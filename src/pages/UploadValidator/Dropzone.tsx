@@ -54,9 +54,8 @@ export const StyledDropzone = ({
       const reader = new FileReader();
       reader.onload = event => {
         if (event.target) {
-          const jsonData: keyFile[] = (event.target
-            .result as unknown) as keyFile[];
-          updateKeyFiles(jsonData);
+          const jsonData = event.target.result as string;
+          updateKeyFiles(JSON.parse(jsonData));
         }
       };
       reader.readAsText(acceptedFiles[0]);

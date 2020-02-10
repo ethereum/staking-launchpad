@@ -7,17 +7,7 @@ import { Paper } from "../../components/Paper";
 import styled from "styled-components";
 import { FormNextLink } from "grommet-icons";
 import { web3ReactInterface } from "./index";
-
-const Dot = styled.div`
-  width: 15px;
-  height: 15px;
-  background: ${(p: { theme: any; success: boolean }) =>
-    p.success ? p.theme.success : p.theme.error};
-  border: 3px solid
-    ${(p: { theme: any; success: boolean }) =>
-      p.success ? p.theme.successLight : p.theme.errorLight};
-  border-radius: 50%;
-`;
+import { Dot } from "../../components/Dot";
 
 export const WalletConnected = () => {
   const {

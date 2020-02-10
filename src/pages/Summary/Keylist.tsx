@@ -1,45 +1,50 @@
-import React, { useState } from "react";
-import { FakeInput } from "../../components/FakeInput";
-import { Text } from "grommet";
+import React from "react";
 import styled from "styled-components";
-// @ts-ignore
-import ReactShadowScroll from "react-shadow-scroll";
+import { trimString } from "../../utils/trimString";
+import { FakeInput } from "../../components/FakeInput";
 
-const Container = styled(FakeInput)`
+const ScrollContainer = styled.div`
+  height: 200px;
+  margin-top: 20px;
+  width: 100%;
+  overflow-y: hidden;
   display: flex;
-  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) inset, 0 0 rgba(0, 0, 0, 0) inset; // shadow on top only
 `;
-const CopyBtn = styled(Text)`
-  color: ${p => p.theme.brand};
-  cursor: pointer;
-  :hover {
-    font-weight: bold;
+
+const SubContainer = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 5px;
+    overflow: hidden;
+    &:hover {
+      background: #a6a6a6;
+    }
   }
 `;
 
 export const Keylist = ({ coldKeys }: { coldKeys: string[] }) => {
-  const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
-  const handleClick = (coldKey: string, i: number) => {
-    navigator.clipboard.writeText(coldKey);
-    setCopiedIdx(i);
-  };
   const renderKeys = () =>
-    coldKeys.map((coldKey, i) => {
-      return (
-        <Container className="flex" key={coldKey}>
-          <Text>{coldKey}</Text>
-          <CopyBtn onClick={() => handleClick(coldKey, i)}>
-            {copiedIdx === i ? "Copied" : "Copy"}
-          </CopyBtn>
-        </Container>
-      );
-    });
+    coldKeys.map(coldKey => (
+      <FakeInput key={coldKey} className="px25 py0">
+        <pre>{trimString(coldKey, 45)}</pre>
+      </FakeInput>
+    ));
 
   if (coldKeys.length > 4) {
     return (
-      <ReactShadowScroll style={{ height: 200, marginTop: 20 }}>
-        {renderKeys()}
-      </ReactShadowScroll>
+      <ScrollContainer>
+        <SubContainer>{renderKeys()}</SubContainer>
+      </ScrollContainer>
     );
   }
   return <div className="mt20">{renderKeys()}</div>;

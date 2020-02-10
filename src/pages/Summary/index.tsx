@@ -9,34 +9,26 @@ import { FakeInput } from "../../components/FakeInput";
 import { Keylist } from "./Keylist";
 import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
+import { keyFile } from "../../store/actions";
 
 const SummarySection = styled(Box)`
   width: 30%;
 `;
 
-const tempKeys = [
-  "0xfd61352232157815cf7b71045557192bf0ce1881",
-  "0xfd61352232157815cf7b71045557192bf0ce1882",
-  "0xfd61352232157815cf7b71045557192bf0ce1883"
-  // "0xfd61352232157815cf7b71045557192bf0ce1884",
-  // "0xfd61352232157815cf7b71045557192bf0ce1885",
-  // "0xfd61352232157815cf7b71045557192bf0ce1886",
-  // "0xfd61352232157815cf7b71045557192bf0ce1887",
-  // "0xfd61352232157815cf7b71045557192bf0ce1888",
-  // "0xfd61352232157815cf7b71045557192bf0ce1889",
-  // "0xfd61352232157815cf7b71045557192bf0ce1880"
-];
-
 const _SummaryPage = ({
-  validatorCount
+  validatorCount,
+  keyFiles
 }: {
   validatorCount: number;
+  keyFiles: keyFile[];
 }): JSX.Element => {
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const allChecked = losePhrase && earlyAdopt && nonReverse && noPhish;
+
+  const coldKeys = keyFiles.map(file => file.pubkey);
 
   const renderSummarySection = () => (
     <Paper>
@@ -50,11 +42,11 @@ const _SummaryPage = ({
         </SummarySection>
         <SummarySection className="mx20">
           <Text weight="bold">Amount</Text>
-          <FakeInput>{validatorCount * 32}</FakeInput>
+          <FakeInput>{validatorCount * 32} ETH</FakeInput>
         </SummarySection>
         <SummarySection>
           <Text weight="bold">Key Pairs Generated</Text>
-          <FakeInput>1</FakeInput>
+          <FakeInput>{keyFiles.length}</FakeInput>
         </SummarySection>
       </Box>
     </Paper>
@@ -68,7 +60,7 @@ const _SummaryPage = ({
       <Text size="large">
         Here are your cold keys, you will have the hot keys.
       </Text>
-      <Keylist coldKeys={tempKeys} />
+      <Keylist coldKeys={coldKeys} />
     </Paper>
   );
 
@@ -133,8 +125,9 @@ const _SummaryPage = ({
   );
 };
 
-const mstp = ({ validatorCount }: StoreState) => ({
-  validatorCount
+const mstp = ({ validatorCount, keyFiles }: StoreState) => ({
+  validatorCount,
+  keyFiles
 });
 
 export const SummaryPage = connect(mstp)(_SummaryPage);

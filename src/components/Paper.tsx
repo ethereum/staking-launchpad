@@ -26,11 +26,10 @@ export const Paper = (
 
 const BoxGroup = styled(Box)`
   > :first-child {
-    border-radius: ${p =>
-      `${p.theme.borderRadius} ${p.theme.borderRadius} 0 0`};
+    border-radius: ${p => `2px 2px 0 0`};
   }
   > :last-child {
-    border-radius:${p => `0 0 ${p.theme.borderRadius} ${p.theme.borderRadius}`};
+    border-radius:${p => `0 0 2px 2px`};
   }
   }
   > *:not(:first-child):not(:last-child) {

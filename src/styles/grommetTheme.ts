@@ -1,5 +1,15 @@
-import { styledComponentsTheme } from "./styledComponentsTheme";
-const { brand, transparent, gray20, white, error } = styledComponentsTheme;
+import {styledComponentsTheme} from "./styledComponentsTheme";
+
+const {
+  brand,
+  transparent,
+  gray20,
+  error,
+  secondary,
+  success,
+  successLight,
+  errorLight
+} = styledComponentsTheme;
 
 export const grommetTheme = {
   global: {
@@ -12,7 +22,10 @@ export const grommetTheme = {
     colors: {
       brand,
       border: gray20,
-      error: error
+      error,
+      errorLight,
+      success,
+      successLight
     },
     font: {
       family: "Roboto"
@@ -21,18 +34,16 @@ export const grommetTheme = {
   button: {
     border: {
       radius: "2px",
-      color: brand // cobalt blue
+      color: secondary
     },
     padding: {
       vertical: "12px",
       horizontal: "24px"
     },
     primary: {
-      color: brand // cobalt blue
+      color: secondary
     },
     extend: `
-      min-width: 280px;
-      color: ${white};
       font-size: 12px;
       font-weight: bold;
      `

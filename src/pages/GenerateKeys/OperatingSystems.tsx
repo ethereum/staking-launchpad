@@ -10,7 +10,7 @@ const LogoContainerBox = styled.div`
   height: 200px;
   border: ${(p: { theme: any; isActive: boolean }) =>
     `1px solid ${p.isActive ? p.theme.brand : p.theme.gray20}`};
-  border-radius: 2px;
+  border-radius: ${p => p.theme.borderRadius};
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -10,18 +10,13 @@ import { routesEnum } from "../../Routes";
 import { StoreState } from "../../store/reducers";
 import { updateValidatorCount } from "../../store/actions";
 import { connect } from "react-redux";
+import { FakeInput } from "../../components/FakeInput";
 
 const warnings: string[] = [
   "Please make sure you send exactly 32 ETH per validator, excluding fees.",
   "Transactions with less than 32 ETH will need to be topped up to run a validator.",
   "You will sign a separate transaction for each validator."
 ];
-
-const EthAmountContainer = styled.div`
-  border: 1px solid #ddd;
-  padding: 12px 10px;
-  width: 100%;
-`;
 
 const Container = styled.div`
   width: 100%;
@@ -65,9 +60,9 @@ const _ValidatorSettingsPage = ({
           </Container>
           <Container>
             <Text weight="bold">Cost</Text>
-            <EthAmountContainer>
+            <FakeInput>
               <Text>{validatorCount * 32} ETH</Text>
-            </EthAmountContainer>
+            </FakeInput>
           </Container>
         </div>
       </Paper>

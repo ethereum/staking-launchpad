@@ -3,44 +3,46 @@ import { range } from "lodash";
 
 const shorthandSpacing = range(51).map((_, i) => {
   return `
-  .m${i}{ margin: ${i}px !important;}
-  .mt${i}{ margin-top: ${i}px !important;}
-  .mb${i}{ margin-bottom: ${i}px !important;}
-  .ml${i}{ margin-left: ${i}px !important;}
-  .mr${i}{ margin-right: ${i}px !important;}
-  .mx${i}{ margin-right: ${i}px !important; margin-left: ${i}px !important;}
-  .my${i}{ margin-top: ${i}px !important; margin-bottom: ${i}px !important;}
-  .p${i}{ padding: ${i}px !important;}
-  .pt${i}{ padding-top: ${i}px !important;}
-  .pb${i}{ padding-bottom: ${i}px !important;}
-  .pl${i}{ padding-left: ${i}px !important;}
-  .pr${i}{ padding-right: ${i}px !important;}
-  .px${i}{ padding-right: ${i}px !important; padding-left: ${i}px !important;}
-  .py${i}{ padding-top: ${i}px !important; padding-bottom: ${i}px !important;}
+  .m${i}{ margin: ${i}px; }
+  .mt${i}{ margin-top: ${i}px; }
+  .mb${i}{ margin-bottom: ${i}px; }
+  .ml${i}{ margin-left: ${i}px; }
+  .mr${i}{ margin-right: ${i}px; }
+  .mx${i}{ margin-right: ${i}px;  margin-left: ${i}px; }
+  .my${i}{ margin-top: ${i}px;  margin-bottom: ${i}px; }
+  .p${i}{ padding: ${i}px; }
+  .pt${i}{ padding-top: ${i}px; }
+  .pb${i}{ padding-bottom: ${i}px; }
+  .pl${i}{ padding-left: ${i}px; }
+  .pr${i}{ padding-right: ${i}px; }
+  .px${i}{ padding-right: ${i}px;  padding-left: ${i}px; }
+  .py${i}{ padding-top: ${i}px;  padding-bottom: ${i}px; }
   `;
 });
 
 const shorthandRemSpacing = range(13).map((_, i) => {
   return `
-  .m-${i}{ margin: ${i}rem !important;}
-  .m-t-${i}{ margin-top: ${i}rem !important;}
-  .m-b-${i}{ margin-bottom: ${i}rem !important;}
-  .m-l-${i}{ margin-left: ${i}rem !important;}
-  .m-r-${i}{ margin-right: ${i}rem !important;}
-  .m-x-${i}{ margin-right: ${i}rem !important; margin-left: ${i}rem !important;}
-  .m-y-${i}{ margin-top: ${i}rem !important; margin-bottom: ${i}rem !important;}
-  .p-${i}{ padding: ${i}rem !important;}
-  .p-t-${i}{ padding-top: ${i}rem !important;}
-  .p-b-${i}{ padding-bottom: ${i}rem !important;}
-  .p-l-${i}{ padding-left: ${i}rem !important;}
-  .p-r-${i}{ padding-right: ${i}rem !important;}
-  .p-x-${i}{ padding-right: ${i}rem !important; padding-left: ${i}rem !important;}
-  .p-y-${i}{ padding-top: ${i}rem !important; padding-bottom: ${i}rem !important;}
+  .m-${i}{ margin: ${i}rem; }
+  .m-t-${i}{ margin-top: ${i}rem; }
+  .m-b-${i}{ margin-bottom: ${i}rem; }
+  .m-l-${i}{ margin-left: ${i}rem; }
+  .m-r-${i}{ margin-right: ${i}rem; }
+  .m-x-${i}{ margin-right: ${i}rem;  margin-left: ${i}rem; }
+  .m-y-${i}{ margin-top: ${i}rem;  margin-bottom: ${i}rem; }
+  .p-${i}{ padding: ${i}rem; }
+  .p-t-${i}{ padding-top: ${i}rem; }
+  .p-b-${i}{ padding-bottom: ${i}rem; }
+  .p-l-${i}{ padding-left: ${i}rem; }
+  .p-r-${i}{ padding-right: ${i}rem; }
+  .p-x-${i}{ padding-right: ${i}rem;  padding-left: ${i}rem; }
+  .p-y-${i}{ padding-top: ${i}rem;  padding-bottom: ${i}rem; }
   `;
 });
 
 const shorthandClasses = `
-  .flex { display: flex !important }
+  .flex { display: flex  }
+  .flex-row { flex-direction: row  }
+  .rm-double-border { margin-top: -2px  }
 `;
 
 const transitionClasses = `

@@ -37,8 +37,13 @@ export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks
 });
 
+if (!process.env.REACT_APP_PORTIS_DAPP_ID) {
+  console.log(process.env);
+  throw new TypeError("Missing PORTIS_DAPP_ID");
+}
+
 export const portis: PortisConnector = new PortisConnector({
-  dAppId: "2b163b11-f9f7-42cf-9c57-5fe5c1f614e1",
+  dAppId: process.env.REACT_APP_PORTIS_DAPP_ID,
   networks: supportedNetworks
 });
 

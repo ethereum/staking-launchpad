@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, BoxProps} from "grommet";
+import { Box, BoxProps } from "grommet";
 import styled from "styled-components";
 
 export const Paper = (
@@ -7,12 +7,12 @@ export const Paper = (
     children: React.ReactNode;
     className?: string;
     error?: boolean;
-    style?: any
+    style?: any;
   } & BoxProps
 ): JSX.Element => {
   return (
     <Box
-      border={props.error ? { color: "error", size: "small" } : true}
+      border={props.error ? { color: "errorLight", size: "small" } : true}
       className={props.className}
       pad="large"
       background="white"
@@ -26,10 +26,11 @@ export const Paper = (
 
 const BoxGroup = styled(Box)`
   > :first-child {
-    border-radius: 2px 2px 0 0;
+    border-radius: ${p => `2px 2px 0 0`};
   }
   > :last-child {
-    border-radius: 0 0 2px 2px;
+    border-radius:${p => `0 0 2px 2px`};
+  }
   }
   > *:not(:first-child):not(:last-child) {
     border-radius: 0;

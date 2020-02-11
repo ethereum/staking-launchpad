@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { CaretDown, CaretUp } from "grommet-icons";
+import { FormDown, FormUp } from "grommet-icons";
 
 const StyledButton = styled.button`
   height: 25px;
@@ -66,10 +66,10 @@ export const NumberInput = ({
       />
       <ButtonContainer>
         <StyledButton onClick={increment} style={{ borderBottom: "none" }}>
-          <CaretUp size="small" />
+          <FormUp size="medium" />
         </StyledButton>
         <StyledButton className="plus" onClick={decrement}>
-          <CaretDown size="small" />
+          <FormDown size="medium" />
         </StyledButton>
       </ButtonContainer>
     </div>

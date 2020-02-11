@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-import { Action, ActionTypes } from "../actions";
+import { Action, ActionTypes, keyFile } from "../actions";
 
 export interface StoreState {
   allAcknowledgementsAgreedTo: boolean;
   validatorCount: number;
+  keyFiles: keyFile[];
 }
 
 export const acknowledgementReducer = (
@@ -23,7 +24,15 @@ export const validatorReducer = (state: number = 0, action: Action) => {
   return state;
 };
 
+export const keyFilesReducer = (state: keyFile[] = [], action: Action) => {
+  if (action.type === ActionTypes.updateKeyFiles) {
+    return action.payload;
+  }
+  return state;
+};
+
 export const reducers = combineReducers<StoreState>({
   allAcknowledgementsAgreedTo: acknowledgementReducer,
-  validatorCount: validatorReducer
+  validatorCount: validatorReducer,
+  keyFiles: keyFilesReducer
 });

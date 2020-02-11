@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Heading, Text } from "grommet";
+import { Box, Button, Heading, Text } from "grommet";
 import { Paper, PaperGroup } from "../../components/Paper";
 import { OperatingSystems } from "./OperatingSystems";
 import { LinuxInstructions } from "./LinuxInstructions";
 import { MacInstructions } from "./MacInstructions";
 import { WindowsInstructions } from "./WindowsInstructions";
+import { Redirect } from "react-router-dom";
+import { routesEnum } from "../../Routes";
 
 export enum operatingSystem {
   "MAC",
@@ -14,6 +16,8 @@ export enum operatingSystem {
 }
 
 export const GenerateKeysPage = (): JSX.Element => {
+  const [goToNextPage, setGoToNextPage] = useState(false);
+
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
@@ -30,6 +34,10 @@ export const GenerateKeysPage = (): JSX.Element => {
         return null;
     }
   };
+
+  if (goToNextPage) {
+    return <Redirect to={routesEnum.UploadValidatorPage} />;
+  }
 
   return (
     <WorkflowPageTemplate title="Generate Key Pairs">
@@ -50,6 +58,13 @@ export const GenerateKeysPage = (): JSX.Element => {
         </Paper>
       </PaperGroup>
       {renderInstructions()}
+      <Box align="center" pad="large">
+        <Button
+          primary
+          label="CONTINUE"
+          onClick={() => setGoToNextPage(true)}
+        />
+      </Box>
     </WorkflowPageTemplate>
   );
 };

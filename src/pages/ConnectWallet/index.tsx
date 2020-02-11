@@ -1,5 +1,5 @@
-import React from "react";
-import { Grid, ResponsiveContext } from "grommet";
+import React, { useState } from "react";
+import {Box, Button, Grid, ResponsiveContext} from "grommet";
 import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { useWeb3React } from "@web3-react/core";
@@ -12,6 +12,8 @@ import {
   useMetamaskListener
 } from "./web3Utils";
 import { WalletButton } from "./WalletButton";
+import { Redirect } from "react-router-dom";
+import { routesEnum } from "../../Routes";
 
 export interface web3ReactInterface {
   activate: (
@@ -30,6 +32,7 @@ export interface web3ReactInterface {
 }
 
 export const ConnectWalletPage = (): JSX.Element => {
+  const [goToNextPage, setGoToNextPage] = useState(false);
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
     active: walletConnected,
@@ -39,10 +42,14 @@ export const ConnectWalletPage = (): JSX.Element => {
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
+  if (goToNextPage) {
+    return <Redirect to={routesEnum.SummaryPage} />;
+  }
+
   if (walletConnected) {
     return (
       <WorkflowPageTemplate title="Connect Wallet">
-        <WalletConnected />
+        <WalletConnected setGoToNextPage={setGoToNextPage} />
       </WorkflowPageTemplate>
     );
   }

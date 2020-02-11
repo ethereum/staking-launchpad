@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { trimString } from "../../utils/trimString";
-import { FakeInput } from "../../components/FakeInput";
+import { InfoBox } from "../../components/InfoBox";
 
 const ScrollContainer = styled.div`
   height: 200px;
@@ -32,15 +32,15 @@ const SubContainer = styled.div`
   }
 `;
 
-export const Keylist = ({ coldKeys }: { coldKeys: string[] }) => {
+export const Keylist = ({ validatorKeys }: { validatorKeys: string[] }) => {
   const renderKeys = () =>
-    coldKeys.map(coldKey => (
-      <FakeInput key={coldKey} className="px25 py0">
+    validatorKeys.map(coldKey => (
+      <InfoBox key={coldKey} className="px25 py0">
         <pre>{trimString(coldKey, 45)}</pre>
-      </FakeInput>
+      </InfoBox>
     ));
 
-  if (coldKeys.length > 4) {
+  if (validatorKeys.length > 4) {
     return (
       <ScrollContainer>
         <SubContainer>{renderKeys()}</SubContainer>

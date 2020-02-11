@@ -9,7 +9,11 @@ import { FormNextLink } from "grommet-icons";
 import { web3ReactInterface } from "./index";
 import { Dot } from "../../components/Dot";
 
-export const WalletConnected = () => {
+export const WalletConnected = ({
+  setGoToNextPage
+}: {
+  setGoToNextPage: (val: boolean) => void;
+}) => {
   const {
     account,
     chainId,
@@ -51,7 +55,7 @@ export const WalletConnected = () => {
           />
           <Button
             disabled={!networkAllowed}
-            onClick={() => {}}
+            onClick={() => setGoToNextPage(true)}
             label="CONTINUE ON TESTNET"
             primary
             reverse

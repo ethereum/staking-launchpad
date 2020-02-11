@@ -10,7 +10,7 @@ import { routesEnum } from "../../Routes";
 import { StoreState } from "../../store/reducers";
 import { updateValidatorCount } from "../../store/actions";
 import { connect } from "react-redux";
-import { FakeInput } from "../../components/FakeInput";
+import { InfoBox } from "../../components/InfoBox";
 
 const warnings: string[] = [
   "Please make sure you send exactly 32 ETH per validator, excluding fees.",
@@ -32,15 +32,15 @@ const _ValidatorSettingsPage = ({
   validatorCount,
   updateValidatorCount
 }: Props): JSX.Element => {
-  const [shouldRedirect, setShouldRedirect] = useState(false);
+  const [goToNextPage, setGoToNextPage] = useState(false);
 
   const handleSubmit = () => {
     if (validatorCount > 0) {
-      setShouldRedirect(true);
+      setGoToNextPage(true);
     }
   };
 
-  if (shouldRedirect) {
+  if (goToNextPage) {
     return <Redirect to={routesEnum.GenerateKeysPage} />;
   }
 
@@ -60,9 +60,9 @@ const _ValidatorSettingsPage = ({
           </Container>
           <Container>
             <Text weight="bold">Cost</Text>
-            <FakeInput>
+            <InfoBox>
               <Text>{validatorCount * 32} ETH</Text>
-            </FakeInput>
+            </InfoBox>
           </Container>
         </div>
       </Paper>

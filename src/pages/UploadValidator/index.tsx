@@ -13,12 +13,6 @@ interface Props {
   updateKeyFiles(files: keyFile[]): void;
   keyFiles: keyFile[];
 }
-// interface State {
-//   acknowledgements: {
-//     [key in acknowledgementId]: boolean;
-//   };
-//   goToNextPage: boolean;
-// }
 
 export const _UploadValidatorPage = ({
   keyFiles,

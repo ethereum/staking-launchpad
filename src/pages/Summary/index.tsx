@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Paper } from "../../components/Paper";
 import { Box, Button, CheckBox, Heading, Text } from "grommet";
 import styled from "styled-components";
-import { FakeInput } from "../../components/FakeInput";
+import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
 import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
@@ -28,7 +28,7 @@ const _SummaryPage = ({
   const [noPhish, setNoPhish] = useState(false);
   const allChecked = losePhrase && earlyAdopt && nonReverse && noPhish;
 
-  const coldKeys = keyFiles.map(file => file.pubkey);
+  const validatorKeys = keyFiles.map(file => file.pubkey);
 
   const renderSummarySection = () => (
     <Paper>
@@ -38,15 +38,15 @@ const _SummaryPage = ({
       <Box className="flex flex-row">
         <SummarySection>
           <Text weight="bold">Validators</Text>
-          <FakeInput>{validatorCount}</FakeInput>
+          <InfoBox>{validatorCount}</InfoBox>
         </SummarySection>
         <SummarySection className="mx20">
           <Text weight="bold">Amount</Text>
-          <FakeInput>{validatorCount * 32} ETH</FakeInput>
+          <InfoBox>{validatorCount * 32} ETH</InfoBox>
         </SummarySection>
         <SummarySection>
           <Text weight="bold">Key Pairs Generated</Text>
-          <FakeInput>{keyFiles.length}</FakeInput>
+          <InfoBox>{keyFiles.length}</InfoBox>
         </SummarySection>
       </Box>
     </Paper>
@@ -57,10 +57,7 @@ const _SummaryPage = ({
       <Heading level={3} size="small" color="brand">
         Keys
       </Heading>
-      <Text size="large">
-        Here are your cold keys, you will have the hot keys.
-      </Text>
-      <Keylist coldKeys={coldKeys} />
+      <Keylist validatorKeys={validatorKeys} />
     </Paper>
   );
 
@@ -117,7 +114,8 @@ const _SummaryPage = ({
         <Button
           primary
           disabled={!allChecked}
-          label="SIGN 1 TRANSACTION AND DEPOSIT 32 ETH"
+          label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
+            32} ETH`}
           onClick={() => {}}
         />
       </Box>

@@ -4,7 +4,6 @@ import { BrandWithTitle } from "./Brand";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import { web3ReactInterface } from "../pages/ConnectWallet";
-import { WalletConnected } from "../pages/ConnectWallet/WalletConnected";
 import { trimString } from "../utils/trimString";
 import {
   AllowedNetworks,

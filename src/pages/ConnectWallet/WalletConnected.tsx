@@ -21,9 +21,14 @@ export const WalletConnected = ({
     deactivate
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
-  // @ts-ignore chainId should not ever be undefined
-  const network = NetworkChainId[chainId];
-  const networkAllowed = Object.values(AllowedNetworks).includes(network);
+  let network;
+  let networkAllowed = false;
+
+  if (chainId) {
+    network = NetworkChainId[chainId];
+    networkAllowed = Object.values(AllowedNetworks).includes(network);
+  }
+
 
   return (
     <div>

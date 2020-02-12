@@ -8,7 +8,11 @@ import { NumberInput } from "./NumberInput";
 import { CircleAlert } from "./CircleAlert";
 import { routesEnum } from "../../Routes";
 import { StoreState } from "../../store/reducers";
-import { updateValidatorCount } from "../../store/actions";
+import {
+  ProgressStep,
+  updateProgress,
+  updateValidatorCount
+} from "../../store/actions";
 import { connect } from "react-redux";
 import { InfoBox } from "../../components/InfoBox";
 
@@ -26,16 +30,19 @@ const Container = styled.div`
 interface Props {
   updateValidatorCount(count: number): void;
   validatorCount: number;
+  updateProgress: () => void;
 }
 
 const _ValidatorSettingsPage = ({
   validatorCount,
-  updateValidatorCount
+  updateValidatorCount,
+  updateProgress
 }: Props): JSX.Element => {
   const [goToNextPage, setGoToNextPage] = useState(false);
 
   const handleSubmit = () => {
     if (validatorCount > 0) {
+      updateProgress();
       setGoToNextPage(true);
     }
   };
@@ -94,6 +101,9 @@ const mstp = ({ validatorCount }: StoreState) => ({
 const mdtp = (dispatch: any) => ({
   updateValidatorCount: (count: number): void => {
     dispatch(updateValidatorCount(count));
+  },
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.GENERATE_KEY_PAIRS));
   }
 });
 

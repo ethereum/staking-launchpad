@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import EthRound from "../../static/ethRound.svg";
+import { StoreState } from "../../store/reducers";
+import { ProgressStep } from "../../store/actions";
+import { connect } from "react-redux";
 
 const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
@@ -42,7 +45,7 @@ const BarContainer = styled.div`
 `;
 const CompletedColor = styled.div`
   width: ${(p: { position: number }) => logoPositions.large[p.position] + 1}%;
-  background: ${p => p.theme.brand};
+  background: ${p => p.theme.secondary};
   border-radius: 8px;
   height: 10px;
   position: absolute;
@@ -83,38 +86,82 @@ const EthLogo = styled.img`
 const Flexbox = styled.div`
   display: flex;
   justify-content: space-evenly;
-  //padding-top: 40px;
 `;
 
-const Section = styled.div`
-  //width: ${100 / 6}%;
+interface StepProps {
+  active: boolean;
+  disabled: boolean;
+  theme: any;
+}
+const Step = styled.div`
   margin: 0 20px;
   text-align: center;
+  color: ${(p: StepProps) => {
+    if (p.disabled) return p.theme.gray10;
+    if (p.active) return p.theme.secondary;
+    return p.theme.brand;
+  }};
+  font-weight: 500;
 `;
 
-export const WorkflowStatusBar = () => {
-  const [pos, setPos] = useState(0);
+interface Props {
+  progress: ProgressStep;
+}
+
+const _WorkflowProgressBar = ({ progress }: Props) => {
   return (
     <Container>
       <SubContainer>
         <BarContainer>
           <GreyedColor />
-          <CompletedColor position={pos} />
-          <EthLogo
-            position={pos}
-            src={EthRound}
-            alt="eth-diamond-round"
-          />
+          <CompletedColor position={progress} />
+          <EthLogo position={progress} src={EthRound} alt="eth-diamond-round" />
         </BarContainer>
         <Flexbox>
-          <Section onClick={() => setPos(pos - 1)}>Overview</Section>
-          <Section>ValidatorSettings</Section>
-          <Section>Generate Keys</Section>
-          <Section>UploadValidator</Section>
-          <Section>Connect Wallet</Section>
-          <Section onClick={() => setPos(pos + 1)}>Summary</Section>
+          <Step
+            disabled={progress < ProgressStep.OVERVIEW}
+            active={progress === ProgressStep.OVERVIEW}
+          >
+            Overview
+          </Step>
+          <Step
+            disabled={progress < ProgressStep.VALIDATOR_SETTINGS}
+            active={progress === ProgressStep.VALIDATOR_SETTINGS}
+          >
+            ValidatorSettings
+          </Step>
+          <Step
+            disabled={progress < ProgressStep.GENERATE_KEY_PAIRS}
+            active={progress === ProgressStep.GENERATE_KEY_PAIRS}
+          >
+            Generate Keys
+          </Step>
+          <Step
+            disabled={progress < ProgressStep.UPLOAD_VALIDATOR_FILE}
+            active={progress === ProgressStep.UPLOAD_VALIDATOR_FILE}
+          >
+            UploadValidator
+          </Step>
+          <Step
+            disabled={progress < ProgressStep.CONNECT_WALLET}
+            active={progress === ProgressStep.CONNECT_WALLET}
+          >
+            Connect Wallet
+          </Step>
+          <Step
+            disabled={progress < ProgressStep.SUMMARY}
+            active={progress === ProgressStep.SUMMARY}
+          >
+            Summary
+          </Step>
         </Flexbox>
       </SubContainer>
     </Container>
   );
 };
+
+const mstp = ({ progress }: StoreState) => ({
+  progress
+});
+
+export const WorkflowProgressBar = connect(mstp)(_WorkflowProgressBar);

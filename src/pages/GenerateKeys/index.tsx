@@ -8,6 +8,8 @@ import { MacInstructions } from "./MacInstructions";
 import { WindowsInstructions } from "./WindowsInstructions";
 import { Redirect } from "react-router-dom";
 import { routesEnum } from "../../Routes";
+import { ProgressStep, updateProgress } from "../../store/actions";
+import { connect } from "react-redux";
 
 export enum operatingSystem {
   "MAC",
@@ -15,12 +17,21 @@ export enum operatingSystem {
   "WINDOWS"
 }
 
-export const GenerateKeysPage = (): JSX.Element => {
+const _GenerateKeysPage = ({
+  updateProgress
+}: {
+  updateProgress: () => void;
+}): JSX.Element => {
   const [goToNextPage, setGoToNextPage] = useState(false);
 
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
+
+  const handleSubmit = () => {
+    updateProgress();
+    setGoToNextPage(true);
+  };
 
   const renderInstructions = (): React.ReactNode => {
     switch (chosenOs) {
@@ -59,12 +70,16 @@ export const GenerateKeysPage = (): JSX.Element => {
       </PaperGroup>
       {renderInstructions()}
       <Box align="center" pad="large">
-        <Button
-          primary
-          label="CONTINUE"
-          onClick={() => setGoToNextPage(true)}
-        />
+        <Button primary label="CONTINUE" onClick={handleSubmit} />
       </Box>
     </WorkflowPageTemplate>
   );
 };
+
+const mdtp = (dispatch: any) => ({
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE));
+  }
+});
+
+export const GenerateKeysPage = connect(null, mdtp)(_GenerateKeysPage);

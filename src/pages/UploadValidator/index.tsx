@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper } from "../../components/Paper";
 import { StoreState } from "../../store/reducers";
-import { keyFile, updateKeyFiles } from "../../store/actions";
+import {
+  keyFile,
+  ProgressStep,
+  updateKeyFiles,
+  updateProgress
+} from "../../store/actions";
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
 import { Box, Button } from "grommet";
@@ -12,16 +17,19 @@ import { Redirect } from "react-router-dom";
 interface Props {
   updateKeyFiles(files: keyFile[]): void;
   keyFiles: keyFile[];
+  updateProgress: () => void;
 }
 
 export const _UploadValidatorPage = ({
   keyFiles,
-  updateKeyFiles
+  updateKeyFiles,
+  updateProgress
 }: Props): JSX.Element => {
   const [fileAccepted, setFileAccepted] = useState(false);
   const [redirectToNextPage, setRedirectToNextPage] = useState(false);
 
   const handleSubmit = () => {
+    updateProgress();
     setRedirectToNextPage(true);
   };
 
@@ -56,7 +64,10 @@ const mstp = ({ keyFiles }: StoreState) => ({
   keyFiles
 });
 const mdtp = (dispatch: any) => ({
-  updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files))
+  updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files)),
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.CONNECT_WALLET));
+  }
 });
 
 export const UploadValidatorPage = connect(mstp, mdtp)(_UploadValidatorPage);

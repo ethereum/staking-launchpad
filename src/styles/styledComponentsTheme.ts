@@ -15,7 +15,7 @@ export const colors = {
   transparent: "transparent",
   success: "#26AB83",
   successLight: "#66d6ae",
-  secondary: "#147FBF",
+  secondary: "#007FB0",
   error: "#912d2c",
   errorLight: "#FF9B9A",
   warning: "#D45C06"

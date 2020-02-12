@@ -1,7 +1,8 @@
 export enum ActionTypes {
   updateAcknowledgementState,
   updateValidatorCount,
-  updateKeyFiles
+  updateKeyFiles,
+  updateProgress
 }
 
 // ACKNOWLEDGEMENT ACTIONS
@@ -50,7 +51,30 @@ export const updateKeyFiles = (files: keyFile[]): UpdateKeyFilesAction => {
   };
 };
 
+// PROGRESS ACTIONS
+export enum ProgressStep {
+  "OVERVIEW",
+  "VALIDATOR_SETTINGS",
+  "GENERATE_KEY_PAIRS",
+  "UPLOAD_VALIDATOR_FILE",
+  "CONNECT_WALLET",
+  "SUMMARY"
+}
+export interface UpdateProgressAction {
+  type: ActionTypes.updateProgress;
+  payload: ProgressStep;
+}
+export const updateProgress = (
+  progressStep: ProgressStep
+): UpdateProgressAction => {
+  return {
+    type: ActionTypes.updateProgress,
+    payload: progressStep
+  };
+};
+
 export type Action =
   | UpdateAcknowledgementStateAction
   | UpdateValidatorCountAction
-  | UpdateKeyFilesAction;
+  | UpdateKeyFilesAction
+  | UpdateProgressAction;

@@ -13,7 +13,11 @@ import {
 import { Link } from "../../components/Link";
 import { routesEnum } from "../../Routes";
 import { StoreState } from "../../store/reducers";
-import { updateAcknowledgementState } from "../../store/actions";
+import {
+  ProgressStep,
+  updateAcknowledgementState,
+  updateProgress
+} from "../../store/actions";
 import { Paper } from "../../components/Paper";
 
 export enum acknowledgementId {
@@ -205,6 +209,7 @@ const pageContent: AcknowledgementSectionData[] = [
 interface Props {
   updateAcknowledgementState(allChecked: boolean): void;
   allAcknowledgementsAgreedTo: boolean;
+  updateProgress: () => void;
 }
 interface State {
   acknowledgements: {
@@ -231,6 +236,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   }
 
   handleSubmit() {
+    this.props.updateProgress();
     this.setState({ goToNextPage: true });
   }
 
@@ -336,6 +342,9 @@ const mstp = ({ allAcknowledgementsAgreedTo }: StoreState) => ({
 const mdtp = (dispatch: any) => ({
   updateAcknowledgementState: (allChecked: boolean): void => {
     dispatch(updateAcknowledgementState(allChecked));
+  },
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.VALIDATOR_SETTINGS));
   }
 });
 

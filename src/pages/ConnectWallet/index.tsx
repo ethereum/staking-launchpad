@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Box, Button, Grid, ResponsiveContext} from "grommet";
+import { Grid, ResponsiveContext } from "grommet";
 import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { useWeb3React } from "@web3-react/core";

@@ -1,18 +1,21 @@
 import React from "react";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
-import { Box, Button, Heading, Text } from "grommet";
-import { AllowedNetworks, metamask, NetworkChainId } from "./web3Utils";
-import { Paper } from "../../components/Paper";
-import styled from "styled-components";
-import { FormNextLink } from "grommet-icons";
-import { web3ReactInterface } from "./index";
-import { Dot } from "../../components/Dot";
+import {useWeb3React} from "@web3-react/core";
+import {Web3Provider} from "@ethersproject/providers";
+import {Box, Button, Heading, Text} from "grommet";
+import {AllowedNetworks, metamask, NetworkChainId} from "./web3Utils";
+import {Paper} from "../../components/Paper";
+import {FormNextLink} from "grommet-icons";
+import {web3ReactInterface} from "./index";
+import {Dot} from "../../components/Dot";
+import {ProgressStep, updateProgress} from "../../store/actions";
+import {connect} from "react-redux";
 
-export const WalletConnected = ({
-  setGoToNextPage
+const _WalletConnected = ({
+  setGoToNextPage,
+  updateProgress
 }: {
   setGoToNextPage: (val: boolean) => void;
+  updateProgress: () => void;
 }) => {
   const {
     account,
@@ -29,6 +32,10 @@ export const WalletConnected = ({
     networkAllowed = Object.values(AllowedNetworks).includes(network);
   }
 
+  const handleSubmit = () => {
+    updateProgress();
+    setGoToNextPage(true);
+  };
 
   return (
     <div>
@@ -60,7 +67,7 @@ export const WalletConnected = ({
           />
           <Button
             disabled={!networkAllowed}
-            onClick={() => setGoToNextPage(true)}
+            onClick={handleSubmit}
             label="CONTINUE ON TESTNET"
             primary
             reverse
@@ -71,3 +78,11 @@ export const WalletConnected = ({
     </div>
   );
 };
+
+const mdtp = (dispatch: any) => ({
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.SUMMARY));
+  }
+});
+
+export const WalletConnected = connect(null, mdtp)(_WalletConnected);

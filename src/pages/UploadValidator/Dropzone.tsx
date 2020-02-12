@@ -48,19 +48,22 @@ export const StyledDropzone = ({
 }: props) => {
   const alreadyUploaded = keyFiles.length > 0;
 
-  const onDrop = useCallback(acceptedFiles => {
-    if (acceptedFiles.length === 1 && !alreadyUploaded) {
-      setFileAccepted(true);
-      const reader = new FileReader();
-      reader.onload = event => {
-        if (event.target) {
-          const jsonData = event.target.result as string;
-          updateKeyFiles(JSON.parse(jsonData));
-        }
-      };
-      reader.readAsText(acceptedFiles[0]);
-    }
-  }, []);
+  const onDrop = useCallback(
+    acceptedFiles => {
+      if (acceptedFiles.length === 1 && !alreadyUploaded) {
+        setFileAccepted(true);
+        const reader = new FileReader();
+        reader.onload = event => {
+          if (event.target) {
+            const jsonData = event.target.result as string;
+            updateKeyFiles(JSON.parse(jsonData));
+          }
+        };
+        reader.readAsText(acceptedFiles[0]);
+      }
+    },
+    [alreadyUploaded, setFileAccepted, updateKeyFiles]
+  );
 
   const {
     getRootProps,

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import EthDiamondRoundSvg from "../../static/eth-diamond-round.svg";
+import EthRound from "../../static/ethRound.svg";
 
 const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
@@ -102,7 +102,7 @@ export const WorkflowStatusBar = () => {
           <CompletedColor position={pos} />
           <EthLogo
             position={pos}
-            src={EthDiamondRoundSvg}
+            src={EthRound}
             alt="eth-diamond-round"
           />
         </BarContainer>

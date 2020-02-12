@@ -13,6 +13,15 @@ import { Dot } from "./Dot";
 import { Link } from "./Link";
 import { routesEnum } from "../Routes";
 import styled from "styled-components";
+import rainbow from "../static/RainbowHeader.png";
+
+const Header = styled(Box)``;
+const RainbowBackground = styled.img`
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  z-index: -1;
+`;
 
 const EthLogo = styled.img`
   height: 40px;
@@ -36,32 +45,34 @@ export const AppBar = () => {
   }
 
   return (
-    <Box
-      tag="header"
-      direction="row"
-      align="center"
-      justify="between"
-      background="brand"
-      pad={{ left: "medium", right: "small", vertical: "small" }}
-      elevation="medium"
-      style={{ zIndex: 1 }}
-    >
-      <div className="ml50 flex">
-        <Link to={routesEnum.LandingPage}>
-          <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <Heading level={4} margin="none" className="py8">
-            ETH 2 deposit ceremony
-          </Heading>
-        </Link>
-      </div>
-      {walletConnected && (
-        <Box className="flex flex-row mr20">
-          <Dot success={networkAllowed} />
-          <Text size="small" className="ml10" color="white">
-            {trimString(account as string, 10)}
-          </Text>
-        </Box>
-      )}
-    </Box>
+    <>
+      <RainbowBackground src={rainbow} />
+      <Header
+        tag="header"
+        direction="row"
+        align="center"
+        justify="between"
+        pad={{ left: "medium", right: "small", vertical: "small" }}
+        elevation="medium"
+        style={{ zIndex: 1 }}
+      >
+        <div className="ml50 flex">
+          <Link to={routesEnum.LandingPage}>
+            <EthLogo src={EthDiamond} alt="eth-diamond" />
+            <Heading level={4} margin="none" className="py8">
+              ETH 2 deposit ceremony
+            </Heading>
+          </Link>
+        </div>
+        {walletConnected && (
+          <Box className="flex flex-row mr20">
+            <Dot success={networkAllowed} />
+            <Text size="small" className="ml10" color="white">
+              {trimString(account as string, 10)}
+            </Text>
+          </Box>
+        )}
+      </Header>
+    </>
   );
 };

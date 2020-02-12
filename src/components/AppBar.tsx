@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Text } from "grommet";
-import { BrandWithTitle } from "./Brand";
+import { Box, Heading, Text } from "grommet";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
+import EthDiamondSvg from "../static/eth-diamond.svg";
 import { web3ReactInterface } from "../pages/ConnectWallet";
 import { trimString } from "../utils/trimString";
 import {
@@ -10,6 +10,14 @@ import {
   NetworkChainId
 } from "../pages/ConnectWallet/web3Utils";
 import { Dot } from "./Dot";
+import { Link } from "./Link";
+import { routesEnum } from "../Routes";
+import styled from "styled-components";
+
+const EthLogo = styled.img`
+  height: 40px;
+  width: 40px;
+`;
 
 export const AppBar = () => {
   const {
@@ -37,7 +45,14 @@ export const AppBar = () => {
       elevation="medium"
       style={{ zIndex: 1 }}
     >
-      <BrandWithTitle />
+      <div className="ml50 flex">
+        <Link to={routesEnum.LandingPage}>
+          <EthLogo src={EthDiamondSvg} alt="eth-diamond" />;
+          <Heading level={4} margin="none" className="py8">
+            eth 2 deposit ceremony
+          </Heading>
+        </Link>
+      </div>
       {walletConnected && (
         <Box className="flex flex-row mr20">
           <Dot success={networkAllowed} />

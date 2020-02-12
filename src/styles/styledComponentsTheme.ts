@@ -10,6 +10,7 @@ export const colors = {
   gray70: "#475166",
   gray85: "#4A4A4A",
   black: "#333333",
+  // brand: "#007fb0",
   brand: "#0F2A43",
   transparent: "transparent",
   success: "#26AB83",

@@ -10,14 +10,23 @@ import {
 } from "../../store/actions";
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
-import { Box, Button } from "grommet";
+import { Box, Button, Text } from "grommet";
 import { routesEnum } from "../../Routes";
 import { Redirect } from "react-router-dom";
+import styled from "styled-components";
+
+const BackBtn = styled(Text)`
+  color: ${p => p.theme.gray20};
+  cursor: pointer;
+  :hover {
+    color: ${p => p.theme.gray};
+  }
+`;
 
 interface Props {
   updateKeyFiles(files: keyFile[]): void;
   keyFiles: keyFile[];
-  updateProgress: () => void;
+  updateProgress: (step: ProgressStep) => void;
 }
 
 export const _UploadValidatorPage = ({
@@ -29,7 +38,12 @@ export const _UploadValidatorPage = ({
   const [redirectToNextPage, setRedirectToNextPage] = useState(false);
 
   const handleSubmit = () => {
-    updateProgress();
+    updateProgress(ProgressStep.CONNECT_WALLET);
+    setRedirectToNextPage(true);
+  };
+
+  const handleGoBack = () => {
+    updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     setRedirectToNextPage(true);
   };
 
@@ -48,6 +62,7 @@ export const _UploadValidatorPage = ({
         />
 
         <Box align="center" pad="large">
+          <BackBtn onClick={handleGoBack}>Go Back</BackBtn>
           <Button
             primary
             disabled={!fileAccepted}
@@ -65,8 +80,8 @@ const mstp = ({ keyFiles }: StoreState) => ({
 });
 const mdtp = (dispatch: any) => ({
   updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files)),
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.CONNECT_WALLET));
+  updateProgress: (step: ProgressStep): void => {
+    dispatch(updateProgress(step));
   }
 });
 

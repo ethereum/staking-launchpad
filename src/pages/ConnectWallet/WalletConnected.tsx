@@ -1,20 +1,18 @@
 import React from "react";
-import {useWeb3React} from "@web3-react/core";
-import {Web3Provider} from "@ethersproject/providers";
-import {Box, Button, Heading, Text} from "grommet";
-import {AllowedNetworks, metamask, NetworkChainId} from "./web3Utils";
-import {Paper} from "../../components/Paper";
-import {FormNextLink} from "grommet-icons";
-import {web3ReactInterface} from "./index";
-import {Dot} from "../../components/Dot";
-import {ProgressStep, updateProgress} from "../../store/actions";
-import {connect} from "react-redux";
+import { useWeb3React } from "@web3-react/core";
+import { Web3Provider } from "@ethersproject/providers";
+import { Box, Button, Heading, Text } from "grommet";
+import { AllowedNetworks, metamask, NetworkChainId } from "./web3Utils";
+import { Paper } from "../../components/Paper";
+import { FormNextLink } from "grommet-icons";
+import { web3ReactInterface } from "./index";
+import { Dot } from "../../components/Dot";
+import { ProgressStep, updateProgress } from "../../store/actions";
+import { connect } from "react-redux";
 
 const _WalletConnected = ({
-  setGoToNextPage,
   updateProgress
 }: {
-  setGoToNextPage: (val: boolean) => void;
   updateProgress: () => void;
 }) => {
   const {
@@ -34,7 +32,6 @@ const _WalletConnected = ({
 
   const handleSubmit = () => {
     updateProgress();
-    setGoToNextPage(true);
   };
 
   return (

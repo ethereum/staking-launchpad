@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button, CheckBox, Heading, Text } from "grommet";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
@@ -9,8 +8,9 @@ import { OperatingSystemButtons } from "./OperatingSystemButtons";
 import { LinuxInstructions } from "./LinuxInstructions";
 import { MacInstructions } from "./MacInstructions";
 import { WindowsInstructions } from "./WindowsInstructions";
-import { routesEnum } from "../../Routes";
 import { ProgressStep, updateProgress } from "../../store/actions";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { StoreState } from "../../store/reducers";
 
 export enum operatingSystem {
   "MAC",
@@ -22,6 +22,7 @@ const Highlight = styled.span`
   color: ${p => p.theme.secondary};
 `;
 
+// TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
   border: 1px solid ${p => p.theme.gray20};
@@ -31,12 +32,12 @@ const InstructionImgContainer = styled.div`
 `;
 
 const _GenerateKeysPage = ({
-  updateProgress
+  updateProgress,
+  progress
 }: {
   updateProgress: () => void;
+  progress: ProgressStep;
 }): JSX.Element => {
-  const [goToNextPage, setGoToNextPage] = useState(false);
-
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
@@ -49,7 +50,6 @@ const _GenerateKeysPage = ({
 
   const handleSubmit = () => {
     updateProgress();
-    setGoToNextPage(true);
   };
 
   const renderOSInstructions = (): React.ReactNode => {
@@ -65,8 +65,8 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (goToNextPage) {
-    return <Redirect to={routesEnum.UploadValidatorPage} />;
+  if (progress !== ProgressStep.GENERATE_KEY_PAIRS) {
+    return routeToCorrectProgressStep(progress);
   }
 
   return (
@@ -127,10 +127,14 @@ const _GenerateKeysPage = ({
   );
 };
 
+const mstp = ({ progress }: StoreState) => ({
+  progress
+});
+
 const mdtp = (dispatch: any) => ({
   updateProgress: (): void => {
     dispatch(updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE));
   }
 });
 
-export const GenerateKeysPage = connect(null, mdtp)(_GenerateKeysPage);
+export const GenerateKeysPage = connect(mstp, mdtp)(_GenerateKeysPage);

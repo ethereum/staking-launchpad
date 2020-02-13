@@ -9,7 +9,8 @@ import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
 import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
-import { keyFile } from "../../store/actions";
+import { keyFile, ProgressStep } from "../../store/actions";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 const SummarySection = styled(Box)`
   width: 30%;
@@ -17,10 +18,12 @@ const SummarySection = styled(Box)`
 
 const _SummaryPage = ({
   validatorCount,
-  keyFiles
+  keyFiles,
+  progress
 }: {
   validatorCount: number;
   keyFiles: keyFile[];
+  progress: ProgressStep;
 }): JSX.Element => {
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
@@ -105,6 +108,10 @@ const _SummaryPage = ({
     </div>
   );
 
+  if (progress !== ProgressStep.SUMMARY) {
+    return routeToCorrectProgressStep(progress);
+  }
+
   return (
     <WorkflowPageTemplate title="Summary">
       {renderSummarySection()}
@@ -123,9 +130,10 @@ const _SummaryPage = ({
   );
 };
 
-const mstp = ({ validatorCount, keyFiles }: StoreState) => ({
+const mstp = ({ validatorCount, keyFiles, progress }: StoreState) => ({
   validatorCount,
-  keyFiles
+  keyFiles,
+  progress
 });
 
 export const SummaryPage = connect(mstp)(_SummaryPage);

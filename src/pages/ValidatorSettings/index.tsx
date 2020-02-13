@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Button, Heading, Text } from "grommet";
-import { Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper } from "../../components/Paper";
 import { NumberInput } from "./NumberInput";
 import { CircleAlert } from "./CircleAlert";
-import { routesEnum } from "../../Routes";
 import { StoreState } from "../../store/reducers";
 import {
   ProgressStep,
@@ -15,6 +13,7 @@ import {
 } from "../../store/actions";
 import { connect } from "react-redux";
 import { InfoBox } from "../../components/InfoBox";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 const warnings: string[] = [
   "Please make sure you send exactly 32 ETH per validator, excluding fees.",
@@ -31,24 +30,23 @@ interface Props {
   updateValidatorCount(count: number): void;
   validatorCount: number;
   updateProgress: () => void;
+  progress: ProgressStep;
 }
 
 const _ValidatorSettingsPage = ({
   validatorCount,
   updateValidatorCount,
-  updateProgress
+  updateProgress,
+  progress
 }: Props): JSX.Element => {
-  const [goToNextPage, setGoToNextPage] = useState(false);
-
   const handleSubmit = () => {
     if (validatorCount > 0) {
       updateProgress();
-      setGoToNextPage(true);
     }
   };
 
-  if (goToNextPage) {
-    return <Redirect to={routesEnum.GenerateKeysPage} />;
+  if (progress !== ProgressStep.VALIDATOR_SETTINGS) {
+    return routeToCorrectProgressStep(progress);
   }
 
   return (
@@ -95,8 +93,9 @@ const _ValidatorSettingsPage = ({
   );
 };
 
-const mstp = ({ validatorCount }: StoreState) => ({
-  validatorCount
+const mstp = ({ validatorCount, progress }: StoreState) => ({
+  validatorCount,
+  progress
 });
 const mdtp = (dispatch: any) => ({
   updateValidatorCount: (count: number): void => {

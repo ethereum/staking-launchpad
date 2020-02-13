@@ -1,24 +1,16 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
-import { Box, Button, Heading, Text } from "grommet";
-import { FormNext } from "grommet-icons";
-import { connect } from "react-redux";
-import { every, values } from "lodash";
-import { scroller } from "react-scroll";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import {
-  AcknowledgementSection,
-  AcknowledgementSectionData
-} from "./AcknowledgementSection";
-import { Link } from "../../components/Link";
-import { routesEnum } from "../../Routes";
-import { StoreState } from "../../store/reducers";
-import {
-  ProgressStep,
-  updateAcknowledgementState,
-  updateProgress
-} from "../../store/actions";
-import { Paper } from "../../components/Paper";
+import {Box, Button, Heading, Text} from "grommet";
+import {FormNext} from "grommet-icons";
+import {connect} from "react-redux";
+import {every, values} from "lodash";
+import {scroller} from "react-scroll";
+import {WorkflowPageTemplate} from "../../components/WorkflowPage/WorkflowPageTemplate";
+import {AcknowledgementSection, AcknowledgementSectionData} from "./AcknowledgementSection";
+import {Link} from "../../components/Link";
+import {StoreState} from "../../store/reducers";
+import {ProgressStep, updateAcknowledgementState, updateProgress} from "../../store/actions";
+import {Paper} from "../../components/Paper";
+import {routeToCorrectProgressStep} from "../../utils/RouteToCorrectProgressStep";
 
 export enum acknowledgementId {
   signup = "signup",
@@ -210,20 +202,19 @@ interface Props {
   updateAcknowledgementState(allChecked: boolean): void;
   allAcknowledgementsAgreedTo: boolean;
   updateProgress: () => void;
+  progress: ProgressStep;
 }
 interface State {
   acknowledgements: {
     [key in acknowledgementId]: boolean;
   };
-  goToNextPage: boolean;
 }
 
 class _AcknowledgementPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      acknowledgements: defaultAcknowledgementState,
-      goToNextPage: false
+      acknowledgements: defaultAcknowledgementState
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
@@ -237,7 +228,6 @@ class _AcknowledgementPage extends React.Component<Props, State> {
 
   handleSubmit() {
     this.props.updateProgress();
-    this.setState({ goToNextPage: true });
   }
 
   updateAllAcknowledgementState() {
@@ -307,9 +297,10 @@ class _AcknowledgementPage extends React.Component<Props, State> {
       </Paper>
     );
   }
+
   render() {
-    if (this.state.goToNextPage) {
-      return <Redirect to={routesEnum.ValidatorSettingsPage} />;
+    if (this.props.progress !== ProgressStep.OVERVIEW) {
+      return routeToCorrectProgressStep(this.props.progress);
     }
 
     return (
@@ -336,8 +327,9 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   }
 }
 
-const mstp = ({ allAcknowledgementsAgreedTo }: StoreState) => ({
-  allAcknowledgementsAgreedTo
+const mstp = ({ progress, allAcknowledgementsAgreedTo }: StoreState) => ({
+  allAcknowledgementsAgreedTo,
+  progress
 });
 const mdtp = (dispatch: any) => ({
   updateAcknowledgementState: (allChecked: boolean): void => {

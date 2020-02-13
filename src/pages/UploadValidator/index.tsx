@@ -11,13 +11,13 @@ import {
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
 import { Box, Button, Text } from "grommet";
-import { routesEnum } from "../../Routes";
-import { Redirect } from "react-router-dom";
 import styled from "styled-components";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 const BackBtn = styled(Text)`
   color: ${p => p.theme.gray20};
   cursor: pointer;
+  margin-bottom: 10px;
   :hover {
     color: ${p => p.theme.gray};
   }
@@ -27,28 +27,27 @@ interface Props {
   updateKeyFiles(files: keyFile[]): void;
   keyFiles: keyFile[];
   updateProgress: (step: ProgressStep) => void;
+  progress: ProgressStep;
 }
 
 export const _UploadValidatorPage = ({
   keyFiles,
   updateKeyFiles,
-  updateProgress
+  updateProgress,
+  progress
 }: Props): JSX.Element => {
   const [fileAccepted, setFileAccepted] = useState(false);
-  const [redirectToNextPage, setRedirectToNextPage] = useState(false);
 
   const handleSubmit = () => {
     updateProgress(ProgressStep.CONNECT_WALLET);
-    setRedirectToNextPage(true);
   };
 
   const handleGoBack = () => {
     updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
-    setRedirectToNextPage(true);
   };
 
-  if (redirectToNextPage) {
-    return <Redirect to={routesEnum.ConnectWalletPage} />;
+  if (progress !== ProgressStep.UPLOAD_VALIDATOR_FILE) {
+    return routeToCorrectProgressStep(progress);
   }
 
   return (
@@ -75,8 +74,9 @@ export const _UploadValidatorPage = ({
   );
 };
 
-const mstp = ({ keyFiles }: StoreState) => ({
-  keyFiles
+const mstp = ({ keyFiles, progress }: StoreState) => ({
+  keyFiles,
+  progress
 });
 const mdtp = (dispatch: any) => ({
   updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files)),

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { WorkflowStatusBar } from "./WorkflowStatusBar";
+import { WorkflowProgressBar } from "./WorkflowProgressBar";
 import { Heading } from "grommet";
 
 interface WorkflowPageTemplateProps {
@@ -26,7 +26,7 @@ export const WorkflowPageTemplate = ({
 }: WorkflowPageTemplateProps): JSX.Element => {
   return (
     <div>
-      <WorkflowStatusBar />
+      <WorkflowProgressBar />
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="brand" className="mb40">

@@ -10,18 +10,20 @@ export const colors = {
   gray70: "#475166",
   gray85: "#4A4A4A",
   black: "#333333",
-  brand: "#0F2A43",
+  brand: "#0F2A43", // navy dark blue
+  secondary: "#007FB0", // ligter, royal blue
+  lightBrand: "#b0e2f5", // lightest blue
   transparent: "transparent",
   success: "#26AB83",
   successLight: "#66d6ae",
-  secondary: "#147FBF",
   error: "#912d2c",
   errorLight: "#FF9B9A",
-  warning: "#D45C06"
+  warning: "#D45C06",
+  info: "#FFF9F2",
 };
 
 export const details = {
-  borderRadius: "2px"
+  borderRadius: "3px"
 };
 
 export const screenSizes = {
@@ -36,5 +38,6 @@ export const screenSizes = {
 
 export const styledComponentsTheme = {
   ...colors,
-  ...screenSizes
+  ...screenSizes,
+  ...details
 };

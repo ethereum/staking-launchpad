@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import styled from "styled-components";
+import { Box, Button, CheckBox, Heading, Text } from "grommet";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Box, Button, Heading, Text } from "grommet";
 import { Paper, PaperGroup } from "../../components/Paper";
-import { OperatingSystems } from "./OperatingSystems";
+import { OperatingSystemButtons } from "./OperatingSystemButtons";
 import { LinuxInstructions } from "./LinuxInstructions";
 import { MacInstructions } from "./MacInstructions";
 import { WindowsInstructions } from "./WindowsInstructions";
-import { Redirect } from "react-router-dom";
-import { routesEnum } from "../../Routes";
+import { ProgressStep, updateProgress } from "../../store/actions";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { StoreState } from "../../store/reducers";
 
 export enum operatingSystem {
   "MAC",
@@ -15,14 +18,41 @@ export enum operatingSystem {
   "WINDOWS"
 }
 
-export const GenerateKeysPage = (): JSX.Element => {
-  const [goToNextPage, setGoToNextPage] = useState(false);
+const Highlight = styled.span`
+  color: ${p => p.theme.secondary};
+`;
 
+// TODO: Add an actual image to this container
+const InstructionImgContainer = styled.div`
+  height: 250px;
+  border: 1px solid ${p => p.theme.gray20};
+  border-radius: ${p => p.theme.borderRadius};
+  background-color: ${p => p.theme.gray10};
+  margin: 20px;
+`;
+
+const _GenerateKeysPage = ({
+  updateProgress,
+  progress
+}: {
+  updateProgress: () => void;
+  progress: ProgressStep;
+}): JSX.Element => {
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
 
-  const renderInstructions = (): React.ReactNode => {
+  const [agreedTo, setAgreedTo] = useState(false);
+
+  const onCheckboxClick = (e: any) => {
+    setAgreedTo(e.target.checked);
+  };
+
+  const handleSubmit = () => {
+    updateProgress();
+  };
+
+  const renderOSInstructions = (): React.ReactNode => {
     switch (chosenOs) {
       case operatingSystem.LINUX:
         return <LinuxInstructions />;
@@ -35,8 +65,8 @@ export const GenerateKeysPage = (): JSX.Element => {
     }
   };
 
-  if (goToNextPage) {
-    return <Redirect to={routesEnum.UploadValidatorPage} />;
+  if (progress !== ProgressStep.GENERATE_KEY_PAIRS) {
+    return routeToCorrectProgressStep(progress);
   }
 
   return (
@@ -49,22 +79,62 @@ export const GenerateKeysPage = (): JSX.Element => {
         </Paper>
         <Paper>
           <Heading level={3} size="small" color="brand">
-            What is your current operating system?
+            1. What is your current operating system?
           </Heading>
           <Text>
             Choose your current OS so we can tailor the instructions for you.
           </Text>
-          <OperatingSystems chosenOs={chosenOs} setChosenOs={setChosenOs} />
+          <OperatingSystemButtons
+            chosenOs={chosenOs}
+            setChosenOs={setChosenOs}
+          />
         </Paper>
       </PaperGroup>
-      {renderInstructions()}
+      {renderOSInstructions()}
+      <Paper className="mt20">
+        <Heading level={3} size="small" color="secondary">
+          4. Save the key files and get the validator file ready
+        </Heading>
+        <Text>
+          You should now be able to save the file{" "}
+          <Highlight>signing-keystore-....json</Highlight> which contains your
+          key pairs. Please make sure keep it safe, preferably offline.
+        </Text>
+        <InstructionImgContainer />
+        <Text>
+          The second file you will export is{" "}
+          <Highlight>deposit_data.json</Highlight> - you will need to upload in
+          the next step.
+        </Text>
+        <InstructionImgContainer />
+      </Paper>
+      <Paper className="mt20">
+        <CheckBox
+          onChange={onCheckboxClick}
+          checked={agreedTo}
+          label="I am keeping my keys safe and have backed up my mnemonic phrase."
+        />
+      </Paper>
       <Box align="center" pad="large">
         <Button
           primary
+          disabled={!agreedTo}
           label="CONTINUE"
-          onClick={() => setGoToNextPage(true)}
+          onClick={handleSubmit}
         />
       </Box>
     </WorkflowPageTemplate>
   );
 };
+
+const mstp = ({ progress }: StoreState) => ({
+  progress
+});
+
+const mdtp = (dispatch: any) => ({
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE));
+  }
+});
+
+export const GenerateKeysPage = connect(mstp, mdtp)(_GenerateKeysPage);

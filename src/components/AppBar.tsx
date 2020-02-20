@@ -15,7 +15,6 @@ import { routesEnum } from "../Routes";
 import styled from "styled-components";
 import rainbow from "../static/RainbowHeader.png";
 
-const Header = styled(Box)``;
 const RainbowBackground = styled.img`
   width: 100%;
   height: 64px;
@@ -46,8 +45,10 @@ export const AppBar = () => {
 
   return (
     <>
-      <RainbowBackground src={rainbow} />
-      <Header
+      <div className="relative">
+        <RainbowBackground src={rainbow} />
+      </div>
+      <Box
         tag="header"
         direction="row"
         align="center"
@@ -72,7 +73,7 @@ export const AppBar = () => {
             </Text>
           </Box>
         )}
-      </Header>
+      </Box>
     </>
   );
 };

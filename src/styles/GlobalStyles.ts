@@ -40,6 +40,7 @@ const shorthandRemSpacing = range(13).map((_, i) => {
 });
 
 const shorthandClasses = `
+  .relative { position: relative  }
   .flex { display: flex  }
   .flex-row { flex-direction: row  }
   .rm-double-border { margin-top: -2px  }

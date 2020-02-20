@@ -31,7 +31,6 @@ export const App: React.FC = () => {
             <ThemeProvider theme={styledComponentsTheme}>
               <GlobalStyles />
               <Router>
-                <AppBar />
                 <RoutedContent />
               </Router>
             </ThemeProvider>

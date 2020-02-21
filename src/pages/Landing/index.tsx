@@ -3,8 +3,8 @@ import styled from "styled-components";
 import TimelineImg from "../../static/TimelineMilestones.svg";
 import { Hero } from "./Hero";
 import { NetworkStatus } from "./NetworkStatus";
+import { StakingRewards } from "./StakingRewards";
 
-const StakingRewards = styled.div``;
 const SignupIntro = styled.div``;
 const ThreeSteps = styled.div``;
 const Phase0Info = styled.div``;
@@ -16,7 +16,7 @@ export const LandingPage = (): JSX.Element => {
     <div>
       <Hero />
       <NetworkStatus />
-      {/*<StakingRewards>StakingRewards</StakingRewards>*/}
+      <StakingRewards />
       {/*<Timeline src={TimelineImg} />*/}
       {/*<SignupIntro>SignupIntro</SignupIntro>*/}
       {/*<ThreeSteps>ThreeSteps</ThreeSteps>*/}

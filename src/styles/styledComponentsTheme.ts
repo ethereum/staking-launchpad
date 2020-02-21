@@ -15,7 +15,7 @@ export const colors = {
   lightBrand: "#b0e2f5", // lightest blue
   transparent: "transparent",
   success: "#26AB83",
-  successLight: "#66d6ae",
+  successLight: "#D0E1D5",
   successLightest: "#F8FAF9",
   error: "#912d2c",
   errorLight: "#FF9B9A",

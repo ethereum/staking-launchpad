@@ -6,15 +6,21 @@ const Container = styled.div`
   background-color: ${p => p.theme.successLightest};
   height: 630px;
   position: relative;
-  padding: 30px;
+  padding: 100px 0;
   .container {
     max-width: 100%;
   }
 `;
 
 const Content = styled.div`
-  margin: 100px auto;
-  padding: 0 15px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 120px;
+  @media only screen and (max-width: 1440px) {
+    padding: 0 60px;
+  }
 `;
 
 const GreenBold = styled.span`
@@ -59,6 +65,7 @@ const ProgressBar = ({ progress }: { progress: number }) => {
   );
 };
 
+const amountNeeded = 524288;
 export const NetworkStatus = () => {
   const [amountEth, setAmountEth] = useState(12000);
 
@@ -77,14 +84,23 @@ export const NetworkStatus = () => {
         <SubHeader className="mt20">
           The eth2 network needs to reach at least
           <GreenBold className="mr10 ml10" fontSize={24}>
-            524,288 ETH,
+            {amountNeeded} ETH,
           </GreenBold>
           <GrayBold className="mr10" fontSize={24}>
             16,284 validators,
           </GrayBold>
           to launch its mainnet
         </SubHeader>
-        <ProgressBar progress={10} />
+        <div>
+          <ProgressBar progress={10} />
+          <div className="flex space-between mt20">
+            <span>
+              <GreenBold fontSize={18} className="mr10">{amountEth} ETH</GreenBold>
+              <Text>Current Staking Balance</Text>
+            </span>
+            <Text>{amountNeeded - amountEth} ETH Launch threshold</Text>
+          </div>
+        </div>
       </Content>
     </Container>
   );

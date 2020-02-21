@@ -11,4 +11,5 @@ export const Text = styled(T)`
   letter-spacing: normal;
   color: ${p => p.theme.brand};
   margin: 0;
+  display: block;
 `;

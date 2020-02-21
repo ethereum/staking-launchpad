@@ -4,6 +4,7 @@ import { Hero } from "./Hero";
 import { NetworkStatus } from "./NetworkStatus";
 import { StakingRewards } from "./StakingRewards";
 import { TimelineMileStones } from "./TimelineMilestones";
+import { Introduction } from "./Introduction";
 
 const SignupIntro = styled.div``;
 const ThreeSteps = styled.div``;
@@ -17,7 +18,7 @@ export const LandingPage = (): JSX.Element => {
       <NetworkStatus />
       <StakingRewards />
       <TimelineMileStones />
-      {/*<SignupIntro>SignupIntro</SignupIntro>*/}
+      <Introduction />
       {/*<ThreeSteps>ThreeSteps</ThreeSteps>*/}
       {/*<Phase0Info>Phase0Info</Phase0Info>*/}
       {/*<CTAFooter>CTAFooter</CTAFooter>*/}

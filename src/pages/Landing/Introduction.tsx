@@ -1,0 +1,89 @@
+import React from "react";
+import styled from "styled-components";
+import ImgUrl from "../../static/EthRound-intro.svg";
+import EthDiamondURL from "../../static/eth-diamond.svg";
+import { Text } from "../../components/Text";
+import { Heading } from "grommet";
+
+const Container = styled.div`
+  background: white;
+`;
+const SubContainer = styled.div`
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 120px;
+  @media only screen and (max-width: 1440px) {
+    padding: 0 60px;
+  }
+`;
+const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 20px;
+  @media only screen and (max-width: 760px) {
+    display: none;
+  }
+`;
+const ContentContainer = styled.div`
+  @media only screen and (max-width: 760px) {
+    :before {
+      content: " ";
+      display: block;
+      position: absolute;
+      right: 60px;
+      top: 35px;
+      width: 250px;
+      height: 400px;
+      z-index: 1;
+      opacity: 0.15;
+      background-image: url(${EthDiamondURL});
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      -ms-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+  }
+`;
+export const Introduction = (): JSX.Element => {
+  return (
+    <Container>
+      <SubContainer className="py100 flex">
+        <ImgContainer>
+          <img src={ImgUrl} alt="" />
+        </ImgContainer>
+        <ContentContainer>
+          <Heading level={2} size="medium" color="brand" margin="none">
+            Introduction to the sign up process
+          </Heading>
+          <Text className="mt24">
+            eth2 is the next generation of Ethereum. It’s a multi-year plan to
+            improve the scalability, security and programmability of Ethereum,
+            without compromising on decentralization.
+          </Text>
+          <Text className="mt24">
+            In contrast to Eth1, eth2 uses proof-of-stake (PoS) to secure its
+            network. And while Eth1 will continue to exist as its own
+            independent proof-of-work chain for a little while to come, the
+            transition towards PoS starts now.
+          </Text>
+          <Text className="mt24">
+            In order to make this transition possible, eth2 requires active
+            participants – known as validators. Validators are responsible for
+            securing the network and receive continuous payouts for actions that
+            help the network reach consensus.
+          </Text>
+          <Text className="mt24">
+            This deposit ceremony takes you through how to become one.
+          </Text>
+        </ContentContainer>
+      </SubContainer>
+    </Container>
+  );
+};

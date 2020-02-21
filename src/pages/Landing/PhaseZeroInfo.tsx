@@ -153,9 +153,6 @@ export const PhaseZeroInfo = (): JSX.Element => {
             ))}
           </PhasesContainer>
         </ResponsiveContainer>
-        <Box align="center" pad="large" className="mt30">
-          <Button width={200} label="BECOME A VALIDATOR" />
-        </Box>
       </SubContainer>
     </Container>
   );

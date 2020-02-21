@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "../../components/Text";
-import { Heading } from "grommet";
+import { Box, Heading } from "grommet";
 import DepositImgUrl from "../../static/depositStep.svg";
 import GenerateKeyImgUrl from "../../static/generatekeyStep.svg";
 import ResponsibilityImgUrl from "../../static/responsibilityStep.svg";
+import { Button } from "../../components/Button";
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -74,6 +75,9 @@ export const SignupSteps = (): JSX.Element => {
           content="After depositing 32 ETH per validator, you receive 32 bETH and become an important part of the network!"
         />
       </StepsContainer>
+      <Box align="center" pad="large" className="mt30">
+        <Button width={200} label="BECOME A VALIDATOR" />
+      </Box>
     </Container>
   );
 };

@@ -4,6 +4,7 @@ import { Button as GrommetButton, ButtonProps } from "grommet";
 
 interface CustomButtonProps {
   className?: string;
+  width?: number;
 }
 
 const StyledButton = styled(GrommetButton)`
@@ -19,6 +20,7 @@ const StyledButton = styled(GrommetButton)`
     ${p => p.theme.rainbow.blue},
     ${p => p.theme.rainbow.purple}
   );
+  width: ${(p: { width: number }) => (p.width ? `${p.width}px` : undefined)};
 `;
 
 export const Button = (props: CustomButtonProps & ButtonProps) => {

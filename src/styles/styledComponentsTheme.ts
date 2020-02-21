@@ -20,7 +20,9 @@ export const colors = {
   error: "#912d2c",
   errorLight: "#FF9B9A",
   warning: "#D45C06",
-  info: "#FFF9F2"
+  info: "#FFF9F2",
+  lightPurple: "#F0F2FB",
+  purple: "#E3E5F2"
 };
 
 export const details = {

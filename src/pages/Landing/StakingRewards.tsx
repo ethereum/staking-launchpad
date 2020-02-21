@@ -11,6 +11,7 @@ const Container = styled.div`
 const APRChart = styled.img`
   margin: 100px auto;
   display: block;
+  width: 100%;
 `;
 const SubContainer = styled.div`
   box-sizing: border-box;
@@ -18,6 +19,9 @@ const SubContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 120px;
+  @media only screen and (max-width: 1440px) {
+    padding: 0 60px;
+  }
 `;
 
 export const StakingRewards = (): JSX.Element => {
@@ -28,7 +32,7 @@ export const StakingRewards = (): JSX.Element => {
           Staking and rewards
         </Heading>
         <Text className="mt24">
-          Once the mainnet has launched, validators get rewarded fo attesting
+          Once the mainnet has launched, validators get rewarded for attesting
           and proposing blocks. The rewards are tired to the overall amount of
           ETH staking in the network
         </Text>

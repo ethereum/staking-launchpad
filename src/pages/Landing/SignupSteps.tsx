@@ -20,8 +20,13 @@ const Container = styled.div`
 
 const StepsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
+
+  @media only screen and (max-width: 1380px) {
+    justify-content: center;
+  }
 `;
 
 const Step = ({
@@ -35,6 +40,7 @@ const Step = ({
 }) => {
   const Container = styled.div`
     max-width: 340px;
+    margin: 20px;
   `;
 
   const Img = styled.img`

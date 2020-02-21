@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Heading, Text } from "grommet";
+import { Heading } from "grommet";
+import { Text } from "../../components/Text";
 
 const Container = styled.div`
   background-color: ${p => p.theme.successLightest};
@@ -95,7 +96,9 @@ export const NetworkStatus = () => {
           <ProgressBar progress={10} />
           <div className="flex space-between mt20">
             <span>
-              <GreenBold fontSize={18} className="mr10">{amountEth} ETH</GreenBold>
+              <GreenBold fontSize={18} className="mr10">
+                {amountEth} ETH
+              </GreenBold>
               <Text>Current Staking Balance</Text>
             </span>
             <Text>{amountNeeded - amountEth} ETH Launch threshold</Text>

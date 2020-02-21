@@ -5,6 +5,10 @@ import { Button } from "../../components/Button";
 import RainbowImg from "../../static/JumboRainbow.png";
 import EthLogoImg from "../../static/eth-diamond.svg";
 
+const RainbowBtn = styled(Button)`
+  width: 250px;
+`;
+
 const Rainbow = styled.img`
   height: 630px;
   width: 100%;
@@ -63,7 +67,7 @@ export const Hero = () => {
             Earn continuous payouts for providing a public good to the
             community.
           </Text>
-          <Button className="mt20" label="GET STARTED" />
+          <RainbowBtn className="mt20" label="GET STARTED" />
         </TextContent>
       </Container>
     </Jumbotron>

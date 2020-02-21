@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Box, Button, Grid, ResponsiveContext} from "grommet";
+import { Grid, ResponsiveContext } from "grommet";
 import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { useWeb3React } from "@web3-react/core";
@@ -12,8 +12,11 @@ import {
   useMetamaskListener
 } from "./web3Utils";
 import { WalletButton } from "./WalletButton";
-import { Redirect } from "react-router-dom";
-import { routesEnum } from "../../Routes";
+
+import { StoreState } from "../../store/reducers";
+import { ProgressStep } from "../../store/actions";
+import { connect } from "react-redux";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 export interface web3ReactInterface {
   activate: (
@@ -31,8 +34,11 @@ export interface web3ReactInterface {
   error?: Error;
 }
 
-export const ConnectWalletPage = (): JSX.Element => {
-  const [goToNextPage, setGoToNextPage] = useState(false);
+const _ConnectWalletPage = ({
+  progress
+}: {
+  progress: ProgressStep;
+}): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
     active: walletConnected,
@@ -42,14 +48,14 @@ export const ConnectWalletPage = (): JSX.Element => {
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  if (goToNextPage) {
-    return <Redirect to={routesEnum.SummaryPage} />;
+  if (progress !== ProgressStep.CONNECT_WALLET) {
+    return routeToCorrectProgressStep(progress);
   }
 
   if (walletConnected) {
     return (
       <WorkflowPageTemplate title="Connect Wallet">
-        <WalletConnected setGoToNextPage={setGoToNextPage} />
+        <WalletConnected />
       </WorkflowPageTemplate>
     );
   }
@@ -75,3 +81,9 @@ export const ConnectWalletPage = (): JSX.Element => {
     </WorkflowPageTemplate>
   );
 };
+
+const mstp = ({ progress }: StoreState) => ({
+  progress
+});
+
+export const ConnectWalletPage = connect(mstp)(_ConnectWalletPage);

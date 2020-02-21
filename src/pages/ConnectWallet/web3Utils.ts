@@ -38,7 +38,6 @@ export const metamask: InjectedConnector = new MetamaskConnector({
 });
 
 if (!process.env.REACT_APP_PORTIS_DAPP_ID) {
-  console.log(process.env);
   throw new TypeError("Missing PORTIS_DAPP_ID");
 }
 
@@ -76,7 +75,7 @@ export function useMetamaskEagerConnect(): boolean {
         : setAttempted(true);
     };
     attemptConnection();
-  }, []);
+  }, [connectTo]);
 
   useEffect(() => {
     if (!attempted && isMetamaskConnected) setAttempted(true);

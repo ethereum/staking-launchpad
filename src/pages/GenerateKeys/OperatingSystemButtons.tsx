@@ -4,17 +4,22 @@ import { operatingSystem } from "./index";
 import styled from "styled-components";
 import MacLogo from "../../static/apple.svg";
 import LinuxLogo from "../../static/linux.svg";
+import WindowsLogo from "../../static/windows.svg";
 
 const LogoContainerBox = styled.div`
   width: 200px;
   height: 200px;
   border: ${(p: { theme: any; isActive: boolean }) =>
-    `1px solid ${p.isActive ? p.theme.brand : p.theme.gray20}`};
+    `2px solid ${p.isActive ? p.theme.secondary : p.theme.gray20}`};
   border-radius: ${p => p.theme.borderRadius};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   cursor: pointer;
+  -webkit-transition: border 500ms ease-out;
+  -moz-transition: border 500ms ease-out;
+  -o-transition: border 500ms ease-out;
+  transition: border 500ms ease-out;
   @media only screen and (max-width: 770px) {
     width: 150px;
     height: 150px;
@@ -33,7 +38,12 @@ const LogoBackground = styled.div`
   height: 85px;
   margin: 20px auto auto;
   border-radius: 50%;
-  background-color: ${p => p.theme.gray10};
+  background-color: ${(p: { theme: any; isActive: boolean }) =>
+    p.isActive ? p.theme.lightBrand : p.theme.gray10};
+  -webkit-transition: background-color 500ms ease-out;
+  -moz-transition: background-color 500ms ease-out;
+  -o-transition: background-color 500ms ease-out;
+  transition: background-color 500ms ease-out;
   img {
     width: 50px;
     height: 50px;
@@ -64,7 +74,7 @@ const LogoContainer = ({
 }: LogoContainerProps) => {
   return (
     <LogoContainerBox onClick={onClick} isActive={isActive}>
-      <LogoBackground>
+      <LogoBackground isActive={isActive}>
         <img src={osImage} alt={text} />
       </LogoBackground>
       <LogoText level={3} size="small" color="brand">
@@ -88,7 +98,7 @@ const Container = styled.div`
   }
 `;
 
-export const OperatingSystems = ({
+export const OperatingSystemButtons = ({
   chosenOs,
   setChosenOs
 }: {
@@ -107,7 +117,7 @@ export const OperatingSystems = ({
         text="Windows"
         onClick={() => setChosenOs(operatingSystem.WINDOWS)}
         isActive={chosenOs === operatingSystem.WINDOWS}
-        osImage={MacLogo}
+        osImage={WindowsLogo}
       />
       <LogoContainer
         text="Mac"

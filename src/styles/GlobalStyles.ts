@@ -45,6 +45,7 @@ const shorthandClasses = `
   .flex-row { flex-direction: row  }
   .flex-column { flex-direction: column  }
   .space-between { justify-content: space-between  }
+  .center { justify-content: center  }
   .start { justify-content: flex-start  }
   .rm-double-border { margin-top: -2px  }
 `;

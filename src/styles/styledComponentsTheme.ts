@@ -41,7 +41,7 @@ export const rainbow = {
 export const screenSizes = {
   smaller: "420px",
   small: "576px",
-  medium: "768px",
+  medium: "760px",
   large: "992px",
   larger: "1200px",
   largest: "1440px",
@@ -50,7 +50,7 @@ export const screenSizes = {
 
 export const styledComponentsTheme = {
   ...colors,
-  ...screenSizes,
+  screenSizes,
   ...details,
   rainbow
 };

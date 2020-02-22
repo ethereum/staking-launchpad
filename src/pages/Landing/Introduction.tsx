@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ImgUrl from "../../static/EthRound-intro.svg";
-import EthDiamondURL from "../../static/eth-diamond.svg";
+import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
 import { Text } from "../../components/Text";
 import { Heading } from "grommet";
 
@@ -40,7 +40,7 @@ const ContentContainer = styled.div`
       height: 400px;
       z-index: 1;
       opacity: 0.15;
-      background-image: url(${EthDiamondURL});
+      background-image: url(${EthDiamondPlain});
       background-repeat: no-repeat;
       background-position: 50% 0;
       -ms-background-size: cover;

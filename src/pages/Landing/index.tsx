@@ -10,7 +10,7 @@ import { CTAFooter } from "./CTAFooter";
 
 export const LandingPage = (): JSX.Element => {
   return (
-    <div>
+    <>
       <Hero />
       <NetworkStatus />
       <StakingRewards />
@@ -19,6 +19,6 @@ export const LandingPage = (): JSX.Element => {
       <SignupSteps />
       <PhaseZeroInfo />
       <CTAFooter />
-    </div>
+    </>
   );
 };

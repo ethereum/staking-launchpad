@@ -306,7 +306,6 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   }
 
   render() {
-    window.scrollTo(0, 0);
     if (this.props.progress !== ProgressStep.OVERVIEW) {
       return routeToCorrectProgressStep(this.props.progress);
     }

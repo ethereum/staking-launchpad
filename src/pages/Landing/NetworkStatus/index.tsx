@@ -32,8 +32,9 @@ const BoldGray = styled.span`
   font-weight: bold;
 `;
 
-const amountNeeded = 524288;
+// TODO: Hook up to the contract. Using hard-coded values for now.
 
+const amountNeeded = 524288;
 export const NetworkStatus = () => {
   const [amountEth, setAmountEth] = useState(12000);
 

@@ -1,3 +1,4 @@
+// TODO: This needs to be cleaned up
 export const colors = {
   white: "#ffffff",
   gray5: "#fdfcfe",

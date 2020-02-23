@@ -6,17 +6,12 @@ import { Button } from "../../components/Button";
 import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import { routesEnum } from "../../Routes";
+import { Link } from "../../components/Link";
 
 const RainbowBackground = styled.div`
-  background-image: radial-gradient(
-    circle at 100% -80%,
-    ${p => p.theme.rainbow.red},
-    ${p => p.theme.rainbow.orange},
-    ${p => p.theme.rainbow.yellow},
-    ${p => p.theme.rainbow.green},
-    ${p => p.theme.rainbow.blue},
-    ${p => p.theme.rainbow.purple}
-  );
+  background-image: ${p =>
+    `radial-gradient(circle at 100% -80%, ${p.theme.rainbow}`});
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -27,13 +22,11 @@ const MainContainer = styled.div`
     padding: 0 60px 100px;
   }
 `;
-
 const ResponsiveContainer = styled.div`
   @media only screen and (min-width: ${p => p.theme.screenSizes.medium}) {
     max-width: 65%;
   }
 `;
-
 const LogoContainer = styled.div`
   display: flex;
   height: 50px;
@@ -70,7 +63,9 @@ export const Hero = () => {
             </ScrollAnimation>
           </div>
           <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
-            <Button width={250} label="GET STARTED" />
+            <Link to={routesEnum.AcknowledgementPage}>
+              <Button rainbow width={250} label="GET STARTED" />
+            </Link>
           </ScrollAnimation>
         </ResponsiveContainer>
       </MainContainer>

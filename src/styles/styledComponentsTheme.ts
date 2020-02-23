@@ -29,14 +29,14 @@ export const details = {
   borderRadius: "3px"
 };
 
-export const rainbow = {
-  red: "#fca09a",
-  orange: "#fdccd3",
-  yellow: "#ffcc9e",
-  green: "#98ddad",
-  blue: "#81d7ec",
-  purple: "#a0aaed"
-};
+export const rainbow = `
+  #fca09a,
+  #fdccd3,
+  #ffcc9e,
+  #98ddad,
+  #81d7ec,
+  #a0aaed
+`;
 
 export const screenSizes = {
   smaller: "420px",

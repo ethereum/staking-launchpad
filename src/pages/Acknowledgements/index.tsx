@@ -1,16 +1,23 @@
 import React from "react";
-import {Box, Button, Heading, Text} from "grommet";
-import {FormNext} from "grommet-icons";
-import {connect} from "react-redux";
-import {every, values} from "lodash";
-import {scroller} from "react-scroll";
-import {WorkflowPageTemplate} from "../../components/WorkflowPage/WorkflowPageTemplate";
-import {AcknowledgementSection, AcknowledgementSectionData} from "./AcknowledgementSection";
-import {Link} from "../../components/Link";
-import {StoreState} from "../../store/reducers";
-import {ProgressStep, updateAcknowledgementState, updateProgress} from "../../store/actions";
-import {Paper} from "../../components/Paper";
-import {routeToCorrectProgressStep} from "../../utils/RouteToCorrectProgressStep";
+import { Box, Button, Heading, Text } from "grommet";
+import { FormNext } from "grommet-icons";
+import { connect } from "react-redux";
+import { every, values } from "lodash";
+import { scroller } from "react-scroll";
+import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
+import {
+  AcknowledgementSection,
+  AcknowledgementSectionData
+} from "./AcknowledgementSection";
+import { Link } from "../../components/Link";
+import { StoreState } from "../../store/reducers";
+import {
+  ProgressStep,
+  updateAcknowledgementState,
+  updateProgress
+} from "../../store/actions";
+import { Paper } from "../../components/Paper";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 export enum acknowledgementId {
   signup = "signup",
@@ -299,6 +306,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   }
 
   render() {
+    window.scrollTo(0, 0);
     if (this.props.progress !== ProgressStep.OVERVIEW) {
       return routeToCorrectProgressStep(this.props.progress);
     }

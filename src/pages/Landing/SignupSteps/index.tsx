@@ -1,63 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "../../components/Text";
 import { Box, Heading } from "grommet";
-import DepositImgUrl from "../../static/depositStep.svg";
-import GenerateKeyImgUrl from "../../static/generatekeyStep.svg";
-import ResponsibilityImgUrl from "../../static/responsibilityStep.svg";
-import { Button } from "../../components/Button";
+import DepositImgUrl from "../../../static/depositStep.svg";
+import GenerateKeyImgUrl from "../../../static/generatekeyStep.svg";
+import ResponsibilityImgUrl from "../../../static/responsibilityStep.svg";
+import { Button } from "../../../components/Button";
 import ScrollAnimation from "react-animate-on-scroll";
+import { routesEnum } from "../../../Routes";
+import { Link } from "../../../components/Link";
+import { Step } from "./Step";
 
 const Container = styled.div`
   box-sizing: border-box;
-  max-width: 1440px;
+  max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
   padding: 0 120px;
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: 0 60px;
   }
 `;
-
 const StepsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
-
   @media only screen and (max-width: 1380px) {
     justify-content: center;
   }
 `;
-
-const Step = ({
-  imgUrl,
-  title,
-  content
-}: {
-  imgUrl: any;
-  title: string;
-  content: string;
-}) => {
-  const Container = styled.div`
-    max-width: 340px;
-    margin: 20px;
-  `;
-
-  const Img = styled.img`
-    width: 340px;
-  `;
-
-  return (
-    <Container>
-      <Img src={imgUrl} alt="" />
-      <Heading level="4" className="my10">
-        {title}
-      </Heading>
-      <Text>{content}</Text>
-    </Container>
-  );
-};
 
 export const SignupSteps = (): JSX.Element => {
   return (
@@ -90,9 +61,13 @@ export const SignupSteps = (): JSX.Element => {
           />
         </ScrollAnimation>
       </StepsContainer>
-      <Box align="center" pad="large" className="mt30">
-        <Button width={200} label="BECOME A VALIDATOR" />
-      </Box>
+      <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
+        <Box align="center" pad="large" className="mt30">
+          <Link to={routesEnum.AcknowledgementPage}>
+            <Button width={200} label="BECOME A VALIDATOR" />
+          </Link>
+        </Box>
+      </ScrollAnimation>
     </Container>
   );
 };

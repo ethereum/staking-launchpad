@@ -12,11 +12,11 @@ const Container = styled.div`
 const SubContainer = styled.div`
   position: relative;
   box-sizing: border-box;
-  max-width: 1440px;
+  max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
   padding: 0 120px;
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: 0 60px;
   }
 `;
@@ -25,12 +25,14 @@ const ImgContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 20px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     display: none;
   }
 `;
+
+// adds an opaque eth logo behind the text on small screen sizes
 const ContentContainer = styled.div`
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     :before {
       content: " ";
       display: block;

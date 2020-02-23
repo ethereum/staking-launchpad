@@ -9,7 +9,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 const Container = styled.div`
   background: white;
 `;
-
 const APRChart = styled.img`
   margin: 100px auto;
   display: block;
@@ -17,11 +16,11 @@ const APRChart = styled.img`
 `;
 const SubContainer = styled.div`
   box-sizing: border-box;
-  max-width: 1440px;
+  max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
   padding: 0 120px;
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: 0 60px;
   }
 `;

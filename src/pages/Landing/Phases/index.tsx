@@ -1,70 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "../../components/Text";
-import { Box } from "grommet";
-import { Button } from "../../components/Button";
-import { Link } from "../../components/Link";
-import { Heading } from "../../components/Heading";
+import { Text } from "../../../components/Text";
+import { Heading } from "../../../components/Heading";
 import ScrollAnimation from "react-animate-on-scroll";
+import { PhaseCard } from "./PhaseCard";
 
 const Container = styled.div`
   background-color: ${p => p.theme.lightPurple};
 `;
 const SubContainer = styled.div`
-  box-sizing: border-box;
-  max-width: 1440px;
+  max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
   padding: 0 120px;
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: 0 60px;
   }
 `;
-
 const PhasesContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  //justify-content: space-between;
-  //margin-top: 30px;
 `;
-const TextContainer = styled.div`
-  max-width: 440px;
-  padding: 0 20px;
-`;
-
-const PhaseCard = ({
-  title,
-  subTitle,
-  link,
-  linkUrl
-}: {
-  title: string;
-  subTitle: string;
-  link: string;
-  linkUrl: string;
-}) => {
-  const Container = styled.div`
-    width: 610px;
-    background-color: ${p => p.theme.purple};
-    margin: 10px auto;
-    padding: 10px 20px;
-    border-radius: ${p => p.theme.borderRadius};
-  `;
-
-  return (
-    <Container>
-      <Heading level="4" size="large" className="my10">
-        {title}
-      </Heading>
-      <Text>{subTitle}</Text>
-      <Link className="mt20" to={linkUrl}>
-        {link}
-      </Link>
-    </Container>
-  );
-};
-
 const ResponsiveContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -129,12 +86,12 @@ const phases: phase[] = [
   }
 ];
 
-export const PhaseZeroInfo = (): JSX.Element => {
+export const Phases = (): JSX.Element => {
   return (
     <Container>
       <SubContainer className="py100">
         <ResponsiveContainer>
-          <TextContainer>
+          <div className="px60">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <Heading margin="none" className="mt20">
                 What is eth2 phase 0?
@@ -146,10 +103,11 @@ export const PhaseZeroInfo = (): JSX.Element => {
                 launched in 4 phases.
               </Text>
             </ScrollAnimation>
-          </TextContainer>
+          </div>
           <PhasesContainer>
-            {phases.map((phase: phase, index) => (
+            {phases.map((phase: phase) => (
               <PhaseCard
+                key={phase.title}
                 title={phase.title}
                 link={phase.link}
                 linkUrl={phase.linkUrl}

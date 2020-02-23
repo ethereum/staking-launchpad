@@ -5,7 +5,7 @@ import { StakingRewards } from "./StakingRewards";
 import { TimelineMileStones } from "./TimelineMilestones";
 import { Introduction } from "./Introduction";
 import { SignupSteps } from "./SignupSteps";
-import { PhaseZeroInfo } from "./PhaseZeroInfo";
+import { Phases } from "./Phases";
 import { CTAFooter } from "./CTAFooter";
 
 export const LandingPage = (): JSX.Element => {
@@ -17,7 +17,7 @@ export const LandingPage = (): JSX.Element => {
       <TimelineMileStones />
       <Introduction />
       <SignupSteps />
-      <PhaseZeroInfo />
+      <Phases />
       <CTAFooter />
     </>
   );

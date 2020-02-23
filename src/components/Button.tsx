@@ -11,16 +11,21 @@ const StyledButton = styled(GrommetButton)`
   display: block;
   padding: 10px;
   text-transform: capitalize;
-  background-image: linear-gradient(
-    to right,
-    ${p => p.theme.rainbow.red},
-    ${p => p.theme.rainbow.orange},
-    ${p => p.theme.rainbow.yellow},
-    ${p => p.theme.rainbow.green},
-    ${p => p.theme.rainbow.blue},
-    ${p => p.theme.rainbow.purple}
-  );
   width: ${(p: { width: number }) => (p.width ? `${p.width}px` : undefined)};
+  background-color: ${p => p.theme.brand};
+  color: ${p => p.theme.white};
+  border: none;
+  :hover {
+    box-shadow: none;
+  }
+  
+  // rainbow styles
+  ${p =>
+    p.theme.rainbow &&
+    `background-image: linear-gradient(to right, ${p.theme.rainbow});
+     color: ${p.theme.brand};
+     border: 1px solid ${p.theme.brand};
+     `}
 `;
 
 export const Button = (props: CustomButtonProps & ButtonProps) => {

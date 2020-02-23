@@ -5,6 +5,7 @@ import { Box } from "grommet";
 import { Button } from "../../components/Button";
 import { Link } from "../../components/Link";
 import { Heading } from "../../components/Heading";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Container = styled.div`
   background-color: ${p => p.theme.lightPurple};
@@ -134,16 +135,20 @@ export const PhaseZeroInfo = (): JSX.Element => {
       <SubContainer className="py100">
         <ResponsiveContainer>
           <TextContainer>
-            <Heading margin="none" className="mt20">
-              What is eth2 phase 0?
-            </Heading>
-            <Text>
-              Transitioning from proof-of-work to proof-of-stake, eth2 will be
-              launched in 4 phases.
-            </Text>
+            <ScrollAnimation animateIn="fadeIn" animateOnce>
+              <Heading margin="none" className="mt20">
+                What is eth2 phase 0?
+              </Heading>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce>
+              <Text>
+                Transitioning from proof-of-work to proof-of-stake, eth2 will be
+                launched in 4 phases.
+              </Text>
+            </ScrollAnimation>
           </TextContainer>
           <PhasesContainer>
-            {phases.map((phase: phase) => (
+            {phases.map((phase: phase, index) => (
               <PhaseCard
                 title={phase.title}
                 link={phase.link}

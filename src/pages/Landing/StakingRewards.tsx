@@ -3,6 +3,8 @@ import styled from "styled-components";
 import ChartUrl from "../../static/StakingRewards.svg";
 import { Text } from "../../components/Text";
 import { Heading } from "grommet";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Container = styled.div`
   background: white;
@@ -28,14 +30,18 @@ export const StakingRewards = (): JSX.Element => {
   return (
     <Container>
       <SubContainer className="py100">
-        <Heading level={2} size="medium" color="brand" margin="none">
-          Staking and rewards
-        </Heading>
-        <Text className="mt24">
-          Once the mainnet has launched, validators get rewarded for attesting
-          and proposing blocks. The rewards are tired to the overall amount of
-          ETH staking in the network
-        </Text>
+        <ScrollAnimation animateIn="fadeIn" animateOnce>
+          <Heading level={2} size="medium" color="brand" margin="none">
+            Staking and rewards
+          </Heading>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce>
+          <Text className="mt24">
+            Once the mainnet has launched, validators get rewarded for attesting
+            and proposing blocks. The rewards are tired to the overall amount of
+            ETH staking in the network
+          </Text>
+        </ScrollAnimation>
         <APRChart src={ChartUrl} alt="" />
       </SubContainer>
     </Container>

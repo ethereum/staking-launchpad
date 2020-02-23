@@ -4,6 +4,8 @@ import { Heading } from "../../components/Heading";
 import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
 import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const RainbowBackground = styled.div`
   background-image: radial-gradient(
@@ -51,19 +53,25 @@ export const Hero = () => {
       <MainContainer>
         <ResponsiveContainer>
           <div className="py100">
-            <LogoContainer>
-              <EthLogo src={EthDiamondPlain} />
-              <LogoText>eth2 Launch Pad</LogoText>
-            </LogoContainer>
-            <Heading level={2} size="large" color="brand" className="my20">
-              Become a validator and help secure the eth2 network.
-            </Heading>
-            <Text className="mt24">
-              Earn continuous payouts for providing a public good to the
-              community.
-            </Text>
+            <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
+              <LogoContainer>
+                <EthLogo src={EthDiamondPlain} />
+                <LogoText>eth2 Launch Pad</LogoText>
+              </LogoContainer>
+              <Heading level={2} size="large" color="brand" className="my20">
+                Become a validator and help secure the eth2 network.
+              </Heading>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
+              <Text className="mt24">
+                Earn continuous payouts for providing a public good to the
+                community.
+              </Text>
+            </ScrollAnimation>
           </div>
-          <Button width={250} label="GET STARTED" />
+          <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
+            <Button width={250} label="GET STARTED" />
+          </ScrollAnimation>
         </ResponsiveContainer>
       </MainContainer>
     </RainbowBackground>

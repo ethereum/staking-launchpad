@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Heading } from "grommet";
 import { Text } from "../../components/Text";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Container = styled.div`
   background-color: ${p => p.theme.successLightest};
@@ -73,37 +74,39 @@ export const NetworkStatus = () => {
   return (
     <Container>
       <Content>
-        <Heading level={2} size="medium" color="brand" margin="none">
-          Network Status
-        </Heading>
-        <SubHeader size="x-large">
-          <GreenBold className="mr10" fontSize={24}>
-            {amountEth} ETH
-          </GreenBold>
-          in the network and counting
-        </SubHeader>
-        <SubHeader className="mt20">
-          The eth2 network needs to reach at least
-          <GreenBold className="mr10 ml10" fontSize={24}>
-            {amountNeeded} ETH,
-          </GreenBold>
-          <GrayBold className="mr10" fontSize={24}>
-            16,284 validators,
-          </GrayBold>
-          to launch its mainnet
-        </SubHeader>
-        <div>
-          <ProgressBar progress={10} />
-          <div className="flex space-between mt20">
-            <span>
-              <GreenBold fontSize={18} className="mr10">
-                {amountEth} ETH
-              </GreenBold>
-              <Text>Current Staking Balance</Text>
-            </span>
-            <Text>{amountNeeded - amountEth} ETH Launch threshold</Text>
+        <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
+          <Heading level={2} size="medium" color="brand" margin="none">
+            Network Status
+          </Heading>
+          <SubHeader size="x-large">
+            <GreenBold className="mr10" fontSize={24}>
+              {amountEth} ETH
+            </GreenBold>
+            in the network and counting
+          </SubHeader>
+          <SubHeader className="mt20">
+            The eth2 network needs to reach at least
+            <GreenBold className="mr10 ml10" fontSize={24}>
+              {amountNeeded} ETH,
+            </GreenBold>
+            <GrayBold className="mr10" fontSize={24}>
+              16,284 validators,
+            </GrayBold>
+            to launch its mainnet
+          </SubHeader>
+          <div>
+            <ProgressBar progress={10} />
+            <div className="flex space-between mt20">
+              <span>
+                <GreenBold fontSize={18} className="mr10">
+                  {amountEth} ETH
+                </GreenBold>
+                <Text>Current Staking Balance</Text>
+              </span>
+              <Text>{amountNeeded - amountEth} ETH Launch threshold</Text>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </Content>
     </Container>
   );

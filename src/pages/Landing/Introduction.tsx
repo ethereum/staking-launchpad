@@ -4,6 +4,7 @@ import ImgUrl from "../../static/EthRound-intro.svg";
 import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
 import { Text } from "../../components/Text";
 import { Heading } from "grommet";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Container = styled.div`
   background: white;
@@ -59,29 +60,33 @@ export const Introduction = (): JSX.Element => {
           <img src={ImgUrl} alt="" />
         </ImgContainer>
         <ContentContainer>
-          <Heading level={2} size="medium" color="brand" margin="none">
-            Introduction to the sign up process
-          </Heading>
-          <Text className="mt24">
-            eth2 is the next generation of Ethereum. It’s a multi-year plan to
-            improve the scalability, security and programmability of Ethereum,
-            without compromising on decentralization.
-          </Text>
-          <Text className="mt24">
-            In contrast to Eth1, eth2 uses proof-of-stake (PoS) to secure its
-            network. And while Eth1 will continue to exist as its own
-            independent proof-of-work chain for a little while to come, the
-            transition towards PoS starts now.
-          </Text>
-          <Text className="mt24">
-            In order to make this transition possible, eth2 requires active
-            participants – known as validators. Validators are responsible for
-            securing the network and receive continuous payouts for actions that
-            help the network reach consensus.
-          </Text>
-          <Text className="mt24">
-            This deposit ceremony takes you through how to become one.
-          </Text>
+          <ScrollAnimation animateIn="fadeIn" animateOnce>
+            <Heading level={2} size="medium" color="brand" margin="none">
+              Introduction to the sign up process
+            </Heading>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce>
+            <Text className="mt24">
+              eth2 is the next generation of Ethereum. It’s a multi-year plan to
+              improve the scalability, security and programmability of Ethereum,
+              without compromising on decentralization.
+            </Text>
+            <Text className="mt24">
+              In contrast to Eth1, eth2 uses proof-of-stake (PoS) to secure its
+              network. And while Eth1 will continue to exist as its own
+              independent proof-of-work chain for a little while to come, the
+              transition towards PoS starts now.
+            </Text>
+            <Text className="mt24">
+              In order to make this transition possible, eth2 requires active
+              participants – known as validators. Validators are responsible for
+              securing the network and receive continuous payouts for actions
+              that help the network reach consensus.
+            </Text>
+            <Text className="mt24">
+              This deposit ceremony takes you through how to become one.
+            </Text>
+          </ScrollAnimation>
         </ContentContainer>
       </SubContainer>
     </Container>

@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, Heading } from "grommet";
-import DepositImgUrl from "../../../static/depositStep.svg";
-import GenerateKeyImgUrl from "../../../static/generatekeyStep.svg";
-import ResponsibilityImgUrl from "../../../static/responsibilityStep.svg";
-import { Button } from "../../../components/Button";
+import { Box } from "grommet";
 import ScrollAnimation from "react-animate-on-scroll";
+import DepositImgUrl from "../../../static/deposit-eth-step.svg";
+import GenerateKeyImgUrl from "../../../static/generate-key-step.svg";
+import ResponsibilityImgUrl from "../../../static/responsibility-step.svg";
+import { Button } from "../../../components/Button";
+import { Heading } from "../../../components/Heading";
 import { routesEnum } from "../../../Routes";
 import { Link } from "../../../components/Link";
 import { Step } from "./Step";

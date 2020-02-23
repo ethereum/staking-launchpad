@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../../components/Button";
 import { Box } from "grommet";
+import { Button } from "../../components/Button";
 import { Link } from "../../components/Link";
 import { routesEnum } from "../../Routes";
 

@@ -5,6 +5,7 @@ import { Button as GrommetButton, ButtonProps } from "grommet";
 interface CustomButtonProps {
   className?: string;
   width?: number;
+  rainbow?: boolean;
 }
 
 const StyledButton = styled(GrommetButton)`
@@ -18,14 +19,14 @@ const StyledButton = styled(GrommetButton)`
   :hover {
     box-shadow: none;
   }
-  
+
   // rainbow styles
   ${p =>
     p.theme.rainbow &&
     `background-image: linear-gradient(to right, ${p.theme.rainbow});
      color: ${p.theme.brand};
      border: 1px solid ${p.theme.brand};
-     `}
+   `}
 `;
 
 export const Button = (props: CustomButtonProps & ButtonProps) => {

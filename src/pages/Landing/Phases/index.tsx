@@ -1,8 +1,8 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import styled from "styled-components";
 import { Text } from "../../../components/Text";
 import { Heading } from "../../../components/Heading";
-import ScrollAnimation from "react-animate-on-scroll";
 import { PhaseCard } from "./PhaseCard";
 
 const Container = styled.div`

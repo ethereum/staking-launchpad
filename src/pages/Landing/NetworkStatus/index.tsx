@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 import { Heading } from "grommet";
 import { Text } from "../../../components/Text";
-import ScrollAnimation from "react-animate-on-scroll";
 import { ProgressBar } from "./ProgressBar";
 
 const Container = styled.div`

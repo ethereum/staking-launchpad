@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
+import { routesEnum } from "../../Routes";
 import { Heading } from "../../components/Heading";
 import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
-import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
-import "animate.css/animate.min.css";
-import ScrollAnimation from "react-animate-on-scroll";
-import { routesEnum } from "../../Routes";
 import { Link } from "../../components/Link";
 
 const RainbowBackground = styled.div`

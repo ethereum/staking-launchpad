@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import ChartUrl from "../../static/StakingRewards.svg";
-import { Text } from "../../components/Text";
-import { Heading } from "grommet";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import ChartUrl from "../../static/StakingRewards.svg";
+import { Heading } from "../../components/Heading";
+import { Text } from "../../components/Text";
 
 const Container = styled.div`
   background: white;

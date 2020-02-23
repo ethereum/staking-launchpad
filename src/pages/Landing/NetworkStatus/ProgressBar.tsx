@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React from "react";
+import styled from "styled-components";
 
 export const ProgressBar = ({ progress }: { progress: number }) => {
     const PBarContainer = styled.div`

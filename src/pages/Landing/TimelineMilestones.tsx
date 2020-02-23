@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import ImgUrl from "../../static/TimelineMilestones.svg";
-import { Text } from "../../components/Text";
-import { Heading } from "grommet";
 import ScrollAnimation from "react-animate-on-scroll";
+import ImgUrl from "../../static/TimelineMilestones.svg";
+import { Heading } from "../../components/Heading";
+import { Text } from "../../components/Text";
 
 const MilestoneImg = styled.img`
   margin: 100px auto;

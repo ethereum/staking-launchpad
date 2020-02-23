@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import ImgUrl from "../../static/EthRound-intro.svg";
-import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
-import { Text } from "../../components/Text";
-import { Heading } from "grommet";
 import ScrollAnimation from "react-animate-on-scroll";
+import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
+import EthRound from "../../static/eth-round-landing.svg";
+import { Text } from "../../components/Text";
+import { Heading } from "../../components/Heading";
 
 const Container = styled.div`
   background: white;
@@ -59,7 +59,7 @@ export const Introduction = (): JSX.Element => {
     <Container>
       <SubContainer className="py100 flex">
         <ImgContainer>
-          <img src={ImgUrl} alt="" />
+          <img src={EthRound} alt="" />
         </ImgContainer>
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>

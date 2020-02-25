@@ -48,6 +48,7 @@ const shorthandClasses = `
   .center { justify-content: center  }
   .start { justify-content: flex-start  }
   .rm-double-border { margin-top: -2px  }
+  .m-auto { margin: auto }
 `;
 
 const transitionClasses = `

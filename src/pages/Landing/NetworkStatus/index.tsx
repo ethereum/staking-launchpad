@@ -7,18 +7,17 @@ import { ProgressBar } from "./ProgressBar";
 
 const Container = styled.div`
   background-color: ${p => p.theme.successLightest};
-  height: 630px;
   position: relative;
-  padding: 100px 0;
+  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "60px 0" : "150px 0")};
 `;
 const Content = styled.div`
-  box-sizing: border-box;
   max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
   padding: 0 120px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    padding: 0 60px;
+    padding: ${(p: { isMobile: boolean }) =>
+      p.isMobile ? "0 20px" : "0 60px"};
   }
 `;
 const BoldGreen = styled.span`
@@ -36,11 +35,12 @@ const BoldGray = styled.span`
 
 const amountNeeded = 524288;
 export const NetworkStatus = () => {
+  const m = (window as any).mobileCheck();
   const [amountEth, setAmountEth] = useState(12000);
 
   return (
-    <Container>
-      <Content>
+    <Container isMobile={m}>
+      <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="brand" margin="none">
             Network Status

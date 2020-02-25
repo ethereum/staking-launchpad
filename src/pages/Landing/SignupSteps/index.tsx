@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Box } from "grommet";
 import ScrollAnimation from "react-animate-on-scroll";
 import DepositImgUrl from "../../../static/deposit-eth-step.svg";
 import GenerateKeyImgUrl from "../../../static/generate-key-step.svg";
@@ -63,11 +62,14 @@ export const SignupSteps = (): JSX.Element => {
         </ScrollAnimation>
       </StepsContainer>
       <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
-        <Box align="center" pad="large" className="mt30">
-          <Link to={routesEnum.AcknowledgementPage}>
-            <Button width={200} label="BECOME A VALIDATOR" />
-          </Link>
-        </Box>
+        <Link to={routesEnum.AcknowledgementPage} className="pt100">
+          <Button
+            className="m-auto"
+            fullWidth
+            width={(window as any).mobileCheck() ? undefined : 400}
+            label="BECOME A VALIDATOR"
+          />
+        </Link>
       </ScrollAnimation>
     </Container>
   );

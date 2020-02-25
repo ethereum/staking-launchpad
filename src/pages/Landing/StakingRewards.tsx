@@ -8,27 +8,34 @@ import { Text } from "../../components/Text";
 
 const Container = styled.div`
   background: white;
+  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "60px 0" : "150px 0")};
 `;
 const APRChart = styled.img`
-  margin: 100px auto;
+  margin: ${(p: { isMobile: boolean }) =>
+    p.isMobile ? "40px auto 0" : "100px auto 0"};
   display: block;
-  width: 100%;
+  width: ${(p: { isMobile: boolean }) => (p.isMobile ? "100%" : "66%")};
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    width: 100%;
+  }
 `;
 const SubContainer = styled.div`
-  box-sizing: border-box;
-  max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
+  max-width: ${p =>
+    p.theme.screenSizes.largest}; // needed to contain the chart svg
   margin: 0 auto;
   padding: 0 120px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    padding: 0 60px;
+    padding: ${(p: { isMobile: boolean }) =>
+      p.isMobile ? "0 20px" : "0 60px"};
   }
 `;
 
 export const StakingRewards = (): JSX.Element => {
+  const m = (window as any).mobileCheck();
   return (
-    <Container>
-      <SubContainer className="py100">
+    <Container isMobile={m}>
+      <SubContainer isMobile={m}>
         <ScrollAnimation animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="brand" margin="none">
             Staking and rewards
@@ -41,7 +48,9 @@ export const StakingRewards = (): JSX.Element => {
             ETH staking in the network
           </Text>
         </ScrollAnimation>
-        <APRChart src={ChartUrl} alt="" />
+        <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
+          <APRChart src={ChartUrl} alt="" isMobile={m} />
+        </ScrollAnimation>
       </SubContainer>
     </Container>
   );

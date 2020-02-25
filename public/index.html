@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="application/javascript">
+    <script type="text/javascript">
       // taken from
       // https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
       window.mobileCheck = function() {
@@ -21,7 +21,11 @@
       };
     </script>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
@@ -35,10 +39,25 @@
         margin: 0;
         background-color: #f2f2f2; /*light grey*/
       }
+
+      html.mobile {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+      }
+      body.mobile {
+        position: relative;
+      }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script type="application/javascript">
+    if (window.mobileCheck()) {
+      document.documentElement.classList.add("mobile");
+      document.body.classList.add("mobile");
+    }
+  </script>
 </html>

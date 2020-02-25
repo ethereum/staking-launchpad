@@ -25,8 +25,12 @@ const PhasesContainer = styled.div`
 const ResponsiveContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: 1150px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.larger}) {
     flex-direction: column;
+  }
+  > div {
+    padding: ${(p: { isMobile: boolean }) =>
+      p.isMobile ? "0 40px" : "0 60px"};
   }
 `;
 
@@ -87,18 +91,19 @@ const phases: phase[] = [
 ];
 
 export const Phases = (): JSX.Element => {
+  const m = (window as any).mobileCheck();
   return (
     <Container>
       <SubContainer className="py100">
-        <ResponsiveContainer>
-          <div className="px60">
+        <ResponsiveContainer isMobile={m}>
+          <div>
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <Heading margin="none" className="mt20">
                 What is eth2 phase 0?
               </Heading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
-              <Text>
+              <Text className="mt20">
                 Transitioning from proof-of-work to proof-of-stake, eth2 will be
                 launched in 4 phases.
               </Text>

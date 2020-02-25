@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Box } from "grommet";
 import { Button } from "../../components/Button";
 import { Link } from "../../components/Link";
 import { routesEnum } from "../../Routes";
@@ -10,7 +9,6 @@ const Container = styled.div`
 `;
 const SubContainer = styled.div`
   position: relative;
-  box-sizing: border-box;
   max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
@@ -21,14 +19,18 @@ const SubContainer = styled.div`
 `;
 
 export const CTAFooter = (): JSX.Element => {
+  const m = (window as any).mobileCheck();
   return (
     <Container>
-      <SubContainer className="py100">
-        <Box align="center" pad="large" className="mt30">
-          <Link to={routesEnum.AcknowledgementPage}>
-            <Button width={400} label="GET STARTED ON DESKTOP" />
-          </Link>
-        </Box>
+      <SubContainer className={m ? "py20" : "py100"}>
+        <Link to={routesEnum.AcknowledgementPage}>
+          <Button
+            className="m-auto"
+            fullWidth
+            width={m ? undefined : 400}
+            label={`GET STARTED ${m ? "ON DESKTOP" : ""}`}
+          />
+        </Link>
       </SubContainer>
     </Container>
   );

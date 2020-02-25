@@ -5,11 +5,17 @@ import { Text } from "../../../components/Text";
 import { Link } from "../../../components/Link";
 
 const Container = styled.div`
-  width: 610px;
   background-color: ${p => p.theme.purple};
   margin: 10px auto;
   padding: 10px 20px;
   border-radius: ${p => p.theme.borderRadius};
+  width: 100%;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.larger}) {
+    max-width: 500px;
+  }
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    max-width: 100%;
+  }
 `;
 
 export const PhaseCard = ({

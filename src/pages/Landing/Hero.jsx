@@ -12,6 +12,9 @@ import { Link } from "../../components/Link";
 const RainbowBackground = styled.div`
   background-image: ${p =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
+  height: ${p =>
+    p.isMobile &&
+    "calc(101vh - 100px)"}; // vh minus typical mobile browser bottom controls
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -19,10 +22,19 @@ const MainContainer = styled.div`
   margin: 0 auto;
   padding: 0 120px 100px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    padding: 0 60px 100px;
+    padding: ${p => (p.isMobile ? "20px" : "0 60px 100px")};
+    height: ${p => (p.isMobile ? "100%" : undefined)};
   }
 `;
 const ResponsiveContainer = styled.div`
+  height: ${p => (p.isMobile ? "100%" : undefined)};
+  > div.is-mobile {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
   @media only screen and (min-width: ${p => p.theme.screenSizes.medium}) {
     max-width: 65%;
   }
@@ -41,32 +53,54 @@ const LogoText = styled(Text)`
 `;
 
 export const Hero = () => {
+  const m = window.mobileCheck();
   return (
-    <RainbowBackground>
-      <MainContainer>
-        <ResponsiveContainer>
-          <div className="py100">
-            <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
-              <LogoContainer>
-                <EthLogo src={EthDiamondPlain} />
-                <LogoText>eth2 Launch Pad</LogoText>
-              </LogoContainer>
-              <Heading level={2} size="large" color="brand" className="my20">
-                Become a validator and help secure the eth2 network.
-              </Heading>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
-              <Text className="mt24">
-                Earn continuous payouts for providing a public good to the
-                community.
-              </Text>
+    <RainbowBackground isMobile={m}>
+      <MainContainer isMobile={m}>
+        <ResponsiveContainer isMobile={m}>
+          <div className={`pt100 ${m ? "is-mobile" : undefined}`}>
+            <div>
+              <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
+                <LogoContainer className={m ? "mb50" : undefined}>
+                  <EthLogo src={EthDiamondPlain} />
+                  <LogoText>eth2 Launch Pad</LogoText>
+                </LogoContainer>
+                <Heading
+                  level={m ? 1 : 2}
+                  size="large"
+                  color="brand"
+                  className="my20"
+                >
+                  Become a validator and help secure the eth2 network.
+                </Heading>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
+                <Text className="mt24">
+                  Earn continuous payouts for providing a public good to the
+                  community.
+                </Text>
+              </ScrollAnimation>
+            </div>
+            <ScrollAnimation
+              animateIn="fadeIn"
+              delay={750}
+              animateOnce
+              className={m ? undefined : "mt100"}
+              initiallyVisible={m}
+            >
+              <Link
+                to={routesEnum.AcknowledgementPage}
+                className={`${m ? "mb90" : undefined}`}
+              >
+                <Button
+                  fullWidth={m}
+                  rainbow
+                  width={m ? undefined : 250}
+                  label={`GET STARTED ${m ? "ON DESKTOP" : ""}`}
+                />
+              </Link>
             </ScrollAnimation>
           </div>
-          <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
-            <Link to={routesEnum.AcknowledgementPage}>
-              <Button rainbow width={250} label="GET STARTED" />
-            </Link>
-          </ScrollAnimation>
         </ResponsiveContainer>
       </MainContainer>
     </RainbowBackground>

@@ -11,7 +11,7 @@ import { Link } from "../../components/Link";
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
-    `radial-gradient(circle at 100% -80%, ${p.theme.rainbow}`});
+    `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};

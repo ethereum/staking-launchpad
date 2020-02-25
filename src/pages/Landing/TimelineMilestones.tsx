@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-import ImgUrl from "../../static/TimelineMilestones.svg";
+import TimelineGraphic from "../../static/timeline.svg";
+import TimelineGraphicMobile from "../../static/timeline-mobile.svg";
 import { Heading } from "../../components/Heading";
 import { Text } from "../../components/Text";
 
@@ -9,7 +10,20 @@ const MilestoneImg = styled.img`
   margin: 100px auto;
   display: block;
   width: 100%;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    display: none;
+  }
 `;
+
+const MilestoneImgMMobile = styled.img`
+  margin-top: 40px;
+  width: 280px;
+  display: none;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    display: block;
+  }
+`;
+
 const Container = styled.div`
   box-sizing: border-box;
   max-width: ${p => p.theme.screenSizes.largest};
@@ -22,6 +36,7 @@ const Container = styled.div`
 `;
 
 export const TimelineMileStones = (): JSX.Element => {
+  console.log((window as any).mobileCheck());
   return (
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
@@ -34,7 +49,18 @@ export const TimelineMileStones = (): JSX.Element => {
           The eth2 network will be released in several milestones.
         </Text>
       </ScrollAnimation>
-      <MilestoneImg src={ImgUrl} alt="" />
+      <MilestoneImg
+        src={
+          (window as any).mobileCheck()
+            ? TimelineGraphicMobile
+            : TimelineGraphic
+        }
+        alt=""
+      />
+      <MilestoneImgMMobile
+        src={TimelineGraphicMobile}
+        alt=""
+      />
     </Container>
   );
 };

@@ -39,6 +39,15 @@ export const rainbow = `
   #a0aaed
 `;
 
+export const rainbowLight = `
+  #fbf1ed,
+  #f9f1e9,
+  #eef3eb,
+  #e4f4f4,
+  #e5f0f8,
+  #e7eaf8
+`;
+
 export const screenSizes = {
   smaller: "420px",
   small: "576px",
@@ -53,5 +62,6 @@ export const styledComponentsTheme = {
   ...colors,
   screenSizes,
   ...details,
-  rainbow
+  rainbow,
+  rainbowLight
 };

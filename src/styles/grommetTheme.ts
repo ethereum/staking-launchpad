@@ -3,7 +3,7 @@ import {styledComponentsTheme} from "./styledComponentsTheme";
 const {
   brand,
   transparent,
-  gray20,
+  gray,
   error,
   secondary,
   success,
@@ -21,7 +21,7 @@ export const grommetTheme = {
     },
     colors: {
       brand,
-      border: gray20,
+      border: gray.light,
       error,
       errorLight,
       success,

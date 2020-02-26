@@ -61,7 +61,7 @@ const CompletedColor = styled.div`
 `;
 const GreyedColor = styled.div`
   width: 100%;
-  background: ${p => p.theme.gray10};
+  background: ${p => p.theme.gray.medium};
   border-radius: 8px;
   height: 4px;
   position: absolute;
@@ -97,7 +97,7 @@ const Step = styled.div`
   margin: 0 20px;
   text-align: center;
   color: ${(p: StepProps) => {
-    if (p.disabled) return p.theme.gray10;
+    if (p.disabled) return p.theme.gray.medium;
     if (p.active) return p.theme.secondary;
     return p.theme.brand;
   }};

@@ -15,11 +15,11 @@ import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 const BackBtn = styled(Text)`
-  color: ${p => p.theme.gray20};
+  color: ${p => p.theme.gray.medium};
   cursor: pointer;
   margin-bottom: 10px;
   :hover {
-    color: ${p => p.theme.gray};
+    color: ${p => p.theme.gray.dark};
   }
 `;
 

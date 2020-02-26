@@ -26,7 +26,7 @@ const BoldGreen = styled.span`
   font-weight: bold;
 `;
 const BoldGray = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.gray};
+  color: ${(p: { theme: any; fontSize: number }) => p.theme.gray.medium};
   font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
   font-weight: bold;
 `;

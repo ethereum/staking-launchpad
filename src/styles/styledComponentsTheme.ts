@@ -1,15 +1,12 @@
 // TODO: This needs to be cleaned up
 export const colors = {
   white: "#ffffff",
-  gray5: "#fdfcfe",
-  gray10: "#F0ECF5",
-  gray20: "#E6E6E6",
-  gray35: "#B6B6B6",
-  gray: "#B6B6B6",
-  gray50: "#8E8E8E",
-  gray60: "#9B9B9B",
-  gray70: "#475166",
-  gray85: "#4A4A4A",
+  gray: {
+    lightest: "#fdfcfe",
+    light: "#F0F4F8",
+    medium: "#B6B6B6",
+    dark: "#4A4A4A"
+  },
   black: "#333333",
   brand: "#0F2A43", // navy dark blue
   secondary: "#007FB0", // ligter, royal blue

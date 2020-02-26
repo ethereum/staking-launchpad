@@ -36,7 +36,7 @@ export const AcknowledgementSection = ({
         {content}
       </Paper>
       {acknowledgement && (
-        <Paper>
+        <Paper className="rm-double-border">
           <CheckBox
             onChange={onCheckboxClick}
             checked={agreedTo}

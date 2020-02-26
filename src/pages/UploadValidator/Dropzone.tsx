@@ -24,9 +24,9 @@ const Container = styled.div`
   padding: 20px;
   border-width: 2px;
   border-radius: ${p => p.theme.borderRadius}
-  border-color: ${p => getColor(p, p.theme.gray35)};
+  border-color: ${p => getColor(p, p.theme.gray.medium)};
   border-style: dashed;
-  background-color: ${p => p.theme.gray5};
+  background-color: ${p => p.theme.gray.light};
   color: ${p => getColor(p, p.theme.brand)};
   outline: none;
   transition: border 0.24s ease-in-out;

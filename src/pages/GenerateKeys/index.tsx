@@ -25,9 +25,7 @@ const Highlight = styled.span`
 // TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
-  border: 1px solid ${p => p.theme.gray20};
-  border-radius: ${p => p.theme.borderRadius};
-  background-color: ${p => p.theme.gray10};
+  border: 1px solid black;
   margin: 20px;
 `;
 

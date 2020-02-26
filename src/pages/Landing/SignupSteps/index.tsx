@@ -31,10 +31,11 @@ const StepsContainer = styled.div`
 `;
 
 export const SignupSteps = (): JSX.Element => {
+  const m: boolean = (window as any).mobileCheck();
   return (
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
-        <Heading level={2} size="medium" color="brand" margin="none">
+        <Heading level={2} size="medium" color="blueDark" margin="none">
           Sign up in 3 easy steps
         </Heading>
       </ScrollAnimation>
@@ -66,7 +67,7 @@ export const SignupSteps = (): JSX.Element => {
           <Button
             className="m-auto"
             fullWidth
-            width={(window as any).mobileCheck() ? undefined : 400}
+            width={m ? undefined : 400}
             label="BECOME A VALIDATOR"
           />
         </Link>

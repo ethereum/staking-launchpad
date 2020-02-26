@@ -31,7 +31,7 @@ export const WorkflowPageTemplate = ({
       <WorkflowProgressBar />
       <Gutter>
         <Content>
-          <Heading level={2} size="medium" color="brand" className="mb40">
+          <Heading level={2} size="medium" color="blueDark" className="mb40">
             {title}
           </Heading>
           {children}

@@ -5,7 +5,7 @@ import { Link } from "../../components/Link";
 import { routesEnum } from "../../Routes";
 
 const Container = styled.div`
-  background: ${p => p.theme.brand};
+  background-color: ${p => p.theme.blue.dark};
 `;
 const SubContainer = styled.div`
   position: relative;
@@ -19,7 +19,7 @@ const SubContainer = styled.div`
 `;
 
 export const CTAFooter = (): JSX.Element => {
-  const m = (window as any).mobileCheck();
+  const m: boolean = (window as any).mobileCheck();
   return (
     <Container>
       <SubContainer className={m ? "py20" : "py100"}>

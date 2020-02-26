@@ -12,7 +12,7 @@ export const Paper = (
 ): JSX.Element => {
   return (
     <Box
-      border={props.error ? { color: "errorLight", size: "small" } : true}
+      border={props.error ? { color: "redLight", size: "small" } : true}
       className={props.className}
       pad="large"
       background="white"
@@ -26,10 +26,11 @@ export const Paper = (
 
 const BoxGroup = styled(Box)`
   > :first-child {
-    border-radius: ${p => `2px 2px 0 0`};
+    border-radius: ${p =>
+      `${p.theme.borderRadius} ${p.theme.borderRadius} 0 0`};
   }
   > :last-child {
-    border-radius:${p => `0 0 2px 2px`};
+    border-radius:${p => `0 0 ${p.theme.borderRadius} ${p.theme.borderRadius}`};
   }
   }
   > *:not(:first-child):not(:last-child) {

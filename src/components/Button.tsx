@@ -23,7 +23,7 @@ const StyledButton = styled(GrommetButton)`
   padding: 10px;
   text-transform: capitalize;
   width: ${calculateWidth};
-  background-color: ${p => p.theme.brand};
+  background-color: ${p => p.theme.blue.dark};
   color: ${p => p.theme.white};
   border: none;
   :hover {
@@ -33,8 +33,8 @@ const StyledButton = styled(GrommetButton)`
   ${p =>
     p.theme.rainbow &&
     `background-image: linear-gradient(to right, ${p.theme.rainbow});
-     color: ${p.theme.brand};
-     border: 1px solid ${p.theme.brand};
+     color: ${p.theme.blue.dark};
+     border: 1px solid ${p.theme.blue.dark};
    `}
 `;
 

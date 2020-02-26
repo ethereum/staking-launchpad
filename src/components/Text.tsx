@@ -9,7 +9,7 @@ export const Text = styled(T)`
   font-style: normal;
   font-weight: 300;
   letter-spacing: normal;
-  color: ${p => p.theme.brand};
+  color: ${p => p.theme.blue.dark};
   margin: 0;
   display: block;
 `;

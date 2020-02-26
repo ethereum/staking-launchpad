@@ -6,7 +6,7 @@ import { CodeBox } from "../../components/CodeBox";
 export const LinuxInstructions = () => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">
-      <Heading level={3} size="small" color="secondary">
+      <Heading level={3} size="small" color="blueMedium">
         2. Install Python and git
       </Heading>
       <Text className="my10">
@@ -20,7 +20,7 @@ export const LinuxInstructions = () => (
       <CodeBox className="mt20" snippet="sudo apt install git-all" />
     </Paper>
     <Paper className="mt20">
-      <Heading level={3} size="small" color="secondary">
+      <Heading level={3} size="small" color="blueMedium">
         3. Clone and install the deposit tool repository
       </Heading>
       <Text>

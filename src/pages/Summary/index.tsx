@@ -35,7 +35,7 @@ const _SummaryPage = ({
 
   const renderSummarySection = () => (
     <Paper>
-      <Heading level={3} size="small" color="brand">
+      <Heading level={3} size="small" color="blueDark">
         Deposit Ceremony Summary
       </Heading>
       <Box className="flex flex-row">
@@ -57,7 +57,7 @@ const _SummaryPage = ({
 
   const renderKeyList = () => (
     <Paper className="mt20">
-      <Heading level={3} size="small" color="brand">
+      <Heading level={3} size="small" color="blueDark">
         Keys
       </Heading>
       <Keylist validatorKeys={validatorKeys} />

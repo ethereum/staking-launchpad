@@ -45,7 +45,7 @@ const BarContainer = styled.div`
 `;
 const CompletedColor = styled.div`
   width: ${(p: { position: number }) => logoPositions.large[p.position] + 1}%;
-  background: ${p => p.theme.secondary};
+  background: ${p => p.theme.blue.medium};
   border-radius: 8px;
   height: 10px;
   position: absolute;
@@ -61,7 +61,7 @@ const CompletedColor = styled.div`
 `;
 const GreyedColor = styled.div`
   width: 100%;
-  background: ${p => p.theme.gray10};
+  background: ${p => p.theme.gray.medium};
   border-radius: 8px;
   height: 4px;
   position: absolute;
@@ -97,9 +97,9 @@ const Step = styled.div`
   margin: 0 20px;
   text-align: center;
   color: ${(p: StepProps) => {
-    if (p.disabled) return p.theme.gray10;
-    if (p.active) return p.theme.secondary;
-    return p.theme.brand;
+    if (p.disabled) return p.theme.gray.medium;
+    if (p.active) return p.theme.blue.medium;
+    return p.theme.blue.dark;
   }};
   font-weight: 500;
 `;

@@ -7,7 +7,7 @@ import { Text } from "../../components/Text";
 import { Heading } from "../../components/Heading";
 
 const Container = styled.div`
-  background: white;
+  background: ${p => p.theme.white};
 `;
 const SubContainer = styled.div`
   position: relative;
@@ -63,7 +63,7 @@ export const Introduction = (): JSX.Element => {
         </ImgContainer>
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
-            <Heading level={2} size="medium" color="brand" margin="none">
+            <Heading level={2} size="medium" color="blueDark" margin="none">
               Introduction to the sign up process
             </Heading>
           </ScrollAnimation>

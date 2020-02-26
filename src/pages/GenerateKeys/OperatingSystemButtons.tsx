@@ -10,7 +10,7 @@ const LogoContainerBox = styled.div`
   width: 200px;
   height: 200px;
   border: ${(p: { theme: any; isActive: boolean }) =>
-    `2px solid ${p.isActive ? p.theme.secondary : p.theme.gray20}`};
+    `2px solid ${p.isActive ? p.theme.blue.medium : p.theme.gray.medium}`};
   border-radius: ${p => p.theme.borderRadius};
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@ const LogoBackground = styled.div`
   margin: 20px auto auto;
   border-radius: 50%;
   background-color: ${(p: { theme: any; isActive: boolean }) =>
-    p.isActive ? p.theme.lightBrand : p.theme.gray10};
+    p.isActive ? p.theme.blue.light : p.theme.gray.light};
   -webkit-transition: background-color 500ms ease-out;
   -moz-transition: background-color 500ms ease-out;
   -o-transition: background-color 500ms ease-out;
@@ -77,7 +77,7 @@ const LogoContainer = ({
       <LogoBackground isActive={isActive}>
         <img src={osImage} alt={text} />
       </LogoBackground>
-      <LogoText level={3} size="small" color="brand">
+      <LogoText level={3} size="small" color="blueDark">
         {text}
       </LogoText>
     </LogoContainerBox>

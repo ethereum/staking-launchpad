@@ -5,7 +5,7 @@ import { Text } from "../../../components/Text";
 import { Link } from "../../../components/Link";
 
 const Container = styled.div`
-  background-color: ${p => p.theme.purple};
+  background-color: ${p => p.theme.purple.medium};
   margin: 10px auto;
   padding: 10px 20px;
   border-radius: ${p => p.theme.borderRadius};

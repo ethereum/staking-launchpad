@@ -37,7 +37,7 @@ const _WalletConnected = ({
   return (
     <div>
       <Paper>
-        <Heading level={3} size="small" color="brand" className="mt0">
+        <Heading level={3} size="small" color="blueDark" className="mt0">
           {walletProvider === metamask ? "Metamask" : "Portis"}
         </Heading>
         <Box className="flex flex-row">
@@ -46,7 +46,7 @@ const _WalletConnected = ({
         </Box>
         <Text
           className="mt10 ml31"
-          color={networkAllowed ? "success" : "error"}
+          color={networkAllowed ? "greenDark" : "redMedium"}
         >
           {network}
         </Text>
@@ -60,7 +60,7 @@ const _WalletConnected = ({
             onClick={deactivate}
             label="Connect a different wallet"
             className="mr10"
-            color="brand"
+            color="blueDark"
           />
           <Button
             disabled={!networkAllowed}

@@ -6,7 +6,7 @@ import { Text } from "../../../components/Text";
 import { ProgressBar } from "./ProgressBar";
 
 const Container = styled.div`
-  background-color: ${p => p.theme.successLightest};
+  background-color: ${p => p.theme.green.light};
   position: relative;
   padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "60px 0" : "150px 0")};
 `;
@@ -21,12 +21,12 @@ const Content = styled.div`
   }
 `;
 const BoldGreen = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.success};
+  color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
   font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
   font-weight: bold;
 `;
 const BoldGray = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.gray};
+  color: ${(p: { theme: any; fontSize: number }) => p.theme.gray.medium};
   font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
   font-weight: bold;
 `;
@@ -34,15 +34,15 @@ const BoldGray = styled.span`
 // TODO: Hook up to the contract. Using hard-coded values for now.
 
 const amountNeeded = 524288;
-export const NetworkStatus = () => {
-  const m = (window as any).mobileCheck();
+export const NetworkStatus = (): JSX.Element => {
+  const m: boolean = (window as any).mobileCheck();
   const [amountEth, setAmountEth] = useState(12000);
 
   return (
     <Container isMobile={m}>
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
-          <Heading level={2} size="medium" color="brand" margin="none">
+          <Heading level={2} size="medium" color="blueDark" margin="none">
             Network Status
           </Heading>
           <Text size="x-large" className="mt20">

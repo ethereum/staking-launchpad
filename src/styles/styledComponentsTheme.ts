@@ -1,29 +1,32 @@
-// TODO: This needs to be cleaned up
 export const colors = {
-  white: "#ffffff",
-  gray5: "#fdfcfe",
-  gray10: "#F0ECF5",
-  gray20: "#E6E6E6",
-  gray35: "#B6B6B6",
-  gray: "#B6B6B6",
-  gray50: "#8E8E8E",
-  gray60: "#9B9B9B",
-  gray70: "#475166",
-  gray85: "#4A4A4A",
-  black: "#333333",
-  brand: "#0F2A43", // navy dark blue
-  secondary: "#007FB0", // ligter, royal blue
-  lightBrand: "#b0e2f5", // lightest blue
   transparent: "transparent",
-  success: "#26AB83",
-  successLight: "#D0E1D5",
-  successLightest: "#F8FAF9",
-  error: "#912d2c",
-  errorLight: "#FF9B9A",
-  warning: "#D45C06",
-  info: "#FFF9F2",
-  lightPurple: "#F0F2FB",
-  purple: "#E3E5F2"
+  white: "#ffffff",
+  gray: {
+    lightest: "#fdfcfe",
+    light: "#F0F4F8",
+    medium: "#B6B6B6",
+    dark: "#4A4A4A"
+  },
+  black: "#333333",
+  blue: {
+    light: "#b0e2f5",
+    medium: "#007FB0",
+    dark: "#0F2A43"
+  },
+  green: {
+    light: "#F8FAF9",
+    medium: "#D0E1D5",
+    dark: "#26AB83"
+  },
+  red: {
+    light: "#FF9B9A",
+    medium: "#912d2c"
+  },
+  orange: "#FFF9F2",
+  purple: {
+    light: "#F0F2FB",
+    medium: "#E3E5F2"
+  }
 };
 
 export const details = {

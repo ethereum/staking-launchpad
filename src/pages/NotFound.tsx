@@ -1,5 +1,5 @@
 import React from "react";
 
 export const NotFoundPage = (): JSX.Element => {
-  return <div>NotFoundPage</div>;
+  return <div>not found</div>;
 };

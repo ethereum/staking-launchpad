@@ -8,12 +8,17 @@ import { Heading } from "../../components/Heading";
 import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
 import { Link } from "../../components/Link";
+// @ts-ignore
 import Animate from "animate.css-react";
+
+interface mobile {
+  isMobile: boolean;
+}
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
-  min-height: ${p => p.isMobile && "calc(100vh - 20px)"};
+  min-height: ${(p: mobile) => p.isMobile && "calc(100vh - 20px)"};
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -21,12 +26,12 @@ const MainContainer = styled.div`
   margin: 0 auto;
   padding: 0 120px 100px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    padding: ${p => (p.isMobile ? "20px" : "0 60px 100px")};
-    min-height: ${p => (p.isMobile ? "100vh" : undefined)};
+    padding: ${(p: mobile) => (p.isMobile ? "20px" : "0 60px 100px")};
+    min-height: ${(p: mobile) => (p.isMobile ? "100vh" : undefined)};
   }
 `;
 const ResponsiveContainer = styled.div`
-  height: ${p => (p.isMobile ? "100%" : undefined)};
+  height: ${(p: mobile) => (p.isMobile ? "100%" : undefined)};
   > div.is-mobile {
     padding: 0;
     display: flex;
@@ -52,7 +57,7 @@ const LogoText = styled(Text)`
 `;
 
 export const Hero = () => {
-  const m = window.mobileCheck();
+  const m: boolean = (window as any).mobileCheck();
   return (
     <RainbowBackground isMobile={m}>
       <MainContainer isMobile={m}>

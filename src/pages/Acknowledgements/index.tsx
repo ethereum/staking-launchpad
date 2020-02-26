@@ -68,7 +68,7 @@ const pageContent: AcknowledgementSectionData[] = [
           for being offline are equal to the rewards for actively participating.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the duties of a validator <FormNext color="brand" />
+          Learn More about the duties of a validator <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -87,7 +87,7 @@ const pageContent: AcknowledgementSectionData[] = [
           liable to being slashed (incur a large penalty)
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about about penalties <FormNext color="brand" />
+          Learn More about about penalties <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -193,7 +193,7 @@ const pageContent: AcknowledgementSectionData[] = [
           This means validators need to be in it for the long haul.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the different Phases <FormNext color="brand" />
+          Learn More about the different Phases <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -280,7 +280,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   renderIntroSection() {
     return (
       <Paper>
-        <Heading level={3} size="small" color="brand">
+        <Heading level={3} size="small" color="blueDark">
           Introducing eth2 phase 0
         </Heading>
 
@@ -299,7 +299,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
           1.0
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="brand" />
+          Learn More <FormNext color="blueDark" />
         </Link>
       </Paper>
     );

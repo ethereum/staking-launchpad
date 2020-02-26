@@ -19,15 +19,13 @@ export enum operatingSystem {
 }
 
 const Highlight = styled.span`
-  color: ${p => p.theme.secondary};
+  color: ${p => p.theme.blue.medium};
 `;
 
 // TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
-  border: 1px solid ${p => p.theme.gray20};
-  border-radius: ${p => p.theme.borderRadius};
-  background-color: ${p => p.theme.gray10};
+  border: 1px solid black;
   margin: 20px;
 `;
 
@@ -73,12 +71,12 @@ const _GenerateKeysPage = ({
     <WorkflowPageTemplate title="Generate Key Pairs">
       <PaperGroup>
         <Paper>
-          <Heading level={3} size="small" color="brand">
+          <Heading level={3} size="small" color="blueDark">
             How to generate the validator keys
           </Heading>
         </Paper>
         <Paper>
-          <Heading level={3} size="small" color="brand">
+          <Heading level={3} size="small" color="blueMedium">
             1. What is your current operating system?
           </Heading>
           <Text>
@@ -92,7 +90,7 @@ const _GenerateKeysPage = ({
       </PaperGroup>
       {renderOSInstructions()}
       <Paper className="mt20">
-        <Heading level={3} size="small" color="secondary">
+        <Heading level={3} size="small" color="blueMedium">
           4. Save the key files and get the validator file ready
         </Heading>
         <Text>

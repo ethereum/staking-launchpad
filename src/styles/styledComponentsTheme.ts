@@ -19,8 +19,11 @@ export const colors = {
     medium: "#D0E1D5",
     dark: "#26AB83",
   },
-  error: "#912d2c",
-  errorLight: "#FF9B9A",
+  red: {
+    light:"#FF9B9A",
+    medium:"#912d2c",
+    // dark:
+  },
   warning: "#D45C06",
   info: "#FFF9F2",
   lightPurple: "#F0F2FB",

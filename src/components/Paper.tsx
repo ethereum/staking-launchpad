@@ -12,7 +12,7 @@ export const Paper = (
 ): JSX.Element => {
   return (
     <Box
-      border={props.error ? { color: "errorLight", size: "small" } : true}
+      border={props.error ? { color: "redLight", size: "small" } : true}
       className={props.className}
       pad="large"
       background="white"

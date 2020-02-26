@@ -68,7 +68,7 @@ export const AppBar = () => {
         {walletConnected && (
           <Box className="flex flex-row mr20">
             <Dot success={networkAllowed} />
-            <Text size="small" className="ml10" color="white">
+            <Text size="small" className="ml10" color="blueDark">
               {trimString(account as string, 10)}
             </Text>
           </Box>

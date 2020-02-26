@@ -46,7 +46,7 @@ const _WalletConnected = ({
         </Box>
         <Text
           className="mt10 ml31"
-          color={networkAllowed ? "greenDark" : "error"}
+          color={networkAllowed ? "greenDark" : "redMedium"}
         >
           {network}
         </Text>

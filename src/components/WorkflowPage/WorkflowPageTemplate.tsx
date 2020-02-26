@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { WorkflowProgressBar } from "./WorkflowProgressBar";
 import { Heading } from "grommet";
+import { AppBar } from "../AppBar";
 
 interface WorkflowPageTemplateProps {
   children: React.ReactNode;
@@ -26,6 +27,7 @@ export const WorkflowPageTemplate = ({
 }: WorkflowPageTemplateProps): JSX.Element => {
   return (
     <div>
+      <AppBar />
       <WorkflowProgressBar />
       <Gutter>
         <Content>

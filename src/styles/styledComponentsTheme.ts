@@ -1,3 +1,4 @@
+// TODO: This needs to be cleaned up
 export const colors = {
   white: "#ffffff",
   gray5: "#fdfcfe",
@@ -15,21 +16,42 @@ export const colors = {
   lightBrand: "#b0e2f5", // lightest blue
   transparent: "transparent",
   success: "#26AB83",
-  successLight: "#66d6ae",
+  successLight: "#D0E1D5",
+  successLightest: "#F8FAF9",
   error: "#912d2c",
   errorLight: "#FF9B9A",
   warning: "#D45C06",
   info: "#FFF9F2",
+  lightPurple: "#F0F2FB",
+  purple: "#E3E5F2"
 };
 
 export const details = {
   borderRadius: "3px"
 };
 
+export const rainbow = `
+  #fca09a,
+  #fdccd3,
+  #ffcc9e,
+  #98ddad,
+  #81d7ec,
+  #a0aaed
+`;
+
+export const rainbowLight = `
+  #fbf1ed,
+  #f9f1e9,
+  #eef3eb,
+  #e4f4f4,
+  #e5f0f8,
+  #e7eaf8
+`;
+
 export const screenSizes = {
   smaller: "420px",
   small: "576px",
-  medium: "768px",
+  medium: "760px",
   large: "992px",
   larger: "1200px",
   largest: "1440px",
@@ -38,6 +60,8 @@ export const screenSizes = {
 
 export const styledComponentsTheme = {
   ...colors,
-  ...screenSizes,
-  ...details
+  screenSizes,
+  ...details,
+  rainbow,
+  rainbowLight
 };

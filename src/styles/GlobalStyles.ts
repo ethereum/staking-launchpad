@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { range } from "lodash";
 
-const shorthandSpacing = range(51).map((_, i) => {
+const shorthandSpacing = range(400).map((_, i) => {
   return `
   .m${i}{ margin: ${i}px; }
   .mt${i}{ margin-top: ${i}px; }
@@ -43,7 +43,12 @@ const shorthandClasses = `
   .relative { position: relative  }
   .flex { display: flex  }
   .flex-row { flex-direction: row  }
+  .flex-column { flex-direction: column  }
+  .space-between { justify-content: space-between  }
+  .center { justify-content: center  }
+  .start { justify-content: flex-start  }
   .rm-double-border { margin-top: -2px  }
+  .m-auto { margin: auto }
 `;
 
 const transitionClasses = `

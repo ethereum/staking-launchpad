@@ -18,12 +18,12 @@ const Container = styled.div`
 `;
 const SubContainer = styled.div`
   box-sizing: border-box;
-  max-width: 1440px;
+  max-width: ${p => p.theme.screenSizes.largest};
   width: 100%;
   margin: 80px auto 0;
   padding: 0 120px;
 
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     max-width: 1024px;
     padding: 0px 60px;
   }
@@ -37,7 +37,7 @@ const BarContainer = styled.div`
   height: 50px;
 
   width: 85%;
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
   }
   @media only screen and (max-width: 1024px) {
     width: 100%;
@@ -51,7 +51,7 @@ const CompletedColor = styled.div`
   position: absolute;
   z-index: 1;
 
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     width: ${(p: { position: number }) =>
       logoPositions.medium[p.position] + 1}%;
   }
@@ -75,7 +75,7 @@ const EthLogo = styled.img`
   width: 60px;
   z-index: 2;
 
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     left: ${(p: { position: number }) => logoPositions.medium[p.position]}%;
   }
   @media only screen and (max-width: 1024px) {

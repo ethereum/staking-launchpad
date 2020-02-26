@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 const CopyBtn = styled.span`
-  color: ${p => p.theme.secondary};
+  color: ${p => p.theme.blue.medium};
   font-weight: bold;
   :hover {
     cursor: pointer;

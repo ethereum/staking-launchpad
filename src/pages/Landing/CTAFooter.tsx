@@ -5,7 +5,7 @@ import { Link } from "../../components/Link";
 import { routesEnum } from "../../Routes";
 
 const Container = styled.div`
-  background: ${p => p.theme.brand};
+  background-color: ${p => p.theme.blue.dark};
 `;
 const SubContainer = styled.div`
   position: relative;

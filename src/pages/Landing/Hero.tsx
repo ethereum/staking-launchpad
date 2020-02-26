@@ -73,7 +73,7 @@ export const Hero = (): JSX.Element => {
                 <Heading
                   level={m ? 1 : 2}
                   size={m ? "medium" : "large"}
-                  color="brand"
+                  color="blueDark"
                   className="my20"
                 >
                   Become a validator and help secure the eth2 network.

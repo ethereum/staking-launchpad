@@ -37,7 +37,7 @@ export const StakingRewards = (): JSX.Element => {
     <Container isMobile={m}>
       <SubContainer isMobile={m}>
         <ScrollAnimation animateIn="fadeIn" animateOnce>
-          <Heading level={2} size="medium" color="brand" margin="none">
+          <Heading level={2} size="medium" color="blueDark" margin="none">
             Staking and rewards
           </Heading>
         </ScrollAnimation>

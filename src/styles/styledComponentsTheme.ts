@@ -8,9 +8,11 @@ export const colors = {
     dark: "#4A4A4A"
   },
   black: "#333333",
-  brand: "#0F2A43", // navy dark blue
-  secondary: "#007FB0", // ligter, royal blue
-  lightBrand: "#b0e2f5", // lightest blue
+  blue: {
+    light:"#b0e2f5",
+    medium:"#007FB0",
+    dark: "#0F2A43"
+  },
   transparent: "transparent",
   success: "#26AB83",
   successLight: "#D0E1D5",

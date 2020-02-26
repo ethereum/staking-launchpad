@@ -52,7 +52,7 @@ const _ValidatorSettingsPage = ({
   return (
     <WorkflowPageTemplate title="Validator Settings">
       <Paper>
-        <Heading level={3} size="small" color="brand">
+        <Heading level={3} size="small" color="blueDark">
           How many validators would you like to run?
         </Heading>
         <div className="flex">

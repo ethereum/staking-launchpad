@@ -30,7 +30,7 @@ export const AcknowledgementSection = ({
   return (
     <PaperGroup className="my10" id={acknowledgement.id}>
       <Paper>
-        <Heading level={3} size="small" color="brand">
+        <Heading level={3} size="small" color="blueDark">
           {title}
         </Heading>
         {content}

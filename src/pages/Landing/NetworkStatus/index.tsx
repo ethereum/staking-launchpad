@@ -42,7 +42,7 @@ export const NetworkStatus = (): JSX.Element => {
     <Container isMobile={m}>
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
-          <Heading level={2} size="medium" color="brand" margin="none">
+          <Heading level={2} size="medium" color="blueDark" margin="none">
             Network Status
           </Heading>
           <Text size="x-large" className="mt20">

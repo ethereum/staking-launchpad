@@ -11,7 +11,7 @@ const getColor = (props: any, defaultColor: string) => {
     return props.theme.error;
   }
   if (props.isDragActive) {
-    return props.theme.brand;
+    return props.theme.blue.dark;
   }
   return defaultColor;
 };
@@ -27,7 +27,7 @@ const Container = styled.div`
   border-color: ${p => getColor(p, p.theme.gray.medium)};
   border-style: dashed;
   background-color: ${p => p.theme.gray.light};
-  color: ${p => getColor(p, p.theme.brand)};
+  color: ${p => getColor(p, p.theme.blue.dark)};
   outline: none;
   transition: border 0.24s ease-in-out;
   cursor: pointer;

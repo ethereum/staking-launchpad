@@ -6,7 +6,7 @@ import { CodeBox } from "../../components/CodeBox";
 export const MacInstructions = () => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">
-      <Heading level={3} size="small" color="secondary">
+      <Heading level={3} size="small" color="blueMedium">
         2. Install Python and git
       </Heading>
       <Text>
@@ -20,7 +20,7 @@ export const MacInstructions = () => (
       <CodeBox className="mt20" snippet="brew install python" />
     </Paper>
     <Paper className="mt20">
-      <Heading level={3} size="small" color="secondary">
+      <Heading level={3} size="small" color="blueMedium">
         3. Clone and install the deposit tool repository
       </Heading>
       <Text>

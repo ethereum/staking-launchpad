@@ -1,11 +1,10 @@
-import {styledComponentsTheme} from "./styledComponentsTheme";
+import { styledComponentsTheme } from "./styledComponentsTheme";
 
 const {
-  brand,
+  blue,
   transparent,
   gray,
   error,
-  secondary,
   success,
   successLight,
   errorLight
@@ -20,7 +19,9 @@ export const grommetTheme = {
       outline: "none"
     },
     colors: {
-      brand,
+      brand: blue.dark, // needed to override default grommet component styling
+      blueDark: blue.dark,
+      blueMedium: blue.medium,
       border: gray.light,
       error,
       errorLight,
@@ -34,14 +35,14 @@ export const grommetTheme = {
   button: {
     border: {
       radius: "2px",
-      color: secondary
+      color: blue.medium
     },
     padding: {
       vertical: "12px",
       horizontal: "24px"
     },
     primary: {
-      color: secondary
+      color: blue.medium
     },
     extend: `
       font-size: 12px;

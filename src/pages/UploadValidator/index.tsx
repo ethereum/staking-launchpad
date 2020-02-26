@@ -10,9 +10,10 @@ import {
 } from "../../store/actions";
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
-import { Box, Button, Text } from "grommet";
+import { Box, Text } from "grommet";
 import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
 
 const BackBtn = styled(Text)`
   color: ${p => p.theme.gray.medium};
@@ -63,7 +64,8 @@ export const _UploadValidatorPage = ({
         <Box align="center" pad="large">
           <BackBtn onClick={handleGoBack}>Go Back</BackBtn>
           <Button
-            primary
+            width={300}
+            rainbow
             disabled={!fileAccepted}
             label="Continue"
             onClick={handleSubmit}

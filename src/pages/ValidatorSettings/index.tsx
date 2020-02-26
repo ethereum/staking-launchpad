@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Heading, Text } from "grommet";
+import { Box, Heading, Text } from "grommet";
 import styled from "styled-components";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper } from "../../components/Paper";
@@ -14,6 +14,7 @@ import {
 import { connect } from "react-redux";
 import { InfoBox } from "../../components/InfoBox";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
 
 const warnings: string[] = [
   "Please make sure you send exactly 32 ETH per validator, excluding fees.",
@@ -83,9 +84,10 @@ const _ValidatorSettingsPage = ({
       </Paper>
       <Box align="center" pad="large">
         <Button
-          primary
+          width={300}
+          rainbow
           disabled={validatorCount <= 0}
-          label="GENERATE MY KEYPAIR(S)"
+          label={`GENERATE MY KEYPAIR${validatorCount > 1 ? "S" : ""}`}
           onClick={handleSubmit}
         />
       </Box>

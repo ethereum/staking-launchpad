@@ -7,6 +7,7 @@ interface CustomButtonProps {
   width?: number;
   fullWidth?: boolean;
   rainbow?: boolean;
+  onClick?: () => any;
 }
 
 const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
@@ -23,15 +24,15 @@ const StyledButton = styled(GrommetButton)`
   padding: 10px;
   text-transform: capitalize;
   width: ${calculateWidth};
-  background-color: ${p => p.theme.blue.dark};
-  color: ${p => p.theme.white};
-  border: none;
+  background-color: ${p => (p.primary ? p.theme.blue.dark : p.theme.white)};
+  color: ${p => (p.color ? p.color : p.theme.white)};
   :hover {
     box-shadow: none;
   }
   // rainbow styles
   ${p =>
-    p.theme.rainbow &&
+    // @ts-ignore
+    p.rainbow &&
     `background-image: linear-gradient(to right, ${p.theme.rainbow});
      color: ${p.theme.blue.dark};
      border: 1px solid ${p.theme.blue.dark};

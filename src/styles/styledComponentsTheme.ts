@@ -10,24 +10,24 @@ export const colors = {
   },
   black: "#333333",
   blue: {
-    light:"#b0e2f5",
-    medium:"#007FB0",
+    light: "#b0e2f5",
+    medium: "#007FB0",
     dark: "#0F2A43"
   },
   green: {
     light: "#F8FAF9",
     medium: "#D0E1D5",
-    dark: "#26AB83",
+    dark: "#26AB83"
   },
   red: {
-    light:"#FF9B9A",
-    medium:"#912d2c",
-    // dark:
+    light: "#FF9B9A",
+    medium: "#912d2c"
   },
-  warning: "#D45C06",
-  info: "#FFF9F2",
-  lightPurple: "#F0F2FB",
-  purple: "#E3E5F2"
+  orange: "#FFF9F2",
+  purple: {
+    light: "#F0F2FB",
+    medium: "#E3E5F2"
+  }
 };
 
 export const details = {

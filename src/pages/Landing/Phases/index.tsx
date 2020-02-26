@@ -6,7 +6,7 @@ import { Heading } from "../../../components/Heading";
 import { PhaseCard } from "./PhaseCard";
 
 const Container = styled.div`
-  background-color: ${p => p.theme.lightPurple};
+  background-color: ${p => p.theme.purple.light};
   padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "20px 0" : "150px 0")};
 `;
 const SubContainer = styled.div`

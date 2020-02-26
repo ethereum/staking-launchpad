@@ -5,7 +5,7 @@ const Container = styled.div`
   border: 1px solid #ddd;
   padding: 18px 30px;
   width: 100%;
-  background: ${p => p.theme.info};
+  background: ${p => p.theme.orange};
   display: flex;
   justify-content: space-between;
 `;

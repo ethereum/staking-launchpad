@@ -41,7 +41,7 @@ export const NetworkStatus = () => {
   return (
     <Container isMobile={m}>
       <Content isMobile={m}>
-        <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
+        <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce initiallyVisible>
           <Heading level={2} size="medium" color="brand" margin="none">
             Network Status
           </Heading>

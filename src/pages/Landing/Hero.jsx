@@ -13,7 +13,7 @@ import Animate from "animate.css-react";
 const RainbowBackground = styled.div`
   background-image: ${p =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
-  min-height: ${p => p.isMobile && "100vh"};
+  min-height: ${p => p.isMobile && "calc(100vh - 20px)"};
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -32,7 +32,7 @@ const ResponsiveContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: calc(100vh - 20px);
   }
   @media only screen and (min-width: ${p => p.theme.screenSizes.medium}) {
     max-width: 65%;
@@ -57,10 +57,7 @@ export const Hero = () => {
     <RainbowBackground isMobile={m}>
       <MainContainer isMobile={m}>
         <ResponsiveContainer isMobile={m}>
-          <div
-            className={`pt100 ${m ? "is-mobile" : undefined}`}
-            id="parent-selector"
-          >
+          <div className={`pt100 ${m ? "is-mobile" : undefined}`}>
             <div>
               <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                 <LogoContainer className={m ? "mb50" : undefined}>
@@ -90,7 +87,7 @@ export const Hero = () => {
             >
               <Link
                 to={routesEnum.AcknowledgementPage}
-                className={`${m ? "mb90" : undefined}`}
+                className={`${m ? "mb125" : undefined}`}
               >
                 <Button
                   fullWidth={m}

@@ -7,6 +7,7 @@ import { PhaseCard } from "./PhaseCard";
 
 const Container = styled.div`
   background-color: ${p => p.theme.lightPurple};
+  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "20px 0" : "150px 0")};
 `;
 const SubContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -14,7 +15,8 @@ const SubContainer = styled.div`
   margin: 0 auto;
   padding: 0 120px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    padding: 0 60px;
+    padding: ${(p: { isMobile: boolean }) =>
+      p.isMobile ? "0 20px" : "0 60px"};
   }
 `;
 const PhasesContainer = styled.div`
@@ -28,10 +30,10 @@ const ResponsiveContainer = styled.div`
   @media only screen and (max-width: ${p => p.theme.screenSizes.larger}) {
     flex-direction: column;
   }
-  > div {
-    padding: ${(p: { isMobile: boolean }) =>
-      p.isMobile ? "0 40px" : "0 60px"};
-  }
+`;
+const StyledHeading = styled(Heading)`
+  width: ${(p: { isMobile: boolean }) =>
+    p.isMobile ? "220px" : undefined}; // force word break
 `;
 
 interface phase {
@@ -93,14 +95,14 @@ const phases: phase[] = [
 export const Phases = (): JSX.Element => {
   const m = (window as any).mobileCheck();
   return (
-    <Container>
-      <SubContainer className="py100">
-        <ResponsiveContainer isMobile={m}>
+    <Container isMobile={m}>
+      <SubContainer isMobile={m}>
+        <ResponsiveContainer>
           <div>
             <ScrollAnimation animateIn="fadeIn" animateOnce>
-              <Heading margin="none" className="mt20">
+              <StyledHeading margin="none" className="mt20" isMobile={m}>
                 What is eth2 phase 0?
-              </Heading>
+              </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20">

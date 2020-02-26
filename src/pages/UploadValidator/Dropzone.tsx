@@ -5,7 +5,7 @@ import { keyFile } from "../../store/actions";
 
 const getColor = (props: any, defaultColor: string) => {
   if (props.isDragAccept) {
-    return props.theme.success;
+    return props.theme.green.dark;
   }
   if (props.isDragReject) {
     return props.theme.error;

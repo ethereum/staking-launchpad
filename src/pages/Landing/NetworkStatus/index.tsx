@@ -6,7 +6,7 @@ import { Text } from "../../../components/Text";
 import { ProgressBar } from "./ProgressBar";
 
 const Container = styled.div`
-  background-color: ${p => p.theme.successLightest};
+  background-color: ${p => p.theme.green.light};
   position: relative;
   padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "60px 0" : "150px 0")};
 `;
@@ -21,7 +21,7 @@ const Content = styled.div`
   }
 `;
 const BoldGreen = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.success};
+  color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
   font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
   font-weight: bold;
 `;

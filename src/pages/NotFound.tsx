@@ -42,11 +42,22 @@ const Blue = () => {
   );
 };
 
+const Green = () => {
+  return (
+    <Container>
+      <Box color={theme.green.light} colorText="Green light" />
+      <Box color={theme.green.medium} colorText="Green medium" />
+      <Box color={theme.green.dark} colorText="Green dark" />
+    </Container>
+  );
+};
+
 export const NotFoundPage = (): JSX.Element => {
   return (
     <div>
       <Gray />
       <Blue />
+      <Green />
     </div>
   );
 };

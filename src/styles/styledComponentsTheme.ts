@@ -1,5 +1,6 @@
 // TODO: This needs to be cleaned up
 export const colors = {
+  transparent: "transparent",
   white: "#ffffff",
   gray: {
     lightest: "#fdfcfe",
@@ -13,10 +14,11 @@ export const colors = {
     medium:"#007FB0",
     dark: "#0F2A43"
   },
-  transparent: "transparent",
-  success: "#26AB83",
-  successLight: "#D0E1D5",
-  successLightest: "#F8FAF9",
+  green: {
+    light: "#F8FAF9",
+    medium: "#D0E1D5",
+    dark: "#26AB83",
+  },
   error: "#912d2c",
   errorLight: "#FF9B9A",
   warning: "#D45C06",

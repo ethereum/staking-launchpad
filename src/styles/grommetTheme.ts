@@ -5,8 +5,7 @@ const {
   transparent,
   gray,
   error,
-  success,
-  successLight,
+  green,
   errorLight
 } = styledComponentsTheme;
 
@@ -20,13 +19,18 @@ export const grommetTheme = {
     },
     colors: {
       brand: blue.dark, // needed to override default grommet component styling
-      blueDark: blue.dark,
+
+      blueLight: blue.light,
       blueMedium: blue.medium,
+      blueDark: blue.dark,
+
+      greenLight: green.light,
+      greenMedium: green.medium,
+      greenDark: green.dark,
+
       border: gray.light,
       error,
-      errorLight,
-      success,
-      successLight
+      errorLight
     },
     font: {
       family: "Roboto"

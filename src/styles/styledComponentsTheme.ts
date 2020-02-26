@@ -1,4 +1,3 @@
-// TODO: This needs to be cleaned up
 export const colors = {
   transparent: "transparent",
   white: "#ffffff",

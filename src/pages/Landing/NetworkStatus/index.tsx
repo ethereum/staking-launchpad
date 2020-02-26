@@ -34,8 +34,8 @@ const BoldGray = styled.span`
 // TODO: Hook up to the contract. Using hard-coded values for now.
 
 const amountNeeded = 524288;
-export const NetworkStatus = () => {
-  const m = (window as any).mobileCheck();
+export const NetworkStatus = (): JSX.Element => {
+  const m: boolean = (window as any).mobileCheck();
   const [amountEth, setAmountEth] = useState(12000);
 
   return (

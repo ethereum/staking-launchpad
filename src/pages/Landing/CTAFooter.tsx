@@ -19,7 +19,7 @@ const SubContainer = styled.div`
 `;
 
 export const CTAFooter = (): JSX.Element => {
-  const m = (window as any).mobileCheck();
+  const m: boolean = (window as any).mobileCheck();
   return (
     <Container>
       <SubContainer className={m ? "py20" : "py100"}>

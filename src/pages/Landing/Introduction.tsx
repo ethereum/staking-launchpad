@@ -7,7 +7,7 @@ import { Text } from "../../components/Text";
 import { Heading } from "../../components/Heading";
 
 const Container = styled.div`
-  background: white;
+  background: ${p => p.theme.white};
 `;
 const SubContainer = styled.div`
   position: relative;

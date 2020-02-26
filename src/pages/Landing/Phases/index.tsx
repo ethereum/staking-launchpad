@@ -93,7 +93,7 @@ const phases: phase[] = [
 ];
 
 export const Phases = (): JSX.Element => {
-  const m = (window as any).mobileCheck();
+  const m: boolean = (window as any).mobileCheck();
   return (
     <Container isMobile={m}>
       <SubContainer isMobile={m}>

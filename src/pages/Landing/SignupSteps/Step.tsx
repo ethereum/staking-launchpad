@@ -19,7 +19,7 @@ export const Step = ({
   imgUrl: any;
   title: string;
   content: string;
-}) => {
+}): JSX.Element => {
   return (
     <Container>
       <Img src={imgUrl} alt="" />

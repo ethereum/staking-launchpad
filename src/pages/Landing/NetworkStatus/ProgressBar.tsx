@@ -9,21 +9,13 @@ const PBarContainer = styled.div`
 `;
 const PBarComplete = styled.div`
   border-radius: ${p => p.theme.borderRadius} 0 0 ${p => p.theme.borderRadius};
-<<<<<<< HEAD
   background-color: ${p => p.theme.green.dark};
-=======
-  background-color: ${p => p.theme.success};
->>>>>>> 557a64b45ce4467de746091d9cdfdbd4ece9d804
   height: 100%;
   width: ${(p: { progress: number }) => p.progress}%;
 `;
 const PBarIncomplete = styled.div`
   border-radius: 0 ${p => p.theme.borderRadius} ${p => p.theme.borderRadius} 0;
-<<<<<<< HEAD
   background-color: ${p => p.theme.green.medium};
-=======
-  background-color: ${p => p.theme.successLight};
->>>>>>> 557a64b45ce4467de746091d9cdfdbd4ece9d804
   height: 100%;
   width: ${(p: { progress: number }) => 100 - p.progress}%;
 `;

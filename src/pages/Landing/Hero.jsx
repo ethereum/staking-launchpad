@@ -8,13 +8,12 @@ import { Heading } from "../../components/Heading";
 import { Text } from "../../components/Text";
 import { Button } from "../../components/Button";
 import { Link } from "../../components/Link";
+import Animate from "animate.css-react";
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
-  height: ${p =>
-    p.isMobile &&
-    "calc(101vh - 100px)"}; // vh minus typical mobile browser bottom controls
+  min-height: ${p => p.isMobile && "100vh"};
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -23,7 +22,7 @@ const MainContainer = styled.div`
   padding: 0 120px 100px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: ${p => (p.isMobile ? "20px" : "0 60px 100px")};
-    height: ${p => (p.isMobile ? "100%" : undefined)};
+    min-height: ${p => (p.isMobile ? "100vh" : undefined)};
   }
 `;
 const ResponsiveContainer = styled.div`
@@ -33,7 +32,7 @@ const ResponsiveContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    min-height: 100vh;
   }
   @media only screen and (min-width: ${p => p.theme.screenSizes.medium}) {
     max-width: 65%;
@@ -58,7 +57,10 @@ export const Hero = () => {
     <RainbowBackground isMobile={m}>
       <MainContainer isMobile={m}>
         <ResponsiveContainer isMobile={m}>
-          <div className={`pt100 ${m ? "is-mobile" : undefined}`}>
+          <div
+            className={`pt100 ${m ? "is-mobile" : undefined}`}
+            id="parent-selector"
+          >
             <div>
               <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                 <LogoContainer className={m ? "mb50" : undefined}>
@@ -67,7 +69,7 @@ export const Hero = () => {
                 </LogoContainer>
                 <Heading
                   level={m ? 1 : 2}
-                  size="large"
+                  size={m ? "meduim" : "large"}
                   color="brand"
                   className="my20"
                 >
@@ -81,12 +83,10 @@ export const Hero = () => {
                 </Text>
               </ScrollAnimation>
             </div>
-            <ScrollAnimation
-              animateIn="fadeIn"
-              delay={750}
-              animateOnce
+            <Animate
+              enter="fadeIn"
+              appear="fadeIn"
               className={m ? undefined : "mt100"}
-              initiallyVisible={m}
             >
               <Link
                 to={routesEnum.AcknowledgementPage}
@@ -99,7 +99,7 @@ export const Hero = () => {
                   label={`GET STARTED ${m ? "ON DESKTOP" : ""}`}
                 />
               </Link>
-            </ScrollAnimation>
+            </Animate>
           </div>
         </ResponsiveContainer>
       </MainContainer>

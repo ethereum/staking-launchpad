@@ -17,7 +17,7 @@ import { StoreState } from "../../store/reducers";
 import { ProgressStep } from "../../store/actions";
 import { connect } from "react-redux";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import {rainbowLightColors} from "../../styles/styledComponentsTheme";
+import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
 
 export interface web3ReactInterface {
   activate: (
@@ -55,14 +55,14 @@ const _ConnectWalletPage = ({
 
   if (walletConnected) {
     return (
-      <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowLightColors[4]}>
+      <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
         <WalletConnected />
       </WorkflowPageTemplate>
     );
   }
 
   return (
-    <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowLightColors[4]}>
+    <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
       <ResponsiveContext.Consumer>
         {() => (
           <Grid columns="medium">

@@ -15,7 +15,7 @@ import { connect } from "react-redux";
 import { InfoBox } from "../../components/InfoBox";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
-import {rainbowLightColors} from "../../styles/styledComponentsTheme";
+import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
 
 const warnings: string[] = [
   "Please make sure you send exactly 32 ETH per validator, excluding fees.",
@@ -52,7 +52,7 @@ const _ValidatorSettingsPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Validator Settings" backgroundColor={rainbowLightColors[1]}>
+    <WorkflowPageTemplate title="Validator Settings" backgroundColor={rainbowMutedColors[1]}>
       <Paper>
         <Heading level={3} size="small" color="blueDark">
           How many validators would you like to run?

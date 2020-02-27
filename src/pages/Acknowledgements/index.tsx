@@ -19,7 +19,9 @@ import {
 import { Paper } from "../../components/Paper";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
-import { rainbowLightColors } from "../../styles/styledComponentsTheme";
+import {
+  rainbowMutedColors
+} from "../../styles/styledComponentsTheme";
 
 export enum acknowledgementId {
   signup = "signup",
@@ -316,7 +318,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
     return (
       <WorkflowPageTemplate
         title="Overview"
-        backgroundColor={rainbowLightColors[0]}
+        backgroundColor={rainbowMutedColors[0]}
       >
         {this.renderIntroSection()}
         {pageContent.map((acknowledgement: AcknowledgementSectionData) => (

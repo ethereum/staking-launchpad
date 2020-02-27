@@ -12,7 +12,7 @@ import { ProgressStep, updateProgress } from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { StoreState } from "../../store/reducers";
 import { Button } from "../../components/Button";
-import {rainbowLightColors} from "../../styles/styledComponentsTheme";
+import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
 
 export enum operatingSystem {
   "MAC",
@@ -70,7 +70,7 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs" backgroundColor={rainbowLightColors[2]}>
+    <WorkflowPageTemplate title="Generate Key Pairs" backgroundColor={rainbowMutedColors[2]}>
       <PaperGroup>
         <Paper>
           <Heading level={3} size="small" color="blueDark">

@@ -12,7 +12,7 @@ import { AcknowledgementSection } from "./AcknowledgementSection";
 import { keyFile, ProgressStep } from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
-import { rainbowLightColors } from "../../styles/styledComponentsTheme";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 const SummarySection = styled(Box)`
   width: 30%;
@@ -117,7 +117,7 @@ const _SummaryPage = ({
   return (
     <WorkflowPageTemplate
       title="Summary"
-      backgroundColor={rainbowLightColors[5]}
+      backgroundColor={rainbowMutedColors[5]}
     >
       {renderSummarySection()}
       {renderKeyList()}

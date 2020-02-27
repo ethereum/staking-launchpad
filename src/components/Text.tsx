@@ -12,4 +12,5 @@ export const Text = styled(T)`
   color: ${p => p.theme.blue.dark};
   margin: 0;
   display: block;
+  text-align: ${(p: { center?: boolean }) => p.center && "center"};
 `;

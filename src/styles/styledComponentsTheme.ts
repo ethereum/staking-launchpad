@@ -33,23 +33,27 @@ export const details = {
   borderRadius: "3px"
 };
 
-export const rainbow = `
-  #fca09a,
-  #fdccd3,
-  #ffcc9e,
-  #98ddad,
-  #81d7ec,
-  #a0aaed
-`;
+export const rainbowColors = [
+  "#fca09a",
+  "#fdccd3",
+  "#ffcc9e",
+  "#98ddad",
+  "#81d7ec",
+  "#a0aaed"
+];
 
-export const rainbowLight = `
-  #fbf1ed,
-  #f9f1e9,
-  #eef3eb,
-  #e4f4f4,
-  #e5f0f8,
-  #e7eaf8
-`;
+export const rainbowLightColors = [
+  "#fbf1ed",
+  "#f9f1e9",
+  "#eef3eb",
+  "#e4f4f4",
+  "#e5f0f8",
+  "#e7eaf8"
+];
+
+export const rainbow = rainbowColors.join(", ");
+
+export const rainbowLight = rainbowLightColors.join(", ");
 
 export const screenSizes = {
   smaller: "420px",
@@ -66,5 +70,6 @@ export const styledComponentsTheme = {
   screenSizes,
   ...details,
   rainbow,
-  rainbowLight
+  rainbowLight,
+  rainbowLightColors
 };

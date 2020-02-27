@@ -14,6 +14,7 @@ import { Box, Text } from "grommet";
 import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
+import {rainbowLightColors} from "../../styles/styledComponentsTheme";
 
 const BackBtn = styled(Text)`
   color: ${p => p.theme.gray.medium};
@@ -52,7 +53,7 @@ export const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload Key File">
+    <WorkflowPageTemplate title="Upload Key File" backgroundColor={rainbowLightColors[3]}>
       <Paper>
         <StyledDropzone
           fileAccepted={fileAccepted}

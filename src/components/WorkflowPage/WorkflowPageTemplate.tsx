@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { WorkflowProgressBar } from "./WorkflowProgressBar";
 import { Heading } from "grommet";
+import { Redirect } from "react-router-dom";
+import { WorkflowProgressBar } from "./WorkflowProgressBar";
 import { AppBar } from "../AppBar";
+import { DesktopOnlyModal } from "../DesktopOnlyModal";
 
 interface WorkflowPageTemplateProps {
   children: React.ReactNode;
@@ -25,6 +27,9 @@ export const WorkflowPageTemplate = ({
   children,
   title
 }: WorkflowPageTemplateProps): JSX.Element => {
+  if ((window as any).mobileCheck()) {
+    return <DesktopOnlyModal />;
+  }
   return (
     <div>
       <AppBar />

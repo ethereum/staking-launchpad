@@ -240,8 +240,9 @@ const _SummaryPage = ({
           width={300}
           rainbow
           disabled={!allChecked}
-          label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
-            32} ETH`}
+          label={`SIGN ${validatorCount} TRANSACTION${
+            validatorCount > 1 ? "S" : ""
+          } AND DEPOSIT ${validatorCount * 32} ETH`}
           onClick={handleDepositClick}
         />
       </Box>

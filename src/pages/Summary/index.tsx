@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { Box, CheckBox, Heading, Text } from "grommet";
 import styled from "styled-components";
-import { Box, Button, CheckBox, Heading, Text } from "grommet";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import { AbstractConnector } from "@web3-react/abstract-connector"
@@ -18,9 +18,11 @@ import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
 import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
+import { Button } from "../../components/Button";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { prefix0X } from "../../utils/prefix0x";
 import { contractAbi } from "../../contractAbi";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
 const CONTRACT_ADDRESS = "0x4dc8b546b93131309c82505a6fdfb978d311bf45";
@@ -58,7 +60,7 @@ const _SummaryPage = ({
 
   const renderSummarySection = (): JSX.Element => (
     <Paper>
-      <Heading level={3} size="small" color="brand">
+      <Heading level={3} size="small" color="blueDark">
         Deposit Ceremony Summary
       </Heading>
       <Box className="flex flex-row">
@@ -80,7 +82,7 @@ const _SummaryPage = ({
 
   const renderKeyList = (): JSX.Element => (
     <Paper className="mt20">
-      <Heading level={3} size="small" color="brand">
+      <Heading level={3} size="small" color="blueDark">
         Keys
       </Heading>
       <Keylist validatorKeys={validatorKeys} />
@@ -223,13 +225,17 @@ const _SummaryPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Summary">
+    <WorkflowPageTemplate
+      title="Summary"
+      backgroundColor={rainbowMutedColors[5]}
+    >
       {renderSummarySection()}
       {renderKeyList()}
       {renderAcknowledgements()}
       <Box align="center" pad="large">
         <Button
-          primary
+          width={300}
+          rainbow
           disabled={!allChecked}
           label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
             32} ETH`}

@@ -1,16 +1,27 @@
 import React from "react";
-import {Box, Button, Heading, Text} from "grommet";
-import {FormNext} from "grommet-icons";
-import {connect} from "react-redux";
-import {every, values} from "lodash";
-import {scroller} from "react-scroll";
-import {WorkflowPageTemplate} from "../../components/WorkflowPage/WorkflowPageTemplate";
-import {AcknowledgementSection, AcknowledgementSectionData} from "./AcknowledgementSection";
-import {Link} from "../../components/Link";
-import {StoreState} from "../../store/reducers";
-import {ProgressStep, updateAcknowledgementState, updateProgress} from "../../store/actions";
-import {Paper} from "../../components/Paper";
-import {routeToCorrectProgressStep} from "../../utils/RouteToCorrectProgressStep";
+import { Box, Heading, Text } from "grommet";
+import { FormNext } from "grommet-icons";
+import { connect } from "react-redux";
+import { every, values } from "lodash";
+import { scroller } from "react-scroll";
+import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
+import {
+  AcknowledgementSection,
+  AcknowledgementSectionData
+} from "./AcknowledgementSection";
+import { Link } from "../../components/Link";
+import { StoreState } from "../../store/reducers";
+import {
+  ProgressStep,
+  updateAcknowledgementState,
+  updateProgress
+} from "../../store/actions";
+import { Paper } from "../../components/Paper";
+import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
+import {
+  rainbowMutedColors
+} from "../../styles/styledComponentsTheme";
 
 export enum acknowledgementId {
   signup = "signup",
@@ -61,7 +72,8 @@ const pageContent: AcknowledgementSectionData[] = [
           for being offline are equal to the rewards for actively participating.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the duties of a validator <FormNext color="brand" />
+          Learn More about the duties of a validator{" "}
+          <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -80,7 +92,7 @@ const pageContent: AcknowledgementSectionData[] = [
           liable to being slashed (incur a large penalty)
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about about penalties <FormNext color="brand" />
+          Learn More about about penalties <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -186,7 +198,7 @@ const pageContent: AcknowledgementSectionData[] = [
           This means validators need to be in it for the long haul.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the different Phases <FormNext color="brand" />
+          Learn More about the different Phases <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -273,7 +285,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   renderIntroSection() {
     return (
       <Paper>
-        <Heading level={3} size="small" color="brand">
+        <Heading level={3} size="small" color="blueDark">
           Introducing eth2 phase 0
         </Heading>
 
@@ -292,7 +304,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
           1.0
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="brand" />
+          Learn More <FormNext color="blueDark" />
         </Link>
       </Paper>
     );
@@ -304,7 +316,10 @@ class _AcknowledgementPage extends React.Component<Props, State> {
     }
 
     return (
-      <WorkflowPageTemplate title="Overview">
+      <WorkflowPageTemplate
+        title="Overview"
+        backgroundColor={rainbowMutedColors[0]}
+      >
         {this.renderIntroSection()}
         {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
           <AcknowledgementSection
@@ -316,7 +331,8 @@ class _AcknowledgementPage extends React.Component<Props, State> {
         ))}
         <Box align="center" pad="large">
           <Button
-            primary
+            rainbow
+            width={300}
             disabled={!this.props.allAcknowledgementsAgreedTo}
             label="Continue"
             onClick={this.handleSubmit}

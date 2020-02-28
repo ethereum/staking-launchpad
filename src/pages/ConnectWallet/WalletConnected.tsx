@@ -1,14 +1,15 @@
 import React from "react";
+import { connect } from "react-redux";
+import { FormNextLink } from "grommet-icons";
+import { Box, Heading, Text } from "grommet";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
-import { Box, Button, Heading, Text } from "grommet";
 import { AllowedNetworks, metamask, NetworkChainId } from "./web3Utils";
-import { Paper } from "../../components/Paper";
-import { FormNextLink } from "grommet-icons";
 import { web3ReactInterface } from "./index";
-import { Dot } from "../../components/Dot";
 import { ProgressStep, updateProgress } from "../../store/actions";
-import { connect } from "react-redux";
+import { Paper } from "../../components/Paper";
+import { Dot } from "../../components/Dot";
+import { Button } from "../../components/Button";
 
 const _WalletConnected = ({
   updateProgress
@@ -37,7 +38,7 @@ const _WalletConnected = ({
   return (
     <div>
       <Paper>
-        <Heading level={3} size="small" color="brand" className="mt0">
+        <Heading level={3} size="small" color="blueDark" className="mt0">
           {walletProvider === metamask ? "Metamask" : "Portis"}
         </Heading>
         <Box className="flex flex-row">
@@ -45,8 +46,8 @@ const _WalletConnected = ({
           <Text className="ml10">{account}</Text>
         </Box>
         <Text
-          className="mt10 ml31"
-          color={networkAllowed ? "success" : "error"}
+          className="mt10 ml30"
+          color={networkAllowed ? "greenDark" : "redMedium"}
         >
           {network}
         </Text>
@@ -55,18 +56,20 @@ const _WalletConnected = ({
         {!networkAllowed && (
           <Text className="mb10">Please connect to Göerli Testnet</Text>
         )}
-        <div>
+        <div className="flex">
           <Button
+            width={300}
             onClick={deactivate}
             label="Connect a different wallet"
             className="mr10"
-            color="brand"
+            color="blueDark"
           />
           <Button
+            width={300}
+            rainbow
             disabled={!networkAllowed}
             onClick={handleSubmit}
             label="CONTINUE ON TESTNET"
-            primary
             reverse
             icon={<FormNextLink />}
           />

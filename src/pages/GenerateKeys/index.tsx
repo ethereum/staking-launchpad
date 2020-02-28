@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import { Box, Button, CheckBox, Heading, Text } from "grommet";
+import { Box, CheckBox, Heading, Text } from "grommet";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper, PaperGroup } from "../../components/Paper";
 import { OperatingSystemButtons } from "./OperatingSystemButtons";
@@ -11,6 +11,8 @@ import { WindowsInstructions } from "./WindowsInstructions";
 import { ProgressStep, updateProgress } from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { StoreState } from "../../store/reducers";
+import { Button } from "../../components/Button";
+import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
 
 export enum operatingSystem {
   "MAC",
@@ -19,15 +21,13 @@ export enum operatingSystem {
 }
 
 const Highlight = styled.span`
-  color: ${p => p.theme.secondary};
+  color: ${p => p.theme.blue.medium};
 `;
 
 // TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
-  border: 1px solid ${p => p.theme.gray20};
-  border-radius: ${p => p.theme.borderRadius};
-  background-color: ${p => p.theme.gray10};
+  border: 1px solid black;
   margin: 20px;
 `;
 
@@ -70,15 +70,15 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs">
+    <WorkflowPageTemplate title="Generate Key Pairs" backgroundColor={rainbowMutedColors[2]}>
       <PaperGroup>
         <Paper>
-          <Heading level={3} size="small" color="brand">
+          <Heading level={3} size="small" color="blueDark">
             How to generate the validator keys
           </Heading>
         </Paper>
         <Paper>
-          <Heading level={3} size="small" color="brand">
+          <Heading level={3} size="small" color="blueMedium">
             1. What is your current operating system?
           </Heading>
           <Text>
@@ -92,7 +92,7 @@ const _GenerateKeysPage = ({
       </PaperGroup>
       {renderOSInstructions()}
       <Paper className="mt20">
-        <Heading level={3} size="small" color="secondary">
+        <Heading level={3} size="small" color="blueMedium">
           4. Save the key files and get the validator file ready
         </Heading>
         <Text>
@@ -117,7 +117,8 @@ const _GenerateKeysPage = ({
       </Paper>
       <Box align="center" pad="large">
         <Button
-          primary
+          width={300}
+          rainbow
           disabled={!agreedTo}
           label="CONTINUE"
           onClick={handleSubmit}

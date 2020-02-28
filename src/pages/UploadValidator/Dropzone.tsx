@@ -5,13 +5,13 @@ import { keyFile } from "../../store/actions";
 
 const getColor = (props: any, defaultColor: string) => {
   if (props.isDragAccept) {
-    return props.theme.success;
+    return props.theme.green.dark;
   }
   if (props.isDragReject) {
     return props.theme.error;
   }
   if (props.isDragActive) {
-    return props.theme.brand;
+    return props.theme.blue.dark;
   }
   return defaultColor;
 };
@@ -24,10 +24,10 @@ const Container = styled.div`
   padding: 20px;
   border-width: 2px;
   border-radius: ${p => p.theme.borderRadius}
-  border-color: ${p => getColor(p, p.theme.gray35)};
+  border-color: ${p => getColor(p, p.theme.gray.medium)};
   border-style: dashed;
-  background-color: ${p => p.theme.gray5};
-  color: ${p => getColor(p, p.theme.brand)};
+  background-color: ${p => p.theme.gray.light};
+  color: ${p => getColor(p, p.theme.blue.dark)};
   outline: none;
   transition: border 0.24s ease-in-out;
   cursor: pointer;

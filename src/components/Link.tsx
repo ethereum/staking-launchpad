@@ -26,11 +26,11 @@ const styles = `
 
 const StyledExternalLink = styled.a<Pick<LinkProps, "primary" | "theme">>`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.brand : "inherit")};
+  color: ${(props: any) => (props.primary ? props.theme.blue.dark : "inherit")};
 `;
 const StyledLink = styled(RouterLink)`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.brand : "inherit")};
+  color: ${(props: any) => (props.primary ? props.theme.blue.dark : "inherit")};
 `;
 
 interface LinkProps {

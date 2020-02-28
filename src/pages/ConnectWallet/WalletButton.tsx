@@ -19,7 +19,7 @@ export const WalletButton = ({
 
   return (
     <Paper className="m10">
-      <Heading level={3} size="small" color="brand">
+      <Heading level={3} size="small" color="blueDark">
         {title}
       </Heading>
       <Button primary onClick={handleClick} label="CONNECT" />

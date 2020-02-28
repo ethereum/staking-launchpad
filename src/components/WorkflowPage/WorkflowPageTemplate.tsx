@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { WorkflowProgressBar } from "./WorkflowProgressBar";
 import { Heading } from "grommet";
+import { AppBar } from "../AppBar";
 
 interface WorkflowPageTemplateProps {
   children: React.ReactNode;
   title: string;
+  backgroundColor?: string;
 }
 
 const Content = styled.div`
@@ -19,22 +21,27 @@ const Gutter = styled.div`
   display: flex;
   justify-content: center;
 `;
+const Background = styled.div`
+  background-color: ${(p: { backgroundColor: string }) => p.backgroundColor};
+`;
 
 export const WorkflowPageTemplate = ({
   children,
-  title
+  title,
+  backgroundColor = "lightgray"
 }: WorkflowPageTemplateProps): JSX.Element => {
   return (
-    <div>
+    <Background backgroundColor={backgroundColor}>
+      <AppBar />
       <WorkflowProgressBar />
       <Gutter>
         <Content>
-          <Heading level={2} size="medium" color="brand" className="mb40">
+          <Heading level={2} size="medium" color="blueDark" className="mb40">
             {title}
           </Heading>
           {children}
         </Content>
       </Gutter>
-    </div>
+    </Background>
   );
 };

@@ -52,7 +52,7 @@ export const AppBar = () => {
       <div className="ml50 flex">
         <Link to={routesEnum.LandingPage}>
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <Heading level={4} margin="none" className="py8">
+          <Heading level={4} margin="none" style={{ padding: "8px 0" }}>
             ETH 2 deposit ceremony
           </Heading>
         </Link>

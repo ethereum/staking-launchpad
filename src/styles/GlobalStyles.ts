@@ -45,7 +45,6 @@ const transitionClasses = `
 
 export const GlobalStyles = createGlobalStyle`
   ${shorthandSpacing}
-  ${shorthandRemSpacing}
   ${shorthandClasses}
   ${transitionClasses}
 `;

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Heading } from "grommet";
-import { Redirect } from "react-router-dom";
 import { WorkflowProgressBar } from "./WorkflowProgressBar";
 import { AppBar } from "../AppBar";
 import { DesktopOnlyModal } from "../DesktopOnlyModal";

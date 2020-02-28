@@ -7,7 +7,7 @@ interface CustomButtonProps {
   width?: number;
   fullWidth?: boolean;
   rainbow?: boolean;
-  onClick?: any;
+  onClick?: () => any;
 }
 
 const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {

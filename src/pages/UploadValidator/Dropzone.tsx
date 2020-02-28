@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDropzone } from "react-dropzone";
 import styled from "styled-components";
 import { keyFile } from "../../store/actions";
@@ -34,36 +34,12 @@ const Container = styled.div`
 `;
 
 interface props {
-  updateKeyFiles(keyFile: keyFile[]): void;
   fileAccepted: boolean;
-  setFileAccepted(value: boolean): void;
   keyFiles: keyFile[];
+  onDrop: (acceptedFiles: any) => void;
 }
 
-export const StyledDropzone = ({
-  updateKeyFiles,
-  fileAccepted,
-  setFileAccepted,
-  keyFiles
-}: props) => {
-  const alreadyUploaded = keyFiles.length > 0;
-  const onDrop = useCallback(
-    acceptedFiles => {
-      if (acceptedFiles.length === 1) {
-        setFileAccepted(true);
-        const reader = new FileReader();
-        reader.onload = event => {
-          if (event.target) {
-            const jsonData = event.target.result as string;
-            updateKeyFiles(JSON.parse(jsonData));
-          }
-        };
-        reader.readAsText(acceptedFiles[0]);
-      }
-    },
-    [setFileAccepted, updateKeyFiles]
-  );
-
+export const StyledDropzone = ({ fileAccepted, keyFiles, onDrop }: props) => {
   const {
     getRootProps,
     getInputProps,
@@ -74,11 +50,11 @@ export const StyledDropzone = ({
 
   let message = "Drop or click here to upload deposit_data.json";
 
-  if (isDragReject && !alreadyUploaded) {
+  if (isDragReject) {
     message = "Please upload a valid JSON file ";
   }
 
-  if (fileAccepted || alreadyUploaded) {
+  if (fileAccepted) {
     message = "File successfully uploaded";
   }
 

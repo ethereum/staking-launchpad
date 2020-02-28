@@ -203,9 +203,9 @@ const _SummaryPage = ({
     return (
       <WorkflowPageTemplate title="Summary">
         <AcknowledgementSection title="Your wallet has disconnected">
-          <span className="mt20">
+          <Text>
             Your wallet has disconnected. Please connect your wallet and refresh the page to begin the deposit process again.
-          </span>
+          </Text>
         </AcknowledgementSection>
       </WorkflowPageTemplate>
     )
@@ -216,9 +216,9 @@ const _SummaryPage = ({
     return (
       <WorkflowPageTemplate title="Summary">
         <AcknowledgementSection title="Your network has changed">
-          <span className="mt20">
+          <Text>
             Your Ethereum network is not correct, Please connect to the {NETWORK_NAME} network and refresh the page to begin the deposit process again.
-          </span>
+          </Text>
         </AcknowledgementSection>
       </WorkflowPageTemplate>
     )

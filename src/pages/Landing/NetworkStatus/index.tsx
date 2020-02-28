@@ -5,7 +5,11 @@ import { Heading } from "../../../components/Heading";
 import { Text } from "../../../components/Text";
 import { ProgressBar } from "./ProgressBar";
 import { queryContract } from "../../../utils/queryContract";
-import { mainnetEthRequirement, pricePerValidator } from "../../../enums";
+import {
+  isMainnet,
+  mainnetEthRequirement,
+  pricePerValidator
+} from "../../../enums";
 import { numberWithCommas } from "../../../utils/numberWithCommas";
 
 const Container = styled.div`
@@ -49,14 +53,14 @@ export const NetworkStatus = (): JSX.Element => {
 
   const calculatePercentage = (amountEth: number) => {
     const percentage = (amountEth / mainnetEthRequirement) * 100;
+    if (percentage === 0) {
+      return 0;
+    }
     if (percentage < 1) {
       return 1;
     }
     return percentage;
   };
-
-  const calculateValidatorCount = () =>
-    Math.ceil(amountEth / pricePerValidator);
 
   const calculateLaunchThreshold = () =>
     (mainnetEthRequirement - amountEth).toFixed(1);
@@ -77,12 +81,12 @@ export const NetworkStatus = (): JSX.Element => {
           <Text className="mt20">
             The eth2 network needs to reach at least
             <BoldGreen className="mr10 ml10" fontSize={24}>
-              {numberWithCommas(mainnetEthRequirement)} ETH,
+              524,288 ETH,
             </BoldGreen>
             <BoldGray className="mr10" fontSize={24}>
-              {numberWithCommas(calculateValidatorCount())} validators,
+              16,284 validators,
             </BoldGray>
-            to launch its mainnet
+            to launch its {isMainnet ? "mainnet" : "testnet"}
           </Text>
           <div>
             <ProgressBar progress={calculatePercentage(amountEth)} />

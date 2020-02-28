@@ -68,7 +68,7 @@ export const NetworkStatus = (): JSX.Element => {
                 <BoldGreen fontSize={18} className="mr10">
                   {amountEth} ETH
                 </BoldGreen>
-                <Text size="small" className="mt2">
+                <Text size="small" style={{ marginTop: "2px" }}>
                   Current Staking Balance
                 </Text>
               </span>

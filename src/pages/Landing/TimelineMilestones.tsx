@@ -44,7 +44,7 @@ export const TimelineMileStones = (): JSX.Element => {
         </Heading>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <Text className="mt24">
+        <Text className="mt25">
           The eth2 network will be released in several milestones.
         </Text>
       </ScrollAnimation>

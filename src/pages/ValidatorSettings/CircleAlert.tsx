@@ -3,7 +3,7 @@ import React from "react";
 export const CircleAlert = ({ size = 20 }: { size?: number }) => {
   return (
     <svg
-      className="pt2"
+      style={{ paddingTop: "2px" }}
       width={size}
       height={size}
       viewBox="0 0 20 20"

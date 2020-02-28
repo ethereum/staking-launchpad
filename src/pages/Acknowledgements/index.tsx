@@ -19,9 +19,8 @@ import {
 import { Paper } from "../../components/Paper";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
-import {
-  rainbowMutedColors
-} from "../../styles/styledComponentsTheme";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { pricePerValidator } from "../../enums";
 
 export enum acknowledgementId {
   signup = "signup",
@@ -52,13 +51,13 @@ const pageContent: AcknowledgementSectionData[] = [
     content: (
       <Text size="large" className="my10">
         In order to become a validator on the eth2 beacon chain, one needs to
-        deposit 32 ETH (in exchange for bETH). This process cannot be reversed
+        deposit ${pricePerValidator} ETH (in exchange for bETH). This process
+        cannot be reversed
       </Text>
     ),
     acknowledgement: {
       id: acknowledgementId.signup,
-      text:
-        "I understand that I need to deposit 32 ETH to sign up as a validator. And that the transfer of ETH to bETH is one-way, and non-reversible."
+      text: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH to bETH is one-way, and non-reversible.`
     }
   },
   {

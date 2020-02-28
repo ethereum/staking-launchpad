@@ -23,10 +23,11 @@ import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressSt
 import { prefix0X } from "../../utils/prefix0x";
 import { contractAbi } from "../../contractAbi";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { contractAddress, pricePerValidator } from "../../enums";
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
-const CONTRACT_ADDRESS = "0x4dc8b546b93131309c82505a6fdfb978d311bf45";
-const TX_VALUE = 3200000000000000000; // 3.2 eth for testnet, change to 32 on mainnet
+const CONTRACT_ADDRESS = contractAddress;
+const TX_VALUE = pricePerValidator * 1e18; // 3.2 eth for testnet, change to 32 on mainnet
 const NETWORK_NAME = "Göerli Testnet";
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
@@ -67,7 +68,7 @@ const _SummaryPage = ({
         </SummarySection>
         <SummarySection className="mx20">
           <Text weight="bold">Amount</Text>
-          <InfoBox>{validatorCount * 32} ETH</InfoBox>
+          <InfoBox>{validatorCount * pricePerValidator} ETH</InfoBox>
         </SummarySection>
         <SummarySection>
           <Text weight="bold">Key Pairs Generated</Text>
@@ -112,9 +113,9 @@ const _SummaryPage = ({
       <AcknowledgementSection title="Please make sure you aren't being phished">
         <Text>
           You are responsible for the transaction. Fraudulent websites might
-          lure you into sending the 32 ETH to them, instead of the official
-          deposit contract. Please check that the address you are sending the
-          transaction to is the correct address.
+          lure you into sending the {pricePerValidator} ETH to them, instead of
+          the official deposit contract. Please check that the address you are
+          sending the transaction to is the correct address.
         </Text>
         <Link to="https://www.google.com" external className="mt10" primary>
           Learn here how to do it safely

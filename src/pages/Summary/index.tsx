@@ -4,15 +4,15 @@ import { Box, CheckBox, Heading, Text } from "grommet";
 import styled from "styled-components";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
-import { AbstractConnector } from "@web3-react/abstract-connector"
+import { AbstractConnector } from "@web3-react/abstract-connector";
 import Web3 from "web3";
-import { Eth } from "web3-eth"
-import { SendOptions } from "web3-eth-contract"
+import { Eth } from "web3-eth";
+import { SendOptions } from "web3-eth-contract";
 import { StoreState } from "../../store/reducers";
 import { keyFile, ProgressStep } from "../../store/actions";
 import { Paper } from "../../components/Paper";
 import { web3ReactInterface } from "../ConnectWallet";
-import { NetworkChainId } from "../ConnectWallet/web3Utils"
+import { NetworkChainId } from "../ConnectWallet/web3Utils";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
@@ -26,7 +26,7 @@ import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
 const CONTRACT_ADDRESS = "0x4dc8b546b93131309c82505a6fdfb978d311bf45";
-const TX_VALUE = 3200000000000000000;  // 3.2 eth for testnet, change to 32 on mainnet
+const TX_VALUE = 3200000000000000000; // 3.2 eth for testnet, change to 32 on mainnet
 const NETWORK_NAME = "Göerli Testnet";
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
@@ -51,12 +51,9 @@ const _SummaryPage = ({
 
   const validatorKeys = keyFiles.map(file => file.pubkey);
 
-  const {
-    account,
-    chainId,
-    connector,
-  }: web3ReactInterface = useWeb3React<Web3Provider>();
-
+  const { account, chainId, connector }: web3ReactInterface = useWeb3React<
+    Web3Provider
+  >();
 
   const renderSummarySection = (): JSX.Element => (
     <Paper>
@@ -142,56 +139,58 @@ const _SummaryPage = ({
     } = depositFile;
 
     try {
-      const walletProvider: any = await (connector as AbstractConnector).getProvider()
+      const walletProvider: any = await (connector as AbstractConnector).getProvider();
       const web3: Eth = new Web3(walletProvider).eth;
-      const contract = new web3.Contract(
-        contractAbi,
-        CONTRACT_ADDRESS,
-      );
+      const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
 
       const transactionParameters: SendOptions = {
         gasPrice: "0x0055e72a000", //TODO: estimate gas price
         from: account as string,
-        value: TX_VALUE,
+        value: TX_VALUE
       };
 
       // Send validator transaction
-      contract.methods.deposit(
-        prefix0X(pubkey),
-        prefix0X(withdrawal_credentials),
-        prefix0X(signature),
-        prefix0X(deposit_data_root)
-      )
+      contract.methods
+        .deposit(
+          prefix0X(pubkey),
+          prefix0X(withdrawal_credentials),
+          prefix0X(signature),
+          prefix0X(deposit_data_root)
+        )
         .send(transactionParameters)
         // Event for when the user confirms the tx
         .on("transactionHash", (txId: string): void => {
-          console.log('transaction id', txId)
+          console.log("transaction id", txId);
           // TODO(tx UI feature): return txId
         })
         // Event is for when the tx is mined
-        .on("confirmation", (confirmation: number, receipt: { status: {} }): void => {
-          if (confirmation === 0) {
-            console.log("receipt: ", receipt)
-            if (receipt.status) {
-              console.log("receipt status: ", receipt.status)
-              // TODO(tx UI feature): return status
-            } else {
-              console.log('error: receipt status not received')
+        .on(
+          "confirmation",
+          (confirmation: number, receipt: { status: {} }): void => {
+            if (confirmation === 0) {
+              console.log("receipt: ", receipt);
+              if (receipt.status) {
+                console.log("receipt status: ", receipt.status);
+                // TODO(tx UI feature): return status
+              } else {
+                console.log("error: receipt status not received");
+              }
             }
           }
-        })
+        );
     } catch (rejected) {
       console.log("user rejected transaction: ", rejected);
       // TODO(tx UI): return rejected status
     }
-  }
+  };
 
   // Fires off a transaction for each validator in the users deposit key file
   const handleDepositClick = async () => {
-    keyFiles.forEach((validator) => { // TODO(tx UI feature): set state with array of TXs 
-      handleTransaction(validator)
-    })
-  }
+    keyFiles.forEach(validator => {
+      // TODO(tx UI feature): set state with array of TXs
+      handleTransaction(validator);
+    });
+  };
 
   if (progress !== ProgressStep.SUMMARY) {
     return routeToCorrectProgressStep(progress);
@@ -204,11 +203,12 @@ const _SummaryPage = ({
       <WorkflowPageTemplate title="Summary">
         <AcknowledgementSection title="Your wallet has disconnected">
           <Text>
-            Your wallet has disconnected. Please connect your wallet and refresh the page to begin the deposit process again.
+            Your wallet has disconnected. Please connect your wallet and refresh
+            the page to begin the deposit process again.
           </Text>
         </AcknowledgementSection>
       </WorkflowPageTemplate>
-    )
+    );
   }
 
   // Handles the edge case for when the user changes the network while on this page
@@ -217,11 +217,13 @@ const _SummaryPage = ({
       <WorkflowPageTemplate title="Summary">
         <AcknowledgementSection title="Your network has changed">
           <Text>
-            Your Ethereum network is not correct, Please connect to the {NETWORK_NAME} network and refresh the page to begin the deposit process again.
+            Your Ethereum network is not correct, Please connect to the{" "}
+            {NETWORK_NAME} network and refresh the page to begin the deposit
+            process again.
           </Text>
         </AcknowledgementSection>
       </WorkflowPageTemplate>
-    )
+    );
   }
 
   return (
@@ -237,8 +239,9 @@ const _SummaryPage = ({
           width={300}
           rainbow
           disabled={!allChecked}
-          label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
-            32} ETH`}
+          label={`SIGN ${validatorCount} TRANSACTION${
+            validatorCount > 1 ? "S" : ""
+          } AND DEPOSIT ${validatorCount * 32} ETH`}
           onClick={handleDepositClick}
         />
       </Box>

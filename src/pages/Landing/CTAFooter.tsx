@@ -25,6 +25,7 @@ export const CTAFooter = (): JSX.Element => {
       <SubContainer className={m ? "py20" : "py100"}>
         <Link to={routesEnum.AcknowledgementPage}>
           <Button
+            rainbow
             className="m-auto"
             fullWidth
             width={m ? undefined : 400}

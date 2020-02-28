@@ -10,9 +10,11 @@ import {
 } from "../../store/actions";
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
-import { Box, Button, Text } from "grommet";
+import { Box, Text } from "grommet";
 import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
+import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
 
 const BackBtn = styled(Text)`
   color: ${p => p.theme.gray.medium};
@@ -51,7 +53,7 @@ export const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload Key File">
+    <WorkflowPageTemplate title="Upload Key File" backgroundColor={rainbowMutedColors[3]}>
       <Paper>
         <StyledDropzone
           fileAccepted={fileAccepted}
@@ -63,7 +65,8 @@ export const _UploadValidatorPage = ({
         <Box align="center" pad="large">
           <BackBtn onClick={handleGoBack}>Go Back</BackBtn>
           <Button
-            primary
+            width={300}
+            rainbow
             disabled={!fileAccepted}
             label="Continue"
             onClick={handleSubmit}

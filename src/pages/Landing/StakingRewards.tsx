@@ -42,7 +42,7 @@ export const StakingRewards = (): JSX.Element => {
           </Heading>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
-          <Text className="mt24">
+          <Text className="mt25">
             Once the mainnet has launched, validators get rewarded for attesting
             and proposing blocks. The rewards are tired to the overall amount of
             ETH staking in the network

@@ -65,6 +65,7 @@ export const SignupSteps = (): JSX.Element => {
       <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
         <Link to={routesEnum.AcknowledgementPage} className="pt100">
           <Button
+            rainbow
             className="m-auto"
             fullWidth
             width={m ? undefined : 400}

@@ -29,7 +29,7 @@ export const PhaseCard = ({
         {title}
       </Heading>
       <Text>{subTitle}</Text>
-      <Link className="mt20" to={linkUrl}>
+      <Link external className="mt20" to={linkUrl}>
         {link}
       </Link>
     </Container>

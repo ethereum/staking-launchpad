@@ -75,12 +75,12 @@ export const Hero = () => {
                   color="brand"
                   className="my20"
                 >
-                  Become a validator and help secure the eth2 network.
+                  become a validator and help secure the eth2 network.
                 </Heading>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
                 <Text className="mt25">
-                  Earn continuous payouts for providing a public good to the
+                  earn continuous payouts for providing a public good to the
                   community.
                 </Text>
               </ScrollAnimation>

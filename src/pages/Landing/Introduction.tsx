@@ -64,7 +64,7 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              Introduction to the sign up process
+              introduction to the sign up process
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
@@ -74,8 +74,8 @@ export const Introduction = (): JSX.Element => {
               without compromising on decentralization.
             </Text>
             <Text className="mt25">
-              In contrast to Eth1, eth2 uses proof-of-stake (PoS) to secure its
-              network. And while Eth1 will continue to exist as its own
+              In contrast to eth1, eth2 uses proof-of-stake (PoS) to secure its
+              network. And while eth1 will continue to exist as its own
               independent proof-of-work chain for a little while to come, the
               transition towards PoS starts now.
             </Text>

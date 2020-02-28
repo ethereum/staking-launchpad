@@ -48,47 +48,17 @@ const phases: phase[] = [
     title: "Duration",
     subTitle:
       "The duration for the deployment of the individual phases depends on many factors.",
-    linkUrl: "/somePage",
+    linkUrl:
+      "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/",
     link: "Phase 0, 1, 2 and 3 duration →"
   },
   {
-    title: "Tokens",
-    subTitle: "eth2 will have a new token - bETH.",
-    linkUrl: "/somePage",
-    link: "About bETH →"
-  },
-  {
-    title: "Available Clients",
+    title: "Deposit contract formally verified",
     subTitle:
-      "We put together a curated list of available clients for running a validator.",
-    linkUrl: "/somePage",
-    link: "See list of clients →"
-  },
-  {
-    title: "Economics",
-    subTitle: "All economic details are publicly accessible and transparent.",
-    linkUrl: "/somePage",
-    link: "Validator Economics →"
-  },
-  {
-    title: "Code Audit",
-    subTitle:
-      "Any code audits are written up into a report, you can read it here.",
-    linkUrl: "/somePage",
-    link: "Read the full audit report →"
-  },
-  {
-    title: "Testnet info",
-    subTitle:
-      "We put together a list of resources on anything related to the testnet.",
-    linkUrl: "/somePage",
-    link: "Testnet Details →"
-  },
-  {
-    title: "Resources",
-    subTitle: "See our full list of curated resources and information.",
-    linkUrl: "/somePage",
-    link: "Further Resources →"
+      "The deposit contract has been verified at a byte-code level to ensure everyone’s safety.",
+    linkUrl:
+      "https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/",
+    link: "Read about formal verification →"
   }
 ];
 
@@ -98,16 +68,16 @@ export const Phases = (): JSX.Element => {
     <Container isMobile={m}>
       <SubContainer isMobile={m}>
         <ResponsiveContainer>
-          <div>
+          <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                What is eth2 phase 0?
+                what is eth2 phase 0?
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20">
                 Transitioning from proof-of-work to proof-of-stake, eth2 will be
-                launched in 4 phases.
+                launched in at least 3 phases.
               </Text>
             </ScrollAnimation>
           </div>

@@ -3,7 +3,7 @@ import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPage
 import { StoreState } from "../../store/reducers";
 import { connect } from "react-redux";
 import { Paper } from "../../components/Paper";
-import { Box, Button, CheckBox, Heading, Text } from "grommet";
+import { Box, CheckBox, Heading, Text } from "grommet";
 import styled from "styled-components";
 import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
@@ -11,6 +11,8 @@ import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
 import { keyFile, ProgressStep } from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 const SummarySection = styled(Box)`
   width: 30%;
@@ -113,13 +115,17 @@ const _SummaryPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Summary">
+    <WorkflowPageTemplate
+      title="Summary"
+      backgroundColor={rainbowMutedColors[5]}
+    >
       {renderSummarySection()}
       {renderKeyList()}
       {renderAcknowledgements()}
       <Box align="center" pad="large">
         <Button
-          primary
+          width={300}
+          rainbow
           disabled={!allChecked}
           label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
             32} ETH`}

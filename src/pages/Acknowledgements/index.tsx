@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Heading, Text } from "grommet";
+import { Box, Heading, Text } from "grommet";
 import { FormNext } from "grommet-icons";
 import { connect } from "react-redux";
 import { every, values } from "lodash";
@@ -18,6 +18,10 @@ import {
 } from "../../store/actions";
 import { Paper } from "../../components/Paper";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
+import {
+  rainbowMutedColors
+} from "../../styles/styledComponentsTheme";
 
 export enum acknowledgementId {
   signup = "signup",
@@ -68,7 +72,8 @@ const pageContent: AcknowledgementSectionData[] = [
           for being offline are equal to the rewards for actively participating.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the duties of a validator <FormNext color="blueDark" />
+          Learn More about the duties of a validator{" "}
+          <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -311,7 +316,10 @@ class _AcknowledgementPage extends React.Component<Props, State> {
     }
 
     return (
-      <WorkflowPageTemplate title="Overview">
+      <WorkflowPageTemplate
+        title="Overview"
+        backgroundColor={rainbowMutedColors[0]}
+      >
         {this.renderIntroSection()}
         {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
           <AcknowledgementSection
@@ -323,7 +331,8 @@ class _AcknowledgementPage extends React.Component<Props, State> {
         ))}
         <Box align="center" pad="large">
           <Button
-            primary
+            rainbow
+            width={300}
             disabled={!this.props.allAcknowledgementsAgreedTo}
             label="Continue"
             onClick={this.handleSubmit}

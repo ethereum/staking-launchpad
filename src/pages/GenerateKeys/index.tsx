@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import { Box, Button, CheckBox, Heading, Text } from "grommet";
+import { Box, CheckBox, Heading, Text } from "grommet";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper, PaperGroup } from "../../components/Paper";
 import { OperatingSystemButtons } from "./OperatingSystemButtons";
@@ -11,6 +11,8 @@ import { WindowsInstructions } from "./WindowsInstructions";
 import { ProgressStep, updateProgress } from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { StoreState } from "../../store/reducers";
+import { Button } from "../../components/Button";
+import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
 
 export enum operatingSystem {
   "MAC",
@@ -68,7 +70,7 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs">
+    <WorkflowPageTemplate title="Generate Key Pairs" backgroundColor={rainbowMutedColors[2]}>
       <PaperGroup>
         <Paper>
           <Heading level={3} size="small" color="blueDark">
@@ -115,7 +117,8 @@ const _GenerateKeysPage = ({
       </Paper>
       <Box align="center" pad="large">
         <Button
-          primary
+          width={300}
+          rainbow
           disabled={!agreedTo}
           label="CONTINUE"
           onClick={handleSubmit}

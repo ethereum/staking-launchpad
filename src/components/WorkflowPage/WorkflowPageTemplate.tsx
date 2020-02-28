@@ -9,6 +9,7 @@ import { DesktopOnlyModal } from "../DesktopOnlyModal";
 interface WorkflowPageTemplateProps {
   children: React.ReactNode;
   title: string;
+  backgroundColor?: string;
 }
 
 const Content = styled.div`
@@ -22,16 +23,20 @@ const Gutter = styled.div`
   display: flex;
   justify-content: center;
 `;
+const Background = styled.div`
+  background-color: ${(p: { backgroundColor: string }) => p.backgroundColor};
+`;
 
 export const WorkflowPageTemplate = ({
   children,
-  title
+  title,
+  backgroundColor = "lightgray"
 }: WorkflowPageTemplateProps): JSX.Element => {
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }
   return (
-    <div>
+    <Background backgroundColor={backgroundColor}>
       <AppBar />
       <WorkflowProgressBar />
       <Gutter>
@@ -42,6 +47,6 @@ export const WorkflowPageTemplate = ({
           {children}
         </Content>
       </Gutter>
-    </div>
+    </Background>
   );
 };

@@ -23,6 +23,10 @@ export enum NetworkChainId {
  */
 const supportedNetworks = [
   NetworkChainId["Göerli Testnet"],
+  NetworkChainId["Ethereum Mainnet"],
+  NetworkChainId["Rinkeby Testnet"],
+  NetworkChainId["Ropsten Testnet"],
+  NetworkChainId["Kovan Testnet"]
 ];
 
 export enum AllowedNetworks {

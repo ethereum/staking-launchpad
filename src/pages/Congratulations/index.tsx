@@ -13,10 +13,10 @@ import { keyFile, ProgressStep } from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 
 const RainbowBackground = styled.div`
-  background-image: ${p =>
-    `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
+  background-image: ${p => `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight})`};
   min-height: 100vh;
 `;
+
 const Gutter = styled.div`
   padding: 0 48px;
   display: flex;

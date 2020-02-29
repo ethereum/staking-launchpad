@@ -242,7 +242,7 @@ const _SummaryPage = ({
             label={`SIGN ${validatorCount} TRANSACTION${
               validatorCount > 1 ? "S" : ""
             } AND DEPOSIT ${validatorCount * pricePerValidator} ETH`}
-            // onClick={handleDepositClick}
+            onClick={handleDepositClick}
           />
         </Link>
       </Box>

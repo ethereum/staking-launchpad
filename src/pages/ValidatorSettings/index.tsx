@@ -72,7 +72,7 @@ const _ValidatorSettingsPage = ({
           <Container>
             <Text weight="bold">Cost</Text>
             <InfoBox>
-              <Text>{validatorCount * pricePerValidator} ETH</Text>
+              <Text>{(validatorCount * pricePerValidator).toFixed(1)} ETH</Text>
             </InfoBox>
           </Container>
         </div>

@@ -11,6 +11,7 @@ import {
   UploadValidatorPage,
   ValidatorSettingsPage
 } from "./pages";
+import ScrollToTop from "./utils/ScrollToTop";
 
 type RouteType = {
   path: string;
@@ -67,10 +68,17 @@ const routes: RouteType[] = [
 
 export const Routes = () => {
   return (
-    <Switch>
-      {routes.map((route: RouteType) => (
-        <Route {...route} key={route.path} />
-      ))}
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        {routes.map((route: RouteType) => (
+          <Route
+            onUpdate={() => window.scrollTo(0, 0)}
+            {...route}
+            key={route.path}
+          />
+        ))}
+      </Switch>
+    </>
   );
 };

@@ -36,11 +36,9 @@ const SummarySection = styled(Box)`
 `;
 
 const _SummaryPage = ({
-  validatorCount,
   keyFiles,
   progress
 }: {
-  validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
 }): JSX.Element => {
@@ -49,8 +47,8 @@ const _SummaryPage = ({
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const allChecked = losePhrase && earlyAdopt && nonReverse && noPhish;
-
   const validatorKeys = keyFiles.map(file => file.pubkey);
+  const validatorCount = keyFiles.length;
 
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
@@ -72,7 +70,7 @@ const _SummaryPage = ({
         </SummarySection>
         <SummarySection>
           <Text weight="bold">Key Pairs Generated</Text>
-          <InfoBox>{keyFiles.length}</InfoBox>
+          <InfoBox>{validatorCount}</InfoBox>
         </SummarySection>
       </Box>
     </Paper>
@@ -236,15 +234,17 @@ const _SummaryPage = ({
       {renderKeyList()}
       {renderAcknowledgements()}
       <Box align="center" pad="large">
-        <Button
-          width={300}
-          rainbow
-          disabled={!allChecked}
-          label={`SIGN ${validatorCount} TRANSACTION${
-            validatorCount > 1 ? "S" : ""
-          } AND DEPOSIT ${validatorCount * 32} ETH`}
-          onClick={handleDepositClick}
-        />
+        <Link to="/congratulations">
+          <Button
+            width={300}
+            rainbow
+            disabled={!allChecked}
+            label={`SIGN ${validatorCount} TRANSACTION${
+              validatorCount > 1 ? "S" : ""
+            } AND DEPOSIT ${validatorCount * pricePerValidator} ETH`}
+            onClick={handleDepositClick}
+          />
+        </Link>
       </Box>
     </WorkflowPageTemplate>
   );

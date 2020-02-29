@@ -1,7 +1,7 @@
 import React from "react";
-import {Redirect} from "react-router-dom";
-import {ProgressStep} from "../store/actions";
-import {routesEnum} from "../Routes";
+import { Redirect } from "react-router-dom";
+import { ProgressStep } from "../store/actions";
+import { routesEnum } from "../Routes";
 
 export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.OVERVIEW) {
@@ -22,6 +22,8 @@ export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.SUMMARY) {
     return <Redirect to={routesEnum.SummaryPage} />;
   }
-
+  if (step === ProgressStep.CONGRATULATIONS) {
+    return <Redirect to={routesEnum.CongratulationsPage} />;
+  }
   return <Redirect to={routesEnum.NotFoundPage} />;
 };

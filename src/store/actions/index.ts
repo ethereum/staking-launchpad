@@ -59,7 +59,8 @@ export enum ProgressStep {
   "GENERATE_KEY_PAIRS",
   "UPLOAD_VALIDATOR_FILE",
   "CONNECT_WALLET",
-  "SUMMARY"
+  "SUMMARY",
+  "CONGRATULATIONS"
 }
 export interface UpdateProgressAction {
   type: ActionTypes.updateProgress;

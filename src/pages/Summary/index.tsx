@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Box, CheckBox, Heading, Text } from "grommet";
-import { Spinning } from 'grommet-controls';
-import { FormNext } from "grommet-icons";
+import { Spinning } from "grommet-controls";
 import styled from "styled-components";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
@@ -10,9 +9,8 @@ import { AbstractConnector } from "@web3-react/abstract-connector";
 import Web3 from "web3";
 import { Eth } from "web3-eth";
 import { SendOptions } from "web3-eth-contract";
-import { Redirect } from "react-router-dom";
 import { StoreState } from "../../store/reducers";
-import { keyFile, ProgressStep } from "../../store/actions";
+import { keyFile, ProgressStep, updateProgress } from "../../store/actions";
 import { Paper } from "../../components/Paper";
 import { web3ReactInterface } from "../ConnectWallet";
 import { NetworkChainId } from "../ConnectWallet/web3Utils";
@@ -21,13 +19,12 @@ import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
 import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
-import { Button } from "../../components/Button";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { prefix0X } from "../../utils/prefix0x";
 import { contractAbi } from "../../contractAbi";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { contractAddress, pricePerValidator } from "../../enums";
-import { routesEnum } from "../../Routes";
+import { pricePerValidator, contractAddress } from "../../enums";
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
 const CONTRACT_ADDRESS = contractAddress;
@@ -40,26 +37,30 @@ const SummarySection = styled(Box)`
 `;
 
 const _SummaryPage = ({
+  validatorCount,
   keyFiles,
-  progress
+  progress,
+  updateProgress
 }: {
+  validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
+  updateProgress: () => void;
 }): JSX.Element => {
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
-  const [txMining, setTxMining] = useState(false)
-  const [redirectToCongratulations, setRedirectToCongratulations] = useState(false)
-  const [transactionList, setTransactionList] = useState([])
+  const [txMining, setTxMining] = useState(false);
   const allChecked = losePhrase && earlyAdopt && nonReverse && noPhish;
   const validatorKeys = keyFiles.map(file => file.pubkey);
-  const validatorCount = keyFiles.length;
 
-  const { account, chainId, connector }: web3ReactInterface = useWeb3React<
-    Web3Provider
-  >();
+  const {
+    account,
+    chainId,
+    connector,
+  }: web3ReactInterface = useWeb3React<Web3Provider>();
+
 
   const renderSummarySection = (): JSX.Element => (
     <Paper>
@@ -77,60 +78,11 @@ const _SummaryPage = ({
         </SummarySection>
         <SummarySection>
           <Text weight="bold">Key Pairs Generated</Text>
-          <InfoBox>{validatorCount}</InfoBox>
+          <InfoBox>{keyFiles.length}</InfoBox>
         </SummarySection>
       </Box>
     </Paper>
   );
-
-  interface tx {
-    pubkey: string
-    txSent: boolean,
-    status?: string,
-    etherscanLink?: string
-  }
-
-  // @ts-ignore
-  const transactionSection = (transactionList): JSX.Element => (
-    <Box>
-      {transactionList.map((tx: tx) => {
-        console.log(transactionList, 'from txsection')
-        const { pubkey, txSent, status, etherscanLink } = tx
-        let etherscanLinkText = etherscanLink || "/"
-        const transactionStatus = txSent ? "pending transaction" : "rejected signing"
-        return (
-          <div className="flex flex-row space-between mt20">
-            <InfoBox>{pubkey}</InfoBox>
-            <InfoBox>{status ? status : transactionStatus}</InfoBox>
-            <InfoBox>{
-              <Link external to={etherscanLinkText} primary>follow tx on etherscan <FormNext color="blueDark" /></Link>
-            }
-            </InfoBox>
-
-          </div>
-        )
-      })}
-    </Box>
-  );
-
-
-  const transactionHeading = (): JSX.Element => {
-    console.log('in transactionSection')
-
-    return (
-      <Box width="100%" className="flex flex-row space-between">
-        <SummarySection>
-          <Text weight="bold">Validator Key</Text>
-        </SummarySection>
-        <SummarySection>
-          <Text weight="bold">Transaction status</Text>
-        </SummarySection>
-        <SummarySection>
-          <Text weight="bold">Transaction Link</Text>
-        </SummarySection>
-      </Box>
-    )
-  }
 
   const renderKeyList = (): JSX.Element => (
     <Paper className="mt20">
@@ -185,20 +137,6 @@ const _SummaryPage = ({
     </div>
   );
 
-  const handleTxChange = (pubkey: string, txValues: {}): any[] => {
-    // @ts-ignore
-    return setTransactionList((oldTxList: tx) => (oldTxList.map(oldTx => {
-      console.log('old', oldTxList)
-      console.log('oldtx', oldTx)
-
-      if (oldTx.pubkey === pubkey) {
-        console.log('val', txValues)
-        return { ...oldTx, txValues }
-      }
-      return oldTx;
-    })))
-  }
-
   const handleTransaction = async (depositFile: keyFile): Promise<void> => {
     const {
       pubkey,
@@ -215,7 +153,7 @@ const _SummaryPage = ({
       const transactionParameters: SendOptions = {
         gasPrice: "0x0055e72a000", //TODO: estimate gas price
         from: account as string,
-        value: TX_VALUE
+        value: TX_VALUE,
       };
 
       // Send validator transaction
@@ -229,61 +167,38 @@ const _SummaryPage = ({
         .send(transactionParameters)
         // Event for when the user confirms the tx
         .on("transactionHash", (txId: string): void => {
-          setTxMining(true)
-          console.log("transaction id", txId);
-          const txObj = {
-            pubkey,
-            txSent: true,
-            etherscanLink: `https://goerli.etherscan.io/tx/${txId}`
-          }
-          // @ts-ignore
-          setTransactionList((oldTxList) => [...oldTxList, txObj])
+          setTxMining(true);
           // TODO(tx UI feature): return txId
         })
         // Event is for when the tx is mined
-        .on(
-          "confirmation",
-          (confirmation: number, receipt: { status: {} }): void => {
-            if (confirmation === 0) {
-              console.log("receipt: ", receipt);
-              handleTxChange(pubkey, { status: receipt.status })
-              if (receipt.status) {
-                console.log("receipt status: ", receipt.status);
-                // TODO(tx UI feature): return status
-
-              } else {
-                console.log("error: receipt status not received");
-              }
+        .on("confirmation", (confirmation: number, receipt: { status: {}; }): any => {
+          if (confirmation === 0) {
+            console.log("receipt: ", receipt);
+            if (receipt.status) {
+              console.log("receipt status: ", receipt.status);
+              // TODO(tx UI feature): return status
+              updateProgress();
+            } else {
+              console.log('error: receipt status not received');
             }
           }
-        );
+        });
     } catch (rejected) {
       console.log("user rejected transaction: ", rejected);
       // TODO(tx UI): return rejected status
-      const txObj = {
-        pubkey,
-        txSent: false,
-      }
-      // @ts-ignore
-      setTransactionList((oldTxList) => [...oldTxList, txObj])
     }
   };
 
   // Fires off a transaction for each validator in the users deposit key file
   const handleDepositClick = async () => {
-    keyFiles.forEach(validator => {
-      // TODO(tx UI feature): set state with array of TXs
+    keyFiles.forEach((validator) => {
       handleTransaction(validator);
     });
   };
 
-  if (redirectToCongratulations) {
-    return <Redirect to={routesEnum.CongratulationsPage} />
-  }
-
   if (progress !== ProgressStep.SUMMARY) {
     return routeToCorrectProgressStep(progress);
-  }
+  };
 
   // Handles the edge case for when the user disconnects the wallet while on this page
   // TODO(Post release UI): consider moving the user back to connect wallet or making the wallet connection reusable for this edgecase
@@ -315,7 +230,6 @@ const _SummaryPage = ({
     );
   }
 
-  // TODO: add in grid
   if (txMining) {
     return (
       <WorkflowPageTemplate title="Summary"
@@ -325,16 +239,10 @@ const _SummaryPage = ({
             <Text size="large" className="my10">Your transactions have started processing</Text>
             <Text size="medium" className="my20">Please confrim your transaction for each validator key you have generated</Text>
             <Spinning size="large" />
-            {transactionList && (
-              <Box className="mt20" width="100%">
-                {transactionHeading()}
-                {transactionSection(transactionList)}
-              </Box>
-            )}
           </Box>
         </Paper>
       </WorkflowPageTemplate>
-    )
+    );
   }
 
   return (
@@ -346,17 +254,14 @@ const _SummaryPage = ({
       {renderKeyList()}
       {renderAcknowledgements()}
       <Box align="center" pad="large">
-        <Link to="/congratulations">
-          <Button
-            width={300}
-            rainbow
-            disabled={!allChecked}
-            label={`SIGN ${validatorCount} TRANSACTION${
-              validatorCount > 1 ? "S" : ""
-              } AND DEPOSIT ${validatorCount * pricePerValidator} ETH`}
-            onClick={handleDepositClick}
-          />
-        </Link>
+        <Button
+          width={300}
+          rainbow
+          disabled={!allChecked}
+          label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
+            32} ETH`}
+          onClick={handleDepositClick}
+        />
       </Box>
     </WorkflowPageTemplate>
   );
@@ -368,4 +273,10 @@ const mstp = ({ validatorCount, keyFiles, progress }: StoreState) => ({
   progress
 });
 
-export const SummaryPage = connect(mstp)(_SummaryPage);
+const mdtp = (dispatch: any) => ({
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.CONGRATULATIONS));
+  }
+});
+
+export const SummaryPage = connect(mstp, mdtp)(_SummaryPage);

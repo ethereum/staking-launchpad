@@ -120,8 +120,8 @@ const _SummaryPage = ({
         <Text>
           You are responsible for the transaction. Fraudulent websites might
           lure you into sending the {pricePerValidator} ETH to them, instead of
-              the official deposit contract. Please check that the address you are
-              sending the transaction to is the correct address.
+          the official deposit contract. Please check that the address you are
+          sending the transaction to is the correct address.
         </Text>
         <Link to="https://www.google.com" external className="mt10" primary>
           Learn here how to do it safely
@@ -191,7 +191,7 @@ const _SummaryPage = ({
 
   // Fires off a transaction for each validator in the users deposit key file
   const handleDepositClick = async () => {
-    keyFiles.forEach((validator) => {
+    keyFiles.forEach(validator => {
       handleTransaction(validator);
     });
   };

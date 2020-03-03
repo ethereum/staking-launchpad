@@ -12,7 +12,6 @@ import { ThemeProvider } from "styled-components";
 import { Web3Provider } from "@ethersproject/providers";
 import { Web3ReactProvider } from "@web3-react/core";
 import { BrowserRouter } from "react-router-dom";
-import { ScrollToTop } from "./utils/ScrollToTop";
 
 const store = createStore(reducers);
 
@@ -26,7 +25,6 @@ export const App: React.FC = () => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <BrowserRouter>
-        <ScrollToTop /> {/* needed to fix react router */}
         <Provider store={store}>
           <Grommet theme={grommetTheme}>
             <ThemeProvider theme={styledComponentsTheme}>

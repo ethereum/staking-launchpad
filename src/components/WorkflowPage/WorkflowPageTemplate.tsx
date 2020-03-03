@@ -24,6 +24,7 @@ const Gutter = styled.div`
 `;
 const Background = styled.div`
   background-color: ${(p: { backgroundColor: string }) => p.backgroundColor};
+  min-height: 100vh;
 `;
 
 export const WorkflowPageTemplate = ({

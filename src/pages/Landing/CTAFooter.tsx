@@ -18,6 +18,17 @@ const SubContainer = styled.div`
   }
 `;
 
+const CtaText = ({ mobile }: { mobile?: boolean }) => {
+  const Rhino = styled.span`
+    font-size: 20px;
+  `;
+  return (
+    <span>
+      GET <Rhino>🦏</Rhino> STARTED {mobile ? "ON DESKTOP" : ""}
+    </span>
+  );
+};
+
 export const CTAFooter = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
   return (
@@ -29,7 +40,7 @@ export const CTAFooter = (): JSX.Element => {
             className="m-auto"
             fullWidth
             width={m ? undefined : 400}
-            label={`GET STARTED ${m ? "ON DESKTOP" : ""}`}
+            label={<CtaText mobile={m} />}
           />
         </Link>
       </SubContainer>

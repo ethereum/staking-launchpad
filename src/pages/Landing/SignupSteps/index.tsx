@@ -37,7 +37,7 @@ export const SignupSteps = (): JSX.Element => {
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <Heading level={2} size="medium" color="blueDark" margin="none">
-          Sign up in 3 easy steps
+          sign up in 3 easy steps
         </Heading>
       </ScrollAnimation>
       <StepsContainer>

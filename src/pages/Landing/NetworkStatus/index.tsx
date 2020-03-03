@@ -43,7 +43,7 @@ export const NetworkStatus = (): JSX.Element => {
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Network Status
+            network status
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>

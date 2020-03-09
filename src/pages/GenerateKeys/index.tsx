@@ -74,7 +74,7 @@ const _GenerateKeysPage = ({
       <PaperGroup>
         <Paper>
           <Heading level={3} size="small" color="blueDark">
-            How to generate the validator keys
+            How to generate your validator keys
           </Heading>
         </Paper>
         <Paper>
@@ -93,7 +93,7 @@ const _GenerateKeysPage = ({
       {renderOSInstructions()}
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          4. Save the key files and get the validator file ready
+          3. Save the key files and get the validator file ready
         </Heading>
         <Text>
           You should now be able to save the file{" "}
@@ -120,7 +120,7 @@ const _GenerateKeysPage = ({
           width={300}
           rainbow
           disabled={!agreedTo}
-          label="CONTINUE"
+          label="Continue"
           onClick={handleSubmit}
         />
       </Box>

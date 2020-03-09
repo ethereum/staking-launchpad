@@ -87,7 +87,7 @@ const _SummaryPage = ({
   const renderKeyList = (): JSX.Element => (
     <Paper className="mt20">
       <Heading level={3} size="small" color="blueDark">
-        Keys
+        keys
       </Heading>
       <Keylist validatorKeys={validatorKeys} />
     </Paper>
@@ -204,7 +204,7 @@ const _SummaryPage = ({
   // TODO(Post release UI): consider moving the user back to connect wallet or making the wallet connection reusable for this edgecase
   if (!account || !connector) {
     return (
-      <WorkflowPageTemplate title="Summary">
+      <WorkflowPageTemplate title="deposit summary">
         <AcknowledgementSection title="Your wallet has disconnected">
           <Text>
             Your wallet has disconnected. Please connect your wallet and refresh
@@ -258,8 +258,8 @@ const _SummaryPage = ({
           width={300}
           rainbow
           disabled={!allChecked}
-          label={`SIGN ${validatorCount} TRANSACTION AND DEPOSIT ${validatorCount *
-            32} ETH`}
+          label={`Sign ${validatorCount} transaction(s) and deposit ${validatorCount *
+            3.2} ETH`}
           onClick={handleDepositClick}
         />
       </Box>

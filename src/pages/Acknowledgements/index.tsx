@@ -27,10 +27,10 @@ export enum acknowledgementId {
   responsibilities = "responsibilities",
   slashing = "slashing",
   keyManagement = "keyManagement",
+  signingKeys = "signingKeys",
   transferDelay = "transferDelay",
   commitment = "commitment",
   earlyAdoptionRisks = "earlyAdoptionRisks",
-  economics = "economics"
 }
 
 const defaultAcknowledgementState = {
@@ -38,16 +38,16 @@ const defaultAcknowledgementState = {
   [acknowledgementId.responsibilities]: false,
   [acknowledgementId.slashing]: false,
   [acknowledgementId.keyManagement]: false,
+  [acknowledgementId.signingKeys]: false,
   [acknowledgementId.transferDelay]: false,
   [acknowledgementId.commitment]: false,
   [acknowledgementId.earlyAdoptionRisks]: false,
-  [acknowledgementId.economics]: false
 };
 
 const pageContent: AcknowledgementSectionData[] = [
   {
     id: acknowledgementId.signup,
-    title: "Signing up",
+    title: "signing up",
     content: (
       <Text size="large" className="my10">
         In order to become a validator on the eth2 beacon chain, one needs to
@@ -57,17 +57,17 @@ const pageContent: AcknowledgementSectionData[] = [
     ),
     acknowledgement: {
       id: acknowledgementId.signup,
-      text: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH to bETH is one-way, and non-reversible.`
+      text: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`
     }
   },
   {
     id: acknowledgementId.responsibilities,
-    title: "Responsibilities",
+    title: "responsibilities",
     content: (
       <>
         <Text size="large" className="my10">
           Only validators that actively participate in consensus receive
-          rewards, Those that are offline are penalised - where the penalties
+          rewards. Those that are offline are penalised - where the penalties
           for being offline are equal to the rewards for actively participating.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
@@ -83,12 +83,12 @@ const pageContent: AcknowledgementSectionData[] = [
   },
   {
     id: acknowledgementId.slashing,
-    title: "Slashing risks",
+    title: "slashing risks",
     content: (
       <>
         <Text size="large" className="my10">
           Validators that act maliciously, or contrary to the specification, are
-          liable to being slashed (incur a large penalty)
+          liable to be slashed (incur a large penalty)
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
           Learn More about about penalties <FormNext color="blueDark" />
@@ -98,28 +98,44 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.slashing,
       text:
-        "I understand that if I act contrary to the specification, I am liable to being slashed."
+        "I understand that if I act contrary to the specification, I am liable to be slashed."
     }
   },
   {
     id: acknowledgementId.keyManagement,
-    title: "Key Management",
+    title: "backup mnemonic",
     content: (
       <Text size="large" className="my10">
-        Each validators’ keys will be derived from a unique mnemonic phrase.
-        Validators will need this mnemonic to be able to withdraw their funds.
+        Each validators’ keys will be derived from a unique mnemonic (or seed) phrase.
+        Validators will NEED this mnemonic to be able to withdraw their funds.
         It also serves as a backup for the signing key.
       </Text>
     ),
     acknowledgement: {
       id: acknowledgementId.keyManagement,
       text:
-        "I understand that it is my responsibility to keep my mnemonic phrase in a secure location, that it serves as a backup for my signing key, and that without it, I cannot withdraw my funds."
+        "I understand that my mnemonic is the ❗️ONLY WAY❗️ to withdraw my funds."
+    }
+  },
+  {
+    id: acknowledgementId.signingKeys,
+    title: "signing keys",
+    content: (
+      <Text size="large" className="my10">
+        This process will produce 1 key-store for each of your validators.
+        You will need to give these to your validator software to begin validating.
+        You will also receive one deposits file to upload to this website.
+      </Text>
+    ),
+    acknowledgement: {
+      id: acknowledgementId.signingKeys,
+      text:
+        "I will safeguard my signing key-stores and give them to my validator software when I am supposed to start validating."
     }
   },
   {
     id: acknowledgementId.transferDelay,
-    title: "Transfer Delay",
+    title: "transfer delay",
     content: (
       <Text size="large" className="my10">
         Transfers between validators are disabled until at least phase 1. And
@@ -130,12 +146,12 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.transferDelay,
       text:
-        "I understand that I won’t be able to transfer my stake until at least phase 1, and withdraw my stake until phase 2."
+        "I understand that I CANNOT TRANSFER my staked ETH until at least phase 1 and withdraw until phase 2."
     }
   },
   {
     id: acknowledgementId.commitment,
-    title: "Long-term Commitment",
+    title: "long-term commitment",
     content: (
       <Text size="large" className="my10">
         With transfers disabled until at least phase 1, there’s no way for a
@@ -146,12 +162,12 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.commitment,
       text:
-        "I understand that becoming a validator is a long term commitment. And that if I try to withdraw my funds early, I won’t be able to access them until transfers/withdrawals are enabled."
+        "Once I exit, I cannot rejoin until at least phase 1. This is a long term commitment."
     }
   },
   {
     id: acknowledgementId.earlyAdoptionRisks,
-    title: "Early adopter risks",
+    title: "early adopter risks",
     content: (
       <Text size="large" className="my10">
         Validators are participating in the initial launch of a novel network.
@@ -162,49 +178,7 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.earlyAdoptionRisks,
       text:
-        "I understand that I am an early adopter in the launch of a novel network. And that software bugs may result in the loss of some or all of my funds."
-    }
-  },
-  {
-    id: acknowledgementId.economics,
-    title: "Economics",
-    content: (
-      <>
-        <Text size="large" className="my10">
-          Before we begin the sign up process, let’s cover a couple of important
-          points on economics:
-        </Text>
-        <Heading level={4}>No transfers in phase 0</Heading>
-        <Text size="large" className="my10">
-          Transfers are disabled in phase 0. They may become possible in phase
-          1, in which case validators could transfer between one-another if they
-          wanted to stop validating.
-        </Text>
-        <Text size="large" className="my10">
-          This means that while validators can still signal an exit, their stake
-          (and any interest accrued on it) will be stuck until at least phase 1.
-        </Text>
-        <Text size="large" className="my10">
-          Validators will have to wait until phase 2 to be able to withdraw to a
-          specific shard.
-        </Text>
-        <Heading level={4}>Exited validators can’t restart</Heading>
-        <Text size="large" className="my10">
-          With transfers disabled until at least phase 1, there’s no way for a
-          validator to voluntarily exit and then restart later.
-        </Text>
-        <Text size="large" className="my10">
-          This means validators need to be in it for the long haul.
-        </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the different Phases <FormNext color="blueDark" />
-        </Link>
-      </>
-    ),
-    acknowledgement: {
-      id: acknowledgementId.economics,
-      text:
-        "I understand that I am an early adopter in the launch of a novel network. And that software bugs may result in the loss of some or all of my funds."
+        "I am an early adopter and I accept that software and design bugs may result in me being slashed."
     }
   }
 ];
@@ -293,12 +267,12 @@ class _AcknowledgementPage extends React.Component<Props, State> {
         </Text>
         <Text size="large" className="my10">
           For this, we need active participants - known as validators - to
-          propose, verify and vouch for the validity of blocks. In exchange,
+          propose, verify, and vouch for the validity of blocks. In exchange,
           honest validators receive financial rewards
         </Text>
         <Text size="large" className="my10">
           Importantly, validators need to post ETH as collateral - in other
-          words, have som funds at stake. The only way to become a validator is
+          words, have some funds at stake. The only way to become a validator is
           to make a one-way ETH transaction to a deposit contract on Ethereum
           1.0
         </Text>

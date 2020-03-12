@@ -15,11 +15,11 @@ import { connect } from "react-redux";
 import { InfoBox } from "../../components/InfoBox";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { pricePerValidator } from "../../enums";
 
 const warnings: string[] = [
-  "Please make sure you send exactly 32 ETH per validator, excluding fees.",
-  "Transactions with less than 32 ETH will need to be topped up to run a validator.",
+  `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,
   "You will sign a separate transaction for each validator."
 ];
 
@@ -52,7 +52,10 @@ const _ValidatorSettingsPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Validator Settings" backgroundColor={rainbowMutedColors[1]}>
+    <WorkflowPageTemplate
+      title="Validator Settings"
+      backgroundColor={rainbowMutedColors[1]}
+    >
       <Paper>
         <Heading level={3} size="small" color="blueDark">
           How many validators would you like to run?
@@ -68,7 +71,7 @@ const _ValidatorSettingsPage = ({
           <Container>
             <Text weight="bold">Cost</Text>
             <InfoBox>
-              <Text>{validatorCount * 32} ETH</Text>
+              <Text>{(validatorCount * pricePerValidator).toFixed(1)} ETH</Text>
             </InfoBox>
           </Container>
         </div>

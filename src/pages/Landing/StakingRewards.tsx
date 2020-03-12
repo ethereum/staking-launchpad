@@ -38,14 +38,12 @@ export const StakingRewards = (): JSX.Element => {
       <SubContainer isMobile={m}>
         <ScrollAnimation animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Staking and rewards
+            staking and rewards
           </Heading>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
-            Once the mainnet has launched, validators get rewarded for attesting
-            and proposing blocks. The rewards are tired to the overall amount of
-            ETH staking in the network
+            Validators get rewarded for proposing and attesting to and blocks. The rewards are tired to the overall amount of ETH staked in the network.
           </Text>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>

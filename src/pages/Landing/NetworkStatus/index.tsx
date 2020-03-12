@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
-import { Heading } from "grommet";
+import { Heading } from "../../../components/Heading";
 import { Text } from "../../../components/Text";
 import { ProgressBar } from "./ProgressBar";
+import { queryContract } from "../../../utils/queryContract";
+import {
+  isMainnet,
+  mainnetEthRequirement,
+  pricePerValidator
+} from "../../../enums";
+import { numberWithCommas } from "../../../utils/numberWithCommas";
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
@@ -31,49 +38,72 @@ const BoldGray = styled.span`
   font-weight: bold;
 `;
 
-// TODO: Hook up to the contract. Using hard-coded values for now.
-
-const amountNeeded = 524288;
 export const NetworkStatus = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
-  const [amountEth, setAmountEth] = useState(12000);
+  const [amountEth, setAmountEth] = useState(0);
+
+  useEffect(() => {
+    const getBalance = async () => {
+      const ethBalance = await queryContract();
+      setAmountEth(ethBalance);
+    };
+
+    getBalance();
+  });
+
+  const calculatePercentage = (amountEth: number) => {
+    const percentage = (amountEth / mainnetEthRequirement) * 100;
+    if (percentage === 0) {
+      return 0;
+    }
+    if (percentage < 1) {
+      return 1;
+    }
+    return percentage;
+  };
+
+  const calculateLaunchThreshold = () =>
+    (mainnetEthRequirement - amountEth).toFixed(1);
 
   return (
     <Container isMobile={m}>
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Network Status
+            network status
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
-              {amountEth} ETH
+              {numberWithCommas(amountEth)} ETH
             </BoldGreen>
             in the network and counting
           </Text>
           <Text className="mt20">
             The eth2 network needs to reach at least
             <BoldGreen className="mr10 ml10" fontSize={24}>
-              {amountNeeded} ETH,
+              524,288 ETH,
             </BoldGreen>
             <BoldGray className="mr10" fontSize={24}>
               16,284 validators,
             </BoldGray>
-            to launch its mainnet
+            to launch its {isMainnet ? "mainnet" : "testnet"}
           </Text>
           <div>
-            <ProgressBar progress={10} />
+            <ProgressBar progress={calculatePercentage(amountEth)} />
             <div className="flex space-between mt20">
               <span className="flex">
                 <BoldGreen fontSize={18} className="mr10">
-                  {amountEth} ETH
+                  {numberWithCommas(amountEth)} ETH
                 </BoldGreen>
                 <Text size="small" style={{ marginTop: "2px" }}>
                   Current Staking Balance
                 </Text>
               </span>
               <Text size="small">
-                {amountNeeded - amountEth} ETH Launch threshold
+                <strong>
+                  {numberWithCommas(calculateLaunchThreshold())} ETH{" "}
+                </strong>
+                Launch threshold
               </Text>
             </div>
           </div>

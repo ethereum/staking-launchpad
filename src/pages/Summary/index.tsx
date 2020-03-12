@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Box, CheckBox, Heading, Text } from "grommet";
+import { Spinning } from "grommet-controls";
 import styled from "styled-components";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
@@ -9,7 +10,7 @@ import Web3 from "web3";
 import { Eth } from "web3-eth";
 import { SendOptions } from "web3-eth-contract";
 import { StoreState } from "../../store/reducers";
-import { keyFile, ProgressStep } from "../../store/actions";
+import { keyFile, ProgressStep, updateProgress } from "../../store/actions";
 import { Paper } from "../../components/Paper";
 import { web3ReactInterface } from "../ConnectWallet";
 import { NetworkChainId } from "../ConnectWallet/web3Utils";
@@ -18,15 +19,16 @@ import { InfoBox } from "../../components/InfoBox";
 import { Keylist } from "./Keylist";
 import { Link } from "../../components/Link";
 import { AcknowledgementSection } from "./AcknowledgementSection";
-import { Button } from "../../components/Button";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import { Button } from "../../components/Button";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { prefix0X } from "../../utils/prefix0x";
 import { contractAbi } from "../../contractAbi";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { pricePerValidator, contractAddress } from "../../enums";
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
-const CONTRACT_ADDRESS = "0x4dc8b546b93131309c82505a6fdfb978d311bf45";
-const TX_VALUE = 3200000000000000000; // 3.2 eth for testnet, change to 32 on mainnet
+const CONTRACT_ADDRESS = contractAddress;
+const TX_VALUE = pricePerValidator * 1e18; // 3.2 eth for testnet, change to 32 on mainnet
 const NETWORK_NAME = "Göerli Testnet";
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
@@ -37,23 +39,28 @@ const SummarySection = styled(Box)`
 const _SummaryPage = ({
   validatorCount,
   keyFiles,
-  progress
+  progress,
+  updateProgress
 }: {
   validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
+  updateProgress: () => void;
 }): JSX.Element => {
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
+  const [txMining, setTxMining] = useState(false);
   const allChecked = losePhrase && earlyAdopt && nonReverse && noPhish;
-
   const validatorKeys = keyFiles.map(file => file.pubkey);
 
-  const { account, chainId, connector }: web3ReactInterface = useWeb3React<
-    Web3Provider
-  >();
+  const {
+    account,
+    chainId,
+    connector,
+  }: web3ReactInterface = useWeb3React<Web3Provider>();
+
 
   const renderSummarySection = (): JSX.Element => (
     <Paper>
@@ -67,7 +74,7 @@ const _SummaryPage = ({
         </SummarySection>
         <SummarySection className="mx20">
           <Text weight="bold">Amount</Text>
-          <InfoBox>{validatorCount * 32} ETH</InfoBox>
+          <InfoBox>{validatorCount * pricePerValidator} ETH</InfoBox>
         </SummarySection>
         <SummarySection>
           <Text weight="bold">Key Pairs Generated</Text>
@@ -80,7 +87,7 @@ const _SummaryPage = ({
   const renderKeyList = (): JSX.Element => (
     <Paper className="mt20">
       <Heading level={3} size="small" color="blueDark">
-        Keys
+        keys
       </Heading>
       <Keylist validatorKeys={validatorKeys} />
     </Paper>
@@ -112,9 +119,9 @@ const _SummaryPage = ({
       <AcknowledgementSection title="Please make sure you aren't being phished">
         <Text>
           You are responsible for the transaction. Fraudulent websites might
-          lure you into sending the 32 ETH to them, instead of the official
-          deposit contract. Please check that the address you are sending the
-          transaction to is the correct address.
+          lure you into sending the {pricePerValidator} ETH to them, instead of
+          the official deposit contract. Please check that the address you are
+          sending the transaction to is the correct address.
         </Text>
         <Link to="https://www.google.com" external className="mt10" primary>
           Learn here how to do it safely
@@ -146,7 +153,7 @@ const _SummaryPage = ({
       const transactionParameters: SendOptions = {
         gasPrice: "0x0055e72a000", //TODO: estimate gas price
         from: account as string,
-        value: TX_VALUE
+        value: TX_VALUE,
       };
 
       // Send validator transaction
@@ -160,24 +167,22 @@ const _SummaryPage = ({
         .send(transactionParameters)
         // Event for when the user confirms the tx
         .on("transactionHash", (txId: string): void => {
-          console.log("transaction id", txId);
+          setTxMining(true);
           // TODO(tx UI feature): return txId
         })
         // Event is for when the tx is mined
-        .on(
-          "confirmation",
-          (confirmation: number, receipt: { status: {} }): void => {
-            if (confirmation === 0) {
-              console.log("receipt: ", receipt);
-              if (receipt.status) {
-                console.log("receipt status: ", receipt.status);
-                // TODO(tx UI feature): return status
-              } else {
-                console.log("error: receipt status not received");
-              }
+        .on("confirmation", (confirmation: number, receipt: { status: {}; }): any => {
+          if (confirmation === 0) {
+            console.log("receipt: ", receipt);
+            if (receipt.status) {
+              console.log("receipt status: ", receipt.status);
+              // TODO(tx UI feature): return status
+              updateProgress();
+            } else {
+              console.log('error: receipt status not received');
             }
           }
-        );
+        });
     } catch (rejected) {
       console.log("user rejected transaction: ", rejected);
       // TODO(tx UI): return rejected status
@@ -187,20 +192,19 @@ const _SummaryPage = ({
   // Fires off a transaction for each validator in the users deposit key file
   const handleDepositClick = async () => {
     keyFiles.forEach(validator => {
-      // TODO(tx UI feature): set state with array of TXs
       handleTransaction(validator);
     });
   };
 
   if (progress !== ProgressStep.SUMMARY) {
     return routeToCorrectProgressStep(progress);
-  }
+  };
 
   // Handles the edge case for when the user disconnects the wallet while on this page
   // TODO(Post release UI): consider moving the user back to connect wallet or making the wallet connection reusable for this edgecase
   if (!account || !connector) {
     return (
-      <WorkflowPageTemplate title="Summary">
+      <WorkflowPageTemplate title="deposit summary">
         <AcknowledgementSection title="Your wallet has disconnected">
           <Text>
             Your wallet has disconnected. Please connect your wallet and refresh
@@ -226,6 +230,21 @@ const _SummaryPage = ({
     );
   }
 
+  if (txMining) {
+    return (
+      <WorkflowPageTemplate title="Summary"
+        backgroundColor={rainbowMutedColors[5]}>
+        <Paper>
+          <Box align="center">
+            <Text size="large" className="my10">Your transactions have started processing</Text>
+            <Text size="medium" className="my20">Please confrim your transaction for each validator key you have generated</Text>
+            <Spinning size="large" />
+          </Box>
+        </Paper>
+      </WorkflowPageTemplate>
+    );
+  }
+
   return (
     <WorkflowPageTemplate
       title="Summary"
@@ -239,9 +258,8 @@ const _SummaryPage = ({
           width={300}
           rainbow
           disabled={!allChecked}
-          label={`SIGN ${validatorCount} TRANSACTION${
-            validatorCount > 1 ? "S" : ""
-          } AND DEPOSIT ${validatorCount * 32} ETH`}
+          label={`Sign ${validatorCount} transaction(s) and deposit ${validatorCount *
+            3.2} ETH`}
           onClick={handleDepositClick}
         />
       </Box>
@@ -255,4 +273,10 @@ const mstp = ({ validatorCount, keyFiles, progress }: StoreState) => ({
   progress
 });
 
-export const SummaryPage = connect(mstp)(_SummaryPage);
+const mdtp = (dispatch: any) => ({
+  updateProgress: (): void => {
+    dispatch(updateProgress(ProgressStep.CONGRATULATIONS));
+  }
+});
+
+export const SummaryPage = connect(mstp, mdtp)(_SummaryPage);

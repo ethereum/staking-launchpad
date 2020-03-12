@@ -21,10 +21,10 @@ const PBarIncomplete = styled.div`
 `;
 
 export const ProgressBar = ({ progress }: { progress: number }) => {
-  return (
-    <PBarContainer>
-      <PBarComplete progress={progress} />
-      <PBarIncomplete progress={progress} />
-    </PBarContainer>
-  );
+    return (
+        <PBarContainer>
+            <PBarComplete progress={progress} />
+            <PBarIncomplete progress={progress} />
+        </PBarContainer>
+    );
 };

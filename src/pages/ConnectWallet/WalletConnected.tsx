@@ -69,7 +69,7 @@ const _WalletConnected = ({
             rainbow
             disabled={!networkAllowed}
             onClick={handleSubmit}
-            label="CONTINUE ON TESTNET"
+            label="Continue on testnet"
             reverse
             icon={<FormNextLink />}
           />

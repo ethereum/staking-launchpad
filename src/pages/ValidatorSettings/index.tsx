@@ -19,7 +19,6 @@ import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { pricePerValidator } from "../../enums";
 
 const warnings: string[] = [
-  `Please make sure you send exactly ${pricePerValidator} ETH per validator, excluding fees.`,
   `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,
   "You will sign a separate transaction for each validator."
 ];

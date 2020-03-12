@@ -53,7 +53,7 @@ export const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload Key File" backgroundColor={rainbowMutedColors[3]}>
+    <WorkflowPageTemplate title="Upload Deposits" backgroundColor={rainbowMutedColors[3]}>
       <Paper>
         <StyledDropzone
           fileAccepted={fileAccepted}

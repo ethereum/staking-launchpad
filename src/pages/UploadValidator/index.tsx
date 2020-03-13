@@ -60,7 +60,6 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
     } = file;
 
     // check existence of required keys
-    console.log("check existence of required keys")
     if (
       !pubkey ||
       !withdrawal_credentials ||
@@ -72,7 +71,6 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
     }
 
     // check type of values
-    console.log("check type of values")
     if (
       typeof pubkey !== "string" ||
       typeof withdrawal_credentials !== "string" ||
@@ -84,7 +82,6 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
     }
 
     // check length of strings
-    console.log("check length of strings")
     if (
       pubkey.length !== 96 ||
       withdrawal_credentials.length !== 64 ||
@@ -94,7 +91,6 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
       return false;
     }
 
-    console.log("verifying bls check")
     // perform BLS check
     return verifySignature(pubkey, signature, deposit_data_root);
   });

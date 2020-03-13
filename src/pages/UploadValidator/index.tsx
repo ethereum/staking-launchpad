@@ -15,6 +15,9 @@ import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { verifySignature } from "../../utils/verifySignature";
+import _every from "lodash/every";
+import { initBLS } from "@chainsafe/bls";
 
 const BackBtn = styled(Text)`
   color: ${p => p.theme.gray.medium};
@@ -45,32 +48,57 @@ interface Props {
   progress: ProgressStep;
 }
 
-const validateKeyFile = (files: keyFile[]): boolean => {
-  let checked = true;
-  files.forEach(file => {
+const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
+  await initBLS();
+  const keyfileStatuses: boolean[] = files.map(file => {
+    const {
+      pubkey,
+      withdrawal_credentials,
+      amount,
+      signature,
+      deposit_data_root
+    } = file;
+
+    // check existence of required keys
+    console.log("check existence of required keys")
     if (
-      // check existence of required keys
-      !("pubkey" in file) ||
-      !("withdrawal_credentials" in file) ||
-      !("amount" in file) ||
-      !("signature" in file) ||
-      !("deposit_data_root" in file) ||
-      // check type
-      typeof file.pubkey !== "string" ||
-      typeof file.withdrawal_credentials !== "string" ||
-      typeof file.amount !== "number" ||
-      typeof file.signature !== "string" ||
-      typeof file.deposit_data_root !== "string" ||
-      // check length of strings
-      file.pubkey.length !== 96 ||
-      file.withdrawal_credentials.length !== 64 ||
-      file.signature.length !== 192 ||
-      file.deposit_data_root.length !== 64
+      !pubkey ||
+      !withdrawal_credentials ||
+      !amount ||
+      !signature ||
+      !deposit_data_root
     ) {
-      checked = false;
+      return false;
     }
+
+    // check type of values
+    console.log("check type of values")
+    if (
+      typeof pubkey !== "string" ||
+      typeof withdrawal_credentials !== "string" ||
+      typeof amount !== "number" ||
+      typeof signature !== "string" ||
+      typeof deposit_data_root !== "string"
+    ) {
+      return false;
+    }
+
+    // check length of strings
+    console.log("check length of strings")
+    if (
+      pubkey.length !== 96 ||
+      withdrawal_credentials.length !== 64 ||
+      signature.length !== 192 ||
+      deposit_data_root.length !== 64
+    ) {
+      return false;
+    }
+
+    console.log("verifying bls check")
+    // perform BLS check
+    return verifySignature(pubkey, signature, deposit_data_root);
   });
-  return checked;
+  return _every(keyfileStatuses);
 };
 
 export const _UploadValidatorPage = ({
@@ -88,10 +116,10 @@ export const _UploadValidatorPage = ({
         setInvalidKeyFile(false);
         setFileAccepted(true);
         const reader = new FileReader();
-        reader.onload = event => {
+        reader.onload = async event => {
           if (event.target) {
             const fileData = JSON.parse(event.target.result as string);
-            if (validateKeyFile(fileData as keyFile[])) {
+            if (await validateKeyFile(fileData as keyFile[])) {
               updateKeyFiles(fileData);
             } else {
               setInvalidKeyFile(true);
@@ -117,7 +145,10 @@ export const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload Deposits" backgroundColor={rainbowMutedColors[3]}>
+    <WorkflowPageTemplate
+      title="Upload Deposits"
+      backgroundColor={rainbowMutedColors[3]}
+    >
       <Paper>
         <StyledDropzone
           fileAccepted={fileAccepted}

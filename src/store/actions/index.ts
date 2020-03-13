@@ -1,23 +1,13 @@
+import { UpdateAcknowledgementStateAction } from "./acknowledgementActions";
+
+export * from "./acknowledgementActions";
+
 export enum ActionTypes {
   updateAcknowledgementState,
   updateValidatorCount,
   updateKeyFiles,
   updateProgress
 }
-
-// ACKNOWLEDGEMENT ACTIONS
-export interface UpdateAcknowledgementStateAction {
-  type: ActionTypes.updateAcknowledgementState;
-  payload: boolean;
-}
-export const updateAcknowledgementState = (
-  allChecked: boolean
-): UpdateAcknowledgementStateAction => {
-  return {
-    type: ActionTypes.updateAcknowledgementState,
-    payload: allChecked
-  };
-};
 
 // VALIDATOR ACTIONS
 export interface UpdateValidatorCountAction {

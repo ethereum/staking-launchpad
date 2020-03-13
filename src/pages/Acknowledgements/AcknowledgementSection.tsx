@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckBox, Heading } from "grommet";
 import { Paper, PaperGroup } from "../../components/Paper";
-import { acknowledgementId } from ".";
+import { acknowledgementId } from "../../store/reducers";
 
 export interface AcknowledgementSectionData {
   id: acknowledgementId;

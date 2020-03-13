@@ -31,7 +31,7 @@ const Container = styled.div`
 interface Props {
   updateValidatorCount(count: number): void;
   validatorCount: number;
-  updateProgress: () => void;
+  updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
 }
 
@@ -43,7 +43,7 @@ const _ValidatorSettingsPage = ({
 }: Props): JSX.Element => {
   const handleSubmit = () => {
     if (validatorCount > 0) {
-      updateProgress();
+      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -86,7 +86,13 @@ const _ValidatorSettingsPage = ({
           </div>
         ))}
       </Paper>
-      <Box align="center" pad="large">
+      <div className="flex center p30">
+        <Button
+          className="mr10"
+          width={100}
+          label="Back"
+          onClick={() => updateProgress(ProgressStep.OVERVIEW)}
+        />
         <Button
           width={300}
           rainbow
@@ -94,7 +100,7 @@ const _ValidatorSettingsPage = ({
           label={`GENERATE MY KEYPAIR${validatorCount > 1 ? "S" : ""}`}
           onClick={handleSubmit}
         />
-      </Box>
+      </div>
     </WorkflowPageTemplate>
   );
 };
@@ -107,8 +113,8 @@ const mdtp = (dispatch: any) => ({
   updateValidatorCount: (count: number): void => {
     dispatch(updateValidatorCount(count));
   },
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.GENERATE_KEY_PAIRS));
+  updateProgress: (step: ProgressStep): void => {
+    dispatch(updateProgress(step));
   }
 });
 

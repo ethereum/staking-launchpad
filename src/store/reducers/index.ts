@@ -1,22 +1,15 @@
 import { combineReducers } from "redux";
 import { Action, ActionTypes, keyFile, ProgressStep } from "../actions";
+import { acknowledgementReducer, acknowledgementState } from "./acknowledgementReducer";
+
+export * from "./acknowledgementReducer";
 
 export interface StoreState {
-  allAcknowledgementsAgreedTo: boolean;
+  acknowledgementState: acknowledgementState;
   validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
 }
-
-export const acknowledgementReducer = (
-  state: boolean = false,
-  action: Action
-) => {
-  if (action.type === ActionTypes.updateAcknowledgementState) {
-    return action.payload;
-  }
-  return state;
-};
 
 export const validatorReducer = (state: number = 0, action: Action) => {
   if (action.type === ActionTypes.updateValidatorCount) {
@@ -43,7 +36,7 @@ export const progressReducer = (
 };
 
 export const reducers = combineReducers<StoreState>({
-  allAcknowledgementsAgreedTo: acknowledgementReducer,
+  acknowledgementState: acknowledgementReducer,
   validatorCount: validatorReducer,
   keyFiles: keyFilesReducer,
   progress: progressReducer

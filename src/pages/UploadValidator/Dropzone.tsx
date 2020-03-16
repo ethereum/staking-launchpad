@@ -36,21 +36,18 @@ const Container = styled.div`
 interface props {
   updateKeyFiles(keyFile: keyFile[]): void;
   fileAccepted: boolean;
-  setFileAccepted(value: boolean): void;
   keyFiles: keyFile[];
 }
 
 export const StyledDropzone = ({
   updateKeyFiles,
   fileAccepted,
-  setFileAccepted,
   keyFiles
 }: props) => {
   const alreadyUploaded = keyFiles.length > 0;
   const onDrop = useCallback(
     acceptedFiles => {
       if (acceptedFiles.length === 1) {
-        setFileAccepted(true);
         const reader = new FileReader();
         reader.onload = event => {
           if (event.target) {
@@ -61,7 +58,7 @@ export const StyledDropzone = ({
         reader.readAsText(acceptedFiles[0]);
       }
     },
-    [setFileAccepted, updateKeyFiles]
+    [updateKeyFiles]
   );
 
   const {

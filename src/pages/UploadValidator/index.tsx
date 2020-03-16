@@ -10,20 +10,9 @@ import {
 } from "../../store/actions";
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
-import { Box, Text } from "grommet";
-import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
-
-const BackBtn = styled(Text)`
-  color: ${p => p.theme.gray.medium};
-  cursor: pointer;
-  margin-bottom: 10px;
-  :hover {
-    color: ${p => p.theme.gray.dark};
-  }
-`;
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 interface Props {
   updateKeyFiles(files: keyFile[]): void;
@@ -38,14 +27,10 @@ export const _UploadValidatorPage = ({
   updateProgress,
   progress
 }: Props): JSX.Element => {
-  const [fileAccepted, setFileAccepted] = useState(false);
+  const fileAccepted = keyFiles.length > 0;
 
   const handleSubmit = () => {
     updateProgress(ProgressStep.CONNECT_WALLET);
-  };
-
-  const handleGoBack = () => {
-    updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
   };
 
   if (progress !== ProgressStep.UPLOAD_VALIDATOR_FILE) {
@@ -53,26 +38,32 @@ export const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload Deposits" backgroundColor={rainbowMutedColors[3]}>
+    <WorkflowPageTemplate
+      title="Upload Deposits"
+      backgroundColor={rainbowMutedColors[3]}
+    >
       <Paper>
         <StyledDropzone
           fileAccepted={fileAccepted}
-          setFileAccepted={setFileAccepted}
           updateKeyFiles={updateKeyFiles}
           keyFiles={keyFiles}
         />
-
-        <Box align="center" pad="large">
-          <BackBtn onClick={handleGoBack}>Go Back</BackBtn>
-          <Button
-            width={300}
-            rainbow
-            disabled={!fileAccepted}
-            label="Continue"
-            onClick={handleSubmit}
-          />
-        </Box>
       </Paper>
+      <div className="flex center p30">
+        <Button
+          className="mr10"
+          width={100}
+          label="Back"
+          onClick={() => updateProgress(ProgressStep.GENERATE_KEY_PAIRS)}
+        />
+        <Button
+          width={300}
+          rainbow
+          disabled={!fileAccepted}
+          label="Continue"
+          onClick={handleSubmit}
+        />
+      </div>
     </WorkflowPageTemplate>
   );
 };

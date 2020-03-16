@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import { Box, CheckBox, Heading, Text } from "grommet";
+import { CheckBox, Heading, Text } from "grommet";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper, PaperGroup } from "../../components/Paper";
 import { OperatingSystemButtons } from "./OperatingSystemButtons";
 import { LinuxInstructions } from "./LinuxInstructions";
 import { MacInstructions } from "./MacInstructions";
 import { WindowsInstructions } from "./WindowsInstructions";
-import { ProgressStep, updateProgress } from "../../store/actions";
+import {
+  ProgressStep,
+  updateMnemonicAcknowledgement,
+  updateProgress
+} from "../../store/actions";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { StoreState } from "../../store/reducers";
 import { Button } from "../../components/Button";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 export enum operatingSystem {
   "MAC",
@@ -33,23 +37,25 @@ const InstructionImgContainer = styled.div`
 
 const _GenerateKeysPage = ({
   updateProgress,
-  progress
+  progress,
+  mnemonicAcknowledgementChecked,
+  updateMnemonicAcknowledgement
 }: {
-  updateProgress: () => void;
+  updateProgress: (progressStep: ProgressStep) => void;
   progress: ProgressStep;
+  mnemonicAcknowledgementChecked: boolean;
+  updateMnemonicAcknowledgement: (checked: boolean) => void;
 }): JSX.Element => {
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
 
-  const [agreedTo, setAgreedTo] = useState(false);
-
   const onCheckboxClick = (e: any) => {
-    setAgreedTo(e.target.checked);
+    updateMnemonicAcknowledgement(e.target.checked);
   };
 
   const handleSubmit = () => {
-    updateProgress();
+    updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE);
   };
 
   const renderOSInstructions = (): React.ReactNode => {
@@ -70,7 +76,10 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs" backgroundColor={rainbowMutedColors[2]}>
+    <WorkflowPageTemplate
+      title="Generate Key Pairs"
+      backgroundColor={rainbowMutedColors[2]}
+    >
       <PaperGroup>
         <Paper>
           <Heading level={3} size="small" color="blueDark">
@@ -111,30 +120,40 @@ const _GenerateKeysPage = ({
       <Paper className="mt20">
         <CheckBox
           onChange={onCheckboxClick}
-          checked={agreedTo}
+          checked={mnemonicAcknowledgementChecked}
           label="I am keeping my keys safe and have backed up my mnemonic phrase."
         />
       </Paper>
-      <Box align="center" pad="large">
+      <div className="flex center p30">
+        <Button
+          className="mr10"
+          width={100}
+          label="Back"
+          onClick={() => updateProgress(ProgressStep.VALIDATOR_SETTINGS)}
+        />
         <Button
           width={300}
           rainbow
-          disabled={!agreedTo}
+          disabled={!mnemonicAcknowledgementChecked}
           label="Continue"
           onClick={handleSubmit}
         />
-      </Box>
+      </div>
     </WorkflowPageTemplate>
   );
 };
 
-const mstp = ({ progress }: StoreState) => ({
-  progress
+const mstp = ({ progress, mnemonicAcknowledgementChecked }: StoreState) => ({
+  progress,
+  mnemonicAcknowledgementChecked
 });
 
 const mdtp = (dispatch: any) => ({
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE));
+  updateProgress: (progressStep: ProgressStep): void => {
+    dispatch(updateProgress(progressStep));
+  },
+  updateMnemonicAcknowledgement: (checked: boolean): void => {
+    dispatch(updateMnemonicAcknowledgement(checked));
   }
 });
 

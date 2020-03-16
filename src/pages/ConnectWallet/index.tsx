@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, ResponsiveContext } from "grommet";
 import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
@@ -14,10 +14,11 @@ import {
 import { WalletButton } from "./WalletButton";
 
 import { StoreState } from "../../store/reducers";
-import { ProgressStep } from "../../store/actions";
+import { ProgressStep, updateProgress } from "../../store/actions";
 import { connect } from "react-redux";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { Button } from "../../components/Button";
 
 export interface web3ReactInterface {
   activate: (
@@ -36,9 +37,11 @@ export interface web3ReactInterface {
 }
 
 const _ConnectWalletPage = ({
-  progress
+  progress,
+  updateProgress
 }: {
   progress: ProgressStep;
+  updateProgress: (step: ProgressStep) => void;
 }): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
@@ -55,14 +58,20 @@ const _ConnectWalletPage = ({
 
   if (walletConnected) {
     return (
-      <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
+      <WorkflowPageTemplate
+        title="Connect Wallet"
+        backgroundColor={rainbowMutedColors[4]}
+      >
         <WalletConnected />
       </WorkflowPageTemplate>
     );
   }
 
   return (
-    <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
+    <WorkflowPageTemplate
+      title="Connect Wallet"
+      backgroundColor={rainbowMutedColors[4]}
+    >
       <ResponsiveContext.Consumer>
         {() => (
           <Grid columns="medium">
@@ -79,6 +88,14 @@ const _ConnectWalletPage = ({
           </Grid>
         )}
       </ResponsiveContext.Consumer>
+      <div className="flex center p30">
+        <Button
+          className="mr10"
+          width={100}
+          label="Back"
+          onClick={() => updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE)}
+        />
+      </div>
     </WorkflowPageTemplate>
   );
 };
@@ -87,4 +104,10 @@ const mstp = ({ progress }: StoreState) => ({
   progress
 });
 
-export const ConnectWalletPage = connect(mstp)(_ConnectWalletPage);
+const mdtp = (dispatch: any) => ({
+  updateProgress: (progressStep: ProgressStep): void => {
+    dispatch(updateProgress(progressStep));
+  }
+});
+
+export const ConnectWalletPage = connect(mstp, mdtp)(_ConnectWalletPage);

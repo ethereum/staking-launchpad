@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Button } from "../../components/Button";
-import { Link } from "../../components/Link";
-import { routesEnum } from "../../Routes";
+import React from 'react';
+import styled from 'styled-components';
+import { Button } from '../../components/Button';
+import { Link } from '../../components/Link';
+import { routesEnum } from '../../Routes';
 
 const Container = styled.div`
   background-color: ${p => p.theme.blue.dark};
@@ -24,7 +24,7 @@ const CtaText = ({ mobile }: { mobile?: boolean }) => {
   `;
   return (
     <span>
-      GET <Rhino>🦏</Rhino> STARTED {mobile ? "ON DESKTOP" : ""}
+      GET <Rhino>🦏</Rhino> STARTED {mobile ? 'ON DESKTOP' : ''}
     </span>
   );
 };
@@ -33,8 +33,8 @@ export const CTAFooter = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
   return (
     <Container>
-      <SubContainer className={m ? "py20" : "py100"}>
-        <Link to={routesEnum.AcknowledgementPage}>
+      <SubContainer className={m ? 'py20' : 'py100'}>
+        <Link to={routesEnum.acknowledgementPage}>
           <Button
             rainbow
             className="m-auto"

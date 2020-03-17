@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
-import TimelineGraphic from "../../static/timeline.svg";
-import TimelineGraphicMobile from "../../static/timeline-mobile.svg";
-import { Heading } from "../../components/Heading";
-import { Text } from "../../components/Text";
+import React from 'react';
+import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import TimelineGraphic from '../../static/timeline.svg';
+import TimelineGraphicMobile from '../../static/timeline-mobile.svg';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 const Container = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ const Container = styled.div`
   padding: 150px 60px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: ${(p: { isMobile: boolean }) =>
-      p.isMobile ? "40px" : "150px 60px"};
+      p.isMobile ? '40px' : '150px 60px'};
   }
 `;
 const MilestoneImg = styled.img`
@@ -44,9 +44,7 @@ export const TimelineMileStones = (): JSX.Element => {
         </Heading>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>
-        <Text className="mt25">
-            eth2 will be released in several phases.
-        </Text>
+        <Text className="mt25">eth2 will be released in several phases.</Text>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <MilestoneImg

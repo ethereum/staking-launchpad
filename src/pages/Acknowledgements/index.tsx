@@ -1,36 +1,36 @@
-import React from "react";
-import { Box, Heading, Text } from "grommet";
-import { FormNext } from "grommet-icons";
-import { connect } from "react-redux";
-import { every, values } from "lodash";
-import { scroller } from "react-scroll";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
+import React from 'react';
+import { Box, Heading, Text } from 'grommet';
+import { FormNext } from 'grommet-icons';
+import { connect } from 'react-redux';
+import { every, values } from 'lodash';
+import { scroller } from 'react-scroll';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import {
   AcknowledgementSection,
-  AcknowledgementSectionData
-} from "./AcknowledgementSection";
-import { Link } from "../../components/Link";
-import { StoreState } from "../../store/reducers";
+  AcknowledgementSectionData,
+} from './AcknowledgementSection';
+import { Link } from '../../components/Link';
+import { StoreState } from '../../store/reducers';
 import {
   ProgressStep,
   updateAcknowledgementState,
-  updateProgress
-} from "../../store/actions";
-import { Paper } from "../../components/Paper";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { pricePerValidator } from "../../enums";
+  updateProgress,
+} from '../../store/actions';
+import { Paper } from '../../components/Paper';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { pricePerValidator } from '../../enums';
 
 export enum acknowledgementId {
-  signup = "signup",
-  responsibilities = "responsibilities",
-  slashing = "slashing",
-  keyManagement = "keyManagement",
-  signingKeys = "signingKeys",
-  transferDelay = "transferDelay",
-  commitment = "commitment",
-  earlyAdoptionRisks = "earlyAdoptionRisks",
+  signup = 'signup',
+  responsibilities = 'responsibilities',
+  slashing = 'slashing',
+  keyManagement = 'keyManagement',
+  signingKeys = 'signingKeys',
+  transferDelay = 'transferDelay',
+  commitment = 'commitment',
+  earlyAdoptionRisks = 'earlyAdoptionRisks',
 }
 
 const defaultAcknowledgementState = {
@@ -47,7 +47,7 @@ const defaultAcknowledgementState = {
 const pageContent: AcknowledgementSectionData[] = [
   {
     id: acknowledgementId.signup,
-    title: "signing up",
+    title: 'signing up',
     content: (
       <Text size="large" className="my10">
         In order to become a validator on the eth2 beacon chain, one needs to
@@ -57,12 +57,12 @@ const pageContent: AcknowledgementSectionData[] = [
     ),
     acknowledgement: {
       id: acknowledgementId.signup,
-      text: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`
-    }
+      text: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
+    },
   },
   {
     id: acknowledgementId.responsibilities,
-    title: "responsibilities",
+    title: 'responsibilities',
     content: (
       <>
         <Text size="large" className="my10">
@@ -71,19 +71,19 @@ const pageContent: AcknowledgementSectionData[] = [
           for being offline are equal to the rewards for actively participating.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the duties of a validator{" "}
+          Learn More about the duties of a validator{' '}
           <FormNext color="blueDark" />
         </Link>
       </>
     ),
     acknowledgement: {
       id: acknowledgementId.responsibilities,
-      text: "I understand what validators do."
-    }
+      text: 'I understand what validators do.',
+    },
   },
   {
     id: acknowledgementId.slashing,
-    title: "slashing risks",
+    title: 'slashing risks',
     content: (
       <>
         <Text size="large" className="my10">
@@ -98,44 +98,44 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.slashing,
       text:
-        "I understand that if I act contrary to the specification, I am liable to be slashed."
-    }
+        'I understand that if I act contrary to the specification, I am liable to be slashed.',
+    },
   },
   {
     id: acknowledgementId.keyManagement,
-    title: "backup mnemonic",
+    title: 'backup mnemonic',
     content: (
       <Text size="large" className="my10">
-        Each validators’ keys will be derived from a unique mnemonic (or seed) phrase.
-        Validators will NEED this mnemonic to be able to withdraw their funds.
-        It also serves as a backup for the signing key.
+        Each validators’ keys will be derived from a unique mnemonic (or seed)
+        phrase. Validators will NEED this mnemonic to be able to withdraw their
+        funds. It also serves as a backup for the signing key.
       </Text>
     ),
     acknowledgement: {
       id: acknowledgementId.keyManagement,
       text:
-        "I understand that my mnemonic is the ❗️ONLY WAY❗️ to withdraw my funds."
-    }
+        'I understand that my mnemonic is the ❗️ONLY WAY❗️ to withdraw my funds.',
+    },
   },
   {
     id: acknowledgementId.signingKeys,
-    title: "signing keys",
+    title: 'signing keys',
     content: (
       <Text size="large" className="my10">
-        This process will produce 1 key-store for each of your validators.
-        You will need to give these to your validator software to begin validating.
+        This process will produce 1 key-store for each of your validators. You
+        will need to give these to your validator software to begin validating.
         You will also receive one deposits file to upload to this website.
       </Text>
     ),
     acknowledgement: {
       id: acknowledgementId.signingKeys,
       text:
-        "I will safeguard my signing key-stores and give them to my validator software when I am supposed to start validating."
-    }
+        'I will safeguard my signing key-stores and give them to my validator software when I am supposed to start validating.',
+    },
   },
   {
     id: acknowledgementId.transferDelay,
-    title: "transfer delay",
+    title: 'transfer delay',
     content: (
       <Text size="large" className="my10">
         Transfers between validators are disabled until at least phase 1. And
@@ -146,12 +146,12 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.transferDelay,
       text:
-        "I understand that I CANNOT TRANSFER my staked ETH until at least phase 1 and withdraw until phase 2."
-    }
+        'I understand that I CANNOT TRANSFER my staked ETH until at least phase 1 and withdraw until phase 2.',
+    },
   },
   {
     id: acknowledgementId.commitment,
-    title: "long-term commitment",
+    title: 'long-term commitment',
     content: (
       <Text size="large" className="my10">
         With transfers disabled until at least phase 1, there’s no way for a
@@ -162,12 +162,12 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.commitment,
       text:
-        "Once I exit, I cannot rejoin until at least phase 1. This is a long term commitment."
-    }
+        'Once I exit, I cannot rejoin until at least phase 1. This is a long term commitment.',
+    },
   },
   {
     id: acknowledgementId.earlyAdoptionRisks,
-    title: "early adopter risks",
+    title: 'early adopter risks',
     content: (
       <Text size="large" className="my10">
         Validators are participating in the initial launch of a novel network.
@@ -178,9 +178,9 @@ const pageContent: AcknowledgementSectionData[] = [
     acknowledgement: {
       id: acknowledgementId.earlyAdoptionRisks,
       text:
-        "I am an early adopter and I accept that software and design bugs may result in me being slashed."
-    }
-  }
+        'I am an early adopter and I accept that software and design bugs may result in me being slashed.',
+    },
+  },
 ];
 
 interface Props {
@@ -199,7 +199,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      acknowledgements: defaultAcknowledgementState
+      acknowledgements: defaultAcknowledgementState,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheckboxClick = this.handleCheckboxClick.bind(this);
@@ -224,8 +224,8 @@ class _AcknowledgementPage extends React.Component<Props, State> {
     await this.setState({
       acknowledgements: {
         ...this.state.acknowledgements,
-        [id]: checked
-      }
+        [id]: checked,
+      },
     });
     this.updateAllAcknowledgementState();
     if (checked) {
@@ -242,7 +242,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
 
       if (nextAcknowledgement === undefined) {
         throw new TypeError(
-          "Redux and local acknowledgement state are out of sync"
+          'Redux and local acknowledgement state are out of sync'
         );
       }
 
@@ -250,7 +250,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
         duration: 800,
         delay: 0,
         offset: -10,
-        smooth: "easeInOutQuart"
+        smooth: 'easeInOutQuart',
       });
     }
   }
@@ -318,7 +318,7 @@ class _AcknowledgementPage extends React.Component<Props, State> {
 
 const mstp = ({ progress, allAcknowledgementsAgreedTo }: StoreState) => ({
   allAcknowledgementsAgreedTo,
-  progress
+  progress,
 });
 const mdtp = (dispatch: any) => ({
   updateAcknowledgementState: (allChecked: boolean): void => {
@@ -326,7 +326,7 @@ const mdtp = (dispatch: any) => ({
   },
   updateProgress: (): void => {
     dispatch(updateProgress(ProgressStep.VALIDATOR_SETTINGS));
-  }
+  },
 });
 
 export const AcknowledgementPage = connect(mstp, mdtp)(_AcknowledgementPage);

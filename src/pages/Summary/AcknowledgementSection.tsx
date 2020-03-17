@@ -1,11 +1,11 @@
-import { Paper, PaperGroup } from "../../components/Paper";
-import { CircleAlert } from "../ValidatorSettings/CircleAlert";
-import { Heading } from "grommet";
-import React from "react";
+import { Paper, PaperGroup } from '../../components/Paper';
+import { CircleAlert } from '../ValidatorSettings/CircleAlert';
+import { Heading } from 'grommet';
+import React from 'react';
 
 export const AcknowledgementSection = ({
   title,
-  children
+  children,
 }: {
   title: string;
   children: any;

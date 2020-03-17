@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import EthDiamondPlain from "../static/eth-diamond-plain.svg";
-import { Text } from "../components/Text";
+import React from 'react';
+import styled from 'styled-components';
+import EthDiamondPlain from '../static/eth-diamond-plain.svg';
+import { Text } from '../components/Text';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>

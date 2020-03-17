@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Heading } from "./Heading";
-import { Text } from "./Text";
-import { Button } from "./Button";
-import Mobile from "../static/mobile.svg";
-import Laptop from "../static/laptop.svg";
-import { Alert, Checkmark } from "grommet-icons";
-import { Link } from "./Link";
+import React from 'react';
+import styled from 'styled-components';
+import { Heading } from './Heading';
+import { Text } from './Text';
+import { Button } from './Button';
+import Mobile from '../static/mobile.svg';
+import Laptop from '../static/laptop.svg';
+import { Alert, Checkmark } from 'grommet-icons';
+import { Link } from './Link';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -40,8 +40,8 @@ const ImageBackground = styled.div`
   border-radius: 50%;
 `;
 const IconStyles = {
-  margin: "auto",
-  marginTop: "10px"
+  margin: 'auto',
+  marginTop: '10px',
 };
 
 export const DesktopOnlyModal = (): JSX.Element => {

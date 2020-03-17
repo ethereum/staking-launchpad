@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { trimString } from "../../utils/trimString";
-import { InfoBox } from "../../components/InfoBox";
+import React from 'react';
+import styled from 'styled-components';
+import { trimString } from '../../utils/trimString';
+import { InfoBox } from '../../components/InfoBox';
 
 const ScrollContainer = styled.div`
   height: 200px;

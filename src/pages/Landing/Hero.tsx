@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import "animate.css/animate.min.css";
-import ScrollAnimation from "react-animate-on-scroll";
-import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
-import { routesEnum } from "../../Routes";
-import { Heading } from "../../components/Heading";
-import { Text } from "../../components/Text";
-import { Button } from "../../components/Button";
-import { Link } from "../../components/Link";
+import React from 'react';
+import styled from 'styled-components';
+import 'animate.css/animate.min.css';
+import ScrollAnimation from 'react-animate-on-scroll';
+import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
+import { routesEnum } from '../../Routes';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
+import { Button } from '../../components/Button';
+import { Link } from '../../components/Link';
 // @ts-ignore
-import Animate from "animate.css-react";
+import Animate from 'animate.css-react';
 
 interface mobile {
   isMobile: boolean;
@@ -18,7 +18,7 @@ interface mobile {
 const RainbowBackground = styled.div`
   background-image: ${p =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
-  min-height: ${(p: mobile) => p.isMobile && "calc(100vh - 20px)"};
+  min-height: ${(p: mobile) => p.isMobile && 'calc(100vh - 20px)'};
 `;
 const MainContainer = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -26,12 +26,12 @@ const MainContainer = styled.div`
   margin: 0 auto;
   padding: 0 120px 100px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    padding: ${(p: mobile) => (p.isMobile ? "20px" : "0 60px 100px")};
-    min-height: ${(p: mobile) => (p.isMobile ? "100vh" : undefined)};
+    padding: ${(p: mobile) => (p.isMobile ? '20px' : '0 60px 100px')};
+    min-height: ${(p: mobile) => (p.isMobile ? '100vh' : undefined)};
   }
 `;
 const ResponsiveContainer = styled.div`
-  height: ${(p: mobile) => (p.isMobile ? "100%" : undefined)};
+  height: ${(p: mobile) => (p.isMobile ? '100%' : undefined)};
   > div.is-mobile {
     padding: 0;
     display: flex;
@@ -62,16 +62,16 @@ export const Hero = () => {
     <RainbowBackground isMobile={m}>
       <MainContainer isMobile={m}>
         <ResponsiveContainer isMobile={m}>
-          <div className={`pt100 ${m ? "is-mobile" : undefined}`}>
+          <div className={`pt100 ${m ? 'is-mobile' : undefined}`}>
             <div>
               <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
-                <LogoContainer className={m ? "mb50" : undefined}>
+                <LogoContainer className={m ? 'mb50' : undefined}>
                   <EthLogo src={EthDiamondPlain} />
                   <LogoText>eth2 Launch Pad</LogoText>
                 </LogoContainer>
                 <Heading
                   level={m ? 1 : 2}
-                  size={m ? "meduim" : "large"}
+                  size={m ? 'meduim' : 'large'}
                   color="brand"
                   className="my20"
                 >
@@ -88,17 +88,17 @@ export const Hero = () => {
             <Animate
               enter="fadeIn"
               appear="fadeIn"
-              className={m ? undefined : "mt100"}
+              className={m ? undefined : 'mt100'}
             >
               <Link
-                to={routesEnum.AcknowledgementPage}
-                className={`${m ? "mb125" : undefined}`}
+                to={routesEnum.acknowledgementPage}
+                className={`${m ? 'mb125' : undefined}`}
               >
                 <Button
                   fullWidth={m}
                   rainbow
                   width={m ? undefined : 250}
-                  label={`GET STARTED ${m ? "ON DESKTOP" : ""}`}
+                  label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
                 />
               </Link>
             </Animate>

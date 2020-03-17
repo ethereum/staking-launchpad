@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import styled from "styled-components";
-import { Box, CheckBox, Heading, Text } from "grommet";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Paper, PaperGroup } from "../../components/Paper";
-import { OperatingSystemButtons } from "./OperatingSystemButtons";
-import { LinuxInstructions } from "./LinuxInstructions";
-import { MacInstructions } from "./MacInstructions";
-import { WindowsInstructions } from "./WindowsInstructions";
-import { ProgressStep, updateProgress } from "../../store/actions";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { StoreState } from "../../store/reducers";
-import { Button } from "../../components/Button";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import { Box, CheckBox, Heading, Text } from 'grommet';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { Paper, PaperGroup } from '../../components/Paper';
+import { OperatingSystemButtons } from './OperatingSystemButtons';
+import { LinuxInstructions } from './LinuxInstructions';
+import { MacInstructions } from './MacInstructions';
+import { WindowsInstructions } from './WindowsInstructions';
+import { ProgressStep, updateProgress } from '../../store/actions';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { StoreState } from '../../store/reducers';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 
 export enum operatingSystem {
-  "MAC",
-  "LINUX",
-  "WINDOWS"
+  'MAC',
+  'LINUX',
+  'WINDOWS',
 }
 
 const Highlight = styled.span`
@@ -33,7 +33,7 @@ const InstructionImgContainer = styled.div`
 
 const _GenerateKeysPage = ({
   updateProgress,
-  progress
+  progress,
 }: {
   updateProgress: () => void;
   progress: ProgressStep;
@@ -70,7 +70,10 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs" backgroundColor={rainbowMutedColors[2]}>
+    <WorkflowPageTemplate
+      title="Generate Key Pairs"
+      backgroundColor={rainbowMutedColors[2]}
+    >
       <PaperGroup>
         <Paper>
           <Heading level={3} size="small" color="blueDark">
@@ -96,13 +99,13 @@ const _GenerateKeysPage = ({
           3. Save the key files and get the validator file ready
         </Heading>
         <Text>
-          You should now be able to save the file{" "}
+          You should now be able to save the file{' '}
           <Highlight>signing-keystore-....json</Highlight> which contains your
           key pairs. Please make sure keep it safe, preferably offline.
         </Text>
         <InstructionImgContainer />
         <Text>
-          The second file you will export is{" "}
+          The second file you will export is{' '}
           <Highlight>deposit_data.json</Highlight> - you will need to upload in
           the next step.
         </Text>
@@ -129,13 +132,13 @@ const _GenerateKeysPage = ({
 };
 
 const mstp = ({ progress }: StoreState) => ({
-  progress
+  progress,
 });
 
 const mdtp = (dispatch: any) => ({
   updateProgress: (): void => {
     dispatch(updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE));
-  }
+  },
 });
 
 export const GenerateKeysPage = connect(mstp, mdtp)(_GenerateKeysPage);

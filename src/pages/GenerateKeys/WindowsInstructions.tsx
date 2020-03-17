@@ -1,5 +1,5 @@
-import React from "react";
-import { Paper } from "../../components/Paper";
+import React from 'react';
+import { Paper } from '../../components/Paper';
 
 export const WindowsInstructions = () => (
   <div style={{ animation: `fadeIn 1s` }}>

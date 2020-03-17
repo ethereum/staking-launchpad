@@ -1,14 +1,14 @@
-import React from "react";
-import { Button, Heading, Text } from "grommet";
-import { Paper } from "../../components/Paper";
-import { getErrorMessage } from "./web3Utils";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
+import React from 'react';
+import { Button, Heading, Text } from 'grommet';
+import { Paper } from '../../components/Paper';
+import { getErrorMessage } from './web3Utils';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
 
 export const WalletButton = ({
   title,
   walletProvider,
-  error
+  error,
 }: {
   title: string;
   walletProvider: any;

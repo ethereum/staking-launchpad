@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
-import EthDiamondPlain from "../../static/eth-diamond-plain.svg";
-import EthRound from "../../static/eth-round-landing.svg";
-import { Text } from "../../components/Text";
-import { Heading } from "../../components/Heading";
+import React from 'react';
+import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
+import EthRound from '../../static/eth-round-landing.svg';
+import { Text } from '../../components/Text';
+import { Heading } from '../../components/Heading';
 
 const Container = styled.div`
   background: ${p => p.theme.white};
@@ -34,7 +34,7 @@ const ImgContainer = styled.div`
 const ContentContainer = styled.div`
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     :before {
-      content: " ";
+      content: ' ';
       display: block;
       position: absolute;
       right: 60px;

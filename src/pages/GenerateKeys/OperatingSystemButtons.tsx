@@ -1,10 +1,10 @@
-import React from "react";
-import { Heading } from "grommet";
-import { operatingSystem } from "./index";
-import styled from "styled-components";
-import MacLogo from "../../static/apple.svg";
-import LinuxLogo from "../../static/linux.svg";
-import WindowsLogo from "../../static/windows.svg";
+import React from 'react';
+import { Heading } from 'grommet';
+import { operatingSystem } from './index';
+import styled from 'styled-components';
+import MacLogo from '../../static/apple.svg';
+import LinuxLogo from '../../static/linux.svg';
+import WindowsLogo from '../../static/windows.svg';
 
 const LogoContainerBox = styled.div`
   width: 200px;
@@ -70,7 +70,7 @@ const LogoContainer = ({
   osImage,
   isActive,
   onClick,
-  text
+  text,
 }: LogoContainerProps) => {
   return (
     <LogoContainerBox onClick={onClick} isActive={isActive}>
@@ -100,7 +100,7 @@ const Container = styled.div`
 
 export const OperatingSystemButtons = ({
   chosenOs,
-  setChosenOs
+  setChosenOs,
 }: {
   chosenOs: operatingSystem;
   setChosenOs: (os: operatingSystem) => void;

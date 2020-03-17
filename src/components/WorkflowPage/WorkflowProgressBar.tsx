@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import EthRound from "../../static/ethRound.svg";
-import { StoreState } from "../../store/reducers";
-import { ProgressStep } from "../../store/actions";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import EthRound from '../../static/ethRound.svg';
+import { StoreState } from '../../store/reducers';
+import { ProgressStep } from '../../store/actions';
 
 const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
   medium: [-5, 14.5, 36.5, 57.5, 79.5, 97.5],
-  large: [-2, 16.5, 37.5, 57.5, 78, 96]
+  large: [-2, 16.5, 37.5, 57.5, 78, 96],
 };
 
 const Container = styled.div`
@@ -108,60 +108,58 @@ interface Props {
   progress: ProgressStep;
 }
 
-const _WorkflowProgressBar = ({ progress }: Props) => {
-  return (
-    <Container>
-      <SubContainer>
-        <BarContainer>
-          <GreyedColor />
-          <CompletedColor position={progress} />
-          <EthLogo position={progress} src={EthRound} alt="eth-diamond-round" />
-        </BarContainer>
-        <Flexbox>
-          <Step
-            disabled={progress < ProgressStep.OVERVIEW}
-            active={progress === ProgressStep.OVERVIEW}
-          >
-            Overview
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.VALIDATOR_SETTINGS}
-            active={progress === ProgressStep.VALIDATOR_SETTINGS}
-          >
-            ValidatorSettings
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.GENERATE_KEY_PAIRS}
-            active={progress === ProgressStep.GENERATE_KEY_PAIRS}
-          >
-            Generate Keys
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.UPLOAD_VALIDATOR_FILE}
-            active={progress === ProgressStep.UPLOAD_VALIDATOR_FILE}
-          >
-            UploadValidator
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.CONNECT_WALLET}
-            active={progress === ProgressStep.CONNECT_WALLET}
-          >
-            Connect Wallet
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.SUMMARY}
-            active={progress === ProgressStep.SUMMARY}
-          >
-            Summary
-          </Step>
-        </Flexbox>
-      </SubContainer>
-    </Container>
-  );
-};
+const _WorkflowProgressBar = ({ progress }: Props) => (
+  <Container>
+    <SubContainer>
+      <BarContainer>
+        <GreyedColor />
+        <CompletedColor position={progress} />
+        <EthLogo position={progress} src={EthRound} alt="eth-diamond-round" />
+      </BarContainer>
+      <Flexbox>
+        <Step
+          disabled={progress < ProgressStep.OVERVIEW}
+          active={progress === ProgressStep.OVERVIEW}
+        >
+          Overview
+        </Step>
+        <Step
+          disabled={progress < ProgressStep.VALIDATOR_SETTINGS}
+          active={progress === ProgressStep.VALIDATOR_SETTINGS}
+        >
+          ValidatorSettings
+        </Step>
+        <Step
+          disabled={progress < ProgressStep.GENERATE_KEY_PAIRS}
+          active={progress === ProgressStep.GENERATE_KEY_PAIRS}
+        >
+          Generate Keys
+        </Step>
+        <Step
+          disabled={progress < ProgressStep.UPLOAD_VALIDATOR_FILE}
+          active={progress === ProgressStep.UPLOAD_VALIDATOR_FILE}
+        >
+          UploadValidator
+        </Step>
+        <Step
+          disabled={progress < ProgressStep.CONNECT_WALLET}
+          active={progress === ProgressStep.CONNECT_WALLET}
+        >
+          Connect Wallet
+        </Step>
+        <Step
+          disabled={progress < ProgressStep.SUMMARY}
+          active={progress === ProgressStep.SUMMARY}
+        >
+          Summary
+        </Step>
+      </Flexbox>
+    </SubContainer>
+  </Container>
+);
 
 const mstp = ({ progress }: StoreState) => ({
-  progress
+  progress,
 });
 
 export const WorkflowProgressBar = connect(mstp)(_WorkflowProgressBar);

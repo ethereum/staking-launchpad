@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import { Grid, ResponsiveContext } from "grommet";
-import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
-import { WalletConnected } from "./WalletConnected";
+import React from 'react';
+import { Grid, ResponsiveContext } from 'grommet';
+import { AbstractConnector as AbstractConnectorInterface } from '@web3-react/abstract-connector';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { WalletConnected } from './WalletConnected';
 import {
   metamask,
   portis,
   useMetamaskEagerConnect,
-  useMetamaskListener
-} from "./web3Utils";
-import { WalletButton } from "./WalletButton";
+  useMetamaskListener,
+} from './web3Utils';
+import { WalletButton } from './WalletButton';
 
-import { StoreState } from "../../store/reducers";
-import { ProgressStep } from "../../store/actions";
-import { connect } from "react-redux";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
+import { StoreState } from '../../store/reducers';
+import { ProgressStep } from '../../store/actions';
+import { connect } from 'react-redux';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 
 export interface web3ReactInterface {
   activate: (
@@ -36,7 +36,7 @@ export interface web3ReactInterface {
 }
 
 const _ConnectWalletPage = ({
-  progress
+  progress,
 }: {
   progress: ProgressStep;
 }): JSX.Element => {
@@ -44,7 +44,7 @@ const _ConnectWalletPage = ({
   const {
     active: walletConnected,
     connector: walletProvider,
-    error
+    error,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
@@ -55,14 +55,20 @@ const _ConnectWalletPage = ({
 
   if (walletConnected) {
     return (
-      <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
+      <WorkflowPageTemplate
+        title="Connect Wallet"
+        backgroundColor={rainbowMutedColors[4]}
+      >
         <WalletConnected />
       </WorkflowPageTemplate>
     );
   }
 
   return (
-    <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
+    <WorkflowPageTemplate
+      title="Connect Wallet"
+      backgroundColor={rainbowMutedColors[4]}
+    >
       <ResponsiveContext.Consumer>
         {() => (
           <Grid columns="medium">
@@ -84,7 +90,7 @@ const _ConnectWalletPage = ({
 };
 
 const mstp = ({ progress }: StoreState) => ({
-  progress
+  progress,
 });
 
 export const ConnectWalletPage = connect(mstp)(_ConnectWalletPage);

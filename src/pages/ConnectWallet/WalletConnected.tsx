@@ -1,18 +1,18 @@
-import React from "react";
-import { connect } from "react-redux";
-import { FormNextLink } from "grommet-icons";
-import { Box, Heading, Text } from "grommet";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
-import { AllowedNetworks, metamask, NetworkChainId } from "./web3Utils";
-import { web3ReactInterface } from "./index";
-import { ProgressStep, updateProgress } from "../../store/actions";
-import { Paper } from "../../components/Paper";
-import { Dot } from "../../components/Dot";
-import { Button } from "../../components/Button";
+import React from 'react';
+import { connect } from 'react-redux';
+import { FormNextLink } from 'grommet-icons';
+import { Box, Heading, Text } from 'grommet';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { AllowedNetworks, metamask, NetworkChainId } from './web3Utils';
+import { web3ReactInterface } from './index';
+import { ProgressStep, updateProgress } from '../../store/actions';
+import { Paper } from '../../components/Paper';
+import { Dot } from '../../components/Dot';
+import { Button } from '../../components/Button';
 
 const _WalletConnected = ({
-  updateProgress
+  updateProgress,
 }: {
   updateProgress: () => void;
 }) => {
@@ -20,7 +20,7 @@ const _WalletConnected = ({
     account,
     chainId,
     connector: walletProvider,
-    deactivate
+    deactivate,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
   let network;
@@ -39,7 +39,7 @@ const _WalletConnected = ({
     <div>
       <Paper>
         <Heading level={3} size="small" color="blueDark" className="mt0">
-          {walletProvider === metamask ? "Metamask" : "Portis"}
+          {walletProvider === metamask ? 'Metamask' : 'Portis'}
         </Heading>
         <Box className="flex flex-row">
           <Dot success={networkAllowed} />
@@ -47,7 +47,7 @@ const _WalletConnected = ({
         </Box>
         <Text
           className="mt10 ml30"
-          color={networkAllowed ? "greenDark" : "redMedium"}
+          color={networkAllowed ? 'greenDark' : 'redMedium'}
         >
           {network}
         </Text>
@@ -82,7 +82,7 @@ const _WalletConnected = ({
 const mdtp = (dispatch: any) => ({
   updateProgress: (): void => {
     dispatch(updateProgress(ProgressStep.SUMMARY));
-  }
+  },
 });
 
 export const WalletConnected = connect(null, mdtp)(_WalletConnected);

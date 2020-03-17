@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import { Action, ActionTypes, keyFile, ProgressStep } from "../actions";
+import { combineReducers } from 'redux';
+import { Action, ActionTypes, keyFile, ProgressStep } from '../actions';
 
 export interface StoreState {
   allAcknowledgementsAgreedTo: boolean;
@@ -46,5 +46,5 @@ export const reducers = combineReducers<StoreState>({
   allAcknowledgementsAgreedTo: acknowledgementReducer,
   validatorCount: validatorReducer,
   keyFiles: keyFilesReducer,
-  progress: progressReducer
+  progress: progressReducer,
 });

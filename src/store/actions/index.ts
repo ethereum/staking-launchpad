@@ -2,7 +2,7 @@ export enum ActionTypes {
   updateAcknowledgementState,
   updateValidatorCount,
   updateKeyFiles,
-  updateProgress
+  updateProgress,
 }
 
 // ACKNOWLEDGEMENT ACTIONS
@@ -15,7 +15,7 @@ export const updateAcknowledgementState = (
 ): UpdateAcknowledgementStateAction => {
   return {
     type: ActionTypes.updateAcknowledgementState,
-    payload: allChecked
+    payload: allChecked,
   };
 };
 
@@ -29,7 +29,7 @@ export const updateValidatorCount = (
 ): UpdateValidatorCountAction => {
   return {
     type: ActionTypes.updateValidatorCount,
-    payload: count
+    payload: count,
   };
 };
 
@@ -48,19 +48,19 @@ export interface UpdateKeyFilesAction {
 export const updateKeyFiles = (files: keyFile[]): UpdateKeyFilesAction => {
   return {
     type: ActionTypes.updateKeyFiles,
-    payload: files
+    payload: files,
   };
 };
 
 // PROGRESS ACTIONS
 export enum ProgressStep {
-  "OVERVIEW",
-  "VALIDATOR_SETTINGS",
-  "GENERATE_KEY_PAIRS",
-  "UPLOAD_VALIDATOR_FILE",
-  "CONNECT_WALLET",
-  "SUMMARY",
-  "CONGRATULATIONS"
+  'OVERVIEW',
+  'VALIDATOR_SETTINGS',
+  'GENERATE_KEY_PAIRS',
+  'UPLOAD_VALIDATOR_FILE',
+  'CONNECT_WALLET',
+  'SUMMARY',
+  'CONGRATULATIONS',
 }
 export interface UpdateProgressAction {
   type: ActionTypes.updateProgress;
@@ -71,7 +71,7 @@ export const updateProgress = (
 ): UpdateProgressAction => {
   return {
     type: ActionTypes.updateProgress,
-    payload: progressStep
+    payload: progressStep,
   };
 };
 

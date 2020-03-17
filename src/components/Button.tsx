@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Button as GrommetButton, ButtonProps } from "grommet";
+import React from 'react';
+import styled from 'styled-components';
+import { Button as GrommetButton, ButtonProps } from 'grommet';
 
 interface CustomButtonProps {
   className?: string;
@@ -15,7 +15,7 @@ const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
     return `${p.width}px`;
   }
   if (p.fullWidth) {
-    return "100%";
+    return '100%';
   }
 };
 

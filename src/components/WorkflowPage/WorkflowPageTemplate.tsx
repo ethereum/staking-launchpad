@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { Heading } from "grommet";
-import { WorkflowProgressBar } from "./WorkflowProgressBar";
-import { AppBar } from "../AppBar";
-import { DesktopOnlyModal } from "../DesktopOnlyModal";
+import React from 'react';
+import styled from 'styled-components';
+import { Heading } from 'grommet';
+import { WorkflowProgressBar } from './WorkflowProgressBar';
+import { AppBar } from '../AppBar';
+import { DesktopOnlyModal } from '../DesktopOnlyModal';
 
 interface WorkflowPageTemplateProps {
   children: React.ReactNode;
@@ -30,7 +30,7 @@ const Background = styled.div`
 export const WorkflowPageTemplate = ({
   children,
   title,
-  backgroundColor = "lightgray"
+  backgroundColor = 'lightgray',
 }: WorkflowPageTemplateProps): JSX.Element => {
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;

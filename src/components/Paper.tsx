@@ -1,6 +1,6 @@
-import React from "react";
-import { Box, BoxProps } from "grommet";
-import styled from "styled-components";
+import React from 'react';
+import { Box, BoxProps } from 'grommet';
+import styled from 'styled-components';
 
 export const Paper = (
   props: {
@@ -12,7 +12,7 @@ export const Paper = (
 ): JSX.Element => {
   return (
     <Box
-      border={props.error ? { color: "redLight", size: "small" } : true}
+      border={props.error ? { color: 'redLight', size: 'small' } : true}
       className={props.className}
       pad="large"
       background="white"

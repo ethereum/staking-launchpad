@@ -50,6 +50,10 @@ interface Props {
 
 const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
   await initBLS();
+
+  if (!Array.isArray(files)) return false;
+  if (files.length <= 0) return false;
+
   const keyfileStatuses: boolean[] = files.map(file => {
     const {
       pubkey,
@@ -110,14 +114,18 @@ export const _UploadValidatorPage = ({
     acceptedFiles => {
       if (acceptedFiles.length === 1) {
         setInvalidKeyFile(false);
-        setFileAccepted(true);
         const reader = new FileReader();
         reader.onload = async event => {
           if (event.target) {
-            const fileData = JSON.parse(event.target.result as string);
-            if (await validateKeyFile(fileData as keyFile[])) {
-              updateKeyFiles(fileData);
-            } else {
+            try {
+              const fileData = JSON.parse(event.target.result as string);
+              if (await validateKeyFile(fileData as keyFile[])) {
+                setFileAccepted(true);
+                updateKeyFiles(fileData);
+              } else {
+                setInvalidKeyFile(true);
+              }
+            } catch (e) {
               setInvalidKeyFile(true);
             }
           }

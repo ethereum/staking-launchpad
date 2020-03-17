@@ -275,7 +275,6 @@ const _SummaryPage = ({
             3.2} ETH`}
           onClick={handleDepositClick}
         />
-        />
       </div>
     </WorkflowPageTemplate>
   );

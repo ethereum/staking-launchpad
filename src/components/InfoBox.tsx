@@ -5,4 +5,5 @@ export const InfoBox = styled.div`
   padding: 12px 10px;
   width: 100%;
   background: ${p => p.theme.gray.lightest};
+  overflow: hidden;
 `;

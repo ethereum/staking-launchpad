@@ -265,7 +265,7 @@ const _SummaryPage = ({
           className="mr10"
           width={100}
           label="Back"
-          onClick={() => updateProgress(ProgressStep.VALIDATOR_SETTINGS)}
+          onClick={() => updateProgress(ProgressStep.CONNECT_WALLET)}
         />
         <Button
           width={300}

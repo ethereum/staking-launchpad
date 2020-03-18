@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text } from "grommet";
+import { Heading, Text } from "grommet";
 import styled from "styled-components";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
 import { Paper } from "../../components/Paper";
@@ -17,6 +17,8 @@ import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressSt
 import { Button } from "../../components/Button";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { pricePerValidator } from "../../enums";
+import { routesEnum } from "../../Routes";
+import { Link } from "../../components/Link";
 
 const warnings: string[] = [
   `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,
@@ -42,12 +44,12 @@ const _ValidatorSettingsPage = ({
   progress
 }: Props): JSX.Element => {
   const handleSubmit = () => {
-    if (validatorCount > 0) {
+    if (progress === ProgressStep.VALIDATOR_SETTINGS) {
       updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
-  if (progress !== ProgressStep.VALIDATOR_SETTINGS) {
+  if (progress < ProgressStep.VALIDATOR_SETTINGS) {
     return routeToCorrectProgressStep(progress);
   }
 
@@ -87,19 +89,17 @@ const _ValidatorSettingsPage = ({
         ))}
       </Paper>
       <div className="flex center p30">
-        <Button
-          className="mr10"
-          width={100}
-          label="Back"
-          onClick={() => updateProgress(ProgressStep.OVERVIEW)}
-        />
-        <Button
-          width={300}
-          rainbow
-          disabled={validatorCount <= 0}
-          label={`GENERATE MY KEYPAIR${validatorCount > 1 ? "S" : ""}`}
-          onClick={handleSubmit}
-        />
+        <Link to={routesEnum.AcknowledgementPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
+        <Link to={routesEnum.GenerateKeysPage} onClick={handleSubmit}>
+          <Button
+            width={300}
+            rainbow
+            disabled={validatorCount <= 0}
+            label={`GENERATE MY KEYPAIR${validatorCount > 1 ? "S" : ""}`}
+          />
+        </Link>
       </div>
     </WorkflowPageTemplate>
   );

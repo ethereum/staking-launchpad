@@ -1,5 +1,5 @@
-// PROGRESS ACTIONS
 import { ActionTypes } from "./index";
+// import { routesEnum } from "../../Routes";
 
 export enum ProgressStep {
   "OVERVIEW",
@@ -10,6 +10,7 @@ export enum ProgressStep {
   "SUMMARY",
   "CONGRATULATIONS"
 }
+
 export interface UpdateProgressAction {
   type: ActionTypes.updateProgress;
   payload: ProgressStep;

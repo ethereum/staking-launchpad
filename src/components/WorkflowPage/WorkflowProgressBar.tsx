@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 import EthRound from "../../static/ethRound.svg";
 import { StoreState } from "../../store/reducers";
 import { ProgressStep } from "../../store/actions";
 import { connect } from "react-redux";
+import { routesEnum } from "../../Routes";
 
 const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
@@ -105,52 +107,71 @@ const Step = styled.div`
 `;
 
 interface Props {
-  progress: ProgressStep;
+  // progress: ProgressStep;
+  history?: any;
 }
 
-const _WorkflowProgressBar = ({ progress }: Props) => {
+const mapPathnameToProgressStep = (pathname: routesEnum) => {
+  const routesInOrder = [
+    routesEnum.SummaryPage,
+    routesEnum.ValidatorSettingsPage,
+    routesEnum.GenerateKeysPage,
+    routesEnum.UploadValidatorPage,
+    routesEnum.ConnectWalletPage,
+    routesEnum.SummaryPage
+  ];
+  return routesInOrder.indexOf(pathname);
+};
+
+const _WorkflowProgressBar = ({ history }: Props) => {
+  const mappedProgress = mapPathnameToProgressStep(history.location.pathname);
+
   return (
     <Container>
       <SubContainer>
         <BarContainer>
           <GreyedColor />
-          <CompletedColor position={progress} />
-          <EthLogo position={progress} src={EthRound} alt="eth-diamond-round" />
+          <CompletedColor position={mappedProgress} />
+          <EthLogo
+            position={mappedProgress}
+            src={EthRound}
+            alt="eth-diamond-round"
+          />
         </BarContainer>
         <Flexbox>
           <Step
-            disabled={progress < ProgressStep.OVERVIEW}
-            active={progress === ProgressStep.OVERVIEW}
+            disabled={mappedProgress < ProgressStep.OVERVIEW}
+            active={mappedProgress === ProgressStep.OVERVIEW}
           >
             Overview
           </Step>
           <Step
-            disabled={progress < ProgressStep.VALIDATOR_SETTINGS}
-            active={progress === ProgressStep.VALIDATOR_SETTINGS}
+            disabled={mappedProgress < ProgressStep.VALIDATOR_SETTINGS}
+            active={mappedProgress === ProgressStep.VALIDATOR_SETTINGS}
           >
             ValidatorSettings
           </Step>
           <Step
-            disabled={progress < ProgressStep.GENERATE_KEY_PAIRS}
-            active={progress === ProgressStep.GENERATE_KEY_PAIRS}
+            disabled={mappedProgress < ProgressStep.GENERATE_KEY_PAIRS}
+            active={mappedProgress === ProgressStep.GENERATE_KEY_PAIRS}
           >
             Generate Keys
           </Step>
           <Step
-            disabled={progress < ProgressStep.UPLOAD_VALIDATOR_FILE}
-            active={progress === ProgressStep.UPLOAD_VALIDATOR_FILE}
+            disabled={mappedProgress < ProgressStep.UPLOAD_VALIDATOR_FILE}
+            active={mappedProgress === ProgressStep.UPLOAD_VALIDATOR_FILE}
           >
             UploadValidator
           </Step>
           <Step
-            disabled={progress < ProgressStep.CONNECT_WALLET}
-            active={progress === ProgressStep.CONNECT_WALLET}
+            disabled={mappedProgress < ProgressStep.CONNECT_WALLET}
+            active={mappedProgress === ProgressStep.CONNECT_WALLET}
           >
             Connect Wallet
           </Step>
           <Step
-            disabled={progress < ProgressStep.SUMMARY}
-            active={progress === ProgressStep.SUMMARY}
+            disabled={mappedProgress < ProgressStep.SUMMARY}
+            active={mappedProgress === ProgressStep.SUMMARY}
           >
             Summary
           </Step>
@@ -160,8 +181,12 @@ const _WorkflowProgressBar = ({ progress }: Props) => {
   );
 };
 
-const mstp = ({ progress }: StoreState) => ({
-  progress
-});
+// const mstp = ({ progress }: StoreState) => ({
+//   progress
+// });
 
-export const WorkflowProgressBar = connect(mstp)(_WorkflowProgressBar);
+export const WorkflowProgressBar = withRouter(
+  // connect(mstp)(
+  _WorkflowProgressBar
+  // )
+);

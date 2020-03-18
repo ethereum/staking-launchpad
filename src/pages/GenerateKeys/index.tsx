@@ -17,6 +17,8 @@ import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressSt
 import { StoreState } from "../../store/reducers";
 import { Button } from "../../components/Button";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+import { routesEnum } from "../../Routes";
+import { Link } from "../../components/Link";
 
 export enum operatingSystem {
   "MAC",
@@ -55,7 +57,9 @@ const _GenerateKeysPage = ({
   };
 
   const handleSubmit = () => {
-    updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE);
+    if (progress === ProgressStep.GENERATE_KEY_PAIRS) {
+      updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE);
+    }
   };
 
   const renderOSInstructions = (): React.ReactNode => {
@@ -71,7 +75,7 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (progress !== ProgressStep.GENERATE_KEY_PAIRS) {
+  if (progress < ProgressStep.GENERATE_KEY_PAIRS) {
     return routeToCorrectProgressStep(progress);
   }
 
@@ -125,19 +129,17 @@ const _GenerateKeysPage = ({
         />
       </Paper>
       <div className="flex center p30">
-        <Button
-          className="mr10"
-          width={100}
-          label="Back"
-          onClick={() => updateProgress(ProgressStep.VALIDATOR_SETTINGS)}
-        />
-        <Button
-          width={300}
-          rainbow
-          disabled={!mnemonicAcknowledgementChecked}
-          label="Continue"
-          onClick={handleSubmit}
-        />
+        <Link to={routesEnum.ValidatorSettingsPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
+        <Link to={routesEnum.UploadValidatorPage} onClick={handleSubmit}>
+          <Button
+            width={300}
+            rainbow
+            disabled={!mnemonicAcknowledgementChecked}
+            label="Continue"
+          />
+        </Link>
       </div>
     </WorkflowPageTemplate>
   );

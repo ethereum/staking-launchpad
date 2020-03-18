@@ -1,7 +1,7 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDropzone } from "react-dropzone";
 import styled from "styled-components";
-import { keyFile } from "../../store/actions";
+import { Text } from "../../components/Text";
 
 const getColor = (props: any, defaultColor: string) => {
   if (props.isDragAccept) {
@@ -34,33 +34,11 @@ const Container = styled.div`
 `;
 
 interface props {
-  updateKeyFiles(keyFile: keyFile[]): void;
   fileAccepted: boolean;
-  keyFiles: keyFile[];
+  onDrop: (acceptedFiles: any) => void;
 }
 
-export const StyledDropzone = ({
-  updateKeyFiles,
-  fileAccepted,
-  keyFiles
-}: props) => {
-  const alreadyUploaded = keyFiles.length > 0;
-  const onDrop = useCallback(
-    acceptedFiles => {
-      if (acceptedFiles.length === 1) {
-        const reader = new FileReader();
-        reader.onload = event => {
-          if (event.target) {
-            const jsonData = event.target.result as string;
-            updateKeyFiles(JSON.parse(jsonData));
-          }
-        };
-        reader.readAsText(acceptedFiles[0]);
-      }
-    },
-    [updateKeyFiles]
-  );
-
+export const StyledDropzone = ({ fileAccepted, onDrop }: props) => {
   const {
     getRootProps,
     getInputProps,
@@ -71,11 +49,11 @@ export const StyledDropzone = ({
 
   let message = "Drop or click here to upload deposit_data.json";
 
-  if (isDragReject && !alreadyUploaded) {
+  if (isDragReject) {
     message = "Please upload a valid JSON file ";
   }
 
-  if (fileAccepted || alreadyUploaded) {
+  if (fileAccepted) {
     message = "File successfully uploaded";
   }
 
@@ -85,7 +63,7 @@ export const StyledDropzone = ({
         {...getRootProps({ isDragActive, isDragAccept, isDragReject })}
       >
         <input {...getInputProps()} />
-        <p>{message}</p>
+        <Text>{message}</Text>
       </Container>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import {
   AcknowledgementPage,
   CongratulationsPage,
@@ -66,19 +66,22 @@ const routes: RouteType[] = [
   { path: routesEnum.NotFoundPage, component: NotFoundPage }
 ];
 
-export const Routes = () => {
+const _Routes = () => {
   return (
     <>
-      <ScrollToTop />
-      <Switch>
-        {routes.map((route: RouteType) => (
-          <Route
-            onUpdate={() => window.scrollTo(0, 0)}
-            {...route}
-            key={route.path}
-          />
-        ))}
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          {routes.map((route: RouteType) => (
+            <Route
+              onUpdate={() => window.scrollTo(0, 0)}
+              {...route}
+              key={route.path}
+            />
+          ))}
+        </Switch>
+      </ScrollToTop>
     </>
   );
 };
+
+export const Routes = withRouter(_Routes);

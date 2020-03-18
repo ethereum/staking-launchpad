@@ -19,6 +19,8 @@ import { connect } from "react-redux";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { Button } from "../../components/Button";
+import { routesEnum } from "../../Routes";
+import { Link } from "../../components/Link";
 
 export interface web3ReactInterface {
   activate: (
@@ -52,7 +54,7 @@ const _ConnectWalletPage = ({
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  if (progress !== ProgressStep.CONNECT_WALLET) {
+  if (progress < ProgressStep.CONNECT_WALLET) {
     return routeToCorrectProgressStep(progress);
   }
 
@@ -89,12 +91,9 @@ const _ConnectWalletPage = ({
         )}
       </ResponsiveContext.Consumer>
       <div className="flex center p30">
-        <Button
-          className="mr10"
-          width={100}
-          label="Back"
-          onClick={() => updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE)}
-        />
+        <Link to={routesEnum.UploadValidatorPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
       </div>
     </WorkflowPageTemplate>
   );

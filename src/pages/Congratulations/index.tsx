@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { AppBar } from "../../components/AppBar";
-import { Heading } from "../../components/Heading";
+import React, {useEffect, useState} from "react";
+import {AppBar} from "../../components/AppBar";
+import {Heading} from "../../components/Heading";
 import styled from "styled-components";
-import { colors } from "../../styles/styledComponentsTheme";
-import { ProgressBar } from "./ProgresBar";
-import { queryContract } from "../../utils/queryContract";
-import { ProgressBarInfo } from "./ProgressBarInfo";
-import { mainnetEthRequirement, pricePerValidator } from "../../enums";
-import { StoreState } from "../../store/reducers";
-import { connect } from "react-redux";
-import { keyFile, ProgressStep } from "../../store/actions";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
+import {colors} from "../../styles/styledComponentsTheme";
+import {ProgressBar} from "./ProgresBar";
+import {queryContract} from "../../utils/queryContract";
+import {ProgressBarInfo} from "./ProgressBarInfo";
+import {mainnetEthRequirement, pricePerValidator} from "../../enums";
+import {StoreState} from "../../store/reducers";
+import {connect} from "react-redux";
+import {keyFile, ProgressStep} from "../../store/actions";
+import {routeToCorrectProgressStep} from "../../utils/RouteToCorrectProgressStep";
 
 const RainbowBackground = styled.div`
-  background-image: ${p => `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight})`};
+  background-image: ${p =>
+    `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight})`};
   min-height: 100vh;
 `;
 
@@ -61,7 +62,7 @@ const _CongratulationsPage = ({
   })();
   const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
 
-  if (progress !== ProgressStep.CONGRATULATIONS) {
+  if (progress > ProgressStep.CONGRATULATIONS) {
     return routeToCorrectProgressStep(progress);
   }
 

@@ -11,8 +11,8 @@ import {
 import { Link } from "../../components/Link";
 import {
   acknowledgementId,
-  StoreState,
-  acknowledgementState
+  acknowledgementState,
+  StoreState
 } from "../../store/reducers";
 import {
   ProgressStep,
@@ -20,10 +20,10 @@ import {
   updateProgress
 } from "../../store/actions";
 import { Paper } from "../../components/Paper";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { pageContent } from "./pageContent";
+import { routesEnum } from "../../Routes";
 
 interface Props {
   updateAcknowledgementState(
@@ -36,12 +36,16 @@ interface Props {
 }
 
 const _AcknowledgementPage = ({
-  progress,
   updateProgress,
   acknowledgementState,
-  updateAcknowledgementState
+  updateAcknowledgementState,
+  progress
 }: Props) => {
-  const handleSubmit = () => updateProgress(ProgressStep.VALIDATOR_SETTINGS);
+  const handleSubmit = () => {
+    if (progress === ProgressStep.OVERVIEW) {
+      updateProgress(ProgressStep.VALIDATOR_SETTINGS);
+    }
+  };
 
   const handleCheckboxClick = (
     id: acknowledgementId,
@@ -103,10 +107,6 @@ const _AcknowledgementPage = ({
     );
   };
 
-  if (progress !== ProgressStep.OVERVIEW) {
-    return routeToCorrectProgressStep(progress);
-  }
-
   return (
     <WorkflowPageTemplate
       title="Overview"
@@ -122,13 +122,14 @@ const _AcknowledgementPage = ({
         />
       ))}
       <Box align="center" pad="large">
-        <Button
-          rainbow
-          width={300}
-          disabled={!acknowledgementState.allAgreedTo}
-          label="Continue"
-          onClick={handleSubmit}
-        />
+        <Link to={routesEnum.ValidatorSettingsPage} onClick={handleSubmit}>
+          <Button
+            rainbow
+            width={300}
+            disabled={!acknowledgementState.allAgreedTo}
+            label="Continue"
+          />
+        </Link>
       </Box>
     </WorkflowPageTemplate>
   );
@@ -142,12 +143,8 @@ const mdtp = (dispatch: any) => ({
   updateAcknowledgementState: (
     acknowledgementId: acknowledgementId,
     value: boolean
-  ): void => {
-    dispatch(updateAcknowledgementState(acknowledgementId, value));
-  },
-  updateProgress: (step: ProgressStep): void => {
-    dispatch(updateProgress(step));
-  }
+  ): void => dispatch(updateAcknowledgementState(acknowledgementId, value)),
+  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step))
 });
 
 export const AcknowledgementPage = connect(mstp, mdtp)(_AcknowledgementPage);

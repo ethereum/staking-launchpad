@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 import EthRound from "../../static/ethRound.svg";
-import { StoreState } from "../../store/reducers";
 import { ProgressStep } from "../../store/actions";
-import { connect } from "react-redux";
 import { routesEnum } from "../../Routes";
 
 const logoPositions = {
@@ -181,12 +179,4 @@ const _WorkflowProgressBar = ({ history }: Props) => {
   );
 };
 
-// const mstp = ({ progress }: StoreState) => ({
-//   progress
-// });
-
-export const WorkflowProgressBar = withRouter(
-  // connect(mstp)(
-  _WorkflowProgressBar
-  // )
-);
+export const WorkflowProgressBar = withRouter(_WorkflowProgressBar);

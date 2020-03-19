@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, ResponsiveContext } from "grommet";
 import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
 import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
@@ -6,6 +6,7 @@ import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import { WalletConnected } from "./WalletConnected";
 import {
+  fortmatic,
   metamask,
   portis,
   useMetamaskEagerConnect,
@@ -17,7 +18,7 @@ import { StoreState } from "../../store/reducers";
 import { ProgressStep } from "../../store/actions";
 import { connect } from "react-redux";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import {rainbowMutedColors} from "../../styles/styledComponentsTheme";
+import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 
 export interface web3ReactInterface {
   activate: (
@@ -55,14 +56,20 @@ const _ConnectWalletPage = ({
 
   if (walletConnected) {
     return (
-      <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
+      <WorkflowPageTemplate
+        title="Connect Wallet"
+        backgroundColor={rainbowMutedColors[4]}
+      >
         <WalletConnected />
       </WorkflowPageTemplate>
     );
   }
 
   return (
-    <WorkflowPageTemplate title="Connect Wallet" backgroundColor={rainbowMutedColors[4]}>
+    <WorkflowPageTemplate
+      title="Connect Wallet"
+      backgroundColor={rainbowMutedColors[4]}
+    >
       <ResponsiveContext.Consumer>
         {() => (
           <Grid columns="medium">
@@ -75,6 +82,11 @@ const _ConnectWalletPage = ({
               walletProvider={portis}
               title="Portis"
               error={walletProvider === portis ? error : undefined}
+            />
+            <WalletButton
+              walletProvider={fortmatic}
+              title="Fortmatic"
+              error={walletProvider === fortmatic ? error : undefined}
             />
           </Grid>
         )}

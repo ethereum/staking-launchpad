@@ -36,7 +36,8 @@ export const queryContract = async (): Promise<number> => {
     const hex: string = response.data.result;
     let ethBalance;
     ethBalance = parseInt(hex, 16);
-    ethBalance = ethBalance * Math.pow(10, -18);
+    // eslint-disable-next-line no-restricted-properties
+    ethBalance *= Math.pow(10, -18);
     ethBalance = +ethBalance.toFixed(1);
     return ethBalance;
   } catch (error) {

@@ -140,6 +140,7 @@ const _WorkflowProgressBar = ({ history }: { history?: any }) => {
         <Flexbox>
           {steps.map(({ step, text }) => (
             <Step
+              key={text}
               disabled={mappedProgress < step}
               active={mappedProgress === step}
             >

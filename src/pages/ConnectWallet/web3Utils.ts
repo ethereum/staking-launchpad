@@ -70,9 +70,11 @@ export function useMetamaskEagerConnect(): boolean {
   useEffect(() => {
     const attemptConnection = async () => {
       const isAuthorized: boolean = await metamask.isAuthorized();
-      isAuthorized
-        ? connectTo(metamask, undefined, true).catch(() => setAttempted(true))
-        : setAttempted(true);
+      if (isAuthorized) {
+        connectTo(metamask, undefined, true).catch(() => setAttempted(true));
+      } else {
+        setAttempted(true);
+      }
     };
     attemptConnection();
   }, [connectTo]);

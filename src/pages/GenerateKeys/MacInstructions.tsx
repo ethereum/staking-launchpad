@@ -1,6 +1,5 @@
 import React from 'react';
 import { Paper } from '../../components/Paper';
-import { Heading, Text } from 'grommet';
 import { CodeBox } from '../../components/CodeBox';
 
 export const MacInstructions = () => (

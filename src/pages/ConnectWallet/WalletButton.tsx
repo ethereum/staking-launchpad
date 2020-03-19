@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Heading, Text } from 'grommet';
-import { Paper } from '../../components/Paper';
-import { getErrorMessage } from './web3Utils';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
+import { getErrorMessage } from './web3Utils';
+import { Paper } from '../../components/Paper';
 
 export const WalletButton = ({
   title,
@@ -15,7 +15,7 @@ export const WalletButton = ({
   error: Error | undefined;
 }) => {
   const { activate } = useWeb3React<Web3Provider>();
-  const handleClick = async () => await activate(walletProvider);
+  const handleClick = () => activate(walletProvider);
 
   return (
     <Paper className="m10">

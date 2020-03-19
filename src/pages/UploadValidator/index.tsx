@@ -1,4 +1,10 @@
+/* eslint camelcase: 0 */ // --> OFF
 import React, { useCallback, useState } from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import _every from 'lodash/every';
+import { initBLS } from '@chainsafe/bls';
+import { StyledDropzone } from './Dropzone';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
 import { StoreState } from '../../store/reducers';
@@ -8,15 +14,10 @@ import {
   updateKeyFiles,
   updateProgress,
 } from '../../store/actions';
-import { connect } from 'react-redux';
-import { StyledDropzone } from './Dropzone';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { Button } from '../../components/Button';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { verifySignature } from '../../utils/verifySignature';
-import _every from 'lodash/every';
-import { initBLS } from '@chainsafe/bls';
-import styled from 'styled-components';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';

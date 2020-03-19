@@ -7,7 +7,9 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import Web3 from 'web3';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Eth } from 'web3-eth';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
 import { StoreState } from '../../store/reducers';
 import { keyFile, ProgressStep, updateProgress } from '../../store/actions';
@@ -138,7 +140,9 @@ const _SummaryPage = ({
     const {
       pubkey,
       signature,
+      // eslint-disable-next-line camelcase
       withdrawal_credentials,
+      // eslint-disable-next-line camelcase
       deposit_data_root,
     } = depositFile;
 
@@ -148,7 +152,7 @@ const _SummaryPage = ({
       const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
 
       const transactionParameters: SendOptions = {
-        gasPrice: '0x0055e72a000', //TODO: estimate gas price
+        gasPrice: '0x0055e72a000', // TODO: estimate gas price
         from: account as string,
         value: TX_VALUE,
       };
@@ -163,7 +167,7 @@ const _SummaryPage = ({
         )
         .send(transactionParameters)
         // Event for when the user confirms the tx
-        .on('transactionHash', (txId: string): void => {
+        .on('transactionHash', (): void => {
           setTxMining(true);
           // TODO(tx UI feature): return txId
         })

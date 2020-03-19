@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, ResponsiveContext } from 'grommet';
+import { connect } from 'react-redux';
 import { AbstractConnector as AbstractConnectorInterface } from '@web3-react/abstract-connector';
-import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { WalletConnected } from './WalletConnected';
@@ -12,10 +12,9 @@ import {
   useMetamaskListener,
 } from './web3Utils';
 import { WalletButton } from './WalletButton';
-
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { StoreState } from '../../store/reducers';
-import { ProgressStep, updateProgress } from '../../store/actions';
-import { connect } from 'react-redux';
+import { ProgressStep } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { Button } from '../../components/Button';
@@ -40,10 +39,8 @@ export interface web3ReactInterface {
 
 const _ConnectWalletPage = ({
   progress,
-  updateProgress,
 }: {
   progress: ProgressStep;
-  updateProgress: (step: ProgressStep) => void;
 }): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
@@ -103,10 +100,4 @@ const mstp = ({ progress }: StoreState) => ({
   progress,
 });
 
-const mdtp = (dispatch: any) => ({
-  updateProgress: (progressStep: ProgressStep): void => {
-    dispatch(updateProgress(progressStep));
-  },
-});
-
-export const ConnectWalletPage = connect(mstp, mdtp)(_ConnectWalletPage);
+export const ConnectWalletPage = connect(mstp)(_ConnectWalletPage);

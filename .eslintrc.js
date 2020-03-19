@@ -24,9 +24,13 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'implicit-arrow-linebreak': 'off',
     'no-underscore-dangle': 'off',
-    'react/jsx-props-no-spreading': 'warn',
+    'jsx-a11y/accessible-emoji': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'import/no-mutable-exports': 'off',
     'no-shadow': 'warn',
     'react/destructuring-assignment': 'warn',
+    'consistent-return': 'warn',
   },
   settings: {
     'import/resolver': {

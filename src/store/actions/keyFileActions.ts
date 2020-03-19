@@ -1,11 +1,12 @@
-// KEY FILE ACTIONS
-import { ActionTypes } from "./index";
+import { ActionTypes } from './index';
 
 export interface keyFile {
   pubkey: string;
+  // eslint-disable-next-line camelcase
   withdrawal_credentials: string;
   amount: number;
   signature: string;
+  // eslint-disable-next-line camelcase
   deposit_data_root: string;
 }
 export interface UpdateKeyFilesAction {
@@ -15,6 +16,6 @@ export interface UpdateKeyFilesAction {
 export const updateKeyFiles = (files: keyFile[]): UpdateKeyFilesAction => {
   return {
     type: ActionTypes.updateKeyFiles,
-    payload: files
+    payload: files,
   };
 };

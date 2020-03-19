@@ -10,7 +10,7 @@ export const Text = styled(T)`
   font-weight: ${(p: any) =>
     p.weight ? undefined : 300}; // default to grommet
   letter-spacing: normal;
-  color: ${p => p.theme.blue.dark};
+  color: ${(p: any) => (p.color ? p.color : p.theme.blue.dark)};
   margin: 0;
   display: block;
   text-align: ${(p: { center?: boolean }) => p.center && "center"};

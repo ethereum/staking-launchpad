@@ -2,8 +2,13 @@ import React from "react";
 import { Paper } from "../../components/Paper";
 import { Heading, Text } from "grommet";
 import { CodeBox } from "../../components/CodeBox";
+import { connect } from "react-redux";
 
-export const LinuxInstructions = () => (
+export const _LinuxInstructions = ({
+  validatorCount
+}: {
+  validatorCount: number;
+}) => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">
       <Heading level={3} size="small" color="blueMedium">
@@ -21,8 +26,14 @@ export const LinuxInstructions = () => (
       <CodeBox className="mt20" snippet="pip3 install -r requirements.txt" />
       <CodeBox
         className="mt20"
-        snippet="python3 deposit.py --num_validators n"
+        snippet={`python3 deposit.py --num_validators ${validatorCount}`}
       />
     </Paper>
   </div>
 );
+
+const mstp = ({ validatorCount }: { validatorCount: number }) => ({
+  validatorCount
+});
+
+export const LinuxInstructions = connect(mstp)(_LinuxInstructions);

@@ -25,7 +25,7 @@ const StyledButton = styled(GrommetButton)`
   text-transform: capitalize;
   width: ${calculateWidth};
   background-color: ${p => (p.primary ? p.theme.blue.dark : p.theme.white)};
-  color: ${p => (p.color ? p.color : p.theme.white)};
+  border: ${p => `1px solid ${p.theme.gray.light}`};
   :hover {
     box-shadow: none;
   }

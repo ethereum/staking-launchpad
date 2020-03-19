@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { trimString } from "../../utils/trimString";
 import { InfoBox } from "../../components/InfoBox";
 
 const ScrollContainer = styled.div`
@@ -31,12 +30,16 @@ const SubContainer = styled.div`
     }
   }
 `;
+const StyledPre = styled.pre`
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
 
 export const Keylist = ({ validatorKeys }: { validatorKeys: string[] }) => {
   const renderKeys = () =>
     validatorKeys.map(coldKey => (
       <InfoBox key={coldKey} className="px25 py0">
-        <pre>{trimString(coldKey, 45)}</pre>
+        <StyledPre>{coldKey}</StyledPre>
       </InfoBox>
     ));
 

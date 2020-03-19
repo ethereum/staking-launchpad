@@ -45,7 +45,7 @@ const _SummaryPage = ({
   validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
-  updateProgress: () => void;
+  updateProgress: (step: ProgressStep) => void;
 }): JSX.Element => {
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
@@ -55,12 +55,9 @@ const _SummaryPage = ({
   const allChecked = losePhrase && earlyAdopt && nonReverse && noPhish;
   const validatorKeys = keyFiles.map(file => file.pubkey);
 
-  const {
-    account,
-    chainId,
-    connector,
-  }: web3ReactInterface = useWeb3React<Web3Provider>();
-
+  const { account, chainId, connector }: web3ReactInterface = useWeb3React<
+    Web3Provider
+  >();
 
   const renderSummarySection = (): JSX.Element => (
     <Paper>
@@ -153,7 +150,7 @@ const _SummaryPage = ({
       const transactionParameters: SendOptions = {
         gasPrice: "0x0055e72a000", //TODO: estimate gas price
         from: account as string,
-        value: TX_VALUE,
+        value: TX_VALUE
       };
 
       // Send validator transaction
@@ -171,18 +168,21 @@ const _SummaryPage = ({
           // TODO(tx UI feature): return txId
         })
         // Event is for when the tx is mined
-        .on("confirmation", (confirmation: number, receipt: { status: {}; }): any => {
-          if (confirmation === 0) {
-            console.log("receipt: ", receipt);
-            if (receipt.status) {
-              console.log("receipt status: ", receipt.status);
-              // TODO(tx UI feature): return status
-              updateProgress();
-            } else {
-              console.log('error: receipt status not received');
+        .on(
+          "confirmation",
+          (confirmation: number, receipt: { status: {} }): any => {
+            if (confirmation === 0) {
+              console.log("receipt: ", receipt);
+              if (receipt.status) {
+                console.log("receipt status: ", receipt.status);
+                // TODO(tx UI feature): return status
+                updateProgress(ProgressStep.CONGRATULATIONS);
+              } else {
+                console.log("error: receipt status not received");
+              }
             }
           }
-        });
+        );
     } catch (rejected) {
       console.log("user rejected transaction: ", rejected);
       // TODO(tx UI): return rejected status
@@ -198,7 +198,7 @@ const _SummaryPage = ({
 
   if (progress !== ProgressStep.SUMMARY) {
     return routeToCorrectProgressStep(progress);
-  };
+  }
 
   // Handles the edge case for when the user disconnects the wallet while on this page
   // TODO(Post release UI): consider moving the user back to connect wallet or making the wallet connection reusable for this edgecase
@@ -232,12 +232,19 @@ const _SummaryPage = ({
 
   if (txMining) {
     return (
-      <WorkflowPageTemplate title="Summary"
-        backgroundColor={rainbowMutedColors[5]}>
+      <WorkflowPageTemplate
+        title="Summary"
+        backgroundColor={rainbowMutedColors[5]}
+      >
         <Paper>
           <Box align="center">
-            <Text size="large" className="my10">Your transactions have started processing</Text>
-            <Text size="medium" className="my20">Please confrim your transaction for each validator key you have generated</Text>
+            <Text size="large" className="my10">
+              Your transactions have started processing
+            </Text>
+            <Text size="medium" className="my20">
+              Please confrim your transaction for each validator key you have
+              generated
+            </Text>
             <Spinning size="large" />
           </Box>
         </Paper>
@@ -253,7 +260,13 @@ const _SummaryPage = ({
       {renderSummarySection()}
       {renderKeyList()}
       {renderAcknowledgements()}
-      <Box align="center" pad="large">
+      <div className="flex center p30">
+        <Button
+          className="mr10"
+          width={100}
+          label="Back"
+          onClick={() => updateProgress(ProgressStep.CONNECT_WALLET)}
+        />
         <Button
           width={300}
           rainbow
@@ -262,7 +275,7 @@ const _SummaryPage = ({
             3.2} ETH`}
           onClick={handleDepositClick}
         />
-      </Box>
+      </div>
     </WorkflowPageTemplate>
   );
 };
@@ -274,8 +287,8 @@ const mstp = ({ validatorCount, keyFiles, progress }: StoreState) => ({
 });
 
 const mdtp = (dispatch: any) => ({
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.CONGRATULATIONS));
+  updateProgress: (step: ProgressStep): void => {
+    dispatch(updateProgress(step));
   }
 });
 

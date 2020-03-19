@@ -1,50 +1,32 @@
 import { combineReducers } from "redux";
-import { Action, ActionTypes, keyFile, ProgressStep } from "../actions";
+import { keyFile, ProgressStep } from "../actions";
+import {
+  acknowledgementReducer,
+  acknowledgementState
+} from "./acknowledgementReducer";
+import { progressReducer } from "./progressReducer";
+import { keyFilesReducer } from "./keyFilesReducer";
+import { validatorReducer } from "./validatorReducer";
+import { generateKeysReducer } from "./generateKeysReducer";
+
+export * from "./acknowledgementReducer";
+export * from "./keyFilesReducer";
+export * from "./progressReducer";
+export * from "./validatorReducer";
+export * from "./generateKeysReducer";
 
 export interface StoreState {
-  allAcknowledgementsAgreedTo: boolean;
+  acknowledgementState: acknowledgementState;
   validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
+  mnemonicAcknowledgementChecked: boolean;
 }
 
-export const acknowledgementReducer = (
-  state: boolean = false,
-  action: Action
-) => {
-  if (action.type === ActionTypes.updateAcknowledgementState) {
-    return action.payload;
-  }
-  return state;
-};
-
-export const validatorReducer = (state: number = 0, action: Action) => {
-  if (action.type === ActionTypes.updateValidatorCount) {
-    return action.payload;
-  }
-  return state;
-};
-
-export const keyFilesReducer = (state: keyFile[] = [], action: Action) => {
-  if (action.type === ActionTypes.updateKeyFiles) {
-    return action.payload;
-  }
-  return state;
-};
-
-export const progressReducer = (
-  state: ProgressStep = ProgressStep.OVERVIEW,
-  action: Action
-) => {
-  if (action.type === ActionTypes.updateProgress) {
-    return action.payload;
-  }
-  return state;
-};
-
 export const reducers = combineReducers<StoreState>({
-  allAcknowledgementsAgreedTo: acknowledgementReducer,
+  acknowledgementState: acknowledgementReducer,
   validatorCount: validatorReducer,
   keyFiles: keyFilesReducer,
-  progress: progressReducer
+  progress: progressReducer,
+  mnemonicAcknowledgementChecked: generateKeysReducer
 });

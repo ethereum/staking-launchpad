@@ -10,11 +10,16 @@ import { ProgressStep, updateProgress } from "../../store/actions";
 import { Paper } from "../../components/Paper";
 import { Dot } from "../../components/Dot";
 import { Button } from "../../components/Button";
+import { routesEnum } from "../../Routes";
+import { Link } from "../../components/Link";
+import { StoreState } from "../../store/reducers";
 
 const _WalletConnected = ({
+  progress,
   updateProgress
 }: {
-  updateProgress: () => void;
+  progress: ProgressStep;
+  updateProgress: (step: ProgressStep) => void;
 }) => {
   const {
     account,
@@ -32,7 +37,9 @@ const _WalletConnected = ({
   }
 
   const handleSubmit = () => {
-    updateProgress();
+    if (progress === ProgressStep.CONNECT_WALLET) {
+      updateProgress(ProgressStep.SUMMARY);
+    }
   };
 
   return (
@@ -64,25 +71,27 @@ const _WalletConnected = ({
             className="mr10"
             color="blueDark"
           />
-          <Button
-            width={300}
-            rainbow
-            disabled={!networkAllowed}
-            onClick={handleSubmit}
-            label="Continue on testnet"
-            reverse
-            icon={<FormNextLink />}
-          />
+          <Link to={routesEnum.SummaryPage} onClick={handleSubmit}>
+            <Button
+              width={300}
+              rainbow
+              disabled={!networkAllowed}
+              label="Continue on testnet"
+              reverse
+              icon={<FormNextLink />}
+            />
+          </Link>
         </div>
       </Box>
     </div>
   );
 };
 
+const mstp = ({ progress }: StoreState) => ({
+  progress
+});
 const mdtp = (dispatch: any) => ({
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.SUMMARY));
-  }
+  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step))
 });
 
-export const WalletConnected = connect(null, mdtp)(_WalletConnected);
+export const WalletConnected = connect(mstp, mdtp)(_WalletConnected);

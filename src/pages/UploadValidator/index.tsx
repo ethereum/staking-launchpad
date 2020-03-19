@@ -10,24 +10,18 @@ import {
 } from "../../store/actions";
 import { connect } from "react-redux";
 import { StyledDropzone } from "./Dropzone";
-import { Box, Text } from "grommet";
-import styled from "styled-components";
 import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
 import { Button } from "../../components/Button";
 import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
 import { verifySignature } from "../../utils/verifySignature";
 import _every from "lodash/every";
 import { initBLS } from "@chainsafe/bls";
+import styled from "styled-components";
+import { Text } from "../../components/Text";
+import { routesEnum } from "../../Routes";
+import { Link } from "../../components/Link";
 
-const BackBtn = styled(Text)`
-  color: ${p => p.theme.gray.medium};
-  cursor: pointer;
-  margin-bottom: 10px;
-  :hover {
-    color: ${p => p.theme.gray.dark};
-  }
-`;
-const Instructions = styled.span`
+const Instructions = styled(Link)`
   font-weight: bold;
   :hover {
     color: ${p => p.theme.red.light};
@@ -42,7 +36,6 @@ const ErrorText = styled(Text)`
 
 interface Props {
   updateKeyFiles(files: keyFile[]): void;
-
   keyFiles: keyFile[];
   updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
@@ -107,8 +100,14 @@ export const _UploadValidatorPage = ({
   updateProgress,
   progress
 }: Props): JSX.Element => {
-  const [fileAccepted, setFileAccepted] = useState(false);
+  const fileAccepted = keyFiles.length > 0;
   const [invalidKeyFile, setInvalidKeyFile] = useState(false);
+
+  const handleSubmit = () => {
+    if (progress === ProgressStep.UPLOAD_VALIDATOR_FILE) {
+      updateProgress(ProgressStep.CONNECT_WALLET);
+    }
+  };
 
   const onDrop = useCallback(
     acceptedFiles => {
@@ -120,7 +119,6 @@ export const _UploadValidatorPage = ({
             try {
               const fileData = JSON.parse(event.target.result as string);
               if (await validateKeyFile(fileData as keyFile[])) {
-                setFileAccepted(true);
                 updateKeyFiles(fileData);
               } else {
                 setInvalidKeyFile(true);
@@ -133,18 +131,10 @@ export const _UploadValidatorPage = ({
         reader.readAsText(acceptedFiles[0]);
       }
     },
-    [setFileAccepted, updateKeyFiles]
+    [updateKeyFiles]
   );
 
-  const handleSubmit = () => {
-    updateProgress(ProgressStep.CONNECT_WALLET);
-  };
-
-  const handleGoBack = () => {
-    updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
-  };
-
-  if (progress !== ProgressStep.UPLOAD_VALIDATOR_FILE) {
+  if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE) {
     return routeToCorrectProgressStep(progress);
   }
 
@@ -154,31 +144,29 @@ export const _UploadValidatorPage = ({
       backgroundColor={rainbowMutedColors[3]}
     >
       <Paper>
-        <StyledDropzone
-          fileAccepted={fileAccepted}
-          keyFiles={keyFiles}
-          onDrop={onDrop}
-        />
+        <StyledDropzone fileAccepted={fileAccepted} onDrop={onDrop} />
         {invalidKeyFile && (
           <ErrorText color="redMedium">
             There was an error processing your key file. Please follow the
             instructions{" "}
-            <Instructions onClick={handleGoBack}>here</Instructions> to generate
-            your file.
+            <Instructions to={routesEnum.GenerateKeysPage}>here</Instructions>
+            to generate your file.
           </ErrorText>
         )}
-
-        <Box align="center" pad="large">
-          <BackBtn onClick={handleGoBack}>Go Back</BackBtn>
+      </Paper>
+      <div className="flex center p30">
+        <Link to={routesEnum.GenerateKeysPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
+        <Link to={routesEnum.ConnectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
-            disabled={!fileAccepted || invalidKeyFile}
+            disabled={!fileAccepted}
             label="Continue"
-            onClick={handleSubmit}
           />
-        </Box>
-      </Paper>
+        </Link>
+      </div>
     </WorkflowPageTemplate>
   );
 };

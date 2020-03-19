@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 import EthRound from "../../static/ethRound.svg";
-import { StoreState } from "../../store/reducers";
 import { ProgressStep } from "../../store/actions";
-import { connect } from "react-redux";
+import { routesEnum } from "../../Routes";
 
 const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
@@ -88,15 +88,10 @@ const Flexbox = styled.div`
   justify-content: space-evenly;
 `;
 
-interface StepProps {
-  active: boolean;
-  disabled: boolean;
-  theme: any;
-}
 const Step = styled.div`
   margin: 0 20px;
   text-align: center;
-  color: ${(p: StepProps) => {
+  color: ${(p: { active: boolean; disabled: boolean; theme: any }) => {
     if (p.disabled) return p.theme.gray.medium;
     if (p.active) return p.theme.blue.medium;
     return p.theme.blue.dark;
@@ -104,64 +99,57 @@ const Step = styled.div`
   font-weight: 500;
 `;
 
-interface Props {
-  progress: ProgressStep;
-}
+const mapPathnameToProgressStep = (pathname: routesEnum) => {
+  const routesInOrder = [
+    routesEnum.AcknowledgementPage,
+    routesEnum.ValidatorSettingsPage,
+    routesEnum.GenerateKeysPage,
+    routesEnum.UploadValidatorPage,
+    routesEnum.ConnectWalletPage,
+    routesEnum.SummaryPage
+  ];
+  return routesInOrder.indexOf(pathname);
+};
 
-const _WorkflowProgressBar = ({ progress }: Props) => {
+const _WorkflowProgressBar = ({ history }: { history?: any }) => {
+  const mappedProgress = mapPathnameToProgressStep(history.location.pathname);
+  interface step {
+    step: ProgressStep;
+    text: string;
+  }
+  const steps: step[] = [
+    { step: ProgressStep.OVERVIEW, text: "Overview" },
+    { step: ProgressStep.VALIDATOR_SETTINGS, text: "Validator Settings" },
+    { step: ProgressStep.GENERATE_KEY_PAIRS, text: "Generate Keys" },
+    { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: "Upload Validator" },
+    { step: ProgressStep.CONNECT_WALLET, text: "Connect Wallet" },
+    { step: ProgressStep.SUMMARY, text: "Summary" }
+  ];
   return (
     <Container>
       <SubContainer>
         <BarContainer>
           <GreyedColor />
-          <CompletedColor position={progress} />
-          <EthLogo position={progress} src={EthRound} alt="eth-diamond-round" />
+          <CompletedColor position={mappedProgress} />
+          <EthLogo
+            position={mappedProgress}
+            src={EthRound}
+            alt="eth-diamond-round"
+          />
         </BarContainer>
         <Flexbox>
-          <Step
-            disabled={progress < ProgressStep.OVERVIEW}
-            active={progress === ProgressStep.OVERVIEW}
-          >
-            Overview
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.VALIDATOR_SETTINGS}
-            active={progress === ProgressStep.VALIDATOR_SETTINGS}
-          >
-            ValidatorSettings
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.GENERATE_KEY_PAIRS}
-            active={progress === ProgressStep.GENERATE_KEY_PAIRS}
-          >
-            Generate Keys
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.UPLOAD_VALIDATOR_FILE}
-            active={progress === ProgressStep.UPLOAD_VALIDATOR_FILE}
-          >
-            UploadValidator
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.CONNECT_WALLET}
-            active={progress === ProgressStep.CONNECT_WALLET}
-          >
-            Connect Wallet
-          </Step>
-          <Step
-            disabled={progress < ProgressStep.SUMMARY}
-            active={progress === ProgressStep.SUMMARY}
-          >
-            Summary
-          </Step>
+          {steps.map(({ step, text }) => (
+            <Step
+              disabled={mappedProgress < step}
+              active={mappedProgress === step}
+            >
+              {text}
+            </Step>
+          ))}
         </Flexbox>
       </SubContainer>
     </Container>
   );
 };
 
-const mstp = ({ progress }: StoreState) => ({
-  progress
-});
-
-export const WorkflowProgressBar = connect(mstp)(_WorkflowProgressBar);
+export const WorkflowProgressBar = withRouter(_WorkflowProgressBar);

@@ -15,9 +15,15 @@ import { BrowserRouter } from "react-router-dom";
 
 const store = createStore(reducers);
 
+console.log(process.env);
+if (!process.env.REACT_APP_WEB3_POLLING_INTERVAL) {
+  throw new TypeError("Missing WEB3_POLLING_INTERVAL");
+}
+
 function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider);
-  library.pollingInterval = 12000;
+  // @ts-ignore
+  library.pollingInterval = +process.env.REACT_APP_WEB3_POLLING_INTERVAL;
   return library;
 }
 

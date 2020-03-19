@@ -9,7 +9,7 @@ import {
   metamask,
   portis,
   useMetamaskEagerConnect,
-  useMetamaskListener
+  useMetamaskListener, walletconnect
 } from "./web3Utils";
 import { WalletButton } from "./WalletButton";
 
@@ -75,6 +75,11 @@ const _ConnectWalletPage = ({
               walletProvider={portis}
               title="Portis"
               error={walletProvider === portis ? error : undefined}
+            />
+            <WalletButton
+                walletProvider={walletconnect}
+                title="WalletConnect"
+                error={walletProvider === walletconnect ? error : undefined}
             />
           </Grid>
         )}

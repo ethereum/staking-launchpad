@@ -5,6 +5,7 @@ import {
   UserRejectedRequestError
 } from "@web3-react/injected-connector";
 import { PortisConnector } from "@web3-react/portis-connector";
+import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { UnsupportedChainIdError, useWeb3React } from "@web3-react/core";
 import { useEffect, useState } from "react";
 import { web3ReactInterface } from "./index";
@@ -45,6 +46,22 @@ export const portis: PortisConnector = new PortisConnector({
   dAppId: process.env.REACT_APP_PORTIS_DAPP_ID,
   networks: supportedNetworks
 });
+
+const RPC_URLS: { [chainId: number]: string } = {
+  [NetworkChainId["Göerli Testnet"]]: process.env.RPC_URL_GOERLI as string,
+  [NetworkChainId["Ethereum Mainnet"]]: process.env.RPC_URL_MAINNET as string
+};
+
+export const walletconnect = new WalletConnectConnector({
+         rpc: {
+           [NetworkChainId["Göerli Testnet"]]:
+             RPC_URLS[NetworkChainId["Göerli Testnet"]]
+         },
+         bridge: "https://bridge.walletconnect.org",
+         qrcode: true,
+         // @ts-ignore
+         pollingInterval: process.env.REACT_APP_WEB3_POLLING_INTERVAL as number
+       });
 
 export function getErrorMessage(error: Error): string {
   if (error instanceof NoEthereumProviderError) {

@@ -13,15 +13,17 @@ const chainIdToNetwork: { [network: number]: string } = {
 interface FortmaticConnectorArguments {
   apiKey: string;
   chainId: number;
+  rpcUrl: string;
 }
 
 export class FortmaticConnector extends AbstractConnector {
   private readonly apiKey: string;
   private readonly chainId: number;
+  private readonly rpcUrl: string;
 
   public fortmatic: any;
 
-  constructor({ apiKey, chainId }: FortmaticConnectorArguments) {
+  constructor({ apiKey, chainId, rpcUrl }: FortmaticConnectorArguments) {
     invariant(
       Object.keys(chainIdToNetwork).includes(chainId.toString()),
       `Unsupported chainId ${chainId}`
@@ -30,18 +32,20 @@ export class FortmaticConnector extends AbstractConnector {
 
     this.apiKey = apiKey;
     this.chainId = chainId;
+    this.rpcUrl = rpcUrl;
   }
 
   public async activate(): Promise<ConnectorUpdate> {
     if (!this.fortmatic) {
       // @ts-ignore
       const { default: Fortmatic } = await import("fortmatic");
-      this.fortmatic = new Fortmatic(
-        this.apiKey,
-        this.chainId === 1 || this.chainId === 4
-          ? undefined
-          : chainIdToNetwork[this.chainId]
-      );
+      this.fortmatic = new Fortmatic(this.apiKey, {
+        rpcUrl: this.rpcUrl,
+        chainId:
+          this.chainId === 1 || this.chainId === 4
+            ? undefined
+            : chainIdToNetwork[this.chainId]
+      });
     }
 
     const account = await this.fortmatic

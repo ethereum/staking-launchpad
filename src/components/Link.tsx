@@ -40,6 +40,7 @@ interface LinkProps {
   external?: boolean;
   className?: string;
   primary?: boolean | undefined;
+  onClick?: (param?: any) => void;
 }
 
 export const Link = (props: LinkProps) => {

@@ -62,7 +62,7 @@ const _CongratulationsPage = ({
   })();
   const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
 
-  if (progress !== ProgressStep.CONGRATULATIONS) {
+  if (progress > ProgressStep.CONGRATULATIONS) {
     return routeToCorrectProgressStep(progress);
   }
 

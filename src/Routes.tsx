@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import {
   AcknowledgementPage,
   CongratulationsPage,
@@ -20,65 +20,68 @@ type RouteType = {
 };
 
 export enum routesEnum {
-  congratulationsPage = '/congratulations',
-  connectWalletPage = '/connect-wallet',
-  generateKeysPage = '/generate-keys',
-  acknowledgementPage = '/overview',
-  summaryPage = '/summary',
-  uploadValidatorPage = '/upload-validator',
-  validatorSettingsPage = '/validator-settings',
-  landingPage = '/',
-  notFoundPage = '/*',
+  CongratulationsPage = '/congratulations',
+  ConnectWalletPage = '/connect-wallet',
+  GenerateKeysPage = '/generate-keys',
+  AcknowledgementPage = '/overview',
+  SummaryPage = '/summary',
+  UploadValidatorPage = '/upload-validator',
+  ValidatorSettingsPage = '/validator-settings',
+  LandingPage = '/',
+  NotFoundPage = '/*',
 }
 const routes: RouteType[] = [
   {
-    path: routesEnum.congratulationsPage,
+    path: routesEnum.CongratulationsPage,
     exact: true,
     component: CongratulationsPage,
   },
   {
-    path: routesEnum.connectWalletPage,
+    path: routesEnum.ConnectWalletPage,
     exact: true,
     component: ConnectWalletPage,
   },
   {
-    path: routesEnum.generateKeysPage,
+    path: routesEnum.GenerateKeysPage,
     exact: true,
     component: GenerateKeysPage,
   },
   {
-    path: routesEnum.acknowledgementPage,
+    path: routesEnum.AcknowledgementPage,
     exact: true,
     component: AcknowledgementPage,
   },
-  { path: routesEnum.summaryPage, exact: true, component: SummaryPage },
+  { path: routesEnum.SummaryPage, exact: true, component: SummaryPage },
   {
-    path: routesEnum.uploadValidatorPage,
+    path: routesEnum.UploadValidatorPage,
     exact: true,
     component: UploadValidatorPage,
   },
   {
-    path: routesEnum.validatorSettingsPage,
+    path: routesEnum.ValidatorSettingsPage,
     exact: true,
     component: ValidatorSettingsPage,
   },
-  { path: routesEnum.landingPage, exact: true, component: LandingPage },
-  { path: routesEnum.notFoundPage, component: NotFoundPage },
+  { path: routesEnum.LandingPage, exact: true, component: LandingPage },
+  { path: routesEnum.NotFoundPage, component: NotFoundPage },
 ];
 
-export const Routes = () => {
+const _Routes = () => {
   return (
     <>
-      <ScrollToTop />
-      <Switch>
-        {routes.map((route: RouteType) => (
-          <Route
-            onUpdate={() => window.scrollTo(0, 0)}
-            {...route}
-            key={route.path}
-          />
-        ))}
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          {routes.map((route: RouteType) => (
+            <Route
+              onUpdate={() => window.scrollTo(0, 0)}
+              {...route}
+              key={route.path}
+            />
+          ))}
+        </Switch>
+      </ScrollToTop>
     </>
   );
 };
+
+export const Routes = withRouter(_Routes);

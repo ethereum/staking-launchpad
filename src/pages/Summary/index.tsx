@@ -45,7 +45,7 @@ const _SummaryPage = ({
   validatorCount: number;
   keyFiles: keyFile[];
   progress: ProgressStep;
-  updateProgress: () => void;
+  updateProgress: (step: ProgressStep) => void;
 }): JSX.Element => {
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
@@ -176,7 +176,7 @@ const _SummaryPage = ({
               if (receipt.status) {
                 console.log('receipt status: ', receipt.status);
                 // TODO(tx UI feature): return status
-                updateProgress();
+                updateProgress(ProgressStep.CONGRATULATIONS);
               } else {
                 console.log('error: receipt status not received');
               }
@@ -260,7 +260,13 @@ const _SummaryPage = ({
       {renderSummarySection()}
       {renderKeyList()}
       {renderAcknowledgements()}
-      <Box align="center" pad="large">
+      <div className="flex center p30">
+        <Button
+          className="mr10"
+          width={100}
+          label="Back"
+          onClick={() => updateProgress(ProgressStep.CONNECT_WALLET)}
+        />
         <Button
           width={300}
           rainbow
@@ -269,7 +275,7 @@ const _SummaryPage = ({
             3.2} ETH`}
           onClick={handleDepositClick}
         />
-      </Box>
+      </div>
     </WorkflowPageTemplate>
   );
 };
@@ -281,8 +287,8 @@ const mstp = ({ validatorCount, keyFiles, progress }: StoreState) => ({
 });
 
 const mdtp = (dispatch: any) => ({
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.CONGRATULATIONS));
+  updateProgress: (step: ProgressStep): void => {
+    dispatch(updateProgress(step));
   },
 });
 

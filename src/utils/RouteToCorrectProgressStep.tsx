@@ -5,25 +5,25 @@ import { routesEnum } from '../Routes';
 
 export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.OVERVIEW) {
-    return <Redirect to={routesEnum.acknowledgementPage} />;
+    return <Redirect push to={routesEnum.AcknowledgementPage} />;
   }
   if (step === ProgressStep.VALIDATOR_SETTINGS) {
-    return <Redirect to={routesEnum.validatorSettingsPage} />;
+    return <Redirect push to={routesEnum.ValidatorSettingsPage} />;
   }
   if (step === ProgressStep.GENERATE_KEY_PAIRS) {
-    return <Redirect to={routesEnum.generateKeysPage} />;
+    return <Redirect push to={routesEnum.GenerateKeysPage} />;
   }
   if (step === ProgressStep.UPLOAD_VALIDATOR_FILE) {
-    return <Redirect to={routesEnum.uploadValidatorPage} />;
+    return <Redirect push to={routesEnum.UploadValidatorPage} />;
   }
   if (step === ProgressStep.CONNECT_WALLET) {
-    return <Redirect to={routesEnum.connectWalletPage} />;
+    return <Redirect push to={routesEnum.ConnectWalletPage} />;
   }
   if (step === ProgressStep.SUMMARY) {
-    return <Redirect to={routesEnum.summaryPage} />;
+    return <Redirect push to={routesEnum.SummaryPage} />;
   }
   if (step === ProgressStep.CONGRATULATIONS) {
-    return <Redirect to={routesEnum.congratulationsPage} />;
+    return <Redirect push to={routesEnum.CongratulationsPage} />;
   }
-  return <Redirect to={routesEnum.notFoundPage} />;
+  return <Redirect push to={routesEnum.NotFoundPage} />;
 };

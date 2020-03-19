@@ -88,15 +88,10 @@ const Flexbox = styled.div`
   justify-content: space-evenly;
 `;
 
-interface StepProps {
-  active: boolean;
-  disabled: boolean;
-  theme: any;
-}
 const Step = styled.div`
   margin: 0 20px;
   text-align: center;
-  color: ${(p: StepProps) => {
+  color: ${(p: { active: boolean; disabled: boolean; theme: any }) => {
     if (p.disabled) return p.theme.gray.medium;
     if (p.active) return p.theme.blue.medium;
     return p.theme.blue.dark;
@@ -104,14 +99,9 @@ const Step = styled.div`
   font-weight: 500;
 `;
 
-interface Props {
-  // progress: ProgressStep;
-  history?: any;
-}
-
 const mapPathnameToProgressStep = (pathname: routesEnum) => {
   const routesInOrder = [
-    routesEnum.SummaryPage,
+    routesEnum.AcknowledgementPage,
     routesEnum.ValidatorSettingsPage,
     routesEnum.GenerateKeysPage,
     routesEnum.UploadValidatorPage,
@@ -121,9 +111,20 @@ const mapPathnameToProgressStep = (pathname: routesEnum) => {
   return routesInOrder.indexOf(pathname);
 };
 
-const _WorkflowProgressBar = ({ history }: Props) => {
+const _WorkflowProgressBar = ({ history }: { history?: any }) => {
   const mappedProgress = mapPathnameToProgressStep(history.location.pathname);
-
+  interface step {
+    step: ProgressStep;
+    text: string;
+  }
+  const steps: step[] = [
+    { step: ProgressStep.OVERVIEW, text: "Overview" },
+    { step: ProgressStep.VALIDATOR_SETTINGS, text: "Validator Settings" },
+    { step: ProgressStep.GENERATE_KEY_PAIRS, text: "Generate Keys" },
+    { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: "Upload Validator" },
+    { step: ProgressStep.CONNECT_WALLET, text: "Connect Wallet" },
+    { step: ProgressStep.SUMMARY, text: "Summary" }
+  ];
   return (
     <Container>
       <SubContainer>
@@ -137,42 +138,14 @@ const _WorkflowProgressBar = ({ history }: Props) => {
           />
         </BarContainer>
         <Flexbox>
-          <Step
-            disabled={mappedProgress < ProgressStep.OVERVIEW}
-            active={mappedProgress === ProgressStep.OVERVIEW}
-          >
-            Overview
-          </Step>
-          <Step
-            disabled={mappedProgress < ProgressStep.VALIDATOR_SETTINGS}
-            active={mappedProgress === ProgressStep.VALIDATOR_SETTINGS}
-          >
-            ValidatorSettings
-          </Step>
-          <Step
-            disabled={mappedProgress < ProgressStep.GENERATE_KEY_PAIRS}
-            active={mappedProgress === ProgressStep.GENERATE_KEY_PAIRS}
-          >
-            Generate Keys
-          </Step>
-          <Step
-            disabled={mappedProgress < ProgressStep.UPLOAD_VALIDATOR_FILE}
-            active={mappedProgress === ProgressStep.UPLOAD_VALIDATOR_FILE}
-          >
-            UploadValidator
-          </Step>
-          <Step
-            disabled={mappedProgress < ProgressStep.CONNECT_WALLET}
-            active={mappedProgress === ProgressStep.CONNECT_WALLET}
-          >
-            Connect Wallet
-          </Step>
-          <Step
-            disabled={mappedProgress < ProgressStep.SUMMARY}
-            active={mappedProgress === ProgressStep.SUMMARY}
-          >
-            Summary
-          </Step>
+          {steps.map(({ step, text }) => (
+            <Step
+              disabled={mappedProgress < step}
+              active={mappedProgress === step}
+            >
+              {text}
+            </Step>
+          ))}
         </Flexbox>
       </SubContainer>
     </Container>

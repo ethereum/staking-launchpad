@@ -1,6 +1,6 @@
 import React from 'react';
-import { CheckBox, Heading } from 'grommet';
 import { Paper, PaperGroup } from '../../components/Paper';
+import { CheckBox, Heading } from 'grommet';
 import { acknowledgementId } from '../../store/reducers';
 
 export interface AcknowledgementSectionData {

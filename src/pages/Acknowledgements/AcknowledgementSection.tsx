@@ -1,7 +1,7 @@
-import React from "react";
-import { CheckBox, Heading } from "grommet";
-import { Paper, PaperGroup } from "../../components/Paper";
-import { acknowledgementId } from "../../store/reducers";
+import React from 'react';
+import { Paper, PaperGroup } from '../../components/Paper';
+import { CheckBox, Heading } from 'grommet';
+import { acknowledgementId } from '../../store/reducers';
 
 export interface AcknowledgementSectionData {
   id: acknowledgementId;
@@ -22,7 +22,7 @@ export const AcknowledgementSection = ({
   content,
   acknowledgement,
   handleCheckboxClick,
-  agreedTo
+  agreedTo,
 }: AcknowledgementSectionProps & AcknowledgementSectionData): JSX.Element => {
   const onCheckboxClick = (event: any) =>
     handleCheckboxClick(acknowledgement.id, event.target.checked);

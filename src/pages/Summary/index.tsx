@@ -1,35 +1,37 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import { Box, CheckBox, Heading, Text } from "grommet";
-import { Spinning } from "grommet-controls";
-import styled from "styled-components";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
-import { AbstractConnector } from "@web3-react/abstract-connector";
-import Web3 from "web3";
-import { Eth } from "web3-eth";
-import { SendOptions } from "web3-eth-contract";
-import { StoreState } from "../../store/reducers";
-import { keyFile, ProgressStep, updateProgress } from "../../store/actions";
-import { Paper } from "../../components/Paper";
-import { web3ReactInterface } from "../ConnectWallet";
-import { NetworkChainId } from "../ConnectWallet/web3Utils";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { InfoBox } from "../../components/InfoBox";
-import { Keylist } from "./Keylist";
-import { Link } from "../../components/Link";
-import { AcknowledgementSection } from "./AcknowledgementSection";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { prefix0X } from "../../utils/prefix0x";
-import { contractAbi } from "../../contractAbi";
-import { pricePerValidator, contractAddress } from "../../enums";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { Box, CheckBox, Heading, Text } from 'grommet';
+import { Spinning } from 'grommet-controls';
+import styled from 'styled-components';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import Web3 from 'web3';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Eth } from 'web3-eth';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { SendOptions } from 'web3-eth-contract';
+import { StoreState } from '../../store/reducers';
+import { keyFile, ProgressStep, updateProgress } from '../../store/actions';
+import { Paper } from '../../components/Paper';
+import { web3ReactInterface } from '../ConnectWallet';
+import { NetworkChainId } from '../ConnectWallet/web3Utils';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { InfoBox } from '../../components/InfoBox';
+import { Keylist } from './Keylist';
+import { Link } from '../../components/Link';
+import { AcknowledgementSection } from './AcknowledgementSection';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { prefix0X } from '../../utils/prefix0x';
+import { contractAbi } from '../../contractAbi';
+import { pricePerValidator, contractAddress } from '../../enums';
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
 const CONTRACT_ADDRESS = contractAddress;
 const TX_VALUE = pricePerValidator * 1e18; // 3.2 eth for testnet, change to 32 on mainnet
-const NETWORK_NAME = "Göerli Testnet";
+const NETWORK_NAME = 'Göerli Testnet';
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
 const SummarySection = styled(Box)`
@@ -40,7 +42,7 @@ const _SummaryPage = ({
   validatorCount,
   keyFiles,
   progress,
-  updateProgress
+  updateProgress,
 }: {
   validatorCount: number;
   keyFiles: keyFile[];
@@ -138,8 +140,10 @@ const _SummaryPage = ({
     const {
       pubkey,
       signature,
+      // eslint-disable-next-line camelcase
       withdrawal_credentials,
-      deposit_data_root
+      // eslint-disable-next-line camelcase
+      deposit_data_root,
     } = depositFile;
 
     try {
@@ -148,9 +152,9 @@ const _SummaryPage = ({
       const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
 
       const transactionParameters: SendOptions = {
-        gasPrice: "0x0055e72a000", //TODO: estimate gas price
+        gasPrice: '0x0055e72a000', // TODO: estimate gas price
         from: account as string,
-        value: TX_VALUE
+        value: TX_VALUE,
       };
 
       // Send validator transaction
@@ -163,28 +167,28 @@ const _SummaryPage = ({
         )
         .send(transactionParameters)
         // Event for when the user confirms the tx
-        .on("transactionHash", (txId: string): void => {
+        .on('transactionHash', (): void => {
           setTxMining(true);
           // TODO(tx UI feature): return txId
         })
         // Event is for when the tx is mined
         .on(
-          "confirmation",
+          'confirmation',
           (confirmation: number, receipt: { status: {} }): any => {
             if (confirmation === 0) {
-              console.log("receipt: ", receipt);
+              console.log('receipt: ', receipt);
               if (receipt.status) {
-                console.log("receipt status: ", receipt.status);
+                console.log('receipt status: ', receipt.status);
                 // TODO(tx UI feature): return status
                 updateProgress(ProgressStep.CONGRATULATIONS);
               } else {
-                console.log("error: receipt status not received");
+                console.log('error: receipt status not received');
               }
             }
           }
         );
     } catch (rejected) {
-      console.log("user rejected transaction: ", rejected);
+      console.log('user rejected transaction: ', rejected);
       // TODO(tx UI): return rejected status
     }
   };
@@ -221,7 +225,7 @@ const _SummaryPage = ({
       <WorkflowPageTemplate title="Summary">
         <AcknowledgementSection title="Your network has changed">
           <Text>
-            Your Ethereum network is not correct, Please connect to the{" "}
+            Your Ethereum network is not correct, Please connect to the{' '}
             {NETWORK_NAME} network and refresh the page to begin the deposit
             process again.
           </Text>
@@ -283,13 +287,13 @@ const _SummaryPage = ({
 const mstp = ({ validatorCount, keyFiles, progress }: StoreState) => ({
   validatorCount,
   keyFiles,
-  progress
+  progress,
 });
 
 const mdtp = (dispatch: any) => ({
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
-  }
+  },
 });
 
 export const SummaryPage = connect(mstp, mdtp)(_SummaryPage);

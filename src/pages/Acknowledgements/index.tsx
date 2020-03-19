@@ -1,29 +1,29 @@
-import React from "react";
-import { Box, Heading, Text } from "grommet";
-import { FormNext } from "grommet-icons";
-import { connect } from "react-redux";
-import { scroller } from "react-scroll";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
+import React from 'react';
+import { Box, Heading, Text } from 'grommet';
+import { FormNext } from 'grommet-icons';
+import { connect } from 'react-redux';
+import { scroller } from 'react-scroll';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import {
   AcknowledgementSection,
-  AcknowledgementSectionData
-} from "./AcknowledgementSection";
-import { Link } from "../../components/Link";
+  AcknowledgementSectionData,
+} from './AcknowledgementSection';
+import { Link } from '../../components/Link';
 import {
   acknowledgementId,
   acknowledgementState,
-  StoreState
-} from "../../store/reducers";
+  StoreState,
+} from '../../store/reducers';
 import {
   ProgressStep,
   updateAcknowledgementState,
-  updateProgress
-} from "../../store/actions";
-import { Paper } from "../../components/Paper";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { pageContent } from "./pageContent";
-import { routesEnum } from "../../Routes";
+  updateProgress,
+} from '../../store/actions';
+import { Paper } from '../../components/Paper';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { pageContent } from './pageContent';
+import { routesEnum } from '../../Routes';
 
 interface Props {
   updateAcknowledgementState(
@@ -39,21 +39,11 @@ const _AcknowledgementPage = ({
   updateProgress,
   acknowledgementState,
   updateAcknowledgementState,
-  progress
+  progress,
 }: Props) => {
   const handleSubmit = () => {
     if (progress === ProgressStep.OVERVIEW) {
       updateProgress(ProgressStep.VALIDATOR_SETTINGS);
-    }
-  };
-
-  const handleCheckboxClick = (
-    id: acknowledgementId,
-    checked: boolean
-  ): void => {
-    updateAcknowledgementState(id, checked);
-    if (checked) {
-      scrollToNextAcknowledgement();
     }
   };
 
@@ -66,7 +56,7 @@ const _AcknowledgementPage = ({
 
       if (nextAcknowledgement === undefined) {
         throw new TypeError(
-          "Redux and local acknowledgement state are out of sync"
+          'Redux and local acknowledgement state are out of sync'
         );
       }
 
@@ -74,8 +64,18 @@ const _AcknowledgementPage = ({
         duration: 800,
         delay: 0,
         offset: -10,
-        smooth: "easeInOutQuart"
+        smooth: 'easeInOutQuart',
       });
+    }
+  };
+
+  const handleCheckboxClick = (
+    id: acknowledgementId,
+    checked: boolean
+  ): void => {
+    updateAcknowledgementState(id, checked);
+    if (checked) {
+      scrollToNextAcknowledgement();
     }
   };
 
@@ -122,7 +122,7 @@ const _AcknowledgementPage = ({
         />
       ))}
       <Box align="center" pad="large">
-        <Link to={routesEnum.ValidatorSettingsPage} onClick={handleSubmit}>
+        <Link to={routesEnum.validatorSettingsPage} onClick={handleSubmit}>
           <Button
             rainbow
             width={300}
@@ -137,14 +137,14 @@ const _AcknowledgementPage = ({
 
 const mstp = ({ progress, acknowledgementState }: StoreState) => ({
   progress,
-  acknowledgementState
+  acknowledgementState,
 });
 const mdtp = (dispatch: any) => ({
   updateAcknowledgementState: (
     acknowledgementId: acknowledgementId,
     value: boolean
   ): void => dispatch(updateAcknowledgementState(acknowledgementId, value)),
-  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step))
+  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step)),
 });
 
 export const AcknowledgementPage = connect(mstp, mdtp)(_AcknowledgementPage);

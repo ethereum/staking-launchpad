@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const PBarContainer = styled.div`
   height: 70px;
@@ -32,7 +32,7 @@ const PBarIncomplete = styled.div`
 export const ProgressBar = ({
   complete,
   newlyAdded,
-  incomplete
+  incomplete,
 }: {
   complete: number;
   newlyAdded: number;

@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { withRouter } from "react-router-dom";
-import EthRound from "../../static/ethRound.svg";
-import { ProgressStep } from "../../store/actions";
-import { routesEnum } from "../../Routes";
+import React from 'react';
+import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
+import EthRound from '../../static/ethRound.svg';
+import { ProgressStep } from '../../store/actions';
+import { routesEnum } from '../../Routes';
 
 const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
   medium: [-5, 14.5, 36.5, 57.5, 79.5, 97.5],
-  large: [-2, 16.5, 37.5, 57.5, 78, 96]
+  large: [-2, 16.5, 37.5, 57.5, 78, 96],
 };
 
 const Container = styled.div`
@@ -101,12 +101,12 @@ const Step = styled.div`
 
 const mapPathnameToProgressStep = (pathname: routesEnum) => {
   const routesInOrder = [
-    routesEnum.AcknowledgementPage,
-    routesEnum.ValidatorSettingsPage,
-    routesEnum.GenerateKeysPage,
-    routesEnum.UploadValidatorPage,
-    routesEnum.ConnectWalletPage,
-    routesEnum.SummaryPage
+    routesEnum.acknowledgementPage,
+    routesEnum.validatorSettingsPage,
+    routesEnum.generateKeysPage,
+    routesEnum.uploadValidatorPage,
+    routesEnum.connectWalletPage,
+    routesEnum.summaryPage,
   ];
   return routesInOrder.indexOf(pathname);
 };
@@ -118,12 +118,12 @@ const _WorkflowProgressBar = ({ history }: { history?: any }) => {
     text: string;
   }
   const steps: step[] = [
-    { step: ProgressStep.OVERVIEW, text: "Overview" },
-    { step: ProgressStep.VALIDATOR_SETTINGS, text: "Validator Settings" },
-    { step: ProgressStep.GENERATE_KEY_PAIRS, text: "Generate Keys" },
-    { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: "Upload Validator" },
-    { step: ProgressStep.CONNECT_WALLET, text: "Connect Wallet" },
-    { step: ProgressStep.SUMMARY, text: "Summary" }
+    { step: ProgressStep.OVERVIEW, text: 'Overview' },
+    { step: ProgressStep.VALIDATOR_SETTINGS, text: 'Validator Settings' },
+    { step: ProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
+    { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: 'Upload Validator' },
+    { step: ProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
+    { step: ProgressStep.SUMMARY, text: 'Summary' },
   ];
   return (
     <Container>
@@ -140,6 +140,7 @@ const _WorkflowProgressBar = ({ history }: { history?: any }) => {
         <Flexbox>
           {steps.map(({ step, text }) => (
             <Step
+              key={text}
               disabled={mappedProgress < step}
               active={mappedProgress === step}
             >

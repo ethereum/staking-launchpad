@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
-import { Heading } from "../../../components/Heading";
-import { Text } from "../../../components/Text";
-import { ProgressBar } from "./ProgressBar";
-import { queryContract } from "../../../utils/queryContract";
-import { isMainnet, mainnetEthRequirement } from "../../../enums";
-import { numberWithCommas } from "../../../utils/numberWithCommas";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Heading } from '../../../components/Heading';
+import { Text } from '../../../components/Text';
+import { ProgressBar } from './ProgressBar';
+import { queryContract } from '../../../utils/queryContract';
+import { isMainnet, mainnetEthRequirement } from '../../../enums';
+import { numberWithCommas } from '../../../utils/numberWithCommas';
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
   position: relative;
-  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "60px 0" : "150px 0")};
+  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? '60px 0' : '150px 0')};
 `;
 const Content = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -20,7 +20,7 @@ const Content = styled.div`
   padding: 0 120px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: ${(p: { isMobile: boolean }) =>
-      p.isMobile ? "0 20px" : "0 60px"};
+      p.isMobile ? '0 20px' : '0 60px'};
   }
 `;
 const BoldGreen = styled.span`
@@ -82,7 +82,7 @@ export const NetworkStatus = (): JSX.Element => {
             <BoldGray className="mr10" fontSize={24}>
               16,284 validators,
             </BoldGray>
-            to launch its {isMainnet ? "mainnet" : "testnet"}
+            to launch its {isMainnet ? 'mainnet' : 'testnet'}
           </Text>
           <div>
             <ProgressBar progress={calculatePercentage(amountEth)} />
@@ -91,13 +91,13 @@ export const NetworkStatus = (): JSX.Element => {
                 <BoldGreen fontSize={18} className="mr10">
                   {numberWithCommas(amountEth)} ETH
                 </BoldGreen>
-                <Text size="small" style={{ marginTop: "2px" }}>
+                <Text size="small" style={{ marginTop: '2px' }}>
                   Current Staking Balance
                 </Text>
               </span>
               <Text size="small">
                 <strong>
-                  {numberWithCommas(calculateLaunchThreshold())} ETH{" "}
+                  {numberWithCommas(calculateLaunchThreshold())} ETH{' '}
                 </strong>
                 Launch threshold
               </Text>

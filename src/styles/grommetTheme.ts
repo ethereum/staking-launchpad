@@ -1,4 +1,4 @@
-import { styledComponentsTheme } from "./styledComponentsTheme";
+import { styledComponentsTheme } from './styledComponentsTheme';
 
 const { blue, transparent, gray, red, green } = styledComponentsTheme;
 
@@ -6,9 +6,9 @@ export const grommetTheme = {
   global: {
     focus: {
       border: {
-        color: transparent
+        color: transparent,
       },
-      outline: "none"
+      outline: 'none',
     },
     colors: {
       brand: blue.dark, // needed to override default grommet component styling
@@ -23,27 +23,27 @@ export const grommetTheme = {
       greenDark: green.dark,
 
       redLight: red.light,
-      redMedium: red.medium
+      redMedium: red.medium,
     },
     font: {
-      family: "Roboto"
-    }
+      family: 'Roboto',
+    },
   },
   button: {
     border: {
-      radius: "2px",
-      color: blue.medium
+      radius: '2px',
+      color: blue.medium,
     },
     padding: {
-      vertical: "12px",
-      horizontal: "24px"
+      vertical: '12px',
+      horizontal: '24px',
     },
     primary: {
-      color: blue.medium
+      color: blue.medium,
     },
     extend: `
       font-size: 12px;
       font-weight: bold;
-     `
-  }
+     `,
+  },
 };

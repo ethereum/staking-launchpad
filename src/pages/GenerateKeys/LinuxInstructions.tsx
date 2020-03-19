@@ -1,11 +1,11 @@
-import React from "react";
-import { Paper } from "../../components/Paper";
-import { Heading, Text } from "grommet";
-import { CodeBox } from "../../components/CodeBox";
-import { connect } from "react-redux";
+import React from 'react';
+import { Paper } from '../../components/Paper';
+import { Heading, Text } from 'grommet';
+import { CodeBox } from '../../components/CodeBox';
+import { connect } from 'react-redux';
 
 export const _LinuxInstructions = ({
-  validatorCount
+  validatorCount,
 }: {
   validatorCount: number;
 }) => (
@@ -33,7 +33,7 @@ export const _LinuxInstructions = ({
 );
 
 const mstp = ({ validatorCount }: { validatorCount: number }) => ({
-  validatorCount
+  validatorCount,
 });
 
 export const LinuxInstructions = connect(mstp)(_LinuxInstructions);

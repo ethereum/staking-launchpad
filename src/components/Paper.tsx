@@ -1,6 +1,6 @@
-import React from "react";
-import { Box, BoxProps } from "grommet";
-import styled from "styled-components";
+import React from 'react';
+import { Box, BoxProps } from 'grommet';
+import styled from 'styled-components';
 
 export const Paper = (
   props: {
@@ -10,16 +10,17 @@ export const Paper = (
     style?: any;
   } & BoxProps
 ): JSX.Element => {
+  const { error, className, children } = props;
   return (
     <Box
-      border={props.error ? { color: "redLight", size: "small" } : true}
-      className={props.className}
+      border={error ? { color: 'redLight', size: 'small' } : true}
+      className={className}
       pad="large"
       background="white"
       round="xsmall"
       {...props}
     >
-      {props.children}
+      {children}
     </Box>
   );
 };
@@ -47,5 +48,6 @@ export const PaperGroup = (
     id?: string;
   } & BoxProps
 ): JSX.Element => {
-  return <BoxGroup {...props}>{props.children}</BoxGroup>;
+  const { children } = props;
+  return <BoxGroup {...props}>{children}</BoxGroup>;
 };

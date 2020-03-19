@@ -1,25 +1,26 @@
-import React, { useCallback, useState } from "react";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Paper } from "../../components/Paper";
-import { StoreState } from "../../store/reducers";
+/* eslint camelcase: 0 */ // --> OFF
+import React, { useCallback, useState } from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import _every from 'lodash/every';
+import { initBLS } from '@chainsafe/bls';
+import { StyledDropzone } from './Dropzone';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { Paper } from '../../components/Paper';
+import { StoreState } from '../../store/reducers';
 import {
   keyFile,
   ProgressStep,
   updateKeyFiles,
-  updateProgress
-} from "../../store/actions";
-import { connect } from "react-redux";
-import { StyledDropzone } from "./Dropzone";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { verifySignature } from "../../utils/verifySignature";
-import _every from "lodash/every";
-import { initBLS } from "@chainsafe/bls";
-import styled from "styled-components";
-import { Text } from "../../components/Text";
-import { routesEnum } from "../../Routes";
-import { Link } from "../../components/Link";
+  updateProgress,
+} from '../../store/actions';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { verifySignature } from '../../utils/verifySignature';
+import { Text } from '../../components/Text';
+import { routesEnum } from '../../Routes';
+import { Link } from '../../components/Link';
 
 const Instructions = styled(Link)`
   font-weight: bold;
@@ -53,7 +54,7 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
       withdrawal_credentials,
       amount,
       signature,
-      deposit_data_root
+      deposit_data_root,
     } = file;
 
     // check existence of required keys
@@ -69,11 +70,11 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
 
     // check type of values
     if (
-      typeof pubkey !== "string" ||
-      typeof withdrawal_credentials !== "string" ||
-      typeof amount !== "number" ||
-      typeof signature !== "string" ||
-      typeof deposit_data_root !== "string"
+      typeof pubkey !== 'string' ||
+      typeof withdrawal_credentials !== 'string' ||
+      typeof amount !== 'number' ||
+      typeof signature !== 'string' ||
+      typeof deposit_data_root !== 'string'
     ) {
       return false;
     }
@@ -98,7 +99,7 @@ export const _UploadValidatorPage = ({
   keyFiles,
   updateKeyFiles,
   updateProgress,
-  progress
+  progress,
 }: Props): JSX.Element => {
   const fileAccepted = keyFiles.length > 0;
   const [invalidKeyFile, setInvalidKeyFile] = useState(false);
@@ -148,17 +149,17 @@ export const _UploadValidatorPage = ({
         {invalidKeyFile && (
           <ErrorText color="redMedium">
             There was an error processing your key file. Please follow the
-            instructions{" "}
-            <Instructions to={routesEnum.GenerateKeysPage}>here</Instructions>
+            instructions{' '}
+            <Instructions to={routesEnum.generateKeysPage}>here</Instructions>
             to generate your file.
           </ErrorText>
         )}
       </Paper>
       <div className="flex center p30">
-        <Link to={routesEnum.GenerateKeysPage}>
+        <Link to={routesEnum.generateKeysPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.ConnectWalletPage} onClick={handleSubmit}>
+        <Link to={routesEnum.connectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
@@ -173,13 +174,13 @@ export const _UploadValidatorPage = ({
 
 const mstp = ({ keyFiles, progress }: StoreState) => ({
   keyFiles,
-  progress
+  progress,
 });
 const mdtp = (dispatch: any) => ({
   updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files)),
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
-  }
+  },
 });
 
 export const UploadValidatorPage = connect(mstp, mdtp)(_UploadValidatorPage);

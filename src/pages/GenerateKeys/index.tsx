@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import styled from "styled-components";
-import { CheckBox, Heading, Text } from "grommet";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Paper, PaperGroup } from "../../components/Paper";
-import { OperatingSystemButtons } from "./OperatingSystemButtons";
-import { LinuxInstructions } from "./LinuxInstructions";
-import { MacInstructions } from "./MacInstructions";
-import { WindowsInstructions } from "./WindowsInstructions";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import { CheckBox, Heading, Text } from 'grommet';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { Paper, PaperGroup } from '../../components/Paper';
+import { OperatingSystemButtons } from './OperatingSystemButtons';
+import { LinuxInstructions } from './LinuxInstructions';
+import { MacInstructions } from './MacInstructions';
+import { WindowsInstructions } from './WindowsInstructions';
 import {
   ProgressStep,
   updateMnemonicAcknowledgement,
-  updateProgress
-} from "../../store/actions";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { StoreState } from "../../store/reducers";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { routesEnum } from "../../Routes";
-import { Link } from "../../components/Link";
+  updateProgress,
+} from '../../store/actions';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { StoreState } from '../../store/reducers';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { routesEnum } from '../../Routes';
+import { Link } from '../../components/Link';
 
 export enum operatingSystem {
-  "MAC",
-  "LINUX",
-  "WINDOWS"
+  'MAC',
+  'LINUX',
+  'WINDOWS',
 }
 
 const Highlight = styled.span`
@@ -41,7 +41,7 @@ const _GenerateKeysPage = ({
   updateProgress,
   progress,
   mnemonicAcknowledgementChecked,
-  updateMnemonicAcknowledgement
+  updateMnemonicAcknowledgement,
 }: {
   updateProgress: (progressStep: ProgressStep) => void;
   progress: ProgressStep;
@@ -109,13 +109,13 @@ const _GenerateKeysPage = ({
           3. Save the key files and get the validator file ready
         </Heading>
         <Text>
-          You should now be able to save the file{" "}
+          You should now be able to save the file{' '}
           <Highlight>signing-keystore-....json</Highlight> which contains your
           key pairs. Please make sure keep it safe, preferably offline.
         </Text>
         <InstructionImgContainer />
         <Text>
-          The second file you will export is{" "}
+          The second file you will export is{' '}
           <Highlight>deposit_data.json</Highlight> - you will need to upload in
           the next step.
         </Text>
@@ -129,10 +129,10 @@ const _GenerateKeysPage = ({
         />
       </Paper>
       <div className="flex center p30">
-        <Link to={routesEnum.ValidatorSettingsPage}>
+        <Link to={routesEnum.validatorSettingsPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.UploadValidatorPage} onClick={handleSubmit}>
+        <Link to={routesEnum.uploadValidatorPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
@@ -147,7 +147,7 @@ const _GenerateKeysPage = ({
 
 const mstp = ({ progress, mnemonicAcknowledgementChecked }: StoreState) => ({
   progress,
-  mnemonicAcknowledgementChecked
+  mnemonicAcknowledgementChecked,
 });
 
 const mdtp = (dispatch: any) => ({
@@ -156,7 +156,7 @@ const mdtp = (dispatch: any) => ({
   },
   updateMnemonicAcknowledgement: (checked: boolean): void => {
     dispatch(updateMnemonicAcknowledgement(checked));
-  }
+  },
 });
 
 export const GenerateKeysPage = connect(mstp, mdtp)(_GenerateKeysPage);

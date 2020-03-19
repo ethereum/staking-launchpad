@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
-import { withRouter } from "react-router-dom";
+import { useEffect, useRef } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const ScrollIntoView = ({
   children,
-  location
+  location,
 }: {
   children?: any;
   location?: any;

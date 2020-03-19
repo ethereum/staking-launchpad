@@ -1,7 +1,6 @@
-import React from "react";
-import { Paper } from "../../components/Paper";
-import { Heading, Text } from "grommet";
-import { CodeBox } from "../../components/CodeBox";
+import React from 'react';
+import { Paper } from '../../components/Paper';
+import { CodeBox } from '../../components/CodeBox';
 
 export const MacInstructions = () => (
   <div style={{ animation: `fadeIn 1s` }}>

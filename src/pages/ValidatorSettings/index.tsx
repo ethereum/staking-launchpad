@@ -1,28 +1,28 @@
-import React from "react";
-import { Heading, Text } from "grommet";
-import styled from "styled-components";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Paper } from "../../components/Paper";
-import { NumberInput } from "./NumberInput";
-import { CircleAlert } from "./CircleAlert";
-import { StoreState } from "../../store/reducers";
+import React from 'react';
+import { Heading, Text } from 'grommet';
+import styled from 'styled-components';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { Paper } from '../../components/Paper';
+import { NumberInput } from './NumberInput';
+import { CircleAlert } from './CircleAlert';
+import { StoreState } from '../../store/reducers';
 import {
   ProgressStep,
   updateProgress,
-  updateValidatorCount
-} from "../../store/actions";
-import { connect } from "react-redux";
-import { InfoBox } from "../../components/InfoBox";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { pricePerValidator } from "../../enums";
-import { routesEnum } from "../../Routes";
-import { Link } from "../../components/Link";
+  updateValidatorCount,
+} from '../../store/actions';
+import { connect } from 'react-redux';
+import { InfoBox } from '../../components/InfoBox';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { pricePerValidator } from '../../enums';
+import { routesEnum } from '../../Routes';
+import { Link } from '../../components/Link';
 
 const warnings: string[] = [
   `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,
-  "You will sign a separate transaction for each validator."
+  'You will sign a separate transaction for each validator.',
 ];
 
 const Container = styled.div`
@@ -41,7 +41,7 @@ const _ValidatorSettingsPage = ({
   validatorCount,
   updateValidatorCount,
   updateProgress,
-  progress
+  progress,
 }: Props): JSX.Element => {
   const handleSubmit = () => {
     if (progress === ProgressStep.VALIDATOR_SETTINGS) {
@@ -89,15 +89,15 @@ const _ValidatorSettingsPage = ({
         ))}
       </Paper>
       <div className="flex center p30">
-        <Link to={routesEnum.AcknowledgementPage}>
+        <Link to={routesEnum.acknowledgementPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.GenerateKeysPage} onClick={handleSubmit}>
+        <Link to={routesEnum.generateKeysPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
             disabled={validatorCount <= 0}
-            label={`GENERATE MY KEYPAIR${validatorCount > 1 ? "S" : ""}`}
+            label={`GENERATE MY KEYPAIR${validatorCount > 1 ? 'S' : ''}`}
           />
         </Link>
       </div>
@@ -107,7 +107,7 @@ const _ValidatorSettingsPage = ({
 
 const mstp = ({ validatorCount, progress }: StoreState) => ({
   validatorCount,
-  progress
+  progress,
 });
 const mdtp = (dispatch: any) => ({
   updateValidatorCount: (count: number): void => {
@@ -115,7 +115,7 @@ const mdtp = (dispatch: any) => ({
   },
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
-  }
+  },
 });
 
 export const ValidatorSettingsPage = connect(

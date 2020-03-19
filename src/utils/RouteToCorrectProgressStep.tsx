@@ -1,29 +1,29 @@
-import React from "react";
-import { Redirect } from "react-router-dom";
-import { ProgressStep } from "../store/actions";
-import { routesEnum } from "../Routes";
+import React from 'react';
+import { Redirect } from 'react-router-dom';
+import { ProgressStep } from '../store/actions';
+import { routesEnum } from '../Routes';
 
 export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.OVERVIEW) {
-    return <Redirect push to={routesEnum.AcknowledgementPage} />;
+    return <Redirect push to={routesEnum.acknowledgementPage} />;
   }
   if (step === ProgressStep.VALIDATOR_SETTINGS) {
-    return <Redirect push to={routesEnum.ValidatorSettingsPage} />;
+    return <Redirect push to={routesEnum.validatorSettingsPage} />;
   }
   if (step === ProgressStep.GENERATE_KEY_PAIRS) {
-    return <Redirect push to={routesEnum.GenerateKeysPage} />;
+    return <Redirect push to={routesEnum.generateKeysPage} />;
   }
   if (step === ProgressStep.UPLOAD_VALIDATOR_FILE) {
-    return <Redirect push to={routesEnum.UploadValidatorPage} />;
+    return <Redirect push to={routesEnum.uploadValidatorPage} />;
   }
   if (step === ProgressStep.CONNECT_WALLET) {
-    return <Redirect push to={routesEnum.ConnectWalletPage} />;
+    return <Redirect push to={routesEnum.connectWalletPage} />;
   }
   if (step === ProgressStep.SUMMARY) {
-    return <Redirect push to={routesEnum.SummaryPage} />;
+    return <Redirect push to={routesEnum.summaryPage} />;
   }
   if (step === ProgressStep.CONGRATULATIONS) {
-    return <Redirect push to={routesEnum.CongratulationsPage} />;
+    return <Redirect push to={routesEnum.congratulationsPage} />;
   }
-  return <Redirect push to={routesEnum.NotFoundPage} />;
+  return <Redirect push to={routesEnum.notFoundPage} />;
 };

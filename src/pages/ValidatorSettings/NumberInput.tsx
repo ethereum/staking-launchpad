@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { FormDown, FormUp } from "grommet-icons";
+import React from 'react';
+import styled from 'styled-components';
+import { FormDown, FormUp } from 'grommet-icons';
 
 const StyledButton = styled.button`
   height: 25px;
@@ -39,15 +39,15 @@ const StyledInput = styled.input`
 
 export const NumberInput = ({
   value,
-  setValue
+  setValue,
 }: {
   value: number;
   setValue: (e: any) => void;
 }): JSX.Element => {
   const handleManualInput = (e: any) => {
-    const val = e.target.value.replace(/\./g, ""); // remove "." to force integer input
+    const val = e.target.value.replace(/\./g, ''); // remove "." to force integer input
     if (e.target.validity.valid) setValue(val);
-    else if (val === "") setValue(val); // allow empty
+    else if (val === '') setValue(val); // allow empty
   };
 
   const decrement = () => {
@@ -65,7 +65,7 @@ export const NumberInput = ({
         pattern="^-?[0-9]\d*\.?\d*$"
       />
       <ButtonContainer>
-        <StyledButton onClick={increment} style={{ borderBottom: "none" }}>
+        <StyledButton onClick={increment} style={{ borderBottom: 'none' }}>
           <FormUp size="medium" />
         </StyledButton>
         <StyledButton className="plus" onClick={decrement}>

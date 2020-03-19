@@ -143,7 +143,7 @@ const _SummaryPage = ({
       // eslint-disable-next-line camelcase
       withdrawal_credentials,
       // eslint-disable-next-line camelcase
-      deposit_data_root,
+      signed_deposit_data_root,
     } = depositFile;
 
     try {
@@ -163,7 +163,7 @@ const _SummaryPage = ({
           prefix0X(pubkey),
           prefix0X(withdrawal_credentials),
           prefix0X(signature),
-          prefix0X(deposit_data_root)
+          prefix0X(signed_deposit_data_root)
         )
         .send(transactionParameters)
         // Event for when the user confirms the tx

@@ -158,7 +158,7 @@ export const _UploadValidatorPage = ({
         <Link to={routesEnum.GenerateKeysPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.UploadValidatorPage} onClick={handleSubmit}>
+        <Link to={routesEnum.ConnectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow

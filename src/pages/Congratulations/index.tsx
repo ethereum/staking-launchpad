@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { AppBar } from '../../components/AppBar';
 import styled from 'styled-components';
+import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { colors } from '../../styles/styledComponentsTheme';
 import { ProgressBar } from './ProgresBar';

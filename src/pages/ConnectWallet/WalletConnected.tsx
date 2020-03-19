@@ -71,7 +71,7 @@ const _WalletConnected = ({
             className="mr10"
             color="blueDark"
           />
-          <Link to={routesEnum.SummaryPage} onClick={handleSubmit}>
+          <Link to={routesEnum.summaryPage} onClick={handleSubmit}>
             <Button
               width={300}
               rainbow

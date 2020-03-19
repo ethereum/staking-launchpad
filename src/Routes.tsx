@@ -20,50 +20,50 @@ type RouteType = {
 };
 
 export enum routesEnum {
-  CongratulationsPage = '/congratulations',
-  ConnectWalletPage = '/connect-wallet',
-  GenerateKeysPage = '/generate-keys',
-  AcknowledgementPage = '/overview',
-  SummaryPage = '/summary',
-  UploadValidatorPage = '/upload-validator',
-  ValidatorSettingsPage = '/validator-settings',
-  LandingPage = '/',
-  NotFoundPage = '/*',
+  congratulationsPage = '/congratulations',
+  connectWalletPage = '/connect-wallet',
+  generateKeysPage = '/generate-keys',
+  acknowledgementPage = '/overview',
+  summaryPage = '/summary',
+  uploadValidatorPage = '/upload-validator',
+  validatorSettingsPage = '/validator-settings',
+  landingPage = '/',
+  notFoundPage = '/*',
 }
 const routes: RouteType[] = [
   {
-    path: routesEnum.CongratulationsPage,
+    path: routesEnum.congratulationsPage,
     exact: true,
     component: CongratulationsPage,
   },
   {
-    path: routesEnum.ConnectWalletPage,
+    path: routesEnum.connectWalletPage,
     exact: true,
     component: ConnectWalletPage,
   },
   {
-    path: routesEnum.GenerateKeysPage,
+    path: routesEnum.generateKeysPage,
     exact: true,
     component: GenerateKeysPage,
   },
   {
-    path: routesEnum.AcknowledgementPage,
+    path: routesEnum.acknowledgementPage,
     exact: true,
     component: AcknowledgementPage,
   },
-  { path: routesEnum.SummaryPage, exact: true, component: SummaryPage },
+  { path: routesEnum.summaryPage, exact: true, component: SummaryPage },
   {
-    path: routesEnum.UploadValidatorPage,
+    path: routesEnum.uploadValidatorPage,
     exact: true,
     component: UploadValidatorPage,
   },
   {
-    path: routesEnum.ValidatorSettingsPage,
+    path: routesEnum.validatorSettingsPage,
     exact: true,
     component: ValidatorSettingsPage,
   },
-  { path: routesEnum.LandingPage, exact: true, component: LandingPage },
-  { path: routesEnum.NotFoundPage, component: NotFoundPage },
+  { path: routesEnum.landingPage, exact: true, component: LandingPage },
+  { path: routesEnum.notFoundPage, component: NotFoundPage },
 ];
 
 const _Routes = () => {

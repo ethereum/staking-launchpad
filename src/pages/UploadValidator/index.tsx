@@ -149,16 +149,16 @@ export const _UploadValidatorPage = ({
           <ErrorText color="redMedium">
             There was an error processing your key file. Please follow the
             instructions{' '}
-            <Instructions to={routesEnum.GenerateKeysPage}>here</Instructions>
+            <Instructions to={routesEnum.generateKeysPage}>here</Instructions>
             to generate your file.
           </ErrorText>
         )}
       </Paper>
       <div className="flex center p30">
-        <Link to={routesEnum.GenerateKeysPage}>
+        <Link to={routesEnum.generateKeysPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.ConnectWalletPage} onClick={handleSubmit}>
+        <Link to={routesEnum.connectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow

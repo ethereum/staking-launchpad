@@ -129,10 +129,10 @@ const _GenerateKeysPage = ({
         />
       </Paper>
       <div className="flex center p30">
-        <Link to={routesEnum.ValidatorSettingsPage}>
+        <Link to={routesEnum.validatorSettingsPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.UploadValidatorPage} onClick={handleSubmit}>
+        <Link to={routesEnum.uploadValidatorPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow

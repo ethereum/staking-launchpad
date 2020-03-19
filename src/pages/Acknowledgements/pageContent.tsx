@@ -1,10 +1,10 @@
 import React from "react";
+import { FormNext } from "grommet-icons";
+import { Text } from "grommet";
 import { AcknowledgementSectionData } from "./AcknowledgementSection";
 import { acknowledgementId } from "../../store/reducers";
-import { Text } from "grommet";
 import { pricePerValidator } from "../../enums";
 import { Link } from "../../components/Link";
-import { FormNext } from "grommet-icons";
 
 export const pageContent: AcknowledgementSectionData[] = [
   {

@@ -44,8 +44,8 @@ interface LinkProps {
 }
 
 export const Link = (props: LinkProps) => {
-  const { children, className, to, primary } = props;
-  if (props.external) {
+  const { external, children, className, to, primary } = props;
+  if (external) {
     return (
       <StyledExternalLink className={className} href={to} primary={primary}>
         {children}

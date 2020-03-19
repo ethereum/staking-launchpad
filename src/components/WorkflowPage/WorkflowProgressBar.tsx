@@ -101,12 +101,12 @@ const Step = styled.div`
 
 const mapPathnameToProgressStep = (pathname: routesEnum) => {
   const routesInOrder = [
-    routesEnum.AcknowledgementPage,
-    routesEnum.ValidatorSettingsPage,
-    routesEnum.GenerateKeysPage,
-    routesEnum.UploadValidatorPage,
-    routesEnum.ConnectWalletPage,
-    routesEnum.SummaryPage,
+    routesEnum.acknowledgementPage,
+    routesEnum.validatorSettingsPage,
+    routesEnum.generateKeysPage,
+    routesEnum.uploadValidatorPage,
+    routesEnum.connectWalletPage,
+    routesEnum.summaryPage,
   ];
   return routesInOrder.indexOf(pathname);
 };

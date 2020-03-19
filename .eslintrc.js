@@ -25,6 +25,8 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'no-underscore-dangle': 'off',
     'react/jsx-props-no-spreading': 'warn',
+    'no-shadow': 'warn',
+    'react/destructuring-assignment': 'warn',
   },
   settings: {
     'import/resolver': {

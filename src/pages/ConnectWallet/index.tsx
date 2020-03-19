@@ -91,7 +91,7 @@ const _ConnectWalletPage = ({
         )}
       </ResponsiveContext.Consumer>
       <div className="flex center p30">
-        <Link to={routesEnum.UploadValidatorPage}>
+        <Link to={routesEnum.uploadValidatorPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
       </div>

@@ -47,16 +47,6 @@ const _AcknowledgementPage = ({
     }
   };
 
-  const handleCheckboxClick = (
-    id: acknowledgementId,
-    checked: boolean
-  ): void => {
-    updateAcknowledgementState(id, checked);
-    if (checked) {
-      scrollToNextAcknowledgement();
-    }
-  };
-
   const scrollToNextAcknowledgement = () => {
     if (!acknowledgementState.allAgreedTo) {
       const nextAcknowledgement = pageContent.find(
@@ -76,6 +66,16 @@ const _AcknowledgementPage = ({
         offset: -10,
         smooth: 'easeInOutQuart',
       });
+    }
+  };
+
+  const handleCheckboxClick = (
+    id: acknowledgementId,
+    checked: boolean
+  ): void => {
+    updateAcknowledgementState(id, checked);
+    if (checked) {
+      scrollToNextAcknowledgement();
     }
   };
 
@@ -122,7 +122,7 @@ const _AcknowledgementPage = ({
         />
       ))}
       <Box align="center" pad="large">
-        <Link to={routesEnum.ValidatorSettingsPage} onClick={handleSubmit}>
+        <Link to={routesEnum.validatorSettingsPage} onClick={handleSubmit}>
           <Button
             rainbow
             width={300}

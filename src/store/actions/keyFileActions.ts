@@ -8,6 +8,8 @@ export interface keyFile {
   signature: string;
   // eslint-disable-next-line camelcase
   deposit_data_root: string;
+  // eslint-disable-next-line camelcase
+  signed_deposit_data_root: string;
 }
 export interface UpdateKeyFilesAction {
   type: ActionTypes.updateKeyFiles;

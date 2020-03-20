@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
 
 interface LinkProps {
   primary?: boolean | undefined;
@@ -24,13 +24,13 @@ const styles = `
   };
  `;
 
-const StyledExternalLink = styled.a<Pick<LinkProps, "primary" | "theme">>`
+const StyledExternalLink = styled.a<Pick<LinkProps, 'primary' | 'theme'>>`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.blue.dark : "inherit")};
+  color: ${(props: any) => (props.primary ? props.theme.blue.dark : 'inherit')};
 `;
 const StyledLink = styled(RouterLink)`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.blue.dark : "inherit")};
+  color: ${(props: any) => (props.primary ? props.theme.blue.dark : 'inherit')};
 `;
 
 interface LinkProps {
@@ -40,11 +40,12 @@ interface LinkProps {
   external?: boolean;
   className?: string;
   primary?: boolean | undefined;
+  onClick?: (param?: any) => void;
 }
 
 export const Link = (props: LinkProps) => {
-  const { children, className, to, primary } = props;
-  if (props.external) {
+  const { external, children, className, to, primary } = props;
+  if (external) {
     return (
       <StyledExternalLink className={className} href={to} primary={primary}>
         {children}

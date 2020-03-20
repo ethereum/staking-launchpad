@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
-import { range } from "lodash";
+import { createGlobalStyle } from 'styled-components';
+import { range } from 'lodash';
 
-const shorthandSpacing = range(0, 150, 5  ).map(n => {
+const shorthandSpacing = range(0, 150, 5).map(n => {
   return `
   .m${n}{ margin: ${n}px; }
   .mt${n}{ margin-top: ${n}px; }

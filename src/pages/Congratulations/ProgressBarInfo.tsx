@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Text } from "../../components/Text";
-import { numberWithCommas } from "../../utils/numberWithCommas";
+import React from 'react';
+import styled from 'styled-components';
+import { Text } from '../../components/Text';
+import { numberWithCommas } from '../../utils/numberWithCommas';
 
 const ColorBox = styled.div`
   height: 20px;
@@ -15,7 +15,7 @@ export const ProgressBarInfo = ({
   title,
   color,
   amountEth,
-  amountValidators
+  amountValidators,
 }: {
   title: string;
   color: string;

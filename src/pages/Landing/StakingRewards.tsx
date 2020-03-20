@@ -1,20 +1,20 @@
-import React from "react";
-import styled from "styled-components";
-import "animate.css/animate.min.css";
-import ScrollAnimation from "react-animate-on-scroll";
-import ChartUrl from "../../static/StakingRewards.svg";
-import { Heading } from "../../components/Heading";
-import { Text } from "../../components/Text";
+import React from 'react';
+import styled from 'styled-components';
+import 'animate.css/animate.min.css';
+import ScrollAnimation from 'react-animate-on-scroll';
+import ChartUrl from '../../static/StakingRewards.svg';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 const Container = styled.div`
   background: ${p => p.theme.white};
-  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? "60px 0" : "150px 0")};
+  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? '60px 0' : '150px 0')};
 `;
 const APRChart = styled.img`
   margin: ${(p: { isMobile: boolean }) =>
-    p.isMobile ? "40px auto 0" : "100px auto 0"};
+    p.isMobile ? '40px auto 0' : '100px auto 0'};
   display: block;
-  width: ${(p: { isMobile: boolean }) => (p.isMobile ? "100%" : "66%")};
+  width: ${(p: { isMobile: boolean }) => (p.isMobile ? '100%' : '66%')};
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     width: 100%;
   }
@@ -27,7 +27,7 @@ const SubContainer = styled.div`
   padding: 0 120px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
     padding: ${(p: { isMobile: boolean }) =>
-      p.isMobile ? "0 20px" : "0 60px"};
+      p.isMobile ? '0 20px' : '0 60px'};
   }
 `;
 
@@ -43,7 +43,9 @@ export const StakingRewards = (): JSX.Element => {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
-            Validators get rewarded for proposing and attesting to and blocks. The rewards are tired to the overall amount of ETH staked in the network.
+            Validators get rewarded for proposing and attesting to and blocks.
+            The rewards are tired to the overall amount of ETH staked in the
+            network.
           </Text>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>

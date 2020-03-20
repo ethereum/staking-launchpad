@@ -1,18 +1,18 @@
-import React from "react";
-import { Box, Heading, Text } from "grommet";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
-import EthDiamond from "../static/eth-diamond-plain.svg";
-import { web3ReactInterface } from "../pages/ConnectWallet";
-import { trimString } from "../utils/trimString";
+import React from 'react';
+import styled from 'styled-components';
+import { Box, Heading, Text } from 'grommet';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import EthDiamond from '../static/eth-diamond-plain.svg';
+import { web3ReactInterface } from '../pages/ConnectWallet';
+import { trimString } from '../utils/trimString';
 import {
   AllowedNetworks,
-  NetworkChainId
-} from "../pages/ConnectWallet/web3Utils";
-import { Dot } from "./Dot";
-import { Link } from "./Link";
-import { routesEnum } from "../Routes";
-import styled from "styled-components";
+  NetworkChainId,
+} from '../pages/ConnectWallet/web3Utils';
+import { Dot } from './Dot';
+import { Link } from './Link';
+import { routesEnum } from '../Routes';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -28,7 +28,7 @@ export const AppBar = () => {
   const {
     active: walletConnected,
     account,
-    chainId
+    chainId,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
   let network;
@@ -45,14 +45,14 @@ export const AppBar = () => {
       direction="row"
       align="center"
       justify="between"
-      pad={{ left: "medium", right: "small", vertical: "small" }}
+      pad={{ left: 'medium', right: 'small', vertical: 'small' }}
       elevation="medium"
       style={{ zIndex: 1 }}
     >
       <div className="ml50 flex">
-        <Link to={routesEnum.LandingPage}>
+        <Link to={routesEnum.landingPage}>
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <Heading level={4} margin="none" style={{ padding: "8px 0" }}>
+          <Heading level={4} margin="none" style={{ padding: '8px 0' }}>
             ETH 2 deposit ceremony
           </Heading>
         </Link>

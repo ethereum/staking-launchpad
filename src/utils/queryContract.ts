@@ -1,5 +1,5 @@
-import axios from "axios";
-import { contractAddress } from "../enums";
+import axios from 'axios';
+import { contractAddress } from '../enums';
 
 type infuraResponse = {
   data: {
@@ -10,7 +10,7 @@ type infuraResponse = {
 };
 
 if (!process.env.REACT_APP_INFURA_PROJECT_ID) {
-  throw new TypeError("Missing INFURA_PROJECT_ID");
+  throw new TypeError('Missing INFURA_PROJECT_ID');
 }
 
 export const queryContract = async (): Promise<number> => {
@@ -20,10 +20,10 @@ export const queryContract = async (): Promise<number> => {
     const response: infuraResponse = await axios.post(
       infuraUrl,
       {
-        jsonrpc: "2.0",
-        method: "eth_getBalance",
-        params: [contractAddress, "latest"],
-        id: 1
+        jsonrpc: '2.0',
+        method: 'eth_getBalance',
+        params: [contractAddress, 'latest'],
+        id: 1,
       }
       // TODO figure out how to authenticate with the infura secret key. will require CORS pre-flight workaround
       // {
@@ -36,7 +36,8 @@ export const queryContract = async (): Promise<number> => {
     const hex: string = response.data.result;
     let ethBalance;
     ethBalance = parseInt(hex, 16);
-    ethBalance = ethBalance * Math.pow(10, -18);
+    // eslint-disable-next-line no-restricted-properties
+    ethBalance *= Math.pow(10, -18);
     ethBalance = +ethBalance.toFixed(1);
     return ethBalance;
   } catch (error) {

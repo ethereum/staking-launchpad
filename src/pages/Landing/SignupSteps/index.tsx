@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import ScrollAnimation from "react-animate-on-scroll";
-import DepositImgUrl from "../../../static/deposit-eth-step.svg";
-import GenerateKeyImgUrl from "../../../static/generate-key-step.svg";
-import ResponsibilityImgUrl from "../../../static/responsibility-step.svg";
-import { Button } from "../../../components/Button";
-import { Heading } from "../../../components/Heading";
-import { routesEnum } from "../../../Routes";
-import { Link } from "../../../components/Link";
-import { Step } from "./Step";
-import { pricePerValidator } from "../../../enums";
+import React from 'react';
+import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import DepositImgUrl from '../../../static/deposit-eth-step.svg';
+import GenerateKeyImgUrl from '../../../static/generate-key-step.svg';
+import ResponsibilityImgUrl from '../../../static/responsibility-step.svg';
+import { Button } from '../../../components/Button';
+import { Heading } from '../../../components/Heading';
+import { routesEnum } from '../../../Routes';
+import { Link } from '../../../components/Link';
+import { Step } from './Step';
+import { pricePerValidator } from '../../../enums';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -64,7 +64,7 @@ export const SignupSteps = (): JSX.Element => {
         </ScrollAnimation>
       </StepsContainer>
       <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
-        <Link to={routesEnum.AcknowledgementPage} className="pt100">
+        <Link to={routesEnum.acknowledgementPage} className="pt100">
           <Button
             rainbow
             className="m-auto"

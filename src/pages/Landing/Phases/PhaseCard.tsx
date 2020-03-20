@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Heading } from "../../../components/Heading";
-import { Text } from "../../../components/Text";
-import { Link } from "../../../components/Link";
+import React from 'react';
+import styled from 'styled-components';
+import { Heading } from '../../../components/Heading';
+import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
 
 const Container = styled.div`
   background-color: ${p => p.theme.purple.medium};
@@ -16,7 +16,7 @@ export const PhaseCard = ({
   title,
   subTitle,
   link,
-  linkUrl
+  linkUrl,
 }: {
   title: string;
   subTitle: string;

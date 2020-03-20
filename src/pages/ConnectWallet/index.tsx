@@ -1,24 +1,26 @@
-import React from "react";
-import { Grid, ResponsiveContext } from "grommet";
-import { AbstractConnector as AbstractConnectorInterface } from "@web3-react/abstract-connector";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
-import { WalletConnected } from "./WalletConnected";
+import React from 'react';
+import { Grid, ResponsiveContext } from 'grommet';
+import { connect } from 'react-redux';
+import { AbstractConnector as AbstractConnectorInterface } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { WalletConnected } from './WalletConnected';
 import {
-  fortmatic,
   metamask,
   portis,
   useMetamaskEagerConnect,
-  useMetamaskListener
-} from "./web3Utils";
-import { WalletButton } from "./WalletButton";
-
-import { StoreState } from "../../store/reducers";
-import { ProgressStep } from "../../store/actions";
-import { connect } from "react-redux";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
+  useMetamaskListener,
+  fortmatic,
+} from './web3Utils';
+import { WalletButton } from './WalletButton';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { StoreState } from '../../store/reducers';
+import { ProgressStep } from '../../store/actions';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { Button } from '../../components/Button';
+import { routesEnum } from '../../Routes';
+import { Link } from '../../components/Link';
 
 export interface web3ReactInterface {
   activate: (
@@ -37,7 +39,7 @@ export interface web3ReactInterface {
 }
 
 const _ConnectWalletPage = ({
-  progress
+  progress,
 }: {
   progress: ProgressStep;
 }): JSX.Element => {
@@ -45,12 +47,12 @@ const _ConnectWalletPage = ({
   const {
     active: walletConnected,
     connector: walletProvider,
-    error
+    error,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  if (progress !== ProgressStep.CONNECT_WALLET) {
+  if (progress < ProgressStep.CONNECT_WALLET) {
     return routeToCorrectProgressStep(progress);
   }
 
@@ -91,12 +93,17 @@ const _ConnectWalletPage = ({
           </Grid>
         )}
       </ResponsiveContext.Consumer>
+      <div className="flex center p30">
+        <Link to={routesEnum.uploadValidatorPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
+      </div>
     </WorkflowPageTemplate>
   );
 };
 
 const mstp = ({ progress }: StoreState) => ({
-  progress
+  progress,
 });
 
 export const ConnectWalletPage = connect(mstp)(_ConnectWalletPage);

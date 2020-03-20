@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
   border: 1px solid #ddd;
@@ -23,7 +23,7 @@ const Code = styled.pre`
 
 export const CodeBox = ({
   snippet,
-  className
+  className,
 }: {
   snippet: string;
   className?: string;
@@ -36,7 +36,7 @@ export const CodeBox = ({
   return (
     <Container className={className}>
       <Code>{snippet}</Code>
-      <CopyBtn onClick={copySnippet}>{copied ? "Copied" : "Copy"}</CopyBtn>
+      <CopyBtn onClick={copySnippet}>{copied ? 'Copied' : 'Copy'}</CopyBtn>
     </Container>
   );
 };

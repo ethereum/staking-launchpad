@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Heading } from "../../../components/Heading";
-import { Text } from "../../../components/Text";
+import React from 'react';
+import styled from 'styled-components';
+import { Heading } from '../../../components/Heading';
+import { Text } from '../../../components/Text';
 
 const Container = styled.div`
   max-width: 340px;
@@ -14,7 +14,7 @@ const Img = styled.img`
 export const Step = ({
   imgUrl,
   title,
-  content
+  content,
 }: {
   imgUrl: any;
   title: string;

@@ -1,26 +1,28 @@
-import React from "react";
-import { Box, Heading, Text } from "grommet";
-import styled from "styled-components";
-import { WorkflowPageTemplate } from "../../components/WorkflowPage/WorkflowPageTemplate";
-import { Paper } from "../../components/Paper";
-import { NumberInput } from "./NumberInput";
-import { CircleAlert } from "./CircleAlert";
-import { StoreState } from "../../store/reducers";
+import React from 'react';
+import { Heading, Text } from 'grommet';
+import styled from 'styled-components';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { Paper } from '../../components/Paper';
+import { NumberInput } from './NumberInput';
+import { CircleAlert } from './CircleAlert';
+import { StoreState } from '../../store/reducers';
 import {
   ProgressStep,
   updateProgress,
-  updateValidatorCount
-} from "../../store/actions";
-import { connect } from "react-redux";
-import { InfoBox } from "../../components/InfoBox";
-import { routeToCorrectProgressStep } from "../../utils/RouteToCorrectProgressStep";
-import { Button } from "../../components/Button";
-import { rainbowMutedColors } from "../../styles/styledComponentsTheme";
-import { pricePerValidator } from "../../enums";
+  updateValidatorCount,
+} from '../../store/actions';
+import { connect } from 'react-redux';
+import { InfoBox } from '../../components/InfoBox';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { Button } from '../../components/Button';
+import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { pricePerValidator } from '../../enums';
+import { routesEnum } from '../../Routes';
+import { Link } from '../../components/Link';
 
 const warnings: string[] = [
   `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,
-  "You will sign a separate transaction for each validator."
+  'You will sign a separate transaction for each validator.',
 ];
 
 const Container = styled.div`
@@ -31,7 +33,7 @@ const Container = styled.div`
 interface Props {
   updateValidatorCount(count: number): void;
   validatorCount: number;
-  updateProgress: () => void;
+  updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
 }
 
@@ -39,15 +41,15 @@ const _ValidatorSettingsPage = ({
   validatorCount,
   updateValidatorCount,
   updateProgress,
-  progress
+  progress,
 }: Props): JSX.Element => {
   const handleSubmit = () => {
-    if (validatorCount > 0) {
-      updateProgress();
+    if (progress === ProgressStep.VALIDATOR_SETTINGS) {
+      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
-  if (progress !== ProgressStep.VALIDATOR_SETTINGS) {
+  if (progress < ProgressStep.VALIDATOR_SETTINGS) {
     return routeToCorrectProgressStep(progress);
   }
 
@@ -86,30 +88,34 @@ const _ValidatorSettingsPage = ({
           </div>
         ))}
       </Paper>
-      <Box align="center" pad="large">
-        <Button
-          width={300}
-          rainbow
-          disabled={validatorCount <= 0}
-          label={`GENERATE MY KEYPAIR${validatorCount > 1 ? "S" : ""}`}
-          onClick={handleSubmit}
-        />
-      </Box>
+      <div className="flex center p30">
+        <Link to={routesEnum.acknowledgementPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
+        <Link to={routesEnum.generateKeysPage} onClick={handleSubmit}>
+          <Button
+            width={300}
+            rainbow
+            disabled={validatorCount <= 0}
+            label={`GENERATE MY KEYPAIR${validatorCount > 1 ? 'S' : ''}`}
+          />
+        </Link>
+      </div>
     </WorkflowPageTemplate>
   );
 };
 
 const mstp = ({ validatorCount, progress }: StoreState) => ({
   validatorCount,
-  progress
+  progress,
 });
 const mdtp = (dispatch: any) => ({
   updateValidatorCount: (count: number): void => {
     dispatch(updateValidatorCount(count));
   },
-  updateProgress: (): void => {
-    dispatch(updateProgress(ProgressStep.GENERATE_KEY_PAIRS));
-  }
+  updateProgress: (step: ProgressStep): void => {
+    dispatch(updateProgress(step));
+  },
 });
 
 export const ValidatorSettingsPage = connect(

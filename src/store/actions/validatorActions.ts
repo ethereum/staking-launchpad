@@ -1,5 +1,5 @@
 // VALIDATOR ACTIONS
-import { ActionTypes } from "./index";
+import { ActionTypes } from './index';
 
 export interface UpdateValidatorCountAction {
   type: ActionTypes.updateValidatorCount;
@@ -10,6 +10,6 @@ export const updateValidatorCount = (
 ): UpdateValidatorCountAction => {
   return {
     type: ActionTypes.updateValidatorCount,
-    payload: count
+    payload: count,
   };
 };

@@ -7,6 +7,7 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import {
   AcknowledgementSection,
   AcknowledgementSectionData,
+  ShadowOverlay,
 } from './AcknowledgementSection';
 import { Link } from '../../components/Link';
 import {
@@ -24,6 +25,7 @@ import { Button } from '../../components/Button';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
+import _every from 'lodash/every';
 
 interface Props {
   updateAcknowledgementState(
@@ -60,7 +62,7 @@ const _AcknowledgementPage = ({
         );
       }
 
-      scroller.scrollTo(nextAcknowledgement.id, {
+      scroller.scrollTo(nextAcknowledgement.id.toString(), {
         duration: 800,
         delay: 0,
         offset: -10,
@@ -79,31 +81,58 @@ const _AcknowledgementPage = ({
     }
   };
 
+  const calculateActiveState = (currentBoxId: acknowledgementId): boolean => {
+    const checked = acknowledgementState.acknowledgements;
+
+    const checkboxesInOrder = [
+      acknowledgementId.signup,
+      acknowledgementId.responsibilities,
+      acknowledgementId.slashing,
+      acknowledgementId.keyManagement,
+      acknowledgementId.signingKeys,
+      acknowledgementId.transferDelay,
+      acknowledgementId.commitment,
+      acknowledgementId.earlyAdoptionRisks,
+    ];
+
+    const allPreviousChecked = _every(
+      checkboxesInOrder.slice(0, currentBoxId).map(id => checked[id])
+    );
+    return !checked[currentBoxId] && allPreviousChecked;
+  };
+
   const renderIntroSection = () => {
     return (
-      <Paper>
-        <Heading level={3} size="small" color="blueDark">
-          Introducing eth2 phase 0
-        </Heading>
+      <div className="relative">
+        <ShadowOverlay
+          active={
+            !acknowledgementState.acknowledgements[acknowledgementId.signup]
+          }
+        />
+        <Paper>
+          <Heading level={3} size="small" color="blueDark">
+            Introducing eth2 phase 0
+          </Heading>
 
-        <Text size="large" className="my10">
-          Ethereum 2.0 uses proof-of-stake to secure its network.
-        </Text>
-        <Text size="large" className="my10">
-          For this, we need active participants - known as validators - to
-          propose, verify, and vouch for the validity of blocks. In exchange,
-          honest validators receive financial rewards
-        </Text>
-        <Text size="large" className="my10">
-          Importantly, validators need to post ETH as collateral - in other
-          words, have some funds at stake. The only way to become a validator is
-          to make a one-way ETH transaction to a deposit contract on Ethereum
-          1.0
-        </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="blueDark" />
-        </Link>
-      </Paper>
+          <Text size="large" className="my10">
+            Ethereum 2.0 uses proof-of-stake to secure its network.
+          </Text>
+          <Text size="large" className="my10">
+            For this, we need active participants - known as validators - to
+            propose, verify, and vouch for the validity of blocks. In exchange,
+            honest validators receive financial rewards
+          </Text>
+          <Text size="large" className="my10">
+            Importantly, validators need to post ETH as collateral - in other
+            words, have some funds at stake. The only way to become a validator
+            is to make a one-way ETH transaction to a deposit contract on
+            Ethereum 1.0
+          </Text>
+          <Link external to="https://www.google.com" className="my10" primary>
+            Learn More <FormNext color="blueDark" />
+          </Link>
+        </Paper>
+      </div>
     );
   };
 
@@ -115,6 +144,7 @@ const _AcknowledgementPage = ({
       {renderIntroSection()}
       {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
         <AcknowledgementSection
+          active={calculateActiveState(acknowledgement.id)}
           key={acknowledgement.id}
           handleCheckboxClick={handleCheckboxClick}
           agreedTo={acknowledgementState.acknowledgements[acknowledgement.id]}

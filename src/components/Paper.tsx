@@ -38,14 +38,14 @@ const BoxGroup = styled(Box)`
     border-radius: 0;
     border-top: none;
     border-bottom: none;
-  }
+  };
 `;
 
 export const PaperGroup = (
   props: {
     children: React.ReactNode;
     className?: string;
-    id?: string;
+    id?: string | number;
   } & BoxProps
 ): JSX.Element => {
   const { children } = props;

@@ -2,14 +2,14 @@ import { every, values } from 'lodash';
 import { Action, ActionTypes } from '../actions';
 
 export enum acknowledgementId {
-  signup, // = "signup",
-  responsibilities, // = "responsibilities",
-  slashing, // = "slashing",
-  keyManagement, // = "keyManagement",
-  signingKeys, // = "signingKeys",
-  transferDelay, // = "transferDelay",
-  commitment, // = "commitment",
-  earlyAdoptionRisks, // = "earlyAdoptionRisks"
+  signup,
+  responsibilities,
+  slashing,
+  keyManagement,
+  signingKeys,
+  transferDelay,
+  commitment,
+  earlyAdoptionRisks,
 }
 
 export interface acknowledgementState {

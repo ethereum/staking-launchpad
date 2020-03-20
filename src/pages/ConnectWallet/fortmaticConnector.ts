@@ -41,10 +41,10 @@ export class FortmaticConnector extends AbstractConnector {
       const { default: Fortmatic } = await import("fortmatic");
       this.fortmatic = new Fortmatic(this.apiKey, {
         rpcUrl: this.rpcUrl,
-        chainId:
-          this.chainId === 1 || this.chainId === 4
-            ? undefined
-            : chainIdToNetwork[this.chainId]
+        chainId: 5
+          // this.chainId === 1 || this.chainId === 4
+          //   ? undefined
+          //   : chainIdToNetwork[this.chainId]
       });
     }
 

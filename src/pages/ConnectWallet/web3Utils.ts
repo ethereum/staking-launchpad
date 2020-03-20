@@ -53,7 +53,8 @@ export const portis: PortisConnector = new PortisConnector({
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: process.env.REACT_APP_FORTMATIC_KEY as string,
   // chainId: NetworkChainId["Rinkeby Testnet"]
-  chainId: NetworkChainId["Göerli Testnet"]
+  chainId: NetworkChainId["Göerli Testnet"],
+  rpcUrl: process.env.REACT_APP_RPC_URL_GOERLI as string
 });
 
 export function getErrorMessage(error: Error): string {

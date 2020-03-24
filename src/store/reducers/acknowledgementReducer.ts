@@ -1,51 +1,44 @@
-import { Action, ActionTypes } from "../actions";
-import { every, values } from "lodash";
+import { Action, ActionTypes } from '../actions';
 
-export enum acknowledgementId {
-  signup = "signup",
-  responsibilities = "responsibilities",
-  slashing = "slashing",
-  keyManagement = "keyManagement",
-  signingKeys = "signingKeys",
-  transferDelay = "transferDelay",
-  commitment = "commitment",
-  earlyAdoptionRisks = "earlyAdoptionRisks"
+// TODO this code can probably be cleaned up using some fancy typescript syntax
+export enum AcknowledgementIdsEnum {
+  introSection,
+  signup,
+  responsibilities,
+  slashing,
+  keyManagement,
+  signingKeys,
+  transferDelay,
+  commitment,
+  earlyAdoptionRisks,
+  confirmation,
 }
 
-export interface acknowledgementState {
-  acknowledgements: {
-    [key in acknowledgementId]: boolean;
-  };
-  allAgreedTo: boolean;
-}
+export type AcknowledgementStateInterface = {
+  [key in AcknowledgementIdsEnum]: boolean;
+};
 
-const defaultAcknowledgementState: acknowledgementState = {
-  acknowledgements: {
-    [acknowledgementId.signup]: false,
-    [acknowledgementId.responsibilities]: false,
-    [acknowledgementId.slashing]: false,
-    [acknowledgementId.keyManagement]: false,
-    [acknowledgementId.signingKeys]: false,
-    [acknowledgementId.transferDelay]: false,
-    [acknowledgementId.commitment]: false,
-    [acknowledgementId.earlyAdoptionRisks]: false
-  },
-  allAgreedTo: false
+const defaultAcknowledgementState: AcknowledgementStateInterface = {
+  0: false,
+  1: false,
+  2: false,
+  3: false,
+  4: false,
+  5: false,
+  6: false,
+  7: false,
+  8: false,
+  9: false,
 };
 
 export const acknowledgementReducer = (
   state = defaultAcknowledgementState,
   action: Action
-): acknowledgementState => {
+): AcknowledgementStateInterface => {
   if (action.type === ActionTypes.updateAcknowledgementState) {
-    const newAcknowledgementState = {
-      ...state.acknowledgements,
-      ...{ [action.payload.acknowledgementId]: action.payload.value }
-    };
-    
     return {
-      acknowledgements: newAcknowledgementState,
-      allAgreedTo: every(values(newAcknowledgementState))
+      ...state,
+      ...{ [action.payload.acknowledgementId]: action.payload.value },
     };
   }
   return state;

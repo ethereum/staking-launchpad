@@ -1,49 +1,64 @@
 import React from 'react';
+import { Box } from 'grommet';
 import { Paper, PaperGroup } from '../../components/Paper';
-import { CheckBox, Heading } from 'grommet';
-import { acknowledgementId } from '../../store/reducers';
+import { AcknowledgementIdsEnum } from '../../store/reducers';
+import { Button } from '../../components/Button';
+import { Text } from '../../components/Text';
+import { Heading } from '../../components/Heading';
 
 export interface AcknowledgementSectionData {
-  id: acknowledgementId;
   title: string;
   content: JSX.Element;
   acknowledgement: {
-    id: acknowledgementId;
-    text: string;
+    id: AcknowledgementIdsEnum;
+    text?: string;
   };
 }
-export interface AcknowledgementSectionProps {
-  handleCheckboxClick(id: acknowledgementId, checked: boolean): void;
-  agreedTo: boolean;
+
+interface AcknowledgementSectionProps {
+  handleContinueClick(id: AcknowledgementIdsEnum): void;
+  handleGoBackClick(id: AcknowledgementIdsEnum): void;
 }
 
 export const AcknowledgementSection = ({
   title,
   content,
   acknowledgement,
-  handleCheckboxClick,
-  agreedTo,
+  handleContinueClick,
+  handleGoBackClick,
 }: AcknowledgementSectionProps & AcknowledgementSectionData): JSX.Element => {
-  const onCheckboxClick = (event: any) =>
-    handleCheckboxClick(acknowledgement.id, event.target.checked);
-
+  const isIntroSection =
+    acknowledgement.id === AcknowledgementIdsEnum.introSection;
   return (
-    <PaperGroup className="my10" id={acknowledgement.id}>
+    <PaperGroup>
       <Paper>
         <Heading level={3} size="small" color="blueDark">
           {title}
         </Heading>
         {content}
       </Paper>
-      {acknowledgement && (
-        <Paper className="rm-double-border">
-          <CheckBox
-            onChange={onCheckboxClick}
-            checked={agreedTo}
-            label={acknowledgement.text}
+      <Paper className="rm-double-border">
+        <Text>{acknowledgement.text}</Text>
+        <Box
+          align="center"
+          pad="xsmall"
+          className="flex flex-row space-evenly mt20"
+        >
+          {!isIntroSection && (
+            <Button
+              onClick={() => handleGoBackClick(acknowledgement.id)}
+              width={300}
+              label="Back"
+            />
+          )}
+          <Button
+            onClick={() => handleContinueClick(acknowledgement.id)}
+            rainbow
+            width={300}
+            label={isIntroSection ? 'Continue' : 'I Accept'}
           />
-        </Paper>
-      )}
+        </Box>
+      </Paper>
     </PaperGroup>
   );
 };

@@ -1,17 +1,12 @@
-import React from 'react';
-import { Box, Heading, Text } from 'grommet';
-import { FormNext } from 'grommet-icons';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { scroller } from 'react-scroll';
+import _every from 'lodash/every';
+import _pickBy from 'lodash/pickBy';
+import _values from 'lodash/values';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import {
-  AcknowledgementSection,
-  AcknowledgementSectionData,
-} from './AcknowledgementSection';
-import { Link } from '../../components/Link';
-import {
-  acknowledgementId,
-  acknowledgementState,
+  AcknowledgementIdsEnum,
+  AcknowledgementStateInterface,
   StoreState,
 } from '../../store/reducers';
 import {
@@ -19,18 +14,16 @@ import {
   updateAcknowledgementState,
   updateProgress,
 } from '../../store/actions';
-import { Paper } from '../../components/Paper';
-import { Button } from '../../components/Button';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { pageContent } from './pageContent';
-import { routesEnum } from '../../Routes';
+import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
 
-interface Props {
+interface AcknowledgementPageProps {
   updateAcknowledgementState(
-    acknowledgementId: acknowledgementId,
-    value: boolean
+    acknowledgementId: AcknowledgementIdsEnum,
+    valuesEnum: boolean
   ): void;
-  acknowledgementState: acknowledgementState;
+  acknowledgementState: AcknowledgementStateInterface;
   updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
 }
@@ -40,70 +33,55 @@ const _AcknowledgementPage = ({
   acknowledgementState,
   updateAcknowledgementState,
   progress,
-}: Props) => {
+}: AcknowledgementPageProps) => {
+  const [activeAcknowledgement, setActiveAcknowledgement] = useState<
+    AcknowledgementIdsEnum
+  >(
+    progress === ProgressStep.OVERVIEW
+      ? AcknowledgementIdsEnum.introSection
+      : AcknowledgementIdsEnum.confirmation
+  );
+
+  const allAgreedTo = _every(
+    _values(
+      _pickBy(
+        acknowledgementState,
+        // @ts-ignore
+        (val: boolean, id: AcknowledgementIdsEnum) => {
+          // eslint-disable-next-line eqeqeq
+          return id != AcknowledgementIdsEnum.confirmation;
+        }
+      )
+    )
+  );
+
   const handleSubmit = () => {
     if (progress === ProgressStep.OVERVIEW) {
       updateProgress(ProgressStep.VALIDATOR_SETTINGS);
     }
   };
 
-  const scrollToNextAcknowledgement = () => {
-    if (!acknowledgementState.allAgreedTo) {
-      const nextAcknowledgement = pageContent.find(
-        (section: AcknowledgementSectionData) =>
-          !acknowledgementState.acknowledgements[section.id]
-      );
-
-      if (nextAcknowledgement === undefined) {
-        throw new TypeError(
-          'Redux and local acknowledgement state are out of sync'
-        );
-      }
-
-      scroller.scrollTo(nextAcknowledgement.id, {
-        duration: 800,
-        delay: 0,
-        offset: -10,
-        smooth: 'easeInOutQuart',
-      });
+  const handleContinueClick = (id: AcknowledgementIdsEnum) => {
+    updateAcknowledgementState(id, true);
+    if (id + 1 in AcknowledgementIdsEnum) {
+      setActiveAcknowledgement(id + 1);
+    }
+  };
+  const handleGoBackClick = (id: AcknowledgementIdsEnum) => {
+    if (id - 1 in AcknowledgementIdsEnum) {
+      setActiveAcknowledgement(id - 1);
     }
   };
 
-  const handleCheckboxClick = (
-    id: acknowledgementId,
-    checked: boolean
-  ): void => {
-    updateAcknowledgementState(id, checked);
-    if (checked) {
-      scrollToNextAcknowledgement();
-    }
-  };
-
-  const renderIntroSection = () => {
+  const renderAcknowledgement = () => {
+    const Acknowledgement = pageContent[activeAcknowledgement];
     return (
-      <Paper>
-        <Heading level={3} size="small" color="blueDark">
-          Introducing eth2 phase 0
-        </Heading>
-
-        <Text size="large" className="my10">
-          Ethereum 2.0 uses proof-of-stake to secure its network.
-        </Text>
-        <Text size="large" className="my10">
-          For this, we need active participants - known as validators - to
-          propose, verify, and vouch for the validity of blocks. In exchange,
-          honest validators receive financial rewards
-        </Text>
-        <Text size="large" className="my10">
-          Importantly, validators need to post ETH as collateral - in other
-          words, have some funds at stake. The only way to become a validator is
-          to make a one-way ETH transaction to a deposit contract on Ethereum
-          1.0
-        </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="blueDark" />
-        </Link>
-      </Paper>
+      <Acknowledgement
+        handleContinueClick={handleContinueClick}
+        handleGoBackClick={handleGoBackClick}
+        handleSubmit={handleSubmit}
+        allAgreedTo={allAgreedTo}
+      />
     );
   };
 
@@ -112,25 +90,13 @@ const _AcknowledgementPage = ({
       title="Overview"
       backgroundColor={rainbowMutedColors[0]}
     >
-      {renderIntroSection()}
-      {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
-        <AcknowledgementSection
-          key={acknowledgement.id}
-          handleCheckboxClick={handleCheckboxClick}
-          agreedTo={acknowledgementState.acknowledgements[acknowledgement.id]}
-          {...acknowledgement}
+      <div className="flex">
+        {renderAcknowledgement()}
+        <AcknowledgementProgressTracker
+          activeAcknowledgement={activeAcknowledgement}
+          setActiveAcknowledgement={setActiveAcknowledgement}
         />
-      ))}
-      <Box align="center" pad="large">
-        <Link to={routesEnum.validatorSettingsPage} onClick={handleSubmit}>
-          <Button
-            rainbow
-            width={300}
-            disabled={!acknowledgementState.allAgreedTo}
-            label="Continue"
-          />
-        </Link>
-      </Box>
+      </div>
     </WorkflowPageTemplate>
   );
 };
@@ -141,7 +107,7 @@ const mstp = ({ progress, acknowledgementState }: StoreState) => ({
 });
 const mdtp = (dispatch: any) => ({
   updateAcknowledgementState: (
-    acknowledgementId: acknowledgementId,
+    acknowledgementId: AcknowledgementIdsEnum,
     value: boolean
   ): void => dispatch(updateAcknowledgementState(acknowledgementId, value)),
   updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step)),

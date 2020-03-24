@@ -1,5 +1,4 @@
 import React from 'react';
-import { Heading, Text } from 'grommet';
 import styled from 'styled-components';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
@@ -19,6 +18,8 @@ import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { pricePerValidator } from '../../enums';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 const warnings: string[] = [
   `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Heading, Text } from 'grommet';
+import { Box } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
@@ -13,6 +13,8 @@ import {
 import { Dot } from './Dot';
 import { Link } from './Link';
 import { routesEnum } from '../Routes';
+import { Text } from './Text';
+import { Heading } from './Heading';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};

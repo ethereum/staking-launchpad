@@ -1,9 +1,11 @@
 import React from 'react';
-import { Button, Heading, Text } from 'grommet';
+import { Button } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { getErrorMessage } from './web3Utils';
 import { Paper } from '../../components/Paper';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 export const WalletButton = ({
   title,

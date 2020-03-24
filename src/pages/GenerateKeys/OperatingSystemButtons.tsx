@@ -1,7 +1,7 @@
 import React from 'react';
-import { Heading } from 'grommet';
-import { operatingSystem } from './index';
 import styled from 'styled-components';
+import { Heading } from '../../components/Heading';
+import { operatingSystem } from './index';
 import MacLogo from '../../static/apple.svg';
 import LinuxLogo from '../../static/linux.svg';
 import WindowsLogo from '../../static/windows.svg';

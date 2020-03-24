@@ -1,8 +1,9 @@
 import React from 'react';
-import { Paper } from '../../components/Paper';
-import { Heading, Text } from 'grommet';
-import { CodeBox } from '../../components/CodeBox';
 import { connect } from 'react-redux';
+import { Paper } from '../../components/Paper';
+import { CodeBox } from '../../components/CodeBox';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 export const _LinuxInstructions = ({
   validatorCount,

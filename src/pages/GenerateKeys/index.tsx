@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { CheckBox, Heading, Text } from 'grommet';
+import { CheckBox } from 'grommet';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper, PaperGroup } from '../../components/Paper';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
@@ -19,6 +19,8 @@ import { Button } from '../../components/Button';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 export enum operatingSystem {
   'MAC',

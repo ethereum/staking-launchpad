@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { FormNextLink } from 'grommet-icons';
-import { Box, Heading, Text } from 'grommet';
+import { Box } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AllowedNetworks, metamask, NetworkChainId } from './web3Utils';
@@ -12,6 +12,8 @@ import { Dot } from '../../components/Dot';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 import { StoreState } from '../../store/reducers';
 
 const _WalletConnected = ({

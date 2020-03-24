@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Box, CheckBox, Heading, Text } from 'grommet';
+import { Box, CheckBox } from 'grommet';
 import { Spinning } from 'grommet-controls';
 import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
@@ -27,6 +27,8 @@ import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { pricePerValidator, contractAddress } from '../../enums';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 
 // DEPOSIT CONTRACT VARIABLES(public for transparency)
 const CONTRACT_ADDRESS = contractAddress;

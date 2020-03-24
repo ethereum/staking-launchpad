@@ -1,7 +1,7 @@
+import React from 'react';
 import { Paper, PaperGroup } from '../../components/Paper';
 import { CircleAlert } from '../ValidatorSettings/CircleAlert';
-import { Heading } from 'grommet';
-import React from 'react';
+import { Heading } from '../../components/Heading';
 
 export const AcknowledgementSection = ({
   title,

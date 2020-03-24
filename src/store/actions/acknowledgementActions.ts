@@ -1,5 +1,5 @@
-import { ActionTypes } from "./index";
-import { acknowledgementId } from "../reducers";
+import { ActionTypes } from './index';
+import { acknowledgementId } from '../reducers';
 
 export interface UpdateAcknowledgementStateAction {
   type: ActionTypes.updateAcknowledgementState;
@@ -15,6 +15,6 @@ export const updateAcknowledgementState = (
 ): UpdateAcknowledgementStateAction => {
   return {
     type: ActionTypes.updateAcknowledgementState,
-    payload: { acknowledgementId, value }
+    payload: { acknowledgementId, value },
   };
 };

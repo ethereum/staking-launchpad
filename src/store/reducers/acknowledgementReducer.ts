@@ -1,15 +1,15 @@
-import { Action, ActionTypes } from "../actions";
-import { every, values } from "lodash";
+import { Action, ActionTypes } from '../actions';
+import { every, values } from 'lodash';
 
 export enum acknowledgementId {
-  signup = "signup",
-  responsibilities = "responsibilities",
-  slashing = "slashing",
-  keyManagement = "keyManagement",
-  signingKeys = "signingKeys",
-  transferDelay = "transferDelay",
-  commitment = "commitment",
-  earlyAdoptionRisks = "earlyAdoptionRisks"
+  signup = 'signup',
+  responsibilities = 'responsibilities',
+  slashing = 'slashing',
+  keyManagement = 'keyManagement',
+  signingKeys = 'signingKeys',
+  transferDelay = 'transferDelay',
+  commitment = 'commitment',
+  earlyAdoptionRisks = 'earlyAdoptionRisks',
 }
 
 export interface acknowledgementState {
@@ -28,9 +28,9 @@ const defaultAcknowledgementState: acknowledgementState = {
     [acknowledgementId.signingKeys]: false,
     [acknowledgementId.transferDelay]: false,
     [acknowledgementId.commitment]: false,
-    [acknowledgementId.earlyAdoptionRisks]: false
+    [acknowledgementId.earlyAdoptionRisks]: false,
   },
-  allAgreedTo: false
+  allAgreedTo: false,
 };
 
 export const acknowledgementReducer = (
@@ -40,12 +40,12 @@ export const acknowledgementReducer = (
   if (action.type === ActionTypes.updateAcknowledgementState) {
     const newAcknowledgementState = {
       ...state.acknowledgements,
-      ...{ [action.payload.acknowledgementId]: action.payload.value }
+      ...{ [action.payload.acknowledgementId]: action.payload.value },
     };
-    
+
     return {
       acknowledgements: newAcknowledgementState,
-      allAgreedTo: every(values(newAcknowledgementState))
+      allAgreedTo: every(values(newAcknowledgementState)),
     };
   }
   return state;

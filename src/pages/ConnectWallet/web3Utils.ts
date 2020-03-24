@@ -4,6 +4,7 @@ import {
   NoEthereumProviderError,
   UserRejectedRequestError,
 } from '@web3-react/injected-connector';
+import { FortmaticConnector } from './fortmaticConnector';
 import { PortisConnector } from '@web3-react/portis-connector';
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
 import { useEffect, useState } from 'react';
@@ -40,10 +41,19 @@ export const metamask: InjectedConnector = new MetamaskConnector({
 if (!process.env.REACT_APP_PORTIS_DAPP_ID) {
   throw new TypeError('Missing PORTIS_DAPP_ID');
 }
+if (!process.env.REACT_APP_FORTMATIC_KEY) {
+  throw new TypeError('Missing FORTMATIC_KEY');
+}
 
 export const portis: PortisConnector = new PortisConnector({
   dAppId: process.env.REACT_APP_PORTIS_DAPP_ID,
   networks: supportedNetworks,
+});
+
+export const fortmatic: FortmaticConnector = new FortmaticConnector({
+  apiKey: process.env.REACT_APP_FORTMATIC_KEY as string,
+  chainId: NetworkChainId['Göerli Testnet'],
+  rpcUrl: process.env.REACT_APP_RPC_URL_GOERLI as string,
 });
 
 export function getErrorMessage(error: Error): string {

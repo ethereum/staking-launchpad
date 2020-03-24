@@ -10,6 +10,7 @@ import {
   portis,
   useMetamaskEagerConnect,
   useMetamaskListener,
+  fortmatic,
 } from './web3Utils';
 import { WalletButton } from './WalletButton';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
@@ -83,6 +84,11 @@ const _ConnectWalletPage = ({
               walletProvider={portis}
               title="Portis"
               error={walletProvider === portis ? error : undefined}
+            />
+            <WalletButton
+              walletProvider={fortmatic}
+              title="Fortmatic"
+              error={walletProvider === fortmatic ? error : undefined}
             />
           </Grid>
         )}

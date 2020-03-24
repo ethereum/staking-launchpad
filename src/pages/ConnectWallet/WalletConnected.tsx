@@ -4,13 +4,20 @@ import { FormNextLink } from 'grommet-icons';
 import { Box, Heading, Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { AllowedNetworks, metamask, NetworkChainId } from './web3Utils';
+import {
+  AllowedNetworks,
+  fortmatic,
+  metamask,
+  NetworkChainId,
+  portis,
+} from './web3Utils';
 import { web3ReactInterface } from './index';
 import { ProgressStep, updateProgress } from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Dot } from '../../components/Dot';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
+import { AbstractConnector } from '@web3-react/abstract-connector';
 import { Link } from '../../components/Link';
 import { StoreState } from '../../store/reducers';
 
@@ -42,11 +49,19 @@ const _WalletConnected = ({
     }
   };
 
+  const getWalletName = (provider?: AbstractConnector) => {
+    if (!provider) return '';
+    if (provider === metamask) return 'Metamask';
+    if (provider === portis) return 'Portis';
+    if (provider === fortmatic) return 'Fortmatic';
+    return '';
+  };
+
   return (
     <div>
       <Paper>
         <Heading level={3} size="small" color="blueDark" className="mt0">
-          {walletProvider === metamask ? 'Metamask' : 'Portis'}
+          {getWalletName(walletProvider)}
         </Heading>
         <Box className="flex flex-row">
           <Dot success={networkAllowed} />

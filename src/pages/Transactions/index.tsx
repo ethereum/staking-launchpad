@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -11,13 +11,12 @@ import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { KeyList } from './Keylist';
-import { handleTransaction } from './transactionUtils';
+import { handleTransaction, TransactionStatuses } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { WalletDisconnected } from '../Summary/WalletDisconnected';
 import { WrongNetwork } from '../Summary/WrongNetwork';
-import { contractAddress, pricePerValidator } from '../../enums';
 import { connect } from 'react-redux';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 
@@ -53,10 +52,18 @@ const _TransactionsPage = ({
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
+  const [status, setStatus] = useState<TransactionStatuses>(
+    TransactionStatuses.READY
+  );
 
   const handleAllTransactionClick = async () =>
     keyFiles.forEach(validator =>
-      handleTransaction(validator, connector as AbstractConnector, account)
+      handleTransaction(
+        validator,
+        connector as AbstractConnector,
+        account,
+        setStatus
+      )
     );
 
   // if (progress !== ProgressStep.TRANSACTION_SIGNING)
@@ -75,11 +82,12 @@ const _TransactionsPage = ({
           </Heading>
           <Paper className="mt20">
             <Heading level={3} size="small" color="blueMedium">
-              Transactions for {keyFiles.length} validators and{' '}
-              {keyFiles.length} keypairs
+              Transactions for {keyFiles.length} validators
             </Heading>
             <Text>
               You must sign an individual transaction for each key you created.
+            </Text>
+            <Text>
               You can initiate these all at once, or sign them individually from
               the keylist below
             </Text>

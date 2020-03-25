@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormNextLink } from 'grommet-icons';
-import { TransactionStatuses } from './index';
 import { Text } from '../../../components/Text';
+import { TransactionStatuses } from '../transactionUtils';
 
 const ButtonText = styled(Text)`
   line-height: inherit;
@@ -13,11 +13,16 @@ const ButtonText = styled(Text)`
   }
 `;
 
-export const ActionButton = ({ status }: { status: TransactionStatuses }) => {
+interface ActionButtonProps {
+  status: TransactionStatuses;
+  onClick: (e: any) => void;
+}
+
+export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
   if (status === TransactionStatuses.READY) {
     return (
       <div className="flex">
-        <ButtonText>Start</ButtonText>
+        <ButtonText onClick={onClick}>Start</ButtonText>
         <FormNextLink />
       </div>
     );
@@ -25,7 +30,7 @@ export const ActionButton = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.PENDING) {
     return (
       <div className="flex">
-        <ButtonText>Retry</ButtonText>
+        <ButtonText onClick={onClick}>Retry</ButtonText>
         <FormNextLink />
       </div>
     );
@@ -36,15 +41,18 @@ export const ActionButton = ({ status }: { status: TransactionStatuses }) => {
   ) {
     return (
       <div>
-        <ButtonText>Alethio</ButtonText>
-        <ButtonText>Etherscan</ButtonText>
+        <ButtonText onClick={onClick}>Alethio</ButtonText>
+        <ButtonText onClick={onClick}>Etherscan</ButtonText>
       </div>
     );
   }
-  if (status === TransactionStatuses.FAILED) {
+  if (
+    (status === TransactionStatuses.FAILED) ||
+    (status === TransactionStatuses.REJECTED)
+  ) {
     return (
       <div className="flex">
-        <ButtonText>Try again</ButtonText>
+        <ButtonText onClick={onClick}>Try again</ButtonText>
         <FormNextLink />
       </div>
     );

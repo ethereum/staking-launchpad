@@ -1,6 +1,8 @@
 import React from 'react';
-import { CustomText, TransactionStatuses } from './index';
+import { CustomText } from './index';
 import { Dot } from '../../../components/Dot';
+import { TransactionStatuses } from '../transactionUtils';
+import { Spinning } from 'grommet-controls';
 
 export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.READY) {
@@ -14,7 +16,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.PENDING) {
     return (
       <div className="flex">
-        <Dot success className="mr5" />
+        <Dot className="mr5" />
         <CustomText>Waiting for wallet confirmation</CustomText>
       </div>
     );
@@ -22,7 +24,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.STARTED) {
     return (
       <div className="flex">
-        <Dot success className="mr5" />
+        <Spinning kind="pulse" />
         <CustomText color="green">Transaction Started</CustomText>
       </div>
     );
@@ -38,8 +40,16 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.FAILED) {
     return (
       <div className="flex">
-        <Dot success className="mr5" />
+        <Dot error className="mr5" />
         <CustomText>Transaction Failed</CustomText>
+      </div>
+    );
+  }
+  if (status === TransactionStatuses.REJECTED) {
+    return (
+      <div className="flex">
+        <Dot error className="mr5" />
+        <CustomText>Transaction Rejected</CustomText>
       </div>
     );
   }

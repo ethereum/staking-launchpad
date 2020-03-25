@@ -1,14 +1,16 @@
+import React from 'react';
 import styled from 'styled-components';
 
 interface DotProps {
-  theme: any;
-  success: boolean;
+  theme?: any;
+  success?: boolean;
   error?: boolean;
   width?: number;
   height?: number;
+  className?: string;
 }
 
-export const Dot = styled.div`
+const StyledDiv = styled.div`
   width: ${(p: DotProps) => p.width || 20}px;
   height: ${(p: DotProps) => p.height || 20}px;
   background: ${(p: DotProps) => {
@@ -16,7 +18,7 @@ export const Dot = styled.div`
     if (p.error) return p.theme.red.medium;
     return p.theme.gray.light;
   }};
-  border: 3px solid 
+  border: 3px solid
     ${(p: DotProps) => {
       if (p.success) return p.theme.green.medium;
       if (p.error) return p.theme.red.light;
@@ -24,3 +26,5 @@ export const Dot = styled.div`
     }};
   border-radius: 50%;
 `;
+
+export const Dot = (props: DotProps) => <StyledDiv {...props} />;

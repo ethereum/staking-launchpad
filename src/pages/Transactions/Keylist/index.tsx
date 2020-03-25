@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Table,
@@ -12,8 +12,7 @@ import { connect } from 'react-redux';
 import { Paper } from '../../../components/Paper';
 import { keyFile } from '../../../store/actions';
 import { StoreState } from '../../../store/reducers';
-import { ActionButton } from './ActionButton';
-import { Status } from './Status';
+import { TransactionTableRow } from './TransactionTableRow';
 
 const CustomTableRow = styled(TableRow)`
   background-color: ${(p: { theme: any }) => p.theme.blue.light};
@@ -34,46 +33,10 @@ export const CustomText = styled.div`
   }
 `;
 
-export enum TransactionStatuses {
-  'READY',
-  'PENDING',
-  'STARTED',
-  'SUCCEEDED',
-  'FAILED',
-}
-
 interface KeyListProps {
   keyFiles: keyFile[];
 }
 const _KeyList = ({ keyFiles }: KeyListProps) => {
-  const [truncateDigits, setTruncateDigits] = useState(
-    window.innerWidth > 840 ? 8 : 5
-  );
-  window.addEventListener('resize', event => {
-    // @ts-ignore
-    setTruncateDigits(event.target.innerWidth > 840 ? 8 : 5);
-  });
-
-  const truncateKey = (key: string) =>
-    `${key.slice(0, truncateDigits)}...${key.slice(truncateDigits * -1)}`;
-
-  const renderTableRow = ({ pubkey }: keyFile) => {
-    const status: TransactionStatuses = 0;
-    return (
-      <TableRow key={pubkey}>
-        <TableCell>
-          <CustomText>{truncateKey(pubkey)}</CustomText>
-        </TableCell>
-        <TableCell>
-          <Status status={status} />
-        </TableCell>
-        <TableCell>
-          <ActionButton status={status} />
-        </TableCell>
-      </TableRow>
-    );
-  };
-
   return (
     <CustomPaper>
       <Box pad="small">
@@ -91,7 +54,11 @@ const _KeyList = ({ keyFiles }: KeyListProps) => {
               </TableCell>
             </CustomTableRow>
           </TableHeader>
-          <TableBody>{keyFiles.map(renderTableRow)}</TableBody>
+          <TableBody>
+            {keyFiles.map(keyFile => (
+              <TransactionTableRow key={keyFile.pubkey} keyFile={keyFile} />
+            ))}
+          </TableBody>
         </CustomTable>
       </Box>
     </CustomPaper>

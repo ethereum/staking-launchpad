@@ -64,7 +64,7 @@ const _WalletConnected = ({
           {getWalletName(walletProvider)}
         </Heading>
         <Box className="flex flex-row">
-          <Dot success={networkAllowed} />
+          <Dot success={networkAllowed} error={!networkAllowed} />
           <Text className="ml10">{account}</Text>
         </Box>
         <Text

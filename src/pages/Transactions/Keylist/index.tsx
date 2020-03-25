@@ -34,6 +34,14 @@ export const CustomText = styled.div`
   }
 `;
 
+export enum TransactionStatuses {
+  'READY',
+  'PENDING',
+  'STARTED',
+  'SUCCEEDED',
+  'FAILED',
+}
+
 interface KeyListProps {
   keyFiles: keyFile[];
 }
@@ -49,9 +57,26 @@ const _KeyList = ({ keyFiles }: KeyListProps) => {
   const truncateKey = (key: string) =>
     `${key.slice(0, truncateDigits)}...${key.slice(truncateDigits * -1)}`;
 
+  const renderTableRow = ({ pubkey }: keyFile) => {
+    const status: TransactionStatuses = 0;
+    return (
+      <TableRow key={pubkey}>
+        <TableCell>
+          <CustomText>{truncateKey(pubkey)}</CustomText>
+        </TableCell>
+        <TableCell>
+          <Status status={status} />
+        </TableCell>
+        <TableCell>
+          <ActionButton status={status} />
+        </TableCell>
+      </TableRow>
+    );
+  };
+
   return (
     <CustomPaper>
-      <Box pad="small" basis="small">
+      <Box pad="small">
         <CustomTable>
           <TableHeader>
             <CustomTableRow>
@@ -66,21 +91,7 @@ const _KeyList = ({ keyFiles }: KeyListProps) => {
               </TableCell>
             </CustomTableRow>
           </TableHeader>
-          <TableBody>
-            {keyFiles.map(({ pubkey }) => (
-              <TableRow key={pubkey}>
-                <TableCell>
-                  <CustomText>{truncateKey(pubkey)}</CustomText>
-                </TableCell>
-                <TableCell>
-                  <Status />
-                </TableCell>
-                <TableCell>
-                  <ActionButton />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
+          <TableBody>{keyFiles.map(renderTableRow)}</TableBody>
         </CustomTable>
       </Box>
     </CustomPaper>

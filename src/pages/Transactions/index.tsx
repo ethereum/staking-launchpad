@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -8,6 +8,7 @@ import {
   ProgressStep,
   TransactionStatuses,
   updateProgress,
+  updateTransactionStatus,
 } from '../../store/actions';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { AppBar } from '../../components/AppBar';
@@ -19,7 +20,6 @@ import { KeyList } from './Keylist';
 import { handleTransaction } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { WalletDisconnected } from '../Summary/WalletDisconnected';
 import { WrongNetwork } from '../Summary/WrongNetwork';
 import { connect } from 'react-redux';
@@ -45,6 +45,10 @@ interface TransactionsPageProps {
   keyFiles: KeyFileInterface[];
   progress: ProgressStep;
   updateProgress: (step: ProgressStep) => void;
+  updateTransactionStatus: (
+    pubkey: string,
+    status: TransactionStatuses
+  ) => void;
 }
 
 const NETWORK_NAME = 'Göerli Testnet';
@@ -53,13 +57,11 @@ const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 const _TransactionsPage = ({
   keyFiles,
   progress,
+  updateTransactionStatus,
 }: TransactionsPageProps): JSX.Element => {
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
-  const [status, setStatus] = useState<TransactionStatuses>(
-    TransactionStatuses.READY
-  );
 
   const handleAllTransactionClick = async () =>
     keyFiles.forEach(validator =>
@@ -67,7 +69,7 @@ const _TransactionsPage = ({
         validator,
         connector as AbstractConnector,
         account,
-        setStatus
+        updateTransactionStatus
       )
     );
 
@@ -120,6 +122,12 @@ const mstp = ({ keyFiles, progress }: StoreState) => ({
 const mdtp = (dispatch: any) => ({
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
+  },
+  updateTransactionStatus: (
+    pubkey: string,
+    status: TransactionStatuses
+  ): void => {
+    dispatch(updateTransactionStatus(pubkey, status));
   },
 });
 

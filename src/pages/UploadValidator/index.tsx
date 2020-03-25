@@ -11,6 +11,7 @@ import { StoreState } from '../../store/reducers';
 import {
   KeyFileInterface,
   ProgressStep,
+  TransactionStatuses,
   updateKeyFiles,
   updateProgress,
 } from '../../store/actions';
@@ -120,7 +121,12 @@ export const _UploadValidatorPage = ({
             try {
               const fileData = JSON.parse(event.target.result as string);
               if (await validateKeyFile(fileData as KeyFileInterface[])) {
-                updateKeyFiles(fileData);
+                updateKeyFiles(
+                  fileData.map((keyFile: KeyFileInterface) => ({
+                    ...keyFile,
+                    transactionStatus: TransactionStatuses.READY,
+                  }))
+                );
               } else {
                 setInvalidKeyFile(true);
               }
@@ -177,7 +183,8 @@ const mstp = ({ keyFiles, progress }: StoreState) => ({
   progress,
 });
 const mdtp = (dispatch: any) => ({
-  updateKeyFiles: (files: KeyFileInterface[]): void => dispatch(updateKeyFiles(files)),
+  updateKeyFiles: (files: KeyFileInterface[]): void =>
+    dispatch(updateKeyFiles(files)),
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
   },

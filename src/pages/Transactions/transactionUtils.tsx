@@ -2,7 +2,11 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import Web3 from 'web3';
 import { Eth } from 'web3-eth';
 import { SendOptions } from 'web3-eth-contract';
-import { KeyFileInterface, TransactionStatuses } from '../../store/actions';
+import {
+  KeyFileInterface,
+  TransactionStatuses,
+  updateTransactionStatus,
+} from '../../store/actions';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { contractAddress, pricePerValidator } from '../../enums';
@@ -31,7 +35,7 @@ export const handleTransaction = async (
   depositFile: KeyFileInterface,
   connector: AbstractConnector,
   account: any,
-  setStatus: (status: TransactionStatuses) => void
+  updateTransactionStatus: (pubkey: string, status: TransactionStatuses) => void
 ): Promise<void> => {
   const {
     pubkey,
@@ -43,7 +47,7 @@ export const handleTransaction = async (
   } = depositFile;
 
   try {
-    setStatus(TransactionStatuses.PENDING);
+    updateTransactionStatus(pubkey, TransactionStatuses.PENDING);
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: Eth = new Web3(walletProvider).eth;
     const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
@@ -63,7 +67,7 @@ export const handleTransaction = async (
       .send(transactionParameters)
       .on('transactionHash', (hash: any): void => {
         console.log('on tx hash', hash);
-        setStatus(TransactionStatuses.STARTED);
+        updateTransactionStatus(pubkey, TransactionStatuses.STARTED);
       })
       .on('receipt', (receipt: any) => {
         console.log('on receipt', receipt);
@@ -74,9 +78,9 @@ export const handleTransaction = async (
           console.log('on confirmation');
           if (confirmation === 0) {
             if (receipt.status) {
-              setStatus(TransactionStatuses.SUCCEEDED);
+              updateTransactionStatus(pubkey, TransactionStatuses.SUCCEEDED);
             } else {
-              setStatus(TransactionStatuses.FAILED);
+              updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
             }
           }
         }
@@ -84,13 +88,13 @@ export const handleTransaction = async (
       .on('error', (error: any) => {
         console.log('on error', error.message);
         if (isUserRejectionError(error)) {
-          setStatus(TransactionStatuses.REJECTED);
+          updateTransactionStatus(pubkey, TransactionStatuses.REJECTED);
         } else {
-          setStatus(TransactionStatuses.FAILED);
+          updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
         }
       });
   } catch (rejected) {
     console.log('tx failed');
-    setStatus(TransactionStatuses.FAILED);
+    updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
   }
 };

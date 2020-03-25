@@ -1,20 +1,33 @@
 import React, { useState } from 'react';
 import { handleTransaction } from '../transactionUtils';
 import { AbstractConnector } from '@web3-react/abstract-connector';
-import { TableCell, TableRow } from 'grommet';
+import { TableBody, TableCell, TableRow } from 'grommet';
 import { Status } from './Status';
 import { ActionButton } from './ActionButton';
 import { CustomText } from './index';
 import { web3ReactInterface } from '../../ConnectWallet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { KeyFileInterface, TransactionStatuses } from '../../../store/actions';
+import {
+  KeyFileInterface,
+  TransactionStatuses,
+  updateTransactionStatus,
+} from '../../../store/actions';
+import { connect } from 'react-redux';
+import { StoreState } from '../../../store/reducers';
 
 interface TransactionTableRowProps {
-  keyFile: KeyFileInterface;
+  keyFiles: KeyFileInterface[];
+  updateTransactionStatus: (
+    pubkey: string,
+    status: TransactionStatuses
+  ) => void;
 }
 
-export const TransactionTableRow = ({ keyFile }: TransactionTableRowProps) => {
+const _TransactionTableRows = ({
+  keyFiles,
+  updateTransactionStatus,
+}: TransactionTableRowProps) => {
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -29,30 +42,48 @@ export const TransactionTableRow = ({ keyFile }: TransactionTableRowProps) => {
   const truncateKey = (key: string) =>
     `${key.slice(0, truncateDigits)}...${key.slice(truncateDigits * -1)}`;
 
-  const [status, setStatus] = useState<TransactionStatuses>(
-    TransactionStatuses.READY
-  );
-
-  const handleActionClick = () => {
+  const handleActionClick = (keyFile: KeyFileInterface) => {
     handleTransaction(
       keyFile,
       connector as AbstractConnector,
       account,
-      setStatus
+      updateTransactionStatus
     );
   };
 
   return (
-    <TableRow>
-      <TableCell>
-        <CustomText>{truncateKey(keyFile.pubkey)}</CustomText>
-      </TableCell>
-      <TableCell>
-        <Status status={status} />
-      </TableCell>
-      <TableCell>
-        <ActionButton onClick={handleActionClick} status={status} />
-      </TableCell>
-    </TableRow>
+    <TableBody>
+      {keyFiles.map(keyFile => (
+        <TableRow>
+          <TableCell>
+            <CustomText>{truncateKey(keyFile.pubkey)}</CustomText>
+          </TableCell>
+          <TableCell>
+            <Status status={keyFile.transactionStatus} />
+          </TableCell>
+          <TableCell>
+            <ActionButton
+              onClick={() => handleActionClick(keyFile)}
+              status={keyFile.transactionStatus}
+            />
+          </TableCell>
+        </TableRow>
+      ))}
+    </TableBody>
   );
 };
+
+const mstp = ({ keyFiles }: StoreState) => {
+  return { keyFiles };
+};
+
+const mdtp = (dispatch: any) => ({
+  updateTransactionStatus: (
+    pubkey: string,
+    status: TransactionStatuses
+  ): void => {
+    dispatch(updateTransactionStatus(pubkey, status));
+  },
+});
+
+export const TransactionTableRows = connect(mstp, mdtp)(_TransactionTableRows);

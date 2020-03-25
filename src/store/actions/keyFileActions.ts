@@ -1,5 +1,14 @@
 import { ActionTypes } from './index';
 
+export enum TransactionStatuses {
+  'READY',
+  'PENDING',
+  'STARTED',
+  'SUCCEEDED',
+  'FAILED',
+  'REJECTED',
+}
+
 export interface KeyFileInterface {
   pubkey: string;
   // eslint-disable-next-line camelcase
@@ -10,17 +19,9 @@ export interface KeyFileInterface {
   deposit_data_root: string;
   // eslint-disable-next-line camelcase
   signed_deposit_data_root: string;
-}
 
-export enum TransactionStatuses {
-  'READY',
-  'PENDING',
-  'STARTED',
-  'SUCCEEDED',
-  'FAILED',
-  'REJECTED',
+  transactionStatus: TransactionStatuses;
 }
-
 export interface UpdateKeyFilesAction {
   type: ActionTypes.updateKeyFiles;
   payload: KeyFileInterface[];
@@ -32,9 +33,24 @@ export interface UpdateTransactionStatusAction {
     status: TransactionStatuses;
   };
 }
-export const updateKeyFiles = (files: KeyFileInterface[]): UpdateKeyFilesAction => {
+export const updateKeyFiles = (
+  files: KeyFileInterface[]
+): UpdateKeyFilesAction => {
   return {
     type: ActionTypes.updateKeyFiles,
     payload: files,
+  };
+};
+
+export const updateTransactionStatus = (
+  pubkey: string,
+  status: TransactionStatuses
+): UpdateTransactionStatusAction => {
+  return {
+    type: ActionTypes.updateTransactionStatus,
+    payload: {
+      pubkey,
+      status,
+    },
   };
 };

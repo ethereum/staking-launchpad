@@ -1,4 +1,9 @@
-import { Action, ActionTypes, KeyFileInterface } from '../actions';
+import {
+  Action,
+  ActionTypes,
+  KeyFileInterface,
+  TransactionStatuses,
+} from '../actions';
 
 const tempState = [
   {
@@ -13,6 +18,7 @@ const tempState = [
       '4aa8b452b650b51140b867e84ccbb344afefaac97859649c38c374345e43e0ed',
     signed_deposit_data_root:
       '7be5994756c5a1d3ec499b07de6c63a03a4901d9bf91db960a9295fd7d026c6f',
+    transactionStatus: TransactionStatuses.READY,
   },
   {
     pubkey:
@@ -26,6 +32,7 @@ const tempState = [
       'c389c2a853d7c40a8461c26ddfc5dc90e1d67c13418f4e0deb118386e241d856',
     signed_deposit_data_root:
       'b9e413e1d4e1310fbc79a2039af7a6c5ffecb6e7222568abe942b9b0dfff5355',
+    transactionStatus: TransactionStatuses.READY,
   },
   {
     pubkey:
@@ -39,6 +46,7 @@ const tempState = [
       'deb169a39cd6aa5a7ce2809ade0061dacd275e20f317c47643fd1d79f916154a',
     signed_deposit_data_root:
       '1048587c4f2a7e5c48e24473394d9721d265b8de5ee42ea9db3b4ddb74da6c26',
+    transactionStatus: TransactionStatuses.READY,
   },
 ];
 
@@ -50,7 +58,14 @@ export const keyFilesReducer = (
     return action.payload;
   }
   if (action.type === ActionTypes.updateTransactionStatus) {
-    return state;
+    const clonedState = [...state];
+    const indexOfKeyFileToUpdate = state.findIndex(
+      ({ pubkey }) => pubkey === action.payload.pubkey
+    );
+    clonedState[indexOfKeyFileToUpdate].transactionStatus =
+      action.payload.status;
+
+    return clonedState;
   }
   return state;
 };

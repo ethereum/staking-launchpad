@@ -10,9 +10,16 @@ import {
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Paper } from '../../../components/Paper';
-import { KeyFileInterface } from '../../../store/actions';
+import {
+  KeyFileInterface,
+  ProgressStep,
+  TransactionStatuses,
+  updateMnemonicAcknowledgement,
+  updateProgress,
+  updateTransactionStatus,
+} from '../../../store/actions';
 import { StoreState } from '../../../store/reducers';
-import { TransactionTableRow } from './TransactionTableRow';
+import { TransactionTableRows } from './TransactionTableRow';
 
 const CustomTableRow = styled(TableRow)`
   background-color: ${(p: { theme: any }) => p.theme.blue.light};
@@ -33,10 +40,7 @@ export const CustomText = styled.div`
   }
 `;
 
-interface KeyListProps {
-  keyFiles: KeyFileInterface[];
-}
-const _KeyList = ({ keyFiles }: KeyListProps) => {
+export const KeyList = () => {
   return (
     <CustomPaper>
       <Box pad="small">
@@ -54,19 +58,9 @@ const _KeyList = ({ keyFiles }: KeyListProps) => {
               </TableCell>
             </CustomTableRow>
           </TableHeader>
-          <TableBody>
-            {keyFiles.map(keyFile => (
-              <TransactionTableRow key={keyFile.pubkey} keyFile={keyFile} />
-            ))}
-          </TableBody>
+          <TransactionTableRows />
         </CustomTable>
       </Box>
     </CustomPaper>
   );
 };
-
-const mstp = ({ keyFiles }: StoreState) => ({
-  keyFiles,
-});
-
-export const KeyList = connect(mstp)(_KeyList);

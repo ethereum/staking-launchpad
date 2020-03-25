@@ -67,7 +67,7 @@ export const rainbowLight = rainbowLightColors.join(', ');
 export const screenSizes = {
   smaller: '420px',
   small: '576px',
-  medium: '760px',
+  medium: '768px',
   large: '992px',
   larger: '1200px',
   largest: '1440px',

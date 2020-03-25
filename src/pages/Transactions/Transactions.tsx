@@ -6,7 +6,7 @@ import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 
-export const Transactions = () => (
+export const TransactionsPage = () => (
   <WorkflowPageTemplate
     title="Deposit Summary"
     backgroundColor={rainbowMutedColors[5]}

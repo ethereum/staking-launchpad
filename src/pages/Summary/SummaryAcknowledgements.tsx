@@ -12,10 +12,10 @@ interface SummaryAcknowledgementsProps {
 export const SummaryAcknowledgements = ({
   setAllChecked,
 }: SummaryAcknowledgementsProps): JSX.Element => {
-  const [losePhrase, setLosePhrase] = useState(false);
-  const [earlyAdopt, setEarlyAdopt] = useState(false);
-  const [nonReverse, setNonReverse] = useState(false);
-  const [noPhish, setNoPhish] = useState(false);
+  const [losePhrase, setLosePhrase] = useState(true);
+  const [earlyAdopt, setEarlyAdopt] = useState(true);
+  const [nonReverse, setNonReverse] = useState(true);
+  const [noPhish, setNoPhish] = useState(true);
 
   useEffect(() => {
     setAllChecked(losePhrase && earlyAdopt && nonReverse && noPhish);

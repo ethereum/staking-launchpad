@@ -8,6 +8,7 @@ export enum ProgressStep {
   'UPLOAD_VALIDATOR_FILE',
   'CONNECT_WALLET',
   'SUMMARY',
+  'TRANSACTION_SIGNING',
   'CONGRATULATIONS',
 }
 

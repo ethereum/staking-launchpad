@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { handleTransaction, TransactionStatuses } from '../transactionUtils';
+import { handleTransaction } from '../transactionUtils';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { TableCell, TableRow } from 'grommet';
 import { Status } from './Status';
@@ -8,10 +8,10 @@ import { CustomText } from './index';
 import { web3ReactInterface } from '../../ConnectWallet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { keyFile } from '../../../store/actions';
+import { KeyFileInterface, TransactionStatuses } from '../../../store/actions';
 
 interface TransactionTableRowProps {
-  keyFile: keyFile;
+  keyFile: KeyFileInterface;
 }
 
 export const TransactionTableRow = ({ keyFile }: TransactionTableRowProps) => {

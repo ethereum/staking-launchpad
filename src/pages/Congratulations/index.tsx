@@ -9,7 +9,7 @@ import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
 import { mainnetEthRequirement, pricePerValidator } from '../../enums';
 import { StoreState } from '../../store/reducers';
-import { keyFile, ProgressStep } from '../../store/actions';
+import { KeyFileInterface, ProgressStep } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 
 const RainbowBackground = styled.div`
@@ -34,7 +34,7 @@ const _CongratulationsPage = ({
   keyFiles,
   progress,
 }: {
-  keyFiles: keyFile[];
+  keyFiles: KeyFileInterface[];
   progress: ProgressStep;
 }): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);

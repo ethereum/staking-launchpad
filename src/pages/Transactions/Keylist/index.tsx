@@ -10,7 +10,7 @@ import {
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Paper } from '../../../components/Paper';
-import { keyFile } from '../../../store/actions';
+import { KeyFileInterface } from '../../../store/actions';
 import { StoreState } from '../../../store/reducers';
 import { TransactionTableRow } from './TransactionTableRow';
 
@@ -34,7 +34,7 @@ export const CustomText = styled.div`
 `;
 
 interface KeyListProps {
-  keyFiles: keyFile[];
+  keyFiles: KeyFileInterface[];
 }
 const _KeyList = ({ keyFiles }: KeyListProps) => {
   return (

@@ -3,7 +3,11 @@ import { connect } from 'react-redux';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { StoreState } from '../../store/reducers';
-import { keyFile, ProgressStep, updateProgress } from '../../store/actions';
+import {
+  KeyFileInterface,
+  ProgressStep,
+  updateProgress,
+} from '../../store/actions';
 import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
@@ -20,7 +24,7 @@ const NETWORK_NAME = 'Göerli Testnet';
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
 interface SummaryPageProps {
-  keyFiles: keyFile[];
+  keyFiles: KeyFileInterface[];
   progress: ProgressStep;
   updateProgress: (step: ProgressStep) => void;
 }

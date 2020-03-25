@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { keyFile, ProgressStep } from '../actions';
+import { KeyFileInterface, ProgressStep } from '../actions';
 import {
   acknowledgementReducer,
   acknowledgementState,
@@ -18,7 +18,7 @@ export * from './generateKeysReducer';
 export interface StoreState {
   acknowledgementState: acknowledgementState;
   validatorCount: number;
-  keyFiles: keyFile[];
+  keyFiles: KeyFileInterface[];
   progress: ProgressStep;
   mnemonicAcknowledgementChecked: boolean;
 }

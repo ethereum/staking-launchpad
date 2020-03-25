@@ -9,7 +9,7 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { Paper } from '../../components/Paper';
 import { StoreState } from '../../store/reducers';
 import {
-  keyFile,
+  KeyFileInterface,
   ProgressStep,
   updateKeyFiles,
   updateProgress,
@@ -36,19 +36,19 @@ const ErrorText = styled(Text)`
 `;
 
 interface Props {
-  updateKeyFiles(files: keyFile[]): void;
-  keyFiles: keyFile[];
+  updateKeyFiles(files: KeyFileInterface[]): void;
+  keyFiles: KeyFileInterface[];
   updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
 }
 
-const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
+const validateKeyFile = async (files: KeyFileInterface[]): Promise<boolean> => {
   await initBLS();
 
   if (!Array.isArray(files)) return false;
   if (files.length <= 0) return false;
 
-  const keyfileStatuses: boolean[] = files.map(file => {
+  const keyFileStatuses: boolean[] = files.map(file => {
     const {
       pubkey,
       withdrawal_credentials,
@@ -92,7 +92,7 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
     // perform BLS check
     return verifySignature(pubkey, signature, deposit_data_root);
   });
-  return _every(keyfileStatuses);
+  return _every(keyFileStatuses);
 };
 
 export const _UploadValidatorPage = ({
@@ -119,7 +119,7 @@ export const _UploadValidatorPage = ({
           if (event.target) {
             try {
               const fileData = JSON.parse(event.target.result as string);
-              if (await validateKeyFile(fileData as keyFile[])) {
+              if (await validateKeyFile(fileData as KeyFileInterface[])) {
                 updateKeyFiles(fileData);
               } else {
                 setInvalidKeyFile(true);
@@ -177,7 +177,7 @@ const mstp = ({ keyFiles, progress }: StoreState) => ({
   progress,
 });
 const mdtp = (dispatch: any) => ({
-  updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files)),
+  updateKeyFiles: (files: KeyFileInterface[]): void => dispatch(updateKeyFiles(files)),
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
   },

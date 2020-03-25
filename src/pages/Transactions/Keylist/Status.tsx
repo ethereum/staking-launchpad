@@ -1,8 +1,8 @@
 import React from 'react';
 import { CustomText } from './index';
 import { Dot } from '../../../components/Dot';
-import { TransactionStatuses } from '../transactionUtils';
 import { Spinning } from 'grommet-controls';
+import { TransactionStatuses } from '../../../store/actions';
 
 export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.READY) {

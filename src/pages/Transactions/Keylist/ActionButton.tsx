@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormNextLink } from 'grommet-icons';
 import { Text } from '../../../components/Text';
-import { TransactionStatuses } from '../transactionUtils';
+import { TransactionStatuses } from '../../../store/actions';
 
 const ButtonText = styled(Text)`
   line-height: inherit;
@@ -47,8 +47,8 @@ export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
     );
   }
   if (
-    (status === TransactionStatuses.FAILED) ||
-    (status === TransactionStatuses.REJECTED)
+    status === TransactionStatuses.FAILED ||
+    status === TransactionStatuses.REJECTED
   ) {
     return (
       <div className="flex">

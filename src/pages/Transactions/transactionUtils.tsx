@@ -2,7 +2,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import Web3 from 'web3';
 import { Eth } from 'web3-eth';
 import { SendOptions } from 'web3-eth-contract';
-import { keyFile } from '../../store/actions';
+import { KeyFileInterface, TransactionStatuses } from '../../store/actions';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { contractAddress, pricePerValidator } from '../../enums';
@@ -27,17 +27,8 @@ const isUserRejectionError = (error: any) => {
   return false;
 };
 
-export enum TransactionStatuses {
-  'READY',
-  'PENDING',
-  'STARTED',
-  'SUCCEEDED',
-  'FAILED',
-  'REJECTED',
-}
-
 export const handleTransaction = async (
-  depositFile: keyFile,
+  depositFile: KeyFileInterface,
   connector: AbstractConnector,
   account: any,
   setStatus: (status: TransactionStatuses) => void

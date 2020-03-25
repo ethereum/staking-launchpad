@@ -3,7 +3,12 @@ import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { StoreState } from '../../store/reducers';
-import { keyFile, ProgressStep, updateProgress } from '../../store/actions';
+import {
+  KeyFileInterface,
+  ProgressStep,
+  TransactionStatuses,
+  updateProgress,
+} from '../../store/actions';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
@@ -11,7 +16,7 @@ import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { KeyList } from './Keylist';
-import { handleTransaction, TransactionStatuses } from './transactionUtils';
+import { handleTransaction } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
@@ -37,7 +42,7 @@ const Content = styled.div`
 `;
 
 interface TransactionsPageProps {
-  keyFiles: keyFile[];
+  keyFiles: KeyFileInterface[];
   progress: ProgressStep;
   updateProgress: (step: ProgressStep) => void;
 }

@@ -9,14 +9,14 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { pricePerValidator } from '../../enums';
 import { StoreState } from '../../store/reducers';
-import { keyFile } from '../../store/actions';
+import { KeyFileInterface } from '../../store/actions';
 
 const Container = styled.div`
   width: 100%;
 `;
 
 interface ValidatorInfoSummaryProps {
-  keyFiles: keyFile[];
+  keyFiles: KeyFileInterface[];
 }
 
 const _ValidatorInfoSummary = ({

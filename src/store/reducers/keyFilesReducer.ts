@@ -1,4 +1,4 @@
-import { Action, ActionTypes, keyFile } from '../actions';
+import { Action, ActionTypes, KeyFileInterface } from '../actions';
 
 const tempState = [
   {
@@ -43,11 +43,14 @@ const tempState = [
 ];
 
 export const keyFilesReducer = (
-  state: keyFile[] = tempState,
+  state: KeyFileInterface[] = tempState,
   action: Action
 ) => {
   if (action.type === ActionTypes.updateKeyFiles) {
     return action.payload;
+  }
+  if (action.type === ActionTypes.updateTransactionStatus) {
+    return state;
   }
   return state;
 };

@@ -13,7 +13,11 @@ import { Routes as RoutedContent } from './Routes';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { reducers } from './store/reducers';
 
-export const store = createStore(reducers);
+export const store = createStore(
+  reducers,
+  // @ts-ignore
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider);

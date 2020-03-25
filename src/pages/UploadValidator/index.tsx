@@ -135,9 +135,9 @@ export const _UploadValidatorPage = ({
     [updateKeyFiles]
   );
 
-  if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE) {
-    return routeToCorrectProgressStep(progress);
-  }
+  // if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE) {
+  //   return routeToCorrectProgressStep(progress);
+  // }
 
   return (
     <WorkflowPageTemplate

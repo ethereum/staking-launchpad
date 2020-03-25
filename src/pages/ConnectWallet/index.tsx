@@ -52,9 +52,9 @@ const _ConnectWalletPage = ({
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  if (progress < ProgressStep.CONNECT_WALLET) {
-    return routeToCorrectProgressStep(progress);
-  }
+  // if (progress < ProgressStep.CONNECT_WALLET) {
+  //   return routeToCorrectProgressStep(progress);
+  // }
 
   if (walletConnected) {
     return (

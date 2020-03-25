@@ -1,6 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { InfoBox } from '../../components/InfoBox';
+import { Heading } from '../../components/Heading';
+import { Paper } from '../../components/Paper';
+import { StoreState } from '../../store/reducers';
+import { keyFile } from '../../store/actions';
 
 const ScrollContainer = styled.div`
   height: 200px;
@@ -35,11 +40,16 @@ const StyledPre = styled.pre`
   overflow: hidden;
 `;
 
-export const Keylist = ({ validatorKeys }: { validatorKeys: string[] }) => {
+interface KeyListProps {
+  keyFiles: keyFile[];
+}
+
+const _KeyList = ({ keyFiles }: KeyListProps) => {
+  const validatorKeys = keyFiles.map(file => file.pubkey);
   const renderKeys = () =>
-    validatorKeys.map(coldKey => (
-      <InfoBox key={coldKey} className="px25 py0">
-        <StyledPre>{coldKey}</StyledPre>
+    validatorKeys.map(key => (
+      <InfoBox key={key} className="px25 py0">
+        <StyledPre>{key}</StyledPre>
       </InfoBox>
     ));
 
@@ -50,5 +60,19 @@ export const Keylist = ({ validatorKeys }: { validatorKeys: string[] }) => {
       </ScrollContainer>
     );
   }
-  return <div className="mt20">{renderKeys()}</div>;
+
+  return (
+    <Paper className="mt20">
+      <Heading level={3} size="small" color="blueDark">
+        keys
+      </Heading>
+      <div className="mt20">{renderKeys()}</div>
+    </Paper>
+  );
 };
+
+const mstp = ({ keyFiles }: StoreState) => ({
+  keyFiles,
+});
+
+export const KeyList = connect(mstp)(_KeyList);

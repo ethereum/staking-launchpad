@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Table, TableCell, TableHeader, TableRow } from 'grommet';
 import styled from 'styled-components';
 import { Paper } from '../../../components/Paper';
-import { TransactionTableRows } from './TransactionTableRow';
+import { TransactionTableRows } from './TransactionTableRows';
 
 const CustomTableRow = styled(TableRow)`
   background-color: ${(p: { theme: any }) => p.theme.blue.light};
@@ -17,15 +17,10 @@ const CustomTable = styled(Table)`
     }
   }
 `;
-export const CustomText = styled.div`
-  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
-    font-size: 12px;
-  }
-`;
 
 export const KeyList = () => {
   return (
-    <CustomPaper>
+    <CustomPaper className="mt20">
       <Box pad="small">
         <CustomTable>
           <TableHeader>

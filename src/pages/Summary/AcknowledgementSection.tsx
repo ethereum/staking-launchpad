@@ -1,7 +1,6 @@
-import { Paper, PaperGroup } from '../../components/Paper';
-import { CircleAlert } from '../ValidatorSettings/CircleAlert';
-import { Heading } from 'grommet';
 import React from 'react';
+import { Paper, PaperGroup } from '../../components/Paper';
+import { Heading } from '../../components/Heading';
 
 export const AcknowledgementSection = ({
   title,
@@ -14,7 +13,6 @@ export const AcknowledgementSection = ({
     <PaperGroup className="mt20">
       <Paper error pad="medium">
         <div className="flex">
-          <CircleAlert size={25} />
           <Heading
             level={3}
             size="small"

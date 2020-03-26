@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomText } from './index';
+import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
 import { Spinning } from 'grommet-controls';
 import { TransactionStatuses } from '../../../store/actions';
@@ -9,7 +9,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
     return (
       <div className="flex">
         <Dot success className="mr5" />
-        <CustomText>Ready</CustomText>
+        <Text>Ready</Text>
       </div>
     );
   }
@@ -17,7 +17,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
     return (
       <div className="flex">
         <Dot className="mr5" />
-        <CustomText>Waiting for wallet confirmation</CustomText>
+        <Text>Waiting for wallet confirmation</Text>
       </div>
     );
   }
@@ -25,7 +25,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
     return (
       <div className="flex">
         <Spinning kind="pulse" />
-        <CustomText color="green">Transaction Started</CustomText>
+        <Text color="green">Transaction Started</Text>
       </div>
     );
   }
@@ -33,7 +33,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
     return (
       <div className="flex">
         <Dot success className="mr5" />
-        <CustomText>Transaction Successful</CustomText>
+        <Text>Transaction Successful</Text>
       </div>
     );
   }
@@ -41,7 +41,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
     return (
       <div className="flex">
         <Dot error className="mr5" />
-        <CustomText>Transaction Failed</CustomText>
+        <Text>Transaction Failed</Text>
       </div>
     );
   }
@@ -49,10 +49,10 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
     return (
       <div className="flex">
         <Dot error className="mr5" />
-        <CustomText>Transaction Rejected</CustomText>
+        <Text>Transaction Rejected</Text>
       </div>
     );
   }
 
-  return <CustomText>An Error Occurred</CustomText>;
+  return <Text>An Error Occurred</Text>;
 };

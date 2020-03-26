@@ -42,10 +42,6 @@ const _ValidatorInfoSummary = ({
             ETH
           </InfoBox>
         </Container>
-        <Container>
-          <Text>Key Pairs Generated</Text>
-          <InfoBox>{amountValidators.toString()}</InfoBox>
-        </Container>
       </Box>
     </Paper>
   );

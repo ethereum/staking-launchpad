@@ -4,6 +4,7 @@ import { CheckBox } from 'grommet';
 import { pricePerValidator } from '../../enums';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
+import { FormNextLink } from 'grommet-icons';
 
 interface SummaryAcknowledgementsProps {
   setAllChecked: (v: boolean) => void;
@@ -62,7 +63,7 @@ export const SummaryAcknowledgements = ({
           sending the transaction to is the correct address.
         </Text>
         <Link to="https://www.google.com" external className="mt10" primary>
-          Learn here how to do it safely
+          Learn here how to do it safely <FormNextLink />
         </Link>
         <span className="mt20">
           <CheckBox

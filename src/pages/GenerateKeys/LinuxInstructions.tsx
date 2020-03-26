@@ -1,23 +1,22 @@
 import React from 'react';
 import { Paper } from '../../components/Paper';
-import { Heading, Text } from 'grommet';
+import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 import { CodeBox } from '../../components/CodeBox';
-import { connect } from 'react-redux';
 
-export const _LinuxInstructions = ({
-  validatorCount,
-}: {
+interface LinuxInstructionsProps {
   validatorCount: number;
-}) => (
+}
+
+export const LinuxInstructions = ({
+  validatorCount,
+}: LinuxInstructionsProps) => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">
       <Heading level={3} size="small" color="blueMedium">
-        2. Type/copy the following lines into your terminal window:
+        3. Type/copy the following lines into your terminal window:
       </Heading>
-      <Text>
-        Type the following lines into the terminal window and replace the n with
-        the amount of validators you plan to run:
-      </Text>
+      <Text>Type the following lines into the terminal window.</Text>
       <CodeBox
         className="mt20"
         snippet="git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git"
@@ -31,9 +30,3 @@ export const _LinuxInstructions = ({
     </Paper>
   </div>
 );
-
-const mstp = ({ validatorCount }: { validatorCount: number }) => ({
-  validatorCount,
-});
-
-export const LinuxInstructions = connect(mstp)(_LinuxInstructions);

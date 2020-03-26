@@ -92,7 +92,6 @@ const Step = styled.div`
 const mapPathnameToProgressStep = (pathname: routesEnum) => {
   const workflowRoutesInOrder = [
     routesEnum.acknowledgementPage,
-    // routesEnum.validatorSettingsPage,
     routesEnum.generateKeysPage,
     routesEnum.uploadValidatorPage,
     routesEnum.connectWalletPage,

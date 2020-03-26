@@ -9,7 +9,6 @@ import {
   NotFoundPage,
   SummaryPage,
   UploadValidatorPage,
-  // ValidatorSettingsPage,
   TransactionsPage,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
@@ -27,7 +26,6 @@ export enum routesEnum {
   acknowledgementPage = '/overview',
   summaryPage = '/summary',
   uploadValidatorPage = '/upload-validator',
-  // validatorSettingsPage = '/validator-settings',
   transactionsPage = '/transactions',
   landingPage = '/',
   notFoundPage = '/*',
@@ -59,11 +57,6 @@ const routes: RouteType[] = [
     exact: true,
     component: UploadValidatorPage,
   },
-  // {
-  //   path: routesEnum.validatorSettingsPage,
-  //   exact: true,
-  //   component: ValidatorSettingsPage,
-  // },
   {
     path: routesEnum.transactionsPage,
     exact: true,

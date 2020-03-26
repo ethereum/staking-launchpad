@@ -1,4 +1,4 @@
-import { Action, ActionTypes, ProgressStep } from "../actions";
+import { Action, ActionTypes, ProgressStep } from '../actions';
 
 export const progressReducer = (
   state: ProgressStep = ProgressStep.OVERVIEW,

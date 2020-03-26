@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import EthRound from '../../static/ethRound.svg';
+import { EthRoundLogo } from './EthRoundLogo';
 import { ProgressStep } from '../../store/actions';
 import { routesEnum } from '../../Routes';
+import { rainbowColors } from '../../styles/styledComponentsTheme';
 
-const logoPositions = {
+export const logoPositions = {
   small: [-7, 16, 38, 59, 80.5, 98],
   medium: [-5, 14.5, 36.5, 57.5, 79.5, 97.5],
   large: [-2, 16.5, 37.5, 57.5, 78, 96],
@@ -45,7 +46,7 @@ const BarContainer = styled.div`
 `;
 const CompletedColor = styled.div`
   width: ${(p: { position: number }) => logoPositions.large[p.position] + 1}%;
-  background: ${p => p.theme.blue.medium};
+  background: ${(p: { position: number }) => rainbowColors[p.position]};
   border-radius: 8px;
   height: 10px;
   position: absolute;
@@ -67,21 +68,6 @@ const GreyedColor = styled.div`
   position: absolute;
   top: 3px;
 `;
-const EthLogo = styled.img`
-  position: absolute;
-  top: -25px;
-  left: ${(p: { position: number }) => logoPositions.large[p.position]}%;
-  height: 60px;
-  width: 60px;
-  z-index: 2;
-
-  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    left: ${(p: { position: number }) => logoPositions.medium[p.position]}%;
-  }
-  @media only screen and (max-width: 1024px) {
-    left: ${(p: { position: number }) => logoPositions.small[p.position]}%;
-  }
-`;
 
 const Flexbox = styled.div`
   display: flex;
@@ -91,12 +77,16 @@ const Flexbox = styled.div`
 const Step = styled.div`
   margin: 0 20px;
   text-align: center;
-  color: ${(p: { active: boolean; disabled: boolean; theme: any }) => {
+  color: ${(p: {
+    disabled: boolean;
+    active: boolean;
+    index: number;
+    theme: any;
+  }) => {
     if (p.disabled) return p.theme.gray.medium;
-    if (p.active) return p.theme.blue.medium;
-    return p.theme.blue.dark;
+    return rainbowColors[p.index];
   }};
-  font-weight: 500;
+  font-weight: ${p => (p.active ? 600 : undefined)};
 `;
 
 const mapPathnameToProgressStep = (pathname: routesEnum) => {
@@ -131,16 +121,13 @@ const _WorkflowProgressBar = ({ history }: { history?: any }) => {
         <BarContainer>
           <GreyedColor />
           <CompletedColor position={mappedProgress} />
-          <EthLogo
-            position={mappedProgress}
-            src={EthRound}
-            alt="eth-diamond-round"
-          />
+          <EthRoundLogo position={mappedProgress} />
         </BarContainer>
         <Flexbox>
-          {steps.map(({ step, text }) => (
+          {steps.map(({ step, text }, i) => (
             <Step
               key={text}
+              index={i}
               disabled={mappedProgress < step}
               active={mappedProgress === step}
             >

@@ -28,6 +28,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
     'import/no-mutable-exports': 'off',
+    'class-methods-use-this': 'off',
     'no-shadow': 'warn',
     'react/destructuring-assignment': 'warn',
     'consistent-return': 'warn',

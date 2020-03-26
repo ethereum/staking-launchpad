@@ -1,4 +1,4 @@
-import { ActionTypes } from "./index";
+import { ActionTypes } from './index';
 
 export interface UpdateMnemonicAcknowledgment {
   type: ActionTypes.updateMnemonicAcknowledgment;
@@ -9,6 +9,6 @@ export const updateMnemonicAcknowledgement = (
 ): UpdateMnemonicAcknowledgment => {
   return {
     type: ActionTypes.updateMnemonicAcknowledgment,
-    payload: checked
+    payload: checked,
   };
 };

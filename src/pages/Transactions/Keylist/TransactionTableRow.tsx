@@ -54,7 +54,7 @@ const _TransactionTableRows = ({
   return (
     <TableBody>
       {keyFiles.map(keyFile => (
-        <TableRow>
+        <TableRow key={keyFile.pubkey}>
           <TableCell>
             <CustomText>{truncateKey(keyFile.pubkey)}</CustomText>
           </TableCell>

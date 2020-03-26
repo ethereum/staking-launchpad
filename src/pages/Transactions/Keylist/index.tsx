@@ -1,24 +1,7 @@
 import React from 'react';
-import {
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from 'grommet';
+import { Box, Table, TableCell, TableHeader, TableRow } from 'grommet';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
 import { Paper } from '../../../components/Paper';
-import {
-  KeyFileInterface,
-  ProgressStep,
-  TransactionStatuses,
-  updateMnemonicAcknowledgement,
-  updateProgress,
-  updateTransactionStatus,
-} from '../../../store/actions';
-import { StoreState } from '../../../store/reducers';
 import { TransactionTableRows } from './TransactionTableRow';
 
 const CustomTableRow = styled(TableRow)`

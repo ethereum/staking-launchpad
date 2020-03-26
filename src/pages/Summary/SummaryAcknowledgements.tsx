@@ -27,20 +27,30 @@ export const SummaryAcknowledgements = ({
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}
           checked={losePhrase}
-          label="I understand that if I lose my mnemonic phrase, I won't be able to withdraw my funds"
+          label={
+            <Text>
+              {' '}
+              I understand that if I lose my mnemonic phrase, I won't be able to
+              withdraw my funds
+            </Text>
+          }
         />
         <span className="mt20">
           <CheckBox
             onChange={e => setEarlyAdopt(e.target.checked)}
             checked={earlyAdopt}
-            label="I am aware of the early adopter and slashing risks"
+            label={
+              <Text> I am aware of the early adopter and slashing risks</Text>
+            }
           />
         </span>
         <span className="mt20">
           <CheckBox
             onChange={e => setNonReverse(e.target.checked)}
             checked={nonReverse}
-            label="I am aware that this transaction is not reversible"
+            label={
+              <Text> I am aware that this transaction is not reversible</Text>
+            }
           />
         </span>
       </AcknowledgementSection>
@@ -58,7 +68,13 @@ export const SummaryAcknowledgements = ({
           <CheckBox
             onChange={e => setNoPhish(e.target.checked)}
             checked={noPhish}
-            label="I know how to check that I am sending my ETH into the correct deposit contract and will do so."
+            label={
+              <Text>
+                {' '}
+                I know how to check that I am sending my ETH into the correct
+                deposit contract and will do so.
+              </Text>
+            }
           />
         </span>
       </AcknowledgementSection>

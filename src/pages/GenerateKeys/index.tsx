@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { CheckBox, Heading, Text } from 'grommet';
+import { CheckBox } from 'grommet';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper, PaperGroup } from '../../components/Paper';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
@@ -19,6 +19,8 @@ import { Button } from '../../components/Button';
 import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { Text } from '../../components/Text';
+import { Heading } from '../../components/Heading';
 
 export enum operatingSystem {
   'MAC',
@@ -125,7 +127,11 @@ const _GenerateKeysPage = ({
         <CheckBox
           onChange={onCheckboxClick}
           checked={mnemonicAcknowledgementChecked}
-          label="I am keeping my keys safe and have backed up my mnemonic phrase."
+          label={
+            <Text>
+              I am keeping my keys safe and have backed up my mnemonic phrase.
+            </Text>
+          }
         />
       </Paper>
       <div className="flex center p30">

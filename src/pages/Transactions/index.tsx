@@ -63,15 +63,32 @@ const _TransactionsPage = ({
     Web3Provider
   >();
 
+  const totalTxCount = keyFiles.length;
+  const remainingTxCount = keyFiles.filter(
+    file => file.transactionStatus === TransactionStatuses.READY
+  ).length;
+  console.log('reaminging: ', remainingTxCount);
+
+  const createButtonText = (): string => {
+    if (totalTxCount === remainingTxCount)
+      return `Initiate all ${totalTxCount} transactions`;
+    if (remainingTxCount > 1)
+      return `Initiate remaining ${remainingTxCount} transactions`;
+    if (remainingTxCount === 1) return `Initiate last transaction`;
+    return 'No pending transactions';
+  };
+
   const handleAllTransactionClick = async () =>
-    keyFiles.forEach(validator =>
-      handleTransaction(
-        validator,
-        connector as AbstractConnector,
-        account,
-        updateTransactionStatus
-      )
-    );
+    keyFiles.forEach(validator => {
+      if (validator.transactionStatus === TransactionStatuses.READY) {
+        handleTransaction(
+          validator,
+          connector as AbstractConnector,
+          account,
+          updateTransactionStatus
+        );
+      }
+    });
 
   // if (progress !== ProgressStep.TRANSACTION_SIGNING)
   //   return routeToCorrectProgressStep(progress);
@@ -102,8 +119,9 @@ const _TransactionsPage = ({
               <Button
                 width={300}
                 rainbow
-                label={`Initiate all ${keyFiles.length} transactions`}
+                label={createButtonText()}
                 onClick={handleAllTransactionClick}
+                disabled={remainingTxCount === 0}
               />
             </div>
           </Paper>

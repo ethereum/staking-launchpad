@@ -70,7 +70,6 @@ export const SummaryAcknowledgements = ({
             checked={noPhish}
             label={
               <Text>
-                {' '}
                 I know how to check that I am sending my ETH into the correct
                 deposit contract and will do so.
               </Text>

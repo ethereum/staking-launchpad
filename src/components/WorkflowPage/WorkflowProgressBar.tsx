@@ -90,15 +90,16 @@ const Step = styled.div`
 `;
 
 const mapPathnameToProgressStep = (pathname: routesEnum) => {
-  const routesInOrder = [
+  const workflowRoutesInOrder = [
     routesEnum.acknowledgementPage,
-    routesEnum.validatorSettingsPage,
+    // routesEnum.validatorSettingsPage,
     routesEnum.generateKeysPage,
     routesEnum.uploadValidatorPage,
     routesEnum.connectWalletPage,
     routesEnum.summaryPage,
+    routesEnum.transactionsPage,
   ];
-  return routesInOrder.indexOf(pathname);
+  return workflowRoutesInOrder.indexOf(pathname);
 };
 
 const _WorkflowProgressBar = ({ history }: { history?: any }) => {
@@ -109,11 +110,12 @@ const _WorkflowProgressBar = ({ history }: { history?: any }) => {
   }
   const steps: step[] = [
     { step: ProgressStep.OVERVIEW, text: 'Overview' },
-    { step: ProgressStep.VALIDATOR_SETTINGS, text: 'Validator Settings' },
+    // { step: ProgressStep.VALIDATOR_SETTINGS, text: 'Validator Settings' },
     { step: ProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
     { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: 'Upload Validator' },
     { step: ProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
     { step: ProgressStep.SUMMARY, text: 'Summary' },
+    { step: ProgressStep.TRANSACTION_SIGNING, text: 'Transactions' },
   ];
   return (
     <Container>

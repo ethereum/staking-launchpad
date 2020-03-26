@@ -42,7 +42,7 @@ export const AcknowledgementSection = ({
           <CheckBox
             onChange={onCheckboxClick}
             checked={agreedTo}
-            label={<Text>acknowledgement.text</Text>}
+            label={<Text>{acknowledgement.text}</Text>}
           />
         </Paper>
       )}

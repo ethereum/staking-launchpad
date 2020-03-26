@@ -17,7 +17,7 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { StoreState } from '../../store/reducers';
 import { ProgressStep } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
@@ -60,7 +60,7 @@ const _ConnectWalletPage = ({
     return (
       <WorkflowPageTemplate
         title="Connect Wallet"
-        backgroundColor={rainbowMutedColors[4]}
+        backgroundColor={rainbowLightColors[ProgressStep.CONNECT_WALLET]}
       >
         <WalletConnected />
       </WorkflowPageTemplate>
@@ -70,7 +70,7 @@ const _ConnectWalletPage = ({
   return (
     <WorkflowPageTemplate
       title="Connect Wallet"
-      backgroundColor={rainbowMutedColors[4]}
+      backgroundColor={rainbowLightColors[ProgressStep.CONNECT_WALLET]}
     >
       <ResponsiveContext.Consumer>
         {() => (

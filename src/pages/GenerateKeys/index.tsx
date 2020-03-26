@@ -16,7 +16,7 @@ import {
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { StoreState } from '../../store/reducers';
 import { Button } from '../../components/Button';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
@@ -84,7 +84,7 @@ const _GenerateKeysPage = ({
   return (
     <WorkflowPageTemplate
       title="Generate Key Pairs"
-      backgroundColor={rainbowMutedColors[2]}
+      backgroundColor={rainbowLightColors[ProgressStep.GENERATE_KEY_PAIRS]}
     >
       <PaperGroup>
         <Paper>
@@ -135,7 +135,7 @@ const _GenerateKeysPage = ({
         />
       </Paper>
       <div className="flex center p30">
-        <Link to={routesEnum.validatorSettingsPage}>
+        <Link to={routesEnum.acknowledgementPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
         <Link to={routesEnum.uploadValidatorPage} onClick={handleSubmit}>

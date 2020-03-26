@@ -21,16 +21,16 @@ export interface acknowledgementState {
 
 const defaultAcknowledgementState: acknowledgementState = {
   acknowledgements: {
-    [acknowledgementId.signup]: false,
-    [acknowledgementId.responsibilities]: false,
-    [acknowledgementId.slashing]: false,
-    [acknowledgementId.keyManagement]: false,
-    [acknowledgementId.signingKeys]: false,
-    [acknowledgementId.transferDelay]: false,
-    [acknowledgementId.commitment]: false,
-    [acknowledgementId.earlyAdoptionRisks]: false,
+    [acknowledgementId.signup]: true,
+    [acknowledgementId.responsibilities]: true,
+    [acknowledgementId.slashing]: true,
+    [acknowledgementId.keyManagement]: true,
+    [acknowledgementId.signingKeys]: true,
+    [acknowledgementId.transferDelay]: true,
+    [acknowledgementId.commitment]: true,
+    [acknowledgementId.earlyAdoptionRisks]: true,
   },
-  allAgreedTo: false,
+  allAgreedTo: true,
 };
 
 export const acknowledgementReducer = (

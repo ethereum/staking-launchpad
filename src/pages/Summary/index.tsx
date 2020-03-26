@@ -12,7 +12,7 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Button } from '../../components/Button';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { ValidatorInfoSummary } from './ValidatorInfoSummary';
 import { SummaryAcknowledgements } from './SummaryAcknowledgements';
 import { WalletDisconnected } from './WalletDisconnected';
@@ -51,7 +51,7 @@ const _SummaryPage = ({
   return (
     <WorkflowPageTemplate
       title="Summary"
-      backgroundColor={rainbowMutedColors[5]}
+      backgroundColor={rainbowLightColors[ProgressStep.SUMMARY]}
     >
       <ValidatorInfoSummary />
       <SummaryAcknowledgements setAllChecked={setAllChecked} />

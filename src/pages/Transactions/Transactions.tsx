@@ -2,14 +2,14 @@ import React from 'react';
 import { Spinning } from 'grommet-controls';
 import { Box } from 'grommet';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 
 export const TransactionsPage = () => (
   <WorkflowPageTemplate
     title="Deposit Summary"
-    backgroundColor={rainbowMutedColors[5]}
+    backgroundColor={rainbowLightColors[5]}
   >
     <Paper>
       <Box align="center">

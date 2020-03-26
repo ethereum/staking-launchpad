@@ -10,7 +10,7 @@ import {
   updateProgress,
   updateTransactionStatus,
 } from '../../store/actions';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
+import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { Paper } from '../../components/Paper';
@@ -24,22 +24,7 @@ import { WalletDisconnected } from '../Summary/WalletDisconnected';
 import { WrongNetwork } from '../Summary/WrongNetwork';
 import { connect } from 'react-redux';
 import { AbstractConnector } from '@web3-react/abstract-connector';
-
-const Container = styled.div`
-  min-height: 100vh;
-  background-color: ${rainbowMutedColors[5]};
-`;
-const Gutter = styled.div`
-  padding: 0 48px;
-  display: flex;
-  justify-content: center;
-`;
-
-const Content = styled.div`
-  width: 100%;
-  max-width: 1024px;
-  margin: 30px 0;
-`;
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 
 interface TransactionsPageProps {
   keyFiles: KeyFileInterface[];
@@ -97,38 +82,33 @@ const _TransactionsPage = ({
     return <WrongNetwork networkName={NETWORK_NAME} />;
 
   return (
-    <Container>
-      <AppBar />
-      <Gutter>
-        <Content>
-          <Heading level={2} size="small" color="blueMedium">
-            Transactions
-          </Heading>
-          <Paper className="mt20">
-            <Heading level={3} size="small" color="blueMedium">
-              Transactions for {keyFiles.length} validators
-            </Heading>
-            <Text>
-              You must sign an individual transaction for each key you created.
-            </Text>
-            <Text>
-              You can initiate these all at once, or sign them individually from
-              the keylist below
-            </Text>
-            <div className="flex center mt30">
-              <Button
-                width={300}
-                rainbow
-                label={createButtonText()}
-                onClick={handleAllTransactionClick}
-                disabled={remainingTxCount === 0}
-              />
-            </div>
-          </Paper>
-          <KeyList />
-        </Content>
-      </Gutter>
-    </Container>
+    <WorkflowPageTemplate
+      title="Transactions"
+      backgroundColor={rainbowLightColors[ProgressStep.TRANSACTION_SIGNING]}
+    >
+      <Paper className="mt20">
+        <Heading level={3} size="small" color="blueMedium">
+          Transactions for {keyFiles.length} validators
+        </Heading>
+        <Text>
+          You must sign an individual transaction for each key you created.
+        </Text>
+        <Text>
+          You can initiate these all at once, or sign them individually from the
+          keylist below
+        </Text>
+        <div className="flex center mt30">
+          <Button
+            width={300}
+            rainbow
+            label={createButtonText()}
+            onClick={handleAllTransactionClick}
+            disabled={remainingTxCount === 0}
+          />
+        </div>
+      </Paper>
+      <KeyList />
+    </WorkflowPageTemplate>
   );
 };
 

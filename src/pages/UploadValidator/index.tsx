@@ -17,7 +17,6 @@ import {
 } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { Button } from '../../components/Button';
-import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { verifySignature } from '../../utils/verifySignature';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
@@ -141,9 +140,8 @@ export const _UploadValidatorPage = ({
     [updateKeyFiles]
   );
 
-  // if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE) {
-  //   return routeToCorrectProgressStep(progress);
-  // }
+  if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE)
+    return routeToCorrectProgressStep(progress);
 
   return (
     <WorkflowPageTemplate

@@ -17,7 +17,6 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { StoreState } from '../../store/reducers';
 import { ProgressStep } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
-import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
@@ -52,9 +51,9 @@ const _ConnectWalletPage = ({
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  // if (progress < ProgressStep.CONNECT_WALLET) {
-  //   return routeToCorrectProgressStep(progress);
-  // }
+  if (progress < ProgressStep.CONNECT_WALLET) {
+    return routeToCorrectProgressStep(progress);
+  }
 
   if (walletConnected) {
     return (

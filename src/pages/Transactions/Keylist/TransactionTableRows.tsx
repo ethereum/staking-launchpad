@@ -53,22 +53,28 @@ const _TransactionTableRows = ({
 
   return (
     <TableBody>
-      {keyFiles.map(keyFile => (
-        <TableRow key={keyFile.pubkey}>
-          <TableCell>
-            <Text className="dont-break-out">{keyFile.pubkey}</Text>
-          </TableCell>
-          <TableCell>
-            <Status status={keyFile.transactionStatus} />
-          </TableCell>
-          <TableCell>
-            <ActionButton
-              onClick={() => handleActionClick(keyFile)}
-              status={keyFile.transactionStatus}
-            />
-          </TableCell>
-        </TableRow>
-      ))}
+      {keyFiles.map(keyFile => {
+        const { pubkey, transactionStatus } = keyFile;
+        return (
+          <TableRow key={pubkey}>
+            <TableCell>
+              <Text className="dont-break-out">{`${pubkey.slice(
+                0,
+                10
+              )}...${pubkey.slice(-10)}`}</Text>
+            </TableCell>
+            <TableCell>
+              <Status status={transactionStatus} />
+            </TableCell>
+            <TableCell>
+              <ActionButton
+                onClick={() => handleActionClick(keyFile)}
+                status={transactionStatus}
+              />
+            </TableCell>
+          </TableRow>
+        );
+      })}
     </TableBody>
   );
 };

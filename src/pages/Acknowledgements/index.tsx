@@ -21,7 +21,6 @@ import {
 } from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
-import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
 
@@ -108,10 +107,7 @@ const _AcknowledgementPage = ({
   };
 
   return (
-    <WorkflowPageTemplate
-      title="Overview"
-      progressStep={ProgressStep.OVERVIEW}
-    >
+    <WorkflowPageTemplate title="Overview" progressStep={ProgressStep.OVERVIEW}>
       {renderIntroSection()}
       {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
         <AcknowledgementSection

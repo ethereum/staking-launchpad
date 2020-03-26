@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
+import { connect } from 'react-redux';
+import { AbstractConnector } from '@web3-react/abstract-connector';
 import { StoreState } from '../../store/reducers';
 import {
   KeyFileInterface,
@@ -10,8 +11,6 @@ import {
   updateProgress,
   updateTransactionStatus,
 } from '../../store/actions';
-import { rainbowLightColors } from '../../styles/styledComponentsTheme';
-import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
@@ -22,9 +21,8 @@ import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../Summary/WalletDisconnected';
 import { WrongNetwork } from '../Summary/WrongNetwork';
-import { connect } from 'react-redux';
-import { AbstractConnector } from '@web3-react/abstract-connector';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 
 interface TransactionsPageProps {
   keyFiles: KeyFileInterface[];
@@ -75,8 +73,8 @@ const _TransactionsPage = ({
       }
     });
 
-  // if (progress !== ProgressStep.TRANSACTION_SIGNING)
-  //   return routeToCorrectProgressStep(progress);
+  if (progress !== ProgressStep.TRANSACTION_SIGNING)
+    return routeToCorrectProgressStep(progress);
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;

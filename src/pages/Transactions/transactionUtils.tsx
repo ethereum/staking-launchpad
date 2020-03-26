@@ -1,12 +1,10 @@
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import Web3 from 'web3';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Eth } from 'web3-eth';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
-import {
-  KeyFileInterface,
-  TransactionStatuses,
-  updateTransactionStatus,
-} from '../../store/actions';
+import { KeyFileInterface, TransactionStatuses } from '../../store/actions';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { contractAddress, pricePerValidator } from '../../enums';

@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormNextLink } from 'grommet-icons';
+import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { TransactionStatuses } from '../../../store/actions';
 
+const Container = styled.div`
+  width: 100px;
+  display: flex;
+`;
 const ButtonText = styled(Text)`
   line-height: inherit;
   font-size: 16px;
@@ -21,18 +25,18 @@ interface ActionButtonProps {
 export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
   if (status === TransactionStatuses.READY) {
     return (
-      <div className="flex">
+      <Container>
         <ButtonText onClick={onClick}>Start</ButtonText>
         <FormNextLink />
-      </div>
+      </Container>
     );
   }
   if (status === TransactionStatuses.PENDING) {
     return (
-      <div className="flex">
+      <Container>
         <ButtonText onClick={onClick}>Retry</ButtonText>
         <FormNextLink />
-      </div>
+      </Container>
     );
   }
   if (
@@ -40,9 +44,13 @@ export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
     status === TransactionStatuses.SUCCEEDED
   ) {
     return (
-      <div>
-        <ButtonText onClick={onClick}>Alethio</ButtonText>
-        <ButtonText onClick={onClick}>Etherscan</ButtonText>
+      <div className="flex">
+        <ButtonText onClick={onClick} className="mr5">
+          Alethio <Share size="small" />
+        </ButtonText>
+        <ButtonText onClick={onClick}>
+          Etherscan <Share size="small" />
+        </ButtonText>
       </div>
     );
   }
@@ -51,10 +59,10 @@ export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
     status === TransactionStatuses.REJECTED
   ) {
     return (
-      <div className="flex">
+      <Container>
         <ButtonText onClick={onClick}>Try again</ButtonText>
         <FormNextLink />
-      </div>
+      </Container>
     );
   }
 

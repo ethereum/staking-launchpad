@@ -12,13 +12,13 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Button } from '../../components/Button';
-import { rainbowLightColors } from '../../styles/styledComponentsTheme';
 import { ValidatorInfoSummary } from './ValidatorInfoSummary';
 import { SummaryAcknowledgements } from './SummaryAcknowledgements';
 import { WalletDisconnected } from './WalletDisconnected';
 import { WrongNetwork } from './WrongNetwork';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
+import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 
 const NETWORK_NAME = 'Göerli Testnet';
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
@@ -44,7 +44,8 @@ const _SummaryPage = ({
     }
   };
 
-  // if (progress !== ProgressStep.SUMMARY) return routeToCorrectProgressStep(progress);
+  if (progress !== ProgressStep.SUMMARY)
+    return routeToCorrectProgressStep(progress);
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;

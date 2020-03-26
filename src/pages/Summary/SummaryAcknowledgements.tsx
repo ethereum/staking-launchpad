@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { AcknowledgementSection } from './AcknowledgementSection';
 import { CheckBox } from 'grommet';
+import { FormNextLink } from 'grommet-icons';
+import { AcknowledgementSection } from './AcknowledgementSection';
 import { pricePerValidator } from '../../enums';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
-import { FormNextLink } from 'grommet-icons';
 
 interface SummaryAcknowledgementsProps {
   setAllChecked: (v: boolean) => void;
@@ -30,9 +30,8 @@ export const SummaryAcknowledgements = ({
           checked={losePhrase}
           label={
             <Text>
-              {' '}
-              I understand that if I lose my mnemonic phrase, I won't be able to
-              withdraw my funds
+              I understand that if I lose my mnemonic phrase, I will not be able
+              to withdraw my funds
             </Text>
           }
         />

@@ -49,10 +49,7 @@ const _SummaryPage = ({
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;
   return (
-    <WorkflowPageTemplate
-      title="Summary"
-      backgroundColor={rainbowLightColors[ProgressStep.SUMMARY]}
-    >
+    <WorkflowPageTemplate title="Summary" progressStep={ProgressStep.SUMMARY}>
       <ValidatorInfoSummary />
       <SummaryAcknowledgements setAllChecked={setAllChecked} />
       <div className="flex center p30">

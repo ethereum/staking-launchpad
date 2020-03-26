@@ -110,7 +110,7 @@ const _AcknowledgementPage = ({
   return (
     <WorkflowPageTemplate
       title="Overview"
-      backgroundColor={rainbowLightColors[ProgressStep.OVERVIEW]}
+      progressStep={ProgressStep.OVERVIEW}
     >
       {renderIntroSection()}
       {pageContent.map((acknowledgement: AcknowledgementSectionData) => (

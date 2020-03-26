@@ -84,7 +84,7 @@ const _TransactionsPage = ({
   return (
     <WorkflowPageTemplate
       title="Transactions"
-      backgroundColor={rainbowLightColors[ProgressStep.TRANSACTION_SIGNING]}
+      progressStep={ProgressStep.TRANSACTION_SIGNING}
     >
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">

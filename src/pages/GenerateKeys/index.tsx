@@ -84,7 +84,7 @@ const _GenerateKeysPage = ({
   return (
     <WorkflowPageTemplate
       title="Generate Key Pairs"
-      backgroundColor={rainbowLightColors[ProgressStep.GENERATE_KEY_PAIRS]}
+      progressStep={ProgressStep.GENERATE_KEY_PAIRS}
     >
       <PaperGroup>
         <Paper>

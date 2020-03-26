@@ -60,7 +60,7 @@ const _ConnectWalletPage = ({
     return (
       <WorkflowPageTemplate
         title="Connect Wallet"
-        backgroundColor={rainbowLightColors[ProgressStep.CONNECT_WALLET]}
+        progressStep={ProgressStep.CONNECT_WALLET}
       >
         <WalletConnected />
       </WorkflowPageTemplate>
@@ -70,7 +70,7 @@ const _ConnectWalletPage = ({
   return (
     <WorkflowPageTemplate
       title="Connect Wallet"
-      backgroundColor={rainbowLightColors[ProgressStep.CONNECT_WALLET]}
+      progressStep={ProgressStep.CONNECT_WALLET}
     >
       <ResponsiveContext.Consumer>
         {() => (

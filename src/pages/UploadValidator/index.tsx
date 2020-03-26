@@ -148,7 +148,7 @@ export const _UploadValidatorPage = ({
   return (
     <WorkflowPageTemplate
       title="Upload Deposits"
-      backgroundColor={rainbowLightColors[ProgressStep.UPLOAD_VALIDATOR_FILE]}
+      progressStep={ProgressStep.UPLOAD_VALIDATOR_FILE}
     >
       <Paper>
         <StyledDropzone fileAccepted={fileAccepted} onDrop={onDrop} />

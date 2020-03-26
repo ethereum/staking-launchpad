@@ -4,11 +4,16 @@ import { Heading } from 'grommet';
 import { WorkflowProgressBar } from './WorkflowProgressBar';
 import { AppBar } from '../AppBar';
 import { DesktopOnlyModal } from '../DesktopOnlyModal';
+import { ProgressStep } from '../../store/actions';
+import {
+  rainbowColors,
+  rainbowLightColors,
+} from '../../styles/styledComponentsTheme';
 
 interface WorkflowPageTemplateProps {
   children: React.ReactNode;
   title: string;
-  backgroundColor?: string;
+  progressStep: ProgressStep;
 }
 
 const Content = styled.div`
@@ -23,20 +28,24 @@ const Gutter = styled.div`
   justify-content: center;
 `;
 const Background = styled.div`
-  background-color: ${(p: { backgroundColor: string }) => p.backgroundColor};
+  background-image: ${(p: { progressStep: ProgressStep }) =>
+    `linear-gradient(to top left, ${rainbowLightColors[p.progressStep]}, ${
+      rainbowColors[p.progressStep]
+    });`};
+
   min-height: 100vh;
 `;
 
 export const WorkflowPageTemplate = ({
   children,
   title,
-  backgroundColor = 'lightgray',
+  progressStep,
 }: WorkflowPageTemplateProps): JSX.Element => {
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }
   return (
-    <Background backgroundColor={backgroundColor}>
+    <Background progressStep={progressStep}>
       <AppBar />
       <WorkflowProgressBar />
       <Gutter>

@@ -43,8 +43,6 @@ const _WalletConnected = ({
   }
 
   const handleSubmit = () => {
-    console.log('handling submit');
-
     if (progress === ProgressStep.CONNECT_WALLET) {
       updateProgress(ProgressStep.SUMMARY);
     }

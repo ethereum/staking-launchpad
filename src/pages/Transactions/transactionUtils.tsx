@@ -1,4 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector';
+import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Eth } from 'web3-eth';
@@ -7,10 +8,11 @@ import { SendOptions } from 'web3-eth-contract';
 import { KeyFileInterface, TransactionStatuses } from '../../store/actions';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
-import { contractAddress, pricePerValidator } from '../../enums';
+import { contractAddress, pricePerValidator as rawPrice } from '../../enums';
 
 const CONTRACT_ADDRESS = contractAddress;
-const TX_VALUE = pricePerValidator * 1e18; // 3.2 eth for testnet, change to 32 on mainnet
+const pricePerValidator = new BigNumber(rawPrice);
+const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 
 const isUserRejectionError = (error: any) => {
   if (error.code === 4001) return true; // metamask
@@ -54,7 +56,7 @@ export const handleTransaction = async (
     const web3: Eth = new Web3(walletProvider).eth;
     const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
     const transactionParameters: SendOptions = {
-      gasPrice: '0x0055e72a000',
+      gasPrice: '0x0055e72a000', // TODO estimate gas value
       from: account as string,
       value: TX_VALUE,
     };
@@ -68,7 +70,6 @@ export const handleTransaction = async (
       )
       .send(transactionParameters)
       .on('transactionHash', (txHash: string): void => {
-        console.log('working with: ', txHash);
         updateTransactionStatus(pubkey, TransactionStatuses.STARTED, txHash);
       })
       .on('receipt', () => {

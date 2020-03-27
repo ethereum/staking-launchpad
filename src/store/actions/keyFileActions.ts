@@ -49,7 +49,6 @@ export const updateTransactionStatus = (
   status: TransactionStatuses,
   txHash?: string
 ): UpdateTransactionStatusAction => {
-  console.log('the action...? ', txHash);
   return {
     type: ActionTypes.updateTransactionStatus,
     payload: {

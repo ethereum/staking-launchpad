@@ -29,19 +29,18 @@ export const ActionButton = ({
   txHash,
   onClick,
 }: ActionButtonProps) => {
-  console.log('GOT THE X HASH: ', txHash);
   if (status === TransactionStatuses.READY) {
     return (
-      <Container>
-        <ButtonText onClick={onClick}>Start</ButtonText>
+      <Container onClick={onClick}>
+        <ButtonText>Start</ButtonText>
         <FormNextLink />
       </Container>
     );
   }
   if (status === TransactionStatuses.PENDING) {
     return (
-      <Container>
-        <ButtonText onClick={onClick}>Retry</ButtonText>
+      <Container onClick={onClick}>
+        <ButtonText>Retry</ButtonText>
         <FormNextLink />
       </Container>
     );
@@ -70,8 +69,8 @@ export const ActionButton = ({
     status === TransactionStatuses.REJECTED
   ) {
     return (
-      <Container>
-        <ButtonText onClick={onClick}>Try again</ButtonText>
+      <Container onClick={onClick}>
+        <ButtonText>Try again</ButtonText>
         <FormNextLink />
       </Container>
     );

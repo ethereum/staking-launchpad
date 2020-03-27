@@ -19,6 +19,9 @@ export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.SUMMARY) {
     return <Redirect push to={routesEnum.summaryPage} />;
   }
+  if (step === ProgressStep.TRANSACTION_SIGNING) {
+    return <Redirect push to={routesEnum.transactionsPage} />;
+  }
   if (step === ProgressStep.CONGRATULATIONS) {
     return <Redirect push to={routesEnum.congratulationsPage} />;
   }

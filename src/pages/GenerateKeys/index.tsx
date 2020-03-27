@@ -60,7 +60,6 @@ const _GenerateKeysPage = ({
   };
 
   const handleSubmit = () => {
-    console.log('handling click');
     if (progress === ProgressStep.GENERATE_KEY_PAIRS) {
       updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE);
     }

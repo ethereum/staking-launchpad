@@ -69,7 +69,7 @@ const _SummaryPage = ({
     }
   };
 
-  if (progress !== ProgressStep.SUMMARY)
+  if (progress < ProgressStep.SUMMARY)
     return routeToCorrectProgressStep(progress);
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID)

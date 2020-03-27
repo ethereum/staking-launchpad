@@ -32,6 +32,7 @@ module.exports = {
     'no-shadow': 'warn',
     'react/destructuring-assignment': 'warn',
     'consistent-return': 'warn',
+    eqeqeq: 'warn',
   },
   settings: {
     'import/resolver': {

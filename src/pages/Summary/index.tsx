@@ -27,6 +27,7 @@ import { pricePerValidator } from '../../enums';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
+import { KeyList } from './KeyList';
 
 const Container = styled.div`
   width: 100%;
@@ -93,6 +94,7 @@ const _SummaryPage = ({
           </Container>
         </Box>
       </Paper>
+      <KeyList keyFiles={keyFiles} />
       <AcknowledgementSection title="Please proceed with caution">
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}

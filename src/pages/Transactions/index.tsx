@@ -50,7 +50,6 @@ const _TransactionsPage = ({
   const [routeToCongratulationsPage, setRouteToCongratulationsPage] = useState(
     false
   );
-
   const totalTxCount = keyFiles.length;
   const remainingTxCount = keyFiles.filter(
     file => file.transactionStatus === TransactionStatuses.READY
@@ -70,10 +69,10 @@ const _TransactionsPage = ({
     return 'No pending transactions';
   };
 
-  const handleAllTransactionsClick = async () =>
-    keyFiles.forEach(validator => {
+  const handleAllTransactionsClick = () =>
+    keyFiles.forEach(async validator => {
       if (validator.transactionStatus === TransactionStatuses.READY) {
-        handleTransaction(
+        await handleTransaction(
           validator,
           connector as AbstractConnector,
           account,
@@ -139,9 +138,10 @@ const mdtp = (dispatch: any) => ({
   },
   updateTransactionStatus: (
     pubkey: string,
-    status: TransactionStatuses
+    status: TransactionStatuses,
+    txHash?: string
   ): void => {
-    dispatch(updateTransactionStatus(pubkey, status));
+    dispatch(updateTransactionStatus(pubkey, status, txHash));
   },
 });
 

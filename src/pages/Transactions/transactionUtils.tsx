@@ -63,17 +63,15 @@ export const handleTransaction = async (
         prefix0X(signed_deposit_data_root)
       )
       .send(transactionParameters)
-      .on('transactionHash', (hash: any): void => {
-        console.log('on tx hash', hash);
+      .on('transactionHash', (): void => {
         updateTransactionStatus(pubkey, TransactionStatuses.STARTED);
       })
-      .on('receipt', (receipt: any) => {
-        console.log('on receipt', receipt);
+      .on('receipt', () => {
+        // do something?
       })
       .on(
         'confirmation',
         (confirmation: number, receipt: { status: {} }): any => {
-          console.log('on confirmation');
           if (confirmation === 0) {
             if (receipt.status) {
               updateTransactionStatus(pubkey, TransactionStatuses.SUCCEEDED);
@@ -84,7 +82,6 @@ export const handleTransaction = async (
         }
       )
       .on('error', (error: any) => {
-        console.log('on error', error.message);
         if (isUserRejectionError(error)) {
           updateTransactionStatus(pubkey, TransactionStatuses.REJECTED);
         } else {
@@ -92,7 +89,6 @@ export const handleTransaction = async (
         }
       });
   } catch (rejected) {
-    console.log('tx failed');
     updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
   }
 };

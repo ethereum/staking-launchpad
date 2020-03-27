@@ -1,5 +1,5 @@
-import { Action, ActionTypes } from '../actions';
 import { every, values } from 'lodash';
+import { Action, ActionTypes } from '../actions';
 
 export enum acknowledgementId {
   signup = 'signup',
@@ -21,16 +21,16 @@ export interface acknowledgementState {
 
 const defaultAcknowledgementState: acknowledgementState = {
   acknowledgements: {
-    [acknowledgementId.signup]: true,
-    [acknowledgementId.responsibilities]: true,
-    [acknowledgementId.slashing]: true,
-    [acknowledgementId.keyManagement]: true,
-    [acknowledgementId.signingKeys]: true,
-    [acknowledgementId.transferDelay]: true,
-    [acknowledgementId.commitment]: true,
-    [acknowledgementId.earlyAdoptionRisks]: true,
+    [acknowledgementId.signup]: false,
+    [acknowledgementId.responsibilities]: false,
+    [acknowledgementId.slashing]: false,
+    [acknowledgementId.keyManagement]: false,
+    [acknowledgementId.signingKeys]: false,
+    [acknowledgementId.transferDelay]: false,
+    [acknowledgementId.commitment]: false,
+    [acknowledgementId.earlyAdoptionRisks]: false,
   },
-  allAgreedTo: true,
+  allAgreedTo: false,
 };
 
 export const acknowledgementReducer = (

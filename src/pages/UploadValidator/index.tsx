@@ -123,7 +123,7 @@ export const _UploadValidatorPage = ({
                 updateKeyFiles(
                   fileData.map((keyFile: KeyFileInterface) => ({
                     ...keyFile,
-                    transactionStatus: TransactionStatuses.READY,
+                    transactionStatus: TransactionStatuses.READY, // initialize each keyFile with ready state for transaction
                   }))
                 );
               } else {
@@ -144,10 +144,7 @@ export const _UploadValidatorPage = ({
     return routeToCorrectProgressStep(progress);
 
   return (
-    <WorkflowPageTemplate
-      title="Upload Deposits"
-      progressStep={ProgressStep.UPLOAD_VALIDATOR_FILE}
-    >
+    <WorkflowPageTemplate title="Upload Deposits">
       <Paper>
         <StyledDropzone fileAccepted={fileAccepted} onDrop={onDrop} />
         {invalidKeyFile && (

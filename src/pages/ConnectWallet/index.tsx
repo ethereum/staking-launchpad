@@ -57,20 +57,14 @@ const _ConnectWalletPage = ({
 
   if (walletConnected) {
     return (
-      <WorkflowPageTemplate
-        title="Connect Wallet"
-        progressStep={ProgressStep.CONNECT_WALLET}
-      >
+      <WorkflowPageTemplate title="Connect Wallet">
         <WalletConnected />
       </WorkflowPageTemplate>
     );
   }
 
   return (
-    <WorkflowPageTemplate
-      title="Connect Wallet"
-      progressStep={ProgressStep.CONNECT_WALLET}
-    >
+    <WorkflowPageTemplate title="Connect Wallet">
       <ResponsiveContext.Consumer>
         {() => (
           <Grid columns="medium">

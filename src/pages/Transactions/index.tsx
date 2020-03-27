@@ -19,8 +19,8 @@ import { KeyList } from './Keylist';
 import { handleTransaction } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
-import { WalletDisconnected } from '../Summary/WalletDisconnected';
-import { WrongNetwork } from '../Summary/WrongNetwork';
+import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
+import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 
@@ -50,7 +50,6 @@ const _TransactionsPage = ({
   const remainingTxCount = keyFiles.filter(
     file => file.transactionStatus === TransactionStatuses.READY
   ).length;
-  console.log('reaminging: ', remainingTxCount);
 
   const createButtonText = (): string => {
     if (totalTxCount === remainingTxCount)
@@ -61,7 +60,7 @@ const _TransactionsPage = ({
     return 'No pending transactions';
   };
 
-  const handleAllTransactionClick = async () =>
+  const handleAllTransactionsClick = async () =>
     keyFiles.forEach(validator => {
       if (validator.transactionStatus === TransactionStatuses.READY) {
         handleTransaction(
@@ -80,18 +79,15 @@ const _TransactionsPage = ({
     return <WrongNetwork networkName={NETWORK_NAME} />;
 
   return (
-    <WorkflowPageTemplate
-      title="Transactions"
-      progressStep={ProgressStep.TRANSACTION_SIGNING}
-    >
+    <WorkflowPageTemplate title="Transactions">
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
           Transactions for {keyFiles.length} validators
         </Heading>
-        <Text>
+        <Text className="mt20">
           You must sign an individual transaction for each key you created.
         </Text>
-        <Text>
+        <Text className="mt10">
           You can initiate these all at once, or sign them individually from the
           keylist below
         </Text>
@@ -100,7 +96,7 @@ const _TransactionsPage = ({
             width={300}
             rainbow
             label={createButtonText()}
-            onClick={handleAllTransactionClick}
+            onClick={handleAllTransactionsClick}
             disabled={remainingTxCount === 0}
           />
         </div>

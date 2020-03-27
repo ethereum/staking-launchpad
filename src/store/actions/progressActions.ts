@@ -1,9 +1,7 @@
 import { ActionTypes } from './index';
-// import { routesEnum } from "../../Routes";
 
 export enum ProgressStep {
   'OVERVIEW',
-  // 'VALIDATOR_SETTINGS',
   'GENERATE_KEY_PAIRS',
   'UPLOAD_VALIDATOR_FILE',
   'CONNECT_WALLET',

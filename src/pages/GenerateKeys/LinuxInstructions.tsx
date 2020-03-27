@@ -16,7 +16,9 @@ export const LinuxInstructions = ({
       <Heading level={3} size="small" color="blueMedium">
         3. Type/copy the following lines into your terminal window:
       </Heading>
-      <Text>Type the following lines into the terminal window.</Text>
+      <Text className="mt20">
+        Type the following lines into the terminal window.
+      </Text>
       <CodeBox
         className="mt20"
         snippet="git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git"

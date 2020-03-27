@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { FormNextLink } from 'grommet-icons';
 import { Box, Heading, Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -44,6 +43,8 @@ const _WalletConnected = ({
   }
 
   const handleSubmit = () => {
+    console.log('handling submit');
+
     if (progress === ProgressStep.CONNECT_WALLET) {
       updateProgress(ProgressStep.SUMMARY);
     }
@@ -92,8 +93,6 @@ const _WalletConnected = ({
               rainbow
               disabled={!networkAllowed}
               label="Continue on testnet"
-              reverse
-              icon={<FormNextLink />}
             />
           </Link>
         </div>

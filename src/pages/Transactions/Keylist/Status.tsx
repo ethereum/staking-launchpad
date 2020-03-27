@@ -1,63 +1,56 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Spinning } from 'grommet-controls';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
 import { TransactionStatuses } from '../../../store/actions';
 
-const Container = styled.div`
-  //width: 100%;
-  //width: 200px;
-  display: flex;
-`;
-
 export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.READY) {
     return (
-      <Container>
+      <div className="flex">
         <Dot success className="mr5" />
         <Text>Ready</Text>
-      </Container>
+      </div>
     );
   }
   if (status === TransactionStatuses.PENDING) {
     return (
-      <Container>
+      <div className="flex">
         <Dot className="mr5" />
         <Text>Waiting for wallet confirmation</Text>
-      </Container>
+      </div>
     );
   }
   if (status === TransactionStatuses.STARTED) {
     return (
-      <Container>
+      <div className="flex">
         <Spinning kind="pulse" />
         <Text color="green">Transaction Started</Text>
-      </Container>
+      </div>
     );
   }
   if (status === TransactionStatuses.SUCCEEDED) {
     return (
-      <Container>
+      <div className="flex">
         <Dot success className="mr5" />
         <Text>Transaction Successful</Text>
-      </Container>
+      </div>
     );
   }
   if (status === TransactionStatuses.FAILED) {
     return (
-      <Container>
+      <div className="flex">
         <Dot error className="mr5" />
         <Text>Transaction Failed</Text>
-      </Container>
+      </div>
     );
   }
   if (status === TransactionStatuses.REJECTED) {
     return (
-      <Container>
+      <div className="flex">
         <Dot error className="mr5" />
         <Text>Transaction Rejected</Text>
-      </Container>
+      </div>
     );
   }
 

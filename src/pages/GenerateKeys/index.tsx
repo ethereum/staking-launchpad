@@ -60,6 +60,7 @@ const _GenerateKeysPage = ({
   };
 
   const handleSubmit = () => {
+    console.log('handling click');
     if (progress === ProgressStep.GENERATE_KEY_PAIRS) {
       updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE);
     }
@@ -82,27 +83,8 @@ const _GenerateKeysPage = ({
     return routeToCorrectProgressStep(progress);
   }
 
-  // const warnings: string[] = [
-  //   `Transactions with less than ${pricePerValidator} ETH will need to be topped up to run a validator.`,
-  //   'You will sign a separate transaction for each validator.',
-  // ];
-
-  //       <Paper error className="mt20">
-  //         {warnings.map(warning => (
-  //           <div className="flex my10" key={warning}>
-  //             <CircleAlert />
-  //             <Text size="medium" className="ml10" weight="bold">
-  //               {warning}
-  //             </Text>
-  //           </div>
-  //         ))}
-  //       </Paper>
-
   return (
-    <WorkflowPageTemplate
-      title="Generate Key Pairs"
-      progressStep={ProgressStep.GENERATE_KEY_PAIRS}
-    >
+    <WorkflowPageTemplate title="Generate Key Pairs">
       <Paper>
         <Heading level={3} size="small" color="blueDark">
           1. How many validators would you like to run?
@@ -124,7 +106,7 @@ const _GenerateKeysPage = ({
         <Heading level={3} size="small" color="blueMedium">
           2. What is your current operating system?
         </Heading>
-        <Text>
+        <Text className="mt20">
           Choose your current OS so we can tailor the instructions for you.
         </Text>
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
@@ -134,14 +116,14 @@ const _GenerateKeysPage = ({
         <Heading level={3} size="small" color="blueMedium">
           4. Save the key files and get the validator file ready
         </Heading>
-        <Text>
-          You should now be able to save the file{' '}
+        <Text className="mt20">
+          You should now be able to save the file
           <Highlight>signing-keystore-....json</Highlight> which contains your
           key pairs. Please make sure keep it safe, preferably offline.
         </Text>
         <InstructionImgContainer />
         <Text>
-          The second file you will export is{' '}
+          The second file you will export is
           <Highlight>deposit_data.json</Highlight> - you will need to upload in
           the next step.
         </Text>

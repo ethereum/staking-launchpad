@@ -107,7 +107,7 @@ const _AcknowledgementPage = ({
   };
 
   return (
-    <WorkflowPageTemplate title="Overview" progressStep={ProgressStep.OVERVIEW}>
+    <WorkflowPageTemplate title="Overview">
       {renderIntroSection()}
       {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
         <AcknowledgementSection

@@ -33,7 +33,7 @@ const _AcknowledgementPage = ({
   updateAcknowledgementState,
   progress,
 }: AcknowledgementPageProps) => {
-  const [activeAcknowledgement, setActiveAcknowledgement] = useState<
+  const [activeAcknowledgementId, setActiveAcknowledgementId] = useState<
     AcknowledgementIdsEnum
   >(
     progress === ProgressStep.OVERVIEW
@@ -63,17 +63,17 @@ const _AcknowledgementPage = ({
   const handleContinueClick = (id: AcknowledgementIdsEnum) => {
     updateAcknowledgementState(id, true);
     if (id + 1 in AcknowledgementIdsEnum) {
-      setActiveAcknowledgement(id + 1);
+      setActiveAcknowledgementId(id + 1);
     }
   };
   const handleGoBackClick = (id: AcknowledgementIdsEnum) => {
     if (id - 1 in AcknowledgementIdsEnum) {
-      setActiveAcknowledgement(id - 1);
+      setActiveAcknowledgementId(id - 1);
     }
   };
 
   const renderAcknowledgement = () => {
-    const Acknowledgement = pageContent[activeAcknowledgement];
+    const Acknowledgement = pageContent[activeAcknowledgementId];
     return (
       <Acknowledgement
         handleContinueClick={handleContinueClick}
@@ -89,8 +89,8 @@ const _AcknowledgementPage = ({
       <div className="flex">
         {renderAcknowledgement()}
         <AcknowledgementProgressTracker
-          activeAcknowledgement={activeAcknowledgement}
-          setActiveAcknowledgement={setActiveAcknowledgement}
+          activeAcknowledgementId={activeAcknowledgementId}
+          setActiveAcknowledgementId={setActiveAcknowledgementId}
         />
       </div>
     </WorkflowPageTemplate>

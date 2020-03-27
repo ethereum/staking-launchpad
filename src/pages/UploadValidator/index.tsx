@@ -9,14 +9,14 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { Paper } from '../../components/Paper';
 import { StoreState } from '../../store/reducers';
 import {
-  keyFile,
+  KeyFileInterface,
   ProgressStep,
+  TransactionStatuses,
   updateKeyFiles,
   updateProgress,
 } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { Button } from '../../components/Button';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { verifySignature } from '../../utils/verifySignature';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
@@ -36,19 +36,19 @@ const ErrorText = styled(Text)`
 `;
 
 interface Props {
-  updateKeyFiles(files: keyFile[]): void;
-  keyFiles: keyFile[];
+  updateKeyFiles(files: KeyFileInterface[]): void;
+  keyFiles: KeyFileInterface[];
   updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
 }
 
-const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
+const validateKeyFile = async (files: KeyFileInterface[]): Promise<boolean> => {
   await initBLS();
 
   if (!Array.isArray(files)) return false;
   if (files.length <= 0) return false;
 
-  const keyfileStatuses: boolean[] = files.map(file => {
+  const keyFileStatuses: boolean[] = files.map(file => {
     const {
       pubkey,
       withdrawal_credentials,
@@ -92,7 +92,7 @@ const validateKeyFile = async (files: keyFile[]): Promise<boolean> => {
     // perform BLS check
     return verifySignature(pubkey, signature, deposit_data_root);
   });
-  return _every(keyfileStatuses);
+  return _every(keyFileStatuses);
 };
 
 export const _UploadValidatorPage = ({
@@ -119,8 +119,13 @@ export const _UploadValidatorPage = ({
           if (event.target) {
             try {
               const fileData = JSON.parse(event.target.result as string);
-              if (await validateKeyFile(fileData as keyFile[])) {
-                updateKeyFiles(fileData);
+              if (await validateKeyFile(fileData as KeyFileInterface[])) {
+                updateKeyFiles(
+                  fileData.map((keyFile: KeyFileInterface) => ({
+                    ...keyFile,
+                    transactionStatus: TransactionStatuses.READY, // initialize each keyFile with ready state for transaction
+                  }))
+                );
               } else {
                 setInvalidKeyFile(true);
               }
@@ -135,15 +140,11 @@ export const _UploadValidatorPage = ({
     [updateKeyFiles]
   );
 
-  if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE) {
+  if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE)
     return routeToCorrectProgressStep(progress);
-  }
 
   return (
-    <WorkflowPageTemplate
-      title="Upload Deposits"
-      backgroundColor={rainbowMutedColors[3]}
-    >
+    <WorkflowPageTemplate title="Upload Deposits">
       <Paper>
         <StyledDropzone fileAccepted={fileAccepted} onDrop={onDrop} />
         {invalidKeyFile && (
@@ -177,7 +178,8 @@ const mstp = ({ keyFiles, progress }: StoreState) => ({
   progress,
 });
 const mdtp = (dispatch: any) => ({
-  updateKeyFiles: (files: keyFile[]): void => dispatch(updateKeyFiles(files)),
+  updateKeyFiles: (files: KeyFileInterface[]): void =>
+    dispatch(updateKeyFiles(files)),
   updateProgress: (step: ProgressStep): void => {
     dispatch(updateProgress(step));
   },

@@ -14,7 +14,6 @@ import {
   updateAcknowledgementState,
   updateProgress,
 } from '../../store/actions';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { pageContent } from './pageContent';
 import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
 
@@ -57,7 +56,7 @@ const _AcknowledgementPage = ({
 
   const handleSubmit = () => {
     if (progress === ProgressStep.OVERVIEW) {
-      updateProgress(ProgressStep.VALIDATOR_SETTINGS);
+      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -86,10 +85,7 @@ const _AcknowledgementPage = ({
   };
 
   return (
-    <WorkflowPageTemplate
-      title="Overview"
-      backgroundColor={rainbowMutedColors[0]}
-    >
+    <WorkflowPageTemplate title="Overview">
       <div className="flex">
         {renderAcknowledgement()}
         <AcknowledgementProgressTracker

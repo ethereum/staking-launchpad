@@ -264,7 +264,7 @@ export const pageContent = {
             label="Back"
           />
           <Link
-            to={routesEnum.validatorSettingsPage}
+            to={routesEnum.generateKeysPage}
             onClick={() => {
               handleContinueClick(AcknowledgementIdsEnum.confirmation);
               handleSubmit();

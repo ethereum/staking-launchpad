@@ -87,11 +87,11 @@ const _AcknowledgementPage = ({
   return (
     <WorkflowPageTemplate title="Overview">
       <div className="flex">
-        {renderAcknowledgement()}
         <AcknowledgementProgressTracker
           activeAcknowledgementId={activeAcknowledgementId}
           setActiveAcknowledgementId={setActiveAcknowledgementId}
         />
+        {renderAcknowledgement()}
       </div>
     </WorkflowPageTemplate>
   );

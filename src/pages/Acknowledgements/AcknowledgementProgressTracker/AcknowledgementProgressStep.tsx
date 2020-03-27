@@ -10,46 +10,51 @@ import {
 } from '../../../store/reducers';
 import { Text } from '../../../components/Text';
 
-const IconContainer = styled.div`
-  width: 30px;
-  margin-right: 5px;
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
-`;
-const CheckContainer = styled.div`
-  background-color: white;
-  margin-left: 5px;
-`;
-
-interface P {
+interface Props {
   theme: any;
   disabled: boolean;
-  active: boolean;
+  isActive: boolean;
 }
 
+const Container = styled.div`
+  position: relative;
+  display: flex;
+  background-color: white;
+  width: ${(p: Props) => (p.isActive ? '100%' : '235px')};
+  margin: auto auto 20px;
+  border-radius: 4px;
+  border: 1px solid ${(p: Props) => p.theme.gray.light};
+  box-shadow: ${(p: Props) =>
+    p.isActive
+      ? '-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);\n' +
+        '\t-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);\n' +
+        '\tbox-shadow:0 0 10px rgba(0, 0, 0, 0.5);'
+      : 'inherit'};
+  cursor: ${(p: Props) => (p.disabled ? 'default' : 'pointer')};
+`;
+const IndexContainer = styled.div`
+  background-color: ${(p: { theme: any }) => p.theme.gray.light};
+  padding: 10px 15px;
+`;
+
+const CheckContainer = styled.div`
+  background-color: ${(p: { theme: any; isActive: boolean }) =>
+    p.isActive ? p.theme.green.dark : p.theme.green.medium};
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  border-radius: 50%;
+  padding: ${(p: { isActive: boolean }) =>
+    p.isActive ? '7px 9px 4px;' : '3px 5px 0px;'};
+`;
+
 const StyledText = styled(Text)`
-  cursor: pointer;
-  color: ${(p: P) => (p.disabled ? p.theme.gray.medium : p.theme.gray.dark)};
-  font-weight: ${(p: P) => (p.active ? 600 : 200)};
+  color: ${(p: Props) =>
+    p.disabled ? p.theme.gray.medium : p.theme.gray.dark};
+  font-weight: ${(p: Props) => (p.isActive ? 600 : 200)};
   font-size: 18px;
   line-height: 40px;
-`;
-// const VerticalLine = styled.span`
-//   background-color: ${(p: { theme: any }) => p.theme.gray.medium};
-//   width: 1px;
-//   height: 380px;
-//   position: absolute;
-//   left: 25px;
-//   top: 16px;
-// `;
-const Radial = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin: auto;
-  border: 7px solid white;
-  background-color: ${(p: { theme: any }) => p.theme.gray.medium};
+  margin-left: 15px;
 `;
 
 interface ProgressItemProps {
@@ -80,21 +85,25 @@ export const AcknowledgementProgressStep = ({
     }
   };
   return (
-    <div className="flex" key={acknowledgementId} style={{ zIndex: 1 }}>
-      <IconContainer>
-        {isComplete ? (
-          <CheckContainer>
-            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible>
-              <Checkmark size="medium" color="green" />
-            </Animated>
-          </CheckContainer>
-        ) : (
-          <Radial />
-        )}
-      </IconContainer>
-      <StyledText disabled={disabled} onClick={handleClick} active={isActive}>
+    <Container
+      key={acknowledgementId}
+      disabled={disabled}
+      isActive={isActive}
+      onClick={handleClick}
+    >
+      <IndexContainer>
+        <Text>{+acknowledgementId + 1}</Text>
+      </IndexContainer>
+      <StyledText disabled={disabled} isActive={isActive}>
         {acknowledgementsWithCopy[acknowledgementId]}
       </StyledText>
-    </div>
+      {isComplete && (
+        <CheckContainer isActive={isActive}>
+          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible>
+            <Checkmark size="medium" color="white" />
+          </Animated>
+        </CheckContainer>
+      )}
+    </Container>
   );
 };

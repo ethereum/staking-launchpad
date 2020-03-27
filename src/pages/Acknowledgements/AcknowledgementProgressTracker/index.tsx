@@ -51,7 +51,7 @@ export const _AcknowledgementProgressTracker = ({
               acknowledgementsWithCopy={acknowledgementsWithCopy}
               acknowledgementId={acknowledgementId}
               setActiveAcknowledgementId={setActiveAcknowledgementId}
-              isActive={activeAcknowledgementId === acknowledgementId}
+              isActive={activeAcknowledgementId === +acknowledgementId}
               acknowledgementState={acknowledgementState}
             />
           );

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { connect } from 'react-redux';
 import { AbstractConnector } from '@web3-react/abstract-connector';
+import _every from 'lodash/every';
 import { StoreState } from '../../store/reducers';
 import {
   KeyFileInterface,
@@ -46,10 +47,19 @@ const _TransactionsPage = ({
     Web3Provider
   >();
 
+  const [routeToCongratulationsPage, setRouteToCongratulationsPage] = useState(
+    false
+  );
+
   const totalTxCount = keyFiles.length;
   const remainingTxCount = keyFiles.filter(
     file => file.transactionStatus === TransactionStatuses.READY
   ).length;
+  const allTxConfirmed = _every(
+    keyFiles.map(
+      file => file.transactionStatus === TransactionStatuses.SUCCEEDED
+    )
+  );
 
   const createButtonText = (): string => {
     if (totalTxCount === remainingTxCount)
@@ -74,9 +84,21 @@ const _TransactionsPage = ({
 
   if (progress !== ProgressStep.TRANSACTION_SIGNING)
     return routeToCorrectProgressStep(progress);
+
   if (!account || !connector) return <WalletDisconnected />;
+
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;
+
+  if (allTxConfirmed) {
+    setTimeout(() => {
+      updateProgress(ProgressStep.CONGRATULATIONS);
+      setRouteToCongratulationsPage(true);
+    }, 3000);
+  }
+  if (routeToCongratulationsPage) {
+    return routeToCorrectProgressStep(ProgressStep.CONGRATULATIONS);
+  }
 
   return (
     <WorkflowPageTemplate title="Transactions">

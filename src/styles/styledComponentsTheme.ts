@@ -52,15 +52,6 @@ export const rainbowLightColors = [
   '#e7e9fa', // purple
 ];
 
-// export const rainbowMutedColors = [
-//     'rgba(252, 160, 154, 0.1)', // pink-ish
-//   'rgba(255, 204, 158, 0.15)', // orange
-//   'rgba(238, 243, 235, 0.5)', // green
-//   'rgba(228, 244, 244, 0.5)', // blue
-//   'rgba(229, 240, 248, 0.5)', // blue
-//   'rgba(231, 234, 248, 0.5)', // purple
-// ];
-
 export const rainbow = rainbowColors.join(', ');
 export const rainbowLight = rainbowLightColors.join(', ');
 
@@ -81,5 +72,4 @@ export const styledComponentsTheme = {
   rainbow,
   rainbowLight,
   rainbowLightColors,
-  // rainbowMutedColors,
 };

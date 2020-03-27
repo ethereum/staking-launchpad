@@ -14,8 +14,9 @@ import {
   updateAcknowledgementState,
   updateProgress,
 } from '../../store/actions';
-import { pageContent } from './pageContent';
+import { pageContent, PageContentInterface } from './pageContent';
 import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
+import { AcknowledgementSection } from './AcknowledgementSection';
 
 interface AcknowledgementPageProps {
   updateAcknowledgementState(
@@ -62,27 +63,21 @@ const _AcknowledgementPage = ({
 
   const handleContinueClick = (id: AcknowledgementIdsEnum) => {
     updateAcknowledgementState(id, true);
-    if (id + 1 in AcknowledgementIdsEnum) {
-      setActiveAcknowledgementId(id + 1);
+    if (+id + 1 in AcknowledgementIdsEnum) {
+      setActiveAcknowledgementId(+id + 1);
     }
   };
   const handleGoBackClick = (id: AcknowledgementIdsEnum) => {
-    if (id - 1 in AcknowledgementIdsEnum) {
-      setActiveAcknowledgementId(id - 1);
+    if (+id - 1 in AcknowledgementIdsEnum) {
+      setActiveAcknowledgementId(+id - 1);
     }
   };
 
-  const renderAcknowledgement = () => {
-    const Acknowledgement = pageContent[activeAcknowledgementId];
-    return (
-      <Acknowledgement
-        handleContinueClick={handleContinueClick}
-        handleGoBackClick={handleGoBackClick}
-        handleSubmit={handleSubmit}
-        allAgreedTo={allAgreedTo}
-      />
-    );
-  };
+  const {
+    title,
+    content,
+    acknowledgementText,
+  }: PageContentInterface = pageContent[activeAcknowledgementId];
 
   return (
     <WorkflowPageTemplate title="Overview">
@@ -91,7 +86,16 @@ const _AcknowledgementPage = ({
           activeAcknowledgementId={activeAcknowledgementId}
           setActiveAcknowledgementId={setActiveAcknowledgementId}
         />
-        {renderAcknowledgement()}
+        <AcknowledgementSection
+          handleContinueClick={handleContinueClick}
+          handleGoBackClick={handleGoBackClick}
+          handleSubmit={handleSubmit}
+          allAgreedTo={allAgreedTo}
+          title={title}
+          content={content}
+          acknowledgementId={activeAcknowledgementId}
+          acknowledgementText={acknowledgementText}
+        />
       </div>
     </WorkflowPageTemplate>
   );

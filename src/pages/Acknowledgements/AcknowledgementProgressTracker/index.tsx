@@ -45,9 +45,10 @@ export const _AcknowledgementProgressTracker = ({
     <Container>
       {_map(
         acknowledgementsWithCopy,
-        (text: string, acknowledgementId: AcknowledgementIdsEnum) => {
+        (_, acknowledgementId: AcknowledgementIdsEnum) => {
           return (
             <AcknowledgementProgressStep
+              key={acknowledgementId}
               acknowledgementsWithCopy={acknowledgementsWithCopy}
               acknowledgementId={acknowledgementId}
               setActiveAcknowledgementId={setActiveAcknowledgementId}

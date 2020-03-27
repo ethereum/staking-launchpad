@@ -5,30 +5,93 @@ import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
+import { Link } from '../../components/Link';
+import { routesEnum } from '../../Routes';
 
 export interface AcknowledgementSectionData {
   title: string;
   content: JSX.Element;
-  acknowledgement: {
-    id: AcknowledgementIdsEnum;
-    text?: string;
-  };
+  acknowledgementText?: string;
+  acknowledgementId: AcknowledgementIdsEnum;
 }
 
 interface AcknowledgementSectionProps {
-  handleContinueClick(id: AcknowledgementIdsEnum): void;
-  handleGoBackClick(id: AcknowledgementIdsEnum): void;
+  handleContinueClick: (id: AcknowledgementIdsEnum) => void;
+  handleGoBackClick: (id: AcknowledgementIdsEnum) => void;
+  handleSubmit: () => void;
+  allAgreedTo: boolean;
 }
 
 export const AcknowledgementSection = ({
   title,
   content,
-  acknowledgement,
+  acknowledgementId,
+  acknowledgementText,
   handleContinueClick,
   handleGoBackClick,
+  handleSubmit,
+  allAgreedTo,
 }: AcknowledgementSectionProps & AcknowledgementSectionData): JSX.Element => {
   const isIntroSection =
-    acknowledgement.id === AcknowledgementIdsEnum.introSection;
+    acknowledgementId === AcknowledgementIdsEnum.introSection;
+  const isConfirmationSection =
+    acknowledgementId === AcknowledgementIdsEnum.confirmation;
+
+  const renderButtons = () => {
+    if (isConfirmationSection) {
+      return (
+        <Box
+          align="center"
+          pad="xsmall"
+          className="flex flex-row space-evenly mt20"
+        >
+          <Button
+            onClick={() =>
+              handleGoBackClick(AcknowledgementIdsEnum.confirmation)
+            }
+            width={300}
+            label="Back"
+          />
+          <Link
+            to={routesEnum.generateKeysPage}
+            onClick={() => {
+              handleContinueClick(AcknowledgementIdsEnum.confirmation);
+              handleSubmit();
+            }}
+          >
+            <Button
+              rainbow
+              width={300}
+              disabled={!allAgreedTo}
+              label="Continue"
+            />
+          </Link>
+        </Box>
+      );
+    }
+    return (
+      <Box
+        align="center"
+        pad="xsmall"
+        className="flex flex-row space-evenly mt20"
+      >
+        {!isIntroSection && (
+          <Button
+            onClick={() => handleGoBackClick(acknowledgementId)}
+            width={300}
+            label="Back"
+          />
+        )}
+        <Button
+          onClick={() => handleContinueClick(acknowledgementId)}
+          rainbow
+          width={300}
+          label={isIntroSection ? 'Continue' : 'I Accept'}
+        />
+      </Box>
+    );
+  };
+
   return (
     <PaperGroup>
       <Paper>
@@ -38,26 +101,8 @@ export const AcknowledgementSection = ({
         {content}
       </Paper>
       <Paper className="rm-double-border">
-        <Text>{acknowledgement.text}</Text>
-        <Box
-          align="center"
-          pad="xsmall"
-          className="flex flex-row space-evenly mt20"
-        >
-          {!isIntroSection && (
-            <Button
-              onClick={() => handleGoBackClick(acknowledgement.id)}
-              width={300}
-              label="Back"
-            />
-          )}
-          <Button
-            onClick={() => handleContinueClick(acknowledgement.id)}
-            rainbow
-            width={300}
-            label={isIntroSection ? 'Continue' : 'I Accept'}
-          />
-        </Box>
+        <Text>{acknowledgementText}</Text>
+        {renderButtons()}
       </Paper>
     </PaperGroup>
   );

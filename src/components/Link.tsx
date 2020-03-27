@@ -47,7 +47,12 @@ export const Link = (props: LinkProps) => {
   const { external, children, className, to, primary } = props;
   if (external) {
     return (
-      <StyledExternalLink className={className} href={to} primary={primary}>
+      <StyledExternalLink
+        className={className}
+        href={to}
+        primary={primary}
+        target="_blank"
+      >
         {children}
       </StyledExternalLink>
     );

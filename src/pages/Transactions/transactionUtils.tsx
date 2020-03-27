@@ -33,7 +33,11 @@ export const handleTransaction = async (
   depositFile: KeyFileInterface,
   connector: AbstractConnector,
   account: any,
-  updateTransactionStatus: (pubkey: string, status: TransactionStatuses) => void
+  updateTransactionStatus: (
+    pubkey: string,
+    status: TransactionStatuses,
+    txHash?: string
+  ) => void
 ): Promise<void> => {
   const {
     pubkey,
@@ -63,8 +67,9 @@ export const handleTransaction = async (
         prefix0X(signed_deposit_data_root)
       )
       .send(transactionParameters)
-      .on('transactionHash', (): void => {
-        updateTransactionStatus(pubkey, TransactionStatuses.STARTED);
+      .on('transactionHash', (txHash: string): void => {
+        console.log('working with: ', txHash);
+        updateTransactionStatus(pubkey, TransactionStatuses.STARTED, txHash);
       })
       .on('receipt', () => {
         // do something?

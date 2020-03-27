@@ -21,6 +21,7 @@ export interface KeyFileInterface {
   signed_deposit_data_root: string;
 
   transactionStatus: TransactionStatuses;
+  txHash?: string;
 }
 export interface UpdateKeyFilesAction {
   type: ActionTypes.updateKeyFiles;
@@ -31,6 +32,7 @@ export interface UpdateTransactionStatusAction {
   payload: {
     pubkey: string;
     status: TransactionStatuses;
+    txHash?: string;
   };
 }
 export const updateKeyFiles = (
@@ -44,13 +46,16 @@ export const updateKeyFiles = (
 
 export const updateTransactionStatus = (
   pubkey: string,
-  status: TransactionStatuses
+  status: TransactionStatuses,
+  txHash?: string
 ): UpdateTransactionStatusAction => {
+  console.log('the action...? ', txHash);
   return {
     type: ActionTypes.updateTransactionStatus,
     payload: {
       pubkey,
       status,
+      txHash,
     },
   };
 };

@@ -79,7 +79,7 @@ const _KeyList = ({ keyFiles, updateTransactionStatus }: KeyListProps) => {
           </TableHeader>
           <TableBody>
             {keyFiles.map(keyFile => {
-              const { pubkey, transactionStatus } = keyFile;
+              const { pubkey, transactionStatus, txHash } = keyFile;
               return (
                 <TableRow key={pubkey}>
                   <TableCell>
@@ -95,6 +95,7 @@ const _KeyList = ({ keyFiles, updateTransactionStatus }: KeyListProps) => {
                     <ActionButton
                       onClick={() => handleActionClick(keyFile)}
                       status={transactionStatus}
+                      txHash={txHash}
                     />
                   </TableCell>
                 </TableRow>
@@ -114,9 +115,10 @@ const mstp = ({ keyFiles }: StoreState) => {
 const mdtp = (dispatch: any) => ({
   updateTransactionStatus: (
     pubkey: string,
-    status: TransactionStatuses
+    status: TransactionStatuses,
+    txHash?: string
   ): void => {
-    dispatch(updateTransactionStatus(pubkey, status));
+    dispatch(updateTransactionStatus(pubkey, status, txHash));
   },
 });
 

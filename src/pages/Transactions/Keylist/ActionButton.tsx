@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { TransactionStatuses } from '../../../store/actions';
+import { Link } from '../../../components/Link';
 
 const Container = styled.div`
   width: 100px;
@@ -19,10 +20,16 @@ const ButtonText = styled(Text)`
 
 interface ActionButtonProps {
   status: TransactionStatuses;
+  txHash?: string;
   onClick: (e: any) => void;
 }
 
-export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
+export const ActionButton = ({
+  status,
+  txHash,
+  onClick,
+}: ActionButtonProps) => {
+  console.log('GOT THE X HASH: ', txHash);
   if (status === TransactionStatuses.READY) {
     return (
       <Container>
@@ -45,12 +52,16 @@ export const ActionButton = ({ status, onClick }: ActionButtonProps) => {
   ) {
     return (
       <div className="flex">
-        <ButtonText onClick={onClick} className="mr5">
-          Alethio <Share size="small" />
-        </ButtonText>
-        <ButtonText onClick={onClick}>
-          Etherscan <Share size="small" />
-        </ButtonText>
+        <Link external to={`${process.env.REACT_APP_ALETHIO_URL}/${txHash}`}>
+          <ButtonText className="mr5">
+            Alethio <Share size="small" />
+          </ButtonText>
+        </Link>
+        <Link external to={`${process.env.REACT_APP_ETHERSCAN_URL}/${txHash}`}>
+          <ButtonText>
+            Etherscan <Share size="small" />
+          </ButtonText>
+        </Link>
       </div>
     );
   }

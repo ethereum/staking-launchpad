@@ -1,6 +1,8 @@
 import React from 'react';
 import { Paper, PaperGroup } from '../../components/Paper';
-import { CheckBox, Heading } from 'grommet';
+import { CheckBox } from 'grommet';
+import { Text } from '../../components/Text';
+import { Heading } from '../../components/Heading';
 import { acknowledgementId } from '../../store/reducers';
 
 export interface AcknowledgementSectionData {
@@ -40,7 +42,7 @@ export const AcknowledgementSection = ({
           <CheckBox
             onChange={onCheckboxClick}
             checked={agreedTo}
-            label={acknowledgement.text}
+            label={<Text>{acknowledgement.text}</Text>}
           />
         </Paper>
       )}

@@ -8,4 +8,5 @@ export const Heading = styled(H)`
   margin: 0;
   display: block;
   text-align: ${(p: { center?: boolean }) => p.center && 'center'};
+  max-width: inherit;
 `;

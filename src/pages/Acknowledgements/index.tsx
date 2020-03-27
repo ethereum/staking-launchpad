@@ -21,7 +21,6 @@ import {
 } from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
-import { rainbowMutedColors } from '../../styles/styledComponentsTheme';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
 
@@ -43,7 +42,7 @@ const _AcknowledgementPage = ({
 }: Props) => {
   const handleSubmit = () => {
     if (progress === ProgressStep.OVERVIEW) {
-      updateProgress(ProgressStep.VALIDATOR_SETTINGS);
+      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -108,10 +107,7 @@ const _AcknowledgementPage = ({
   };
 
   return (
-    <WorkflowPageTemplate
-      title="Overview"
-      backgroundColor={rainbowMutedColors[0]}
-    >
+    <WorkflowPageTemplate title="Overview">
       {renderIntroSection()}
       {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
         <AcknowledgementSection
@@ -122,7 +118,7 @@ const _AcknowledgementPage = ({
         />
       ))}
       <Box align="center" pad="large">
-        <Link to={routesEnum.validatorSettingsPage} onClick={handleSubmit}>
+        <Link to={routesEnum.generateKeysPage} onClick={handleSubmit}>
           <Button
             rainbow
             width={300}

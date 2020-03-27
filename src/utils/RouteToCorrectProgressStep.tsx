@@ -7,9 +7,6 @@ export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.OVERVIEW) {
     return <Redirect push to={routesEnum.acknowledgementPage} />;
   }
-  if (step === ProgressStep.VALIDATOR_SETTINGS) {
-    return <Redirect push to={routesEnum.validatorSettingsPage} />;
-  }
   if (step === ProgressStep.GENERATE_KEY_PAIRS) {
     return <Redirect push to={routesEnum.generateKeysPage} />;
   }
@@ -21,6 +18,9 @@ export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   }
   if (step === ProgressStep.SUMMARY) {
     return <Redirect push to={routesEnum.summaryPage} />;
+  }
+  if (step === ProgressStep.TRANSACTION_SIGNING) {
+    return <Redirect push to={routesEnum.transactionsPage} />;
   }
   if (step === ProgressStep.CONGRATULATIONS) {
     return <Redirect push to={routesEnum.congratulationsPage} />;

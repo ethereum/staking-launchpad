@@ -35,30 +35,21 @@ export const details = {
 };
 
 export const rainbowColors = [
-  '#fca09a',
-  '#fdccd3',
-  '#ffcc9e',
-  '#98ddad',
-  '#81d7ec',
-  '#a0aaed',
+  '#fdccd3', // pink
+  '#fca09a', // red
+  '#ffcc9e', // yellow
+  '#98ddad', // green
+  '#81d7ec', // blue
+  '#a0aaed', // purple
 ];
 
 export const rainbowLightColors = [
-  '#fbf1ed',
-  '#f9f1e9',
-  '#eef3eb',
-  '#e4f4f4',
-  '#e5f0f8',
-  '#e7eaf8',
-];
-
-export const rainbowMutedColors = [
-  'rgba(252, 160, 154, 0.1)', // red
-  'rgba(255, 204, 158, 0.15)', // orange
-  'rgba(238, 243, 235, 0.5)', // yellow-ish
-  'rgba(228, 244, 244, 0.5)', // green
-  'rgba(229, 240, 248, 0.5)', // blue
-  'rgba(231, 234, 248, 0.5)', // purple
+  '#fef2f4', // pink
+  '#fee7e5', // red
+  '#fff2e6', // yellow
+  '#e5f6ea', // green
+  '#dff5fa', // blue
+  '#e7e9fa', // purple
 ];
 
 export const rainbow = rainbowColors.join(', ');
@@ -67,7 +58,7 @@ export const rainbowLight = rainbowLightColors.join(', ');
 export const screenSizes = {
   smaller: '420px',
   small: '576px',
-  medium: '760px',
+  medium: '768px',
   large: '992px',
   larger: '1200px',
   largest: '1440px',
@@ -81,5 +72,4 @@ export const styledComponentsTheme = {
   rainbow,
   rainbowLight,
   rainbowLightColors,
-  rainbowMutedColors,
 };

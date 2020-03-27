@@ -30,6 +30,12 @@ const shorthandClasses = `
   .start { justify-content: flex-start  }
   .rm-double-border { margin-top: -2px  }
   .m-auto { margin: auto }
+  .dont-break-out {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+  }
 `;
 
 const transitionClasses = `

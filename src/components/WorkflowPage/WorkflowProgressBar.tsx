@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { withRouter } from 'react-router-dom';
 import { EthRoundLogo } from './EthRoundLogo';
 import { ProgressStep } from '../../store/actions';
-import { routesEnum } from '../../Routes';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
 
 export const logoPositions = {
-  small: [-7, 16, 38, 59, 80.5, 98],
-  medium: [-5, 14.5, 36.5, 57.5, 79.5, 97.5],
-  large: [-2, 16.5, 37.5, 57.5, 78, 96],
+  small: [0, 17.5, 35, 52, 69, 90],
+  medium: [-5, 14.5, 36.5, 57.5, 77.5, 95.5],
+  large: [-2, 17, 37.5, 58.5, 77, 94.5],
 };
 
 const Container = styled.div`
@@ -67,6 +65,9 @@ const GreyedColor = styled.div`
   height: 4px;
   position: absolute;
   top: 3px;
+  @media only screen and (max-width: 1024px) {
+    width: 98%;
+  }
 `;
 
 const Flexbox = styled.div`
@@ -89,47 +90,41 @@ const Step = styled.div`
   font-weight: ${p => (p.active ? 600 : undefined)};
 `;
 
-const mapPathnameToProgressStep = (pathname: routesEnum) => {
-  const routesInOrder = [
-    routesEnum.acknowledgementPage,
-    routesEnum.validatorSettingsPage,
-    routesEnum.generateKeysPage,
-    routesEnum.uploadValidatorPage,
-    routesEnum.connectWalletPage,
-    routesEnum.summaryPage,
-  ];
-  return routesInOrder.indexOf(pathname);
-};
+interface WorkflowProgressBarInterface {
+  progress: ProgressStep;
+}
 
-const _WorkflowProgressBar = ({ history }: { history?: any }) => {
-  const mappedProgress = mapPathnameToProgressStep(history.location.pathname);
+export const WorkflowProgressBar = ({
+  progress,
+}: WorkflowProgressBarInterface): JSX.Element => {
   interface step {
     step: ProgressStep;
     text: string;
   }
+
   const steps: step[] = [
     { step: ProgressStep.OVERVIEW, text: 'Overview' },
-    { step: ProgressStep.VALIDATOR_SETTINGS, text: 'Validator Settings' },
     { step: ProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
     { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: 'Upload Validator' },
     { step: ProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
     { step: ProgressStep.SUMMARY, text: 'Summary' },
+    { step: ProgressStep.TRANSACTION_SIGNING, text: 'Transactions' },
   ];
   return (
     <Container>
       <SubContainer>
         <BarContainer>
           <GreyedColor />
-          <CompletedColor position={mappedProgress} />
-          <EthRoundLogo position={mappedProgress} />
+          <CompletedColor position={progress} />
+          <EthRoundLogo position={progress} />
         </BarContainer>
         <Flexbox>
           {steps.map(({ step, text }, i) => (
             <Step
               key={text}
               index={i}
-              disabled={mappedProgress < step}
-              active={mappedProgress === step}
+              disabled={progress < step}
+              active={progress === step}
             >
               {text}
             </Step>
@@ -139,5 +134,3 @@ const _WorkflowProgressBar = ({ history }: { history?: any }) => {
     </Container>
   );
 };
-
-export const WorkflowProgressBar = withRouter(_WorkflowProgressBar);

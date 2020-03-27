@@ -1,6 +1,15 @@
 import { ActionTypes } from './index';
 
-export interface keyFile {
+export enum TransactionStatuses {
+  'READY',
+  'PENDING',
+  'STARTED',
+  'SUCCEEDED',
+  'FAILED',
+  'REJECTED',
+}
+
+export interface KeyFileInterface {
   pubkey: string;
   // eslint-disable-next-line camelcase
   withdrawal_credentials: string;
@@ -10,14 +19,42 @@ export interface keyFile {
   deposit_data_root: string;
   // eslint-disable-next-line camelcase
   signed_deposit_data_root: string;
+
+  transactionStatus: TransactionStatuses;
+  txHash?: string;
 }
 export interface UpdateKeyFilesAction {
   type: ActionTypes.updateKeyFiles;
-  payload: keyFile[];
+  payload: KeyFileInterface[];
 }
-export const updateKeyFiles = (files: keyFile[]): UpdateKeyFilesAction => {
+export interface UpdateTransactionStatusAction {
+  type: ActionTypes.updateTransactionStatus;
+  payload: {
+    pubkey: string;
+    status: TransactionStatuses;
+    txHash?: string;
+  };
+}
+export const updateKeyFiles = (
+  files: KeyFileInterface[]
+): UpdateKeyFilesAction => {
   return {
     type: ActionTypes.updateKeyFiles,
     payload: files,
+  };
+};
+
+export const updateTransactionStatus = (
+  pubkey: string,
+  status: TransactionStatuses,
+  txHash?: string
+): UpdateTransactionStatusAction => {
+  return {
+    type: ActionTypes.updateTransactionStatus,
+    payload: {
+      pubkey,
+      status,
+      txHash,
+    },
   };
 };

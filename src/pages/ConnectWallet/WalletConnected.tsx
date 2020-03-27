@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { FormNextLink } from 'grommet-icons';
 import { Box, Heading, Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -64,7 +63,7 @@ const _WalletConnected = ({
           {getWalletName(walletProvider)}
         </Heading>
         <Box className="flex flex-row">
-          <Dot success={networkAllowed} />
+          <Dot success={networkAllowed} error={!networkAllowed} />
           <Text className="ml10">{account}</Text>
         </Box>
         <Text
@@ -92,8 +91,6 @@ const _WalletConnected = ({
               rainbow
               disabled={!networkAllowed}
               label="Continue on testnet"
-              reverse
-              icon={<FormNextLink />}
             />
           </Link>
         </div>

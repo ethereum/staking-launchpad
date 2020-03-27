@@ -6,4 +6,4 @@ export * from './NotFound';
 export * from './Acknowledgements';
 export * from './Summary';
 export * from './UploadValidator';
-export * from './ValidatorSettings';
+export * from './Transactions';

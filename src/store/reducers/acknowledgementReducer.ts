@@ -1,5 +1,5 @@
-import { Action, ActionTypes } from '../actions';
 import { every, values } from 'lodash';
+import { Action, ActionTypes } from '../actions';
 
 export enum acknowledgementId {
   signup = 'signup',

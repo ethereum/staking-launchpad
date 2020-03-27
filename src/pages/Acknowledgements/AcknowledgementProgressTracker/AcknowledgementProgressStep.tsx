@@ -31,6 +31,7 @@ const Container = styled.div`
         '\tbox-shadow:0 0 10px rgba(0, 0, 0, 0.5);'
       : 'inherit'};
   cursor: ${(p: Props) => (p.disabled ? 'default' : 'pointer')};
+  transition: width 0.3s;
 `;
 const IndexContainer = styled.div`
   background-color: ${(p: { theme: any }) => p.theme.gray.light};

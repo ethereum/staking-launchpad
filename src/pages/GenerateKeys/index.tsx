@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { CheckBox } from 'grommet';
@@ -8,7 +9,7 @@ import { OperatingSystemButtons } from './OperatingSystemButtons';
 import { LinuxInstructions } from './LinuxInstructions';
 import { MacInstructions } from './MacInstructions';
 import { WindowsInstructions } from './WindowsInstructions';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
 import { StoreState } from '../../store/reducers';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
@@ -19,9 +20,10 @@ import { NumberInput } from './NumberInput';
 import { InfoBox } from '../../components/InfoBox';
 import { pricePerValidator } from '../../enums';
 import {
-  ProgressStep,
-  updateProgress,
-} from '../../store/actions/progressActions';
+  DispatchUpdateWorkflowProgressType,
+  WorkflowProgressStep,
+  updateWorkflowProgress,
+} from '../../store/actions/workflowProgressActions';
 
 export enum operatingSystem {
   'MAC',
@@ -40,20 +42,25 @@ const InstructionImgContainer = styled.div`
   margin: 20px;
 `;
 
-interface GenerateKeysPageProps {
-  updateProgress: (progressStep: ProgressStep) => void;
-  progress: ProgressStep;
+// Prop definitions
+interface OwnProps {}
+interface StateProps {
+  workflowProgress: WorkflowProgressStep;
 }
+interface DispatchProps {
+  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 const _GenerateKeysPage = ({
-  updateProgress,
-  progress,
-}: GenerateKeysPageProps): JSX.Element => {
+  dispatchUpdateWorkflowProgress,
+  workflowProgress,
+}: Props): JSX.Element => {
   const [validatorCount, setValidatorCount] = useState<number>(0);
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
-  ] = useState<boolean>(progress > ProgressStep.GENERATE_KEY_PAIRS);
+  ] = useState<boolean>(workflowProgress > WorkflowProgressStep.GENERATE_KEY_PAIRS);
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
@@ -63,8 +70,8 @@ const _GenerateKeysPage = ({
   };
 
   const handleSubmit = () => {
-    if (progress === ProgressStep.GENERATE_KEY_PAIRS) {
-      updateProgress(ProgressStep.UPLOAD_VALIDATOR_FILE);
+    if (workflowProgress === WorkflowProgressStep.GENERATE_KEY_PAIRS) {
+      dispatchUpdateWorkflowProgress(WorkflowProgressStep.UPLOAD_VALIDATOR_FILE);
     }
   };
 
@@ -81,8 +88,8 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (progress < ProgressStep.GENERATE_KEY_PAIRS) {
-    return routeToCorrectProgressStep(progress);
+  if (workflowProgress < WorkflowProgressStep.GENERATE_KEY_PAIRS) {
+    return routeToCorrectWorkflowProgressStep(workflowProgress);
   }
 
   return (
@@ -159,14 +166,21 @@ const _GenerateKeysPage = ({
   );
 };
 
-const mstp = ({ progress }: StoreState) => ({
-  progress,
+const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
+  workflowProgress,
 });
-
-const mdtp = (dispatch: any) => ({
-  updateProgress: (progressStep: ProgressStep): void => {
-    dispatch(updateProgress(progressStep));
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchUpdateWorkflowProgress: (workflowProgressStep: WorkflowProgressStep) => {
+    dispatch(updateWorkflowProgress(workflowProgressStep));
   },
 });
 
-export const GenerateKeysPage = connect(mstp, mdtp)(_GenerateKeysPage);
+export const GenerateKeysPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_GenerateKeysPage);

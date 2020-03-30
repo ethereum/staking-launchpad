@@ -3,17 +3,17 @@ import {
   UpdateKeyFilesAction,
   UpdateTransactionStatusAction,
 } from './keyFileActions';
-import { UpdateProgressAction } from './progressActions';
+import { UpdateWorkflowProgressAction } from './workflowProgressActions';
 
 export enum ActionTypes {
   updateAcknowledgementState,
   updateKeyFiles,
   updateTransactionStatus,
-  updateProgress,
+  updateWorkflowProgress,
 }
 
 export type Action =
   | UpdateAcknowledgementStateAction
   | UpdateKeyFilesAction
   | UpdateTransactionStatusAction
-  | UpdateProgressAction;
+  | UpdateWorkflowProgressAction;

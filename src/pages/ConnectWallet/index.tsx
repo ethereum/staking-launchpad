@@ -15,11 +15,11 @@ import {
 import { WalletButton } from './WalletButton';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { StoreState } from '../../store/reducers';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
-import { ProgressStep } from '../../store/actions/progressActions';
+import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
 
 export interface web3ReactInterface {
   activate: (
@@ -40,13 +40,13 @@ export interface web3ReactInterface {
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  progress: ProgressStep;
+  workflowProgress: WorkflowProgressStep;
 }
 interface DispatchProps {}
 
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _ConnectWalletPage = ({ progress }: Props): JSX.Element => {
+const _ConnectWalletPage = ({ workflowProgress }: Props): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
     active: walletConnected,
@@ -56,8 +56,8 @@ const _ConnectWalletPage = ({ progress }: Props): JSX.Element => {
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  if (progress < ProgressStep.CONNECT_WALLET) {
-    return routeToCorrectProgressStep(progress);
+  if (workflowProgress < WorkflowProgressStep.CONNECT_WALLET) {
+    return routeToCorrectWorkflowProgressStep(workflowProgress);
   }
 
   if (walletConnected) {
@@ -100,8 +100,8 @@ const _ConnectWalletPage = ({ progress }: Props): JSX.Element => {
   );
 };
 
-const mapStateToProps = ({ progress }: StoreState): StateProps => ({
-  progress,
+const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
+  workflowProgress,
 });
 
 export const ConnectWalletPage = connect<

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
@@ -15,7 +16,7 @@ import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { pricePerValidator } from '../../enums';
@@ -25,9 +26,10 @@ import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import {
-  ProgressStep,
-  updateProgress,
-} from '../../store/actions/progressActions';
+  DispatchUpdateWorkflowProgressType,
+  WorkflowProgressStep,
+  updateWorkflowProgress,
+} from '../../store/actions/workflowProgressActions';
 
 const Container = styled.div`
   width: 100%;
@@ -36,17 +38,22 @@ const Container = styled.div`
 const NETWORK_NAME = 'Göerli Testnet';
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
-interface SummaryPageProps {
+// Prop definitions
+interface OwnProps {}
+interface StateProps {
   keyFiles: KeyFileInterface[];
-  progress: ProgressStep;
-  updateProgress: (step: ProgressStep) => void;
+  workflowProgress: WorkflowProgressStep;
 }
+interface DispatchProps {
+  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 const _SummaryPage = ({
-  progress,
-  updateProgress,
+  workflowProgress,
+  dispatchUpdateWorkflowProgress,
   keyFiles,
-}: SummaryPageProps): JSX.Element => {
+}: Props): JSX.Element => {
   const [allChecked, setAllChecked] = useState(false);
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
@@ -64,13 +71,13 @@ const _SummaryPage = ({
   >();
 
   const handleSubmit = () => {
-    if (progress === ProgressStep.SUMMARY) {
-      updateProgress(ProgressStep.TRANSACTION_SIGNING);
+    if (workflowProgress === WorkflowProgressStep.SUMMARY) {
+      dispatchUpdateWorkflowProgress(WorkflowProgressStep.TRANSACTION_SIGNING);
     }
   };
 
-  if (progress < ProgressStep.SUMMARY)
-    return routeToCorrectProgressStep(progress);
+  if (workflowProgress < WorkflowProgressStep.SUMMARY)
+    return routeToCorrectWorkflowProgressStep(workflowProgress);
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;
@@ -160,15 +167,23 @@ const _SummaryPage = ({
   );
 };
 
-const mstp = ({ keyFiles, progress }: StoreState) => ({
+const mapStateToProps = ({ keyFiles, workflowProgress }: StoreState): StateProps => ({
   keyFiles,
-  progress,
+  workflowProgress,
 });
 
-const mdtp = (dispatch: any) => ({
-  updateProgress: (step: ProgressStep): void => {
-    dispatch(updateProgress(step));
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) => {
+    dispatch(updateWorkflowProgress(step));
   },
 });
 
-export const SummaryPage = connect(mstp, mdtp)(_SummaryPage);
+export const SummaryPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_SummaryPage);

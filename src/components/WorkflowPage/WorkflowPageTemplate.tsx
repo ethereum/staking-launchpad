@@ -10,7 +10,7 @@ import {
   rainbowLightColors,
 } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
-import { ProgressStep } from '../../store/actions/progressActions';
+import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
 
 const Content = styled.div`
   width: 100%;
@@ -24,9 +24,9 @@ const Gutter = styled.div`
   justify-content: center;
 `;
 const Background = styled.div`
-  background-image: ${(p: { progressStep: ProgressStep }) =>
-    `linear-gradient(to bottom right, ${rainbowLightColors[p.progressStep]}, ${
-      rainbowColors[p.progressStep]
+  background-image: ${(p: { workflowProgressStep: WorkflowProgressStep }) =>
+    `linear-gradient(to bottom right, ${rainbowLightColors[p.workflowProgressStep]}, ${
+      rainbowColors[p.workflowProgressStep]
     });`};
 
   min-height: 100vh;
@@ -38,7 +38,7 @@ interface WorkflowPageTemplateProps extends RouteComponentProps {
   history: any;
 }
 
-const mapPathnameToProgressStep = (pathname: routesEnum) => {
+const mapPathnameToWorkflowProgressStep = (pathname: routesEnum) => {
   const workflowRoutesInOrder = [
     routesEnum.acknowledgementPage,
     routesEnum.generateKeysPage,
@@ -59,14 +59,14 @@ const _WorkflowPageTemplate = ({
     return <DesktopOnlyModal />;
   }
 
-  const calculatedProgressStep: ProgressStep = mapPathnameToProgressStep(
+  const calculatedWorkflowProgressStep: WorkflowProgressStep = mapPathnameToWorkflowProgressStep(
     history.location.pathname
   );
 
   return (
-    <Background progressStep={calculatedProgressStep}>
+    <Background workflowProgressStep={calculatedWorkflowProgressStep}>
       <AppBar />
-      <WorkflowProgressBar progress={calculatedProgressStep} />
+      <WorkflowProgressBar workflowProgress={calculatedWorkflowProgressStep} />
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" className="mb40">

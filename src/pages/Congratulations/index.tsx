@@ -9,8 +9,8 @@ import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
 import { mainnetEthRequirement, pricePerValidator } from '../../enums';
 import { StoreState } from '../../store/reducers';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
-import { ProgressStep } from '../../store/actions/progressActions';
+import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 
 const RainbowBackground = styled.div`
@@ -31,13 +31,15 @@ const Content = styled.div`
   margin: 30px 0;
 `;
 
-const _CongratulationsPage = ({
-  keyFiles,
-  progress,
-}: {
+interface OwnProps {}
+interface StateProps {
   keyFiles: KeyFileInterface[];
-  progress: ProgressStep;
-}): JSX.Element => {
+  workflowProgress: WorkflowProgressStep;
+}
+interface DispatchProps {}
+type Props = StateProps & DispatchProps & OwnProps;
+
+const _CongratulationsPage = ({ keyFiles, workflowProgress }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
   useEffect(() => {
     const getBalance = async () => {
@@ -63,8 +65,8 @@ const _CongratulationsPage = ({
   })();
   const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
 
-  if (progress > ProgressStep.CONGRATULATIONS) {
-    return routeToCorrectProgressStep(progress);
+  if (workflowProgress > WorkflowProgressStep.CONGRATULATIONS) {
+    return routeToCorrectWorkflowProgressStep(workflowProgress);
   }
 
   return (
@@ -117,9 +119,14 @@ const _CongratulationsPage = ({
   );
 };
 
-const mstp = ({ keyFiles, progress }: StoreState) => ({
+const mapStateToProps = ({ keyFiles, workflowProgress }: StoreState): StateProps => ({
   keyFiles,
-  progress,
+  workflowProgress,
 });
 
-export const CongratulationsPage = connect(mstp)(_CongratulationsPage);
+export const CongratulationsPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(mapStateToProps)(_CongratulationsPage);

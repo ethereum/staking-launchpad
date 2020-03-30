@@ -19,7 +19,7 @@ import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
-import {DispatchUpdateProgressType, ProgressStep, updateProgress} from "../../store/actions/progressActions";
+import {DispatchUpdateWorkflowProgressType, WorkflowProgressStep, updateWorkflowProgress} from "../../store/actions/workflowProgressActions";
 import {
   DispatchUpdateAcknowledgementStateType,
   updateAcknowledgementState
@@ -28,23 +28,23 @@ import {
 interface OwnProps {}
 interface StateProps {
   acknowledgementState: acknowledgementState;
-  progress: ProgressStep;
+  workflowProgress: WorkflowProgressStep;
 }
 interface DispatchProps {
   dispatchUpdateAcknowledgementState: DispatchUpdateAcknowledgementStateType;
-  dispatchUpdateProgress: DispatchUpdateProgressType;
+  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _AcknowledgementPage = ({
   acknowledgementState,
   dispatchUpdateAcknowledgementState,
-  progress,
-  dispatchUpdateProgress,
+  workflowProgress,
+  dispatchUpdateWorkflowProgress,
 }: Props) => {
   const handleSubmit = () => {
-    if (progress === ProgressStep.OVERVIEW) {
-      dispatchUpdateProgress(ProgressStep.GENERATE_KEY_PAIRS);
+    if (workflowProgress === WorkflowProgressStep.OVERVIEW) {
+      dispatchUpdateWorkflowProgress(WorkflowProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -134,14 +134,14 @@ const _AcknowledgementPage = ({
 };
 
 const mapStateToProps = (state: StoreState): StateProps => ({
-  progress: state.progress,
+  workflowProgress: state.workflowProgress,
   acknowledgementState: state.acknowledgementState,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchUpdateAcknowledgementState: (id, value) =>
     dispatch(updateAcknowledgementState(id, value)),
-  dispatchUpdateProgress: (step: ProgressStep) =>
-    dispatch(updateProgress(step)),
+  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) =>
+    dispatch(updateWorkflowProgress(step)),
 });
 
 export const AcknowledgementPage = connect<

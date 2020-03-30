@@ -3,23 +3,23 @@ import {
   acknowledgementReducer,
   acknowledgementState,
 } from './acknowledgementReducer';
-import { progressReducer } from './progressReducer';
+import { workflowProgressReducer } from './workflowProgressReducer';
 import { keyFilesReducer } from './keyFilesReducer';
 import { KeyFileInterface } from '../actions/keyFileActions';
-import { ProgressStep } from '../actions/progressActions';
+import { WorkflowProgressStep } from '../actions/workflowProgressActions';
 
 export * from './acknowledgementReducer';
 export * from './keyFilesReducer';
-export * from './progressReducer';
+export * from './workflowProgressReducer';
 
 export interface StoreState {
   acknowledgementState: acknowledgementState;
   keyFiles: KeyFileInterface[];
-  progress: ProgressStep;
+  workflowProgress: WorkflowProgressStep;
 }
 
 export const reducers = combineReducers<StoreState>({
   acknowledgementState: acknowledgementReducer,
   keyFiles: keyFilesReducer,
-  progress: progressReducer,
+  workflowProgress: workflowProgressReducer,
 });

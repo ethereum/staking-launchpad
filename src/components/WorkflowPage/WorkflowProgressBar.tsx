@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { EthRoundLogo } from './EthRoundLogo';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
-import { ProgressStep } from '../../store/actions/progressActions';
+import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
 
 export const logoPositions = {
   small: [0, 17.5, 35, 52, 69, 90],
@@ -91,40 +91,40 @@ const Step = styled.div`
 `;
 
 interface WorkflowProgressBarInterface {
-  progress: ProgressStep;
+  workflowProgress: WorkflowProgressStep;
 }
 
 export const WorkflowProgressBar = ({
-  progress,
+  workflowProgress,
 }: WorkflowProgressBarInterface): JSX.Element => {
   interface step {
-    step: ProgressStep;
+    step: WorkflowProgressStep;
     text: string;
   }
 
   const steps: step[] = [
-    { step: ProgressStep.OVERVIEW, text: 'Overview' },
-    { step: ProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
-    { step: ProgressStep.UPLOAD_VALIDATOR_FILE, text: 'Upload Validator' },
-    { step: ProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
-    { step: ProgressStep.SUMMARY, text: 'Summary' },
-    { step: ProgressStep.TRANSACTION_SIGNING, text: 'Transactions' },
+    { step: WorkflowProgressStep.OVERVIEW, text: 'Overview' },
+    { step: WorkflowProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
+    { step: WorkflowProgressStep.UPLOAD_VALIDATOR_FILE, text: 'Upload Validator' },
+    { step: WorkflowProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
+    { step: WorkflowProgressStep.SUMMARY, text: 'Summary' },
+    { step: WorkflowProgressStep.TRANSACTION_SIGNING, text: 'Transactions' },
   ];
   return (
     <Container>
       <SubContainer>
         <BarContainer>
           <GreyedColor />
-          <CompletedColor position={progress} />
-          <EthRoundLogo position={progress} />
+          <CompletedColor position={workflowProgress} />
+          <EthRoundLogo position={workflowProgress} />
         </BarContainer>
         <Flexbox>
           {steps.map(({ step, text }, i) => (
             <Step
               key={text}
               index={i}
-              disabled={progress < step}
-              active={progress === step}
+              disabled={workflowProgress < step}
+              active={workflowProgress === step}
             >
               {text}
             </Step>

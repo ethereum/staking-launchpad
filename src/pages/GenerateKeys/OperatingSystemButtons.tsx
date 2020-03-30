@@ -11,15 +11,17 @@ const LogoContainerBox = styled.div`
   height: 200px;
   border: ${(p: { theme: any; isActive: boolean }) =>
     `2px solid ${p.isActive ? p.theme.blue.medium : p.theme.gray.medium}`};
+  box-shadow: ${(p: { theme: any; isActive: boolean }) =>
+    p.isActive && `0 0 10px rgba(0, 0, 0, 0.5)`};
   border-radius: ${p => p.theme.borderRadius};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   cursor: pointer;
-  -webkit-transition: border 500ms ease-out;
-  -moz-transition: border 500ms ease-out;
-  -o-transition: border 500ms ease-out;
-  transition: border 500ms ease-out;
+  -webkit-transition: border 500ms ease-out, box-shadow 500ms ease-out;
+  -moz-transition: border 500ms ease-out, box-shadow 500ms ease-out;
+  -o-transition: border 500ms ease-out, box-shadow 500ms ease-out;
+  transition: border 500ms ease-out, box-shadow 500ms ease-out;
   @media only screen and (max-width: 770px) {
     width: 150px;
     height: 150px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { EthRoundLogo } from './EthRoundLogo';
-import { ProgressStep } from '../../store/actions';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
+import { ProgressStep } from '../../store/actions/progressActions';
 
 export const logoPositions = {
   small: [0, 17.5, 35, 52, 69, 90],

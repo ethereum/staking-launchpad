@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { ProgressStep } from '../store/actions';
 import { routesEnum } from '../Routes';
+import { ProgressStep } from '../store/actions/progressActions';
 
 export const routeToCorrectProgressStep = (step: ProgressStep): JSX.Element => {
   if (step === ProgressStep.OVERVIEW) {

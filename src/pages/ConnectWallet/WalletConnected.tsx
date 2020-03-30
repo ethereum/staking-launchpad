@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Box, Heading, Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
+import { AbstractConnector } from '@web3-react/abstract-connector';
 import {
   AllowedNetworks,
   fortmatic,
@@ -11,14 +12,16 @@ import {
   portis,
 } from './web3Utils';
 import { web3ReactInterface } from './index';
-import { ProgressStep, updateProgress } from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Dot } from '../../components/Dot';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
-import { AbstractConnector } from '@web3-react/abstract-connector';
 import { Link } from '../../components/Link';
 import { StoreState } from '../../store/reducers';
+import {
+  ProgressStep,
+  updateProgress,
+} from '../../store/actions/progressActions';
 
 const _WalletConnected = ({
   progress,

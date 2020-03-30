@@ -5,10 +5,6 @@ import {
 } from './keyFileActions';
 import { UpdateProgressAction } from './progressActions';
 
-export * from './acknowledgementActions';
-export * from './keyFileActions';
-export * from './progressActions';
-
 export enum ActionTypes {
   updateAcknowledgementState,
   updateKeyFiles,
@@ -20,4 +16,4 @@ export type Action =
   | UpdateAcknowledgementStateAction
   | UpdateKeyFilesAction
   | UpdateTransactionStatusAction
-  | UpdateProgressAction
+  | UpdateProgressAction;

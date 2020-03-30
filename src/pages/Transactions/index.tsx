@@ -5,13 +5,6 @@ import { connect } from 'react-redux';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import _every from 'lodash/every';
 import { StoreState } from '../../store/reducers';
-import {
-  KeyFileInterface,
-  ProgressStep,
-  TransactionStatuses,
-  updateProgress,
-  updateTransactionStatus,
-} from '../../store/actions';
 import { Heading } from '../../components/Heading';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
@@ -24,6 +17,15 @@ import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import {
+  KeyFileInterface,
+  TransactionStatuses,
+  updateTransactionStatus,
+} from '../../store/actions/keyFileActions';
+import {
+  ProgressStep,
+  updateProgress,
+} from '../../store/actions/progressActions';
 
 interface TransactionsPageProps {
   keyFiles: KeyFileInterface[];

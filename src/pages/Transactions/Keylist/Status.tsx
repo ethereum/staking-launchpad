@@ -2,7 +2,7 @@ import React from 'react';
 import { Spinning } from 'grommet-controls';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
-import { TransactionStatuses } from '../../../store/actions';
+import {TransactionStatuses} from "../../../store/actions/keyFileActions";
 
 export const Status = ({ status }: { status: TransactionStatuses }) => {
   if (status === TransactionStatuses.READY) {

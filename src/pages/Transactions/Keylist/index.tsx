@@ -17,13 +17,13 @@ import { Text } from '../../../components/Text';
 import { Status } from './Status';
 import { ActionButton } from './ActionButton';
 import { StoreState } from '../../../store/reducers';
+import { handleTransaction } from '../transactionUtils';
+import { web3ReactInterface } from '../../ConnectWallet';
 import {
   KeyFileInterface,
   TransactionStatuses,
   updateTransactionStatus,
-} from '../../../store/actions';
-import { handleTransaction } from '../transactionUtils';
-import { web3ReactInterface } from '../../ConnectWallet';
+} from '../../../store/actions/keyFileActions';
 
 const CustomTableRow = styled(TableRow)`
   background-color: ${(p: { theme: any }) => p.theme.blue.light};

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { InfoBox } from '../../components/InfoBox';
-import { KeyFileInterface } from '../../store/actions';
+import {KeyFileInterface} from "../../store/actions/keyFileActions";
 
 const ScrollContainer = styled.div`
   height: 200px;

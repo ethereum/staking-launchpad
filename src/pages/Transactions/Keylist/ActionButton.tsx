@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
-import { TransactionStatuses } from '../../../store/actions';
 import { Link } from '../../../components/Link';
+import {TransactionStatuses} from "../../../store/actions/keyFileActions";
 
 const Container = styled.div`
   width: 100px;

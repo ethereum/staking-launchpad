@@ -7,11 +7,6 @@ import { FormNextLink } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { StoreState } from '../../store/reducers';
-import {
-  KeyFileInterface,
-  ProgressStep,
-  updateProgress,
-} from '../../store/actions';
 import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
@@ -28,6 +23,11 @@ import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
+import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import {
+  ProgressStep,
+  updateProgress,
+} from '../../store/actions/progressActions';
 
 const Container = styled.div`
   width: 100%;

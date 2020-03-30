@@ -1,15 +1,17 @@
 import { combineReducers } from 'redux';
-import { KeyFileInterface, ProgressStep } from '../actions';
 import {
   acknowledgementReducer,
   acknowledgementState,
 } from './acknowledgementReducer';
 import { progressReducer } from './progressReducer';
 import { keyFilesReducer } from './keyFilesReducer';
+import { KeyFileInterface } from '../actions/keyFileActions';
+import { ProgressStep } from '../actions/progressActions';
 
 export * from './acknowledgementReducer';
 export * from './keyFilesReducer';
 export * from './progressReducer';
+
 export interface StoreState {
   acknowledgementState: acknowledgementState;
   keyFiles: KeyFileInterface[];

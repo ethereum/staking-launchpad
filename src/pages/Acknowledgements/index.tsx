@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dispatch } from 'redux';
 import { Box, Heading, Text } from 'grommet';
 import { FormNext } from 'grommet-icons';
 import { connect } from 'react-redux';
@@ -14,35 +15,36 @@ import {
   acknowledgementState,
   StoreState,
 } from '../../store/reducers';
-import {
-  ProgressStep,
-  updateAcknowledgementState,
-  updateProgress,
-} from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
+import {DispatchUpdateProgressType, ProgressStep, updateProgress} from "../../store/actions/progressActions";
+import {
+  DispatchUpdateAcknowledgementStateType,
+  updateAcknowledgementState
+} from "../../store/actions/acknowledgementActions";
 
-interface Props {
-  updateAcknowledgementState(
-    acknowledgementId: acknowledgementId,
-    value: boolean
-  ): void;
+interface OwnProps {}
+interface StateProps {
   acknowledgementState: acknowledgementState;
-  updateProgress: (step: ProgressStep) => void;
   progress: ProgressStep;
 }
+interface DispatchProps {
+  dispatchUpdateAcknowledgementState: DispatchUpdateAcknowledgementStateType;
+  dispatchUpdateProgress: DispatchUpdateProgressType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 const _AcknowledgementPage = ({
-  updateProgress,
   acknowledgementState,
-  updateAcknowledgementState,
+  dispatchUpdateAcknowledgementState,
   progress,
+  dispatchUpdateProgress,
 }: Props) => {
   const handleSubmit = () => {
     if (progress === ProgressStep.OVERVIEW) {
-      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
+      dispatchUpdateProgress(ProgressStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -72,7 +74,7 @@ const _AcknowledgementPage = ({
     id: acknowledgementId,
     checked: boolean
   ): void => {
-    updateAcknowledgementState(id, checked);
+    dispatchUpdateAcknowledgementState(id, checked);
     if (checked) {
       scrollToNextAcknowledgement();
     }
@@ -131,16 +133,23 @@ const _AcknowledgementPage = ({
   );
 };
 
-const mstp = ({ progress, acknowledgementState }: StoreState) => ({
-  progress,
-  acknowledgementState,
+const mapStateToProps = (state: StoreState): StateProps => ({
+  progress: state.progress,
+  acknowledgementState: state.acknowledgementState,
 });
-const mdtp = (dispatch: any) => ({
-  updateAcknowledgementState: (
-    acknowledgementId: acknowledgementId,
-    value: boolean
-  ): void => dispatch(updateAcknowledgementState(acknowledgementId, value)),
-  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step)),
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchUpdateAcknowledgementState: (id, value) =>
+    dispatch(updateAcknowledgementState(id, value)),
+  dispatchUpdateProgress: (step: ProgressStep) =>
+    dispatch(updateProgress(step)),
 });
 
-export const AcknowledgementPage = connect(mstp, mdtp)(_AcknowledgementPage);
+export const AcknowledgementPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_AcknowledgementPage);

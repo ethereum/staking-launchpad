@@ -5,10 +5,10 @@ import Web3 from 'web3';
 import { Eth } from 'web3-eth';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
-import { KeyFileInterface, TransactionStatuses } from '../../store/actions';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { contractAddress, pricePerValidator as rawPrice } from '../../enums';
+import {KeyFileInterface, TransactionStatuses} from "../../store/actions/keyFileActions";
 
 const CONTRACT_ADDRESS = contractAddress;
 const pricePerValidator = new BigNumber(rawPrice);

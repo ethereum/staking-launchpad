@@ -8,7 +8,6 @@ import { OperatingSystemButtons } from './OperatingSystemButtons';
 import { LinuxInstructions } from './LinuxInstructions';
 import { MacInstructions } from './MacInstructions';
 import { WindowsInstructions } from './WindowsInstructions';
-import { ProgressStep, updateProgress } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { StoreState } from '../../store/reducers';
 import { Button } from '../../components/Button';
@@ -19,6 +18,10 @@ import { Heading } from '../../components/Heading';
 import { NumberInput } from './NumberInput';
 import { InfoBox } from '../../components/InfoBox';
 import { pricePerValidator } from '../../enums';
+import {
+  ProgressStep,
+  updateProgress,
+} from '../../store/actions/progressActions';
 
 export enum operatingSystem {
   'MAC',

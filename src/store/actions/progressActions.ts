@@ -22,3 +22,5 @@ export const updateProgress = (
     payload: progressStep,
   };
 };
+
+export type DispatchUpdateProgressType = (step: ProgressStep) => void;

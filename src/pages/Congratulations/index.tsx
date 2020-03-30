@@ -9,8 +9,9 @@ import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
 import { mainnetEthRequirement, pricePerValidator } from '../../enums';
 import { StoreState } from '../../store/reducers';
-import { KeyFileInterface, ProgressStep } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { ProgressStep } from '../../store/actions/progressActions';
+import { KeyFileInterface } from '../../store/actions/keyFileActions';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>

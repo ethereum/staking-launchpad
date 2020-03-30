@@ -15,11 +15,11 @@ import {
 import { WalletButton } from './WalletButton';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { StoreState } from '../../store/reducers';
-import { ProgressStep } from '../../store/actions';
 import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { ProgressStep } from '../../store/actions/progressActions';
 
 export interface web3ReactInterface {
   activate: (
@@ -37,11 +37,16 @@ export interface web3ReactInterface {
   error?: Error;
 }
 
-const _ConnectWalletPage = ({
-  progress,
-}: {
+// Prop definitions
+interface OwnProps {}
+interface StateProps {
   progress: ProgressStep;
-}): JSX.Element => {
+}
+interface DispatchProps {}
+
+type Props = StateProps & DispatchProps & OwnProps;
+
+const _ConnectWalletPage = ({ progress }: Props): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
     active: walletConnected,
@@ -95,8 +100,13 @@ const _ConnectWalletPage = ({
   );
 };
 
-const mstp = ({ progress }: StoreState) => ({
+const mapStateToProps = ({ progress }: StoreState): StateProps => ({
   progress,
 });
 
-export const ConnectWalletPage = connect(mstp)(_ConnectWalletPage);
+export const ConnectWalletPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(mapStateToProps)(_ConnectWalletPage);

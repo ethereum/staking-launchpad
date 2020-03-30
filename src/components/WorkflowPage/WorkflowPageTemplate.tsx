@@ -5,12 +5,12 @@ import { Heading } from 'grommet';
 import { WorkflowProgressBar } from './WorkflowProgressBar';
 import { AppBar } from '../AppBar';
 import { DesktopOnlyModal } from '../DesktopOnlyModal';
-import { ProgressStep } from '../../store/actions';
 import {
   rainbowColors,
   rainbowLightColors,
 } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
+import { ProgressStep } from '../../store/actions/progressActions';
 
 const Content = styled.div`
   width: 100%;

@@ -1,59 +1,23 @@
 import React from 'react';
-import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
 import { Box, Heading, Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
-import {
-  AllowedNetworks,
-  fortmatic,
-  metamask,
-  NetworkChainId,
-  portis,
-} from './web3Utils';
+import { fortmatic, metamask, portis } from './web3Utils';
 import { web3ReactInterface } from './index';
 import { Paper } from '../../components/Paper';
 import { Dot } from '../../components/Dot';
-import { Button } from '../../components/Button';
-import { routesEnum } from '../../Routes';
-import { Link } from '../../components/Link';
-import { StoreState } from '../../store/reducers';
-import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
 
-interface OwnProps {}
-interface StateProps {
-  workflowProgress: WorkflowProgressStep;
+interface Props {
+  network: string;
+  networkAllowed: boolean;
 }
-interface DispatchProps {
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
-}
-type Props = StateProps & DispatchProps & OwnProps;
-const _WalletConnected = ({ workflowProgress, dispatchUpdateWorkflowProgress }: Props) => {
+
+export const WalletConnected = ({ network, networkAllowed }: Props) => {
   const {
     account,
-    chainId,
     connector: walletProvider,
-    deactivate,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-
-  let network;
-  let networkAllowed = false;
-
-  if (chainId) {
-    network = NetworkChainId[chainId];
-    networkAllowed = Object.values(AllowedNetworks).includes(network);
-  }
-
-  const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.CONNECT_WALLET) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.SUMMARY);
-    }
-  };
 
   const getWalletName = (provider?: AbstractConnector) => {
     if (!provider) return '';
@@ -80,46 +44,6 @@ const _WalletConnected = ({ workflowProgress, dispatchUpdateWorkflowProgress }: 
           {network}
         </Text>
       </Paper>
-      <Box align="center" pad="large">
-        {!networkAllowed && (
-          <Text className="mb10">Please connect to Göerli Testnet</Text>
-        )}
-        <div className="flex">
-          <Button
-            width={300}
-            onClick={deactivate}
-            label="Connect a different wallet"
-            className="mr10"
-            color="blueDark"
-          />
-          <Link to={routesEnum.summaryPage} onClick={handleSubmit}>
-            <Button
-              width={300}
-              rainbow
-              disabled={!networkAllowed}
-              label="Continue on testnet"
-            />
-          </Link>
-        </div>
-      </Box>
     </div>
   );
 };
-
-const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
-  workflowProgress,
-});
-const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) =>
-    dispatch(updateWorkflowProgress(step)),
-});
-
-export const WalletConnected = connect<
-  StateProps,
-  DispatchProps,
-  OwnProps,
-  StoreState
->(
-  mapStateToProps,
-  mapDispatchToProps
-)(_WalletConnected);

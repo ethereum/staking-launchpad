@@ -56,17 +56,24 @@ export const fortmatic: FortmaticConnector = new FortmaticConnector({
   rpcUrl: process.env.REACT_APP_RPC_URL_GOERLI as string,
 });
 
-export function getErrorMessage(error: Error): string {
-  if (error instanceof NoEthereumProviderError) {
-    return 'No Ethereum browser extension detected, install MetaMask.';
+export function getErrorMessage(error: Error | string): string {
+  // User has cancelled wallet connection
+  if (
+    typeof error === 'string' || // portis
+    error.message ===
+      'Fortmatic RPC Error: [-32603] Fortmatic: User denied account access.' || // fortmatic
+    error instanceof UserRejectedRequestError // should catch all other wallets
+  ) {
+    return '';
   }
+
+  if (error instanceof NoEthereumProviderError) { // for metamask only
+    return 'No Ethereum browser extension detected. install MetaMask.';
+  }
+
   if (error instanceof UnsupportedChainIdError) {
     return "You're connected to an unsupported network.";
   }
-  if (error instanceof UserRejectedRequestError) {
-    return 'Please authorize this website to access your Ethereum account.';
-  }
-  console.error(error);
   return 'An unknown error occurred. Check the console for more details.';
 }
 

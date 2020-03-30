@@ -11,15 +11,13 @@ const Img = styled.img`
   width: 340px;
 `;
 
-export const Step = ({
-  imgUrl,
-  title,
-  content,
-}: {
+interface Props {
   imgUrl: any;
   title: string;
   content: string;
-}): JSX.Element => {
+}
+
+export const Step = ({ imgUrl, title, content }: Props): JSX.Element => {
   return (
     <Container>
       <Img src={imgUrl} alt="" />

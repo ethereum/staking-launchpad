@@ -1,3 +1,8 @@
+/*
+  This class is from NoahZinsmeisters web3-react library with edits to allow Goerli testnet
+  https://github.com/NoahZinsmeister/web3-react/blob/v6/packages/fortmatic-connector/src/index.ts
+ */
+
 import { ConnectorUpdate } from '@web3-react/types';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import invariant from 'tiny-invariant';

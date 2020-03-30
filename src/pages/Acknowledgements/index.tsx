@@ -12,22 +12,26 @@ import {
 import { Link } from '../../components/Link';
 import {
   acknowledgementId,
-  acknowledgementState,
+  AcknowledgementStateInterface,
   StoreState,
 } from '../../store/reducers';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
-import {DispatchUpdateWorkflowProgressType, WorkflowProgressStep, updateWorkflowProgress} from "../../store/actions/workflowProgressActions";
+import {
+  DispatchUpdateWorkflowProgressType,
+  WorkflowProgressStep,
+  updateWorkflowProgress,
+} from '../../store/actions/workflowProgressActions';
 import {
   DispatchUpdateAcknowledgementStateType,
-  updateAcknowledgementState
-} from "../../store/actions/acknowledgementActions";
+  updateAcknowledgementState,
+} from '../../store/actions/acknowledgementActions';
 
 interface OwnProps {}
 interface StateProps {
-  acknowledgementState: acknowledgementState;
+  acknowledgementState: AcknowledgementStateInterface;
   workflowProgress: WorkflowProgressStep;
 }
 interface DispatchProps {

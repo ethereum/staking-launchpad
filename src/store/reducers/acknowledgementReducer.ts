@@ -12,14 +12,14 @@ export enum acknowledgementId {
   earlyAdoptionRisks = 'earlyAdoptionRisks',
 }
 
-export interface acknowledgementState {
+export interface AcknowledgementStateInterface {
   acknowledgements: {
     [key in acknowledgementId]: boolean;
   };
   allAgreedTo: boolean;
 }
 
-const defaultAcknowledgementState: acknowledgementState = {
+const defaultAcknowledgementState: AcknowledgementStateInterface = {
   acknowledgements: {
     [acknowledgementId.signup]: false,
     [acknowledgementId.responsibilities]: false,
@@ -36,7 +36,7 @@ const defaultAcknowledgementState: acknowledgementState = {
 export const acknowledgementReducer = (
   state = defaultAcknowledgementState,
   action: Action
-): acknowledgementState => {
+): AcknowledgementStateInterface => {
   if (action.type === ActionTypes.updateAcknowledgementState) {
     const newAcknowledgementState = {
       ...state.acknowledgements,

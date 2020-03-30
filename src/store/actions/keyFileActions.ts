@@ -1,6 +1,9 @@
+/*
+  eslint-disable camelcase
+*/
 import { ActionTypes } from './index';
 
-export enum TransactionStatuses {
+export enum TransactionStatus {
   'READY',
   'PENDING',
   'STARTED',
@@ -11,16 +14,13 @@ export enum TransactionStatuses {
 
 export interface KeyFileInterface {
   pubkey: string;
-  // eslint-disable-next-line camelcase
   withdrawal_credentials: string;
   amount: number;
   signature: string;
-  // eslint-disable-next-line camelcase
   deposit_data_root: string;
-  // eslint-disable-next-line camelcase
   signed_deposit_data_root: string;
 
-  transactionStatus: TransactionStatuses;
+  transactionStatus: TransactionStatus;
   txHash?: string;
 }
 export interface UpdateKeyFilesAction {
@@ -31,7 +31,7 @@ export interface UpdateTransactionStatusAction {
   type: ActionTypes.updateTransactionStatus;
   payload: {
     pubkey: string;
-    status: TransactionStatuses;
+    status: TransactionStatus;
     txHash?: string;
   };
 }
@@ -49,7 +49,7 @@ export const updateKeyFiles = (
 
 export const updateTransactionStatus = (
   pubkey: string,
-  status: TransactionStatuses,
+  status: TransactionStatus,
   txHash?: string
 ): UpdateTransactionStatusAction => {
   return {
@@ -64,6 +64,6 @@ export const updateTransactionStatus = (
 
 export type DispatchUpdateTransactionStatusType = (
   pubkey: string,
-  status: TransactionStatuses,
+  status: TransactionStatus,
   txHash?: string
 ) => void;

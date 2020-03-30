@@ -15,10 +15,14 @@ import { StoreState } from '../../store/reducers';
 import {
   DispatchUpdateKeyFilesType,
   KeyFileInterface,
-  TransactionStatuses,
-  updateKeyFiles
-} from "../../store/actions/keyFileActions";
-import {DispatchUpdateWorkflowProgressType, WorkflowProgressStep, updateWorkflowProgress} from "../../store/actions/workflowProgressActions";
+  TransactionStatus,
+  updateKeyFiles,
+} from '../../store/actions/keyFileActions';
+import {
+  DispatchUpdateWorkflowProgressType,
+  WorkflowProgressStep,
+  updateWorkflowProgress,
+} from '../../store/actions/workflowProgressActions';
 
 // Styled components
 const Instructions = styled(Link)`
@@ -73,7 +77,7 @@ export const _UploadValidatorPage = ({
                 dispatchUpdateKeyFiles(
                   fileData.map((keyFile: KeyFileInterface) => ({
                     ...keyFile,
-                    transactionStatus: TransactionStatuses.READY, // initialize each keyFile with ready state for transaction
+                    transactionStatus: TransactionStatus.READY, // initialize each keyFile with ready state for transaction
                   }))
                 );
               } else {
@@ -129,7 +133,8 @@ const mapStateToProps = (state: StoreState): StateProps => ({
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchUpdateKeyFiles: files => dispatch(updateKeyFiles(files)),
-  dispatchUpdateWorkflowProgress: step => dispatch(updateWorkflowProgress(step)),
+  dispatchUpdateWorkflowProgress: step =>
+    dispatch(updateWorkflowProgress(step)),
 });
 
 export const UploadValidatorPage = connect<

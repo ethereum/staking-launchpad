@@ -21,7 +21,7 @@ import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWo
 import {
   DispatchUpdateTransactionStatusType,
   KeyFileInterface,
-  TransactionStatuses,
+  TransactionStatus,
   updateTransactionStatus,
 } from '../../store/actions/keyFileActions';
 import {
@@ -60,12 +60,10 @@ const _TransactionsPage = ({
   );
   const totalTxCount = keyFiles.length;
   const remainingTxCount = keyFiles.filter(
-    file => file.transactionStatus === TransactionStatuses.READY
+    file => file.transactionStatus === TransactionStatus.READY
   ).length;
   const allTxConfirmed = _every(
-    keyFiles.map(
-      file => file.transactionStatus === TransactionStatuses.SUCCEEDED
-    )
+    keyFiles.map(file => file.transactionStatus === TransactionStatus.SUCCEEDED)
   );
 
   const createButtonText = (): string => {
@@ -79,7 +77,7 @@ const _TransactionsPage = ({
 
   const handleAllTransactionsClick = () =>
     keyFiles.forEach(async validator => {
-      if (validator.transactionStatus === TransactionStatuses.READY) {
+      if (validator.transactionStatus === TransactionStatus.READY) {
         await handleTransaction(
           validator,
           connector as AbstractConnector,
@@ -104,7 +102,9 @@ const _TransactionsPage = ({
     }, 3000);
   }
   if (routeToCongratulationsPage)
-    return routeToCorrectWorkflowProgressStep(WorkflowProgressStep.CONGRATULATIONS);
+    return routeToCorrectWorkflowProgressStep(
+      WorkflowProgressStep.CONGRATULATIONS
+    );
 
   return (
     <WorkflowPageTemplate title="Transactions">
@@ -134,13 +134,17 @@ const _TransactionsPage = ({
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflowProgress }: StoreState): StateProps => ({
+const mapStateToProps = ({
+  keyFiles,
+  workflowProgress,
+}: StoreState): StateProps => ({
   keyFiles,
   workflowProgress,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: step => dispatch(updateWorkflowProgress(step)),
+  dispatchUpdateWorkflowProgress: step =>
+    dispatch(updateWorkflowProgress(step)),
   dispatchUpdateTransactionStatus: (pubkey, status, txHash) =>
     dispatch(updateTransactionStatus(pubkey, status, txHash)),
 });

@@ -4,13 +4,11 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { CodeBox } from '../../components/CodeBox';
 
-interface LinuxInstructionsProps {
+interface Props {
   validatorCount: number;
 }
 
-export const LinuxInstructions = ({
-  validatorCount,
-}: LinuxInstructionsProps) => (
+export const LinuxInstructions = ({ validatorCount }: Props) => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">
       <Heading level={3} size="small" color="blueMedium">

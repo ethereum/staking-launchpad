@@ -4,10 +4,10 @@ import { CodeBox } from '../../components/CodeBox';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 
-interface MacInstructionsProps {
+interface Props {
   validatorCount: number;
 }
-export const MacInstructions = ({ validatorCount }: MacInstructionsProps) => (
+export const MacInstructions = ({ validatorCount }: Props) => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">
       <Heading level={3} size="small" color="blueMedium">

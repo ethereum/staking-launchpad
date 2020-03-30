@@ -25,18 +25,12 @@ const Gutter = styled.div`
 `;
 const Background = styled.div`
   background-image: ${(p: { workflowProgressStep: WorkflowProgressStep }) =>
-    `linear-gradient(to bottom right, ${rainbowLightColors[p.workflowProgressStep]}, ${
-      rainbowColors[p.workflowProgressStep]
-    });`};
+    `linear-gradient(to bottom right, ${
+      rainbowLightColors[p.workflowProgressStep]
+    }, ${rainbowColors[p.workflowProgressStep]});`};
 
   min-height: 100vh;
 `;
-
-interface WorkflowPageTemplateProps extends RouteComponentProps {
-  children?: React.ReactNode;
-  title: string;
-  history: any;
-}
 
 const mapPathnameToWorkflowProgressStep = (pathname: routesEnum) => {
   const workflowRoutesInOrder = [
@@ -50,11 +44,17 @@ const mapPathnameToWorkflowProgressStep = (pathname: routesEnum) => {
   return workflowRoutesInOrder.indexOf(pathname);
 };
 
+interface Props extends RouteComponentProps {
+  children?: React.ReactNode;
+  title: string;
+  history: any;
+}
+
 const _WorkflowPageTemplate = ({
   children,
   title,
   history,
-}: WorkflowPageTemplateProps): JSX.Element => {
+}: Props): JSX.Element => {
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }

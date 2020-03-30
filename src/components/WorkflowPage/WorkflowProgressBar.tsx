@@ -90,13 +90,13 @@ const Step = styled.div`
   font-weight: ${p => (p.active ? 600 : undefined)};
 `;
 
-interface WorkflowProgressBarInterface {
+interface Props {
   workflowProgress: WorkflowProgressStep;
 }
 
 export const WorkflowProgressBar = ({
   workflowProgress,
-}: WorkflowProgressBarInterface): JSX.Element => {
+}: Props): JSX.Element => {
   interface step {
     step: WorkflowProgressStep;
     text: string;
@@ -105,7 +105,10 @@ export const WorkflowProgressBar = ({
   const steps: step[] = [
     { step: WorkflowProgressStep.OVERVIEW, text: 'Overview' },
     { step: WorkflowProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
-    { step: WorkflowProgressStep.UPLOAD_VALIDATOR_FILE, text: 'Upload Validator' },
+    {
+      step: WorkflowProgressStep.UPLOAD_VALIDATOR_FILE,
+      text: 'Upload Validator',
+    },
     { step: WorkflowProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
     { step: WorkflowProgressStep.SUMMARY, text: 'Summary' },
     { step: WorkflowProgressStep.TRANSACTION_SIGNING, text: 'Transactions' },

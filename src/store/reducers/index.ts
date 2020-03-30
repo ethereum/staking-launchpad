@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import {
   acknowledgementReducer,
-  acknowledgementState,
+  AcknowledgementStateInterface,
 } from './acknowledgementReducer';
 import { workflowProgressReducer } from './workflowProgressReducer';
 import { keyFilesReducer } from './keyFilesReducer';
@@ -13,7 +13,7 @@ export * from './keyFilesReducer';
 export * from './workflowProgressReducer';
 
 export interface StoreState {
-  acknowledgementState: acknowledgementState;
+  acknowledgementState: AcknowledgementStateInterface;
   keyFiles: KeyFileInterface[];
   workflowProgress: WorkflowProgressStep;
 }

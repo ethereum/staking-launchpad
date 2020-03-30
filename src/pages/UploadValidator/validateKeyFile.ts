@@ -1,3 +1,6 @@
+/*
+  eslint-disable camelcase
+ */
 import _every from 'lodash/every';
 import { initBLS } from '@chainsafe/bls';
 import { verifySignature } from '../../utils/verifySignature';

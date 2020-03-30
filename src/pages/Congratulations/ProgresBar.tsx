@@ -29,15 +29,13 @@ const PBarIncomplete = styled.div`
   width: ${(p: { workflowProgress: number }) => p.workflowProgress}%;
 `;
 
-export const ProgressBar = ({
-  complete,
-  newlyAdded,
-  incomplete,
-}: {
+interface Props {
   complete: number;
   newlyAdded: number;
   incomplete: number;
-}) => {
+}
+
+export const ProgressBar = ({ complete, newlyAdded, incomplete }: Props) => {
   return (
     <div>
       <PBarContainer>

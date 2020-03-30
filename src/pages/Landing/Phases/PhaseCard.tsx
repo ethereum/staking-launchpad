@@ -12,17 +12,14 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export const PhaseCard = ({
-  title,
-  subTitle,
-  link,
-  linkUrl,
-}: {
+interface Props {
   title: string;
   subTitle: string;
   link: string;
   linkUrl: string;
-}) => {
+}
+
+export const PhaseCard = ({ title, subTitle, link, linkUrl }: Props) => {
   return (
     <Container>
       <Heading level="4" size="large" className="my10">

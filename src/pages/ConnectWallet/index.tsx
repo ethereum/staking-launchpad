@@ -166,9 +166,9 @@ const _ConnectWalletPage = ({
   }
 
   if (walletConnected && networkAllowed && !error && balance) {
-    status = `${parseFloat(formatEther(balance)).toPrecision(
-      5
-    )} Goerli ETH available`;
+    status = `${parseFloat(formatEther(balance)).toPrecision(5)} ${
+      isMainnet ? '' : network
+    } ETH available`;
   } else if (walletConnected && error) {
     status = 'Error';
   } else if (!networkAllowed) {

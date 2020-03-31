@@ -1967,6 +1967,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-tooltip@^3.11.0":
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@types/react-tooltip/-/react-tooltip-3.11.0.tgz#e7e7e9c67629f2b6f75ea67752922c9de0b64468"
+  integrity sha512-TkXMgkZ5aAKkFE9Wvt8OlOiPtF9ufgBOL9xWlRSzLBaoL12qSOBiyMcU4/8TyED1fuWkm5VTVarScwOPLSArYw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.9.0":
   version "16.9.23"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.23.tgz#1a66c6d468ba11a8943ad958a8cb3e737568271c"
@@ -11905,6 +11912,13 @@ react-scroll@^1.7.16:
   dependencies:
     lodash.throttle "^4.1.1"
     prop-types "^15.5.8"
+
+react-tooltip@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-4.1.3.tgz#29d4fe854b678992965b131698b3bf1818474015"
+  integrity sha512-Tzi9QGn7WGC6NocvWHtQw2Lp7nOFSt2rB9Gyg4O4vflT/catGDNMvo8vXBIzKHYKp+tXYj8eZCN7AxoZtW3zXg==
+  dependencies:
+    prop-types "^15.7.2"
 
 react-transition-group@^1.2.1:
   version "1.2.1"

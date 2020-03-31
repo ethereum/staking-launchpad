@@ -11,6 +11,8 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { formatEther } from '@ethersproject/units';
 import { NoEthereumProviderError } from '@web3-react/injected-connector';
+import { StatusWarning } from 'grommet-icons';
+import ReactTooltip from 'react-tooltip';
 import {
   AllowedNetworks,
   fortmatic,
@@ -33,20 +35,22 @@ import fortmaticLogo from '../../static/fortmatic.svg';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { Dot } from '../../components/Dot';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
+import { KeyFileInterface } from '../../store/actions/keyFileActions';
 
+// Environment variables
 const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
+const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 
+// styled components
 const Container = styled.div`
   margin: auto;
   position: relative;
 `;
-
 const WalletConnectedContainer = styled.div`
   pointer-events: none;
   width: 500px;
@@ -54,7 +58,6 @@ const WalletConnectedContainer = styled.div`
   position: absolute;
   left: calc(50% - 250px); // center - half width
 `;
-
 const WalletButtonContainer = styled.div`
   margin: auto;
   .wallet-button-sub-container {
@@ -66,7 +69,6 @@ const WalletButtonContainer = styled.div`
       width: 400px;
     }
   }
-
   .wallet-button {
     width: 350px;
     margin: 10px;
@@ -79,8 +81,8 @@ const WalletInfoContainer = styled.div`
   padding-bottom: 20px;
 `;
 const StatusText = styled(Text)`
-  margin: 20px auto auto;
-  font-size: 20px;
+  font-size: 22px;
+  margin-left: 10px;
 `;
 
 export interface web3ReactInterface {
@@ -103,18 +105,23 @@ export interface web3ReactInterface {
 interface OwnProps {}
 interface StateProps {
   workflow: WorkflowStep;
+  keyFiles: KeyFileInterface[];
 }
 interface DispatchProps {
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
-
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _ConnectWalletPage = ({
   workflow,
   dispatchWorkflowUpdate,
+  keyFiles,
 }: Props): JSX.Element => {
+  // setup RPC event listener
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
+  useMetamaskListener(!attemptedMMConnection);
+
+  // get wallet info from Web3React
   const {
     active: walletConnected,
     deactivate,
@@ -126,22 +133,56 @@ const _ConnectWalletPage = ({
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
   const [balance, setBalance] = useState<number | null>(null);
+  const [lowBalance, setLowBalance] = useState<boolean>(false);
+  const [selectedWallet, setSelectedWallet] = useState<
+    AbstractConnector | null | undefined
+  >(null);
+  const [network, setNetwork] = useState<string>('');
+  const [networkAllowed, setNetworkAllowed] = useState<boolean>(false);
+  const [status, setStatus] = useState<string>('');
 
+  // sets the balance to the current wallet on provider or network change
   useEffect((): any => {
     if (!!account && !!library) {
       library
         .getBalance(account)
-        .then((amount: any) => setBalance(amount))
+        .then((amount: any) => {
+          const formattedBalance = Number(
+            parseFloat(formatEther(amount)).toPrecision(5)
+          );
+          const requiredBalance = keyFiles.length * pricePerValidator;
+          setBalance(formattedBalance);
+          if (formattedBalance < requiredBalance || formattedBalance === 0) {
+            setLowBalance(true);
+          }
+        })
         .catch(() => setBalance(null));
       return () => setBalance(null);
     }
-  }, [account, library, chainId]);
+  }, [account, library, chainId, keyFiles]);
 
-  const [selectedWallet, setSelectedWallet] = useState<
-    AbstractConnector | null | undefined
-  >(null);
+  // sets the status copy on provider or network change
+  useEffect(() => {
+    if (chainId) {
+      setNetwork(NetworkChainId[chainId]);
+      setNetworkAllowed(Object.values(AllowedNetworks).includes(network));
+    }
 
-  useMetamaskListener(!attemptedMMConnection); // listen for RPC events
+    if (
+      walletConnected &&
+      networkAllowed &&
+      !error &&
+      (balance || balance === 0)
+    ) {
+      setStatus(`${balance} ${isMainnet ? '' : network} ETH available`);
+    } else if (walletConnected && error) {
+      setStatus('Error');
+    } else if (!networkAllowed) {
+      setStatus(
+        `Please connect to ${isMainnet ? 'Ethereum Mainnet' : 'Göerli Testnet'}`
+      );
+    }
+  });
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.CONNECT_WALLET) {
@@ -156,27 +197,6 @@ const _ConnectWalletPage = ({
     if (provider === fortmatic) return 'Fortmatic';
     return '';
   };
-
-  let network = '';
-  let networkAllowed = false;
-  let status = '';
-
-  if (chainId) {
-    network = NetworkChainId[chainId];
-    networkAllowed = Object.values(AllowedNetworks).includes(network);
-  }
-
-  if (walletConnected && networkAllowed && !error && balance) {
-    status = `${parseFloat(formatEther(balance)).toPrecision(5)} ${
-      isMainnet ? '' : network
-    } ETH available`;
-  } else if (walletConnected && error) {
-    status = 'Error';
-  } else if (!networkAllowed) {
-    status = `Please connect to ${
-      isMainnet ? 'Ethereum Mainnet' : 'Göerli Testnet'
-    }`;
-  }
 
   // if (workflowProgress < WorkflowStep.CONNECT_WALLET) {
   //   return routeToCorrectWorkflowStep(workflowProgress);
@@ -223,7 +243,29 @@ const _ConnectWalletPage = ({
                   {network === 'Mainnet' ? network : `${network} Testnet`}
                 </Text>
               </WalletInfoContainer>
-              <StatusText>{status}</StatusText>
+              <div className="flex center mt20">
+                {lowBalance && (
+                  <>
+                    <ReactTooltip
+                      id="status-warning"
+                      type="warning"
+                      effect="solid"
+                    >
+                      <span>
+                        You do not have enough ETH in this wallet for
+                        {keyFiles.length} validator
+                        {keyFiles.length > 1 ? 's' : ''}
+                      </span>
+                    </ReactTooltip>
+                    <StatusWarning
+                      data-tip
+                      data-for="status-warning"
+                      color="yellowDark"
+                    />
+                  </>
+                )}
+                <StatusText>{status}</StatusText>
+              </div>
             </Paper>
           </Animated>
         </WalletConnectedContainer>
@@ -302,8 +344,9 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
-const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+const mapStateToProps = ({ workflow, keyFiles }: StoreState): StateProps => ({
   workflow,
+  keyFiles,
 });
 
 export const ConnectWalletPage = connect<

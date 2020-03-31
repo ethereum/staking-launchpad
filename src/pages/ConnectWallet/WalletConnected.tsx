@@ -20,20 +20,20 @@ import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
 import { StoreState } from '../../store/reducers';
 import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
+  DispatchUpdateWorkflowType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
 interface OwnProps {}
 interface StateProps {
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
-const _WalletConnected = ({ workflowProgress, dispatchUpdateWorkflowProgress }: Props) => {
+const _WalletConnected = ({ workflow, dispatchUpdateWorkflow }: Props) => {
   const {
     account,
     chainId,
@@ -50,8 +50,8 @@ const _WalletConnected = ({ workflowProgress, dispatchUpdateWorkflowProgress }: 
   }
 
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.CONNECT_WALLET) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.SUMMARY);
+    if (workflow === WorkflowStep.CONNECT_WALLET) {
+      dispatchUpdateWorkflow(WorkflowStep.SUMMARY);
     }
   };
 
@@ -106,12 +106,12 @@ const _WalletConnected = ({ workflowProgress, dispatchUpdateWorkflowProgress }: 
   );
 };
 
-const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
-  workflowProgress,
+const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+  workflow,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) =>
-    dispatch(updateWorkflowProgress(step)),
+  dispatchUpdateWorkflow: (step: WorkflowStep) =>
+    dispatch(updateWorkflow(step)),
 });
 
 export const WalletConnected = connect<

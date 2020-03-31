@@ -9,7 +9,7 @@ import { OperatingSystemButtons } from './OperatingSystemButtons';
 import { LinuxInstructions } from './LinuxInstructions';
 import { MacInstructions } from './MacInstructions';
 import { WindowsInstructions } from './WindowsInstructions';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { StoreState } from '../../store/reducers';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
@@ -20,10 +20,10 @@ import { NumberInput } from './NumberInput';
 import { InfoBox } from '../../components/InfoBox';
 import { pricePerValidator } from '../../enums';
 import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
+  DispatchUpdateWorkflowType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
 export enum operatingSystem {
   'MAC',
@@ -45,22 +45,22 @@ const InstructionImgContainer = styled.div`
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _GenerateKeysPage = ({
-  dispatchUpdateWorkflowProgress,
-  workflowProgress,
+  dispatchUpdateWorkflow,
+  workflow,
 }: Props): JSX.Element => {
   const [validatorCount, setValidatorCount] = useState<number>(0);
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
-  ] = useState<boolean>(workflowProgress > WorkflowProgressStep.GENERATE_KEY_PAIRS);
+  ] = useState<boolean>(workflow > WorkflowStep.GENERATE_KEY_PAIRS);
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
@@ -70,8 +70,8 @@ const _GenerateKeysPage = ({
   };
 
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.GENERATE_KEY_PAIRS) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.UPLOAD_VALIDATOR_FILE);
+    if (workflow === WorkflowStep.GENERATE_KEY_PAIRS) {
+      dispatchUpdateWorkflow(WorkflowStep.UPLOAD_VALIDATOR_FILE);
     }
   };
 
@@ -88,8 +88,8 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (workflowProgress < WorkflowProgressStep.GENERATE_KEY_PAIRS) {
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
+    return routeToCorrectWorkflowStep(workflow);
   }
 
   return (
@@ -166,12 +166,12 @@ const _GenerateKeysPage = ({
   );
 };
 
-const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
-  workflowProgress,
+const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+  workflow,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (workflowProgressStep: WorkflowProgressStep) => {
-    dispatch(updateWorkflowProgress(workflowProgressStep));
+  dispatchUpdateWorkflow: (workflowStep: WorkflowStep) => {
+    dispatch(updateWorkflow(workflowStep));
   },
 });
 

@@ -15,11 +15,11 @@ import {
 import { WalletButton } from './WalletButton';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { StoreState } from '../../store/reducers';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
-import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
+import { WorkflowStep } from '../../store/actions/workflowActions';
 
 export interface web3ReactInterface {
   activate: (
@@ -40,13 +40,13 @@ export interface web3ReactInterface {
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {}
 
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _ConnectWalletPage = ({ workflowProgress }: Props): JSX.Element => {
+const _ConnectWalletPage = ({ workflow }: Props): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
     active: walletConnected,
@@ -56,8 +56,8 @@ const _ConnectWalletPage = ({ workflowProgress }: Props): JSX.Element => {
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
-  if (workflowProgress < WorkflowProgressStep.CONNECT_WALLET) {
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow < WorkflowStep.CONNECT_WALLET) {
+    return routeToCorrectWorkflowStep(workflow);
   }
 
   if (walletConnected) {
@@ -100,8 +100,8 @@ const _ConnectWalletPage = ({ workflowProgress }: Props): JSX.Element => {
   );
 };
 
-const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
-  workflowProgress,
+const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+  workflow,
 });
 
 export const ConnectWalletPage = connect<

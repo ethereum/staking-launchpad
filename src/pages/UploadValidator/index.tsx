@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { StyledDropzone } from './Dropzone';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
@@ -19,10 +19,10 @@ import {
   updateKeyFiles,
 } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
+  DispatchUpdateWorkflowType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
 // Styled components
 const Instructions = styled(Link)`
@@ -42,25 +42,25 @@ const ErrorText = styled(Text)`
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {
   dispatchUpdateKeyFiles: DispatchUpdateKeyFilesType;
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 export const _UploadValidatorPage = ({
   keyFiles,
   dispatchUpdateKeyFiles,
-  dispatchUpdateWorkflowProgress,
-  workflowProgress,
+  dispatchUpdateWorkflow,
+  workflow,
 }: Props): JSX.Element => {
   const fileAccepted = keyFiles.length > 0;
   const [invalidKeyFile, setInvalidKeyFile] = useState(false);
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.UPLOAD_VALIDATOR_FILE) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.CONNECT_WALLET);
+    if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
+      dispatchUpdateWorkflow(WorkflowStep.CONNECT_WALLET);
     }
   };
 
@@ -94,8 +94,8 @@ export const _UploadValidatorPage = ({
     [dispatchUpdateKeyFiles]
   );
 
-  if (workflowProgress < WorkflowProgressStep.UPLOAD_VALIDATOR_FILE)
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
+    return routeToCorrectWorkflowStep(workflow);
 
   return (
     <WorkflowPageTemplate title="Upload Deposits">
@@ -129,12 +129,11 @@ export const _UploadValidatorPage = ({
 
 const mapStateToProps = (state: StoreState): StateProps => ({
   keyFiles: state.keyFiles,
-  workflowProgress: state.workflowProgress,
+  workflow: state.workflow,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchUpdateKeyFiles: files => dispatch(updateKeyFiles(files)),
-  dispatchUpdateWorkflowProgress: step =>
-    dispatch(updateWorkflowProgress(step)),
+  dispatchUpdateWorkflow: step => dispatch(updateWorkflow(step)),
 });
 
 export const UploadValidatorPage = connect<

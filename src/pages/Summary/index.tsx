@@ -16,7 +16,7 @@ import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { pricePerValidator } from '../../enums';
@@ -26,10 +26,10 @@ import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
+  DispatchUpdateWorkflowType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
 const Container = styled.div`
   width: 100%;
@@ -42,16 +42,16 @@ const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _SummaryPage = ({
-  workflowProgress,
-  dispatchUpdateWorkflowProgress,
+  workflow,
+  dispatchUpdateWorkflow,
   keyFiles,
 }: Props): JSX.Element => {
   const [allChecked, setAllChecked] = useState(false);
@@ -71,13 +71,13 @@ const _SummaryPage = ({
   >();
 
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.SUMMARY) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.TRANSACTION_SIGNING);
+    if (workflow === WorkflowStep.SUMMARY) {
+      dispatchUpdateWorkflow(WorkflowStep.TRANSACTION_SIGNING);
     }
   };
 
-  if (workflowProgress < WorkflowProgressStep.SUMMARY)
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow < WorkflowStep.SUMMARY)
+    return routeToCorrectWorkflowStep(workflow);
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;
@@ -167,14 +167,14 @@ const _SummaryPage = ({
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflowProgress }: StoreState): StateProps => ({
+const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
   keyFiles,
-  workflowProgress,
+  workflow,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) => {
-    dispatch(updateWorkflowProgress(step));
+  dispatchUpdateWorkflow: (step: WorkflowStep) => {
+    dispatch(updateWorkflow(step));
   },
 });
 

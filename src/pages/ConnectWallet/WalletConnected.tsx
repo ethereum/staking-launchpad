@@ -20,7 +20,7 @@ import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
 import { StoreState } from '../../store/reducers';
 import {
-  DispatchUpdateWorkflowType,
+  DispatchWorkflowUpdateType,
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
@@ -30,10 +30,10 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
-const _WalletConnected = ({ workflow, dispatchUpdateWorkflow }: Props) => {
+const _WalletConnected = ({ workflow, dispatchWorkflowUpdate }: Props) => {
   const {
     account,
     chainId,
@@ -51,7 +51,7 @@ const _WalletConnected = ({ workflow, dispatchUpdateWorkflow }: Props) => {
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.CONNECT_WALLET) {
-      dispatchUpdateWorkflow(WorkflowStep.SUMMARY);
+      dispatchWorkflowUpdate(WorkflowStep.SUMMARY);
     }
   };
 
@@ -110,7 +110,7 @@ const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
   workflow,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflow: (step: WorkflowStep) =>
+  dispatchWorkflowUpdate: (step: WorkflowStep) =>
     dispatch(updateWorkflow(step)),
 });
 

@@ -23,4 +23,4 @@ export const updateWorkflow = (
   };
 };
 
-export type DispatchUpdateWorkflowType = (step: WorkflowStep) => void;
+export type DispatchWorkflowUpdateType = (step: WorkflowStep) => void;

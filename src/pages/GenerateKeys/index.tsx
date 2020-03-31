@@ -20,7 +20,7 @@ import { NumberInput } from './NumberInput';
 import { InfoBox } from '../../components/InfoBox';
 import { pricePerValidator } from '../../enums';
 import {
-  DispatchUpdateWorkflowType,
+  DispatchWorkflowUpdateType,
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
@@ -48,12 +48,12 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _GenerateKeysPage = ({
-  dispatchUpdateWorkflow,
+  dispatchWorkflowUpdate,
   workflow,
 }: Props): JSX.Element => {
   const [validatorCount, setValidatorCount] = useState<number>(0);
@@ -71,7 +71,7 @@ const _GenerateKeysPage = ({
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.GENERATE_KEY_PAIRS) {
-      dispatchUpdateWorkflow(WorkflowStep.UPLOAD_VALIDATOR_FILE);
+      dispatchWorkflowUpdate(WorkflowStep.UPLOAD_VALIDATOR_FILE);
     }
   };
 
@@ -170,7 +170,7 @@ const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
   workflow,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflow: (workflowStep: WorkflowStep) => {
+  dispatchWorkflowUpdate: (workflowStep: WorkflowStep) => {
     dispatch(updateWorkflow(workflowStep));
   },
 });

@@ -20,12 +20,12 @@ import { Button } from '../../components/Button';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
 import {
-  DispatchUpdateWorkflowType,
+  DispatchWorkflowUpdateType,
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
 import {
-  DispatchUpdateAcknowledgementStateType,
+  DispatchAcknowledgementStateUpdateType,
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
 
@@ -35,20 +35,20 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateAcknowledgementState: DispatchUpdateAcknowledgementStateType;
-  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
+  dispatchAcknowledgementStateUpdate: DispatchAcknowledgementStateUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _AcknowledgementPage = ({
   acknowledgementState,
-  dispatchUpdateAcknowledgementState,
+  dispatchAcknowledgementStateUpdate,
   workflow,
-  dispatchUpdateWorkflow,
+  dispatchWorkflowUpdate,
 }: Props) => {
   const handleSubmit = () => {
     if (workflow === WorkflowStep.OVERVIEW) {
-      dispatchUpdateWorkflow(WorkflowStep.GENERATE_KEY_PAIRS);
+      dispatchWorkflowUpdate(WorkflowStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -78,7 +78,7 @@ const _AcknowledgementPage = ({
     id: acknowledgementId,
     checked: boolean
   ): void => {
-    dispatchUpdateAcknowledgementState(id, checked);
+    dispatchAcknowledgementStateUpdate(id, checked);
     if (checked) {
       scrollToNextAcknowledgement();
     }
@@ -142,9 +142,9 @@ const mapStateToProps = (state: StoreState): StateProps => ({
   acknowledgementState: state.acknowledgementState,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateAcknowledgementState: (id, value) =>
+  dispatchAcknowledgementStateUpdate: (id, value) =>
     dispatch(updateAcknowledgementState(id, value)),
-  dispatchUpdateWorkflow: (step: WorkflowStep) =>
+  dispatchWorkflowUpdate: (step: WorkflowStep) =>
     dispatch(updateWorkflow(step)),
 });
 

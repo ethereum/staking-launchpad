@@ -21,7 +21,7 @@ import { StoreState } from '../../../store/reducers';
 import { handleTransaction } from '../transactionUtils';
 import { web3ReactInterface } from '../../ConnectWallet';
 import {
-  DispatchUpdateTransactionStatusType,
+  DispatchTransactionStatusUpdateType,
   KeyFileInterface,
   updateTransactionStatus,
 } from '../../../store/actions/keyFileActions';
@@ -46,11 +46,11 @@ interface StateProps {
   keyFiles: KeyFileInterface[];
 }
 interface DispatchProps {
-  dispatchUpdateTransactionStatus: DispatchUpdateTransactionStatusType;
+  dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _KeyList = ({ keyFiles, dispatchUpdateTransactionStatus }: Props) => {
+const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -59,7 +59,7 @@ const _KeyList = ({ keyFiles, dispatchUpdateTransactionStatus }: Props) => {
       keyFile,
       connector as AbstractConnector,
       account,
-      dispatchUpdateTransactionStatus
+      dispatchTransactionStatusUpdate
     );
   };
 
@@ -116,7 +116,7 @@ const mapStateToProps = ({ keyFiles }: StoreState): StateProps => {
 };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateTransactionStatus: (pubkey, status, txHash) =>
+  dispatchTransactionStatusUpdate: (pubkey, status, txHash) =>
     dispatch(updateTransactionStatus(pubkey, status, txHash)),
 });
 

@@ -13,13 +13,13 @@ import { Link } from '../../components/Link';
 import { validateKeyFile } from './validateKeyFile';
 import { StoreState } from '../../store/reducers';
 import {
-  DispatchUpdateKeyFilesType,
+  DispatchKeyFilesUpdateType,
   KeyFileInterface,
   TransactionStatus,
   updateKeyFiles,
 } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowType,
+  DispatchWorkflowUpdateType,
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
@@ -45,22 +45,22 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateKeyFiles: DispatchUpdateKeyFilesType;
-  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
+  dispatchKeyFilesUpdate: DispatchKeyFilesUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 export const _UploadValidatorPage = ({
   keyFiles,
-  dispatchUpdateKeyFiles,
-  dispatchUpdateWorkflow,
+  dispatchKeyFilesUpdate,
+  dispatchWorkflowUpdate,
   workflow,
 }: Props): JSX.Element => {
   const fileAccepted = keyFiles.length > 0;
   const [invalidKeyFile, setInvalidKeyFile] = useState(false);
   const handleSubmit = () => {
     if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
-      dispatchUpdateWorkflow(WorkflowStep.CONNECT_WALLET);
+      dispatchWorkflowUpdate(WorkflowStep.CONNECT_WALLET);
     }
   };
 
@@ -74,7 +74,7 @@ export const _UploadValidatorPage = ({
             try {
               const fileData = JSON.parse(event.target.result as string);
               if (await validateKeyFile(fileData as KeyFileInterface[])) {
-                dispatchUpdateKeyFiles(
+                dispatchKeyFilesUpdate(
                   fileData.map((keyFile: KeyFileInterface) => ({
                     ...keyFile,
                     transactionStatus: TransactionStatus.READY, // initialize each keyFile with ready state for transaction
@@ -91,7 +91,7 @@ export const _UploadValidatorPage = ({
         reader.readAsText(acceptedFiles[0]);
       }
     },
-    [dispatchUpdateKeyFiles]
+    [dispatchKeyFilesUpdate]
   );
 
   if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
@@ -132,8 +132,8 @@ const mapStateToProps = (state: StoreState): StateProps => ({
   workflow: state.workflow,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateKeyFiles: files => dispatch(updateKeyFiles(files)),
-  dispatchUpdateWorkflow: step => dispatch(updateWorkflow(step)),
+  dispatchKeyFilesUpdate: files => dispatch(updateKeyFiles(files)),
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
 export const UploadValidatorPage = connect<

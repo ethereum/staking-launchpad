@@ -26,7 +26,7 @@ import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowType,
+  DispatchWorkflowUpdateType,
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
@@ -45,13 +45,13 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _SummaryPage = ({
   workflow,
-  dispatchUpdateWorkflow,
+  dispatchWorkflowUpdate,
   keyFiles,
 }: Props): JSX.Element => {
   const [allChecked, setAllChecked] = useState(false);
@@ -72,7 +72,7 @@ const _SummaryPage = ({
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.SUMMARY) {
-      dispatchUpdateWorkflow(WorkflowStep.TRANSACTION_SIGNING);
+      dispatchWorkflowUpdate(WorkflowStep.TRANSACTION_SIGNING);
     }
   };
 
@@ -173,7 +173,7 @@ const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflow: (step: WorkflowStep) => {
+  dispatchWorkflowUpdate: (step: WorkflowStep) => {
     dispatch(updateWorkflow(step));
   },
 });

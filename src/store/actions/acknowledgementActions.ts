@@ -19,7 +19,7 @@ export const updateAcknowledgementState = (
   };
 };
 
-export type DispatchUpdateAcknowledgementStateType = (
+export type DispatchAcknowledgementStateUpdateType = (
   acknowledgementId: acknowledgementId,
   value: boolean
 ) => void;

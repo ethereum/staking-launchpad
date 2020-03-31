@@ -19,13 +19,13 @@ import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
-  DispatchUpdateTransactionStatusType,
+  DispatchTransactionStatusUpdateType,
   KeyFileInterface,
   TransactionStatus,
   updateTransactionStatus,
 } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowType,
+  DispatchWorkflowUpdateType,
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
@@ -40,16 +40,16 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateTransactionStatus: DispatchUpdateTransactionStatusType;
-  dispatchUpdateWorkflow: DispatchUpdateWorkflowType;
+  dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _TransactionsPage = ({
   keyFiles,
   workflow,
-  dispatchUpdateTransactionStatus,
-  dispatchUpdateWorkflow,
+  dispatchTransactionStatusUpdate,
+  dispatchWorkflowUpdate,
 }: Props): JSX.Element => {
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
@@ -82,7 +82,7 @@ const _TransactionsPage = ({
           validator,
           connector as AbstractConnector,
           account,
-          dispatchUpdateTransactionStatus
+          dispatchTransactionStatusUpdate
         );
       }
     });
@@ -97,7 +97,7 @@ const _TransactionsPage = ({
 
   if (allTxConfirmed) {
     setTimeout(() => {
-      dispatchUpdateWorkflow(WorkflowStep.CONGRATULATIONS);
+      dispatchWorkflowUpdate(WorkflowStep.CONGRATULATIONS);
       setRouteToCongratulationsPage(true);
     }, 3000);
   }
@@ -138,8 +138,8 @@ const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflow: step => dispatch(updateWorkflow(step)),
-  dispatchUpdateTransactionStatus: (pubkey, status, txHash) =>
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
+  dispatchTransactionStatusUpdate: (pubkey, status, txHash) =>
     dispatch(updateTransactionStatus(pubkey, status, txHash)),
 });
 

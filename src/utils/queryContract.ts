@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { contractAddress } from '../enums';
+
+const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 
 type infuraResponse = {
   data: {

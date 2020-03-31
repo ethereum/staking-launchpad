@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react';
 import {
   InjectedConnector,
   InjectedConnector as MetamaskConnector,
-  NoEthereumProviderError,
-  UserRejectedRequestError,
 } from '@web3-react/injected-connector';
 import { PortisConnector } from '@web3-react/portis-connector';
-import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
+import { useWeb3React } from '@web3-react/core';
 import { FortmaticConnector } from './fortmaticConnector';
 import { web3ReactInterface } from './index';
 
+const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
+
 export enum NetworkChainId {
-  'Ethereum Mainnet' = 1,
-  'Ropsten Testnet' = 3,
-  'Rinkeby Testnet' = 4,
-  'Göerli Testnet' = 5,
-  'Kovan Testnet' = 42,
+  'Mainnet' = 1,
+  'Ropsten' = 3,
+  'Rinkeby' = 4,
+  'Göerli' = 5,
+  'Kovan' = 42,
 }
 
 /*
@@ -23,16 +23,22 @@ export enum NetworkChainId {
  is displayed when the user is not connected to the "allowed" network
  */
 const supportedNetworks = [
-  NetworkChainId['Göerli Testnet'],
-  NetworkChainId['Ethereum Mainnet'],
-  NetworkChainId['Rinkeby Testnet'],
-  NetworkChainId['Ropsten Testnet'],
-  NetworkChainId['Kovan Testnet'],
+  NetworkChainId['Göerli'],
+  NetworkChainId.Mainnet,
+  NetworkChainId.Rinkeby,
+  NetworkChainId.Ropsten,
+  NetworkChainId.Kovan,
 ];
 
-export enum AllowedNetworks {
-  'Göerli Testnet', // TODO edit this enum based on .env
+enum Testnet {
+  'Göerli',
 }
+
+enum Mainnet {
+  'Mainnet',
+}
+
+export const AllowedNetworks = isMainnet ? Mainnet : Testnet;
 
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
@@ -52,30 +58,9 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: process.env.REACT_APP_FORTMATIC_KEY as string,
-  chainId: NetworkChainId['Göerli Testnet'],
+  chainId: isMainnet ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
   rpcUrl: process.env.REACT_APP_RPC_URL_GOERLI as string,
 });
-
-export function getErrorMessage(error: Error | string): string {
-  // User has cancelled wallet connection
-  if (
-    typeof error === 'string' || // portis
-    error.message ===
-      'Fortmatic RPC Error: [-32603] Fortmatic: User denied account access.' || // fortmatic
-    error instanceof UserRejectedRequestError // should catch all other wallets
-  ) {
-    return '';
-  }
-
-  if (error instanceof NoEthereumProviderError) { // for metamask only
-    return 'No Ethereum browser extension detected. install MetaMask.';
-  }
-
-  if (error instanceof UnsupportedChainIdError) {
-    return "You're connected to an unsupported network.";
-  }
-  return 'An unknown error occurred. Check the console for more details.';
-}
 
 // sets up initial call to MM
 export function useMetamaskEagerConnect(): boolean {

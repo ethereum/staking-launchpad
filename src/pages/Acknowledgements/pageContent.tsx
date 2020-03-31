@@ -3,8 +3,9 @@ import { FormNext } from 'grommet-icons';
 import { Text } from 'grommet';
 import { AcknowledgementSectionData } from './AcknowledgementSection';
 import { acknowledgementId } from '../../store/reducers';
-import { pricePerValidator } from '../../enums';
 import { Link } from '../../components/Link';
+
+const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 
 export const pageContent: AcknowledgementSectionData[] = [
   {

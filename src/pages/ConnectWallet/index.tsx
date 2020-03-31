@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { Animated } from 'react-animated-css';
@@ -9,6 +9,8 @@ import {
 } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
+import { formatEther } from '@ethersproject/units';
+import { NoEthereumProviderError } from '@web3-react/injected-connector';
 import {
   AllowedNetworks,
   fortmatic,
@@ -37,10 +39,11 @@ import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { Dot } from '../../components/Dot';
 
+const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
+
 const Container = styled.div`
   margin: auto;
   position: relative;
-  //height: ${(p: { walletCount: number }) => `${100 * p.walletCount}px`};
 `;
 
 const WalletConnectedContainer = styled.div`
@@ -53,7 +56,6 @@ const WalletConnectedContainer = styled.div`
 
 const WalletButtonContainer = styled.div`
   margin: auto;
-  //width: 300px;
   .wallet-button-sub-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,9 +65,7 @@ const WalletButtonContainer = styled.div`
       width: 400px;
     }
   }
-  //.wallet-button:not(:first-child) {
-  //  margin-top: 20px;
-  //}
+
   .wallet-button {
     width: 350px;
     margin: 10px;
@@ -121,7 +121,20 @@ const _ConnectWalletPage = ({
     connector: walletProvider,
     error,
     account,
+    library,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+
+  const [balance, setBalance] = useState<number | null>(null);
+
+  useEffect((): any => {
+    if (!!account && !!library) {
+      library
+        .getBalance(account)
+        .then((amount: any) => setBalance(amount))
+        .catch(() => setBalance(null));
+      return () => setBalance(null);
+    }
+  }, [account, library, chainId]);
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined
@@ -151,12 +164,17 @@ const _ConnectWalletPage = ({
     network = NetworkChainId[chainId];
     networkAllowed = Object.values(AllowedNetworks).includes(network);
   }
-  if (walletConnected && networkAllowed && !error) {
-    status = '45.53 Goerli ETH available';
+
+  if (walletConnected && networkAllowed && !error && balance) {
+    status = `${parseFloat(formatEther(balance)).toPrecision(
+      5
+    )} Goerli ETH available`;
   } else if (walletConnected && error) {
     status = 'Error';
   } else if (!networkAllowed) {
-    status = 'Please connect to Goerli Testnet';
+    status = `Please connect to ${
+      isMainnet ? 'Ethereum Mainnet' : 'Göerli Testnet'
+    }`;
   }
 
   // if (workflowProgress < WorkflowProgressStep.CONNECT_WALLET) {
@@ -165,14 +183,13 @@ const _ConnectWalletPage = ({
 
   return (
     <WorkflowPageTemplate title="Connect Wallet">
-      <Container walletCount={3}>
+      <Container>
         <WalletConnectedContainer>
           <Animated
             animationIn="fadeInLeft"
             animationOut="fadeOutLeft"
             isVisible={walletConnected}
             animateOnMount={false}
-            // animationInDelay={600}
             animationInDuration={200}
             animationOutDuration={200}
           >
@@ -202,7 +219,7 @@ const _ConnectWalletPage = ({
                   </div>
                 </div>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {network}
+                  {network === 'Mainnet' ? network : `${network} Testnet`}
                 </Text>
               </WalletInfoContainer>
               <StatusText>{status}</StatusText>
@@ -215,7 +232,6 @@ const _ConnectWalletPage = ({
             animationOut="fadeOutRight"
             isVisible={!walletConnected}
             animateOnMount={false}
-            // animationOutDelay={600}
             animationInDuration={200}
             animationOutDuration={200}
           >
@@ -248,6 +264,11 @@ const _ConnectWalletPage = ({
           </Animated>
         </WalletButtonContainer>
       </Container>
+
+      {error && error instanceof NoEthereumProviderError && (
+        <div className="flex center mt20">Please install MetaMask.</div>
+      )}
+
       <div className="flex center p30 mt20">
         {!walletConnected && (
           <Link to={routesEnum.uploadValidatorPage}>
@@ -275,19 +296,6 @@ const _ConnectWalletPage = ({
     </WorkflowPageTemplate>
   );
 };
-
-// {
-//   error && (
-//     <Text textAlign="center" className="mt10" color="error">
-//       {getErrorMessage(error)}
-//     </Text>
-//   );
-// }
-// {
-//   !networkAllowed && (
-//     <Text className="mb10">Please connect to Göerli Testnet</Text>
-//   );
-// }
 
 const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
   workflowProgress,

@@ -20,7 +20,11 @@ const PBarIncomplete = styled.div`
   width: ${(p: { workflowProgress: number }) => 100 - p.workflowProgress}%;
 `;
 
-export const ProgressBar = ({ workflowProgress }: { workflowProgress: number }) => {
+export const ProgressBar = ({
+  workflowProgress,
+}: {
+  workflowProgress: number;
+}) => {
   return (
     <PBarContainer>
       <PBarComplete workflowProgress={workflowProgress} />

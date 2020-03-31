@@ -3,7 +3,9 @@ import { Redirect } from 'react-router-dom';
 import { routesEnum } from '../Routes';
 import { WorkflowProgressStep } from '../store/actions/workflowProgressActions';
 
-export const routeToCorrectWorkflowProgressStep = (step: WorkflowProgressStep): JSX.Element => {
+export const routeToCorrectWorkflowProgressStep = (
+  step: WorkflowProgressStep
+): JSX.Element => {
   if (step === WorkflowProgressStep.OVERVIEW) {
     return <Redirect push to={routesEnum.acknowledgementPage} />;
   }

@@ -19,7 +19,6 @@ import { routesEnum } from '../../Routes';
 import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
-import { pricePerValidator } from '../../enums';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
@@ -31,12 +30,14 @@ import {
   updateWorkflowProgress,
 } from '../../store/actions/workflowProgressActions';
 
+const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
+const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
 const Container = styled.div`
   width: 100%;
 `;
-
-const NETWORK_NAME = 'Göerli Testnet';
-const NETWORK_ID = NetworkChainId[NETWORK_NAME];
+const NETWORK_ID = isMainnet
+  ? NetworkChainId.Mainnet
+  : NetworkChainId['Göerli'];
 
 // Prop definitions
 interface OwnProps {}
@@ -79,8 +80,7 @@ const _SummaryPage = ({
   if (workflowProgress < WorkflowProgressStep.SUMMARY)
     return routeToCorrectWorkflowProgressStep(workflowProgress);
   if (!account || !connector) return <WalletDisconnected />;
-  if (chainId !== NETWORK_ID)
-    return <WrongNetwork networkName={NETWORK_NAME} />;
+  if (chainId !== NETWORK_ID) return <WrongNetwork />;
   return (
     <WorkflowPageTemplate title="Summary">
       <Paper>
@@ -167,7 +167,10 @@ const _SummaryPage = ({
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflowProgress }: StoreState): StateProps => ({
+const mapStateToProps = ({
+  keyFiles,
+  workflowProgress,
+}: StoreState): StateProps => ({
   keyFiles,
   workflowProgress,
 });

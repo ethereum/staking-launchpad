@@ -23,4 +23,6 @@ export const updateWorkflowProgress = (
   };
 };
 
-export type DispatchUpdateWorkflowProgressType = (step: WorkflowProgressStep) => void;
+export type DispatchUpdateWorkflowProgressType = (
+  step: WorkflowProgressStep
+) => void;

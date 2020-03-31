@@ -7,13 +7,13 @@ import { Eth } from 'web3-eth';
 import { SendOptions } from 'web3-eth-contract';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
-import { contractAddress, pricePerValidator as rawPrice } from '../../enums';
 import {
   KeyFileInterface,
   TransactionStatus,
 } from '../../store/actions/keyFileActions';
 
-const CONTRACT_ADDRESS = contractAddress;
+const CONTRACT_ADDRESS = process.env.REACT_APP_CONTRACT_ADDRESS;
+const rawPrice = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 const pricePerValidator = new BigNumber(rawPrice);
 const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 

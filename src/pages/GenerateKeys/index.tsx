@@ -18,12 +18,13 @@ import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { NumberInput } from './NumberInput';
 import { InfoBox } from '../../components/InfoBox';
-import { pricePerValidator } from '../../enums';
 import {
   DispatchUpdateWorkflowProgressType,
   WorkflowProgressStep,
   updateWorkflowProgress,
 } from '../../store/actions/workflowProgressActions';
+
+const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 
 export enum operatingSystem {
   'MAC',
@@ -60,7 +61,9 @@ const _GenerateKeysPage = ({
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
-  ] = useState<boolean>(workflowProgress > WorkflowProgressStep.GENERATE_KEY_PAIRS);
+  ] = useState<boolean>(
+    workflowProgress > WorkflowProgressStep.GENERATE_KEY_PAIRS
+  );
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
@@ -71,7 +74,9 @@ const _GenerateKeysPage = ({
 
   const handleSubmit = () => {
     if (workflowProgress === WorkflowProgressStep.GENERATE_KEY_PAIRS) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.UPLOAD_VALIDATOR_FILE);
+      dispatchUpdateWorkflowProgress(
+        WorkflowProgressStep.UPLOAD_VALIDATOR_FILE
+      );
     }
   };
 
@@ -170,7 +175,9 @@ const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
   workflowProgress,
 });
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (workflowProgressStep: WorkflowProgressStep) => {
+  dispatchUpdateWorkflowProgress: (
+    workflowProgressStep: WorkflowProgressStep
+  ) => {
     dispatch(updateWorkflowProgress(workflowProgressStep));
   },
 });

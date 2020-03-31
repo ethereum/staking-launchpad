@@ -5,8 +5,12 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { ProgressBar } from './ProgressBar';
 import { queryContract } from '../../../utils/queryContract';
-import { isMainnet, mainnetEthRequirement } from '../../../enums';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
+
+const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
+const mainnetEthRequirement = Number(
+  process.env.REACT_APP_MAINNET_ETH_REQUIREMENT
+);
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};

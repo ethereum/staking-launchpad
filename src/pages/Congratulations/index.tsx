@@ -7,11 +7,15 @@ import { colors } from '../../styles/styledComponentsTheme';
 import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
-import { mainnetEthRequirement, pricePerValidator } from '../../enums';
 import { StoreState } from '../../store/reducers';
 import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
 import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
+
+const mainnetEthRequirement = Number(
+  process.env.REACT_APP_MAINNET_ETH_REQUIREMENT
+);
+const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -39,7 +43,10 @@ interface StateProps {
 interface DispatchProps {}
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _CongratulationsPage = ({ keyFiles, workflowProgress }: Props): JSX.Element => {
+const _CongratulationsPage = ({
+  keyFiles,
+  workflowProgress,
+}: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
   useEffect(() => {
     const getBalance = async () => {
@@ -119,7 +126,10 @@ const _CongratulationsPage = ({ keyFiles, workflowProgress }: Props): JSX.Elemen
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflowProgress }: StoreState): StateProps => ({
+const mapStateToProps = ({
+  keyFiles,
+  workflowProgress,
+}: StoreState): StateProps => ({
   keyFiles,
   workflowProgress,
 });

@@ -9,7 +9,8 @@ import { Heading } from '../../../components/Heading';
 import { routesEnum } from '../../../Routes';
 import { Link } from '../../../components/Link';
 import { Step } from './Step';
-import { pricePerValidator } from '../../../enums';
+
+const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 
 const Container = styled.div`
   box-sizing: border-box;

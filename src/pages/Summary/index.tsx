@@ -16,7 +16,7 @@ import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { Paper } from '../../components/Paper';
@@ -25,10 +25,10 @@ import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
+  DispatchWorkflowUpdateType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
 const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
 const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
@@ -43,16 +43,17 @@ const NETWORK_ID = isMainnet
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
+
 interface DispatchProps {
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _SummaryPage = ({
-  workflowProgress,
-  dispatchUpdateWorkflowProgress,
+  workflow,
+  dispatchWorkflowUpdate,
   keyFiles,
 }: Props): JSX.Element => {
   const [allChecked, setAllChecked] = useState(false);
@@ -72,15 +73,17 @@ const _SummaryPage = ({
   >();
 
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.SUMMARY) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.TRANSACTION_SIGNING);
+    if (workflow === WorkflowStep.SUMMARY) {
+      dispatchWorkflowUpdate(WorkflowStep.TRANSACTION_SIGNING);
     }
   };
 
-  if (workflowProgress < WorkflowProgressStep.SUMMARY)
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow < WorkflowStep.SUMMARY)
+    return routeToCorrectWorkflowStep(workflow);
+
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID) return <WrongNetwork />;
+
   return (
     <WorkflowPageTemplate title="Summary">
       <Paper>
@@ -167,17 +170,14 @@ const _SummaryPage = ({
   );
 };
 
-const mapStateToProps = ({
+const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
   keyFiles,
-  workflowProgress,
-}: StoreState): StateProps => ({
-  keyFiles,
-  workflowProgress,
+  workflow,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) => {
-    dispatch(updateWorkflowProgress(step));
+  dispatchWorkflowUpdate: (step: WorkflowStep) => {
+    dispatch(updateWorkflow(step));
   },
 });
 

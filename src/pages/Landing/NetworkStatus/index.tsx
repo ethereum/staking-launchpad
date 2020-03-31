@@ -89,7 +89,7 @@ export const NetworkStatus = (): JSX.Element => {
             to launch its {isMainnet ? 'mainnet' : 'testnet'}
           </Text>
           <div>
-            <ProgressBar workflowProgress={calculatePercentage(amountEth)} />
+            <ProgressBar workflow={calculatePercentage(amountEth)} />
             <div className="flex space-between mt20">
               <span className="flex">
                 <BoldGreen fontSize={18} className="mr10">

@@ -8,9 +8,9 @@ import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
 import { StoreState } from '../../store/reducers';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
-import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import { WorkflowStep } from '../../store/actions/workflowActions';
 
 const mainnetEthRequirement = Number(
   process.env.REACT_APP_MAINNET_ETH_REQUIREMENT
@@ -38,15 +38,12 @@ const Content = styled.div`
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {}
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _CongratulationsPage = ({
-  keyFiles,
-  workflowProgress,
-}: Props): JSX.Element => {
+const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
   useEffect(() => {
     const getBalance = async () => {
@@ -72,8 +69,8 @@ const _CongratulationsPage = ({
   })();
   const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
 
-  if (workflowProgress > WorkflowProgressStep.CONGRATULATIONS) {
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow > WorkflowStep.CONGRATULATIONS) {
+    return routeToCorrectWorkflowStep(workflow);
   }
 
   return (
@@ -126,12 +123,9 @@ const _CongratulationsPage = ({
   );
 };
 
-const mapStateToProps = ({
+const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
   keyFiles,
-  workflowProgress,
-}: StoreState): StateProps => ({
-  keyFiles,
-  workflowProgress,
+  workflow,
 });
 
 export const CongratulationsPage = connect<

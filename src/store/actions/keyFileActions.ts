@@ -36,7 +36,7 @@ export interface UpdateTransactionStatusAction {
   };
 }
 
-export type DispatchUpdateKeyFilesType = (files: KeyFileInterface[]) => void;
+export type DispatchKeyFilesUpdateType = (files: KeyFileInterface[]) => void;
 
 export const updateKeyFiles = (
   files: KeyFileInterface[]
@@ -62,7 +62,8 @@ export const updateTransactionStatus = (
   };
 };
 
-export type DispatchUpdateTransactionStatusType = (
+
+export type DispatchTransactionStatusUpdateType = (
   pubkey: string,
   status: TransactionStatus,
   txHash?: string

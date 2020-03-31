@@ -17,21 +17,20 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
-  DispatchUpdateTransactionStatusType,
+  DispatchTransactionStatusUpdateType,
   KeyFileInterface,
   TransactionStatus,
   updateTransactionStatus,
 } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowProgressType,
-  updateWorkflowProgress,
-  WorkflowProgressStep,
-} from '../../store/actions/workflowProgressActions';
+  DispatchWorkflowUpdateType,
+  updateWorkflow,
+  WorkflowStep,
+} from '../../store/actions/workflowActions';
 
 const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
-
 const NETWORK_ID = isMainnet
   ? NetworkChainId.Mainnet
   : NetworkChainId['Göerli'];
@@ -40,19 +39,19 @@ const NETWORK_ID = isMainnet
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateTransactionStatus: DispatchUpdateTransactionStatusType;
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _TransactionsPage = ({
   keyFiles,
-  workflowProgress,
-  dispatchUpdateTransactionStatus,
-  dispatchUpdateWorkflowProgress,
+  workflow,
+  dispatchTransactionStatusUpdate,
+  dispatchWorkflowUpdate,
 }: Props): JSX.Element => {
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
@@ -85,13 +84,13 @@ const _TransactionsPage = ({
           validator,
           connector as AbstractConnector,
           account,
-          dispatchUpdateTransactionStatus
+          dispatchTransactionStatusUpdate
         );
       }
     });
 
-  if (workflowProgress !== WorkflowProgressStep.TRANSACTION_SIGNING)
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow !== WorkflowStep.TRANSACTION_SIGNING)
+    return routeToCorrectWorkflowStep(workflow);
 
   if (!account || !connector) return <WalletDisconnected />;
 
@@ -99,14 +98,12 @@ const _TransactionsPage = ({
 
   if (allTxConfirmed) {
     setTimeout(() => {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.CONGRATULATIONS);
+      dispatchWorkflowUpdate(WorkflowStep.CONGRATULATIONS);
       setRouteToCongratulationsPage(true);
     }, 3000);
   }
   if (routeToCongratulationsPage)
-    return routeToCorrectWorkflowProgressStep(
-      WorkflowProgressStep.CONGRATULATIONS
-    );
+    return routeToCorrectWorkflowStep(WorkflowStep.CONGRATULATIONS);
 
   return (
     <WorkflowPageTemplate title="Transactions">
@@ -136,18 +133,14 @@ const _TransactionsPage = ({
   );
 };
 
-const mapStateToProps = ({
+const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
   keyFiles,
-  workflowProgress,
-}: StoreState): StateProps => ({
-  keyFiles,
-  workflowProgress,
+  workflow,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: step =>
-    dispatch(updateWorkflowProgress(step)),
-  dispatchUpdateTransactionStatus: (pubkey, status, txHash) =>
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
+  dispatchTransactionStatusUpdate: (pubkey, status, txHash) =>
     dispatch(updateTransactionStatus(pubkey, status, txHash)),
 });
 

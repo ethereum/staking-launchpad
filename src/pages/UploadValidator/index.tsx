@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { StyledDropzone } from './Dropzone';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
-import { routeToCorrectWorkflowProgressStep } from '../../utils/RouteToCorrectWorkflowProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
@@ -13,16 +13,16 @@ import { Link } from '../../components/Link';
 import { validateKeyFile } from './validateKeyFile';
 import { StoreState } from '../../store/reducers';
 import {
-  DispatchUpdateKeyFilesType,
+  DispatchKeyFilesUpdateType,
   KeyFileInterface,
   TransactionStatus,
   updateKeyFiles,
 } from '../../store/actions/keyFileActions';
 import {
-  DispatchUpdateWorkflowProgressType,
-  WorkflowProgressStep,
-  updateWorkflowProgress,
-} from '../../store/actions/workflowProgressActions';
+    DispatchWorkflowUpdateType,
+  updateWorkflow,
+  WorkflowStep,
+} from '../../store/actions/workflowActions';
 
 // Styled components
 const Instructions = styled(Link)`
@@ -42,25 +42,26 @@ const ErrorText = styled(Text)`
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
+
 interface DispatchProps {
-  dispatchUpdateKeyFiles: DispatchUpdateKeyFilesType;
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchKeyFilesUpdate: DispatchKeyFilesUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 export const _UploadValidatorPage = ({
   keyFiles,
-  dispatchUpdateKeyFiles,
-  dispatchUpdateWorkflowProgress,
-  workflowProgress,
+  dispatchKeyFilesUpdate,
+  dispatchWorkflowUpdate,
+  workflow,
 }: Props): JSX.Element => {
   const fileAccepted = keyFiles.length > 0;
   const [invalidKeyFile, setInvalidKeyFile] = useState(false);
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.UPLOAD_VALIDATOR_FILE) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.CONNECT_WALLET);
+    if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
+      dispatchWorkflowUpdate(WorkflowStep.CONNECT_WALLET);
     }
   };
 
@@ -74,7 +75,7 @@ export const _UploadValidatorPage = ({
             try {
               const fileData = JSON.parse(event.target.result as string);
               if (await validateKeyFile(fileData as KeyFileInterface[])) {
-                dispatchUpdateKeyFiles(
+                dispatchKeyFilesUpdate(
                   fileData.map((keyFile: KeyFileInterface) => ({
                     ...keyFile,
                     transactionStatus: TransactionStatus.READY, // initialize each keyFile with ready state for transaction
@@ -91,11 +92,11 @@ export const _UploadValidatorPage = ({
         reader.readAsText(acceptedFiles[0]);
       }
     },
-    [dispatchUpdateKeyFiles]
+    [dispatchKeyFilesUpdate]
   );
 
-  if (workflowProgress < WorkflowProgressStep.UPLOAD_VALIDATOR_FILE)
-    return routeToCorrectWorkflowProgressStep(workflowProgress);
+  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
+    return routeToCorrectWorkflowStep(workflow);
 
   return (
     <WorkflowPageTemplate title="Upload Deposits">
@@ -129,12 +130,12 @@ export const _UploadValidatorPage = ({
 
 const mapStateToProps = (state: StoreState): StateProps => ({
   keyFiles: state.keyFiles,
-  workflowProgress: state.workflowProgress,
+  workflow: state.workflow,
 });
+
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateKeyFiles: files => dispatch(updateKeyFiles(files)),
-  dispatchUpdateWorkflowProgress: step =>
-    dispatch(updateWorkflowProgress(step)),
+  dispatchKeyFilesUpdate: files => dispatch(updateKeyFiles(files)),
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
 export const UploadValidatorPage = connect<

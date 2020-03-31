@@ -1,27 +1,20 @@
 import React from 'react';
-import { Dispatch } from 'redux';
-import {
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableRow,
-} from 'grommet';
+import {Dispatch} from 'redux';
+import {Box, Table, TableBody, TableCell, TableHeader, TableRow,} from 'grommet';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
-import { AbstractConnector } from '@web3-react/abstract-connector';
-import { useWeb3React } from '@web3-react/core';
-import { Web3Provider } from '@ethersproject/providers';
-import { Paper } from '../../../components/Paper';
-import { Text } from '../../../components/Text';
-import { Status } from './Status';
-import { ActionButton } from './ActionButton';
-import { StoreState } from '../../../store/reducers';
-import { handleTransaction } from '../transactionUtils';
-import { web3ReactInterface } from '../../ConnectWallet';
+import {connect} from 'react-redux';
+import {AbstractConnector} from '@web3-react/abstract-connector';
+import {useWeb3React} from '@web3-react/core';
+import {Web3Provider} from '@ethersproject/providers';
+import {Paper} from '../../../components/Paper';
+import {Text} from '../../../components/Text';
+import {Status} from './Status';
+import {ActionButton} from './ActionButton';
+import {StoreState} from '../../../store/reducers';
+import {handleTransaction} from '../transactionUtils';
+import {web3ReactInterface} from '../../ConnectWallet';
 import {
-  DispatchUpdateTransactionStatusType,
+  DispatchTransactionStatusUpdateType,
   KeyFileInterface,
   updateTransactionStatus,
 } from '../../../store/actions/keyFileActions';
@@ -46,11 +39,11 @@ interface StateProps {
   keyFiles: KeyFileInterface[];
 }
 interface DispatchProps {
-  dispatchUpdateTransactionStatus: DispatchUpdateTransactionStatusType;
+  dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _KeyList = ({ keyFiles, dispatchUpdateTransactionStatus }: Props) => {
+const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -59,7 +52,8 @@ const _KeyList = ({ keyFiles, dispatchUpdateTransactionStatus }: Props) => {
       keyFile,
       connector as AbstractConnector,
       account,
-      dispatchUpdateTransactionStatus
+
+      dispatchTransactionStatusUpdate
     );
   };
 
@@ -116,7 +110,7 @@ const mapStateToProps = ({ keyFiles }: StoreState): StateProps => {
 };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateTransactionStatus: (pubkey, status, txHash) =>
+  dispatchTransactionStatusUpdate: (pubkey, status, txHash) =>
     dispatch(updateTransactionStatus(pubkey, status, txHash)),
 });
 

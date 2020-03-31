@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { EthRoundLogo } from './EthRoundLogo';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
-import { WorkflowProgressStep } from '../../store/actions/workflowProgressActions';
+import { WorkflowStep } from '../../store/actions/workflowActions';
 
 export const logoPositions = {
   small: [0, 17.5, 35, 52, 69, 90],
@@ -91,43 +91,41 @@ const Step = styled.div`
 `;
 
 interface Props {
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 
-export const WorkflowProgressBar = ({
-  workflowProgress,
-}: Props): JSX.Element => {
+export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
   interface step {
-    step: WorkflowProgressStep;
+    step: WorkflowStep;
     text: string;
   }
 
   const steps: step[] = [
-    { step: WorkflowProgressStep.OVERVIEW, text: 'Overview' },
-    { step: WorkflowProgressStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
+    { step: WorkflowStep.OVERVIEW, text: 'Overview' },
+    { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
     {
-      step: WorkflowProgressStep.UPLOAD_VALIDATOR_FILE,
+      step: WorkflowStep.UPLOAD_VALIDATOR_FILE,
       text: 'Upload Validator',
     },
-    { step: WorkflowProgressStep.CONNECT_WALLET, text: 'Connect Wallet' },
-    { step: WorkflowProgressStep.SUMMARY, text: 'Summary' },
-    { step: WorkflowProgressStep.TRANSACTION_SIGNING, text: 'Transactions' },
+    { step: WorkflowStep.CONNECT_WALLET, text: 'Connect Wallet' },
+    { step: WorkflowStep.SUMMARY, text: 'Summary' },
+    { step: WorkflowStep.TRANSACTION_SIGNING, text: 'Transactions' },
   ];
   return (
     <Container>
       <SubContainer>
         <BarContainer>
           <GreyedColor />
-          <CompletedColor position={workflowProgress} />
-          <EthRoundLogo position={workflowProgress} />
+          <CompletedColor position={workflow} />
+          <EthRoundLogo position={workflow} />
         </BarContainer>
         <Flexbox>
           {steps.map(({ step, text }, i) => (
             <Step
               key={text}
               index={i}
-              disabled={workflowProgress < step}
-              active={workflowProgress === step}
+              disabled={workflow < step}
+              active={workflow === step}
             >
               {text}
             </Step>

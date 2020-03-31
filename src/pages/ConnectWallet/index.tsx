@@ -25,11 +25,6 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { StoreState } from '../../store/reducers';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
-import {
-  DispatchUpdateWorkflowProgressType,
-  updateWorkflowProgress,
-  WorkflowProgressStep,
-} from '../../store/actions/workflowProgressActions';
 import { Text } from '../../components/Text';
 import { WalletButton } from './WalletButton';
 import metamaskLogo from '../../static/metamask.svg';
@@ -38,6 +33,12 @@ import fortmaticLogo from '../../static/fortmatic.svg';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { Dot } from '../../components/Dot';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import {
+  DispatchWorkflowUpdateType,
+  updateWorkflow,
+  WorkflowStep,
+} from '../../store/actions/workflowActions';
 
 const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
 
@@ -101,17 +102,17 @@ export interface web3ReactInterface {
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  workflowProgress: WorkflowProgressStep;
+  workflow: WorkflowStep;
 }
 interface DispatchProps {
-  dispatchUpdateWorkflowProgress: DispatchUpdateWorkflowProgressType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
 
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _ConnectWalletPage = ({
-  workflowProgress,
-  dispatchUpdateWorkflowProgress,
+  workflow,
+  dispatchWorkflowUpdate,
 }: Props): JSX.Element => {
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
   const {
@@ -143,8 +144,8 @@ const _ConnectWalletPage = ({
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
   const handleSubmit = () => {
-    if (workflowProgress === WorkflowProgressStep.CONNECT_WALLET) {
-      dispatchUpdateWorkflowProgress(WorkflowProgressStep.SUMMARY);
+    if (workflow === WorkflowStep.CONNECT_WALLET) {
+      dispatchWorkflowUpdate(WorkflowStep.SUMMARY);
     }
   };
 
@@ -177,8 +178,8 @@ const _ConnectWalletPage = ({
     }`;
   }
 
-  // if (workflowProgress < WorkflowProgressStep.CONNECT_WALLET) {
-  //   return routeToCorrectWorkflowProgressStep(workflowProgress);
+  // if (workflowProgress < WorkflowStep.CONNECT_WALLET) {
+  //   return routeToCorrectWorkflowStep(workflowProgress);
   // }
 
   return (
@@ -297,13 +298,12 @@ const _ConnectWalletPage = ({
   );
 };
 
-const mapStateToProps = ({ workflowProgress }: StoreState): StateProps => ({
-  workflowProgress,
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
-const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchUpdateWorkflowProgress: (step: WorkflowProgressStep) =>
-    dispatch(updateWorkflowProgress(step)),
+const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+  workflow,
 });
 
 export const ConnectWalletPage = connect<

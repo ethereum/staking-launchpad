@@ -11,7 +11,7 @@ export const WrongNetwork = () => (
   <WorkflowPageTemplate title="Deposit Summary">
     <AcknowledgementSection title="Your network has changed">
       <Text>
-        Your Ethereum network is not correct, Please connect to the
+        Your Ethereum network is not correct, Please connect to the{' '}
         {networkName} network.
       </Text>
     </AcknowledgementSection>

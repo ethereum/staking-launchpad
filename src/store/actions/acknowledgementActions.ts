@@ -19,7 +19,6 @@ export const updateAcknowledgementState = (
   };
 };
 
-
 export type DispatchAcknowledgementStateUpdateType = (
   acknowledgementId: acknowledgementId,
   value: boolean

@@ -1,18 +1,25 @@
 import React from 'react';
-import {Dispatch} from 'redux';
-import {Box, Table, TableBody, TableCell, TableHeader, TableRow,} from 'grommet';
+import { Dispatch } from 'redux';
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableRow,
+} from 'grommet';
 import styled from 'styled-components';
-import {connect} from 'react-redux';
-import {AbstractConnector} from '@web3-react/abstract-connector';
-import {useWeb3React} from '@web3-react/core';
-import {Web3Provider} from '@ethersproject/providers';
-import {Paper} from '../../../components/Paper';
-import {Text} from '../../../components/Text';
-import {Status} from './Status';
-import {ActionButton} from './ActionButton';
-import {StoreState} from '../../../store/reducers';
-import {handleTransaction} from '../transactionUtils';
-import {web3ReactInterface} from '../../ConnectWallet';
+import { connect } from 'react-redux';
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { Paper } from '../../../components/Paper';
+import { Text } from '../../../components/Text';
+import { Status } from './Status';
+import { ActionButton } from './ActionButton';
+import { StoreState } from '../../../store/reducers';
+import { handleTransaction } from '../transactionUtils';
+import { web3ReactInterface } from '../../ConnectWallet';
 import {
   DispatchTransactionStatusUpdateType,
   KeyFileInterface,

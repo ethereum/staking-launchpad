@@ -41,6 +41,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 // Environment variables
 const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
@@ -151,15 +152,18 @@ const _ConnectWalletPage = ({
             parseFloat(formatEther(amount)).toPrecision(5)
           );
           const requiredBalance = keyFiles.length * pricePerValidator;
+
           setBalance(formattedBalance);
           if (formattedBalance < requiredBalance || formattedBalance === 0) {
             setLowBalance(true);
+          } else {
+            setLowBalance(false);
           }
         })
         .catch(() => setBalance(null));
       return () => setBalance(null);
     }
-  }, [account, library, chainId, keyFiles]);
+  }, [selectedWallet, walletProvider, library, chainId, keyFiles]);
 
   // sets the status copy on provider or network change
   useEffect(() => {
@@ -198,9 +202,9 @@ const _ConnectWalletPage = ({
     return '';
   };
 
-  // if (workflowProgress < WorkflowStep.CONNECT_WALLET) {
-  //   return routeToCorrectWorkflowStep(workflowProgress);
-  // }
+  if (workflow < WorkflowStep.CONNECT_WALLET) {
+    return routeToCorrectWorkflowStep(workflow);
+  }
 
   return (
     <WorkflowPageTemplate title="Connect Wallet">
@@ -252,7 +256,7 @@ const _ConnectWalletPage = ({
                       effect="solid"
                     >
                       <span>
-                        You do not have enough ETH in this wallet for
+                        You do not have enough ETH in this wallet for{' '}
                         {keyFiles.length} validator
                         {keyFiles.length > 1 ? 's' : ''}
                       </span>

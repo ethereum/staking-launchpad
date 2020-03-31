@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import {RouteComponentProps, withRouter} from 'react-router-dom';
-import {Heading} from 'grommet';
-import {WorkflowProgressBar} from './WorkflowProgressBar';
-import {AppBar} from '../AppBar';
-import {DesktopOnlyModal} from '../DesktopOnlyModal';
-import {rainbowColors, rainbowLightColors,} from '../../styles/styledComponentsTheme';
-import {routesEnum} from '../../Routes';
-import {WorkflowStep} from '../../store/actions/workflowActions';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { Heading } from 'grommet';
+import { WorkflowProgressBar } from './WorkflowProgressBar';
+import { AppBar } from '../AppBar';
+import { DesktopOnlyModal } from '../DesktopOnlyModal';
+import {
+  rainbowColors,
+  rainbowLightColors,
+} from '../../styles/styledComponentsTheme';
+import { routesEnum } from '../../Routes';
+import { WorkflowStep } from '../../store/actions/workflowActions';
 
 const Content = styled.div`
   width: 100%;
@@ -27,7 +30,6 @@ const Background = styled.div`
     });`};
   min-height: 100vh;
 `;
-
 
 const mapPathnameToWorkflowStep = (pathname: routesEnum) => {
   const workflowRoutesInOrder = [
@@ -55,7 +57,6 @@ const _WorkflowPageTemplate = ({
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }
-
 
   const calculatedWorkflowStep: WorkflowStep = mapPathnameToWorkflowStep(
     history.location.pathname

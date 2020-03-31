@@ -19,7 +19,7 @@ import {
   updateKeyFiles,
 } from '../../store/actions/keyFileActions';
 import {
-    DispatchWorkflowUpdateType,
+  DispatchWorkflowUpdateType,
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';

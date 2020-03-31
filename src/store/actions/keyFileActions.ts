@@ -62,7 +62,6 @@ export const updateTransactionStatus = (
   };
 };
 
-
 export type DispatchTransactionStatusUpdateType = (
   pubkey: string,
   status: TransactionStatus,

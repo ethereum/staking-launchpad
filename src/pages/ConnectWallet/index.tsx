@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { Animated } from 'react-animated-css';
 import { connect } from 'react-redux';
-import { AbstractConnector as AbstractConnectorInterface } from '@web3-react/abstract-connector';
+import {
+  AbstractConnector,
+  AbstractConnector as AbstractConnectorInterface,
+} from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { WalletConnected } from './WalletConnected';
 import {
   AllowedNetworks,
   fortmatic,
-  getErrorMessage,
   metamask,
   NetworkChainId,
   portis,
@@ -32,20 +33,53 @@ import { WalletButton } from './WalletButton';
 import metamaskLogo from '../../static/metamask.svg';
 import portisLogo from '../../static/portis.svg';
 import fortmaticLogo from '../../static/fortmatic.svg';
+import { Paper } from '../../components/Paper';
+import { Heading } from '../../components/Heading';
+import { Dot } from '../../components/Dot';
 
 const Container = styled.div`
-  width: 300px;
   margin: auto;
-  cursor: pointer;
   position: relative;
-  height: ${(p: { walletCount: number }) => `${100 * p.walletCount}px`};
+  //height: ${(p: { walletCount: number }) => `${100 * p.walletCount}px`};
 `;
-const SubContainer = styled.div`
-  div:not(:first-child) {
-    margin-top: 20px;
-  }
+
+const WalletConnectedContainer = styled.div`
+  pointer-events: none;
+  width: 500px;
+  margin: auto;
   position: absolute;
-  width: 100%;
+  left: calc(50% - 250px); // center - half width
+`;
+
+const WalletButtonContainer = styled.div`
+  margin: auto;
+  //width: 300px;
+  .wallet-button-sub-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    margin: auto;
+    @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
+      width: 400px;
+    }
+  }
+  //.wallet-button:not(:first-child) {
+  //  margin-top: 20px;
+  //}
+  .wallet-button {
+    width: 350px;
+    margin: 10px;
+  }
+`;
+const WalletInfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid ${(p: { theme: any }) => p.theme.gray.medium};
+  padding-bottom: 20px;
+`;
+const StatusText = styled(Text)`
+  margin: 20px auto auto;
+  font-size: 20px;
 `;
 
 export interface web3ReactInterface {
@@ -86,7 +120,12 @@ const _ConnectWalletPage = ({
     chainId,
     connector: walletProvider,
     error,
+    account,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+
+  const [selectedWallet, setSelectedWallet] = useState<
+    AbstractConnector | null | undefined
+  >(null);
 
   useMetamaskListener(!attemptedMMConnection); // listen for RPC events
 
@@ -96,39 +135,83 @@ const _ConnectWalletPage = ({
     }
   };
 
-  // if (workflowProgress < WorkflowProgressStep.CONNECT_WALLET) {
-  //   return routeToCorrectWorkflowProgressStep(workflowProgress);
-  // }
+  const getWalletName = (provider?: AbstractConnector) => {
+    if (!provider) return '';
+    if (provider === metamask) return 'Metamask';
+    if (provider === portis) return 'Portis';
+    if (provider === fortmatic) return 'Fortmatic';
+    return '';
+  };
+
   let network = '';
   let networkAllowed = false;
+  let status = '';
 
   if (chainId) {
     network = NetworkChainId[chainId];
     networkAllowed = Object.values(AllowedNetworks).includes(network);
   }
+  if (walletConnected && networkAllowed && !error) {
+    status = '45.53 Goerli ETH available';
+  } else if (walletConnected && error) {
+    status = 'Error';
+  } else if (!networkAllowed) {
+    status = 'Please connect to Goerli Testnet';
+  }
+
+  // if (workflowProgress < WorkflowProgressStep.CONNECT_WALLET) {
+  //   return routeToCorrectWorkflowProgressStep(workflowProgress);
+  // }
 
   return (
     <WorkflowPageTemplate title="Connect Wallet">
       <Container walletCount={3}>
-        <SubContainer>
+        <WalletConnectedContainer>
           <Animated
             animationIn="fadeInLeft"
-            animationOut="fadeOutRight"
+            animationOut="fadeOutLeft"
             isVisible={walletConnected}
             animateOnMount={false}
             // animationInDelay={600}
             animationInDuration={200}
             animationOutDuration={200}
           >
-            <WalletConnected
-              network={network}
-              networkAllowed={networkAllowed}
-            />
+            <Paper pad="medium">
+              <WalletInfoContainer>
+                <div className="flex">
+                  <Dot
+                    className="mt10"
+                    success={networkAllowed}
+                    error={!networkAllowed}
+                  />
+                  <div className="ml20">
+                    <Heading
+                      level={3}
+                      size="small"
+                      color="blueDark"
+                      className="mt0"
+                    >
+                      {getWalletName(walletProvider)}
+                    </Heading>
+                    {account && (
+                      <Text size="small">{`${account.slice(
+                        0,
+                        6
+                      )}...${account.slice(-6)}`}</Text>
+                    )}
+                  </div>
+                </div>
+                <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
+                  {network}
+                </Text>
+              </WalletInfoContainer>
+              <StatusText>{status}</StatusText>
+            </Paper>
           </Animated>
-        </SubContainer>
-        <SubContainer>
+        </WalletConnectedContainer>
+        <WalletButtonContainer>
           <Animated
-            animationIn="fadeIn"
+            animationIn="fadeInRight"
             animationOut="fadeOutRight"
             isVisible={!walletConnected}
             animateOnMount={false}
@@ -136,28 +219,36 @@ const _ConnectWalletPage = ({
             animationInDuration={200}
             animationOutDuration={200}
           >
-            <WalletButton
-              logoSource={metamaskLogo}
-              walletProvider={metamask}
-              title="Metamask"
-              error={walletProvider === metamask ? error : undefined}
-            />
-            <WalletButton
-              logoSource={portisLogo}
-              walletProvider={portis}
-              title="Portis"
-              error={walletProvider === portis ? error : undefined}
-            />
-            <WalletButton
-              logoSource={fortmaticLogo}
-              walletProvider={fortmatic}
-              title="Fortmatic"
-              error={walletProvider === fortmatic ? error : undefined}
-            />
+            <div className="wallet-button-sub-container">
+              <WalletButton
+                selectedWallet={selectedWallet}
+                setSelectedWallet={setSelectedWallet}
+                logoSource={metamaskLogo}
+                walletProvider={metamask}
+                title="Metamask"
+                error={walletProvider === metamask ? error : undefined}
+              />
+              <WalletButton
+                selectedWallet={selectedWallet}
+                setSelectedWallet={setSelectedWallet}
+                logoSource={portisLogo}
+                walletProvider={portis}
+                title="Portis"
+                error={walletProvider === portis ? error : undefined}
+              />
+              <WalletButton
+                selectedWallet={selectedWallet}
+                setSelectedWallet={setSelectedWallet}
+                logoSource={fortmaticLogo}
+                walletProvider={fortmatic}
+                title="Fortmatic"
+                error={walletProvider === fortmatic ? error : undefined}
+              />
+            </div>
           </Animated>
-        </SubContainer>
+        </WalletButtonContainer>
       </Container>
-      <div className="flex center p30">
+      <div className="flex center p30 mt20">
         {!walletConnected && (
           <Link to={routesEnum.uploadValidatorPage}>
             <Button className="mr10" width={100} label="Back" />
@@ -177,7 +268,7 @@ const _ConnectWalletPage = ({
             width={300}
             rainbow
             disabled={!networkAllowed}
-            label="Continue on testnet"
+            label="Continue"
           />
         </Link>
       </div>

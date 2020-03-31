@@ -24,6 +24,7 @@ const shorthandClasses = `
   .relative { position: relative  }
   .flex { display: flex  }
   .flex-row { flex-direction: row  }
+  .flex-wrap { flex-wrap: wrap  }
   .flex-column { flex-direction: column  }
   .space-between { justify-content: space-between  }
   .center { justify-content: center  }

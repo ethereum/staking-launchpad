@@ -1,4 +1,5 @@
-import { Action, ActionTypes, KeyFileInterface } from '../actions';
+import { Action, ActionTypes } from '../actions';
+import { KeyFileInterface } from '../actions/keyFileActions';
 
 export const keyFilesReducer = (
   state: KeyFileInterface[] = [],

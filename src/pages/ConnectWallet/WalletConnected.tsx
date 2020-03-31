@@ -1,8 +1,10 @@
 import React from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Box, Heading, Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
+import { AbstractConnector } from '@web3-react/abstract-connector';
 import {
   AllowedNetworks,
   fortmatic,
@@ -11,22 +13,27 @@ import {
   portis,
 } from './web3Utils';
 import { web3ReactInterface } from './index';
-import { ProgressStep, updateProgress } from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Dot } from '../../components/Dot';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
-import { AbstractConnector } from '@web3-react/abstract-connector';
 import { Link } from '../../components/Link';
 import { StoreState } from '../../store/reducers';
+import {
+  DispatchWorkflowUpdateType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
-const _WalletConnected = ({
-  progress,
-  updateProgress,
-}: {
-  progress: ProgressStep;
-  updateProgress: (step: ProgressStep) => void;
-}) => {
+interface OwnProps {}
+interface StateProps {
+  workflow: WorkflowStep;
+}
+interface DispatchProps {
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
+const _WalletConnected = ({ workflow, dispatchWorkflowUpdate }: Props) => {
   const {
     account,
     chainId,
@@ -43,8 +50,8 @@ const _WalletConnected = ({
   }
 
   const handleSubmit = () => {
-    if (progress === ProgressStep.CONNECT_WALLET) {
-      updateProgress(ProgressStep.SUMMARY);
+    if (workflow === WorkflowStep.CONNECT_WALLET) {
+      dispatchWorkflowUpdate(WorkflowStep.SUMMARY);
     }
   };
 
@@ -99,11 +106,20 @@ const _WalletConnected = ({
   );
 };
 
-const mstp = ({ progress }: StoreState) => ({
-  progress,
+const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+  workflow,
 });
-const mdtp = (dispatch: any) => ({
-  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step)),
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchWorkflowUpdate: (step: WorkflowStep) =>
+    dispatch(updateWorkflow(step)),
 });
 
-export const WalletConnected = connect(mstp, mdtp)(_WalletConnected);
+export const WalletConnected = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_WalletConnected);

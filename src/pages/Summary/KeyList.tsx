@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { InfoBox } from '../../components/InfoBox';
-import { KeyFileInterface } from '../../store/actions';
+import { KeyFileInterface } from '../../store/actions/keyFileActions';
 
 const ScrollContainer = styled.div`
   height: 200px;
@@ -36,7 +36,11 @@ const StyledPre = styled.pre`
   overflow: hidden;
 `;
 
-export const KeyList = ({ keyFiles }: { keyFiles: KeyFileInterface[] }) => {
+interface Props {
+  keyFiles: KeyFileInterface[];
+}
+
+export const KeyList = ({ keyFiles }: Props) => {
   const validatorKeys = keyFiles.map(file => file.pubkey);
   const renderKeys = () =>
     validatorKeys.map(coldKey => (

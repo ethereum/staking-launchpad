@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dispatch } from 'redux';
 import { Box, Heading, Text } from 'grommet';
 import { FormNext } from 'grommet-icons';
 import { connect } from 'react-redux';
@@ -11,38 +12,43 @@ import {
 import { Link } from '../../components/Link';
 import {
   acknowledgementId,
-  acknowledgementState,
+  AcknowledgementStateInterface,
   StoreState,
 } from '../../store/reducers';
-import {
-  ProgressStep,
-  updateAcknowledgementState,
-  updateProgress,
-} from '../../store/actions';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
 import { pageContent } from './pageContent';
 import { routesEnum } from '../../Routes';
+import {
+  DispatchWorkflowUpdateType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
+import {
+  DispatchAcknowledgementStateUpdateType,
+  updateAcknowledgementState,
+} from '../../store/actions/acknowledgementActions';
 
-interface Props {
-  updateAcknowledgementState(
-    acknowledgementId: acknowledgementId,
-    value: boolean
-  ): void;
-  acknowledgementState: acknowledgementState;
-  updateProgress: (step: ProgressStep) => void;
-  progress: ProgressStep;
+interface OwnProps {}
+interface StateProps {
+  acknowledgementState: AcknowledgementStateInterface;
+  workflow: WorkflowStep;
 }
+interface DispatchProps {
+  dispatchAcknowledgementStateUpdate: DispatchAcknowledgementStateUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 const _AcknowledgementPage = ({
-  updateProgress,
   acknowledgementState,
-  updateAcknowledgementState,
-  progress,
+  dispatchAcknowledgementStateUpdate,
+  workflow,
+  dispatchWorkflowUpdate,
 }: Props) => {
   const handleSubmit = () => {
-    if (progress === ProgressStep.OVERVIEW) {
-      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
+    if (workflow === WorkflowStep.OVERVIEW) {
+      dispatchWorkflowUpdate(WorkflowStep.GENERATE_KEY_PAIRS);
     }
   };
 
@@ -72,7 +78,7 @@ const _AcknowledgementPage = ({
     id: acknowledgementId,
     checked: boolean
   ): void => {
-    updateAcknowledgementState(id, checked);
+    dispatchAcknowledgementStateUpdate(id, checked);
     if (checked) {
       scrollToNextAcknowledgement();
     }
@@ -131,16 +137,23 @@ const _AcknowledgementPage = ({
   );
 };
 
-const mstp = ({ progress, acknowledgementState }: StoreState) => ({
-  progress,
-  acknowledgementState,
+const mapStateToProps = (state: StoreState): StateProps => ({
+  workflow: state.workflow,
+  acknowledgementState: state.acknowledgementState,
 });
-const mdtp = (dispatch: any) => ({
-  updateAcknowledgementState: (
-    acknowledgementId: acknowledgementId,
-    value: boolean
-  ): void => dispatch(updateAcknowledgementState(acknowledgementId, value)),
-  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step)),
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchAcknowledgementStateUpdate: (id, value) =>
+    dispatch(updateAcknowledgementState(id, value)),
+  dispatchWorkflowUpdate: (step: WorkflowStep) =>
+    dispatch(updateWorkflow(step)),
 });
 
-export const AcknowledgementPage = connect(mstp, mdtp)(_AcknowledgementPage);
+export const AcknowledgementPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_AcknowledgementPage);

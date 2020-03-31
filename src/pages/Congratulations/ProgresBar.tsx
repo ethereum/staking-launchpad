@@ -13,37 +13,35 @@ const PBarComplete = styled.div`
   border-radius: ${p => p.theme.borderRadius} 0 0 ${p => p.theme.borderRadius};
   background-color: ${p => p.theme.blue.dark};
   height: 100%;
-  width: ${(p: { progress: number }) => p.progress}%;
+  width: ${(p: { workflow: number }) => p.workflow}%;
 `;
 
 const PBarNewlyAdded = styled.div`
   background-color: ${p => p.theme.blue.light};
   height: 100%;
-  width: ${(p: { progress: number }) => p.progress}%;
+  width: ${(p: { workflow: number }) => p.workflow}%;
 `;
 
 const PBarIncomplete = styled.div`
   border-radius: 0 ${p => p.theme.borderRadius} ${p => p.theme.borderRadius} 0;
   background-color: ${p => p.theme.blue.lightest};
   height: 100%;
-  width: ${(p: { progress: number }) => p.progress}%;
+  width: ${(p: { workflow: number }) => p.workflow}%;
 `;
 
-export const ProgressBar = ({
-  complete,
-  newlyAdded,
-  incomplete,
-}: {
+interface Props {
   complete: number;
   newlyAdded: number;
   incomplete: number;
-}) => {
+}
+
+export const ProgressBar = ({ complete, newlyAdded, incomplete }: Props) => {
   return (
     <div>
       <PBarContainer>
-        <PBarComplete progress={complete} />
-        <PBarNewlyAdded progress={newlyAdded} />
-        <PBarIncomplete progress={incomplete} />
+        <PBarComplete workflow={complete} />
+        <PBarNewlyAdded workflow={newlyAdded} />
+        <PBarIncomplete workflow={incomplete} />
       </PBarContainer>
     </div>
   );

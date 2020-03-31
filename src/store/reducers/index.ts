@@ -1,23 +1,25 @@
 import { combineReducers } from 'redux';
-import { KeyFileInterface, ProgressStep } from '../actions';
 import {
   acknowledgementReducer,
-  acknowledgementState,
+  AcknowledgementStateInterface,
 } from './acknowledgementReducer';
-import { progressReducer } from './progressReducer';
+import { workflowReducer } from './workflowReducer';
 import { keyFilesReducer } from './keyFilesReducer';
+import { KeyFileInterface } from '../actions/keyFileActions';
+import { WorkflowStep } from '../actions/workflowActions';
 
 export * from './acknowledgementReducer';
 export * from './keyFilesReducer';
-export * from './progressReducer';
+export * from './workflowReducer';
+
 export interface StoreState {
-  acknowledgementState: acknowledgementState;
+  acknowledgementState: AcknowledgementStateInterface;
   keyFiles: KeyFileInterface[];
-  progress: ProgressStep;
+  workflow: WorkflowStep;
 }
 
 export const reducers = combineReducers<StoreState>({
   acknowledgementState: acknowledgementReducer,
   keyFiles: keyFilesReducer,
-  progress: progressReducer,
+  workflow: workflowReducer,
 });

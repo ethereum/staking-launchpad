@@ -2,13 +2,12 @@ import React from 'react';
 import { Paper, PaperGroup } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 
-export const AcknowledgementSection = ({
-  title,
-  children,
-}: {
+interface Props {
   title: string;
   children: any;
-}) => {
+}
+
+export const AcknowledgementSection = ({ title, children }: Props) => {
   return (
     <PaperGroup className="mt20">
       <Paper error pad="medium">

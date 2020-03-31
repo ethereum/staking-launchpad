@@ -33,12 +33,12 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
-interface props {
+interface Props {
   fileAccepted: boolean;
   onDrop: (acceptedFiles: any) => void;
 }
 
-export const StyledDropzone = ({ fileAccepted, onDrop }: props) => {
+export const StyledDropzone = ({ fileAccepted, onDrop }: Props) => {
   const {
     getRootProps,
     getInputProps,

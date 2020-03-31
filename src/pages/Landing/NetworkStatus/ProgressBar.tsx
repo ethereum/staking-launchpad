@@ -11,20 +11,20 @@ const PBarComplete = styled.div`
   border-radius: ${p => p.theme.borderRadius} 0 0 ${p => p.theme.borderRadius};
   background-color: ${p => p.theme.green.dark};
   height: 100%;
-  width: ${(p: { progress: number }) => p.progress}%;
+  width: ${(p: { workflow: number }) => p.workflow}%;
 `;
 const PBarIncomplete = styled.div`
   border-radius: 0 ${p => p.theme.borderRadius} ${p => p.theme.borderRadius} 0;
   background-color: ${p => p.theme.green.medium};
   height: 100%;
-  width: ${(p: { progress: number }) => 100 - p.progress}%;
+  width: ${(p: { workflow: number }) => 100 - p.workflow}%;
 `;
 
-export const ProgressBar = ({ progress }: { progress: number }) => {
+export const ProgressBar = ({ workflow }: { workflow: number }) => {
   return (
     <PBarContainer>
-      <PBarComplete progress={progress} />
-      <PBarIncomplete progress={progress} />
+      <PBarComplete workflow={workflow} />
+      <PBarIncomplete workflow={workflow} />
     </PBarContainer>
   );
 };

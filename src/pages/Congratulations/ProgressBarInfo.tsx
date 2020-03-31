@@ -11,17 +11,19 @@ const ColorBox = styled.div`
   margin: 10px;
 `;
 
+interface Props {
+  title: string;
+  color: string;
+  amountEth: number;
+  amountValidators: number;
+}
+
 export const ProgressBarInfo = ({
   title,
   color,
   amountEth,
   amountValidators,
-}: {
-  title: string;
-  color: string;
-  amountEth: number;
-  amountValidators: number;
-}) => {
+}: Props) => {
   const formattedEth = numberWithCommas(amountEth.toFixed(1));
   const formattedValidators = numberWithCommas(amountValidators.toFixed(0));
 

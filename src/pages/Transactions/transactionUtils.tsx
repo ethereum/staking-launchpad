@@ -5,10 +5,13 @@ import Web3 from 'web3';
 import { Eth } from 'web3-eth';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
-import { KeyFileInterface, TransactionStatuses } from '../../store/actions';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { contractAddress, pricePerValidator as rawPrice } from '../../enums';
+import {
+  KeyFileInterface,
+  TransactionStatus,
+} from '../../store/actions/keyFileActions';
 
 const CONTRACT_ADDRESS = contractAddress;
 const pricePerValidator = new BigNumber(rawPrice);
@@ -37,7 +40,7 @@ export const handleTransaction = async (
   account: any,
   updateTransactionStatus: (
     pubkey: string,
-    status: TransactionStatuses,
+    status: TransactionStatus,
     txHash?: string
   ) => void
 ): Promise<void> => {
@@ -51,7 +54,7 @@ export const handleTransaction = async (
   } = depositFile;
 
   try {
-    updateTransactionStatus(pubkey, TransactionStatuses.PENDING);
+    updateTransactionStatus(pubkey, TransactionStatus.PENDING);
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: Eth = new Web3(walletProvider).eth;
     const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
@@ -70,7 +73,7 @@ export const handleTransaction = async (
       )
       .send(transactionParameters)
       .on('transactionHash', (txHash: string): void => {
-        updateTransactionStatus(pubkey, TransactionStatuses.STARTED, txHash);
+        updateTransactionStatus(pubkey, TransactionStatus.STARTED, txHash);
       })
       .on('receipt', () => {
         // do something?
@@ -80,21 +83,21 @@ export const handleTransaction = async (
         (confirmation: number, receipt: { status: {} }): any => {
           if (confirmation === 0) {
             if (receipt.status) {
-              updateTransactionStatus(pubkey, TransactionStatuses.SUCCEEDED);
+              updateTransactionStatus(pubkey, TransactionStatus.SUCCEEDED);
             } else {
-              updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
+              updateTransactionStatus(pubkey, TransactionStatus.FAILED);
             }
           }
         }
       )
       .on('error', (error: any) => {
         if (isUserRejectionError(error)) {
-          updateTransactionStatus(pubkey, TransactionStatuses.REJECTED);
+          updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
         } else {
-          updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
+          updateTransactionStatus(pubkey, TransactionStatus.FAILED);
         }
       });
   } catch (rejected) {
-    updateTransactionStatus(pubkey, TransactionStatuses.FAILED);
+    updateTransactionStatus(pubkey, TransactionStatus.FAILED);
   }
 };

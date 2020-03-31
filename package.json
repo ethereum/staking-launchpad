@@ -75,7 +75,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "npx prettier --write",
+      "npx prettier --write '{,!(node_modules)/**/}*.{ts,tsx}'",
       "yarn run eslint src --ext .js,.jsx,.ts,.tsx --fix-dry-run"
     ]
   },

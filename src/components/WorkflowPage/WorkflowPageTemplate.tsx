@@ -5,12 +5,12 @@ import { Heading } from 'grommet';
 import { WorkflowProgressBar } from './WorkflowProgressBar';
 import { AppBar } from '../AppBar';
 import { DesktopOnlyModal } from '../DesktopOnlyModal';
-import { ProgressStep } from '../../store/actions';
 import {
   rainbowColors,
   rainbowLightColors,
 } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
+import { WorkflowStep } from '../../store/actions/workflowActions';
 
 const Content = styled.div`
   width: 100%;
@@ -24,21 +24,15 @@ const Gutter = styled.div`
   justify-content: center;
 `;
 const Background = styled.div`
-  background-image: ${(p: { progressStep: ProgressStep }) =>
-    `linear-gradient(to bottom right, ${rainbowLightColors[p.progressStep]}, ${
-      rainbowColors[p.progressStep]
+  background-image: ${(p: { workflowStep: WorkflowStep }) =>
+    `linear-gradient(to bottom right, ${rainbowLightColors[p.workflowStep]}, ${
+      rainbowColors[p.workflowStep]
     });`};
 
   min-height: 100vh;
 `;
 
-interface WorkflowPageTemplateProps extends RouteComponentProps {
-  children?: React.ReactNode;
-  title: string;
-  history: any;
-}
-
-const mapPathnameToProgressStep = (pathname: routesEnum) => {
+const mapPathnameToWorkflowStep = (pathname: routesEnum) => {
   const workflowRoutesInOrder = [
     routesEnum.acknowledgementPage,
     routesEnum.generateKeysPage,
@@ -50,23 +44,29 @@ const mapPathnameToProgressStep = (pathname: routesEnum) => {
   return workflowRoutesInOrder.indexOf(pathname);
 };
 
+interface Props extends RouteComponentProps {
+  children?: React.ReactNode;
+  title: string;
+  history: any;
+}
+
 const _WorkflowPageTemplate = ({
   children,
   title,
   history,
-}: WorkflowPageTemplateProps): JSX.Element => {
+}: Props): JSX.Element => {
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }
 
-  const calculatedProgressStep: ProgressStep = mapPathnameToProgressStep(
+  const calculatedWorkflowStep: WorkflowStep = mapPathnameToWorkflowStep(
     history.location.pathname
   );
 
   return (
-    <Background progressStep={calculatedProgressStep}>
+    <Background workflowStep={calculatedWorkflowStep}>
       <AppBar />
-      <WorkflowProgressBar progress={calculatedProgressStep} />
+      <WorkflowProgressBar workflow={calculatedWorkflowStep} />
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" className="mb40">

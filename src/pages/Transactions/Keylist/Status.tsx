@@ -2,10 +2,14 @@ import React from 'react';
 import { Spinning } from 'grommet-controls';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
-import { TransactionStatuses } from '../../../store/actions';
+import { TransactionStatus } from '../../../store/actions/keyFileActions';
 
-export const Status = ({ status }: { status: TransactionStatuses }) => {
-  if (status === TransactionStatuses.READY) {
+interface Props {
+  status: TransactionStatus;
+}
+
+export const Status = ({ status }: Props) => {
+  if (status === TransactionStatus.READY) {
     return (
       <div className="flex">
         <Dot success className="mr5" />
@@ -13,7 +17,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
       </div>
     );
   }
-  if (status === TransactionStatuses.PENDING) {
+  if (status === TransactionStatus.PENDING) {
     return (
       <div className="flex">
         <Dot className="mr5" />
@@ -21,7 +25,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
       </div>
     );
   }
-  if (status === TransactionStatuses.STARTED) {
+  if (status === TransactionStatus.STARTED) {
     return (
       <div className="flex">
         <Spinning kind="pulse" />
@@ -29,7 +33,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
       </div>
     );
   }
-  if (status === TransactionStatuses.SUCCEEDED) {
+  if (status === TransactionStatus.SUCCEEDED) {
     return (
       <div className="flex">
         <Dot success className="mr5" />
@@ -37,7 +41,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
       </div>
     );
   }
-  if (status === TransactionStatuses.FAILED) {
+  if (status === TransactionStatus.FAILED) {
     return (
       <div className="flex">
         <Dot error className="mr5" />
@@ -45,7 +49,7 @@ export const Status = ({ status }: { status: TransactionStatuses }) => {
       </div>
     );
   }
-  if (status === TransactionStatuses.REJECTED) {
+  if (status === TransactionStatus.REJECTED) {
     return (
       <div className="flex">
         <Dot error className="mr5" />

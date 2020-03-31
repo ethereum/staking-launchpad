@@ -18,3 +18,8 @@ export const updateAcknowledgementState = (
     payload: { acknowledgementId, value },
   };
 };
+
+export type DispatchAcknowledgementStateUpdateType = (
+  acknowledgementId: acknowledgementId,
+  value: boolean
+) => void;

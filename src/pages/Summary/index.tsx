@@ -19,7 +19,6 @@ import { routesEnum } from '../../Routes';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
-import { pricePerValidator } from '../../enums';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
@@ -30,13 +29,14 @@ import {
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
+import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 const Container = styled.div`
   width: 100%;
 `;
-
-const NETWORK_NAME = 'Göerli Testnet';
-const NETWORK_ID = NetworkChainId[NETWORK_NAME];
+const NETWORK_ID = IS_MAINNET
+  ? NetworkChainId.Mainnet
+  : NetworkChainId['Göerli'];
 
 // Prop definitions
 interface OwnProps {}
@@ -44,6 +44,7 @@ interface StateProps {
   keyFiles: KeyFileInterface[];
   workflow: WorkflowStep;
 }
+
 interface DispatchProps {
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
 }
@@ -60,7 +61,7 @@ const _SummaryPage = ({
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const amountValidators = new BigNumber(keyFiles.length);
-  const convertedPrice = new BigNumber(pricePerValidator);
+  const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
 
   useEffect(() => {
     setAllChecked(losePhrase && earlyAdopt && nonReverse && noPhish);
@@ -78,9 +79,10 @@ const _SummaryPage = ({
 
   if (workflow < WorkflowStep.SUMMARY)
     return routeToCorrectWorkflowStep(workflow);
+
   if (!account || !connector) return <WalletDisconnected />;
-  if (chainId !== NETWORK_ID)
-    return <WrongNetwork networkName={NETWORK_NAME} />;
+  if (chainId !== NETWORK_ID) return <WrongNetwork />;
+
   return (
     <WorkflowPageTemplate title="Summary">
       <Paper>
@@ -135,9 +137,9 @@ const _SummaryPage = ({
       <AcknowledgementSection title="Please make sure you aren't being phished">
         <Text>
           You are responsible for the transaction. Fraudulent websites might
-          lure you into sending the {pricePerValidator} ETH to them, instead of
-          the official deposit contract. Please check that the address you are
-          sending the transaction to is the correct address.
+          lure you into sending the {PRICE_PER_VALIDATOR} ETH to them, instead
+          of the official deposit contract. Please check that the address you
+          are sending the transaction to is the correct address.
         </Text>
         <Link to="https://www.google.com" external className="mt10" primary>
           Learn here how to do it safely <FormNextLink />

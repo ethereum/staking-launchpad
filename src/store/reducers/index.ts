@@ -3,9 +3,9 @@ import {
   acknowledgementReducer,
   AcknowledgementStateInterface,
 } from './acknowledgementReducer';
-import { workflowReducer } from './workflowReducer';
 import { keyFilesReducer } from './keyFilesReducer';
 import { KeyFileInterface } from '../actions/keyFileActions';
+import { workflowReducer } from './workflowReducer';
 import { WorkflowStep } from '../actions/workflowActions';
 
 export * from './acknowledgementReducer';

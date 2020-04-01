@@ -59,6 +59,7 @@ const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
       keyFile,
       connector as AbstractConnector,
       account,
+
       dispatchTransactionStatusUpdate
     );
   };

@@ -4,6 +4,7 @@ import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { TransactionStatus } from '../../../store/actions/keyFileActions';
+import { ALETHIO_URL, ETHERSCAN_URL } from '../../../utils/envVars';
 
 const Container = styled.div`
   width: 100px;
@@ -47,12 +48,12 @@ export const ActionButton = ({ status, txHash, onClick }: Props) => {
   ) {
     return (
       <div className="flex">
-        <Link external to={`${process.env.REACT_APP_ALETHIO_URL}/${txHash}`}>
+        <Link external to={`${ALETHIO_URL}/${txHash}`}>
           <ButtonText className="mr5">
             Alethio <Share size="small" />
           </ButtonText>
         </Link>
-        <Link external to={`${process.env.REACT_APP_ETHERSCAN_URL}/${txHash}`}>
+        <Link external to={`${ETHERSCAN_URL}/${txHash}`}>
           <ButtonText>
             Etherscan <Share size="small" />
           </ButtonText>

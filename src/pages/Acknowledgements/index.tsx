@@ -29,6 +29,7 @@ interface StateProps {
   acknowledgementState: AcknowledgementStateInterface;
   workflow: WorkflowStep;
 }
+
 interface DispatchProps {
   dispatchAcknowledgementStateUpdate: DispatchAcknowledgementStateUpdateType;
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;

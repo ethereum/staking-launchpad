@@ -5,8 +5,8 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { ProgressBar } from './ProgressBar';
 import { queryContract } from '../../../utils/queryContract';
-import { isMainnet, mainnetEthRequirement } from '../../../enums';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
+import { IS_MAINNET, MAINNET_ETH_REQUIREMENT } from '../../../utils/envVars';
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
@@ -48,7 +48,7 @@ export const NetworkStatus = (): JSX.Element => {
   });
 
   const calculatePercentage = (amountEth: number) => {
-    const percentage = (amountEth / mainnetEthRequirement) * 100;
+    const percentage = (amountEth / MAINNET_ETH_REQUIREMENT) * 100;
     if (percentage === 0) {
       return 0;
     }
@@ -59,7 +59,7 @@ export const NetworkStatus = (): JSX.Element => {
   };
 
   const calculateLaunchThreshold = () =>
-    (mainnetEthRequirement - amountEth).toFixed(1);
+    (MAINNET_ETH_REQUIREMENT - amountEth).toFixed(1);
 
   return (
     <Container isMobile={m}>
@@ -82,7 +82,7 @@ export const NetworkStatus = (): JSX.Element => {
             <BoldGray className="mr10" fontSize={24}>
               16,284 validators,
             </BoldGray>
-            to launch its {isMainnet ? 'mainnet' : 'testnet'}
+            to launch its {IS_MAINNET ? 'mainnet' : 'testnet'}
           </Text>
           <div>
             <ProgressBar workflow={calculatePercentage(amountEth)} />

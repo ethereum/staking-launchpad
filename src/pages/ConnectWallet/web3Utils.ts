@@ -2,20 +2,24 @@ import { useEffect, useState } from 'react';
 import {
   InjectedConnector,
   InjectedConnector as MetamaskConnector,
-  NoEthereumProviderError,
-  UserRejectedRequestError,
 } from '@web3-react/injected-connector';
 import { PortisConnector } from '@web3-react/portis-connector';
-import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
+import { useWeb3React } from '@web3-react/core';
 import { FortmaticConnector } from './fortmaticConnector';
 import { web3ReactInterface } from './index';
+import {
+  FORTMATIC_KEY,
+  IS_MAINNET,
+  PORTIS_DAPP_ID,
+  RPC_URL_GOERLI,
+} from '../../utils/envVars';
 
 export enum NetworkChainId {
-  'Ethereum Mainnet' = 1,
-  'Ropsten Testnet' = 3,
-  'Rinkeby Testnet' = 4,
-  'Göerli Testnet' = 5,
-  'Kovan Testnet' = 42,
+  'Mainnet' = 1,
+  'Ropsten' = 3,
+  'Rinkeby' = 4,
+  'Göerli' = 5,
+  'Kovan' = 42,
 }
 
 /*
@@ -23,52 +27,37 @@ export enum NetworkChainId {
  is displayed when the user is not connected to the "allowed" network
  */
 const supportedNetworks = [
-  NetworkChainId['Göerli Testnet'],
-  NetworkChainId['Ethereum Mainnet'],
-  NetworkChainId['Rinkeby Testnet'],
-  NetworkChainId['Ropsten Testnet'],
-  NetworkChainId['Kovan Testnet'],
+  NetworkChainId['Göerli'],
+  NetworkChainId.Mainnet,
+  NetworkChainId.Rinkeby,
+  NetworkChainId.Ropsten,
+  NetworkChainId.Kovan,
 ];
 
-export enum AllowedNetworks {
-  'Göerli Testnet', // TODO edit this enum based on .env
+enum Testnet {
+  'Göerli',
 }
+
+enum Mainnet {
+  'Mainnet',
+}
+
+export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
 });
 
-if (!process.env.REACT_APP_PORTIS_DAPP_ID) {
-  throw new TypeError('Missing PORTIS_DAPP_ID');
-}
-if (!process.env.REACT_APP_FORTMATIC_KEY) {
-  throw new TypeError('Missing FORTMATIC_KEY');
-}
-
 export const portis: PortisConnector = new PortisConnector({
-  dAppId: process.env.REACT_APP_PORTIS_DAPP_ID,
+  dAppId: PORTIS_DAPP_ID,
   networks: supportedNetworks,
 });
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
-  apiKey: process.env.REACT_APP_FORTMATIC_KEY as string,
-  chainId: NetworkChainId['Göerli Testnet'],
-  rpcUrl: process.env.REACT_APP_RPC_URL_GOERLI as string,
+  apiKey: FORTMATIC_KEY as string,
+  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
+  rpcUrl: RPC_URL_GOERLI as string,
 });
-
-export function getErrorMessage(error: Error): string {
-  if (error instanceof NoEthereumProviderError) {
-    return 'No Ethereum browser extension detected, install MetaMask.';
-  }
-  if (error instanceof UnsupportedChainIdError) {
-    return "You're connected to an unsupported network.";
-  }
-  if (error instanceof UserRejectedRequestError) {
-    return 'Please authorize this website to access your Ethereum account.';
-  }
-  console.error(error);
-  return 'An unknown error occurred. Check the console for more details.';
-}
 
 // sets up initial call to MM
 export function useMetamaskEagerConnect(): boolean {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormNext } from 'grommet-icons';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
-import { pricePerValidator } from '../../enums';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
+import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 export interface PageContentInterface {
   title: string;
@@ -41,11 +41,11 @@ export const pageContent = {
     content: (
       <Text size="large" className="my10">
         In order to become a validator on the eth2 beacon chain, one needs to
-        deposit {pricePerValidator}
-        ETH (in exchange for bETH). This process cannot be reversed
+        deposit ${PRICE_PER_VALIDATOR} ETH (in exchange for bETH). This process
+        cannot be reversed
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',

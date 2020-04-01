@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Heading } from '../Heading';
 import { WorkflowProgressBar } from './WorkflowProgressBar';
 import { AppBar } from '../AppBar';
@@ -29,7 +29,6 @@ const Background = styled.div`
     `linear-gradient(to bottom right, ${rainbowLightColors[p.workflowStep]}, ${
       rainbowColors[p.workflowStep]
     });`};
-
   min-height: 100vh;
 `;
 

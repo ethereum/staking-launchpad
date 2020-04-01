@@ -20,8 +20,8 @@ import {
 } from '../../store/actions/keyFileActions';
 import {
   DispatchWorkflowUpdateType,
-  WorkflowStep,
   updateWorkflow,
+  WorkflowStep,
 } from '../../store/actions/workflowActions';
 
 // Styled components
@@ -44,6 +44,7 @@ interface StateProps {
   keyFiles: KeyFileInterface[];
   workflow: WorkflowStep;
 }
+
 interface DispatchProps {
   dispatchKeyFilesUpdate: DispatchKeyFilesUpdateType;
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
@@ -131,6 +132,7 @@ const mapStateToProps = (state: StoreState): StateProps => ({
   keyFiles: state.keyFiles,
   workflow: state.workflow,
 });
+
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchKeyFilesUpdate: files => dispatch(updateKeyFiles(files)),
   dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),

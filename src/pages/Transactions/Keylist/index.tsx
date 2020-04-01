@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dispatch } from 'redux';
 import {
   Box,
   Table,
@@ -17,13 +18,13 @@ import { Text } from '../../../components/Text';
 import { Status } from './Status';
 import { ActionButton } from './ActionButton';
 import { StoreState } from '../../../store/reducers';
-import {
-  KeyFileInterface,
-  TransactionStatuses,
-  updateTransactionStatus,
-} from '../../../store/actions';
 import { handleTransaction } from '../transactionUtils';
 import { web3ReactInterface } from '../../ConnectWallet';
+import {
+  DispatchTransactionStatusUpdateType,
+  KeyFileInterface,
+  updateTransactionStatus,
+} from '../../../store/actions/keyFileActions';
 
 const CustomTableRow = styled(TableRow)`
   background-color: ${(p: { theme: any }) => p.theme.blue.light};
@@ -39,15 +40,17 @@ const CustomTable = styled(Table)`
   }
 `;
 
-interface KeyListProps {
+// Prop definitions
+interface OwnProps {}
+interface StateProps {
   keyFiles: KeyFileInterface[];
-  updateTransactionStatus: (
-    pubkey: string,
-    status: TransactionStatuses
-  ) => void;
 }
+interface DispatchProps {
+  dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
-const _KeyList = ({ keyFiles, updateTransactionStatus }: KeyListProps) => {
+const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -56,7 +59,7 @@ const _KeyList = ({ keyFiles, updateTransactionStatus }: KeyListProps) => {
       keyFile,
       connector as AbstractConnector,
       account,
-      updateTransactionStatus
+      dispatchTransactionStatusUpdate
     );
   };
 
@@ -108,18 +111,16 @@ const _KeyList = ({ keyFiles, updateTransactionStatus }: KeyListProps) => {
   );
 };
 
-const mstp = ({ keyFiles }: StoreState) => {
+const mapStateToProps = ({ keyFiles }: StoreState): StateProps => {
   return { keyFiles };
 };
 
-const mdtp = (dispatch: any) => ({
-  updateTransactionStatus: (
-    pubkey: string,
-    status: TransactionStatuses,
-    txHash?: string
-  ): void => {
-    dispatch(updateTransactionStatus(pubkey, status, txHash));
-  },
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchTransactionStatusUpdate: (pubkey, status, txHash) =>
+    dispatch(updateTransactionStatus(pubkey, status, txHash)),
 });
 
-export const KeyList = connect(mstp, mdtp)(_KeyList);
+export const KeyList = connect<StateProps, DispatchProps, OwnProps, StoreState>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_KeyList);

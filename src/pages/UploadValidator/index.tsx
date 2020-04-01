@@ -1,27 +1,30 @@
-/* eslint camelcase: 0 */ // --> OFF
 import React, { useCallback, useState } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import _every from 'lodash/every';
-import { initBLS } from '@chainsafe/bls';
 import { StyledDropzone } from './Dropzone';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
-import { StoreState } from '../../store/reducers';
-import {
-  KeyFileInterface,
-  ProgressStep,
-  TransactionStatuses,
-  updateKeyFiles,
-  updateProgress,
-} from '../../store/actions';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { Button } from '../../components/Button';
-import { verifySignature } from '../../utils/verifySignature';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { validateKeyFile } from './validateKeyFile';
+import { StoreState } from '../../store/reducers';
+import {
+  DispatchKeyFilesUpdateType,
+  KeyFileInterface,
+  TransactionStatus,
+  updateKeyFiles,
+} from '../../store/actions/keyFileActions';
+import {
+  DispatchWorkflowUpdateType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
+// Styled components
 const Instructions = styled(Link)`
   font-weight: bold;
   :hover {
@@ -35,78 +38,29 @@ const ErrorText = styled(Text)`
   text-align: center;
 `;
 
-interface Props {
-  updateKeyFiles(files: KeyFileInterface[]): void;
+// Prop definitions
+interface OwnProps {}
+interface StateProps {
   keyFiles: KeyFileInterface[];
-  updateProgress: (step: ProgressStep) => void;
-  progress: ProgressStep;
+  workflow: WorkflowStep;
 }
-
-const validateKeyFile = async (files: KeyFileInterface[]): Promise<boolean> => {
-  await initBLS();
-
-  if (!Array.isArray(files)) return false;
-  if (files.length <= 0) return false;
-
-  const keyFileStatuses: boolean[] = files.map(file => {
-    const {
-      pubkey,
-      withdrawal_credentials,
-      amount,
-      signature,
-      deposit_data_root,
-    } = file;
-
-    // check existence of required keys
-    if (
-      !pubkey ||
-      !withdrawal_credentials ||
-      !amount ||
-      !signature ||
-      !deposit_data_root
-    ) {
-      return false;
-    }
-
-    // check type of values
-    if (
-      typeof pubkey !== 'string' ||
-      typeof withdrawal_credentials !== 'string' ||
-      typeof amount !== 'number' ||
-      typeof signature !== 'string' ||
-      typeof deposit_data_root !== 'string'
-    ) {
-      return false;
-    }
-
-    // check length of strings
-    if (
-      pubkey.length !== 96 ||
-      withdrawal_credentials.length !== 64 ||
-      signature.length !== 192 ||
-      deposit_data_root.length !== 64
-    ) {
-      return false;
-    }
-
-    // perform BLS check
-    return verifySignature(pubkey, signature, deposit_data_root);
-  });
-  return _every(keyFileStatuses);
-};
+interface DispatchProps {
+  dispatchKeyFilesUpdate: DispatchKeyFilesUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 export const _UploadValidatorPage = ({
   keyFiles,
-  updateKeyFiles,
-  updateProgress,
-  progress,
+  dispatchKeyFilesUpdate,
+  dispatchWorkflowUpdate,
+  workflow,
 }: Props): JSX.Element => {
   const fileAccepted = keyFiles.length > 0;
   const [invalidKeyFile, setInvalidKeyFile] = useState(false);
-
   const handleSubmit = () => {
-    if (progress === ProgressStep.UPLOAD_VALIDATOR_FILE) {
-      updateProgress(ProgressStep.CONNECT_WALLET);
+    if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
+      dispatchWorkflowUpdate(WorkflowStep.CONNECT_WALLET);
     }
   };
 
@@ -120,10 +74,10 @@ export const _UploadValidatorPage = ({
             try {
               const fileData = JSON.parse(event.target.result as string);
               if (await validateKeyFile(fileData as KeyFileInterface[])) {
-                updateKeyFiles(
+                dispatchKeyFilesUpdate(
                   fileData.map((keyFile: KeyFileInterface) => ({
                     ...keyFile,
-                    transactionStatus: TransactionStatuses.READY, // initialize each keyFile with ready state for transaction
+                    transactionStatus: TransactionStatus.READY, // initialize each keyFile with ready state for transaction
                   }))
                 );
               } else {
@@ -137,11 +91,11 @@ export const _UploadValidatorPage = ({
         reader.readAsText(acceptedFiles[0]);
       }
     },
-    [updateKeyFiles]
+    [dispatchKeyFilesUpdate]
   );
 
-  if (progress < ProgressStep.UPLOAD_VALIDATOR_FILE)
-    return routeToCorrectProgressStep(progress);
+  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
+    return routeToCorrectWorkflowStep(workflow);
 
   return (
     <WorkflowPageTemplate title="Upload Deposits">
@@ -150,7 +104,7 @@ export const _UploadValidatorPage = ({
         {invalidKeyFile && (
           <ErrorText color="redMedium">
             There was an error processing your key file. Please follow the
-            instructions{' '}
+            instructions
             <Instructions to={routesEnum.generateKeysPage}>here</Instructions>
             to generate your file.
           </ErrorText>
@@ -173,16 +127,21 @@ export const _UploadValidatorPage = ({
   );
 };
 
-const mstp = ({ keyFiles, progress }: StoreState) => ({
-  keyFiles,
-  progress,
+const mapStateToProps = (state: StoreState): StateProps => ({
+  keyFiles: state.keyFiles,
+  workflow: state.workflow,
 });
-const mdtp = (dispatch: any) => ({
-  updateKeyFiles: (files: KeyFileInterface[]): void =>
-    dispatch(updateKeyFiles(files)),
-  updateProgress: (step: ProgressStep): void => {
-    dispatch(updateProgress(step));
-  },
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchKeyFilesUpdate: files => dispatch(updateKeyFiles(files)),
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
-export const UploadValidatorPage = connect(mstp, mdtp)(_UploadValidatorPage);
+export const UploadValidatorPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_UploadValidatorPage);

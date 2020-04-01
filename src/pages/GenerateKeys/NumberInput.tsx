@@ -37,13 +37,12 @@ const StyledInput = styled.input`
   }
 `;
 
-export const NumberInput = ({
-  value,
-  setValue,
-}: {
+interface Props {
   value: number;
   setValue: (e: any) => void;
-}): JSX.Element => {
+}
+
+export const NumberInput = ({ value, setValue }: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
     const val = e.target.value.replace(/\./g, ''); // remove "." to force integer input
     if (e.target.validity.valid) setValue(val);

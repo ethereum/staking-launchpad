@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import _every from 'lodash/every';
 import _pickBy from 'lodash/pickBy';
@@ -9,35 +10,40 @@ import {
   AcknowledgementStateInterface,
   StoreState,
 } from '../../store/reducers';
-import {
-  ProgressStep,
-  updateAcknowledgementState,
-  updateProgress,
-} from '../../store/actions';
 import { pageContent, PageContentInterface } from './pageContent';
 import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
 import { AcknowledgementSection } from './AcknowledgementSection';
+import {
+  DispatchWorkflowUpdateType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
+import {
+  DispatchAcknowledgementStateUpdateType,
+  updateAcknowledgementState,
+} from '../../store/actions/acknowledgementActions';
 
-interface AcknowledgementPageProps {
-  updateAcknowledgementState(
-    acknowledgementId: AcknowledgementIdsEnum,
-    valuesEnum: boolean
-  ): void;
+interface OwnProps {}
+interface StateProps {
   acknowledgementState: AcknowledgementStateInterface;
-  updateProgress: (step: ProgressStep) => void;
-  progress: ProgressStep;
+  workflow: WorkflowStep;
 }
+interface DispatchProps {
+  dispatchAcknowledgementStateUpdate: DispatchAcknowledgementStateUpdateType;
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 const _AcknowledgementPage = ({
-  updateProgress,
   acknowledgementState,
-  updateAcknowledgementState,
-  progress,
-}: AcknowledgementPageProps) => {
+  dispatchAcknowledgementStateUpdate,
+  workflow,
+  dispatchWorkflowUpdate,
+}: Props): JSX.Element => {
   const [activeAcknowledgementId, setActiveAcknowledgementId] = useState<
     AcknowledgementIdsEnum
   >(
-    progress === ProgressStep.OVERVIEW
+    workflow === WorkflowStep.OVERVIEW
       ? AcknowledgementIdsEnum.introSection
       : AcknowledgementIdsEnum.confirmation
   );
@@ -56,17 +62,18 @@ const _AcknowledgementPage = ({
   );
 
   const handleSubmit = () => {
-    if (progress === ProgressStep.OVERVIEW) {
-      updateProgress(ProgressStep.GENERATE_KEY_PAIRS);
+    if (workflow === WorkflowStep.OVERVIEW) {
+      dispatchWorkflowUpdate(WorkflowStep.GENERATE_KEY_PAIRS);
     }
   };
 
   const handleContinueClick = (id: AcknowledgementIdsEnum) => {
-    updateAcknowledgementState(id, true);
+    dispatchAcknowledgementStateUpdate(id, true);
     if (+id + 1 in AcknowledgementIdsEnum) {
       setActiveAcknowledgementId(+id + 1);
     }
   };
+
   const handleGoBackClick = (id: AcknowledgementIdsEnum) => {
     if (+id - 1 in AcknowledgementIdsEnum) {
       setActiveAcknowledgementId(+id - 1);
@@ -101,16 +108,23 @@ const _AcknowledgementPage = ({
   );
 };
 
-const mstp = ({ progress, acknowledgementState }: StoreState) => ({
-  progress,
-  acknowledgementState,
-});
-const mdtp = (dispatch: any) => ({
-  updateAcknowledgementState: (
-    acknowledgementId: AcknowledgementIdsEnum,
-    value: boolean
-  ): void => dispatch(updateAcknowledgementState(acknowledgementId, value)),
-  updateProgress: (step: ProgressStep): void => dispatch(updateProgress(step)),
+const mapStateToProps = (state: StoreState): StateProps => ({
+  workflow: state.workflow,
+  acknowledgementState: state.acknowledgementState,
 });
 
-export const AcknowledgementPage = connect(mstp, mdtp)(_AcknowledgementPage);
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchAcknowledgementStateUpdate: (id, value) =>
+    dispatch(updateAcknowledgementState(id, value)),
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
+});
+
+export const AcknowledgementPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_AcknowledgementPage);

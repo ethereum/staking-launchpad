@@ -1,13 +1,13 @@
+import { useEffect, useState } from 'react';
 import {
   InjectedConnector,
   InjectedConnector as MetamaskConnector,
   NoEthereumProviderError,
   UserRejectedRequestError,
 } from '@web3-react/injected-connector';
-import { FortmaticConnector } from './fortmaticConnector';
 import { PortisConnector } from '@web3-react/portis-connector';
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
-import { useEffect, useState } from 'react';
+import { FortmaticConnector } from './fortmaticConnector';
 import { web3ReactInterface } from './index';
 
 export enum NetworkChainId {
@@ -31,7 +31,7 @@ const supportedNetworks = [
 ];
 
 export enum AllowedNetworks {
-  'Göerli Testnet',
+  'Göerli Testnet', // TODO edit this enum based on .env
 }
 
 export const metamask: InjectedConnector = new MetamaskConnector({
@@ -59,14 +59,15 @@ export const fortmatic: FortmaticConnector = new FortmaticConnector({
 export function getErrorMessage(error: Error): string {
   if (error instanceof NoEthereumProviderError) {
     return 'No Ethereum browser extension detected, install MetaMask.';
-  } else if (error instanceof UnsupportedChainIdError) {
-    return "You're connected to an unsupported network.";
-  } else if (error instanceof UserRejectedRequestError) {
-    return 'Please authorize this website to access your Ethereum account.';
-  } else {
-    console.error(error);
-    return 'An unknown error occurred. Check the console for more details.';
   }
+  if (error instanceof UnsupportedChainIdError) {
+    return "You're connected to an unsupported network.";
+  }
+  if (error instanceof UserRejectedRequestError) {
+    return 'Please authorize this website to access your Ethereum account.';
+  }
+  console.error(error);
+  return 'An unknown error occurred. Check the console for more details.';
 }
 
 // sets up initial call to MM

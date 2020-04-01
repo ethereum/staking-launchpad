@@ -68,6 +68,7 @@ interface LogoContainerProps {
   onClick: any;
   text: string;
 }
+
 const LogoContainer = ({
   osImage,
   isActive,
@@ -100,13 +101,15 @@ const Container = styled.div`
   }
 `;
 
+interface OSButtonProps {
+  chosenOs: operatingSystem;
+  setChosenOs: (os: operatingSystem) => void;
+}
+
 export const OperatingSystemButtons = ({
   chosenOs,
   setChosenOs,
-}: {
-  chosenOs: operatingSystem;
-  setChosenOs: (os: operatingSystem) => void;
-}) => {
+}: OSButtonProps) => {
   return (
     <Container className="flex">
       <LogoContainer

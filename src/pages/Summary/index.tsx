@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
@@ -7,11 +8,6 @@ import { FormNextLink } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { StoreState } from '../../store/reducers';
-import {
-  KeyFileInterface,
-  ProgressStep,
-  updateProgress,
-} from '../../store/actions';
 import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
@@ -20,7 +16,7 @@ import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { routeToCorrectProgressStep } from '../../utils/RouteToCorrectProgressStep';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { pricePerValidator } from '../../enums';
@@ -28,6 +24,12 @@ import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
+import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import {
+  DispatchWorkflowUpdateType,
+  WorkflowStep,
+  updateWorkflow,
+} from '../../store/actions/workflowActions';
 
 const Container = styled.div`
   width: 100%;
@@ -36,17 +38,22 @@ const Container = styled.div`
 const NETWORK_NAME = 'Göerli Testnet';
 const NETWORK_ID = NetworkChainId[NETWORK_NAME];
 
-interface SummaryPageProps {
+// Prop definitions
+interface OwnProps {}
+interface StateProps {
   keyFiles: KeyFileInterface[];
-  progress: ProgressStep;
-  updateProgress: (step: ProgressStep) => void;
+  workflow: WorkflowStep;
 }
+interface DispatchProps {
+  dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+}
+type Props = StateProps & DispatchProps & OwnProps;
 
 const _SummaryPage = ({
-  progress,
-  updateProgress,
+  workflow,
+  dispatchWorkflowUpdate,
   keyFiles,
-}: SummaryPageProps): JSX.Element => {
+}: Props): JSX.Element => {
   const [allChecked, setAllChecked] = useState(false);
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
@@ -64,13 +71,13 @@ const _SummaryPage = ({
   >();
 
   const handleSubmit = () => {
-    if (progress === ProgressStep.SUMMARY) {
-      updateProgress(ProgressStep.TRANSACTION_SIGNING);
+    if (workflow === WorkflowStep.SUMMARY) {
+      dispatchWorkflowUpdate(WorkflowStep.TRANSACTION_SIGNING);
     }
   };
 
-  if (progress < ProgressStep.SUMMARY)
-    return routeToCorrectProgressStep(progress);
+  if (workflow < WorkflowStep.SUMMARY)
+    return routeToCorrectWorkflowStep(workflow);
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID)
     return <WrongNetwork networkName={NETWORK_NAME} />;
@@ -160,15 +167,23 @@ const _SummaryPage = ({
   );
 };
 
-const mstp = ({ keyFiles, progress }: StoreState) => ({
+const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
   keyFiles,
-  progress,
+  workflow,
 });
 
-const mdtp = (dispatch: any) => ({
-  updateProgress: (step: ProgressStep): void => {
-    dispatch(updateProgress(step));
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchWorkflowUpdate: (step: WorkflowStep) => {
+    dispatch(updateWorkflow(step));
   },
 });
 
-export const SummaryPage = connect(mstp, mdtp)(_SummaryPage);
+export const SummaryPage = connect<
+  StateProps,
+  DispatchProps,
+  OwnProps,
+  StoreState
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_SummaryPage);

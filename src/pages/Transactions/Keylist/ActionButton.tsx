@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
-import { TransactionStatuses } from '../../../store/actions';
 import { Link } from '../../../components/Link';
+import { TransactionStatus } from '../../../store/actions/keyFileActions';
 
 const Container = styled.div`
   width: 100px;
@@ -18,18 +18,14 @@ const ButtonText = styled(Text)`
   }
 `;
 
-interface ActionButtonProps {
-  status: TransactionStatuses;
+interface Props {
+  status: TransactionStatus;
   txHash?: string;
   onClick: (e: any) => void;
 }
 
-export const ActionButton = ({
-  status,
-  txHash,
-  onClick,
-}: ActionButtonProps) => {
-  if (status === TransactionStatuses.READY) {
+export const ActionButton = ({ status, txHash, onClick }: Props) => {
+  if (status === TransactionStatus.READY) {
     return (
       <Container onClick={onClick}>
         <ButtonText>Start</ButtonText>
@@ -37,7 +33,7 @@ export const ActionButton = ({
       </Container>
     );
   }
-  if (status === TransactionStatuses.PENDING) {
+  if (status === TransactionStatus.PENDING) {
     return (
       <Container onClick={onClick}>
         <ButtonText>Retry</ButtonText>
@@ -46,8 +42,8 @@ export const ActionButton = ({
     );
   }
   if (
-    status === TransactionStatuses.STARTED ||
-    status === TransactionStatuses.SUCCEEDED
+    status === TransactionStatus.STARTED ||
+    status === TransactionStatus.SUCCEEDED
   ) {
     return (
       <div className="flex">
@@ -65,8 +61,8 @@ export const ActionButton = ({
     );
   }
   if (
-    status === TransactionStatuses.FAILED ||
-    status === TransactionStatuses.REJECTED
+    status === TransactionStatus.FAILED ||
+    status === TransactionStatus.REJECTED
   ) {
     return (
       <Container onClick={onClick}>

@@ -210,8 +210,8 @@ const _ConnectWalletPage = ({
       <Container>
         <WalletConnectedContainer>
           <Animated
-            animationIn="fadeInLeft"
-            animationOut="fadeOutLeft"
+            animationIn="fadeInRight"
+            animationOut="fadeOutRight"
             isVisible={walletConnected}
             animateOnMount={false}
             animationInDuration={200}
@@ -274,8 +274,8 @@ const _ConnectWalletPage = ({
         </WalletConnectedContainer>
         <WalletButtonContainer>
           <Animated
-            animationIn="fadeInRight"
-            animationOut="fadeOutRight"
+            animationIn="fadeInLeft"
+            animationOut="fadeOutLeft"
             isVisible={!walletConnected}
             animateOnMount={false}
             animationInDuration={200}

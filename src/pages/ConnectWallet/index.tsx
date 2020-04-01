@@ -335,7 +335,7 @@ const _ConnectWalletPage = ({
           <Button
             width={300}
             rainbow
-            disabled={!networkAllowed}
+            disabled={!walletProvider || !walletConnected || !networkAllowed}
             label="Continue"
           />
         </Link>

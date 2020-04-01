@@ -148,5 +148,6 @@ export const pageContent = {
         <Text>Perhaps some more text?</Text>
       </>
     ),
+    acknowledgementText: 'Final confirmation copy',
   },
 };

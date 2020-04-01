@@ -1,19 +1,24 @@
 import React from 'react';
-import { Box } from 'grommet';
-import { Paper, PaperGroup } from '../../components/Paper';
+import styled from 'styled-components';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import styled from 'styled-components';
 
-const StyledHeading = styled(Heading)`
-  background-color: aliceblue;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const AcknowledgementText = styled(Text)`
+  background: #ffdeb32e;
+  border: 1px solid burlywood;
+  padding: 30px;
+  border-radius: 4px;
 `;
 
 export interface AcknowledgementSectionData {
@@ -48,16 +53,13 @@ export const AcknowledgementSection = ({
   const renderButtons = () => {
     if (isConfirmationSection) {
       return (
-        <Box
-          align="center"
-          pad="xsmall"
-          className="flex flex-row space-evenly mt20"
-        >
+        <div className="flex center p30">
           <Button
+            className="mr10"
             onClick={() =>
               handleGoBackClick(AcknowledgementIdsEnum.confirmation)
             }
-            width={300}
+            width={100}
             label="Back"
           />
           <Link
@@ -74,44 +76,45 @@ export const AcknowledgementSection = ({
               label="Continue"
             />
           </Link>
-        </Box>
+        </div>
       );
     }
     return (
-      <Box
-        align="center"
-        pad="xsmall"
-        className="flex flex-row space-evenly mt20"
-      >
+      <div className="flex center p30">
         {!isIntroSection && (
           <Button
+            width={100}
             onClick={() => handleGoBackClick(acknowledgementId)}
-            width={300}
             label="Back"
+            className="mr10"
           />
         )}
         <Button
           onClick={() => handleContinueClick(acknowledgementId)}
           rainbow
-          width={300}
           label={isIntroSection ? 'Continue' : 'I Accept'}
+          width={300}
         />
-      </Box>
+      </div>
     );
   };
 
   return (
-    <div className="flex flex-column space-between">
+    <Container>
       <div>
-        <StyledHeading level={2} size="medium" color="blueDark">
+        <Heading level={2} size="medium" color="blueDark" className="mb50">
           {title}
-        </StyledHeading>
-        <div className="p10">{content}</div>
+        </Heading>
+        {content}
       </div>
-      <div>
-        <Text textAlign="center">{acknowledgementText}</Text>
+      <div className="mt20">
+        {!isIntroSection && (
+          <AcknowledgementText textAlign="center">
+            {acknowledgementText}
+          </AcknowledgementText>
+        )}
         {renderButtons()}
       </div>
-    </div>
+    </Container>
   );
 };

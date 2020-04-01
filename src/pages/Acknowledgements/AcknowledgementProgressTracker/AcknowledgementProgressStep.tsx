@@ -4,7 +4,6 @@ import _keys from 'lodash/keys';
 import _every from 'lodash/every';
 import { colors } from '../../../styles/styledComponentsTheme';
 import { Animated } from 'react-animated-css';
-import { Checkmark } from 'grommet-icons';
 import {
   AcknowledgementIdsEnum,
   AcknowledgementStateInterface,
@@ -23,8 +22,8 @@ const Container = styled.div`
   background-color: white;
   width: ${(p: Props) => (p.isActive ? '100%' : '235px')};
   margin: auto auto 25px;
-  border-radius: 4px;
-  border: 1px solid ${(p: Props) => p.theme.gray.light};
+  border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
+  border: 1px solid ${(p: Props) => p.theme.gray.medium};
   box-shadow: ${(p: Props) =>
     p.isActive
       ? '-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);\n' +
@@ -41,16 +40,18 @@ const IndexContainer = styled.div`
   padding: 10px 15px;
   height: 40px;
   width: 45px;
+  border-radius: ${(p: { theme: any }) =>
+    `${p.theme.borderRadius} 0 0 ${p.theme.borderRadius}`};
 `;
 
 const AnimatedCheck = styled.div`
   display: ${(p: { show: boolean }) => (p.show ? 'block' : 'none')};
   position: absolute;
-  right: -20px;
-  top: -20px;
+  right: -15px;
+  top: -15px;
 
   svg {
-    width: 40px;
+    width: 30px;
     display: block;
   }
 
@@ -143,8 +144,6 @@ export const AcknowledgementProgressStep = ({
     }
   };
 
-  const circleFillColor = isActive ? colors.green.dark : colors.green.medium;
-
   return (
     <Container
       key={acknowledgementId}
@@ -172,14 +171,18 @@ export const AcknowledgementProgressStep = ({
           >
             <circle
               className="path circle"
-              fill={circleFillColor}
+              fill={isActive ? colors.green.dark : colors.green.medium}
+              stroke={isActive ? colors.green.dark : colors.green.medium}
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
               cx="65.1"
               cy="65.1"
               r="62.1"
             />
             <polyline
               className="path check"
-              fill="none"
+              fill={isActive ? colors.green.dark : colors.green.medium}
               stroke="#fff"
               strokeWidth="6"
               strokeLinecap="round"

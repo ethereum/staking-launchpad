@@ -11,8 +11,8 @@ import { AcknowledgementProgressStep } from './AcknowledgementProgressStep';
 
 const Container = styled.div`
   min-width: 250px;
-  margin-right: 30px;
-  @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
+  margin-right: 40px;
+  @media only screen and (max-width: 940px) {
     display: none;
   }
 `;

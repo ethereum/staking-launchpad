@@ -71,7 +71,7 @@ const _AcknowledgementPage = ({
   const handleContinueClick = (id: AcknowledgementIdsEnum) => {
     dispatchAcknowledgementStateUpdate(id, true);
     if (+id + 1 in AcknowledgementIdsEnum) {
-      setTimeout(() => setActiveAcknowledgementId(+id + 1), 700)
+      setTimeout(() => setActiveAcknowledgementId(+id + 1), 700);
     }
   };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import _keys from 'lodash/keys';
 import _every from 'lodash/every';
+import { colors } from '../../../styles/styledComponentsTheme';
 import { Animated } from 'react-animated-css';
 import { Checkmark } from 'grommet-icons';
 import {
@@ -21,7 +22,7 @@ const Container = styled.div`
   display: flex;
   background-color: white;
   width: ${(p: Props) => (p.isActive ? '100%' : '235px')};
-  margin: auto auto 20px;
+  margin: auto auto 25px;
   border-radius: 4px;
   border: 1px solid ${(p: Props) => p.theme.gray.light};
   box-shadow: ${(p: Props) =>
@@ -31,22 +32,78 @@ const Container = styled.div`
         '\tbox-shadow:0 0 10px rgba(0, 0, 0, 0.5);'
       : 'inherit'};
   cursor: ${(p: Props) => (p.disabled ? 'default' : 'pointer')};
-  transition: width 0.3s;
+  transition: width 0.5s;
 `;
 const IndexContainer = styled.div`
+  display: flex;
+  justify-content: center;
   background-color: ${(p: { theme: any }) => p.theme.gray.light};
   padding: 10px 15px;
+  height: 40px;
+  width: 45px;
 `;
 
-const CheckContainer = styled.div`
-  background-color: ${(p: { theme: any; isActive: boolean }) =>
-    p.isActive ? p.theme.green.dark : p.theme.green.medium};
+const AnimatedCheck = styled.div`
+  display: ${(p: { show: boolean }) => (p.show ? 'block' : 'none')};
   position: absolute;
   right: -20px;
   top: -20px;
-  border-radius: 50%;
-  padding: ${(p: { isActive: boolean }) =>
-    p.isActive ? '7px 9px 4px;' : '3px 5px 0px;'};
+
+  svg {
+    width: 40px;
+    display: block;
+  }
+
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+
+    &.line {
+      stroke-dashoffset: 1000;
+      -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+      animation: dash 0.9s 0.35s ease-in-out forwards;
+    }
+    &.check {
+      stroke-dashoffset: -100;
+      -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+      animation: dash-check 0.9s 0.35s ease-in-out forwards;
+    }
+  }
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @-webkit-keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: 900;
+    }
+  }
+
+  @keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: 900;
+    }
+  }
 `;
 
 const StyledText = styled(Text)`
@@ -85,6 +142,9 @@ export const AcknowledgementProgressStep = ({
       setActiveAcknowledgementId(acknowledgementId);
     }
   };
+
+  const circleFillColor = isActive ? colors.green.dark : colors.green.medium;
+
   return (
     <Container
       key={acknowledgementId}
@@ -98,13 +158,50 @@ export const AcknowledgementProgressStep = ({
       <StyledText disabled={disabled} isActive={isActive}>
         {acknowledgementsWithCopy[acknowledgementId]}
       </StyledText>
-      {isComplete && (
-        <CheckContainer isActive={isActive}>
-          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible>
-            <Checkmark size="medium" color="white" />
-          </Animated>
-        </CheckContainer>
-      )}
+      <Animated
+        animationInDuration={300}
+        animationIn="fadeIn"
+        animationOut="fadeOut"
+        isVisible={isComplete}
+      >
+        <AnimatedCheck show={isComplete}>
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 130.2 130.2"
+          >
+            <circle
+              className="path circle"
+              fill={circleFillColor}
+              cx="65.1"
+              cy="65.1"
+              r="62.1"
+            />
+            <polyline
+              className="path check"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              points="100.2,40.2 51.5,88.8 29.8,67.5 "
+            />
+          </svg>
+        </AnimatedCheck>
+      </Animated>
     </Container>
   );
 };
+// {isComplete && (
+// )}
+
+// <CheckContainer isActive={isActive}>
+//   <Animated
+//     animationIn="fadeIn"
+//     animationOut="fadeOut"
+//     isVisible
+//     animationInDuration={400}
+//   >
+//     <Checkmark size="medium" color="white" />
+//   </Animated>
+// </CheckContainer>

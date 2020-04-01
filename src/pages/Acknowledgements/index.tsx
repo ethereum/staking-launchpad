@@ -22,6 +22,7 @@ import {
   DispatchAcknowledgementStateUpdateType,
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
+import { Paper } from '../../components/Paper';
 
 interface OwnProps {}
 interface StateProps {
@@ -70,7 +71,7 @@ const _AcknowledgementPage = ({
   const handleContinueClick = (id: AcknowledgementIdsEnum) => {
     dispatchAcknowledgementStateUpdate(id, true);
     if (+id + 1 in AcknowledgementIdsEnum) {
-      setActiveAcknowledgementId(+id + 1);
+      setTimeout(() => setActiveAcknowledgementId(+id + 1), 700)
     }
   };
 
@@ -88,7 +89,7 @@ const _AcknowledgementPage = ({
 
   return (
     <WorkflowPageTemplate title="Overview">
-      <div className="flex">
+      <Paper className="flex flex-row">
         <AcknowledgementProgressTracker
           activeAcknowledgementId={activeAcknowledgementId}
           setActiveAcknowledgementId={setActiveAcknowledgementId}
@@ -103,7 +104,7 @@ const _AcknowledgementPage = ({
           acknowledgementId={activeAcknowledgementId}
           acknowledgementText={acknowledgementText}
         />
-      </div>
+      </Paper>
     </WorkflowPageTemplate>
   );
 };

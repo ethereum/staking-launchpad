@@ -7,6 +7,14 @@ import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
+import styled from 'styled-components';
+
+const StyledHeading = styled(Heading)`
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+`;
 
 export interface AcknowledgementSectionData {
   title: string;
@@ -93,17 +101,17 @@ export const AcknowledgementSection = ({
   };
 
   return (
-    <PaperGroup>
-      <Paper>
-        <Heading level={3} size="small" color="blueDark">
+    <div className="flex flex-column space-between">
+      <div>
+        <StyledHeading level={2} size="medium" color="blueDark">
           {title}
-        </Heading>
-        {content}
-      </Paper>
-      <Paper className="rm-double-border">
-        <Text>{acknowledgementText}</Text>
+        </StyledHeading>
+        <div className="p10">{content}</div>
+      </div>
+      <div>
+        <Text textAlign="center">{acknowledgementText}</Text>
         {renderButtons()}
-      </Paper>
-    </PaperGroup>
+      </div>
+    </div>
   );
 };

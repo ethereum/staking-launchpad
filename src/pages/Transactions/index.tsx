@@ -29,9 +29,9 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
+import { IS_MAINNET } from '../../utils/envVars';
 
-const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
-const NETWORK_ID = isMainnet
+const NETWORK_ID = IS_MAINNET
   ? NetworkChainId.Mainnet
   : NetworkChainId['Göerli'];
 

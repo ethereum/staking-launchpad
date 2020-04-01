@@ -11,11 +11,10 @@ import { StoreState } from '../../store/reducers';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { WorkflowStep } from '../../store/actions/workflowActions';
-
-const mainnetEthRequirement = Number(
-  process.env.REACT_APP_MAINNET_ETH_REQUIREMENT
-);
-const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
+import {
+  MAINNET_ETH_REQUIREMENT,
+  PRICE_PER_VALIDATOR,
+} from '../../utils/envVars';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -55,14 +54,14 @@ const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
   });
 
   const stakingBalancePercent = (() => {
-    const percent = (amountEth / mainnetEthRequirement) * 100;
+    const percent = (amountEth / MAINNET_ETH_REQUIREMENT) * 100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
     return percent;
   })();
   const amountAddedPercent = (() => {
     const percent =
-      ((keyFiles.length * pricePerValidator) / mainnetEthRequirement) * 100;
+      ((keyFiles.length * PRICE_PER_VALIDATOR) / MAINNET_ETH_REQUIREMENT) * 100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
     return percent;
@@ -101,19 +100,19 @@ const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
                 title="Staking balance:"
                 color={colors.blue.dark}
                 amountEth={amountEth}
-                amountValidators={amountEth / pricePerValidator}
+                amountValidators={amountEth / PRICE_PER_VALIDATOR}
               />
               <ProgressBarInfo
                 title="You added:"
                 color={colors.blue.light}
-                amountEth={keyFiles.length * pricePerValidator}
+                amountEth={keyFiles.length * PRICE_PER_VALIDATOR}
                 amountValidators={keyFiles.length}
               />
               <ProgressBarInfo
                 title="Launch threshold:"
                 color={colors.blue.lightest}
-                amountEth={mainnetEthRequirement}
-                amountValidators={mainnetEthRequirement / pricePerValidator}
+                amountEth={MAINNET_ETH_REQUIREMENT}
+                amountValidators={MAINNET_ETH_REQUIREMENT / PRICE_PER_VALIDATOR}
               />
             </div>
           </div>

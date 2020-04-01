@@ -4,8 +4,7 @@ import { Text } from 'grommet';
 import { AcknowledgementSectionData } from './AcknowledgementSection';
 import { acknowledgementId } from '../../store/reducers';
 import { Link } from '../../components/Link';
-
-const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
+import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 export const pageContent: AcknowledgementSectionData[] = [
   {
@@ -14,13 +13,13 @@ export const pageContent: AcknowledgementSectionData[] = [
     content: (
       <Text size="large" className="my10">
         In order to become a validator on the eth2 beacon chain, one needs to
-        deposit ${pricePerValidator} ETH (in exchange for bETH). This process
+        deposit ${PRICE_PER_VALIDATOR} ETH (in exchange for bETH). This process
         cannot be reversed
       </Text>
     ),
     acknowledgement: {
       id: acknowledgementId.signup,
-      text: `I understand that I need to deposit ${pricePerValidator} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
+      text: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
     },
   },
   {

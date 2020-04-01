@@ -29,13 +29,12 @@ import {
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
+import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
-const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
-const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
 const Container = styled.div`
   width: 100%;
 `;
-const NETWORK_ID = isMainnet
+const NETWORK_ID = IS_MAINNET
   ? NetworkChainId.Mainnet
   : NetworkChainId['Göerli'];
 
@@ -62,7 +61,7 @@ const _SummaryPage = ({
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const amountValidators = new BigNumber(keyFiles.length);
-  const convertedPrice = new BigNumber(pricePerValidator);
+  const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
 
   useEffect(() => {
     setAllChecked(losePhrase && earlyAdopt && nonReverse && noPhish);
@@ -138,9 +137,9 @@ const _SummaryPage = ({
       <AcknowledgementSection title="Please make sure you aren't being phished">
         <Text>
           You are responsible for the transaction. Fraudulent websites might
-          lure you into sending the {pricePerValidator} ETH to them, instead of
-          the official deposit contract. Please check that the address you are
-          sending the transaction to is the correct address.
+          lure you into sending the {PRICE_PER_VALIDATOR} ETH to them, instead
+          of the official deposit contract. Please check that the address you
+          are sending the transaction to is the correct address.
         </Text>
         <Link to="https://www.google.com" external className="mt10" primary>
           Learn here how to do it safely <FormNextLink />

@@ -7,8 +7,12 @@ import { PortisConnector } from '@web3-react/portis-connector';
 import { useWeb3React } from '@web3-react/core';
 import { FortmaticConnector } from './fortmaticConnector';
 import { web3ReactInterface } from './index';
-
-const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
+import {
+  FORTMATIC_KEY,
+  IS_MAINNET,
+  PORTIS_DAPP_ID,
+  RPC_URL_GOERLI,
+} from '../../utils/envVars';
 
 export enum NetworkChainId {
   'Mainnet' = 1,
@@ -38,28 +42,21 @@ enum Mainnet {
   'Mainnet',
 }
 
-export const AllowedNetworks = isMainnet ? Mainnet : Testnet;
+export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
 });
 
-if (!process.env.REACT_APP_PORTIS_DAPP_ID) {
-  throw new TypeError('Missing PORTIS_DAPP_ID');
-}
-if (!process.env.REACT_APP_FORTMATIC_KEY) {
-  throw new TypeError('Missing FORTMATIC_KEY');
-}
-
 export const portis: PortisConnector = new PortisConnector({
-  dAppId: process.env.REACT_APP_PORTIS_DAPP_ID,
+  dAppId: PORTIS_DAPP_ID,
   networks: supportedNetworks,
 });
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
-  apiKey: process.env.REACT_APP_FORTMATIC_KEY as string,
-  chainId: isMainnet ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
-  rpcUrl: process.env.REACT_APP_RPC_URL_GOERLI as string,
+  apiKey: FORTMATIC_KEY as string,
+  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
+  rpcUrl: RPC_URL_GOERLI as string,
 });
 
 // sets up initial call to MM

@@ -11,10 +11,9 @@ import {
   KeyFileInterface,
   TransactionStatus,
 } from '../../store/actions/keyFileActions';
+import { CONTRACT_ADDRESS, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
-const CONTRACT_ADDRESS = process.env.REACT_APP_CONTRACT_ADDRESS;
-const rawPrice = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
-const pricePerValidator = new BigNumber(rawPrice);
+const pricePerValidator = new BigNumber(PRICE_PER_VALIDATOR);
 const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 
 const isUserRejectionError = (error: any) => {

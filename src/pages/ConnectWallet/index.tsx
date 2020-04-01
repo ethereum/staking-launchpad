@@ -42,10 +42,7 @@ import {
 } from '../../store/actions/workflowActions';
 import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-
-// Environment variables
-const isMainnet = process.env.REACT_APP_IS_MAINNET === 'true';
-const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
+import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 // styled components
 const Container = styled.div`
@@ -151,7 +148,7 @@ const _ConnectWalletPage = ({
           const formattedBalance = Number(
             parseFloat(formatEther(amount)).toPrecision(5)
           );
-          const requiredBalance = keyFiles.length * pricePerValidator;
+          const requiredBalance = keyFiles.length * PRICE_PER_VALIDATOR;
 
           setBalance(formattedBalance);
           if (formattedBalance < requiredBalance || formattedBalance === 0) {
@@ -178,12 +175,14 @@ const _ConnectWalletPage = ({
       !error &&
       (balance || balance === 0)
     ) {
-      setStatus(`${balance} ${isMainnet ? '' : network} ETH available`);
+      setStatus(`${balance} ${IS_MAINNET ? '' : network} ETH available`);
     } else if (walletConnected && error) {
       setStatus('Error');
     } else if (!networkAllowed) {
       setStatus(
-        `Please connect to ${isMainnet ? 'Ethereum Mainnet' : 'Göerli Testnet'}`
+        `Please connect to ${
+          IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet'
+        }`
       );
     }
   });

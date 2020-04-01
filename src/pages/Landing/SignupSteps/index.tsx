@@ -9,8 +9,7 @@ import { Heading } from '../../../components/Heading';
 import { routesEnum } from '../../../Routes';
 import { Link } from '../../../components/Link';
 import { Step } from './Step';
-
-const pricePerValidator = Number(process.env.REACT_APP_PRICE_PER_VALIDATOR);
+import { PRICE_PER_VALIDATOR } from '../../../utils/envVars';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -60,7 +59,7 @@ export const SignupSteps = (): JSX.Element => {
           <Step
             imgUrl={DepositImgUrl}
             title="Deposit ETH in exchange for bETH"
-            content={`After depositing ${pricePerValidator} ETH per validator, you receive ${pricePerValidator} bETH and become an important part of the network!`}
+            content={`After depositing ${PRICE_PER_VALIDATOR} ETH per validator, you receive ${PRICE_PER_VALIDATOR} bETH and become an important part of the network!`}
           />
         </ScrollAnimation>
       </StepsContainer>

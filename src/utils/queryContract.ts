@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { contractAddress } from '../enums';
+import { CONTRACT_ADDRESS, INFURA_PROJECT_ID } from './envVars';
 
 type infuraResponse = {
   data: {
@@ -9,20 +9,15 @@ type infuraResponse = {
   };
 };
 
-if (!process.env.REACT_APP_INFURA_PROJECT_ID) {
-  throw new TypeError('Missing INFURA_PROJECT_ID');
-}
-
 export const queryContract = async (): Promise<number> => {
-  const infuraProjectId = process.env.REACT_APP_INFURA_PROJECT_ID;
-  const infuraUrl = `https://goerli.infura.io/v3/${infuraProjectId}`;
+  const infuraUrl = `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`;
   try {
     const response: infuraResponse = await axios.post(
       infuraUrl,
       {
         jsonrpc: '2.0',
         method: 'eth_getBalance',
-        params: [contractAddress, 'latest'],
+        params: [CONTRACT_ADDRESS, 'latest'],
         id: 1,
       }
       // TODO figure out how to authenticate with the infura secret key. will require CORS pre-flight workaround

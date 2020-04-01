@@ -34,6 +34,7 @@ interface StateProps {
   acknowledgementState: AcknowledgementStateInterface;
   workflow: WorkflowStep;
 }
+
 interface DispatchProps {
   dispatchAcknowledgementStateUpdate: DispatchAcknowledgementStateUpdateType;
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
@@ -141,6 +142,7 @@ const mapStateToProps = (state: StoreState): StateProps => ({
   workflow: state.workflow,
   acknowledgementState: state.acknowledgementState,
 });
+
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchAcknowledgementStateUpdate: (id, value) =>
     dispatch(updateAcknowledgementState(id, value)),

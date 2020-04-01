@@ -26,12 +26,14 @@ import {
 } from '../../store/actions/keyFileActions';
 import {
   DispatchWorkflowUpdateType,
-  WorkflowStep,
   updateWorkflow,
+  WorkflowStep,
 } from '../../store/actions/workflowActions';
+import { IS_MAINNET } from '../../utils/envVars';
 
-const NETWORK_NAME = 'Göerli Testnet';
-const NETWORK_ID = NetworkChainId[NETWORK_NAME];
+const NETWORK_ID = IS_MAINNET
+  ? NetworkChainId.Mainnet
+  : NetworkChainId['Göerli'];
 
 // Prop definitions
 interface OwnProps {}
@@ -92,8 +94,7 @@ const _TransactionsPage = ({
 
   if (!account || !connector) return <WalletDisconnected />;
 
-  if (chainId !== NETWORK_ID)
-    return <WrongNetwork networkName={NETWORK_NAME} />;
+  if (chainId !== NETWORK_ID) return <WrongNetwork />;
 
   if (allTxConfirmed) {
     setTimeout(() => {

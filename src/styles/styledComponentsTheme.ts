@@ -28,6 +28,9 @@ export const colors = {
     light: '#F0F2FB',
     medium: '#E3E5F2',
   },
+  yellow: {
+    dark: '#f0ad4d',
+  },
 };
 
 export const details = {

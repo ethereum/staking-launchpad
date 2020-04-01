@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import BigNumber from 'bignumber.js';
 import { CheckBox } from 'grommet';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
@@ -18,12 +19,12 @@ import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { NumberInput } from './NumberInput';
 import { InfoBox } from '../../components/InfoBox';
-import { pricePerValidator } from '../../enums';
 import {
   DispatchWorkflowUpdateType,
-  WorkflowStep,
   updateWorkflow,
+  WorkflowStep,
 } from '../../store/actions/workflowActions';
+import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 export enum operatingSystem {
   'MAC',
@@ -106,7 +107,13 @@ const _GenerateKeysPage = ({
           <div className="ml20">
             <Text className="mb5">Cost</Text>
             <InfoBox>
-              <Text>{(validatorCount * pricePerValidator).toFixed(1)} ETH</Text>
+              <Text>
+                {new BigNumber(validatorCount)
+                  .times(new BigNumber(PRICE_PER_VALIDATOR))
+                  .toFixed(1)
+                  .toString()}
+                ETH
+              </Text>
             </InfoBox>
           </div>
         </div>

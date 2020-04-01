@@ -1,6 +1,6 @@
 import { styledComponentsTheme } from './styledComponentsTheme';
 
-const { blue, transparent, gray, red, green } = styledComponentsTheme;
+const { blue, transparent, gray, red, green, yellow } = styledComponentsTheme;
 
 export const grommetTheme = {
   global: {
@@ -24,6 +24,8 @@ export const grommetTheme = {
 
       redLight: red.light,
       redMedium: red.medium,
+
+      yellowDark: yellow.dark,
     },
     font: {
       family: 'Roboto',

@@ -26,6 +26,12 @@ import {
 import { FileUploadAnimation } from './FileUploadAnimation';
 import SubtleEthDiamonds from '../../static/subtle-eth-diamonds.svg';
 
+const Container = styled(Paper)`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
 const Dropzone = styled.div`
   outline: none;
   :focus {
@@ -36,25 +42,16 @@ const Dropzone = styled.div`
   margin: auto;
   cursor: ${(p: { invalidFile: boolean; fileAccepted: boolean }) =>
     p.invalidFile || p.fileAccepted ? 'inherit' : 'pointer'};
-
   box-shadow: ${(p: { theme: any }) => `0 0 10px ${p.theme.gray.light}`};
   padding: 30px;
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
   background-image: url(${SubtleEthDiamonds});
   background-repeat: repeat-x;
 `;
-const Container = styled(Paper)`
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`;
-
 const UploadText = styled(Text)`
   color: ${(p: { theme: any }) => p.theme.blue.medium};
   display: inline-block;
 `;
-
 const DeleteBtn = styled.span`
   cursor: pointer;
   :hover {
@@ -62,6 +59,7 @@ const DeleteBtn = styled.span`
   }
   padding: 3px;
 `;
+
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
@@ -89,9 +87,9 @@ export const _UploadValidatorPage = ({
   );
   const [message, setMessage] = useState(defaultMessage);
   const [activeFileName, setActiveFileName] = useState('');
+
   const onDrop = useCallback(
     acceptedFiles => {
-      console.log(acceptedFiles);
       if (acceptedFiles.length === 1) {
         setInvalidFile(false);
         setActiveFileName(acceptedFiles[0].name);
@@ -174,10 +172,14 @@ export const _UploadValidatorPage = ({
 
     if (isDragActive) {
       if (isDragReject) {
-        setMessage(<Text>Please upload a valid json file</Text>);
+        setTimeout(
+          () => setMessage(<Text>Please upload a valid json file</Text>),
+          800
+        );
       }
     }
   }, [fileAccepted, invalidFile, isDragReject, isDragActive]);
+
   const handleSubmit = () => {
     if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
       dispatchWorkflowUpdate(WorkflowStep.CONNECT_WALLET);
@@ -253,6 +255,3 @@ export const UploadValidatorPage = connect<
   mapStateToProps,
   mapDispatchToProps
 )(_UploadValidatorPage);
-
-// pointer-events: ${(p: { invalidFile: boolean }) =>
-//   p.invalidFile ? 'none' : 'inherit'};

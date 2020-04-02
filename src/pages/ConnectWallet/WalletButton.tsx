@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Spinner } from 'react-rainbow-components';
-import { Text } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { Paper } from '../../components/Paper';
+import { Text } from '../../components/Text';
 
 const Logo = styled.img`
   height: 50px;

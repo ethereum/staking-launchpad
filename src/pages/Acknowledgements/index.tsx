@@ -1,24 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Dispatch } from 'redux';
-import { Box, Heading, Text } from 'grommet';
-import { FormNext } from 'grommet-icons';
 import { connect } from 'react-redux';
-import { scroller } from 'react-scroll';
+import _every from 'lodash/every';
+import _pickBy from 'lodash/pickBy';
+import _values from 'lodash/values';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import {
-  AcknowledgementSection,
-  AcknowledgementSectionData,
-} from './AcknowledgementSection';
-import { Link } from '../../components/Link';
-import {
-  acknowledgementId,
+  AcknowledgementIdsEnum,
   AcknowledgementStateInterface,
   StoreState,
 } from '../../store/reducers';
-import { Paper } from '../../components/Paper';
-import { Button } from '../../components/Button';
-import { pageContent } from './pageContent';
-import { routesEnum } from '../../Routes';
+import { pageContent, PageContentInterface } from './pageContent';
+import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
+import { AcknowledgementSection } from './AcknowledgementSection';
 import {
   DispatchWorkflowUpdateType,
   WorkflowStep,
@@ -28,6 +22,7 @@ import {
   DispatchAcknowledgementStateUpdateType,
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
+import { Paper } from '../../components/Paper';
 
 interface OwnProps {}
 interface StateProps {
@@ -46,94 +41,71 @@ const _AcknowledgementPage = ({
   dispatchAcknowledgementStateUpdate,
   workflow,
   dispatchWorkflowUpdate,
-}: Props) => {
+}: Props): JSX.Element => {
+  const [activeAcknowledgementId, setActiveAcknowledgementId] = useState<
+    AcknowledgementIdsEnum
+  >(
+    workflow === WorkflowStep.OVERVIEW
+      ? AcknowledgementIdsEnum.introSection
+      : AcknowledgementIdsEnum.confirmation
+  );
+
+  const allAgreedTo = _every(
+    _values(
+      _pickBy(
+        acknowledgementState,
+        // @ts-ignore
+        (val: boolean, id: AcknowledgementIdsEnum) => {
+          // eslint-disable-next-line eqeqeq
+          return id != AcknowledgementIdsEnum.confirmation;
+        }
+      )
+    )
+  );
+
   const handleSubmit = () => {
     if (workflow === WorkflowStep.OVERVIEW) {
       dispatchWorkflowUpdate(WorkflowStep.GENERATE_KEY_PAIRS);
     }
   };
 
-  const scrollToNextAcknowledgement = () => {
-    if (!acknowledgementState.allAgreedTo) {
-      const nextAcknowledgement = pageContent.find(
-        (section: AcknowledgementSectionData) =>
-          !acknowledgementState.acknowledgements[section.id]
-      );
-
-      if (nextAcknowledgement === undefined) {
-        throw new TypeError(
-          'Redux and local acknowledgement state are out of sync'
-        );
-      }
-
-      scroller.scrollTo(nextAcknowledgement.id, {
-        duration: 800,
-        delay: 0,
-        offset: -10,
-        smooth: 'easeInOutQuart',
-      });
+  const handleContinueClick = (id: AcknowledgementIdsEnum) => {
+    dispatchAcknowledgementStateUpdate(id, true);
+    if (+id + 1 in AcknowledgementIdsEnum) {
+      setTimeout(() => setActiveAcknowledgementId(+id + 1), 500);
     }
   };
 
-  const handleCheckboxClick = (
-    id: acknowledgementId,
-    checked: boolean
-  ): void => {
-    dispatchAcknowledgementStateUpdate(id, checked);
-    if (checked) {
-      scrollToNextAcknowledgement();
+  const handleGoBackClick = (id: AcknowledgementIdsEnum) => {
+    if (+id - 1 in AcknowledgementIdsEnum) {
+      setActiveAcknowledgementId(+id - 1);
     }
   };
 
-  const renderIntroSection = () => {
-    return (
-      <Paper>
-        <Heading level={3} size="small" color="blueDark">
-          Introducing eth2 phase 0
-        </Heading>
-
-        <Text size="large" className="my10">
-          Ethereum 2.0 uses proof-of-stake to secure its network.
-        </Text>
-        <Text size="large" className="my10">
-          For this, we need active participants - known as validators - to
-          propose, verify, and vouch for the validity of blocks. In exchange,
-          honest validators receive financial rewards
-        </Text>
-        <Text size="large" className="my10">
-          Importantly, validators need to post ETH as collateral - in other
-          words, have some funds at stake. The only way to become a validator is
-          to make a one-way ETH transaction to a deposit contract on Ethereum
-          1.0
-        </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="blueDark" />
-        </Link>
-      </Paper>
-    );
-  };
+  const {
+    title,
+    content,
+    acknowledgementText,
+  }: PageContentInterface = pageContent[activeAcknowledgementId];
 
   return (
     <WorkflowPageTemplate title="Overview">
-      {renderIntroSection()}
-      {pageContent.map((acknowledgement: AcknowledgementSectionData) => (
-        <AcknowledgementSection
-          key={acknowledgement.id}
-          handleCheckboxClick={handleCheckboxClick}
-          agreedTo={acknowledgementState.acknowledgements[acknowledgement.id]}
-          {...acknowledgement}
+      <Paper className="flex flex-row">
+        <AcknowledgementProgressTracker
+          activeAcknowledgementId={activeAcknowledgementId}
+          setActiveAcknowledgementId={setActiveAcknowledgementId}
         />
-      ))}
-      <Box align="center" pad="large">
-        <Link to={routesEnum.generateKeysPage} onClick={handleSubmit}>
-          <Button
-            rainbow
-            width={300}
-            disabled={!acknowledgementState.allAgreedTo}
-            label="Continue"
-          />
-        </Link>
-      </Box>
+        <AcknowledgementSection
+          handleContinueClick={handleContinueClick}
+          handleGoBackClick={handleGoBackClick}
+          handleSubmit={handleSubmit}
+          allAgreedTo={allAgreedTo}
+          title={title}
+          content={content}
+          acknowledgementId={activeAcknowledgementId}
+          acknowledgementText={acknowledgementText}
+        />
+      </Paper>
     </WorkflowPageTemplate>
   );
 };
@@ -146,8 +118,7 @@ const mapStateToProps = (state: StoreState): StateProps => ({
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchAcknowledgementStateUpdate: (id, value) =>
     dispatch(updateAcknowledgementState(id, value)),
-  dispatchWorkflowUpdate: (step: WorkflowStep) =>
-    dispatch(updateWorkflow(step)),
+  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
 export const AcknowledgementPage = connect<

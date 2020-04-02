@@ -25,6 +25,10 @@ export const grommetTheme = {
       redLight: red.light,
       redMedium: red.medium,
 
+      grayLight: gray.light,
+      grayMedium: gray.medium,
+      grayDark: gray.dark,
+
       yellowDark: yellow.dark,
     },
     font: {

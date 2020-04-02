@@ -10,12 +10,12 @@ export const Paper = (
     style?: any;
   } & BoxProps
 ): JSX.Element => {
-  const { error, className, children } = props;
+  const { error, className, children, pad } = props;
   return (
     <Box
       border={error ? { color: 'redLight', size: 'small' } : true}
       className={className}
-      pad="large"
+      pad={pad || 'large'}
       background="white"
       round="xsmall"
       {...props}
@@ -26,6 +26,7 @@ export const Paper = (
 };
 
 const BoxGroup = styled(Box)`
+  width: 100%;
   > :first-child {
     border-radius: ${p =>
       `${p.theme.borderRadius} ${p.theme.borderRadius} 0 0`};

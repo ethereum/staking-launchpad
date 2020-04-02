@@ -1,8 +1,8 @@
 import React from 'react';
 import { Paper } from '../../components/Paper';
+import { CodeBox } from '../../components/CodeBox';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
-import { CodeBox } from '../../components/CodeBox';
 
 interface Props {
   validatorCount: number;

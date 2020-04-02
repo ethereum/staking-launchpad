@@ -1,16 +1,16 @@
 import { ActionTypes } from './index';
-import { acknowledgementId } from '../reducers';
+import { AcknowledgementIdsEnum } from '../reducers';
 
 export interface UpdateAcknowledgementStateAction {
   type: ActionTypes.updateAcknowledgementState;
   payload: {
-    acknowledgementId: acknowledgementId;
+    acknowledgementId: AcknowledgementIdsEnum;
     value: boolean;
   };
 }
 
 export const updateAcknowledgementState = (
-  acknowledgementId: acknowledgementId,
+  acknowledgementId: AcknowledgementIdsEnum,
   value: boolean
 ): UpdateAcknowledgementStateAction => {
   return {
@@ -20,6 +20,6 @@ export const updateAcknowledgementState = (
 };
 
 export type DispatchAcknowledgementStateUpdateType = (
-  acknowledgementId: acknowledgementId,
+  acknowledgementId: AcknowledgementIdsEnum,
   value: boolean
 ) => void;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { Heading } from 'grommet';
+import { Heading } from '../Heading';
 import { WorkflowProgressBar } from './WorkflowProgressBar';
 import { AppBar } from '../AppBar';
 import { DesktopOnlyModal } from '../DesktopOnlyModal';
@@ -16,6 +16,7 @@ const Content = styled.div`
   width: 100%;
   max-width: 1024px;
   margin: 30px 0;
+  position: relative;
 `;
 
 const Gutter = styled.div`

@@ -1,51 +1,120 @@
 import React from 'react';
-import { Paper, PaperGroup } from '../../components/Paper';
-import { CheckBox } from 'grommet';
+import styled from 'styled-components';
+import { AcknowledgementIdsEnum } from '../../store/reducers';
+import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
-import { acknowledgementId } from '../../store/reducers';
+import { Link } from '../../components/Link';
+import { routesEnum } from '../../Routes';
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const AcknowledgementText = styled(Text)`
+  background: #ffdeb32e;
+  border: 1px solid burlywood;
+  padding: 30px;
+  border-radius: 4px;
+`;
 
 export interface AcknowledgementSectionData {
-  id: acknowledgementId;
   title: string;
   content: JSX.Element;
-  acknowledgement: {
-    id: acknowledgementId;
-    text: string;
-  };
+  acknowledgementText?: string;
+  acknowledgementId: AcknowledgementIdsEnum;
 }
-export interface AcknowledgementSectionProps {
-  handleCheckboxClick(id: acknowledgementId, checked: boolean): void;
-  agreedTo: boolean;
+
+interface AcknowledgementSectionProps {
+  handleContinueClick: (id: AcknowledgementIdsEnum) => void;
+  handleGoBackClick: (id: AcknowledgementIdsEnum) => void;
+  handleSubmit: () => void;
+  allAgreedTo: boolean;
 }
 
 export const AcknowledgementSection = ({
   title,
   content,
-  acknowledgement,
-  handleCheckboxClick,
-  agreedTo,
+  acknowledgementId,
+  acknowledgementText,
+  handleContinueClick,
+  handleGoBackClick,
+  handleSubmit,
+  allAgreedTo,
 }: AcknowledgementSectionProps & AcknowledgementSectionData): JSX.Element => {
-  const onCheckboxClick = (event: any) =>
-    handleCheckboxClick(acknowledgement.id, event.target.checked);
+  const isIntroSection =
+    acknowledgementId === AcknowledgementIdsEnum.introSection;
+  const isConfirmationSection =
+    acknowledgementId === AcknowledgementIdsEnum.confirmation;
+
+  const renderButtons = () => {
+    if (isConfirmationSection) {
+      return (
+        <div className="flex center p30">
+          <Button
+            className="mr10"
+            onClick={() =>
+              handleGoBackClick(AcknowledgementIdsEnum.confirmation)
+            }
+            width={100}
+            label="Back"
+          />
+          <Link
+            to={routesEnum.generateKeysPage}
+            onClick={() => {
+              handleContinueClick(AcknowledgementIdsEnum.confirmation);
+              handleSubmit();
+            }}
+          >
+            <Button
+              rainbow
+              width={300}
+              disabled={!allAgreedTo}
+              label="Continue"
+            />
+          </Link>
+        </div>
+      );
+    }
+    return (
+      <div className="flex center p30">
+        {!isIntroSection && (
+          <Button
+            width={100}
+            onClick={() => handleGoBackClick(acknowledgementId)}
+            label="Back"
+            className="mr10"
+          />
+        )}
+        <Button
+          onClick={() => handleContinueClick(acknowledgementId)}
+          rainbow
+          label={isIntroSection ? 'Continue' : 'I Accept'}
+          width={300}
+        />
+      </div>
+    );
+  };
 
   return (
-    <PaperGroup className="my10" id={acknowledgement.id}>
-      <Paper>
-        <Heading level={3} size="small" color="blueDark">
+    <Container>
+      <div>
+        <Heading level={2} size="medium" color="blueDark" className="mb50">
           {title}
         </Heading>
         {content}
-      </Paper>
-      {acknowledgement && (
-        <Paper className="rm-double-border">
-          <CheckBox
-            onChange={onCheckboxClick}
-            checked={agreedTo}
-            label={<Text>{acknowledgement.text}</Text>}
-          />
-        </Paper>
-      )}
-    </PaperGroup>
+      </div>
+      <div className="mt20">
+        {!isIntroSection && (
+          <AcknowledgementText textAlign="center">
+            {acknowledgementText}
+          </AcknowledgementText>
+        )}
+        {renderButtons()}
+      </div>
+    </Container>
   );
 };

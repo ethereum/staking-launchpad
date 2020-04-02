@@ -1,6 +1,15 @@
 import React from 'react';
 import { Box, BoxProps } from 'grommet';
 import styled from 'styled-components';
+import SubtleEthDiamonds from '../static/subtle-eth-diamonds.svg';
+
+const StyledBox = styled(Box)`
+  ${(p: { ethBackground: boolean }) =>
+    p.ethBackground
+      ? `background-image: url(${SubtleEthDiamonds});
+  background-repeat: repeat-x;`
+      : ''}
+`;
 
 export const Paper = (
   props: {
@@ -8,11 +17,12 @@ export const Paper = (
     className?: string;
     error?: boolean;
     style?: any;
+    ethBackground?: boolean;
   } & BoxProps
 ): JSX.Element => {
   const { error, className, children, pad } = props;
   return (
-    <Box
+    <StyledBox
       border={error ? { color: 'redLight', size: 'small' } : true}
       className={className}
       pad={pad || 'large'}
@@ -21,7 +31,7 @@ export const Paper = (
       {...props}
     >
       {children}
-    </Box>
+    </StyledBox>
   );
 };
 

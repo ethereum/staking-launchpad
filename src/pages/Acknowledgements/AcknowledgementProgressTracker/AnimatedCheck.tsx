@@ -17,13 +17,13 @@ export const AnimatedCheck = styled.div`
 
     &.line {
       stroke-dashoffset: 1000;
-      -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
-      animation: dash 0.9s 0.35s ease-in-out forwards;
+      -webkit-animation: dash 0.6s 0.15s ease-in-out forwards;
+      animation: dash 0.6s 0.15s ease-in-out forwards;
     }
     &.check {
       stroke-dashoffset: -100;
-      -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
-      animation: dash-check 0.9s 0.35s ease-in-out forwards;
+      -webkit-animation: dash-check 0.6s 0.15s ease-in-out forwards;
+      animation: dash-check 0.6s 0.15s ease-in-out forwards;
     }
   }
   @-webkit-keyframes dash {

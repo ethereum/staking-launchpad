@@ -1,5 +1,5 @@
 import React from 'react';
-import { Add, DocumentUpload } from 'grommet-icons';
+import { Add, DocumentMissing, DocumentUpload } from 'grommet-icons';
 import { colors } from '../../styles/styledComponentsTheme';
 
 export const Svg = ({ children }: { children: any }) => (
@@ -39,41 +39,19 @@ export const Check = () => (
   />
 );
 
-export const X = () => (
-  <svg
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    x="13px"
-    y="15px"
-    width="50px"
-    height="50px"
-    viewBox="0 0 50 50"
-    enableBackground="new 0 0 50 50"
-  >
-    <g>
-      <line
-        className="x-line"
-        fill="none"
-        stroke={colors.red.light}
-        strokeWidth="2"
-        strokeMiterlimit="10"
-        x1="4"
-        y1="20"
-        x2="20"
-        y2="4"
-      />
-      <line
-        className="x-line delay"
-        fill="none"
-        stroke={colors.red.light}
-        strokeWidth="2"
-        strokeMiterlimit="10"
-        x1="20"
-        y1="20"
-        x2="4"
-        y2="4"
-      />
-    </g>
+export const InvalidFileIcon = () => (
+  <svg>
+    <animate
+      attributeType="CSS"
+      attributeName="visibility"
+      from="hidden"
+      to="visible"
+      // values="hidden;visible;hidden"
+      // keyTimes="0; 0.5; 1"
+      dur="1.5s"
+      // repeatCount="indefinite"
+    />
+    <DocumentMissing height="20px" y="15px" color="redMedium" />
   </svg>
 );
 
@@ -82,5 +60,17 @@ export const Plus = () => (
 );
 
 export const FileIcon = () => (
-  <DocumentUpload height="20px" y="15px" color="grayMedium" />
+  <svg>
+    <animate
+      attributeType="CSS"
+      attributeName="visibility"
+      from="hidden"
+      to="visible"
+      // values="hidden;visible;hidden"
+      // keyTimes="0; 0.5; 1"
+      dur="1.5s"
+      // repeatCount="indefinite"
+    />
+    <DocumentUpload height="20px" y="15px" color="grayMedium" />
+  </svg>
 );

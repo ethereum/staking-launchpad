@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/styledComponentsTheme';
-import { Check, Circle, FileIcon, Plus, Svg, X } from './Icons';
+import { Check, Circle, FileIcon, Plus, Svg, InvalidFileIcon } from './Icons';
 
 const Container = styled.div`
   .circle {
@@ -86,7 +86,8 @@ export const FileUploadAnimation = ({
     if (isDragAccept) {
       return fileAccepted ? <Check /> : <FileIcon />;
     }
-    if (isDragReject || invalidFile) return <X />;
+    if (isDragReject || invalidFile)
+      return <InvalidFileIcon autoReject={invalidFile} />;
     if (fileAccepted) return <Check />;
     return <Plus />;
   };
@@ -95,7 +96,7 @@ export const FileUploadAnimation = ({
     return (
       <Container>
         <Svg>
-          <Circle />
+          <Circle animated />
           <path
             className="check-animated"
             fill="none"

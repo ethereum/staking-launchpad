@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { SyntheticEvent, useCallback, useEffect, useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { useDropzone } from 'react-dropzone';
+import { Close } from 'grommet-icons';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
@@ -29,14 +30,21 @@ const Dropzone = styled.div`
   :focus {
     outline: none;
   }
+  border: 1px solid lightgray;
+  width: 500px;
+  margin: auto;
+  cursor: ${(p: { invalidFile: boolean; fileAccepted: boolean }) =>
+    p.invalidFile || p.fileAccepted ? 'inherit' : 'pointer'};
+
+  box-shadow: ${(p: { theme: any }) => `0 0 10px ${p.theme.gray.light}`};
+  padding: 30px;
+  border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
 `;
 const Container = styled(Paper)`
-  height: 400px;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  cursor: pointer;
 `;
 
 const UploadText = styled(Text)`
@@ -44,6 +52,13 @@ const UploadText = styled(Text)`
   display: inline-block;
 `;
 
+const DeleteBtn = styled.span`
+  cursor: pointer;
+  :hover {
+    color: black;
+  }
+  padding: 3px;
+`;
 interface OwnProps {}
 interface StateProps {
   keyFiles: KeyFileInterface[];
@@ -70,10 +85,13 @@ export const _UploadValidatorPage = ({
     </div>
   );
   const [message, setMessage] = useState(defaultMessage);
+  const [activeFileName, setActiveFileName] = useState('');
   const onDrop = useCallback(
     acceptedFiles => {
+      console.log(acceptedFiles);
       if (acceptedFiles.length === 1) {
         setInvalidFile(false);
+        setActiveFileName(acceptedFiles[0].name);
         const reader = new FileReader();
         reader.onload = async event => {
           if (event.target) {
@@ -88,11 +106,9 @@ export const _UploadValidatorPage = ({
                 );
               } else {
                 setInvalidFile(true);
-                setTimeout(() => setInvalidFile(false), 2000);
               }
             } catch (e) {
               setInvalidFile(true);
-              setTimeout(() => setInvalidFile(false), 2000);
             }
           }
         };
@@ -102,23 +118,51 @@ export const _UploadValidatorPage = ({
     [dispatchKeyFilesUpdate]
   );
 
+  const handleFileDelete = (e: SyntheticEvent) => {
+    e.preventDefault();
+    dispatchKeyFilesUpdate([]);
+    setInvalidFile(false);
+  };
+
   const {
     isDragActive,
     isDragAccept,
     isDragReject,
     getRootProps,
     getInputProps,
-  } = useDropzone({ onDrop, accept: 'application/json' });
+  } = useDropzone({
+    onDrop,
+    accept: 'application/json',
+    noClick: fileAccepted || invalidFile,
+  });
 
   useEffect(() => {
     if (fileAccepted) {
-      setTimeout(() => setMessage(<div>File accepted</div>), 800);
+      setTimeout(
+        () =>
+          setMessage(
+            <div className="flex center">
+              <DeleteBtn onClick={handleFileDelete}>
+                <Close size="15px" className="mr10" />
+              </DeleteBtn>
+              <Text>{activeFileName}</Text>
+            </div>
+          ),
+        800
+      );
       return;
     }
 
     if (!isDragActive) {
       if (invalidFile) {
-        setMessage(<div>File is invalid</div>);
+        setMessage(
+          <div className="flex center">
+            <DeleteBtn onClick={handleFileDelete}>
+              <Close size="15px" className="mr10" />
+            </DeleteBtn>
+            <Text>{activeFileName} is invalid</Text>
+          </div>
+        );
         return;
       }
       setMessage(defaultMessage);
@@ -127,7 +171,7 @@ export const _UploadValidatorPage = ({
 
     if (isDragActive) {
       if (isDragReject) {
-        setMessage(<div>Please upload a valid json file</div>);
+        setMessage(<Text>Please upload a valid json file</Text>);
       }
     }
   }, [fileAccepted, invalidFile, isDragReject, isDragActive]);
@@ -142,8 +186,20 @@ export const _UploadValidatorPage = ({
 
   return (
     <WorkflowPageTemplate title="Upload Deposit File">
-      <Dropzone {...getRootProps({ isDragActive, isDragAccept, isDragReject })}>
-        <Container className="mt20" pad="medium" ethBackground>
+      <Container className="mt20">
+        <Text className="mb20">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industrys standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electron
+        </Text>
+
+        <Dropzone
+          fileAccepted={fileAccepted}
+          invalidFile={invalidFile}
+          {...getRootProps({ isDragActive, isDragAccept, isDragReject })}
+        >
           <input {...getInputProps()} />
           <FileUploadAnimation
             isDragAccept={isDragAccept}
@@ -152,11 +208,13 @@ export const _UploadValidatorPage = ({
             isDragActive={isDragActive}
             invalidFile={invalidFile}
           />
+
           <Text className="mt20" textAlign="center">
             {message}
           </Text>
-        </Container>
-      </Dropzone>
+        </Dropzone>
+      </Container>
+
       <div className="flex center p30">
         <Link to={routesEnum.generateKeysPage}>
           <Button className="mr10" width={100} label="Back" />
@@ -193,3 +251,6 @@ export const UploadValidatorPage = connect<
   mapStateToProps,
   mapDispatchToProps
 )(_UploadValidatorPage);
+
+// pointer-events: ${(p: { invalidFile: boolean }) =>
+//   p.invalidFile ? 'none' : 'inherit'};

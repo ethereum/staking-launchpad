@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { useDropzone } from 'react-dropzone';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
 import { Button } from '../../components/Button';
@@ -21,7 +22,6 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { useDropzone } from 'react-dropzone';
 import { FileUploadAnimation } from './FileUploadAnimation';
 
 const Dropzone = styled.div`
@@ -36,11 +36,11 @@ const Container = styled(Paper)`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
 `;
 
 const UploadText = styled(Text)`
   color: ${(p: { theme: any }) => p.theme.blue.medium};
-  cursor: pointer;
   display: inline-block;
 `;
 

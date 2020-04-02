@@ -19,7 +19,8 @@ const Container = styled.div`
     stroke-dasharray: 4;
   }
   
- 
+  
+  
   .checkmark {
     width: 150px;
     height: 150px;
@@ -38,6 +39,7 @@ const Container = styled.div`
     stroke-dashoffset: 48;
     animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
   }
+
   @keyframes stroke {
     100% {
       stroke-dashoffset: 0;
@@ -62,9 +64,8 @@ export const FileUploadAnimation = ({
 }: Props) => {
   const renderIcon = () => {
     if (fileAccepted) return <Check />;
-    if (isDragAccept) return fileAccepted ? <Check /> : <FileIcon />;
+    if (isDragAccept) return <FileIcon />;
     if (isDragReject || invalidFile) return <InvalidFileIcon />;
-    if (fileAccepted) return <Check />;
     return <Plus />;
   };
 

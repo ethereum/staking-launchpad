@@ -25,6 +25,7 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import SubtleEthDiamonds from '../../static/subtle-eth-diamonds.svg';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -186,8 +187,8 @@ export const _UploadValidatorPage = ({
     }
   };
 
-  // if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
-  //   return routeToCorrectWorkflowStep(workflow);
+  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
+    return routeToCorrectWorkflowStep(workflow);
 
   return (
     <WorkflowPageTemplate title="Upload Deposit File">

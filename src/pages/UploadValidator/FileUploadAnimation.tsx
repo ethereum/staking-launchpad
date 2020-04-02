@@ -86,8 +86,7 @@ export const FileUploadAnimation = ({
     if (isDragAccept) {
       return fileAccepted ? <Check /> : <FileIcon />;
     }
-    if (isDragReject || invalidFile)
-      return <InvalidFileIcon autoReject={invalidFile} />;
+    if (isDragReject || invalidFile) return <InvalidFileIcon />;
     if (fileAccepted) return <Check />;
     return <Plus />;
   };

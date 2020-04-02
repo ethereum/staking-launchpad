@@ -24,6 +24,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
+import SubtleEthDiamonds from '../../static/subtle-eth-diamonds.svg';
 
 const Dropzone = styled.div`
   outline: none;
@@ -39,6 +40,8 @@ const Dropzone = styled.div`
   box-shadow: ${(p: { theme: any }) => `0 0 10px ${p.theme.gray.light}`};
   padding: 30px;
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
+  background-image: url(${SubtleEthDiamonds});
+  background-repeat: repeat-x;
 `;
 const Container = styled(Paper)`
   margin: auto;
@@ -194,7 +197,6 @@ export const _UploadValidatorPage = ({
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electron
         </Text>
-
         <Dropzone
           fileAccepted={fileAccepted}
           invalidFile={invalidFile}

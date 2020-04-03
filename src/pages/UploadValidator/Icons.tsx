@@ -4,7 +4,7 @@ import { colors } from '../../styles/styledComponentsTheme';
 
 export const Svg = ({ children }: { children: any }) => (
   <svg
-    className="checkmark"
+    className="svg-container"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 52 52"
   >
@@ -39,14 +39,18 @@ export const Check = () => (
   />
 );
 
-export const InvalidFileIcon = () => (
+export const InvalidFileIcon = ({
+  renderImmediately,
+}: {
+  renderImmediately?: boolean;
+}) => (
   <svg>
     <animate
       attributeType="CSS"
       attributeName="visibility"
       from="hidden"
       to="visible"
-      dur="1.2s"
+      dur={renderImmediately ? '0.1s' : '1.2s'}
     />
     <DocumentMissing height="20px" y="15px" color="redMedium" />
   </svg>

@@ -40,8 +40,7 @@ const Dropzone = styled.div`
   }
   border: 1px solid lightgray;
   width: 500px;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto auto;
   cursor: ${(p: { invalidFile: boolean; isFileAccepted: boolean }) =>
     p.invalidFile || p.isFileAccepted ? 'inherit' : 'pointer'};
   box-shadow: ${(p: { theme: any }) => `0 0 10px ${p.theme.gray.light}`};
@@ -66,10 +65,12 @@ const Code = styled(Text)`
   font-size: 14px;
   line-height: 16px;
 `;
-
 const DeleteBtn = styled.span`
   cursor: pointer;
   padding: 3px;
+`;
+const InlineLink = styled(Link)`
+  display: inline;
 `;
 
 interface OwnProps {}
@@ -210,6 +211,7 @@ const _UploadValidatorPage = ({
       ),
     accept: 'application/json',
     noClick: isFileAccepted || invalidFile,
+    disabled: isFileAccepted || invalidFile,
   });
 
   // forcefully mutates the acceptedFiles array to clear it
@@ -273,9 +275,9 @@ const _UploadValidatorPage = ({
           Please upload the{' '}
           <Highlighted className="mr5">Deposit Data file</Highlighted>
           generated in the{' '}
-          <Link to={routesEnum.generateKeysPage} inline className="mr5">
+          <InlineLink to={routesEnum.generateKeysPage} className="mr5">
             previous step.
-          </Link>
+          </InlineLink>
           The <Code>deposit-data-[timestamp].json</Code> is located in the{' '}
           <Code>/eth2.0-deposit-cli/validator_keys</Code> directory.
         </Text>

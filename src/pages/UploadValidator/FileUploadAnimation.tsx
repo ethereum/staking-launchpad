@@ -4,11 +4,17 @@ import { colors } from '../../styles/styledComponentsTheme';
 import { Check, Circle, FileIcon, Plus, Svg, InvalidFileIcon } from './Icons';
 
 const Container = styled.div`
+  .svg-container {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: block;
+  }
   .circle {
     stroke-width: 1;
     stroke-miterlimit: 10;
     stroke: ${colors.blue.light};
-    fill:none;
+    fill: none;
   }
   .circle-animated {
     stroke-dasharray: 166;
@@ -17,17 +23,6 @@ const Container = styled.div`
   }
   .circle-dashed {
     stroke-dasharray: 3;
-  }
-  .checkmark {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: ${colors.green.dark}
-    stroke-miterlimit: 10;
-    margin: auto;
-    box-shadow: inset 0 0 0 #7ac142;
   }
   .check-animated {
     stroke: ${colors.green.medium};
@@ -59,22 +54,20 @@ export const FileUploadAnimation = ({
   invalidFile,
 }: Props) => {
   const renderIcon = () => {
-    if (fileDropped) {
-      return <Check />;
-    }
-    if (isDragAccept) {
-      return <FileIcon />;
-    }
-    if (isDragReject || invalidFile) {
-      return <InvalidFileIcon />;
-    }
+    if (fileDropped)
+      return invalidFile ? <InvalidFileIcon renderImmediately /> : <Check />;
+    if (isDragAccept) return <FileIcon />;
+    if (isDragReject || invalidFile) return <InvalidFileIcon />;
     return <Plus />;
   };
 
   return (
     <Container>
       <Svg>
-        <Circle animated={isDragActive} dashed={!invalidFile && !fileDropped} />
+        <Circle
+          animated={isDragActive && !fileDropped}
+          dashed={!invalidFile && !fileDropped}
+        />
         {renderIcon()}
       </Svg>
     </Container>

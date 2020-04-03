@@ -42,7 +42,6 @@ interface LinkProps {
   className?: string;
   primary?: boolean | undefined;
   onClick?: (param?: any) => void;
-  inline?: boolean;
 }
 
 export const Link = (props: LinkProps) => {

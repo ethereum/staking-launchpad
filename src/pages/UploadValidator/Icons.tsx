@@ -46,7 +46,7 @@ export const InvalidFileIcon = () => (
       attributeName="visibility"
       from="hidden"
       to="visible"
-      dur="1.5s"
+      dur="1.2s"
     />
     <DocumentMissing height="20px" y="15px" color="redMedium" />
   </svg>
@@ -63,7 +63,7 @@ export const FileIcon = () => (
       attributeName="visibility"
       from="hidden"
       to="visible"
-      dur="1.5s"
+      dur="1.2s"
     />
     <DocumentUpload height="20px" y="15px" color="grayMedium" />
   </svg>

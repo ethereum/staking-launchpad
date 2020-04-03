@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useCallback, useEffect, useState } from 'react';
+import React, { SyntheticEvent, useEffect, useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -25,8 +25,6 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
-import SubtleEthDiamonds from '../../static/subtle-eth-diamonds.svg';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -42,13 +40,11 @@ const Dropzone = styled.div`
   border: 1px solid lightgray;
   width: 500px;
   margin: auto;
-  cursor: ${(p: { invalidFile: boolean; fileAccepted: boolean }) =>
-    p.invalidFile || p.fileAccepted ? 'inherit' : 'pointer'};
+  cursor: ${(p: { invalidFile: boolean; isFileAccepted: boolean }) =>
+    p.invalidFile || p.isFileAccepted ? 'inherit' : 'pointer'};
   box-shadow: ${(p: { theme: any }) => `0 0 10px ${p.theme.gray.light}`};
   padding: 30px;
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
-  background-image: url(${SubtleEthDiamonds});
-  background-repeat: repeat-x;
 `;
 const UploadText = styled(Text)`
   color: ${(p: { theme: any }) => p.theme.blue.medium};
@@ -56,10 +52,7 @@ const UploadText = styled(Text)`
 `;
 const DeleteBtn = styled.span`
   cursor: pointer;
-  :hover {
-    color: black;
-  }
-  padding: 3px;
+  padding: 2px;
 `;
 
 interface OwnProps {}
@@ -68,7 +61,6 @@ interface StateProps {
   workflow: WorkflowStep;
   depositFileName: string;
 }
-
 interface DispatchProps {
   dispatchDepositFileKeyUpdate: DispatchDepositKeysUpdateType;
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
@@ -76,85 +68,156 @@ interface DispatchProps {
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
-export const _UploadValidatorPage = ({
-  depositFileName,
-  dispatchDepositFileNameUpdate,
-  depositKeys,
+const defaultMessage = (
+  <div>
+    Drag file to upload or <UploadText>browse</UploadText>
+  </div>
+);
+
+function onFileDrop(
+  acceptedFiles: Array<any>,
+  setInvalidFile: (isInvalid: boolean) => void,
+  dispatchDepositFileNameUpdate: DispatchDepositFileNameUpdateType,
+  dispatchDepositFileKeyUpdate: DispatchDepositKeysUpdateType,
+  flushDropzoneCache: () => void
+) {
+  if (acceptedFiles.length === 1) {
+    setInvalidFile(false);
+    dispatchDepositFileNameUpdate(acceptedFiles[0].name);
+
+    const reader = new FileReader();
+
+    reader.onload = async event => {
+      if (event.target) {
+        try {
+          const fileData = JSON.parse(event.target.result as string);
+          if (await validateDepositKey(fileData as DepositKeyInterface[])) {
+            dispatchDepositFileKeyUpdate(
+              fileData.map((file: DepositKeyInterface) => ({
+                ...file,
+                transactionStatus: TransactionStatus.READY, // initialize each file with ready state for transaction
+              }))
+            );
+          } else {
+            setInvalidFile(true);
+            flushDropzoneCache();
+          }
+        } catch (e) {
+          setInvalidFile(true);
+          flushDropzoneCache();
+        }
+      }
+    };
+    reader.readAsText(acceptedFiles[0]);
+  }
+}
+
+function handleSubmit(workflow: any, dispatchWorkflowUpdate: any) {
+  if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
+    dispatchWorkflowUpdate(WorkflowStep.CONNECT_WALLET);
+  }
+}
+
+function handleFileDelete(
+  e: SyntheticEvent,
+  dispatchDepositFileKeyUpdate: DispatchDepositKeysUpdateType,
+  setInvalidFile: (isInvalid: boolean) => void,
+  flushDropzoneCache: () => void
+) {
+  e.preventDefault();
+  dispatchDepositFileKeyUpdate([]);
+  setInvalidFile(false);
+  flushDropzoneCache();
+}
+
+interface DeleteBtnMessageProps {
+  text: string;
+  dispatchDepositFileKeyUpdate: DispatchDepositKeysUpdateType;
+  setInvalidFile: (isFileInvalid: boolean) => void;
+  flushDropzoneCache: () => void;
+}
+
+const DeleteBtnMessage = ({
+  text,
   dispatchDepositFileKeyUpdate,
-  dispatchWorkflowUpdate,
-  workflow,
-}: Props): JSX.Element => {
-  const fileAccepted = depositKeys.length > 0;
-  const [invalidFile, setInvalidFile] = useState(false);
-  const defaultMessage = (
-    <div>
-      Drag file to upload or <UploadText>browse</UploadText>
+  setInvalidFile,
+  flushDropzoneCache,
+}: DeleteBtnMessageProps) => {
+  return (
+    <div className="flex center">
+      <DeleteBtn
+        onClick={e =>
+          handleFileDelete(
+            e,
+            dispatchDepositFileKeyUpdate,
+            setInvalidFile,
+            flushDropzoneCache
+          )
+        }
+      >
+        <Close size="15px" className="mr10" />
+      </DeleteBtn>
+      <Text>{text}</Text>
     </div>
   );
+};
+
+const _UploadValidatorPage = ({
+  workflow,
+  depositKeys,
+  dispatchDepositFileKeyUpdate,
+  depositFileName,
+  dispatchDepositFileNameUpdate,
+  dispatchWorkflowUpdate,
+}: Props): JSX.Element => {
+  const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
+  const [invalidFile, setInvalidFile] = useState(false);
   const [message, setMessage] = useState(defaultMessage);
-
-  const onDrop = useCallback(
-    acceptedFiles => {
-      if (acceptedFiles.length === 1) {
-        setInvalidFile(false);
-        dispatchDepositFileNameUpdate(acceptedFiles[0].name);
-        const reader = new FileReader();
-        reader.onload = async event => {
-          if (event.target) {
-            try {
-              const fileData = JSON.parse(event.target.result as string);
-              if (await validateDepositKey(fileData as DepositKeyInterface[])) {
-                dispatchDepositFileKeyUpdate(
-                  fileData.map((file: DepositKeyInterface) => ({
-                    ...file,
-                    transactionStatus: TransactionStatus.READY, // initialize each file with ready state for transaction
-                  }))
-                );
-              } else {
-                setInvalidFile(true);
-              }
-            } catch (e) {
-              setInvalidFile(true);
-            }
-          }
-        };
-        reader.readAsText(acceptedFiles[0]);
-      }
-    },
-    [dispatchDepositFileKeyUpdate]
-  );
-
-  const handleFileDelete = (e: SyntheticEvent) => {
-    e.preventDefault();
-    dispatchDepositFileKeyUpdate([]);
-    setInvalidFile(false);
-  };
-
   const {
     isDragActive,
     isDragAccept,
     isDragReject,
+    acceptedFiles,
+    inputRef,
     getRootProps,
     getInputProps,
   } = useDropzone({
-    onDrop,
+    onDrop: files =>
+      onFileDrop(
+        files,
+        setInvalidFile,
+        dispatchDepositFileNameUpdate,
+        dispatchDepositFileKeyUpdate,
+        // eslint-disable-next-line no-use-before-define
+        flushDropzoneCache
+      ),
     accept: 'application/json',
-    noClick: fileAccepted || invalidFile,
+    noClick: isFileAccepted || invalidFile,
   });
 
+  // forcefully mutates the acceptedFiles array to clear it
+  function flushDropzoneCache() {
+    acceptedFiles.length = 0;
+    acceptedFiles.splice(0, acceptedFiles.length);
+    if (inputRef.current) {
+      inputRef.current.value = '';
+    }
+  }
+
+  useEffect(() => setIsFileAccepted(depositKeys.length > 0), [depositKeys]);
   useEffect(() => {
-    if (fileAccepted) {
+    if (isFileAccepted) {
       setTimeout(
         () =>
           setMessage(
-            <div className="flex center">
-              <DeleteBtn onClick={handleFileDelete}>
-                <Close size="15px" className="mr10" />
-              </DeleteBtn>
-              <Text>{depositFileName}</Text>
-            </div>
+            <DeleteBtnMessage
+              dispatchDepositFileKeyUpdate={dispatchDepositFileKeyUpdate}
+              setInvalidFile={setInvalidFile}
+              flushDropzoneCache={flushDropzoneCache}
+              text={depositFileName}
+            />
           ),
-        800
+        400
       );
       return;
     }
@@ -162,12 +225,12 @@ export const _UploadValidatorPage = ({
     if (!isDragActive) {
       if (invalidFile) {
         setMessage(
-          <div className="flex center">
-            <DeleteBtn onClick={handleFileDelete}>
-              <Close size="15px" className="mr10" />
-            </DeleteBtn>
-            <Text>{depositFileName} is invalid</Text>
-          </div>
+          <DeleteBtnMessage
+            dispatchDepositFileKeyUpdate={dispatchDepositFileKeyUpdate}
+            setInvalidFile={setInvalidFile}
+            flushDropzoneCache={flushDropzoneCache}
+            text={`${depositFileName} is invalid`}
+          />
         );
         return;
       }
@@ -175,24 +238,16 @@ export const _UploadValidatorPage = ({
       return;
     }
 
-    if (isDragActive) {
-      if (isDragReject) {
-        setTimeout(
-          () => setMessage(<Text>Please upload a valid json file</Text>),
-          800
-        );
-      }
+    if (isDragActive && isDragReject) {
+      setTimeout(
+        () => setMessage(<Text>Please upload a valid json file</Text>),
+        600
+      );
     }
-  }, [fileAccepted, invalidFile, isDragReject, isDragActive]);
+  }, [isFileAccepted, invalidFile, isDragReject, isDragActive]);
 
-  const handleSubmit = () => {
-    if (workflow === WorkflowStep.UPLOAD_VALIDATOR_FILE) {
-      dispatchWorkflowUpdate(WorkflowStep.CONNECT_WALLET);
-    }
-  };
-
-  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
-    return routeToCorrectWorkflowStep(workflow);
+  // if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
+  //   return routeToCorrectWorkflowStep(workflow);
 
   return (
     <WorkflowPageTemplate title="Upload Deposit File">
@@ -206,7 +261,7 @@ export const _UploadValidatorPage = ({
           please upload this file here in order to continue.
         </Text>
         <Dropzone
-          fileAccepted={fileAccepted}
+          isFileAccepted={isFileAccepted}
           invalidFile={invalidFile}
           {...getRootProps({ isDragActive, isDragAccept, isDragReject })}
         >
@@ -214,7 +269,9 @@ export const _UploadValidatorPage = ({
           <FileUploadAnimation
             isDragAccept={isDragAccept}
             isDragReject={isDragReject}
-            fileAccepted={fileAccepted}
+            fileDropped={
+              isFileAccepted || invalidFile || acceptedFiles.length > 0
+            }
             isDragActive={isDragActive}
             invalidFile={invalidFile}
           />
@@ -229,11 +286,14 @@ export const _UploadValidatorPage = ({
         <Link to={routesEnum.generateKeysPage}>
           <Button className="mr10" width={100} label="Back" />
         </Link>
-        <Link to={routesEnum.connectWalletPage} onClick={handleSubmit}>
+        <Link
+          to={routesEnum.connectWalletPage}
+          onClick={() => handleSubmit(workflow, dispatchWorkflowUpdate)}
+        >
           <Button
             width={300}
             rainbow
-            disabled={!fileAccepted}
+            disabled={!isFileAccepted}
             label="Continue"
           />
         </Link>

@@ -10,14 +10,15 @@ import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
-import { validateKeyFile } from './validateKeyFile';
-import { StoreState } from '../../store/reducers';
+import { validateDepositKey } from './validateDepositKey';
+import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import {
-  DispatchKeyFilesUpdateType,
-  KeyFileInterface,
+  DispatchDepositFileNameUpdateType,
+  DispatchDepositKeysUpdateType,
   TransactionStatus,
-  updateKeyFiles,
-} from '../../store/actions/keyFileActions';
+  updateDepositFileKeys,
+  updateDepositFileName,
+} from '../../store/actions/depositFileActions';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
@@ -63,23 +64,27 @@ const DeleteBtn = styled.span`
 
 interface OwnProps {}
 interface StateProps {
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
   workflow: WorkflowStep;
+  depositFileName: string;
 }
 
 interface DispatchProps {
-  dispatchKeyFilesUpdate: DispatchKeyFilesUpdateType;
+  dispatchDepositFileKeyUpdate: DispatchDepositKeysUpdateType;
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+  dispatchDepositFileNameUpdate: DispatchDepositFileNameUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 export const _UploadValidatorPage = ({
-  keyFiles,
-  dispatchKeyFilesUpdate,
+  depositFileName,
+  dispatchDepositFileNameUpdate,
+  depositKeys,
+  dispatchDepositFileKeyUpdate,
   dispatchWorkflowUpdate,
   workflow,
 }: Props): JSX.Element => {
-  const fileAccepted = keyFiles.length > 0;
+  const fileAccepted = depositKeys.length > 0;
   const [invalidFile, setInvalidFile] = useState(false);
   const defaultMessage = (
     <div>
@@ -87,23 +92,22 @@ export const _UploadValidatorPage = ({
     </div>
   );
   const [message, setMessage] = useState(defaultMessage);
-  const [activeFileName, setActiveFileName] = useState('');
 
   const onDrop = useCallback(
     acceptedFiles => {
       if (acceptedFiles.length === 1) {
         setInvalidFile(false);
-        setActiveFileName(acceptedFiles[0].name);
+        dispatchDepositFileNameUpdate(acceptedFiles[0].name);
         const reader = new FileReader();
         reader.onload = async event => {
           if (event.target) {
             try {
               const fileData = JSON.parse(event.target.result as string);
-              if (await validateKeyFile(fileData as KeyFileInterface[])) {
-                dispatchKeyFilesUpdate(
-                  fileData.map((keyFile: KeyFileInterface) => ({
-                    ...keyFile,
-                    transactionStatus: TransactionStatus.READY, // initialize each keyFile with ready state for transaction
+              if (await validateDepositKey(fileData as DepositKeyInterface[])) {
+                dispatchDepositFileKeyUpdate(
+                  fileData.map((file: DepositKeyInterface) => ({
+                    ...file,
+                    transactionStatus: TransactionStatus.READY, // initialize each file with ready state for transaction
                   }))
                 );
               } else {
@@ -117,12 +121,12 @@ export const _UploadValidatorPage = ({
         reader.readAsText(acceptedFiles[0]);
       }
     },
-    [dispatchKeyFilesUpdate]
+    [dispatchDepositFileKeyUpdate]
   );
 
   const handleFileDelete = (e: SyntheticEvent) => {
     e.preventDefault();
-    dispatchKeyFilesUpdate([]);
+    dispatchDepositFileKeyUpdate([]);
     setInvalidFile(false);
   };
 
@@ -147,7 +151,7 @@ export const _UploadValidatorPage = ({
               <DeleteBtn onClick={handleFileDelete}>
                 <Close size="15px" className="mr10" />
               </DeleteBtn>
-              <Text>{activeFileName}</Text>
+              <Text>{depositFileName}</Text>
             </div>
           ),
         800
@@ -162,7 +166,7 @@ export const _UploadValidatorPage = ({
             <DeleteBtn onClick={handleFileDelete}>
               <Close size="15px" className="mr10" />
             </DeleteBtn>
-            <Text>{activeFileName} is invalid</Text>
+            <Text>{depositFileName} is invalid</Text>
           </div>
         );
         return;
@@ -239,12 +243,14 @@ export const _UploadValidatorPage = ({
 };
 
 const mapStateToProps = (state: StoreState): StateProps => ({
-  keyFiles: state.keyFiles,
+  depositKeys: state.depositFile.keys,
+  depositFileName: state.depositFile.name,
   workflow: state.workflow,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchKeyFilesUpdate: files => dispatch(updateKeyFiles(files)),
+  dispatchDepositFileNameUpdate: name => dispatch(updateDepositFileName(name)),
+  dispatchDepositFileKeyUpdate: files => dispatch(updateDepositFileKeys(files)),
   dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 

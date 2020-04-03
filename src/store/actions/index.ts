@@ -1,19 +1,22 @@
 import { UpdateAcknowledgementStateAction } from './acknowledgementActions';
 import {
-  UpdateKeyFilesAction,
+  UpdateDepositFileNameAction,
+  UpdateDepositFileKeysAction,
   UpdateTransactionStatusAction,
-} from './keyFileActions';
+} from './depositFileActions';
 import { UpdateWorkflowAction } from './workflowActions';
 
 export enum ActionTypes {
   updateAcknowledgementState,
-  updateKeyFiles,
+  updateDepositFileKeys,
+  updateDepositFileName,
   updateTransactionStatus,
   updateWorkflow,
 }
 
 export type Action =
   | UpdateAcknowledgementStateAction
-  | UpdateKeyFilesAction
+  | UpdateDepositFileKeysAction
   | UpdateTransactionStatusAction
-  | UpdateWorkflowAction;
+  | UpdateWorkflowAction
+  | UpdateDepositFileNameAction;

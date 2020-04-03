@@ -3,23 +3,22 @@ import {
   acknowledgementReducer,
   AcknowledgementStateInterface,
 } from './acknowledgementReducer';
-import { keyFilesReducer } from './keyFilesReducer';
-import { KeyFileInterface } from '../actions/keyFileActions';
+import { DepositFileInterface, depositFileReducer } from './depositFileReducer';
 import { workflowReducer } from './workflowReducer';
 import { WorkflowStep } from '../actions/workflowActions';
 
 export * from './acknowledgementReducer';
-export * from './keyFilesReducer';
+export * from './depositFileReducer';
 export * from './workflowReducer';
 
 export interface StoreState {
   acknowledgementState: AcknowledgementStateInterface;
-  keyFiles: KeyFileInterface[];
+  depositFile: DepositFileInterface;
   workflow: WorkflowStep;
 }
 
 export const reducers = combineReducers<StoreState>({
   acknowledgementState: acknowledgementReducer,
-  keyFiles: keyFilesReducer,
+  depositFile: depositFileReducer,
   workflow: workflowReducer,
 });

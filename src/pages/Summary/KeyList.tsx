@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { InfoBox } from '../../components/InfoBox';
-import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import { DepositKeyInterface } from '../../store/reducers';
 
 const ScrollContainer = styled.div`
   height: 200px;
@@ -37,11 +37,11 @@ const StyledPre = styled.pre`
 `;
 
 interface Props {
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
 }
 
-export const KeyList = ({ keyFiles }: Props) => {
-  const validatorKeys = keyFiles.map(file => file.pubkey);
+export const KeyList = ({ depositKeys }: Props) => {
+  const validatorKeys = depositKeys.map(file => file.pubkey);
   const renderKeys = () =>
     validatorKeys.map(coldKey => (
       <InfoBox key={coldKey} className="px25 py0">

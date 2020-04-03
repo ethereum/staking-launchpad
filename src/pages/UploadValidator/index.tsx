@@ -194,11 +194,12 @@ export const _UploadValidatorPage = ({
     <WorkflowPageTemplate title="Upload Deposit File">
       <Container className="mt20">
         <Text className="mb20">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electron
+          Please upload your Deposit Data file generated in the previous step.
+        </Text>
+        <Text className="mb20">
+          To locate this file, open the validator_keys folder in the eth2.0
+          deposit CLI repository. Inside you should find the deposit_data file,
+          please upload this file here in order to continue.
         </Text>
         <Dropzone
           fileAccepted={fileAccepted}

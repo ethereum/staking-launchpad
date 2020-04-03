@@ -19,8 +19,6 @@ const Container = styled.div`
     stroke-dasharray: 4;
   }
   
-  
-  
   .checkmark {
     width: 150px;
     height: 150px;

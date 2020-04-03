@@ -25,6 +25,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -40,19 +41,35 @@ const Dropzone = styled.div`
   border: 1px solid lightgray;
   width: 500px;
   margin: auto;
+  margin-top: 20px;
   cursor: ${(p: { invalidFile: boolean; isFileAccepted: boolean }) =>
     p.invalidFile || p.isFileAccepted ? 'inherit' : 'pointer'};
   box-shadow: ${(p: { theme: any }) => `0 0 10px ${p.theme.gray.light}`};
   padding: 30px;
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
 `;
-const UploadText = styled(Text)`
+const Highlighted = styled(Text)`
   color: ${(p: { theme: any }) => p.theme.blue.medium};
   display: inline-block;
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
+const Code = styled(Text)`
+  border: 1px solid #dc8180;
+  background-color: ${(p: any) => p.theme.red.lightest};
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0 4px;
+  color: #ad2b2a;
+  font-size: 14px;
+  line-height: 16px;
+`;
+
 const DeleteBtn = styled.span`
   cursor: pointer;
-  padding: 2px;
+  padding: 3px;
 `;
 
 interface OwnProps {}
@@ -70,7 +87,7 @@ type Props = StateProps & DispatchProps & OwnProps;
 
 const defaultMessage = (
   <div>
-    Drag file to upload or <UploadText>browse</UploadText>
+    Drag file to upload or <Highlighted>browse</Highlighted>
   </div>
 );
 
@@ -246,19 +263,21 @@ const _UploadValidatorPage = ({
     }
   }, [isFileAccepted, invalidFile, isDragReject, isDragActive]);
 
-  // if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
-  //   return routeToCorrectWorkflowStep(workflow);
+  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
+    return routeToCorrectWorkflowStep(workflow);
 
   return (
     <WorkflowPageTemplate title="Upload Deposit File">
       <Container className="mt20">
         <Text className="mb20">
-          Please upload your Deposit Data file generated in the previous step.
-        </Text>
-        <Text className="mb20">
-          To locate this file, open the validator_keys folder in the eth2.0
-          deposit CLI repository. Inside you should find the deposit_data file,
-          please upload this file here in order to continue.
+          Please upload the{' '}
+          <Highlighted className="mr5">Deposit Data file</Highlighted>
+          generated in the{' '}
+          <Link to={routesEnum.generateKeysPage} inline className="mr5">
+            previous step.
+          </Link>
+          The <Code>deposit-data-[timestamp].json</Code> is located in the{' '}
+          <Code>/eth2.0-deposit-cli/validator_keys</Code> directory.
         </Text>
         <Dropzone
           isFileAccepted={isFileAccepted}

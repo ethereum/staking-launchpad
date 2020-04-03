@@ -22,6 +22,7 @@ export const grommetTheme = {
       greenMedium: green.medium,
       greenDark: green.dark,
 
+      redLightest: red.lightest,
       redLight: red.light,
       redMedium: red.medium,
 

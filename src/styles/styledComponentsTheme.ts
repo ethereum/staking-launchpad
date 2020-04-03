@@ -20,6 +20,7 @@ export const colors = {
     dark: '#26AB83',
   },
   red: {
+    lightest: '#fff0f2',
     light: '#FF9B9A',
     medium: '#912d2c',
   },

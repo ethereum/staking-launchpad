@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/styledComponentsTheme';
 import { Check, Circle, FileIcon, Plus, Svg, InvalidFileIcon } from './Icons';
@@ -39,36 +39,36 @@ const Container = styled.div`
 `;
 
 interface Props {
-  isDragAccept: any;
-  isDragReject: any;
-  fileDropped: any;
-  isDragActive: any;
-  invalidFile: any;
+  isDragAccept: boolean;
+  isDragReject: boolean;
+  isFileStaged: boolean;
+  isDragActive: boolean;
+  isFileAccepted: boolean;
 }
 
 export const FileUploadAnimation = ({
   isDragAccept,
   isDragReject,
-  fileDropped,
+  isFileStaged,
   isDragActive,
-  invalidFile,
+  isFileAccepted,
 }: Props) => {
-  const renderIcon = () => {
-    if (fileDropped)
-      return invalidFile ? <InvalidFileIcon renderImmediately /> : <Check />;
+  const renderIcon = useMemo(() => {
+    if (isFileStaged)
+      return isFileAccepted ? <Check /> : <InvalidFileIcon renderImmediately />;
     if (isDragAccept) return <FileIcon />;
-    if (isDragReject || invalidFile) return <InvalidFileIcon />;
+    if (isDragReject || isFileAccepted) return <InvalidFileIcon />;
     return <Plus />;
-  };
+  }, [isFileStaged, isFileAccepted, isDragReject, isDragAccept]);
 
   return (
     <Container>
       <Svg>
         <Circle
-          animated={isDragActive && !fileDropped}
-          dashed={!invalidFile && !fileDropped}
+          animated={isDragActive && !isFileStaged}
+          dashed={!isFileAccepted && !isFileStaged}
         />
-        {renderIcon()}
+        {renderIcon}
       </Svg>
     </Container>
   );

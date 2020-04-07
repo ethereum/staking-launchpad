@@ -5,8 +5,9 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 
 interface Props {
-  validatorCount: number;
+  validatorCount: number | string;
 }
+
 export const MacInstructions = ({ validatorCount }: Props) => (
   <div style={{ animation: `fadeIn 1s` }}>
     <Paper className="mt20">

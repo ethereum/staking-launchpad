@@ -3,9 +3,10 @@ import { Paper } from '../../components/Paper';
 import { CodeBox } from '../../components/CodeBox';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
+import { TerminalUI } from './TerminalUI';
 
 interface Props {
-  validatorCount: number;
+  validatorCount: number | string;
 }
 
 export const LinuxInstructions = ({ validatorCount }: Props) => (
@@ -14,9 +15,10 @@ export const LinuxInstructions = ({ validatorCount }: Props) => (
       <Heading level={3} size="small" color="blueMedium">
         3. Type/copy the following lines into your terminal window:
       </Heading>
-      <Text className="mt20">
+      <Text className="mt20 mb20">
         Type the following lines into the terminal window.
       </Text>
+      <TerminalUI />
       <CodeBox
         className="mt20"
         snippet="git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git"

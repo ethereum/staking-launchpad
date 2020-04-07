@@ -25,6 +25,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { TerminalUI } from './TerminalUI';
 
 export enum operatingSystem {
   'MAC',
@@ -57,7 +58,7 @@ const _GenerateKeysPage = ({
   dispatchWorkflowUpdate,
   workflow,
 }: Props): JSX.Element => {
-  const [validatorCount, setValidatorCount] = useState<number>(0);
+  const [validatorCount, setValidatorCount] = useState<number | string>(0);
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
@@ -89,9 +90,11 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
-    return routeToCorrectWorkflowStep(workflow);
-  }
+  // if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
+  //   return routeToCorrectWorkflowStep(workflow);
+  // }
+
+  console.log(validatorCount);
 
   return (
     <WorkflowPageTemplate title="Generate Key Pairs">
@@ -108,10 +111,12 @@ const _GenerateKeysPage = ({
             <Text className="mb5">Cost</Text>
             <InfoBox>
               <Text>
-                {new BigNumber(validatorCount)
-                  .times(new BigNumber(PRICE_PER_VALIDATOR))
-                  .toFixed(1)
-                  .toString()}
+                {validatorCount === ''
+                  ? validatorCount
+                  : new BigNumber(validatorCount)
+                      .times(new BigNumber(PRICE_PER_VALIDATOR))
+                      .toFixed(1)
+                      .toString()}
                 ETH
               </Text>
             </InfoBox>
@@ -127,35 +132,9 @@ const _GenerateKeysPage = ({
         </Text>
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
       </Paper>
+
       {renderOSInstructions()}
-      <Paper className="mt20">
-        <Heading level={3} size="small" color="blueMedium">
-          4. Save the key files and get the validator file ready
-        </Heading>
-        <Text className="mt20">
-          You should now be able to save the file
-          <Highlight>signing-keystore-....json</Highlight> which contains your
-          key pairs. Please make sure keep it safe, preferably offline.
-        </Text>
-        <InstructionImgContainer />
-        <Text>
-          The second file you will export is
-          <Highlight>deposit_data.json</Highlight> - you will need to upload in
-          the next step.
-        </Text>
-        <InstructionImgContainer />
-      </Paper>
-      <Paper className="mt20">
-        <CheckBox
-          onChange={onCheckboxClick}
-          checked={mnemonicAcknowledgementChecked}
-          label={
-            <Text>
-              I am keeping my keys safe and have backed up my mnemonic phrase.
-            </Text>
-          }
-        />
-      </Paper>
+
       <div className="flex center p30">
         <Link to={routesEnum.acknowledgementPage}>
           <Button className="mr10" width={100} label="Back" />
@@ -191,3 +170,32 @@ export const GenerateKeysPage = connect<
   mapStateToProps,
   mapDispatchToProps
 )(_GenerateKeysPage);
+
+// <Paper className="mt20">
+// <Heading level={3} size="small" color="blueMedium">
+// 4. Save the key files and get the validator file ready
+// </Heading>
+// <Text className="mt20">
+// You should now be able to save the file
+// <Highlight>signing-keystore-....json</Highlight> which contains your
+// key pairs. Please make sure keep it safe, preferably offline.
+// </Text>
+// <InstructionImgContainer />
+// <Text>
+// The second file you will export is
+// <Highlight>deposit_data.json</Highlight> - you will need to upload in
+// the next step.
+// </Text>
+// <InstructionImgContainer />
+// </Paper>
+// <Paper className="mt20">
+// <CheckBox
+// onChange={onCheckboxClick}
+// checked={mnemonicAcknowledgementChecked}
+// label={
+// <Text>
+// I am keeping my keys safe and have backed up my mnemonic phrase.
+// </Text>
+// }
+// />
+// </Paper>

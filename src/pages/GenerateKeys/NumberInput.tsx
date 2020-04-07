@@ -10,6 +10,9 @@ const StyledButton = styled.button`
   :focus {
     outline: none;
   }
+  :hover {
+    background-color: ${(p: any) => p.theme.gray.lightest};
+  }
 `;
 const ButtonContainer = styled.div`
   display: flex;
@@ -38,15 +41,14 @@ const StyledInput = styled.input`
 `;
 
 interface Props {
-  value: number;
-  setValue: (e: any) => void;
+  value: number | string;
+  setValue: (e: number) => void;
 }
 
 export const NumberInput = ({ value, setValue }: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
     const val = e.target.value.replace(/\./g, ''); // remove "." to force integer input
-    if (e.target.validity.valid) setValue(val);
-    else if (val === '') setValue(val); // allow empty
+    setValue(val);
   };
 
   const decrement = () => {

@@ -26,6 +26,8 @@ import {
 } from '../../store/actions/workflowActions';
 import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 import { TerminalUI } from './TerminalUI';
+import instructions1 from '../../static/instructions_1.svg';
+import instructions2 from '../../static/instructions_2.svg';
 
 export enum operatingSystem {
   'MAC',
@@ -40,8 +42,11 @@ const Highlight = styled.span`
 // TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
-  border: 1px solid black;
   margin: 20px;
+  border: 1px solid ${(p: any) => p.theme.gray.medium};
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
 `;
 
 // Prop definitions
@@ -135,6 +140,39 @@ const _GenerateKeysPage = ({
 
       {renderOSInstructions()}
 
+      <Paper className="mt20">
+        <Heading level={3} size="small" color="blueMedium">
+          4. Save the key files and get the validator file ready
+        </Heading>
+        <Text className="mt20">
+          You should now be able to save the file
+          <Highlight>signing-keystore-....json</Highlight> which contains your
+          key pairs. Please make sure keep it safe, preferably offline.
+        </Text>
+        <InstructionImgContainer>
+          <img src={instructions1} alt="" />
+        </InstructionImgContainer>
+        <Text>
+          The second file you will export is
+          <Highlight>deposit_data.json</Highlight> - you will need to upload in
+          the next step.
+        </Text>
+        <InstructionImgContainer>
+          <img src={instructions2} alt="" />
+        </InstructionImgContainer>
+      </Paper>
+      <Paper className="mt20">
+        <CheckBox
+          onChange={onCheckboxClick}
+          checked={mnemonicAcknowledgementChecked}
+          label={
+            <Text>
+              I am keeping my keys safe and have backed up my mnemonic phrase.
+            </Text>
+          }
+        />
+      </Paper>
+
       <div className="flex center p30">
         <Link to={routesEnum.acknowledgementPage}>
           <Button className="mr10" width={100} label="Back" />
@@ -170,32 +208,3 @@ export const GenerateKeysPage = connect<
   mapStateToProps,
   mapDispatchToProps
 )(_GenerateKeysPage);
-
-// <Paper className="mt20">
-// <Heading level={3} size="small" color="blueMedium">
-// 4. Save the key files and get the validator file ready
-// </Heading>
-// <Text className="mt20">
-// You should now be able to save the file
-// <Highlight>signing-keystore-....json</Highlight> which contains your
-// key pairs. Please make sure keep it safe, preferably offline.
-// </Text>
-// <InstructionImgContainer />
-// <Text>
-// The second file you will export is
-// <Highlight>deposit_data.json</Highlight> - you will need to upload in
-// the next step.
-// </Text>
-// <InstructionImgContainer />
-// </Paper>
-// <Paper className="mt20">
-// <CheckBox
-// onChange={onCheckboxClick}
-// checked={mnemonicAcknowledgementChecked}
-// label={
-// <Text>
-// I am keeping my keys safe and have backed up my mnemonic phrase.
-// </Text>
-// }
-// />
-// </Paper>

@@ -201,9 +201,9 @@ const _ConnectWalletPage = ({
     return '';
   };
 
-  if (workflow < WorkflowStep.CONNECT_WALLET) {
-    return routeToCorrectWorkflowStep(workflow);
-  }
+  // if (workflow < WorkflowStep.CONNECT_WALLET) {
+  //   return routeToCorrectWorkflowStep(workflow);
+  // }
 
   return (
     <WorkflowPageTemplate title="Connect Wallet">

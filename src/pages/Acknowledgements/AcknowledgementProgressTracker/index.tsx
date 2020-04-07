@@ -62,10 +62,10 @@ export const _AcknowledgementProgressTracker = ({
   );
 };
 
-const mstp = ({ acknowledgementState }: StoreState) => ({
+const mapStateToProps = ({ acknowledgementState }: StoreState) => ({
   acknowledgementState,
 });
 
-export const AcknowledgementProgressTracker = connect(mstp)(
+export const AcknowledgementProgressTracker = connect(mapStateToProps)(
   _AcknowledgementProgressTracker
 );

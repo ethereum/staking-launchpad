@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { TransactionStatus } from '../../../store/actions/keyFileActions';
+import { TransactionStatus } from '../../../store/actions/depositFileActions';
 import { ALETHIO_URL, ETHERSCAN_URL } from '../../../utils/envVars';
 
 const Container = styled.div`

@@ -24,7 +24,7 @@ import {
 } from './web3Utils';
 import { Button } from '../../components/Button';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { StoreState } from '../../store/reducers';
+import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
@@ -40,7 +40,6 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
@@ -103,7 +102,7 @@ export interface web3ReactInterface {
 interface OwnProps {}
 interface StateProps {
   workflow: WorkflowStep;
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
 }
 interface DispatchProps {
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
@@ -113,7 +112,7 @@ type Props = StateProps & DispatchProps & OwnProps;
 const _ConnectWalletPage = ({
   workflow,
   dispatchWorkflowUpdate,
-  keyFiles,
+  depositKeys,
 }: Props): JSX.Element => {
   // setup RPC event listener
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
@@ -148,7 +147,7 @@ const _ConnectWalletPage = ({
           const formattedBalance = Number(
             parseFloat(formatEther(amount)).toPrecision(5)
           );
-          const requiredBalance = keyFiles.length * PRICE_PER_VALIDATOR;
+          const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
 
           setBalance(formattedBalance);
           if (formattedBalance < requiredBalance || formattedBalance === 0) {
@@ -160,7 +159,7 @@ const _ConnectWalletPage = ({
         .catch(() => setBalance(null));
       return () => setBalance(null);
     }
-  }, [selectedWallet, walletProvider, library, chainId, keyFiles]);
+  }, [selectedWallet, walletProvider, library, chainId, depositKeys]);
 
   // sets the status copy on provider or network change
   useEffect(() => {
@@ -256,8 +255,8 @@ const _ConnectWalletPage = ({
                     >
                       <span>
                         You do not have enough ETH in this wallet for{' '}
-                        {keyFiles.length} validator
-                        {keyFiles.length > 1 ? 's' : ''}
+                        {depositKeys.length} validator
+                        {depositKeys.length > 1 ? 's' : ''}
                       </span>
                     </ReactTooltip>
                     <StatusWarning
@@ -347,9 +346,12 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });
 
-const mapStateToProps = ({ workflow, keyFiles }: StoreState): StateProps => ({
+const mapStateToProps = ({
   workflow,
-  keyFiles,
+  depositFile,
+}: StoreState): StateProps => ({
+  workflow,
+  depositKeys: depositFile.keys,
 });
 
 export const ConnectWalletPage = connect<

@@ -17,14 +17,13 @@ import { Paper } from '../../../components/Paper';
 import { Text } from '../../../components/Text';
 import { Status } from './Status';
 import { ActionButton } from './ActionButton';
-import { StoreState } from '../../../store/reducers';
+import { DepositKeyInterface, StoreState } from '../../../store/reducers';
 import { handleTransaction } from '../transactionUtils';
 import { web3ReactInterface } from '../../ConnectWallet';
 import {
   DispatchTransactionStatusUpdateType,
-  KeyFileInterface,
   updateTransactionStatus,
-} from '../../../store/actions/keyFileActions';
+} from '../../../store/actions/depositFileActions';
 
 const CustomTableRow = styled(TableRow)`
   background-color: ${(p: { theme: any }) => p.theme.blue.light};
@@ -43,20 +42,20 @@ const CustomTable = styled(Table)`
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
 }
 interface DispatchProps {
   dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
+const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
-  const handleActionClick = (keyFile: KeyFileInterface) => {
+  const handleActionClick = (depositKey: DepositKeyInterface) => {
     handleTransaction(
-      keyFile,
+      depositKey,
       connector as AbstractConnector,
       account,
 
@@ -82,8 +81,8 @@ const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
             </CustomTableRow>
           </TableHeader>
           <TableBody>
-            {keyFiles.map(keyFile => {
-              const { pubkey, transactionStatus, txHash } = keyFile;
+            {depositKeys.map(depositKey => {
+              const { pubkey, transactionStatus, txHash } = depositKey;
               return (
                 <TableRow key={pubkey}>
                   <TableCell>
@@ -97,7 +96,7 @@ const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
                   </TableCell>
                   <TableCell>
                     <ActionButton
-                      onClick={() => handleActionClick(keyFile)}
+                      onClick={() => handleActionClick(depositKey)}
                       status={transactionStatus}
                       txHash={txHash}
                     />
@@ -112,8 +111,8 @@ const _KeyList = ({ keyFiles, dispatchTransactionStatusUpdate }: Props) => {
   );
 };
 
-const mapStateToProps = ({ keyFiles }: StoreState): StateProps => {
-  return { keyFiles };
+const mapStateToProps = ({ depositFile }: StoreState): StateProps => {
+  return { depositKeys: depositFile.keys };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({

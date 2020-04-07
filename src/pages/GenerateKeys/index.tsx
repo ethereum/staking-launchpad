@@ -114,17 +114,17 @@ const _GenerateKeysPage = ({
           </div>
           <div className="ml20">
             <Text className="mb5">Cost</Text>
-            <InfoBox>
-              <Text>
-                {validatorCount === ''
-                  ? validatorCount
-                  : new BigNumber(validatorCount)
-                      .times(new BigNumber(PRICE_PER_VALIDATOR))
-                      .toFixed(1)
-                      .toString()}
-                ETH
-              </Text>
-            </InfoBox>
+            <input type="number" style={{width: "300px"}} />
+
+            <Text>
+              {validatorCount === ''
+                ? validatorCount
+                : new BigNumber(validatorCount)
+                    .times(new BigNumber(PRICE_PER_VALIDATOR))
+                    .toFixed(1)
+                    .toString()}
+              ETH
+            </Text>
           </div>
         </div>
       </Paper>

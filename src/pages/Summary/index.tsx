@@ -7,7 +7,7 @@ import { Box, CheckBox } from 'grommet';
 import { FormNextLink } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { StoreState } from '../../store/reducers';
+import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
@@ -23,7 +23,6 @@ import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
 import { KeyList } from './KeyList';
-import { KeyFileInterface } from '../../store/actions/keyFileActions';
 import {
   DispatchWorkflowUpdateType,
   WorkflowStep,
@@ -41,7 +40,7 @@ const NETWORK_ID = IS_MAINNET
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
   workflow: WorkflowStep;
 }
 
@@ -53,14 +52,14 @@ type Props = StateProps & DispatchProps & OwnProps;
 const _SummaryPage = ({
   workflow,
   dispatchWorkflowUpdate,
-  keyFiles,
+  depositKeys,
 }: Props): JSX.Element => {
   const [allChecked, setAllChecked] = useState(false);
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
-  const amountValidators = new BigNumber(keyFiles.length);
+  const amountValidators = new BigNumber(depositKeys.length);
   const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
 
   useEffect(() => {
@@ -103,7 +102,7 @@ const _SummaryPage = ({
           </Container>
         </Box>
       </Paper>
-      <KeyList keyFiles={keyFiles} />
+      <KeyList depositKeys={depositKeys} />
       <AcknowledgementSection title="Please proceed with caution">
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}
@@ -169,8 +168,11 @@ const _SummaryPage = ({
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
-  keyFiles,
+const mapStateToProps = ({
+  depositFile,
+  workflow,
+}: StoreState): StateProps => ({
+  depositKeys: depositFile.keys,
   workflow,
 });
 

@@ -27,12 +27,12 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
     <div style={{ animation: `fadeIn 1s` }}>
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium" className="mb20">
-          3. Install python3, pip3 and git
-        </Heading>
-        <Heading level={4} size="small" color="blueMedium">
-          Install python3
+          3. Install developer libraries
         </Heading>
         <Section>
+          <Heading level={4} size="small" color="blueMedium">
+            Install python3
+          </Heading>
           <Text>
             Installation may differ depending on your linux build. For the most
             up-to-date installation instructions please visit{' '}
@@ -46,26 +46,14 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
             </Link>
             .
           </Text>
-          <Text className="my10">
-            Once the installation is complete, you can verify with:
-          </Text>
-          <CodeBox snippet="python3 --version" className="mx20" />
         </Section>
-        <Heading level={4} size="small" color="blueMedium">
-          Install pip3
-        </Heading>
         <Section>
-          <Text className="my10">Ubuntu or Debian Linux:</Text>
-          <CodeBox
-            snippet="sudo apt-get install python3-pip"
-            className="mx20"
-          />
-          <Text className="my10">Fedora (centOS) Linux:</Text>
-          <CodeBox snippet="sudo yum install python3-pip" className="mx20" />
-
+          <Heading level={4} size="small" color="blueMedium">
+            Install pip3
+          </Heading>
           <Text className="my10">
-            For other linux distributions please reference the pip the
-            documentation found{' '}
+            For a the most-up-to-date instructions on install pip3, please
+            reference the pip the documentation found{' '}
             <Link
               inline
               external
@@ -74,27 +62,30 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
             >
               here
             </Link>
-            .
           </Text>
-          <Text className="my10">
-            Once the installation is complete, you can verify with:
-          </Text>
-          <CodeBox snippet="which pip" className="mx20" />
         </Section>
-        <Heading level={4} size="small" color="blueMedium">
-          Install git
-        </Heading>
         <Section>
-          <Text className="my10">Ubuntu or Debian Linux:</Text>
-          <CodeBox snippet="sudo apt install git-all" className="mx20" />
-          <Text className="my10">Fedora (centOS) Linux</Text>
-          <CodeBox snippet="sudo yum install git" className="mx20" />
+          <Heading level={4} size="small" color="blueMedium">
+            Install git
+          </Heading>
+          <Text className="my10">
+            If git is not already installed on your machine, you can find
+            install instructions
+            <Link
+              inline
+              external
+              primary
+              to="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
+            >
+              here
+            </Link>
+          </Text>
         </Section>
       </Paper>
 
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          4. Type/copy the following lines into your terminal window:
+          4. Generate deposit keys using the Ethereum Foundation deposit tool
         </Heading>
         <Text className="mt20 mb20">
           Type the following lines into the terminal window.

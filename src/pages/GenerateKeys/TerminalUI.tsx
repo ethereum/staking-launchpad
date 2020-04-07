@@ -69,6 +69,7 @@ export const TerminalUI = ({
     cursor: '',
   };
   const delayMs = 2000;
+
   const commands = [
     'git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git',
     'cd eth2.0-deposit-tooling',

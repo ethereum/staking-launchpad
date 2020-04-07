@@ -2,7 +2,7 @@ import React from 'react';
 import { Spinning } from 'grommet-controls';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
-import { TransactionStatus } from '../../../store/actions/keyFileActions';
+import { TransactionStatus } from '../../../store/actions/depositFileActions';
 
 interface Props {
   status: TransactionStatus;

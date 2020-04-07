@@ -21,15 +21,17 @@ const Dot = styled.div`
 `;
 const ControlContainer = styled.div`
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
 `;
 
 const WindowControls = () => {
   return (
     <ControlContainer>
-      <Dot color="red" />
-      <Dot color="yellow" />
-      <Dot color="green" />
+      <Dot color="#ef655d" />
+      <Dot color="#ffcc13" />
+      <Dot color="#15e215" />
     </ControlContainer>
   );
 };

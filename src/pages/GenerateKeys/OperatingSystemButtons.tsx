@@ -10,7 +10,7 @@ const LogoContainerBox = styled.div`
   width: 200px;
   height: 200px;
   border: ${(p: { theme: any; isActive: boolean }) =>
-    `2px solid ${p.isActive ? p.theme.blue.medium : p.theme.gray.medium}`};
+    `2px solid ${p.isActive ? p.theme.blue.light : p.theme.gray.medium}`};
   box-shadow: ${(p: { theme: any; isActive: boolean }) =>
     p.isActive && `0 0 10px rgba(0, 0, 0, 0.5)`};
   border-radius: ${p => p.theme.borderRadius};

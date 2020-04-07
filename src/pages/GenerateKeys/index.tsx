@@ -25,7 +25,6 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
-import { TerminalUI } from './TerminalUI';
 import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
 
@@ -37,6 +36,7 @@ export enum operatingSystem {
 
 const Highlight = styled.span`
   color: ${p => p.theme.blue.medium};
+  margin-left: 5px;
 `;
 
 // TODO: Add an actual image to this container
@@ -89,7 +89,7 @@ const _GenerateKeysPage = ({
       case operatingSystem.MAC:
         return <MacInstructions validatorCount={validatorCount} />;
       case operatingSystem.WINDOWS:
-        return <WindowsInstructions />;
+        return <WindowsInstructions validatorCount={validatorCount} />;
       default:
         return null;
     }

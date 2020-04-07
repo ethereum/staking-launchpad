@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   border: 1px solid #ddd;
-  padding: 18px 30px;
-  width: 100%;
+  padding: 10px;
   background: ${p => p.theme.orange};
   display: flex;
   justify-content: space-between;
+  border-radius: ${p => p.theme.borderRadius};
 `;
 const CopyBtn = styled.span`
+  margin-right: 10px;
+  font-size: 12px;
   color: ${p => p.theme.blue.medium};
   font-weight: bold;
   :hover {

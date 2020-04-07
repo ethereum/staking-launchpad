@@ -95,7 +95,7 @@ const _UploadValidatorPage = ({
   dispatchWorkflowUpdate,
 }: Props): JSX.Element => {
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
-  const [isFileAccepted, setIsFileAccepted] = useState(false);
+  const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
 
   // forcefully mutates the acceptedFiles array to clear it
   /* eslint-disable no-use-before-define */
@@ -189,7 +189,7 @@ const _UploadValidatorPage = ({
             <Close size="15px" className="mr10" />
           </DeleteBtn>
           <Text>
-            {depositFileName} {!isFileAccepted && 'did not pass BLS'}
+            {depositFileName} {!isFileAccepted && 'is invalid'}
           </Text>
         </div>
       );

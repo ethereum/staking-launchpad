@@ -31,6 +31,7 @@ const StyledExternalLink = styled.a<Pick<LinkProps, 'primary' | 'theme'>>`
 const StyledLink = styled(RouterLink)`
   ${styles};
   color: ${(props: any) => (props.primary ? props.theme.blue.dark : 'inherit')};
+  display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
 
 interface LinkProps {

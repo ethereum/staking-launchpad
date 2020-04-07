@@ -7,8 +7,7 @@ import { colors } from '../../styles/styledComponentsTheme';
 import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
-import { StoreState } from '../../store/reducers';
-import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
@@ -36,13 +35,16 @@ const Content = styled.div`
 
 interface OwnProps {}
 interface StateProps {
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
   workflow: WorkflowStep;
 }
 interface DispatchProps {}
 type Props = StateProps & DispatchProps & OwnProps;
 
-const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
+const _CongratulationsPage = ({
+  depositKeys,
+  workflow,
+}: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
   useEffect(() => {
     const getBalance = async () => {
@@ -61,7 +63,8 @@ const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
   })();
   const amountAddedPercent = (() => {
     const percent =
-      ((keyFiles.length * PRICE_PER_VALIDATOR) / MAINNET_ETH_REQUIREMENT) * 100;
+      ((depositKeys.length * PRICE_PER_VALIDATOR) / MAINNET_ETH_REQUIREMENT) *
+      100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
     return percent;
@@ -105,8 +108,8 @@ const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
               <ProgressBarInfo
                 title="You added:"
                 color={colors.blue.light}
-                amountEth={keyFiles.length * PRICE_PER_VALIDATOR}
-                amountValidators={keyFiles.length}
+                amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
+                amountValidators={depositKeys.length}
               />
               <ProgressBarInfo
                 title="Launch threshold:"
@@ -122,8 +125,11 @@ const _CongratulationsPage = ({ keyFiles, workflow }: Props): JSX.Element => {
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
-  keyFiles,
+const mapStateToProps = ({
+  depositFile,
+  workflow,
+}: StoreState): StateProps => ({
+  depositKeys: depositFile.keys,
   workflow,
 });
 

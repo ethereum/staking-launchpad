@@ -34,11 +34,11 @@ const Container = styled.div`
 `;
 
 interface Props {
-  fileAccepted: boolean;
+  isFileStaged: boolean;
   onDrop: (acceptedFiles: any) => void;
 }
 
-export const StyledDropzone = ({ fileAccepted, onDrop }: Props) => {
+export const StyledDropzone = ({ isFileStaged, onDrop }: Props) => {
   const {
     getRootProps,
     getInputProps,
@@ -53,7 +53,7 @@ export const StyledDropzone = ({ fileAccepted, onDrop }: Props) => {
     message = 'Please upload a valid JSON file ';
   }
 
-  if (fileAccepted) {
+  if (isFileStaged) {
     message = 'File successfully uploaded';
   }
 

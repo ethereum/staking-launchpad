@@ -4,17 +4,17 @@
 import _every from 'lodash/every';
 import { initBLS } from '@chainsafe/bls';
 import { verifySignature } from '../../utils/verifySignature';
-import { KeyFileInterface } from '../../store/actions/keyFileActions';
+import { DepositKeyInterface } from '../../store/reducers';
 
-export const validateKeyFile = async (
-  files: KeyFileInterface[]
+export const validateDepositKey = async (
+  files: DepositKeyInterface[]
 ): Promise<boolean> => {
   await initBLS();
 
   if (!Array.isArray(files)) return false;
   if (files.length <= 0) return false;
 
-  const keyFileStatuses: boolean[] = files.map(file => {
+  const depositKeysStatuses: boolean[] = files.map(file => {
     const {
       pubkey,
       withdrawal_credentials,
@@ -58,5 +58,5 @@ export const validateKeyFile = async (
     // perform BLS check
     return verifySignature(pubkey, signature, deposit_data_root);
   });
-  return _every(keyFileStatuses);
+  return _every(depositKeysStatuses);
 };

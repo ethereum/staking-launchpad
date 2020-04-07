@@ -5,7 +5,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import { connect } from 'react-redux';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import _every from 'lodash/every';
-import { StoreState } from '../../store/reducers';
+import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { Heading } from '../../components/Heading';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
@@ -20,10 +20,9 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
   DispatchTransactionStatusUpdateType,
-  KeyFileInterface,
   TransactionStatus,
   updateTransactionStatus,
-} from '../../store/actions/keyFileActions';
+} from '../../store/actions/depositFileActions';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
@@ -38,7 +37,7 @@ const NETWORK_ID = IS_MAINNET
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
-  keyFiles: KeyFileInterface[];
+  depositKeys: DepositKeyInterface[];
   workflow: WorkflowStep;
 }
 interface DispatchProps {
@@ -48,7 +47,7 @@ interface DispatchProps {
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _TransactionsPage = ({
-  keyFiles,
+  depositKeys,
   workflow,
   dispatchTransactionStatusUpdate,
   dispatchWorkflowUpdate,
@@ -60,12 +59,14 @@ const _TransactionsPage = ({
   const [routeToCongratulationsPage, setRouteToCongratulationsPage] = useState(
     false
   );
-  const totalTxCount = keyFiles.length;
-  const remainingTxCount = keyFiles.filter(
+  const totalTxCount = depositKeys.length;
+  const remainingTxCount = depositKeys.filter(
     file => file.transactionStatus === TransactionStatus.READY
   ).length;
   const allTxConfirmed = _every(
-    keyFiles.map(file => file.transactionStatus === TransactionStatus.SUCCEEDED)
+    depositKeys.map(
+      file => file.transactionStatus === TransactionStatus.SUCCEEDED
+    )
   );
 
   const createButtonText = (): string => {
@@ -78,7 +79,7 @@ const _TransactionsPage = ({
   };
 
   const handleAllTransactionsClick = () =>
-    keyFiles.forEach(async validator => {
+    depositKeys.forEach(async validator => {
       if (validator.transactionStatus === TransactionStatus.READY) {
         await handleTransaction(
           validator,
@@ -109,7 +110,7 @@ const _TransactionsPage = ({
     <WorkflowPageTemplate title="Transactions">
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          Transactions for {keyFiles.length} validators
+          Transactions for {depositKeys.length} validators
         </Heading>
         <Text className="mt20">
           You must sign an individual transaction for each key you created.
@@ -133,8 +134,11 @@ const _TransactionsPage = ({
   );
 };
 
-const mapStateToProps = ({ keyFiles, workflow }: StoreState): StateProps => ({
-  keyFiles,
+const mapStateToProps = ({
+  depositFile,
+  workflow,
+}: StoreState): StateProps => ({
+  depositKeys: depositFile.keys,
   workflow,
 });
 

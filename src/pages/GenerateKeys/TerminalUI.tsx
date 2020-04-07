@@ -61,7 +61,7 @@ export const TerminalUI = () => {
             typewriter
               .typeString(
                 `<span style="color: #06FF04; font-family: monospace">
-                  https://github.com/CarlBeek/eth2.0-deposit-tooling.git
+                  git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git
                 </span>`
               )
               .start();

@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { Paper } from '../../components/Paper';
 import { CodeBox } from '../../components/CodeBox';
 import { Heading } from '../../components/Heading';
@@ -18,7 +19,9 @@ export const LinuxInstructions = ({ validatorCount }: Props) => (
       <Text className="mt20 mb20">
         Type the following lines into the terminal window.
       </Text>
-      <TerminalUI />
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
+        <TerminalUI />
+      </ScrollAnimation>
       <CodeBox
         className="mt20"
         snippet="git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git"

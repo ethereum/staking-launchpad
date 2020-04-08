@@ -25,14 +25,18 @@ const styles = `
   };
  `;
 
-const StyledExternalLink = styled.a<Pick<LinkProps, 'primary' | 'theme' | 'inline'>>`
+const StyledExternalLink = styled.a<
+  Pick<LinkProps, 'primary' | 'theme' | 'inline'>
+>`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.blue.medium : 'inherit')};
+  color: ${(props: any) =>
+    props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
 const StyledLink = styled(RouterLink)`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.blue.medium : 'inherit')};
+  color: ${(props: any) =>
+    props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
 

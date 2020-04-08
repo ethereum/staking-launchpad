@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import ChartUrl from '../../static/StakingRewards.svg';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
+import { Link } from '../../components/Link';
 
 const Container = styled.div`
   background: ${p => p.theme.white};
@@ -47,6 +48,14 @@ export const StakingRewards = (): JSX.Element => {
             The rewards are tired to the overall amount of ETH staked in the
             network.
           </Text>
+          <Link
+            external
+            to="https://docs.google.com/spreadsheets/d/1jK_e0WKKbEg2Uh0RY_4m8b6CvPEElJvc4zeiHUCvJaU/edit#gid=1548910165"
+            className="my10"
+            primary
+          >
+            Learn more about eth2 economics →
+          </Link>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
           <APRChart src={ChartUrl} alt="" isMobile={m} />

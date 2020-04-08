@@ -86,7 +86,7 @@ const _SummaryPage = ({
     <WorkflowPageTemplate title="Summary">
       <Paper>
         <Heading level={3} size="small" color="blueDark">
-          Deposit Ceremony Summary
+          Launch Pad Summary
         </Heading>
         <Box className="flex flex-row space-between mt10">
           <Container>

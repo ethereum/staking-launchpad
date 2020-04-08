@@ -159,7 +159,7 @@ const _ConnectWalletPage = ({
         .catch(() => setBalance(null));
       return () => setBalance(null);
     }
-  }, [selectedWallet, walletProvider, library, chainId, depositKeys]);
+  }, [selectedWallet, walletProvider, library, chainId, depositKeys, account]);
 
   // sets the status copy on provider or network change
   useEffect(() => {
@@ -184,7 +184,7 @@ const _ConnectWalletPage = ({
         }`
       );
     }
-  });
+  }, [chainId, walletConnected, networkAllowed, error, balance, network]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.CONNECT_WALLET) {

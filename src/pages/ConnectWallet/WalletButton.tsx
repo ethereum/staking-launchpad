@@ -51,7 +51,7 @@ export const WalletButton = ({
     if (error || active) {
       setShowSpinner(false);
     }
-  });
+  }, [error, active, setShowSpinner]);
 
   const handleClick = async () => {
     if (!selectedWallet) {

@@ -52,6 +52,7 @@ export const _AcknowledgementProgressTracker = ({
               acknowledgementsWithCopy={acknowledgementsWithCopy}
               acknowledgementId={acknowledgementId}
               setActiveAcknowledgementId={setActiveAcknowledgementId}
+              /* eslint-disable-next-line eqeqeq */
               isActive={activeAcknowledgementId == acknowledgementId}
               acknowledgementState={acknowledgementState}
             />

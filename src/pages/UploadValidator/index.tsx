@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useMemo, useState } from 'react';
+import React, { SyntheticEvent, useCallback, useMemo, useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -99,13 +99,16 @@ const _UploadValidatorPage = ({
 
   // forcefully mutates the acceptedFiles array to clear it
   /* eslint-disable no-use-before-define */
-  function flushDropzoneCache() {
+  /* eslint-disable @typescript-eslint/no-use-before-define */
+  const flushDropzoneCache = useCallback(() => {
     acceptedFiles.length = 0;
     acceptedFiles.splice(0, acceptedFiles.length);
     if (inputRef.current) {
       inputRef.current.value = '';
     }
-  }
+    // @ts-ignore
+  }, [acceptedFiles, inputRef]);
+  /* eslint-enable @typescript-eslint/no-use-before-define */
   /* eslint-enable no-use-before-define */
 
   const onFileDrop = (acceptedFiles: Array<any>) => {
@@ -154,14 +157,21 @@ const _UploadValidatorPage = ({
     }
   }
 
-  function handleFileDelete(e: SyntheticEvent) {
-    e.preventDefault();
-    dispatchDepositFileNameUpdate('');
-    dispatchDepositFileKeyUpdate([]);
-    setIsFileStaged(false);
-    setIsFileAccepted(false);
-    flushDropzoneCache();
-  }
+  const handleFileDelete = useCallback(
+    (e: SyntheticEvent) => {
+      e.preventDefault();
+      dispatchDepositFileNameUpdate('');
+      dispatchDepositFileKeyUpdate([]);
+      setIsFileStaged(false);
+      setIsFileAccepted(false);
+      flushDropzoneCache();
+    },
+    [
+      dispatchDepositFileKeyUpdate,
+      dispatchDepositFileNameUpdate,
+      flushDropzoneCache,
+    ]
+  );
 
   const {
     isDragActive,
@@ -201,12 +211,11 @@ const _UploadValidatorPage = ({
       </div>
     );
   }, [
-    isDragActive,
-    isDragAccept,
     isDragReject,
     isFileStaged,
     isFileAccepted,
     depositFileName,
+    handleFileDelete,
   ]);
 
   if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // @ts-ignore
 import Typewriter from 'typewriter-effect';
@@ -12,6 +12,7 @@ const Container = styled.div`
   border-radius: 5px;
   position: relative;
 `;
+
 const Dot = styled.div`
   height: 10px;
   width: 10px;
@@ -25,67 +26,44 @@ const ControlContainer = styled.div`
   border-bottom: 1px solid;
   padding-bottom: 10px;
 `;
-
-const WindowControls = () => {
-  return (
-    <ControlContainer>
-      <Dot color="#ef655d" />
-      <Dot color="#ffcc13" />
-      <Dot color="#15e215" />
-    </ControlContainer>
-  );
-};
-
-const CopyBtn = (p: any) => {
-  const CopyContainer = styled.div`
-    color: #06ff04;
-    font-family: monospace;
-    font-size: 16px;
-    padding: 0 5px;
-    cursor: pointer;
-  `;
-
-  return (
-    <CopyContainer
-      onClick={() => {
-        navigator.clipboard.writeText(p.command);
-        p.setCopyIdx(p.idx);
-      }}
-    >
-      {p.copied ? 'Copied' : 'Copy'}
-    </CopyContainer>
-  );
-};
+const CopyContainer = styled.div`
+  color: #06ff04;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 0 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+`;
 
 export const TerminalUI = ({
-  validatorCount,
+  commands,
   animate,
 }: {
-  validatorCount: number | string;
+  commands: string[];
   animate: boolean;
 }) => {
   const opts = {
-    delay: 0,
+    delay: -5,
     cursor: '',
   };
   const delayMs = 2000;
 
-  const commands = [
-    'git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git',
-    'cd eth2.0-deposit-tooling',
-    'pip3 install -r requirements.txt',
-    `python3 deposit.py --num_validators ${validatorCount}`,
-  ];
-
-  const [copyIdx, setCopyIdx] = useState(999999999);
-
   return (
     <Container>
-      <WindowControls />
+      <ControlContainer>
+        <Dot color="#ef655d" />
+        <Dot color="#ffcc13" />
+        <Dot color="#15e215" />
+      </ControlContainer>
       <div className="p10">
         {animate &&
           commands.map((command, i) => (
-            <div className="flex space-between mb10">
+            <div
+              className="flex space-between mb10"
+              key={`${command}--${Math.random().toFixed(2)}`}
+            >
               <Typewriter
                 options={opts}
                 onInit={(typewriter: any) => {
@@ -93,8 +71,8 @@ export const TerminalUI = ({
                     .pauseFor(delayMs * i)
                     .typeString(
                       `<span style="color: #06FF04; font-family: monospace">
-                  ${command}
-                </span>`
+                           ${command}
+                          </span>`
                     )
                     .start();
                 }}
@@ -106,12 +84,11 @@ export const TerminalUI = ({
                 animationOut="fadeOut"
                 isVisible={animate}
               >
-                <CopyBtn
-                  copied={copyIdx === i}
-                  setCopyIdx={setCopyIdx}
-                  idx={i}
-                  command={command}
-                />
+                <CopyContainer
+                  onClick={() => navigator.clipboard.writeText(command)}
+                >
+                  Copy
+                </CopyContainer>
               </Animated>
             </div>
           ))}

@@ -18,7 +18,6 @@ import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { NumberInput } from './NumberInput';
-import { InfoBox } from '../../components/InfoBox';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
@@ -39,7 +38,6 @@ const Highlight = styled.span`
   margin-left: 5px;
 `;
 
-// TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
   margin: 20px;
@@ -99,8 +97,6 @@ const _GenerateKeysPage = ({
   //   return routeToCorrectWorkflowStep(workflow);
   // }
 
-  console.log(validatorCount);
-
   return (
     <WorkflowPageTemplate title="Generate Key Pairs">
       <Paper>
@@ -112,17 +108,15 @@ const _GenerateKeysPage = ({
             <Text className="mb5">Validators</Text>
             <NumberInput value={validatorCount} setValue={setValidatorCount} />
           </div>
-          <div className="ml20">
+          <div className="ml50">
             <Text className="mb5">Cost</Text>
-            <input type="number" style={{width: "300px"}} />
-
             <Text>
               {validatorCount === ''
                 ? validatorCount
                 : new BigNumber(validatorCount)
                     .times(new BigNumber(PRICE_PER_VALIDATOR))
                     .toFixed(1)
-                    .toString()}
+                    .toString()}{' '}
               ETH
             </Text>
           </div>
@@ -208,3 +202,37 @@ export const GenerateKeysPage = connect<
   mapStateToProps,
   mapDispatchToProps
 )(_GenerateKeysPage);
+
+//
+//
+//
+
+// {renderOSInstructions()}
+// <Paper className="mt20">
+// <Heading level={3} size="small" color="blueMedium">
+// 4. Save the key files and get the validator file ready
+// </Heading>
+// <Text className="mt20">
+// You should now be able to save the file
+// <Highlight>signing-keystore-....json</Highlight> which contains your
+// key pairs. Please make sure keep it safe, preferably offline.
+// </Text>
+// <InstructionImgContainer />
+// <Text>
+// The second file you will export is
+// <Highlight>deposit_data.json</Highlight> - you will need to upload in
+// the next step.
+// </Text>
+// <InstructionImgContainer />
+// </Paper>
+// <Paper className="mt20">
+// <CheckBox
+// onChange={onCheckboxClick}
+// checked={mnemonicAcknowledgementChecked}
+// label={
+// <Text>
+// I am keeping my keys safe and have backed up my mnemonic phrase.
+// </Text>
+// }
+// />
+// </Paper>

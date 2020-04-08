@@ -15,7 +15,7 @@ const styles = `
   display: inherit;
   text-decoration: none;
   &:hover {
-    font-weight: bold;
+    font-weight: 400;
   };
   &:focus,
   &:visited,

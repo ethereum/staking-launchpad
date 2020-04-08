@@ -26,6 +26,7 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import { Code } from '../../components/Code';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -54,16 +55,6 @@ const Highlighted = styled(Text)`
     text-decoration: underline;
     cursor: pointer;
   }
-`;
-const Code = styled(Text)`
-  border: 1px solid #dc8180;
-  background-color: ${(p: any) => p.theme.red.lightest};
-  display: inline-block;
-  border-radius: 4px;
-  padding: 0 4px;
-  color: #ad2b2a;
-  font-size: 14px;
-  line-height: 16px;
 `;
 const DeleteBtn = styled.span`
   cursor: pointer;

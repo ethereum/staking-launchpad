@@ -17,6 +17,12 @@ const StyledButton = styled.button`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  button:nth-child(1) {
+    border-radius: ${(p: any) => `0 ${p.theme.borderRadius} 0 0`};
+  }
+  button:nth-child(2) {
+    border-radius: ${(p: any) => `0 0 ${p.theme.borderRadius} 0`};
+  }
 `;
 const StyledInput = styled.input`
   width: 100%;
@@ -25,6 +31,9 @@ const StyledInput = styled.input`
   color: #444444;
   padding-left: 10px;
   box-sizing: border-box;
+  background-color: ${(p: any) => p.theme.gray.lightest};
+  border-radius: ${(p: any) =>
+    `${p.theme.borderRadius} 0 0 ${p.theme.borderRadius}`};
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;

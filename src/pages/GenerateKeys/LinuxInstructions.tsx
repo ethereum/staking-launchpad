@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Paper } from '../../components/Paper';
-import { CodeBox } from '../../components/CodeBox';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { TerminalUI } from './TerminalUI';
 import { Link } from '../../components/Link';
 import styled from 'styled-components';
+import { Code } from '../../components/Code';
 
 interface Props {
   validatorCount: number | string;
@@ -22,6 +22,15 @@ const Section = styled.div`
 
 export const LinuxInstructions = ({ validatorCount }: Props) => {
   const [animateTerminal, setAnimateTerminal] = useState<boolean>(false);
+  const terminalCommands = [
+    'git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git',
+    'cd eth2.0-deposit-tooling',
+    'pip3 install -r requirements.txt',
+    `python3 deposit.py --num_validators ${
+      // eslint-disable-next-line no-template-curly-in-string
+      validatorCount === 0 ? '${VALIDATOR_COUNT}' : validatorCount
+    }`,
+  ];
 
   return (
     <div style={{ animation: `fadeIn 1s` }}>
@@ -30,12 +39,13 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
           3. Install developer libraries
         </Heading>
         <Section>
-          <Heading level={4} size="small" color="blueMedium">
+          <Heading level={4} size="small" color="blueMedium" className="mb10">
             Install python3
           </Heading>
           <Text>
-            Installation may differ depending on your linux build. For the most
-            up-to-date installation instructions please visit{' '}
+            The python3 install process may differ depending on your linux
+            build. For the most up-to-date installation instructions, please
+            visit{' '}
             <Link
               primary
               inline
@@ -48,12 +58,14 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
           </Text>
         </Section>
         <Section>
-          <Heading level={4} size="small" color="blueMedium">
+          <Heading level={4} size="small" color="blueMedium" className="mb10">
             Install pip3
           </Heading>
-          <Text className="my10">
-            For a the most-up-to-date instructions on install pip3, please
-            reference the pip the documentation found{' '}
+          <Text>
+            You can install pip using a Linux Package Manager like{' '}
+            <Code>apt</Code> or <Code>yum</Code>. For the most-up-to-date
+            instructions on installing pip3, please reference the pip the
+            documentation found{' '}
             <Link
               inline
               external
@@ -62,15 +74,16 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
             >
               here
             </Link>
+            .
           </Text>
         </Section>
         <Section>
-          <Heading level={4} size="small" color="blueMedium">
+          <Heading level={4} size="small" color="blueMedium" className="mb10">
             Install git
           </Heading>
-          <Text className="my10">
+          <Text>
             If git is not already installed on your machine, you can find
-            install instructions
+            install instructions{' '}
             <Link
               inline
               external
@@ -79,6 +92,7 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
             >
               here
             </Link>
+            .
           </Text>
         </Section>
       </Paper>
@@ -96,10 +110,7 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
           // @ts-ignore
           afterAnimatedIn={() => setAnimateTerminal(true)}
         >
-          <TerminalUI
-            validatorCount={validatorCount}
-            animate={animateTerminal}
-          />
+          <TerminalUI commands={terminalCommands} animate={animateTerminal} />
         </ScrollAnimation>
       </Paper>
     </div>

@@ -93,9 +93,9 @@ const _GenerateKeysPage = ({
     }
   };
 
-  // if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
-  //   return routeToCorrectWorkflowStep(workflow);
-  // }
+  if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
+    return routeToCorrectWorkflowStep(workflow);
+  }
 
   return (
     <WorkflowPageTemplate title="Generate Key Pairs">
@@ -202,37 +202,3 @@ export const GenerateKeysPage = connect<
   mapStateToProps,
   mapDispatchToProps
 )(_GenerateKeysPage);
-
-//
-//
-//
-
-// {renderOSInstructions()}
-// <Paper className="mt20">
-// <Heading level={3} size="small" color="blueMedium">
-// 4. Save the key files and get the validator file ready
-// </Heading>
-// <Text className="mt20">
-// You should now be able to save the file
-// <Highlight>signing-keystore-....json</Highlight> which contains your
-// key pairs. Please make sure keep it safe, preferably offline.
-// </Text>
-// <InstructionImgContainer />
-// <Text>
-// The second file you will export is
-// <Highlight>deposit_data.json</Highlight> - you will need to upload in
-// the next step.
-// </Text>
-// <InstructionImgContainer />
-// </Paper>
-// <Paper className="mt20">
-// <CheckBox
-// onChange={onCheckboxClick}
-// checked={mnemonicAcknowledgementChecked}
-// label={
-// <Text>
-// I am keeping my keys safe and have backed up my mnemonic phrase.
-// </Text>
-// }
-// />
-// </Paper>

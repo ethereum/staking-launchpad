@@ -96,27 +96,27 @@ const _UploadValidatorPage = ({
 }: Props): JSX.Element => {
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
+  const {
+    acceptedFiles, // all JSON files will pass this check (including BLS failures
+    inputRef,
+  } = useDropzone({
+    accept: 'application/json',
+  });
 
-  // forcefully mutates the acceptedFiles array to clear it
-  /* eslint-disable no-use-before-define */
-  /* eslint-disable @typescript-eslint/no-use-before-define */
   const flushDropzoneCache = useCallback(() => {
     acceptedFiles.length = 0;
     acceptedFiles.splice(0, acceptedFiles.length);
     if (inputRef.current) {
       inputRef.current.value = '';
     }
-    // @ts-ignore
   }, [acceptedFiles, inputRef]);
-  /* eslint-enable @typescript-eslint/no-use-before-define */
-  /* eslint-enable no-use-before-define */
 
-  const onFileDrop = (acceptedFiles: Array<any>) => {
+  const onFileDrop = (jsonFiles: Array<any>) => {
     // check if the file is JSON
-    if (acceptedFiles.length === 1) {
+    if (jsonFiles.length === 1) {
       setIsFileStaged(true); // unstaged via handleFileDelete
       setIsFileAccepted(true); // rejected if BLS check fails
-      dispatchDepositFileNameUpdate(acceptedFiles[0].name);
+      dispatchDepositFileNameUpdate(jsonFiles[0].name);
       const reader = new FileReader();
       reader.onload = async event => {
         if (event.target) {
@@ -147,7 +147,7 @@ const _UploadValidatorPage = ({
           }
         }
       };
-      reader.readAsText(acceptedFiles[0]);
+      reader.readAsText(jsonFiles[0]);
     }
   };
 
@@ -177,8 +177,6 @@ const _UploadValidatorPage = ({
     isDragActive,
     isDragAccept,
     isDragReject,
-    acceptedFiles, // all JSON files will pass this check (including BLS failures)
-    inputRef,
     getRootProps,
     getInputProps,
   } = useDropzone({

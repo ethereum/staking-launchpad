@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { Animated } from 'react-animated-css';
@@ -7,7 +7,7 @@ import {
   AbstractConnector,
   AbstractConnector as AbstractConnectorInterface,
 } from '@web3-react/abstract-connector';
-import { useWeb3React } from '@web3-react/core';
+import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { formatEther } from '@ethersproject/units';
 import { NoEthereumProviderError } from '@web3-react/injected-connector';
@@ -40,7 +40,6 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 // styled components
@@ -114,10 +113,6 @@ const _ConnectWalletPage = ({
   dispatchWorkflowUpdate,
   depositKeys,
 }: Props): JSX.Element => {
-  // setup RPC event listener
-  const attemptedMMConnection: boolean = useMetamaskEagerConnect();
-  useMetamaskListener(!attemptedMMConnection);
-
   // get wallet info from Web3React
   const {
     active: walletConnected,
@@ -129,6 +124,7 @@ const _ConnectWalletPage = ({
     library,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
 
+  // initialize state
   const [balance, setBalance] = useState<number | null>(null);
   const [lowBalance, setLowBalance] = useState<boolean>(false);
   const [selectedWallet, setSelectedWallet] = useState<
@@ -137,6 +133,17 @@ const _ConnectWalletPage = ({
   const [network, setNetwork] = useState<string>('');
   const [networkAllowed, setNetworkAllowed] = useState<boolean>(false);
   const [status, setStatus] = useState<string>('');
+  const isInvalidNetwork = useMemo(() => {
+    return (
+      error &&
+      (error instanceof UnsupportedChainIdError ||
+        error.message === 'Invariant failed: chainId 0xNaN is not an integer')
+    );
+  }, [error]);
+
+  // setup RPC event listener
+  const attemptedMMConnection: boolean = useMetamaskEagerConnect();
+  useMetamaskListener(!attemptedMMConnection);
 
   // sets the balance to the current wallet on provider or network change
   useEffect((): any => {
@@ -200,9 +207,9 @@ const _ConnectWalletPage = ({
     return '';
   };
 
-  if (workflow < WorkflowStep.CONNECT_WALLET) {
-    return routeToCorrectWorkflowStep(workflow);
-  }
+  // if (workflow < WorkflowStep.CONNECT_WALLET) {
+  //   return routeToCorrectWorkflowStep(workflow);
+  // }
 
   return (
     <WorkflowPageTemplate title="Connect Wallet">
@@ -312,6 +319,12 @@ const _ConnectWalletPage = ({
 
       {error && error instanceof NoEthereumProviderError && (
         <div className="flex center mt20">Please install MetaMask.</div>
+      )}
+
+      {isInvalidNetwork && (
+        <div className="flex center mt20">
+          The selected network is not supported.
+        </div>
       )}
 
       <div className="flex center p30 mt20">

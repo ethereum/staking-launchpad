@@ -49,7 +49,7 @@ export const WalletButton = ({
 
   const handleClick = async () => {
     if (!selectedWallet) {
-      setTimeout(() => setShowSpinner(true), 100); // avoids spinner flash  when metamask connects instantly
+      setShowSpinner(true);
       setSelectedWallet(walletProvider);
       await activate(walletProvider);
       setSelectedWallet(undefined);

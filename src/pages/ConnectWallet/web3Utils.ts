@@ -44,7 +44,6 @@ enum Mainnet {
 
 export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
-console.log('mm using : ', supportedNetworks);
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
 });

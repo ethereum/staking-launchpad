@@ -55,7 +55,7 @@ export const AppBar = () => {
         <Link to={routesEnum.landingPage}>
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           <Heading level={4} margin="none" style={{ padding: '8px 0' }}>
-            ETH 2 deposit ceremony
+            ETH 2 Launch Pad
           </Heading>
         </Link>
       </div>

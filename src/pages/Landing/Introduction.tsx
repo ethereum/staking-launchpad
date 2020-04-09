@@ -86,7 +86,7 @@ export const Introduction = (): JSX.Element => {
               that help the network reach consensus.
             </Text>
             <Text className="mt25">
-              This deposit ceremony takes you through how to become one.
+              This Launch Pad takes you through how to become one.
             </Text>
           </ScrollAnimation>
         </ContentContainer>

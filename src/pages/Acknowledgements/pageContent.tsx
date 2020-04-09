@@ -40,9 +40,9 @@ export const pageContent = {
     title: 'Signing up',
     content: (
       <Text size="large" className="my10">
-        In order to become a validator on the eth2 beacon chain, one needs to
-        deposit ${PRICE_PER_VALIDATOR} ETH (in exchange for bETH). This process
-        cannot be reversed
+        To become a validator on the eth2, one needs to deposit
+        {PRICE_PER_VALIDATOR}
+        ETH. This process cannot be reversed.
       </Text>
     ),
     acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
@@ -52,17 +52,22 @@ export const pageContent = {
     content: (
       <>
         <Text size="large" className="my10">
-          Only validators that actively participate in consensus receive
-          rewards. Those that are offline are penalised - where the penalties
-          for being offline are equal to the rewards for actively participating.
+          Only validators that actively participate in consensus, receive
+          rewards. Those that are offline are penalized. The penalties for being
+          offline are equal to the rewards for actively participating.
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about the duties of a validator
+        <Link
+          external
+          to="https://docs.google.com/spreadsheets/d/1jK_e0WKKbEg2Uh0RY_4m8b6CvPEElJvc4zeiHUCvJaU/edit#gid=1548910165"
+          className="my10"
+          primary
+        >
+          Learn more about eth2 economics
           <FormNext color="blueDark" />
         </Link>
       </>
     ),
-    acknowledgementText: 'I understand what validators do.',
+    acknowledgementText: 'I understand my responsibilities as a validator.',
   },
   [AcknowledgementIdsEnum.slashing]: {
     title: 'Slashing Risks',
@@ -70,7 +75,7 @@ export const pageContent = {
       <>
         <Text size="large" className="my10">
           Validators that act maliciously, or contrary to the specification, are
-          liable to be slashed (incur a large penalty)
+          liable to be slashed (incur a large penalty).
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
           Learn More about about penalties <FormNext color="blueDark" />
@@ -90,7 +95,7 @@ export const pageContent = {
       </Text>
     ),
     acknowledgementText:
-      'I understand that my mnemonic is the ❗️ONLY WAY❗️ to withdraw my funds.',
+      'I understand that my mnemonic is the ONLY WAY to withdraw my funds.',
   },
   [AcknowledgementIdsEnum.signingKeys]: {
     title: 'Signing Keys',
@@ -98,7 +103,7 @@ export const pageContent = {
       <Text size="large" className="my10">
         This process will produce 1 key-store for each of your validators. You
         will need to give these to your validator software to begin validating.
-        You will also receive one deposits file to upload to this website.
+        You will also receive one deposit file to upload to this website.
       </Text>
     ),
     acknowledgementText:
@@ -107,14 +112,19 @@ export const pageContent = {
   [AcknowledgementIdsEnum.transferDelay]: {
     title: 'Transfer delay',
     content: (
-      <Text size="large" className="my10">
-        Transfers between validators are disabled until at least phase 1. And
-        validators will have to wait until phase 2 – around two years – to be
-        able to withdraw to a specific shard.
-      </Text>
+      <>
+        <Text size="large" className="my10">
+          Transfers between validators are disabled until at least phase 1.
+          Validators will have to wait until phase 2 (around two years) to be
+          able to withdraw to a specific shard.
+        </Text>
+        <Link external to="https://www.google.com" className="my10" primary>
+          Learn More about about sharding <FormNext color="blueDark" />
+        </Link>
+      </>
     ),
     acknowledgementText:
-      'I understand that I CANNOT TRANSFER my staked ETH until at least phase 1 and withdraw until phase 2.',
+      'I understand that I CAN NOT TRANSFER my staked ETH until at least phase 1, and I CAN NOT withdraw until phase 2.',
   },
   [AcknowledgementIdsEnum.commitment]: {
     title: 'Long-term commitment',
@@ -126,7 +136,7 @@ export const pageContent = {
       </Text>
     ),
     acknowledgementText:
-      'Once I exit, I cannot rejoin until at least phase 1. This is a long term commitment.',
+      'Once I exit, I can not rejoin until at least phase 1. This is a long term commitment.',
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
     title: 'Early adopter risks',
@@ -138,16 +148,20 @@ export const pageContent = {
       </Text>
     ),
     acknowledgementText:
-      'I am an early adopter and I accept that software and design bugs may result in me being slashed.',
+      'I am an early adopter, and I accept that software and design bugs may result in me being slashed.',
   },
   [AcknowledgementIdsEnum.confirmation]: {
-    title: 'Do you agree to everything?',
+    title: 'Confirmation',
     content: (
       <>
-        <Text>Some more text about what you are agreeing to.</Text>
-        <Text>Perhaps some more text?</Text>
+        <Text size="large" className="my10">
+          In order to become a validator, you will generate your new eth2 key
+          pairs. To do this you need to be technically capable of running
+          commands in a terminal on a desktop computer.
+        </Text>
       </>
     ),
-    acknowledgementText: 'Final confirmation copy',
+    acknowledgementText:
+      'I agree to all of the previous sections, and I am technically capable of setting up and running a validator',
   },
 };

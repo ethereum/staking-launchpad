@@ -41,6 +41,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 // styled components
 const Container = styled.div`
@@ -207,9 +208,9 @@ const _ConnectWalletPage = ({
     return '';
   };
 
-  // if (workflow < WorkflowStep.CONNECT_WALLET) {
-  //   return routeToCorrectWorkflowStep(workflow);
-  // }
+  if (workflow < WorkflowStep.CONNECT_WALLET) {
+    return routeToCorrectWorkflowStep(workflow);
+  }
 
   return (
     <WorkflowPageTemplate title="Connect Wallet">

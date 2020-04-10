@@ -7,6 +7,7 @@ interface LinkProps {
   theme?: any;
   className?: string;
   href?: string;
+  inline?: boolean;
 }
 
 const styles = `
@@ -14,7 +15,7 @@ const styles = `
   display: inherit;
   text-decoration: none;
   &:hover {
-    font-weight: bold;
+    font-weight: 400;
   };
   &:focus,
   &:visited,
@@ -24,13 +25,18 @@ const styles = `
   };
  `;
 
-const StyledExternalLink = styled.a<Pick<LinkProps, 'primary' | 'theme'>>`
+const StyledExternalLink = styled.a<
+  Pick<LinkProps, 'primary' | 'theme' | 'inline'>
+>`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.blue.dark : 'inherit')};
+  color: ${(props: any) =>
+    props.primary ? props.theme.blue.medium : 'inherit'};
+  display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
 const StyledLink = styled(RouterLink)`
   ${styles};
-  color: ${(props: any) => (props.primary ? props.theme.blue.dark : 'inherit')};
+  color: ${(props: any) =>
+    props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
 
@@ -42,10 +48,11 @@ interface LinkProps {
   className?: string;
   primary?: boolean | undefined;
   onClick?: (param?: any) => void;
+  inline?: boolean;
 }
 
 export const Link = (props: LinkProps) => {
-  const { external, children, className, to, primary } = props;
+  const { external, children, className, to, primary, inline } = props;
   if (external) {
     return (
       <StyledExternalLink
@@ -53,6 +60,7 @@ export const Link = (props: LinkProps) => {
         href={to}
         primary={primary}
         target="_blank"
+        inline={inline}
       >
         {children}
       </StyledExternalLink>

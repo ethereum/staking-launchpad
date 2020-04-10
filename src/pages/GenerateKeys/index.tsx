@@ -18,13 +18,14 @@ import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { NumberInput } from './NumberInput';
-import { InfoBox } from '../../components/InfoBox';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import instructions1 from '../../static/instructions_1.svg';
+import instructions2 from '../../static/instructions_2.svg';
 
 export enum operatingSystem {
   'MAC',
@@ -34,13 +35,16 @@ export enum operatingSystem {
 
 const Highlight = styled.span`
   color: ${p => p.theme.blue.medium};
+  margin-left: 5px;
 `;
 
-// TODO: Add an actual image to this container
 const InstructionImgContainer = styled.div`
   height: 250px;
-  border: 1px solid black;
   margin: 20px;
+  border: 1px solid ${(p: any) => p.theme.gray.medium};
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
 `;
 
 // Prop definitions
@@ -57,7 +61,7 @@ const _GenerateKeysPage = ({
   dispatchWorkflowUpdate,
   workflow,
 }: Props): JSX.Element => {
-  const [validatorCount, setValidatorCount] = useState<number>(0);
+  const [validatorCount, setValidatorCount] = useState<number | string>(0);
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
@@ -83,7 +87,7 @@ const _GenerateKeysPage = ({
       case operatingSystem.MAC:
         return <MacInstructions validatorCount={validatorCount} />;
       case operatingSystem.WINDOWS:
-        return <WindowsInstructions />;
+        return <WindowsInstructions validatorCount={validatorCount} />;
       default:
         return null;
     }
@@ -104,17 +108,17 @@ const _GenerateKeysPage = ({
             <Text className="mb5">Validators</Text>
             <NumberInput value={validatorCount} setValue={setValidatorCount} />
           </div>
-          <div className="ml20">
+          <div className="ml50">
             <Text className="mb5">Cost</Text>
-            <InfoBox>
-              <Text>
-                {new BigNumber(validatorCount)
-                  .times(new BigNumber(PRICE_PER_VALIDATOR))
-                  .toFixed(1)
-                  .toString()}
-                ETH
-              </Text>
-            </InfoBox>
+            <Text>
+              {validatorCount === ''
+                ? validatorCount
+                : new BigNumber(validatorCount)
+                    .times(new BigNumber(PRICE_PER_VALIDATOR))
+                    .toFixed(1)
+                    .toString()}{' '}
+              ETH
+            </Text>
           </div>
         </div>
       </Paper>
@@ -127,23 +131,30 @@ const _GenerateKeysPage = ({
         </Text>
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
       </Paper>
+
       {renderOSInstructions()}
+
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
           4. Save the key files and get the validator file ready
         </Heading>
         <Text className="mt20">
-          You should now be able to save the file
-          <Highlight>signing-keystore-....json</Highlight> which contains your
-          key pairs. Please make sure keep it safe, preferably offline.
+          You should now be able to save a
+          <Highlight>signing-keystore-....json</Highlight> file for each
+          validator, which contains your key pairs. Please make sure keep these
+          safe, preferably offline.
         </Text>
-        <InstructionImgContainer />
+        <InstructionImgContainer>
+          <img src={instructions1} alt="" />
+        </InstructionImgContainer>
         <Text>
           The second file you will export is
           <Highlight>deposit_data.json</Highlight> - you will need to upload in
           the next step.
         </Text>
-        <InstructionImgContainer />
+        <InstructionImgContainer>
+          <img src={instructions2} alt="" />
+        </InstructionImgContainer>
       </Paper>
       <Paper className="mt20">
         <CheckBox
@@ -156,6 +167,7 @@ const _GenerateKeysPage = ({
           }
         />
       </Paper>
+
       <div className="flex center p30">
         <Link to={routesEnum.acknowledgementPage}>
           <Button className="mr10" width={100} label="Back" />

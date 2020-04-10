@@ -10,10 +10,19 @@ const StyledButton = styled.button`
   :focus {
     outline: none;
   }
+  :hover {
+    background-color: ${(p: any) => p.theme.gray.lightest};
+  }
 `;
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  button:nth-child(1) {
+    border-radius: ${(p: any) => `0 ${p.theme.borderRadius} 0 0`};
+  }
+  button:nth-child(2) {
+    border-radius: ${(p: any) => `0 0 ${p.theme.borderRadius} 0`};
+  }
 `;
 const StyledInput = styled.input`
   width: 100%;
@@ -22,6 +31,9 @@ const StyledInput = styled.input`
   color: #444444;
   padding-left: 10px;
   box-sizing: border-box;
+  background-color: ${(p: any) => p.theme.gray.lightest};
+  border-radius: ${(p: any) =>
+    `${p.theme.borderRadius} 0 0 ${p.theme.borderRadius}`};
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
@@ -38,15 +50,14 @@ const StyledInput = styled.input`
 `;
 
 interface Props {
-  value: number;
-  setValue: (e: any) => void;
+  value: number | string;
+  setValue: (e: number) => void;
 }
 
 export const NumberInput = ({ value, setValue }: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
     const val = e.target.value.replace(/\./g, ''); // remove "." to force integer input
-    if (e.target.validity.valid) setValue(val);
-    else if (val === '') setValue(val); // allow empty
+    setValue(val);
   };
 
   const decrement = () => {

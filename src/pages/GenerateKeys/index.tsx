@@ -139,9 +139,10 @@ const _GenerateKeysPage = ({
           4. Save the key files and get the validator file ready
         </Heading>
         <Text className="mt20">
-          You should now be able to save the file
-          <Highlight>signing-keystore-....json</Highlight> which contains your
-          key pairs. Please make sure keep it safe, preferably offline.
+          You should now be able to save a
+          <Highlight>signing-keystore-....json</Highlight> file for each
+          validator, which contains your key pairs. Please make sure keep these
+          safe, preferably offline.
         </Text>
         <InstructionImgContainer>
           <img src={instructions1} alt="" />

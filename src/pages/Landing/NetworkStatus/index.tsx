@@ -6,7 +6,11 @@ import { Text } from '../../../components/Text';
 import { ProgressBar } from './ProgressBar';
 import { queryContract } from '../../../utils/queryContract';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
-import { IS_MAINNET, MAINNET_ETH_REQUIREMENT } from '../../../utils/envVars';
+import {
+  IS_MAINNET,
+  MAINNET_ETH_REQUIREMENT,
+  INFURA_PROJECT_ID,
+} from '../../../utils/envVars';
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
@@ -34,17 +38,19 @@ const BoldGray = styled.span`
   font-weight: bold;
 `;
 
-export const NetworkStatus = (): JSX.Element => {
+export const NetworkStatus = (): JSX.Element | null => {
   const m: boolean = (window as any).mobileCheck();
   const [amountEth, setAmountEth] = useState(0);
 
   useEffect(() => {
-    const getBalance = async () => {
-      const ethBalance = await queryContract();
-      setAmountEth(ethBalance);
-    };
+    if (!INFURA_PROJECT_ID || INFURA_PROJECT_ID === '') {
+      const getBalance = async () => {
+        const ethBalance = await queryContract();
+        setAmountEth(ethBalance);
+      };
 
-    getBalance();
+      getBalance();
+    }
   });
 
   const calculatePercentage = (amountEth: number) => {
@@ -60,6 +66,8 @@ export const NetworkStatus = (): JSX.Element => {
 
   const calculateLaunchThreshold = () =>
     (MAINNET_ETH_REQUIREMENT - amountEth).toFixed(1);
+
+  if (!INFURA_PROJECT_ID || INFURA_PROJECT_ID === '') return null;
 
   return (
     <Container isMobile={m}>

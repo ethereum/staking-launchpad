@@ -24,7 +24,13 @@ const CtaText = ({ mobile }: { mobile?: boolean }) => {
   `;
   return (
     <span>
-      GET <Rhino>🦏</Rhino> STARTED {mobile ? 'ON DESKTOP' : ''}
+      GET{' '}
+      <Rhino>
+        <span role="img" aria-label="rhino">
+          🦏
+        </span>
+      </Rhino>{' '}
+      STARTED {mobile ? 'ON DESKTOP' : ''}
     </span>
   );
 };

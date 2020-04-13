@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Spinner } from 'react-rainbow-components';
+import { Spinning } from 'grommet-controls';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -21,12 +21,6 @@ const StyledText = styled(Text)`
 const StyledPaper = styled(Paper)`
   box-shadow: ${(p: { isActive: boolean }) =>
     p.isActive && `0 0 10px rgba(0, 0, 0, 0.5)`};
-`;
-const StyledSpinner = styled(Spinner)`
-  height: 25px;
-  width: 25px;
-  top: 40px;
-  left: 88%;
 `;
 
 export const WalletButton = ({
@@ -51,11 +45,11 @@ export const WalletButton = ({
     if (error || active) {
       setShowSpinner(false);
     }
-  });
+  }, [error, active, setShowSpinner]);
 
   const handleClick = async () => {
     if (!selectedWallet) {
-      setTimeout(() => setShowSpinner(true), 100); // avoids spinner flash  when metamask connects instantly
+      setShowSpinner(true);
       setSelectedWallet(walletProvider);
       await activate(walletProvider);
       setSelectedWallet(undefined);
@@ -71,7 +65,11 @@ export const WalletButton = ({
     >
       <Logo src={logoSource} />
       <StyledText>{title}</StyledText>
-      {showSpinner && <StyledSpinner />}
+      {showSpinner && (
+        <span className="mt20 mr10">
+          <Spinning kind="pulse" />
+        </span>
+      )}
     </StyledPaper>
   );
 };

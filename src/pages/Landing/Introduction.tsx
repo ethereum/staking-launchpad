@@ -64,12 +64,12 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              introduction to the sign up process
+              Introduction to the sign up process
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
             <Text className="mt25">
-              eth2 is the next generation of Ethereum. It’s a multi-year plan to
+              Eth2 is the next generation of Ethereum. It’s a multi-year plan to
               improve the scalability, security and programmability of Ethereum,
               without compromising on decentralization.
             </Text>

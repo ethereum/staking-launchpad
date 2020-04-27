@@ -22,13 +22,13 @@ export const pageContent = {
         <Text size="large" className="my10">
           For this, we need active participants - known as validators - to
           propose, verify, and vouch for the validity of blocks. In exchange,
-          honest validators receive financial rewards
+          honest validators receive financial rewards.
         </Text>
         <Text size="large" className="my10">
           Importantly, validators need to post ETH as collateral - in other
           words, have some funds at stake. The only way to become a validator is
-          to make a one-way ETH transaction to a deposit contract on Ethereum
-          1.0
+          to make a one-way ETH transaction to the deposit contract on Ethereum
+          1.0.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
           Learn More <FormNext color="blueDark" />
@@ -40,9 +40,9 @@ export const pageContent = {
     title: 'Signing up',
     content: (
       <Text size="large" className="my10">
-        To become a validator on the eth2, one needs to deposit
+        To become a validator on the eth2, you need to deposit
         {PRICE_PER_VALIDATOR}
-        ETH. This process cannot be reversed.
+        ETH per validator that you wish to run. This process cannot be reversed.
       </Text>
     ),
     acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
@@ -67,7 +67,7 @@ export const pageContent = {
         </Link>
       </>
     ),
-    acknowledgementText: 'I understand my responsibilities as a validator.',
+    acknowledgementText: 'I understand that it important to keep my validator online and updated.',
   },
   [AcknowledgementIdsEnum.slashing]: {
     title: 'Slashing Risks',
@@ -89,9 +89,9 @@ export const pageContent = {
     title: 'Backup Mnemonic',
     content: (
       <Text size="large" className="my10">
-        Each validators’ keys will be derived from a unique mnemonic (or seed)
-        phrase. Validators will NEED this mnemonic to be able to withdraw their
-        funds. It also serves as a backup for the signing key.
+        Validator keys are are derived from a unique mnemonic (or seed).
+        Your seed is the ONLY WAY to withdraw your funds.
+        Above all, keep it safe!
       </Text>
     ),
     acknowledgementText:
@@ -101,13 +101,15 @@ export const pageContent = {
     title: 'Signing Keys',
     content: (
       <Text size="large" className="my10">
-        This process will produce 1 key-store for each of your validators. You
-        will need to give these to your validator software to begin validating.
-        You will also receive one deposit file to upload to this website.
+        This Launchpad will help you create keys for each of your validators.
+        These keys will be saved in key-stores and you will need to give these
+         to your validator software to begin validating.
+        You will also receive a deposit file to upload to this website with the
+         public keys for your validator.
       </Text>
     ),
     acknowledgementText:
-      'I will safeguard my signing key-stores and give them to my validator software when I am supposed to start validating.',
+      'I will safeguard my key-stores and give them to my validator software in order to start validating.',
   },
   [AcknowledgementIdsEnum.transferDelay]: {
     title: 'Transfer delay',
@@ -119,12 +121,12 @@ export const pageContent = {
           able to withdraw to a specific shard.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about about sharding <FormNext color="blueDark" />
+          Learn More about eth2's phases <FormNext color="blueDark" />
         </Link>
       </>
     ),
     acknowledgementText:
-      'I understand that I CAN NOT TRANSFER my staked ETH until at least phase 1, and I CAN NOT withdraw until phase 2.',
+      'I understand that I CAN NOT TRANSFER my staked ETH until at least phase 1, and I CAN NOT WITHDRAW until phase 2.',
   },
   [AcknowledgementIdsEnum.commitment]: {
     title: 'Long-term commitment',
@@ -156,8 +158,8 @@ export const pageContent = {
       <>
         <Text size="large" className="my10">
           In order to become a validator, you will generate your new eth2 key
-          pairs. To do this you need to be technically capable of running
-          commands in a terminal on a desktop computer.
+          pairs. To do this and to install the validator software you need to
+          be technically capable of running commands in a terminal on a computer.
         </Text>
       </>
     ),

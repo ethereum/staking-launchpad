@@ -37,7 +37,7 @@ export const SignupSteps = (): JSX.Element => {
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <Heading level={2} size="medium" color="blueDark" margin="none">
-          sign up in 3 easy steps
+          Sign up in 3 easy steps
         </Heading>
       </ScrollAnimation>
       <StepsContainer>
@@ -52,14 +52,14 @@ export const SignupSteps = (): JSX.Element => {
           <Step
             imgUrl={GenerateKeyImgUrl}
             title="Generate validator keys offline"
-            content="In order to register on the beacon chain, you need to generate a keypair and upload the the public key."
+            content="In order to become a validator, you need to generate new keys to identify and secure your validator."
           />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             imgUrl={DepositImgUrl}
-            title="Deposit ETH in exchange for bETH"
-            content={`After depositing ${PRICE_PER_VALIDATOR} ETH per validator, you receive ${PRICE_PER_VALIDATOR} bETH and become an important part of the network!`}
+            title="Transfer your ETH to eth2"
+            content={`After depositing ${PRICE_PER_VALIDATOR} ETH per validator, your validators & ETH will become active on eth2!`}
           />
         </ScrollAnimation>
       </StepsContainer>

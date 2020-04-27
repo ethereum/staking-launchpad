@@ -39,12 +39,12 @@ export const StakingRewards = (): JSX.Element => {
       <SubContainer isMobile={m}>
         <ScrollAnimation animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            staking and rewards
+            Staking and rewards
           </Heading>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
-            Validators get rewarded for proposing and attesting to and blocks.
+            Validators get rewarded for proposing and attesting to blocks.
             The rewards are tired to the overall amount of ETH staked in the
             network.
           </Text>
@@ -54,7 +54,7 @@ export const StakingRewards = (): JSX.Element => {
             className="my10"
             primary
           >
-            Learn more about eth2 economics →
+            Learn more about the economics of eth2 →
           </Link>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>

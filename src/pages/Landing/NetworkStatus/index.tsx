@@ -66,13 +66,13 @@ export const NetworkStatus = (): JSX.Element => {
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            network status
+            Network status
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
               {numberWithCommas(amountEth)} ETH
             </BoldGreen>
-            in the network and counting
+            already staked and counting.
           </Text>
           <Text className="mt20">
             The eth2 network needs to reach at least
@@ -82,7 +82,7 @@ export const NetworkStatus = (): JSX.Element => {
             <BoldGray className="mr10" fontSize={24}>
               16,284 validators,
             </BoldGray>
-            to launch its {IS_MAINNET ? 'mainnet' : 'testnet'}
+            to launch the {IS_MAINNET ? 'mainnet' : 'testnet'}.
           </Text>
           <div>
             <ProgressBar workflow={calculatePercentage(amountEth)} />
@@ -92,7 +92,7 @@ export const NetworkStatus = (): JSX.Element => {
                   {numberWithCommas(amountEth)} ETH
                 </BoldGreen>
                 <Text size="small" style={{ marginTop: '2px' }}>
-                  Current Staking Balance
+                  Current staking balance
                 </Text>
               </span>
               <Text size="small">

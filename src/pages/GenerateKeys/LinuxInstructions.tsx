@@ -23,12 +23,12 @@ const Section = styled.div`
 export const LinuxInstructions = ({ validatorCount }: Props) => {
   const [animateTerminal, setAnimateTerminal] = useState<boolean>(false);
   const terminalCommands = [
-    'git clone https://github.com/CarlBeek/eth2.0-deposit-tooling.git',
-    'cd eth2.0-deposit-tooling',
+    'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
+    'cd eth2.0-deposit-cli',
     'pip3 install -r requirements.txt',
-    `python3 deposit.py --num_validators ${
+    `python3 eth2deposit/depsit.py ${
       // eslint-disable-next-line no-template-curly-in-string
-      validatorCount === 0 ? '${VALIDATOR_COUNT}' : validatorCount
+      validatorCount > 0 ? '--num_validators ' + validatorCount : ''
     }`,
   ];
 

@@ -40,7 +40,12 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import {
+  PORTIS_DAPP_ID,
+  INFURA_PROJECT_ID,
+  IS_MAINNET,
+  PRICE_PER_VALIDATOR,
+} from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 // styled components
@@ -57,18 +62,14 @@ const WalletConnectedContainer = styled.div`
 `;
 const WalletButtonContainer = styled.div`
   margin: auto;
-  .wallet-button-sub-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 750px;
-    margin: auto;
-    @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
-      width: 400px;
-    }
-  }
-  .wallet-button {
-    width: 350px;
-    margin: 10px;
+`;
+const WalletButtonSubContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 750px;
+  margin: auto;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
+    width: 400px;
   }
 `;
 const WalletInfoContainer = styled.div`
@@ -288,7 +289,7 @@ const _ConnectWalletPage = ({
             animationInDuration={200}
             animationOutDuration={200}
           >
-            <div className="wallet-button-sub-container">
+            <WalletButtonSubContainer>
               <WalletButton
                 selectedWallet={selectedWallet}
                 setSelectedWallet={setSelectedWallet}
@@ -297,7 +298,9 @@ const _ConnectWalletPage = ({
                 title="Metamask"
                 error={walletProvider === metamask ? error : undefined}
               />
+
               <WalletButton
+                invalid={PORTIS_DAPP_ID === ''}
                 selectedWallet={selectedWallet}
                 setSelectedWallet={setSelectedWallet}
                 logoSource={portisLogo}
@@ -305,7 +308,9 @@ const _ConnectWalletPage = ({
                 title="Portis"
                 error={walletProvider === portis ? error : undefined}
               />
+
               <WalletButton
+                invalid={INFURA_PROJECT_ID === ''}
                 selectedWallet={selectedWallet}
                 setSelectedWallet={setSelectedWallet}
                 logoSource={fortmaticLogo}
@@ -313,7 +318,7 @@ const _ConnectWalletPage = ({
                 title="Fortmatic"
                 error={walletProvider === fortmatic ? error : undefined}
               />
-            </div>
+            </WalletButtonSubContainer>
           </Animated>
         </WalletButtonContainer>
       </Container>

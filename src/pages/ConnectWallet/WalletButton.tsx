@@ -16,11 +16,14 @@ const Logo = styled.img`
 
 const StyledText = styled(Text)`
   margin: auto;
-  font-size: 24px;
+  font-size: ${(p: { invalid?: boolean }) => (p.invalid ? '14px' : '24px')};
+  text-align: center;
 `;
 const StyledPaper = styled(Paper)`
   box-shadow: ${(p: { isActive: boolean }) =>
     p.isActive && `0 0 10px rgba(0, 0, 0, 0.5)`};
+  width: 350px;
+  margin: 10px;
 `;
 
 export const WalletButton = ({
@@ -30,6 +33,7 @@ export const WalletButton = ({
   logoSource,
   selectedWallet,
   setSelectedWallet,
+  invalid,
 }: {
   title: string;
   walletProvider: any;
@@ -37,6 +41,7 @@ export const WalletButton = ({
   logoSource: string;
   selectedWallet: AbstractConnector | undefined | null;
   setSelectedWallet(wallet?: AbstractConnector): void;
+  invalid?: boolean;
 }) => {
   const { activate, active } = useWeb3React<Web3Provider>();
   const [showSpinner, setShowSpinner] = useState<boolean>(false);
@@ -60,11 +65,15 @@ export const WalletButton = ({
     <StyledPaper
       pad="xsmall"
       className="wallet-button flex flex-row relative"
-      onClick={handleClick}
+      onClick={() => {
+        if (!invalid) handleClick();
+      }}
       isActive={selectedWallet === walletProvider}
     >
       <Logo src={logoSource} />
-      <StyledText>{title}</StyledText>
+      <StyledText invalid={invalid}>
+        {`${title} ${invalid ? 'is not supported in offline mode.' : ''}`}
+      </StyledText>
       {showSpinner && (
         <span className="mt20 mr10">
           <Spinning kind="pulse" />

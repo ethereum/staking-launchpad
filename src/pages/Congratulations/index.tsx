@@ -11,6 +11,7 @@ import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
+  INFURA_PROJECT_ID,
   MAINNET_ETH_REQUIREMENT,
   PRICE_PER_VALIDATOR,
 } from '../../utils/envVars';
@@ -45,14 +46,18 @@ const _CongratulationsPage = ({
   depositKeys,
   workflow,
 }: Props): JSX.Element => {
+  const shouldRenderProgressBar = INFURA_PROJECT_ID !== '';
   const [amountEth, setAmountEth] = useState(0);
-  useEffect(() => {
-    const getBalance = async () => {
-      const ethBalance = await queryContract();
-      setAmountEth(ethBalance);
-    };
 
-    getBalance();
+  useEffect(() => {
+    if (shouldRenderProgressBar) {
+      const getBalance = async () => {
+        const ethBalance = await queryContract();
+        setAmountEth(ethBalance);
+      };
+
+      getBalance();
+    }
   });
 
   const stakingBalancePercent = (() => {
@@ -93,31 +98,37 @@ const _CongratulationsPage = ({
             Thank you for supporting the eth2 network!
           </Heading>
           <div>
-            <ProgressBar
-              complete={stakingBalancePercent}
-              newlyAdded={amountAddedPercent}
-              incomplete={thresholdPercent}
-            />
-            <div className="flex space-between mt20">
-              <ProgressBarInfo
-                title="Staking balance:"
-                color={colors.blue.dark}
-                amountEth={amountEth}
-                amountValidators={amountEth / PRICE_PER_VALIDATOR}
-              />
-              <ProgressBarInfo
-                title="You added:"
-                color={colors.blue.light}
-                amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
-                amountValidators={depositKeys.length}
-              />
-              <ProgressBarInfo
-                title="Launch threshold:"
-                color={colors.blue.lightest}
-                amountEth={MAINNET_ETH_REQUIREMENT}
-                amountValidators={MAINNET_ETH_REQUIREMENT / PRICE_PER_VALIDATOR}
-              />
-            </div>
+            {shouldRenderProgressBar && (
+              <>
+                <ProgressBar
+                  complete={stakingBalancePercent}
+                  newlyAdded={amountAddedPercent}
+                  incomplete={thresholdPercent}
+                />
+                <div className="flex space-between mt20">
+                  <ProgressBarInfo
+                    title="Staking balance:"
+                    color={colors.blue.dark}
+                    amountEth={amountEth}
+                    amountValidators={amountEth / PRICE_PER_VALIDATOR}
+                  />
+                  <ProgressBarInfo
+                    title="You added:"
+                    color={colors.blue.light}
+                    amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
+                    amountValidators={depositKeys.length}
+                  />
+                  <ProgressBarInfo
+                    title="Launch threshold:"
+                    color={colors.blue.lightest}
+                    amountEth={MAINNET_ETH_REQUIREMENT}
+                    amountValidators={
+                      MAINNET_ETH_REQUIREMENT / PRICE_PER_VALIDATOR
+                    }
+                  />
+                </div>
+              </>
+            )}
           </div>
         </Content>
       </Gutter>

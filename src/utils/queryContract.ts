@@ -9,7 +9,7 @@ type infuraResponse = {
   };
 };
 
-export const queryContract = async (): Promise<number> => {
+export const queryContract = async () => {
   const infuraUrl = `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`;
   try {
     const response: infuraResponse = await axios.post(

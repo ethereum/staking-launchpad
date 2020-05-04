@@ -90,7 +90,7 @@ const _TransactionsPage = ({
       }
     });
 
-  if (workflow !== WorkflowStep.TRANSACTION_SIGNING)
+  if (workflow < WorkflowStep.TRANSACTION_SIGNING)
     return routeToCorrectWorkflowStep(workflow);
 
   if (!account || !connector) return <WalletDisconnected />;

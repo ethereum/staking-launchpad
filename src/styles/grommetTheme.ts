@@ -53,4 +53,35 @@ export const grommetTheme = {
       font-weight: bold;
      `,
   },
+  checkBox: {
+    border: {
+      color: 'gray',
+      radius: '2px',
+    },
+    check: {
+      extend: ({ checked }: { checked: boolean }) =>
+        `background-color: white; border: 2px solid ${
+          checked ? 'black' : 'gray'
+        }`,
+    },
+    color: {
+      light: 'neutral-3',
+      dark: 'neutral-3',
+    },
+    gap: 'xsmall',
+    hover: {
+      border: {
+        color: 'black',
+      },
+    },
+    icon: {
+      size: '18px',
+      extend: 'stroke: black;',
+    },
+    size: '18px',
+    // label color
+    extend: `
+      color: #9C9C9C;
+    `,
+  },
 };

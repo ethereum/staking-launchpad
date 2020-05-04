@@ -76,7 +76,7 @@ const _CongratulationsPage = ({
   })();
   const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
 
-  if (workflow > WorkflowStep.CONGRATULATIONS) {
+  if (workflow < WorkflowStep.CONGRATULATIONS) {
     return routeToCorrectWorkflowStep(workflow);
   }
 

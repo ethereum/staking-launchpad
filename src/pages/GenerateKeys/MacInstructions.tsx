@@ -25,9 +25,8 @@ export const MacInstructions = ({ validatorCount }: Props) => {
     'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
     'cd eth2.0-deposit-cli',
     'pip3 install -r requirements.txt',
-    `python3 eth2deposit/depsit.py ${
-      // eslint-disable-next-line no-template-curly-in-string
-      validatorCount > 0 ? '--num_validators ' + validatorCount : ''
+    `python3 src/deposit.py ${
+      validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
     }`,
   ];
 

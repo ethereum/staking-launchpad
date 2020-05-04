@@ -44,8 +44,8 @@ export const StakingRewards = (): JSX.Element => {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
-            Validators get rewarded for proposing and attesting to blocks.
-            The rewards are tired to the overall amount of ETH staked in the
+            Validators get rewarded for proposing and attesting to blocks. The
+            rewards are tired to the overall amount of ETH staked in the
             network.
           </Text>
           <Link

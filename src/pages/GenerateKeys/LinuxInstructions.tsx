@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import styled from 'styled-components';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { TerminalUI } from './TerminalUI';
 import { Link } from '../../components/Link';
-import styled from 'styled-components';
 import { Code } from '../../components/Code';
 
 interface Props {
@@ -26,9 +26,8 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
     'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
     'cd eth2.0-deposit-cli',
     'pip3 install -r requirements.txt',
-    `python3 eth2deposit/depsit.py ${
-      // eslint-disable-next-line no-template-curly-in-string
-      validatorCount > 0 ? '--num_validators ' + validatorCount : ''
+    `python3 src/deposit.py ${
+      validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
     }`,
   ];
 

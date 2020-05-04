@@ -67,7 +67,8 @@ export const pageContent = {
         </Link>
       </>
     ),
-    acknowledgementText: 'I understand that it important to keep my validator online and updated.',
+    acknowledgementText:
+      'I understand that it important to keep my validator online and updated.',
   },
   [AcknowledgementIdsEnum.slashing]: {
     title: 'Slashing Risks',
@@ -89,9 +90,8 @@ export const pageContent = {
     title: 'Backup Mnemonic',
     content: (
       <Text size="large" className="my10">
-        Validator keys are are derived from a unique mnemonic (or seed).
-        Your seed is the ONLY WAY to withdraw your funds.
-        Above all, keep it safe!
+        Validator keys are are derived from a unique mnemonic (or seed). Your
+        seed is the ONLY WAY to withdraw your funds. Above all, keep it safe!
       </Text>
     ),
     acknowledgementText:
@@ -103,9 +103,9 @@ export const pageContent = {
       <Text size="large" className="my10">
         This Launchpad will help you create keys for each of your validators.
         These keys will be saved in key-stores and you will need to give these
-         to your validator software to begin validating.
-        You will also receive a deposit file to upload to this website with the
-         public keys for your validator.
+        to your validator software to begin validating. You will also receive a
+        deposit file to upload to this website with the public keys for your
+        validator.
       </Text>
     ),
     acknowledgementText:
@@ -121,7 +121,7 @@ export const pageContent = {
           able to withdraw to a specific shard.
         </Text>
         <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about eth2's phases <FormNext color="blueDark" />
+          Learn More about eth2&apos;s phases <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -158,8 +158,8 @@ export const pageContent = {
       <>
         <Text size="large" className="my10">
           In order to become a validator, you will generate your new eth2 key
-          pairs. To do this and to install the validator software you need to
-          be technically capable of running commands in a terminal on a computer.
+          pairs. To do this and to install the validator software you need to be
+          technically capable of running commands in a terminal on a computer.
         </Text>
       </>
     ),

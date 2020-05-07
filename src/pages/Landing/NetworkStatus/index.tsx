@@ -43,12 +43,12 @@ export const NetworkStatus = (): JSX.Element | null => {
   const [amountEth, setAmountEth] = useState(0);
 
   useEffect(() => {
-    if (!INFURA_PROJECT_ID || INFURA_PROJECT_ID === '') {
-      const getBalance = async () => {
-        const ethBalance = await queryContract();
-        setAmountEth(ethBalance);
-      };
+    const getBalance = async () => {
+      const ethBalance = await queryContract();
+      setAmountEth(ethBalance);
+    };
 
+    if (INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '') {
       getBalance();
     }
   });

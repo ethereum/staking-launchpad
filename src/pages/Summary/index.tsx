@@ -22,7 +22,6 @@ import { Text } from '../../components/Text';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
-import { KeyList } from './KeyList';
 import {
   DispatchWorkflowUpdateType,
   WorkflowStep,
@@ -102,7 +101,6 @@ const _SummaryPage = ({
           </Container>
         </Box>
       </Paper>
-      <KeyList depositKeys={depositKeys} />
       <AcknowledgementSection title="Please proceed with caution">
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}

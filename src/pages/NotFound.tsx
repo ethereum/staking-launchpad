@@ -47,7 +47,7 @@ export const NotFoundPage = (): JSX.Element => {
       <Content>
         <LogoContainer>
           <EthLogo src={EthDiamondPlain} />
-          <LogoText size="large">eth2 Launch Pad</LogoText>
+          <LogoText size="large">Eth2 Launch Pad</LogoText>
         </LogoContainer>
         <Text center className="mt20">
           Sorry, this page does not exist.

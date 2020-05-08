@@ -67,7 +67,7 @@ export const Hero = () => {
               <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                 <LogoContainer className={m ? 'mb50' : undefined}>
                   <EthLogo src={EthDiamondPlain} />
-                  <LogoText>eth2 Launch Pad</LogoText>
+                  <LogoText>Eth2 Launch Pad</LogoText>
                 </LogoContainer>
                 <Heading
                   level={m ? 1 : 2}
@@ -75,12 +75,12 @@ export const Hero = () => {
                   color="brand"
                   className="my20"
                 >
-                  become a validator and help secure the eth2 network.
+                  Become a validator and help secure the eth2 network.
                 </Heading>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
                 <Text className="mt25">
-                  earn continuous payouts for providing a public good to the
+                  Earn continuous payouts for providing a public good to the
                   community.
                 </Text>
               </ScrollAnimation>

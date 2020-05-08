@@ -35,6 +35,10 @@ const StyledHeading = styled(Heading)`
   width: ${(p: { isMobile: boolean }) =>
     p.isMobile ? '220px' : undefined}; // force word break
 `;
+const PhaseTitle = styled(Text)`
+  display: inline;
+  font-weight: bold;
+`;
 
 interface phase {
   title: string;
@@ -71,13 +75,29 @@ export const Phases = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                what is eth2 phase 0?
+                What is eth2 phase 0?
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20">
                 Transitioning from proof-of-work to proof-of-stake, eth2 will be
-                launched in at least 3 phases.
+                launched in at least 3 phases. The idea is to break up this
+                transition into phases each focusing on a different aspect of
+                eth2.
+              </Text>
+              <Text className="mt20">
+                <PhaseTitle>Phase 0 </PhaseTitle>
+                contains all of the machinery behind eth2&apos;s consensus, it
+                tracks the validators and their balances.
+              </Text>
+              <Text className="mt20">
+                <PhaseTitle>Phase 1 </PhaseTitle>
+                handles adding and storing the data associated with eth2.
+              </Text>
+              <Text className="mt20">
+                <PhaseTitle>Phase 2 </PhaseTitle>
+                Phase 2 adds execution to eth2 which enables programmes to be
+                run on top of it.
               </Text>
             </ScrollAnimation>
           </div>

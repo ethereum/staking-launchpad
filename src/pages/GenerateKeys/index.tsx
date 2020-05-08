@@ -136,21 +136,23 @@ const _GenerateKeysPage = ({
 
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          4. Save the key files and get the validator file ready
+          5. Save the key files and get the validator file ready
         </Heading>
         <Text className="mt20">
-          You should now be able to save a
-          <Highlight>signing-keystore-....json</Highlight> file for each
-          validator, which contains your key pairs. Please make sure keep these
-          safe, preferably offline.
+          You should now written down your mnemonic in a safe place and have
+          generated a keystore for each of your {validatorCount} validators.
+          Please make sure keep these safe, preferably offline. Your validator
+          keystores should be available in the
+          <Highlight>validator_keys</Highlight> directory.
         </Text>
         <InstructionImgContainer>
           <img src={instructions1} alt="" />
         </InstructionImgContainer>
         <Text>
-          The second file you will export is
-          <Highlight>deposit_data.json</Highlight> - you will need to upload in
-          the next step.
+          The other file you just generated is
+          <Highlight>deposit_data.json</Highlight>. This file contains your
+          validators&apos; public keys which you will need to upload in the next
+          step.
         </Text>
         <InstructionImgContainer>
           <img src={instructions2} alt="" />
@@ -162,7 +164,8 @@ const _GenerateKeysPage = ({
           checked={mnemonicAcknowledgementChecked}
           label={
             <Text>
-              I am keeping my keys safe and have backed up my mnemonic phrase.
+              I am keeping my keys safe and have written down my mnemonic
+              phrase.
             </Text>
           }
         />

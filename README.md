@@ -46,9 +46,9 @@ yarn start
 ```
 
 ----
-
 ## Open source licensing info
--> EF to add
+[License](LICENSE)
+
 ----
 
 

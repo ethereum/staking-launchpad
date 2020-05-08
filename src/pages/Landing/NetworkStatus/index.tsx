@@ -88,7 +88,7 @@ export const NetworkStatus = (): JSX.Element | null => {
               524,288 ETH,
             </BoldGreen>
             <BoldGray className="mr10" fontSize={24}>
-              16,284 validators,
+              16,384 validators,
             </BoldGray>
             to launch its {IS_MAINNET ? 'mainnet' : 'testnet'}
           </Text>

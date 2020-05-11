@@ -92,12 +92,11 @@ export const Phases = (): JSX.Element => {
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 1 </PhaseTitle>
-                handles adding and storing the data associated with eth2.
+                adds more data capacity to eth2.
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 2 </PhaseTitle>
-                Phase 2 adds execution to eth2 which enables programmes to be
-                run on top of it.
+                allows smart contract programs to be built and run on eth2.
               </Text>
             </ScrollAnimation>
           </div>

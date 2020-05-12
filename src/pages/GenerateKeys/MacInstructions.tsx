@@ -6,6 +6,7 @@ import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { TerminalUI } from './TerminalUI';
 import { Link } from '../../components/Link';
+import { Code } from '../../components/Code';
 
 interface Props {
   validatorCount: number | string;
@@ -45,7 +46,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             <Link primary inline external to="https://brew.sh/">
               homebrew
             </Link>
-            . Once you've installed homebrew, run <code>brew install python3</code>.
+            . Once you've installed homebrew, run <Code>brew install python3</Code>.
             If you'd like to install python without homebrew, see{' '}
             <Link
               primary
@@ -85,7 +86,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             Install git
           </Heading>
           <Text>
-            On Mavericks (10.9) or above you can do this by simply running <code>git --version</code> 
+            On Mavericks (10.9) or above you can do this by simply running <Code>git --version</Code> 
              (if you don't have it installed already, it will prompt you to install it).
             Otherwise, you can find install instructions{' '}
             <Link

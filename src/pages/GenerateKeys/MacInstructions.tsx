@@ -45,8 +45,8 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             <Link primary inline external to="https://brew.sh/">
               homebrew
             </Link>
-            . Once you've installed homebrew, you can install Python 3 by running <code>brew install python3</code>.
-            If you'd like to install python with homebrew, see{' '}
+            . Once you've installed homebrew, run <code>brew install python3</code>.
+            If you'd like to install python without homebrew, see{' '}
             <Link
               primary
               inline
@@ -63,7 +63,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             Install pip3
           </Heading>
           <Text>
-            If you installed Python 3 with{' '}
+            If you installed python3 with{' '}
             <Link primary inline external to="https://brew.sh/">
               homebrew
             </Link>{' '}

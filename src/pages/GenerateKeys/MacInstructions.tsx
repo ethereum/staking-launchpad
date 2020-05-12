@@ -42,17 +42,18 @@ export const MacInstructions = ({ validatorCount }: Props) => {
           </Heading>
           <Text>
             You can install python3 on your MacOS device using{' '}
-            <Link primary inline external to="https://docs.brew.sh/Manpage">
+            <Link primary inline external to="https://brew.sh/">
               homebrew
             </Link>
-            . For the most up-to-date installation instructions, please visit{' '}
+            . Once you've installed homebrew, you can install Python 3 by running <code>brew install python3</code>.
+            If you'd like to install python with homebrew, see{' '}
             <Link
               primary
               inline
               external
               to="https://python.org/about/gettingstarted"
             >
-              https://python.org/about/gettingstarted
+              here
             </Link>
             .
           </Text>
@@ -62,13 +63,12 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             Install pip3
           </Heading>
           <Text>
-            You can also use{' '}
+            If you installed Python 3 with{' '}
             <Link primary inline external to="https://docs.brew.sh/Manpage">
               homebrew
             </Link>{' '}
-            to install pip3. For the most-up-to-date instructions on installing
-            pip3, and for a direct download link, please reference the pip the
-            documentation found{' '}
+            , then you'll have installed pip3 automatically.
+            If you didn't, follow the instructions{' '}
             <Link
               inline
               external
@@ -85,8 +85,9 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             Install git
           </Heading>
           <Text>
-            If git is not already installed on your machine, you can find
-            install instructions{' '}
+            On Mavericks (10.9) or above you can do this by simply running git from the Terminal for the first time: 
+            run <code>git --version</code> (if you don't have it installed already, it will prompt you to install it).
+            Otherwise, you can find install instructions{' '}
             <Link
               inline
               external

@@ -85,8 +85,8 @@ export const MacInstructions = ({ validatorCount }: Props) => {
             Install git
           </Heading>
           <Text>
-            On Mavericks (10.9) or above you can do this by simply running git from the Terminal for the first time: 
-            run <code>git --version</code> (if you don't have it installed already, it will prompt you to install it).
+            On Mavericks (10.9) or above you can do this by simply running <code>git --version</code> 
+            (if you don't have it installed already, it will prompt you to install it).
             Otherwise, you can find install instructions{' '}
             <Link
               inline

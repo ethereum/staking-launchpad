@@ -64,10 +64,10 @@ export const MacInstructions = ({ validatorCount }: Props) => {
           </Heading>
           <Text>
             If you installed Python 3 with{' '}
-            <Link primary inline external to="https://docs.brew.sh/Manpage">
+            <Link primary inline external to="https://brew.sh/">
               homebrew
             </Link>{' '}
-            , then you'll have installed pip3 automatically.
+            in the previous step, then you'll have installed pip3 automatically.
             If you didn't, follow the instructions{' '}
             <Link
               inline
@@ -86,7 +86,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
           </Heading>
           <Text>
             On Mavericks (10.9) or above you can do this by simply running <code>git --version</code> 
-            (if you don't have it installed already, it will prompt you to install it).
+             (if you don't have it installed already, it will prompt you to install it).
             Otherwise, you can find install instructions{' '}
             <Link
               inline

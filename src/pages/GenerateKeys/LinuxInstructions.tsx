@@ -26,7 +26,8 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
     'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
     'cd eth2.0-deposit-cli',
     'pip3 install -r requirements.txt',
-    `python3 src/deposit.py ${
+    'python3 setup.py install',
+    `python3 cli/deposit.py ${
       validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
     }`,
   ];

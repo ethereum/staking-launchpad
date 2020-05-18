@@ -40,9 +40,9 @@ export const pageContent = {
     title: 'Signing up',
     content: (
       <Text size="large" className="my10">
-        To become a validator on eth2, you need to deposit 
-        {PRICE_PER_VALIDATOR}
-        ETH per validator that you wish to run. This process cannot be reversed.
+        To become a validator on Ethereum 2, you need to deposit{' '}
+        {PRICE_PER_VALIDATOR} ETH per validator that you wish to run. This
+        process cannot be reversed.
       </Text>
     ),
     acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
@@ -90,8 +90,8 @@ export const pageContent = {
     title: 'Backup Mnemonic',
     content: (
       <Text size="large" className="my10">
-        Validator keys are derived from a unique mnemonic (or seed). Your
-        seed is the ONLY WAY to withdraw your funds. Above all, keep it safe!
+        Validator keys are derived from a unique mnemonic (or seed). Your seed
+        is the ONLY WAY to withdraw your funds. Above all, keep it safe!
       </Text>
     ),
     acknowledgementText:

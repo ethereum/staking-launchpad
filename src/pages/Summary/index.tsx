@@ -95,8 +95,7 @@ const _SummaryPage = ({
           <Container className="mx20">
             <Text>Total Amount Required</Text>
             <InfoBox>
-              {amountValidators.times(convertedPrice).toString()}
-              ETH
+              {`${amountValidators.times(convertedPrice).toString()} ETH`}
             </InfoBox>
           </Container>
         </Box>

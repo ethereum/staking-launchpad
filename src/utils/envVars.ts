@@ -13,5 +13,5 @@ export const ALETHIO_URL = 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL = 'https://goerli.etherscan.io/tx';
 export const CONTRACT_ADDRESS = '0x4DC8B546b93131309c82505a6fdfB978D311bf45';
 export const MAINNET_ETH_REQUIREMENT = 524288;
-export const PRICE_PER_VALIDATOR = 3.2;
+export const PRICE_PER_VALIDATOR = 32;
 export const IS_MAINNET = false;

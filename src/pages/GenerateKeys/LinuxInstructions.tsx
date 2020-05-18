@@ -33,7 +33,7 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
   ];
 
   return (
-    <div style={{ animation: `fadeIn 1s` }}>
+    <div style={{ animation: 'fadeIn 1s' }}>
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium" className="mb20">
           3. Install developer libraries

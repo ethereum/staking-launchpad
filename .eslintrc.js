@@ -33,6 +33,7 @@ module.exports = {
     'react/destructuring-assignment': 'warn',
     'consistent-return': 'warn',
     eqeqeq: 'warn',
+    'react/jsx-one-expression-per-line': 'off',
   },
   settings: {
     'import/resolver': {

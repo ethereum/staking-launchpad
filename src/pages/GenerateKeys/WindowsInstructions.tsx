@@ -21,7 +21,15 @@ const Section = styled.div`
 
 export const WindowsInstructions = ({ validatorCount }: Props) => {
   const [animateTerminal, setAnimateTerminal] = useState<boolean>(false);
-  const terminalCommands = [`we need windows commands ${validatorCount}`];
+  const terminalCommands = [
+    'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
+    'cd eth2.0-deposit-cli',
+    'pip3 install -r requirements.txt',
+    'python setup.py install',
+    `python cli/deposit.py ${
+      validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
+    }`,
+  ];
 
   return (
     <div style={{ animation: 'fadeIn 1s' }}>
@@ -43,6 +51,15 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
             >
               python.org
             </Link>{' '}
+            or via{' '}
+            <Link
+              primary
+              inline
+              external
+              to="https://chocolatey.org/packages/python"
+            >
+              Chocolatey
+            </Link>{' '}
             and follow the installation instructions.
           </Text>
         </Section>
@@ -53,14 +70,23 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
           <Text>
             The latest version of pip should have been installed with python
             3.x.x. For more information about pip, you can visit the windows
-            install guide{' '}
+            install{' '}
             <Link
               inline
               external
               primary
               to="https://pip.pypa.io/en/stable/installing/"
             >
-              here
+              guide{' '}
+            </Link>
+            or install the pip package via{' '}
+            <Link
+              inline
+              external
+              primary
+              to="https://chocolatey.org/packages/pip"
+            >
+              Chocolatey
             </Link>
             .
           </Text>
@@ -78,7 +104,16 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
               primary
               to="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
             >
-              here
+              here{' '}
+            </Link>
+            or install the pip package via{' '}
+            <Link
+              inline
+              external
+              primary
+              to="https://chocolatey.org/packages/git"
+            >
+              Chocolatey
             </Link>
             .
           </Text>

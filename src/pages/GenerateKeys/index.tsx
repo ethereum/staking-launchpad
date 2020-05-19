@@ -139,9 +139,9 @@ const _GenerateKeysPage = ({
           5. Save the key files and get the validator file ready
         </Heading>
         <Text className="mt20">
-          You should now have your mnemonic written down in a safe place
-          and a keystore saved for each of your {validatorCount} validators.
-          Please make sure you keep these safe, preferably offline. Your validator
+          You should now have your mnemonic written down in a safe place and a
+          keystore saved for each of your {validatorCount} validators. Please
+          make sure you keep these safe, preferably offline. Your validator
           keystores should be available in the
           <Highlight>validator_keys</Highlight> directory.
         </Text>
@@ -162,12 +162,12 @@ const _GenerateKeysPage = ({
         <CheckBox
           onChange={onCheckboxClick}
           checked={mnemonicAcknowledgementChecked}
-          label={
+          label={(
             <Text>
               I am keeping my keys safe and have written down my mnemonic
               phrase.
             </Text>
-          }
+          )}
         />
       </Paper>
 

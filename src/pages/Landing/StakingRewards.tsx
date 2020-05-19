@@ -45,8 +45,7 @@ export const StakingRewards = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
             Validators get rewarded for proposing and attesting to blocks. The
-            rewards are tied to the overall amount of ETH staked in the
-            network.
+            rewards are tied to the overall amount of ETH staked in the network.
           </Text>
           <Link
             external

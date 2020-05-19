@@ -86,10 +86,9 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
               return (
                 <TableRow key={pubkey}>
                   <TableCell>
-                    <Text className="dont-break-out">{`${pubkey.slice(
-                      0,
-                      10
-                    )}...${pubkey.slice(-10)}`}</Text>
+                    <Text className="dont-break-out">
+                      {`${pubkey.slice(0, 10)}...${pubkey.slice(-10)}`}
+                    </Text>
                   </TableCell>
                   <TableCell>
                     <Status status={transactionStatus} />

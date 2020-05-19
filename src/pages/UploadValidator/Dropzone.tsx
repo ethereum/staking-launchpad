@@ -23,7 +23,7 @@ const Container = styled.div`
   align-items: center;
   padding: 20px;
   border-width: 2px;
-  border-radius: ${p => p.theme.borderRadius}
+  border-radius: ${p => p.theme.borderRadius};
   border-color: ${p => getColor(p, p.theme.gray.medium)};
   border-style: dashed;
   background-color: ${p => p.theme.gray.light};

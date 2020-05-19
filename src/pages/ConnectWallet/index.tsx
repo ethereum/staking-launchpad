@@ -243,10 +243,9 @@ const _ConnectWalletPage = ({
                       {getWalletName(walletProvider)}
                     </Heading>
                     {account && (
-                      <Text size="small">{`${account.slice(
-                        0,
-                        6
-                      )}...${account.slice(-6)}`}</Text>
+                      <Text size="small">
+                        {`${account.slice(0, 6)}...${account.slice(-6)}`}
+                      </Text>
                     )}
                   </div>
                 </div>

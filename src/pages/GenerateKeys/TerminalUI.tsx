@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-// @ts-ignore
-import Typewriter from 'typewriter-effect';
-import { Animated } from 'react-animated-css';
+import CopyToClipboard from 'react-copy-to-clipboard';
+import { Text } from '../../components/Text';
 
 const Container = styled.div`
   background-color: #1d1e28;
-  height: 260px;
+  min-height: 260px;
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   position: relative;
 `;
-
 const Dot = styled.div`
   height: 10px;
   width: 10px;
@@ -25,6 +23,12 @@ const ControlContainer = styled.div`
   margin-bottom: 10px;
   border-bottom: 1px solid;
   padding-bottom: 10px;
+`;
+const TerminalText = styled(Text)`
+  color: #06ff04;
+  font-family: monospace;
+  overflow-wrap: break-word;
+  word-break: break-all;
 `;
 const CopyContainer = styled.div`
   color: #06ff04;
@@ -44,11 +48,11 @@ export const TerminalUI = ({
   commands: string[];
   animate: boolean;
 }) => {
-  const opts = {
-    delay: -5,
-    cursor: '',
+  const [copyIdx, setCopyIdx] = useState<null | number>(null);
+
+  const onCopy = (i: number): void => {
+    setCopyIdx(i);
   };
-  const delayMs = 2000;
 
   return (
     <Container>
@@ -64,32 +68,12 @@ export const TerminalUI = ({
               className="flex space-between mb10"
               key={`${command}--${Math.random().toFixed(2)}`}
             >
-              <Typewriter
-                options={opts}
-                onInit={(typewriter: any) => {
-                  typewriter
-                    .pauseFor(delayMs * i)
-                    .typeString(
-                      `<span style="color: #06FF04; font-family: monospace">
-                           ${command}
-                          </span>`
-                    )
-                    .start();
-                }}
-              />
-              <Animated
-                animationInDelay={delayMs * i + 1500}
-                animationInDuration={500}
-                animationIn="bounceIn"
-                animationOut="fadeOut"
-                isVisible={animate}
-              >
-                <CopyContainer
-                  onClick={() => navigator.clipboard.writeText(command)}
-                >
-                  Copy
+              <TerminalText>{command}</TerminalText>
+              <CopyToClipboard text={command} onCopy={() => onCopy(i)}>
+                <CopyContainer>
+                  {copyIdx === i ? 'Copied' : 'Copy'}
                 </CopyContainer>
-              </Animated>
+              </CopyToClipboard>
             </div>
           ))}
       </div>

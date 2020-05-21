@@ -162,12 +162,12 @@ const _GenerateKeysPage = ({
         <CheckBox
           onChange={onCheckboxClick}
           checked={mnemonicAcknowledgementChecked}
-          label={(
+          label={
             <Text>
               I am keeping my keys safe and have written down my mnemonic
               phrase.
             </Text>
-          )}
+          }
         />
       </Paper>
 

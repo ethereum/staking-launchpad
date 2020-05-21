@@ -72,7 +72,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
           <TableHeader>
             <CustomTableRow>
               <TableCell scope="col" border="bottom">
-                Key
+                Validator Public Key
               </TableCell>
               <TableCell scope="col" border="bottom">
                 Status

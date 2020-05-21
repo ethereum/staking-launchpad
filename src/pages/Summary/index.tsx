@@ -105,12 +105,12 @@ const _SummaryPage = ({
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}
           checked={losePhrase}
-          label={
+          label={(
             <Text>
               I understand that if I lose my mnemonic phrase, I will not be able
               to withdraw my funds
             </Text>
-          }
+          )}
         />
         <span className="mt20">
           <CheckBox
@@ -145,12 +145,12 @@ const _SummaryPage = ({
           <CheckBox
             onChange={e => setNoPhish(e.target.checked)}
             checked={noPhish}
-            label={
+            label={(
               <Text>
                 I know how to check that I am sending my ETH into the correct
                 deposit contract and will do so.
               </Text>
-            }
+            )}
           />
         </span>
       </AcknowledgementSection>

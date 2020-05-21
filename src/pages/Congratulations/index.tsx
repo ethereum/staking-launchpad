@@ -86,7 +86,7 @@ const _CongratulationsPage = ({
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Congratulations!
+            🎉 Congratulations!
           </Heading>
           <Heading
             level={3}

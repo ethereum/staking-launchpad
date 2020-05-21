@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Dispatch } from 'redux';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { connect } from 'react-redux';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import _every from 'lodash/every';
+import _some from 'lodash/some';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { Heading } from '../../components/Heading';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
+import { Link } from '../../components/Link';
+import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
 import { handleTransaction } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
@@ -56,14 +59,16 @@ const _TransactionsPage = ({
     Web3Provider
   >();
 
-  const [routeToCongratulationsPage, setRouteToCongratulationsPage] = useState(
-    false
-  );
   const totalTxCount = depositKeys.length;
   const remainingTxCount = depositKeys.filter(
     file => file.transactionStatus === TransactionStatus.READY
   ).length;
   const allTxConfirmed = _every(
+    depositKeys.map(
+      file => file.transactionStatus === TransactionStatus.SUCCEEDED
+    )
+  );
+  const oneTxConfirmed = _some(
     depositKeys.map(
       file => file.transactionStatus === TransactionStatus.SUCCEEDED
     )
@@ -78,6 +83,15 @@ const _TransactionsPage = ({
     return 'No pending transactions';
   };
 
+  const createContinueButtonText = (): string => {
+    if (!oneTxConfirmed) {
+      return '🎉 Continue';
+    }
+    return allTxConfirmed
+      ? '🎉 Continue'
+      : '⚠️ Complete without all transactions confirmed';
+  };
+
   const handleAllTransactionsClick = () =>
     depositKeys.forEach(async validator => {
       if (validator.transactionStatus === TransactionStatus.READY) {
@@ -90,21 +104,18 @@ const _TransactionsPage = ({
       }
     });
 
+  const handleSubmit = () => {
+    if (workflow === WorkflowStep.TRANSACTION_SIGNING) {
+      dispatchWorkflowUpdate(WorkflowStep.CONGRATULATIONS);
+    }
+  };
+
   if (workflow < WorkflowStep.TRANSACTION_SIGNING)
     return routeToCorrectWorkflowStep(workflow);
 
   if (!account || !connector) return <WalletDisconnected />;
 
   if (chainId !== NETWORK_ID) return <WrongNetwork />;
-
-  if (allTxConfirmed) {
-    setTimeout(() => {
-      dispatchWorkflowUpdate(WorkflowStep.CONGRATULATIONS);
-      setRouteToCongratulationsPage(true);
-    }, 3000);
-  }
-  if (routeToCongratulationsPage)
-    return routeToCorrectWorkflowStep(WorkflowStep.CONGRATULATIONS);
 
   return (
     <WorkflowPageTemplate title="Transactions">
@@ -130,6 +141,19 @@ const _TransactionsPage = ({
         </div>
       </Paper>
       <KeyList />
+      <div className="flex center p30 mt20">
+        <Link to={routesEnum.summaryPage}>
+          <Button className="mr10" width={100} label="Back" />
+        </Link>
+        <Link to={routesEnum.congratulationsPage} onClick={handleSubmit}>
+          <Button
+            width={300}
+            rainbow
+            label={createContinueButtonText()}
+            disabled={!oneTxConfirmed}
+          />
+        </Link>
+      </div>
     </WorkflowPageTemplate>
   );
 };

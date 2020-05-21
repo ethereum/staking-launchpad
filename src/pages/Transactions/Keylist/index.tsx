@@ -26,10 +26,12 @@ import {
 } from '../../../store/actions/depositFileActions';
 
 const CustomTableRow = styled(TableRow)`
-  background-color: ${(p: { theme: any }) => p.theme.blue.light};
+  background-color: ${(p: { theme: any }) => p.theme.purple.light};
 `;
 const CustomPaper = styled(Paper)`
   display: block;
+  height: 280px;
+  overflow: auto;
 `;
 const CustomTable = styled(Table)`
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {

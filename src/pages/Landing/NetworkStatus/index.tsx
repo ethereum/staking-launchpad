@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { ProgressBar } from './ProgressBar';
-import { queryContract } from '../../../utils/queryContract';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
 import {
   IS_MAINNET,
@@ -38,22 +37,12 @@ const BoldGray = styled.span`
   font-weight: bold;
 `;
 
-export const NetworkStatus = (): JSX.Element | null => {
+export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
+  amountEth = 0,
+}): JSX.Element | null => {
   const m: boolean = (window as any).mobileCheck();
-  const [amountEth, setAmountEth] = useState(0);
 
-  useEffect(() => {
-    const getBalance = async () => {
-      const ethBalance = await queryContract();
-      setAmountEth(ethBalance);
-    };
-
-    if (INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '') {
-      getBalance();
-    }
-  });
-
-  const calculatePercentage = (amountEth: number) => {
+  const calculatePercentage = () => {
     const percentage = (amountEth / MAINNET_ETH_REQUIREMENT) * 100;
     if (percentage === 0) {
       return 0;
@@ -78,7 +67,8 @@ export const NetworkStatus = (): JSX.Element | null => {
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
-              {numberWithCommas(amountEth)} ETH
+              {numberWithCommas(amountEth)}
+              &nbsp;ETH
             </BoldGreen>
             already staked and counting.
           </Text>
@@ -90,14 +80,16 @@ export const NetworkStatus = (): JSX.Element | null => {
             <BoldGray className="mr10" fontSize={24}>
               16,384 validators,
             </BoldGray>
-            to launch the {IS_MAINNET ? 'mainnet' : 'testnet'}.
+            to launch the
+            {IS_MAINNET ? ' mainnet' : ' testnet'}.
           </Text>
           <div>
-            <ProgressBar workflow={calculatePercentage(amountEth)} />
+            <ProgressBar workflow={calculatePercentage()} />
             <div className="flex space-between mt20">
               <span className="flex">
                 <BoldGreen fontSize={18} className="mr10">
-                  {numberWithCommas(amountEth)} ETH
+                  {numberWithCommas(amountEth)}
+                  &nbsp;ETH
                 </BoldGreen>
                 <Text size="small" style={{ marginTop: '2px' }}>
                   Current staking balance
@@ -105,7 +97,8 @@ export const NetworkStatus = (): JSX.Element | null => {
               </span>
               <Text size="small">
                 <strong>
-                  {numberWithCommas(calculateLaunchThreshold())} ETH{' '}
+                  {numberWithCommas(calculateLaunchThreshold())}
+                  &nbsp;ETH&nbsp;
                 </strong>
                 Launch threshold
               </Text>

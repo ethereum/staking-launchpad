@@ -24,9 +24,8 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
   const terminalCommands = [
     'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
     'cd eth2.0-deposit-cli',
-    'pip3 install -r requirements.txt',
-    'python setup.py install',
-    `python cli/deposit.py ${
+    'sh deposit.sh',
+    `sh deposit.sh ${
       validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
     }`,
   ];
@@ -39,7 +38,7 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
         </Heading>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install python3
+            Install python3.7+
           </Heading>
           <Text>
             Download python3 from{' '}

@@ -56,8 +56,10 @@ export const AcknowledgementSection = ({
         <div className="flex center p30">
           <Button
             className="mr10"
-            onClick={() =>
-              handleGoBackClick(AcknowledgementIdsEnum.confirmation)}
+            onClick={
+              () =>
+                handleGoBackClick(AcknowledgementIdsEnum.confirmation)
+            }
             width={100}
             label="Back"
           />

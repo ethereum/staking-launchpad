@@ -48,7 +48,7 @@ const InstructionImgContainer = styled.div`
 `;
 
 // Prop definitions
-interface OwnProps {}
+interface OwnProps { }
 interface StateProps {
   workflow: WorkflowStep;
 }
@@ -114,9 +114,9 @@ const _GenerateKeysPage = ({
               {validatorCount === ''
                 ? validatorCount
                 : new BigNumber(validatorCount)
-                    .times(new BigNumber(PRICE_PER_VALIDATOR))
-                    .toFixed(1)
-                    .toString()}{' '}
+                  .times(new BigNumber(PRICE_PER_VALIDATOR))
+                  .toFixed(1)
+                  .toString()}{' '}
               ETH
             </Text>
           </div>

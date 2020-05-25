@@ -86,6 +86,9 @@ const _CongratulationsPage = ({
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" margin="none">
+            <span role="img" aria-label="congratulations">
+              🎉{' '}
+            </span>
             Congratulations!
           </Heading>
           <Heading

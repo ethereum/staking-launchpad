@@ -25,9 +25,8 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
   const terminalCommands = [
     'git clone https://github.com/ethereum/eth2.0-deposit-cli.git',
     'cd eth2.0-deposit-cli',
-    'pip3 install -r requirements.txt',
-    'python3 setup.py install',
-    `python3 cli/deposit.py ${
+    './deposit.sh install',
+    `./deposit.sh ${
       validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
     }`,
   ];
@@ -40,7 +39,7 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
         </Heading>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install python3
+            Install python3.7+
           </Heading>
           <Text>
             The python3 install process may differ depending on your linux

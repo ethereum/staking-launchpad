@@ -17,7 +17,8 @@ const validateFieldFormatting = (
     !depositDatum.amount ||
     !depositDatum.signature ||
     !depositDatum.deposit_message_root ||
-    !depositDatum.deposit_data_root
+    !depositDatum.deposit_data_root ||
+    !depositDatum.fork_version
   ) {
     return false;
   }
@@ -29,18 +30,20 @@ const validateFieldFormatting = (
     typeof depositDatum.amount !== 'number' ||
     typeof depositDatum.signature !== 'string' ||
     typeof depositDatum.deposit_message_root !== 'string' ||
-    typeof depositDatum.deposit_data_root !== 'string'
+    typeof depositDatum.deposit_data_root !== 'string' ||
+    typeof depositDatum.fork_version !== 'string'
   ) {
     return false;
   }
 
-  // check length of strings
+  // check length of strings (note: using string length, so 1 byte = 2 chars)
   if (
     depositDatum.pubkey.length !== 96 ||
     depositDatum.withdrawal_credentials.length !== 64 ||
     depositDatum.signature.length !== 192 ||
     depositDatum.deposit_message_root.length !== 64 ||
-    depositDatum.deposit_data_root.length !== 64
+    depositDatum.deposit_data_root.length !== 64 ||
+    depositDatum.fork_version.length !== 8
   ) {
     return false;
   }

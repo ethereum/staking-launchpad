@@ -10,8 +10,8 @@ export interface DepositKeyInterface {
   withdrawal_credentials: string;
   amount: number;
   signature: string;
+  deposit_message_root: string;
   deposit_data_root: string;
-  signed_deposit_data_root: string;
   transactionStatus: TransactionStatus;
   txHash?: string;
 }

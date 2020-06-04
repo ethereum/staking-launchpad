@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@assemblyscript/loader@^0.9.2":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.9.4.tgz#a483c54c1253656bb33babd464e3154a173e1577"
+  integrity sha512-HazVq9zwTVwGmqdwYzu7WyQ6FQVZ7SwET0KKQuKm55jD0IfUpZgN0OPIiZG3zV1iSrVYcN0bdwLRXI/VNCYsUA==
+
 "@babel/code-frame@7.8.3", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -946,6 +951,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@chainsafe/as-sha256@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@chainsafe/as-sha256/-/as-sha256-0.2.0.tgz#3ebe061d59d30af9e95a8c22ff4813cbf0e89dbc"
+  integrity sha512-reKklZhY4jSj7JdxdAjUfsaiMt2pdm8V/IqlOR5c4m6Y4tRCxt4f0HBMfyiE2ZQF4tqPPqRVf/ulXwK+LjLIxw==
+  dependencies:
+    "@assemblyscript/loader" "^0.9.2"
+    buffer "^5.4.3"
+
 "@chainsafe/bls-hd-key@^0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@chainsafe/bls-hd-key/-/bls-hd-key-0.0.1.tgz#143ff16d2dcc2ec7a0b51e211d6cadabdd65f2df"
@@ -989,6 +1002,22 @@
   version "0.10.1-fix"
   resolved "https://registry.yarnpkg.com/@chainsafe/eth2-spec-tests/-/eth2-spec-tests-0.10.1-fix.tgz#c0fb839b5b93fae0a7cd247fd686d2a9ea926240"
   integrity sha512-mnfIDUFZ/IsAHmJQ7hkZ3t3s7rxrr5olLz3pH1RS2kWsuQonAKzVOZTQNkHYowpeI4ebYo8H+NPRtD5mkbTTzg==
+
+"@chainsafe/persistent-merkle-tree@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@chainsafe/persistent-merkle-tree/-/persistent-merkle-tree-0.1.2.tgz#d052e068fa69be60117f47d686b28caf4b6d9b5a"
+  integrity sha512-W3WLCMnuYpXHALnDD1wd09H8m3dNtv1Rqx8+3VS/6gbILJaydGDUvroDIltshRg3bpVMTsTSxAM54J9ddNOApw==
+  dependencies:
+    "@chainsafe/as-sha256" "^0.2.0"
+
+"@chainsafe/ssz@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@chainsafe/ssz/-/ssz-0.6.4.tgz#1ee5e5599790a34f16406cd743ad83c9dc1d6bee"
+  integrity sha512-FeBwchyzSXBNJ/xToMDeldwM1IARIul9DZpEFLlzktKM+1zaJ9zRE2gMZf1dPPcUB15053dkb3ZsdqTIlm+BaA==
+  dependencies:
+    "@chainsafe/as-sha256" "^0.2.0"
+    "@chainsafe/persistent-merkle-tree" "^0.1.2"
+    case "^1.6.3"
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -4144,6 +4173,11 @@ case-sensitive-paths-webpack-plugin@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.3.0.tgz#23ac613cc9a856e4f88ff8bb73bbb5e989825cf7"
   integrity sha512-/4YgnZS8y1UXXmC02xD5rRrBEu6T5ub+mQHLNRj0fzTRbgdBYhsNo2V5EqwgqrExjxsjtF/OpAKAMkKsxbD5XQ==
+
+case@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
+  integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 caseless@~0.12.0:
   version "0.12.0"

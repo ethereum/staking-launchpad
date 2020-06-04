@@ -47,7 +47,7 @@ export const handleTransaction = async (
     // eslint-disable-next-line camelcase
     withdrawal_credentials,
     // eslint-disable-next-line camelcase
-    signed_deposit_data_root,
+    deposit_data_root,
   } = depositFile;
 
   try {
@@ -66,7 +66,7 @@ export const handleTransaction = async (
         prefix0X(pubkey),
         prefix0X(withdrawal_credentials),
         prefix0X(signature),
-        prefix0X(signed_deposit_data_root)
+        prefix0X(deposit_data_root)
       )
       .send(transactionParameters)
       .on('transactionHash', (txHash: string): void => {

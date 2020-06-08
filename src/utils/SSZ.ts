@@ -1,5 +1,5 @@
 import {
-  BigIntUintType,
+  NumberUintType,
   ByteVector,
   ByteVectorType,
   ContainerType,
@@ -16,7 +16,7 @@ const DepositMessage = new ContainerType({
     withdrawalCredentials: new ByteVectorType({
       length: 32,
     }),
-    amount: new BigIntUintType({
+    amount: new NumberUintType({
       byteLength: 8,
     }),
   },
@@ -25,7 +25,7 @@ const DepositMessage = new ContainerType({
 interface DepositMessage {
   pubkey: ByteVector;
   withdrawalCredentials: ByteVector;
-  amount: BigInt;
+  amount: Number;
 }
 
 const DepositData = new ContainerType({
@@ -36,7 +36,7 @@ const DepositData = new ContainerType({
     withdrawalCredentials: new ByteVectorType({
       length: 32,
     }),
-    amount: new BigIntUintType({
+    amount: new NumberUintType({
       byteLength: 8,
     }),
     signature: new ByteVectorType({
@@ -48,7 +48,7 @@ const DepositData = new ContainerType({
 interface DepositData {
   pubkey: ByteVector;
   withdrawalCredentials: ByteVector;
-  amount: BigInt;
+  amount: Number;
   signature: ByteVector;
 }
 
@@ -58,24 +58,27 @@ export const verifyDepositRoots = (
   const depositMessage: DepositMessage = {
     pubkey: bufferHex(depositDatum.pubkey),
     withdrawalCredentials: bufferHex(depositDatum.withdrawal_credentials),
-    amount: BigInt(depositDatum.amount),
+    amount: Number(depositDatum.amount),
   };
   const depositData: DepositData = {
     pubkey: bufferHex(depositDatum.pubkey),
     withdrawalCredentials: bufferHex(depositDatum.withdrawal_credentials),
-    amount: BigInt(depositDatum.amount),
+    amount: Number(depositDatum.amount),
     signature: bufferHex(depositDatum.signature),
   };
-
-  if (
-    bufferHex(depositDatum.deposit_message_root).compare(
-      DepositMessage.hashTreeRoot(depositMessage)
-    ) === 0 &&
-    bufferHex(depositDatum.deposit_data_root).compare(
-      DepositData.hashTreeRoot(depositData)
-    ) === 0
-  ) {
-    return true;
+  try {
+    if (
+      bufferHex(depositDatum.deposit_message_root).compare(
+        DepositMessage.hashTreeRoot(depositMessage)
+      ) === 0 &&
+      bufferHex(depositDatum.deposit_data_root).compare(
+        DepositData.hashTreeRoot(depositData)
+      ) === 0
+    ) {
+      return true;
+    }
+  } catch (err) {
+    console.log(err);
   }
   return false;
 };

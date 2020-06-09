@@ -66,19 +66,15 @@ export const verifyDepositRoots = (
     amount: Number(depositDatum.amount),
     signature: bufferHex(depositDatum.signature),
   };
-  try {
-    if (
-      bufferHex(depositDatum.deposit_message_root).compare(
-        DepositMessage.hashTreeRoot(depositMessage)
-      ) === 0 &&
-      bufferHex(depositDatum.deposit_data_root).compare(
-        DepositData.hashTreeRoot(depositData)
-      ) === 0
-    ) {
-      return true;
-    }
-  } catch (err) {
-    console.log(err);
+  if (
+    bufferHex(depositDatum.deposit_message_root).compare(
+      DepositMessage.hashTreeRoot(depositMessage)
+    ) === 0 &&
+    bufferHex(depositDatum.deposit_data_root).compare(
+      DepositData.hashTreeRoot(depositData)
+    ) === 0
+  ) {
+    return true;
   }
   return false;
 };

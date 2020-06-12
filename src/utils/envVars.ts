@@ -11,9 +11,8 @@ export const RPC_URL_MAINNET = `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID
 export const FORTMATIC_KEY = 'pk_test_D113D979E0D3508F';
 export const ALETHIO_URL = 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL = 'https://goerli.etherscan.io/tx';
-export const CONTRACT_ADDRESS = '0x4DC8B546b93131309c82505a6fdfB978D311bf45';
+export const CONTRACT_ADDRESS = '0x344b3a521ded954b4fa9ec8cc1d999631c998daa';
 export const MAINNET_ETH_REQUIREMENT = 524288;
-export const PRICE_PER_VALIDATOR = 3.2;
 export const IS_MAINNET = false;
 
 // eth2.0 specs constants
@@ -24,3 +23,7 @@ export const EMPTY_ROOT = Buffer.from(
   'hex'
 );
 export const GENESIS_FORK_VERSION = Buffer.from('00000000', 'hex');
+export const GWEI = 1e9;
+export const MIN_DEPOSIT_AMOUNT = 1 * GWEI;
+export const MAX_DEPOSIT_AMOUNT = 32 * GWEI;
+export const PRICE_PER_VALIDATOR = MAX_DEPOSIT_AMOUNT / GWEI;

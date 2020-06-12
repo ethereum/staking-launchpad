@@ -11,7 +11,7 @@ export const RPC_URL_MAINNET = `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID
 export const FORTMATIC_KEY = 'pk_test_D113D979E0D3508F';
 export const ALETHIO_URL = 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL = 'https://goerli.etherscan.io/tx';
-export const CONTRACT_ADDRESS = '0x4DC8B546b93131309c82505a6fdfB978D311bf45';
+export const CONTRACT_ADDRESS = '0x344b3a521ded954b4fa9ec8cc1d999631c998daa';
 export const MAINNET_ETH_REQUIREMENT = 524288;
 export const IS_MAINNET = false;
 

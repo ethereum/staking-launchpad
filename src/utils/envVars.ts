@@ -21,31 +21,3 @@ export const MIN_DEPOSIT_AMOUNT         = 1 * GWEI;
 export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
 export const GENESIS_FORK_VERSION       = Buffer.from('00000000', 'hex');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -16,8 +16,8 @@ export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT 
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
 
 // BLS signature verification variables
-export const GWEI                       = 1e9;
-export const MIN_DEPOSIT_AMOUNT         = 1 * GWEI;
+export const ETHER_TO_GWEI              = 1e9;
+export const MIN_DEPOSIT_AMOUNT         = 1 * ETHER_TO_GWEI;
 export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
 export const GENESIS_FORK_VERSION       = Buffer.from('00000000', 'hex');

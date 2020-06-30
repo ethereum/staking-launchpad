@@ -6,7 +6,11 @@ import { initBLS } from '@chainsafe/bls';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
 import { DepositKeyInterface } from '../../store/reducers';
-import { MIN_DEPOSIT_AMOUNT, MAX_DEPOSIT_AMOUNT } from '../../utils/envVars';
+import {
+  GWEI,
+  MIN_DEPOSIT_AMOUNT,
+  PRICE_PER_VALIDATOR,
+} from '../../utils/envVars';
 
 const validateFieldFormatting = (
   depositDatum: DepositKeyInterface
@@ -48,9 +52,11 @@ const validateFieldFormatting = (
   ) {
     return false;
   }
+
   if (
     depositDatum.amount < MIN_DEPOSIT_AMOUNT ||
-    depositDatum.amount > MAX_DEPOSIT_AMOUNT
+    // @ts-ignore
+    depositDatum.amount > PRICE_PER_VALIDATOR * GWEI
   ) {
     return false;
   }

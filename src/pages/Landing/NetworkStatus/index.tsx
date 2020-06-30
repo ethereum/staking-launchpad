@@ -7,8 +7,10 @@ import { ProgressBar } from './ProgressBar';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
 import {
   IS_MAINNET,
-  MAINNET_ETH_REQUIREMENT,
-  INFURA_PROJECT_ID,
+  ETH_REQUIREMENT,
+  ENABLE_RPC_FEATURES,
+  ETH2_NETWORK_NAME,
+  PRICE_PER_VALIDATOR,
 } from '../../../utils/envVars';
 
 const Container = styled.div`
@@ -43,7 +45,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   const m: boolean = (window as any).mobileCheck();
 
   const calculatePercentage = () => {
-    const percentage = (amountEth / MAINNET_ETH_REQUIREMENT) * 100;
+    const percentage = (amountEth / ETH_REQUIREMENT) * 100;
     if (percentage === 0) {
       return 0;
     }
@@ -54,9 +56,9 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   };
 
   const calculateLaunchThreshold = () =>
-    (MAINNET_ETH_REQUIREMENT - amountEth).toFixed(1);
+    (ETH_REQUIREMENT - amountEth).toFixed(1);
 
-  if (!INFURA_PROJECT_ID || INFURA_PROJECT_ID === '') return null;
+  if (!ENABLE_RPC_FEATURES) return null;
 
   return (
     <Container isMobile={m}>
@@ -75,13 +77,13 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           <Text className="mt20">
             The eth2 network needs to reach at least
             <BoldGreen className="mr10 ml10" fontSize={24}>
-              524,288 ETH,
+              {numberWithCommas(ETH_REQUIREMENT)} ETH,
             </BoldGreen>
             <BoldGray className="mr10" fontSize={24}>
-              16,384 validators,
+              {Math.round(ETH_REQUIREMENT / PRICE_PER_VALIDATOR)} validators,
             </BoldGray>
             to launch the
-            {IS_MAINNET ? ' mainnet' : ' testnet'}.
+            {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
           </Text>
           <div>
             <ProgressBar workflow={calculatePercentage()} />

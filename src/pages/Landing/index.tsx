@@ -8,18 +8,17 @@ import { SignupSteps } from './SignupSteps';
 import { Phases } from './Phases';
 import { CTAFooter } from './CTAFooter';
 import { queryContract } from '../../utils/queryContract';
-import { INFURA_PROJECT_ID } from '../../utils/envVars';
+import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 
 export const LandingPage = (): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
 
   useEffect(() => {
-    const getBalance = async () => {
-      const ethBalance = await queryContract();
-      setAmountEth(ethBalance);
-    };
-
-    if (INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '') {
+    if (ENABLE_RPC_FEATURES) {
+      const getBalance = async () => {
+        const ethBalance = await queryContract();
+        setAmountEth(ethBalance);
+      };
       getBalance();
     }
   });

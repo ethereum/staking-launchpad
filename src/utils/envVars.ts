@@ -20,4 +20,4 @@ export const ETHER_TO_GWEI              = 1e9;
 export const MIN_DEPOSIT_AMOUNT         = 1 * ETHER_TO_GWEI;
 export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
-export const GENESIS_FORK_VERSION       = Buffer.from('00000000', 'hex');
+export const GENESIS_FORK_VERSION       = process.env.REACT_APP_GENESIS_FORK_VERSION || Buffer.from('00000000', 'hex');

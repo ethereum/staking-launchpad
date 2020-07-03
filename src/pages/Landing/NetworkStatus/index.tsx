@@ -45,6 +45,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   const m: boolean = (window as any).mobileCheck();
 
   const calculatePercentage = () => {
+    // @ts-ignore
     const percentage = (amountEth / ETH_REQUIREMENT) * 100;
     if (percentage === 0) {
       return 0;
@@ -56,9 +57,17 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   };
 
   const calculateLaunchThreshold = () =>
+    // @ts-ignore
     (ETH_REQUIREMENT - amountEth).toFixed(1);
 
   if (!ENABLE_RPC_FEATURES) return null;
+
+  const validatorRequirement = numberWithCommas(
+    Math.round(
+      // @ts-ignore
+      ETH_REQUIREMENT / PRICE_PER_VALIDATOR
+    )
+  );
 
   return (
     <Container isMobile={m}>
@@ -80,7 +89,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               {numberWithCommas(ETH_REQUIREMENT)} ETH,
             </BoldGreen>
             <BoldGray className="mr10" fontSize={24}>
-              {Math.round(ETH_REQUIREMENT / PRICE_PER_VALIDATOR)} validators,
+              {validatorRequirement} validators,
             </BoldGray>
             to launch the
             {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.

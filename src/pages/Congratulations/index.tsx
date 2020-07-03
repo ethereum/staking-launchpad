@@ -59,6 +59,7 @@ const _CongratulationsPage = ({
   });
 
   const stakingBalancePercent = (() => {
+    // @ts-ignore (type check in envVars.ts)
     const percent = (amountEth / ETH_REQUIREMENT) * 100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
@@ -66,6 +67,7 @@ const _CongratulationsPage = ({
   })();
   const amountAddedPercent = (() => {
     const percent =
+      // @ts-ignore
       ((depositKeys.length * PRICE_PER_VALIDATOR) / ETH_REQUIREMENT) * 100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
@@ -110,18 +112,22 @@ const _CongratulationsPage = ({
                     title="Staking balance:"
                     color={colors.blue.dark}
                     amountEth={amountEth}
+                    // @ts-ignore
                     amountValidators={amountEth / PRICE_PER_VALIDATOR}
                   />
                   <ProgressBarInfo
                     title="You added:"
                     color={colors.blue.light}
+                    // @ts-ignore
                     amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
                     amountValidators={depositKeys.length}
                   />
                   <ProgressBarInfo
                     title="Launch threshold:"
                     color={colors.blue.lightest}
+                    // @ts-ignore
                     amountEth={ETH_REQUIREMENT}
+                    // @ts-ignore
                     amountValidators={ETH_REQUIREMENT / PRICE_PER_VALIDATOR}
                   />
                 </div>

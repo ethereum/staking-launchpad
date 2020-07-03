@@ -156,6 +156,7 @@ const _ConnectWalletPage = ({
           const formattedBalance = Number(
             parseFloat(formatEther(amount)).toPrecision(5)
           );
+          // @ts-ignore (type check performed in envVars.ts)
           const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
 
           setBalance(formattedBalance);

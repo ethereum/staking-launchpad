@@ -8,7 +8,7 @@ const computeForkDataRoot = (
   genesisValidatorsRoot: Uint8Array
 ): Uint8Array => {
   const forkData: ForkData = {
-    currentVersion,
+    currentVersion: currentVersion as Uint8Array,
     genesisValidatorsRoot,
   };
   return ForkData.hashTreeRoot(forkData);
@@ -16,10 +16,13 @@ const computeForkDataRoot = (
 
 const computeDomain = (
   domainType: Buffer,
-  forkVersion: Buffer = GENESIS_FORK_VERSION,
+  forkVersion: Buffer | string = GENESIS_FORK_VERSION,
   genesisValidatorsRoot: Buffer = EMPTY_ROOT
 ): Uint8Array => {
-  const forkDataRoot = computeForkDataRoot(forkVersion, genesisValidatorsRoot);
+  const forkDataRoot = computeForkDataRoot(
+    forkVersion as Uint8Array,
+    genesisValidatorsRoot
+  );
   const domain = new Uint8Array(32);
   domain.set(domainType);
   domain.set(forkDataRoot.subarray(0, 28), 4);

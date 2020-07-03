@@ -12,7 +12,16 @@ export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx'
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
 export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x344b3a521ded954b4fa9ec8cc1d999631c998daa';
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'mainnet';
+
+if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
+    throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")
+}
 export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT     || 524288;
+
+
+if(process.env.REACT_APP_PRICE_PER_VALIDATOR &&  Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
+    throw new Error("REACT_APP_PRICE_PER_VALIDATOR must be of type: number")
+}
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
 
 // BLS signature verification variables

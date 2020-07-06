@@ -29,7 +29,7 @@ const EthLogo = styled.img`
 
 const NetworkText = styled(Text)`
   margin-right: 30px;
-  background: white;
+  background-color: rbga(0, 0, 0, 0);
   padding: 5px 15px;
   border-radius: 4px;
   border: 1px solid;

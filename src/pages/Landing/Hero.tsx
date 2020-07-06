@@ -68,7 +68,10 @@ export const Hero = () => {
               <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                 <LogoContainer className={m ? 'mb50' : undefined}>
                   <EthLogo src={EthDiamondPlain} />
-                  <LogoText>Eth2 Launch Pad</LogoText>
+                  <LogoText>
+                    Eth2 Launch Pad{' '}
+                    {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                  </LogoText>
                 </LogoContainer>
                 <Heading
                   level={m ? 1 : 2}

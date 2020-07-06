@@ -15,7 +15,7 @@ import { Link } from './Link';
 import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
-import { ETH2_NETWORK_NAME } from '../utils/envVars';
+import { ETH2_NETWORK_NAME, IS_MAINNET } from '../utils/envVars';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -65,7 +65,8 @@ export const AppBar = () => {
         <Link to={routesEnum.landingPage}>
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           <Heading level={4} margin="none" style={{ padding: '8px 0' }}>
-            Eth2 Launch Pad
+            Eth2 Launch Pad{' '}
+            {IS_MAINNET ? `` : ` for ${ETH2_NETWORK_NAME} testnet`}
           </Heading>
         </Link>
       </div>

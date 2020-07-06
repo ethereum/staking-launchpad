@@ -70,7 +70,10 @@ export const AppBar = () => {
           </Heading>
         </Link>
       </div>
-      <NetworkText>{ETH2_NETWORK_NAME}</NetworkText>
+      <NetworkText>
+        {ETH2_NETWORK_NAME}
+        {IS_MAINNET ? `` : ` Testnet`}
+      </NetworkText>
       {walletConnected && (
         <Box className="flex flex-row mr20">
           <Dot success={networkAllowed} error={!networkAllowed} />

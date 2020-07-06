@@ -45,6 +45,7 @@ import {
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
+  TICKER_NAME,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
@@ -184,7 +185,9 @@ const _ConnectWalletPage = ({
       !error &&
       (balance || balance === 0)
     ) {
-      setStatus(`${balance} ${IS_MAINNET ? '' : network} ETH available`);
+      setStatus(
+        `${balance} ${IS_MAINNET ? '' : network} ${TICKER_NAME} available`
+      );
     } else if (walletConnected && error) {
       setStatus('Error');
     } else if (!networkAllowed) {

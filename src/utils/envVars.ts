@@ -10,9 +10,12 @@ export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "g
 export const ALETHIO_URL                = IS_MAINNET ? 'https://explorer.aleth.io/tx' : 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
+
+// Network dependant constants
 export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x344b3a521ded954b4fa9ec8cc1d999631c998daa';
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Altona';
 export const CHAIN_NAME                 = process.env.CHAIN_NAME                    || 'Altona';
+export const TICKER_NAME                = process.env.TICKER_NAME                   || 'GöETH';
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
     throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")

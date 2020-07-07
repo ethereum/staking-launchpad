@@ -6,6 +6,7 @@ import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { TerminalUI } from './TerminalUI';
 import { Link } from '../../components/Link';
+import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
 
 interface Props {
   validatorCount: number | string;
@@ -27,7 +28,7 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
     'sh deposit.sh',
     `sh deposit.sh ${
       validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
-    }`,
+    } ${IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}`,
   ];
 
   return (

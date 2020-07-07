@@ -40,8 +40,7 @@ export const pageContent = {
     title: 'Signing up',
     content: (
       <Text size="large" className="my10">
-        To become a validator on eth2, you need to deposit
-        {PRICE_PER_VALIDATOR}
+        To become a validator on eth2, you need to deposit {PRICE_PER_VALIDATOR}
         ETH per validator that you wish to run. This process cannot be reversed.
       </Text>
     ),

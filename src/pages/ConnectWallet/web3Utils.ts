@@ -11,8 +11,7 @@ import {
   FORTMATIC_KEY,
   IS_MAINNET,
   PORTIS_DAPP_ID,
-  RPC_URL_GOERLI,
-  RPC_URL_MAINNET,
+  INFURA_URL,
 } from '../../utils/envVars';
 
 export enum NetworkChainId {
@@ -57,7 +56,7 @@ export const portis: PortisConnector = new PortisConnector({
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
   chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
-  rpcUrl: IS_MAINNET ? RPC_URL_GOERLI : RPC_URL_MAINNET,
+  rpcUrl: INFURA_URL,
 });
 
 // sets up initial call to MM

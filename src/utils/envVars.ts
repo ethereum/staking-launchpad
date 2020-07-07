@@ -10,17 +10,16 @@ export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "g
 export const ALETHIO_URL                = IS_MAINNET ? 'https://explorer.aleth.io/tx' : 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
-
-// Network dependant constants
-export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x344b3a521ded954b4fa9ec8cc1d999631c998daa';
+export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x16e82D77882A663454Ef92806b7DeCa1D394810f';
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Altona';
 export const CHAIN_NAME                 = process.env.CHAIN_NAME                    || 'Altona';
 export const TICKER_NAME                = process.env.TICKER_NAME                   || 'GöETH';
+export const GENESIS_FORK_VERSION       = process.env.REACT_APP_GENESIS_FORK_VERSION|| Buffer.from('00000121', 'hex');
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
     throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")
 }
-export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT     || 524288;
+export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT     || 20480;
 
 
 if(process.env.REACT_APP_PRICE_PER_VALIDATOR &&  Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
@@ -33,4 +32,3 @@ export const ETHER_TO_GWEI              = 1e9;
 export const MIN_DEPOSIT_AMOUNT         = 1 * ETHER_TO_GWEI;
 export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
-export const GENESIS_FORK_VERSION       = process.env.REACT_APP_GENESIS_FORK_VERSION || Buffer.from('00000000', 'hex');

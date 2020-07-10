@@ -99,9 +99,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           fontFamily: 'sans-serif',
                         }}
                       >
-                        TOTAL {TICKER_NAME} STAKED&nbsp;
-                        {!isMobile && <>IN NETWORK&nbsp;</>}
-                        (IN MILLIONS)
+                        Total {TICKER_NAME} Staked&nbsp; (in millions)
                       </text>
                     </>
                   )}
@@ -133,7 +131,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           transform: 'rotate(-90deg)',
                         }}
                       >
-                        ESTIMATED APR (IN {TICKER_NAME})
+                        Estimated APR (in {TICKER_NAME})
                       </text>
                     </>
                   )}

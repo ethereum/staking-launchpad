@@ -79,8 +79,7 @@ export const Hero = () => {
                   color="brand"
                   className="my20"
                 >
-                  Become a validator and help secure the eth2{' '}
-                  {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
+                  Become a validator and help secure eth2
                 </Heading>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>

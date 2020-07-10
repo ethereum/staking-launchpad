@@ -45,8 +45,7 @@ export const verifySignature = (depositDatum: DepositKeyInterface): boolean => {
   const pubkeyBuffer = bufferHex(depositDatum.pubkey);
   const signatureBuffer = bufferHex(depositDatum.signature);
   const depositMessageBuffer = bufferHex(depositDatum.deposit_message_root);
-  const forkVersion = bufferHex(depositDatum.fork_version);
-  const domain = computeDomain(DOMAIN_DEPOSIT, forkVersion);
+  const domain = computeDomain(DOMAIN_DEPOSIT);
   const signingRoot = computeSigningRoot(depositMessageBuffer, domain);
   return verify(pubkeyBuffer, signingRoot, signatureBuffer);
 };

@@ -129,6 +129,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   const isSmallScreen: boolean = useMobileCheck('630px');
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
   const percentageComplete = calculatePercentage(amountEth);
+  const thresholdReached = amountEth >= +ETH_REQUIREMENT;
 
   React.useEffect(() => {
     const resizeListener = () => {
@@ -142,10 +143,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   if (!ENABLE_RPC_FEATURES) return null;
 
   const validatorRequirement = numberWithCommas(
-    Math.round(
-      // @ts-ignore
-      ETH_REQUIREMENT / PRICE_PER_VALIDATOR
-    )
+    Math.round(+ETH_REQUIREMENT / +PRICE_PER_VALIDATOR)
   );
 
   return (
@@ -162,20 +160,28 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
             </BoldGreen>
             already staked and counting.
           </Text>
-          <Text className="mt20">
-            The eth2 network needs to reach at least
-            <BoldGreen className="mr10 ml10" fontSize={24}>
-              {numberWithCommas(ETH_REQUIREMENT)} ETH,
-            </BoldGreen>
-            <BoldGray className="mr10" fontSize={24}>
-              {validatorRequirement} validators,
-            </BoldGray>
-            to launch the
-            {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
-          </Text>
+          {thresholdReached ? (
+            <Text className="mt20">
+              The threshold to launch the eth2
+              {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
+              has been reached 🎉
+            </Text>
+          ) : (
+            <Text className="mt20">
+              The eth2 network needs to reach at least
+              <BoldGreen className="mr10 ml10" fontSize={24}>
+                {numberWithCommas(ETH_REQUIREMENT)} ETH,
+              </BoldGreen>
+              <BoldGray className="mr10" fontSize={24}>
+                {validatorRequirement} validators,
+              </BoldGray>
+              to launch the
+              {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
+            </Text>
+          )}
           <div>
             <ProgressBar workflow={percentageComplete} />
-            {amountEth >= +ETH_REQUIREMENT ? (
+            {thresholdReached ? (
               <PostThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
             ) : (
               <PreThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />

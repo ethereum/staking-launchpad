@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import _shuffle from 'lodash/shuffle';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 import { colors } from '../../styles/styledComponentsTheme';
 import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
@@ -16,10 +18,10 @@ import {
   ENABLE_RPC_FEATURES,
 } from '../../utils/envVars';
 import { ClientCard } from './ClientCard';
-import PrysmaticBg from '../../static/prysmatic-bg.svg';
-import LighthouseBg from '../../static/lighthouse-bg.svg';
-import NimbusBg from '../../static/nimbus-bg.svg';
-import TekuBg from '../../static/teku-bg.svg';
+import PrysmaticBg from '../../static/prysmatic-bg.png';
+import LighthouseBg from '../../static/lighthouse-bg.png';
+import NimbusBg from '../../static/nimbus-bg.png';
+import TekuBg from '../../static/teku-bg.png';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -60,7 +62,7 @@ const _CongratulationsPage = ({
 }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
 
-  const clientInfo = [
+  const clientInfo = _shuffle([
     {
       header: 'Lighthouse',
       text:
@@ -85,7 +87,7 @@ const _CongratulationsPage = ({
         'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
       imgUrl: TekuBg,
     },
-  ];
+  ]);
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -173,6 +175,22 @@ const _CongratulationsPage = ({
               </>
             )}
           </div>
+          <Heading
+            level={3}
+            size="medium"
+            color="blueDark"
+            margin="none"
+            className="mt30"
+          >
+            Set up your validator
+          </Heading>
+          <Text>
+            Lorem ipsum scaling sit blockchain, decentralized economy elit, sed
+            do replace tempor monetary ut labore et dollare magna distributed.
+            Ut smart contracts ad minim transaction fees, quis notarization
+            masternode proof-of-laboris profit nisi ut governance ea investment
+            consequat.{' '}
+          </Text>
           <ClientContainer>
             {clientInfo.map(client => (
               <ClientCard

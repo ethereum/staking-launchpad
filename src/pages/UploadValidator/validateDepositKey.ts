@@ -6,6 +6,7 @@ import { initBLS } from '@chainsafe/bls';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
 import { DepositKeyInterface } from '../../store/reducers';
+import { ETHER_TO_GWEI, MIN_DEPOSIT_AMOUNT } from '../../utils/envVars';
 
 const validateFieldFormatting = (
   depositDatum: DepositKeyInterface
@@ -44,6 +45,13 @@ const validateFieldFormatting = (
     depositDatum.deposit_message_root.length !== 64 ||
     depositDatum.deposit_data_root.length !== 64 ||
     depositDatum.fork_version.length !== 8
+  ) {
+    return false;
+  }
+
+  if (
+    depositDatum.amount < MIN_DEPOSIT_AMOUNT ||
+    depositDatum.amount > 32 * ETHER_TO_GWEI
   ) {
     return false;
   }

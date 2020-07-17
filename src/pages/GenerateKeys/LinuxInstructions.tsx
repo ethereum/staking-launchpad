@@ -7,6 +7,7 @@ import { Text } from '../../components/Text';
 import { TerminalUI } from './TerminalUI';
 import { Link } from '../../components/Link';
 import { Code } from '../../components/Code';
+import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
 
 interface Props {
   validatorCount: number | string;
@@ -28,7 +29,7 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
     './deposit.sh install',
     `./deposit.sh ${
       validatorCount > 0 ? `--num_validators ${validatorCount}` : ''
-    }`,
+    } ${IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}`,
   ];
 
   return (

@@ -12,9 +12,10 @@ import {
 } from '../pages/ConnectWallet/web3Utils';
 import { Dot } from './Dot';
 import { Link } from './Link';
-import { routesEnum } from '../Routes';
 import { Text } from './Text';
+import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
+import { ETH2_NETWORK_NAME } from '../utils/envVars';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -24,6 +25,15 @@ const EthLogo = styled.img`
   height: 40px;
   width: 40px;
   margin-right: 10px;
+`;
+
+const NetworkText = styled(Text)`
+  margin-right: 30px;
+  background: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: 1px solid;
+  font-weight: 500;
 `;
 
 export const AppBar = () => {
@@ -59,6 +69,7 @@ export const AppBar = () => {
           </Heading>
         </Link>
       </div>
+      <NetworkText>{ETH2_NETWORK_NAME}</NetworkText>
       {walletConnected && (
         <Box className="flex flex-row mr20">
           <Dot success={networkAllowed} error={!networkAllowed} />

@@ -17,7 +17,7 @@ export const contractAbi: EFAbi[] = [
   },
   {
     outputs: [],
-    inputs: [{ type: 'address', name: '_drain_address' }],
+    inputs: [],
     constant: false,
     payable: false,
     type: 'constructor',
@@ -29,7 +29,6 @@ export const contractAbi: EFAbi[] = [
     constant: true,
     payable: false,
     type: 'function',
-    gas: 95628,
   },
   {
     name: 'get_deposit_count',
@@ -38,7 +37,6 @@ export const contractAbi: EFAbi[] = [
     constant: true,
     payable: false,
     type: 'function',
-    gas: 18231,
   },
   {
     name: 'deposit',
@@ -52,7 +50,6 @@ export const contractAbi: EFAbi[] = [
     constant: false,
     payable: true,
     type: 'function',
-    gas: 1342274,
   },
   {
     name: 'drain',
@@ -61,15 +58,5 @@ export const contractAbi: EFAbi[] = [
     constant: false,
     payable: false,
     type: 'function',
-    gas: 35831,
-  },
-  {
-    name: 'drain_address',
-    outputs: [{ type: 'address', name: 'out' }],
-    inputs: [],
-    constant: true,
-    payable: false,
-    type: 'function',
-    gas: 701,
   },
 ];

@@ -11,9 +11,9 @@ import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
-  INFURA_PROJECT_ID,
-  MAINNET_ETH_REQUIREMENT,
+  ETH_REQUIREMENT,
   PRICE_PER_VALIDATOR,
+  ENABLE_RPC_FEATURES,
 } from '../../utils/envVars';
 
 const RainbowBackground = styled.div`
@@ -46,30 +46,29 @@ const _CongratulationsPage = ({
   depositKeys,
   workflow,
 }: Props): JSX.Element => {
-  const shouldRenderProgressBar = INFURA_PROJECT_ID !== '';
   const [amountEth, setAmountEth] = useState(0);
 
   useEffect(() => {
-    if (shouldRenderProgressBar) {
+    if (ENABLE_RPC_FEATURES) {
       const getBalance = async () => {
         const ethBalance = await queryContract();
         setAmountEth(ethBalance);
       };
-
       getBalance();
     }
   });
 
   const stakingBalancePercent = (() => {
-    const percent = (amountEth / MAINNET_ETH_REQUIREMENT) * 100;
+    // @ts-ignore (type check in envVars.ts)
+    const percent = (amountEth / ETH_REQUIREMENT) * 100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
     return percent;
   })();
   const amountAddedPercent = (() => {
     const percent =
-      ((depositKeys.length * PRICE_PER_VALIDATOR) / MAINNET_ETH_REQUIREMENT) *
-      100;
+      // @ts-ignore
+      ((depositKeys.length * PRICE_PER_VALIDATOR) / ETH_REQUIREMENT) * 100;
     if (percent === 0) return 0;
     if (percent < 1) return 0.25;
     return percent;
@@ -101,7 +100,7 @@ const _CongratulationsPage = ({
             Thank you for supporting the eth2 network!
           </Heading>
           <div>
-            {shouldRenderProgressBar && (
+            {ENABLE_RPC_FEATURES && (
               <>
                 <ProgressBar
                   complete={stakingBalancePercent}
@@ -113,21 +112,23 @@ const _CongratulationsPage = ({
                     title="Staking balance:"
                     color={colors.blue.dark}
                     amountEth={amountEth}
+                    // @ts-ignore
                     amountValidators={amountEth / PRICE_PER_VALIDATOR}
                   />
                   <ProgressBarInfo
                     title="You added:"
                     color={colors.blue.light}
+                    // @ts-ignore
                     amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
                     amountValidators={depositKeys.length}
                   />
                   <ProgressBarInfo
                     title="Launch threshold:"
                     color={colors.blue.lightest}
-                    amountEth={MAINNET_ETH_REQUIREMENT}
-                    amountValidators={
-                      MAINNET_ETH_REQUIREMENT / PRICE_PER_VALIDATOR
-                    }
+                    // @ts-ignore
+                    amountEth={ETH_REQUIREMENT}
+                    // @ts-ignore
+                    amountValidators={ETH_REQUIREMENT / PRICE_PER_VALIDATOR}
                   />
                 </div>
               </>

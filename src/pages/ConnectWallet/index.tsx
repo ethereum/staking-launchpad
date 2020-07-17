@@ -42,7 +42,7 @@ import {
 } from '../../store/actions/workflowActions';
 import {
   PORTIS_DAPP_ID,
-  INFURA_PROJECT_ID,
+  ENABLE_RPC_FEATURES,
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
 } from '../../utils/envVars';
@@ -156,6 +156,7 @@ const _ConnectWalletPage = ({
           const formattedBalance = Number(
             parseFloat(formatEther(amount)).toPrecision(5)
           );
+          // @ts-ignore (type check performed in envVars.ts)
           const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
 
           setBalance(formattedBalance);
@@ -309,7 +310,7 @@ const _ConnectWalletPage = ({
               />
 
               <WalletButton
-                invalid={INFURA_PROJECT_ID === ''}
+                invalid={!ENABLE_RPC_FEATURES}
                 selectedWallet={selectedWallet}
                 setSelectedWallet={setSelectedWallet}
                 logoSource={fortmaticLogo}

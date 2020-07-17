@@ -10,6 +10,7 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
+import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 
 interface mobile {
   isMobile: boolean;
@@ -75,7 +76,8 @@ export const Hero = () => {
                   color="brand"
                   className="my20"
                 >
-                  Become a validator and help secure the eth2 network.
+                  Become a validator and help secure the eth2{' '}
+                  {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
                 </Heading>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>

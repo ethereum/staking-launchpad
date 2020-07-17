@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CONTRACT_ADDRESS, INFURA_PROJECT_ID } from './envVars';
+import { CONTRACT_ADDRESS, INFURA_URL } from './envVars';
 
 type infuraResponse = {
   data: {
@@ -10,10 +10,9 @@ type infuraResponse = {
 };
 
 export const queryContract = async () => {
-  const infuraUrl = `https://goerli.infura.io/v3/${INFURA_PROJECT_ID}`;
   try {
     const response: infuraResponse = await axios.post(
-      infuraUrl,
+      INFURA_URL,
       {
         jsonrpc: '2.0',
         method: 'eth_getBalance',

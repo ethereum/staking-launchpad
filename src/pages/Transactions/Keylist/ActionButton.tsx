@@ -4,7 +4,12 @@ import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { TransactionStatus } from '../../../store/actions/depositFileActions';
-import { ALETHIO_URL, ETHERSCAN_URL } from '../../../utils/envVars';
+import {
+  ALETHIO_URL,
+  ETHERSCAN_URL,
+  BEACONSCAN_URL,
+  BEACONCHAIN_URL,
+} from '../../../utils/envVars';
 
 const Container = styled.div`
   width: 100px;
@@ -23,9 +28,10 @@ interface Props {
   status: TransactionStatus;
   txHash?: string;
   onClick: (e: any) => void;
+  pubkey?: string;
 }
 
-export const ActionButton = ({ status, txHash, onClick }: Props) => {
+export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
   if (status === TransactionStatus.READY) {
     return (
       <Container onClick={onClick}>
@@ -42,10 +48,7 @@ export const ActionButton = ({ status, txHash, onClick }: Props) => {
       </Container>
     );
   }
-  if (
-    status === TransactionStatus.STARTED ||
-    status === TransactionStatus.SUCCEEDED
-  ) {
+  if (status === TransactionStatus.STARTED) {
     return (
       <div className="flex">
         <Link external to={`${ALETHIO_URL}/${txHash}`}>
@@ -61,6 +64,23 @@ export const ActionButton = ({ status, txHash, onClick }: Props) => {
       </div>
     );
   }
+  if (status === TransactionStatus.SUCCEEDED) {
+    return (
+      <div className="flex">
+        <Link external to={`${BEACONCHAIN_URL}/${pubkey}`}>
+          <ButtonText className="mr5">
+            Beaconchain <Share size="small" />
+          </ButtonText>
+        </Link>
+        <Link external to={`${BEACONSCAN_URL}/${pubkey}#deposits`}>
+          <ButtonText>
+            Beaconscan <Share size="small" />
+          </ButtonText>
+        </Link>
+      </div>
+    );
+  }
+
   if (
     status === TransactionStatus.FAILED ||
     status === TransactionStatus.REJECTED

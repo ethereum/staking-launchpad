@@ -5,6 +5,7 @@ import _shuffle from 'lodash/shuffle';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
+import { Link } from '../../components/Link';
 import { colors } from '../../styles/styledComponentsTheme';
 import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
@@ -191,6 +192,14 @@ const _CongratulationsPage = ({
             masternode proof-of-laboris profit nisi ut governance ea investment
             consequat.{' '}
           </Text>
+          <Link
+            className="mt10"
+            external
+            to="https://notes.ethereum.org/@Uj8LfAR6SACOz4TM6m07kw/ryWupFtyP"
+          >
+            Learn more about the roles and responsibilities of ETH 2 Validators
+            →
+          </Link>
           <ClientContainer>
             {clientInfo.map(client => (
               <ClientCard

@@ -32,6 +32,7 @@ import { WalletButton } from './WalletButton';
 import metamaskLogo from '../../static/metamask.svg';
 import portisLogo from '../../static/portis.svg';
 import fortmaticLogo from '../../static/fortmatic.svg';
+import ledgerLogo from '../../static/ledger-thumbnail.png';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { Dot } from '../../components/Dot';
@@ -317,6 +318,16 @@ const _ConnectWalletPage = ({
                 walletProvider={fortmatic}
                 title="Fortmatic"
                 error={walletProvider === fortmatic ? error : undefined}
+              />
+
+              <WalletButton
+                invalid={false}
+                selectedWallet={null}
+                setSelectedWallet={() => {}}
+                logoSource={ledgerLogo}
+                walletProvider={null}
+                title="Ledger (coming soon)"
+                error={undefined}
               />
             </WalletButtonSubContainer>
           </Animated>

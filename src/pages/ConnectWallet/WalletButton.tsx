@@ -53,7 +53,7 @@ export const WalletButton = ({
   }, [error, active, setShowSpinner]);
 
   const handleClick = async () => {
-    if (!selectedWallet) {
+    if (!selectedWallet && walletProvider) {
       setShowSpinner(true);
       setSelectedWallet(walletProvider);
       await activate(walletProvider);
@@ -66,7 +66,7 @@ export const WalletButton = ({
       pad="xsmall"
       className="wallet-button flex flex-row relative"
       onClick={() => {
-        if (!invalid) handleClick();
+        if (!invalid && setSelectedWallet) handleClick();
       }}
       isActive={selectedWallet === walletProvider}
     >

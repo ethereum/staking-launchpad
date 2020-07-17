@@ -64,6 +64,13 @@ const phases: phase[] = [
       'https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/',
     link: 'Read about formal verification →',
   },
+  {
+    title: 'Validators FAQ',
+    subTitle:
+      'Check out the FAQ page for more information about the roles and responsibilities of ETH 2 network validators.',
+    linkUrl: 'https://notes.ethereum.org/@Uj8LfAR6SACOz4TM6m07kw/ryWupFtyP',
+    link: 'Learn more about validators →',
+  },
 ];
 
 export const Phases = (): JSX.Element => {

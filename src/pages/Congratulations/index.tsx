@@ -15,6 +15,11 @@ import {
   PRICE_PER_VALIDATOR,
   ENABLE_RPC_FEATURES,
 } from '../../utils/envVars';
+import { ClientCard } from './ClientCard';
+import PrysmaticBg from '../../static/prysmatic-bg.svg';
+import LighthouseBg from '../../static/lighthouse-bg.svg';
+import NimbusBg from '../../static/nimbus-bg.svg';
+import TekuBg from '../../static/teku-bg.svg';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -34,6 +39,13 @@ const Content = styled.div`
   margin: 30px 0;
 `;
 
+const ClientContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+`;
+
 interface OwnProps {}
 interface StateProps {
   depositKeys: DepositKeyInterface[];
@@ -47,6 +59,33 @@ const _CongratulationsPage = ({
   workflow,
 }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
+
+  const clientInfo = [
+    {
+      header: 'Lighthouse',
+      text:
+        'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
+      imgUrl: LighthouseBg,
+    },
+    {
+      header: 'Nimbus',
+      text:
+        'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
+      imgUrl: NimbusBg,
+    },
+    {
+      header: 'Prysm',
+      text:
+        'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
+      imgUrl: PrysmaticBg,
+    },
+    {
+      header: 'Teku',
+      text:
+        'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
+      imgUrl: TekuBg,
+    },
+  ];
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -134,6 +173,17 @@ const _CongratulationsPage = ({
               </>
             )}
           </div>
+          <ClientContainer>
+            {clientInfo.map(client => (
+              <ClientCard
+                className="mt10"
+                header={client.header}
+                imgUrl={client.imgUrl}
+                text={client.text}
+                key={client.header}
+              />
+            ))}
+          </ClientContainer>
         </Content>
       </Gutter>
     </RainbowBackground>

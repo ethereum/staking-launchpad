@@ -126,8 +126,6 @@ const PostThresholdSubText = ({
 export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   amountEth = 0,
 }): JSX.Element | null => {
-  // eslint-disable-next-line
-  amountEth = 10000;
   const isSmallScreen: boolean = useMobileCheck('630px');
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
   const percentageComplete = calculatePercentage(amountEth);

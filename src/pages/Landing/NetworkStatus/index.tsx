@@ -12,6 +12,21 @@ import {
   ETH2_NETWORK_NAME,
   PRICE_PER_VALIDATOR,
 } from '../../../utils/envVars';
+import useMobileCheck from '../../../hooks/useMobileCheck';
+
+//
+// Helpers
+
+const calculatePercentage = (amountEth: number) => {
+  const percentage = (amountEth / +ETH_REQUIREMENT) * 100;
+  return percentage && Math.max(1, percentage);
+};
+
+const calculateLaunchThreshold = (amountEth: number) =>
+  (+ETH_REQUIREMENT - amountEth).toFixed(1);
+
+//
+// Styled Componens
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
@@ -39,26 +54,92 @@ const BoldGray = styled.span`
   font-weight: bold;
 `;
 
+//
+// Sub-components
+
+const PreThresholdSubText = ({
+  amountEth = 0,
+  mobile = false,
+}: {
+  amountEth?: number;
+  mobile?: boolean;
+}) => (
+  <div className="flex space-between mt20">
+    <span className={`flex ${mobile ? 'flex-column flex-start' : ''}`}>
+      <BoldGreen fontSize={18} className="mr10">
+        {numberWithCommas(amountEth)}
+        &nbsp;ETH
+      </BoldGreen>
+      <Text size="small" style={{ marginTop: '2px' }}>
+        Current staking balance
+      </Text>
+    </span>
+    <Text
+      className={mobile ? 'flex flex-column align-flex-end' : ''}
+      size="small"
+    >
+      <strong>
+        {calculateLaunchThreshold(amountEth)}
+        &nbsp;ETH
+        {mobile ? <br /> : <>&nbsp;</>}
+      </strong>
+      Launch threshold
+    </Text>
+  </div>
+);
+
+const PostThresholdSubText = ({
+  amountEth = 0,
+  mobile = false,
+}: {
+  amountEth?: number;
+  mobile?: boolean;
+}) => (
+  <div className="flex space-between mt20">
+    <Text size="small">
+      <strong>
+        {numberWithCommas(ETH_REQUIREMENT)}
+        &nbsp;ETH
+        {mobile ? <br /> : <>&nbsp;</>}
+      </strong>
+      Launch threshold
+    </Text>
+    <span
+      className={`flex ${
+        mobile ? 'flex-column flex-start align-flex-end' : ''
+      }`}
+    >
+      <BoldGreen fontSize={18} className={mobile ? '' : 'mr10'}>
+        {numberWithCommas(amountEth)}
+        &nbsp;ETH
+      </BoldGreen>
+      <Text size="small" style={{ marginTop: '2px' }}>
+        Current staking balance
+      </Text>
+    </span>
+  </div>
+);
+
+//
+// Main Component
+
 export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   amountEth = 0,
 }): JSX.Element | null => {
-  const m: boolean = (window as any).mobileCheck();
+  // eslint-disable-next-line
+  amountEth = 10000;
+  const isSmallScreen: boolean = useMobileCheck('630px');
+  const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
+  const percentageComplete = calculatePercentage(amountEth);
 
-  const calculatePercentage = () => {
-    // @ts-ignore
-    const percentage = (amountEth / ETH_REQUIREMENT) * 100;
-    if (percentage === 0) {
-      return 0;
-    }
-    if (percentage < 1) {
-      return 1;
-    }
-    return percentage;
-  };
-
-  const calculateLaunchThreshold = () =>
-    // @ts-ignore
-    (ETH_REQUIREMENT - amountEth).toFixed(1);
+  React.useEffect(() => {
+    const resizeListener = () => {
+      const newM = (window as any).mobileCheck();
+      if (m !== newM) setM(newM);
+    };
+    window.addEventListener('resize', resizeListener);
+    return () => window.removeEventListener('resize', resizeListener);
+  }, []);
 
   if (!ENABLE_RPC_FEATURES) return null;
 
@@ -95,25 +176,12 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
             {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
           </Text>
           <div>
-            <ProgressBar workflow={calculatePercentage()} />
-            <div className="flex space-between mt20">
-              <span className="flex">
-                <BoldGreen fontSize={18} className="mr10">
-                  {numberWithCommas(amountEth)}
-                  &nbsp;ETH
-                </BoldGreen>
-                <Text size="small" style={{ marginTop: '2px' }}>
-                  Current staking balance
-                </Text>
-              </span>
-              <Text size="small">
-                <strong>
-                  {numberWithCommas(calculateLaunchThreshold())}
-                  &nbsp;ETH&nbsp;
-                </strong>
-                Launch threshold
-              </Text>
-            </div>
+            <ProgressBar workflow={percentageComplete} />
+            {amountEth >= +ETH_REQUIREMENT ? (
+              <PostThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
+            ) : (
+              <PreThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
+            )}
           </div>
         </ScrollAnimation>
       </Content>

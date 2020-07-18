@@ -67,12 +67,12 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
   if (status === TransactionStatus.SUCCEEDED) {
     return (
       <div className="flex">
-        <Link external to={`${BEACONCHAIN_URL}/${pubkey}`}>
+        <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
           <ButtonText className="mr5">
             Beaconchain <Share size="small" />
           </ButtonText>
         </Link>
-        <Link external to={`${BEACONSCAN_URL}/${pubkey}#deposits`}>
+        <Link external to={`${BEACONSCAN_URL}/0x${pubkey}`}>
           <ButtonText>
             Beaconscan <Share size="small" />
           </ButtonText>

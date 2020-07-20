@@ -7,3 +7,4 @@ export * from './Acknowledgements';
 export * from './Summary';
 export * from './UploadValidator';
 export * from './Transactions';
+export * from './FAQ';

@@ -47,10 +47,19 @@ export const rainbowColors = [
   '#a0aaed', // purple
 ];
 
+export const rainbowBGColors = [
+  '#fdccd3', // pink
+  '#FED4D1', // red
+  '#ffd9b8', // yellow-orange
+  '#ABE3BC', // green
+  '#81d7ec', // blue
+  '#a0aaed', // purple
+];
+
 export const rainbowLightColors = [
   '#fef2f4', // pink
-  '#fee7e5', // red
-  '#fff2e6', // yellow
+  '#fdf8f7', // red
+  '#FFF2E6', // yellow-orange
   '#e5f6ea', // green
   '#dff5fa', // blue
   '#e7e9fa', // purple

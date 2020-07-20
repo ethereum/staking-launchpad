@@ -1,13 +1,17 @@
 import React from 'react';
+import { HashLink as Anchor } from 'react-router-hash-link';
 import styled from 'styled-components';
+import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
-import { Link } from '../../components/Link';
 
 const FAQStyles = styled.div`
   section {
     margin-top: 30px;
+  }
+  a {
+    text-decoration: none;
   }
 `;
 
@@ -28,7 +32,9 @@ export const FAQ = () => {
     <PageTemplate title="Validator FAQs">
       <FAQStyles>
         <section>
-          <SectionTitle level={3}>Introduction</SectionTitle>
+          <Anchor to="#introduction" id="introduction">
+            <SectionTitle level={3}>Introduction</SectionTitle>
+          </Anchor>
 
           <section>
             <Heading level={4}>What exactly is a validator?</Heading>
@@ -109,7 +115,9 @@ export const FAQ = () => {
           </section>
         </section>
         <section>
-          <SectionTitle level={3}>Responsibilities</SectionTitle>
+          <Anchor to="#responsibilities" id="responsibilities">
+            <SectionTitle level={3}>Responsibilities</SectionTitle>
+          </Anchor>
           <section>
             <Heading level={4}>
               How are validators incentivized to stay active and honest?
@@ -339,7 +347,9 @@ export const FAQ = () => {
           </section>
         </section>
         <section>
-          <SectionTitle level={3}>Keys</SectionTitle>
+          <Anchor to="#keys" id="keys">
+            <SectionTitle level={3}>Keys</SectionTitle>
+          </Anchor>
           <section>
             <Heading level={4}>What happens I lose my signing key?</Heading>
             <Text className="mt10">

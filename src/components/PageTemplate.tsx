@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { AppBar } from './AppBar';
 import { Heading } from './Heading';
-import { DesktopOnlyModal } from './DesktopOnlyModal';
 
 const Content = styled.div`
   width: 100%;
@@ -31,10 +30,6 @@ interface Props extends RouteComponentProps {
 }
 
 const _PageTemplate = ({ children, title }: Props): JSX.Element => {
-  if ((window as any).mobileCheck()) {
-    return <DesktopOnlyModal />;
-  }
-
   return (
     <RainbowBackground>
       <AppBar />

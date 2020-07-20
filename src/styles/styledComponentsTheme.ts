@@ -50,9 +50,9 @@ export const rainbowColors = [
 export const rainbowBGColors = [
   '#fdccd3', // pink
   '#FED4D1', // red
-  '#ffd9b8', // yellow-orange
-  '#ABE3BC', // green
-  '#81d7ec', // blue
+  '#fcead9', // yellow-orange
+  '#dcf0df', // green
+  '#d3edf6', // blue
   '#a0aaed', // purple
 ];
 

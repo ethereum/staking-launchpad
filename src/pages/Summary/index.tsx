@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
 import { Box, CheckBox } from 'grommet';
-import { FormNextLink } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
@@ -138,8 +137,14 @@ const _SummaryPage = ({
           of the official deposit contract. Please check that the address you
           are sending the transaction to is the correct address.
         </Text>
-        <Link to="https://www.google.com" external className="mt10" primary>
-          Learn here how to do it safely <FormNextLink />
+        <Link
+          to="https://www.google.com"
+          external
+          className="mt10"
+          primary
+          withArrow
+        >
+          Learn here how to do it safely
         </Link>
         <span className="mt20">
           <CheckBox

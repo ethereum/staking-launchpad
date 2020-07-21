@@ -27,9 +27,9 @@ const Container = styled.div`
   border: 1px solid ${(p: Props) => p.theme.gray.medium};
   box-shadow: ${(p: Props) =>
     p.isActive
-      ? '-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);\n' +
-        '\t-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);\n' +
-        '\tbox-shadow:0 0 10px rgba(0, 0, 0, 0.5);'
+      ? '-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);\n' +
+        '\t-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);\n' +
+        '\tbox-shadow:0 0 10px rgba(0, 0, 0, 0.3);'
       : 'inherit'};
   cursor: ${(p: Props) => (p.disabled ? 'default' : 'pointer')};
   transition: width 0.5s;

@@ -24,7 +24,8 @@ const StyledButton = styled(GrommetButton)`
   padding: 15px;
   text-transform: capitalize;
   width: ${calculateWidth};
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
   background-color: ${p => (p.primary ? p.theme.blue.dark : p.theme.white)};
   border: ${p => `1px solid ${p.theme.gray.medium}`};
   :hover {

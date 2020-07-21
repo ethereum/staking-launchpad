@@ -20,6 +20,6 @@ const StyledImgForHero = styled.img`
   height: 230px;
 `;
 
-export const Hero = ({ imgSrc }: { imgSrc: string }) => {
-  return <StyledImgForHero src={imgSrc} className="mb20" />;
+export const Hero = ({ imgSrc, ...props }: any) => {
+  return <StyledImgForHero src={imgSrc} className="mb20" {...props} />;
 };

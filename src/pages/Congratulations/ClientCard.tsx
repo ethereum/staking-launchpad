@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Text } from '../../components/Text';
+import { Link } from '../../components/Link';
 
 const Container = styled.div`
   background-color: white;
@@ -20,18 +21,21 @@ interface Props {
   header: string | React.ReactElement;
   text: string | React.ReactElement;
   className?: string;
+  url: string;
 }
 
-export const ClientCard = ({ imgUrl, header, text, className }: Props) => {
+export const ClientCard = ({ imgUrl, header, text, className, url }: Props) => {
   return (
-    <Container className={className}>
-      <HeroImg src={imgUrl} alt="" />
-      <div className="p20">
-        <Text size="large">{header}</Text>
-        <Text size="small" className="mt15">
-          {text}
-        </Text>
-      </div>
-    </Container>
+    <Link to={url}>
+      <Container className={className}>
+        <HeroImg src={imgUrl} alt="" />
+        <div className="p20">
+          <Text size="large">{header}</Text>
+          <Text size="small" className="mt15">
+            {text}
+          </Text>
+        </div>
+      </Container>
+    </Link>
   );
 };

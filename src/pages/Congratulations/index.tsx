@@ -11,18 +11,19 @@ import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
 import { ProgressBarInfo } from './ProgressBarInfo';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
+  ENABLE_RPC_FEATURES,
   ETH_REQUIREMENT,
   PRICE_PER_VALIDATOR,
-  ENABLE_RPC_FEATURES,
 } from '../../utils/envVars';
 import { ClientCard } from './ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
+import { routesEnum } from '../../Routes';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -55,6 +56,12 @@ interface StateProps {
   workflow: WorkflowStep;
 }
 interface DispatchProps {}
+interface Client {
+  header: string;
+  text: string;
+  imgUrl: any;
+  url: routesEnum;
+}
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _CongratulationsPage = ({
@@ -63,30 +70,34 @@ const _CongratulationsPage = ({
 }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
 
-  const clientInfo = _shuffle([
+  const clientInfo: Client[] = _shuffle([
     {
       header: 'Lighthouse',
       text:
         'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
       imgUrl: LighthouseBg,
+      url: routesEnum.lighthouse,
     },
     {
       header: 'Nimbus',
       text:
         'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
       imgUrl: NimbusBg,
+      url: routesEnum.nimbus,
     },
     {
       header: 'Prysm',
       text:
         'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
       imgUrl: PrysmaticBg,
+      url: routesEnum.prysm,
     },
     {
       header: 'Teku',
       text:
         'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
       imgUrl: TekuBg,
+      url: routesEnum.teku,
     },
   ]);
 
@@ -208,6 +219,7 @@ const _CongratulationsPage = ({
                 imgUrl={client.imgUrl}
                 text={client.text}
                 key={client.header}
+                url={client.url}
               />
             ))}
           </ClientContainer>

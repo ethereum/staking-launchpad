@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
+import { FormNext } from 'grommet-icons';
 
 interface LinkProps {
   primary?: boolean | undefined;
@@ -39,6 +40,11 @@ const StyledLink = styled(RouterLink)`
     props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
+const Arrow = styled(FormNext)`
+  transform: translate(0px, 6px);
+  stroke: ${(props: any) =>
+    props.primary ? props.theme.blue.medium : 'inherit'};
+`;
 
 interface LinkProps {
   to: string;
@@ -49,10 +55,19 @@ interface LinkProps {
   primary?: boolean | undefined;
   onClick?: (param?: any) => void;
   inline?: boolean;
+  withArrow?: boolean;
 }
 
 export const Link = (props: LinkProps) => {
-  const { external, children, className, to, primary, inline } = props;
+  const {
+    external,
+    children,
+    className,
+    to,
+    primary,
+    inline,
+    withArrow,
+  } = props;
   if (external) {
     return (
       <StyledExternalLink
@@ -63,12 +78,17 @@ export const Link = (props: LinkProps) => {
         inline={inline}
       >
         {children}
+        {withArrow && (
+          // @ts-ignore
+          <Arrow primary={primary} />
+        )}
       </StyledExternalLink>
     );
   }
   return (
     <StyledLink className={className} {...props}>
       {children}
+      {withArrow && <Arrow primary={primary} />}
     </StyledLink>
   );
 };

@@ -100,6 +100,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
                       onClick={() => handleActionClick(depositKey)}
                       status={transactionStatus}
                       txHash={txHash}
+                      pubkey={pubkey}
                     />
                   </TableCell>
                 </TableRow>

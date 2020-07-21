@@ -10,6 +10,7 @@ import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
+import { Code } from '../../components/Code';
 import { validateDepositKey } from './validateDepositKey';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import {
@@ -26,7 +27,6 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-import { Code } from '../../components/Code';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -48,6 +48,7 @@ const Dropzone = styled.div`
   padding: 30px;
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
 `;
+// eslint-disable-next-line
 const Highlighted = styled(Text)`
   color: ${(p: { theme: any }) => p.theme.blue.medium};
   display: inline-block;
@@ -87,6 +88,7 @@ const _UploadValidatorPage = ({
 }: Props): JSX.Element => {
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
+  const [isFileInvalid, setIsFileInvalid] = useState(depositKeys.length > 0);
   const {
     acceptedFiles, // all JSON files will pass this check (including BLS failures
     inputRef,
@@ -107,6 +109,7 @@ const _UploadValidatorPage = ({
     if (jsonFiles.length === 1) {
       setIsFileStaged(true); // unstaged via handleFileDelete
       setIsFileAccepted(true); // rejected if BLS check fails
+      setIsFileInvalid(false);
       dispatchDepositFileNameUpdate(jsonFiles[0].name);
       const reader = new FileReader();
       reader.onload = async event => {
@@ -126,6 +129,7 @@ const _UploadValidatorPage = ({
             } else {
               // file is JSON but did not pass BLS, so leave it "staged" but not "accepted"
               setIsFileAccepted(false);
+              setIsFileInvalid(true);
               dispatchDepositFileKeyUpdate([]);
               flushDropzoneCache();
             }
@@ -188,7 +192,22 @@ const _UploadValidatorPage = ({
             <Close size="15px" className="mr10" />
           </DeleteBtn>
           <Text>
-            {depositFileName} {!isFileAccepted && 'is invalid'}
+            <Code>{depositFileName}</Code>
+            {!isFileAccepted && ' is invalid'}
+            {isFileInvalid && (
+              <>
+                &nbsp;due to a serious issue. Please&nbsp;
+                <Link
+                  external
+                  primary
+                  inline
+                  to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+                >
+                  open an issue on GitHub
+                </Link>
+                &nbsp;to get in contact with us.
+              </>
+            )}
           </Text>
         </div>
       );
@@ -203,6 +222,7 @@ const _UploadValidatorPage = ({
     isDragReject,
     isFileStaged,
     isFileAccepted,
+    isFileInvalid,
     depositFileName,
     handleFileDelete,
   ]);

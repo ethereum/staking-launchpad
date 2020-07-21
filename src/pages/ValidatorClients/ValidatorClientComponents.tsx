@@ -16,6 +16,8 @@ export const SectionTitle = styled(Heading)`
 
 const StyledImgForHero = styled.img`
   width: 100%;
+  object-fit: cover;
+  height: 230px;
 `;
 
 export const Hero = ({ imgSrc }: { imgSrc: string }) => {

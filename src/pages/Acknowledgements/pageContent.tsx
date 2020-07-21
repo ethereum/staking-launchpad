@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormNext } from 'grommet-icons';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
@@ -30,8 +29,14 @@ export const pageContent = {
           to make a one-way ETH transaction to the deposit contract on Ethereum
           1.0.
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="blueDark" />
+        <Link
+          external
+          to="https://www.google.com"
+          className="my10"
+          primary
+          withArrow
+        >
+          Learn More
         </Link>
       </>
     ),
@@ -60,9 +65,9 @@ export const pageContent = {
           to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
           className="my10"
           primary
+          withArrow
         >
           Learn more about eth2 economics
-          <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -77,8 +82,8 @@ export const pageContent = {
           Validators that act maliciously, or contrary to the specification, are
           liable to be slashed (incur a large penalty).
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about about penalties <FormNext color="blueDark" />
+        <Link to="/faq" className="my10" primary withArrow>
+          Learn More about about penalties
         </Link>
       </>
     ),
@@ -119,8 +124,15 @@ export const pageContent = {
           Validators will have to wait until phase 2 (around two years) to be
           able to withdraw to a specific shard.
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about eth2&apos;s phases <FormNext color="blueDark" />
+        <Link
+          external
+          // TODO: NEED LINK HERE
+          to="https://www.google.com"
+          className="my10"
+          primary
+          withArrow
+        >
+          Learn More about eth2&apos;s phases
         </Link>
       </>
     ),

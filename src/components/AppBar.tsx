@@ -29,7 +29,6 @@ const EthLogo = styled.img`
 
 const NetworkText = styled(Text)`
   margin-right: 30px;
-  background: white;
   padding: 5px 15px;
   border-radius: 4px;
   border: 1px solid;
@@ -69,15 +68,17 @@ export const AppBar = () => {
           </Heading>
         </Link>
       </div>
-      <NetworkText>{ETH2_NETWORK_NAME}</NetworkText>
-      {walletConnected && (
-        <Box className="flex flex-row mr20">
-          <Dot success={networkAllowed} error={!networkAllowed} />
-          <Text size="small" className="ml10" color="blueDark">
-            {trimString(account as string, 10)}
-          </Text>
-        </Box>
-      )}
+      <div className="flex">
+        <NetworkText>{ETH2_NETWORK_NAME}</NetworkText>
+        {walletConnected && (
+          <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
+            <Dot success={networkAllowed} error={!networkAllowed} />
+            <Text size="small" className="ml10" color="blueDark">
+              {trimString(account as string, 10)}
+            </Text>
+          </Box>
+        )}
+      </div>
     </RainbowBackground>
   );
 };

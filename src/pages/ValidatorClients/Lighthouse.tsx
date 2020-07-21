@@ -9,6 +9,24 @@ import {
 import { Code } from '../../components/Code';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
+import styled from 'styled-components';
+
+const CodeSnippet = styled.div`
+  padding: 10px;
+  font-family: Courier, sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  color: #fff;
+  background-color: #597ea3;
+  border-radius: 6px;
+  margin: 10px 0;
+
+  code {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+`;
 
 export const Lighthouse = () => {
   return (
@@ -81,7 +99,39 @@ export const Lighthouse = () => {
             Troubleshooting
           </SectionTitle>
           <Text>The file structure should look as follows (example):</Text>
-
+          <CodeSnippet>
+            <pre>
+              <code>.lighthouse</code>
+              <code>|-- beacon</code>
+              <code>| ...</code>
+              <code>|-- secrets</code>
+              <code>
+                |{'   '}|--
+                0xa9e96563c1ab22dc9d1d05d87305b5997418178cfc72af77ccb689be7ca5c1f3d29499c2adb37f6feb34b67e9f7523f7
+              </code>
+              <code>
+                |{'   '}|--
+                0x822e877e5e326408842b49ca8b2527f5042a5814df036f88c97a533964203d101656634bbd80bf162c179d78bc55a60b
+              </code>
+              <code>
+                |{'   '}|--
+                0x85d44bc728214797a466d1bbd0a833bddf33d139a7fcc179e97518ea8e519cc6bd7fa8f13ec524afbb04c1b1fc8af880
+              </code>
+              <code>
+                |{'   '}|--
+                0x8d2d82b28d1bb6f5d44ff6f3d54fc473deebbd9f82cc1bec8ddb9f864c085bf67e7a24b990dccf23fb01c44b6e13b1a5
+              </code>
+              <code>|-- validators</code>
+              <code>{'    '}|-- keystore-0</code>
+              <code>{'        '}|-- voting-keystore.json</code>
+              <code>{'    '}|-- keystore-1</code>
+              <code>{'        '}|-- voting-keystore.json</code>
+              <code>{'    '}|-- keystore-2</code>
+              <code>{'        '}|-- voting-keystore.json</code>
+              <code>{'    '}|-- keystore-3</code>
+              <code>{'        '}|-- voting-keystore.json</code>
+            </pre>
+          </CodeSnippet>
           <ul>
             <li>
               <Text>

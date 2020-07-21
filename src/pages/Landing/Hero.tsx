@@ -19,6 +19,8 @@ interface mobile {
 }
 
 const RainbowBackground = styled.div`
+  min-width: 100%;
+  overflow: hidden;
   background-image: ${p =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight})`};
   min-height: ${(p: mobile) => p.isMobile && 'calc(100vh - 20px)'};
@@ -43,16 +45,13 @@ const ResponsiveContainer = styled.div`
     min-height: calc(100vh - 20px);
   }
 `;
-const SectionContainer = styled.div`
-  @media screen and (max-width: ${({ theme }) => theme.screenSizes.small}) {
-    min-height: calc(100vh - 50px);
-  }
-`;
 const ContentContainer = styled.div`
   display: flex;
+  align-items: center;
   @media screen and (max-width: ${({ theme }) => theme.screenSizes.small}) {
+    align-items: flex-start;
     justify-content: space-between;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 50px);
   }
 `;
 const LogoContainer = styled.div`
@@ -69,11 +68,15 @@ const LogoText = styled(Text)`
   font-weight: bold;
 `;
 const StyledLeslieImgNode = styled.img`
-  margin: 3rem 0;
   max-width: 100%;
-  @media screen and (min-width: ${({ theme }) => theme.screenSizes.small}) {
+  margin: 3rem 0 5rem;
+  transform: scale(1.2, 1.2);
+  transform-origin: 0% 0%;
+  @media screen and (min-width: 800px) {
+    transform: translate3d(0, 0, 0);
+    margin: 0 -3rem 0 3rem;
     max-width: 100%;
-    max-height: 600px;
+    max-height: 650px;
   }
 `;
 
@@ -103,8 +106,8 @@ export const Hero = () => {
       <MainContainer isMobile={m}>
         <ResponsiveContainer isMobile={m}>
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
-            <SectionContainer className={m ? undefined : 'pt100'}>
-              <SectionContainer>
+            <ContentContainer className={m ? undefined : 'pt100'}>
+              <div>
                 <div style={{ minHeight: 50 }}>
                   <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                     <LogoContainer className={m ? 'mb50' : undefined}>
@@ -113,56 +116,41 @@ export const Hero = () => {
                     </LogoContainer>
                   </Animate>
                 </div>
-                <ContentContainer
-                  className={isSmallScreen ? undefined : 'pt100'}
+                <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
+                  <Heading
+                    level={m ? 1 : 2}
+                    size={m ? 'meduim' : 'large'}
+                    color="brand"
+                    className="my20"
+                  >
+                    Become a validator and help secure the eth2{' '}
+                    {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
+                  </Heading>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
+                  <Text className="mt25">
+                    Earn continuous payouts for providing a public good to the
+                    community.
+                  </Text>
+                </ScrollAnimation>
+                {!!isSmallScreen && <LeslieImage />}
+                <Animate
+                  enter="fadeIn"
+                  appear="fadeIn"
+                  className={m ? undefined : 'mt100'}
                 >
-                  <div>
-                    <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
-                      <Heading
-                        level={m ? 1 : 2}
-                        size={m ? 'meduim' : 'large'}
-                        color="brand"
-                        className="my20"
-                      >
-                        Become a validator and help secure the eth2{' '}
-                        {IS_MAINNET
-                          ? ` mainnet`
-                          : ` ${ETH2_NETWORK_NAME} testnet`}
-                        .
-                      </Heading>
-                    </ScrollAnimation>
-                    <ScrollAnimation
-                      animateIn="fadeInUp"
-                      delay={750}
-                      animateOnce
-                    >
-                      <Text className="mt25">
-                        Earn continuous payouts for providing a public good to
-                        the community.
-                      </Text>
-                    </ScrollAnimation>
-                    {!!isSmallScreen && <LeslieImage />}
-                    <Animate
-                      enter="fadeIn"
-                      appear="fadeIn"
-                      className={m ? undefined : 'mt100'}
-                    >
-                      <Link to={routesEnum.acknowledgementPage}>
-                        <Button
-                          fullWidth={isSmallScreen}
-                          rainbow
-                          width={isSmallScreen ? undefined : 250}
-                          label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
-                        />
-                      </Link>
-                    </Animate>
-                  </div>
-                  {!isSmallScreen && (
-                    <LeslieImage style={{ margin: '3rem 0 0 3rem ' }} />
-                  )}
-                </ContentContainer>
-              </SectionContainer>
-            </SectionContainer>
+                  <Link to={routesEnum.acknowledgementPage}>
+                    <Button
+                      fullWidth={isSmallScreen}
+                      rainbow
+                      width={m ? undefined : 250}
+                      label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
+                    />
+                  </Link>
+                </Animate>
+              </div>
+              {!isSmallScreen && <LeslieImage />}
+            </ContentContainer>
           </div>
         </ResponsiveContainer>
       </MainContainer>

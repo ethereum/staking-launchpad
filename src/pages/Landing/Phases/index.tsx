@@ -45,6 +45,7 @@ interface phase {
   subTitle: string;
   linkUrl: string;
   link: string;
+  external: boolean;
 }
 
 const phases: phase[] = [
@@ -54,7 +55,8 @@ const phases: phase[] = [
       'The duration for the deployment of the individual phases depends on many factors.',
     linkUrl:
       'https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/',
-    link: 'Phase 0, 1, 2 and 3 duration →',
+    link: 'Phase 0, 1, 2 and 3 duration',
+    external: true,
   },
   {
     title: 'Deposit contract formally verified',
@@ -62,7 +64,16 @@ const phases: phase[] = [
       'The deposit contract has been verified at a byte-code level to ensure everyone’s safety.',
     linkUrl:
       'https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/',
-    link: 'Read about formal verification →',
+    link: 'Read about formal verification',
+    external: true,
+  },
+  {
+    title: 'Validators FAQ',
+    subTitle:
+      'Check out the FAQ page for more information about the roles and responsibilities of eth2 network validators.',
+    linkUrl: '/faq',
+    link: 'Learn more about validators',
+    external: false,
   },
 ];
 
@@ -103,13 +114,7 @@ export const Phases = (): JSX.Element => {
           </div>
           <PhasesContainer>
             {phases.map((phase: phase) => (
-              <PhaseCard
-                key={phase.title}
-                title={phase.title}
-                link={phase.link}
-                linkUrl={phase.linkUrl}
-                subTitle={phase.subTitle}
-              />
+              <PhaseCard key={phase.title} {...phase} />
             ))}
           </PhasesContainer>
         </ResponsiveContainer>

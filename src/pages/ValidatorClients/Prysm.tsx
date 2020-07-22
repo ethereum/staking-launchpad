@@ -47,11 +47,19 @@ export const Prysm = () => {
           <SectionTitle level={2} className="mb5">
             Key Management
           </SectionTitle>
-        </section>
-        <section>
-          <SectionTitle level={2} className="mb5">
-            Troubleshooting
-          </SectionTitle>
+          <Text>
+            Prysm is currently going through a redesign of how their keys are
+            managed. After this redesign is completed, it will be much easier to
+            use keystores in Prysm and these instructions will be updated then.
+          </Text>
+          <Link
+            primary
+            external
+            to="https://github.com/prysmaticlabs/prysm/pulls?q=is%3Apr+Accounts+V2+"
+            withArrow
+          >
+            Follow the progress of this update on the Prysm Github repository
+          </Link>
         </section>
         <section>
           <SectionTitle level={2} className="mb5">

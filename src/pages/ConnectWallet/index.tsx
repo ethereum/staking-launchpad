@@ -185,9 +185,7 @@ const _ConnectWalletPage = ({
       !error &&
       (balance || balance === 0)
     ) {
-      setStatus(
-        `${balance} ${IS_MAINNET ? '' : network} ${TICKER_NAME} available`
-      );
+      setStatus(`${balance} ${TICKER_NAME} available`);
     } else if (walletConnected && error) {
       setStatus('Error');
     } else if (!networkAllowed) {

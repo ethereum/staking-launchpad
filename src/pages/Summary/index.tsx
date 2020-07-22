@@ -137,13 +137,7 @@ const _SummaryPage = ({
           of the official deposit contract. Please check that the address you
           are sending the transaction to is the correct address.
         </Text>
-        <Link
-          to="https://www.google.com"
-          external
-          className="mt10"
-          primary
-          withArrow
-        >
+        <Link to="/phishing" className="my10" primary withArrow>
           Learn here how to do it safely
         </Link>
         <span className="mt20">
@@ -153,7 +147,7 @@ const _SummaryPage = ({
             label={
               <Text>
                 I know how to check that I am sending my ETH into the correct
-                deposit contract and will do so.
+                deposit contract address and will do so.
               </Text>
             }
           />

@@ -70,7 +70,7 @@ const phases: phase[] = [
   {
     title: 'Validators FAQ',
     subTitle:
-      'Check out the FAQ page for more information about the roles and responsibilities of ETH 2 network validators.',
+      'Check out the FAQ page for more information about the roles and responsibilities of eth2 network validators.',
     linkUrl: '/faq',
     link: 'Learn more about validators',
     external: false,

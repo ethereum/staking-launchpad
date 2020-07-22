@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Text } from '../../../../components/Text';
+import { TICKER_NAME } from '../../../../utils/envVars';
 
 /**
  * Type Declarations
@@ -236,9 +237,9 @@ const ValidatorEconomicsChartTooltip: React.FC<Props> = ({
       <TooltipLineCircle cx={x} cy={y0} {...{ color }} />
       <ForeignObject
         ref={foreignObjectRef}
-        transform={`translate(${x1}, ${y - 160})`}
+        transform={`translate(${x1}, ${y - 170})`}
         opacity={+loaded}
-        {...{ x: 0, y: 0, width: 160, height: 90 }}
+        {...{ x: 0, y: 0, width: 170, height: 90 }}
       >
         <CurrentLabel
           isCurrent={current.x === x && current.x > chart.x!(524_288)}
@@ -253,7 +254,7 @@ const ValidatorEconomicsChartTooltip: React.FC<Props> = ({
               <TooltipField>Staked</TooltipField>
               <TooltipValue>
                 {datum.x!.toLocaleString()}
-                &nbsp;ETH
+                &nbsp;{TICKER_NAME}
               </TooltipValue>
               <TooltipField marginTop="7px">APR</TooltipField>
               <TooltipValue>

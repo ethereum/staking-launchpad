@@ -23,7 +23,7 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
 
@@ -117,7 +117,7 @@ const _GenerateKeysPage = ({
                     .times(new BigNumber(PRICE_PER_VALIDATOR))
                     .toFixed(1)
                     .toString()}{' '}
-              ETH
+              {TICKER_NAME}
             </Text>
           </div>
         </div>

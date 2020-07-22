@@ -31,7 +31,7 @@ export const pageContent = {
         </Text>
         <Link
           external
-          to="https://www.google.com"
+          to="https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/"
           className="my10"
           primary
           withArrow
@@ -127,7 +127,7 @@ export const pageContent = {
         <Link
           external
           // TODO: NEED LINK HERE
-          to="https://www.google.com"
+          to="https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/"
           className="my10"
           primary
           withArrow

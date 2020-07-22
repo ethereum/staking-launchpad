@@ -61,8 +61,8 @@ const phases: phase[] = [
     subTitle:
       'The deposit contract has been verified at a byte-code level to ensure everyone’s safety.',
     linkUrl:
-      'https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/',
-    link: 'Read about formal verification →',
+      'https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf',
+    link: 'Formal verification report →',
   },
 ];
 

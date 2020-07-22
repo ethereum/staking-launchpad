@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import numeral from 'numeral';
 import { Text } from '../../components/Text';
-import { numberWithCommas } from '../../utils/numberWithCommas';
 import { TICKER_NAME } from '../../utils/envVars';
 
 const ColorBox = styled.div`
@@ -25,8 +25,8 @@ export const ProgressBarInfo = ({
   amountEth,
   amountValidators,
 }: Props) => {
-  const formattedEth = numberWithCommas(amountEth.toFixed(1));
-  const formattedValidators = numberWithCommas(amountValidators.toFixed(0));
+  const formattedEth = numeral(amountEth).format('0,0');
+  const formattedValidators = numeral(amountValidators).format('0,0');
 
   return (
     <div className="flex">

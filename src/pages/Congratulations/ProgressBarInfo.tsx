@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import numeral from 'numeral';
 import { Text } from '../../components/Text';
+import { TICKER_NAME } from '../../utils/envVars';
 
 const ColorBox = styled.div`
   height: 20px;
@@ -32,7 +33,9 @@ export const ProgressBarInfo = ({
       <ColorBox color={color} />
       <div>
         <Text weight="bold">{title}</Text>
-        <Text size="small">{formattedEth} ETH</Text>
+        <Text size="small">
+          {formattedEth} {TICKER_NAME}
+        </Text>
         <Text size="small">({formattedValidators} validators)</Text>
       </div>
     </div>

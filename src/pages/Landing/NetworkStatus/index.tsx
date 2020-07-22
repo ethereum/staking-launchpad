@@ -11,6 +11,7 @@ import {
   ENABLE_RPC_FEATURES,
   ETH2_NETWORK_NAME,
   PRICE_PER_VALIDATOR,
+  TICKER_NAME,
 } from '../../../utils/envVars';
 
 const Container = styled.div`
@@ -79,14 +80,14 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
               {numberWithCommas(amountEth)}
-              &nbsp;ETH
+              &nbsp;{TICKER_NAME}
             </BoldGreen>
             already staked and counting.
           </Text>
           <Text className="mt20">
             The eth2 network needs to reach at least
             <BoldGreen className="mr10 ml10" fontSize={24}>
-              {numberWithCommas(ETH_REQUIREMENT)} ETH,
+              {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
             </BoldGreen>
             <BoldGray className="mr10" fontSize={24}>
               {validatorRequirement} validators,
@@ -100,7 +101,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               <span className="flex">
                 <BoldGreen fontSize={18} className="mr10">
                   {numberWithCommas(amountEth)}
-                  &nbsp;ETH
+                  &nbsp;{TICKER_NAME}
                 </BoldGreen>
                 <Text size="small" style={{ marginTop: '2px' }}>
                   Current staking balance
@@ -109,7 +110,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               <Text size="small">
                 <strong>
                   {numberWithCommas(calculateLaunchThreshold())}
-                  &nbsp;ETH&nbsp;
+                  &nbsp;{TICKER_NAME}&nbsp;
                 </strong>
                 Launch threshold
               </Text>

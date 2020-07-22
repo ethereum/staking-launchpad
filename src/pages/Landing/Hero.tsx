@@ -112,7 +112,10 @@ export const Hero = () => {
                   <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                     <LogoContainer className={m ? 'mb50' : undefined}>
                       <EthLogo src={EthDiamondPlain} />
-                      <LogoText>Eth2 Launch Pad</LogoText>
+                      <LogoText>
+                        Eth2 Launch Pad{' '}
+                        {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                      </LogoText>
                     </LogoContainer>
                   </Animate>
                 </div>
@@ -123,8 +126,7 @@ export const Hero = () => {
                     color="brand"
                     className="my20"
                   >
-                    Become a validator and help secure the eth2{' '}
-                    {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
+                    Become a validator and help secure eth2.
                   </Heading>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>

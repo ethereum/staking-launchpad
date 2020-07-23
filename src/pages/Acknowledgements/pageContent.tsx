@@ -27,7 +27,7 @@ export const pageContent = {
           Importantly, validators need to post {TICKER_NAME} as collateral - in
           other words, have some funds at stake. The only way to become a
           validator is to make a one-way {TICKER_NAME} transaction to the
-          deposit contract on Ethereum 1.0.
+          deposit contract on the current Ethereum chain.
         </Text>
         <Link
           external

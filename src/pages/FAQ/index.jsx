@@ -63,8 +63,8 @@ export const FAQ = () => {
           <section>
             <Heading level={4}>What is the deposit contract?</Heading>
             <Text className="mt10">
-              You can think of it as a transfer of funds between Ethereum 1.0
-              accounts and Ethereum 2.0 validators.
+              You can think of it as a transfer of funds between Ethereum
+              accounts and eth2 validators.
             </Text>
             <Text className="mt10">
               It specifies who is staking, who is validating, how much is being

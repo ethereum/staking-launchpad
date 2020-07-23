@@ -86,7 +86,7 @@ export const Lighthouse = () => {
           </Text>
           <CodeSnippet>
             lighthouse account validator import --directory
-            eth2-deposit-cli/validator_keys
+            eth2.0-deposit-cli/validator_keys
           </CodeSnippet>
           <Text className="mt10">
             Once the process is complete, you should see the following:

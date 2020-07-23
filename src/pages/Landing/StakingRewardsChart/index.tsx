@@ -99,7 +99,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           fontFamily: 'sans-serif',
                         }}
                       >
-                        Total {TICKER_NAME} Staked (in Million)
+                        Total Stake (in Million {TICKER_NAME})
                       </text>
                     </>
                   )}

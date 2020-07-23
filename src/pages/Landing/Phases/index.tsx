@@ -86,7 +86,7 @@ export const Phases = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                What is ETH2 phase 0?
+                What is ETH2 Phase 0?
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
@@ -103,11 +103,12 @@ export const Phases = (): JSX.Element => {
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 1 </PhaseTitle>
-                handles adding and storing the data associated with ETH2.
+                enables sharding and handles adding and storing the data 
+                associated with ETH2.
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 2 </PhaseTitle>
-                Phase 2 adds execution to ETH2 which enables programmes to be
+                adds execution to ETH2 which enables programmes to be
                 run on top of it.
               </Text>
             </ScrollAnimation>

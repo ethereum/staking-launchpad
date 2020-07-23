@@ -40,7 +40,7 @@ export const TimelineMileStones = (): JSX.Element => {
     <Container isMobile={m}>
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <Heading level={2} size="medium" color="blueDark" margin="none">
-          Timeline and milestones
+          Timeline and Milestones
         </Heading>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp" animateOnce>

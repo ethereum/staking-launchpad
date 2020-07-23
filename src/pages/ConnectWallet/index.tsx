@@ -83,6 +83,10 @@ const StatusText = styled(Text)`
   font-size: 22px;
   margin-left: 10px;
 `;
+const FaucetLink = styled(Link)`
+  margin: auto;
+  margin-top: 10px;
+`;
 
 export interface web3ReactInterface {
   activate: (
@@ -278,6 +282,16 @@ const _ConnectWalletPage = ({
                 )}
                 <StatusText>{status}</StatusText>
               </div>
+              {lowBalance && (
+                <FaucetLink
+                  to="https://faucet.goerli.mudit.blog/"
+                  external
+                  primary
+                  withArrow
+                >
+                  Goerli Faucet
+                </FaucetLink>
+              )}
             </Paper>
           </Animated>
         </WalletConnectedContainer>

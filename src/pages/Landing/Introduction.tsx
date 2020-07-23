@@ -74,8 +74,9 @@ export const Introduction = (): JSX.Element => {
               without compromising on decentralization.
             </Text>
             <Text className="mt25">
-              In contrast to eth1, eth2 uses proof-of-stake (PoS) to secure its
-              network. And while eth1 will continue to exist as its own
+              In contrast to the Ethereum chain, as it currently stands, eth2
+              uses proof-of-stake (PoS) to secure its network. And while
+              Ethereum as you know and love it will continue to exist as its own
               independent proof-of-work chain for a little while to come, the
               transition towards PoS starts now.
             </Text>

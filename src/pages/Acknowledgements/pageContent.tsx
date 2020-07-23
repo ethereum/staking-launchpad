@@ -27,7 +27,7 @@ export const pageContent = {
           Importantly, validators need to post {TICKER_NAME} as collateral - in
           other words, have some funds at stake. The only way to become a
           validator is to make a one-way {TICKER_NAME} transaction to the
-          deposit contract on Ethereum 1.0.
+          deposit contract on the current Ethereum chain.
         </Text>
         <Link
           external
@@ -51,7 +51,7 @@ export const pageContent = {
         reversed.
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator. And that the transfer of ${TICKER_NAME} from eth1 to to eth2 is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} into eth2 is one-way, and non-reversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',

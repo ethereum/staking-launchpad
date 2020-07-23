@@ -75,11 +75,18 @@ const _TransactionsPage = ({
   );
 
   const createButtonText = (): string => {
-    if (totalTxCount === remainingTxCount)
+    if (totalTxCount === 1) {
+      return 'Initiate the transaction.';
+    }
+    if (totalTxCount === remainingTxCount) {
       return `Initiate all ${totalTxCount} transactions`;
-    if (remainingTxCount > 1)
+    }
+    if (remainingTxCount > 1) {
       return `Initiate remaining ${remainingTxCount} transactions`;
-    if (remainingTxCount === 1) return `Initiate last transaction`;
+    }
+    if (remainingTxCount === 1) {
+      return `Initiate last transaction`;
+    }
     return 'No pending transactions';
   };
 

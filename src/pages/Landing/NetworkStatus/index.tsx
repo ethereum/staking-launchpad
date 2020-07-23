@@ -13,6 +13,21 @@ import {
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
 } from '../../../utils/envVars';
+import useMobileCheck from '../../../hooks/useMobileCheck';
+
+//
+// Helpers
+
+const calculatePercentage = (amountEth: number) => {
+  const percentage = (amountEth / +ETH_REQUIREMENT) * 100;
+  return percentage && Math.max(1, percentage);
+};
+
+const calculateLaunchThreshold = (amountEth: number) =>
+  (+ETH_REQUIREMENT - amountEth).toFixed(1);
+
+//
+// Styled Componens
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
@@ -40,34 +55,96 @@ const BoldGray = styled.span`
   font-weight: bold;
 `;
 
+//
+// Sub-components
+
+const PreThresholdSubText = ({
+  amountEth = 0,
+  mobile = false,
+}: {
+  amountEth?: number;
+  mobile?: boolean;
+}) => (
+  <div className="flex space-between mt20">
+    <span className={`flex ${mobile ? 'flex-column flex-start' : ''}`}>
+      <BoldGreen fontSize={18} className="mr10">
+        {numberWithCommas(amountEth)}
+        &nbsp;ETH
+      </BoldGreen>
+      <Text size="small" style={{ marginTop: '2px' }}>
+        Current staking balance
+      </Text>
+    </span>
+    <Text
+      className={mobile ? 'flex flex-column align-flex-end' : ''}
+      size="small"
+    >
+      <strong>
+        {calculateLaunchThreshold(amountEth)}
+        &nbsp;ETH
+        {mobile ? <br /> : <>&nbsp;</>}
+      </strong>
+      Launch threshold
+    </Text>
+  </div>
+);
+
+const PostThresholdSubText = ({
+  amountEth = 0,
+  mobile = false,
+}: {
+  amountEth?: number;
+  mobile?: boolean;
+}) => (
+  <div className="flex space-between mt20">
+    <Text size="small">
+      <strong>
+        {numberWithCommas(ETH_REQUIREMENT)}
+        &nbsp;ETH
+        {mobile ? <br /> : <>&nbsp;</>}
+      </strong>
+      Launch threshold
+    </Text>
+    <span
+      className={`flex ${
+        mobile ? 'flex-column flex-start align-flex-end' : ''
+      }`}
+    >
+      <BoldGreen fontSize={18} className={mobile ? '' : 'mr10'}>
+        {numberWithCommas(amountEth)}
+        &nbsp;ETH
+      </BoldGreen>
+      <Text size="small" style={{ marginTop: '2px' }}>
+        Current staking balance
+      </Text>
+    </span>
+  </div>
+);
+
+//
+// Main Component
+
 export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   amountEth = 0,
 }): JSX.Element | null => {
-  const m: boolean = (window as any).mobileCheck();
+  const isSmallScreen: boolean = useMobileCheck('630px');
+  const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
+  const percentageComplete = calculatePercentage(amountEth);
+  const thresholdReached = amountEth >= +ETH_REQUIREMENT;
 
-  const calculatePercentage = () => {
-    // @ts-ignore
-    const percentage = (amountEth / ETH_REQUIREMENT) * 100;
-    if (percentage === 0) {
-      return 0;
-    }
-    if (percentage < 1) {
-      return 1;
-    }
-    return percentage;
-  };
-
-  const calculateLaunchThreshold = () =>
-    // @ts-ignore
-    (ETH_REQUIREMENT - amountEth).toFixed(1);
+  React.useEffect(() => {
+    const resizeListener = () => {
+      const newM = (window as any).mobileCheck();
+      if (m !== newM) setM(newM);
+    };
+    window.addEventListener('resize', resizeListener);
+    return () => window.removeEventListener('resize', resizeListener);
+  }, []);
 
   if (!ENABLE_RPC_FEATURES) return null;
 
   const validatorRequirement = numberWithCommas(
-    Math.round(
-      // @ts-ignore
-      ETH_REQUIREMENT / PRICE_PER_VALIDATOR
-    )
+    Math.round(+ETH_REQUIREMENT / +PRICE_PER_VALIDATOR)
   );
 
   return (
@@ -84,37 +161,32 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
             </BoldGreen>
             already staked and counting.
           </Text>
-          <Text className="mt20">
-            The eth2 network needs to reach at least
-            <BoldGreen className="mr10 ml10" fontSize={24}>
-              {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
-            </BoldGreen>
-            <BoldGray className="mr10" fontSize={24}>
-              {validatorRequirement} validators,
-            </BoldGray>
-            to launch the
-            {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
-          </Text>
+          {thresholdReached ? (
+            <Text className="mt20">
+              The threshold to launch the eth2
+              {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
+              has been reached 🎉
+            </Text>
+          ) : (
+            <Text className="mt20">
+              The eth2 network needs to reach at least
+              <BoldGreen className="mr10 ml10" fontSize={24}>
+                {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
+              </BoldGreen>
+              <BoldGray className="mr10" fontSize={24}>
+                {validatorRequirement} validators,
+              </BoldGray>
+              to launch the
+              {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
+            </Text>
+          )}
           <div>
-            <ProgressBar workflow={calculatePercentage()} />
-            <div className="flex space-between mt20">
-              <span className="flex">
-                <BoldGreen fontSize={18} className="mr10">
-                  {numberWithCommas(amountEth)}
-                  &nbsp;{TICKER_NAME}
-                </BoldGreen>
-                <Text size="small" style={{ marginTop: '2px' }}>
-                  Current staking balance
-                </Text>
-              </span>
-              <Text size="small">
-                <strong>
-                  {numberWithCommas(calculateLaunchThreshold())}
-                  &nbsp;{TICKER_NAME}&nbsp;
-                </strong>
-                Launch threshold
-              </Text>
-            </div>
+            <ProgressBar workflow={percentageComplete} />
+            {thresholdReached ? (
+              <PostThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
+            ) : (
+              <PreThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
+            )}
           </div>
         </ScrollAnimation>
       </Content>

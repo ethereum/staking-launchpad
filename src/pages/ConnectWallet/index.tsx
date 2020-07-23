@@ -282,7 +282,7 @@ const _ConnectWalletPage = ({
                 )}
                 <StatusText>{status}</StatusText>
               </div>
-              {lowBalance && (
+              {!IS_MAINNET && lowBalance && (
                 <FaucetLink
                   to="https://faucet.goerli.mudit.blog/"
                   external

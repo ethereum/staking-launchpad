@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
 import { Box, CheckBox } from 'grommet';
-import { FormNextLink } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
@@ -27,7 +26,11 @@ import {
   WorkflowStep,
   updateWorkflow,
 } from '../../store/actions/workflowActions';
-import { IS_MAINNET, PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import {
+  IS_MAINNET,
+  PRICE_PER_VALIDATOR,
+  TICKER_NAME,
+} from '../../utils/envVars';
 
 const Container = styled.div`
   width: 100%;
@@ -96,7 +99,7 @@ const _SummaryPage = ({
             <Text>Total Amount Required</Text>
             <InfoBox>
               {amountValidators.times(convertedPrice).toString()}
-              ETH
+              {TICKER_NAME}
             </InfoBox>
           </Container>
         </Box>
@@ -134,12 +137,12 @@ const _SummaryPage = ({
       <AcknowledgementSection title="Please make sure you aren't being phished">
         <Text>
           You are responsible for the transaction. Fraudulent websites might
-          lure you into sending the {PRICE_PER_VALIDATOR} ETH to them, instead
-          of the official deposit contract. Please check that the address you
-          are sending the transaction to is the correct address.
+          lure you into sending the {PRICE_PER_VALIDATOR} {TICKER_NAME} to them,
+          instead of the official deposit contract. Please check that the
+          address you are sending the transaction to is the correct address.
         </Text>
-        <Link to="https://www.google.com" external className="mt10" primary>
-          Learn here how to do it safely <FormNextLink />
+        <Link to={routesEnum.phishingPage} className="my10" primary withArrow>
+          Learn here how to do it safely
         </Link>
         <span className="mt20">
           <CheckBox
@@ -147,8 +150,8 @@ const _SummaryPage = ({
             checked={noPhish}
             label={
               <Text>
-                I know how to check that I am sending my ETH into the correct
-                deposit contract and will do so.
+                I know how to check that I am sending my {TICKER_NAME} into the
+                correct deposit contract and will do so.
               </Text>
             }
           />

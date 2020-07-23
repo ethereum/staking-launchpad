@@ -1,9 +1,8 @@
 import React from 'react';
-import { FormNext } from 'grommet-icons';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
-import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 
 export interface PageContentInterface {
   title: string;
@@ -25,13 +24,19 @@ export const pageContent = {
           honest validators receive financial rewards.
         </Text>
         <Text size="large" className="my10">
-          Importantly, validators need to post ETH as collateral - in other
-          words, have some funds at stake. The only way to become a validator is
-          to make a one-way ETH transaction to the deposit contract on Ethereum
-          1.0.
+          Importantly, validators need to post {TICKER_NAME} as collateral - in
+          other words, have some funds at stake. The only way to become a
+          validator is to make a one-way {TICKER_NAME} transaction to the
+          deposit contract on Ethereum 1.0.
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More <FormNext color="blueDark" />
+        <Link
+          external
+          to="https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/"
+          className="my10"
+          primary
+          withArrow
+        >
+          Learn More
         </Link>
       </>
     ),
@@ -40,11 +45,13 @@ export const pageContent = {
     title: 'Signing up',
     content: (
       <Text size="large" className="my10">
-        To become a validator on eth2, you need to deposit {PRICE_PER_VALIDATOR}
-        ETH per validator that you wish to run. This process cannot be reversed.
+        To become a validator on eth2, you need to deposit {PRICE_PER_VALIDATOR}{' '}
+        {` `}
+        {TICKER_NAME} per validator that you wish to run. This process cannot be
+        reversed.
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ETH to sign up as a validator. And that the transfer of ETH from eth1 to to eth2 is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator. And that the transfer of ${TICKER_NAME} from eth1 to to eth2 is one-way, and non-reversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',
@@ -60,9 +67,9 @@ export const pageContent = {
           to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
           className="my10"
           primary
+          withArrow
         >
           Learn more about eth2 economics
-          <FormNext color="blueDark" />
         </Link>
       </>
     ),
@@ -77,8 +84,8 @@ export const pageContent = {
           Validators that act maliciously, or contrary to the specification, are
           liable to be slashed (incur a large penalty).
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about about penalties <FormNext color="blueDark" />
+        <Link to="/faq" className="my10" primary withArrow>
+          Learn More about about penalties
         </Link>
       </>
     ),
@@ -119,13 +126,19 @@ export const pageContent = {
           Validators will have to wait until phase 2 (around two years) to be
           able to withdraw to a specific shard.
         </Text>
-        <Link external to="https://www.google.com" className="my10" primary>
-          Learn More about eth2&apos;s phases <FormNext color="blueDark" />
+        <Link
+          external
+          // TODO: NEED LINK HERE
+          to="https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/"
+          className="my10"
+          primary
+          withArrow
+        >
+          Learn More about eth2&apos;s phases
         </Link>
       </>
     ),
-    acknowledgementText:
-      'I understand that I CAN NOT TRANSFER my staked ETH until at least phase 1, and I CAN NOT WITHDRAW until phase 2.',
+    acknowledgementText: `I understand that I CAN NOT TRANSFER my staked ${TICKER_NAME} until at least phase 1, and I CAN NOT WITHDRAW until phase 2.`,
   },
   [AcknowledgementIdsEnum.commitment]: {
     title: 'Long-term commitment',

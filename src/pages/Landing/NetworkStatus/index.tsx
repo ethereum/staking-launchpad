@@ -11,6 +11,7 @@ import {
   ENABLE_RPC_FEATURES,
   ETH2_NETWORK_NAME,
   PRICE_PER_VALIDATOR,
+  TICKER_NAME,
 } from '../../../utils/envVars';
 import useMobileCheck from '../../../hooks/useMobileCheck';
 
@@ -156,7 +157,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
               {numberWithCommas(amountEth)}
-              &nbsp;ETH
+              &nbsp;{TICKER_NAME}
             </BoldGreen>
             already staked and counting.
           </Text>
@@ -170,7 +171,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
             <Text className="mt20">
               The eth2 network needs to reach at least
               <BoldGreen className="mr10 ml10" fontSize={24}>
-                {numberWithCommas(ETH_REQUIREMENT)} ETH,
+                {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
               </BoldGreen>
               <BoldGray className="mr10" fontSize={24}>
                 {validatorRequirement} validators,

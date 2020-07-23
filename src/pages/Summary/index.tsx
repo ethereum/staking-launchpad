@@ -141,13 +141,7 @@ const _SummaryPage = ({
           instead of the official deposit contract. Please check that the
           address you are sending the transaction to is the correct address.
         </Text>
-        <Link
-          to="https://www.google.com"
-          external
-          className="mt10"
-          primary
-          withArrow
-        >
+        <Link to={routesEnum.phishingPage} className="my10" primary withArrow>
           Learn here how to do it safely
         </Link>
         <span className="mt20">

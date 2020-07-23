@@ -45,7 +45,7 @@ export const SignupSteps = (): JSX.Element => {
           <Step
             imgUrl={ResponsibilityImgUrl}
             title="Learn about your responsibilities"
-            content="The new eth2 network can only work  successfully if validators understand their responsibilities and risks."
+            content="The new ETH2 network can only work  successfully if validators understand their responsibilities and risks."
           />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
@@ -58,8 +58,8 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             imgUrl={DepositImgUrl}
-            title={`Transfer your ${TICKER_NAME} to eth2`}
-            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators & ${TICKER_NAME} will become active on eth2!`}
+            title={`Transfer your ${TICKER_NAME} to ETH2`}
+            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators & ${TICKER_NAME} will become active on ETH2!`}
           />
         </ScrollAnimation>
       </StepsContainer>

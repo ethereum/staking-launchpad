@@ -71,7 +71,7 @@ const PreThresholdSubText = ({
         {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
       <Text size="small" style={{ marginTop: '2px' }}>
-        Current staking balance
+        Current Staking Balance
       </Text>
     </span>
     <Text
@@ -82,7 +82,7 @@ const PreThresholdSubText = ({
         {calculateLaunchThreshold(amountEth)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
-      Launch threshold
+      Launch Threshold
     </Text>
   </div>
 );
@@ -100,7 +100,7 @@ const PostThresholdSubText = ({
         {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
-      Launch threshold
+      Launch Threshold
     </Text>
     <span
       className={`flex ${
@@ -111,7 +111,7 @@ const PostThresholdSubText = ({
         {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
       <Text size="small" style={{ marginTop: '2px' }}>
-        Current staking balance
+        Current Staking Balance
       </Text>
     </span>
   </div>
@@ -147,13 +147,13 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Network status
+            Network Status
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
               {numberWithCommas(amountEth)} {TICKER_NAME}
             </BoldGreen>
-            already staked and counting.
+            already staked and counting...
           </Text>
           {thresholdReached ? (
             <>
@@ -174,10 +174,10 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               <Text className="mt20">
                 The ETH2 network needs to reach at least
                 <BoldGreen className="mr10 ml10" fontSize={24}>
-                  {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
+                  {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}
                 </BoldGreen>
                 <BoldGray className="mr10" fontSize={24}>
-                  {validatorRequirement} validators,
+                  ({validatorRequirement} validators)
                 </BoldGray>
                 to launch the
                 {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.

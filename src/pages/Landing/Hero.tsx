@@ -42,21 +42,47 @@ const ResponsiveContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: calc(100vh - 20px);
+    min-height: calc(100vh - 10px);
   }
 `;
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   @media screen and (max-width: ${({ theme }) => theme.screenSizes.small}) {
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 40px);
+    height: calc(100vh - 40px);
+  }
+`;
+const LefContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
+const InfoContainer = styled.div`
+  min-height: calc(100% - 50px);
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: ${({ theme }) => theme.screenSizes.small}) {
+    min-height: calc(100% - 70px);
+  }
+`;
+const TitleContainer = styled.div`
+  flex-basis: 50px;
+  flex-shrink: 0;
+  height: 50px;
+  @media screen and (max-width: ${({ theme }) => theme.screenSizes.small}) {
+    flex-basis: 70px;
+    flex-shrink: 0;
+    height: 70px;
   }
 `;
 const LogoContainer = styled.div`
   display: flex;
-  height: 50px;
+  min-height: 50px;
 `;
 const EthLogo = styled.img`
   height: 50px;
@@ -66,6 +92,9 @@ const LogoText = styled(Text)`
   line-height: 50px;
   margin-left: 15px;
   font-weight: bold;
+  @media screen and (max-width: 800px) {
+    line-height: 30px;
+  }
 `;
 const StyledLeslieImgNode = styled.img`
   max-width: 100%;
@@ -76,7 +105,7 @@ const StyledLeslieImgNode = styled.img`
     transform: translate3d(0, 0, 0);
     margin: 0 -3rem 0 3rem;
     max-width: 100%;
-    max-height: 650px;
+    max-height: 510px;
   }
 `;
 
@@ -107,8 +136,8 @@ export const Hero = () => {
         <ResponsiveContainer isMobile={m}>
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
             <ContentContainer className={m ? undefined : 'pt100'}>
-              <div>
-                <div style={{ minHeight: 50 }}>
+              <LefContentContainer>
+                <TitleContainer>
                   <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                     <LogoContainer className={m ? 'mb50' : undefined}>
                       <EthLogo src={EthDiamondPlain} />
@@ -118,39 +147,41 @@ export const Hero = () => {
                       </LogoText>
                     </LogoContainer>
                   </Animate>
-                </div>
-                <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
-                  <Heading
-                    level={m ? 1 : 2}
-                    size={m ? 'meduim' : 'large'}
-                    color="brand"
-                    className="my20"
+                </TitleContainer>
+                <InfoContainer>
+                  <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
+                    <Heading
+                      level={m ? 1 : 2}
+                      size={m ? 'meduim' : 'large'}
+                      color="brand"
+                      className="my20"
+                    >
+                      Become a validator and help secure eth2.
+                    </Heading>
+                  </ScrollAnimation>
+                  <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
+                    <Text className="mt25">
+                      Earn continuous payouts for providing a public good to the
+                      community.
+                    </Text>
+                  </ScrollAnimation>
+                  {!!isSmallScreen && <LeslieImage />}
+                  <Animate
+                    enter="fadeIn"
+                    appear="fadeIn"
+                    className={m ? undefined : 'mt100'}
                   >
-                    Become a validator and help secure eth2.
-                  </Heading>
-                </ScrollAnimation>
-                <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
-                  <Text className="mt25">
-                    Earn continuous payouts for providing a public good to the
-                    community.
-                  </Text>
-                </ScrollAnimation>
-                {!!isSmallScreen && <LeslieImage />}
-                <Animate
-                  enter="fadeIn"
-                  appear="fadeIn"
-                  className={m ? undefined : 'mt100'}
-                >
-                  <Link to={routesEnum.acknowledgementPage}>
-                    <Button
-                      fullWidth={isSmallScreen}
-                      rainbow
-                      width={m ? undefined : 250}
-                      label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
-                    />
-                  </Link>
-                </Animate>
-              </div>
+                    <Link to={routesEnum.acknowledgementPage}>
+                      <Button
+                        fullWidth={m || isSmallScreen}
+                        rainbow
+                        width={isSmallScreen || m ? undefined : 250}
+                        label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
+                      />
+                    </Link>
+                  </Animate>
+                </InfoContainer>
+              </LefContentContainer>
               {!isSmallScreen && <LeslieImage />}
             </ContentContainer>
           </div>

@@ -7,6 +7,7 @@ import DataLine from './scene/DataLine';
 import DataLineEnd from './scene/DataLineEnd';
 import EthMarker from './scene/EthMarker';
 import StakingRewardsChartTooltip from './scene/StakingRewardsChartTooltip';
+import { TICKER_NAME } from '../../../utils/envVars';
 
 /*
  * Type Decclarations
@@ -98,9 +99,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           fontFamily: 'sans-serif',
                         }}
                       >
-                        TOTAL ETH STAKED&nbsp;
-                        {!isMobile && <>IN NETWORK&nbsp;</>}
-                        (IN MILLIONS)
+                        Total {TICKER_NAME} Staked&nbsp; (in millions)
                       </text>
                     </>
                   )}
@@ -132,7 +131,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           transform: 'rotate(-90deg)',
                         }}
                       >
-                        ESTIMATED APR (IN ETH)
+                        Estimated APR (in {TICKER_NAME})
                       </text>
                     </>
                   )}
@@ -149,7 +148,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                   >
                     <text style={{ fontWeight: 'bold', fill: '#ADADAD' }}>
                       {(524_288).toLocaleString()}
-                      &nbsp;ETH
+                      &nbsp;{TICKER_NAME}
                     </text>
                     <text y={17} style={{ fill: '#ADADAD' }}>
                       Required for Beacon Chain Launch

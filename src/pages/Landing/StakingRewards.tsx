@@ -8,6 +8,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
 import StakingRewardsChart from './StakingRewardsChart';
+import { TICKER_NAME } from '../../utils/envVars';
 
 /**
  * Utils
@@ -86,7 +87,8 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
             Validators get rewarded for proposing and attesting to blocks. The
-            rewards are tied to the overall amount of ETH staked in the network.
+            rewards are tied to the overall amount of {TICKER_NAME} staked in
+            the network.
           </Text>
           <Link
             external

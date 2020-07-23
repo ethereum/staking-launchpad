@@ -68,8 +68,7 @@ const PreThresholdSubText = ({
   <div className="flex space-between mt20">
     <span className={`flex ${mobile ? 'flex-column flex-start' : ''}`}>
       <BoldGreen fontSize={18} className="mr10">
-        {numberWithCommas(amountEth)}
-        &nbsp;ETH
+        {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
       <Text size="small" style={{ marginTop: '2px' }}>
         Current staking balance
@@ -80,8 +79,7 @@ const PreThresholdSubText = ({
       size="small"
     >
       <strong>
-        {calculateLaunchThreshold(amountEth)}
-        &nbsp;ETH
+        {calculateLaunchThreshold(amountEth)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
       Launch threshold
@@ -99,8 +97,7 @@ const PostThresholdSubText = ({
   <div className="flex space-between mt20">
     <Text size="small">
       <strong>
-        {numberWithCommas(ETH_REQUIREMENT)}
-        &nbsp;ETH
+        {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
       Launch threshold
@@ -111,8 +108,7 @@ const PostThresholdSubText = ({
       }`}
     >
       <BoldGreen fontSize={18} className={mobile ? '' : 'mr10'}>
-        {numberWithCommas(amountEth)}
-        &nbsp;ETH
+        {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
       <Text size="small" style={{ marginTop: '2px' }}>
         Current staking balance
@@ -156,38 +152,45 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
-              {numberWithCommas(amountEth)}
-              &nbsp;{TICKER_NAME}
+              {numberWithCommas(amountEth)} {TICKER_NAME}
             </BoldGreen>
             already staked and counting.
           </Text>
           {thresholdReached ? (
-            <Text className="mt20">
-              The threshold to launch the eth2
-              {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
-              has been reached 🎉
-            </Text>
+            <>
+              <Text className="mt20">
+                The threshold to launch the eth2
+                {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
+                has been reached 🎉
+              </Text>
+              <div>
+                <ProgressBar workflow={percentageComplete} />
+                <PostThresholdSubText
+                  {...{ amountEth, mobile: isSmallScreen }}
+                />
+              </div>
+            </>
           ) : (
-            <Text className="mt20">
-              The eth2 network needs to reach at least
-              <BoldGreen className="mr10 ml10" fontSize={24}>
-                {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
-              </BoldGreen>
-              <BoldGray className="mr10" fontSize={24}>
-                {validatorRequirement} validators,
-              </BoldGray>
-              to launch the
-              {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
-            </Text>
+            <>
+              <Text className="mt20">
+                The eth2 network needs to reach at least
+                <BoldGreen className="mr10 ml10" fontSize={24}>
+                  {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
+                </BoldGreen>
+                <BoldGray className="mr10" fontSize={24}>
+                  {validatorRequirement} validators,
+                </BoldGray>
+                to launch the
+                {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
+              </Text>
+              <div>
+                <ProgressBar workflow={percentageComplete} />
+                <PreThresholdSubText
+                  {...{ amountEth, mobile: isSmallScreen }}
+                />
+              </div>
+            </>
           )}
-          <div>
-            <ProgressBar workflow={percentageComplete} />
-            {thresholdReached ? (
-              <PostThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
-            ) : (
-              <PreThresholdSubText {...{ amountEth, mobile: isSmallScreen }} />
-            )}
-          </div>
         </ScrollAnimation>
       </Content>
     </Container>

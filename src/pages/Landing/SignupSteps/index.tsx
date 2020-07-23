@@ -9,7 +9,7 @@ import { Heading } from '../../../components/Heading';
 import { routesEnum } from '../../../Routes';
 import { Link } from '../../../components/Link';
 import { Step } from './Step';
-import { PRICE_PER_VALIDATOR } from '../../../utils/envVars';
+import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../../utils/envVars';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -58,8 +58,8 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             imgUrl={DepositImgUrl}
-            title="Transfer your ETH to eth2"
-            content={`After depositing ${PRICE_PER_VALIDATOR} ETH per validator, your validators & ETH will become active on eth2!`}
+            title={`Transfer your ${TICKER_NAME} to eth2`}
+            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators & ${TICKER_NAME} will become active on eth2!`}
           />
         </ScrollAnimation>
       </StepsContainer>

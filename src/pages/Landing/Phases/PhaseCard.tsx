@@ -17,16 +17,23 @@ interface Props {
   subTitle: string;
   link: string;
   linkUrl: string;
+  external?: boolean;
 }
 
-export const PhaseCard = ({ title, subTitle, link, linkUrl }: Props) => {
+export const PhaseCard = ({
+  title,
+  subTitle,
+  link,
+  linkUrl,
+  external,
+}: Props) => {
   return (
     <Container>
       <Heading level="4" size="large" className="my10">
         {title}
       </Heading>
       <Text>{subTitle}</Text>
-      <Link external className="mt20" to={linkUrl}>
+      <Link primary external={external} className="mt20" to={linkUrl} withArrow>
         {link}
       </Link>
     </Container>

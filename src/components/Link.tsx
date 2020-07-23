@@ -12,6 +12,7 @@ interface LinkProps {
 }
 
 const styles = `
+  line-height: 33px;
   color:inherit;
   display: inherit;
   text-decoration: none;

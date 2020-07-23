@@ -198,9 +198,8 @@ const _CongratulationsPage = ({
             Beacon Node, import your keystores, and run your Validator. Do some
             research into your client options:
           </Text>
-          <Link className="mt10" to="/faq">
+          <Link className="mt10" to="/faq" primary withArrow>
             Learn more about the roles and responsibilities of ETH 2 Validators
-            →
           </Link>
           <ClientContainer>
             {clientInfo.map(client => (

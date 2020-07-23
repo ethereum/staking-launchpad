@@ -27,6 +27,11 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import {
+  GENESIS_FORK_VERSION,
+  ETH2_NETWORK_NAME,
+  IS_MAINNET,
+} from '../../utils/envVars';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -48,7 +53,7 @@ const Dropzone = styled.div`
   padding: 30px;
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
 `;
-// eslint-disable-next-line
+// @ts-ignore
 const Highlighted = styled(Text)`
   color: ${(p: { theme: any }) => p.theme.blue.medium};
   display: inline-block;
@@ -88,7 +93,7 @@ const _UploadValidatorPage = ({
 }: Props): JSX.Element => {
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
-  const [isFileInvalid, setIsFileInvalid] = useState(depositKeys.length > 0);
+  const [fileError, setFileError] = useState<React.ReactElement | null>(null);
   const {
     acceptedFiles, // all JSON files will pass this check (including BLS failures
     inputRef,
@@ -104,19 +109,61 @@ const _UploadValidatorPage = ({
     }
   }, [acceptedFiles, inputRef]);
 
-  const onFileDrop = (jsonFiles: Array<any>) => {
+  const checkJsonStructure = (depositDataJson: { [field: string]: any }) => {
+    return !!(
+      depositDataJson.pubkey ||
+      depositDataJson.withdrawal_credentials ||
+      depositDataJson.amount ||
+      depositDataJson.signature ||
+      depositDataJson.deposit_message_root ||
+      depositDataJson.deposit_data_root ||
+      depositDataJson.fork_version
+    );
+  };
+
+  const handleWrongNetwork = () => {
+    setFileError(
+      <>
+        Oops! The json file you provided isn&apos;t for the&nbsp;
+        {ETH2_NETWORK_NAME} {IS_MAINNET ? 'mainnet' : 'testnet'}
+      </>
+    );
+  };
+
+  const handleSevereError = () => {
+    setFileError(
+      <>
+        <Code>{depositFileName}</Code>
+        &nbsp;is invalid due to a serious issue. Please&nbsp;
+        <Link
+          external
+          primary
+          inline
+          to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+        >
+          open an issue on GitHub
+        </Link>
+        &nbsp;to get in contact with us.
+      </>
+    );
+  };
+
+  const onFileDrop = (jsonFiles: Array<any>, rejectedFiles: Array<any>) => {
+    if (rejectedFiles?.length) {
+      setFileError(<>Please use a valid json file</>);
+      return;
+    }
+
     // check if the file is JSON
     if (jsonFiles.length === 1) {
       setIsFileStaged(true); // unstaged via handleFileDelete
       setIsFileAccepted(true); // rejected if BLS check fails
-      setIsFileInvalid(false);
       dispatchDepositFileNameUpdate(jsonFiles[0].name);
       const reader = new FileReader();
       reader.onload = async event => {
         if (event.target) {
           try {
-            const fileData = JSON.parse(event.target.result as string);
-
+            const fileData: any[] = JSON.parse(event.target.result as string);
             // perform BLS check
             if (await validateDepositKey(fileData as DepositKeyInterface[])) {
               // add valid files to redux
@@ -129,14 +176,25 @@ const _UploadValidatorPage = ({
             } else {
               // file is JSON but did not pass BLS, so leave it "staged" but not "accepted"
               setIsFileAccepted(false);
-              setIsFileInvalid(true);
               dispatchDepositFileKeyUpdate([]);
               flushDropzoneCache();
+
+              // there are a couple special cases that can occur
+              const { fork_version: forkVersion } = fileData[0] || {};
+              const hasCorrectStructure = checkJsonStructure(fileData[0] || {});
+              if (
+                hasCorrectStructure &&
+                forkVersion !== (GENESIS_FORK_VERSION as string)
+              ) {
+                // file doesn't match the correct network
+                handleWrongNetwork();
+              }
             }
           } catch (e) {
             // possible error example: json is invalid or empty so it cannot be parsed
             // TODO think about other possible errors here, and consider if we might want to set "isFileStaged"
             setIsFileAccepted(false);
+            handleSevereError();
             dispatchDepositFileKeyUpdate([]);
             flushDropzoneCache();
           }
@@ -157,6 +215,7 @@ const _UploadValidatorPage = ({
       e.preventDefault();
       dispatchDepositFileNameUpdate('');
       dispatchDepositFileKeyUpdate([]);
+      setFileError(null);
       setIsFileStaged(false);
       setIsFileAccepted(false);
       flushDropzoneCache();
@@ -185,27 +244,17 @@ const _UploadValidatorPage = ({
       return <div>Please upload a valid JSON file.</div>;
     }
 
-    if (isFileStaged) {
+    if (isFileStaged || fileError) {
       return (
         <div className="flex center">
           <DeleteBtn onClick={handleFileDelete}>
             <Close size="15px" className="mr10" />
           </DeleteBtn>
           <Text>
-            <Code>{depositFileName}</Code>
-            {!isFileAccepted && ' is invalid'}
-            {isFileInvalid && (
+            {fileError || (
               <>
-                &nbsp;due to a serious issue. Please&nbsp;
-                <Link
-                  external
-                  primary
-                  inline
-                  to="https://github.com/ethereum/eth2.0-deposit/issues/new"
-                >
-                  open an issue on GitHub
-                </Link>
-                &nbsp;to get in contact with us.
+                {depositFileName}
+                {!isFileAccepted && ' is invalid'}
               </>
             )}
           </Text>
@@ -222,7 +271,7 @@ const _UploadValidatorPage = ({
     isDragReject,
     isFileStaged,
     isFileAccepted,
-    isFileInvalid,
+    fileError,
     depositFileName,
     handleFileDelete,
   ]);
@@ -245,7 +294,7 @@ const _UploadValidatorPage = ({
         </Text>
         <Dropzone
           isFileStaged={isFileStaged}
-          isFileAccepted={isFileAccepted}
+          isFileAccepted={isFileAccepted && !fileError}
           {...getRootProps({ isDragActive, isDragAccept, isDragReject })}
         >
           <input {...getInputProps()} />
@@ -253,8 +302,8 @@ const _UploadValidatorPage = ({
             isDragAccept={isDragAccept}
             isDragReject={isDragReject}
             isDragActive={isDragActive}
-            isFileStaged={isFileStaged}
-            isFileAccepted={isFileAccepted}
+            isFileStaged={!!(isFileStaged || fileError)}
+            isFileAccepted={isFileAccepted && !fileError}
           />
 
           <Text className="mt20" textAlign="center">
@@ -278,6 +327,8 @@ const _UploadValidatorPage = ({
     </WorkflowPageTemplate>
   );
 };
+
+_UploadValidatorPage.displayName = 'UploadValidatorPage';
 
 const mapStateToProps = (state: StoreState): StateProps => ({
   depositKeys: state.depositFile.keys,

@@ -1,8 +1,8 @@
 # Ethereum 2.0 Launchpad
 
-The Launchpad is the Ethereum Foundation's official way to deposit your Eth for Ethereum 2.0
+The Launchpad is the Ethereum Foundation's _"official"_ way to deposit your Ether on the Ethereum blockchain to become an Ethereum 2.0 validator.
 
-  - **Status**:  This Launchpad is in active development for testnet
+  - **Status**:  This Launchpad is in active development for testnet.
 
 ## Dependencies
 
@@ -17,16 +17,16 @@ The Launchpad is the Ethereum Foundation's official way to deposit your Eth for 
 
 ## Configuration
 
-To have full functionality of the Launchpad, you must create an .env file in your root directory and add an environment variable
+To have full functionality of the Launchpad, you must create an .env file in your root directory and add an environment variable.
 
 
-The Infura Project ID will enable the network status progress bar showing the balance of the Deposit Contract
+The Infura Project ID will enable the network status progress bar showing the balance of the deposit contract.
 
 ```
 REACT_APP_INFURA_PROJECT_ID=your-infura-project-id-here
 ```
 
-Note: The Portis wallet option is not available when running locally
+Note: The Portis wallet option is not available when running locally.
 
 ## Installation
 
@@ -45,12 +45,5 @@ yarn
 yarn start
 ```
 
-----
-## Open source licensing info
-[License](LICENSE)
-
-----
-
-
-
-
+## License
+[CC0 1.0 Universal](LICENSE)

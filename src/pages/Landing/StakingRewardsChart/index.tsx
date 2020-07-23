@@ -99,7 +99,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           fontFamily: 'sans-serif',
                         }}
                       >
-                        Total {TICKER_NAME} Staked&nbsp; (in millions)
+                        Total {TICKER_NAME} Staked (in Million)
                       </text>
                     </>
                   )}
@@ -131,12 +131,12 @@ const StakingRewardsChart: React.FC<Props> = ({
                           transform: 'rotate(-90deg)',
                         }}
                       >
-                        Estimated APR (in {TICKER_NAME})
+                        Estimated Rate (in Percent per Year)
                       </text>
                     </>
                   )}
 
-                  {/* Beacon Chain Threshole Text */}
+                  {/* Beacon Chain Threshold Text */}
                   <g
                     transform={
                       !isMobile
@@ -151,7 +151,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                       &nbsp;{TICKER_NAME}
                     </text>
                     <text y={17} style={{ fill: '#ADADAD' }}>
-                      Required for Beacon Chain Launch
+                      Required for the Beacon Chain Launch
                     </text>
                   </g>
 

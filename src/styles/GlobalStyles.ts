@@ -38,6 +38,7 @@ const shorthandClasses = `
     -ms-word-break: break-all;
     word-break: break-word;
   }
+  .align-flex-end { align-items: flex-end; }
 `;
 
 const transitionClasses = `

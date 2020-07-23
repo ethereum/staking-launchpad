@@ -40,10 +40,10 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
         </Heading>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install python3.7+
+            Install Python 3.7+
           </Heading>
           <Text>
-            The python3 install process may differ depending on your linux
+            The python3 install process may differ depending on your Linux
             build. For the most up-to-date installation instructions, please
             visit{' '}
             <Link
@@ -59,10 +59,10 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
         </Section>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install pip3
+            Install Python Package Installer (PIP)
           </Heading>
           <Text>
-            You can install pip using a Linux Package Manager like{' '}
+            You can install pip3 using a Linux package manager like{' '}
             <Code>apt</Code> or <Code>yum</Code>. For the most-up-to-date
             instructions on installing pip3, please reference the pip the
             documentation found{' '}
@@ -79,7 +79,7 @@ export const LinuxInstructions = ({ validatorCount }: Props) => {
         </Section>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install git
+            Install Git
           </Heading>
           <Text>
             If git is not already installed on your machine, you can find

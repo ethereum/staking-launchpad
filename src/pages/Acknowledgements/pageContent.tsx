@@ -12,7 +12,7 @@ export interface PageContentInterface {
 
 export const pageContent = {
   [AcknowledgementIdsEnum.introSection]: {
-    title: 'Introducing ETH2 phase 0',
+    title: 'Introducing ETH2 Phase 0',
     content: (
       <>
         <Text size="large" className="my10">
@@ -21,7 +21,7 @@ export const pageContent = {
         <Text size="large" className="my10">
           For this, we need active participants - known as validators - to
           propose, verify, and vouch for the validity of blocks. In exchange,
-          honest validators receive financial rewards.
+          honest validators receive rewards.
         </Text>
         <Text size="large" className="my10">
           Importantly, validators need to post {TICKER_NAME} as collateral - in
@@ -42,7 +42,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.signup]: {
-    title: 'Signing up',
+    title: 'Signing Up',
     content: (
       <Text size="large" className="my10">
         To become a validator on ETH2, you need to deposit {PRICE_PER_VALIDATOR}{' '}
@@ -51,7 +51,7 @@ export const pageContent = {
         reversed.
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} into ETH2 is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} into ETH2 is one-way, and irreversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',
@@ -59,8 +59,8 @@ export const pageContent = {
       <>
         <Text size="large" className="my10">
           Only validators that actively participate in consensus, receive
-          rewards. Those that are offline are penalized. The penalties for being
-          offline are equal to the rewards for actively participating.
+          rewards. Those that are offline will be penalized. The penalties for
+          being offline are equal to the rewards for actively participating.
         </Text>
         <Link
           external
@@ -81,8 +81,8 @@ export const pageContent = {
     content: (
       <>
         <Text size="large" className="my10">
-          Validators that act maliciously, or contrary to the specification, are
-          liable to be slashed (incur a large penalty).
+          Validators that act maliciously or contrary to the specification, are
+          liable to be slashed, incuring a large penalty.
         </Text>
         <Link to="/faq" className="my10" primary withArrow>
           Learn more about about penalties
@@ -90,13 +90,13 @@ export const pageContent = {
       </>
     ),
     acknowledgementText:
-      'I understand that if I act contrary to the specification, I am liable to be slashed.',
+      'I understand that if I act maliciously or contrary to the specification, I am liable to be slashed.',
   },
   [AcknowledgementIdsEnum.keyManagement]: {
     title: 'Backup Mnemonic',
     content: (
       <Text size="large" className="my10">
-        Validator keys are derived from a unique mnemonic (or seed). Your seed
+        Validator keys are derived from a unique mnemonic seed phrase. Your seed
         is the ONLY WAY to withdraw your funds. Above all, keep it safe!
       </Text>
     ),
@@ -107,23 +107,23 @@ export const pageContent = {
     title: 'Signing Keys',
     content: (
       <Text size="large" className="my10">
-        This Launchpad will help you create keys for each of your validators.
+        This launchpad will help you create keys for each of your validators.
         These keys will be saved in key-stores and you will need to give these
         to your validator software to begin validating. You will also receive a
-        deposit file to upload to this website with the public keys for your
-        validator.
+        deposit file that you can upload to this launchpad with the public keys
+        for your validator deposit on Ethereum.
       </Text>
     ),
     acknowledgementText:
       'I will safeguard my key-stores and give them to my validator software in order to start validating.',
   },
   [AcknowledgementIdsEnum.transferDelay]: {
-    title: 'Transfer delay',
+    title: 'Transfer Delay',
     content: (
       <>
         <Text size="large" className="my10">
           Transfers between validators are disabled until at least phase 1.
-          Validators will have to wait until phase 2 (around two years) to be
+          Validators will have to wait until phase 2 (at least two years) to be
           able to withdraw to a specific shard.
         </Text>
         <Link
@@ -141,7 +141,7 @@ export const pageContent = {
     acknowledgementText: `I understand that I CAN NOT TRANSFER my staked ${TICKER_NAME} until at least phase 1, and I CAN NOT WITHDRAW until phase 2.`,
   },
   [AcknowledgementIdsEnum.commitment]: {
-    title: 'Long-term commitment',
+    title: 'Long-Term Commitment',
     content: (
       <Text size="large" className="my10">
         With transfers disabled until at least phase 1, there’s no way for a
@@ -153,16 +153,17 @@ export const pageContent = {
       'Once I exit, I can not rejoin until at least phase 1. This is a long term commitment.',
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
-    title: 'Early adopter risks',
+    title: 'Early-Adopter Risks',
     content: (
       <Text size="large" className="my10">
         Validators are participating in the initial launch of a novel network.
-        As with any new piece of software, there is the potential for software
-        bugs. While unlikely, potential bugs may result in slashing.
+        As with any new software, there is the chance for unwanted
+        misbehaviour. While unlikely, potential client bugs may result in
+        slashing.
       </Text>
     ),
     acknowledgementText:
-      'I am an early adopter, and I accept that software and design bugs may result in me being slashed.',
+      'I am an early adopter, and I accept that software and design bugs may result in my validator being slashed.',
   },
   [AcknowledgementIdsEnum.confirmation]: {
     title: 'Confirmation',
@@ -176,6 +177,6 @@ export const pageContent = {
       </>
     ),
     acknowledgementText:
-      'I agree to all of the previous sections, and I am technically capable of setting up and running a validator',
+      'I agree to all of the previous sections, and I am technically capable of setting up and running a validator.',
   },
 };

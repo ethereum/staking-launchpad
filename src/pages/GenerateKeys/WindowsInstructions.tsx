@@ -39,7 +39,7 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
         </Heading>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install python3.7+
+            Install Python 3.7+
           </Heading>
           <Text>
             Download python3 from{' '}
@@ -65,10 +65,10 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
         </Section>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install pip3
+            Install Python Package Installer (PIP)
           </Heading>
           <Text>
-            The latest version of pip should have been installed with python
+            The latest version of pip3 should have been installed with python
             3.x.x. For more information about pip, you can visit the windows
             install{' '}
             <Link
@@ -93,7 +93,7 @@ export const WindowsInstructions = ({ validatorCount }: Props) => {
         </Section>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install git
+            Install Git
           </Heading>
           <Text>
             If git is not already installed on your machine, you can find

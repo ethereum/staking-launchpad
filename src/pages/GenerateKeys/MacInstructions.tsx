@@ -39,7 +39,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
         </Heading>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install python3.7+
+            Install Python 3.7+
           </Heading>
           <Text>
             You can install python3 on your MacOS device using{' '}
@@ -60,7 +60,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
         </Section>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install pip3
+            Install Python Package Installer (PIP)
           </Heading>
           <Text>
             You can also use{' '}
@@ -83,7 +83,7 @@ export const MacInstructions = ({ validatorCount }: Props) => {
         </Section>
         <Section>
           <Heading level={4} size="small" color="blueMedium" className="mb10">
-            Install git
+            Install Git
           </Heading>
           <Text>
             If git is not already installed on your machine, you can find

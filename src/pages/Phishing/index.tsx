@@ -14,7 +14,7 @@ export const Phishing = () => {
   return (
     <PageTemplate title="Phishing">
       <Text className="mt10">
-        Phishing is a very real risk for eth2 validators and, unfortunately,
+        Phishing is a very real risk for ETH2 validators and, unfortunately,
         many people will lose funds due to these attacks.
       </Text>
       <section>
@@ -78,7 +78,7 @@ export const Phishing = () => {
             </ul>
           </li>
           <li>
-            <Text className="mt10">On your favorite eth2 block explorer:</Text>
+            <Text className="mt10">On your favorite ETH2 block explorer:</Text>
             <ul>
               <li>
                 <Text className="mt10">

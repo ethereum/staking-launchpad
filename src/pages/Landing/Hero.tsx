@@ -124,7 +124,7 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
     <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
       <StyledLeslieImgNode
         src={LeslieTheRhinoPNG}
-        alt="Leslie the Rhino - eth2 mascot"
+        alt="Leslie the Rhino - ETH2 mascot."
         {...{ style }}
       />
     </ScrollAnimation>
@@ -149,8 +149,8 @@ export const Hero = () => {
                     <LogoContainer className={m ? 'mb50' : undefined}>
                       <EthLogo src={EthDiamondPlain} />
                       <LogoText>
-                        Eth2 Launch Pad{' '}
-                        {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                        ETH2 Launchpad{' '}
+                        {IS_MAINNET ? `` : `for the ${ETH2_NETWORK_NAME} Testnet`}
                       </LogoText>
                     </LogoContainer>
                   </Animate>
@@ -163,7 +163,7 @@ export const Hero = () => {
                       color="brand"
                       className="my20"
                     >
-                      Become a validator and help secure eth2.
+                      Become a validator and help securing ETH2.
                     </Heading>
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>

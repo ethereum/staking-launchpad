@@ -12,7 +12,7 @@ export interface PageContentInterface {
 
 export const pageContent = {
   [AcknowledgementIdsEnum.introSection]: {
-    title: 'Introducing eth2 phase 0',
+    title: 'Introducing ETH2 phase 0',
     content: (
       <>
         <Text size="large" className="my10">
@@ -45,13 +45,13 @@ export const pageContent = {
     title: 'Signing up',
     content: (
       <Text size="large" className="my10">
-        To become a validator on eth2, you need to deposit {PRICE_PER_VALIDATOR}{' '}
+        To become a validator on ETH2, you need to deposit {PRICE_PER_VALIDATOR}{' '}
         {` `}
         {TICKER_NAME} per validator that you wish to run. This process cannot be
         reversed.
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} into eth2 is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} into ETH2 is one-way, and non-reversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',
@@ -69,7 +69,7 @@ export const pageContent = {
           primary
           withArrow
         >
-          Learn more about eth2 economics
+          Learn more about ETH2 economics
         </Link>
       </>
     ),
@@ -85,7 +85,7 @@ export const pageContent = {
           liable to be slashed (incur a large penalty).
         </Text>
         <Link to="/faq" className="my10" primary withArrow>
-          Learn More about about penalties
+          Learn more about about penalties
         </Link>
       </>
     ),
@@ -134,7 +134,7 @@ export const pageContent = {
           primary
           withArrow
         >
-          Learn More about eth2&apos;s phases
+          Learn More about ETH2&apos;s phases
         </Link>
       </>
     ),
@@ -169,7 +169,7 @@ export const pageContent = {
     content: (
       <>
         <Text size="large" className="my10">
-          In order to become a validator, you will generate your new eth2 key
+          In order to become a validator, you will generate your new ETH2 key
           pairs. To do this and to install the validator software you need to be
           technically capable of running commands in a terminal on a computer.
         </Text>

@@ -69,25 +69,26 @@ export const Introduction = (): JSX.Element => {
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
             <Text className="mt25">
-              Eth2 is the next generation of Ethereum. It’s a multi-year plan to
+              ETH2 is the next generation of Ethereum. It’s a multi-year plan to
               improve the scalability, security and programmability of Ethereum,
               without compromising on decentralization.
             </Text>
             <Text className="mt25">
-              In contrast to the Ethereum chain, as it currently stands, eth2
+              In contrast to the Ethereum chain, as it currently stands, ETH2
               uses proof-of-stake (PoS) to secure its network. And while
               Ethereum as you know and love it will continue to exist as its own
               independent proof-of-work chain for a little while to come, the
               transition towards PoS starts now.
             </Text>
             <Text className="mt25">
-              In order to make this transition possible, eth2 requires active
+              In order to make this transition possible, ETH2 requires active
               participants – known as validators. Validators are responsible for
               securing the network and receive continuous payouts for actions
               that help the network reach consensus.
             </Text>
             <Text className="mt25">
-              This Launch Pad takes you through how to become one.
+              This launchpad takes you through the process of becoming a 
+              validator.
             </Text>
           </ScrollAnimation>
         </ContentContainer>

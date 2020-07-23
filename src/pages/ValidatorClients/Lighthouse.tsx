@@ -36,7 +36,7 @@ export const Lighthouse = () => {
           <Link external to="https://github.com/sigp/lighthouse" primary inline>
             Lighthouse
           </Link>{' '}
-          is an Eth2.0 client with a heavy focus on speed and security. The team
+          is an ETH2 client with a heavy focus on speed and security. The team
           behind it,{' '}
           <Link external to="https://sigmaprime.io/" primary inline>
             Sigma Prime
@@ -86,7 +86,7 @@ export const Lighthouse = () => {
           </Text>
           <CodeSnippet>
             lighthouse account validator import --directory
-            eth2.0-deposit-cli/validator_keys
+            eth2-deposit-cli/validator_keys
           </CodeSnippet>
           <Text className="mt10">
             Once the process is complete, you should see the following:

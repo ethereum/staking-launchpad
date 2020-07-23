@@ -158,7 +158,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           {thresholdReached ? (
             <>
               <Text className="mt20">
-                The threshold to launch the eth2
+                The threshold to launch the ETH2
                 {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
                 has been reached 🎉
               </Text>
@@ -172,7 +172,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           ) : (
             <>
               <Text className="mt20">
-                The eth2 network needs to reach at least
+                The ETH2 network needs to reach at least
                 <BoldGreen className="mr10 ml10" fontSize={24}>
                   {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
                 </BoldGreen>

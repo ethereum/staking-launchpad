@@ -64,7 +64,7 @@ export const FAQ = () => {
             <Heading level={4}>What is the deposit contract?</Heading>
             <Text className="mt10">
               You can think of it as a transfer of funds between Ethereum
-              accounts and eth2 validators.
+              accounts and ETH2 validators.
             </Text>
             <Text className="mt10">
               It specifies who is staking, who is validating, how much is being
@@ -335,7 +335,7 @@ export const FAQ = () => {
             <Heading level={4}>What exactly is slashing?</Heading>
             <Text className="mt10">
               Slashing has two purposes: (1) to make it prohibitively expensive
-              to attack eth2, and (2) to stop validators from being lazy by
+              to attack ETH2, and (2) to stop validators from being lazy by
               checking that they actually perform their duties. Slashing a
               validator is to destroy (a portion of) the validator’s stake if
               they act in a provably destructive manner.

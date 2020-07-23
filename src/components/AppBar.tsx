@@ -64,8 +64,8 @@ export const AppBar = () => {
         <Link to={routesEnum.landingPage}>
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           <Heading level={4} margin="none" style={{ padding: '8px 0' }}>
-            Eth2 Launch Pad{' '}
-            {IS_MAINNET ? `` : ` for ${ETH2_NETWORK_NAME} testnet`}
+            ETH2 Launchpad{' '}
+            {IS_MAINNET ? `` : ` for the ${ETH2_NETWORK_NAME} Testnet`}
           </Heading>
         </Link>
       </div>

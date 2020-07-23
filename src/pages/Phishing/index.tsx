@@ -53,7 +53,9 @@ export const Phishing = () => {
             </Text>
           </li>
           <li>
-            <Text className="mt10">On your favorite eth1 block explorer:</Text>
+            <Text className="mt10">
+              On your favorite Ethereum block explorer:
+            </Text>
             <ul>
               <li>
                 <Text className="mt10">Are there recent 32ETH deposits?</Text>

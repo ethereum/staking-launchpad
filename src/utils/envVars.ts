@@ -9,8 +9,8 @@ export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "g
 // public
 export const ALETHIO_URL                = IS_MAINNET ? 'https://explorer.aleth.io/tx' : 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
-export const BEACONSCAN_URL             = process.env.BEACONSCAN_URL                || "https://beaconscan.com/altona/validator";
-export const BEACONCHAIN_URL            = process.env.BEACONCHAIN_URL               || "https://altona.beaconcha.in/validator";
+export const BEACONSCAN_URL             = process.env.BEACONSCAN_URL                || "https://beaconscan.com/medalla/validator";
+export const BEACONCHAIN_URL            = process.env.BEACONCHAIN_URL               || "https://medalla.beaconcha.in/validator";
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
 export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x07b39f4fde4a38bace212b546dac87c58dfe3fdc';
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';

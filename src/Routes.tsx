@@ -11,6 +11,7 @@ import {
   UploadValidatorPage,
   TransactionsPage,
   FAQ,
+  Phishing,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/ValidatorClients/Prysm';
@@ -37,6 +38,7 @@ export enum routesEnum {
   nimbus = '/nimbus',
   lighthouse = '/lighthouse',
   teku = '/teku',
+  phishingPage = '/phishing',
   landingPage = '/',
   notFoundPage = '/*',
 }
@@ -96,6 +98,11 @@ const routes: RouteType[] = [
     path: routesEnum.lighthouse,
     exact: true,
     component: Lighthouse,
+  },
+  {
+    path: routesEnum.phishingPage,
+    exact: true,
+    component: Phishing,
   },
   { path: routesEnum.landingPage, exact: true, component: LandingPage },
   { path: routesEnum.notFoundPage, component: NotFoundPage },

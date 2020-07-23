@@ -192,13 +192,8 @@ const _CongratulationsPage = ({
             masternode proof-of-laboris profit nisi ut governance ea investment
             consequat.{' '}
           </Text>
-          <Link
-            className="mt10"
-            external
-            to="https://notes.ethereum.org/@Uj8LfAR6SACOz4TM6m07kw/ryWupFtyP"
-          >
+          <Link className="mt10" to="/faq" primary withArrow>
             Learn more about the roles and responsibilities of ETH 2 Validators
-            →
           </Link>
           <ClientContainer>
             {clientInfo.map(client => (

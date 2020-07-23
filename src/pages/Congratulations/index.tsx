@@ -61,6 +61,7 @@ interface Client {
   text: string;
   imgUrl: any;
   url: routesEnum;
+  linkText: string;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
@@ -77,6 +78,7 @@ const _CongratulationsPage = ({
         'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
       imgUrl: LighthouseBg,
       url: routesEnum.lighthouse,
+      linkText: 'Configure Lighthouse →',
     },
     {
       header: 'Nimbus',
@@ -84,6 +86,7 @@ const _CongratulationsPage = ({
         'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
       imgUrl: NimbusBg,
       url: routesEnum.nimbus,
+      linkText: 'Configure Nimbus →',
     },
     {
       header: 'Prysm',
@@ -91,6 +94,7 @@ const _CongratulationsPage = ({
         'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
       imgUrl: PrysmaticBg,
       url: routesEnum.prysm,
+      linkText: 'Configure Prysm →',
     },
     {
       header: 'Teku',
@@ -98,6 +102,7 @@ const _CongratulationsPage = ({
         'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
       imgUrl: TekuBg,
       url: routesEnum.teku,
+      linkText: 'Configure Teku →',
     },
   ]);
 
@@ -194,14 +199,12 @@ const _CongratulationsPage = ({
             margin="none"
             className="mt30"
           >
-            Set up your validator
+            Choose your client
           </Heading>
           <Text>
-            Lorem ipsum scaling sit blockchain, decentralized economy elit, sed
-            do replace tempor monetary ut labore et dollare magna distributed.
-            Ut smart contracts ad minim transaction fees, quis notarization
-            masternode proof-of-laboris profit nisi ut governance ea investment
-            consequat.{' '}
+            Now that you’ve have made your deposit, it’s time to set up your
+            Beacon Node, import your keystores, and run your Validator. Do some
+            research into your client options:
           </Text>
           <Link className="mt10" to="/faq" primary withArrow>
             Learn more about the roles and responsibilities of ETH 2 Validators
@@ -215,6 +218,7 @@ const _CongratulationsPage = ({
                 text={client.text}
                 key={client.header}
                 url={client.url}
+                linkText={client.linkText}
               />
             ))}
           </ClientContainer>

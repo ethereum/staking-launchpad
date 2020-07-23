@@ -6,7 +6,6 @@ import {
   SectionTitle,
   ValidatorClientPageStyles,
 } from './ValidatorClientComponents';
-import { Code } from '../../components/Code';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import styled from 'styled-components';
@@ -74,96 +73,53 @@ export const Lighthouse = () => {
           </SectionTitle>
 
           <Text className="mt10">
-            Lighthouse requires that your validator keystores & passwords are
-            named precisely and are availible at the correct location.
+            Lighthouse has dedicated tooling to make the transfer from the
+            Launchpad as easy as possible.
           </Text>
 
           <Text className="mt10">
-            Specifically, your keystores each need to be in their own folder in
-            <Code className="mx5">~/.lighthouse/validators/</Code> the folders
-            can be called whatever name you desire, provided it is unique.
-            Inside each folder, the keystore must be renamed to{' '}
-            <Code className="mx5">voting_keystore.json.</Code>
+            Specifically, when starting your lighthouse validator client, you
+            can point it at the directory with your keystores and it will import
+            your keystores and interactively ask for your password(s). If you do
+            not supply a password, lighthouse will ask for it again every time
+            it starts up.
           </Text>
-
+          <CodeSnippet>
+            lighthouse account validator import --directory
+            eth2.0-deposit-cli/validator_keys
+          </CodeSnippet>
           <Text className="mt10">
-            Each keystore also requires its own password. The passwords are
-            files contained <Code className="mx5">.lighthouse/secrets/</Code>{' '}
-            and each validator needs its own password file. The files themselves
-            must be named <Code className="mx5">[public_key] .pass</Code>
-            corresponding to the public keys of each of your validators.
+            Once the process is complete, you should see the following:
           </Text>
-        </section>
-        <section>
+          <CodeSnippet>
+            <code>Successfully moved keystore.</code>
+            <code>Successfully updated validator_definitions.yml.</code>
+            <code> </code>
+            <code>Successfully imported 1 validators.</code>
+          </CodeSnippet>
+
+          <SectionTitle level={3} className="mb5">
+            Running the validator client
+          </SectionTitle>
+          <Text className="mt10">
+            Now that the keys are imported, all that is left to do (assuming
+            your beacon node is already running) is to run the validator client
+            with:
+          </Text>
+          <CodeSnippet>
+            <code>lighthouse vc</code>
+          </CodeSnippet>
+
           <SectionTitle level={2} className="mb5">
             Troubleshooting
           </SectionTitle>
-          <Text>The file structure should look as follows (example):</Text>
-          <CodeSnippet>
-            <pre>
-              <code>.lighthouse</code>
-              <code>|-- beacon</code>
-              <code>| ...</code>
-              <code>|-- secrets</code>
-              <code>
-                |{'   '}|--
-                0xa9e96563c1ab22dc9d1d05d87305b5997418178cfc72af77ccb689be7ca5c1f3d29499c2adb37f6feb34b67e9f7523f7
-              </code>
-              <code>
-                |{'   '}|--
-                0x822e877e5e326408842b49ca8b2527f5042a5814df036f88c97a533964203d101656634bbd80bf162c179d78bc55a60b
-              </code>
-              <code>
-                |{'   '}|--
-                0x85d44bc728214797a466d1bbd0a833bddf33d139a7fcc179e97518ea8e519cc6bd7fa8f13ec524afbb04c1b1fc8af880
-              </code>
-              <code>
-                |{'   '}|--
-                0x8d2d82b28d1bb6f5d44ff6f3d54fc473deebbd9f82cc1bec8ddb9f864c085bf67e7a24b990dccf23fb01c44b6e13b1a5
-              </code>
-              <code>|-- validators</code>
-              <code>{'    '}|-- keystore-0</code>
-              <code>{'        '}|-- voting-keystore.json</code>
-              <code>{'    '}|-- keystore-1</code>
-              <code>{'        '}|-- voting-keystore.json</code>
-              <code>{'    '}|-- keystore-2</code>
-              <code>{'        '}|-- voting-keystore.json</code>
-              <code>{'    '}|-- keystore-3</code>
-              <code>{'        '}|-- voting-keystore.json</code>
-            </pre>
-          </CodeSnippet>
-          <ul>
-            <li>
-              <Text>
-                Ensure the keystores are all called{' '}
-                <Code className="px5">voting_keystore.json</Code>
-              </Text>
-            </li>
-            <li>
-              <Text>
-                Verify that the name of the password files matches the validator
-                public keys
-              </Text>
-            </li>
-            <li>
-              <Text>
-                Check that the password files don’t have trailing new-lines
-              </Text>
-            </li>
-            <li>
-              <Text>
-                Read the messages when starting the validator, they are very
-                informative for debugging this
-              </Text>
-            </li>
-          </ul>
           <Link
             primary
             external
-            to="https://lighthouse-book.sigmaprime.io/validator-create.html"
+            to="https://lighthouse-book.sigmaprime.io/validator-import-launchpad.html"
             withArrow
           >
-            More key management info
+            Documentation on importing from the Launchpad
           </Link>
         </section>
         <section>

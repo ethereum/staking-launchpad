@@ -107,6 +107,13 @@ const StyledLeslieImgNode = styled.img`
     max-width: 100%;
     max-height: 510px;
   }
+  @media screen and (max-width: 800px) {
+    max-width: 220px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: block;
+  }
 `;
 
 //

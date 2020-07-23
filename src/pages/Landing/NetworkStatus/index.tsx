@@ -130,8 +130,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
 
   React.useEffect(() => {
     const resizeListener = () => {
-      const newM = (window as any).mobileCheck();
-      if (m !== newM) setM(newM);
+      setM((window as any).mobileCheck());
     };
     window.addEventListener('resize', resizeListener);
     return () => window.removeEventListener('resize', resizeListener);

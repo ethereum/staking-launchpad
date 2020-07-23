@@ -150,7 +150,7 @@ const _UploadValidatorPage = ({
 
   const onFileDrop = (jsonFiles: Array<any>, rejectedFiles: Array<any>) => {
     if (rejectedFiles?.length) {
-      setFileError(<>Please use a valid json file</>);
+      setFileError(<>That is not a valid deposit_data json file.</>);
       return;
     }
 

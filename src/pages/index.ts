@@ -8,3 +8,4 @@ export * from './Summary';
 export * from './UploadValidator';
 export * from './Transactions';
 export * from './FAQ';
+export * from './Phishing';

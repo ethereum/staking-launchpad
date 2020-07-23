@@ -45,6 +45,7 @@ import {
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
+  TICKER_NAME,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
@@ -81,6 +82,10 @@ const WalletInfoContainer = styled.div`
 const StatusText = styled(Text)`
   font-size: 22px;
   margin-left: 10px;
+`;
+const FaucetLink = styled(Link)`
+  margin: auto;
+  margin-top: 10px;
 `;
 
 export interface web3ReactInterface {
@@ -184,7 +189,7 @@ const _ConnectWalletPage = ({
       !error &&
       (balance || balance === 0)
     ) {
-      setStatus(`${balance} ${IS_MAINNET ? '' : network} ETH available`);
+      setStatus(`${balance} ${TICKER_NAME} available`);
     } else if (walletConnected && error) {
       setStatus('Error');
     } else if (!networkAllowed) {
@@ -277,6 +282,16 @@ const _ConnectWalletPage = ({
                 )}
                 <StatusText>{status}</StatusText>
               </div>
+              {!IS_MAINNET && lowBalance && (
+                <FaucetLink
+                  to="https://faucet.goerli.mudit.blog/"
+                  external
+                  primary
+                  withArrow
+                >
+                  Goerli Faucet
+                </FaucetLink>
+              )}
             </Paper>
           </Animated>
         </WalletConnectedContainer>

@@ -92,7 +92,7 @@ export const Phases = (): JSX.Element => {
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 1 </PhaseTitle>
-                adds more data capacity to eth2.
+                adds data capacity to eth2.
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 2 </PhaseTitle>

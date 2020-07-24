@@ -59,7 +59,7 @@ export const SignupSteps = (): JSX.Element => {
           <Step
             imgUrl={DepositImgUrl}
             title={`Transfer your ${TICKER_NAME} to eth2`}
-            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators & ${TICKER_NAME} will become active on eth2!`}
+            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators will become active on eth2!`}
           />
         </ScrollAnimation>
       </StepsContainer>

@@ -24,10 +24,10 @@ const calculatePercentage = (amountEth: number) => {
 };
 
 const calculateLaunchThreshold = (amountEth: number) =>
-  (+ETH_REQUIREMENT - amountEth).toFixed(1);
+  Math.floor(+ETH_REQUIREMENT - amountEth);
 
 //
-// Styled Componens
+// Styled Components
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};

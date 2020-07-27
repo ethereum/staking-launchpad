@@ -1,6 +1,6 @@
 # Ethereum 2.0 Launchpad
 
-The Launchpad is the Ethereum Foundation's _"official"_ way to deposit your Ether on the Ethereum blockchain to become an Ethereum 2.0 validator.
+The Launchpad is the Ethereum Foundation's interface to deposit your Ether on the Ethereum blockchain to become an Ethereum 2.0 validator.
 
   - **Status**:  This Launchpad is in active development for testnet.
 

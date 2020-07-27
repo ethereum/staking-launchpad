@@ -84,7 +84,7 @@ export const Introduction = (): JSX.Element => {
               In order to make this transition possible, ETH2 requires active
               participants – known as validators. Validators are responsible for
               securing the network and receive continuous payouts for actions
-              that help the network reaching consensus.
+              that help the network reach consensus.
             </Text>
             <Text className="mt25">
               This launchpad takes you through the process of becoming a 

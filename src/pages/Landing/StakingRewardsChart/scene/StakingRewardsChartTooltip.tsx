@@ -256,7 +256,7 @@ const ValidatorEconomicsChartTooltip: React.FC<Props> = ({
                 {datum.x!.toLocaleString()}
                 &nbsp;{TICKER_NAME}
               </TooltipValue>
-              <TooltipField marginTop="7px">Rate</TooltipField>
+              <TooltipField marginTop="7px">Yearly Rate</TooltipField>
               <TooltipValue>
                 {(Math.round(datum.y * 1000) / 10).toLocaleString()}%
               </TooltipValue>

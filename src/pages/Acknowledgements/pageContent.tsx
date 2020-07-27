@@ -82,7 +82,7 @@ export const pageContent = {
       <>
         <Text size="large" className="my10">
           Validators that act maliciously or contrary to the specification, are
-          liable to be slashed, incuring a large penalty.
+          liable to be slashed, incurring a large penalty.
         </Text>
         <Link to="/faq" className="my10" primary withArrow>
           Learn more about about penalties

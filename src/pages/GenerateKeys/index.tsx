@@ -100,8 +100,8 @@ const _GenerateKeysPage = ({
   return (
     <WorkflowPageTemplate title="Generate Key Pairs">
       <Paper>
-        <Heading level={3} size="small" color="blueDark">
-          1. How many validators would you like to run?
+        <Heading level={2} size="small" color="blueDark">
+          How many validators would you like to run?
         </Heading>
         <div className="flex mt20">
           <div>
@@ -123,8 +123,8 @@ const _GenerateKeysPage = ({
         </div>
       </Paper>
       <Paper className="mt20">
-        <Heading level={3} size="small" color="blueMedium">
-          2. What is your current operating system?
+        <Heading level={2} size="small" color="blueMedium">
+          What is your current operating system?
         </Heading>
         <Text className="mt20">
           Choose your current OS so we can tailor the instructions for you.
@@ -135,8 +135,8 @@ const _GenerateKeysPage = ({
       {renderOSInstructions()}
 
       <Paper className="mt20">
-        <Heading level={3} size="small" color="blueMedium">
-          5. Save the key files and get the validator file ready
+        <Heading level={2} size="small" color="blueMedium">
+          Save the key files and get the validator file ready
         </Heading>
         <Text className="mt20">
           You should now have your mnemonic written down in a safe place and a

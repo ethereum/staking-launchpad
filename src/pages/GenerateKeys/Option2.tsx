@@ -15,52 +15,53 @@ export const Option2 = ({
   validatorCount: number | string;
   os: string;
 }) => {
-  return (
-    <Paper className="mt20">
-      <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Option 2: build deposit-cli from the Python source code
-      </Heading>
-      <Heading level={4} size="small" color="blueMedium" className="mb10">
-        Install python3.7+
-      </Heading>
-      <Text>
-        {os === 'linux' && (
-          <>
-            The python3 install process may differ depending on your linux
-            build. For the most up-to-date installation instructions, please
-            visit
-          </>
-        )}
-        {os === 'mac' && (
-          <>
-            You can install python3 on your MacOS device using{' '}
-            <Link primary inline external to="https://docs.brew.sh/Manpage">
-              homebrew
-            </Link>
-          </>
-        )}
-        . For the most up-to-date installation instructions, please visit{' '}
-        <Link
-          primary
-          inline
-          external
-          to="https://python.org/about/gettingstarted"
-        >
-          https://python.org/about/gettingstarted
-        </Link>
-        .
-      </Text>
-      <Alert variant="info" className="my10">
-        <Text className="my10" color="blueDark">
-          You can check your Python version by typing{' '}
-          <span className="alert-highlight">python3 -v</span> on your terminal.
-        </Text>
-      </Alert>
-      <Heading level={4} size="small" color="blueMedium" className="mb10 mt20">
-        Install pip3
-      </Heading>
+  const renderPythonInstructions = () => {
+    if (os === 'linux')
+      return (
+        <>
+          The python3 install process may differ depending on your linux build.
+        </>
+      );
 
-      {os === 'linux' && (
+    if (os === 'mac')
+      return (
+        <>
+          You can install python3 on your MacOS device using{' '}
+          <Link primary inline external to="https://docs.brew.sh/Manpage">
+            homebrew
+          </Link>
+        </>
+      );
+
+    if (os === 'windows')
+      return (
+        <>
+          Download python3 from{' '}
+          <Link
+            primary
+            inline
+            external
+            to="https://docs.python.org/3/using/windows.html"
+          >
+            python.org
+          </Link>{' '}
+          or via{' '}
+          <Link
+            primary
+            inline
+            external
+            to="https://chocolatey.org/packages/python"
+          >
+            Chocolatey
+          </Link>{' '}
+          and follow the installation instructions.
+        </>
+      );
+  };
+
+  const renderPipInstructions = () => {
+    if (os === 'linux') {
+      return (
         <Text>
           You can install pip using a Linux Package Manager like{' '}
           <Code>apt</Code> or <Code>yum</Code>. For the most-up-to-date
@@ -76,8 +77,11 @@ export const Option2 = ({
           </Link>
           .
         </Text>
-      )}
-      {os === 'mac' && (
+      );
+    }
+
+    if (os === 'mac') {
+      return (
         <Text>
           You can also use{' '}
           <Link primary inline external to="https://docs.brew.sh/Manpage">
@@ -96,8 +100,92 @@ export const Option2 = ({
           </Link>
           .
         </Text>
-      )}
+      );
+    }
 
+    if (os === 'windows') {
+      return (
+        <Text>
+          The latest version of pip should have been installed with python
+          3.x.x. For more information about pip, you can visit the windows
+          install{' '}
+          <Link
+            inline
+            external
+            primary
+            to="https://pip.pypa.io/en/stable/installing/"
+          >
+            guide{' '}
+          </Link>
+          or install the pip package via{' '}
+          <Link
+            inline
+            external
+            primary
+            to="https://chocolatey.org/packages/pip"
+          >
+            Chocolatey
+          </Link>
+          .
+        </Text>
+      );
+    }
+  };
+
+  const renderDepositKeyCommand = () => {
+    if (os === 'mac' || os === 'linux') {
+      return (
+        <pre className="my0">
+          ./deposit{' '}
+          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}
+          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+        </pre>
+      );
+    }
+
+    if (os === 'windows') {
+      return (
+        <pre className="my0">
+          .\eth2deposit\deposit.py{' '}
+          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
+          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+        </pre>
+      );
+    }
+  };
+
+  return (
+    <Paper className="mt20">
+      <Heading level={2} size="small" color="blueMedium" className="mb20">
+        Option 2: build deposit-cli from the Python source code
+      </Heading>
+      <Heading level={4} size="small" color="blueMedium" className="mb10">
+        Install python3.7+
+      </Heading>
+      <Text>{renderPythonInstructions()}</Text>
+      <Text>
+        For the most up-to-date installation instructions, please visit{' '}
+        <Link
+          primary
+          inline
+          external
+          to="https://python.org/about/gettingstarted"
+        >
+          https://python.org/about/gettingstarted
+        </Link>
+        .
+      </Text>
+      <Alert variant="info" className="my10">
+        <Text className="my10" color="blueDark">
+          You can check your Python version by typing{' '}
+          <span className="alert-highlight">python3 -v</span> on your terminal.
+        </Text>
+      </Alert>
+
+      <Heading level={4} size="small" color="blueMedium" className="mb10 mt20">
+        Install pip3
+      </Heading>
+      {renderPipInstructions()}
       <Heading level={4} size="small" color="blueMedium" className="mb10 my20">
         Install virtualenv
       </Heading>
@@ -163,11 +251,7 @@ export const Option2 = ({
         Type the following lines into the terminal window:
       </Text>
       <Alert variant="secondary" className="my10">
-        <pre className="my0">
-          ./deposit{' '}
-          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}
-          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
-        </pre>
+        {renderDepositKeyCommand()}
       </Alert>
       <Alert variant="error" className="my10">
         <Text>

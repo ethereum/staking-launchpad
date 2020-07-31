@@ -5,11 +5,14 @@ import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
 import { Paper } from '../../components/Paper';
+import { colors } from '../../styles/styledComponentsTheme';
 
 export const Option1 = ({
   validatorCount,
+  os,
 }: {
   validatorCount: number | string;
+  os: string;
 }) => {
   return (
     <Paper className="mt20">
@@ -44,9 +47,20 @@ export const Option1 = ({
       </Text>
       <Alert variant="secondary" className="my10">
         <pre className="my10">
-          ./deposit{' '}
+          {(os === 'linux' || os === 'mac') && (
+            <span style={{ color: colors.red.medium }}>./deposit </span>
+          )}
+
+          {os === 'windows' && (
+            <>
+              <span style={{ color: colors.red.medium }}>deposit</span>
+              <span style={{ color: colors.purple.dark }}>.exe </span>
+            </>
+          )}
+
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}
-          <span style={{ color: '#969896' }}>
+
+          <span style={{ color: colors.red.medium }}>
             {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
           </span>
         </pre>

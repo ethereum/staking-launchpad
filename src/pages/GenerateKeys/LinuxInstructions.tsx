@@ -9,7 +9,7 @@ interface Props {
 export const LinuxInstructions = ({ validatorCount }: Props) => {
   return (
     <div style={{ animation: 'fadeIn 1s' }}>
-      <Option1 validatorCount={validatorCount} />
+      <Option1 validatorCount={validatorCount} os="linux" />
       <Option2 validatorCount={validatorCount} os="linux" />
     </div>
   );

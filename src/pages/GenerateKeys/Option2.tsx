@@ -136,8 +136,8 @@ export const Option2 = ({
     if (os === 'mac' || os === 'linux') {
       return (
         <pre className="my0">
-          ./deposit{' '}
-          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}
+          python3 ./eth2deposit/deposit.py{' '}
+          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
         </pre>
       );
@@ -178,7 +178,13 @@ export const Option2 = ({
       <Alert variant="info" className="my10">
         <Text className="my10" color="blueDark">
           You can check your Python version by typing{' '}
-          <span className="alert-highlight">python3 -v</span> on your terminal.
+          {(os === 'linux' || os === 'mac') && (
+            <span className="alert-highlight">python3 -V</span>
+          )}
+          {os === 'windows' && (
+            <span className="alert-highlight">python -V</span>
+          )}
+          on your terminal.
         </Text>
       </Alert>
 
@@ -210,7 +216,7 @@ export const Option2 = ({
           external
           inline
           primary
-          to="https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.2.1/eth2deposit-cli-v0.2.1-darwin-amd64.tar.gz"
+          to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
         >
           source code{' '}
         </Link>
@@ -224,22 +230,31 @@ export const Option2 = ({
           </span>
         </Text>
       </Alert>
-      <Text>First, create an venv virtualenv:</Text>
+      <Text>First, create an venv virtualenv under repository directory:</Text>
       <Alert variant="secondary" className="my10">
         <pre className="my0">
           <span style={{ color: colors.blue.medium }}>virtualenv</span> venv
         </pre>
-        <pre className="my0">./venv/bin/activate</pre>
+        {(os === 'linux' || os === 'mac') && (
+          <pre className="my0">source venv/bin/activate</pre>
+        )}
+        {os === 'windows' && <pre className="my0">.\venv\Scripts\activate</pre>}
       </Alert>
       <Text>Second, install the dependency packages:</Text>
       <Alert variant="secondary" className="my10">
         <pre className="my0">
-          <span style={{ color: colors.red.medium }}>python3 setup</span>
+          {(os === 'linux' || os === 'mac') && (
+            <span style={{ color: colors.red.medium }}>python3 setup</span>
+          )}
+          {os === 'windows' && (
+            <span style={{ color: colors.red.medium }}>python setup</span>
+          )}
           <span style={{ color: colors.purple.dark }}>.py</span>{' '}
+          <span style={{ color: colors.red.medium }}>install</span>
         </pre>
         <pre className="my0">
           <span style={{ color: colors.red.medium }}>
-            install pip3 install -r requirements
+            pip3 install -r requirements
           </span>
           <span style={{ color: colors.purple.dark }}>.txt</span>
         </pre>

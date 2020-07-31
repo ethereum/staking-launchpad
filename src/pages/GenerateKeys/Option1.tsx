@@ -50,16 +50,13 @@ export const Option1 = ({
           {(os === 'linux' || os === 'mac') && (
             <span style={{ color: colors.red.medium }}>./deposit </span>
           )}
-
           {os === 'windows' && (
             <>
               <span style={{ color: colors.red.medium }}>deposit</span>
               <span style={{ color: colors.purple.dark }}>.exe </span>
             </>
           )}
-
-          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}
-
+          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           <span style={{ color: colors.red.medium }}>
             {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
           </span>

@@ -21,7 +21,7 @@ export const Option1 = ({
       </Heading>
       <Text weight={500}>Download the binary executable file</Text>
       <Text>
-        Please find the binary execution file of the latest deposit-cli release
+        Please find the binary executable file of the latest deposit-cli release
         on{' '}
         <Link
           primary

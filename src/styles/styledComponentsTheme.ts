@@ -28,9 +28,12 @@ export const colors = {
   purple: {
     light: '#F0F2FB',
     medium: '#E3E5F2',
+    dark: '#795da3',
   },
   yellow: {
+    light: '#fff0a8',
     dark: '#f0ad4d',
+    darkest: '#8a6d3b',
   },
 };
 

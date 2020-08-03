@@ -218,7 +218,7 @@ export const Option2 = ({
           primary
           to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
         >
-          source code{' '}
+          master branch source code{' '}
         </Link>
         from GitHub.
       </Text>
@@ -226,8 +226,11 @@ export const Option2 = ({
         <Text>
           If you’re a git user, you can run{' '}
           <span className="alert-highlight">
-            git clone https://github.com/ethereum/eth2.0-deposit-cli.git
-          </span>
+            git clone -b master --single-branch
+            https://github.com/ethereum/eth2.0-deposit-cli.git
+          </span>{' '}
+          to download the <span className="alert-highlight">master</span>{' '}
+          branch.
         </Text>
       </Alert>
       <Text>First, create an venv virtualenv under repository directory:</Text>

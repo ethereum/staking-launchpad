@@ -24,10 +24,10 @@ const calculatePercentage = (amountEth: number) => {
 };
 
 const calculateLaunchThreshold = (amountEth: number) =>
-  (+ETH_REQUIREMENT - amountEth).toFixed(1);
+  Math.floor(+ETH_REQUIREMENT - amountEth);
 
 //
-// Styled Componens
+// Styled Components
 
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
@@ -71,7 +71,7 @@ const PreThresholdSubText = ({
         {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
       <Text size="small" style={{ marginTop: '2px' }}>
-        Current staking balance
+        current staking balance
       </Text>
     </span>
     <Text
@@ -82,7 +82,7 @@ const PreThresholdSubText = ({
         {calculateLaunchThreshold(amountEth)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
-      Launch threshold
+      until launch threshold
     </Text>
   </div>
 );
@@ -100,7 +100,7 @@ const PostThresholdSubText = ({
         {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
-      Launch threshold
+      until launch threshold
     </Text>
     <span
       className={`flex ${
@@ -111,7 +111,7 @@ const PostThresholdSubText = ({
         {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
       <Text size="small" style={{ marginTop: '2px' }}>
-        Current staking balance
+        current staking balance
       </Text>
     </span>
   </div>

@@ -33,32 +33,18 @@ export const Prysm = () => {
         </Text>
         <section>
           <SectionTitle level={2} className="mb5">
-            Installation
-          </SectionTitle>
-          <Link
-            external
-            primary
-            to="https://docs.prylabs.network/docs/getting-started/"
-          >
-            https://docs.prylabs.network/docs/getting-started/
-          </Link>
-        </section>
-        <section>
-          <SectionTitle level={2} className="mb5">
-            Key Management
+            Validating with Prysm
           </SectionTitle>
           <Text>
-            Prysm is currently going through a redesign of how their keys are
-            managed. After this redesign is completed, it will be much easier to
-            use keystores in Prysm and these instructions will be updated then.
+            Prysm offers step-by-step guidelines to run their client after completing your deposit through the launchpad 
           </Text>
           <Link
             primary
             external
-            to="https://github.com/prysmaticlabs/prysm/pulls?q=is%3Apr+Accounts+V2+"
+            to="https://docs.prylabs.network/docs/testnet/medalla/"
             withArrow
           >
-            Follow the progress of this update on the Prysm Github repository
+            Run Prysm
           </Link>
         </section>
         <section>

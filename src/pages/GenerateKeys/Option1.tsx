@@ -17,12 +17,11 @@ export const Option1 = ({
   return (
     <Paper className="mt20">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Option 1: Use binary executable file
+        Option 1: Download command line app
       </Heading>
-      <Text weight={500}>Download the binary executable file</Text>
+      <Text weight={500}>Download the deposit command line interface app</Text>
       <Text>
-        Please find the binary executable file of the latest deposit-cli release
-        on{' '}
+        Please find the latest deposit-cli release on the{' '}
         <Link
           primary
           external
@@ -35,15 +34,17 @@ export const Option1 = ({
       </Text>
       <Alert variant="warning" className="my20">
         <Text weight={500} color="yellowDarkest" className="my10">
-          Please make sure that you are downloading from Ethereum Foundation
-          official GitHub account.
+          Please make sure that you are downloading from the official Ethereum
+          Foundation GitHub account.
         </Text>
       </Alert>
       <Text weight={500}>
         Generate deposit keys using the Ethereum Foundation deposit tool
       </Text>
       <Text className="mt5">
-        Type the following lines into the terminal window:
+        Decompress the file you just downloaded, use the terminal to move into
+        the directory that contains the <code>deposit</code> executable, and run
+        the following command to launch the app:
       </Text>
       <Alert variant="secondary" className="my10">
         <pre className="my10">
@@ -62,6 +63,10 @@ export const Option1 = ({
           </span>
         </pre>
       </Alert>
+      <Text>
+        Now follow the instructions presented to you in the terminal window to
+        generate your keys.
+      </Text>
     </Paper>
   );
 };

@@ -21,7 +21,8 @@ export const Option1 = ({
       </Heading>
       <Text weight={500}>Download the deposit command line interface app</Text>
       <Text>
-        Please find the latest deposit-cli release on the{' '}
+        Please find the zip/tarball file containing the latest deposit-cli
+        release on the{' '}
         <Link
           primary
           external

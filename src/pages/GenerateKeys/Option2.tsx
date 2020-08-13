@@ -157,7 +157,7 @@ export const Option2 = ({
   return (
     <Paper className="mt20">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Option 2: build deposit-cli from the Python source code
+        Option 2: Build deposit-cli from the Python source code
       </Heading>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
         Install python3.7+
@@ -279,7 +279,7 @@ export const Option2 = ({
           </span>{' '}
           for {CHAIN_NAME.charAt(0).toUpperCase()}
           {CHAIN_NAME.toLowerCase().slice(1)} testnet, otherwise the deposit
-          would be invalid.
+          will be invalid.
         </Text>
       </Alert>
       <Alert variant="warning" className="my10">

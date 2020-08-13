@@ -36,7 +36,8 @@ export const Prysm = () => {
             Validating with Prysm
           </SectionTitle>
           <Text>
-            Prysm offers step-by-step guidelines to run their client after completing your deposit through the launchpad 
+            Prysm offers step-by-step guidelines to run their client after
+            completing your deposit through the launchpad
           </Text>
           <Link
             primary

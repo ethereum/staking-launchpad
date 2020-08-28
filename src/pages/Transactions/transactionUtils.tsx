@@ -98,3 +98,62 @@ export const handleTransaction = async (
     updateTransactionStatus(pubkey, TransactionStatus.FAILED);
   }
 };
+
+export const handleMultipleTransactions = async (
+  depositFiles: DepositKeyInterface[],
+  connector: AbstractConnector,
+  account: any,
+  updateTransactionStatus: (
+    pubkey: string,
+    status: TransactionStatus,
+    txHash?: string
+  ) => void
+) => {
+  const walletProvider: any = await (connector as AbstractConnector).getProvider();
+  const web3 = new Web3(walletProvider).eth;
+  const contract = new web3.Contract(contractAbi, CONTRACT_ADDRESS);
+
+  const transactionParameters: SendOptions = {
+    gasPrice: '0x0055e72a000', // TODO estimate gas value
+    from: account as string,
+    value: TX_VALUE,
+  };
+
+  // @ts-ignore
+  const batch = new contract.BatchRequest();
+
+  depositFiles.forEach(
+    // eslint-disable-next-line camelcase
+    ({ pubkey, withdrawal_credentials, signature, deposit_data_root }) => {
+      updateTransactionStatus(pubkey, TransactionStatus.PENDING);
+
+      batch.add(
+        contract.methods
+          .deposit(
+            prefix0X(pubkey),
+            prefix0X(withdrawal_credentials),
+            prefix0X(signature),
+            prefix0X(deposit_data_root)
+          )
+          .send.request(transactionParameters, (error: any, txHash: any) => {
+            // values are set to fixed for the example
+            if (error) {
+              if (isUserRejectionError(error)) {
+                updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
+              } else {
+                updateTransactionStatus(pubkey, TransactionStatus.FAILED);
+              }
+            } else {
+              updateTransactionStatus(
+                pubkey,
+                TransactionStatus.STARTED,
+                txHash
+              );
+            }
+          })
+      );
+    }
+  );
+
+  batch.execute();
+};

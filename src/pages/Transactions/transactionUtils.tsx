@@ -107,7 +107,8 @@ export const handleMultipleTransactions = async (
     pubkey: string,
     status: TransactionStatus,
     txHash?: string
-  ) => void
+  ) => void,
+  recursionIdx = 0
 ) => {
   const walletProvider: any = await (connector as AbstractConnector).getProvider();
   const web3 = new Web3(walletProvider).eth;
@@ -119,41 +120,64 @@ export const handleMultipleTransactions = async (
     value: TX_VALUE,
   };
 
-  // @ts-ignore
-  const batch = new contract.BatchRequest();
+  if (recursionIdx === depositFiles.length) {
+    // stop calling yourself
+  } else {
+    const {
+      pubkey,
+      // eslint-disable-next-line
+      withdrawal_credentials,
+      signature,
+      // eslint-disable-next-line
+      deposit_data_root,
+    } = depositFiles[recursionIdx];
 
-  depositFiles.forEach(
-    // eslint-disable-next-line camelcase
-    ({ pubkey, withdrawal_credentials, signature, deposit_data_root }) => {
-      updateTransactionStatus(pubkey, TransactionStatus.PENDING);
-
-      batch.add(
-        contract.methods
-          .deposit(
-            prefix0X(pubkey),
-            prefix0X(withdrawal_credentials),
-            prefix0X(signature),
-            prefix0X(deposit_data_root)
-          )
-          .send.request(transactionParameters, (error: any, txHash: any) => {
-            // values are set to fixed for the example
-            if (error) {
-              if (isUserRejectionError(error)) {
-                updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
-              } else {
-                updateTransactionStatus(pubkey, TransactionStatus.FAILED);
-              }
+    contract.methods
+      .deposit(
+        prefix0X(pubkey),
+        prefix0X(withdrawal_credentials),
+        prefix0X(signature),
+        prefix0X(deposit_data_root)
+      )
+      .send(transactionParameters)
+      .on('transactionHash', (txHash: string): void => {
+        updateTransactionStatus(pubkey, TransactionStatus.STARTED, txHash);
+        handleMultipleTransactions(
+          depositFiles,
+          connector,
+          account,
+          updateTransactionStatus,
+          recursionIdx + 1
+        );
+      })
+      .on('receipt', () => {
+        // do something?
+      })
+      .on(
+        'confirmation',
+        (confirmation: number, receipt: { status: {} }): any => {
+          if (confirmation === 0) {
+            if (receipt.status) {
+              updateTransactionStatus(pubkey, TransactionStatus.SUCCEEDED);
             } else {
-              updateTransactionStatus(
-                pubkey,
-                TransactionStatus.STARTED,
-                txHash
-              );
+              updateTransactionStatus(pubkey, TransactionStatus.FAILED);
             }
-          })
-      );
-    }
-  );
-
-  batch.execute();
+          }
+        }
+      )
+      .on('error', (error: any) => {
+        handleMultipleTransactions(
+          depositFiles,
+          connector,
+          account,
+          updateTransactionStatus,
+          recursionIdx + 1
+        );
+        if (isUserRejectionError(error)) {
+          updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
+        } else {
+          updateTransactionStatus(pubkey, TransactionStatus.FAILED);
+        }
+      });
+  }
 };

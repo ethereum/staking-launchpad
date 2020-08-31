@@ -18,7 +18,7 @@ import { Text } from '../../../components/Text';
 import { Status } from './Status';
 import { ActionButton } from './ActionButton';
 import { DepositKeyInterface, StoreState } from '../../../store/reducers';
-import { handleTransaction } from '../transactionUtils';
+import { handleMultipleTransactions } from '../transactionUtils';
 import { web3ReactInterface } from '../../ConnectWallet';
 import {
   DispatchTransactionStatusUpdateType,
@@ -56,11 +56,10 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
     Web3Provider
   >();
   const handleActionClick = (depositKey: DepositKeyInterface) => {
-    handleTransaction(
-      depositKey,
+    handleMultipleTransactions(
+      [depositKey],
       connector as AbstractConnector,
       account,
-
       dispatchTransactionStatusUpdate
     );
   };

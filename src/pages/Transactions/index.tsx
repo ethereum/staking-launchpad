@@ -14,10 +14,7 @@ import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
-import {
-  handleMultipleTransactions,
-  // handleTransaction,
-} from './transactionUtils';
+import { handleMultipleTransactions } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
@@ -103,8 +100,12 @@ const _TransactionsPage = ({
   };
 
   const handleAllTransactionsClick = () => {
+    const remainingTxs = depositKeys.filter(
+      key => key.transactionStatus === TransactionStatus.READY
+    );
+
     handleMultipleTransactions(
-      depositKeys,
+      remainingTxs,
       connector as AbstractConnector,
       account,
       dispatchTransactionStatusUpdate

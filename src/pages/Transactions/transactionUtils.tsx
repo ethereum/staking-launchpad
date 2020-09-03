@@ -104,13 +104,6 @@ export const handleMultipleTransactions = async (
       }
     )
     .on('error', (error: any) => {
-      handleMultipleTransactions(
-        depositFiles,
-        connector,
-        account,
-        updateTransactionStatus,
-        recursionIdx + 1
-      );
       if (isUserRejectionError(error)) {
         updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
       } else {

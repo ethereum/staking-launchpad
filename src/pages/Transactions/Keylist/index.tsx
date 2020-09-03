@@ -34,6 +34,7 @@ const CustomPaper = styled(Paper)`
   overflow: auto;
 `;
 const CustomTable = styled(Table)`
+  width: 100%;
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     td {
       padding: 5px;

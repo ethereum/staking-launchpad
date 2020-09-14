@@ -24,6 +24,7 @@ import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import { TransactionStatus } from '../../store/actions/depositFileActions';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -133,6 +134,10 @@ const _CongratulationsPage = ({
   })();
   const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
 
+  const successfulDeposits = depositKeys.filter(
+    deposit => deposit.transactionStatus === TransactionStatus.SUCCEEDED
+  );
+
   if (workflow < WorkflowStep.CONGRATULATIONS) {
     return routeToCorrectWorkflowStep(workflow);
   }
@@ -177,8 +182,11 @@ const _CongratulationsPage = ({
                     title="You added:"
                     color={colors.blue.light}
                     // @ts-ignore
-                    amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
-                    amountValidators={depositKeys.length}
+                    amountEth={successfulDeposits.reduce(
+                      (accumulator, deposit) => accumulator + deposit.amount,
+                      0
+                    )}
+                    amountValidators={successfulDeposits.length}
                   />
                   <ProgressBarInfo
                     title="Launch threshold:"

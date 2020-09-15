@@ -15,6 +15,7 @@ import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
   ENABLE_RPC_FEATURES,
   ETH_REQUIREMENT,
+  ETHER_TO_GWEI,
   PRICE_PER_VALIDATOR,
 } from '../../utils/envVars';
 import { ClientCard } from './ClientCard';
@@ -182,10 +183,12 @@ const _CongratulationsPage = ({
                     title="You added:"
                     color={colors.blue.light}
                     // @ts-ignore
-                    amountEth={successfulDeposits.reduce(
-                      (accumulator, deposit) => accumulator + deposit.amount,
-                      0
-                    )}
+                    amountEth={
+                      successfulDeposits.reduce(
+                        (accumulator, deposit) => accumulator + deposit.amount,
+                        0
+                      ) / ETHER_TO_GWEI
+                    }
                     amountValidators={successfulDeposits.length}
                   />
                   <ProgressBarInfo

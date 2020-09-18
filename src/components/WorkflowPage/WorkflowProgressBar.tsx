@@ -6,7 +6,7 @@ import { WorkflowStep } from '../../store/actions/workflowActions';
 
 export const logoPositions = {
   small: [0, 17.5, 35, 52, 69, 90],
-  medium: [-5, 14.5, 36.5, 57.5, 77.5, 95.5],
+  medium: [-5, 9.5, 25.5, 44, 62.5, 78.6, 95.5],
   large: [-2, 17, 37.5, 58.5, 77, 94.5],
 };
 
@@ -102,6 +102,7 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
 
   const steps: step[] = [
     { step: WorkflowStep.OVERVIEW, text: 'Overview' },
+    { step: WorkflowStep.SELECT_VALIDATOR, text: 'Validator' },
     { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
     {
       step: WorkflowStep.UPLOAD_VALIDATOR_FILE,

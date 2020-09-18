@@ -18,6 +18,7 @@ const ValidatorOptionContainer = styled.div`
   & label {
     display: inline-block;
     padding: 1rem;
+    margin: 30px 0;
     border-radius: 4px;
     background: #fcfcfc;
     border: 1px solid #ececec;
@@ -73,15 +74,14 @@ const SelectValidatorSection = ({
     <Box className="flex flex-column space-between mt10">
       <ValidatorOptionContainer>
         {clients.map(({ name, imgUrl }) => {
+          const inputId = `${name}-validator`;
           const onChange = () => setCurrentValidator(name);
+          const labelClassName =
+            name === currentValidator ? 'active' : undefined;
           return (
-            <label htmlFor={`${name}-validator`} className="my30">
+            <label htmlFor={`${name}-validator`} className={labelClassName}>
               <img src={imgUrl} alt={`${name} validator option`} />
-              <input
-                id={`${name}-validator`}
-                {...{ onChange }}
-                {...radioProps}
-              />
+              <input id={inputId} onChange={onChange} {...radioProps} />
             </label>
           );
         })}

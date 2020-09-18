@@ -2,6 +2,7 @@ import { ActionTypes } from './index';
 
 export enum WorkflowStep {
   'OVERVIEW',
+  'SELECT_VALIDATOR',
   'GENERATE_KEY_PAIRS',
   'UPLOAD_VALIDATOR_FILE',
   'CONNECT_WALLET',

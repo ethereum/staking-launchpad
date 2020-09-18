@@ -69,6 +69,7 @@ interface ImgSelectionBoxProps {
   onClick: any;
   text: string;
   fullWidthImg?: boolean;
+  style?: any;
 }
 
 export const ImageSelectionBox = ({
@@ -77,9 +78,10 @@ export const ImageSelectionBox = ({
   onClick,
   text,
   fullWidthImg,
+  style,
 }: ImgSelectionBoxProps) => {
   return (
-    <LogoContainerBox onClick={onClick} isActive={isActive}>
+    <LogoContainerBox onClick={onClick} isActive={isActive} style={style}>
       <LogoBackground isActive={isActive} fullWidthImg={fullWidthImg}>
         <img src={src} alt={text} />
       </LogoBackground>

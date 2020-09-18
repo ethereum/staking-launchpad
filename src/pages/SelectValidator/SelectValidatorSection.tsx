@@ -8,18 +8,8 @@ import { ImageSelectionBox } from '../../components/ImageSelectionBox';
 const ValidatorOptionContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-
-  & label {
-    display: inline-block;
-    padding: 1rem;
-    margin: 30px 0;
-    border-radius: 4px;
-    background: #fcfcfc;
-    border: 1px solid #ececec;
-    flex: 0.8;
-  }
 `;
 
 const ValidatorDescriptionContainer = styled.div`
@@ -56,15 +46,16 @@ const SelectValidatorSection = ({
       <ValidatorOptionContainer>
         {clients.map(({ name, imgUrl }) => {
           const inputId = `${name}-validator`;
-          const onChange = () => setCurrentValidator(name);
+          const onClick = () => setCurrentValidator(name);
 
           return (
             <ImageSelectionBox
+              style={{ margin: '0 5px' }}
               fullWidthImg
               key={inputId}
               src={imgUrl}
               isActive={currentValidator === name}
-              onClick={onChange}
+              onClick={onClick}
               text={name}
             />
           );

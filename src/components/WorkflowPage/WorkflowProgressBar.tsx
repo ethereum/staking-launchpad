@@ -4,12 +4,6 @@ import { FormNext } from 'grommet-icons';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 
-export const logoPositions = {
-  small: [0, 17.5, 35, 52, 69, 90],
-  medium: [-5, 9.5, 25.5, 44, 62.5, 78.6, 95.5],
-  large: [-2, 17, 37.5, 58.5, 77, 94.5],
-};
-
 const Container = styled.div`
   background-color: white;
 `;
@@ -66,9 +60,8 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
     <Container>
       <StepContainer>
         {steps.map(({ step, text }, i) => (
-          <div className="flex-inline">
+          <div className="flex-inline" key={text}>
             <Step
-              key={text}
               index={i}
               disabled={workflow < step}
               active={workflow === step}

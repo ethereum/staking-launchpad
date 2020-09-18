@@ -4,6 +4,7 @@ import {
   AcknowledgementPage,
   CongratulationsPage,
   ConnectWalletPage,
+  SelectValidatorPage,
   GenerateKeysPage,
   LandingPage,
   NotFoundPage,
@@ -30,6 +31,7 @@ export enum routesEnum {
   connectWalletPage = '/connect-wallet',
   generateKeysPage = '/generate-keys',
   acknowledgementPage = '/overview',
+  selectValidator = '/select-validator',
   summaryPage = '/summary',
   uploadValidatorPage = '/upload-validator',
   transactionsPage = '/transactions',
@@ -52,6 +54,11 @@ const routes: RouteType[] = [
     path: routesEnum.connectWalletPage,
     exact: true,
     component: ConnectWalletPage,
+  },
+  {
+    path: routesEnum.selectValidator,
+    exact: true,
+    component: SelectValidatorPage,
   },
   {
     path: routesEnum.generateKeysPage,

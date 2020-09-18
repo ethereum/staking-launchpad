@@ -45,11 +45,11 @@ interface DispatchProps {
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
-const clientDetails: { [client: string]: React.ReactElement } = {
-  Teku: <TekuDetails />,
-  Lighthouse: <LighthouseDetails />,
-  Prysm: <PrysmDetails />,
-  Nimbus: <NimbusDetails />,
+const clientDetails = {
+  [ValidatorId.TEKU]: <TekuDetails />,
+  [ValidatorId.LIGHTHOUSE]: <LighthouseDetails />,
+  [ValidatorId.PRYSM]: <PrysmDetails />,
+  [ValidatorId.NIMBUS]: <NimbusDetails />,
 };
 
 export type Client = {
@@ -88,7 +88,7 @@ const ethClients: {
       name: 'Prysm',
       imgUrl: PrysmaticCircle,
     },
-    { validatorId: ValidatorId.PARITY, name: 'Nimbus', imgUrl: NimbusCircle },
+    { validatorId: ValidatorId.NIMBUS, name: 'Nimbus', imgUrl: NimbusCircle },
   ]),
 };
 

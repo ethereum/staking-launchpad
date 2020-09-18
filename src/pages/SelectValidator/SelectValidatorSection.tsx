@@ -28,7 +28,7 @@ type Props = {
   clients: Array<Client>;
   currentValidator: ValidatorId;
   setCurrentValidator: (validator: ValidatorId) => void;
-  clientDetails: { [client: string]: React.ReactElement };
+  clientDetails: any;
 };
 
 const SelectValidatorSection = ({

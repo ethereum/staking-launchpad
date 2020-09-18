@@ -4,6 +4,8 @@ import { Box } from 'grommet';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
+import { Client } from './index';
+import { ValidatorId } from '../../store/actions/validatorActions';
 
 const ValidatorOptionContainer = styled.div`
   width: 100%;
@@ -21,13 +23,11 @@ const ValidatorDescriptionContainer = styled.div`
   padding: 1rem 2rem;
 `;
 
-type Client = { name: string; imgUrl: string };
-
 type Props = {
   title?: string;
   clients: Array<Client>;
-  currentValidator: string;
-  setCurrentValidator: (validator: string) => void;
+  currentValidator: ValidatorId;
+  setCurrentValidator: (validator: ValidatorId) => void;
   clientDetails: { [client: string]: React.ReactElement };
 };
 
@@ -44,9 +44,9 @@ const SelectValidatorSection = ({
     </Heading>
     <Box className="flex flex-column space-between mt10">
       <ValidatorOptionContainer>
-        {clients.map(({ name, imgUrl }) => {
-          const inputId = `${name}-validator`;
-          const onClick = () => setCurrentValidator(name);
+        {clients.map(({ validatorId, name, imgUrl }) => {
+          const inputId = `${validatorId}-validator`;
+          const onClick = () => setCurrentValidator(validatorId);
 
           return (
             <ImageSelectionBox
@@ -54,7 +54,7 @@ const SelectValidatorSection = ({
               fullWidthImg
               key={inputId}
               src={imgUrl}
-              isActive={currentValidator === name}
+              isActive={currentValidator === validatorId}
               onClick={onClick}
               text={name}
             />

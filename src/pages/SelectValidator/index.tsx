@@ -25,15 +25,23 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
+import {
+  DispatchValidatorUpdate,
+  updateValidator,
+  ValidatorId,
+} from '../../store/actions/validatorActions';
+import { validatorState } from '../../store/reducers/validatorReducer';
 
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
   workflow: WorkflowStep;
+  chosenValidators: validatorState;
 }
 
 interface DispatchProps {
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
+  dispatchValidatorUpdate: DispatchValidatorUpdate;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
@@ -44,27 +52,51 @@ const clientDetails: { [client: string]: React.ReactElement } = {
   Nimbus: <NimbusDetails />,
 };
 
+export type Client = {
+  validatorId: ValidatorId;
+  name: string;
+  imgUrl: string;
+};
+
 // define and shuffle the validators
 const ethClients: {
-  [ethVersion: number]: Array<{ name: string; imgUrl: string }>;
+  [ethVersion: number]: Array<Client>;
 } = {
   1: _shuffle([
-    { name: 'OpenEthereum', imgUrl: ParityCircle },
-    { name: 'Geth', imgUrl: GethCircle },
-    { name: 'Besu', imgUrl: BesuCircle },
-    { name: 'Nethermind', imgUrl: NethermindCircle },
+    {
+      validatorId: ValidatorId.PARITY,
+      name: 'OpenEthereum',
+      imgUrl: ParityCircle,
+    },
+    { validatorId: ValidatorId.GETH, name: 'Geth', imgUrl: GethCircle },
+    { validatorId: ValidatorId.BESU, name: 'Besu', imgUrl: BesuCircle },
+    {
+      validatorId: ValidatorId.NETHERMIND,
+      name: 'Nethermind',
+      imgUrl: NethermindCircle,
+    },
   ]),
   2: _shuffle([
-    { name: 'Teku', imgUrl: TekuCircle },
-    { name: 'Lighthouse', imgUrl: LighthouseCircle },
-    { name: 'Prysm', imgUrl: PrysmaticCircle },
-    { name: 'Nimbus', imgUrl: NimbusCircle },
+    { validatorId: ValidatorId.TEKU, name: 'Teku', imgUrl: TekuCircle },
+    {
+      validatorId: ValidatorId.LIGHTHOUSE,
+      name: 'Lighthouse',
+      imgUrl: LighthouseCircle,
+    },
+    {
+      validatorId: ValidatorId.PRYSM,
+      name: 'Prysm',
+      imgUrl: PrysmaticCircle,
+    },
+    { validatorId: ValidatorId.PARITY, name: 'Nimbus', imgUrl: NimbusCircle },
   ]),
 };
 
 const _SelectValidatorPage = ({
   workflow,
   dispatchWorkflowUpdate,
+  chosenValidators,
+  dispatchValidatorUpdate,
 }: Props): JSX.Element => {
   // set the default the eth version to 1 on initial render
   const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
@@ -74,25 +106,18 @@ const _SelectValidatorPage = ({
     ethVersionStep,
   ]);
 
-  // save local state for the selected eth1 and eth2 validators
-  const [eth1Validator, setEth1Validator] = useState<string>(
-    ethClients[1][0].name
-  );
-  const [eth2Validator, setEth2Validator] = useState<string>(
-    ethClients[2][0].name
-  );
-
   // memoize the chosen validator by step
-  const selectedValidator = React.useMemo(
-    () => (ethVersionStep === 1 ? eth1Validator : eth2Validator),
-    [ethVersionStep, eth1Validator, eth2Validator]
+  const selectedValidator: ValidatorId = React.useMemo(
+    () =>
+      ethVersionStep === 1
+        ? chosenValidators.eth1Validator
+        : chosenValidators.eth2Validator,
+    [ethVersionStep, chosenValidators]
   );
 
-  // memoize the eth versions validator update method
-  const setValidatorFxn = React.useMemo(
-    () => (ethVersionStep === 1 ? setEth1Validator : setEth2Validator),
-    [ethVersionStep]
-  );
+  const setValidatorFxn = (validatorId: ValidatorId) => {
+    dispatchValidatorUpdate(validatorId, ethVersionStep);
+  };
 
   React.useEffect(() => {
     const header = document.getElementsByTagName('header')[0];
@@ -117,7 +142,7 @@ const _SelectValidatorPage = ({
         title={`Choose your Eth ${ethVersionStep} validator and set up a node`}
         clients={validatorOptions}
         currentValidator={selectedValidator}
-        setCurrentValidator={name => setValidatorFxn(name)}
+        setCurrentValidator={setValidatorFxn}
         clientDetails={clientDetails}
       />
       <div className="flex center p30">
@@ -132,11 +157,15 @@ const _SelectValidatorPage = ({
   );
 };
 
-const mapStateToProps = ({ workflow }: StoreState): StateProps => ({
+const mapStateToProps = ({ workflow, validator }: StoreState): StateProps => ({
   workflow,
+  chosenValidators: validator,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchValidatorUpdate: (validatorId: ValidatorId, ethVersion: 1 | 2) => {
+    dispatch(updateValidator(validatorId, ethVersion));
+  },
   dispatchWorkflowUpdate: (step: WorkflowStep) => {
     dispatch(updateWorkflow(step));
   },

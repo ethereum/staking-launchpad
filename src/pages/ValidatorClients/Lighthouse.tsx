@@ -27,7 +27,7 @@ const CodeSnippet = styled.div`
   }
 `;
 
-export const LighthouseDetails = () => (
+export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
     <Text className="mt10">
       <Link external to="https://github.com/sigp/lighthouse" primary inline>
@@ -64,60 +64,67 @@ export const LighthouseDetails = () => (
         https://lighthouse-book.sigmaprime.io/installation.html
       </Link>
     </section>
-    <section>
-      <SectionTitle level={2} className="mb5">
-        Key Management
-      </SectionTitle>
+    {
+      <>
+        {!shortened && (
+          <section>
+            <SectionTitle level={2} className="mb5">
+              Key Management
+            </SectionTitle>
 
-      <Text className="mt10">
-        Lighthouse has dedicated tooling to make the transfer from the Launchpad
-        as easy as possible.
-      </Text>
+            <Text className="mt10">
+              Lighthouse has dedicated tooling to make the transfer from the
+              Launchpad as easy as possible.
+            </Text>
 
-      <Text className="mt10">
-        Specifically, when starting your lighthouse validator client, you can
-        point it at the directory with your keystores and it will import your
-        keystores and interactively ask for your password(s). If you do not
-        supply a password, lighthouse will ask for it again every time it starts
-        up.
-      </Text>
-      <CodeSnippet>
-        lighthouse account validator import --directory
-        eth2.0-deposit-cli/validator_keys
-      </CodeSnippet>
-      <Text className="mt10">
-        Once the process is complete, you should see the following:
-      </Text>
-      <CodeSnippet>
-        <code>Successfully moved keystore.</code>
-        <code>Successfully updated validator_definitions.yml.</code>
-        <code> </code>
-        <code>Successfully imported 1 validators.</code>
-      </CodeSnippet>
+            <Text className="mt10">
+              Specifically, when starting your lighthouse validator client, you
+              can point it at the directory with your keystores and it will
+              import your keystores and interactively ask for your password(s).
+              If you do not supply a password, lighthouse will ask for it again
+              every time it starts up.
+            </Text>
+            <CodeSnippet>
+              lighthouse account validator import --directory
+              eth2.0-deposit-cli/validator_keys
+            </CodeSnippet>
+            <Text className="mt10">
+              Once the process is complete, you should see the following:
+            </Text>
+            <CodeSnippet>
+              <code>Successfully moved keystore.</code>
+              <code>Successfully updated validator_definitions.yml.</code>
+              <code> </code>
+              <code>Successfully imported 1 validators.</code>
+            </CodeSnippet>
 
-      <SectionTitle level={3} className="mb5">
-        Running the validator client
-      </SectionTitle>
-      <Text className="mt10">
-        Now that the keys are imported, all that is left to do (assuming your
-        beacon node is already running) is to run the validator client with:
-      </Text>
-      <CodeSnippet>
-        <code>lighthouse vc</code>
-      </CodeSnippet>
+            <SectionTitle level={3} className="mb5">
+              Running the validator client
+            </SectionTitle>
+            <Text className="mt10">
+              Now that the keys are imported, all that is left to do (assuming
+              your beacon node is already running) is to run the validator
+              client with:
+            </Text>
+            <CodeSnippet>
+              <code>lighthouse vc</code>
+            </CodeSnippet>
 
-      <SectionTitle level={2} className="mb5">
-        Troubleshooting
-      </SectionTitle>
-      <Link
-        primary
-        external
-        to="https://lighthouse-book.sigmaprime.io/validator-import-launchpad.html"
-        withArrow
-      >
-        Documentation on importing from the Launchpad
-      </Link>
-    </section>
+            <SectionTitle level={2} className="mb5">
+              Troubleshooting
+            </SectionTitle>
+            <Link
+              primary
+              external
+              to="https://lighthouse-book.sigmaprime.io/validator-import-launchpad.html"
+              withArrow
+            >
+              Documentation on importing from the Launchpad
+            </Link>
+          </section>
+        )}
+      </>
+    }
   </>
 );
 

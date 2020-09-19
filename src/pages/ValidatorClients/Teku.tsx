@@ -11,7 +11,7 @@ import { Link } from '../../components/Link';
 import { Code } from '../../components/Code';
 import { Heading } from '../../components/Heading';
 
-export const TekuDetails = () => (
+export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
     <Text className="mt10">
       <Link external to="https://pegasys.tech/teku/" primary inline>
@@ -48,76 +48,84 @@ export const TekuDetails = () => (
         https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/
       </Link>
     </section>
-    <section>
-      <SectionTitle level={2} className="mb5">
-        Key Management
-      </SectionTitle>
-      <Text>
-        Teku needs to be pointed at files containing keystores & their
-        associated passwords at startup. There are 3 methods for doing so:
-      </Text>
-      <Heading level={3} className="mt10 mb5">
-        Command Line:
-      </Heading>
-      <Text>
-        When launching Teku, keystores and passwords can be provided as
-        comma-separated lists of paths via the{' '}
-        <Code className="px5 ml5">--validators-key-files</Code> and
-        <Code className="px5 ml5">validators-key-password-files options.</Code>
-      </Text>
-      <Heading level={3} className="mt10 mb5">
-        Environment Variables:
-      </Heading>
-      <Text>
-        Teku will also load validators from keystores (and passwords) from the
-        paths found in the{' '}
-        <Code className="px5 ml5">TEKU_VALIDATORS_KEY_FILES</Code> and
-        <Code className="px5 ml5">TEKU_VALIDATORS_KEY_PASSWORD_FILES</Code>{' '}
-        environment variables.
-      </Text>
-      <Heading level={3} className="mt10 mb5">
-        Configuration File:
-      </Heading>
-      <Text>
-        Teku can also be configured via a YAML file which is passed in via the{' '}
-        <Code className="px5 ml5">--config-file</Code> CLI argument or
-        <Code className="px5 ml5">TEKU_CONFIG_FILE</Code> environment variable.
-        The syntax for YAML file is
-        <Code className="px5 ml5">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          validators-key-files: ['keystyore_0.json', ...]
-        </Code>{' '}
-        and
-        <Code className="px5 ml5">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          validators-key-password-files: ['path/to/password_file']
-        </Code>
-        .
-      </Text>
-    </section>
-    <section>
-      <SectionTitle level={2} className="mb5">
-        Troubleshooting
-      </SectionTitle>
-      <ul>
-        <li>
+    {!shortened && (
+      <>
+        <section>
+          <SectionTitle level={2} className="mb5">
+            Key Management
+          </SectionTitle>
           <Text>
-            <Link
-              external
-              inline
-              to="https://docs.teku.pegasys.tech/en/latest/Reference/CLI/CLI-Syntax/#validators-key-password-files"
-            >
-              Teku documentation on options and subcommands
-            </Link>
+            Teku needs to be pointed at files containing keystores & their
+            associated passwords at startup. There are 3 methods for doing so:
           </Text>
-        </li>
-        <li>
+          <Heading level={3} className="mt10 mb5">
+            Command Line:
+          </Heading>
           <Text>
-            Check that the password files don’t have trailing new-lines
+            When launching Teku, keystores and passwords can be provided as
+            comma-separated lists of paths via the{' '}
+            <Code className="px5 ml5">--validators-key-files</Code> and
+            <Code className="px5 ml5">
+              validators-key-password-files options.
+            </Code>
           </Text>
-        </li>
-      </ul>
-    </section>
+          <Heading level={3} className="mt10 mb5">
+            Environment Variables:
+          </Heading>
+          <Text>
+            Teku will also load validators from keystores (and passwords) from
+            the paths found in the{' '}
+            <Code className="px5 ml5">TEKU_VALIDATORS_KEY_FILES</Code> and
+            <Code className="px5 ml5">
+              TEKU_VALIDATORS_KEY_PASSWORD_FILES
+            </Code>{' '}
+            environment variables.
+          </Text>
+          <Heading level={3} className="mt10 mb5">
+            Configuration File:
+          </Heading>
+          <Text>
+            Teku can also be configured via a YAML file which is passed in via
+            the <Code className="px5 ml5">--config-file</Code> CLI argument or
+            <Code className="px5 ml5">TEKU_CONFIG_FILE</Code> environment
+            variable. The syntax for YAML file is
+            <Code className="px5 ml5">
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              validators-key-files: ['keystyore_0.json', ...]
+            </Code>{' '}
+            and
+            <Code className="px5 ml5">
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              validators-key-password-files: ['path/to/password_file']
+            </Code>
+            .
+          </Text>
+        </section>
+        <section>
+          <SectionTitle level={2} className="mb5">
+            Troubleshooting
+          </SectionTitle>
+          <ul>
+            <li>
+              <Text>
+                <Link
+                  external
+                  inline
+                  to="https://docs.teku.pegasys.tech/en/latest/Reference/CLI/CLI-Syntax/#validators-key-password-files"
+                >
+                  Teku documentation on options and subcommands
+                </Link>
+              </Text>
+            </li>
+            <li>
+              <Text>
+                Check that the password files don’t have trailing new-lines
+              </Text>
+            </li>
+          </ul>
+        </section>
+      </>
+    )}
   </>
 );
 

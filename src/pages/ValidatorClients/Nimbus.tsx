@@ -10,7 +10,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Code } from '../../components/Code';
 
-export const NimbusDetails = () => (
+export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
     <Text className="mt10">
       <Link external to="https://our.status.im/tag/nimbus/" primary inline>
@@ -51,35 +51,40 @@ export const NimbusDetails = () => (
         https://status-im.github.io/nim-beacon-chain/install.html
       </Link>
     </section>
-    <section>
-      <SectionTitle level={2} className="mb5">
-        Key Management
-      </SectionTitle>
-      <Text>
-        Nimbus looks for keystores in the{' '}
-        <Code>./build/data/[testnet_name]/validators</Code> folder with the
-        assisted password in <Code>/build/data/[testnet_name]/secrets</Code>. If
-        you do not supply a password, Nimbus will interactively ask for it on
-        startup.
-      </Text>
-    </section>
-    <section>
-      <SectionTitle level={2} className="mb5">
-        Troubleshooting
-      </SectionTitle>
-      <Text>
-        If you do not have a <Code>./build/data/[testnet_name]/</Code> folder it
-        is likely you have not built and run Nimbus correctly (run the make
-        commands again).
-      </Text>
-      <Link
-        external
-        primary
-        to="https://status-im.github.io/nim-beacon-chain/validator.html#key-management"
-      >
-        Nimbus documentation on key management
-      </Link>
-    </section>
+
+    {!shortened && (
+      <>
+        <section>
+          <SectionTitle level={2} className="mb5">
+            Key Management
+          </SectionTitle>
+          <Text>
+            Nimbus looks for keystores in the{' '}
+            <Code>./build/data/[testnet_name]/validators</Code> folder with the
+            assisted password in <Code>/build/data/[testnet_name]/secrets</Code>
+            . If you do not supply a password, Nimbus will interactively ask for
+            it on startup.
+          </Text>
+        </section>
+        <section>
+          <SectionTitle level={2} className="mb5">
+            Troubleshooting
+          </SectionTitle>
+          <Text>
+            If you do not have a <Code>./build/data/[testnet_name]/</Code>{' '}
+            folder it is likely you have not built and run Nimbus correctly (run
+            the make commands again).
+          </Text>
+          <Link
+            external
+            primary
+            to="https://status-im.github.io/nim-beacon-chain/validator.html#key-management"
+          >
+            Nimbus documentation on key management
+          </Link>
+        </section>
+      </>
+    )}
   </>
 );
 

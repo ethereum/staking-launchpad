@@ -46,10 +46,10 @@ interface DispatchProps {
 type Props = StateProps & DispatchProps & OwnProps;
 
 const clientDetails = {
-  [ValidatorId.TEKU]: <TekuDetails />,
-  [ValidatorId.LIGHTHOUSE]: <LighthouseDetails />,
-  [ValidatorId.PRYSM]: <PrysmDetails />,
-  [ValidatorId.NIMBUS]: <NimbusDetails />,
+  [ValidatorId.TEKU]: <TekuDetails shortened />,
+  [ValidatorId.LIGHTHOUSE]: <LighthouseDetails shortened />,
+  [ValidatorId.PRYSM]: <PrysmDetails shortened />,
+  [ValidatorId.NIMBUS]: <NimbusDetails shortened />,
 };
 
 export type Client = {

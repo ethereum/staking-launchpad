@@ -1,13 +1,13 @@
 import React from 'react';
-import { PageTemplate } from '../../components/PageTemplate';
-import prysmBg from '../../static/prysmatic-bg.png';
+import { PageTemplate } from '../../../components/PageTemplate';
+import prysmBg from '../../../static/prysmatic-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
-} from './ValidatorClientComponents';
-import { Text } from '../../components/Text';
-import { Link } from '../../components/Link';
+} from '../ValidatorClientComponents';
+import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
 
 // eslint-disable-next-line no-unused-vars
 export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (

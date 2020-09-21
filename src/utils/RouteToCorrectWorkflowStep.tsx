@@ -7,8 +7,8 @@ export const routeToCorrectWorkflowStep = (step: WorkflowStep): JSX.Element => {
   if (step === WorkflowStep.OVERVIEW) {
     return <Redirect push to={routesEnum.acknowledgementPage} />;
   }
-  if (step === WorkflowStep.SELECT_VALIDATOR) {
-    return <Redirect push to={routesEnum.selectValidator} />;
+  if (step === WorkflowStep.SELECT_CLIENT) {
+    return <Redirect push to={routesEnum.selectClient} />;
   }
   if (step === WorkflowStep.GENERATE_KEY_PAIRS) {
     return <Redirect push to={routesEnum.generateKeysPage} />;

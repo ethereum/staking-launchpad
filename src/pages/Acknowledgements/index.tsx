@@ -65,7 +65,7 @@ const _AcknowledgementPage = ({
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.OVERVIEW) {
-      dispatchWorkflowUpdate(WorkflowStep.SELECT_VALIDATOR);
+      dispatchWorkflowUpdate(WorkflowStep.SELECT_CLIENT);
     }
   };
 

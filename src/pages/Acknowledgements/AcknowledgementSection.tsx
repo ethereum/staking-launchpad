@@ -63,7 +63,7 @@ export const AcknowledgementSection = ({
             label="Back"
           />
           <Link
-            to={routesEnum.selectValidator}
+            to={routesEnum.selectClient}
             onClick={() => {
               handleContinueClick(AcknowledgementIdsEnum.confirmation);
               handleSubmit();

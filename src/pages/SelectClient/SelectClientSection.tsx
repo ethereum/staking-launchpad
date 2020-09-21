@@ -5,16 +5,16 @@ import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
 import { Client } from './index';
-import { ValidatorId } from '../../store/actions/validatorActions';
+import { ClientId } from '../../store/actions/clientActions';
 
-const ValidatorOptionContainer = styled.div`
+const ClientOptionContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 `;
 
-const ValidatorDescriptionContainer = styled.div`
+const ClientDescriptionContainer = styled.div`
   width: 100%;
   border-radius: 4px;
   background: #fcfcfc;
@@ -26,16 +26,16 @@ const ValidatorDescriptionContainer = styled.div`
 type Props = {
   title?: string;
   clients: Array<Client>;
-  currentValidator: ValidatorId;
-  setCurrentValidator: (validator: ValidatorId) => void;
+  currentClient: ClientId;
+  setCurrentClient: (client: ClientId) => void;
   clientDetails: any;
 };
 
-const SelectValidatorSection = ({
+const SelectClientSection = ({
   title,
   clients,
-  currentValidator,
-  setCurrentValidator,
+  currentClient,
+  setCurrentClient,
   clientDetails,
 }: Props): JSX.Element => (
   <Paper>
@@ -43,10 +43,10 @@ const SelectValidatorSection = ({
       {title}
     </Heading>
     <Box className="flex flex-column space-between mt10">
-      <ValidatorOptionContainer>
-        {clients.map(({ validatorId, name, imgUrl }) => {
-          const inputId = `${validatorId}-validator`;
-          const onClick = () => setCurrentValidator(validatorId);
+      <ClientOptionContainer>
+        {clients.map(({ clientId, name, imgUrl }) => {
+          const inputId = `${clientId}-client`;
+          const onClick = () => setCurrentClient(clientId);
 
           return (
             <ImageSelectionBox
@@ -54,18 +54,18 @@ const SelectValidatorSection = ({
               fullWidthImg
               key={inputId}
               src={imgUrl}
-              isActive={currentValidator === validatorId}
+              isActive={currentClient === clientId}
               onClick={onClick}
               text={name}
             />
           );
         })}
-      </ValidatorOptionContainer>
-      <ValidatorDescriptionContainer>
-        {clientDetails[currentValidator]}
-      </ValidatorDescriptionContainer>
+      </ClientOptionContainer>
+      <ClientDescriptionContainer>
+        {clientDetails[currentClient]}
+      </ClientDescriptionContainer>
     </Box>
   </Paper>
 );
 
-export default SelectValidatorSection;
+export default SelectClientSection;

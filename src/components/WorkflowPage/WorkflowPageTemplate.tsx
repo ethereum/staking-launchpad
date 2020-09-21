@@ -35,7 +35,7 @@ const Background = styled.div`
 const mapPathnameToWorkflowStep = (pathname: routesEnum) => {
   const workflowRoutesInOrder = [
     routesEnum.acknowledgementPage,
-    routesEnum.selectValidator,
+    routesEnum.selectClient,
     routesEnum.generateKeysPage,
     routesEnum.uploadValidatorPage,
     routesEnum.connectWalletPage,

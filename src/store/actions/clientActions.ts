@@ -1,6 +1,6 @@
 import { ActionTypes } from './index';
 
-export enum ValidatorId {
+export enum ClientId {
   'BESU' = 'BESU',
   'PARITY' = 'PARITY',
   'NETHERMIND' = 'NETHERMIND',
@@ -11,28 +11,28 @@ export enum ValidatorId {
   'TEKU' = 'TEKU',
 }
 
-export interface UpdateValidatorAction {
-  type: ActionTypes.updateValidator;
+export interface UpdateClientAction {
+  type: ActionTypes.updateClient;
   payload: {
-    validatorId: ValidatorId;
+    clientId: ClientId;
     ethVersion: 1 | 2;
   };
 }
 
-export const updateValidator = (
-  validatorId: ValidatorId,
+export const updateClient = (
+  clientId: ClientId,
   ethVersion: 1 | 2
-): UpdateValidatorAction => {
+): UpdateClientAction => {
   return {
-    type: ActionTypes.updateValidator,
+    type: ActionTypes.updateClient,
     payload: {
-      validatorId,
+      clientId,
       ethVersion,
     },
   };
 };
 
-export type DispatchValidatorUpdate = (
-  ValidatorId: ValidatorId,
+export type DispatchClientUpdate = (
+  ValidatorId: ClientId,
   ethVersion: 1 | 2
 ) => void;

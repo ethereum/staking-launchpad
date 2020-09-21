@@ -4,7 +4,7 @@ export * from './GenerateKeys';
 export * from './Landing';
 export * from './NotFound';
 export * from './Acknowledgements';
-export * from './SelectValidator';
+export * from './SelectClient';
 export * from './Summary';
 export * from './UploadValidator';
 export * from './Transactions';

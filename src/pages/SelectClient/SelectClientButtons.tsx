@@ -4,18 +4,18 @@ import { LinkProps } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { ValidatorId } from '../../store/actions/validatorActions';
+import { ClientId } from '../../store/actions/clientActions';
 
 type Props = {
   ethVersionStep: 1 | 2;
-  currentValidator: ValidatorId;
+  currentClient: ClientId;
   handleSubmit: LinkProps['onClick'];
   updateStep: (nextStep: 1 | 2) => void;
 };
 
-const SelectValidatorButtons = ({
+const SelectClientButtons = ({
   ethVersionStep,
-  currentValidator,
+  currentClient,
   handleSubmit,
   updateStep,
 }: Props) => {
@@ -28,7 +28,7 @@ const SelectValidatorButtons = ({
         <Button
           width={300}
           rainbow
-          disabled={!currentValidator}
+          disabled={!currentClient}
           label="Continue"
           onClick={() => updateStep(2)}
         />
@@ -48,7 +48,7 @@ const SelectValidatorButtons = ({
         <Button
           width={300}
           rainbow
-          disabled={!currentValidator}
+          disabled={!currentClient}
           label="Continue"
         />
       </Link>
@@ -56,4 +56,4 @@ const SelectValidatorButtons = ({
   );
 };
 
-export default SelectValidatorButtons;
+export default SelectClientButtons;

@@ -4,7 +4,7 @@ import {
   AcknowledgementPage,
   CongratulationsPage,
   ConnectWalletPage,
-  SelectValidatorPage,
+  SelectClientPage,
   GenerateKeysPage,
   LandingPage,
   NotFoundPage,
@@ -15,10 +15,10 @@ import {
   Phishing,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
-import { Prysm } from './pages/ValidatorClients/Prysm';
-import { Teku } from './pages/ValidatorClients/Teku';
-import { Nimbus } from './pages/ValidatorClients/Nimbus';
-import { Lighthouse } from './pages/ValidatorClients/Lighthouse';
+import { Prysm } from './pages/Clients/Prysm';
+import { Teku } from './pages/Clients/Teku';
+import { Nimbus } from './pages/Clients/Nimbus';
+import { Lighthouse } from './pages/Clients/Lighthouse';
 
 type RouteType = {
   path: string;
@@ -31,7 +31,7 @@ export enum routesEnum {
   connectWalletPage = '/connect-wallet',
   generateKeysPage = '/generate-keys',
   acknowledgementPage = '/overview',
-  selectValidator = '/select-validator',
+  selectClient = '/select-client',
   summaryPage = '/summary',
   uploadValidatorPage = '/upload-validator',
   transactionsPage = '/transactions',
@@ -56,9 +56,9 @@ const routes: RouteType[] = [
     component: ConnectWalletPage,
   },
   {
-    path: routesEnum.selectValidator,
+    path: routesEnum.selectClient,
     exact: true,
-    component: SelectValidatorPage,
+    component: SelectClientPage,
   },
   {
     path: routesEnum.generateKeysPage,

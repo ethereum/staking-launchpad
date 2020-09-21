@@ -5,12 +5,12 @@ import _shuffle from 'lodash/shuffle';
 import { StoreState } from '../../store/reducers';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-import SelectValidatorSection from './SelectValidatorSection';
-import SelectValidatorButtons from './SelectValidatorButtons';
-import { PrysmDetails } from '../ValidatorClients/Prysm';
-import { LighthouseDetails } from '../ValidatorClients/Lighthouse';
-import { TekuDetails } from '../ValidatorClients/Teku';
-import { NimbusDetails } from '../ValidatorClients/Nimbus';
+import SelectClientSection from './SelectClientSection';
+import SelectClientButtons from './SelectClientButtons';
+import { PrysmDetails } from '../Clients/Prysm';
+import { LighthouseDetails } from '../Clients/Lighthouse';
+import { TekuDetails } from '../Clients/Teku';
+import { NimbusDetails } from '../Clients/Nimbus';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';
 import NimbusCircle from '../../static/nimbus-circle.png';
@@ -26,97 +26,97 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import {
-  DispatchValidatorUpdate,
-  updateValidator,
-  ValidatorId,
-} from '../../store/actions/validatorActions';
-import { validatorState } from '../../store/reducers/validatorReducer';
+  DispatchClientUpdate,
+  updateClient,
+  ClientId,
+} from '../../store/actions/clientActions';
+import { clientState } from '../../store/reducers/clientReducer';
 
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
   workflow: WorkflowStep;
-  chosenValidators: validatorState;
+  chosenClients: clientState;
 }
 
 interface DispatchProps {
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
-  dispatchValidatorUpdate: DispatchValidatorUpdate;
+  dispatchClientUpdate: DispatchClientUpdate;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
 const clientDetails = {
-  [ValidatorId.TEKU]: <TekuDetails shortened />,
-  [ValidatorId.LIGHTHOUSE]: <LighthouseDetails shortened />,
-  [ValidatorId.PRYSM]: <PrysmDetails shortened />,
-  [ValidatorId.NIMBUS]: <NimbusDetails shortened />,
+  [ClientId.TEKU]: <TekuDetails shortened />,
+  [ClientId.LIGHTHOUSE]: <LighthouseDetails shortened />,
+  [ClientId.PRYSM]: <PrysmDetails shortened />,
+  [ClientId.NIMBUS]: <NimbusDetails shortened />,
 };
 
 export type Client = {
-  validatorId: ValidatorId;
+  clientId: ClientId;
   name: string;
   imgUrl: string;
 };
 
-// define and shuffle the validators
+// define and shuffle the clients
 const ethClients: {
   [ethVersion: number]: Array<Client>;
 } = {
   1: _shuffle([
     {
-      validatorId: ValidatorId.PARITY,
+      clientId: ClientId.PARITY,
       name: 'OpenEthereum',
       imgUrl: ParityCircle,
     },
-    { validatorId: ValidatorId.GETH, name: 'Geth', imgUrl: GethCircle },
-    { validatorId: ValidatorId.BESU, name: 'Besu', imgUrl: BesuCircle },
+    { clientId: ClientId.GETH, name: 'Geth', imgUrl: GethCircle },
+    { clientId: ClientId.BESU, name: 'Besu', imgUrl: BesuCircle },
     {
-      validatorId: ValidatorId.NETHERMIND,
+      clientId: ClientId.NETHERMIND,
       name: 'Nethermind',
       imgUrl: NethermindCircle,
     },
   ]),
   2: _shuffle([
-    { validatorId: ValidatorId.TEKU, name: 'Teku', imgUrl: TekuCircle },
+    { clientId: ClientId.TEKU, name: 'Teku', imgUrl: TekuCircle },
     {
-      validatorId: ValidatorId.LIGHTHOUSE,
+      clientId: ClientId.LIGHTHOUSE,
       name: 'Lighthouse',
       imgUrl: LighthouseCircle,
     },
     {
-      validatorId: ValidatorId.PRYSM,
+      clientId: ClientId.PRYSM,
       name: 'Prysm',
       imgUrl: PrysmaticCircle,
     },
-    { validatorId: ValidatorId.NIMBUS, name: 'Nimbus', imgUrl: NimbusCircle },
+    { clientId: ClientId.NIMBUS, name: 'Nimbus', imgUrl: NimbusCircle },
   ]),
 };
 
-const _SelectValidatorPage = ({
+const _SelectClientPage = ({
   workflow,
   dispatchWorkflowUpdate,
-  chosenValidators,
-  dispatchValidatorUpdate,
+  chosenClients,
+  dispatchClientUpdate,
 }: Props): JSX.Element => {
   // set the default the eth version to 1 on initial render
   const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
 
   // filter the options based on the eth version the user is on
-  const validatorOptions = React.useMemo(() => ethClients[ethVersionStep], [
+  const clientOptions = React.useMemo(() => ethClients[ethVersionStep], [
     ethVersionStep,
   ]);
 
-  // memoize the chosen validator by step
-  const selectedValidator: ValidatorId = React.useMemo(
+  // memoize the chosen client by step
+  const selectedClient: ClientId = React.useMemo(
     () =>
       ethVersionStep === 1
-        ? chosenValidators.eth1Validator
-        : chosenValidators.eth2Validator,
-    [ethVersionStep, chosenValidators]
+        ? chosenClients.eth1Client
+        : chosenClients.eth2Client,
+    [ethVersionStep, chosenClients]
   );
 
-  const setValidatorFxn = (validatorId: ValidatorId) => {
-    dispatchValidatorUpdate(validatorId, ethVersionStep);
+  const setClientFxn = (clientId: ClientId) => {
+    dispatchClientUpdate(clientId, ethVersionStep);
   };
 
   React.useEffect(() => {
@@ -128,50 +128,50 @@ const _SelectValidatorPage = ({
   }, [ethVersionStep]);
 
   const handleSubmit = () => {
-    if (workflow === WorkflowStep.SELECT_VALIDATOR) {
+    if (workflow === WorkflowStep.SELECT_CLIENT) {
       dispatchWorkflowUpdate(WorkflowStep.TRANSACTION_SIGNING);
     }
   };
 
-  if (workflow < WorkflowStep.SELECT_VALIDATOR)
+  if (workflow < WorkflowStep.SELECT_CLIENT)
     return routeToCorrectWorkflowStep(workflow);
 
   return (
-    <WorkflowPageTemplate title="Validator">
-      <SelectValidatorSection
-        title={`Choose your Eth ${ethVersionStep} validator and set up a node`}
-        clients={validatorOptions}
-        currentValidator={selectedValidator}
-        setCurrentValidator={setValidatorFxn}
+    <WorkflowPageTemplate title="Client Selection">
+      <SelectClientSection
+        title={`Choose your Eth ${ethVersionStep} client and set up a node`}
+        clients={clientOptions}
+        currentClient={selectedClient}
+        setCurrentClient={setClientFxn}
         clientDetails={clientDetails}
       />
       <div className="flex center p30">
-        <SelectValidatorButtons
+        <SelectClientButtons
           updateStep={setEthVersionStep}
           ethVersionStep={ethVersionStep}
           handleSubmit={handleSubmit}
-          currentValidator={selectedValidator}
+          currentClient={selectedClient}
         />
       </div>
     </WorkflowPageTemplate>
   );
 };
 
-const mapStateToProps = ({ workflow, validator }: StoreState): StateProps => ({
+const mapStateToProps = ({ workflow, client }: StoreState): StateProps => ({
   workflow,
-  chosenValidators: validator,
+  chosenClients: client,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchValidatorUpdate: (validatorId: ValidatorId, ethVersion: 1 | 2) => {
-    dispatch(updateValidator(validatorId, ethVersion));
+  dispatchClientUpdate: (clientId: ClientId, ethVersion: 1 | 2) => {
+    dispatch(updateClient(clientId, ethVersion));
   },
   dispatchWorkflowUpdate: (step: WorkflowStep) => {
     dispatch(updateWorkflow(step));
   },
 });
 
-export const SelectValidatorPage = connect<
+export const SelectClientPage = connect<
   StateProps,
   DispatchProps,
   OwnProps,
@@ -179,4 +179,4 @@ export const SelectValidatorPage = connect<
 >(
   mapStateToProps,
   mapDispatchToProps
-)(_SelectValidatorPage);
+)(_SelectClientPage);

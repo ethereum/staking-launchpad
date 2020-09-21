@@ -1,14 +1,14 @@
 import React from 'react';
-import { PageTemplate } from '../../components/PageTemplate';
-import nimbusBg from '../../static/nimbus-bg.png';
+import { PageTemplate } from '../../../components/PageTemplate';
+import nimbusBg from '../../../static/nimbus-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
-} from './ValidatorClientComponents';
-import { Text } from '../../components/Text';
-import { Link } from '../../components/Link';
-import { Code } from '../../components/Code';
+} from '../ValidatorClientComponents';
+import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
+import { Code } from '../../../components/Code';
 
 export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
   <>

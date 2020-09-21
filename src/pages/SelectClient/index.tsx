@@ -7,15 +7,19 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import SelectClientSection from './SelectClientSection';
 import SelectClientButtons from './SelectClientButtons';
-import { PrysmDetails } from '../Clients/Prysm';
-import { LighthouseDetails } from '../Clients/Lighthouse';
-import { TekuDetails } from '../Clients/Teku';
-import { NimbusDetails } from '../Clients/Nimbus';
+import { PrysmDetails } from '../Clients/Eth2/Prysm';
+import { LighthouseDetails } from '../Clients/Eth2/Lighthouse';
+import { TekuDetails } from '../Clients/Eth2/Teku';
+import { NimbusDetails } from '../Clients/Eth2/Nimbus';
+import { GethDetails } from '../Clients/Eth1/Geth';
+import { OpenEthereumDetails } from '../Clients/Eth1/OpenEthereum';
+import { BesuDetails } from '../Clients/Eth1/Besu';
+import { NethermindDetails } from '../Clients/Eth1/Nethermind';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';
 import NimbusCircle from '../../static/nimbus-circle.png';
 import TekuCircle from '../../static/pegasys-teku-circle.png';
-import ParityCircle from '../../static/parity-circle.png';
+import OpenEthereumCircle from '../../static/parity-circle.png';
 import GethCircle from '../../static/gethereum-mascot-circle.png';
 import BesuCircle from '../../static/hyperledger-besu-circle.png';
 import NethermindCircle from '../../static/nethermind-circle.png';
@@ -50,6 +54,10 @@ const clientDetails = {
   [ClientId.LIGHTHOUSE]: <LighthouseDetails shortened />,
   [ClientId.PRYSM]: <PrysmDetails shortened />,
   [ClientId.NIMBUS]: <NimbusDetails shortened />,
+  [ClientId.GETH]: <GethDetails />,
+  [ClientId.OPEN_ETHEREUM]: <OpenEthereumDetails />,
+  [ClientId.BESU]: <BesuDetails />,
+  [ClientId.NETHERMIND]: <NethermindDetails />,
 };
 
 export type Client = {
@@ -64,9 +72,9 @@ const ethClients: {
 } = {
   1: _shuffle([
     {
-      clientId: ClientId.PARITY,
+      clientId: ClientId.OPEN_ETHEREUM,
       name: 'OpenEthereum',
-      imgUrl: ParityCircle,
+      imgUrl: OpenEthereumCircle,
     },
     { clientId: ClientId.GETH, name: 'Geth', imgUrl: GethCircle },
     { clientId: ClientId.BESU, name: 'Besu', imgUrl: BesuCircle },

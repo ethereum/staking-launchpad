@@ -1,15 +1,15 @@
 import React from 'react';
-import { PageTemplate } from '../../components/PageTemplate';
-import tekuBg from '../../static/teku-bg.png';
+import { PageTemplate } from '../../../components/PageTemplate';
+import tekuBg from '../../../static/teku-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
-} from './ValidatorClientComponents';
-import { Text } from '../../components/Text';
-import { Link } from '../../components/Link';
-import { Code } from '../../components/Code';
-import { Heading } from '../../components/Heading';
+} from '../ValidatorClientComponents';
+import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
+import { Code } from '../../../components/Code';
+import { Heading } from '../../../components/Heading';
 
 export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -25,7 +25,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
       </Link>{' '}
       dedicated to building enterprise-ready clients and tools for interacting
       with the core Ethereum platform. Teku is Apache 2 licensed and written in
-      Java, a language notable for its materity & ubiquity.
+      Java, a language notable for its maturity & ubiquity.
     </Text>
     <Link
       external
@@ -34,7 +34,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
       withArrow
       className="mt10"
     >
-      Read more about Pegasys Teku
+      Read more about PegaSys Teku
     </Link>{' '}
     <section>
       <SectionTitle level={2} className="mb5">
@@ -91,7 +91,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             variable. The syntax for YAML file is
             <Code className="px5 ml5">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              validators-key-files: ['keystyore_0.json', ...]
+              validators-key-files: ['keystore_0.json', ...]
             </Code>{' '}
             and
             <Code className="px5 ml5">

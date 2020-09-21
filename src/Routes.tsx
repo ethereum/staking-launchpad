@@ -15,10 +15,10 @@ import {
   Phishing,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
-import { Prysm } from './pages/Clients/Prysm';
-import { Teku } from './pages/Clients/Teku';
-import { Nimbus } from './pages/Clients/Nimbus';
-import { Lighthouse } from './pages/Clients/Lighthouse';
+import { Prysm } from './pages/Clients/Eth2/Prysm';
+import { Teku } from './pages/Clients/Eth2/Teku';
+import { Nimbus } from './pages/Clients/Eth2/Nimbus';
+import { Lighthouse } from './pages/Clients/Eth2/Lighthouse';
 
 type RouteType = {
   path: string;

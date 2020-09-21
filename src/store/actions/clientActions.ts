@@ -2,7 +2,7 @@ import { ActionTypes } from './index';
 
 export enum ClientId {
   'BESU' = 'BESU',
-  'PARITY' = 'PARITY',
+  'OPEN_ETHEREUM' = 'OPEN_ETHEREUM',
   'NETHERMIND' = 'NETHERMIND',
   'GETH' = 'GETH',
   'PRYSM' = 'PRYSM',

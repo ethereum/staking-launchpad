@@ -3,61 +3,32 @@ import styled from 'styled-components';
 import { Box } from 'grommet';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
-
-const radioProps = {
-  type: 'radio',
-  name: 'eth-validator',
-};
+import { ImageSelectionBox } from '../../components/ImageSelectionBox';
+import { Client } from './index';
+import { ValidatorId } from '../../store/actions/validatorActions';
 
 const ValidatorOptionContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-
-  & label {
-    display: inline-block;
-    padding: 1rem;
-    margin: 30px 0;
-    border-radius: 4px;
-    background: #fcfcfc;
-    border: 1px solid #ececec;
-    flex: 0.8;
-    .active {
-      background: #e7f3f1;
-      border-color: #c7d3d1;
-    }
-  }
-
-  & img {
-    background: black;
-    max-width: 100%;
-    border-radius: 4;
-    border: 1px solid #c7d3d1;
-  }
-
-  & input {
-    display: none;
-  }
 `;
 
 const ValidatorDescriptionContainer = styled.div`
   width: 100%;
-  border-radius: 4;
+  border-radius: 4px;
   background: #fcfcfc;
   border: 1px solid #ececec;
   margin-top: 30px;
   padding: 1rem 2rem;
 `;
 
-type Client = { name: string; imgUrl: string };
-
 type Props = {
-  title: string;
+  title?: string;
   clients: Array<Client>;
-  currentValidator: string;
-  setCurrentValidator: (validator: string) => void;
-  clientDetails: { [client: string]: React.ReactElement };
+  currentValidator: ValidatorId;
+  setCurrentValidator: (validator: ValidatorId) => void;
+  clientDetails: any;
 };
 
 const SelectValidatorSection = ({
@@ -68,21 +39,25 @@ const SelectValidatorSection = ({
   clientDetails,
 }: Props): JSX.Element => (
   <Paper>
-    <Heading level={3} size="small" color="blueDark">
+    <Heading level={3} size="small" color="blueDark" className="mb20">
       {title}
     </Heading>
     <Box className="flex flex-column space-between mt10">
       <ValidatorOptionContainer>
-        {clients.map(({ name, imgUrl }) => {
-          const inputId = `${name}-validator`;
-          const onChange = () => setCurrentValidator(name);
-          const labelClassName =
-            name === currentValidator ? 'active' : undefined;
+        {clients.map(({ validatorId, name, imgUrl }) => {
+          const inputId = `${validatorId}-validator`;
+          const onClick = () => setCurrentValidator(validatorId);
+
           return (
-            <label htmlFor={`${name}-validator`} className={labelClassName}>
-              <img src={imgUrl} alt={`${name} validator option`} />
-              <input id={inputId} onChange={onChange} {...radioProps} />
-            </label>
+            <ImageSelectionBox
+              style={{ margin: '0 5px' }}
+              fullWidthImg
+              key={inputId}
+              src={imgUrl}
+              isActive={currentValidator === validatorId}
+              onClick={onClick}
+              text={name}
+            />
           );
         })}
       </ValidatorOptionContainer>

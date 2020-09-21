@@ -1,78 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { EthRoundLogo } from './EthRoundLogo';
+import { FormNext } from 'grommet-icons';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 
-export const logoPositions = {
-  small: [0, 17.5, 35, 52, 69, 90],
-  medium: [-5, 9.5, 25.5, 44, 62.5, 78.6, 95.5],
-  large: [-2, 17, 37.5, 58.5, 77, 94.5],
-};
-
 const Container = styled.div`
   background-color: white;
-  height: 200px;
-  display: flex;
 `;
-const SubContainer = styled.div`
-  box-sizing: border-box;
-  max-width: ${p => p.theme.screenSizes.largest};
-  width: 100%;
-  margin: 80px auto 0;
-  padding: 0 120px;
 
-  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    max-width: 1024px;
-    padding: 0px 60px;
-  }
-  @media only screen and (max-width: 1024px) {
-    max-width: 768px;
-  }
-`;
-const BarContainer = styled.div`
-  position: relative;
+const StepContainer = styled.div`
+  padding: 20px;
+  width: fit-content;
   margin: auto;
-  height: 50px;
-
-  width: 85%;
-  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-  }
-  @media only screen and (max-width: 1024px) {
-    width: 100%;
-  }
-`;
-const CompletedColor = styled.div`
-  width: ${(p: { position: number }) => logoPositions.large[p.position] + 1}%;
-  background: ${(p: { position: number }) => rainbowColors[p.position]};
-  border-radius: 8px;
-  height: 10px;
-  position: absolute;
-  z-index: 1;
-
-  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
-    width: ${(p: { position: number }) =>
-      logoPositions.medium[p.position] + 1}%;
-  }
-  @media only screen and (max-width: 1024px) {
-    width: ${(p: { position: number }) => logoPositions.small[p.position] + 1}%;
-  }
-`;
-const GreyedColor = styled.div`
-  width: 100%;
-  background: ${p => p.theme.gray.medium};
-  border-radius: 8px;
-  height: 4px;
-  position: absolute;
-  top: 3px;
-  @media only screen and (max-width: 1024px) {
-    width: 98%;
-  }
-`;
-
-const Flexbox = styled.div`
-  display: flex;
-  justify-content: space-evenly;
 `;
 
 const Step = styled.div`
@@ -84,10 +23,14 @@ const Step = styled.div`
     index: number;
     theme: any;
   }) => {
-    if (p.disabled) return p.theme.gray.medium;
-    return rainbowColors[p.index];
+    if (p.active) return rainbowColors[p.index];
+    return p.theme.gray.medium;
   }};
   font-weight: ${p => (p.active ? 600 : undefined)};
+`;
+
+const Arrow = styled(FormNext)`
+  stroke: ${p => p.color || p.theme.gray.medium};
 `;
 
 interface Props {
@@ -112,27 +55,26 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
     { step: WorkflowStep.SUMMARY, text: 'Summary' },
     { step: WorkflowStep.TRANSACTION_SIGNING, text: 'Transactions' },
   ];
+
   return (
     <Container>
-      <SubContainer>
-        <BarContainer>
-          <GreyedColor />
-          <CompletedColor position={workflow} />
-          <EthRoundLogo position={workflow} />
-        </BarContainer>
-        <Flexbox>
-          {steps.map(({ step, text }, i) => (
+      <StepContainer>
+        {steps.map(({ step, text }, i) => (
+          <div className="flex-inline" key={text}>
             <Step
-              key={text}
               index={i}
               disabled={workflow < step}
               active={workflow === step}
             >
               {text}
             </Step>
-          ))}
-        </Flexbox>
-      </SubContainer>
+            {i !== steps.length - 1 && (
+              // @ts-ignore
+              <Arrow color={workflow === step ? rainbowColors[i] : undefined} />
+            )}
+          </div>
+        ))}
+      </StepContainer>
     </Container>
   );
 };

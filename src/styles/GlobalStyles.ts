@@ -23,6 +23,7 @@ const shorthandSpacing = range(0, 150, 5).map(n => {
 const shorthandClasses = `
   .relative { position: relative  }
   .flex { display: flex  }
+  .flex-inline { display: inline-flex }
   .flex-row { flex-direction: row  }
   .flex-wrap { flex-wrap: wrap  }
   .flex-column { flex-direction: column  }

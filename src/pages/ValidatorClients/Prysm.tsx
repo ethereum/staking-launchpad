@@ -9,7 +9,8 @@ import {
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 
-export const PrysmDetails = () => (
+// eslint-disable-next-line no-unused-vars
+export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
     <Text className="mt10">
       <Link external to="https://github.com/prysmaticlabs/prysm" primary inline>

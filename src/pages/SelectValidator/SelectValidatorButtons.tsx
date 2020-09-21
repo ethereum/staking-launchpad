@@ -4,10 +4,11 @@ import { LinkProps } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
+import { ValidatorId } from '../../store/actions/validatorActions';
 
 type Props = {
   ethVersionStep: 1 | 2;
-  currentValidator: string;
+  currentValidator: ValidatorId;
   handleSubmit: LinkProps['onClick'];
   updateStep: (nextStep: 1 | 2) => void;
 };

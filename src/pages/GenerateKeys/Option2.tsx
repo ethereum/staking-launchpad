@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
@@ -7,6 +8,10 @@ import { Code } from '../../components/Code';
 import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
 import { Paper } from '../../components/Paper';
 import { colors } from '../../styles/styledComponentsTheme';
+
+const Pre = styled.pre`
+  white-space: normal;
+`;
 
 export const Option2 = ({
   validatorCount,
@@ -135,21 +140,21 @@ export const Option2 = ({
   const renderDepositKeyCommand = () => {
     if (os === 'mac' || os === 'linux') {
       return (
-        <pre className="my0">
+        <Pre className="my0">
           python3 ./eth2deposit/deposit.py{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
-        </pre>
+        </Pre>
       );
     }
 
     if (os === 'windows') {
       return (
-        <pre className="my0">
+        <Pre className="my0">
           .\eth2deposit\deposit.py{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
-        </pre>
+        </Pre>
       );
     }
   };
@@ -157,7 +162,7 @@ export const Option2 = ({
   return (
     <Paper className="mt20">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Option 2: build deposit-cli from the Python source code
+        Option 2: Build deposit-cli from the Python source code
       </Heading>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
         Install python3.7+
@@ -279,7 +284,7 @@ export const Option2 = ({
           </span>{' '}
           for {CHAIN_NAME.charAt(0).toUpperCase()}
           {CHAIN_NAME.toLowerCase().slice(1)} testnet, otherwise the deposit
-          would be invalid.
+          will be invalid.
         </Text>
       </Alert>
       <Alert variant="warning" className="my10">

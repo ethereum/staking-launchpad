@@ -14,7 +14,7 @@ import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
-import { handleTransaction } from './transactionUtils';
+import { handleMultipleTransactions } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
@@ -99,17 +99,18 @@ const _TransactionsPage = ({
       : '⚠️ Complete without all transactions confirmed';
   };
 
-  const handleAllTransactionsClick = () =>
-    depositKeys.forEach(async validator => {
-      if (validator.transactionStatus === TransactionStatus.READY) {
-        await handleTransaction(
-          validator,
-          connector as AbstractConnector,
-          account,
-          dispatchTransactionStatusUpdate
-        );
-      }
-    });
+  const handleAllTransactionsClick = () => {
+    const remainingTxs = depositKeys.filter(
+      key => key.transactionStatus === TransactionStatus.READY
+    );
+
+    handleMultipleTransactions(
+      remainingTxs,
+      connector as AbstractConnector,
+      account,
+      dispatchTransactionStatusUpdate
+    );
+  };
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.TRANSACTION_SIGNING) {

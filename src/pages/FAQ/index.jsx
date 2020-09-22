@@ -115,43 +115,54 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              Can I stop running my validator for a few days and then start it back up again?
+              Can I stop running my validator for a few days and then start it
+              back up again?
             </Heading>
             <Text className="mt10">
-              Yes but, under normal conditions, you will lose an amount of ETH roughly equivalent
-              to the amount of ETH you would have gained in that period. In other words,
-              if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH.
+              Yes but, under normal conditions, you will lose an amount of ETH
+              roughly equivalent to the amount of ETH you would have gained in
+              that period. In other words, if you stood to earn ≈0.01 ETH, you
+              would instead be penalised ≈0.01 ETH.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              When should I top up my validator's balance?
+              When should I top up my validator&apos;s balance?
             </Heading>
             <Text className="mt10">
-              The answer to this question very much depends on how much ETH you have at your disposal.
+              The answer to this question very much depends on how much ETH you
+              have at your disposal.
             </Text>
             <Text className="mt10">
-              You should certainly top up if your balance is close to 16 ETH: this is to ensure you don't
-              get kicked out of the validator set (which automatically happens if your balance falls below 16 ETH).
+              You should certainly top up if your balance is close to 16 ETH:
+              this is to ensure you don&apos;t get kicked out of the validator
+              set (which automatically happens if your balance falls below 16
+              ETH).
             </Text>
             <Text className="mt10">
-              At the other end of the spectrum, if your balance is closer to 31 ETH,
-              it's probably not worth your while adding the extra ETH required to get back to 32.
+              At the other end of the spectrum, if your balance is closer to 31
+              ETH, it&apos;s probably not worth your while adding the extra ETH
+              required to get back to 32.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              When can I withdraw my funds, and what's the difference between exiting and withdrawing?
+              When can I withdraw my funds, and what&apos;s the difference
+              between exiting and withdrawing?
             </Heading>
             <Text className="mt10">
-              You can signal your intent to stop validating by signing a voluntary exit message with your validator. 
+              You can signal your intent to stop validating by signing a
+              voluntary exit message with your validator.
             </Text>
             <Text className="mt10">
-              However, bear in mind that in Phase 0, once you've exited, there's no going back.
+              However, bear in mind that in Phase 0, once you&apos;ve exited,
+              there&apos;s no going back.
             </Text>
             <Text className="mt10">
-              There's no way for you to activate your validator again, and you won't be able to transfer
-              or withdraw your funds until at least Phase 1.5 (which means your funds will remain inaccessible until then).
+              There&apos;s no way for you to activate your validator again, and
+              you won&apos;t be able to transfer or withdraw your funds until at
+              least Phase 1.5 (which means your funds will remain inaccessible
+              until then).
             </Text>
           </section>
         </section>

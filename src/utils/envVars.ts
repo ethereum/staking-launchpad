@@ -16,12 +16,17 @@ export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';
 export const CHAIN_NAME                 = process.env.REACT_APP_CHAIN_NAME          || 'Medalla';
 export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'GöETH';
-export const GENESIS_FORK_VERSION       = process.env.REACT_APP_GENESIS_FORK_VERSION|| Buffer.from('00000001', 'hex');
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
     throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")
 }
 export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT     || 524288;
+
+let forkVersion = Buffer.from('00000001', 'hex')
+if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
+    forkVersion = Buffer.from(process.env.REACT_APP_GENESIS_FORK_VERSION.replace(/0x/g, ''), 'hex');
+}
+export const GENESIS_FORK_VERSION = forkVersion;
 
 
 if(process.env.REACT_APP_PRICE_PER_VALIDATOR &&  Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {

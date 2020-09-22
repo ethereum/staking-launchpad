@@ -168,7 +168,7 @@ export const Hero = () => {
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
                     <Text className="mt25">
-                      Earn continuous payouts for providing a public good to the
+                      Earn continuous rewards for providing a public good to the
                       community.
                     </Text>
                   </ScrollAnimation>

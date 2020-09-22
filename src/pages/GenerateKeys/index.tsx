@@ -14,6 +14,7 @@ import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowSt
 import { StoreState } from '../../store/reducers';
 import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
+import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
@@ -142,9 +143,15 @@ const _GenerateKeysPage = ({
           You should now have your mnemonic written down in a safe place and a
           keystore saved for each of your {validatorCount} validators. Please
           make sure you keep these safe, preferably offline. Your validator
-          keystores should be available in the
+          keystores should be available in the newly created
           <Highlight>validator_keys</Highlight> directory.
         </Text>
+        <Alert variant="info" className="my10">
+          You should see that you have one keystore per validator. This keystore
+          contains your signing key, encrypted with your password. You can use
+          your mnemonic to generate your withdrawal key when you wish to
+          withdraw.
+        </Alert>
         <InstructionImgContainer>
           <img src={instructions1} alt="" />
         </InstructionImgContainer>

@@ -68,7 +68,7 @@ export const BesuDetails = () => (
             <Link
               primary
               external
-              to="hhttps://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
+              to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
               withArrow
               inline
             >

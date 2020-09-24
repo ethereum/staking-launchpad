@@ -1,59 +1,55 @@
 import React from 'react';
-import { PageTemplate } from '../../components/PageTemplate';
-import tekuBg from '../../static/teku-bg.png';
+import { PageTemplate } from '../../../components/PageTemplate';
+import tekuBg from '../../../static/teku-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
-} from './ValidatorClientComponents';
-import { Text } from '../../components/Text';
-import { Link } from '../../components/Link';
-import { Code } from '../../components/Code';
-import { Heading } from '../../components/Heading';
+} from '../ValidatorClientComponents';
+import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
+import { Code } from '../../../components/Code';
+import { Heading } from '../../../components/Heading';
 
-export const Teku = () => {
-  return (
-    <PageTemplate title="">
-      <ValidatorClientPageStyles>
-        <Hero
-          imgSrc={tekuBg}
-          style={{ objectPosition: '0 -110px', height: 300 }}
-        />
-        <Text className="mt10">
-          <Link external to="https://pegasys.tech/teku/" primary inline>
-            PegaSys Teku
-          </Link>{' '}
-          (formerly known as Artemis) is a Java-based Ethereum 2.0 client
-          designed & built to meet institutional needs and security
-          requirements. PegaSys is an arm of{' '}
-          <Link external to="https://consensys.net/" primary inline>
-            ConsenSys
-          </Link>{' '}
-          dedicated to building enterprise-ready clients and tools for
-          interacting with the core Ethereum platform. Teku is Apache 2 licensed
-          and written in Java, a language notable for its materity & ubiquity.
-        </Text>
-        <Link
-          external
-          to="https://pegasys.tech/teku-ethereum-2-for-enterprise/"
-          primary
-          withArrow
-          className="mt10"
-        >
-          Read more about Pegasys Teku
-        </Link>{' '}
-        <section>
-          <SectionTitle level={2} className="mb5">
-            Installation
-          </SectionTitle>
-          <Link
-            external
-            primary
-            to="https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/"
-          >
-            https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/
-          </Link>
-        </section>
+export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
+  <>
+    <Text className="mt10">
+      <Link external to="https://pegasys.tech/teku/" primary inline>
+        PegaSys Teku
+      </Link>{' '}
+      (formerly known as Artemis) is a Java-based Ethereum 2.0 client designed &
+      built to meet institutional needs and security requirements. PegaSys is an
+      arm of{' '}
+      <Link external to="https://consensys.net/" primary inline>
+        ConsenSys
+      </Link>{' '}
+      dedicated to building enterprise-ready clients and tools for interacting
+      with the core Ethereum platform. Teku is Apache 2 licensed and written in
+      Java, a language notable for its maturity & ubiquity.
+    </Text>
+    <Link
+      external
+      to="https://pegasys.tech/teku-ethereum-2-for-enterprise/"
+      primary
+      withArrow
+      className="mt10"
+    >
+      Read more about PegaSys Teku
+    </Link>{' '}
+    <section>
+      <SectionTitle level={2} className="mb5">
+        Installation
+      </SectionTitle>
+      <Link
+        external
+        primary
+        to="https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/"
+      >
+        https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/
+      </Link>
+    </section>
+    {!shortened && (
+      <>
         <section>
           <SectionTitle level={2} className="mb5">
             Key Management
@@ -95,7 +91,7 @@ export const Teku = () => {
             variable. The syntax for YAML file is
             <Code className="px5 ml5">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              validators-key-files: ['keystyore_0.json', ...]
+              validators-key-files: ['keystore_0.json', ...]
             </Code>{' '}
             and
             <Code className="px5 ml5">
@@ -128,6 +124,20 @@ export const Teku = () => {
             </li>
           </ul>
         </section>
+      </>
+    )}
+  </>
+);
+
+export const Teku = () => {
+  return (
+    <PageTemplate title="">
+      <ValidatorClientPageStyles>
+        <Hero
+          imgSrc={tekuBg}
+          style={{ objectPosition: '0 -110px', height: 300 }}
+        />
+        <TekuDetails />
         <section>
           <SectionTitle level={2} className="mb5">
             Documentation

@@ -137,12 +137,13 @@ const _SelectClientPage = ({
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.SELECT_CLIENT) {
-      dispatchWorkflowUpdate(WorkflowStep.TRANSACTION_SIGNING);
+      dispatchWorkflowUpdate(WorkflowStep.GENERATE_KEY_PAIRS);
     }
   };
 
-  if (workflow < WorkflowStep.SELECT_CLIENT)
+  if (workflow < WorkflowStep.SELECT_CLIENT) {
     return routeToCorrectWorkflowStep(workflow);
+  }
 
   return (
     <WorkflowPageTemplate title="Client Selection">

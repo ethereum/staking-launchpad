@@ -61,7 +61,9 @@ const _TransactionsPage = ({
 
   const totalTxCount = depositKeys.length;
   const remainingTxCount = depositKeys.filter(
-    file => file.transactionStatus === TransactionStatus.READY
+    file =>
+      file.transactionStatus === TransactionStatus.READY ||
+      file.transactionStatus === TransactionStatus.REJECTED
   ).length;
   const allTxConfirmed = _every(
     depositKeys.map(
@@ -100,12 +102,8 @@ const _TransactionsPage = ({
   };
 
   const handleAllTransactionsClick = () => {
-    const remainingTxs = depositKeys.filter(
-      key => key.transactionStatus === TransactionStatus.READY
-    );
-
     handleMultipleTransactions(
-      remainingTxs,
+      depositKeys,
       connector as AbstractConnector,
       account,
       dispatchTransactionStatusUpdate
@@ -136,7 +134,7 @@ const _TransactionsPage = ({
         </Text>
         <Text className="mt10">
           You can initiate these all at once, or sign them individually from the
-          keylist below
+          key-list below
         </Text>
         <div className="flex center mt30">
           <Button

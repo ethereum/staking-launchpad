@@ -5,6 +5,7 @@ import {
   UpdateTransactionStatusAction,
 } from './depositFileActions';
 import { UpdateWorkflowAction } from './workflowActions';
+import { UpdateClientAction } from './clientActions';
 
 export enum ActionTypes {
   updateAcknowledgementState,
@@ -12,6 +13,7 @@ export enum ActionTypes {
   updateDepositFileName,
   updateTransactionStatus,
   updateWorkflow,
+  updateClient,
 }
 
 export type Action =
@@ -19,4 +21,5 @@ export type Action =
   | UpdateDepositFileKeysAction
   | UpdateTransactionStatusAction
   | UpdateWorkflowAction
-  | UpdateDepositFileNameAction;
+  | UpdateDepositFileNameAction
+  | UpdateClientAction;

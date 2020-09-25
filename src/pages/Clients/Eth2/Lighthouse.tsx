@@ -1,14 +1,14 @@
 import React from 'react';
-import { PageTemplate } from '../../components/PageTemplate';
-import lighthouseBg from '../../static/lighthouse-bg.png';
+import styled from 'styled-components';
+import { PageTemplate } from '../../../components/PageTemplate';
+import lighthouseBg from '../../../static/lighthouse-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
-} from './ValidatorClientComponents';
-import { Text } from '../../components/Text';
-import { Link } from '../../components/Link';
-import styled from 'styled-components';
+} from '../ValidatorClientComponents';
+import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
 
 const CodeSnippet = styled.div`
   padding: 10px;
@@ -27,46 +27,45 @@ const CodeSnippet = styled.div`
   }
 `;
 
-export const Lighthouse = () => {
-  return (
-    <PageTemplate title="">
-      <ValidatorClientPageStyles>
-        <Hero imgSrc={lighthouseBg} />
-        <Text className="mt10">
-          <Link external to="https://github.com/sigp/lighthouse" primary inline>
-            Lighthouse
-          </Link>{' '}
-          is an Eth2.0 client with a heavy focus on speed and security. The team
-          behind it,{' '}
-          <Link external to="https://sigmaprime.io/" primary inline>
-            Sigma Prime
-          </Link>
-          , is an information security and software engineering firm who have
-          funded Lighthouse along with the Ethereum Foundation, Consensys, and
-          private individuals. Lighthouse is built in Rust and offered under an
-          Apache 2.0 License.
-          <Link
-            external
-            to="https://lighthouse.sigmaprime.io/update-00.html"
-            primary
-            withArrow
-            className="mt10"
-          >
-            Read more about Lighthouse and Sigma Prime
-          </Link>
-        </Text>
-        <section>
-          <SectionTitle level={2} className="mb5">
-            Installation
-          </SectionTitle>
-          <Link
-            external
-            primary
-            to="https://lighthouse-book.sigmaprime.io/installation.html"
-          >
-            https://lighthouse-book.sigmaprime.io/installation.html
-          </Link>
-        </section>
+export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
+  <>
+    <Text className="mt10">
+      <Link external to="https://github.com/sigp/lighthouse" primary inline>
+        Lighthouse
+      </Link>{' '}
+      is an Eth2.0 client with a heavy focus on speed and security. The team
+      behind it,{' '}
+      <Link external to="https://sigmaprime.io/" primary inline>
+        Sigma Prime
+      </Link>
+      , is an information security and software engineering firm who have funded
+      Lighthouse along with the Ethereum Foundation, Consensys, and private
+      individuals. Lighthouse is built in Rust and offered under an Apache 2.0
+      License.
+      <Link
+        external
+        to="https://lighthouse.sigmaprime.io/update-00.html"
+        primary
+        withArrow
+        className="mt10"
+      >
+        Read more about Lighthouse and Sigma Prime
+      </Link>
+    </Text>
+    <section>
+      <SectionTitle level={2} className="mb5">
+        Installation
+      </SectionTitle>
+      <Link
+        external
+        primary
+        to="https://lighthouse-book.sigmaprime.io/installation.html"
+      >
+        https://lighthouse-book.sigmaprime.io/installation.html
+      </Link>
+    </section>
+    <>
+      {!shortened && (
         <section>
           <SectionTitle level={2} className="mb5">
             Key Management
@@ -122,6 +121,17 @@ export const Lighthouse = () => {
             Documentation on importing from the Launchpad
           </Link>
         </section>
+      )}
+    </>
+  </>
+);
+
+export const Lighthouse = () => {
+  return (
+    <PageTemplate title="">
+      <ValidatorClientPageStyles>
+        <Hero imgSrc={lighthouseBg} />
+        <LighthouseDetails />
         <section>
           <SectionTitle level={2} className="mb5">
             Documentation

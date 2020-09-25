@@ -41,12 +41,7 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
     );
   }
   if (status === TransactionStatus.PENDING) {
-    return (
-      <Container onClick={onClick}>
-        <ButtonText>Retry</ButtonText>
-        <FormNextLink />
-      </Container>
-    );
+    return <div className="flex" />;
   }
   if (status === TransactionStatus.STARTED) {
     return (

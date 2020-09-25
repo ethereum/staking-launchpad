@@ -35,15 +35,14 @@ const isUserRejectionError = (error: any) => {
 */
 
 export const handleMultipleTransactions = async (
-  depositFiles: DepositKeyInterface[],
+  depositKeys: DepositKeyInterface[],
   connector: AbstractConnector,
   account: any,
   updateTransactionStatus: (
     pubkey: string,
     status: TransactionStatus,
     txHash?: string
-  ) => void,
-  recursionIdx = 0
+  ) => void
 ) => {
   const walletProvider: any = await (connector as AbstractConnector).getProvider();
   const web3: any = new Web3(walletProvider);
@@ -56,7 +55,15 @@ export const handleMultipleTransactions = async (
     value: TX_VALUE,
   };
 
-  if (recursionIdx === depositFiles.length) {
+  const remainingTxs = depositKeys.filter(
+    key =>
+      key.transactionStatus === TransactionStatus.READY ||
+      key.transactionStatus === TransactionStatus.REJECTED
+  );
+
+  const nextTransaction = remainingTxs.shift();
+
+  if (nextTransaction === undefined) {
     // stop calling yourself
     return;
   }
@@ -68,7 +75,8 @@ export const handleMultipleTransactions = async (
     signature,
     // eslint-disable-next-line
     deposit_data_root,
-  } = depositFiles[recursionIdx];
+  } = nextTransaction;
+  updateTransactionStatus(pubkey, TransactionStatus.PENDING);
 
   contract.methods
     .deposit(
@@ -81,11 +89,10 @@ export const handleMultipleTransactions = async (
     .on('transactionHash', (txHash: string): void => {
       updateTransactionStatus(pubkey, TransactionStatus.STARTED, txHash);
       handleMultipleTransactions(
-        depositFiles,
+        depositKeys,
         connector,
         account,
-        updateTransactionStatus,
-        recursionIdx + 1
+        updateTransactionStatus
       );
     })
     .on('receipt', () => {

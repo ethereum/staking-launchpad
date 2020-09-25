@@ -7,9 +7,7 @@ import { CheckBox } from 'grommet';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
-import { LinuxInstructions } from './LinuxInstructions';
-import { MacInstructions } from './MacInstructions';
-import { WindowsInstructions } from './WindowsInstructions';
+import { Instructions } from './Instructions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { StoreState } from '../../store/reducers';
 import { Button } from '../../components/Button';
@@ -33,6 +31,12 @@ export enum operatingSystem {
   'LINUX',
   'WINDOWS',
 }
+
+const osMapping: { [os: number]: 'mac' | 'linux' | 'windows' } = {
+  [operatingSystem.MAC]: 'mac',
+  [operatingSystem.LINUX]: 'linux',
+  [operatingSystem.WINDOWS]: 'windows',
+};
 
 const Highlight = styled.span`
   color: ${p => p.theme.blue.medium};
@@ -81,19 +85,6 @@ const _GenerateKeysPage = ({
     }
   };
 
-  const renderOSInstructions = (): React.ReactNode => {
-    switch (chosenOs) {
-      case operatingSystem.LINUX:
-        return <LinuxInstructions validatorCount={validatorCount} />;
-      case operatingSystem.MAC:
-        return <MacInstructions validatorCount={validatorCount} />;
-      case operatingSystem.WINDOWS:
-        return <WindowsInstructions validatorCount={validatorCount} />;
-      default:
-        return null;
-    }
-  };
-
   if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
     return routeToCorrectWorkflowStep(workflow);
   }
@@ -133,7 +124,7 @@ const _GenerateKeysPage = ({
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
       </Paper>
 
-      {renderOSInstructions()}
+      <Instructions validatorCount={validatorCount} os={osMapping[chosenOs]} />
 
       <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium">

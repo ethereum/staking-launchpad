@@ -13,7 +13,7 @@ interface Props {
 export const Instructions = ({ validatorCount, os }: Props) => {
   const [selectedOption, setSelectedOption] = React.useState<1 | 2>(1);
   return (
-    <Paper style={{ animation: 'fadeIn 1s' }}>
+    <Paper className="mt20" style={{ animation: 'fadeIn 1s' }}>
       <Heading level={2} size="small" color="blueMedium">
         How do you want to run the CLI?
       </Heading>

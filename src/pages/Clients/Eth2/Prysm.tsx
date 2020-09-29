@@ -35,7 +35,7 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
       <Link
         primary
         external
-        to="https://docs.prylabs.network/docs/testnet/medalla/"
+        to="https://docs.prylabs.network/docs/testnet/spadina/"
         withArrow
       >
         Run Prysm

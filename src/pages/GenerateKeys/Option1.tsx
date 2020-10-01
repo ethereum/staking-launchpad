@@ -5,7 +5,6 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
-import { Paper } from '../../components/Paper';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const Pre = styled.pre`
@@ -20,7 +19,7 @@ export const Option1 = ({
   os: string;
 }) => {
   return (
-    <Paper className="mt20">
+    <div className="mt30">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
         Option 1: Download command line app
       </Heading>
@@ -73,6 +72,6 @@ export const Option1 = ({
         Now follow the instructions presented to you in the terminal window to
         generate your keys.
       </Text>
-    </Paper>
+    </div>
   );
 };

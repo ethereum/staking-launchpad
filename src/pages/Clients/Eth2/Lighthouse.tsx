@@ -9,6 +9,7 @@ import {
 } from '../ValidatorClientComponents';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
+import { LIGHTHOUSE_INSTALLATION_URL } from '../../../utils/envVars';
 
 const CodeSnippet = styled.div`
   padding: 10px;
@@ -56,12 +57,8 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
       <SectionTitle level={2} className="mb5">
         Installation
       </SectionTitle>
-      <Link
-        external
-        primary
-        to="https://lighthouse-book.sigmaprime.io/installation.html"
-      >
-        https://lighthouse-book.sigmaprime.io/installation.html
+      <Link external primary to={LIGHTHOUSE_INSTALLATION_URL} withArrow>
+        {LIGHTHOUSE_INSTALLATION_URL}
       </Link>
     </section>
     <>

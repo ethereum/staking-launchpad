@@ -8,6 +8,7 @@ import {
 } from '../ValidatorClientComponents';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
+import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
@@ -26,19 +27,14 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Validating with Prysm
+        Installation
       </SectionTitle>
       <Text>
         Prysm offers step-by-step guidelines to run their client after
         completing your deposit through the launchpad
       </Text>
-      <Link
-        primary
-        external
-        to="https://docs.prylabs.network/docs/testnet/medalla/"
-        withArrow
-      >
-        Run Prysm
+      <Link primary external to={PRYSM_INSTALLATION_URL} withArrow>
+        {PRYSM_INSTALLATION_URL}
       </Link>
     </section>
   </>

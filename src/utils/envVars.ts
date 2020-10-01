@@ -16,6 +16,10 @@ export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';
 export const CHAIN_NAME                 = process.env.REACT_APP_CHAIN_NAME          || 'Medalla';
 export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'GöETH';
+export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/installation.html';
+export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://status-im.github.io/nim-beacon-chain/intro.html';
+export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/testnet/medalla/';
+export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATION_URL    || 'https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/';
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
     throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")

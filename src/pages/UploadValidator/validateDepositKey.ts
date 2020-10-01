@@ -6,7 +6,12 @@ import { initBLS } from '@chainsafe/bls';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
 import { DepositKeyInterface } from '../../store/reducers';
-import { ETHER_TO_GWEI, MIN_DEPOSIT_AMOUNT } from '../../utils/envVars';
+import {
+  ETHER_TO_GWEI,
+  MIN_DEPOSIT_AMOUNT,
+  MIN_DEPOSIT_CLI_VERSION,
+} from '../../utils/envVars';
+import compareVersions from 'compare-versions';
 
 const validateFieldFormatting = (
   depositDatum: DepositKeyInterface
@@ -19,7 +24,8 @@ const validateFieldFormatting = (
     !depositDatum.signature ||
     !depositDatum.deposit_message_root ||
     !depositDatum.deposit_data_root ||
-    !depositDatum.fork_version
+    !depositDatum.fork_version ||
+    !depositDatum.deposit_cli_version
   ) {
     return false;
   }
@@ -32,7 +38,8 @@ const validateFieldFormatting = (
     typeof depositDatum.signature !== 'string' ||
     typeof depositDatum.deposit_message_root !== 'string' ||
     typeof depositDatum.deposit_data_root !== 'string' ||
-    typeof depositDatum.fork_version !== 'string'
+    typeof depositDatum.fork_version !== 'string' ||
+    typeof depositDatum.deposit_cli_version !== 'string'
   ) {
     return false;
   }
@@ -49,12 +56,25 @@ const validateFieldFormatting = (
     return false;
   }
 
+  // check the deposit amount
   if (
     depositDatum.amount < MIN_DEPOSIT_AMOUNT ||
     depositDatum.amount > 32 * ETHER_TO_GWEI
   ) {
     return false;
   }
+
+  // check the deposit-cli version
+  if (
+    compareVersions.compare(
+      depositDatum.deposit_cli_version,
+      MIN_DEPOSIT_CLI_VERSION,
+      '<'
+    )
+  ) {
+    return false;
+  }
+
   return true;
 };
 

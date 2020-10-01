@@ -13,6 +13,7 @@ export interface DepositKeyInterface {
   deposit_message_root: string;
   deposit_data_root: string;
   fork_version: string;
+  deposit_cli_version: string;
   transactionStatus: TransactionStatus;
   txHash?: string;
 }

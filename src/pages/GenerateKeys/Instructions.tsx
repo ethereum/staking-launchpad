@@ -23,7 +23,7 @@ export const Instructions = ({ validatorCount, os }: Props) => {
           onClick={() => setSelectedOption(1)}
           style={{ marginRight: '20px' }}
         >
-          Download pre-built binary
+          Download CLI app
         </TextSelectionBox>
         <TextSelectionBox
           isActive={selectedOption === 2}

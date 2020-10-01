@@ -10,6 +10,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
+import { TEKU_INSTALLATION_URL } from '../../../utils/envVars';
 
 export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -40,12 +41,8 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
       <SectionTitle level={2} className="mb5">
         Installation
       </SectionTitle>
-      <Link
-        external
-        primary
-        to="https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/"
-      >
-        https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/
+      <Link external primary to={TEKU_INSTALLATION_URL} withArrow>
+        {TEKU_INSTALLATION_URL}
       </Link>
     </section>
     {!shortened && (

@@ -9,6 +9,7 @@ import {
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
+import { NIMBUS_INSTALLATION_URL } from '../../../utils/envVars';
 
 export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -43,12 +44,8 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       <SectionTitle level={2} className="mb5">
         Installation
       </SectionTitle>
-      <Link
-        external
-        primary
-        to="https://status-im.github.io/nim-beacon-chain/install.html"
-      >
-        https://status-im.github.io/nim-beacon-chain/install.html
+      <Link external primary to={NIMBUS_INSTALLATION_URL} withArrow>
+        {NIMBUS_INSTALLATION_URL}
       </Link>
     </section>
 

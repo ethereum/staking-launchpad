@@ -157,8 +157,8 @@ const _GenerateKeysPage = ({
         </InstructionImgContainer>
         <Text>
           The other file you just generated is
-          <Highlight>deposit_data.json</Highlight>. This file contains your
-          validators&apos; public keys which you will need to upload in the next
+          <Highlight>deposit_data.json</Highlight>. This file contains the public key(s) associated with your your
+          validator(s); You will need to upload this in the next
           step.
         </Text>
         <InstructionImgContainer>
@@ -171,7 +171,7 @@ const _GenerateKeysPage = ({
           checked={mnemonicAcknowledgementChecked}
           label={
             <Text>
-              I am keeping my keys safe and have written down my mnemonic
+              I am keeping my key(s) safe and have written down my mnemonic
               phrase.
             </Text>
           }

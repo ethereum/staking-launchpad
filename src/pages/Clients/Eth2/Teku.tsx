@@ -39,7 +39,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
     </Link>{' '}
     <section>
       <SectionTitle level={2} className="mb5">
-        Installation
+        Become a Validator with Teku
       </SectionTitle>
       <Link external primary to={TEKU_INSTALLATION_URL} withArrow>
         {TEKU_INSTALLATION_URL}

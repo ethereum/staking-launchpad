@@ -27,7 +27,7 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installation
+        Become a Validator with Prysm
       </SectionTitle>
       <Text>
         Prysm offers step-by-step guidelines to run their client after

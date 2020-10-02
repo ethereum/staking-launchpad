@@ -55,7 +55,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installation
+        Become a Validator with Lighthouse
       </SectionTitle>
       <Link external primary to={LIGHTHOUSE_INSTALLATION_URL} withArrow>
         {LIGHTHOUSE_INSTALLATION_URL}

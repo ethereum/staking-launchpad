@@ -75,7 +75,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
           <Link
             external
             primary
-            to="https://status-im.github.io/nim-beacon-chain/validator.html#key-management"
+            to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
           >
             Nimbus documentation on key management
           </Link>
@@ -98,10 +98,10 @@ export const Nimbus = () => {
           <Link
             primary
             external
-            to="https://status-im.github.io/nim-beacon-chain/intro.html"
+            to="https://status-im.github.io/nimbus-eth2/intro.html"
             withArrow
           >
-            https://status-im.github.io/nim-beacon-chain/intro.html
+            https://status-im.github.io/nimbus-eth2/intro.html
           </Link>
         </section>
       </ValidatorClientPageStyles>

@@ -78,7 +78,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
           <Link
             external
             primary
-            to="https://status-im.github.io/nim-beacon-chain/spadina.html#key-management"
+            to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
           >
             Nimbus documentation on key management
           </Link>

@@ -4,14 +4,12 @@ import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import Animate from 'animate.css-react';
-import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { routesEnum } from '../../Routes';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import useMobileCheck from '../../hooks/useMobileCheck';
 
 interface mobile {
@@ -70,32 +68,6 @@ const InfoContainer = styled.div`
     min-height: calc(100% - 70px);
   }
 `;
-const TitleContainer = styled.div`
-  flex-basis: 50px;
-  flex-shrink: 0;
-  height: 50px;
-  @media screen and (max-width: ${({ theme }) => theme.screenSizes.small}) {
-    flex-basis: 70px;
-    flex-shrink: 0;
-    height: 70px;
-  }
-`;
-const LogoContainer = styled.div`
-  display: flex;
-  min-height: 50px;
-`;
-const EthLogo = styled.img`
-  height: 50px;
-`;
-// @ts-ignore
-const LogoText = styled(Text)`
-  line-height: 50px;
-  margin-left: 15px;
-  font-weight: bold;
-  @media screen and (max-width: 800px) {
-    line-height: 30px;
-  }
-`;
 const StyledLeslieImgNode = styled.img`
   max-width: 100%;
   margin: 3rem 0 5rem;
@@ -109,9 +81,7 @@ const StyledLeslieImgNode = styled.img`
   }
   @media screen and (max-width: 800px) {
     max-width: 220px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     display: block;
   }
 `;
@@ -144,17 +114,6 @@ export const Hero = () => {
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
             <ContentContainer className={m ? undefined : 'pt100'}>
               <LefContentContainer>
-                <TitleContainer>
-                  <Animate enter="fadeIn" appear="fadeIn" delay={150}>
-                    <LogoContainer className={m ? 'mb50' : undefined}>
-                      <EthLogo src={EthDiamondPlain} />
-                      <LogoText>
-                        Eth2 Launch Pad{' '}
-                        {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
-                      </LogoText>
-                    </LogoContainer>
-                  </Animate>
-                </TitleContainer>
                 <InfoContainer>
                   <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                     <Heading

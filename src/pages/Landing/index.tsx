@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { AppBar } from '../../components/AppBar';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
 import { StakingRewards } from './StakingRewards';
@@ -25,6 +26,7 @@ export const LandingPage = (): JSX.Element => {
 
   return (
     <>
+      <AppBar />
       <Hero />
       <NetworkStatus {...{ amountEth }} />
       <StakingRewards currentStaked={amountEth} />

@@ -10,3 +10,4 @@ export * from './UploadValidator';
 export * from './Transactions';
 export * from './FAQ';
 export * from './Phishing';
+export * from './Checklist';

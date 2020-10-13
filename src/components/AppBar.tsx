@@ -81,6 +81,11 @@ export const AppBar = () => {
             {IS_MAINNET ? `` : ` for ${ETH2_NETWORK_NAME} testnet`}
           </Heading>
         </Link>
+        <Link to={routesEnum.acknowledgementPage} className="mx10">
+          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+            Deposit
+          </Heading>
+        </Link>
         <ValidatorDropdown
           className="mx10 px0"
           label={
@@ -98,9 +103,9 @@ export const AppBar = () => {
             </Box>
           }
         />
-        <Link to={routesEnum.acknowledgementPage} className="mx10">
+        <Link to={routesEnum.checklistPage} className="mx10">
           <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
-            Deposit
+            Checklist
           </Heading>
         </Link>
         <Link to={routesEnum.FaqPage} className="mx10">

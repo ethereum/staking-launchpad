@@ -60,10 +60,17 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
           </Heading>
           <Text>
             When launching Teku, keystores and passwords can be provided as{' '}
-            <Code> {"<"}KEY_DIR{">"}:{"<"}PASS_DIR{">"}</Code>{' '}or{' '}
-            <Code>{"<"}KEY_FILE_1{">"}:{"<"}PASS_FILE_1{">"},...,{"<"}KEY_FILE_N{">"}:{"<"}PASS_FILE_N{">"}</Code> of paths
-            via the{' '}
-            <Code className="px5 ml5">--validators-keys</Code> option.
+            <Code>
+              {' '}
+              {'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}
+            </Code>{' '}
+            or{' '}
+            <Code>
+              {'<'}KEY_FILE_1{'>'}:{'<'}PASS_FILE_1{'>'},...,{'<'}KEY_FILE_N
+              {'>'}:{'<'}PASS_FILE_N{'>'}
+            </Code>{' '}
+            of paths via the <Code className="px5 ml5">--validators-keys</Code>{' '}
+            option.
           </Text>
           <Heading level={3} className="mt10 mb5">
             Environment Variables:
@@ -71,8 +78,8 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
           <Text>
             Teku will also load validators from keystores (and passwords) from
             the paths found in the{' '}
-            <Code className="px5 ml5">TEKU_VALIDATORS_KEYS</Code>
-            {' '}environment variable.
+            <Code className="px5 ml5">TEKU_VALIDATORS_KEYS</Code> environment
+            variable.
           </Text>
           <Heading level={3} className="mt10 mb5">
             Configuration File:
@@ -84,12 +91,13 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             variable. The syntax for YAML file is
             <Code className="px5 ml5">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              validators-keys: [{"<"}KEY_DIR{">"}:{"<"}PASS_DIR{">"}]
+              validators-keys: [{'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}]
             </Code>{' '}
             or
             <Code className="px5 ml5">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              validators-keys: [{"<"}KEY_FILE_1{">"}:{"<"}PASS_FILE_1{">"},...,{"<"}KEY_FILE_N{">"}:{"<"}PASS_FILE_N{">"}]
+              validators-keys: [{'<'}KEY_FILE_1{'>'}:{'<'}PASS_FILE_1{'>'},...,
+              {'<'}KEY_FILE_N{'>'}:{'<'}PASS_FILE_N{'>'}]
             </Code>
             .
           </Text>
@@ -98,39 +106,33 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
           </Heading>
           <Text>
             <Code className="px5 ml5">
-              {"<"}KEY_DIR{">"}:{"<"}PASS_DIR{">"}
-            </Code>
-            {' '}will find{' '}
+              {'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}
+            </Code>{' '}
+            will find{' '}
             <Code className="px5 ml5">
-              {"<"}KEY_DIR{">/**"}.json
+              {'<'}KEY_DIR{'>/**'}.json
             </Code>
             , and expect to find{' '}
             <Code className="px5 ml5">
-              {"<"}PASS_DIR{">/**"}.txt
+              {'<'}PASS_DIR{'>/**'}.txt
             </Code>
             .{' '}
             <Code className="px5 ml5">
-              {"<"}KEY_FILE{">"}:{"<"}PASS_FILE{">"}
-            </Code>
-            {' '}will expect that the file{' '}
+              {'<'}KEY_FILE{'>'}:{'<'}PASS_FILE{'>'}
+            </Code>{' '}
+            will expect that the file{' '}
             <Code className="px5 ml5">
-              {"<"}KEY_FILE{">"}
-            </Code>
-            {' '}exists, and the file containing the password for it is{' '}
+              {'<'}KEY_FILE{'>'}
+            </Code>{' '}
+            exists, and the file containing the password for it is{' '}
             <Code className="px5 ml5">
-              {"<"}PASS_FILE{">"}
+              {'<'}PASS_FILE{'>'}
             </Code>
             . The path separator is operating system dependent, and should be{' '}
-            <Code className="px5 ml5">
-            ;
-            </Code>
-            {' '}in Windows rather than{' '}
-            <Code className="px5 ml5">
-            :
-            </Code>
-            .
+            <Code className="px5 ml5">;</Code> in Windows rather than{' '}
+            <Code className="px5 ml5">:</Code>.
           </Text>
-      </section>
+        </section>
         <section>
           <SectionTitle level={2} className="mb5">
             Troubleshooting

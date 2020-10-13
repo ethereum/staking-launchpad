@@ -10,9 +10,12 @@ import { Phases } from './Phases';
 import { CTAFooter } from './CTAFooter';
 import { queryContract } from '../../utils/queryContract';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
+import useMobileCheck from '../../hooks/useMobileCheck';
 
 export const LandingPage = (): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
+
+  const mobile = useMobileCheck('800px');
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -26,7 +29,7 @@ export const LandingPage = (): JSX.Element => {
 
   return (
     <>
-      <AppBar />
+      {!mobile && <AppBar />}
       <Hero />
       <NetworkStatus {...{ amountEth }} />
       <StakingRewards currentStaked={amountEth} />

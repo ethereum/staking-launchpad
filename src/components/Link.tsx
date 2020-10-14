@@ -57,6 +57,7 @@ interface LinkProps {
   onClick?: (param?: any) => void;
   inline?: boolean;
   withArrow?: boolean;
+  style?: any;
 }
 
 export const Link = (props: LinkProps) => {
@@ -68,6 +69,7 @@ export const Link = (props: LinkProps) => {
     primary,
     inline,
     withArrow,
+    style,
   } = props;
   if (external) {
     return (
@@ -77,6 +79,7 @@ export const Link = (props: LinkProps) => {
         primary={primary}
         target="_blank"
         inline={inline}
+        style={style}
       >
         {children}
         {withArrow && (

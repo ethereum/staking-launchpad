@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
+import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
@@ -18,32 +19,50 @@ export const Option1 = ({
   validatorCount: number | string;
   os: string;
 }) => {
+  const cliLink = React.useMemo(() => {
+    if (os === 'linux')
+      return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-darwin-amd64.tar.gz';
+    if (os === 'mac')
+      return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-linux-amd64.tar.gz';
+    if (os === 'windows')
+      return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-windows-amd64.zip';
+    return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-windows-amd64.zip';
+  }, [os]);
+
+  const osName = React.useMemo(() => {
+    if (os === 'linux') return 'Linux';
+    if (os === 'mac') return 'MacOS';
+    if (os === 'windows') return 'Windows';
+    return 'default';
+  }, [os]);
+
   return (
     <div className="mt30">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
         Option 1: Download command line app
       </Heading>
       <Text weight={500}>Download the deposit command line interface app</Text>
-      <Text>
-        Please find the zip/tarball file containing the latest deposit-cli
-        release on the{' '}
+      <Text className="mt5">
+        The easiest way to generate your deposit key files is by downloading the
+        CLI tool and following the instructions. You can also download the
+        deposit command line tool from the official Ethereum github account{' '}
         <Link
+          inline
           primary
           external
           to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
-          inline
         >
-          ethereum/eth2.0-deposit-cli
-        </Link>{' '}
-        GitHub page for your platform.{' '}
+          here
+        </Link>
+        .
       </Text>
-      <Alert variant="warning" className="my20">
-        <Text weight={500} color="yellowDarkest" className="my10">
-          Please make sure that you are downloading from the official Ethereum
-          Foundation GitHub account.
-        </Text>
-      </Alert>
-      <Text weight={500}>
+      <Link external to={cliLink} style={{ margin: '2rem auto' }}>
+        <Button
+          primary
+          label={<Text color="white">Download the CLI tool for {osName}</Text>}
+        />
+      </Link>
+      <Text weight={500} className="mt10">
         Generate deposit keys using the Ethereum Foundation deposit tool
       </Text>
       <Text className="mt5">

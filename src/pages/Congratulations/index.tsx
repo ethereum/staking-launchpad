@@ -25,6 +25,7 @@ import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { Button } from '../../components/Button';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>

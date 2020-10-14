@@ -23,7 +23,10 @@ const ChecklistPageStyles = styled.div`
   }
   .sub-checklist-item {
     margin-top: -0.5rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+  }
+  .checkbox-label {
+    margin-left: 0.5rem;
   }
 `;
 
@@ -74,26 +77,48 @@ export const Checklist = () => {
           <Heading level={3}>Keystore</Heading>
           <CheckBox
             label={
-              <Text>I have securely generated and saved my keystore(s).</Text>
+              <Text className="checkbox-label">
+                I have securely generated and saved my keystore(s).
+              </Text>
             }
           />
-          <CheckBox label={<Text>I have backed up my mnemonic.</Text>} />
           <CheckBox
-            label={<Text>I have set a strong password for my keystore(s)</Text>}
+            label={
+              <Text className="checkbox-label">
+                I have backed up my mnemonic.
+              </Text>
+            }
           />
-          <CheckBox label={<Text>I have backed up my password.</Text>} />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have set a strong password for my keystore(s)
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have backed up my password.
+              </Text>
+            }
+          />
         </section>
         <section>
           <Heading level={3}>Security</Heading>
           <CheckBox
-            label={<Text>I have set up a firewall on my machine(s). </Text>}
+            label={
+              <Text className="checkbox-label">
+                I have set up a firewall on my machine(s).{' '}
+              </Text>
+            }
           />
         </section>
         <section>
           <Heading level={3}>Eth1 Client</Heading>
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have installed and synced my Eth1 node on{' '}
                 {IS_MAINNET ? 'mainnet' : 'goerli'}.
               </Text>
@@ -105,7 +130,7 @@ export const Checklist = () => {
           <Heading level={4}>Required</Heading>
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have installed the{' '}
                 <strong>latest stable software release</strong> of my client.
               </Text>
@@ -123,7 +148,7 @@ export const Checklist = () => {
           </ul>
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 My Eth2 beacon node is able to connect to my Eth1 client via
                 HTTP API(s).
               </Text>
@@ -131,7 +156,7 @@ export const Checklist = () => {
           />
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have synced my Eth2 beacon node on {ETH2_NETWORK_NAME}.
               </Text>
             }
@@ -146,7 +171,11 @@ export const Checklist = () => {
           </ul>
           <Heading level={4}>Recommended</Heading>
           <CheckBox
-            label={<Text>I have joined my client's discord chat.</Text>}
+            label={
+              <Text className="checkbox-label">
+                I have joined my client's discord chat.
+              </Text>
+            }
           />
           <ul className="sub-checklist-item">
             <li>
@@ -168,7 +197,11 @@ export const Checklist = () => {
             </li>
           </ul>
           <CheckBox
-            label={<Text>I have opened the ports on my router.</Text>}
+            label={
+              <Text className="checkbox-label">
+                I have opened the ports on my router.
+              </Text>
+            }
           />
         </section>
         <section>
@@ -176,18 +209,22 @@ export const Checklist = () => {
           <Heading level={4}>Required</Heading>
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have imported my keystore(s) into my Eth2 validator client.
               </Text>
             }
           />
           <CheckBox
-            label={<Text>I have started running my validator client.</Text>}
+            label={
+              <Text className="checkbox-label">
+                I have started running my validator client.
+              </Text>
+            }
           />
           <Heading level={4}>Recommended</Heading>
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have set up my validator client on a separate machine and
                 connected it to my Beacon Node via HTTP/gRPC API(s).
               </Text>
@@ -238,7 +275,7 @@ export const Checklist = () => {
           </Text>
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have set up my{' '}
                 <Link primary inline external to="https://prometheus.io/">
                   Prometheus
@@ -249,7 +286,7 @@ export const Checklist = () => {
           />
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have set up my{' '}
                 <Link primary inline external to="https://grafana.com/">
                   Grafana
@@ -260,7 +297,7 @@ export const Checklist = () => {
           />
           <CheckBox
             label={
-              <Text>
+              <Text className="checkbox-label">
                 I have imported the dashboard config to my Grafana server and
                 double checked that my node is alive.
               </Text>
@@ -284,7 +321,13 @@ export const Checklist = () => {
             </Link>
             .
           </Text>
-          <CheckBox label={<Text>I have set my graffiti flag.</Text>} />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have set my graffiti flag.
+              </Text>
+            }
+          />
         </section>
       </ChecklistPageStyles>
     </PageTemplate>

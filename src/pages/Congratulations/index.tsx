@@ -64,11 +64,17 @@ const ChecklistAlert = styled.div`
     flex-direction: column;
     justify-content: center;
   }
+  @media only screen and (max-width: 720px) {
+    padding: 2rem 0;
+  }
 `;
 const Leslie = styled.img.attrs({ src: LeslieTheRhinoPNG })`
   width: 200px;
   transform: scale(-1.2, 1.2);
   margin: 3rem 0 5rem 4rem;
+  @media only screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 interface OwnProps {}

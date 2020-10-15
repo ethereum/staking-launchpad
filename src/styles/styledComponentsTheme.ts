@@ -47,6 +47,7 @@ export const rainbowColors = [
   '#ffcc9e', // yellow
   '#98ddad', // green
   '#81d7ec', // blue
+  '#91C1ED', // blurple
   '#a0aaed', // purple
 ];
 
@@ -56,6 +57,7 @@ export const rainbowBGColors = [
   '#fcead9', // yellow-orange
   '#dcf0df', // green
   '#d3edf6', // blue
+  '#baccf2', // blurple
   '#a0aaed', // purple
 ];
 
@@ -65,6 +67,7 @@ export const rainbowLightColors = [
   '#FFF2E6', // yellow-orange
   '#e5f6ea', // green
   '#dff5fa', // blue
+  '#E3EFFA', // blurple
   '#e7e9fa', // purple
 ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box } from 'grommet';
+import { Box, DropButton } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
@@ -35,6 +35,19 @@ const NetworkText = styled(Text)`
   font-weight: 500;
 `;
 
+const ValidatorDropdown = styled(DropButton)`
+  border: none;
+  :hover {
+    border: none;
+    box-shadow: none;
+  }
+`;
+const DropdownLink = styled(Link)`
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
 export const AppBar = () => {
   const {
     active: walletConnected,
@@ -61,14 +74,47 @@ export const AppBar = () => {
       style={{ zIndex: 1 }}
     >
       <div className="ml50 flex">
-        <Link to={routesEnum.landingPage}>
+        <Link to={routesEnum.landingPage} className="mx10">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <Heading level={4} margin="none" style={{ padding: '8px 0' }}>
+          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
             Eth2 Launch Pad{' '}
             {IS_MAINNET ? `` : ` for ${ETH2_NETWORK_NAME} testnet`}
           </Heading>
         </Link>
+        <Link to={routesEnum.acknowledgementPage} className="mx10">
+          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+            Deposit
+          </Heading>
+        </Link>
+        <ValidatorDropdown
+          className="mx10 px0"
+          label={
+            <Heading level={4} margin="none">
+              Validator Clients
+            </Heading>
+          }
+          dropAlign={{ top: 'bottom', right: 'right' }}
+          dropContent={
+            <Box pad="small">
+              <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+              <DropdownLink to={routesEnum.lighthouse}>Lighthouse</DropdownLink>
+              <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
+              <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+            </Box>
+          }
+        />
+        <Link to={routesEnum.checklistPage} className="mx10">
+          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+            Checklist
+          </Heading>
+        </Link>
+        <Link to={routesEnum.FaqPage} className="mx10">
+          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+            FAQ
+          </Heading>
+        </Link>
       </div>
+
       <div className="flex">
         <NetworkText>
           {ETH2_NETWORK_NAME}

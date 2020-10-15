@@ -53,9 +53,8 @@ const phases: phase[] = [
     title: 'Duration',
     subTitle:
       'The duration for the deployment of the individual phases depends on many factors.',
-    linkUrl:
-      'https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/',
-    link: 'Phase 0, 1, 2 and 3 duration',
+    linkUrl: 'https://ethereum.org/en/eth2/#roadmap',
+    link: 'Phase 0, 1, 1.5, and 2 duration',
     external: true,
   },
   {
@@ -91,24 +90,30 @@ export const Phases = (): JSX.Element => {
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20">
-                Transitioning from proof-of-work to proof-of-stake, eth2 will be
-                launched in at least 3 phases. The idea is to break up this
-                transition into phases each focusing on a different aspect of
-                eth2.
+                Transitioning from proof-of-work (PoW) to proof-of-stake (PoS),
+                eth2 will be launched in at least 4 phases. The idea is to break
+                up this transition into phases each focusing on a different
+                aspect of eth2.
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 0 </PhaseTitle>
-                contains all of the machinery behind eth2&apos;s consensus, it
-                tracks the validators and their balances.
+                contains all of the machinery behind eth2&apos;s PoS consensus,
+                it tracks the validators and their balances.
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 1 </PhaseTitle>
-                handles adding and storing the data associated with eth2.
+                handles adding, storing, and retrieving the data associated with
+                eth2's shards.
+              </Text>
+              <Text className="mt20">
+                <PhaseTitle>Phase 1.5 </PhaseTitle>
+                updates Ethereum as we know it today from PoW to PoS by making
+                it a shard under eth2.
               </Text>
               <Text className="mt20">
                 <PhaseTitle>Phase 2 </PhaseTitle>
-                Phase 2 adds execution to eth2 which enables programmes to be
-                run on top of it.
+                Phase 2 adds execution to the remaining eth2 shards which
+                enables smart contracts to run on all of the shards.
               </Text>
             </ScrollAnimation>
           </div>

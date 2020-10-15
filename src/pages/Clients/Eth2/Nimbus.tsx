@@ -42,7 +42,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installation
+        Become a Validator with Nimbus
       </SectionTitle>
       <Link external primary to={NIMBUS_INSTALLATION_URL} withArrow>
         {NIMBUS_INSTALLATION_URL}
@@ -75,7 +75,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
           <Link
             external
             primary
-            to="https://status-im.github.io/nim-beacon-chain/validator.html#key-management"
+            to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
           >
             Nimbus documentation on key management
           </Link>
@@ -98,10 +98,10 @@ export const Nimbus = () => {
           <Link
             primary
             external
-            to="https://status-im.github.io/nim-beacon-chain/intro.html"
+            to="https://status-im.github.io/nimbus-eth2/intro.html"
             withArrow
           >
-            https://status-im.github.io/nim-beacon-chain/intro.html
+            https://status-im.github.io/nimbus-eth2/intro.html
           </Link>
         </section>
       </ValidatorClientPageStyles>

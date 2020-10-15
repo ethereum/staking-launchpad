@@ -68,6 +68,17 @@ export const Option1 = ({
           </span>
         </Pre>
       </Alert>
+      <Alert variant="error" className="my10">
+        <Text>
+          Please make sure you have set{' '}
+          <span className="alert-highlight">
+            --chain {ETH2_NETWORK_NAME.toLowerCase()}
+          </span>{' '}
+          for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
+          {ETH2_NETWORK_NAME.toLowerCase().slice(1)} testnet, otherwise the
+          deposit will be invalid.
+        </Text>
+      </Alert>
       <Text>
         Now follow the instructions presented to you in the terminal window to
         generate your keys.

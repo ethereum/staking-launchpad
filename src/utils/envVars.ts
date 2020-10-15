@@ -14,7 +14,6 @@ export const BEACONCHAIN_URL            = process.env.REACT_APP_BEACONCHAIN_URL 
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
 export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x07b39f4fde4a38bace212b546dac87c58dfe3fdc';
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';
-export const CHAIN_NAME                 = process.env.REACT_APP_CHAIN_NAME          || 'Medalla';
 export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'GöETH';
 export const MIN_DEPOSIT_CLI_VERSION    = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION  || '0.2.1';  // 0.2.1 was for Medalla
 export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/';

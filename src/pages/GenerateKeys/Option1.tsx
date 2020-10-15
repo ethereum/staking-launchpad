@@ -4,7 +4,7 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
-import { CHAIN_NAME } from '../../utils/envVars';
+import { ETH2_NETWORK_NAME } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const Pre = styled.pre`
@@ -64,7 +64,7 @@ export const Option1 = ({
           )}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           <span style={{ color: colors.red.medium }}>
-            {`--chain ${CHAIN_NAME.toLowerCase()}`}
+            {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
           </span>
         </Pre>
       </Alert>

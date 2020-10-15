@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'react/no-unescaped-entities': 'off',
     'import/extensions': 'off',
     'arrow-parens': 'off',
     'react/jsx-filename-extension': 'off',

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import TimelineGraphic from '../../static/timeline_testnet_launch.svg';
-import TimelineGraphicMobile from '../../static/timeline_testnet_launch_mobile.svg';
+import TimelineGraphic from '../../static/timeline_deposit_contract_launch.svg';
+import TimelineGraphicMobile from '../../static/timeline_deposit_contract_launch_mobile.svg';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 

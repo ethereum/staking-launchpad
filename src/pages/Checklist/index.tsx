@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import _shuffle from 'lodash/shuffle';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { CheckBox } from 'grommet';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { ClientCard } from '../Congratulations/ClientCard';
+import PrysmaticBg from '../../static/prysmatic-bg.png';
+import LighthouseBg from '../../static/lighthouse-bg.png';
+import NimbusBg from '../../static/nimbus-bg.png';
+import TekuBg from '../../static/teku-bg.png';
+import { routesEnum } from '../../Routes';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -29,8 +36,57 @@ const ChecklistPageStyles = styled.div`
     margin-left: 0.5rem;
   }
 `;
+const ClientContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+`;
+
+interface Client {
+  header: string;
+  text: string;
+  imgUrl: any;
+  url: routesEnum;
+  linkText: string;
+}
 
 export const Checklist = () => {
+  const clientInfo: Client[] = _shuffle([
+    {
+      header: 'Lighthouse',
+      text:
+        'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
+      imgUrl: LighthouseBg,
+      url: routesEnum.lighthouse,
+      linkText: 'Configure Lighthouse →',
+    },
+    {
+      header: 'Nimbus',
+      text:
+        'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
+      imgUrl: NimbusBg,
+      url: routesEnum.nimbus,
+      linkText: 'Configure Nimbus →',
+    },
+    {
+      header: 'Prysm',
+      text:
+        'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
+      imgUrl: PrysmaticBg,
+      url: routesEnum.prysm,
+      linkText: 'Configure Prysm →',
+    },
+    {
+      header: 'Teku',
+      text:
+        'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
+      imgUrl: TekuBg,
+      url: routesEnum.teku,
+      linkText: 'Configure Teku →',
+    },
+  ]);
+
   return (
     <PageTemplate title="Eth2 Staker Checklist">
       <ChecklistPageStyles>
@@ -111,6 +167,25 @@ export const Checklist = () => {
               </Text>
             }
           />
+        </section>
+        <section>
+          <Heading level={3}>Configure your Eth2 client</Heading>
+          <Link className="mt10" to="/faq" primary withArrow>
+            Learn more about the roles and responsibilities of ETH 2 Validators
+          </Link>
+          <ClientContainer>
+            {clientInfo.map(client => (
+              <ClientCard
+                className="mt10"
+                header={client.header}
+                imgUrl={client.imgUrl}
+                text={client.text}
+                key={client.header}
+                url={client.url}
+                linkText={client.linkText}
+              />
+            ))}
+          </ClientContainer>
         </section>
         <section>
           <Heading level={3}>Eth2 Beacon Node (BN)</Heading>

@@ -102,10 +102,10 @@ export const AppBar = () => {
           dropAlign={{ top: 'bottom', right: 'right' }}
           dropContent={
             <Box pad="small">
-              <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
               <DropdownLink to={routesEnum.lighthouse}>Lighthouse</DropdownLink>
-              <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
               <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+              <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+              <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
             </Box>
           }
         />

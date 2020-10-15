@@ -23,6 +23,8 @@ import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
+import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
+import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const RainbowBackground = styled.div`
@@ -48,6 +50,31 @@ const ClientContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 30px;
+`;
+const ChecklistAlert = styled.div`
+  display: flex;
+  margin-top: 3rem;
+  background: #5da2b2;
+  border-radius: 5px;
+  > div {
+    margin-left: 5rem;
+  }
+  .flex {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 720px) {
+    padding: 2rem 0;
+  }
+`;
+const Leslie = styled.img.attrs({ src: LeslieTheRhinoPNG })`
+  width: 200px;
+  transform: scale(-1.2, 1.2);
+  margin: 3rem 0 5rem 4rem;
+  @media only screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 interface OwnProps {}
@@ -192,6 +219,30 @@ const _CongratulationsPage = ({
               </>
             )}
           </div>
+
+          <ChecklistAlert>
+            <Leslie />
+            <div>
+              <div className="flex">
+                <Heading level={3} size="medium" color="white" margin="none">
+                  Complete the checklist
+                </Heading>
+                <Text color="white" className="mt10">
+                  You will need to complete the{' '}
+                  <strong>Staker Checklist</strong> before the Beaconchain
+                  starts.
+                </Text>
+                <Link to={routesEnum.checklistPage} className="mt10">
+                  <Button
+                    width={260}
+                    label="View the checklist"
+                    className="mt20"
+                  />
+                </Link>
+              </div>
+            </div>
+          </ChecklistAlert>
+
           <Heading
             level={3}
             size="medium"

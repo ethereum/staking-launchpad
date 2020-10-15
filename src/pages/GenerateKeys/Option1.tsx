@@ -52,7 +52,7 @@ export const Option1 = ({
           external
           to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
         >
-          here
+          ethereum/eth2.0-deposit-cli
         </Link>
         .
       </Text>

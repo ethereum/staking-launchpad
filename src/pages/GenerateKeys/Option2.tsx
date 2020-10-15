@@ -5,7 +5,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
+import { CHAIN_NAME } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const Pre = styled.pre`
@@ -142,7 +142,7 @@ export const Option2 = ({
         <Pre className="my0">
           python3 ./eth2deposit/deposit.py{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
-          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+          {`--chain ${CHAIN_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -152,7 +152,7 @@ export const Option2 = ({
         <Pre className="my0">
           .\eth2deposit\deposit.py{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
-          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+          {`--chain ${CHAIN_NAME.toLowerCase()}`}
         </Pre>
       );
     }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import _shuffle from 'lodash/shuffle';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
@@ -17,11 +16,6 @@ import {
   ETH_REQUIREMENT,
   PRICE_PER_VALIDATOR,
 } from '../../utils/envVars';
-import { ClientCard } from './ClientCard';
-import PrysmaticBg from '../../static/prysmatic-bg.png';
-import LighthouseBg from '../../static/lighthouse-bg.png';
-import NimbusBg from '../../static/nimbus-bg.png';
-import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { Button } from '../../components/Button';
@@ -45,12 +39,6 @@ const Content = styled.div`
   margin: 30px 0;
 `;
 
-const ClientContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 30px;
-`;
 const ChecklistAlert = styled.div`
   display: flex;
   margin-top: 3rem;
@@ -97,41 +85,6 @@ const _CongratulationsPage = ({
   workflow,
 }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
-
-  const clientInfo: Client[] = _shuffle([
-    {
-      header: 'Lighthouse',
-      text:
-        'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
-      imgUrl: LighthouseBg,
-      url: routesEnum.lighthouse,
-      linkText: 'Configure Lighthouse →',
-    },
-    {
-      header: 'Nimbus',
-      text:
-        'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
-      imgUrl: NimbusBg,
-      url: routesEnum.nimbus,
-      linkText: 'Configure Nimbus →',
-    },
-    {
-      header: 'Prysm',
-      text:
-        'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
-      imgUrl: PrysmaticBg,
-      url: routesEnum.prysm,
-      linkText: 'Configure Prysm →',
-    },
-    {
-      header: 'Teku',
-      text:
-        'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
-      imgUrl: TekuBg,
-      url: routesEnum.teku,
-      linkText: 'Configure Teku →',
-    },
-  ]);
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -242,37 +195,6 @@ const _CongratulationsPage = ({
               </div>
             </div>
           </ChecklistAlert>
-
-          <Heading
-            level={3}
-            size="medium"
-            color="blueDark"
-            margin="none"
-            className="mt30"
-          >
-            Choose your client
-          </Heading>
-          <Text>
-            Now that you’ve have made your deposit, it’s time to set up your
-            Beacon Node, import your keystores, and run your Validator. Do some
-            research into your client options:
-          </Text>
-          <Link className="mt10" to="/faq" primary withArrow>
-            Learn more about the roles and responsibilities of ETH 2 Validators
-          </Link>
-          <ClientContainer>
-            {clientInfo.map(client => (
-              <ClientCard
-                className="mt10"
-                header={client.header}
-                imgUrl={client.imgUrl}
-                text={client.text}
-                key={client.header}
-                url={client.url}
-                linkText={client.linkText}
-              />
-            ))}
-          </ClientContainer>
         </Content>
       </Gutter>
     </RainbowBackground>

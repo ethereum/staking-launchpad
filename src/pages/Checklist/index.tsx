@@ -40,24 +40,8 @@ export const Checklist = () => {
           <ul>
             <li className="py5">
               <Text>
-                We recommend you run the Validator Client (VC) on a separate
-                machine from your Beacon Node (BN). This is to ensure your
-                keystore(s) and password(s) are as secure as possible. Read{' '}
-                <Link
-                  primary
-                  external
-                  inline
-                  to="https://blog.ethereum.org/2019/11/27/validated-staking-on-eth2-0/"
-                >
-                  here
-                </Link>{' '}
-                to understand more about the architecture.
-              </Text>
-            </li>
-            <li className="py5">
-              <Text>
                 In order to process incoming validator deposits from the eth1
-                chain, you'll need to run an eth1 client in parallel to your
+                chain, you will need to run an eth1 client in parallel to your
                 eth2 client. While it is possible to use a third-party service
                 like Infura, we recommend running your own client in order to
                 ensure the network stays as decentralised as possible.
@@ -142,7 +126,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li>
               <Text>
-                <strong>Note:</strong> If you're setting up your client before
+                <strong>Note:</strong> If you are setting up your client before
                 phase 0 launch, it is your responsibility to check for any new
                 software releases in the run up to launch. There is a good
                 chance you will need to update your software.
@@ -235,7 +219,8 @@ export const Checklist = () => {
           />
         </section>
         <section>
-          <Heading level={3}>[Optional] Prometheus + Grafana monitor</Heading>
+          <Heading level={3}>Appendix</Heading>
+          <Heading level={4}>Prometheus + Grafana monitor</Heading>
           <Text>
             The Eth2 clients support Prometheus + Grafana to help you visualise
             important real-time metrics concerning your validator. You can find
@@ -253,7 +238,7 @@ export const Checklist = () => {
               primary
               inline
               external
-              to="https://status-im.github.io/nim-beacon-chain/metrics-pretty-pictures.html"
+              to="https://status-im.github.io/nimbus-eth2/metrics-pretty-pictures.html"
             >
               Nimbus
             </Link>{' '}
@@ -306,19 +291,16 @@ export const Checklist = () => {
               </Text>
             }
           />
-        </section>
-        <section>
-          <Heading level={3}>
-            [Optional]{' '}
+          <Heading level={4}>
             <Link primary inline external to="https://beaconcha.in/poap">
               POAP
             </Link>{' '}
             Graffiti
           </Heading>
           <Text>
-            You can use your validator client's graffiti flag to add a personal
-            touch to your proposed blocks (some text of your choice). You'll be
-            able to see it using the{' '}
+            You can use your validator client&apos;s graffiti flag to add a
+            personal touch to your proposed blocks (some text of your choice).
+            You will be able to see it using the{' '}
             <Link primary external inline to="block explorer">
               block explorer
             </Link>
@@ -331,6 +313,24 @@ export const Checklist = () => {
               </Text>
             }
           />
+          <Heading level={4}>Advanced system architecture</Heading>
+          <ul>
+            <li className="py5">
+              <Text>
+                To avoid exposing your validator identity to the network, you
+                can use a trustworthy VPN to help reduce the risk of revealing
+                your IP address.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                Moreover, you can set your Validator Client (VC) and Beacon Node
+                (BN) on separate machines and IPs so that even if your beacon
+                node is vulnerable, your keystore is stored on a different
+                machine.
+              </Text>
+            </li>
+          </ul>
         </section>
       </ChecklistPageStyles>
     </PageTemplate>

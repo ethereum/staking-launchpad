@@ -39,10 +39,16 @@ const ValidatorDropdown = styled(DropButton)`
   border: none;
   :hover {
     border: none;
+    text-decoration: underline;
     box-shadow: none;
   }
 `;
 const DropdownLink = styled(Link)`
+  :hover {
+    text-decoration: underline;
+  }
+`;
+const BarLink = styled(Link)`
   :hover {
     text-decoration: underline;
   }
@@ -74,18 +80,18 @@ export const AppBar = () => {
       style={{ zIndex: 1 }}
     >
       <div className="ml50 flex">
-        <Link to={routesEnum.landingPage} className="mx10">
+        <BarLink to={routesEnum.landingPage} className="mx10">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
             Eth2 Launch Pad{' '}
             {IS_MAINNET ? `` : ` for ${ETH2_NETWORK_NAME} testnet`}
           </Heading>
-        </Link>
-        <Link to={routesEnum.acknowledgementPage} className="mx10">
+        </BarLink>
+        <BarLink to={routesEnum.acknowledgementPage} className="mx10">
           <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
             Deposit
           </Heading>
-        </Link>
+        </BarLink>
         <ValidatorDropdown
           className="mx10 px0"
           label={
@@ -96,23 +102,23 @@ export const AppBar = () => {
           dropAlign={{ top: 'bottom', right: 'right' }}
           dropContent={
             <Box pad="small">
-              <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
               <DropdownLink to={routesEnum.lighthouse}>Lighthouse</DropdownLink>
-              <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
               <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+              <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+              <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
             </Box>
           }
         />
-        <Link to={routesEnum.checklistPage} className="mx10">
+        <BarLink to={routesEnum.checklistPage} className="mx10">
           <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
             Checklist
           </Heading>
-        </Link>
-        <Link to={routesEnum.FaqPage} className="mx10">
+        </BarLink>
+        <BarLink to={routesEnum.FaqPage} className="mx10">
           <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
             FAQ
           </Heading>
-        </Link>
+        </BarLink>
       </div>
 
       <div className="flex">

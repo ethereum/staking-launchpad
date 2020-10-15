@@ -40,7 +40,6 @@ const ClientContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
-  flex-wrap: wrap;
 `;
 
 interface Client {

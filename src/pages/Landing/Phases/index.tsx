@@ -55,7 +55,7 @@ const phases: phase[] = [
       'The duration for the deployment of the individual phases depends on many factors.',
     linkUrl:
       'https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/',
-    link: 'Phase 0, 1, 2 and 3 duration',
+    link: 'Phase 0, 1, and 2 duration',
     external: true,
   },
   {

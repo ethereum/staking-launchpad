@@ -48,6 +48,7 @@ import {
   TICKER_NAME,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import { MetamaskHardwareButton } from './MetamaskHardwareButton';
 
 // styled components
 const Container = styled.div`
@@ -333,6 +334,7 @@ const _ConnectWalletPage = ({
                 title="Fortmatic"
                 error={walletProvider === fortmatic ? error : undefined}
               />
+              <MetamaskHardwareButton />
             </WalletButtonSubContainer>
           </Animated>
         </WalletButtonContainer>

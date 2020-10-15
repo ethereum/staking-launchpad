@@ -77,11 +77,14 @@ export const Checklist = () => {
           <Heading level={3}>Keystore</Heading>
           <CheckBox
             label={
-              <Text className="checkbox-label">
-                I have securely generated and saved my keystore(s).
-              </Text>
+              <Text>I have securely generated and saved my keystore(s).</Text>
             }
           />
+          <CheckBox label={<Text>I have backed up my mnemonic.</Text>} />
+          <CheckBox
+            label={<Text>I have set a strong password for my keystore(s)</Text>}
+          />
+          <CheckBox label={<Text>I have backed up my password.</Text>} />
           <CheckBox
             label={
               <Text className="checkbox-label">

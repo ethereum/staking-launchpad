@@ -11,8 +11,8 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import useMobileCheck from '../../hooks/useMobileCheck';
+import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 
 interface mobile {
   isMobile: boolean;
@@ -109,9 +109,7 @@ const StyledLeslieImgNode = styled.img`
   }
   @media screen and (max-width: 800px) {
     max-width: 220px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     display: block;
   }
 `;
@@ -144,17 +142,19 @@ export const Hero = () => {
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
             <ContentContainer className={m ? undefined : 'pt100'}>
               <LefContentContainer>
-                <TitleContainer>
-                  <Animate enter="fadeIn" appear="fadeIn" delay={150}>
-                    <LogoContainer className={m ? 'mb50' : undefined}>
-                      <EthLogo src={EthDiamondPlain} />
-                      <LogoText>
-                        Eth2 Launch Pad{' '}
-                        {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
-                      </LogoText>
-                    </LogoContainer>
-                  </Animate>
-                </TitleContainer>
+                {isSmallScreen && (
+                  <TitleContainer>
+                    <Animate enter="fadeIn" appear="fadeIn" delay={150}>
+                      <LogoContainer className={m ? 'mb50' : undefined}>
+                        <EthLogo src={EthDiamondPlain} />
+                        <LogoText>
+                          Eth2 Launch Pad{' '}
+                          {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                        </LogoText>
+                      </LogoContainer>
+                    </Animate>
+                  </TitleContainer>
+                )}
                 <InfoContainer>
                   <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                     <Heading

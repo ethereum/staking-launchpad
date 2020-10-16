@@ -16,7 +16,10 @@ export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';
 export const CHAIN_NAME                 = process.env.REACT_APP_CHAIN_NAME          || 'Medalla';
 export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'GöETH';
-export const MIN_DEPOSIT_CLI_VERSION    = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION  || '0.2.1';  // 0.2.1 was for Medalla
+export const MIN_DEPOSIT_CLI_VERSION    = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION  || '0.4.1';  // 0.4.1 was for Zinken
+export const MIN_DEPOSIT_CLI_VERSION_LINUX_URL = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL  || 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-linux-amd64.tar.gz';
+export const MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL  || 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-windows-amd64.zip';
+export const MIN_DEPOSIT_CLI_VERSION_MAC_URL = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION_MACOS_URL  || 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-darwin-amd64.tar.gz';
 export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/become-a-validator.html';
 export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://status-im.github.io/nimbus-eth2/intro.html';
 export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/testnet/medalla/';
@@ -27,6 +30,17 @@ if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REAC
 }
 export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT     || 524288;
 
+// Check CLI version
+if(!MIN_DEPOSIT_CLI_VERSION_LINUX_URL.includes(MIN_DEPOSIT_CLI_VERSION)){
+    throw new Error("MIN_DEPOSIT_CLI_VERSION_LINUX_URL should be matched with MIN_DEPOSIT_CLI_VERSION")
+}
+if(!MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL.includes(MIN_DEPOSIT_CLI_VERSION)){
+    throw new Error("MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL should be matched with MIN_DEPOSIT_CLI_VERSION")
+}
+if(!MIN_DEPOSIT_CLI_VERSION_MAC_URL.includes(MIN_DEPOSIT_CLI_VERSION)){
+    throw new Error("MIN_DEPOSIT_CLI_VERSION_MAC_URL should be matched with MIN_DEPOSIT_CLI_VERSION")
+}
+
 let forkVersion = Buffer.from('00000001', 'hex')
 if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
     forkVersion = Buffer.from(process.env.REACT_APP_GENESIS_FORK_VERSION.replace(/0x/g, ''), 'hex');
@@ -34,7 +48,7 @@ if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
 export const GENESIS_FORK_VERSION = forkVersion;
 
 
-if(process.env.REACT_APP_PRICE_PER_VALIDATOR &&  Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
+if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
     throw new Error("REACT_APP_PRICE_PER_VALIDATOR must be of type: number")
 }
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;

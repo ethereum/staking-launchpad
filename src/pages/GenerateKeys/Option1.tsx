@@ -5,7 +5,13 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
-import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
+import {
+  CHAIN_NAME,
+  IS_MAINNET,
+  MIN_DEPOSIT_CLI_VERSION_LINUX_URL,
+  MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL,
+  MIN_DEPOSIT_CLI_VERSION_MAC_URL,
+} from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const Pre = styled.pre`
@@ -20,13 +26,10 @@ export const Option1 = ({
   os: string;
 }) => {
   const cliLink = React.useMemo(() => {
-    if (os === 'linux')
-      return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-darwin-amd64.tar.gz';
-    if (os === 'mac')
-      return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-linux-amd64.tar.gz';
-    if (os === 'windows')
-      return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-windows-amd64.zip';
-    return 'https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.4.1/eth2deposit-cli-3f4a79a-windows-amd64.zip';
+    if (os === 'linux') return MIN_DEPOSIT_CLI_VERSION_LINUX_URL;
+    if (os === 'mac') return MIN_DEPOSIT_CLI_VERSION_MAC_URL;
+    if (os === 'windows') return MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL;
+    return MIN_DEPOSIT_CLI_VERSION_WINDOWS_URL;
   }, [os]);
 
   const osName = React.useMemo(() => {

@@ -12,6 +12,7 @@ import { styledComponentsTheme } from './styles/styledComponentsTheme';
 import { Routes as RoutedContent } from './Routes';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { reducers } from './store/reducers';
+import { Footer } from './components/Footer';
 
 export const store = createStore(
   reducers,
@@ -36,6 +37,7 @@ export const App: React.FC = () => {
             <ThemeProvider theme={styledComponentsTheme}>
               <GlobalStyles />
               <RoutedContent />
+              <Footer />
             </ThemeProvider>
           </Grommet>
         </Provider>

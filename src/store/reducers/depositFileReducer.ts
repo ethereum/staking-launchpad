@@ -5,6 +5,12 @@
 import { Action, ActionTypes } from '../actions';
 import { TransactionStatus } from '../actions/depositFileActions';
 
+export enum DepositStatus {
+  VERIFYING,
+  ALREADY_DEPOSITED,
+  READY_FOR_DEPOSIT,
+}
+
 export interface DepositKeyInterface {
   pubkey: string;
   withdrawal_credentials: string;
@@ -16,6 +22,7 @@ export interface DepositKeyInterface {
   deposit_cli_version: string;
   transactionStatus: TransactionStatus;
   txHash?: string;
+  depositStatus: DepositStatus;
 }
 
 export interface DepositFileInterface {
@@ -57,6 +64,18 @@ export const depositFileReducer = (
     if (action.payload.txHash) {
       clonedKeys[indexOfFileToUpdate].txHash = action.payload.txHash;
     }
+
+    return { ...state, keys: clonedKeys };
+  }
+
+  if (action.type === ActionTypes.updateDepositStatus) {
+    const { keys } = state;
+    const clonedKeys = [...keys];
+    const indexOfFileToUpdate = keys.findIndex(
+      ({ pubkey }) => pubkey === action.payload.pubkey
+    );
+    clonedKeys[indexOfFileToUpdate].depositStatus =
+      action.payload.depositStatus;
 
     return { ...state, keys: clonedKeys };
   }

@@ -56,6 +56,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
+
   const handleActionClick = (depositKey: DepositKeyInterface) => {
     handleMultipleTransactions(
       [depositKey],
@@ -65,6 +66,10 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
     );
   };
 
+  React.useEffect(() => {
+    // loop to check depositStatus
+  }, []);
+t
   return (
     <CustomPaper className="mt20">
       <Box pad="small">

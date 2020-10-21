@@ -2,7 +2,7 @@
   eslint-disable camelcase
 */
 import { ActionTypes } from './index';
-import { DepositKeyInterface } from '../reducers';
+import { DepositStatus, DepositKeyInterface } from '../reducers';
 
 export enum TransactionStatus {
   'READY',
@@ -27,6 +27,13 @@ export interface UpdateTransactionStatusAction {
     pubkey: string;
     status: TransactionStatus;
     txHash?: string;
+  };
+}
+export interface UpdateDepositStatusAction {
+  type: ActionTypes.updateDepositStatus;
+  payload: {
+    pubkey: string;
+    depositStatus: DepositStatus;
   };
 }
 
@@ -75,3 +82,21 @@ export type DispatchTransactionStatusUpdateType = (
 ) => void;
 
 export type DispatchDepositFileNameUpdate = (name: string) => void;
+
+export const UpdateDepositStatus = (
+  pubkey: string,
+  depositStatus: DepositStatus
+): UpdateDepositStatusAction => {
+  return {
+    type: ActionTypes.updateDepositStatus,
+    payload: {
+      pubkey,
+      depositStatus,
+    },
+  };
+};
+
+export type DispatchDepositStatusUpdateType = (
+  pubkey: string,
+  depositStatus: DepositStatus
+) => void;

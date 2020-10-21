@@ -116,8 +116,9 @@ const _TransactionsPage = ({
     }
   };
 
-  if (workflow < WorkflowStep.TRANSACTION_SIGNING)
-    return routeToCorrectWorkflowStep(workflow);
+  // if (workflow < WorkflowStep.TRANSACTION_SIGNING) {
+  //   return routeToCorrectWorkflowStep(workflow);
+  // }
 
   if (!account || !connector) return <WalletDisconnected />;
 
@@ -146,7 +147,9 @@ const _TransactionsPage = ({
           />
         </div>
       </Paper>
+
       <KeyList />
+
       <div className="flex center p30 mt20">
         <Link to={routesEnum.summaryPage}>
           <Button className="mr10" width={100} label="Back" />

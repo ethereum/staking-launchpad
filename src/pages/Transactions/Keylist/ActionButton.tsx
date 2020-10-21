@@ -13,6 +13,7 @@ import {
   BEACONSCAN_URL,
   ETHERSCAN_URL,
 } from '../../../utils/envVars';
+import ReactTooltip from 'react-tooltip';
 
 const Container = styled.div`
   width: 100px;
@@ -75,11 +76,18 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.SUCCEEDED) {
     return (
       <div className="flex">
-        <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
-          <ButtonText className="mr5">
-            Beaconchain <Share size="small" />
-          </ButtonText>
-        </Link>
+        <span
+          data-for="beaconchain-warning"
+          data-tip="Note: Beaconchain may take several minutes to verify your deposit"
+        >
+          <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
+            <ButtonText className="mr5" data-tip>
+              Beaconchain <Share size="small" />
+            </ButtonText>
+          </Link>
+        </span>
+        <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
+
         <Link external to={`${BEACONSCAN_URL}/0x${pubkey}`}>
           <ButtonText>
             Beaconscan <Share size="small" />

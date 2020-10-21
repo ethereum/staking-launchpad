@@ -1,4 +1,5 @@
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Box, DropButton } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
@@ -24,7 +25,6 @@ const RainbowBackground = styled(Box)`
 const EthLogo = styled.img`
   height: 40px;
   width: 40px;
-  margin-right: 10px;
 `;
 
 const NetworkText = styled(Text)`
@@ -35,26 +35,40 @@ const NetworkText = styled(Text)`
   font-weight: 500;
 `;
 
+const NavBarLinks = styled.div`
+  display: flex;
+  @media only screen and (max-width: 1080px) {
+    .secondary-link {
+      display: none;
+    }
+  }
+`;
+
 const ValidatorDropdown = styled(DropButton)`
+  font-weight: 300;
   border: none;
   :hover {
     border: none;
-    text-decoration: underline;
     box-shadow: none;
   }
 `;
+
 const DropdownLink = styled(Link)`
   :hover {
     text-decoration: underline;
   }
 `;
-const BarLink = styled(Link)`
-  :hover {
-    text-decoration: underline;
-  }
-`;
 
-export const AppBar = () => {
+const BarLinkText = styled(Heading)`
+  :not(.no-padding) {
+    padding: 0 12px;
+  }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: ${(p: { active?: boolean }) => (p.active ? 'bold' : 300)};
+`;
+const _AppBar = ({ location }: RouteComponentProps) => {
   const {
     active: walletConnected,
     account,
@@ -69,6 +83,19 @@ export const AppBar = () => {
     networkAllowed = Object.values(AllowedNetworks).includes(network);
   }
 
+  const pathname: string = React.useMemo(() => location.pathname, [
+    location.pathname,
+  ]);
+
+  const isDropdownPage = React.useMemo(
+    () =>
+      pathname === routesEnum.lighthouse ||
+      pathname === routesEnum.nimbus ||
+      pathname === routesEnum.prysm ||
+      pathname === routesEnum.teku,
+    [pathname]
+  );
+
   return (
     <RainbowBackground
       tag="header"
@@ -79,25 +106,41 @@ export const AppBar = () => {
       elevation="medium"
       style={{ zIndex: 1 }}
     >
-      <div className="ml50 flex">
-        <BarLink to={routesEnum.landingPage} className="mx10">
+      <NavBarLinks>
+        <Link to={routesEnum.landingPage} className="mx30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
-            Eth2 Launch Pad{' '}
-            {IS_MAINNET ? `` : ` for ${ETH2_NETWORK_NAME} testnet`}
-          </Heading>
-        </BarLink>
-        <BarLink to={routesEnum.acknowledgementPage} className="mx10">
-          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+          <div className="flex flex-column center ml5">
+            <BarLinkText
+              active={pathname === routesEnum.landingPage}
+              level={4}
+              margin="none"
+              className="bar-link-text no-padding"
+            >
+              Eth2 Launch Pad
+            </BarLinkText>
+            {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
+          </div>
+        </Link>
+
+        <Link
+          to={routesEnum.acknowledgementPage}
+          className="mx30 secondary-link"
+        >
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.acknowledgementPage}
+          >
             Deposit
-          </Heading>
-        </BarLink>
+          </BarLinkText>
+        </Link>
         <ValidatorDropdown
-          className="mx10 px0"
+          className="secondary-link"
           label={
-            <Heading level={4} margin="none">
+            <BarLinkText level={4} margin="none" active={isDropdownPage}>
               Validator Clients
-            </Heading>
+            </BarLinkText>
           }
           dropAlign={{ top: 'bottom', right: 'right' }}
           dropContent={
@@ -109,17 +152,27 @@ export const AppBar = () => {
             </Box>
           }
         />
-        <BarLink to={routesEnum.checklistPage} className="mx10">
-          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+        <Link to={routesEnum.checklistPage} className="mx30 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.checklistPage}
+          >
             Checklist
-          </Heading>
-        </BarLink>
-        <BarLink to={routesEnum.FaqPage} className="mx10">
-          <Heading level={4} margin="none" style={{ padding: '12px 0' }}>
+          </BarLinkText>
+        </Link>
+        <Link to={routesEnum.FaqPage} className="mx30 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.FaqPage}
+          >
             FAQ
-          </Heading>
-        </BarLink>
-      </div>
+          </BarLinkText>
+        </Link>
+      </NavBarLinks>
 
       <div className="flex">
         <NetworkText>
@@ -138,3 +191,5 @@ export const AppBar = () => {
     </RainbowBackground>
   );
 };
+
+export const AppBar = withRouter(_AppBar);

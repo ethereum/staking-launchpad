@@ -128,7 +128,8 @@ const _TransactionsPage = ({
     <WorkflowPageTemplate title="Transactions">
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          Transactions for {depositKeys.length} validators
+          Transactions for {depositKeys.length} validator
+          {depositKeys.length === 1 ? '' : 's'}
         </Heading>
         <Text className="mt20">
           You must sign an individual transaction for each key you created.

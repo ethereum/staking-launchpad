@@ -2,14 +2,35 @@ import React from 'react';
 import { Spinning } from 'grommet-controls';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
-import { TransactionStatus } from '../../../store/actions/depositFileActions';
+import styled from 'styled-components';
+import { Alert as GrommetAlert } from 'grommet-icons/icons';
+import {
+  DepositStatus,
+  TransactionStatus,
+} from '../../../store/actions/depositFileActions';
 
 interface Props {
-  status: TransactionStatus;
+  transactionStatus: TransactionStatus;
+  depositStatus: DepositStatus;
 }
 
-export const Status = ({ status }: Props) => {
-  if (status === TransactionStatus.READY) {
+const AlertIcon = styled(p => <GrommetAlert {...p} />)`
+  display: block;
+  margin-right: 10px;
+  height: 23px;
+  stroke: red;
+`;
+
+export const Status = ({ transactionStatus, depositStatus }: Props) => {
+  if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
+    return (
+      <div className="flex">
+        <AlertIcon />
+        <Text color="redDark">Already Deposited</Text>
+      </div>
+    );
+  }
+  if (transactionStatus === TransactionStatus.READY) {
     return (
       <div className="flex">
         <Dot success className="mr5" />
@@ -17,7 +38,7 @@ export const Status = ({ status }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.PENDING) {
+  if (transactionStatus === TransactionStatus.PENDING) {
     return (
       <div className="flex">
         <Dot className="mr5" />
@@ -25,7 +46,7 @@ export const Status = ({ status }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.STARTED) {
+  if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
         <Spinning kind="pulse" />
@@ -33,7 +54,7 @@ export const Status = ({ status }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.SUCCEEDED) {
+  if (transactionStatus === TransactionStatus.SUCCEEDED) {
     return (
       <div className="flex">
         <Dot success className="mr5" />
@@ -41,7 +62,7 @@ export const Status = ({ status }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.FAILED) {
+  if (transactionStatus === TransactionStatus.FAILED) {
     return (
       <div className="flex">
         <Dot error className="mr5" />
@@ -49,7 +70,7 @@ export const Status = ({ status }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.REJECTED) {
+  if (transactionStatus === TransactionStatus.REJECTED) {
     return (
       <div className="flex">
         <Dot error className="mr5" />

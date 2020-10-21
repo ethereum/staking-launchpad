@@ -21,13 +21,19 @@ import { DepositKeyInterface, StoreState } from '../../../store/reducers';
 import { handleMultipleTransactions } from '../transactionUtils';
 import { web3ReactInterface } from '../../ConnectWallet';
 import {
+  DepositStatus,
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../../store/actions/depositFileActions';
 
-const CustomTableRow = styled(TableRow)`
-  background-color: ${(p: { theme: any }) => p.theme.purple.light};
+const CustomTableRow = styled(p => <TableRow {...p} />)`
+  background-color: ${(p: any) => {
+    if (p.header) return p.theme.purple.light;
+    if (p.invalid) return p.theme.red.lightest;
+    return undefined;
+  }};
 `;
+
 const CustomPaper = styled(Paper)`
   display: block;
   height: 280px;
@@ -57,7 +63,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
     Web3Provider
   >();
 
-  const handleActionClick = (depositKey: DepositKeyInterface) => {
+  const handleActionClick = (depositKey: DepositKeyInterface): void => {
     handleMultipleTransactions(
       [depositKey],
       connector as AbstractConnector,
@@ -66,16 +72,12 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
     );
   };
 
-  React.useEffect(() => {
-    // loop to check depositStatus
-  }, []);
-t
   return (
     <CustomPaper className="mt20">
       <Box pad="small">
         <CustomTable>
           <TableHeader>
-            <CustomTableRow>
+            <CustomTableRow header>
               <TableCell scope="col" border="bottom">
                 Validator Public Key
               </TableCell>
@@ -89,26 +91,38 @@ t
           </TableHeader>
           <TableBody>
             {depositKeys.map(depositKey => {
-              const { pubkey, transactionStatus, txHash } = depositKey;
+              const {
+                pubkey,
+                transactionStatus,
+                txHash,
+                depositStatus,
+              } = depositKey;
               return (
-                <TableRow key={pubkey}>
+                <CustomTableRow
+                  key={pubkey}
+                  invalid={depositStatus === DepositStatus.ALREADY_DEPOSITED}
+                >
                   <TableCell>
                     <Text className="dont-break-out">
                       {`${pubkey.slice(0, 10)}...${pubkey.slice(-10)}`}
                     </Text>
                   </TableCell>
                   <TableCell>
-                    <Status status={transactionStatus} />
+                    <Status
+                      transactionStatus={transactionStatus}
+                      depositStatus={depositStatus}
+                    />
                   </TableCell>
                   <TableCell>
                     <ActionButton
                       onClick={() => handleActionClick(depositKey)}
-                      status={transactionStatus}
+                      transactionStatus={transactionStatus}
+                      depositStatus={depositStatus}
                       txHash={txHash}
                       pubkey={pubkey}
                     />
                   </TableCell>
-                </TableRow>
+                </CustomTableRow>
               );
             })}
           </TableBody>

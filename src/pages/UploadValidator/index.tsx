@@ -11,14 +11,20 @@ import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
 import { Code } from '../../components/Code';
-import { validateDepositKey } from './validateDepositKey';
+import {
+  checkDoubleDepositStatus,
+  validateDepositKey,
+} from './validateDepositKey';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import {
+  DepositStatus,
   DispatchDepositFileNameUpdateType,
   DispatchDepositKeysUpdateType,
+  DispatchDepositStatusUpdateType,
   TransactionStatus,
   updateDepositFileKeys,
   updateDepositFileName,
+  updateDepositStatus,
 } from '../../store/actions/depositFileActions';
 import {
   DispatchWorkflowUpdateType,
@@ -26,10 +32,9 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
-  GENESIS_FORK_VERSION,
   ETH2_NETWORK_NAME,
+  GENESIS_FORK_VERSION,
   IS_MAINNET,
 } from '../../utils/envVars';
 
@@ -80,6 +85,7 @@ interface DispatchProps {
   dispatchDepositFileKeyUpdate: DispatchDepositKeysUpdateType;
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
   dispatchDepositFileNameUpdate: DispatchDepositFileNameUpdateType;
+  dispatchDepositStatusUpdate: DispatchDepositStatusUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
@@ -90,6 +96,7 @@ const _UploadValidatorPage = ({
   depositFileName,
   dispatchDepositFileNameUpdate,
   dispatchWorkflowUpdate,
+  dispatchDepositStatusUpdate,
 }: Props): JSX.Element => {
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
@@ -171,8 +178,24 @@ const _UploadValidatorPage = ({
                 fileData.map((file: DepositKeyInterface) => ({
                   ...file,
                   transactionStatus: TransactionStatus.READY, // initialize each file with ready state for transaction
+                  depositStatus: DepositStatus.VERIFYING, // assign to verifying status until the pubkey is checked via beaconscan
                 }))
               );
+
+              // perform double deposit check
+              (fileData as DepositKeyInterface[]).forEach(async file => {
+                if (await checkDoubleDepositStatus(file)) {
+                  dispatchDepositStatusUpdate(
+                    file.pubkey,
+                    DepositStatus.READY_FOR_DEPOSIT
+                  );
+                } else {
+                  dispatchDepositStatusUpdate(
+                    file.pubkey,
+                    DepositStatus.ALREADY_DEPOSITED
+                  );
+                }
+              });
             } else {
               // file is JSON but did not pass BLS, so leave it "staged" but not "accepted"
               setIsFileAccepted(false);
@@ -276,8 +299,9 @@ const _UploadValidatorPage = ({
     handleFileDelete,
   ]);
 
-  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE)
-    return routeToCorrectWorkflowStep(workflow);
+  // if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE) {
+  //   return routeToCorrectWorkflowStep(workflow);
+  // }
 
   return (
     <WorkflowPageTemplate title="Upload Deposit File">
@@ -338,6 +362,8 @@ const mapStateToProps = (state: StoreState): StateProps => ({
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   dispatchDepositFileNameUpdate: name => dispatch(updateDepositFileName(name)),
+  dispatchDepositStatusUpdate: (pubkey, depositStatus) =>
+    dispatch(updateDepositStatus(pubkey, depositStatus)),
   dispatchDepositFileKeyUpdate: files => dispatch(updateDepositFileKeys(files)),
   dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
 });

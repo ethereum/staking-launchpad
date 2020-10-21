@@ -3,13 +3,10 @@
 */
 
 import { Action, ActionTypes } from '../actions';
-import { TransactionStatus } from '../actions/depositFileActions';
-
-export enum DepositStatus {
-  VERIFYING,
-  ALREADY_DEPOSITED,
-  READY_FOR_DEPOSIT,
-}
+import {
+  DepositStatus,
+  TransactionStatus,
+} from '../actions/depositFileActions';
 
 export interface DepositKeyInterface {
   pubkey: string;

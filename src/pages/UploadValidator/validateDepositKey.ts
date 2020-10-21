@@ -3,6 +3,8 @@
  */
 import _every from 'lodash/every';
 import { initBLS } from '@chainsafe/bls';
+import compareVersions from 'compare-versions';
+import axios from 'axios';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
 import { DepositKeyInterface } from '../../store/reducers';
@@ -11,7 +13,6 @@ import {
   MIN_DEPOSIT_AMOUNT,
   MIN_DEPOSIT_CLI_VERSION,
 } from '../../utils/envVars';
-import compareVersions from 'compare-versions';
 
 const validateFieldFormatting = (
   depositDatum: DepositKeyInterface
@@ -96,4 +97,13 @@ export const validateDepositKey = async (
     return verifySignature(depositDatum);
   });
   return _every(depositKeysStatuses);
+};
+
+export const checkDoubleDepositStatus = async (
+  keyFile: DepositKeyInterface
+) => {
+  const beaconScanUrl = `https://beaconcha.in/api/v1/validator/${keyFile.pubkey}/deposits`;
+  const beaconScanCheck = await axios.get(beaconScanUrl);
+  console.log(beaconScanCheck);
+  return beaconScanCheck.data.data.length === 0;
 };

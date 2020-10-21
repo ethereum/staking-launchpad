@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { TransactionStatus } from '../../../store/actions/depositFileActions';
+import {
+  DepositStatus,
+  TransactionStatus,
+} from '../../../store/actions/depositFileActions';
 import {
   ALETHIO_URL,
-  ETHERSCAN_URL,
-  BEACONSCAN_URL,
   BEACONCHAIN_URL,
+  BEACONSCAN_URL,
+  ETHERSCAN_URL,
 } from '../../../utils/envVars';
 
 const Container = styled.div`
@@ -25,14 +28,24 @@ const ButtonText = styled(Text)`
 `;
 
 interface Props {
-  status: TransactionStatus;
+  transactionStatus: TransactionStatus;
+  depositStatus: DepositStatus;
   txHash?: string;
   onClick: (e: any) => void;
   pubkey?: string;
 }
 
-export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
-  if (status === TransactionStatus.READY) {
+export const ActionButton = ({
+  transactionStatus,
+  depositStatus,
+  txHash,
+  onClick,
+  pubkey,
+}: Props) => {
+  if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
+    return null;
+  }
+  if (transactionStatus === TransactionStatus.READY) {
     return (
       <Container onClick={onClick}>
         <ButtonText>Start</ButtonText>
@@ -40,10 +53,10 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
       </Container>
     );
   }
-  if (status === TransactionStatus.PENDING) {
+  if (transactionStatus === TransactionStatus.PENDING) {
     return <div className="flex" />;
   }
-  if (status === TransactionStatus.STARTED) {
+  if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
         <Link external to={`${ALETHIO_URL}/${txHash}`}>
@@ -59,7 +72,7 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.SUCCEEDED) {
+  if (transactionStatus === TransactionStatus.SUCCEEDED) {
     return (
       <div className="flex">
         <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
@@ -77,8 +90,8 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
   }
 
   if (
-    status === TransactionStatus.FAILED ||
-    status === TransactionStatus.REJECTED
+    transactionStatus === TransactionStatus.FAILED ||
+    transactionStatus === TransactionStatus.REJECTED
   ) {
     return (
       <Container onClick={onClick}>

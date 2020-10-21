@@ -59,8 +59,6 @@ const DropdownLink = styled(Link)`
   }
 `;
 
-const BarLink = styled(Link)``;
-
 const BarLinkText = styled(Heading)`
   :not(.no-padding) {
     padding: 0 12px;
@@ -109,7 +107,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       style={{ zIndex: 1 }}
     >
       <NavBarLinks>
-        <BarLink to={routesEnum.landingPage} className="mx30">
+        <Link to={routesEnum.landingPage} className="mx30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           <div className="flex flex-column center ml5">
             <BarLinkText
@@ -122,9 +120,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </BarLinkText>
             {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
           </div>
-        </BarLink>
+        </Link>
 
-        <BarLink
+        <Link
           to={routesEnum.acknowledgementPage}
           className="mx30 secondary-link"
         >
@@ -136,7 +134,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           >
             Deposit
           </BarLinkText>
-        </BarLink>
+        </Link>
         <ValidatorDropdown
           className="secondary-link"
           label={
@@ -154,7 +152,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Box>
           }
         />
-        <BarLink to={routesEnum.checklistPage} className="mx30 secondary-link">
+        <Link to={routesEnum.checklistPage} className="mx30 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -163,8 +161,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           >
             Checklist
           </BarLinkText>
-        </BarLink>
-        <BarLink to={routesEnum.FaqPage} className="mx30 secondary-link">
+        </Link>
+        <Link to={routesEnum.FaqPage} className="mx30 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -173,7 +171,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           >
             FAQ
           </BarLinkText>
-        </BarLink>
+        </Link>
       </NavBarLinks>
 
       <div className="flex">

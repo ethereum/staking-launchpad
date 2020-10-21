@@ -35,6 +35,15 @@ const NetworkText = styled(Text)`
   font-weight: 500;
 `;
 
+const NavBarLinks = styled.div`
+  display: flex;
+  @media only screen and (max-width: 1080px) {
+    .secondary-link {
+      display: none;
+    }
+  }
+`;
+
 const ValidatorDropdown = styled(DropButton)`
   font-weight: 300;
   border: none;
@@ -99,7 +108,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       elevation="medium"
       style={{ zIndex: 1 }}
     >
-      <div className="ml50 flex">
+      <NavBarLinks>
         <BarLink to={routesEnum.landingPage} className="mx30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           <div className="flex flex-column center ml5">
@@ -114,7 +123,11 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
           </div>
         </BarLink>
-        <BarLink to={routesEnum.acknowledgementPage} className="mx30">
+
+        <BarLink
+          to={routesEnum.acknowledgementPage}
+          className="mx30 secondary-link"
+        >
           <BarLinkText
             level={4}
             margin="none"
@@ -125,6 +138,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           </BarLinkText>
         </BarLink>
         <ValidatorDropdown
+          className="secondary-link"
           label={
             <BarLinkText level={4} margin="none" active={isDropdownPage}>
               Validator Clients
@@ -140,7 +154,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Box>
           }
         />
-        <BarLink to={routesEnum.checklistPage} className="mx30">
+        <BarLink to={routesEnum.checklistPage} className="mx30 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -150,7 +164,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             Checklist
           </BarLinkText>
         </BarLink>
-        <BarLink to={routesEnum.FaqPage} className="mx30">
+        <BarLink to={routesEnum.FaqPage} className="mx30 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -160,7 +174,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             FAQ
           </BarLinkText>
         </BarLink>
-      </div>
+      </NavBarLinks>
 
       <div className="flex">
         <NetworkText>

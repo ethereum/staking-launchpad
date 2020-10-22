@@ -13,6 +13,7 @@ import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
+import { colors } from '../../styles/styledComponentsTheme';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -134,7 +135,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                I have set a strong password for my keystore(s)
+                I have set a strong password for my keystore(s).
               </Text>
             }
           />
@@ -151,7 +152,71 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                I have set up a firewall on my machine(s).{' '}
+                I have secured the root account.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have hardened ssh on a random port.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">I have set up a firewall.</Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have forwarded the necessary ports from my router to the
+                correct machine(s). Only open the ports that apply to your
+                installation (default ports listed):{' '}
+              </Text>
+            }
+          />
+          <ul className="sub-checklist-item">
+            <li>
+              <Text>
+                <strong>geth</strong>: Port 30303 TCP/UDP
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Lighthouse</strong>: Port 9000 TCP/UDP
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Nimbus</strong>: Port 19000 TCP/UDP
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Prysm</strong>: Port 12000 UDP, Port 13000 TCP
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <strong>Teku</strong>: Port 9001 TCP/UDP
+              </Text>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={3}>Configure time sync</Heading>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                For Ubuntu 20.04:
+                <pre className="my0">
+                  <span style={{ color: colors.red.medium }}>
+                    {' '}
+                    sudo timedatectl set-ntp on
+                  </span>
+                </pre>
               </Text>
             }
           />

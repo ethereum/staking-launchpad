@@ -1,9 +1,9 @@
 import React from 'react';
 import { Spinning } from 'grommet-controls';
-import { Text } from '../../../components/Text';
-import { Dot } from '../../../components/Dot';
 import styled from 'styled-components';
 import { Alert as GrommetAlert } from 'grommet-icons/icons';
+import { Text } from '../../../components/Text';
+import { Dot } from '../../../components/Dot';
 import {
   DepositStatus,
   TransactionStatus,
@@ -26,7 +26,7 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <AlertIcon />
-        <Text color="redDark">Already Deposited</Text>
+        <Text color="redDark">Deposit Already Exists</Text>
       </div>
     );
   }

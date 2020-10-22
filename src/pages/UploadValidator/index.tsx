@@ -21,10 +21,13 @@ import {
   DispatchDepositFileNameUpdateType,
   DispatchDepositKeysUpdateType,
   DispatchDepositStatusUpdateType,
+  DispatchBeaconChainAPIStatusUpdateType,
   TransactionStatus,
   updateDepositFileKeys,
   updateDepositFileName,
   updateDepositStatus,
+  updateBeaconChainAPIStatus,
+  BeaconChainStatus,
 } from '../../store/actions/depositFileActions';
 import {
   DispatchWorkflowUpdateType,
@@ -86,6 +89,7 @@ interface DispatchProps {
   dispatchWorkflowUpdate: DispatchWorkflowUpdateType;
   dispatchDepositFileNameUpdate: DispatchDepositFileNameUpdateType;
   dispatchDepositStatusUpdate: DispatchDepositStatusUpdateType;
+  dispatchBeaconChainAPIStatusUpdate: DispatchBeaconChainAPIStatusUpdateType;
 }
 type Props = StateProps & DispatchProps & OwnProps;
 
@@ -97,6 +101,7 @@ const _UploadValidatorPage = ({
   dispatchDepositFileNameUpdate,
   dispatchWorkflowUpdate,
   dispatchDepositStatusUpdate,
+  dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
@@ -184,16 +189,20 @@ const _UploadValidatorPage = ({
 
               // perform double deposit check
               (fileData as DepositKeyInterface[]).forEach(async file => {
-                if (await checkDoubleDepositStatus(file)) {
-                  dispatchDepositStatusUpdate(
-                    file.pubkey,
-                    DepositStatus.READY_FOR_DEPOSIT
-                  );
-                } else {
-                  dispatchDepositStatusUpdate(
-                    file.pubkey,
-                    DepositStatus.ALREADY_DEPOSITED
-                  );
+                try {
+                  if (await checkDoubleDepositStatus(file)) {
+                    dispatchDepositStatusUpdate(
+                      file.pubkey,
+                      DepositStatus.READY_FOR_DEPOSIT
+                    );
+                  } else {
+                    dispatchDepositStatusUpdate(
+                      file.pubkey,
+                      DepositStatus.ALREADY_DEPOSITED
+                    );
+                  }
+                } catch (error) {
+                  dispatchBeaconChainAPIStatusUpdate(BeaconChainStatus.DOWN);
                 }
               });
             } else {
@@ -366,6 +375,8 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
     dispatch(updateDepositStatus(pubkey, depositStatus)),
   dispatchDepositFileKeyUpdate: files => dispatch(updateDepositFileKeys(files)),
   dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
+  dispatchBeaconChainAPIStatusUpdate: status =>
+    dispatch(updateBeaconChainAPIStatus(status)),
 });
 
 export const UploadValidatorPage = connect<

@@ -25,6 +25,7 @@ import {
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../../store/actions/depositFileActions';
+import ReactTooltip from 'react-tooltip';
 
 const CustomTableRow = styled(p => <TableRow {...p} />)`
   background-color: ${(p: any) => {
@@ -90,7 +91,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
             </CustomTableRow>
           </TableHeader>
           <TableBody>
-            {depositKeys.map(depositKey => {
+            {depositKeys.map((depositKey, i) => {
               const {
                 pubkey,
                 transactionStatus,
@@ -99,6 +100,8 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
               } = depositKey;
               return (
                 <CustomTableRow
+                  data-for={`double-deposit-${i}`}
+                  data-tip="Your initial deposit has already been made for this validator public key. Please check the status of your deposit on the Beaconchain data provider."
                   key={pubkey}
                   invalid={depositStatus === DepositStatus.ALREADY_DEPOSITED}
                 >
@@ -108,6 +111,11 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
                     </Text>
                   </TableCell>
                   <TableCell>
+                    <ReactTooltip
+                      id={`double-deposit-${i}`}
+                      place="top"
+                      effect="solid"
+                    />
                     <Status
                       transactionStatus={transactionStatus}
                       depositStatus={depositStatus}

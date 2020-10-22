@@ -44,7 +44,13 @@ export const ActionButton = ({
   pubkey,
 }: Props) => {
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
-    return null;
+    return (
+      <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
+        <ButtonText className="mr5" data-tip>
+          Beaconchain <Share size="small" />
+        </ButtonText>
+      </Link>
+    );
   }
   if (transactionStatus === TransactionStatus.READY) {
     return (

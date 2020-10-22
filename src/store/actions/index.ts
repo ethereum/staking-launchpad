@@ -4,6 +4,7 @@ import {
   UpdateDepositFileKeysAction,
   UpdateTransactionStatusAction,
   UpdateDepositStatusAction,
+  UpdateBeaconChainAPIStatusAction,
 } from './depositFileActions';
 import { UpdateWorkflowAction } from './workflowActions';
 import { UpdateClientAction } from './clientActions';
@@ -16,6 +17,7 @@ export enum ActionTypes {
   updateDepositStatus,
   updateWorkflow,
   updateClient,
+  updateBeaconChainAPIStatus,
 }
 
 export type Action =
@@ -25,4 +27,5 @@ export type Action =
   | UpdateDepositStatusAction
   | UpdateWorkflowAction
   | UpdateDepositFileNameAction
-  | UpdateClientAction;
+  | UpdateClientAction
+  | UpdateBeaconChainAPIStatusAction;

@@ -4,6 +4,7 @@
 
 import { Action, ActionTypes } from '../actions';
 import {
+  BeaconChainStatus,
   DepositStatus,
   TransactionStatus,
 } from '../actions/depositFileActions';
@@ -24,11 +25,13 @@ export interface DepositKeyInterface {
 
 export interface DepositFileInterface {
   name: string;
+  beaconChainApiStatus: BeaconChainStatus;
   keys: DepositKeyInterface[];
 }
 
 const initialState: DepositFileInterface = {
   name: '',
+  beaconChainApiStatus: BeaconChainStatus.HEALTHY,
   keys: [],
 };
 
@@ -75,6 +78,13 @@ export const depositFileReducer = (
       action.payload.depositStatus;
 
     return { ...state, keys: clonedKeys };
+  }
+
+  if (action.type === ActionTypes.updateBeaconChainAPIStatus) {
+    return {
+      ...state,
+      beaconChainApiStatus: action.payload,
+    };
   }
   return state;
 };

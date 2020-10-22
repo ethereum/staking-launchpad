@@ -103,7 +103,11 @@ export const checkDoubleDepositStatus = async (
   keyFile: DepositKeyInterface
 ) => {
   const beaconScanUrl = `https://beaconcha.in/api/v1/validator/${keyFile.pubkey}/deposits`;
-  const beaconScanCheck = await axios.get(beaconScanUrl);
-  console.log(beaconScanCheck);
-  return beaconScanCheck.data.data.length === 0;
+  const { data: beaconScanCheck } = await axios.get(beaconScanUrl);
+
+  if (!beaconScanCheck.data || beaconScanCheck.status !== 'OK') {
+    throw new Error('Beaconchain API is down');
+  }
+  // if beaconchain returns any information for the pubkey, it has already been uploaded, so this check returns false
+  return beaconScanCheck.data.length === 0;
 };

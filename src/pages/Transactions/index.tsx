@@ -20,8 +20,8 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
+  DepositStatus,
   DispatchTransactionStatusUpdateType,
   TransactionStatus,
   updateTransactionStatus,
@@ -59,17 +59,23 @@ const _TransactionsPage = ({
     Web3Provider
   >();
 
-  const totalTxCount = depositKeys.length;
+  const totalTxCount = depositKeys.filter(
+    key => key.depositStatus === DepositStatus.READY_FOR_DEPOSIT
+  ).length;
+
   const remainingTxCount = depositKeys.filter(
     file =>
-      file.transactionStatus === TransactionStatus.READY ||
-      file.transactionStatus === TransactionStatus.REJECTED
+      file.depositStatus === DepositStatus.READY_FOR_DEPOSIT &&
+      (file.transactionStatus === TransactionStatus.READY ||
+        file.transactionStatus === TransactionStatus.REJECTED)
   ).length;
+
   const allTxConfirmed = _every(
     depositKeys.map(
       file => file.transactionStatus === TransactionStatus.SUCCEEDED
     )
   );
+
   const oneTxConfirmed = _some(
     depositKeys.map(
       file => file.transactionStatus === TransactionStatus.SUCCEEDED
@@ -80,7 +86,7 @@ const _TransactionsPage = ({
     if (totalTxCount === 1) {
       return 'Initiate the transaction.';
     }
-    if (totalTxCount === remainingTxCount) {
+    if (totalTxCount === remainingTxCount && totalTxCount > 0) {
       return `Initiate all ${totalTxCount} transactions`;
     }
     if (remainingTxCount > 1) {

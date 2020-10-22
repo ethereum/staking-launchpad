@@ -33,6 +33,7 @@ import {
 import { Alert } from '../../components/Alert';
 import { Alert as GrommetAlert } from 'grommet-icons';
 import { BeaconChainStatus } from '../../store/actions/depositFileActions';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -93,9 +94,9 @@ const _SummaryPage = ({
     }
   };
 
-  // if (workflow < WorkflowStep.SUMMARY) {
-  //   return routeToCorrectWorkflowStep(workflow);
-  // }
+  if (workflow < WorkflowStep.SUMMARY) {
+    return routeToCorrectWorkflowStep(workflow);
+  }
 
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID) return <WrongNetwork />;

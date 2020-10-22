@@ -61,7 +61,7 @@ const _TransactionsPage = ({
   >();
 
   const totalTxCount = depositKeys.filter(
-    key => key.depositStatus === DepositStatus.READY_FOR_DEPOSIT
+    key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
   ).length;
 
   const remainingTxCount = depositKeys.filter(
@@ -110,7 +110,9 @@ const _TransactionsPage = ({
 
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
-      depositKeys,
+      depositKeys.filter(
+        key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
+      ),
       connector as AbstractConnector,
       account,
       dispatchTransactionStatusUpdate

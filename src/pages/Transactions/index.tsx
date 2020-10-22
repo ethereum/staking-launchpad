@@ -32,6 +32,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { IS_MAINNET } from '../../utils/envVars';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const NETWORK_ID = IS_MAINNET
   ? NetworkChainId.Mainnet
@@ -122,9 +123,9 @@ const _TransactionsPage = ({
     }
   };
 
-  // if (workflow < WorkflowStep.TRANSACTION_SIGNING) {
-  //   return routeToCorrectWorkflowStep(workflow);
-  // }
+  if (workflow < WorkflowStep.TRANSACTION_SIGNING) {
+    return routeToCorrectWorkflowStep(workflow);
+  }
 
   if (!account || !connector) return <WalletDisconnected />;
 

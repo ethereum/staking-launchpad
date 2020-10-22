@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 import { Dispatch } from 'redux';
 import {
   Box,
@@ -25,7 +26,6 @@ import {
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../../store/actions/depositFileActions';
-import ReactTooltip from 'react-tooltip';
 
 const CustomTableRow = styled(p => <TableRow {...p} />)`
   background-color: ${(p: any) => {
@@ -111,11 +111,13 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
                     </Text>
                   </TableCell>
                   <TableCell>
-                    <ReactTooltip
-                      id={`double-deposit-${i}`}
-                      place="top"
-                      effect="solid"
-                    />
+                    {depositStatus === DepositStatus.ALREADY_DEPOSITED && (
+                      <ReactTooltip
+                        id={`double-deposit-${i}`}
+                        place="top"
+                        effect="solid"
+                      />
+                    )}
                     <Status
                       transactionStatus={transactionStatus}
                       depositStatus={depositStatus}

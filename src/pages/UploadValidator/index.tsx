@@ -40,6 +40,7 @@ import {
   GENESIS_FORK_VERSION,
   IS_MAINNET,
 } from '../../utils/envVars';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -308,9 +309,9 @@ const _UploadValidatorPage = ({
     handleFileDelete,
   ]);
 
-  // if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE) {
-  //   return routeToCorrectWorkflowStep(workflow);
-  // }
+  if (workflow < WorkflowStep.UPLOAD_VALIDATOR_FILE) {
+    return routeToCorrectWorkflowStep(workflow);
+  }
 
   return (
     <WorkflowPageTemplate title="Upload Deposit File">

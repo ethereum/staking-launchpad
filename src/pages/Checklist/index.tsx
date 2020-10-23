@@ -43,6 +43,26 @@ const ClientContainer = styled.div`
   margin-top: 30px;
 `;
 
+const PortTable = styled.table`
+  margin: 1rem auto;
+  color: #212529;
+
+  th,
+  td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+
+  thead th {
+    vertical-align: bottom;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+`;
+
 interface Client {
   header: string;
   text: string;
@@ -117,14 +137,11 @@ export const Checklist = () => {
           <Heading level={3}>Keystore</Heading>
           <CheckBox
             label={
-              <Text>I have securely generated and saved my keystore(s).</Text>
+              <Text className="checkbox-label">
+                I have securely generated and saved my keystore(s).
+              </Text>
             }
           />
-          <CheckBox label={<Text>I have backed up my mnemonic.</Text>} />
-          <CheckBox
-            label={<Text>I have set a strong password for my keystore(s)</Text>}
-          />
-          <CheckBox label={<Text>I have backed up my password.</Text>} />
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -135,7 +152,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                I have set a strong password for my keystore(s).
+                I have set a strong password for my keystore(s)
               </Text>
             }
           />
@@ -173,43 +190,46 @@ export const Checklist = () => {
               <Text className="checkbox-label">
                 I have forwarded the necessary ports from my router to the
                 correct machine(s). Only open the ports that apply to your
-                installation (default ports listed):{' '}
+                installation.
               </Text>
             }
           />
-          <ul className="sub-checklist-item">
-            <li>
-              <Text>
-                <strong>geth</strong>: Port 30303 TCP/UDP
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <strong>Lighthouse</strong>: Port 9000 TCP/UDP
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <strong>Nimbus</strong>: Port 19000 TCP/UDP
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <strong>Prysm</strong>: Port 12000 UDP, Port 13000 TCP
-              </Text>
-            </li>
-            <li>
-              <Text>
-                <strong>Teku</strong>: Port 9001 TCP/UDP
-              </Text>
-            </li>
-          </ul>
+          <PortTable>
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Default Port</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>geth</td>
+                <td>30303 TCP/UDP</td>
+              </tr>
+              <tr>
+                <td>Lighthouse</td>
+                <td>9000 TCP/UDP</td>
+              </tr>
+              <tr>
+                <td>Nimbus</td>
+                <td>12000 UDP, 13000 TCP</td>
+              </tr>
+              <tr>
+                <td>Prysm</td>
+                <td>12000 UDP, 13000 TCP</td>
+              </tr>
+              <tr>
+                <td>Teku</td>
+                <td>9001 TCP/UDP</td>
+              </tr>
+            </tbody>
+          </PortTable>
         </section>
         <section>
           <Heading level={3}>Configure time sync</Heading>
           <CheckBox
             label={
-              <Text className="checkbox-label">
+              <Text className="checkbox-label" style={{ display: 'inherit' }}>
                 For Ubuntu 20.04:
                 <pre className="my0">
                   <span style={{ color: colors.red.medium }}>

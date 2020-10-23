@@ -212,7 +212,7 @@ export const Checklist = () => {
               </tr>
               <tr>
                 <td>Nimbus</td>
-                <td>12000 UDP, 13000 TCP</td>
+                <td>9000 UDP/TCP</td>
               </tr>
               <tr>
                 <td>Prysm</td>
@@ -220,7 +220,7 @@ export const Checklist = () => {
               </tr>
               <tr>
                 <td>Teku</td>
-                <td>9001 TCP/UDP</td>
+                <td>9000 TCP/UDP</td>
               </tr>
             </tbody>
           </PortTable>

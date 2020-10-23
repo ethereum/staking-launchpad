@@ -163,20 +163,6 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have backed up my mnemonic.
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have set a strong password for my keystore(s).
-              </Text>
-            }
-          />
         </section>
         <section>
           <Heading level={3}>Security</Heading>
@@ -211,7 +197,7 @@ export const Checklist = () => {
           <PortTable>
             <thead>
               <tr>
-                <th>Validator</th>
+                <th>Service</th>
                 <th>Default Port</th>
               </tr>
             </thead>

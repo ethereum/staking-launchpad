@@ -221,8 +221,10 @@ const _SummaryPage = ({
             checked={duplicatesAcknowledged}
             label={
               <Text>
-                I understand that sending a duplicate transaction will result in
-                a loss of funds.
+                I understand that sending a deposit more than once will result
+                in my validator's balance exceeding 32 ETH, and that there is no
+                advantage to this since a validator's maximum stake is limited
+                to 32 ETH.
               </Text>
             }
           />

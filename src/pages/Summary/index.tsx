@@ -221,7 +221,7 @@ const _SummaryPage = ({
             checked={duplicatesAcknowledged}
             label={
               <Text>
-                I understand that sending a duplicate transaction will result in
+                I understand that sending a duplicate deposit will result in
                 a loss of funds.
               </Text>
             }

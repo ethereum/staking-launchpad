@@ -282,8 +282,9 @@ export const Option2 = ({
             --chain {ETH2_NETWORK_NAME.toLowerCase()}
           </span>{' '}
           for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
-          {ETH2_NETWORK_NAME.toLowerCase().slice(1)} testnet, otherwise the
-          deposit will be invalid.
+          {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
+          {ETH2_NETWORK_NAME.toLowerCase() !== 'mainnet' && ' testnet'},
+          otherwise the deposit will be invalid.
         </Text>
       </Alert>
       <Alert variant="warning" className="my10">

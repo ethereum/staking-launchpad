@@ -98,6 +98,7 @@ export const Option1 = ({
               <span style={{ color: colors.purple.dark }}>.exe </span>
             </>
           )}
+          <span style={{ color: colors.red.medium }}>new-mnemonic</span>
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           <span style={{ color: colors.red.medium }}>
             {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}

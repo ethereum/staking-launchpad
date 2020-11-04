@@ -140,7 +140,7 @@ export const Option2 = ({
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
-          python3 ./eth2deposit/deposit.py{' '}
+          python3 ./eth2deposit/deposit.py new-mnemonic{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
         </Pre>
@@ -150,7 +150,7 @@ export const Option2 = ({
     if (os === 'windows') {
       return (
         <Pre className="my0">
-          .\eth2deposit\deposit.py{' '}
+          .\eth2deposit\deposit.py new-mnemonic{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
         </Pre>

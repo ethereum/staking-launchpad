@@ -105,7 +105,8 @@ export const TermsOfService = () => {
                 >
                   Cookie Policy
                 </Link>
-                , incorporated herein by reference.
+                , incorporated herein by reference (note: no cookies are used on
+                launchpad.ethereum.org).
               </li>
             </ul>
           </Text>

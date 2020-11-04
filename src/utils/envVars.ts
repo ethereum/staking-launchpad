@@ -7,7 +7,6 @@ export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PR
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
 
 // public
-export const ALETHIO_URL                = IS_MAINNET ? 'https://explorer.aleth.io/tx' : 'https://explorer.goerli.aleth.io/tx';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
 export const BEACONSCAN_URL             = process.env.REACT_APP_BEACONSCAN_URL      || "https://beaconscan.com/medalla/validator";
 export const BEACONCHAIN_URL            = process.env.REACT_APP_BEACONCHAIN_URL     || "https://medalla.beaconcha.in/validator";

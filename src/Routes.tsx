@@ -14,6 +14,7 @@ import {
   FAQ,
   Phishing,
   Checklist,
+  TermsOfService,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Eth2/Prysm';
@@ -28,6 +29,7 @@ type RouteType = {
 };
 
 export enum routesEnum {
+  termsOfServicePage = '/terms-of-service',
   congratulationsPage = '/congratulations',
   connectWalletPage = '/connect-wallet',
   generateKeysPage = '/generate-keys',
@@ -47,6 +49,11 @@ export enum routesEnum {
   notFoundPage = '/*',
 }
 const routes: RouteType[] = [
+  {
+    path: routesEnum.termsOfServicePage,
+    exact: true,
+    component: TermsOfService,
+  },
   {
     path: routesEnum.congratulationsPage,
     exact: true,

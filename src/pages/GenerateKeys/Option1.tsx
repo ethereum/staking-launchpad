@@ -4,11 +4,26 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
-import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
+import { ETH2_NETWORK_NAME } from '../../utils/envVars';
+import { Button } from '../../components/Button';
+import { Alert as GrommetAlert, FormNext } from 'grommet-icons';
+import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
+
+const AlertIcon = styled(p => <GrommetAlert {...p} />)`
+  display: block;
+  margin: 1.3rem;
+`;
 
 const Pre = styled.pre`
   white-space: normal;
+`;
+
+const Arrow = styled(() => <FormNext />)``;
+
+const GithubScreenshot = styled.img.attrs({ src: githubScreenshot })`
+  max-width: 925px;
+  width: 100%;
 `;
 
 export const Option1 = ({
@@ -23,28 +38,49 @@ export const Option1 = ({
       <Heading level={2} size="small" color="blueMedium" className="mb20">
         Option 1: Download command line app
       </Heading>
-      <Text weight={500}>Download the deposit command line interface app</Text>
-      <Text>
-        Please find the zip/tarball file containing the latest deposit-cli
-        release on the{' '}
-        <Link
-          primary
-          external
-          to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
-          inline
-        >
-          ethereum/eth2.0-deposit-cli
-        </Link>{' '}
-        GitHub page for your platform.{' '}
-      </Text>
-      <Alert variant="warning" className="my20">
-        <Text weight={500} color="yellowDarkest" className="my10">
-          Please make sure that you are downloading from the official Ethereum
-          Foundation GitHub account.
-        </Text>
-      </Alert>
       <Text weight={500}>
-        Generate deposit keys using the Ethereum Foundation deposit tool
+        Step 1: Download the deposit command line interface app for your
+        operating system
+      </Text>
+      <Link
+        external
+        to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
+        className="mt10"
+      >
+        <Button
+          className="flex"
+          rainbow
+          label={
+            <>
+              <Text>Download from github</Text>
+              <Arrow />
+            </>
+          }
+        />
+      </Link>
+
+      <Alert variant="warning" className="my20">
+        <div className="flex">
+          <AlertIcon />
+          <Text
+            weight={500}
+            color="yellowDarkest"
+            className="my10"
+            style={{ wordBreak: 'break-word' }}
+          >
+            Please make sure that you are downloading from the official Ethereum
+            Foundation GitHub account by verifying the url:{' '}
+            <strong>
+              https://github.com/ethereum/eth2.0-deposit-cli/releases/
+            </strong>
+          </Text>
+        </div>
+      </Alert>
+
+      <GithubScreenshot />
+
+      <Text weight={500} className="mt20">
+        Step 2: Generate deposit keys using the Ethereum Foundation deposit tool
       </Text>
       <Text className="mt5">
         Decompress the file you just downloaded, use the terminal to move into
@@ -62,11 +98,25 @@ export const Option1 = ({
               <span style={{ color: colors.purple.dark }}>.exe </span>
             </>
           )}
-          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
+          <span style={{ color: colors.red.medium }}>new-mnemonic</span>
           <span style={{ color: colors.red.medium }}>
-            {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+            {validatorCount > 0 ? ` --num_validators ${validatorCount}` : ''}{' '}
+          </span>
+          <span style={{ color: colors.red.medium }}>
+            {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
           </span>
         </Pre>
+      </Alert>
+      <Alert variant="error" className="my10">
+        <Text>
+          Please make sure you have set{' '}
+          <span className="alert-highlight">
+            --chain {ETH2_NETWORK_NAME.toLowerCase()}
+          </span>{' '}
+          for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
+          {ETH2_NETWORK_NAME.toLowerCase().slice(1)} testnet, otherwise the
+          deposit will be invalid.
+        </Text>
       </Alert>
       <Text>
         Now follow the instructions presented to you in the terminal window to

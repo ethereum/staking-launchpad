@@ -10,6 +10,7 @@ import { verifyDepositRoots } from '../../utils/SSZ';
 import { DepositKeyInterface } from '../../store/reducers';
 import {
   ETHER_TO_GWEI,
+  ETH2_NETWORK_NAME,
   MIN_DEPOSIT_AMOUNT,
   MIN_DEPOSIT_CLI_VERSION,
 } from '../../utils/envVars';
@@ -102,7 +103,7 @@ export const validateDepositKey = async (
 export const checkDoubleDepositStatus = async (
   keyFile: DepositKeyInterface
 ) => {
-  const beaconScanUrl = `https://beaconcha.in/api/v1/validator/${keyFile.pubkey}/deposits`;
+  const beaconScanUrl = `https://${ETH2_NETWORK_NAME}.beaconcha.in/api/v1/validator/${keyFile.pubkey}/deposits`;
   const { data: beaconScanCheck } = await axios.get(beaconScanUrl);
 
   if (!beaconScanCheck.data || beaconScanCheck.status !== 'OK') {

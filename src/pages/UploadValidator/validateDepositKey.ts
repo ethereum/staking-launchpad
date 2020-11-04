@@ -3,15 +3,17 @@
  */
 import _every from 'lodash/every';
 import { initBLS } from '@chainsafe/bls';
+import compareVersions from 'compare-versions';
+import axios from 'axios';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
 import { DepositKeyInterface } from '../../store/reducers';
 import {
   ETHER_TO_GWEI,
+  ETH2_NETWORK_NAME,
   MIN_DEPOSIT_AMOUNT,
   MIN_DEPOSIT_CLI_VERSION,
 } from '../../utils/envVars';
-import compareVersions from 'compare-versions';
 
 const validateFieldFormatting = (
   depositDatum: DepositKeyInterface
@@ -96,4 +98,17 @@ export const validateDepositKey = async (
     return verifySignature(depositDatum);
   });
   return _every(depositKeysStatuses);
+};
+
+export const checkDoubleDepositStatus = async (
+  keyFile: DepositKeyInterface
+) => {
+  const beaconScanUrl = `https://${ETH2_NETWORK_NAME}.beaconcha.in/api/v1/validator/${keyFile.pubkey}/deposits`;
+  const { data: beaconScanCheck } = await axios.get(beaconScanUrl);
+
+  if (!beaconScanCheck.data || beaconScanCheck.status !== 'OK') {
+    throw new Error('Beaconchain API is down');
+  }
+  // if beaconchain returns any information for the pubkey, it has already been uploaded, so this check returns false
+  return beaconScanCheck.data.length === 0;
 };

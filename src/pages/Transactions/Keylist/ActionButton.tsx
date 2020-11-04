@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { TransactionStatus } from '../../../store/actions/depositFileActions';
 import {
-  ETHERSCAN_URL,
-  BEACONSCAN_URL,
+  DepositStatus,
+  TransactionStatus,
+} from '../../../store/actions/depositFileActions';
+import {
   BEACONCHAIN_URL,
+  BEACONSCAN_URL,
+  ETHERSCAN_URL,
 } from '../../../utils/envVars';
+import ReactTooltip from 'react-tooltip';
 
 const Container = styled.div`
   width: 100px;
@@ -24,14 +28,30 @@ const ButtonText = styled(Text)`
 `;
 
 interface Props {
-  status: TransactionStatus;
+  transactionStatus: TransactionStatus;
+  depositStatus: DepositStatus;
   txHash?: string;
   onClick: (e: any) => void;
   pubkey?: string;
 }
 
-export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
-  if (status === TransactionStatus.READY) {
+export const ActionButton = ({
+  transactionStatus,
+  depositStatus,
+  txHash,
+  onClick,
+  pubkey,
+}: Props) => {
+  if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
+    return (
+      <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
+        <ButtonText className="mr5" data-tip>
+          Beaconchain <Share size="small" />
+        </ButtonText>
+      </Link>
+    );
+  }
+  if (transactionStatus === TransactionStatus.READY) {
     return (
       <Container onClick={onClick}>
         <ButtonText>Start</ButtonText>
@@ -39,10 +59,10 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
       </Container>
     );
   }
-  if (status === TransactionStatus.PENDING) {
+  if (transactionStatus === TransactionStatus.PENDING) {
     return <div className="flex" />;
   }
-  if (status === TransactionStatus.STARTED) {
+  if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
         <Link external to={`${ETHERSCAN_URL}/${txHash}`}>
@@ -53,14 +73,21 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
       </div>
     );
   }
-  if (status === TransactionStatus.SUCCEEDED) {
+  if (transactionStatus === TransactionStatus.SUCCEEDED) {
     return (
       <div className="flex">
-        <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
-          <ButtonText className="mr5">
-            Beaconchain <Share size="small" />
-          </ButtonText>
-        </Link>
+        <span
+          data-for="beaconchain-warning"
+          data-tip="Note: Beaconchain may take several minutes to verify your deposit"
+        >
+          <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
+            <ButtonText className="mr5" data-tip>
+              Beaconchain <Share size="small" />
+            </ButtonText>
+          </Link>
+        </span>
+        <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
+
         <Link external to={`${BEACONSCAN_URL}/0x${pubkey}`}>
           <ButtonText>
             Beaconscan <Share size="small" />
@@ -71,8 +98,8 @@ export const ActionButton = ({ status, txHash, onClick, pubkey }: Props) => {
   }
 
   if (
-    status === TransactionStatus.FAILED ||
-    status === TransactionStatus.REJECTED
+    transactionStatus === TransactionStatus.FAILED ||
+    transactionStatus === TransactionStatus.REJECTED
   ) {
     return (
       <Container onClick={onClick}>

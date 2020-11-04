@@ -5,7 +5,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
+import { ETH2_NETWORK_NAME } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const Pre = styled.pre`
@@ -142,7 +142,7 @@ export const Option2 = ({
         <Pre className="my0">
           python3 ./eth2deposit/deposit.py new-mnemonic{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
-          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+          {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -152,7 +152,7 @@ export const Option2 = ({
         <Pre className="my0">
           .\eth2deposit\deposit.py new-mnemonic{' '}
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
-          {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+          {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -279,11 +279,11 @@ export const Option2 = ({
         <Text>
           Please make sure you have set{' '}
           <span className="alert-highlight">
-            --chain {CHAIN_NAME.toLowerCase()}
+            --chain {ETH2_NETWORK_NAME.toLowerCase()}
           </span>{' '}
-          for {CHAIN_NAME.charAt(0).toUpperCase()}
-          {CHAIN_NAME.toLowerCase().slice(1)} testnet, otherwise the deposit
-          will be invalid.
+          for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
+          {ETH2_NETWORK_NAME.toLowerCase().slice(1)} testnet, otherwise the
+          deposit will be invalid.
         </Text>
       </Alert>
       <Alert variant="warning" className="my10">

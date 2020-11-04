@@ -8,16 +8,16 @@ export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "g
 
 // public
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
-export const BEACONSCAN_URL             = process.env.REACT_APP_BEACONSCAN_URL      || "https://beaconscan.com/medalla/validator";
-export const BEACONCHAIN_URL            = process.env.REACT_APP_BEACONCHAIN_URL     || "https://medalla.beaconcha.in/validator";
+export const BEACONSCAN_URL             = process.env.REACT_APP_BEACONSCAN_URL      || "https://beaconscan.com/validator";
+export const BEACONCHAIN_URL            = process.env.REACT_APP_BEACONCHAIN_URL     || "https://mainnet.beaconcha.in/validator";
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
-export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x07b39f4fde4a38bace212b546dac87c58dfe3fdc';
-export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Medalla';
-export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'GöETH';
+export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS    || '0x00000000219ab540356cBB839Cbe05303d7705Fa';
+export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Mainnet';
+export const TICKER_NAME                = process.env.REACT_APP_TICKER_NAME         || 'ETH';
 export const MIN_DEPOSIT_CLI_VERSION    = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION  || '1.0.0';
 export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/';
 export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://status-im.github.io/nimbus-eth2/intro.html';
-export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/testnet/medalla/';
+export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/install/install-with-script';
 export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATION_URL    || 'https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/';
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
@@ -25,7 +25,7 @@ if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REAC
 }
 export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT     || 524288;
 
-let forkVersion = Buffer.from('00000001', 'hex')
+let forkVersion = Buffer.from('00000000', 'hex')
 if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
     forkVersion = Buffer.from(process.env.REACT_APP_GENESIS_FORK_VERSION.replace(/0x/g, ''), 'hex');
 }

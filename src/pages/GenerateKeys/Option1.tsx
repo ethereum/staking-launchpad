@@ -4,11 +4,11 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
+import { ETH2_NETWORK_NAME } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import { Alert as GrommetAlert, FormNext } from 'grommet-icons';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
-import { CHAIN_NAME, IS_MAINNET } from '../../utils/envVars';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -98,11 +98,23 @@ export const Option1 = ({
               <span style={{ color: colors.purple.dark }}>.exe </span>
             </>
           )}
+          <span style={{ color: colors.red.medium }}>new-mnemonic</span>
           {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
           <span style={{ color: colors.red.medium }}>
-            {IS_MAINNET ? '' : `--chain ${CHAIN_NAME.toLowerCase()}`}
+            {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
           </span>
         </Pre>
+      </Alert>
+      <Alert variant="error" className="my10">
+        <Text>
+          Please make sure you have set{' '}
+          <span className="alert-highlight">
+            --chain {ETH2_NETWORK_NAME.toLowerCase()}
+          </span>{' '}
+          for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
+          {ETH2_NETWORK_NAME.toLowerCase().slice(1)} testnet, otherwise the
+          deposit will be invalid.
+        </Text>
       </Alert>
       <Text>
         Now follow the instructions presented to you in the terminal window to

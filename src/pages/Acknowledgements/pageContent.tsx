@@ -167,13 +167,25 @@ export const pageContent = {
   [AcknowledgementIdsEnum.confirmation]: {
     title: 'Confirmation',
     content: (
-      <>
-        <Text size="large" className="my10">
-          In order to become a validator, you will generate your new eth2 key
-          pairs. To do this and to install the validator software you need to be
-          technically capable of running commands in a terminal on a computer.
-        </Text>
-      </>
+      <ul>
+        <li>
+          <Text size="large" className="my10">
+            In order to become a validator, you will generate your new eth2 key
+            pairs. To do this and to install the validator software you need to
+            be technically capable of running commands in a terminal on a
+            computer.
+          </Text>
+        </li>
+        <li>
+          <Text size="large" className="my10">
+            I have read and agree to the Launchpad{' '}
+            <Link inline to="/terms-of-service" className="my10" primary>
+              Terms of Service
+            </Link>
+            .
+          </Text>
+        </li>
+      </ul>
     ),
     acknowledgementText:
       'I agree to all of the previous sections, and I am technically capable of setting up and running a validator',

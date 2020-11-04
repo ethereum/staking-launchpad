@@ -8,7 +8,6 @@ import {
   TransactionStatus,
 } from '../../../store/actions/depositFileActions';
 import {
-  ALETHIO_URL,
   BEACONCHAIN_URL,
   BEACONSCAN_URL,
   ETHERSCAN_URL,
@@ -66,11 +65,6 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
-        <Link external to={`${ALETHIO_URL}/${txHash}`}>
-          <ButtonText className="mr5">
-            Alethio <Share size="small" />
-          </ButtonText>
-        </Link>
         <Link external to={`${ETHERSCAN_URL}/${txHash}`}>
           <ButtonText>
             Etherscan <Share size="small" />

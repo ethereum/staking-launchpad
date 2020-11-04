@@ -13,6 +13,7 @@ import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
+import { colors } from '../../styles/styledComponentsTheme';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -40,6 +41,26 @@ const ClientContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+`;
+
+const PortTable = styled.table`
+  margin: 1rem auto;
+  color: #212529;
+
+  th,
+  td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+
+  thead th {
+    vertical-align: bottom;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
 `;
 
 interface Client {
@@ -116,14 +137,11 @@ export const Checklist = () => {
           <Heading level={3}>Keystore</Heading>
           <CheckBox
             label={
-              <Text>I have securely generated and saved my keystore(s).</Text>
+              <Text className="checkbox-label">
+                I have securely generated and saved my keystore(s).
+              </Text>
             }
           />
-          <CheckBox label={<Text>I have backed up my mnemonic.</Text>} />
-          <CheckBox
-            label={<Text>I have set a strong password for my keystore(s)</Text>}
-          />
-          <CheckBox label={<Text>I have backed up my password.</Text>} />
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -151,7 +169,74 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                I have set up a firewall on my machine(s).{' '}
+                I have secured the root account.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have hardened ssh on a random port.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">I have set up a firewall.</Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have forwarded the necessary ports from my router to the
+                correct machine(s). Only open the ports that apply to your
+                installation.
+              </Text>
+            }
+          />
+          <PortTable>
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Default Port</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>geth</td>
+                <td>30303 TCP/UDP</td>
+              </tr>
+              <tr>
+                <td>Lighthouse</td>
+                <td>9000 TCP/UDP</td>
+              </tr>
+              <tr>
+                <td>Nimbus</td>
+                <td>9000 UDP/TCP</td>
+              </tr>
+              <tr>
+                <td>Prysm</td>
+                <td>12000 UDP, 13000 TCP</td>
+              </tr>
+              <tr>
+                <td>Teku</td>
+                <td>9000 TCP/UDP</td>
+              </tr>
+            </tbody>
+          </PortTable>
+        </section>
+        <section>
+          <Heading level={3}>Configure time sync</Heading>
+          <CheckBox
+            label={
+              <Text className="checkbox-label" style={{ display: 'inherit' }}>
+                For Ubuntu 20.04:
+                <pre className="my0">
+                  <span style={{ color: colors.red.medium }}>
+                    {' '}
+                    sudo timedatectl set-ntp on
+                  </span>
+                </pre>
               </Text>
             }
           />

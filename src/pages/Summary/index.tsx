@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import BigNumber from 'bignumber.js';
@@ -15,7 +15,6 @@ import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { Paper } from '../../components/Paper';
@@ -23,14 +22,23 @@ import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
 import {
   DispatchWorkflowUpdateType,
-  WorkflowStep,
   updateWorkflow,
+  WorkflowStep,
 } from '../../store/actions/workflowActions';
 import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
 } from '../../utils/envVars';
+import { Alert } from '../../components/Alert';
+import { Alert as GrommetAlert } from 'grommet-icons';
+import { BeaconChainStatus } from '../../store/actions/depositFileActions';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+
+const AlertIcon = styled(p => <GrommetAlert {...p} />)`
+  display: block;
+  margin: 1.3rem;
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -44,6 +52,7 @@ interface OwnProps {}
 interface StateProps {
   depositKeys: DepositKeyInterface[];
   workflow: WorkflowStep;
+  beaconChainApiStatus: BeaconChainStatus;
 }
 
 interface DispatchProps {
@@ -55,18 +64,25 @@ const _SummaryPage = ({
   workflow,
   dispatchWorkflowUpdate,
   depositKeys,
+  beaconChainApiStatus,
 }: Props): JSX.Element => {
-  const [allChecked, setAllChecked] = useState(false);
   const [losePhrase, setLosePhrase] = useState(false);
   const [earlyAdopt, setEarlyAdopt] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
+  const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
   const amountValidators = new BigNumber(depositKeys.length);
   const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
 
-  useEffect(() => {
-    setAllChecked(losePhrase && earlyAdopt && nonReverse && noPhish);
-  }, [losePhrase, earlyAdopt, nonReverse, noPhish]);
+  const allChecked = React.useMemo(
+    () =>
+      losePhrase &&
+      earlyAdopt &&
+      nonReverse &&
+      noPhish &&
+      duplicatesAcknowledged,
+    [losePhrase, earlyAdopt, nonReverse, noPhish, duplicatesAcknowledged]
+  );
 
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
@@ -78,8 +94,9 @@ const _SummaryPage = ({
     }
   };
 
-  if (workflow < WorkflowStep.SUMMARY)
+  if (workflow < WorkflowStep.SUMMARY) {
     return routeToCorrectWorkflowStep(workflow);
+  }
 
   if (!account || !connector) return <WalletDisconnected />;
   if (chainId !== NETWORK_ID) return <WrongNetwork />;
@@ -157,6 +174,64 @@ const _SummaryPage = ({
           />
         </span>
       </AcknowledgementSection>
+      <AcknowledgementSection title="Protect yourself against double deposits">
+        {beaconChainApiStatus === BeaconChainStatus.DOWN && (
+          <Alert variant="warning" className="mb20">
+            <div className="flex">
+              <AlertIcon />
+              <Text
+                weight={500}
+                color="yellowDarkest"
+                className="my10"
+                style={{ wordBreak: 'break-word' }}
+              >
+                Proceed with caution. Our on-chain data source is down and we
+                are unable to flag any double deposits.
+              </Text>
+            </div>
+          </Alert>
+        )}
+
+        <Text>
+          Again, <i>you are responsible for this transaction!</i> Duplicate
+          deposits with the same keyfile public key will be considered as a
+          top-up and the extra balance more than {PRICE_PER_VALIDATOR}{' '}
+          {TICKER_NAME}{' '}
+          will NOT be counted in your effective balance on the beacon chain.
+        </Text>
+        <ul>
+          <li>
+            <Text className="mt10">
+              Do not submit any transaction with a deposit_data file that you
+              did not create yourself, or that you do not own the mnemonic
+              phrase for.
+            </Text>
+          </li>
+          <li>
+            <Text className="mt10">
+              If you've recently submitted a transaction with this deposit_data
+              file, and are now resubmitting for some reason, we recommend
+              waiting at least 30 minutes for our on-chain data source to flag
+              any duplicates.
+            </Text>
+          </li>
+        </ul>
+
+        <span className="mt20">
+          <CheckBox
+            onChange={e => setDuplicatesAcknowledged(e.target.checked)}
+            checked={duplicatesAcknowledged}
+            label={
+              <Text>
+                I understand that sending a deposit more than once will result
+                in my validator's balance exceeding 32 ETH, and that there is no
+                advantage to this since a validator's maximum stake is limited
+                to 32 ETH.
+              </Text>
+            }
+          />
+        </span>
+      </AcknowledgementSection>
       <div className="flex center p30">
         <Link to={routesEnum.connectWalletPage}>
           <Button className="mr10" width={100} label="Back" />
@@ -175,6 +250,7 @@ const mapStateToProps = ({
 }: StoreState): StateProps => ({
   depositKeys: depositFile.keys,
   workflow,
+  beaconChainApiStatus: depositFile.beaconChainApiStatus,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({

@@ -20,7 +20,7 @@ const Content = styled.div`
 `;
 
 const Gutter = styled.div`
-  padding: 0 48px;
+  padding: 0 48px 5rem;
   display: flex;
   justify-content: center;
 `;

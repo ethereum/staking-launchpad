@@ -13,6 +13,17 @@ export enum TransactionStatus {
   'REJECTED',
 }
 
+export enum DepositStatus {
+  VERIFYING,
+  ALREADY_DEPOSITED,
+  READY_FOR_DEPOSIT,
+}
+
+export enum BeaconChainStatus {
+  HEALTHY,
+  DOWN,
+}
+
 export interface UpdateDepositFileNameAction {
   type: ActionTypes.updateDepositFileName;
   payload: string;
@@ -28,6 +39,17 @@ export interface UpdateTransactionStatusAction {
     status: TransactionStatus;
     txHash?: string;
   };
+}
+export interface UpdateDepositStatusAction {
+  type: ActionTypes.updateDepositStatus;
+  payload: {
+    pubkey: string;
+    depositStatus: DepositStatus;
+  };
+}
+export interface UpdateBeaconChainAPIStatusAction {
+  type: ActionTypes.updateBeaconChainAPIStatus;
+  payload: BeaconChainStatus;
 }
 
 export type DispatchDepositKeysUpdateType = (
@@ -53,6 +75,15 @@ export const updateDepositFileName = (
   };
 };
 
+export const updateBeaconChainAPIStatus = (
+  status: BeaconChainStatus
+): UpdateBeaconChainAPIStatusAction => {
+  return {
+    type: ActionTypes.updateBeaconChainAPIStatus,
+    payload: status,
+  };
+};
+
 export const updateTransactionStatus = (
   pubkey: string,
   status: TransactionStatus,
@@ -75,3 +106,25 @@ export type DispatchTransactionStatusUpdateType = (
 ) => void;
 
 export type DispatchDepositFileNameUpdate = (name: string) => void;
+
+export const updateDepositStatus = (
+  pubkey: string,
+  depositStatus: DepositStatus
+): UpdateDepositStatusAction => {
+  return {
+    type: ActionTypes.updateDepositStatus,
+    payload: {
+      pubkey,
+      depositStatus,
+    },
+  };
+};
+
+export type DispatchDepositStatusUpdateType = (
+  pubkey: string,
+  depositStatus: DepositStatus
+) => void;
+
+export type DispatchBeaconChainAPIStatusUpdateType = (
+  status: BeaconChainStatus
+) => void;

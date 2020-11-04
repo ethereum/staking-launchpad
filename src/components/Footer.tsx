@@ -102,7 +102,7 @@ export const Footer = () => {
             external
             to="https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf"
           >
-            Deposit Verification
+            Formal Verification Report
           </Link>
         </div>
       </FooterStyles>

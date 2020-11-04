@@ -105,7 +105,7 @@ export const TermsOfService = () => {
                 >
                   Cookie Policy
                 </Link>
-                ,incorporated herein by reference.
+                , incorporated herein by reference.
               </li>
             </ul>
           </Text>

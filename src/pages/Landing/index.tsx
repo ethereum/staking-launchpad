@@ -7,7 +7,6 @@ import { TimelineMileStones } from './TimelineMilestones';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
 import { Phases } from './Phases';
-import { CTAFooter } from './CTAFooter';
 import { queryContract } from '../../utils/queryContract';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 import useMobileCheck from '../../hooks/useMobileCheck';
@@ -37,7 +36,6 @@ export const LandingPage = (): JSX.Element => {
       <Introduction />
       <SignupSteps />
       <Phases />
-      <CTAFooter />
     </>
   );
 };

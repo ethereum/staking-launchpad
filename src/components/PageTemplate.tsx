@@ -12,7 +12,7 @@ const Content = styled.div`
 `;
 
 const Gutter = styled.div`
-  padding: 0 48px;
+  padding: 0 48px 5rem; // adds space for footer
   display: flex;
   justify-content: center;
 `;

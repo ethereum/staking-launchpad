@@ -9,7 +9,7 @@ import {
 } from '../../../store/actions/depositFileActions';
 import {
   BEACONCHAIN_URL,
-  BEACONSCAN_URL,
+  //   BEACONSCAN_URL,
   ETHERSCAN_URL,
 } from '../../../utils/envVars';
 import ReactTooltip from 'react-tooltip';
@@ -88,11 +88,12 @@ export const ActionButton = ({
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
 
-        <Link external to={`${BEACONSCAN_URL}/0x${pubkey}`}>
+        {/* TODO: comment it out for now until beaconscan is available. */}
+        {/* <Link external to={`${BEACONSCAN_URL}/0x${pubkey}`}>
           <ButtonText>
             Beaconscan <Share size="small" />
           </ButtonText>
-        </Link>
+        </Link> */}
       </div>
     );
   }

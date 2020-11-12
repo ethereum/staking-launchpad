@@ -4,7 +4,7 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
-import { ETH2_NETWORK_NAME } from '../../utils/envVars';
+import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import { Alert as GrommetAlert, FormNext } from 'grommet-icons';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
@@ -115,8 +115,7 @@ export const Option1 = ({
           </span>{' '}
           for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
           {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
-          {ETH2_NETWORK_NAME.toLowerCase() !== 'mainnet' && ' testnet'},
-          otherwise the deposit will be invalid.
+          {!IS_MAINNET && ' testnet'}, otherwise the deposit will be invalid.
         </Text>
       </Alert>
       <Text>

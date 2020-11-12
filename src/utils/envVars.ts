@@ -1,4 +1,4 @@
-export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET === 'true');
+export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET !== 'false');  // If REACT_APP_IS_MAINNET is unset, set it to true by default
 
 // private vars (or derived from)
 export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
@@ -32,7 +32,7 @@ if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
 export const GENESIS_FORK_VERSION = forkVersion;
 
 
-if(process.env.REACT_APP_PRICE_PER_VALIDATOR &&  Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
+if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
     throw new Error("REACT_APP_PRICE_PER_VALIDATOR must be of type: number")
 }
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;

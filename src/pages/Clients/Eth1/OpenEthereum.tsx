@@ -22,12 +22,7 @@ export const OpenEthereumDetails = () => (
       </SectionTitle>
       <Text>
         The
-        <Link
-          primary
-          external
-          to="https://openethereum.github.io/wiki/Setup"
-          inline
-        >
+        <Link primary external to="https://openethereum.github.io/Setup" inline>
           {' '}
           OpenEthereum documentation
         </Link>{' '}
@@ -51,7 +46,7 @@ export const OpenEthereumDetails = () => (
                 <Link
                   primary
                   external
-                  to="https://openethereum.github.io/wiki/Basic-Usage.html#networking"
+                  to="https://openethereum.github.io/"
                   withArrow
                   inline
                 >

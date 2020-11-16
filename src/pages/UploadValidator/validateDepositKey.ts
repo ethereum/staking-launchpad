@@ -7,7 +7,10 @@ import compareVersions from 'compare-versions';
 import axios from 'axios';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
-import { DepositKeyInterface } from '../../store/reducers';
+import {
+  DepositKeyInterface,
+  BeaconchainDepositInterface,
+} from '../../store/reducers';
 import {
   ETHER_TO_GWEI,
   ETH2_NETWORK_NAME,
@@ -100,15 +103,19 @@ export const validateDepositKey = async (
   return _every(depositKeysStatuses);
 };
 
-export const checkDoubleDepositStatus = async (
-  keyFile: DepositKeyInterface
-) => {
-  const beaconScanUrl = `https://${ETH2_NETWORK_NAME}.beaconcha.in/api/v1/validator/${keyFile.pubkey}/deposits`;
-  const { data: beaconScanCheck } = await axios.get(beaconScanUrl);
+export const getExistingDepositsForPubkeys = async (
+  files: DepositKeyInterface[]
+): Promise<BeaconchainDepositInterface> => {
+  const pubkeys = files.flatMap(x => x.pubkey);
+  const beaconScanUrl = `https://${ETH2_NETWORK_NAME}.beaconcha.in/api/v1/validator/${pubkeys.join(
+    ','
+  )}/deposits`;
+  const { data: beaconScanCheck } = await axios.get<
+    BeaconchainDepositInterface
+  >(beaconScanUrl);
 
   if (!beaconScanCheck.data || beaconScanCheck.status !== 'OK') {
     throw new Error('Beaconchain API is down');
   }
-  // if beaconchain returns any information for the pubkey, it has already been uploaded, so this check returns false
-  return beaconScanCheck.data.length === 0;
+  return beaconScanCheck;
 };

@@ -35,6 +35,27 @@ const initialState: DepositFileInterface = {
   keys: [],
 };
 
+interface BeaconchainDepositDataInterface {
+  amount: number;
+  block_number: number;
+  block_ts: number;
+  from_address: string;
+  merkletree_index: string;
+  publickey: string;
+  removed: boolean;
+  signature: string;
+  tx_hash: string;
+  tx_index: number;
+  tx_input: string;
+  valid_signature: boolean;
+  withdrawal_credentials: string;
+}
+
+export interface BeaconchainDepositInterface {
+  data: BeaconchainDepositDataInterface[];
+  status: string;
+}
+
 export const depositFileReducer = (
   state: DepositFileInterface = initialState,
   action: Action

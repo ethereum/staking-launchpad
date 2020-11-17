@@ -459,11 +459,15 @@ export const Checklist = () => {
           <Text>
             You can use your validator client&apos;s graffiti flag to add a
             personal touch to your proposed blocks (some text of your choice).
-            You will be able to see it using the{' '}
-            <Link primary external inline to="block explorer">
-              block explorer
-            </Link>
-            .
+            You will be able to see it using{' '}
+            <Link primary external inline to="https://beaconcha.in/">
+              Beaconcha.in
+            </Link>{' '}
+            or{' '}
+            <Link primary external inline to="https://beaconscan.com/">
+              BeaconScan
+            </Link>{' '}
+            blockchain explorers.
           </Text>
           <CheckBox
             label={

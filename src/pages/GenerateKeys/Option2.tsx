@@ -5,7 +5,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { ETH2_NETWORK_NAME } from '../../utils/envVars';
+import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const Pre = styled.pre`
@@ -282,8 +282,8 @@ export const Option2 = ({
             --chain {ETH2_NETWORK_NAME.toLowerCase()}
           </span>{' '}
           for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
-          {ETH2_NETWORK_NAME.toLowerCase().slice(1)} testnet, otherwise the
-          deposit will be invalid.
+          {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
+          {!IS_MAINNET && ' testnet'}, otherwise the deposit will be invalid.
         </Text>
       </Alert>
       <Alert variant="warning" className="my10">

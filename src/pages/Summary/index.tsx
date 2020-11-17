@@ -196,8 +196,8 @@ const _SummaryPage = ({
           Again, <i>you are responsible for this transaction!</i> Duplicate
           deposits with the same keyfile public key will be considered as a
           top-up and the extra balance more than {PRICE_PER_VALIDATOR}{' '}
-          {TICKER_NAME}{' '}
-          will NOT be counted in your effective balance on the beacon chain.
+          {TICKER_NAME} will NOT be counted in your effective balance on the
+          beacon chain.
         </Text>
         <ul>
           <li>

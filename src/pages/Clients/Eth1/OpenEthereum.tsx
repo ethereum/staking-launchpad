@@ -25,7 +25,7 @@ export const OpenEthereumDetails = () => (
         <Link
           primary
           external
-          to="https://openethereum.github.io/wiki/Setup"
+          to="https://openethereum.github.io/Setup"
           inline
         >
           {' '}

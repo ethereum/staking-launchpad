@@ -66,7 +66,7 @@ const _TransactionsPage = ({
 
   const remainingTxCount = depositKeys.filter(
     file =>
-      file.depositStatus === DepositStatus.READY_FOR_DEPOSIT &&
+      file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
       (file.transactionStatus === TransactionStatus.READY ||
         file.transactionStatus === TransactionStatus.REJECTED)
   ).length;

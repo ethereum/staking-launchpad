@@ -126,7 +126,7 @@ export const Checklist = () => {
             <ul>
               <li>
                 <Text>
-                  For example, you need at least 140 GB SSD to run geth fast
+                  For example, you need at least 290 GB SSD to run geth fast
                   sync on <i>mainnet</i>.
                 </Text>
               </li>

@@ -12,7 +12,7 @@ import { routesEnum } from '../../Routes';
 import { Link } from '../../components/Link';
 import { Code } from '../../components/Code';
 import {
-  checkDoubleDepositStatus,
+  getExistingDepositsForPubkeys,
   validateDepositKey,
 } from './validateDepositKey';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
@@ -189,23 +189,29 @@ const _UploadValidatorPage = ({
               );
 
               // perform double deposit check
-              (fileData as DepositKeyInterface[]).forEach(async file => {
-                try {
-                  if (await checkDoubleDepositStatus(file)) {
-                    dispatchDepositStatusUpdate(
-                      file.pubkey,
-                      DepositStatus.READY_FOR_DEPOSIT
-                    );
-                  } else {
+              try {
+                const existingDeposits = await getExistingDepositsForPubkeys(
+                  fileData
+                );
+                const existingDepositPubkeys = existingDeposits.data.flatMap(
+                  x => x.publickey.substring(2)
+                );
+                (fileData as DepositKeyInterface[]).forEach(async file => {
+                  if (existingDepositPubkeys.includes(file.pubkey)) {
                     dispatchDepositStatusUpdate(
                       file.pubkey,
                       DepositStatus.ALREADY_DEPOSITED
                     );
+                  } else {
+                    dispatchDepositStatusUpdate(
+                      file.pubkey,
+                      DepositStatus.READY_FOR_DEPOSIT
+                    );
                   }
-                } catch (error) {
-                  dispatchBeaconChainAPIStatusUpdate(BeaconChainStatus.DOWN);
-                }
-              });
+                });
+              } catch (error) {
+                dispatchBeaconChainAPIStatusUpdate(BeaconChainStatus.DOWN);
+              }
             } else {
               // file is JSON but did not pass BLS, so leave it "staged" but not "accepted"
               setIsFileAccepted(false);

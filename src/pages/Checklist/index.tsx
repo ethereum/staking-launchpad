@@ -126,8 +126,12 @@ export const Checklist = () => {
             <ul>
               <li>
                 <Text>
-                  For example, you need at least 140 GB SSD to run geth fast
-                  sync on <i>mainnet</i>.
+                  For example, you need at least ~300 GB SSD to run geth fast
+                  sync on <i>mainnet</i> in November 2020, assuming you move the{' '}
+                  <i>ancient</i> directory on a different drive. Have in mind
+                  that geth <i>chaindata</i> grows with ~1 GB per day, so you
+                  should account for enough space on your SSD and HDD until you
+                  run maintenance on the node.
                 </Text>
               </li>
             </ul>

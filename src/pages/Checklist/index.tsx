@@ -243,6 +243,7 @@ export const Checklist = () => {
                 <pre className="my0">
                   <span style={{ color: colors.red.medium }}>
                     {' '}
+                    sudo apt install chrony
                     sudo timedatectl set-ntp on
                   </span>
                 </pre>

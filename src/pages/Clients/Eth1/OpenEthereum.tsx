@@ -9,7 +9,12 @@ import { Code } from '../../../components/Code';
 export const OpenEthereumDetails = () => (
   <>
     <Text className="mt10">
-      <Link external to="https://www.parity.io/ethereum/" primary inline>
+      <Link
+        external
+        to="https://github.com/openethereum/openethereum"
+        primary
+        inline
+      >
         OpenEthereum
       </Link>{' '}
       (used to be called Parity) is written in Rust and licensed under the

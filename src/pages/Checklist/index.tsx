@@ -239,20 +239,26 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label" style={{ display: 'inherit' }}>
-                For Ubuntu 20.04:
+                For Ubuntu 20.04, run
                 <pre className="my0">
-                  {'\n'}
-                  <span style={{ color: colors.red.medium }}>
-                    sudo apt install chrony
-                  </span>
-                  {'\n'}
+                  {' '}
                   <span style={{ color: colors.red.medium }}>
                     sudo timedatectl set-ntp on
                   </span>
                 </pre>
+                to check the system time.
               </Text>
             }
           />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                If you see error message{' '}
+                <code>Failed to set ntp: NTP not supported</code>, you may need
+                to install <code>chrony</code> or <code>ntp</code> package.
+              </Text>
+            </li>
+          </ul>
           <CheckBox
             label={
               <Text className="checkbox-label" style={{ display: 'inherit' }}>

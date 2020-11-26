@@ -264,8 +264,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <strong>Note:</strong> the RTC (Real-Time Clock) time may be set
-                to UTC time instead of your local timezone especially in a VM
-                which has clock configured on Windows.
+                to your local timezone instead of UTC, especially in a VM which
+                has clock configured on Windows.
               </Text>
             </li>
           </ul>

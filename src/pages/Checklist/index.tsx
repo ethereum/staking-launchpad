@@ -41,6 +41,7 @@ const ClientContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  padding: 1rem;
 `;
 
 const PortTable = styled.table`
@@ -113,7 +114,7 @@ export const Checklist = () => {
         <section>
           <Heading level={3}>Hardware</Heading>
           <Heading level={4}>Recommended</Heading>
-          <ul>
+          <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
                 In order to process incoming validator deposits from the eth1
@@ -123,50 +124,23 @@ export const Checklist = () => {
                 ensure the network stays as decentralised as possible.
               </Text>
             </li>
-            <ul>
-              <li>
-                <Text>
-                  For example, you need at least ~300 GB SSD to run geth fast
-                  sync on <i>mainnet</i> in November 2020, assuming you move the{' '}
-                  <i>ancient</i> directory on a different drive. Have in mind
-                  that geth <i>chaindata</i> grows with ~1 GB per day, so you
-                  should account for enough space on your SSD and HDD until you
-                  run maintenance on the node.
-                </Text>
-              </li>
-            </ul>
+            <li className="py5">
+              <Text>
+                For example, you need at least ~300 GB SSD to run Geth sync on{' '}
+                <i>mainnet</i> in November 2020, assuming you move the{' '}
+                <i>ancient</i> directory on a different drive. Have in mind that
+                Geth <i>chaindata</i> grows with ~1 GB per day, so you should
+                account for enough space on your SSD and HDD until you run
+                maintenance on the node.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> it may take day(s) to sync the Eth1
+                client in the worst-case scenario.
+              </Text>
+            </li>
           </ul>
-        </section>
-        <section>
-          <Heading level={3}>Keystore</Heading>
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have securely generated and saved my keystore(s).
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have backed up my mnemonic.
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have set a strong password for my keystore(s)
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have backed up my password.
-              </Text>
-            }
-          />
         </section>
         <section>
           <Heading level={3}>Security</Heading>
@@ -207,7 +181,7 @@ export const Checklist = () => {
             </thead>
             <tbody>
               <tr>
-                <td>geth</td>
+                <td>Geth</td>
                 <td>30303 TCP/UDP</td>
               </tr>
               <tr>
@@ -234,16 +208,67 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label" style={{ display: 'inherit' }}>
-                For Ubuntu 20.04:
+                For Ubuntu 20.04, run
                 <pre className="my0">
-                  <span style={{ color: colors.red.medium }}>
-                    {' '}
-                    sudo timedatectl set-ntp on
-                  </span>
+                  {' '}
+                  <span style={{ color: colors.red.medium }}>timedatectl</span>
                 </pre>
               </Text>
             }
           />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                Check if <code>NTP Service</code> is <code>active</code>.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                Check if <code>Local time</code>, <code>Time zone</code>, and{' '}
+                <code>Universal time</code> are all correct.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                If <code>NTP Service</code> is not <code>active</code>, run
+                <pre className="my0">
+                  {' '}
+                  <span style={{ color: colors.red.medium }}>
+                    sudo timedatectl set-ntp on
+                  </span>
+                </pre>
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                If you see error message{' '}
+                <code>Failed to set ntp: NTP not supported</code>, you may need
+                to install <code>chrony</code> or <code>ntp</code> package.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> by default, VMs may disable NTP so you
+                may need to find a work-around for your environment.
+              </Text>
+            </li>
+          </ul>
+          <CheckBox
+            label={
+              <Text className="checkbox-label" style={{ display: 'inherit' }}>
+                I've verified my server's time matches the wall clock.
+              </Text>
+            }
+          />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> the RTC (Real-Time Clock) time may be set
+                to your local timezone instead of UTC, especially in a VM which
+                has clock configured on Windows.
+              </Text>
+            </li>
+          </ul>
         </section>
         <section>
           <Heading level={3}>Eth1 Client</Heading>
@@ -274,6 +299,19 @@ export const Checklist = () => {
               />
             ))}
           </ClientContainer>
+          {/* <Heading level={4}>Recommended</Heading> */}
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Warning:</strong> it's high risk to run your Eth2
+                validator in multiple places. It will lead to a slashable event
+                and ejection from the network.{' '}
+                <Link inline to="/faq#responsibilities">
+                  Learn more about slashing →
+                </Link>
+              </Text>
+            </li>
+          </ul>
         </section>
         <section>
           <Heading level={3}>Eth2 Beacon Node (BN)</Heading>
@@ -287,9 +325,9 @@ export const Checklist = () => {
             }
           />
           <ul className="sub-checklist-item">
-            <li>
+            <li className="py5">
               <Text>
-                <strong>Note:</strong> If you are setting up your client before
+                <strong>Note:</strong> if you are setting up your client before
                 phase 0 launch, it is your responsibility to check for any new
                 software releases in the run up to launch. There is a good
                 chance you will need to update your software.
@@ -304,6 +342,19 @@ export const Checklist = () => {
               </Text>
             }
           />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> you can verify it with the following
+                command to check if it returns the client version correctly.
+              </Text>
+              <Text>
+                <span style={{ color: colors.red.medium }}>
+                  <code>{`curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://<YourServerLocation>:8545`}</code>
+                </span>
+              </Text>
+            </li>
+          </ul>
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -312,9 +363,9 @@ export const Checklist = () => {
             }
           />
           <ul className="sub-checklist-item">
-            <li>
+            <li className="py5">
               <Text>
-                <strong>Note:</strong> Please check that your node has greater
+                <strong>Note:</strong> please check that your node has greater
                 than 20 peers.
               </Text>
             </li>
@@ -328,7 +379,7 @@ export const Checklist = () => {
             }
           />
           <ul className="sub-checklist-item">
-            <li>
+            <li className="py5">
               <Link primary inline external to="https://discord.gg/uC7TuaH">
                 Lighthouse
               </Link>{' '}
@@ -341,18 +392,11 @@ export const Checklist = () => {
                 Prysm
               </Link>{' '}
               |{' '}
-              <Link primary inline external to="Teku">
+              <Link primary inline external to="https://discord.gg/7hPv2T6">
                 Teku
               </Link>
             </li>
           </ul>
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have opened the ports on my router.
-              </Text>
-            }
-          />
         </section>
         <section>
           <Heading level={3}>Eth2 Validator Client (VC)</Heading>
@@ -481,7 +525,7 @@ export const Checklist = () => {
             }
           />
           <Heading level={4}>Advanced system architecture</Heading>
-          <ul>
+          <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
                 To avoid exposing your validator identity to the network, you
@@ -495,6 +539,56 @@ export const Checklist = () => {
                 (BN) on separate machines and IPs so that even if your beacon
                 node is vulnerable, your keystore is stored on a different
                 machine.
+              </Text>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={3}>Simulations</Heading>
+          <Heading level={4}>
+            The following are are recommended simulations for ensuring your
+            validation setup is robust:
+          </Heading>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated how to manually stop and restart my Beacon Node
+                (BN) and Validator Client (VC) gracefully.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated power loss (server and internet) and automatic
+                resumption.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated how to migrate from one Eth2 client to another
+                Eth2 client.
+              </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>Tips</Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                If you have questions, EthStaker community is a good place to
+                get help! You can find supports on{' '}
+                <Link inline external to="https://invite.gg/ethstaker">
+                  Discord
+                </Link>{' '}
+                or{' '}
+                <Link inline external to="https://reddit.com/r/ethstaker">
+                  Reddit
+                </Link>
+                .
               </Text>
             </li>
           </ul>

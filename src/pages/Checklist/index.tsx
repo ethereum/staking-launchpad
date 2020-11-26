@@ -143,37 +143,6 @@ export const Checklist = () => {
           </ul>
         </section>
         <section>
-          <Heading level={3}>Keystore</Heading>
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have securely generated and saved my keystore(s).
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have backed up my mnemonic.
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have set a strong password for my keystore(s)
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have backed up my password.
-              </Text>
-            }
-          />
-        </section>
-        <section>
           <Heading level={3}>Security</Heading>
           <CheckBox
             label={
@@ -242,20 +211,45 @@ export const Checklist = () => {
                 For Ubuntu 20.04, run
                 <pre className="my0">
                   {' '}
-                  <span style={{ color: colors.red.medium }}>
-                    sudo timedatectl set-ntp on
-                  </span>
+                  <span style={{ color: colors.red.medium }}>timedatectl</span>
                 </pre>
-                to check the system time.
               </Text>
             }
           />
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
+                Check if <code>NTP Service</code> is <code>active</code>.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                Check if <code>Local time</code>, <code>Time zone</code>, and{' '}
+                <code>Universal time</code> are all correct.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                If <code>NTP Service</code> is not <code>active</code>, run
+                <pre className="my0">
+                  {' '}
+                  <span style={{ color: colors.red.medium }}>
+                    sudo timedatectl set-ntp on
+                  </span>
+                </pre>
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
                 If you see error message{' '}
                 <code>Failed to set ntp: NTP not supported</code>, you may need
                 to install <code>chrony</code> or <code>ntp</code> package.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> by default, VMs may disable NTP so you
+                may need to find a work-around for your environment.
               </Text>
             </li>
           </ul>
@@ -269,9 +263,9 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <strong>Note:</strong> time can be set to UTC instead of
-                timezone especially in a VM which has clock configured for
-                windows mode.
+                <strong>Note:</strong> the RTC (Real-Time Clock) time may be set
+                to UTC time instead of your local timezone especially in a VM
+                which has clock configured on Windows.
               </Text>
             </li>
           </ul>
@@ -403,13 +397,6 @@ export const Checklist = () => {
               </Link>
             </li>
           </ul>
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have opened the ports on my router.
-              </Text>
-            }
-          />
         </section>
         <section>
           <Heading level={3}>Eth2 Validator Client (VC)</Heading>
@@ -558,29 +545,18 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>Simulations</Heading>
+          <Heading level={4}>
+            The following are are recommended simulations for ensuring your
+            validation setup is robust:
+          </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
-                I have simulated how to recorver my keystore JSON files with
-                mnemonic.
+                I have simulated how to manually stop and restart my Beacon Node
+                (BN) and Validator Client (VC) gracefully.
               </Text>
             }
           />
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <strong>Hint:</strong> you can recover it with{' '}
-                <Link
-                  inline
-                  external
-                  to="https://github.com/ethereum/eth2.0-deposit-cli#existing-mnemonic-arguments"
-                >
-                  deposit-cli existing-mnemonic command
-                </Link>
-              </Text>
-              .
-            </li>
-          </ul>
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -597,29 +573,23 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                I have simulated how to change my keystore passphrase and resume
-                running.
-              </Text>
-            }
-          />
         </section>
         <section>
           <Heading level={3}>Tips</Heading>
           <ul className="sub-checklist-item">
             <li className="py5">
-              If you have questions, EthStaker community is a good place to get
-              help! You can find supports on{' '}
-              <Link inline external to="https://invite.gg/ethstaker">
-                Discord
-              </Link>{' '}
-              or{' '}
-              <Link inline external to="https://reddit.com/r/ethstaker">
-                Reddit
-              </Link>
-              .
+              <Text>
+                If you have questions, EthStaker community is a good place to
+                get help! You can find supports on{' '}
+                <Link inline external to="https://invite.gg/ethstaker">
+                  Discord
+                </Link>{' '}
+                or{' '}
+                <Link inline external to="https://reddit.com/r/ethstaker">
+                  Reddit
+                </Link>
+                .
+              </Text>
             </li>
           </ul>
         </section>

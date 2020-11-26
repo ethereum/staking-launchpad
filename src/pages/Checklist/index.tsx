@@ -41,6 +41,7 @@ const ClientContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  padding: 1rem;
 `;
 
 const PortTable = styled.table`
@@ -113,7 +114,7 @@ export const Checklist = () => {
         <section>
           <Heading level={3}>Hardware</Heading>
           <Heading level={4}>Recommended</Heading>
-          <ul>
+          <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
                 In order to process incoming validator deposits from the eth1
@@ -123,18 +124,22 @@ export const Checklist = () => {
                 ensure the network stays as decentralised as possible.
               </Text>
             </li>
-            <ul>
-              <li>
-                <Text>
-                  For example, you need at least ~300 GB SSD to run geth fast
-                  sync on <i>mainnet</i> in November 2020, assuming you move the{' '}
-                  <i>ancient</i> directory on a different drive. Have in mind
-                  that geth <i>chaindata</i> grows with ~1 GB per day, so you
-                  should account for enough space on your SSD and HDD until you
-                  run maintenance on the node.
-                </Text>
-              </li>
-            </ul>
+            <li className="py5">
+              <Text>
+                For example, you need at least ~300 GB SSD to run Geth sync on{' '}
+                <i>mainnet</i> in November 2020, assuming you move the{' '}
+                <i>ancient</i> directory on a different drive. Have in mind that
+                Geth <i>chaindata</i> grows with ~1 GB per day, so you should
+                account for enough space on your SSD and HDD until you run
+                maintenance on the node.
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> it may take day(s) to sync the Eth1
+                client in the worst-case scenario.
+              </Text>
+            </li>
           </ul>
         </section>
         <section>
@@ -207,7 +212,7 @@ export const Checklist = () => {
             </thead>
             <tbody>
               <tr>
-                <td>geth</td>
+                <td>Geth</td>
                 <td>30303 TCP/UDP</td>
               </tr>
               <tr>
@@ -274,6 +279,19 @@ export const Checklist = () => {
               />
             ))}
           </ClientContainer>
+          {/* <Heading level={4}>Recommended</Heading> */}
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Warning:</strong> it's high risk to run your Eth2
+                validator in multiple places. It will lead to a slashable event
+                and ejection from the network.{' '}
+                <Link inline to="/faq#responsibilities">
+                  Learn more about slashing →
+                </Link>
+              </Text>
+            </li>
+          </ul>
         </section>
         <section>
           <Heading level={3}>Eth2 Beacon Node (BN)</Heading>
@@ -287,9 +305,9 @@ export const Checklist = () => {
             }
           />
           <ul className="sub-checklist-item">
-            <li>
+            <li className="py5">
               <Text>
-                <strong>Note:</strong> If you are setting up your client before
+                <strong>Note:</strong> if you are setting up your client before
                 phase 0 launch, it is your responsibility to check for any new
                 software releases in the run up to launch. There is a good
                 chance you will need to update your software.
@@ -304,6 +322,19 @@ export const Checklist = () => {
               </Text>
             }
           />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> you can verify it with the following
+                command to check if it returns the client version correctly.
+              </Text>
+              <Text>
+                <span style={{ color: colors.red.medium }}>
+                  <code>{`curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://<YourServerLocation>:8545`}</code>
+                </span>
+              </Text>
+            </li>
+          </ul>
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -312,9 +343,9 @@ export const Checklist = () => {
             }
           />
           <ul className="sub-checklist-item">
-            <li>
+            <li className="py5">
               <Text>
-                <strong>Note:</strong> Please check that your node has greater
+                <strong>Note:</strong> please check that your node has greater
                 than 20 peers.
               </Text>
             </li>
@@ -328,7 +359,7 @@ export const Checklist = () => {
             }
           />
           <ul className="sub-checklist-item">
-            <li>
+            <li className="py5">
               <Link primary inline external to="https://discord.gg/uC7TuaH">
                 Lighthouse
               </Link>{' '}
@@ -341,7 +372,7 @@ export const Checklist = () => {
                 Prysm
               </Link>{' '}
               |{' '}
-              <Link primary inline external to="Teku">
+              <Link primary inline external to="https://discord.gg/7hPv2T6">
                 Teku
               </Link>
             </li>
@@ -481,7 +512,7 @@ export const Checklist = () => {
             }
           />
           <Heading level={4}>Advanced system architecture</Heading>
-          <ul>
+          <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
                 To avoid exposing your validator identity to the network, you
@@ -496,6 +527,73 @@ export const Checklist = () => {
                 node is vulnerable, your keystore is stored on a different
                 machine.
               </Text>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={3}>Simulations</Heading>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated how to recorver my keystore JSON files with
+                mnemonic.
+              </Text>
+            }
+          />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Hint:</strong> you can recover it with{' '}
+                <Link
+                  inline
+                  external
+                  to="https://github.com/ethereum/eth2.0-deposit-cli#existing-mnemonic-arguments"
+                >
+                  deposit-cli existing-mnemonic command
+                </Link>
+              </Text>
+              .
+            </li>
+          </ul>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated power loss (server and internet) and automatic
+                resumption.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated how to migrate from one Eth2 client to another
+                Eth2 client.
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                I have simulated how to change my keystore passphrase and resume
+                running.
+              </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>Tips</Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              If you have questions, EthStaker community is a good place to get
+              help! You can find supports on{' '}
+              <Link inline external to="https://invite.gg/ethstaker">
+                Discord
+              </Link>{' '}
+              or{' '}
+              <Link inline external to="https://reddit.com/r/ethstaker">
+                Reddit
+              </Link>
+              .
             </li>
           </ul>
         </section>

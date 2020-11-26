@@ -241,9 +241,12 @@ export const Checklist = () => {
               <Text className="checkbox-label" style={{ display: 'inherit' }}>
                 For Ubuntu 20.04:
                 <pre className="my0">
+                  {'\n'}
                   <span style={{ color: colors.red.medium }}>
-                    {' '}
                     sudo apt install chrony
+                  </span>
+                  {'\n'}
+                  <span style={{ color: colors.red.medium }}>
                     sudo timedatectl set-ntp on
                   </span>
                 </pre>

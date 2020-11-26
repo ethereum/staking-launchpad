@@ -253,6 +253,22 @@ export const Checklist = () => {
               </Text>
             }
           />
+          <CheckBox
+            label={
+              <Text className="checkbox-label" style={{ display: 'inherit' }}>
+                I've verified my server's time matches the wall clock.
+              </Text>
+            }
+          />
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <strong>Note:</strong> time can be set to UTC instead of
+                timezone especially in a VM which has clock configured for
+                windows mode.
+              </Text>
+            </li>
+          </ul>
         </section>
         <section>
           <Heading level={3}>Eth1 Client</Heading>

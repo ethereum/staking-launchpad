@@ -337,7 +337,7 @@ export const Checklist = () => {
                 Nimbus
               </Link>{' '}
               |{' '}
-              <Link primary inline external to="https://discord.gg/KSA7rPr">
+              <Link primary inline external to="https://discord.gg/z9efH7e">
                 Prysm
               </Link>{' '}
               |{' '}

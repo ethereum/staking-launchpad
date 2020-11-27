@@ -29,7 +29,7 @@ export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT 
 if(process.env.REACT_APP_ETH_DEPOSIT_OFFSET && Number.isNaN(Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET))) {
     throw new Error("REACT_APP_ETH_DEPOSIT_OFFSET must be of type: number")
 }
-export const ETH_DEPOSIT_OFFSET = Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET) * Number(IS_MAINNET) || 0;
+export const ETH_DEPOSIT_OFFSET = Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET) * Number(!IS_MAINNET) || 0;
 
 let forkVersion = Buffer.from('00000000', 'hex')
 if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){

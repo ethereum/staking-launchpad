@@ -58,6 +58,7 @@ export const handleMultipleTransactions = async (
   const remainingTxs = depositKeys.filter(
     key =>
       key.transactionStatus === TransactionStatus.READY ||
+      key.transactionStatus === TransactionStatus.FAILED || // can be triggered by user taking too long to confirm on hardware wallet
       key.transactionStatus === TransactionStatus.REJECTED
   );
 

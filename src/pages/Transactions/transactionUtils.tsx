@@ -13,12 +13,22 @@ const pricePerValidator = new BigNumber(PRICE_PER_VALIDATOR);
 const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 
 const isUserRejectionError = (error: any) => {
-  if (error.code === 4001) return true; // metamask
+  if (error.code === 4001) return true; // metamask reject
   if (
     error.message ===
     'MetaMask Tx Signature: User denied transaction signature.'
   )
-    return true; // metamask
+    return true; // metamask reject
+  if (
+    error.message ===
+    '​Error: TransportStatusError: Ledger device: Condition of use not satisfied (denied by the user?) (0x6985)'
+  )
+    return true; // ledger reject via metamask
+  if (
+    error.message ===
+    '​Error: TransportError: Failed to sign with Ledger device: U2F OTHER_ERROR'
+  )
+    return false; // ledger time-out or no-connect via metamask
   if (error.message === 'User denied transaction signature.') return true; // portis
   if (
     error.message ===
@@ -58,7 +68,6 @@ export const handleMultipleTransactions = async (
   const remainingTxs = depositKeys.filter(
     key =>
       key.transactionStatus === TransactionStatus.READY ||
-      key.transactionStatus === TransactionStatus.FAILED || // can be triggered by user taking too long to confirm on hardware wallet
       key.transactionStatus === TransactionStatus.REJECTED
   );
 
@@ -112,6 +121,7 @@ export const handleMultipleTransactions = async (
       }
     )
     .on('error', (error: any) => {
+      console.log(error);
       if (isUserRejectionError(error)) {
         updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
       } else {

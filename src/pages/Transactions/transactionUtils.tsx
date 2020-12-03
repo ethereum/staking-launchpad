@@ -121,7 +121,6 @@ export const handleMultipleTransactions = async (
       }
     )
     .on('error', (error: any) => {
-      console.log(error);
       if (isUserRejectionError(error)) {
         updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
       } else {

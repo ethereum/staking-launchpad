@@ -14,25 +14,27 @@ const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 
 const isUserRejectionError = (error: any) => {
   if (error.code === 4001) return true; // metamask reject
+  if (error.code === -32603)
+    if (
+      error.message.includes(
+        'MetaMask Tx Signature: User denied transaction signature.'
+      )
+    )
+      // do nothing because there are different cases with the same error-code ;
+      return true; // metamask reject
   if (
-    error.message ===
-    'MetaMask Tx Signature: User denied transaction signature.'
-  )
-    return true; // metamask reject
-  if (
-    error.message ===
-    '​Error: TransportStatusError: Ledger device: Condition of use not satisfied (denied by the user?) (0x6985)'
+    error.message.includes(
+      'Ledger device: Condition of use not satisfied (denied by the user?)'
+    ) &&
+    error.code === -32603
   )
     return true; // ledger reject via metamask
+  if (error.message.includes('​Ledger device: U2F OTHER_ERROR')) return false; // ledger time-out or no-connect via metamask
+  if (error.message.includes('User denied transaction signature.')) return true; // portis
   if (
-    error.message ===
-    '​Error: TransportError: Failed to sign with Ledger device: U2F OTHER_ERROR'
-  )
-    return false; // ledger time-out or no-connect via metamask
-  if (error.message === 'User denied transaction signature.') return true; // portis
-  if (
-    error.message ===
-    'Fortmatic RPC Error: [-32603] Fortmatic: User denied transaction.'
+    error.message.includes(
+      'Fortmatic RPC Error: [-32603] Fortmatic: User denied transaction.'
+    )
   )
     return true;
 

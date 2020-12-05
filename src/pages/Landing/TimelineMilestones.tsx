@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import TimelineGraphic from '../../static/timeline_mainnet_launch';
+import TimelineGraphic from '../../static/timeline_mainnet_launch.svg';
 import TimelineGraphicMobile from '../../static/timeline_mainnet_launch_mobile.svg';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';

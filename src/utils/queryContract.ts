@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CONTRACT_ADDRESS, INFURA_URL } from './envVars';
+import { CONTRACT_ADDRESS, ETH_DEPOSIT_OFFSET, INFURA_URL } from './envVars';
 
 type infuraResponse = {
   data: {
@@ -33,7 +33,7 @@ export const queryContract = async () => {
     // eslint-disable-next-line no-restricted-properties
     ethBalance *= Math.pow(10, -18);
     ethBalance = +ethBalance.toFixed(1);
-    return ethBalance;
+    return ethBalance + ETH_DEPOSIT_OFFSET;
   } catch (error) {
     console.log(error);
     return 0;

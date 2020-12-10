@@ -27,8 +27,8 @@ export enum NetworkChainId {
  is displayed when the user is not connected to the "allowed" network
  */
 const supportedNetworks = [
-  NetworkChainId['Göerli'],
   NetworkChainId.Mainnet,
+  NetworkChainId['Göerli'],
   NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
   NetworkChainId.Kovan,

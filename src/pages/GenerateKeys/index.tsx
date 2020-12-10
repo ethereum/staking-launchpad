@@ -149,7 +149,7 @@ const _GenerateKeysPage = ({
         <Text>
           The other file you just generated is
           <Highlight>deposit_data.json</Highlight>. This file contains the
-          public key(s) associated with your your validator(s); You will need to
+          public key(s) associated with your validator(s); You will need to
           upload this in the next step.
         </Text>
         <InstructionImgContainer>

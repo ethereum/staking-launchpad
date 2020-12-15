@@ -32,13 +32,13 @@ const isUserRejectionError = (error: any) => {
     )
       return true;
     // 3. Trezor reject via Metamask
-    if (error.message.includes('Error: Action cancelled by user')) return true;
+    if (error.message.includes('Action cancelled by user')) return true;
     // 4. Trezor popup closed via Metamask
-    if (error.message.includes('Error: Popup closed')) return true;
+    if (error.message.includes('Popup closed')) return true;
     // 5. Trezor popup denied via Metamask
-    if (error.message.includes('Error: Permissions not granted')) return true;
+    if (error.message.includes('Permissions not granted')) return true;
     // 6. Trezor disconnected via Metamask
-    if (error.message.includes('Error: device disconnected during action'))
+    if (error.message.includes('device disconnected during action'))
       return true;
     // 7. Fortmatic reject
     if (error.message.includes('Fortmatic: User denied transaction.'))

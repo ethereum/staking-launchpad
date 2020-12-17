@@ -52,11 +52,19 @@ const StyledInput = styled.input`
 interface Props {
   value: number | string;
   setValue: (e: number) => void;
+  allowDecimals?: boolean;
 }
 
-export const NumberInput = ({ value, setValue }: Props): JSX.Element => {
+export const NumberInput = ({
+  value,
+  setValue,
+  allowDecimals,
+}: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
-    const val = e.target.value.replace(/\./g, ''); // remove "." to force integer input
+    const val = allowDecimals
+      ? e.target.value
+      : e.target.value.replace(/\./g, ''); // remove "." to force integer input
+
     setValue(val);
   };
 

@@ -49,9 +49,8 @@ const _TopUpPage: React.FC<Props> = () => {
 
   React.useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
-      const blah = '0x93b172DCD946B5A656a403Ba213226B54af005DC';
       setLoading(true);
-      fetch(`${BEACONCHAIN_API_URL}/eth1/${blah}`)
+      fetch(`${BEACONCHAIN_API_URL}/eth1/${account}`)
         .then(r => r.json())
         .then(({ data }: { data: BeaconChainValidatorResponse[] }) => {
           if (data.length === 0) {

@@ -44,8 +44,13 @@ const depositDataContainer = new ContainerType({
 });
 
 const InputContainer = styled.div`
-  max-width: 300px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const SubmitButton = styled(Button)`
+  height: 50px;
 `;
 
 const TopUpDetailsContainer = styled.div`
@@ -57,19 +62,26 @@ const TopUpDetailsContainer = styled.div`
   border-radius: 5px;
   padding: 10px 20px;
   flex-wrap: wrap;
+  @media screen and (max-width: 724px) {
+    flex-direction: column;
+    .details-item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 `;
 
 const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const [value, setValue] = React.useState(0);
 
-  const balance = useMemo(() => validator.effectivebalance / 10 ** 9, [
+  const balance = useMemo(() => Number(validator.balance) / 10 ** 9, [
     validator,
   ]);
 
-  const newBalance = useMemo(() => balance + value, [balance, value]);
+  const newBalance = useMemo(() => +balance + Number(value), [balance, value]);
 
-  const maxTopUpVal = useMemo(() => 32 - balance, [balance]);
+  const maxTopUpVal = useMemo(() => 32 - Number(balance), [balance]);
 
   const topUp = async () => {
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
@@ -130,80 +142,91 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const [termB, setTermB] = useState(false);
   const [termC, setTermC] = useState(false);
 
+  const showAlert = React.useMemo(() => {
+    return newBalance > 32 || balance > 32;
+  }, []);
+
   return (
     <div>
       <Paper className="mt20">
         <Heading level={3} color="blueDark">
           Risks & Acknowledgements:
         </Heading>
-        <CheckBox
-          checked={termA}
-          onChange={() => setTermA(!termA)}
-          label={
-            <Text className="checkbox-label mt20">
-              Although TRON mining some dormant proof of stake of a ICO, Tether
-              looked at many hash. Maker was lots of whale until some
-              decentralised application.
-            </Text>
-          }
-        />
-        <CheckBox
-          checked={termB}
-          onChange={() => setTermB(!termB)}
-          label={
-            <Text className="checkbox-label mt20">
-              Satoshi Nakamoto detected few considerable escrow after some
-              hardware wallet.
-            </Text>
-          }
-        />
-        <CheckBox
-          checked={termC}
-          onChange={() => setTermC(!termC)}
-          label={
-            <Text className="checkbox-label mt20">
-              Stellar halving the safe proof of work, therefore, Litecoin
-              required a trusted turing-complete after lots of stablecoin. They
-              cooperated many do your own research although Cardano based on
-              some whitepaper for few initial coin offering, for although they
-              chose the efficient cryptocurrency, blockchain expected the
-              oracle.
-            </Text>
-          }
-        />
+        <div className="mt20">
+          <CheckBox
+            checked={termA}
+            onChange={() => setTermA(!termA)}
+            label={
+              <Text className="checkbox-label ml10">
+                Although TRON mining some dormant proof of stake of a ICO,
+                Tether looked at many hash. Maker was lots of whale until some
+                decentralised application.
+              </Text>
+            }
+          />
+        </div>
+        <div className="mt20">
+          <CheckBox
+            checked={termB}
+            onChange={() => setTermB(!termB)}
+            label={
+              <Text className="checkbox-label ml10">
+                Satoshi Nakamoto detected few considerable escrow after some
+                hardware wallet.
+              </Text>
+            }
+          />
+        </div>
+        <div className="mt20">
+          <CheckBox
+            checked={termC}
+            onChange={() => setTermC(!termC)}
+            label={
+              <Text className="checkbox-label ml10">
+                Stellar halving the safe proof of work, therefore, Litecoin
+                required a trusted turing-complete after lots of stablecoin.
+                They cooperated many do your own research although Cardano based
+                on some whitepaper for few initial coin offering, for although
+                they chose the efficient cryptocurrency, blockchain expected the
+                oracle.
+              </Text>
+            }
+          />
+        </div>
       </Paper>
       <Paper className="mt30">
         <Heading level={3} color="blueDark">
           Top Up Details
         </Heading>
         <TopUpDetailsContainer>
-          <div>
+          <div className="details-item">
             <Text weight={600} color="blueDark">
               Public Key
             </Text>
             <Text>{shortenAddress(validator.pubkey, 6)}</Text>
           </div>
-          <div>
+          <div className="details-item">
             <Text weight={600} color="blueDark">
               Current Balance
             </Text>
             <Text>{balance} ETH</Text>
           </div>
-          <div>
+          <div className="details-item">
             <Text weight={600} color="blueDark">
-              Balance after topup
+              Balance after topping up
             </Text>
             <Text>{newBalance} ETH</Text>
           </div>
         </TopUpDetailsContainer>
 
-        <div style={{ visibility: newBalance > 32 ? 'visible' : 'hidden' }}>
+        <div style={{ visibility: showAlert ? 'visible' : 'hidden' }}>
           <Alert variant="warning" className="my10">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <AlertIcon color="redLight" />
               <Text className="ml10">
-                Submitting a topup for more than {maxTopUpVal} will result in a
-                balance higher than the maximum balance of 32.
+                {balance > 32
+                  ? 'Validator balance is already higher than the maximum amount.'
+                  : `Submitting a topup for more than ${maxTopUpVal} will result in a balance higher than the maximum balance of 32.`}
               </Text>
             </div>
           </Alert>
@@ -211,8 +234,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
         <InputContainer>
           <NumberInput value={value} setValue={setValue} allowDecimals />
-          <Button
-            className="mt10"
+          <SubmitButton
+            className="ml10"
             label="Submit"
             rainbow
             onClick={topUp}

@@ -15,8 +15,24 @@ import ValidatorTable from './ValidatorTable';
 import TopupPage from './TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
+import { FormPrevious } from 'grommet-icons';
+import { BEACONCHAIN_API_URL } from '../../utils/envVars';
 
+const Arrow = styled(props => <FormPrevious {...props} />)`
+  position: absolute;
+  left: 0;
+  color: ${p => p.theme.blue.medium};
+`;
 const SubTextContainer = styled.div``;
+const BackText = styled(Text)`
+  margin-top: -25px;
+  cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
+  position: relative;
+  padding-left: 25px;
+`;
 
 const _TopUpPage: React.FC<Props> = () => {
   const { account, active }: web3ReactInterface = useWeb3React<Web3Provider>();
@@ -34,7 +50,7 @@ const _TopUpPage: React.FC<Props> = () => {
   React.useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
       setLoading(true);
-      fetch(`https://pyrmont.beaconcha.in/api/v1/validator/eth1/${account}`)
+      fetch(`${BEACONCHAIN_API_URL}/eth1/${account}`)
         .then(r => r.json())
         .then(({ data }: { data: BeaconChainValidatorResponse[] }) => {
           if (data.length === 0) {
@@ -44,9 +60,7 @@ const _TopUpPage: React.FC<Props> = () => {
               .slice(0, 99)
               .map(validator => validator.publickey)
               .join(',')}`;
-            fetch(
-              `https://pyrmont.beaconcha.in/api/v1/validator/${pubKeysCommaDelin}`
-            )
+            fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelin}`)
               .then(r => r.json())
               .then(({ data }: { data: BeaconChainValidator[] }) => {
                 setValidators([...validators, ...data]);
@@ -102,6 +116,12 @@ const _TopUpPage: React.FC<Props> = () => {
 
   return (
     <PageTemplate title="Top up a validator">
+      {selectedValidator && (
+        <BackText onClick={() => setSelectedValidator(null)} color="blueMedium">
+          <Arrow />
+          All Validators
+        </BackText>
+      )}
       {showWalletModal && <WalletConnectModal />}
       <SubTextContainer className="mt20">
         <Text className="mt10">

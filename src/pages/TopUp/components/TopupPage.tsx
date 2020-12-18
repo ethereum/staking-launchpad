@@ -1,27 +1,33 @@
-import React, {useMemo, useState} from 'react';
-import {CheckBox} from 'grommet';
+import React, { useMemo, useState } from 'react';
+import { CheckBox } from 'grommet';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import {SendOptions} from 'web3-eth-contract';
-import {ByteVectorType, ContainerType, NumberUintType} from '@chainsafe/ssz';
-import {useWeb3React} from '@web3-react/core';
-import {AbstractConnector} from '@web3-react/abstract-connector';
+import { SendOptions } from 'web3-eth-contract';
+import { ByteVectorType, ContainerType, NumberUintType } from '@chainsafe/ssz';
+import { useWeb3React } from '@web3-react/core';
+import { AbstractConnector } from '@web3-react/abstract-connector';
 import Web3 from 'web3';
 import BigNumber from 'bignumber.js';
-import {Alert as AlertIcon} from 'grommet-icons';
+import { Alert as AlertIcon } from 'grommet-icons';
 import styled from 'styled-components';
-import {contractAbi} from '../../../contractAbi';
-import {CONTRACT_ADDRESS} from '../../../utils/envVars';
-import {BeaconChainValidator, TransactionStatus} from '../types';
-import {bufferHex} from '../../../utils/SSZ';
-import {buf2hex} from '../../../utils/buf2hex';
-import {Text} from '../../../components/Text';
-import {Button} from '../../../components/Button';
-import {Paper} from '../../../components/Paper';
-import {Heading} from '../../../components/Heading';
-import {NumberInput} from '../../GenerateKeys/NumberInput';
+import { contractAbi } from '../../../contractAbi';
+import { CONTRACT_ADDRESS } from '../../../utils/envVars';
+import { BeaconChainValidator, TransactionStatus } from '../types';
+import { bufferHex } from '../../../utils/SSZ';
+import { buf2hex } from '../../../utils/buf2hex';
+import { Text } from '../../../components/Text';
+import { Button } from '../../../components/Button';
+import { Paper } from '../../../components/Paper';
+import { Heading } from '../../../components/Heading';
+import { NumberInput } from '../../GenerateKeys/NumberInput';
 import shortenAddress from '../../../utils/shortenAddress';
-import {Alert} from '../../../components/Alert';
+import { Alert } from '../../../components/Alert';
 import TopUpTransactionModal from './TopUpTransactionModal';
+import {
+  fortmaticTxRejected,
+  isLedgerTimeoutError,
+  ledgerTxRejected,
+  metamaskTxRejected,
+} from '../../../utils/transactionErrorTypes';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -76,6 +82,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const [value, setValue] = React.useState(0);
   const [showTxModal, setShowTxModal] = React.useState(false);
+  const [txHash, setTxHash] = React.useState('');
 
   const balance = useMemo(() => Number(validator.balance) / 10 ** 9, [
     validator,
@@ -90,6 +97,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   );
 
   const topUp = async () => {
+    console.log('topping up for portis user');
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
@@ -115,6 +123,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     const byteRoot = depositDataContainer.hashTreeRoot(reconstructedKeyFile);
     const reconstructedDepositDataRoot = `0x${buf2hex(byteRoot)}`;
 
+    console.log('got all the shit we need: ');
     contract.methods
       .deposit(
         reconstructedKeyFile.pubkey,
@@ -125,13 +134,12 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       .send(transactionParameters)
       .on('transactionHash', (hash: string): void => {
         setTransactionStatus('confirm_on_chain');
-      })
-      .on('receipt', () => {
-        // do something?
+        setTxHash(hash);
       })
       .on(
         'confirmation',
         (confirmation: number, receipt: { status: {} }): any => {
+          console.log('confirmed');
           if (confirmation === 0) {
             if (receipt.status) {
               setTransactionStatus('success');
@@ -142,9 +150,12 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
         }
       )
       .on('error', (error: any) => {
-        if (
-          error.message ===
-          'MetaMask Tx Signature: User denied transaction signature.'
+        if (isLedgerTimeoutError(error)) {
+          setShowTxModal(false);
+        } else if (
+          metamaskTxRejected(error) ||
+          ledgerTxRejected(error) ||
+          fortmaticTxRejected(error)
         ) {
           setTransactionStatus('user_rejected');
         } else {
@@ -163,6 +174,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     <div>
       {showTxModal && (
         <TopUpTransactionModal
+          txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={() => setShowTxModal(false)}
         />

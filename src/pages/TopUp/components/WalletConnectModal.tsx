@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
+import { Layer } from 'grommet';
 import { fortmatic, metamask, portis } from '../../ConnectWallet/web3Utils';
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
-import { Layer } from 'grommet';
 import { ENABLE_RPC_FEATURES, PORTIS_DAPP_ID } from '../../../utils/envVars';
 import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
+import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
 
 const WalletConnectModal: React.FC = () => {
   const { connector, error }: web3ReactInterface = useWeb3React<Web3Provider>();
@@ -51,6 +52,8 @@ const WalletConnectModal: React.FC = () => {
         title="Fortmatic"
         error={connector === fortmatic ? error : undefined}
       />
+
+      <MetamaskHardwareButton />
     </Layer>
   );
 };

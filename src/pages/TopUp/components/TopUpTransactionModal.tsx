@@ -1,19 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box, Layer } from 'grommet';
+import { Share } from 'grommet-icons';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import TransactionProgress from './TransactionProgress';
 import { stepStatus, TransactionStatus } from '../types';
 import { Button } from '../../../components/Button';
+import { ETHERSCAN_URL } from '../../../utils/envVars';
+import { Link } from '../../../components/Link';
 
 interface TopUpTransactionModalProps {
   onClose: () => void;
   transactionStatus: TransactionStatus;
+  txHash: string;
 }
 
 const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
   onClose,
   transactionStatus,
+  txHash,
 }) => {
   const signTxStatus: stepStatus = React.useMemo(() => {
     if (
@@ -55,6 +60,15 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
           signTxStatus={signTxStatus}
           confirmOnChainStatus={confirmOnChainStatus}
         />
+        {txHash?.length > 0 && (
+          <Text center>
+            Check{' '}
+            <Link primary inline external to={`${ETHERSCAN_URL}/${txHash}`}>
+              Etherscan <Share size="small" />
+            </Link>{' '}
+            for more details
+          </Text>
+        )}
       </Box>
       <Box
         as="footer"

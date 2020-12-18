@@ -8,17 +8,17 @@ import {
   TableHeader,
   TableRow,
 } from 'grommet';
-import { styledComponentsTheme as theme } from '../../styles/styledComponentsTheme';
+import { styledComponentsTheme as theme } from '../../../styles/styledComponentsTheme';
 import { Wifi, StatusWarning, Refresh, StatusDisabled } from 'grommet-icons';
 import numeral from 'numeral';
 import { useWeb3React } from '@web3-react/core';
-import { BeaconChainValidator } from './types';
-import { Text } from '../../components/Text';
-import shortenAddress from '../../utils/shortenAddress';
-import { Button } from '../../components/Button';
-import { Paper } from '../../components/Paper';
-import { Link } from '../../components/Link';
-import { BEACONCHAIN_URL } from '../../utils/envVars';
+import { BeaconChainValidator } from '../types';
+import { Text } from '../../../components/Text';
+import shortenAddress from '../../../utils/shortenAddress';
+import { Button } from '../../../components/Button';
+import { Paper } from '../../../components/Paper';
+import { Link } from '../../../components/Link';
+import { BEACONCHAIN_URL } from '../../../utils/envVars';
 
 const FakeLink = styled.span`
   color: blue;

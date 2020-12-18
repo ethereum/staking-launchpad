@@ -1,26 +1,27 @@
-import React, { useMemo, useState } from 'react';
-import { CheckBox } from 'grommet';
+import React, {useMemo, useState} from 'react';
+import {CheckBox} from 'grommet';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { SendOptions } from 'web3-eth-contract';
-import { ByteVectorType, ContainerType, NumberUintType } from '@chainsafe/ssz';
-import { useWeb3React } from '@web3-react/core';
-import { AbstractConnector } from '@web3-react/abstract-connector';
+import {SendOptions} from 'web3-eth-contract';
+import {ByteVectorType, ContainerType, NumberUintType} from '@chainsafe/ssz';
+import {useWeb3React} from '@web3-react/core';
+import {AbstractConnector} from '@web3-react/abstract-connector';
 import Web3 from 'web3';
 import BigNumber from 'bignumber.js';
-import { Alert as AlertIcon } from 'grommet-icons';
+import {Alert as AlertIcon} from 'grommet-icons';
 import styled from 'styled-components';
-import { contractAbi } from '../../contractAbi';
-import { CONTRACT_ADDRESS } from '../../utils/envVars';
-import { BeaconChainValidator } from './types';
-import { bufferHex } from '../../utils/SSZ';
-import { buf2hex } from '../../utils/buf2hex';
-import { Text } from '../../components/Text';
-import { Button } from '../../components/Button';
-import { Paper } from '../../components/Paper';
-import { Heading } from '../../components/Heading';
-import { NumberInput } from '../GenerateKeys/NumberInput';
-import shortenAddress from '../../utils/shortenAddress';
-import { Alert } from '../../components/Alert';
+import {contractAbi} from '../../../contractAbi';
+import {CONTRACT_ADDRESS} from '../../../utils/envVars';
+import {BeaconChainValidator, TransactionStatus} from '../types';
+import {bufferHex} from '../../../utils/SSZ';
+import {buf2hex} from '../../../utils/buf2hex';
+import {Text} from '../../../components/Text';
+import {Button} from '../../../components/Button';
+import {Paper} from '../../../components/Paper';
+import {Heading} from '../../../components/Heading';
+import {NumberInput} from '../../GenerateKeys/NumberInput';
+import shortenAddress from '../../../utils/shortenAddress';
+import {Alert} from '../../../components/Alert';
+import TopUpTransactionModal from './TopUpTransactionModal';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -56,7 +57,7 @@ const SubmitButton = styled(Button)`
 const TopUpDetailsContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  margin: 10px;
+  margin: 10px 0;
   border: 1px solid lightblue;
   background: #eaf6f9;
   border-radius: 5px;
@@ -74,6 +75,7 @@ const TopUpDetailsContainer = styled.div`
 const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const [value, setValue] = React.useState(0);
+  const [showTxModal, setShowTxModal] = React.useState(false);
 
   const balance = useMemo(() => Number(validator.balance) / 10 ** 9, [
     validator,
@@ -83,7 +85,13 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
   const maxTopUpVal = useMemo(() => 32 - Number(balance), [balance]);
 
+  const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
+    'not_started'
+  );
+
   const topUp = async () => {
+    setTransactionStatus('waiting_user_confirmation');
+    setShowTxModal(true);
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
     const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
@@ -116,7 +124,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       )
       .send(transactionParameters)
       .on('transactionHash', (hash: string): void => {
-        console.log('tx hash : ', hash);
+        setTransactionStatus('confirm_on_chain');
       })
       .on('receipt', () => {
         // do something?
@@ -126,21 +134,26 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
         (confirmation: number, receipt: { status: {} }): any => {
           if (confirmation === 0) {
             if (receipt.status) {
-              console.log('FINISHED!');
+              setTransactionStatus('success');
             } else {
-              console.log('FAILED!');
+              setTransactionStatus('error');
             }
           }
         }
       )
       .on('error', (error: any) => {
-        console.log(error);
+        if (
+          error.message ===
+          'MetaMask Tx Signature: User denied transaction signature.'
+        ) {
+          setTransactionStatus('user_rejected');
+        } else {
+          setTransactionStatus('error');
+        }
       });
   };
 
   const [termA, setTermA] = useState(false);
-  const [termB, setTermB] = useState(false);
-  const [termC, setTermC] = useState(false);
 
   const showAlert = React.useMemo(() => {
     return newBalance > 32 || balance > 32;
@@ -148,6 +161,13 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
   return (
     <div>
+      {showTxModal && (
+        <TopUpTransactionModal
+          transactionStatus={transactionStatus}
+          onClose={() => setShowTxModal(false)}
+        />
+      )}
+
       <Paper className="mt20">
         <Heading level={3} color="blueDark">
           Risks & Acknowledgements:
@@ -158,37 +178,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             onChange={() => setTermA(!termA)}
             label={
               <Text className="checkbox-label ml10">
-                Although TRON mining some dormant proof of stake of a ICO,
-                Tether looked at many hash. Maker was lots of whale until some
-                decentralised application.
-              </Text>
-            }
-          />
-        </div>
-        <div className="mt20">
-          <CheckBox
-            checked={termB}
-            onChange={() => setTermB(!termB)}
-            label={
-              <Text className="checkbox-label ml10">
-                Satoshi Nakamoto detected few considerable escrow after some
-                hardware wallet.
-              </Text>
-            }
-          />
-        </div>
-        <div className="mt20">
-          <CheckBox
-            checked={termC}
-            onChange={() => setTermC(!termC)}
-            label={
-              <Text className="checkbox-label ml10">
-                Stellar halving the safe proof of work, therefore, Litecoin
-                required a trusted turing-complete after lots of stablecoin.
-                They cooperated many do your own research although Cardano based
-                on some whitepaper for few initial coin offering, for although
-                they chose the efficient cryptocurrency, blockchain expected the
-                oracle.
+                I am certain that the validator I am topping up is my validator.
               </Text>
             }
           />
@@ -239,7 +229,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             label="Submit"
             rainbow
             onClick={topUp}
-            disabled={value === 0}
+            disabled={value <= 0 || !termA}
           />
         </InputContainer>
       </Paper>

@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
-import { fortmatic, metamask, portis } from '../ConnectWallet/web3Utils';
-import { WalletButton } from '../ConnectWallet/WalletButton';
-import { web3ReactInterface } from '../ConnectWallet';
-import metamaskLogo from '../../static/metamask.svg';
+import { fortmatic, metamask, portis } from '../../ConnectWallet/web3Utils';
+import { WalletButton } from '../../ConnectWallet/WalletButton';
+import { web3ReactInterface } from '../../ConnectWallet';
+import metamaskLogo from '../../../static/metamask.svg';
 import { Layer } from 'grommet';
-import { ENABLE_RPC_FEATURES, PORTIS_DAPP_ID } from '../../utils/envVars';
-import portisLogo from '../../static/portis.svg';
-import fortmaticLogo from '../../static/fortmatic.svg';
-import { Heading } from '../../components/Heading';
+import { ENABLE_RPC_FEATURES, PORTIS_DAPP_ID } from '../../../utils/envVars';
+import portisLogo from '../../../static/portis.svg';
+import fortmaticLogo from '../../../static/fortmatic.svg';
+import { Heading } from '../../../components/Heading';
 
 const WalletConnectModal: React.FC = () => {
   const { connector, error }: web3ReactInterface = useWeb3React<Web3Provider>();

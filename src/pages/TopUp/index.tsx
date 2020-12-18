@@ -10,9 +10,9 @@ import {
 } from './types';
 import { Text } from '../../components/Text';
 import { web3ReactInterface } from '../ConnectWallet';
-import WalletConnectModal from './WalletConnectModal';
-import ValidatorTable from './ValidatorTable';
-import TopupPage from './TopupPage';
+import WalletConnectModal from './components/WalletConnectModal';
+import ValidatorTable from './components/ValidatorTable';
+import TopupPage from './components/TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
 import { FormPrevious } from 'grommet-icons';
@@ -125,17 +125,13 @@ const _TopUpPage: React.FC<Props> = () => {
       {showWalletModal && <WalletConnectModal />}
       <SubTextContainer className="mt20">
         <Text className="mt10">
-          Use this page for topping up your validators that have been slashed.
-          Keeping an effective balance of 32 ETH for your validator is the best
-          way to maximize your ETH2 staking rewards.
-        </Text>
-        <Text className="mt10">
-          Slashing occurs when a validator has acted against the Ethereum
-          network, yet slashing may occur to non-malicious users due to
-          misconfiguration. For example, running the same validation keys on two
-          different machines may result in a loss of funds. The goal of slashing
-          is both to disincentive those who seek to harm the Eth2 network, and
-          to bolster the security of the chain by promoting good actors.
+          If your validator’s balance is getting low because you haven’t been
+          active for a while, you may wish to top-up you balance to ensure your
+          validator isn’t ejected from the validator set for having a balance
+          that is too low. Low-balance ejections occur when a validator’s
+          effective balance drops below 16 ETH. The Launchpad only facilitates
+          top-ups that get validators’ balances to 32 ETH, as validator rewards
+          are based on effective balance which is capped at 32 ETH.
         </Text>
       </SubTextContainer>
 

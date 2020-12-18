@@ -1,8 +1,17 @@
 import React from 'react';
 import { Box } from 'grommet';
 
-export const Spinner = ({ className }: { className?: string }) => (
-  <Box align="center" justify="center" className={className}>
+export const Spinner = ({
+  className,
+  align = 'center',
+  justify = 'center',
+}: {
+  className?: string;
+  align?: string;
+  justify?: string;
+}) => (
+  // @ts-ignore
+  <Box align={align} justify={justify} className={className}>
     <svg
       version="1.1"
       viewBox="0 0 32 32"

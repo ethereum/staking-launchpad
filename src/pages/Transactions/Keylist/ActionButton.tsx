@@ -97,10 +97,7 @@ export const ActionButton = ({
     );
   }
 
-  if (
-    transactionStatus === TransactionStatus.FAILED ||
-    transactionStatus === TransactionStatus.REJECTED
-  ) {
+  if (transactionStatus === TransactionStatus.REJECTED) {
     return (
       <Container onClick={onClick}>
         <ButtonText>Try again</ButtonText>

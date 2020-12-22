@@ -58,6 +58,7 @@ export const Footer = () => {
           <Link to={routesEnum.acknowledgementPage}>Deposit</Link>
           <Link to={routesEnum.checklistPage}>Checklist</Link>
           <Link to={routesEnum.FaqPage}>FAQ</Link>
+          <Link to={routesEnum.FaqPageEs}>FAQ Español</Link>
           <Link to={routesEnum.termsOfServicePage}>Terms of Service</Link>
         </div>
 

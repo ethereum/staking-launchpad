@@ -12,6 +12,7 @@ import {
   UploadValidatorPage,
   TransactionsPage,
   FAQ,
+  FAQEs,
   Phishing,
   Checklist,
   TermsOfService,
@@ -39,6 +40,7 @@ export enum routesEnum {
   uploadValidatorPage = '/upload-validator',
   transactionsPage = '/transactions',
   FaqPage = '/faq',
+  FaqPageEs = '/faq_es',
   prysm = '/prysm',
   nimbus = '/nimbus',
   lighthouse = '/lighthouse',
@@ -94,6 +96,11 @@ const routes: RouteType[] = [
     path: routesEnum.FaqPage,
     exact: true,
     component: FAQ,
+  },
+  {
+    path: routesEnum.FaqPageEs,
+    exact: true,
+    component: FAQEs,
   },
   {
     path: routesEnum.teku,

@@ -9,6 +9,7 @@ export * from './Summary';
 export * from './UploadValidator';
 export * from './Transactions';
 export * from './FAQ';
+export * from './FAQEs';
 export * from './Phishing';
 export * from './Checklist';
 export * from './TermsOfService';

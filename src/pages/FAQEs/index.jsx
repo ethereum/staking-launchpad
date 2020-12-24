@@ -39,385 +39,363 @@ export const FAQEs = () => {
           <section>
             <Heading level={4}>¿Qué es exactamente un validador?</Heading>
             <Text className="mt10">
-              A validator is an entity that participates in the consensus of the
-              Ethereum 2.0 protocol.
+              Un validador es una entidad que participa en el consenso del protocolo de 
+              Ethereum 2.0.
             </Text>
             <Text className="mt10">
-              Or in plain english, a human running a computer process. This
-              process proposes and vouches for new blocks to be added to the
-              blockchain.
+              O, en lenguaje llano, un humano ejecutando un proceso informático. Este 
+              proceso propone y asegura que se añadan nuevos bloques a la cadena de bloques.
             </Text>
             <Text className="mt10">
-              In other words,{' '}
+              En otras palabras,{' '}
               <strong>
-                you can think of a validator as a voter for new blocks.
+              puedes pensar en un validador como un candidato para los nuevos bloques.  
               </strong>
-              The more votes a block gets, the more likely it is to be added to
-              the chain.
+              Cuantos más votos tenga un bloque, más probable es que se añada a la cadena.
             </Text>
             <Text className="mt10">
-              Importantly, a validator’s vote is weighted by the amount it has
-              at stake.
-            </Text>
-          </section>
-          <section>
-            <Heading level={4}>What is the deposit contract?</Heading>
-            <Text className="mt10">
-              You can think of it as a transfer of funds between Ethereum
-              accounts and eth2 validators.
-            </Text>
-            <Text className="mt10">
-              It specifies who is staking, who is validating, how much is being
-              staked, and who can withdraw the funds.
+              Es importante que el voto de un validador sea ponderado por la cantidad que 
+              está en juego.
             </Text>
           </section>
           <section>
-            <Heading level={4}>
-              Why do validators need to have funds at stake?
-            </Heading>
+            <Heading level={4}>¿Qué es el contrato de depósito?</Heading>
             <Text className="mt10">
-              Validators need to have funds at stake so they can be penalized
-              for behaving dishonestly.
+              Puedes pensar en ello como una transferencia de fondos entre las cuentas de 
+              Ethereum y los validadores de eth2.
             </Text>
             <Text className="mt10">
-              In other words, to keep them honest, their actions need to have
-              financial consequences.
+              Especifica quién participa, quién valida, cuánto se participa y quién puede 
+              retirar los fondos.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              How much ETH does a validator need to stake?
+              ¿Por qué los validadores necesitan tener fondos en juego?
             </Heading>
             <Text className="mt10">
-              Before a validator can start to secure the network, he or she
-              needs to stake <strong>32 ETH.</strong> This forms the validator’s
-              initial balance.
+              Los validadores necesitan tener fondos en juego para poder ser penalizados por 
+              su comportamiento deshonesto.
+            </Text>
+            <Text className="mt10">
+              En otras palabras, para que sean honestos, sus acciones deben tener 
+              consecuencias financieras.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              Is there any advantage to having more than 32 ETH at stake?
+              ¿Cuánto ETH necesita depositar un validador?
             </Heading>
             <Text className="mt10">
-              No. There is no advantage to having more than 32 ETH staked.
+              Antes de que un validador pueda empezar a asegurar la red, necesita depositar 
+              <strong>32 ETH.</strong> Esto forma el balance inicial del validador.
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              ¿Hay alguna ventaja en tener más de 32 ETH en juego?
+            </Heading>
+            <Text className="mt10">
+              No. No hay ninguna ventaja en tener más de 32 ETH en juego.
             </Text>
             <Text className="mt10">
-              Limiting the maximum stake to 32 ETH encourages decentralization
-              of power as it prevents any single validator from having an
-              excessively large vote on the state of the chain.
+              Limitar la participación máxima a 32 ETH fomenta la descentralización 
+              del poder, ya que impide que un solo validador tenga un voto excesivamente 
+              grande sobre el estado de la cadena.
             </Text>
             <BlockQuote>
               <Text>
-                Remember that a validator’s vote is weighted by the amount it
-                has at stake.
+              Recuerda que el voto de un validador es ponderado por la cantidad que 
+              tiene en participación.
               </Text>
             </BlockQuote>
           </section>
           <section>
             <Heading level={4}>
-              Can I stop running my validator for a few days and then start it
-              back up again?
+              ¿Puedo parar mi validador por unos días y luego volver a 
+              iniciarlo?
             </Heading>
             <Text className="mt10">
-              Yes but, under normal conditions, you will lose an amount of ETH
-              roughly equivalent to the amount of ETH you would have gained in
-              that period. In other words, if you stood to earn ≈0.01 ETH, you
-              would instead be penalised ≈0.01 ETH.
+              Sí, pero, en condiciones normales, perderá una cantidad de 
+              ETH aproximadamente equivalente a la cantidad de ETH que habría 
+              ganado en ese período. En otras palabras, si usted ganara ≈0.01 ETH, 
+              sería penalizado con ≈0.01 ETH.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              When should I top up my validator&apos;s balance?
+              ¿Cuándo debo actualizar el balance de mi validador?
             </Heading>
             <Text className="mt10">
-              The answer to this question very much depends on how much ETH you
-              have at your disposal.
+              La respuesta a esta pregunta depende en gran medida de 
+              la cantidad de ETH que tenga a su disposición.
             </Text>
             <Text className="mt10">
-              You should certainly top up if your balance is close to 16 ETH:
-              this is to ensure you don&apos;t get kicked out of the validator
-              set (which automatically happens if your balance falls below 16
-              ETH).
+              Ciertamente debes aumentar tu balance si está cerca de 16 ETH: 
+              esto es para asegurarte de que no te echen del conjunto de validadores 
+              (lo cual ocurre automáticamente si tu balance cae por debajo de 16 ETH).
             </Text>
             <Text className="mt10">
-              At the other end of the spectrum, if your balance is closer to 31
-              ETH, it&apos;s probably not worth your while adding the extra ETH
-              required to get back to 32.
+              En el otro extremo del escenario, si tu balance está más cerca de 31 ETH, 
+              probablemente no valga la pena añadir los ETHs extras necesarios para alcanzar 32.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              When can I withdraw my funds, and what&apos;s the difference
-              between exiting and withdrawing?
+              ¿Cuándo puedo retirar mis fondos, y cuál es la diferencia entre salir y retirarlos?
             </Heading>
             <Text className="mt10">
-              You can signal your intent to stop validating by signing a
-              voluntary exit message with your validator.
+              Puede indicar su intención de dejar de validar firmando un mensaje de salida voluntaria 
+              con su validador.
             </Text>
             <Text className="mt10">
-              However, bear in mind that in Phase 0, once you&apos;ve exited,
-              there&apos;s no going back.
+              Sin embargo, ten en cuenta que en la fase 0, una vez que has salido, no hay vuelta atrás.
             </Text>
             <Text className="mt10">
-              There&apos;s no way for you to activate your validator again, and
-              you won&apos;t be able to transfer or withdraw your funds until at
-              least Phase 1.5 (which means your funds will remain inaccessible
-              until then).
+              No hay forma de que puedas habilitar tu validador de nuevo, y no podrás transferir o retirar 
+              tus fondos hasta por lo menos la fase 1.5 (lo que significa que tus fondos permanecerán inaccesibles 
+              hasta entonces).
             </Text>
           </section>
         </section>
         <section>
           <Anchor to="#responsibilities" id="responsibilities">
-            <SectionTitle level={3}>Responsibilities</SectionTitle>
+            <SectionTitle level={3}>Responsabilidades</SectionTitle>
           </Anchor>
           <section>
             <Heading level={4}>
-              How are validators incentivized to stay active and honest?
+              ¿Cómo se incentivan los validadores para que se mantengan activos y honestos?
             </Heading>
             <Text className="mt10">
-              In addition to being penalized for being offline, validators are
-              penalized for behaving maliciously – for example attesting to
-              invalid or contradicting blocks.
+              Además de ser sancionados por estar fuera de línea, los validadores son sancionados 
+              por comportarse de manera maliciosa - por ejemplo, mediante la certificación de bloques 
+              inválidos o contradictorios.
             </Text>
             <Text className="mt10">
-              On the other hand, they are rewarded for proposing / attesting to
-              blocks that are included in the chain.
+              Por otro lado, son recompensados por proponer / dar fe de los bloques que se incluyen en la cadena.
             </Text>
-            <Text className="mt10">The key concept is the following:</Text>
+            <Text className="mt10">El concepto clave es el siguiente:</Text>
             <ul>
               <li>
-                Rewards are given for actions that help the network reach
-                consensus
+                Se recompensan las acciones que ayudan a la red a llegar a un consenso
               </li>
               <li>
-                Minor penalties are given for inadvertant actions (or inactions)
-                that hinder consensus
+                Se imponen sanciones menores por acciones descuidadas (o inexistentes) que 
+                impiden el consenso
               </li>
               <li>
-                And major penalities – or <strong>slashings</strong> – are given
-                for malicious actions
+                Y se dan penalizaciones importantes - o <strong>recortes</strong> - por acciones 
+                maliciosas
               </li>
             </ul>
             <Text className="mt10">
-              In other words, validators that maximize their rewards also
-              provide the greatest benefit to the network as a whole.
+              En otras palabras, los validadores que maximizan sus recompensas también proporcionan el 
+              mayor beneficio a la red en su conjunto.
             </Text>
           </section>
           <section>
-            <Heading level={4}>How are rewards/penalties issued?</Heading>
+            <Heading level={4}>¿Cómo se establecen las recompensas/penalizaciones?</Heading>
             <Text className="mt10">
-              Remember that each validator has its own balance – with the
-              initial balance outlined in the deposit contract.
+              Recuerde que cada validador tiene su propio balance - con el balance 
+              inicial indicado en el contrato de depósito.
             </Text>
             <Text className="mt10">
-              This balance is updated periodically by the Ethereum network rules
-              as the validator carries (or fails to carry) out his or her
-              responsibilities.
+              Este balance se actualiza periódicamente mediante las reglas de la red Ethereum 
+              a medida que el validador cumple (o deja de cumplir) sus responsabilidades.
             </Text>
             <Text className="mt10">
-              Put another way, rewards and penalties are reflected in the
-              validator’s balance over time.
-            </Text>
-          </section>
-          <section>
-            <Heading level={4}>How often are rewards/penalties issued?</Heading>
-            <Text className="mt10">
-              Approximately every six and a half minutes – a period of time
-              known as an epoch.
-            </Text>
-            <Text className="mt10">
-              Every epoch, the network measures the actions of each validator
-              and issues rewards or penalties appropriately.
+              Dicho de otra manera, las recompensas y penalizaciones se reflejan en el balance del 
+              validador a lo largo del tiempo.
             </Text>
           </section>
           <section>
-            <Heading level={4}>How large are the rewards/penalties?</Heading>
+            <Heading level={4}>¿Con qué frecuencia se emiten recompensas/penalizaciones?</Heading>
             <Text className="mt10">
-              There is no easy answer to this question as there are many factors
-              that go into this calculation.
+              Aproximadamente cada seis minutos y medio, un período de tiempo conocido como una época.
             </Text>
             <Text className="mt10">
-              Arguably the most impactful factor on rewards earned for
-              validating transactions is the total amount of stake in the
-              network. In other words, the total amount of validators. Depending
-              on this figure the max annual return rate for a validator can be
-              anywhere between 2 and 20%.
+              En cada época, la red evalúa las acciones de cada validador y emite recompensas o 
+              penalizaciones de manera adecuada.
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>¿Qué cantidad de recompensas y penalizaciones hay?</Heading>
+            <Text className="mt10">
+              No hay una respuesta fácil a esta pregunta ya que hay muchos factores que 
+              entran en este cálculo.
             </Text>
             <Text className="mt10">
-              Given a fixed total number of validators, the rewards/penalties
-              predominantly scale with the balance of the validator – attesting
-              with a higher balance results in larger rewards/penalties whereas
-              attesting with a lower balance results in lower rewards/penalties.
+              Podría decirse que el factor de mayor impacto en las recompensas obtenidas 
+              por la validación de las transacciones es la cantidad total de participación 
+              en la red. En otras palabras, la cantidad total de validadores. Dependiendo de 
+              esta cifra, la tasa máxima de retorno anual para un validador puede estar entre 
+              el 2 y el 20%.
+            </Text>
+            <Text className="mt10">
+              Dado un número total fijo de validadores, las recompensas/penalidades se escalan 
+              principalmente con el balance del validador - asegurar un balance más alto resulta 
+              en mayores recompensas/penalizaciones mientras que asegurar un balance más bajo 
+              resulta en menores recompensas/penalizaciones.
             </Text>
             <BlockQuote>
               <Text className="mt10">
-                Note however that this scaling mechanism works in a non-obvious
-                way. To understand the precise details of how it works requires
-                understanding a concept called{' '}
-                <strong> effective balance.</strong> If you’re not yet familiar
-                with this concept, we recommend you read through this{' '}
+              Sin embargo, hay que tener en cuenta que este mecanismo de escalado 
+              funciona de una manera no obvia. Para entender los detalles precisos 
+              de su funcionamiento es necesario comprender un concepto llamado{' '} 
+              <strong>equilibrio efectivo</strong>. Si aún no está familiarizado con este concepto, 
+              le recomendamos que lea este{' '}
                 <Link
                   primary
                   inline
                   external
                   to="https://www.attestant.io/posts/understanding-validator-effective-balance/"
                 >
-                  excellent post.
+                  post excelente.
                 </Link>
               </Text>
             </BlockQuote>
           </section>
           <section>
             <Heading level={4}>
-              Why do rewards depend on the total number of validators in the
-              network?
+              ¿Por qué las recompensas dependen del número total de validadores en la red?
             </Heading>
             <Text className="mt10">
-              Block rewards are calculated using a sliding scale based on the
-              total amount of ETH staked on the network.
+              Las recompensas de bloque se calculan usando una escala gradual basada en la 
+              cantidad total de ETH depositada en la red.
             </Text>
             <Text className="mt10">
-              In plain english: if the total amount of ETH staked is low, the
-              reward (interest rate) is high, but as the total stake rises, the
-              reward (interest) paid out to each validator starts to fall.
+              En pocas palabras: si la cantidad total de ETH depositada es baja, la 
+              recompensa (tasa de interés) es alta, pero a medida que la cantidad total 
+              depositada aumenta, la recompensa (interés) pagada a cada validador comienza 
+              a disminuir.
             </Text>
             <Text className="mt10">
-              Why a sliding scale? While we won’t get into the gory details
-              here, the basic intution is that there needs to be a minimum
-              number of validators (and hence a minimum amount of ETH staked)
-              for the network to function properly. So, to incentivize more
-              validators to join, it’s important that the interest rate remains
-              high until this minimum number is reached.
+              ¿Por qué una escala gradual? Aunque no entraremos en detalles escabrosos aquí, 
+              la intuición básica es que se necesita un número mínimo de validadores (y por lo 
+              tanto una cantidad mínima de ETH en juego) para que la red funcione correctamente. 
+              Por lo tanto, para incentivar a más validadores que se unan, es importante que la 
+              tasa de interés se mantenga alta hasta que se alcance este número mínimo.
             </Text>
             <Text className="mt10">
-              Afterwards, validators are still encouraged to join (the more
-              validators the more decentralized the network), but it’s not
-              absolutely essential that they do so (so the interest rate can
-              fall).
+              Posteriormente, se sigue alentando a los validadores a que se unan 
+              (cuantos más validadores más descentralizada está la red), pero no es absolutamente 
+              esencial que lo hagan (para que el tipo de interés pueda bajar).
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              How badly will a validator be penalized for being offline?
+            ¿Qué tan grave será la penalización de un validador por estar desconectado?
             </Heading>
             <Text className="mt10">
-              It depends. In addition to the{' '}
+            Depende. Además del{' '}
               <Link
                 inline
                 primary
                 external
                 to="https://www.attestant.io/posts/understanding-validator-effective-balance/#the-impact-of-effective-balance-on-validating"
               >
-                impact of effective balance
+                impacto del equilibrio efectivo
               </Link>{' '}
-              there are two important scenarios to be aware of:
+              hay dos escenarios importantes que hay que tener en cuenta:
             </Text>
             <ol>
               <li>
                 <Text className="mt10">
-                  Being offline while a supermajority (2/3) of validators is
-                  still online leads to relatively small penalties as there are
-                  still enough validators online for the chain to finalize.{' '}
-                  <strong>This is the expected scenario.</strong>
+                Estar fuera de la red mientras una gran mayoría (2/3) de los 
+                validadores está todavía en línea conduce a penalizaciones relativamente 
+                pequeñas ya que todavía hay suficientes validadores en línea para que la cadena 
+                finalice.{' '} <strong>Este es el escenario esperado.</strong>
                 </Text>
               </li>
               <li>
                 <Text className="mt10">
-                  Being offline at the same time as more than 1/3 of the total
-                  number of validators leads to harsher penalties, since blocks
-                  do not finalize anymore.{' '}
-                  <strong>
-                    This scenario is very extreme and unlikely to happen.
-                  </strong>
+                Estar fuera de línea al mismo tiempo que más de 1/3 del número total de validadores 
+                conduce a penalizaciones más fuertes, ya que los bloques no finalizan.{' '} <strong>Este escenario 
+                es muy extremista y es poco probable que ocurra.</strong>
                 </Text>
               </li>
             </ol>
             <BlockQuote>
               <Text className="mt10">
-                Note that in the second (unlikely) scenario, validators stand to
-                progressively lose up to 50% (16 ETH) of their stake over 21
-                days. After 21 days they are ejected out of the validator pool.
-                This ensures that blocks start finalizing again at some point.
+              Nótese que en el segundo (improbable) escenario, los validadores perderán progresivamente hasta el 50% 
+              (16 ETH) de su participación a lo largo de 21 días. Después de 21 días son expulsados de la lista de validadores. 
+              Esto asegura que los bloques empiecen a finalizar de nuevo en algún momento.
               </Text>
             </BlockQuote>
           </section>
           <section>
             <Heading level={4}>
-              How great does an honest validator’s uptime need to be for it to
-              be net profitable?
+              ¿Qué tan excelente debe ser el tiempo de actividad de un validador honesto para que sea rentable?
             </Heading>
             <Text className="mt10">
-              Overall, validators are expected to be net profitable as long as
-              their uptime is{' '}
+              En general, se espera que los validadores sean rentables, siempre y cuando su tiempo de 
+              funcionamiento sea{' '}
               <Link
                 external
                 to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/"
               >
-                greater than 50%.
+                superior al 50%.
               </Link>
             </Text>
             <Text className="mt10">
-              This means that validators need not go to extreme lengths with
-              backup clients or redundant internet connections as the
-              repercussions of being offline are not so severe.
+            Esto significa que los validadores no necesitan llegar a extremos 
+            con clientes de respaldo o conexiones de internet redundantes ya que las 
+            repercusiones de estar fuera de línea no son tan severas.  
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              How much will a validator be penalized for acting maliciously?
+              ¿Cuánto se sancionará a un validador por actuar de manera maliciosa?
             </Heading>
             <Text className="mt10">
-              Again, it depends. Behaving maliciously – for example attesting to
-              invalid or contradicting blocks, will lead to a validator’s stake
-              being slashed.
+              De nuevo, depende. Comportarse maliciosamente - por ejemplo, 
+              demostrando bloques inválidos o contradictorios, conducirá a que la 
+              participación de un validador sea recortada.
             </Text>
             <Text className="mt10">
-              The minimum amount that can be slashed is 1 ETH, but{' '}
+              La cantidad mínima que puede ser recortada es 1 ETH, pero{' '}
               <strong>
-                this number increases if other validators are slashed at the
-                same time.
-              </strong>
+                este número aumenta si otros validadores son penalizados al 
+                mismo tiempo.
+              </strong>  
             </Text>
             <Text className="mt10">
-              The idea behind this is to minimize the losses from honest
-              mistakes, but strongly disincentivize coordinated attacks.
+              La idea detrás de esto es minimizar las pérdidas por errores honestos, 
+              pero desanimar en gran medida los ataques coordinados.
             </Text>
           </section>
           <section>
-            <Heading level={4}>What exactly is slashing?</Heading>
+            <Heading level={4}>¿Qué es exactamente la penalización?</Heading>
             <Text className="mt10">
-              Slashing has two purposes: (1) to make it prohibitively expensive
-              to attack eth2, and (2) to stop validators from being lazy by
-              checking that they actually perform their duties. Slashing a
-              validator is to destroy (a portion of) the validator’s stake if
-              they act in a provably destructive manner.
+            La penalización tiene dos propósitos: (1) hacer que sea prohibitivamente caro atacar eth2, 
+            y (2) evitar que los validadores sean perezosos comprobando que realmente cumplen con sus 
+            obligaciones. Penalizar a un validador es destruir (una porción de) la participación del validador 
+            si actúa de una manera destructiva.
             </Text>
             <Text className="mt10">
-              Validators that are slashed are prevented from participating in
-              the protocol further and are forcibly exited.
+              A los validadores que son penalizados se les impide seguir participando en el protocolo y se 
+              les expulsa por la fuerza.
             </Text>
           </section>
         </section>
         <section>
           <Anchor to="#keys" id="keys">
-            <SectionTitle level={3}>Keys</SectionTitle>
+            <SectionTitle level={3}>Claves</SectionTitle>
           </Anchor>
           <section>
-            <Heading level={4}>What happens I lose my signing key?</Heading>
+            <Heading level={4}>¿Qué pasa si pierdo mi clave de firma?</Heading>
             <Text className="mt10">
-              If the signing key is lost, the validator can no longer propose or
-              attest.
+              Si se pierde la clave de firma, el validador ya no puede proponer o confirmar.
             </Text>
             <Text className="mt10">
-              Over time, the validator’s balance will decrease as he or she is
-              punished for not participating in the consensus process. When the
-              validator’s balance reaches 16 Eth, he or she will be
-              automatically exited from the validator pool.
+              Con el tiempo, el balance del validador disminuirá a medida que se le penalice por no 
+              participar en el proceso de consenso. Cuando el balance del validador llegue a 16 Eth, 
+              él o ella saldrá automáticamente del grupo de validadores.
             </Text>
             <BlockQuote>
               <Text className="mt10">
-                However, all is not lost. Assuming validators derive their keys
-                using{' '}
+                Sin embargo, no todo está perdido. Suponiendo que los validadores deriven sus claves 
+                usando{' '}
                 <Link
                   primary
                   inline
@@ -426,63 +404,65 @@ export const FAQEs = () => {
                 >
                   EIP2334
                 </Link>{' '}
-                (as per the default onboarding flow) then{' '}
+                (según el esquema de integración por defecto),{' '}
                 <strong>
-                  validators can always recalculate their signing key from their
-                  withdrawal key.
+                los validadores siempre pueden volver a calcular su clave de firma a partir de su clave 
+                de retirada.
                 </strong>
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              The 16 Eth can then be withdrawn – with the withdrawal key – after
-              a delay of around a day.
+              Los 16 Eth pueden ser retirados - con la clave de retirada - después de un plazo de 
+              alrededor de un día.
             </Text>
             <BlockQuote>
               <Text className="mt10">
-                Note that this delay can be longer if many others are exiting or
-                being kicked out at the same time.
+              Tenga en cuenta que este plazo puede ser más largo si muchos otros salen o son 
+              expulsados al mismo tiempo.
               </Text>
             </BlockQuote>
           </section>
           <section>
             <Heading level={4}>
-              What happens if I lose my withdrawal key?
+              ¿Qué pasa si pierdo mi clave de retirada?
             </Heading>
             <Text className="mt10">
-              If the withdrawal key is lost, there is no way to obtain access to
-              the funds held by the validator.
+              Si se pierde la clave de retirada, no hay forma de obtener 
+              acceso a los fondos en posesión del validador.
             </Text>
             <Text className="mt10">
-              As such, it’s a good idea to create your keys from mnemonics which
-              act as another backup. This will be the default for validators who
-              join via this site’s onboarding process.
+            Por lo tanto, es una buena idea crear tus claves a partir de 
+            mnemotécnicos que actúan como otra copia de seguridad. Este será 
+            el método predeterminado para los validadores que se unan a través 
+            del proceso de incorporación de este sitio.
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              What happens if my withdrawal key is stolen?
+              ¿Qué pasa si me roban la clave de retirada?
             </Heading>
             <Text className="mt10">
-              If the withdrawal key is stolen, the thief can transfer the
-              validator’s balance, but only once the validator has exited.
+              Si la clave de retirada es robada, el ladrón 
+              puede transferir el saldo del validador, pero 
+              sólo una vez que el validador haya salido.
             </Text>
             <Text className="mt10">
-              If the signing key is not under the thief’s control, the thief
-              cannot exit the validator.
+              Si la llave de firma no está bajo el control del 
+              ladrón, éste no puede sacar el validador.
             </Text>
             <Text className="mt10">
-              The user with the signing key could attempt to quickly exit the
-              validator and then transfer the funds – with the withdrawal key –
-              before the thief.
+              El usuario con la clave de firma podría intentar 
+              salir rápidamente del validador y luego transferir 
+              los fondos - con la clave de retirada - antes que el ladrón.
             </Text>
           </section>
           <section>
-            <Heading level={4}>Why two keys instead of one?</Heading>
+            <Heading level={4}>¿Por qué dos claves en vez de una?</Heading>
             <Text className="mt10">
-              In a nutshell, security. The signing key must be available at all
-              times. As such, it will need to be held online. Since anything
-              online is vulnerable to being hacked, it’s not a good idea to use
-              the same key for withdrawals.
+              En resumen, de seguridad. La clave de firma debe estar disponible 
+              en todo momento. Como tal, tendrá que ser mantenida online. Como todo 
+              lo que está online es vulnerable a ser hackeado, no es una buena idea 
+              usar la misma clave para las retiradas.
             </Text>
           </section>
         </section>

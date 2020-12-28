@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { Box } from 'grommet';
 import styled from 'styled-components';
+import { FormPrevious } from 'grommet-icons';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
@@ -15,8 +16,8 @@ import ValidatorTable from './components/ValidatorTable';
 import TopupPage from './components/TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
-import { FormPrevious } from 'grommet-icons';
 import { BEACONCHAIN_API_URL } from '../../utils/envVars';
+import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 
 const Arrow = styled(props => <FormPrevious {...props} />)`
   position: absolute;
@@ -35,17 +36,14 @@ const BackText = styled(Text)`
 `;
 
 const _TopUpPage: React.FC<Props> = () => {
-  const { account, active }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const { account, active, chainId }: web3ReactInterface = useWeb3React<
+    Web3Provider
+  >();
   const [validators, setValidators] = useState<BeaconChainValidator[]>([]);
-  const [showWalletModal, setShowWalletModal] = React.useState(true);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [validatorLoadError, setValidatorLoadError] = React.useState<boolean>(
     false
   );
-
-  useEffect(() => {
-    setShowWalletModal(!active);
-  }, [active]);
 
   React.useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
@@ -78,10 +76,14 @@ const _TopUpPage: React.FC<Props> = () => {
         });
     };
 
-    if (active && account) {
+    const network = NetworkChainId[chainId as number];
+
+    const isValidNetwork = Object.values(AllowedNetworks).includes(network);
+
+    if (active && account && isValidNetwork) {
       fetchValidatorsForUserAddress();
     }
-  }, [account, active]);
+  }, [account, active, chainId]);
 
   const [
     selectedValidator,
@@ -112,8 +114,6 @@ const _TopUpPage: React.FC<Props> = () => {
     );
   }, [loading, validatorLoadError, selectedValidator, active]);
 
-  // Top up a validator
-
   return (
     <PageTemplate title="Top up a validator">
       {selectedValidator && (
@@ -122,7 +122,7 @@ const _TopUpPage: React.FC<Props> = () => {
           All Validators
         </BackText>
       )}
-      {showWalletModal && <WalletConnectModal />}
+      <WalletConnectModal />
       <SubTextContainer className="mt20">
         <Text className="mt10">
           If your validator’s balance is getting low because you haven’t been

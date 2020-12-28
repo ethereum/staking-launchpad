@@ -32,6 +32,7 @@ const ValidatorTable: React.FC<{
   setSelectedValidator: (validator: BeaconChainValidator) => void;
 }> = ({ validators, setSelectedValidator }) => {
   const { deactivate } = useWeb3React();
+
   const validatorStatus = (validator: BeaconChainValidator) => {
     const { status } = validator;
 
@@ -85,7 +86,9 @@ const ValidatorTable: React.FC<{
     }
     return '';
   };
+
   const validatorRows = React.useMemo(() => {
+    console.log(validators);
     return validators.map(validator => (
       <React.Fragment key={validator.pubkey}>
         <TableRow>
@@ -150,7 +153,7 @@ const ValidatorTable: React.FC<{
     <Box align="center" justify="center" className="mt40">
       <Text weight={600}>No Validators found.</Text>
       <Text className="mt20">
-        You can <FakeLink onClick={deactivate}>Change your wallet</FakeLink> to
+        You can <FakeLink onClick={deactivate}>change your wallet</FakeLink> to
         load validators for a different address.
       </Text>
     </Box>

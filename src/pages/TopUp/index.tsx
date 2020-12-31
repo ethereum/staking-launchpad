@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { Box } from 'grommet';
 import styled from 'styled-components';
 import { FormPrevious } from 'grommet-icons';
+import { Alert as AlertIcon } from 'grommet-icons/icons';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
@@ -18,6 +18,7 @@ import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
 import { BEACONCHAIN_API_URL } from '../../utils/envVars';
 import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
+import { Alert } from '../../components/Alert';
 
 const Arrow = styled(props => <FormPrevious {...props} />)`
   position: absolute;
@@ -45,20 +46,26 @@ const _TopUpPage: React.FC<Props> = () => {
     false
   );
 
+  // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   React.useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
       setLoading(true);
+
+      // beaconchain API requires two fetches - one that gets the public keys for an eth1 address, and one that
+      // queries by the validators public keys
       fetch(`${BEACONCHAIN_API_URL}/eth1/${account}`)
         .then(r => r.json())
         .then(({ data }: { data: BeaconChainValidatorResponse[] }) => {
           if (data.length === 0) {
             setLoading(false);
           } else {
-            const pubKeysCommaDelin = `${data
-              .slice(0, 99)
+            // query by public keys
+            const pubKeysCommaDelineated = `${data
+              .slice(0, 50)
               .map(validator => validator.publickey)
               .join(',')}`;
-            fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelin}`)
+
+            fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelineated}`)
               .then(r => r.json())
               .then(({ data }: { data: BeaconChainValidator[] }) => {
                 setValidators([...validators, ...data]);
@@ -94,14 +101,21 @@ const _TopUpPage: React.FC<Props> = () => {
     if (loading || !active) {
       return <Spinner className="mt40" />;
     }
+
     if (validatorLoadError) {
       return (
-        <Box align="center" justify="center" className="mt30">
-          There was an issue loading your validator information from
-          Beaconcha.in
-        </Box>
+        <Alert variant="warning" className="my10">
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <AlertIcon color="redLight" />
+            <Text className="ml10">
+              There was an issue loading your validator information from
+              Beaconcha.in
+            </Text>
+          </div>
+        </Alert>
       );
     }
+
     if (selectedValidator) {
       return <TopupPage validator={selectedValidator} />;
     }
@@ -115,28 +129,39 @@ const _TopUpPage: React.FC<Props> = () => {
   }, [loading, validatorLoadError, selectedValidator, active]);
 
   return (
-    <PageTemplate title="Top up a validator">
-      {selectedValidator && (
-        <BackText onClick={() => setSelectedValidator(null)} color="blueMedium">
-          <Arrow />
-          All Validators
-        </BackText>
-      )}
+    <>
+      {/* the wallet connect modal controls it's own display, so it is always rendered here */}
       <WalletConnectModal />
-      <SubTextContainer className="mt20">
-        <Text className="mt10">
-          If your validator’s balance is getting low because you haven’t been
-          active for a while, you may wish to top-up you balance to ensure your
-          validator isn’t ejected from the validator set for having a balance
-          that is too low. Low-balance ejections occur when a validator’s
-          effective balance drops below 16 ETH. The Launchpad only facilitates
-          top-ups that get validators’ balances to 32 ETH, as validator rewards
-          are based on effective balance which is capped at 32 ETH.
-        </Text>
-      </SubTextContainer>
 
-      {topUpPageContent}
-    </PageTemplate>
+      <PageTemplate title="Top up a validator">
+        {/* render a "back button" if there's a selected validator */}
+        {selectedValidator && (
+          <BackText
+            onClick={() => setSelectedValidator(null)}
+            color="blueMedium"
+          >
+            <Arrow />
+            All Validators
+          </BackText>
+        )}
+
+        <SubTextContainer className="mt20">
+          <Text className="mt10">
+            If your validator’s balance is getting low because you haven’t been
+            active for a while, you may wish to top-up you balance to ensure
+            your validator isn’t ejected from the validator set for having a
+            balance that is too low. Low-balance ejections occur when a
+            validator’s effective balance drops below 16 ETH. The Launchpad only
+            facilitates top-ups that get validators’ balances to 32 ETH, as
+            validator rewards are based on effective balance which is capped at
+            32 ETH.
+          </Text>
+        </SubTextContainer>
+
+        {/* the main content for the topup page */}
+        {topUpPageContent}
+      </PageTemplate>
+    </>
   );
 };
 

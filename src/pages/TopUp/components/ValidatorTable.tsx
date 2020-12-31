@@ -8,10 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from 'grommet';
-import { styledComponentsTheme as theme } from '../../../styles/styledComponentsTheme';
+import ReactTooltip from 'react-tooltip';
 import { Wifi, StatusWarning, Refresh, StatusDisabled } from 'grommet-icons';
 import numeral from 'numeral';
 import { useWeb3React } from '@web3-react/core';
+import { styledComponentsTheme as theme } from '../../../styles/styledComponentsTheme';
 import { BeaconChainValidator } from '../types';
 import { Text } from '../../../components/Text';
 import shortenAddress from '../../../utils/shortenAddress';
@@ -36,99 +37,130 @@ const ValidatorTable: React.FC<{
   const validatorStatus = (validator: BeaconChainValidator) => {
     const { status } = validator;
 
-    if (status === 'pending') {
-      return (
-        <div className="flex">
-          <Refresh color="blueLight" />
-          <Text className="ml10">Pending</Text>
-        </div>
-      );
+    switch (status) {
+      case 'pending': {
+        return (
+          <div className="flex">
+            <Refresh color="blueLight" />
+            <Text className="ml10">Pending</Text>
+          </div>
+        );
+      }
+      case 'slashing': {
+        return (
+          <div className="flex">
+            <StatusWarning color={theme.red.light} />
+            <Text className="ml10">Slashing</Text>
+          </div>
+        );
+      }
+      case 'slashed': {
+        return (
+          <div className="flex">
+            <StatusWarning color={theme.red.light} />
+            <Text className="ml10">Slashed</Text>
+          </div>
+        );
+      }
+      case 'exiting': {
+        return (
+          <div className="flex">
+            <StatusWarning color="yellowDark" />
+            <Text className="ml10">Exiting</Text>
+          </div>
+        );
+      }
+      case 'exited': {
+        return (
+          <div className="flex">
+            <StatusDisabled color={theme.gray.medium} />
+            <Text className="ml10">Exited</Text>
+          </div>
+        );
+      }
+      case 'active_offline': {
+        return (
+          <div className="flex">
+            <Wifi color={theme.gray.medium} />
+            <Text className="ml10">Offline</Text>
+          </div>
+        );
+      }
+      case 'active_online': {
+        return (
+          <div className="flex">
+            <Wifi color={theme.green.dark} />
+            <Text className="ml10">Online</Text>
+          </div>
+        );
+      }
+      default:
+        return '';
     }
-    if (status === 'slashing') {
-      return (
-        <div className="flex">
-          <StatusWarning color={theme.red.light} />
-          <Text className="ml10">Slashing</Text>
-        </div>
-      );
-    }
-    if (status === 'exiting') {
-      return (
-        <div className="flex">
-          <StatusWarning color="yellowDark" />
-          <Text className="ml10">Exiting</Text>
-        </div>
-      );
-    }
-    if (status === 'exited') {
-      return (
-        <div className="flex">
-          <StatusDisabled color={theme.gray.medium} />
-          <Text className="ml10">Exited</Text>
-        </div>
-      );
-    }
-    if (status === 'active_offline') {
-      return (
-        <div className="flex">
-          <Wifi color={theme.gray.medium} />
-          <Text className="ml10">Offline</Text>
-        </div>
-      );
-    }
-    if (status === 'active_online') {
-      return (
-        <div className="flex">
-          <Wifi color={theme.green.dark} />
-          <Text className="ml10">Online</Text>
-        </div>
-      );
-    }
-    return '';
   };
 
   const validatorRows = React.useMemo(() => {
-    console.log(validators);
-    return validators.map(validator => (
-      <React.Fragment key={validator.pubkey}>
-        <TableRow>
-          <TableCell scope="col" border="bottom">
-            <Link
-              withArrow
-              external
-              primary
-              to={`${BEACONCHAIN_URL}/${validator.pubkey}`}
-            >
-              {shortenAddress(validator.pubkey)}
-            </Link>
-          </TableCell>
-          <TableCell scope="col" border="bottom">
-            <Text>{validatorStatus(validator)}</Text>
-          </TableCell>
-          <TableCell scope="col" border="bottom">
-            <Text>{validator.slashed ? 'YES' : 'NO'}</Text>
-          </TableCell>
-          <TableCell scope="col" border="bottom">
-            <Text>
-              {numeral(validator.balance / 10 ** 9).format('0.00000')} ETH
-            </Text>
-          </TableCell>
-          {/* {validator.effectivebalance < 32000000000 && ( */}
-          <TableCell>
-            <Button
-              onClick={() => setSelectedValidator(validator)}
-              label="Top Up"
-              rainbow
-            />
-          </TableCell>
-          {/* )} */}
-        </TableRow>
-      </React.Fragment>
-    ));
+    return validators.map(validator => {
+      const alreadyToppedUp = validator.effectivebalance >= 32000000000;
+      // const statusIneligible =
+      //   validator.status === 'slashed' || validator.status === 'exited';
+
+      // const disableTopUpButton = alreadyToppedUp || statusIneligible;
+
+      const toolTipText = alreadyToppedUp
+        ? 'This validator already has an effective balance of 32 ETH.'
+        : 'This validator is not eligible to be topped up';
+
+      return (
+        <React.Fragment key={validator.pubkey}>
+          <TableRow>
+            <TableCell scope="col" border="bottom">
+              <Link
+                withArrow
+                external
+                primary
+                to={`${BEACONCHAIN_URL}/${validator.pubkey}`}
+              >
+                {shortenAddress(validator.pubkey)}
+              </Link>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>{validatorStatus(validator)}</Text>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>{validator.slashed ? 'YES' : 'NO'}</Text>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>
+                {numeral(validator.balance / 10 ** 9).format('0.00000')} ETH
+              </Text>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>
+                {numeral(validator.effectivebalance / 10 ** 9).format(
+                  '0.00000'
+                )}{' '}
+                ETH
+              </Text>
+            </TableCell>
+
+            <TableCell data-tip={toolTipText}>
+              <Button
+                onClick={() => setSelectedValidator(validator)}
+                label="Top Up"
+                rainbow
+                // disabled={disableTopUpButton}
+              />
+            </TableCell>
+          </TableRow>
+        </React.Fragment>
+      );
+    });
   }, [validators]);
 
   return validators.length > 0 ? (
     <Paper style={{ marginTop: '3rem' }}>
+      <ReactTooltip />
       <Table>
         <TableHeader>
           <TableRow>
@@ -142,7 +174,10 @@ const ValidatorTable: React.FC<{
               <Text>Slashed?</Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
-              <Text>Balance</Text>
+              <Text>True Balance</Text>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>Effective Balance</Text>
             </TableCell>
           </TableRow>
         </TableHeader>

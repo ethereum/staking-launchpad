@@ -8,6 +8,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import Web3 from 'web3';
 import BigNumber from 'bignumber.js';
 import { Alert as AlertIcon } from 'grommet-icons';
+import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
 import { contractAbi } from '../../../contractAbi';
 import { CONTRACT_ADDRESS } from '../../../utils/envVars';
@@ -18,7 +19,7 @@ import { Text } from '../../../components/Text';
 import { Button } from '../../../components/Button';
 import { Paper } from '../../../components/Paper';
 import { Heading } from '../../../components/Heading';
-import { NumberInput } from '../../GenerateKeys/NumberInput';
+import { TopupInput } from './TopUpInput';
 import shortenAddress from '../../../utils/shortenAddress';
 import { Alert } from '../../../components/Alert';
 import TopUpTransactionModal from './TopUpTransactionModal';
@@ -54,6 +55,7 @@ const InputContainer = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
 `;
 
 const SubmitButton = styled(Button)`
@@ -80,24 +82,33 @@ const TopUpDetailsContainer = styled.div`
 
 const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
-  const [value, setValue] = React.useState(0);
-  const [showTxModal, setShowTxModal] = React.useState(false);
-  const [txHash, setTxHash] = React.useState('');
 
   const balance = useMemo(() => Number(validator.balance) / 10 ** 9, [
     validator,
   ]);
 
-  const newBalance = useMemo(() => +balance + Number(value), [balance, value]);
+  const maxTopUpVal = useMemo(() => Math.max(0, 32 - Number(balance)), [
+    balance,
+  ]);
 
-  const maxTopUpVal = useMemo(() => 32 - Number(balance), [balance]);
+  // const minTopupValue = 1;
+
+  const [value, setValue] = React.useState(maxTopUpVal);
+
+  const [showTxModal, setShowTxModal] = React.useState(false);
+
+  const [txHash, setTxHash] = React.useState('');
+
+  const balanceAfterTopup = useMemo(() => +balance + Number(value), [
+    balance,
+    value,
+  ]);
 
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
 
-  const topUp = async () => {
-    console.log('topping up for portis user');
+  const submitTopupTransaction = async () => {
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
@@ -123,7 +134,6 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     const byteRoot = depositDataContainer.hashTreeRoot(reconstructedKeyFile);
     const reconstructedDepositDataRoot = `0x${buf2hex(byteRoot)}`;
 
-    console.log('got all the shit we need: ');
     contract.methods
       .deposit(
         reconstructedKeyFile.pubkey,
@@ -139,7 +149,6 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       .on(
         'confirmation',
         (confirmation: number, receipt: { status: {} }): any => {
-          console.log('confirmed');
           if (confirmation === 0) {
             if (receipt.status) {
               setTransactionStatus('success');
@@ -167,11 +176,31 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const [termA, setTermA] = useState(false);
 
   const showAlert = React.useMemo(() => {
-    return newBalance > 32 || balance > 32;
-  }, []);
+    return balanceAfterTopup > 32 || balance > 32;
+  }, [balance, balanceAfterTopup]);
+
+  const alertText = React.useMemo(() => {
+    if (balance > 32)
+      return 'Validator balance is already higher than the maximum amount.';
+    if (balanceAfterTopup > 32)
+      return `Submitting a topup for more than ${maxTopUpVal.toFixed(
+        4
+      )} will result in a balance higher than the maximum balance of 32.`;
+  }, [balance, balanceAfterTopup]);
+
+  const submitBtnTooltipText = React.useMemo(() => {
+    if (value <= 0 || value > maxTopUpVal)
+      return 'Please enter a valid top up value.';
+
+    if (value < 1) return 'Minimum topup value is 1 ETH.';
+
+    if (!termA) return 'Please accept the conditions above.';
+    return '';
+  }, [value, balance, termA]);
 
   return (
     <div>
+      <ReactTooltip />
       {showTxModal && (
         <TopUpTransactionModal
           txHash={txHash}
@@ -211,13 +240,13 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             <Text weight={600} color="blueDark">
               Current Balance
             </Text>
-            <Text>{balance} ETH</Text>
+            <Text>{balance.toFixed(8)} ETH</Text>
           </div>
           <div className="details-item">
             <Text weight={600} color="blueDark">
               Balance after topping up
             </Text>
-            <Text>{newBalance} ETH</Text>
+            <Text>{balanceAfterTopup.toFixed(8)} ETH</Text>
           </div>
         </TopUpDetailsContainer>
 
@@ -225,24 +254,26 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           <Alert variant="warning" className="my10">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <AlertIcon color="redLight" />
-              <Text className="ml10">
-                {balance > 32
-                  ? 'Validator balance is already higher than the maximum amount.'
-                  : `Submitting a topup for more than ${maxTopUpVal} will result in a balance higher than the maximum balance of 32.`}
-              </Text>
+              <Text className="ml10">{alertText}</Text>
             </div>
           </Alert>
         </div>
 
         <InputContainer>
-          <NumberInput value={value} setValue={setValue} allowDecimals />
-          <SubmitButton
-            className="ml10"
-            label="Submit"
-            rainbow
-            onClick={topUp}
-            disabled={value <= 0 || !termA}
+          <TopupInput
+            value={value}
+            setValue={setValue}
+            maxValue={maxTopUpVal}
           />
+          <span data-tip={submitBtnTooltipText}>
+            <SubmitButton
+              className="ml10"
+              label="Submit"
+              rainbow
+              onClick={submitTopupTransaction}
+              // disabled={value <= 0 || value > maxTopUpVal || value < minTopupValue || !termA}
+            />
+          </span>
         </InputContainer>
       </Paper>
     </div>

@@ -196,7 +196,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
     if (!termA) return 'Please accept the conditions above.';
     return '';
-  }, [value, balance, termA, maxTopUpVal]);
+  }, [value, termA, maxTopUpVal]);
 
   return (
     <div>

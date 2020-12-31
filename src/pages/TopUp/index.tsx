@@ -53,10 +53,13 @@ const _TopUpPage: React.FC<Props> = () => {
 
       // beaconchain API requires two fetches - one that gets the public keys for an eth1 address, and one that
       // queries by the validators public keys
+      console.log('fetching for ', account);
       fetch(`${BEACONCHAIN_API_URL}/eth1/${account}`)
         .then(r => r.json())
         .then(({ data }: { data: BeaconChainValidatorResponse[] }) => {
+          console.log(data);
           if (data.length === 0) {
+            setValidators([]);
             setLoading(false);
           } else {
             // query by public keys
@@ -68,7 +71,7 @@ const _TopUpPage: React.FC<Props> = () => {
             fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelineated}`)
               .then(r => r.json())
               .then(({ data }: { data: BeaconChainValidator[] }) => {
-                setValidators([...validators, ...data]);
+                setValidators(data);
                 setLoading(false);
               })
               .catch(() => {
@@ -126,7 +129,7 @@ const _TopUpPage: React.FC<Props> = () => {
         setSelectedValidator={setSelectedValidator}
       />
     );
-  }, [loading, validatorLoadError, selectedValidator, active]);
+  }, [loading, validatorLoadError, selectedValidator, active, validators]);
 
   return (
     <>

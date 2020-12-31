@@ -186,7 +186,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       return `Submitting a topup for more than ${maxTopUpVal.toFixed(
         4
       )} will result in a balance higher than the maximum balance of 32.`;
-  }, [balance, balanceAfterTopup]);
+  }, [balance, balanceAfterTopup, maxTopUpVal]);
 
   const submitBtnTooltipText = React.useMemo(() => {
     if (value <= 0 || value > maxTopUpVal)
@@ -196,7 +196,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
     if (!termA) return 'Please accept the conditions above.';
     return '';
-  }, [value, balance, termA]);
+  }, [value, balance, termA, maxTopUpVal]);
 
   return (
     <div>

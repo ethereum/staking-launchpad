@@ -156,7 +156,7 @@ const ValidatorTable: React.FC<{
         </React.Fragment>
       );
     });
-  }, [validators]);
+  }, [validators, setSelectedValidator]);
 
   return validators.length > 0 ? (
     <Paper style={{ marginTop: '3rem' }}>

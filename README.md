@@ -1,6 +1,6 @@
 # Ethereum 2.0 Launchpad
 
-The Launchpad is the Ethereum Foundation's official way to deposit your Eth for Ethereum 2.0
+The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your Eth for Ethereum 2.0
 
   - **Status**:  This Launchpad is in active development for testnet
 
@@ -17,7 +17,7 @@ The Launchpad is the Ethereum Foundation's official way to deposit your Eth for 
 
 ## Configuration
 
-To have full functionality of the Launchpad, you must create an .env file in your root directory and add an environment variable
+To have full functionality of the Launchpad, you must create an `.env` file in your root directory and add an environment variable.
 
 
 The Infura Project ID will enable the network status progress bar showing the balance of the Deposit Contract
@@ -47,10 +47,6 @@ yarn start
 
 ----
 ## Open source licensing info
-[License](LICENSE)
+Creative Commons Zero v1.0 Universal - For more information read the [`LICENSE`](./LICENSE) file.
 
 ----
-
-
-
-

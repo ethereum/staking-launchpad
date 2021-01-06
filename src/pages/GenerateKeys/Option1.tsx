@@ -94,7 +94,7 @@ export const Option1 = ({
           )}
           {os === 'windows' && (
             <>
-              <span style={{ color: colors.red.medium }}>deposit</span>
+              <span style={{ color: colors.red.medium }}>.\deposit</span>
               <span style={{ color: colors.purple.dark }}>.exe </span>
             </>
           )}

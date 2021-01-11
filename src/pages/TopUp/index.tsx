@@ -53,34 +53,52 @@ const _TopUpPage: React.FC<Props> = () => {
 
       // beaconchain API requires two fetches - one that gets the public keys for an eth1 address, and one that
       // queries by the validators public keys
-      console.log('fetching for ', account);
+
       fetch(`${BEACONCHAIN_API_URL}/eth1/${account}`)
         .then(r => r.json())
-        .then(({ data }: { data: BeaconChainValidatorResponse[] }) => {
-          console.log(data);
-          if (data.length === 0) {
-            setValidators([]);
-            setLoading(false);
-          } else {
-            // query by public keys
-            const pubKeysCommaDelineated = `${data
-              .slice(0, 50)
-              .map(validator => validator.publickey)
-              .join(',')}`;
+        .then(
+          ({
+            data,
+          }: {
+            data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
+          }) => {
+            const response = Array.isArray(data) ? data : [data];
+            console.log('first response: ', response);
 
-            fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelineated}`)
-              .then(r => r.json())
-              .then(({ data }: { data: BeaconChainValidator[] }) => {
-                setValidators(data);
-                setLoading(false);
-              })
-              .catch(() => {
-                setLoading(false);
-                setValidatorLoadError(true);
-              });
+            // no validators for that user's wallet address
+            if (response.length === 0) {
+              setValidators([]);
+              setLoading(false);
+              return;
+            }
+
+            if (response.length === 0) {
+              setValidators([]);
+              setLoading(false);
+            } else {
+              // query by public keys
+              const pubKeysCommaDelineated = `${response
+                .slice(0, 50)
+                .map(validator => validator.publickey)
+                .join(',')}`;
+
+              fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelineated}`)
+                .then(r => r.json())
+                .then(({ data }: { data: BeaconChainValidator[] }) => {
+                  console.log('second response: ', data);
+                  setValidators(data);
+                  setLoading(false);
+                })
+                .catch(error => {
+                  console.log(error);
+                  setLoading(false);
+                  setValidatorLoadError(true);
+                });
+            }
           }
-        })
-        .catch(() => {
+        )
+        .catch(error => {
+          console.log(error);
           setLoading(false);
           setValidatorLoadError(true);
         });

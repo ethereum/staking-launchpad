@@ -90,8 +90,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <strong>32 ETH</strong> is the amount needed to initially active the validator - this forms the validator's initial balance which itself can shrink or grow.
-              A validator can eventually stake less than that (e.g if penalties lower the balance) down to 16 ETH.
-              It cannot stake more than 32 ETH.
+              A validator can eventually stake less than that (e.g if penalties lower the balance), down to 16 ETH.
             </Text>
           </section>
           <section>

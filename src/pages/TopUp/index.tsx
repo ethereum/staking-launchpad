@@ -45,6 +45,10 @@ const _TopUpPage: React.FC<Props> = () => {
   const [validatorLoadError, setValidatorLoadError] = React.useState<boolean>(
     false
   );
+  const [
+    showDepositVerificationWarning,
+    setShowDepositVerificationWarning,
+  ] = React.useState(false);
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   React.useEffect(() => {
@@ -62,9 +66,8 @@ const _TopUpPage: React.FC<Props> = () => {
           }: {
             data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
           }) => {
+            setShowDepositVerificationWarning(false);
             const response = Array.isArray(data) ? data : [data];
-            console.log('first response: ', response);
-
             // no validators for that user's wallet address
             if (response.length === 0) {
               setValidators([]);
@@ -85,7 +88,9 @@ const _TopUpPage: React.FC<Props> = () => {
               fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelineated}`)
                 .then(r => r.json())
                 .then(({ data }: { data: BeaconChainValidator[] }) => {
-                  console.log('second response: ', data);
+                  if (data.length === 0) {
+                    setShowDepositVerificationWarning(true);
+                  }
                   setValidators(data);
                   setLoading(false);
                 })
@@ -142,10 +147,24 @@ const _TopUpPage: React.FC<Props> = () => {
     }
 
     return (
-      <ValidatorTable
-        validators={validators}
-        setSelectedValidator={setSelectedValidator}
-      />
+      <>
+        {showDepositVerificationWarning && (
+          <Alert variant="warning" className="my10">
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <AlertIcon color="redLight" />
+              <Text className="ml10">
+                You may have an ETH deposit that was accepted but is being
+                validated on chain. It will be available here when beaconcha.in
+                has confirmed 2048 blocks.
+              </Text>
+            </div>
+          </Alert>
+        )}
+        <ValidatorTable
+          validators={validators}
+          setSelectedValidator={setSelectedValidator}
+        />
+      </>
     );
   }, [loading, validatorLoadError, selectedValidator, active, validators]);
 

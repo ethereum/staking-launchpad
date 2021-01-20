@@ -12,11 +12,11 @@ export interface PageContentInterface {
 
 export const pageContent = {
   [AcknowledgementIdsEnum.introSection]: {
-    title: 'Introducing eth2 phase 0',
+    title: 'Introducing eth2',
     content: (
       <>
         <Text size="large" className="my10">
-          Ethereum 2.0 uses proof-of-stake to secure its network.
+          Eth2 brings Proof of Stake consensus to Ethereum.
         </Text>
         <Text size="large" className="my10">
           For this, we need active participants - known as validators - to
@@ -42,16 +42,16 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.signup]: {
-    title: 'Signing up',
+    title: 'The Deposit',
     content: (
       <Text size="large" className="my10">
-        To become a validator on eth2, you need to deposit {PRICE_PER_VALIDATOR}{' '}
-        {` `}
+        To become a validator on the beacon chain, you need to deposit{' '}
+        {PRICE_PER_VALIDATOR} {` `}
         {TICKER_NAME} per validator that you wish to run. This process cannot be
         reversed.
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} into eth2 is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} to the beacon chain is one-way, and non-reversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',
@@ -59,8 +59,9 @@ export const pageContent = {
       <>
         <Text size="large" className="my10">
           Only validators that actively participate in consensus, receive
-          rewards. Those that are offline are penalized. The penalties for being
-          offline are equal to the rewards for actively participating.
+          rewards. Those that are offline are penalized. The onus is on you to
+          keep you validator online and up to date. The penalties for being
+          offline are roughly equal to the rewards for actively participating.
         </Text>
         <Link
           external
@@ -85,7 +86,7 @@ export const pageContent = {
           liable to be slashed (incur a large penalty).
         </Text>
         <Link to="/faq" className="my10" primary withArrow>
-          Learn More about about penalties
+          Learn More about about slashing
         </Link>
       </>
     ),
@@ -101,7 +102,7 @@ export const pageContent = {
       </Text>
     ),
     acknowledgementText:
-      'I understand that my mnemonic is the ONLY WAY to withdraw my funds.',
+      'I understand that my mnemonic is the ‼️ONLY WAY‼️ to withdraw my funds.',
   },
   [AcknowledgementIdsEnum.signingKeys]: {
     title: 'Signing Keys',
@@ -122,35 +123,34 @@ export const pageContent = {
     content: (
       <>
         <Text size="large" className="my10">
-          Transfers between validators are disabled until at least phase 1.
-          Validators will have to wait until phase 2 (around two years) to be
-          able to withdraw to a specific shard.
+          Transfers between validators are disabled for now. Validators will
+          have to wait until <i>the merge</i> (around two years) to be able to
+          withdraw their ${TICKER_NAME}.
         </Text>
         <Link
           external
-          // TODO: NEED LINK HERE
-          to="https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/"
+          to="https://ethereum.org/en/eth2/beacon-chain/#relationship-between-upgrades"
           className="my10"
           primary
           withArrow
         >
-          Learn More about eth2&apos;s phases
+          Learn More about the eth2 upgrades
         </Link>
       </>
     ),
-    acknowledgementText: `I understand that I CAN NOT TRANSFER my staked ${TICKER_NAME} until at least phase 1, and I CAN NOT WITHDRAW until phase 2.`,
+    acknowledgementText: `I understand that I CAN NOT TRANSFER my staked ${TICKER_NAME} for a while, and I CAN NOT WITHDRAW until the merge.`,
   },
   [AcknowledgementIdsEnum.commitment]: {
     title: 'Long-term commitment',
     content: (
       <Text size="large" className="my10">
-        With transfers disabled until at least phase 1, there’s no way for a
-        validator to voluntarily exit and then restart later. This means
-        validators need to be in it for the long haul.
+        With transfers disabled for now, there’s no way for a validator to
+        voluntarily exit and then restart later. This means validators need to
+        be in it for the long haul.
       </Text>
     ),
     acknowledgementText:
-      'Once I exit, I can not rejoin until at least phase 1. This is a long term commitment.',
+      'Once I exit, I can not rejoin until much later. This is a long term commitment.',
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
     title: 'Early adopter risks',

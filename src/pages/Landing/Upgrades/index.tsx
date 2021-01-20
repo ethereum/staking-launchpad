@@ -3,7 +3,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
 import { Text } from '../../../components/Text';
 import { Heading } from '../../../components/Heading';
-import { PhaseCard } from './PhaseCard';
+import { UpgradeCard } from './UpgradeCard';
 import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../../utils/envVars';
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const SubContainer = styled.div`
       p.isMobile ? '0 20px' : '0 60px'};
   }
 `;
-const PhasesContainer = styled.div`
+const UpgradesContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -36,12 +36,12 @@ const StyledHeading = styled(Heading)`
   width: ${(p: { isMobile: boolean }) =>
     p.isMobile ? '220px' : undefined}; // force word break
 `;
-const PhaseTitle = styled(Text)`
+const UpgradeTitle = styled(Text)`
   display: inline;
   font-weight: bold;
 `;
 
-interface phase {
+interface upgrade {
   title: string;
   subTitle: string;
   linkUrl: string;
@@ -49,7 +49,7 @@ interface phase {
   external: boolean;
 }
 
-const phases: phase[] = [
+const upgrades: upgrade[] = [
   {
     title: 'The upgrade',
     subTitle: 'Dig deeper into how eth2 upgrades Ethereum.',
@@ -76,7 +76,7 @@ const phases: phase[] = [
   },
 ];
 
-export const Phases = (): JSX.Element => {
+export const Upgrades = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
   return (
     <Container isMobile={m}>
@@ -95,7 +95,7 @@ export const Phases = (): JSX.Element => {
                 of today. The main components of this upgrade are:
               </Text>
               <Text className="mt20">
-                <PhaseTitle>Proof of Stake </PhaseTitle>
+                <UpgradeTitle>Proof of Stake </UpgradeTitle>
                 (PoS) is more secure, decentralised, and environmentally
                 friendly consensus mechanism when compared with Proof of Work
                 (PoW) that secures Ethereum today. Proof of Stake works by
@@ -105,23 +105,23 @@ export const Phases = (): JSX.Element => {
                 the form of the beacon chain.
               </Text>
               <Text className="mt20">
-                <PhaseTitle>The Merge </PhaseTitle>
+                <UpgradeTitle>The Merge </UpgradeTitle>
                 is when the beacon chain stops being a separate chain and
                 replaces PoW consensus in Ethereum.
               </Text>
               <Text className="mt20">
-                <PhaseTitle>Sharding </PhaseTitle>
+                <UpgradeTitle>Sharding </UpgradeTitle>
                 will dramatically improve Ethereum's data handling capabilities
                 by adding 64 parallel chains, each of which will be able to
                 handle the same of more data to what Ethereum can today.
               </Text>
             </ScrollAnimation>
           </div>
-          <PhasesContainer>
-            {phases.map((phase: phase) => (
-              <PhaseCard key={phase.title} {...phase} />
+          <UpgradesContainer>
+            {upgrades.map((upgrade: upgrade) => (
+              <UpgradeCard key={upgrade.title} {...upgrade} />
             ))}
-          </PhasesContainer>
+          </UpgradesContainer>
         </ResponsiveContainer>
       </SubContainer>
     </Container>

@@ -155,14 +155,14 @@ export const FAQ = () => {
               voluntary exit message with your validator.
             </Text>
             <Text className="mt10">
-              However, bear in mind that in Phase 0, once you&apos;ve exited,
-              there&apos;s no going back.
+              However, bear in mind that for the forseeable future, once
+              you&apos;ve exited, there&apos;s no going back.
             </Text>
             <Text className="mt10">
               There&apos;s no way for you to activate your validator again, and
-              you won&apos;t be able to transfer or withdraw your funds until at
-              least Phase 1.5 (which means your funds will remain inaccessible
-              until then).
+              you won&apos;t be able to transfer or withdraw your funds until
+              the merge (which means your funds will remain inaccessible until
+              then).
             </Text>
           </section>
         </section>

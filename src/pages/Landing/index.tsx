@@ -5,7 +5,7 @@ import { NetworkStatus } from './NetworkStatus';
 import { StakingRewards } from './StakingRewards';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
-import { Phases } from './Phases';
+import { Upgrades } from './Upgrades';
 import { queryContract } from '../../utils/queryContract';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 import useMobileCheck from '../../hooks/useMobileCheck';
@@ -33,7 +33,7 @@ export const LandingPage = (): JSX.Element => {
       <StakingRewards currentStaked={amountEth} />
       <Introduction />
       <SignupSteps />
-      <Phases />
+      <Upgrades />
     </>
   );
 };

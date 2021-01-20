@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Text } from '../../../components/Text';
 import { Heading } from '../../../components/Heading';
 import { PhaseCard } from './PhaseCard';
+import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../../utils/envVars';
 
 const Container = styled.div`
   background-color: ${p => p.theme.purple.light};
@@ -50,11 +51,10 @@ interface phase {
 
 const phases: phase[] = [
   {
-    title: 'Duration',
-    subTitle:
-      'The duration for the deployment of the individual phases depends on many factors.',
-    linkUrl: 'https://ethereum.org/en/eth2/#roadmap',
-    link: 'Phase 0, 1, 1.5, and 2 duration',
+    title: 'The upgrade',
+    subTitle: 'Dig deeper into how eth2 upgrades Ethereum.',
+    linkUrl: 'https://ethereum.org/en/eth2/',
+    link: 'How does this all happen?',
     external: true,
   },
   {
@@ -85,35 +85,35 @@ export const Phases = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                What is eth2 phase 0?
+                How does eth2 upgrade Ethereum?
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20">
-                Transitioning from proof-of-work (PoW) to proof-of-stake (PoS),
-                eth2 will be launched in at least 4 phases. The idea is to break
-                up this transition into phases each focusing on a different
-                aspect of eth2.
+                In order to future-proof Ethereum, eth2 will upgrade various
+                components of Ethereum while seamlessly continuing on the chain
+                of today. The main components of this upgrade are:
               </Text>
               <Text className="mt20">
-                <PhaseTitle>Phase 0 </PhaseTitle>
-                contains all of the machinery behind eth2&apos;s PoS consensus,
-                it tracks the validators and their balances.
+                <PhaseTitle>Proof of Stake </PhaseTitle>
+                (PoS) is more secure, decentralised, and environmentally
+                friendly consensus mechanism when compared with Proof of Work
+                (PoW) that secures Ethereum today. Proof of Stake works by
+                having validators lock up {PRICE_PER_VALIDATOR} {TICKER_NAME}{' '}
+                and rewarding them for building the chain and punishing them if
+                they try to attack it. This portion of eth2 is already live in
+                the form of the beacon chain.
               </Text>
               <Text className="mt20">
-                <PhaseTitle>Phase 1 </PhaseTitle>
-                handles adding, storing, and retrieving the data associated with
-                eth2's shards.
+                <PhaseTitle>The Merge </PhaseTitle>
+                is when the beacon chain stops being a separate chain and
+                replaces PoW consensus in Ethereum.
               </Text>
               <Text className="mt20">
-                <PhaseTitle>Phase 1.5 </PhaseTitle>
-                updates Ethereum as we know it today from PoW to PoS by making
-                it a shard under eth2.
-              </Text>
-              <Text className="mt20">
-                <PhaseTitle>Phase 2 </PhaseTitle>
-                Phase 2 adds execution to the remaining eth2 shards which
-                enables smart contracts to run on all of the shards.
+                <PhaseTitle>Sharding </PhaseTitle>
+                will dramatically improve Ethereum's data handling capabilities
+                by adding 64 parallel chains, each of which will be able to
+                handle the same of more data to what Ethereum can today.
               </Text>
             </ScrollAnimation>
           </div>

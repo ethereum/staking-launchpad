@@ -3,7 +3,6 @@ import { AppBar } from '../../components/AppBar';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
 import { StakingRewards } from './StakingRewards';
-import { TimelineMileStones } from './TimelineMilestones';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
 import { Phases } from './Phases';
@@ -32,7 +31,6 @@ export const LandingPage = (): JSX.Element => {
       <Hero />
       <NetworkStatus {...{ amountEth }} />
       <StakingRewards currentStaked={amountEth} />
-      <TimelineMileStones />
       <Introduction />
       <SignupSteps />
       <Phases />

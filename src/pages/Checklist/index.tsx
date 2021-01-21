@@ -546,7 +546,7 @@ export const Checklist = () => {
         <section>
           <Heading level={3}>Simulations</Heading>
           <Heading level={4}>
-            The following are are recommended simulations for ensuring your
+            The following are recommended simulations for ensuring your
             validation setup is robust:
           </Heading>
           <CheckBox

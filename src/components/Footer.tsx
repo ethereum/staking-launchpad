@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { Heading } from './Heading';
@@ -85,8 +86,8 @@ export const Footer = () => {
 
         <div className="col extra-links">
           <Heading level={4}>Learn More About Eth 2</Heading>
-          <Link external to="https://ethereum.org/en/eth2/">
-            The Eth2 Upgrades Intro
+          <Link to="https://ethereum.org/en/eth2/">
+            <FormattedMessage defaultMessage="The Eth2 Upgrades Intro" />
           </Link>
           <Link
             external
@@ -95,7 +96,7 @@ export const Footer = () => {
             Economics
           </Link>
           {/* TODO: add this link when page goes live */}
-          {/* <Link external to="http://activate.codefi.network/eth2"> */}
+          {/* <Link to="http://activate.codefi.network/eth2"> */}
           {/*  Calculator */}
           {/* </Link> */}
           <Link

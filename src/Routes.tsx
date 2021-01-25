@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 import {
   AcknowledgementPage,
   CongratulationsPage,
@@ -21,6 +22,8 @@ import { Prysm } from './pages/Clients/Eth2/Prysm';
 import { Teku } from './pages/Clients/Eth2/Teku';
 import { Nimbus } from './pages/Clients/Eth2/Nimbus';
 import { Lighthouse } from './pages/Clients/Eth2/Lighthouse';
+
+import { AppLanguage } from './intl/constants';
 
 type RouteType = {
   path: string;
@@ -130,12 +133,33 @@ const routes: RouteType[] = [
   { path: routesEnum.notFoundPage, component: NotFoundPage },
 ];
 
+const localizeRoutes = (locale: String, routes: RouteType[]) => {
+  const supportedLangs: String[] = Object.values(AppLanguage);
+  return routes.map(route => {
+    const path = route.path;
+    const languagePath = path.split('/')[1];
+    const routeHasLangPath = supportedLangs.includes(languagePath);
+    if (routeHasLangPath || route.path === '/*') {
+      return route;
+    }
+    const localizedRoute: RouteType = {
+      path: `/${locale}${route.path}`,
+      exact: route.exact,
+      component: route.component,
+    };
+    return localizedRoute;
+  });
+};
+
 const _Routes = () => {
+  const { locale } = useIntl();
+  const localizedRoutes = localizeRoutes(locale, routes);
+
   return (
     <>
       <ScrollToTop>
         <Switch>
-          {routes.map((route: RouteType) => (
+          {localizedRoutes.map((route: RouteType) => (
             <Route
               onUpdate={() => window.scrollTo(0, 0)}
               {...route}

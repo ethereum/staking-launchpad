@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const acknowledgementsWithCopy = {
   [AcknowledgementIdsEnum.introSection]: 'Overview',
-  [AcknowledgementIdsEnum.signup]: 'Signup',
+  [AcknowledgementIdsEnum.deposit]: 'Deposit',
   [AcknowledgementIdsEnum.responsibilities]: 'Responsibilities',
   [AcknowledgementIdsEnum.slashing]: 'Slashing',
   [AcknowledgementIdsEnum.keyManagement]: 'Key Management',

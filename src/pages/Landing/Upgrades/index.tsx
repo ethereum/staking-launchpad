@@ -90,7 +90,7 @@ export const Upgrades = (): JSX.Element => {
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20">
-                In order to future-proof Ethereum, eth2 will upgrade various
+                To better future-proof Ethereum, eth2 will upgrade various
                 components of Ethereum while seamlessly continuing on the chain
                 of today. The main components of this upgrade are:
               </Text>

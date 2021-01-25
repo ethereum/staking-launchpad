@@ -41,7 +41,7 @@ export const pageContent = {
       </>
     ),
   },
-  [AcknowledgementIdsEnum.signup]: {
+  [AcknowledgementIdsEnum.deposit]: {
     title: 'The Deposit',
     content: (
       <Text size="large" className="my10">
@@ -58,9 +58,9 @@ export const pageContent = {
     content: (
       <>
         <Text size="large" className="my10">
-          Only validators that actively participate in consensus can receive full
-          rewards. Those that are offline are penalized. The onus is on you to
-          keep your validator online and up to date. The penalties for being
+          Only validators that actively participate in consensus can receive
+          full rewards. Those that are offline are penalized. The onus is on you
+          to keep your validator online and up to date. The penalties for being
           offline are roughly equal to the rewards for actively participating.
         </Text>
         <Link

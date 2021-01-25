@@ -6,7 +6,6 @@ import { createBrowserHistory } from 'history';
 import { Grommet } from 'grommet';
 import { Web3Provider } from '@ethersproject/providers';
 import { Web3ReactProvider } from '@web3-react/core';
-import { Router } from 'react-router-dom';
 import { grommetTheme } from './styles/grommetTheme';
 import { styledComponentsTheme } from './styles/styledComponentsTheme';
 import { Routes as RoutedContent } from './Routes';
@@ -14,9 +13,6 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import { reducers } from './store/reducers';
 import { LocalizedRouter } from './components/LocalizedRouter';
 import { Footer } from './components/Footer';
-
-import * as localizations from './intl';
-import { AppLanguage } from './intl/constants';
 
 export const store = createStore(
   reducers,
@@ -35,12 +31,7 @@ export const history = createBrowserHistory();
 export const App: React.FC = () => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-      <LocalizedRouter
-        history={history}
-        RouterComponent={Router}
-        languages={AppLanguage}
-        appStrings={localizations}
-      >
+      <LocalizedRouter history={history}>
         <Provider store={store}>
           <Grommet theme={grommetTheme}>
             <ThemeProvider theme={styledComponentsTheme}>

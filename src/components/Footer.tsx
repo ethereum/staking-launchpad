@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { Heading } from './Heading';
@@ -86,7 +87,7 @@ export const Footer = () => {
         <div className="col extra-links">
           <Heading level={4}>Learn More About Eth 2</Heading>
           <Link external to="https://ethereum.org/en/eth2/#roadmap">
-            Launch Phases
+            <FormattedMessage id="launch-phases" />
           </Link>
           <Link
             external

@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { useIntl } from 'react-intl';
+import { supportedLanguages } from './intl';
 import {
   AcknowledgementPage,
   CongratulationsPage,
@@ -22,8 +23,6 @@ import { Prysm } from './pages/Clients/Eth2/Prysm';
 import { Teku } from './pages/Clients/Eth2/Teku';
 import { Nimbus } from './pages/Clients/Eth2/Nimbus';
 import { Lighthouse } from './pages/Clients/Eth2/Lighthouse';
-
-import { AppLanguage } from './intl/constants';
 
 type RouteType = {
   path: string;
@@ -134,11 +133,9 @@ const routes: RouteType[] = [
 ];
 
 const localizeRoutes = (locale: String, routes: RouteType[]) => {
-  const supportedLangs: String[] = Object.values(AppLanguage);
   return routes.map(route => {
-    const path = route.path;
-    const languagePath = path.split('/')[1];
-    const routeHasLangPath = supportedLangs.includes(languagePath);
+    const languagePath = route.path.split('/')[1];
+    const routeHasLangPath = supportedLanguages.includes(languagePath);
     if (routeHasLangPath || route.path === '/*') {
       return route;
     }

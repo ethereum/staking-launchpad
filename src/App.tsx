@@ -12,7 +12,11 @@ import { styledComponentsTheme } from './styles/styledComponentsTheme';
 import { Routes as RoutedContent } from './Routes';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { reducers } from './store/reducers';
+import { LocalizedRouter } from './components/LocalizedRouter';
 import { Footer } from './components/Footer';
+
+import * as localizations from './intl';
+import { AppLanguage } from './intl/constants';
 
 export const store = createStore(
   reducers,
@@ -31,7 +35,12 @@ export const history = createBrowserHistory();
 export const App: React.FC = () => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
-      <Router history={history}>
+      <LocalizedRouter
+        history={history}
+        RouterComponent={Router}
+        languages={AppLanguage}
+        appStrings={localizations}
+      >
         <Provider store={store}>
           <Grommet theme={grommetTheme}>
             <ThemeProvider theme={styledComponentsTheme}>
@@ -41,7 +50,7 @@ export const App: React.FC = () => {
             </ThemeProvider>
           </Grommet>
         </Provider>
-      </Router>
+      </LocalizedRouter>
     </Web3ReactProvider>
   );
 };

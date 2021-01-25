@@ -51,7 +51,7 @@ interface upgrade {
 
 const upgrades: upgrade[] = [
   {
-    title: 'The upgrade',
+    title: 'The upgrades',
     subTitle: 'Dig deeper into how eth2 upgrades Ethereum.',
     linkUrl: 'https://ethereum.org/en/eth2/',
     link: 'How does this all happen?',
@@ -96,7 +96,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Text className="mt20">
                 <UpgradeTitle>Proof of Stake </UpgradeTitle>
-                (PoS) is more secure, decentralised, and environmentally
+                (PoS) is a more secure, decentralized, and environmentally
                 friendly consensus mechanism when compared with Proof of Work
                 (PoW) that secures Ethereum today. Proof of Stake works by
                 having validators lock up {PRICE_PER_VALIDATOR} {TICKER_NAME}{' '}
@@ -113,7 +113,7 @@ export const Upgrades = (): JSX.Element => {
                 <UpgradeTitle>Sharding </UpgradeTitle>
                 will dramatically improve Ethereum's data handling capabilities
                 by adding 64 parallel chains, each of which will be able to
-                handle the same of more data to what Ethereum can today.
+                handle the same or more data to what Ethereum can today.
               </Text>
             </ScrollAnimation>
           </div>

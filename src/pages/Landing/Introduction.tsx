@@ -77,7 +77,7 @@ export const Introduction = (): JSX.Element => {
             <Text className="mt25">
               The <i>beacon chain</i> had its genesis on the 1st of December
               2020 and forms the basis for all the eth2 upgrades. When the chain
-              is stable enough and feature complete, it will be swapped in as
+              is stable enough and feature-complete, it will be swapped in as
               the consensus mechanism for Ethereum.
             </Text>
             <Text className="mt25">

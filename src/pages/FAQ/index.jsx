@@ -155,7 +155,7 @@ export const FAQ = () => {
               voluntary exit message with your validator.
             </Text>
             <Text className="mt10">
-              However, bear in mind that for the forseeable future, once
+              However, bear in mind that for the foreseeable future, once
               you&apos;ve exited, there&apos;s no going back.
             </Text>
             <Text className="mt10">

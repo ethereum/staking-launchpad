@@ -3,10 +3,9 @@ import { AppBar } from '../../components/AppBar';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
 import { StakingRewards } from './StakingRewards';
-import { TimelineMileStones } from './TimelineMilestones';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
-import { Phases } from './Phases';
+import { Upgrades } from './Upgrades';
 import { queryContract } from '../../utils/queryContract';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 import useMobileCheck from '../../hooks/useMobileCheck';
@@ -32,10 +31,9 @@ export const LandingPage = (): JSX.Element => {
       <Hero />
       <NetworkStatus {...{ amountEth }} />
       <StakingRewards currentStaked={amountEth} />
-      <TimelineMileStones />
       <Introduction />
       <SignupSteps />
-      <Phases />
+      <Upgrades />
     </>
   );
 };

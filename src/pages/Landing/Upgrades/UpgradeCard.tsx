@@ -20,7 +20,7 @@ interface Props {
   external?: boolean;
 }
 
-export const PhaseCard = ({
+export const UpgradeCard = ({
   title,
   subTitle,
   link,

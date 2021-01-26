@@ -37,7 +37,7 @@ export const SignupSteps = (): JSX.Element => {
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <Heading level={2} size="medium" color="blueDark" margin="none">
-          Sign up in 3 easy steps
+          Become a validator in 3 steps
         </Heading>
       </ScrollAnimation>
       <StepsContainer>
@@ -45,7 +45,7 @@ export const SignupSteps = (): JSX.Element => {
           <Step
             imgUrl={ResponsibilityImgUrl}
             title="Learn about your responsibilities"
-            content="The new eth2 network can only work  successfully if validators understand their responsibilities and risks."
+            content="The eth2 upgrades will only be successful if validators understand the risks and responsibilities."
           />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
@@ -58,8 +58,8 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             imgUrl={DepositImgUrl}
-            title={`Transfer your ${TICKER_NAME} to eth2`}
-            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators will become active on eth2!`}
+            title={`Make your validator deposit`}
+            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators will become active on the beacon chain!`}
           />
         </ScrollAnimation>
       </StepsContainer>

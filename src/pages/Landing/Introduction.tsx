@@ -64,30 +64,31 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              Introduction to the sign up process
+              How does eth2 upgrade Ethereum?
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
             <Text className="mt25">
-              Eth2 is the next generation of Ethereum. It’s a multi-year plan to
-              improve the scalability, security and programmability of Ethereum,
-              without compromising on decentralization.
+              Eth2 is the name for a collection of upgrades to the underlying
+              consensus and data-handling capabilities of Ethereum. It is not a
+              replacement of the Ethereum chain you know and love, but a way to
+              achieve a more rapid and less risky upgrade for Ethereum.
             </Text>
             <Text className="mt25">
-              In contrast to the Ethereum chain, as it currently stands, eth2
-              uses proof-of-stake (PoS) to secure its network. And while
-              Ethereum as you know and love it will continue to exist as its own
-              independent proof-of-work chain for a little while to come, the
-              transition towards PoS starts now.
+              The <i>beacon chain</i> had its genesis on the 1st of December
+              2020 and forms the basis for all the eth2 upgrades. When the chain
+              is stable enough and feature-complete, it will be swapped in as
+              the consensus mechanism for Ethereum.
             </Text>
             <Text className="mt25">
-              In order to make this transition possible, eth2 requires active
-              participants – known as validators. Validators are responsible for
-              securing the network and receive continuous payouts for actions
-              that help the network reach consensus.
+              Eth2 uses a different type of consensus, called Proof of Stake
+              (PoS), which requires active participants – known as validators.
+              Validators are responsible for securing the network and receive
+              continuous payouts for actions that help the network reach
+              consensus.
             </Text>
             <Text className="mt25">
-              This Launch Pad takes you through how to become one.
+              This Launch Pad takes you through the process of becoming one.
             </Text>
           </ScrollAnimation>
         </ContentContainer>

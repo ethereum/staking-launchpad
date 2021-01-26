@@ -324,16 +324,6 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <strong>Note:</strong> if you are setting up your client before
-                phase 0 launch, it is your responsibility to check for any new
-                software releases in the run up to launch. There is a good
-                chance you will need to update your software.
-              </Text>
-            </li>
-          </ul>
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -498,12 +488,7 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <Heading level={4}>
-            <Link primary inline external to="https://beaconcha.in/poap">
-              POAP
-            </Link>{' '}
-            Graffiti
-          </Heading>
+          <Heading level={4}>Graffiti</Heading>
           <Text>
             You can use your validator client&apos;s graffiti flag to add a
             personal touch to your proposed blocks (some text of your choice).

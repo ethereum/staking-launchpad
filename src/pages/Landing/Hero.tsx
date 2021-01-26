@@ -163,7 +163,7 @@ export const Hero = () => {
                       color="brand"
                       className="my20"
                     >
-                      Become a validator and help secure eth2.
+                      Become a validator and help secure the future of Ethereum.
                     </Heading>
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>

@@ -22,7 +22,7 @@ const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
 const StyledButton = styled(GrommetButton)`
   display: block;
   padding: 15px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   width: ${calculateWidth};
   font-size: 18px;
   letter-spacing: 1.5px;

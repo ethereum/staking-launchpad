@@ -45,13 +45,13 @@ export const pageContent = {
     title: 'The Deposit',
     content: (
       <Text size="large" className="my10">
-        To become a validator on the beacon chain, you need to deposit{' '}
+        To become a validator on the Beacon Chain, you need to deposit{' '}
         {PRICE_PER_VALIDATOR} {` `}
         {TICKER_NAME} per validator that you wish to run. This process cannot be
         reversed.
       </Text>
     ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} to the beacon chain is one-way, and non-reversible.`,
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} to the Beacon Chain is one-way, and non-reversible.`,
   },
   [AcknowledgementIdsEnum.responsibilities]: {
     title: 'Responsibilities',
@@ -70,7 +70,7 @@ export const pageContent = {
           primary
           withArrow
         >
-          Learn more about eth2 economics
+          More on Eth2 economics
         </Link>
       </>
     ),
@@ -134,7 +134,7 @@ export const pageContent = {
           primary
           withArrow
         >
-          Learn More about the eth2 upgrades
+          More on the Eth2 upgrades
         </Link>
       </>
     ),
@@ -170,7 +170,7 @@ export const pageContent = {
       <ul>
         <li>
           <Text size="large" className="my10">
-            In order to become a validator, you will generate your new eth2 key
+            In order to become a validator, you will generate your new Eth2 key
             pairs. To do this and to install the validator software you need to
             be technically capable of running commands in a terminal on a
             computer.

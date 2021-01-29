@@ -1,7 +1,6 @@
 import React from 'react';
 import BaseLineChart from '../../../components/BaseLineChart';
 import BaseLineChartAxis from '../../../components/BaseLineChart/scene/BaseLineChartAxis';
-import useMobileCheck from '../../../hooks/useMobileCheck';
 import CurrentMarker from './scene/CurrentMarker';
 import DataLine from './scene/DataLine';
 import DataLineEnd from './scene/DataLineEnd';
@@ -57,7 +56,6 @@ const StakingRewardsChart: React.FC<Props> = ({
   innerTooltipContent = undefined,
   ...props
 }) => {
-  const isMobile = useMobileCheck('900px');
   const { x, y } = dataKeys;
   const _data = [...data];
   const _margin = { ...margin, left: margin.left * 1.5 };
@@ -99,7 +97,7 @@ const StakingRewardsChart: React.FC<Props> = ({
                           fontFamily: 'sans-serif',
                         }}
                       >
-                        Total {TICKER_NAME} Staked&nbsp; (in millions)
+                        Total {TICKER_NAME} staked&nbsp;(millions)
                       </text>
                     </>
                   )}
@@ -131,29 +129,10 @@ const StakingRewardsChart: React.FC<Props> = ({
                           transform: 'rotate(-90deg)',
                         }}
                       >
-                        Estimated APR (in {TICKER_NAME})
+                        Estimated APR ({TICKER_NAME})
                       </text>
                     </>
                   )}
-
-                  {/* Beacon Chain Threshole Text */}
-                  <g
-                    transform={
-                      !isMobile
-                        ? `translate(${-state.margin!.left}, ${chart.y(0) +
-                            50})`
-                        : `translate(${-state.margin!.left}, ${chart.y(0) +
-                            80})`
-                    }
-                  >
-                    <text style={{ fontWeight: 'bold', fill: '#ADADAD' }}>
-                      {(524_288).toLocaleString()}
-                      &nbsp;{TICKER_NAME}
-                    </text>
-                    <text y={17} style={{ fill: '#ADADAD' }}>
-                      Required for Beacon Chain Launch
-                    </text>
-                  </g>
 
                   {/* The line representing the data */}
                   <DataLine data={_data} {...{ chart, color }} />

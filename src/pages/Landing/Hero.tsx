@@ -148,7 +148,7 @@ export const Hero = () => {
                       <LogoContainer className={m ? 'mb50' : undefined}>
                         <EthLogo src={EthDiamondPlain} />
                         <LogoText>
-                          Eth2 Launch Pad{' '}
+                          Eth2 Launchpad{' '}
                           {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
                         </LogoText>
                       </LogoContainer>
@@ -159,11 +159,11 @@ export const Hero = () => {
                   <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                     <Heading
                       level={m ? 1 : 2}
-                      size={m ? 'meduim' : 'large'}
+                      size={m ? 'medium' : 'large'}
                       color="brand"
                       className="my20"
                     >
-                      Become a validator and help secure the future of Ethereum.
+                      Become a validator and help secure the future of Ethereum
                     </Heading>
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
@@ -183,7 +183,7 @@ export const Hero = () => {
                         fullWidth={m || isSmallScreen}
                         rainbow
                         width={isSmallScreen || m ? undefined : 250}
-                        label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
+                        label={`Become a validator ${m ? 'ON DESKTOP' : ''}`}
                       />
                     </Link>
                   </Animate>

@@ -96,7 +96,7 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
             className="my10"
             primary
           >
-            Learn more about the economics of eth2 →
+            More on Eth2 economics
           </Link>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>

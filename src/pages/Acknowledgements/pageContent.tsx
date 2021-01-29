@@ -155,7 +155,7 @@ export const pageContent = {
           className="my10"
           primary
         >
-          More on the merge
+          More on the Eth2 upgrades
         </Link>
       </>
     ),
@@ -200,14 +200,25 @@ export const pageContent = {
   [AcknowledgementIdsEnum.confirmation]: {
     title: 'Confirmation',
     content: (
-      <>
-        <Text size="large" className="my10">
-          I have read and agree to the Launchpad terms of service.{' '}
-        </Text>
-        <Link inline to="/terms-of-service" className="my10" primary>
-          Terms of Service
-        </Link>
-      </>
+      <ul>
+        <li>
+          <Text size="large" className="my10">
+            In order to become a validator, you will generate your new Eth2 key
+            pairs. To do this and to install the validator software you need to
+            be technically capable of running commands in a terminal on a
+            computer.
+          </Text>
+        </li>
+        <li>
+          <Text size="large" className="my10">
+            I have read and agree to the Launchpad{' '}
+            <Link inline to="/terms-of-service" className="my10" primary>
+              Terms of Service
+            </Link>
+            .
+          </Text>
+        </li>
+      </ul>
     ),
     acknowledgementText:
       'I understand and agree to everything stated in the previous sections.',

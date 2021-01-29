@@ -33,9 +33,22 @@ export const UpgradeCard = ({
         {title}
       </Heading>
       <Text>{subTitle}</Text>
-      <Link primary external={external} className="mt20" to={linkUrl} withArrow>
-        {link}
-      </Link>
+      {!external && (
+        <Link
+          primary
+          external={external}
+          className="mt20"
+          to={linkUrl}
+          withArrow
+        >
+          {link}
+        </Link>
+      )}
+      {external && (
+        <Link primary external={external} className="mt20" to={linkUrl}>
+          {link}
+        </Link>
+      )}
     </Container>
   );
 };

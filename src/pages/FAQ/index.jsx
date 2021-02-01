@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 import { HashLink as Anchor } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { Link } from '../../components/Link';
@@ -28,8 +29,12 @@ const SectionTitle = styled(Heading)`
 `;
 
 export const FAQ = () => {
+  const intl = useIntl();
   return (
-    <PageTemplate title="Validator FAQs">
+    <PageTemplate
+      title={intl.formatMessage({ id: 'page-faq-title' })}
+      description={intl.formatMessage({ id: 'page-faq-description' })}
+    >
       <FAQStyles>
         <section>
           <Anchor to="#introduction" id="introduction">

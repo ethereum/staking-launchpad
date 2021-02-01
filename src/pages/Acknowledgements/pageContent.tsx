@@ -12,11 +12,11 @@ export interface PageContentInterface {
 
 export const pageContent = {
   [AcknowledgementIdsEnum.introSection]: {
-    title: 'Introducing eth2',
+    title: 'Proof of stake',
     content: (
       <>
         <Text size="large" className="my10">
-          Eth2 brings Proof of Stake consensus to Ethereum.
+          The Beacon Chain upgrade brings proof-of-stake consensus to Ethereum.
         </Text>
         <Text size="large" className="my10">
           For this, we need active participants - known as validators - to
@@ -24,53 +24,68 @@ export const pageContent = {
           honest validators receive financial rewards.
         </Text>
         <Text size="large" className="my10">
-          Importantly, validators need to post {TICKER_NAME} as collateral - in
-          other words, have some funds at stake. The only way to become a
-          validator is to make a one-way {TICKER_NAME} transaction to the
-          deposit contract on the current Ethereum chain.
+          Importantly, as a validator you'll need to post {TICKER_NAME} as
+          collateral - in other words, have some funds at stake. The only way to
+          become a validator is to make a one-way {TICKER_NAME} transaction to
+          the deposit contract on the current Ethereum chain.
         </Text>
         <Link
           external
-          to="https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/"
+          to="https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/"
           className="my10"
           primary
-          withArrow
         >
-          Learn More
+          More on proof of stake
         </Link>
       </>
     ),
+    acknowledgementText: `I understand proof-of-stake and why validators are needed.`,
   },
   [AcknowledgementIdsEnum.deposit]: {
-    title: 'The Deposit',
-    content: (
-      <Text size="large" className="my10">
-        To become a validator on the beacon chain, you need to deposit{' '}
-        {PRICE_PER_VALIDATOR} {` `}
-        {TICKER_NAME} per validator that you wish to run. This process cannot be
-        reversed.
-      </Text>
-    ),
-    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to sign up as a validator, and that the transfer of ${TICKER_NAME} to the beacon chain is one-way, and non-reversible.`,
-  },
-  [AcknowledgementIdsEnum.responsibilities]: {
-    title: 'Responsibilities',
+    title: 'The deposit',
     content: (
       <>
         <Text size="large" className="my10">
-          Only validators that actively participate in consensus can receive
-          full rewards. Those that are offline are penalized. The onus is on you
-          to keep your validator online and up to date. The penalties for being
-          offline are roughly equal to the rewards for actively participating.
+          To become a validator on the Beacon Chain, you need to deposit{' '}
+          {PRICE_PER_VALIDATOR} {` `}
+          {TICKER_NAME} per validator that you wish to run.
+        </Text>
+        <Text size="large" className="my20">
+          This is a non-reversible transaction.
+        </Text>
+        <Text size="large" className="my20">
+          Withdrawing your deposit won't be possible until mainnet merges with
+          the Beacon Chain.
+        </Text>
+        <Link
+          external
+          to="https://ethereum.org/eth2/docking/"
+          className="my10"
+          primary
+        >
+          More on the merge
+        </Link>
+      </>
+    ),
+    acknowledgementText: `I understand that I need to deposit ${PRICE_PER_VALIDATOR} ${TICKER_NAME} to become a validator, and that the transfer of ${TICKER_NAME} to the Beacon Chain is one-way, and non-reversible.`,
+  },
+  [AcknowledgementIdsEnum.responsibilities]: {
+    title: 'Validator uptime',
+    content: (
+      <>
+        <Text size="large" className="my10">
+          You'll only get your full rewards if your validator is online and up
+          to date. This is your responsibility. If your validator goes offline
+          you'll be penalized. The penalties for being offline are roughly equal
+          to the rewards for actively participating.
         </Text>
         <Link
           external
           to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
           className="my10"
           primary
-          withArrow
         >
-          Learn more about eth2 economics
+          More on Eth2 economics
         </Link>
       </>
     ),
@@ -78,15 +93,22 @@ export const pageContent = {
       'I understand that it is important to keep my validator online and updated.',
   },
   [AcknowledgementIdsEnum.slashing]: {
-    title: 'Slashing Risks',
+    title: 'Bad validator behaviour',
     content: (
       <>
         <Text size="large" className="my10">
-          Validators that act maliciously, or contrary to the specification, are
-          liable to be slashed (incur a large penalty).
+          If you try to cheat the system, or act contrary to the specification,
+          you will be liable to incur a large penalty, known as slashing.
         </Text>
+        <Link
+          to="https://github.com/ethereum/eth2.0-specs"
+          className="my10"
+          primary
+        >
+          The Eth2 specification
+        </Link>
         <Link to="/faq" className="my10" primary withArrow>
-          Learn More about about slashing
+          More on slashing risks
         </Link>
       </>
     ),
@@ -94,100 +116,100 @@ export const pageContent = {
       'I understand that if I act contrary to the specification, I am liable to be slashed.',
   },
   [AcknowledgementIdsEnum.keyManagement]: {
-    title: 'Backup Mnemonic',
+    title: 'Keys safety',
     content: (
       <Text size="large" className="my10">
-        Validator keys are derived from a unique mnemonic (or seed). Your seed
-        is the ONLY WAY to withdraw your funds. Above all, keep it safe!
+        Your validator keys are derived from a unique mnemonic (or seed). Your
+        seed will be the ONLY WAY to withdraw your funds. Above all, keep it
+        safe!
       </Text>
     ),
     acknowledgementText:
-      'I understand that my mnemonic is the ‼️ONLY WAY‼️ to withdraw my funds.',
+      'I understand that my mnemonic (seed) will be the ‼️ONLY WAY‼️ to withdraw my funds.',
   },
   [AcknowledgementIdsEnum.signingKeys]: {
-    title: 'Signing Keys',
+    title: 'Signing keys',
     content: (
       <Text size="large" className="my10">
-        This Launchpad will help you create keys for each of your validators.
-        These keys will be saved in key-stores and you will need to give these
-        to your validator software to begin validating. You will also receive a
-        deposit file to upload to this website with the public keys for your
-        validator.
+        We'll help you create keys for each of your validators. These keys will
+        be saved in key-stores and you will need to give these to your validator
+        software to begin validating. You will also receive a deposit file to
+        upload to this website with the public keys for your validator.
       </Text>
     ),
     acknowledgementText:
-      'I will safeguard my key-stores and give them to my validator software in order to start validating.',
+      'I will safeguard my key-stores and give them to my validator software to start validating.',
   },
   [AcknowledgementIdsEnum.transferDelay]: {
     title: 'Transfer delay',
     content: (
       <>
         <Text size="large" className="my10">
-          Transfers between validators are disabled for now. Validators will
-          have to wait until <i>the merge</i> (around two years) to be able to
-          withdraw their ${TICKER_NAME}.
+          Transfers between validators aren't possible today. You will have to
+          wait until mainnet merges with the Beacon Chain (around two years)
+          before you can withdraw your {TICKER_NAME}.
         </Text>
         <Link
           external
-          to="https://ethereum.org/en/eth2/beacon-chain/#relationship-between-upgrades"
+          to="https://ethereum.org/en/eth2/docking"
           className="my10"
           primary
-          withArrow
         >
-          Learn More about the eth2 upgrades
+          More on the merge
         </Link>
       </>
     ),
-    acknowledgementText: `I understand that I CAN NOT TRANSFER my staked ${TICKER_NAME} for a while, and I CAN NOT WITHDRAW until the merge.`,
+    acknowledgementText: `I understand that I CANNOT TRANSFER my staked ${TICKER_NAME} for a while, and I CANNOT WITHDRAW until the merge.`,
   },
   [AcknowledgementIdsEnum.commitment]: {
-    title: 'Long-term commitment',
+    title: 'Validating is a long-term commitment',
     content: (
       <Text size="large" className="my10">
-        With transfers disabled for now, there’s no way for a validator to
-        voluntarily exit and then restart later. This means validators need to
-        be in it for the long haul.
+        With transfers disabled for now, you won't be able to voluntarily exit
+        and then restart later. This means you need to be in it for the long
+        haul.
       </Text>
     ),
     acknowledgementText:
-      'Once I exit, I can not rejoin until much later. This is a long term commitment.',
+      'I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment.',
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
     title: 'Early adopter risks',
     content: (
       <Text size="large" className="my10">
-        Validators are participating in the initial launch of a novel network.
-        As with any new piece of software, there is the potential for software
+        You'll be participating in the initial launch of a novel network. As
+        with any new piece of software, there is the potential for software
         bugs. While unlikely, potential bugs may result in slashing.
       </Text>
     ),
     acknowledgementText:
       'I am an early adopter, and I accept that software and design bugs may result in me being slashed.',
   },
+  [AcknowledgementIdsEnum.terminal]: {
+    title: 'Using the terminal',
+    content: (
+      <Text size="large" className="my10">
+        To become a validator, you will need to be able to run commands in the
+        terminal on your computer. Generating your new Eth2 key pairs and
+        installing the validator software are both done in the terminal.
+      </Text>
+    ),
+    acknowledgementText:
+      'I am technically capable of setting up and running a validator.',
+  },
   [AcknowledgementIdsEnum.confirmation]: {
     title: 'Confirmation',
     content: (
-      <ul>
-        <li>
-          <Text size="large" className="my10">
-            In order to become a validator, you will generate your new eth2 key
-            pairs. To do this and to install the validator software you need to
-            be technically capable of running commands in a terminal on a
-            computer.
-          </Text>
-        </li>
-        <li>
-          <Text size="large" className="my10">
-            I have read and agree to the Launchpad{' '}
-            <Link inline to="/terms-of-service" className="my10" primary>
-              Terms of Service
-            </Link>
-            .
-          </Text>
-        </li>
-      </ul>
+      <>
+        <Text size="large" className="my10">
+          I have read and agree to the Launchpad terms of service.{' '}
+        </Text>
+        <Link inline to="/terms-of-service" className="my10" primary>
+          Terms of Service
+        </Link>
+      </>
     ),
     acknowledgementText:
-      'I agree to all of the previous sections, and I am technically capable of setting up and running a validator',
+      'I understand and agree to everything stated in the previous sections.',
   },
 };

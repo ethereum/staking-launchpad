@@ -3,6 +3,7 @@ import { Action, ActionTypes } from '../actions';
 export enum AcknowledgementIdsEnum {
   introSection,
   deposit,
+  terminal,
   responsibilities,
   slashing,
   keyManagement,
@@ -27,6 +28,7 @@ const defaultAcknowledgementState: AcknowledgementStateInterface = {
   [AcknowledgementIdsEnum.transferDelay]: false,
   [AcknowledgementIdsEnum.commitment]: false,
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: false,
+  [AcknowledgementIdsEnum.terminal]: false,
   [AcknowledgementIdsEnum.confirmation]: false,
 };
 

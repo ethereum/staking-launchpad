@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import { useIntl } from 'react-intl';
+import { supportedLanguages } from './intl';
 import {
   AcknowledgementPage,
   CongratulationsPage,
@@ -130,12 +132,31 @@ const routes: RouteType[] = [
   { path: routesEnum.notFoundPage, component: NotFoundPage },
 ];
 
+const localizeRoutes = (locale: String, routes: RouteType[]) => {
+  return routes.map(route => {
+    const languagePath = route.path.split('/')[1];
+    const routeHasLangPath = supportedLanguages.includes(languagePath);
+    if (routeHasLangPath || route.path === '/*') {
+      return route;
+    }
+    const localizedRoute: RouteType = {
+      path: `/${locale}${route.path}`,
+      exact: route.exact,
+      component: route.component,
+    };
+    return localizedRoute;
+  });
+};
+
 const _Routes = () => {
+  const { locale } = useIntl();
+  const localizedRoutes = localizeRoutes(locale, routes);
+
   return (
     <>
       <ScrollToTop>
         <Switch>
-          {routes.map((route: RouteType) => (
+          {localizedRoutes.map((route: RouteType) => (
             <Route
               onUpdate={() => window.scrollTo(0, 0)}
               {...route}

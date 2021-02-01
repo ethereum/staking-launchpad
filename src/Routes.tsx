@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import { Helmet } from 'react-helmet';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import { supportedLanguages } from './intl';
@@ -156,12 +157,28 @@ const localizeRoutes = (locale: String, routes: RouteType[]) => {
 };
 
 const _Routes = () => {
-  const { locale } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const localizedRoutes = localizeRoutes(locale, routes);
 
   return (
     <>
       <ScrollToTop>
+        <Helmet>
+          <html lang={locale} />
+          <title>{formatMessage({ id: 'site-title' })}</title>
+          <meta
+            property="og:title"
+            content={formatMessage({ id: 'site-title' })}
+          />
+          <meta
+            name="description"
+            content={formatMessage({ id: 'site-description' })}
+          />
+          <meta
+            property="og:description"
+            content={formatMessage({ id: 'site-description' })}
+          />
+        </Helmet>
         <Switch>
           {localizedRoutes.map((route: RouteType) => (
             <Route

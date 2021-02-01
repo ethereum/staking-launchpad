@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import _every from 'lodash/every';
@@ -63,6 +64,11 @@ const _AcknowledgementPage = ({
     )
   );
 
+  const Subtitle = styled.p`
+    font-size: 20px;
+    margin-bottom: 32px;
+  `;
+
   const handleSubmit = () => {
     if (workflow === WorkflowStep.OVERVIEW) {
       dispatchWorkflowUpdate(WorkflowStep.SELECT_CLIENT);
@@ -89,7 +95,10 @@ const _AcknowledgementPage = ({
   }: PageContentInterface = pageContent[activeAcknowledgementId];
 
   return (
-    <WorkflowPageTemplate title="Overview">
+    <WorkflowPageTemplate title="Before you deposit">
+      <Subtitle>
+        Everything you should understand before becoming a validator today.
+      </Subtitle>
       <Paper className="flex flex-row">
         <AcknowledgementProgressTracker
           activeAcknowledgementId={activeAcknowledgementId}

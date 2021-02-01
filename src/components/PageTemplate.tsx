@@ -9,6 +9,7 @@ const Content = styled.div`
   max-width: 1024px;
   margin: 30px 0;
   position: relative;
+  margin-top: 64px;
 `;
 
 const Gutter = styled.div`

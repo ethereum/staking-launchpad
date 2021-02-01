@@ -135,7 +135,7 @@ const _CongratulationsPage = ({
             margin="none"
             className="mt10"
           >
-            Thank you for supporting the eth2 network!
+            Thank you for supporting the Eth2 network!
           </Heading>
           <div>
             {ENABLE_RPC_FEATURES && (

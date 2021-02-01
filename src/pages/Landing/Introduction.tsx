@@ -5,6 +5,7 @@ import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
 import EthRound from '../../static/eth-round-landing.svg';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
+import { Link } from '../../components/Link';
 
 const Container = styled.div`
   background: ${p => p.theme.white};
@@ -64,32 +65,43 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              How does eth2 upgrade Ethereum?
+              Validators and Eth2
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
-            <Text className="mt25">
-              Eth2 is the name for a collection of upgrades to the underlying
-              consensus and data-handling capabilities of Ethereum. It is not a
-              replacement of the Ethereum chain you know and love, but a way to
-              achieve a more rapid and less risky upgrade for Ethereum.
+            <Text className="mt20">
+              This launchpad will help you become a validator, so you can play
+              an active part in Ethereum's future. Validators are key to the
+              more secure, scalable, and sustainable Ethereum we're building
+              together.
             </Text>
-            <Text className="mt25">
-              The <i>beacon chain</i> had its genesis on the 1st of December
-              2020 and forms the basis for all the eth2 upgrades. When the chain
-              is stable enough and feature-complete, it will be swapped in as
-              the consensus mechanism for Ethereum.
-            </Text>
-            <Text className="mt25">
-              Eth2 uses a different type of consensus, called Proof of Stake
-              (PoS), which requires active participants – known as validators.
-              Validators are responsible for securing the network and receive
-              continuous payouts for actions that help the network reach
+            <Link
+              className="mt20 mb40"
+              external
+              to="https://ethereum.org/en/eth2/vision/"
+            >
+              More on the Eth2 vision
+            </Link>
+            <Text className="mt20">
+              As a validator, you'll be responsible for securing the network and
+              receive continuous payouts for actions that help the network reach
               consensus.
             </Text>
-            <Text className="mt25">
-              This Launch Pad takes you through the process of becoming one.
+            <Text className="mt20">
+              Today, you'll secure the Beacon Chain, the first Eth2 upgrade.
+              It's a separate chain that uses a proof-of-stake consensus
+              mechanism. Eventually you'll help secure all of Ethereum, once
+              mainnet (the Ethereum we use today) merges with the Beacon Chain.
             </Text>
+            <Link
+              className="mt20 mb40"
+              external
+              to="https://ethereum.org/en/eth2/beacon-chain/"
+            >
+              More on the Beacon Chain
+            </Link>
+
+            {/* NOTE: this section felt like there was a lot of repetition with the section below so have reframed to talk about validators in the context of the upgrades */}
           </ScrollAnimation>
         </ContentContainer>
       </SubContainer>

@@ -35,6 +35,14 @@ const StyledExternalLink = styled.a<
   color: ${(props: any) =>
     props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: inline;
+    content: '↗';
+    transition: all 0.1s ease-in-out;
+    font-style: normal;
+  }
 `;
 const StyledLink = styled(RouterLink)`
   ${styles};

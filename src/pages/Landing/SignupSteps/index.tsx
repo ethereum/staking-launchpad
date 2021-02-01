@@ -37,29 +37,29 @@ export const SignupSteps = (): JSX.Element => {
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <Heading level={2} size="medium" color="blueDark" margin="none">
-          Become a validator in 3 steps
+          Become a validator
         </Heading>
       </ScrollAnimation>
       <StepsContainer>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Step
             imgUrl={ResponsibilityImgUrl}
-            title="Learn about your responsibilities"
-            content="The eth2 upgrades will only be successful if validators understand the risks and responsibilities."
+            title="1. Learn about your responsibilities"
+            content="The Eth2 upgrades will only be successful if validators understand the risks and responsibilities."
           />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
           <Step
             imgUrl={GenerateKeyImgUrl}
-            title="Generate validator keys offline"
-            content="In order to become a validator, you need to generate new keys to identify and secure your validator."
+            title="2. Generate validator keys offline"
+            content="You need to generate new keys to identify and secure your validator."
           />
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             imgUrl={DepositImgUrl}
-            title={`Make your validator deposit`}
-            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators will become active on the beacon chain!`}
+            title={`3. Make your validator deposit`}
+            content={`After depositing ${PRICE_PER_VALIDATOR} ${TICKER_NAME} per validator, your validators will become active on the Beacon Chain!`}
           />
         </ScrollAnimation>
       </StepsContainer>

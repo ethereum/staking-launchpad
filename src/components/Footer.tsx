@@ -71,13 +71,12 @@ export const Footer = () => {
               width={400}
               label={
                 <span>
-                  GET
+                  Become a validator{' '}
                   <Rhino>
                     <span role="img" aria-label="rhino">
                       🦏
                     </span>
-                  </Rhino>{' '}
-                  STARTED
+                  </Rhino>
                 </span>
               }
             />

@@ -81,7 +81,7 @@ export const NethermindDetails = () => (
             </>
           )}
           <li>
-            The JSON RPC endpoint for the eth2 node to connect to must be
+            The JSON RPC endpoint for the Eth2 node to connect to must be
             enabled with <Code className="px5 ml5">--JsonRpc.Enabled true</Code>
             . This will enable the JSON RPC service on the default port of 8545.
             <Link

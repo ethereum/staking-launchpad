@@ -44,7 +44,7 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
   }
 
   const steps: step[] = [
-    { step: WorkflowStep.OVERVIEW, text: 'Overview' },
+    { step: WorkflowStep.OVERVIEW, text: 'Before you start' },
     { step: WorkflowStep.SELECT_CLIENT, text: 'Select Client' },
     { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
     {

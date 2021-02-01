@@ -70,7 +70,7 @@ const _WorkflowPageTemplate = ({
       <WorkflowProgressBar workflow={calculatedWorkflowStep} />
       <Gutter>
         <Content>
-          <Heading level={2} size="medium" color="blueDark" className="mb40">
+          <Heading level={2} size="medium" color="blueDark" className="mb20">
             {title}
           </Heading>
           {children}

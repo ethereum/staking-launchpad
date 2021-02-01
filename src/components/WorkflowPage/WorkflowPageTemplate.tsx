@@ -11,6 +11,7 @@ import {
 } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
 import { WorkflowStep } from '../../store/actions/workflowActions';
+import { Helmet } from 'react-helmet';
 
 const Content = styled.div`
   width: 100%;
@@ -48,12 +49,14 @@ const mapPathnameToWorkflowStep = (pathname: routesEnum) => {
 interface Props extends RouteComponentProps {
   children?: React.ReactNode;
   title: string;
+  description?: string;
   history: any;
 }
 
 const _WorkflowPageTemplate = ({
   children,
   title,
+  description,
   history,
 }: Props): JSX.Element => {
   if ((window as any).mobileCheck()) {
@@ -66,6 +69,12 @@ const _WorkflowPageTemplate = ({
 
   return (
     <Background workflowStep={calculatedWorkflowStep}>
+      <Helmet>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+      </Helmet>
       <AppBar />
       <WorkflowProgressBar workflow={calculatedWorkflowStep} />
       <Gutter>

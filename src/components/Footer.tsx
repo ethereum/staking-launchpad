@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { Heading } from './Heading';
@@ -70,13 +71,12 @@ export const Footer = () => {
               width={400}
               label={
                 <span>
-                  GET
+                  Become a validator{' '}
                   <Rhino>
                     <span role="img" aria-label="rhino">
                       🦏
                     </span>
-                  </Rhino>{' '}
-                  STARTED
+                  </Rhino>
                 </span>
               }
             />

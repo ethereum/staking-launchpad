@@ -150,7 +150,7 @@ const _SelectClientPage = ({
       {ethVersionStep === 1 && (
         <div className="mt30" style={{ paddingBottom: '1rem' }}>
           In order to process incoming validator deposits from the eth1 chain,
-          you'll need to run an eth1 client in parallel to your eth2 client.
+          you'll need to run an eth1 client in parallel to your Eth2 client.
           While it is possible to use a third-party service like Infura, we
           recommend running your own client in order to ensure the network stays
           as decentralised as possible.

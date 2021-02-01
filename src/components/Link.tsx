@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 import { FormNext } from 'grommet-icons';
 
 interface LinkProps {
@@ -34,6 +35,14 @@ const StyledExternalLink = styled.a<
   color: ${(props: any) =>
     props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: inline;
+    content: '↗';
+    transition: all 0.1s ease-in-out;
+    font-style: normal;
+  }
 `;
 const StyledLink = styled(RouterLink)`
   ${styles};
@@ -69,6 +78,7 @@ export const Link = (props: LinkProps) => {
     inline,
     withArrow,
   } = props;
+  const { locale } = useIntl();
   if (external) {
     return (
       <StyledExternalLink
@@ -86,8 +96,9 @@ export const Link = (props: LinkProps) => {
       </StyledExternalLink>
     );
   }
+  const langPath = `/${locale}${to}`;
   return (
-    <StyledLink className={className} {...props}>
+    <StyledLink className={className} {...props} to={langPath}>
       {children}
       {withArrow && <Arrow primary={primary} />}
     </StyledLink>

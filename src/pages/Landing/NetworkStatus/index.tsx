@@ -172,7 +172,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           ) : (
             <>
               <Text className="mt20">
-                The eth2 network needs to reach at least
+                The Eth2 network needs to reach at least
                 <BoldGreen className="mr10 ml10" fontSize={24}>
                   {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
                 </BoldGreen>

@@ -116,7 +116,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               margin="none"
               className="bar-link-text no-padding"
             >
-              Eth2 Launch Pad
+              Eth2 Launchpad
             </BarLinkText>
             {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
           </div>
@@ -175,6 +175,16 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       </NavBarLinks>
 
       <div className="flex">
+        <Link to={routesEnum.languagesPage} className="mx30 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.languagesPage}
+          >
+            Languages
+          </BarLinkText>
+        </Link>
         <NetworkText>
           {ETH2_NETWORK_NAME}
           {IS_MAINNET ? `` : ` Testnet`}

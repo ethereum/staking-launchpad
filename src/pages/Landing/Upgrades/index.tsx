@@ -2,9 +2,9 @@ import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
 import { Text } from '../../../components/Text';
+import { Link } from '../../../components/Link';
 import { Heading } from '../../../components/Heading';
 import { UpgradeCard } from './UpgradeCard';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../../utils/envVars';
 
 const Container = styled.div`
   background-color: ${p => p.theme.purple.light};
@@ -37,8 +37,8 @@ const StyledHeading = styled(Heading)`
     p.isMobile ? '220px' : undefined}; // force word break
 `;
 const UpgradeTitle = styled(Text)`
-  display: inline;
   font-weight: bold;
+  font-size: 24px;
 `;
 
 interface upgrade {
@@ -52,7 +52,7 @@ interface upgrade {
 const upgrades: upgrade[] = [
   {
     title: 'The upgrades',
-    subTitle: 'Dig deeper into how eth2 upgrades Ethereum.',
+    subTitle: 'Dig deeper into how Eth2 upgrades Ethereum.',
     linkUrl: 'https://ethereum.org/en/eth2/',
     link: 'How does this all happen?',
     external: true,
@@ -69,9 +69,9 @@ const upgrades: upgrade[] = [
   {
     title: 'Validators FAQ',
     subTitle:
-      'Check out the FAQ page for more information about the roles and responsibilities of eth2 network validators.',
+      'Check out the FAQ page for more information about the roles and responsibilities of Eth2 network validators.',
     linkUrl: '/faq',
-    link: 'Learn more about validators',
+    link: 'More on validators',
     external: false,
   },
 ];
@@ -85,36 +85,60 @@ export const Upgrades = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                How does eth2 upgrade Ethereum?
+                How does Eth2 upgrade Ethereum?
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
-              <Text className="mt20">
-                To better future-proof Ethereum, eth2 will upgrade various
+              <Text className="mt20 mb40">
+                To better future-proof Ethereum, Eth2 will upgrade various
                 components of Ethereum while seamlessly continuing on the chain
                 of today. The main components of this upgrade are:
               </Text>
+              <UpgradeTitle className="mt20">
+                Proof-of-stake (PoS) and the Beacon Chain{' '}
+              </UpgradeTitle>
               <Text className="mt20">
-                <UpgradeTitle>Proof of Stake </UpgradeTitle>
-                (PoS) is a more secure, decentralized, and environmentally
-                friendly consensus mechanism when compared with Proof of Work
-                (PoW) that secures Ethereum today. Proof of Stake works by
-                having validators lock up {PRICE_PER_VALIDATOR} {TICKER_NAME}{' '}
-                and rewarding them for building the chain and punishing them if
-                they try to attack it. This portion of eth2 is already live in
-                the form of the beacon chain.
+                PoS is a more secure, decentralized, and environmentally
+                friendly consensus mechanism than the Proof-of-work (PoW) that
+                secures Ethereum today. It works by rewarding validators for
+                building the chain, but slashing their deposits if they try to
+                attack it, incentivising healthy behaviour . This upgrade is
+                already live in the form of the Beacon Chain.
               </Text>
+              <Link
+                className="mt20 mb40"
+                external
+                to="https://www.ethereum.org/eth2/beacon-chain/"
+              >
+                More on the Beacon Chain
+              </Link>
+              <UpgradeTitle className="mt20">The Merge (docking)</UpgradeTitle>
               <Text className="mt20">
-                <UpgradeTitle>The Merge </UpgradeTitle>
-                is when the beacon chain stops being a separate chain and
-                replaces PoW consensus in Ethereum.
+                The merge, also known as the docking, is when the Ethereum
+                mainnet we use todaay merge with the Beacon Chain. This is when
+                Ethereum fully transitions to proof of stake.
               </Text>
+              <Link
+                className="mt20 mb40"
+                external
+                to="https://www.ethereum.org/eth2/the-docking/"
+              >
+                More on the merge
+              </Link>
+              <UpgradeTitle className="mt20">Sharding </UpgradeTitle>
               <Text className="mt20">
-                <UpgradeTitle>Sharding </UpgradeTitle>
-                will dramatically improve Ethereum's data handling capabilities
-                by adding 64 parallel chains, each of which will be able to
-                handle the same or more data to what Ethereum can today.
+                Sharding will add 64 parallel chains to the network. This will
+                dramatically improve Ethereum's data handling capabilities as
+                each chain will be able to handle at least as much data as
+                mainnet Ethereum can today, probably more.
               </Text>
+              <Link
+                className="mt20 mb40"
+                external
+                to="https://www.ethereum.org/eth2/shard-chains/"
+              >
+                More on shard chains
+              </Link>
             </ScrollAnimation>
           </div>
           <UpgradesContainer>

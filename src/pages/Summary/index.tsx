@@ -105,7 +105,7 @@ const _SummaryPage = ({
     <WorkflowPageTemplate title="Summary">
       <Paper>
         <Heading level={3} size="small" color="blueDark">
-          Launch Pad Summary
+          Launchpad Summary
         </Heading>
         <Box className="flex flex-row space-between mt10">
           <Container>
@@ -197,7 +197,7 @@ const _SummaryPage = ({
           deposits with the same keyfile public key will be considered as a
           top-up and the extra balance more than {PRICE_PER_VALIDATOR}{' '}
           {TICKER_NAME} will NOT be counted in your effective balance on the
-          beacon chain.
+          Beacon Chain.
         </Text>
         <ul>
           <li>

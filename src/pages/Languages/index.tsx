@@ -26,13 +26,16 @@ const LangItem = styled(Link)`
     transition: transform 0.1s;
     transform: scale(1.02);
   }
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    width: 100%;
+  }
 `;
 
 const ContentContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items; flex-start;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 `;
 
 const LangTitle = styled.div`

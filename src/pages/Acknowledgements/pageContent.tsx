@@ -15,15 +15,15 @@ export const pageContent = {
     title: 'Proof of stake',
     content: (
       <>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           The Beacon Chain upgrade brings proof-of-stake consensus to Ethereum.
         </Text>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           For this, we need active participants - known as validators - to
           propose, verify, and vouch for the validity of blocks. In exchange,
           honest validators receive financial rewards.
         </Text>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           Importantly, as a validator you'll need to post {TICKER_NAME} as
           collateral - in other words, have some funds at stake. The only way to
           become a validator is to make a one-way {TICKER_NAME} transaction to
@@ -45,15 +45,15 @@ export const pageContent = {
     title: 'The deposit',
     content: (
       <>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           To become a validator on the Beacon Chain, you need to deposit{' '}
           {PRICE_PER_VALIDATOR} {` `}
           {TICKER_NAME} per validator that you wish to run.
         </Text>
-        <Text size="large" className="my20">
+        <Text size="medium" className="my20">
           This is a non-reversible transaction.
         </Text>
-        <Text size="large" className="my20">
+        <Text size="medium" className="my20">
           Withdrawing your deposit won't be possible until mainnet merges with
           the Beacon Chain.
         </Text>
@@ -73,7 +73,7 @@ export const pageContent = {
     title: 'Validator uptime',
     content: (
       <>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           You'll only get your full rewards if your validator is online and up
           to date. This is your responsibility. If your validator goes offline
           you'll be penalized. The penalties for being offline are roughly equal
@@ -96,9 +96,9 @@ export const pageContent = {
     title: 'Bad validator behaviour',
     content: (
       <>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           If you try to cheat the system, or act contrary to the specification,
-          you will be liable to incur a large penalty, known as slashing.
+          you will be liable to incur a medium penalty, known as slashing.
         </Text>
         <Link
           to="https://github.com/ethereum/eth2.0-specs"
@@ -116,35 +116,37 @@ export const pageContent = {
       'I understand that if I act contrary to the specification, I am liable to be slashed.',
   },
   [AcknowledgementIdsEnum.keyManagement]: {
-    title: 'Keys safety',
-    content: (
-      <Text size="large" className="my10">
-        Your validator keys are derived from a unique mnemonic (or seed). Your
-        seed will be the ONLY WAY to withdraw your funds. Above all, keep it
-        safe!
-      </Text>
-    ),
-    acknowledgementText:
-      'I understand that my mnemonic (seed) will be the ‼️ONLY WAY‼️ to withdraw my funds.',
-  },
-  [AcknowledgementIdsEnum.signingKeys]: {
-    title: 'Signing keys',
-    content: (
-      <Text size="large" className="my10">
-        We'll help you create keys for each of your validators. These keys will
-        be saved in key-stores and you will need to give these to your validator
-        software to begin validating. You will also receive a deposit file to
-        upload to this website with the public keys for your validator.
-      </Text>
-    ),
-    acknowledgementText:
-      'I will safeguard my key-stores and give them to my validator software to start validating.',
-  },
-  [AcknowledgementIdsEnum.transferDelay]: {
-    title: 'Transfer delay',
+    title: 'Keys management',
     content: (
       <>
-        <Text size="large" className="my10">
+        <Text size="medium" className="mt10">
+          To become a validator you'll need to know about managing keys. If
+          you're unfamiliar with keys and mnemomics, please don't proceed. Your
+          keys will be your responsibility and no one can help you if you lose
+          them.
+        </Text>
+        <Text size="medium" className="mt20">
+          Your validator keys are derived from a unique mnemonic (or seed). Your
+          seed will be the ONLY WAY to withdraw your funds. Above all, keep it
+          safe!
+        </Text>
+        <Text size="medium" className="mt20">
+          We'll help you create keys for each of your validators. These keys
+          will be saved in key-stores and you will need to give these to your
+          validator software to begin validating. You will also receive a
+          deposit file to upload to this website with the public keys for your
+          validator.
+        </Text>
+      </>
+    ),
+    acknowledgementText:
+      'I understand that keys are my responsibility and that my mnemonic (seed) will be the ‼️ONLY WAY‼️ to withdraw my funds.',
+  },
+  [AcknowledgementIdsEnum.commitment]: {
+    title: 'Validating is a long-term commitment',
+    content: (
+      <>
+        <Text size="medium" className="my10">
           Transfers between validators aren't possible today. You will have to
           wait until mainnet merges with the Beacon Chain (around two years)
           before you can withdraw your {TICKER_NAME}.
@@ -157,30 +159,26 @@ export const pageContent = {
         >
           More on the merge
         </Link>
+        <Text size="medium" className="my10">
+          With transfers disabled for now, you won't be able to voluntarily exit
+          and then restart later. This means you need to be in it for the long
+          haul.
+        </Text>
       </>
     ),
-    acknowledgementText: `I understand that I CANNOT TRANSFER my staked ${TICKER_NAME} for a while, and I CANNOT WITHDRAW until the merge.`,
-  },
-  [AcknowledgementIdsEnum.commitment]: {
-    title: 'Validating is a long-term commitment',
-    content: (
-      <Text size="large" className="my10">
-        With transfers disabled for now, you won't be able to voluntarily exit
-        and then restart later. This means you need to be in it for the long
-        haul.
-      </Text>
-    ),
     acknowledgementText:
-      'I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment.',
+      'I understand that I CANNOT TRANSFER my stake for a while, and I CANNOT WITHDRAW until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment.',
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
     title: 'Early adopter risks',
     content: (
-      <Text size="large" className="my10">
-        You'll be participating in the initial launch of a novel network. As
-        with any new piece of software, there is the potential for software
-        bugs. While unlikely, potential bugs may result in slashing.
-      </Text>
+      <>
+        <Text size="medium" className="my10">
+          You're joining a new network. As with any new piece of software, there
+          is the potential for software bugs. While unlikely, potential bugs may
+          result in slashing.
+        </Text>
+      </>
     ),
     acknowledgementText:
       'I am an early adopter, and I accept that software and design bugs may result in me being slashed.',
@@ -188,7 +186,7 @@ export const pageContent = {
   [AcknowledgementIdsEnum.terminal]: {
     title: 'Using the terminal',
     content: (
-      <Text size="large" className="my10">
+      <Text size="medium" className="my10">
         To become a validator, you will need to be able to run commands in the
         terminal on your computer. Generating your new Eth2 key pairs and
         installing the validator software are both done in the terminal.
@@ -201,7 +199,7 @@ export const pageContent = {
     title: 'Confirmation',
     content: (
       <>
-        <Text size="large" className="my10">
+        <Text size="medium" className="my10">
           I have read and agree to the Launchpad terms of service.{' '}
         </Text>
         <Link inline to="/terms-of-service" className="my10" primary>

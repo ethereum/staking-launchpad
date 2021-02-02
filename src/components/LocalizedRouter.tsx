@@ -3,7 +3,8 @@ import { Router } from 'react-router-dom';
 
 import { IntlProvider } from 'react-intl';
 import { Route, Redirect } from 'react-router-dom';
-import { messages, AppLanguage } from '../intl';
+import { messages, AppLanguage, supportedLanguages } from '../intl';
+import { routesEnum } from '../Routes';
 
 interface Props {
   history: any;
@@ -19,6 +20,13 @@ export const LocalizedRouter: React.FC<Props> = ({ children, history }) => (
          */
         const params = match ? match.params : {};
         const { lang = AppLanguage.English } = params;
+
+        /**
+         * If language provided is not supported, redirect to "languages" page
+         */
+        if (supportedLanguages.indexOf(lang) < 0) {
+          return <Redirect push to={routesEnum.languagesPage} />;
+        }
 
         /**
          * If language is not in route path, redirect to language route

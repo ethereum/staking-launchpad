@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
@@ -88,6 +89,13 @@ export const Languages = () => {
 
   return (
     <PageTemplate title="Choose a language">
+      <FormattedMessage
+        description="Greeting to welcome the user to the app"
+        defaultMessage="Hello, {name}!"
+        values={{
+          name: 'Eric',
+        }}
+      />
       <LangContainer>
         {langs.map(lang => {
           return (

@@ -32,8 +32,10 @@ export const FAQ = () => {
   const intl = useIntl();
   return (
     <PageTemplate
-      title={intl.formatMessage({ id: 'page-faq-title' })}
-      description={intl.formatMessage({ id: 'page-faq-description' })}
+      title={intl.formatMessage({ defaultMessage: 'Validator FAQs' })}
+      description={intl.formatMessage({
+        defaultMessage: 'Answers to common questions on becomming a validator.',
+      })}
     >
       <FAQStyles>
         <section>

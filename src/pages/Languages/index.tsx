@@ -89,9 +89,9 @@ export const Languages = () => {
   return (
     <PageTemplate title="Choose a language">
       <LangContainer>
-        {langs.map(lang => {
+        {langs.map((lang, idx) => {
           return (
-            <LangItem to={lang.path}>
+            <LangItem key={String(idx)} to={lang.path}>
               <ContentContainer>
                 <LangTitle>{lang.language}</LangTitle>
                 <Lang>{lang.title}</Lang>
@@ -100,10 +100,10 @@ export const Languages = () => {
           );
         })}
       </LangContainer>
-      <text>
+      <p>
         If you'd like to see the launchpad in another language, or if you can
         help translate, get in touch.
-      </text>
+      </p>
     </PageTemplate>
   );
 };

@@ -21,7 +21,7 @@ module.exports = [
       extends: ['react-app'],
       plugins: ['eslint-plugin-formatjs'],
       rules: {
-        'formatjs/enforce-description': 'warn',
+        'formatjs/enforce-default-message': 'error',
       },
     },
   ],

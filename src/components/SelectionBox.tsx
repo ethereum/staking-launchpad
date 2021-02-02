@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LogoContainerBox = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 196px;
+  height: 196px;
   border: ${(p: { theme: any; isActive: boolean }) =>
     `2px solid ${p.isActive ? p.theme.blue.light : p.theme.gray.medium}`};
   box-shadow: ${(p: { theme: any; isActive: boolean }) =>
@@ -11,7 +11,8 @@ const LogoContainerBox = styled.div`
   border-radius: ${p => p.theme.borderRadius};
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 1rem;
   cursor: pointer;
   -webkit-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   -moz-transition: border 500ms ease-out, box-shadow 500ms ease-out;

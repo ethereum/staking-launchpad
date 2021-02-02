@@ -16,7 +16,7 @@ export const isLangRightToLeft = (lang: string): boolean => {
   return lang === 'ar' || lang === 'fa';
 };
 
-export const translateMessageId = (id: string, intl: any) => {
+export const translateMessageId = (id: string, intl: { [s: string]: any }) => {
   if (!id) {
     console.error(`No id provided for translation.`);
     return '';

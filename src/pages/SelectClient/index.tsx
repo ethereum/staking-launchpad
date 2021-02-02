@@ -146,18 +146,18 @@ const _SelectClientPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Client Selection">
+    <WorkflowPageTemplate title="Choose client">
       {ethVersionStep === 1 && (
         <div className="mt30" style={{ paddingBottom: '1rem' }}>
-          In order to process incoming validator deposits from the eth1 chain,
-          you'll need to run an eth1 client in parallel to your Eth2 client.
-          While it is possible to use a third-party service like Infura, we
-          recommend running your own client in order to ensure the network stays
-          as decentralised as possible.
+          In order to process incoming validator deposits from mainnet (the Eth1
+          chain), you'll need to run an Eth1 client in parallel to your Eth2
+          client. While it is possible to use a third-party service like Infura,
+          we recommend running your own client in order to ensure the network
+          stays as decentralised as possible.
         </div>
       )}
       <SelectClientSection
-        title={`Choose your Eth ${ethVersionStep} client and set up a node`}
+        title={`Choose your Eth${ethVersionStep} client and set up a node`}
         clients={clientOptions}
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}

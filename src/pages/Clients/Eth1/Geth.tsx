@@ -4,6 +4,7 @@ import { IS_MAINNET } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
+import { Heading } from '../../../components/Heading';
 
 // eslint-disable-next-line no-unused-vars
 export const GethDetails = () => (
@@ -32,7 +33,7 @@ export const GethDetails = () => (
         primary
         external
         to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
-        inline
+        className="mt10"
       >
         Geth installation documentation
       </Link>
@@ -46,10 +47,10 @@ export const GethDetails = () => (
       </Text>
       {!IS_MAINNET && (
         <>
-          <SectionTitle level={3} className="my20">
+          <Heading level={3} className="mt20">
             Testing on Goerli
-          </SectionTitle>
-          <Code className="px5 ml5">--goerli</Code>
+          </Heading>
+          <Code className="mt20">--goerli</Code>
           <Text className="mt10">
             Configures Geth to sync the Goerli testnet
           </Text>
@@ -62,7 +63,7 @@ export const GethDetails = () => (
           </Link>
         </>
       )}
-      <Code className="px5 ml5">--http</Code>
+      <Code className="mt20">--http</Code>
       <Text className="mt10">
         Makes sure your Eth2 node will be able to connect to the JSON RPC
         endpoint. This will enable the JSON RPC services on the default 8545

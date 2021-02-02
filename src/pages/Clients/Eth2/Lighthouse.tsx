@@ -30,42 +30,42 @@ const CodeSnippet = styled.div`
 
 export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
+    <SectionTitle level={2} className="mb5">
+      Lighthouse
+    </SectionTitle>
     <Text className="mt10">
-      <Link external to="https://github.com/sigp/lighthouse" primary inline>
-        Lighthouse
-      </Link>{' '}
-      is an Eth2.0 client with a heavy focus on speed and security. The team
-      behind it,{' '}
-      <Link external to="https://sigmaprime.io/" primary inline>
-        Sigma Prime
-      </Link>
-      , is an information security and software engineering firm who have funded
-      Lighthouse along with the Ethereum Foundation, Consensys, and private
-      individuals. Lighthouse is built in Rust and offered under an Apache 2.0
-      License.
-      <Link
-        external
-        to="https://lighthouse.sigmaprime.io/update-00.html"
-        primary
-        withArrow
-        className="mt10"
-      >
-        Read more about Lighthouse and Sigma Prime
-      </Link>
+      An Eth2 client with a heavy focus on speed and security. Built by Sigma
+      Prime, an information security and software engineering firm who have
+      funded Lighthouse along with the Ethereum Foundation, Consensys, and
+      private individuals.
+    </Text>
+    <Link
+      external
+      to="https://lighthouse.sigmaprime.io/update-00.html"
+      primary
+      className="mt10"
+    >
+      More on Lighthouse and Sigma Prime
+    </Link>
+    <SectionTitle level={2} className="mb5">
+      Language information
+    </SectionTitle>
+    <Text className="mt10">
+      Lighthouse is built in Rust and offered under an Apache 2.0 License.
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Become a Validator with Lighthouse
+        Become a validator with Lighthouse
       </SectionTitle>
-      <Link external primary to={LIGHTHOUSE_INSTALLATION_URL} withArrow>
-        {LIGHTHOUSE_INSTALLATION_URL}
+      <Link external primary to={LIGHTHOUSE_INSTALLATION_URL}>
+        Lighthouse installation documentation
       </Link>
     </section>
     <>
       {!shortened && (
         <section>
           <SectionTitle level={2} className="mb5">
-            Key Management
+            Key management
           </SectionTitle>
 
           <Text className="mt10">
@@ -99,8 +99,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
           </SectionTitle>
           <Text className="mt10">
             Now that the keys are imported, all that is left to do (assuming
-            your beacon node is already running) is to run the validator client
-            with:
+            your beacon node is already running) is to run the validator client.
           </Text>
           <CodeSnippet>
             <code>lighthouse vc</code>
@@ -113,9 +112,8 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
             primary
             external
             to="https://lighthouse-book.sigmaprime.io/validator-import-launchpad.html"
-            withArrow
           >
-            Documentation on importing from the Launchpad
+            Importing from Launchpad documentation
           </Link>
         </section>
       )}
@@ -133,12 +131,7 @@ export const Lighthouse = () => {
           <SectionTitle level={2} className="mb5">
             Documentation
           </SectionTitle>
-          <Link
-            primary
-            external
-            to="https://lighthouse-book.sigmaprime.io/"
-            withArrow
-          >
+          <Link primary external to="https://lighthouse-book.sigmaprime.io/">
             Documentation on running Lighthouse
           </Link>
         </section>

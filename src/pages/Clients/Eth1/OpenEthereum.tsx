@@ -29,7 +29,12 @@ export const OpenEthereumDetails = () => (
         The OpenEthereum documentation explains how to download and install the
         client.
       </Text>
-      <Link primary external to="https://openethereum.github.io/Setup">
+      <Link
+        primary
+        external
+        to="https://openethereum.github.io/Setup"
+        className="mt10"
+      >
         OpenEthereum installation documentation
       </Link>
     </section>
@@ -43,13 +48,17 @@ export const OpenEthereumDetails = () => (
             Make sure you do the following to get your Eth1 client working
             properly.
           </Text>
-          <SectionTitle level={3} className="my20">
+          <SectionTitle level={3} className="mt20">
             Testing on Goerli
           </SectionTitle>
-          <Code className="px5 ml5">---chain goerli</Code>
+          <Code className="mt20">---chain goerli</Code>
           <Text>Configures OpenEthereum to sync the Goerli testnet.</Text>
-          <Link primary external to="https://openethereum.github.io/">
-            {' '}
+          <Link
+            className="mt20"
+            primary
+            external
+            to="https://openethereum.github.io/"
+          >
             OpenEthereum documentation
           </Link>
         </section>

@@ -4,6 +4,7 @@ import { IS_MAINNET } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
+import { Heading } from '../../../components/Heading';
 
 // eslint-disable-next-line no-unused-vars
 export const BesuDetails = () => (
@@ -46,10 +47,10 @@ export const BesuDetails = () => (
       </Text>
       {!IS_MAINNET && (
         <>
-          <SectionTitle level={3} className="my20">
+          <Heading level={3} className="mt20">
             Testing on Goerli
-          </SectionTitle>
-          <Code className="px5 ml5">--network=goerli</Code>
+          </Heading>
+          <Code className="mt20">--network=goerli</Code>
           <Text className="mt10">
             Configures Besu to sync the Goerli testnet.
           </Text>
@@ -57,13 +58,14 @@ export const BesuDetails = () => (
             primary
             external
             to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-on-goerli-testnet"
+            className="mt20"
           >
             {' '}
             Besu on Goerli documentation
           </Link>
         </>
       )}
-      <Code className="px5 ml5">-rpc-http-enabled</Code>
+      <Code className="mt20">-rpc-http-enabled</Code>
       <Text className="mt10">
         Makes sure your Eth2 node will be able to connect to the JSON RPC
         endpoint. This will enable the JSON RPC services on the default 8545
@@ -73,6 +75,7 @@ export const BesuDetails = () => (
         primary
         external
         to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
+        className="mt20"
       >
         rpc-http-enabled documentation
       </Link>

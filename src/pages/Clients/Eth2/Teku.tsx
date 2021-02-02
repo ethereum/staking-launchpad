@@ -98,16 +98,13 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
           </Text>
           <ul>
             <li>
-              <Text>The config file</Text>
+              <Text>The config file CLI argument</Text>
             </li>
             <ul>
               <li>
                 <Code className="px5 ml5">--config-file</Code>
               </li>
             </ul>
-            <li>
-              <Text>CLI argument</Text>
-            </li>
             <li>
               <Text>The Teku config file environment variable</Text>
             </li>

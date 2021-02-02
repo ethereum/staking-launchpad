@@ -8,76 +8,74 @@ import { Code } from '../../../components/Code';
 // eslint-disable-next-line no-unused-vars
 export const BesuDetails = () => (
   <>
+    <SectionTitle level={2} className="mb5">
+      Hyperledger Besu
+    </SectionTitle>
     <Text className="mt10">
-      <Link external to="https://www.hyperledger.org/use/besu" primary inline>
-        Hyperledger Besu
-      </Link>{' '}
-      is an Ethereum client designed to be enterprise-friendly for both public
-      and private permissioned network use cases. Besu is written in Java and
-      released under the Apache 2.0 Licence.
+      An Ethereum client designed to be enterprise-friendly for both public and
+      private, permissioned network use cases.
+    </Text>
+    <SectionTitle level={2} className="mb5">
+      Language information
+    </SectionTitle>
+    <Text className="mt10">
+      Besu is written in Java and released under the Apache 2.0 Licence.
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installing Besu
+        Installation
       </SectionTitle>
-      <Text>
-        The
-        <Link
-          primary
-          external
-          to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/"
-          inline
-        >
-          {' '}
-          Besu documentation
-        </Link>{' '}
-        explains how to download and install the client.
+      <Text className="mt10">
+        The Besu documentation explains how to download and install the client.
       </Text>
+      <Link
+        className="mt10"
+        primary
+        external
+        to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/"
+      >
+        Besu installation documentation
+      </Link>
     </section>
     <section>
       <SectionTitle level={2} className="mb5">
         Setup
       </SectionTitle>
-      <Text>
-        When starting up the client, there are a few important options to
-        configure:
-        <ul>
-          {!IS_MAINNET && (
-            <>
-              <li>
-                Besu must be configured to sync the Goerli testnet which can be
-                done with the <Code className="px5 ml5">--network=goerli</Code>{' '}
-                flag.
-                <Link
-                  primary
-                  external
-                  to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-on-goerli-testnet"
-                  withArrow
-                  inline
-                >
-                  {' '}
-                  Documentation
-                </Link>
-              </li>
-            </>
-          )}
-          <li>
-            The JSON RPC endpoint for the Eth2 node to connect to must be
-            enabled with <Code className="px5 ml5">-rpc-http-enabled</Code>.
-            This will enable the JSON RPC service on the default port of 8545.
-            <Link
-              primary
-              external
-              to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
-              withArrow
-              inline
-            >
-              {' '}
-              Documentation
-            </Link>
-          </li>
-        </ul>
+      <Text className="mb20 mt10">
+        Make sure you do the following to get your Eth1 client working properly.
       </Text>
+      {!IS_MAINNET && (
+        <>
+          <SectionTitle level={3} className="my20">
+            Testing on Goerli
+          </SectionTitle>
+          <Code className="px5 ml5">--network=goerli</Code>
+          <Text className="mt10">
+            Configures Besu to sync the Goerli testnet.
+          </Text>
+          <Link
+            primary
+            external
+            to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-on-goerli-testnet"
+          >
+            {' '}
+            Besu on Goerli documentation
+          </Link>
+        </>
+      )}
+      <Code className="px5 ml5">-rpc-http-enabled</Code>
+      <Text className="mt10">
+        Makes sure your Eth2 node will be able to connect to the JSON RPC
+        endpoint. This will enable the JSON RPC services on the default 8545
+        port.
+      </Text>
+      <Link
+        primary
+        external
+        to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
+      >
+        rpc-http-enabled documentation
+      </Link>
     </section>
   </>
 );

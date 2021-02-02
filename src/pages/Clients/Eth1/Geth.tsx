@@ -8,74 +8,73 @@ import { Code } from '../../../components/Code';
 // eslint-disable-next-line no-unused-vars
 export const GethDetails = () => (
   <>
+    <SectionTitle level={2} className="mb5">
+      Geth
+    </SectionTitle>
     <Text className="mt10">
-      <Link external to="https://geth.ethereum.org/" primary inline>
-        Geth
-      </Link>{' '}
-      is one of the three original implementations of the Ethereum protocol. It
-      is written in Go, fully open source and licensed under the GNU LGPL v3.
+      One of the three original implementations of the Ethereum protocol.
+    </Text>
+    <SectionTitle level={2} className="mb5">
+      Language information
+    </SectionTitle>
+    <Text className="mt10">
+      Geth is written in Go, fully open source and licensed under the GNU LGPL
+      v3.
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installing Geth
+        Installation
       </SectionTitle>
       <Text>
-        The
-        <Link
-          primary
-          external
-          to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
-          inline
-        >
-          {' '}
-          Geth documentation
-        </Link>{' '}
-        explains how to download and install the client.
+        The Geth documentation explains how to download and install the client.
       </Text>
+      <Link
+        primary
+        external
+        to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
+        inline
+      >
+        Geth installation documentation
+      </Link>
     </section>
     <section>
       <SectionTitle level={2} className="mb5">
         Setup
       </SectionTitle>
-      <Text>
-        When starting up the client, there are a few important options to
-        configure:
-        <ul>
-          {!IS_MAINNET && (
-            <>
-              <li>
-                Geth must be configured to sync the Goerli testnet which can be
-                done with the <Code className="px5 ml5">--goerli</Code> flag.
-                <Link
-                  primary
-                  external
-                  to="https://geth.ethereum.org/docs/interface/command-line-options"
-                  withArrow
-                  inline
-                >
-                  {' '}
-                  Documentation
-                </Link>
-              </li>
-            </>
-          )}
-          <li>
-            The JSON RPC endpoint for the Eth2 node to connect to must be
-            enabled with <Code className="px5 ml5">--http</Code>. This will
-            enable the JSON RPC service on the default port of 8545.
-            <Link
-              primary
-              external
-              to="https://geth.ethereum.org/docs/interface/command-line-options"
-              withArrow
-              inline
-            >
-              {' '}
-              Documentation
-            </Link>
-          </li>
-        </ul>
+      <Text className="mb20 mt10">
+        Make sure you do the following to get your Eth1 client working properly.
       </Text>
+      {!IS_MAINNET && (
+        <>
+          <SectionTitle level={3} className="my20">
+            Testing on Goerli
+          </SectionTitle>
+          <Code className="px5 ml5">--goerli</Code>
+          <Text className="mt10">
+            Configures Geth to sync the Goerli testnet
+          </Text>
+          <Link
+            primary
+            external
+            to="https://geth.ethereum.org/docs/interface/command-line-options"
+          >
+            Geth on Goerli documentation
+          </Link>
+        </>
+      )}
+      <Code className="px5 ml5">--http</Code>
+      <Text className="mt10">
+        Makes sure your Eth2 node will be able to connect to the JSON RPC
+        endpoint. This will enable the JSON RPC services on the default 8545
+        port.
+      </Text>
+      <Link
+        primary
+        external
+        to="https://geth.ethereum.org/docs/interface/command-line-options"
+      >
+        --http documentation
+      </Link>
     </section>
   </>
 );

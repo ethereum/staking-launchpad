@@ -36,8 +36,9 @@ const LogoBackground = styled.div<LogoBackgroundProps>`
 `;
 
 const SelectionText = styled(Heading)`
-  margin-bottom: 40px;
   text-align: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
   @media only screen and (max-width: 770px) {
     display: none;
   }

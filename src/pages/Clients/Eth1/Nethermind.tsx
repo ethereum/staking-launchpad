@@ -4,6 +4,7 @@ import { IS_MAINNET } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
+import { Heading } from '../../../components/Heading';
 
 // eslint-disable-next-line no-unused-vars
 export const NethermindDetails = () => (
@@ -34,6 +35,7 @@ export const NethermindDetails = () => (
         primary
         external
         to="https://nethermind.readthedocs.io/en/latest/download.html"
+        className="mt10"
       >
         Nethermind installation documentation
       </Link>
@@ -47,13 +49,14 @@ export const NethermindDetails = () => (
       </Text>
       {IS_MAINNET && (
         <>
-          <Code className="px5 ml5">--config mainnet</Code>
+          <Code className="mt20">--config mainnet</Code>
           <Text className="mt10">
             Configures Nethermind to sync the Ethereum mainnet.
           </Text>
           <Link
             primary
             external
+            className="mt20"
             to="https://nethermind.readthedocs.io/en/latest/networks.html#mainnet"
           >
             --config mainnet documentation
@@ -62,10 +65,10 @@ export const NethermindDetails = () => (
       )}
       {!IS_MAINNET && (
         <>
-          <SectionTitle level={3} className="my20">
+          <Heading level={3} className="mt20">
             Testing on Goerli
-          </SectionTitle>
-          <Code className="px5 ml5">--config goerli</Code>
+          </Heading>
+          <Code className="mt20">--config goerli</Code>
           <Text className="mt10">
             Configures Nethermind to sync the Goerli testnet.
           </Text>
@@ -73,13 +76,14 @@ export const NethermindDetails = () => (
           <Link
             primary
             external
+            className="mt20"
             to="https://nethermind.readthedocs.io/en/latest/networks.html#gorli-goerli"
           >
             Nethermind on Goerli documentation
           </Link>
         </>
       )}
-      <Code className="px5 ml5">--JsonRpc.Enabled true</Code>
+      <Code className="mt20">--JsonRpc.Enabled true</Code>
       <Text className="mt10">
         Makes sure your Eth2 node will be able to connect to the JSON RPC
         endpoint. This will enable the JSON RPC services on the default 8545
@@ -88,6 +92,7 @@ export const NethermindDetails = () => (
       <Link
         primary
         external
+        className="mt20"
         to="https://nethermind.readthedocs.io/en/latest/configuration.html#jsonrpcconfig"
       >
         --JsonRpc.Enabled documentation

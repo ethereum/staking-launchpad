@@ -24,7 +24,7 @@ export const LocalizedRouter: React.FC<Props> = ({ children, history }) => (
          * If language is not in route path, redirect to language route
          */
         const { pathname } = location;
-        if (!pathname.includes(`/${lang}/`)) {
+        if (!pathname.includes(`/${lang}/`) && pathname !== `/${lang}`) {
           return <Redirect to={`/${lang}${pathname}`} />;
         }
 

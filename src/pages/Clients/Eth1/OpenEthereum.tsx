@@ -8,26 +8,30 @@ import { Code } from '../../../components/Code';
 // eslint-disable-next-line no-unused-vars
 export const OpenEthereumDetails = () => (
   <>
+    <SectionTitle level={2} className="mb5">
+      OpenEthereum
+    </SectionTitle>
     <Text className="mt10">
-      <Link external to="https://www.parity.io/ethereum/" primary inline>
-        OpenEthereum
-      </Link>{' '}
-      (used to be called Parity) is written in Rust and licensed under the
-      GPLv3. The design goals are to be “the fastest, lightest, and most secure
-      Ethereum client”.
+      Formerly Parity, OpenEthereum is designed to be “the fastest, lightest,
+      and most secure Ethereum client”.
+    </Text>
+    <SectionTitle level={2} className="mb5">
+      Language information
+    </SectionTitle>
+    <Text className="mt10">
+      OpenEthereum is written in Rust and licensed under the GPLv3.
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installing OpenEthereum
+        Installation
       </SectionTitle>
       <Text>
-        The
-        <Link primary external to="https://openethereum.github.io/Setup" inline>
-          {' '}
-          OpenEthereum documentation
-        </Link>{' '}
-        explains how to download and install the client.
+        The OpenEthereum documentation explains how to download and install the
+        client.
       </Text>
+      <Link primary external to="https://openethereum.github.io/Setup">
+        OpenEthereum installation documentation
+      </Link>
     </section>
     {!IS_MAINNET && (
       <>
@@ -35,27 +39,19 @@ export const OpenEthereumDetails = () => (
           <SectionTitle level={2} className="mb5">
             Setup
           </SectionTitle>
-          <Text>
-            When starting up the client, there are a few important options to
-            configure:
-            <ul>
-              <li>
-                OpenEthereum must be configured to sync the Goerli testnet which
-                can be done with the{' '}
-                <Code className="px5 ml5">---chain goerli</Code> parameter.
-                <Link
-                  primary
-                  external
-                  to="https://openethereum.github.io/"
-                  withArrow
-                  inline
-                >
-                  {' '}
-                  Documentation
-                </Link>
-              </li>
-            </ul>
+          <Text className="mb20 mt10">
+            Make sure you do the following to get your Eth1 client working
+            properly.
           </Text>
+          <SectionTitle level={3} className="my20">
+            Testing on Goerli
+          </SectionTitle>
+          <Code className="px5 ml5">---chain goerli</Code>
+          <Text>Configures OpenEthereum to sync the Goerli testnet.</Text>
+          <Link primary external to="https://openethereum.github.io/">
+            {' '}
+            OpenEthereum documentation
+          </Link>
         </section>
       </>
     )}

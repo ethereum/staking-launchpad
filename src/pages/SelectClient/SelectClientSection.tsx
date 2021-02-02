@@ -46,7 +46,7 @@ const SelectClientSection = ({
     </Heading>
     <Box className="flex flex-column space-between mt10">
       <ClientOptionContainer>
-        {clients.map(({ clientId, name, imgUrl }) => {
+        {clients.map(({ clientId, name, imgUrl, language }) => {
           const inputId = `${clientId}-client`;
           const onClick = () => setCurrentClient(clientId);
 
@@ -58,6 +58,7 @@ const SelectClientSection = ({
               isActive={currentClient === clientId}
               onClick={onClick}
               text={name}
+              language={language}
             />
           );
         })}

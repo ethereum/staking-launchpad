@@ -3,9 +3,8 @@ import styled from 'styled-components';
 
 const LogoContainerBox = styled.div`
   width: 196px;
-  height: 196px;
   border: ${(p: { theme: any; isActive: boolean }) =>
-    `2px solid ${p.isActive ? p.theme.blue.light : p.theme.gray.medium}`};
+    `2px solid ${p.isActive ? p.theme.gray.dark : p.theme.gray.medium}`};
   box-shadow: ${(p: { theme: any; isActive: boolean }) =>
     p.isActive && `0 0 10px rgba(0, 0, 0, 0.5)`};
   border-radius: ${p => p.theme.borderRadius};

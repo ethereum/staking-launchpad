@@ -64,6 +64,7 @@ export type Client = {
   clientId: ClientId;
   name: string;
   imgUrl: string;
+  language?: any;
 };
 
 // define and shuffle the clients
@@ -75,28 +76,52 @@ const ethClients: {
       clientId: ClientId.OPEN_ETHEREUM,
       name: 'OpenEthereum',
       imgUrl: OpenEthereumCircle,
+      language: 'Rust',
     },
-    { clientId: ClientId.GETH, name: 'Geth', imgUrl: GethCircle },
-    { clientId: ClientId.BESU, name: 'Besu', imgUrl: BesuCircle },
+    {
+      clientId: ClientId.GETH,
+      name: 'Geth',
+      imgUrl: GethCircle,
+      language: 'Go',
+    },
+    {
+      clientId: ClientId.BESU,
+      name: 'Besu',
+      imgUrl: BesuCircle,
+      language: 'Java',
+    },
     {
       clientId: ClientId.NETHERMIND,
       name: 'Nethermind',
       imgUrl: NethermindCircle,
+      language: 'C#, .NET',
     },
   ]),
   2: _shuffle([
-    { clientId: ClientId.TEKU, name: 'Teku', imgUrl: TekuCircle },
+    {
+      clientId: ClientId.TEKU,
+      name: 'Teku',
+      imgUrl: TekuCircle,
+      language: 'Java',
+    },
     {
       clientId: ClientId.LIGHTHOUSE,
       name: 'Lighthouse',
       imgUrl: LighthouseCircle,
+      language: 'Rust',
     },
     {
       clientId: ClientId.PRYSM,
       name: 'Prysm',
       imgUrl: PrysmaticCircle,
+      language: 'Go',
     },
-    { clientId: ClientId.NIMBUS, name: 'Nimbus', imgUrl: NimbusCircle },
+    {
+      clientId: ClientId.NIMBUS,
+      name: 'Nimbus',
+      imgUrl: NimbusCircle,
+      language: 'Nim',
+    },
   ]),
 };
 
@@ -149,11 +174,11 @@ const _SelectClientPage = ({
     <WorkflowPageTemplate title="Choose client">
       {ethVersionStep === 1 && (
         <div className="mt30" style={{ paddingBottom: '1rem' }}>
-          In order to process incoming validator deposits from mainnet (the Eth1
-          chain), you'll need to run an Eth1 client in parallel to your Eth2
-          client. While it is possible to use a third-party service like Infura,
-          we recommend running your own client in order to ensure the network
-          stays as decentralised as possible.
+          To process incoming validator deposits from mainnet (the Eth1 chain),
+          you'll need to run an Eth1 client in parallel to your Eth2 client.
+          While you can use a third-party service like Infura, we recommend
+          running your own client in order to ensure the network stays as
+          decentralised as possible.
         </div>
       )}
       <SelectClientSection

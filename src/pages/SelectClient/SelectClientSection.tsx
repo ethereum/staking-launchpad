@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from 'grommet';
+import { Link } from '../../components/Link';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
@@ -12,6 +13,7 @@ const ClientOptionContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 `;
 
 const ClientDescriptionContainer = styled.div`
@@ -50,7 +52,6 @@ const SelectClientSection = ({
 
           return (
             <ImageSelectionBox
-              style={{ margin: '0 5px' }}
               fullWidthImg
               key={inputId}
               src={imgUrl}
@@ -61,6 +62,13 @@ const SelectClientSection = ({
           );
         })}
       </ClientOptionContainer>
+      <Link
+        to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
+        primary
+        external
+      >
+        View extensive client comparison
+      </Link>
       <ClientDescriptionContainer>
         {clientDetails[currentClient]}
       </ClientDescriptionContainer>

@@ -96,11 +96,23 @@ export const Introduction = (): JSX.Element => {
             <Link
               className="mt20 mb40"
               external
-              to="https://ethereum.org/en/eth2/beacon-chain/"
+              to="https://ethereum.org/en/eth2/docking/"
             >
-              More on the Beacon Chain
+              More on the merge
             </Link>
-
+            <Text className="mt20">
+              Validating in Ethereum is not the same as mining. The outcomes are
+              similar: the work you do will extend and secure the chain. But the
+              process is completely different because they use different
+              consensus mechanisms.
+            </Text>
+            <Link
+              className="mt20 mb40"
+              external
+              to="https://ethereum.org/en/developers/docs/consensus-mechanisms/"
+            >
+              More on consensus mechanisms
+            </Link>
             {/* NOTE: this section felt like there was a lot of repetition with the section below so have reframed to talk about validators in the context of the upgrades */}
           </ScrollAnimation>
         </ContentContainer>

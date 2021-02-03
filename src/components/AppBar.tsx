@@ -2,6 +2,8 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Box, DropButton } from 'grommet';
+import { Menu } from 'grommet-icons';
+import { Language } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
@@ -17,6 +19,7 @@ import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../utils/envVars';
+import useMobileCheck from '../hooks/useMobileCheck';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -46,6 +49,8 @@ const NavBarLinks = styled.div`
 
 const ValidatorDropdown = styled(DropButton)`
   font-weight: 300;
+  display: flex;
+  align-items: center;
   border: none;
   :hover {
     border: none;
@@ -57,6 +62,11 @@ const DropdownLink = styled(Link)`
   :hover {
     text-decoration: underline;
   }
+`;
+
+const NavLinksRight = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const BarLinkText = styled(Heading)`
@@ -96,6 +106,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     [pathname]
   );
 
+  const mobile = useMobileCheck('800px');
+
   return (
     <RainbowBackground
       tag="header"
@@ -109,17 +121,19 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       <NavBarLinks>
         <Link to={routesEnum.landingPage} className="mx30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <div className="flex flex-column center ml5">
-            <BarLinkText
-              active={pathname === routesEnum.landingPage}
-              level={4}
-              margin="none"
-              className="bar-link-text no-padding"
-            >
-              Eth2 Launchpad
-            </BarLinkText>
-            {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
-          </div>
+          {!mobile && (
+            <div className="flex flex-column center ml5">
+              <BarLinkText
+                active={pathname === routesEnum.landingPage}
+                level={4}
+                margin="none"
+                className="bar-link-text no-padding"
+              >
+                Eth2 Launchpad
+              </BarLinkText>
+              {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
+            </div>
+          )}
         </Link>
 
         <Link
@@ -173,22 +187,62 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           </BarLinkText>
         </Link>
       </NavBarLinks>
-
-      <div className="flex">
-        <Link to={routesEnum.languagesPage} className="mx30 secondary-link">
-          <BarLinkText
-            level={4}
-            margin="none"
-            className="bar-link-text"
-            active={pathname === routesEnum.languagesPage}
-          >
-            Languages
-          </BarLinkText>
-        </Link>
-        <NetworkText>
-          {ETH2_NETWORK_NAME}
-          {IS_MAINNET ? `` : ` Testnet`}
-        </NetworkText>
+      <NavLinksRight>
+        {!mobile && (
+          <Link to={routesEnum.languagesPage} className="mx30 secondary-link">
+            <BarLinkText
+              level={4}
+              margin="none"
+              className="bar-link-text"
+              active={pathname === routesEnum.languagesPage}
+            >
+              Languages
+            </BarLinkText>
+          </Link>
+        )}
+        {mobile && (
+          <Link to={routesEnum.languagesPage} className="mx16">
+            <Language color="black" />
+          </Link>
+        )}
+        {mobile && (
+          <ValidatorDropdown
+            className="secondary-link"
+            label={<Menu color="black" />}
+            dropAlign={{ top: 'bottom', right: 'right' }}
+            dropContent={
+              <Box pad="large">
+                <DropdownLink to={routesEnum.FaqPage}>
+                  Frequently asked questions
+                </DropdownLink>
+                <DropdownLink to={routesEnum.checklistPage}>
+                  Eth2 staker checklist
+                </DropdownLink>
+                <DropdownLink to={routesEnum.languagesPage}>
+                  Languages
+                </DropdownLink>
+                <Text className="my20">
+                  <b>The Eth2 clients</b>
+                </Text>
+                <DropdownLink to={routesEnum.lighthouse}>
+                  Lighthouse
+                </DropdownLink>
+                <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+                <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+                <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
+                <Text className="mt20">
+                  <em>Visit this site on desktop to become a validator.</em>
+                </Text>
+              </Box>
+            }
+          />
+        )}
+        {!mobile && (
+          <NetworkText>
+            {ETH2_NETWORK_NAME}
+            {IS_MAINNET ? `` : ` Testnet`}
+          </NetworkText>
+        )}
         {walletConnected && (
           <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
             <Dot success={networkAllowed} error={!networkAllowed} />
@@ -197,7 +251,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Text>
           </Box>
         )}
-      </div>
+      </NavLinksRight>
     </RainbowBackground>
   );
 };

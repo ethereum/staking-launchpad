@@ -4,7 +4,6 @@ import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import Animate from 'animate.css-react';
-import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { routesEnum } from '../../Routes';
 import { Heading } from '../../components/Heading';
@@ -84,16 +83,13 @@ const LogoContainer = styled.div`
   display: flex;
   min-height: 50px;
 `;
-const EthLogo = styled.img`
-  height: 50px;
-`;
+
 // @ts-ignore
 const LogoText = styled(Text)`
-  line-height: 50px;
-  margin-left: 15px;
+  line-height: 40px;
   font-weight: bold;
   @media screen and (max-width: 800px) {
-    line-height: 30px;
+    line-height: 24px;
   }
 `;
 const StyledLeslieImgNode = styled.img`
@@ -154,7 +150,7 @@ export const Hero = () => {
                   <TitleContainer>
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>
-                        <EthLogo src={EthDiamondPlain} />
+                        {/* <EthLogo src={EthDiamondPlain} /> */}
                         <LogoText>
                           Eth2 Launchpad{' '}
                           {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
@@ -180,6 +176,7 @@ export const Hero = () => {
                       community.
                     </Text>
                   </ScrollAnimation>
+
                   {!!isSmallScreen && <LeslieImage />}
                   <Animate
                     enter="fadeIn"

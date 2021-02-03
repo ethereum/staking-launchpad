@@ -39,14 +39,13 @@ const osMapping: { [os: number]: 'mac' | 'linux' | 'windows' } = {
 };
 
 const Highlight = styled.span`
-  color: ${p => p.theme.blue.medium};
+  background: ${p => p.theme.green.medium};
   margin-left: 5px;
 `;
 
 const InstructionImgContainer = styled.div`
   height: 250px;
-  margin: 20px;
-  border: 1px solid ${(p: any) => p.theme.gray.medium};
+  margin: 64px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -118,8 +117,10 @@ const _GenerateKeysPage = ({
         <Heading level={2} size="small" color="blueMedium">
           What is your current operating system?
         </Heading>
-        <Text className="mt20">
-          Choose your current OS so we can tailor the instructions for you.
+        <Text className="mt20 mb40">
+          Choose the OS of the computer you're currently using. This will be the
+          computer you use to generate your keys. It doesn't need to be the OS
+          you want to use for your node.
         </Text>
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
       </Paper>
@@ -137,7 +138,7 @@ const _GenerateKeysPage = ({
           keystores should be available in the newly created
           <Highlight>validator_keys</Highlight> directory.
         </Text>
-        <Alert variant="info" className="my10">
+        <Alert variant="info" className="my40">
           You should see that you have one keystore per validator. This keystore
           contains your signing key, encrypted with your password. You can use
           your mnemonic to generate your withdrawal key when you wish to

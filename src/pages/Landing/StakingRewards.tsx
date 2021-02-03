@@ -8,7 +8,8 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
 import StakingRewardsChart from './StakingRewardsChart';
-import { TICKER_NAME } from '../../utils/envVars';
+import { numberWithCommas } from '../../utils/numberWithCommas';
+import { TICKER_NAME, ETH_REQUIREMENT } from '../../utils/envVars';
 
 /**
  * Utils
@@ -129,6 +130,12 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
               }}
             />
           </div>
+          <Text className="mt25">
+            Rewards are only possible if there is more than{' '}
+            {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME} in the deposit
+            contract. This is the amount required for the chain to function
+            securely.
+          </Text>
         </ScrollAnimation>
       </SubContainer>
     </Container>

@@ -28,6 +28,7 @@ const RainbowBackground = styled.div`
 interface Props extends RouteComponentProps {
   children?: React.ReactNode;
   title: string;
+  header?: string;
   description?: string;
   history: any;
 }
@@ -36,6 +37,7 @@ const _PageTemplate = ({
   children,
   description,
   title,
+  header = title,
 }: Props): JSX.Element => {
   return (
     <RainbowBackground>
@@ -49,7 +51,7 @@ const _PageTemplate = ({
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" className="mb40">
-            {title}
+            {header}
           </Heading>
           {children}
         </Content>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { Heading } from './Heading';
@@ -87,20 +88,14 @@ export const Footer = () => {
           <Link to="https://ethereum.org/en/eth2/">
             <FormattedMessage defaultMessage="The Eth2 Upgrades Intro" />
           </Link>
-          <Link
-            external
-            to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
-          >
+          <Link to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204">
             Economics
           </Link>
           {/* TODO: add this link when page goes live */}
           {/* <Link to="http://activate.codefi.network/eth2"> */}
           {/*  Calculator */}
           {/* </Link> */}
-          <Link
-            external
-            to="https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf"
-          >
+          <Link to="https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf">
             Formal Verification Report
           </Link>
         </div>

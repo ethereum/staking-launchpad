@@ -87,7 +87,6 @@ export const TermsOfService = () => {
                 our{' '}
                 <Link
                   primary
-                  external
                   inline
                   to="https://ethereum.org/en/privacy-policy/"
                 >
@@ -99,7 +98,6 @@ export const TermsOfService = () => {
                 our{' '}
                 <Link
                   primary
-                  external
                   inline
                   to="https://ethereum.org/en/cookie-policy/"
                 >
@@ -344,12 +342,7 @@ export const TermsOfService = () => {
 
           <Text className="tos-text">
             All information we collect on this Websites is subject to our{' '}
-            <Link
-              primary
-              external
-              inline
-              to="https://ethereum.org/en/privacy-policy/"
-            >
+            <Link primary inline to="https://ethereum.org/en/privacy-policy/">
               Privacy Policy
             </Link>
             . By using the Website, you consent to all actions taken by us with

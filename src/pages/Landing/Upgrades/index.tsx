@@ -46,7 +46,6 @@ interface upgrade {
   subTitle: string;
   linkUrl: string;
   link: string;
-  external: boolean;
 }
 
 const upgrades: upgrade[] = [
@@ -55,7 +54,6 @@ const upgrades: upgrade[] = [
     subTitle: 'Dig deeper into how Eth2 upgrades Ethereum.',
     linkUrl: 'https://ethereum.org/en/eth2/',
     link: 'How does this all happen?',
-    external: true,
   },
   {
     title: 'Deposit contract formally verified',
@@ -64,7 +62,6 @@ const upgrades: upgrade[] = [
     linkUrl:
       'https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf',
     link: 'Formal verification report',
-    external: true,
   },
   {
     title: 'Validators FAQ',
@@ -72,7 +69,6 @@ const upgrades: upgrade[] = [
       'Check out the FAQ page for more information about the roles and responsibilities of Eth2 network validators.',
     linkUrl: '/faq',
     link: 'More on validators',
-    external: false,
   },
 ];
 
@@ -107,7 +103,6 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                external
                 to="https://www.ethereum.org/eth2/beacon-chain/"
               >
                 More on the Beacon Chain
@@ -120,7 +115,6 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                external
                 to="https://www.ethereum.org/eth2/the-docking/"
               >
                 More on the merge
@@ -134,7 +128,6 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                external
                 to="https://www.ethereum.org/eth2/shard-chains/"
               >
                 More on shard chains

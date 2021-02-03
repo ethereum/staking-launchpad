@@ -60,7 +60,6 @@ interface LinkProps {
   to: string;
   key?: string;
   children: React.ReactNode;
-  external?: boolean;
   className?: string;
   primary?: boolean | undefined;
   onClick?: (param?: any) => void;
@@ -69,17 +68,10 @@ interface LinkProps {
 }
 
 export const Link = (props: LinkProps) => {
-  const {
-    external,
-    children,
-    className,
-    to,
-    primary,
-    inline,
-    withArrow,
-  } = props;
+  const { children, className, to, primary, inline, withArrow } = props;
   const { locale } = useIntl();
-  if (external) {
+  const isExternal = to && to.includes('http');
+  if (isExternal) {
     return (
       <StyledExternalLink
         className={className}

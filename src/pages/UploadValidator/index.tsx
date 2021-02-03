@@ -153,7 +153,6 @@ const _UploadValidatorPage = ({
           }}
         />
         <Link
-          external
           primary
           inline
           to="https://github.com/ethereum/eth2.0-deposit/issues/new"

@@ -35,7 +35,6 @@ export const pageContent = {
           the deposit contract on the current Ethereum chain.
         </Text>
         <Link
-          external
           to="https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/"
           className="my10"
           primary
@@ -62,12 +61,7 @@ export const pageContent = {
           Withdrawing your deposit won't be possible until mainnet merges with
           the Beacon Chain.
         </Text>
-        <Link
-          external
-          to="https://ethereum.org/eth2/docking/"
-          className="my10"
-          primary
-        >
+        <Link to="https://ethereum.org/eth2/docking/" className="my10" primary>
           More on the merge
         </Link>
       </>
@@ -85,7 +79,6 @@ export const pageContent = {
           to the rewards for actively participating.
         </Text>
         <Link
-          external
           to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
           className="my10"
           primary
@@ -163,7 +156,6 @@ export const pageContent = {
           before you can withdraw your {TICKER_NAME}.
         </Text>
         <Link
-          external
           to="https://ethereum.org/en/eth2/docking"
           className="my10"
           primary

@@ -1,8 +1,25 @@
 {
-  "site-title": "Eth2 Launchpad",
-  "site-description": "Become a validator and help secure Eth2.",
-  "launch-phases": "Launch Phases",
-  "page-faq-title": "Validator FAQs",
-  "page-faq-description": "Answers to common questions on becomming a validator.",
-  "greeting": "Hi {name}"
+  "0ANoM/": {
+    "defaultMessage": "{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
+  },
+  "Bs34de": {
+    "defaultMessage": "The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+  },
+  "JYvwX8": {
+    "defaultMessage": "{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
+  },
+  "LeHQQm": {
+    "defaultMessage": "Validator FAQs"
+  },
+  "eSWhUt": {
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  },
+  "iDXMFo": {
+    "defaultMessage": "Answers to common questions on becomming a validator."
+  },
+  "site-description": {
+  },
+  "site-title": {
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { PageTemplate } from '../../../components/PageTemplate';
 import tekuBg from '../../../static/teku-bg.png';
 import {
@@ -135,32 +136,53 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             Note
           </Heading>
           <Text>
-            <Code className="px5 ml5">
-              {'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}
-            </Code>{' '}
-            will find{' '}
-            <Code className="px5 ml5">
-              {'<'}KEY_DIR{'>/**'}.json
-            </Code>
-            , and expect to find{' '}
-            <Code className="px5 ml5">
-              {'<'}PASS_DIR{'>/**'}.txt
-            </Code>
-            .{' '}
-            <Code className="px5 ml5">
-              {'<'}KEY_FILE{'>'}:{'<'}PASS_FILE{'>'}
-            </Code>{' '}
-            will expect that the file{' '}
-            <Code className="px5 ml5">
-              {'<'}KEY_FILE{'>'}
-            </Code>{' '}
-            exists, and the file containing the password for it is{' '}
-            <Code className="px5 ml5">
-              {'<'}PASS_FILE{'>'}
-            </Code>
-            . The path separator is operating system dependent, and should be{' '}
-            <Code className="px5 ml5">;</Code> in Windows rather than{' '}
-            <Code className="px5 ml5">:</Code>.
+            <FormattedMessage
+              defaultMessage="{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
+              values={{
+                directoriesPattern: (
+                  <Code className="px5 ml5">
+                    {'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}
+                  </Code>
+                ),
+                keyDirectory: (
+                  <Code className="px5 ml5">
+                    {'<'}KEY_DIR{'>/**'}.json
+                  </Code>
+                ),
+                passwordDirectory: (
+                  <Code className="px5 ml5">
+                    {'<'}PASS_DIR{'>/**'}.txt
+                  </Code>
+                ),
+              }}
+            />{' '}
+            <FormattedMessage
+              defaultMessage="{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
+              values={{
+                filesPattern: (
+                  <Code className="px5 ml5">
+                    {'<'}KEY_FILE{'>'}:{'<'}PASS_FILE{'>'}
+                  </Code>
+                ),
+                keyFile: (
+                  <Code className="px5 ml5">
+                    {'<'}KEY_FILE{'>'}
+                  </Code>
+                ),
+                passwordFile: (
+                  <Code className="px5 ml5">
+                    {'<'}PASS_FILE{'>'}
+                  </Code>
+                ),
+              }}
+            />{' '}
+            <FormattedMessage
+              defaultMessage="The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+              values={{
+                semicolon: <Code className="px5 ml5">;</Code>,
+                colon: <Code className="px5 ml5">:</Code>,
+              }}
+            />
           </Text>
         </section>
         <section>

@@ -49,11 +49,6 @@ const BoldGreen = styled.span`
   font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
   font-weight: bold;
 `;
-const BoldGray = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.gray.medium};
-  font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
-  font-weight: bold;
-`;
 
 //
 // Sub-components
@@ -70,9 +65,7 @@ const PreThresholdSubText = ({
       <BoldGreen fontSize={18} className="mr10">
         {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
-      <Text size="small" style={{ marginTop: '2px' }}>
-        current staking balance
-      </Text>
+      <Text size="small" style={{ marginTop: '2px' }}></Text>
     </span>
     <Text
       className={mobile ? 'flex flex-column align-flex-end' : ''}
@@ -82,7 +75,6 @@ const PreThresholdSubText = ({
         {calculateLaunchThreshold(amountEth)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
-      until launch threshold
     </Text>
   </div>
 );
@@ -100,7 +92,6 @@ const PostThresholdSubText = ({
         {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}
         {mobile ? <br /> : <>&nbsp;</>}
       </strong>
-      until launch threshold
     </Text>
     <span
       className={`flex ${
@@ -110,9 +101,7 @@ const PostThresholdSubText = ({
       <BoldGreen fontSize={18} className={mobile ? '' : 'mr10'}>
         {numberWithCommas(amountEth)} {TICKER_NAME}
       </BoldGreen>
-      <Text size="small" style={{ marginTop: '2px' }}>
-        current staking balance
-      </Text>
+      <Text size="small" style={{ marginTop: '2px' }}></Text>
     </span>
   </div>
 );
@@ -147,20 +136,21 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
       <Content isMobile={m}>
         <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Network status
+            Total {TICKER_NAME} staked
           </Heading>
           <Text size="x-large" className="mt20">
             <BoldGreen className="mr10" fontSize={24}>
               {numberWithCommas(amountEth)} {TICKER_NAME}
             </BoldGreen>
-            already staked and counting.
           </Text>
           {thresholdReached ? (
             <>
               <Text className="mt20">
-                The threshold to launch the eth2
-                {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
-                has been reached 🎉
+                {IS_MAINNET
+                  ? `The Beacon Chain `
+                  : ` ${ETH2_NETWORK_NAME} testnet `}{' '}
+                needs at least {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}{' '}
+                staked to be secure.
               </Text>
               <div>
                 <ProgressBar workflow={percentageComplete} />
@@ -172,14 +162,9 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
           ) : (
             <>
               <Text className="mt20">
-                The Eth2 network needs to reach at least
-                <BoldGreen className="mr10 ml10" fontSize={24}>
-                  {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
-                </BoldGreen>
-                <BoldGray className="mr10" fontSize={24}>
-                  {validatorRequirement} validators,
-                </BoldGray>
-                to launch the
+                The Eth2 network needs at least{' '}
+                {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME} (
+                {validatorRequirement} validators), to launch the
                 {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
               </Text>
               <div>

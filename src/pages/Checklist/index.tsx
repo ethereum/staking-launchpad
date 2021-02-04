@@ -13,6 +13,7 @@ import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
+import { Code } from '../../components/Code';
 import { colors } from '../../styles/styledComponentsTheme';
 
 const ChecklistPageStyles = styled.div`
@@ -29,6 +30,17 @@ const ChecklistPageStyles = styled.div`
   label {
     padding: 1rem;
   }
+  pre {
+    background-color: ${(p: any) => p.theme.gray.light};
+    display: block;
+    border-radius: 4px;
+    margin: 16px;
+    padding: 16px;
+    color: #ad2b2a;
+    font-size: 14px;
+    line-height: 16px;
+    white-space: pre-wrap;
+  }
   .sub-checklist-item {
     margin-top: -0.5rem;
     margin-left: 1.5rem;
@@ -36,12 +48,32 @@ const ChecklistPageStyles = styled.div`
   .checkbox-label {
     margin-left: 0.5rem;
   }
+  ul {
+    padding-left: 0px;
+    padding-top: 16px;
+  }
+  @media screen and (max-width: 1080px) {
+    section {
+    background-color: white;
+    margin: 0px;
+    padding: 16px;
+    flex-wrap: wrap;
+  }
 `;
+
 const ClientContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
   padding: 1rem;
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+  }
+`;
+
+const Subtitle = styled.p`
+  font-size: 20px;
+  margin-bottom: 32px;
 `;
 
 const PortTable = styled.table`
@@ -109,7 +141,11 @@ export const Checklist = () => {
   ]);
 
   return (
-    <PageTemplate title="Eth2 Staker Checklist">
+    <PageTemplate title="Eth2 validator checklist">
+      <Subtitle>
+        This checklist will help you understand the role of a validator and
+        prepare you for the role.
+      </Subtitle>
       <ChecklistPageStyles>
         <section>
           <Heading level={3}>Hardware</Heading>
@@ -205,32 +241,26 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>Configure time sync</Heading>
-          <CheckBox
-            label={
-              <Text className="checkbox-label" style={{ display: 'inherit' }}>
-                For Ubuntu 20.04, run
-                <pre className="my0">
-                  {' '}
-                  <span style={{ color: colors.red.medium }}>timedatectl</span>
-                </pre>
-              </Text>
-            }
-          />
+          <Text className="mt20">For Ubuntu 20.04</Text>
           <ul className="sub-checklist-item">
             <li className="py5">
+              <Text>Run the following command</Text>
+              <pre className="my0"> timedatectl</pre>
+            </li>
+            <li className="py5">
               <Text>
-                Check if <code>NTP Service</code> is <code>active</code>.
+                Check if <Code>NTP Service</Code> is <Code>active</Code>.
               </Text>
             </li>
             <li className="py5">
               <Text>
-                Check if <code>Local time</code>, <code>Time zone</code>, and{' '}
-                <code>Universal time</code> are all correct.
+                Check if <Code>Local time</Code>, <Code>Time zone</Code>, and{' '}
+                <Code>Universal time</Code> are all correct.
               </Text>
             </li>
             <li className="py5">
               <Text>
-                If <code>NTP Service</code> is not <code>active</code>, run
+                If <Code>NTP Service</Code> is not <Code>active</Code>, run
                 <pre className="my0">
                   {' '}
                   <span style={{ color: colors.red.medium }}>
@@ -242,8 +272,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 If you see error message{' '}
-                <code>Failed to set ntp: NTP not supported</code>, you may need
-                to install <code>chrony</code> or <code>ntp</code> package.
+                <Code>Failed to set ntp: NTP not supported</Code>, you may need
+                to install <Code>chrony</Code> or <Code>ntp</Code> package.
               </Text>
             </li>
             <li className="py5">
@@ -338,11 +368,9 @@ export const Checklist = () => {
                 <strong>Note:</strong> you can verify it with the following
                 command to check if it returns the client version correctly.
               </Text>
-              <Text>
-                <span style={{ color: colors.red.medium }}>
-                  <code>{`curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://<YourServerLocation>:8545`}</code>
-                </span>
-              </Text>
+              <pre>
+                {`curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://<YourServerLocation>:8545`}
+              </pre>
             </li>
           </ul>
           <CheckBox
@@ -561,22 +589,17 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>Tips</Heading>
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                If you have questions, EthStaker community is a good place to
-                get help! You can find supports on{' '}
-                <Link inline external to="https://invite.gg/ethstaker">
-                  Discord
-                </Link>{' '}
-                or{' '}
-                <Link inline external to="https://reddit.com/r/ethstaker">
-                  Reddit
-                </Link>
-                .
-              </Text>
-            </li>
-          </ul>
+          <Text>
+            If you have questions, EthStaker community is a good place to get
+            help! You can find supports on{' '}
+            <Link inline external to="https://invite.gg/ethstaker">
+              Discord
+            </Link>{' '}
+            or{' '}
+            <Link inline external to="https://reddit.com/r/ethstaker">
+              Reddit
+            </Link>
+          </Text>
         </section>
       </ChecklistPageStyles>
     </PageTemplate>

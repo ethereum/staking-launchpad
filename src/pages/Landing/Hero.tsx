@@ -150,7 +150,6 @@ export const Hero = () => {
                   <TitleContainer>
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>
-                        {/* <EthLogo src={EthDiamondPlain} /> */}
                         <LogoText>
                           Eth2 Launchpad{' '}
                           {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}

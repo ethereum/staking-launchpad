@@ -137,9 +137,10 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 margin="none"
                 className="bar-link-text no-padding"
               >
-                Eth2 Launchpad
+                <Text>
+                  Eth2 {!IS_MAINNET && `${ETH2_NETWORK_NAME} `}Launchpad
+                </Text>
               </BarLinkText>
-              {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
             </div>
           )}
         </Link>

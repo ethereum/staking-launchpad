@@ -2,8 +2,10 @@ import React from 'react';
 import { SectionTitle } from '../ValidatorClientComponents';
 import { IS_MAINNET } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
+import { Heading } from '../../../components/Heading';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
+import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
 export const OpenEthereumDetails = () => (
@@ -48,11 +50,17 @@ export const OpenEthereumDetails = () => (
             Make sure you do the following to get your Eth1 client working
             properly.
           </Text>
-          <SectionTitle level={3} className="mt20">
+          <Heading level={3} className="mt20">
             Testing on Goerli
-          </SectionTitle>
-          <Code className="mt20">---chain goerli</Code>
-          <Text>Configures OpenEthereum to sync the Goerli testnet.</Text>
+          </Heading>
+          <Text className="mt10">
+            <FormattedMessage
+              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              values={{
+                goerli: <Code className="mt20">---chain goerli</Code>,
+              }}
+            />
+          </Text>
           <Link
             className="mt20"
             primary

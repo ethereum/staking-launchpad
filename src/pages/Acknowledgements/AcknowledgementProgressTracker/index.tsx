@@ -22,7 +22,7 @@ const acknowledgementsWithCopy = {
   [AcknowledgementIdsEnum.deposit]: 'Deposit',
   [AcknowledgementIdsEnum.responsibilities]: 'Uptime',
   [AcknowledgementIdsEnum.slashing]: 'Bad behaviour',
-  [AcknowledgementIdsEnum.keyManagement]: 'Keys management',
+  [AcknowledgementIdsEnum.keyManagement]: 'Key management',
   [AcknowledgementIdsEnum.commitment]: 'Commitment',
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: 'Early adoption risks',
   [AcknowledgementIdsEnum.terminal]: 'The terminal',

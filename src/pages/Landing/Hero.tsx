@@ -88,7 +88,7 @@ const LogoContainer = styled.div`
 const LogoText = styled(Text)`
   line-height: 40px;
   font-weight: bold;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     line-height: 24px;
   }
 `;
@@ -146,7 +146,7 @@ export const Hero = () => {
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
             <ContentContainer className={m ? undefined : 'pt100'}>
               <LefContentContainer>
-                {isSmallScreen && (
+                {isMediumScreen && (
                   <TitleContainer>
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>

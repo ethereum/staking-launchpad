@@ -128,17 +128,19 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       <NavBarLinks>
         <Link to={routesEnum.landingPage} className="mr30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <div className="flex flex-column center ml5">
-            <BarLinkText
-              active={pathname === routesEnum.landingPage}
-              level={4}
-              margin="none"
-              className="bar-link-text no-padding"
-            >
-              Eth2 Launchpad
-            </BarLinkText>
-            {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
-          </div>
+          {!mobile && (
+            <div className="flex flex-column center ml5">
+              <BarLinkText
+                active={pathname === routesEnum.landingPage}
+                level={4}
+                margin="none"
+                className="bar-link-text no-padding"
+              >
+                Eth2 Launchpad
+              </BarLinkText>
+              {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
+            </div>
+          )}
         </Link>
 
         <Link

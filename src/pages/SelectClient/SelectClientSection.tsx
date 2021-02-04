@@ -31,6 +31,7 @@ type Props = {
   currentClient: ClientId;
   setCurrentClient: (client: ClientId) => void;
   clientDetails: any;
+  ethVersionStep: number;
 };
 
 const SelectClientSection = ({
@@ -39,6 +40,7 @@ const SelectClientSection = ({
   currentClient,
   setCurrentClient,
   clientDetails,
+  ethVersionStep,
 }: Props): JSX.Element => (
   <Paper>
     <Heading level={3} size="small" color="blueDark" className="mb20">
@@ -63,13 +65,15 @@ const SelectClientSection = ({
           );
         })}
       </ClientOptionContainer>
-      <Link
-        to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
-        primary
-        external
-      >
-        View extensive client comparison
-      </Link>
+      {ethVersionStep === 1 && (
+        <Link
+          to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
+          primary
+          external
+        >
+          View extensive client comparison
+        </Link>
+      )}
       <ClientDescriptionContainer>
         {clientDetails[currentClient]}
       </ClientDescriptionContainer>

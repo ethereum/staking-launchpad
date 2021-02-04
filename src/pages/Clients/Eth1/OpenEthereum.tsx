@@ -57,7 +57,7 @@ export const OpenEthereumDetails = () => (
             <FormattedMessage
               defaultMessage="Use {goerli} to sync the Goerli testnet."
               values={{
-                goerli: <Code className="mt20">---chain goerli</Code>,
+                goerli: <Code className="mt20">--chain goerli</Code>,
               }}
             />
           </Text>

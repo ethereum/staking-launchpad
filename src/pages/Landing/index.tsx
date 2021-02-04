@@ -8,12 +8,9 @@ import { SignupSteps } from './SignupSteps';
 import { Upgrades } from './Upgrades';
 import { queryContract } from '../../utils/queryContract';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
-import useMobileCheck from '../../hooks/useMobileCheck';
 
 export const LandingPage = (): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
-
-  const mobile = useMobileCheck('800px');
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -27,7 +24,7 @@ export const LandingPage = (): JSX.Element => {
 
   return (
     <>
-      {!mobile && <AppBar />}
+      <AppBar />
       <Hero />
       <NetworkStatus {...{ amountEth }} />
       <StakingRewards currentStaked={amountEth} />

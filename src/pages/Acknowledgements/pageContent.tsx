@@ -185,7 +185,7 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="my10">
-          You're joining a new network. As with any new piece of software, there
+          You're joining a young network. As with any new piece of software, there
           is the potential for software bugs. While unlikely, potential bugs may
           result in slashing.
         </Text>

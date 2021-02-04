@@ -49,7 +49,7 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
     { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate keys' },
     {
       step: WorkflowStep.UPLOAD_VALIDATOR_FILE,
-      text: 'Upload Validator',
+      text: 'Upload deposit data',
     },
     { step: WorkflowStep.CONNECT_WALLET, text: 'Connect wallet' },
     { step: WorkflowStep.SUMMARY, text: 'Summary' },

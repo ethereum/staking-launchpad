@@ -5,6 +5,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
+import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
 export const NethermindDetails = () => (
@@ -49,9 +50,13 @@ export const NethermindDetails = () => (
       </Text>
       {IS_MAINNET && (
         <>
-          <Code className="mt20">--config mainnet</Code>
           <Text className="mt10">
-            Configures Nethermind to sync the Ethereum mainnet.
+            <FormattedMessage
+              defaultMessage="Use {mainnet} to sync the Ethereum mainnet."
+              values={{
+                mainnet: <Code className="mt20">--config mainnet</Code>,
+              }}
+            />
           </Text>
           <Link
             primary
@@ -68,11 +73,14 @@ export const NethermindDetails = () => (
           <Heading level={3} className="mt20">
             Testing on Goerli
           </Heading>
-          <Code className="mt20">--config goerli</Code>
           <Text className="mt10">
-            Configures Nethermind to sync the Goerli testnet.
+            <FormattedMessage
+              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              values={{
+                goerli: <Code className="mt20">--config goerli</Code>,
+              }}
+            />
           </Text>
-
           <Link
             primary
             external
@@ -83,11 +91,15 @@ export const NethermindDetails = () => (
           </Link>
         </>
       )}
-      <Code className="mt20">--JsonRpc.Enabled true</Code>
       <Text className="mt10">
-        Makes sure your Eth2 node will be able to connect to the JSON RPC
-        endpoint. This will enable the JSON RPC services on the default 8545
-        port.
+        <FormattedMessage
+          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          endpoint. This will enable the JSON RPC services on the default 8545
+          port."
+          values={{
+            http: <Code className="mt20">--JsonRpc.Enabled true</Code>,
+          }}
+        />
       </Text>
       <Link
         primary

@@ -5,6 +5,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
+import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
 export const GethDetails = () => (
@@ -50,9 +51,13 @@ export const GethDetails = () => (
           <Heading level={3} className="mt20">
             Testing on Goerli
           </Heading>
-          <Code className="mt20">--goerli</Code>
           <Text className="mt10">
-            Configures Geth to sync the Goerli testnet
+            <FormattedMessage
+              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              values={{
+                goerli: <Code className="mt20">--goerli</Code>,
+              }}
+            />
           </Text>
           <Link
             primary
@@ -63,11 +68,15 @@ export const GethDetails = () => (
           </Link>
         </>
       )}
-      <Code className="mt20">--http</Code>
       <Text className="mt10">
-        Makes sure your Eth2 node will be able to connect to the JSON RPC
-        endpoint. This will enable the JSON RPC services on the default 8545
-        port.
+        <FormattedMessage
+          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          endpoint. This will enable the JSON RPC services on the default 8545
+          port."
+          values={{
+            http: <Code className="mt20">--http</Code>,
+          }}
+        />
       </Text>
       <Link
         primary

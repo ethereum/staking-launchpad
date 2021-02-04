@@ -177,17 +177,24 @@ export const pageContent = {
         </Text>
       </>
     ),
-    acknowledgementText:
-      'I understand that I CANNOT TRANSFER my stake for a while, and I CANNOT WITHDRAW until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment.',
+    acknowledgementText: (
+      <FormattedMessage
+        defaultMessage="I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
+        values={{
+          cannotTransfer: <BoldCaps>cannot transfer</BoldCaps>,
+          cannotWithdraw: <BoldCaps>cannot withdraw</BoldCaps>,
+        }}
+      />
+    ),
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
     title: 'Early adopter risks',
     content: (
       <>
         <Text size="medium" className="my10">
-          You're joining a young network. As with any new piece of software, there
-          is the potential for software bugs. While unlikely, potential bugs may
-          result in slashing.
+          You're joining a young network. As with any new piece of software,
+          there is the potential for software bugs. While unlikely, potential
+          bugs may result in slashing.
         </Text>
       </>
     ),

@@ -35,6 +35,7 @@ import {
   ClientId,
 } from '../../store/actions/clientActions';
 import { clientState } from '../../store/reducers/clientReducer';
+import { useIntl } from 'react-intl';
 
 // Prop definitions
 interface OwnProps {}
@@ -170,8 +171,17 @@ const _SelectClientPage = ({
     return routeToCorrectWorkflowStep(workflow);
   }
 
+  const { formatMessage } = useIntl();
+
+  const title = formatMessage(
+    { defaultMessage: `Choose {ethereum} client` },
+    {
+      ethereum: `Eth${ethVersionStep}`,
+    }
+  );
+
   return (
-    <WorkflowPageTemplate title="Choose client">
+    <WorkflowPageTemplate title={title}>
       {ethVersionStep === 1 && (
         <div className="mt30" style={{ paddingBottom: '1rem' }}>
           To process incoming validator deposits from mainnet (the Eth1 chain),
@@ -187,6 +197,7 @@ const _SelectClientPage = ({
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}
         clientDetails={clientDetails}
+        ethVersionStep={ethVersionStep}
       />
       <div className="flex center p30">
         <SelectClientButtons

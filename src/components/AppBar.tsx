@@ -31,7 +31,7 @@ const EthLogo = styled.img`
 `;
 
 const NetworkText = styled(Text)`
-  padding: 5px 15px;
+  padding: 5px 8px;
   border-radius: 4px;
   border: 1px solid;
   font-weight: 500;
@@ -48,6 +48,7 @@ const NavBarLinks = styled.div`
 `;
 
 const ValidatorDropdown = styled(DropButton)`
+  padding: 12px 8px;
   font-weight: 300;
   display: flex;
   align-items: center;
@@ -145,7 +146,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
 
         <Link
           to={routesEnum.acknowledgementPage}
-          className="mx30 secondary-link"
+          className="mx10 secondary-link"
         >
           <BarLinkText
             level={4}
@@ -160,7 +161,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           className="secondary-link"
           label={
             <BarLinkText level={4} margin="none" active={isDropdownPage}>
-              Validator Clients
+              Clients
             </BarLinkText>
           }
           dropAlign={{ top: 'bottom', right: 'right' }}
@@ -173,7 +174,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Box>
           }
         />
-        <Link to={routesEnum.checklistPage} className="mx30 secondary-link">
+        <Link to={routesEnum.checklistPage} className="mx10 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -183,7 +184,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             Checklist
           </BarLinkText>
         </Link>
-        <Link to={routesEnum.FaqPage} className="mx30 secondary-link">
+        <Link to={routesEnum.FaqPage} className="mx10 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -196,7 +197,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       </NavBarLinks>
       <NavLinksRight>
         {!mobile && (
-          <Link to={routesEnum.languagesPage} className="mx30 secondary-link">
+          <Link to={routesEnum.languagesPage} className="mx10 secondary-link">
             <BarLinkText
               level={4}
               margin="none"
@@ -208,7 +209,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           </Link>
         )}
         {mobile && (
-          <Link to={routesEnum.languagesPage} className="mx16">
+          <Link to={routesEnum.languagesPage} className="mx10">
             <Language color="black" />
           </Link>
         )}

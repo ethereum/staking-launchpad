@@ -110,6 +110,13 @@ const StyledLeslieImgNode = styled.img`
   }
 `;
 
+const ButtonRow = styled.div`
+  display: flex;
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+  }
+`;
+
 //
 // Sub-components
 
@@ -175,14 +182,23 @@ export const Hero = () => {
                     appear="fadeIn"
                     className={m ? undefined : 'mt100'}
                   >
-                    <Link to={routesEnum.acknowledgementPage}>
-                      <Button
-                        fullWidth={m || isSmallScreen}
-                        rainbow
-                        width={isSmallScreen || m ? undefined : 250}
-                        label={`Become a validator ${m ? 'ON DESKTOP' : ''}`}
-                      />
-                    </Link>
+                    <ButtonRow>
+                      <Link to={routesEnum.acknowledgementPage}>
+                        <Button
+                          fullWidth={m || isSmallScreen}
+                          rainbow
+                          width={isSmallScreen || m ? undefined : 250}
+                          label={`Become a validator ${m ? 'ON DESKTOP' : ''}`}
+                        />
+                      </Link>
+                      <Link to={routesEnum.checklistPage}>
+                        <Button
+                          className={isMediumScreen || m ? `mt20` : `ml20`}
+                          fullWidth={m || isSmallScreen}
+                          label={`Thinking about staking?`}
+                        />
+                      </Link>
+                    </ButtonRow>
                   </Animate>
                 </InfoContainer>
               </LefContentContainer>

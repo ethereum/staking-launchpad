@@ -88,7 +88,7 @@ const LogoContainer = styled.div`
 const LogoText = styled(Text)`
   line-height: 40px;
   font-weight: bold;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     line-height: 24px;
   }
 `;
@@ -130,6 +130,7 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
 
 export const Hero = () => {
   const isSmallScreen = useMobileCheck('800px');
+  const isMediumScreen = useMobileCheck('1080px');
   const m: boolean = (window as any).mobileCheck();
   return (
     <RainbowBackground isMobile={m}>
@@ -138,7 +139,7 @@ export const Hero = () => {
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
             <ContentContainer className={m ? undefined : 'pt100'}>
               <LefContentContainer>
-                {isSmallScreen && (
+                {isMediumScreen && (
                   <TitleContainer>
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>

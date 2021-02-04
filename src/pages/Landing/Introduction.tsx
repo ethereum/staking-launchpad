@@ -77,7 +77,6 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              external
               to="https://ethereum.org/en/eth2/vision/"
             >
               More on the Eth2 vision
@@ -95,7 +94,6 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              external
               to="https://ethereum.org/en/eth2/docking/"
             >
               More on the merge
@@ -108,7 +106,6 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              external
               to="https://ethereum.org/en/developers/docs/consensus-mechanisms/"
             >
               More on consensus mechanisms

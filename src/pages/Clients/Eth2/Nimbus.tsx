@@ -24,14 +24,13 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       browser.
     </Text>
     <Link
-      external
       to="https://our.status.im/nimbus-for-newbies/"
       primary
       className="mt10"
     >
       More on Nimbus
     </Link>
-    <Link external to="https://status.im/" primary className="mt10">
+    <Link to="https://status.im/" primary className="mt10">
       More on Status
     </Link>
     <SectionTitle level={2} className="mb5">
@@ -45,7 +44,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       <SectionTitle level={2} className="mb5">
         Become a validator with Nimbus
       </SectionTitle>
-      <Link external primary to={NIMBUS_INSTALLATION_URL}>
+      <Link primary to={NIMBUS_INSTALLATION_URL}>
         Nimbus installation documentation
       </Link>
     </section>
@@ -80,7 +79,6 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
           </Text>
           <Code className="my20">./build/data/[testnet_name]/</Code>
           <Link
-            external
             primary
             to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
           >
@@ -102,11 +100,7 @@ export const Nimbus = () => {
           <SectionTitle level={2} className="mb5">
             Documentation
           </SectionTitle>
-          <Link
-            primary
-            external
-            to="https://status-im.github.io/nimbus-eth2/intro.html"
-          >
+          <Link primary to="https://status-im.github.io/nimbus-eth2/intro.html">
             Nimbus documentation
           </Link>
         </section>

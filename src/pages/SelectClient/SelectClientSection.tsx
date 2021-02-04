@@ -69,7 +69,6 @@ const SelectClientSection = ({
         <Link
           to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
           primary
-          external
         >
           View extensive client comparison
         </Link>

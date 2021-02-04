@@ -34,7 +34,6 @@ export const NethermindDetails = () => (
       </Text>
       <Link
         primary
-        external
         to="https://nethermind.readthedocs.io/en/latest/download.html"
         className="mt10"
       >
@@ -60,7 +59,6 @@ export const NethermindDetails = () => (
           </Text>
           <Link
             primary
-            external
             className="mt20"
             to="https://nethermind.readthedocs.io/en/latest/networks.html#mainnet"
           >
@@ -83,7 +81,6 @@ export const NethermindDetails = () => (
           </Text>
           <Link
             primary
-            external
             className="mt20"
             to="https://nethermind.readthedocs.io/en/latest/networks.html#gorli-goerli"
           >
@@ -103,7 +100,6 @@ export const NethermindDetails = () => (
       </Text>
       <Link
         primary
-        external
         className="mt20"
         to="https://nethermind.readthedocs.io/en/latest/configuration.html#jsonrpcconfig"
       >

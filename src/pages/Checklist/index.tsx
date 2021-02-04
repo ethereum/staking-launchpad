@@ -42,10 +42,11 @@ const ChecklistPageStyles = styled.div`
   }
   @media screen and (max-width: 1080px) {
     section {
-    background-color: white;
-    margin: 0px;
-    padding: 16px;
-    flex-wrap: wrap;
+      background-color: white;
+      margin: 0px;
+      padding: 16px;
+      flex-wrap: wrap;
+    }
   }
 `;
 
@@ -333,13 +334,12 @@ export const Checklist = () => {
               />
             ))}
           </ClientContainer>
-          {/* <Heading level={4}>Recommended</Heading> */}
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <strong>Warning:</strong> it's high risk to run your Eth2
-                validator in multiple places. It will lead to a slashable event
-                and ejection from the network.{' '}
+                <strong>Warning: </strong>
+                it's high risk to run your Eth2 validator in multiple places. It
+                will lead to a slashable event and ejection from the network.{' '}
                 <Link inline to="/faq#responsibilities">
                   Learn more about slashing →
                 </Link>
@@ -404,19 +404,19 @@ export const Checklist = () => {
           />
           <ul className="sub-checklist-item">
             <li className="py5">
-              <Link primary inline external to="https://discord.gg/uC7TuaH">
+              <Link primary inline to="https://discord.gg/uC7TuaH">
                 Lighthouse
               </Link>{' '}
               |{' '}
-              <Link primary inline external to="https://discord.gg/YbTCNat">
+              <Link primary inline to="https://discord.gg/YbTCNat">
                 Nimbus
               </Link>{' '}
               |{' '}
-              <Link primary inline external to="https://discord.gg/z9efH7e">
+              <Link primary inline to="https://discord.gg/z9efH7e">
                 Prysm
               </Link>{' '}
               |{' '}
-              <Link primary inline external to="https://discord.gg/7hPv2T6">
+              <Link primary inline to="https://discord.gg/7hPv2T6">
                 Teku
               </Link>
             </li>
@@ -459,7 +459,6 @@ export const Checklist = () => {
             <Link
               primary
               inline
-              external
               to="https://github.com/sigp/lighthouse-metrics"
             >
               Lighthouse
@@ -468,7 +467,6 @@ export const Checklist = () => {
             <Link
               primary
               inline
-              external
               to="https://status-im.github.io/nimbus-eth2/metrics-pretty-pictures.html"
             >
               Nimbus
@@ -477,7 +475,6 @@ export const Checklist = () => {
             <Link
               primary
               inline
-              external
               to="https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/"
             >
               Prysm
@@ -486,7 +483,6 @@ export const Checklist = () => {
             <Link
               primary
               inline
-              external
               to="https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/"
             >
               Teku
@@ -496,7 +492,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 I have set up my{' '}
-                <Link primary inline external to="https://prometheus.io/">
+                <Link primary inline to="https://prometheus.io/">
                   Prometheus
                 </Link>{' '}
                 service.
@@ -507,7 +503,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 I have set up my{' '}
-                <Link primary inline external to="https://grafana.com/">
+                <Link primary inline to="https://grafana.com/">
                   Grafana
                 </Link>{' '}
                 service.
@@ -527,11 +523,11 @@ export const Checklist = () => {
             You can use your validator client&apos;s graffiti flag to add a
             personal touch to your proposed blocks (some text of your choice).
             You will be able to see it using{' '}
-            <Link primary external inline to="https://beaconcha.in/">
+            <Link primary inline to="https://beaconcha.in/">
               Beaconcha.in
             </Link>{' '}
             or{' '}
-            <Link primary external inline to="https://beaconscan.com/">
+            <Link primary inline to="https://beaconscan.com/">
               BeaconScan
             </Link>{' '}
             blockchain explorers.
@@ -600,11 +596,11 @@ export const Checklist = () => {
               <Text>
                 If you have questions, EthStaker community is a good place to
                 get help! You can find support on{' '}
-                <Link inline external to="https://invite.gg/ethstaker">
+                <Link inline to="https://invite.gg/ethstaker">
                   Discord
                 </Link>{' '}
                 or{' '}
-                <Link inline external to="https://reddit.com/r/ethstaker">
+                <Link inline to="https://reddit.com/r/ethstaker">
                   Reddit
                 </Link>
                 .

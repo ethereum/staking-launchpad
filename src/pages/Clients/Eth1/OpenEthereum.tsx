@@ -31,12 +31,7 @@ export const OpenEthereumDetails = () => (
         The OpenEthereum documentation explains how to download and install the
         client.
       </Text>
-      <Link
-        primary
-        external
-        to="https://openethereum.github.io/Setup"
-        className="mt10"
-      >
+      <Link primary to="https://openethereum.github.io/Setup" className="mt10">
         OpenEthereum installation documentation
       </Link>
     </section>
@@ -61,12 +56,7 @@ export const OpenEthereumDetails = () => (
               }}
             />
           </Text>
-          <Link
-            className="mt20"
-            primary
-            external
-            to="https://openethereum.github.io/"
-          >
+          <Link className="mt20" primary to="https://openethereum.github.io/">
             OpenEthereum documentation
           </Link>
         </section>

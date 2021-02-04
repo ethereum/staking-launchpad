@@ -33,7 +33,6 @@ export const BesuDetails = () => (
       <Link
         className="mt10"
         primary
-        external
         to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/"
       >
         Besu installation documentation
@@ -61,7 +60,6 @@ export const BesuDetails = () => (
           </Text>
           <Link
             primary
-            external
             to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-on-goerli-testnet"
             className="mt20"
           >
@@ -82,7 +80,6 @@ export const BesuDetails = () => (
       </Text>
       <Link
         primary
-        external
         to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
         className="mt20"
       >

@@ -14,7 +14,6 @@ import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
-import { colors } from '../../styles/styledComponentsTheme';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -29,17 +28,6 @@ const ChecklistPageStyles = styled.div`
   }
   label {
     padding: 1rem;
-  }
-  pre {
-    background-color: ${(p: any) => p.theme.gray.light};
-    display: block;
-    border-radius: 4px;
-    margin: 16px;
-    padding: 16px;
-    color: #ad2b2a;
-    font-size: 14px;
-    line-height: 16px;
-    white-space: pre-wrap;
   }
   .sub-checklist-item {
     margin-top: -0.5rem;
@@ -58,6 +46,23 @@ const ChecklistPageStyles = styled.div`
     margin: 0px;
     padding: 16px;
     flex-wrap: wrap;
+  }
+`;
+
+const CodeSnippet = styled.div`
+  padding: 10px;
+  font-family: Courier, sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  color: #fff;
+  background-color: #597ea3;
+  border-radius: 6px;
+  margin: 10px 0;
+
+  code {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
@@ -245,7 +250,9 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>Run the following command</Text>
-              <pre className="my0"> timedatectl</pre>
+              <CodeSnippet>
+                <code>timedatectl</code>
+              </CodeSnippet>
             </li>
             <li className="py5">
               <Text>
@@ -261,12 +268,9 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 If <Code>NTP Service</Code> is not <Code>active</Code>, run
-                <pre className="my0">
-                  {' '}
-                  <span style={{ color: colors.red.medium }}>
-                    sudo timedatectl set-ntp on
-                  </span>
-                </pre>
+                <CodeSnippet>
+                  <code>sudo timedatectl set-ntp on</code>
+                </CodeSnippet>
               </Text>
             </li>
             <li className="py5">
@@ -368,9 +372,11 @@ export const Checklist = () => {
                 <strong>Note:</strong> you can verify it with the following
                 command to check if it returns the client version correctly.
               </Text>
-              <pre>
-                {`curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://<YourServerLocation>:8545`}
-              </pre>
+              <CodeSnippet>
+                <code>
+                  {`curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' http://<YourServerLocation>:8545`}
+                </code>
+              </CodeSnippet>
             </li>
           </ul>
           <CheckBox

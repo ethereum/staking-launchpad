@@ -35,6 +35,7 @@ import {
   ClientId,
 } from '../../store/actions/clientActions';
 import { clientState } from '../../store/reducers/clientReducer';
+import { useIntl } from 'react-intl';
 
 // Prop definitions
 interface OwnProps {}
@@ -64,6 +65,7 @@ export type Client = {
   clientId: ClientId;
   name: string;
   imgUrl: string;
+  language?: any;
 };
 
 // define and shuffle the clients
@@ -75,28 +77,52 @@ const ethClients: {
       clientId: ClientId.OPEN_ETHEREUM,
       name: 'OpenEthereum',
       imgUrl: OpenEthereumCircle,
+      language: 'Rust',
     },
-    { clientId: ClientId.GETH, name: 'Geth', imgUrl: GethCircle },
-    { clientId: ClientId.BESU, name: 'Besu', imgUrl: BesuCircle },
+    {
+      clientId: ClientId.GETH,
+      name: 'Geth',
+      imgUrl: GethCircle,
+      language: 'Go',
+    },
+    {
+      clientId: ClientId.BESU,
+      name: 'Besu',
+      imgUrl: BesuCircle,
+      language: 'Java',
+    },
     {
       clientId: ClientId.NETHERMIND,
       name: 'Nethermind',
       imgUrl: NethermindCircle,
+      language: 'C#, .NET',
     },
   ]),
   2: _shuffle([
-    { clientId: ClientId.TEKU, name: 'Teku', imgUrl: TekuCircle },
+    {
+      clientId: ClientId.TEKU,
+      name: 'Teku',
+      imgUrl: TekuCircle,
+      language: 'Java',
+    },
     {
       clientId: ClientId.LIGHTHOUSE,
       name: 'Lighthouse',
       imgUrl: LighthouseCircle,
+      language: 'Rust',
     },
     {
       clientId: ClientId.PRYSM,
       name: 'Prysm',
       imgUrl: PrysmaticCircle,
+      language: 'Go',
     },
-    { clientId: ClientId.NIMBUS, name: 'Nimbus', imgUrl: NimbusCircle },
+    {
+      clientId: ClientId.NIMBUS,
+      name: 'Nimbus',
+      imgUrl: NimbusCircle,
+      language: 'Nim',
+    },
   ]),
 };
 
@@ -108,6 +134,8 @@ const _SelectClientPage = ({
 }: Props): JSX.Element => {
   // set the default the eth version to 1 on initial render
   const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
+
+  const { formatMessage } = useIntl();
 
   // filter the options based on the eth version the user is on
   const clientOptions = React.useMemo(() => ethClients[ethVersionStep], [
@@ -145,23 +173,31 @@ const _SelectClientPage = ({
     return routeToCorrectWorkflowStep(workflow);
   }
 
+  const title = formatMessage(
+    { defaultMessage: `Choose {ethereum} client` },
+    {
+      ethereum: `Eth${ethVersionStep}`,
+    }
+  );
+
   return (
-    <WorkflowPageTemplate title="Client Selection">
+    <WorkflowPageTemplate title={title}>
       {ethVersionStep === 1 && (
         <div className="mt30" style={{ paddingBottom: '1rem' }}>
-          In order to process incoming validator deposits from the eth1 chain,
-          you'll need to run an eth1 client in parallel to your Eth2 client.
-          While it is possible to use a third-party service like Infura, we
-          recommend running your own client in order to ensure the network stays
-          as decentralised as possible.
+          To process incoming validator deposits from mainnet (the Eth1 chain),
+          you'll need to run an Eth1 client in parallel to your Eth2 client.
+          While you can use a third-party service like Infura, we recommend
+          running your own client in order to ensure the network stays as
+          decentralised as possible.
         </div>
       )}
       <SelectClientSection
-        title={`Choose your Eth ${ethVersionStep} client and set up a node`}
+        title={`Choose your Eth${ethVersionStep} client and set up a node`}
         clients={clientOptions}
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}
         clientDetails={clientDetails}
+        ethVersionStep={ethVersionStep}
       />
       <div className="flex center p30">
         <SelectClientButtons

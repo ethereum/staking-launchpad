@@ -2,6 +2,8 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Box, DropButton } from 'grommet';
+import { Menu } from 'grommet-icons';
+import { Language } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
@@ -17,6 +19,7 @@ import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../utils/envVars';
+import useMobileCheck from '../hooks/useMobileCheck';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -28,11 +31,11 @@ const EthLogo = styled.img`
 `;
 
 const NetworkText = styled(Text)`
-  margin-right: 30px;
-  padding: 5px 15px;
+  padding: 5px 8px;
   border-radius: 4px;
   border: 1px solid;
   font-weight: 500;
+  text-align: center;
 `;
 
 const NavBarLinks = styled.div`
@@ -45,7 +48,10 @@ const NavBarLinks = styled.div`
 `;
 
 const ValidatorDropdown = styled(DropButton)`
+  padding: 12px 8px;
   font-weight: 300;
+  display: flex;
+  align-items: center;
   border: none;
   :hover {
     border: none;
@@ -57,6 +63,18 @@ const DropdownLink = styled(Link)`
   :hover {
     text-decoration: underline;
   }
+`;
+
+const Card = styled.div``;
+
+const NetworkInfo = styled.div`
+  background: ${p => p.theme.gray.light};
+  padding: 32px;
+`;
+
+const NavLinksRight = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const BarLinkText = styled(Heading)`
@@ -96,6 +114,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     [pathname]
   );
 
+  const mobile = useMobileCheck('1080px');
+
   return (
     <RainbowBackground
       tag="header"
@@ -107,24 +127,27 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       style={{ zIndex: 1 }}
     >
       <NavBarLinks>
-        <Link to={routesEnum.landingPage} className="mx30">
+        <Link to={routesEnum.landingPage} className="mr30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          <div className="flex flex-column center ml5">
-            <BarLinkText
-              active={pathname === routesEnum.landingPage}
-              level={4}
-              margin="none"
-              className="bar-link-text no-padding"
-            >
-              Eth2 Launchpad
-            </BarLinkText>
-            {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
-          </div>
+          {!mobile && (
+            <div className="flex flex-column center ml5">
+              <BarLinkText
+                active={pathname === routesEnum.landingPage}
+                level={4}
+                margin="none"
+                className="bar-link-text no-padding"
+              >
+                <Text>
+                  Eth2 {!IS_MAINNET && `${ETH2_NETWORK_NAME} `}Launchpad
+                </Text>
+              </BarLinkText>
+            </div>
+          )}
         </Link>
 
         <Link
           to={routesEnum.acknowledgementPage}
-          className="mx30 secondary-link"
+          className="mx10 secondary-link"
         >
           <BarLinkText
             level={4}
@@ -139,7 +162,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           className="secondary-link"
           label={
             <BarLinkText level={4} margin="none" active={isDropdownPage}>
-              Validator Clients
+              Clients
             </BarLinkText>
           }
           dropAlign={{ top: 'bottom', right: 'right' }}
@@ -152,7 +175,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Box>
           }
         />
-        <Link to={routesEnum.checklistPage} className="mx30 secondary-link">
+        <Link to={routesEnum.checklistPage} className="mx10 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -162,7 +185,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             Checklist
           </BarLinkText>
         </Link>
-        <Link to={routesEnum.FaqPage} className="mx30 secondary-link">
+        <Link to={routesEnum.FaqPage} className="mx10 secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -173,23 +196,79 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           </BarLinkText>
         </Link>
       </NavBarLinks>
-
-      <div className="flex">
-        <Link to={routesEnum.languagesPage} className="mx30 secondary-link">
-          <BarLinkText
-            level={4}
-            margin="none"
-            className="bar-link-text"
-            active={pathname === routesEnum.languagesPage}
-          >
-            Languages
-          </BarLinkText>
-        </Link>
-        <NetworkText>
-          {ETH2_NETWORK_NAME}
-          {IS_MAINNET ? `` : ` Testnet`}
-        </NetworkText>
-        {walletConnected && (
+      <NavLinksRight>
+        {!mobile && (
+          <Link to={routesEnum.languagesPage} className="mx10 secondary-link">
+            <BarLinkText
+              level={4}
+              margin="none"
+              className="bar-link-text"
+              active={pathname === routesEnum.languagesPage}
+            >
+              Languages
+            </BarLinkText>
+          </Link>
+        )}
+        {mobile && (
+          <Link to={routesEnum.languagesPage} className="mx10">
+            <Language color="black" />
+          </Link>
+        )}
+        {mobile && (
+          <ValidatorDropdown
+            className="secondary-link"
+            label={<Menu color="black" />}
+            dropAlign={{ top: 'bottom', right: 'right' }}
+            dropContent={
+              <Card>
+                <NetworkInfo>
+                  {walletConnected && (
+                    <Box className="flex flex-row mb20">
+                      <Dot success={networkAllowed} error={!networkAllowed} />
+                      <Text size="small" className="ml10" color="blueDark">
+                        {trimString(account as string, 10)}
+                      </Text>
+                    </Box>
+                  )}
+                  <NetworkText>
+                    {ETH2_NETWORK_NAME}
+                    {IS_MAINNET ? `` : ` Testnet`}
+                  </NetworkText>
+                  <Text className="mt20">
+                    <em>Visit this site on desktop to become a validator.</em>
+                  </Text>
+                </NetworkInfo>
+                <Box pad="medium" className="mt0">
+                  <DropdownLink to={routesEnum.FaqPage}>
+                    Frequently asked questions
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.checklistPage}>
+                    Eth2 staker checklist
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.languagesPage}>
+                    Languages
+                  </DropdownLink>
+                  <Text className="my20">
+                    <b>The Eth2 clients</b>
+                  </Text>
+                  <DropdownLink to={routesEnum.lighthouse}>
+                    Lighthouse
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+                  <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+                  <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
+                </Box>
+              </Card>
+            }
+          />
+        )}
+        {!mobile && (
+          <NetworkText className="mr30">
+            {ETH2_NETWORK_NAME}
+            {IS_MAINNET ? `` : ` Testnet`}
+          </NetworkText>
+        )}
+        {!mobile && walletConnected && (
           <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
             <Dot success={networkAllowed} error={!networkAllowed} />
             <Text size="small" className="ml10" color="blueDark">
@@ -197,7 +276,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Text>
           </Box>
         )}
-      </div>
+      </NavLinksRight>
     </RainbowBackground>
   );
 };

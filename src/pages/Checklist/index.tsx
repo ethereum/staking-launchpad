@@ -595,17 +595,22 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>Tips</Heading>
-          <Text>
-            If you have questions, EthStaker community is a good place to get
-            help! You can find supports on{' '}
-            <Link inline external to="https://invite.gg/ethstaker">
-              Discord
-            </Link>{' '}
-            or{' '}
-            <Link inline external to="https://reddit.com/r/ethstaker">
-              Reddit
-            </Link>
-          </Text>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                If you have questions, EthStaker community is a good place to
+                get help! You can find support on{' '}
+                <Link inline external to="https://invite.gg/ethstaker">
+                  Discord
+                </Link>{' '}
+                or{' '}
+                <Link inline external to="https://reddit.com/r/ethstaker">
+                  Reddit
+                </Link>
+                .
+              </Text>
+            </li>
+          </ul>
         </section>
       </ChecklistPageStyles>
     </PageTemplate>

@@ -31,11 +31,11 @@ const EthLogo = styled.img`
 `;
 
 const NetworkText = styled(Text)`
-  margin-right: 30px;
   padding: 5px 15px;
   border-radius: 4px;
   border: 1px solid;
   font-weight: 500;
+  text-align: center;
 `;
 
 const NavBarLinks = styled.div`
@@ -62,6 +62,13 @@ const DropdownLink = styled(Link)`
   :hover {
     text-decoration: underline;
   }
+`;
+
+const Card = styled.div``;
+
+const NetworkInfo = styled.div`
+  background: ${p => p.theme.gray.light};
+  padding: 32px;
 `;
 
 const NavLinksRight = styled.div`
@@ -106,7 +113,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     [pathname]
   );
 
-  const mobile = useMobileCheck('800px');
+  const mobile = useMobileCheck('1080px');
 
   return (
     <RainbowBackground
@@ -119,21 +126,19 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       style={{ zIndex: 1 }}
     >
       <NavBarLinks>
-        <Link to={routesEnum.landingPage} className="mx30">
+        <Link to={routesEnum.landingPage} className="mr30">
           <EthLogo src={EthDiamond} alt="eth-diamond" />
-          {!mobile && (
-            <div className="flex flex-column center ml5">
-              <BarLinkText
-                active={pathname === routesEnum.landingPage}
-                level={4}
-                margin="none"
-                className="bar-link-text no-padding"
-              >
-                Eth2 Launchpad
-              </BarLinkText>
-              {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
-            </div>
-          )}
+          <div className="flex flex-column center ml5">
+            <BarLinkText
+              active={pathname === routesEnum.landingPage}
+              level={4}
+              margin="none"
+              className="bar-link-text no-padding"
+            >
+              Eth2 Launchpad
+            </BarLinkText>
+            {!IS_MAINNET && <Text>for {ETH2_NETWORK_NAME} testnet</Text>}
+          </div>
         </Link>
 
         <Link
@@ -211,39 +216,55 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             label={<Menu color="black" />}
             dropAlign={{ top: 'bottom', right: 'right' }}
             dropContent={
-              <Box pad="large">
-                <DropdownLink to={routesEnum.FaqPage}>
-                  Frequently asked questions
-                </DropdownLink>
-                <DropdownLink to={routesEnum.checklistPage}>
-                  Eth2 staker checklist
-                </DropdownLink>
-                <DropdownLink to={routesEnum.languagesPage}>
-                  Languages
-                </DropdownLink>
-                <Text className="my20">
-                  <b>The Eth2 clients</b>
-                </Text>
-                <DropdownLink to={routesEnum.lighthouse}>
-                  Lighthouse
-                </DropdownLink>
-                <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
-                <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
-                <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
-                <Text className="mt20">
-                  <em>Visit this site on desktop to become a validator.</em>
-                </Text>
-              </Box>
+              <Card>
+                <NetworkInfo>
+                  {walletConnected && (
+                    <Box className="flex flex-row mb20">
+                      <Dot success={networkAllowed} error={!networkAllowed} />
+                      <Text size="small" className="ml10" color="blueDark">
+                        {trimString(account as string, 10)}
+                      </Text>
+                    </Box>
+                  )}
+                  <NetworkText>
+                    {ETH2_NETWORK_NAME}
+                    {IS_MAINNET ? `` : ` Testnet`}
+                  </NetworkText>
+                  <Text className="mt20">
+                    <em>Visit this site on desktop to become a validator.</em>
+                  </Text>
+                </NetworkInfo>
+                <Box pad="medium" className="mt0">
+                  <DropdownLink to={routesEnum.FaqPage}>
+                    Frequently asked questions
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.checklistPage}>
+                    Eth2 staker checklist
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.languagesPage}>
+                    Languages
+                  </DropdownLink>
+                  <Text className="my20">
+                    <b>The Eth2 clients</b>
+                  </Text>
+                  <DropdownLink to={routesEnum.lighthouse}>
+                    Lighthouse
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+                  <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+                  <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
+                </Box>
+              </Card>
             }
           />
         )}
         {!mobile && (
-          <NetworkText>
+          <NetworkText className="mr30">
             {ETH2_NETWORK_NAME}
             {IS_MAINNET ? `` : ` Testnet`}
           </NetworkText>
         )}
-        {walletConnected && (
+        {!mobile && walletConnected && (
           <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
             <Dot success={networkAllowed} error={!networkAllowed} />
             <Text size="small" className="ml10" color="blueDark">

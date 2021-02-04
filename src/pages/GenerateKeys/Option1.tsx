@@ -4,11 +4,13 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
+import { Code } from '../../components/Code';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import { Alert as GrommetAlert } from 'grommet-icons';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
+import { FormattedMessage } from 'react-intl';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -56,11 +58,17 @@ export const Option1 = ({
             className="my10"
             style={{ wordBreak: 'break-word' }}
           >
-            Please make sure that you are downloading from the official Ethereum
-            Foundation GitHub account by verifying the url:{' '}
-            <strong>
-              https://github.com/ethereum/eth2.0-deposit-cli/releases/
-            </strong>
+            <FormattedMessage
+              defaultMessage="Please make sure that you are downloading from the official Ethereum
+              Foundation GitHub account by verifying the url: {url}"
+              values={{
+                url: (
+                  <strong>
+                    https://github.com/ethereum/eth2.0-deposit-cli/releases/
+                  </strong>
+                ),
+              }}
+            />
           </Text>
         </div>
       </Alert>
@@ -73,8 +81,12 @@ export const Option1 = ({
       <ul>
         <li>Decompress the file you just downloaded</li>
         <li>
-          Use the terminal to move into the directory that contains the{' '}
-          <code>deposit</code> executable
+          <FormattedMessage
+            defaultMessage="Use the terminal to move into the directory that contains the {deposit} executable"
+            values={{
+              deposit: <code>deposit</code>,
+            }}
+          />
         </li>
         <li>Run the following command to launch the app</li>
         <Alert variant="secondary" className="my10">
@@ -99,13 +111,19 @@ export const Option1 = ({
         </Alert>
         <Alert variant="error" className="my10">
           <Text>
-            Please make sure you have set{' '}
-            <span className="alert-highlight">
-              --chain {ETH2_NETWORK_NAME.toLowerCase()}
-            </span>{' '}
-            for {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
-            {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
-            {!IS_MAINNET && ' testnet'}, otherwise the deposit will be invalid.
+            <FormattedMessage
+              defaultMessage="Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+              values={{
+                flag: <Code>--chain {ETH2_NETWORK_NAME.toLowerCase()}</Code>,
+                network: (
+                  <span>
+                    {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
+                    {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
+                    {!IS_MAINNET && ' testnet'}
+                  </span>
+                ),
+              }}
+            />
           </Text>
         </Alert>
         <li>

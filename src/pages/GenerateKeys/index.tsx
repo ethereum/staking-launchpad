@@ -25,6 +25,7 @@ import {
 import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
+import { FormattedMessage } from 'react-intl';
 
 export enum operatingSystem {
   'MAC',
@@ -40,7 +41,6 @@ const osMapping: { [os: number]: 'mac' | 'linux' | 'windows' } = {
 
 const Highlight = styled.span`
   background: ${p => p.theme.green.medium};
-  margin-left: 5px;
 `;
 
 const InstructionImgContainer = styled.div`
@@ -89,7 +89,7 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs">
+    <WorkflowPageTemplate title="Generate key pairs">
       <Paper>
         <Heading level={2} size="small" color="blueDark">
           How many validators would you like to run?
@@ -132,11 +132,17 @@ const _GenerateKeysPage = ({
           Save the key files and get the validator file ready
         </Heading>
         <Text className="mt20">
-          You should now have your mnemonic written down in a safe place and a
-          keystore saved for each of your {validatorCount} validators. Please
-          make sure you keep these safe, preferably offline. Your validator
-          keystores should be available in the newly created
-          <Highlight>validator_keys</Highlight> directory.
+          <FormattedMessage
+            defaultMessage="You should now have your mnemonic written down in a safe place and a
+            keystore saved for each of your {validatorCount} validators. Please
+            make sure you keep these safe, preferably offline. Your validator
+            keystores should be available in the newly created
+            {validatorKeys} directory."
+            values={{
+              validatorKeys: <Highlight>validator_keys</Highlight>,
+              validatorCount: <span>{validatorCount}</span>,
+            }}
+          />
         </Text>
         <Alert variant="info" className="my40">
           You should see that you have one keystore per validator. This keystore
@@ -148,10 +154,15 @@ const _GenerateKeysPage = ({
           <img src={instructions1} alt="" />
         </InstructionImgContainer>
         <Text>
-          The other file you just generated is
-          <Highlight>deposit_data.json</Highlight>. This file contains the
-          public key(s) associated with your validator(s); You will need to
-          upload this in the next step.
+          <FormattedMessage
+            defaultMessage="The other file you just generated is
+            {depositDataJson}. This file contains the
+            public key(s) associated with your validator(s); You will need to
+            upload this in the next step."
+            values={{
+              depositDataJson: <Highlight>deposit_data.json</Highlight>,
+            }}
+          />
         </Text>
         <InstructionImgContainer>
           <img src={instructions2} alt="" />

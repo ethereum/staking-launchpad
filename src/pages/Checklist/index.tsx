@@ -14,6 +14,7 @@ import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
+import { FormattedMessage } from 'react-intl';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -168,12 +169,18 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                For example, you need at least ~300 GB SSD to run Geth sync on{' '}
-                <i>mainnet</i> in November 2020, assuming you move the{' '}
-                <i>ancient</i> directory on a different drive. Have in mind that
-                Geth <i>chaindata</i> grows with ~1 GB per day, so you should
-                account for enough space on your SSD and HDD until you run
-                maintenance on the node.
+                <FormattedMessage
+                  defaultMessage="For example, you need at least ~400 GB SSD to run Geth sync on
+                    {mainnet} in February 2021, assuming you move the {ancient} directory on a
+                    different drive. Have in mind that Geth {chaindata} grows with ~1 GB per day,
+                    so you should account for enough space on your SSD and HDD until you run
+                    maintenance on the node."
+                  values={{
+                    mainnet: <em>mainnet</em>,
+                    ancient: <em>ancient</em>,
+                    chaindata: <em>chaindata</em>,
+                  }}
+                />
               </Text>
             </li>
             <li className="py5">

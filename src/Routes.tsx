@@ -160,24 +160,19 @@ const _Routes = () => {
   const { locale, formatMessage } = useIntl();
   const localizedRoutes = localizeRoutes(locale, routes);
 
+  const title = formatMessage({ defaultMessage: 'Eth2 Launchpad' });
+  const description = formatMessage({
+    defaultMessage: 'Become a validator and help secure Eth2.',
+  });
   return (
     <>
       <ScrollToTop>
         <Helmet>
           <html lang={locale} />
-          <title>{formatMessage({ id: 'site-title' })}</title>
-          <meta
-            property="og:title"
-            content={formatMessage({ id: 'site-title' })}
-          />
-          <meta
-            name="description"
-            content={formatMessage({ id: 'site-description' })}
-          />
-          <meta
-            property="og:description"
-            content={formatMessage({ id: 'site-description' })}
-          />
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
         </Helmet>
         <Switch>
           {localizedRoutes.map((route: RouteType) => (

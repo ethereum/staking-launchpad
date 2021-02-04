@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
@@ -49,53 +49,50 @@ const Lang = styled.div`
 `;
 
 export const Languages = () => {
+  const intl = useIntl();
   const langs = [
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'Chinese (simplified)',
+      path: 'zh',
+      title: intl.formatMessage({ defaultMessage: 'Chinese (simplified)' }),
       language: '简体中文',
     },
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'Chinese (traditional)',
+      path: 'zh-tw',
+      title: intl.formatMessage({ defaultMessage: 'Chinese (traditional)' }),
       language: '繁體中文',
     },
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'Czech',
+      path: 'cs',
+      title: intl.formatMessage({ defaultMessage: 'Czech' }),
       language: 'čeština',
     },
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'English',
+      path: 'en',
+      title: intl.formatMessage({ defaultMessage: 'English' }),
       language: 'English',
     },
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'Italian',
+      path: 'it',
+      title: intl.formatMessage({ defaultMessage: 'Italian' }),
       language: 'Italiano',
     },
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'Korean',
+      path: 'ko',
+      title: intl.formatMessage({ defaultMessage: 'Korean' }),
       language: '한국어',
     },
     {
-      path: 'https://launchpad.ethereum.org',
-      title: 'Spanish',
+      path: 'es',
+      title: intl.formatMessage({ defaultMessage: 'Spanish' }),
       language: 'Español',
     },
   ];
 
   return (
-    <PageTemplate title="Choose a language">
-      <FormattedMessage
-        description="Greeting to welcome the user to the app"
-        defaultMessage="Hello, {name}!"
-        values={{
-          name: 'Eric',
-        }}
-      />
+    <PageTemplate
+      title={intl.formatMessage({ defaultMessage: 'Language Support' })}
+      header={intl.formatMessage({ defaultMessage: 'Choose a language' })}
+    >
       <LangContainer>
         {langs.map((lang, idx) => {
           return (
@@ -109,8 +106,16 @@ export const Languages = () => {
         })}
       </LangContainer>
       <p>
-        If you'd like to see the launchpad in another language, or if you can
-        help translate, get in touch.
+        <FormattedMessage
+          defaultMessage="If you'd like to see the launchpad in another language, or if you can help translate, {getInTouch}!"
+          values={{
+            getInTouch: (
+              <Link inline to="https://discord.gg/bTCfS8C">
+                {intl.formatMessage({ defaultMessage: 'Get in touch' })}
+              </Link>
+            ),
+          }}
+        />
       </p>
     </PageTemplate>
   );

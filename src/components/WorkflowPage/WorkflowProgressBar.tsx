@@ -44,14 +44,14 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
   }
 
   const steps: step[] = [
-    { step: WorkflowStep.OVERVIEW, text: 'Before you start' },
-    { step: WorkflowStep.SELECT_CLIENT, text: 'Select Client' },
-    { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate Keys' },
+    { step: WorkflowStep.OVERVIEW, text: 'Overview' },
+    { step: WorkflowStep.SELECT_CLIENT, text: 'Choose client' },
+    { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate keys' },
     {
       step: WorkflowStep.UPLOAD_VALIDATOR_FILE,
       text: 'Upload Validator',
     },
-    { step: WorkflowStep.CONNECT_WALLET, text: 'Connect Wallet' },
+    { step: WorkflowStep.CONNECT_WALLET, text: 'Connect wallet' },
     { step: WorkflowStep.SUMMARY, text: 'Summary' },
     { step: WorkflowStep.TRANSACTION_SIGNING, text: 'Transactions' },
   ];

@@ -2,32 +2,43 @@ import React from 'react';
 import { SectionTitle } from '../ValidatorClientComponents';
 import { IS_MAINNET } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
+import { Heading } from '../../../components/Heading';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
+import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
 export const OpenEthereumDetails = () => (
   <>
+    <SectionTitle level={2} className="mb5">
+      OpenEthereum
+    </SectionTitle>
     <Text className="mt10">
-      <Link external to="https://www.parity.io/ethereum/" primary inline>
-        OpenEthereum
-      </Link>{' '}
-      (used to be called Parity) is written in Rust and licensed under the
-      GPLv3. The design goals are to be “the fastest, lightest, and most secure
-      Ethereum client”.
+      Formerly Parity, OpenEthereum is designed to be “the fastest, lightest,
+      and most secure Ethereum client”.
+    </Text>
+    <SectionTitle level={2} className="mb5">
+      Language information
+    </SectionTitle>
+    <Text className="mt10">
+      OpenEthereum is written in Rust and licensed under the GPLv3.
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installing OpenEthereum
+        Installation
       </SectionTitle>
       <Text>
-        The
-        <Link primary external to="https://openethereum.github.io/Setup" inline>
-          {' '}
-          OpenEthereum documentation
-        </Link>{' '}
-        explains how to download and install the client.
+        The OpenEthereum documentation explains how to download and install the
+        client.
       </Text>
+      <Link
+        primary
+        external
+        to="https://openethereum.github.io/Setup"
+        className="mt10"
+      >
+        OpenEthereum installation documentation
+      </Link>
     </section>
     {!IS_MAINNET && (
       <>
@@ -35,27 +46,29 @@ export const OpenEthereumDetails = () => (
           <SectionTitle level={2} className="mb5">
             Setup
           </SectionTitle>
-          <Text>
-            When starting up the client, there are a few important options to
-            configure:
-            <ul>
-              <li>
-                OpenEthereum must be configured to sync the Goerli testnet which
-                can be done with the{' '}
-                <Code className="px5 ml5">---chain goerli</Code> parameter.
-                <Link
-                  primary
-                  external
-                  to="https://openethereum.github.io/"
-                  withArrow
-                  inline
-                >
-                  {' '}
-                  Documentation
-                </Link>
-              </li>
-            </ul>
+          <Text className="mb20 mt10">
+            Make sure you do the following to get your Eth1 client working
+            properly.
           </Text>
+          <Heading level={3} className="mt20">
+            Testing on Goerli
+          </Heading>
+          <Text className="mt10">
+            <FormattedMessage
+              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              values={{
+                goerli: <Code className="mt20">--chain goerli</Code>,
+              }}
+            />
+          </Text>
+          <Link
+            className="mt20"
+            primary
+            external
+            to="https://openethereum.github.io/"
+          >
+            OpenEthereum documentation
+          </Link>
         </section>
       </>
     )}

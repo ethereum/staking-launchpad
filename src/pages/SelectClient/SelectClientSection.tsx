@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from 'grommet';
+import { Link } from '../../components/Link';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
@@ -12,6 +13,7 @@ const ClientOptionContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 `;
 
 const ClientDescriptionContainer = styled.div`
@@ -29,6 +31,7 @@ type Props = {
   currentClient: ClientId;
   setCurrentClient: (client: ClientId) => void;
   clientDetails: any;
+  ethVersionStep: number;
 };
 
 const SelectClientSection = ({
@@ -37,6 +40,7 @@ const SelectClientSection = ({
   currentClient,
   setCurrentClient,
   clientDetails,
+  ethVersionStep,
 }: Props): JSX.Element => (
   <Paper>
     <Heading level={3} size="small" color="blueDark" className="mb20">
@@ -44,23 +48,32 @@ const SelectClientSection = ({
     </Heading>
     <Box className="flex flex-column space-between mt10">
       <ClientOptionContainer>
-        {clients.map(({ clientId, name, imgUrl }) => {
+        {clients.map(({ clientId, name, imgUrl, language }) => {
           const inputId = `${clientId}-client`;
           const onClick = () => setCurrentClient(clientId);
 
           return (
             <ImageSelectionBox
-              style={{ margin: '0 5px' }}
               fullWidthImg
               key={inputId}
               src={imgUrl}
               isActive={currentClient === clientId}
               onClick={onClick}
               text={name}
+              language={language}
             />
           );
         })}
       </ClientOptionContainer>
+      {ethVersionStep === 1 && (
+        <Link
+          to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
+          primary
+          external
+        >
+          View extensive client comparison
+        </Link>
+      )}
       <ClientDescriptionContainer>
         {clientDetails[currentClient]}
       </ClientDescriptionContainer>

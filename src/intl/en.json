@@ -1,4 +1,22 @@
 {
+  "0ANoM/": {
+    "defaultMessage": "{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
+  },
+  "1utfoI": {
+    "defaultMessage": "Use {mainnet} to sync the Ethereum mainnet."
+  },
+  "9lBMQr": {
+    "defaultMessage": "{keyFile} of paths via the {validatorsKeys} option."
+  },
+  "Bs34de": {
+    "defaultMessage": "The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+  },
+  "C1XY1c": {
+    "defaultMessage": "Choose {ethereum} client"
+  },
+  "JYvwX8": {
+    "defaultMessage": "{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
+  },
   "+UUcBt": {
     "defaultMessage": "Choose a language"
   },
@@ -16,6 +34,16 @@
   },
   "LeHQQm": {
     "defaultMessage": "Validator FAQs"
+  },
+  "aziK5i": {
+    "defaultMessage": "Use {http} to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+  },
+  "eSWhUt": {
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  },
+  "gN9D/h": {
+    "defaultMessage": "Use {goerli} to sync the Goerli testnet."
   },
   "NEmnAV": {
     "defaultMessage": "Italian"

@@ -73,14 +73,23 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
                 </Code>
               </li>
               <li>
-                <Code>
-                  {'<'}KEY_FILE_1{'>'}:{'<'}PASS_FILE_1{'>'},...,{'<'}KEY_FILE_N
-                  {'>'}:{'<'}PASS_FILE_N{'>'}
-                </Code>{' '}
+                <FormattedMessage
+                  defaultMessage="{keyFile} of paths via the {validatorsKeys} option."
+                  values={{
+                    keyFile: (
+                      <Code>
+                        {'<'}KEY_FILE_1{'>'}:{'<'}PASS_FILE_1{'>'},...,{'<'}
+                        KEY_FILE_N
+                        {'>'}:{'<'}PASS_FILE_N{'>'}
+                      </Code>
+                    ),
+                    validatorsKeys: (
+                      <Code className="px5 ml5">--validators-keys</Code>
+                    ),
+                  }}
+                />
               </li>
             </ul>
-            of paths via the <Code className="px5 ml5">--validators-keys</Code>{' '}
-            option.
           </Text>
           <Heading level={3} className="mt20 mb5">
             Environment variables

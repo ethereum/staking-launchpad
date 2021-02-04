@@ -1,13 +1,18 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 
+const BoldCaps = styled.b`
+  text-transform: uppercase;
+`;
 export interface PageContentInterface {
   title: string;
   content: JSX.Element;
-  acknowledgementText?: string;
+  acknowledgementText?: any;
 }
 
 export const pageContent = {
@@ -120,10 +125,7 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="mt10">
-          To become a validator you'll need to know about managing keys. If
-          you're unfamiliar with keys and mnemomics, please don't proceed. Your
-          keys will be your responsibility and no one can help you if you lose
-          them.
+          To become a validator you'll need to know about managing keys.
         </Text>
         <Text size="medium" className="mt20">
           Your validator keys are derived from a unique mnemonic (or seed). Your
@@ -137,10 +139,19 @@ export const pageContent = {
           deposit file to upload to this website with the public keys for your
           validator.
         </Text>
+        <Text size="medium" className="mt20">
+          If you're unfamiliar with keys and mnemomics, please don't proceed.
+          Your keys will be your responsibility and no one can help you if you
+          lose them.
+        </Text>
       </>
     ),
-    acknowledgementText:
-      'I understand that keys are my responsibility and that my mnemonic (seed) will be the ‼️ONLY WAY‼️ to withdraw my funds.',
+    acknowledgementText: (
+      <FormattedMessage
+        defaultMessage="I understand that keys are my responsibility and that my mnemonic (seed) will be the {onlyWay} to withdraw my funds."
+        values={{ onlyWay: <BoldCaps>only way</BoldCaps> }}
+      />
+    ),
   },
   [AcknowledgementIdsEnum.commitment]: {
     title: 'Validating is a long-term commitment',

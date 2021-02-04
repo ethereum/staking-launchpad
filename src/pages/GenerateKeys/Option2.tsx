@@ -187,7 +187,7 @@ export const Option2 = ({
   return (
     <div className="mt30">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Option 2: Build deposit-cli from the Python source code
+        Build deposit-cli from the Python source code
       </Heading>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
         Install python3.7+

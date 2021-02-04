@@ -11,7 +11,7 @@ import {
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
 } from '../../../utils/envVars';
-
+import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
 //
 // Styled Components
 
@@ -76,9 +76,13 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
 
   if (!ENABLE_RPC_FEATURES) return null;
 
+  // TODO query this data from somewhere...
   const validatorAmount = numberWithCommas(
     Math.round(+amountEth / +PRICE_PER_VALIDATOR)
   );
+
+  const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
+  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
   return (
     <Container isMobile={m}>
@@ -114,7 +118,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  21%
+                  {formattedAPR}%
                 </BoldGreen>
               </Text>
             </Card>

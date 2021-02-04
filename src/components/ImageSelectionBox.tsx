@@ -24,15 +24,6 @@ const LogoBackground = styled.div<LogoBackgroundProps>`
     height: ${p => (p.fullWidthImg ? '100%' : '50px')};
     margin: ${p => (p.fullWidthImg ? 0 : '17px')};
   }
-  /* @media only screen and (max-width: 770px) {
-    height: 100px;
-    width: 100px;
-    img {
-      width: 60px;
-      height: 60px;
-      margin: 19px;
-    }
-  } */
 `;
 
 const SelectionText = styled(Heading)`

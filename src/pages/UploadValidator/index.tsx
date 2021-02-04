@@ -134,7 +134,7 @@ const _UploadValidatorPage = ({
             network: (
               <span>
                 {ETH2_NETWORK_NAME}
-                {IS_MAINNET ? '' : 'testnet'}
+                {IS_MAINNET ? '' : ' testnet'}
               </span>
             ),
           }}
@@ -147,7 +147,7 @@ const _UploadValidatorPage = ({
     setFileError(
       <Text>
         <FormattedMessage
-          defaultMessage="Couldn't upload {depositFileName} due to an error we should investigate. Open an issue in GitHub so we can investigate. "
+          defaultMessage="Couldn't upload {depositFileName} due to an error. Open an issue in GitHub so we can investigate. "
           values={{
             depositFileName: <Code>{depositFileName}</Code>,
           }}
@@ -326,13 +326,13 @@ const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload deposit file">
+    <WorkflowPageTemplate title="Upload deposit data">
       <Container className="mt20">
         <Text className="mb20">
           <FormattedMessage
             defaultMessage="Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
             values={{
-              json: <Code>deposit-data-[timestamp].json</Code>,
+              json: <Code>deposit_data-[timestamp].json</Code>,
               validatorKeys: <Code>/eth2.0-deposit-cli/validator_keys</Code>,
             }}
           />

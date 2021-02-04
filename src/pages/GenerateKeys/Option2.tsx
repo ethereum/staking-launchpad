@@ -8,7 +8,7 @@ import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const Pre = styled.pre`
   white-space: normal;
@@ -21,6 +21,7 @@ export const Option2 = ({
   validatorCount: number | string;
   os: string;
 }) => {
+  const intl = useIntl();
   const renderPythonInstructions = () => {
     if (os === 'linux')
       return (
@@ -118,12 +119,7 @@ export const Option2 = ({
                   primary
                   to="https://pip.pypa.io/en/stable/installing/"
                 >
-                  <FormattedMessage
-                    defaultMessage="{pip} documentation"
-                    values={{
-                      pip: <span>pip</span>,
-                    }}
-                  />
+                  {intl.formatMessage({ defaultMessage: 'pip documentation' })}
                 </Link>
               ),
             }}

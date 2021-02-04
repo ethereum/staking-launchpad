@@ -17,15 +17,18 @@ export type AcknowledgementStateInterface = {
 };
 
 const defaultAcknowledgementState: AcknowledgementStateInterface = {
-  [AcknowledgementIdsEnum.introSection]: false,
-  [AcknowledgementIdsEnum.deposit]: false,
-  [AcknowledgementIdsEnum.responsibilities]: false,
-  [AcknowledgementIdsEnum.slashing]: false,
-  [AcknowledgementIdsEnum.keyManagement]: false,
-  [AcknowledgementIdsEnum.commitment]: false,
-  [AcknowledgementIdsEnum.earlyAdoptionRisks]: false,
-  [AcknowledgementIdsEnum.terminal]: false,
-  [AcknowledgementIdsEnum.confirmation]: false,
+  [AcknowledgementIdsEnum.introSection]: process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.deposit]: process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.responsibilities]:
+    process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.slashing]: process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.keyManagement]:
+    process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.commitment]: process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.earlyAdoptionRisks]:
+    process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.terminal]: process.env.NODE_ENV === 'development',
+  [AcknowledgementIdsEnum.confirmation]: process.env.NODE_ENV === 'development',
 };
 
 export const acknowledgementReducer = (

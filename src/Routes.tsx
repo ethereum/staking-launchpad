@@ -40,7 +40,7 @@ export enum routesEnum {
   acknowledgementPage = '/overview',
   selectClient = '/select-client',
   summaryPage = '/summary',
-  uploadValidatorPage = '/upload-validator',
+  uploadValidatorPage = '/upload-deposit-data',
   transactionsPage = '/transactions',
   FaqPage = '/faq',
   prysm = '/prysm',

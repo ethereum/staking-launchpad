@@ -2,7 +2,7 @@ import { Action, ActionTypes } from '../actions';
 
 export enum AcknowledgementIdsEnum {
   introSection,
-  signup,
+  deposit,
   responsibilities,
   slashing,
   keyManagement,
@@ -19,7 +19,7 @@ export type AcknowledgementStateInterface = {
 
 const defaultAcknowledgementState: AcknowledgementStateInterface = {
   [AcknowledgementIdsEnum.introSection]: false,
-  [AcknowledgementIdsEnum.signup]: false,
+  [AcknowledgementIdsEnum.deposit]: false,
   [AcknowledgementIdsEnum.responsibilities]: false,
   [AcknowledgementIdsEnum.slashing]: false,
   [AcknowledgementIdsEnum.keyManagement]: false,

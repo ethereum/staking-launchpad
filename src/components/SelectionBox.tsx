@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const LogoContainerBox = styled.div`
   width: 196px;
+  height: 100%;
   border: ${(p: { theme: any; isActive: boolean }) =>
     `2px solid ${p.isActive ? p.theme.gray.dark : p.theme.gray.medium}`};
   box-shadow: ${(p: { theme: any; isActive: boolean }) =>
@@ -18,9 +19,7 @@ const LogoContainerBox = styled.div`
   -o-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   transition: border 500ms ease-out, box-shadow 500ms ease-out;
   @media only screen and (max-width: 770px) {
-    width: 150px;
-    height: 150px;
-    margin: 17px;
+    width: 100%;
   }
 `;
 

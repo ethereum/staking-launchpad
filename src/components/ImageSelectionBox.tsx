@@ -24,7 +24,7 @@ const LogoBackground = styled.div<LogoBackgroundProps>`
     height: ${p => (p.fullWidthImg ? '100%' : '50px')};
     margin: ${p => (p.fullWidthImg ? 0 : '17px')};
   }
-  @media only screen and (max-width: 770px) {
+  /* @media only screen and (max-width: 770px) {
     height: 100px;
     width: 100px;
     img {
@@ -32,16 +32,13 @@ const LogoBackground = styled.div<LogoBackgroundProps>`
       height: 60px;
       margin: 19px;
     }
-  }
+  } */
 `;
 
 const SelectionText = styled(Heading)`
   text-align: center;
   margin-top: 24px;
   margin-bottom: 24px;
-  @media only screen and (max-width: 770px) {
-    display: none;
-  }
 `;
 
 const LanguageTag = styled.div`

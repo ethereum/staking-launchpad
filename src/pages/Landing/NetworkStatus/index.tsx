@@ -123,7 +123,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               </Text>
             </Card>
           </CardContainer>
-          <Link to="https://www.beaconcha.in" className="pt40" external>
+          <Link to="https://www.beaconcha.in" className="pt40">
             <Button
               className="m-auto"
               fullWidth

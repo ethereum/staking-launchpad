@@ -40,7 +40,6 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
       private individuals.
     </Text>
     <Link
-      external
       to="https://lighthouse.sigmaprime.io/update-00.html"
       primary
       className="mt10"
@@ -57,7 +56,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
       <SectionTitle level={2} className="mb5">
         Become a validator with Lighthouse
       </SectionTitle>
-      <Link external primary to={LIGHTHOUSE_INSTALLATION_URL}>
+      <Link primary to={LIGHTHOUSE_INSTALLATION_URL}>
         Lighthouse installation documentation
       </Link>
     </section>
@@ -110,7 +109,6 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
           </SectionTitle>
           <Link
             primary
-            external
             to="https://lighthouse-book.sigmaprime.io/validator-import-launchpad.html"
           >
             Importing from Launchpad documentation
@@ -131,7 +129,7 @@ export const Lighthouse = () => {
           <SectionTitle level={2} className="mb5">
             Documentation
           </SectionTitle>
-          <Link primary external to="https://lighthouse-book.sigmaprime.io/">
+          <Link primary to="https://lighthouse-book.sigmaprime.io/">
             Documentation on running Lighthouse
           </Link>
         </section>

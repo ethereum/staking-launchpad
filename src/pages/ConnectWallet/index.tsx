@@ -286,7 +286,6 @@ const _ConnectWalletPage = ({
               {!IS_MAINNET && lowBalance && (
                 <FaucetLink
                   to="https://faucet.goerli.mudit.blog/"
-                  external
                   primary
                   withArrow
                 >

@@ -91,10 +91,10 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
             the network.
           </Text>
           <Link
-            external
             to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
             className="my10"
             primary
+            inline
           >
             More on Eth2 economics
           </Link>

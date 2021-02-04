@@ -37,7 +37,7 @@ export const Option2 = ({
             defaultMessage="You can install python3 on your MacOS device using {homebrew}"
             values={{
               homebrew: (
-                <Link primary inline external to="https://docs.brew.sh/Manpage">
+                <Link primary inline to="https://docs.brew.sh/Manpage">
                   homebrew
                 </Link>
               ),
@@ -55,19 +55,13 @@ export const Option2 = ({
               <Link
                 primary
                 inline
-                external
                 to="https://docs.python.org/3/using/windows.html"
               >
                 python.org
               </Link>
             </li>
             <li>
-              <Link
-                primary
-                inline
-                external
-                to="https://chocolatey.org/packages/python"
-              >
+              <Link primary inline to="https://chocolatey.org/packages/python">
                 Chocolatey
               </Link>
             </li>
@@ -89,7 +83,6 @@ export const Option2 = ({
           />
           <Link
             inline
-            external
             primary
             to="https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers"
           >
@@ -108,14 +101,13 @@ export const Option2 = ({
             pip3, and for a direct download link, reference the {docs}"
             values={{
               homebrew: (
-                <Link primary inline external to="https://docs.brew.sh/Manpage">
+                <Link primary inline to="https://docs.brew.sh/Manpage">
                   homebrew
                 </Link>
               ),
               docs: (
                 <Link
                   inline
-                  external
                   primary
                   to="https://pip.pypa.io/en/stable/installing/"
                 >
@@ -138,7 +130,6 @@ export const Option2 = ({
               windowsInstallGuide: (
                 <Link
                   inline
-                  external
                   primary
                   to="https://pip.pypa.io/en/stable/installing/"
                 >
@@ -146,12 +137,7 @@ export const Option2 = ({
                 </Link>
               ),
               chocolatey: (
-                <Link
-                  inline
-                  external
-                  primary
-                  to="https://chocolatey.org/packages/pip"
-                >
+                <Link inline primary to="https://chocolatey.org/packages/pip">
                   Chocolatey
                 </Link>
               ),
@@ -195,12 +181,7 @@ export const Option2 = ({
       <Text>{renderPythonInstructions()}</Text>
       <Text>
         If you need help, check out the Python documentation.{' '}
-        <Link
-          primary
-          inline
-          external
-          to="https://python.org/about/gettingstarted"
-        >
+        <Link primary inline to="https://python.org/about/gettingstarted">
           Python installation instructions
         </Link>
       </Text>
@@ -231,7 +212,6 @@ export const Option2 = ({
         virtualenv would help you to create an isolated Python environment for
         deposit-cli tool.{' '}
         <Link
-          external
           to="https://virtualenv.pypa.io/en/latest/installation.html"
           inline
           primary
@@ -329,7 +309,6 @@ export const Option2 = ({
           repository.
         </Text>
         <Link
-          external
           primary
           inline
           to="https://github.com/ethereum/eth2.0-deposit-cli"

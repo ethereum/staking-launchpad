@@ -266,7 +266,6 @@ export const FAQ = () => {
                 <Link
                   primary
                   inline
-                  external
                   to="https://www.attestant.io/posts/understanding-validator-effective-balance/"
                 >
                   excellent post.
@@ -312,7 +311,6 @@ export const FAQ = () => {
               <Link
                 inline
                 primary
-                external
                 to="https://www.attestant.io/posts/understanding-validator-effective-balance/#the-impact-of-effective-balance-on-validating"
               >
                 impact of effective balance
@@ -356,10 +354,7 @@ export const FAQ = () => {
             <Text className="mt10">
               Overall, validators are expected to be net profitable as long as
               their uptime is{' '}
-              <Link
-                external
-                to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/"
-              >
+              <Link to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/">
                 greater than 50%.
               </Link>
             </Text>
@@ -428,7 +423,6 @@ export const FAQ = () => {
                 <Link
                   primary
                   inline
-                  external
                   to="https://eips.ethereum.org/EIPS/eip-2334"
                 >
                   EIP2334
@@ -504,11 +498,11 @@ export const FAQ = () => {
             <Text className="mt10">
               If you have questions, EthStaker community is a good place to get
               help! You can find support on{' '}
-              <Link inline external to="https://invite.gg/ethstaker">
+              <Link inline to="https://invite.gg/ethstaker">
                 Discord
               </Link>{' '}
               or{' '}
-              <Link inline external to="https://reddit.com/r/ethstaker">
+              <Link inline to="https://reddit.com/r/ethstaker">
                 Reddit
               </Link>
               .

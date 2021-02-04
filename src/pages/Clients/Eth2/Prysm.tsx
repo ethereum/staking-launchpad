@@ -21,7 +21,7 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
       security, and reliability. Prysm is developed by Prysmatic Labs, a company
       with the sole focus on the development of their client.
     </Text>
-    <Link external to="https://prysmaticlabs.com/" primary>
+    <Link to="https://prysmaticlabs.com/" primary>
       More on Prysmatic Labs
     </Link>
     <SectionTitle level={2} className="mb5">
@@ -38,7 +38,7 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
         Prysm offers step-by-step guidelines to run their client after
         completing your deposit through the launchpad.
       </Text>
-      <Link primary external to={PRYSM_INSTALLATION_URL}>
+      <Link primary to={PRYSM_INSTALLATION_URL}>
         Prysm installation documentation
       </Link>
     </section>
@@ -57,7 +57,6 @@ export const Prysm = () => {
           </SectionTitle>
           <Link
             primary
-            external
             to="https://docs.prylabs.network/docs/"
             className="mt10"
           >

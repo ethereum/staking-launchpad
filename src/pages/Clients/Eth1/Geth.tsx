@@ -32,7 +32,6 @@ export const GethDetails = () => (
       </Text>
       <Link
         primary
-        external
         to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
         className="mt10"
       >
@@ -61,7 +60,6 @@ export const GethDetails = () => (
           </Text>
           <Link
             primary
-            external
             to="https://geth.ethereum.org/docs/interface/command-line-options"
           >
             Geth on Goerli documentation
@@ -80,7 +78,6 @@ export const GethDetails = () => (
       </Text>
       <Link
         primary
-        external
         to="https://geth.ethereum.org/docs/interface/command-line-options"
       >
         --http documentation

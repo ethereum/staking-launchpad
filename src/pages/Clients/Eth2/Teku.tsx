@@ -25,14 +25,13 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
       interacting with the core Ethereum platform.
     </Text>
     <Link
-      external
       to="https://pegasys.tech/teku-ethereum-2-for-enterprise/"
       primary
       className="mt10"
     >
       More on PegaSys Teku
     </Link>{' '}
-    <Link external to="https://consensys.net/" primary className="mt10">
+    <Link to="https://consensys.net/" primary className="mt10">
       More on ConsenSys
     </Link>
     <SectionTitle level={2} className="mb5">
@@ -46,7 +45,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
       <SectionTitle level={2} className="mb5">
         Become a validator with Teku
       </SectionTitle>
-      <Link external primary to={TEKU_INSTALLATION_URL}>
+      <Link primary to={TEKU_INSTALLATION_URL}>
         Teku installation documentation
       </Link>
     </section>
@@ -202,7 +201,6 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             <li>
               <Text>
                 <Link
-                  external
                   primary
                   to="https://docs.teku.pegasys.tech/en/latest/Reference/CLI/CLI-Syntax/#validators-key-password-files"
                 >
@@ -237,7 +235,6 @@ export const Teku = () => {
           </SectionTitle>
           <Link
             primary
-            external
             to="https://docs.teku.pegasys.tech/en/latest/"
             className="mt10"
           >

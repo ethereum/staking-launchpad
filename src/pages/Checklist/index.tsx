@@ -565,7 +565,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 If you have questions, EthStaker community is a good place to
-                get help! You can find supports on{' '}
+                get help! You can find support on{' '}
                 <Link inline external to="https://invite.gg/ethstaker">
                   Discord
                 </Link>{' '}

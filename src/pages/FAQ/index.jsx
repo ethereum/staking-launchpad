@@ -503,7 +503,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               If you have questions, EthStaker community is a good place to get
-              help! You can find supports on{' '}
+              help! You can find support on{' '}
               <Link inline external to="https://invite.gg/ethstaker">
                 Discord
               </Link>{' '}

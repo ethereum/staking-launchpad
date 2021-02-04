@@ -135,6 +135,8 @@ const _SelectClientPage = ({
   // set the default the eth version to 1 on initial render
   const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
 
+  const { formatMessage } = useIntl();
+
   // filter the options based on the eth version the user is on
   const clientOptions = React.useMemo(() => ethClients[ethVersionStep], [
     ethVersionStep,
@@ -170,8 +172,6 @@ const _SelectClientPage = ({
   if (workflow < WorkflowStep.SELECT_CLIENT) {
     return routeToCorrectWorkflowStep(workflow);
   }
-
-  const { formatMessage } = useIntl();
 
   const title = formatMessage(
     { defaultMessage: `Choose {ethereum} client` },

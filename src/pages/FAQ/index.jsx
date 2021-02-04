@@ -493,6 +493,28 @@ export const FAQ = () => {
             </Text>
           </section>
         </section>
+        <section>
+          <Anchor to="#support" id="support">
+            <SectionTitle level={3}>Support</SectionTitle>
+          </Anchor>
+          <section>
+            <Heading level={4}>
+              Where can I find troubleshooting support?
+            </Heading>
+            <Text className="mt10">
+              If you have questions, EthStaker community is a good place to get
+              help! You can find supports on{' '}
+              <Link inline external to="https://invite.gg/ethstaker">
+                Discord
+              </Link>{' '}
+              or{' '}
+              <Link inline external to="https://reddit.com/r/ethstaker">
+                Reddit
+              </Link>
+              .
+            </Text>
+          </section>
+        </section>
       </FAQStyles>
     </PageTemplate>
   );

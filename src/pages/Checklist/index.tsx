@@ -204,13 +204,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage
-                  defaultMessage="{note}: it may take day(s) to sync the Eth1 client in the worst-case scenario."
-                  values={{
-                    note: <strong>Note</strong>,
-                  }}
-                  description="{note} is just 'Note' in bold to start the line"
-                />
+                <FormattedMessage defaultMessage="Note: it may take day(s) to sync the Eth1 client in the worst-case scenario." />
               </Text>
             </li>
           </ul>
@@ -364,13 +358,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage
-                  defaultMessage="{note}: by default, VMs may disable NTP so you may need to find a work-around for your environment."
-                  values={{
-                    note: <strong>Note</strong>,
-                  }}
-                  description="{note} is just 'Note' in bold to start the line"
-                />
+                <FormattedMessage defaultMessage="Note: by default, VMs may disable NTP so you may need to find a work-around for your environment." />
               </Text>
             </li>
           </ul>
@@ -385,12 +373,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="{note}: the RTC (Real-Time Clock) time may be set to your local timezone
+                  defaultMessage="Note: the RTC (Real-Time Clock) time may be set to your local timezone
                     instead of UTC, especially in a VM which has clock configured on Windows."
-                  values={{
-                    note: <strong>Note</strong>,
-                  }}
-                  description="{note} is just 'Note' in bold to start the line"
                 />
               </Text>
             </li>
@@ -480,13 +464,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage
-                  defaultMessage="{note}: you can verify it with the following command to check if it returns the client version correctly."
-                  values={{
-                    note: <strong>Note</strong>,
-                  }}
-                  description="{note} is just 'Note' in bold to start the line"
-                />
+                <FormattedMessage defaultMessage="Note: you can verify it with the following command to check if it returns the client version correctly." />
               </Text>
               <CodeSnippet>
                 <code>
@@ -508,13 +486,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage
-                  defaultMessage="{note}: please check that your node has greater than 20 peers."
-                  values={{
-                    note: <strong>Note</strong>,
-                  }}
-                  description="{note} is just 'Note' in bold to start the line"
-                />
+                <FormattedMessage defaultMessage="Note: please check that your node has greater than 20 peers." />
               </Text>
             </li>
           </ul>

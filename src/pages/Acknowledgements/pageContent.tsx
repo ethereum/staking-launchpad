@@ -9,6 +9,7 @@ import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 const BoldCaps = styled.strong`
   text-transform: uppercase;
 `;
+
 export interface PageContentInterface {
   title: string;
   content: JSX.Element;

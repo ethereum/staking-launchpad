@@ -71,5 +71,132 @@
   },
   "vYOWYI": {
     "defaultMessage": "Chinese (simplified)"
+  },
+  "+UUcBt": {
+    "message": "Choose a language"
+  },
+  "/SbhtD": {
+    "message": "You can also use {homebrew} to install pip3. For the most-up-to-date instructions on installing pip3, and for a direct download link, reference the {docs}"
+  },
+  "1utfoI": {
+    "message": "Use {mainnet} to sync the Ethereum mainnet."
+  },
+  "2pTHr8": {
+    "message": "You can install python3 on your MacOS device using {homebrew}"
+  },
+  "2t/3ab": {
+    "message": "The other file you just generated is {depositDataJson}. This file contains the public key(s) associated with your validator(s); You will need to upload this in the next step."
+  },
+  "594ZNn": {
+    "message": "This json file isn't for the right network. Upload a file generated for your current network: {network}."
+  },
+  "7Jo6ZP": {
+    "message": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: {url}"
+  },
+  "7KqQZV": {
+    "message": "Language Support"
+  },
+  "8WtyrD": {
+    "message": "Spanish"
+  },
+  "9lBMQr": {
+    "message": "{keyFile} of paths via the {validatorsKeys} option."
+  },
+  "Bs34de": {
+    "message": "The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+  },
+  "C1XY1c": {
+    "message": "Choose {ethereum} client"
+  },
+  "CACPC+": {
+    "message": "Czech"
+  },
+  "E+Y27g": {
+    "message": "You can check your Python version by typing {terminalCommand} in your terminal."
+  },
+  "HDgppg": {
+    "message": "You can install pip using a Linux Package Manager like {apt} or {yum}."
+  },
+  "HkjkaV": {
+    "message": "{depositFileName} isn't a valid deposit_data json file. Try again."
+  },
+  "J455S4": {
+    "message": "If you’re a git user, you can run {gitClone} to download the {master} branch."
+  },
+  "J5Lzz1": {
+    "message": "Chinese (traditional)"
+  },
+  "JUye/m": {
+    "message": "Use the terminal to move into the directory that contains the {deposit} executable"
+  },
+  "JYvwX8": {
+    "message": "{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
+  },
+  "LeHQQm": {
+    "message": "Validator FAQs"
+  },
+  "NEmnAV": {
+    "message": "Italian"
+  },
+  "Px7wWb": {
+    "message": "pip documentation"
+  },
+  "VPpHAq": {
+    "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
+  },
+  "WkrNSk": {
+    "message": "English"
+  },
+  "YBs4dR": {
+    "message": "The latest version of pip should have been installed with python 3.x.x. For more information about installing pip on Windows, visit {windowsInstallGuide}. Or you can install the pip package via {chocolatey}."
+  },
+  "Z07LQm": {
+    "message": "Couldn't upload {depositFileName} due to an error. Open an issue in GitHub so we can investigate."
+  },
+  "aziK5i": {
+    "message": "Use {http} to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+  },
+  "gN9D/h": {
+    "message": "Use {goerli} to sync the Goerli testnet."
+  },
+  "iDXMFo": {
+    "message": "Answers to common questions on becomming a validator."
+  },
+  "jyN21A": {
+    "message": "Eth2 Launchpad"
+  },
+  "krEziQ": {
+    "message": "Get in touch"
+  },
+  "lVdzDK": {
+    "message": "Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
+  },
+  "m4GjWu": {
+    "description": "{directoriesPattern} refers to a computer command which will find {keyDirectory} and {passwordDirectory} - both folders within a computer.",
+    "message": "{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
+  },
+  "pA+UVF": {
+    "message": "If you'd like to see the launchpad in another language, or if you can help translate, {getInTouch}!"
+  },
+  "qDvaNm": {
+    "message": "I understand that keys are my responsibility and that my mnemonic (seed) will be the {onlyWay} to withdraw my funds."
+  },
+  "qQ+Xla": {
+    "message": "Korean"
+  },
+  "ujVT29": {
+    "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the newly created {validatorKeys} directory."
+  },
+  "uq7E+F": {
+    "message": "Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+  },
+  "vFrE9m": {
+    "message": "Become a validator and help secure Eth2."
+  },
+  "vYOWYI": {
+    "message": "Chinese (simplified)"
+  },
+  "z/ZhML": {
+    "message": "Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
   }
 }

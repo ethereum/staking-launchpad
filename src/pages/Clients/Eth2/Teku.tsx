@@ -146,6 +146,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
           <Text>
             <FormattedMessage
               defaultMessage="{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
+              description="{directoriesPattern} refers to a computer command which will find {keyDirectory} and {passwordDirectory} - both folders within a computer."
               values={{
                 directoriesPattern: (
                   <Code className="px5 ml5">
@@ -166,6 +167,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             />{' '}
             <FormattedMessage
               defaultMessage="{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
+              description="{filesPattern} refers to a computer command which will find {keyFile} and {passwordFile} - both files within a computer."
               values={{
                 filesPattern: (
                   <Code className="px5 ml5">
@@ -186,6 +188,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             />{' '}
             <FormattedMessage
               defaultMessage="The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+              description="The {semicolon} and {colon} variables refer to the keyboard characters ';' and ':'."
               values={{
                 semicolon: <Code className="px5 ml5">;</Code>,
                 colon: <Code className="px5 ml5">:</Code>,

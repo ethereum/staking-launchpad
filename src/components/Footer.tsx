@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { Heading } from './Heading';
@@ -85,7 +86,7 @@ export const Footer = () => {
         <div className="col extra-links">
           <Heading level={4}>Learn More About Eth 2</Heading>
           <Link to="https://ethereum.org/en/eth2/">
-            The Eth2 Upgrades Intro
+            <FormattedMessage defaultMessage="The Eth2 Upgrades Intro" />
           </Link>
           <Link to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204">
             Economics

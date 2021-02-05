@@ -14,7 +14,7 @@ import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -112,38 +112,55 @@ interface Client {
 }
 
 export const Checklist = () => {
+  const { formatMessage } = useIntl();
   const clientInfo: Client[] = _shuffle([
     {
       header: 'Lighthouse',
-      text:
-        'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
+      text: formatMessage({
+        defaultMessage:
+          'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
+      }),
       imgUrl: LighthouseBg,
       url: routesEnum.lighthouse,
-      linkText: 'Configure Lighthouse →',
+      linkText: formatMessage({
+        defaultMessage: 'Configure Lighthouse →',
+      }),
     },
     {
       header: 'Nimbus',
-      text:
-        'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
+      text: formatMessage({
+        defaultMessage:
+          'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
+      }),
       imgUrl: NimbusBg,
       url: routesEnum.nimbus,
-      linkText: 'Configure Nimbus →',
+      linkText: formatMessage({
+        defaultMessage: 'Configure Nimbus →',
+      }),
     },
     {
       header: 'Prysm',
-      text:
-        'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
+      text: formatMessage({
+        defaultMessage:
+          'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
+      }),
       imgUrl: PrysmaticBg,
       url: routesEnum.prysm,
-      linkText: 'Configure Prysm →',
+      linkText: formatMessage({
+        defaultMessage: 'Configure Prysm →',
+      }),
     },
     {
       header: 'Teku',
-      text:
-        'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
+      text: formatMessage({
+        defaultMessage:
+          'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
+      }),
       imgUrl: TekuBg,
       url: routesEnum.teku,
-      linkText: 'Configure Teku →',
+      linkText: formatMessage({
+        defaultMessage: 'Configure Teku →',
+      }),
     },
   ]);
 

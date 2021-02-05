@@ -198,7 +198,7 @@ export const Checklist = () => {
                     ancient: <em>ancient</em>,
                     chaindata: <em>chaindata</em>,
                   }}
-                  description="The {mainnet}, {ancient} and {chaindata} values are those same words but with emphasis styling"
+                  description="The {mainnet}, {ancient} and {chaindata} values are network and folder names that should not be translated"
                 />
               </Text>
             </li>
@@ -419,12 +419,18 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="{warning}: it's high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
+                  defaultMessage="{warning} It's high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
                   values={{
-                    warning: <strong>Warning: </strong>,
+                    warning: (
+                      <strong>
+                        {formatMessage({ defaultMessage: 'Warning!' })}
+                      </strong>
+                    ),
                     learnMore: (
                       <Link primary inline to="/faq#responsibilities">
-                        Learn more about slashing →
+                        {formatMessage({
+                          defaultMessage: 'Learn more about slashing →',
+                        })}
                       </Link>
                     ),
                   }}
@@ -447,9 +453,14 @@ export const Checklist = () => {
                   defaultMessage="I have installed the {latestRelease} of my client."
                   values={{
                     latestRelease: (
-                      <strong>latest stable software release</strong>
+                      <strong>
+                        {formatMessage({
+                          defaultMessage: 'latest stable software release',
+                        })}
+                      </strong>
                     ),
                   }}
+                  description="{latestReleased} = 'latest stable software release', being styled in bold"
                 />
               </Text>
             }
@@ -479,6 +490,7 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="I have synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
                   values={{ ETH2_NETWORK_NAME }}
+                  description="{ETH2_NETWORK_NAME} is name of network, do not translate"
                 />
               </Text>
             }
@@ -605,7 +617,7 @@ export const Checklist = () => {
                   </Link>
                 ),
               }}
-              description="{variables} are client names, each linking to documentation"
+              description="{variables} are client names, each linking to documentation (do not translate names)"
             />
           </Text>
           <CheckBox
@@ -620,7 +632,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
-                  description="{prometheus} is 'Prometheus' service, with link to its homepage"
+                  description="{prometheus} is 'Prometheus' service, with link to its homepage (do not translate name)"
                 />
               </Text>
             }
@@ -637,7 +649,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
-                  description="{grafana} is 'Grafana' service, with link to its homepage"
+                  description="{grafana} is 'Grafana' service, with link to its homepage (do not translate name)"
                 />
               </Text>
             }
@@ -670,7 +682,7 @@ export const Checklist = () => {
                   </Link>
                 ),
               }}
-              description="{variables} are beacon chain block explorers, with links to each"
+              description="{variables} are beacon chain block explorers, with links to each (do not translate names)"
             />
           </Text>
           <CheckBox
@@ -753,7 +765,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
-                  description="{variables} social media platform links to Discord and Reddit"
+                  description="{variables} social media platform links to Discord and Reddit (do not translate names)"
                 />
               </Text>
             </li>

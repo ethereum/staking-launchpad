@@ -198,6 +198,7 @@ export const Checklist = () => {
                     ancient: <em>ancient</em>,
                     chaindata: <em>chaindata</em>,
                   }}
+                  description="The {mainnet}, {ancient} and {chaindata} values are those same words but with emphasis styling"
                 />
               </Text>
             </li>
@@ -208,6 +209,7 @@ export const Checklist = () => {
                   values={{
                     note: <strong>Note</strong>,
                   }}
+                  description="{note} is just 'Note' in bold to start the line"
                 />
               </Text>
             </li>
@@ -290,10 +292,10 @@ export const Checklist = () => {
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="For {operatingSystem}"
-              description="Indicates which operating system the instructions are for"
               values={{
                 operatingSystem: 'Ubuntu 20.04',
               }}
+              description="Indicates which operating system the instructions are for"
             />
           </Text>
           <ul className="sub-checklist-item">
@@ -313,7 +315,7 @@ export const Checklist = () => {
                     code1: <Code>NTP Service</Code>,
                     code2: <Code>active</Code>,
                   }}
-                  description="do not translate values"
+                  description="{code} values are terminal outputs to look for, should not translate"
                 />
               </Text>
             </li>
@@ -322,11 +324,11 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="Check if {code1}, {code2}, and {code3} are all correct."
                   values={{
-                    /* Translate these? */
                     code1: <Code>Local time</Code>,
                     code2: <Code>Time zone</Code>,
                     code3: <Code>Universal time</Code>,
                   }}
+                  description="{code} values are terminal outputs to look for to confirm system time"
                 />
               </Text>
             </li>
@@ -343,6 +345,7 @@ export const Checklist = () => {
                       </CodeSnippet>
                     ),
                   }}
+                  description="{code} values are terminal outputs and commands."
                 />
               </Text>
             </li>
@@ -355,6 +358,7 @@ export const Checklist = () => {
                     code2: <Code>chrony</Code>,
                     code3: <Code>ntp</Code>,
                   }}
+                  description="{code} values are terminal outputs and commands."
                 />
               </Text>
             </li>
@@ -365,6 +369,7 @@ export const Checklist = () => {
                   values={{
                     note: <strong>Note</strong>,
                   }}
+                  description="{note} is just 'Note' in bold to start the line"
                 />
               </Text>
             </li>
@@ -385,6 +390,7 @@ export const Checklist = () => {
                   values={{
                     note: <strong>Note</strong>,
                   }}
+                  description="{note} is just 'Note' in bold to start the line"
                 />
               </Text>
             </li>
@@ -479,6 +485,7 @@ export const Checklist = () => {
                   values={{
                     note: <strong>Note</strong>,
                   }}
+                  description="{note} is just 'Note' in bold to start the line"
                 />
               </Text>
               <CodeSnippet>
@@ -506,6 +513,7 @@ export const Checklist = () => {
                   values={{
                     note: <strong>Note</strong>,
                   }}
+                  description="{note} is just 'Note' in bold to start the line"
                 />
               </Text>
             </li>
@@ -625,6 +633,7 @@ export const Checklist = () => {
                   </Link>
                 ),
               }}
+              description="{variables} are client names, each linking to documentation"
             />
           </Text>
           <CheckBox
@@ -639,6 +648,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
+                  description="{prometheus} is 'Prometheus' service, with link to its homepage"
                 />
               </Text>
             }
@@ -655,6 +665,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
+                  description="{grafana} is 'Grafana' service, with link to its homepage"
                 />
               </Text>
             }
@@ -687,6 +698,7 @@ export const Checklist = () => {
                   </Link>
                 ),
               }}
+              description="{variables} are beacon chain block explorers, with links to each"
             />
           </Text>
           <CheckBox
@@ -769,6 +781,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
+                  description="{variables} social media platform links to Discord and Reddit"
                 />
               </Text>
             </li>

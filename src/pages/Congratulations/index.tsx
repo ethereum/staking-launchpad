@@ -20,6 +20,7 @@ import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -85,6 +86,7 @@ const _CongratulationsPage = ({
   workflow,
 }: Props): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
+  const { formatMessage } = useIntl();
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -126,7 +128,7 @@ const _CongratulationsPage = ({
             <span role="img" aria-label="congratulations">
               🎉{' '}
             </span>
-            Congratulations!
+            <FormattedMessage defaultMessage="Congratulations!" />
           </Heading>
           <Heading
             level={3}
@@ -135,7 +137,7 @@ const _CongratulationsPage = ({
             margin="none"
             className="mt10"
           >
-            Thank you for supporting the Eth2 network!
+            <FormattedMessage defaultMessage="Thank you for supporting the Eth2 network!" />
           </Heading>
           <div>
             {ENABLE_RPC_FEATURES && (
@@ -147,21 +149,31 @@ const _CongratulationsPage = ({
                 />
                 <div className="flex space-between mt20">
                   <ProgressBarInfo
-                    title="Staking balance:"
+                    title={formatMessage({
+                      defaultMessage: 'Staking balance:',
+                      description: 'Informing user of staking balance',
+                    })}
                     color={colors.blue.dark}
                     amountEth={amountEth}
                     // @ts-ignore
                     amountValidators={amountEth / PRICE_PER_VALIDATOR}
                   />
                   <ProgressBarInfo
-                    title="You added:"
+                    title={formatMessage({
+                      defaultMessage: 'You added:',
+                      description: 'Informing user of total funds deposited',
+                    })}
                     color={colors.blue.light}
                     // @ts-ignore
                     amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
                     amountValidators={depositKeys.length}
                   />
                   <ProgressBarInfo
-                    title="Launch threshold:"
+                    title={formatMessage({
+                      defaultMessage: 'Launch threshold:',
+                      description:
+                        'Refers to threshold of ETH needed to launch the beacon chain',
+                    })} /* TODO: remove this reference? */
                     color={colors.blue.lightest}
                     // @ts-ignore
                     amountEth={ETH_REQUIREMENT}
@@ -178,12 +190,23 @@ const _CongratulationsPage = ({
             <div>
               <div className="flex">
                 <Heading level={3} size="medium" color="white" margin="none">
-                  Complete the checklist
+                  <FormattedMessage defaultMessage="Complete the checklist" />
                 </Heading>
                 <Text color="white" className="mt10">
-                  You will need to complete the{' '}
-                  <strong>Staker Checklist</strong> before the Beaconchain
-                  starts.
+                  <FormattedMessage
+                    defaultMessage="Be sure to complete any remaining items on the {stakerChecklist}
+                      before your deposit is activated on the Beacon Chain."
+                    values={{
+                      stakerChecklist: (
+                        <strong>
+                          {formatMessage({
+                            defaultMessage: 'Staker Checklist',
+                          })}
+                        </strong>
+                      ),
+                    }}
+                    description="{stakerChecklist} = 'Staker Checklist' bolded to draw attention"
+                  />
                 </Text>
                 <Link to={routesEnum.checklistPage} className="mt10">
                   <Button

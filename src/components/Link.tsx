@@ -10,6 +10,7 @@ interface LinkProps {
   className?: string;
   href?: string;
   inline?: boolean;
+  isTextLink?: boolean;
 }
 
 const styles = `
@@ -29,16 +30,16 @@ const styles = `
  `;
 
 const StyledExternalLink = styled.a<
-  Pick<LinkProps, 'primary' | 'theme' | 'inline'>
+  Pick<LinkProps, 'primary' | 'theme' | 'inline' | 'isTextLink'>
 >`
   ${styles};
   color: ${(props: any) =>
     props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
   &:after {
+    display: ${(props: any) => (props.isTextLink ? `inline` : `none`)};
     margin-left: 0.125em;
     margin-right: 0.3em;
-    display: inline;
     content: '↗';
     transition: all 0.1s ease-in-out;
     font-style: normal;
@@ -71,7 +72,9 @@ export const Link = (props: LinkProps) => {
   const { children, className, to, primary, inline, withArrow } = props;
   const { locale } = useIntl();
   const isExternal = to && to.includes('http');
+
   if (isExternal) {
+    const isTextLink = typeof children === 'string';
     return (
       <StyledExternalLink
         className={className}
@@ -79,6 +82,7 @@ export const Link = (props: LinkProps) => {
         primary={primary}
         target="_blank"
         inline={inline}
+        isTextLink={isTextLink}
       >
         {children}
         {withArrow && (

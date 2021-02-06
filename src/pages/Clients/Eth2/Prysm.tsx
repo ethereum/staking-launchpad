@@ -9,6 +9,7 @@ import {
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
+import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
 export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
@@ -17,29 +18,33 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
       Prysm
     </SectionTitle>
     <Text className="mt10 mb20">
-      An implementation of the Eth2 protocol with a focus on usability,
-      security, and reliability. Prysm is developed by Prysmatic Labs, a company
-      with the sole focus on the development of their client.
+      <FormattedMessage
+        defaultMessage="An implementation of the Eth2 protocol with a focus on usability,
+          security, and reliability. Prysm is developed by Prysmatic Labs, a company with
+          the sole focus on the development of their client."
+      />
     </Text>
     <Link to="https://prysmaticlabs.com/" primary>
-      More on Prysmatic Labs
+      <FormattedMessage defaultMessage="More on Prysmatic Labs" />
     </Link>
     <SectionTitle level={2} className="mb5">
-      Language information
+      <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      Prysm is written in Go and released under a GPL-3.0 license.
+      <FormattedMessage defaultMessage="Prysm is written in Go and released under a GPL-3.0 license." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Become a validator with Prysm
+        <FormattedMessage defaultMessage="Become a validator with Prysm" />
       </SectionTitle>
       <Text className="mt10 mb20">
-        Prysm offers step-by-step guidelines to run their client after
-        completing your deposit through the launchpad.
+        <FormattedMessage
+          defaultMessage="Prysm offers step-by-step guidelines to run their client after completing
+            your deposit through the launchpad."
+        />
       </Text>
       <Link primary to={PRYSM_INSTALLATION_URL}>
-        Prysm installation documentation
+        <FormattedMessage defaultMessage="Prysm installation documentation" />
       </Link>
     </section>
   </>
@@ -53,14 +58,14 @@ export const Prysm = () => {
         <PrysmDetails />
         <section>
           <SectionTitle level={2} className="mb5">
-            Documentation
+            <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
           <Link
             primary
             to="https://docs.prylabs.network/docs/"
             className="mt10"
           >
-            Prysm documentation
+            <FormattedMessage defaultMessage="Prysm documentation" />
           </Link>
         </section>
       </ValidatorClientPageStyles>

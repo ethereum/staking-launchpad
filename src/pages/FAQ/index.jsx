@@ -75,6 +75,7 @@ export const FAQ = () => {
                     </strong>
                   ),
                 }}
+                description="{boldSummary} is styled with bold for emphasis"
               />
             </Text>
             <Text className="mt10">
@@ -439,6 +440,7 @@ export const FAQ = () => {
                         </strong>
                       ),
                     }}
+                    description="{expected} shows 'This is the expected scenario' and is bolded for emphasis"
                   />
                 </Text>
               </li>
@@ -458,6 +460,7 @@ export const FAQ = () => {
                         </strong>
                       ),
                     }}
+                    description="{strongText} shows 'This scenario is very extreme and unlikely to happen' and is bolded for emphasis"
                   />
                 </Text>
               </li>
@@ -523,6 +526,7 @@ export const FAQ = () => {
                     </strong>
                   ),
                 }}
+                description="{strongText} is a warning, bolded for emphasis"
               />
             </Text>
             <Text className="mt10">
@@ -597,6 +601,7 @@ export const FAQ = () => {
                       </strong>
                     ),
                   }}
+                  description="{eip2334} shows 'EIP2334' and links to EIP documentation. {strongText} is important information bolded for emphasis"
                 />
               </Text>
             </BlockQuote>

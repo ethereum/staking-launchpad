@@ -14,38 +14,35 @@ export const NethermindDetails = () => (
       Nethermind
     </SectionTitle>
     <Text className="mt10">
-      An Ethereum client with a huge pool of developers. It's perfect for
-      enterprise-grade systems.
+      <FormattedMessage defaultMessage="An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems." />
     </Text>
     <SectionTitle level={2} className="mb5">
-      Language information
+      <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      Nethermind is built on .NET Core. Extend it, customise it - the sky’s the
-      limit..
+      <FormattedMessage defaultMessage="Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installation
+        <FormattedMessage defaultMessage="Installation" />
       </SectionTitle>
       <Text>
-        The Nethermind documentation explains how to download and install the
-        client.
+        <FormattedMessage defaultMessage="The Nethermind documentation explains how to download and install the client." />
       </Text>
       <Link
         primary
         to="https://nethermind.readthedocs.io/en/latest/download.html"
         className="mt10"
       >
-        Nethermind installation documentation
+        <FormattedMessage defaultMessage="Nethermind installation documentation" />
       </Link>
     </section>
     <section>
       <SectionTitle level={2} className="mb5">
-        Setup
+        <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        Make sure you do the following to get your Eth1 client working properly.
+        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
       </Text>
       {IS_MAINNET && (
         <>
@@ -55,6 +52,7 @@ export const NethermindDetails = () => (
               values={{
                 mainnet: <Code className="mt20">--config mainnet</Code>,
               }}
+              description="{mainnet} shows '--config mainnet' terminal command"
             />
           </Text>
           <Link
@@ -77,6 +75,7 @@ export const NethermindDetails = () => (
               values={{
                 goerli: <Code className="mt20">--config goerli</Code>,
               }}
+              description="{goerli} shows '--config goerli' terminal command"
             />
           </Text>
           <Link
@@ -84,7 +83,10 @@ export const NethermindDetails = () => (
             className="mt20"
             to="https://nethermind.readthedocs.io/en/latest/networks.html#gorli-goerli"
           >
-            Nethermind on Goerli documentation
+            <FormattedMessage
+              defaultMessage="Nethermind on Goerli documentation"
+              description="Links to the documentation for the eth1 client Nethermind, specifically for testnet Goerli"
+            />
           </Link>
         </>
       )}
@@ -96,6 +98,7 @@ export const NethermindDetails = () => (
           values={{
             http: <Code className="mt20">--JsonRpc.Enabled true</Code>,
           }}
+          description="{http} shows '--JsonRpc.Enabled true' terminal command"
         />
       </Text>
       <Link

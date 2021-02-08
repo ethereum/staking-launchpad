@@ -198,6 +198,7 @@ const _ConnectWalletPage = ({
         error.message === 'Invariant failed: chainId 0xNaN is not an integer')
     );
   }, [error]);
+  const intl = useIntl();
 
   // setup RPC event listener
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
@@ -235,24 +236,6 @@ const _ConnectWalletPage = ({
     return '';
   };
 
-  const { formatMessage } = useIntl();
-
-  const pageTitle = formatMessage({
-    defaultMessage: 'Connect wallet',
-  });
-
-  const continueButton = formatMessage({
-    defaultMessage: 'Continue',
-  });
-
-  const connectButton = formatMessage({
-    defaultMessage: 'Connect new wallet',
-  });
-
-  const backButton = formatMessage({
-    defaultMessage: 'Back',
-  });
-
   // sets the status copy on provider or network change
   useEffect(() => {
     if (chainId) {
@@ -289,7 +272,9 @@ const _ConnectWalletPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title={pageTitle}>
+    <WorkflowPageTemplate
+      title={intl.formatMessage({ defaultMessage: 'Connect wallet' })}
+    >
       <Container>
         <WalletConnectedContainer>
           <Animated
@@ -459,14 +444,18 @@ const _ConnectWalletPage = ({
       <ButtonRow>
         {!walletConnected && (
           <Link to={routesEnum.uploadValidatorPage}>
-            <Button className="mr10" width={100} label={backButton} />
+            <Button
+              className="mr10"
+              width={100}
+              label={intl.formatMessage({ defaultMessage: 'Back' })}
+            />
           </Link>
         )}
         {walletConnected && (
           <Button
             width={300}
             onClick={deactivate}
-            label={connectButton}
+            label={intl.formatMessage({ defaultMessage: 'Connect new wallet' })}
             className="mr10"
             color="blueDark"
           />
@@ -481,7 +470,7 @@ const _ConnectWalletPage = ({
               !networkAllowed ||
               lowBalance
             }
-            label={continueButton}
+            label={intl.formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </ButtonRow>

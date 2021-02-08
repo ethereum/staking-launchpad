@@ -10,16 +10,18 @@ import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { web3ReactInterface } from '../ConnectWallet';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { Button } from '../../components/Button';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import { Link } from '../../components/Link';
+import { Button } from '../../components/Button';
 import { routesEnum } from '../../Routes';
 import { AcknowledgementSection } from './AcknowledgementSection';
 import { Text } from '../../components/Text';
+import { Code } from '../../components/Code';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
+import { FormattedMessage, useIntl } from 'react-intl';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
@@ -38,6 +40,12 @@ import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowSt
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
   margin: 1.3rem;
+`;
+
+const Row = styled.div`
+  display: flex;
+  margin: 2rem 0rem;
+  align-items: center;
 `;
 
 const Container = styled.div`
@@ -73,7 +81,7 @@ const _SummaryPage = ({
   const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
   const amountValidators = new BigNumber(depositKeys.length);
   const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
-
+  const intl = useIntl();
   const allChecked = React.useMemo(
     () =>
       losePhrase &&
@@ -102,18 +110,24 @@ const _SummaryPage = ({
   if (chainId !== NETWORK_ID) return <WrongNetwork />;
 
   return (
-    <WorkflowPageTemplate title="Summary">
+    <WorkflowPageTemplate
+      title={intl.formatMessage({ defaultMessage: 'Summary' })}
+    >
       <Paper>
         <Heading level={3} size="small" color="blueDark">
-          Launchpad Summary
+          <FormattedMessage defaultMessage="Launchpad summary" />
         </Heading>
         <Box className="flex flex-row space-between mt10">
           <Container>
-            <Text>Validators</Text>
+            <Text>
+              <FormattedMessage defaultMessage="Validators" />
+            </Text>
             <InfoBox>{amountValidators.toString()}</InfoBox>
           </Container>
           <Container className="mx20">
-            <Text>Total Amount Required</Text>
+            <Text>
+              <FormattedMessage defaultMessage="Total amount required" />
+            </Text>
             <InfoBox>
               {amountValidators.times(convertedPrice).toString()}
               {TICKER_NAME}
@@ -121,14 +135,15 @@ const _SummaryPage = ({
           </Container>
         </Box>
       </Paper>
-      <AcknowledgementSection title="Please proceed with caution">
+      <AcknowledgementSection
+        title={intl.formatMessage({ defaultMessage: 'Understand the risks' })}
+      >
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}
           checked={losePhrase}
           label={
             <Text>
-              I understand that if I lose my mnemonic phrase, I will not be able
-              to withdraw my funds
+              <FormattedMessage defaultMessage="I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase." />
             </Text>
           }
         />
@@ -137,7 +152,9 @@ const _SummaryPage = ({
             onChange={e => setEarlyAdopt(e.target.checked)}
             checked={earlyAdopt}
             label={
-              <Text> I am aware of the early adopter and slashing risks</Text>
+              <Text>
+                <FormattedMessage defaultMessage="I understand the early adopter and slashing risks." />
+              </Text>
             }
           />
         </span>
@@ -146,35 +163,67 @@ const _SummaryPage = ({
             onChange={e => setNonReverse(e.target.checked)}
             checked={nonReverse}
             label={
-              <Text> I am aware that this transaction is not reversible</Text>
+              <Text>
+                <FormattedMessage defaultMessage="I understand that this transaction is not reversible." />
+              </Text>
             }
           />
         </span>
       </AcknowledgementSection>
-      <AcknowledgementSection title="Please make sure you aren't being phished">
+      <AcknowledgementSection
+        title={intl.formatMessage({
+          defaultMessage: "Make sure you aren't being phished",
+        })}
+      >
         <Text>
-          You are responsible for the transaction. Fraudulent websites might
-          lure you into sending the {PRICE_PER_VALIDATOR} {TICKER_NAME} to them,
-          instead of the official deposit contract. Please check that the
-          address you are sending the transaction to is the correct address.
+          <FormattedMessage
+            defaultMessage="You are responsible for the transaction. Fraudulent websites might
+          try and lure you into sending the {pricePerValidator} to them,
+          instead of the official deposit contract. Make sure that the
+          address you are sending the transaction to is the correct address."
+            values={{
+              pricePerValidator: (
+                <span>
+                  {PRICE_PER_VALIDATOR} {TICKER_NAME}
+                </span>
+              ),
+            }}
+          />
         </Text>
-        <Link to={routesEnum.phishingPage} className="my10" primary>
-          Learn here how to do it safely
-        </Link>
+        <Row>
+          <Link to="https://ethereum.org/eth2/deposit-contract/" primary>
+            <Button
+              width={420}
+              label={intl.formatMessage({
+                defaultMessage: 'Check deposit contract address',
+              })}
+            />
+          </Link>
+          <Link to={routesEnum.phishingPage} primary className="ml20">
+            <FormattedMessage defaultMessage="More on phishing" />
+          </Link>
+        </Row>
         <span className="mt20">
           <CheckBox
             onChange={e => setNoPhish(e.target.checked)}
             checked={noPhish}
             label={
               <Text>
-                I know how to check that I am sending my {TICKER_NAME} into the
-                correct deposit contract and will do so.
+                <FormattedMessage
+                  defaultMessage="I know how to check that I am sending my {eth} into the
+                correct deposit contract and will do so."
+                  values={{ eth: <span>{TICKER_NAME}</span> }}
+                />
               </Text>
             }
           />
         </span>
       </AcknowledgementSection>
-      <AcknowledgementSection title="Protect yourself against double deposits">
+      <AcknowledgementSection
+        title={intl.formatMessage({
+          defaultMessage: 'Protect yourself against double deposits',
+        })}
+      >
         {beaconChainApiStatus === BeaconChainStatus.DOWN && (
           <Alert variant="warning" className="mb20">
             <div className="flex">
@@ -185,48 +234,68 @@ const _SummaryPage = ({
                 className="my10"
                 style={{ wordBreak: 'break-word' }}
               >
-                Proceed with caution. Our on-chain data source is down and we
-                are unable to flag any double deposits.
+                <FormattedMessage
+                  defaultMessage="Proceed with caution. Our on-chain data source is down and we
+                are unable to flag any double deposits."
+                />
               </Text>
             </div>
           </Alert>
         )}
 
         <Text>
-          Again, <i>you are responsible for this transaction!</i> Duplicate
+          <FormattedMessage
+            defaultMessage="{italicsWarning} Duplicate
           deposits with the same keyfile public key will be considered as a
-          top-up and the extra balance more than {PRICE_PER_VALIDATOR}{' '}
-          {TICKER_NAME} will NOT be counted in your effective balance on the
-          Beacon Chain.
+          double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the
+          Beacon Chain."
+            values={{
+              italicsWarning: (
+                <i>
+                  {intl.formatMessage({
+                    defaultMessage: 'You are responsible for this transaction!',
+                  })}
+                </i>
+              ),
+              eth: (
+                <span>
+                  {PRICE_PER_VALIDATOR} {TICKER_NAME}
+                </span>
+              ),
+            }}
+          />
         </Text>
+
         <ul>
           <li>
             <Text className="mt10">
-              Do not submit any transaction with a deposit_data file that you
+              <FormattedMessage
+                defaultMessage="Do not submit any transaction with a {depositData} file that you
               did not create yourself, or that you do not own the mnemonic
-              phrase for.
+              phrase for."
+                values={{ depositData: <Code>deposit_data</Code> }}
+              />
             </Text>
           </li>
           <li>
             <Text className="mt10">
-              If you've recently submitted a transaction with this deposit_data
-              file, and are now resubmitting for some reason, we recommend
-              waiting at least 30 minutes for our on-chain data source to flag
-              any duplicates.
+              <FormattedMessage
+                defaultMessage="Wait at least 30 minutes before trying to resubmit a transaction with this {depositData} file. This will give our on-chain data source time to flag any duplicate deposits."
+                values={{ depositData: <Code>deposit_data</Code> }}
+              />
             </Text>
           </li>
         </ul>
-
         <span className="mt20">
           <CheckBox
             onChange={e => setDuplicatesAcknowledged(e.target.checked)}
             checked={duplicatesAcknowledged}
             label={
               <Text>
-                I understand that sending a deposit more than once will result
-                in my validator's balance exceeding 32 ETH, and that there is no
-                advantage to this since a validator's maximum stake is limited
-                to 32 ETH.
+                <FormattedMessage
+                  defaultMessage="I understand that there is no advantage to depositing more than once per validator. Any extra {eth} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
+                  values={{ eth: <span>{TICKER_NAME}</span> }}
+                />
               </Text>
             }
           />
@@ -234,10 +303,19 @@ const _SummaryPage = ({
       </AcknowledgementSection>
       <div className="flex center p30">
         <Link to={routesEnum.connectWalletPage}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={intl.formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.transactionsPage} onClick={handleSubmit}>
-          <Button width={300} rainbow disabled={!allChecked} label="Continue" />
+          <Button
+            width={300}
+            rainbow
+            disabled={!allChecked}
+            label={intl.formatMessage({ defaultMessage: 'Continue' })}
+          />
         </Link>
       </div>
     </WorkflowPageTemplate>

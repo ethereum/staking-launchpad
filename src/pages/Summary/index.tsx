@@ -248,7 +248,7 @@ const _SummaryPage = ({
             defaultMessage="{italicsWarning} Duplicate
           deposits with the same keyfile public key will be considered as a
           double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the
-          Beacon Chain."
+          Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
             values={{
               italicsWarning: (
                 <i>

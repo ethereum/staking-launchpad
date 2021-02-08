@@ -47,7 +47,7 @@ import {
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 // styled components
 const Container = styled.div`
@@ -235,6 +235,24 @@ const _ConnectWalletPage = ({
     return '';
   };
 
+  const { formatMessage } = useIntl();
+
+  const pageTitle = formatMessage({
+    defaultMessage: 'Connect wallet',
+  });
+
+  const continueButton = formatMessage({
+    defaultMessage: 'Continue',
+  });
+
+  const connectButton = formatMessage({
+    defaultMessage: 'Connect new wallet',
+  });
+
+  const backButton = formatMessage({
+    defaultMessage: 'Back',
+  });
+
   // sets the status copy on provider or network change
   useEffect(() => {
     if (chainId) {
@@ -271,7 +289,7 @@ const _ConnectWalletPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Connect wallet">
+    <WorkflowPageTemplate title={pageTitle}>
       <Container>
         <WalletConnectedContainer>
           <Animated
@@ -441,14 +459,14 @@ const _ConnectWalletPage = ({
       <ButtonRow>
         {!walletConnected && (
           <Link to={routesEnum.uploadValidatorPage}>
-            <Button className="mr10" width={100} label="Back" />
+            <Button className="mr10" width={100} label={backButton} />
           </Link>
         )}
         {walletConnected && (
           <Button
             width={300}
             onClick={deactivate}
-            label="Connect a different wallet"
+            label={connectButton}
             className="mr10"
             color="blueDark"
           />
@@ -463,7 +481,7 @@ const _ConnectWalletPage = ({
               !networkAllowed ||
               lowBalance
             }
-            label="Continue"
+            label={continueButton}
           />
         </Link>
       </ButtonRow>

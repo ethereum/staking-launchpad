@@ -158,7 +158,7 @@ const _SummaryPage = ({
           instead of the official deposit contract. Please check that the
           address you are sending the transaction to is the correct address.
         </Text>
-        <Link to={routesEnum.phishingPage} className="my10" primary withArrow>
+        <Link to={routesEnum.phishingPage} className="my10" primary>
           Learn here how to do it safely
         </Link>
         <span className="mt20">

@@ -42,6 +42,7 @@ export const Option1 = ({
         <FormattedMessage defaultMessage="Step 1: Download the deposit command line interface app for your operating system" />
       </Text>
       <Link
+        isTextLink={false}
         to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
         className="my40"
       >

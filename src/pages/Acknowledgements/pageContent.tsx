@@ -130,7 +130,7 @@ export const pageContent = {
         >
           <FormattedMessage defaultMessage="The Eth2 specification" />
         </Link>
-        <Link to="/faq" className="my10" primary withArrow>
+        <Link to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
         </Link>
       </>

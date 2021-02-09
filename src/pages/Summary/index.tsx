@@ -182,16 +182,16 @@ const _SummaryPage = ({
           instead of the official deposit contract. Make sure that the
           address you are sending the transaction to is the correct address."
             values={{
-              pricePerValidator: (
-                <span>
-                  {PRICE_PER_VALIDATOR} {TICKER_NAME}
-                </span>
-              ),
+              pricePerValidator: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
             }}
           />
         </Text>
         <Row>
-          <Link to="https://ethereum.org/eth2/deposit-contract/" primary>
+          <Link
+            isTextLink={false}
+            to="https://ethereum.org/eth2/deposit-contract/"
+            primary
+          >
             <Button
               width={420}
               label={intl.formatMessage({
@@ -199,7 +199,12 @@ const _SummaryPage = ({
               })}
             />
           </Link>
-          <Link to={routesEnum.phishingPage} primary className="ml20">
+          <Link
+            shouldOpenNewTab={true}
+            to={routesEnum.phishingPage}
+            primary
+            className="ml20"
+          >
             <FormattedMessage defaultMessage="More on phishing" />
           </Link>
         </Row>
@@ -210,9 +215,9 @@ const _SummaryPage = ({
             label={
               <Text>
                 <FormattedMessage
-                  defaultMessage="I know how to check that I am sending my {eth} into the
+                  defaultMessage="I know how to check that I am sending my {TICKER_NAME} into the
                 correct deposit contract and will do so."
-                  values={{ eth: <span>{TICKER_NAME}</span> }}
+                  values={{ TICKER_NAME }}
                 />
               </Text>
             }
@@ -245,23 +250,19 @@ const _SummaryPage = ({
 
         <Text>
           <FormattedMessage
-            defaultMessage="{italicsWarning} Duplicate
+            defaultMessage="{warning} Duplicate
           deposits with the same keyfile public key will be considered as a
           double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the
           Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
             values={{
-              italicsWarning: (
-                <i>
+              warning: (
+                <em>
                   {intl.formatMessage({
                     defaultMessage: 'You are responsible for this transaction!',
                   })}
-                </i>
+                </em>
               ),
-              eth: (
-                <span>
-                  {PRICE_PER_VALIDATOR} {TICKER_NAME}
-                </span>
-              ),
+              eth: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
             }}
           />
         </Text>
@@ -293,8 +294,8 @@ const _SummaryPage = ({
             label={
               <Text>
                 <FormattedMessage
-                  defaultMessage="I understand that there is no advantage to depositing more than once per validator. Any extra {eth} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
-                  values={{ eth: <span>{TICKER_NAME}</span> }}
+                  defaultMessage="I understand that there is no advantage to depositing more than once per validator. Any extra {TICKER_NAME} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
+                  values={{ TICKER_NAME }}
                 />
               </Text>
             }

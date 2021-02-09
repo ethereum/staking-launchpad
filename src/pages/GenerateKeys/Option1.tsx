@@ -78,6 +78,10 @@ export const Option1 = ({
       <Text weight={500} className="mt20">
         Step 2: Generate deposit keys using the Ethereum Foundation deposit tool
       </Text>
+      <Alert className="my20" variant="info">
+        For security, we recommend you disconnect from the internet to complete
+        this step.
+      </Alert>
       <ul>
         <li>Decompress the file you just downloaded</li>
         <li>

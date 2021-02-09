@@ -34,7 +34,7 @@ export const FAQ = () => {
     <PageTemplate
       title={intl.formatMessage({ defaultMessage: 'Validator FAQs' })}
       description={intl.formatMessage({
-        defaultMessage: 'Answers to common questions on becomming a validator.',
+        defaultMessage: 'Answers to common questions on becoming a validator.',
       })}
     >
       <FAQStyles>

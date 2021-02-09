@@ -83,10 +83,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
             />
           </Text>
           <Code className="my20">./build/data/[testnet_name]/</Code>
-          <Link
-            primary
-            to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
-          >
+          <Link primary to="https://nimbus.guide/keys.html">
             <FormattedMessage defaultMessage="Nimbus key management documentation" />
           </Link>
         </section>

@@ -62,7 +62,7 @@ export const Prysm = () => {
           </SectionTitle>
           <Link
             primary
-            to="https://docs.prylabs.network/docs/"
+            to="https://docs.prylabs.network/docs/getting-started/"
             className="mt10"
           >
             <FormattedMessage defaultMessage="Prysm documentation" />

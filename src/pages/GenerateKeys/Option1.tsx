@@ -36,11 +36,10 @@ export const Option1 = ({
   return (
     <div className="mt30">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Download command line app
+        <FormattedMessage defaultMessage="Download command line app" />
       </Heading>
       <Text weight={500}>
-        Step 1: Download the deposit command line interface app for your
-        operating system
+        <FormattedMessage defaultMessage="Step 1: Download the deposit command line interface app for your operating system" />
       </Text>
       <Link
         to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
@@ -68,6 +67,7 @@ export const Option1 = ({
                   </strong>
                 ),
               }}
+              description="{url} is link to GitHub CLI release, made bold for emphasis"
             />
           </Text>
         </div>
@@ -76,23 +76,27 @@ export const Option1 = ({
       <GithubScreenshot />
 
       <Text weight={500} className="mt20">
-        Step 2: Generate deposit keys using the Ethereum Foundation deposit tool
+        <FormattedMessage defaultMessage="Step 2: Generate deposit keys using the Ethereum Foundation deposit tool" />
       </Text>
       <Alert className="my20" variant="info">
-        For security, we recommend you disconnect from the internet to complete
-        this step.
+        <FormattedMessage defaultMessage="For security, we recommend you disconnect from the internet to complete this step." />
       </Alert>
       <ul>
-        <li>Decompress the file you just downloaded</li>
+        <li>
+          <FormattedMessage defaultMessage="Decompress the file you just downloaded" />
+        </li>
         <li>
           <FormattedMessage
             defaultMessage="Use the terminal to move into the directory that contains the {deposit} executable"
             values={{
               deposit: <code>deposit</code>,
             }}
+            description="{deposit} = 'deposit' styled as code"
           />
         </li>
-        <li>Run the following command to launch the app</li>
+        <li>
+          <FormattedMessage defaultMessage="Run the following command to launch the app" />
+        </li>
         <Alert variant="secondary" className="my10">
           <Pre className="my10">
             {(os === 'linux' || os === 'mac') && (
@@ -127,12 +131,12 @@ export const Option1 = ({
                   </span>
                 ),
               }}
+              description="{flag} and {network} are terminal commands styled as code."
             />
           </Text>
         </Alert>
         <li>
-          Now follow the instructions presented to you in the terminal window to
-          generate your keys.
+          <FormattedMessage defaultMessage="Now follow the instructions presented to you in the terminal window to generate your keys." />
         </li>
       </ul>
     </div>

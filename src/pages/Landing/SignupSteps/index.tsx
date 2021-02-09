@@ -7,6 +7,7 @@ import { routesEnum } from '../../../Routes';
 import { Link } from '../../../components/Link';
 import { Step } from './Step';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { TESTNEST_LAUNCHPAD_URL } from '../../../utils/envVars';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -62,7 +63,7 @@ export const SignupSteps = (): JSX.Element => {
                 'The Eth2 upgrades will only be successful if validators understand the risks and responsibilities.',
             })}
           >
-            <Link to={routesEnum.FaqPage} primary withArrow>
+            <Link to={routesEnum.FaqPage} primary>
               <FormattedMessage defaultMessage="Validators FAQ" />
             </Link>
           </Step>
@@ -77,7 +78,7 @@ export const SignupSteps = (): JSX.Element => {
                 "You'll need to run an Eth1 and an Eth2 node to become a validator. Take a look at the checklist to prepare yourself and your equipment.",
             })}
           >
-            <Link to={routesEnum.checklistPage} primary withArrow>
+            <Link to={routesEnum.checklistPage} primary>
               <FormattedMessage defaultMessage="Hardware checklist" />
             </Link>
           </Step>
@@ -96,16 +97,16 @@ export const SignupSteps = (): JSX.Element => {
                 'We recommend you go through the entire process on a testnet first to get comfortable.',
             })}
           >
-            <Link to={routesEnum.checklistPage}>
-              <FormattedMessage defaultMessage="Try the testnet [how can we dynamically link to the testnet?]" />
+            <Link primary to={TESTNEST_LAUNCHPAD_URL}>
+              <FormattedMessage defaultMessage="Try the testnet" />
             </Link>
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
-            emoji="🚧"
+            emoji="🎣"
             emojiAlt={intl.formatMessage({
-              defaultMessage: 'warning construction sign',
+              defaultMessage: 'fishing rod',
             })}
             title={intl.formatMessage({ defaultMessage: '4. Avoid phishing' })}
             content={intl.formatMessage({
@@ -113,7 +114,7 @@ export const SignupSteps = (): JSX.Element => {
                 "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for.",
             })}
           >
-            <Link to={routesEnum.phishingPage} primary withArrow>
+            <Link to={routesEnum.phishingPage} primary>
               <FormattedMessage defaultMessage="Phishing guide" />
             </Link>
           </Step>
@@ -128,7 +129,7 @@ export const SignupSteps = (): JSX.Element => {
                 "Once you're comfortable, you'll go through generating your keys and depositing your ETH.",
             })}
           >
-            <Link to={routesEnum.acknowledgementPage} primary withArrow>
+            <Link to={routesEnum.acknowledgementPage} primary>
               <FormattedMessage defaultMessage="Start deposit process" />
             </Link>
           </Step>
@@ -145,7 +146,7 @@ export const SignupSteps = (): JSX.Element => {
                 "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet.",
             })}
           >
-            <Link to={routesEnum.checklistPage} primary withArrow>
+            <Link to={routesEnum.checklistPage} primary>
               <FormattedMessage defaultMessage="Complete checklist" />
             </Link>
           </Step>

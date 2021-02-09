@@ -30,11 +30,11 @@ export const Option2 = ({
     if (os === 'mac')
       return (
         <FormattedMessage
-          defaultMessage="You can install python3 on your MacOS device using {homebrew}"
+          defaultMessage="You can install python3 on your macOS device using {homebrew}"
           values={{
             homebrew: (
               <Link primary inline to="https://docs.brew.sh/Manpage">
-                homebrew
+                Homebrew
               </Link>
             ),
           }}

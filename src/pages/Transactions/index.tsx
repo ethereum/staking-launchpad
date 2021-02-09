@@ -57,6 +57,7 @@ const _TransactionsPage = ({
   dispatchTransactionStatusUpdate,
   dispatchWorkflowUpdate,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -86,18 +87,28 @@ const _TransactionsPage = ({
 
   const createButtonText = (): string => {
     if (totalTxCount === 1) {
-      return 'Confirm deposit';
+      return formatMessage({ defaultMessage: 'Confirm deposit' });
     }
     if (totalTxCount === remainingTxCount && totalTxCount > 0) {
-      return `Confirm all ${totalTxCount} deposits`;
+      return formatMessage(
+        {
+          defaultMessage: `Confirm all {totalTxCount} deposits`,
+        },
+        { totalTxCount }
+      );
     }
     if (remainingTxCount > 1) {
-      return `Confirm remaining ${remainingTxCount} deposits`;
+      return formatMessage(
+        {
+          defaultMessage: `Confirm remaining {remainingTxCount} deposits`,
+        },
+        { remainingTxCount }
+      );
     }
     if (remainingTxCount === 1) {
-      return `Confirm last deposit`;
+      return formatMessage({ defaultMessage: `Confirm last deposit` });
     }
-    return 'No pending deposits';
+    return formatMessage({ defaultMessage: 'No pending deposits' });
   };
 
   const createContinueButtonText = (): string => {
@@ -105,8 +116,10 @@ const _TransactionsPage = ({
       return 'Continue 🎉';
     }
     return allTxConfirmed
-      ? 'Continue 🎉'
-      : 'Complete without all transactions confirmed ⚠️';
+      ? formatMessage({ defaultMessage: 'Continue 🎉' })
+      : formatMessage({
+          defaultMessage: 'Complete without all transactions confirmed ⚠️',
+        });
   };
 
   const handleAllTransactionsClick = () => {
@@ -119,8 +132,6 @@ const _TransactionsPage = ({
       dispatchTransactionStatusUpdate
     );
   };
-
-  const intl = useIntl();
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.TRANSACTION_SIGNING) {
@@ -138,7 +149,7 @@ const _TransactionsPage = ({
 
   return (
     <WorkflowPageTemplate
-      title={intl.formatMessage({ defaultMessage: 'Transactions' })}
+      title={formatMessage({ defaultMessage: 'Transactions' })}
     >
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">

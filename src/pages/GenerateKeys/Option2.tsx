@@ -227,6 +227,7 @@ export const Option2 = ({
         <Link
           inline
           primary
+          isTextLink={false}
           to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
         >
           <Button className="my20" label="Download master branch source code" />

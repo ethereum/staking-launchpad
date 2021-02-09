@@ -7,18 +7,17 @@ import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
 import { FormNext } from 'grommet-icons';
-import { colors } from '../../styles/styledComponentsTheme';
-import { ProgressBar } from './ProgresBar';
 import { queryContract } from '../../utils/queryContract';
-import { ProgressBarInfo } from './ProgressBarInfo';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
 import {
   ENABLE_RPC_FEATURES,
-  ETH_REQUIREMENT,
   PRICE_PER_VALIDATOR,
-  ETH2_NETWORK_NAME,
+  TESTNEST_LAUNCHPAD_NAME,
+  IS_MAINNET,
+  MAINNET_LAUNCHPAD_URL,
+  TESTNEST_LAUNCHPAD_URL,
   TICKER_NAME,
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
@@ -176,23 +175,6 @@ const _CongratulationsPage = ({
     }
   });
 
-  const stakingBalancePercent = (() => {
-    // @ts-ignore (type check in envVars.ts)
-    const percent = (amountEth / ETH_REQUIREMENT) * 100;
-    if (percent === 0) return 0;
-    if (percent < 1) return 0.25;
-    return percent;
-  })();
-  const amountAddedPercent = (() => {
-    const percent =
-      // @ts-ignore
-      ((depositKeys.length * PRICE_PER_VALIDATOR) / ETH_REQUIREMENT) * 100;
-    if (percent === 0) return 0;
-    if (percent < 1) return 0.25;
-    return percent;
-  })();
-  const thresholdPercent = 100 - stakingBalancePercent - amountAddedPercent;
-
   if (workflow < WorkflowStep.CONGRATULATIONS) {
     return routeToCorrectWorkflowStep(workflow);
   }
@@ -216,16 +198,39 @@ const _CongratulationsPage = ({
             </span>
           </Heading>
           <Alert variant="info" className="mt30" pad="medium">
-            <FormattedMessage
-              defaultMessage="There is a bit of a wait before your validator becomes active on the Beacon Chain. Use this time to complete the checklist and spend some time validating {testnet}"
-              values={{
-                testnet: (
-                  <Link inline to="https://pyrmont.launchpad.ethereum.org">
-                    {ETH2_NETWORK_NAME}
-                  </Link>
-                ),
-              }}
-            />
+            {IS_MAINNET && (
+              <>
+                <FormattedMessage
+                  defaultMessage="There is a short wait before your validator becomes active on the Beacon Chain. Use this time to complete the checklist and spend some time validating the {testnet}"
+                  values={{
+                    testnet: (
+                      <Link primary inline to={TESTNEST_LAUNCHPAD_URL}>
+                        {TESTNEST_LAUNCHPAD_NAME} Testnet
+                      </Link>
+                    ),
+                  }}
+                />{' '}
+                <Link
+                  primary
+                  to="https://kb.beaconcha.in/ethereum-2.0-depositing"
+                  className="mt10"
+                >
+                  <FormattedMessage defaultMessage="Why is there a wait?" />
+                </Link>
+              </>
+            )}
+            {!IS_MAINNET && (
+              <FormattedMessage
+                defaultMessage="You've successfully set up a testnet validator! We recommend you complete the checklist before validating on {mainnet}"
+                values={{
+                  mainnet: (
+                    <Link primary inline to={MAINNET_LAUNCHPAD_URL}>
+                      mainnet
+                    </Link>
+                  ),
+                }}
+              />
+            )}
           </Alert>
           <div>
             {ENABLE_RPC_FEATURES && (
@@ -313,42 +318,6 @@ const _CongratulationsPage = ({
                     </Row>
                   </CardLink>
                 </CardContainer>
-                <Heading
-                  level={3}
-                  size="medium"
-                  className="mt40"
-                  color="blueDark"
-                  margin="none"
-                >
-                  <FormattedMessage defaultMessage="The Eth2 network" />
-                </Heading>
-                <ProgressBar
-                  complete={stakingBalancePercent}
-                  newlyAdded={amountAddedPercent}
-                  incomplete={thresholdPercent}
-                />
-                <div className="flex space-between mt20">
-                  <ProgressBarInfo
-                    title={formatMessage({
-                      defaultMessage: 'Staking balance',
-                      description: 'Informing user of staking balance',
-                    })}
-                    color={colors.blue.dark}
-                    amountEth={amountEth}
-                    // @ts-ignore
-                    amountValidators={amountEth / PRICE_PER_VALIDATOR}
-                  />
-                  <ProgressBarInfo
-                    title={formatMessage({
-                      defaultMessage: 'You added',
-                      description: 'Informing user of total funds deposited',
-                    })}
-                    color={colors.blue.light}
-                    // @ts-ignore
-                    amountEth={depositKeys.length * PRICE_PER_VALIDATOR}
-                    amountValidators={depositKeys.length}
-                  />
-                </div>
               </>
             )}
           </div>
@@ -383,7 +352,11 @@ const _CongratulationsPage = ({
                       rainbow
                     />
                   </Link>
-                  <Link to="https://invite.gg/ethstaker" className="mt20">
+                  <Link
+                    isTextLink={false}
+                    to="https://invite.gg/ethstaker"
+                    className="mt20"
+                  >
                     <Button
                       fullWidth
                       label={formatMessage({ id: 'EthStaker community' })}

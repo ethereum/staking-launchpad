@@ -30,7 +30,10 @@ const StyledPaper = styled(Paper)`
 
 export const MetamaskHardwareButton = () => {
   return (
-    <Link to="https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet">
+    <Link
+      isTextLink={false}
+      to="https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet"
+    >
       <StyledPaper
         pad="xsmall"
         className="wallet-button flex flex-row relative"

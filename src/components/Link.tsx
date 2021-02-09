@@ -60,10 +60,19 @@ interface LinkProps {
   onClick?: (param?: any) => void;
   isTextLink?: boolean;
   inline?: boolean;
+  shouldOpenNewTab?: boolean;
 }
 
 export const Link = (props: LinkProps) => {
-  const { children, className, to, primary, inline, isTextLink = true } = props;
+  const {
+    children,
+    className,
+    to,
+    primary,
+    inline,
+    isTextLink = true,
+    shouldOpenNewTab = false,
+  } = props;
   const { locale } = useIntl();
   const isExternal = to && to.includes('http');
   if (isExternal) {
@@ -82,7 +91,12 @@ export const Link = (props: LinkProps) => {
   }
   const langPath = `/${locale}${to}`;
   return (
-    <StyledLink className={className} {...props} to={langPath}>
+    <StyledLink
+      target={shouldOpenNewTab ? '_blank' : '_self'}
+      className={className}
+      {...props}
+      to={langPath}
+    >
       {children}
     </StyledLink>
   );

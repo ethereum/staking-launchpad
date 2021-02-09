@@ -214,7 +214,7 @@ export const Option2 = ({
         </Link>
       </Text>
       <Heading level={4} size="small" color="blueMedium" className="mb10 mt20">
-        Install deposit-cli tool
+<FormattedMessage defaultMessage="Install deposit-cli tool"/>
       </Heading>
       <Text>
         <FormattedMessage defaultMessage="Download and uncompress the master branch source code from GitHub." />

@@ -78,10 +78,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
             and run Nimbus correctly. Run the make commands again.
           </Text>
           <Code className="my20">./build/data/[testnet_name]/</Code>
-          <Link
-            primary
-            to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
-          >
+          <Link primary to="https://nimbus.guide/keys.html">
             Nimbus key management documentation
           </Link>
         </section>

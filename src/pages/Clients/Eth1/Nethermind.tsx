@@ -22,7 +22,7 @@ export const NethermindDetails = () => (
     </SectionTitle>
     <Text className="mt10">
       Nethermind is built on .NET Core. Extend it, customise it - the sky’s the
-      limit..
+      limit...
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
@@ -32,11 +32,7 @@ export const NethermindDetails = () => (
         The Nethermind documentation explains how to download and install the
         client.
       </Text>
-      <Link
-        primary
-        to="https://nethermind.readthedocs.io/en/latest/download.html"
-        className="mt10"
-      >
+      <Link primary to="https://downloads.nethermind.io/" className="mt10">
         Nethermind installation documentation
       </Link>
     </section>
@@ -60,7 +56,7 @@ export const NethermindDetails = () => (
           <Link
             primary
             className="mt20"
-            to="https://nethermind.readthedocs.io/en/latest/networks.html#mainnet"
+            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#mainnet"
           >
             --config mainnet documentation
           </Link>
@@ -82,7 +78,7 @@ export const NethermindDetails = () => (
           <Link
             primary
             className="mt20"
-            to="https://nethermind.readthedocs.io/en/latest/networks.html#gorli-goerli"
+            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#goerli-goerli"
           >
             Nethermind on Goerli documentation
           </Link>
@@ -101,7 +97,7 @@ export const NethermindDetails = () => (
       <Link
         primary
         className="mt20"
-        to="https://nethermind.readthedocs.io/en/latest/configuration.html#jsonrpcconfig"
+        to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
       >
         --JsonRpc.Enabled documentation
       </Link>

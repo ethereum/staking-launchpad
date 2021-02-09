@@ -6,7 +6,7 @@ import { Heading } from '../../../components/Heading';
 import { routesEnum } from '../../../Routes';
 import { Link } from '../../../components/Link';
 import { Step } from './Step';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../../utils/envVars';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -35,87 +35,118 @@ const Subtitle = styled.p`
 
 export const SignupSteps = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
+  const intl = useIntl();
   return (
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
         <Heading level={2} size="medium" color="blueDark" margin="none">
-          Become a validator
+          <FormattedMessage defaultMessage="Become a validator" />
         </Heading>
         <Subtitle>
-          Becoming a validator is a big responsibility with important
-          preparation steps. Only start the deposit process when you're ready.
+          <FormattedMessage
+            defaultMessage="Becoming a validator is a big responsibility with important
+          preparation steps. Only start the deposit process when you're ready."
+          />
         </Subtitle>
       </ScrollAnimation>
       <StepsContainer>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Step
             emoji="📚"
-            emojiAlt="books"
-            title="1. Learn about your responsibilities"
-            content="The Eth2 upgrades will only be successful if validators understand the risks and responsibilities."
+            emojiAlt={intl.formatMessage({ defaultMessage: 'books' })}
+            title={intl.formatMessage({
+              defaultMessage: '1. Learn about your responsibilities',
+            })}
+            content={intl.formatMessage({
+              defaultMessage:
+                'The Eth2 upgrades will only be successful if validators understand the risks and responsibilities.',
+            })}
           >
             <Link to={routesEnum.FaqPage} primary withArrow>
-              Validators FAQ
+              <FormattedMessage defaultMessage="Validators FAQ" />
             </Link>
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             emoji="🔧"
-            emojiAlt="wrench"
-            title="2. Prep nodes"
-            content={`You'll need to run an Eth1 and an Eth2 node to become a validator. Take a look at the checklist to prepare yourself and your equipment.`}
+            emojiAlt={intl.formatMessage({ defaultMessage: 'wrench' })}
+            title={intl.formatMessage({ defaultMessage: '2. Prep nodes' })}
+            content={intl.formatMessage({
+              defaultMessage:
+                "You'll need to run an Eth1 and an Eth2 node to become a validator. Take a look at the checklist to prepare yourself and your equipment.",
+            })}
           >
             <Link to={routesEnum.checklistPage} primary withArrow>
-              Hardware checklist
+              <FormattedMessage defaultMessage="Hardware checklist" />
             </Link>
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
           <Step
             emoji="🥋"
-            emojiAlt="martial arts uniform"
-            title="3. Practice on a testnet"
-            content="We recommend you go through the entire process on a testnet first to get comfortable."
+            emojiAlt={intl.formatMessage({
+              defaultMessage: 'martial arts uniform',
+            })}
+            title={intl.formatMessage({
+              defaultMessage: '3. Practice on a testnet',
+            })}
+            content={intl.formatMessage({
+              defaultMessage:
+                'We recommend you go through the entire process on a testnet first to get comfortable.',
+            })}
           >
             <Link to={routesEnum.checklistPage}>
-              Try the testnet [how can we dynamically link to the testnet?]
+              <FormattedMessage defaultMessage="Try the testnet [how can we dynamically link to the testnet?]" />
             </Link>
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             emoji="🚧"
-            emojiAlt="warning construction sign"
-            title="4. Avoid phishing"
-            content="Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
+            emojiAlt={intl.formatMessage({
+              defaultMessage: 'warning construction sign',
+            })}
+            title={intl.formatMessage({ defaultMessage: '4. Avoid phishing' })}
+            content={intl.formatMessage({
+              defaultMessage:
+                "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for.",
+            })}
           >
             <Link to={routesEnum.phishingPage} primary withArrow>
-              Avoid phishing guide
+              <FormattedMessage defaultMessage="Phishing guide" />
             </Link>
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
           <Step
             emoji="💰"
-            emojiAlt="money bag"
-            title="5. Time to deposit"
-            content={`Once you're comfortable, you'll go through generating your keys and depositing your ${PRICE_PER_VALIDATOR} ${TICKER_NAME}.`}
+            emojiAlt={intl.formatMessage({ defaultMessage: 'money bag' })}
+            title={intl.formatMessage({ defaultMessage: '5. Time to deposit' })}
+            content={intl.formatMessage({
+              defaultMessage:
+                "Once you're comfortable, you'll go through generating your keys and depositing your ETH.",
+            })}
           >
             <Link to={routesEnum.acknowledgementPage} primary withArrow>
-              Start deposit process
+              <FormattedMessage defaultMessage="Start deposit process" />
             </Link>
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             emoji="🕰"
-            emojiAlt="clock"
-            title="6. Wait to become active"
-            content="Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet."
+            emojiAlt={intl.formatMessage({ defaultMessage: 'clock' })}
+            title={intl.formatMessage({
+              defaultMessage: '6. Wait to become active',
+            })}
+            content={intl.formatMessage({
+              defaultMessage:
+                "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet.",
+            })}
           >
             <Link to={routesEnum.checklistPage} primary withArrow>
-              Complete checklist
+              <FormattedMessage defaultMessage="Complete checklist" />
             </Link>
           </Step>
         </ScrollAnimation>
@@ -127,7 +158,7 @@ export const SignupSteps = (): JSX.Element => {
             className="m-auto"
             fullWidth
             width={m ? undefined : 400}
-            label="BECOME A VALIDATOR"
+            label={intl.formatMessage({ defaultMessage: 'Become a validator' })}
           />
         </Link>
       </ScrollAnimation>

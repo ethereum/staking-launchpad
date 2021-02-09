@@ -251,12 +251,16 @@ const _ConnectWalletPage = ({
     ) {
       setStatus(`${balance} ${TICKER_NAME}`);
     } else if (walletConnected && error) {
-      setStatus('Error');
+      setStatus(intl.formatMessage({ defaultMessage: 'Error' }));
     } else if (!networkAllowed) {
       setStatus(
-        `Connect ${getWalletName(walletProvider)} to ${
-          IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet'
-        }`
+        intl.formatMessage(
+          { defaultMessage: 'Connect {wallet} to {network}' },
+          {
+            wallet: getWalletName(walletProvider),
+            network: IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet',
+          }
+        )
       );
     }
   }, [chainId, walletConnected, networkAllowed, error, balance, network]);
@@ -343,20 +347,18 @@ const _ConnectWalletPage = ({
                       <>
                         <FormattedMessage
                           defaultMessage="You do not have enough {eth} in this account for
-                          {depositKeys} {validator}"
+                          {numberOfValidators} {validator}"
                           values={{
-                            depositKeys: (
-                              <span>
-                                {depositKeys.length}
-                                {depositKeys.length > 1 ? 's' : ''}
-                              </span>
-                            ),
-                            eth: <span>{TICKER_NAME}</span>,
-                            validator: (
-                              <span>
-                                validator{depositKeys.length > 1 ? 's' : ''}
-                              </span>
-                            ),
+                            numberOfValidators: depositKeys.length,
+                            eth: TICKER_NAME,
+                            validator:
+                              depositKeys.length > 1
+                                ? intl.formatMessage({
+                                    defaultMessage: 'validators',
+                                  })
+                                : intl.formatMessage({
+                                    defaultMessage: 'validator',
+                                  }),
                           }}
                         />
                       </>
@@ -367,9 +369,9 @@ const _ConnectWalletPage = ({
                         primary
                       >
                         <FormattedMessage
-                          defaultMessage="Get {eth}"
+                          defaultMessage="Get {TICKER_NAME}"
                           values={{
-                            eth: <span>{TICKER_NAME}</span>,
+                            TICKER_NAME,
                           }}
                         />
                       </FaucetLink>

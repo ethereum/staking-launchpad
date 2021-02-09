@@ -21,35 +21,31 @@ export const Option2 = ({
   validatorCount: number | string;
   os: string;
 }) => {
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   const renderPythonInstructions = () => {
     if (os === 'linux')
       return (
-        <>
-          The python3 install process may differ depending on your linux build.
-        </>
+        <FormattedMessage defaultMessage="The python3 install process may differ depending on your linux build." />
       );
-
     if (os === 'mac')
       return (
-        <>
-          <FormattedMessage
-            defaultMessage="You can install python3 on your MacOS device using {homebrew}"
-            values={{
-              homebrew: (
-                <Link primary inline to="https://docs.brew.sh/Manpage">
-                  homebrew
-                </Link>
-              ),
-            }}
-          />
-        </>
+        <FormattedMessage
+          defaultMessage="You can install python3 on your MacOS device using {homebrew}"
+          values={{
+            homebrew: (
+              <Link primary inline to="https://docs.brew.sh/Manpage">
+                homebrew
+              </Link>
+            ),
+          }}
+          description="{homebrew} = 'homebrew' and links to the homebrew package manager website documentation"
+        />
       );
 
     if (os === 'windows')
       return (
         <>
-          Download python3 and follow the installation instructions.
+          <FormattedMessage defaultMessage="Download python3 and follow the installation instructions." />
           <ul>
             <li>
               <Link
@@ -80,14 +76,13 @@ export const Option2 = ({
               apt: <Code>apt</Code>,
               yum: <Code>yum</Code>,
             }}
+            description="{apt} and {yum} are both package manager names styled as code"
           />
           <Link
-            inline
             primary
             to="https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers"
           >
-            {' '}
-            More on installing pip
+            <FormattedMessage defaultMessage="More on installing pip" />
           </Link>
         </Text>
       );
@@ -111,7 +106,7 @@ export const Option2 = ({
                   primary
                   to="https://pip.pypa.io/en/stable/installing/"
                 >
-                  {intl.formatMessage({ defaultMessage: 'pip documentation' })}
+                  {formatMessage({ defaultMessage: 'pip documentation' })}
                 </Link>
               ),
             }}
@@ -173,16 +168,16 @@ export const Option2 = ({
   return (
     <div className="mt30">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
-        Build deposit-cli from the Python source code
+        <FormattedMessage defaultMessage="Build deposit-cli from the Python source code" />
       </Heading>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
-        Install python3.7+
+        <FormattedMessage defaultMessage="Install python3.7+" />
       </Heading>
       <Text>{renderPythonInstructions()}</Text>
       <Text>
-        If you need help, check out the Python documentation.{' '}
-        <Link primary inline to="https://python.org/about/gettingstarted">
-          Python installation instructions
+        <FormattedMessage defaultMessage="If you need help, check out the Python documentation." />
+        <Link primary to="https://python.org/about/gettingstarted">
+          <FormattedMessage defaultMessage="Python installation instructions" />
         </Link>
       </Text>
       <Alert variant="info" className="my10">
@@ -202,35 +197,39 @@ export const Option2 = ({
       </Alert>
 
       <Heading level={4} size="small" color="blueMedium" className="mb10 mt20">
-        Install pip3
+        <FormattedMessage defaultMessage="Install pip3" />
       </Heading>
       {renderPipInstructions()}
       <Heading level={4} size="small" color="blueMedium" className="mb10 my20">
-        Install virtualenv
+        <FormattedMessage defaultMessage="Install virtualenv" />
       </Heading>
       <Text>
-        virtualenv would help you to create an isolated Python environment for
-        deposit-cli tool.{' '}
+        <FormattedMessage defaultMessage="virtualenv would help you to create an isolated Python environment for deposit-cli tool." />
         <Link
           to="https://virtualenv.pypa.io/en/latest/installation.html"
           inline
           primary
         >
-          More on virtualenv
+          <FormattedMessage defaultMessage="More on virtualenv" />
         </Link>
       </Text>
       <Heading level={4} size="small" color="blueMedium" className="mb10 mt20">
         Install deposit-cli tool
       </Heading>
       <Text>
-        Download and uncompress the master branch source code from GitHub.
+        <FormattedMessage defaultMessage="Download and uncompress the master branch source code from GitHub." />
         <Link
           inline
           primary
           isTextLink={false}
           to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
         >
-          <Button className="my20" label="Download master branch source code" />
+          <Button
+            className="my20"
+            label={formatMessage({
+              defaultMessage: 'Download master branch source code',
+            })}
+          />
         </Link>
       </Text>
       <Alert variant="info" className="my10">
@@ -249,7 +248,9 @@ export const Option2 = ({
           />
         </Text>
       </Alert>
-      <Text>First, create an venv virtualenv under repository directory:</Text>
+      <Text>
+        <FormattedMessage defaultMessage="First, create a venv virtualenv under repository directory:" />
+      </Text>
       <Alert variant="secondary" className="my10">
         <pre className="my0">
           <span style={{ color: colors.blue.medium }}>virtualenv</span> venv
@@ -259,7 +260,9 @@ export const Option2 = ({
         )}
         {os === 'windows' && <pre className="my0">.\venv\Scripts\activate</pre>}
       </Alert>
-      <Text>Second, install the dependency packages:</Text>
+      <Text>
+        <FormattedMessage defaultMessage="Second, install the dependency packages:" />
+      </Text>
       <Alert variant="secondary" className="my10">
         <pre className="my0">
           {(os === 'linux' || os === 'mac') && (
@@ -279,14 +282,13 @@ export const Option2 = ({
         </pre>
       </Alert>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
-        Generate deposit keys using the Ethereum Foundation deposit tool
+        <FormattedMessage defaultMessage="Generate deposit keys using the Ethereum Foundation deposit tool" />
       </Heading>
       <Alert className="my20" variant="info">
-        For security, we recommend you disconnect from the internet to complete
-        this step.
+        <FormattedMessage defaultMessage="For security, we recommend you disconnect from the internet to complete this step." />
       </Alert>
       <Text className="mt5">
-        Type the following lines into the terminal window:
+        <FormattedMessage defaultMessage="Type the following lines into the terminal window:" />
       </Text>
       <Alert variant="secondary" className="my10">
         {renderDepositKeyCommand()}
@@ -310,8 +312,7 @@ export const Option2 = ({
       </Alert>
       <Alert variant="warning" className="my10">
         <Text>
-          If you have questions about deposit-cli, please visit the GitHub
-          repository.
+          <FormattedMessage defaultMessage="If you have questions about deposit-cli, please visit the GitHub repository." />
         </Text>
         <Link
           primary

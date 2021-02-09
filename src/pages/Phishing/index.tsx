@@ -14,10 +14,10 @@ const SectionTitle = styled(Heading)`
 `;
 
 export const Phishing = () => {
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   return (
     <PageTemplate
-      title={intl.formatMessage({ defaultMessage: 'Avoid Eth2 phishing' })}
+      title={formatMessage({ defaultMessage: 'Avoid Eth2 phishing' })}
     >
       <Text className="mt10">
         <FormattedMessage
@@ -33,11 +33,10 @@ export const Phishing = () => {
           <li>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Does the site asking you for your {validatorAmount}{eth} deposit have a URL you
+                defaultMessage="Does the site asking you for your {ethAmount} deposit have a URL you
                 expect?"
                 values={{
-                  validatorAmount: <span>{PRICE_PER_VALIDATOR}</span>,
-                  eth: <span>{TICKER_NAME}</span>,
+                  ethAmount: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
                 }}
               />
             </Text>
@@ -88,10 +87,9 @@ export const Phishing = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Are there recent {validatorAmount}{eth} deposits?"
+                    defaultMessage="Are there recent {ethAmount} deposits?"
                     values={{
-                      validatorAmount: <span>{PRICE_PER_VALIDATOR}</span>,
-                      eth: <span>{TICKER_NAME}</span>,
+                      ethAmount: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
                     }}
                   />
                 </Text>

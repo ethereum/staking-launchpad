@@ -98,7 +98,6 @@ export const Footer = () => {
         )}
         <div className="col extra-links">
           <Heading level={4}>
-            {' '}
             <FormattedMessage defaultMessage="More on Eth2" />
           </Heading>
           <Link to="https://ethereum.org/en/eth2/">

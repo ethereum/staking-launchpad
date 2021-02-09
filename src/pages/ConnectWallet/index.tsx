@@ -284,11 +284,7 @@ const _ConnectWalletPage = ({
                 <StatusText>{status}</StatusText>
               </div>
               {!IS_MAINNET && lowBalance && (
-                <FaucetLink
-                  to="https://faucet.goerli.mudit.blog/"
-                  primary
-                  withArrow
-                >
+                <FaucetLink to="https://faucet.goerli.mudit.blog/" primary>
                   Goerli Faucet
                 </FaucetLink>
               )}

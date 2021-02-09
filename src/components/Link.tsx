@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import { useIntl } from 'react-intl';
-import { FormNext } from 'grommet-icons';
 
 interface LinkProps {
   primary?: boolean | undefined;
@@ -51,11 +50,6 @@ const StyledLink = styled(RouterLink)`
     props.primary ? props.theme.blue.medium : 'inherit'};
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
 `;
-const Arrow = styled(FormNext)`
-  transform: translate(0px, 6px);
-  stroke: ${(props: any) =>
-    props.primary ? props.theme.blue.medium : 'inherit'};
-`;
 
 interface LinkProps {
   to: string;
@@ -64,17 +58,15 @@ interface LinkProps {
   className?: string;
   primary?: boolean | undefined;
   onClick?: (param?: any) => void;
+  isTextLink?: boolean;
   inline?: boolean;
-  withArrow?: boolean;
 }
 
 export const Link = (props: LinkProps) => {
-  const { children, className, to, primary, inline, withArrow } = props;
+  const { children, className, to, primary, inline, isTextLink = true } = props;
   const { locale } = useIntl();
   const isExternal = to && to.includes('http');
-
   if (isExternal) {
-    const isTextLink = typeof children === 'string';
     return (
       <StyledExternalLink
         className={className}
@@ -85,10 +77,6 @@ export const Link = (props: LinkProps) => {
         isTextLink={isTextLink}
       >
         {children}
-        {withArrow && (
-          // @ts-ignore
-          <Arrow primary={primary} />
-        )}
       </StyledExternalLink>
     );
   }
@@ -96,7 +84,6 @@ export const Link = (props: LinkProps) => {
   return (
     <StyledLink className={className} {...props} to={langPath}>
       {children}
-      {withArrow && <Arrow primary={primary} />}
     </StyledLink>
   );
 };

@@ -318,7 +318,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>Configure your Eth2 client</Heading>
-          <Link className="mt10" to="/faq" primary withArrow>
+          <Link className="mt10" to="/faq" primary>
             Learn more about the roles and responsibilities of ETH 2 Validators
           </Link>
           <ClientContainer>

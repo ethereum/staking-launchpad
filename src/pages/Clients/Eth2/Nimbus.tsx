@@ -10,6 +10,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { NIMBUS_INSTALLATION_URL } from '../../../utils/envVars';
+import { FormattedMessage } from 'react-intl';
 
 export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -17,35 +18,39 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       Nimbus
     </SectionTitle>
     <Text className="mt10">
-      A research project and a client implementation for Eth2 designed to
-      perform well on embedded systems and personal mobile devices, including
-      older smartphones with resource-restricted hardware. The Nimbus team are
-      from Status, a company best known for their messaging app/wallet/Web3
-      browser.
+      <FormattedMessage
+        defaultMessage="A research project and a client implementation for Eth2 designed to
+          perform well on embedded systems and personal mobile devices, including
+          older smartphones with resource-restricted hardware. The Nimbus team are
+          from Status, a company best known for their messaging app/wallet/Web3
+          browser."
+      />
     </Text>
     <Link
       to="https://our.status.im/nimbus-for-newbies/"
       primary
       className="mt10"
     >
-      More on Nimbus
+      <FormattedMessage defaultMessage="More on Nimbus" />
     </Link>
     <Link to="https://status.im/" primary className="mt10">
-      More on Status
+      <FormattedMessage defaultMessage="More on Status" />
     </Link>
     <SectionTitle level={2} className="mb5">
-      Language information
+      <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      Nimbus (Apache 2) is written in Nim, a language with Python-like syntax
-      that compiles to C.
+      <FormattedMessage
+        defaultMessage="Nimbus (Apache 2) is writtenin Nim, a language with
+          Python-like syntax that compiles to C."
+      />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Become a validator with Nimbus
+        <FormattedMessage defaultMessage="Become a validator with Nimbus" />
       </SectionTitle>
       <Link primary to={NIMBUS_INSTALLATION_URL}>
-        Nimbus installation documentation
+        <FormattedMessage defaultMessage="Nimbus installation documentation" />
       </Link>
     </section>
 
@@ -53,36 +58,33 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       <>
         <section>
           <SectionTitle level={2} className="mb5">
-            Key management
+            <FormattedMessage defaultMessage="Key management" />
           </SectionTitle>
           <Text className="mt10">
-            Nimbus looks for keystores in your validators folder.
+            <FormattedMessage defaultMessage="Nimbus looks for keystores in your validators folder." />
           </Text>
           <Code className="my20">./build/data/[testnet_name]/validators</Code>
           <Text className="mt10">
-            {' '}
-            It uses the assisted password in your secrets folder.
+            <FormattedMessage defaultMessage="It uses the assisted password in your secrets folder." />
           </Text>
           <Code className="my20">/build/data/[testnet_name]/secrets</Code>
           <Text className="mt10">
-            If you do not supply a password, Nimbus will interactively ask for
-            it on startup.
+            <FormattedMessage defaultMessage="If you do not supply a password, Nimbus will interactively ask for it on startup." />
           </Text>
         </section>
         <section>
           <SectionTitle level={2} className="mb5">
-            Troubleshooting
+            <FormattedMessage defaultMessage="Troubleshooting" />
           </SectionTitle>
           <Text className="mt10">
-            If you do not have a testnet folder it is likely you have not built
-            and run Nimbus correctly. Run the make commands again.
+            <FormattedMessage
+              defaultMessage="If you do not have a testnet folder it is likely you have not built and run Nimbus
+                correctly. Run the make commands again."
+            />
           </Text>
           <Code className="my20">./build/data/[testnet_name]/</Code>
-          <Link
-            primary
-            to="https://status-im.github.io/nimbus-eth2/zinken.html#key-management"
-          >
-            Nimbus key management documentation
+          <Link primary to="https://nimbus.guide/keys.html">
+            <FormattedMessage defaultMessage="Nimbus key management documentation" />
           </Link>
         </section>
       </>
@@ -98,10 +100,10 @@ export const Nimbus = () => {
         <NimbusDetails />
         <section>
           <SectionTitle level={2} className="mb5">
-            Documentation
+            <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
           <Link primary to="https://status-im.github.io/nimbus-eth2/intro.html">
-            Nimbus documentation
+            <FormattedMessage defaultMessage="Nimbus documentation" />
           </Link>
         </section>
       </ValidatorClientPageStyles>

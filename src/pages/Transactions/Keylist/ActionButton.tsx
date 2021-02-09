@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
+import { FormattedMessage } from 'react-intl';
 import {
   DepositStatus,
   TransactionStatus,
@@ -15,16 +16,24 @@ import {
 import ReactTooltip from 'react-tooltip';
 
 const Container = styled.div`
-  width: 100px;
   display: flex;
+  border: 1px solid ${p => p.theme.gray.medium};
+  padding: 4px;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  :hover {
+    background: ${p => p.theme.gray.light};
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
 `;
+
 const ButtonText = styled(Text)`
   line-height: inherit;
   font-size: 16px;
-  cursor: pointer;
-  :hover {
-    text-decoration: underline;
-  }
+  text-align: center;
 `;
 
 interface Props {
@@ -54,8 +63,9 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.READY) {
     return (
       <Container onClick={onClick}>
-        <ButtonText>Start</ButtonText>
-        <FormNextLink />
+        <ButtonText>
+          <FormattedMessage defaultMessage="Confirm deposit" />
+        </ButtonText>
       </Container>
     );
   }
@@ -100,11 +110,17 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.REJECTED) {
     return (
       <Container onClick={onClick}>
-        <ButtonText>Try again</ButtonText>
+        <ButtonText>
+          <FormattedMessage defaultMessage="Try again" />
+        </ButtonText>
         <FormNextLink />
       </Container>
     );
   }
 
-  return <Text>An Error Occurred</Text>;
+  return (
+    <Text>
+      <FormattedMessage defaultMessage="An error occurred" />
+    </Text>
+  );
 };

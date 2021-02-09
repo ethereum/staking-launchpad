@@ -16,6 +16,7 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { Paper } from '../../../components/Paper';
 import { Text } from '../../../components/Text';
+import { Heading } from '../../../components/Heading';
 import { Status } from './Status';
 import { ActionButton } from './ActionButton';
 import { DepositKeyInterface, StoreState } from '../../../store/reducers';
@@ -26,6 +27,7 @@ import {
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../../store/actions/depositFileActions';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const CustomTableRow = styled(p => <TableRow {...p} />)`
   background-color: ${(p: any) => {
@@ -72,21 +74,24 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
       dispatchTransactionStatusUpdate
     );
   };
-
+  const intl = useIntl();
   return (
     <CustomPaper className="mt20">
-      <Box pad="small">
+      <Heading level={3} size="small" color="blueMedium" className="mb20">
+        <FormattedMessage defaultMessage="Key list" />
+      </Heading>
+      <Box pad="x-small">
         <CustomTable>
           <TableHeader>
             <CustomTableRow header>
               <TableCell scope="col" border="bottom">
-                Validator Public Key
+                <FormattedMessage defaultMessage="Validator public key" />
               </TableCell>
               <TableCell scope="col" border="bottom">
-                Status
+                <FormattedMessage defaultMessage="Status" />
               </TableCell>
               <TableCell scope="col" border="bottom">
-                Action
+                <FormattedMessage defaultMessage="Action" />
               </TableCell>
             </CustomTableRow>
           </TableHeader>
@@ -101,7 +106,10 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
               return (
                 <CustomTableRow
                   data-for={`double-deposit-${i}`}
-                  data-tip="Your initial deposit has already been made for this validator public key. Please check the status of your deposit on the Beaconchain data provider."
+                  data-tip={intl.formatMessage({
+                    defaultMessage:
+                      'Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider.',
+                  })}
                   key={pubkey}
                   invalid={depositStatus === DepositStatus.ALREADY_DEPOSITED}
                 >

@@ -220,7 +220,9 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#responsibilities" id="responsibilities">
-            <SectionTitle level={3}>Responsibilities</SectionTitle>
+            <SectionTitle level={3}>
+              <FormattedMessage defaultMessage="Responsibilities" />
+            </SectionTitle>
           </Anchor>
           <section>
             <Heading level={4}>
@@ -239,7 +241,9 @@ export const FAQ = () => {
                   blocks that are included in the chain."
               />
             </Text>
-            <Text className="mt10">The key concept is the following:</Text>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="The key concept is the following:" />
+            </Text>
             <ul>
               <li>
                 <FormattedMessage defaultMessage="Rewards are given for actions that help the network reach consensus" />
@@ -559,7 +563,9 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#keys" id="keys">
-            <SectionTitle level={3}>Keys</SectionTitle>
+            <SectionTitle level={3}>
+              <FormattedMessage defaultMessage="Keys" />
+            </SectionTitle>
           </Anchor>
           <section>
             <Heading level={4}>
@@ -596,8 +602,10 @@ export const FAQ = () => {
                     ),
                     strongText: (
                       <strong>
-                        validators can always recalculate their signing key from
-                        their withdrawal key.
+                        {formatMessage({
+                          defaultMessage:
+                            'validators can always recalculate their signing key from their withdrawal key',
+                        })}
                       </strong>
                     ),
                   }}
@@ -678,7 +686,9 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#support" id="support">
-            <SectionTitle level={3}>Support</SectionTitle>
+            <SectionTitle level={3}>
+              <FormattedMessage defaultMessage="Support" />
+            </SectionTitle>
           </Anchor>
           <section>
             <Heading level={4}>

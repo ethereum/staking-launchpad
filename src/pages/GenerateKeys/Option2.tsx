@@ -227,6 +227,7 @@ export const Option2 = ({
         <Link
           inline
           primary
+          isTextLink={false}
           to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
         >
           <Button className="my20" label="Download master branch source code" />
@@ -280,6 +281,10 @@ export const Option2 = ({
       <Heading level={4} size="small" color="blueMedium" className="mb10">
         Generate deposit keys using the Ethereum Foundation deposit tool
       </Heading>
+      <Alert className="my20" variant="info">
+        For security, we recommend you disconnect from the internet to complete
+        this step.
+      </Alert>
       <Text className="mt5">
         Type the following lines into the terminal window:
       </Text>

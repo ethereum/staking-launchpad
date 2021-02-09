@@ -31,7 +31,7 @@ export const NethermindDetails = () => (
       </Text>
       <Link
         primary
-        to="https://nethermind.readthedocs.io/en/latest/download.html"
+        to="https://downloads.nethermind.io/"
         className="mt10"
       >
         <FormattedMessage defaultMessage="Nethermind installation documentation" />
@@ -58,7 +58,7 @@ export const NethermindDetails = () => (
           <Link
             primary
             className="mt20"
-            to="https://nethermind.readthedocs.io/en/latest/networks.html#mainnet"
+            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#mainnet"
           >
             --config mainnet documentation
           </Link>
@@ -81,7 +81,7 @@ export const NethermindDetails = () => (
           <Link
             primary
             className="mt20"
-            to="https://nethermind.readthedocs.io/en/latest/networks.html#gorli-goerli"
+            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#goerli-goerli"
           >
             <FormattedMessage
               defaultMessage="Nethermind on Goerli documentation"
@@ -104,7 +104,7 @@ export const NethermindDetails = () => (
       <Link
         primary
         className="mt20"
-        to="https://nethermind.readthedocs.io/en/latest/configuration.html#jsonrpcconfig"
+        to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
       >
         --JsonRpc.Enabled documentation
       </Link>

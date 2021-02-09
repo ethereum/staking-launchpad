@@ -9,7 +9,12 @@ const ColorBox = styled.div`
   width: 20px;
   background-color: ${(p: any) => p.color};
   border-radius: ${p => p.theme.borderRadius};
-  margin: 10px;
+  margin-right: 8px;
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: flex-start;
 `;
 
 interface Props {
@@ -29,7 +34,7 @@ export const ProgressBarInfo = ({
   const formattedValidators = numeral(amountValidators).format('0,0');
 
   return (
-    <div className="flex">
+    <Container>
       <ColorBox color={color} />
       <div>
         <Text weight="bold">{title}</Text>
@@ -38,6 +43,6 @@ export const ProgressBarInfo = ({
         </Text>
         <Text size="small">({formattedValidators} validators)</Text>
       </div>
-    </div>
+    </Container>
   );
 };

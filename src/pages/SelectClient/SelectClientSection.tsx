@@ -46,6 +46,15 @@ const SelectClientSection = ({
     <Heading level={3} size="small" color="blueDark" className="mb20">
       {title}
     </Heading>
+    {ethVersionStep === 1 && (
+      <div style={{ paddingBottom: '1rem' }}>
+        To process incoming validator deposits from mainnet (the Eth1 chain),
+        you'll need to run an Eth1 client in parallel to your Eth2 client. While
+        you can use a third-party service like Infura, we recommend running your
+        own client in order to ensure the network stays as decentralised as
+        possible.
+      </div>
+    )}
     <Box className="flex flex-column space-between mt10">
       <ClientOptionContainer>
         {clients.map(({ clientId, name, imgUrl, language }) => {

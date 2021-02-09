@@ -113,12 +113,12 @@ const _TransactionsPage = ({
 
   const createContinueButtonText = (): string => {
     if (!oneTxConfirmed) {
-      return 'Continue 🎉';
+      return formatMessage({ defaultMessage: 'Continue' });
     }
     return allTxConfirmed
-      ? formatMessage({ defaultMessage: 'Continue 🎉' })
+      ? formatMessage({ defaultMessage: 'Continue' })
       : formatMessage({
-          defaultMessage: 'Complete without all transactions confirmed ⚠️',
+          defaultMessage: 'Continue without all transactions confirmed',
         });
   };
 
@@ -155,7 +155,7 @@ const _TransactionsPage = ({
         <Heading level={3} size="small" color="blueMedium">
           <FormattedMessage
             defaultMessage="Confirm deposits ({depositKeys})"
-            values={{ depositKeys: <span>{depositKeys.length}</span> }}
+            values={{ depositKeys: depositKeys.length }}
           />
         </Heading>
         {depositKeys.length === 1 && (

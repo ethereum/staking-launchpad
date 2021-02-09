@@ -347,7 +347,7 @@ const _CongratulationsPage = ({
                 <ButtonRow>
                   <Link to={routesEnum.checklistPage} className="mt20">
                     <Button
-                      label={formatMessage({ id: 'Checklist' })}
+                      label={formatMessage({ defaultMessage: 'Checklist' })}
                       className="mr20"
                       rainbow
                     />
@@ -359,7 +359,9 @@ const _CongratulationsPage = ({
                   >
                     <Button
                       fullWidth
-                      label={formatMessage({ id: 'EthStaker community' })}
+                      label={formatMessage({
+                        defaultMessage: 'EthStaker community',
+                      })}
                     />
                   </Link>
                 </ButtonRow>

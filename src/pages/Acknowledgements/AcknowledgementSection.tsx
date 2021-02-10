@@ -6,6 +6,7 @@ import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
+import { useIntl } from 'react-intl';
 
 const Container = styled.div`
   width: 100%;
@@ -49,7 +50,7 @@ export const AcknowledgementSection = ({
     acknowledgementId === AcknowledgementIdsEnum.introSection;
   const isConfirmationSection =
     acknowledgementId === AcknowledgementIdsEnum.confirmation;
-
+  const intl = useIntl();
   const renderButtons = () => {
     if (isConfirmationSection) {
       return (
@@ -60,7 +61,7 @@ export const AcknowledgementSection = ({
               handleGoBackClick(AcknowledgementIdsEnum.confirmation)
             }
             width={100}
-            label="Back"
+            label={intl.formatMessage({ defaultMessage: 'Back' })}
           />
           <Link
             to={routesEnum.selectClient}
@@ -73,7 +74,7 @@ export const AcknowledgementSection = ({
               rainbow
               width={300}
               disabled={!allAgreedTo}
-              label="Continue"
+              label={intl.formatMessage({ defaultMessage: 'Continue' })}
             />
           </Link>
         </div>
@@ -85,14 +86,18 @@ export const AcknowledgementSection = ({
           <Button
             width={100}
             onClick={() => handleGoBackClick(acknowledgementId)}
-            label="Back"
+            label={intl.formatMessage({ defaultMessage: 'Back' })}
             className="mr10"
           />
         )}
         <Button
           onClick={() => handleContinueClick(acknowledgementId)}
           rainbow
-          label={isIntroSection ? 'Continue' : 'I Accept'}
+          label={
+            isIntroSection
+              ? `${intl.formatMessage({ defaultMessage: 'Continue' })}`
+              : `${intl.formatMessage({ defaultMessage: 'I accept' })}`
+          }
           width={300}
         />
       </div>

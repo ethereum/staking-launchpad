@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormNextLink, Share } from 'grommet-icons';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { FormattedMessage } from 'react-intl';
 import {
   DepositStatus,
   TransactionStatus,
@@ -51,11 +51,13 @@ export const ActionButton = ({
   onClick,
   pubkey,
 }: Props) => {
+  const { formatMessage } = useIntl();
+
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
       <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
         <ButtonText className="mr5" data-tip>
-          Beaconchain <Share size="small" />
+          Beaconcha.in <Share size="small" />
         </ButtonText>
       </Link>
     );
@@ -88,11 +90,14 @@ export const ActionButton = ({
       <div className="flex">
         <span
           data-for="beaconchain-warning"
-          data-tip="Note: Beaconchain may take several minutes to verify your deposit"
+          data-tip={formatMessage({
+            defaultMessage:
+              'Note: Beacon Chain may take several minutes to verify your deposit',
+          })}
         >
           <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
             <ButtonText className="mr5" data-tip>
-              Beaconchain <Share size="small" />
+              Beaconcha.in <Share size="small" />
             </ButtonText>
           </Link>
         </span>

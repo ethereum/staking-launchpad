@@ -15,7 +15,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const AcknowledgementText = styled(Text)`
+const AcknowledgementText = styled(Text as any)`
   background: #ffdeb32e;
   border: 1px solid burlywood;
   padding: 30px;
@@ -23,9 +23,9 @@ const AcknowledgementText = styled(Text)`
 `;
 
 export interface AcknowledgementSectionData {
-  title: string;
+  title: JSX.Element;
   content: JSX.Element;
-  acknowledgementText?: string;
+  acknowledgementText?: JSX.Element;
   acknowledgementId: AcknowledgementIdsEnum;
 }
 
@@ -50,7 +50,7 @@ export const AcknowledgementSection = ({
     acknowledgementId === AcknowledgementIdsEnum.introSection;
   const isConfirmationSection =
     acknowledgementId === AcknowledgementIdsEnum.confirmation;
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   const renderButtons = () => {
     if (isConfirmationSection) {
       return (
@@ -61,7 +61,7 @@ export const AcknowledgementSection = ({
               handleGoBackClick(AcknowledgementIdsEnum.confirmation)
             }
             width={100}
-            label={intl.formatMessage({ defaultMessage: 'Back' })}
+            label={formatMessage({ defaultMessage: 'Back' })}
           />
           <Link
             to={routesEnum.selectClient}
@@ -74,7 +74,7 @@ export const AcknowledgementSection = ({
               rainbow
               width={300}
               disabled={!allAgreedTo}
-              label={intl.formatMessage({ defaultMessage: 'Continue' })}
+              label={formatMessage({ defaultMessage: 'Continue' })}
             />
           </Link>
         </div>
@@ -86,7 +86,7 @@ export const AcknowledgementSection = ({
           <Button
             width={100}
             onClick={() => handleGoBackClick(acknowledgementId)}
-            label={intl.formatMessage({ defaultMessage: 'Back' })}
+            label={formatMessage({ defaultMessage: 'Back' })}
             className="mr10"
           />
         )}
@@ -95,8 +95,8 @@ export const AcknowledgementSection = ({
           rainbow
           label={
             isIntroSection
-              ? `${intl.formatMessage({ defaultMessage: 'Continue' })}`
-              : `${intl.formatMessage({ defaultMessage: 'I accept' })}`
+              ? `${formatMessage({ defaultMessage: 'Continue' })}`
+              : `${formatMessage({ defaultMessage: 'I accept' })}`
           }
           width={300}
         />

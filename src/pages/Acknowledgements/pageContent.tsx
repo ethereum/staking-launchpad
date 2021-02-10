@@ -11,9 +11,9 @@ const BoldCaps = styled.strong`
 `;
 
 export interface PageContentInterface {
-  title: string;
+  title: JSX.Element;
   content: JSX.Element;
-  acknowledgementText?: any;
+  acknowledgementText?: JSX.Element;
 }
 
 export const pageContent = {

@@ -2,8 +2,7 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Box, DropButton } from 'grommet';
-import { Menu } from 'grommet-icons';
-import { Language } from 'grommet-icons';
+import { Menu, Language, FormDown } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
@@ -18,8 +17,14 @@ import { Link } from './Link';
 import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../utils/envVars';
+import {
+  IS_MAINNET,
+  TESTNEST_LAUNCHPAD_NAME,
+  MAINNET_LAUNCHPAD_URL,
+  TESTNEST_LAUNCHPAD_URL,
+} from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
+import { FormattedMessage } from 'react-intl';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -30,12 +35,23 @@ const EthLogo = styled.img`
   width: 40px;
 `;
 
-const NetworkText = styled(Text)`
+const NetworkText = styled.div`
   padding: 5px 8px;
-  border-radius: 4px;
   border: 1px solid;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 4px;
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
 `;
 
 const NavBarLinks = styled.div`
@@ -86,6 +102,7 @@ const BarLinkText = styled(Heading)`
   flex-direction: column;
   font-weight: ${(p: { active?: boolean }) => (p.active ? 'bold' : 300)};
 `;
+
 const _AppBar = ({ location }: RouteComponentProps) => {
   const {
     active: walletConnected,
@@ -138,7 +155,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 className="bar-link-text no-padding"
               >
                 <Text>
-                  Eth2 {!IS_MAINNET && `${ETH2_NETWORK_NAME} `}Launchpad
+                  Eth2 {!IS_MAINNET && `${TESTNEST_LAUNCHPAD_NAME}`} Launchpad
                 </Text>
               </BarLinkText>
             </div>
@@ -230,15 +247,40 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                       </Text>
                     </Box>
                   )}
-                  <NetworkText>
-                    {ETH2_NETWORK_NAME}
-                    {IS_MAINNET ? `` : ` Testnet`}
-                  </NetworkText>
+                  <span>
+                    <FormattedMessage defaultMessage="Launchpad network:" />{' '}
+                    <b>
+                      {IS_MAINNET
+                        ? `Mainnet`
+                        : `${TESTNEST_LAUNCHPAD_NAME} testnet`}
+                    </b>
+                  </span>
+                  <Link
+                    primary
+                    to={
+                      IS_MAINNET
+                        ? `${TESTNEST_LAUNCHPAD_URL}`
+                        : `${MAINNET_LAUNCHPAD_URL}`
+                    }
+                  >
+                    <FormattedMessage
+                      defaultMessage="Switch to {network} launchpad"
+                      values={{
+                        network: `${
+                          IS_MAINNET
+                            ? `${TESTNEST_LAUNCHPAD_NAME} testnet`
+                            : `mainnet`
+                        }`,
+                      }}
+                    />
+                  </Link>
                   <Text className="mt20">
-                    <em>Visit this site on desktop to become a validator.</em>
+                    <em>
+                      <FormattedMessage defaultMessage="Visit this site on desktop to become a validator." />
+                    </em>
                   </Text>
                 </NetworkInfo>
-                <Box pad="medium" className="mt0">
+                <Box pad="large" className="mt0">
                   <DropdownLink to={routesEnum.FaqPage}>
                     Frequently asked questions
                   </DropdownLink>
@@ -249,7 +291,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     Languages
                   </DropdownLink>
                   <Text className="my20">
-                    <b>The Eth2 clients</b>
+                    <b>Eth2 clients</b>
                   </Text>
                   <DropdownLink to={routesEnum.lighthouse}>
                     Lighthouse
@@ -263,10 +305,49 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           />
         )}
         {!mobile && (
-          <NetworkText className="mr30">
-            {ETH2_NETWORK_NAME}
-            {IS_MAINNET ? `` : ` Testnet`}
-          </NetworkText>
+          <ValidatorDropdown
+            className="secondary-link"
+            label={
+              <NetworkText>
+                {IS_MAINNET ? `Mainnet` : `${TESTNEST_LAUNCHPAD_NAME}`}
+                <FormDown />
+              </NetworkText>
+            }
+            dropAlign={{ top: 'bottom', right: 'right' }}
+            dropContent={
+              <Card>
+                <Box pad="small" className="mt0">
+                  {!IS_MAINNET && (
+                    <Text className="mb10">
+                      {IS_MAINNET ? (
+                        ``
+                      ) : (
+                        <FormattedMessage defaultMessage="This is a test network ⚠️" />
+                      )}
+                    </Text>
+                  )}
+                  <DropdownLink
+                    to={
+                      IS_MAINNET
+                        ? `${TESTNEST_LAUNCHPAD_URL}`
+                        : `${MAINNET_LAUNCHPAD_URL}`
+                    }
+                  >
+                    <FormattedMessage
+                      defaultMessage="Switch to {network} launchpad"
+                      values={{
+                        network: `${
+                          IS_MAINNET
+                            ? `${TESTNEST_LAUNCHPAD_NAME} testnet`
+                            : `mainnet`
+                        }`,
+                      }}
+                    />
+                  </DropdownLink>
+                </Box>
+              </Card>
+            }
+          />
         )}
         {!mobile && walletConnected && (
           <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>

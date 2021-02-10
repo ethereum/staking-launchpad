@@ -11,7 +11,7 @@ import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import useMobileCheck from '../../hooks/useMobileCheck';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { IS_MAINNET, TESTNEST_LAUNCHPAD_NAME } from '../../utils/envVars';
 
 interface mobile {
   isMobile: boolean;
@@ -151,8 +151,8 @@ export const Hero = () => {
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>
                         <LogoText>
-                          Eth2 Launchpad{' '}
-                          {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                          Eth2 {!IS_MAINNET && `${TESTNEST_LAUNCHPAD_NAME}`}{' '}
+                          Launchpad
                         </LogoText>
                       </LogoContainer>
                     </Animate>

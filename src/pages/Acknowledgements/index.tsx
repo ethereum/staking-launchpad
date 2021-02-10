@@ -24,6 +24,7 @@ import {
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
 import { Paper } from '../../components/Paper';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 interface OwnProps {}
 interface StateProps {
@@ -93,11 +94,13 @@ const _AcknowledgementPage = ({
     content,
     acknowledgementText,
   }: PageContentInterface = pageContent[activeAcknowledgementId];
-
+  const intl = useIntl();
   return (
-    <WorkflowPageTemplate title="Before you deposit">
+    <WorkflowPageTemplate
+      title={intl.formatMessage({ defaultMessage: 'Before you deposit' })}
+    >
       <Subtitle>
-        Everything you should understand before becoming a validator today.
+        <FormattedMessage defaultMessage="Everything you should understand before becoming a validator." />
       </Subtitle>
       <Paper className="flex flex-row">
         <AcknowledgementProgressTracker

@@ -4,6 +4,7 @@ import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import Animate from 'animate.css-react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { routesEnum } from '../../Routes';
 import { Heading } from '../../components/Heading';
@@ -11,7 +12,7 @@ import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import useMobileCheck from '../../hooks/useMobileCheck';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { IS_MAINNET, TESTNET_LAUNCHPAD_NAME } from '../../utils/envVars';
 
 interface mobile {
   isMobile: boolean;
@@ -136,6 +137,7 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
 // Main component
 
 export const Hero = () => {
+  const { formatMessage } = useIntl();
   const isSmallScreen = useMobileCheck('800px');
   const isMediumScreen = useMobileCheck('1080px');
   const m: boolean = (window as any).mobileCheck();
@@ -151,8 +153,15 @@ export const Hero = () => {
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>
                         <LogoText>
-                          Eth2 Launchpad{' '}
-                          {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                          {IS_MAINNET ? (
+                            <FormattedMessage defaultMessage="Eth2 Launchpad" />
+                          ) : (
+                            <FormattedMessage
+                              defaultMessage="Eth2 Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+                              values={{ TESTNET_LAUNCHPAD_NAME }}
+                              description="This phrase is a sentence "
+                            />
+                          )}
                         </LogoText>
                       </LogoContainer>
                     </Animate>
@@ -166,13 +175,12 @@ export const Hero = () => {
                       color="brand"
                       className="my20"
                     >
-                      Become a validator and help secure the future of Ethereum
+                      <FormattedMessage defaultMessage="Become a validator and help secure the future of Ethereum" />
                     </Heading>
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
                     <Text className="mt25">
-                      Earn continuous rewards for providing a public good to the
-                      community.
+                      <FormattedMessage defaultMessage="Earn continuous rewards for providing a public good to the community." />
                     </Text>
                   </ScrollAnimation>
 
@@ -188,14 +196,25 @@ export const Hero = () => {
                           fullWidth={m || isSmallScreen}
                           rainbow
                           width={isSmallScreen || m ? undefined : 250}
-                          label={`Become a validator ${m ? 'ON DESKTOP' : ''}`}
+                          label={
+                            m
+                              ? formatMessage({
+                                  defaultMessage:
+                                    'Become a validator on desktop',
+                                })
+                              : formatMessage({
+                                  defaultMessage: 'Become a validator',
+                                })
+                          }
                         />
                       </Link>
                       <Link to={routesEnum.checklistPage}>
                         <Button
                           className={isMediumScreen || m ? `mt20` : `ml20`}
                           fullWidth={m || isSmallScreen}
-                          label={`Thinking about staking?`}
+                          label={formatMessage({
+                            defaultMessage: 'Thinking about staking?',
+                          })}
                         />
                       </Link>
                     </ButtonRow>

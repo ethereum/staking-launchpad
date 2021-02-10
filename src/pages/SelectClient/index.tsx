@@ -174,7 +174,10 @@ const _SelectClientPage = ({
   }
 
   const title = formatMessage(
-    { defaultMessage: `Choose {ethereum} client` },
+    {
+      defaultMessage: `Choose {ethereum} client`,
+      description: '{ethereum} injects Eth1 or Eth2 depending on step',
+    },
     {
       ethereum: `Eth${ethVersionStep}`,
     }

@@ -38,6 +38,7 @@ export const Phishing = () => {
                 values={{
                   ethAmount: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
                 }}
+                description="{ethAmount} will generally refer to 32ETH"
               />
             </Text>
           </li>
@@ -76,6 +77,7 @@ export const Phishing = () => {
                     </Link>
                   ),
                 }}
+                description="{ethereumorg} is a link to deposit contract page on ethereum.org"
               />
             </Text>
           </li>
@@ -91,6 +93,7 @@ export const Phishing = () => {
                     values={{
                       ethAmount: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
                     }}
+                    description="Asks users to check deposit contract address against a block explorer and confirm 32ETH deposits are present"
                   />
                 </Text>
               </li>

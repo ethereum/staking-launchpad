@@ -3,6 +3,7 @@ import { range as d3Range } from 'd3';
 import styled from 'styled-components';
 import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FormattedMessage } from 'react-intl';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
@@ -81,14 +82,17 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
       <SubContainer isMobile={m}>
         <ScrollAnimation animateIn="fadeIn" animateOnce>
           <Heading level={2} size="medium" color="blueDark" margin="none">
-            Staking and rewards
+            <FormattedMessage defaultMessage="Staking and rewards" />
           </Heading>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Text className="mt25">
-            Validators get rewarded for proposing and attesting to blocks. The
-            rewards are tied to the overall amount of {TICKER_NAME} staked in
-            the network.
+            <FormattedMessage
+              defaultMessage="Validators get rewarded for proposing and attesting to blocks. The
+                rewards are tied to the overall amount of {TICKER_NAME} staked in
+                the network."
+              values={{ TICKER_NAME }}
+            />
           </Text>
           <Link
             to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
@@ -96,7 +100,7 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
             primary
             inline
           >
-            More on Eth2 economics
+            <FormattedMessage defaultMessage="More on Eth2 economics" />
           </Link>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>

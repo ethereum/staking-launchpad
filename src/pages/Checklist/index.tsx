@@ -282,23 +282,6 @@ export const Checklist = () => {
                 <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you anticipate using sufficient and supported" />
               </Text>
             </li>
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="For example, you need at least ~400 GB SSD to run Geth sync on
-                    {mainnet} in February 2021, assuming you move the {ancient} directory on a
-                    different drive. Have in mind that Geth {chaindata} grows with ~1 GB per day,
-                    so you should account for enough space on your SSD and HDD until you run
-                    maintenance on the node."
-                  values={{
-                    mainnet: <em>mainnet</em>,
-                    ancient: <em>ancient</em>,
-                    chaindata: <em>chaindata</em>,
-                  }}
-                  description="The {mainnet}, {ancient} and {chaindata} values are network and folder names that should not be translated"
-                />
-              </Text>
-            </li>
           </ul>
         </section>
         <section>
@@ -318,7 +301,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note that upload bandwidth is also important and at time of writing (2/2021) this is ~700-800 MB/hour, and anticipated to increase." />
+                <FormattedMessage defaultMessage="Upload bandwidth is also important, and as of February 2021 this is ~700-800 MB/hour, and anticipated to increase." />
               </Text>
             </li>
             <li className="py5">
@@ -722,7 +705,7 @@ export const Checklist = () => {
           <Heading level={3}>
             <FormattedMessage defaultMessage="Monitoring" />
           </Heading>
-          <Heading level={4} className="mt10">
+          <Heading level={4} className="my10">
             <FormattedMessage defaultMessage="Prometheus + Grafana monitor" />
           </Heading>
           <Text>

@@ -203,8 +203,8 @@ export const Checklist = () => {
           </Heading>
         </SectionHeader>
         <section>
-          <Heading level={3}>
-            <FormattedMessage defaultMessage="Recommendations are subject to change" />
+          <Heading level={4}>
+            <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
           <ul className="sub-checklist-item">
             <li className="py5">
@@ -213,16 +213,6 @@ export const Checklist = () => {
                   defaultMessage="Please note that hardware suggestions are an ever evolving target. Current
                     minimum requirements are likely to increase by an order of magnitude after the merge and 
                     introduction of shard chains. Please do your own research before depositing funds."
-                />
-              </Text>
-            </li>
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="To maximize security and efficiency of your node, it is best to use dedicated
-                    hardware to run your clients. This reduces risk of malware exposure and minimizes competition
-                    for computing resources, ensuring your node handles the network load and its validator
-                    responsibilities at all times."
                 />
               </Text>
             </li>
@@ -317,9 +307,23 @@ export const Checklist = () => {
           <Heading level={3}>
             <FormattedMessage defaultMessage="Initial setup" />
           </Heading>
-          <Text className="mt20 ml20">
-            <FormattedMessage defaultMessage="Start by setting up your chosen hardware and operating system." />
-          </Text>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Start by setting up your chosen hardware and operating system." />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage
+                  defaultMessage="To maximize security and efficiency of your node, it is best to use dedicated
+                    hardware to run your clients. This reduces risk of malware exposure and minimizes competition
+                    for computing resources, ensuring your node handles the network load and its validator
+                    responsibilities at all times."
+                />
+              </Text>
+            </li>
+          </ul>
         </section>
         <section>
           <Heading level={3}>

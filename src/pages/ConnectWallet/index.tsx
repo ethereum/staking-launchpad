@@ -198,7 +198,7 @@ const _ConnectWalletPage = ({
         error.message === 'Invariant failed: chainId 0xNaN is not an integer')
     );
   }, [error]);
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
 
   // setup RPC event listener
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
@@ -251,10 +251,10 @@ const _ConnectWalletPage = ({
     ) {
       setStatus(`${balance} ${TICKER_NAME}`);
     } else if (walletConnected && error) {
-      setStatus(intl.formatMessage({ defaultMessage: 'Error' }));
+      setStatus(formatMessage({ defaultMessage: 'Error' }));
     } else if (!networkAllowed) {
       setStatus(
-        intl.formatMessage(
+        formatMessage(
           { defaultMessage: 'Connect {wallet} to {network}' },
           {
             wallet: getWalletName(walletProvider),
@@ -263,7 +263,16 @@ const _ConnectWalletPage = ({
         )
       );
     }
-  }, [chainId, walletConnected, networkAllowed, error, balance, network]);
+  }, [
+    chainId,
+    walletConnected,
+    networkAllowed,
+    error,
+    balance,
+    network,
+    formatMessage,
+    walletProvider,
+  ]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.CONNECT_WALLET) {
@@ -277,7 +286,7 @@ const _ConnectWalletPage = ({
 
   return (
     <WorkflowPageTemplate
-      title={intl.formatMessage({ defaultMessage: 'Connect wallet' })}
+      title={formatMessage({ defaultMessage: 'Connect wallet' })}
     >
       <Container>
         <WalletConnectedContainer>
@@ -353,10 +362,10 @@ const _ConnectWalletPage = ({
                             eth: TICKER_NAME,
                             validator:
                               depositKeys.length > 1
-                                ? intl.formatMessage({
+                                ? formatMessage({
                                     defaultMessage: 'validators',
                                   })
-                                : intl.formatMessage({
+                                : formatMessage({
                                     defaultMessage: 'validator',
                                   }),
                           }}
@@ -449,7 +458,7 @@ const _ConnectWalletPage = ({
             <Button
               className="mr10"
               width={100}
-              label={intl.formatMessage({ defaultMessage: 'Back' })}
+              label={formatMessage({ defaultMessage: 'Back' })}
             />
           </Link>
         )}
@@ -457,7 +466,7 @@ const _ConnectWalletPage = ({
           <Button
             width={300}
             onClick={deactivate}
-            label={intl.formatMessage({ defaultMessage: 'Connect new wallet' })}
+            label={formatMessage({ defaultMessage: 'Connect new wallet' })}
             className="mr10"
             color="blueDark"
           />
@@ -472,7 +481,7 @@ const _ConnectWalletPage = ({
               !networkAllowed ||
               lowBalance
             }
-            label={intl.formatMessage({ defaultMessage: 'Continue' })}
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </ButtonRow>

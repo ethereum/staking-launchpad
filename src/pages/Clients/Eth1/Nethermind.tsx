@@ -29,11 +29,7 @@ export const NethermindDetails = () => (
       <Text>
         <FormattedMessage defaultMessage="The Nethermind documentation explains how to download and install the client." />
       </Text>
-      <Link
-        primary
-        to="https://downloads.nethermind.io/"
-        className="mt10"
-      >
+      <Link primary to="https://downloads.nethermind.io/" className="mt10">
         <FormattedMessage defaultMessage="Nethermind installation documentation" />
       </Link>
     </section>
@@ -67,7 +63,7 @@ export const NethermindDetails = () => (
       {!IS_MAINNET && (
         <>
           <Heading level={3} className="mt20">
-            Testing on Goerli
+            <FormattedMessage defaultMessage="Testing on Goerli" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage

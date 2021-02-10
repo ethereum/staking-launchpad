@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Heading } from '../../../components/Heading';
@@ -48,32 +49,43 @@ interface upgrade {
   link: string;
 }
 
-const upgrades: upgrade[] = [
-  {
-    title: 'The upgrades',
-    subTitle: 'Dig deeper into how Eth2 upgrades Ethereum.',
-    linkUrl: 'https://ethereum.org/en/eth2/',
-    link: 'How does this all happen?',
-  },
-  {
-    title: 'Deposit contract formally verified',
-    subTitle:
-      'The deposit contract has been verified at a byte-code level to ensure everyone’s safety.',
-    linkUrl:
-      'https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf',
-    link: 'Formal verification report',
-  },
-  {
-    title: 'Validators FAQ',
-    subTitle:
-      'Check out the FAQ page for more information about the roles and responsibilities of Eth2 network validators.',
-    linkUrl: '/faq',
-    link: 'More on validators',
-  },
-];
-
 export const Upgrades = (): JSX.Element => {
+  const { formatMessage } = useIntl();
+
   const m: boolean = (window as any).mobileCheck();
+
+  const upgrades: upgrade[] = [
+    {
+      title: formatMessage({ defaultMessage: 'The upgrades' }),
+      subTitle: formatMessage({
+        defaultMessage: 'Dig deeper into how Eth2 upgrades Ethereum.',
+      }),
+      linkUrl: 'https://ethereum.org/en/eth2/',
+      link: formatMessage({ defaultMessage: 'How does this all happen?' }),
+    },
+    {
+      title: formatMessage({
+        defaultMessage: 'Deposit contract formally verified',
+      }),
+      subTitle: formatMessage({
+        defaultMessage:
+          'The deposit contract has been verified at a byte-code level to ensure everyone’s safety.',
+      }),
+      linkUrl:
+        'https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf',
+      link: formatMessage({ defaultMessage: 'Formal verification report' }),
+    },
+    {
+      title: formatMessage({ defaultMessage: 'Validators FAQ' }),
+      subTitle: formatMessage({
+        defaultMessage:
+          'Check out the FAQ page for more information about the roles and responsibilities of Eth2 network validators.',
+      }),
+      linkUrl: '/faq',
+      link: formatMessage({ defaultMessage: 'More on validators' }),
+    },
+  ];
+
   return (
     <Container isMobile={m}>
       <SubContainer isMobile={m}>
@@ -81,56 +93,64 @@ export const Upgrades = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                How does Eth2 upgrade Ethereum?
+                <FormattedMessage defaultMessage="How does Eth2 upgrade Ethereum?" />
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20 mb40">
-                To better future-proof Ethereum, Eth2 will upgrade various
-                components of Ethereum while seamlessly continuing on the chain
-                of today. The main components of this upgrade are:
+                <FormattedMessage
+                  defaultMessage="To better future-proof Ethereum, Eth2 will upgrade various
+                  components of Ethereum while seamlessly continuing on the chain
+                  of today. The main components of this upgrade are:"
+                />
               </Text>
               <UpgradeTitle className="mt20">
-                Proof-of-stake (PoS) and the Beacon Chain{' '}
+                <FormattedMessage defaultMessage="Proof-of-stake (PoS) and the Beacon Chain" />
               </UpgradeTitle>
               <Text className="mt20">
-                PoS is a more secure, decentralized, and environmentally
-                friendly consensus mechanism than the Proof-of-work (PoW) that
-                secures Ethereum today. It works by rewarding validators for
-                building the chain, but slashing their deposits if they try to
-                attack it, incentivising healthy behaviour . This upgrade is
-                already live in the form of the Beacon Chain.
+                <FormattedMessage
+                  defaultMessage="PoS is a more secure, decentralized, and environmentally
+                    friendly consensus mechanism than the proof-of-work (PoW) that
+                    secures Ethereum today. It works by rewarding validators for
+                    building the chain, but slashing their deposits if they try to
+                    attack it, incentivising healthy behaviour. This upgrade is
+                    already live in the form of the Beacon Chain."
+                />
               </Text>
               <Link
                 className="mt20 mb40"
                 to="https://www.ethereum.org/eth2/beacon-chain/"
               >
-                More on the Beacon Chain
+                <FormattedMessage defaultMessage="More on the Beacon Chain" />
               </Link>
               <UpgradeTitle className="mt20">The Merge (docking)</UpgradeTitle>
               <Text className="mt20">
-                The merge, also known as the docking, is when the Ethereum
-                mainnet we use todaay merge with the Beacon Chain. This is when
-                Ethereum fully transitions to proof of stake.
+                <FormattedMessage
+                  defaultMessage="The merge, also known as the docking, is when the Ethereum
+                    mainnet we use todaay merge with the Beacon Chain. This is when
+                    Ethereum fully transitions to proof-of-stake."
+                />
               </Text>
               <Link
                 className="mt20 mb40"
                 to="https://www.ethereum.org/eth2/the-docking/"
               >
-                More on the merge
+                <FormattedMessage defaultMessage="More on the merge" />
               </Link>
               <UpgradeTitle className="mt20">Sharding </UpgradeTitle>
               <Text className="mt20">
-                Sharding will add 64 parallel chains to the network. This will
-                dramatically improve Ethereum's data handling capabilities as
-                each chain will be able to handle at least as much data as
-                mainnet Ethereum can today, probably more.
+                <FormattedMessage
+                  defaultMessage="Sharding will add 64 parallel chains to the network. This will
+                    dramatically improve Ethereum's data handling capabilities as
+                    each chain will be able to handle at least as much data as
+                    mainnet Ethereum can today, probably more."
+                />
               </Text>
               <Link
                 className="mt20 mb40"
                 to="https://www.ethereum.org/eth2/shard-chains/"
               >
-                More on shard chains
+                <FormattedMessage defaultMessage="More on shard chains" />
               </Link>
             </ScrollAnimation>
           </div>

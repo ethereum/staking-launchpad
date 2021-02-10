@@ -101,15 +101,23 @@ const PortTable = styled.table`
 `;
 
 const SectionHeader = styled.div`
-  background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
-  margin: 3rem 1rem 1rem;
+  margin-bottom: 3rem 0 1rem;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 4px;
+  &:before {
+    content: '';
+    display: block;
+    height: 3rem;
+    margin-top: -3rem;
+    visibility: hidden;
+  }
 `;
 
-const ReverseHeader = styled(SectionHeader)`
-  background-image: ${p => `linear-gradient(to left, ${p.theme.rainbow})`};
+const RainbowHeader = styled(SectionHeader as any)`
+  margin: 3rem 1rem 1rem;
+  background-image: ${p =>
+    `linear-gradient(to right, ${p.theme.rainbowLight})`};
 `;
 
 interface Client {
@@ -174,12 +182,15 @@ export const Checklist = () => {
   ]);
 
   return (
-    <PageTemplate title="Eth2 validator checklist">
+    <PageTemplate
+      title={formatMessage({ defaultMessage: 'Eth2 validator checklist' })}
+    >
+      <div id="top" />
       <Subtitle>
         <FormattedMessage defaultMessage="This checklist will help you understand the role of a validator and prepare you for the role." />
         <Text className="mt10">
           <FormattedMessage
-            defaultMessage="Visit EthStaker on {discord} or {reddit} at any time during your onboarding for some friendly help!"
+            defaultMessage="Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
             values={{
               discord: (
                 <Link primary inline to="https://invite.gg/ethstaker">
@@ -197,10 +208,13 @@ export const Checklist = () => {
         </Text>
       </Subtitle>
       <ChecklistPageStyles>
-        <SectionHeader>
+        <SectionHeader id="section-one">
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Section 1 - Preparation" />
+            <FormattedMessage defaultMessage="Section 1 - Before you start" />
           </Heading>
+          <Text className="mt10">
+            <FormattedMessage defaultMessage="Review this section before deciding to proceed with validator setup" />
+          </Text>
         </SectionHeader>
         <section>
           <Heading level={4}>
@@ -210,9 +224,9 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="Please note that hardware suggestions are an ever evolving target. Current
+                  defaultMessage="Hardware suggestions are an ever evolving target. Current
                     minimum requirements are likely to increase by an order of magnitude after the merge and 
-                    introduction of shard chains. Please do your own research before depositing funds."
+                    introduction of shard chains. Do your own research before depositing funds."
                 />
               </Text>
             </li>
@@ -254,7 +268,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Please be sure to account for enough space on your drive until you run maintenance on your node." />
+                <FormattedMessage defaultMessage="Be sure to account for enough space on your drive until you run maintenance on your node." />
               </Text>
             </li>
           </ul>
@@ -266,7 +280,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Please check with client documentation to ensure the hardware you anticipate using is sufficient and supported." />
+                <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you anticipate using is sufficient and supported." />
               </Text>
             </li>
           </ul>
@@ -298,9 +312,12 @@ export const Checklist = () => {
             </li>
           </ul>
         </section>
-        <SectionHeader>
+        <SectionHeader id="section-two">
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Section 2 - Setup" />
+            <FormattedMessage defaultMessage="Section 2 - During setup" />
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="Use this as a reference during client setup to check off important steps" />
+            </Text>
           </Heading>
         </SectionHeader>
         <section>
@@ -327,7 +344,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Node Security" />
+            <FormattedMessage defaultMessage="Node security" />
           </Heading>
 
           <CheckBox
@@ -497,14 +514,14 @@ export const Checklist = () => {
             </li>
           </ul>
         </section>
-        <ReverseHeader>
+        <RainbowHeader>
           <Heading level={3}>
             <FormattedMessage defaultMessage="Testnet practice" />
           </Heading>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Strongly recommended these steps be completed on the current testnet prior to advancing to mainnet" />
           </Text>
-        </ReverseHeader>
+        </RainbowHeader>
         <section>
           <Heading level={3}>
             <FormattedMessage defaultMessage="Configure your Eth1 Client" />
@@ -619,7 +636,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: please check that your node has greater than 20 peers" />
+                <FormattedMessage defaultMessage="Note: check that your node has greater than 20 peers" />
               </Text>
             </li>
           </ul>
@@ -693,9 +710,12 @@ export const Checklist = () => {
             }
           />
         </section>
-        <SectionHeader>
+        <SectionHeader id="section-three">
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Section 3 - Monitoring and Maintenance" />
+            <FormattedMessage defaultMessage="Section 3 - After depositing" />
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="Protect your funds using monitoring software, and learn how to handle different real world scenarios" />
+            </Text>
           </Heading>
         </SectionHeader>
         <section>
@@ -886,7 +906,7 @@ export const Checklist = () => {
             }
           />
         </section>
-        <ReverseHeader>
+        <RainbowHeader>
           <Text>
             <FormattedMessage
               defaultMessage="If you have questions, EthStaker community is a good place to get help!
@@ -906,7 +926,7 @@ export const Checklist = () => {
               description="{variables} social media platform links to Discord and Reddit (do not translate names)"
             />
           </Text>
-        </ReverseHeader>
+        </RainbowHeader>
       </ChecklistPageStyles>
     </PageTemplate>
   );

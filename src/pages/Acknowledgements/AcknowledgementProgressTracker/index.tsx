@@ -20,12 +20,13 @@ const Container = styled.div`
 const acknowledgementsWithCopy = {
   [AcknowledgementIdsEnum.introSection]: 'Proof of stake',
   [AcknowledgementIdsEnum.deposit]: 'Deposit',
+  [AcknowledgementIdsEnum.terminal]: 'The terminal',
   [AcknowledgementIdsEnum.responsibilities]: 'Uptime',
   [AcknowledgementIdsEnum.slashing]: 'Bad behaviour',
   [AcknowledgementIdsEnum.keyManagement]: 'Key management',
   [AcknowledgementIdsEnum.commitment]: 'Commitment',
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: 'Early adoption risks',
-  [AcknowledgementIdsEnum.terminal]: 'The terminal',
+  [AcknowledgementIdsEnum.checklist]: 'Checklist',
   [AcknowledgementIdsEnum.confirmation]: 'Confirmation',
 };
 

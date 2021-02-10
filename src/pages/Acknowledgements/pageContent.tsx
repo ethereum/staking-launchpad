@@ -155,33 +155,10 @@ export const pageContent = {
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="Your validator keys are derived from a unique mnemonic (or seed). Your
-              mnemonic/seed will be the ONLY WAY to withdraw your funds. Above all, keep it safe! No
-              one can help you if you lose this phrase."
-          />
-        </Text>
-        <Text size="medium" className="mt20">
-          <FormattedMessage
-            defaultMessage="We'll help you create keys for each of your validators. These keys
-              will be saved in password-encrypted keystore files and you will need to give these
-              to your validator software to begin validating*. You will also receive a deposit file
-              to upload to this website with the public keys for your validator."
-          />
-        </Text>
-        <Text size="medium" className="mt20">
-          <FormattedMessage
-            defaultMessage="*Warning: Do not store keys on multiple/backup validators at once {readMore}"
-            values={{
-              readMore: (
-                <Link
-                  className="my10"
-                  primary
-                  to="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
-                >
-                  <FormattedMessage defaultMessage="More on slashing prevention" />
-                </Link>
-              ),
-            }}
+            defaultMessage="We'll help you create keys for every validator you want to run. They'll be generated
+              via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to
+              withdraw your ETH when the time comes and no one can help you recover your mnemonic if
+              you lose it."
           />
         </Text>
       </>

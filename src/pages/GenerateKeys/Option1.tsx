@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Alert as GrommetAlert } from 'grommet-icons';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
@@ -7,10 +9,8 @@ import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { Button } from '../../components/Button';
-import { Alert as GrommetAlert } from 'grommet-icons';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
-import { FormattedMessage } from 'react-intl';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -33,6 +33,8 @@ export const Option1 = ({
   validatorCount: number | string;
   os: string;
 }) => {
+  const { formatMessage } = useIntl();
+
   return (
     <div className="mt30">
       <Heading level={2} size="small" color="blueMedium" className="mb20">
@@ -46,7 +48,11 @@ export const Option1 = ({
         to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
         className="my40"
       >
-        <Button className="flex" rainbow label="Download from GitHub" />
+        <Button
+          className="flex"
+          rainbow
+          label={formatMessage({ defaultMessage: 'Download from GitHub' })}
+        />
       </Link>
 
       <Alert variant="warning" className="my40">

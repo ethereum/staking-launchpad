@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { Animated } from 'react-animated-css';
 import { connect } from 'react-redux';
+import { FormattedMessage, useIntl } from 'react-intl';
 import {
   AbstractConnector,
   AbstractConnector as AbstractConnectorInterface,
@@ -47,7 +48,6 @@ import {
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 // styled components
 const Container = styled.div`
@@ -441,7 +441,10 @@ const _ConnectWalletPage = ({
             <FormattedMessage defaultMessage="We can't detect MetaMask. Switch browsers or install MetaMask." />
           </Text>
           <Link to="https://metamask.io/">
-            <Button className="mr10" label="Download MetaMask" />
+            <Button
+              className="mr10"
+              label={formatMessage({ defaultMessage: 'Download MetaMask' })}
+            />
           </Link>
         </MetaMaskError>
       )}

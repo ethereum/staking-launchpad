@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Alert, Checkmark } from 'grommet-icons';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Heading } from './Heading';
 import { Text } from './Text';
 import { Button } from './Button';
 import Mobile from '../static/mobile.svg';
 import Laptop from '../static/laptop.svg';
-import { Alert, Checkmark } from 'grommet-icons';
 import { Link } from './Link';
 
 const RainbowBackground = styled.div`
@@ -45,11 +46,17 @@ const IconStyles = {
 };
 
 export const DesktopOnlyModal = (): JSX.Element => {
+  const { formatMessage } = useIntl();
+
   return (
     <RainbowBackground>
       <Container>
-        <Heading center>Desktop Only</Heading>
-        <Text center>You must be on a desktop device to use this app</Text>
+        <Heading center>
+          <FormattedMessage defaultMessage="Desktop Only" />
+        </Heading>
+        <Text center>
+          <FormattedMessage defaultMessage="You must be on a desktop device to use this app" />
+        </Text>
         <ImageContainer>
           <div className="flex flex-column">
             <ImageBackground mobile>
@@ -65,7 +72,11 @@ export const DesktopOnlyModal = (): JSX.Element => {
           </div>
         </ImageContainer>
         <Link to="/">
-          <Button fullWidth label="close" rainbow />
+          <Button
+            fullWidth
+            label={formatMessage({ defaultMessage: 'close' })}
+            rainbow
+          />
         </Link>
       </Container>
     </RainbowBackground>

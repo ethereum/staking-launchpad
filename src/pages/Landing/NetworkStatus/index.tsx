@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
@@ -66,6 +66,7 @@ const CardContainer = styled.div`
 export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   amountEth = 0,
 }): JSX.Element | null => {
+  const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
 
   React.useEffect(() => {
@@ -140,7 +141,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               className="m-auto"
               fullWidth
               width={m ? undefined : 400}
-              label="More stats"
+              label={formatMessage({ defaultMessage: 'More stats' })}
             />
           </Link>
         </Content>

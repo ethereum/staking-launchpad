@@ -192,7 +192,10 @@ const _CongratulationsPage = ({
             margin="none"
           >
             <FormattedMessage defaultMessage="Your stake has reached the deposit contract!" />
-            <span role="img" aria-label="congratulations">
+            <span
+              role="img"
+              aria-label={formatMessage({ defaultMessage: 'congratulations' })}
+            >
               {' '}
               🎉
             </span>
@@ -305,7 +308,12 @@ const _CongratulationsPage = ({
                           color="blueDark"
                           margin="none"
                         >
-                          <span role="img" aria-label="clipboard">
+                          <span
+                            role="img"
+                            aria-label={formatMessage({
+                              defaultMessage: 'clipboard',
+                            })}
+                          >
                             📋{' '}
                           </span>
                           <FormattedMessage defaultMessage="Next" />

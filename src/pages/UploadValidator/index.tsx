@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useCallback, useMemo, useState } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -95,6 +95,7 @@ const _UploadValidatorPage = ({
   dispatchDepositStatusUpdate,
   dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
   const [fileError, setFileError] = useState<React.ReactElement | null>(null);
@@ -357,14 +358,18 @@ const _UploadValidatorPage = ({
       </Container>
       <div className="flex center p30">
         <Link to={routesEnum.generateKeysPage}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.connectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
             disabled={!isFileAccepted}
-            label="Continue"
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </div>

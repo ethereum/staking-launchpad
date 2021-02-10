@@ -3,6 +3,7 @@ import { Dispatch } from 'redux';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { connect } from 'react-redux';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import _every from 'lodash/every';
 import _some from 'lodash/some';
@@ -16,7 +17,6 @@ import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
 import { handleMultipleTransactions } from './transactionUtils';
 import { NetworkChainId } from '../ConnectWallet/web3Utils';
-import { FormattedMessage, useIntl } from 'react-intl';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
@@ -187,7 +187,11 @@ const _TransactionsPage = ({
 
       <div className="flex center p30 mt20">
         <Link to={routesEnum.summaryPage}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.congratulationsPage} onClick={handleSubmit}>
           <Button

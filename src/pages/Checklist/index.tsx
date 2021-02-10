@@ -103,6 +103,18 @@ const PortTable = styled.table`
   }
 `;
 
+const SectionHeader = styled.div`
+  background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+  margin: 3rem 1rem 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+`;
+
+const ReverseHeader = styled(SectionHeader)`
+  background-image: ${p => `linear-gradient(to left, ${p.theme.rainbow})`};
+`;
+
 interface Client {
   header: string;
   text: string;
@@ -168,21 +180,106 @@ export const Checklist = () => {
     <PageTemplate title="Eth2 validator checklist">
       <Subtitle>
         <FormattedMessage defaultMessage="This checklist will help you understand the role of a validator and prepare you for the role." />
+        <Text className="mt10">
+          <FormattedMessage
+            defaultMessage="Visit EthStaker on {discord} or {reddit} at any time during your onboarding for some friendly help!"
+            values={{
+              discord: (
+                <Link primary inline to="https://invite.gg/ethstaker">
+                  Discord
+                </Link>
+              ),
+              reddit: (
+                <Link primary inline to="https://reddit.com/r/ethstaker">
+                  Reddit
+                </Link>
+              ),
+            }}
+            description="{variables} are social media platform links to Discord and Reddit (do not translate names)"
+          />
+        </Text>
       </Subtitle>
       <ChecklistPageStyles>
+        <SectionHeader>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Section 1 - Preparation" />
+          </Heading>
+        </SectionHeader>
         <section>
-          <Heading level={3}>Hardware</Heading>
-          <Heading level={4}>Recommended</Heading>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Recommendations are subject to change" />
+          </Heading>
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="In order to process incoming validator deposits from the eth1
-                    chain, you will need to run an eth1 client in parallel to your
+                  defaultMessage="Please note that hardware suggestions are an ever evolving target. Current
+                    minimum requirements are likely to increase by an order of magnitude after the merge and 
+                    introduction of shard chains. Please do your own research before depositing funds."
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage
+                  defaultMessage="To maximize security and efficiency of your node, it is best to use dedicated
+                    hardware to run your clients. This reduces risk of malware exposure and minimizes competition
+                    for computing resources, ensuring your node handles the network load and its validator
+                    responsibilities at all times."
+                />
+              </Text>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Hard drive" />
+          </Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <FormattedMessage
+                  defaultMessage="In order to process incoming validator deposits from the Eth1
+                    chain, you will need to run an Eth1 client in parallel to your
                     Eth2 client. While it is possible to use a third-party service
                     like Infura, we recommend running your own client in order to
                     ensure the network stays as decentralised as possible."
                 />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="As of February 2021 ~400GB is needed for the Eth1 mainnet chaindata alone (growing at ~1GB/day)" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage
+                  defaultMessage="The Beacon chain had its genesis on 01-Dec-2021. It is growing in size over time, and the
+                    introduction of sharding will also increase storage, memory and bandwidth requirements."
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="SSD storage required to consistently handle necessary read/write speeds." />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Please be sure to account for enough space on your drive until you run maintenance on your node." />
+              </Text>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="CPU and RAM" />
+          </Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you anticipate using sufficient and supported" />
               </Text>
             </li>
             <li className="py5">
@@ -202,6 +299,28 @@ export const Checklist = () => {
                 />
               </Text>
             </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Internet" />
+          </Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Internet connection should be reliable and as close to 24/7 as possible without interruption" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Bandwidth should not be throttled or capped to ensure node stays in sync and ready to validate when called" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Note that upload bandwidth is also important and at time of writing (2/2021) this is ~700-800 MB/hour, and anticipated to increase." />
+              </Text>
+            </li>
             <li className="py5">
               <Text>
                 <FormattedMessage defaultMessage="Note: it may take day(s) to sync the Eth1 client in the worst-case scenario." />
@@ -209,28 +328,42 @@ export const Checklist = () => {
             </li>
           </ul>
         </section>
+        <SectionHeader>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Section 2 - Setup" />
+          </Heading>
+        </SectionHeader>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Security" />
+            <FormattedMessage defaultMessage="Initial setup" />
           </Heading>
+          <Text className="mt20 ml20">
+            <FormattedMessage defaultMessage="Start by setting up your chosen hardware and operating system" />
+          </Text>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Node Security" />
+          </Heading>
+
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have secured the root account." />
+                <FormattedMessage defaultMessage="I have secured the root account" />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have hardened ssh on a random port." />
+                <FormattedMessage defaultMessage="I have hardened ssh on a random port" />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have set up a firewall." />
+                <FormattedMessage defaultMessage="I have set up a firewall" />
               </Text>
             }
           />
@@ -380,9 +513,17 @@ export const Checklist = () => {
             </li>
           </ul>
         </section>
+        <ReverseHeader>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Testnet practice" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="Strongly recommended these steps be completed on the current testnet prior to advancing to mainnet" />
+          </Text>
+        </ReverseHeader>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Eth1 Client" />
+            <FormattedMessage defaultMessage="Configure your Eth1 Client" />
           </Heading>
           <CheckBox
             label={
@@ -400,7 +541,7 @@ export const Checklist = () => {
         <section>
           <Heading level={3}>Configure your Eth2 client</Heading>
           <Link className="mt10" to="/faq" primary>
-            <FormattedMessage defaultMessage="Learn more about the roles and responsibilities of ETH 2 Validators" />
+            <FormattedMessage defaultMessage="Learn more about the roles and responsibilities of Eth2 Validators" />
           </Link>
           <ClientContainer>
             {clientInfo.map(client => (
@@ -438,19 +579,11 @@ export const Checklist = () => {
               </Text>
             </li>
           </ul>
-        </section>
-        <section>
-          <Heading level={3}>
-            <FormattedMessage defaultMessage="Eth2 Beacon Node (BN)" />
-          </Heading>
-          <Heading level={4}>
-            <FormattedMessage defaultMessage="Required" />
-          </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have installed the {latestRelease} of my client."
+                  defaultMessage="I have installed the {latestRelease} of my client"
                   values={{
                     latestRelease: (
                       <strong>
@@ -465,10 +598,18 @@ export const Checklist = () => {
               </Text>
             }
           />
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Eth2 Beacon Node (BN)" />
+          </Heading>
+          <Heading level={4} className="mt10">
+            <FormattedMessage defaultMessage="Required" />
+          </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="My Eth2 beacon node is able to connect to my Eth1 client via HTTP API(s)." />
+                <FormattedMessage defaultMessage="My Eth2 beacon node is able to connect to my Eth1 client via HTTP API(s)" />
               </Text>
             }
           />
@@ -488,7 +629,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
+                  defaultMessage="I have synced my Eth2 beacon node on {ETH2_NETWORK_NAME}"
                   values={{ ETH2_NETWORK_NAME }}
                   description="{ETH2_NETWORK_NAME} is name of network, do not translate"
                 />
@@ -502,76 +643,86 @@ export const Checklist = () => {
               </Text>
             </li>
           </ul>
-          <Heading level={4}>
+          <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Recommended" />
           </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have joined my client's discord chat." />
+                <FormattedMessage defaultMessage="I have joined my client's discord chat" />
               </Text>
             }
           />
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Link primary inline to="https://discord.gg/uC7TuaH">
-                Lighthouse
-              </Link>{' '}
-              |{' '}
-              <Link primary inline to="https://discord.gg/YbTCNat">
-                Nimbus
-              </Link>{' '}
-              |{' '}
-              <Link primary inline to="https://discord.gg/z9efH7e">
-                Prysm
-              </Link>{' '}
-              |{' '}
-              <Link primary inline to="https://discord.gg/7hPv2T6">
-                Teku
-              </Link>
-            </li>
-          </ul>
+          <Text className="ml20">
+            <Link primary inline to="https://discord.gg/uC7TuaH">
+              Lighthouse
+            </Link>{' '}
+            |{' '}
+            <Link primary inline to="https://discord.gg/YbTCNat">
+              Nimbus
+            </Link>{' '}
+            |{' '}
+            <Link primary inline to="https://discord.gg/z9efH7e">
+              Prysm
+            </Link>{' '}
+            |{' '}
+            <Link primary inline to="https://discord.gg/7hPv2T6">
+              Teku
+            </Link>
+          </Text>
         </section>
         <section>
           <Heading level={3}>
             <FormattedMessage defaultMessage="Eth2 Validator Client (VC)" />
           </Heading>
-          <Heading level={4}>
+          <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Required" />
           </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have imported my keystore(s) into my Eth2 validator client." />
+                <FormattedMessage defaultMessage="I have imported my keystore(s) into my Eth2 validator client" />
               </Text>
             }
           />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have started running my validator client." />
-              </Text>
-            }
-          />
-          <Heading level={4}>
-            <FormattedMessage defaultMessage="Recommended" />
-          </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have set up my validator client on a separate machine and
-                    connected it to my Beacon Node via HTTP/gRPC API(s)."
+                  defaultMessage="I have ensured my keystore(s) is/are {boldCaution}"
+                  values={{
+                    boldCaution: (
+                      <strong>
+                        {formatMessage({
+                          defaultMessage:
+                            'only stored on one validator machine',
+                        })}
+                      </strong>
+                    ),
+                  }}
+                  description="{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users"
                 />
               </Text>
             }
           />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I have started running my validator client" />
+              </Text>
+            }
+          />
         </section>
+        <SectionHeader>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Section 3 - Monitoring and Maintenance" />
+          </Heading>
+        </SectionHeader>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Appendix" />
+            <FormattedMessage defaultMessage="Monitoring" />
           </Heading>
-          <Heading level={4}>
+          <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Prometheus + Grafana monitor" />
           </Heading>
           <Text>
@@ -624,7 +775,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have set up my {prometheus} service."
+                  defaultMessage="I have set up my {prometheus} service"
                   values={{
                     prometheus: (
                       <Link primary inline to="https://prometheus.io/">
@@ -641,7 +792,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have set up my {grafana} service."
+                  defaultMessage="I have set up my {grafana} service"
                   values={{
                     grafana: (
                       <Link primary inline to="https://grafana.com/">
@@ -659,13 +810,75 @@ export const Checklist = () => {
               <Text className="checkbox-label">
                 <FormattedMessage
                   defaultMessage="I have imported the dashboard config to my Grafana server
-                    and double checked that my node is alive."
+                    and double checked that my node is alive"
                 />
               </Text>
             }
           />
-          <Heading level={4}>Graffiti</Heading> {/* Translate? */}
-          <Text>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Testnet simulations" />
+          </Heading>
+          <Text className="my10">
+            <FormattedMessage
+              defaultMessage="While validating on the testnet, perform these simulations to learn more about your
+                node, and better prepare yourself for mainnet:"
+            />
+          </Text>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage
+                  defaultMessage="I have simulated how to manually stop and restart my Beacon Node (BN)
+                    and Validator Client (VC) gracefully"
+                />
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I have simulated power loss (server and internet) and automatic resumption" />
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I have simulated how to migrate from one Eth2 client to another Eth2 client" />
+              </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>Advanced system architecture</Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <FormattedMessage
+                  defaultMessage="To avoid exposing your validator identity to the network, you can use
+                    a trustworthy VPN to help reduce the risk of revealing your IP address."
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage
+                  defaultMessage="Moreover, you can set your Validator Client (VC) and Beacon Node (BN)
+                    on separate machines and IPs so that even if your beacon node is vulnerable, your 
+                    keystore is stored on a different machine."
+                />
+              </Text>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <Heading level={4} className="mt10">
+            Graffiti
+          </Heading>{' '}
+          {/* Translate? */}
+          <Text className="mt10">
             <FormattedMessage
               defaultMessage="You can use your validator client's graffiti flag to add a personal
                 touch to your proposed blocks (some text of your choice). You will be able to see
@@ -688,89 +901,32 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have set my graffiti flag." />
-              </Text>
-            }
-          />
-          <Heading level={4}>Advanced system architecture</Heading>
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="To avoid exposing your validator identity to the network, you can use
-                    a trustworthy VPN to help reduce the risk of revealing your IP address."
-                />
-              </Text>
-            </li>
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="Moreover, you can set your Validator Client (VC) and Beacon Node (BN)
-                    on separate machines and IPs so that even if your beacon node is vulnerable, your 
-                    keystore is stored on a different machine."
-                />
-              </Text>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <Heading level={3}>
-            <FormattedMessage defaultMessage="Simulations" />
-          </Heading>
-          <Heading level={4}>
-            <FormattedMessage defaultMessage="The following are recommended simulations for ensuring your validation setup is robust:" />
-          </Heading>
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                <FormattedMessage
-                  defaultMessage="I have simulated how to manually stop and restart my Beacon Node (BN)
-                    and Validator Client (VC) gracefully."
-                />
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have simulated power loss (server and internet) and automatic resumption." />
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have simulated how to migrate from one Eth2 client to another Eth2 client." />
+                <FormattedMessage defaultMessage="I have set my graffiti flag" />
               </Text>
             }
           />
         </section>
-        <section>
-          <Heading level={3}>Tips</Heading>
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="If you have questions, EthStaker community is a good place to get help!
-                    You can find support on {discord} or {reddit}."
-                  values={{
-                    discord: (
-                      <Link primary inline to="https://invite.gg/ethstaker">
-                        Discord
-                      </Link>
-                    ),
-                    reddit: (
-                      <Link primary inline to="https://reddit.com/r/ethstaker">
-                        Reddit
-                      </Link>
-                    ),
-                  }}
-                  description="{variables} social media platform links to Discord and Reddit (do not translate names)"
-                />
-              </Text>
-            </li>
-          </ul>
-        </section>
+        <ReverseHeader>
+          <Text>
+            <FormattedMessage
+              defaultMessage="If you have questions, EthStaker community is a good place to get help!
+                You can find support on {discord} or {reddit}."
+              values={{
+                discord: (
+                  <Link primary inline to="https://invite.gg/ethstaker">
+                    Discord
+                  </Link>
+                ),
+                reddit: (
+                  <Link primary inline to="https://reddit.com/r/ethstaker">
+                    Reddit
+                  </Link>
+                ),
+              }}
+              description="{variables} social media platform links to Discord and Reddit (do not translate names)"
+            />
+          </Text>
+        </ReverseHeader>
       </ChecklistPageStyles>
     </PageTemplate>
   );

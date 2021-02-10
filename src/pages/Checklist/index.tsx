@@ -69,13 +69,10 @@ const CodeSnippet = styled.div`
 `;
 
 const ClientContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  padding: 1rem;
-  @media screen and (max-width: 1080px) {
-    flex-direction: column;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
 `;
 
 const Subtitle = styled.p`
@@ -249,7 +246,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="As of February 2021 ~400GB is needed for the Eth1 mainnet chaindata alone (growing at ~1GB/day)" />
+                <FormattedMessage defaultMessage="As of February 2021, ~400GB is needed for the Eth1 mainnet chaindata alone (growing at ~1GB/day)." />
               </Text>
             </li>
             <li className="py5">
@@ -262,7 +259,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="SSD storage required to consistently handle necessary read/write speeds." />
+                <FormattedMessage defaultMessage="SSD storage is required to consistently handle necessary read/write speeds." />
               </Text>
             </li>
             <li className="py5">
@@ -279,7 +276,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you anticipate using sufficient and supported" />
+                <FormattedMessage defaultMessage="Please check with client documentation to ensure the hardware you anticipate using is sufficient and supported." />
               </Text>
             </li>
           </ul>
@@ -291,12 +288,12 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Internet connection should be reliable and as close to 24/7 as possible without interruption" />
+                <FormattedMessage defaultMessage="Your internet connection should be reliable and as close to 24/7 as possible without interruption." />
               </Text>
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Bandwidth should not be throttled or capped to ensure node stays in sync and ready to validate when called" />
+                <FormattedMessage defaultMessage="Bandwidth should not be throttled or capped to ensure node stays in sync and ready to validate when called." />
               </Text>
             </li>
             <li className="py5">
@@ -306,7 +303,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: it may take day(s) to sync the Eth1 client in the worst-case scenario." />
+                <FormattedMessage defaultMessage="Note: syncing your Eth1 client may take a few days in the worst-case scenario" />
               </Text>
             </li>
           </ul>
@@ -321,7 +318,7 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Initial setup" />
           </Heading>
           <Text className="mt20 ml20">
-            <FormattedMessage defaultMessage="Start by setting up your chosen hardware and operating system" />
+            <FormattedMessage defaultMessage="Start by setting up your chosen hardware and operating system." />
           </Text>
         </section>
         <section>
@@ -354,8 +351,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have forwarded the necessary ports from my router to the
-                    correct machine(s). Only open the ports that apply to your installation."
+                  defaultMessage="I have forwarded the necessary ports to the correct machine(s)
+                    from my router (Only open the ports that apply to your installation)"
                 />
               </Text>
             }
@@ -411,7 +408,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Run the following command" />
+                <FormattedMessage defaultMessage="Run the following command:" />
               </Text>
               <CodeSnippet>
                 <code>timedatectl</code>
@@ -445,7 +442,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="If {code1} is not {code2}, run {code3}"
+                  defaultMessage="If {code1} is not {code2}, run: {code3}"
                   values={{
                     code1: <Code>NTP Service</Code>,
                     code2: <Code>active</Code>,
@@ -474,14 +471,14 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: by default, VMs may disable NTP so you may need to find a work-around for your environment." />
+                <FormattedMessage defaultMessage="Note: by default, VMs may disable NTP so you may need to find a work-around for your environment" />
               </Text>
             </li>
           </ul>
           <CheckBox
             label={
               <Text className="checkbox-label" style={{ display: 'inherit' }}>
-                <FormattedMessage defaultMessage="I've verified my server's time matches the wall clock." />
+                <FormattedMessage defaultMessage="I have verified my server time matches the wall clock" />
               </Text>
             }
           />
@@ -490,7 +487,7 @@ export const Checklist = () => {
               <Text>
                 <FormattedMessage
                   defaultMessage="Note: the RTC (Real-Time Clock) time may be set to your local timezone
-                    instead of UTC, especially in a VM which has clock configured on Windows."
+                    instead of UTC, especially in a VM which has clock configured on Windows"
                 />
               </Text>
             </li>
@@ -512,7 +509,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have installed and synced my Eth1 node on {network}. (Do not wait on this as it can take several days)"
+                  defaultMessage="I have installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)"
                   values={{
                     network: IS_MAINNET ? 'mainnet' : 'goerli',
                   }}
@@ -539,29 +536,25 @@ export const Checklist = () => {
               />
             ))}
           </ClientContainer>
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="{warning} It's high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
-                  values={{
-                    warning: (
-                      <strong>
-                        {formatMessage({ defaultMessage: 'Warning!' })}
-                      </strong>
-                    ),
-                    learnMore: (
-                      <Link primary inline to="/faq#responsibilities">
-                        {formatMessage({
-                          defaultMessage: 'Learn more about slashing →',
-                        })}
-                      </Link>
-                    ),
-                  }}
-                />
-              </Text>
-            </li>
-          </ul>
+          <Text>
+            <FormattedMessage
+              defaultMessage="{warning} It is high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
+              values={{
+                warning: (
+                  <strong>
+                    {formatMessage({ defaultMessage: 'Warning!' })}
+                  </strong>
+                ),
+                learnMore: (
+                  <Link primary inline to="/faq#responsibilities">
+                    {formatMessage({
+                      defaultMessage: 'Learn more about slashing →',
+                    })}
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -599,7 +592,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: you can verify it with the following command to check if it returns the client version correctly." />
+                <FormattedMessage defaultMessage="Note: you can verify it with the following command to check if it returns the client version correctly" />
               </Text>
               <CodeSnippet>
                 <code>
@@ -622,7 +615,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: please check that your node has greater than 20 peers." />
+                <FormattedMessage defaultMessage="Note: please check that your node has greater than 20 peers" />
               </Text>
             </li>
           </ul>

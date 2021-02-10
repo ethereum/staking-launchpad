@@ -147,12 +147,17 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="mt10">
-          <FormattedMessage defaultMessage="To become a validator you'll need to know about managing keys." />
+          <FormattedMessage
+            defaultMessage="To become a validator you'll need to know about managing keys and
+              protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please
+              do not proceed."
+          />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="Your validator keys are derived from a uniquemnemonic (or seed). Your
-              seed will be the ONLY WAY to withdraw your funds. Above all, keep it safe!"
+            defaultMessage="Your validator keys are derived from a unique mnemonic (or seed). Your
+              mnemonic/seed will be the ONLY WAY to withdraw your funds. Above all, keep it safe! No
+              one can help you if you lose this phrase."
           />
         </Text>
         <Text size="medium" className="mt20">
@@ -165,13 +170,7 @@ export const pageContent = {
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="If you're unfamiliar with keys and mnemomics, please don't proceed. Your
-              keys will be your responsibility and no one can help you if you lose them."
-          />
-        </Text>
-        <Text size="medium" className="mt20">
-          <FormattedMessage
-            defaultMessage="*Warning: Do not store keys on multiple/backup validators at once. {readMore}"
+            defaultMessage="*Warning: Do not store keys on multiple/backup validators at once {readMore}"
             values={{
               readMore: (
                 <Link

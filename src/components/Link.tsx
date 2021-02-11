@@ -44,6 +44,15 @@ const StyledExternalLink = styled.a<
     font-style: normal;
   }
 `;
+
+const StyledHashLink = styled(StyledExternalLink as any)<
+  Pick<LinkProps, 'primary' | 'theme' | 'inline' | 'isTextLink'>
+>`
+  &:after {
+    content: none;
+  }
+`;
+
 const StyledLink = styled(RouterLink)`
   ${styles};
   color: ${(props: any) =>
@@ -63,6 +72,9 @@ interface LinkProps {
   shouldOpenNewTab?: boolean;
 }
 
+const HASH_PATTERN = /^#.*/;
+const isHashLink = (to: string) => HASH_PATTERN.test(to);
+
 export const Link = (props: LinkProps) => {
   const {
     children,
@@ -75,6 +87,22 @@ export const Link = (props: LinkProps) => {
   } = props;
   const { locale } = useIntl();
   const isExternal = to && to.includes('http');
+  const isHash = isHashLink(to);
+
+  if (isHash) {
+    return (
+      <StyledHashLink
+        className={className}
+        href={to}
+        primary={primary}
+        inline={inline}
+        isTextLink={isTextLink}
+      >
+        {children}
+      </StyledHashLink>
+    );
+  }
+
   if (isExternal) {
     return (
       <StyledExternalLink

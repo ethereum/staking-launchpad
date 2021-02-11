@@ -9,6 +9,7 @@ export enum AcknowledgementIdsEnum {
   keyManagement,
   commitment,
   earlyAdoptionRisks,
+  checklist,
   confirmation,
 }
 
@@ -19,12 +20,13 @@ export type AcknowledgementStateInterface = {
 const defaultAcknowledgementState: AcknowledgementStateInterface = {
   [AcknowledgementIdsEnum.introSection]: false,
   [AcknowledgementIdsEnum.deposit]: false,
+  [AcknowledgementIdsEnum.terminal]: false,
   [AcknowledgementIdsEnum.responsibilities]: false,
   [AcknowledgementIdsEnum.slashing]: false,
   [AcknowledgementIdsEnum.keyManagement]: false,
   [AcknowledgementIdsEnum.commitment]: false,
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: false,
-  [AcknowledgementIdsEnum.terminal]: false,
+  [AcknowledgementIdsEnum.checklist]: false,
   [AcknowledgementIdsEnum.confirmation]: false,
 };
 

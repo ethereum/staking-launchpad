@@ -245,6 +245,22 @@ export const pageContent = {
       <FormattedMessage defaultMessage="I am technically capable of setting up and running a validator." />
     ),
   },
+  [AcknowledgementIdsEnum.checklist]: {
+    title: 'Staking Checklist',
+    content: (
+      <>
+        <Text size="medium" className="my10">
+          <FormattedMessage defaultMessage="Please review the staking checklist prior to proceeding. Use this as a guide to check off tasks as you complete validator setup." />
+        </Text>
+        <Link inline shouldOpenNewTab={true} to="/checklist" className="my10" primary>
+          <FormattedMessage defaultMessage="Staking Checklist" />
+        </Link>
+      </>
+    ),
+    acknowledgementText: (
+      <FormattedMessage defaultMessage="I have reviewed the staking checklist." />
+    ),
+  },
   [AcknowledgementIdsEnum.confirmation]: {
     title: <FormattedMessage defaultMessage="Confirmation" />,
     content: (

@@ -6,6 +6,7 @@ import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
+import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 const FAQStyles = styled.div`
   section {
@@ -34,7 +35,7 @@ export const FAQ = () => {
     <PageTemplate
       title={formatMessage({ defaultMessage: 'Validator FAQs' })}
       description={formatMessage({
-        defaultMessage: 'Answers to common questions on becomming a validator.',
+        defaultMessage: 'Answers to common questions on becoming a validator.',
       })}
     >
       <FAQStyles>
@@ -101,47 +102,60 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="Why do validators need to have funds at stake?" />
+              <FormattedMessage defaultMessage="Why do I need to have funds at stake?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Validators need to have funds at stake so they can be penalized
+                defaultMessage="As a validator, you'll need to have funds at stake so you can be penalized
                   for behaving dishonestly."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="In other words, to keep them honest, their actions need to have
+                defaultMessage="In other words, to keep you honest, your actions need to have
                   financial consequences."
               />
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="How much ETH does a validator need to stake?" />
+              <FormattedMessage defaultMessage="How much ETH do I need to stake to become a validator?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Before a validator can start to secure the network, he or she
-                  needs to stake {eth}. This forms the validator’s initial balance."
+                defaultMessage="Before you can run a validator and start to secure the network, you
+                  need to stake {pricePerValidator} ETH. This forms your initial balance."
                 values={{
-                  eth: <strong>32 ETH</strong>,
+                  pricePerValidator: <strong>{PRICE_PER_VALIDATOR}</strong>,
                 }}
-                description="{eth} represents '32 ETH' styled in bold"
+                description="{pricePerValidator} represents deposit amount styled in bold"
               />
             </Text>
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="Is there any advantage to having more than 32 ETH at stake?" />
+              <FormattedMessage
+                defaultMessage="Is there any advantage to having more than {pricePerValidator} ETH at stake?"
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="No. There is no advantage to having more than 32 ETH staked." />
+              <FormattedMessage
+                defaultMessage="No. There is no advantage to having more than {pricePerValidator} ETH staked."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Limiting the maximum stake to 32 ETH encourages decentralization of power as it
+                defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH encourages decentralization of power as it
                   prevents any single validator from having an excessively large vote on the state of the chain."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
               />
             </Text>
             <BlockQuote>
@@ -175,8 +189,8 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="You should certainly top up if your balance is close to 16 ETH:
-                  this is to ensure you don’t get kicked out of the validator
+                defaultMessage="You should certainly top up if your balance is close to 16 ETH.
+                  This is to ensure you don’t get kicked out of the validator
                   set (which automatically happens if your balance falls below 16
                   ETH)."
               />
@@ -184,8 +198,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="At the other end of the spectrum, if your balance is closer to 31
-                  ETH, it’s probably not worth your while adding the extra ETH
-                  required to get back to 32."
+                  ETH, it’s probably not worth adding the extra ETH required to get back to 32."
               />
             </Text>
           </section>
@@ -210,11 +223,14 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="There’s no way for you to activate your validator again, and
+                defaultMessage="There’s no way for you to re-activate your validator, and
                   you won’t be able to transfer or withdraw your funds until
                   the merge (which means your funds will remain inaccessible until
                   then)."
               />
+              <Link className="mt20" to="https://ethereum.org/en/eth2/docking/">
+                <FormattedMessage defaultMessage="More on the merge" />
+              </Link>
             </Text>
           </section>
         </section>
@@ -230,8 +246,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="In addition to being penalized for being offline, validators are
-                  penalized for behaving maliciously – for example attesting to
+                defaultMessage="As a validator you can be penalized for being offline and behaving maliciously – for example attesting to
                   invalid or contradicting blocks."
               />
             </Text>
@@ -246,14 +261,14 @@ export const FAQ = () => {
             </Text>
             <ul>
               <li>
-                <FormattedMessage defaultMessage="Rewards are given for actions that help the network reach consensus" />
+                <FormattedMessage defaultMessage="Rewards are given for actions that help the network reach consensus." />
               </li>
               <li>
-                <FormattedMessage defaultMessage="Minor penalties are given for inadvertant actions (or inactions) that hinder consensus" />
+                <FormattedMessage defaultMessage="Minor penalties are given for inadvertant actions (or inactions) that hinder consensus." />
               </li>
               <li>
                 <FormattedMessage
-                  defaultMessage="And major penalities – or {slashings} – are given for malicious actions"
+                  defaultMessage="And major penalities – or {slashings} – are given for malicious actions."
                   values={{
                     slashings: (
                       <strong>
@@ -267,8 +282,8 @@ export const FAQ = () => {
             </ul>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="In other words, validators that maximize their rewards also
-                  provide the greatest benefit to the network as a whole."
+                defaultMessage="In other words, you maximize your rewards by
+                  providing the greatest benefit to the network as a whole."
               />
             </Text>
           </section>
@@ -278,21 +293,20 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Remember that each validator has its own balance – with the
+                defaultMessage="Remember your validator has its own balance – with the
                   initial balance outlined in the deposit contract."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="This balance is updated periodically by the Ethereum network rules
-                  as the validator carries (or fails to carry) out his or her
-                  responsibilities."
+                defaultMessage="Your balance is updated periodically by the Ethereum network rules
+                  as you carry (or fail to carry) out your responsibilities."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Put another way, rewards and penalties are reflected in the
-                  validator’s balance over time."
+                  your validator's balance over time."
               />
             </Text>
           </section>
@@ -309,7 +323,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Every epoch, the network measures the actions of each validator
-                  and issues rewards or penalties appropriately."
+                  and issues your rewards or penalties appropriately."
               />
             </Text>
           </section>
@@ -346,24 +360,27 @@ export const FAQ = () => {
                   defaultMessage="Note however that this scaling mechanism works in a non-obvious
                     way. To understand the precise details of how it works requires
                     understanding a concept called {effectiveBalance}. If you’re not yet familiar
-                    with this concept, we recommend you read through this {excellentPost}."
+                    with this concept, we recommend you read through {article}"
                   values={{
                     effectiveBalance: (
                       <strong>
                         {formatMessage({ defaultMessage: 'effective balance' })}
                       </strong>
                     ),
-                    excellentPost: (
+                    article: (
                       <Link
                         primary
                         inline
                         to="https://www.attestant.io/posts/understanding-validator-effective-balance/"
                       >
-                        {formatMessage({ defaultMessage: 'excellent post' })}
+                        {formatMessage({
+                          defaultMessage:
+                            'understanding validator effective balance',
+                        })}
                       </Link>
                     ),
                   }}
-                  description="{effectiveBalance} shows 'effective balance' in bold. {excellentPost}
+                  description="{effectiveBalance} shows 'effective balance' in bold. {article}
                     shows 'excellent post' and links to an article."
                 />
               </Text>
@@ -407,7 +424,7 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="How badly will a validator be penalized for being offline?" />
+              <FormattedMessage defaultMessage="How badly will I be penalized for being offline?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
@@ -472,9 +489,9 @@ export const FAQ = () => {
             <BlockQuote>
               <Text className="mt10">
                 <FormattedMessage
-                  defaultMessage="Note that in the second (unlikely) scenario, validators stand to
-                    progressively lose up to 50% (16 ETH) of their stake over 21
-                    days. After 21 days they are ejected out of the validator pool.
+                  defaultMessage="Note that in the second (unlikely) scenario, you stand to
+                    progressively lose up to 50% (16 ETH) of your stake over 21
+                    days. After 21 days you are ejected out of the validator pool.
                     This ensures that blocks start finalizing again at some point."
                 />
               </Text>
@@ -482,12 +499,12 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="How great does an honest validator’s uptime need to be for it to be net profitable?" />
+              <FormattedMessage defaultMessage="How great does my uptime need to be for my validator to be net profitable?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Overall, validators are expected to be net profitable as long as
-                  their uptime is {greaterThan50Percent}."
+                defaultMessage="Overall, we'd expect your validator to be net profitable as long as
+                  your uptime is {greaterThan50Percent}."
                 values={{
                   greaterThan50Percent: (
                     <Link to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/">
@@ -500,7 +517,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="This means that validators need not go to extreme lengths with
+                defaultMessage="This means that you don't need to go to extreme lengths with
                   backup clients or redundant internet connections as the
                   repercussions of being offline are not so severe."
               />
@@ -508,12 +525,12 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="How much will a validator be penalized for acting maliciously?" />
+              <FormattedMessage defaultMessage="How much will I be penalized for acting maliciously?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Again, it depends. Behaving maliciously – for example attesting to
-                  invalid or contradicting blocks, will lead to a validator’s stake
+                  invalid or contradicting blocks, will lead to your stake
                   being slashed."
               />
             </Text>
@@ -547,15 +564,13 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Slashing has two purposes: (1) to make it prohibitively expensive
-                  to attack eth2, and (2) to stop validators from being lazy by
-                  checking that they actually perform their duties. Slashing a
-                  validator is to destroy (a portion of) the validator’s stake if
-                  they act in a provably destructive manner."
+                  to attack Eth2, and (2) to stop validators from being lazy by
+                  checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Validators that are slashed are prevented from participating in
+                defaultMessage="If you're slashed you're prevented from participating in
                   the protocol further and are forcibly exited."
               />
             </Text>
@@ -569,26 +584,25 @@ export const FAQ = () => {
           </Anchor>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="What happens I lose my signing key?" />
+              <FormattedMessage defaultMessage="What happens if I lose my signing key?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="If the signing key is lost, the validator can no longer propose or
+                defaultMessage="If you lose your signing key, your validator can no longer propose or
               attest."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Over time, the validator’s balance will decrease as he or she is
-                  punished for not participating in the consensus process. When the
-                  validator’s balance reaches 16 Eth, he or she will be
+                defaultMessage="Over time, your balance will decrease as you are
+                  punished for not participating in the consensus process. When your balance reaches 16 ETH, you will be
                   automatically exited from the validator pool."
               />
             </Text>
             <BlockQuote>
               <Text className="mt10">
                 <FormattedMessage
-                  defaultMessage="However, all is not lost. Assuming validators derive their keys
+                  defaultMessage="However, all is not lost. Assuming you derive your keys
                     using {eip2334} (as per the default onboarding flow) then {strongText}."
                   values={{
                     eip2334: (
@@ -604,7 +618,7 @@ export const FAQ = () => {
                       <strong>
                         {formatMessage({
                           defaultMessage:
-                            'validators can always recalculate their signing key from their withdrawal key',
+                            'you can always recalculate your signing key from your withdrawal key',
                         })}
                       </strong>
                     ),
@@ -615,7 +629,7 @@ export const FAQ = () => {
             </BlockQuote>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="The 16 Eth can then be withdrawn – with the withdrawal key – after
+                defaultMessage="Your 16 ETH can then be withdrawn – with your withdrawal key – after
                   a delay of around a day."
               />
             </Text>
@@ -634,8 +648,8 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="If the withdrawal key is lost, there is no way to obtain access to
-              the funds held by the validator."
+                defaultMessage="If you lose your withdrawal key, there is no way to access to
+              the funds held by your validator."
               />
             </Text>
             <Text className="mt10">
@@ -652,19 +666,19 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="If the withdrawal key is stolen, the thief can transfer the
+                defaultMessage="If your withdrawal key is stolen, the thief can transfer your
                   validator’s balance, but only once the validator has exited."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="If the signing key is not under the thief’s control, the thief
-                  cannot exit the validator."
+                defaultMessage="If your signing key is not under the thief’s control, the thief
+                  cannot exit your validator."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="The user with the signing key could attempt to quickly exit the
+                defaultMessage="With your signing key, you could attempt to quickly exit the
                   validator and then transfer the funds – with the withdrawal key –
                   before the thief."
               />
@@ -676,7 +690,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="In a nutshell, security. The signing key must be available at all
+                defaultMessage="In a nutshell, security. Your signing key must be available at all
                   times. As such, it will need to be held online. Since anything
                   online is vulnerable to being hacked, it’s not a good idea to use
                   the same key for withdrawals."

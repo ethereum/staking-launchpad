@@ -428,13 +428,6 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have hardened ssh on a random port" />
-              </Text>
-            }
-          />
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
                 <FormattedMessage defaultMessage="I have set up a firewall" />
               </Text>
             }
@@ -631,25 +624,25 @@ export const Checklist = () => {
               />
             ))}
           </ClientContainer>
-          <Text>
-            <FormattedMessage
-              defaultMessage="{warning} It is high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
-              values={{
-                warning: (
-                  <strong>
-                    {formatMessage({ defaultMessage: 'Warning!' })}
-                  </strong>
-                ),
-                learnMore: (
-                  <Link primary inline to="/faq#responsibilities">
-                    {formatMessage({
-                      defaultMessage: 'Learn more about slashing →',
-                    })}
-                  </Link>
-                ),
-              }}
-            />
-          </Text>
+          <Alert variant="error" className="mt30 mb20">
+            <Heading level={3}>
+              <FormattedMessage defaultMessage="Warning!" />
+            </Heading>
+            <Text className="mt20">
+              <FormattedMessage
+                defaultMessage="It is high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
+                values={{
+                  learnMore: (
+                    <Link primary inline to="/faq#responsibilities">
+                      {formatMessage({
+                        defaultMessage: 'Learn more about slashing →',
+                      })}
+                    </Link>
+                  ),
+                }}
+              />
+            </Text>
+          </Alert>
           <CheckBox
             label={
               <Text className="checkbox-label">

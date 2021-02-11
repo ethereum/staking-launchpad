@@ -120,10 +120,12 @@ export const Link = (props: LinkProps) => {
     );
   }
 
+  // Add language path if not already present
   const firstPath = to.split('/')[1];
   const langPath = supportedLanguages.includes(firstPath)
     ? to
     : `/${locale}${to}`;
+
   return (
     <StyledLink
       target={shouldOpenNewTab ? '_blank' : '_self'}

@@ -274,7 +274,7 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage defaultMessage="Please review the staking checklist prior to proceeding. Use this as a guide to check off tasks as you complete validator setup." />
         </Text>
-        <Link inline to="/checklist" className="my10" primary>
+        <Link inline shouldOpenNewTab={true} to="/checklist" className="my10" primary>
           <FormattedMessage defaultMessage="Staking Checklist" />
         </Link>
       </>

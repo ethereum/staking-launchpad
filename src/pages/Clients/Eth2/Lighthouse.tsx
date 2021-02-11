@@ -10,7 +10,7 @@ import {
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { LIGHTHOUSE_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const CodeSnippet = styled.div`
   padding: 10px;
@@ -125,8 +125,14 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
 );
 
 export const Lighthouse = () => {
+  const { formatMessage } = useIntl();
   return (
-    <PageTemplate title="">
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { clientName: 'Lighthouse' }
+      )}
+    >
       <ValidatorClientPageStyles>
         <Hero imgSrc={lighthouseBg} />
         <LighthouseDetails />

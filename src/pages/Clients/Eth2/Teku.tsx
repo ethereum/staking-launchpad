@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { PageTemplate } from '../../../components/PageTemplate';
 import tekuBg from '../../../static/teku-bg.png';
 import {
@@ -222,8 +222,14 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
 );
 
 export const Teku = () => {
+  const { formatMessage } = useIntl();
   return (
-    <PageTemplate title="">
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { clientName: 'Teku' }
+      )}
+    >
       <ValidatorClientPageStyles>
         <Hero
           imgSrc={tekuBg}

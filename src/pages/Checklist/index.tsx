@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
+import { CheckBox } from 'grommet';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
-import { CheckBox } from 'grommet';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
@@ -14,7 +15,7 @@ import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { Alert } from '../../components/Alert';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -101,7 +102,7 @@ const PortTable = styled.table`
 `;
 
 const SectionHeader = styled.div`
-  margin-bottom: 3rem 0 1rem;
+  margin: 3rem 0 1rem;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 4px;
@@ -118,6 +119,44 @@ const RainbowHeader = styled(SectionHeader as any)`
   margin: 3rem 1rem 1rem;
   background-image: ${p =>
     `linear-gradient(to right, ${p.theme.rainbowLight})`};
+`;
+
+const CardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 1rem;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    flex-direction: column;
+  }
+`;
+
+const Card = styled.div`
+  padding: 24px;
+  border: 1px solid ${p => p.theme.gray.dark};
+  border-radius: 4px;
+  width: 100%;
+  background: white;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    margin: 0px;
+    margin-top: 16px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
+`;
+
+const BoldGreen = styled.span`
+  color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
+  font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
+  font-weight: bold;
+`;
+
+const StyledLink = styled(Link as any)`
+  width: 100%;
 `;
 
 interface Client {
@@ -207,6 +246,38 @@ export const Checklist = () => {
           />
         </Text>
       </Subtitle>
+      <CardContainer>
+        <StyledLink to="#section-one" inline isTextLink={false}>
+          <Card>
+            <Heading level={4} className="mb10">
+              <FormattedMessage defaultMessage="Section 1" />
+            </Heading>
+            <BoldGreen className="mr10" fontSize={24}>
+              <FormattedMessage defaultMessage="Before you start" />
+            </BoldGreen>
+          </Card>
+        </StyledLink>
+        <StyledLink to="#section-two" inline isTextLink={false}>
+          <Card>
+            <Heading level={4} className="mb10">
+              <FormattedMessage defaultMessage="Section 2" />
+            </Heading>
+            <BoldGreen className="mr10" fontSize={24}>
+              <FormattedMessage defaultMessage="During setup" />
+            </BoldGreen>
+          </Card>
+        </StyledLink>
+        <StyledLink to="#section-three" inline isTextLink={false}>
+          <Card>
+            <Heading level={4} className="mb10">
+              <FormattedMessage defaultMessage="Section 3" />
+            </Heading>
+            <BoldGreen className="mr10" fontSize={24}>
+              <FormattedMessage defaultMessage="After depositing" />
+            </BoldGreen>
+          </Card>
+        </StyledLink>
+      </CardContainer>
       <ChecklistPageStyles>
         <SectionHeader id="section-one">
           <Heading level={3}>
@@ -514,14 +585,17 @@ export const Checklist = () => {
             </li>
           </ul>
         </section>
-        <RainbowHeader>
+        <Alert variant="error" className="my40 mx15">
           <Heading level={3}>
             <FormattedMessage defaultMessage="Testnet practice" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Strongly recommended these steps be completed on the current testnet prior to advancing to mainnet" />
+            <FormattedMessage
+              defaultMessage="Strongly recommended these steps be completed on the current testnet
+                prior to advancing to mainnet"
+            />
           </Text>
-        </RainbowHeader>
+        </Alert>
         <section>
           <Heading level={3}>
             <FormattedMessage defaultMessage="Configure your Eth1 Client" />
@@ -580,7 +654,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have installed the {latestRelease} of my client"
+                  defaultMessage="I have installed the {latestRelease} of my Eth2 client"
                   values={{
                     latestRelease: (
                       <strong>
@@ -646,7 +720,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have joined my client's discord chat" />
+                <FormattedMessage defaultMessage="I have joined my client's Discord chat" />
               </Text>
             }
           />

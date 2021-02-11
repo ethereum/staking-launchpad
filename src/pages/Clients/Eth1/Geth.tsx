@@ -14,41 +14,40 @@ export const GethDetails = () => (
       Geth
     </SectionTitle>
     <Text className="mt10">
-      One of the three original implementations of the Ethereum protocol.
+      <FormattedMessage defaultMessage="One of the three original implementations of the Ethereum protocol." />
     </Text>
     <SectionTitle level={2} className="mb5">
-      Language information
+      <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      Geth is written in Go, fully open source and licensed under the GNU LGPL
-      v3.
+      <FormattedMessage defaultMessage="Geth is written in Go, fully open source and licensed under the GNU LGPL v3." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Installation
+        <FormattedMessage defaultMessage="Installation" />
       </SectionTitle>
       <Text>
-        The Geth documentation explains how to download and install the client.
+        <FormattedMessage defaultMessage="The Geth documentation explains how to download and install the client." />
       </Text>
       <Link
         primary
         to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
         className="mt10"
       >
-        Geth installation documentation
+        <FormattedMessage defaultMessage="Geth installation documentation" />
       </Link>
     </section>
     <section>
       <SectionTitle level={2} className="mb5">
-        Setup
+        <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        Make sure you do the following to get your Eth1 client working properly.
+        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
       </Text>
       {!IS_MAINNET && (
         <>
           <Heading level={3} className="mt20">
-            Testing on Goerli
+            <FormattedMessage defaultMessage="Testing on Goerli" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage
@@ -62,7 +61,7 @@ export const GethDetails = () => (
             primary
             to="https://geth.ethereum.org/docs/interface/command-line-options"
           >
-            Geth on Goerli documentation
+            <FormattedMessage defaultMessage="Geth on Goerli documentation" />
           </Link>
         </>
       )}
@@ -74,6 +73,7 @@ export const GethDetails = () => (
           values={{
             http: <Code className="mt20">--http</Code>,
           }}
+          description="{http} shows '--http' terminal command"
         />
       </Text>
       <Link

@@ -130,7 +130,7 @@ export const pageContent = {
         >
           <FormattedMessage defaultMessage="The Eth2 specification" />
         </Link>
-        <Link to="/faq" className="my10" primary withArrow>
+        <Link to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
         </Link>
       </>
@@ -147,42 +147,18 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="mt10">
-          <FormattedMessage defaultMessage="To become a validator you'll need to know about managing keys." />
-        </Text>
-        <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="Your validator keys are derived from a uniquemnemonic (or seed). Your
-              seed will be the ONLY WAY to withdraw your funds. Above all, keep it safe!"
+            defaultMessage="To become a validator you'll need to know about managing keys and
+              protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please
+              do not proceed."
           />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="We'll help you create keys for each of your validators. These keys
-              will be saved in password-encrypted keystore files and you will need to give these
-              to your validator software to begin validating*. You will also receive a deposit file
-              to upload to this website with the public keys for your validator."
-          />
-        </Text>
-        <Text size="medium" className="mt20">
-          <FormattedMessage
-            defaultMessage="If you're unfamiliar with keys and mnemomics, please don't proceed. Your
-              keys will be your responsibility and no one can help you if you lose them."
-          />
-        </Text>
-        <Text size="medium" className="mt20">
-          <FormattedMessage
-            defaultMessage="*Warning: Do not store keys on multiple/backup validators at once. {readMore}"
-            values={{
-              readMore: (
-                <Link
-                  className="my10"
-                  primary
-                  to="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
-                >
-                  <FormattedMessage defaultMessage="More on slashing prevention" />
-                </Link>
-              ),
-            }}
+            defaultMessage="We'll help you create keys for every validator you want to run. They'll be generated
+              via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to
+              withdraw your ETH when the time comes and no one can help you recover your mnemonic if
+              you lose it."
           />
         </Text>
       </>

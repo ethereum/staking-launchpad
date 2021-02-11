@@ -75,6 +75,18 @@ const ValidatorDropdown = styled(DropButton)`
   }
 `;
 
+const DotDropdown = styled(DropButton)`
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  :hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+  }
+`;
+
 const DropdownLink = styled(Link)`
   :hover {
     text-decoration: underline;
@@ -136,6 +148,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNEST_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
+  const networkName = IS_MAINNET ? 'Mainnet' : 'Göerli Testnet';
+
   return (
     <RainbowBackground
       tag="header"
@@ -175,14 +189,14 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="bar-link-text"
             active={pathname === routesEnum.acknowledgementPage}
           >
-            Deposit
+            <FormattedMessage defaultMessage="Deposit" />
           </BarLinkText>
         </Link>
         <ValidatorDropdown
           className="secondary-link"
           label={
             <BarLinkText level={4} margin="none" active={isDropdownPage}>
-              Clients
+              <FormattedMessage defaultMessage="Clients" />
             </BarLinkText>
           }
           dropAlign={{ top: 'bottom', right: 'right' }}
@@ -202,7 +216,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="bar-link-text"
             active={pathname === routesEnum.checklistPage}
           >
-            Checklist
+            <FormattedMessage defaultMessage="Checklist" />
           </BarLinkText>
         </Link>
         <Link to={routesEnum.FaqPage} className="mx10 secondary-link">
@@ -212,7 +226,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="bar-link-text"
             active={pathname === routesEnum.FaqPage}
           >
-            FAQ
+            <FormattedMessage defaultMessage="FAQ" />
           </BarLinkText>
         </Link>
       </NavBarLinks>
@@ -225,7 +239,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               className="bar-link-text"
               active={pathname === routesEnum.languagesPage}
             >
-              Languages
+              <FormattedMessage defaultMessage="Languages" />
             </BarLinkText>
           </Link>
         )}
@@ -278,16 +292,18 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 </NetworkInfo>
                 <Box pad="large" className="mt0">
                   <DropdownLink to={routesEnum.FaqPage}>
-                    Frequently asked questions
+                    <FormattedMessage defaultMessage="FAQ" />
                   </DropdownLink>
                   <DropdownLink to={routesEnum.checklistPage}>
-                    Eth2 staker checklist
+                    <FormattedMessage defaultMessage="Staker checklist" />
                   </DropdownLink>
                   <DropdownLink to={routesEnum.languagesPage}>
-                    Languages
+                    <FormattedMessage defaultMessage="Languages" />
                   </DropdownLink>
                   <Text className="my20">
-                    <b>Eth2 clients</b>
+                    <b>
+                      <FormattedMessage defaultMessage="The Eth2 clients" />
+                    </b>
                   </Text>
                   <DropdownLink to={routesEnum.lighthouse}>
                     Lighthouse
@@ -336,8 +352,40 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           />
         )}
         {!mobile && walletConnected && (
-          <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
-            <Dot success={networkAllowed} error={!networkAllowed} />
+          <Box className="flex flex-row mr20">
+            {networkAllowed && (
+              <DotDropdown
+                className="secondary-link"
+                label={<Dot success={networkAllowed} error={!networkAllowed} />}
+                dropAlign={{ top: 'bottom', right: 'right' }}
+                dropContent={
+                  <Box pad="small">
+                    <Text>
+                      <FormattedMessage defaultMessage="You're on the right network!" />
+                    </Text>
+                  </Box>
+                }
+              />
+            )}
+            {!networkAllowed && (
+              <DotDropdown
+                className="secondary-link"
+                label={<Dot error={!networkAllowed} />}
+                dropAlign={{ top: 'bottom', right: 'right' }}
+                dropContent={
+                  <Box pad="small">
+                    <Text>
+                      <FormattedMessage
+                        defaultMessage="Your wallet should be set to {networkName} to use this launchpad."
+                        values={{
+                          networkName: <span>{networkName}</span>,
+                        }}
+                      />
+                    </Text>
+                  </Box>
+                }
+              />
+            )}
             <Text size="small" className="ml10" color="blueDark">
               {trimString(account as string, 10)}
             </Text>

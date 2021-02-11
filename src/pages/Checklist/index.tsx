@@ -626,7 +626,9 @@ export const Checklist = () => {
           />
         </section>
         <section>
-          <Heading level={3}>Configure your Eth2 client</Heading>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Configure your Eth2 client" />
+          </Heading>
           <Link className="mt10" to="/faq" primary>
             <FormattedMessage defaultMessage="Learn more about the roles and responsibilities of Eth2 Validators" />
           </Link>
@@ -938,7 +940,9 @@ export const Checklist = () => {
           />
         </section>
         <section>
-          <Heading level={3}>Advanced system architecture</Heading>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Advanced system architecture" />
+          </Heading>
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
@@ -960,10 +964,10 @@ export const Checklist = () => {
           </ul>
         </section>
         <section>
+          {/* Translate "Graffiti"? */}
           <Heading level={4} className="mt10">
             Graffiti
           </Heading>{' '}
-          {/* Translate? */}
           <Text className="mt10">
             <FormattedMessage
               defaultMessage="You can use your validator client's graffiti flag to add a personal

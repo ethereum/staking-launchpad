@@ -287,22 +287,18 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Review this section before deciding to proceed with validator setup" />
           </Text>
         </SectionHeader>
-        <section>
-          <Heading level={4}>
+        <Alert variant="warning" className="my40 mx15">
+          <Heading level={3}>
             <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <FormattedMessage
-                  defaultMessage="Hardware suggestions are an ever evolving target. Current
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Hardware suggestions are an ever evolving target. Current
                     minimum requirements are likely to increase by an order of magnitude after the merge and 
                     introduction of shard chains. Do your own research before depositing funds."
-                />
-              </Text>
-            </li>
-          </ul>
-        </section>
+            />
+          </Text>
+        </Alert>
         <section>
           <Heading level={3}>
             <FormattedMessage defaultMessage="Hard drive" />
@@ -424,7 +420,10 @@ export const Checklist = () => {
                   defaultMessage="Avoid overly complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small
                     inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups
                     can add to the expense of your setup, and redundant backup validators can lead to slashing."
-                />
+                />{' '}
+                <Link primary inline to="/faq#responsibilities">
+                  <FormattedMessage defaultMessage="More on slashing risks" />
+                </Link>
               </Text>
             </li>
             <li className="py5">
@@ -650,7 +649,7 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="I have installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)"
                   values={{
-                    network: IS_MAINNET ? 'mainnet' : 'goerli',
+                    network: IS_MAINNET ? 'mainnet' : 'Goerli',
                   }}
                 />
               </Text>
@@ -838,7 +837,7 @@ export const Checklist = () => {
             </Text>
           </Heading>
           <Alert variant="info" className="mt20">
-            <FormattedMessage defaultMessage="The last items, though not required for your validator to function, are recommended to optimize your node" />
+            <FormattedMessage defaultMessage="These last items, though not required for your validator to function, are recommended to optimize your node" />
           </Alert>
         </SectionHeader>
         <section>
@@ -1000,7 +999,7 @@ export const Checklist = () => {
         </section>
         <section>
           {/* Translate "Graffiti"? */}
-          <Heading level={4} className="mt10">
+          <Heading level={3} className="mt10">
             Graffiti
           </Heading>{' '}
           <Text className="mt10">

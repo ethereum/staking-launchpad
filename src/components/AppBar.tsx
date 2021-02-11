@@ -132,6 +132,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
   );
 
   const mobile = useMobileCheck('1080px');
+  const switchLaunchpadUrl = IS_MAINNET
+    ? TESTNEST_LAUNCHPAD_URL
+    : MAINNET_LAUNCHPAD_URL;
 
   return (
     <RainbowBackground
@@ -255,14 +258,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                         : `${TESTNEST_LAUNCHPAD_NAME} testnet`}
                     </b>
                   </span>
-                  <Link
-                    primary
-                    to={
-                      IS_MAINNET
-                        ? TESTNEST_LAUNCHPAD_URL
-                        : MAINNET_LAUNCHPAD_URL
-                    }
-                  >
+                  <Link primary to={switchLaunchpadUrl}>
                     <FormattedMessage
                       defaultMessage="Switch to {network} launchpad"
                       values={{
@@ -319,20 +315,10 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 <Box pad="small" className="mt0">
                   {!IS_MAINNET && (
                     <Text className="mb10">
-                      {IS_MAINNET ? (
-                        ``
-                      ) : (
-                        <FormattedMessage defaultMessage="This is a test network ⚠️" />
-                      )}
+                      <FormattedMessage defaultMessage="This is a test network ⚠️" />
                     </Text>
                   )}
-                  <DropdownLink
-                    to={
-                      IS_MAINNET
-                        ? `${TESTNEST_LAUNCHPAD_URL}`
-                        : `${MAINNET_LAUNCHPAD_URL}`
-                    }
-                  >
+                  <DropdownLink to={switchLaunchpadUrl}>
                     <FormattedMessage
                       defaultMessage="Switch to {network} launchpad"
                       values={{

@@ -259,8 +259,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     primary
                     to={
                       IS_MAINNET
-                        ? `${TESTNEST_LAUNCHPAD_URL}`
-                        : `${MAINNET_LAUNCHPAD_URL}`
+                        ? TESTNEST_LAUNCHPAD_URL
+                        : MAINNET_LAUNCHPAD_URL
                     }
                   >
                     <FormattedMessage

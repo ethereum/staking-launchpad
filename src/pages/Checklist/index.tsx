@@ -354,6 +354,11 @@ export const Checklist = () => {
                 <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you anticipate using is sufficient and supported." />
               </Text>
             </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Resource usage can vary significantly between clients. It is worth researching the different clients if you're working with resource constraints." />
+              </Text>
+            </li>
           </ul>
         </section>
         <section>
@@ -363,7 +368,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Your internet connection should be reliable and as close to 24/7 as possible without interruption." />
+                <FormattedMessage defaultMessage="Ideally your internet connection should be reliable and as close to 24/7 as possible without interruption." />
               </Text>
             </li>
             <li className="py5">
@@ -376,9 +381,23 @@ export const Checklist = () => {
                 <FormattedMessage defaultMessage="Upload bandwidth is also important, and as of February 2021 this is ~700-800 MB/hour, and anticipated to increase." />
               </Text>
             </li>
+          </ul>
+          <Heading level={4} className="mt10">
+            <FormattedMessage defaultMessage="Notes" />
+          </Heading>
+          <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: syncing your Eth1 client may take a few days in the worst-case scenario" />
+                <FormattedMessage
+                  defaultMessage="Avoid overly complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small
+                    inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups
+                    can add to the expense of your setup, and redundant backup validators can lead to slashing."
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Syncing your Eth1 client may take a few days in the worst-case scenario." />
               </Text>
             </li>
           </ul>

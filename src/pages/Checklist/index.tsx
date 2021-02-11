@@ -805,6 +805,9 @@ export const Checklist = () => {
               <FormattedMessage defaultMessage="Protect your funds using monitoring software, and learn how to handle different real world scenarios" />
             </Text>
           </Heading>
+          <Alert variant="info" className="mt20">
+            <FormattedMessage defaultMessage="The last items, though not required for your validator to function, are recommended to optimize your node" />
+          </Alert>
         </SectionHeader>
         <section>
           <Heading level={3}>

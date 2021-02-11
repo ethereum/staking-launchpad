@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
 import { CheckBox } from 'grommet';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
@@ -321,14 +321,35 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="As of February 2021, ~400GB is needed for the Eth1 mainnet chaindata alone (growing at ~1GB/day)." />
+                <FormattedMessage
+                  defaultMessage="As of {date}, ~400GB is needed for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
+                  values={{
+                    date: (
+                      <FormattedDate
+                        value="February 2021"
+                        year="numeric"
+                        month="long"
+                      />
+                    ),
+                  }}
+                />
               </Text>
             </li>
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="The Beacon chain had its genesis on 01-Dec-2021. It is growing in size over time, and the
+                  defaultMessage="The Beacon chain had its genesis on {date}. It is growing in size over time, and the
                     introduction of sharding will also increase storage, memory and bandwidth requirements."
+                  values={{
+                    date: (
+                      <FormattedDate
+                        value="2020-12-01 12:00:23 GMT"
+                        year="numeric"
+                        month="long"
+                        day="2-digit"
+                      />
+                    ),
+                  }}
                 />
               </Text>
             </li>
@@ -378,7 +399,18 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Upload bandwidth is also important, and as of February 2021 this is ~700-800 MB/hour, and anticipated to increase." />
+                <FormattedMessage
+                  defaultMessage="Upload bandwidth is also important, and as of {date} this is ~700-800 MB/hour, and anticipated to increase."
+                  values={{
+                    date: (
+                      <FormattedDate
+                        value="February 2021"
+                        year="numeric"
+                        month="long"
+                      />
+                    ),
+                  }}
+                />
               </Text>
             </li>
           </ul>

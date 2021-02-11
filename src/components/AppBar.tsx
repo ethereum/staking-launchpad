@@ -19,9 +19,9 @@ import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import {
   IS_MAINNET,
-  TESTNEST_LAUNCHPAD_NAME,
+  TESTNET_LAUNCHPAD_NAME,
   MAINNET_LAUNCHPAD_URL,
-  TESTNEST_LAUNCHPAD_URL,
+  TESTNET_LAUNCHPAD_URL,
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
 import { FormattedMessage } from 'react-intl';
@@ -145,7 +145,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
 
   const mobile = useMobileCheck('1080px');
   const switchLaunchpadUrl = IS_MAINNET
-    ? TESTNEST_LAUNCHPAD_URL
+    ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
   const networkName = IS_MAINNET ? 'Mainnet' : 'Göerli Testnet';
@@ -172,7 +172,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 className="bar-link-text no-padding"
               >
                 <Text>
-                  Eth2 {!IS_MAINNET && `${TESTNEST_LAUNCHPAD_NAME}`} Launchpad
+                  Eth2 {!IS_MAINNET && `${TESTNET_LAUNCHPAD_NAME}`} Launchpad
                 </Text>
               </BarLinkText>
             </div>
@@ -269,7 +269,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     <b>
                       {IS_MAINNET
                         ? `Mainnet`
-                        : `${TESTNEST_LAUNCHPAD_NAME} testnet`}
+                        : `${TESTNET_LAUNCHPAD_NAME} testnet`}
                     </b>
                   </span>
                   <Link primary to={switchLaunchpadUrl}>
@@ -278,7 +278,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                       values={{
                         network: `${
                           IS_MAINNET
-                            ? `${TESTNEST_LAUNCHPAD_NAME} testnet`
+                            ? `${TESTNET_LAUNCHPAD_NAME} testnet`
                             : `mainnet`
                         }`,
                       }}
@@ -321,7 +321,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="secondary-link"
             label={
               <NetworkText>
-                {IS_MAINNET ? `Mainnet` : `${TESTNEST_LAUNCHPAD_NAME}`}
+                {IS_MAINNET ? `Mainnet` : `${TESTNET_LAUNCHPAD_NAME}`}
                 <FormDown />
               </NetworkText>
             }
@@ -340,7 +340,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                       values={{
                         network: `${
                           IS_MAINNET
-                            ? `${TESTNEST_LAUNCHPAD_NAME} testnet`
+                            ? `${TESTNET_LAUNCHPAD_NAME} testnet`
                             : `mainnet`
                         }`,
                       }}

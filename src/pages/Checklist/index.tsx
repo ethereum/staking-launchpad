@@ -179,7 +179,7 @@ export const Checklist = () => {
       imgUrl: LighthouseBg,
       url: routesEnum.lighthouse,
       linkText: formatMessage({
-        defaultMessage: 'Configure Lighthouse →',
+        defaultMessage: 'Configure Lighthouse',
       }),
     },
     {
@@ -191,7 +191,7 @@ export const Checklist = () => {
       imgUrl: NimbusBg,
       url: routesEnum.nimbus,
       linkText: formatMessage({
-        defaultMessage: 'Configure Nimbus →',
+        defaultMessage: 'Configure Nimbus',
       }),
     },
     {
@@ -203,7 +203,7 @@ export const Checklist = () => {
       imgUrl: PrysmaticBg,
       url: routesEnum.prysm,
       linkText: formatMessage({
-        defaultMessage: 'Configure Prysm →',
+        defaultMessage: 'Configure Prysm',
       }),
     },
     {
@@ -215,7 +215,7 @@ export const Checklist = () => {
       imgUrl: TekuBg,
       url: routesEnum.teku,
       linkText: formatMessage({
-        defaultMessage: 'Configure Teku →',
+        defaultMessage: 'Configure Teku',
       }),
     },
   ]);
@@ -616,7 +616,7 @@ export const Checklist = () => {
         <section>
           <Heading level={3}>Configure your Eth2 client</Heading>
           <Link className="mt10" to="/faq" primary>
-            <FormattedMessage defaultMessage="Learn more about the roles and responsibilities of Eth2 Validators" />
+            <FormattedMessage defaultMessage="More on validator roles and responsibilities" />
           </Link>
           <ClientContainer>
             {clientInfo.map(client => (
@@ -643,7 +643,7 @@ export const Checklist = () => {
                 learnMore: (
                   <Link primary inline to="/faq#responsibilities">
                     {formatMessage({
-                      defaultMessage: 'Learn more about slashing →',
+                      defaultMessage: 'More on slashing risks',
                     })}
                   </Link>
                 ),

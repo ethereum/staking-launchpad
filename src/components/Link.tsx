@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
+import { supportedLanguages } from '../intl';
+
 interface LinkProps {
   primary?: boolean | undefined;
   theme?: any;
@@ -117,7 +119,11 @@ export const Link = (props: LinkProps) => {
       </StyledExternalLink>
     );
   }
-  const langPath = `/${locale}${to}`;
+
+  const firstPath = to.split('/')[1];
+  const langPath = supportedLanguages.includes(firstPath)
+    ? to
+    : `/${locale}${to}`;
   return (
     <StyledLink
       target={shouldOpenNewTab ? '_blank' : '_self'}

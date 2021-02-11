@@ -6,8 +6,13 @@ export const messages: { [key: string]: any } = { en, de, fr };
 
 export enum AppLanguage {
   English = 'en',
+  ChineseSimplified = 'zh',
+  ChineseTraditional = 'zh-tw',
+  Czech = 'cs',
+  Italian = 'it',
+  Korean = 'ko',
+  Spanish = 'es',
   French = 'fr',
-  Deutch = 'de',
 }
 
 export const supportedLanguages: String[] = Object.values(AppLanguage);

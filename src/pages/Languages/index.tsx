@@ -3,6 +3,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
+import { supportedLanguages } from '../../intl';
 
 const LangContainer = styled.div`
   margin-top: 2rem;
@@ -52,41 +53,46 @@ export const Languages = () => {
   const { formatMessage } = useIntl();
   const langs = [
     {
-      path: 'zh',
+      code: 'zh',
       title: formatMessage({ defaultMessage: 'Chinese (simplified)' }),
       language: '简体中文',
     },
     {
-      path: 'zh-tw',
+      code: 'zh-tw',
       title: formatMessage({ defaultMessage: 'Chinese (traditional)' }),
       language: '繁體中文',
     },
     {
-      path: 'cs',
+      code: 'cs',
       title: formatMessage({ defaultMessage: 'Czech' }),
       language: 'čeština',
     },
     {
-      path: 'en',
+      code: 'en',
       title: formatMessage({ defaultMessage: 'English' }),
       language: 'English',
     },
     {
-      path: 'it',
+      code: 'it',
       title: formatMessage({ defaultMessage: 'Italian' }),
       language: 'Italiano',
     },
     {
-      path: 'ko',
+      code: 'ko',
       title: formatMessage({ defaultMessage: 'Korean' }),
       language: '한국어',
     },
     {
-      path: 'es',
+      code: 'es',
       title: formatMessage({ defaultMessage: 'Spanish' }),
       language: 'Español',
     },
-  ];
+    {
+      code: 'fr',
+      title: formatMessage({ defaultMessage: 'French' }),
+      language: 'Frances',
+    },
+  ].filter(lang => supportedLanguages.includes(lang.code));
 
   return (
     <PageTemplate
@@ -96,7 +102,7 @@ export const Languages = () => {
       <LangContainer>
         {langs.map((lang, idx) => {
           return (
-            <LangItem key={String(idx)} to={lang.path}>
+            <LangItem key={String(idx)} to={`/${lang.code}`}>
               <ContentContainer>
                 <LangTitle>{lang.language}</LangTitle>
                 <Lang>{lang.title}</Lang>

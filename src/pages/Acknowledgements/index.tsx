@@ -24,6 +24,7 @@ import {
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
 import { Paper } from '../../components/Paper';
+import { FormattedMessage } from 'react-intl';
 
 interface OwnProps {}
 interface StateProps {
@@ -97,7 +98,7 @@ const _AcknowledgementPage = ({
   return (
     <WorkflowPageTemplate title="Before you deposit">
       <Subtitle>
-        Everything you should understand before becoming a validator today.
+        <FormattedMessage defaultMessage="Everything you should understand before becoming a validator today." />
       </Subtitle>
       <Paper className="flex flex-row">
         <AcknowledgementProgressTracker

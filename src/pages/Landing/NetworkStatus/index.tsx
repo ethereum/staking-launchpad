@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
@@ -12,6 +13,7 @@ import {
   TICKER_NAME,
 } from '../../../utils/envVars';
 import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
+
 //
 // Styled Components
 
@@ -64,6 +66,7 @@ const CardContainer = styled.div`
 export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   amountEth = 0,
 }): JSX.Element | null => {
+  const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
 
   React.useEffect(() => {
@@ -89,12 +92,15 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
       <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
         <Content isMobile={m}>
           <Heading level={2} size="medium" color="blueDark" className="mb40">
-            The Eth2 network
+            <FormattedMessage defaultMessage="The Eth2 network" />
           </Heading>
           <CardContainer>
             <Card>
               <Heading level={3} size="medium" color="blueDark" margin="none">
-                Total {TICKER_NAME} staked
+                <FormattedMessage
+                  defaultMessage="Total {TICKER_NAME} staked"
+                  values={{ TICKER_NAME }}
+                />
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
@@ -104,7 +110,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
             </Card>
             <Card>
               <Heading level={3} size="medium" color="blueDark" margin="none">
-                Total validators
+                <FormattedMessage defaultMessage="Total validators" />
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
@@ -114,7 +120,10 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
             </Card>
             <Card>
               <Heading level={3} size="medium" color="blueDark" margin="none">
-                Current APR
+                <FormattedMessage
+                  defaultMessage="Current APR"
+                  description="APR refers to Annual Percentage Rate"
+                />
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
@@ -132,7 +141,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               className="m-auto"
               fullWidth
               width={m ? undefined : 400}
-              label="More stats"
+              label={formatMessage({ defaultMessage: 'More stats' })}
             />
           </Link>
         </Content>

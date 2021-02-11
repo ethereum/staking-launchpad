@@ -102,7 +102,7 @@ export const NethermindDetails = () => (
         className="mt20"
         to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
       >
-        --JsonRpc.Enabled documentation
+        <FormattedMessage defaultMessage="--JsonRpc.Enabled documentation" />
       </Link>
     </section>
   </>

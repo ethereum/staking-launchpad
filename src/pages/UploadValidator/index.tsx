@@ -1,5 +1,5 @@
 import React, { SyntheticEvent, useCallback, useMemo, useState } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -95,6 +95,7 @@ const _UploadValidatorPage = ({
   dispatchDepositStatusUpdate,
   dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
   const [fileError, setFileError] = useState<React.ReactElement | null>(null);
@@ -129,7 +130,7 @@ const _UploadValidatorPage = ({
     setFileError(
       <Text>
         <FormattedMessage
-          defaultMessage="This json file isn't for the right network. Upload a file generated for your current network: {network}."
+          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
           values={{
             network: (
               <span>
@@ -165,7 +166,11 @@ const _UploadValidatorPage = ({
 
   const onFileDrop = (jsonFiles: Array<any>, rejectedFiles: Array<any>) => {
     if (rejectedFiles?.length) {
-      setFileError(<>That is not a valid deposit_data json file.</>);
+      setFileError(
+        <>
+          <FormattedMessage defaultMessage="That is not a valid deposit_data JSON file." />
+        </>
+      );
       return;
     }
 
@@ -282,7 +287,11 @@ const _UploadValidatorPage = ({
 
   const renderMessage = useMemo(() => {
     if (isDragReject && !isFileStaged) {
-      return <div>Upload a valid json file.</div>;
+      return (
+        <div>
+          <FormattedMessage defaultMessage="Upload a valid json file." />
+        </div>
+      );
     }
 
     if (isFileStaged || fileError) {
@@ -297,7 +306,7 @@ const _UploadValidatorPage = ({
               {!isFileAccepted && (
                 <Text>
                   <FormattedMessage
-                    defaultMessage="{depositFileName} isn't a valid deposit_data json file. Try again."
+                    defaultMessage="{depositFileName} isn't a valid deposit_data JSON file. Try again."
                     values={{
                       depositFileName: <span>{depositFileName}</span>,
                     }}
@@ -310,7 +319,11 @@ const _UploadValidatorPage = ({
       );
     }
 
-    return <div>Drag file to upload or browse</div>;
+    return (
+      <div>
+        <FormattedMessage defaultMessage="Drag file to upload or browse" />
+      </div>
+    );
   }, [
     isDragReject,
     isFileStaged,
@@ -357,14 +370,18 @@ const _UploadValidatorPage = ({
       </Container>
       <div className="flex center p30">
         <Link to={routesEnum.generateKeysPage}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.connectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
             disabled={!isFileAccepted}
-            label="Continue"
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FormattedMessage } from 'react-intl';
 import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
 import EthRound from '../../static/eth-round-landing.svg';
 import { Text } from '../../components/Text';
@@ -65,50 +66,58 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              Validators and Eth2
+              <FormattedMessage defaultMessage="Validators and Eth2" />
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
             <Text className="mt20">
-              This launchpad will help you become a validator, so you can play
-              an active part in Ethereum's future. Validators are key to the
-              more secure, scalable, and sustainable Ethereum we're building
-              together.
+              <FormattedMessage
+                defaultMessage="This launchpad will help you become a validator, so you can play
+                  an active part in Ethereum's future. Validators are key to the
+                  more secure, scalable, and sustainable Ethereum we're building
+                  together."
+              />
             </Text>
             <Link
               className="mt20 mb40"
               to="https://ethereum.org/en/eth2/vision/"
             >
-              More on the Eth2 vision
+              <FormattedMessage defaultMessage="More on the Eth2 vision" />
             </Link>
             <Text className="mt20">
-              As a validator, you'll be responsible for securing the network and
-              receive continuous payouts for actions that help the network reach
-              consensus.
+              <FormattedMessage
+                defaultMessage="As a validator, you'll be responsible for securing the network and
+                  receive continuous payouts for actions that help the network reach
+                  consensus."
+              />
             </Text>
             <Text className="mt20">
-              Today, you'll secure the Beacon Chain, the first Eth2 upgrade.
-              It's a separate chain that uses a proof-of-stake consensus
-              mechanism. Eventually you'll help secure all of Ethereum, once
-              mainnet (the Ethereum we use today) merges with the Beacon Chain.
+              <FormattedMessage
+                defaultMessage="Today, you'll secure the Beacon Chain, the first Eth2 upgrade.
+                  It's a separate chain that uses a proof-of-stake consensus
+                  mechanism. Eventually you'll help secure all of Ethereum, once
+                  mainnet (the Ethereum we use today) merges with the Beacon Chain."
+              />
             </Text>
             <Link
               className="mt20 mb40"
               to="https://ethereum.org/en/eth2/docking/"
             >
-              More on the merge
+              <FormattedMessage defaultMessage="More on the merge" />
             </Link>
             <Text className="mt20">
-              Validating in Ethereum is not the same as mining. The outcomes are
-              similar: the work you do will extend and secure the chain. But the
-              process is completely different because they use different
-              consensus mechanisms.
+              <FormattedMessage
+                defaultMessage="Validating in Ethereum is not the same as mining. The outcomes are
+                  similar: the work you do will extend and secure the chain. But the
+                  process is completely different because they use different
+                  consensus mechanisms."
+              />
             </Text>
             <Link
               className="mt20 mb40"
               to="https://ethereum.org/en/developers/docs/consensus-mechanisms/"
             >
-              More on consensus mechanisms
+              <FormattedMessage defaultMessage="More on consensus mechanisms" />
             </Link>
             {/* NOTE: this section felt like there was a lot of repetition with the section below so have reframed to talk about validators in the context of the upgrades */}
           </ScrollAnimation>

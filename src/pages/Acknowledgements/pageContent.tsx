@@ -11,14 +11,14 @@ const BoldCaps = styled.strong`
 `;
 
 export interface PageContentInterface {
-  title: string;
+  title: JSX.Element;
   content: JSX.Element;
-  acknowledgementText?: any;
+  acknowledgementText?: JSX.Element;
 }
 
 export const pageContent = {
   [AcknowledgementIdsEnum.introSection]: {
-    title: 'Proof of stake',
+    title: <FormattedMessage defaultMessage="Proof of stake" />,
     content: (
       <>
         <Text size="medium" className="my10">
@@ -54,7 +54,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.deposit]: {
-    title: 'The deposit',
+    title: <FormattedMessage defaultMessage="The deposit" />,
     content: (
       <>
         <Text size="medium" className="my10">
@@ -88,7 +88,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.responsibilities]: {
-    title: 'Validator uptime',
+    title: <FormattedMessage defaultMessage="Validator uptime" />,
     content: (
       <>
         <Text size="medium" className="my10">
@@ -114,7 +114,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.slashing]: {
-    title: 'Bad validator behaviour',
+    title: <FormattedMessage defaultMessage="Bad validator behaviour" />,
     content: (
       <>
         <Text size="medium" className="my10">
@@ -143,7 +143,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.keyManagement]: {
-    title: 'Key management',
+    title: <FormattedMessage defaultMessage="Key management" />,
     content: (
       <>
         <Text size="medium" className="mt10">
@@ -172,7 +172,9 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.commitment]: {
-    title: 'Validating is a long-term commitment',
+    title: (
+      <FormattedMessage defaultMessage="Validating is a long-term commitment" />
+    ),
     content: (
       <>
         <Text size="medium" className="my10">
@@ -211,7 +213,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
-    title: 'Early adopter risks',
+    title: <FormattedMessage defaultMessage="Early adopter risks" />,
     content: (
       <Text size="medium" className="my10">
         <FormattedMessage
@@ -229,7 +231,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.terminal]: {
-    title: 'Using the terminal',
+    title: <FormattedMessage defaultMessage="Using the terminal" />,
     content: (
       <Text size="medium" className="my10">
         <FormattedMessage
@@ -244,7 +246,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.confirmation]: {
-    title: 'Confirmation',
+    title: <FormattedMessage defaultMessage="Confirmation" />,
     content: (
       <>
         <Text size="medium" className="my10">

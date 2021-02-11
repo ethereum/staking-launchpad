@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
+import { FormattedMessage, useIntl } from 'react-intl';
 import BigNumber from 'bignumber.js';
 import styled from 'styled-components';
 import { Box, CheckBox } from 'grommet';
+import { Alert as GrommetAlert } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
@@ -21,7 +23,6 @@ import { Code } from '../../components/Code';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { InfoBox } from '../../components/InfoBox';
-import { FormattedMessage, useIntl } from 'react-intl';
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
@@ -33,7 +34,6 @@ import {
   TICKER_NAME,
 } from '../../utils/envVars';
 import { Alert } from '../../components/Alert';
-import { Alert as GrommetAlert } from 'grommet-icons';
 import { BeaconChainStatus } from '../../store/actions/depositFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
@@ -81,7 +81,7 @@ const _SummaryPage = ({
   const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
   const amountValidators = new BigNumber(depositKeys.length);
   const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   const allChecked = React.useMemo(
     () =>
       losePhrase &&
@@ -110,9 +110,7 @@ const _SummaryPage = ({
   if (chainId !== NETWORK_ID) return <WrongNetwork />;
 
   return (
-    <WorkflowPageTemplate
-      title={intl.formatMessage({ defaultMessage: 'Summary' })}
-    >
+    <WorkflowPageTemplate title={formatMessage({ defaultMessage: 'Summary' })}>
       <Paper>
         <Heading level={3} size="small" color="blueDark">
           <FormattedMessage defaultMessage="Launchpad summary" />
@@ -136,7 +134,7 @@ const _SummaryPage = ({
         </Box>
       </Paper>
       <AcknowledgementSection
-        title={intl.formatMessage({ defaultMessage: 'Understand the risks' })}
+        title={formatMessage({ defaultMessage: 'Understand the risks' })}
       >
         <CheckBox
           onChange={e => setLosePhrase(e.target.checked)}
@@ -171,7 +169,7 @@ const _SummaryPage = ({
         </span>
       </AcknowledgementSection>
       <AcknowledgementSection
-        title={intl.formatMessage({
+        title={formatMessage({
           defaultMessage: "Make sure you aren't being phished",
         })}
       >
@@ -194,13 +192,13 @@ const _SummaryPage = ({
           >
             <Button
               width={420}
-              label={intl.formatMessage({
+              label={formatMessage({
                 defaultMessage: 'Check deposit contract address',
               })}
             />
           </Link>
           <Link
-            shouldOpenNewTab={true}
+            shouldOpenNewTab
             to={routesEnum.phishingPage}
             primary
             className="ml20"
@@ -225,7 +223,7 @@ const _SummaryPage = ({
         </span>
       </AcknowledgementSection>
       <AcknowledgementSection
-        title={intl.formatMessage({
+        title={formatMessage({
           defaultMessage: 'Protect yourself against double deposits',
         })}
       >
@@ -257,7 +255,7 @@ const _SummaryPage = ({
             values={{
               warning: (
                 <em>
-                  {intl.formatMessage({
+                  {formatMessage({
                     defaultMessage: 'You are responsible for this transaction!',
                   })}
                 </em>
@@ -307,7 +305,7 @@ const _SummaryPage = ({
           <Button
             className="mr10"
             width={100}
-            label={intl.formatMessage({ defaultMessage: 'Back' })}
+            label={formatMessage({ defaultMessage: 'Back' })}
           />
         </Link>
         <Link to={routesEnum.transactionsPage} onClick={handleSubmit}>
@@ -315,7 +313,7 @@ const _SummaryPage = ({
             width={300}
             rainbow
             disabled={!allChecked}
-            label={intl.formatMessage({ defaultMessage: 'Continue' })}
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </div>

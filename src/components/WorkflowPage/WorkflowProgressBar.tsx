@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FormNext } from 'grommet-icons';
+import { useIntl } from 'react-intl';
 import { rainbowColors } from '../../styles/styledComponentsTheme';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 
@@ -38,22 +39,41 @@ interface Props {
 }
 
 export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   interface step {
     step: WorkflowStep;
     text: string;
   }
 
   const steps: step[] = [
-    { step: WorkflowStep.OVERVIEW, text: 'Overview' },
-    { step: WorkflowStep.SELECT_CLIENT, text: 'Choose client' },
-    { step: WorkflowStep.GENERATE_KEY_PAIRS, text: 'Generate keys' },
+    {
+      step: WorkflowStep.OVERVIEW,
+      text: formatMessage({ defaultMessage: 'Overview' }),
+    },
+    {
+      step: WorkflowStep.SELECT_CLIENT,
+      text: formatMessage({ defaultMessage: 'Choose client' }),
+    },
+    {
+      step: WorkflowStep.GENERATE_KEY_PAIRS,
+      text: formatMessage({ defaultMessage: 'Generate keys' }),
+    },
     {
       step: WorkflowStep.UPLOAD_VALIDATOR_FILE,
-      text: 'Upload deposit data',
+      text: formatMessage({ defaultMessage: 'Upload deposit data' }),
     },
-    { step: WorkflowStep.CONNECT_WALLET, text: 'Connect wallet' },
-    { step: WorkflowStep.SUMMARY, text: 'Summary' },
-    { step: WorkflowStep.TRANSACTION_SIGNING, text: 'Transactions' },
+    {
+      step: WorkflowStep.CONNECT_WALLET,
+      text: formatMessage({ defaultMessage: 'Connect wallet' }),
+    },
+    {
+      step: WorkflowStep.SUMMARY,
+      text: formatMessage({ defaultMessage: 'Summary' }),
+    },
+    {
+      step: WorkflowStep.TRANSACTION_SIGNING,
+      text: formatMessage({ defaultMessage: 'Transactions' }),
+    },
   ];
 
   return (

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { FormNext } from 'grommet-icons';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
-import { FormNext } from 'grommet-icons';
 import { queryContract } from '../../utils/queryContract';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
@@ -14,17 +15,16 @@ import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
 import {
   ENABLE_RPC_FEATURES,
   PRICE_PER_VALIDATOR,
-  TESTNEST_LAUNCHPAD_NAME,
+  TESTNET_LAUNCHPAD_NAME,
   IS_MAINNET,
   MAINNET_LAUNCHPAD_URL,
-  TESTNEST_LAUNCHPAD_URL,
+  TESTNET_LAUNCHPAD_URL,
   TICKER_NAME,
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -192,7 +192,10 @@ const _CongratulationsPage = ({
             margin="none"
           >
             <FormattedMessage defaultMessage="Your stake has reached the deposit contract!" />
-            <span role="img" aria-label="congratulations">
+            <span
+              role="img"
+              aria-label={formatMessage({ defaultMessage: 'congratulations' })}
+            >
               {' '}
               🎉
             </span>
@@ -204,8 +207,8 @@ const _CongratulationsPage = ({
                   defaultMessage="There is a short wait before your validator becomes active on the Beacon Chain. Use this time to complete the checklist and spend some time validating the {testnet}"
                   values={{
                     testnet: (
-                      <Link primary inline to={TESTNEST_LAUNCHPAD_URL}>
-                        {TESTNEST_LAUNCHPAD_NAME} Testnet
+                      <Link primary inline to={TESTNET_LAUNCHPAD_URL}>
+                        {TESTNET_LAUNCHPAD_NAME} Testnet
                       </Link>
                     ),
                   }}
@@ -305,7 +308,12 @@ const _CongratulationsPage = ({
                           color="blueDark"
                           margin="none"
                         >
-                          <span role="img" aria-label="clipboard">
+                          <span
+                            role="img"
+                            aria-label={formatMessage({
+                              defaultMessage: 'clipboard',
+                            })}
+                          >
                             📋{' '}
                           </span>
                           <FormattedMessage defaultMessage="Next" />

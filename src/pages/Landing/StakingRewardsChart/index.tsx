@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import BaseLineChart from '../../../components/BaseLineChart';
 import BaseLineChartAxis from '../../../components/BaseLineChart/scene/BaseLineChartAxis';
 import CurrentMarker from './scene/CurrentMarker';
@@ -97,7 +98,10 @@ const StakingRewardsChart: React.FC<Props> = ({
                           fontFamily: 'sans-serif',
                         }}
                       >
-                        Total {TICKER_NAME} staked&nbsp;(millions)
+                        <FormattedMessage
+                          defaultMessage="Total {TICKER_NAME} staked (millions)"
+                          values={{ TICKER_NAME }}
+                        />
                       </text>
                     </>
                   )}
@@ -129,7 +133,11 @@ const StakingRewardsChart: React.FC<Props> = ({
                           transform: 'rotate(-90deg)',
                         }}
                       >
-                        Estimated APR ({TICKER_NAME})
+                        <FormattedMessage
+                          defaultMessage="Estimated APR ({TICKER_NAME})"
+                          values={{ TICKER_NAME }}
+                          description="APR refers to Annual Percentage Rate"
+                        />
                       </text>
                     </>
                   )}

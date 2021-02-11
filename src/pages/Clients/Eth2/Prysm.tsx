@@ -9,7 +9,7 @@ import {
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
 export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
@@ -51,8 +51,14 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
 );
 
 export const Prysm = () => {
+  const { formatMessage } = useIntl();
   return (
-    <PageTemplate title="">
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { clientName: 'Prysm' }
+      )}
+    >
       <ValidatorClientPageStyles>
         <Hero imgSrc={prysmBg} style={{ objectPosition: '0 -80px' }} />
         <PrysmDetails />

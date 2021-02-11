@@ -10,7 +10,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { NIMBUS_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -93,8 +93,14 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
 );
 
 export const Nimbus = () => {
+  const { formatMessage } = useIntl();
   return (
-    <PageTemplate title="">
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { clientName: 'Nimbus' }
+      )}
+    >
       <ValidatorClientPageStyles>
         <Hero imgSrc={nimbusBg} />
         <NimbusDetails />

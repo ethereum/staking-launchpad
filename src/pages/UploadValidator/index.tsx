@@ -130,7 +130,7 @@ const _UploadValidatorPage = ({
     setFileError(
       <Text>
         <FormattedMessage
-          defaultMessage="This json file isn't for the right network. Upload a file generated for your current network: {network}."
+          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
           values={{
             network: (
               <span>
@@ -168,7 +168,7 @@ const _UploadValidatorPage = ({
     if (rejectedFiles?.length) {
       setFileError(
         <>
-          <FormattedMessage defaultMessage="That is not a valid deposit_data json file." />
+          <FormattedMessage defaultMessage="That is not a valid deposit_data JSON file." />
         </>
       );
       return;
@@ -306,7 +306,7 @@ const _UploadValidatorPage = ({
               {!isFileAccepted && (
                 <Text>
                   <FormattedMessage
-                    defaultMessage="{depositFileName} isn't a valid deposit_data json file. Try again."
+                    defaultMessage="{depositFileName} isn't a valid deposit_data JSON file. Try again."
                     values={{
                       depositFileName: <span>{depositFileName}</span>,
                     }}

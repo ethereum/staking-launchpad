@@ -51,7 +51,7 @@ export const StyledDropzone = ({ isFileStaged, onDrop }: Props) => {
 
   let message = formatMessage(
     {
-      defaultMessage: 'Drop or click here to upload {depositJSON}',
+      defaultMessage: 'Upload {depositJSON}',
       description:
         'Tells user to upload specific JSON file created during previous step',
     },
@@ -61,7 +61,7 @@ export const StyledDropzone = ({ isFileStaged, onDrop }: Props) => {
   if (isDragReject) {
     message = formatMessage(
       {
-        defaultMessage: 'Please upload a valid {JSON} file',
+        defaultMessage: "This isn't a valid {JSON} file",
         description: '{JSON} is filetype extension',
       },
       { JSON: 'JSON' }
@@ -69,7 +69,7 @@ export const StyledDropzone = ({ isFileStaged, onDrop }: Props) => {
   }
 
   if (isFileStaged) {
-    message = formatMessage({ defaultMessage: 'File successfully uploaded' });
+    message = formatMessage({ defaultMessage: 'File uploaded' });
   }
 
   return (

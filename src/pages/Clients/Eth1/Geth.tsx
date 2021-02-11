@@ -80,7 +80,7 @@ export const GethDetails = () => (
         primary
         to="https://geth.ethereum.org/docs/interface/command-line-options"
       >
-        --http documentation
+        <FormattedMessage defaultMessage="--http documentation" />
       </Link>
     </section>
   </>

@@ -90,7 +90,7 @@ export const Languages = () => {
 
   return (
     <PageTemplate
-      title={formatMessage({ defaultMessage: 'Language Support' })}
+      title={formatMessage({ defaultMessage: 'Language support' })}
       header={formatMessage({ defaultMessage: 'Choose a language' })}
     >
       <LangContainer>

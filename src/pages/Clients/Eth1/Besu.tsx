@@ -89,7 +89,7 @@ export const BesuDetails = () => (
         to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
         className="mt20"
       >
-        rpc-http-enabled documentation
+        <FormattedMessage defaultMessage="rpc-http-enabled documentation" />
       </Link>
     </section>
   </>

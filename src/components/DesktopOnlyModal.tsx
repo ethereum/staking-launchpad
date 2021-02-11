@@ -14,6 +14,7 @@ const RainbowBackground = styled.div`
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight}`});
   min-height: 100vh;
 `;
+
 const Container = styled.div`
   padding: 150px 30px;
   height: 100%;
@@ -52,10 +53,10 @@ export const DesktopOnlyModal = (): JSX.Element => {
     <RainbowBackground>
       <Container>
         <Heading center>
-          <FormattedMessage defaultMessage="Desktop Only" />
+          <FormattedMessage defaultMessage="Desktop only" />
         </Heading>
         <Text center>
-          <FormattedMessage defaultMessage="You must be on a desktop device to use this app" />
+          <FormattedMessage defaultMessage="You must be on a desktop device to use this app." />
         </Text>
         <ImageContainer>
           <div className="flex flex-column">
@@ -74,7 +75,7 @@ export const DesktopOnlyModal = (): JSX.Element => {
         <Link to="/">
           <Button
             fullWidth
-            label={formatMessage({ defaultMessage: 'close' })}
+            label={formatMessage({ defaultMessage: 'Close' })}
             rainbow
           />
         </Link>

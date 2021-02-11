@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import EthDiamondPlain from '../static/eth-diamond-plain.svg';
 import { Text } from '../components/Text';
+import { Link } from '../components/Link';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -11,15 +12,14 @@ const RainbowBackground = styled.div`
 `;
 const LogoContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `;
 const EthLogo = styled.img`
   height: 100px;
 `;
 const LogoText = styled(Text)`
-  margin-left: 25px;
   font-weight: bold;
-  display: inline-flex;
   align-items: center;
 `;
 const Content = styled.div`
@@ -48,10 +48,16 @@ export const NotFoundPage = (): JSX.Element => {
       <Content>
         <LogoContainer>
           <EthLogo src={EthDiamondPlain} />
-          <LogoText size="large">Eth2 Launchpad</LogoText>
+          <LogoText className="mt20" center size="large">
+            Eth2 Launchpad
+          </LogoText>
         </LogoContainer>
         <Text center className="mt20">
           <FormattedMessage defaultMessage="Sorry, this page does not exist." />
+          <Link primary className="mt20" to="/">
+            {' '}
+            <FormattedMessage defaultMessage="Launchpad home" />
+          </Link>
         </Text>
       </Content>
     </RainbowBackground>

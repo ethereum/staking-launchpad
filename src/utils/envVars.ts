@@ -7,9 +7,9 @@ export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PR
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
 
 // public
-export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
-export const TESTNET_LAUNCHPAD_URL      = 'https://pyrmont.launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_NAME      = 'Pyrmont'
+export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
+export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const ETH2_NETWORK_NAME          = IS_MAINNET ? TESTNET_LAUNCHPAD_NAME : 'Mainnet';
 export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'GöETH';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';

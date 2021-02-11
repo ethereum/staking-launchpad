@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import EthDiamondPlain from '../static/eth-diamond-plain.svg';
 import { Text } from '../components/Text';
@@ -50,7 +51,7 @@ export const NotFoundPage = (): JSX.Element => {
           <LogoText size="large">Eth2 Launchpad</LogoText>
         </LogoContainer>
         <Text center className="mt20">
-          Sorry, this page does not exist.
+          <FormattedMessage defaultMessage="Sorry, this page does not exist." />
         </Text>
       </Content>
     </RainbowBackground>

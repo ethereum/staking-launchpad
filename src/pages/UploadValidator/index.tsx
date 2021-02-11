@@ -166,7 +166,11 @@ const _UploadValidatorPage = ({
 
   const onFileDrop = (jsonFiles: Array<any>, rejectedFiles: Array<any>) => {
     if (rejectedFiles?.length) {
-      setFileError(<>That is not a valid deposit_data json file.</>);
+      setFileError(
+        <>
+          <FormattedMessage defaultMessage="That is not a valid deposit_data json file." />
+        </>
+      );
       return;
     }
 
@@ -283,7 +287,11 @@ const _UploadValidatorPage = ({
 
   const renderMessage = useMemo(() => {
     if (isDragReject && !isFileStaged) {
-      return <div>Upload a valid json file.</div>;
+      return (
+        <div>
+          <FormattedMessage defaultMessage="Upload a valid json file." />
+        </div>
+      );
     }
 
     if (isFileStaged || fileError) {
@@ -311,7 +319,11 @@ const _UploadValidatorPage = ({
       );
     }
 
-    return <div>Drag file to upload or browse</div>;
+    return (
+      <div>
+        <FormattedMessage defaultMessage="Drag file to upload or browse" />
+      </div>
+    );
   }, [
     isDragReject,
     isFileStaged,

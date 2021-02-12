@@ -440,7 +440,7 @@ const _ConnectWalletPage = ({
           <Text className="mb30">
             <FormattedMessage defaultMessage="We can't detect MetaMask. Switch browsers or install MetaMask." />
           </Text>
-          <Link to="https://metamask.io/">
+          <Link isTextLink={false} to="https://metamask.io/">
             <Button
               className="mr10"
               label={formatMessage({ defaultMessage: 'Download MetaMask' })}
@@ -451,7 +451,12 @@ const _ConnectWalletPage = ({
 
       {isInvalidNetwork && (
         <div className="flex center mt20">
-          <FormattedMessage defaultMessage="Your chosen network is not supported." />
+          <FormattedMessage
+            defaultMessage="Your wallet is on the wrong network. Switch to {network}"
+            values={{
+              network: IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet',
+            }}
+          />
         </div>
       )}
 

@@ -3,11 +3,17 @@ import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
 import { CheckBox } from 'grommet';
 import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
+import { FormNext } from 'grommet-icons';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import {
+  ETH2_NETWORK_NAME,
+  IS_MAINNET,
+  TESTNET_LAUNCHPAD_URL,
+  TESTNET_LAUNCHPAD_NAME,
+} from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
@@ -136,6 +142,10 @@ const Card = styled.div`
   border-radius: 4px;
   width: 100%;
   background: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     margin: 0px;
     margin-top: 16px;
@@ -249,32 +259,41 @@ export const Checklist = () => {
       <CardContainer>
         <StyledLink to="#section-one" inline isTextLink={false}>
           <Card>
-            <Heading level={4} className="mb10">
-              <FormattedMessage defaultMessage="Section 1" />
-            </Heading>
-            <BoldGreen className="mr10" fontSize={24}>
-              <FormattedMessage defaultMessage="Before you start" />
-            </BoldGreen>
+            <div>
+              <Heading level={4} className="mb10">
+                <FormattedMessage defaultMessage="Section 1" />
+              </Heading>
+              <BoldGreen className="mr10" fontSize={24}>
+                <FormattedMessage defaultMessage="Before you start" />
+              </BoldGreen>
+            </div>
+            <FormNext size="large" />
           </Card>
         </StyledLink>
         <StyledLink to="#section-two" inline isTextLink={false}>
           <Card>
-            <Heading level={4} className="mb10">
-              <FormattedMessage defaultMessage="Section 2" />
-            </Heading>
-            <BoldGreen className="mr10" fontSize={24}>
-              <FormattedMessage defaultMessage="During setup" />
-            </BoldGreen>
+            <div>
+              <Heading level={4} className="mb10">
+                <FormattedMessage defaultMessage="Section 2" />
+              </Heading>
+              <BoldGreen className="mr10" fontSize={24}>
+                <FormattedMessage defaultMessage="During setup" />
+              </BoldGreen>
+            </div>
+            <FormNext size="large" />
           </Card>
         </StyledLink>
         <StyledLink to="#section-three" inline isTextLink={false}>
           <Card>
-            <Heading level={4} className="mb10">
-              <FormattedMessage defaultMessage="Section 3" />
-            </Heading>
-            <BoldGreen className="mr10" fontSize={24}>
-              <FormattedMessage defaultMessage="After depositing" />
-            </BoldGreen>
+            <div>
+              <Heading level={4} className="mb10">
+                <FormattedMessage defaultMessage="Section 3" />
+              </Heading>
+              <BoldGreen className="mr10" fontSize={24}>
+                <FormattedMessage defaultMessage="After depositing" />
+              </BoldGreen>
+            </div>
+            <FormNext size="large" />
           </Card>
         </StyledLink>
       </CardContainer>
@@ -284,16 +303,16 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Section 1 - Before you start" />
           </Heading>
           <Text className="mt10">
-            <FormattedMessage defaultMessage="Review this section before deciding to proceed with validator setup" />
+            <FormattedMessage defaultMessage="Review this section before deciding to proceed with validator setup." />
           </Text>
         </SectionHeader>
         <Alert variant="warning" className="my40 mx15">
-          <Heading level={3}>
+          <Heading level={4}>
             <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="Hardware suggestions are an ever evolving target. Current
+              defaultMessage="Hardware suggestions are an ever-evolving target. Current
                     minimum requirements are likely to increase by an order of magnitude after the merge and 
                     introduction of shard chains. Do your own research before depositing funds."
             />
@@ -307,18 +326,18 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="In order to process incoming validator deposits from the Eth1
-                    chain, you will need to run an Eth1 client in parallel to your
-                    Eth2 client. While it is possible to use a third-party service
-                    like Infura, we recommend running your own client in order to
-                    ensure the network stays as decentralised as possible."
+                  defaultMessage="To process incoming validator deposits from the Eth1
+                    chain, you'll need to run an Eth1 client as well as your
+                    Eth2 client. You can use a third-party service
+                    like Infura, but we recommend running your own client to
+                    keep the network as decentralised as possible."
                 />
               </Text>
             </li>
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="As of {date}, ~400GB is needed for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
+                  defaultMessage="As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
                   values={{
                     date: (
                       <FormattedDate
@@ -334,8 +353,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="The Beacon chain had its genesis on {date}. It is growing in size over time, and the
-                    introduction of sharding will also increase storage, memory and bandwidth requirements."
+                  defaultMessage="The Beacon Chain had its genesis on {date}. It is growing in size over time, and the
+                    introduction of sharding will also increase storage, memory, and bandwidth requirements."
                   values={{
                     date: (
                       <FormattedDate
@@ -351,7 +370,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="SSD storage is required to consistently handle necessary read/write speeds." />
+                <FormattedMessage defaultMessage="You'll need SSD storage to consistently handle necessary read/write speeds." />
               </Text>
             </li>
             <li className="py5">
@@ -368,12 +387,12 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you anticipate using is sufficient and supported." />
+                <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you want to use is sufficient and supported." />
               </Text>
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Resource usage can vary significantly between clients. It is worth researching the different clients if you're working with resource constraints." />
+                <FormattedMessage defaultMessage="Resource usage can vary significantly between clients. Research the different clients if you're working with resource constraints." />
               </Text>
             </li>
           </ul>
@@ -390,13 +409,13 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Bandwidth should not be throttled or capped to ensure node stays in sync and ready to validate when called." />
+                <FormattedMessage defaultMessage="Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called." />
               </Text>
             </li>
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="Upload bandwidth is also important, and as of {date} this is ~700-800 MB/hour, and anticipated to increase."
+                  defaultMessage="You need enough upload bandwidth too. As of {date} this is ~700-800 MB/hour, and is likely to increase."
                   values={{
                     date: (
                       <FormattedDate
@@ -416,11 +435,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage
-                  defaultMessage="Avoid overly complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small
-                    inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups
-                    can add to the expense of your setup, and redundant backup validators can lead to slashing."
-                />{' '}
+                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing." />{' '}
                 <Link primary inline to="/faq#responsibilities">
                   <FormattedMessage defaultMessage="More on slashing risks" />
                 </Link>
@@ -437,7 +452,7 @@ export const Checklist = () => {
           <Heading level={3}>
             <FormattedMessage defaultMessage="Section 2 - During setup" />
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Use this as a reference during client setup to check off important steps" />
+              <FormattedMessage defaultMessage="Use this as a reference during client setup to check off important steps." />
             </Text>
           </Heading>
         </SectionHeader>
@@ -454,7 +469,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="To maximize security and efficiency of your node, it is best to use dedicated
+                  defaultMessage="To maximize security and efficiency of your node, use dedicated
                     hardware to run your clients. This reduces risk of malware exposure and minimizes competition
                     for computing resources, ensuring your node handles the network load and its validator
                     responsibilities at all times."
@@ -471,14 +486,14 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have secured the root account" />
+                <FormattedMessage defaultMessage="I've secured the root account." />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have set up a firewall" />
+                <FormattedMessage defaultMessage="I've set up a firewall." />
               </Text>
             }
           />
@@ -486,8 +501,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have forwarded the necessary ports to the correct machine(s)
-                    from my router (Only open the ports that apply to your installation)"
+                  defaultMessage="I've forwarded the necessary ports to the correct machine(s)
+                    from my router (only open the ports that apply to your installation)."
                 />
               </Text>
             }
@@ -594,7 +609,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="If you see error message {code1} , you may need to install {code2} or {code3} package."
+                  defaultMessage="If you see error message {code1}, you may need to install {code2} or {code3} package."
                   values={{
                     code1: <Code>Failed to set ntp: NTP not supported</Code>,
                     code2: <Code>chrony</Code>,
@@ -606,14 +621,14 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: by default, VMs may disable NTP so you may need to find a work-around for your environment" />
+                <FormattedMessage defaultMessage="Note: by default, VMs may disable NTP so you may need to find a work-around for your environment." />
               </Text>
             </li>
           </ul>
           <CheckBox
             label={
               <Text className="checkbox-label" style={{ display: 'inherit' }}>
-                <FormattedMessage defaultMessage="I have verified my server time matches the wall clock" />
+                <FormattedMessage defaultMessage="I've verified my server time matches the wall clock." />
               </Text>
             }
           />
@@ -622,21 +637,25 @@ export const Checklist = () => {
               <Text>
                 <FormattedMessage
                   defaultMessage="Note: the RTC (Real-Time Clock) time may be set to your local timezone
-                    instead of UTC, especially in a VM which has clock configured on Windows"
+                    instead of UTC, especially in a VM which has its clock configured on Windows."
                 />
               </Text>
             </li>
           </ul>
         </section>
         <Alert variant="error" className="my40 mx15">
-          <Heading level={3}>
+          <Heading level={4}>
             <FormattedMessage defaultMessage="Testnet practice" />
           </Heading>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="Strongly recommended these steps be completed on the current testnet
-                prior to advancing to mainnet"
+              defaultMessage="We strongly recommended you complete these steps on the current testnet
+                before mainnet."
             />
+            {'  '}
+            <Link inline primary to={TESTNET_LAUNCHPAD_URL}>
+              {TESTNET_LAUNCHPAD_NAME}
+            </Link>
           </Text>
         </Alert>
         <section>
@@ -647,7 +666,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)"
+                  defaultMessage="I've installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)."
                   values={{
                     network: IS_MAINNET ? 'mainnet' : 'Goerli',
                   }}
@@ -677,7 +696,7 @@ export const Checklist = () => {
             ))}
           </ClientContainer>
           <Alert variant="error" className="mt30 mb20">
-            <Heading level={3}>
+            <Heading level={4}>
               <FormattedMessage defaultMessage="Warning!" />
             </Heading>
             <Text className="mt20">
@@ -699,7 +718,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have installed the {latestRelease} of my Eth2 client"
+                  defaultMessage="I've installed the {latestRelease} of my Eth2 client."
                   values={{
                     latestRelease: (
                       <strong>
@@ -725,14 +744,14 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="My Eth2 beacon node is able to connect to my Eth1 client via HTTP API(s)" />
+                <FormattedMessage defaultMessage="I'm able to connect my Eth2 beacon node to my Eth1 client via HTTP API(s)." />
               </Text>
             }
           />
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: you can verify it with the following command to check if it returns the client version correctly" />
+                <FormattedMessage defaultMessage="Verify it with the following command to check if it returns the client version correctly:" />
               </Text>
               <CodeSnippet>
                 <code>
@@ -745,7 +764,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have synced my Eth2 beacon node on {ETH2_NETWORK_NAME}"
+                  defaultMessage="I've synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
                   values={{ ETH2_NETWORK_NAME }}
                   description="{ETH2_NETWORK_NAME} is name of network, do not translate"
                 />
@@ -755,7 +774,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Note: check that your node has greater than 20 peers" />
+                <FormattedMessage defaultMessage="Make sure that your node has more than 20 peers." />
               </Text>
             </li>
           </ul>
@@ -765,7 +784,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have joined my client's Discord chat" />
+                <FormattedMessage defaultMessage="I've joined my client's Discord server." />
               </Text>
             }
           />
@@ -797,7 +816,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have imported my keystore(s) into my Eth2 validator client" />
+                <FormattedMessage defaultMessage="I've imported my keystore(s) into my Eth2 validator client." />
               </Text>
             }
           />
@@ -805,7 +824,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have ensured my keystore(s) is/are {boldCaution}"
+                  defaultMessage="I've ensured my keystore(s) is/are {boldCaution}."
                   values={{
                     boldCaution: (
                       <strong>
@@ -824,7 +843,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have started running my validator client" />
+                <FormattedMessage defaultMessage="I've started running my validator client." />
               </Text>
             }
           />
@@ -833,11 +852,11 @@ export const Checklist = () => {
           <Heading level={3}>
             <FormattedMessage defaultMessage="Section 3 - After depositing" />
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Protect your funds using monitoring software, and learn how to handle different real world scenarios" />
+              <FormattedMessage defaultMessage="Protect your funds using monitoring software, and learn how to handle different real world scenarios." />
             </Text>
           </Heading>
           <Alert variant="info" className="mt20">
-            <FormattedMessage defaultMessage="These last items, though not required for your validator to function, are recommended to optimize your node" />
+            <FormattedMessage defaultMessage="These steps are optional but are recommended to optimize your node." />
           </Alert>
         </SectionHeader>
         <section>
@@ -845,13 +864,13 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Monitoring" />
           </Heading>
           <Heading level={4} className="my10">
-            <FormattedMessage defaultMessage="Prometheus + Grafana monitor" />
+            <FormattedMessage defaultMessage="Prometheus and Grafana monitor" />
           </Heading>
           <Text>
             <FormattedMessage
-              defaultMessage="The Eth2 clients support Prometheus + Grafana to help you
-                visualise important real-time metrics concerning your validator. You can
-                find client specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
+              defaultMessage="The Eth2 clients support Prometheus and Grafana to help you
+                visualise important real-time metrics about your validator. You can
+                find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
               values={{
                 lighthouse: (
                   <Link
@@ -897,7 +916,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have set up my {prometheus} service"
+                  defaultMessage="I've set up my {prometheus} service."
                   values={{
                     prometheus: (
                       <Link primary inline to="https://prometheus.io/">
@@ -914,7 +933,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have set up my {grafana} service"
+                  defaultMessage="I've set up my {grafana} service."
                   values={{
                     grafana: (
                       <Link primary inline to="https://grafana.com/">
@@ -931,8 +950,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have imported the dashboard config to my Grafana server
-                    and double checked that my node is alive"
+                  defaultMessage="I've imported the dashboard config to my Grafana server
+                    and double checked that my node is alive."
                 />
               </Text>
             }
@@ -952,8 +971,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have simulated how to manually stop and restart my Beacon Node (BN)
-                    and Validator Client (VC) gracefully"
+                  defaultMessage="I've simulated how to manually stop and restart my Beacon Node (BN)
+                    and Validator Client (VC) gracefully."
                 />
               </Text>
             }
@@ -961,14 +980,14 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have simulated power loss (server and internet) and automatic resumption" />
+                <FormattedMessage defaultMessage="I've simulated power loss (server and internet) and automatic resumption." />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have simulated how to migrate from one Eth2 client to another Eth2 client" />
+                <FormattedMessage defaultMessage="I've simulated how to migrate from one Eth2 client to another Eth2 client." />
               </Text>
             }
           />
@@ -998,9 +1017,8 @@ export const Checklist = () => {
           </ul>
         </section>
         <section>
-          {/* Translate "Graffiti"? */}
           <Heading level={3} className="mt10">
-            Graffiti
+            <FormattedMessage defaultMessage="Graffiti" />
           </Heading>{' '}
           <Text className="mt10">
             <FormattedMessage
@@ -1019,37 +1037,35 @@ export const Checklist = () => {
                   </Link>
                 ),
               }}
-              description="{variables} are beacon chain block explorers, with links to each (do not translate names)"
+              description="{variables} are Beacon Chain block explorers, with links to each (do not translate names)"
             />
           </Text>
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have set my graffiti flag" />
+                <FormattedMessage defaultMessage="I've set my graffiti flag." />
               </Text>
             }
           />
         </section>
         <RainbowHeader>
-          <Text>
-            <FormattedMessage
-              defaultMessage="If you have questions, EthStaker community is a good place to get help!
+          <FormattedMessage
+            defaultMessage="If you have questions, EthStaker community is a good place to get help!
                 You can find support on {discord} or {reddit}."
-              values={{
-                discord: (
-                  <Link primary inline to="https://invite.gg/ethstaker">
-                    Discord
-                  </Link>
-                ),
-                reddit: (
-                  <Link primary inline to="https://reddit.com/r/ethstaker">
-                    Reddit
-                  </Link>
-                ),
-              }}
-              description="{variables} social media platform links to Discord and Reddit (do not translate names)"
-            />
-          </Text>
+            values={{
+              discord: (
+                <Link primary inline to="https://invite.gg/ethstaker">
+                  Discord
+                </Link>
+              ),
+              reddit: (
+                <Link primary inline to="https://reddit.com/r/ethstaker">
+                  Reddit
+                </Link>
+              ),
+            }}
+            description="{variables} social media platform links to Discord and Reddit (do not translate names)"
+          />
         </RainbowHeader>
       </ChecklistPageStyles>
     </PageTemplate>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormNextLink, Share } from 'grommet-icons';
+import { FormNextLink } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
@@ -57,7 +57,7 @@ export const ActionButton = ({
     return (
       <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
         <ButtonText className="mr5" data-tip>
-          Beaconcha.in <Share size="small" />
+          Beaconcha.in
         </ButtonText>
       </Link>
     );
@@ -78,9 +78,7 @@ export const ActionButton = ({
     return (
       <div className="flex">
         <Link to={`${ETHERSCAN_URL}/${txHash}`}>
-          <ButtonText>
-            Etherscan <Share size="small" />
-          </ButtonText>
+          <ButtonText>Etherscan</ButtonText>
         </Link>
       </div>
     );
@@ -92,21 +90,19 @@ export const ActionButton = ({
           data-for="beaconchain-warning"
           data-tip={formatMessage({
             defaultMessage:
-              'Note: Beacon Chain may take several minutes to verify your deposit',
+              'Note: the Beacon Chain may take several minutes to verify your deposit',
           })}
         >
           <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
             <ButtonText className="mr5" data-tip>
-              Beaconcha.in <Share size="small" />
+              Beaconcha.in
             </ButtonText>
           </Link>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
 
         <Link to={`${BEACONSCAN_URL}/0x${pubkey}`}>
-          <ButtonText>
-            Beaconscan <Share size="small" />
-          </ButtonText>
+          <ButtonText>Beaconscan</ButtonText>
         </Link>
       </div>
     );

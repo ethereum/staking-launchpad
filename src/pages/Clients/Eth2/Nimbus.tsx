@@ -41,7 +41,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10">
       <FormattedMessage
-        defaultMessage="Nimbus (Apache 2) is writtenin Nim, a language with
+        defaultMessage="Nimbus (Apache 2) is written in Nim, a language with
           Python-like syntax that compiles to C."
       />
     </Text>

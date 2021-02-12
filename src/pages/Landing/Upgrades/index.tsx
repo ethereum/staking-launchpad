@@ -69,7 +69,7 @@ export const Upgrades = (): JSX.Element => {
       }),
       subTitle: formatMessage({
         defaultMessage:
-          'The deposit contract has been verified at a byte-code level to ensure everyone’s safety.',
+          'The deposit contract has been verified at a byte-code level to ensure your safety.',
       }),
       linkUrl:
         'https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf',
@@ -79,7 +79,7 @@ export const Upgrades = (): JSX.Element => {
       title: formatMessage({ defaultMessage: 'Validators FAQ' }),
       subTitle: formatMessage({
         defaultMessage:
-          'Check out the FAQ page for more information about the roles and responsibilities of Eth2 network validators.',
+          'Learn more about the roles and responsibilities of Eth2 validators.',
       }),
       linkUrl: '/faq',
       link: formatMessage({ defaultMessage: 'More on validators' }),
@@ -99,9 +99,8 @@ export const Upgrades = (): JSX.Element => {
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20 mb40">
                 <FormattedMessage
-                  defaultMessage="To better future-proof Ethereum, Eth2 will upgrade various
-                  components of Ethereum while seamlessly continuing on the chain
-                  of today. The main components of this upgrade are:"
+                  defaultMessage="Eth2 is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
+                  of today. Here's more on the different upgrades:"
                 />
               </Text>
               <UpgradeTitle className="mt20">
@@ -109,10 +108,9 @@ export const Upgrades = (): JSX.Element => {
               </UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="PoS is a more secure, decentralized, and environmentally
-                    friendly consensus mechanism than the proof-of-work (PoW) that
-                    secures Ethereum today. It works by rewarding validators for
-                    building the chain, but slashing their deposits if they try to
+                  defaultMessage="PoS is a more secure, decentralized, and environmentally-friendly consensus mechanism than the proof-of-work (PoW) that
+                    secures Ethereum today. It rewards validators for
+                    building the chain, but slashes their deposits if they try to
                     attack it, incentivising healthy behaviour. This upgrade is
                     already live in the form of the Beacon Chain."
                 />
@@ -126,9 +124,9 @@ export const Upgrades = (): JSX.Element => {
               <UpgradeTitle className="mt20">The Merge (docking)</UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="The merge, also known as the docking, is when the Ethereum
-                    mainnet we use todaay merge with the Beacon Chain. This is when
-                    Ethereum fully transitions to proof-of-stake."
+                  defaultMessage="The merge, also known as the docking, will see the Ethereum
+                    mainnet we use today merge with the Beacon Chain. This is when
+                    Ethereum will fully transition to proof-of-stake."
                 />
               </Text>
               <Link
@@ -139,12 +137,7 @@ export const Upgrades = (): JSX.Element => {
               </Link>
               <UpgradeTitle className="mt20">Sharding </UpgradeTitle>
               <Text className="mt20">
-                <FormattedMessage
-                  defaultMessage="Sharding will add 64 parallel chains to the network. This will
-                    dramatically improve Ethereum's data handling capabilities as
-                    each chain will be able to handle at least as much data as
-                    mainnet Ethereum can today, probably more."
-                />
+                <FormattedMessage defaultMessage="Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more." />
               </Text>
               <Link
                 className="mt20 mb40"

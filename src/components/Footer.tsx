@@ -24,7 +24,9 @@ const FooterStyles = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 4rem;
-
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+  }
   @media screen and (max-width: 960px) {
     .cta-button {
       display: none;

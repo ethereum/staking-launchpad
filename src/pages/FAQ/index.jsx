@@ -89,7 +89,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="You can think of it as a transfer of funds between Ethereum accounts and
+                defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
                   Eth2 validators."
               />
             </Text>
@@ -170,7 +170,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Yes but, under normal conditions, you will lose an amount of ETH
+                defaultMessage="If you go offline for a number of days under normal conditions you will lose an amount of ETH
                   roughly equivalent to the amount of ETH you would have gained in
                   that period. In other words, if you stood to earn ≈0.01 ETH, you
                   would instead be penalised ≈0.01 ETH."
@@ -246,14 +246,14 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="As a validator you can be penalized for being offline and behaving maliciously – for example attesting to
-                  invalid or contradicting blocks."
+                defaultMessage="As a validator you are rewarded for proposing / attesting to
+                blocks that are included in the chain."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="On the other hand, they are rewarded for proposing / attesting to
-                  blocks that are included in the chain."
+                defaultMessage="On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to
+                invalid or contradicting blocks."
               />
             </Text>
             <Text className="mt10">
@@ -293,20 +293,15 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Remember your validator has its own balance – with the
-                  initial balance outlined in the deposit contract."
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
                 defaultMessage="Your balance is updated periodically by the Ethereum network rules
                   as you carry (or fail to carry) out your responsibilities."
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Put another way, rewards and penalties are reflected in the
-                  your validator's balance over time."
+                defaultMessage="Your validator has its own balance – with the
+                initial balance outlined in the deposit contract. Your rewards and penalties are reflected in
+                your validator's balance over time."
               />
             </Text>
           </section>
@@ -316,7 +311,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Approximately every six and a half minutes – a period of time
+                defaultMessage="Rewards and penalties are issued roughly every six and a half minutes – a period of time
                   known as an epoch."
               />
             </Text>
@@ -542,7 +537,7 @@ export const FAQ = () => {
                     <strong>
                       {formatMessage({
                         defaultMessage:
-                          'this number increases if other validators are slashed at the same time.',
+                          'this number increases if other validators are slashed at the same time',
                       })}
                     </strong>
                   ),
@@ -690,7 +685,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="In a nutshell, security. Your signing key must be available at all
+                defaultMessage="Validating involves two keys for security reasons. Your signing key must be available at all
                   times. As such, it will need to be held online. Since anything
                   online is vulnerable to being hacked, it’s not a good idea to use
                   the same key for withdrawals."

@@ -451,7 +451,12 @@ const _ConnectWalletPage = ({
 
       {isInvalidNetwork && (
         <div className="flex center mt20">
-          <FormattedMessage defaultMessage="Your chosen network is not supported." />
+          <FormattedMessage
+            defaultMessage="Your wallet is on the wrong network. Switch to {network}"
+            values={{
+              network: IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet',
+            }}
+          />
         </div>
       )}
 

@@ -90,7 +90,7 @@ export const ActionButton = ({
           data-for="beaconchain-warning"
           data-tip={formatMessage({
             defaultMessage:
-              'Note: Beacon Chain may take several minutes to verify your deposit',
+              'Note: the Beacon Chain may take several minutes to verify your deposit',
           })}
         >
           <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>

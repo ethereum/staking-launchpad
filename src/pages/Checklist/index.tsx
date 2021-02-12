@@ -1037,7 +1037,7 @@ export const Checklist = () => {
                   </Link>
                 ),
               }}
-              description="{variables} are beacon chain block explorers, with links to each (do not translate names)"
+              description="{variables} are Beacon Chain block explorers, with links to each (do not translate names)"
             />
           </Text>
           <CheckBox

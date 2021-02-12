@@ -440,7 +440,7 @@ const _ConnectWalletPage = ({
           <Text className="mb30">
             <FormattedMessage defaultMessage="We can't detect MetaMask. Switch browsers or install MetaMask." />
           </Text>
-          <Link to="https://metamask.io/">
+          <Link isTextLink={false} to="https://metamask.io/">
             <Button
               className="mr10"
               label={formatMessage({ defaultMessage: 'Download MetaMask' })}

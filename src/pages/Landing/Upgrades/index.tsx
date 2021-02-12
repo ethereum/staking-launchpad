@@ -126,7 +126,7 @@ export const Upgrades = (): JSX.Element => {
                 <FormattedMessage
                   defaultMessage="The merge, also known as the docking, will see the Ethereum
                     mainnet we use today merge with the Beacon Chain. This is when
-                    Ethereum will fully transition to proof-of-stake."
+                    Ethereum will fully transition to proof of stake."
                 />
               </Text>
               <Link

@@ -48,7 +48,7 @@ export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
   const steps: step[] = [
     {
       step: WorkflowStep.OVERVIEW,
-      text: formatMessage({ defaultMessage: 'Overview' }),
+      text: formatMessage({ defaultMessage: 'Advisories' }),
     },
     {
       step: WorkflowStep.SELECT_CLIENT,

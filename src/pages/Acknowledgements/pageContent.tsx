@@ -154,8 +154,11 @@ export const pageContent = {
           />
         </Text>
         <Text size="medium" className="mt20">
+          <FormattedMessage defaultMessage="We'll help you create signing keys for every validator you want to run and your withdrawal keys. Signing and withdrawal keys are separate by design. Your signing key must be held online because it needs to be available at all times. Your withdrawal keys don't need to be online so it's better to keep them separate for security." />
+        </Text>
+        <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="We'll help you create keys for every validator you want to run. They'll be generated
+            defaultMessage="Both sets of keys will be generated
               via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to
               withdraw your ETH when the time comes and no one can help you recover your mnemonic if
               you lose it."

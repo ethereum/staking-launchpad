@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { FormNext } from 'grommet-icons';
+import { FormNext, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
+import _every from 'lodash/every';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
-import { queryContract } from '../../utils/queryContract';
+import { KeyList } from '../../pages/Transactions/Keylist';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
@@ -25,6 +26,10 @@ import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import {
+  DepositStatus,
+  TransactionStatus,
+} from '../../store/actions/depositFileActions';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -92,6 +97,14 @@ const Row = styled.div`
   justify-content: space-between;
 `;
 
+const WarningRow = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: ${p => p.theme.red.medium};
+  margin-top: 1rem;
+`;
+
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
@@ -99,6 +112,10 @@ const ButtonRow = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
+`;
+
+const WarningText = styled(Text)`
+  color: ${p => p.theme.red.medium};
 `;
 
 const CardContainer = styled.div`
@@ -160,20 +177,29 @@ const _CongratulationsPage = ({
   depositKeys,
   workflow,
 }: Props): JSX.Element => {
-  const [amountEth, setAmountEth] = useState(0);
   const { formatMessage } = useIntl();
-  const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
-  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
-  useEffect(() => {
-    if (ENABLE_RPC_FEATURES) {
-      const getBalance = async () => {
-        const ethBalance = await queryContract();
-        setAmountEth(ethBalance);
-      };
-      getBalance();
-    }
-  });
+  const totalTxCount = depositKeys.filter(
+    key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
+  ).length;
+
+  const remainingTxCount = depositKeys.filter(
+    file =>
+      file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
+      (file.transactionStatus === TransactionStatus.READY ||
+        file.transactionStatus === TransactionStatus.REJECTED)
+  ).length;
+
+  const allTxConfirmed = _every(
+    depositKeys.map(
+      file => file.transactionStatus === TransactionStatus.SUCCEEDED
+    )
+  );
+
+  const actualTxConfirmed = totalTxCount - remainingTxCount;
+
+  const currentAPR = calculateEth2Rewards({ totalAtStake: actualTxConfirmed });
+  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
   if (workflow < WorkflowStep.CONGRATULATIONS) {
     return routeToCorrectWorkflowStep(workflow);
@@ -259,8 +285,7 @@ const _CongratulationsPage = ({
                     </Heading>
                     <Text size="x-large" className="mt20">
                       <BoldGreen className="mr10" fontSize={24}>
-                        {depositKeys.length * +PRICE_PER_VALIDATOR}{' '}
-                        {TICKER_NAME}
+                        {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
                       </BoldGreen>
                     </Text>
                   </Card>
@@ -276,13 +301,24 @@ const _CongratulationsPage = ({
                     <Text size="x-large" className="mt20">
                       <BoldGreen className="mr10" fontSize={24}>
                         <FormattedMessage
-                          defaultMessage="{depositKeys} validators"
+                          defaultMessage="{totalTxCount} validators"
                           values={{
-                            depositKeys: <span>{depositKeys.length}</span>,
+                            totalTxCount: <span>{actualTxConfirmed}</span>,
                           }}
                         />
                       </BoldGreen>
                     </Text>
+                    {!allTxConfirmed && (
+                      <WarningRow>
+                        <FlagFill color="red" />
+                        <WarningText className="ml20">
+                          <FormattedMessage
+                            defaultMessage="You have {remainingTxCount} outstanding deposits"
+                            values={{ remainingTxCount: remainingTxCount }}
+                          />
+                        </WarningText>
+                      </WarningRow>
+                    )}
                   </Card>
                   <Card>
                     <Heading
@@ -299,37 +335,83 @@ const _CongratulationsPage = ({
                       </BoldGreen>
                     </Text>
                   </Card>
-                  <CardLink to={routesEnum.checklistPage}>
-                    <Row>
-                      <div>
-                        <Heading
-                          level={3}
-                          size="medium"
-                          color="blueDark"
-                          margin="none"
-                        >
-                          <span
-                            role="img"
-                            aria-label={formatMessage({
-                              defaultMessage: 'clipboard',
-                            })}
+                  {!allTxConfirmed ? (
+                    <CardLink to={routesEnum.checklistPage}>
+                      <Row>
+                        <div>
+                          <Heading
+                            level={3}
+                            size="medium"
+                            color="blueDark"
+                            margin="none"
                           >
-                            📋{' '}
-                          </span>
-                          <FormattedMessage defaultMessage="Next" />
-                        </Heading>
-                        <Text size="x-large" className="mt20">
-                          <FormattedMessage defaultMessage="Complete the staker checklist" />
-                        </Text>
-                      </div>
-                      <FormNext size="large" />
-                    </Row>
-                  </CardLink>
+                            <span
+                              role="img"
+                              aria-label={formatMessage({
+                                defaultMessage: 'clipboard',
+                              })}
+                            >
+                              📋{' '}
+                            </span>
+                            <FormattedMessage defaultMessage="Next" />
+                          </Heading>
+                          <Text size="x-large" className="mt20">
+                            <FormattedMessage
+                              defaultMessage="Complete remaining {remainingTxCount} deposits"
+                              values={{ remainingTxCount: remainingTxCount }}
+                            />
+                          </Text>
+                          <Text size="small">
+                            <FormattedMessage defaultMessage="You can also confirm the deposits individually below..." />
+                          </Text>
+                        </div>
+                        <FormNext size="large" />
+                      </Row>
+                    </CardLink>
+                  ) : (
+                    <CardLink to={routesEnum.checklistPage}>
+                      <Row>
+                        <div>
+                          <Heading
+                            level={3}
+                            size="medium"
+                            color="blueDark"
+                            margin="none"
+                          >
+                            <span
+                              role="img"
+                              aria-label={formatMessage({
+                                defaultMessage: 'clipboard',
+                              })}
+                            >
+                              📋{' '}
+                            </span>
+                            <FormattedMessage defaultMessage="Next" />
+                          </Heading>
+                          <Text size="x-large" className="mt20">
+                            <FormattedMessage defaultMessage="Complete the staker checklist" />
+                          </Text>
+                        </div>
+                        <FormNext size="large" />
+                      </Row>
+                    </CardLink>
+                  )}
                 </CardContainer>
               </>
             )}
           </div>
-
+          {!allTxConfirmed && (
+            <>
+              <Heading level={3} className="mt20">
+                <FormattedMessage defaultMessage="Outstanding deposits" />(
+                {remainingTxCount})
+              </Heading>
+              <Text className="mt20">
+                <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits." />
+              </Text>
+              <KeyList />
+            </>
+          )}
           <ChecklistAlert>
             <Leslie />
             <div>

@@ -12,6 +12,7 @@ import {
 import { routesEnum } from '../../Routes';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import { Helmet } from 'react-helmet';
+import { useIntl } from 'react-intl';
 
 const Content = styled.div`
   width: 100%;
@@ -59,13 +60,16 @@ const _WorkflowPageTemplate = ({
   description,
   history,
 }: Props): JSX.Element => {
+  const { locale } = useIntl();
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }
 
-  const calculatedWorkflowStep: WorkflowStep = mapPathnameToWorkflowStep(
-    history.location.pathname
-  );
+  const { pathname } = history.location;
+  const path = pathname.startsWith(`/${locale}`)
+    ? pathname.substr(`/${locale}`.length)
+    : pathname;
+  const calculatedWorkflowStep: WorkflowStep = mapPathnameToWorkflowStep(path);
 
   return (
     <Background workflowStep={calculatedWorkflowStep}>

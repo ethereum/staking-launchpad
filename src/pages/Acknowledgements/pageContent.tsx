@@ -179,7 +179,7 @@ export const pageContent = {
       <>
         <Text size="medium" className="my10">
           <FormattedMessage
-            defaultMessage={`Transfers between validators aren't possible today.You will have to
+            defaultMessage={`Transfers between validators aren't possible today. You will have to
               wait until mainnet merges with the Beacon Chain (around two years) before you can
               withdraw your {TICKER_NAME}.`}
             values={{ TICKER_NAME }}
@@ -246,7 +246,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.checklist]: {
-    title: <FormattedMessage defaultMessage="Staking Checklist" />,
+    title: <FormattedMessage defaultMessage="Staking checklist" />,
     content: (
       <>
         <Text size="medium" className="my10">
@@ -259,12 +259,12 @@ export const pageContent = {
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="Staking Checklist" />
+          <FormattedMessage defaultMessage="Eth2 validator checklist" />
         </Link>
       </>
     ),
     acknowledgementText: (
-      <FormattedMessage defaultMessage="I have reviewed the staking checklist." />
+      <FormattedMessage defaultMessage="I have reviewed the checklist." />
     ),
   },
   [AcknowledgementIdsEnum.confirmation]: {
@@ -275,12 +275,12 @@ export const pageContent = {
           <FormattedMessage defaultMessage="I have read and agree to the Launchpad terms of service." />
         </Text>
         <Link inline to="/terms-of-service" className="my10" primary>
-          <FormattedMessage defaultMessage="Terms of Service" />
+          <FormattedMessage defaultMessage="Terms of service" />
         </Link>
       </>
     ),
     acknowledgementText: (
-      <FormattedMessage defaultMessage="I understand and agree to everything stated in the previous sections." />
+      <FormattedMessage defaultMessage="I understand and agree to the terms-of-service and everything stated in the previous sections." />
     ),
   },
 };

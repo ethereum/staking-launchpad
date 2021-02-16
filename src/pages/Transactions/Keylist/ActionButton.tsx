@@ -55,7 +55,7 @@ export const ActionButton = ({
 
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
-      <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
+      <Link to={`${BEACONCHAIN_URL}/validator/0x${pubkey}`}>
         <ButtonText className="mr5" data-tip>
           Beaconcha.in <Share size="small" />
         </ButtonText>
@@ -95,7 +95,7 @@ export const ActionButton = ({
               'Note: Beacon Chain may take several minutes to verify your deposit',
           })}
         >
-          <Link to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
+          <Link to={`${BEACONCHAIN_URL}/validator/0x${pubkey}`}>
             <ButtonText className="mr5" data-tip>
               Beaconcha.in <Share size="small" />
             </ButtonText>

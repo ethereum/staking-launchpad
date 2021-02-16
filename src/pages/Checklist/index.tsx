@@ -7,7 +7,11 @@ import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  ETH2_NETWORK_NAME,
+  IS_MAINNET,
+} from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
@@ -1009,7 +1013,7 @@ export const Checklist = () => {
                 it using {beaconchain} or {beaconscan} blockchain explorers."
               values={{
                 beaconchain: (
-                  <Link primary inline to="https://beaconcha.in/">
+                  <Link primary inline to={BEACONCHAIN_URL}>
                     Beaconcha.in
                   </Link>
                 ),

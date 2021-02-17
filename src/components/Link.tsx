@@ -90,13 +90,8 @@ export const Link = (props: LinkProps) => {
   const { locale } = useIntl();
   const isExternal = to && to.includes('http');
   // Check for ethereum.org root domain links
-  const ETHEREUM_DOT_ORG = 'ethereum.org';
-  const isEthereumDotOrg =
-    to &&
-    (to.includes(`http://${ETHEREUM_DOT_ORG}`) ||
-      to.includes(`https://${ETHEREUM_DOT_ORG}`) ||
-      to.includes(`http://www.${ETHEREUM_DOT_ORG}`) ||
-      to.includes(`https://www.${ETHEREUM_DOT_ORG}`));
+  const ETHEREUM_DOT_ORG = `https://ethereum.org`;
+  const isEthereumDotOrg = to && to.includes(ETHEREUM_DOT_ORG);
   const isHash = isHashLink(to);
 
   if (isHash) {
@@ -115,11 +110,13 @@ export const Link = (props: LinkProps) => {
 
   if (isExternal) {
     let href = '';
-    if (isEthereumDotOrg) {
-      // Grab everything after "ethereum.org/"
-      const slug: string = to.substr(
-        to.indexOf(ETHEREUM_DOT_ORG) + ETHEREUM_DOT_ORG.length + 1
-      );
+
+    if (to === ETHEREUM_DOT_ORG) {
+      // Path is to https://ethereum.org homepage; will append locale
+      href = `${ETHEREUM_DOT_ORG}/${locale}`;
+    } else if (isEthereumDotOrg) {
+      // Grab everything after "https://ethereum.org/"
+      const slug: string = to.substr(ETHEREUM_DOT_ORG.length + 1);
       // Split path on "/" and check if index 0 matches current locale
       const pathSplit: string[] = slug.split('/');
       if (pathSplit[0] === locale) {
@@ -127,12 +124,10 @@ export const Link = (props: LinkProps) => {
         href = to;
       } else if (supportedLanguages.includes(pathSplit[0])) {
         // Path of link has a supported language, but does not match locale; swap it
-        href = `https://${ETHEREUM_DOT_ORG}/${locale}/${pathSplit
-          .slice(1)
-          .join('/')}`;
+        href = `${ETHEREUM_DOT_ORG}/${locale}/${pathSplit.slice(1).join('/')}`;
       } else {
         // Path of link does not specify a language; will insert locale
-        href = `https://${ETHEREUM_DOT_ORG}/${locale}/${slug}`;
+        href = `${ETHEREUM_DOT_ORG}/${locale}/${slug}`;
       }
     }
 

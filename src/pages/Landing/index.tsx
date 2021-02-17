@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { AppBar } from '../../components/AppBar';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
@@ -11,6 +12,7 @@ import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 
 export const LandingPage = (): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
+  const [totalValidators, setTotalValidators] = useState(0);
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -19,6 +21,17 @@ export const LandingPage = (): JSX.Element => {
         setAmountEth(ethBalance);
       };
       getBalance();
+
+      const getValidators = async () => {
+        try {
+          const { data } = await axios.get('/.netlify/functions/infura');
+          setTotalValidators(data.totalValidators);
+        } catch (error) {
+          console.error(error);
+          setTotalValidators(amountEth / 32);
+        }
+      };
+      getValidators();
     }
   });
 
@@ -26,7 +39,7 @@ export const LandingPage = (): JSX.Element => {
     <>
       <AppBar />
       <Hero />
-      <NetworkStatus {...{ amountEth }} />
+      <NetworkStatus {...{ amountEth, totalValidators }} />
       <StakingRewards currentStaked={amountEth} />
       <Introduction />
       <SignupSteps />

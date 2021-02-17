@@ -1,10 +1,12 @@
 export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET !== 'false');  // If REACT_APP_IS_MAINNET is unset, set it to true by default
+export const TESTNET_LAUNCHPAD_NAME      = 'Pyrmont'
 
 // private vars (or derived from)
 export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
 export const INFURA_PROJECT_ID          = process.env.REACT_APP_INFURA_PROJECT_ID  || '';
 export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '');
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
+export const INFURA_BEACON_URL          = `https://eth2-beacon-${IS_MAINNET ? "mainnet" : TESTNET_LAUNCHPAD_NAME.toLowerCase()}.infura.io/eth/v1/beacon/states/head/validator_balances`;
 
 // public
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Mainnet';
@@ -20,8 +22,7 @@ export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLAT
 export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/install/install-with-script';
 export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATION_URL    || 'https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/';
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
-export const TESTNET_LAUNCHPAD_URL      = 'https://pyrmont.launchpad.ethereum.org/'
-export const TESTNET_LAUNCHPAD_NAME      = 'Pyrmont'
+export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {
     throw new Error("REACT_APP_ETH_REQUIREMENT must be of type: number")

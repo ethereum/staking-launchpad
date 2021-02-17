@@ -63,9 +63,10 @@ const CardContainer = styled.div`
 //
 // Main Component
 
-export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
-  amountEth = 0,
-}): JSX.Element | null => {
+export const NetworkStatus: React.FC<{
+  amountEth?: number;
+  totalValidators?: number;
+}> = ({ amountEth = 0, totalValidators = 0 }): JSX.Element | null => {
   const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
 
@@ -78,11 +79,6 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
   }, []);
 
   if (!ENABLE_RPC_FEATURES) return null;
-
-  // TODO query this data from somewhere...
-  const validatorAmount = numberWithCommas(
-    Math.round(+amountEth / +PRICE_PER_VALIDATOR)
-  );
 
   const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
@@ -114,7 +110,11 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {validatorAmount}
+                  {numberWithCommas(
+                    totalValidators !== 0
+                      ? totalValidators
+                      : Math.round(+amountEth / +PRICE_PER_VALIDATOR)
+                  )}
                 </BoldGreen>
               </Text>
             </Card>

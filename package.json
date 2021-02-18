@@ -104,7 +104,8 @@
     "build": "rescripts build",
     "test": "rescripts test",
     "eject": "rescripts eject",
-    "extract": "formatjs extract 'src/**/*.{t,j}sx' --out-file src/intl/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format crowdin"
+    "extract": "formatjs extract 'src/**/*.{t,j}sx' --out-file src/intl/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format crowdin",
+    "compile": "formatjs compile src/intl/en.json --format crowdin --out-file src/intl/compiled/en.json --ast"
   },
   "eslintConfig": {
     "extends": "react-app"

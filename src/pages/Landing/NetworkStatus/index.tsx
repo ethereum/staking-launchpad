@@ -7,7 +7,11 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
-import { ENABLE_RPC_FEATURES, TICKER_NAME } from '../../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  ENABLE_RPC_FEATURES,
+  TICKER_NAME,
+} from '../../../utils/envVars';
 import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
 
 //
@@ -139,11 +143,7 @@ export const NetworkStatus: React.FC<{
               </Text>
             </Card>
           </CardContainer>
-          <Link
-            isTextLink={false}
-            to="https://www.beaconcha.in"
-            className="pt40"
-          >
+          <Link isTextLink={false} to={BEACONCHAIN_URL} className="pt40">
             <Button
               className="m-auto"
               fullWidth

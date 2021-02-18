@@ -1,7 +1,4 @@
 {
-  "+2J9RX": {
-    "message": "As a validator you can be penalized for being offline and behaving maliciously – for example attesting to invalid or contradicting blocks."
-  },
   "+3PPtT": {
     "message": "Today, you'll secure the Beacon Chain, the first Eth2 upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
   },
@@ -41,6 +38,9 @@
   "/U09hN": {
     "message": "To avoid exposing your validator identity to the network, you can use a trustworthy VPN to help reduce the risk of revealing your IP address."
   },
+  "/VVB8t": {
+    "message": "Review this section before deciding to proceed with validator setup."
+  },
   "/Vc/P6": {
     "message": "Sorry, this page does not exist."
   },
@@ -53,12 +53,18 @@
   "/ub26/": {
     "message": "Understand the risks"
   },
+  "/vPNsl": {
+    "message": "The merge, also known as the docking, will see the Ethereum mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
+  },
   "/vkCbT": {
     "message": "Validators get rewarded for proposing and attesting to blocks. The rewards are tied to the overall amount of {TICKER_NAME} staked in the network."
   },
   "/w/KT4": {
     "description": "{eip2334} shows 'EIP2334' and links to EIP documentation. {strongText} is important information bolded for emphasis",
     "message": "However, all is not lost. Assuming you derive your keys using {eip2334} (as per the default onboarding flow) then {strongText}."
+  },
+  "/wNiYN": {
+    "message": "The deposit contract has been verified at a byte-code level to ensure your safety."
   },
   "/ydZdf": {
     "message": "How large are the rewards/penalties?"
@@ -74,12 +80,6 @@
   },
   "0GSZcr": {
     "message": "Staked"
-  },
-  "0H8m1y": {
-    "message": "Upload bandwidth is also important, and as of {date} this is ~700-800 MB/hour, and anticipated to increase."
-  },
-  "0MUAav": {
-    "message": "I have reviewed the staking checklist."
   },
   "0PlVao": {
     "message": "More on slashing prevention"
@@ -102,9 +102,6 @@
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
-  "1/FHag": {
-    "message": "In order to process incoming validator deposits from the Eth1 chain, you will need to run an Eth1 client in parallel to your Eth2 client. While it is possible to use a third-party service like Infura, we recommend running your own client in order to ensure the network stays as decentralised as possible."
-  },
   "18gUul": {
     "message": "Or in plain english, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
   },
@@ -113,6 +110,9 @@
   },
   "1P6GMj": {
     "message": "Monitoring"
+  },
+  "1PPGHb": {
+    "message": "I've verified my server time matches the wall clock."
   },
   "1QW89r": {
     "message": "More stats"
@@ -132,6 +132,9 @@
   "1fytak": {
     "message": "Check deposit contract details"
   },
+  "2+TGmE": {
+    "message": "To process incoming validator deposits from the Eth1 chain, you'll need to run an Eth1 client as well as your Eth2 client. You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralised as possible."
+  },
   "22EpKq": {
     "description": "{JSON} is filetype extension",
     "message": "This isn't a valid {JSON} file"
@@ -149,9 +152,6 @@
   },
   "2a1GTh": {
     "message": "you can always recalculate your signing key from your withdrawal key"
-  },
-  "2i7eIN": {
-    "message": "Check with client documentation to ensure the hardware you anticipate using is sufficient and supported."
   },
   "2iH8Zc": {
     "message": "Nimbus key management documentation"
@@ -183,6 +183,10 @@
   "3PbtmF": {
     "message": "Check the whole address, not just a portion of it. There could be just a few bytes different."
   },
+  "3Pmjlx": {
+    "description": "{latestReleased} = 'latest stable software release', being styled in bold",
+    "message": "I've installed the {latestRelease} of my Eth2 client."
+  },
   "3Q43SM": {
     "message": "Become a validator"
   },
@@ -196,8 +200,9 @@
   "3tR/V9": {
     "message": "Section 2 - During setup"
   },
-  "3z2C5R": {
-    "message": "Resource usage can vary significantly between clients. It is worth researching the different clients if you're working with resource constraints."
+  "3zCA2i": {
+    "description": "{code} values are terminal outputs and commands.",
+    "message": "If you see error message {code1}, you may need to install {code2} or {code3} package."
   },
   "4+3cIr": {
     "message": "You've successfully set up a testnet validator! We recommend you complete the checklist before validating on {mainnet}"
@@ -220,17 +225,11 @@
   "4l6vz1": {
     "message": "Copy"
   },
-  "4s9fBo": {
-    "message": "To better future-proof Ethereum, Eth2 will upgrade various components of Ethereum while seamlessly continuing on the chain of today. The main components of this upgrade are:"
-  },
   "52qGy6": {
     "message": "CURRENT"
   },
   "58PXVy": {
     "message": "Why two keys instead of one?"
-  },
-  "58VJ9n": {
-    "message": "I have simulated how to migrate from one Eth2 client to another Eth2 client"
   },
   "5HJLBU": {
     "message": "Teku installation documentation"
@@ -239,8 +238,8 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
-  "5wjQ1d": {
-    "message": "Remember your validator has its own balance – with the initial balance outlined in the deposit contract."
+  "6CK2Nu": {
+    "message": "Your wallet is on the wrong network. Switch to {network}"
   },
   "6HBTTN": {
     "message": "Proof-of-stake (PoS) and the Beacon Chain"
@@ -265,6 +264,10 @@
   },
   "7V/8wz": {
     "message": "Configuration file"
+  },
+  "7d3Nzd": {
+    "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
+    "message": "You can use your validator client's graffiti flag to add a personal touch to your proposed blocks (some text of your choice). You will be able to see it using {beaconchain} or {beaconscan} blockchain explorers."
   },
   "7s6XNV": {
     "message": "Staking and rewards"
@@ -291,9 +294,6 @@
   "8JtiQS": {
     "message": "Does the contract address listed on the website match?"
   },
-  "8R6L4Q": {
-    "message": "As of {date}, ~400GB is needed for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
-  },
   "8Rj/6A": {
     "message": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
   },
@@ -313,17 +313,17 @@
   "9+Ddtu": {
     "message": "Next"
   },
+  "9/4mZe": {
+    "message": "Validating involves two keys for security reasons. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being hacked, it’s not a good idea to use the same key for withdrawals."
+  },
   "94dQms": {
     "message": "For security, we recommend you disconnect from the internet to complete this step."
   },
-  "95Wmif": {
-    "message": "this number increases if other validators are slashed at the same time."
+  "96pen8": {
+    "message": "Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more."
   },
   "9DZdsc": {
     "message": "Is there any advantage to having more than {pricePerValidator} ETH at stake?"
-  },
-  "9E8sVS": {
-    "message": "My Eth2 beacon node is able to connect to my Eth1 client via HTTP API(s)"
   },
   "9JktQX": {
     "message": "There is no easy answer to this question as there are many factors that go into this calculation."
@@ -331,14 +331,8 @@
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
   },
-  "9ZEImm": {
-    "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment"
-  },
   "9grYVn": {
     "message": "We'll help you create keys for every validator you want to run. They'll be generated via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to withdraw your ETH when the time comes and no one can help you recover your mnemonic if you lose it."
-  },
-  "9jzsQd": {
-    "message": "Approximately every six and a half minutes – a period of time known as an epoch."
   },
   "9lBMQr": {
     "message": "{keyFile} of paths via the {validatorsKeys} option."
@@ -360,9 +354,6 @@
   },
   "AEp7+F": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral - in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
-  },
-  "AWKDnl": {
-    "message": "These last items, though not required for your validator to function, are recommended to optimize your node"
   },
   "AYKxmf": {
     "message": "Connect your hardware wallet to Metamask"
@@ -389,15 +380,15 @@
   "B2EKj+": {
     "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is one-way, and non-reversible."
   },
+  "BB65vH": {
+    "message": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Eth2 validators."
+  },
   "BCsPjJ": {
     "message": "Start deposit process"
   },
   "BFsUAH": {
     "description": "{code} values are terminal outputs to look for, should not translate",
     "message": "Check if {code1} is {code2}."
-  },
-  "BMEIPQ": {
-    "message": "I understand and agree to everything stated in the previous sections."
   },
   "BPpnlJ": {
     "message": "Download MetaMask"
@@ -411,14 +402,8 @@
   "BoEpk9": {
     "message": "Introduction"
   },
-  "BpW583": {
-    "message": "I have imported the dashboard config to my Grafana server and double checked that my node is alive"
-  },
   "BvD9ay": {
     "message": "Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security."
-  },
-  "ByBB0i": {
-    "message": "Note: the RTC (Real-Time Clock) time may be set to your local timezone instead of UTC, especially in a VM which has clock configured on Windows"
   },
   "C/gb74": {
     "message": "Configure Lighthouse"
@@ -442,6 +427,9 @@
     "description": "{strongText} is a warning, bolded for emphasis",
     "message": "The minimum amount that can be slashed is 1 ETH, but {strongText}."
   },
+  "CeeJfw": {
+    "message": "I've set up a firewall."
+  },
   "Cv+T7+": {
     "message": "Slashing has two purposes: (1) to make it prohibitively expensive to attack Eth2, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
   },
@@ -458,9 +446,6 @@
   "DKSrR+": {
     "message": "I understand that if I act contrary to the specification, I am liable to be slashed."
   },
-  "DLnGWF": {
-    "message": "Nimbus (Apache 2) is writtenin Nim, a language with Python-like syntax that compiles to C."
-  },
   "DNRQa7": {
     "message": "I have read and agree to the Launchpad terms of service."
   },
@@ -475,9 +460,6 @@
   },
   "DsJ/Mk": {
     "message": "Don’t just trust the contract address listed on this website."
-  },
-  "DzZQvI": {
-    "message": "I have simulated power loss (server and internet) and automatic resumption"
   },
   "E+Y27g": {
     "message": "You can check your Python version by typing {terminalCommand} in your terminal."
@@ -495,11 +477,11 @@
   "EPCHZV": {
     "message": "If you lose your signing key, your validator can no longer propose or attest."
   },
+  "EPlepr": {
+    "message": "I've simulated power loss (server and internet) and automatic resumption."
+  },
   "ETJ2T5": {
     "message": "If you have questions about deposit-cli, please visit the GitHub repository."
-  },
-  "ETRndR": {
-    "message": "I have imported my keystore(s) into my Eth2 validator client"
   },
   "EThT2C": {
     "message": "5. Time to deposit"
@@ -507,11 +489,11 @@
   "EXLB88": {
     "message": "This is a test network ⚠️"
   },
-  "EtF/5E": {
-    "message": "To maximize security and efficiency of your node, it is best to use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
-  },
   "FEbVwB": {
     "message": "The key concept is the following:"
+  },
+  "FM92S0": {
+    "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
   },
   "FSRfSJ": {
     "message": "I understand that this transaction is not reversible."
@@ -534,11 +516,17 @@
   "FgraU0": {
     "message": "Step 1: Download the deposit command line interface app for your operating system"
   },
+  "FqgDIV": {
+    "message": "Terms of service"
+  },
   "FzkbsB": {
     "message": "validators"
   },
   "G/VJJd": {
     "message": "OpenEthereum installation documentation"
+  },
+  "G0aacl": {
+    "message": "As a validator you are rewarded for proposing / attesting to blocks that are included in the chain."
   },
   "G5IMoZ": {
     "message": "Download master branch source code"
@@ -569,9 +557,6 @@
   },
   "Gbo300": {
     "message": "Generate keys"
-  },
-  "GkX0Qr": {
-    "message": "Note: check that your node has greater than 20 peers"
   },
   "GrU/lp": {
     "message": "The Eth2 clients"
@@ -606,9 +591,6 @@
   "IAKvZ0": {
     "message": "The Eth2 upgrades"
   },
-  "IV+kTM": {
-    "message": "Use this as a reference during client setup to check off important steps"
-  },
   "IVyWYt": {
     "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
   },
@@ -620,9 +602,6 @@
   },
   "Il9tBQ": {
     "message": "Geth is written in Go, fully open source and licensed under the GNU LGPL v3."
-  },
-  "IpzdYz": {
-    "message": "In a nutshell, security. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being hacked, it’s not a good idea to use the same key for withdrawals."
   },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
@@ -652,11 +631,11 @@
   "JYrJic": {
     "message": "Avoid Eth2 phishing"
   },
-  "JZJxJr": {
-    "message": "Transfers between validators aren't possible today.You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw your {TICKER_NAME}."
-  },
   "JhUYU3": {
     "message": "Download CLI app"
+  },
+  "JqVeL+": {
+    "message": "Resource usage can vary significantly between clients. Research the different clients if you're working with resource constraints."
   },
   "Js4uuA": {
     "message": "effective balance"
@@ -683,14 +662,27 @@
     "description": "Link to documentation about eth1 client Besu, specifically for goerli testnet",
     "message": "Besu on Goerli documentation"
   },
+  "KjcAm2": {
+    "message": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
+  },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
+  },
+  "KrVaDy": {
+    "message": "I've joined my client's Discord server."
   },
   "KvRSg5": {
     "message": "What exactly is slashing?"
   },
   "Kw+pTr": {
     "message": "The python3 install process may differ depending on your linux build."
+  },
+  "KxUgHu": {
+    "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
+    "message": "I've ensured my keystore(s) is/are {boldCaution}."
+  },
+  "LVy+cS": {
+    "message": "Check with client documentation to ensure the hardware you want to use is sufficient and supported."
   },
   "LeHQQm": {
     "message": "Validator FAQs"
@@ -712,8 +704,14 @@
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
   },
+  "MD9DcJ": {
+    "message": "Transfers between validators aren't possible today. You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw your {TICKER_NAME}."
+  },
   "MIsmjW": {
     "message": "Connect new wallet"
+  },
+  "MPHPEO": {
+    "message": "I'm able to connect my Eth2 beacon node to my Eth1 client via HTTP API(s)."
   },
   "MQTBvH": {
     "message": "Protect yourself against double deposits"
@@ -756,8 +754,14 @@
   "NLgogh": {
     "message": "Launchpad network:"
   },
+  "NOTCV0": {
+    "message": "Prometheus and Grafana monitor"
+  },
   "NPmm0q": {
     "message": "You must be on a desktop device to use this app."
+  },
+  "NSK+Li": {
+    "message": "I've secured the root account."
   },
   "NTWnJC": {
     "message": "Download command line app"
@@ -767,6 +771,9 @@
   },
   "NVljH4": {
     "message": "More on Prysmatic Labs"
+  },
+  "NYFKzu": {
+    "message": "Staking checklist"
   },
   "NZUWs7": {
     "message": "Remember that a validator’s vote is weighted by the amount it has at stake."
@@ -808,26 +815,17 @@
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
     "message": "If you have questions, EthStaker community is a good place to get help! You can find support on {discord} or {reddit}."
   },
-  "P2yEWN": {
-    "message": "Sharding will add 64 parallel chains to the network. This will dramatically improve Ethereum's data handling capabilities as each chain will be able to handle at least as much data as mainnet Ethereum can today, probably more."
-  },
   "P91KmA": {
     "message": "Become a validator {emoji}"
   },
   "P9mVZK": {
     "message": "Your network has changed"
   },
-  "PBqbOs": {
-    "message": "Staking Checklist"
-  },
   "PIQDar": {
     "message": "We recommend you go through the entire process on a testnet first to get comfortable."
   },
   "PTeZAz": {
     "message": "{depositKeys} validators"
-  },
-  "PU2XNm": {
-    "message": "Bandwidth should not be throttled or capped to ensure node stays in sync and ready to validate when called."
   },
   "PboOCR": {
     "message": "Configure your Eth2 client"
@@ -838,9 +836,8 @@
   "PglO1W": {
     "message": "Formal verification report"
   },
-  "PiMzwh": {
-    "description": "{prometheus} is 'Prometheus' service, with link to its homepage (do not translate name)",
-    "message": "I have set up my {prometheus} service"
+  "PoBIK+": {
+    "message": "You'll need SSD storage to consistently handle necessary read/write speeds."
   },
   "Pswssl": {
     "message": "Confirmation"
@@ -853,6 +850,9 @@
   },
   "QKFeMq": {
     "message": "Internet"
+  },
+  "QOAgQF": {
+    "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
   },
   "QWDxrk": {
     "message": "Key management"
@@ -881,6 +881,12 @@
   "RWqrlk": {
     "message": "congratulations"
   },
+  "RYUKCz": {
+    "message": "I've simulated how to migrate from one Eth2 client to another Eth2 client."
+  },
+  "RaBZna": {
+    "message": "If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH."
+  },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
   },
@@ -895,6 +901,9 @@
   },
   "RrCui3": {
     "message": "Summary"
+  },
+  "Ryptmy": {
+    "message": "Verify it with the following command to check if it returns the client version correctly:"
   },
   "S0e/cN": {
     "message": "How do you want to run the CLI?"
@@ -911,6 +920,9 @@
   },
   "SGzXoY": {
     "message": "Your stake has reached the deposit contract!"
+  },
+  "SR0qHv": {
+    "message": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing."
   },
   "SaR1pU": {
     "message": "Deposit already exists"
@@ -937,18 +949,14 @@
   "Szwbym": {
     "message": "wrench"
   },
+  "TLEziZ": {
+    "message": "The Beacon Chain had its genesis on {date}. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
+  },
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
   },
-  "TXqTqc": {
-    "message": "Strongly recommended these steps be completed on the current testnet prior to advancing to mainnet"
-  },
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
-  },
-  "ThZdNS": {
-    "description": "{grafana} is 'Grafana' service, with link to its homepage (do not translate name)",
-    "message": "I have set up my {grafana} service"
   },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
@@ -959,14 +967,21 @@
   "U7AOxj": {
     "message": "greater than 50%"
   },
-  "UUV2/j": {
-    "message": "Check out the FAQ page for more information about the roles and responsibilities of Eth2 network validators."
+  "U7PMU1": {
+    "description": "{variables} are client names, each linking to documentation (do not translate names)",
+    "message": "The Eth2 clients support Prometheus and Grafana to help you visualise important real-time metrics about your validator. You can find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
+  },
+  "UHbYCa": {
+    "message": "Your validator has its own balance – with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
   },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
   },
   "Utck3E": {
     "message": "Language support"
+  },
+  "Uxs0RD": {
+    "message": "Graffiti"
   },
   "Uy8THS": {
     "description": "{strongText} shows 'This scenario is very extreme and unlikely to happen' and is bolded for emphasis",
@@ -1008,9 +1023,6 @@
   "VY3/Wo": {
     "message": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new Eth2 key pairs and installing the validator software are both done in the terminal."
   },
-  "Vk02qd": {
-    "message": "On the other hand, they are rewarded for proposing / attesting to blocks that are included in the chain."
-  },
   "VzGJkB": {
     "message": "Staker checklist"
   },
@@ -1030,14 +1042,17 @@
     "description": "{http} shows '--JsonRpc.Enabled true' terminal command",
     "message": "Use {http} to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
   },
+  "WTPUDZ": {
+    "message": "These steps are optional but are recommended to optimize your node."
+  },
   "Wao7OA": {
     "message": "Eth2 Beacon Node (BN)"
   },
-  "WkSP1y": {
-    "message": "Put another way, rewards and penalties are reflected in the your validator's balance over time."
-  },
   "WkrNSk": {
     "message": "English"
+  },
+  "WxqnJn": {
+    "message": "On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to invalid or contradicting blocks."
   },
   "Wxzght": {
     "message": "Drag file to upload or browse"
@@ -1058,14 +1073,8 @@
     "description": "{filesPattern} refers to a computer command which will find {keyFile} and\n                {passwordFile} - both files within a computer.",
     "message": "{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
   },
-  "XWkQBP": {
-    "message": "Prometheus + Grafana monitor"
-  },
   "XmddSV": {
     "message": "Build from source"
-  },
-  "Y7dMEN": {
-    "message": "Your chosen network is not supported."
   },
   "Y8YLHs": {
     "message": "If your signing key is not under the thief’s control, the thief cannot exit your validator."
@@ -1082,11 +1091,15 @@
   "YP03/j": {
     "message": "Afterwards, validators are still encouraged to join (the more validators the more decentralized the network), but it’s not absolutely essential that they do so (so the interest rate can fall)."
   },
+  "YPsbIU": {
+    "description": "{grafana} is 'Grafana' service, with link to its homepage (do not translate name)",
+    "message": "I've set up my {grafana} service."
+  },
   "YWfd2t": {
     "message": "A research project and a client implementation for Eth2 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware. The Nimbus team are from Status, a company best known for their messaging app/wallet/Web3 browser."
   },
-  "YXYKUL": {
-    "message": "Review this section before deciding to proceed with validator setup"
+  "YZtdY1": {
+    "message": "As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
   },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
@@ -1097,12 +1110,6 @@
   "Yu78N6": {
     "message": "money bag"
   },
-  "Ywxi6B": {
-    "message": "The deposit contract has been verified at a byte-code level to ensure everyone’s safety."
-  },
-  "YxSswM": {
-    "message": "I have secured the root account"
-  },
   "Z07LQm": {
     "message": "Couldn't upload {depositFileName} due to an error. Open an issue in GitHub so we can investigate."
   },
@@ -1110,11 +1117,14 @@
     "description": "{greater than 50%} shows 'greater than 50%' and is a link to validator incentives article",
     "message": "Overall, we'd expect your validator to be net profitable as long as your uptime is {greaterThan50Percent}."
   },
+  "ZBtnGs": {
+    "message": "I have reviewed the checklist."
+  },
+  "ZK6NmY": {
+    "message": "Note: the RTC (Real-Time Clock) time may be set to your local timezone instead of UTC, especially in a VM which has its clock configured on Windows."
+  },
   "ZOU+p7": {
     "message": "--http documentation"
-  },
-  "ZOWFOL": {
-    "message": "Note: Beacon Chain may take several minutes to verify your deposit"
   },
   "ZOXuIe": {
     "message": "Why do I need to have funds at stake?"
@@ -1140,9 +1150,6 @@
   "a+xjjV": {
     "message": "Become a validator with Prysm"
   },
-  "a7v/oZ": {
-    "message": "You can think of it as a transfer of funds between Ethereum accounts and Eth2 validators."
-  },
   "aEBE6s": {
     "message": "2. Prep nodes"
   },
@@ -1151,6 +1158,9 @@
   },
   "aS6dBe": {
     "message": "Configure Nimbus"
+  },
+  "aTRROW": {
+    "message": "Nimbus (Apache 2) is written in Nim, a language with Python-like syntax that compiles to C."
   },
   "aXWL9X": {
     "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the merge (which means your funds will remain inaccessible until then)."
@@ -1179,6 +1189,9 @@
   "bNFkSo": {
     "message": "Now follow the instructions presented to you in the terminal window to generate your keys."
   },
+  "bR1R2M": {
+    "message": "Use this as a reference during client setup to check off important steps."
+  },
   "bUk/lm": {
     "message": "Besu installation documentation"
   },
@@ -1188,17 +1201,14 @@
   "bbr+aD": {
     "message": "The YAML files can have different syntaxes."
   },
-  "bd/ckW": {
-    "message": "Hardware suggestions are an ever evolving target. Current minimum requirements are likely to increase by an order of magnitude after the merge and introduction of shard chains. Do your own research before depositing funds."
-  },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
   },
   "bxU6sX": {
     "message": "Python installation instructions"
   },
-  "cB0Xdt": {
-    "message": "I have installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)"
+  "c9DSZ1": {
+    "message": "We strongly recommended you complete these steps on the current testnet before mainnet."
   },
   "cHUoV9": {
     "message": "The Geth documentation explains how to download and install the client."
@@ -1217,6 +1227,9 @@
   },
   "clxIWO": {
     "message": "How much will I be penalized for acting maliciously?"
+  },
+  "cs9mQw": {
+    "message": "Learn more about the roles and responsibilities of Eth2 validators."
   },
   "cyR7Kh": {
     "message": "Back"
@@ -1246,9 +1259,6 @@
   "dzdAcD": {
     "message": "Default Port"
   },
-  "e+mPaC": {
-    "message": "Note: you can verify it with the following command to check if it returns the client version correctly"
-  },
   "e/PSgJ": {
     "message": "Upload deposit data"
   },
@@ -1265,8 +1275,8 @@
   "eOpZjd": {
     "message": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
   },
-  "eXRu6g": {
-    "message": "The merge, also known as the docking, is when the Ethereum mainnet we use todaay merge with the Beacon Chain. This is when Ethereum fully transitions to proof-of-stake."
+  "eaU/aL": {
+    "message": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
   },
   "egVO5r": {
     "message": "More on shard chains"
@@ -1283,10 +1293,6 @@
   "f/N7FO": {
     "message": "What happens if I lose my signing key?"
   },
-  "f73Ni5": {
-    "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
-    "message": "I have ensured my keystore(s) is/are {boldCaution}"
-  },
   "fEqqBk": {
     "message": "Confirm last deposit"
   },
@@ -1299,10 +1305,6 @@
   "fbiteI": {
     "message": "only stored on one validator machine"
   },
-  "flcIEq": {
-    "description": "{variables} are beacon chain block explorers, with links to each (do not translate names)",
-    "message": "You can use your validator client's graffiti flag to add a personal touch to your proposed blocks (some text of your choice). You will be able to see it using {beaconchain} or {beaconscan} blockchain explorers."
-  },
   "fnMHGO": {
     "message": "Waiting for wallet confirmation"
   },
@@ -1314,10 +1316,6 @@
   },
   "g37XKP": {
     "message": "More on virtualenv"
-  },
-  "g6IWws": {
-    "description": "{ETH2_NETWORK_NAME} is name of network, do not translate",
-    "message": "I have synced my Eth2 beacon node on {ETH2_NETWORK_NAME}"
   },
   "gAdE9y": {
     "message": "Thank you for supporting the Eth2 network!"
@@ -1336,9 +1334,6 @@
   },
   "gfLdAQ": {
     "message": "More on the Beacon Chain"
-  },
-  "gtJH4N": {
-    "message": "Protect your funds using monitoring software, and learn how to handle different real world scenarios"
   },
   "gtrcyK": {
     "description": "{code} values are terminal outputs to look for to confirm system time",
@@ -1372,9 +1367,6 @@
   "hjrLbR": {
     "message": "For this, we need active participants - known as validators - to propose, verify, and vouch for the validity of blocks. In exchange, honest validators receive financial rewards."
   },
-  "hogF4P": {
-    "message": "I have joined my client's Discord chat"
-  },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
   },
@@ -1400,6 +1392,9 @@
   "idDbou": {
     "message": "Thinking about staking?"
   },
+  "irRdC0": {
+    "message": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the merge and introduction of shard chains. Do your own research before depositing funds."
+  },
   "isGKnz": {
     "message": "Documentation"
   },
@@ -1409,15 +1404,14 @@
   "jDv/zO": {
     "message": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for mainnet:"
   },
-  "jQV+it": {
-    "description": "{variables} are client names, each linking to documentation (do not translate names)",
-    "message": "The Eth2 clients support Prometheus + Grafana to help you visualise important real-time metrics concerning your validator. You can find client specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
-  },
   "jXer8/": {
     "message": "Prysm documentation"
   },
   "jYVeq4": {
     "message": "Lighthouse installation documentation"
+  },
+  "jZVChZ": {
+    "message": "I've imported my keystore(s) into my Eth2 validator client."
   },
   "jjLubH": {
     "message": "Prysm installation documentation"
@@ -1474,9 +1468,6 @@
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."
   },
-  "l4sZxc": {
-    "message": "I have started running my validator client"
-  },
   "l6OJpv": {
     "message": "First, create a venv virtualenv under repository directory:"
   },
@@ -1502,31 +1493,30 @@
   "lrdlY6": {
     "message": "File uploaded"
   },
-  "lsDGEk": {
-    "message": "I have verified my server time matches the wall clock"
-  },
   "mArJcj": {
     "message": "Hard drive"
-  },
-  "mGpucW": {
-    "description": "{code} values are terminal outputs and commands.",
-    "message": "If you see error message {code1} , you may need to install {code2} or {code3} package."
   },
   "mZOXtM": {
     "message": "Validators"
   },
+  "mhyltV": {
+    "message": "I've set my graffiti flag."
+  },
   "mpmFDY": {
     "message": "No pending deposits"
+  },
+  "n6Uub0": {
+    "message": "I've installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)."
   },
   "n7yYXG": {
     "message": "Service"
   },
+  "nHk8Et": {
+    "message": "PoS is a more secure, decentralized, and environmentally-friendly consensus mechanism than the proof-of-work (PoW) that secures Ethereum today. It rewards validators for building the chain, but slashes their deposits if they try to attack it, incentivising healthy behaviour. This upgrade is already live in the form of the Beacon Chain."
+  },
   "nIb6XF": {
     "description": "{slashings} shows 'slashings' in bold for emphasis",
     "message": "And major penalities – or {slashings} – are given for malicious actions."
-  },
-  "nN1FB8": {
-    "message": "I have simulated how to manually stop and restart my Beacon Node (BN) and Validator Client (VC) gracefully"
   },
   "nRdJct": {
     "message": "Continue without all transactions confirmed"
@@ -1540,6 +1530,9 @@
   "njAU72": {
     "message": "French"
   },
+  "njnn9P": {
+    "message": "I've started running my validator client."
+  },
   "ntG2by": {
     "message": "Advanced system architecture"
   },
@@ -1549,9 +1542,6 @@
   },
   "o9QvTP": {
     "message": "Before you start"
-  },
-  "oIuwtr": {
-    "message": "The Beacon chain had its genesis on {date}. It is growing in size over time, and the introduction of sharding will also increase storage, memory and bandwidth requirements."
   },
   "oLxfO1": {
     "message": "Now that the keys are imported, all that is left to do (assuming your beacon node is already running) is to run the validator client."
@@ -1573,6 +1563,9 @@
   },
   "omJNJw": {
     "message": "Warning!"
+  },
+  "on8WXn": {
+    "message": "I've imported the dashboard config to my Grafana server and double checked that my node is alive."
   },
   "orM+1T": {
     "message": "Teku will also load validators from keystores (and passwords) from the paths found in the validator keys environment variable."
@@ -1599,14 +1592,11 @@
   "pA+UVF": {
     "message": "If you'd like to see the launchpad in another language, or if you can help translate, {getInTouch}!"
   },
-  "pDftNd": {
-    "message": "Avoid overly complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing."
-  },
-  "pIgdGK": {
-    "message": "I have set up a firewall"
-  },
   "pXyH++": {
     "message": "The Besu documentation explains how to download and install the client."
+  },
+  "penFMT": {
+    "message": "Eth2 is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
   },
   "pfJX2D": {
     "message": "More on phishing"
@@ -1617,6 +1607,9 @@
   "ps8lLk": {
     "description": "{expected} shows 'This is the expected scenario' and is bolded for emphasis",
     "message": "Being offline while a supermajority (2/3) of validators is still online leads to relatively small penalties as there are still enough validators online for the chain to finalize. {expected}"
+  },
+  "ptWiT7": {
+    "message": "I've simulated how to manually stop and restart my Beacon Node (BN) and Validator Client (VC) gracefully."
   },
   "pyWt01": {
     "message": "Deposit summary"
@@ -1693,9 +1686,6 @@
   "rswUPu": {
     "message": "Launchpad summary"
   },
-  "s/faRU": {
-    "message": "Yes but, under normal conditions, you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH."
-  },
   "s0FTco": {
     "description": "APR refers to Annual Percentage Rate",
     "message": "APR"
@@ -1706,17 +1696,21 @@
   "sXV95+": {
     "message": "CPU and RAM"
   },
-  "sdDm+7": {
-    "message": "I have set my graffiti flag"
-  },
   "soCLV+": {
     "message": "Checklist"
   },
   "sraQ3P": {
     "message": "Waiting to connect..."
   },
+  "svsq8J": {
+    "description": "{ETH2_NETWORK_NAME} is name of network, do not translate",
+    "message": "I've synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
+  },
   "sy35J+": {
     "message": "What is the deposit contract?"
+  },
+  "szN3Fl": {
+    "message": "I understand and agree to the terms-of-service and everything stated in the previous sections."
   },
   "teyxVk": {
     "message": "What should the address be?"
@@ -1737,6 +1731,9 @@
   "u28qA1": {
     "message": "After depositing"
   },
+  "uCikFk": {
+    "message": "You need enough upload bandwidth too. As of {date} this is ~700-800 MB/hour, and is likely to increase."
+  },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
   },
@@ -1745,6 +1742,9 @@
   },
   "ubKWX8": {
     "message": "Generate key pairs"
+  },
+  "uhapiE": {
+    "message": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
   },
   "ujVT29": {
     "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the newly created {validatorKeys} directory."
@@ -1756,11 +1756,11 @@
     "description": "{pricePerValidator} represents deposit amount styled in bold",
     "message": "Before you can run a validator and start to secure the network, you need to stake {pricePerValidator} ETH. This forms your initial balance."
   },
-  "upyBpO": {
-    "message": "I have forwarded the necessary ports to the correct machine(s) from my router (Only open the ports that apply to your installation)"
-  },
   "vBOf5K": {
     "message": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
+  },
+  "vEJDo8": {
+    "message": "Protect your funds using monitoring software, and learn how to handle different real world scenarios."
   },
   "vFrE9m": {
     "message": "Become a validator and help secure Eth2."
@@ -1777,6 +1777,9 @@
   "vYOWYI": {
     "message": "Chinese (simplified)"
   },
+  "va96SS": {
+    "message": "I've forwarded the necessary ports to the correct machine(s) from my router (only open the ports that apply to your installation)."
+  },
   "vbVsqW": {
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
@@ -1792,9 +1795,6 @@
   },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
-  },
-  "w73E/8": {
-    "message": "SSD storage is required to consistently handle necessary read/write speeds."
   },
   "wJ1PbL": {
     "description": "Indicates which operating system the instructions are for",
@@ -1824,9 +1824,6 @@
   "x0tVK4": {
     "message": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
   },
-  "x9VW3n": {
-    "message": "PoS is a more secure, decentralized, and environmentally friendly consensus mechanism than the proof-of-work (PoW) that secures Ethereum today. It works by rewarding validators for building the chain, but slashing their deposits if they try to attack it, incentivising healthy behaviour. This upgrade is already live in the form of the Beacon Chain."
-  },
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",
     "message": "Cross check the deposit contract address against other websites – for example: Reddit, Twitter, and GitHub. There's also a list of trusted sources on {ethereumorg}"
@@ -1836,10 +1833,6 @@
   },
   "xJPCw/": {
     "message": "What happens if I lose my withdrawal key?"
-  },
-  "xKn7BI": {
-    "description": "{latestReleased} = 'latest stable software release', being styled in bold",
-    "message": "I have installed the {latestRelease} of my Eth2 client"
   },
   "xOSMb1": {
     "description": "Links to the documentation for the eth1 client Nethermind, specifically for testnet Goerli",
@@ -1869,6 +1862,9 @@
   "y7dWNc": {
     "message": "Importantly, a validator’s vote is weighted by the amount it has at stake."
   },
+  "yI/DO8": {
+    "message": "this number increases if other validators are slashed at the same time"
+  },
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
   },
@@ -1888,11 +1884,18 @@
   "yjBvUO": {
     "message": "Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.."
   },
+  "yoGtkz": {
+    "message": "Make sure that your node has more than 20 peers."
+  },
   "z/ZhML": {
     "message": "Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
   },
   "z63I56": {
     "message": "validator"
+  },
+  "z6K3D6": {
+    "description": "{prometheus} is 'Prometheus' service, with link to its homepage (do not translate name)",
+    "message": "I've set up my {prometheus} service."
   },
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"

@@ -13,7 +13,7 @@ import {
 } from '../../store/reducers';
 import {
   ETHER_TO_GWEI,
-  ETH2_NETWORK_NAME,
+  BEACONCHAIN_URL,
   MIN_DEPOSIT_AMOUNT,
   MIN_DEPOSIT_CLI_VERSION,
 } from '../../utils/envVars';
@@ -107,7 +107,7 @@ export const getExistingDepositsForPubkeys = async (
   files: DepositKeyInterface[]
 ): Promise<BeaconchainDepositInterface> => {
   const pubkeys = files.flatMap(x => x.pubkey);
-  const beaconScanUrl = `https://${ETH2_NETWORK_NAME}.beaconcha.in/api/v1/validator/${pubkeys.join(
+  const beaconScanUrl = `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(
     ','
   )}/deposits`;
   const { data: beaconScanCheck } = await axios.get<

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BEACONCHAIN_ENDPOINT } from './envVars';
+import { BEACONCHAIN_URL } from './envVars';
 
 type BeaconchainResponse = {
   data: {
@@ -13,7 +13,9 @@ type BeaconchainResponse = {
 
 export const queryBeaconchain = async () => {
   try {
-    const response: BeaconchainResponse = await axios.get(BEACONCHAIN_ENDPOINT);
+    const response: BeaconchainResponse = await axios.get(
+      `${BEACONCHAIN_URL}/api/v1/epoch/latest`
+    );
     return {
       statusCode: 200,
       body: {

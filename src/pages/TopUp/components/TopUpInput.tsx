@@ -53,37 +53,33 @@ const StyledInput = styled.input`
 interface Props {
   value: number | string;
   setValue: (e: number) => void;
-  allowDecimals?: boolean;
+  maxValue: number;
 }
 
-export const NumberInput = ({
+export const TopupInput = ({
   value,
   setValue,
-  allowDecimals,
-}: Props): JSX.Element => {
+}: // maxValue,
+Props): JSX.Element => {
   const handleManualInput = (e: any) => {
     const val = e.target.value;
-    if (allowDecimals) {
-      setValue(val);
-    } else {
-      setValue(val.replace(/\./g, '')); // remove "." to force integer input;
-    }
+    setValue(val);
   };
 
   const decrement = () => {
-    if (value > 0) setValue(+value - 1);
+    if (value > 0) {
+      setValue(Math.max(0, +value - 1));
+    }
   };
 
-  const increment = () => setValue(+value + 1);
+  const increment = () => {
+    // setValue(Math.min(+value + 1, maxValue));
+    setValue(+value + 1);
+  };
 
   return (
     <div className="flex">
-      <StyledInput
-        onChange={handleManualInput}
-        value={value}
-        type={allowDecimals ? 'number' : 'tel'}
-        pattern="^-?[0-9]\d*\.?\d*$"
-      />
+      <StyledInput onChange={handleManualInput} value={value} type="number" />
       <ButtonContainer>
         <StyledButton onClick={increment} style={{ borderBottom: 'none' }}>
           <FormUp size="medium" />

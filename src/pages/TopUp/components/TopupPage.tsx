@@ -91,7 +91,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     balance,
   ]);
 
-  // const minTopupValue = 1;
+  const minTopupValue = 1;
 
   const [value, setValue] = React.useState(maxTopUpVal);
 
@@ -271,7 +271,12 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
               label="Submit"
               rainbow
               onClick={submitTopupTransaction}
-              disabled={value <= 0 || value > maxTopUpVal || value <= minTopupValue || !termA}
+              disabled={
+                value <= 0 ||
+                value > maxTopUpVal ||
+                value <= minTopupValue ||
+                !termA
+              }
             />
           </span>
         </InputContainer>

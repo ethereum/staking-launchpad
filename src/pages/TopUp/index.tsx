@@ -166,7 +166,14 @@ const _TopUpPage: React.FC<Props> = () => {
         />
       </>
     );
-  }, [loading, validatorLoadError, selectedValidator, active, validators]);
+  }, [
+    loading,
+    validatorLoadError,
+    selectedValidator,
+    active,
+    validators,
+    showDepositVerificationWarning,
+  ]);
 
   return (
     <>

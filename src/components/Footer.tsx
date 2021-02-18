@@ -48,6 +48,7 @@ export const Footer = () => {
     routesEnum.summaryPage,
     routesEnum.transactionsPage,
     routesEnum.congratulationsPage,
+    routesEnum.topUpPage,
   ];
 
   return (

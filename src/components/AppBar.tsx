@@ -17,6 +17,7 @@ import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import { ETH2_NETWORK_NAME, IS_MAINNET } from '../utils/envVars';
+import { Button } from './Button';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -33,6 +34,7 @@ const NetworkText = styled(Text)`
   border-radius: 4px;
   border: 1px solid;
   font-weight: 500;
+  line-height: 40px;
 `;
 
 const NavBarLinks = styled.div`
@@ -68,12 +70,15 @@ const BarLinkText = styled(Heading)`
   flex-direction: column;
   font-weight: ${(p: { active?: boolean }) => (p.active ? 'bold' : 300)};
 `;
+
 const _AppBar = ({ location }: RouteComponentProps) => {
   const {
     active: walletConnected,
     account,
     chainId,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+
+  const { deactivate } = useWeb3React();
 
   let network;
   let networkAllowed = false;
@@ -172,20 +177,37 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             FAQ
           </BarLinkText>
         </Link>
+        <Link to={routesEnum.topUpPage} className="mx30 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.topUpPage}
+          >
+            Top Up
+          </BarLinkText>
+        </Link>
       </NavBarLinks>
 
       <div className="flex">
         <NetworkText>
-          {ETH2_NETWORK_NAME}
-          {IS_MAINNET ? `` : ` Testnet`}
+          {ETH2_NETWORK_NAME} {IS_MAINNET ? `` : ` Testnet`}
         </NetworkText>
+
         {walletConnected && (
-          <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
-            <Dot success={networkAllowed} error={!networkAllowed} />
-            <Text size="small" className="ml10" color="blueDark">
-              {trimString(account as string, 10)}
-            </Text>
-          </Box>
+          <ValidatorDropdown
+            className="secondary-link"
+            label={
+              <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
+                <Dot success={networkAllowed} error={!networkAllowed} />
+                <Text size="small" className="ml10" color="blueDark">
+                  {trimString(account as string, 10)}
+                </Text>
+              </Box>
+            }
+            dropAlign={{ top: 'bottom', right: 'right' }}
+            dropContent={<Button label="Disconnect" onClick={deactivate} />}
+          />
         )}
       </div>
     </RainbowBackground>

@@ -12,3 +12,4 @@ export * from './FAQ';
 export * from './Phishing';
 export * from './Checklist';
 export * from './TermsOfService';
+export * from './TopUp';

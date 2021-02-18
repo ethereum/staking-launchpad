@@ -18,7 +18,6 @@ import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import {
-  ETH2_NETWORK_NAME,
   IS_MAINNET,
   TESTNET_LAUNCHPAD_NAME,
   MAINNET_LAUNCHPAD_URL,
@@ -26,7 +25,6 @@ import {
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
 import { FormattedMessage } from 'react-intl';
-import { Button } from './Button';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -123,8 +121,6 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     account,
     chainId,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-
-  const { deactivate } = useWeb3React();
 
   let network;
   let networkAllowed = false;
@@ -406,27 +402,6 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           </Box>
         )}
       </NavLinksRight>
-      <div className="flex">
-        <NetworkText>
-          {ETH2_NETWORK_NAME} {IS_MAINNET ? `` : ` Testnet`}
-        </NetworkText>
-
-        {walletConnected && (
-          <ValidatorDropdown
-            className="secondary-link"
-            label={
-              <Box className="flex flex-row mr20" style={{ paddingTop: 8 }}>
-                <Dot success={networkAllowed} error={!networkAllowed} />
-                <Text size="small" className="ml10" color="blueDark">
-                  {trimString(account as string, 10)}
-                </Text>
-              </Box>
-            }
-            dropAlign={{ top: 'bottom', right: 'right' }}
-            dropContent={<Button label="Disconnect" onClick={deactivate} />}
-          />
-        )}
-      </div>
     </RainbowBackground>
   );
 };

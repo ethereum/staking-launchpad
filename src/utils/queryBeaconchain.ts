@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { BEACONCHAIN_ENDPOINT } from '../utils/envVars';
+import { BEACONCHAIN_ENDPOINT } from './envVars';
 
-type InfuraResponse = {
+type BeaconchainResponse = {
   data: {
     status: string;
     data: {
@@ -13,7 +13,7 @@ type InfuraResponse = {
 
 export const queryBeaconchain = async () => {
   try {
-    const response: InfuraResponse = await axios.get(BEACONCHAIN_ENDPOINT);
+    const response: BeaconchainResponse = await axios.get(BEACONCHAIN_ENDPOINT);
     return {
       statusCode: 200,
       body: {
@@ -25,7 +25,11 @@ export const queryBeaconchain = async () => {
     console.error(error);
     return {
       statusCode: 500,
-      body: { totalValidators: 0, msg: error.message },
+      body: {
+        totalValidators: 0,
+        amountEth: 0,
+        msg: error.message,
+      },
     };
   }
 };

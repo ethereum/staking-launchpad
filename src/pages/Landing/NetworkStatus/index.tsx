@@ -56,13 +56,18 @@ const CardContainer = styled.div`
   }
 `;
 
+type PropData = {
+  count: number;
+  status: number;
+};
+
 //
 // Main Component
 
 export const NetworkStatus: React.FC<{
   amountEth?: number;
-  totalValidators?: number;
-}> = ({ amountEth = 0, totalValidators = 0 }): JSX.Element | null => {
+  totalValidators?: PropData;
+}> = ({ amountEth = 0, totalValidators }): JSX.Element | null => {
   const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
 
@@ -78,6 +83,16 @@ export const NetworkStatus: React.FC<{
 
   const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
+
+  const TotalValidators = () => {
+    if (totalValidators?.status === 200) {
+      return <span>{numberWithCommas(totalValidators.count)}</span>;
+    }
+    if (totalValidators?.status === 500) {
+      return <FormattedMessage defaultMessage="Loading error" />;
+    }
+    return <FormattedMessage defaultMessage="Loading..." />;
+  };
 
   return (
     <Container isMobile={m}>
@@ -106,11 +121,7 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {totalValidators === 0 ? (
-                    <FormattedMessage defaultMessage="Loading..." />
-                  ) : (
-                    numberWithCommas(totalValidators)
-                  )}
+                  <TotalValidators />
                 </BoldGreen>
               </Text>
             </Card>

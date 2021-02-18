@@ -12,7 +12,10 @@ import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 
 export const LandingPage = (): JSX.Element => {
   const [amountEth, setAmountEth] = useState(0);
-  const [totalValidators, setTotalValidators] = useState(0);
+  const [totalValidators, setTotalValidators] = useState({
+    count: 0,
+    status: 0,
+  });
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -24,11 +27,14 @@ export const LandingPage = (): JSX.Element => {
 
       const getValidators = async () => {
         const response = await queryBeaconchain();
-        setTotalValidators(response.body.totalValidators);
+        setTotalValidators({
+          count: response.body.totalValidators,
+          status: response.statusCode,
+        });
       };
       getValidators();
     }
-  });
+  }, []);
 
   return (
     <>

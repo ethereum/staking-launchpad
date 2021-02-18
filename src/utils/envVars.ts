@@ -6,7 +6,7 @@ export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID  
 export const INFURA_PROJECT_ID          = process.env.REACT_APP_INFURA_PROJECT_ID  || '';
 export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '');
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
-export const INFURA_BEACON_URL          = `https://eth2-beacon-${IS_MAINNET ? "mainnet" : TESTNET_LAUNCHPAD_NAME.toLowerCase()}.infura.io/eth/v1/beacon/states/head/validator_balances`;
+export const BEACONCHAIN_ENDPOINT       = `https://${IS_MAINNET ? `` : `${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.`}beaconcha.in/api/v1/epoch/latest`;
 
 // public
 export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Mainnet';

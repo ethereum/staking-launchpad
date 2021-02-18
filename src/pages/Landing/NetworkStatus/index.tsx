@@ -7,11 +7,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
-import {
-  ENABLE_RPC_FEATURES,
-  PRICE_PER_VALIDATOR,
-  TICKER_NAME,
-} from '../../../utils/envVars';
+import { ENABLE_RPC_FEATURES, TICKER_NAME } from '../../../utils/envVars';
 import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
 
 //
@@ -110,10 +106,10 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {numberWithCommas(
-                    totalValidators !== 0
-                      ? totalValidators
-                      : Math.round(+amountEth / +PRICE_PER_VALIDATOR)
+                  {totalValidators === 0 ? (
+                    <FormattedMessage defaultMessage="Loading..." />
+                  ) : (
+                    numberWithCommas(totalValidators)
                   )}
                 </BoldGreen>
               </Text>

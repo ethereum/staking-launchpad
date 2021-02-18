@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { AppBar } from '../../components/AppBar';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
@@ -8,6 +7,7 @@ import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
 import { Upgrades } from './Upgrades';
 import { queryContract } from '../../utils/queryContract';
+import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 
 export const LandingPage = (): JSX.Element => {
@@ -23,13 +23,8 @@ export const LandingPage = (): JSX.Element => {
       getBalance();
 
       const getValidators = async () => {
-        try {
-          const { data } = await axios.get('/.netlify/functions/infura');
-          setTotalValidators(data.totalValidators);
-        } catch (error) {
-          console.error(error);
-          setTotalValidators(amountEth / 32);
-        }
+        const response = await queryBeaconchain();
+        setTotalValidators(response.body.totalValidators);
       };
       getValidators();
     }

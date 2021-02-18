@@ -16,7 +16,7 @@ import ValidatorTable from './components/ValidatorTable';
 import TopupPage from './components/TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
-import { BEACONCHAIN_API_URL } from '../../utils/envVars';
+import { BEACONCHAIN_URL } from '../../utils/envVars';
 import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 
@@ -25,7 +25,9 @@ const Arrow = styled(props => <FormPrevious {...props} />)`
   left: 0;
   color: ${p => p.theme.blue.medium};
 `;
+
 const SubTextContainer = styled.div``;
+
 const BackText = styled(Text)`
   margin-top: -25px;
   cursor: pointer;
@@ -58,7 +60,7 @@ const _TopUpPage: React.FC<Props> = () => {
       // beaconchain API requires two fetches - one that gets the public keys for an eth1 address, and one that
       // queries by the validators public keys
 
-      fetch(`${BEACONCHAIN_API_URL}/eth1/${account}`)
+      fetch(`${BEACONCHAIN_URL}/api/v1/validator/eth1/${account}`)
         .then(r => r.json())
         .then(
           ({
@@ -85,7 +87,9 @@ const _TopUpPage: React.FC<Props> = () => {
                 .map(validator => validator.publickey)
                 .join(',')}`;
 
-              fetch(`${BEACONCHAIN_API_URL}/${pubKeysCommaDelineated}`)
+              fetch(
+                `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
+              )
                 .then(r => r.json())
                 .then(({ data }: { data: BeaconChainValidator[] }) => {
                   if (data.length === 0) {

@@ -26,7 +26,6 @@ import {
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
 import { FormattedMessage } from 'react-intl';
-import {  IS_MAINNET } from '../utils/envVars';
 import { Button } from './Button';
 
 const RainbowBackground = styled(Box)`
@@ -405,7 +404,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               {trimString(account as string, 10)}
             </Text>
           </Box>
-
+        )}
+      </NavLinksRight>
       <div className="flex">
         <NetworkText>
           {ETH2_NETWORK_NAME} {IS_MAINNET ? `` : ` Testnet`}
@@ -426,7 +426,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             dropContent={<Button label="Disconnect" onClick={deactivate} />}
           />
         )}
-      </NavLinksRight>
+      </div>
     </RainbowBackground>
   );
 };

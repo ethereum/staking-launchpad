@@ -115,12 +115,7 @@ const ValidatorTable: React.FC<{
         <React.Fragment key={validator.pubkey}>
           <TableRow>
             <TableCell scope="col" border="bottom">
-              <Link
-                withArrow
-                external
-                primary
-                to={`${BEACONCHAIN_URL}/${validator.pubkey}`}
-              >
+              <Link primary to={`${BEACONCHAIN_URL}/${validator.pubkey}`}>
                 {shortenAddress(validator.pubkey)}
               </Link>
             </TableCell>

@@ -63,7 +63,7 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
         {txHash?.length > 0 && (
           <Text center>
             Check{' '}
-            <Link primary inline external to={`${ETHERSCAN_URL}/${txHash}`}>
+            <Link primary inline to={`${ETHERSCAN_URL}/${txHash}`}>
               Etherscan <Share size="small" />
             </Link>{' '}
             for more details

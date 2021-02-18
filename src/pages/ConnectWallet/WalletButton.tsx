@@ -8,7 +8,7 @@ import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { FormattedMessage } from 'react-intl';
 
-export const WalletButtonLogo = styled.img`
+export const Logo = styled.img`
   height: 50px;
   width: 50px;
   display: block;

@@ -19,6 +19,7 @@ import {
   Checklist,
   TermsOfService,
   Languages,
+  TopUpPage,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Eth2/Prysm';
@@ -49,6 +50,7 @@ export enum routesEnum {
   teku = '/teku',
   phishingPage = '/phishing',
   checklistPage = '/checklist',
+  topUpPage = '/top-up',
   landingPage = '/',
   notFoundPage = '/*',
   languagesPage = '/languages',
@@ -134,6 +136,11 @@ const routes: RouteType[] = [
     path: routesEnum.languagesPage,
     exact: true,
     component: Languages,
+  },
+  {
+    path: routesEnum.topUpPage,
+    exact: true,
+    component: TopUpPage,
   },
   { path: routesEnum.landingPage, exact: true, component: LandingPage },
   // NOTE: this wildcard route must be the last index of the routes array

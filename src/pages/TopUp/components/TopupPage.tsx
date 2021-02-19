@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useIntl, FormattedMessage } from 'react-intl';
 import { CheckBox } from 'grommet';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
@@ -108,6 +109,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     'not_started'
   );
 
+  const { formatMessage } = useIntl();
+
   const submitTopupTransaction = async () => {
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
@@ -181,20 +184,35 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
   const alertText = React.useMemo(() => {
     if (balance > 32)
-      return 'Validator balance is already higher than the maximum amount.';
+      return formatMessage({
+        defaultMessage:
+          'Validator balance is already higher than the maximum amount.',
+      });
     if (balanceAfterTopup > 32)
-      return `Submitting a topup for more than ${maxTopUpVal.toFixed(
-        4
-      )} will result in a balance higher than the maximum balance of 32.`;
+      return formatMessage(
+        {
+          defaultMessage: `Submitting a topup for more than {maxTopUpValue} will result in a balance higher than the maximum balance of 32.`,
+          description: `"topup" short for "topping up" your validator with more funds to a limit of 32 ETH. {maxTopUpValue} represents the amount of ether until user hits this max.`,
+        },
+        {
+          maxTopUpValue: maxTopUpVal.toFixed(4),
+        }
+      );
   }, [balance, balanceAfterTopup, maxTopUpVal]);
 
   const submitBtnTooltipText = React.useMemo(() => {
     if (value <= 0 || value > maxTopUpVal)
-      return 'Please enter a valid top up value.';
+      return formatMessage({
+        defaultMessage: 'Please enter a valid top up value.',
+      });
 
-    if (value < 1) return 'Minimum topup value is 1 ETH.';
+    if (value < 1)
+      return formatMessage({ defaultMessage: 'Minimum topup value is 1 ETH.' });
 
-    if (!termA) return 'Please accept the conditions above.';
+    if (!termA)
+      return formatMessage({
+        defaultMessage: 'Please accept the conditions above.',
+      });
     return '';
   }, [value, termA, maxTopUpVal]);
 
@@ -211,7 +229,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
       <Paper className="mt20">
         <Heading level={3} color="blueDark">
-          Risks & Acknowledgements:
+          <FormattedMessage defaultMessage="Risks & Acknowledgements:" />
         </Heading>
         <div className="mt20">
           <CheckBox
@@ -219,7 +237,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             onChange={() => setTermA(!termA)}
             label={
               <Text className="checkbox-label ml10">
-                I am certain that the validator I am topping up is my validator.
+                <FormattedMessage defaultMessage="I am certain that the validator I am topping up is my validator." />
               </Text>
             }
           />
@@ -227,24 +245,24 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       </Paper>
       <Paper className="mt30">
         <Heading level={3} color="blueDark">
-          Top Up Details
+          <FormattedMessage defaultMessage="Top Up Details" />
         </Heading>
         <TopUpDetailsContainer>
           <div className="details-item">
             <Text weight={600} color="blueDark">
-              Public Key
+              <FormattedMessage defaultMessage="Public Key" />
             </Text>
             <Text>{shortenAddress(validator.pubkey, 6)}</Text>
           </div>
           <div className="details-item">
             <Text weight={600} color="blueDark">
-              Current Balance
+              <FormattedMessage defaultMessage="Current Balance" />
             </Text>
             <Text>{balance.toFixed(8)} ETH</Text>
           </div>
           <div className="details-item">
             <Text weight={600} color="blueDark">
-              Balance after topping up
+              <FormattedMessage defaultMessage="Balance after topping up" />
             </Text>
             <Text>{balanceAfterTopup.toFixed(8)} ETH</Text>
           </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import styled from 'styled-components';
@@ -51,6 +52,8 @@ const _TopUpPage: React.FC<Props> = () => {
     showDepositVerificationWarning,
     setShowDepositVerificationWarning,
   ] = React.useState(false);
+
+  const { formatMessage } = useIntl();
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   React.useEffect(() => {
@@ -138,8 +141,7 @@ const _TopUpPage: React.FC<Props> = () => {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <AlertIcon color="redLight" />
             <Text className="ml10">
-              There was an issue loading your validator information from
-              Beaconcha.in
+              <FormattedMessage defaultMessage="There was an issue loading your validator information from Beaconcha.in" />
             </Text>
           </div>
         </Alert>
@@ -157,9 +159,11 @@ const _TopUpPage: React.FC<Props> = () => {
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <AlertIcon color="redLight" />
               <Text className="ml10">
-                You may have an ETH deposit that was accepted but is being
-                validated on chain. It will be available here when beaconcha.in
-                has confirmed 2048 blocks.
+                <FormattedMessage
+                  defaultMessage="You may have an ETH deposit that was accepted but is being
+                    validated on chain. It will be available here when beaconcha.in
+                    has confirmed 2048 blocks."
+                />
               </Text>
             </div>
           </Alert>
@@ -184,7 +188,9 @@ const _TopUpPage: React.FC<Props> = () => {
       {/* the wallet connect modal controls it's own display, so it is always rendered here */}
       <WalletConnectModal />
 
-      <PageTemplate title="Top up a validator">
+      <PageTemplate
+        title={formatMessage({ defaultMessage: 'Top up a validator' })}
+      >
         {/* render a "back button" if there's a selected validator */}
         {selectedValidator && (
           <BackText
@@ -192,20 +198,22 @@ const _TopUpPage: React.FC<Props> = () => {
             color="blueMedium"
           >
             <Arrow />
-            All Validators
+            <FormattedMessage defaultMessage="All Validators" />
           </BackText>
         )}
 
         <SubTextContainer className="mt20">
           <Text className="mt10">
-            If your validator’s balance is getting low because you haven’t been
-            active for a while, you may wish to top-up you balance to ensure
-            your validator isn’t ejected from the validator set for having a
-            balance that is too low. Low-balance ejections occur when a
-            validator’s effective balance drops below 16 ETH. The Launchpad only
-            facilitates top-ups that get validators’ balances to 32 ETH, as
-            validator rewards are based on effective balance which is capped at
-            32 ETH.
+            <FormattedMessage
+              defaultMessage="If your validator’s balance is getting low because you haven’t been
+                active for a while, you may wish to top-up you balance to ensure
+                your validator isn’t ejected from the validator set for having a
+                balance that is too low. Low-balance ejections occur when a
+                validator’s effective balance drops below 16 ETH. The Launchpad only
+                facilitates top-ups that get validators’ balances to 32 ETH, as
+                validator rewards are based on effective balance which is capped at
+                32 ETH."
+            />
           </Text>
         </SubTextContainer>
 

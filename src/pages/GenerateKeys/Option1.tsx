@@ -52,7 +52,7 @@ export const Option1 = ({
           rainbow
           label={
             <>
-              <Text>Download from github</Text>
+              <Text>Download from GitHub</Text>
               <Arrow />
             </>
           }

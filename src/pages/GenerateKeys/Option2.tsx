@@ -30,9 +30,9 @@ export const Option2 = ({
     if (os === 'mac')
       return (
         <>
-          You can install python3 on your MacOS device using{' '}
+          You can install python3 on your macOS device using{' '}
           <Link primary inline external to="https://docs.brew.sh/Manpage">
-            homebrew
+            Homebrew
           </Link>
         </>
       );

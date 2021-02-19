@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
 import {
   Box,
@@ -33,6 +34,7 @@ const ValidatorTable: React.FC<{
   setSelectedValidator: (validator: BeaconChainValidator) => void;
 }> = ({ validators, setSelectedValidator }) => {
   const { deactivate } = useWeb3React();
+  const { formatMessage } = useIntl();
 
   const validatorStatus = (validator: BeaconChainValidator) => {
     const { status } = validator;
@@ -42,7 +44,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <Refresh color="blueLight" />
-            <Text className="ml10">Pending</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Pending" />
+            </Text>
           </div>
         );
       }
@@ -50,7 +54,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <StatusWarning color={theme.red.light} />
-            <Text className="ml10">Slashing</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Slashing" />
+            </Text>
           </div>
         );
       }
@@ -58,7 +64,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <StatusWarning color={theme.red.light} />
-            <Text className="ml10">Slashed</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Slashed" />
+            </Text>
           </div>
         );
       }
@@ -66,7 +74,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <StatusWarning color="yellowDark" />
-            <Text className="ml10">Exiting</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Exiting" />
+            </Text>
           </div>
         );
       }
@@ -74,7 +84,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <StatusDisabled color={theme.gray.medium} />
-            <Text className="ml10">Exited</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Exited" />
+            </Text>
           </div>
         );
       }
@@ -82,7 +94,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <Wifi color={theme.gray.medium} />
-            <Text className="ml10">Offline</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Offline" />
+            </Text>
           </div>
         );
       }
@@ -90,7 +104,9 @@ const ValidatorTable: React.FC<{
         return (
           <div className="flex">
             <Wifi color={theme.green.dark} />
-            <Text className="ml10">Online</Text>
+            <Text className="ml10">
+              <FormattedMessage defaultMessage="Online" />
+            </Text>
           </div>
         );
       }
@@ -108,8 +124,13 @@ const ValidatorTable: React.FC<{
       // const disableTopUpButton = alreadyToppedUp || statusIneligible;
 
       const toolTipText = alreadyToppedUp
-        ? 'This validator already has an effective balance of 32 ETH.'
-        : 'This validator is not eligible to be topped up';
+        ? formatMessage({
+            defaultMessage:
+              'This validator already has an effective balance of 32 ETH.',
+          })
+        : formatMessage({
+            defaultMessage: 'This validator is not eligible to be topped up',
+          });
 
       return (
         <React.Fragment key={validator.pubkey}>
@@ -123,7 +144,13 @@ const ValidatorTable: React.FC<{
               <Text>{validatorStatus(validator)}</Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
-              <Text>{validator.slashed ? 'YES' : 'NO'}</Text>
+              <Text>
+                {validator.slashed ? (
+                  <FormattedMessage defaultMessage="YES" />
+                ) : (
+                  <FormattedMessage defaultMessage="NO" />
+                )}
+              </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
@@ -142,7 +169,7 @@ const ValidatorTable: React.FC<{
             <TableCell data-tip={toolTipText}>
               <Button
                 onClick={() => setSelectedValidator(validator)}
-                label="Top Up"
+                label={formatMessage({ defaultMessage: 'Top Up' })}
                 rainbow
                 // disabled={disableTopUpButton}
               />
@@ -160,19 +187,29 @@ const ValidatorTable: React.FC<{
         <TableHeader>
           <TableRow>
             <TableCell scope="col" border="bottom">
-              <Text>Public Key</Text>
+              <Text>
+                <FormattedMessage defaultMessage="Public Key" />
+              </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
-              <Text>Status</Text>
+              <Text>
+                <FormattedMessage defaultMessage="Status" />
+              </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
-              <Text>Slashed?</Text>
+              <Text>
+                <FormattedMessage defaultMessage="Slashed?" />
+              </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
-              <Text>True Balance</Text>
+              <Text>
+                <FormattedMessage defaultMessage="True Balance" />
+              </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
-              <Text>Effective Balance</Text>
+              <Text>
+                <FormattedMessage defaultMessage="Effective Balance" />
+              </Text>
             </TableCell>
           </TableRow>
         </TableHeader>
@@ -181,10 +218,21 @@ const ValidatorTable: React.FC<{
     </Paper>
   ) : (
     <Box align="center" justify="center" className="mt40">
-      <Text weight={600}>No Validators found.</Text>
+      <Text weight={600}>
+        <FormattedMessage defaultMessage="No Validators found." />
+      </Text>
       <Text className="mt20">
-        You can <FakeLink onClick={deactivate}>change your wallet</FakeLink> to
-        load validators for a different address.
+        <FormattedMessage
+          defaultMessage="You can {changeYourWallet} to load validators for a different address."
+          values={{
+            changeYourWallet: (
+              <FakeLink onClick={deactivate}>
+                <FormattedMessage defaultMessage="change your wallet" />
+              </FakeLink>
+            ),
+          }}
+          description="{changeYourWallet} is a link labeled 'change your wallet'"
+        />
       </Text>
     </Box>
   );

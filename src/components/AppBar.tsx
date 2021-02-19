@@ -172,7 +172,13 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 className="bar-link-text no-padding"
               >
                 <Text>
-                  Eth2 {!IS_MAINNET && `${TESTNET_LAUNCHPAD_NAME}`} Launchpad
+                  <FormattedMessage
+                    defaultMessage="Eth2 {network}Launchpad"
+                    values={{
+                      network: IS_MAINNET ? '' : `${TESTNET_LAUNCHPAD_NAME} `,
+                    }}
+                    description="{network} inserts the testnet name, only if on the testnet"
+                  />
                 </Text>
               </BarLinkText>
             </div>
@@ -236,7 +242,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="bar-link-text"
             active={pathname === routesEnum.topUpPage}
           >
-            Top Up
+            <FormattedMessage defaultMessage="Top Up" />
           </BarLinkText>
         </Link>
       </NavBarLinks>

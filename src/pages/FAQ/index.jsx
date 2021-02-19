@@ -403,7 +403,7 @@ export const FAQ = () => {
             <SectionTitle level={3}>Keys</SectionTitle>
           </Anchor>
           <section>
-            <Heading level={4}>What happens I lose my signing key?</Heading>
+            <Heading level={4}>What happens if I lose my signing key?</Heading>
             <Text className="mt10">
               If the signing key is lost, the validator can no longer propose or
               attest.

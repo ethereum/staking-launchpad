@@ -61,7 +61,8 @@ const CardContainer = styled.div`
 `;
 
 type PropData = {
-  count: number;
+  amountEth: number;
+  totalValidators: number;
   status: number;
 };
 
@@ -69,11 +70,11 @@ type PropData = {
 // Main Component
 
 export const NetworkStatus: React.FC<{
-  amountEth?: number;
-  totalValidators?: PropData;
-}> = ({ amountEth = 0, totalValidators }): JSX.Element | null => {
+  state: PropData;
+}> = ({ state }): JSX.Element | null => {
   const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
+  const { amountEth, totalValidators, status } = state;
 
   React.useEffect(() => {
     const resizeListener = () => {
@@ -88,11 +89,13 @@ export const NetworkStatus: React.FC<{
   const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
-  const TotalValidators = () => {
-    if (totalValidators?.status === 200) {
-      return <span>{numberWithCommas(totalValidators.count)}</span>;
+  const LoadingHandler: React.FC<{
+    value?: string;
+  }> = ({ value }): JSX.Element => {
+    if (status === 200) {
+      return <span>{value}</span>;
     }
-    if (totalValidators?.status === 500) {
+    if (status === 500) {
       return <FormattedMessage defaultMessage="Loading error" />;
     }
     return <FormattedMessage defaultMessage="Loading..." />;
@@ -115,7 +118,9 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {numberWithCommas(amountEth)} {TICKER_NAME}
+                  <LoadingHandler
+                    value={`${numberWithCommas(amountEth)} ${TICKER_NAME}`}
+                  />
                 </BoldGreen>
               </Text>
             </Card>
@@ -125,7 +130,7 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  <TotalValidators />
+                  <LoadingHandler value={numberWithCommas(totalValidators)} />
                 </BoldGreen>
               </Text>
             </Card>

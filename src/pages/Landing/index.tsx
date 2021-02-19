@@ -6,33 +6,26 @@ import { StakingRewards } from './StakingRewards';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
 import { Upgrades } from './Upgrades';
-import { queryContract } from '../../utils/queryContract';
 import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 
 export const LandingPage = (): JSX.Element => {
-  const [amountEth, setAmountEth] = useState(0);
-  const [totalValidators, setTotalValidators] = useState({
-    count: 0,
+  const [state, setState] = useState({
+    amountEth: 0,
+    totalValidators: 0,
     status: 0,
   });
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
-      const getBalance = async () => {
-        const ethBalance = await queryContract();
-        setAmountEth(ethBalance);
-      };
-      getBalance();
-
-      const getValidators = async () => {
+      (async () => {
         const response = await queryBeaconchain();
-        setTotalValidators({
-          count: response.body.totalValidators,
+        setState({
+          amountEth: response.body.amountEth,
+          totalValidators: response.body.totalValidators,
           status: response.statusCode,
         });
-      };
-      getValidators();
+      })();
     }
   }, []);
 
@@ -40,8 +33,8 @@ export const LandingPage = (): JSX.Element => {
     <>
       <AppBar />
       <Hero />
-      <NetworkStatus {...{ amountEth, totalValidators }} />
-      <StakingRewards currentStaked={amountEth} />
+      <NetworkStatus {...{ state }} />
+      <StakingRewards currentStaked={state.amountEth} />
       <Introduction />
       <SignupSteps />
       <Upgrades />

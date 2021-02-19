@@ -8,7 +8,7 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
-import { queryContract } from '../../utils/queryContract';
+import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
@@ -160,20 +160,38 @@ const _CongratulationsPage = ({
   depositKeys,
   workflow,
 }: Props): JSX.Element => {
-  const [amountEth, setAmountEth] = useState(0);
+  const [state, setState] = useState({
+    amountEth: 0,
+    status: 0,
+  });
+  const { amountEth, status } = state;
   const { formatMessage } = useIntl();
   const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
-      const getBalance = async () => {
-        const ethBalance = await queryContract();
-        setAmountEth(ethBalance);
-      };
-      getBalance();
+      (async () => {
+        const response = await queryBeaconchain();
+        setState({
+          amountEth: response.body.amountEth,
+          status: response.statusCode,
+        });
+      })();
     }
-  });
+  }, []);
+
+  const LoadingHandler: React.FC<{
+    value?: string;
+  }> = ({ value }): JSX.Element => {
+    if (status === 200) {
+      return <span>{value}</span>;
+    }
+    if (status === 500) {
+      return <FormattedMessage defaultMessage="Loading error" />;
+    }
+    return <FormattedMessage defaultMessage="Loading..." />;
+  };
 
   if (workflow < WorkflowStep.CONGRATULATIONS) {
     return routeToCorrectWorkflowStep(workflow);
@@ -295,7 +313,7 @@ const _CongratulationsPage = ({
                     </Heading>
                     <Text size="x-large" className="mt20">
                       <BoldGreen className="mr10" fontSize={24}>
-                        {formattedAPR}%
+                        <LoadingHandler value={`${formattedAPR}%`} />
                       </BoldGreen>
                     </Text>
                   </Card>

@@ -324,9 +324,9 @@ export const Option2 = ({
               ),
               network: (
                 <span>
-                  {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
-                  {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
-                  {!IS_MAINNET && ' testnet'}
+                  {IS_MAINNET
+                    ? ETH2_NETWORK_NAME
+                    : `${ETH2_NETWORK_NAME} testnet`}
                 </span>
               ),
             }}

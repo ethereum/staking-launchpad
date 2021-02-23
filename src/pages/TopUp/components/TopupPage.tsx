@@ -30,6 +30,7 @@ import {
   ledgerTxRejected,
   metamaskTxRejected,
 } from '../../../utils/transactionErrorTypes';
+import { PRICE_PER_VALIDATOR } from '../../../utils/envVars';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -179,22 +180,25 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const [termA, setTermA] = useState(false);
 
   const showAlert = React.useMemo(() => {
-    return balanceAfterTopup > 32 || balance > 32;
+    return (
+      balanceAfterTopup > PRICE_PER_VALIDATOR || balance > PRICE_PER_VALIDATOR
+    );
   }, [balance, balanceAfterTopup]);
 
   const alertText = React.useMemo(() => {
-    if (balance > 32)
+    if (balance > PRICE_PER_VALIDATOR)
       return formatMessage({
         defaultMessage:
           'Validator balance is already higher than the maximum amount.',
       });
-    if (balanceAfterTopup > 32)
+    if (balanceAfterTopup > PRICE_PER_VALIDATOR)
       return formatMessage(
         {
-          defaultMessage: `Validators have a maximum balance of 32 ETH. You only need to top up {maxTopUpValue}.`,
-          description: `"Validators have a max balance of 32 ETH. {maxTopUpValue} represents the amount of ether until user hits this max.`,
+          defaultMessage: `Validators have a maximum balance of {pricePerValidator} ETH. You only need to top up {maxTopUpValue}.`,
+          description: `"Validators have a max balance of ETH. {pricePerValidator} represents that number. {maxTopUpValue} represents the amount of ether until user hits this max.`,
         },
         {
+          pricePerValidator: PRICE_PER_VALIDATOR,
           maxTopUpValue: maxTopUpVal.toFixed(4),
         }
       );

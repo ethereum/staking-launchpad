@@ -368,7 +368,7 @@ const _CongratulationsPage = ({
                       </Row>
                     </CardLink>
                   ) : (
-                    <CardLink to={routesEnum.checklistPage}>
+                    <CardLink to={`${routesEnum.checklistPage}/#section-three`}>
                       <Row>
                         <div>
                           <Heading

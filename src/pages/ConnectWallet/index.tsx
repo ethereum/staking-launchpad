@@ -258,7 +258,7 @@ const _ConnectWalletPage = ({
           { defaultMessage: 'Connect {wallet} to {network}' },
           {
             wallet: getWalletName(walletProvider),
-            network: IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet',
+            network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
           }
         )
       );
@@ -326,7 +326,7 @@ const _ConnectWalletPage = ({
                   </Heading>
                 </Row>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {network === 'Mainnet' ? network : `${network} Testnet`}
+                  {network === 'Mainnet' ? network : `${network} testnet`}
                 </Text>
               </Network>
               <div>

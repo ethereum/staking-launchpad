@@ -466,14 +466,19 @@ const _CongratulationsPage = ({
             <div id="keylist">
               <Heading level={3} className="mt20">
                 {remainingTxCount === 1 ? (
-                  <FormattedMessage defaultMessage="Outstanding deposit ({remainingTxCount})" />
+                  <FormattedMessage defaultMessage="Outstanding deposit" />
                 ) : (
                   <FormattedMessage defaultMessage="Outstanding deposits ({remainingTxCount})" />
                 )}
                 {remainingTxCount})
               </Heading>
               <Text className="mt20">
-                <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits." />
+                {remainingTxCount === 1 ? (
+                  <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up one more validator. This deposit is still outstanding. If you think you've already made this deposit, wait an hour before trying again to avoid duplicate deposits." />
+                ) : (
+                  <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits." />
+                )}
+                {remainingTxCount})
               </Text>
               <KeyList />
             </div>

@@ -148,8 +148,17 @@ export const Option2 = ({
       return (
         <Pre className="my0">
           python3 ./eth2deposit/deposit.py new-mnemonic{' '}
-          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
-          {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
+          {validatorCount > 0
+            ? `--${formatMessage({
+                defaultMessage: 'num_validators',
+                description:
+                  'this is used as a command line flag, short for "number of validators"',
+              })} ${validatorCount}`
+            : ''}{' '}
+          {`--${formatMessage({
+            defaultMessage: 'chain',
+            description: 'this is used as a command line flag',
+          })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -158,8 +167,17 @@ export const Option2 = ({
       return (
         <Pre className="my0">
           .\eth2deposit\deposit.py new-mnemonic{' '}
-          {validatorCount > 0 ? `--num_validators ${validatorCount}` : ''}{' '}
-          {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
+          {validatorCount > 0
+            ? `--${formatMessage({
+                defaultMessage: 'num_validators',
+                description:
+                  'this is used as a command line flag, short for "number of validators"',
+              })} ${validatorCount}`
+            : ''}{' '}
+          {`--${formatMessage({
+            defaultMessage: 'chain',
+            description: 'this is used as a command line flag',
+          })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -298,7 +316,12 @@ export const Option2 = ({
           <FormattedMessage
             defaultMessage="Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
             values={{
-              flag: <Code>--chain {ETH2_NETWORK_NAME.toLowerCase()}</Code>,
+              flag: (
+                <Code>{`--${formatMessage({
+                  defaultMessage: 'chain',
+                  description: 'this is used as a command line flag',
+                })} ${ETH2_NETWORK_NAME.toLowerCase()}`}</Code>
+              ),
               network: (
                 <span>
                   {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}

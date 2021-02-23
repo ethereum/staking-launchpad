@@ -192,7 +192,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       return formatMessage(
         {
           defaultMessage: `Validators have a maximum balance of 32 ETH. You only need to top up {maxTopUpValue}.`,
-          description: `"top-up" short for "topping up" your validator with more funds to a limit of 32 ETH. {maxTopUpValue} represents the amount of ether until user hits this max.`,
+          description: `"Validators have a max balance of 32 ETH. {maxTopUpValue} represents the amount of ether until user hits this max.`,
         },
         {
           maxTopUpValue: maxTopUpVal.toFixed(4),

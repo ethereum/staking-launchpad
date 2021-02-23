@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Heading } from '../Heading';
 import { WorkflowProgressBar } from './WorkflowProgressBar';
-import { AppBar } from '../AppBar';
 import { DesktopOnlyModal } from '../DesktopOnlyModal';
 import {
   rainbowBGColors,
@@ -16,16 +15,15 @@ import { useIntl } from 'react-intl';
 
 const Content = styled.div`
   width: 100%;
-  max-width: 1024px;
-  margin: 30px 0;
-  position: relative;
+  padding: 64px;
+  margin-left: 256px;
 `;
 
 const Gutter = styled.div`
-  padding: 0 48px 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 `;
+
 const Background = styled.div`
   background-image: ${(p: { workflowStep: WorkflowStep }) =>
     `linear-gradient(to bottom right, ${rainbowLightColors[p.workflowStep]}, ${
@@ -79,9 +77,8 @@ const _WorkflowPageTemplate = ({
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
       </Helmet>
-      <AppBar />
-      <WorkflowProgressBar workflow={calculatedWorkflowStep} />
       <Gutter>
+        <WorkflowProgressBar workflow={calculatedWorkflowStep} />
         <Content>
           <Heading level={2} size="medium" color="blueDark" className="mb20">
             {title}

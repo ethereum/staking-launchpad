@@ -51,7 +51,7 @@ const WalletConnectModal: React.FC = () => {
       <Layer>
         <div className="p20">
           <Heading level={2} color="blueMedium" center className="mb20">
-            <FormattedMessage defaultMessage="Incorrect Network" />
+            <FormattedMessage defaultMessage="Wrong network" />
           </Heading>
           <Network
             size="xlarge"
@@ -59,7 +59,7 @@ const WalletConnectModal: React.FC = () => {
           />
           <Text center>
             <FormattedMessage
-              defaultMessage="Please connect to {network}"
+              defaultMessage="Connect to {network}"
               values={{
                 network: IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet',
               }}

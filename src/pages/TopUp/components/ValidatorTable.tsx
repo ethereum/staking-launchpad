@@ -126,10 +126,10 @@ const ValidatorTable: React.FC<{
       const toolTipText = alreadyToppedUp
         ? formatMessage({
             defaultMessage:
-              'This validator already has an effective balance of 32 ETH.',
+              "This validator's balance is at the effective maximum: 32 ETH.",
           })
         : formatMessage({
-            defaultMessage: 'This validator is not eligible to be topped up',
+            defaultMessage: "You can't top up this validator",
           });
 
       return (
@@ -169,7 +169,7 @@ const ValidatorTable: React.FC<{
             <TableCell data-tip={toolTipText}>
               <Button
                 onClick={() => setSelectedValidator(validator)}
-                label={formatMessage({ defaultMessage: 'Top Up' })}
+                label={formatMessage({ defaultMessage: 'Top up' })}
                 rainbow
                 // disabled={disableTopUpButton}
               />
@@ -188,7 +188,7 @@ const ValidatorTable: React.FC<{
           <TableRow>
             <TableCell scope="col" border="bottom">
               <Text>
-                <FormattedMessage defaultMessage="Public Key" />
+                <FormattedMessage defaultMessage="Public key" />
               </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
@@ -203,12 +203,12 @@ const ValidatorTable: React.FC<{
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
-                <FormattedMessage defaultMessage="True Balance" />
+                <FormattedMessage defaultMessage="True balance" />
               </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
-                <FormattedMessage defaultMessage="Effective Balance" />
+                <FormattedMessage defaultMessage="Effective balance" />
               </Text>
             </TableCell>
           </TableRow>

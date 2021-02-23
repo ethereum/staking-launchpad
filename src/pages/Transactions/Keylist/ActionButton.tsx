@@ -61,7 +61,11 @@ export const ActionButton = ({
 
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
-      <ButtonLink to={`${BEACONCHAIN_URL}/0x${pubkey}`} className="mr5">
+      <ButtonLink
+        to={`${BEACONCHAIN_URL}/0x${pubkey}`}
+        className="mr5"
+        data-tip
+      >
         Beaconcha.in
       </ButtonLink>
     );

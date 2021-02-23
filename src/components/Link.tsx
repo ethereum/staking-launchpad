@@ -109,7 +109,7 @@ export const Link = (props: LinkProps) => {
   }
 
   if (isExternal) {
-    let href = '';
+    let href = to;
 
     if (to === ETHEREUM_DOT_ORG) {
       // Path is to https://ethereum.org homepage; will append locale

@@ -17,7 +17,11 @@ import ValidatorTable from './components/ValidatorTable';
 import TopupPage from './components/TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
-import { BEACONCHAIN_URL } from '../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  PRICE_PER_VALIDATOR,
+  EJECTION_PRICE,
+} from '../../utils/envVars';
 import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 
@@ -141,7 +145,7 @@ const _TopUpPage: React.FC<Props> = () => {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <AlertIcon color="redLight" />
             <Text className="ml10">
-              <FormattedMessage defaultMessage="There was an issue loading your validator information from Beaconcha.in" />
+              <FormattedMessage defaultMessage="There was an error loading your validator information from Beaconcha.in" />
             </Text>
           </div>
         </Alert>
@@ -198,21 +202,15 @@ const _TopUpPage: React.FC<Props> = () => {
             color="blueMedium"
           >
             <Arrow />
-            <FormattedMessage defaultMessage="All Validators" />
+            <FormattedMessage defaultMessage="All validators" />
           </BackText>
         )}
 
         <SubTextContainer className="mt20">
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="If your validator’s balance is getting low because you haven’t been
-                active for a while, you may wish to top-up you balance to ensure
-                your validator isn’t ejected from the validator set for having a
-                balance that is too low. Low-balance ejections occur when a
-                validator’s effective balance drops below 16 ETH. The Launchpad only
-                facilitates top-ups that get validators’ balances to 32 ETH, as
-                validator rewards are based on effective balance which is capped at
-                32 ETH."
+              defaultMessage="You may need to top up your validator's balance for two important reasons. If the balance is below {PRICE_PER_VALIDATOR} ETH you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} ETH the system will eject your validator."
+              values={{ PRICE_PER_VALIDATOR, EJECTION_PRICE }}
             />
           </Text>
         </SubTextContainer>

@@ -219,7 +219,7 @@ const ValidatorTable: React.FC<{
   ) : (
     <Box align="center" justify="center" className="mt40">
       <Text weight={600}>
-        <FormattedMessage defaultMessage="No Validators found." />
+        <FormattedMessage defaultMessage="No validators found for your connected wallet" />
       </Text>
       <Text className="mt20">
         <FormattedMessage

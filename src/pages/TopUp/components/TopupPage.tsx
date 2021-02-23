@@ -191,8 +191,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     if (balanceAfterTopup > 32)
       return formatMessage(
         {
-          defaultMessage: `Submitting a topup for more than {maxTopUpValue} will result in a balance higher than the maximum balance of 32.`,
-          description: `"topup" short for "topping up" your validator with more funds to a limit of 32 ETH. {maxTopUpValue} represents the amount of ether until user hits this max.`,
+          defaultMessage: `Validators have a maximum balance of 32 ETH. You only need to top up {maxTopUpValue}.`,
+          description: `"top-up" short for "topping up" your validator with more funds to a limit of 32 ETH. {maxTopUpValue} represents the amount of ether until user hits this max.`,
         },
         {
           maxTopUpValue: maxTopUpVal.toFixed(4),
@@ -203,11 +203,13 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const submitBtnTooltipText = React.useMemo(() => {
     if (value <= 0 || value > maxTopUpVal)
       return formatMessage({
-        defaultMessage: 'Please enter a valid top up value.',
+        defaultMessage: 'Please enter a valid top-up value.',
       });
 
     if (value < 1)
-      return formatMessage({ defaultMessage: 'Minimum topup value is 1 ETH.' });
+      return formatMessage({
+        defaultMessage: 'Minimum top-up value is 1 ETH.',
+      });
 
     if (!termA)
       return formatMessage({
@@ -229,7 +231,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
       <Paper className="mt20">
         <Heading level={3} color="blueDark">
-          <FormattedMessage defaultMessage="Risks & Acknowledgements:" />
+          <FormattedMessage defaultMessage="Risks and acknowledgements:" />
         </Heading>
         <div className="mt20">
           <CheckBox
@@ -245,18 +247,18 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       </Paper>
       <Paper className="mt30">
         <Heading level={3} color="blueDark">
-          <FormattedMessage defaultMessage="Top Up Details" />
+          <FormattedMessage defaultMessage="Top-up details" />
         </Heading>
         <TopUpDetailsContainer>
           <div className="details-item">
             <Text weight={600} color="blueDark">
-              <FormattedMessage defaultMessage="Public Key" />
+              <FormattedMessage defaultMessage="Public key" />
             </Text>
             <Text>{shortenAddress(validator.pubkey, 6)}</Text>
           </div>
           <div className="details-item">
             <Text weight={600} color="blueDark">
-              <FormattedMessage defaultMessage="Current Balance" />
+              <FormattedMessage defaultMessage="Current balance" />
             </Text>
             <Text>{balance.toFixed(8)} ETH</Text>
           </div>

@@ -46,6 +46,8 @@ if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.
 }
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
 
+export const EJECTION_PRICE = 16;
+
 // BLS signature verification variables
 export const ETHER_TO_GWEI              = 1e9;
 export const MIN_DEPOSIT_AMOUNT         = 1 * ETHER_TO_GWEI;

@@ -55,7 +55,7 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
     <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
       <Box pad="medium" gap="small" width="medium">
         <Heading level={3} margin="none">
-          <FormattedMessage defaultMessage="Top up Transaction" />
+          <FormattedMessage defaultMessage="Top-up transaction" />
         </Heading>
         <TransactionProgress
           signTxStatus={signTxStatus}

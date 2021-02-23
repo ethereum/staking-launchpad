@@ -5,7 +5,7 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { IS_MAINNET } from '../../utils/envVars';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-const networkName = IS_MAINNET ? 'Mainnet' : 'Göerli Testnet';
+const networkName = IS_MAINNET ? 'Mainnet' : 'Göerli testnet';
 
 export const WrongNetwork = () => {
   const { formatMessage } = useIntl();

@@ -233,7 +233,7 @@ const _CongratulationsPage = ({
                   values={{
                     testnet: (
                       <Link primary inline to={TESTNET_LAUNCHPAD_URL}>
-                        {TESTNET_LAUNCHPAD_NAME} Testnet
+                        {TESTNET_LAUNCHPAD_NAME} testnet
                       </Link>
                     ),
                   }}

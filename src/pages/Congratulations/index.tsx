@@ -186,8 +186,7 @@ const _CongratulationsPage = ({
   const remainingTxCount = depositKeys.filter(
     file =>
       file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
-      (file.transactionStatus === TransactionStatus.READY ||
-        file.transactionStatus === TransactionStatus.REJECTED)
+      file.transactionStatus !== TransactionStatus.SUCCEEDED
   ).length;
 
   const allTxConfirmed = _every(
@@ -336,7 +335,7 @@ const _CongratulationsPage = ({
                     </Text>
                   </Card>
                   {!allTxConfirmed ? (
-                    <CardLink to={routesEnum.checklistPage}>
+                    <CardLink to="#keylist">
                       <Row>
                         <div>
                           <Heading
@@ -401,7 +400,7 @@ const _CongratulationsPage = ({
             )}
           </div>
           {!allTxConfirmed && (
-            <>
+            <div id="keylist">
               <Heading level={3} className="mt20">
                 <FormattedMessage defaultMessage="Outstanding deposits" />(
                 {remainingTxCount})
@@ -410,7 +409,7 @@ const _CongratulationsPage = ({
                 <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits." />
               </Text>
               <KeyList />
-            </>
+            </div>
           )}
           <ChecklistAlert>
             <Leslie />

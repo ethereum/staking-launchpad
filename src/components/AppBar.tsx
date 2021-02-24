@@ -148,7 +148,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
-  const networkName = IS_MAINNET ? 'Mainnet' : 'Göerli Testnet';
+  const networkName = IS_MAINNET ? 'mainnet' : 'Göerli testnet';
 
   return (
     <RainbowBackground
@@ -284,7 +284,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     <FormattedMessage defaultMessage="Launchpad network:" />{' '}
                     <b>
                       {IS_MAINNET
-                        ? `Mainnet`
+                        ? `mainnet`
                         : `${TESTNET_LAUNCHPAD_NAME} testnet`}
                     </b>
                   </span>

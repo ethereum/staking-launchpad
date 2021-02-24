@@ -8,7 +8,8 @@ export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PR
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
 
 // public
-export const ETH2_NETWORK_NAME          = process.env.REACT_APP_ETH2_NETWORK_NAME   || 'Mainnet';
+export const ETH2_NETWORK_NAME          = (!process.env.REACT_APP_ETH2_NETWORK_NAME || process.env.REACT_APP_ETH2_NETWORK_NAME.toLowerCase() === "mainnet")
+                                            ? 'mainnet' : process.env.REACT_APP_ETH2_NETWORK_NAME;
 export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'GöETH';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
 export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/validator' : `https://beaconscan.com/${ETH2_NETWORK_NAME.toLowerCase()}/validator`;

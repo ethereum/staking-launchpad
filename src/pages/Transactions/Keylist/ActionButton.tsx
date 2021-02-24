@@ -36,6 +36,12 @@ const ButtonText = styled(Text)`
   text-align: center;
 `;
 
+const ButtonLink = styled(Link)`
+  line-height: inherit;
+  font-size: 16px;
+  text-align: center;
+`;
+
 interface Props {
   transactionStatus: TransactionStatus;
   depositStatus: DepositStatus;
@@ -55,11 +61,13 @@ export const ActionButton = ({
 
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
-      <Link to={`${BEACONCHAIN_URL}/validator/0x${pubkey}`}>
-        <ButtonText className="mr5" data-tip>
-          Beaconcha.in
-        </ButtonText>
-      </Link>
+      <ButtonLink
+        to={`${BEACONCHAIN_URL}/0x${pubkey}`}
+        className="mr5"
+        data-tip
+      >
+        Beaconcha.in
+      </ButtonLink>
     );
   }
   if (transactionStatus === TransactionStatus.READY) {
@@ -77,9 +85,7 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
-        <Link to={`${ETHERSCAN_URL}/${txHash}`}>
-          <ButtonText>Etherscan</ButtonText>
-        </Link>
+        <ButtonLink to={`${ETHERSCAN_URL}/${txHash}`}>Etherscan</ButtonLink>
       </div>
     );
   }
@@ -93,17 +99,17 @@ export const ActionButton = ({
               'Note: the Beacon Chain may take several minutes to verify your deposit',
           })}
         >
-          <Link to={`${BEACONCHAIN_URL}/validator/0x${pubkey}`}>
-            <ButtonText className="mr5" data-tip>
-              Beaconcha.in
-            </ButtonText>
-          </Link>
+          <ButtonLink
+            to={`${BEACONCHAIN_URL}/0x${pubkey}`}
+            className="mr5"
+            data-tip
+          >
+            Beaconcha.in
+          </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
 
-        <Link to={`${BEACONSCAN_URL}/0x${pubkey}`}>
-          <ButtonText>Beaconscan</ButtonText>
-        </Link>
+        <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>Beaconscan</ButtonLink>
       </div>
     );
   }

@@ -45,6 +45,13 @@ const StyledExternalLink = styled.a<
     transition: all 0.1s ease-in-out;
     font-style: normal;
   }
+  & > button:after {
+    display: ${(props: any) => (props.isTextLink ? `none` : `inline`)};
+    margin-left: 0.25em;
+    margin-right: 0.3em;
+    content: '↗';
+    font-style: normal;
+  }
 `;
 
 const StyledHashLink = styled(StyledExternalLink as any)<

@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
+import { useWeb3React } from '@web3-react/core';
+import { Web3Provider } from '@ethersproject/providers';
+import { AbstractConnector } from '@web3-react/abstract-connector';
 import styled from 'styled-components';
-import { FormNext } from 'grommet-icons';
+import { FormNext, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
+import _every from 'lodash/every';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
+import { KeyList } from '../Transactions/Keylist';
+import { handleMultipleTransactions } from '../Transactions/transactionUtils';
+import { web3ReactInterface } from '../ConnectWallet';
 import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
@@ -25,6 +33,12 @@ import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import {
+  DepositStatus,
+  TransactionStatus,
+  DispatchTransactionStatusUpdateType,
+  updateTransactionStatus,
+} from '../../store/actions/depositFileActions';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -85,11 +99,41 @@ const CardLink = styled(Link)`
   }
 `;
 
+const CardButton = styled.div`
+  padding: 24px;
+  border: 1px solid ${p => p.theme.gray.dark};
+  border-radius: 4px;
+  width: 496px;
+  margin-bottom: 24px;
+  background-image: ${p =>
+    `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight})`};
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    margin: 0px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
+`;
+
 const Row = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+`;
+
+const WarningRow = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: ${p => p.theme.red.medium};
+  margin-top: 1rem;
 `;
 
 const ButtonRow = styled.div`
@@ -99,6 +143,10 @@ const ButtonRow = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
+`;
+
+const WarningText = styled(Text)`
+  color: ${p => p.theme.red.medium};
 `;
 
 const CardContainer = styled.div`
@@ -146,28 +194,58 @@ interface StateProps {
   depositKeys: DepositKeyInterface[];
   workflow: WorkflowStep;
 }
-interface DispatchProps {}
-interface Client {
-  header: string;
-  text: string;
-  imgUrl: any;
-  url: routesEnum;
-  linkText: string;
+interface DispatchProps {
+  dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
 }
+
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _CongratulationsPage = ({
   depositKeys,
   workflow,
+  dispatchTransactionStatusUpdate,
 }: Props): JSX.Element => {
   const [state, setState] = useState({
     amountEth: 0,
     status: 0,
   });
-  const { amountEth, status } = state;
+  const { status } = state;
   const { formatMessage } = useIntl();
-  const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
+  const { account, connector }: web3ReactInterface = useWeb3React<
+    Web3Provider
+  >();
+
+  const totalTxCount = depositKeys.filter(
+    key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
+  ).length;
+
+  const remainingTxCount = depositKeys.filter(
+    file =>
+      file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
+      file.transactionStatus !== TransactionStatus.SUCCEEDED
+  ).length;
+
+  const allTxConfirmed = _every(
+    depositKeys.map(
+      file => file.transactionStatus === TransactionStatus.SUCCEEDED
+    )
+  );
+
+  const actualTxConfirmed = totalTxCount - remainingTxCount;
+
+  const currentAPR = calculateEth2Rewards({ totalAtStake: state.amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
+
+  const handleAllTransactionsClick = () => {
+    handleMultipleTransactions(
+      depositKeys.filter(
+        key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
+      ),
+      connector as AbstractConnector,
+      account,
+      dispatchTransactionStatusUpdate
+    );
+  };
 
   useEffect(() => {
     if (ENABLE_RPC_FEATURES) {
@@ -226,7 +304,7 @@ const _CongratulationsPage = ({
                   values={{
                     testnet: (
                       <Link primary inline to={TESTNET_LAUNCHPAD_URL}>
-                        {TESTNET_LAUNCHPAD_NAME} Testnet
+                        {TESTNET_LAUNCHPAD_NAME} testnet
                       </Link>
                     ),
                   }}
@@ -277,8 +355,7 @@ const _CongratulationsPage = ({
                     </Heading>
                     <Text size="x-large" className="mt20">
                       <BoldGreen className="mr10" fontSize={24}>
-                        {depositKeys.length * +PRICE_PER_VALIDATOR}{' '}
-                        {TICKER_NAME}
+                        {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
                       </BoldGreen>
                     </Text>
                   </Card>
@@ -294,13 +371,33 @@ const _CongratulationsPage = ({
                     <Text size="x-large" className="mt20">
                       <BoldGreen className="mr10" fontSize={24}>
                         <FormattedMessage
-                          defaultMessage="{depositKeys} validators"
+                          defaultMessage="{totalTxCount} validators"
                           values={{
-                            depositKeys: <span>{depositKeys.length}</span>,
+                            totalTxCount: <span>{actualTxConfirmed}</span>,
                           }}
                         />
                       </BoldGreen>
                     </Text>
+                    {!allTxConfirmed && (
+                      <WarningRow>
+                        <FlagFill color="red" />
+                        <WarningText className="ml20">
+                          {remainingTxCount === 1 ? (
+                            <FormattedMessage
+                              defaultMessage="You have {remainingTxCount} outstanding deposit"
+                              values={{ remainingTxCount }}
+                              description="Singular form, for only one deposit"
+                            />
+                          ) : (
+                            <FormattedMessage
+                              defaultMessage="You have {remainingTxCount} outstanding deposits"
+                              values={{ remainingTxCount }}
+                              description="Plural form, for multiple remaining deposits"
+                            />
+                          )}
+                        </WarningText>
+                      </WarningRow>
+                    )}
                   </Card>
                   <Card>
                     <Heading
@@ -317,37 +414,98 @@ const _CongratulationsPage = ({
                       </BoldGreen>
                     </Text>
                   </Card>
-                  <CardLink to={routesEnum.checklistPage}>
-                    <Row>
-                      <div>
-                        <Heading
-                          level={3}
-                          size="medium"
-                          color="blueDark"
-                          margin="none"
-                        >
-                          <span
-                            role="img"
-                            aria-label={formatMessage({
-                              defaultMessage: 'clipboard',
-                            })}
+                  {!allTxConfirmed ? (
+                    <CardButton onClick={handleAllTransactionsClick}>
+                      <Row>
+                        <div>
+                          <Heading
+                            level={3}
+                            size="medium"
+                            color="blueDark"
+                            margin="none"
                           >
-                            📋{' '}
-                          </span>
-                          <FormattedMessage defaultMessage="Next" />
-                        </Heading>
-                        <Text size="x-large" className="mt20">
-                          <FormattedMessage defaultMessage="Complete the staker checklist" />
-                        </Text>
-                      </div>
-                      <FormNext size="large" />
-                    </Row>
-                  </CardLink>
+                            <span
+                              role="img"
+                              aria-label={formatMessage({
+                                defaultMessage: 'clipboard',
+                              })}
+                            >
+                              📋{' '}
+                            </span>
+                            <FormattedMessage defaultMessage="Next" />
+                          </Heading>
+                          <Text size="x-large" className="mt20">
+                            {remainingTxCount === 1 ? (
+                              <FormattedMessage defaultMessage="Complete your last deposit" />
+                            ) : (
+                              <FormattedMessage
+                                defaultMessage="Complete remaining {remainingTxCount} deposits"
+                                values={{ remainingTxCount }}
+                              />
+                            )}
+                          </Text>
+                          {remainingTxCount !== 1 && (
+                            <Text size="medium">
+                              <FormattedMessage defaultMessage="You can also confirm the deposits individually below..." />
+                            </Text>
+                          )}
+                        </div>
+                        <FormNext size="large" />
+                      </Row>
+                    </CardButton>
+                  ) : (
+                    <CardLink to={`${routesEnum.checklistPage}/#section-three`}>
+                      <Row>
+                        <div>
+                          <Heading
+                            level={3}
+                            size="medium"
+                            color="blueDark"
+                            margin="none"
+                          >
+                            <span
+                              role="img"
+                              aria-label={formatMessage({
+                                defaultMessage: 'clipboard',
+                              })}
+                            >
+                              📋{' '}
+                            </span>
+                            <FormattedMessage defaultMessage="Next" />
+                          </Heading>
+                          <Text size="x-large" className="mt20">
+                            <FormattedMessage defaultMessage="Complete the staker checklist" />
+                          </Text>
+                        </div>
+                        <FormNext size="large" />
+                      </Row>
+                    </CardLink>
+                  )}
                 </CardContainer>
               </>
             )}
           </div>
-
+          {!allTxConfirmed && (
+            <div id="keylist">
+              <Heading level={3} className="mt20">
+                {remainingTxCount === 1 ? (
+                  <FormattedMessage defaultMessage="Outstanding deposit" />
+                ) : (
+                  <FormattedMessage defaultMessage="Outstanding deposits ({remainingTxCount})" />
+                )}
+                {remainingTxCount})
+              </Heading>
+              <Text className="mt20">
+                {remainingTxCount === 1 ? (
+                  <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up one more validator. This deposit is still outstanding. If you think you've already made this deposit, wait an hour before trying again to avoid duplicate deposits." />
+                ) : (
+                  <FormattedMessage defaultMessage="Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits." />
+                )}
+                {remainingTxCount})
+              </Text>
+              <KeyList />
+            </div>
+          )}
           <ChecklistAlert>
             <Leslie />
             <div>
@@ -408,9 +566,17 @@ const mapStateToProps = ({
   workflow,
 });
 
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  dispatchTransactionStatusUpdate: (pubkey, status, txHash) =>
+    dispatch(updateTransactionStatus(pubkey, status, txHash)),
+});
+
 export const CongratulationsPage = connect<
   StateProps,
   DispatchProps,
   OwnProps,
   StoreState
->(mapStateToProps)(_CongratulationsPage);
+>(
+  mapStateToProps,
+  mapDispatchToProps
+)(_CongratulationsPage);

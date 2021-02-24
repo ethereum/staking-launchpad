@@ -117,10 +117,19 @@ export const Option1 = ({
             )}
             <span style={{ color: colors.red.medium }}>new-mnemonic</span>
             <span style={{ color: colors.red.medium }}>
-              {validatorCount > 0 ? ` --num_validators ${validatorCount}` : ''}{' '}
+              {validatorCount > 0
+                ? ` --${formatMessage({
+                    defaultMessage: 'num_validators',
+                    description:
+                      'this is used as a command line flag, short for "number of validators"',
+                  })} ${validatorCount}`
+                : ''}{' '}
             </span>
             <span style={{ color: colors.red.medium }}>
-              {`--chain ${ETH2_NETWORK_NAME.toLowerCase()}`}
+              {`--${formatMessage({
+                defaultMessage: 'chain',
+                description: 'this is used as a command line flag',
+              })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
             </span>
           </Pre>
         </Alert>
@@ -129,12 +138,17 @@ export const Option1 = ({
             <FormattedMessage
               defaultMessage="Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
               values={{
-                flag: <Code>--chain {ETH2_NETWORK_NAME.toLowerCase()}</Code>,
+                flag: (
+                  <Code>{`--${formatMessage({
+                    defaultMessage: 'chain',
+                    description: 'this is used as a command line flag',
+                  })} ${ETH2_NETWORK_NAME.toLowerCase()}`}</Code>
+                ),
                 network: (
                   <span>
-                    {ETH2_NETWORK_NAME.charAt(0).toUpperCase()}
-                    {ETH2_NETWORK_NAME.toLowerCase().slice(1)}
-                    {!IS_MAINNET && ' testnet'}
+                    {IS_MAINNET
+                      ? ETH2_NETWORK_NAME
+                      : `${ETH2_NETWORK_NAME} testnet`}
                   </span>
                 ),
               }}

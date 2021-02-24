@@ -97,7 +97,7 @@ const _AcknowledgementPage = ({
   const { formatMessage } = useIntl();
   return (
     <WorkflowPageTemplate
-      title={formatMessage({ defaultMessage: 'Before you deposit' })}
+      title={formatMessage({ defaultMessage: 'Advisories' })}
     >
       <Subtitle>
         <FormattedMessage defaultMessage="Everything you should understand before becoming a validator." />

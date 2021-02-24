@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { Animated } from 'react-animated-css';
@@ -198,7 +198,11 @@ const _ConnectWalletPage = ({
         error.message === 'Invariant failed: chainId 0xNaN is not an integer')
     );
   }, [error]);
+  const balanceRef = useRef<number | null>(null);
   const { formatMessage } = useIntl();
+
+  // sets balanceRef to always have current balance (to refer to in callbacks)
+  balanceRef.current = balance;
 
   // setup RPC event listener
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
@@ -228,7 +232,7 @@ const _ConnectWalletPage = ({
     }
   }, [selectedWallet, walletProvider, library, chainId, depositKeys, account]);
 
-  // adds event emitter to listen to new blocks & update balance
+  // adds event emitter to listen to new blocks & update balance if it changed
   useEffect((): any => {
     if (!!account && !!library) {
       library.on('block', () => {
@@ -238,13 +242,18 @@ const _ConnectWalletPage = ({
             const formattedBalance = Number(
               parseFloat(formatEther(amount)).toPrecision(5)
             );
-            // @ts-ignore (type check performed in envVars.ts)
-            const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
-            setBalance(formattedBalance);
-            if (formattedBalance < requiredBalance || formattedBalance === 0) {
-              setLowBalance(true);
-            } else {
-              setLowBalance(false);
+            if (formattedBalance !== balanceRef.current) {
+              setBalance(formattedBalance);
+              // @ts-ignore (type check performed in envVars.ts)
+              const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
+              if (
+                formattedBalance < requiredBalance ||
+                formattedBalance === 0
+              ) {
+                setLowBalance(true);
+              } else {
+                setLowBalance(false);
+              }
             }
           })
           .catch(() => setBalance(null));
@@ -252,7 +261,7 @@ const _ConnectWalletPage = ({
 
       return () => library.off('block');
     }
-  }, [library, account]);
+  }, [library, account, depositKeys]);
 
   const getWalletName = (provider?: AbstractConnector) => {
     if (!provider) return '';

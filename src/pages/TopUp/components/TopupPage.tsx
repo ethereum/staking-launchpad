@@ -292,7 +292,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           <span data-tip={submitBtnTooltipText}>
             <SubmitButton
               className="ml10"
-              label="Submit"
+              label="Top up validator"
               rainbow
               onClick={submitTopupTransaction}
               disabled={

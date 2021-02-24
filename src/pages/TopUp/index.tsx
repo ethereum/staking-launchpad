@@ -253,7 +253,7 @@ const _TopUpPage: React.FC<Props> = () => {
           </Text>
           <Alert variant="info" className="my20">
             <FormattedMessage
-              defaultMessage="{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's effective balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
+              defaultMessage="{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
               values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
             />{' '}
             <Link

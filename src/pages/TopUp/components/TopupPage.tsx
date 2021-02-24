@@ -202,7 +202,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           maxTopUpValue: maxTopUpVal.toFixed(4),
         }
       );
-  }, [balance, balanceAfterTopup, maxTopUpVal]);
+  }, [balance, balanceAfterTopup, maxTopUpVal, formatMessage]);
 
   const submitBtnTooltipText = React.useMemo(() => {
     if (value <= 0 || value > maxTopUpVal)
@@ -220,7 +220,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
         defaultMessage: 'Please accept the conditions above.',
       });
     return '';
-  }, [value, termA, maxTopUpVal]);
+  }, [value, termA, maxTopUpVal, formatMessage]);
 
   return (
     <div>

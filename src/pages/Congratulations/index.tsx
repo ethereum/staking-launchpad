@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useWeb3React } from '@web3-react/core';
@@ -7,9 +7,9 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import styled from 'styled-components';
 import { FormNext, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
+import _every from 'lodash/every';
 import { AppBar } from '../../components/AppBar';
 import { Heading } from '../../components/Heading';
-import _every from 'lodash/every';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
@@ -198,13 +198,6 @@ interface DispatchProps {
   dispatchTransactionStatusUpdate: DispatchTransactionStatusUpdateType;
 }
 
-interface Client {
-  header: string;
-  text: string;
-  imgUrl: any;
-  url: routesEnum;
-  linkText: string;
-}
 type Props = StateProps & DispatchProps & OwnProps;
 
 const _CongratulationsPage = ({
@@ -216,7 +209,7 @@ const _CongratulationsPage = ({
     amountEth: 0,
     status: 0,
   });
-  const { amountEth, status } = state;
+  const { status } = state;
   const { formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider

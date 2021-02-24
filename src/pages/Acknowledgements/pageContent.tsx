@@ -154,7 +154,7 @@ export const pageContent = {
           />
         </Text>
         <Text size="medium" className="mt20">
-          <FormattedMessage defaultMessage="We'll help you create signing keys for every validator you want to run and your withdrawal keys. Signing and withdrawal keys are separate by design. Your signing key must be held online because it needs to be available at all times. Your withdrawal keys don't need to be online so it's better to keep them separate for security." />
+          <FormattedMessage defaultMessage="We'll help you create a signing key and a withdrawal key for every validator you want to run. Signing and withdrawal keys are separate by design. Your signing key must be held online because it needs to be available at all times. Your withdrawal key doesn't need to be online so it's better to keep them separate for security." />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage

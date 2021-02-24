@@ -233,7 +233,7 @@ const _CongratulationsPage = ({
 
   const actualTxConfirmed = totalTxCount - remainingTxCount;
 
-  const currentAPR = calculateEth2Rewards({ totalAtStake: actualTxConfirmed });
+  const currentAPR = calculateEth2Rewards({ totalAtStake: state.amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
   const handleAllTransactionsClick = () => {

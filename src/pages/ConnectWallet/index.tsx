@@ -228,6 +228,32 @@ const _ConnectWalletPage = ({
     }
   }, [selectedWallet, walletProvider, library, chainId, depositKeys, account]);
 
+  // adds event emitter to listen to new blocks & update balance
+  useEffect((): any => {
+    if (!!account && !!library) {
+      library.on('block', () => {
+        library
+          .getBalance(account)
+          .then((amount: any) => {
+            const formattedBalance = Number(
+              parseFloat(formatEther(amount)).toPrecision(5)
+            );
+            // @ts-ignore (type check performed in envVars.ts)
+            const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
+            setBalance(formattedBalance);
+            if (formattedBalance < requiredBalance || formattedBalance === 0) {
+              setLowBalance(true);
+            } else {
+              setLowBalance(false);
+            }
+          })
+          .catch(() => setBalance(null));
+      });
+
+      return () => library.off('block');
+    }
+  }, [library, account]);
+
   const getWalletName = (provider?: AbstractConnector) => {
     if (!provider) return '';
     if (provider === metamask) return 'Metamask';

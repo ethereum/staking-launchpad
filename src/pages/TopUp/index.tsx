@@ -163,7 +163,7 @@ const _TopUpPage: React.FC<Props> = () => {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="You can {reloadYourWallet} to try again, or refresh the page. If issue persist, let us know on {github}."
+                defaultMessage="You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
                 values={{
                   reloadYourWallet: (
                     <FakeLink onClick={deactivate}>

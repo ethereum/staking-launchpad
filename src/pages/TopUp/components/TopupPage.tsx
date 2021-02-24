@@ -98,12 +98,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   ]);
 
   const maxTopupValue = useMemo(
-    () =>
-      Math.max(
-        1,
-        Number(PRICE_PER_VALIDATOR) + 0.26 - Number(effectiveBalance)
-      ),
-    [effectiveBalance]
+    () => Math.max(1, Number(PRICE_PER_VALIDATOR) + 0.26 - Number(balance)),
+    [balance]
   );
 
   const minTopupValue = 1;

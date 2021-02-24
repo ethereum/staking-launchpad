@@ -139,10 +139,12 @@ export const Option1 = ({
               defaultMessage="Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
               values={{
                 flag: (
-                  <Code>{`--${formatMessage({
-                    defaultMessage: 'chain',
-                    description: 'this is used as a command line flag',
-                  })} ${ETH2_NETWORK_NAME.toLowerCase()}`}</Code>
+                  <Code>
+                    {`--${formatMessage({
+                      defaultMessage: 'chain',
+                      description: 'this is used as a command line flag',
+                    })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
+                  </Code>
                 ),
                 network: (
                   <span>

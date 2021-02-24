@@ -69,6 +69,9 @@
   "/ydZdf": {
     "message": "How large are the rewards/penalties?"
   },
+  "00OWFk": {
+    "message": "Minimum top-up value is {minTopupValue} {TICKER_NAME}."
+  },
   "00d8uq": {
     "message": "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet."
   },
@@ -83,6 +86,9 @@
   },
   "0PlVao": {
     "message": "More on slashing prevention"
+  },
+  "0RmIrh": {
+    "message": "Your deposit_data.json suggests you wanted to set up one more validator. This deposit is still outstanding. If you think you've already made this deposit, wait an hour before trying again to avoid duplicate deposits."
   },
   "0S8/Wo": {
     "message": "Testnet practice"
@@ -143,6 +149,9 @@
     "description": "The {semicolon} and {colon} variables refer to the keyboard characters ';' and ':'.",
     "message": "The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
   },
+  "2AHkym": {
+    "message": "There was an error loading your validator information from Beaconcha.in"
+  },
   "2CYEJa": {
     "message": "Troubleshooting"
   },
@@ -174,6 +183,9 @@
   "3GbrWR": {
     "message": "Why do rewards depend on the total number of validators in the network?"
   },
+  "3H3ygi": {
+    "message": "No validators found for your connected wallet"
+  },
   "3NHygY": {
     "message": "Testing on Goerli"
   },
@@ -189,6 +201,9 @@
   },
   "3Q43SM": {
     "message": "Become a validator"
+  },
+  "3QmqFf": {
+    "message": "Top-up transaction"
   },
   "3URRZK": {
     "message": "Geth on Goerli documentation"
@@ -247,6 +262,9 @@
   "6UUL73": {
     "message": "More on validators"
   },
+  "6VIBSR": {
+    "message": "You can improve the effective balance of this validator by topping up"
+  },
   "6zye8g": {
     "message": "An implementation of the Eth2 protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
   },
@@ -262,8 +280,14 @@
   "793QlI": {
     "message": "{title} is not supported in offline mode."
   },
+  "7UOvbT": {
+    "message": "Offline"
+  },
   "7V/8wz": {
     "message": "Configuration file"
+  },
+  "7XiYRi": {
+    "message": "Slashed?"
   },
   "7d3Nzd": {
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
@@ -281,6 +305,9 @@
   "7y4xl1": {
     "description": "This phrase is a sentence ",
     "message": "Eth2 Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+  },
+  "80eWKU": {
+    "message": "True balance"
   },
   "82vl9l": {
     "message": "We can't detect MetaMask. Switch browsers or install MetaMask."
@@ -331,8 +358,8 @@
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
   },
-  "9grYVn": {
-    "message": "We'll help you create keys for every validator you want to run. They'll be generated via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to withdraw your ETH when the time comes and no one can help you recover your mnemonic if you lose it."
+  "9k7tO9": {
+    "message": "Wrong network"
   },
   "9lBMQr": {
     "message": "{keyFile} of paths via the {validatorsKeys} option."
@@ -358,6 +385,9 @@
   "AYKxmf": {
     "message": "Connect your hardware wallet to Metamask"
   },
+  "AZaw+B": {
+    "message": "Exiting"
+  },
   "AbBgEs": {
     "message": "understanding validator effective balance"
   },
@@ -377,6 +407,9 @@
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
   },
+  "Aw1mMs": {
+    "message": "Top up validator"
+  },
   "B2EKj+": {
     "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is one-way, and non-reversible."
   },
@@ -385,6 +418,12 @@
   },
   "BCsPjJ": {
     "message": "Start deposit process"
+  },
+  "BFAvr/": {
+    "message": "Top up a validator"
+  },
+  "BFfsSX": {
+    "message": "The Eth2 deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
   },
   "BFsUAH": {
     "description": "{code} values are terminal outputs to look for, should not translate",
@@ -398,6 +437,9 @@
   },
   "Bf2QKg": {
     "message": "Validating is a long-term commitment"
+  },
+  "Bj5yI5": {
+    "message": "Effective balance"
   },
   "BoEpk9": {
     "message": "Introduction"
@@ -433,12 +475,18 @@
   "Cv+T7+": {
     "message": "Slashing has two purposes: (1) to make it prohibitively expensive to attack Eth2, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
   },
+  "D0Rigq": {
+    "message": "NO"
+  },
   "D33f/7": {
     "description": "APR refers to Annual Percentage Rate",
     "message": "Current APR"
   },
   "D4cQV/": {
     "message": "How much ETH do I need to stake to become a validator?"
+  },
+  "DCaq7N": {
+    "message": "Your wallet is connected to the right network!"
   },
   "DGHD9y": {
     "message": "Lighthouse has dedicated tooling to make the transfer from the Launchpad as easy as possible."
@@ -455,6 +503,10 @@
   "DbnQg+": {
     "message": "Verify the contract address"
   },
+  "DoCZT1": {
+    "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network",
+    "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
+  },
   "Ds66AU": {
     "message": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed."
   },
@@ -466,6 +518,10 @@
   },
   "E/P9zo": {
     "message": "3. Practice on a testnet"
+  },
+  "E1Mywn": {
+    "description": "this is used as a command line flag",
+    "message": "chain"
   },
   "EFjTSf": {
     "message": "Minor penalties are given for inadvertant actions (or inactions) that hinder consensus."
@@ -591,6 +647,9 @@
   "IAKvZ0": {
     "message": "The Eth2 upgrades"
   },
+  "IJw06E": {
+    "message": "Sign transaction with your wallet"
+  },
   "IVyWYt": {
     "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
   },
@@ -599,6 +658,10 @@
   },
   "IdUtHu": {
     "message": "Install virtualenv"
+  },
+  "IhDJWs": {
+    "description": "Plural form, for multiple remaining deposits",
+    "message": "You have {remainingTxCount} outstanding deposits"
   },
   "Il9tBQ": {
     "message": "Geth is written in Go, fully open source and licensed under the GNU LGPL v3."
@@ -625,6 +688,9 @@
   "JDGiXT": {
     "message": "The OpenEthereum documentation explains how to download and install the client."
   },
+  "JMcBLZ": {
+    "message": "Outstanding deposits ({remainingTxCount})"
+  },
   "JPT/TK": {
     "message": "4. Avoid phishing"
   },
@@ -640,11 +706,18 @@
   "Js4uuA": {
     "message": "effective balance"
   },
+  "JsTbFu": {
+    "message": "Slashed"
+  },
   "JtAiN/": {
     "message": "What is your current operating system?"
   },
   "K6+jQ3": {
     "message": "Geth installation documentation"
+  },
+  "KBSbmP": {
+    "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
+    "message": "You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
   },
   "KBjoXt": {
     "message": "Download and uncompress the master branch source code from GitHub."
@@ -681,8 +754,20 @@
     "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
     "message": "I've ensured my keystore(s) is/are {boldCaution}."
   },
+  "L3klMv": {
+    "message": "We'll help you create a signing key and a withdrawal key for every validator you want to run. Signing and withdrawal keys are separate by design. Your signing key must be held online because it needs to be available at all times. Your withdrawal key doesn't need to be online so it's better to keep it separate for security."
+  },
+  "L7fPF+": {
+    "message": "Complete your last deposit"
+  },
+  "L8jrV5": {
+    "message": "reload your wallet"
+  },
   "LVy+cS": {
     "message": "Check with client documentation to ensure the hardware you want to use is sufficient and supported."
+  },
+  "LWIlKS": {
+    "message": "You can also confirm the deposits individually below..."
   },
   "LeHQQm": {
     "message": "Validator FAQs"
@@ -737,6 +822,9 @@
   "Mc8nNE": {
     "message": "Transaction failed"
   },
+  "MmZjeu": {
+    "message": "Top-up details"
+  },
   "N+2G1J": {
     "description": "{ethereum} injects Eth1 or Eth2 depending on step",
     "message": "Choose {ethereum} client"
@@ -787,8 +875,14 @@
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
+  "O+3LJ1": {
+    "message": "This validator's balance is at the effective maximum: {PRICE_PER_VALIDATOR} {TICKER_NAME}."
+  },
   "O54B/F": {
     "message": "The Eth2 network"
+  },
+  "OIvXIO": {
+    "message": "Complete remaining {remainingTxCount} deposits"
   },
   "OLDql0": {
     "message": "In plain english: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
@@ -824,9 +918,6 @@
   "PIQDar": {
     "message": "We recommend you go through the entire process on a testnet first to get comfortable."
   },
-  "PTeZAz": {
-    "message": "{depositKeys} validators"
-  },
   "PboOCR": {
     "message": "Configure your Eth2 client"
   },
@@ -848,6 +939,9 @@
   "Q1ZwPT": {
     "message": "clipboard"
   },
+  "Q8P0rZ": {
+    "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
+  },
   "QKFeMq": {
     "message": "Internet"
   },
@@ -865,6 +959,9 @@
   },
   "QqqeNk": {
     "message": "Transaction rejected"
+  },
+  "Qs/oj3": {
+    "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
   },
   "R8eePn": {
     "message": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
@@ -921,6 +1018,10 @@
   "SGzXoY": {
     "message": "Your stake has reached the deposit contract!"
   },
+  "SMffKt": {
+    "description": "{ethVersionStep} is either 1 or 2, depending on which step user is on",
+    "message": "Choose your Eth{ethVersionStep} client and set up a node"
+  },
   "SR0qHv": {
     "message": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing."
   },
@@ -932,6 +1033,9 @@
   },
   "Sd0I/u": {
     "message": "Validator public key"
+  },
+  "Sd3VAH": {
+    "message": "Validators that have exited or been slashed are not eligible for topping up"
   },
   "Sd9qhL": {
     "message": "More on slashing risks"
@@ -958,6 +1062,10 @@
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
   },
+  "TmYprU": {
+    "description": "{network} inserts the testnet name, only if on the testnet",
+    "message": "Eth2 {network} Launchpad"
+  },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
@@ -973,6 +1081,10 @@
   },
   "UHbYCa": {
     "message": "Your validator has its own balance – with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
+  },
+  "UJMct0": {
+    "description": "{etherscan} is a share link to this transaction on etherscan.io, labeled 'Etherscan'",
+    "message": "Check {etherscan} for more details"
   },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
@@ -996,9 +1108,6 @@
   "V0cb8p": {
     "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
   },
-  "VA8tr5": {
-    "message": "Before you deposit"
-  },
   "VASo1/": {
     "message": "Connect wallet"
   },
@@ -1014,6 +1123,9 @@
   "VKfWR3": {
     "message": "Recommended"
   },
+  "VLDKor": {
+    "message": "{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
+  },
   "VPpHAq": {
     "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
   },
@@ -1022,6 +1134,9 @@
   },
   "VY3/Wo": {
     "message": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new Eth2 key pairs and installing the validator software are both done in the terminal."
+  },
+  "VctWDX": {
+    "message": "I am certain that the validator I am topping up is my validator."
   },
   "VzGJkB": {
     "message": "Staker checklist"
@@ -1038,6 +1153,9 @@
   "WFVzvu": {
     "message": "{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
   },
+  "WMLn/w": {
+    "message": "{totalTxCount} validators"
+  },
   "WRevBY": {
     "description": "{http} shows '--JsonRpc.Enabled true' terminal command",
     "message": "Use {http} to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
@@ -1050,6 +1168,9 @@
   },
   "WkrNSk": {
     "message": "English"
+  },
+  "Wl6cI3": {
+    "message": "Please accept the conditions above."
   },
   "WxqnJn": {
     "message": "On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to invalid or contradicting blocks."
@@ -1075,6 +1196,9 @@
   },
   "XmddSV": {
     "message": "Build from source"
+  },
+  "Y47aYU": {
+    "message": "Top up"
   },
   "Y8YLHs": {
     "message": "If your signing key is not under the thief’s control, the thief cannot exit your validator."
@@ -1106,6 +1230,10 @@
   },
   "YkznEp": {
     "message": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
+  },
+  "YtwQyB": {
+    "description": "{changeYourWallet} is a link labeled 'change your wallet'",
+    "message": "You can {changeYourWallet} to load validators for a different address."
   },
   "Yu78N6": {
     "message": "money bag"
@@ -1171,9 +1299,6 @@
   "acrOoz": {
     "message": "Continue"
   },
-  "auwobA": {
-    "message": "You're on the right network!"
-  },
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
   },
@@ -1219,6 +1344,9 @@
   "cav520": {
     "message": "Download from GitHub"
   },
+  "ccU6l/": {
+    "message": "Online"
+  },
   "chw27s": {
     "message": "More on PegaSys Teku"
   },
@@ -1242,6 +1370,9 @@
   },
   "dM/KIM": {
     "message": "What exactly is a validator?"
+  },
+  "dTOtPO": {
+    "message": "Top Up"
   },
   "deLJOg": {
     "message": "Upload a valid json file."
@@ -1272,6 +1403,9 @@
   "eIRc60": {
     "message": "More on Eth2"
   },
+  "eKEL/g": {
+    "message": "Pending"
+  },
   "eOpZjd": {
     "message": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
   },
@@ -1286,6 +1420,9 @@
   },
   "erZJkZ": {
     "message": "When launching Teku, keystores and passwords can be provided in different ways."
+  },
+  "esDvdR": {
+    "message": "Validator balance is over {PRICE_PER_VALIDATOR}, but effective balance is low ({effectiveBalance}). Adding {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance."
   },
   "eyK2E3": {
     "message": "Complete checklist"
@@ -1335,6 +1472,12 @@
   "gfLdAQ": {
     "message": "More on the Beacon Chain"
   },
+  "gjBiyj": {
+    "message": "Loading..."
+  },
+  "gjmx29": {
+    "message": "YES"
+  },
   "gtrcyK": {
     "description": "{code} values are terminal outputs to look for to confirm system time",
     "message": "Check if {code1}, {code2}, and {code3} are all correct."
@@ -1366,6 +1509,13 @@
   },
   "hjrLbR": {
     "message": "For this, we need active participants - known as validators - to propose, verify, and vouch for the validity of blocks. In exchange, honest validators receive financial rewards."
+  },
+  "hkg3fb": {
+    "message": "More on effective balance"
+  },
+  "huEFUF": {
+    "description": "Singular form, for only one deposit",
+    "message": "You have {remainingTxCount} outstanding deposit"
   },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
@@ -1412,6 +1562,12 @@
   },
   "jZVChZ": {
     "message": "I've imported my keystore(s) into my Eth2 validator client."
+  },
+  "jecC36": {
+    "message": "Public key"
+  },
+  "jfHMKL": {
+    "message": "Connect a wallet"
   },
   "jjLubH": {
     "message": "Prysm installation documentation"
@@ -1465,11 +1621,26 @@
   "krEziQ": {
     "message": "Get in touch"
   },
+  "kuYpoI": {
+    "message": "Current balance"
+  },
+  "kv1nqx": {
+    "message": "Exited"
+  },
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."
   },
+  "l5XCJW": {
+    "message": "Advisories"
+  },
+  "l5kq/q": {
+    "message": "Confirm on-chain"
+  },
   "l6OJpv": {
     "message": "First, create a venv virtualenv under repository directory:"
+  },
+  "lD66ab": {
+    "message": "Outstanding deposit"
   },
   "lJNmgK": {
     "message": "How does Eth2 upgrade Ethereum?"
@@ -1478,8 +1649,15 @@
     "description": "{apt} and {yum} are both package manager names styled as code",
     "message": "You can install pip using a Linux Package Manager like {apt} or {yum}."
   },
+  "lQzdpT": {
+    "description": "this is used as a command line flag, short for \"number of validators\"",
+    "message": "num_validators"
+  },
   "lS9VhN": {
     "message": "Total {TICKER_NAME} staked"
+  },
+  "lVARlA": {
+    "message": "Please enter a valid top-up value."
   },
   "lVdzDK": {
     "message": "Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
@@ -1489,6 +1667,9 @@
   },
   "ll/zMW": {
     "message": "This is a non-reversible transaction."
+  },
+  "lo+Qqn": {
+    "message": "change your wallet"
   },
   "lrdlY6": {
     "message": "File uploaded"
@@ -1504,6 +1685,9 @@
   },
   "mpmFDY": {
     "message": "No pending deposits"
+  },
+  "mr1BWl": {
+    "message": "Risks and acknowledgements:"
   },
   "n6Uub0": {
     "message": "I've installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)."
@@ -1532,6 +1716,9 @@
   },
   "njnn9P": {
     "message": "I've started running my validator client."
+  },
+  "nkZ7Mr": {
+    "message": "Both sets of keys will be generated via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to withdraw your ETH when the time comes and no one can help you recover your mnemonic if you lose it."
   },
   "ntG2by": {
     "message": "Advanced system architecture"
@@ -1604,6 +1791,9 @@
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."
   },
+  "pqC+qt": {
+    "message": "Slashing"
+  },
   "ps8lLk": {
     "description": "{expected} shows 'This is the expected scenario' and is bolded for emphasis",
     "message": "Being offline while a supermajority (2/3) of validators is still online leads to relatively small penalties as there are still enough validators online for the chain to finalize. {expected}"
@@ -1634,6 +1824,9 @@
   },
   "qQ+Xla": {
     "message": "Korean"
+  },
+  "qZ59xY": {
+    "message": "All validators"
   },
   "qdk7Hp": {
     "message": "Your wallet has disconnected"
@@ -1683,6 +1876,9 @@
   "rcdxTW": {
     "message": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
   },
+  "rs4eqr": {
+    "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
+  },
   "rswUPu": {
     "message": "Launchpad summary"
   },
@@ -1712,11 +1908,17 @@
   "szN3Fl": {
     "message": "I understand and agree to the terms-of-service and everything stated in the previous sections."
   },
+  "tJcyUM": {
+    "message": "Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits."
+  },
   "teyxVk": {
     "message": "What should the address be?"
   },
   "tigMuZ": {
     "message": "Wait at least 30 minutes before trying to resubmit a transaction with this {depositData} file. This will give our on-chain data source time to flag any duplicate deposits."
+  },
+  "tkFTZw": {
+    "message": "Balance after topping up"
   },
   "tsfX5f": {
     "message": "Confirm deposit"
@@ -1771,6 +1973,9 @@
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
   },
+  "vY2wig": {
+    "message": "Loading error"
+  },
   "vYODEJ": {
     "message": "Get {TICKER_NAME}"
   },
@@ -1808,6 +2013,10 @@
   },
   "wdb1NC": {
     "message": "More on proof of stake"
+  },
+  "wfSgCZ": {
+    "description": "{network} is either 'Ethereum mainnet' or 'Göerli testnet'",
+    "message": "Connect to {network}"
   },
   "wm04oC": {
     "message": "Run the following command:"

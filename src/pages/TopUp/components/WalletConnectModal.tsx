@@ -61,9 +61,9 @@ const WalletConnectModal: React.FC = () => {
             <FormattedMessage
               defaultMessage="Connect to {network}"
               values={{
-                network: IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet',
+                network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
               }}
-              description="{network} is either 'Ethereum Mainnet' or 'Göerli Testnet'"
+              description="{network} is either 'Ethereum mainnet' or 'Göerli testnet'"
             />
           </Text>
         </div>

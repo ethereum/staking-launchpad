@@ -173,7 +173,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               >
                 <Text>
                   <FormattedMessage
-                    defaultMessage="Eth2 {network}Launchpad"
+                    defaultMessage="Eth2 {network} Launchpad"
                     values={{
                       network: IS_MAINNET ? '' : `${TESTNET_LAUNCHPAD_NAME} `,
                     }}

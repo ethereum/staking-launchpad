@@ -21,6 +21,7 @@ import {
   BEACONCHAIN_URL,
   PRICE_PER_VALIDATOR,
   EJECTION_PRICE,
+  TICKER_NAME,
 } from '../../utils/envVars';
 import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
@@ -44,10 +45,20 @@ const BackText = styled(Text)`
   padding-left: 25px;
 `;
 
+const FakeLink = styled.span`
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline;
+`;
+
 const _TopUpPage: React.FC<Props> = () => {
-  const { account, active, chainId }: web3ReactInterface = useWeb3React<
-    Web3Provider
-  >();
+  const {
+    account,
+    active,
+    chainId,
+    deactivate,
+  }: web3ReactInterface = useWeb3React<Web3Provider>();
   const [validators, setValidators] = useState<BeaconChainValidator[]>([]);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [validatorLoadError, setValidatorLoadError] = React.useState<boolean>(
@@ -149,6 +160,30 @@ const _TopUpPage: React.FC<Props> = () => {
               <FormattedMessage defaultMessage="There was an error loading your validator information from Beaconcha.in" />
             </Text>
           </div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Text className="mt20">
+              <FormattedMessage
+                defaultMessage="You can {reloadYourWallet} to try again, or refresh the page. If issue persist, let us know on {github}."
+                values={{
+                  reloadYourWallet: (
+                    <FakeLink onClick={deactivate}>
+                      <FormattedMessage defaultMessage="reload your wallet" />
+                    </FakeLink>
+                  ),
+                  github: (
+                    <Link
+                      inline
+                      primary
+                      to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+                    >
+                      GitHub
+                    </Link>
+                  ),
+                }}
+                description="{reloadYourWallet} is a link labeled 'reload your wallet'"
+              />
+            </Text>
+          </div>
         </Alert>
       );
     }
@@ -165,9 +200,10 @@ const _TopUpPage: React.FC<Props> = () => {
               <AlertIcon color="redLight" />
               <Text className="ml10">
                 <FormattedMessage
-                  defaultMessage="You may have an ETH deposit that was accepted but is being
+                  defaultMessage="You may have an {TICKER_NAME} deposit that was accepted but is being
                     validated on chain. It will be available here when beaconcha.in
                     has confirmed 2048 blocks."
+                  values={{ TICKER_NAME }}
                 />
               </Text>
             </div>
@@ -186,6 +222,7 @@ const _TopUpPage: React.FC<Props> = () => {
     active,
     validators,
     showDepositVerificationWarning,
+    deactivate,
   ]);
 
   return (
@@ -210,14 +247,14 @@ const _TopUpPage: React.FC<Props> = () => {
         <SubTextContainer className="mt20">
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} ETH you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} ETH the system will eject your validator."
-              values={{ PRICE_PER_VALIDATOR, EJECTION_PRICE }}
+              defaultMessage="You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
+              values={{ PRICE_PER_VALIDATOR, TICKER_NAME, EJECTION_PRICE }}
             />
           </Text>
           <Alert variant="info" className="my20">
             <FormattedMessage
-              defaultMessage="{PRICE_PER_VALIDATOR} ETH is the maximum effective validator balance. This means you won't earn more rewards if your validator's effective balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
-              values={{ PRICE_PER_VALIDATOR }}
+              defaultMessage="{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's effective balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
+              values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
             />{' '}
             <Link
               inline

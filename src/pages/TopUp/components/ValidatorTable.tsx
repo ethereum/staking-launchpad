@@ -20,7 +20,11 @@ import shortenAddress from '../../../utils/shortenAddress';
 import { Button } from '../../../components/Button';
 import { Paper } from '../../../components/Paper';
 import { Link } from '../../../components/Link';
-import { BEACONCHAIN_URL } from '../../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  PRICE_PER_VALIDATOR,
+  TICKER_NAME,
+} from '../../../utils/envVars';
 
 const FakeLink = styled.span`
   color: blue;
@@ -117,20 +121,31 @@ const ValidatorTable: React.FC<{
 
   const validatorRows = React.useMemo(() => {
     return validators.map(validator => {
-      const alreadyToppedUp = validator.effectivebalance >= 32000000000;
-      // const statusIneligible =
-      //   validator.status === 'slashed' || validator.status === 'exited';
+      const alreadyToppedUp =
+        validator.effectivebalance >= Number(PRICE_PER_VALIDATOR) * 10 ** 9;
+      // No top-ups for exited or slashed validators:
+      const statusIneligible =
+        validator.status === 'slashed' || validator.status === 'exited';
 
-      // const disableTopUpButton = alreadyToppedUp || statusIneligible;
-
-      const toolTipText = alreadyToppedUp
-        ? formatMessage({
+      const toolTipText = () => {
+        if (statusIneligible)
+          return formatMessage({
             defaultMessage:
-              "This validator's balance is at the effective maximum: 32 ETH.",
-          })
-        : formatMessage({
-            defaultMessage: "You can't top up this validator",
+              'Validators that have exited or been slashed are not eligible for topping up',
           });
+        if (alreadyToppedUp)
+          return formatMessage(
+            {
+              defaultMessage:
+                "This validator's balance is at the effective maximum: {PRICE_PER_VALIDATOR} {TICKER_NAME}.",
+            },
+            { PRICE_PER_VALIDATOR, TICKER_NAME }
+          );
+        return formatMessage({
+          defaultMessage:
+            'You can improve the effective balance of this validator by topping up',
+        });
+      };
 
       return (
         <React.Fragment key={validator.pubkey}>
@@ -154,24 +169,24 @@ const ValidatorTable: React.FC<{
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
-                {numeral(validator.balance / 10 ** 9).format('0.00000')} ETH
+                {`${numeral(validator.balance / 10 ** 9).format(
+                  '0.00000'
+                )} ${TICKER_NAME}`}
               </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
-                {numeral(validator.effectivebalance / 10 ** 9).format(
+                {`${numeral(validator.effectivebalance / 10 ** 9).format(
                   '0.00000'
-                )}{' '}
-                ETH
+                )} ${TICKER_NAME}`}
               </Text>
             </TableCell>
-
-            <TableCell data-tip={toolTipText}>
+            <TableCell data-tip={toolTipText()}>
               <Button
                 onClick={() => setSelectedValidator(validator)}
                 label={formatMessage({ defaultMessage: 'Top up' })}
                 rainbow
-                // disabled={disableTopUpButton}
+                disabled={statusIneligible}
               />
             </TableCell>
           </TableRow>

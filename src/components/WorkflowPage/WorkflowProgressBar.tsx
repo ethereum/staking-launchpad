@@ -16,7 +16,7 @@ const StepContainer = styled.div`
 `;
 
 const Step = styled.div`
-  margin: 0 20px;
+  margin: 0 10px;
   text-align: center;
   color: ${(p: {
     disabled: boolean;

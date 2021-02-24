@@ -16,6 +16,7 @@ import { Link } from '../../components/Link';
 import { KeyList } from '../Transactions/Keylist';
 import { handleMultipleTransactions } from '../Transactions/transactionUtils';
 import { web3ReactInterface } from '../ConnectWallet';
+import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
@@ -211,6 +212,11 @@ const _CongratulationsPage = ({
   workflow,
   dispatchTransactionStatusUpdate,
 }: Props): JSX.Element => {
+  const [state, setState] = useState({
+    amountEth: 0,
+    status: 0,
+  });
+  const { amountEth, status } = state;
   const { formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
@@ -246,6 +252,30 @@ const _CongratulationsPage = ({
       account,
       dispatchTransactionStatusUpdate
     );
+  };
+
+  useEffect(() => {
+    if (ENABLE_RPC_FEATURES) {
+      (async () => {
+        const response = await queryBeaconchain();
+        setState({
+          amountEth: response.body.amountEth,
+          status: response.statusCode,
+        });
+      })();
+    }
+  }, []);
+
+  const LoadingHandler: React.FC<{
+    value?: string;
+  }> = ({ value }): JSX.Element => {
+    if (status === 200) {
+      return <span>{value}</span>;
+    }
+    if (status === 500) {
+      return <FormattedMessage defaultMessage="Loading error" />;
+    }
+    return <FormattedMessage defaultMessage="Loading..." />;
   };
 
   if (workflow < WorkflowStep.CONGRATULATIONS) {
@@ -387,7 +417,7 @@ const _CongratulationsPage = ({
                     </Heading>
                     <Text size="x-large" className="mt20">
                       <BoldGreen className="mr10" fontSize={24}>
-                        {formattedAPR}%
+                        <LoadingHandler value={`${formattedAPR}%`} />
                       </BoldGreen>
                     </Text>
                   </Card>

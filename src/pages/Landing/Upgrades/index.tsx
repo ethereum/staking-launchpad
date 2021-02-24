@@ -117,7 +117,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://www.ethereum.org/eth2/beacon-chain/"
+                to="https://ethereum.org/eth2/beacon-chain/"
               >
                 <FormattedMessage defaultMessage="More on the Beacon Chain" />
               </Link>
@@ -131,7 +131,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://www.ethereum.org/eth2/the-docking/"
+                to="https://ethereum.org/eth2/the-docking/"
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
@@ -141,7 +141,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://www.ethereum.org/eth2/shard-chains/"
+                to="https://ethereum.org/eth2/shard-chains/"
               >
                 <FormattedMessage defaultMessage="More on shard chains" />
               </Link>

@@ -229,6 +229,16 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="FAQ" />
           </BarLinkText>
         </Link>
+        <Link to={routesEnum.topUpPage} className="mx30 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.topUpPage}
+          >
+            Top Up
+          </BarLinkText>
+        </Link>
       </NavBarLinks>
       <NavLinksRight>
         {!mobile && (
@@ -361,7 +371,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 dropContent={
                   <Box pad="small">
                     <Text>
-                      <FormattedMessage defaultMessage="You're on the right network!" />
+                      <FormattedMessage defaultMessage="Your wallet is connected to the right network!" />
                     </Text>
                   </Box>
                 }

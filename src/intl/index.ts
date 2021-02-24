@@ -1,4 +1,4 @@
-import en from './en.json';
+import en from './compiled/en.json';
 
 export const messages: { [key: string]: any } = { en };
 

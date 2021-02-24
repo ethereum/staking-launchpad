@@ -8,7 +8,7 @@ import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { FormattedMessage } from 'react-intl';
 
-const Logo = styled.img`
+export const Logo = styled.img`
   height: 50px;
   width: 50px;
   display: block;
@@ -45,6 +45,7 @@ const ConnectingContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 8px;
+  cursor: pointer;
 `;
 
 export const WalletButton = ({

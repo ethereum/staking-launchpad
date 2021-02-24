@@ -9,6 +9,7 @@ import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import {
+  BEACONCHAIN_URL,
   ETH2_NETWORK_NAME,
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
@@ -1027,7 +1028,7 @@ export const Checklist = () => {
                 it using {beaconchain} or {beaconscan} blockchain explorers."
               values={{
                 beaconchain: (
-                  <Link primary inline to="https://beaconcha.in/">
+                  <Link primary inline to={BEACONCHAIN_URL}>
                     Beaconcha.in
                   </Link>
                 ),

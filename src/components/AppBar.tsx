@@ -377,7 +377,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 dropContent={
                   <Box pad="small">
                     <Text>
-                      <FormattedMessage defaultMessage="You're on the right network!" />
+                      <FormattedMessage defaultMessage="Your wallet is connected to the right network!" />
                     </Text>
                   </Box>
                 }

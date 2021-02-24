@@ -10,7 +10,6 @@ import { numberWithCommas } from '../../../utils/numberWithCommas';
 import {
   BEACONCHAIN_URL,
   ENABLE_RPC_FEATURES,
-  PRICE_PER_VALIDATOR,
   TICKER_NAME,
 } from '../../../utils/envVars';
 import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
@@ -61,14 +60,21 @@ const CardContainer = styled.div`
   }
 `;
 
+type PropData = {
+  amountEth: number;
+  totalValidators: number;
+  status: number;
+};
+
 //
 // Main Component
 
-export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
-  amountEth = 0,
-}): JSX.Element | null => {
+export const NetworkStatus: React.FC<{
+  state: PropData;
+}> = ({ state }): JSX.Element | null => {
   const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
+  const { amountEth, totalValidators, status } = state;
 
   React.useEffect(() => {
     const resizeListener = () => {
@@ -80,13 +86,20 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
 
   if (!ENABLE_RPC_FEATURES) return null;
 
-  // TODO query this data from somewhere...
-  const validatorAmount = numberWithCommas(
-    Math.round(+amountEth / +PRICE_PER_VALIDATOR)
-  );
-
   const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
+
+  const LoadingHandler: React.FC<{
+    value?: string;
+  }> = ({ value }): JSX.Element => {
+    if (status === 200) {
+      return <span>{value}</span>;
+    }
+    if (status === 500) {
+      return <FormattedMessage defaultMessage="Loading error" />;
+    }
+    return <FormattedMessage defaultMessage="Loading..." />;
+  };
 
   return (
     <Container isMobile={m}>
@@ -105,7 +118,9 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {numberWithCommas(amountEth)} {TICKER_NAME}
+                  <LoadingHandler
+                    value={`${numberWithCommas(amountEth)} ${TICKER_NAME}`}
+                  />
                 </BoldGreen>
               </Text>
             </Card>
@@ -115,7 +130,7 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {validatorAmount}
+                  <LoadingHandler value={numberWithCommas(totalValidators)} />
                 </BoldGreen>
               </Text>
             </Card>

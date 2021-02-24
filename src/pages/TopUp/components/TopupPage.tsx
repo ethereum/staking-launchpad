@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useIntl, FormattedMessage } from 'react-intl';
 import { CheckBox } from 'grommet';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
@@ -11,7 +12,6 @@ import { Alert as AlertIcon } from 'grommet-icons';
 import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
 import { contractAbi } from '../../../contractAbi';
-import { CONTRACT_ADDRESS } from '../../../utils/envVars';
 import { BeaconChainValidator, TransactionStatus } from '../types';
 import { bufferHex } from '../../../utils/SSZ';
 import { buf2hex } from '../../../utils/buf2hex';
@@ -29,6 +29,11 @@ import {
   ledgerTxRejected,
   metamaskTxRejected,
 } from '../../../utils/transactionErrorTypes';
+import {
+  PRICE_PER_VALIDATOR,
+  TICKER_NAME,
+  CONTRACT_ADDRESS,
+} from '../../../utils/envVars';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -83,17 +88,23 @@ const TopUpDetailsContainer = styled.div`
 const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
 
+  const effectiveBalance = useMemo(
+    () => Number(validator.effectivebalance) / 10 ** 9,
+    [validator]
+  );
+
   const balance = useMemo(() => Number(validator.balance) / 10 ** 9, [
     validator,
   ]);
 
-  const maxTopUpVal = useMemo(() => Math.max(0, 32 - Number(balance)), [
-    balance,
-  ]);
+  const maxTopupValue = useMemo(
+    () => Math.max(1, Number(PRICE_PER_VALIDATOR) + 0.26 - Number(balance)),
+    [balance]
+  );
 
   const minTopupValue = 1;
 
-  const [value, setValue] = React.useState(maxTopUpVal);
+  const [value, setValue] = React.useState(maxTopupValue);
 
   const [showTxModal, setShowTxModal] = React.useState(false);
 
@@ -107,6 +118,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
+
+  const { formatMessage } = useIntl();
 
   const submitTopupTransaction = async () => {
     setTransactionStatus('waiting_user_confirmation');
@@ -176,27 +189,74 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const [termA, setTermA] = useState(false);
 
   const showAlert = React.useMemo(() => {
-    return balanceAfterTopup > 32 || balance > 32;
+    return (
+      balanceAfterTopup > PRICE_PER_VALIDATOR || balance > PRICE_PER_VALIDATOR
+    );
   }, [balance, balanceAfterTopup]);
 
   const alertText = React.useMemo(() => {
-    if (balance > 32)
-      return 'Validator balance is already higher than the maximum amount.';
-    if (balanceAfterTopup > 32)
-      return `Submitting a topup for more than ${maxTopUpVal.toFixed(
-        4
-      )} will result in a balance higher than the maximum balance of 32.`;
-  }, [balance, balanceAfterTopup, maxTopUpVal]);
+    // If EB already maxed out
+    if (effectiveBalance >= PRICE_PER_VALIDATOR)
+      return formatMessage(
+        {
+          defaultMessage:
+            'Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)',
+          description:
+            '{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network',
+        },
+        { TICKER_NAME, minTopupValue }
+      );
+    // If EB is low (31 or less)
+    if (balance > PRICE_PER_VALIDATOR)
+      return formatMessage(
+        {
+          defaultMessage:
+            'Validator balance is over {PRICE_PER_VALIDATOR}, but effective balance is low ({effectiveBalance}). Adding {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance.',
+        },
+        { PRICE_PER_VALIDATOR, effectiveBalance, minTopupValue, TICKER_NAME }
+      );
+    if (value > maxTopupValue)
+      return formatMessage(
+        {
+          defaultMessage: `Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance.`,
+        },
+        {
+          PRICE_PER_VALIDATOR,
+          TICKER_NAME,
+          maxTopupValue: maxTopupValue.toFixed(4),
+        }
+      );
+    if (value < minTopupValue)
+      return formatMessage(
+        {
+          defaultMessage: `The Eth2 deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted.`,
+        },
+        { minTopupValue, TICKER_NAME }
+      );
+    return '';
+  }, [balance, maxTopupValue, formatMessage, effectiveBalance, value]);
 
   const submitBtnTooltipText = React.useMemo(() => {
-    if (value <= 0 || value > maxTopUpVal)
-      return 'Please enter a valid top up value.';
+    if (value <= 0 || value > maxTopupValue)
+      return formatMessage({
+        defaultMessage: 'Please enter a valid top-up value.',
+      });
 
-    if (value < 1) return 'Minimum topup value is 1 ETH.';
+    if (value < minTopupValue)
+      return formatMessage(
+        {
+          defaultMessage:
+            'Minimum top-up value is {minTopupValue} {TICKER_NAME}.',
+        },
+        { minTopupValue, TICKER_NAME }
+      );
 
-    if (!termA) return 'Please accept the conditions above.';
+    if (!termA)
+      return formatMessage({
+        defaultMessage: 'Please accept the conditions above.',
+      });
     return '';
-  }, [value, termA, maxTopUpVal]);
+  }, [value, termA, maxTopupValue, formatMessage]);
 
   return (
     <div>
@@ -209,9 +269,32 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
         />
       )}
 
-      <Paper className="mt20">
+      <Paper className="mt30">
         <Heading level={3} color="blueDark">
-          Risks & Acknowledgements:
+          <FormattedMessage defaultMessage="Top-up details" />
+        </Heading>
+        <TopUpDetailsContainer className="my30">
+          <div className="details-item">
+            <Text weight={600} color="blueDark">
+              <FormattedMessage defaultMessage="Public key" />
+            </Text>
+            <Text>{shortenAddress(validator.pubkey, 6)}</Text>
+          </div>
+          <div className="details-item">
+            <Text weight={600} color="blueDark">
+              <FormattedMessage defaultMessage="Current balance" />
+            </Text>
+            <Text>{`${balance.toFixed(8)} ${TICKER_NAME}`}</Text>
+          </div>
+          <div className="details-item">
+            <Text weight={600} color="blueDark">
+              <FormattedMessage defaultMessage="Balance after topping up" />
+            </Text>
+            <Text>{`${balanceAfterTopup.toFixed(8)} ${TICKER_NAME}`}</Text>
+          </div>
+        </TopUpDetailsContainer>
+        <Heading level={3} color="blueDark">
+          <FormattedMessage defaultMessage="Risks and acknowledgements:" />
         </Heading>
         <div className="mt20">
           <CheckBox
@@ -219,62 +302,35 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             onChange={() => setTermA(!termA)}
             label={
               <Text className="checkbox-label ml10">
-                I am certain that the validator I am topping up is my validator.
+                <FormattedMessage defaultMessage="I am certain that the validator I am topping up is my validator." />
               </Text>
             }
           />
         </div>
-      </Paper>
-      <Paper className="mt30">
-        <Heading level={3} color="blueDark">
-          Top Up Details
-        </Heading>
-        <TopUpDetailsContainer>
-          <div className="details-item">
-            <Text weight={600} color="blueDark">
-              Public Key
-            </Text>
-            <Text>{shortenAddress(validator.pubkey, 6)}</Text>
-          </div>
-          <div className="details-item">
-            <Text weight={600} color="blueDark">
-              Current Balance
-            </Text>
-            <Text>{balance.toFixed(8)} ETH</Text>
-          </div>
-          <div className="details-item">
-            <Text weight={600} color="blueDark">
-              Balance after topping up
-            </Text>
-            <Text>{balanceAfterTopup.toFixed(8)} ETH</Text>
-          </div>
-        </TopUpDetailsContainer>
-
-        <div style={{ visibility: showAlert ? 'visible' : 'hidden' }}>
-          <Alert variant="warning" className="my10">
+        <div style={{ display: showAlert ? 'block' : 'none' }}>
+          <Alert variant="warning" className="mt30">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <AlertIcon color="redLight" />
-              <Text className="ml10">{alertText}</Text>
+              <Text className="ml10 center">{alertText}</Text>
             </div>
           </Alert>
         </div>
-
-        <InputContainer>
+        <InputContainer className="mt30">
           <TopupInput
             value={value}
             setValue={setValue}
-            maxValue={maxTopUpVal}
+            maxValue={maxTopupValue}
           />
           <span data-tip={submitBtnTooltipText}>
             <SubmitButton
               className="ml10"
-              label="Submit"
+              label={formatMessage({ defaultMessage: 'Top up validator' })}
               rainbow
               onClick={submitTopupTransaction}
               disabled={
                 value <= 0 ||
-                value > maxTopUpVal ||
-                value <= minTopupValue ||
+                value > maxTopupValue ||
+                value < minTopupValue ||
                 !termA
               }
             />

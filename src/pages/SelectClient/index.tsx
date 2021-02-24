@@ -186,7 +186,13 @@ const _SelectClientPage = ({
   return (
     <WorkflowPageTemplate title={title}>
       <SelectClientSection
-        title={`Choose your Eth${ethVersionStep} client and set up a node`}
+        title={formatMessage(
+          {
+            defaultMessage: `Choose your Eth{ethVersionStep} client and set up a node`,
+            description: `{ethVersionStep} is either 1 or 2, depending on which step user is on`,
+          },
+          { ethVersionStep }
+        )}
         clients={clientOptions}
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}

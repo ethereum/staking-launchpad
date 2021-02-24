@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Box, Layer } from 'grommet';
 import { Share } from 'grommet-icons';
 import { Heading } from '../../../components/Heading';
@@ -54,7 +55,7 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
     <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
       <Box pad="medium" gap="small" width="medium">
         <Heading level={3} margin="none">
-          Top up Transaction
+          <FormattedMessage defaultMessage="Top-up transaction" />
         </Heading>
         <TransactionProgress
           signTxStatus={signTxStatus}
@@ -62,11 +63,17 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
         />
         {txHash?.length > 0 && (
           <Text center>
-            Check{' '}
-            <Link primary inline to={`${ETHERSCAN_URL}/${txHash}`}>
-              Etherscan <Share size="small" />
-            </Link>{' '}
-            for more details
+            <FormattedMessage
+              defaultMessage="Check {etherscan} for more details"
+              values={{
+                etherscan: (
+                  <Link primary inline to={`${ETHERSCAN_URL}/${txHash}`}>
+                    Etherscan <Share size="small" />
+                  </Link>
+                ),
+              }}
+              description="{etherscan} is a share link to this transaction on etherscan.io, labeled 'Etherscan'"
+            />
           </Text>
         )}
       </Box>

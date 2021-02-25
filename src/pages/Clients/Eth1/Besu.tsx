@@ -73,24 +73,28 @@ export const BesuDetails = () => (
           </Link>
         </>
       )}
-      <Text className="mt10">
-        <FormattedMessage
-          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
-          endpoint. This will enable the JSON RPC services on the default 8545
-          port."
-          values={{
-            http: <Code className="mt20">-rpc-http-enabled</Code>,
-          }}
-          description="{http} shows '-rpc-http-enabled' terminal command"
-        />
-      </Text>
-      <Link
-        primary
-        to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
-        className="mt20"
-      >
-        <FormattedMessage defaultMessage="rpc-http-enabled documentation" />
-      </Link>
+      {IS_MAINNET && (
+        <>
+          <Text className="mt10">
+            <FormattedMessage
+              defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+              endpoint. This will enable the JSON RPC services on the default 8545
+              port."
+              values={{
+                http: <Code className="mt20">-rpc-http-enabled</Code>,
+              }}
+              description="{http} shows '-rpc-http-enabled' terminal command"
+            />
+          </Text>
+          <Link
+            primary
+            to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
+            className="mt20"
+          >
+            <FormattedMessage defaultMessage="rpc-http-enabled documentation" />
+          </Link>
+        </>
+      )}
     </section>
   </>
 );

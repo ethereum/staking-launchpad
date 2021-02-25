@@ -86,24 +86,28 @@ export const NethermindDetails = () => (
           </Link>
         </>
       )}
-      <Text className="mt10">
-        <FormattedMessage
-          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
-          endpoint. This will enable the JSON RPC services on the default 8545
-          port."
-          values={{
-            http: <Code className="mt20">--JsonRpc.Enabled true</Code>,
-          }}
-          description="{http} shows '--JsonRpc.Enabled true' terminal command"
-        />
-      </Text>
-      <Link
-        primary
-        className="mt20"
-        to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
-      >
-        <FormattedMessage defaultMessage="--JsonRpc.Enabled documentation" />
-      </Link>
+      {IS_MAINNET && (
+        <>
+          <Text className="mt10">
+            <FormattedMessage
+              defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+              endpoint. This will enable the JSON RPC services on the default 8545
+              port."
+              values={{
+                http: <Code className="mt20">--JsonRpc.Enabled true</Code>,
+              }}
+              description="{http} shows '--JsonRpc.Enabled true' terminal command"
+            />
+          </Text>
+          <Link
+            primary
+            className="mt20"
+            to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
+          >
+            <FormattedMessage defaultMessage="--JsonRpc.Enabled documentation" />
+          </Link>
+        </>
+      )}
     </section>
   </>
 );

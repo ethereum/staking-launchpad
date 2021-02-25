@@ -1,5 +1,5 @@
 export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET !== 'false');  // If REACT_APP_IS_MAINNET is unset, set it to true by default
-export const TESTNET_LAUNCHPAD_NAME      = 'Pyrmont'
+export const TESTNET_LAUNCHPAD_NAME     = process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME || 'Pyrmont';
 
 // private vars (or derived from)
 export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
@@ -47,7 +47,10 @@ if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.
 }
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
 
-export const EJECTION_PRICE = 16;
+if(process.env.REACT_APP_EJECTION_PRICE && Number.isNaN(Number(process.env.REACT_APP_EJECTION_PRICE))) {
+    throw new Error("REACT_APP_EJECTION_PRICE must be of type: number")
+}
+export const EJECTION_PRICE             = process.env.REACT_APP_EJECTION_PRICE || 16;
 
 // BLS signature verification variables
 export const ETHER_TO_GWEI              = 1e9;

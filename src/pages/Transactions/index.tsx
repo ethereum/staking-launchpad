@@ -87,12 +87,12 @@ const _TransactionsPage = ({
 
   const createButtonText = (): string => {
     if (totalTxCount === 1) {
-      return formatMessage({ defaultMessage: 'Confirm deposit' });
+      return formatMessage({ defaultMessage: 'Send deposit' });
     }
     if (totalTxCount === remainingTxCount && totalTxCount > 0) {
       return formatMessage(
         {
-          defaultMessage: `Confirm all {totalTxCount} deposits`,
+          defaultMessage: `Send all {totalTxCount} deposits`,
         },
         { totalTxCount }
       );
@@ -100,13 +100,13 @@ const _TransactionsPage = ({
     if (remainingTxCount > 1) {
       return formatMessage(
         {
-          defaultMessage: `Confirm remaining {remainingTxCount} deposits`,
+          defaultMessage: `Send remaining {remainingTxCount} deposits`,
         },
         { remainingTxCount }
       );
     }
     if (remainingTxCount === 1) {
-      return formatMessage({ defaultMessage: `Confirm last deposit` });
+      return formatMessage({ defaultMessage: `Send last deposit` });
     }
     return formatMessage({ defaultMessage: 'No pending deposits' });
   };
@@ -160,7 +160,7 @@ const _TransactionsPage = ({
         </Heading>
         {depositKeys.length === 1 && (
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Submit a transaction to confirm your deposit." />
+            <FormattedMessage defaultMessage="Submit a transaction to finish your deposit." />
           </Text>
         )}
         {depositKeys.length > 1 && (

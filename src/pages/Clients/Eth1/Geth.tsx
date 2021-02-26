@@ -65,27 +65,26 @@ export const GethDetails = () => (
           </Link>
         </>
       )}
-      {IS_MAINNET && (
-        <>
-          <Text className="mt10">
-            <FormattedMessage
-              defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
-              endpoint. This will enable the JSON RPC services on the default 8545
-              port."
-              values={{
-                http: <Code className="mt20">--http</Code>,
-              }}
-              description="{http} shows '--http' terminal command"
-            />
-          </Text>
-          <Link
-            primary
-            to="https://geth.ethereum.org/docs/interface/command-line-options"
-          >
-            <FormattedMessage defaultMessage="--http documentation" />
-          </Link>
-        </>
-      )}
+      <Heading level={3} className="mt20">
+        <FormattedMessage defaultMessage="JSON RPC endpoint" />
+      </Heading>
+      <Text className="mt10">
+        <FormattedMessage
+          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          endpoint. This will enable the JSON RPC services on the default 8545
+          port."
+          values={{
+            http: <Code className="mt20">--http</Code>,
+          }}
+          description="{http} shows '--http' terminal command"
+        />
+      </Text>
+      <Link
+        primary
+        to="https://geth.ethereum.org/docs/interface/command-line-options"
+      >
+        <FormattedMessage defaultMessage="--http documentation" />
+      </Link>
     </section>
   </>
 );

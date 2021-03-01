@@ -19,8 +19,9 @@ import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import {
   IS_MAINNET,
-  TESTNET_LAUNCHPAD_NAME,
+  ETH2_NETWORK_NAME,
   MAINNET_LAUNCHPAD_URL,
+  TESTNET_LAUNCHPAD_NAME,
   TESTNET_LAUNCHPAD_URL,
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
@@ -175,7 +176,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <FormattedMessage
                     defaultMessage="Eth2 {network} Launchpad"
                     values={{
-                      network: IS_MAINNET ? '' : `${TESTNET_LAUNCHPAD_NAME} `,
+                      network: IS_MAINNET ? '' : `${ETH2_NETWORK_NAME} `,
                     }}
                     description="{network} inserts the testnet name, only if on the testnet"
                   />
@@ -337,7 +338,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="secondary-link"
             label={
               <NetworkText>
-                {IS_MAINNET ? `Mainnet` : `${TESTNET_LAUNCHPAD_NAME}`}
+                {IS_MAINNET ? `Mainnet` : `${ETH2_NETWORK_NAME}`}
                 <FormDown />
               </NetworkText>
             }

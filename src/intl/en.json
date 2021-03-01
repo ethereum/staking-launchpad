@@ -108,11 +108,11 @@
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
-  "18gUul": {
-    "message": "Or in plain english, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
-  },
   "19o6KO": {
     "message": "When can I withdraw my funds, and what’s the difference between exiting and withdrawing?"
+  },
+  "1FdDAV": {
+    "message": "JSON RPC endpoint"
   },
   "1P6GMj": {
     "message": "Monitoring"
@@ -207,10 +207,6 @@
   },
   "3URRZK": {
     "message": "Geth on Goerli documentation"
-  },
-  "3VH/j7": {
-    "description": "{ethAmount} will generally refer to 32ETH",
-    "message": "Does the site asking you for your {ethAmount} deposit have a URL you expect?"
   },
   "3tR/V9": {
     "message": "Section 2 - During setup"
@@ -372,6 +368,9 @@
   },
   "A/iYbo": {
     "message": "The Eth2 upgrades will only be successful if validators understand the risks and responsibilities."
+  },
+  "A2b4uB": {
+    "message": "Send deposit"
   },
   "A6Oppp": {
     "message": "Prysm offers step-by-step guidelines to run their client after completing your deposit through the launchpad."
@@ -863,6 +862,9 @@
   "NYFKzu": {
     "message": "Staking checklist"
   },
+  "NZIM+F": {
+    "message": "Send remaining {remainingTxCount} deposits"
+  },
   "NZUWs7": {
     "message": "Remember that a validator’s vote is weighted by the amount it has at stake."
   },
@@ -883,9 +885,6 @@
   },
   "OIvXIO": {
     "message": "Complete remaining {remainingTxCount} deposits"
-  },
-  "OLDql0": {
-    "message": "In plain english: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
   },
   "ON2tXT": {
     "message": "The Nethermind documentation explains how to download and install the client."
@@ -987,6 +986,9 @@
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
   },
+  "Rj0OAx": {
+    "message": "Or in other words, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
+  },
   "RkbwNZ": {
     "message": "Withdrawing your deposit won't be possible until mainnet merges with the Beacon Chain."
   },
@@ -1004,10 +1006,6 @@
   },
   "S0e/cN": {
     "message": "How do you want to run the CLI?"
-  },
-  "S7IIu4": {
-    "description": "Asks users to check deposit contract address against a block explorer and confirm 32ETH deposits are present",
-    "message": "Are there recent {ethAmount} deposits?"
   },
   "S943uU": {
     "message": "Double check the URL"
@@ -1129,6 +1127,9 @@
   "VPpHAq": {
     "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
   },
+  "VSSmNp": {
+    "message": "In other words: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
+  },
   "VUuZsb": {
     "message": "martial arts uniform"
   },
@@ -1202,6 +1203,9 @@
   },
   "Y8YLHs": {
     "message": "If your signing key is not under the thief’s control, the thief cannot exit your validator."
+  },
+  "Y9S0NE": {
+    "message": "Send last deposit"
   },
   "YBs4dR": {
     "message": "The latest version of pip should have been installed with python 3.x.x. For more information about installing pip on Windows, visit {windowsInstallGuide}. Or you can install the pip package via {chocolatey}."
@@ -1301,9 +1305,6 @@
   },
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
-  },
-  "b2qj6W": {
-    "message": "Confirm all {totalTxCount} deposits"
   },
   "b3J7Pw": {
     "message": "No. There is no advantage to having more than {pricePerValidator} ETH staked."
@@ -1406,6 +1407,9 @@
   "eKEL/g": {
     "message": "Pending"
   },
+  "eOVXJz": {
+    "message": "Submit a transaction to finish your deposit."
+  },
   "eOpZjd": {
     "message": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
   },
@@ -1429,9 +1433,6 @@
   },
   "f/N7FO": {
     "message": "What happens if I lose my signing key?"
-  },
-  "fEqqBk": {
-    "message": "Confirm last deposit"
   },
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
@@ -1548,6 +1549,9 @@
   "isGKnz": {
     "message": "Documentation"
   },
+  "iv88b5": {
+    "message": "Send all {totalTxCount} deposits"
+  },
   "j4ctVP": {
     "message": "The Eth2 specification"
   },
@@ -1576,9 +1580,6 @@
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validators at once"
   },
-  "jo5OU3": {
-    "message": "Confirm remaining {remainingTxCount} deposits"
-  },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
   },
@@ -1590,9 +1591,6 @@
   },
   "jytPQU": {
     "message": "Nimbus documentation"
-  },
-  "k54/Yy": {
-    "message": "Submit a transaction to confirm your deposit."
   },
   "kFS5Sd": {
     "message": "Deposit contract formally verified"
@@ -1648,6 +1646,10 @@
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",
     "message": "You can install pip using a Linux Package Manager like {apt} or {yum}."
+  },
+  "lM/dEI": {
+    "description": "{ethAmount} will generally refer to 32 ETH",
+    "message": "Does the site asking you for your {ethAmount} deposit have a URL you expect?"
   },
   "lQzdpT": {
     "description": "this is used as a command line flag, short for \"number of validators\"",
@@ -1957,6 +1959,10 @@
   "unzIoE": {
     "description": "{pricePerValidator} represents deposit amount styled in bold",
     "message": "Before you can run a validator and start to secure the network, you need to stake {pricePerValidator} ETH. This forms your initial balance."
+  },
+  "up+5YH": {
+    "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
+    "message": "Are there recent {ethAmount} deposits?"
   },
   "vBOf5K": {
     "message": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."

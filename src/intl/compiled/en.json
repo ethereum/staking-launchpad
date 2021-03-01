@@ -295,16 +295,16 @@
       "value": "Earn continuous rewards for providing a public good to the community."
     }
   ],
-  "18gUul": [
-    {
-      "type": 0,
-      "value": "Or in plain english, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
-    }
-  ],
   "19o6KO": [
     {
       "type": 0,
       "value": "When can I withdraw my funds, and what’s the difference between exiting and withdrawing?"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "JSON RPC endpoint"
     }
   ],
   "1P6GMj": [
@@ -553,20 +553,6 @@
     {
       "type": 0,
       "value": "Geth on Goerli documentation"
-    }
-  ],
-  "3VH/j7": [
-    {
-      "type": 0,
-      "value": "Does the site asking you for your "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " deposit have a URL you expect?"
     }
   ],
   "3tR/V9": [
@@ -983,6 +969,12 @@
     {
       "type": 0,
       "value": "The Eth2 upgrades will only be successful if validators understand the risks and responsibilities."
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "Send deposit"
     }
   ],
   "A6Oppp": [
@@ -2177,6 +2169,20 @@
       "value": "Staking checklist"
     }
   ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "Send remaining "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " deposits"
+    }
+  ],
   "NZUWs7": [
     {
       "type": 0,
@@ -2241,12 +2247,6 @@
     {
       "type": 0,
       "value": " deposits"
-    }
-  ],
-  "OLDql0": [
-    {
-      "type": 0,
-      "value": "In plain english: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
     }
   ],
   "ON2tXT": [
@@ -2515,6 +2515,12 @@
       "value": "How many validators would you like to run?"
     }
   ],
+  "Rj0OAx": [
+    {
+      "type": 0,
+      "value": "Or in other words, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
+    }
+  ],
   "RkbwNZ": [
     {
       "type": 0,
@@ -2557,20 +2563,6 @@
     {
       "type": 0,
       "value": "How do you want to run the CLI?"
-    }
-  ],
-  "S7IIu4": [
-    {
-      "type": 0,
-      "value": "Are there recent "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " deposits?"
     }
   ],
   "S943uU": [
@@ -2929,6 +2921,12 @@
       "value": " until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
     }
   ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "In other words: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
+    }
+  ],
   "VUuZsb": [
     {
       "type": 0,
@@ -3119,6 +3117,12 @@
     {
       "type": 0,
       "value": "If your signing key is not under the thief’s control, the thief cannot exit your validator."
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "Send last deposit"
     }
   ],
   "YBs4dR": [
@@ -3377,20 +3381,6 @@
       "value": "Build deposit-cli from the Python source code"
     }
   ],
-  "b2qj6W": [
-    {
-      "type": 0,
-      "value": "Confirm all "
-    },
-    {
-      "type": 1,
-      "value": "totalTxCount"
-    },
-    {
-      "type": 0,
-      "value": " deposits"
-    }
-  ],
   "b3J7Pw": [
     {
       "type": 0,
@@ -3625,6 +3615,12 @@
       "value": "Pending"
     }
   ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "Submit a transaction to finish your deposit."
+    }
+  ],
   "eOpZjd": [
     {
       "type": 0,
@@ -3703,12 +3699,6 @@
     {
       "type": 0,
       "value": "What happens if I lose my signing key?"
-    }
-  ],
-  "fEqqBk": [
-    {
-      "type": 0,
-      "value": "Confirm last deposit"
     }
   ],
   "fHLKXR": [
@@ -3993,6 +3983,20 @@
       "value": "Documentation"
     }
   ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "Send all "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " deposits"
+    }
+  ],
   "j4ctVP": [
     {
       "type": 0,
@@ -4047,20 +4051,6 @@
       "value": "Warning: Do not store keys on multiple (backup) validators at once"
     }
   ],
-  "jo5OU3": [
-    {
-      "type": 0,
-      "value": "Confirm remaining "
-    },
-    {
-      "type": 1,
-      "value": "remainingTxCount"
-    },
-    {
-      "type": 0,
-      "value": " deposits"
-    }
-  ],
   "jse8rl": [
     {
       "type": 0,
@@ -4083,12 +4073,6 @@
     {
       "type": 0,
       "value": "Nimbus documentation"
-    }
-  ],
-  "k54/Yy": [
-    {
-      "type": 0,
-      "value": "Submit a transaction to confirm your deposit."
     }
   ],
   "kFS5Sd": [
@@ -4221,6 +4205,20 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "Does the site asking you for your "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " deposit have a URL you expect?"
     }
   ],
   "lQzdpT": [
@@ -5033,6 +5031,20 @@
     {
       "type": 0,
       "value": " ETH. This forms your initial balance."
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "Are there recent "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " deposits?"
     }
   ],
   "vBOf5K": [

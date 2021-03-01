@@ -58,7 +58,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Or in plain english, a human running a computer process. This
+                defaultMessage="Or in other words, a human running a computer process. This
                   process proposes and vouches for new blocks to be added to the blockchain."
               />
             </Text>
@@ -393,7 +393,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="In plain english: if the total amount of ETH staked is low, the
+                defaultMessage="In other words: if the total amount of ETH staked is low, the
                   reward (interest rate) is high, but as the total stake rises, the
                   reward (interest) paid out to each validator starts to fall."
               />

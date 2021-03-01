@@ -5,7 +5,7 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
+import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 const SectionTitle = styled(Heading)`
   margin-top: 30px;
@@ -36,9 +36,9 @@ export const Phishing = () => {
                 defaultMessage="Does the site asking you for your {ethAmount} deposit have a URL you
                 expect?"
                 values={{
-                  ethAmount: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
+                  ethAmount: `${PRICE_PER_VALIDATOR} ETH`,
                 }}
-                description="{ethAmount} will generally refer to 32ETH"
+                description="{ethAmount} will generally refer to 32 ETH"
               />
             </Text>
           </li>
@@ -91,9 +91,9 @@ export const Phishing = () => {
                   <FormattedMessage
                     defaultMessage="Are there recent {ethAmount} deposits?"
                     values={{
-                      ethAmount: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
+                      ethAmount: `${PRICE_PER_VALIDATOR} ETH`,
                     }}
-                    description="Asks users to check deposit contract address against a block explorer and confirm 32ETH deposits are present"
+                    description="Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present"
                   />
                 </Text>
               </li>

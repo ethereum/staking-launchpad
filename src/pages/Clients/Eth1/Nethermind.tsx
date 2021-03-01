@@ -86,6 +86,9 @@ export const NethermindDetails = () => (
           </Link>
         </>
       )}
+      <Heading level={3} className="mt20">
+        <FormattedMessage defaultMessage="JSON RPC endpoint" />
+      </Heading>
       <Text className="mt10">
         <FormattedMessage
           defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC

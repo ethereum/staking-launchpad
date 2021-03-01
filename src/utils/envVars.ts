@@ -1,5 +1,5 @@
 export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET !== 'false');  // If REACT_APP_IS_MAINNET is unset, set it to true by default
-export const TESTNET_LAUNCHPAD_NAME      = 'Pyrmont'
+export const TESTNET_LAUNCHPAD_NAME     = process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME || 'Pyrmont';
 
 // private vars (or derived from)
 export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
@@ -8,8 +8,7 @@ export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PR
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`;
 
 // public
-export const ETH2_NETWORK_NAME          = (!process.env.REACT_APP_ETH2_NETWORK_NAME || process.env.REACT_APP_ETH2_NETWORK_NAME.toLowerCase() === "mainnet")
-                                            ? 'mainnet' : process.env.REACT_APP_ETH2_NETWORK_NAME;
+export const ETH2_NETWORK_NAME          = (IS_MAINNET || !process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME) ? 'mainnet' : process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME;
 export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'GöETH';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx';
 export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/validator' : `https://beaconscan.com/${ETH2_NETWORK_NAME.toLowerCase()}/validator`;
@@ -47,7 +46,10 @@ if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.
 }
 export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
 
-export const EJECTION_PRICE = 16;
+if(process.env.REACT_APP_EJECTION_PRICE && Number.isNaN(Number(process.env.REACT_APP_EJECTION_PRICE))) {
+    throw new Error("REACT_APP_EJECTION_PRICE must be of type: number")
+}
+export const EJECTION_PRICE             = process.env.REACT_APP_EJECTION_PRICE || 16;
 
 // BLS signature verification variables
 export const ETHER_TO_GWEI              = 1e9;

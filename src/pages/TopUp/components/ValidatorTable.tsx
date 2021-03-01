@@ -24,6 +24,7 @@ import {
   BEACONCHAIN_URL,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
+  ETHER_TO_GWEI,
 } from '../../../utils/envVars';
 
 const FakeLink = styled.span`
@@ -122,7 +123,8 @@ const ValidatorTable: React.FC<{
   const validatorRows = React.useMemo(() => {
     return validators.map(validator => {
       const alreadyToppedUp =
-        validator.effectivebalance >= Number(PRICE_PER_VALIDATOR) * 10 ** 9;
+        validator.effectivebalance >=
+        Number(PRICE_PER_VALIDATOR) * ETHER_TO_GWEI;
       // No top-ups for exited or slashed validators:
       const statusIneligible =
         validator.status === 'slashed' || validator.status === 'exited';
@@ -169,14 +171,14 @@ const ValidatorTable: React.FC<{
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
-                {`${numeral(validator.balance / 10 ** 9).format(
+                {`${numeral(validator.balance / ETHER_TO_GWEI).format(
                   '0.00000'
                 )} ${TICKER_NAME}`}
               </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
-                {`${numeral(validator.effectivebalance / 10 ** 9).format(
+                {`${numeral(validator.effectivebalance / ETHER_TO_GWEI).format(
                   '0.00000'
                 )} ${TICKER_NAME}`}
               </Text>

@@ -7,7 +7,7 @@ import { Heading } from '../../../components/Heading';
 import { routesEnum } from '../../../Routes';
 import { Link } from '../../../components/Link';
 import { Step } from './Step';
-import { TESTNET_LAUNCHPAD_URL } from '../../../utils/envVars';
+import { IS_MAINNET, TESTNET_LAUNCHPAD_URL } from '../../../utils/envVars';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -97,9 +97,13 @@ export const SignupSteps = (): JSX.Element => {
                 'We recommend you go through the entire process on a testnet first to get comfortable.',
             })}
           >
-            <Link primary to={TESTNET_LAUNCHPAD_URL}>
-              <FormattedMessage defaultMessage="Try the testnet" />
-            </Link>
+            {IS_MAINNET ? (
+              <Link primary to={TESTNET_LAUNCHPAD_URL}>
+                <FormattedMessage defaultMessage="Try the testnet" />
+              </Link>
+            ) : (
+              <FormattedMessage defaultMessage="You're on the testnet" />
+            )}
           </Step>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>

@@ -20,6 +20,9 @@
   "+mDtA4": {
     "message": "6. Wait to become active"
   },
+  "+oBh8L": {
+    "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw you funds, you can derive your withdrawal keys from your mnemonic."
+  },
   "+s8Gac": {
     "message": "Connect {wallet} to {network}"
   },
@@ -506,9 +509,6 @@
     "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network",
     "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
   },
-  "Ds66AU": {
-    "message": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed."
-  },
   "DsJ/Mk": {
     "message": "Don’t just trust the contract address listed on this website."
   },
@@ -521,6 +521,9 @@
   "E1Mywn": {
     "description": "this is used as a command line flag",
     "message": "chain"
+  },
+  "E8t6ru": {
+    "message": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed. Note that during this process you will not derive the keys needed to withdraw later, so store your mnemonic safely in order to be able to withdraw later."
   },
   "EFjTSf": {
     "message": "Minor penalties are given for inadvertant actions (or inactions) that hinder consensus."
@@ -753,9 +756,6 @@
     "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
     "message": "I've ensured my keystore(s) is/are {boldCaution}."
   },
-  "L3klMv": {
-    "message": "We'll help you create a signing key and a withdrawal key for every validator you want to run. Signing and withdrawal keys are separate by design. Your signing key must be held online because it needs to be available at all times. Your withdrawal key doesn't need to be online so it's better to keep it separate for security."
-  },
   "L7fPF+": {
     "message": "Complete your last deposit"
   },
@@ -787,9 +787,6 @@
   },
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
-  },
-  "MD9DcJ": {
-    "message": "Transfers between validators aren't possible today. You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw your {TICKER_NAME}."
   },
   "MIsmjW": {
     "message": "Connect new wallet"
@@ -982,6 +979,9 @@
   },
   "RaBZna": {
     "message": "If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH."
+  },
+  "Raywyg": {
+    "message": "You're joining an emerging, growing network. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
@@ -1282,6 +1282,9 @@
   "a+xjjV": {
     "message": "Become a validator with Prysm"
   },
+  "aDomwX": {
+    "message": "If you try to cheat the system, or act contrary to the specification, you will be liable to incur a penalty, known as slashing. Running your validator keys simultaneously on two or more machines will result in slashing."
+  },
   "aEBE6s": {
     "message": "2. Prep nodes"
   },
@@ -1398,9 +1401,6 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
-  "e8pWsi": {
-    "message": "You're joining a young network. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
-  },
   "eIRc60": {
     "message": "More on Eth2"
   },
@@ -1491,6 +1491,9 @@
   },
   "h8MTUo": {
     "message": "Your stake"
+  },
+  "h8ZHus": {
+    "message": "Transfers between validators aren't possible yet. You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw or transfer your {TICKER_NAME}."
   },
   "hFzE1M": {
     "message": "Rewards are given for actions that help the network reach consensus."
@@ -1625,6 +1628,9 @@
   "kv1nqx": {
     "message": "Exited"
   },
+  "l/uCcX": {
+    "message": "You're on the testnet"
+  },
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."
   },
@@ -1718,9 +1724,6 @@
   },
   "njnn9P": {
     "message": "I've started running my validator client."
-  },
-  "nkZ7Mr": {
-    "message": "Both sets of keys will be generated via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to withdraw your ETH when the time comes and no one can help you recover your mnemonic if you lose it."
   },
   "ntG2by": {
     "message": "Advanced system architecture"
@@ -1883,6 +1886,9 @@
   },
   "rswUPu": {
     "message": "Launchpad summary"
+  },
+  "rxttyC": {
+    "message": "Your mnemonic is the backup for your signing keys and will be the ONLY way to withdraw your {TICKER_NAME} when the time comes and no one can help you recover your mnemonic if you lose it."
   },
   "s0FTco": {
     "description": "APR refers to Annual Percentage Rate",
@@ -2121,9 +2127,6 @@
   "zbEBi9": {
     "description": "{mainnet} shows '--config mainnet' terminal command",
     "message": "Use {mainnet} to sync the Ethereum mainnet."
-  },
-  "zhC0Rt": {
-    "message": "If you try to cheat the system, or act contrary to the specification, you will be liable to incur a medium penalty, known as slashing."
   },
   "zicXn7": {
     "message": "Node security"

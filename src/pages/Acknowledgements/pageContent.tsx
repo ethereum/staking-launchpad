@@ -120,7 +120,7 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage
             defaultMessage="If you try to cheat the system, or act contrary to the specification,
-              you will be liable to incur a medium penalty, known as slashing."
+              you will be liable to incur a penalty, known as slashing. Running your validator keys simultaneously on two or more machines will result in slashing."
           />
         </Text>
         <Link
@@ -150,18 +150,19 @@ export const pageContent = {
           <FormattedMessage
             defaultMessage="To become a validator you'll need to know about managing keys and
               protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please
-              do not proceed."
+              do not proceed. Note that during this process you will not derive the keys needed to
+              withdraw later, so store your mnemonic safely in order to be able to withdraw later."
           />
         </Text>
         <Text size="medium" className="mt20">
-          <FormattedMessage defaultMessage="We'll help you create a signing key and a withdrawal key for every validator you want to run. Signing and withdrawal keys are separate by design. Your signing key must be held online because it needs to be available at all times. Your withdrawal key doesn't need to be online so it's better to keep it separate for security." />
+          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw you funds, you can derive your withdrawal keys from your mnemonic." />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="Both sets of keys will be generated
-              via a mnemonic (seed) which you need to keep safe. Your mnemonic will be the ONLY way to
-              withdraw your ETH when the time comes and no one can help you recover your mnemonic if
+            defaultMessage="Your mnemonic is the backup for your signing keys and will be the ONLY way to
+              withdraw your {TICKER_NAME} when the time comes and no one can help you recover your mnemonic if
               you lose it."
+            values={{ TICKER_NAME }}
           />
         </Text>
       </>
@@ -182,9 +183,9 @@ export const pageContent = {
       <>
         <Text size="medium" className="my10">
           <FormattedMessage
-            defaultMessage={`Transfers between validators aren't possible today. You will have to
+            defaultMessage={`Transfers between validators aren't possible yet. You will have to
               wait until mainnet merges with the Beacon Chain (around two years) before you can
-              withdraw your {TICKER_NAME}.`}
+              withdraw or transfer your {TICKER_NAME}.`}
             values={{ TICKER_NAME }}
           />
         </Text>
@@ -220,7 +221,7 @@ export const pageContent = {
     content: (
       <Text size="medium" className="my10">
         <FormattedMessage
-          defaultMessage="You're joining a young network. As with any new piece of software,
+          defaultMessage="You're joining an emerging, growing network. As with any new piece of software,
               there is the potential for software bugs. While unlikely, potential bugs may
               result in slashing."
         />

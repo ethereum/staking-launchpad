@@ -221,7 +221,7 @@ export const pageContent = {
     content: (
       <Text size="medium" className="my10">
         <FormattedMessage
-          defaultMessage="You're joining an emerging, growing network. As with any new piece of software,
+          defaultMessage="You're joining a network in its early stages. As with any new piece of software,
               there is the potential for software bugs. While unlikely, potential bugs may
               result in slashing."
         />

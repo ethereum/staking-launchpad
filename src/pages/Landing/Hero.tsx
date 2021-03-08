@@ -4,7 +4,7 @@ import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import Animate from 'animate.css-react';
-import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
+import { FormattedMessage, useIntl } from 'react-intl';
 import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
 import { routesEnum } from '../../Routes';
 import { Heading } from '../../components/Heading';
@@ -12,7 +12,7 @@ import { Text } from '../../components/Text';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import useMobileCheck from '../../hooks/useMobileCheck';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { IS_MAINNET, TESTNET_LAUNCHPAD_NAME } from '../../utils/envVars';
 
 interface mobile {
   isMobile: boolean;
@@ -84,16 +84,13 @@ const LogoContainer = styled.div`
   display: flex;
   min-height: 50px;
 `;
-const EthLogo = styled.img`
-  height: 50px;
-`;
+
 // @ts-ignore
 const LogoText = styled(Text)`
-  line-height: 50px;
-  margin-left: 15px;
+  line-height: 40px;
   font-weight: bold;
-  @media screen and (max-width: 800px) {
-    line-height: 30px;
+  @media screen and (max-width: 1080px) {
+    line-height: 24px;
   }
 `;
 const StyledLeslieImgNode = styled.img`
@@ -111,6 +108,13 @@ const StyledLeslieImgNode = styled.img`
     max-width: 220px;
     margin: 30px auto;
     display: block;
+  }
+`;
+
+const ButtonRow = styled.div`
+  display: flex;
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
   }
 `;
 
@@ -133,7 +137,9 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
 // Main component
 
 export const Hero = () => {
+  const { formatMessage } = useIntl();
   const isSmallScreen = useMobileCheck('800px');
+  const isMediumScreen = useMobileCheck('1080px');
   const m: boolean = (window as any).mobileCheck();
   return (
     <RainbowBackground isMobile={m}>
@@ -142,14 +148,20 @@ export const Hero = () => {
           <div className={`flex ${m ? 'flex-column is-mobile' : ''}`}>
             <ContentContainer className={m ? undefined : 'pt100'}>
               <LefContentContainer>
-                {isSmallScreen && (
+                {isMediumScreen && (
                   <TitleContainer>
                     <Animate enter="fadeIn" appear="fadeIn" delay={150}>
                       <LogoContainer className={m ? 'mb50' : undefined}>
-                        <EthLogo src={EthDiamondPlain} />
                         <LogoText>
-                          Eth2 Launch Pad{' '}
-                          {IS_MAINNET ? `` : `for ${ETH2_NETWORK_NAME} testnet`}
+                          {IS_MAINNET ? (
+                            <FormattedMessage defaultMessage="Eth2 Launchpad" />
+                          ) : (
+                            <FormattedMessage
+                              defaultMessage="Eth2 Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+                              values={{ TESTNET_LAUNCHPAD_NAME }}
+                              description="This phrase is a sentence "
+                            />
+                          )}
                         </LogoText>
                       </LogoContainer>
                     </Animate>
@@ -159,33 +171,53 @@ export const Hero = () => {
                   <ScrollAnimation animateIn="fadeIn" delay={150} animateOnce>
                     <Heading
                       level={m ? 1 : 2}
-                      size={m ? 'meduim' : 'large'}
+                      size={m ? 'medium' : 'large'}
                       color="brand"
                       className="my20"
                     >
-                      Become a validator and help secure the future of Ethereum.
+                      <FormattedMessage defaultMessage="Become a validator and help secure the future of Ethereum" />
                     </Heading>
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInUp" delay={750} animateOnce>
                     <Text className="mt25">
-                      Earn continuous rewards for providing a public good to the
-                      community.
+                      <FormattedMessage defaultMessage="Earn continuous rewards for providing a public good to the community." />
                     </Text>
                   </ScrollAnimation>
+
                   {!!isSmallScreen && <LeslieImage />}
                   <Animate
                     enter="fadeIn"
                     appear="fadeIn"
                     className={m ? undefined : 'mt100'}
                   >
-                    <Link to={routesEnum.acknowledgementPage}>
-                      <Button
-                        fullWidth={m || isSmallScreen}
-                        rainbow
-                        width={isSmallScreen || m ? undefined : 250}
-                        label={`GET STARTED ${m ? 'ON DESKTOP' : ''}`}
-                      />
-                    </Link>
+                    <ButtonRow>
+                      <Link to={routesEnum.acknowledgementPage}>
+                        <Button
+                          fullWidth={m || isSmallScreen}
+                          rainbow
+                          width={isSmallScreen || m ? undefined : 250}
+                          label={
+                            m
+                              ? formatMessage({
+                                  defaultMessage:
+                                    'Become a validator on desktop',
+                                })
+                              : formatMessage({
+                                  defaultMessage: 'Become a validator',
+                                })
+                          }
+                        />
+                      </Link>
+                      <Link to={routesEnum.checklistPage}>
+                        <Button
+                          className={isMediumScreen || m ? `mt20` : `ml20`}
+                          fullWidth={m || isSmallScreen}
+                          label={formatMessage({
+                            defaultMessage: 'Thinking about staking?',
+                          })}
+                        />
+                      </Link>
+                    </ButtonRow>
                   </Animate>
                 </InfoContainer>
               </LefContentContainer>

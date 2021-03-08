@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -50,15 +51,20 @@ const WalletConnectModal: React.FC = () => {
       <Layer>
         <div className="p20">
           <Heading level={2} color="blueMedium" center className="mb20">
-            Incorrect Network
+            <FormattedMessage defaultMessage="Wrong network" />
           </Heading>
           <Network
             size="xlarge"
             style={{ margin: '45 auto', display: 'block' }}
           />
           <Text center>
-            Please connect to{' '}
-            {IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet'}
+            <FormattedMessage
+              defaultMessage="Connect to {network}"
+              values={{
+                network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+              }}
+              description="{network} is either 'Ethereum mainnet' or 'Göerli testnet'"
+            />
           </Text>
         </div>
       </Layer>
@@ -70,7 +76,7 @@ const WalletConnectModal: React.FC = () => {
   return (
     <Layer>
       <Heading level={2} color="blueMedium" style={{ margin: '20px auto' }}>
-        Connect a wallet
+        <FormattedMessage defaultMessage="Connect a wallet" />
       </Heading>
       <div style={{ margin: 'auto' }}>
         <WalletButton

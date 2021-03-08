@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { Heading } from './Heading';
@@ -23,7 +24,9 @@ const FooterStyles = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 4rem;
-
+  @media screen and (max-width: 1080px) {
+    flex-direction: column;
+  }
   @media screen and (max-width: 960px) {
     .cta-button {
       display: none;
@@ -55,11 +58,21 @@ export const Footer = () => {
     <RainbowBackground>
       <FooterStyles>
         <div className="col">
-          <Heading level={4}>Ethereum 2 Launchpad</Heading>
-          <Link to={routesEnum.acknowledgementPage}>Deposit</Link>
-          <Link to={routesEnum.checklistPage}>Checklist</Link>
-          <Link to={routesEnum.FaqPage}>FAQ</Link>
-          <Link to={routesEnum.termsOfServicePage}>Terms of Service</Link>
+          <Heading level={4}>
+            <FormattedMessage defaultMessage="Eth2 Launchpad" />
+          </Heading>
+          <Link to={routesEnum.acknowledgementPage}>
+            <FormattedMessage defaultMessage="Deposit" />
+          </Link>
+          <Link to={routesEnum.checklistPage}>
+            <FormattedMessage defaultMessage="Checklist" />
+          </Link>
+          <Link to={routesEnum.FaqPage}>
+            <FormattedMessage defaultMessage="FAQ" />
+          </Link>
+          <Link to={routesEnum.termsOfServicePage}>
+            <FormattedMessage defaultMessage="Terms of Service" />
+          </Link>
         </div>
 
         {!despotWorkflowRoutes.includes(pathname as routesEnum) && (
@@ -70,40 +83,41 @@ export const Footer = () => {
               fullWidth
               width={400}
               label={
-                <span>
-                  GET
-                  <Rhino>
-                    <span role="img" aria-label="rhino">
-                      🦏
-                    </span>
-                  </Rhino>{' '}
-                  STARTED
-                </span>
+                <FormattedMessage
+                  defaultMessage="Become a validator {emoji}"
+                  values={{
+                    emoji: (
+                      <Rhino>
+                        <span role="img" aria-label="rhino">
+                          🦏
+                        </span>
+                      </Rhino>
+                    ),
+                  }}
+                />
               }
             />
           </Link>
         )}
-
         <div className="col extra-links">
-          <Heading level={4}>Learn More About Eth 2</Heading>
-          <Link external to="https://ethereum.org/en/eth2/">
-            The Eth2 Upgrades Intro
+          <Heading level={4}>
+            <FormattedMessage defaultMessage="More on Eth2" />
+          </Heading>
+          <Link to="https://ethereum.org/en/eth2/">
+            <FormattedMessage defaultMessage="The Eth2 upgrades" />
           </Link>
-          <Link
-            external
-            to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204"
-          >
-            Economics
+          <Link to={routesEnum.phishingPage}>
+            <FormattedMessage defaultMessage="Avoid Eth2 phishing" />
+          </Link>
+          <Link to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204">
+            <FormattedMessage defaultMessage="Eth2 economics" />
           </Link>
           {/* TODO: add this link when page goes live */}
-          {/* <Link external to="http://activate.codefi.network/eth2"> */}
+          {/* <Link to="http://activate.codefi.network/eth2"> */}
           {/*  Calculator */}
           {/* </Link> */}
-          <Link
-            external
-            to="https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf"
-          >
-            Formal Verification Report
+          <Link to="https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf">
+            <FormattedMessage defaultMessage="Formal verification report" />
           </Link>
         </div>
       </FooterStyles>

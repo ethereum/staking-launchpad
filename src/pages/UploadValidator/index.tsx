@@ -1,4 +1,5 @@
 import React, { SyntheticEvent, useCallback, useMemo, useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -63,20 +64,10 @@ const Dropzone = styled.div`
   border-radius: ${(p: { theme: any }) => p.theme.borderRadius};
 `;
 // @ts-ignore
-const Highlighted = styled(Text)`
-  color: ${(p: { theme: any }) => p.theme.blue.medium};
-  display: inline-block;
-  :hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-`;
+
 const DeleteBtn = styled.span`
   cursor: pointer;
   padding: 3px;
-`;
-const InlineLink = styled(Link)`
-  display: inline;
 `;
 
 interface OwnProps {}
@@ -104,6 +95,7 @@ const _UploadValidatorPage = ({
   dispatchDepositStatusUpdate,
   dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
   const [fileError, setFileError] = useState<React.ReactElement | null>(null);
@@ -136,34 +128,49 @@ const _UploadValidatorPage = ({
 
   const handleWrongNetwork = () => {
     setFileError(
-      <>
-        Oops! The json file you provided isn&apos;t for the&nbsp;
-        {ETH2_NETWORK_NAME} {IS_MAINNET ? 'mainnet' : 'testnet'}
-      </>
+      <Text>
+        <FormattedMessage
+          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
+          values={{
+            network: (
+              <span>
+                {ETH2_NETWORK_NAME}
+                {IS_MAINNET ? '' : ' testnet'}
+              </span>
+            ),
+          }}
+        />
+      </Text>
     );
   };
 
   const handleSevereError = () => {
     setFileError(
-      <>
-        <Code>{depositFileName}</Code>
-        &nbsp;is invalid due to a serious issue. Please&nbsp;
+      <Text>
+        <FormattedMessage
+          defaultMessage="Couldn't upload {depositFileName} due to an error. Open an issue in GitHub so we can investigate. "
+          values={{
+            depositFileName: <Code>{depositFileName}</Code>,
+          }}
+        />
         <Link
-          external
           primary
           inline
           to="https://github.com/ethereum/eth2.0-deposit/issues/new"
         >
-          open an issue on GitHub
+          Open issue
         </Link>
-        &nbsp;to get in contact with us.
-      </>
+      </Text>
     );
   };
 
   const onFileDrop = (jsonFiles: Array<any>, rejectedFiles: Array<any>) => {
     if (rejectedFiles?.length) {
-      setFileError(<>That is not a valid deposit_data json file.</>);
+      setFileError(
+        <>
+          <FormattedMessage defaultMessage="That is not a valid deposit_data JSON file." />
+        </>
+      );
       return;
     }
 
@@ -280,7 +287,11 @@ const _UploadValidatorPage = ({
 
   const renderMessage = useMemo(() => {
     if (isDragReject && !isFileStaged) {
-      return <div>Please upload a valid JSON file.</div>;
+      return (
+        <div>
+          <FormattedMessage defaultMessage="Upload a valid json file." />
+        </div>
+      );
     }
 
     if (isFileStaged || fileError) {
@@ -289,21 +300,28 @@ const _UploadValidatorPage = ({
           <DeleteBtn onClick={handleFileDelete}>
             <Close size="15px" className="mr10" />
           </DeleteBtn>
-          <Text>
-            {fileError || (
-              <>
-                {depositFileName}
-                {!isFileAccepted && ' is invalid'}
-              </>
-            )}
-          </Text>
+          {fileError || (
+            <>
+              {isFileAccepted && <Text>{depositFileName}</Text>}
+              {!isFileAccepted && (
+                <Text>
+                  <FormattedMessage
+                    defaultMessage="{depositFileName} isn't a valid deposit_data JSON file. Try again."
+                    values={{
+                      depositFileName: <span>{depositFileName}</span>,
+                    }}
+                  />
+                </Text>
+              )}
+            </>
+          )}
         </div>
       );
     }
 
     return (
       <div>
-        Drag file to upload or <Highlighted>browse</Highlighted>
+        <FormattedMessage defaultMessage="Drag file to upload or browse" />
       </div>
     );
   }, [
@@ -320,17 +338,16 @@ const _UploadValidatorPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Upload Deposit File">
+    <WorkflowPageTemplate title="Upload deposit data">
       <Container className="mt20">
         <Text className="mb20">
-          Please upload the{' '}
-          <Highlighted className="mr5">Deposit Data file</Highlighted>
-          generated in the{' '}
-          <InlineLink to={routesEnum.generateKeysPage} className="mr5">
-            previous step.
-          </InlineLink>
-          The <Code>deposit-data-[timestamp].json</Code> is located in the{' '}
-          <Code>/eth2.0-deposit-cli/validator_keys</Code> directory.
+          <FormattedMessage
+            defaultMessage="Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
+            values={{
+              json: <Code>deposit_data-[timestamp].json</Code>,
+              validatorKeys: <Code>/eth2.0-deposit-cli/validator_keys</Code>,
+            }}
+          />
         </Text>
         <Dropzone
           isFileStaged={isFileStaged}
@@ -353,14 +370,18 @@ const _UploadValidatorPage = ({
       </Container>
       <div className="flex center p30">
         <Link to={routesEnum.generateKeysPage}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.connectWalletPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
             disabled={!isFileAccepted}
-            label="Continue"
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </div>

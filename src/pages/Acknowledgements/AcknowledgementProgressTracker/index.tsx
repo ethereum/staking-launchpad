@@ -18,15 +18,15 @@ const Container = styled.div`
 `;
 
 const acknowledgementsWithCopy = {
-  [AcknowledgementIdsEnum.introSection]: 'Overview',
+  [AcknowledgementIdsEnum.introSection]: 'Proof of stake',
   [AcknowledgementIdsEnum.deposit]: 'Deposit',
-  [AcknowledgementIdsEnum.responsibilities]: 'Responsibilities',
-  [AcknowledgementIdsEnum.slashing]: 'Slashing',
-  [AcknowledgementIdsEnum.keyManagement]: 'Key Management',
-  [AcknowledgementIdsEnum.signingKeys]: 'Signing Keys',
-  [AcknowledgementIdsEnum.transferDelay]: 'Transfer Delay',
+  [AcknowledgementIdsEnum.terminal]: 'The terminal',
+  [AcknowledgementIdsEnum.responsibilities]: 'Uptime',
+  [AcknowledgementIdsEnum.slashing]: 'Bad behaviour',
+  [AcknowledgementIdsEnum.keyManagement]: 'Key management',
   [AcknowledgementIdsEnum.commitment]: 'Commitment',
-  [AcknowledgementIdsEnum.earlyAdoptionRisks]: 'Early Adoption Risks',
+  [AcknowledgementIdsEnum.earlyAdoptionRisks]: 'Early adoption risks',
+  [AcknowledgementIdsEnum.checklist]: 'Checklist',
   [AcknowledgementIdsEnum.confirmation]: 'Confirmation',
 };
 

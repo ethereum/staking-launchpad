@@ -24,23 +24,19 @@ const LogoBackground = styled.div<LogoBackgroundProps>`
     height: ${p => (p.fullWidthImg ? '100%' : '50px')};
     margin: ${p => (p.fullWidthImg ? 0 : '17px')};
   }
-  @media only screen and (max-width: 770px) {
-    height: 100px;
-    width: 100px;
-    img {
-      width: 60px;
-      height: 60px;
-      margin: 19px;
-    }
-  }
 `;
 
 const SelectionText = styled(Heading)`
-  margin-bottom: 40px;
   text-align: center;
-  @media only screen and (max-width: 770px) {
-    display: none;
-  }
+  margin-top: 24px;
+  margin-bottom: 24px;
+`;
+
+const LanguageTag = styled.div`
+  background: ${p => p.theme.blue.light};
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
 `;
 
 interface ImgSelectionBoxProps {
@@ -50,6 +46,7 @@ interface ImgSelectionBoxProps {
   text: string;
   fullWidthImg?: boolean;
   style?: any;
+  language?: any;
 }
 
 export const ImageSelectionBox = ({
@@ -59,6 +56,7 @@ export const ImageSelectionBox = ({
   text,
   fullWidthImg,
   style,
+  language,
 }: ImgSelectionBoxProps) => {
   return (
     <SelectionBox onClick={onClick} isActive={isActive} style={style}>
@@ -68,6 +66,7 @@ export const ImageSelectionBox = ({
       <SelectionText level={3} size="small" color="blueDark">
         {text}
       </SelectionText>
+      {language && <LanguageTag>{language}</LanguageTag>}
     </SelectionBox>
   );
 };

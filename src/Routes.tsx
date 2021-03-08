@@ -1,5 +1,8 @@
 import React, { FunctionComponent } from 'react';
+import { Helmet } from 'react-helmet';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import { useIntl } from 'react-intl';
+import { supportedLanguages } from './intl';
 import {
   AcknowledgementPage,
   CongratulationsPage,
@@ -15,6 +18,7 @@ import {
   Phishing,
   Checklist,
   TermsOfService,
+  Languages,
   TopUpPage,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
@@ -37,7 +41,7 @@ export enum routesEnum {
   acknowledgementPage = '/overview',
   selectClient = '/select-client',
   summaryPage = '/summary',
-  uploadValidatorPage = '/upload-validator',
+  uploadValidatorPage = '/upload-deposit-data',
   transactionsPage = '/transactions',
   FaqPage = '/faq',
   prysm = '/prysm',
@@ -49,6 +53,7 @@ export enum routesEnum {
   topUpPage = '/top-up',
   landingPage = '/',
   notFoundPage = '/*',
+  languagesPage = '/languages',
 }
 const routes: RouteType[] = [
   {
@@ -128,6 +133,11 @@ const routes: RouteType[] = [
     component: Checklist,
   },
   {
+    path: routesEnum.languagesPage,
+    exact: true,
+    component: Languages,
+  },
+  {
     path: routesEnum.topUpPage,
     exact: true,
     component: TopUpPage,
@@ -137,12 +147,42 @@ const routes: RouteType[] = [
   { path: routesEnum.notFoundPage, component: NotFoundPage },
 ];
 
+const localizeRoutes = (locale: String, routes: RouteType[]) => {
+  return routes.map(route => {
+    const languagePath = route.path.split('/')[1];
+    const routeHasLangPath = supportedLanguages.includes(languagePath);
+    if (routeHasLangPath || route.path === '/*') {
+      return route;
+    }
+    const localizedRoute: RouteType = {
+      path: `/${locale}${route.path}`,
+      exact: route.exact,
+      component: route.component,
+    };
+    return localizedRoute;
+  });
+};
+
 const _Routes = () => {
+  const { locale, formatMessage } = useIntl();
+  const localizedRoutes = localizeRoutes(locale, routes);
+
+  const title = formatMessage({ defaultMessage: 'Eth2 Launchpad' });
+  const description = formatMessage({
+    defaultMessage: 'Become a validator and help secure Eth2.',
+  });
   return (
     <>
       <ScrollToTop>
+        <Helmet>
+          <html lang={locale} />
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
+        </Helmet>
         <Switch>
-          {routes.map((route: RouteType) => (
+          {localizedRoutes.map((route: RouteType) => (
             <Route
               onUpdate={() => window.scrollTo(0, 0)}
               {...route}

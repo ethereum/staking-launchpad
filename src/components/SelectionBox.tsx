@@ -2,25 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LogoContainerBox = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 196px;
+  height: 100%;
   border: ${(p: { theme: any; isActive: boolean }) =>
-    `2px solid ${p.isActive ? p.theme.blue.light : p.theme.gray.medium}`};
+    `2px solid ${p.isActive ? p.theme.gray.dark : p.theme.gray.medium}`};
   box-shadow: ${(p: { theme: any; isActive: boolean }) =>
     p.isActive && `0 0 10px rgba(0, 0, 0, 0.5)`};
   border-radius: ${p => p.theme.borderRadius};
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 1rem;
   cursor: pointer;
   -webkit-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   -moz-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   -o-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   transition: border 500ms ease-out, box-shadow 500ms ease-out;
   @media only screen and (max-width: 770px) {
-    width: 150px;
-    height: 150px;
-    margin: 17px;
+    width: 100%;
   }
 `;
 

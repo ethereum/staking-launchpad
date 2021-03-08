@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Checkmark, Close } from 'grommet-icons';
 import Spinner from '../../../components/Spinner';
@@ -111,11 +112,15 @@ const TransactionProgress: React.FC<TransactionProgressProps> = ({
     <Container>
       <div className="flex">
         <ProgressCircle step={1} status={signTxStatus} />
-        <Text className="mt10 ml15">Sign transaction with your wallet</Text>
+        <Text className="mt10 ml15">
+          <FormattedMessage defaultMessage="Sign transaction with your wallet" />
+        </Text>
       </div>
       <div className="mt30 flex">
         <ProgressCircle step={2} status={confirmOnChainStatus} />
-        <Text className="mt10 ml15">Confirm on-chain</Text>
+        <Text className="mt10 ml15">
+          <FormattedMessage defaultMessage="Confirm on-chain" />
+        </Text>
       </div>
     </Container>
   );

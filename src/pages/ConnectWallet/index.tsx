@@ -1,8 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { Animated } from 'react-animated-css';
 import { connect } from 'react-redux';
+import { FormattedMessage, useIntl } from 'react-intl';
 import {
   AbstractConnector,
   AbstractConnector as AbstractConnectorInterface,
@@ -11,8 +12,6 @@ import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { formatEther } from '@ethersproject/units';
 import { NoEthereumProviderError } from '@web3-react/injected-connector';
-import { StatusWarning } from 'grommet-icons';
-import ReactTooltip from 'react-tooltip';
 import {
   AllowedNetworks,
   fortmatic,
@@ -54,14 +53,25 @@ import { MetamaskHardwareButton } from './MetamaskHardwareButton';
 const Container = styled.div`
   margin: auto;
   position: relative;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
+    margin-bottom: 0;
+  }
 `;
 const WalletConnectedContainer = styled.div`
   pointer-events: none;
-  width: 500px;
+  width: 800px;
   margin: auto;
   position: absolute;
-  left: calc(50% - 250px); // center - half width
+  left: calc(50% - 400px); // center - half width
+  @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
+    width: 100%;
+    left: 0;
+    height: 100%;
+  }
 `;
+
 const WalletButtonContainer = styled.div`
   margin: auto;
 `;
@@ -77,16 +87,56 @@ const WalletButtonSubContainer = styled.div`
 const WalletInfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid ${(p: { theme: any }) => p.theme.gray.medium};
   padding-bottom: 20px;
 `;
 const StatusText = styled(Text)`
-  font-size: 22px;
-  margin-left: 10px;
+  font-size: 18px;
 `;
 const FaucetLink = styled(Link)`
   margin: auto;
   margin-top: 10px;
+`;
+
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Network = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+`;
+
+const Balance = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  margin-top: 24px;
+`;
+
+const ButtonRow = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 128px;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const MetaMaskError = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
 `;
 
 export interface web3ReactInterface {
@@ -148,6 +198,11 @@ const _ConnectWalletPage = ({
         error.message === 'Invariant failed: chainId 0xNaN is not an integer')
     );
   }, [error]);
+  const balanceRef = useRef<number | null>(null);
+  const { formatMessage } = useIntl();
+
+  // sets balanceRef to always have current balance (to refer to in callbacks)
+  balanceRef.current = balance;
 
   // setup RPC event listener
   const attemptedMMConnection: boolean = useMetamaskEagerConnect();
@@ -177,6 +232,45 @@ const _ConnectWalletPage = ({
     }
   }, [selectedWallet, walletProvider, library, chainId, depositKeys, account]);
 
+  // adds event emitter to listen to new blocks & update balance if it changed
+  useEffect((): any => {
+    if (!!account && !!library) {
+      library.on('block', () => {
+        library
+          .getBalance(account)
+          .then((amount: any) => {
+            const formattedBalance = Number(
+              parseFloat(formatEther(amount)).toPrecision(5)
+            );
+            if (formattedBalance !== balanceRef.current) {
+              setBalance(formattedBalance);
+              // @ts-ignore (type check performed in envVars.ts)
+              const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
+              if (
+                formattedBalance < requiredBalance ||
+                formattedBalance === 0
+              ) {
+                setLowBalance(true);
+              } else {
+                setLowBalance(false);
+              }
+            }
+          })
+          .catch(() => setBalance(null));
+      });
+
+      return () => library.off('block');
+    }
+  }, [library, account, depositKeys]);
+
+  const getWalletName = (provider?: AbstractConnector) => {
+    if (!provider) return '';
+    if (provider === metamask) return 'Metamask';
+    if (provider === portis) return 'Portis';
+    if (provider === fortmatic) return 'Fortmatic';
+    return '';
+  };
+
   // sets the status copy on provider or network change
   useEffect(() => {
     if (chainId) {
@@ -190,17 +284,30 @@ const _ConnectWalletPage = ({
       !error &&
       (balance || balance === 0)
     ) {
-      setStatus(`${balance} ${TICKER_NAME} available`);
+      setStatus(`${balance} ${TICKER_NAME}`);
     } else if (walletConnected && error) {
-      setStatus('Error');
+      setStatus(formatMessage({ defaultMessage: 'Error' }));
     } else if (!networkAllowed) {
       setStatus(
-        `Please connect to ${
-          IS_MAINNET ? 'Ethereum Mainnet' : 'Göerli Testnet'
-        }`
+        formatMessage(
+          { defaultMessage: 'Connect {wallet} to {network}' },
+          {
+            wallet: getWalletName(walletProvider),
+            network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+          }
+        )
       );
     }
-  }, [chainId, walletConnected, networkAllowed, error, balance, network]);
+  }, [
+    chainId,
+    walletConnected,
+    networkAllowed,
+    error,
+    balance,
+    network,
+    formatMessage,
+    walletProvider,
+  ]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.CONNECT_WALLET) {
@@ -208,20 +315,14 @@ const _ConnectWalletPage = ({
     }
   };
 
-  const getWalletName = (provider?: AbstractConnector) => {
-    if (!provider) return '';
-    if (provider === metamask) return 'Metamask';
-    if (provider === portis) return 'Portis';
-    if (provider === fortmatic) return 'Fortmatic';
-    return '';
-  };
-
   if (workflow < WorkflowStep.CONNECT_WALLET) {
     return routeToCorrectWorkflowStep(workflow);
   }
 
   return (
-    <WorkflowPageTemplate title="Connect Wallet">
+    <WorkflowPageTemplate
+      title={formatMessage({ defaultMessage: 'Connect wallet' })}
+    >
       <Container>
         <WalletConnectedContainer>
           <Animated
@@ -234,64 +335,93 @@ const _ConnectWalletPage = ({
           >
             <Paper pad="medium">
               <WalletInfoContainer>
-                <div className="flex">
+                <Heading level={3} size="small" color="blueDark">
+                  {getWalletName(walletProvider)}
+                </Heading>
+                {account && (
+                  <Text size="medium">
+                    {`${account.slice(0, 6)}...${account.slice(-6)}`}
+                  </Text>
+                )}
+              </WalletInfoContainer>
+              <Network>
+                <Row>
                   <Dot
-                    className="mt10"
+                    className="mr10"
                     success={networkAllowed}
                     error={!networkAllowed}
                   />
-                  <div className="ml20">
-                    <Heading
-                      level={3}
-                      size="small"
-                      color="blueDark"
-                      className="mt0"
-                    >
-                      {getWalletName(walletProvider)}
-                    </Heading>
-                    {account && (
-                      <Text size="small">
-                        {`${account.slice(0, 6)}...${account.slice(-6)}`}
-                      </Text>
-                    )}
-                  </div>
-                </div>
+                  <Heading
+                    level={3}
+                    size="small"
+                    color="blueDark"
+                    className="mt0"
+                  >
+                    <FormattedMessage defaultMessage="Network" />
+                  </Heading>
+                </Row>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {network === 'Mainnet' ? network : `${network} Testnet`}
+                  {network === 'Mainnet' ? network : `${network} testnet`}
                 </Text>
-              </WalletInfoContainer>
-              <div className="flex center mt20">
-                {lowBalance && (
+              </Network>
+              <div>
+                {!networkAllowed && (
                   <>
-                    <ReactTooltip
-                      id="status-warning"
-                      type="warning"
-                      effect="solid"
-                    >
-                      <span>
-                        You do not have enough ETH in this wallet for{' '}
-                        {depositKeys.length} validator
-                        {depositKeys.length > 1 ? 's' : ''}
-                      </span>
-                    </ReactTooltip>
-                    <StatusWarning
-                      data-tip
-                      data-for="status-warning"
-                      color="yellowDark"
-                    />
+                    <StatusText className="mt10">{status}</StatusText>
                   </>
                 )}
-                <StatusText>{status}</StatusText>
               </div>
-              {!IS_MAINNET && lowBalance && (
-                <FaucetLink
-                  to="https://faucet.goerli.mudit.blog/"
-                  external
-                  primary
-                  withArrow
-                >
-                  Goerli Faucet
-                </FaucetLink>
+              {networkAllowed && (
+                <>
+                  <Balance>
+                    <Row>
+                      <Dot
+                        className="mr10"
+                        success={!lowBalance}
+                        error={lowBalance}
+                      />
+                      <Heading level={3} size="small" color="blueDark">
+                        <FormattedMessage defaultMessage="Balance" />
+                      </Heading>
+                    </Row>
+                    <StatusText className="mt10">{status}</StatusText>
+                  </Balance>
+                  <div>
+                    {networkAllowed && lowBalance && (
+                      <>
+                        <FormattedMessage
+                          defaultMessage="You do not have enough {eth} in this account for
+                          {numberOfValidators} {validator}"
+                          values={{
+                            numberOfValidators: depositKeys.length,
+                            eth: TICKER_NAME,
+                            validator:
+                              depositKeys.length > 1
+                                ? formatMessage({
+                                    defaultMessage: 'validators',
+                                  })
+                                : formatMessage({
+                                    defaultMessage: 'validator',
+                                  }),
+                          }}
+                        />
+                      </>
+                    )}
+                    {!IS_MAINNET && lowBalance && (
+                      <FaucetLink
+                        to="https://faucet.goerli.mudit.blog/"
+                        primary
+                      >
+                        <FormattedMessage
+                          defaultMessage="Get {TICKER_NAME}"
+                          values={{
+                            TICKER_NAME,
+                          }}
+                        />
+                      </FaucetLink>
+                    )}
+                  </div>
+                </>
               )}
             </Paper>
           </Animated>
@@ -341,26 +471,45 @@ const _ConnectWalletPage = ({
       </Container>
 
       {error && error instanceof NoEthereumProviderError && (
-        <div className="flex center mt20">Please install MetaMask.</div>
+        <MetaMaskError>
+          <Text className="mb30">
+            <FormattedMessage defaultMessage="We can't detect MetaMask. Switch browsers or install MetaMask." />
+          </Text>
+          <Link isTextLink={false} to="https://metamask.io/">
+            <Button
+              className="mr10"
+              label={formatMessage({ defaultMessage: 'Download MetaMask' })}
+            />
+          </Link>
+        </MetaMaskError>
       )}
 
       {isInvalidNetwork && (
         <div className="flex center mt20">
-          The selected network is not supported.
+          <FormattedMessage
+            defaultMessage="Your wallet is on the wrong network. Switch to {network}"
+            values={{
+              network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+            }}
+          />
         </div>
       )}
 
-      <div className="flex center p30 mt20">
+      <ButtonRow>
         {!walletConnected && (
           <Link to={routesEnum.uploadValidatorPage}>
-            <Button className="mr10" width={100} label="Back" />
+            <Button
+              className="mr10"
+              width={100}
+              label={formatMessage({ defaultMessage: 'Back' })}
+            />
           </Link>
         )}
         {walletConnected && (
           <Button
             width={300}
             onClick={deactivate}
-            label="Connect a different wallet"
+            label={formatMessage({ defaultMessage: 'Connect new wallet' })}
             className="mr10"
             color="blueDark"
           />
@@ -369,11 +518,16 @@ const _ConnectWalletPage = ({
           <Button
             width={300}
             rainbow
-            disabled={!walletProvider || !walletConnected || !networkAllowed}
-            label="Continue"
+            disabled={
+              !walletProvider ||
+              !walletConnected ||
+              !networkAllowed ||
+              lowBalance
+            }
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
-      </div>
+      </ButtonRow>
     </WorkflowPageTemplate>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { PageTemplate } from '../../../components/PageTemplate';
 import tekuBg from '../../../static/teku-bg.png';
 import {
@@ -14,144 +15,203 @@ import { TEKU_INSTALLATION_URL } from '../../../utils/envVars';
 
 export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
+    <SectionTitle level={2} className="mb5">
+      Teku
+    </SectionTitle>
     <Text className="mt10">
-      <Link external to="https://pegasys.tech/teku/" primary inline>
-        PegaSys Teku
-      </Link>{' '}
-      (formerly known as Artemis) is a Java-based Ethereum 2.0 client designed &
-      built to meet institutional needs and security requirements. PegaSys is an
-      arm of{' '}
-      <Link external to="https://consensys.net/" primary inline>
-        ConsenSys
-      </Link>{' '}
-      dedicated to building enterprise-ready clients and tools for interacting
-      with the core Ethereum platform. Teku is Apache 2 licensed and written in
-      Java, a language notable for its maturity & ubiquity.
+      <FormattedMessage
+        defaultMessage="Formerly known as Artemis, Teku is an Eth2 client built to meet
+          institutional needs and security requirements. PegaSys is an arm of ConsenSys,
+          dedicated to building enterprise-ready clients and tools for interacting with
+          the core Ethereum platform."
+      />
     </Text>
     <Link
-      external
       to="https://pegasys.tech/teku-ethereum-2-for-enterprise/"
       primary
-      withArrow
       className="mt10"
     >
-      Read more about PegaSys Teku
+      <FormattedMessage defaultMessage="More on PegaSys Teku" />
     </Link>{' '}
+    <Link to="https://consensys.net/" primary className="mt10">
+      <FormattedMessage defaultMessage="More on ConsenSys" />
+    </Link>
+    <SectionTitle level={2} className="mb5">
+      <FormattedMessage defaultMessage="Language information" />
+    </SectionTitle>
+    <Text className="mt10">
+      <FormattedMessage
+        defaultMessage="Teku is Apache 2 licensed and written in Java, a language
+          notable for its maturity and ubiquity."
+      />
+    </Text>
     <section>
       <SectionTitle level={2} className="mb5">
-        Become a Validator with Teku
+        <FormattedMessage defaultMessage="Become a validator with Teku" />
       </SectionTitle>
-      <Link external primary to={TEKU_INSTALLATION_URL} withArrow>
-        {TEKU_INSTALLATION_URL}
+      <Link primary to={TEKU_INSTALLATION_URL}>
+        <FormattedMessage defaultMessage="Teku installation documentation" />
       </Link>
     </section>
     {!shortened && (
       <>
         <section>
           <SectionTitle level={2} className="mb5">
-            Key Management
+            <FormattedMessage defaultMessage="Key management" />
           </SectionTitle>
           <Text>
-            Teku needs to be pointed at files containing keystores & their
-            associated passwords at startup. There are 3 methods for doing so:
+            <FormattedMessage
+              defaultMessage="Teku needs to be pointed at files containing keystores and
+                their associated passwords at startup. There are 3 methods for doing so."
+            />
           </Text>
-          <Heading level={3} className="mt10 mb5">
-            Command Line:
+          <Heading level={3} className="mt20 mb5">
+            <FormattedMessage defaultMessage="Command Line" />
           </Heading>
           <Text>
-            When launching Teku, keystores and passwords can be provided as{' '}
-            <Code>
-              {' '}
-              {'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}
-            </Code>{' '}
-            or{' '}
-            <Code>
-              {'<'}KEY_FILE_1{'>'}:{'<'}PASS_FILE_1{'>'},...,{'<'}KEY_FILE_N
-              {'>'}:{'<'}PASS_FILE_N{'>'}
-            </Code>{' '}
-            of paths via the <Code className="px5 ml5">--validators-keys</Code>{' '}
-            option.
+            <FormattedMessage
+              defaultMessage="When launching Teku, keystores and passwords can be provided
+                in different ways."
+            />
+            <ul>
+              <li>
+                <Code>{`<KEY_DIR>:<PASS_DIR>`}</Code>
+              </li>
+              <li>
+                <FormattedMessage
+                  defaultMessage="{keyFile} of paths via the {validatorsKeys} option."
+                  values={{
+                    keyFile: (
+                      <Code>
+                        {`<KEY_FILE_1>:<PASS_FILE_1>,...,<KEY_FILE_N>:<PASS_FILE_N>`}
+                      </Code>
+                    ),
+                    validatorsKeys: (
+                      <Code className="px5 ml5">--validators-keys</Code>
+                    ),
+                  }}
+                />
+              </li>
+            </ul>
           </Text>
-          <Heading level={3} className="mt10 mb5">
-            Environment Variables:
+          <Heading level={3} className="mt20 mb5">
+            <FormattedMessage defaultMessage="Environment variables" />
           </Heading>
           <Text>
-            Teku will also load validators from keystores (and passwords) from
-            the paths found in the{' '}
-            <Code className="px5 ml5">TEKU_VALIDATORS_KEYS</Code> environment
-            variable.
+            <FormattedMessage
+              defaultMessage="Teku will also load validators from keystores (and passwords)
+                from the paths found in the validator keys environment variable."
+            />
           </Text>
-          <Heading level={3} className="mt10 mb5">
-            Configuration File:
+          <Code className="px5 ml5">TEKU_VALIDATORS_KEYS</Code>
+          <Heading level={3} className="mt20 mb5">
+            <FormattedMessage defaultMessage="Configuration file" />
           </Heading>
           <Text>
-            Teku can also be configured via a YAML file which is passed in via
-            the <Code className="px5 ml5">--config-file</Code> CLI argument or
-            <Code className="px5 ml5">TEKU_CONFIG_FILE</Code> environment
-            variable. The syntax for YAML file is
-            <Code className="px5 ml5">
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
-              validators-keys: [{'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}]
-            </Code>{' '}
-            or
-            <Code className="px5 ml5">
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
-              validators-keys: [{'<'}KEY_FILE_1{'>'}:{'<'}PASS_FILE_1{'>'},...,
-              {'<'}KEY_FILE_N{'>'}:{'<'}PASS_FILE_N{'>'}]
-            </Code>
-            .
+            <FormattedMessage
+              defaultMessage="Teku can also be configured via a YAML file which is passed
+                in via a few different ways."
+            />
           </Text>
+          <ul>
+            <li>
+              <Text>
+                <FormattedMessage defaultMessage="The config file CLI argument" />
+              </Text>
+            </li>
+            <ul>
+              <li>
+                <Code className="px5 ml5">--config-file</Code>
+              </li>
+            </ul>
+            <li>
+              <Text>
+                <FormattedMessage defaultMessage="The Teku config file environment variable" />
+              </Text>
+            </li>
+            <ul>
+              <li>
+                <Code className="px5 ml5">TEKU_CONFIG_FILE</Code>
+              </li>
+            </ul>
+          </ul>
+          <Text>
+            <FormattedMessage defaultMessage="The YAML files can have different syntaxes." />
+          </Text>
+          <ul>
+            <li>
+              <Code className="px5 ml5">
+                {`validators-keys: [<KEY_DIR>:<PASS_DIR>]`}
+              </Code>
+            </li>
+            <li>
+              <Code className="px5 ml5">
+                {`validators-keys: [<KEY_FILE_1>:<PASS_FILE_1>,...,<KEY_FILE_N>:<PASS_FILE_N>]`}
+              </Code>
+            </li>
+          </ul>
           <Heading level={4} className="mt10 mb5">
-            Note:
+            <FormattedMessage defaultMessage="Note" />
           </Heading>
           <Text>
-            <Code className="px5 ml5">
-              {'<'}KEY_DIR{'>'}:{'<'}PASS_DIR{'>'}
-            </Code>{' '}
-            will find{' '}
-            <Code className="px5 ml5">
-              {'<'}KEY_DIR{'>/**'}.json
-            </Code>
-            , and expect to find{' '}
-            <Code className="px5 ml5">
-              {'<'}PASS_DIR{'>/**'}.txt
-            </Code>
-            .{' '}
-            <Code className="px5 ml5">
-              {'<'}KEY_FILE{'>'}:{'<'}PASS_FILE{'>'}
-            </Code>{' '}
-            will expect that the file{' '}
-            <Code className="px5 ml5">
-              {'<'}KEY_FILE{'>'}
-            </Code>{' '}
-            exists, and the file containing the password for it is{' '}
-            <Code className="px5 ml5">
-              {'<'}PASS_FILE{'>'}
-            </Code>
-            . The path separator is operating system dependent, and should be{' '}
-            <Code className="px5 ml5">;</Code> in Windows rather than{' '}
-            <Code className="px5 ml5">:</Code>.
+            <FormattedMessage
+              defaultMessage="{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
+              description="{directoriesPattern} refers to a computer command which will find {keyDirectory} and
+                {passwordDirectory} - both folders within a computer."
+              values={{
+                directoriesPattern: (
+                  <Code className="px5 ml5">{`<KEY_DIR>:<PASS_DIR>`}</Code>
+                ),
+                keyDirectory: (
+                  <Code className="px5 ml5">{`<KEY_DIR>/**.json`}</Code>
+                ),
+                passwordDirectory: (
+                  <Code className="px5 ml5">{`<PASS_DIR>/**.txt`}</Code>
+                ),
+              }}
+            />{' '}
+            <FormattedMessage
+              defaultMessage="{filesPattern} will expect that the {keyFile} exists, and the file containing the
+                password for it is {passwordFile}."
+              description="{filesPattern} refers to a computer command which will find {keyFile} and
+                {passwordFile} - both files within a computer."
+              values={{
+                filesPattern: (
+                  <Code className="px5 ml5">{`<KEY_FILE>:<PASS_FILE>`}</Code>
+                ),
+                keyFile: <Code className="px5 ml5">{'<KEY_FILE>'}</Code>,
+                passwordFile: <Code className="px5 ml5">{'<PASS_FILE>'}</Code>,
+              }}
+            />{' '}
+            <FormattedMessage
+              defaultMessage="The path separator is operating system dependent, and should be {semicolon}
+                in Windows rather than {colon}."
+              description="The {semicolon} and {colon} variables refer to the keyboard characters ';' and ':'."
+              values={{
+                semicolon: <Code className="px5 ml5">;</Code>,
+                colon: <Code className="px5 ml5">:</Code>,
+              }}
+            />
           </Text>
         </section>
         <section>
           <SectionTitle level={2} className="mb5">
-            Troubleshooting
+            <FormattedMessage defaultMessage="Troubleshooting" />
           </SectionTitle>
           <ul>
             <li>
               <Text>
                 <Link
-                  external
-                  inline
+                  primary
                   to="https://docs.teku.pegasys.tech/en/latest/Reference/CLI/CLI-Syntax/#validators-key-password-files"
                 >
-                  Teku documentation on options and subcommands
+                  <FormattedMessage defaultMessage="Read options and subcommands documentation" />
                 </Link>
               </Text>
             </li>
             <li>
               <Text>
-                Check that the password files don’t have trailing new-lines
+                <FormattedMessage defaultMessage="Check that the password files don’t have trailing new-lines." />
               </Text>
             </li>
           </ul>
@@ -162,8 +222,14 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
 );
 
 export const Teku = () => {
+  const { formatMessage } = useIntl();
   return (
-    <PageTemplate title="">
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { clientName: 'Teku' }
+      )}
+    >
       <ValidatorClientPageStyles>
         <Hero
           imgSrc={tekuBg}
@@ -172,15 +238,14 @@ export const Teku = () => {
         <TekuDetails />
         <section>
           <SectionTitle level={2} className="mb5">
-            Documentation
+            <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
           <Link
             primary
-            external
             to="https://docs.teku.pegasys.tech/en/latest/"
-            withArrow
+            className="mt10"
           >
-            Documentation on running Teku
+            <FormattedMessage defaultMessage="Teku documentation" />
           </Link>
         </section>
       </ValidatorClientPageStyles>

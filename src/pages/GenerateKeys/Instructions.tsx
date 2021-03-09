@@ -4,6 +4,7 @@ import { TextSelectionBox } from '../../components/TextSelectionBox';
 import { Option1 } from './Option1';
 import { Option2 } from './Option2';
 import { Heading } from '../../components/Heading';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 interface Props {
   validatorCount: number | string;
@@ -11,11 +12,12 @@ interface Props {
 }
 
 export const Instructions = ({ validatorCount, os }: Props) => {
+  const { formatMessage } = useIntl();
   const [selectedOption, setSelectedOption] = React.useState<1 | 2>(1);
   return (
     <Paper className="mt20" style={{ animation: 'fadeIn 1s' }}>
       <Heading level={2} size="small" color="blueMedium">
-        How do you want to run the CLI?
+        <FormattedMessage defaultMessage="How do you want to run the CLI?" />
       </Heading>
       <div className="my20" style={{ display: 'flex' }}>
         <TextSelectionBox
@@ -23,13 +25,13 @@ export const Instructions = ({ validatorCount, os }: Props) => {
           onClick={() => setSelectedOption(1)}
           style={{ marginRight: '20px' }}
         >
-          Download CLI app
+          {formatMessage({ defaultMessage: 'Download CLI app' })}
         </TextSelectionBox>
         <TextSelectionBox
           isActive={selectedOption === 2}
           onClick={() => setSelectedOption(2)}
         >
-          Build from source
+          {formatMessage({ defaultMessage: 'Build from source' })}
         </TextSelectionBox>
       </div>
       <div>

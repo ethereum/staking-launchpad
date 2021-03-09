@@ -17,23 +17,16 @@ interface Props {
   subTitle: string;
   link: string;
   linkUrl: string;
-  external?: boolean;
 }
 
-export const UpgradeCard = ({
-  title,
-  subTitle,
-  link,
-  linkUrl,
-  external,
-}: Props) => {
+export const UpgradeCard = ({ title, subTitle, link, linkUrl }: Props) => {
   return (
     <Container>
       <Heading level="4" size="large" className="my10">
         {title}
       </Heading>
       <Text>{subTitle}</Text>
-      <Link primary external={external} className="mt20" to={linkUrl} withArrow>
+      <Link primary className="mt20" to={linkUrl}>
         {link}
       </Link>
     </Container>

@@ -26,9 +26,10 @@ export enum NetworkChainId {
   for UI purposes, all networks are "supported", but an error message
  is displayed when the user is not connected to the "allowed" network
  */
+
 const supportedNetworks = [
-  NetworkChainId.Mainnet,
   NetworkChainId['Göerli'],
+  NetworkChainId.Mainnet,
   NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
   NetworkChainId.Kovan,

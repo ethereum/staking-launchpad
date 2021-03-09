@@ -1,30 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
-import { ProgressBar } from './ProgressBar';
+import { Link } from '../../../components/Link';
+import { Button } from '../../../components/Button';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
 import {
-  IS_MAINNET,
-  ETH_REQUIREMENT,
+  BEACONCHAIN_URL,
   ENABLE_RPC_FEATURES,
-  ETH2_NETWORK_NAME,
-  PRICE_PER_VALIDATOR,
   TICKER_NAME,
 } from '../../../utils/envVars';
-import useMobileCheck from '../../../hooks/useMobileCheck';
-
-//
-// Helpers
-
-const calculatePercentage = (amountEth: number) => {
-  const percentage = (amountEth / +ETH_REQUIREMENT) * 100;
-  return percentage && Math.max(1, percentage);
-};
-
-const calculateLaunchThreshold = (amountEth: number) =>
-  Math.floor(+ETH_REQUIREMENT - amountEth);
+import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
 
 //
 // Styled Components
@@ -32,7 +20,7 @@ const calculateLaunchThreshold = (amountEth: number) =>
 const Container = styled.div`
   background-color: ${p => p.theme.green.light};
   position: relative;
-  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? '60px 0' : '150px 0')};
+  padding: ${(p: { isMobile: boolean }) => (p.isMobile ? '64px 0' : '124px 0')};
 `;
 const Content = styled.div`
   max-width: ${p => p.theme.screenSizes.largest};
@@ -44,89 +32,49 @@ const Content = styled.div`
       p.isMobile ? '0 20px' : '0 60px'};
   }
 `;
+
 const BoldGreen = styled.span`
   color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
   font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
   font-weight: bold;
 `;
-const BoldGray = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.gray.medium};
-  font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
-  font-weight: bold;
+
+const Card = styled.div`
+  padding: 24px;
+  border: 1px solid ${p => p.theme.gray.dark};
+  border-radius: 4px;
+  width: 100%;
+  margin: 16px;
+  background: white;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    margin: 0px;
+    margin-top: 16px;
+  }
 `;
 
-//
-// Sub-components
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    flex-direction: column;
+  }
+`;
 
-const PreThresholdSubText = ({
-  amountEth = 0,
-  mobile = false,
-}: {
-  amountEth?: number;
-  mobile?: boolean;
-}) => (
-  <div className="flex space-between mt20">
-    <span className={`flex ${mobile ? 'flex-column flex-start' : ''}`}>
-      <BoldGreen fontSize={18} className="mr10">
-        {numberWithCommas(amountEth)} {TICKER_NAME}
-      </BoldGreen>
-      <Text size="small" style={{ marginTop: '2px' }}>
-        current staking balance
-      </Text>
-    </span>
-    <Text
-      className={mobile ? 'flex flex-column align-flex-end' : ''}
-      size="small"
-    >
-      <strong>
-        {calculateLaunchThreshold(amountEth)} {TICKER_NAME}
-        {mobile ? <br /> : <>&nbsp;</>}
-      </strong>
-      until launch threshold
-    </Text>
-  </div>
-);
-
-const PostThresholdSubText = ({
-  amountEth = 0,
-  mobile = false,
-}: {
-  amountEth?: number;
-  mobile?: boolean;
-}) => (
-  <div className="flex space-between mt20">
-    <Text size="small">
-      <strong>
-        {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME}
-        {mobile ? <br /> : <>&nbsp;</>}
-      </strong>
-      until launch threshold
-    </Text>
-    <span
-      className={`flex ${
-        mobile ? 'flex-column flex-start align-flex-end' : ''
-      }`}
-    >
-      <BoldGreen fontSize={18} className={mobile ? '' : 'mr10'}>
-        {numberWithCommas(amountEth)} {TICKER_NAME}
-      </BoldGreen>
-      <Text size="small" style={{ marginTop: '2px' }}>
-        current staking balance
-      </Text>
-    </span>
-  </div>
-);
+type PropData = {
+  amountEth: number;
+  totalValidators: number;
+  status: number;
+};
 
 //
 // Main Component
 
-export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
-  amountEth = 0,
-}): JSX.Element | null => {
-  const isSmallScreen: boolean = useMobileCheck('630px');
+export const NetworkStatus: React.FC<{
+  state: PropData;
+}> = ({ state }): JSX.Element | null => {
+  const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
-  const percentageComplete = calculatePercentage(amountEth);
-  const thresholdReached = amountEth >= +ETH_REQUIREMENT;
+  const { amountEth, totalValidators, status } = state;
 
   React.useEffect(() => {
     const resizeListener = () => {
@@ -138,60 +86,78 @@ export const NetworkStatus: React.FC<{ amountEth?: number }> = ({
 
   if (!ENABLE_RPC_FEATURES) return null;
 
-  const validatorRequirement = numberWithCommas(
-    Math.round(+ETH_REQUIREMENT / +PRICE_PER_VALIDATOR)
-  );
+  const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
+  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
+
+  const LoadingHandler: React.FC<{
+    value?: string;
+  }> = ({ value }): JSX.Element => {
+    if (status === 200) {
+      return <span>{value}</span>;
+    }
+    if (status === 500) {
+      return <FormattedMessage defaultMessage="Loading error" />;
+    }
+    return <FormattedMessage defaultMessage="Loading..." />;
+  };
 
   return (
     <Container isMobile={m}>
-      <Content isMobile={m}>
-        <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
-          <Heading level={2} size="medium" color="blueDark" margin="none">
-            Network status
+      <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
+        <Content isMobile={m}>
+          <Heading level={2} size="medium" color="blueDark" className="mb40">
+            <FormattedMessage defaultMessage="The Eth2 network" />
           </Heading>
-          <Text size="x-large" className="mt20">
-            <BoldGreen className="mr10" fontSize={24}>
-              {numberWithCommas(amountEth)} {TICKER_NAME}
-            </BoldGreen>
-            already staked and counting.
-          </Text>
-          {thresholdReached ? (
-            <>
-              <Text className="mt20">
-                The threshold to launch the eth2
-                {IS_MAINNET ? ` mainnet ` : ` ${ETH2_NETWORK_NAME} testnet `}
-                has been reached 🎉
-              </Text>
-              <div>
-                <ProgressBar workflow={percentageComplete} />
-                <PostThresholdSubText
-                  {...{ amountEth, mobile: isSmallScreen }}
+          <CardContainer>
+            <Card>
+              <Heading level={3} size="medium" color="blueDark" margin="none">
+                <FormattedMessage
+                  defaultMessage="Total {TICKER_NAME} staked"
+                  values={{ TICKER_NAME }}
                 />
-              </div>
-            </>
-          ) : (
-            <>
-              <Text className="mt20">
-                The eth2 network needs to reach at least
-                <BoldGreen className="mr10 ml10" fontSize={24}>
-                  {numberWithCommas(ETH_REQUIREMENT)} {TICKER_NAME},
+              </Heading>
+              <Text size="x-large" className="mt20">
+                <BoldGreen className="mr10" fontSize={24}>
+                  <LoadingHandler
+                    value={`${numberWithCommas(amountEth)} ${TICKER_NAME}`}
+                  />
                 </BoldGreen>
-                <BoldGray className="mr10" fontSize={24}>
-                  {validatorRequirement} validators,
-                </BoldGray>
-                to launch the
-                {IS_MAINNET ? ` mainnet` : ` ${ETH2_NETWORK_NAME} testnet`}.
               </Text>
-              <div>
-                <ProgressBar workflow={percentageComplete} />
-                <PreThresholdSubText
-                  {...{ amountEth, mobile: isSmallScreen }}
+            </Card>
+            <Card>
+              <Heading level={3} size="medium" color="blueDark" margin="none">
+                <FormattedMessage defaultMessage="Total validators" />
+              </Heading>
+              <Text size="x-large" className="mt20">
+                <BoldGreen className="mr10" fontSize={24}>
+                  <LoadingHandler value={numberWithCommas(totalValidators)} />
+                </BoldGreen>
+              </Text>
+            </Card>
+            <Card>
+              <Heading level={3} size="medium" color="blueDark" margin="none">
+                <FormattedMessage
+                  defaultMessage="Current APR"
+                  description="APR refers to Annual Percentage Rate"
                 />
-              </div>
-            </>
-          )}
-        </ScrollAnimation>
-      </Content>
+              </Heading>
+              <Text size="x-large" className="mt20">
+                <BoldGreen className="mr10" fontSize={24}>
+                  {formattedAPR}%
+                </BoldGreen>
+              </Text>
+            </Card>
+          </CardContainer>
+          <Link isTextLink={false} to={BEACONCHAIN_URL} className="pt40">
+            <Button
+              className="m-auto"
+              fullWidth
+              width={m ? undefined : 400}
+              label={formatMessage({ defaultMessage: 'More stats' })}
+            />
+          </Link>
+        </Content>
+      </ScrollAnimation>
     </Container>
   );
 };

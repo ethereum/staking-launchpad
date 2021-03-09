@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormNextLink, Share } from 'grommet-icons';
+import { FormNextLink } from 'grommet-icons';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import {
@@ -15,16 +16,30 @@ import {
 import ReactTooltip from 'react-tooltip';
 
 const Container = styled.div`
-  width: 100px;
   display: flex;
+  border: 1px solid ${p => p.theme.gray.medium};
+  padding: 4px;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  :hover {
+    background: ${p => p.theme.gray.light};
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
 `;
+
 const ButtonText = styled(Text)`
   line-height: inherit;
   font-size: 16px;
-  cursor: pointer;
-  :hover {
-    text-decoration: underline;
-  }
+  text-align: center;
+`;
+
+const ButtonLink = styled(Link)`
+  line-height: inherit;
+  font-size: 16px;
+  text-align: center;
 `;
 
 interface Props {
@@ -42,20 +57,25 @@ export const ActionButton = ({
   onClick,
   pubkey,
 }: Props) => {
+  const { formatMessage } = useIntl();
+
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
-      <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
-        <ButtonText className="mr5" data-tip>
-          Beaconchain <Share size="small" />
-        </ButtonText>
-      </Link>
+      <ButtonLink
+        to={`${BEACONCHAIN_URL}/0x${pubkey}`}
+        className="mr5"
+        data-tip
+      >
+        Beaconcha.in
+      </ButtonLink>
     );
   }
   if (transactionStatus === TransactionStatus.READY) {
     return (
       <Container onClick={onClick}>
-        <ButtonText>Start</ButtonText>
-        <FormNextLink />
+        <ButtonText>
+          <FormattedMessage defaultMessage="Confirm deposit" />
+        </ButtonText>
       </Container>
     );
   }
@@ -65,11 +85,7 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
-        <Link external to={`${ETHERSCAN_URL}/${txHash}`}>
-          <ButtonText>
-            Etherscan <Share size="small" />
-          </ButtonText>
-        </Link>
+        <ButtonLink to={`${ETHERSCAN_URL}/${txHash}`}>Etherscan</ButtonLink>
       </div>
     );
   }
@@ -78,21 +94,22 @@ export const ActionButton = ({
       <div className="flex">
         <span
           data-for="beaconchain-warning"
-          data-tip="Note: Beaconchain may take several minutes to verify your deposit"
+          data-tip={formatMessage({
+            defaultMessage:
+              'Note: the Beacon Chain may take several minutes to verify your deposit',
+          })}
         >
-          <Link external to={`${BEACONCHAIN_URL}/0x${pubkey}`}>
-            <ButtonText className="mr5" data-tip>
-              Beaconchain <Share size="small" />
-            </ButtonText>
-          </Link>
+          <ButtonLink
+            to={`${BEACONCHAIN_URL}/0x${pubkey}`}
+            className="mr5"
+            data-tip
+          >
+            Beaconcha.in
+          </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
 
-        <Link external to={`${BEACONSCAN_URL}/0x${pubkey}`}>
-          <ButtonText>
-            Beaconscan <Share size="small" />
-          </ButtonText>
-        </Link>
+        <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>Beaconscan</ButtonLink>
       </div>
     );
   }
@@ -100,11 +117,17 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.REJECTED) {
     return (
       <Container onClick={onClick}>
-        <ButtonText>Try again</ButtonText>
+        <ButtonText>
+          <FormattedMessage defaultMessage="Try again" />
+        </ButtonText>
         <FormNextLink />
       </Container>
     );
   }
 
-  return <Text>An Error Occurred</Text>;
+  return (
+    <Text>
+      <FormattedMessage defaultMessage="An error occurred" />
+    </Text>
+  );
 };

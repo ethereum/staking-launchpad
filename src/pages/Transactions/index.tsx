@@ -3,6 +3,7 @@ import { Dispatch } from 'redux';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { connect } from 'react-redux';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import _every from 'lodash/every';
 import _some from 'lodash/some';
@@ -56,6 +57,7 @@ const _TransactionsPage = ({
   dispatchTransactionStatusUpdate,
   dispatchWorkflowUpdate,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -85,27 +87,39 @@ const _TransactionsPage = ({
 
   const createButtonText = (): string => {
     if (totalTxCount === 1) {
-      return 'Initiate the transaction.';
+      return formatMessage({ defaultMessage: 'Send deposit' });
     }
     if (totalTxCount === remainingTxCount && totalTxCount > 0) {
-      return `Initiate all ${totalTxCount} transactions`;
+      return formatMessage(
+        {
+          defaultMessage: `Send all {totalTxCount} deposits`,
+        },
+        { totalTxCount }
+      );
     }
     if (remainingTxCount > 1) {
-      return `Initiate remaining ${remainingTxCount} transactions`;
+      return formatMessage(
+        {
+          defaultMessage: `Send remaining {remainingTxCount} deposits`,
+        },
+        { remainingTxCount }
+      );
     }
     if (remainingTxCount === 1) {
-      return `Initiate last transaction`;
+      return formatMessage({ defaultMessage: `Send last deposit` });
     }
-    return 'No pending transactions';
+    return formatMessage({ defaultMessage: 'No pending deposits' });
   };
 
   const createContinueButtonText = (): string => {
     if (!oneTxConfirmed) {
-      return '🎉 Continue';
+      return formatMessage({ defaultMessage: 'Continue' });
     }
     return allTxConfirmed
-      ? '🎉 Continue'
-      : '⚠️ Complete without all transactions confirmed';
+      ? formatMessage({ defaultMessage: 'Continue' })
+      : formatMessage({
+          defaultMessage: 'Continue without all transactions confirmed',
+        });
   };
 
   const handleAllTransactionsClick = () => {
@@ -134,22 +148,35 @@ const _TransactionsPage = ({
   if (chainId !== NETWORK_ID) return <WrongNetwork />;
 
   return (
-    <WorkflowPageTemplate title="Transactions">
+    <WorkflowPageTemplate
+      title={formatMessage({ defaultMessage: 'Transactions' })}
+    >
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          Transactions for {depositKeys.length} validator
-          {depositKeys.length === 1 ? '' : 's'}
+          <FormattedMessage
+            defaultMessage="Confirm deposits ({depositKeys})"
+            values={{ depositKeys: depositKeys.length }}
+          />
         </Heading>
-        <Text className="mt20">
-          You must sign an individual transaction for each key you created.
-        </Text>
-        <Text className="mt10">
-          You can initiate these all at once, or sign them individually from the
-          key-list below
-        </Text>
+        {depositKeys.length === 1 && (
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="Submit a transaction to finish your deposit." />
+          </Text>
+        )}
+        {depositKeys.length > 1 && (
+          <>
+            <Text className="mt20">
+              <FormattedMessage defaultMessage="You must sign a transaction for every deposit you want to make." />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="You can start all the transactions at once, or start them individually." />
+            </Text>
+          </>
+        )}
+        {depositKeys.length >= 1 && <KeyList />}
         <div className="flex center mt30">
           <Button
-            width={300}
+            fullWidth
             rainbow
             label={createButtonText()}
             onClick={handleAllTransactionsClick}
@@ -158,11 +185,13 @@ const _TransactionsPage = ({
         </div>
       </Paper>
 
-      <KeyList />
-
       <div className="flex center p30 mt20">
         <Link to={routesEnum.summaryPage}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.congratulationsPage} onClick={handleSubmit}>
           <Button

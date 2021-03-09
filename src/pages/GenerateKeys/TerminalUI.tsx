@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { useIntl } from 'react-intl';
 import { Text } from '../../components/Text';
 
 const Container = styled.div`
@@ -49,6 +50,7 @@ export const TerminalUI = ({
   animate: boolean;
 }) => {
   const [copyIdx, setCopyIdx] = useState<null | number>(null);
+  const { formatMessage } = useIntl();
 
   const onCopy = (i: number): void => {
     setCopyIdx(i);
@@ -71,7 +73,9 @@ export const TerminalUI = ({
               <TerminalText>{command}</TerminalText>
               <CopyToClipboard text={command} onCopy={() => onCopy(i)}>
                 <CopyContainer>
-                  {copyIdx === i ? 'Copied' : 'Copy'}
+                  {copyIdx === i
+                    ? formatMessage({ defaultMessage: 'Copied' })
+                    : formatMessage({ defaultMessage: 'Copy' })}
                 </CopyContainer>
               </CopyToClipboard>
             </div>

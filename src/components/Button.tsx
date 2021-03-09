@@ -22,15 +22,19 @@ const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
 const StyledButton = styled(GrommetButton)`
   display: block;
   padding: 15px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   width: ${calculateWidth};
   font-size: 18px;
   letter-spacing: 1.5px;
   background-color: ${p =>
     p.primary ? p.theme.blue.dark : p.theme.gray.light};
   border: ${p => `1px solid ${p.theme.gray.medium}`};
-  :hover {
-    box-shadow: none;
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+    transition: transform 0.1s;
+    transform: scale(1.02);
   }
   // rainbow styles
   ${p =>

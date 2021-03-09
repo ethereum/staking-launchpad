@@ -9,7 +9,7 @@ The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's of
   - **Technology stack**: 
     - [React](https://reactjs.org/) via [CRA](https://reactjs.org/docs/create-a-new-react-app.html)
     - [Redux](https://redux.js.org/)
-    - [Typescript](https://www.typescriptlang.org/)
+    - [TypeScript](https://www.typescriptlang.org/)
     - [Web3-React](https://github.com/NoahZinsmeister/web3-react)
     - [Grommet](https://v2.grommet.io/)
     - [Yarn](https://yarnpkg.com/)

@@ -130,7 +130,7 @@ export const pageContent = {
         >
           <FormattedMessage defaultMessage="The Eth2 specification" />
         </Link>
-        <Link to="/faq" className="my10" primary>
+        <Link shouldOpenNewTab={true} to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
         </Link>
       </>
@@ -278,7 +278,13 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage defaultMessage="I have read and agree to the Launchpad terms of service." />
         </Text>
-        <Link inline to="/terms-of-service" className="my10" primary>
+        <Link
+          inline
+          shouldOpenNewTab={true}
+          to="/terms-of-service"
+          className="my10"
+          primary
+        >
           <FormattedMessage defaultMessage="Terms of service" />
         </Link>
       </>

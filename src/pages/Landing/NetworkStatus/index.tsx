@@ -60,6 +60,11 @@ const CardContainer = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 type PropData = {
   amountEth: number;
   totalValidators: number;
@@ -148,14 +153,15 @@ export const NetworkStatus: React.FC<{
               </Text>
             </Card>
           </CardContainer>
-          <Link isTextLink={false} to={BEACONCHAIN_URL} className="pt40">
-            <Button
-              className="m-auto"
-              fullWidth
-              width={m ? undefined : 400}
-              label={formatMessage({ defaultMessage: 'More stats' })}
-            />
-          </Link>
+          <ButtonContainer className="pt40">
+            <Link isTextLink={false} to={BEACONCHAIN_URL}>
+              <Button
+                fullWidth
+                width={m ? undefined : 400}
+                label={formatMessage({ defaultMessage: 'More stats' })}
+              />
+            </Link>
+          </ButtonContainer>
         </Content>
       </ScrollAnimation>
     </Container>

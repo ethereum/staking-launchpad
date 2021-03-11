@@ -34,6 +34,11 @@ const Subtitle = styled.p`
   margin-bottom: 32px;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const SignupSteps = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
   const intl = useIntl();
@@ -157,15 +162,19 @@ export const SignupSteps = (): JSX.Element => {
         </ScrollAnimation>
       </StepsContainer>
       <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>
-        <Link to={routesEnum.acknowledgementPage} className="pt100">
-          <Button
-            rainbow
-            className="m-auto"
-            fullWidth
-            width={m ? undefined : 400}
-            label={intl.formatMessage({ defaultMessage: 'Become a validator' })}
-          />
-        </Link>
+        <ButtonContainer className="pt100">
+          <Link to={routesEnum.acknowledgementPage}>
+            <Button
+              rainbow
+              className="m-auto"
+              fullWidth
+              width={m ? undefined : 400}
+              label={intl.formatMessage({
+                defaultMessage: 'Become a validator',
+              })}
+            />
+          </Link>
+        </ButtonContainer>
       </ScrollAnimation>
     </Container>
   );

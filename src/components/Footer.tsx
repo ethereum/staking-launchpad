@@ -40,6 +40,16 @@ const FooterStyles = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const ButtonLink = styled(Link)`
+  width: fit-content;
+  padding: 0;
+`;
+
 export const Footer = () => {
   const { pathname } = useLocation();
   const despotWorkflowRoutes = [
@@ -76,28 +86,32 @@ export const Footer = () => {
         </div>
 
         {!despotWorkflowRoutes.includes(pathname as routesEnum) && (
-          <Link to={routesEnum.acknowledgementPage} className="cta-button">
-            <Button
-              rainbow
-              className="m-auto"
-              fullWidth
-              width={400}
-              label={
-                <FormattedMessage
-                  defaultMessage="Become a validator {emoji}"
-                  values={{
-                    emoji: (
-                      <Rhino>
-                        <span role="img" aria-label="rhino">
-                          🦏
-                        </span>
-                      </Rhino>
-                    ),
-                  }}
-                />
-              }
-            />
-          </Link>
+          <ButtonContainer className="m-auto">
+            <ButtonLink
+              to={routesEnum.acknowledgementPage}
+              className="cta-button"
+            >
+              <Button
+                rainbow
+                fullWidth
+                width={400}
+                label={
+                  <FormattedMessage
+                    defaultMessage="Become a validator {emoji}"
+                    values={{
+                      emoji: (
+                        <Rhino>
+                          <span role="img" aria-label="rhino">
+                            🦏
+                          </span>
+                        </Rhino>
+                      ),
+                    }}
+                  />
+                }
+              />
+            </ButtonLink>
+          </ButtonContainer>
         )}
         <div className="col extra-links">
           <Heading level={4}>

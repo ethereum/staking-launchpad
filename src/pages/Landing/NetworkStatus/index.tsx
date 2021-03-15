@@ -7,11 +7,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
-import {
-  BEACONCHAIN_URL,
-  ENABLE_RPC_FEATURES,
-  TICKER_NAME,
-} from '../../../utils/envVars';
+import { BEACONCHAIN_URL, TICKER_NAME } from '../../../utils/envVars';
 import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
 
 //
@@ -60,6 +56,11 @@ const CardContainer = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 type PropData = {
   amountEth: number;
   totalValidators: number;
@@ -83,8 +84,6 @@ export const NetworkStatus: React.FC<{
     window.addEventListener('resize', resizeListener);
     return () => window.removeEventListener('resize', resizeListener);
   }, []);
-
-  if (!ENABLE_RPC_FEATURES) return null;
 
   const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
@@ -148,14 +147,15 @@ export const NetworkStatus: React.FC<{
               </Text>
             </Card>
           </CardContainer>
-          <Link isTextLink={false} to={BEACONCHAIN_URL} className="pt40">
-            <Button
-              className="m-auto"
-              fullWidth
-              width={m ? undefined : 400}
-              label={formatMessage({ defaultMessage: 'More stats' })}
-            />
-          </Link>
+          <ButtonContainer className="pt40">
+            <Link isTextLink={false} to={BEACONCHAIN_URL}>
+              <Button
+                fullWidth
+                width={m ? undefined : 400}
+                label={formatMessage({ defaultMessage: 'More stats' })}
+              />
+            </Link>
+          </ButtonContainer>
         </Content>
       </ScrollAnimation>
     </Container>

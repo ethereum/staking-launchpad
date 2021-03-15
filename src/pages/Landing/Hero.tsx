@@ -112,9 +112,18 @@ const StyledLeslieImgNode = styled.img`
 `;
 
 const ButtonRow = styled.div`
+  width: fit-content;
   display: flex;
   @media screen and (max-width: 1080px) {
     flex-direction: column;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  width: fit-content;
+  margin: 0;
+  @media (max-width: 400px) {
+    width: 100%;
   }
 `;
 
@@ -191,32 +200,36 @@ export const Hero = () => {
                     className={m ? undefined : 'mt100'}
                   >
                     <ButtonRow>
-                      <Link to={routesEnum.acknowledgementPage}>
-                        <Button
-                          fullWidth={m || isSmallScreen}
-                          rainbow
-                          width={isSmallScreen || m ? undefined : 250}
-                          label={
-                            m
-                              ? formatMessage({
-                                  defaultMessage:
-                                    'Become a validator on desktop',
-                                })
-                              : formatMessage({
-                                  defaultMessage: 'Become a validator',
-                                })
-                          }
-                        />
-                      </Link>
-                      <Link to={routesEnum.checklistPage}>
-                        <Button
-                          className={isMediumScreen || m ? `mt20` : `ml20`}
-                          fullWidth={m || isSmallScreen}
-                          label={formatMessage({
-                            defaultMessage: 'Thinking about staking?',
-                          })}
-                        />
-                      </Link>
+                      <ButtonContainer>
+                        <Link to={routesEnum.acknowledgementPage}>
+                          <Button
+                            fullWidth={m || isSmallScreen}
+                            rainbow
+                            label={
+                              m
+                                ? formatMessage({
+                                    defaultMessage:
+                                      'Become a validator on desktop',
+                                  })
+                                : formatMessage({
+                                    defaultMessage: 'Become a validator',
+                                  })
+                            }
+                          />
+                        </Link>
+                      </ButtonContainer>
+                      <ButtonContainer
+                        className={isMediumScreen || m ? `mt20` : `ml20`}
+                      >
+                        <Link to={routesEnum.checklistPage}>
+                          <Button
+                            fullWidth={m || isSmallScreen}
+                            label={formatMessage({
+                              defaultMessage: 'Thinking about staking?',
+                            })}
+                          />
+                        </Link>
+                      </ButtonContainer>
                     </ButtonRow>
                   </Animate>
                 </InfoContainer>

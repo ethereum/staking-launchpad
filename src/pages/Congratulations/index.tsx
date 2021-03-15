@@ -21,7 +21,6 @@ import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
 import {
-  ENABLE_RPC_FEATURES,
   PRICE_PER_VALIDATOR,
   TESTNET_LAUNCHPAD_NAME,
   IS_MAINNET,
@@ -248,15 +247,13 @@ const _CongratulationsPage = ({
   };
 
   useEffect(() => {
-    if (ENABLE_RPC_FEATURES) {
-      (async () => {
-        const response = await queryBeaconchain();
-        setState({
-          amountEth: response.body.amountEth,
-          status: response.statusCode,
-        });
-      })();
-    }
+    (async () => {
+      const response = await queryBeaconchain();
+      setState({
+        amountEth: response.body.amountEth,
+        status: response.statusCode,
+      });
+    })();
   }, []);
 
   const LoadingHandler: React.FC<{
@@ -332,158 +329,139 @@ const _CongratulationsPage = ({
             )}
           </Alert>
           <div>
-            {ENABLE_RPC_FEATURES && (
-              <>
-                <Heading
-                  level={3}
-                  size="medium"
-                  color="blueDark"
-                  margin="none"
-                  className="mt60"
-                >
-                  <FormattedMessage defaultMessage="Overview" />
+            <Heading
+              level={3}
+              size="medium"
+              color="blueDark"
+              margin="none"
+              className="mt60"
+            >
+              <FormattedMessage defaultMessage="Overview" />
+            </Heading>
+            <CardContainer>
+              <Card>
+                <Heading level={3} size="medium" color="blueDark" margin="none">
+                  <FormattedMessage defaultMessage="Your stake" />
                 </Heading>
-                <CardContainer>
-                  <Card>
-                    <Heading
-                      level={3}
-                      size="medium"
-                      color="blueDark"
-                      margin="none"
-                    >
-                      <FormattedMessage defaultMessage="Your stake" />
-                    </Heading>
-                    <Text size="x-large" className="mt20">
-                      <BoldGreen className="mr10" fontSize={24}>
-                        {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
-                      </BoldGreen>
-                    </Text>
-                  </Card>
-                  <Card>
-                    <Heading
-                      level={3}
-                      size="medium"
-                      color="blueDark"
-                      margin="none"
-                    >
-                      <FormattedMessage defaultMessage="Your validators" />
-                    </Heading>
-                    <Text size="x-large" className="mt20">
-                      <BoldGreen className="mr10" fontSize={24}>
+                <Text size="x-large" className="mt20">
+                  <BoldGreen className="mr10" fontSize={24}>
+                    {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
+                  </BoldGreen>
+                </Text>
+              </Card>
+              <Card>
+                <Heading level={3} size="medium" color="blueDark" margin="none">
+                  <FormattedMessage defaultMessage="Your validators" />
+                </Heading>
+                <Text size="x-large" className="mt20">
+                  <BoldGreen className="mr10" fontSize={24}>
+                    <FormattedMessage
+                      defaultMessage="{totalTxCount} validators"
+                      values={{
+                        totalTxCount: <span>{actualTxConfirmed}</span>,
+                      }}
+                    />
+                  </BoldGreen>
+                </Text>
+                {!allTxConfirmed && (
+                  <WarningRow>
+                    <FlagFill color="red" />
+                    <WarningText className="ml20">
+                      {remainingTxCount === 1 ? (
                         <FormattedMessage
-                          defaultMessage="{totalTxCount} validators"
-                          values={{
-                            totalTxCount: <span>{actualTxConfirmed}</span>,
-                          }}
+                          defaultMessage="You have {remainingTxCount} outstanding deposit"
+                          values={{ remainingTxCount }}
+                          description="Singular form, for only one deposit"
                         />
-                      </BoldGreen>
-                    </Text>
-                    {!allTxConfirmed && (
-                      <WarningRow>
-                        <FlagFill color="red" />
-                        <WarningText className="ml20">
-                          {remainingTxCount === 1 ? (
-                            <FormattedMessage
-                              defaultMessage="You have {remainingTxCount} outstanding deposit"
-                              values={{ remainingTxCount }}
-                              description="Singular form, for only one deposit"
-                            />
-                          ) : (
-                            <FormattedMessage
-                              defaultMessage="You have {remainingTxCount} outstanding deposits"
-                              values={{ remainingTxCount }}
-                              description="Plural form, for multiple remaining deposits"
-                            />
-                          )}
-                        </WarningText>
-                      </WarningRow>
-                    )}
-                  </Card>
-                  <Card>
-                    <Heading
-                      level={3}
-                      size="medium"
-                      color="blueDark"
-                      margin="none"
-                    >
-                      <FormattedMessage defaultMessage="Current APR" />
-                    </Heading>
-                    <Text size="x-large" className="mt20">
-                      <BoldGreen className="mr10" fontSize={24}>
-                        <LoadingHandler value={`${formattedAPR}%`} />
-                      </BoldGreen>
-                    </Text>
-                  </Card>
-                  {!allTxConfirmed ? (
-                    <CardButton onClick={handleAllTransactionsClick}>
-                      <Row>
-                        <div>
-                          <Heading
-                            level={3}
-                            size="medium"
-                            color="blueDark"
-                            margin="none"
-                          >
-                            <span
-                              role="img"
-                              aria-label={formatMessage({
-                                defaultMessage: 'clipboard',
-                              })}
-                            >
-                              📋{' '}
-                            </span>
-                            <FormattedMessage defaultMessage="Next" />
-                          </Heading>
-                          <Text size="x-large" className="mt20">
-                            {remainingTxCount === 1 ? (
-                              <FormattedMessage defaultMessage="Complete your last deposit" />
-                            ) : (
-                              <FormattedMessage
-                                defaultMessage="Complete remaining {remainingTxCount} deposits"
-                                values={{ remainingTxCount }}
-                              />
-                            )}
-                          </Text>
-                          {remainingTxCount !== 1 && (
-                            <Text size="medium">
-                              <FormattedMessage defaultMessage="You can also confirm the deposits individually below..." />
-                            </Text>
-                          )}
-                        </div>
-                        <FormNext size="large" />
-                      </Row>
-                    </CardButton>
-                  ) : (
-                    <CardLink to={`${routesEnum.checklistPage}/#section-three`}>
-                      <Row>
-                        <div>
-                          <Heading
-                            level={3}
-                            size="medium"
-                            color="blueDark"
-                            margin="none"
-                          >
-                            <span
-                              role="img"
-                              aria-label={formatMessage({
-                                defaultMessage: 'clipboard',
-                              })}
-                            >
-                              📋{' '}
-                            </span>
-                            <FormattedMessage defaultMessage="Next" />
-                          </Heading>
-                          <Text size="x-large" className="mt20">
-                            <FormattedMessage defaultMessage="Complete the staker checklist" />
-                          </Text>
-                        </div>
-                        <FormNext size="large" />
-                      </Row>
-                    </CardLink>
-                  )}
-                </CardContainer>
-              </>
-            )}
+                      ) : (
+                        <FormattedMessage
+                          defaultMessage="You have {remainingTxCount} outstanding deposits"
+                          values={{ remainingTxCount }}
+                          description="Plural form, for multiple remaining deposits"
+                        />
+                      )}
+                    </WarningText>
+                  </WarningRow>
+                )}
+              </Card>
+              <Card>
+                <Heading level={3} size="medium" color="blueDark" margin="none">
+                  <FormattedMessage defaultMessage="Current APR" />
+                </Heading>
+                <Text size="x-large" className="mt20">
+                  <BoldGreen className="mr10" fontSize={24}>
+                    <LoadingHandler value={`${formattedAPR}%`} />
+                  </BoldGreen>
+                </Text>
+              </Card>
+              {!allTxConfirmed ? (
+                <CardButton onClick={handleAllTransactionsClick}>
+                  <Row>
+                    <div>
+                      <Heading
+                        level={3}
+                        size="medium"
+                        color="blueDark"
+                        margin="none"
+                      >
+                        <span
+                          role="img"
+                          aria-label={formatMessage({
+                            defaultMessage: 'clipboard',
+                          })}
+                        >
+                          📋{' '}
+                        </span>
+                        <FormattedMessage defaultMessage="Next" />
+                      </Heading>
+                      <Text size="x-large" className="mt20">
+                        {remainingTxCount === 1 ? (
+                          <FormattedMessage defaultMessage="Complete your last deposit" />
+                        ) : (
+                          <FormattedMessage
+                            defaultMessage="Complete remaining {remainingTxCount} deposits"
+                            values={{ remainingTxCount }}
+                          />
+                        )}
+                      </Text>
+                      {remainingTxCount !== 1 && (
+                        <Text size="medium">
+                          <FormattedMessage defaultMessage="You can also confirm the deposits individually below..." />
+                        </Text>
+                      )}
+                    </div>
+                    <FormNext size="large" />
+                  </Row>
+                </CardButton>
+              ) : (
+                <CardLink to={`${routesEnum.checklistPage}/#section-three`}>
+                  <Row>
+                    <div>
+                      <Heading
+                        level={3}
+                        size="medium"
+                        color="blueDark"
+                        margin="none"
+                      >
+                        <span
+                          role="img"
+                          aria-label={formatMessage({
+                            defaultMessage: 'clipboard',
+                          })}
+                        >
+                          📋{' '}
+                        </span>
+                        <FormattedMessage defaultMessage="Next" />
+                      </Heading>
+                      <Text size="x-large" className="mt20">
+                        <FormattedMessage defaultMessage="Complete the staker checklist" />
+                      </Text>
+                    </div>
+                    <FormNext size="large" />
+                  </Row>
+                </CardLink>
+              )}
+            </CardContainer>
           </div>
           {!allTxConfirmed && (
             <div id="keylist">

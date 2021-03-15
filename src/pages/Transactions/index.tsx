@@ -153,10 +153,14 @@ const _TransactionsPage = ({
     >
       <Paper className="mt20">
         <Heading level={3} size="small" color="blueMedium">
-          <FormattedMessage
-            defaultMessage="Confirm deposits ({depositKeys})"
-            values={{ depositKeys: depositKeys.length }}
-          />
+          {depositKeys.length === 1 ? (
+            <FormattedMessage defaultMessage="Confirm deposit" />
+          ) : (
+            <FormattedMessage
+              defaultMessage="Confirm deposits ({depositKeys})"
+              values={{ depositKeys: depositKeys.length }}
+            />
+          )}
         </Heading>
         {depositKeys.length === 1 && (
           <Text className="mt20">

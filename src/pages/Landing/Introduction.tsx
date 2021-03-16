@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FormattedMessage } from 'react-intl';
 import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
 import EthRound from '../../static/eth-round-landing.svg';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
+import { Link } from '../../components/Link';
 
 const Container = styled.div`
   background: ${p => p.theme.white};
@@ -64,31 +66,60 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              Introduction to the sign up process
+              <FormattedMessage defaultMessage="Validators and Eth2" />
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
-            <Text className="mt25">
-              Eth2 is the next generation of Ethereum. It’s a multi-year plan to
-              improve the scalability, security and programmability of Ethereum,
-              without compromising on decentralization.
+            <Text className="mt20">
+              <FormattedMessage
+                defaultMessage="This launchpad will help you become a validator, so you can play
+                  an active part in Ethereum's future. Validators are key to the
+                  more secure, scalable, and sustainable Ethereum we're building
+                  together."
+              />
             </Text>
-            <Text className="mt25">
-              In contrast to the Ethereum chain, as it currently stands, eth2
-              uses proof-of-stake (PoS) to secure its network. And while
-              Ethereum as you know and love it will continue to exist as its own
-              independent proof-of-work chain for a little while to come, the
-              transition towards PoS starts now.
+            <Link
+              className="mt20 mb40"
+              to="https://ethereum.org/en/eth2/vision/"
+            >
+              <FormattedMessage defaultMessage="More on the Eth2 vision" />
+            </Link>
+            <Text className="mt20">
+              <FormattedMessage
+                defaultMessage="As a validator, you'll be responsible for securing the network and
+                  receive continuous payouts for actions that help the network reach
+                  consensus."
+              />
             </Text>
-            <Text className="mt25">
-              In order to make this transition possible, eth2 requires active
-              participants – known as validators. Validators are responsible for
-              securing the network and receive continuous payouts for actions
-              that help the network reach consensus.
+            <Text className="mt20">
+              <FormattedMessage
+                defaultMessage="Today, you'll secure the Beacon Chain, the first Eth2 upgrade.
+                  It's a separate chain that uses a proof-of-stake consensus
+                  mechanism. Eventually you'll help secure all of Ethereum, once
+                  mainnet (the Ethereum we use today) merges with the Beacon Chain."
+              />
             </Text>
-            <Text className="mt25">
-              This Launch Pad takes you through how to become one.
+            <Link
+              className="mt20 mb40"
+              to="https://ethereum.org/en/eth2/docking/"
+            >
+              <FormattedMessage defaultMessage="More on the merge" />
+            </Link>
+            <Text className="mt20">
+              <FormattedMessage
+                defaultMessage="Validating in Ethereum is not the same as mining. The outcomes are
+                  similar: the work you do will extend and secure the chain. But the
+                  process is completely different because they use different
+                  consensus mechanisms."
+              />
             </Text>
+            <Link
+              className="mt20 mb40"
+              to="https://ethereum.org/en/developers/docs/consensus-mechanisms/"
+            >
+              <FormattedMessage defaultMessage="More on consensus mechanisms" />
+            </Link>
+            {/* NOTE: this section felt like there was a lot of repetition with the section below so have reframed to talk about validators in the context of the upgrades */}
           </ScrollAnimation>
         </ContentContainer>
       </SubContainer>

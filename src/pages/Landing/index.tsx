@@ -3,39 +3,38 @@ import { AppBar } from '../../components/AppBar';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
 import { StakingRewards } from './StakingRewards';
-import { TimelineMileStones } from './TimelineMilestones';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
-import { Phases } from './Phases';
-import { queryContract } from '../../utils/queryContract';
-import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
-import useMobileCheck from '../../hooks/useMobileCheck';
+import { Upgrades } from './Upgrades';
+import { queryBeaconchain } from '../../utils/queryBeaconchain';
 
 export const LandingPage = (): JSX.Element => {
-  const [amountEth, setAmountEth] = useState(0);
-
-  const mobile = useMobileCheck('800px');
+  const [state, setState] = useState({
+    amountEth: 0,
+    totalValidators: 0,
+    status: 0,
+  });
 
   useEffect(() => {
-    if (ENABLE_RPC_FEATURES) {
-      const getBalance = async () => {
-        const ethBalance = await queryContract();
-        setAmountEth(ethBalance);
-      };
-      getBalance();
-    }
-  });
+    (async () => {
+      const response = await queryBeaconchain();
+      setState({
+        amountEth: response.body.amountEth,
+        totalValidators: response.body.totalValidators,
+        status: response.statusCode,
+      });
+    })();
+  }, []);
 
   return (
     <>
-      {!mobile && <AppBar />}
+      <AppBar />
       <Hero />
-      <NetworkStatus {...{ amountEth }} />
-      <StakingRewards currentStaked={amountEth} />
-      <TimelineMileStones />
+      <NetworkStatus {...{ state }} />
+      <StakingRewards currentStaked={state.amountEth} />
       <Introduction />
       <SignupSteps />
-      <Phases />
+      <Upgrades />
     </>
   );
 };

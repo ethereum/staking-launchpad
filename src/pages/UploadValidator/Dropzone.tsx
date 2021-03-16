@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDropzone } from 'react-dropzone';
+import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { Text } from '../../components/Text';
 
@@ -46,15 +47,29 @@ export const StyledDropzone = ({ isFileStaged, onDrop }: Props) => {
     isDragAccept,
     isDragReject,
   } = useDropzone({ onDrop, accept: 'application/json' });
+  const { formatMessage } = useIntl();
 
-  let message = 'Drop or click here to upload deposit_data.json';
+  let message = formatMessage(
+    {
+      defaultMessage: 'Upload {depositJSON}',
+      description:
+        'Tells user to upload specific JSON file created during previous step',
+    },
+    { depositJSON: 'deposit_data.json' }
+  );
 
   if (isDragReject) {
-    message = 'Please upload a valid JSON file ';
+    message = formatMessage(
+      {
+        defaultMessage: "This isn't a valid {JSON} file",
+        description: '{JSON} is filetype extension',
+      },
+      { JSON: 'JSON' }
+    );
   }
 
   if (isFileStaged) {
-    message = 'File successfully uploaded';
+    message = formatMessage({ defaultMessage: 'File uploaded' });
   }
 
   return (

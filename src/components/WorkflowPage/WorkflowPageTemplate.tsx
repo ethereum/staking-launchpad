@@ -11,6 +11,8 @@ import {
 } from '../../styles/styledComponentsTheme';
 import { routesEnum } from '../../Routes';
 import { WorkflowStep } from '../../store/actions/workflowActions';
+import { Helmet } from 'react-helmet';
+import { useIntl } from 'react-intl';
 
 const Content = styled.div`
   width: 100%;
@@ -48,29 +50,40 @@ const mapPathnameToWorkflowStep = (pathname: routesEnum) => {
 interface Props extends RouteComponentProps {
   children?: React.ReactNode;
   title: string;
+  description?: string;
   history: any;
 }
 
 const _WorkflowPageTemplate = ({
   children,
   title,
+  description,
   history,
 }: Props): JSX.Element => {
+  const { locale } = useIntl();
   if ((window as any).mobileCheck()) {
     return <DesktopOnlyModal />;
   }
 
-  const calculatedWorkflowStep: WorkflowStep = mapPathnameToWorkflowStep(
-    history.location.pathname
-  );
+  const { pathname } = history.location;
+  const path = pathname.startsWith(`/${locale}`)
+    ? pathname.substr(`/${locale}`.length)
+    : pathname;
+  const calculatedWorkflowStep: WorkflowStep = mapPathnameToWorkflowStep(path);
 
   return (
     <Background workflowStep={calculatedWorkflowStep}>
+      <Helmet>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+      </Helmet>
       <AppBar />
       <WorkflowProgressBar workflow={calculatedWorkflowStep} />
       <Gutter>
         <Content>
-          <Heading level={2} size="medium" color="blueDark" className="mb40">
+          <Heading level={2} size="medium" color="blueDark" className="mb20">
             {title}
           </Heading>
           {children}

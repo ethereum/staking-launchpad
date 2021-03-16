@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import _every from 'lodash/every';
@@ -23,6 +24,7 @@ import {
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
 import { Paper } from '../../components/Paper';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 interface OwnProps {}
 interface StateProps {
@@ -63,6 +65,11 @@ const _AcknowledgementPage = ({
     )
   );
 
+  const Subtitle = styled.p`
+    font-size: 20px;
+    margin-bottom: 32px;
+  `;
+
   const handleSubmit = () => {
     if (workflow === WorkflowStep.OVERVIEW) {
       dispatchWorkflowUpdate(WorkflowStep.SELECT_CLIENT);
@@ -87,9 +94,14 @@ const _AcknowledgementPage = ({
     content,
     acknowledgementText,
   }: PageContentInterface = pageContent[activeAcknowledgementId];
-
+  const { formatMessage } = useIntl();
   return (
-    <WorkflowPageTemplate title="Overview">
+    <WorkflowPageTemplate
+      title={formatMessage({ defaultMessage: 'Advisories' })}
+    >
+      <Subtitle>
+        <FormattedMessage defaultMessage="Everything you should understand before becoming a validator." />
+      </Subtitle>
       <Paper className="flex flex-row">
         <AcknowledgementProgressTracker
           activeAcknowledgementId={activeAcknowledgementId}

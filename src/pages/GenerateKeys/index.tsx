@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import BigNumber from 'bignumber.js';
 import { CheckBox } from 'grommet';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
@@ -39,14 +40,12 @@ const osMapping: { [os: number]: 'mac' | 'linux' | 'windows' } = {
 };
 
 const Highlight = styled.span`
-  color: ${p => p.theme.blue.medium};
-  margin-left: 5px;
+  background: ${p => p.theme.green.medium};
 `;
 
 const InstructionImgContainer = styled.div`
   height: 250px;
-  margin: 20px;
-  border: 1px solid ${(p: any) => p.theme.gray.medium};
+  margin: 64px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -66,6 +65,7 @@ const _GenerateKeysPage = ({
   dispatchWorkflowUpdate,
   workflow,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
   const [validatorCount, setValidatorCount] = useState<number | string>(0);
   const [
     mnemonicAcknowledgementChecked,
@@ -90,14 +90,18 @@ const _GenerateKeysPage = ({
   }
 
   return (
-    <WorkflowPageTemplate title="Generate Key Pairs">
+    <WorkflowPageTemplate
+      title={formatMessage({ defaultMessage: 'Generate key pairs' })}
+    >
       <Paper>
         <Heading level={2} size="small" color="blueDark">
-          How many validators would you like to run?
+          <FormattedMessage defaultMessage="How many validators would you like to run?" />
         </Heading>
         <div className="flex mt20">
           <div>
-            <Text className="mb5">Validators</Text>
+            <Text className="mb5">
+              <FormattedMessage defaultMessage="Validators" />
+            </Text>
             <NumberInput value={validatorCount} setValue={setValidatorCount} />
           </div>
           <div className="ml50">
@@ -116,10 +120,14 @@ const _GenerateKeysPage = ({
       </Paper>
       <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium">
-          What is your current operating system?
+          <FormattedMessage defaultMessage="What is your current operating system?" />
         </Heading>
-        <Text className="mt20">
-          Choose your current OS so we can tailor the instructions for you.
+        <Text className="mt20 mb40">
+          <FormattedMessage
+            defaultMessage="Choose the OS of the computer you're currently using. This will be the
+              computer you use to generate your keys. It doesn't need to be the OS
+              you want to use for your node."
+          />
         </Text>
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
       </Paper>
@@ -128,33 +136,59 @@ const _GenerateKeysPage = ({
 
       <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium">
-          Save the key files and get the validator file ready
+          <FormattedMessage defaultMessage="Save the key files and get the validator file ready" />
         </Heading>
         <Text className="mt20">
-          You should now have your mnemonic written down in a safe place and a
-          keystore saved for each of your {validatorCount} validators. Please
-          make sure you keep these safe, preferably offline. Your validator
-          keystores should be available in the newly created
-          <Highlight>validator_keys</Highlight> directory.
+          <FormattedMessage
+            defaultMessage="You should now have your mnemonic written down in a safe place and a
+            keystore saved for each of your {validatorCount} validators. Please
+            make sure you keep these safe, preferably offline. Your validator
+            keystores should be available in the newly created
+            {validatorKeys} directory."
+            values={{
+              validatorKeys: <Highlight>validator_keys</Highlight>,
+              validatorCount: <span>{validatorCount}</span>,
+            }}
+          />
         </Text>
-        <Alert variant="info" className="my10">
-          You should see that you have one keystore per validator. This keystore
-          contains your signing key, encrypted with your password. You can use
-          your mnemonic to generate your withdrawal key when you wish to
-          withdraw.
+        <Alert variant="info" className="my40">
+          <FormattedMessage
+            defaultMessage="You should see that you have one keystore per validator. This keystore
+              contains your signing key, encrypted with your password. You can use
+              your mnemonic to generate your withdrawal key when you wish to
+              withdraw."
+          />
         </Alert>
         <InstructionImgContainer>
           <img src={instructions1} alt="" />
         </InstructionImgContainer>
         <Text>
-          The other file you just generated is
-          <Highlight>deposit_data.json</Highlight>. This file contains the
-          public key(s) associated with your validator(s); You will need to
-          upload this in the next step.
+          <FormattedMessage
+            defaultMessage="The other file you just generated is
+            {depositDataJson}. This file contains the
+            public key(s) associated with your validator(s); You will need to
+            upload this in the next step."
+            values={{
+              depositDataJson: <Highlight>deposit_data.json</Highlight>,
+            }}
+          />
         </Text>
         <InstructionImgContainer>
           <img src={instructions2} alt="" />
         </InstructionImgContainer>
+        <Alert variant="error">
+          <FormattedMessage
+            defaultMessage="Warning: Do not store keys on multiple (backup) validators at once"
+            description="Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once."
+          />
+          <Link
+            className="mt10"
+            primary
+            to="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50"
+          >
+            <FormattedMessage defaultMessage="More on slashing prevention" />
+          </Link>
+        </Alert>
       </Paper>
       <Paper className="mt20">
         <CheckBox
@@ -162,8 +196,7 @@ const _GenerateKeysPage = ({
           checked={mnemonicAcknowledgementChecked}
           label={
             <Text>
-              I am keeping my key(s) safe and have written down my mnemonic
-              phrase.
+              <FormattedMessage defaultMessage="I am keeping my key(s) safe and have written down my mnemonic phrase." />
             </Text>
           }
         />
@@ -171,14 +204,18 @@ const _GenerateKeysPage = ({
 
       <div className="flex center p30">
         <Link to={routesEnum.selectClient}>
-          <Button className="mr10" width={100} label="Back" />
+          <Button
+            className="mr10"
+            width={100}
+            label={formatMessage({ defaultMessage: 'Back' })}
+          />
         </Link>
         <Link to={routesEnum.uploadValidatorPage} onClick={handleSubmit}>
           <Button
             width={300}
             rainbow
             disabled={!mnemonicAcknowledgementChecked}
-            label="Continue"
+            label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
       </div>

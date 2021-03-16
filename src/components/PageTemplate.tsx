@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { AppBar } from './AppBar';
 import { Heading } from './Heading';
+import { Helmet } from 'react-helmet';
 
 const Content = styled.div`
   width: 100%;
   max-width: 1024px;
   margin: 30px 0;
   position: relative;
+  margin-top: 64px;
 `;
 
 const Gutter = styled.div`
@@ -26,17 +28,30 @@ const RainbowBackground = styled.div`
 interface Props extends RouteComponentProps {
   children?: React.ReactNode;
   title: string;
+  header?: string;
+  description?: string;
   history: any;
 }
 
-const _PageTemplate = ({ children, title }: Props): JSX.Element => {
+const _PageTemplate = ({
+  children,
+  description,
+  title,
+  header = title,
+}: Props): JSX.Element => {
   return (
     <RainbowBackground>
+      <Helmet>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+      </Helmet>
       <AppBar />
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" className="mb40">
-            {title}
+            {header}
           </Heading>
           {children}
         </Content>

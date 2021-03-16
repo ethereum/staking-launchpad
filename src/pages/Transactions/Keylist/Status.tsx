@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Alert as GrommetAlert } from 'grommet-icons/icons';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
+import { FormattedMessage } from 'react-intl';
 import {
   DepositStatus,
   TransactionStatus,
@@ -26,7 +27,9 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <AlertIcon />
-        <Text color="redDark">Deposit Already Exists</Text>
+        <Text color="redDark">
+          <FormattedMessage defaultMessage="Deposit already exists" />
+        </Text>
       </div>
     );
   }
@@ -34,7 +37,9 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <Dot success className="mr5" />
-        <Text>Ready</Text>
+        <Text>
+          <FormattedMessage defaultMessage="Ready" />
+        </Text>
       </div>
     );
   }
@@ -42,7 +47,9 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <Dot className="mr5" />
-        <Text>Waiting for wallet confirmation</Text>
+        <Text>
+          <FormattedMessage defaultMessage="Waiting for wallet confirmation" />
+        </Text>
       </div>
     );
   }
@@ -50,7 +57,9 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <Spinning kind="pulse" />
-        <Text color="green">Transaction Started</Text>
+        <Text color="green">
+          <FormattedMessage defaultMessage="Transaction started" />
+        </Text>
       </div>
     );
   }
@@ -58,7 +67,9 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <Dot success className="mr5" />
-        <Text>Transaction Successful</Text>
+        <Text>
+          <FormattedMessage defaultMessage="Transaction successful" />
+        </Text>
       </div>
     );
   }
@@ -66,7 +77,9 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <Dot error className="mr5" />
-        <Text>Transaction Failed</Text>
+        <Text>
+          <FormattedMessage defaultMessage="Transaction failed" />
+        </Text>
       </div>
     );
   }
@@ -74,10 +87,16 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
     return (
       <div className="flex">
         <Dot error className="mr5" />
-        <Text>Transaction Rejected</Text>
+        <Text>
+          <FormattedMessage defaultMessage="Transaction rejected" />
+        </Text>
       </div>
     );
   }
 
-  return <Text>An Error Occurred</Text>;
+  return (
+    <Text>
+      <FormattedMessage defaultMessage="An error occurred" />
+    </Text>
+  );
 };

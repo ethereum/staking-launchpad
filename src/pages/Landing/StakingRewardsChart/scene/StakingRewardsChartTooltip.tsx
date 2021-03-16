@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Text } from '../../../../components/Text';
 import { TICKER_NAME } from '../../../../utils/envVars';
@@ -244,19 +245,28 @@ const ValidatorEconomicsChartTooltip: React.FC<Props> = ({
         <CurrentLabel
           isCurrent={current.x === x && current.x > chart.x!(524_288)}
         >
-          <TooltipValue>CURRENT</TooltipValue>
+          <TooltipValue>
+            <FormattedMessage defaultMessage="CURRENT" />
+          </TooltipValue>
         </CurrentLabel>
         <StyledTooltip>
           {innerTooltip ? (
             innerTooltip(datum)
           ) : (
             <>
-              <TooltipField>Staked</TooltipField>
+              <TooltipField>
+                <FormattedMessage defaultMessage="Staked" />
+              </TooltipField>
               <TooltipValue>
                 {datum.x!.toLocaleString()}
                 &nbsp;{TICKER_NAME}
               </TooltipValue>
-              <TooltipField marginTop="7px">APR</TooltipField>
+              <TooltipField marginTop="7px">
+                <FormattedMessage
+                  defaultMessage="APR"
+                  description="APR refers to Annual Percentage Rate"
+                />
+              </TooltipField>
               <TooltipValue>
                 {(Math.round(datum.y * 1000) / 10).toLocaleString()}%
               </TooltipValue>

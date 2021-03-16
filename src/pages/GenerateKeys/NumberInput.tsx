@@ -25,6 +25,7 @@ const ButtonContainer = styled.div`
   }
 `;
 const StyledInput = styled.input`
+  height: 50px;
   width: 100%;
   font-size: 18px;
   line-height: 24px;
@@ -52,12 +53,21 @@ const StyledInput = styled.input`
 interface Props {
   value: number | string;
   setValue: (e: number) => void;
+  allowDecimals?: boolean;
 }
 
-export const NumberInput = ({ value, setValue }: Props): JSX.Element => {
+export const NumberInput = ({
+  value,
+  setValue,
+  allowDecimals,
+}: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
-    const val = e.target.value.replace(/\./g, ''); // remove "." to force integer input
-    setValue(val);
+    const val = e.target.value;
+    if (allowDecimals) {
+      setValue(val);
+    } else {
+      setValue(val.replace(/\./g, '')); // remove "." to force integer input;
+    }
   };
 
   const decrement = () => {
@@ -71,7 +81,7 @@ export const NumberInput = ({ value, setValue }: Props): JSX.Element => {
       <StyledInput
         onChange={handleManualInput}
         value={value}
-        type="tel"
+        type={allowDecimals ? 'number' : 'tel'}
         pattern="^-?[0-9]\d*\.?\d*$"
       />
       <ButtonContainer>

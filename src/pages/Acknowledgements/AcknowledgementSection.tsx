@@ -6,6 +6,7 @@ import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
+import { useIntl } from 'react-intl';
 
 const Container = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const AcknowledgementText = styled(Text)`
+const AcknowledgementText = styled(Text as any)`
   background: #ffdeb32e;
   border: 1px solid burlywood;
   padding: 30px;
@@ -22,9 +23,9 @@ const AcknowledgementText = styled(Text)`
 `;
 
 export interface AcknowledgementSectionData {
-  title: string;
+  title: JSX.Element;
   content: JSX.Element;
-  acknowledgementText?: string;
+  acknowledgementText?: JSX.Element;
   acknowledgementId: AcknowledgementIdsEnum;
 }
 
@@ -49,7 +50,7 @@ export const AcknowledgementSection = ({
     acknowledgementId === AcknowledgementIdsEnum.introSection;
   const isConfirmationSection =
     acknowledgementId === AcknowledgementIdsEnum.confirmation;
-
+  const { formatMessage } = useIntl();
   const renderButtons = () => {
     if (isConfirmationSection) {
       return (
@@ -60,7 +61,7 @@ export const AcknowledgementSection = ({
               handleGoBackClick(AcknowledgementIdsEnum.confirmation)
             }
             width={100}
-            label="Back"
+            label={formatMessage({ defaultMessage: 'Back' })}
           />
           <Link
             to={routesEnum.selectClient}
@@ -73,7 +74,7 @@ export const AcknowledgementSection = ({
               rainbow
               width={300}
               disabled={!allAgreedTo}
-              label="Continue"
+              label={formatMessage({ defaultMessage: 'Continue' })}
             />
           </Link>
         </div>
@@ -85,14 +86,18 @@ export const AcknowledgementSection = ({
           <Button
             width={100}
             onClick={() => handleGoBackClick(acknowledgementId)}
-            label="Back"
+            label={formatMessage({ defaultMessage: 'Back' })}
             className="mr10"
           />
         )}
         <Button
           onClick={() => handleContinueClick(acknowledgementId)}
           rainbow
-          label={isIntroSection ? 'Continue' : 'I Accept'}
+          label={
+            isIntroSection
+              ? `${formatMessage({ defaultMessage: 'Continue' })}`
+              : `${formatMessage({ defaultMessage: 'I accept' })}`
+          }
           width={300}
         />
       </div>

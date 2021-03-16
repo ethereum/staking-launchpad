@@ -237,7 +237,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="FAQ" />
           </BarLinkText>
         </Link>
-        <Link to={routesEnum.topUpPage} className="mx30 secondary-link">
+        <Link to={routesEnum.topUpPage} className="mx10 secondary-link">
           <BarLinkText
             level={4}
             margin="none"

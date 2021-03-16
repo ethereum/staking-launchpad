@@ -109,6 +109,7 @@ const NavLinksRight = styled.div`
 const BarLinkText = styled(Heading)`
   :not(.no-padding) {
     padding: 0 12px;
+    white-space: nowrap;
   }
   display: flex;
   justify-content: center;

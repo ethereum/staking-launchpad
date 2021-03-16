@@ -1,7 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Box, Layer } from 'grommet';
-import { Share } from 'grommet-icons';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import TransactionProgress from './TransactionProgress';
@@ -68,7 +67,7 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
               values={{
                 etherscan: (
                   <Link primary inline to={`${ETHERSCAN_URL}/${txHash}`}>
-                    Etherscan <Share size="small" />
+                    Etherscan
                   </Link>
                 ),
               }}

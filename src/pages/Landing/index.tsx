@@ -7,7 +7,6 @@ import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
 import { Upgrades } from './Upgrades';
 import { queryBeaconchain } from '../../utils/queryBeaconchain';
-import { ENABLE_RPC_FEATURES } from '../../utils/envVars';
 
 export const LandingPage = (): JSX.Element => {
   const [state, setState] = useState({
@@ -17,16 +16,14 @@ export const LandingPage = (): JSX.Element => {
   });
 
   useEffect(() => {
-    if (ENABLE_RPC_FEATURES) {
-      (async () => {
-        const response = await queryBeaconchain();
-        setState({
-          amountEth: response.body.amountEth,
-          totalValidators: response.body.totalValidators,
-          status: response.statusCode,
-        });
-      })();
-    }
+    (async () => {
+      const response = await queryBeaconchain();
+      setState({
+        amountEth: response.body.amountEth,
+        totalValidators: response.body.totalValidators,
+        status: response.statusCode,
+      });
+    })();
   }, []);
 
   return (

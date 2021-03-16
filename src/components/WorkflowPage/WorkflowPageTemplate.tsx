@@ -76,8 +76,10 @@ const _WorkflowPageTemplate = ({
       <Helmet>
         <title>{title}</title>
         <meta property="og:title" content={title} />
+        <meta property="twitter:title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
+        <meta property="twitter:description" content={description} />
       </Helmet>
       <AppBar />
       <WorkflowProgressBar workflow={calculatedWorkflowStep} />

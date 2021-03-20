@@ -1,0 +1,5448 @@
+{
+  "+3PPtT": [
+    {
+      "type": 0,
+      "value": "今天，您将确保信标链的安全，这是 Eth2 的第一次升级。这是一个单独的链，使用的是利益攸关方证明共识机制。最终，一旦主网（我们今天使用的以太坊）与信标链合并，您将帮助确保所有以太坊的安全。"
+    }
+  ],
+  "+L0IkF": [
+    {
+      "type": 0,
+      "value": "第 2 步：使用 Ethereum Foundation 存款工具生成存款密码"
+    }
+  ],
+  "+UUcBt": [
+    {
+      "type": 0,
+      "value": "选择语言"
+    }
+  ],
+  "+V+ZX+": [
+    {
+      "type": 0,
+      "value": "验证者运行时间"
+    }
+  ],
+  "+e8bO+": [
+    {
+      "type": 0,
+      "value": "我理解，如果我丢失了我的助记词，我将无法提取我的资金。"
+    }
+  ],
+  "+fnRDB": [
+    {
+      "type": 0,
+      "value": "我接受"
+    }
+  ],
+  "+mDtA4": [
+    {
+      "type": 0,
+      "value": "6. 等待激活"
+    }
+  ],
+  "+oBh8L": [
+    {
+      "type": 0,
+      "value": "我们将帮助您为您想要运行的每个验证者创建一个签名密钥。因为在合并之前没有提款，您现在不会创建提款密钥。当可以提取您的资金时，您可以从您的助记词中提取您的提款密钥。"
+    }
+  ],
+  "+s8Gac": [
+    {
+      "type": 0,
+      "value": "将 "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " 连接到 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "/+atl4": [
+    {
+      "type": 0,
+      "value": "建议免责声明"
+    }
+  ],
+  "//KCTE": [
+    {
+      "type": 0,
+      "value": "您可以一次启动所有交易，或者单独启动交易。"
+    }
+  ],
+  "/QPc9s": [
+    {
+      "type": 0,
+      "value": "您可以通过向验证者签署自愿退出消息，来表明您打算停止验证。"
+    }
+  ],
+  "/SbhtD": [
+    {
+      "type": 0,
+      "value": "您也可以使用 "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": " 安装 pip3。有关安装 pip3 的最新说明，以及直接下载链接，请参考 "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    }
+  ],
+  "/U09hN": [
+    {
+      "type": 0,
+      "value": "为了避免在网络中暴露您的验证者身份。您可以使用一个值得信任的 VPN 来帮助减少披露您的 IP 地址的风险。"
+    }
+  ],
+  "/VVB8t": [
+    {
+      "type": 0,
+      "value": "在决定继续进行验证者设置之前，请先查看本部分。"
+    }
+  ],
+  "/Vc/P6": [
+    {
+      "type": 0,
+      "value": "抱歉，此页面不存在。"
+    }
+  ],
+  "/WenEu": [
+    {
+      "type": 0,
+      "value": "您对交易负责。 欺诈性网站可能试图和引诱您将 "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " 发送给他们，而不是正式的存款合同。 请确保您发送交易的地址是正确的地址。"
+    }
+  ],
+  "/jJLYy": [
+    {
+      "type": 0,
+      "value": "交易"
+    }
+  ],
+  "/ub26/": [
+    {
+      "type": 0,
+      "value": "了解风险"
+    }
+  ],
+  "/vPNsl": [
+    {
+      "type": 0,
+      "value": "合并，也称为停靠，将看到我们今天使用的以太坊主网与信标链合并。这是以太坊完全过渡到利益攸关方证明的时候。"
+    }
+  ],
+  "/vkCbT": [
+    {
+      "type": 0,
+      "value": "验证者因提出和证明区块而获得奖励。奖励与网络中的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 总金额挂钩。"
+    }
+  ],
+  "/w/KT4": [
+    {
+      "type": 0,
+      "value": "然而，所有都不会丢失。假定您使用 "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " (根据默认的入职流程) 获取您的密钥，然后为 "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "/wNiYN": [
+    {
+      "type": 0,
+      "value": "为了确保您的安全，存款合同已经在一个字节码级别上进行了验证。"
+    }
+  ],
+  "/ydZdf": [
+    {
+      "type": 0,
+      "value": "奖励/惩罚的数额有多大？"
+    }
+  ],
+  "00OWFk": [
+    {
+      "type": 0,
+      "value": "最小充值金额为 "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "00d8uq": [
+    {
+      "type": 0,
+      "value": "一旦设置，您的验证者将不会立即激活。使用此时间来完成核对表，并在测试网上获得一些额外的练习。"
+    }
+  ],
+  "03xT/J": [
+    {
+      "type": 0,
+      "value": "其背后的想法是尽量减少诚实错误造成的损失，但却极大地抑制了协调一致的攻击。"
+    }
+  ],
+  "07C4IQ": [
+    {
+      "type": 0,
+      "value": "第 3 部分 - 交存后"
+    }
+  ],
+  "0GSZcr": [
+    {
+      "type": 0,
+      "value": "已质押"
+    }
+  ],
+  "0PlVao": [
+    {
+      "type": 0,
+      "value": "更多关于切割预防的信息"
+    }
+  ],
+  "0RmIrh": [
+    {
+      "type": 0,
+      "value": "您的 deposit_data.json 建议您再设置一个验证者。这笔存款仍未结清。如果您认为自己已完成了这笔存款，请等一小时后再次尝试以避免重复存款。"
+    }
+  ],
+  "0S8/Wo": [
+    {
+      "type": 0,
+      "value": "测试网练习"
+    }
+  ],
+  "0i4cCJ": [
+    {
+      "type": 0,
+      "value": "确认存款 ("
+    },
+    {
+      "type": 1,
+      "value": "depositKeys"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "0lHkrT": [
+    {
+      "type": 0,
+      "value": "第二，安装依赖软件包："
+    }
+  ],
+  "0oNdmk": [
+    {
+      "type": 0,
+      "value": "验证者常见问题"
+    }
+  ],
+  "0qvZJn": [
+    {
+      "type": 0,
+      "value": "更多关于 Eth2 愿景的信息"
+    }
+  ],
+  "0uqjBl": [
+    {
+      "type": 0,
+      "value": "通过向社区提供公益不断获得奖励。"
+    }
+  ],
+  "19o6KO": [
+    {
+      "type": 0,
+      "value": "我何时能够提取我的资金，退出和撤出之间有什么区别？"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "JSON RPC 端点"
+    }
+  ],
+  "1P6GMj": [
+    {
+      "type": 0,
+      "value": "监视"
+    }
+  ],
+  "1PPGHb": [
+    {
+      "type": 0,
+      "value": "我已验证我的服务器时间与挂钟匹配。"
+    }
+  ],
+  "1QW89r": [
+    {
+      "type": 0,
+      "value": "更多统计数据"
+    }
+  ],
+  "1UmyRL": [
+    {
+      "type": 0,
+      "value": "最新的稳定软件版本"
+    }
+  ],
+  "1VJ05X": [
+    {
+      "type": 0,
+      "value": "第 3 部分"
+    }
+  ],
+  "1Vkpd0": [
+    {
+      "type": 0,
+      "value": "请检查密码文件是否没有新行尾。"
+    }
+  ],
+  "1fDfw7": [
+    {
+      "type": 0,
+      "value": "这一切是如何发生的？"
+    }
+  ],
+  "1fytak": [
+    {
+      "type": 0,
+      "value": "检查存款合同详细信息"
+    }
+  ],
+  "2+TGmE": [
+    {
+      "type": 0,
+      "value": "若要处理来自 Eth1 链的验证者存款，您需要运行一个 Eth1 客户端以及您的 Eth2 客户端。 您可以使用 Infura 这样的第三方服务，但我们建议运行您自己的客户端以保持网络尽可能分散。"
+    }
+  ],
+  "22EpKq": [
+    {
+      "type": 0,
+      "value": "这不是有效的 "
+    },
+    {
+      "type": 1,
+      "value": "JSON"
+    },
+    {
+      "type": 0,
+      "value": " 文件"
+    }
+  ],
+  "25suT4": [
+    {
+      "type": 0,
+      "value": "路径分隔符取决于操作系统，在 Windows 中应为 "
+    },
+    {
+      "type": 1,
+      "value": "semicolon"
+    },
+    {
+      "type": 0,
+      "value": " 而不是 "
+    },
+    {
+      "type": 1,
+      "value": "colon"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "2AHkym": [
+    {
+      "type": 0,
+      "value": "从 Beaconcha.in 加载验证者信息时出错"
+    }
+  ],
+  "2CYEJa": [
+    {
+      "type": 0,
+      "value": "故障排查"
+    }
+  ],
+  "2DuJTX": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " 将您的 Eth2 节点连接到 JSON RPC 端点。这将在默认 8545 端口上启用 JSON RPC 服务。"
+    }
+  ],
+  "2a1GTh": [
+    {
+      "type": 0,
+      "value": "您可以随时根据取款密钥重新计算签名密钥"
+    }
+  ],
+  "2iH8Zc": [
+    {
+      "type": 0,
+      "value": "Nimbus 密钥管理文档"
+    }
+  ],
+  "2t/3ab": [
+    {
+      "type": 0,
+      "value": "您刚刚生成的另一个文件是 "
+    },
+    {
+      "type": 1,
+      "value": "depositDataJson"
+    },
+    {
+      "type": 0,
+      "value": "。此文件包含与您的验证者关联的公钥；您需要在下一步上传此公钥。"
+    }
+  ],
+  "32rBNK": [
+    {
+      "type": 0,
+      "value": "服务条款"
+    }
+  ],
+  "36KKVb": [
+    {
+      "type": 0,
+      "value": "更多关于 Eth2 经济学的信息"
+    }
+  ],
+  "38VH2G": [
+    {
+      "type": 0,
+      "value": "安装 deposit-cli 工具"
+    }
+  ],
+  "3CRtg8": [
+    {
+      "type": 0,
+      "value": "您的此帐户中没有足够的 "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " 用于 "
+    },
+    {
+      "type": 1,
+      "value": "numberOfValidators"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    }
+  ],
+  "3GbrWR": [
+    {
+      "type": 0,
+      "value": "为什么奖励取决于网络中的验证者总数？"
+    }
+  ],
+  "3H3ygi": [
+    {
+      "type": 0,
+      "value": "找不到连接的钱包的验证者"
+    }
+  ],
+  "3NHygY": [
+    {
+      "type": 0,
+      "value": "在 Goerli 上测试"
+    }
+  ],
+  "3PZq07": [
+    {
+      "type": 0,
+      "value": "因此，从助记符创建密钥是一个好主意，它充当另一个备份。对于通过此站点的入职流程加入的验证者，这将是默认设置。"
+    }
+  ],
+  "3PbtmF": [
+    {
+      "type": 0,
+      "value": "检查整个地址，而不是只检查其中的一部分。可能只有几个字节不同。"
+    }
+  ],
+  "3Pmjlx": [
+    {
+      "type": 0,
+      "value": "我已经安装了我的 Eth2 客户端的 "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "3Q43SM": [
+    {
+      "type": 0,
+      "value": "成为验证者"
+    }
+  ],
+  "3QmqFf": [
+    {
+      "type": 0,
+      "value": "为交易充值"
+    }
+  ],
+  "3URRZK": [
+    {
+      "type": 0,
+      "value": "Geth on Goerli 文档"
+    }
+  ],
+  "3tR/V9": [
+    {
+      "type": 0,
+      "value": "第 2 部分 - 安装期间"
+    }
+  ],
+  "3zCA2i": [
+    {
+      "type": 0,
+      "value": "如果看到错误消息 "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": "，您可能需要安装 "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " 软件包。"
+    }
+  ],
+  "4+3cIr": [
+    {
+      "type": 0,
+      "value": "您已成功地设置了测试网验证者！我们建议您在验证 "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " 之前完成该清单"
+    }
+  ],
+  "47svuN": [
+    {
+      "type": 0,
+      "value": "安装"
+    }
+  ],
+  "4FcLja": [
+    {
+      "type": 0,
+      "value": "Prysm 是 Etherum 2.0 协议的 Go 实现，注重可用性、安全性和可靠性。"
+    }
+  ],
+  "4NvAhl": [
+    {
+      "type": 0,
+      "value": "首先设置您选择的硬件和操作系统。"
+    }
+  ],
+  "4QNsja": [
+    {
+      "type": 0,
+      "value": "为什么滑动缩放？虽然我们不会在这里讨论令人难忘的细节，但基本的直觉是，网络要正常工作，需要最少数量的验证者（因此需要最少数量的以太币）。因此，为了激励更多的验证者加入，重要的是利率保持在较高水平，直到达到这个最低数字。"
+    }
+  ],
+  "4hnEBA": [
+    {
+      "type": 0,
+      "value": "智能合同代码是否已验证？"
+    }
+  ],
+  "4l6vz1": [
+    {
+      "type": 0,
+      "value": "复制"
+    }
+  ],
+  "52qGy6": [
+    {
+      "type": 0,
+      "value": "当前"
+    }
+  ],
+  "58PXVy": [
+    {
+      "type": 0,
+      "value": "为什么要用两个密钥而不是一个？"
+    }
+  ],
+  "5HJLBU": [
+    {
+      "type": 0,
+      "value": "Teku 安装文档"
+    }
+  ],
+  "5t8oYl": [
+    {
+      "type": 0,
+      "value": "在安装过程中，请随时访问 "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " 上的 EthStaker，获取一些友好的帮助！"
+    }
+  ],
+  "6CK2Nu": [
+    {
+      "type": 0,
+      "value": "您的钱包在错误的网络上。切换到 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "6HBTTN": [
+    {
+      "type": 0,
+      "value": "利益攸关方证明 (PoS) 和信标链"
+    }
+  ],
+  "6UUL73": [
+    {
+      "type": 0,
+      "value": "更多关于验证者的信息"
+    }
+  ],
+  "6VIBSR": [
+    {
+      "type": 0,
+      "value": "您可以通过充值来提高此验证者的有效余额"
+    }
+  ],
+  "6nh4de": [
+    {
+      "type": 0,
+      "value": "您正在加入一个处于早期阶段的网络。与任何新软件一样，存在潜在的软件错误。虽然不太可能，但潜在的漏洞可能会导致大幅削减。"
+    }
+  ],
+  "6zye8g": [
+    {
+      "type": 0,
+      "value": "以可用性、安全性和可靠性为重点的 Eth2 协议的实施。Prysm 是由 Prysmatic Labs 开发的，Prysmatic Labs 是一家专注于客户端开发的公司。"
+    }
+  ],
+  "7+Domh": [
+    {
+      "type": 0,
+      "value": "备注"
+    }
+  ],
+  "738tqz": [
+    {
+      "type": 0,
+      "value": "Prysm 是用 Go 编写的，依照 GPL-3.0 许可发布。"
+    }
+  ],
+  "74QdCu": [
+    {
+      "type": 0,
+      "value": "交易开始"
+    }
+  ],
+  "793QlI": [
+    {
+      "type": 0,
+      "value": "离线模式不支持 "
+    },
+    {
+      "type": 1,
+      "value": "title"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "7UOvbT": [
+    {
+      "type": 0,
+      "value": "离线"
+    }
+  ],
+  "7V/8wz": [
+    {
+      "type": 0,
+      "value": "配置文件"
+    }
+  ],
+  "7XiYRi": [
+    {
+      "type": 0,
+      "value": "已大幅削减？"
+    }
+  ],
+  "7d3Nzd": [
+    {
+      "type": 0,
+      "value": "您可以使用验证者客户端的拼写标志为您建议的区块（您选择的一些文本）添加个人风格。您可以使用 "
+    },
+    {
+      "type": 1,
+      "value": "beaconchain"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "beaconscan"
+    },
+    {
+      "type": 0,
+      "value": " 区块链浏览器查看它。"
+    }
+  ],
+  "7s6XNV": [
+    {
+      "type": 0,
+      "value": "质押和奖励"
+    }
+  ],
+  "7sZfCF": [
+    {
+      "type": 0,
+      "value": "更多关于 Nimbus 的信息"
+    }
+  ],
+  "7tRtDE": [
+    {
+      "type": 0,
+      "value": "每一个时代，网络都会衡量每个验证者的行为，并适当地对您进行奖励或处罚。"
+    }
+  ],
+  "7y4xl1": [
+    {
+      "type": 0,
+      "value": "适用于 "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 测试网的 Eth2 Launchpad"
+    }
+  ],
+  "80eWKU": [
+    {
+      "type": 0,
+      "value": "实际余额"
+    }
+  ],
+  "82vl9l": [
+    {
+      "type": 0,
+      "value": "我们无法检测到 MetaMask。切换浏览器或安装 MetaMask。"
+    }
+  ],
+  "8FmuYF": [
+    {
+      "type": 0,
+      "value": "安装 pip3"
+    }
+  ],
+  "8HxLGA": [
+    {
+      "type": 0,
+      "value": "配置 Teku"
+    }
+  ],
+  "8JtiQS": [
+    {
+      "type": 0,
+      "value": "网站上列出的合同地址是否匹配？"
+    }
+  ],
+  "8Rj/6A": [
+    {
+      "type": 0,
+      "value": "选择您目前使用的计算机的操作系统。这将是您用来生成密钥的计算机。 它不需要是您想要用于节点的操作系统。"
+    }
+  ],
+  "8WtyrD": [
+    {
+      "type": 0,
+      "value": "西班牙语"
+    }
+  ],
+  "8XQmxX": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 来同步 Goerli 测试网。"
+    }
+  ],
+  "8boRAk": [
+    {
+      "type": 0,
+      "value": "切割"
+    }
+  ],
+  "8wd0q5": [
+    {
+      "type": 0,
+      "value": "以太坊客户端设计为企业友好型，适用于允许的公共和私有网络使用情形。"
+    }
+  ],
+  "9+Ddtu": [
+    {
+      "type": 0,
+      "value": "下一步"
+    }
+  ],
+  "9/4mZe": [
+    {
+      "type": 0,
+      "value": "出于安全原因，验证涉及两个密钥。您的签名密钥必须随时可用。因此，它需要在线保存。 因为在线的任何内容都容易受到黑客攻击，所以使用相同的密钥进行提款不是一个好主意。"
+    }
+  ],
+  "94dQms": [
+    {
+      "type": 0,
+      "value": "为了安全起见，我们建议您断开互联网连接以完成此步骤。"
+    }
+  ],
+  "96pen8": [
+    {
+      "type": 0,
+      "value": "通过引入 64 个平行链，碎片将向网络提供更多的数据。 每个新链都能够处理至少与今天的主网一样多的数据，或许更多。"
+    }
+  ],
+  "9DZdsc": [
+    {
+      "type": 0,
+      "value": "拥有超过 "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " 个以太币是否有什么好处？"
+    }
+  ],
+  "9JktQX": [
+    {
+      "type": 0,
+      "value": "这个问题没有简单的答案，因为这种计算有许多因素。"
+    }
+  ],
+  "9VZ9oy": [
+    {
+      "type": 0,
+      "value": "如何激励验证者保持积极和诚实？"
+    }
+  ],
+  "9k7tO9": [
+    {
+      "type": 0,
+      "value": "网络不正确"
+    }
+  ],
+  "9lBMQr": [
+    {
+      "type": 0,
+      "value": "通过 "
+    },
+    {
+      "type": 1,
+      "value": "validatorsKeys"
+    },
+    {
+      "type": 0,
+      "value": " 选项的路径的 "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "9qMyhY": [
+    {
+      "type": 0,
+      "value": "读取选项和子命令文档"
+    }
+  ],
+  "9uOFF3": [
+    {
+      "type": 0,
+      "value": "概述"
+    }
+  ],
+  "A/iYbo": [
+    {
+      "type": 0,
+      "value": "Eth2 升级只有在验证者理解风险和责任时才能成功。"
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "发送存款"
+    }
+  ],
+  "A6Oppp": [
+    {
+      "type": 0,
+      "value": "Prysm 提供分步指南，指导您在通过 Launchpad 完成存款后运行其客户端。"
+    }
+  ],
+  "AC669U": [
+    {
+      "type": 0,
+      "value": "如果您需要帮助，请查看 Python 文档。"
+    }
+  ],
+  "AEp7+F": [
+    {
+      "type": 0,
+      "value": "重要的是，作为验证者，您需要将 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 作为抵押品 — 换言之，有一些资金处于危急状态。 成为验证者的唯一途径是在当前以太坊链上进行单向的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 交易。"
+    }
+  ],
+  "AYKxmf": [
+    {
+      "type": 0,
+      "value": "将您的硬件钱包连接到 Metamask"
+    }
+  ],
+  "AZaw+B": [
+    {
+      "type": 0,
+      "value": "正在退出"
+    }
+  ],
+  "AbBgEs": [
+    {
+      "type": 0,
+      "value": "了解验证者有效余额"
+    }
+  ],
+  "Ad61gz": [
+    {
+      "type": 0,
+      "value": "请确认您正在从 Etherum Foundation GitHub 的官方帐户下载，验证网址："
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "Affixg": [
+    {
+      "type": 0,
+      "value": "存款"
+    }
+  ],
+  "AkVktj": [
+    {
+      "type": 0,
+      "value": "检查存款合同地址"
+    }
+  ],
+  "An37jY": [
+    {
+      "type": 0,
+      "value": "具体而言，当您启动 Lighthouse 验证者客户端时， 您可以在您的密钥库目录中指向它，它将导入您的密钥库并交互请求您的密码。 如果您不提供密码，Lighthouse 会在每次启动时再次询问密码。"
+    }
+  ],
+  "Anqi3n": [
+    {
+      "type": 0,
+      "value": "使用 Lighthouse 成为验证者"
+    }
+  ],
+  "Aw1mMs": [
+    {
+      "type": 0,
+      "value": "为验证者充值"
+    }
+  ],
+  "B2EKj+": [
+    {
+      "type": 0,
+      "value": "我了解我需要存款 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 才能成为验证者。 并且，向信标链传输 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 是单向的、不可逆转的。"
+    }
+  ],
+  "BB65vH": [
+    {
+      "type": 0,
+      "value": "您可以将存款合同视为以太坊帐户和 Eth2 验证者之间的资金转移。"
+    }
+  ],
+  "BCsPjJ": [
+    {
+      "type": 0,
+      "value": "开始存款流程"
+    }
+  ],
+  "BFAvr/": [
+    {
+      "type": 0,
+      "value": "为验证者充值"
+    }
+  ],
+  "BFfsSX": [
+    {
+      "type": 0,
+      "value": "Eth2 存款合同要求至少发送一次 "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 才能被接受。"
+    }
+  ],
+  "BFsUAH": [
+    {
+      "type": 0,
+      "value": "检查 "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " 是否为 "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "BPpnlJ": [
+    {
+      "type": 0,
+      "value": "下载 MetaMask"
+    }
+  ],
+  "BUFaRV": [
+    {
+      "type": 0,
+      "value": "EthStaker 社区"
+    }
+  ],
+  "Bf2QKg": [
+    {
+      "type": 0,
+      "value": "验证是一项长期承诺"
+    }
+  ],
+  "Bj5yI5": [
+    {
+      "type": 0,
+      "value": "有效余额"
+    }
+  ],
+  "BoEpk9": [
+    {
+      "type": 0,
+      "value": "简介"
+    }
+  ],
+  "BvD9ay": [
+    {
+      "type": 0,
+      "value": "Lighthouse 是一个 Etherum 2.0 实现，它是用 Rust 编写的，非常注重速度和安全性。"
+    }
+  ],
+  "C/gb74": [
+    {
+      "type": 0,
+      "value": "配置 Lighthouse"
+    }
+  ],
+  "C9fTX1": [
+    {
+      "type": 0,
+      "value": "成为验证者时常见问题的答案。"
+    }
+  ],
+  "CACPC+": [
+    {
+      "type": 0,
+      "value": "捷克语"
+    }
+  ],
+  "CBbRux": [
+    {
+      "type": 0,
+      "value": "OpenEthereum 是用 Rust 写的，依照 GPLv3 授权使用。"
+    }
+  ],
+  "CF9vMR": [
+    {
+      "type": 0,
+      "value": "权益证明"
+    }
+  ],
+  "CVDzDs": [
+    {
+      "type": 0,
+      "value": "如果您的余额接近 16 以太币，您当然应该充值。 这是为了确保您不会被踢出验证者组（如果您的余额低于 16 以太币，则自动进行）。"
+    }
+  ],
+  "CdKEd/": [
+    {
+      "type": 0,
+      "value": "可以削减的最小金额是 1 以太币，但是 "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "CeeJfw": [
+    {
+      "type": 0,
+      "value": "我已设置防火墙。"
+    }
+  ],
+  "Cv+T7+": [
+    {
+      "type": 0,
+      "value": "大幅削减有两个目的：(1) 使攻击 Eth2 的成本高得令人望而却步，(2) 通过检查验证者是否实际执行了职责来阻止他们变得懒惰。如果您因为行为被证明是破坏性而被大幅削减，您的一部分股权将被销毁。"
+    }
+  ],
+  "D0Rigq": [
+    {
+      "type": 0,
+      "value": "否"
+    }
+  ],
+  "D33f/7": [
+    {
+      "type": 0,
+      "value": "当前 APR"
+    }
+  ],
+  "D4cQV/": [
+    {
+      "type": 0,
+      "value": "要成为验证者，我需要押多少以太币？"
+    }
+  ],
+  "DCaq7N": [
+    {
+      "type": 0,
+      "value": "您的钱包已连接到正确的网络！"
+    }
+  ],
+  "DGHD9y": [
+    {
+      "type": 0,
+      "value": "Lighthouse 有专门的工具，使从 Launchpad 的传输变得尽可能容易。"
+    }
+  ],
+  "DKSrR+": [
+    {
+      "type": 0,
+      "value": "我了解，如果我违反规定，我可能会被大幅削减。"
+    }
+  ],
+  "DNRQa7": [
+    {
+      "type": 0,
+      "value": "我已阅读并同意 Launchpad 服务条款。"
+    }
+  ],
+  "DUnyVI": [
+    {
+      "type": 0,
+      "value": "理想情况下，您的互联网连接应该是可靠的，并且尽可能接近全天候不间断。"
+    }
+  ],
+  "DbnQg+": [
+    {
+      "type": 0,
+      "value": "验证合同地址"
+    }
+  ],
+  "DoCZT1": [
+    {
+      "type": 0,
+      "value": "验证者有效余额当前已达到最大值。如果需要，您可以添加 "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "（存款合同允许的最小值）"
+    }
+  ],
+  "DsJ/Mk": [
+    {
+      "type": 0,
+      "value": "不要只相信这个网站上列出的合同地址。"
+    }
+  ],
+  "E+Y27g": [
+    {
+      "type": 0,
+      "value": "您可以在终端中输入 "
+    },
+    {
+      "type": 1,
+      "value": "terminalCommand"
+    },
+    {
+      "type": 0,
+      "value": " 来检查您的 Python 版本。"
+    }
+  ],
+  "E/P9zo": [
+    {
+      "type": 0,
+      "value": "3. 在测试网上练习"
+    }
+  ],
+  "E1Mywn": [
+    {
+      "type": 0,
+      "value": "链"
+    }
+  ],
+  "E8t6ru": [
+    {
+      "type": 0,
+      "value": "要成为验证者，您需要了解如何管理密钥和保护助记符。如果您还不熟悉密钥和助记符，请不要继续。请注意，在此过程中，您不会找到稍后提款所需的密钥，因此请安全地存储您的助记符，以便能够稍后提示。"
+    }
+  ],
+  "EFjTSf": [
+    {
+      "type": 0,
+      "value": "对于阻碍共识的疏忽行为（或不作为），将给予轻微处罚。"
+    }
+  ],
+  "EIUapL": [
+    {
+      "type": 0,
+      "value": "使用终端移动到包含 "
+    },
+    {
+      "type": 1,
+      "value": "deposit"
+    },
+    {
+      "type": 0,
+      "value": " 可执行文件的目录"
+    }
+  ],
+  "EPCHZV": [
+    {
+      "type": 0,
+      "value": "如果您丢失了签名密钥，您的验证者将无法再提出或证明。"
+    }
+  ],
+  "EPlepr": [
+    {
+      "type": 0,
+      "value": "我模拟了断电（服务器和互联网）和自动恢复。"
+    }
+  ],
+  "ETJ2T5": [
+    {
+      "type": 0,
+      "value": "如果您对存款 cli 有任何疑问，请访问 GitHub 仓库。"
+    }
+  ],
+  "EThT2C": [
+    {
+      "type": 0,
+      "value": "5. 存款时间"
+    }
+  ],
+  "EXLB88": [
+    {
+      "type": 0,
+      "value": "这是测试网络 ⚠️"
+    }
+  ],
+  "FEbVwB": [
+    {
+      "type": 0,
+      "value": "关键的概念如下："
+    }
+  ],
+  "FM92S0": [
+    {
+      "type": 0,
+      "value": "注意：信标链可能需要几分钟时间来验证您的存款"
+    }
+  ],
+  "FSRfSJ": [
+    {
+      "type": 0,
+      "value": "我了解，这笔交易是不可逆转的。"
+    }
+  ],
+  "FZa0R+": [
+    {
+      "type": 0,
+      "value": "这种情况非常极端，不可能发生。"
+    }
+  ],
+  "Fa2pjg": [
+    {
+      "type": 0,
+      "value": "配置文件 CLI 参数"
+    }
+  ],
+  "FazwRl": [
+    {
+      "type": 0,
+      "value": "重试"
+    }
+  ],
+  "FdbNS6": [
+    {
+      "type": 0,
+      "value": "配置您的 Eth1 客户端"
+    }
+  ],
+  "FfLWt5": [
+    {
+      "type": 0,
+      "value": "一个拥有大量开发者的以太坊客户端。它对企业级系统是完美的。"
+    }
+  ],
+  "FgraU0": [
+    {
+      "type": 0,
+      "value": "第 1 步：为您的操作系统下载存款命令行界面应用"
+    }
+  ],
+  "FqgDIV": [
+    {
+      "type": 0,
+      "value": "服务条款"
+    }
+  ],
+  "FzkbsB": [
+    {
+      "type": 0,
+      "value": "验证者"
+    }
+  ],
+  "G/VJJd": [
+    {
+      "type": 0,
+      "value": "OpenEthereum 安装文档"
+    }
+  ],
+  "G0aacl": [
+    {
+      "type": 0,
+      "value": "作为验证者，您可以因为提出/证明包含在链中的区块而获得奖励。"
+    }
+  ],
+  "G5IMoZ": [
+    {
+      "type": 0,
+      "value": "下载主分支源代码"
+    }
+  ],
+  "G6kg26": [
+    {
+      "type": 0,
+      "value": "Eth2 客户端："
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "G8tAKU": [
+    {
+      "type": 0,
+      "value": "选择客户端"
+    }
+  ],
+  "GBXzeJ": [
+    {
+      "type": 0,
+      "value": "可以说，验证交易所得报酬的影响最大的因素是网络中的全部股权。换言之，验证者的总金额。根据这个数字，验证者的最大年回报率可以在 2% 至 20% 之间。"
+    }
+  ],
+  "GCz3kj": [
+    {
+      "type": 0,
+      "value": "Teku 前身为 Artemis，是一款专为满足机构需求和安全要求而构建的 Eth2 客户端。PegaSys 是 ConsenSys 的一个分支，致力于构建企业就绪型客户端和工具，用于与核心以太坊平台交互。"
+    }
+  ],
+  "GDaRAW": [
+    {
+      "type": 0,
+      "value": "请确保您没有被钓鱼。"
+    }
+  ],
+  "GOc7cL": [
+    {
+      "type": 0,
+      "value": "我离线会受到多大的惩罚？"
+    }
+  ],
+  "GUDhpC": [
+    {
+      "type": 0,
+      "value": "第 1 部分"
+    }
+  ],
+  "GadkjP": [
+    {
+      "type": 0,
+      "value": "有关运行 Lighthouse 的文档"
+    }
+  ],
+  "Gbo300": [
+    {
+      "type": 0,
+      "value": "生成密钥"
+    }
+  ],
+  "GrU/lp": [
+    {
+      "type": 0,
+      "value": "Eth2 客户端"
+    }
+  ],
+  "GsBRWL": [
+    {
+      "type": 0,
+      "value": "语言"
+    }
+  ],
+  "GuIwY6": [
+    {
+      "type": 0,
+      "value": "我应该何时为我的验证者余额充值？"
+    }
+  ],
+  "H+Wcch": [
+    {
+      "type": 0,
+      "value": "第 2 部分"
+    }
+  ],
+  "H+kIpp": [
+    {
+      "type": 0,
+      "value": "所需总金额"
+    }
+  ],
+  "H5+NAX": [
+    {
+      "type": 0,
+      "value": "余额"
+    }
+  ],
+  "HoahTd": [
+    {
+      "type": 0,
+      "value": "如果您不提供密码，Nimbus 将在启动时交互请求密码。"
+    }
+  ],
+  "HqRNN8": [
+    {
+      "type": 0,
+      "value": "支持"
+    }
+  ],
+  "I212vY": [
+    {
+      "type": 0,
+      "value": "您的验证者在信标链上处于活动状态之前有一个短暂的等待期。 使用此时间来完成核对表并花一些时间验证 "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    }
+  ],
+  "I3JhPS": [
+    {
+      "type": 0,
+      "value": "网络"
+    }
+  ],
+  "IAKvZ0": [
+    {
+      "type": 0,
+      "value": "Eth2 升级"
+    }
+  ],
+  "IJw06E": [
+    {
+      "type": 0,
+      "value": "使用您的钱包签署交易"
+    }
+  ],
+  "IVyWYt": [
+    {
+      "type": 0,
+      "value": "请注意，在第二种（不太可能的）情况下，您将在 21 天内逐步损失高达 50% (16 以太币) 的股份。21 天后，您将被逐出验证者池。这确保了块在某个时刻再次开始最终确定。"
+    }
+  ],
+  "IZFEUg": [
+    {
+      "type": 0,
+      "value": "就绪"
+    }
+  ],
+  "IdUtHu": [
+    {
+      "type": 0,
+      "value": "安装 virtualenv"
+    }
+  ],
+  "IhDJWs": [
+    {
+      "type": 0,
+      "value": "您有 "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 笔未清存款"
+    }
+  ],
+  "Il9tBQ": [
+    {
+      "type": 0,
+      "value": "Geth 是用 Go 编写的，完全开源，并依照 GNU LGPL v3 获得许可。"
+    }
+  ],
+  "IwrKbS": [
+    {
+      "type": 0,
+      "value": "视情况而定。除了 "
+    },
+    {
+      "type": 1,
+      "value": "impact"
+    },
+    {
+      "type": 0,
+      "value": " 之外，还有两个重要的场景需要注意："
+    }
+  ],
+  "J0DclJ": [
+    {
+      "type": 0,
+      "value": "在最坏的情况下，同步您的 Eth1 客户端可能需要几天时间。"
+    }
+  ],
+  "J455S4": [
+    {
+      "type": 0,
+      "value": "如果您是 git 用户，可以运行 "
+    },
+    {
+      "type": 1,
+      "value": "gitClone"
+    },
+    {
+      "type": 0,
+      "value": " 下载 "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": " 分支。"
+    }
+  ],
+  "J5Lzz1": [
+    {
+      "type": 0,
+      "value": "中文（繁体）"
+    }
+  ],
+  "J7T0SR": [
+    {
+      "type": 0,
+      "value": "Nimbus 安装文档"
+    }
+  ],
+  "JAiV0o": [
+    {
+      "type": 0,
+      "value": "换句话说，为了让您保持诚实，您的行为需要产生财务后果。"
+    }
+  ],
+  "JDGiXT": [
+    {
+      "type": 0,
+      "value": "OpenEthereum 文档解释了如何下载和安装客户端。"
+    }
+  ],
+  "JMcBLZ": [
+    {
+      "type": 0,
+      "value": "未清存款 ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "JPT/TK": [
+    {
+      "type": 0,
+      "value": "4. 避免钓鱼行为"
+    }
+  ],
+  "JYrJic": [
+    {
+      "type": 0,
+      "value": "避免 Eth2 钓鱼行为"
+    }
+  ],
+  "JhUYU3": [
+    {
+      "type": 0,
+      "value": "下载 CLI 应用"
+    }
+  ],
+  "JqVeL+": [
+    {
+      "type": 0,
+      "value": "不同客户端之间的资源使用可能会有很大差异。如果您使用的是资源限制，请研究不同的客户端。"
+    }
+  ],
+  "Js4uuA": [
+    {
+      "type": 0,
+      "value": "有效余额"
+    }
+  ],
+  "JsTbFu": [
+    {
+      "type": 0,
+      "value": "已大幅削减"
+    }
+  ],
+  "JtAiN/": [
+    {
+      "type": 0,
+      "value": "您当前的操作系统是什么？"
+    }
+  ],
+  "K6+jQ3": [
+    {
+      "type": 0,
+      "value": "Geth 安装文档"
+    }
+  ],
+  "KBSbmP": [
+    {
+      "type": 0,
+      "value": "您可以 "
+    },
+    {
+      "type": 1,
+      "value": "reloadYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " 重试，或刷新页面。如果问题仍然存在，请在 "
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": " 上通知我们。"
+    }
+  ],
+  "KBjoXt": [
+    {
+      "type": 0,
+      "value": "从 GitHub 下载并解压缩主分支源代码。"
+    }
+  ],
+  "KC9jbz": [
+    {
+      "type": 0,
+      "value": "硬件清单"
+    }
+  ],
+  "KN7zKn": [
+    {
+      "type": 0,
+      "value": "错误"
+    }
+  ],
+  "KV017i": [
+    {
+      "type": 0,
+      "value": "验证者是参与 Ethereum 2.0 协议共识的实体。"
+    }
+  ],
+  "KhEtqB": [
+    {
+      "type": 0,
+      "value": "Besu on Goerli 文档"
+    }
+  ],
+  "KjcAm2": [
+    {
+      "type": 0,
+      "value": "奖励和惩罚大约每六分半钟发布一次 – 这段时间被称为一个时期。"
+    }
+  ],
+  "KqGKRA": [
+    {
+      "type": 0,
+      "value": "该过程完成后，您应该会看到以下内容："
+    }
+  ],
+  "KrVaDy": [
+    {
+      "type": 0,
+      "value": "我已加入客户端的 Discord 服务器。"
+    }
+  ],
+  "KvRSg5": [
+    {
+      "type": 0,
+      "value": "大幅削减的具体内容是什么？"
+    }
+  ],
+  "Kw+pTr": [
+    {
+      "type": 0,
+      "value": "根据您的 Linux 版本的不同，python3 安装过程可能会有所不同。"
+    }
+  ],
+  "KxUgHu": [
+    {
+      "type": 0,
+      "value": "我已确保我的密钥库是 "
+    },
+    {
+      "type": 1,
+      "value": "boldCaution"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "L7fPF+": [
+    {
+      "type": 0,
+      "value": "完成您上次的存款"
+    }
+  ],
+  "L8jrV5": [
+    {
+      "type": 0,
+      "value": "重新加载您的钱包"
+    }
+  ],
+  "LVy+cS": [
+    {
+      "type": 0,
+      "value": "请查阅客户端文档，确保您要使用的硬件足够且受支持。"
+    }
+  ],
+  "LWIlKS": [
+    {
+      "type": 0,
+      "value": "您也可以在下面单独确认存款..."
+    }
+  ],
+  "LeHQQm": [
+    {
+      "type": 0,
+      "value": "验证者常见问题"
+    }
+  ],
+  "LibVut": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 来同步 Goerli 测试网。"
+    }
+  ],
+  "Ltd/hJ": [
+    {
+      "type": 1,
+      "value": "directoriesPattern"
+    },
+    {
+      "type": 0,
+      "value": " 将找到 "
+    },
+    {
+      "type": 1,
+      "value": "keyDirectory"
+    },
+    {
+      "type": 0,
+      "value": "，预计会找到 "
+    },
+    {
+      "type": 1,
+      "value": "passwordDirectory"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "Lv3Pmp": [
+    {
+      "type": 0,
+      "value": "您已为此验证者公钥支付了初始存款。请稍候，并检查您在信标链数据提供程序上的存款状态。"
+    }
+  ],
+  "LyJqWj": [
+    {
+      "type": 0,
+      "value": "有关验证者角色和职责的更多信息"
+    }
+  ],
+  "M3GwXS": [
+    {
+      "type": 0,
+      "value": "只有在您的验证者在线且最新的情况下，您才能获得全部奖励。这是您的职责。如果您的验证者离线，您将受到惩罚。离线的惩罚大致等同于积极参与的奖励。"
+    }
+  ],
+  "MIsmjW": [
+    {
+      "type": 0,
+      "value": "选择新钱包"
+    }
+  ],
+  "MPHPEO": [
+    {
+      "type": 0,
+      "value": "我能够通过 HTTP API 将我的 Eth2 信标节点连接到我的 Eth1 客户端。"
+    }
+  ],
+  "MQTBvH": [
+    {
+      "type": 0,
+      "value": "保护自己不受重复存款的影响"
+    }
+  ],
+  "MSanFQ": [
+    {
+      "type": 0,
+      "value": "书籍"
+    }
+  ],
+  "MX00UO": [
+    {
+      "type": 0,
+      "value": "如果我的提款密钥被盗，会发生什么情况？"
+    }
+  ],
+  "MZEcKL": [
+    {
+      "type": 0,
+      "value": "无效验证者行为"
+    }
+  ],
+  "MZvoWG": [
+    {
+      "type": 0,
+      "value": "升级"
+    }
+  ],
+  "Mb3npQ": [
+    {
+      "type": 0,
+      "value": "使用终端"
+    }
+  ],
+  "MbsAo3": [
+    {
+      "type": 0,
+      "value": "这个 LaunchPad 将帮助您成为一名验证者，这样您就可以在以太坊的未来发挥积极的作用。验证者是我们共同建设的更安全、更可扩展、更可持续的以太坊的关键。"
+    }
+  ],
+  "Mc8nNE": [
+    {
+      "type": 0,
+      "value": "交易失败"
+    }
+  ],
+  "MmZjeu": [
+    {
+      "type": 0,
+      "value": "充值详情"
+    }
+  ],
+  "N+2G1J": [
+    {
+      "type": 0,
+      "value": "选择 "
+    },
+    {
+      "type": 1,
+      "value": "ethereum"
+    },
+    {
+      "type": 0,
+      "value": " 客户端"
+    }
+  ],
+  "N0rwnt": [
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " 不是有效的 deposit_data JSON 文件。请重试。"
+    }
+  ],
+  "NBJR7v": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " 将您的 Eth2 节点连接到 JSON RPC 端点。这将在默认 8545 端口上启用 JSON RPC 服务。"
+    }
+  ],
+  "NEmnAV": [
+    {
+      "type": 0,
+      "value": "意大利语"
+    }
+  ],
+  "NLgogh": [
+    {
+      "type": 0,
+      "value": "Launchpad 网络："
+    }
+  ],
+  "NOTCV0": [
+    {
+      "type": 0,
+      "value": "Prometheus 和 Grafana 监视器"
+    }
+  ],
+  "NPmm0q": [
+    {
+      "type": 0,
+      "value": "您必须在桌面设备上才能使用此应用。"
+    }
+  ],
+  "NSK+Li": [
+    {
+      "type": 0,
+      "value": "我已经保护了 root 帐户。"
+    }
+  ],
+  "NTWnJC": [
+    {
+      "type": 0,
+      "value": "下载命令行应用"
+    }
+  ],
+  "NVQd7i": [
+    {
+      "type": 0,
+      "value": "若要处理从主网（Eth1 链）传入的验证者存款，您需要并行运行 Eth1 客户端和 Eth2 客户端。虽然您可以使用像 Infura 这样的第三方服务，但我们建议您运行自己的客户端，以确保网络尽可能地分散。"
+    }
+  ],
+  "NVljH4": [
+    {
+      "type": 0,
+      "value": "关于 Prysthatic Labs 的更多信息"
+    }
+  ],
+  "NYFKzu": [
+    {
+      "type": 0,
+      "value": "权益质押清单"
+    }
+  ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "发送剩余的 "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 存款"
+    }
+  ],
+  "NZUWs7": [
+    {
+      "type": 0,
+      "value": "请记住，验证者的票数是按其所涉及的金额加权的。"
+    }
+  ],
+  "NZsVaA": [
+    {
+      "type": 0,
+      "value": "验证者和 Eth2"
+    }
+  ],
+  "Nb5DNK": [
+    {
+      "type": 0,
+      "value": "使用 Teku 成为验证者"
+    }
+  ],
+  "NwzcYT": [
+    {
+      "type": 0,
+      "value": "Teku 需要在启动时指向包含密钥库及其关联密码的文件。有三种方法可以做到这一点。"
+    }
+  ],
+  "O+3LJ1": [
+    {
+      "type": 0,
+      "value": "此验证者的余额达到最大值： "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "O54B/F": [
+    {
+      "type": 0,
+      "value": "Eth2 网络"
+    }
+  ],
+  "OIvXIO": [
+    {
+      "type": 0,
+      "value": "完成剩余的 "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 存款"
+    }
+  ],
+  "ON2tXT": [
+    {
+      "type": 0,
+      "value": "NetherMind 文档解释了如何下载和安装客户端。"
+    }
+  ],
+  "OdYQYh": [
+    {
+      "type": 0,
+      "value": "更多关于 Consensys 的信息"
+    }
+  ],
+  "OsO8ik": [
+    {
+      "type": 0,
+      "value": "从技术上讲，我有能力设置和运行验证者。"
+    }
+  ],
+  "Ou/o3H": [
+    {
+      "type": 0,
+      "value": "在成为验证者之前您应该了解的一切。"
+    }
+  ],
+  "P+nziG": [
+    {
+      "type": 0,
+      "value": "作为验证者，您需要有相关资金才能因不诚实行为而受到惩罚。"
+    }
+  ],
+  "P0kiYS": [
+    {
+      "type": 0,
+      "value": "信标链升级为以太坊带来了利益攸关方证明共识机制。"
+    }
+  ],
+  "P1QerV": [
+    {
+      "type": 0,
+      "value": "如果您有问题，EthStaker 社区是一个寻求帮助的好地方！您可以在 "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " 上找到支持。"
+    }
+  ],
+  "P91KmA": [
+    {
+      "type": 0,
+      "value": "成为验证者 "
+    },
+    {
+      "type": 1,
+      "value": "emoji"
+    }
+  ],
+  "P9mVZK": [
+    {
+      "type": 0,
+      "value": "您的网络已更改"
+    }
+  ],
+  "PIQDar": [
+    {
+      "type": 0,
+      "value": "我们建议您首先在测试网上完成整个过程，以获得舒适的体验。"
+    }
+  ],
+  "PboOCR": [
+    {
+      "type": 0,
+      "value": "配置您的 Eth1 客户端"
+    }
+  ],
+  "PfoT0C": [
+    {
+      "type": 0,
+      "value": "此清单将有助于您了解验证者的角色，并为您的角色做好准备。"
+    }
+  ],
+  "PglO1W": [
+    {
+      "type": 0,
+      "value": "正式核查报告"
+    }
+  ],
+  "PoBIK+": [
+    {
+      "type": 0,
+      "value": "您需要 SSD 存储来持续处理必要的读/写速度。"
+    }
+  ],
+  "Pswssl": [
+    {
+      "type": 0,
+      "value": "确认"
+    }
+  ],
+  "Px7wWb": [
+    {
+      "type": 0,
+      "value": "pip 文档"
+    }
+  ],
+  "Q1ZwPT": [
+    {
+      "type": 0,
+      "value": "剪贴板"
+    }
+  ],
+  "Q8P0rZ": [
+    {
+      "type": 0,
+      "value": "验证者的最大有效余额为 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "。您只需充值 "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 即可最大化您的有效余额。"
+    }
+  ],
+  "QKFeMq": [
+    {
+      "type": 0,
+      "value": "互联网"
+    }
+  ],
+  "QOAgQF": [
+    {
+      "type": 0,
+      "value": "注意：默认情况下，VM 可能会禁用 NTP，因此您可能需要针对您的环境找到解决方法。"
+    }
+  ],
+  "QWDxrk": [
+    {
+      "type": 0,
+      "value": "密钥管理"
+    }
+  ],
+  "QlsDcr": [
+    {
+      "type": 0,
+      "value": "操作"
+    }
+  ],
+  "QnS0CA": [
+    {
+      "type": 0,
+      "value": "您的钱包应设置为 "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": " 才能使用此 LaunchPad。"
+    }
+  ],
+  "QqqeNk": [
+    {
+      "type": 0,
+      "value": "交易被拒绝"
+    }
+  ],
+  "Qs/oj3": [
+    {
+      "type": 0,
+      "value": "您可能有一个 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 存款已被接受但正在链上验证。 当 beaconcha.in 确认了 2048 个区块时，它就可以在这里使用。"
+    }
+  ],
+  "R8eePn": [
+    {
+      "type": 0,
+      "value": "如果您被大幅削减，您将被阻止进一步参与协议，并被强制退出。"
+    }
+  ],
+  "RIFLCz": [
+    {
+      "type": 0,
+      "value": "网络钓鱼对 Eth2 验证者来说是一个非常真实的风险，不幸的是，许多人会因为这些攻击而损失资金。"
+    }
+  ],
+  "ROHpFF": [
+    {
+      "type": 0,
+      "value": "1. 了解您的责任"
+    }
+  ],
+  "RVyb7r": [
+    {
+      "type": 0,
+      "value": "我可以停止运行我的验证者几天，然后重新启动它吗？"
+    }
+  ],
+  "RWqrlk": [
+    {
+      "type": 0,
+      "value": "祝贺您！"
+    }
+  ],
+  "RYUKCz": [
+    {
+      "type": 0,
+      "value": "我模拟了如何从一个 Eth2 客户端迁移到另一个 Eth2 客户端。"
+    }
+  ],
+  "RaBZna": [
+    {
+      "type": 0,
+      "value": "如果您在正常情况下离线几天，您将损失大致相当于您在此期间获得的以太币数量的以太币。换句话说，如果您能赚取 ≈0.01 以太币，您反而会被处罚 ≈0.01 以太币。"
+    }
+  ],
+  "Rg5ySE": [
+    {
+      "type": 0,
+      "value": "您想运行多少个验证者？"
+    }
+  ],
+  "Rj0OAx": [
+    {
+      "type": 0,
+      "value": "或者换句话说，一个运行计算机进程的人。该进程建议并担保将新区块添加到区块链中。"
+    }
+  ],
+  "RkbwNZ": [
+    {
+      "type": 0,
+      "value": "在主网与信标链合并之前，不可能提取您的存款。"
+    }
+  ],
+  "Rm2GQZ": [
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 下注总数（百万）"
+    }
+  ],
+  "Rr2lI/": [
+    {
+      "type": 0,
+      "value": "您对此交易负责！"
+    }
+  ],
+  "RrCui3": [
+    {
+      "type": 0,
+      "value": "摘要"
+    }
+  ],
+  "Ryptmy": [
+    {
+      "type": 0,
+      "value": "使用以下命令对其进行验证，以检查其是否正确返回客户端版本："
+    }
+  ],
+  "S0e/cN": [
+    {
+      "type": 0,
+      "value": "您想要如何运行 CLI ？"
+    }
+  ],
+  "S943uU": [
+    {
+      "type": 0,
+      "value": "仔细检查 URL"
+    }
+  ],
+  "SB6yx7": [
+    {
+      "type": 0,
+      "value": "Teku 配置文件环境变量"
+    }
+  ],
+  "SGzXoY": [
+    {
+      "type": 0,
+      "value": "您的股份已经到达存款合同！"
+    }
+  ],
+  "SMffKt": [
+    {
+      "type": 0,
+      "value": "选择您的 Eth"
+    },
+    {
+      "type": 1,
+      "value": "ethVersionStep"
+    },
+    {
+      "type": 0,
+      "value": " 客户端并设置节点"
+    }
+  ],
+  "SR0qHv": [
+    {
+      "type": 0,
+      "value": "避免过于复杂的设置，并注意权衡取舍。短暂的离线将导致少量的不活动惩罚，但在再次在线大约相同的时间后，将很容易得到补偿。复杂的电源备份可能会增加您的设置费用，而冗余的备份验证者可能会导致大幅削减。"
+    }
+  ],
+  "SaR1pU": [
+    {
+      "type": 0,
+      "value": "存款已存在"
+    }
+  ],
+  "Sd+Pq6": [
+    {
+      "type": 0,
+      "value": "验证者总数"
+    }
+  ],
+  "Sd0I/u": [
+    {
+      "type": 0,
+      "value": "验证者公钥"
+    }
+  ],
+  "Sd3VAH": [
+    {
+      "type": 0,
+      "value": "已退出或被大幅削减的验证者不符合充值条件"
+    }
+  ],
+  "Sd9qhL": [
+    {
+      "type": 0,
+      "value": "更多关于大幅削减风险的信息"
+    }
+  ],
+  "SeW5ak": [
+    {
+      "type": 0,
+      "value": "签字前核实您钱包中的合同地址。"
+    }
+  ],
+  "Seanpx": [
+    {
+      "type": 0,
+      "value": "必需"
+    }
+  ],
+  "SqKNq2": [
+    {
+      "type": 0,
+      "value": "您可以使用 "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": " 在 macOS 设备上安装 python3"
+    }
+  ],
+  "Szwbym": [
+    {
+      "type": 0,
+      "value": "扳手"
+    }
+  ],
+  "TLEziZ": [
+    {
+      "type": 0,
+      "value": "信标链起源于 "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": "。随着时间的推移，它的大小在不断增长，而分片的引入也会增加存储、内存和带宽需求。"
+    }
+  ],
+  "TMw9oz": [
+    {
+      "type": 0,
+      "value": "在桌面上访问此站点以成为验证者。"
+    }
+  ],
+  "TfNuWP": [
+    {
+      "type": 0,
+      "value": "virtualenv 将帮助您为 deposit-cli 工具创建一个隔离的 Python 环境。"
+    }
+  ],
+  "TmYprU": [
+    {
+      "type": 0,
+      "value": "Eth2 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " Launchpad"
+    }
+  ],
+  "Tpe6yK": [
+    {
+      "type": 0,
+      "value": "rpc-http-enabled 文档"
+    }
+  ],
+  "U0yY/A": [
+    {
+      "type": 0,
+      "value": "查看广泛的客户端比较"
+    }
+  ],
+  "U7AOxj": [
+    {
+      "type": 0,
+      "value": "大于 50%"
+    }
+  ],
+  "U7PMU1": [
+    {
+      "type": 0,
+      "value": "Eth2 客户端支持 Prometheus 和 Grafana，帮助您可视化有关验证者的重要实时指标。您可以在此处找到特定于客户端的说明："
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
+    }
+  ],
+  "UHbYCa": [
+    {
+      "type": 0,
+      "value": "您的验证者有自己的余额 -- 存款合同中列出的初始余额。随着时间的推移，您的奖惩将反映在验证者的余额中。"
+    }
+  ],
+  "UJMct0": [
+    {
+      "type": 0,
+      "value": "检查 "
+    },
+    {
+      "type": 1,
+      "value": "etherscan"
+    },
+    {
+      "type": 0,
+      "value": " 获得更多详细信息"
+    }
+  ],
+  "UWv7yD": [
+    {
+      "type": 0,
+      "value": "在您最喜欢的以太坊区块浏览器上查看存款合同："
+    }
+  ],
+  "Utck3E": [
+    {
+      "type": 0,
+      "value": "语言支持"
+    }
+  ],
+  "Uxs0RD": [
+    {
+      "type": 0,
+      "value": "涂鸦"
+    }
+  ],
+  "Uy8THS": [
+    {
+      "type": 0,
+      "value": "在验证者总数超过 1/3 的情况下离线会导致更严厉的惩罚，因为区块不再最终确定。"
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    }
+  ],
+  "UygdAl": [
+    {
+      "type": 0,
+      "value": "以太坊协议的三个原始实现之一。"
+    }
+  ],
+  "UykRIk": [
+    {
+      "type": 0,
+      "value": "成为一名验证者是一项重大的责任，有重要的准备步骤。只有在您准备好后才开始存款流程。"
+    }
+  ],
+  "V0cb8p": [
+    {
+      "type": 0,
+      "value": "如果您没有测试网文件夹，很可能您没有正确构建和运行 Nimbus。再次运行 make 命令。"
+    }
+  ],
+  "VASo1/": [
+    {
+      "type": 0,
+      "value": "连接钱包"
+    }
+  ],
+  "VEj6nh": [
+    {
+      "type": 0,
+      "value": "Nethermind 安装文档"
+    }
+  ],
+  "VIMMdE": [
+    {
+      "type": 0,
+      "value": "如果不是您自己创建的，或者您不拥有其助记词，请不要提交任何包含 "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " 文件的交易。"
+    }
+  ],
+  "VJZrCQ": [
+    {
+      "type": 0,
+      "value": "切换到 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " LaunchPad"
+    }
+  ],
+  "VKfWR3": [
+    {
+      "type": 0,
+      "value": "推荐"
+    }
+  ],
+  "VLDKor": [
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 是最大有效验证者余额。这意味着如果验证者的余额超过 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": "，您将不会获得更多奖励。但是，如果价格降至 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " 以下，您的收入将会减少。"
+    }
+  ],
+  "VPpHAq": [
+    {
+      "type": 0,
+      "value": "我了解，我暂时"
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": "我的股份，在合并之前我"
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": "。我了解，如果我退出，我要很久以后才能重新加入。这是一项长期的承诺。"
+    }
+  ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "换句话说，如果以太币押注的总金额较低，回报（利率）就高，但随着总赌注的增加，支付给每个验证者的回报（利息）开始下降。"
+    }
+  ],
+  "VUuZsb": [
+    {
+      "type": 0,
+      "value": "武术制服"
+    }
+  ],
+  "VY3/Wo": [
+    {
+      "type": 0,
+      "value": "要成为验证者，您需要能够在您的计算机上的终端中运行命令。生成新的 Eth2 密钥对和安装验证者软件都是在终端中完成的。"
+    }
+  ],
+  "VctWDX": [
+    {
+      "type": 0,
+      "value": "我确信我正在为其充值的验证者是我的验证者。"
+    }
+  ],
+  "VzGJkB": [
+    {
+      "type": 0,
+      "value": "权益质押者清单"
+    }
+  ],
+  "W10U1b": [
+    {
+      "type": 0,
+      "value": "Teku 是 Apache 2 授权并以 Java 编写，它是一种以成熟和普遍存在而闻名的语言。"
+    }
+  ],
+  "W8nHSd": [
+    {
+      "type": 0,
+      "value": "常见问题"
+    }
+  ],
+  "W9JuAN": [
+    {
+      "type": 0,
+      "value": "Eth2 验证者客户端 (VC)"
+    }
+  ],
+  "WFVzvu": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " 使用相同密钥文件公钥的重复存款将被视为双重存款。 超过 "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " 的任何额外余额将不会计入您在信标链上的有效余额。 在信标链和主网合并之前，您也不能撤回。"
+    }
+  ],
+  "WMLn/w": [
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 个验证者"
+    }
+  ],
+  "WRevBY": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " 将您的 Eth2 节点连接到 JSON RPC 端点。这将在默认 8545 端口上启用 JSON RPC 服务。"
+    }
+  ],
+  "WTPUDZ": [
+    {
+      "type": 0,
+      "value": "这些步骤是可选的，但建议优化您的节点。"
+    }
+  ],
+  "Wao7OA": [
+    {
+      "type": 0,
+      "value": "Eth2 信标节点 (BN)"
+    }
+  ],
+  "WkrNSk": [
+    {
+      "type": 0,
+      "value": "英语"
+    }
+  ],
+  "Wl6cI3": [
+    {
+      "type": 0,
+      "value": "请接受上述条件。"
+    }
+  ],
+  "WxqnJn": [
+    {
+      "type": 0,
+      "value": "另一方面，您可能会因为离线和恶意行为而受到惩罚 – 例如，证明无效或相互矛盾的区块。"
+    }
+  ],
+  "Wxzght": [
+    {
+      "type": 0,
+      "value": "拖动文件以上传或浏览"
+    }
+  ],
+  "X/fKmY": [
+    {
+      "type": 0,
+      "value": "区块浏览器是否命名了合同？"
+    }
+  ],
+  "X0dSr0": [
+    {
+      "type": 0,
+      "value": "在多个地方运行您的 Eth2 验证者的风险很高。它将导致一个可削减的事件和从网络中弹出。 "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "X5KFEh": [
+    {
+      "type": 0,
+      "value": "这不是有效的 depositer_data JSON 文件。"
+    }
+  ],
+  "XBEBYR": [
+    {
+      "type": 0,
+      "value": "有关安装 pip 的更多信息"
+    }
+  ],
+  "XVehvN": [
+    {
+      "type": 1,
+      "value": "filesPattern"
+    },
+    {
+      "type": 0,
+      "value": " 预期 "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " 存在，并且包含其密码的文件为 "
+    },
+    {
+      "type": 1,
+      "value": "passwordFile"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "XmddSV": [
+    {
+      "type": 0,
+      "value": "从源代码构建"
+    }
+  ],
+  "Y47aYU": [
+    {
+      "type": 0,
+      "value": "充值"
+    }
+  ],
+  "Y8YLHs": [
+    {
+      "type": 0,
+      "value": "如果您的签名密钥不在盗窃者控制之下，盗窃者无法退出您的验证者。"
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "发送上一次存款"
+    }
+  ],
+  "YBs4dR": [
+    {
+      "type": 0,
+      "value": "最新版本的 pip 应该已与 python3.x.x 一起安装。有关在 Windows 上安装 pip 的详细信息，请访问 "
+    },
+    {
+      "type": 1,
+      "value": "windowsInstallGuide"
+    },
+    {
+      "type": 0,
+      "value": "。或者您也可以通过 "
+    },
+    {
+      "type": 1,
+      "value": "chocolatey"
+    },
+    {
+      "type": 0,
+      "value": " 安装 pip 软件包。"
+    }
+  ],
+  "YFFqcn": [
+    {
+      "type": 0,
+      "value": "我了解利益攸关方证明以及为何需要验证者。"
+    }
+  ],
+  "YFT4rG": [
+    {
+      "type": 0,
+      "value": "密钥"
+    }
+  ],
+  "YP03/j": [
+    {
+      "type": 0,
+      "value": "之后，仍然鼓励验证者加入（验证者越多，网络就越分散），但他们这样做并不是绝对必要的（这样可以降低利率）。"
+    }
+  ],
+  "YPsbIU": [
+    {
+      "type": 0,
+      "value": "我已设置我的 "
+    },
+    {
+      "type": 1,
+      "value": "grafana"
+    },
+    {
+      "type": 0,
+      "value": " 服务。"
+    }
+  ],
+  "YWfd2t": [
+    {
+      "type": 0,
+      "value": "一个针对 Eth2 的研究项目和客户端实现，旨在在嵌入式系统和个人移动设备（包括硬件资源受限的老式智能手机）上运行良好。Nimbus 团队来自 Status，这家公司最出名的是他们的即时通讯应用/钱包/Web3 浏览器。"
+    }
+  ],
+  "YZtdY1": [
+    {
+      "type": 0,
+      "value": "截止 "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": "，仅 Eth1 主网链数据就需要 ~400GB（每日增长 ~1GB） 。"
+    }
+  ],
+  "Yganfl": [
+    {
+      "type": 0,
+      "value": "在终端窗口中输入以下行："
+    }
+  ],
+  "YkznEp": [
+    {
+      "type": 0,
+      "value": "如果您丢失了您的提款密钥，您无法访问您的验证者持有的资金。"
+    }
+  ],
+  "YtwQyB": [
+    {
+      "type": 0,
+      "value": "您可以"
+    },
+    {
+      "type": 1,
+      "value": "changeYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " 为其他地址加载验证者。"
+    }
+  ],
+  "Yu78N6": [
+    {
+      "type": 0,
+      "value": "钱袋"
+    }
+  ],
+  "Z07LQm": [
+    {
+      "type": 0,
+      "value": "由于出现错误，无法上传 "
+    },
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": "。在 GitHub 中打开一个问题，以便我们可以进行调查。"
+    }
+  ],
+  "Z1aGQe": [
+    {
+      "type": 0,
+      "value": "总体而言，只要您的正常运行时间为 "
+    },
+    {
+      "type": 1,
+      "value": "greaterThan50Percent"
+    },
+    {
+      "type": 0,
+      "value": "，我们预计您的验证者将实现净盈利。"
+    }
+  ],
+  "ZBtnGs": [
+    {
+      "type": 0,
+      "value": "我已经审查了该清单。"
+    }
+  ],
+  "ZK6NmY": [
+    {
+      "type": 0,
+      "value": "注意：RTC（实时时钟）时间可以设置为您的本地时区，而不是 UTC，特别是在 Windows 上配置了时钟的虚拟机中。"
+    }
+  ],
+  "ZOU+p7": [
+    {
+      "type": 0,
+      "value": "--http 文档"
+    }
+  ],
+  "ZOXuIe": [
+    {
+      "type": 0,
+      "value": "我为什么需要获得资金？"
+    }
+  ],
+  "ZPRDyW": [
+    {
+      "type": 0,
+      "value": "再说一次，这要视情况而定。恶意行为（例如证明无效或相互矛盾的区块）将导致您的赌注被大幅削减。"
+    }
+  ],
+  "ZRbxwY": [
+    {
+      "type": 0,
+      "value": "Eth2 验证者清单"
+    }
+  ],
+  "ZTo0Fl": [
+    {
+      "type": 0,
+      "value": "为什么要等待？"
+    }
+  ],
+  "Zi+EED": [
+    {
+      "type": 0,
+      "value": "Pegasys Teku 是一个基于 Java 的 Etherum 2.0 客户端，旨在满足机构需求和安全要求。"
+    }
+  ],
+  "Zspg8H": [
+    {
+      "type": 0,
+      "value": "第 1 部分 - 开始之前"
+    }
+  ],
+  "ZzTcj5": [
+    {
+      "type": 0,
+      "value": "下载 python3 并按照安装说明操作。"
+    }
+  ],
+  "a+xjjV": [
+    {
+      "type": 0,
+      "value": "使用 Prysm 成为验证者"
+    }
+  ],
+  "aDomwX": [
+    {
+      "type": 0,
+      "value": "如果您试图欺骗系统，或违反规范，您将可能招致处罚，即所谓的大幅削减。在两台或更多机器上同时运行您的验证者密钥将导致大幅削减。"
+    }
+  ],
+  "aEBE6s": [
+    {
+      "type": 0,
+      "value": "2. 准备节点"
+    }
+  ],
+  "aMcG1s": [
+    {
+      "type": 0,
+      "value": "检查您最喜欢的 Eth2 区块浏览器："
+    }
+  ],
+  "aS6dBe": [
+    {
+      "type": 0,
+      "value": "配置 Nimbus"
+    }
+  ],
+  "aTRROW": [
+    {
+      "type": 0,
+      "value": "Nimbus (Apache2) 是用 Nim 编写的，Nim 是一种使用类似 Python 的语法编译成 C 的语言。"
+    }
+  ],
+  "aXWL9X": [
+    {
+      "type": 0,
+      "value": "您无法重新激活验证者，并且在合并之前您将无法转移或提取资金（这意味着在合并之前您的资金将不可用）。"
+    }
+  ],
+  "aZ7pUj": [
+    {
+      "type": 0,
+      "value": "您的钱包在错误的以太坊网络上。若要继续，请连接到 "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": " 网络。"
+    }
+  ],
+  "acrOoz": [
+    {
+      "type": 0,
+      "value": "继续"
+    }
+  ],
+  "azLmaD": [
+    {
+      "type": 0,
+      "value": "从 Python 源代码构建 deposit-cli"
+    }
+  ],
+  "b3J7Pw": [
+    {
+      "type": 0,
+      "value": "不。下注超过 "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " 以太币没有好处。"
+    }
+  ],
+  "b4csjU": [
+    {
+      "type": 0,
+      "value": "然而，请记住，在可预见的未来，一旦您退出，就没有回头路可走了。"
+    }
+  ],
+  "bNFkSo": [
+    {
+      "type": 0,
+      "value": "现在按照终端窗口中显示的说明生成密钥。"
+    }
+  ],
+  "bR1R2M": [
+    {
+      "type": 0,
+      "value": "在客户端设置过程中将此作为参考，以检查重要步骤。"
+    }
+  ],
+  "bUk/lm": [
+    {
+      "type": 0,
+      "value": "Besu 安装文档"
+    }
+  ],
+  "bVtlF7": [
+    {
+      "type": 0,
+      "value": "在对节点运行维护之前，请确保在驱动器上留出足够的空间。"
+    }
+  ],
+  "bbr+aD": [
+    {
+      "type": 0,
+      "value": "YAML 文件可以有不同的语法。"
+    }
+  ],
+  "bnuvhg": [
+    {
+      "type": 0,
+      "value": "Lighthouse 是用 Rust 构建的，并且是依照 Apache 2.0 许可提供的。"
+    }
+  ],
+  "bxU6sX": [
+    {
+      "type": 0,
+      "value": "Python 安装说明"
+    }
+  ],
+  "c9DSZ1": [
+    {
+      "type": 0,
+      "value": "我们强烈建议您在主网之前在当前的测试网上完成这些步骤。"
+    }
+  ],
+  "cHUoV9": [
+    {
+      "type": 0,
+      "value": "Geth 文档解释了如何下载和安装客户端。"
+    }
+  ],
+  "cRzxes": [
+    {
+      "type": 0,
+      "value": "当前 APR"
+    }
+  ],
+  "cav520": [
+    {
+      "type": 0,
+      "value": "从 GitHub 下载"
+    }
+  ],
+  "ccU6l/": [
+    {
+      "type": 0,
+      "value": "在线"
+    }
+  ],
+  "chw27s": [
+    {
+      "type": 0,
+      "value": "关于 PegaSys Teku 的更多信息"
+    }
+  ],
+  "clUb0+": [
+    {
+      "type": 0,
+      "value": "命令行"
+    }
+  ],
+  "clxIWO": [
+    {
+      "type": 0,
+      "value": "我将因恶意行为而受到多少惩罚？"
+    }
+  ],
+  "cs9mQw": [
+    {
+      "type": 0,
+      "value": "了解更多关于 Eth2 验证者的角色和责任的信息。"
+    }
+  ],
+  "cyR7Kh": [
+    {
+      "type": 0,
+      "value": "返回"
+    }
+  ],
+  "d5KEM8": [
+    {
+      "type": 0,
+      "value": "您必须为想要进行的每笔存款签署交易。"
+    }
+  ],
+  "dIgBOz": [
+    {
+      "type": 0,
+      "value": "存款"
+    }
+  ],
+  "dM/KIM": [
+    {
+      "type": 0,
+      "value": "什么是验证者？"
+    }
+  ],
+  "dTOtPO": [
+    {
+      "type": 0,
+      "value": "充值"
+    }
+  ],
+  "deLJOg": [
+    {
+      "type": 0,
+      "value": "上传有效的 json 文件。"
+    }
+  ],
+  "do+Cyc": [
+    {
+      "type": 0,
+      "value": "估计的 APR ("
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "dprf8W": [
+    {
+      "type": 0,
+      "value": "在哪里可以找到故障排除支持？"
+    }
+  ],
+  "dvr19k": [
+    {
+      "type": 0,
+      "value": "设置"
+    }
+  ],
+  "dzdAcD": [
+    {
+      "type": 0,
+      "value": "默认端口"
+    }
+  ],
+  "e/PSgJ": [
+    {
+      "type": 0,
+      "value": "上传存款数据"
+    }
+  ],
+  "e4f94H": [
+    {
+      "type": 0,
+      "value": "如果 "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " 不是 "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "，则运行 "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    }
+  ],
+  "eIRc60": [
+    {
+      "type": 0,
+      "value": "关于 Eth2 的更多信息"
+    }
+  ],
+  "eKEL/g": [
+    {
+      "type": 0,
+      "value": "待处理"
+    }
+  ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "提交交易以完成您的存款。"
+    }
+  ],
+  "eOpZjd": [
+    {
+      "type": 0,
+      "value": "它指定了谁在下注，谁在验证，下注了多少，以及谁可以提取资金。"
+    }
+  ],
+  "eaU/aL": [
+    {
+      "type": 0,
+      "value": "要最大限度地提高节点的安全性和效率，请使用专用硬件来运行客户端。这降低了恶意软件暴露的风险，并最大限度地减少了对计算资源的竞争，确保您的节点始终处理网络负载及其验证者职责。"
+    }
+  ],
+  "egVO5r": [
+    {
+      "type": 0,
+      "value": "关于碎片链的更多信息"
+    }
+  ],
+  "elCkOU": [
+    {
+      "type": 0,
+      "value": "关于合并的更多信息"
+    }
+  ],
+  "erZJkZ": [
+    {
+      "type": 0,
+      "value": "启动 Teku 时，可以通过不同的方式提供密钥库和密码。"
+    }
+  ],
+  "esDvdR": [
+    {
+      "type": 0,
+      "value": "验证者余额超过 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": "，但有效余额较低 ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": ")。添加 "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "（存款合同允许的最小值）将使您的有效余额最大化。"
+    }
+  ],
+  "eyK2E3": [
+    {
+      "type": 0,
+      "value": "完整清单"
+    }
+  ],
+  "f/N7FO": [
+    {
+      "type": 0,
+      "value": "如果我丢失签名密钥会发生什么？"
+    }
+  ],
+  "fHLKXR": [
+    {
+      "type": 0,
+      "value": "这个问题的答案在很大程度上取决于您有多少可支配的以太币。"
+    }
+  ],
+  "fR8+bQ": [
+    {
+      "type": 0,
+      "value": "安装期间"
+    }
+  ],
+  "fbiteI": [
+    {
+      "type": 0,
+      "value": "仅存储在一个验证者计算机上"
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "正在等待钱包确认"
+    }
+  ],
+  "frGVRP": [
+    {
+      "type": 0,
+      "value": "有效余额的影响"
+    }
+  ],
+  "g/DxI7": [
+    {
+      "type": 0,
+      "value": "此外，您可以在不同的计算机和 IP 上设置验证者客户端 (VC) 和信标节点 (BN)，以便即使您的信标节点易受攻击，您的密钥库也存储在不同的计算机上。"
+    }
+  ],
+  "g37XKP": [
+    {
+      "type": 0,
+      "value": "关于虚拟环境的更多信息"
+    }
+  ],
+  "gAdE9y": [
+    {
+      "type": 0,
+      "value": "感谢您支持 Eth2 网络 ！"
+    }
+  ],
+  "gIauNz": [
+    {
+      "type": 0,
+      "value": "您应该看到每个验证者都有一个密钥库。此密钥库包含使用密码加密的签名密钥。当您想要取款时，可以使用助记符生成取款密钥。"
+    }
+  ],
+  "gN9D/h": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 来同步 Goerli 测试网。"
+    }
+  ],
+  "gQkd2y": [
+    {
+      "type": 0,
+      "value": "使用 Ethereum Foundation 存款工具生成存款密钥"
+    }
+  ],
+  "gVC0Wl": [
+    {
+      "type": 0,
+      "value": "它在您的机密文件夹中使用辅助密码。"
+    }
+  ],
+  "gfLdAQ": [
+    {
+      "type": 0,
+      "value": "关于信标链的更多信息"
+    }
+  ],
+  "gjBiyj": [
+    {
+      "type": 0,
+      "value": "正在加载..."
+    }
+  ],
+  "gjmx29": [
+    {
+      "type": 0,
+      "value": "是"
+    }
+  ],
+  "gtrcyK": [
+    {
+      "type": 0,
+      "value": "检查 "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": "、"
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " 和 "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " 是否都正确。"
+    }
+  ],
+  "guMfKn": [
+    {
+      "type": 0,
+      "value": "这意味着您不需要使用备份客户端或冗余的互联网连接上走极端，因为离线的影响不是那么严重。"
+    }
+  ],
+  "gx6frf": [
+    {
+      "type": 0,
+      "value": "时钟"
+    }
+  ],
+  "h8MTUo": [
+    {
+      "type": 0,
+      "value": "您的赌注"
+    }
+  ],
+  "h8ZHus": [
+    {
+      "type": 0,
+      "value": "验证者之间的传输还不可能。您必须等到主网与信标链合并（大约两年）后，才能撤回或转让您的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "hFzE1M": [
+    {
+      "type": 0,
+      "value": "帮助网络达成共识的行动会得到奖励。"
+    }
+  ],
+  "hG0uP4": [
+    {
+      "type": 0,
+      "value": "仅桌面版"
+    }
+  ],
+  "hPCn9f": [
+    {
+      "type": 0,
+      "value": "--JsonRpc.Enabled 文档"
+    }
+  ],
+  "hXE+0W": [
+    {
+      "type": 0,
+      "value": "上传 "
+    },
+    {
+      "type": 1,
+      "value": "depositJSON"
+    }
+  ],
+  "hZrkPB": [
+    {
+      "type": 0,
+      "value": "换句话说，通过为整个网络提供最大收益，您将获得最大的回报。"
+    }
+  ],
+  "hjrLbR": [
+    {
+      "type": 0,
+      "value": "为此，我们需要积极的参与者（称为验证者）来建议、验证和担保区块的有效性。作为交换，诚实的验证者会获得经济奖励。"
+    }
+  ],
+  "hkg3fb": [
+    {
+      "type": 0,
+      "value": "更多关于有效余额的信息"
+    }
+  ],
+  "huEFUF": [
+    {
+      "type": 0,
+      "value": "您有 "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 笔未清存款"
+    }
+  ],
+  "hzLd+/": [
+    {
+      "type": 0,
+      "value": "我了解，让我的验证者保持在线和更新非常重要。"
+    }
+  ],
+  "iBYfM0": [
+    {
+      "type": 0,
+      "value": "您需要运行 Eth1 和 Eth2 节点才能成为验证者。查看核对表，让自己和您的设备做好准备。"
+    }
+  ],
+  "iCpuph": [
+    {
+      "type": 0,
+      "value": "客户端"
+    }
+  ],
+  "iMvXLd": [
+    {
+      "type": 0,
+      "value": "运行验证者客户端"
+    }
+  ],
+  "iPRnRG": [
+    {
+      "type": 0,
+      "value": "由于传输暂时禁用，您将无法自动退出，稍后再重新启动。这意味着您需要长期参与其中。"
+    }
+  ],
+  "iWg7mL": [
+    {
+      "type": 0,
+      "value": "请确保您为 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " 设置了 "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": "，否则存款将无效。"
+    }
+  ],
+  "iZuIgB": [
+    {
+      "type": 0,
+      "value": "解压缩刚刚下载的文件"
+    }
+  ],
+  "idDbou": [
+    {
+      "type": 0,
+      "value": "在考虑权益质押吗？"
+    }
+  ],
+  "irRdC0": [
+    {
+      "type": 0,
+      "value": "硬件建议是一个不断发展的目标。合并和引入碎片链后，当前的最低要求可能会增加一个数量级。在存入资金之前先做好您自己的研究。"
+    }
+  ],
+  "isGKnz": [
+    {
+      "type": 0,
+      "value": "文档"
+    }
+  ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "发送所有 "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 存款"
+    }
+  ],
+  "j4ctVP": [
+    {
+      "type": 0,
+      "value": "Eth2 规范"
+    }
+  ],
+  "jDv/zO": [
+    {
+      "type": 0,
+      "value": "在测试网上进行验证时，执行这些模拟以更多地了解您的节点，更好地为主网做好准备："
+    }
+  ],
+  "jXer8/": [
+    {
+      "type": 0,
+      "value": "Prysm 文档"
+    }
+  ],
+  "jYVeq4": [
+    {
+      "type": 0,
+      "value": "Lighthouse 安装文档"
+    }
+  ],
+  "jZVChZ": [
+    {
+      "type": 0,
+      "value": "我已经将我的密钥库导入到我的 Eth2 验证者客户端。"
+    }
+  ],
+  "jecC36": [
+    {
+      "type": 0,
+      "value": "公钥"
+    }
+  ],
+  "jfHMKL": [
+    {
+      "type": 0,
+      "value": "连接钱包"
+    }
+  ],
+  "jjLubH": [
+    {
+      "type": 0,
+      "value": "Prysm 安装文档"
+    }
+  ],
+  "jm79h1": [
+    {
+      "type": 0,
+      "value": "警告：不要同时在多个（备份）验证者上存储密钥"
+    }
+  ],
+  "jse8rl": [
+    {
+      "type": 0,
+      "value": "我的验证者需要多长的正常运行时间才能实现净盈利？"
+    }
+  ],
+  "jvB4W9": [
+    {
+      "type": 0,
+      "value": "环境变量"
+    }
+  ],
+  "jyN21A": [
+    {
+      "type": 0,
+      "value": "Eth2 Launchpad"
+    }
+  ],
+  "jytPQU": [
+    {
+      "type": 0,
+      "value": "Nimbus 文档"
+    }
+  ],
+  "kFS5Sd": [
+    {
+      "type": 0,
+      "value": "正式核实的存款合同"
+    }
+  ],
+  "kGnu3F": [
+    {
+      "type": 0,
+      "value": "如何发放奖励/惩罚？"
+    }
+  ],
+  "kQTAe+": [
+    {
+      "type": 0,
+      "value": "URL 是否与您在其他网站上看到的匹配？"
+    }
+  ],
+  "kXhUdD": [
+    {
+      "type": 0,
+      "value": "在桌面上成为验证者"
+    }
+  ],
+  "kZ1+zq": [
+    {
+      "type": 0,
+      "value": "Teku 文档"
+    }
+  ],
+  "kd/f4u": [
+    {
+      "type": 0,
+      "value": "密钥列表"
+    }
+  ],
+  "km7b1A": [
+    {
+      "type": 0,
+      "value": "随着时间的推移，您的余额将会减少，因为您会因为没有参与共识过程而受到惩罚。当您的余额达到 16 以太币时，您将自动退出验证者池。"
+    }
+  ],
+  "kn7kJd": [
+    {
+      "type": 0,
+      "value": "关于协商一致机制的更多信息"
+    }
+  ],
+  "krEziQ": [
+    {
+      "type": 0,
+      "value": "联系我们"
+    }
+  ],
+  "kuYpoI": [
+    {
+      "type": 0,
+      "value": "当前余额"
+    }
+  ],
+  "kv1nqx": [
+    {
+      "type": 0,
+      "value": "已退出"
+    }
+  ],
+  "l/uCcX": [
+    {
+      "type": 0,
+      "value": "您在测试网上"
+    }
+  ],
+  "l4nLft": [
+    {
+      "type": 0,
+      "value": "我知道如何检查是否将我的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 发送到正确的存款合同中，并且会这样做。"
+    }
+  ],
+  "l5XCJW": [
+    {
+      "type": 0,
+      "value": "通告"
+    }
+  ],
+  "l5kq/q": [
+    {
+      "type": 0,
+      "value": "在链上确认"
+    }
+  ],
+  "l6OJpv": [
+    {
+      "type": 0,
+      "value": "首先，在资源库目录下创建一个 venv virtualenv："
+    }
+  ],
+  "lD66ab": [
+    {
+      "type": 0,
+      "value": "未清存款"
+    }
+  ],
+  "lJNmgK": [
+    {
+      "type": 0,
+      "value": "Eth2 如何升级以太坊？"
+    }
+  ],
+  "lLOZMD": [
+    {
+      "type": 0,
+      "value": "您可以使用像 "
+    },
+    {
+      "type": 1,
+      "value": "apt"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "yum"
+    },
+    {
+      "type": 0,
+      "value": " 这样的 Linux 软件包管理器安装 pip。"
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "向您索要 "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " 存款的网站是否有您期望的 URL？"
+    }
+  ],
+  "lQzdpT": [
+    {
+      "type": 0,
+      "value": "num_validators"
+    }
+  ],
+  "lS9VhN": [
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 下注总数"
+    }
+  ],
+  "lVARlA": [
+    {
+      "type": 0,
+      "value": "请输入有效的充值。"
+    }
+  ],
+  "lVdzDK": [
+    {
+      "type": 0,
+      "value": "上传您刚刚生成的存款数据文件。"
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " 位于您的 "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " 目录中。"
+    }
+  ],
+  "lfV1bj": [
+    {
+      "type": 0,
+      "value": "从 Launchpad 文档导入"
+    }
+  ],
+  "ll/zMW": [
+    {
+      "type": 0,
+      "value": "这是不可逆转的交易。"
+    }
+  ],
+  "lo+Qqn": [
+    {
+      "type": 0,
+      "value": "更改您的钱包"
+    }
+  ],
+  "lrdlY6": [
+    {
+      "type": 0,
+      "value": "文件已上传"
+    }
+  ],
+  "mArJcj": [
+    {
+      "type": 0,
+      "value": "硬盘驱动器"
+    }
+  ],
+  "mZOXtM": [
+    {
+      "type": 0,
+      "value": "验证者"
+    }
+  ],
+  "mhyltV": [
+    {
+      "type": 0,
+      "value": "我设置了我的涂鸦旗帜。"
+    }
+  ],
+  "mpmFDY": [
+    {
+      "type": 0,
+      "value": "没有待定存款"
+    }
+  ],
+  "mr1BWl": [
+    {
+      "type": 0,
+      "value": "风险和确认："
+    }
+  ],
+  "n6Uub0": [
+    {
+      "type": 0,
+      "value": "我已经在 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " 上安装并同步了我的 Eth1 节点（不要等待，因为这可能需要几天时间）。"
+    }
+  ],
+  "n7yYXG": [
+    {
+      "type": 0,
+      "value": "服务"
+    }
+  ],
+  "nHk8Et": [
+    {
+      "type": 0,
+      "value": "PoS 是一种比目前确保以太坊安全的工作证明 (PoW) 更安全、更分散、更环保的共识机制。它奖励建立链的验证者，但如果他们试图攻击它，就会大幅削减他们的存款，以激励健康的行为。这次升级已经以信标链的形式上线。"
+    }
+  ],
+  "nIb6XF": [
+    {
+      "type": 0,
+      "value": "而恶意行为会受到重大惩罚或者"
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "nRdJct": [
+    {
+      "type": 0,
+      "value": "继续不确认所有交易"
+    }
+  ],
+  "nZTFTz": [
+    {
+      "type": 0,
+      "value": "我明白每个验证者存款超过一次是没有好处的。在重复存款中发送的任何额外的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 将不会计入我的有效验证者余额中，并且我将无法提取它。"
+    }
+  ],
+  "ndhFef": [
+    {
+      "type": 0,
+      "value": "一旦您熟悉了，您将完成生成密钥和存放以太币的过程。"
+    }
+  ],
+  "njAU72": [
+    {
+      "type": 0,
+      "value": "法语"
+    }
+  ],
+  "njnn9P": [
+    {
+      "type": 0,
+      "value": "我已开始运行我的验证者客户端。"
+    }
+  ],
+  "ntG2by": [
+    {
+      "type": 0,
+      "value": "高级系统架构"
+    }
+  ],
+  "nz27+c": [
+    {
+      "type": 0,
+      "value": "如果您有问题，EthStaker 社区是一个寻求帮助的好地方！您可以在 "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " 上找到支持。"
+    }
+  ],
+  "o9QvTP": [
+    {
+      "type": 0,
+      "value": "开始之前"
+    }
+  ],
+  "oLxfO1": [
+    {
+      "type": 0,
+      "value": "现在已经导入了密钥，剩下要做的就是运行验证者客户端（假设您的信标节点已经在运行）。"
+    }
+  ],
+  "oPdwwC": [
+    {
+      "type": 0,
+      "value": "将最大股份限制在 "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " 以太币会鼓励权力下放，因为它防止任何一个验证者对链的状态拥有过大的投票权。"
+    }
+  ],
+  "oWhj8Q": [
+    {
+      "type": 0,
+      "value": "奖励/惩罚多久发放一次？"
+    }
+  ],
+  "ogbG7r": [
+    {
+      "type": 0,
+      "value": "要成为信标链上的验证者，您需要为每个要运行的验证者存入 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "ohspQX": [
+    {
+      "type": 0,
+      "value": "责任"
+    }
+  ],
+  "okxBZ6": [
+    {
+      "type": 0,
+      "value": "OpenEtherum 的前身是 Parity，它被设计成“最快、最轻、最安全的以太坊客户端”。"
+    }
+  ],
+  "omJNJw": [
+    {
+      "type": 0,
+      "value": "警告！"
+    }
+  ],
+  "on8WXn": [
+    {
+      "type": 0,
+      "value": "我已经将仪表板配置导入到我的 Grafana 服务器，并再次检查我的节点是否处于活动状态。"
+    }
+  ],
+  "orM+1T": [
+    {
+      "type": 0,
+      "value": "Teku 还将从验证者密钥环境变量中找到的路径加载来自密钥库（和密码）的验证者。"
+    }
+  ],
+  "orczlb": [
+    {
+      "type": 0,
+      "value": "合同是否有很大的余额？"
+    }
+  ],
+  "ouW9ov": [
+    {
+      "type": 0,
+      "value": "您的验证者"
+    }
+  ],
+  "ox304v": [
+    {
+      "type": 0,
+      "value": "发生错误"
+    }
+  ],
+  "ozEkVY": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 来同步 Goerli 测试网。"
+    }
+  ],
+  "p0b6zX": [
+    {
+      "type": 0,
+      "value": "关于状态的更多信息"
+    }
+  ],
+  "p556q3": [
+    {
+      "type": 0,
+      "value": "已复制"
+    }
+  ],
+  "pA+UVF": [
+    {
+      "type": 0,
+      "value": "如果您想要查看另一种语言的 LaunchPad，或者如果您可以帮助翻译，请"
+    },
+    {
+      "type": 1,
+      "value": "getInTouch"
+    },
+    {
+      "type": 0,
+      "value": "！"
+    }
+  ],
+  "pXyH++": [
+    {
+      "type": 0,
+      "value": "Besu 文档解释了如何下载和安装客户端。"
+    }
+  ],
+  "penFMT": [
+    {
+      "type": 0,
+      "value": "Eth2 是一组升级，将使以太坊更具可扩展性、安全性和可持续性。这些升级将改进以太坊，同时在今天的链上无缝延续。以下是关于不同升级的更多信息："
+    }
+  ],
+  "pfJX2D": [
+    {
+      "type": 0,
+      "value": "更多关于钓鱼的信息"
+    }
+  ],
+  "pnxB8A": [
+    {
+      "type": 0,
+      "value": "Nimbus 在您的验证者文件夹中查找密钥库。"
+    }
+  ],
+  "pqC+qt": [
+    {
+      "type": 0,
+      "value": "大幅削减"
+    }
+  ],
+  "ps8lLk": [
+    {
+      "type": 0,
+      "value": "在绝大多数 (2/3) 验证者仍在线的情况下离线会导致相对较小的处罚，因为仍有足够的验证者在线以供链完成。"
+    },
+    {
+      "type": 1,
+      "value": "expected"
+    }
+  ],
+  "ptWiT7": [
+    {
+      "type": 0,
+      "value": "我已经模拟了如何妥善地手动停止和重新启动我的信标节点 (BN) 和验证者客户端 (VC)。"
+    }
+  ],
+  "pyWt01": [
+    {
+      "type": 0,
+      "value": "存款摘要"
+    }
+  ],
+  "q2XW/k": [
+    {
+      "type": 0,
+      "value": "如果您的取款钥匙被盗，窃贼可以转移您的验证者余额，但前提是验证者已经退出。"
+    }
+  ],
+  "q6sz6X": [
+    {
+      "type": 0,
+      "value": "Eth2 经济学"
+    }
+  ],
+  "qDcbPp": [
+    {
+      "type": 0,
+      "value": "您的 16 以太币可以在延迟大约一天后用您的取款密钥取款。"
+    }
+  ],
+  "qDvaNm": [
+    {
+      "type": 0,
+      "value": "我了解，密钥是我的责任，我的助记符（种子）将是提取我资金的"
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": "。"
+    }
+  ],
+  "qLf68w": [
+    {
+      "type": 0,
+      "value": "OpenEthereum 文档"
+    }
+  ],
+  "qMePPG": [
+    {
+      "type": 0,
+      "value": "备注"
+    }
+  ],
+  "qQ+Xla": [
+    {
+      "type": 0,
+      "value": "韩语"
+    }
+  ],
+  "qZ59xY": [
+    {
+      "type": 0,
+      "value": "所有验证者"
+    }
+  ],
+  "qdk7Hp": [
+    {
+      "type": 0,
+      "value": "您的钱包已断开连接"
+    }
+  ],
+  "qgqVCE": [
+    {
+      "type": 0,
+      "value": "重新连接您的钱包"
+    }
+  ],
+  "qkhah0": [
+    {
+      "type": 0,
+      "value": "保存密钥文件并准备好验证者文件"
+    }
+  ],
+  "qpdTjz": [
+    {
+      "type": 0,
+      "value": "一个非常注重速度和安全性的 Eth2 客户端。由信息安全和软件工程公司 Sigma Prime 构建，该公司与 Ethereum Foundation、Consensys 和个人一起资助 Lighthouse。"
+    }
+  ],
+  "quIMjo": [
+    {
+      "type": 0,
+      "value": "请确保执行以下操作，以使您的 Eth1 客户端正常工作。"
+    }
+  ],
+  "qwh6gM": [
+    {
+      "type": 0,
+      "value": "我了解早期采用者和大幅削减风险。"
+    }
+  ],
+  "r2BH1M": [
+    {
+      "type": 0,
+      "value": "配置 Prysm"
+    }
+  ],
+  "r4JsKB": [
+    {
+      "type": 0,
+      "value": "交易成功"
+    }
+  ],
+  "rD3ot9": [
+    {
+      "type": 0,
+      "value": "钓鱼指南"
+    }
+  ],
+  "rFe61n": [
+    {
+      "type": 0,
+      "value": "作为验证者，您将负责保护网络安全，并为帮助网络达成共识的行动获得持续的回报。"
+    }
+  ],
+  "rNEdex": [
+    {
+      "type": 0,
+      "value": "您可以将验证者视为新区块的投票者"
+    }
+  ],
+  "rTSJI9": [
+    {
+      "type": 0,
+      "value": "尝试测试网"
+    }
+  ],
+  "rULiIc": [
+    {
+      "type": 0,
+      "value": "完成权益质押者清单"
+    }
+  ],
+  "raRw6Z": [
+    {
+      "type": 0,
+      "value": "Launchpad 主页"
+    }
+  ],
+  "rbrahO": [
+    {
+      "type": 0,
+      "value": "关闭"
+    }
+  ],
+  "rcdxTW": [
+    {
+      "type": 0,
+      "value": "在验证者总数固定的情况下，奖罚主要与验证者的余额成比例 -- 余额越高，奖罚越大，余额越低，奖罚越低。"
+    }
+  ],
+  "rs4eqr": [
+    {
+      "type": 0,
+      "value": "出于两个重要原因，您可能需要补充验证者的余额。如果您的验证者的有效余额低于 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "，您将无法获得全部的赌注奖励。如果它降至 "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "，系统将弹出您的验证者。"
+    }
+  ],
+  "rswUPu": [
+    {
+      "type": 0,
+      "value": "Launchpad 摘要"
+    }
+  ],
+  "rxttyC": [
+    {
+      "type": 0,
+      "value": "您的助记符是签名密钥的备份，当您丢失助记符时，没有人能帮助您找回您的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "，这将是唯一的方法。"
+    }
+  ],
+  "s0FTco": [
+    {
+      "type": 0,
+      "value": "APR"
+    }
+  ],
+  "s6gImC": [
+    {
+      "type": 0,
+      "value": "Teku 也可以通过 YAML 文件进行配置，该文件通过几种不同的方式传入。"
+    }
+  ],
+  "sXV95+": [
+    {
+      "type": 0,
+      "value": "CPU 和 RAM"
+    }
+  ],
+  "soCLV+": [
+    {
+      "type": 0,
+      "value": "核对清单"
+    }
+  ],
+  "sraQ3P": [
+    {
+      "type": 0,
+      "value": "正在等待连接…"
+    }
+  ],
+  "svsq8J": [
+    {
+      "type": 0,
+      "value": "我已在 "
+    },
+    {
+      "type": 1,
+      "value": "ETH2_NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 上同步了我的 Eth2 信标节点。"
+    }
+  ],
+  "sy35J+": [
+    {
+      "type": 0,
+      "value": "什么是存款合同？"
+    }
+  ],
+  "szN3Fl": [
+    {
+      "type": 0,
+      "value": "我理解并同意以上各节所述之服务条款及一切规定。"
+    }
+  ],
+  "tJcyUM": [
+    {
+      "type": 0,
+      "value": "Deposit_data.json 表明您想要设置更多的验证者。这些存款仍未结清。如果您认为自己已经进行了这些存款，那就等一个小时再试一次，以避免重复存款。"
+    }
+  ],
+  "teyxVk": [
+    {
+      "type": 0,
+      "value": "地址应该是什么？"
+    }
+  ],
+  "tigMuZ": [
+    {
+      "type": 0,
+      "value": "至少等待 30 分钟，然后再尝试重新提交包含此 "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " 文件的交易。这将使我们的链上数据源有时间来标记任何重复的存款。"
+    }
+  ],
+  "tkFTZw": [
+    {
+      "type": 0,
+      "value": "充值后的余额"
+    }
+  ],
+  "tsfX5f": [
+    {
+      "type": 0,
+      "value": "确认存款"
+    }
+  ],
+  "tv5Cxs": [
+    {
+      "type": 0,
+      "value": "但是请注意，这种缩放机制以一种不明显的方式工作。要了解其工作原理的确切细节，需要理解一个名为 "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": " 的概念。如果您还不熟悉此概念，我们建议您通读"
+    },
+    {
+      "type": 1,
+      "value": "article"
+    }
+  ],
+  "tzMNF3": [
+    {
+      "type": 0,
+      "value": "状态"
+    }
+  ],
+  "u28qA1": [
+    {
+      "type": 0,
+      "value": "存款之后"
+    }
+  ],
+  "uCikFk": [
+    {
+      "type": 0,
+      "value": "您也需要足够的上传带宽。截至 "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": "，此速度约为 700-800 MB/小时，而且可能还会增加。"
+    }
+  ],
+  "uJzGSb": [
+    {
+      "type": 0,
+      "value": "确保您知道如何避免网络钓鱼攻击。我们准备了一份要注意的事项清单。"
+    }
+  ],
+  "uNfxNg": [
+    {
+      "type": 0,
+      "value": "要继续，请"
+    },
+    {
+      "type": 1,
+      "value": "reconnect"
+    }
+  ],
+  "ubKWX8": [
+    {
+      "type": 0,
+      "value": "生成密钥对"
+    }
+  ],
+  "uhapiE": [
+    {
+      "type": 0,
+      "value": "确保您的带宽不会被限制，也不会被封顶，以便您的节点保持同步，并准备好在被调用时进行验证。"
+    }
+  ],
+  "ujVT29": [
+    {
+      "type": 0,
+      "value": "现在，您应该将助记符写在安全的地方，并为每个 "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " 验证者保存一个密钥库。请确保这些内容的安全，最好是离线。您的验证者密钥库应该位于新创建的 "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " 目录中。"
+    }
+  ],
+  "ukfwum": [
+    {
+      "type": 0,
+      "value": "使用 Nimbus 成为验证者"
+    }
+  ],
+  "unzIoE": [
+    {
+      "type": 0,
+      "value": "在运行验证者并开始保护网络之前，您需要质押 "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " 以太币。这就形成了您的初始余额。"
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "近期是否有 "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " 存款？"
+    }
+  ],
+  "vBOf5K": [
+    {
+      "type": 0,
+      "value": "当您履行（或未能履行）您的责任时，以太坊网络规则会定期更新您的余额。"
+    }
+  ],
+  "vEJDo8": [
+    {
+      "type": 0,
+      "value": "使用监控软件保护您的资金，并了解如何处理不同的现实场景。"
+    }
+  ],
+  "vFrE9m": [
+    {
+      "type": 0,
+      "value": "成为验证者并帮助保护 Eth2。"
+    }
+  ],
+  "vIF140": [
+    {
+      "type": 0,
+      "value": "成为验证者并帮助保护以太坊的未来"
+    }
+  ],
+  "vJez0K": [
+    {
+      "type": 0,
+      "value": "谨慎行事。我们的链上数据源已关闭，我们无法标记任何重复存款。"
+    }
+  ],
+  "vY2wig": [
+    {
+      "type": 0,
+      "value": "加载错误"
+    }
+  ],
+  "vYODEJ": [
+    {
+      "type": 0,
+      "value": "获取 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "vYOWYI": [
+    {
+      "type": 0,
+      "value": "中文（简体）"
+    }
+  ],
+  "va96SS": [
+    {
+      "type": 0,
+      "value": "我已将必要的端口从我的路由器转发到正确的计算机（仅打开适用于您安装的端口）。"
+    }
+  ],
+  "vbVsqW": [
+    {
+      "type": 0,
+      "value": "请务必尽快完成 "
+    },
+    {
+      "type": 1,
+      "value": "stakerChecklist"
+    },
+    {
+      "type": 0,
+      "value": "。并加入 EthStaker 社区，以获得支持并与其他验证者进行讨论。"
+    }
+  ],
+  "vg1dVR": [
+    {
+      "type": 0,
+      "value": "使用您的签名密钥，您可以尝试快速退出验证者，然后在窃贼之前使用取款密钥转移资金。"
+    }
+  ],
+  "vyvUB5": [
+    {
+      "type": 0,
+      "value": "此 JSON 文件不适用于正确的网络。请上传为您的当前网络 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " 生成的文件。"
+    }
+  ],
+  "w/ghcK": [
+    {
+      "type": 0,
+      "value": "深入了解 Eth2 如何升级以太坊。"
+    }
+  ],
+  "w6qYSU": [
+    {
+      "type": 0,
+      "value": "运行以下命令来启动应用"
+    }
+  ],
+  "wJ1PbL": [
+    {
+      "type": 0,
+      "value": "适用于 "
+    },
+    {
+      "type": 1,
+      "value": "operatingSystem"
+    }
+  ],
+  "wJy3tO": [
+    {
+      "type": 0,
+      "value": "初始设置"
+    }
+  ],
+  "wawegX": [
+    {
+      "type": 0,
+      "value": "钓鱼竿"
+    }
+  ],
+  "wdb1NC": [
+    {
+      "type": 0,
+      "value": "更多关于权益证明的信息"
+    }
+  ],
+  "wfSgCZ": [
+    {
+      "type": 0,
+      "value": "连接到 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "wm04oC": [
+    {
+      "type": 0,
+      "value": "执行下列命令："
+    }
+  ],
+  "wqUcy/": [
+    {
+      "type": 0,
+      "value": "早期采用者风险"
+    }
+  ],
+  "wtTeex": [
+    {
+      "type": 0,
+      "value": "是否存在拼写错误？"
+    }
+  ],
+  "x+fF+M": [
+    {
+      "type": 0,
+      "value": "测试网模拟"
+    }
+  ],
+  "x0tVK4": [
+    {
+      "type": 0,
+      "value": "在以太坊中验证与采矿不同。结果是相似的：您所做的工作将延伸并对链条进行保护。但这一过程完全不同，因为他们使用的是不同的共识机制。"
+    }
+  ],
+  "xDyl3T": [
+    {
+      "type": 0,
+      "value": "对照其他网站交叉检查存款合同地址 – 例如：Reddit、Twitter 和 GitHub。"
+    },
+    {
+      "type": 1,
+      "value": "ethereumorg"
+    },
+    {
+      "type": 0,
+      "value": " 上还有一个可信来源列表"
+    }
+  ],
+  "xH5GKj": [
+    {
+      "type": 0,
+      "value": "我是一个早期采用者，我接受软件和设计缺陷可能导致我被大幅削减。"
+    }
+  ],
+  "xJPCw/": [
+    {
+      "type": 0,
+      "value": "如果我把取款密钥弄丢了怎么办？"
+    }
+  ],
+  "xOSMb1": [
+    {
+      "type": 0,
+      "value": "Nethermind on Goerli 文档"
+    }
+  ],
+  "xP6BKs": [
+    {
+      "type": 0,
+      "value": "权益质押者清单"
+    }
+  ],
+  "xQrU13": [
+    {
+      "type": 0,
+      "value": "在继续之前，请查看权益质押清单。在完成验证者设置时，请将此作为检查任务的指南。"
+    }
+  ],
+  "xSvJIi": [
+    {
+      "type": 0,
+      "value": "区块奖励是根据网络上押注的以太币总量使用滑动比例计算的。"
+    }
+  ],
+  "xYRzZY": [
+    {
+      "type": 0,
+      "value": "Nimbus 是一个研究项目，也是 Etherum 2.0 的客户端实现，旨在在嵌入式系统和个人移动设备上运行良好。"
+    }
+  ],
+  "xbet2w": [
+    {
+      "type": 0,
+      "value": "安装 python3.7+"
+    }
+  ],
+  "xogY3N": [
+    {
+      "type": 0,
+      "value": "Besu 是用 Java 编写的，依据 Apache2.0 许可发布。"
+    }
+  ],
+  "y4dBsA": [
+    {
+      "type": 0,
+      "value": "配置时间同步"
+    }
+  ],
+  "y7dWNc": [
+    {
+      "type": 0,
+      "value": "重要的是，验证者的票数是按其所涉及的金额加权的。"
+    }
+  ],
+  "yI/DO8": [
+    {
+      "type": 0,
+      "value": "如果同时大幅削减其他验证者，则此数字会增加"
+    }
+  ],
+  "ySYWBD": [
+    {
+      "type": 0,
+      "value": "我保持密钥安全，并且已经写下了我的助记词。"
+    }
+  ],
+  "yT2EZO": [
+    {
+      "type": 0,
+      "value": "也就是说，"
+    },
+    {
+      "type": 1,
+      "value": "boldSummary"
+    },
+    {
+      "type": 0,
+      "value": "。一个区块获得的选票越多，它被添加到链中的可能性就越大。"
+    }
+  ],
+  "ydh1KU": [
+    {
+      "type": 0,
+      "value": "语言信息"
+    }
+  ],
+  "yeI1Zq": [
+    {
+      "type": 0,
+      "value": "请注意，如果许多其他人同时退出或被踢出，这种延迟可能会更长。"
+    }
+  ],
+  "yis3aS": [
+    {
+      "type": 0,
+      "value": "这是预期的情况。"
+    }
+  ],
+  "yjBvUO": [
+    {
+      "type": 0,
+      "value": "NetherMind 是基于 .NET 内核构建的。扩展它，定制它 - 天空是无限的.."
+    }
+  ],
+  "yoGtkz": [
+    {
+      "type": 0,
+      "value": "确保您的节点有 20 个以上的对等节点。"
+    }
+  ],
+  "z/ZhML": [
+    {
+      "type": 0,
+      "value": "请确保您已为 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " 设置了 "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": "，否则存款将无效。"
+    }
+  ],
+  "z63I56": [
+    {
+      "type": 0,
+      "value": "验证者"
+    }
+  ],
+  "z6K3D6": [
+    {
+      "type": 0,
+      "value": "我已设置我的 "
+    },
+    {
+      "type": 1,
+      "value": "prometheus"
+    },
+    {
+      "type": 0,
+      "value": " 服务。"
+    }
+  ],
+  "zAVb0/": [
+    {
+      "type": 0,
+      "value": "更多关于 Lighthouse 和 Sigma Prime 的信息"
+    }
+  ],
+  "zGkAVo": [
+    {
+      "type": 0,
+      "value": "在范围的另一端，如果您的余额接近 31 以太币，可能不值得增加额外的以太币才能回到 32 以太币。"
+    }
+  ],
+  "zbEBi9": [
+    {
+      "type": 0,
+      "value": "使用 "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " 来同步以太坊主网。"
+    }
+  ],
+  "zicXn7": [
+    {
+      "type": 0,
+      "value": "节点安全性"
+    }
+  ]
+}

@@ -90,7 +90,32 @@ export const Languages = () => {
     {
       code: 'fr',
       title: formatMessage({ defaultMessage: 'French' }),
-      language: 'Frances',
+      language: 'Français',
+    },
+    {
+      code: 'el',
+      title: formatMessage({ defaultMessage: 'Greek' }),
+      language: 'Ελληνικά',
+    },
+    {
+      code: 'id',
+      title: formatMessage({ defaultMessage: 'Indonesian' }),
+      language: 'Bahasa Indonesia',
+    },
+    {
+      code: 'pt-br',
+      title: formatMessage({ defaultMessage: 'Portuguese (Brazilian)' }),
+      language: 'Português',
+    },
+    {
+      code: 'ro',
+      title: formatMessage({ defaultMessage: 'Romanian' }),
+      language: 'Română',
+    },
+    {
+      code: 'ar',
+      title: formatMessage({ defaultMessage: 'Arabic' }),
+      language: 'العربية',
     },
   ].filter(lang => supportedLanguages.includes(lang.code));
 

@@ -1,0 +1,5424 @@
+{
+  "+3PPtT": [
+    {
+      "type": 0,
+      "value": "Astăzi vei securiza Lanţul Beacon, prima actualizare a Eth2. Este un lanț separat care folosește un mecanism de consens cu dovada mizei. În cele din urmă, vei contribui la securizarea sistemului Ethereum în ansamblu, în momentul în care rețeaua principală (Ethereum pe care îl folosim astăzi) va fuziona cu lanțul Beacon."
+    }
+  ],
+  "+L0IkF": [
+    {
+      "type": 0,
+      "value": "Pasul 2: Generează chei de depunere folosind instrumentul de depunere al Ethereum Foundation"
+    }
+  ],
+  "+UUcBt": [
+    {
+      "type": 0,
+      "value": "Alege o limbă"
+    }
+  ],
+  "+V+ZX+": [
+    {
+      "type": 0,
+      "value": "Timp de funcționare validator"
+    }
+  ],
+  "+e8bO+": [
+    {
+      "type": 0,
+      "value": "Înțeleg că nu îmi voi putea retrage fondurile dacă pierd fraza mnemonică."
+    }
+  ],
+  "+fnRDB": [
+    {
+      "type": 0,
+      "value": "De acord"
+    }
+  ],
+  "+mDtA4": [
+    {
+      "type": 0,
+      "value": "6. Așteaptă să devii activ"
+    }
+  ],
+  "+oBh8L": [
+    {
+      "type": 0,
+      "value": "Te vom ajuta să creezi o cheie de semnătură pentru fiecare validator pe care vrei să-l execuți. Întrucât nu se fac retrageri până Fuziune, nu vei crea acum cheile de retragere. Când poți să retragi fonduri, poți deriva cheile de retragere din mnemonic."
+    }
+  ],
+  "+s8Gac": [
+    {
+      "type": 0,
+      "value": "Conectează "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " la "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "/+atl4": [
+    {
+      "type": 0,
+      "value": "Neasumarea răspunderii pentru recomandări"
+    }
+  ],
+  "//KCTE": [
+    {
+      "type": 0,
+      "value": "Poți porni tranzacțiile simultan sau pe rând."
+    }
+  ],
+  "/QPc9s": [
+    {
+      "type": 0,
+      "value": "Poți semnala intenția de a opri validarea prin semnarea unui mesaj de ieșire voluntară cu validatorul."
+    }
+  ],
+  "/SbhtD": [
+    {
+      "type": 0,
+      "value": "De asemenea, poți folosi "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": " pentru a instala pip3. Instrucțiunile actualizate pentru instalarea pip3 și linkul direct de descărcare se găsește în "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    }
+  ],
+  "/U09hN": [
+    {
+      "type": 0,
+      "value": "Pentru a nu divulga identitatea validatorului în rețea, poți folosi un VPN de încredere, care să reducă riscul dezvăluirii adresei tale IP."
+    }
+  ],
+  "/VVB8t": [
+    {
+      "type": 0,
+      "value": "Examinează această secțiune înainte de a decide să continui configurarea validatorului."
+    }
+  ],
+  "/Vc/P6": [
+    {
+      "type": 0,
+      "value": "Acestă pagină nu există."
+    }
+  ],
+  "/WenEu": [
+    {
+      "type": 0,
+      "value": "Ești responsabil pentru tranzacție. Site-urile web frauduloase pot încerca să te păcălească să le trimiți "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " în locul contractului de depozit oficial. Asigură-te că adresa la care trimiți tranzacția este cea corectă."
+    }
+  ],
+  "/jJLYy": [
+    {
+      "type": 0,
+      "value": "Tranzacții"
+    }
+  ],
+  "/ub26/": [
+    {
+      "type": 0,
+      "value": "Înțeleg riscurile"
+    }
+  ],
+  "/vPNsl": [
+    {
+      "type": 0,
+      "value": "Fuziunea, cunoscută și sub numele de andocare, va însemna reunirea rețelei principale Ethereum actuale cu Lanțul Beacon. Odată cu fuziunea, Ethereum va trece integral la lucrul cu dovada mizei."
+    }
+  ],
+  "/vkCbT": [
+    {
+      "type": 0,
+      "value": "Validatorii sunt recompensați pentru că au propus și atestat blocurile. Recompensele sunt legate de suma totală a mizelor "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " din rețea."
+    }
+  ],
+  "/w/KT4": [
+    {
+      "type": 0,
+      "value": "Nu este totul pierdut. Presupunând că derivezi cheile folosind "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " (conform fluxului de inițializare implicit) apoi "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/wNiYN": [
+    {
+      "type": 0,
+      "value": "Contractul de depozit a fost verificat la un nivel byte-code pentru a ți se asigura siguranța."
+    }
+  ],
+  "/ydZdf": [
+    {
+      "type": 0,
+      "value": "Cât de mari sunt recompensele/penalizările?"
+    }
+  ],
+  "00OWFk": [
+    {
+      "type": 0,
+      "value": "Valoarea minimă de alimentare este "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "00d8uq": [
+    {
+      "type": 0,
+      "value": "Odată configurat, validatorul nu va deveni activ imediat. Profită de timp ca să finalizezi lista de verificare și ca să exersezi lucrul în testnet."
+    }
+  ],
+  "03xT/J": [
+    {
+      "type": 0,
+      "value": "Ideea este să reducem la minimum pierderile provocate de greșeli neintenționate, dar să descurajăm puternic atacurile coordonate."
+    }
+  ],
+  "07C4IQ": [
+    {
+      "type": 0,
+      "value": "Secțiunea 3 – După depunere"
+    }
+  ],
+  "0GSZcr": [
+    {
+      "type": 0,
+      "value": "Miză"
+    }
+  ],
+  "0PlVao": [
+    {
+      "type": 0,
+      "value": "Mai multe despre prevenirea penalizărilor"
+    }
+  ],
+  "0RmIrh": [
+    {
+      "type": 0,
+      "value": "Datele din deposit_data.json indică faptul că ai vrut să configurezi încă un validator. Această depunere este încă în așteptare. Dacă consideri că ai făcut deja această depunere, așteaptă o oră înainte de a încerca din nou, ca să eviți depunerile duble."
+    }
+  ],
+  "0S8/Wo": [
+    {
+      "type": 0,
+      "value": "Exerciții testnet"
+    }
+  ],
+  "0i4cCJ": [
+    {
+      "type": 0,
+      "value": "Confirmare depuneri ("
+    },
+    {
+      "type": 1,
+      "value": "depositKeys"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "0lHkrT": [
+    {
+      "type": 0,
+      "value": "În al doilea rând, instalează pachetele de dependență:"
+    }
+  ],
+  "0oNdmk": [
+    {
+      "type": 0,
+      "value": "Întrebări frecvente despre validatori"
+    }
+  ],
+  "0qvZJn": [
+    {
+      "type": 0,
+      "value": "Mai multe despre viziunea Eth2"
+    }
+  ],
+  "0uqjBl": [
+    {
+      "type": 0,
+      "value": "Câștigă continuu recompense lucrând pentru binele public al comunității."
+    }
+  ],
+  "19o6KO": [
+    {
+      "type": 0,
+      "value": "Când îmi pot retrage fondurile și care este diferența între ieșire și retragere?"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "Punct final RPC JSON"
+    }
+  ],
+  "1P6GMj": [
+    {
+      "type": 0,
+      "value": "Monitorizare"
+    }
+  ],
+  "1PPGHb": [
+    {
+      "type": 0,
+      "value": "Am verificat: ora serverului se potrivește cu ceasul de perete."
+    }
+  ],
+  "1QW89r": [
+    {
+      "type": 0,
+      "value": "Mai multe statistici"
+    }
+  ],
+  "1UmyRL": [
+    {
+      "type": 0,
+      "value": "ultima versiune stabilă a software-ului"
+    }
+  ],
+  "1VJ05X": [
+    {
+      "type": 0,
+      "value": "Secțiunea 3"
+    }
+  ],
+  "1Vkpd0": [
+    {
+      "type": 0,
+      "value": "Verifică dacă fișierele de parolă nu conțin caractere rând nou la sfârșit."
+    }
+  ],
+  "1fDfw7": [
+    {
+      "type": 0,
+      "value": "Cum se întâmplă toate acestea?"
+    }
+  ],
+  "1fytak": [
+    {
+      "type": 0,
+      "value": "Verifică detaliile contractului de depozit"
+    }
+  ],
+  "2+TGmE": [
+    {
+      "type": 0,
+      "value": "Pentru a procesa depunerile de validator primite din lanțul Eth1, va trebui să rulezi un client Eth1, dar și un client Eth2. Poți folosi un serviciu terț precum Infura, dar îți recomandăm să folosești propriul tău client pentru ca rețeaua să fie cât mai descentralizată."
+    }
+  ],
+  "22EpKq": [
+    {
+      "type": 0,
+      "value": "Acesta nu este un fișier "
+    },
+    {
+      "type": 1,
+      "value": "JSON"
+    },
+    {
+      "type": 0,
+      "value": " corect"
+    }
+  ],
+  "25suT4": [
+    {
+      "type": 0,
+      "value": "Separatorul de cale depinde de sistemul de operare. În Windows ar trebui să fie "
+    },
+    {
+      "type": 1,
+      "value": "semicolon"
+    },
+    {
+      "type": 0,
+      "value": ", nu "
+    },
+    {
+      "type": 1,
+      "value": "colon"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2AHkym": [
+    {
+      "type": 0,
+      "value": "A apărut o eroare la încărcarea informațiilor despre validator din Beaconcha.in"
+    }
+  ],
+  "2CYEJa": [
+    {
+      "type": 0,
+      "value": "Depanare"
+    }
+  ],
+  "2DuJTX": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " pentru a conecta nodul Eth2 la punctul final RPC JSON. Acest lucru va activa serviciile RPC JSON pe portul implicit 8545."
+    }
+  ],
+  "2a1GTh": [
+    {
+      "type": 0,
+      "value": "întotdeauna poți recalcula cheia de semnătură din cheia de retragere"
+    }
+  ],
+  "2iH8Zc": [
+    {
+      "type": 0,
+      "value": "Documentație de management de chei Nimbus"
+    }
+  ],
+  "2t/3ab": [
+    {
+      "type": 0,
+      "value": "Celălalt fișier pe care tocmai l-ai generat este "
+    },
+    {
+      "type": 1,
+      "value": "depositDataJson"
+    },
+    {
+      "type": 0,
+      "value": ". Acesta conține cheile publice asociate cu validatorii. În următorul pas va trebui să încarci fișierul."
+    }
+  ],
+  "32rBNK": [
+    {
+      "type": 0,
+      "value": "Termenii serviciului"
+    }
+  ],
+  "36KKVb": [
+    {
+      "type": 0,
+      "value": "Mai multe despre economia Eth2"
+    }
+  ],
+  "38VH2G": [
+    {
+      "type": 0,
+      "value": "Instalează instrumentul deposit-cli"
+    }
+  ],
+  "3CRtg8": [
+    {
+      "type": 0,
+      "value": "Nu ai destul "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " în acest cont pentru "
+    },
+    {
+      "type": 1,
+      "value": "numberOfValidators"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    }
+  ],
+  "3GbrWR": [
+    {
+      "type": 0,
+      "value": "De ce depind recompensele de numărul total de validatori din rețea?"
+    }
+  ],
+  "3H3ygi": [
+    {
+      "type": 0,
+      "value": "Nu s-au găsit validatori pentru portofelul conectat"
+    }
+  ],
+  "3NHygY": [
+    {
+      "type": 0,
+      "value": "Testare pe Goerli"
+    }
+  ],
+  "3PZq07": [
+    {
+      "type": 0,
+      "value": "Este o idee bună să-ți creezi cheile din mnemonice care acționează ca o altă rezervă. Aceasta va fi varianta implicită pentru validatorii care se alătură prin procesul de inițiere al acestui site."
+    }
+  ],
+  "3PbtmF": [
+    {
+      "type": 0,
+      "value": "Verifică întreaga adresă, nu doar o parte din ea. Diferența poate fi de câțiva byți."
+    }
+  ],
+  "3Pmjlx": [
+    {
+      "type": 0,
+      "value": "Am instalat "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " al clientului Eth2."
+    }
+  ],
+  "3Q43SM": [
+    {
+      "type": 0,
+      "value": "Devino validator"
+    }
+  ],
+  "3QmqFf": [
+    {
+      "type": 0,
+      "value": "Tranzacție de alimentare"
+    }
+  ],
+  "3URRZK": [
+    {
+      "type": 0,
+      "value": "Documentație Geth pe Goerli"
+    }
+  ],
+  "3tR/V9": [
+    {
+      "type": 0,
+      "value": "Secțiunea 2 – În timpul configurării"
+    }
+  ],
+  "3zCA2i": [
+    {
+      "type": 0,
+      "value": "Dacă vezi mesajul de eroare "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", poate fi necesar să instalezi pachetul "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " sau "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "4+3cIr": [
+    {
+      "type": 0,
+      "value": "Ai configurat cu succes un validator testnet! Îți recomandăm să parcurgi pașii din lista de verificare înainte de a valida pe "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    }
+  ],
+  "47svuN": [
+    {
+      "type": 0,
+      "value": "Instalare"
+    }
+  ],
+  "4FcLja": [
+    {
+      "type": 0,
+      "value": "Prysm este o implementare Go a protocolului Ethereum 2.0 cu accent pe utilitate, securitate și fiabilitate."
+    }
+  ],
+  "4NvAhl": [
+    {
+      "type": 0,
+      "value": "Începe prin a configura hardware-ul și sistemul de operare pe care le-ai ales."
+    }
+  ],
+  "4QNsja": [
+    {
+      "type": 0,
+      "value": "De ce o scară mobilă? Nu intrăm în detalii aici, intuiția spune că este nevoie de un număr minim de validatori (prin urmare, o miză minimă de ETH) ca rețeaua să funcționeze corect. Pentru a stimula mai mulți validatori să participe, este important ca rata dobânzii să rămână ridicată până la atingerea acestui număr minim."
+    }
+  ],
+  "4hnEBA": [
+    {
+      "type": 0,
+      "value": "A fost verificat codul de contract inteligent?"
+    }
+  ],
+  "4l6vz1": [
+    {
+      "type": 0,
+      "value": "Copiere"
+    }
+  ],
+  "52qGy6": [
+    {
+      "type": 0,
+      "value": "CURENT"
+    }
+  ],
+  "58PXVy": [
+    {
+      "type": 0,
+      "value": "De ce două chei și nu una?"
+    }
+  ],
+  "5HJLBU": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Teku"
+    }
+  ],
+  "5t8oYl": [
+    {
+      "type": 0,
+      "value": "Vizitează EthStaker pe "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " sau "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " în orice moment în timpul configurării pentru a primi ajutor!"
+    }
+  ],
+  "6CK2Nu": [
+    {
+      "type": 0,
+      "value": "Portofelul tău este în rețeaua greșită. Comută în "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "6HBTTN": [
+    {
+      "type": 0,
+      "value": "Dovada mizei (PoS) și lanțul Beacon"
+    }
+  ],
+  "6UUL73": [
+    {
+      "type": 0,
+      "value": "Mai multe despre validatori"
+    }
+  ],
+  "6VIBSR": [
+    {
+      "type": 0,
+      "value": "Poți îmbunătăți soldul efectiv al acestui validator prin alimentare"
+    }
+  ],
+  "6nh4de": [
+    {
+      "type": 0,
+      "value": "Te alături unei rețele în etapele sale timpurii. Ca în orice software nou, pot apărea erori. Deși este improbabil, erorile pot duce la penalizări."
+    }
+  ],
+  "6zye8g": [
+    {
+      "type": 0,
+      "value": "O implementare a protocolului Eth2, cu accent pe utilitate, securitate și fiabilitate. Prysm este dezvoltat de Prysmatic Labs, o întreprindere care se concentrează exclusiv pe dezvoltarea clientului lor."
+    }
+  ],
+  "7+Domh": [
+    {
+      "type": 0,
+      "value": "Note"
+    }
+  ],
+  "738tqz": [
+    {
+      "type": 0,
+      "value": "Prysm este scris în Go și lansat sub o licență GPL-3.0."
+    }
+  ],
+  "74QdCu": [
+    {
+      "type": 0,
+      "value": "Tranzacție începută"
+    }
+  ],
+  "793QlI": [
+    {
+      "type": 1,
+      "value": "title"
+    },
+    {
+      "type": 0,
+      "value": " nu este acceptat în modul offline."
+    }
+  ],
+  "7UOvbT": [
+    {
+      "type": 0,
+      "value": "Offline"
+    }
+  ],
+  "7V/8wz": [
+    {
+      "type": 0,
+      "value": "Fișier de configurare"
+    }
+  ],
+  "7XiYRi": [
+    {
+      "type": 0,
+      "value": "Penalizat?"
+    }
+  ],
+  "7d3Nzd": [
+    {
+      "type": 0,
+      "value": "Poți folosi indicatorul graffiti al clientului de validator pentru a personaliza blocurile propuse (un text oarecare). Îl vei putea vedea în explorerele de blockchain "
+    },
+    {
+      "type": 1,
+      "value": "beaconchain"
+    },
+    {
+      "type": 0,
+      "value": " sau "
+    },
+    {
+      "type": 1,
+      "value": "beaconscan"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "7s6XNV": [
+    {
+      "type": 0,
+      "value": "Mize și recompense"
+    }
+  ],
+  "7sZfCF": [
+    {
+      "type": 0,
+      "value": "Mai multe despre Nimbus"
+    }
+  ],
+  "7tRtDE": [
+    {
+      "type": 0,
+      "value": "În fiecare epocă, rețeaua măsoară acțiunile fiecărui validator și emite recompensele sau penalitățile corespunzătoare."
+    }
+  ],
+  "7y4xl1": [
+    {
+      "type": 0,
+      "value": "Eth2 Launchpad pentru testnet "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    }
+  ],
+  "80eWKU": [
+    {
+      "type": 0,
+      "value": "Sold real"
+    }
+  ],
+  "82vl9l": [
+    {
+      "type": 0,
+      "value": "Nu putem detecta MetaMask. Schimbă browserul sau instalează MetaMask."
+    }
+  ],
+  "8FmuYF": [
+    {
+      "type": 0,
+      "value": "Instalare pip3"
+    }
+  ],
+  "8HxLGA": [
+    {
+      "type": 0,
+      "value": "Configurare Teku"
+    }
+  ],
+  "8JtiQS": [
+    {
+      "type": 0,
+      "value": "Adresa de contract afișată pe site se potrivește?"
+    }
+  ],
+  "8Rj/6A": [
+    {
+      "type": 0,
+      "value": "Alege sistemul de operare al computerului pe care îl utilizezi. Pe acest computer vei genera cheile. Nu trebuie să fie identic cu sistemul de operare pe care vrei să îl folosești pentru nod."
+    }
+  ],
+  "8WtyrD": [
+    {
+      "type": 0,
+      "value": "Spaniolă"
+    }
+  ],
+  "8XQmxX": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza testnetul Goerli."
+    }
+  ],
+  "8boRAk": [
+    {
+      "type": 0,
+      "value": "penalizări"
+    }
+  ],
+  "8wd0q5": [
+    {
+      "type": 0,
+      "value": "Un client Ethereum conceput pentru a facilita activitatea întreprinderilor în scenariile de rețea cu permisiuni, publice și private."
+    }
+  ],
+  "9+Ddtu": [
+    {
+      "type": 0,
+      "value": "Înainte"
+    }
+  ],
+  "9/4mZe": [
+    {
+      "type": 0,
+      "value": "Validarea implică două chei, din motive de securitate. Cheia de semnătură trebuie să fie disponibilă în orice moment. Ca atare, trebuie păstrată online. Întrucât tot ce se ține online este vulnerabil la atacurile hackerilor, nu este o idee bună să folosești aceeași cheie pentru retrageri."
+    }
+  ],
+  "94dQms": [
+    {
+      "type": 0,
+      "value": "Din considerente de securitate, îți recomandăm să te deconectezi de la internet pentru a finaliza acest pas."
+    }
+  ],
+  "96pen8": [
+    {
+      "type": 0,
+      "value": "Fragmentarea va pune la dispoziția rețelei mai multe date, prin introducerea a 64 de lanțuri paralele. Fiecare lanț nou va fi capabil să gestioneze cel puțin la fel de multe date ca rețeaua principală actuală, probabil mai multe."
+    }
+  ],
+  "9DZdsc": [
+    {
+      "type": 0,
+      "value": "Există vreun avantaj în a avea miză de peste "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH?"
+    }
+  ],
+  "9JktQX": [
+    {
+      "type": 0,
+      "value": "Răspunsul nu este simplu, pentru că trebuie luați în calcul foarte mulți factori."
+    }
+  ],
+  "9VZ9oy": [
+    {
+      "type": 0,
+      "value": "Cum sunt stimulați validatorii să rămână activi și cinstiți?"
+    }
+  ],
+  "9k7tO9": [
+    {
+      "type": 0,
+      "value": "Rețea greșită"
+    }
+  ],
+  "9lBMQr": [
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " cu căi prin opțiunea "
+    },
+    {
+      "type": 1,
+      "value": "validatorsKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "9qMyhY": [
+    {
+      "type": 0,
+      "value": "Citește documentația despre opțiuni și subcomenzi"
+    }
+  ],
+  "9uOFF3": [
+    {
+      "type": 0,
+      "value": "Prezentare generală"
+    }
+  ],
+  "A/iYbo": [
+    {
+      "type": 0,
+      "value": "Actualizările Eth2 vor avea succes numai dacă validatorii înțeleg riscurile și responsabilitățile."
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "Trimite depozit"
+    }
+  ],
+  "A6Oppp": [
+    {
+      "type": 0,
+      "value": "Prysm oferă indicații pas cu pas pentru a rula clientul după finalizarea depunerii prin intermediul panoului de lansare."
+    }
+  ],
+  "AC669U": [
+    {
+      "type": 0,
+      "value": "Dacă ai nevoie de ajutor, consultă documentația Python."
+    }
+  ],
+  "AEp7+F": [
+    {
+      "type": 0,
+      "value": "Important: în calitate de validator trebuie să depui o garanție în "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " - adică să ai o anumită miză. Singura modalitate de a deveni validator este să faci o tranzacție "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " unidirecțională în contractul de depozit din lanțul Ethereum actual."
+    }
+  ],
+  "AYKxmf": [
+    {
+      "type": 0,
+      "value": "Conectează-ți portofelul hardware la Metamask"
+    }
+  ],
+  "AZaw+B": [
+    {
+      "type": 0,
+      "value": "Ieșire"
+    }
+  ],
+  "AbBgEs": [
+    {
+      "type": 0,
+      "value": "înțelegerea soldului efectiv al validatorului"
+    }
+  ],
+  "Ad61gz": [
+    {
+      "type": 0,
+      "value": "Asigură-te că descarci din contul GitHub oficial al Ethereum Foundation, prin verificarea url-ului: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "Affixg": [
+    {
+      "type": 0,
+      "value": "Depunerea"
+    }
+  ],
+  "AkVktj": [
+    {
+      "type": 0,
+      "value": "Verifică adresa din contractul de depozit"
+    }
+  ],
+  "An37jY": [
+    {
+      "type": 0,
+      "value": "Mai exact, la pornirea clientului de validator Lighthouse, îl poți direcționa spre directorul în care ai depozitele de chei. Clientul va importa cheile și îți va cere parolele. Dacă nu specifici o parolă, Lighthouse o va cere din nou la fiecare pornire."
+    }
+  ],
+  "Anqi3n": [
+    {
+      "type": 0,
+      "value": "Devino validator cu Lighthouse"
+    }
+  ],
+  "Aw1mMs": [
+    {
+      "type": 0,
+      "value": "Alimentează validatorul"
+    }
+  ],
+  "B2EKj+": [
+    {
+      "type": 0,
+      "value": "Înțeleg că trebuie să depun "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " pentru a deveni validator și că transferul de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " către Lanțul Beacon este unidirecțional și ireversibil."
+    }
+  ],
+  "BB65vH": [
+    {
+      "type": 0,
+      "value": "Imaginează-ți contractul de depozit ca pe un transfer de fonduri între conturile Ethereum și validatorii Eth2."
+    }
+  ],
+  "BCsPjJ": [
+    {
+      "type": 0,
+      "value": "Începe procesul de depunere"
+    }
+  ],
+  "BFAvr/": [
+    {
+      "type": 0,
+      "value": "Alimentează un validator"
+    }
+  ],
+  "BFfsSX": [
+    {
+      "type": 0,
+      "value": "Contractul de depozit Eth2 poate fi acceptat numai dacă trimiți cel puțin "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " deodată."
+    }
+  ],
+  "BFsUAH": [
+    {
+      "type": 0,
+      "value": "Verifică dacă "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " este "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "BPpnlJ": [
+    {
+      "type": 0,
+      "value": "Descarcă MetaMask"
+    }
+  ],
+  "BUFaRV": [
+    {
+      "type": 0,
+      "value": "Comunitatea EthStaker"
+    }
+  ],
+  "Bf2QKg": [
+    {
+      "type": 0,
+      "value": "Validarea este un angajament pe termen lung"
+    }
+  ],
+  "Bj5yI5": [
+    {
+      "type": 0,
+      "value": "Sold efectiv"
+    }
+  ],
+  "BoEpk9": [
+    {
+      "type": 0,
+      "value": "Introducere"
+    }
+  ],
+  "BvD9ay": [
+    {
+      "type": 0,
+      "value": "Lighthouse este o implementare Ethereum 2.0, scrisă în Rust cu un accent puternic pe viteză și securitate."
+    }
+  ],
+  "C/gb74": [
+    {
+      "type": 0,
+      "value": "Configurează Lighthouse"
+    }
+  ],
+  "C9fTX1": [
+    {
+      "type": 0,
+      "value": "Răspunsuri la întrebările frecvente despre cum se ajunge validator."
+    }
+  ],
+  "CACPC+": [
+    {
+      "type": 0,
+      "value": "Cehă"
+    }
+  ],
+  "CBbRux": [
+    {
+      "type": 0,
+      "value": "OpenEthereum este scris în Rust și este licențiat prin GPLv3."
+    }
+  ],
+  "CF9vMR": [
+    {
+      "type": 0,
+      "value": "Dovada mizei"
+    }
+  ],
+  "CVDzDs": [
+    {
+      "type": 0,
+      "value": "Dacă soldul se apropie de 16 ETH, cu siguranță trebuie să alimentezi. Acest lucru este necesar pentru a evita eliminarea din setul de validatori (ceea ce se întâmplă automat dacă soldul scade sub 16 ETH)."
+    }
+  ],
+  "CdKEd/": [
+    {
+      "type": 0,
+      "value": "Suma minimă de penalizare este 1 ETH, dar "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "CeeJfw": [
+    {
+      "type": 0,
+      "value": "Am instalat un firewall."
+    }
+  ],
+  "Cv+T7+": [
+    {
+      "type": 0,
+      "value": "Penalizarea are două scopuri: (1) scumpirea puternică a atacurilor la adresa Eth2 și (2) stimularea validatorilor prin verificarea îndeplinirii efective a sarcinilor lor. Dacă te penalizează pentru că ai acționat într-o manieră demonstrabil distructivă, o parte din miza ta va fi distrusă."
+    }
+  ],
+  "D0Rigq": [
+    {
+      "type": 0,
+      "value": "NU"
+    }
+  ],
+  "D33f/7": [
+    {
+      "type": 0,
+      "value": "APR curent"
+    }
+  ],
+  "D4cQV/": [
+    {
+      "type": 0,
+      "value": "De cât ETH am nevoie pentru a putea deveni validator?"
+    }
+  ],
+  "DCaq7N": [
+    {
+      "type": 0,
+      "value": "Portofelul tău este conectat la rețeaua corectă!"
+    }
+  ],
+  "DGHD9y": [
+    {
+      "type": 0,
+      "value": "Lighthouse are instrumente dedicate pentru a face transferul din Launchpad cât mai ușor posibil."
+    }
+  ],
+  "DKSrR+": [
+    {
+      "type": 0,
+      "value": "Înțeleg că voi fi penalizat dacă nu respect specificația."
+    }
+  ],
+  "DNRQa7": [
+    {
+      "type": 0,
+      "value": "Am citit și sunt de acord cu termenii serviciului Launchpad."
+    }
+  ],
+  "DUnyVI": [
+    {
+      "type": 0,
+      "value": "Ideal, conexiunea la internet trebuie să fie fiabilă și cât mai aproape de 24/7, fără întreruperi."
+    }
+  ],
+  "DbnQg+": [
+    {
+      "type": 0,
+      "value": "Verifică adresa din contract"
+    }
+  ],
+  "DoCZT1": [
+    {
+      "type": 0,
+      "value": "Soldul efectiv al validatorului a ajuns la maximum. Dacă vrei, poți adăuga "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (minimul permis de contractul de depozitare)"
+    }
+  ],
+  "DsJ/Mk": [
+    {
+      "type": 0,
+      "value": "Nu este cazul să ai încredere pur și simplu în adresa de contract afișată pe acest site."
+    }
+  ],
+  "E+Y27g": [
+    {
+      "type": 0,
+      "value": "Poți verifica versiunea de Python tastând "
+    },
+    {
+      "type": 1,
+      "value": "terminalCommand"
+    },
+    {
+      "type": 0,
+      "value": " în terminal."
+    }
+  ],
+  "E/P9zo": [
+    {
+      "type": 0,
+      "value": "3. Exerciții în testnet"
+    }
+  ],
+  "E1Mywn": [
+    {
+      "type": 0,
+      "value": "lanț"
+    }
+  ],
+  "E8t6ru": [
+    {
+      "type": 0,
+      "value": "Pentru a deveni validator, trebuie să știi să gestionezi cheile și să protejezi un mnemonic. Dacă nu ai aprofundat încă cheile și mnemomicele, te rugăm să nu continui. Reține: în timpul acestui proces nu vei deriva cheile necesare pentru retrageri ulterioare, de păstrează mnemonicul în siguranță pentru a putea face retrageri mai târziu."
+    }
+  ],
+  "EFjTSf": [
+    {
+      "type": 0,
+      "value": "Se dau sancțiuni minore pentru acțiunile (sau inacțiunile) care îngreunează obținerea consensului."
+    }
+  ],
+  "EIUapL": [
+    {
+      "type": 0,
+      "value": "Folosește terminalul pentru a trece în directorul care conține executabilul "
+    },
+    {
+      "type": 1,
+      "value": "deposit"
+    }
+  ],
+  "EPCHZV": [
+    {
+      "type": 0,
+      "value": "Dacă pierzi cheia de semnătură, validatorul nu mai poate să facă propuneri sau atestări."
+    }
+  ],
+  "EPlepr": [
+    {
+      "type": 0,
+      "value": "Am simulat o pană de curent (server și internet) și reluarea automată."
+    }
+  ],
+  "ETJ2T5": [
+    {
+      "type": 0,
+      "value": "Dacă ai întrebări despre deposit-cli, vizitează depozitul GitHub."
+    }
+  ],
+  "EThT2C": [
+    {
+      "type": 0,
+      "value": "5. Timpul de depunere"
+    }
+  ],
+  "EXLB88": [
+    {
+      "type": 0,
+      "value": "Aceasta este o rețea de testare ⚠️"
+    }
+  ],
+  "FEbVwB": [
+    {
+      "type": 0,
+      "value": "Conceptul cheie este următorul:"
+    }
+  ],
+  "FM92S0": [
+    {
+      "type": 0,
+      "value": "Notă: verificarea depunerii prin Lanțul Beacon poate dura câteva minute"
+    }
+  ],
+  "FSRfSJ": [
+    {
+      "type": 0,
+      "value": "Înțeleg că această tranzacție este ireversibilă."
+    }
+  ],
+  "FZa0R+": [
+    {
+      "type": 0,
+      "value": "Acest scenariu este foarte extrem și puțin probabil."
+    }
+  ],
+  "Fa2pjg": [
+    {
+      "type": 0,
+      "value": "Argumentul fișier de configurare în CLI"
+    }
+  ],
+  "FazwRl": [
+    {
+      "type": 0,
+      "value": "Încearcă din nou"
+    }
+  ],
+  "FdbNS6": [
+    {
+      "type": 0,
+      "value": "Configurează clientul Eth1"
+    }
+  ],
+  "FfLWt5": [
+    {
+      "type": 0,
+      "value": "Un client Ethereum cu un grup uriaș de dezvoltatori. Este perfect pentru sistemele de nivel enterprise."
+    }
+  ],
+  "FgraU0": [
+    {
+      "type": 0,
+      "value": "Pasul 1: Descarcă aplicația de linie de comandă pentru depozite corespunzător sistemului de operare pe care îl folosești"
+    }
+  ],
+  "FqgDIV": [
+    {
+      "type": 0,
+      "value": "Termenii serviciului"
+    }
+  ],
+  "FzkbsB": [
+    {
+      "type": 0,
+      "value": "validatori"
+    }
+  ],
+  "G/VJJd": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare OpenEthereum"
+    }
+  ],
+  "G0aacl": [
+    {
+      "type": 0,
+      "value": "Ca validator, primești recompensă dacă propui/atești blocuri care sunt incluse în lanț."
+    }
+  ],
+  "G5IMoZ": [
+    {
+      "type": 0,
+      "value": "Descarcă codul sursă din ramura principală"
+    }
+  ],
+  "G6kg26": [
+    {
+      "type": 0,
+      "value": "Clienți Eth2: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "G8tAKU": [
+    {
+      "type": 0,
+      "value": "Alege clientul"
+    }
+  ],
+  "GBXzeJ": [
+    {
+      "type": 0,
+      "value": "Factorul cu cea mai mare influență asupra recompenselor obținute prin validarea tranzacțiilor este miza totală din rețea. Cu alte cuvinte, numărul total de validatori. În funcție de această cifră, rata anuală de câștig maximă a unui validator poate fi între 2 și 20%."
+    }
+  ],
+  "GCz3kj": [
+    {
+      "type": 0,
+      "value": "Cunoscut anterior ca Artemis, Teku este un client Eth2, creat pentru a satisface nevoile instituționale și cerințele de securitate. PegaSys este o ramură a ConsenSys, dedicată dezvoltării de clienți și instrumente enterprise pentru interacțiunea cu platforma de bază Ethereum."
+    }
+  ],
+  "GDaRAW": [
+    {
+      "type": 0,
+      "value": "Ai grijă să nu cazi victimă phishingului"
+    }
+  ],
+  "GOc7cL": [
+    {
+      "type": 0,
+      "value": "Dacă sunt offline, cât de dură va fi penalizarea?"
+    }
+  ],
+  "GUDhpC": [
+    {
+      "type": 0,
+      "value": "Secțiunea 1"
+    }
+  ],
+  "GadkjP": [
+    {
+      "type": 0,
+      "value": "Documentație pentru rularea Lighthouse"
+    }
+  ],
+  "Gbo300": [
+    {
+      "type": 0,
+      "value": "Generează chei"
+    }
+  ],
+  "GrU/lp": [
+    {
+      "type": 0,
+      "value": "Clienții Eth2"
+    }
+  ],
+  "GsBRWL": [
+    {
+      "type": 0,
+      "value": "Limbi"
+    }
+  ],
+  "GuIwY6": [
+    {
+      "type": 0,
+      "value": "Când trebuie să alimentez soldul de validator?"
+    }
+  ],
+  "H+Wcch": [
+    {
+      "type": 0,
+      "value": "Secțiunea 2"
+    }
+  ],
+  "H+kIpp": [
+    {
+      "type": 0,
+      "value": "Suma totală necesară"
+    }
+  ],
+  "H5+NAX": [
+    {
+      "type": 0,
+      "value": "Sold"
+    }
+  ],
+  "HoahTd": [
+    {
+      "type": 0,
+      "value": "Dacă nu introduci o parolă, Nimbus o va cere interactiv la pornire."
+    }
+  ],
+  "HqRNN8": [
+    {
+      "type": 0,
+      "value": "Suport"
+    }
+  ],
+  "I212vY": [
+    {
+      "type": 0,
+      "value": "Validatorul devine activ pe Lanțul Beacon după o scurtă așteptare. Profită de acest răstimp ca să parcurgi pașii din lista de verificare și rezervă timp validării "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    }
+  ],
+  "I3JhPS": [
+    {
+      "type": 0,
+      "value": "Rețea"
+    }
+  ],
+  "IAKvZ0": [
+    {
+      "type": 0,
+      "value": "Upgrade-urile Eth2"
+    }
+  ],
+  "IJw06E": [
+    {
+      "type": 0,
+      "value": "Semnează tranzacția cu portofelul"
+    }
+  ],
+  "IVyWYt": [
+    {
+      "type": 0,
+      "value": "Reține: în cel de-al doilea scenariu (puțin probabil), veți pierde progresiv până la 50% (16 ETH) din miză pe parcursul a 21 de zile. După 21 de zile ești scos din grupul de validatori. Astfel este sigur că, la un moment dat, blocurile încep din nou să se finalizeze."
+    }
+  ],
+  "IZFEUg": [
+    {
+      "type": 0,
+      "value": "Gata"
+    }
+  ],
+  "IdUtHu": [
+    {
+      "type": 0,
+      "value": "Instalează virtualenv"
+    }
+  ],
+  "IhDJWs": [
+    {
+      "type": 0,
+      "value": "Ai "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depozite restante"
+    }
+  ],
+  "Il9tBQ": [
+    {
+      "type": 0,
+      "value": "Geth este scris în Go, complet open source și licențiat sub GNU LGPL v3."
+    }
+  ],
+  "IwrKbS": [
+    {
+      "type": 0,
+      "value": "Depinde. În afară de "
+    },
+    {
+      "type": 1,
+      "value": "impact"
+    },
+    {
+      "type": 0,
+      "value": " există două scenarii importante de care trebuie să ții cont:"
+    }
+  ],
+  "J0DclJ": [
+    {
+      "type": 0,
+      "value": "Sincronizarea clientului Eth1 poate dura câteva zile, în cel mai rău caz."
+    }
+  ],
+  "J455S4": [
+    {
+      "type": 0,
+      "value": "Dacă ești utilizator git, poți rula "
+    },
+    {
+      "type": 1,
+      "value": "gitClone"
+    },
+    {
+      "type": 0,
+      "value": " pentru a descărca ramura "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J5Lzz1": [
+    {
+      "type": 0,
+      "value": "Chineză (tradițională)"
+    }
+  ],
+  "J7T0SR": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Nimbus"
+    }
+  ],
+  "JAiV0o": [
+    {
+      "type": 0,
+      "value": "Cu alte cuvinte, pentru a te convinge să lucrezi mereu cinstit, acțiunile tale trebuie să aibă consecințe financiare."
+    }
+  ],
+  "JDGiXT": [
+    {
+      "type": 0,
+      "value": "Documentația OpenEthereum explică modul de descărcare și instalare a clientului."
+    }
+  ],
+  "JMcBLZ": [
+    {
+      "type": 0,
+      "value": "Depozite restante ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "JPT/TK": [
+    {
+      "type": 0,
+      "value": "4. Evită phishingul"
+    }
+  ],
+  "JYrJic": [
+    {
+      "type": 0,
+      "value": "Evită phishingul Eth2"
+    }
+  ],
+  "JhUYU3": [
+    {
+      "type": 0,
+      "value": "Descarcă aplicația CLI"
+    }
+  ],
+  "JqVeL+": [
+    {
+      "type": 0,
+      "value": "Consumul de resurse poate varia semnificativ de la un client la altul. Dacă ai restricții la resurse, verifică mai mulți clienți."
+    }
+  ],
+  "Js4uuA": [
+    {
+      "type": 0,
+      "value": "sold efectiv"
+    }
+  ],
+  "JsTbFu": [
+    {
+      "type": 0,
+      "value": "Penalizat"
+    }
+  ],
+  "JtAiN/": [
+    {
+      "type": 0,
+      "value": "Ce sistem de operare folosești?"
+    }
+  ],
+  "K6+jQ3": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Geth"
+    }
+  ],
+  "KBSbmP": [
+    {
+      "type": 0,
+      "value": "Poți să "
+    },
+    {
+      "type": 1,
+      "value": "reloadYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " ca să încerci din nou sau să reîmprospătezi pagina. Dacă problema persistă, anunță-ne pe "
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "KBjoXt": [
+    {
+      "type": 0,
+      "value": "Descarcă și dezarhivează codul sursă din ramura principală a proiectului GitHub."
+    }
+  ],
+  "KC9jbz": [
+    {
+      "type": 0,
+      "value": "Listă de verificare hardware"
+    }
+  ],
+  "KN7zKn": [
+    {
+      "type": 0,
+      "value": "Eroare"
+    }
+  ],
+  "KV017i": [
+    {
+      "type": 0,
+      "value": "Un validator este o entitate care participă la consensul protocolului Ethereum 2.0."
+    }
+  ],
+  "KhEtqB": [
+    {
+      "type": 0,
+      "value": "Documentație Besu pe Goerli"
+    }
+  ],
+  "KjcAm2": [
+    {
+      "type": 0,
+      "value": "Recompensele și penalitățile se emit aproximativ la fiecare șase minute și jumătate – o perioadă de timp cunoscută sub numele de epocă."
+    }
+  ],
+  "KqGKRA": [
+    {
+      "type": 0,
+      "value": "După finalizarea procesului, trebuie să apară următoarele:"
+    }
+  ],
+  "KrVaDy": [
+    {
+      "type": 0,
+      "value": "Am intrat pe serverul Discord al clientului."
+    }
+  ],
+  "KvRSg5": [
+    {
+      "type": 0,
+      "value": "Ce este penalizarea?"
+    }
+  ],
+  "Kw+pTr": [
+    {
+      "type": 0,
+      "value": "Procesul de instalare python3 poate varia în funcție de versiunile linux."
+    }
+  ],
+  "KxUgHu": [
+    {
+      "type": 0,
+      "value": "M-am asigurat că depozitele mele de chei sunt "
+    },
+    {
+      "type": 1,
+      "value": "boldCaution"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "L7fPF+": [
+    {
+      "type": 0,
+      "value": "Finalizează ultima depunere"
+    }
+  ],
+  "L8jrV5": [
+    {
+      "type": 0,
+      "value": "reîncarci portofelul"
+    }
+  ],
+  "LVy+cS": [
+    {
+      "type": 0,
+      "value": "Consultă documentația clientului pentru a te asigura că hardware-ul dorit este suficient și acceptat."
+    }
+  ],
+  "LWIlKS": [
+    {
+      "type": 0,
+      "value": "Mai jos poți confirma individual depunerile..."
+    }
+  ],
+  "LeHQQm": [
+    {
+      "type": 0,
+      "value": "Întrebări frecvente despre validatori"
+    }
+  ],
+  "LibVut": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza testnetul Goerli."
+    }
+  ],
+  "Ltd/hJ": [
+    {
+      "type": 1,
+      "value": "directoriesPattern"
+    },
+    {
+      "type": 0,
+      "value": " va găsi "
+    },
+    {
+      "type": 1,
+      "value": "keyDirectory"
+    },
+    {
+      "type": 0,
+      "value": " și se va așteapta să găsească "
+    },
+    {
+      "type": 1,
+      "value": "passwordDirectory"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Lv3Pmp": [
+    {
+      "type": 0,
+      "value": "Depozitul inițial a fost făcut deja pentru această cheie publică de validator. Te rugăm să aștepți și să verifici starea depozitului prin furnizorul de date Beaconchain."
+    }
+  ],
+  "LyJqWj": [
+    {
+      "type": 0,
+      "value": "Detalii despre rolurile și responsabilitățile validatorului"
+    }
+  ],
+  "M3GwXS": [
+    {
+      "type": 0,
+      "value": "Vei primi recompense complete numai dacă validatorul tău este online și actualizat. Acest aspect este responsabilitatea ta. Dacă validatorul este deconectat, vei fi penalizat. Sancțiunile pentru trecerea offline sunt aproximativ egale cu recompensele pentru participarea activă."
+    }
+  ],
+  "MIsmjW": [
+    {
+      "type": 0,
+      "value": "Creează portofel nou"
+    }
+  ],
+  "MPHPEO": [
+    {
+      "type": 0,
+      "value": "Pot să-mi conectez nodul Eth2 la clientul Eth1 prin API-uri HTTP."
+    }
+  ],
+  "MQTBvH": [
+    {
+      "type": 0,
+      "value": "Protejează-te împotriva depunerilor duble"
+    }
+  ],
+  "MSanFQ": [
+    {
+      "type": 0,
+      "value": "registre"
+    }
+  ],
+  "MX00UO": [
+    {
+      "type": 0,
+      "value": "Ce se întâmplă dacă mi se fură cheia de retragere?"
+    }
+  ],
+  "MZEcKL": [
+    {
+      "type": 0,
+      "value": "Comportamentul incorect al validatorului"
+    }
+  ],
+  "MZvoWG": [
+    {
+      "type": 0,
+      "value": "Upgrade-urile"
+    }
+  ],
+  "Mb3npQ": [
+    {
+      "type": 0,
+      "value": "Utilizarea terminalului"
+    }
+  ],
+  "MbsAo3": [
+    {
+      "type": 0,
+      "value": "Acest panou de lansare te va ajuta să devii validator, ca să poți juca un rol activ în viitorul Ethereum. Validatorii sunt cheia unui Ethereum mai sigur, mai scalabil și sustenabil pe care îl construim împreună."
+    }
+  ],
+  "Mc8nNE": [
+    {
+      "type": 0,
+      "value": "Tranzacția nu a reușit"
+    }
+  ],
+  "MmZjeu": [
+    {
+      "type": 0,
+      "value": "Detalii de alimentare"
+    }
+  ],
+  "N+2G1J": [
+    {
+      "type": 0,
+      "value": "Alege clientul "
+    },
+    {
+      "type": 1,
+      "value": "ethereum"
+    }
+  ],
+  "N0rwnt": [
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " nu este un fișier JSON deposit_data corect. Încearcă din nou."
+    }
+  ],
+  "NBJR7v": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " pentru a conecta nodul Eth2 la punctul final RPC JSON. Acest lucru va activa serviciile RPC JSON pe portul implicit 8545."
+    }
+  ],
+  "NEmnAV": [
+    {
+      "type": 0,
+      "value": "Italiană"
+    }
+  ],
+  "NLgogh": [
+    {
+      "type": 0,
+      "value": "Rețea Launchpad:"
+    }
+  ],
+  "NOTCV0": [
+    {
+      "type": 0,
+      "value": "Monitorizare Prometheus și Grafana"
+    }
+  ],
+  "NPmm0q": [
+    {
+      "type": 0,
+      "value": "Această aplicație se poate utiliza numai pe un dispozitiv desktop."
+    }
+  ],
+  "NSK+Li": [
+    {
+      "type": 0,
+      "value": "Am securizat contul root."
+    }
+  ],
+  "NTWnJC": [
+    {
+      "type": 0,
+      "value": "Descarcă aplicația linie de comandă"
+    }
+  ],
+  "NVQd7i": [
+    {
+      "type": 0,
+      "value": "Pentru a procesa depunerile de validator primite din rețeaua principală (lanțul Eth1), va trebui să rulezi un client Eth1, în paralel cu un client Eth2. Poți folosi un serviciu terț precum Infura, dar îți recomandăm să folosești propriul tău client pentru ca rețeaua să fie cât mai descentralizată."
+    }
+  ],
+  "NVljH4": [
+    {
+      "type": 0,
+      "value": "Mai multe despre Prysmatic Labs"
+    }
+  ],
+  "NYFKzu": [
+    {
+      "type": 0,
+      "value": "Listă de verificare pentru mize"
+    }
+  ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "Trimite cele "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depozite rămase"
+    }
+  ],
+  "NZUWs7": [
+    {
+      "type": 0,
+      "value": "Nu uita: votul validatorului este ponderat cu suma mizei sale."
+    }
+  ],
+  "NZsVaA": [
+    {
+      "type": 0,
+      "value": "Validatori și Eth2"
+    }
+  ],
+  "Nb5DNK": [
+    {
+      "type": 0,
+      "value": "Devino validator cu Teku"
+    }
+  ],
+  "NwzcYT": [
+    {
+      "type": 0,
+      "value": "Teku trebuie îndreptat spre fișiere care conțin depozite de chei și parolele asociate acestora la pornire. Există 3 metode pentru a face acest lucru."
+    }
+  ],
+  "O+3LJ1": [
+    {
+      "type": 0,
+      "value": "Soldul acestui validator este la maximum efectiv: "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "O54B/F": [
+    {
+      "type": 0,
+      "value": "Rețeaua Eth2"
+    }
+  ],
+  "OIvXIO": [
+    {
+      "type": 0,
+      "value": "Finalizează cele "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depozite rămase"
+    }
+  ],
+  "ON2tXT": [
+    {
+      "type": 0,
+      "value": "Documentația Nethermind explică modul de descărcare și instalare a clientului."
+    }
+  ],
+  "OdYQYh": [
+    {
+      "type": 0,
+      "value": "Mai multe despre ConsenSys"
+    }
+  ],
+  "OsO8ik": [
+    {
+      "type": 0,
+      "value": "Am competența tehnică necesară pentru a instala și a rula un validator."
+    }
+  ],
+  "Ou/o3H": [
+    {
+      "type": 0,
+      "value": "Tot ce trebuie să înțelegi ca să devii validator."
+    }
+  ],
+  "P+nziG": [
+    {
+      "type": 0,
+      "value": "Ca validator, va trebui să pui drept miză niște fonduri, ca să poți fi penalizat pentru eventualul comportament necinstit."
+    }
+  ],
+  "P0kiYS": [
+    {
+      "type": 0,
+      "value": "Upgrade-ul Lanțului Beacon aduce consens cu dovada mizei în Ethereum."
+    }
+  ],
+  "P1QerV": [
+    {
+      "type": 0,
+      "value": "Dacă ai întrebări, comunitatea EthStaker este un loc bun pentru a cere ajutor! Poți primi ajutor pe "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " sau "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "P91KmA": [
+    {
+      "type": 0,
+      "value": "Devino validator "
+    },
+    {
+      "type": 1,
+      "value": "emoji"
+    }
+  ],
+  "P9mVZK": [
+    {
+      "type": 0,
+      "value": "Rețeaua s-a schimbat"
+    }
+  ],
+  "PIQDar": [
+    {
+      "type": 0,
+      "value": "Îți recomandăm să parcurgi întâi tot procesul pe un testnet, ca să te obișnuiești cu activitatea."
+    }
+  ],
+  "PboOCR": [
+    {
+      "type": 0,
+      "value": "Configurează clientul Eth2"
+    }
+  ],
+  "PfoT0C": [
+    {
+      "type": 0,
+      "value": "Această listă de verificare te va ajuta să înțelegi rolul unui validator și să te pregătești pentru acesta."
+    }
+  ],
+  "PglO1W": [
+    {
+      "type": 0,
+      "value": "Raport de verificare oficial"
+    }
+  ],
+  "PoBIK+": [
+    {
+      "type": 0,
+      "value": "Vei avea nevoie de o unitate de stocare SSD ca să beneficiezi sistematic de vitezele de citire/scriere necesare."
+    }
+  ],
+  "Pswssl": [
+    {
+      "type": 0,
+      "value": "Confirmare"
+    }
+  ],
+  "Px7wWb": [
+    {
+      "type": 0,
+      "value": "Documentație pip"
+    }
+  ],
+  "Q1ZwPT": [
+    {
+      "type": 0,
+      "value": "clipboard"
+    }
+  ],
+  "Q8P0rZ": [
+    {
+      "type": 0,
+      "value": "Validatorii au un sold efectiv maxim de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Este suficient să alimentezi "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " ca să ajungi la soldul efectiv maxim."
+    }
+  ],
+  "QKFeMq": [
+    {
+      "type": 0,
+      "value": "Internet"
+    }
+  ],
+  "QOAgQF": [
+    {
+      "type": 0,
+      "value": "Notă: mașinile virtuale pot dezactiva implicit NTP, deci poți avea nevoie de o soluție adaptată mediului folosit."
+    }
+  ],
+  "QWDxrk": [
+    {
+      "type": 0,
+      "value": "Administrarea cheilor"
+    }
+  ],
+  "QlsDcr": [
+    {
+      "type": 0,
+      "value": "Acțiune"
+    }
+  ],
+  "QnS0CA": [
+    {
+      "type": 0,
+      "value": "Portofelul trebuie setat la "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": " pentru a putea utiliza panoul de lansare."
+    }
+  ],
+  "QqqeNk": [
+    {
+      "type": 0,
+      "value": "Tranzacție respinsă"
+    }
+  ],
+  "Qs/oj3": [
+    {
+      "type": 0,
+      "value": "Este posibil să ai un depozit de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " care a fost acceptat, dar a cărui validare în lanț nu s-a terminat. Acesta va apărea aici când beaconcha.in a confirmat 2048 de blocuri."
+    }
+  ],
+  "R8eePn": [
+    {
+      "type": 0,
+      "value": "Dacă ești penalizat, nu poți să participi mai departe la protocol și ești eliminat."
+    }
+  ],
+  "RIFLCz": [
+    {
+      "type": 0,
+      "value": "Phishingul este un risc real pentru validatorii Eth2 și, din păcate, multe persoane vor pierde fonduri din cauza acestor atacuri."
+    }
+  ],
+  "ROHpFF": [
+    {
+      "type": 0,
+      "value": "1. Află mai multe despre responsabilitățile tale"
+    }
+  ],
+  "RVyb7r": [
+    {
+      "type": 0,
+      "value": "Pot să opresc validatorul timp de câteva zile și să-l repornesc ulterior?"
+    }
+  ],
+  "RWqrlk": [
+    {
+      "type": 0,
+      "value": "felicitări"
+    }
+  ],
+  "RYUKCz": [
+    {
+      "type": 0,
+      "value": "Am simulat migrarea de la un client Eth2 la un alt client Eth2."
+    }
+  ],
+  "RaBZna": [
+    {
+      "type": 0,
+      "value": "Dacă te deconectezi timp de mai multe zile în condiții normale, vei pierde o sumă de ETH aproximativ echivalentă cu cea pe care ai fi câștigat-o în perioada respectivă. Cu alte cuvinte, dacă urma să câștigi ≈0,01 ETH, vei suferi o penalizare de ≈0,01 ETH."
+    }
+  ],
+  "Rg5ySE": [
+    {
+      "type": 0,
+      "value": "Câți validatori vrei să rulezi?"
+    }
+  ],
+  "Rj0OAx": [
+    {
+      "type": 0,
+      "value": "Cu alte cuvinte, un om care rulează un proces computerizat. Acest proces propune și garantează adăugarea de noi blocuri la blockchain."
+    }
+  ],
+  "RkbwNZ": [
+    {
+      "type": 0,
+      "value": "Nu vei putea retrage depozitul până când rețeaua principală nu fuzionează cu Lanțul Beacon."
+    }
+  ],
+  "Rm2GQZ": [
+    {
+      "type": 0,
+      "value": "Miză totală în "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (milioane)"
+    }
+  ],
+  "Rr2lI/": [
+    {
+      "type": 0,
+      "value": "Ești responsabil pentru această tranzacție!"
+    }
+  ],
+  "RrCui3": [
+    {
+      "type": 0,
+      "value": "Rezumat"
+    }
+  ],
+  "Ryptmy": [
+    {
+      "type": 0,
+      "value": "Verifică-l cu următoarea comandă pentru a vedea dacă returnează corect versiunea clientului:"
+    }
+  ],
+  "S0e/cN": [
+    {
+      "type": 0,
+      "value": "Cum vrei să rulezi CLI?"
+    }
+  ],
+  "S943uU": [
+    {
+      "type": 0,
+      "value": "Te rugăm să reverifici URL-ul"
+    }
+  ],
+  "SB6yx7": [
+    {
+      "type": 0,
+      "value": "Variabila de mediu a fișierului de configurare Teku"
+    }
+  ],
+  "SGzXoY": [
+    {
+      "type": 0,
+      "value": "Miza a ajuns în contractul de depozit!"
+    }
+  ],
+  "SMffKt": [
+    {
+      "type": 0,
+      "value": "Alege un client Eth"
+    },
+    {
+      "type": 1,
+      "value": "ethVersionStep"
+    },
+    {
+      "type": 0,
+      "value": " și configurează un nod"
+    }
+  ],
+  "SR0qHv": [
+    {
+      "type": 0,
+      "value": "Evită configurațiile prea complicate și cântărește cu atenție compromisurile. Ieșirile offline scurte vor duce la penalități mici pentru inactivitate, care se recuperează cu ușurință după revenirea online pentru aproximativ același interval de timp. Configurațiile de rezervă complicate pot face dotarea mai scumpă, iar validatorii redundanți pot duce la penalizări."
+    }
+  ],
+  "SaR1pU": [
+    {
+      "type": 0,
+      "value": "Depozitul există deja"
+    }
+  ],
+  "Sd+Pq6": [
+    {
+      "type": 0,
+      "value": "Total validatori"
+    }
+  ],
+  "Sd0I/u": [
+    {
+      "type": 0,
+      "value": "Cheie publică validator"
+    }
+  ],
+  "Sd3VAH": [
+    {
+      "type": 0,
+      "value": "Validatorii care au ieșit sau au fost penalizați nu sunt eligibili pentru alimentare"
+    }
+  ],
+  "Sd9qhL": [
+    {
+      "type": 0,
+      "value": "Mai multe despre riscurile de penalizare"
+    }
+  ],
+  "SeW5ak": [
+    {
+      "type": 0,
+      "value": "Înainte de a semna, verifică adresa de contract în portofel."
+    }
+  ],
+  "Seanpx": [
+    {
+      "type": 0,
+      "value": "Obligatoriu"
+    }
+  ],
+  "SqKNq2": [
+    {
+      "type": 0,
+      "value": "Poți instala python3 pe dispozitivul macOS folosind "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    }
+  ],
+  "Szwbym": [
+    {
+      "type": 0,
+      "value": "cheie"
+    }
+  ],
+  "TLEziZ": [
+    {
+      "type": 0,
+      "value": "Lanțul Beacon s-a născut pe "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ". Dimensiunea sa crește în timp, iar introducerea fragmentării va mări cerințele de spațiu de stocare, memorie și lățime de bandă."
+    }
+  ],
+  "TMw9oz": [
+    {
+      "type": 0,
+      "value": "Vizitează acest site cu un dispozitiv desktop pentru a deveni un validator."
+    }
+  ],
+  "TfNuWP": [
+    {
+      "type": 0,
+      "value": "virtualenv te-ar ajuta să creezi un mediu Python izolat pentru instrumentul deposit-cli."
+    }
+  ],
+  "TmYprU": [
+    {
+      "type": 0,
+      "value": "Launchpad Eth2 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "Tpe6yK": [
+    {
+      "type": 0,
+      "value": "Documentație rpc-http-enabled"
+    }
+  ],
+  "U0yY/A": [
+    {
+      "type": 0,
+      "value": "Vizualizează comparația detaliată a clienților"
+    }
+  ],
+  "U7AOxj": [
+    {
+      "type": 0,
+      "value": "mai mare decât 50%"
+    }
+  ],
+  "U7PMU1": [
+    {
+      "type": 0,
+      "value": "Clienții Eth2 sunt compatibili cu Prometheus și Grafana pentru a te ajuta să vizualizezi indicatori importanți, în timp real, despre validator. Instrucțiunile specifice clientului se găsesc aici: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
+    }
+  ],
+  "UHbYCa": [
+    {
+      "type": 0,
+      "value": "Validatorul are propriul său sold – cu soldul inițial specificat în contractul de depozit. În timp, recompensele și penalitățile afectează soldul validatorului."
+    }
+  ],
+  "UJMct0": [
+    {
+      "type": 0,
+      "value": "Verifică "
+    },
+    {
+      "type": 1,
+      "value": "etherscan"
+    },
+    {
+      "type": 0,
+      "value": " pentru detalii"
+    }
+  ],
+  "UWv7yD": [
+    {
+      "type": 0,
+      "value": "Verifică contractul de depozit cu explorerul de bloc Ethereum preferat:"
+    }
+  ],
+  "Utck3E": [
+    {
+      "type": 0,
+      "value": "Limbi acceptate"
+    }
+  ],
+  "Uxs0RD": [
+    {
+      "type": 0,
+      "value": "Graffiti"
+    }
+  ],
+  "Uy8THS": [
+    {
+      "type": 0,
+      "value": "Dacă rămâi offline simultan cu peste 1/3 din numărul total de validatori, penalizarea va fi mai aspră, pentru că nu se mai finalizează blocurile. "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    }
+  ],
+  "UygdAl": [
+    {
+      "type": 0,
+      "value": "Una dintre cele trei implementări inițiale ale protocolului Ethereum."
+    }
+  ],
+  "UykRIk": [
+    {
+      "type": 0,
+      "value": "A deveni validator implică multă responsabilitate, cu pași de pregătire importanți. Începe procesul de depunere doar atunci când ești gata să faci acest pas."
+    }
+  ],
+  "V0cb8p": [
+    {
+      "type": 0,
+      "value": "Dacă nu ai un folder testnet, probabil că nu ai compilat și executat corect Nimbus. Rulează din nou comenzile de compilare."
+    }
+  ],
+  "VASo1/": [
+    {
+      "type": 0,
+      "value": "Conectează portofelul"
+    }
+  ],
+  "VEj6nh": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Nethermind"
+    }
+  ],
+  "VIMMdE": [
+    {
+      "type": 0,
+      "value": "Nu trimite nicio tranzacție cu un fișier "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " pentru care nu l-ai creat personal sau pentru care nu ai fraza mnemonică."
+    }
+  ],
+  "VJZrCQ": [
+    {
+      "type": 0,
+      "value": "Comutare la panoul de lansare "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "VKfWR3": [
+    {
+      "type": 0,
+      "value": "Recomandat"
+    }
+  ],
+  "VLDKor": [
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " este soldul maxim efectiv al validatorului. Acest lucru înseamnă că nu vei câștiga mai multe recompense dacă soldul de validator depășește "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ". Cu toate acestea, vei câștiga mai puțin dacă scade sub "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "VPpHAq": [
+    {
+      "type": 0,
+      "value": "Înțeleg că miza "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " o vreme și că "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " până la fuziune. Înțeleg că, dacă ies, nu voi putea reveni decât mult mai târziu. Acesta este un angajament pe termen lung."
+    }
+  ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "Cu alte cuvinte: dacă miza totală ETH este scăzută, recompensa (rata dobânzii) este mare, dar pe măsură ce miza totală crește, recompensa (dobânda) plătită fiecărui validator începe să scadă."
+    }
+  ],
+  "VUuZsb": [
+    {
+      "type": 0,
+      "value": "uniformă de arte marțiale"
+    }
+  ],
+  "VY3/Wo": [
+    {
+      "type": 0,
+      "value": "Pentru a deveni validator, va trebui să poți rula comenzi în terminalul de pe computer. Generarea noilor perechi de chei Eth2 și instalarea software-ului de validare se fac în terminal."
+    }
+  ],
+  "VctWDX": [
+    {
+      "type": 0,
+      "value": "Știu sigur că validatorul pe care îl alimentez este al meu."
+    }
+  ],
+  "VzGJkB": [
+    {
+      "type": 0,
+      "value": "Lista de verificare pentru mize"
+    }
+  ],
+  "W10U1b": [
+    {
+      "type": 0,
+      "value": "Teku este folosit cu licență Apache 2 și a fost scris în Java, un limbaj de maturitate și omniprezență remarcabile."
+    }
+  ],
+  "W8nHSd": [
+    {
+      "type": 0,
+      "value": "Întrebări frecvente"
+    }
+  ],
+  "W9JuAN": [
+    {
+      "type": 0,
+      "value": "Client de validator Eth2 (VC)"
+    }
+  ],
+  "WFVzvu": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " Depozitele duplicate cu aceeași cheie publică keyfile vor fi considerate drept duble. Niciun sold suplimentar peste "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " NU va fi luat în calcul în soldul efectiv pe lanțul de Beacon. De asemenea, nu vei mai putea să-l retragi până când Lanțul Beacon nu fuzionează cu rețeaua principală."
+    }
+  ],
+  "WMLn/w": [
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " validatori"
+    }
+  ],
+  "WRevBY": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " pentru a conecta nodul Eth2 la punctul final RPC JSON. Acest lucru va activa serviciile RPC JSON pe portul implicit 8545."
+    }
+  ],
+  "WTPUDZ": [
+    {
+      "type": 0,
+      "value": "Acești pași sunt opționali, dar sunt recomandați pentru optimizarea nodului."
+    }
+  ],
+  "Wao7OA": [
+    {
+      "type": 0,
+      "value": "Nod Beacon Eth2 (BN)"
+    }
+  ],
+  "WkrNSk": [
+    {
+      "type": 0,
+      "value": "Engleză"
+    }
+  ],
+  "Wl6cI3": [
+    {
+      "type": 0,
+      "value": "Te rugăm să accepți condițiile de mai sus."
+    }
+  ],
+  "WxqnJn": [
+    {
+      "type": 0,
+      "value": "Pe de altă parte, poți fi penalizat dacă stai offline și dacă ai comportament nociv – de exemplu, atești blocuri incorecte sau contradictorii."
+    }
+  ],
+  "Wxzght": [
+    {
+      "type": 0,
+      "value": "Trage fișierul de încărcat sau răsfoiește"
+    }
+  ],
+  "X/fKmY": [
+    {
+      "type": 0,
+      "value": "Explorerul de blocuri a numit contractul?"
+    }
+  ],
+  "X0dSr0": [
+    {
+      "type": 0,
+      "value": "Este foarte riscant să rulezi validatorul Eth2 în mai multe locuri. Va duce la un eveniment penalizabil și la eliminarea din rețea. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "X5KFEh": [
+    {
+      "type": 0,
+      "value": "Acesta nu este un fișier de JSON deposit_data corect."
+    }
+  ],
+  "XBEBYR": [
+    {
+      "type": 0,
+      "value": "Mai multe despre instalarea pip"
+    }
+  ],
+  "XVehvN": [
+    {
+      "type": 1,
+      "value": "filesPattern"
+    },
+    {
+      "type": 0,
+      "value": " se va aștepta ca "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " să existe, iar fișierul care conține parola să fie "
+    },
+    {
+      "type": 1,
+      "value": "passwordFile"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "XmddSV": [
+    {
+      "type": 0,
+      "value": "Compilare din sursă"
+    }
+  ],
+  "Y47aYU": [
+    {
+      "type": 0,
+      "value": "Alimentare"
+    }
+  ],
+  "Y8YLHs": [
+    {
+      "type": 0,
+      "value": "Dacă hoțul nu controlează cheia ta de semnătură, nu poate ieși din validator."
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "Trimite ultimul depozit"
+    }
+  ],
+  "YBs4dR": [
+    {
+      "type": 0,
+      "value": "Ultima versiune de pip trebuia să fie instalată cu python 3.x.x. Pentru mai multe informații despre instalarea pip pe Windows, vizitează "
+    },
+    {
+      "type": 1,
+      "value": "windowsInstallGuide"
+    },
+    {
+      "type": 0,
+      "value": ". Poți să instalezi pachetul pip și prin "
+    },
+    {
+      "type": 1,
+      "value": "chocolatey"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YFFqcn": [
+    {
+      "type": 0,
+      "value": "Înțeleg dovada mizei și de ce este nevoie de validatori."
+    }
+  ],
+  "YFT4rG": [
+    {
+      "type": 0,
+      "value": "Chei"
+    }
+  ],
+  "YP03/j": [
+    {
+      "type": 0,
+      "value": "Ulterior, se încurajează în continuare implicarea validatorilor (cu cât sunt mai mulți, cu atât rețeaua este mai descentralizată), dar nu este absolut esențial să facă acest lucru (astfel încât rata dobânzii să poată scădea)."
+    }
+  ],
+  "YPsbIU": [
+    {
+      "type": 0,
+      "value": "Am configurat serviciul "
+    },
+    {
+      "type": 1,
+      "value": "grafana"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YWfd2t": [
+    {
+      "type": 0,
+      "value": "Un proiect de cercetare și de implementare de client Eth2 destinate să funcționeze bine pe sistemele integrate și pe dispozitivele mobile personale; inclusiv pe smartphone-urile mai vechi, cu resurse hardware limitate. Echipa Nimbus este de la Status, o companie cunoscută pentru browserul de mesagerie/portofel/Web3."
+    }
+  ],
+  "YZtdY1": [
+    {
+      "type": 0,
+      "value": "Începând cu "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", vei avea nevoie de ~400 GB numai pentru datele lanțului din rețeaua principală Eth1 (creștere de ~1 GB/zi)."
+    }
+  ],
+  "Yganfl": [
+    {
+      "type": 0,
+      "value": "Tastează următoarele rânduri în fereastra de terminal:"
+    }
+  ],
+  "YkznEp": [
+    {
+      "type": 0,
+      "value": "Dacă îți pierzi cheia de retragere, nu există nicio altă modalitate de a accesa fondurile deținute de validator."
+    }
+  ],
+  "YtwQyB": [
+    {
+      "type": 0,
+      "value": "Poți să "
+    },
+    {
+      "type": 1,
+      "value": "changeYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " pentru a încărca validatori corespunzători unei alte adrese."
+    }
+  ],
+  "Yu78N6": [
+    {
+      "type": 0,
+      "value": "pungă de bani"
+    }
+  ],
+  "Z07LQm": [
+    {
+      "type": 0,
+      "value": "Nu s-a putut încărca "
+    },
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " din cauza unei erori. Deschide o problemă în GitHub ca să putem investiga."
+    }
+  ],
+  "Z1aGQe": [
+    {
+      "type": 0,
+      "value": "În general, ne așteptăm ca validatorul tău să fie profitabil câtă vreme timpul de funcționare e "
+    },
+    {
+      "type": 1,
+      "value": "greaterThan50Percent"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "ZBtnGs": [
+    {
+      "type": 0,
+      "value": "Am examinat lista de verificare."
+    }
+  ],
+  "ZK6NmY": [
+    {
+      "type": 0,
+      "value": "Notă: ora RTC (ora reală) poate fi setată la fusul orar local în loc de UTC, mai ales într-mașină virtuală cu ceasul configurat pe Windows."
+    }
+  ],
+  "ZOU+p7": [
+    {
+      "type": 0,
+      "value": "Documentație --http"
+    }
+  ],
+  "ZOXuIe": [
+    {
+      "type": 0,
+      "value": "De ce trebuie să depun niște fonduri ca miză?"
+    }
+  ],
+  "ZPRDyW": [
+    {
+      "type": 0,
+      "value": "Din nou, depinde. Dacă ai un comportament nociv - de exemplu, atești blocuri incorecte sau contradictorii, se vor lua penalizări din miză."
+    }
+  ],
+  "ZRbxwY": [
+    {
+      "type": 0,
+      "value": "Listă de verificare validator Eth2"
+    }
+  ],
+  "ZTo0Fl": [
+    {
+      "type": 0,
+      "value": "De ce trebuie să aștept?"
+    }
+  ],
+  "Zi+EED": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku este un client Ethereum 2.0 bazat pe Java, dezvoltat pentru a satisface nevoile instituționale și cerințele de securitate."
+    }
+  ],
+  "Zspg8H": [
+    {
+      "type": 0,
+      "value": "Secțiunea 1 - Înainte de a începe"
+    }
+  ],
+  "ZzTcj5": [
+    {
+      "type": 0,
+      "value": "Descarcă python3 și urmează instrucțiunile de instalare."
+    }
+  ],
+  "a+xjjV": [
+    {
+      "type": 0,
+      "value": "Devino validator cu Prysm"
+    }
+  ],
+  "aDomwX": [
+    {
+      "type": 0,
+      "value": "Dacă încerci să înșeli sistemul sau să nu respecți specificațiile, ți se poate impune o sancțiune, cunoscută sub numele de penalizare. Rularea simultană a cheilor de validare pe două sau mai multe mașini va duce la penalizare."
+    }
+  ],
+  "aEBE6s": [
+    {
+      "type": 0,
+      "value": "2. Pregătirea nodurilor"
+    }
+  ],
+  "aMcG1s": [
+    {
+      "type": 0,
+      "value": "Verifică explorerul de blocuri Eth2 preferat:"
+    }
+  ],
+  "aS6dBe": [
+    {
+      "type": 0,
+      "value": "Configurează Nimbus"
+    }
+  ],
+  "aTRROW": [
+    {
+      "type": 0,
+      "value": "Nimbus (Apache 2) este scris în Nim, un limbaj cu sintaxă asemănătoare cu Python, care se compilează în C."
+    }
+  ],
+  "aXWL9X": [
+    {
+      "type": 0,
+      "value": "Nu există nicio modalitate de a reactiva validatorul și nu vei putea să transferi sau să retragi fondurile până la fuziune (ceea ce înseamnă că fondurile vor rămâne inaccesibile până atunci)."
+    }
+  ],
+  "aZ7pUj": [
+    {
+      "type": 0,
+      "value": "Portofelul tău este într-o rețea Ethereum greșită. Pentru a continua, conectează-te la rețeaua "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "acrOoz": [
+    {
+      "type": 0,
+      "value": "Continuă"
+    }
+  ],
+  "azLmaD": [
+    {
+      "type": 0,
+      "value": "Compilează deposit-cli din codul sursă Python"
+    }
+  ],
+  "b3J7Pw": [
+    {
+      "type": 0,
+      "value": "Nu. Nu există niciun avantaj în a avea miză de peste "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH."
+    }
+  ],
+  "b4csjU": [
+    {
+      "type": 0,
+      "value": "Cu toate acestea, ține cont de faptul că dacă ieși, nu vei putea reveni în viitorul apropiat."
+    }
+  ],
+  "bNFkSo": [
+    {
+      "type": 0,
+      "value": "Acum urmează instrucțiunile afișate în fereastra terminal pentru a genera cheile."
+    }
+  ],
+  "bR1R2M": [
+    {
+      "type": 0,
+      "value": "Este o referință utilă în timpul configurării clientului, pentru a nu omite pașii importanți."
+    }
+  ],
+  "bUk/lm": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Besu"
+    }
+  ],
+  "bVtlF7": [
+    {
+      "type": 0,
+      "value": "Asigură-te că ai destul spațiu pe disc până când rulezi mentenanța pe nod."
+    }
+  ],
+  "bbr+aD": [
+    {
+      "type": 0,
+      "value": "Fișierele YAML pot avea sintaxe diferite."
+    }
+  ],
+  "bnuvhg": [
+    {
+      "type": 0,
+      "value": "Lighthouse a fost dezvoltat în Rust și este oferit sub licență Apache 2.0."
+    }
+  ],
+  "bxU6sX": [
+    {
+      "type": 0,
+      "value": "Instrucțiuni de instalare Python"
+    }
+  ],
+  "c9DSZ1": [
+    {
+      "type": 0,
+      "value": "Recomandăm insistent să faci acești pași în testnetul actual înaintea de rețeaua principală."
+    }
+  ],
+  "cHUoV9": [
+    {
+      "type": 0,
+      "value": "Documentația Geth explică modul de descărcare și instalare a clientului."
+    }
+  ],
+  "cRzxes": [
+    {
+      "type": 0,
+      "value": "APR curent"
+    }
+  ],
+  "cav520": [
+    {
+      "type": 0,
+      "value": "Descarcă de pe GitHub"
+    }
+  ],
+  "ccU6l/": [
+    {
+      "type": 0,
+      "value": "Online"
+    }
+  ],
+  "chw27s": [
+    {
+      "type": 0,
+      "value": "Mai multe despre PegaSys Teku"
+    }
+  ],
+  "clUb0+": [
+    {
+      "type": 0,
+      "value": "Linie de comandă"
+    }
+  ],
+  "clxIWO": [
+    {
+      "type": 0,
+      "value": "Cu cât voi fi penalizat pentru eventualele acțiuni nocive?"
+    }
+  ],
+  "cs9mQw": [
+    {
+      "type": 0,
+      "value": "Informații suplimentare despre rolul și responsabilitățile validatorilor Eth2."
+    }
+  ],
+  "cyR7Kh": [
+    {
+      "type": 0,
+      "value": "Înapoi"
+    }
+  ],
+  "d5KEM8": [
+    {
+      "type": 0,
+      "value": "Trebuie să semnezi o tranzacție pentru fiecare depunere pe care vrei s-o faci."
+    }
+  ],
+  "dIgBOz": [
+    {
+      "type": 0,
+      "value": "Depunere"
+    }
+  ],
+  "dM/KIM": [
+    {
+      "type": 0,
+      "value": "Ce este un validator?"
+    }
+  ],
+  "dTOtPO": [
+    {
+      "type": 0,
+      "value": "Alimentare"
+    }
+  ],
+  "deLJOg": [
+    {
+      "type": 0,
+      "value": "Încarcă un fișier json corect."
+    }
+  ],
+  "do+Cyc": [
+    {
+      "type": 0,
+      "value": "APR estimat ("
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "dprf8W": [
+    {
+      "type": 0,
+      "value": "Unde găsesc suport pentru depanare?"
+    }
+  ],
+  "dvr19k": [
+    {
+      "type": 0,
+      "value": "Configurare"
+    }
+  ],
+  "dzdAcD": [
+    {
+      "type": 0,
+      "value": "Port implicit"
+    }
+  ],
+  "e/PSgJ": [
+    {
+      "type": 0,
+      "value": "Încarcă datele depozitului"
+    }
+  ],
+  "e4f94H": [
+    {
+      "type": 0,
+      "value": "Dacă "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " nu este "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": ", execută: "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    }
+  ],
+  "eIRc60": [
+    {
+      "type": 0,
+      "value": "Mai multe despre Eth2"
+    }
+  ],
+  "eKEL/g": [
+    {
+      "type": 0,
+      "value": "În așteptare"
+    }
+  ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "Trimite o tranzacție pentru a finaliza depunerea."
+    }
+  ],
+  "eOpZjd": [
+    {
+      "type": 0,
+      "value": "Specifică cine pune miza, cine validează, cât se mizează și cine poate retrage fondurile."
+    }
+  ],
+  "eaU/aL": [
+    {
+      "type": 0,
+      "value": "Pentru a maximiza securitatea și eficiența nodului, rulează clienții pe hardware dedicat. Acest lucru reduce riscul expunerii la malware și minimizează concurența pentru resursele de calcul. Astfel poți fi sigur că nodul face față solicitărilor din rețea și se achită permanent de responsabilitățile de validator."
+    }
+  ],
+  "egVO5r": [
+    {
+      "type": 0,
+      "value": "Mai multe despre lanțurile de fragmente"
+    }
+  ],
+  "elCkOU": [
+    {
+      "type": 0,
+      "value": "Mai multe despre fuziune"
+    }
+  ],
+  "erZJkZ": [
+    {
+      "type": 0,
+      "value": "La lansarea Teku, depozitele de chei și parolele se pot da prin diferite metode."
+    }
+  ],
+  "esDvdR": [
+    {
+      "type": 0,
+      "value": "Soldul validatorului este de peste "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", dar soldul efectiv este scăzut ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": "). Dacă alimentezi cu "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (minimul permis de contractul de depozit), soldul efectiv va ajunge la maximum."
+    }
+  ],
+  "eyK2E3": [
+    {
+      "type": 0,
+      "value": "Execută pașii din lista de verificare"
+    }
+  ],
+  "f/N7FO": [
+    {
+      "type": 0,
+      "value": "Ce se întâmplă dacă îmi pierd cheia de semnare?"
+    }
+  ],
+  "fHLKXR": [
+    {
+      "type": 0,
+      "value": "Răspunsul la această întrebare depinde foarte mult de suma ETH pe care o ai la dispoziție."
+    }
+  ],
+  "fR8+bQ": [
+    {
+      "type": 0,
+      "value": "În timpul configurării"
+    }
+  ],
+  "fbiteI": [
+    {
+      "type": 0,
+      "value": "stocat pe o singură mașină validator"
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "Se așteaptă confirmarea de portofel"
+    }
+  ],
+  "frGVRP": [
+    {
+      "type": 0,
+      "value": "impactul unui echilibru eficace"
+    }
+  ],
+  "g/DxI7": [
+    {
+      "type": 0,
+      "value": "Mai mult, poți seta clientul de validator (VC) și nodul Beacon (BN) pe computere separate, cu adrese IP diferite, astfel încât chiar dacă nodul Beacon devine vulnerabil, depozitul de chei este stocat pe o altă mașină."
+    }
+  ],
+  "g37XKP": [
+    {
+      "type": 0,
+      "value": "Mai multe despre virtualenv"
+    }
+  ],
+  "gAdE9y": [
+    {
+      "type": 0,
+      "value": "Îți mulțumim pentru susținerea rețelei Eth2!"
+    }
+  ],
+  "gIauNz": [
+    {
+      "type": 0,
+      "value": "Ar trebui să vezi că ai o cheie per validator. Acest depozit de chei conține cheia de semnătură, criptată cu parolă. Poți folosi mnemonicul pentru a genera cheia de retragere atunci când vrei să retragi."
+    }
+  ],
+  "gN9D/h": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza testnetul Goerli."
+    }
+  ],
+  "gQkd2y": [
+    {
+      "type": 0,
+      "value": "Generează chei de depunere folosind instrumentul de depunere al Ethereum Foundation"
+    }
+  ],
+  "gVC0Wl": [
+    {
+      "type": 0,
+      "value": "Utilizează parola asistată în folderul de secrete."
+    }
+  ],
+  "gfLdAQ": [
+    {
+      "type": 0,
+      "value": "Mai multe despre Lanțul Beacon"
+    }
+  ],
+  "gjBiyj": [
+    {
+      "type": 0,
+      "value": "Se încarcă..."
+    }
+  ],
+  "gjmx29": [
+    {
+      "type": 0,
+      "value": "DA"
+    }
+  ],
+  "gtrcyK": [
+    {
+      "type": 0,
+      "value": "Verifică dacă "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " și "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " sunt corecte."
+    }
+  ],
+  "guMfKn": [
+    {
+      "type": 0,
+      "value": "Acest lucru înseamnă că nu trebuie să exagerezi cu clienții de rezervă sau cu conexiuni la internet redundante, întrucât consecințele ieșirii offline nu sunt atât de grave."
+    }
+  ],
+  "gx6frf": [
+    {
+      "type": 0,
+      "value": "ceas"
+    }
+  ],
+  "h8MTUo": [
+    {
+      "type": 0,
+      "value": "Miza ta"
+    }
+  ],
+  "h8ZHus": [
+    {
+      "type": 0,
+      "value": "Încă nu se pot face transferuri între validatori. Va trebui să aștepți până când rețeaua principală fuzionează cu Lanțul Beacon (aproximativ doi ani), apoi vei putea face retrageri sau transferuri "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "hFzE1M": [
+    {
+      "type": 0,
+      "value": "Se dau recompense pentru acțiunile care ajută rețeaua să ajungă la un consens."
+    }
+  ],
+  "hG0uP4": [
+    {
+      "type": 0,
+      "value": "Numai desktop"
+    }
+  ],
+  "hPCn9f": [
+    {
+      "type": 0,
+      "value": "Documentație --JsonRpc.Enabled"
+    }
+  ],
+  "hXE+0W": [
+    {
+      "type": 0,
+      "value": "Încarcă "
+    },
+    {
+      "type": 1,
+      "value": "depositJSON"
+    }
+  ],
+  "hZrkPB": [
+    {
+      "type": 0,
+      "value": "Cu alte cuvinte, îți maximizezi recompensele furnizând cel mai mare beneficiu rețelei ca întreg."
+    }
+  ],
+  "hjrLbR": [
+    {
+      "type": 0,
+      "value": "În acest scop, avem nevoie de participanți activi - cunoscuți ca validatori - pentru a propune, verifica și garanta corectitudinea blocurilor. În schimb, validatorii cinstiți primesc recompense financiare."
+    }
+  ],
+  "hkg3fb": [
+    {
+      "type": 0,
+      "value": "Mai multe despre un sold eficient"
+    }
+  ],
+  "huEFUF": [
+    {
+      "type": 0,
+      "value": "Ai depozit restant de "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    }
+  ],
+  "hzLd+/": [
+    {
+      "type": 0,
+      "value": "Înțeleg că este important ca validatorul meu să fie mereu online și la zi."
+    }
+  ],
+  "iBYfM0": [
+    {
+      "type": 0,
+      "value": "Va trebui să rulezi un nod Eth1 și unul Eth2 pentru a deveni validator. Aruncă o privire la lista de verificare ca să te pregătești și ca că pregătești echipamentul."
+    }
+  ],
+  "iCpuph": [
+    {
+      "type": 0,
+      "value": "Clienți"
+    }
+  ],
+  "iMvXLd": [
+    {
+      "type": 0,
+      "value": "Rularea clientului de validator"
+    }
+  ],
+  "iPRnRG": [
+    {
+      "type": 0,
+      "value": "Transferurile sunt dezactivate pentru moment, deci nu vei putea ieși voluntar ca să revii ulterior. Acest lucru înseamnă că trebuie să participi pe termen lung."
+    }
+  ],
+  "iWg7mL": [
+    {
+      "type": 0,
+      "value": "Asigură-te că ai setat "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " pentru "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", altfel depozitul nu va fi corect."
+    }
+  ],
+  "iZuIgB": [
+    {
+      "type": 0,
+      "value": "Dezarhivează fișierul pe care tocmai l-ai descărcat"
+    }
+  ],
+  "idDbou": [
+    {
+      "type": 0,
+      "value": "Te gândești să pui o miză?"
+    }
+  ],
+  "irRdC0": [
+    {
+      "type": 0,
+      "value": "Sugestiile hardware reprezintă un obiectiv în continuă evoluție. Cerințele minime actuale vor crește, probabil, cu un ordin de mărime după fuziune și introducerea lanțurilor de fragmente. Documentează-te bine înainte să depui fonduri."
+    }
+  ],
+  "isGKnz": [
+    {
+      "type": 0,
+      "value": "Documentație"
+    }
+  ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "Trimite toate cele "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depozite"
+    }
+  ],
+  "j4ctVP": [
+    {
+      "type": 0,
+      "value": "Specificațiile Eth2"
+    }
+  ],
+  "jDv/zO": [
+    {
+      "type": 0,
+      "value": "În timp ce validezi pe testnet, execută aceste simulări ca să afli mai multe despre nodul tăi și ca să te pregătești mai bine pentru rețeaua principală:"
+    }
+  ],
+  "jXer8/": [
+    {
+      "type": 0,
+      "value": "Documentație Prysm"
+    }
+  ],
+  "jYVeq4": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Lighthouse"
+    }
+  ],
+  "jZVChZ": [
+    {
+      "type": 0,
+      "value": "Mi-am importat depozitele de chei în clientul de validator Eth2."
+    }
+  ],
+  "jecC36": [
+    {
+      "type": 0,
+      "value": "Cheie publică"
+    }
+  ],
+  "jfHMKL": [
+    {
+      "type": 0,
+      "value": "Conectează un portofel"
+    }
+  ],
+  "jjLubH": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Prysm"
+    }
+  ],
+  "jm79h1": [
+    {
+      "type": 0,
+      "value": "Atenție: nu stoca simultan cheile mai multor validatori (de rezervă)"
+    }
+  ],
+  "jse8rl": [
+    {
+      "type": 0,
+      "value": "Cât timp trebuie să fiu disponibil ca validatorul meu să fie profitabil?"
+    }
+  ],
+  "jvB4W9": [
+    {
+      "type": 0,
+      "value": "Variabile de mediu"
+    }
+  ],
+  "jyN21A": [
+    {
+      "type": 0,
+      "value": "Launchpad Eth2"
+    }
+  ],
+  "jytPQU": [
+    {
+      "type": 0,
+      "value": "Documentație Nimbus"
+    }
+  ],
+  "kFS5Sd": [
+    {
+      "type": 0,
+      "value": "Contract de depozit verificat oficial"
+    }
+  ],
+  "kGnu3F": [
+    {
+      "type": 0,
+      "value": "Cum se emit recompensele/penalizările?"
+    }
+  ],
+  "kQTAe+": [
+    {
+      "type": 0,
+      "value": "URL-ul se potrivește cu ceea ce ai văzut pe alte site-uri?"
+    }
+  ],
+  "kXhUdD": [
+    {
+      "type": 0,
+      "value": "Devino validator pe desktop"
+    }
+  ],
+  "kZ1+zq": [
+    {
+      "type": 0,
+      "value": "Documentație Teku"
+    }
+  ],
+  "kd/f4u": [
+    {
+      "type": 0,
+      "value": "Listă de chei"
+    }
+  ],
+  "km7b1A": [
+    {
+      "type": 0,
+      "value": "În timp, soldul va scădea în urma pedepselor pentru neparticiparea la procesul de obținere a consensului. Când soldul ajunge la 16 ETH, sistemul te va elimina automat din grupul de mizare."
+    }
+  ],
+  "kn7kJd": [
+    {
+      "type": 0,
+      "value": "Detalii despre mecanismele de consens"
+    }
+  ],
+  "krEziQ": [
+    {
+      "type": 0,
+      "value": "Ia legătura cu noi"
+    }
+  ],
+  "kuYpoI": [
+    {
+      "type": 0,
+      "value": "Sold curent"
+    }
+  ],
+  "kv1nqx": [
+    {
+      "type": 0,
+      "value": "Ieșit"
+    }
+  ],
+  "l/uCcX": [
+    {
+      "type": 0,
+      "value": "Ești pe testnet"
+    }
+  ],
+  "l4nLft": [
+    {
+      "type": 0,
+      "value": "Știu să verific dacă trimit "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " într-un contract de depozit corect și voi face acest lucru."
+    }
+  ],
+  "l5XCJW": [
+    {
+      "type": 0,
+      "value": "Recomandări"
+    }
+  ],
+  "l5kq/q": [
+    {
+      "type": 0,
+      "value": "Confirmă on-chain"
+    }
+  ],
+  "l6OJpv": [
+    {
+      "type": 0,
+      "value": "În primul rând, creează un virtualenv venv în directorul depozit:"
+    }
+  ],
+  "lD66ab": [
+    {
+      "type": 0,
+      "value": "Depozit restant"
+    }
+  ],
+  "lJNmgK": [
+    {
+      "type": 0,
+      "value": "Ce upgrade aduce Eth2 în Ethereum?"
+    }
+  ],
+  "lLOZMD": [
+    {
+      "type": 0,
+      "value": "Poți instala pip cu un manager de pachete Linux ca "
+    },
+    {
+      "type": 1,
+      "value": "apt"
+    },
+    {
+      "type": 0,
+      "value": " sau "
+    },
+    {
+      "type": 1,
+      "value": "yum"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "Site-ul care îți cere depozitul de "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " are un URL la care te așteptai?"
+    }
+  ],
+  "lQzdpT": [
+    {
+      "type": 0,
+      "value": "num_validators"
+    }
+  ],
+  "lS9VhN": [
+    {
+      "type": 0,
+      "value": "Miză totală în "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "lVARlA": [
+    {
+      "type": 0,
+      "value": "Introdu o valoare de alimentare corectă."
+    }
+  ],
+  "lVdzDK": [
+    {
+      "type": 0,
+      "value": "Încarcă fișierul de date de depozit pe care tocmai l-ai generat. Fișierul "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " este în directorul "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lfV1bj": [
+    {
+      "type": 0,
+      "value": "Se importă din documentația Launchpad"
+    }
+  ],
+  "ll/zMW": [
+    {
+      "type": 0,
+      "value": "Această tranzacție este ireversibilă."
+    }
+  ],
+  "lo+Qqn": [
+    {
+      "type": 0,
+      "value": "schimbi portofelul"
+    }
+  ],
+  "lrdlY6": [
+    {
+      "type": 0,
+      "value": "Fișier încărcat"
+    }
+  ],
+  "mArJcj": [
+    {
+      "type": 0,
+      "value": "Hard disk"
+    }
+  ],
+  "mZOXtM": [
+    {
+      "type": 0,
+      "value": "Validatori"
+    }
+  ],
+  "mhyltV": [
+    {
+      "type": 0,
+      "value": "Am setat indicatorul graffiti."
+    }
+  ],
+  "mpmFDY": [
+    {
+      "type": 0,
+      "value": "Niciun depozit în așteptare"
+    }
+  ],
+  "mr1BWl": [
+    {
+      "type": 0,
+      "value": "Riscuri și confirmări:"
+    }
+  ],
+  "n6Uub0": [
+    {
+      "type": 0,
+      "value": "Am instalat și sincronizat nodul Eth1 pe "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (nu aștepta, operația poate dura câteva zile)."
+    }
+  ],
+  "n7yYXG": [
+    {
+      "type": 0,
+      "value": "Serviciu"
+    }
+  ],
+  "nHk8Et": [
+    {
+      "type": 0,
+      "value": "PoS este un mecanism de consens mai sigur, descentralizat și mai ecologic decât dovada muncii (PoW) cu care se securizează Ethereum în prezent. Recompensează validatorii pentru construirea lanțului, dar le scade penalități din depozitele dacă încearcă să-l atace, stimulând un comportament corect. Acest upgrade funcționează deja sub forma Lanțului Beacon."
+    }
+  ],
+  "nIb6XF": [
+    {
+      "type": 0,
+      "value": "Și se dau amenzi – sau "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": " – pentru acțiunile nocive."
+    }
+  ],
+  "nRdJct": [
+    {
+      "type": 0,
+      "value": "Continuă fără a confirma toate tranzacțiile"
+    }
+  ],
+  "nZTFTz": [
+    {
+      "type": 0,
+      "value": "Înțeleg că nu există niciun avantaj în a depune mai mult de o dată per validator. Nicio sumă suplimentară de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " trimisă într-un depozit duplicat nu va fi luată în considerare în soldul efectiv de validator și nu poate fi retrasă."
+    }
+  ],
+  "ndhFef": [
+    {
+      "type": 0,
+      "value": "Când simți că te-ai familiarizat cu sistemul, poți să treci la generarea cheilor și la depunerea de ETH."
+    }
+  ],
+  "njAU72": [
+    {
+      "type": 0,
+      "value": "Franceză"
+    }
+  ],
+  "njnn9P": [
+    {
+      "type": 0,
+      "value": "Am început să rulez clientul de validare."
+    }
+  ],
+  "ntG2by": [
+    {
+      "type": 0,
+      "value": "Arhitectură de sistem avansată"
+    }
+  ],
+  "nz27+c": [
+    {
+      "type": 0,
+      "value": "Dacă ai întrebări, comunitatea EthStaker este un loc bun pentru a cere ajutor! Poți primi ajutor pe "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " sau "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "o9QvTP": [
+    {
+      "type": 0,
+      "value": "Înainte de a începe"
+    }
+  ],
+  "oLxfO1": [
+    {
+      "type": 0,
+      "value": "Acum că ai importat cheile, tot ce rămâne de făcut (presupunând că nodul Beacon rulează deja) este să rulezi clientul de validator."
+    }
+  ],
+  "oPdwwC": [
+    {
+      "type": 0,
+      "value": "Limitarea mizei maxime la "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH încurajează descentralizarea puterii, deoarece niciun validator nu va avea un vot excesiv de puternic în privința stării lanțului."
+    }
+  ],
+  "oWhj8Q": [
+    {
+      "type": 0,
+      "value": "Cât de des se emit recompense/penalizări?"
+    }
+  ],
+  "ogbG7r": [
+    {
+      "type": 0,
+      "value": "Ca să devii validator în Lanțul Beacon, trebuie să depui "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " pentru fiecare validator pe care vrei să-l rulezi."
+    }
+  ],
+  "ohspQX": [
+    {
+      "type": 0,
+      "value": "Responsabilități"
+    }
+  ],
+  "okxBZ6": [
+    {
+      "type": 0,
+      "value": "Fost Parity, OpenEthereum a fost conceput drept „cel mai rapid, cel mai ușor și cel mai sigur client Ethereum”."
+    }
+  ],
+  "omJNJw": [
+    {
+      "type": 0,
+      "value": "Avertizare!"
+    }
+  ],
+  "on8WXn": [
+    {
+      "type": 0,
+      "value": "Am importat configurația tabloului de bord în serverul Grafana și m-am asigurat că nodul este funcțional."
+    }
+  ],
+  "orM+1T": [
+    {
+      "type": 0,
+      "value": "Teku va încărca validatori și din depozitele de chei (și parole) din căile care se găsesc în variabila de mediu cu chei de validator."
+    }
+  ],
+  "orczlb": [
+    {
+      "type": 0,
+      "value": "Contractul are un sold mare?"
+    }
+  ],
+  "ouW9ov": [
+    {
+      "type": 0,
+      "value": "Validatorii tăi"
+    }
+  ],
+  "ox304v": [
+    {
+      "type": 0,
+      "value": "A apărut o eroare"
+    }
+  ],
+  "ozEkVY": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza testnetul Goerli."
+    }
+  ],
+  "p0b6zX": [
+    {
+      "type": 0,
+      "value": "Detalii despre stare"
+    }
+  ],
+  "p556q3": [
+    {
+      "type": 0,
+      "value": "Copiat"
+    }
+  ],
+  "pA+UVF": [
+    {
+      "type": 0,
+      "value": "Dacă vrei să vezi panoul de lansare în altă limbă sau dacă poți ajuta cu o traducere, "
+    },
+    {
+      "type": 1,
+      "value": "getInTouch"
+    },
+    {
+      "type": 0,
+      "value": "!"
+    }
+  ],
+  "pXyH++": [
+    {
+      "type": 0,
+      "value": "Documentația Besu explică modul de descărcare și instalare a clientului."
+    }
+  ],
+  "penFMT": [
+    {
+      "type": 0,
+      "value": "Eth2 este un set de upgrade-uri care vor face ca Ethereum să devină mai scalabil, mai sigur și mai durabil. Aceste upgrade-uri vor îmbunătăți Ethereum fără să întrerupă funcționarea corectă cu lanțul actual. Detalii despre diferitele upgrade-uri:"
+    }
+  ],
+  "pfJX2D": [
+    {
+      "type": 0,
+      "value": "Detalii despre phishing"
+    }
+  ],
+  "pnxB8A": [
+    {
+      "type": 0,
+      "value": "Nimbus caută depozitele de chei în folderul de validatori."
+    }
+  ],
+  "pqC+qt": [
+    {
+      "type": 0,
+      "value": "Penalizare"
+    }
+  ],
+  "ps8lLk": [
+    {
+      "type": 0,
+      "value": "Dacă ești offline într-o perioadă în care o supermajoritate (2/3) a validatorilor este încă online, penalitățile sunt relativ mici, pentru că există destui validatori online care să finalizeze lanțul. "
+    },
+    {
+      "type": 1,
+      "value": "expected"
+    }
+  ],
+  "ptWiT7": [
+    {
+      "type": 0,
+      "value": "Am simulat oprirea și repornirea manuale ale nodului Beacon (BN) și clientului de validator (VC)."
+    }
+  ],
+  "pyWt01": [
+    {
+      "type": 0,
+      "value": "Rezumat de depozit"
+    }
+  ],
+  "q2XW/k": [
+    {
+      "type": 0,
+      "value": "Dacă ți se fură cheia de retragere, hoțul poate transfera soldul validatorului, dar numai după ce validatorul a ieșit."
+    }
+  ],
+  "q6sz6X": [
+    {
+      "type": 0,
+      "value": "Economia Eth2"
+    }
+  ],
+  "qDcbPp": [
+    {
+      "type": 0,
+      "value": "Ulterior poți să retragi suma de 16 ETH – cu cheia de retragere – cu o întârziere de aproximativ o zi."
+    }
+  ],
+  "qDvaNm": [
+    {
+      "type": 0,
+      "value": "Înțeleg că cheile sunt responsabilitatea mea și că mnemonicul (nucleul) va fi "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": " de a-mi retrage fondurile."
+    }
+  ],
+  "qLf68w": [
+    {
+      "type": 0,
+      "value": "Documentație OpenEthereum"
+    }
+  ],
+  "qMePPG": [
+    {
+      "type": 0,
+      "value": "Notă"
+    }
+  ],
+  "qQ+Xla": [
+    {
+      "type": 0,
+      "value": "Coreeană"
+    }
+  ],
+  "qZ59xY": [
+    {
+      "type": 0,
+      "value": "Toți validatorii"
+    }
+  ],
+  "qdk7Hp": [
+    {
+      "type": 0,
+      "value": "Portofelul tău a fost deconectat"
+    }
+  ],
+  "qgqVCE": [
+    {
+      "type": 0,
+      "value": "reconectezi portofelul"
+    }
+  ],
+  "qkhah0": [
+    {
+      "type": 0,
+      "value": "Salvează fișierele cheie și pregătește fișierul de validator"
+    }
+  ],
+  "qpdTjz": [
+    {
+      "type": 0,
+      "value": "Un client Eth2 cu accent puternic pe viteză și securitate, dezvoltat de Sigma Prime, o firmă de securitate informatică și software, care a finanțat Lighthouse, împreună cu Ethereum Foundation, Consensys și persoane particulare."
+    }
+  ],
+  "quIMjo": [
+    {
+      "type": 0,
+      "value": "Nu uita să parcurgi următorii pași pentru a asigura funcționarea corectă a clientului Eth1."
+    }
+  ],
+  "qwh6gM": [
+    {
+      "type": 0,
+      "value": "Înțeleg riscurile de penalizare și cele pe care le comportă adoptarea timpurie."
+    }
+  ],
+  "r2BH1M": [
+    {
+      "type": 0,
+      "value": "Configurare Prysm"
+    }
+  ],
+  "r4JsKB": [
+    {
+      "type": 0,
+      "value": "Tranzacție reușită"
+    }
+  ],
+  "rD3ot9": [
+    {
+      "type": 0,
+      "value": "Ghid de apărare împotriva phishingului"
+    }
+  ],
+  "rFe61n": [
+    {
+      "type": 0,
+      "value": "În calitate de validator, vei fi responsabil de securizarea rețelei și veți primi continuu plăți pentru acțiunile care ajută rețeaua să ajungă la un consens."
+    }
+  ],
+  "rNEdex": [
+    {
+      "type": 0,
+      "value": "validatorul este un fel de alegător pentru noile blocuri"
+    }
+  ],
+  "rTSJI9": [
+    {
+      "type": 0,
+      "value": "Încearcă testnet"
+    }
+  ],
+  "rULiIc": [
+    {
+      "type": 0,
+      "value": "Parcurge lista de verificare pentru mize"
+    }
+  ],
+  "raRw6Z": [
+    {
+      "type": 0,
+      "value": "Pagina de pornire Launchpad"
+    }
+  ],
+  "rbrahO": [
+    {
+      "type": 0,
+      "value": "Închide"
+    }
+  ],
+  "rcdxTW": [
+    {
+      "type": 0,
+      "value": "La un număr total fix de validatori, recompensele/penalizările depind în cea mai mare parte de soldul validatorului – atestarea cu un sold mai mare duce la recompense/penalități mai mari, în timp ce atestarea cu sold mai mic are drept rezultat recompense/penalități mai mici."
+    }
+  ],
+  "rs4eqr": [
+    {
+      "type": 0,
+      "value": "Alimentarea soldului de validator poate fi impus de două aspecte importante. Dacă soldul efectiv al validatorului este mai mic decât "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " nu vei câștiga recompense integrale pentru mize. Iar dacă scade până la "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " sistemul elimină validatorul."
+    }
+  ],
+  "rswUPu": [
+    {
+      "type": 0,
+      "value": "Rezumat Launchpad"
+    }
+  ],
+  "rxttyC": [
+    {
+      "type": 0,
+      "value": "Mnemonicul este copia de rezervă a cheilor de semnătură. Va fi SINGURA modalitate de a retrage "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " când sosește momentul potrivit. Dacă îl pierzi, nimeni nu te poate ajuta să-l recuperezi."
+    }
+  ],
+  "s0FTco": [
+    {
+      "type": 0,
+      "value": "APR"
+    }
+  ],
+  "s6gImC": [
+    {
+      "type": 0,
+      "value": "Teku se poate configura și printr-un fișier YAML, care se poate transmite prin mai multe metode diferite."
+    }
+  ],
+  "sXV95+": [
+    {
+      "type": 0,
+      "value": "CPU și RAM"
+    }
+  ],
+  "soCLV+": [
+    {
+      "type": 0,
+      "value": "Listă de verificare"
+    }
+  ],
+  "sraQ3P": [
+    {
+      "type": 0,
+      "value": "Se așteaptă conectarea..."
+    }
+  ],
+  "svsq8J": [
+    {
+      "type": 0,
+      "value": "Am sincronizat nodul Beacon Eth2 pe "
+    },
+    {
+      "type": 1,
+      "value": "ETH2_NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "sy35J+": [
+    {
+      "type": 0,
+      "value": "Ce este contractul de depozit?"
+    }
+  ],
+  "szN3Fl": [
+    {
+      "type": 0,
+      "value": "Înțeleg și accept termenii serviciului și toate prevederile din secțiunile anterioare."
+    }
+  ],
+  "tJcyUM": [
+    {
+      "type": 0,
+      "value": "Datele din deposit_data.json indică faptul că ai vrut să configurezi încă un validator. Aceste depuneri sunt încă în așteptare. Dacă consideri că ai făcut deja aceste depuneri, așteaptă o oră înainte de a încerca din nou, ca să eviți depunerile duble."
+    }
+  ],
+  "teyxVk": [
+    {
+      "type": 0,
+      "value": "Care ar trebui să fie adresa?"
+    }
+  ],
+  "tigMuZ": [
+    {
+      "type": 0,
+      "value": "Așteaptă cel puțin 30 de minute înainte de a retrimite o tranzacție cu acest fișier "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": ". Acest lucru va oferi sursei de date on-chain timp pentru a eventualele depuneri duble."
+    }
+  ],
+  "tkFTZw": [
+    {
+      "type": 0,
+      "value": "Sold după alimentare"
+    }
+  ],
+  "tsfX5f": [
+    {
+      "type": 0,
+      "value": "Confirmă depunerea"
+    }
+  ],
+  "tv5Cxs": [
+    {
+      "type": 0,
+      "value": "Atenție: funcționarea acestui mecanism de scalare nu este evidentă. Pentru a înțelege exact detaliile funcționării, trebuie să înțelegi conceptul de "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": ". Dacă nu ești familiarizat încă cu acest concept, îți recomandăm să citești "
+    },
+    {
+      "type": 1,
+      "value": "article"
+    }
+  ],
+  "tzMNF3": [
+    {
+      "type": 0,
+      "value": "Stare"
+    }
+  ],
+  "u28qA1": [
+    {
+      "type": 0,
+      "value": "După depunere"
+    }
+  ],
+  "uCikFk": [
+    {
+      "type": 0,
+      "value": "Ai nevoie și de lățime de bandă suficientă pentru încărcare. În data de "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " aceasta este de ~700-800 MB/oră și este probabil să crească."
+    }
+  ],
+  "uJzGSb": [
+    {
+      "type": 0,
+      "value": "Asigură-te că știi să eviți atacurile de phishing. Am pregătit o listă cu aspectele pe care trebuie să le urmărești cu atenție."
+    }
+  ],
+  "uNfxNg": [
+    {
+      "type": 0,
+      "value": "Pentru a continua, "
+    },
+    {
+      "type": 1,
+      "value": "reconnect"
+    }
+  ],
+  "ubKWX8": [
+    {
+      "type": 0,
+      "value": "Generează perechi de chei"
+    }
+  ],
+  "uhapiE": [
+    {
+      "type": 0,
+      "value": "Asigură-te că lățimea de bandă nu poate fi restricționată și nu este plafonată, astfel încât nodul să rămână sincronizat și va fi gata de validare la apel."
+    }
+  ],
+  "ujVT29": [
+    {
+      "type": 0,
+      "value": "În acest moment ar trebui să ai mnemonicul notat într-un loc sigur și un depozit de chei salvat pentru fiecare validator. "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": ". Păstrează în loc sigur toate aceste elemente în siguranță, preferabil offline. Depozitele de chei trebuie să fie disponibile în directorul "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " nou creat."
+    }
+  ],
+  "ukfwum": [
+    {
+      "type": 0,
+      "value": "Devino validator cu Nimbus"
+    }
+  ],
+  "unzIoE": [
+    {
+      "type": 0,
+      "value": "Pentru a putea rula un validator și a începe să lucrezi la securizarea rețelei, trebuie să mizezi "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Această sumă este soldul inițial."
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "Există depozite de "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " recente?"
+    }
+  ],
+  "vBOf5K": [
+    {
+      "type": 0,
+      "value": "Soldul este actualizat periodic de regulile rețelei Ethereum, pe măsură ce te achiți (sau nu) de responsabilități."
+    }
+  ],
+  "vEJDo8": [
+    {
+      "type": 0,
+      "value": "Protejează-ți fondurile folosind programul de monitorizare și învață să gestionezi diferite situații reale."
+    }
+  ],
+  "vFrE9m": [
+    {
+      "type": 0,
+      "value": "Devino validator și contribuie la securizarea Eth2."
+    }
+  ],
+  "vIF140": [
+    {
+      "type": 0,
+      "value": "Devino validator și contribuie la asigurarea viitorului sistemului Ethereum"
+    }
+  ],
+  "vJez0K": [
+    {
+      "type": 0,
+      "value": "Continuă cu prudență. Sursa de date on-chain nu funcționează și nu putem semnala eventualele depuneri duble."
+    }
+  ],
+  "vY2wig": [
+    {
+      "type": 0,
+      "value": "Eroare la încărcare"
+    }
+  ],
+  "vYODEJ": [
+    {
+      "type": 0,
+      "value": "Obține "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "vYOWYI": [
+    {
+      "type": 0,
+      "value": "Chineză (simplificată)"
+    }
+  ],
+  "va96SS": [
+    {
+      "type": 0,
+      "value": "Am redirecționat porturile necesare către mașinile corecte de pe routerul meu (deschide numai porturile valabile pentru instalarea ta)."
+    }
+  ],
+  "vbVsqW": [
+    {
+      "type": 0,
+      "value": "Ai grijă să parcurgi cât mai repede "
+    },
+    {
+      "type": 1,
+      "value": "stakerChecklist"
+    },
+    {
+      "type": 0,
+      "value": " și intră în comunitatea EthStaker ca să primești ajutor și să discuți cu alți validatori."
+    }
+  ],
+  "vg1dVR": [
+    {
+      "type": 0,
+      "value": "Cu cheia de semnare poți încerca să oprești repede validatorul și să transferi fondurile – cu cheia de retragere – înaintea hoțului."
+    }
+  ],
+  "vyvUB5": [
+    {
+      "type": 0,
+      "value": "Acest fișier JSON nu este pentru rețeaua corectă. Încarcă un fișier generat pentru rețeaua ta curentă: "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "w/ghcK": [
+    {
+      "type": 0,
+      "value": "Informații aprofundate despre upgrade-urile pe care le aduce Eth2 în Ethereum."
+    }
+  ],
+  "w6qYSU": [
+    {
+      "type": 0,
+      "value": "Rulează următoarea comandă pentru a lansa aplicația"
+    }
+  ],
+  "wJ1PbL": [
+    {
+      "type": 0,
+      "value": "Pentru "
+    },
+    {
+      "type": 1,
+      "value": "operatingSystem"
+    }
+  ],
+  "wJy3tO": [
+    {
+      "type": 0,
+      "value": "Configurare inițială"
+    }
+  ],
+  "wawegX": [
+    {
+      "type": 0,
+      "value": "undiță"
+    }
+  ],
+  "wdb1NC": [
+    {
+      "type": 0,
+      "value": "Informații suplimentare despre dovada mizei"
+    }
+  ],
+  "wfSgCZ": [
+    {
+      "type": 0,
+      "value": "Conectează-te la "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "wm04oC": [
+    {
+      "type": 0,
+      "value": "Rulează următoarea comandă:"
+    }
+  ],
+  "wqUcy/": [
+    {
+      "type": 0,
+      "value": "Riscurile adoptării timpurii"
+    }
+  ],
+  "wtTeex": [
+    {
+      "type": 0,
+      "value": "Apar greșeli de ortografie?"
+    }
+  ],
+  "x+fF+M": [
+    {
+      "type": 0,
+      "value": "Simulări testnet"
+    }
+  ],
+  "x0tVK4": [
+    {
+      "type": 0,
+      "value": "Validarea în Ethereum este diferită de minerit. Rezultatele sunt similare: munca pe care o faci extinde și securizează lanțul, dar procesul este complet diferit, pentru că folosesc mecanisme de consens diferite."
+    }
+  ],
+  "xDyl3T": [
+    {
+      "type": 0,
+      "value": "Verifică adresa din contractul de depozit pe alte site-uri – de exemplu: Reddit, Twitter și GitHub. De asemenea, pe "
+    },
+    {
+      "type": 1,
+      "value": "ethereumorg"
+    },
+    {
+      "type": 0,
+      "value": " găsești o listă de surse de încredere"
+    }
+  ],
+  "xH5GKj": [
+    {
+      "type": 0,
+      "value": "Accept să adopt timpuriu sistemul și faptul că pot suferi penalizări din cauza problemelor de software și de design."
+    }
+  ],
+  "xJPCw/": [
+    {
+      "type": 0,
+      "value": "Ce se întâmplă dacă îmi pierd cheia de retragere?"
+    }
+  ],
+  "xOSMb1": [
+    {
+      "type": 0,
+      "value": "Documentație Nethermind pe Goerli"
+    }
+  ],
+  "xP6BKs": [
+    {
+      "type": 0,
+      "value": "lista de verificare pentru mize"
+    }
+  ],
+  "xQrU13": [
+    {
+      "type": 0,
+      "value": "Parcurge lista de verificare pentru mize înainte de a trece mai departe. Urmează acest ghid ca să efectuezi operațiile necesare configurării validatorului."
+    }
+  ],
+  "xSvJIi": [
+    {
+      "type": 0,
+      "value": "Recompensele pentru blocuri sunt calculate cu o scară mobilă care are la bază suma totală a mizelor de ETH din rețea."
+    }
+  ],
+  "xYRzZY": [
+    {
+      "type": 0,
+      "value": "Nimbus este un proiect de cercetare și o implementare de client Ethereum 2.0, conceput să funcționeze bine pe sistemele incorporate și pe dispozitivele mobile personale."
+    }
+  ],
+  "xbet2w": [
+    {
+      "type": 0,
+      "value": "Instalează python3.7+"
+    }
+  ],
+  "xogY3N": [
+    {
+      "type": 0,
+      "value": "Besu este scris în Java și lansat sub licența Apache 2.0."
+    }
+  ],
+  "y4dBsA": [
+    {
+      "type": 0,
+      "value": "Configurează sincronizarea orei"
+    }
+  ],
+  "y7dWNc": [
+    {
+      "type": 0,
+      "value": "Important: votul validatorului este ponderat cu suma mizei sale."
+    }
+  ],
+  "yI/DO8": [
+    {
+      "type": 0,
+      "value": "acest număr crește dacă alți validatori sunt penalizați în același timp"
+    }
+  ],
+  "ySYWBD": [
+    {
+      "type": 0,
+      "value": "Îmi păstrezi cheile în siguranță și mi-am notat fraza mnemonică."
+    }
+  ],
+  "yT2EZO": [
+    {
+      "type": 0,
+      "value": "Cu alte cuvinte, "
+    },
+    {
+      "type": 1,
+      "value": "boldSummary"
+    },
+    {
+      "type": 0,
+      "value": ". Cu cât primește mai multe voturi, cu atât este mai probabil ca blocul să fie adăugat în lanț."
+    }
+  ],
+  "ydh1KU": [
+    {
+      "type": 0,
+      "value": "Informații despre limbă"
+    }
+  ],
+  "yeI1Zq": [
+    {
+      "type": 0,
+      "value": "Ține cont de faptul că această întârziere poate fi mai mare dacă mulți alții ies sau sunt eliminați în același timp."
+    }
+  ],
+  "yis3aS": [
+    {
+      "type": 0,
+      "value": "Acesta este scenariul preconizat."
+    }
+  ],
+  "yjBvUO": [
+    {
+      "type": 0,
+      "value": "Nethermind este dezvoltat pe .NET Core. Extinde-l și personalizează-l, posibilitățile sunt nelimitate."
+    }
+  ],
+  "yoGtkz": [
+    {
+      "type": 0,
+      "value": "Asigură-te că nodul tău are peste 20 de parteneri egali."
+    }
+  ],
+  "z/ZhML": [
+    {
+      "type": 0,
+      "value": "Asigură-te că ai setat "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " pentru "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", altfel depozitul nu va fi corect."
+    }
+  ],
+  "z63I56": [
+    {
+      "type": 0,
+      "value": "validator"
+    }
+  ],
+  "z6K3D6": [
+    {
+      "type": 0,
+      "value": "Am configurat serviciul "
+    },
+    {
+      "type": 1,
+      "value": "prometheus"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "zAVb0/": [
+    {
+      "type": 0,
+      "value": "Mai multe despre Lighthouse și Sigma Prime"
+    }
+  ],
+  "zGkAVo": [
+    {
+      "type": 0,
+      "value": "La cealaltă extremă, dacă soldul se apropie de 31 ETH, probabil că nu merită să alimentezi suma de ETH suplimentară necesară pentru a reveni la 32."
+    }
+  ],
+  "zbEBi9": [
+    {
+      "type": 0,
+      "value": "Folosește "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza rețeaua principală Ethereum."
+    }
+  ],
+  "zicXn7": [
+    {
+      "type": 0,
+      "value": "Securitatea nodului"
+    }
+  ]
+}

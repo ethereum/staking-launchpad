@@ -1,0 +1,5428 @@
+{
+  "+3PPtT": [
+    {
+      "type": 0,
+      "value": "Hoje, você protegerá o Beacon Chain, a primeira atualização para Eth2. Trata-se de uma cadeia separada que usa um mecanismo de consenso proof-of-stake. Eventualmente você ajudará a proteger todo o Ethereum, quando a mainnet (o Ethereum que usamos hoje) se fusionar com o Beacon Chain."
+    }
+  ],
+  "+L0IkF": [
+    {
+      "type": 0,
+      "value": "Passo 2: Gerar chaves de depósito usando a ferramenta de depósito da Ethereum Foundation"
+    }
+  ],
+  "+UUcBt": [
+    {
+      "type": 0,
+      "value": "Escolher um idioma"
+    }
+  ],
+  "+V+ZX+": [
+    {
+      "type": 0,
+      "value": "Uptime do validador"
+    }
+  ],
+  "+e8bO+": [
+    {
+      "type": 0,
+      "value": "Compreendo que eu não poderei retirar os meus fundos se perder a minha frase mnemônica."
+    }
+  ],
+  "+fnRDB": [
+    {
+      "type": 0,
+      "value": "Aceito"
+    }
+  ],
+  "+mDtA4": [
+    {
+      "type": 0,
+      "value": "6. Espere ficar ativo"
+    }
+  ],
+  "+oBh8L": [
+    {
+      "type": 0,
+      "value": "Nós o ajudaremos a criar uma chave de assinatura para cada validador que desejar executar. Como não haverá retiradas até o Merge, você não criará suas chaves de retirada agora. Quando for possível retirar seus fundos, você poderá obter suas chaves de retirada a partir do seu mnemônico."
+    }
+  ],
+  "+s8Gac": [
+    {
+      "type": 0,
+      "value": "Conectar "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " a "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "/+atl4": [
+    {
+      "type": 0,
+      "value": "Aviso de isenção sobre recomendação"
+    }
+  ],
+  "//KCTE": [
+    {
+      "type": 0,
+      "value": "Você pode iniciar todas as transações de uma vez ou individualmente."
+    }
+  ],
+  "/QPc9s": [
+    {
+      "type": 0,
+      "value": "Você pode sinalizar a sua intenção de parar de validar assinando uma mensagem de saída voluntária no seu validador."
+    }
+  ],
+  "/SbhtD": [
+    {
+      "type": 0,
+      "value": "Você também pode usar "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": " para instalar pip3. Para obter as instruções mais recentes para instalar pip3 e um link de download direto, consulte os "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    }
+  ],
+  "/U09hN": [
+    {
+      "type": 0,
+      "value": "Para evitar expor a identidade do seu validador na rede, use uma VPN de confiança que o ajudará a reduzir o risco de revelar seu endereço IP."
+    }
+  ],
+  "/VVB8t": [
+    {
+      "type": 0,
+      "value": "Revise essa seção antes de continuar com a configuração do validador."
+    }
+  ],
+  "/Vc/P6": [
+    {
+      "type": 0,
+      "value": "Desculpe, essa página não existe."
+    }
+  ],
+  "/WenEu": [
+    {
+      "type": 0,
+      "value": "Você é o responsável pela transação. Sites fraudulentos podem tentar incentivá-lo a enviar o "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " a eles em vez do contrato oficial de depósito. Certifique-se de que o endereço ao qual você está enviando a transação está correto."
+    }
+  ],
+  "/jJLYy": [
+    {
+      "type": 0,
+      "value": "Transações"
+    }
+  ],
+  "/ub26/": [
+    {
+      "type": 0,
+      "value": "Entenda os riscos"
+    }
+  ],
+  "/vPNsl": [
+    {
+      "type": 0,
+      "value": "A merge, também conhecida como docking, causará a fusão da mainnet de Ethereum com o Beacon Chain. Nesse momento, Ethereum concluirá a transição para proof-of-stake."
+    }
+  ],
+  "/vkCbT": [
+    {
+      "type": 0,
+      "value": "Os validadores são recompensados por propor e atestar os blocos. As recompensas estão ligadas à quantidade total de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " depositada na rede."
+    }
+  ],
+  "/w/KT4": [
+    {
+      "type": 0,
+      "value": "Não entanto, nem tudo está perdido. Assumindo que você deriva suas chaves usando "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " (o padrão no fluxo de integração), então "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/wNiYN": [
+    {
+      "type": 0,
+      "value": "O contrato de depósito foi verificado a nível de byte-code para garantir a sua segurança."
+    }
+  ],
+  "/ydZdf": [
+    {
+      "type": 0,
+      "value": "Qual é o tamanho das recompensas/penalizações?"
+    }
+  ],
+  "00OWFk": [
+    {
+      "type": 0,
+      "value": "O valor mínimo de recarga é "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "00d8uq": [
+    {
+      "type": 0,
+      "value": "Uma vez configurado, seu validador não ficará ativo imediatamente. Use esse momento para concluir a lista de verificação e obter uma prática extra numa testnet."
+    }
+  ],
+  "03xT/J": [
+    {
+      "type": 0,
+      "value": "A ideia por trás disto é minimizar as perdas por erros honestos e, ao mesmo tempo, desincentivar fortemente ataques coordenados."
+    }
+  ],
+  "07C4IQ": [
+    {
+      "type": 0,
+      "value": "Seção 3 - Após o depósito"
+    }
+  ],
+  "0GSZcr": [
+    {
+      "type": 0,
+      "value": "Depositado"
+    }
+  ],
+  "0PlVao": [
+    {
+      "type": 0,
+      "value": "Mais sobre prevenção de slashing"
+    }
+  ],
+  "0RmIrh": [
+    {
+      "type": 0,
+      "value": "Seu deposit_data.json sugere que você deseja configurar mais um validador. Esse depósito ainda está pendente. Se você achar que já fez esse depósito, espere uma hora antes de tentar novamente para evitar depósitos duplicados."
+    }
+  ],
+  "0S8/Wo": [
+    {
+      "type": 0,
+      "value": "Prática da testnet"
+    }
+  ],
+  "0i4cCJ": [
+    {
+      "type": 0,
+      "value": "Confirmar depósitos ("
+    },
+    {
+      "type": 1,
+      "value": "depositKeys"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "0lHkrT": [
+    {
+      "type": 0,
+      "value": "Em segundo lugar, instale os pacotes de dependèncias:"
+    }
+  ],
+  "0oNdmk": [
+    {
+      "type": 0,
+      "value": "Perguntas frequentes sobre validadores"
+    }
+  ],
+  "0qvZJn": [
+    {
+      "type": 0,
+      "value": "Mais sobre a visão do Eth2"
+    }
+  ],
+  "0uqjBl": [
+    {
+      "type": 0,
+      "value": "Ganhe recompensas contínuas por fornecer um bem público à comunidade."
+    }
+  ],
+  "19o6KO": [
+    {
+      "type": 0,
+      "value": "Quando posso retirar meus fundos e qual é a diferença entre sair e retirar?"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "Endpoint RPC JSON"
+    }
+  ],
+  "1P6GMj": [
+    {
+      "type": 0,
+      "value": "Monitoramento"
+    }
+  ],
+  "1PPGHb": [
+    {
+      "type": 0,
+      "value": "Verifiquei que a hora do meu servidor corresponde ao relógio de parede."
+    }
+  ],
+  "1QW89r": [
+    {
+      "type": 0,
+      "value": "Mais estatísticas"
+    }
+  ],
+  "1UmyRL": [
+    {
+      "type": 0,
+      "value": "último lançamento de software estável"
+    }
+  ],
+  "1VJ05X": [
+    {
+      "type": 0,
+      "value": "Seção 3"
+    }
+  ],
+  "1Vkpd0": [
+    {
+      "type": 0,
+      "value": "Verifique que os arquivos de senha não possuam novas linhas finais."
+    }
+  ],
+  "1fDfw7": [
+    {
+      "type": 0,
+      "value": "Como é que tudo isso acontece?"
+    }
+  ],
+  "1fytak": [
+    {
+      "type": 0,
+      "value": "Verifique os detalhes do contrato de depósito"
+    }
+  ],
+  "2+TGmE": [
+    {
+      "type": 0,
+      "value": "Para processar depósitos do validador recebidos da cadeia Eth1, você precisará executar um cliente Eth1 além do seu cliente Eth2. Você pode usar um serviço de terceiros, como o Infura, mas recomendamos executar o seu próprio cliente para manter a rede o mais descentralizada possível."
+    }
+  ],
+  "22EpKq": [
+    {
+      "type": 0,
+      "value": "Isso não é um arquivo "
+    },
+    {
+      "type": 1,
+      "value": "JSON"
+    },
+    {
+      "type": 0,
+      "value": " válido"
+    }
+  ],
+  "25suT4": [
+    {
+      "type": 0,
+      "value": "O separador de caminho é dependente do sistema operacional e deve ser "
+    },
+    {
+      "type": 1,
+      "value": "semicolon"
+    },
+    {
+      "type": 0,
+      "value": " no Windows ao invés de "
+    },
+    {
+      "type": 1,
+      "value": "colon"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2AHkym": [
+    {
+      "type": 0,
+      "value": "Houve um erro ao carregar as informações do validador do Beaconcha.in"
+    }
+  ],
+  "2CYEJa": [
+    {
+      "type": 0,
+      "value": "Solução de problemas"
+    }
+  ],
+  "2DuJTX": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " para conectar o seu nó Eth2 ao endpoint RPC JSON. Isso ativará os serviços de RPC JSON na porta padrão 8545."
+    }
+  ],
+  "2a1GTh": [
+    {
+      "type": 0,
+      "value": "você sempre pode recalcular sua chave de assinatura a partir da sua chave de retirada"
+    }
+  ],
+  "2iH8Zc": [
+    {
+      "type": 0,
+      "value": "Documentação de gerenciamento de chaves Nimbus"
+    }
+  ],
+  "2t/3ab": [
+    {
+      "type": 0,
+      "value": "O outro arquivo que você acabou de gerar é "
+    },
+    {
+      "type": 1,
+      "value": "depositDataJson"
+    },
+    {
+      "type": 0,
+      "value": ". Este arquivo contém a(s) chave(s) pública(s) associada(s) ao(s) seu(s) validador(es); você precisará fazer o upload no próximo passo."
+    }
+  ],
+  "32rBNK": [
+    {
+      "type": 0,
+      "value": "Termos de Serviço"
+    }
+  ],
+  "36KKVb": [
+    {
+      "type": 0,
+      "value": "Mais sobre economia da Eth2"
+    }
+  ],
+  "38VH2G": [
+    {
+      "type": 0,
+      "value": "Instalar ferramenta deposit-cli"
+    }
+  ],
+  "3CRtg8": [
+    {
+      "type": 0,
+      "value": "Você não tem "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " suficiente nesta conta para "
+    },
+    {
+      "type": 1,
+      "value": "numberOfValidators"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    }
+  ],
+  "3GbrWR": [
+    {
+      "type": 0,
+      "value": "Por que as recompensas dependem do número total de validadores na rede?"
+    }
+  ],
+  "3H3ygi": [
+    {
+      "type": 0,
+      "value": "Não foram encontrados validadores para sua carteira conectada"
+    }
+  ],
+  "3NHygY": [
+    {
+      "type": 0,
+      "value": "Testes em Goerli"
+    }
+  ],
+  "3PZq07": [
+    {
+      "type": 0,
+      "value": "Como tal, é uma boa ideia criar suas chaves a partir de mnemônicos, que atuam como outro backup. Essa será a regra geral para os validadores que se unem através do processo de integração deste site."
+    }
+  ],
+  "3PbtmF": [
+    {
+      "type": 0,
+      "value": "Verifique o endereço inteiro, não apenas uma parte dele. Pode haver apenas alguns bytes diferentes."
+    }
+  ],
+  "3Pmjlx": [
+    {
+      "type": 0,
+      "value": "Eu instalei o "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " do meu cliente Eth2."
+    }
+  ],
+  "3Q43SM": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador"
+    }
+  ],
+  "3QmqFf": [
+    {
+      "type": 0,
+      "value": "Transação de recarga"
+    }
+  ],
+  "3URRZK": [
+    {
+      "type": 0,
+      "value": "Documentação do Geth on Goerli"
+    }
+  ],
+  "3tR/V9": [
+    {
+      "type": 0,
+      "value": "Seção 2 - Durante a configuração"
+    }
+  ],
+  "3zCA2i": [
+    {
+      "type": 0,
+      "value": "Se você vir a mensagem de erro "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", talvez precise instalar o pacote "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " ou "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "4+3cIr": [
+    {
+      "type": 0,
+      "value": "Você configurou com sucesso um validador da testnet! Recomendamos que você complete a lista de verificação antes de fazer a validação na "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    }
+  ],
+  "47svuN": [
+    {
+      "type": 0,
+      "value": "Instalação"
+    }
+  ],
+  "4FcLja": [
+    {
+      "type": 0,
+      "value": "Prysm é uma implementação Go do protocolo Ethereum 2.0 com foco na usabilidade, segurança e confiabilidade."
+    }
+  ],
+  "4NvAhl": [
+    {
+      "type": 0,
+      "value": "Comece configurando o hardware e o sistema operacional escolhidos."
+    }
+  ],
+  "4QNsja": [
+    {
+      "type": 0,
+      "value": "Por que uma escala deslizante? Embora não entraremos em maiores detalhes aqui, a intuição básica é que precisa haver um número mínimo de validadores (e, portanto, uma quantidade mínima de ETH depositados) para que a rede funcione corretamente. Então, para incentivar a entrada de mais validadores, é importante que a taxa de juros permaneça alta até atingir esse número mínimo."
+    }
+  ],
+  "4hnEBA": [
+    {
+      "type": 0,
+      "value": "O código do contrato inteligente foi verificado?"
+    }
+  ],
+  "4l6vz1": [
+    {
+      "type": 0,
+      "value": "Cópia"
+    }
+  ],
+  "52qGy6": [
+    {
+      "type": 0,
+      "value": "ATUAL"
+    }
+  ],
+  "58PXVy": [
+    {
+      "type": 0,
+      "value": "Por que duas chaves ao invés de uma?"
+    }
+  ],
+  "5HJLBU": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Teku"
+    }
+  ],
+  "5t8oYl": [
+    {
+      "type": 0,
+      "value": "Visite o EthStaker no "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " ou "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " a qualquer momento durante a configuração para obter uma ajuda agradável!"
+    }
+  ],
+  "6CK2Nu": [
+    {
+      "type": 0,
+      "value": "Sua carteira está na rede errada. Alterne para "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "6HBTTN": [
+    {
+      "type": 0,
+      "value": "Proof-of-stake (PoS) e o Beacon Chain"
+    }
+  ],
+  "6UUL73": [
+    {
+      "type": 0,
+      "value": "Mais sobre validadores"
+    }
+  ],
+  "6VIBSR": [
+    {
+      "type": 0,
+      "value": "Você pode melhorar o saldo efetivo deste validador com uma recarga"
+    }
+  ],
+  "6nh4de": [
+    {
+      "type": 0,
+      "value": "Você está entrando em uma rede em suas fases iniciais. Como com qualquer novo software, existe o potencial de haver bugs de software. Embora seja improvável, potenciais bugs podem resultar em slashing."
+    }
+  ],
+  "6zye8g": [
+    {
+      "type": 0,
+      "value": "Uma implementação do protocolo Eth2 com foco na usabilidade, segurança e fiabilidade. Prysm é desenvolvido por Prysmatic Labs, uma empresa focada exclusivamente no desenvolvimento de seu cliente."
+    }
+  ],
+  "7+Domh": [
+    {
+      "type": 0,
+      "value": "Anotações"
+    }
+  ],
+  "738tqz": [
+    {
+      "type": 0,
+      "value": "Prysm é escrito em Go e lançado sob uma licença GPL-3.0."
+    }
+  ],
+  "74QdCu": [
+    {
+      "type": 0,
+      "value": "Transação iniciada"
+    }
+  ],
+  "793QlI": [
+    {
+      "type": 1,
+      "value": "title"
+    },
+    {
+      "type": 0,
+      "value": " não é suportado no modo off-line."
+    }
+  ],
+  "7UOvbT": [
+    {
+      "type": 0,
+      "value": "Off-line"
+    }
+  ],
+  "7V/8wz": [
+    {
+      "type": 0,
+      "value": "Arquivo de configuração"
+    }
+  ],
+  "7XiYRi": [
+    {
+      "type": 0,
+      "value": "Sofreu slashing?"
+    }
+  ],
+  "7d3Nzd": [
+    {
+      "type": 0,
+      "value": "Você pode usar a bandeira graffiti de cliente do seu validador para adicionar um toque pessoal aos blocos propostos (algum texto de sua escolha). Você poderá vê-lo usando os exploradores de blockchain "
+    },
+    {
+      "type": 1,
+      "value": "beaconchain"
+    },
+    {
+      "type": 0,
+      "value": " ou "
+    },
+    {
+      "type": 1,
+      "value": "beaconscan"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "7s6XNV": [
+    {
+      "type": 0,
+      "value": "Depósitos e recompensas"
+    }
+  ],
+  "7sZfCF": [
+    {
+      "type": 0,
+      "value": "Mais sobre Nimbus"
+    }
+  ],
+  "7tRtDE": [
+    {
+      "type": 0,
+      "value": "A cada período, a rede mede as ações de cada validador e emite suas recompensas ou penalizações apropriadamente."
+    }
+  ],
+  "7y4xl1": [
+    {
+      "type": 0,
+      "value": "Eth2 Launchpad para testnet "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    }
+  ],
+  "80eWKU": [
+    {
+      "type": 0,
+      "value": "Balanço verdadeiro"
+    }
+  ],
+  "82vl9l": [
+    {
+      "type": 0,
+      "value": "Não podemos detectar o MetaMask. Alterne o navegador ou instale o MetaMask."
+    }
+  ],
+  "8FmuYF": [
+    {
+      "type": 0,
+      "value": "Instalar pip3"
+    }
+  ],
+  "8HxLGA": [
+    {
+      "type": 0,
+      "value": "Configurar Teku"
+    }
+  ],
+  "8JtiQS": [
+    {
+      "type": 0,
+      "value": "O endereço do contrato coincide com o listado no site?"
+    }
+  ],
+  "8Rj/6A": [
+    {
+      "type": 0,
+      "value": "Escolha o sistema operacional (SO) do computador que você está usando atualmente. Este será o computador com o qual gerará suas chaves. Não precisa ser o SO que você deseja usar para o seu nó."
+    }
+  ],
+  "8WtyrD": [
+    {
+      "type": 0,
+      "value": "Espanhol"
+    }
+  ],
+  "8XQmxX": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " para sincronizar a testnet Goerli."
+    }
+  ],
+  "8boRAk": [
+    {
+      "type": 0,
+      "value": "slashings"
+    }
+  ],
+  "8wd0q5": [
+    {
+      "type": 0,
+      "value": "Um cliente Ethereum projetado para ser amigável à empresa para casos de uso de rede públicas e privadas."
+    }
+  ],
+  "9+Ddtu": [
+    {
+      "type": 0,
+      "value": "Próximo"
+    }
+  ],
+  "9/4mZe": [
+    {
+      "type": 0,
+      "value": "A validação envolve duas chaves por razões de segurança. Sua chave de assinatura deve estar disponível a todo momento; portanto, ela precisará estar armazenada on-line. Como qualquer coisa on-line é vulnerável a ser hackeada, não é uma boa ideia usar a mesma chave para retiradas."
+    }
+  ],
+  "94dQms": [
+    {
+      "type": 0,
+      "value": "Por segurança, recomendamos que você se desconecte da internet para concluir este passo."
+    }
+  ],
+  "96pen8": [
+    {
+      "type": 0,
+      "value": "O sharding disponibilizará mais dados à rede por meio da introdução de 64 cadeias paralelas. Cada nova cadeia poderá gerenciar tantos dados quanto a mainnet hoje, e provavelmente mais."
+    }
+  ],
+  "9DZdsc": [
+    {
+      "type": 0,
+      "value": "Existe alguma vantagem em ter mais de "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH de participação?"
+    }
+  ],
+  "9JktQX": [
+    {
+      "type": 0,
+      "value": "Não há uma resposta fácil a esta pergunta, pois muitos factores entram em jogo nesse cálculo."
+    }
+  ],
+  "9VZ9oy": [
+    {
+      "type": 0,
+      "value": "Como os validadores são incentivados a permanecer ativos e honestos?"
+    }
+  ],
+  "9k7tO9": [
+    {
+      "type": 0,
+      "value": "Rede incorreta"
+    }
+  ],
+  "9lBMQr": [
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " de caminhos através da opção "
+    },
+    {
+      "type": 1,
+      "value": "validatorsKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "9qMyhY": [
+    {
+      "type": 0,
+      "value": "Leia a documentação de opções e subcomandos"
+    }
+  ],
+  "9uOFF3": [
+    {
+      "type": 0,
+      "value": "Visão geral"
+    }
+  ],
+  "A/iYbo": [
+    {
+      "type": 0,
+      "value": "As atualizações ao Eth2 só serão bem sucedidas se os validadores compreenderem os riscos e responsabilidades."
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "Enviar depósito"
+    }
+  ],
+  "A6Oppp": [
+    {
+      "type": 0,
+      "value": "Prysm oferece diretrizes passo a passo para executar o cliente depois de completar o seu depósito através do launchpad."
+    }
+  ],
+  "AC669U": [
+    {
+      "type": 0,
+      "value": "Se precisar de ajuda, confira a documentação do Python."
+    }
+  ],
+  "AEp7+F": [
+    {
+      "type": 0,
+      "value": "Importante: como validador, você precisará incluir "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " como garantia; em outras palavras, ter alguns fundos depositados. A única maneira de se tornar um validador é fazer uma transação unidirecional de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para o contrato de depósito na cadeia de Ethereum atual."
+    }
+  ],
+  "AYKxmf": [
+    {
+      "type": 0,
+      "value": "Conecte sua carteira de hardware ao Metamask"
+    }
+  ],
+  "AZaw+B": [
+    {
+      "type": 0,
+      "value": "Saída"
+    }
+  ],
+  "AbBgEs": [
+    {
+      "type": 0,
+      "value": "entendendo o saldo efetivo do validador"
+    }
+  ],
+  "Ad61gz": [
+    {
+      "type": 0,
+      "value": "Por favor, certifique-se de que você está fazendo download da conta oficial da Ethereum Foundation no GitHub, verificando a URL: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "Affixg": [
+    {
+      "type": 0,
+      "value": "O depósito"
+    }
+  ],
+  "AkVktj": [
+    {
+      "type": 0,
+      "value": "Verificar endereço do contrato de depósito"
+    }
+  ],
+  "An37jY": [
+    {
+      "type": 0,
+      "value": "Especificamente, ao iniciar o cliente validador Lighthouse, você pode apontá-lo para o diretório com suas keystores, o que importará suas keystores e perguntará interativamente por sua(s) senha(s). Se você não fornecer uma senha, Lighthouse a solicitará novamente cada vez que iniciar."
+    }
+  ],
+  "Anqi3n": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador com Lighthouse"
+    }
+  ],
+  "Aw1mMs": [
+    {
+      "type": 0,
+      "value": "Recarregar validador"
+    }
+  ],
+  "B2EKj+": [
+    {
+      "type": 0,
+      "value": "Eu entendo que preciso depositar "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para me tornar um validador, e que a transferência de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para o Beacon Chain é unidirecional e não reversível."
+    }
+  ],
+  "BB65vH": [
+    {
+      "type": 0,
+      "value": "Você pode considerar o contrato de depósito como uma transferência de fundos entre contas Ethereum e validadores Eth2."
+    }
+  ],
+  "BCsPjJ": [
+    {
+      "type": 0,
+      "value": "Iniciar processo de depósito"
+    }
+  ],
+  "BFAvr/": [
+    {
+      "type": 0,
+      "value": "Carregar um validador"
+    }
+  ],
+  "BFfsSX": [
+    {
+      "type": 0,
+      "value": "O contrato de depósito Eth2 requer o envío único de um mínimo de "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para ser aceito."
+    }
+  ],
+  "BFsUAH": [
+    {
+      "type": 0,
+      "value": "Verifique se "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " é "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "BPpnlJ": [
+    {
+      "type": 0,
+      "value": "Baixar MetaMask"
+    }
+  ],
+  "BUFaRV": [
+    {
+      "type": 0,
+      "value": "Comunidade EthStaker"
+    }
+  ],
+  "Bf2QKg": [
+    {
+      "type": 0,
+      "value": "A validação é um compromisso de longo prazo"
+    }
+  ],
+  "Bj5yI5": [
+    {
+      "type": 0,
+      "value": "Saldo efetivo"
+    }
+  ],
+  "BoEpk9": [
+    {
+      "type": 0,
+      "value": "Introdução"
+    }
+  ],
+  "BvD9ay": [
+    {
+      "type": 0,
+      "value": "Lighthouse é uma implementação Ethereum 2.0 escrita em Rust com grande foco na velocidade e na segurança."
+    }
+  ],
+  "C/gb74": [
+    {
+      "type": 0,
+      "value": "Configurar Lighthouse"
+    }
+  ],
+  "C9fTX1": [
+    {
+      "type": 0,
+      "value": "Respostas a perguntas comuns sobre como se tornar um validador."
+    }
+  ],
+  "CACPC+": [
+    {
+      "type": 0,
+      "value": "Tcheco"
+    }
+  ],
+  "CBbRux": [
+    {
+      "type": 0,
+      "value": "O OpenEthereum é escrito em Rust e licenciado sob a GPLv3."
+    }
+  ],
+  "CF9vMR": [
+    {
+      "type": 0,
+      "value": "Proof of stake"
+    }
+  ],
+  "CVDzDs": [
+    {
+      "type": 0,
+      "value": "Você certamente deve recarregar se o seu saldo estiver próximo a 16 ETH. Isso garante que você não seja expulso do conjunto de validadores (o que acontece automaticamente se o seu saldo ficar abaixo de 16 ETH)."
+    }
+  ],
+  "CdKEd/": [
+    {
+      "type": 0,
+      "value": "O valor mínimo que pode ser cortado é 1 ETH, mas "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "CeeJfw": [
+    {
+      "type": 0,
+      "value": "Eu configurei um firewall."
+    }
+  ],
+  "Cv+T7+": [
+    {
+      "type": 0,
+      "value": "O slashing tem dois propósitos: (1) tornar proibitivamente caro um ataque a Eth2, e (2) impedir que os validadores sejam preguiçosos verificando se eles realmente cumprem suas funções. Se você sofreu slashing porque agiu de forma provavelmente destrutiva, uma parte da sua participação será destruída."
+    }
+  ],
+  "D0Rigq": [
+    {
+      "type": 0,
+      "value": "NÃO"
+    }
+  ],
+  "D33f/7": [
+    {
+      "type": 0,
+      "value": "APR atual"
+    }
+  ],
+  "D4cQV/": [
+    {
+      "type": 0,
+      "value": "Quantos ETH eu preciso depositar para me tornar um validador?"
+    }
+  ],
+  "DCaq7N": [
+    {
+      "type": 0,
+      "value": "Sua carteira está conectada à rede correta!"
+    }
+  ],
+  "DGHD9y": [
+    {
+      "type": 0,
+      "value": "Lighthouse conta com ferramentas dedicadas para tornar a transferência do Launchpad o mais fácil possível."
+    }
+  ],
+  "DKSrR+": [
+    {
+      "type": 0,
+      "value": "Compreendo que se eu agir contra a especificação, corro o risco de sofrer slashing."
+    }
+  ],
+  "DNRQa7": [
+    {
+      "type": 0,
+      "value": "Eu li e concordo com os termos de serviço do Launchpad."
+    }
+  ],
+  "DUnyVI": [
+    {
+      "type": 0,
+      "value": "Idealmente, sua conexão com a internet deve ser confiável e o mais próximo de ter uma conexão 24/7 sem interrupções."
+    }
+  ],
+  "DbnQg+": [
+    {
+      "type": 0,
+      "value": "Verificar o endereço do contrato"
+    }
+  ],
+  "DoCZT1": [
+    {
+      "type": 0,
+      "value": "O saldo efetivo do validador atingiu o limite. Se desejar, você pode adicionar "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (o mínimo permitido pelo contrato de depósito)"
+    }
+  ],
+  "DsJ/Mk": [
+    {
+      "type": 0,
+      "value": "Não confie apenas no endereço do contrato listado neste site."
+    }
+  ],
+  "E+Y27g": [
+    {
+      "type": 0,
+      "value": "Você pode verificar sua versão do Python digitando "
+    },
+    {
+      "type": 1,
+      "value": "terminalCommand"
+    },
+    {
+      "type": 0,
+      "value": " no seu terminal."
+    }
+  ],
+  "E/P9zo": [
+    {
+      "type": 0,
+      "value": "3. Pratique em uma testnet"
+    }
+  ],
+  "E1Mywn": [
+    {
+      "type": 0,
+      "value": "cadeia"
+    }
+  ],
+  "E8t6ru": [
+    {
+      "type": 0,
+      "value": "Para se tornar um validador, você precisa saber como gerenciar chaves e proteger um mnemônico. Se ainda não estiver familiarizado com chaves e mnemônicos, por favor não continue. Observe que durante este processo você não derivará as chaves necessárias para uma retirada posterior; portanto, armazene seu mnemônico com segurança para poder retirar mais tarde."
+    }
+  ],
+  "EFjTSf": [
+    {
+      "type": 0,
+      "value": "Sanções menores são aplicadas por ações inadvertidas (ou inações) que impedem o consenso."
+    }
+  ],
+  "EIUapL": [
+    {
+      "type": 0,
+      "value": "Use o terminal para entrar no diretório que contém o executável "
+    },
+    {
+      "type": 1,
+      "value": "deposit"
+    }
+  ],
+  "EPCHZV": [
+    {
+      "type": 0,
+      "value": "Se você perder sua chave de assinatura, seu validador não poderá mais fazer propostas ou atestar."
+    }
+  ],
+  "EPlepr": [
+    {
+      "type": 0,
+      "value": "Eu simulei uma perda de energia (servidor e internet) e a retomada automática."
+    }
+  ],
+  "ETJ2T5": [
+    {
+      "type": 0,
+      "value": "Se você tiver perguntas sobre o deposit-cli, visite o repositório do GitHub."
+    }
+  ],
+  "EThT2C": [
+    {
+      "type": 0,
+      "value": "5. Hora de depositar"
+    }
+  ],
+  "EXLB88": [
+    {
+      "type": 0,
+      "value": "Esta é uma rede de testes ⚠️"
+    }
+  ],
+  "FEbVwB": [
+    {
+      "type": 0,
+      "value": "O conceito principal é o seguinte:"
+    }
+  ],
+  "FM92S0": [
+    {
+      "type": 0,
+      "value": "Observação: o Beacon Chain pode levar vários minutos para verificar seu depósito"
+    }
+  ],
+  "FSRfSJ": [
+    {
+      "type": 0,
+      "value": "Entendo que esta transação não é reversível."
+    }
+  ],
+  "FZa0R+": [
+    {
+      "type": 0,
+      "value": "Este cenário é muito extremo e improvável."
+    }
+  ],
+  "Fa2pjg": [
+    {
+      "type": 0,
+      "value": "O argumento do CLI do arquivo de configuração"
+    }
+  ],
+  "FazwRl": [
+    {
+      "type": 0,
+      "value": "Tente novamente"
+    }
+  ],
+  "FdbNS6": [
+    {
+      "type": 0,
+      "value": "Configure o seu Cliente Eth1"
+    }
+  ],
+  "FfLWt5": [
+    {
+      "type": 0,
+      "value": "Um cliente Ethereum com um enorme conjunto de desenvolvedores. É perfeito para sistemas de nível empresarial."
+    }
+  ],
+  "FgraU0": [
+    {
+      "type": 0,
+      "value": "Passo 1: Baixe o aplicativo de depósito por interface de linha de comando para o seu sistema operacional"
+    }
+  ],
+  "FqgDIV": [
+    {
+      "type": 0,
+      "value": "Termos de serviço"
+    }
+  ],
+  "FzkbsB": [
+    {
+      "type": 0,
+      "value": "validadores"
+    }
+  ],
+  "G/VJJd": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação OpenEthereum"
+    }
+  ],
+  "G0aacl": [
+    {
+      "type": 0,
+      "value": "Como validador você é recompensado por propor/atestar os blocos que são incluídos na cadeia."
+    }
+  ],
+  "G5IMoZ": [
+    {
+      "type": 0,
+      "value": "Baixar código fonte da branch mestra"
+    }
+  ],
+  "G6kg26": [
+    {
+      "type": 0,
+      "value": "Clientes do Eth2: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "G8tAKU": [
+    {
+      "type": 0,
+      "value": "Seleção de cliente"
+    }
+  ],
+  "GBXzeJ": [
+    {
+      "type": 0,
+      "value": "Sem dúvida, o fator de maior impacto nas recompensas obtidas ao validar transações é a quantidade total depositada na rede. Em outras palavras, a quantidade total de validadores. Dependendo desse valor, a taxa de retorno máxima anual de um validador pode estar entre 2 e 20%."
+    }
+  ],
+  "GCz3kj": [
+    {
+      "type": 0,
+      "value": "Anteriormente conhecido como Artemis, Teku é um cliente Eth2 construído para atender às necessidades institucionais e aos requisitos de segurança. PegaSys é um braço do ConsenSys, dedicado à criação de clientes e ferramentas prontos para empresas para interagir com a plataforma central Ethereum."
+    }
+  ],
+  "GDaRAW": [
+    {
+      "type": 0,
+      "value": "Certifique-se de não estar sendo vítima de phishing"
+    }
+  ],
+  "GOc7cL": [
+    {
+      "type": 0,
+      "value": "Qual será a minha penalização por estar off-line?"
+    }
+  ],
+  "GUDhpC": [
+    {
+      "type": 0,
+      "value": "Seção 1"
+    }
+  ],
+  "GadkjP": [
+    {
+      "type": 0,
+      "value": "Documentação sobre a execução do Lighthouse"
+    }
+  ],
+  "Gbo300": [
+    {
+      "type": 0,
+      "value": "Gerar chaves"
+    }
+  ],
+  "GrU/lp": [
+    {
+      "type": 0,
+      "value": "Os clientes Eth2"
+    }
+  ],
+  "GsBRWL": [
+    {
+      "type": 0,
+      "value": "Idiomas"
+    }
+  ],
+  "GuIwY6": [
+    {
+      "type": 0,
+      "value": "Quando devo recarregar o saldo do meu validador?"
+    }
+  ],
+  "H+Wcch": [
+    {
+      "type": 0,
+      "value": "Seção 2"
+    }
+  ],
+  "H+kIpp": [
+    {
+      "type": 0,
+      "value": "Valor total necessário"
+    }
+  ],
+  "H5+NAX": [
+    {
+      "type": 0,
+      "value": "Saldo"
+    }
+  ],
+  "HoahTd": [
+    {
+      "type": 0,
+      "value": "Se você não fornecer uma senha, o Nimbus a solicitará em cada inicialização."
+    }
+  ],
+  "HqRNN8": [
+    {
+      "type": 0,
+      "value": "Suporte"
+    }
+  ],
+  "I212vY": [
+    {
+      "type": 0,
+      "value": "Há uma pequena espera antes que o seu validador se torne ativo no Beacon Chain. Use esse tempo para concluir a lista de verificação e passar um tempo validando a "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    }
+  ],
+  "I3JhPS": [
+    {
+      "type": 0,
+      "value": "Rede"
+    }
+  ],
+  "IAKvZ0": [
+    {
+      "type": 0,
+      "value": "As atualizações ao Eth2"
+    }
+  ],
+  "IJw06E": [
+    {
+      "type": 0,
+      "value": "Assine a transação com a sua carteira"
+    }
+  ],
+  "IVyWYt": [
+    {
+      "type": 0,
+      "value": "Observe que no segundo cenário (improvavel), você poderá perder progressivamente até 50% (16 ETH) da sua participação ao longo de 21 dias. Após 21 dias você é ejetado do pool de validadores. Isso garante que os blocos comecem a finalizar novamente em algum momento."
+    }
+  ],
+  "IZFEUg": [
+    {
+      "type": 0,
+      "value": "Pronto"
+    }
+  ],
+  "IdUtHu": [
+    {
+      "type": 0,
+      "value": "Instalar o virtualenv"
+    }
+  ],
+  "IhDJWs": [
+    {
+      "type": 0,
+      "value": "Você tem "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depósitos pendentes"
+    }
+  ],
+  "Il9tBQ": [
+    {
+      "type": 0,
+      "value": "Geth está escrito em Go, é totalmente de código aberto e licenciado sob a GNU LGPL v3."
+    }
+  ],
+  "IwrKbS": [
+    {
+      "type": 0,
+      "value": "Depende. Além do "
+    },
+    {
+      "type": 1,
+      "value": "impact"
+    },
+    {
+      "type": 0,
+      "value": ", existem dois cenários importantes para estar ciente:"
+    }
+  ],
+  "J0DclJ": [
+    {
+      "type": 0,
+      "value": "A sincronização do seu cliente Eth1 pode levar alguns dias no pior dos casos."
+    }
+  ],
+  "J455S4": [
+    {
+      "type": 0,
+      "value": "Se você é um usuário do git, pode executar "
+    },
+    {
+      "type": 1,
+      "value": "gitClone"
+    },
+    {
+      "type": 0,
+      "value": " para baixar a branch "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J5Lzz1": [
+    {
+      "type": 0,
+      "value": "Chinês (tradicional)"
+    }
+  ],
+  "J7T0SR": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Nimbus"
+    }
+  ],
+  "JAiV0o": [
+    {
+      "type": 0,
+      "value": "Em outras palavras, para que você se mantenha honesto, suas ações devem ter consequências financeiras."
+    }
+  ],
+  "JDGiXT": [
+    {
+      "type": 0,
+      "value": "A documentação do OpenEthereum explica como baixar e instalar o cliente."
+    }
+  ],
+  "JMcBLZ": [
+    {
+      "type": 0,
+      "value": "Depósitos pendentes ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "JPT/TK": [
+    {
+      "type": 0,
+      "value": "4. Evite phishing"
+    }
+  ],
+  "JYrJic": [
+    {
+      "type": 0,
+      "value": "Evite o phishing no Eth2"
+    }
+  ],
+  "JhUYU3": [
+    {
+      "type": 0,
+      "value": "Baixe o aplicativo de CLI"
+    }
+  ],
+  "JqVeL+": [
+    {
+      "type": 0,
+      "value": "O uso de recursos pode variar significativamente entre os clientes. Pesquise os diferentes clientes se você estiver trabalhando com restrições de recursos."
+    }
+  ],
+  "Js4uuA": [
+    {
+      "type": 0,
+      "value": "saldo efetivo"
+    }
+  ],
+  "JsTbFu": [
+    {
+      "type": 0,
+      "value": "Cortado"
+    }
+  ],
+  "JtAiN/": [
+    {
+      "type": 0,
+      "value": "Qual é o seu sistema operacional actual?"
+    }
+  ],
+  "K6+jQ3": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Geth"
+    }
+  ],
+  "KBSbmP": [
+    {
+      "type": 0,
+      "value": "Você pode "
+    },
+    {
+      "type": 1,
+      "value": "reloadYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " ou atualizar a página para tentar novamente. Se o problema persistir, avise-nos em "
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "KBjoXt": [
+    {
+      "type": 0,
+      "value": "Baixe e descompacte o código fonte do branch mestre do GitHub."
+    }
+  ],
+  "KC9jbz": [
+    {
+      "type": 0,
+      "value": "Lista de verificação de hardware"
+    }
+  ],
+  "KN7zKn": [
+    {
+      "type": 0,
+      "value": "Erro"
+    }
+  ],
+  "KV017i": [
+    {
+      "type": 0,
+      "value": "Um validador é uma entidade que participa do consenso do protocolo Ethereum 2.0."
+    }
+  ],
+  "KhEtqB": [
+    {
+      "type": 0,
+      "value": "Documentação do Besu on Goerli"
+    }
+  ],
+  "KjcAm2": [
+    {
+      "type": 0,
+      "value": "As recompensas e as penalizações são emitidas aproximadamente a cada seis minutos e meio, um período de tempo conhecido como \"época\"."
+    }
+  ],
+  "KqGKRA": [
+    {
+      "type": 0,
+      "value": "Quando o processo for concluído, você deverá ver o seguinte:"
+    }
+  ],
+  "KrVaDy": [
+    {
+      "type": 0,
+      "value": "Entrei ao servidor Discord do meu cliente."
+    }
+  ],
+  "KvRSg5": [
+    {
+      "type": 0,
+      "value": "O que é exatamente o slashing?"
+    }
+  ],
+  "Kw+pTr": [
+    {
+      "type": 0,
+      "value": "O processo de instalação do python3 pode ser diferente dependendo da sua compilação de Linux."
+    }
+  ],
+  "KxUgHu": [
+    {
+      "type": 0,
+      "value": "Eu verifiquei que minha(s) keystore(s) seja(m) "
+    },
+    {
+      "type": 1,
+      "value": "boldCaution"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "L7fPF+": [
+    {
+      "type": 0,
+      "value": "Complete seu último depósito"
+    }
+  ],
+  "L8jrV5": [
+    {
+      "type": 0,
+      "value": "recarregar sua carteira"
+    }
+  ],
+  "LVy+cS": [
+    {
+      "type": 0,
+      "value": "Verifique com a documentação do cliente para garantir que o hardware que você deseja usar é suficiente e suportado."
+    }
+  ],
+  "LWIlKS": [
+    {
+      "type": 0,
+      "value": "Você também pode confirmar os depósitos individualmente abaixo..."
+    }
+  ],
+  "LeHQQm": [
+    {
+      "type": 0,
+      "value": "Perguntas frequentes sobre validadores"
+    }
+  ],
+  "LibVut": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " para sincronizar a testnet Goerli."
+    }
+  ],
+  "Ltd/hJ": [
+    {
+      "type": 1,
+      "value": "directoriesPattern"
+    },
+    {
+      "type": 0,
+      "value": " encontrará "
+    },
+    {
+      "type": 1,
+      "value": "keyDirectory"
+    },
+    {
+      "type": 0,
+      "value": ", e espera encontrar "
+    },
+    {
+      "type": 1,
+      "value": "passwordDirectory"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Lv3Pmp": [
+    {
+      "type": 0,
+      "value": "Seu depósito inicial já foi feito para esta chave pública de validador. Por favor, aguarde e verifique o status do seu depósito no provedor de dados Beaconchain."
+    }
+  ],
+  "LyJqWj": [
+    {
+      "type": 0,
+      "value": "Mais sobre as funções e responsabilidades do validador"
+    }
+  ],
+  "M3GwXS": [
+    {
+      "type": 0,
+      "value": "Você só receberá suas recompensas completas se o seu validador estiver on-line e atualizado. Essa é sua responsabilidade. Se o seu validador ficar off-line, você será penalizado. As penalizações por ficar off-line são aproximadamente iguais às recompensas por participar ativamente."
+    }
+  ],
+  "MIsmjW": [
+    {
+      "type": 0,
+      "value": "Criar uma carteira nova"
+    }
+  ],
+  "MPHPEO": [
+    {
+      "type": 0,
+      "value": "Estou apto a conectar meu nó do beacon Eth2 ao meu cliente Eth1 através de APIs HTTP."
+    }
+  ],
+  "MQTBvH": [
+    {
+      "type": 0,
+      "value": "Proteja-se contra depósitos duplicados"
+    }
+  ],
+  "MSanFQ": [
+    {
+      "type": 0,
+      "value": "livros"
+    }
+  ],
+  "MX00UO": [
+    {
+      "type": 0,
+      "value": "O que acontece se minha chave de retirada for roubada?"
+    }
+  ],
+  "MZEcKL": [
+    {
+      "type": 0,
+      "value": "Comportamento inválido do validador"
+    }
+  ],
+  "MZvoWG": [
+    {
+      "type": 0,
+      "value": "As atualizações"
+    }
+  ],
+  "Mb3npQ": [
+    {
+      "type": 0,
+      "value": "Usando o terminal"
+    }
+  ],
+  "MbsAo3": [
+    {
+      "type": 0,
+      "value": "Este launchpad ajudará você a se tornar um validador para que possa desempenhar um papel ativo no futuro do Ethereum. Validadores são a chave para o Ethereum mais seguro, escalável e sustentável que estamos construindo."
+    }
+  ],
+  "Mc8nNE": [
+    {
+      "type": 0,
+      "value": "Falha na transação"
+    }
+  ],
+  "MmZjeu": [
+    {
+      "type": 0,
+      "value": "Detalhes da recarga"
+    }
+  ],
+  "N+2G1J": [
+    {
+      "type": 0,
+      "value": "Escolher cliente "
+    },
+    {
+      "type": 1,
+      "value": "ethereum"
+    }
+  ],
+  "N0rwnt": [
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " não é um arquivo JSON deposit_data válido. Tente novamente."
+    }
+  ],
+  "NBJR7v": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " para conectar o seu nó Eth2 ao endpoint RPC JSON. Isso ativará os serviços de RPC JSON na porta padrão 8545."
+    }
+  ],
+  "NEmnAV": [
+    {
+      "type": 0,
+      "value": "Italiano"
+    }
+  ],
+  "NLgogh": [
+    {
+      "type": 0,
+      "value": "Rede Launchpad:"
+    }
+  ],
+  "NOTCV0": [
+    {
+      "type": 0,
+      "value": "Monitor de Prometheus e Grafana"
+    }
+  ],
+  "NPmm0q": [
+    {
+      "type": 0,
+      "value": "Você precisa estar em um dispositivo desktop para usar este aplicativo."
+    }
+  ],
+  "NSK+Li": [
+    {
+      "type": 0,
+      "value": "Eu protegi a conta root."
+    }
+  ],
+  "NTWnJC": [
+    {
+      "type": 0,
+      "value": "Baixar aplicativo de linha de comando"
+    }
+  ],
+  "NVQd7i": [
+    {
+      "type": 0,
+      "value": "Para processar depósitos do validador recebidos da mainnet (a cadeia Eth1), você precisará executar um cliente Eth1 além do seu cliente Eth2. Você pode usar um serviço de terceiros, como o Infura, mas recomendamos executar o seu próprio cliente para manter a rede o mais descentralizada possível."
+    }
+  ],
+  "NVljH4": [
+    {
+      "type": 0,
+      "value": "Mais sobre Prysmatic Labs"
+    }
+  ],
+  "NYFKzu": [
+    {
+      "type": 0,
+      "value": "Lista de verificação de participação"
+    }
+  ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "Enviar "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depósitos restantes"
+    }
+  ],
+  "NZUWs7": [
+    {
+      "type": 0,
+      "value": "Lembre-se de que o voto de um validador é ponderado pelo montante da sua participação."
+    }
+  ],
+  "NZsVaA": [
+    {
+      "type": 0,
+      "value": "Validadores e Eth2"
+    }
+  ],
+  "Nb5DNK": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador com Teku"
+    }
+  ],
+  "NwzcYT": [
+    {
+      "type": 0,
+      "value": "Teku precisa ser apontado para os arquivos que contenham keystores e suas senhas associadas na inicialização. Existem 3 métodos para fazer isso."
+    }
+  ],
+  "O+3LJ1": [
+    {
+      "type": 0,
+      "value": "O saldo deste validador está no máximo possível: "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "O54B/F": [
+    {
+      "type": 0,
+      "value": "A rede Eth2"
+    }
+  ],
+  "OIvXIO": [
+    {
+      "type": 0,
+      "value": "Completar "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depósitos restantes"
+    }
+  ],
+  "ON2tXT": [
+    {
+      "type": 0,
+      "value": "A documentação do Nethermind explica como baixar e instalar o cliente."
+    }
+  ],
+  "OdYQYh": [
+    {
+      "type": 0,
+      "value": "Mais sobre ConsenSys"
+    }
+  ],
+  "OsO8ik": [
+    {
+      "type": 0,
+      "value": "Sou tecnicamente capaz de configurar e executar um validador."
+    }
+  ],
+  "Ou/o3H": [
+    {
+      "type": 0,
+      "value": "Tudo o que você deve entender antes de se tornar um validador."
+    }
+  ],
+  "P+nziG": [
+    {
+      "type": 0,
+      "value": "Como validador, você precisará ter fundos depositados para, assim, ser penalizado por se comportar de forma desonesta."
+    }
+  ],
+  "P0kiYS": [
+    {
+      "type": 0,
+      "value": "A atualização Beacon Chain leva o consenso de proof-of-stake para Ethereum."
+    }
+  ],
+  "P1QerV": [
+    {
+      "type": 0,
+      "value": "Se você tiver dúvidas, a comunidade EthStaker é um bom lugar para obter ajuda! Você pode encontrar suporte em "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " ou "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "P91KmA": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador "
+    },
+    {
+      "type": 1,
+      "value": "emoji"
+    }
+  ],
+  "P9mVZK": [
+    {
+      "type": 0,
+      "value": "Sua rede foi alterada"
+    }
+  ],
+  "PIQDar": [
+    {
+      "type": 0,
+      "value": "Recomendamos que você participe de todo o processo em uma testnet primeiro para ficar confortável."
+    }
+  ],
+  "PboOCR": [
+    {
+      "type": 0,
+      "value": "Configurar seu cliente Eth2"
+    }
+  ],
+  "PfoT0C": [
+    {
+      "type": 0,
+      "value": "Esta lista de verificação o ajudará a entender o papel de um validador e o preparará para o papel."
+    }
+  ],
+  "PglO1W": [
+    {
+      "type": 0,
+      "value": "Relatório de verificação formal"
+    }
+  ],
+  "PoBIK+": [
+    {
+      "type": 0,
+      "value": "Você precisará de armazenamento SSD para lidar consistentemente com as velocidades de leitura/gravação necessárias."
+    }
+  ],
+  "Pswssl": [
+    {
+      "type": 0,
+      "value": "Confirmação"
+    }
+  ],
+  "Px7wWb": [
+    {
+      "type": 0,
+      "value": "documentação do pip"
+    }
+  ],
+  "Q1ZwPT": [
+    {
+      "type": 0,
+      "value": "área de transferência"
+    }
+  ],
+  "Q8P0rZ": [
+    {
+      "type": 0,
+      "value": "Os validadores têm um saldo efetivo máximo de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Você só precisa recarregar "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para maximizar seu saldo efetivo."
+    }
+  ],
+  "QKFeMq": [
+    {
+      "type": 0,
+      "value": "Internet"
+    }
+  ],
+  "QOAgQF": [
+    {
+      "type": 0,
+      "value": "Nota: por padrão, as VMs podem desativar o NTP, então você pode precisar encontrar uma solução alternativa para o seu ambiente."
+    }
+  ],
+  "QWDxrk": [
+    {
+      "type": 0,
+      "value": "Gerenciamento de chaves"
+    }
+  ],
+  "QlsDcr": [
+    {
+      "type": 0,
+      "value": "Ação"
+    }
+  ],
+  "QnS0CA": [
+    {
+      "type": 0,
+      "value": "Sua carteira deve ser definida como "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": " para usar este launchpad."
+    }
+  ],
+  "QqqeNk": [
+    {
+      "type": 0,
+      "value": "Transação rejeitada"
+    }
+  ],
+  "Qs/oj3": [
+    {
+      "type": 0,
+      "value": "Você pode ter um depósito de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " que foi aceito, mas está sendo validado pela cadeia. Ele estará disponível aqui quando o beaconcha.in tiver confirmado 2048 blocos."
+    }
+  ],
+  "R8eePn": [
+    {
+      "type": 0,
+      "value": "Se você for cortado, será impedido de participar ainda mais do protocolo e exilado pela força."
+    }
+  ],
+  "RIFLCz": [
+    {
+      "type": 0,
+      "value": "A phishing é um risco muito real para os validadores de Eth2 e, infelizmente, muitas pessoas perderão fundos devido a estes ataques."
+    }
+  ],
+  "ROHpFF": [
+    {
+      "type": 0,
+      "value": "1. Conheça as suas responsabilidades"
+    }
+  ],
+  "RVyb7r": [
+    {
+      "type": 0,
+      "value": "Posso parar de rodar o meu validador por alguns dias e iniciá-lo de novo?"
+    }
+  ],
+  "RWqrlk": [
+    {
+      "type": 0,
+      "value": "parabéns"
+    }
+  ],
+  "RYUKCz": [
+    {
+      "type": 0,
+      "value": "Eu simulei como migrar de um cliente Eth2 para outro cliente Eth2."
+    }
+  ],
+  "RaBZna": [
+    {
+      "type": 0,
+      "value": "Se você ficar offline por um número de dias em condições normais, você perderá uma quantidade de ETH aproximadamente equivalente à quantidade de ETH que você teria ganho nesse período. Em outras palavras, se você fosse ganhar ~0.01 ETH, em vez disso, será penalizado em ~0.01 ETH."
+    }
+  ],
+  "Rg5ySE": [
+    {
+      "type": 0,
+      "value": "Quantos validadores você gostaria de executar?"
+    }
+  ],
+  "Rj0OAx": [
+    {
+      "type": 0,
+      "value": "Ou, em outras palavras, um ser humano que executa um processo informático. Esse processo propõe novos blocos e os confirma para serem adicionados à blockchain."
+    }
+  ],
+  "RkbwNZ": [
+    {
+      "type": 0,
+      "value": "A retirada do seu depósito não será possível até a fusão da mainnet com o Beacon Chain."
+    }
+  ],
+  "Rm2GQZ": [
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " depositados no total (milhões)"
+    }
+  ],
+  "Rr2lI/": [
+    {
+      "type": 0,
+      "value": "Você é o responsável por esta transação!"
+    }
+  ],
+  "RrCui3": [
+    {
+      "type": 0,
+      "value": "Resumo"
+    }
+  ],
+  "Ryptmy": [
+    {
+      "type": 0,
+      "value": "Verifique com o seguinte comando para verificar se ele retorna a versão do cliente corretamente:"
+    }
+  ],
+  "S0e/cN": [
+    {
+      "type": 0,
+      "value": "Como você deseja usar a CLI?"
+    }
+  ],
+  "S943uU": [
+    {
+      "type": 0,
+      "value": "Verifique o URL novamente"
+    }
+  ],
+  "SB6yx7": [
+    {
+      "type": 0,
+      "value": "A variável de ambiente do arquivo de configuração Teku"
+    }
+  ],
+  "SGzXoY": [
+    {
+      "type": 0,
+      "value": "Sua participação alcançou o contrato de depósito!"
+    }
+  ],
+  "SMffKt": [
+    {
+      "type": 0,
+      "value": "Escolha o seu cliente do Eth"
+    },
+    {
+      "type": 1,
+      "value": "ethVersionStep"
+    },
+    {
+      "type": 0,
+      "value": " e configure um nó"
+    }
+  ],
+  "SR0qHv": [
+    {
+      "type": 0,
+      "value": "Evite instalações excessivamente complicadas e esteja ciente dos equilíbrios. Ficar off-line por breves períodos de tempo resultará em pequenas penalidades por inatividade, mas será facilmente recuperado depois de estar on-line novamente por cerca da mesma quantidade de tempo. As reservas complicadas de energia podem aumentar as despesas da sua configuração e os validadores de backup redundantes podem levar a slashing."
+    }
+  ],
+  "SaR1pU": [
+    {
+      "type": 0,
+      "value": "O depósito já existe"
+    }
+  ],
+  "Sd+Pq6": [
+    {
+      "type": 0,
+      "value": "Total de validadores"
+    }
+  ],
+  "Sd0I/u": [
+    {
+      "type": 0,
+      "value": "Chave pública do validador"
+    }
+  ],
+  "Sd3VAH": [
+    {
+      "type": 0,
+      "value": "Validadores que saíram ou foram cortados não são elegíveis para recarga"
+    }
+  ],
+  "Sd9qhL": [
+    {
+      "type": 0,
+      "value": "Mais sobre riscos de slashing"
+    }
+  ],
+  "SeW5ak": [
+    {
+      "type": 0,
+      "value": "Verifique o endereço do contrato em sua carteira antes de assinar."
+    }
+  ],
+  "Seanpx": [
+    {
+      "type": 0,
+      "value": "Obrigatório"
+    }
+  ],
+  "SqKNq2": [
+    {
+      "type": 0,
+      "value": "Você pode instalar o python3 no seu dispositivo macOS usando "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    }
+  ],
+  "Szwbym": [
+    {
+      "type": 0,
+      "value": "chave"
+    }
+  ],
+  "TLEziZ": [
+    {
+      "type": 0,
+      "value": "O Beacon Chain teve sua gênesis em "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ". Tem crescido em tamanho ao longo do tempo, e a introdução do sharding também aumentará os requisitos de armazenamento, memória e largura de banda."
+    }
+  ],
+  "TMw9oz": [
+    {
+      "type": 0,
+      "value": "Visite este site no computador para se tornar um validador."
+    }
+  ],
+  "TfNuWP": [
+    {
+      "type": 0,
+      "value": "virtualenv ajudaria você a criar um ambiente Python isolado para a ferramenta deposit-cli."
+    }
+  ],
+  "TmYprU": [
+    {
+      "type": 0,
+      "value": "Launchpad da "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " Eth2"
+    }
+  ],
+  "Tpe6yK": [
+    {
+      "type": 0,
+      "value": "documentação rpc-http-enabled"
+    }
+  ],
+  "U0yY/A": [
+    {
+      "type": 0,
+      "value": "Ver comparação extensiva de clientes"
+    }
+  ],
+  "U7AOxj": [
+    {
+      "type": 0,
+      "value": "maior que 50%"
+    }
+  ],
+  "U7PMU1": [
+    {
+      "type": 0,
+      "value": "Os clientes Eth2 suportam Prometheus e Grafana para ajudá-lo a visualizar importantes métricas em tempo real sobre seu validador. Você pode encontrar instruções específicas para o cliente aqui: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
+    }
+  ],
+  "UHbYCa": [
+    {
+      "type": 0,
+      "value": "Seu validador tem seu próprio saldo, com o saldo inicial delineado no contrato de depósito. Suas recompensas e penalizações são refletidas no saldo do seu validador ao longo do tempo."
+    }
+  ],
+  "UJMct0": [
+    {
+      "type": 0,
+      "value": "Verifique "
+    },
+    {
+      "type": 1,
+      "value": "etherscan"
+    },
+    {
+      "type": 0,
+      "value": " para mais detalhes"
+    }
+  ],
+  "UWv7yD": [
+    {
+      "type": 0,
+      "value": "Verifique o contrato de depósito no seu explorador favorito do bloco Ethereum:"
+    }
+  ],
+  "Utck3E": [
+    {
+      "type": 0,
+      "value": "Línguas suportadas"
+    }
+  ],
+  "Uxs0RD": [
+    {
+      "type": 0,
+      "value": "Grafite"
+    }
+  ],
+  "Uy8THS": [
+    {
+      "type": 0,
+      "value": "Ficar off-line ao mesmo tempo que mais de 1/3 do número total de validadores leva a penas mais severas, já que os blocos deixam de finalizar. "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    }
+  ],
+  "UygdAl": [
+    {
+      "type": 0,
+      "value": "Uma das três implementações originais do protocolo Ethereum."
+    }
+  ],
+  "UykRIk": [
+    {
+      "type": 0,
+      "value": "Tornar-se um validador é uma grande responsabilidade com etapas de preparação importantes. Inicie o processo de depósito somente quando estiver pronto."
+    }
+  ],
+  "V0cb8p": [
+    {
+      "type": 0,
+      "value": "Se você não tem uma pasta testnet, é provável que não tenha construído e executado o Nimbus corretamente. Execute os comandos make novamente."
+    }
+  ],
+  "VASo1/": [
+    {
+      "type": 0,
+      "value": "Conectar carteira"
+    }
+  ],
+  "VEj6nh": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Nethermind"
+    }
+  ],
+  "VIMMdE": [
+    {
+      "type": 0,
+      "value": "Não envie nenhuma transação com um arquivo "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " que você mesmo não criou ou cuja frase mnemônica você não possua."
+    }
+  ],
+  "VJZrCQ": [
+    {
+      "type": 0,
+      "value": "Mudar para o launchpad "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "VKfWR3": [
+    {
+      "type": 0,
+      "value": "Recomendado"
+    }
+  ],
+  "VLDKor": [
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " é o saldo máximo eficaz do validador. Isso significa que você não receberá mais recompensas se o saldo do seu validador estiver acima de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ". No entanto, você ganhará menos se ele ficar abaixo de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "VPpHAq": [
+    {
+      "type": 0,
+      "value": "Eu entendo que "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " minha participação por um tempo e "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " até a fusão. Compreendo que se sair, só poderei voltar a entrar muito mais tarde, pois o compromisso é a longo prazo."
+    }
+  ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "Em outras palavras: se a quantidade total de ETH depositada é baixa, a recompensa (taxa de juros) é alta, mas conforme a participação total aumenta, a recompensa (juros) paga para cada validador começa a cair."
+    }
+  ],
+  "VUuZsb": [
+    {
+      "type": 0,
+      "value": "uniforme de artes marciais"
+    }
+  ],
+  "VY3/Wo": [
+    {
+      "type": 0,
+      "value": "Para se tornar um validador, você precisará ser capaz de executar comandos no terminal em seu computador. Tanto a geração dos seus novos pares de chaves Eth2 como a instalação do software validador são feitos no terminal."
+    }
+  ],
+  "VctWDX": [
+    {
+      "type": 0,
+      "value": "Eu tenho certeza de que o validador que estou recarregando é meu validador."
+    }
+  ],
+  "VzGJkB": [
+    {
+      "type": 0,
+      "value": "Lista de verificação do participante"
+    }
+  ],
+  "W10U1b": [
+    {
+      "type": 0,
+      "value": "O Teku tem licença Apache 2 e é escrito em Java, uma linguagem notável por sua maturidade e ubiquidade."
+    }
+  ],
+  "W8nHSd": [
+    {
+      "type": 0,
+      "value": "Perguntas Frequentes"
+    }
+  ],
+  "W9JuAN": [
+    {
+      "type": 0,
+      "value": "Cliente Validador (VC) Eth2"
+    }
+  ],
+  "WFVzvu": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " Depósitos duplicados com o mesmo arquivo de chave pública serão considerados como um depósito duplo. Qualquer saldo extra maior que "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " NÃO será contado no seu saldo efetivo no Beacon Chain. Você também não poderá retirá-lo até a fusão do Beacon Chain com a mainnet."
+    }
+  ],
+  "WMLn/w": [
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " validadores"
+    }
+  ],
+  "WRevBY": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " para conectar o seu nó Eth2 ao endpoint RPC JSON. Isso ativará os serviços de RPC JSON na porta padrão 8545."
+    }
+  ],
+  "WTPUDZ": [
+    {
+      "type": 0,
+      "value": "Estas etapas são opcionais, mas são recomendadas para otimizar seu nó."
+    }
+  ],
+  "Wao7OA": [
+    {
+      "type": 0,
+      "value": "Nó de Sinalizador Eth2 (BN)"
+    }
+  ],
+  "WkrNSk": [
+    {
+      "type": 0,
+      "value": "Inglês"
+    }
+  ],
+  "Wl6cI3": [
+    {
+      "type": 0,
+      "value": "Por favor, aceite as condições acima."
+    }
+  ],
+  "WxqnJn": [
+    {
+      "type": 0,
+      "value": "Por outro lado, você pode ser penalizado por estar off-line e comportar-se maliciosamente: por exemplo, atestando em blocos inválidos ou contraditórios."
+    }
+  ],
+  "Wxzght": [
+    {
+      "type": 0,
+      "value": "Arraste o arquivo para fazer upload ou procurar"
+    }
+  ],
+  "X/fKmY": [
+    {
+      "type": 0,
+      "value": "O explorador de bloco nomeou o contrato?"
+    }
+  ],
+  "X0dSr0": [
+    {
+      "type": 0,
+      "value": "É de alto risco executar o seu validador Eth2 em vários lugares. Isso levará a um evento passível de slashing e a expulsão da rede. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "X5KFEh": [
+    {
+      "type": 0,
+      "value": "Este não é um arquivo JSON deposit_data válido."
+    }
+  ],
+  "XBEBYR": [
+    {
+      "type": 0,
+      "value": "Mais sobre a instalação do pip"
+    }
+  ],
+  "XVehvN": [
+    {
+      "type": 1,
+      "value": "filesPattern"
+    },
+    {
+      "type": 0,
+      "value": " esperará que o "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " exista e o arquivo que contém a senha para ele seja "
+    },
+    {
+      "type": 1,
+      "value": "passwordFile"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "XmddSV": [
+    {
+      "type": 0,
+      "value": "Compilar o código-fonte"
+    }
+  ],
+  "Y47aYU": [
+    {
+      "type": 0,
+      "value": "Recarregar"
+    }
+  ],
+  "Y8YLHs": [
+    {
+      "type": 0,
+      "value": "Se sua chave de assinatura não estiver sob o controle do ladrão, o ladrão não poderá sair do seu validador."
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "Enviar último depósito"
+    }
+  ],
+  "YBs4dR": [
+    {
+      "type": 0,
+      "value": "A última versão do pip deve ter sido instalada com python 3.x.x. Para obter mais informações sobre a instalação do pip no Windows, visite "
+    },
+    {
+      "type": 1,
+      "value": "windowsInstallGuide"
+    },
+    {
+      "type": 0,
+      "value": ". Ou você pode instalar o pacote do pip via "
+    },
+    {
+      "type": 1,
+      "value": "chocolatey"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YFFqcn": [
+    {
+      "type": 0,
+      "value": "Eu entendo o proof-of-stake e por que os validadores são necessários."
+    }
+  ],
+  "YFT4rG": [
+    {
+      "type": 0,
+      "value": "Chaves"
+    }
+  ],
+  "YP03/j": [
+    {
+      "type": 0,
+      "value": "Posteriormente, os validadores ainda são encorajados a se juntar (quanto mais validadores, mais descentralizada a rede), mas não é absolutamente essencial que o façam (para que a taxa de juros possa cair)."
+    }
+  ],
+  "YPsbIU": [
+    {
+      "type": 0,
+      "value": "Eu configurei o meu serviço "
+    },
+    {
+      "type": 1,
+      "value": "grafana"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YWfd2t": [
+    {
+      "type": 0,
+      "value": "Um projeto de pesquisa e uma implementação de cliente para Eth2 projetados para ter um bom desempenho em sistemas embutidos e dispositivos móveis pessoais, incluindo smartphones mais antigos com hardware limitado em recursos. A equipe do Nimbus é da Status, uma empresa mais conhecida app de mensagens/carteira/navegador Web3."
+    }
+  ],
+  "YZtdY1": [
+    {
+      "type": 0,
+      "value": "A partir de "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", você precisará de ~400GB só para os dados da cadeia de dados da mainnet Eth1 (que cresce em ~1GB/dia)."
+    }
+  ],
+  "Yganfl": [
+    {
+      "type": 0,
+      "value": "Digite as seguintes linhas na janela do terminal:"
+    }
+  ],
+  "YkznEp": [
+    {
+      "type": 0,
+      "value": "Se você perder sua chave de retirada, não terá maneira de acessar os fundos mantidos pelo seu validador."
+    }
+  ],
+  "YtwQyB": [
+    {
+      "type": 0,
+      "value": "Você pode "
+    },
+    {
+      "type": 1,
+      "value": "changeYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " para carregar os validadores para um endereço diferente."
+    }
+  ],
+  "Yu78N6": [
+    {
+      "type": 0,
+      "value": "saco de dinheiro"
+    }
+  ],
+  "Z07LQm": [
+    {
+      "type": 0,
+      "value": "Não foi possível carregar "
+    },
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " devido a um erro. Abra um problema no GitHub para que possamos investigar."
+    }
+  ],
+  "Z1aGQe": [
+    {
+      "type": 0,
+      "value": "Em geral, esperamos que o seu validador seja rentável se o seu tempo de atividade for "
+    },
+    {
+      "type": 1,
+      "value": "greaterThan50Percent"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "ZBtnGs": [
+    {
+      "type": 0,
+      "value": "Eu revisei a lista de verificação."
+    }
+  ],
+  "ZK6NmY": [
+    {
+      "type": 0,
+      "value": "Nota: a hora RTC (tempo real) pode ser definida como o seu fuso horário local ao invés de UTC, especialmente em uma VM que tem seu relógio configurado no Windows."
+    }
+  ],
+  "ZOU+p7": [
+    {
+      "type": 0,
+      "value": "--documentação http"
+    }
+  ],
+  "ZOXuIe": [
+    {
+      "type": 0,
+      "value": "Por que preciso de fundos para participar?"
+    }
+  ],
+  "ZPRDyW": [
+    {
+      "type": 0,
+      "value": "Novamente, isso depende. Comporta-se maliciosamente (por exemplo, atestar blocos inválidos ou contraditórios) pode levar ao slashing da sua participação."
+    }
+  ],
+  "ZRbxwY": [
+    {
+      "type": 0,
+      "value": "Lista de verificação do validador Eth2"
+    }
+  ],
+  "ZTo0Fl": [
+    {
+      "type": 0,
+      "value": "Por que há uma espera?"
+    }
+  ],
+  "Zi+EED": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku é um cliente Ethereum 2.0 baseado em Java criado para atender a necessidades institucionais e requisitos de segurança."
+    }
+  ],
+  "Zspg8H": [
+    {
+      "type": 0,
+      "value": "Seção 1 - Antes de começar"
+    }
+  ],
+  "ZzTcj5": [
+    {
+      "type": 0,
+      "value": "Baixe o python3 e siga as instruções de instalação."
+    }
+  ],
+  "a+xjjV": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador com Prysm"
+    }
+  ],
+  "aDomwX": [
+    {
+      "type": 0,
+      "value": "Se você tentar enganar o sistema ou agir contra a especificação, poderá incorrer numa penalização, conhecida como slashing. Executar suas chaves de validador simultaneamente em duas ou mais máquinas resultará em um slashing."
+    }
+  ],
+  "aEBE6s": [
+    {
+      "type": 0,
+      "value": "2. Nós de preparação"
+    }
+  ],
+  "aMcG1s": [
+    {
+      "type": 0,
+      "value": "Verifique seu explorador de bloco Eth2 favorito:"
+    }
+  ],
+  "aS6dBe": [
+    {
+      "type": 0,
+      "value": "Configurar Nimbus"
+    }
+  ],
+  "aTRROW": [
+    {
+      "type": 0,
+      "value": "Nimbus (Apache 2) é escrito em Nim, uma língua com sintaxe semelhante a Python que compila para C."
+    }
+  ],
+  "aXWL9X": [
+    {
+      "type": 0,
+      "value": "Não há maneira de você reativar seu validador e você não poderá transferir ou retirar seus fundos até a fusão (o que significa que seus fundos permanecerão inacessíveis até lá)."
+    }
+  ],
+  "aZ7pUj": [
+    {
+      "type": 0,
+      "value": "Sua carteira está na rede Ethereum errada. Para continuar, conecte-se à rede "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "acrOoz": [
+    {
+      "type": 0,
+      "value": "Continuar"
+    }
+  ],
+  "azLmaD": [
+    {
+      "type": 0,
+      "value": "Compile o deposit-cli a partir do código fonte Python"
+    }
+  ],
+  "b3J7Pw": [
+    {
+      "type": 0,
+      "value": "Não. Não há vantagem em ter mais de "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH depositados."
+    }
+  ],
+  "b4csjU": [
+    {
+      "type": 0,
+      "value": "No entanto, tenha em mente que, num futuro próximo, depois de ter saído, não haverá como voltar atrás."
+    }
+  ],
+  "bNFkSo": [
+    {
+      "type": 0,
+      "value": "Agora siga as instruções que serão apresentadas na janela do terminal para gerar suas chaves."
+    }
+  ],
+  "bR1R2M": [
+    {
+      "type": 0,
+      "value": "Use isso como referência durante a configuração do cliente para verificar etapas importantes."
+    }
+  ],
+  "bUk/lm": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Besu"
+    }
+  ],
+  "bVtlF7": [
+    {
+      "type": 0,
+      "value": "Certifique-se de reservar espaço suficiente na sua unidade até executar a manutenção no seu nó."
+    }
+  ],
+  "bbr+aD": [
+    {
+      "type": 0,
+      "value": "Os arquivos YAML podem ter diferentes sintaxes."
+    }
+  ],
+  "bnuvhg": [
+    {
+      "type": 0,
+      "value": "O Lighthouse é construído em Rust e oferecido sob uma Licença Apache 2.0."
+    }
+  ],
+  "bxU6sX": [
+    {
+      "type": 0,
+      "value": "Instruções de instalação do Python"
+    }
+  ],
+  "c9DSZ1": [
+    {
+      "type": 0,
+      "value": "Recomendamos fortemente que você conclua esses passos na testnet atual antes de fazê-lo na mainnet."
+    }
+  ],
+  "cHUoV9": [
+    {
+      "type": 0,
+      "value": "A documentação do Geth explica como baixar e instalar o cliente."
+    }
+  ],
+  "cRzxes": [
+    {
+      "type": 0,
+      "value": "APR atual"
+    }
+  ],
+  "cav520": [
+    {
+      "type": 0,
+      "value": "Baixar no GitHub"
+    }
+  ],
+  "ccU6l/": [
+    {
+      "type": 0,
+      "value": "On-line"
+    }
+  ],
+  "chw27s": [
+    {
+      "type": 0,
+      "value": "Mais sobre PegaSys Teku"
+    }
+  ],
+  "clUb0+": [
+    {
+      "type": 0,
+      "value": "Linha de comando"
+    }
+  ],
+  "clxIWO": [
+    {
+      "type": 0,
+      "value": "Qual será a minha penalização por agir maleavelmente?"
+    }
+  ],
+  "cs9mQw": [
+    {
+      "type": 0,
+      "value": "Saiba mais sobre os papéis e responsabilidades dos validadores da Eth2."
+    }
+  ],
+  "cyR7Kh": [
+    {
+      "type": 0,
+      "value": "Voltar"
+    }
+  ],
+  "d5KEM8": [
+    {
+      "type": 0,
+      "value": "Você deve assinar uma transação para cada depósito que deseja realizar."
+    }
+  ],
+  "dIgBOz": [
+    {
+      "type": 0,
+      "value": "Depositar"
+    }
+  ],
+  "dM/KIM": [
+    {
+      "type": 0,
+      "value": "O que é exatamente um validador?"
+    }
+  ],
+  "dTOtPO": [
+    {
+      "type": 0,
+      "value": "Recarregar"
+    }
+  ],
+  "deLJOg": [
+    {
+      "type": 0,
+      "value": "Carregue um arquivo json válido."
+    }
+  ],
+  "do+Cyc": [
+    {
+      "type": 0,
+      "value": "APR estimado ("
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "dprf8W": [
+    {
+      "type": 0,
+      "value": "Onde posso encontrar ajuda para a solução de problemas?"
+    }
+  ],
+  "dvr19k": [
+    {
+      "type": 0,
+      "value": "Instalação"
+    }
+  ],
+  "dzdAcD": [
+    {
+      "type": 0,
+      "value": "Porta padrão"
+    }
+  ],
+  "e/PSgJ": [
+    {
+      "type": 0,
+      "value": "Carregar dados de depósito"
+    }
+  ],
+  "e4f94H": [
+    {
+      "type": 0,
+      "value": "Se "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " não for "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": ", execute: "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    }
+  ],
+  "eIRc60": [
+    {
+      "type": 0,
+      "value": "Mais sobre o Eth2"
+    }
+  ],
+  "eKEL/g": [
+    {
+      "type": 0,
+      "value": "Pendente"
+    }
+  ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "Envie uma transação para finalizar o seu depósito."
+    }
+  ],
+  "eOpZjd": [
+    {
+      "type": 0,
+      "value": "Especifica quem está participando, quem está validando, quanto está sendo depositado e quem pode retirar os fundos."
+    }
+  ],
+  "eaU/aL": [
+    {
+      "type": 0,
+      "value": "Para maximizar a segurança e eficiência do nó, use hardware dedicado para rodar seus clientes. Isso reduz o risco de exposição a malware e minimiza a competição por recursos de computação, o que garante que seu nó lide com a carga da rede e com as responsabilidades do validador a todo momento."
+    }
+  ],
+  "egVO5r": [
+    {
+      "type": 0,
+      "value": "Mais sobre cadeias de shards"
+    }
+  ],
+  "elCkOU": [
+    {
+      "type": 0,
+      "value": "Mais sobre a fusão"
+    }
+  ],
+  "erZJkZ": [
+    {
+      "type": 0,
+      "value": "Ao iniciar Teku, keystores e senhas podem ser fornecidas de maneiras diferentes."
+    }
+  ],
+  "esDvdR": [
+    {
+      "type": 0,
+      "value": "O saldo do validador está acima de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", mas o saldo efetivo é baixo ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": "). Adicionar "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (o mínimo permitido pelo contrato de depósito) maximizará seu saldo efetivo."
+    }
+  ],
+  "eyK2E3": [
+    {
+      "type": 0,
+      "value": "Concluir lista de verificação"
+    }
+  ],
+  "f/N7FO": [
+    {
+      "type": 0,
+      "value": "O que acontece se eu perder minha chave de assinatura?"
+    }
+  ],
+  "fHLKXR": [
+    {
+      "type": 0,
+      "value": "A resposta a esta pergunta depende muito de quanto ETH você tem à sua disposição."
+    }
+  ],
+  "fR8+bQ": [
+    {
+      "type": 0,
+      "value": "Durante a configuração"
+    }
+  ],
+  "fbiteI": [
+    {
+      "type": 0,
+      "value": "armazenadas apenas em um validador"
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "Aguardando a confirmação da carteira"
+    }
+  ],
+  "frGVRP": [
+    {
+      "type": 0,
+      "value": "impacto do saldo efetivo"
+    }
+  ],
+  "g/DxI7": [
+    {
+      "type": 0,
+      "value": "Adicionalmente, você pode definir seu Cliente Validador (VC) e Nó de Sinal (BN) em máquinas e IPs separados para que, mesmo que o seu nó de sinalizador esteja vulnerável, O seu keystore esteja armazenado em uma máquina diferente."
+    }
+  ],
+  "g37XKP": [
+    {
+      "type": 0,
+      "value": "Mais sobre o virtualenv"
+    }
+  ],
+  "gAdE9y": [
+    {
+      "type": 0,
+      "value": "Obrigado por apoiar a rede Eth2!"
+    }
+  ],
+  "gIauNz": [
+    {
+      "type": 0,
+      "value": "Você deve ver que tem um keystore por validador. Esse keystore contém sua chave de assinatura, criptografada com sua senha. Você pode usar o seu mnemônico para gerar a sua chave de retirada quando desejar retirar."
+    }
+  ],
+  "gN9D/h": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " para sincronizar a testnet Goerli."
+    }
+  ],
+  "gQkd2y": [
+    {
+      "type": 0,
+      "value": "Gerar chaves de depósito usando a ferramenta de depósito da Ethereum Foundation"
+    }
+  ],
+  "gVC0Wl": [
+    {
+      "type": 0,
+      "value": "Ele usa a senha assistida na sua pasta de segredos."
+    }
+  ],
+  "gfLdAQ": [
+    {
+      "type": 0,
+      "value": "Mais sobre o Beacon Chain"
+    }
+  ],
+  "gjBiyj": [
+    {
+      "type": 0,
+      "value": "Carregando..."
+    }
+  ],
+  "gjmx29": [
+    {
+      "type": 0,
+      "value": "SIM"
+    }
+  ],
+  "gtrcyK": [
+    {
+      "type": 0,
+      "value": "Verifique se "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " e "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " estão corretos."
+    }
+  ],
+  "guMfKn": [
+    {
+      "type": 0,
+      "value": "Isso significa que você não precisa se esforçar demais com clientes de backup ou conexões de internet redundantes, pois as repercussões por estar off-line não são tão severas."
+    }
+  ],
+  "gx6frf": [
+    {
+      "type": 0,
+      "value": "relógio"
+    }
+  ],
+  "h8MTUo": [
+    {
+      "type": 0,
+      "value": "Sua participação"
+    }
+  ],
+  "h8ZHus": [
+    {
+      "type": 0,
+      "value": "Transferências entre validadores ainda não são possíveis. Você terá que esperar até a fusão da mainnet com o Beacon Chain (cerca de dois anos) para poder retirar ou transferir seus "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "hFzE1M": [
+    {
+      "type": 0,
+      "value": "São dadas recompensas por ações que ajudam a rede a chegar ao consenso."
+    }
+  ],
+  "hG0uP4": [
+    {
+      "type": 0,
+      "value": "Apenas desktop"
+    }
+  ],
+  "hPCn9f": [
+    {
+      "type": 0,
+      "value": "--Documentação do JsonRpc.Enabled"
+    }
+  ],
+  "hXE+0W": [
+    {
+      "type": 0,
+      "value": "Carregar "
+    },
+    {
+      "type": 1,
+      "value": "depositJSON"
+    }
+  ],
+  "hZrkPB": [
+    {
+      "type": 0,
+      "value": "Em outras palavras, você maximiza suas recompensas oferecendo o maior benefício à rede como um todo."
+    }
+  ],
+  "hjrLbR": [
+    {
+      "type": 0,
+      "value": "Para isso, precisamos de participantes activos (conhecidos como validadores) para propor, verificar e atestar a validade dos blocos. Em troca, validadores honestos recebem recompensas financeiras."
+    }
+  ],
+  "hkg3fb": [
+    {
+      "type": 0,
+      "value": "Mais sobre o saldo efetivo"
+    }
+  ],
+  "huEFUF": [
+    {
+      "type": 0,
+      "value": "Você tem "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depósitos pendentes"
+    }
+  ],
+  "hzLd+/": [
+    {
+      "type": 0,
+      "value": "Eu entendo que é importante manter meu validador on-line e atualizado."
+    }
+  ],
+  "iBYfM0": [
+    {
+      "type": 0,
+      "value": "Você precisa executar um nó Eth1 e um Eth2 para se tornar um validador. Dê uma olhada no checklist para preparar você e seu equipamento."
+    }
+  ],
+  "iCpuph": [
+    {
+      "type": 0,
+      "value": "Clientes"
+    }
+  ],
+  "iMvXLd": [
+    {
+      "type": 0,
+      "value": "Executando o cliente do validador"
+    }
+  ],
+  "iPRnRG": [
+    {
+      "type": 0,
+      "value": "Com as transferências desativadas por enquanto, você não poderá sair voluntariamente e retomar mais tarde. Isso significa que você precisa estar nele por um longo tempo."
+    }
+  ],
+  "iWg7mL": [
+    {
+      "type": 0,
+      "value": "Por favor, certifique-se de ter definido "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " para "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "; caso contrário, o depósito será inválido."
+    }
+  ],
+  "iZuIgB": [
+    {
+      "type": 0,
+      "value": "Descompacte o arquivo que você acabou de baixar"
+    }
+  ],
+  "idDbou": [
+    {
+      "type": 0,
+      "value": "Pensando em depositar?"
+    }
+  ],
+  "irRdC0": [
+    {
+      "type": 0,
+      "value": "Sugestões de hardware são um alvo em constante evolução. É provável que os actuais requisitos mínimos aumentem por uma ordem de grandeza após a fusão e introdução de cadeias de fragmentação. Faça sua própria pesquisa antes de depositar fundos."
+    }
+  ],
+  "isGKnz": [
+    {
+      "type": 0,
+      "value": "Documentação"
+    }
+  ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "Enviar todos os "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " depósitos"
+    }
+  ],
+  "j4ctVP": [
+    {
+      "type": 0,
+      "value": "A especificação Eth2"
+    }
+  ],
+  "jDv/zO": [
+    {
+      "type": 0,
+      "value": "Enquanto valida na testnet, execute estas simulações para aprender mais sobre seu nó e se preparar melhor para a mainnet:"
+    }
+  ],
+  "jXer8/": [
+    {
+      "type": 0,
+      "value": "Documentação do Prysm"
+    }
+  ],
+  "jYVeq4": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Lighthouse"
+    }
+  ],
+  "jZVChZ": [
+    {
+      "type": 0,
+      "value": "Eu importei as minhas keystore(s) para o meu cliente validador Eth2."
+    }
+  ],
+  "jecC36": [
+    {
+      "type": 0,
+      "value": "Chave pública"
+    }
+  ],
+  "jfHMKL": [
+    {
+      "type": 0,
+      "value": "Conectar uma carteira"
+    }
+  ],
+  "jjLubH": [
+    {
+      "type": 0,
+      "value": "Documentação de instalação do Prysm"
+    }
+  ],
+  "jm79h1": [
+    {
+      "type": 0,
+      "value": "Aviso: Não armazene chaves em múltiplos validadores (backup) de uma só vez"
+    }
+  ],
+  "jse8rl": [
+    {
+      "type": 0,
+      "value": "Qual deve ser o tamanho do meu período de atividade para que meu validador seja rentável?"
+    }
+  ],
+  "jvB4W9": [
+    {
+      "type": 0,
+      "value": "Variáveis de ambiente"
+    }
+  ],
+  "jyN21A": [
+    {
+      "type": 0,
+      "value": "Launchpad Eth2"
+    }
+  ],
+  "jytPQU": [
+    {
+      "type": 0,
+      "value": "Documentação do Nimbus"
+    }
+  ],
+  "kFS5Sd": [
+    {
+      "type": 0,
+      "value": "Contrato de depósito verificado formalmente"
+    }
+  ],
+  "kGnu3F": [
+    {
+      "type": 0,
+      "value": "Como são emitidas as recompensas/penalizações?"
+    }
+  ],
+  "kQTAe+": [
+    {
+      "type": 0,
+      "value": "A URL corresponde ao que você viu em outros sites?"
+    }
+  ],
+  "kXhUdD": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador pelo desktop"
+    }
+  ],
+  "kZ1+zq": [
+    {
+      "type": 0,
+      "value": "Documentação do Teku"
+    }
+  ],
+  "kd/f4u": [
+    {
+      "type": 0,
+      "value": "Lista de chaves"
+    }
+  ],
+  "km7b1A": [
+    {
+      "type": 0,
+      "value": "Ao longo do tempo, o seu saldo diminuirá, pois você será punido por não participar no processo de consenso. Quando seu saldo chegar a 16 ETH, você será automaticamente excluído do pool de validadores."
+    }
+  ],
+  "kn7kJd": [
+    {
+      "type": 0,
+      "value": "Mais sobre mecanismos de consenso"
+    }
+  ],
+  "krEziQ": [
+    {
+      "type": 0,
+      "value": "Entre em contato"
+    }
+  ],
+  "kuYpoI": [
+    {
+      "type": 0,
+      "value": "Saldo atual"
+    }
+  ],
+  "kv1nqx": [
+    {
+      "type": 0,
+      "value": "Saído"
+    }
+  ],
+  "l/uCcX": [
+    {
+      "type": 0,
+      "value": "Você está na testnet"
+    }
+  ],
+  "l4nLft": [
+    {
+      "type": 0,
+      "value": "Eu sei como verificar se estou enviando meu "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para o contrato de depósito correto e assim o farei."
+    }
+  ],
+  "l5XCJW": [
+    {
+      "type": 0,
+      "value": "Recomendações"
+    }
+  ],
+  "l5kq/q": [
+    {
+      "type": 0,
+      "value": "Confirmar na cadeia"
+    }
+  ],
+  "l6OJpv": [
+    {
+      "type": 0,
+      "value": "Em primeiro lugar, crie um venv virtualenv no diretório do repositório:"
+    }
+  ],
+  "lD66ab": [
+    {
+      "type": 0,
+      "value": "Depósito pendente"
+    }
+  ],
+  "lJNmgK": [
+    {
+      "type": 0,
+      "value": "Como o Eth2 atualiza o Ethereum?"
+    }
+  ],
+  "lLOZMD": [
+    {
+      "type": 0,
+      "value": "Você pode instalar o pip usando um Gerenciador de Pacotes Linux como "
+    },
+    {
+      "type": 1,
+      "value": "apt"
+    },
+    {
+      "type": 0,
+      "value": " ou "
+    },
+    {
+      "type": 1,
+      "value": "yum"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "O site que está pedindo um depósito de "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " tem uma URL que você espera?"
+    }
+  ],
+  "lQzdpT": [
+    {
+      "type": 0,
+      "value": "num_validators"
+    }
+  ],
+  "lS9VhN": [
+    {
+      "type": 0,
+      "value": "Total de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " depositados"
+    }
+  ],
+  "lVARlA": [
+    {
+      "type": 0,
+      "value": "Por favor, insira um valor de recarga válido."
+    }
+  ],
+  "lVdzDK": [
+    {
+      "type": 0,
+      "value": "Carregue o arquivo de dados de depósito que você acabou de gerar. O "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " está localizado no seu diretório "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lfV1bj": [
+    {
+      "type": 0,
+      "value": "Importando da documentação do Launchpad"
+    }
+  ],
+  "ll/zMW": [
+    {
+      "type": 0,
+      "value": "Esta é uma transação não reversível."
+    }
+  ],
+  "lo+Qqn": [
+    {
+      "type": 0,
+      "value": "alterar sua carteira"
+    }
+  ],
+  "lrdlY6": [
+    {
+      "type": 0,
+      "value": "Arquivo carregado"
+    }
+  ],
+  "mArJcj": [
+    {
+      "type": 0,
+      "value": "Disco rígido"
+    }
+  ],
+  "mZOXtM": [
+    {
+      "type": 0,
+      "value": "Validadores"
+    }
+  ],
+  "mhyltV": [
+    {
+      "type": 0,
+      "value": "Eu coloquei a minha flag de grafite."
+    }
+  ],
+  "mpmFDY": [
+    {
+      "type": 0,
+      "value": "Nenhum depósito pendente"
+    }
+  ],
+  "mr1BWl": [
+    {
+      "type": 0,
+      "value": "Riscos e reconhecimentos:"
+    }
+  ],
+  "n6Uub0": [
+    {
+      "type": 0,
+      "value": "Eu instalei e sincronizei o meu nó Eth1 em "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (não espere nisso, pois pode demorar vários dias)."
+    }
+  ],
+  "n7yYXG": [
+    {
+      "type": 0,
+      "value": "Serviço"
+    }
+  ],
+  "nHk8Et": [
+    {
+      "type": 0,
+      "value": "O PoS é um mecanismo de consenso mais seguro, descentralizado e amigável para o ambiente do que o proof-of-work (PoW) que protege o Ethereum hoje. Ele recompensa validadores por construir a cadeia, mas corta seus depósitos se eles tentarem atacá-lo, incentivando o comportamento saudável. Esta atualização já está ativa na forma do Beacon Chain."
+    }
+  ],
+  "nIb6XF": [
+    {
+      "type": 0,
+      "value": "E grandes penalidades, ou "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": ", são aplicadas por ações maliciosas."
+    }
+  ],
+  "nRdJct": [
+    {
+      "type": 0,
+      "value": "Continuar sem todas as transações confirmadas"
+    }
+  ],
+  "nZTFTz": [
+    {
+      "type": 0,
+      "value": "Compreendo que não há qualquer vantagem em fazer mais de um depósito por validador. Qualquer "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " extra enviado em um depósito duplicado não será contado no saldo efetivo do meu validador e eu não serei capaz de retirá-lo."
+    }
+  ],
+  "ndhFef": [
+    {
+      "type": 0,
+      "value": "Quando você estiver confortável, gerará suas chaves e depositará seus ETH."
+    }
+  ],
+  "njAU72": [
+    {
+      "type": 0,
+      "value": "Francês"
+    }
+  ],
+  "njnn9P": [
+    {
+      "type": 0,
+      "value": "Comecei a executar o meu cliente validador."
+    }
+  ],
+  "ntG2by": [
+    {
+      "type": 0,
+      "value": "Arquitetura avançada do sistema"
+    }
+  ],
+  "nz27+c": [
+    {
+      "type": 0,
+      "value": "Se você tiver dúvidas, a comunidade EthStaker é um bom lugar para obter ajuda! Você pode encontrar suporte em "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " ou "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "o9QvTP": [
+    {
+      "type": 0,
+      "value": "Antes de começar"
+    }
+  ],
+  "oLxfO1": [
+    {
+      "type": 0,
+      "value": "Agora que as chaves foram importadas, tudo o que resta fazer (supondo que seu nó de sinalizador já esteja em execução) é executar o cliente validador."
+    }
+  ],
+  "oPdwwC": [
+    {
+      "type": 0,
+      "value": "Limitar a participação máxima para "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH incentiva a descentralização da força, pois impede que qualquer validador individual tenha um voto excessivamente grande no estado da cadeia."
+    }
+  ],
+  "oWhj8Q": [
+    {
+      "type": 0,
+      "value": "Com que frequência são emitidas recompensas/penalizações?"
+    }
+  ],
+  "ogbG7r": [
+    {
+      "type": 0,
+      "value": "Para se tornar um validador no Beacon Chain, você precisa depositar "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " para cada validador que deseja executar."
+    }
+  ],
+  "ohspQX": [
+    {
+      "type": 0,
+      "value": "Responsabilidades"
+    }
+  ],
+  "okxBZ6": [
+    {
+      "type": 0,
+      "value": "O OpenEthereum, antes conhecido como Parity, foi projetado para ser \"o cliente Ethereum mais rápido, mais leve e mais seguro\"."
+    }
+  ],
+  "omJNJw": [
+    {
+      "type": 0,
+      "value": "Atenção!"
+    }
+  ],
+  "on8WXn": [
+    {
+      "type": 0,
+      "value": "Eu importei a configuração do painel para meu servidor Grafana e verifiquei duas vezes que meu nó esteja ativo."
+    }
+  ],
+  "orM+1T": [
+    {
+      "type": 0,
+      "value": "O Teku também carregará validadores dos keystores (e senhas) a partir dos caminhos encontrados na variável de ambiente das chaves de validadores."
+    }
+  ],
+  "orczlb": [
+    {
+      "type": 0,
+      "value": "O contrato tem um saldo grande?"
+    }
+  ],
+  "ouW9ov": [
+    {
+      "type": 0,
+      "value": "Seus validadores"
+    }
+  ],
+  "ox304v": [
+    {
+      "type": 0,
+      "value": "Ocorreu um erro"
+    }
+  ],
+  "ozEkVY": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " para sincronizar a testnet Goerli."
+    }
+  ],
+  "p0b6zX": [
+    {
+      "type": 0,
+      "value": "Mais sobre Status"
+    }
+  ],
+  "p556q3": [
+    {
+      "type": 0,
+      "value": "Copiado"
+    }
+  ],
+  "pA+UVF": [
+    {
+      "type": 0,
+      "value": "Se você desejar ver o launchpad em outro idioma, ou se você puder ajudar a traduzir, "
+    },
+    {
+      "type": 1,
+      "value": "getInTouch"
+    },
+    {
+      "type": 0,
+      "value": "!"
+    }
+  ],
+  "pXyH++": [
+    {
+      "type": 0,
+      "value": "A documentação do Besu explica como baixar e instalar o cliente."
+    }
+  ],
+  "penFMT": [
+    {
+      "type": 0,
+      "value": "Eth2 é um conjunto de atualizações que tornarão o Ethereum mais escalável, seguro e sustentável. Essas atualizações melhorarão Ethereum e, ao mesmo tempo, continuarão perfeitamente na cadeia de hoje. Aqui tem mais sobre as diferentes atualizações:"
+    }
+  ],
+  "pfJX2D": [
+    {
+      "type": 0,
+      "value": "Mais sobre o phishing"
+    }
+  ],
+  "pnxB8A": [
+    {
+      "type": 0,
+      "value": "O Nimbus procura por keystores na sua pasta de validadores."
+    }
+  ],
+  "pqC+qt": [
+    {
+      "type": 0,
+      "value": "Slashing"
+    }
+  ],
+  "ps8lLk": [
+    {
+      "type": 0,
+      "value": "Ficar off-line enquanto uma supermaioria (2/3) dos validadores ainda estiver online leva a penalidades relativamente pequenas, já que ainda existem validadores online suficientes para a cadeia finalizar. "
+    },
+    {
+      "type": 1,
+      "value": "expected"
+    }
+  ],
+  "ptWiT7": [
+    {
+      "type": 0,
+      "value": "Eu simulei como parar e reiniciar manualmente meu Nó Beacon (BN) e o Cliente Validador (VC) exitosamente."
+    }
+  ],
+  "pyWt01": [
+    {
+      "type": 0,
+      "value": "Resumo do seu depósito"
+    }
+  ],
+  "q2XW/k": [
+    {
+      "type": 0,
+      "value": "Se sua chave de retirada for roubada, o ladrão poderá transferir o saldo do seu validador, mas só depois que o validador tenha saído."
+    }
+  ],
+  "q6sz6X": [
+    {
+      "type": 0,
+      "value": "Economia de Eth2"
+    }
+  ],
+  "qDcbPp": [
+    {
+      "type": 0,
+      "value": "Os seus 16 ETH poderão então ser retirados, com a sua chave de retirada, com uma demora de cerca de um dia."
+    }
+  ],
+  "qDvaNm": [
+    {
+      "type": 0,
+      "value": "Eu entendo que as chaves são minha responsabilidade e que meu mnemônico (semente) será a "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": " para retirar meus fundos."
+    }
+  ],
+  "qLf68w": [
+    {
+      "type": 0,
+      "value": "Documentação do OpenEthereum"
+    }
+  ],
+  "qMePPG": [
+    {
+      "type": 0,
+      "value": "Observação"
+    }
+  ],
+  "qQ+Xla": [
+    {
+      "type": 0,
+      "value": "Coreano"
+    }
+  ],
+  "qZ59xY": [
+    {
+      "type": 0,
+      "value": "Todos os validadores"
+    }
+  ],
+  "qdk7Hp": [
+    {
+      "type": 0,
+      "value": "Sua carteira foi desconectada"
+    }
+  ],
+  "qgqVCE": [
+    {
+      "type": 0,
+      "value": "reconectar a sua carteira"
+    }
+  ],
+  "qkhah0": [
+    {
+      "type": 0,
+      "value": "Salve os arquivos de chave e prepare o arquivo de validador"
+    }
+  ],
+  "qpdTjz": [
+    {
+      "type": 0,
+      "value": "Um cliente Eth2 com foco pesado na velocidade e segurança. Criado por Sigma Prime, uma empresa de segurança da informação e engenharia de software que financiou a Lighthouse juntamente com a Ethereum Foundation, Consensys e indivíduos privados."
+    }
+  ],
+  "quIMjo": [
+    {
+      "type": 0,
+      "value": "Certifique-se de fazer o seguinte para que seu cliente Eth1 funcione corretamente."
+    }
+  ],
+  "qwh6gM": [
+    {
+      "type": 0,
+      "value": "Compreendo os riscos de adoção precoce e de slashing."
+    }
+  ],
+  "r2BH1M": [
+    {
+      "type": 0,
+      "value": "Configurar Prysm"
+    }
+  ],
+  "r4JsKB": [
+    {
+      "type": 0,
+      "value": "Transação bem-sucedida"
+    }
+  ],
+  "rD3ot9": [
+    {
+      "type": 0,
+      "value": "Guia de phishing"
+    }
+  ],
+  "rFe61n": [
+    {
+      "type": 0,
+      "value": "Como validador, você será responsável por proteger a rede e receberá pagamentos contínuos por ações que ajudem a rede a chegar ao consenso."
+    }
+  ],
+  "rNEdex": [
+    {
+      "type": 0,
+      "value": "você pode pensar em um validador como um eleitor para novos blocos"
+    }
+  ],
+  "rTSJI9": [
+    {
+      "type": 0,
+      "value": "Experimente a testnet"
+    }
+  ],
+  "rULiIc": [
+    {
+      "type": 0,
+      "value": "Conclua a lista de verificação dos participantes"
+    }
+  ],
+  "raRw6Z": [
+    {
+      "type": 0,
+      "value": "Inicializador do Launchpad"
+    }
+  ],
+  "rbrahO": [
+    {
+      "type": 0,
+      "value": "Fechar"
+    }
+  ],
+  "rcdxTW": [
+    {
+      "type": 0,
+      "value": "Dado um número total fixo de validadores, as recompensas/penalizações predominantemente são proporcionais ao saldo do validador: atestar com um saldo maior resulta em recompensas/penalizações maiores, enquanto atestar com um saldo mais baixo resulta em recompensas/penalidades mais baixas."
+    }
+  ],
+  "rs4eqr": [
+    {
+      "type": 0,
+      "value": "Talvez você precise recarregar o saldo do seu validador por duas razões importantes. Se o saldo efetivo do seu validador estiver abaixo de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", você não ganhará suas recompensas completas. E se ele cair tão baixo quanto "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", o sistema expulsará seu validador."
+    }
+  ],
+  "rswUPu": [
+    {
+      "type": 0,
+      "value": "Resumo do Launchpad"
+    }
+  ],
+  "rxttyC": [
+    {
+      "type": 0,
+      "value": "Seu mnemônico é o backup das suas chaves de assinatura e será a ÚNICA maneira de retirar seus "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " quando o momento chegar, e ninguém poderá ajudá-lo a recuperar seu mnemônico se você o perder."
+    }
+  ],
+  "s0FTco": [
+    {
+      "type": 0,
+      "value": "APR"
+    }
+  ],
+  "s6gImC": [
+    {
+      "type": 0,
+      "value": "O Teku também pode ser configurado através de um arquivo YAML recebido de várias maneiras possíveis."
+    }
+  ],
+  "sXV95+": [
+    {
+      "type": 0,
+      "value": "CPU e RAM"
+    }
+  ],
+  "soCLV+": [
+    {
+      "type": 0,
+      "value": "Lista de verificação"
+    }
+  ],
+  "sraQ3P": [
+    {
+      "type": 0,
+      "value": "Aguardando conexão..."
+    }
+  ],
+  "svsq8J": [
+    {
+      "type": 0,
+      "value": "Eu sincronizei o meu nó de beacon Eth2 no "
+    },
+    {
+      "type": 1,
+      "value": "ETH2_NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "sy35J+": [
+    {
+      "type": 0,
+      "value": "Qual é o contrato de depósito?"
+    }
+  ],
+  "szN3Fl": [
+    {
+      "type": 0,
+      "value": "Compreendo e concordo com os termos de serviço e com tudo o que foi dito nas secções anteriores."
+    }
+  ],
+  "tJcyUM": [
+    {
+      "type": 0,
+      "value": "Seu deposit_data.json sugere que você deseja configurar mais validadores. Esses depósitos ainda estão pendentes. Se você achar que já fez esses depósitos, espere uma hora antes de tentar novamente para evitar depósitos duplicados."
+    }
+  ],
+  "teyxVk": [
+    {
+      "type": 0,
+      "value": "Qual deve ser o endereço?"
+    }
+  ],
+  "tigMuZ": [
+    {
+      "type": 0,
+      "value": "Aguarde pelo menos 30 minutos antes de tentar reenviar uma transação com este arquivo "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": ". Isso dará à nossa fonte de dados da cadeia tempo suficiente para sinalizar quaisquer depósitos duplicados."
+    }
+  ],
+  "tkFTZw": [
+    {
+      "type": 0,
+      "value": "Saldo depois de recargar"
+    }
+  ],
+  "tsfX5f": [
+    {
+      "type": 0,
+      "value": "Confirmar depósito"
+    }
+  ],
+  "tv5Cxs": [
+    {
+      "type": 0,
+      "value": "Note, no entanto, que este mecanismo de escala funciona de uma forma não óbvia. Entender os detalhes precisos de como ele funciona requer compreensão de um conceito chamado "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": ". Se você ainda não está familiarizado com este conceito, recomendamos que leia o "
+    },
+    {
+      "type": 1,
+      "value": "article"
+    }
+  ],
+  "tzMNF3": [
+    {
+      "type": 0,
+      "value": "Status"
+    }
+  ],
+  "u28qA1": [
+    {
+      "type": 0,
+      "value": "Após o depósito"
+    }
+  ],
+  "uCikFk": [
+    {
+      "type": 0,
+      "value": "Você também precisa de largura de banda de upload suficiente. A partir de "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", deve ser de ~700-800 MB/hora, e é provável que o requisito aumente."
+    }
+  ],
+  "uJzGSb": [
+    {
+      "type": 0,
+      "value": "Certifique-se de que você está ciente de como evitar ataques de phishing. Nós preparamos uma lista de coisas para observar."
+    }
+  ],
+  "uNfxNg": [
+    {
+      "type": 0,
+      "value": "Para continuar, "
+    },
+    {
+      "type": 1,
+      "value": "reconnect"
+    }
+  ],
+  "ubKWX8": [
+    {
+      "type": 0,
+      "value": "Gerar pares de chaves"
+    }
+  ],
+  "uhapiE": [
+    {
+      "type": 0,
+      "value": "Certifique-se de que sua largura de banda não possa ser restringida ou limitada para que seu nó permaneça sincronizado e esteja pronto para ser validado quando chamado."
+    }
+  ],
+  "ujVT29": [
+    {
+      "type": 0,
+      "value": "Agora você deve anotar seu mnemônico em um lugar seguro e salvar um keystore para cada um dos seus "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validadores. Certifique-se de mantê-los seguros, de preferência off-line. Os keystores dos seus validadores devem estar disponíveis no diretório "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " recém criado."
+    }
+  ],
+  "ukfwum": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador com Nimbus"
+    }
+  ],
+  "unzIoE": [
+    {
+      "type": 0,
+      "value": "Antes de executar um validador e começar a proteger a rede, você precisa depositar "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Isso forma seu saldo inicial."
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "Existem depósitos recentes de "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
+  "vBOf5K": [
+    {
+      "type": 0,
+      "value": "Seu saldo é atualizado periodicamente pelas regras da rede Ethereum, conforme você atende (ou não) às suas responsabilidades."
+    }
+  ],
+  "vEJDo8": [
+    {
+      "type": 0,
+      "value": "Proteja seus fundos usando um software de monitoramento e aprenda a lidar com diferentes cenários do mundo real."
+    }
+  ],
+  "vFrE9m": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador e ajude a proteger o Eth2."
+    }
+  ],
+  "vIF140": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador e ajude a garantir o futuro da Ethereum"
+    }
+  ],
+  "vJez0K": [
+    {
+      "type": 0,
+      "value": "Proceda com cautela. A nossa fonte de dados em cadeia está indisponível e não podemos sinalizar quaisquer depósitos duplos."
+    }
+  ],
+  "vY2wig": [
+    {
+      "type": 0,
+      "value": "Erro ao carregar"
+    }
+  ],
+  "vYODEJ": [
+    {
+      "type": 0,
+      "value": "Adquira "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "vYOWYI": [
+    {
+      "type": 0,
+      "value": "Chinês (simplificado)"
+    }
+  ],
+  "va96SS": [
+    {
+      "type": 0,
+      "value": "Reencaminhei as portas necessárias para a(s) máquina(s) correta(s) do meu roteador (apenas abra as portas que se aplicam à sua instalação)."
+    }
+  ],
+  "vbVsqW": [
+    {
+      "type": 0,
+      "value": "Certifique-se de completar "
+    },
+    {
+      "type": 1,
+      "value": "stakerChecklist"
+    },
+    {
+      "type": 0,
+      "value": " o mais rápido possível. E junte-se à comunidade EthStaker para suporte e discussão com outros validadores."
+    }
+  ],
+  "vg1dVR": [
+    {
+      "type": 0,
+      "value": "Com sua chave de assinatura, você poderia tentar sair rapidamente do validador e, em seguida, transferir os fundos (com a chave de retirada) antes do ladrão."
+    }
+  ],
+  "vyvUB5": [
+    {
+      "type": 0,
+      "value": "Este arquivo JSON não é para a rede correta. Envie um arquivo gerado para a sua rede atual: "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "w/ghcK": [
+    {
+      "type": 0,
+      "value": "Aprofunde-se sobre a forma como Eth2 atualiza o Ethereum."
+    }
+  ],
+  "w6qYSU": [
+    {
+      "type": 0,
+      "value": "Execute o seguinte comando para iniciar o aplicativo"
+    }
+  ],
+  "wJ1PbL": [
+    {
+      "type": 0,
+      "value": "Para "
+    },
+    {
+      "type": 1,
+      "value": "operatingSystem"
+    }
+  ],
+  "wJy3tO": [
+    {
+      "type": 0,
+      "value": "Configuração inicial"
+    }
+  ],
+  "wawegX": [
+    {
+      "type": 0,
+      "value": "vara de pesca"
+    }
+  ],
+  "wdb1NC": [
+    {
+      "type": 0,
+      "value": "Mais sobre proof-of-stake"
+    }
+  ],
+  "wfSgCZ": [
+    {
+      "type": 0,
+      "value": "Conectar à "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "wm04oC": [
+    {
+      "type": 0,
+      "value": "Execute o seguinte comando:"
+    }
+  ],
+  "wqUcy/": [
+    {
+      "type": 0,
+      "value": "Riscos do adotador antecipado"
+    }
+  ],
+  "wtTeex": [
+    {
+      "type": 0,
+      "value": "Há erros de ortografia?"
+    }
+  ],
+  "x+fF+M": [
+    {
+      "type": 0,
+      "value": "Simulações de testnet"
+    }
+  ],
+  "x0tVK4": [
+    {
+      "type": 0,
+      "value": "Validar em Ethereum não é o mesmo que minerar. Os resultados são semelhantes: o trabalho que você faz irá estender e proteger a cadeia. Mas o processo é completamente diferente porque utilizam mecanismos de consenso diferentes."
+    }
+  ],
+  "xDyl3T": [
+    {
+      "type": 0,
+      "value": "Faça uma verificação cruzada do endereço do contrato de depósito em relação a outros sites, por exemplo: Reddit, Twitter e GitHub. Há também uma lista de fontes confiáveis em "
+    },
+    {
+      "type": 1,
+      "value": "ethereumorg"
+    }
+  ],
+  "xH5GKj": [
+    {
+      "type": 0,
+      "value": "Eu sou um early adopter, e aceito que erros de software e design podem me levar a sofrer slashing."
+    }
+  ],
+  "xJPCw/": [
+    {
+      "type": 0,
+      "value": "O que acontece se eu perder minha chave de retirada?"
+    }
+  ],
+  "xOSMb1": [
+    {
+      "type": 0,
+      "value": "Documentação do Nethermind on Goerli"
+    }
+  ],
+  "xP6BKs": [
+    {
+      "type": 0,
+      "value": "lista de verificação do participante"
+    }
+  ],
+  "xQrU13": [
+    {
+      "type": 0,
+      "value": "Revise a lista de verificação de participação antes de prosseguir. Utilize-a como um guia para marcar as tarefas conforme você completa a configuração do validador."
+    }
+  ],
+  "xSvJIi": [
+    {
+      "type": 0,
+      "value": "As recompensas do bloco são calculadas usando uma escala deslizante com base na quantidade total de ETH depositada na rede."
+    }
+  ],
+  "xYRzZY": [
+    {
+      "type": 0,
+      "value": "O Nimbus é um projeto de pesquisa e uma implementação de cliente para Ethereum 2.0 projetada para ter um bom desempenho em sistemas embutidos e dispositivos móveis pessoais."
+    }
+  ],
+  "xbet2w": [
+    {
+      "type": 0,
+      "value": "Instalar python3.7+"
+    }
+  ],
+  "xogY3N": [
+    {
+      "type": 0,
+      "value": "Besu está escrito em Java e publicado sob a licença Apache 2.0."
+    }
+  ],
+  "y4dBsA": [
+    {
+      "type": 0,
+      "value": "Configurar sincronização de horário"
+    }
+  ],
+  "y7dWNc": [
+    {
+      "type": 0,
+      "value": "Importante: o voto de um validador é ponderado pelo montante da sua participação."
+    }
+  ],
+  "yI/DO8": [
+    {
+      "type": 0,
+      "value": "esse número aumenta se outros validadores sofrerem slashing ao mesmo tempo"
+    }
+  ],
+  "ySYWBD": [
+    {
+      "type": 0,
+      "value": "Eu estou mantendo a(s) minha(s) chave(s) segura(s) e anotei minha frase mnemônica."
+    }
+  ],
+  "yT2EZO": [
+    {
+      "type": 0,
+      "value": "Em outras palavras, "
+    },
+    {
+      "type": 1,
+      "value": "boldSummary"
+    },
+    {
+      "type": 0,
+      "value": ". Quanto mais votos um bloco tiver, maior a probabilidade de ele ser adicionado à cadeia."
+    }
+  ],
+  "ydh1KU": [
+    {
+      "type": 0,
+      "value": "Informações de idioma"
+    }
+  ],
+  "yeI1Zq": [
+    {
+      "type": 0,
+      "value": "Note que este atraso pode ser maior se muitos outros estiverem saindo ou sendo expulsos ao mesmo tempo."
+    }
+  ],
+  "yis3aS": [
+    {
+      "type": 0,
+      "value": "Este é o cenário previsto."
+    }
+  ],
+  "yjBvUO": [
+    {
+      "type": 0,
+      "value": "O Nethermind é construído em .NET Core. Estenda-o, personalize-o, o limite é o céu.."
+    }
+  ],
+  "yoGtkz": [
+    {
+      "type": 0,
+      "value": "Certifique-se de que o seu nó tem mais de 20 pares."
+    }
+  ],
+  "z/ZhML": [
+    {
+      "type": 0,
+      "value": "Certifique-se de ter definido "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " para "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "; caso contrário, o depósito será inválido."
+    }
+  ],
+  "z63I56": [
+    {
+      "type": 0,
+      "value": "validador"
+    }
+  ],
+  "z6K3D6": [
+    {
+      "type": 0,
+      "value": "Eu configurei o meu serviço "
+    },
+    {
+      "type": 1,
+      "value": "prometheus"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "zAVb0/": [
+    {
+      "type": 0,
+      "value": "Mais sobre Lighthouse e Sigma Prime"
+    }
+  ],
+  "zGkAVo": [
+    {
+      "type": 0,
+      "value": "No outro extremo do espectro, se o seu saldo estiver mais próximo de 31 ETH, Provavelmente não vale a pena adicionar o ETH extra necessário para voltar para 32."
+    }
+  ],
+  "zbEBi9": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " para sincronizar a mainnet do Ethereum."
+    }
+  ],
+  "zicXn7": [
+    {
+      "type": 0,
+      "value": "Segurança do nó"
+    }
+  ]
+}

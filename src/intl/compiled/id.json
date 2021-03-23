@@ -1,0 +1,5428 @@
+{
+  "+3PPtT": [
+    {
+      "type": 0,
+      "value": "Hari ini, Anda akan mengamankan Beacon Chain, peningkatan Eth2 yang pertama. Ini adalah rantai terpisah yang menggunakan mekanisme konsensus bukti kepemilikan. Pada akhirnya Anda akan membantu mengamankan semua Ethereum, setelah mainnet (Ethereum yang kita gunakan hari ini) bergabung dengan Beacon Chain."
+    }
+  ],
+  "+L0IkF": [
+    {
+      "type": 0,
+      "value": "Langkah 2: Buat kunci deposit menggunakan alat deposit Ethereum Foundation"
+    }
+  ],
+  "+UUcBt": [
+    {
+      "type": 0,
+      "value": "Pilih Bahasa"
+    }
+  ],
+  "+V+ZX+": [
+    {
+      "type": 0,
+      "value": "Waktu aktif validator"
+    }
+  ],
+  "+e8bO+": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa saya tidak akan dapat menarik dana saya jika kehilangan frasa mnemonik saya."
+    }
+  ],
+  "+fnRDB": [
+    {
+      "type": 0,
+      "value": "Saya setuju"
+    }
+  ],
+  "+mDtA4": [
+    {
+      "type": 0,
+      "value": "6. Harap tunggu untuk menjadi aktif"
+    }
+  ],
+  "+oBh8L": [
+    {
+      "type": 0,
+      "value": "Kami akan membantu Anda membuat kunci penandatanganan untuk setiap validator yang ingin Anda jalankan. Karena tidak ada penarikan hingga Penggabungan, Anda tidak akan membuat kunci penarikan Anda sekarang. Ketika memungkinkan untuk menarik dana, Anda dapat memperoleh kunci penarikan dari mnemonik Anda."
+    }
+  ],
+  "+s8Gac": [
+    {
+      "type": 0,
+      "value": "Hubungkan "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " ke "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "/+atl4": [
+    {
+      "type": 0,
+      "value": "Penafian rekomendasi"
+    }
+  ],
+  "//KCTE": [
+    {
+      "type": 0,
+      "value": "Anda dapat memulai semua transaksi sekaligus, atau memulainya satu per satu."
+    }
+  ],
+  "/QPc9s": [
+    {
+      "type": 0,
+      "value": "Anda bisa memberi sinyal niat Anda untuk berhenti memvalidasi dengan menandatangani pesan keluar sukarela dengan validator Anda."
+    }
+  ],
+  "/SbhtD": [
+    {
+      "type": 0,
+      "value": "Anda juga dapat menggunakan "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": " untuk menginstal pip3. Untuk petunjuk terbaru tentang pemasangan pip3, dan untuk tautan unduhan langsung, lihat "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    }
+  ],
+  "/U09hN": [
+    {
+      "type": 0,
+      "value": "Untuk menghindari menampakkan identitas validator Anda ke jaringan, Anda dapat menggunakan VPN tepercaya untuk membantu mengurangi risiko pengungkapan alamat IP Anda."
+    }
+  ],
+  "/VVB8t": [
+    {
+      "type": 0,
+      "value": "Tinjau bagian ini sebelum memutuskan untuk melanjutkan dengan penyiapan validator."
+    }
+  ],
+  "/Vc/P6": [
+    {
+      "type": 0,
+      "value": "Halaman ini tidak ada."
+    }
+  ],
+  "/WenEu": [
+    {
+      "type": 0,
+      "value": "Anda bertanggung jawab atas transaksinya. Situs web yang bersifat menipu mungkin mencoba dan memikat Anda untuk mengirimkan "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " kepada mereka, alih-alih kontrak deposit resmi. Pastikan alamat tujuan pengiriman transaksi adalah alamat yang benar."
+    }
+  ],
+  "/jJLYy": [
+    {
+      "type": 0,
+      "value": "Transaksi"
+    }
+  ],
+  "/ub26/": [
+    {
+      "type": 0,
+      "value": "Pahami risikonya"
+    }
+  ],
+  "/vPNsl": [
+    {
+      "type": 0,
+      "value": "Penggabungan, juga dikenal sebagai docking, akan melihat mainnet Ethereum yang kita gunakan hari ini bergabung dengan Beacon Chain. Ini adalah saat Ethereum akan sepenuhnya beralih ke bukti kepemilikan."
+    }
+  ],
+  "/vkCbT": [
+    {
+      "type": 0,
+      "value": "Validator mendapatkan imbalan karena mengajukan dan membuktikan blok. Hadiah terkait dengan jumlah keseluruhan dari "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " yang dipertaruhkan di jaringan."
+    }
+  ],
+  "/w/KT4": [
+    {
+      "type": 0,
+      "value": "Namun, semuanya tidak hilang. Dengan asumsi Anda mendapatkan kuncinya menggunakan "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " (sesuai alur orientasi default), lalu "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/wNiYN": [
+    {
+      "type": 0,
+      "value": "Kontrak deposit telah diverifikasi pada tingkat kode byte untuk memastikan keamanan Anda."
+    }
+  ],
+  "/ydZdf": [
+    {
+      "type": 0,
+      "value": "Seberapa besar imbalan / penaltinya?"
+    }
+  ],
+  "00OWFk": [
+    {
+      "type": 0,
+      "value": "Nilai isi ulang minimum adalah "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "00d8uq": [
+    {
+      "type": 0,
+      "value": "Setelah disiapkan, validator Anda tidak akan langsung aktif. Gunakan waktu ini untuk menyelesaikan daftar periksa dan berlatih ekstra di testnet."
+    }
+  ],
+  "03xT/J": [
+    {
+      "type": 0,
+      "value": "Ide di balik ini adalah untuk meminimalkan kerugian dari kesalahan yang benar, tetapi sangat melemahkan serangan terkoordinasi."
+    }
+  ],
+  "07C4IQ": [
+    {
+      "type": 0,
+      "value": "Bagian 3 - Setelah penyetoran"
+    }
+  ],
+  "0GSZcr": [
+    {
+      "type": 0,
+      "value": "Stake"
+    }
+  ],
+  "0PlVao": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang pencegahan pemotongan"
+    }
+  ],
+  "0RmIrh": [
+    {
+      "type": 0,
+      "value": "deposit_data.json Anda menyarankan Anda untuk menyiapkan satu validator lagi. Deposit ini masih belum diselesaikan. Jika Anda merasa telah melakukan deposit ini, tunggu satu jam sebelum mencoba lagi untuk menghindari setoran ganda."
+    }
+  ],
+  "0S8/Wo": [
+    {
+      "type": 0,
+      "value": "Latihan testnet"
+    }
+  ],
+  "0i4cCJ": [
+    {
+      "type": 0,
+      "value": "Konfirmasi deposit ("
+    },
+    {
+      "type": 1,
+      "value": "depositKeys"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "0lHkrT": [
+    {
+      "type": 0,
+      "value": "Kedua, instal paket dependensi:"
+    }
+  ],
+  "0oNdmk": [
+    {
+      "type": 0,
+      "value": "FAQ validator"
+    }
+  ],
+  "0qvZJn": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang visi Eth2"
+    }
+  ],
+  "0uqjBl": [
+    {
+      "type": 0,
+      "value": "Dapatkan imbalan berkelanjutan karena menyediakan barang publik kepada komunitas."
+    }
+  ],
+  "19o6KO": [
+    {
+      "type": 0,
+      "value": "Kapan saya dapat menarik dana saya, dan apa perbedaan antara keluar dan menarik?"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "Titik akhir JSON RPC"
+    }
+  ],
+  "1P6GMj": [
+    {
+      "type": 0,
+      "value": "Pemantauan"
+    }
+  ],
+  "1PPGHb": [
+    {
+      "type": 0,
+      "value": "Saya telah memverifikasi waktu server saya sesuai dengan jam dinding."
+    }
+  ],
+  "1QW89r": [
+    {
+      "type": 0,
+      "value": "Lebih banyak statistik"
+    }
+  ],
+  "1UmyRL": [
+    {
+      "type": 0,
+      "value": "rilis perangkat lunak stabil terbaru"
+    }
+  ],
+  "1VJ05X": [
+    {
+      "type": 0,
+      "value": "Bagian 3"
+    }
+  ],
+  "1Vkpd0": [
+    {
+      "type": 0,
+      "value": "Pastikan berkas kata sandi tidak memiliki baris baru di belakangnya."
+    }
+  ],
+  "1fDfw7": [
+    {
+      "type": 0,
+      "value": "Bagaimana ini semua bisa terjadi?"
+    }
+  ],
+  "1fytak": [
+    {
+      "type": 0,
+      "value": "Periksa detail kontrak deposit"
+    }
+  ],
+  "2+TGmE": [
+    {
+      "type": 0,
+      "value": "Untuk memproses deposit validator yang masuk dari rantai Eth1, Anda harus menjalankan klien Eth1 serta klien Eth2 Anda. Anda dapat menggunakan layanan pihak ketiga seperti Infura, tetapi kami merekomendasikan menjalankan klien Anda sendiri untuk menjaga jaringan tetap terdesentralisasi."
+    }
+  ],
+  "22EpKq": [
+    {
+      "type": 0,
+      "value": "Bukan file "
+    },
+    {
+      "type": 1,
+      "value": "JSON"
+    },
+    {
+      "type": 0,
+      "value": " yang valid"
+    }
+  ],
+  "25suT4": [
+    {
+      "type": 0,
+      "value": "Pemisah jalur bergantung pada sistem operasi, dan harus "
+    },
+    {
+      "type": 1,
+      "value": "semicolon"
+    },
+    {
+      "type": 0,
+      "value": " di Windows, bukan "
+    },
+    {
+      "type": 1,
+      "value": "colon"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2AHkym": [
+    {
+      "type": 0,
+      "value": "Terjadi kesalahan saat memuat informasi validator Anda dari Beaconcha.in"
+    }
+  ],
+  "2CYEJa": [
+    {
+      "type": 0,
+      "value": "Penyelesaian Masalah"
+    }
+  ],
+  "2DuJTX": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " untuk menghubungkan node Eth2 Anda ke titik akhir JSON RPC. Ini akan mengaktifkan layanan JSON RPC pada port 8545 default."
+    }
+  ],
+  "2a1GTh": [
+    {
+      "type": 0,
+      "value": "Anda selalu dapat menghitung ulang kunci penandatanganan Anda dari kunci penarikan Anda"
+    }
+  ],
+  "2iH8Zc": [
+    {
+      "type": 0,
+      "value": "Dokumentasi manajemen kunci Nimbus"
+    }
+  ],
+  "2t/3ab": [
+    {
+      "type": 0,
+      "value": "File lain yang baru saja Anda buat adalah "
+    },
+    {
+      "type": 1,
+      "value": "depositDataJson"
+    },
+    {
+      "type": 0,
+      "value": ". File ini berisi kunci publik yang diasosiasikan dengan validator Anda; Anda perlu mengunggah file ini di langkah berikutnya."
+    }
+  ],
+  "32rBNK": [
+    {
+      "type": 0,
+      "value": "Ketentuan Layanan"
+    }
+  ],
+  "36KKVb": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang ekonomi Eth2"
+    }
+  ],
+  "38VH2G": [
+    {
+      "type": 0,
+      "value": "Instal alat deposit-cli"
+    }
+  ],
+  "3CRtg8": [
+    {
+      "type": 0,
+      "value": "Anda tidak memiliki cukup "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " di akun ini untuk "
+    },
+    {
+      "type": 1,
+      "value": "numberOfValidators"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    }
+  ],
+  "3GbrWR": [
+    {
+      "type": 0,
+      "value": "Mengapa hadiah bergantung pada jumlah total validator di jaringan?"
+    }
+  ],
+  "3H3ygi": [
+    {
+      "type": 0,
+      "value": "Tidak ada validator yang ditemukan untuk dompet Anda yang terhubung"
+    }
+  ],
+  "3NHygY": [
+    {
+      "type": 0,
+      "value": "Menguji di Goerli"
+    }
+  ],
+  "3PZq07": [
+    {
+      "type": 0,
+      "value": "Karena itu, sebaiknya buat kunci Anda dari mnemonik yang berfungsi sebagai cadangan lain. Ini akan menjadi default untuk validator yang bergabung melalui proses orientasi situs ini."
+    }
+  ],
+  "3PbtmF": [
+    {
+      "type": 0,
+      "value": "Periksa alamat lengkapnya, bukan hanya sebagian. Mungkin hanya ada beberapa byte yang berbeda."
+    }
+  ],
+  "3Pmjlx": [
+    {
+      "type": 0,
+      "value": "Saya telah menginstal "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " dari klien Eth2 saya."
+    }
+  ],
+  "3Q43SM": [
+    {
+      "type": 0,
+      "value": "Menjadi validator"
+    }
+  ],
+  "3QmqFf": [
+    {
+      "type": 0,
+      "value": "Transaksi isi ulang"
+    }
+  ],
+  "3URRZK": [
+    {
+      "type": 0,
+      "value": "Geth di dokumentasi Goerli"
+    }
+  ],
+  "3tR/V9": [
+    {
+      "type": 0,
+      "value": "Bagian 2 - Selama penyiapan"
+    }
+  ],
+  "3zCA2i": [
+    {
+      "type": 0,
+      "value": "Jika Anda melihat pesan kesalahan "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", Anda mungkin perlu menginstal paket "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " atau "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "4+3cIr": [
+    {
+      "type": 0,
+      "value": "Anda telah berhasil menyiapkan validator testnet! Kami menyarankan Anda menyelesaikan daftar periksa sebelum memvalidasi di "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    }
+  ],
+  "47svuN": [
+    {
+      "type": 0,
+      "value": "Instalasi"
+    }
+  ],
+  "4FcLja": [
+    {
+      "type": 0,
+      "value": "Prysm adalah implementasi Go dari protokol Ethereum 2.0 yang fokus pada kegunaan, keamanan, dan keandalan."
+    }
+  ],
+  "4NvAhl": [
+    {
+      "type": 0,
+      "value": "Mulailah dengan menyiapkan perangkat keras dan sistem operasi pilihan Anda."
+    }
+  ],
+  "4QNsja": [
+    {
+      "type": 0,
+      "value": "Mengapa skala geser? Kami tidak akan membahas detail yang berlebihan di sini, intinya adalah perlu ada jumlah validator minimum (dan karenanya jumlah minimum yang dipertaruhkan) agar jaringan berfungsi dengan baik. Jadi, demi mendorong lebih banyak validator untuk bergabung, penting agar suku bunga tetap tinggi hingga jumlah minimum ini tercapai."
+    }
+  ],
+  "4hnEBA": [
+    {
+      "type": 0,
+      "value": "Apakah kode kontrak pintar telah diverifikasi?"
+    }
+  ],
+  "4l6vz1": [
+    {
+      "type": 0,
+      "value": "Salin"
+    }
+  ],
+  "52qGy6": [
+    {
+      "type": 0,
+      "value": "SAAT INI"
+    }
+  ],
+  "58PXVy": [
+    {
+      "type": 0,
+      "value": "Mengapa dua kunci, bukan satu?"
+    }
+  ],
+  "5HJLBU": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Teku"
+    }
+  ],
+  "5t8oYl": [
+    {
+      "type": 0,
+      "value": "Kunjungi EthStaker di "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " atau "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " kapan saja selama penyiapan Anda untuk mendapatkan bantuan!"
+    }
+  ],
+  "6CK2Nu": [
+    {
+      "type": 0,
+      "value": "Dompet Anda berada di jaringan yang salah. Beralih ke "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "6HBTTN": [
+    {
+      "type": 0,
+      "value": "Proof-of-stake (PoS) dan Beacon Chain"
+    }
+  ],
+  "6UUL73": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang validator"
+    }
+  ],
+  "6VIBSR": [
+    {
+      "type": 0,
+      "value": "Anda dapat meningkatkan saldo efektif validator ini dengan melakukan isi ulang"
+    }
+  ],
+  "6nh4de": [
+    {
+      "type": 0,
+      "value": "Anda bergabung dengan jaringan di tahap awal. Seperti halnya perangkat lunak baru, terdapat potensi bug perangkat lunak. Meskipun tidak mungkin, potensi bug dapat mengakibatkan pemotongan."
+    }
+  ],
+  "6zye8g": [
+    {
+      "type": 0,
+      "value": "Implementasi protokol Eth2 yang fokus pada kegunaan, keamanan, dan keandalan. Prysm dikembangkan oleh Prysmatic Labs, sebuah perusahaan dengan fokus utama pada pengembangan klien mereka."
+    }
+  ],
+  "7+Domh": [
+    {
+      "type": 0,
+      "value": "Catatan"
+    }
+  ],
+  "738tqz": [
+    {
+      "type": 0,
+      "value": "Prysm ditulis dalam Go dan dirilis di bawah lisensi GPL-3.0."
+    }
+  ],
+  "74QdCu": [
+    {
+      "type": 0,
+      "value": "Transaksi dimulai"
+    }
+  ],
+  "793QlI": [
+    {
+      "type": 1,
+      "value": "title"
+    },
+    {
+      "type": 0,
+      "value": " tidak didukung dalam mode offline."
+    }
+  ],
+  "7UOvbT": [
+    {
+      "type": 0,
+      "value": "Offline"
+    }
+  ],
+  "7V/8wz": [
+    {
+      "type": 0,
+      "value": "File konfigurasi"
+    }
+  ],
+  "7XiYRi": [
+    {
+      "type": 0,
+      "value": "Dipotong?"
+    }
+  ],
+  "7d3Nzd": [
+    {
+      "type": 0,
+      "value": "Anda dapat menggunakan bendera grafiti klien validator Anda untuk menambahkan sentuhan pribadi pada blok yang Anda usulkan (beberapa teks pilihan Anda). Anda akan dapat melihatnya menggunakan penjelajah rantai-blok "
+    },
+    {
+      "type": 1,
+      "value": "beaconchain"
+    },
+    {
+      "type": 0,
+      "value": " atau "
+    },
+    {
+      "type": 1,
+      "value": "beaconscan"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "7s6XNV": [
+    {
+      "type": 0,
+      "value": "Taruhan dan hadiah"
+    }
+  ],
+  "7sZfCF": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Nimbus"
+    }
+  ],
+  "7tRtDE": [
+    {
+      "type": 0,
+      "value": "Setiap masa, jaringan mengukur tindakan setiap validator dan mengeluarkan hadiah atau penalti Anda dengan tepat."
+    }
+  ],
+  "7y4xl1": [
+    {
+      "type": 0,
+      "value": "Launchpad Eth2 untuk testnet "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    }
+  ],
+  "80eWKU": [
+    {
+      "type": 0,
+      "value": "Keseimbangan sejati"
+    }
+  ],
+  "82vl9l": [
+    {
+      "type": 0,
+      "value": "Kami tidak dapat mendeteksi MetaMask. Beralih browser atau instal MetaMask."
+    }
+  ],
+  "8FmuYF": [
+    {
+      "type": 0,
+      "value": "Instal pip3"
+    }
+  ],
+  "8HxLGA": [
+    {
+      "type": 0,
+      "value": "Konfigurasi Teku"
+    }
+  ],
+  "8JtiQS": [
+    {
+      "type": 0,
+      "value": "Apakah alamat kontrak yang tercantum di situs web cocok?"
+    }
+  ],
+  "8Rj/6A": [
+    {
+      "type": 0,
+      "value": "Pilih Sistem Operasi (OS) komputer yang Anda gunakan saat ini. Ini akan menjadi komputer yang Anda gunakan untuk membuat kunci Anda. Tidak perlu OS yang ingin Anda gunakan untuk node Anda."
+    }
+  ],
+  "8WtyrD": [
+    {
+      "type": 0,
+      "value": "Bahasa Spanyol"
+    }
+  ],
+  "8XQmxX": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " untuk sinkronisasi testnet Goerli."
+    }
+  ],
+  "8boRAk": [
+    {
+      "type": 0,
+      "value": "slashing"
+    }
+  ],
+  "8wd0q5": [
+    {
+      "type": 0,
+      "value": "Klien Ethereum dirancang agar ramah perusahaan untuk kasus penggunaan jaringan publik dan swasta yang diizinkan."
+    }
+  ],
+  "9+Ddtu": [
+    {
+      "type": 0,
+      "value": "Selanjutnya"
+    }
+  ],
+  "9/4mZe": [
+    {
+      "type": 0,
+      "value": "Validasi melibatkan dua kunci untuk alasan keamanan. Kunci penandatanganan Anda harus tersedia setiap saat. Oleh karena itu, perlu diadakan secara online. Karena apa pun yang online rentan diretas, sebaiknya jangan gunakan kunci yang sama untuk penarikan."
+    }
+  ],
+  "94dQms": [
+    {
+      "type": 0,
+      "value": "Demi keamanan, kami menyarankan Anda memutuskan koneksi dari internet untuk menyelesaikan langkah ini."
+    }
+  ],
+  "96pen8": [
+    {
+      "type": 0,
+      "value": "Sharding akan membuat lebih banyak data tersedia ke jaringan dengan memperkenalkan 64 rantai paralel. Setiap rantai baru akan dapat menangani setidaknya data sebanyak mainnet hari ini, mungkin lebih."
+    }
+  ],
+  "9DZdsc": [
+    {
+      "type": 0,
+      "value": "Apakah ada keuntungan memiliki lebih dari "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH pada stake?"
+    }
+  ],
+  "9JktQX": [
+    {
+      "type": 0,
+      "value": "Tidak ada jawaban yang mudah untuk pertanyaan ini karena ada banyak faktor yang memengaruhi perhitungan ini."
+    }
+  ],
+  "9VZ9oy": [
+    {
+      "type": 0,
+      "value": "Bagaimana validator didorong untuk tetap aktif dan jujur?"
+    }
+  ],
+  "9k7tO9": [
+    {
+      "type": 0,
+      "value": "Jaringan salah"
+    }
+  ],
+  "9lBMQr": [
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " jalur melalui opsi "
+    },
+    {
+      "type": 1,
+      "value": "validatorsKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "9qMyhY": [
+    {
+      "type": 0,
+      "value": "Baca opsi dan dokumentasi subperintah"
+    }
+  ],
+  "9uOFF3": [
+    {
+      "type": 0,
+      "value": "Ikhtisar"
+    }
+  ],
+  "A/iYbo": [
+    {
+      "type": 0,
+      "value": "Peningkatan Eth2 hanya akan berhasil jika validator memahami risiko dan tanggung jawabnya."
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "Kirim deposit"
+    }
+  ],
+  "A6Oppp": [
+    {
+      "type": 0,
+      "value": "Prysm menawarkan panduan langkah demi langkah untuk menjalankan klien mereka setelah menyelesaikan setoran Anda melalui launchpad."
+    }
+  ],
+  "AC669U": [
+    {
+      "type": 0,
+      "value": "Jika butuh bantuan, lihat dokumentasi Python."
+    }
+  ],
+  "AEp7+F": [
+    {
+      "type": 0,
+      "value": "Hal penting, sebagai validator Anda harus memposting "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " sebagai jaminan - dengan kata lain, memiliki sejumlah dana yang dipertaruhkan. Satu-satunya cara untuk menjadi validator adalah dengan melakukan transaksi satu arah "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " ke kontrak deposit pada rantai Ethereum saat ini."
+    }
+  ],
+  "AYKxmf": [
+    {
+      "type": 0,
+      "value": "Hubungkan dompet perangkat keras Anda ke Metamask"
+    }
+  ],
+  "AZaw+B": [
+    {
+      "type": 0,
+      "value": "Keluar"
+    }
+  ],
+  "AbBgEs": [
+    {
+      "type": 0,
+      "value": "memahami keseimbangan efektif validator"
+    }
+  ],
+  "Ad61gz": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda mengunduh dari GitHub akun resmi Ethereum Foundation dengan memverifikasi url: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "Affixg": [
+    {
+      "type": 0,
+      "value": "Deposit"
+    }
+  ],
+  "AkVktj": [
+    {
+      "type": 0,
+      "value": "Periksa alamat kontrak deposit"
+    }
+  ],
+  "An37jY": [
+    {
+      "type": 0,
+      "value": "Khususnya, saat memulai klien validator lighthouse, Anda dapat mengarahkannya ke direktori dengan keystore Anda yang kemudian akan mengimpor keystore Anda dan secara interaktif meminta sandi Anda. Jika Anda tidak memberikan kata sandi, lighthouse akan memintanya lagi setiap kali dinyalakan."
+    }
+  ],
+  "Anqi3n": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dengan Lighthouse"
+    }
+  ],
+  "Aw1mMs": [
+    {
+      "type": 0,
+      "value": "Isi ulang validator"
+    }
+  ],
+  "B2EKj+": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa saya perlu menyetor "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " untuk menjadi validator, dan bahwa transfer "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " ke Beacon Chain adalah satu arah, dan tidak dapat dibatalkan."
+    }
+  ],
+  "BB65vH": [
+    {
+      "type": 0,
+      "value": "Anda dapat menganggap kontrak deposit sebagai transfer dana antara akun Ethereum dan validator Eth2."
+    }
+  ],
+  "BCsPjJ": [
+    {
+      "type": 0,
+      "value": "Mulai proses deposit"
+    }
+  ],
+  "BFAvr/": [
+    {
+      "type": 0,
+      "value": "Isi ulang validator"
+    }
+  ],
+  "BFfsSX": [
+    {
+      "type": 0,
+      "value": "Kontrak deposit Eth2 membutuhkan minimal "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " untuk dikirim sekaligus agar dapat diterima."
+    }
+  ],
+  "BFsUAH": [
+    {
+      "type": 0,
+      "value": "Periksa apakah "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " adalah "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "BPpnlJ": [
+    {
+      "type": 0,
+      "value": "Unduh MetaMask"
+    }
+  ],
+  "BUFaRV": [
+    {
+      "type": 0,
+      "value": "Komunitas EthStaker"
+    }
+  ],
+  "Bf2QKg": [
+    {
+      "type": 0,
+      "value": "Pemvalidasian merupakan komitmen jangka panjang"
+    }
+  ],
+  "Bj5yI5": [
+    {
+      "type": 0,
+      "value": "Saldo efektif"
+    }
+  ],
+  "BoEpk9": [
+    {
+      "type": 0,
+      "value": "Pengenalan"
+    }
+  ],
+  "BvD9ay": [
+    {
+      "type": 0,
+      "value": "Lighthouse adalah implementasi Ethereum 2.0, yang ditulis dengan Rust dan berfokus utama pada kecepatan dan keamanan."
+    }
+  ],
+  "C/gb74": [
+    {
+      "type": 0,
+      "value": "Konfigurasi Lighthouse"
+    }
+  ],
+  "C9fTX1": [
+    {
+      "type": 0,
+      "value": "Jawaban atas pertanyaan umum untuk menjadi validator."
+    }
+  ],
+  "CACPC+": [
+    {
+      "type": 0,
+      "value": "Bahasa Ceko"
+    }
+  ],
+  "CBbRux": [
+    {
+      "type": 0,
+      "value": "OpenEthereum ditulis dalam Rust dan berlisensi di bawah GPLv3."
+    }
+  ],
+  "CF9vMR": [
+    {
+      "type": 0,
+      "value": "Proof of Stake"
+    }
+  ],
+  "CVDzDs": [
+    {
+      "type": 0,
+      "value": "Anda tentunya harus isi ulang jika saldo Anda mendekati 16 ETH. Hal ini untuk memastikan Anda tidak dikeluarkan dari kumpulan validator (yang secara otomatis terjadi jika saldo Anda kurang dari 16 ETH)."
+    }
+  ],
+  "CdKEd/": [
+    {
+      "type": 0,
+      "value": "Jumlah minimum yang dapat dipotong adalah 1 ETH, tetapi "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "CeeJfw": [
+    {
+      "type": 0,
+      "value": "Saya telah menyiapkan firewall."
+    }
+  ],
+  "Cv+T7+": [
+    {
+      "type": 0,
+      "value": "Dua tujuan pemotongan: (1) agar membuatnya sangat mahal untuk menyerang Eth2, dan (2) untuk menghentikan validator malas dengan memeriksa bahwa mereka benar-benar menjalankan tugasnya. Jika Anda ditebas karena telah bertindak dengan cara yang terbukti merusak, sebagian dari taruhan Anda akan dihancurkan."
+    }
+  ],
+  "D0Rigq": [
+    {
+      "type": 0,
+      "value": "TIDAK"
+    }
+  ],
+  "D33f/7": [
+    {
+      "type": 0,
+      "value": "APR saat ini"
+    }
+  ],
+  "D4cQV/": [
+    {
+      "type": 0,
+      "value": "Berapa banyak ETH yang diperlukan untuk menjadi validator?"
+    }
+  ],
+  "DCaq7N": [
+    {
+      "type": 0,
+      "value": "Dompet Anda terhubung ke jaringan yang benar!"
+    }
+  ],
+  "DGHD9y": [
+    {
+      "type": 0,
+      "value": "Lighthouse telah mendedikasikan alat-alat untuk membuat transfer dari Launchpad semudah mungkin."
+    }
+  ],
+  "DKSrR+": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa jika saya bertindak bertentangan dengan spesifikasi, saya bertanggung jawab untuk diputus."
+    }
+  ],
+  "DNRQa7": [
+    {
+      "type": 0,
+      "value": "Saya telah membaca dan menyetujui persyaratan layanan Launchpad."
+    }
+  ],
+  "DUnyVI": [
+    {
+      "type": 0,
+      "value": "Idealnya, koneksi internet Anda harus dapat diandalkan dan sedekat mungkin dengan 24/7 tanpa gangguan."
+    }
+  ],
+  "DbnQg+": [
+    {
+      "type": 0,
+      "value": "Verifikasi alamat kontrak"
+    }
+  ],
+  "DoCZT1": [
+    {
+      "type": 0,
+      "value": "Saldo efektif validator saat ini sudah maksimal. Jika diinginkan, Anda dapat menambahkan "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (jumlah minimum yang diizinkan oleh kontrak setoran)"
+    }
+  ],
+  "DsJ/Mk": [
+    {
+      "type": 0,
+      "value": "Jangan hanya memercayai alamat kontrak yang tercantum di situs web ini."
+    }
+  ],
+  "E+Y27g": [
+    {
+      "type": 0,
+      "value": "Anda dapat memeriksa versi Python Anda dengan mengetik "
+    },
+    {
+      "type": 1,
+      "value": "terminalCommand"
+    },
+    {
+      "type": 0,
+      "value": " di terminal Anda."
+    }
+  ],
+  "E/P9zo": [
+    {
+      "type": 0,
+      "value": "3. Berlatih di testnet"
+    }
+  ],
+  "E1Mywn": [
+    {
+      "type": 0,
+      "value": "rantai"
+    }
+  ],
+  "E8t6ru": [
+    {
+      "type": 0,
+      "value": "Untuk menjadi validator, Anda harus tahu tentang mengelola kunci dan melindungi mnemonik. Jika Anda belum terbiasa dengan kunci dan mnemomik, jangan lanjutkan. Perhatikan bahwa selama proses ini Anda tidak akan mendapatkan kunci yang diperlukan untuk menarik, jadi simpan mnemonik Anda dengan aman agar dapat menariknya di kemudian hari."
+    }
+  ],
+  "EFjTSf": [
+    {
+      "type": 0,
+      "value": "Hukuman ringan diberikan untuk tindakan yang tidak disengaja (atau kelambanan) yang menghalangi konsensus."
+    }
+  ],
+  "EIUapL": [
+    {
+      "type": 0,
+      "value": "Gunakan terminal untuk pindah ke direktori yang berisi "
+    },
+    {
+      "type": 1,
+      "value": "deposit"
+    },
+    {
+      "type": 0,
+      "value": " yang dapat dieksekusi"
+    }
+  ],
+  "EPCHZV": [
+    {
+      "type": 0,
+      "value": "Jika Anda kehilangan kunci penandatanganan, validator Anda tidak dapat lagi memberikan usulan atau bukti."
+    }
+  ],
+  "EPlepr": [
+    {
+      "type": 0,
+      "value": "Saya telah mensimulasikan kehilangan daya (server dan internet) dan pemulihan otomatis."
+    }
+  ],
+  "ETJ2T5": [
+    {
+      "type": 0,
+      "value": "Jika Anda memiliki pertanyaan tentang deposit-cli, silakan kunjungi repositori GitHub."
+    }
+  ],
+  "EThT2C": [
+    {
+      "type": 0,
+      "value": "5. Waktu untuk deposit"
+    }
+  ],
+  "EXLB88": [
+    {
+      "type": 0,
+      "value": "Ini adalah jaringan untuk uji ⚠️"
+    }
+  ],
+  "FEbVwB": [
+    {
+      "type": 0,
+      "value": "Konsep utamanya adalah sebagai berikut:"
+    }
+  ],
+  "FM92S0": [
+    {
+      "type": 0,
+      "value": "Catatan: Rantai Beacon mungkin perlu beberapa menit untuk memverifikasi setoran Anda"
+    }
+  ],
+  "FSRfSJ": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa transaksi ini tidak dapat dibatalkan."
+    }
+  ],
+  "FZa0R+": [
+    {
+      "type": 0,
+      "value": "Skenario ini sangat ekstrim dan sangat kecil kemungkinannya."
+    }
+  ],
+  "Fa2pjg": [
+    {
+      "type": 0,
+      "value": "Argumen CLI file konfigurasi"
+    }
+  ],
+  "FazwRl": [
+    {
+      "type": 0,
+      "value": "Coba lagi"
+    }
+  ],
+  "FdbNS6": [
+    {
+      "type": 0,
+      "value": "Konfigurasi Klien Eth1 Anda"
+    }
+  ],
+  "FfLWt5": [
+    {
+      "type": 0,
+      "value": "Klien Ethereum yang didukung banyak pengembang. Ini sempurna untuk sistem tingkat perusahaan."
+    }
+  ],
+  "FgraU0": [
+    {
+      "type": 0,
+      "value": "Langkah 1: Unduh aplikasi antarmuka baris perintah deposit untuk sistem operasi Anda"
+    }
+  ],
+  "FqgDIV": [
+    {
+      "type": 0,
+      "value": "Ketentuan layanan"
+    }
+  ],
+  "FzkbsB": [
+    {
+      "type": 0,
+      "value": "validator"
+    }
+  ],
+  "G/VJJd": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi OpenEthereum"
+    }
+  ],
+  "G0aacl": [
+    {
+      "type": 0,
+      "value": "Sebagai validator, Anda diberi imbalan karena mengusulkan / membuktikan blok yang disertakan dalam rantai."
+    }
+  ],
+  "G5IMoZ": [
+    {
+      "type": 0,
+      "value": "Unduh kode sumber cabang master"
+    }
+  ],
+  "G6kg26": [
+    {
+      "type": 0,
+      "value": "Klien Eth2: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "G8tAKU": [
+    {
+      "type": 0,
+      "value": "Pilih klien"
+    }
+  ],
+  "GBXzeJ": [
+    {
+      "type": 0,
+      "value": "Faktor yang paling berpengaruh pada hadiah yang diperoleh untuk memvalidasi transaksi adalah jumlah total taruhan di jaringan. Dengan kata lain, jumlah total validator. Bergantung pada angka ini, tingkat pengembalian tahunan maksimum untuk validator bisa berkisar antara 2 dan 20%."
+    }
+  ],
+  "GCz3kj": [
+    {
+      "type": 0,
+      "value": "Sebelumnya dikenal sebagai Artemis, Teku adalah klien Eth2 yang dibuat untuk memenuhi kebutuhan kelembagaan dan persyaratan keamanan. PegaSys adalah bagian dari ConsenSys, yang didedikasikan untuk membangun klien dan alat yang siap bagi perusahaan untuk berinteraksi dengan platform inti Ethereum."
+    }
+  ],
+  "GDaRAW": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda tidak sedang terkena phishing"
+    }
+  ],
+  "GOc7cL": [
+    {
+      "type": 0,
+      "value": "Seberapa parah saya akan dihukum karena offline?"
+    }
+  ],
+  "GUDhpC": [
+    {
+      "type": 0,
+      "value": "Bagian 1"
+    }
+  ],
+  "GadkjP": [
+    {
+      "type": 0,
+      "value": "Dokumentasi tentang menjalankan Lighthouse"
+    }
+  ],
+  "Gbo300": [
+    {
+      "type": 0,
+      "value": "Membuat kunci"
+    }
+  ],
+  "GrU/lp": [
+    {
+      "type": 0,
+      "value": "Klien Eth2"
+    }
+  ],
+  "GsBRWL": [
+    {
+      "type": 0,
+      "value": "Bahasa"
+    }
+  ],
+  "GuIwY6": [
+    {
+      "type": 0,
+      "value": "Kapan saya harus isi ulang saldo validator saya?"
+    }
+  ],
+  "H+Wcch": [
+    {
+      "type": 0,
+      "value": "Bagian 2"
+    }
+  ],
+  "H+kIpp": [
+    {
+      "type": 0,
+      "value": "Jumlah total yang diperlukan"
+    }
+  ],
+  "H5+NAX": [
+    {
+      "type": 0,
+      "value": "Saldo"
+    }
+  ],
+  "HoahTd": [
+    {
+      "type": 0,
+      "value": "Jika Anda tidak memberikan kata sandi, Nimbus akan memintanya secara interaktif saat startup."
+    }
+  ],
+  "HqRNN8": [
+    {
+      "type": 0,
+      "value": "Dukungan"
+    }
+  ],
+  "I212vY": [
+    {
+      "type": 0,
+      "value": "Ada waktu tunggu sebentar sebelum validator Anda aktif di Rantai Beacon. Gunakan waktu ini untuk menyelesaikan daftar periksa dan luangkan waktu untuk memvalidasi "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    }
+  ],
+  "I3JhPS": [
+    {
+      "type": 0,
+      "value": "Jaringan"
+    }
+  ],
+  "IAKvZ0": [
+    {
+      "type": 0,
+      "value": "Peningkatan Eth2"
+    }
+  ],
+  "IJw06E": [
+    {
+      "type": 0,
+      "value": "Tanda tangani transaksi dengan dompet Anda"
+    }
+  ],
+  "IVyWYt": [
+    {
+      "type": 0,
+      "value": "Perhatikan bahwa dalam skenario kedua (sangat kecil kemungkinan), Anda akan secara bertahap kehilangan hingga 50% (16 ETH) dari taruhan Anda selama 21 hari. Setelah 21 hari, Anda akan dikeluarkan dari kumpulan validator. Ini memastikan bahwa blok mulai difinalisasi lagi."
+    }
+  ],
+  "IZFEUg": [
+    {
+      "type": 0,
+      "value": "Siap"
+    }
+  ],
+  "IdUtHu": [
+    {
+      "type": 0,
+      "value": "Instal virtualenv"
+    }
+  ],
+  "IhDJWs": [
+    {
+      "type": 0,
+      "value": "Anda memiliki "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " setoran terutang"
+    }
+  ],
+  "Il9tBQ": [
+    {
+      "type": 0,
+      "value": "Geth ditulis dalam Go, sumber terbuka sepenuhnya dan berlisensi di bawah GNU LGPL v3."
+    }
+  ],
+  "IwrKbS": [
+    {
+      "type": 0,
+      "value": "Tergantung. Selain "
+    },
+    {
+      "type": 1,
+      "value": "impact"
+    },
+    {
+      "type": 0,
+      "value": ", ada dua skenario penting yang harus diperhatikan:"
+    }
+  ],
+  "J0DclJ": [
+    {
+      "type": 0,
+      "value": "Menyinkronkan klien Eth1 Anda mungkin memerlukan beberapa hari dalam skenario terburuk."
+    }
+  ],
+  "J455S4": [
+    {
+      "type": 0,
+      "value": "Jika Anda pengguna git, Anda dapat menjalankan "
+    },
+    {
+      "type": 1,
+      "value": "gitClone"
+    },
+    {
+      "type": 0,
+      "value": " untuk mengunduh cabang "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J5Lzz1": [
+    {
+      "type": 0,
+      "value": "Bahasa Mandarin (Tradisional)"
+    }
+  ],
+  "J7T0SR": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Nimbus"
+    }
+  ],
+  "JAiV0o": [
+    {
+      "type": 0,
+      "value": "Dengan kata lain, agar Anda tetap jujur, tindakan Anda harus memiliki konsekuensi finansial."
+    }
+  ],
+  "JDGiXT": [
+    {
+      "type": 0,
+      "value": "Dokumentasi OpenEthereum menjelaskan cara mengunduh dan menginstal klien."
+    }
+  ],
+  "JMcBLZ": [
+    {
+      "type": 0,
+      "value": "Deposit yang belum diselesaian ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "JPT/TK": [
+    {
+      "type": 0,
+      "value": "4. Hindari phishing"
+    }
+  ],
+  "JYrJic": [
+    {
+      "type": 0,
+      "value": "Hindari phishing Eth2"
+    }
+  ],
+  "JhUYU3": [
+    {
+      "type": 0,
+      "value": "Unduh aplikasi CLI"
+    }
+  ],
+  "JqVeL+": [
+    {
+      "type": 0,
+      "value": "Penggunaan sumber daya dapat sangat bervariasi antarklien. Teliti klien yang berbeda jika Anda bekerja dengan pembatasan sumber daya."
+    }
+  ],
+  "Js4uuA": [
+    {
+      "type": 0,
+      "value": "saldo efektif"
+    }
+  ],
+  "JsTbFu": [
+    {
+      "type": 0,
+      "value": "Dipotong"
+    }
+  ],
+  "JtAiN/": [
+    {
+      "type": 0,
+      "value": "Apa sistem operasi Anda saat ini?"
+    }
+  ],
+  "K6+jQ3": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Geth"
+    }
+  ],
+  "KBSbmP": [
+    {
+      "type": 0,
+      "value": "Anda dapat "
+    },
+    {
+      "type": 1,
+      "value": "reloadYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " untuk mencoba lagi, atau menyegarkan halaman. Jika masalah terus berlanjut, beri tahu kami di "
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "KBjoXt": [
+    {
+      "type": 0,
+      "value": "Unduh dan buka kompresi kode sumber cabang master dari GitHub."
+    }
+  ],
+  "KC9jbz": [
+    {
+      "type": 0,
+      "value": "Daftar periksa perangkat keras"
+    }
+  ],
+  "KN7zKn": [
+    {
+      "type": 0,
+      "value": "Kesalahan"
+    }
+  ],
+  "KV017i": [
+    {
+      "type": 0,
+      "value": "Validator adalah entitas yang berpartisipasi dalam konsensus protokol Ethereum 2.0."
+    }
+  ],
+  "KhEtqB": [
+    {
+      "type": 0,
+      "value": "Besu di dokumentasi Goerli"
+    }
+  ],
+  "KjcAm2": [
+    {
+      "type": 0,
+      "value": "Hadiah dan penalti diberikan kira-kira setiap enam setengah menit - periode waktu yang dikenal sebagai epoch."
+    }
+  ],
+  "KqGKRA": [
+    {
+      "type": 0,
+      "value": "Setelah prosesnya selesai, Anda akan melihat yang berikut ini:"
+    }
+  ],
+  "KrVaDy": [
+    {
+      "type": 0,
+      "value": "Saya telah bergabung dengan server Discord klien saya."
+    }
+  ],
+  "KvRSg5": [
+    {
+      "type": 0,
+      "value": "Apa sebenarnya pemotongan itu?"
+    }
+  ],
+  "Kw+pTr": [
+    {
+      "type": 0,
+      "value": "Proses instalasi python3 mungkin berbeda tergantung pada build linux Anda."
+    }
+  ],
+  "KxUgHu": [
+    {
+      "type": 0,
+      "value": "Saya telah memastikan keystore saya adalah "
+    },
+    {
+      "type": 1,
+      "value": "boldCaution"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "L7fPF+": [
+    {
+      "type": 0,
+      "value": "Selesaikan deposit terakhir Anda"
+    }
+  ],
+  "L8jrV5": [
+    {
+      "type": 0,
+      "value": "isi ulang dompet Anda"
+    }
+  ],
+  "LVy+cS": [
+    {
+      "type": 0,
+      "value": "Periksa dengan dokumentasi klien untuk memastikan perangkat keras yang ingin Anda gunakan memadai dan didukung."
+    }
+  ],
+  "LWIlKS": [
+    {
+      "type": 0,
+      "value": "Anda juga dapat mengonfirmasi setoran satu per satu di bawah ini..."
+    }
+  ],
+  "LeHQQm": [
+    {
+      "type": 0,
+      "value": "FAQ validator"
+    }
+  ],
+  "LibVut": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " untuk sinkronisasi testnet Goerli."
+    }
+  ],
+  "Ltd/hJ": [
+    {
+      "type": 1,
+      "value": "directoriesPattern"
+    },
+    {
+      "type": 0,
+      "value": " akan menemukan "
+    },
+    {
+      "type": 1,
+      "value": "keyDirectory"
+    },
+    {
+      "type": 0,
+      "value": ", dan berharap menemukan "
+    },
+    {
+      "type": 1,
+      "value": "passwordDirectory"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Lv3Pmp": [
+    {
+      "type": 0,
+      "value": "Setoran awal Anda telah dibuat untuk kunci publik validator ini. Harap tunggu dan periksa status setoran Anda di penyedia data Beaconchain."
+    }
+  ],
+  "LyJqWj": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang peran dan tanggung jawab validator"
+    }
+  ],
+  "M3GwXS": [
+    {
+      "type": 0,
+      "value": "Anda hanya akan mendapatkan hadiah penuh jika validator Anda online dan terbarukan. Ini tanggung jawab Anda. Jika validator Anda offline, Anda akan dihukum. Hukuman untuk offline kira-kira sama dengan hadiah untuk berpartisipasi secara aktif."
+    }
+  ],
+  "MIsmjW": [
+    {
+      "type": 0,
+      "value": "Hubungkan dompet baru"
+    }
+  ],
+  "MPHPEO": [
+    {
+      "type": 0,
+      "value": "Saya dapat menghubungkan node beacon Eth2 saya ke klien Eth1 saya melalui HTTP API."
+    }
+  ],
+  "MQTBvH": [
+    {
+      "type": 0,
+      "value": "Lindungi diri Anda dari deposit ganda"
+    }
+  ],
+  "MSanFQ": [
+    {
+      "type": 0,
+      "value": "buku"
+    }
+  ],
+  "MX00UO": [
+    {
+      "type": 0,
+      "value": "Apa yang terjadi jika kunci penarikan saya dicuri?"
+    }
+  ],
+  "MZEcKL": [
+    {
+      "type": 0,
+      "value": "Perilaku validator buruk"
+    }
+  ],
+  "MZvoWG": [
+    {
+      "type": 0,
+      "value": "Peningkatan"
+    }
+  ],
+  "Mb3npQ": [
+    {
+      "type": 0,
+      "value": "Menggunakan terminal"
+    }
+  ],
+  "MbsAo3": [
+    {
+      "type": 0,
+      "value": "Launchpad ini akan membantu Anda menjadi validator, sehingga Anda dapat berperan aktif di masa depan Ethereum. Validator adalah kunci untuk Ethereum yang lebih aman, terukur, dan berkelanjutan yang kita bangun bersama."
+    }
+  ],
+  "Mc8nNE": [
+    {
+      "type": 0,
+      "value": "Transaksi gagal"
+    }
+  ],
+  "MmZjeu": [
+    {
+      "type": 0,
+      "value": "Detail isi ulang"
+    }
+  ],
+  "N+2G1J": [
+    {
+      "type": 0,
+      "value": "Pilih klien "
+    },
+    {
+      "type": 1,
+      "value": "ethereum"
+    }
+  ],
+  "N0rwnt": [
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " bukan file JSON deposit_data yang valid. Coba lagi."
+    }
+  ],
+  "NBJR7v": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " untuk menghubungkan node Eth2 Anda ke titik akhir JSON RPC. Ini akan mengaktifkan layanan JSON RPC pada port 8545 default."
+    }
+  ],
+  "NEmnAV": [
+    {
+      "type": 0,
+      "value": "Bahasa Italia"
+    }
+  ],
+  "NLgogh": [
+    {
+      "type": 0,
+      "value": "Jaringan Launchpad:"
+    }
+  ],
+  "NOTCV0": [
+    {
+      "type": 0,
+      "value": "Monitor Prometheus dan Grafana"
+    }
+  ],
+  "NPmm0q": [
+    {
+      "type": 0,
+      "value": "Anda harus menggunakan perangkat desktop untuk menggunakan aplikasi ini."
+    }
+  ],
+  "NSK+Li": [
+    {
+      "type": 0,
+      "value": "Saya telah mengamankan akun root."
+    }
+  ],
+  "NTWnJC": [
+    {
+      "type": 0,
+      "value": "Unduh aplikasi baris perintah"
+    }
+  ],
+  "NVQd7i": [
+    {
+      "type": 0,
+      "value": "Untuk memproses deposit validator yang masuk dari mainnet (rantai Eth1), Anda harus menjalankan klien Eth1 secara paralel dengan klien Eth2 Anda. Meskipun Anda dapat menggunakan layanan pihak ketiga seperti Infura, kami merekomendasikan menjalankan klien Anda sendiri untuk memastikan jaringan tetap terdesentralisasi."
+    }
+  ],
+  "NVljH4": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Prysmatic Labs"
+    }
+  ],
+  "NYFKzu": [
+    {
+      "type": 0,
+      "value": "Daftar periksa Staking"
+    }
+  ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "Kirim sisa "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " setoran"
+    }
+  ],
+  "NZUWs7": [
+    {
+      "type": 0,
+      "value": "Ingatlah bahwa suara validator ditentukan oleh jumlah yang dipertaruhkan."
+    }
+  ],
+  "NZsVaA": [
+    {
+      "type": 0,
+      "value": "Validator dan Eth2"
+    }
+  ],
+  "Nb5DNK": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dengan Teku"
+    }
+  ],
+  "NwzcYT": [
+    {
+      "type": 0,
+      "value": "Teku perlu diarahkan ke file yang berisi keystore dan kata sandi yang terkait saat memulai. Ada 3 metode untuk melakukannya."
+    }
+  ],
+  "O+3LJ1": [
+    {
+      "type": 0,
+      "value": "Saldo validator ini sedang pada maksimum efektif: "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "O54B/F": [
+    {
+      "type": 0,
+      "value": "Jaringan Eth2"
+    }
+  ],
+  "OIvXIO": [
+    {
+      "type": 0,
+      "value": "Kirim sisa "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " setoran"
+    }
+  ],
+  "ON2tXT": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Nethermind menjelaskan cara mengunduh dan menginstal klien."
+    }
+  ],
+  "OdYQYh": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang ConsenSys"
+    }
+  ],
+  "OsO8ik": [
+    {
+      "type": 0,
+      "value": "Saya secara teknis mampu menyiapkan dan menjalankan validator."
+    }
+  ],
+  "Ou/o3H": [
+    {
+      "type": 0,
+      "value": "Semua yang harus Anda pahami sebelum menjadi validator."
+    }
+  ],
+  "P+nziG": [
+    {
+      "type": 0,
+      "value": "Sebagai validator, Anda harus memiliki dana yang dipertaruhkan sehingga Anda dapat dihukum karena berperilaku tidak jujur."
+    }
+  ],
+  "P0kiYS": [
+    {
+      "type": 0,
+      "value": "Peningkatan Rantai Beacon menghadirkan konsensus bukti kepemilikan ke Ethereum."
+    }
+  ],
+  "P1QerV": [
+    {
+      "type": 0,
+      "value": "Jika Anda memiliki pertanyaan, komunitas EthStaker adalah tempat yang tepat untuk mendapatkan bantuan! Anda dapat menemukan dukungan di "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " atau "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "P91KmA": [
+    {
+      "type": 0,
+      "value": "Menjadi validator "
+    },
+    {
+      "type": 1,
+      "value": "emoji"
+    }
+  ],
+  "P9mVZK": [
+    {
+      "type": 0,
+      "value": "Jaringan Anda telah diubah"
+    }
+  ],
+  "PIQDar": [
+    {
+      "type": 0,
+      "value": "Kami menyarankan Anda melalui seluruh prosesnya pada testnet terlebih dahulu untuk mengakrabkan."
+    }
+  ],
+  "PboOCR": [
+    {
+      "type": 0,
+      "value": "Konfigurasi Klien Eth2 Anda"
+    }
+  ],
+  "PfoT0C": [
+    {
+      "type": 0,
+      "value": "Daftar periksa ini akan membantu Anda memahami peran validator dan mempersiapkan Anda untuk peran tersebut."
+    }
+  ],
+  "PglO1W": [
+    {
+      "type": 0,
+      "value": "Laporan verifikasi formal"
+    }
+  ],
+  "PoBIK+": [
+    {
+      "type": 0,
+      "value": "Anda memerlukan penyimpanan SSD untuk menangani kecepatan baca / tulis yang diperlukan secara konsisten."
+    }
+  ],
+  "Pswssl": [
+    {
+      "type": 0,
+      "value": "Konfirmasi"
+    }
+  ],
+  "Px7wWb": [
+    {
+      "type": 0,
+      "value": "dokumentasi pip"
+    }
+  ],
+  "Q1ZwPT": [
+    {
+      "type": 0,
+      "value": "papan klip"
+    }
+  ],
+  "Q8P0rZ": [
+    {
+      "type": 0,
+      "value": "Validator memiliki saldo efektif maksimum sebesar "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Anda hanya perlu mengisi ulang "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " untuk memaksimalkan saldo efektif Anda."
+    }
+  ],
+  "QKFeMq": [
+    {
+      "type": 0,
+      "value": "Internet"
+    }
+  ],
+  "QOAgQF": [
+    {
+      "type": 0,
+      "value": "Catatan: secara default, VM dapat menonaktifkan NTP sehingga Anda mungkin perlu mencari solusi untuk lingkungan Anda."
+    }
+  ],
+  "QWDxrk": [
+    {
+      "type": 0,
+      "value": "Manajemen kunci"
+    }
+  ],
+  "QlsDcr": [
+    {
+      "type": 0,
+      "value": "Tindakan"
+    }
+  ],
+  "QnS0CA": [
+    {
+      "type": 0,
+      "value": "Dompet Anda harus disetel ke "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": " untuk menggunakan Launchpad ini."
+    }
+  ],
+  "QqqeNk": [
+    {
+      "type": 0,
+      "value": "Transaksi ditolak"
+    }
+  ],
+  "Qs/oj3": [
+    {
+      "type": 0,
+      "value": "Anda mungkin memiliki setoran "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " yang telah diterima tetapi sedang divalidasi di rantai. Ini akan tersedia di sini ketika beaconcha.in telah mengkonfirmasi 2048 blok."
+    }
+  ],
+  "R8eePn": [
+    {
+      "type": 0,
+      "value": "Jika Anda dipotong, Anda dicegah untuk berpartisipasi dalam protokol lebih lanjut dan dikeluarkan secara paksa."
+    }
+  ],
+  "RIFLCz": [
+    {
+      "type": 0,
+      "value": "Phishing adalah risiko yang sangat nyata bagi validator Eth2 namun, sayangnya, banyak orang akan kehilangan dana karena serangan ini."
+    }
+  ],
+  "ROHpFF": [
+    {
+      "type": 0,
+      "value": "1. Pelajari tentang tanggung jawab Anda"
+    }
+  ],
+  "RVyb7r": [
+    {
+      "type": 0,
+      "value": "Dapatkah saya berhenti menjalankan validator saya selama beberapa hari dan kemudian memulainya kembali?"
+    }
+  ],
+  "RWqrlk": [
+    {
+      "type": 0,
+      "value": "selamat"
+    }
+  ],
+  "RYUKCz": [
+    {
+      "type": 0,
+      "value": "Saya telah mensimulasikan cara bermigrasi dari satu klien Eth2 ke klien Eth2 lainnya."
+    }
+  ],
+  "RaBZna": [
+    {
+      "type": 0,
+      "value": "Jika Anda offline selama beberapa hari dalam kondisi normal, Anda akan kehilangan sejumlah ETH yang kira-kira setara dengan jumlah ETH yang akan Anda peroleh dalam periode itu. Dengan kata lain, jika Anda berhasil mendapatkan ≈0,01 ETH, Anda akan mendapat penalti ≈0,01 ETH."
+    }
+  ],
+  "Rg5ySE": [
+    {
+      "type": 0,
+      "value": "Berapa banyak validator yang ingin Anda jalankan?"
+    }
+  ],
+  "Rj0OAx": [
+    {
+      "type": 0,
+      "value": "Atau dengan kata lain, manusia menjalankan proses komputer. Proses ini mengusulkan dan menjamin blok baru untuk ditambahkan ke blockchain."
+    }
+  ],
+  "RkbwNZ": [
+    {
+      "type": 0,
+      "value": "Penarikan deposit Anda tidak akan memungkinkan sampai mainnet bergabung dengan Beacon Chain."
+    }
+  ],
+  "Rm2GQZ": [
+    {
+      "type": 0,
+      "value": "Total "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " yang dipertaruhkan (jutaan)"
+    }
+  ],
+  "Rr2lI/": [
+    {
+      "type": 0,
+      "value": "Anda bertanggung jawab atas transaksi ini!"
+    }
+  ],
+  "RrCui3": [
+    {
+      "type": 0,
+      "value": "Ringkasan"
+    }
+  ],
+  "Ryptmy": [
+    {
+      "type": 0,
+      "value": "Verifikasi dengan perintah berikut untuk memeriksa apakah mengembalikan versi klien dengan benar:"
+    }
+  ],
+  "S0e/cN": [
+    {
+      "type": 0,
+      "value": "Bagaimana Anda ingin menjalankan CLI?"
+    }
+  ],
+  "S943uU": [
+    {
+      "type": 0,
+      "value": "Periksa kembali URL"
+    }
+  ],
+  "SB6yx7": [
+    {
+      "type": 0,
+      "value": "Variabel lingkungan file konfigurasi Teku"
+    }
+  ],
+  "SGzXoY": [
+    {
+      "type": 0,
+      "value": "Stake Anda telah mencapai kontrak deposit!"
+    }
+  ],
+  "SMffKt": [
+    {
+      "type": 0,
+      "value": "Pilih klien Eth "
+    },
+    {
+      "type": 1,
+      "value": "ethVersionStep"
+    },
+    {
+      "type": 0,
+      "value": " Anda dan siapkan node"
+    }
+  ],
+  "SR0qHv": [
+    {
+      "type": 0,
+      "value": "Hindari penyiapan yang terlalu rumit dan waspadai pertukaran. Offline dalam periode waktu yang singkat akan mengakibatkan hukuman ketidakaktifan kecil, tetapi akan diperoleh kembali dengan mudah setelah kembali online selama jangka waktu yang kurang lebih sama. Cadangan daya yang rumit dapat menambah biaya penyiapan Anda, dan validator cadangan yang berlebihan dapat menyebabkan pemotongan."
+    }
+  ],
+  "SaR1pU": [
+    {
+      "type": 0,
+      "value": "Deposit sudah ada"
+    }
+  ],
+  "Sd+Pq6": [
+    {
+      "type": 0,
+      "value": "Total validator"
+    }
+  ],
+  "Sd0I/u": [
+    {
+      "type": 0,
+      "value": "Kunci Publik validator"
+    }
+  ],
+  "Sd3VAH": [
+    {
+      "type": 0,
+      "value": "Validator yang telah keluar atau dipotong tidak memenuhi syarat untuk mengisi ulang"
+    }
+  ],
+  "Sd9qhL": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang risiko pemotongan"
+    }
+  ],
+  "SeW5ak": [
+    {
+      "type": 0,
+      "value": "Verifikasi alamat kontrak di dompet Anda sebelum Anda menandatangani."
+    }
+  ],
+  "Seanpx": [
+    {
+      "type": 0,
+      "value": "Diperlukan"
+    }
+  ],
+  "SqKNq2": [
+    {
+      "type": 0,
+      "value": "Anda dapat menginstal python3 di perangkat macOS Anda menggunakan "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    }
+  ],
+  "Szwbym": [
+    {
+      "type": 0,
+      "value": "Kunci Pas"
+    }
+  ],
+  "TLEziZ": [
+    {
+      "type": 0,
+      "value": "Beacon Chain bermula dari "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ". Ukurannya terus bertambah dari waktu ke waktu, dan pengenalan sharding juga akan meningkatkan persyaratan penyimpanan, memori, dan bandwidth."
+    }
+  ],
+  "TMw9oz": [
+    {
+      "type": 0,
+      "value": "Kunjungi situs ini di desktop untuk menjadi validator."
+    }
+  ],
+  "TfNuWP": [
+    {
+      "type": 0,
+      "value": "virtualenv akan membantu Anda membuat lingkungan Python yang terisolasi untuk alat deposit-cli."
+    }
+  ],
+  "TmYprU": [
+    {
+      "type": 0,
+      "value": "Launchpad Eth2 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "Tpe6yK": [
+    {
+      "type": 0,
+      "value": "dokumentasi rpc-http-enabled"
+    }
+  ],
+  "U0yY/A": [
+    {
+      "type": 0,
+      "value": "Lihat perbandingan ekstensif klien"
+    }
+  ],
+  "U7AOxj": [
+    {
+      "type": 0,
+      "value": "lebih besar dari 50%"
+    }
+  ],
+  "U7PMU1": [
+    {
+      "type": 0,
+      "value": "Klien Eth2 mendukung Prometheus dan Grafana untuk membantu Anda memvisualisasikan metrik waktu nyata penting tentang validator Anda. Anda dapat menemukan petunjuk khusus klien di sini: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
+    }
+  ],
+  "UHbYCa": [
+    {
+      "type": 0,
+      "value": "Validator Anda memiliki saldonya sendiri - dengan saldo awal yang dijelaskan dalam kontrak deposit. Imbalan dan penalti Anda tercermin dalam saldo validator Anda dari waktu ke waktu."
+    }
+  ],
+  "UJMct0": [
+    {
+      "type": 0,
+      "value": "Lihat "
+    },
+    {
+      "type": 1,
+      "value": "etherscan"
+    },
+    {
+      "type": 0,
+      "value": " untuk lebih jelasnya"
+    }
+  ],
+  "UWv7yD": [
+    {
+      "type": 0,
+      "value": "Periksa kontrak deposit pada penjelajah blok Ethereum favorit Anda:"
+    }
+  ],
+  "Utck3E": [
+    {
+      "type": 0,
+      "value": "Dukungan bahasa"
+    }
+  ],
+  "Uxs0RD": [
+    {
+      "type": 0,
+      "value": "Grafiti"
+    }
+  ],
+  "Uy8THS": [
+    {
+      "type": 0,
+      "value": "Menjadi offline pada saat yang sama dengan lebih dari 1/3 jumlah total validator menyebabkan hukuman yang lebih berat, karena pemblokiran tidak lagi difinalisasi. "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    }
+  ],
+  "UygdAl": [
+    {
+      "type": 0,
+      "value": "Salah satu dari tiga implementasi asli protokol Ethereum."
+    }
+  ],
+  "UykRIk": [
+    {
+      "type": 0,
+      "value": "Menjadi validator adalah tanggung jawab besar dengan langkah-langkah persiapan yang penting. Hanya mulai proses deposit saat Anda siap."
+    }
+  ],
+  "V0cb8p": [
+    {
+      "type": 0,
+      "value": "Jika Anda tidak memiliki folder testnet, kemungkinan Anda belum membangun dan menjalankan Nimbus dengan benar. Jalankan kembali perintah make."
+    }
+  ],
+  "VASo1/": [
+    {
+      "type": 0,
+      "value": "Hubungkan dompet"
+    }
+  ],
+  "VEj6nh": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Nethermind"
+    }
+  ],
+  "VIMMdE": [
+    {
+      "type": 0,
+      "value": "Jangan mengirimkan transaksi apa pun dengan file "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " yang tidak Anda buat sendiri, atau yang frasa mnemoniknya bukan milik Anda."
+    }
+  ],
+  "VJZrCQ": [
+    {
+      "type": 0,
+      "value": "Beralih ke Launchpad "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "VKfWR3": [
+    {
+      "type": 0,
+      "value": "Direkomendasikan"
+    }
+  ],
+  "VLDKor": [
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " adalah saldo validator efektif maksimum. Ini berarti Anda tidak akan mendapatkan lebih banyak hadiah jika saldo validator Anda melebihi "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ". Namun Anda akan mendapatkan lebih sedikit jika turun di bawah "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "VPpHAq": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa saya "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " saham saya untuk sementara waktu, dan saya "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " hingga penggabungan. Saya mengerti bahwa jika saya keluar, saya tidak akan dapat bergabung kembali sampai waktu nanti. Ini adalah komitmen jangka panjang."
+    }
+  ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "Dengan kata lain: jika jumlah total ETH yang dipertaruhkan rendah, hadiah (tingkat bunga) tinggi, tetapi saat total taruhan meningkat, hadiah (bunga) yang dibayarkan kepada setiap validator mulai turun."
+    }
+  ],
+  "VUuZsb": [
+    {
+      "type": 0,
+      "value": "keseragaman bela diri"
+    }
+  ],
+  "VY3/Wo": [
+    {
+      "type": 0,
+      "value": "Untuk menjadi validator, Anda harus dapat menjalankan perintah di terminal pada komputer Anda. Menghasilkan pasangan kunci Eth2 baru Anda dan menginstal perangkat lunak validator keduanya dilakukan di terminal."
+    }
+  ],
+  "VctWDX": [
+    {
+      "type": 0,
+      "value": "Saya yakin validator yang saya isi ulang adalah validator saya."
+    }
+  ],
+  "VzGJkB": [
+    {
+      "type": 0,
+      "value": "Daftar periksa Staker"
+    }
+  ],
+  "W10U1b": [
+    {
+      "type": 0,
+      "value": "Teku berlisensi Apache 2 dan ditulis dalam Java, bahasa yang terkenal karena pengalamannya dan sangat populer."
+    }
+  ],
+  "W8nHSd": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
+  "W9JuAN": [
+    {
+      "type": 0,
+      "value": "Klien Validator (VC) Eth2"
+    }
+  ],
+  "WFVzvu": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " Deposit duplikat dengan kunci publik keyfile yang sama akan dianggap sebagai deposit ganda. Saldo ekstra apa pun yang lebih dari "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " TIDAK akan dihitung dalam saldo efektif Anda di Rantai Beacon. Anda juga tidak akan dapat menariknya sampai Rantai Beacon bergabung dengan mainnet."
+    }
+  ],
+  "WMLn/w": [
+    {
+      "type": 0,
+      "value": "Validator "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    }
+  ],
+  "WRevBY": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " untuk menghubungkan node Eth2 Anda ke titik akhir JSON RPC. Ini akan mengaktifkan layanan JSON RPC pada port 8545 default."
+    }
+  ],
+  "WTPUDZ": [
+    {
+      "type": 0,
+      "value": "Langkah-langkah ini opsional tetapi disarankan untuk mengoptimalkan node Anda."
+    }
+  ],
+  "Wao7OA": [
+    {
+      "type": 0,
+      "value": "Node Beacon (BN) Eth2"
+    }
+  ],
+  "WkrNSk": [
+    {
+      "type": 0,
+      "value": "Bahasa Inggris"
+    }
+  ],
+  "Wl6cI3": [
+    {
+      "type": 0,
+      "value": "Harap terima ketentuan di atas."
+    }
+  ],
+  "WxqnJn": [
+    {
+      "type": 0,
+      "value": "Di sisi lain, Anda dapat dihukum karena offline dan berperilaku jahat - misalnya membuktikan pemblokiran yang tidak valid atau bertentangan."
+    }
+  ],
+  "Wxzght": [
+    {
+      "type": 0,
+      "value": "Seret file untuk diunggah atau dijelajahi"
+    }
+  ],
+  "X/fKmY": [
+    {
+      "type": 0,
+      "value": "Sudahkah penjelajah blok memberi nama kontrak?"
+    }
+  ],
+  "X0dSr0": [
+    {
+      "type": 0,
+      "value": "Menjalankan validator Eth2 Anda di banyak tempat berisiko tinggi. Ini akan menyebabkan peristiwa yang dapat dipotong dan pengeluaran dari jaringan. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "X5KFEh": [
+    {
+      "type": 0,
+      "value": "Itu bukan file JSON deposit_data yang valid."
+    }
+  ],
+  "XBEBYR": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang menginstal pip"
+    }
+  ],
+  "XVehvN": [
+    {
+      "type": 1,
+      "value": "filesPattern"
+    },
+    {
+      "type": 0,
+      "value": " mengharapkan bahwa "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " ada, dan file yang berisi sandi untuk itu adalah "
+    },
+    {
+      "type": 1,
+      "value": "passwordFile"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "XmddSV": [
+    {
+      "type": 0,
+      "value": "Membangunan dari sumber"
+    }
+  ],
+  "Y47aYU": [
+    {
+      "type": 0,
+      "value": "Isi ulang"
+    }
+  ],
+  "Y8YLHs": [
+    {
+      "type": 0,
+      "value": "Jika kunci penandatanganan Anda tidak di bawah kendali pencuri, pencuri tidak dapat keluar dari validator Anda."
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "Kirim deposit terakhir"
+    }
+  ],
+  "YBs4dR": [
+    {
+      "type": 0,
+      "value": "Versi pip terbaru seharusnya sudah diinstal dengan python 3.x.x. Untuk informasi lebih lanjut tentang menginstal pip di Windows, kunjungi "
+    },
+    {
+      "type": 1,
+      "value": "windowsInstallGuide"
+    },
+    {
+      "type": 0,
+      "value": ". Atau Anda dapat menginstal paket pip melalui "
+    },
+    {
+      "type": 1,
+      "value": "chocolatey"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YFFqcn": [
+    {
+      "type": 0,
+      "value": "Saya memahami bukti kepemilikan dan alasan validator diperlukan."
+    }
+  ],
+  "YFT4rG": [
+    {
+      "type": 0,
+      "value": "Kunci"
+    }
+  ],
+  "YP03/j": [
+    {
+      "type": 0,
+      "value": "Setelah itu, validator masih didorong untuk bergabung (semakin banyak validator semakin terdesentralisasi jaringannya), tetapi tidak mutlak baginyauntuk melakukannya (sehingga tingkat suku bunga dapat turun)."
+    }
+  ],
+  "YPsbIU": [
+    {
+      "type": 0,
+      "value": "Saya telah menyiapkan layanan "
+    },
+    {
+      "type": 1,
+      "value": "grafana"
+    },
+    {
+      "type": 0,
+      "value": " saya."
+    }
+  ],
+  "YWfd2t": [
+    {
+      "type": 0,
+      "value": "Proyek penelitian dan implementasi klien untuk Eth2 yang dirancang agar bekerja dengan baik pada sistem tertanam dan perangkat seluler pribadi, termasuk ponsel cerdas lama dengan perangkat keras terbatas sumber daya. Tim Nimbus berasal dari Status, sebuah perusahaan yang terkenal dengan aplikasi perpesanan / dompet / browser Web3 mereka."
+    }
+  ],
+  "YZtdY1": [
+    {
+      "type": 0,
+      "value": "Mulai "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", Anda memerlukan ~ 400 Gb untuk data rantai mainnet Eth1 saja (bertambah ~ 1 Gb / hari)."
+    }
+  ],
+  "Yganfl": [
+    {
+      "type": 0,
+      "value": "Ketik baris berikut ke dalam jendela terminal:"
+    }
+  ],
+  "YkznEp": [
+    {
+      "type": 0,
+      "value": "Jika Anda kehilangan kunci penarikan Anda, tidak ada cara untuk mengakses dana yang dipegang oleh validator Anda."
+    }
+  ],
+  "YtwQyB": [
+    {
+      "type": 0,
+      "value": "Anda dapat "
+    },
+    {
+      "type": 1,
+      "value": "changeYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " untuk memuat validator bagi alamat yang berbeda."
+    }
+  ],
+  "Yu78N6": [
+    {
+      "type": 0,
+      "value": "tas uang"
+    }
+  ],
+  "Z07LQm": [
+    {
+      "type": 0,
+      "value": "Tidak dapat mengunggah "
+    },
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " karena kesalahan. Buka masalah di GitHub agar kami dapat menyelidikinya."
+    }
+  ],
+  "Z1aGQe": [
+    {
+      "type": 0,
+      "value": "Secara keseluruhan, kami mengharapkan validator Anda menghasilkan keuntungan bersih selama waktu aktif Anda "
+    },
+    {
+      "type": 1,
+      "value": "greaterThan50Percent"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "ZBtnGs": [
+    {
+      "type": 0,
+      "value": "Saya telah meninjau daftar periksa."
+    }
+  ],
+  "ZK6NmY": [
+    {
+      "type": 0,
+      "value": "Catatan: waktu RTC (Real-Time Clock) dapat disetel ke zona waktu lokal Anda, bukan UTC, terutama di VM yang jamnya dikonfigurasi di Windows."
+    }
+  ],
+  "ZOU+p7": [
+    {
+      "type": 0,
+      "value": "dokumentasi --http"
+    }
+  ],
+  "ZOXuIe": [
+    {
+      "type": 0,
+      "value": "Mengapa saya perlu mempertaruhkan dana?"
+    }
+  ],
+  "ZPRDyW": [
+    {
+      "type": 0,
+      "value": "Sekali lagi, hal itu tergantung. Berperilaku jahat - misalnya membuktikan blok yang tidak valid atau bertentangan, akan menyebabkan taruhan Anda dipotong."
+    }
+  ],
+  "ZRbxwY": [
+    {
+      "type": 0,
+      "value": "Daftar periksa validator Eth2"
+    }
+  ],
+  "ZTo0Fl": [
+    {
+      "type": 0,
+      "value": "Mengapa ada waktu tunggu?"
+    }
+  ],
+  "Zi+EED": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku adalah klien Ethereum 2.0 berbasis Java yang dibuat untuk memenuhi kebutuhan institusional dan persyaratan keamanan."
+    }
+  ],
+  "Zspg8H": [
+    {
+      "type": 0,
+      "value": "Bagian 1 - Sebelum Anda mulai"
+    }
+  ],
+  "ZzTcj5": [
+    {
+      "type": 0,
+      "value": "Unduh python3 dan ikuti petunjuk instalasi."
+    }
+  ],
+  "a+xjjV": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dengan Prysm"
+    }
+  ],
+  "aDomwX": [
+    {
+      "type": 0,
+      "value": "Jika Anda mencoba mencurangi sistem, atau bertindak bertentangan dengan spesifikasi, Anda akan dikenakan hukuman, yang dikenal sebagai pemotongan. Menjalankan kunci validator Anda secara bersamaan pada dua atau lebih mesin akan mengakibatkan pemotongan."
+    }
+  ],
+  "aEBE6s": [
+    {
+      "type": 0,
+      "value": "2. Mempersiapkan node"
+    }
+  ],
+  "aMcG1s": [
+    {
+      "type": 0,
+      "value": "Periksa penjelajah blok Eth2 favorit Anda:"
+    }
+  ],
+  "aS6dBe": [
+    {
+      "type": 0,
+      "value": "Konfigurasi Nimbus"
+    }
+  ],
+  "aTRROW": [
+    {
+      "type": 0,
+      "value": "Nimbus (Apache 2) ditulis dalam Nim, bahasa dengan sintaks menyerupai Python yang dikompilasi ke C."
+    }
+  ],
+  "aXWL9X": [
+    {
+      "type": 0,
+      "value": "Tidak ada cara bagi Anda untuk mengaktifkan kembali validator Anda, dan Anda tidak akan dapat mentransfer atau menarik dana Anda sampai penggabungan (yang berarti dana Anda akan tetap tidak dapat diakses sampai saat itu)."
+    }
+  ],
+  "aZ7pUj": [
+    {
+      "type": 0,
+      "value": "Dompet Anda berada di jaringan Ethereum yang salah. Untuk melanjutkan, sambungkan ke jaringan "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "acrOoz": [
+    {
+      "type": 0,
+      "value": "Lanjutkan"
+    }
+  ],
+  "azLmaD": [
+    {
+      "type": 0,
+      "value": "Buat deposit-cli dari kode sumber Python"
+    }
+  ],
+  "b3J7Pw": [
+    {
+      "type": 0,
+      "value": "Tidak. Tidak ada keuntungan memiliki lebih dari "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH yang dipertaruhkan."
+    }
+  ],
+  "b4csjU": [
+    {
+      "type": 0,
+      "value": "Namun, perlu diingat bahwa di masa mendatang, setelah Anda keluar, tidak ada jalan untuk kembali."
+    }
+  ],
+  "bNFkSo": [
+    {
+      "type": 0,
+      "value": "Sekarang ikuti instruksi yang disajikan kepada Anda di jendela terminal untuk menghasilkan kunci Anda."
+    }
+  ],
+  "bR1R2M": [
+    {
+      "type": 0,
+      "value": "Gunakan ini sebagai referensi selama penyiapan klien untuk memeriksa langkah-langkah penting."
+    }
+  ],
+  "bUk/lm": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Besu"
+    }
+  ],
+  "bVtlF7": [
+    {
+      "type": 0,
+      "value": "Pastikan untuk memperhitungkan cukup ruang pada drive Anda sampai Anda menjalankan pemeliharaan pada node Anda."
+    }
+  ],
+  "bbr+aD": [
+    {
+      "type": 0,
+      "value": "File YAML dapat memiliki sintaks yang berbeda."
+    }
+  ],
+  "bnuvhg": [
+    {
+      "type": 0,
+      "value": "Lighthouse dibangun di Rust dan dihadirkan di bawah Lisensi Apache 2.0."
+    }
+  ],
+  "bxU6sX": [
+    {
+      "type": 0,
+      "value": "Petunjuk instalasi Python"
+    }
+  ],
+  "c9DSZ1": [
+    {
+      "type": 0,
+      "value": "Kami sangat menyarankan Anda menyelesaikan langkah-langkah ini pada testnet saat ini sebelum mainnet."
+    }
+  ],
+  "cHUoV9": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Geth menjelaskan cara mengunduh dan menginstal klien."
+    }
+  ],
+  "cRzxes": [
+    {
+      "type": 0,
+      "value": "APR saat ini"
+    }
+  ],
+  "cav520": [
+    {
+      "type": 0,
+      "value": "Unduh dari GitHub"
+    }
+  ],
+  "ccU6l/": [
+    {
+      "type": 0,
+      "value": "Online"
+    }
+  ],
+  "chw27s": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang PegaSys Teku"
+    }
+  ],
+  "clUb0+": [
+    {
+      "type": 0,
+      "value": "Baris perintah"
+    }
+  ],
+  "clxIWO": [
+    {
+      "type": 0,
+      "value": "Berapa banyak saya akan dihukum karena bertindak jahat?"
+    }
+  ],
+  "cs9mQw": [
+    {
+      "type": 0,
+      "value": "Pelajari lebih lanjut tentang peran dan tanggung jawab validator Eth2."
+    }
+  ],
+  "cyR7Kh": [
+    {
+      "type": 0,
+      "value": "Kembali"
+    }
+  ],
+  "d5KEM8": [
+    {
+      "type": 0,
+      "value": "Anda harus menandatangani transaksi untuk setiap deposit yang ingin Anda lakukan."
+    }
+  ],
+  "dIgBOz": [
+    {
+      "type": 0,
+      "value": "Deposit"
+    }
+  ],
+  "dM/KIM": [
+    {
+      "type": 0,
+      "value": "Apa sebenarnya validator?"
+    }
+  ],
+  "dTOtPO": [
+    {
+      "type": 0,
+      "value": "Isi ulang"
+    }
+  ],
+  "deLJOg": [
+    {
+      "type": 0,
+      "value": "Unggah file json yang valid."
+    }
+  ],
+  "do+Cyc": [
+    {
+      "type": 0,
+      "value": "Taksiran APR ("
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "dprf8W": [
+    {
+      "type": 0,
+      "value": "Di mana saya dapat menemukan dukungan pemecahan masalah?"
+    }
+  ],
+  "dvr19k": [
+    {
+      "type": 0,
+      "value": "Penyiapan"
+    }
+  ],
+  "dzdAcD": [
+    {
+      "type": 0,
+      "value": "Port Default"
+    }
+  ],
+  "e/PSgJ": [
+    {
+      "type": 0,
+      "value": "Unggah data deposit"
+    }
+  ],
+  "e4f94H": [
+    {
+      "type": 0,
+      "value": "Jika "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " bukan "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": ", jalankan: "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    }
+  ],
+  "eIRc60": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Eth2"
+    }
+  ],
+  "eKEL/g": [
+    {
+      "type": 0,
+      "value": "Tertunda"
+    }
+  ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "Kirimkan transaksi untuk menyelesaikan deposit Anda."
+    }
+  ],
+  "eOpZjd": [
+    {
+      "type": 0,
+      "value": "Ini menentukan siapa yang mempertaruhkan, siapa yang memvalidasi, berapa banyak yang dipertaruhkan, dan siapa yang dapat menarik dana."
+    }
+  ],
+  "eaU/aL": [
+    {
+      "type": 0,
+      "value": "Untuk memaksimalkan keamanan dan efisiensi node Anda, gunakan perangkat keras khusus untuk menjalankan klien Anda. Hal ini mengurangi risiko terkena malware dan meminimalkan persaingan untuk sumber daya komputasi, memastikan node Anda menangani beban jaringan dan tanggung jawab validatornya setiap saat."
+    }
+  ],
+  "egVO5r": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang rantai beling"
+    }
+  ],
+  "elCkOU": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang penggabungan"
+    }
+  ],
+  "erZJkZ": [
+    {
+      "type": 0,
+      "value": "Saat meluncurkan Teku, keystore dan kata sandi dapat disediakan dengan berbagai cara."
+    }
+  ],
+  "esDvdR": [
+    {
+      "type": 0,
+      "value": "Saldo validator lebih dari "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", tetapi saldo efektif rendah ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": "). Menambahkan "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (jumlah minimum yang diizinkan oleh kontrak deposit) akan memaksimalkan saldo efektif Anda."
+    }
+  ],
+  "eyK2E3": [
+    {
+      "type": 0,
+      "value": "Selesaikan daftar periksa"
+    }
+  ],
+  "f/N7FO": [
+    {
+      "type": 0,
+      "value": "Apa yang terjadi jika saya kehilangan kunci penandatanganan saya?"
+    }
+  ],
+  "fHLKXR": [
+    {
+      "type": 0,
+      "value": "Jawaban atas pertanyaan ini sangat bergantung pada seberapa banyak ETH yang Anda miliki."
+    }
+  ],
+  "fR8+bQ": [
+    {
+      "type": 0,
+      "value": "Selama penyiapan"
+    }
+  ],
+  "fbiteI": [
+    {
+      "type": 0,
+      "value": "hanya disimpan di satu mesin validator"
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "Menunggu konfirmasi dompet"
+    }
+  ],
+  "frGVRP": [
+    {
+      "type": 0,
+      "value": "dampak saldo efektif"
+    }
+  ],
+  "g/DxI7": [
+    {
+      "type": 0,
+      "value": "Selain itu, Anda dapat menyetel Klien Validator (VC) dan Node Beacon (BN) pada mesin dan IP terpisah sehingga meskipun node beacon Anda rentan, keystore Anda disimpan di komputer lain."
+    }
+  ],
+  "g37XKP": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang virtualenv"
+    }
+  ],
+  "gAdE9y": [
+    {
+      "type": 0,
+      "value": "Terima kasih telah mendukung jaringan Eth2!"
+    }
+  ],
+  "gIauNz": [
+    {
+      "type": 0,
+      "value": "Anda akan melihat bahwa Anda memiliki satu keystore per validator. Keystore ini berisi kunci penandatanganan Anda, yang dienkripsi dengan sandi Anda. Anda dapat menggunakan mnemonik Anda demi menghasilkan kunci penarikan Anda saat ingin menarik."
+    }
+  ],
+  "gN9D/h": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " untuk menyinkronkan testnet Goerli."
+    }
+  ],
+  "gQkd2y": [
+    {
+      "type": 0,
+      "value": "Buat kunci setoran menggunakan alat deposit Ethereum Foundation"
+    }
+  ],
+  "gVC0Wl": [
+    {
+      "type": 0,
+      "value": "Ini menggunakan kata sandi yang dibantu di folder rahasia Anda."
+    }
+  ],
+  "gfLdAQ": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Rantai Beacon"
+    }
+  ],
+  "gjBiyj": [
+    {
+      "type": 0,
+      "value": "Memuat..."
+    }
+  ],
+  "gjmx29": [
+    {
+      "type": 0,
+      "value": "YA"
+    }
+  ],
+  "gtrcyK": [
+    {
+      "type": 0,
+      "value": "Periksa apakah "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": ", dan "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " semuanya benar."
+    }
+  ],
+  "guMfKn": [
+    {
+      "type": 0,
+      "value": "Ini berarti Anda tidak perlu bersusah payah dengan klien cadangan atau koneksi internet yang berlebihan karena dampak offline tidak terlalu parah."
+    }
+  ],
+  "gx6frf": [
+    {
+      "type": 0,
+      "value": "jam"
+    }
+  ],
+  "h8MTUo": [
+    {
+      "type": 0,
+      "value": "Taruhan Anda"
+    }
+  ],
+  "h8ZHus": [
+    {
+      "type": 0,
+      "value": "Transfer antar validator belum memungkinkan. Anda harus menunggu sampai mainnet bergabung dengan Rantai Beacon (sekitar dua tahun) sebelum Anda dapat menarik atau mentransfer "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " Anda."
+    }
+  ],
+  "hFzE1M": [
+    {
+      "type": 0,
+      "value": "Hadiah diberikan untuk tindakan yang membantu jaringan mencapai konsensus."
+    }
+  ],
+  "hG0uP4": [
+    {
+      "type": 0,
+      "value": "Hanya desktop"
+    }
+  ],
+  "hPCn9f": [
+    {
+      "type": 0,
+      "value": "Eokumentasi --JsonRpc.Enabled"
+    }
+  ],
+  "hXE+0W": [
+    {
+      "type": 0,
+      "value": "Unggah "
+    },
+    {
+      "type": 1,
+      "value": "depositJSON"
+    }
+  ],
+  "hZrkPB": [
+    {
+      "type": 0,
+      "value": "Dengan kata lain, Anda memaksimalkan hadiah Anda dengan memberikan manfaat terbesar ke jaringan secara keseluruhan."
+    }
+  ],
+  "hjrLbR": [
+    {
+      "type": 0,
+      "value": "Demi hal ini, kami membutuhkan peserta aktif - yang dikenal sebagai validator - untuk mengusulkan, memverifikasi, dan menjamin validitas blok. Sebagai gantinya, validator yang jujur menerima imbalan finansial."
+    }
+  ],
+  "hkg3fb": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang saldo efektif"
+    }
+  ],
+  "huEFUF": [
+    {
+      "type": 0,
+      "value": "Anda memiliki "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " deposit terutang"
+    }
+  ],
+  "hzLd+/": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa penting untuk menjaga validator saya tetap online dan terbarukan."
+    }
+  ],
+  "iBYfM0": [
+    {
+      "type": 0,
+      "value": "Anda harus menjalankan node Eth1 dan Eth2 untuk menjadi validator. Lihatlah daftar periksa untuk mempersiapkan diri dan peralatan Anda."
+    }
+  ],
+  "iCpuph": [
+    {
+      "type": 0,
+      "value": "Klien"
+    }
+  ],
+  "iMvXLd": [
+    {
+      "type": 0,
+      "value": "Menjalankan klien validator"
+    }
+  ],
+  "iPRnRG": [
+    {
+      "type": 0,
+      "value": "Dengan transfer yang dinonaktifkan untuk saat ini, Anda tidak akan dapat keluar secara sukarela untuk kemudian memulai ulang nanti. Ini berarti Anda harus berada di dalamnya untuk jangka panjang."
+    }
+  ],
+  "iWg7mL": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda telah menyetel "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " untuk "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", jika tidak, setoran tidak akan valid."
+    }
+  ],
+  "iZuIgB": [
+    {
+      "type": 0,
+      "value": "Dekompresi file yang baru saja Anda unduh"
+    }
+  ],
+  "idDbou": [
+    {
+      "type": 0,
+      "value": "Berpikir tentang melakukan taruhan?"
+    }
+  ],
+  "irRdC0": [
+    {
+      "type": 0,
+      "value": "Saran perangkat keras merupakan target yang terus berkembang. Persyaratan minimum saat ini cenderung meningkat dengan urutan besarnya setelah penggabungan dan pengenalan rantai pecahan. Lakukan riset Anda sendiri sebelum menyetorkan dana."
+    }
+  ],
+  "isGKnz": [
+    {
+      "type": 0,
+      "value": "Dokumentasi"
+    }
+  ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "Kirim semua setoran "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    }
+  ],
+  "j4ctVP": [
+    {
+      "type": 0,
+      "value": "Spesifikasi Eth2"
+    }
+  ],
+  "jDv/zO": [
+    {
+      "type": 0,
+      "value": "Saat memvalidasi di testnet, lakukan simulasi ini untuk mempelajari lebih lanjut tentang node Anda, dan lebih mempersiapkan diri Anda untuk mainnet:"
+    }
+  ],
+  "jXer8/": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Prysm"
+    }
+  ],
+  "jYVeq4": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Lighthouse"
+    }
+  ],
+  "jZVChZ": [
+    {
+      "type": 0,
+      "value": "Saya telah mengimpor keystore saya ke klien validator Eth2 saya."
+    }
+  ],
+  "jecC36": [
+    {
+      "type": 0,
+      "value": "Kunci publik"
+    }
+  ],
+  "jfHMKL": [
+    {
+      "type": 0,
+      "value": "Hubungkan ke dompet"
+    }
+  ],
+  "jjLubH": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Prysm"
+    }
+  ],
+  "jm79h1": [
+    {
+      "type": 0,
+      "value": "Peringatan: Jangan menyimpan kunci pada beberapa validator (cadangan) sekaligus"
+    }
+  ],
+  "jse8rl": [
+    {
+      "type": 0,
+      "value": "Seberapa baik waktu aktif saya agar validator saya untung bersih?"
+    }
+  ],
+  "jvB4W9": [
+    {
+      "type": 0,
+      "value": "Variabel lingkungan"
+    }
+  ],
+  "jyN21A": [
+    {
+      "type": 0,
+      "value": "Launchpad Eth2"
+    }
+  ],
+  "jytPQU": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Nimbus"
+    }
+  ],
+  "kFS5Sd": [
+    {
+      "type": 0,
+      "value": "Kontrak deposit diverifikasi secara resmi"
+    }
+  ],
+  "kGnu3F": [
+    {
+      "type": 0,
+      "value": "Bagaimana hadiah / penalti diberikan?"
+    }
+  ],
+  "kQTAe+": [
+    {
+      "type": 0,
+      "value": "Apakah URL tersebut cocok dengan yang Anda lihat di situs web lain?"
+    }
+  ],
+  "kXhUdD": [
+    {
+      "type": 0,
+      "value": "Menjadi validator di desktop"
+    }
+  ],
+  "kZ1+zq": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Teku"
+    }
+  ],
+  "kd/f4u": [
+    {
+      "type": 0,
+      "value": "Daftar kunci"
+    }
+  ],
+  "km7b1A": [
+    {
+      "type": 0,
+      "value": "Seiring waktu, saldo Anda akan berkurang karena Anda dihukum akibat tidak berpartisipasi dalam proses konsensus. Ketika saldo Anda mencapai 16 ETH, Anda akan secara otomatis keluar dari kumpulan validator."
+    }
+  ],
+  "kn7kJd": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang mekanisme konsensus"
+    }
+  ],
+  "krEziQ": [
+    {
+      "type": 0,
+      "value": "Hubungi kami"
+    }
+  ],
+  "kuYpoI": [
+    {
+      "type": 0,
+      "value": "Saldo saat ini"
+    }
+  ],
+  "kv1nqx": [
+    {
+      "type": 0,
+      "value": "Keluar"
+    }
+  ],
+  "l/uCcX": [
+    {
+      "type": 0,
+      "value": "Anda ada di testnet"
+    }
+  ],
+  "l4nLft": [
+    {
+      "type": 0,
+      "value": "Saya tahu cara memeriksa bahwa saya mengirimkan "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " saya ke dalam kontrak setoran yang benar dan akan melakukannya."
+    }
+  ],
+  "l5XCJW": [
+    {
+      "type": 0,
+      "value": "Konsultan"
+    }
+  ],
+  "l5kq/q": [
+    {
+      "type": 0,
+      "value": "Konfirmasi on-chain"
+    }
+  ],
+  "l6OJpv": [
+    {
+      "type": 0,
+      "value": "Pertama, buat virtualenv venv di bawah direktori repositori:"
+    }
+  ],
+  "lD66ab": [
+    {
+      "type": 0,
+      "value": "Deposit terutang"
+    }
+  ],
+  "lJNmgK": [
+    {
+      "type": 0,
+      "value": "Bagaimana cara Eth2 meningkatkan Ethereum?"
+    }
+  ],
+  "lLOZMD": [
+    {
+      "type": 0,
+      "value": "Anda dapat menginstal pip menggunakan Pengelola Paket Linux seperti "
+    },
+    {
+      "type": 1,
+      "value": "apt"
+    },
+    {
+      "type": 0,
+      "value": " atau "
+    },
+    {
+      "type": 1,
+      "value": "yum"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "Apakah situs yang meminta setoran "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " Anda memiliki URL yang Anda harapkan?"
+    }
+  ],
+  "lQzdpT": [
+    {
+      "type": 0,
+      "value": "num_validators"
+    }
+  ],
+  "lS9VhN": [
+    {
+      "type": 0,
+      "value": "Total "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " yang dipertaruhkan"
+    }
+  ],
+  "lVARlA": [
+    {
+      "type": 0,
+      "value": "Harap masukkan nilai isi ulang yang valid."
+    }
+  ],
+  "lVdzDK": [
+    {
+      "type": 0,
+      "value": "Unggah file data setoran yang baru saja Anda buat. "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " terletak di direktori "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " Anda."
+    }
+  ],
+  "lfV1bj": [
+    {
+      "type": 0,
+      "value": "Mengimpor dari dokumentasi Launchpad"
+    }
+  ],
+  "ll/zMW": [
+    {
+      "type": 0,
+      "value": "Ini adalah transaksi yang tidak dapat dikembalikan."
+    }
+  ],
+  "lo+Qqn": [
+    {
+      "type": 0,
+      "value": "ganti dompet Anda"
+    }
+  ],
+  "lrdlY6": [
+    {
+      "type": 0,
+      "value": "Berkas diunggah"
+    }
+  ],
+  "mArJcj": [
+    {
+      "type": 0,
+      "value": "Hard drive"
+    }
+  ],
+  "mZOXtM": [
+    {
+      "type": 0,
+      "value": "Validator"
+    }
+  ],
+  "mhyltV": [
+    {
+      "type": 0,
+      "value": "Saya telah mengatur bendera grafiti saya."
+    }
+  ],
+  "mpmFDY": [
+    {
+      "type": 0,
+      "value": "Tidak ada setoran yang tertunda"
+    }
+  ],
+  "mr1BWl": [
+    {
+      "type": 0,
+      "value": "Resiko dan pernyataan:"
+    }
+  ],
+  "n6Uub0": [
+    {
+      "type": 0,
+      "value": "Saya telah menginstal dan menyinkronkan node Eth1 saya di "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (jangan menunggu karena prosesnya dapat memakan waktu beberapa hari)."
+    }
+  ],
+  "n7yYXG": [
+    {
+      "type": 0,
+      "value": "Layanan"
+    }
+  ],
+  "nHk8Et": [
+    {
+      "type": 0,
+      "value": "PoS adalah mekanisme konsensus yang lebih aman, terdesentralisasi, dan ramah lingkungan daripada bukti kerja (PoW) yang mengamankan Ethereum saat ini. Ini memberi hadiah kepada validator untuk membangun rantai, tetapi memotong deposit mereka jika mencoba menyerangnya, hal ini demi mendorong perilaku yang sehat. Peningkatan ini sudah berjalan dalam bentuk Rantai Beacon."
+    }
+  ],
+  "nIb6XF": [
+    {
+      "type": 0,
+      "value": "Dan hukuman berat - atau "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": " - diberikan untuk tindakan jahat."
+    }
+  ],
+  "nRdJct": [
+    {
+      "type": 0,
+      "value": "Lanjutkan tanpa semua transaksi dikonfirmasi"
+    }
+  ],
+  "nZTFTz": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa tidak ada keuntungan untuk menyetor lebih dari sekali per validator. Setiap tambahan "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " yang dikirim dalam setoran ganda tidak akan dihitung dalam saldo validator efektif saya dan saya tidak dapat menariknya."
+    }
+  ],
+  "ndhFef": [
+    {
+      "type": 0,
+      "value": "Setelah Anda sudah merasa nyaman, Anda dapat mulai membuat kunci dan menyetor ETH Anda."
+    }
+  ],
+  "njAU72": [
+    {
+      "type": 0,
+      "value": "Bahasa Perancis"
+    }
+  ],
+  "njnn9P": [
+    {
+      "type": 0,
+      "value": "Saya sudah mulai menjalankan klien validator saya."
+    }
+  ],
+  "ntG2by": [
+    {
+      "type": 0,
+      "value": "Arsitektur sistem tingkat lanjut"
+    }
+  ],
+  "nz27+c": [
+    {
+      "type": 0,
+      "value": "Jika Anda memiliki pertanyaan, komunitas EthStaker adalah tempat yang tepat untuk mendapatkan bantuan! Anda dapat menemukan dukungan di "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " atau "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "o9QvTP": [
+    {
+      "type": 0,
+      "value": "Sebelum Anda mulai"
+    }
+  ],
+  "oLxfO1": [
+    {
+      "type": 0,
+      "value": "Setelah kunci diimpor, yang harus dilakukan (dengan asumsi node beacon Anda sudah berjalan) adalah menjalankan klien validator."
+    }
+  ],
+  "oPdwwC": [
+    {
+      "type": 0,
+      "value": "Membatasi taruhan maksimum menjadi "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH mendorong desentralisasi kekuasaan karena mencegah validator tunggal memiliki suara yang terlalu besar di negara bagian rantai."
+    }
+  ],
+  "oWhj8Q": [
+    {
+      "type": 0,
+      "value": "Seberapa sering hadiah / penalti diberikan?"
+    }
+  ],
+  "ogbG7r": [
+    {
+      "type": 0,
+      "value": "Untuk menjadi validator di Rantai Beacon, Anda perlu menyetor "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " per validator yang ingin Anda jalankan."
+    }
+  ],
+  "ohspQX": [
+    {
+      "type": 0,
+      "value": "Tanggung jawab"
+    }
+  ],
+  "okxBZ6": [
+    {
+      "type": 0,
+      "value": "Sebelumnya Parity, OpenEthereum dirancang untuk menjadi \"klien Ethereum tercepat, teringan, dan teraman\"."
+    }
+  ],
+  "omJNJw": [
+    {
+      "type": 0,
+      "value": "Peringatan!"
+    }
+  ],
+  "on8WXn": [
+    {
+      "type": 0,
+      "value": "Saya telah mengimpor konfigurasi dasbor ke server Grafana saya dan memeriksa ulang status node saya aktif."
+    }
+  ],
+  "orM+1T": [
+    {
+      "type": 0,
+      "value": "Teku juga akan memuat validator dari keystore (dan kata sandi) dari jalur yang ditemukan di variabel lingkungan kunci validator."
+    }
+  ],
+  "orczlb": [
+    {
+      "type": 0,
+      "value": "Apakah kontrak memiliki saldo yang besar?"
+    }
+  ],
+  "ouW9ov": [
+    {
+      "type": 0,
+      "value": "Validator Anda"
+    }
+  ],
+  "ox304v": [
+    {
+      "type": 0,
+      "value": "Terdapat kesalahan"
+    }
+  ],
+  "ozEkVY": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " untuk menyinkronkan testnet Goerli."
+    }
+  ],
+  "p0b6zX": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Status"
+    }
+  ],
+  "p556q3": [
+    {
+      "type": 0,
+      "value": "Disalin"
+    }
+  ],
+  "pA+UVF": [
+    {
+      "type": 0,
+      "value": "Jika Anda ingin melihat Launchpad dalam bahasa lain, atau jika Anda dapat membantu menerjemahkan, "
+    },
+    {
+      "type": 1,
+      "value": "getInTouch"
+    },
+    {
+      "type": 0,
+      "value": "!"
+    }
+  ],
+  "pXyH++": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Besu menjelaskan cara mengunduh dan menginstal klien."
+    }
+  ],
+  "penFMT": [
+    {
+      "type": 0,
+      "value": "Eth2 adalah serangkaian peningkatan yang akan membuat Ethereum lebih terukur, aman, dan berkelanjutan. Peningkatan ini akan meningkatkan Ethereum sambil terus melanjutkan rantai hari ini dengan mulus. Berikut lebih lanjut tentang peningkatan yang berbeda:"
+    }
+  ],
+  "pfJX2D": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang phishing"
+    }
+  ],
+  "pnxB8A": [
+    {
+      "type": 0,
+      "value": "Nimbus mencari keystore di folder validator Anda."
+    }
+  ],
+  "pqC+qt": [
+    {
+      "type": 0,
+      "value": "Pemotongan"
+    }
+  ],
+  "ps8lLk": [
+    {
+      "type": 0,
+      "value": "Sedang offline ketika sebagian besar (2/3) validator masih online menyebabkan penalti yang relatif kecil karena masih ada cukup validator online untuk diselesaikan rantai. "
+    },
+    {
+      "type": 1,
+      "value": "expected"
+    }
+  ],
+  "ptWiT7": [
+    {
+      "type": 0,
+      "value": "Saya telah mensimulasikan cara menghentikan dan memulai ulang Node Beacon (BN) dan Klien Validator (VC) saya dengan baik."
+    }
+  ],
+  "pyWt01": [
+    {
+      "type": 0,
+      "value": "Ringkasan deposit"
+    }
+  ],
+  "q2XW/k": [
+    {
+      "type": 0,
+      "value": "Jika kunci penarikan Anda dicuri, pencuri dapat mentransfer saldo validator Anda, tetapi hanya setelah validator keluar."
+    }
+  ],
+  "q6sz6X": [
+    {
+      "type": 0,
+      "value": "Ekonomi Eth2"
+    }
+  ],
+  "qDcbPp": [
+    {
+      "type": 0,
+      "value": "16 ETH Anda kemudian dapat ditarik - dengan kunci penarikan Anda - setelah penundaan sekitar satu hari."
+    }
+  ],
+  "qDvaNm": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa kunci merupakan tanggung jawab saya dan mnemonik (benih) saya akan menjadi "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": " untuk menarik dana saya."
+    }
+  ],
+  "qLf68w": [
+    {
+      "type": 0,
+      "value": "Dokumentasi OpenEthereum"
+    }
+  ],
+  "qMePPG": [
+    {
+      "type": 0,
+      "value": "Catatan"
+    }
+  ],
+  "qQ+Xla": [
+    {
+      "type": 0,
+      "value": "Bahasa Korea"
+    }
+  ],
+  "qZ59xY": [
+    {
+      "type": 0,
+      "value": "Semua validator"
+    }
+  ],
+  "qdk7Hp": [
+    {
+      "type": 0,
+      "value": "Dompet Anda telah diputus"
+    }
+  ],
+  "qgqVCE": [
+    {
+      "type": 0,
+      "value": "hubungkan ulang dompet Anda"
+    }
+  ],
+  "qkhah0": [
+    {
+      "type": 0,
+      "value": "Simpan file kunci dan siapkan file validator"
+    }
+  ],
+  "qpdTjz": [
+    {
+      "type": 0,
+      "value": "Klien Eth2 yang berfokus utama pada kecepatan dan keamanan. Dibangun oleh Sigma Prime, firma keamanan informasi dan rekayasa perangkat lunak yang telah mendanai Lighthouse bersama dengan Ethereum Foundation, Consensys, dan perorangan."
+    }
+  ],
+  "quIMjo": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda melakukan hal berikut agar klien Eth1 Anda berfungsi dengan benar."
+    }
+  ],
+  "qwh6gM": [
+    {
+      "type": 0,
+      "value": "Saya memahami pengadopsi awal dan risiko pemotongan."
+    }
+  ],
+  "r2BH1M": [
+    {
+      "type": 0,
+      "value": "Konfigurasi Prysm"
+    }
+  ],
+  "r4JsKB": [
+    {
+      "type": 0,
+      "value": "Transaksi berhasil"
+    }
+  ],
+  "rD3ot9": [
+    {
+      "type": 0,
+      "value": "Panduan phishing"
+    }
+  ],
+  "rFe61n": [
+    {
+      "type": 0,
+      "value": "Sebagai validator, Anda akan bertanggung jawab untuk mengamankan jaringan dan menerima pembayaran berkelanjutan untuk tindakan yang membantu jaringan mencapai konsensus."
+    }
+  ],
+  "rNEdex": [
+    {
+      "type": 0,
+      "value": "Anda dapat menganggap validator sebagai pemilih untuk blok baru"
+    }
+  ],
+  "rTSJI9": [
+    {
+      "type": 0,
+      "value": "Coba testnet"
+    }
+  ],
+  "rULiIc": [
+    {
+      "type": 0,
+      "value": "Selesaikan daftar periksa Staker"
+    }
+  ],
+  "raRw6Z": [
+    {
+      "type": 0,
+      "value": "Beranda Launchpad"
+    }
+  ],
+  "rbrahO": [
+    {
+      "type": 0,
+      "value": "Tutup"
+    }
+  ],
+  "rcdxTW": [
+    {
+      "type": 0,
+      "value": "Dengan jumlah total validator yang tetap, hadiah / penalti sebagian besar berskala dengan keseimbangan validator - membuktikan dengan saldo yang lebih tinggi menghasilkan hadiah / penalti yang lebih besar sedangkan membuktikan dengan saldo yang lebih rendah menghasilkan hadiah / penalti yang lebih rendah."
+    }
+  ],
+  "rs4eqr": [
+    {
+      "type": 0,
+      "value": "Anda mungkin perlu menambah saldo validator Anda karena dua alasan penting. Jika saldo efektif validator Anda kurang dari "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", Anda tidak akan mendapatkan hadiah penuh taruhan. Dan jika turun hingga "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", sistem akan mengeluarkan validator Anda."
+    }
+  ],
+  "rswUPu": [
+    {
+      "type": 0,
+      "value": "Ringkasan Launchpad"
+    }
+  ],
+  "rxttyC": [
+    {
+      "type": 0,
+      "value": "Mnemonik Anda adalah cadangan untuk kunci penandatanganan Anda dan akan menjadi SATU-SATUNYA cara untuk menarik "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " Anda ketika tiba waktunya dan tidak ada yang dapat membantu Anda memulihkan mnemonik Anda jika Anda kehilangannya."
+    }
+  ],
+  "s0FTco": [
+    {
+      "type": 0,
+      "value": "APR"
+    }
+  ],
+  "s6gImC": [
+    {
+      "type": 0,
+      "value": "Teku juga dapat dikonfigurasi melalui file YAML yang diteruskan melalui beberapa cara berbeda."
+    }
+  ],
+  "sXV95+": [
+    {
+      "type": 0,
+      "value": "CPU dan RAM"
+    }
+  ],
+  "soCLV+": [
+    {
+      "type": 0,
+      "value": "Daftar periksa"
+    }
+  ],
+  "sraQ3P": [
+    {
+      "type": 0,
+      "value": "Menunggu untuk terhubung..."
+    }
+  ],
+  "svsq8J": [
+    {
+      "type": 0,
+      "value": "Saya telah menyinkronkan node beacon Eth2 saya di "
+    },
+    {
+      "type": 1,
+      "value": "ETH2_NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "sy35J+": [
+    {
+      "type": 0,
+      "value": "Apa itu kontrak deposit?"
+    }
+  ],
+  "szN3Fl": [
+    {
+      "type": 0,
+      "value": "Saya memahami dan menyetujui ketentuan layanan dan semua yang disebutkan di bagian sebelumnya."
+    }
+  ],
+  "tJcyUM": [
+    {
+      "type": 0,
+      "value": "Deposit_data.json Anda menyarankan Anda ingin menyiapkan lebih banyak validator. Deposit ini masih belum terselesaikan. Jika Anda merasa telah melakukan setoran ini, tunggu satu jam sebelum mencoba lagi untuk menghindari setoran ganda."
+    }
+  ],
+  "teyxVk": [
+    {
+      "type": 0,
+      "value": "Apa alamatnya yang seharusnya?"
+    }
+  ],
+  "tigMuZ": [
+    {
+      "type": 0,
+      "value": "Tunggu setidaknya 30 menit sebelum mencoba mengirim ulang transaksi dengan file "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " ini. Ini akan memberi waktu sumber data on-chain kami untuk menandai setiap setoran duplikat."
+    }
+  ],
+  "tkFTZw": [
+    {
+      "type": 0,
+      "value": "Saldo setelah isi ulang"
+    }
+  ],
+  "tsfX5f": [
+    {
+      "type": 0,
+      "value": "Konfirmasi deposit"
+    }
+  ],
+  "tv5Cxs": [
+    {
+      "type": 0,
+      "value": "Namun perlu dicatat bahwa mekanisme penskalaan ini bekerja dengan cara yang tidak terlihat jelas. Untuk memahami detail yang tepat tentang cara kerjanya membutuhkan pemahaman konsep yang disebut "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": ". Jika Anda belum memahami konsep ini, kami sarankan untuk membaca "
+    },
+    {
+      "type": 1,
+      "value": "article"
+    }
+  ],
+  "tzMNF3": [
+    {
+      "type": 0,
+      "value": "Status"
+    }
+  ],
+  "u28qA1": [
+    {
+      "type": 0,
+      "value": "Setelah melakukan deposit"
+    }
+  ],
+  "uCikFk": [
+    {
+      "type": 0,
+      "value": "Anda juga membutuhkan bandwidth unggahan yang cukup. Per "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " jumlahnya ~ 700-800 MB / jam, dan kemungkinan akan meningkat."
+    }
+  ],
+  "uJzGSb": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda mengetahui cara menghindari serangan phishing. Kami telah menyiapkan daftar hal-hal yang harus diperhatikan."
+    }
+  ],
+  "uNfxNg": [
+    {
+      "type": 0,
+      "value": "Untuk melanjutkan, "
+    },
+    {
+      "type": 1,
+      "value": "reconnect"
+    }
+  ],
+  "ubKWX8": [
+    {
+      "type": 0,
+      "value": "Buat pasangan kunci"
+    }
+  ],
+  "uhapiE": [
+    {
+      "type": 0,
+      "value": "Pastikan bandwidth Anda tidak dapat dibatasi dan tidak terbatasi sehingga node Anda tetap sinkron dan siap untuk memvalidasi saat dipanggil."
+    }
+  ],
+  "ujVT29": [
+    {
+      "type": 0,
+      "value": "Anda sekarang harus memiliki mnemonik yang ditulis di tempat yang aman dan keystore disimpan untuk setiap validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " Anda. Pastikan Anda menyimpannya dengan aman, lebih bagus saat offline. Keystore validator Anda harus tersedia di direktori "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " yang baru dibuat."
+    }
+  ],
+  "ukfwum": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dengan Nimbus"
+    }
+  ],
+  "unzIoE": [
+    {
+      "type": 0,
+      "value": "Sebelum Anda dapat menjalankan validator dan mulai mengamankan jaringan, Anda perlu mempertaruhkan "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Ini akan membentuk saldo awal Anda."
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "Apakah ada setoran "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " baru-baru ini?"
+    }
+  ],
+  "vBOf5K": [
+    {
+      "type": 0,
+      "value": "Saldo Anda diperbarui secara berkala oleh aturan jaringan Ethereum saat Anda menjalankan (atau gagal menjalankan) tanggung jawab Anda."
+    }
+  ],
+  "vEJDo8": [
+    {
+      "type": 0,
+      "value": "Lindungi dana Anda menggunakan perangkat lunak pemantauan, dan pelajari cara menangani berbagai skenario dunia nyata."
+    }
+  ],
+  "vFrE9m": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dan membantu mengamankan Eth2."
+    }
+  ],
+  "vIF140": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dan membantu mengamankan masa depan Ethereum"
+    }
+  ],
+  "vJez0K": [
+    {
+      "type": 0,
+      "value": "Lanjutkan dengan hati hati. Sumber data on-chain kami sedang tidak aktif dan kami tidak dapat menandai setoran ganda apa pun."
+    }
+  ],
+  "vY2wig": [
+    {
+      "type": 0,
+      "value": "Kesalahan memuat"
+    }
+  ],
+  "vYODEJ": [
+    {
+      "type": 0,
+      "value": "Dapatkan "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "vYOWYI": [
+    {
+      "type": 0,
+      "value": "Bahasa Mandarin (yang disederhanakan)"
+    }
+  ],
+  "va96SS": [
+    {
+      "type": 0,
+      "value": "Saya telah meneruskan port yang diperlukan ke mesin yang benar dari router saya (hanya buka port yang sesuai untuk instalasi Anda)."
+    }
+  ],
+  "vbVsqW": [
+    {
+      "type": 0,
+      "value": "Pastikan untuk menyelesaikan "
+    },
+    {
+      "type": 1,
+      "value": "stakerChecklist"
+    },
+    {
+      "type": 0,
+      "value": " sesegeraa mungkin. Kemudian bergabunglah dengan komunitas EthStaker untuk mendapatkan dukungan dan diskusi dengan sesama validator."
+    }
+  ],
+  "vg1dVR": [
+    {
+      "type": 0,
+      "value": "Dengan kunci penandatanganan Anda, Anda dapat mencoba untuk keluar dari validator dengan cepat dan kemudian mentransfer dana - dengan kunci penarikan - sebelum pencuri."
+    }
+  ],
+  "vyvUB5": [
+    {
+      "type": 0,
+      "value": "File JSON ini bukan untuk jaringan yang benar. Unggah file yang dibuat untuk jaringan Anda saat ini: "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "w/ghcK": [
+    {
+      "type": 0,
+      "value": "Gali lebih dalam bagaimana Eth2 meningkatkan Ethereum."
+    }
+  ],
+  "w6qYSU": [
+    {
+      "type": 0,
+      "value": "Jalankan perintah berikut untuk meluncurkan aplikasi"
+    }
+  ],
+  "wJ1PbL": [
+    {
+      "type": 0,
+      "value": "Untuk "
+    },
+    {
+      "type": 1,
+      "value": "operatingSystem"
+    }
+  ],
+  "wJy3tO": [
+    {
+      "type": 0,
+      "value": "Pengaturan awal"
+    }
+  ],
+  "wawegX": [
+    {
+      "type": 0,
+      "value": "tongkat Pancing"
+    }
+  ],
+  "wdb1NC": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Proof of Stake"
+    }
+  ],
+  "wfSgCZ": [
+    {
+      "type": 0,
+      "value": "Hubungkan ke "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "wm04oC": [
+    {
+      "type": 0,
+      "value": "Jalankan perintah berikut:"
+    }
+  ],
+  "wqUcy/": [
+    {
+      "type": 0,
+      "value": "Risiko pengguna awal"
+    }
+  ],
+  "wtTeex": [
+    {
+      "type": 0,
+      "value": "Apakah ada kesalahan ejaan?"
+    }
+  ],
+  "x+fF+M": [
+    {
+      "type": 0,
+      "value": "Simulasi Testnet"
+    }
+  ],
+  "x0tVK4": [
+    {
+      "type": 0,
+      "value": "Memvalidasi di Ethereum tidak sama dengan menambang. Hasilnya serupa: pekerjaan yang Anda lakukan akan memperluas dan mengamankan rantai. Namun prosesnya sangat berbeda karena menggunakan mekanisme konsensus yang berbeda."
+    }
+  ],
+  "xDyl3T": [
+    {
+      "type": 0,
+      "value": "Periksa kembali alamat kontrak deposit terhadap situs web lain - misalnya: Reddit, Twitter, dan GitHub. Ada juga daftar sumber tepercaya di "
+    },
+    {
+      "type": 1,
+      "value": "ethereumorg"
+    }
+  ],
+  "xH5GKj": [
+    {
+      "type": 0,
+      "value": "Saya adalah pengguna awal, dan saya menerima bahwa bug perangkat lunak dan desain dapat menyebabkan saya dipotong."
+    }
+  ],
+  "xJPCw/": [
+    {
+      "type": 0,
+      "value": "Apa yang terjadi jika saya kehilangan kunci penarikan saya?"
+    }
+  ],
+  "xOSMb1": [
+    {
+      "type": 0,
+      "value": "Nethermind di dokumentasi Goerli"
+    }
+  ],
+  "xP6BKs": [
+    {
+      "type": 0,
+      "value": "daftar periksa Staker"
+    }
+  ],
+  "xQrU13": [
+    {
+      "type": 0,
+      "value": "Harap tinjau daftar periksa taruhan sebelum melanjutkan. Gunakan ini sebagai panduan untuk memeriksa tugas saat Anda menyelesaikan penyiapan validator."
+    }
+  ],
+  "xSvJIi": [
+    {
+      "type": 0,
+      "value": "Hadiah blok dihitung menggunakan skala geser berdasarkan jumlah total ETH yang dipertaruhkan di jaringan."
+    }
+  ],
+  "xYRzZY": [
+    {
+      "type": 0,
+      "value": "Nimbus adalah proyek penelitian dan implementasi klien untuk Ethereum 2.0 yang dirancang untuk bekerja dengan baik pada sistem tertanam dan perangkat seluler pribadi."
+    }
+  ],
+  "xbet2w": [
+    {
+      "type": 0,
+      "value": "Instal python3.7+"
+    }
+  ],
+  "xogY3N": [
+    {
+      "type": 0,
+      "value": "Besu ditulis di Java dan dirilis di bawah Lisensi Apache 2.0."
+    }
+  ],
+  "y4dBsA": [
+    {
+      "type": 0,
+      "value": "Konfigurasikan sinkronisasi waktu"
+    }
+  ],
+  "y7dWNc": [
+    {
+      "type": 0,
+      "value": "Hal yang penting, suara validator ditentukan oleh jumlah yang dipertaruhkan."
+    }
+  ],
+  "yI/DO8": [
+    {
+      "type": 0,
+      "value": "jumlah ini meningkat jika validator lain dipotong pada saat yang bersamaan"
+    }
+  ],
+  "ySYWBD": [
+    {
+      "type": 0,
+      "value": "Saya menyimpan kunci saya dengan aman dan telah menuliskan frasa mnemonik saya."
+    }
+  ],
+  "yT2EZO": [
+    {
+      "type": 0,
+      "value": "Dengan kata lain, "
+    },
+    {
+      "type": 1,
+      "value": "boldSummary"
+    },
+    {
+      "type": 0,
+      "value": ". Semakin banyak suara yang didapat sebuah blok, semakin besar kemungkinan untuk ditambahkan ke rantai."
+    }
+  ],
+  "ydh1KU": [
+    {
+      "type": 0,
+      "value": "Informasi bahasa"
+    }
+  ],
+  "yeI1Zq": [
+    {
+      "type": 0,
+      "value": "Perhatikan bahwa penundaan ini bisa lebih lama jika banyak orang yang keluar atau dikeluarkan pada saat yang bersamaan."
+    }
+  ],
+  "yis3aS": [
+    {
+      "type": 0,
+      "value": "Ini adalah skenario yang diharapkan."
+    }
+  ],
+  "yjBvUO": [
+    {
+      "type": 0,
+      "value": "Nethermind dibangun di atas .NET Core. Perluas, kustomisasi - tidak ada batasnya .."
+    }
+  ],
+  "yoGtkz": [
+    {
+      "type": 0,
+      "value": "Pastikan node Anda memiliki lebih dari 20 peer."
+    }
+  ],
+  "z/ZhML": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda telah menyetel "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " untuk "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", jika tidak, setoran tidak akan valid."
+    }
+  ],
+  "z63I56": [
+    {
+      "type": 0,
+      "value": "validator"
+    }
+  ],
+  "z6K3D6": [
+    {
+      "type": 0,
+      "value": "Saya telah menyiapkan layanan "
+    },
+    {
+      "type": 1,
+      "value": "prometheus"
+    },
+    {
+      "type": 0,
+      "value": " saya."
+    }
+  ],
+  "zAVb0/": [
+    {
+      "type": 0,
+      "value": "Lebih lanjut tentang Lighthouse dan Sigma Prime"
+    }
+  ],
+  "zGkAVo": [
+    {
+      "type": 0,
+      "value": "Di sisi lain, jika saldo Anda mendekati 31 ETH, mungkin tidak ada gunanya menambahkan ETH ekstra yang diperlukan untuk kembali ke 32."
+    }
+  ],
+  "zbEBi9": [
+    {
+      "type": 0,
+      "value": "Gunakan "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " untuk menyinkronkan mainnet Ethereum."
+    }
+  ],
+  "zicXn7": [
+    {
+      "type": 0,
+      "value": "Keamanan node"
+    }
+  ]
+}

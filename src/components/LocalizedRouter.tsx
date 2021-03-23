@@ -10,10 +10,9 @@ interface Props {
   history: any;
 }
 
-// TODO: update to support >2 letter language codes, e.g. `zh-tw`
 export const LocalizedRouter: React.FC<Props> = ({ children, history }) => (
   <Router history={history}>
-    <Route path="/:lang([a-z]{2})">
+    <Route path="/:lang([a-z-]{2,5})">
       {({ match, location }) => {
         /**
          * Get current language

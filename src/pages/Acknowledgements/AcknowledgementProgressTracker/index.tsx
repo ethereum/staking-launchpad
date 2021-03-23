@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import _map from 'lodash/map';
 import {
@@ -17,19 +18,6 @@ const Container = styled.div`
   }
 `;
 
-const acknowledgementsWithCopy = {
-  [AcknowledgementIdsEnum.introSection]: 'Proof of stake',
-  [AcknowledgementIdsEnum.deposit]: 'Deposit',
-  [AcknowledgementIdsEnum.terminal]: 'The terminal',
-  [AcknowledgementIdsEnum.responsibilities]: 'Uptime',
-  [AcknowledgementIdsEnum.slashing]: 'Bad behaviour',
-  [AcknowledgementIdsEnum.keyManagement]: 'Key management',
-  [AcknowledgementIdsEnum.commitment]: 'Commitment',
-  [AcknowledgementIdsEnum.earlyAdoptionRisks]: 'Early adoption risks',
-  [AcknowledgementIdsEnum.checklist]: 'Checklist',
-  [AcknowledgementIdsEnum.confirmation]: 'Confirmation',
-};
-
 export interface AcknowledgementProgressTrackerProps {
   acknowledgementState: AcknowledgementStateInterface;
   activeAcknowledgementId: AcknowledgementIdsEnum;
@@ -41,6 +29,39 @@ export const _AcknowledgementProgressTracker = ({
   activeAcknowledgementId,
   setActiveAcknowledgementId,
 }: AcknowledgementProgressTrackerProps): JSX.Element => {
+  const { formatMessage } = useIntl();
+  const acknowledgementsWithCopy = {
+    [AcknowledgementIdsEnum.introSection]: formatMessage({
+      defaultMessage: 'Proof of stake',
+    }),
+    [AcknowledgementIdsEnum.deposit]: formatMessage({
+      defaultMessage: 'Deposit',
+    }),
+    [AcknowledgementIdsEnum.terminal]: formatMessage({
+      defaultMessage: 'The terminal',
+    }),
+    [AcknowledgementIdsEnum.responsibilities]: formatMessage({
+      defaultMessage: 'Uptime',
+    }),
+    [AcknowledgementIdsEnum.slashing]: formatMessage({
+      defaultMessage: 'Bad behaviour',
+    }),
+    [AcknowledgementIdsEnum.keyManagement]: formatMessage({
+      defaultMessage: 'Key management',
+    }),
+    [AcknowledgementIdsEnum.commitment]: formatMessage({
+      defaultMessage: 'Commitment',
+    }),
+    [AcknowledgementIdsEnum.earlyAdoptionRisks]: formatMessage({
+      defaultMessage: 'Early adoption risks',
+    }),
+    [AcknowledgementIdsEnum.checklist]: formatMessage({
+      defaultMessage: 'Checklist',
+    }),
+    [AcknowledgementIdsEnum.confirmation]: formatMessage({
+      defaultMessage: 'Confirmation',
+    }),
+  };
   return (
     <Container>
       {_map(

@@ -25,11 +25,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
                         including Raspberry Pis -- and multi-purpose servers."
       />
     </Text>
-    <Link
-      to="https://nimbus.team/"
-      primary
-      className="mt10"
-    >
+    <Link to="https://nimbus.team/" primary className="mt10">
       <FormattedMessage defaultMessage="More on Nimbus" />
     </Link>
     <Link to="https://status.im/" primary className="mt10">

@@ -1244,9 +1244,6 @@
     "description": "{grafana} is 'Grafana' service, with link to its homepage (do not translate name)",
     "message": "I've set up my {grafana} service."
   },
-  "YWfd2t": {
-    "message": "A research project and a client implementation for Eth2 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware. The Nimbus team are from Status, a company best known for their messaging app/wallet/Web3 browser."
-  },
   "YZtdY1": {
     "message": "As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
   },
@@ -1315,8 +1312,8 @@
   "aS6dBe": {
     "message": "Configure Nimbus"
   },
-  "aTRROW": {
-    "message": "Nimbus (Apache 2) is written in Nim, a language with Python-like syntax that compiles to C."
+  "aXT3iO": {
+    "message": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
   },
   "aXWL9X": {
     "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the merge (which means your funds will remain inaccessible until then)."
@@ -1568,6 +1565,9 @@
   },
   "iPRnRG": {
     "message": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
+  },
+  "iRQxxL": {
+    "message": "Nimbus is a client implementation for both Eth1 and Eth2 that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
   },
   "iWg7mL": {
     "description": "{flag} and {network} are terminal commands styled as code.",

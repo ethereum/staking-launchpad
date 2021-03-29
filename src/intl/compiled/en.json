@@ -3213,12 +3213,6 @@
       "value": " service."
     }
   ],
-  "YWfd2t": [
-    {
-      "type": 0,
-      "value": "A research project and a client implementation for Eth2 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware. The Nimbus team are from Status, a company best known for their messaging app/wallet/Web3 browser."
-    }
-  ],
   "YZtdY1": [
     {
       "type": 0,
@@ -3383,10 +3377,10 @@
       "value": "Configure Nimbus"
     }
   ],
-  "aTRROW": [
+  "aXT3iO": [
     {
       "type": 0,
-      "value": "Nimbus (Apache 2) is written in Nim, a language with Python-like syntax that compiles to C."
+      "value": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
     }
   ],
   "aXWL9X": [
@@ -4007,6 +4001,12 @@
     {
       "type": 0,
       "value": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
+    }
+  ],
+  "iRQxxL": [
+    {
+      "type": 0,
+      "value": "Nimbus is a client implementation for both Eth1 and Eth2 that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
     }
   ],
   "iWg7mL": [

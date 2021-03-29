@@ -19,18 +19,13 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10">
       <FormattedMessage
-        defaultMessage="A research project and a client implementation for Eth2 designed to
-          perform well on embedded systems and personal mobile devices, including
-          older smartphones with resource-restricted hardware. The Nimbus team are
-          from Status, a company best known for their messaging app/wallet/Web3
-          browser."
+        defaultMessage="Nimbus is a client implementation for both Eth1 and Eth2
+                        that strives to be as lightweight as possible in terms of resources used.
+                        This allows it to perform well on embedded systems, resource-restricted devices --
+                        including Raspberry Pis -- and multi-purpose servers."
       />
     </Text>
-    <Link
-      to="https://our.status.im/nimbus-for-newbies/"
-      primary
-      className="mt10"
-    >
+    <Link to="https://nimbus.team/" primary className="mt10">
       <FormattedMessage defaultMessage="More on Nimbus" />
     </Link>
     <Link to="https://status.im/" primary className="mt10">
@@ -41,7 +36,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10">
       <FormattedMessage
-        defaultMessage="Nimbus (Apache 2) is written in Nim, a language with
+        defaultMessage="Nimbus is Apache 2 licensed and written in Nim, a language with
           Python-like syntax that compiles to C."
       />
     </Text>

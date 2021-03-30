@@ -307,6 +307,12 @@
       "value": "Earn continuous rewards for providing a public good to the community."
     }
   ],
+  "122+yR": [
+    {
+      "type": 0,
+      "value": "withdrawal key"
+    }
+  ],
   "19o6KO": [
     {
       "type": 0,
@@ -477,6 +483,16 @@
     {
       "type": 0,
       "value": "Install deposit-cli tool"
+    }
+  ],
+  "3Bo3k6": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " field is the 32-byte value in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
     }
   ],
   "3CRtg8": [
@@ -653,6 +669,12 @@
     {
       "type": 0,
       "value": "CURRENT"
+    }
+  ],
+  "54J/qs": [
+    {
+      "type": 0,
+      "value": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
     }
   ],
   "58PXVy": [
@@ -1665,6 +1687,12 @@
       "value": "Network"
     }
   ],
+  "I5lWZA": [
+    {
+      "type": 0,
+      "value": "Can I change the withdrawal credentials of my validator after the first deposit?"
+    }
+  ],
   "IAKvZ0": [
     {
       "type": 0,
@@ -2385,6 +2413,24 @@
     {
       "type": 0,
       "value": "pip documentation"
+    }
+  ],
+  "PyArfT": [
+    {
+      "type": 0,
+      "value": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set "
+    },
+    {
+      "type": 1,
+      "value": "eth1AddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " when running deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "Q1ZwPT": [
@@ -3317,6 +3363,12 @@
       "value": "Again, it depends. Behaving maliciously – for example attesting to invalid or contradicting blocks, will lead to your stake being slashed."
     }
   ],
+  "ZPpZDC": [
+    {
+      "type": 0,
+      "value": "Please ensure that you have control over the Eth1 address."
+    }
+  ],
   "ZRbxwY": [
     {
       "type": 0,
@@ -3529,6 +3581,12 @@
     {
       "type": 0,
       "value": "How much will I be penalized for acting maliciously?"
+    }
+  ],
+  "cpxfOR": [
+    {
+      "type": 0,
+      "value": "What are withdrawal credentials?"
     }
   ],
   "cs9mQw": [
@@ -4359,6 +4417,28 @@
       "value": "Importing from Launchpad documentation"
     }
   ],
+  "ljWKM1": [
+    {
+      "type": 0,
+      "value": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " derived via mnemonics in "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " format."
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -4865,6 +4945,12 @@
       "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
     }
   ],
+  "rnDgcN": [
+    {
+      "type": 0,
+      "value": "No, you cannot change your withdrawal credentials in top-ups."
+    }
+  ],
   "rs4eqr": [
     {
       "type": 0,
@@ -5163,6 +5249,12 @@
       "value": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
     }
   ],
+  "vCHTnu": [
+    {
+      "type": 0,
+      "value": "Withdrawal credentials"
+    }
+  ],
   "vEJDo8": [
     {
       "type": 0,
@@ -5337,12 +5429,6 @@
     {
       "type": 0,
       "value": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
-    }
-  ],
-  "xJPCw/": [
-    {
-      "type": 0,
-      "value": "What happens if I lose my withdrawal key?"
     }
   ],
   "xOSMb1": [

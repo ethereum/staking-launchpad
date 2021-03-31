@@ -150,7 +150,7 @@ export const pageContent = {
           <FormattedMessage
             defaultMessage="To become a validator you'll need to know about managing keys and
               protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please
-              do not proceed. Note that during this process you will not derive the keys needed to
+              do not proceed. Note that during this process you will derive the keys needed to
               withdraw later, so store your mnemonic safely in order to be able to withdraw later."
           />
         </Text>

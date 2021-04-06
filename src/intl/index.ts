@@ -1,6 +1,7 @@
 import ar from './compiled/ar.json';
 import el from './compiled/el.json';
 import en from './compiled/en.json';
+import es from './compiled/es.json';
 import fr from './compiled/fr.json';
 import id from './compiled/id.json';
 import it from './compiled/it.json';
@@ -14,6 +15,7 @@ export const messages: { [key: string]: any } = {
   ar,
   el,
   en,
+  es,
   fr,
   id,
   it,
@@ -28,6 +30,7 @@ export enum AppLanguage {
   Arabic = 'ar',
   Greek = 'el',
   English = 'en',
+  Spanish = 'es',
   French = 'fr',
   Indonesian = 'id',
   Italian = 'it',

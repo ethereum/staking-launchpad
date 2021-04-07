@@ -485,16 +485,6 @@
       "value": "Install deposit-cli tool"
     }
   ],
-  "3Bo3k6": [
-    {
-      "type": 1,
-      "value": "withdrawalCredentials"
-    },
-    {
-      "type": 0,
-      "value": " field is the 32-byte value in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
-    }
-  ],
   "3CRtg8": [
     {
       "type": 0,
@@ -4835,6 +4825,16 @@
     {
       "type": 0,
       "value": "Note"
+    }
+  ],
+  "qPG/YN": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
     }
   ],
   "qQ+Xla": [

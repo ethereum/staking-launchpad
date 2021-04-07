@@ -186,9 +186,6 @@
   "38VH2G": {
     "message": "Install deposit-cli tool"
   },
-  "3Bo3k6": {
-    "message": "{withdrawalCredentials} field is the 32-byte value in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
-  },
   "3CRtg8": {
     "message": "You do not have enough {eth} in this account for {numberOfValidators} {validator}"
   },
@@ -1889,6 +1886,9 @@
   },
   "qMePPG": {
     "message": "Note"
+  },
+  "qPG/YN": {
+    "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
   },
   "qQ+Xla": {
     "message": "Korean"

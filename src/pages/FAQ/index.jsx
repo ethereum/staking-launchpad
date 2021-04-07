@@ -583,7 +583,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="{withdrawalCredentials} field is the 32-byte value in the deposit, for verifying the
+                defaultMessage="{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the
                   destination of valid withdrawals. Currently, there are two types of
                   withdrawals: BLS withdrawal and Eth1 address withdrawal."
                 values={{
@@ -593,7 +593,7 @@ export const FAQ = () => {
                       inline
                       to="https://github.com/ethereum/eth2.0-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
                     >
-                      Withdrawal credentials
+                      Withdrawal Credentials
                     </Link>
                   ),
                 }}

@@ -572,6 +572,94 @@ export const FAQ = () => {
           </section>
         </section>
         <section>
+          <Anchor to="#withdrawal-credentials" id="withdrawal-credentials">
+            <SectionTitle level={3}>
+              <FormattedMessage defaultMessage="Withdrawal credentials" />
+            </SectionTitle>
+          </Anchor>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="What are withdrawal credentials?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the
+                  destination of valid withdrawals. Currently, there are two types of
+                  withdrawals: BLS withdrawal and Eth1 address withdrawal."
+                values={{
+                  withdrawalCredentials: (
+                    <Link
+                      primary
+                      inline
+                      to="https://github.com/ethereum/eth2.0-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
+                    >
+                      Withdrawal Credentials
+                    </Link>
+                  ),
+                }}
+              />
+            </Text>
+            <ol>
+              <li>
+                <Text className="mt10">
+                  <FormattedMessage
+                    defaultMessage="BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format."
+                    values={{
+                      boldWithdrawalKey: (
+                        <strong>
+                          {formatMessage({
+                            defaultMessage: 'withdrawal key',
+                          })}
+                        </strong>
+                      ),
+                      eip2334: (
+                        <Link
+                          primary
+                          inline
+                          to="https://eips.ethereum.org/EIPS/eip-2334"
+                        >
+                          EIP2334
+                        </Link>
+                      ),
+                    }}
+                  />
+                </Text>
+              </li>
+              <li>
+                <Text className="mt10">
+                  <FormattedMessage
+                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+                    values={{
+                      eth1AddressWithdraw: (
+                        <code>
+                          {' '}
+                          {`--eth1_withdrawal_address <YOUR ETH1 ADDRESS>`}{' '}
+                        </code>
+                      ),
+                      boldWarning: (
+                        <strong>
+                          {formatMessage({
+                            defaultMessage:
+                              'Please ensure that you have control over the Eth1 address.',
+                          })}
+                        </strong>
+                      ),
+                    }}
+                  />
+                </Text>
+              </li>
+            </ol>
+            <section>
+              <Heading level={4}>
+                <FormattedMessage defaultMessage="Can I change the withdrawal credentials of my validator after the first deposit?" />
+              </Heading>
+              <Text className="mt10">
+                <FormattedMessage defaultMessage="No, you cannot change your withdrawal credentials in top-ups." />
+              </Text>
+            </section>
+          </section>
+        </section>
+        <section>
           <Anchor to="#keys" id="keys">
             <SectionTitle level={3}>
               <FormattedMessage defaultMessage="Keys" />
@@ -639,7 +727,7 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="What happens if I lose my withdrawal key?" />
+              <FormattedMessage defaultMessage="What happens if I use BLS withdrawal and I lose my withdrawal key?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage

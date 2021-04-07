@@ -114,6 +114,9 @@
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
+  "122+yR": {
+    "message": "withdrawal key"
+  },
   "19o6KO": {
     "message": "When can I withdraw my funds, and what’s the difference between exiting and withdrawing?"
   },
@@ -244,6 +247,9 @@
   },
   "52qGy6": {
     "message": "CURRENT"
+  },
+  "54J/qs": {
+    "message": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
   },
   "58PXVy": {
     "message": "Why two keys instead of one?"
@@ -661,6 +667,9 @@
   "I3JhPS": {
     "message": "Network"
   },
+  "I5lWZA": {
+    "message": "Can I change the withdrawal credentials of my validator after the first deposit?"
+  },
   "IAKvZ0": {
     "message": "The Eth2 upgrades"
   },
@@ -952,6 +961,9 @@
   },
   "Px7wWb": {
     "message": "pip documentation"
+  },
+  "PyArfT": {
+    "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
   },
   "Q1ZwPT": {
     "message": "clipboard"
@@ -1288,6 +1300,9 @@
   "ZPRDyW": {
     "message": "Again, it depends. Behaving maliciously – for example attesting to invalid or contradicting blocks, will lead to your stake being slashed."
   },
+  "ZPpZDC": {
+    "message": "Please ensure that you have control over the Eth1 address."
+  },
   "ZRbxwY": {
     "message": "Eth2 validator checklist"
   },
@@ -1386,6 +1401,9 @@
   },
   "clxIWO": {
     "message": "How much will I be penalized for acting maliciously?"
+  },
+  "cpxfOR": {
+    "message": "What are withdrawal credentials?"
   },
   "cs9mQw": {
     "message": "Learn more about the roles and responsibilities of Eth2 validators."
@@ -1718,6 +1736,9 @@
   "lfV1bj": {
     "message": "Importing from Launchpad documentation"
   },
+  "ljWKM1": {
+    "message": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format."
+  },
   "ll/zMW": {
     "message": "This is a non-reversible transaction."
   },
@@ -1875,6 +1896,9 @@
   "qMePPG": {
     "message": "Note"
   },
+  "qPG/YN": {
+    "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
+  },
   "qQ+Xla": {
     "message": "Korean"
   },
@@ -1928,6 +1952,9 @@
   },
   "rcdxTW": {
     "message": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
+  },
+  "rnDgcN": {
+    "message": "No, you cannot change your withdrawal credentials in top-ups."
   },
   "rs4eqr": {
     "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
@@ -2027,6 +2054,9 @@
   "vBOf5K": {
     "message": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
   },
+  "vCHTnu": {
+    "message": "Withdrawal credentials"
+  },
   "vEJDo8": {
     "message": "Protect your funds using monitoring software, and learn how to handle different real world scenarios."
   },
@@ -2102,9 +2132,6 @@
   },
   "xH5GKj": {
     "message": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
-  },
-  "xJPCw/": {
-    "message": "What happens if I lose my withdrawal key?"
   },
   "xOSMb1": {
     "description": "Links to the documentation for the eth1 client Nethermind, specifically for testnet Goerli",

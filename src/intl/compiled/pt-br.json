@@ -2,7 +2,7 @@
   "+3PPtT": [
     {
       "type": 0,
-      "value": "Hoje, você protegerá o Beacon Chain, a primeira atualização para Eth2. Trata-se de uma cadeia separada que usa um mecanismo de consenso proof-of-stake. Eventualmente você ajudará a proteger todo o Ethereum, quando a mainnet (o Ethereum que usamos hoje) se fusionar com o Beacon Chain."
+      "value": "Hoje, você protegerá o Beacon Chain, a primeira atualização para Eth2. Trata-se de uma cadeia separada que usa um mecanismo de consenso proof-of-stake. Eventualmente você ajudará a proteger toda a Ethereum, quando a mainnet (a Ethereum que usamos hoje) se fusionar com o Beacon Chain."
     }
   ],
   "+L0IkF": [
@@ -77,6 +77,12 @@
       "value": "Você pode iniciar todas as transações de uma vez ou individualmente."
     }
   ],
+  "/5Hyyf": [
+    {
+      "type": 0,
+      "value": "Indonésio"
+    }
+  ],
   "/QPc9s": [
     {
       "type": 0,
@@ -116,7 +122,7 @@
   "/Vc/P6": [
     {
       "type": 0,
-      "value": "Desculpe, essa página não existe."
+      "value": "Lamentamos, esta página não existe."
     }
   ],
   "/WenEu": [
@@ -148,7 +154,7 @@
   "/vPNsl": [
     {
       "type": 0,
-      "value": "A merge, também conhecida como docking, causará a fusão da mainnet de Ethereum com o Beacon Chain. Nesse momento, Ethereum concluirá a transição para proof-of-stake."
+      "value": "A merge, também conhecida como docking, causará a fusão da mainnet da Ethereum com o Beacon Chain. Nesse momento, Ethereum concluirá a transição para proof-of-stake."
     }
   ],
   "/vkCbT": [
@@ -224,7 +230,7 @@
   "00d8uq": [
     {
       "type": 0,
-      "value": "Uma vez configurado, seu validador não ficará ativo imediatamente. Use esse momento para concluir a lista de verificação e obter uma prática extra numa testnet."
+      "value": "Uma vez configurado, seu validador não ficará ativo imediatamente. Use esse momento para concluir a lista de verificação e obter uma prática extra numa rede de teste."
     }
   ],
   "03xT/J": [
@@ -655,10 +661,22 @@
       "value": "Por que duas chaves ao invés de uma?"
     }
   ],
+  "5CBhpq": [
+    {
+      "type": 0,
+      "value": "Compromisso"
+    }
+  ],
   "5HJLBU": [
     {
       "type": 0,
       "value": "Documentação de instalação do Teku"
+    }
+  ],
+  "5UH1sh": [
+    {
+      "type": 0,
+      "value": "Romeno"
     }
   ],
   "5t8oYl": [
@@ -726,7 +744,7 @@
   "7+Domh": [
     {
       "type": 0,
-      "value": "Anotações"
+      "value": "Observações"
     }
   ],
   "738tqz": [
@@ -872,7 +890,7 @@
     },
     {
       "type": 0,
-      "value": " para sincronizar a testnet Goerli."
+      "value": " para sincronizar a rede de teste Goerli."
     }
   ],
   "8boRAk": [
@@ -928,7 +946,7 @@
   "9JktQX": [
     {
       "type": 0,
-      "value": "Não há uma resposta fácil a esta pergunta, pois muitos factores entram em jogo nesse cálculo."
+      "value": "Não há uma resposta fácil a esta pergunta, pois muitos fatores entram em jogo nesse cálculo."
     }
   ],
   "9VZ9oy": [
@@ -988,7 +1006,7 @@
   "A6Oppp": [
     {
       "type": 0,
-      "value": "Prysm oferece diretrizes passo a passo para executar o cliente depois de completar o seu depósito através do launchpad."
+      "value": "Prysm oferece diretrizes passo a passo para executar o cliente depois de concluir o seu depósito através do launchpad."
     }
   ],
   "AC669U": [
@@ -1062,7 +1080,7 @@
   "An37jY": [
     {
       "type": 0,
-      "value": "Especificamente, ao iniciar o cliente validador Lighthouse, você pode apontá-lo para o diretório com suas keystores, o que importará suas keystores e perguntará interativamente por sua(s) senha(s). Se você não fornecer uma senha, Lighthouse a solicitará novamente cada vez que iniciar."
+      "value": "Especificamente, ao iniciar o cliente validador Lighthouse, você pode apontá-lo para o diretório com seus keystores, o que importará seus keystores e perguntará interativamente por sua(s) senha(s). Se você não fornecer uma senha, Lighthouse a solicitará novamente cada vez que iniciar."
     }
   ],
   "Anqi3n": [
@@ -1406,7 +1424,7 @@
   "EPlepr": [
     {
       "type": 0,
-      "value": "Eu simulei uma perda de energia (servidor e internet) e a retomada automática."
+      "value": "Eu simulei uma perda de energia (servidor e Internet) e a retomada automática."
     }
   ],
   "ETJ2T5": [
@@ -1436,7 +1454,7 @@
   "FM92S0": [
     {
       "type": 0,
-      "value": "Observação: o Beacon Chain pode levar vários minutos para verificar seu depósito"
+      "value": "Observação: o Beacon Chain pode tomar vários minutos para verificar seu depósito"
     }
   ],
   "FSRfSJ": [
@@ -1454,7 +1472,7 @@
   "Fa2pjg": [
     {
       "type": 0,
-      "value": "O argumento do CLI do arquivo de configuração"
+      "value": "O argumento da CLI do arquivo de configuração"
     }
   ],
   "FazwRl": [
@@ -1496,7 +1514,7 @@
   "G/VJJd": [
     {
       "type": 0,
-      "value": "Documentação de instalação OpenEthereum"
+      "value": "Documentação de instalação do OpenEthereum"
     }
   ],
   "G0aacl": [
@@ -1536,7 +1554,7 @@
   "GCz3kj": [
     {
       "type": 0,
-      "value": "Anteriormente conhecido como Artemis, Teku é um cliente Eth2 construído para atender às necessidades institucionais e aos requisitos de segurança. PegaSys é um braço do ConsenSys, dedicado à criação de clientes e ferramentas prontos para empresas para interagir com a plataforma central Ethereum."
+      "value": "Anteriormente conhecido como Artemis, Teku é um cliente Eth2 construído para atender às necessidades institucionais e aos requisitos de segurança. PegaSys é um braço do ConsenSys, dedicado à criação de clientes e ferramentas prontos para empresas para interagir com a plataforma central da Ethereum."
     }
   ],
   "GDaRAW": [
@@ -1579,6 +1597,12 @@
     {
       "type": 0,
       "value": "Idiomas"
+    }
+  ],
+  "Gsixxx": [
+    {
+      "type": 0,
+      "value": "Riscos de adoção antecipada"
     }
   ],
   "GuIwY6": [
@@ -1681,6 +1705,12 @@
     {
       "type": 0,
       "value": "Geth está escrito em Go, é totalmente de código aberto e licenciado sob a GNU LGPL v3."
+    }
+  ],
+  "IugT5/": [
+    {
+      "type": 0,
+      "value": "não é possível transferir"
     }
   ],
   "IwrKbS": [
@@ -1822,7 +1852,7 @@
     },
     {
       "type": 0,
-      "value": " ou atualizar a página para tentar novamente. Se o problema persistir, avise-nos em "
+      "value": " para tentar novamente ou atualizar a página. Se o problema persistir, avise-nos em "
     },
     {
       "type": 1,
@@ -1998,7 +2028,7 @@
   "MIsmjW": [
     {
       "type": 0,
-      "value": "Criar uma carteira nova"
+      "value": "Conectar uma carteira nova"
     }
   ],
   "MPHPEO": [
@@ -2040,13 +2070,13 @@
   "Mb3npQ": [
     {
       "type": 0,
-      "value": "Usando o terminal"
+      "value": "Uso do terminal"
     }
   ],
   "MbsAo3": [
     {
       "type": 0,
-      "value": "Este launchpad ajudará você a se tornar um validador para que possa desempenhar um papel ativo no futuro do Ethereum. Validadores são a chave para o Ethereum mais seguro, escalável e sustentável que estamos construindo."
+      "value": "Este launchpad ajudará você a se tornar um validador para que possa desempenhar um papel ativo no futuro da Ethereum. Validadores são a chave para a Ethereum mais segura, escalável e sustentável que estamos construindo."
     }
   ],
   "Mc8nNE": [
@@ -2122,7 +2152,7 @@
   "NSK+Li": [
     {
       "type": 0,
-      "value": "Eu protegi a conta root."
+      "value": "Eu protegi a conta raiz."
     }
   ],
   "NTWnJC": [
@@ -2318,7 +2348,7 @@
   "PfoT0C": [
     {
       "type": 0,
-      "value": "Esta lista de verificação o ajudará a entender o papel de um validador e o preparará para o papel."
+      "value": "Esta lista de verificação o ajudará a entender o papel de um validador e o preparará para a função."
     }
   ],
   "PglO1W": [
@@ -2337,6 +2367,12 @@
     {
       "type": 0,
       "value": "Confirmação"
+    }
+  ],
+  "PurNgG": [
+    {
+      "type": 0,
+      "value": "Turco"
     }
   ],
   "Px7wWb": [
@@ -2453,10 +2489,16 @@
       "value": "Se você for cortado, será impedido de participar ainda mais do protocolo e exilado pela força."
     }
   ],
+  "RCGrka": [
+    {
+      "type": 0,
+      "value": "única maneira"
+    }
+  ],
   "RIFLCz": [
     {
       "type": 0,
-      "value": "A phishing é um risco muito real para os validadores de Eth2 e, infelizmente, muitas pessoas perderão fundos devido a estes ataques."
+      "value": "O phishing é um risco muito real para os validadores de Eth2 e, infelizmente, muitas pessoas perderão fundos devido a estes ataques."
     }
   ],
   "ROHpFF": [
@@ -2468,7 +2510,7 @@
   "RVyb7r": [
     {
       "type": 0,
-      "value": "Posso parar de rodar o meu validador por alguns dias e iniciá-lo de novo?"
+      "value": "Posso parar de executar o meu validador por alguns dias e iniciá-lo de novo?"
     }
   ],
   "RWqrlk": [
@@ -2532,7 +2574,7 @@
   "Ryptmy": [
     {
       "type": 0,
-      "value": "Verifique com o seguinte comando para verificar se ele retorna a versão do cliente corretamente:"
+      "value": "Verifique com o seguinte comando para constatar se ele retorna a versão do cliente corretamente:"
     }
   ],
   "S0e/cN": [
@@ -2660,7 +2702,7 @@
   "TfNuWP": [
     {
       "type": 0,
-      "value": "virtualenv ajudaria você a criar um ambiente Python isolado para a ferramenta deposit-cli."
+      "value": "virtualenv poderia ajudar você a criar um ambiente Python isolado para a ferramenta deposit-cli."
     }
   ],
   "TmYprU": [
@@ -2681,6 +2723,12 @@
     {
       "type": 0,
       "value": "documentação rpc-http-enabled"
+    }
+  ],
+  "U/NPbq": [
+    {
+      "type": 0,
+      "value": "Alemão"
     }
   ],
   "U0yY/A": [
@@ -2758,7 +2806,7 @@
   "Utck3E": [
     {
       "type": 0,
-      "value": "Línguas suportadas"
+      "value": "Idiomas suportados"
     }
   ],
   "Uxs0RD": [
@@ -2927,6 +2975,12 @@
     {
       "type": 0,
       "value": "O Teku tem licença Apache 2 e é escrito em Java, uma linguagem notável por sua maturidade e ubiquidade."
+    }
+  ],
+  "W3t7Ob": [
+    {
+      "type": 0,
+      "value": "Japonês"
     }
   ],
   "W8nHSd": [
@@ -3134,7 +3188,7 @@
   "YP03/j": [
     {
       "type": 0,
-      "value": "Posteriormente, os validadores ainda são encorajados a se juntar (quanto mais validadores, mais descentralizada a rede), mas não é absolutamente essencial que o façam (para que a taxa de juros possa cair)."
+      "value": "Posteriormente, os validadores ainda são encorajados a participar (quanto mais validadores, mais descentralizada a rede), mas não é absolutamente essencial que o façam (para que a taxa de juros possa cair)."
     }
   ],
   "YPsbIU": [
@@ -3149,12 +3203,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "YWfd2t": [
-    {
-      "type": 0,
-      "value": "Um projeto de pesquisa e uma implementação de cliente para Eth2 projetados para ter um bom desempenho em sistemas embutidos e dispositivos móveis pessoais, incluindo smartphones mais antigos com hardware limitado em recursos. A equipe do Nimbus é da Status, uma empresa mais conhecida app de mensagens/carteira/navegador Web3."
     }
   ],
   "YZtdY1": [
@@ -3258,7 +3306,7 @@
   "ZPRDyW": [
     {
       "type": 0,
-      "value": "Novamente, isso depende. Comporta-se maliciosamente (por exemplo, atestar blocos inválidos ou contraditórios) pode levar ao slashing da sua participação."
+      "value": "Novamente, isso depende. Comportar-se maliciosamente (por exemplo, atestar blocos inválidos ou contraditórios) pode levar ao slashing da sua participação."
     }
   ],
   "ZRbxwY": [
@@ -3321,10 +3369,10 @@
       "value": "Configurar Nimbus"
     }
   ],
-  "aTRROW": [
+  "aXT3iO": [
     {
       "type": 0,
-      "value": "Nimbus (Apache 2) é escrito em Nim, uma língua com sintaxe semelhante a Python que compila para C."
+      "value": "O Nimbus é licenciado pelo Apache 2 e escrito em Nim, uma linguagem com sintaxe semelhante à do Phyton que complila para C."
     }
   ],
   "aXWL9X": [
@@ -3433,6 +3481,12 @@
       "value": "A documentação do Geth explica como baixar e instalar o cliente."
     }
   ],
+  "cPsIkp": [
+    {
+      "type": 0,
+      "value": "Torne-se um validador e ajude a proteger o futuro da Ethereum."
+    }
+  ],
   "cRzxes": [
     {
       "type": 0,
@@ -3466,7 +3520,7 @@
   "clxIWO": [
     {
       "type": 0,
-      "value": "Qual será a minha penalização por agir maleavelmente?"
+      "value": "Qual será a minha penalização por agir maliciosamente?"
     }
   ],
   "cs9mQw": [
@@ -3485,6 +3539,12 @@
     {
       "type": 0,
       "value": "Você deve assinar uma transação para cada depósito que deseja realizar."
+    }
+  ],
+  "dH5+MX": [
+    {
+      "type": 0,
+      "value": "Comportamento errado"
     }
   ],
   "dIgBOz": [
@@ -3679,6 +3739,12 @@
       "value": "A resposta a esta pergunta depende muito de quanto ETH você tem à sua disposição."
     }
   ],
+  "fQ5yno": [
+    {
+      "type": 0,
+      "value": "Árabe"
+    }
+  ],
   "fR8+bQ": [
     {
       "type": 0,
@@ -3706,7 +3772,13 @@
   "g/DxI7": [
     {
       "type": 0,
-      "value": "Adicionalmente, você pode definir seu Cliente Validador (VC) e Nó de Sinal (BN) em máquinas e IPs separados para que, mesmo que o seu nó de sinalizador esteja vulnerável, O seu keystore esteja armazenado em uma máquina diferente."
+      "value": "Adicionalmente, você pode definir seu Cliente Validador (VC) e Nó de Sinal (BN) em máquinas e IPs separados para que, mesmo que o seu nó de sinalizador esteja vulnerável, o seu keystore esteja armazenado em uma máquina diferente."
+    }
+  ],
+  "g0zIUd": [
+    {
+      "type": 0,
+      "value": "não é possível retirar"
     }
   ],
   "g37XKP": [
@@ -3771,6 +3843,12 @@
       "value": "SIM"
     }
   ],
+  "gsuLMm": [
+    {
+      "type": 0,
+      "value": "Grego"
+    }
+  ],
   "gtrcyK": [
     {
       "type": 0,
@@ -3804,7 +3882,7 @@
   "guMfKn": [
     {
       "type": 0,
-      "value": "Isso significa que você não precisa se esforçar demais com clientes de backup ou conexões de internet redundantes, pois as repercussões por estar off-line não são tão severas."
+      "value": "Isso significa que você não precisa se esforçar demais com clientes de backup ou conexões de Internet redundantes, pois as repercussões por estar off-line não são tão severas."
     }
   ],
   "gx6frf": [
@@ -3902,7 +3980,7 @@
   "iBYfM0": [
     {
       "type": 0,
-      "value": "Você precisa executar um nó Eth1 e um Eth2 para se tornar um validador. Dê uma olhada no checklist para preparar você e seu equipamento."
+      "value": "Você precisa executar um nó Eth1 e um Eth2 para se tornar um validador. Dê uma olhada na lista de verificação para preparar você e seu equipamento."
     }
   ],
   "iCpuph": [
@@ -3914,7 +3992,7 @@
   "iMvXLd": [
     {
       "type": 0,
-      "value": "Executando o cliente do validador"
+      "value": "Execução do cliente do validador"
     }
   ],
   "iPRnRG": [
@@ -3923,10 +4001,16 @@
       "value": "Com as transferências desativadas por enquanto, você não poderá sair voluntariamente e retomar mais tarde. Isso significa que você precisa estar nele por um longo tempo."
     }
   ],
+  "iRQxxL": [
+    {
+      "type": 0,
+      "value": "O Nimbus é uma implementação do cliente tanto para o Eth1 como para o Eth2, que se esforça por ser o mais leve possível em termos de recursos utilizados. Isso permite um bom desempenho em sistemas embutidos, dispositivos restritos com recursos (incluindo Raspberry Pis) e servidores multipropósitos."
+    }
+  ],
   "iWg7mL": [
     {
       "type": 0,
-      "value": "Por favor, certifique-se de ter definido "
+      "value": "Certifique-se de ter definido "
     },
     {
       "type": 1,
@@ -4076,7 +4160,13 @@
   "kQTAe+": [
     {
       "type": 0,
-      "value": "A URL corresponde ao que você viu em outros sites?"
+      "value": "O URL corresponde ao que você viu em outros sites?"
+    }
+  ],
+  "kTt/ND": [
+    {
+      "type": 0,
+      "value": "Russo"
     }
   ],
   "kXhUdD": [
@@ -4174,7 +4264,7 @@
   "lJNmgK": [
     {
       "type": 0,
-      "value": "Como o Eth2 atualiza o Ethereum?"
+      "value": "Como o Eth2 atualiza a Ethereum?"
     }
   ],
   "lLOZMD": [
@@ -4210,7 +4300,7 @@
     },
     {
       "type": 0,
-      "value": " tem uma URL que você espera?"
+      "value": " tem um URL que você espera?"
     }
   ],
   "lQzdpT": [
@@ -4338,7 +4428,7 @@
   "nHk8Et": [
     {
       "type": 0,
-      "value": "O PoS é um mecanismo de consenso mais seguro, descentralizado e amigável para o ambiente do que o proof-of-work (PoW) que protege o Ethereum hoje. Ele recompensa validadores por construir a cadeia, mas corta seus depósitos se eles tentarem atacá-lo, incentivando o comportamento saudável. Esta atualização já está ativa na forma do Beacon Chain."
+      "value": "O PoS é um mecanismo de consenso mais seguro, descentralizado e ecológico do que o proof-of-work (PoW) que protege a Ethereum hoje. Ele recompensa validadores por construir a cadeia, mas corta seus depósitos se eles tentarem atacá-lo, incentivando o comportamento saudável. Esta atualização já está ativa na forma do Beacon Chain."
     }
   ],
   "nIb6XF": [
@@ -4572,7 +4662,7 @@
   "penFMT": [
     {
       "type": 0,
-      "value": "Eth2 é um conjunto de atualizações que tornarão o Ethereum mais escalável, seguro e sustentável. Essas atualizações melhorarão Ethereum e, ao mesmo tempo, continuarão perfeitamente na cadeia de hoje. Aqui tem mais sobre as diferentes atualizações:"
+      "value": "Eth2 é um conjunto de atualizações que tornarão a Ethereum mais escalável, segura e sustentável. Essas atualizações melhorarão Ethereum e, ao mesmo tempo, continuarão perfeitamente na cadeia atual. Aqui tem mais sobre as diferentes atualizações:"
     }
   ],
   "pfJX2D": [
@@ -4596,7 +4686,7 @@
   "ps8lLk": [
     {
       "type": 0,
-      "value": "Ficar off-line enquanto uma supermaioria (2/3) dos validadores ainda estiver online leva a penalidades relativamente pequenas, já que ainda existem validadores online suficientes para a cadeia finalizar. "
+      "value": "Ficar off-line enquanto uma supermaioria (2/3) dos validadores ainda estiver on-line leva a penalidades relativamente pequenas, já que ainda existem validadores on-line suficientes para a cadeia finalizar. "
     },
     {
       "type": 1,
@@ -4612,7 +4702,7 @@
   "pyWt01": [
     {
       "type": 0,
-      "value": "Resumo do seu depósito"
+      "value": "Resumo do depósito"
     }
   ],
   "q2XW/k": [
@@ -4645,6 +4735,12 @@
     {
       "type": 0,
       "value": " para retirar meus fundos."
+    }
+  ],
+  "qK4+NQ": [
+    {
+      "type": 0,
+      "value": "O terminal"
     }
   ],
   "qLf68w": [
@@ -4710,7 +4806,7 @@
   "r2BH1M": [
     {
       "type": 0,
-      "value": "Configurar Prysm"
+      "value": "Configurar o Prysm"
     }
   ],
   "r4JsKB": [
@@ -4814,7 +4910,7 @@
   "rxttyC": [
     {
       "type": 0,
-      "value": "Seu mnemônico é o backup das suas chaves de assinatura e será a ÚNICA maneira de retirar seus "
+      "value": "Seu mnemônico é o backup das suas chaves de assinatura e será a ÚNICA maneira de retirar seu "
     },
     {
       "type": 1,
@@ -4949,6 +5045,18 @@
       "value": "Após o depósito"
     }
   ],
+  "u564LK": [
+    {
+      "type": 0,
+      "value": "Português (Brasileiro)"
+    }
+  ],
+  "u81G9+": [
+    {
+      "type": 0,
+      "value": "Tempo de atividade"
+    }
+  ],
   "uCikFk": [
     {
       "type": 0,
@@ -5059,12 +5167,6 @@
       "value": "Proteja seus fundos usando um software de monitoramento e aprenda a lidar com diferentes cenários do mundo real."
     }
   ],
-  "vFrE9m": [
-    {
-      "type": 0,
-      "value": "Torne-se um validador e ajude a proteger o Eth2."
-    }
-  ],
   "vIF140": [
     {
       "type": 0,
@@ -5142,7 +5244,7 @@
   "w/ghcK": [
     {
       "type": 0,
-      "value": "Aprofunde-se sobre a forma como Eth2 atualiza o Ethereum."
+      "value": "Aprofunde-se sobre a forma como Eth2 atualiza a Ethereum."
     }
   ],
   "w6qYSU": [
@@ -5216,7 +5318,7 @@
   "x0tVK4": [
     {
       "type": 0,
-      "value": "Validar em Ethereum não é o mesmo que minerar. Os resultados são semelhantes: o trabalho que você faz irá estender e proteger a cadeia. Mas o processo é completamente diferente porque utilizam mecanismos de consenso diferentes."
+      "value": "Validar na Ethereum não é o mesmo que minerar. Os resultados são semelhantes: o trabalho que você faz irá estender e proteger a cadeia. Mas o processo é completamente diferente porque utilizam mecanismos de consenso diferentes."
     }
   ],
   "xDyl3T": [
@@ -5318,7 +5420,7 @@
     },
     {
       "type": 0,
-      "value": ". Quanto mais votos um bloco tiver, maior a probabilidade de ele ser adicionado à cadeia."
+      "value": ": Quanto mais votos um bloco tiver, maior a probabilidade de ele ser adicionado à cadeia."
     }
   ],
   "ydh1KU": [
@@ -5348,7 +5450,7 @@
   "yoGtkz": [
     {
       "type": 0,
-      "value": "Certifique-se de que o seu nó tem mais de 20 pares."
+      "value": "Certifique-se de que o seu nó tenha mais de 20 pares."
     }
   ],
   "z/ZhML": [
@@ -5402,13 +5504,13 @@
   "zGkAVo": [
     {
       "type": 0,
-      "value": "No outro extremo do espectro, se o seu saldo estiver mais próximo de 31 ETH, Provavelmente não vale a pena adicionar o ETH extra necessário para voltar para 32."
+      "value": "No outro extremo do espectro, se o seu saldo estiver mais próximo de 31 ETH, provavelmente não vale a pena adicionar o ETH extra necessário para voltar para 32."
     }
   ],
   "zbEBi9": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Use a "
     },
     {
       "type": 1,

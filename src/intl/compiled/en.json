@@ -307,6 +307,12 @@
       "value": "Earn continuous rewards for providing a public good to the community."
     }
   ],
+  "122+yR": [
+    {
+      "type": 0,
+      "value": "withdrawal key"
+    }
+  ],
   "19o6KO": [
     {
       "type": 0,
@@ -653,6 +659,12 @@
     {
       "type": 0,
       "value": "CURRENT"
+    }
+  ],
+  "54J/qs": [
+    {
+      "type": 0,
+      "value": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
     }
   ],
   "58PXVy": [
@@ -1665,6 +1677,12 @@
       "value": "Network"
     }
   ],
+  "I5lWZA": [
+    {
+      "type": 0,
+      "value": "Can I change the withdrawal credentials of my validator after the first deposit?"
+    }
+  ],
   "IAKvZ0": [
     {
       "type": 0,
@@ -1713,6 +1731,12 @@
     {
       "type": 0,
       "value": "Geth is written in Go, fully open source and licensed under the GNU LGPL v3."
+    }
+  ],
+  "IugT5/": [
+    {
+      "type": 0,
+      "value": "cannot transfer"
     }
   ],
   "IwrKbS": [
@@ -2387,6 +2411,24 @@
       "value": "pip documentation"
     }
   ],
+  "PyArfT": [
+    {
+      "type": 0,
+      "value": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set "
+    },
+    {
+      "type": 1,
+      "value": "eth1AddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " when running deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
   "Q1ZwPT": [
     {
       "type": 0,
@@ -2493,6 +2535,12 @@
     {
       "type": 0,
       "value": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
+    }
+  ],
+  "RCGrka": [
+    {
+      "type": 0,
+      "value": "only way"
     }
   ],
   "RIFLCz": [
@@ -3213,12 +3261,6 @@
       "value": " service."
     }
   ],
-  "YWfd2t": [
-    {
-      "type": 0,
-      "value": "A research project and a client implementation for Eth2 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware. The Nimbus team are from Status, a company best known for their messaging app/wallet/Web3 browser."
-    }
-  ],
   "YZtdY1": [
     {
       "type": 0,
@@ -3323,6 +3365,12 @@
       "value": "Again, it depends. Behaving maliciously – for example attesting to invalid or contradicting blocks, will lead to your stake being slashed."
     }
   ],
+  "ZPpZDC": [
+    {
+      "type": 0,
+      "value": "Please ensure that you have control over the Eth1 address."
+    }
+  ],
   "ZRbxwY": [
     {
       "type": 0,
@@ -3383,10 +3431,10 @@
       "value": "Configure Nimbus"
     }
   ],
-  "aTRROW": [
+  "aXT3iO": [
     {
       "type": 0,
-      "value": "Nimbus (Apache 2) is written in Nim, a language with Python-like syntax that compiles to C."
+      "value": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
     }
   ],
   "aXWL9X": [
@@ -3535,6 +3583,12 @@
     {
       "type": 0,
       "value": "How much will I be penalized for acting maliciously?"
+    }
+  ],
+  "cpxfOR": [
+    {
+      "type": 0,
+      "value": "What are withdrawal credentials?"
     }
   ],
   "cs9mQw": [
@@ -3789,6 +3843,12 @@
       "value": "Moreover, you can set your Validator Client (VC) and Beacon Node (BN) on separate machines and IPs so that even if your beacon node is vulnerable, your keystore is stored on a different machine."
     }
   ],
+  "g0zIUd": [
+    {
+      "type": 0,
+      "value": "cannot withdraw"
+    }
+  ],
   "g37XKP": [
     {
       "type": 0,
@@ -4007,6 +4067,12 @@
     {
       "type": 0,
       "value": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
+    }
+  ],
+  "iRQxxL": [
+    {
+      "type": 0,
+      "value": "Nimbus is a client implementation for both Eth1 and Eth2 that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
     }
   ],
   "iWg7mL": [
@@ -4357,6 +4423,28 @@
     {
       "type": 0,
       "value": "Importing from Launchpad documentation"
+    }
+  ],
+  "ljWKM1": [
+    {
+      "type": 0,
+      "value": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " derived via mnemonics in "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " format."
     }
   ],
   "ll/zMW": [
@@ -4757,6 +4845,16 @@
       "value": "Note"
     }
   ],
+  "qPG/YN": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
+    }
+  ],
   "qQ+Xla": [
     {
       "type": 0,
@@ -4863,6 +4961,12 @@
     {
       "type": 0,
       "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
+    }
+  ],
+  "rnDgcN": [
+    {
+      "type": 0,
+      "value": "No, you cannot change your withdrawal credentials in top-ups."
     }
   ],
   "rs4eqr": [
@@ -5163,6 +5267,12 @@
       "value": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
     }
   ],
+  "vCHTnu": [
+    {
+      "type": 0,
+      "value": "Withdrawal credentials"
+    }
+  ],
   "vEJDo8": [
     {
       "type": 0,
@@ -5337,12 +5447,6 @@
     {
       "type": 0,
       "value": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
-    }
-  ],
-  "xJPCw/": [
-    {
-      "type": 0,
-      "value": "What happens if I lose my withdrawal key?"
     }
   ],
   "xOSMb1": [

@@ -80,7 +80,7 @@
   "/5Hyyf": [
     {
       "type": 0,
-      "value": "Indonesian"
+      "value": "インドネシア語"
     }
   ],
   "/QPc9s": [
@@ -668,7 +668,7 @@
   "5CBhpq": [
     {
       "type": 0,
-      "value": "Commitment"
+      "value": "コミットメント"
     }
   ],
   "5HJLBU": [
@@ -680,7 +680,7 @@
   "5UH1sh": [
     {
       "type": 0,
-      "value": "Romanian"
+      "value": "ルーマニア語"
     }
   ],
   "5t8oYl": [
@@ -1610,7 +1610,7 @@
   "Gsixxx": [
     {
       "type": 0,
-      "value": "Early adoption risks"
+      "value": "早期導入のリスク"
     }
   ],
   "GuIwY6": [
@@ -1713,6 +1713,12 @@
     {
       "type": 0,
       "value": "Geth は Go で記述された完全にオープンソースで、GNU LGPL v3 の下でライセンス付与されています。"
+    }
+  ],
+  "IugT5/": [
+    {
+      "type": 0,
+      "value": "転送できません"
     }
   ],
   "IwrKbS": [
@@ -2371,6 +2377,12 @@
       "value": "確認"
     }
   ],
+  "PurNgG": [
+    {
+      "type": 0,
+      "value": "トルコ語"
+    }
+  ],
   "Px7wWb": [
     {
       "type": 0,
@@ -2483,6 +2495,12 @@
     {
       "type": 0,
       "value": "スラッシングされた場合は、さらにプロトコルに参加することができず、強制的に除外されます。"
+    }
+  ],
+  "RCGrka": [
+    {
+      "type": 0,
+      "value": "唯一の方法"
     }
   ],
   "RIFLCz": [
@@ -2717,6 +2735,12 @@
     {
       "type": 0,
       "value": "rpc-http 対応ドキュメント"
+    }
+  ],
+  "U/NPbq": [
+    {
+      "type": 0,
+      "value": "ドイツ語"
     }
   ],
   "U0yY/A": [
@@ -2965,6 +2989,12 @@
       "value": "Teku は Apache2 でライセンスを受け、成熟度と普及率で有名な Javaで記述されています。"
     }
   ],
+  "W3t7Ob": [
+    {
+      "type": 0,
+      "value": "日本語"
+    }
+  ],
   "W8nHSd": [
     {
       "type": 0,
@@ -3183,12 +3213,6 @@
       "value": " サービスを設定しました。"
     }
   ],
-  "YWfd2t": [
-    {
-      "type": 0,
-      "value": "組み込みシステムや、古いスマートフォンとリソースに制限があるハードウェアを含む、個人のモバイルデバイスでうまく動作するように設計された Eh2 の研究プロジェクトとクライアント実装。Nimbus チームは、メッセージングアプリ/ウォレット/Web3ブラウザで知られている Status から来ています。"
-    }
-  ],
   "YZtdY1": [
     {
       "type": 1,
@@ -3349,10 +3373,10 @@
       "value": "Nimbus の設定"
     }
   ],
-  "aTRROW": [
+  "aXT3iO": [
     {
       "type": 0,
-      "value": "Nimbus (Apache 2) は C にコンパイルする Python のような構文を持つ言語である Nim で記述されています。"
+      "value": "Nimbus は Apache 2 のライセンスを受けており、 Cにコンパイルする Python のような構文を持つ言語である Nim で記述されています。"
     }
   ],
   "aXWL9X": [
@@ -3464,7 +3488,7 @@
   "cPsIkp": [
     {
       "type": 0,
-      "value": "Become a validator and help secure the future of Ethereum."
+      "value": "バリデーターになりEthereumの未来を守りましょう。"
     }
   ],
   "cRzxes": [
@@ -3524,7 +3548,7 @@
   "dH5+MX": [
     {
       "type": 0,
-      "value": "Bad behaviour"
+      "value": "不正な動作"
     }
   ],
   "dIgBOz": [
@@ -3722,7 +3746,7 @@
   "fQ5yno": [
     {
       "type": 0,
-      "value": "Arabic"
+      "value": "アラビア語"
     }
   ],
   "fR8+bQ": [
@@ -3753,6 +3777,12 @@
     {
       "type": 0,
       "value": "さらに、 バリデータークライアント (VC) とビーコンノード (BN) を別々のマシンと IP に設定することで、ビーコンノードが脆弱な場合でも、キーストアは別のマシンに保管されます。"
+    }
+  ],
+  "g0zIUd": [
+    {
+      "type": 0,
+      "value": "引き出しできません"
     }
   ],
   "g37XKP": [
@@ -3820,7 +3850,7 @@
   "gsuLMm": [
     {
       "type": 0,
-      "value": "Greek"
+      "value": "ギリシャ語"
     }
   ],
   "gtrcyK": [
@@ -3965,6 +3995,12 @@
     {
       "type": 0,
       "value": "現在送金が無効になっている状態で、自発的に参加を終了してから後で再度参加することはできません。 これは、長期にわたるコミットメントが必要であることを意味します。"
+    }
+  ],
+  "iRQxxL": [
+    {
+      "type": 0,
+      "value": "Nimbus は Eth1 と Eth2 両方のクライアント実装であり、使用されるリソースに関して可能な限り軽量化を目指しています。 これにより、組込みシステム、Raspberry Pi を含むリソースに制約のあるデバイス、および多目的サーバでも十分に動作することができます。"
     }
   ],
   "iWg7mL": [
@@ -4113,6 +4149,12 @@
     {
       "type": 0,
       "value": "URL は他のウェブサイトで見たものと一致していますか？"
+    }
+  ],
+  "kTt/ND": [
+    {
+      "type": 0,
+      "value": "ロシア語"
     }
   ],
   "kXhUdD": [
@@ -4678,7 +4720,7 @@
   "qK4+NQ": [
     {
       "type": 0,
-      "value": "The terminal"
+      "value": "ターミナル"
     }
   ],
   "qLf68w": [
@@ -4990,13 +5032,13 @@
   "u564LK": [
     {
       "type": 0,
-      "value": "Portuguese (Brazilian)"
+      "value": "ポルトガル語 (ブラジル)"
     }
   ],
   "u81G9+": [
     {
       "type": 0,
-      "value": "Uptime"
+      "value": "稼働時間"
     }
   ],
   "uCikFk": [

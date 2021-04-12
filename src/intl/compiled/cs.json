@@ -1,0 +1,5550 @@
+{
+  "+3PPtT": [
+    {
+      "type": 0,
+      "value": "V současnosti budete zabezpečovat Beacon Chain, první upgrade Eth2. Jedná se o samostatný blockchain, který používá mechanismus konsensu proof-of-stake. Až se hlavní síť (Ethereum, které dnes používáme) sloučí s Beacon Chainem, budete pomáhat se zabezpečením veškerého Etherea."
+    }
+  ],
+  "+L0IkF": [
+    {
+      "type": 0,
+      "value": "Krok 2: Pomocí nástroje pro vklady od Ethereum Foundation vygenerujte vkladové klíče"
+    }
+  ],
+  "+UUcBt": [
+    {
+      "type": 0,
+      "value": "Zvolit jazyk"
+    }
+  ],
+  "+V+ZX+": [
+    {
+      "type": 0,
+      "value": "Doba činnosti validátoru"
+    }
+  ],
+  "+e8bO+": [
+    {
+      "type": 0,
+      "value": "Chápu, že nebudu moci vybrat své finanční prostředky, pokud ztratím mnemotechnickou pomůcku."
+    }
+  ],
+  "+fnRDB": [
+    {
+      "type": 0,
+      "value": "Přijímám"
+    }
+  ],
+  "+mDtA4": [
+    {
+      "type": 0,
+      "value": "6. Počkejte, až budete aktivní"
+    }
+  ],
+  "+oBh8L": [
+    {
+      "type": 0,
+      "value": "Pomůžeme vám vytvořit podpisový klíč pro každý validátor, který chcete provozovat. Až do sloučení není možné provádět výběry, takže nyní nevytvoříte klíče pro výběr. Až bude možné vybírat finanční prostředky, můžete své klíče pro výběr odvodit od své mnemotechnické pomůcky."
+    }
+  ],
+  "+s8Gac": [
+    {
+      "type": 0,
+      "value": "Připojit peněženku "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " k síti "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "/+atl4": [
+    {
+      "type": 0,
+      "value": "Vyloučení odpovědnosti za doporučení"
+    }
+  ],
+  "//KCTE": [
+    {
+      "type": 0,
+      "value": "Všechny transakce můžete zahájit najednou, nebo individuálně."
+    }
+  ],
+  "/5Hyyf": [
+    {
+      "type": 0,
+      "value": "Indonéština"
+    }
+  ],
+  "/QPc9s": [
+    {
+      "type": 0,
+      "value": "Svůj záměr přestat s validací můžete oznámit podepsáním zprávy o dobrovolném odchodu pomocí vašeho validátoru."
+    }
+  ],
+  "/SbhtD": [
+    {
+      "type": 0,
+      "value": "K instalaci pip3 můžete také použít "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": ". Aktuální pokyny k instalaci pip3 a přímý odkaz ke stažení najdete v: "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    },
+    {
+      "type": 0,
+      "value": ". "
+    }
+  ],
+  "/U09hN": [
+    {
+      "type": 0,
+      "value": "Vyhněte se odhalení identity validátoru na síti. Riziko odhalení IP adresy můžete omezit pomocí důvěryhodné VPN."
+    }
+  ],
+  "/VVB8t": [
+    {
+      "type": 0,
+      "value": "Než budete pokračovat v nastavování validátoru, přečtěte si tuto část."
+    }
+  ],
+  "/Vc/P6": [
+    {
+      "type": 0,
+      "value": "Tato stránka bohužel neexistuje."
+    }
+  ],
+  "/WenEu": [
+    {
+      "type": 0,
+      "value": "Za transakci odpovídáte vy. Podvodné weby se vás mohou snažit přimět, abyste částku "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " poslali jim, a ne na oficiáln kontrakt pro vklady. Zkontrolujte správnost adresy, na kterou transakci posíláte."
+    }
+  ],
+  "/jJLYy": [
+    {
+      "type": 0,
+      "value": "Transakce"
+    }
+  ],
+  "/ub26/": [
+    {
+      "type": 0,
+      "value": "Seznamte se s riziky"
+    }
+  ],
+  "/vPNsl": [
+    {
+      "type": 0,
+      "value": "Sloučení (nebo také dokování) bude znamenat spojení hlavní sítě Etherea, kterou dnes používáme, s Beacon Chainem. Ethereum při tom plně přejde na proof-of-stake."
+    }
+  ],
+  "/vkCbT": [
+    {
+      "type": 0,
+      "value": "Validátoři dostávají odměny za navrhování a potvrzování bloků. Odměny jsou vázané na celkovou částku podílu v síti ("
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ")."
+    }
+  ],
+  "/w/KT4": [
+    {
+      "type": 0,
+      "value": "Ale není vše ztraceno. Pokud dokážete odvodit své klíče pomocí "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " (podle výchozího náborového postupu, pak "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/wNiYN": [
+    {
+      "type": 0,
+      "value": "Smlouva o vkladu byla ověřena na úrovni bajtového kódu, abyste byli v bezpečí."
+    }
+  ],
+  "/ydZdf": [
+    {
+      "type": 0,
+      "value": "Jak velké jsou odměny/sankce?"
+    }
+  ],
+  "00OWFk": [
+    {
+      "type": 0,
+      "value": "Minimální dobitá částka je "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "00d8uq": [
+    {
+      "type": 0,
+      "value": "Validátor se po nastavení neaktivuje hned. Než se aktivuje, můžete si projít kontrolní seznam a provést další simulace na testnetu."
+    }
+  ],
+  "03xT/J": [
+    {
+      "type": 0,
+      "value": "Cílem je minimalizovat ztráty způsobené nechtěnými chybami a zásadně odrazovat od koordinovaných útoků."
+    }
+  ],
+  "07C4IQ": [
+    {
+      "type": 0,
+      "value": "Oddíl 3 – Po vkladu"
+    }
+  ],
+  "0GSZcr": [
+    {
+      "type": 0,
+      "value": "Vložen podíl"
+    }
+  ],
+  "0PlVao": [
+    {
+      "type": 0,
+      "value": "Víc o tom, jak předcházet postihům"
+    }
+  ],
+  "0RmIrh": [
+    {
+      "type": 0,
+      "value": "Podle souboru deposit_data.json to vypadá, že jste chtěli nastavit jeden další validátor. Tento vklad stále čeká. Pokud si myslíte, že jste tento vklad už provedli, počkejte hodinu a pak to zkuste znovu, aby nedošlo k duplicitním vkladům."
+    }
+  ],
+  "0S8/Wo": [
+    {
+      "type": 0,
+      "value": "Postup testnetu"
+    }
+  ],
+  "0i4cCJ": [
+    {
+      "type": 0,
+      "value": "Potvrdit vklady ("
+    },
+    {
+      "type": 1,
+      "value": "depositKeys"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "0lHkrT": [
+    {
+      "type": 0,
+      "value": "Dále nainstalujte závislé balíčky:"
+    }
+  ],
+  "0oNdmk": [
+    {
+      "type": 0,
+      "value": "Časté dotazy k validátorům"
+    }
+  ],
+  "0qvZJn": [
+    {
+      "type": 0,
+      "value": "Víc o vizi Eth2"
+    }
+  ],
+  "0uqjBl": [
+    {
+      "type": 0,
+      "value": "Dostávejte průběžně odměny za pomáhání komunitě."
+    }
+  ],
+  "19o6KO": [
+    {
+      "type": 0,
+      "value": "Kdy mohu vybrat své finanční prostředky a jaký je rozdíl mezi odchodem a výběrem financí?"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "Koncový bod JSON RPC"
+    }
+  ],
+  "1P6GMj": [
+    {
+      "type": 0,
+      "value": "Monitorování"
+    }
+  ],
+  "1PPGHb": [
+    {
+      "type": 0,
+      "value": "Zkontroloval(a) jsem, zda čas na serveru odpovídá skutečnému času."
+    }
+  ],
+  "1QW89r": [
+    {
+      "type": 0,
+      "value": "Více statistik"
+    }
+  ],
+  "1UmyRL": [
+    {
+      "type": 0,
+      "value": "nejnovější stabilní verze softwaru"
+    }
+  ],
+  "1VJ05X": [
+    {
+      "type": 0,
+      "value": "Oddíl 3"
+    }
+  ],
+  "1Vkpd0": [
+    {
+      "type": 0,
+      "value": "Zkontrolujte, zda soubory s hesly na začátku a na konci neobsahují prázdné řádky."
+    }
+  ],
+  "1fDfw7": [
+    {
+      "type": 0,
+      "value": "Jak k tomu všemu dojde?"
+    }
+  ],
+  "1fytak": [
+    {
+      "type": 0,
+      "value": "Zkontrolujte podrobnosti smlouvy o vkladu"
+    }
+  ],
+  "2+TGmE": [
+    {
+      "type": 0,
+      "value": "Ke zpracovávání příchozích vkladů validátoru z řetězce Eth1 potřebujete provozovat klienta Eth1 i klienta Eth2. Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
+    }
+  ],
+  "22EpKq": [
+    {
+      "type": 0,
+      "value": "Toto není platný soubor "
+    },
+    {
+      "type": 1,
+      "value": "JSON"
+    }
+  ],
+  "25suT4": [
+    {
+      "type": 0,
+      "value": "Oddělovač cest záleží na operačním systému. Ve Windows by měl být "
+    },
+    {
+      "type": 1,
+      "value": "semicolon"
+    },
+    {
+      "type": 0,
+      "value": " namísto "
+    },
+    {
+      "type": 1,
+      "value": "colon"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2AHkym": [
+    {
+      "type": 0,
+      "value": "Při načítání informací o validátoru z Beaconcha.in došlo k chybě"
+    }
+  ],
+  "2CYEJa": [
+    {
+      "type": 0,
+      "value": "Řešení problémů"
+    }
+  ],
+  "2DuJTX": [
+    {
+      "type": 0,
+      "value": "K připojení uzlu Eth2 ke koncovému bodu JSON RPC použijte "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
+    }
+  ],
+  "2a1GTh": [
+    {
+      "type": 0,
+      "value": "svůj podpisový klíč můžete vždy přepočítat na základě svého klíče pro výběr"
+    }
+  ],
+  "2iH8Zc": [
+    {
+      "type": 0,
+      "value": "Dokumentace ke správě klíčů Nimbus"
+    }
+  ],
+  "2t/3ab": [
+    {
+      "type": 0,
+      "value": "Druhý soubor, který jste právě vygenerovali, je "
+    },
+    {
+      "type": 1,
+      "value": "depositDataJson"
+    },
+    {
+      "type": 0,
+      "value": ". Tento soubor obsahuje veřejné klíče vašich validátorů. V následujícím kroku jej bude třeba nahrát."
+    }
+  ],
+  "32rBNK": [
+    {
+      "type": 0,
+      "value": "Podmínky služby"
+    }
+  ],
+  "36KKVb": [
+    {
+      "type": 0,
+      "value": "Víc o ekonomice Eth2"
+    }
+  ],
+  "38VH2G": [
+    {
+      "type": 0,
+      "value": "Nainstalovat nástroj deposit-cli"
+    }
+  ],
+  "3CRtg8": [
+    {
+      "type": 0,
+      "value": "Na tomto účtu nemáte dostatek "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " pro "
+    },
+    {
+      "type": 1,
+      "value": "numberOfValidators"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    }
+  ],
+  "3GbrWR": [
+    {
+      "type": 0,
+      "value": "Proč odměny závisejí na celkovém počtu validátorů v síti?"
+    }
+  ],
+  "3H3ygi": [
+    {
+      "type": 0,
+      "value": "K připojené peněžence jsme nenašli žádné validátory"
+    }
+  ],
+  "3NHygY": [
+    {
+      "type": 0,
+      "value": "Testování na Goerli"
+    }
+  ],
+  "3PZq07": [
+    {
+      "type": 0,
+      "value": "Proto se hodí vytvořit klíče z mnemotechnické pomůcky, která slouží jako další záloha. To bude výchozí pro validátory, kteří se připojí prostřednictvím náborového procesu na tomto webu."
+    }
+  ],
+  "3PbtmF": [
+    {
+      "type": 0,
+      "value": "Zkontrolujte celou adresu, ne jen její část. Několik bajtů by se mohlo lišit."
+    }
+  ],
+  "3Pmjlx": [
+    {
+      "type": 0,
+      "value": "Mám nainstalovaného klienta Eth2 verze "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "3Q43SM": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem"
+    }
+  ],
+  "3QmqFf": [
+    {
+      "type": 0,
+      "value": "Dobíjecí transakce"
+    }
+  ],
+  "3URRZK": [
+    {
+      "type": 0,
+      "value": "Dokumentace Geth na Goerli"
+    }
+  ],
+  "3tR/V9": [
+    {
+      "type": 0,
+      "value": "Oddíl 2 – Během nastavování"
+    }
+  ],
+  "3zCA2i": [
+    {
+      "type": 0,
+      "value": "Pokud vidíte chybovou zprávu "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", možná musíte nainstalovat balíček "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " nebo "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "4+3cIr": [
+    {
+      "type": 0,
+      "value": "Úspěšně jste nastavili validátor pro testnet. Před validací v síti "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " doporučujeme, abyste si prošli kontrolní seznam."
+    }
+  ],
+  "47svuN": [
+    {
+      "type": 0,
+      "value": "Instalace"
+    }
+  ],
+  "4FcLja": [
+    {
+      "type": 0,
+      "value": "Prysm je implementace protokolu Ethereum 2.0 pomocí jazyka Go se zaměřením na použitelnost, bezpečnost a spolehlivost."
+    }
+  ],
+  "4NvAhl": [
+    {
+      "type": 0,
+      "value": "Začněte nastavením zvoleného hardwaru a operačního systému."
+    }
+  ],
+  "4QNsja": [
+    {
+      "type": 0,
+      "value": "Proč posuvná škála? Nechceme zacházet do zbytečných detailů, ale aby síť fungovala správně, musí existovat určitý minimální počet validátorů (to znamená, že musí být vložen určitý podíl v ETH). Takže abychom přilákali více validátorů, musí úroková sazba zůstat vysoká, dokud daný minimální počet nebude dosažen."
+    }
+  ],
+  "4hnEBA": [
+    {
+      "type": 0,
+      "value": "Byl ověřen kód chytré smlouvy?"
+    }
+  ],
+  "4l6vz1": [
+    {
+      "type": 0,
+      "value": "Kopírovat"
+    }
+  ],
+  "52qGy6": [
+    {
+      "type": 0,
+      "value": "AKTUÁLNÍ"
+    }
+  ],
+  "58PXVy": [
+    {
+      "type": 0,
+      "value": "Proč dva klíče namísto jednoho?"
+    }
+  ],
+  "5CBhpq": [
+    {
+      "type": 0,
+      "value": "Závazek"
+    }
+  ],
+  "5HJLBU": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Teku"
+    }
+  ],
+  "5UH1sh": [
+    {
+      "type": 0,
+      "value": "Rumunština"
+    }
+  ],
+  "5t8oYl": [
+    {
+      "type": 0,
+      "value": "Při nastavování můžete kdykoli navštívit EthStaker ve službách "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " nebo "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": ", kde najdete užitečnou nápovědu."
+    }
+  ],
+  "6CK2Nu": [
+    {
+      "type": 0,
+      "value": "Vaše peněženka je na nesprávné síti. Přejděte na síť "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "6HBTTN": [
+    {
+      "type": 0,
+      "value": "Proof-of-stake (PoS) a Beacon Chain"
+    }
+  ],
+  "6UUL73": [
+    {
+      "type": 0,
+      "value": "Víc o validátorech"
+    }
+  ],
+  "6VIBSR": [
+    {
+      "type": 0,
+      "value": "Dobitím můžete zlepšit efektivní zůstatek tohoto validátoru"
+    }
+  ],
+  "6nh4de": [
+    {
+      "type": 0,
+      "value": "Připojujete se k síti v jejích raných fázích. Stejně jako u jiného nového softwaru se u ní mohou vyskytnout chyby. Sice je to nepravděpodobné, ale potenciální chyby mohou vést k postihu."
+    }
+  ],
+  "6zye8g": [
+    {
+      "type": 0,
+      "value": "Implementace protokolu Eth2 se zaměřením na použitelnost, zabezpečení a spolehlivost. Prysm je vyvíjen společností Prysmatic Labs, která se zaměřuje výhradně na vývoj svého klienta."
+    }
+  ],
+  "7+Domh": [
+    {
+      "type": 0,
+      "value": "Poznámky"
+    }
+  ],
+  "738tqz": [
+    {
+      "type": 0,
+      "value": "Prysm je napsán v jazyce Go a uvolněn pod licencí GPL-3.0."
+    }
+  ],
+  "74QdCu": [
+    {
+      "type": 0,
+      "value": "Transakce byla zahájena"
+    }
+  ],
+  "793QlI": [
+    {
+      "type": 1,
+      "value": "title"
+    },
+    {
+      "type": 0,
+      "value": " nepodporujeme v offline režimu."
+    }
+  ],
+  "7UOvbT": [
+    {
+      "type": 0,
+      "value": "Offline"
+    }
+  ],
+  "7V/8wz": [
+    {
+      "type": 0,
+      "value": "Konfigurační soubor"
+    }
+  ],
+  "7XiYRi": [
+    {
+      "type": 0,
+      "value": "Dostali jste postih?"
+    }
+  ],
+  "7d3Nzd": [
+    {
+      "type": 0,
+      "value": "Navrhované bloky si můžete přizpůsobit graffiti příznakem klienta validátora (textem, který si sami zvolíte). Tento příznak budete moci vidět v prohlížečích blockchainu "
+    },
+    {
+      "type": 1,
+      "value": "beaconchain"
+    },
+    {
+      "type": 0,
+      "value": " nebo "
+    },
+    {
+      "type": 1,
+      "value": "beaconscan"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "7s6XNV": [
+    {
+      "type": 0,
+      "value": "Podíly a odměny"
+    }
+  ],
+  "7sZfCF": [
+    {
+      "type": 0,
+      "value": "Víc o Nimbusu"
+    }
+  ],
+  "7tRtDE": [
+    {
+      "type": 0,
+      "value": "Síť v každé epoše měří akce jednotlivých validátorů a podle výsledků měření dává odměny nebo sankce."
+    }
+  ],
+  "7y4xl1": [
+    {
+      "type": 0,
+      "value": "Eth2 Launchpad pro "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
+  "80eWKU": [
+    {
+      "type": 0,
+      "value": "Skutečný zůstatek"
+    }
+  ],
+  "82vl9l": [
+    {
+      "type": 0,
+      "value": "Nedokážeme najít MetaMask. Použijte jiný prohlížeč nebo nainstalujte MetaMask."
+    }
+  ],
+  "8FmuYF": [
+    {
+      "type": 0,
+      "value": "Nainstalovat pip3"
+    }
+  ],
+  "8HxLGA": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Teku"
+    }
+  ],
+  "8JtiQS": [
+    {
+      "type": 0,
+      "value": "Shoduje se adresa smlouvy uvedená na webu?"
+    }
+  ],
+  "8Rj/6A": [
+    {
+      "type": 0,
+      "value": "Vyberte operační systém počítače, který právě používáte. Tento počítač budete používat ke generování klíčů. Nemusí to být operační systém, který chcete používat pro uzel."
+    }
+  ],
+  "8WtyrD": [
+    {
+      "type": 0,
+      "value": "Španělština"
+    }
+  ],
+  "8XQmxX": [
+    {
+      "type": 0,
+      "value": "Synchronizujte testnet Goerli pomocí "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "8boRAk": [
+    {
+      "type": 0,
+      "value": "postihy"
+    }
+  ],
+  "8wd0q5": [
+    {
+      "type": 0,
+      "value": "Ethereum klient navržený tak, aby byl vhodný pro veřejné i soukromé sítě s oprávněními v podnicích."
+    }
+  ],
+  "9+Ddtu": [
+    {
+      "type": 0,
+      "value": "Další"
+    }
+  ],
+  "9/4mZe": [
+    {
+      "type": 0,
+      "value": "Validace z bezpečnostních důvodů vyžaduje dva klíče. Podpisový klíč musí být neustále k dispozici, a proto musí být umístěný online. Jelikož je cokoli umístěné online zranitelné vůči hackerským útokům, není vhodné k výběrům používat stejný klíč."
+    }
+  ],
+  "94dQms": [
+    {
+      "type": 0,
+      "value": "Z bezpečnostních důvodů vám doporučujeme dokončit tento krok po odpojení se od internetu."
+    }
+  ],
+  "96pen8": [
+    {
+      "type": 0,
+      "value": "Sharding umožní dostupnost více dat na síti, protože zavede 64 paralelních řetězců. Každý nový řetězec dokáže pojmout nejméně tolik dat, co dnešní mainnet, ale možná i víc."
+    }
+  ],
+  "9DZdsc": [
+    {
+      "type": 0,
+      "value": "Budu mít nějakou výhodu, když budu mít podíl více než "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH?"
+    }
+  ],
+  "9JktQX": [
+    {
+      "type": 0,
+      "value": "Na tuto otázku neexistuje jednoduchá odpověď, protože se do daného výpočtu zapojuje mnoho faktorů."
+    }
+  ],
+  "9VZ9oy": [
+    {
+      "type": 0,
+      "value": "Jak jsou validátoři motivováni k tomu, aby zůstali aktivní a čestní?"
+    }
+  ],
+  "9k7tO9": [
+    {
+      "type": 0,
+      "value": "Nesprávná síť"
+    }
+  ],
+  "9lBMQr": [
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " pro cesty přes možnost "
+    },
+    {
+      "type": 1,
+      "value": "validatorsKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "9qMyhY": [
+    {
+      "type": 0,
+      "value": "Přečtěte si dokumentaci k možnostem a dílčím příkazům"
+    }
+  ],
+  "9uOFF3": [
+    {
+      "type": 0,
+      "value": "Přehled"
+    }
+  ],
+  "A/iYbo": [
+    {
+      "type": 0,
+      "value": "Upgrady Eth2 budou úspěšné jen v případě, že validátoři chápou rizika a povinnosti."
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "Odeslat vklad"
+    }
+  ],
+  "A6Oppp": [
+    {
+      "type": 0,
+      "value": "Prysm nabízí podrobné pokyny k tomu, jak po dokončení vkladu přes Launchpad spustit příslušného klienta."
+    }
+  ],
+  "AC669U": [
+    {
+      "type": 0,
+      "value": "Pokud potřebujete pomoc, podívejte se na dokumentaci Pythonu."
+    }
+  ],
+  "AEp7+F": [
+    {
+      "type": 0,
+      "value": "Jako validátor musíte vložit finanční podíl v "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Jediná možnost, jak se stát validátorem, je provedení jednosměrné transakce "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " na smlouvu o vkladu na aktuálním ethereovém řetězci."
+    }
+  ],
+  "AYKxmf": [
+    {
+      "type": 0,
+      "value": "Připojte svou hardwarovou peněženku k Metamasku"
+    }
+  ],
+  "AZaw+B": [
+    {
+      "type": 0,
+      "value": "Ukončování"
+    }
+  ],
+  "AbBgEs": [
+    {
+      "type": 0,
+      "value": "vysvětlení efektivního zůstatku validátoru"
+    }
+  ],
+  "Ad61gz": [
+    {
+      "type": 0,
+      "value": "Ujistěte se, že stahujete z oficiálního účtu Ethereum Foundation na GitHubu na následující webové adrese: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "Affixg": [
+    {
+      "type": 0,
+      "value": "Vklad"
+    }
+  ],
+  "AkVktj": [
+    {
+      "type": 0,
+      "value": "Zkontrolovat adresu smlouvy o vkladu"
+    }
+  ],
+  "An37jY": [
+    {
+      "type": 0,
+      "value": "Spouštěného klienta validátora Lighthouse konkrétně můžete nasměrovat na adresář s úložišti klíčů a on pak vaše úložiště klíčů importuje a interaktivně se vás zeptá na hesla. Pokud nějaké heslo nezadáte, Lighthouse se na něj bude ptát znovu při každém svém spuštění."
+    }
+  ],
+  "Anqi3n": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem s Lighthouse"
+    }
+  ],
+  "Aw1mMs": [
+    {
+      "type": 0,
+      "value": "Dobít validátor"
+    }
+  ],
+  "B2EKj+": [
+    {
+      "type": 0,
+      "value": "Chápu, že musím vložit "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", abych se mohl(a) stát validátorem, a že převod "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " do Beacon Chainu je jednosměrný a nevratný."
+    }
+  ],
+  "BB65vH": [
+    {
+      "type": 0,
+      "value": "Smlouva o vkladu je v podstatě převod finančních prostředků mezi ethereovými účty a validátory Eth2."
+    }
+  ],
+  "BCsPjJ": [
+    {
+      "type": 0,
+      "value": "Zahájit proces vkladu"
+    }
+  ],
+  "BFAvr/": [
+    {
+      "type": 0,
+      "value": "Dobít validátor"
+    }
+  ],
+  "BFfsSX": [
+    {
+      "type": 0,
+      "value": "Smlouva o vkladu Eth2 ke svému přijetí vyžaduje jednorázové zaslání minimálně "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "BFsUAH": [
+    {
+      "type": 0,
+      "value": "Zkontrolujte, jestli "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " je "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "BPpnlJ": [
+    {
+      "type": 0,
+      "value": "Stáhnout MetaMask"
+    }
+  ],
+  "BUFaRV": [
+    {
+      "type": 0,
+      "value": "Komunita EthStaker"
+    }
+  ],
+  "Bf2QKg": [
+    {
+      "type": 0,
+      "value": "Validace je dlouhodobý závazek"
+    }
+  ],
+  "Bj5yI5": [
+    {
+      "type": 0,
+      "value": "Efektivní zůstatek"
+    }
+  ],
+  "BoEpk9": [
+    {
+      "type": 0,
+      "value": "Úvod"
+    }
+  ],
+  "BvD9ay": [
+    {
+      "type": 0,
+      "value": "Lighthouse je implementace Ethereum 2.0 napsaná v jazyce Rust s velkým důrazem na rychlost a bezpečnost."
+    }
+  ],
+  "C/gb74": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Lighthouse"
+    }
+  ],
+  "C9fTX1": [
+    {
+      "type": 0,
+      "value": "Odpovědi na běžné dotazy o tom, jak se stát validátorem."
+    }
+  ],
+  "CACPC+": [
+    {
+      "type": 0,
+      "value": "Čeština"
+    }
+  ],
+  "CBbRux": [
+    {
+      "type": 0,
+      "value": "OpenEthereum je napsáno v jazyce Rust a licencováno pod licencí GPLv3."
+    }
+  ],
+  "CF9vMR": [
+    {
+      "type": 0,
+      "value": "Proof-of-stake"
+    }
+  ],
+  "CVDzDs": [
+    {
+      "type": 0,
+      "value": "Pokud se váš zůstatek blíží 16 ETH, měli byste jej dobít. Tím zajistíte, že nebudete vyloučeni z řad validátorů (k tomu dochází automaticky, když vám zůstatek klesne pod 16 ETH)."
+    }
+  ],
+  "CdKEd/": [
+    {
+      "type": 0,
+      "value": "Minimální částka pokuty je 1 ETH, ale "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "CeeJfw": [
+    {
+      "type": 0,
+      "value": "Mám nastavený firewall."
+    }
+  ],
+  "Cv+T7+": [
+    {
+      "type": 0,
+      "value": "Postihy mají dva účely: (1) zvyšují náklady na útoky na Eth2 na neúnosnou míru a (2) podněcují validátory k tomu, aby nebyli líní a plnili své povinnosti. Když dostanete postih, protože jste se chovali prokazatelně škodlivě, část vašeho podílu bude zničena."
+    }
+  ],
+  "D0Rigq": [
+    {
+      "type": 0,
+      "value": "NE"
+    }
+  ],
+  "D33f/7": [
+    {
+      "type": 0,
+      "value": "Aktuální RPS"
+    }
+  ],
+  "D4cQV/": [
+    {
+      "type": 0,
+      "value": "Jaký podíl ETH musím vložit, abych se mohl(a) stát validátorem?"
+    }
+  ],
+  "DCaq7N": [
+    {
+      "type": 0,
+      "value": "Vaše peněženka je připojená ke správné síti!"
+    }
+  ],
+  "DGHD9y": [
+    {
+      "type": 0,
+      "value": "Lighthouse má speciální nástroje, které maximálně usnadňují převod z Launchpadu."
+    }
+  ],
+  "DKSrR+": [
+    {
+      "type": 0,
+      "value": "Chápu, že pokud budu jednat v rozporu se specifikací, mohu dostat postih."
+    }
+  ],
+  "DNRQa7": [
+    {
+      "type": 0,
+      "value": "Mám přečtené podmínky služby Launchpad a souhlasím s nimi."
+    }
+  ],
+  "DUnyVI": [
+    {
+      "type": 0,
+      "value": "Vaše připojení by mělo být ideálně nepřetržitě funkční a spolehlivě stabilní."
+    }
+  ],
+  "DbnQg+": [
+    {
+      "type": 0,
+      "value": "Ověřte adresu smlouvy"
+    }
+  ],
+  "DoCZT1": [
+    {
+      "type": 0,
+      "value": "Efektivní zůstatek validátoru je momentálně na maximální výši. Pokud chcete, můžete přidat "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (minimum dovolené smlouvou o vkladu)."
+    }
+  ],
+  "DsJ/Mk": [
+    {
+      "type": 0,
+      "value": "Nedůvěřujte pouze adrese smlouvy uvedené na této webové stránce."
+    }
+  ],
+  "E+Y27g": [
+    {
+      "type": 0,
+      "value": "Verzi Pythonu můžete zkontrolovat zadáním "
+    },
+    {
+      "type": 1,
+      "value": "terminalCommand"
+    },
+    {
+      "type": 0,
+      "value": " do terminálu."
+    }
+  ],
+  "E/P9zo": [
+    {
+      "type": 0,
+      "value": "3. Procvičte se na testnetu"
+    }
+  ],
+  "E1Mywn": [
+    {
+      "type": 0,
+      "value": "chain"
+    }
+  ],
+  "E8t6ru": [
+    {
+      "type": 0,
+      "value": "Pokud se chcete stát validátorem, potřebujete vědět, jak spravovat klíče a chránit mnemotechnickou pomůcku. Pokud to zatím neumíte, nepokračujte. Upozorňujeme, že při tomto procesu neodvodíte klíč, které budete později potřebovat k výběru finančních prostředků. Proto si mnemotechnickou pomůcku bezpečně uložte, abyste finanční prostředky mohli později vybrat."
+    }
+  ],
+  "EFjTSf": [
+    {
+      "type": 0,
+      "value": "Drobné sankce jsou ukládány za neúmyslná jednání (nebo nečinnost), která brání konsensu."
+    }
+  ],
+  "EIUapL": [
+    {
+      "type": 0,
+      "value": "K přesunu do adresáře se spustitelným souborem "
+    },
+    {
+      "type": 1,
+      "value": "deposit"
+    },
+    {
+      "type": 0,
+      "value": " použijte terminál"
+    }
+  ],
+  "EPCHZV": [
+    {
+      "type": 0,
+      "value": "Pokud ztratíte podpisový klíč, váš validátor už nemůže navrhovat ani atestovat."
+    }
+  ],
+  "EPlepr": [
+    {
+      "type": 0,
+      "value": "Nasimuloval(a) jsem přerušení napájení (serveru a připojení k internetu) i jeho automatické obnovení."
+    }
+  ],
+  "ETJ2T5": [
+    {
+      "type": 0,
+      "value": "Pokud máte nějaké dotazy ohledně nástroje deposit-cli, navštivte repozitář na GitHubu."
+    }
+  ],
+  "EThT2C": [
+    {
+      "type": 0,
+      "value": "5. Je čas na vklad"
+    }
+  ],
+  "EXLB88": [
+    {
+      "type": 0,
+      "value": "Toto je testovací síť ⚠️"
+    }
+  ],
+  "FEbVwB": [
+    {
+      "type": 0,
+      "value": "Klíčový koncept je následující:"
+    }
+  ],
+  "FM92S0": [
+    {
+      "type": 0,
+      "value": "Poznámka: Beacon Chain může na ověření vašeho vkladu potřebovat několik minut."
+    }
+  ],
+  "FSRfSJ": [
+    {
+      "type": 0,
+      "value": "Chápu, že tato transakce je nevratná."
+    }
+  ],
+  "FZa0R+": [
+    {
+      "type": 0,
+      "value": "Tato situace je velmi extrémní a je nepravděpodobné, že by k ní došlo."
+    }
+  ],
+  "Fa2pjg": [
+    {
+      "type": 0,
+      "value": "Argument konfiguračního souboru pro příkazový řádek"
+    }
+  ],
+  "FazwRl": [
+    {
+      "type": 0,
+      "value": "Zkusit znovu"
+    }
+  ],
+  "FdbNS6": [
+    {
+      "type": 0,
+      "value": "Nakonfigurujte svého klienta Eth1"
+    }
+  ],
+  "FfLWt5": [
+    {
+      "type": 0,
+      "value": "Ethereum klient s obrovským počtem vývojářů. Je ideální pro podnikové systémy."
+    }
+  ],
+  "FgraU0": [
+    {
+      "type": 0,
+      "value": "Krok 1: Stáhněte si aplikaci příkazového řádku pro vklady, která je vhodná pro váš operační systém"
+    }
+  ],
+  "FqgDIV": [
+    {
+      "type": 0,
+      "value": "Podmínky služby"
+    }
+  ],
+  "FzkbsB": [
+    {
+      "type": 0,
+      "value": "validátory"
+    }
+  ],
+  "G/VJJd": [
+    {
+      "type": 0,
+      "value": "Dokumentace instalace OpenEthereum"
+    }
+  ],
+  "G0aacl": [
+    {
+      "type": 0,
+      "value": "Jako validátor dostáváte odměny za navrhování/ověřování bloků, které jsou součástí řetězce."
+    }
+  ],
+  "G5IMoZ": [
+    {
+      "type": 0,
+      "value": "Stáhnout zdrojový kód hlavní větve"
+    }
+  ],
+  "G6kg26": [
+    {
+      "type": 0,
+      "value": "Klienti Eth2: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "G8tAKU": [
+    {
+      "type": 0,
+      "value": "Zvolit klienta"
+    }
+  ],
+  "GBXzeJ": [
+    {
+      "type": 0,
+      "value": "Asi největší vliv na odměny za validaci transakcí má celková částka podílu v síti. Jinými slovy, celková částka validátorů. Na základě této částky může být roční maximální míra návratnosti pro validátora někde mezi 2 a 20 %."
+    }
+  ],
+  "GCz3kj": [
+    {
+      "type": 0,
+      "value": "Teku (dříve Artemis) je klient Eth2 pro potřeby institucí a zabezpečení. PegaSys je odnož ConsenSys vyhrazená pro vývoj podnikových klientů a nástrojů k interakci s hlavní platformou Ethereum."
+    }
+  ],
+  "GDaRAW": [
+    {
+      "type": 0,
+      "value": "Ověřte, zda se vás někdo nepokouší podvést"
+    }
+  ],
+  "GOc7cL": [
+    {
+      "type": 0,
+      "value": "Jak velkou sankci dostanu za to, že jsem offline?"
+    }
+  ],
+  "GUDhpC": [
+    {
+      "type": 0,
+      "value": "Oddíl 1"
+    }
+  ],
+  "GadkjP": [
+    {
+      "type": 0,
+      "value": "Dokumentace k provozování Lighthouse"
+    }
+  ],
+  "Gbo300": [
+    {
+      "type": 0,
+      "value": "Vygenerovat klíče"
+    }
+  ],
+  "GrU/lp": [
+    {
+      "type": 0,
+      "value": "Klienti Eth2"
+    }
+  ],
+  "GsBRWL": [
+    {
+      "type": 0,
+      "value": "Jazyky"
+    }
+  ],
+  "Gsixxx": [
+    {
+      "type": 0,
+      "value": "Rizika předčasného přijetí"
+    }
+  ],
+  "GuIwY6": [
+    {
+      "type": 0,
+      "value": "Kdy bych mě(a) navýšit svůj zůstatek validátoru?"
+    }
+  ],
+  "H+Wcch": [
+    {
+      "type": 0,
+      "value": "Oddíl 2"
+    }
+  ],
+  "H+kIpp": [
+    {
+      "type": 0,
+      "value": "Celková požadovaná částka"
+    }
+  ],
+  "H5+NAX": [
+    {
+      "type": 0,
+      "value": "Zůstatek"
+    }
+  ],
+  "HoahTd": [
+    {
+      "type": 0,
+      "value": "Pokud nezadáte heslo, Nimbus o ně interaktivně požádá při spuštění."
+    }
+  ],
+  "HqRNN8": [
+    {
+      "type": 0,
+      "value": "Podpora"
+    }
+  ],
+  "I212vY": [
+    {
+      "type": 0,
+      "value": "Validátor se aktivuje v Beacon Chainu po krátké prodlevě. Mezitím si můžete projít kontrolní seznam a strávit chvíli času ověřováním sítě "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "I3JhPS": [
+    {
+      "type": 0,
+      "value": "Síť"
+    }
+  ],
+  "IAKvZ0": [
+    {
+      "type": 0,
+      "value": "Upgrady Eth2"
+    }
+  ],
+  "IJw06E": [
+    {
+      "type": 0,
+      "value": "Podepište transakci pomocí své peněženky"
+    }
+  ],
+  "IVyWYt": [
+    {
+      "type": 0,
+      "value": "Ve druhé (nepravděpodobné) situaci v průběhu 21 dnů postupně přijdete až o 50 % svého podílu (16 ETH). Po 21 dnech budete vyloučeni z řad validátorů. Tím je zajištěno, že bloky se znovu v určitou dobu začnou dokončovat."
+    }
+  ],
+  "IZFEUg": [
+    {
+      "type": 0,
+      "value": "Připraveno"
+    }
+  ],
+  "IdUtHu": [
+    {
+      "type": 0,
+      "value": "Nainstalovat virtualenv"
+    }
+  ],
+  "IhDJWs": [
+    {
+      "type": 0,
+      "value": "Máte čekající vklady ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "Il9tBQ": [
+    {
+      "type": 0,
+      "value": "Geth je napsaný v jazyce Go, je plně open source a je licencovanáý pod GNU LGPL v3."
+    }
+  ],
+  "IugT5/": [
+    {
+      "type": 0,
+      "value": "nemohu převést"
+    }
+  ],
+  "IwrKbS": [
+    {
+      "type": 0,
+      "value": "To záleží na různých skutečnostech. Kromě "
+    },
+    {
+      "type": 1,
+      "value": "impact"
+    },
+    {
+      "type": 0,
+      "value": " existují dva důležité scénáře, na které je třeba pamatovat:"
+    }
+  ],
+  "J0DclJ": [
+    {
+      "type": 0,
+      "value": "Synchronizace vašeho Eth1 klienta může v nejhorším případě trvat několik dní."
+    }
+  ],
+  "J455S4": [
+    {
+      "type": 0,
+      "value": "Pokud používáte git, můžete ke stažení větve "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": " použít "
+    },
+    {
+      "type": 1,
+      "value": "gitClone"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J5Lzz1": [
+    {
+      "type": 0,
+      "value": "Čínština (tradiční)"
+    }
+  ],
+  "J7T0SR": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Nimbusu"
+    }
+  ],
+  "JAiV0o": [
+    {
+      "type": 0,
+      "value": "Jinými slovy, abyste jednali čestně, za své kroky odpovídáte svými finančními prostředky."
+    }
+  ],
+  "JDGiXT": [
+    {
+      "type": 0,
+      "value": "Dokumentace OpenEthereum vysvětluje, jak si stáhnout a nainstalovat klienta."
+    }
+  ],
+  "JMcBLZ": [
+    {
+      "type": 0,
+      "value": "Čekající vklady ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "JPT/TK": [
+    {
+      "type": 0,
+      "value": "4. Vyhněte se phishingu"
+    }
+  ],
+  "JYrJic": [
+    {
+      "type": 0,
+      "value": "Vyhněte se phishingu zaměřenému na Eth2"
+    }
+  ],
+  "JhUYU3": [
+    {
+      "type": 0,
+      "value": "Stáhnout aplikaci pro příkazový řádek"
+    }
+  ],
+  "JqVeL+": [
+    {
+      "type": 0,
+      "value": "Míra využívání hardwarových prostředků se u jednotlivých klientů může výrazně lišit. Pokud máte omezené hardwarové prostředky, vyzkoušejte různé hardwarové prostředky."
+    }
+  ],
+  "Js4uuA": [
+    {
+      "type": 0,
+      "value": "efektivní zůstatek"
+    }
+  ],
+  "JsTbFu": [
+    {
+      "type": 0,
+      "value": "Dostali jste postih"
+    }
+  ],
+  "JtAiN/": [
+    {
+      "type": 0,
+      "value": "Který operační systém aktuálně používáte?"
+    }
+  ],
+  "K6+jQ3": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Geth"
+    }
+  ],
+  "KBSbmP": [
+    {
+      "type": 0,
+      "value": "Můžete "
+    },
+    {
+      "type": 1,
+      "value": "reloadYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " a zkusit to znovu, případně můžete obnovit stránku. Pokud problém přetrvá, dejte nám vědět ve službě "
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "KBjoXt": [
+    {
+      "type": 0,
+      "value": "Stáhněte a rozbalte zdrojový kód hlavní větve z GitHubu."
+    }
+  ],
+  "KC9jbz": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam hardwaru"
+    }
+  ],
+  "KN7zKn": [
+    {
+      "type": 0,
+      "value": "Chyba"
+    }
+  ],
+  "KV017i": [
+    {
+      "type": 0,
+      "value": "Validátor je subjekt, který se podílí na konsensu protokolu Ethereum 2.0."
+    }
+  ],
+  "KhEtqB": [
+    {
+      "type": 0,
+      "value": "Dokumentace Besu na Goerli"
+    }
+  ],
+  "KjcAm2": [
+    {
+      "type": 0,
+      "value": "Odměny a sankce jsou rozdávány přibližně každé šest a půl minuty. Této době se říká epocha."
+    }
+  ],
+  "KqGKRA": [
+    {
+      "type": 0,
+      "value": "Po dokončení procesu byste měli vidět následující:"
+    }
+  ],
+  "KrVaDy": [
+    {
+      "type": 0,
+      "value": "Připojil(a) jsem se na Discord server svého klienta."
+    }
+  ],
+  "KvRSg5": [
+    {
+      "type": 0,
+      "value": "Co jsou přesně postihy?"
+    }
+  ],
+  "Kw+pTr": [
+    {
+      "type": 0,
+      "value": "Instalační proces prostředí python3 se může lišit v závislosti na linuxovém sestavení."
+    }
+  ],
+  "KxUgHu": [
+    {
+      "type": 0,
+      "value": "Zkontroloval(a) jsem, jestli jsou moje úložiště klíčů "
+    },
+    {
+      "type": 1,
+      "value": "boldCaution"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "L7fPF+": [
+    {
+      "type": 0,
+      "value": "Dokončete poslední vklad"
+    }
+  ],
+  "L8jrV5": [
+    {
+      "type": 0,
+      "value": "znovu načíst svou peněženku"
+    }
+  ],
+  "LVy+cS": [
+    {
+      "type": 0,
+      "value": "V dokumentaci ke klientovi zkontrolujte, zda je hardware, který chcete použít, dostatečný a podporovaný."
+    }
+  ],
+  "LWIlKS": [
+    {
+      "type": 0,
+      "value": "Vklady také můžete jednotlivě potvrdit níže…"
+    }
+  ],
+  "LeHQQm": [
+    {
+      "type": 0,
+      "value": "Časté dotazy k validátorům"
+    }
+  ],
+  "LibVut": [
+    {
+      "type": 0,
+      "value": "Synchronizujte testnet Goerli pomocí "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Ltd/hJ": [
+    {
+      "type": 1,
+      "value": "directoriesPattern"
+    },
+    {
+      "type": 0,
+      "value": " najde "
+    },
+    {
+      "type": 1,
+      "value": "keyDirectory"
+    },
+    {
+      "type": 0,
+      "value": " a bude očekávat, že najde "
+    },
+    {
+      "type": 1,
+      "value": "passwordDirectory"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Lv3Pmp": [
+    {
+      "type": 0,
+      "value": "Prvotní vklad pro tento veřejný klíč validátoru už byl provede. Počkejte a zkontrolujte stav vkladu na poskytovateli dat Beaconchain."
+    }
+  ],
+  "LyJqWj": [
+    {
+      "type": 0,
+      "value": "Víc o rolích a povinnostech validátora"
+    }
+  ],
+  "M3GwXS": [
+    {
+      "type": 0,
+      "value": "Úplné odměny budete dostávat jen v případě, že je váš validátor online a aktuální. Jde o vaši povinnost. Když se validátor odpojí, dostanete sankci. Sankce za to, že je validátor offline, přibližně odpovídají odměnám za aktivní účast."
+    }
+  ],
+  "MIsmjW": [
+    {
+      "type": 0,
+      "value": "Připojit novou peněženku"
+    }
+  ],
+  "MPHPEO": [
+    {
+      "type": 0,
+      "value": "Dokážu připojit svůj beacon uzel Eth2 ke svému klientovi Eth1 přes HTTP API."
+    }
+  ],
+  "MQTBvH": [
+    {
+      "type": 0,
+      "value": "Chraňte se před duplicitními vklady"
+    }
+  ],
+  "MSanFQ": [
+    {
+      "type": 0,
+      "value": "knihy"
+    }
+  ],
+  "MX00UO": [
+    {
+      "type": 0,
+      "value": "Co se stane, když mi někdo ukradne klíč pro výběr?"
+    }
+  ],
+  "MZEcKL": [
+    {
+      "type": 0,
+      "value": "Nevhodné chování validátora"
+    }
+  ],
+  "MZvoWG": [
+    {
+      "type": 0,
+      "value": "Upgrady"
+    }
+  ],
+  "Mb3npQ": [
+    {
+      "type": 0,
+      "value": "Používání terminálu"
+    }
+  ],
+  "MbsAo3": [
+    {
+      "type": 0,
+      "value": "Tento Launchpad vám pomůže stát se validátorem, ať můžete hrát aktivní roli v budoucím vývoji Etherea. Validátoři jsou klíčoví ke zlepšování bezpečnosti, škálovatenosti a udržitelnosti Etherea, němž všichni spolupracujeme."
+    }
+  ],
+  "Mc8nNE": [
+    {
+      "type": 0,
+      "value": "Transakce selhala"
+    }
+  ],
+  "MmZjeu": [
+    {
+      "type": 0,
+      "value": "Podrobnosti o dobití"
+    }
+  ],
+  "N+2G1J": [
+    {
+      "type": 0,
+      "value": "Vyberte klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethereum"
+    }
+  ],
+  "N0rwnt": [
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " není platný soubor JSON deposit_data. Zkuste to znovu."
+    }
+  ],
+  "NBJR7v": [
+    {
+      "type": 0,
+      "value": "K připojení uzlu Eth2 ke koncovému bodu JSON RPC použijte "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
+    }
+  ],
+  "NEmnAV": [
+    {
+      "type": 0,
+      "value": "Italština"
+    }
+  ],
+  "NLgogh": [
+    {
+      "type": 0,
+      "value": "Síť Launchpad:"
+    }
+  ],
+  "NOTCV0": [
+    {
+      "type": 0,
+      "value": "Prometheus a monitorovací systém Grafana"
+    }
+  ],
+  "NPmm0q": [
+    {
+      "type": 0,
+      "value": "Aplikaci musíte používat na počítači."
+    }
+  ],
+  "NSK+Li": [
+    {
+      "type": 0,
+      "value": "Zabezpečil(a) jsem účet root."
+    }
+  ],
+  "NTWnJC": [
+    {
+      "type": 0,
+      "value": "Stáhnout aplikaci příkazového řádku"
+    }
+  ],
+  "NVQd7i": [
+    {
+      "type": 0,
+      "value": "Ke zpracovávání příchozích vkladů validátoru z mainnetu (z řetězce Eth1) potřebujete souběžně provozovat klienta Eth1 i klienta Eth2. Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
+    }
+  ],
+  "NVljH4": [
+    {
+      "type": 0,
+      "value": "Víc o Prysmatic Labs"
+    }
+  ],
+  "NYFKzu": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam podílu"
+    }
+  ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "Odeslat zbývající vklady ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "NZUWs7": [
+    {
+      "type": 0,
+      "value": "Nezapomeňte, že hlas validátora je posuzován podle částky jeho podílu."
+    }
+  ],
+  "NZsVaA": [
+    {
+      "type": 0,
+      "value": "Validátoři a Eth2"
+    }
+  ],
+  "Nb5DNK": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem s Teku"
+    }
+  ],
+  "NwzcYT": [
+    {
+      "type": 0,
+      "value": "Teku je třeba při spuštění odkázat na soubory obsahující úložiště klíčů a jejich související hesla. Existují 3 způsoby, jak to udělat."
+    }
+  ],
+  "O+3LJ1": [
+    {
+      "type": 0,
+      "value": "Zůstatek validátoru je na efektivním maximu "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "O54B/F": [
+    {
+      "type": 0,
+      "value": "Síť Eth2"
+    }
+  ],
+  "OIvXIO": [
+    {
+      "type": 0,
+      "value": "Dokončit zbývající vklady ("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "ON2tXT": [
+    {
+      "type": 0,
+      "value": "Dokumentace Nethermind vysvětluje, jak si stáhnout a nainstalovat klienta."
+    }
+  ],
+  "OdYQYh": [
+    {
+      "type": 0,
+      "value": "Víc o ConsenSys"
+    }
+  ],
+  "OsO8ik": [
+    {
+      "type": 0,
+      "value": "Jsem technicky schopný/á nastavit a spustit validátor."
+    }
+  ],
+  "Ou/o3H": [
+    {
+      "type": 0,
+      "value": "Vše, čemu byste měli rozumět, než se stanete validátorem."
+    }
+  ],
+  "P+nziG": [
+    {
+      "type": 0,
+      "value": "Jako validátor musíte dát finanční prostředky jako podíl, abyste mohli být postihováni na nečestné chování."
+    }
+  ],
+  "P0kiYS": [
+    {
+      "type": 0,
+      "value": "Upgrade Beacon Chainu přinese Ethereu konsensus proof-of-stake."
+    }
+  ],
+  "P1QerV": [
+    {
+      "type": 0,
+      "value": "Máte-li otázky, komunita EthStaker je vhodným místem k získání pomoci. Podporu můžete najít ve službách "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " a "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "P91KmA": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem "
+    },
+    {
+      "type": 1,
+      "value": "emoji"
+    }
+  ],
+  "P9mVZK": [
+    {
+      "type": 0,
+      "value": "Vaše síť se změnila"
+    }
+  ],
+  "PIQDar": [
+    {
+      "type": 0,
+      "value": "Doporučujeme vám nejdřív si projít celý proces na testnetu, abyste se s ním seznámili."
+    }
+  ],
+  "PboOCR": [
+    {
+      "type": 0,
+      "value": "Nakonfigurujte svého klienta Eth2"
+    }
+  ],
+  "PfoT0C": [
+    {
+      "type": 0,
+      "value": "Tento kontrolní seznam vám pomůže pochopit roli validátora a připravit se na ni."
+    }
+  ],
+  "PglO1W": [
+    {
+      "type": 0,
+      "value": "Formální zpráva o ověření"
+    }
+  ],
+  "PoBIK+": [
+    {
+      "type": 0,
+      "value": "Budete potřebovat SSD disk, protože nabízí konstantní rychlost čtení a zápisu."
+    }
+  ],
+  "Pswssl": [
+    {
+      "type": 0,
+      "value": "Potvrzení"
+    }
+  ],
+  "PurNgG": [
+    {
+      "type": 0,
+      "value": "Turečtina"
+    }
+  ],
+  "Px7wWb": [
+    {
+      "type": 0,
+      "value": "Dokumentace pip"
+    }
+  ],
+  "Q1ZwPT": [
+    {
+      "type": 0,
+      "value": "schránka"
+    }
+  ],
+  "Q8P0rZ": [
+    {
+      "type": 0,
+      "value": "Validátory mají maximální efektivní zůstatek "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". K dosažení maximálního efektivního zůstatku potřebujete dobít jen "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "QKFeMq": [
+    {
+      "type": 0,
+      "value": "Internet"
+    }
+  ],
+  "QOAgQF": [
+    {
+      "type": 0,
+      "value": "Poznámka: Virtuální počítače ve výchozím nastavení mohou mít vypnutý protokol NTP, takže možná pro své prostředí musíte najít alternativní řešení."
+    }
+  ],
+  "QWDxrk": [
+    {
+      "type": 0,
+      "value": "Správa klíčů"
+    }
+  ],
+  "QlsDcr": [
+    {
+      "type": 0,
+      "value": "Činnost"
+    }
+  ],
+  "QnS0CA": [
+    {
+      "type": 0,
+      "value": "Chcete-li používat tento Launchpad, peněženku je třeba nastavit na síť "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "QqqeNk": [
+    {
+      "type": 0,
+      "value": "Transakce byla zamítnuta"
+    }
+  ],
+  "Qs/oj3": [
+    {
+      "type": 0,
+      "value": "Možná máte vklad "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", který byl přijat, ale je ověřován v řetězci. Bude zde k dispozici, až beaconcha.in potvrdí 2048 bloků."
+    }
+  ],
+  "R8eePn": [
+    {
+      "type": 0,
+      "value": "Když dostanete postih, nebudete se moci dále podílet na protokolu a bude vynucen váš odchod."
+    }
+  ],
+  "RCGrka": [
+    {
+      "type": 0,
+      "value": "jediný způsob"
+    }
+  ],
+  "RIFLCz": [
+    {
+      "type": 0,
+      "value": "Phishingové útoky představují pro validátory Eth2 velké riziko a mnoho lidí kvůli nim bohužel přichází o finanční prostředky."
+    }
+  ],
+  "ROHpFF": [
+    {
+      "type": 0,
+      "value": "1. Přečtěte si své povinnosti"
+    }
+  ],
+  "RVyb7r": [
+    {
+      "type": 0,
+      "value": "Mohu zastavit validátor na několik dní a pak ho znovu spustit?"
+    }
+  ],
+  "RWqrlk": [
+    {
+      "type": 0,
+      "value": "gratulujeme"
+    }
+  ],
+  "RYUKCz": [
+    {
+      "type": 0,
+      "value": "Nasimuloval(a) jsem migraci z jednoho klienta Eth2 na jiného klienta Eth2."
+    }
+  ],
+  "RaBZna": [
+    {
+      "type": 0,
+      "value": "Pokud se na několik dní odpojíte, za normálních okolností přijdete o částku v ETH, která přibližně odpovídá částce ETH, kterou byste za dané období vydělali. Jinými slovy, pokud byste měli vydělat asi 0,01 ETH, dostanete sankci 0,01 ETH."
+    }
+  ],
+  "Rg5ySE": [
+    {
+      "type": 0,
+      "value": "Kolik validátorů chcete spustit?"
+    }
+  ],
+  "Rj0OAx": [
+    {
+      "type": 0,
+      "value": "Jinými slovy, jedná se o člověka, který provozuje počítačový proces. Tento proces navrhuje nové bloky k přidání do blockchainu a zaručuje se za ně."
+    }
+  ],
+  "RkbwNZ": [
+    {
+      "type": 0,
+      "value": "Dokud se mainnet nesloučí s Beacon Chainem, nebudete moci vybrat svůj vklad."
+    }
+  ],
+  "Rm2GQZ": [
+    {
+      "type": 0,
+      "value": "Celkový podíl v milionech: "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "Rr2lI/": [
+    {
+      "type": 0,
+      "value": "Jste odpovědní za tuto transakci!"
+    }
+  ],
+  "RrCui3": [
+    {
+      "type": 0,
+      "value": "Souhrn"
+    }
+  ],
+  "Ryptmy": [
+    {
+      "type": 0,
+      "value": "Následujícím příkazem zkontrolujte, zda vrátí správnou verzi klienta:"
+    }
+  ],
+  "S0e/cN": [
+    {
+      "type": 0,
+      "value": "Jak chcete spustit příkazový řádek?"
+    }
+  ],
+  "S943uU": [
+    {
+      "type": 0,
+      "value": "Překontrolujte adresu URL"
+    }
+  ],
+  "SB6yx7": [
+    {
+      "type": 0,
+      "value": "Proměnná prostředí konfiguračního souboru Teku"
+    }
+  ],
+  "SGzXoY": [
+    {
+      "type": 0,
+      "value": "Váš podíl dosáhl částky ve smlouvě o vkladu!"
+    }
+  ],
+  "SMffKt": [
+    {
+      "type": 0,
+      "value": "Vyberte klienta Eth"
+    },
+    {
+      "type": 1,
+      "value": "ethVersionStep"
+    },
+    {
+      "type": 0,
+      "value": " a nastavte uzel"
+    }
+  ],
+  "SR0qHv": [
+    {
+      "type": 0,
+      "value": "Vyhněte se zbytečně komplikovaným nastavením a mějte na paměti kompromisy. Když budete krátkodobě offline, dostanete malé sankce za nečinnost. Ty si ale můžete snadno vykompenzovat tím, že budete po stejnou dobu offline. Komplikovaná záložní napájení vám mohou zvýšit provozní náklady a za nadbytečné záložní validátory vám může hrozit postih."
+    }
+  ],
+  "SaR1pU": [
+    {
+      "type": 0,
+      "value": "Vklad už existuje"
+    }
+  ],
+  "Sd+Pq6": [
+    {
+      "type": 0,
+      "value": "Celkem validátorů"
+    }
+  ],
+  "Sd0I/u": [
+    {
+      "type": 0,
+      "value": "Veřejný klíč validátora"
+    }
+  ],
+  "Sd3VAH": [
+    {
+      "type": 0,
+      "value": "Validátoři, kteří odešli nebo dostali postih, nemohou dobíjet"
+    }
+  ],
+  "Sd9qhL": [
+    {
+      "type": 0,
+      "value": "Víc o rizicích postihu"
+    }
+  ],
+  "SeW5ak": [
+    {
+      "type": 0,
+      "value": "Před podpisem ověřte adresu smlouvy ve vaší peněžence."
+    }
+  ],
+  "Seanpx": [
+    {
+      "type": 0,
+      "value": "Povinné"
+    }
+  ],
+  "SqKNq2": [
+    {
+      "type": 0,
+      "value": "Python3 můžete nainstalovat na vaše zařízení s macOS pomocí "
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    }
+  ],
+  "Szwbym": [
+    {
+      "type": 0,
+      "value": "maticový klíč"
+    }
+  ],
+  "TLEziZ": [
+    {
+      "type": 0,
+      "value": "Beacon Chain vznikl "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ". Postupně nabírá na velikosti a zavedením shardování se také zvýší jeho požadavky na úložiště, paměť a rychlost připojení."
+    }
+  ],
+  "TMw9oz": [
+    {
+      "type": 0,
+      "value": "Jestli se chcete stát validátorem, navštivte tento web na počítači."
+    }
+  ],
+  "TfNuWP": [
+    {
+      "type": 0,
+      "value": "virtualenv vám chce pomoci s vytvořením izolovaného pythonového prostředí pro nástroj deposit-cli."
+    }
+  ],
+  "TmYprU": [
+    {
+      "type": 0,
+      "value": "Eth2 "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " Launchpad"
+    }
+  ],
+  "Tpe6yK": [
+    {
+      "type": 0,
+      "value": "Dokumentace s podporou rpc a http"
+    }
+  ],
+  "U/NPbq": [
+    {
+      "type": 0,
+      "value": "Němčina"
+    }
+  ],
+  "U0yY/A": [
+    {
+      "type": 0,
+      "value": "Zobrazit rozsáhlé porovnání klientů"
+    }
+  ],
+  "U7AOxj": [
+    {
+      "type": 0,
+      "value": "více než 50%"
+    }
+  ],
+  "U7PMU1": [
+    {
+      "type": 0,
+      "value": "Klienti Eth2 podporují Prometheus a Grafana, abyste mohli vizualizovat důležité statistiky vašeho validátoru v reálném čase. Pokyny specifické pro klienty najdete zde: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
+    }
+  ],
+  "UHbYCa": [
+    {
+      "type": 0,
+      "value": "Váš validátor má vlastní zůstatek, přičemž jeho prvotní zůstatek je definovaný ve smlouvě o vkladu. Vaše odměny a sankce se postupem času projeví na zůstatku validátoru."
+    }
+  ],
+  "UJMct0": [
+    {
+      "type": 0,
+      "value": "Podrobnosti najdete na webu "
+    },
+    {
+      "type": 1,
+      "value": "etherscan"
+    }
+  ],
+  "UWv7yD": [
+    {
+      "type": 0,
+      "value": "Zkontrolujte smlouvu o vkladu ve svém oblíbeném průzkumníku bloků pro Ethereum:"
+    }
+  ],
+  "Utck3E": [
+    {
+      "type": 0,
+      "value": "Podpora jazyků"
+    }
+  ],
+  "Uxs0RD": [
+    {
+      "type": 0,
+      "value": "Graffiti"
+    }
+  ],
+  "Uy8THS": [
+    {
+      "type": 0,
+      "value": "Když budete offline současně s více než 1/3 celkového počtu validátorů, dostanete větší postih, protože se bloky přestanou dokončovat. "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    }
+  ],
+  "UygdAl": [
+    {
+      "type": 0,
+      "value": "Jedna ze tří původních implementací protokolu Ethereum."
+    }
+  ],
+  "UykRIk": [
+    {
+      "type": 0,
+      "value": "Role validátora vyžaduje spoustu odpovědnosti a nezbytnou přípravu. Proces vkladu zahajte až ve chvíli, kdy budete připravení."
+    }
+  ],
+  "V0cb8p": [
+    {
+      "type": 0,
+      "value": "Pokud nemáte složku testnet, pravděpodobně jste nesestavili a nespustili Nimbus správně. Spusťte příkazy make znovu."
+    }
+  ],
+  "VASo1/": [
+    {
+      "type": 0,
+      "value": "Připojit peněženku"
+    }
+  ],
+  "VEj6nh": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Nethermind"
+    }
+  ],
+  "VIMMdE": [
+    {
+      "type": 0,
+      "value": "Neodesílejte žádnou transakci se souborem "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": ", který jste sami nevytvořili nebo ke kterému nemáte mnemotechnickou pomůcku."
+    }
+  ],
+  "VJZrCQ": [
+    {
+      "type": 0,
+      "value": "Přepnout na "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " Launchpad"
+    }
+  ],
+  "VKfWR3": [
+    {
+      "type": 0,
+      "value": "Doporučeno"
+    }
+  ],
+  "VLDKor": [
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " je maximální efektivní zůstatek validátoru. To znamená, že pokud zůstatek vašeho validátoru překročí "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", nebudete dostávat další odměny. Pokud ale klesne pod "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", budete dostávat menší odměny."
+    }
+  ],
+  "VPpHAq": [
+    {
+      "type": 0,
+      "value": "Chápu, že svůj podíl po nějakou dobu "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " a že do sloučení "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " své finanční prostředky. Chápu, že pokud odejdu, nebudu se později moci vrátit, a že se jedná o dlouhodobý závazek."
+    }
+  ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "Jinými slovy, pokud je celková částka podílu ETH nízká, odměna (úroková sazba) je vysoká. Ale jak celkový podíl roste, odměna (úrok) vyplácená jednotlivým validátorům začíná klesat."
+    }
+  ],
+  "VUuZsb": [
+    {
+      "type": 0,
+      "value": "oděv pro bojová umění"
+    }
+  ],
+  "VY3/Wo": [
+    {
+      "type": 0,
+      "value": "Pokud se chcete stát validátorem, musíte být schopní v příkazovém řádku na počítači spouštět příkazy. Generování nových párů klíčů Eth2 a instalace validačního softwaru probíhá přes příkazový řádek."
+    }
+  ],
+  "VctWDX": [
+    {
+      "type": 0,
+      "value": "Mohu s jistotou potvrdit, že validátor, který dobíjím, je můj."
+    }
+  ],
+  "VzGJkB": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam podílníka"
+    }
+  ],
+  "W10U1b": [
+    {
+      "type": 0,
+      "value": "Teku je licencovaný pod Apache 2 a napsaný v jazyce Java, který je známý svou vyspělostí a rozšířeností."
+    }
+  ],
+  "W3t7Ob": [
+    {
+      "type": 0,
+      "value": "Japonština"
+    }
+  ],
+  "W8nHSd": [
+    {
+      "type": 0,
+      "value": "Časté dotazy"
+    }
+  ],
+  "W9JuAN": [
+    {
+      "type": 0,
+      "value": "Klient validátora Eth2 (VC)"
+    }
+  ],
+  "WFVzvu": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " Duplicitní vklady se stejným veřejným klíčem keyfile budou považovány za dvojité. Veškerý zůstatek vyšší než "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " nebude započítán do efektivního zůstatku na Beacon Chainu. Také ho nebudete moci vybrat, dokud se Beacon Chain nesloučí s mainnetem."
+    }
+  ],
+  "WMLn/w": [
+    {
+      "type": 0,
+      "value": "Počet validátorů: "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    }
+  ],
+  "WRevBY": [
+    {
+      "type": 0,
+      "value": "K připojení uzlu Eth2 ke koncovému bodu JSON RPC použijte "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
+    }
+  ],
+  "WTPUDZ": [
+    {
+      "type": 0,
+      "value": "Tyto kroky jsou volitelné, ale doporučujeme je k optimalizaci uzlu."
+    }
+  ],
+  "Wao7OA": [
+    {
+      "type": 0,
+      "value": "Uzel Eth2 Beacon Node (BN)"
+    }
+  ],
+  "WkrNSk": [
+    {
+      "type": 0,
+      "value": "Angličtina"
+    }
+  ],
+  "Wl6cI3": [
+    {
+      "type": 0,
+      "value": "Přijměte výše uvedené podmínky."
+    }
+  ],
+  "WxqnJn": [
+    {
+      "type": 0,
+      "value": "Na druhou stranu můžete být postihnuti za to, že jste offline nebo se chováte škodlivě – například za potvrzování neplatných nebo protichůdných bloků."
+    }
+  ],
+  "Wxzght": [
+    {
+      "type": 0,
+      "value": "Přetáhněte nebo vyberte soubor k nahrání"
+    }
+  ],
+  "X/fKmY": [
+    {
+      "type": 0,
+      "value": "Pojmenoval průzkumník bloků danou smlouvu?"
+    }
+  ],
+  "X0dSr0": [
+    {
+      "type": 0,
+      "value": "Provozování validátoru Eth2 z více míst je velmi rizikové. Můžete za to dostat postih a být vykopnuti ze sítě. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "X5KFEh": [
+    {
+      "type": 0,
+      "value": "To není platný soubor JSON deposit_data."
+    }
+  ],
+  "XBEBYR": [
+    {
+      "type": 0,
+      "value": "Víc o instalaci pip"
+    }
+  ],
+  "XVehvN": [
+    {
+      "type": 1,
+      "value": "filesPattern"
+    },
+    {
+      "type": 0,
+      "value": " bude očekávat, že soubor "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " existuje, a soubor obsahující jeho heslo je "
+    },
+    {
+      "type": 1,
+      "value": "passwordFile"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "XmddSV": [
+    {
+      "type": 0,
+      "value": "Sestavit ze zdroje"
+    }
+  ],
+  "Y47aYU": [
+    {
+      "type": 0,
+      "value": "Dobít"
+    }
+  ],
+  "Y8YLHs": [
+    {
+      "type": 0,
+      "value": "Pokud váš podpisový klíč není pod kontrolou zloděje, zloděj nemůže váš validátor ukončit."
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "Odeslat poslední vklad"
+    }
+  ],
+  "YBs4dR": [
+    {
+      "type": 0,
+      "value": "Nejnovější verzi pip je třeba nainstalovat s prostředím python 3.x.x. Další informace o instalaci pip na Windows obsahuje "
+    },
+    {
+      "type": 1,
+      "value": "windowsInstallGuide"
+    },
+    {
+      "type": 0,
+      "value": ". Balíček pip také můžete nainstalovat přes "
+    },
+    {
+      "type": 1,
+      "value": "chocolatey"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YFFqcn": [
+    {
+      "type": 0,
+      "value": "Chápu proof-of-stake a proč jsou validátoři potřební."
+    }
+  ],
+  "YFT4rG": [
+    {
+      "type": 0,
+      "value": "Klíče"
+    }
+  ],
+  "YP03/j": [
+    {
+      "type": 0,
+      "value": "Validátoři tak budou stále podněcováni, aby se připojili (čím víc validátorů, tím decentralizovanější síť). Není ale absolutně nutné, aby to udělali (takže úroková sazba může spadnout)."
+    }
+  ],
+  "YPsbIU": [
+    {
+      "type": 0,
+      "value": "Mám nastavenou službu "
+    },
+    {
+      "type": 1,
+      "value": "grafana"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "YZtdY1": [
+    {
+      "type": 0,
+      "value": "K "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " budete potřebovat přibližně 400 GB jen pro data řetězců mainnetu Eth1 (objem dat roste asi o 1 GB denně)."
+    }
+  ],
+  "Yganfl": [
+    {
+      "type": 0,
+      "value": "Do okna terminálu zadejte následující příkazy:"
+    }
+  ],
+  "YkznEp": [
+    {
+      "type": 0,
+      "value": "Pokud ztratíte klíč pro výběr, finanční prostředky zadržované validátorem nebudete mít jak vybrat."
+    }
+  ],
+  "YtwQyB": [
+    {
+      "type": 0,
+      "value": "Můžete "
+    },
+    {
+      "type": 1,
+      "value": "changeYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " a načíst validátory pro jinou adresu."
+    }
+  ],
+  "Yu78N6": [
+    {
+      "type": 0,
+      "value": "pytel peněz"
+    }
+  ],
+  "Z07LQm": [
+    {
+      "type": 0,
+      "value": "Nepovedlo se nahrát "
+    },
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " kvůli chybě. Nahlaste problém na GitHubu, abychom ho mohli přezkoumat."
+    }
+  ],
+  "Z1aGQe": [
+    {
+      "type": 0,
+      "value": "Celkově očekáváme, že váš validátor bude v čistém zisku, dokud vaše doba činnosti bude "
+    },
+    {
+      "type": 1,
+      "value": "greaterThan50Percent"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "ZBtnGs": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam jsem si prošel/prošla."
+    }
+  ],
+  "ZK6NmY": [
+    {
+      "type": 0,
+      "value": "Pozor: Reálný čas (RTC) může být nastavený na místní časové pásmo namísto UTC, a to zejména ve virtuálních počítačích, jejichž čas je konfigurován systémem Windows."
+    }
+  ],
+  "ZOU+p7": [
+    {
+      "type": 0,
+      "value": "--http documentation"
+    }
+  ],
+  "ZOXuIe": [
+    {
+      "type": 0,
+      "value": "Proč musím mít finanční podíl?"
+    }
+  ],
+  "ZPRDyW": [
+    {
+      "type": 0,
+      "value": "To také záleží na různých skutečnostech. Za škodlivé chování (například atestaci neplatných nebo protichůdných bloků) dostanete postih formou ztráty podílu."
+    }
+  ],
+  "ZRbxwY": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam validátora Eth2"
+    }
+  ],
+  "ZTo0Fl": [
+    {
+      "type": 0,
+      "value": "Proč je nutné čekat?"
+    }
+  ],
+  "Zi+EED": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku je klient Ethereum 2.0 založený na Javě a je přizpůsobený potřebám institucí a požadavkům na zabezpečení."
+    }
+  ],
+  "Zspg8H": [
+    {
+      "type": 0,
+      "value": "Oddíl 1 – Než začnete"
+    }
+  ],
+  "ZzTcj5": [
+    {
+      "type": 0,
+      "value": "Stáhněte si python3 a postupujte podle návodu k instalaci."
+    }
+  ],
+  "a+xjjV": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem s Prysmem"
+    }
+  ],
+  "aDomwX": [
+    {
+      "type": 0,
+      "value": "Když se pokusíte podvést systém nebo konat proti specifikacím, vysloužíte si sankci. Za souběžné provozování dvou klíčů validátorů na dvou nebo více počítačích dostanete postih."
+    }
+  ],
+  "aEBE6s": [
+    {
+      "type": 0,
+      "value": "2. Připravte uzly"
+    }
+  ],
+  "aMcG1s": [
+    {
+      "type": 0,
+      "value": "Podívejte se na svůj oblíbený průzkumník bloků Eth2:"
+    }
+  ],
+  "aS6dBe": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Nimbus"
+    }
+  ],
+  "aXT3iO": [
+    {
+      "type": 0,
+      "value": "Nimbus je licencovaný pod Apache 2 a napsaný v jazyce Nim, který má syntaxi jako Python a kompiluje se do jazyka C."
+    }
+  ],
+  "aXWL9X": [
+    {
+      "type": 0,
+      "value": "Až do sloučení nebude možné validátor znovu aktivovat a nebudete moci převádět ani vybírat finanční prostředky (to znamená, že do té doby zůstanou vaše finanční prostředky nedostupné)."
+    }
+  ],
+  "aZ7pUj": [
+    {
+      "type": 0,
+      "value": "Vaše peněženka je na nesprávné síti Ethereum. Chcete-li pokračovat, připojte se k síti "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "acrOoz": [
+    {
+      "type": 0,
+      "value": "Pokračovat"
+    }
+  ],
+  "azLmaD": [
+    {
+      "type": 0,
+      "value": "Sestavte nástroj deposit-cli pomocí zdrojového kódu v Pythonu"
+    }
+  ],
+  "b3J7Pw": [
+    {
+      "type": 0,
+      "value": "Ne. Při podílu větším než "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH nemáte žádnou výhodu."
+    }
+  ],
+  "b4csjU": [
+    {
+      "type": 0,
+      "value": "Vezměte ale na vědomí, že v dohledné době se po odchodu už nebude možné vrátit."
+    }
+  ],
+  "bNFkSo": [
+    {
+      "type": 0,
+      "value": "Nyní podle pokynů v okně terminálu vygenerujte své klíče."
+    }
+  ],
+  "bR1R2M": [
+    {
+      "type": 0,
+      "value": "Řiďte se jím při nastavování klienta, abyste nevynechali důležité kroky."
+    }
+  ],
+  "bUk/lm": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Besu"
+    }
+  ],
+  "bVtlF7": [
+    {
+      "type": 0,
+      "value": "Dokud nespustíte údržbu uzlu, musíte mít na disku dostatek místa."
+    }
+  ],
+  "bbr+aD": [
+    {
+      "type": 0,
+      "value": "Soubory YAML mohou mít různé syntaxe."
+    }
+  ],
+  "bnuvhg": [
+    {
+      "type": 0,
+      "value": "Lighthouse je naprogramován v jazyce Rust a je nabízen pod licencí Apache 2.0."
+    }
+  ],
+  "bxU6sX": [
+    {
+      "type": 0,
+      "value": "Pokyny k instalaci Pythonu"
+    }
+  ],
+  "c9DSZ1": [
+    {
+      "type": 0,
+      "value": "Důrazně doporučujeme, abyste tento postup uskutečnili na aktuálním testnetu a teprvé poté až na mainnetu."
+    }
+  ],
+  "cHUoV9": [
+    {
+      "type": 0,
+      "value": "Dokumentace Geth vysvětluje, jak si stáhnout a nainstalovat klienta."
+    }
+  ],
+  "cPsIkp": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem a pomozte zabezpečit budoucnost Etherea."
+    }
+  ],
+  "cRzxes": [
+    {
+      "type": 0,
+      "value": "Aktuální RPS"
+    }
+  ],
+  "cav520": [
+    {
+      "type": 0,
+      "value": "Stáhnout z GitHubu"
+    }
+  ],
+  "ccU6l/": [
+    {
+      "type": 0,
+      "value": "Online"
+    }
+  ],
+  "chw27s": [
+    {
+      "type": 0,
+      "value": "Víc o PegaSys Teku"
+    }
+  ],
+  "clUb0+": [
+    {
+      "type": 0,
+      "value": "Příkazový řádek"
+    }
+  ],
+  "clxIWO": [
+    {
+      "type": 0,
+      "value": "Jakou sankci dostanu za nevhodné chování?"
+    }
+  ],
+  "cs9mQw": [
+    {
+      "type": 0,
+      "value": "Přečtěte si další informace o rolích a povinnostech validátorů Eth2."
+    }
+  ],
+  "cyR7Kh": [
+    {
+      "type": 0,
+      "value": "Zpět"
+    }
+  ],
+  "d5KEM8": [
+    {
+      "type": 0,
+      "value": "Musíte podeosat transakci u každého vkladu, který chcete provést."
+    }
+  ],
+  "dH5+MX": [
+    {
+      "type": 0,
+      "value": "Nevhodné chování"
+    }
+  ],
+  "dIgBOz": [
+    {
+      "type": 0,
+      "value": "Vklad"
+    }
+  ],
+  "dM/KIM": [
+    {
+      "type": 0,
+      "value": "Co přesně je validátor?"
+    }
+  ],
+  "dTOtPO": [
+    {
+      "type": 0,
+      "value": "Dobít"
+    }
+  ],
+  "deLJOg": [
+    {
+      "type": 0,
+      "value": "Nahrajte platný soubor json."
+    }
+  ],
+  "do+Cyc": [
+    {
+      "type": 0,
+      "value": "Odhadovaná RPS ("
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "dprf8W": [
+    {
+      "type": 0,
+      "value": "Kde mohu najít pomoc s řešením problémů?"
+    }
+  ],
+  "dvr19k": [
+    {
+      "type": 0,
+      "value": "Nastavení"
+    }
+  ],
+  "dzdAcD": [
+    {
+      "type": 0,
+      "value": "Výchozí port"
+    }
+  ],
+  "e/PSgJ": [
+    {
+      "type": 0,
+      "value": "Nahrát data o vkladu"
+    }
+  ],
+  "e4f94H": [
+    {
+      "type": 0,
+      "value": "Pokud "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " není "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": ", spusťte: "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    }
+  ],
+  "eIRc60": [
+    {
+      "type": 0,
+      "value": "Víc o Eth2"
+    }
+  ],
+  "eKEL/g": [
+    {
+      "type": 0,
+      "value": "Čeká"
+    }
+  ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "Dokončete vklad odesláním transakce."
+    }
+  ],
+  "eOpZjd": [
+    {
+      "type": 0,
+      "value": "Určuje, kdo má podíl, kdo validuje, jaký je podíl a kdo může vybírat finanční prostředky."
+    }
+  ],
+  "eaU/aL": [
+    {
+      "type": 0,
+      "value": "Kvůli maximálnímu zabezpečení a efektivitě uzlu provozujte klienty na vyhrazeném hardwaru. Tím omezíte riziko jeho vystavení malwaru a vyhradíte mu výpočetní prostředky, které potřebuje k neustálému plnění svých povinností a zpracovávání dat ze sítě."
+    }
+  ],
+  "egVO5r": [
+    {
+      "type": 0,
+      "value": "Víc o shard řetězcích"
+    }
+  ],
+  "elCkOU": [
+    {
+      "type": 0,
+      "value": "Víc o sloučení"
+    }
+  ],
+  "erZJkZ": [
+    {
+      "type": 0,
+      "value": "Při spouštění Teku lze úložiště klíčů a hesla poskytnout různými způsoby."
+    }
+  ],
+  "esDvdR": [
+    {
+      "type": 0,
+      "value": "Zůstatek validátoru je víc než "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", ale efektivní zůstatek je nízký ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": "). Dobitím "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (minimální částka definovaná ve smlouvě o vkladu) navýšíte efektivní zůstatek na maximum."
+    }
+  ],
+  "eyK2E3": [
+    {
+      "type": 0,
+      "value": "Projít kontrolní seznam"
+    }
+  ],
+  "f/N7FO": [
+    {
+      "type": 0,
+      "value": "Co se stane, když ztratím podpisový klíč?"
+    }
+  ],
+  "fHLKXR": [
+    {
+      "type": 0,
+      "value": "Odpověď na tuto otázku do značné míry závisí na tom, kolik ETH máte k dispozici."
+    }
+  ],
+  "fQ5yno": [
+    {
+      "type": 0,
+      "value": "Arabština"
+    }
+  ],
+  "fR8+bQ": [
+    {
+      "type": 0,
+      "value": "Během instalace"
+    }
+  ],
+  "fbiteI": [
+    {
+      "type": 0,
+      "value": "uložená jen na jednom počítači validátora"
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "Čeká se na potvrzení peněženky"
+    }
+  ],
+  "frGVRP": [
+    {
+      "type": 0,
+      "value": "dopadu efektivního zůstatku"
+    }
+  ],
+  "g/DxI7": [
+    {
+      "type": 0,
+      "value": "Klienta Validator Client (VC) a uzel Beacon Node (BN) můžete také nastavit na samostatných počítačích a IP adresách, takže když bude váš Beacon uzel napaden, úložišti klíčů se nic nestane, protože bude uložené jinde."
+    }
+  ],
+  "g0zIUd": [
+    {
+      "type": 0,
+      "value": "nemohu vybrat"
+    }
+  ],
+  "g37XKP": [
+    {
+      "type": 0,
+      "value": "Víc o virtualenv"
+    }
+  ],
+  "gAdE9y": [
+    {
+      "type": 0,
+      "value": "Děkujeme, že podporujete síť Eth2!"
+    }
+  ],
+  "gIauNz": [
+    {
+      "type": 0,
+      "value": "Měli byste mít jedno úložiště klíčů na validátor. Toto úložiště klíčů obsahuje podpisový klíč zašifrovaný vaším heslem. Pokud chcete vybrat finanční prostředky, pomocí mnemotechnické pomůcky byste měli vygenerovat výběrový klíč."
+    }
+  ],
+  "gN9D/h": [
+    {
+      "type": 0,
+      "value": "Synchronizujte testnet Goerli pomocí "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "gQkd2y": [
+    {
+      "type": 0,
+      "value": "Pomocí nástroje pro vklady od Ethereum Foundation vygenerujte vkladové klíče"
+    }
+  ],
+  "gVC0Wl": [
+    {
+      "type": 0,
+      "value": "Používá související heslo ve vaší složce tajných kódů."
+    }
+  ],
+  "gfLdAQ": [
+    {
+      "type": 0,
+      "value": "Víc o Beacon Chainu"
+    }
+  ],
+  "gjBiyj": [
+    {
+      "type": 0,
+      "value": "Načítání…"
+    }
+  ],
+  "gjmx29": [
+    {
+      "type": 0,
+      "value": "ANO"
+    }
+  ],
+  "gsuLMm": [
+    {
+      "type": 0,
+      "value": "Řečtina"
+    }
+  ],
+  "gtrcyK": [
+    {
+      "type": 0,
+      "value": "Zkontrolujte, zda jsou "
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " a "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " v pořádku."
+    }
+  ],
+  "guMfKn": [
+    {
+      "type": 0,
+      "value": "To znamená, že nemusíte složitě vytvářet záložní klienty ani zařizovat si záložní připojení k internetu, protože sankce za to, že jste online, nejsou tak přísné."
+    }
+  ],
+  "gx6frf": [
+    {
+      "type": 0,
+      "value": "hodiny"
+    }
+  ],
+  "h8MTUo": [
+    {
+      "type": 0,
+      "value": "Váš podíl"
+    }
+  ],
+  "h8ZHus": [
+    {
+      "type": 0,
+      "value": "Převody mezi validátory zatím nejsou možné. Budete muset počkat, dokud se mainnet nesloučí s Beacon Chainem (asi za dva roky). Až pak budete moci vybrat nebo převést své "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "hFzE1M": [
+    {
+      "type": 0,
+      "value": "Odměny jsou dávány za kroky, která pomáhají síti dosáhnout konsensu."
+    }
+  ],
+  "hG0uP4": [
+    {
+      "type": 0,
+      "value": "Pouze pro počítače"
+    }
+  ],
+  "hPCn9f": [
+    {
+      "type": 0,
+      "value": "Dokumentace --JsonRpc.Enabled "
+    }
+  ],
+  "hXE+0W": [
+    {
+      "type": 0,
+      "value": "Nahrát "
+    },
+    {
+      "type": 1,
+      "value": "depositJSON"
+    }
+  ],
+  "hZrkPB": [
+    {
+      "type": 0,
+      "value": "Jinými slovy, maximálních odměn dosáhnete tím, že budete síti jako celku co nejprospěšněji pomáhat."
+    }
+  ],
+  "hjrLbR": [
+    {
+      "type": 0,
+      "value": "K tomu potřebujeme, aby aktivní účastníci (známí jako validátoři) navrhovali bloky, ověřovali je a zaručovali jejich platnost. Poctiví ověřovatelé výměnou za to dostávají finanční odměny."
+    }
+  ],
+  "hkg3fb": [
+    {
+      "type": 0,
+      "value": "Víc o efektivním zůstatku"
+    }
+  ],
+  "huEFUF": [
+    {
+      "type": 0,
+      "value": "Máte "
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " čekající vklad"
+    }
+  ],
+  "hzLd+/": [
+    {
+      "type": 0,
+      "value": "Chápu, že je důležité mát validátor online a aktualizovaný."
+    }
+  ],
+  "iBYfM0": [
+    {
+      "type": 0,
+      "value": "Pokud se chcete stát validátorem, musíte provozovat uzly Eth1 a Eth2. Podle kontrolního seznamu připravte sebe a své vybavení."
+    }
+  ],
+  "iCpuph": [
+    {
+      "type": 0,
+      "value": "Klienti"
+    }
+  ],
+  "iMvXLd": [
+    {
+      "type": 0,
+      "value": "Běží klient validátora"
+    }
+  ],
+  "iPRnRG": [
+    {
+      "type": 0,
+      "value": "Jelikož jsou převody pro tuto chvíli vypnuté, nebudete moci dobrovolně odejít a později znovu začít. To znamená, že dáváte dlouhodobý závazek."
+    }
+  ],
+  "iRQxxL": [
+    {
+      "type": 0,
+      "value": "Nimbus je implementace klienta pro Eth1 i Eth2, která se snaží být co nejméně náročná na hardwarové zdroje. Díky tomu dokáže dobře fungovat na vestavěných systémech, zařízeních s omezenými prostředky (včetně počítačů Raspberry Pi) a víceúčelových serverech."
+    }
+  ],
+  "iWg7mL": [
+    {
+      "type": 0,
+      "value": "Musíte nastavit "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " pro "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", jinak bude vklad neplatný."
+    }
+  ],
+  "iZuIgB": [
+    {
+      "type": 0,
+      "value": "Rozbalte soubor, který jste právě stáhli"
+    }
+  ],
+  "idDbou": [
+    {
+      "type": 0,
+      "value": "Uvažujete o podílu?"
+    }
+  ],
+  "irRdC0": [
+    {
+      "type": 0,
+      "value": "Doporučený hardware se neustále mění. Aktuální minimální nároky se po sloučení a zavedení shard řetězců nejspíš výrazně zvýší. Před vkladem příspěvků se raději informujte o tom, co můžete očekávat."
+    }
+  ],
+  "isGKnz": [
+    {
+      "type": 0,
+      "value": "Dokumentace"
+    }
+  ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "Odeslat všechny vklady ("
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "j4ctVP": [
+    {
+      "type": 0,
+      "value": "Specifikace Eth2"
+    }
+  ],
+  "jDv/zO": [
+    {
+      "type": 0,
+      "value": "Při validaci na testnetu proveďte tyto simulace, abyste se dozvěděli více o svém uzlu a abyste se mohli lépe připravit na mainnet:"
+    }
+  ],
+  "jXer8/": [
+    {
+      "type": 0,
+      "value": "Dokumentace Prysmu"
+    }
+  ],
+  "jYVeq4": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Lighthouse"
+    }
+  ],
+  "jZVChZ": [
+    {
+      "type": 0,
+      "value": "Naimportoval(a) jsem svá úložiště klíčů do svého validátoru Eth2."
+    }
+  ],
+  "jecC36": [
+    {
+      "type": 0,
+      "value": "Veřejný klíč"
+    }
+  ],
+  "jfHMKL": [
+    {
+      "type": 0,
+      "value": "Připojit peněženku"
+    }
+  ],
+  "jjLubH": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Prysmu"
+    }
+  ],
+  "jm79h1": [
+    {
+      "type": 0,
+      "value": "Pozor: Neukládejte klíče na několika validátorech zároveň (například jako zálohu)."
+    }
+  ],
+  "jse8rl": [
+    {
+      "type": 0,
+      "value": "Jak dlouhá musí být moje doba činnosti, aby byl můj validátor v čistém zisku?"
+    }
+  ],
+  "jvB4W9": [
+    {
+      "type": 0,
+      "value": "Proměnné prostředí"
+    }
+  ],
+  "jyN21A": [
+    {
+      "type": 0,
+      "value": "Eth2 Launchpad"
+    }
+  ],
+  "jytPQU": [
+    {
+      "type": 0,
+      "value": "Dokumentace Nimbusu"
+    }
+  ],
+  "kFS5Sd": [
+    {
+      "type": 0,
+      "value": "Smlouva o vkladu byla formálně ověřena"
+    }
+  ],
+  "kGnu3F": [
+    {
+      "type": 0,
+      "value": "Jak jsou dávány odměny/sankce?"
+    }
+  ],
+  "kQTAe+": [
+    {
+      "type": 0,
+      "value": "Odpovídá adresa URL tomu, co jste viděli na jiných stránkách?"
+    }
+  ],
+  "kTt/ND": [
+    {
+      "type": 0,
+      "value": "Ruština"
+    }
+  ],
+  "kXhUdD": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem na počítači"
+    }
+  ],
+  "kZ1+zq": [
+    {
+      "type": 0,
+      "value": "Dokumentace Teku"
+    }
+  ],
+  "kd/f4u": [
+    {
+      "type": 0,
+      "value": "Seznam klíčů"
+    }
+  ],
+  "km7b1A": [
+    {
+      "type": 0,
+      "value": "V souvislosti se sankcemi, které dostanete za to, že se nepodílíte na konsensu, váš zůstatek postupně klesne. Ve chvíli, kdy dosáhne 16 ETH, budete automaticky vyloučeni z řad validátorů."
+    }
+  ],
+  "kn7kJd": [
+    {
+      "type": 0,
+      "value": "Víc o mechanismech konsensu"
+    }
+  ],
+  "krEziQ": [
+    {
+      "type": 0,
+      "value": "Kontaktujte nás"
+    }
+  ],
+  "kuYpoI": [
+    {
+      "type": 0,
+      "value": "Aktuální zůstatek"
+    }
+  ],
+  "kv1nqx": [
+    {
+      "type": 0,
+      "value": "Ukončeno"
+    }
+  ],
+  "l/uCcX": [
+    {
+      "type": 0,
+      "value": "Jste na testnetu"
+    }
+  ],
+  "l4nLft": [
+    {
+      "type": 0,
+      "value": "Vím, jak zkontrolovat, jestli posílám "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " na správnou smlouvu o vkladu, a budu se tímto postupem řídit."
+    }
+  ],
+  "l5XCJW": [
+    {
+      "type": 0,
+      "value": "Doporučení"
+    }
+  ],
+  "l5kq/q": [
+    {
+      "type": 0,
+      "value": "Potvrdit na řetězci"
+    }
+  ],
+  "l6OJpv": [
+    {
+      "type": 0,
+      "value": "Nejprve v adresáři repozitáře vytvořte venv virtualenv:"
+    }
+  ],
+  "lD66ab": [
+    {
+      "type": 0,
+      "value": "Neuhrazený vklad"
+    }
+  ],
+  "lJNmgK": [
+    {
+      "type": 0,
+      "value": "Jak Eth2 upgraduje Ethereum?"
+    }
+  ],
+  "lLOZMD": [
+    {
+      "type": 0,
+      "value": "Pip můžete nainstalovat pomocí linuxového správce balíčků, jako je "
+    },
+    {
+      "type": 1,
+      "value": "apt"
+    },
+    {
+      "type": 0,
+      "value": " nebo "
+    },
+    {
+      "type": 1,
+      "value": "yum"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "Má web, který vás žádá o vklad "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": ", očekávanou adresu URL?"
+    }
+  ],
+  "lQzdpT": [
+    {
+      "type": 0,
+      "value": "num_validators"
+    }
+  ],
+  "lS9VhN": [
+    {
+      "type": 0,
+      "value": "Celkový podíl: "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "lVARlA": [
+    {
+      "type": 0,
+      "value": "Zadejte platnou hodnotu dobití."
+    }
+  ],
+  "lVdzDK": [
+    {
+      "type": 0,
+      "value": "Právě vygenerovaný soubor dat vkladu nahrajte. "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " se nachází ve vašem adresáři pro "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lfV1bj": [
+    {
+      "type": 0,
+      "value": "Importování z dokumentace Launchpadu"
+    }
+  ],
+  "ll/zMW": [
+    {
+      "type": 0,
+      "value": "Tato transakce je nevratná."
+    }
+  ],
+  "lo+Qqn": [
+    {
+      "type": 0,
+      "value": "změnit peněženku"
+    }
+  ],
+  "lrdlY6": [
+    {
+      "type": 0,
+      "value": "Soubor byl nahrán"
+    }
+  ],
+  "mArJcj": [
+    {
+      "type": 0,
+      "value": "Pevný disk"
+    }
+  ],
+  "mZOXtM": [
+    {
+      "type": 0,
+      "value": "Validátoři"
+    }
+  ],
+  "mhyltV": [
+    {
+      "type": 0,
+      "value": "Nastavil(a) jsem svůj příznak graffiti."
+    }
+  ],
+  "mpmFDY": [
+    {
+      "type": 0,
+      "value": "Žádné čekající vklady"
+    }
+  ],
+  "mr1BWl": [
+    {
+      "type": 0,
+      "value": "Rizika a potvrzení:"
+    }
+  ],
+  "n6Uub0": [
+    {
+      "type": 0,
+      "value": "Mám nainstalovaný svůj uzel Eht1 na síti "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (nečekejte na to, protože to může zabrat několik dnů)."
+    }
+  ],
+  "n7yYXG": [
+    {
+      "type": 0,
+      "value": "Služba"
+    }
+  ],
+  "nHk8Et": [
+    {
+      "type": 0,
+      "value": "PoS je bezpečnější, decentralizovanější a ekologicky šetrnější mechanismus konsensu než proof-of-work (PoW), který dnes zajišťuje Ethereum. Odměňuje validátory za budování řetězce, ale pokud se na něj pokusí zaútočit, postihne je. Tím podněcuje vhodné chování. Tento upgrade už je zavedený ve formě Beacon Chainu."
+    }
+  ],
+  "nIb6XF": [
+    {
+      "type": 0,
+      "value": "A za škodlivé akce jsou dávány velké "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "nRdJct": [
+    {
+      "type": 0,
+      "value": "Pokračovat bez potvrzení všech transakcí"
+    }
+  ],
+  "nZTFTz": [
+    {
+      "type": 0,
+      "value": "Chápu, že více vkladů na validátor mi nepřinese žádnou výhodu. Veškeré "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", které pošlu v duplicitním vkladu, se mi nezapočítají do efektivního zůstatku na validátoru a nebude je možné vybrat."
+    }
+  ],
+  "ndhFef": [
+    {
+      "type": 0,
+      "value": "Až vše zkontrolujete, vygenerujete klíče a provedete vklad ETH."
+    }
+  ],
+  "njAU72": [
+    {
+      "type": 0,
+      "value": "Francouzština"
+    }
+  ],
+  "njnn9P": [
+    {
+      "type": 0,
+      "value": "Spustil(a) jsem svého klienta validátora."
+    }
+  ],
+  "ntG2by": [
+    {
+      "type": 0,
+      "value": "Pokročilá systémová architektura"
+    }
+  ],
+  "nz27+c": [
+    {
+      "type": 0,
+      "value": "Máte-li otázky, komunita EthStaker je vhodným místem k získání pomoci. Podporu můžete najít ve službách "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " a "
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "o9QvTP": [
+    {
+      "type": 0,
+      "value": "Než začnete"
+    }
+  ],
+  "oLxfO1": [
+    {
+      "type": 0,
+      "value": "Po naimportování klíčů vám zbývá jen spustit klienta validátoru (za předpokladu, že Beacon uzel už je spuštěný)."
+    }
+  ],
+  "oPdwwC": [
+    {
+      "type": 0,
+      "value": "Omezení maximálního podílu na "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH napomáhá k decentralizaci moci, protože brání tomu, aby kterýkoli validátor měl příliš velké slovo při hlasování o stavu řetězce."
+    }
+  ],
+  "oWhj8Q": [
+    {
+      "type": 0,
+      "value": "Jak často jsou dávány odměny/sankce?"
+    }
+  ],
+  "ogbG7r": [
+    {
+      "type": 0,
+      "value": "Pokud se chcete stát validátorem na Beacon Chainu, musíte vložit "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " na každý validátor, který chcete provozovat."
+    }
+  ],
+  "ohspQX": [
+    {
+      "type": 0,
+      "value": "Povinnosti"
+    }
+  ],
+  "okxBZ6": [
+    {
+      "type": 0,
+      "value": "OpenEthereum, dříve Parity, má být „nejrychlejší, nejméně náročný a nejbezpečnější Ethereum klient“."
+    }
+  ],
+  "omJNJw": [
+    {
+      "type": 0,
+      "value": "Pozor!"
+    }
+  ],
+  "on8WXn": [
+    {
+      "type": 0,
+      "value": "Importoval(a) jsem konfiguraci řídicího panelu na grafana server a překontroloval(a) jsem funkčnost svého uzlu."
+    }
+  ],
+  "orM+1T": [
+    {
+      "type": 0,
+      "value": "Teku také načte validátory z úložišť klíčů (a hesla) z cest, které najde v proměnné prostředí klíčů validátoru."
+    }
+  ],
+  "orczlb": [
+    {
+      "type": 0,
+      "value": "Má smlouva velký zůstatek?"
+    }
+  ],
+  "ouW9ov": [
+    {
+      "type": 0,
+      "value": "Vaši validátoři"
+    }
+  ],
+  "ox304v": [
+    {
+      "type": 0,
+      "value": "Došlo k chybě"
+    }
+  ],
+  "ozEkVY": [
+    {
+      "type": 0,
+      "value": "Synchronizujte testnet Goerli pomocí "
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "p0b6zX": [
+    {
+      "type": 0,
+      "value": "Víc o stavu"
+    }
+  ],
+  "p556q3": [
+    {
+      "type": 0,
+      "value": "Zkopírováno"
+    }
+  ],
+  "pA+UVF": [
+    {
+      "type": 0,
+      "value": "Pokud chcete mít Launchpad v jiném jazyce nebo pokud nám můžete pomoci s jeho překladem, "
+    },
+    {
+      "type": 1,
+      "value": "getInTouch"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "pXyH++": [
+    {
+      "type": 0,
+      "value": "Dokumentace Besu vysvětluje, jak si stáhnout a nainstalovat klienta."
+    }
+  ],
+  "penFMT": [
+    {
+      "type": 0,
+      "value": "Eth2 je skupina upgradů, které zajistí vyšší škálovatelnost, bezpečnost a udržitelnost Etherea. Tyto upgrady vylepší Ethereum a plynule navážou na současný řetězec. Další informace o jednotlivých upgradech najdete tady:"
+    }
+  ],
+  "pfJX2D": [
+    {
+      "type": 0,
+      "value": "Víc o phishingu"
+    }
+  ],
+  "pnxB8A": [
+    {
+      "type": 0,
+      "value": "Nimbus ve vaší složce validátorů vyhledá úložiště klíčů."
+    }
+  ],
+  "pqC+qt": [
+    {
+      "type": 0,
+      "value": "Postih"
+    }
+  ],
+  "ps8lLk": [
+    {
+      "type": 0,
+      "value": "Když jste offline a naprostá většina validátorů (2/3) je stále online, dostanete relativně malé sankce, protože je online pořád dost validátorů k dokončení řetězce. "
+    },
+    {
+      "type": 1,
+      "value": "expected"
+    }
+  ],
+  "ptWiT7": [
+    {
+      "type": 0,
+      "value": "Úspěšně jsem nasimuloval(a) ruční zastavení a opětovné spuštění svého uzlu Beacon Node (BN) a klienta Validator Client (VC)."
+    }
+  ],
+  "pyWt01": [
+    {
+      "type": 0,
+      "value": "Shrnutí vkladu"
+    }
+  ],
+  "q2XW/k": [
+    {
+      "type": 0,
+      "value": "Zloděj, který vám ukradne klíč pro výběr, může převést zůstatek vašeho validátoru, ale až po ukončení validátoru."
+    }
+  ],
+  "q6sz6X": [
+    {
+      "type": 0,
+      "value": "Ekonomika Eth2"
+    }
+  ],
+  "qDcbPp": [
+    {
+      "type": 0,
+      "value": "Poté můžete vybrat svých 16 ETH, a to pomocí vašeho klíče pro výběr a s odstupem přibližně jednoho dne."
+    }
+  ],
+  "qDvaNm": [
+    {
+      "type": 0,
+      "value": "Chápu, že za klíče odpovídám a že moje mnemotechnická pomůcka (počáteční fráze) představuje "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": ", kterým mohu vybrat své finanční prostředky."
+    }
+  ],
+  "qK4+NQ": [
+    {
+      "type": 0,
+      "value": "Terminál"
+    }
+  ],
+  "qLf68w": [
+    {
+      "type": 0,
+      "value": "Dokumentace OpenEthereum"
+    }
+  ],
+  "qMePPG": [
+    {
+      "type": 0,
+      "value": "Poznámka"
+    }
+  ],
+  "qQ+Xla": [
+    {
+      "type": 0,
+      "value": "Korejština"
+    }
+  ],
+  "qZ59xY": [
+    {
+      "type": 0,
+      "value": "Všichni validátoři"
+    }
+  ],
+  "qdk7Hp": [
+    {
+      "type": 0,
+      "value": "Vaše peněženka se odpojila"
+    }
+  ],
+  "qgqVCE": [
+    {
+      "type": 0,
+      "value": "znovu připojit peněženku"
+    }
+  ],
+  "qkhah0": [
+    {
+      "type": 0,
+      "value": "Uložte si soubory klíčů a připravte si soubor validátoru"
+    }
+  ],
+  "qpdTjz": [
+    {
+      "type": 0,
+      "value": "Klient Eth2 silně zaměřený na rychlost a zabezpečení. Vyvinula jej firma Sigma Prime zabývající se zabezpečením dat a vývojem softwaru, která financuje Lighthouse a dále Ethereum Foundation, Consensys a různé jednotlivce."
+    }
+  ],
+  "quIMjo": [
+    {
+      "type": 0,
+      "value": "Musíte provést následující, aby klient Eth1 fungoval správně."
+    }
+  ],
+  "qwh6gM": [
+    {
+      "type": 0,
+      "value": "Chápu rizika předčasného přijetí a postihů."
+    }
+  ],
+  "r2BH1M": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Prysm"
+    }
+  ],
+  "r4JsKB": [
+    {
+      "type": 0,
+      "value": "Transakce byla úspěšná"
+    }
+  ],
+  "rD3ot9": [
+    {
+      "type": 0,
+      "value": "Průvodce phishingem"
+    }
+  ],
+  "rFe61n": [
+    {
+      "type": 0,
+      "value": "Jako validátor budete odpovědní za zabezpečování sítě a budete průběžně dostávat platby za kroky, které pomáhají síti v dosahování konsensu."
+    }
+  ],
+  "rNEdex": [
+    {
+      "type": 0,
+      "value": "validátor můžete považovat za hlasujícího pro nové bloky"
+    }
+  ],
+  "rTSJI9": [
+    {
+      "type": 0,
+      "value": "Vyzkoušejte testnet"
+    }
+  ],
+  "rULiIc": [
+    {
+      "type": 0,
+      "value": "Projděte si kontrolní seznam podílníka"
+    }
+  ],
+  "raRw6Z": [
+    {
+      "type": 0,
+      "value": "Domovská stránka Launchpadu"
+    }
+  ],
+  "rbrahO": [
+    {
+      "type": 0,
+      "value": "Zavřít"
+    }
+  ],
+  "rcdxTW": [
+    {
+      "type": 0,
+      "value": "Vzhledem k fixnímu celkovému počtu validátorů jsou odměny a sankce škálovány především podle zůstatku validátoru – atestování s vyšším zůstatkem znamená vyšší odměny/sankce a atestování s nižším zůstatkem znamená nižší odměny/sankce."
+    }
+  ],
+  "rs4eqr": [
+    {
+      "type": 0,
+      "value": "Zůstatek validátoru možná potřebujete dobít ze dvou důležitých důvodů. Pokud je efektivní zůstatek validátoru nižší než "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", nebudete jako podílník dostávat plné odměny. Pokud klesne pod "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", systém váš validátor vyhodí."
+    }
+  ],
+  "rswUPu": [
+    {
+      "type": 0,
+      "value": "Shrnutí Launchpadu"
+    }
+  ],
+  "rxttyC": [
+    {
+      "type": 0,
+      "value": "Mnemotechnická pomůcka je zálohou podpisových klíčů a zároveň JEDINÁ cesta k výběru vašeho vkladu "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", až to bude možné. Znáte ji jen vy, tak ji nezapomeňte."
+    }
+  ],
+  "s0FTco": [
+    {
+      "type": 0,
+      "value": "RPS"
+    }
+  ],
+  "s6gImC": [
+    {
+      "type": 0,
+      "value": "Teku lze také nakonfigurovat pomocí YAML souboru, který je předán několika různými způsoby."
+    }
+  ],
+  "sXV95+": [
+    {
+      "type": 0,
+      "value": "Procesor a RAM"
+    }
+  ],
+  "soCLV+": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam"
+    }
+  ],
+  "sraQ3P": [
+    {
+      "type": 0,
+      "value": "Čeká se na připojení…"
+    }
+  ],
+  "svsq8J": [
+    {
+      "type": 0,
+      "value": "Synchronizoval(a) jsem svůj Beacon uzel Eth2 na síti "
+    },
+    {
+      "type": 1,
+      "value": "ETH2_NETWORK_NAME"
+    }
+  ],
+  "sy35J+": [
+    {
+      "type": 0,
+      "value": "Co je smlouva o vkladu?"
+    }
+  ],
+  "szN3Fl": [
+    {
+      "type": 0,
+      "value": "Chápu podmínky služby i vše uvedené v předchozích částech a souhlasím s tím."
+    }
+  ],
+  "tJcyUM": [
+    {
+      "type": 0,
+      "value": "Podle souboru deposit_data.json to vypadá, že jste chtěli nastavit víc validátorů. Tyto vklady stále čekají. Pokud si myslíte, že jste tyto vklady už provedli, počkejte hodinu a pak to zkuste znovu, aby nedošlo k duplicitním vkladům."
+    }
+  ],
+  "teyxVk": [
+    {
+      "type": 0,
+      "value": "Jaká by měla být adresa?"
+    }
+  ],
+  "tigMuZ": [
+    {
+      "type": 0,
+      "value": "Počkejte aspoň 30 minut a pak zkuste transakci s tímto souborem "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " poslat znovu. Díky tomu bude náš zdroj dat na řetězci mít čas k nahlášení případných duplicitních vkladů."
+    }
+  ],
+  "tkFTZw": [
+    {
+      "type": 0,
+      "value": "Zůstatek po dobití"
+    }
+  ],
+  "tsfX5f": [
+    {
+      "type": 0,
+      "value": "Potvrdit vklad"
+    }
+  ],
+  "tv5Cxs": [
+    {
+      "type": 0,
+      "value": "Fungování tohoto mechanismu škálování ale není úplně zřejmé. Pokud chcete pochopit, jak přesně funguje, musíte chápat koncept zvaný "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": ". Pokud jej neznáte, doporučujeme, abyste si přečetli článek "
+    },
+    {
+      "type": 1,
+      "value": "article"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "tzMNF3": [
+    {
+      "type": 0,
+      "value": "Stav"
+    }
+  ],
+  "u28qA1": [
+    {
+      "type": 0,
+      "value": "Po vložení"
+    }
+  ],
+  "u564LK": [
+    {
+      "type": 0,
+      "value": "Portugalština (brazilská)"
+    }
+  ],
+  "u81G9+": [
+    {
+      "type": 0,
+      "value": "Doba činnosti"
+    }
+  ],
+  "uCikFk": [
+    {
+      "type": 0,
+      "value": "Také potřebujete mít dostatečnou rychlost odesílání dat. K "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " potřebujete odesílat asi 700–800 MB za hodinu a tento objem může vzrůst."
+    }
+  ],
+  "uJzGSb": [
+    {
+      "type": 0,
+      "value": "Naučte se poznávat phishingové útoky. Připravili jsme pro vás seznam věcí, kterým byste měli věnovat pozornost."
+    }
+  ],
+  "uNfxNg": [
+    {
+      "type": 0,
+      "value": "Jestli chcete pokračovat, "
+    },
+    {
+      "type": 1,
+      "value": "reconnect"
+    }
+  ],
+  "ubKWX8": [
+    {
+      "type": 0,
+      "value": "Vygenerovat dvojice klíčů"
+    }
+  ],
+  "uhapiE": [
+    {
+      "type": 0,
+      "value": "Postarejte se o to, aby rychlost vašeho připojení nebylo možné jakkoli omezovat. Je to nutné k tomu, aby byl váš uzel neustále synchronizovaný a připravený k validaci na vyžádání."
+    }
+  ],
+  "ujVT29": [
+    {
+      "type": 0,
+      "value": "Mnemotechnickou pomůcku byste si měli zapsat a uložit na bezpečném místě. Stejně tak byste měli uložit úložiště klíčů pro každý ze svých "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validátorů. Uchovávejte je na bezpečném, nejlépe offline místě. Úložiště klíčů vašich validátorů by měla být k dispozici v nově vytvořeném adresáři "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "ukfwum": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem s Nimbusem"
+    }
+  ],
+  "unzIoE": [
+    {
+      "type": 0,
+      "value": "Než budete moci spustit validátor a začít zabezpečovat síť, musíte vložit podíl "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Tento podíl bude představovat váš prvotní zůstatek."
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "Vidíte nedávné vklady "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
+  "vBOf5K": [
+    {
+      "type": 0,
+      "value": "Váš zůstatek je pravidelně aktualizován pravidly sítě Ethereum podle toho, jak plníte (nebo neplníte) své povinnosti."
+    }
+  ],
+  "vEJDo8": [
+    {
+      "type": 0,
+      "value": "Chraňte své finanční prostředky pomocí monitorovacího softwaru a naučte se reagovat při různých reálných situacích."
+    }
+  ],
+  "vIF140": [
+    {
+      "type": 0,
+      "value": "Staňte se validátorem a pomozte zabezpečit budoucnost Etherea"
+    }
+  ],
+  "vJez0K": [
+    {
+      "type": 0,
+      "value": "Postupujte opatrně. Náš zdroj dat na řetězci je mimo provoz a nejsme schopní nahlašovat duplicitní vklady."
+    }
+  ],
+  "vY2wig": [
+    {
+      "type": 0,
+      "value": "Chyba načítání"
+    }
+  ],
+  "vYODEJ": [
+    {
+      "type": 0,
+      "value": "Získat "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "vYOWYI": [
+    {
+      "type": 0,
+      "value": "Čínština (zjednodušená)"
+    }
+  ],
+  "va96SS": [
+    {
+      "type": 0,
+      "value": "Přesměroval(a) jsem potřebné porty na routeru na správné počítače (otevírejte pouze porty týkající se příslušné instalace)."
+    }
+  ],
+  "vbVsqW": [
+    {
+      "type": 0,
+      "value": "Co nejdříve si projděte "
+    },
+    {
+      "type": 1,
+      "value": "stakerChecklist"
+    },
+    {
+      "type": 0,
+      "value": ". Pokud potřebujete pomoc nebo něco prodiskutovat s ostatními validátory, zapojte se do komunity EthStaker."
+    }
+  ],
+  "vg1dVR": [
+    {
+      "type": 0,
+      "value": "Pomocí svého podpisového klíče můžete zkusit validátor rychle ukončit a pak finanční prostředky převést s využitím klíče pro výběr, a to dřív, než to udělá zloděj."
+    }
+  ],
+  "vyvUB5": [
+    {
+      "type": 0,
+      "value": "Soubor JSON je určený pro jinou síť. Nahrajte soubor vygenerovaný pro aktuální síť: "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "w/ghcK": [
+    {
+      "type": 0,
+      "value": "Přečtěte si víc o tom, jak Eth2 upgraduje Ethereum."
+    }
+  ],
+  "w6qYSU": [
+    {
+      "type": 0,
+      "value": "Aplikaci spusťte následujícím příkazem"
+    }
+  ],
+  "wJ1PbL": [
+    {
+      "type": 0,
+      "value": "Pro "
+    },
+    {
+      "type": 1,
+      "value": "operatingSystem"
+    }
+  ],
+  "wJy3tO": [
+    {
+      "type": 0,
+      "value": "Počáteční nastavení"
+    }
+  ],
+  "wawegX": [
+    {
+      "type": 0,
+      "value": "rybářský prut"
+    }
+  ],
+  "wdb1NC": [
+    {
+      "type": 0,
+      "value": "Víc o Proof-of-stake"
+    }
+  ],
+  "wfSgCZ": [
+    {
+      "type": 0,
+      "value": "Připojit k síti "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "wm04oC": [
+    {
+      "type": 0,
+      "value": "Spusťte následující příkaz:"
+    }
+  ],
+  "wqUcy/": [
+    {
+      "type": 0,
+      "value": "Rizika předčasného přijetí"
+    }
+  ],
+  "wtTeex": [
+    {
+      "type": 0,
+      "value": "Našli jste pravopisné chyby?"
+    }
+  ],
+  "x+fF+M": [
+    {
+      "type": 0,
+      "value": "Simulace testnetu"
+    }
+  ],
+  "x0tVK4": [
+    {
+      "type": 0,
+      "value": "Validace Etherea není to stejné co těžba. Výsledky jsou podobné: svou činností rozšiřujete a zabezpečujete řetězec. Ale proce se zcela liší, protože používá jiný mechanismus konsensu."
+    }
+  ],
+  "xDyl3T": [
+    {
+      "type": 0,
+      "value": "Překontrolujte adresu smlouvy o vkladu na dalších webových stránkách, jako je například Reddit, Twitter nebo GitHub. Na "
+    },
+    {
+      "type": 1,
+      "value": "ethereumorg"
+    },
+    {
+      "type": 0,
+      "value": " také najdete seznam důvěryhodných zdrojů."
+    }
+  ],
+  "xH5GKj": [
+    {
+      "type": 0,
+      "value": "Jako uživatel předčasné verze beru na vědomí, že za softwarové a jiné chyby mi může hrozit postih."
+    }
+  ],
+  "xJPCw/": [
+    {
+      "type": 0,
+      "value": "Co se stane, když ztratím klíč pro výběr?"
+    }
+  ],
+  "xOSMb1": [
+    {
+      "type": 0,
+      "value": "Dokumentace Nethermind na Goerli"
+    }
+  ],
+  "xP6BKs": [
+    {
+      "type": 0,
+      "value": "kontrolní seznam podílníka"
+    }
+  ],
+  "xQrU13": [
+    {
+      "type": 0,
+      "value": "Než budete pokračovat, projděte si kontrolní seznam podílu. Podle něj podnikněte jednotlivé kroky při dokončování nastavení validátoru."
+    }
+  ],
+  "xSvJIi": [
+    {
+      "type": 0,
+      "value": "Odměny za bloky jsou počítány pomocí posuvné škály založené na celkové částce podílu ETH v síti."
+    }
+  ],
+  "xYRzZY": [
+    {
+      "type": 0,
+      "value": "Nimbus je výzkumný projekt a implementace klienta pro Ethereum 2.0 navržená tak, aby dobře fungovala na vestavěných systémech a osobních mobilních zařízeních."
+    }
+  ],
+  "xbet2w": [
+    {
+      "type": 0,
+      "value": "Nainstalovat python3.7+"
+    }
+  ],
+  "xogY3N": [
+    {
+      "type": 0,
+      "value": "Besu je napsán v Javě a vydáván pod licencí Apache 2.0."
+    }
+  ],
+  "y4dBsA": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat synchronizaci času"
+    }
+  ],
+  "y7dWNc": [
+    {
+      "type": 0,
+      "value": "Je důležité vědět, že hlas validátora je posuzován podle částky jeho podílu."
+    }
+  ],
+  "yI/DO8": [
+    {
+      "type": 0,
+      "value": "toto číslo se zvýší, když ostatní validátoři ve stejnou dobu také dostanou postih"
+    }
+  ],
+  "ySYWBD": [
+    {
+      "type": 0,
+      "value": "Uchovávám své klíče v bezpečí a svou mnemotechnickou pomůcku mám někde zapsanou."
+    }
+  ],
+  "yT2EZO": [
+    {
+      "type": 0,
+      "value": "Jinými slovy, "
+    },
+    {
+      "type": 1,
+      "value": "boldSummary"
+    },
+    {
+      "type": 0,
+      "value": ". Čím víc hlasů blok dostane, tím pravděpodobnější je, že bude přidán do řetězce."
+    }
+  ],
+  "ydh1KU": [
+    {
+      "type": 0,
+      "value": "Informace o jazyce"
+    }
+  ],
+  "yeI1Zq": [
+    {
+      "type": 0,
+      "value": "Tato prodleva může být delší, když spousta dalších uživatelů také zrovna odchází nebo je vykopnuta."
+    }
+  ],
+  "yis3aS": [
+    {
+      "type": 0,
+      "value": "To je předpokládaný scénář."
+    }
+  ],
+  "yjBvUO": [
+    {
+      "type": 0,
+      "value": "Nethermind je založený .NET Core a můžete jej bez omezení rozšiřovat a přizpůsobovat."
+    }
+  ],
+  "yoGtkz": [
+    {
+      "type": 0,
+      "value": "Ujistěte se, že má uzel více než 20 klientů."
+    }
+  ],
+  "z/ZhML": [
+    {
+      "type": 0,
+      "value": "Musíte nastavit "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " pro "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", jinak bude vklad neplatný."
+    }
+  ],
+  "z63I56": [
+    {
+      "type": 0,
+      "value": "validátor"
+    }
+  ],
+  "z6K3D6": [
+    {
+      "type": 0,
+      "value": "Mám nastavenou službu "
+    },
+    {
+      "type": 1,
+      "value": "prometheus"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "zAVb0/": [
+    {
+      "type": 0,
+      "value": "Víc o Lighthouse a Sigma Prime"
+    }
+  ],
+  "zGkAVo": [
+    {
+      "type": 0,
+      "value": "Na druhou stranu, pokud je váš zůstatek blíž k 31 ETH, pravděpodobně není nutné dobíjet ETH, abyste se dostali zpět na 32."
+    }
+  ],
+  "zbEBi9": [
+    {
+      "type": 0,
+      "value": "Ethereum mainnet synchronizujte přes "
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "zicXn7": [
+    {
+      "type": 0,
+      "value": "Zabezpečení uzlu"
+    }
+  ]
+}

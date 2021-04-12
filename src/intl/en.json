@@ -32,6 +32,9 @@
   "//KCTE": {
     "message": "You can start all the transactions at once, or start them individually."
   },
+  "/5Hyyf": {
+    "message": "Indonesian"
+  },
   "/QPc9s": {
     "message": "You can signal your intent to stop validating by signing a voluntary exit message with your validator."
   },
@@ -110,6 +113,9 @@
   },
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
+  },
+  "122+yR": {
+    "message": "withdrawal key"
   },
   "19o6KO": {
     "message": "When can I withdraw my funds, and what’s the difference between exiting and withdrawing?"
@@ -242,11 +248,20 @@
   "52qGy6": {
     "message": "CURRENT"
   },
+  "54J/qs": {
+    "message": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
+  },
   "58PXVy": {
     "message": "Why two keys instead of one?"
   },
+  "5CBhpq": {
+    "message": "Commitment"
+  },
   "5HJLBU": {
     "message": "Teku installation documentation"
+  },
+  "5UH1sh": {
+    "message": "Romanian"
   },
   "5t8oYl": {
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
@@ -625,6 +640,9 @@
   "GsBRWL": {
     "message": "Languages"
   },
+  "Gsixxx": {
+    "message": "Early adoption risks"
+  },
   "GuIwY6": {
     "message": "When should I top up my validator’s balance?"
   },
@@ -649,6 +667,9 @@
   "I3JhPS": {
     "message": "Network"
   },
+  "I5lWZA": {
+    "message": "Can I change the withdrawal credentials of my validator after the first deposit?"
+  },
   "IAKvZ0": {
     "message": "The Eth2 upgrades"
   },
@@ -670,6 +691,9 @@
   },
   "Il9tBQ": {
     "message": "Geth is written in Go, fully open source and licensed under the GNU LGPL v3."
+  },
+  "IugT5/": {
+    "message": "cannot transfer"
   },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
@@ -932,8 +956,14 @@
   "Pswssl": {
     "message": "Confirmation"
   },
+  "PurNgG": {
+    "message": "Turkish"
+  },
   "Px7wWb": {
     "message": "pip documentation"
+  },
+  "PyArfT": {
+    "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
   },
   "Q1ZwPT": {
     "message": "clipboard"
@@ -964,6 +994,9 @@
   },
   "R8eePn": {
     "message": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
+  },
+  "RCGrka": {
+    "message": "only way"
   },
   "RIFLCz": {
     "message": "Phishing is a very real risk for Eth2 validators and, unfortunately, many people will lose funds due to these attacks."
@@ -1067,6 +1100,9 @@
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
+  "U/NPbq": {
+    "message": "German"
+  },
   "U0yY/A": {
     "message": "View extensive client comparison"
   },
@@ -1144,6 +1180,9 @@
   },
   "W10U1b": {
     "message": "Teku is Apache 2 licensed and written in Java, a language notable for its maturity and ubiquity."
+  },
+  "W3t7Ob": {
+    "message": "Japanese"
   },
   "W8nHSd": {
     "message": "FAQ"
@@ -1223,9 +1262,6 @@
     "description": "{grafana} is 'Grafana' service, with link to its homepage (do not translate name)",
     "message": "I've set up my {grafana} service."
   },
-  "YWfd2t": {
-    "message": "A research project and a client implementation for Eth2 designed to perform well on embedded systems and personal mobile devices, including older smartphones with resource-restricted hardware. The Nimbus team are from Status, a company best known for their messaging app/wallet/Web3 browser."
-  },
   "YZtdY1": {
     "message": "As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
   },
@@ -1264,6 +1300,9 @@
   "ZPRDyW": {
     "message": "Again, it depends. Behaving maliciously – for example attesting to invalid or contradicting blocks, will lead to your stake being slashed."
   },
+  "ZPpZDC": {
+    "message": "Please ensure that you have control over the Eth1 address."
+  },
   "ZRbxwY": {
     "message": "Eth2 validator checklist"
   },
@@ -1294,8 +1333,8 @@
   "aS6dBe": {
     "message": "Configure Nimbus"
   },
-  "aTRROW": {
-    "message": "Nimbus (Apache 2) is written in Nim, a language with Python-like syntax that compiles to C."
+  "aXT3iO": {
+    "message": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
   },
   "aXWL9X": {
     "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the merge (which means your funds will remain inaccessible until then)."
@@ -1342,6 +1381,9 @@
   "cHUoV9": {
     "message": "The Geth documentation explains how to download and install the client."
   },
+  "cPsIkp": {
+    "message": "Become a validator and help secure the future of Ethereum."
+  },
   "cRzxes": {
     "message": "Current APR"
   },
@@ -1360,6 +1402,9 @@
   "clxIWO": {
     "message": "How much will I be penalized for acting maliciously?"
   },
+  "cpxfOR": {
+    "message": "What are withdrawal credentials?"
+  },
   "cs9mQw": {
     "message": "Learn more about the roles and responsibilities of Eth2 validators."
   },
@@ -1368,6 +1413,9 @@
   },
   "d5KEM8": {
     "message": "You must sign a transaction for every deposit you want to make."
+  },
+  "dH5+MX": {
+    "message": "Bad behaviour"
   },
   "dIgBOz": {
     "message": "Deposit"
@@ -1437,6 +1485,9 @@
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
   },
+  "fQ5yno": {
+    "message": "Arabic"
+  },
   "fR8+bQ": {
     "message": "During setup"
   },
@@ -1451,6 +1502,9 @@
   },
   "g/DxI7": {
     "message": "Moreover, you can set your Validator Client (VC) and Beacon Node (BN) on separate machines and IPs so that even if your beacon node is vulnerable, your keystore is stored on a different machine."
+  },
+  "g0zIUd": {
+    "message": "cannot withdraw"
   },
   "g37XKP": {
     "message": "More on virtualenv"
@@ -1478,6 +1532,9 @@
   },
   "gjmx29": {
     "message": "YES"
+  },
+  "gsuLMm": {
+    "message": "Greek"
   },
   "gtrcyK": {
     "description": "{code} values are terminal outputs to look for to confirm system time",
@@ -1535,6 +1592,9 @@
   },
   "iPRnRG": {
     "message": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
+  },
+  "iRQxxL": {
+    "message": "Nimbus is a client implementation for both Eth1 and Eth2 that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
   },
   "iWg7mL": {
     "description": "{flag} and {network} are terminal commands styled as code.",
@@ -1604,6 +1664,9 @@
   "kQTAe+": {
     "message": "Does the URL match what you’ve seen on other websites?"
   },
+  "kTt/ND": {
+    "message": "Russian"
+  },
   "kXhUdD": {
     "message": "Become a validator on desktop"
   },
@@ -1672,6 +1735,9 @@
   },
   "lfV1bj": {
     "message": "Importing from Launchpad documentation"
+  },
+  "ljWKM1": {
+    "message": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format."
   },
   "ll/zMW": {
     "message": "This is a non-reversible transaction."
@@ -1821,11 +1887,17 @@
   "qDvaNm": {
     "message": "I understand that keys are my responsibility and that my mnemonic (seed) will be the {onlyWay} to withdraw my funds."
   },
+  "qK4+NQ": {
+    "message": "The terminal"
+  },
   "qLf68w": {
     "message": "OpenEthereum documentation"
   },
   "qMePPG": {
     "message": "Note"
+  },
+  "qPG/YN": {
+    "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
   },
   "qQ+Xla": {
     "message": "Korean"
@@ -1880,6 +1952,9 @@
   },
   "rcdxTW": {
     "message": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
+  },
+  "rnDgcN": {
+    "message": "No, you cannot change your withdrawal credentials in top-ups."
   },
   "rs4eqr": {
     "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
@@ -1941,6 +2016,12 @@
   "u28qA1": {
     "message": "After depositing"
   },
+  "u564LK": {
+    "message": "Portuguese (Brazilian)"
+  },
+  "u81G9+": {
+    "message": "Uptime"
+  },
   "uCikFk": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~700-800 MB/hour, and is likely to increase."
   },
@@ -1973,11 +2054,11 @@
   "vBOf5K": {
     "message": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
   },
+  "vCHTnu": {
+    "message": "Withdrawal credentials"
+  },
   "vEJDo8": {
     "message": "Protect your funds using monitoring software, and learn how to handle different real world scenarios."
-  },
-  "vFrE9m": {
-    "message": "Become a validator and help secure Eth2."
   },
   "vIF140": {
     "message": "Become a validator and help secure the future of Ethereum"
@@ -2051,9 +2132,6 @@
   },
   "xH5GKj": {
     "message": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
-  },
-  "xJPCw/": {
-    "message": "What happens if I lose my withdrawal key?"
   },
   "xOSMb1": {
     "description": "Links to the documentation for the eth1 client Nethermind, specifically for testnet Goerli",

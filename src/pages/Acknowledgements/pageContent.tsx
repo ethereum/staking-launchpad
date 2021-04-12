@@ -171,7 +171,13 @@ export const pageContent = {
       <FormattedMessage
         defaultMessage="I understand that keys are my responsibility and that my mnemonic (seed)
           will be the {onlyWay} to withdraw my funds."
-        values={{ onlyWay: <BoldCaps>only way</BoldCaps> }}
+        values={{
+          onlyWay: (
+            <BoldCaps>
+              <FormattedMessage defaultMessage="only way" />
+            </BoldCaps>
+          ),
+        }}
       />
     ),
   },
@@ -210,8 +216,16 @@ export const pageContent = {
           {cannotWithdraw} until the merge. I understand that if I exit, I will not be able
           to rejoin until much later. This is a long term commitment."
         values={{
-          cannotTransfer: <BoldCaps>cannot transfer</BoldCaps>,
-          cannotWithdraw: <BoldCaps>cannot withdraw</BoldCaps>,
+          cannotTransfer: (
+            <BoldCaps>
+              <FormattedMessage defaultMessage="cannot transfer" />
+            </BoldCaps>
+          ),
+          cannotWithdraw: (
+            <BoldCaps>
+              <FormattedMessage defaultMessage="cannot withdraw" />
+            </BoldCaps>
+          ),
         }}
       />
     ),

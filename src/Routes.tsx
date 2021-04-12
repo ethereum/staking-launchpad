@@ -169,7 +169,8 @@ const _Routes = () => {
 
   const title = formatMessage({ defaultMessage: 'Eth2 Launchpad' });
   const description = formatMessage({
-    defaultMessage: 'Become a validator and help secure Eth2.',
+    defaultMessage:
+      'Become a validator and help secure the future of Ethereum.',
   });
   return (
     <>
@@ -178,8 +179,10 @@ const _Routes = () => {
           <html lang={locale} />
           <title>{title}</title>
           <meta property="og:title" content={title} />
+          <meta property="twitter:title" content={title} />
           <meta name="description" content={description} />
           <meta property="og:description" content={description} />
+          <meta property="twitter:description" content={description} />
         </Helmet>
         <Switch>
           {localizedRoutes.map((route: RouteType) => (

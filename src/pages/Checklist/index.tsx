@@ -342,7 +342,7 @@ export const Checklist = () => {
                   values={{
                     date: (
                       <FormattedDate
-                        value="February 2021"
+                        value={new Date(2021, 1)}
                         year="numeric"
                         month="long"
                       />
@@ -359,7 +359,7 @@ export const Checklist = () => {
                   values={{
                     date: (
                       <FormattedDate
-                        value="2020-12-01 12:00:23 GMT"
+                        value={new Date(Date.UTC(2020, 11, 1, 12, 0, 23))}
                         year="numeric"
                         month="long"
                         day="2-digit"
@@ -420,7 +420,7 @@ export const Checklist = () => {
                   values={{
                     date: (
                       <FormattedDate
-                        value="February 2021"
+                        value={new Date(2021, 1)}
                         year="numeric"
                         month="long"
                       />

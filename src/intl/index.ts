@@ -1,4 +1,6 @@
 import ar from './compiled/ar.json';
+import cs from './compiled/cs.json';
+import de from './compiled/de.json';
 import el from './compiled/el.json';
 import en from './compiled/en.json';
 import es from './compiled/es.json';
@@ -9,10 +11,13 @@ import ja from './compiled/ja.json';
 import ko from './compiled/ko.json';
 import ptbr from './compiled/pt-br.json';
 import ro from './compiled/ro.json';
+import tr from './compiled/tr.json';
 import zh from './compiled/zh.json';
 
 export const messages: { [key: string]: any } = {
   ar,
+  cs,
+  de,
   el,
   en,
   es,
@@ -23,11 +28,14 @@ export const messages: { [key: string]: any } = {
   ko,
   'pt-br': ptbr,
   ro,
+  tr,
   zh,
 };
 
 export enum AppLanguage {
   Arabic = 'ar',
+  Czech = 'cs',
+  German = 'de',
   Greek = 'el',
   English = 'en',
   Spanish = 'es',
@@ -38,6 +46,7 @@ export enum AppLanguage {
   Korean = 'ko',
   PortugueseBrazilian = 'pt-br',
   Romanian = 'ro',
+  Turkish = 'tr',
   ChineseSimplified = 'zh',
 }
 

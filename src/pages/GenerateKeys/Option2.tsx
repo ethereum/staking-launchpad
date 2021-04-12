@@ -144,6 +144,8 @@ export const Option2 = ({
   };
 
   const renderDepositKeyCommand = () => {
+    const translateFlags = false;
+
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
@@ -155,10 +157,14 @@ export const Option2 = ({
                   'this is used as a command line flag, short for "number of validators"',
               })} ${validatorCount}`
             : ''}{' '}
-          {`--${formatMessage({
-            defaultMessage: 'chain',
-            description: 'this is used as a command line flag',
-          })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
+          {`--${
+            translateFlags
+              ? formatMessage({
+                  defaultMessage: 'chain',
+                  description: 'this is used as a command line flag',
+                })
+              : `chain`
+          } ${ETH2_NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -174,10 +180,14 @@ export const Option2 = ({
                   'this is used as a command line flag, short for "number of validators"',
               })} ${validatorCount}`
             : ''}{' '}
-          {`--${formatMessage({
-            defaultMessage: 'chain',
-            description: 'this is used as a command line flag',
-          })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
+          {`--${
+            translateFlags
+              ? formatMessage({
+                  defaultMessage: 'chain',
+                  description: 'this is used as a command line flag',
+                })
+              : `chain`
+          } ${ETH2_NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }

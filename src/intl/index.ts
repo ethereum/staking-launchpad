@@ -11,6 +11,7 @@ import ja from './compiled/ja.json';
 import ko from './compiled/ko.json';
 import ptbr from './compiled/pt-br.json';
 import ro from './compiled/ro.json';
+import ru from './compiled/ru.json';
 import tr from './compiled/tr.json';
 import zh from './compiled/zh.json';
 
@@ -28,6 +29,7 @@ export const messages: { [key: string]: any } = {
   ko,
   'pt-br': ptbr,
   ro,
+  ru,
   tr,
   zh,
 };
@@ -46,6 +48,7 @@ export enum AppLanguage {
   Korean = 'ko',
   PortugueseBrazilian = 'pt-br',
   Romanian = 'ro',
+  Russian = 'ru',
   Turkish = 'tr',
   ChineseSimplified = 'zh',
 }

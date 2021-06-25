@@ -155,7 +155,7 @@ export const pageContent = {
           />
         </Text>
         <Text size="medium" className="mt20">
-          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw you funds, you can derive your withdrawal keys from your mnemonic." />
+          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic." />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage

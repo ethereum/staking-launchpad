@@ -137,6 +137,11 @@ export const Languages = () => {
       title: formatMessage({ defaultMessage: 'Turkish' }),
       language: 'Türkçe',
     },
+    {
+      code: 'pl',
+      title: formatMessage({ defaultMessage: 'Polish' }),
+      language: 'Polskie',
+    },
   ].filter(lang => supportedLanguages.includes(lang.code));
 
   return (

@@ -144,11 +144,7 @@ export const Languages = () => {
     },
   ]
     .filter(lang => supportedLanguages.includes(lang.code))
-    .sort((a, b) => {
-      if (a.title < b.title) return -1;
-      if (a.title > b.title) return 1;
-      return 0;
-    });
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <PageTemplate

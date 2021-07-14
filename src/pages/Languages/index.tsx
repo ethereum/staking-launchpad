@@ -142,7 +142,9 @@ export const Languages = () => {
       title: formatMessage({ defaultMessage: 'Polish' }),
       language: 'Polskie',
     },
-  ].filter(lang => supportedLanguages.includes(lang.code));
+  ]
+    .filter(lang => supportedLanguages.includes(lang.code))
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <PageTemplate

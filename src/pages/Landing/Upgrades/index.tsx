@@ -131,7 +131,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/the-docking/"
+                to="https://ethereum.org/eth2/docking/"
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>

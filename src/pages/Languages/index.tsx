@@ -52,96 +52,96 @@ const Lang = styled.div`
 export const Languages = () => {
   const { formatMessage } = useIntl();
   const langs = [
-    {
-      code: 'zh',
-      title: formatMessage({ defaultMessage: 'Chinese (simplified)' }),
-      language: '简体中文',
-    },
-    {
-      code: 'zh-tw',
-      title: formatMessage({ defaultMessage: 'Chinese (traditional)' }),
-      language: '繁體中文',
-    },
-    {
-      code: 'cs',
-      title: formatMessage({ defaultMessage: 'Czech' }),
-      language: 'čeština',
-    },
+    // {
+    //   code: 'zh',
+    //   title: formatMessage({ defaultMessage: 'Chinese (simplified)' }),
+    //   language: '简体中文',
+    // },
+    // {
+    //   code: 'zh-tw',
+    //   title: formatMessage({ defaultMessage: 'Chinese (traditional)' }),
+    //   language: '繁體中文',
+    // },
+    // {
+    //   code: 'cs',
+    //   title: formatMessage({ defaultMessage: 'Czech' }),
+    //   language: 'čeština',
+    // },
     {
       code: 'en',
       title: formatMessage({ defaultMessage: 'English' }),
       language: 'English',
     },
-    {
-      code: 'it',
-      title: formatMessage({ defaultMessage: 'Italian' }),
-      language: 'Italiano',
-    },
-    {
-      code: 'ko',
-      title: formatMessage({ defaultMessage: 'Korean' }),
-      language: '한국어',
-    },
-    {
-      code: 'es',
-      title: formatMessage({ defaultMessage: 'Spanish' }),
-      language: 'Español',
-    },
-    {
-      code: 'fr',
-      title: formatMessage({ defaultMessage: 'French' }),
-      language: 'Français',
-    },
-    {
-      code: 'el',
-      title: formatMessage({ defaultMessage: 'Greek' }),
-      language: 'Ελληνικά',
-    },
-    {
-      code: 'id',
-      title: formatMessage({ defaultMessage: 'Indonesian' }),
-      language: 'Bahasa Indonesia',
-    },
-    {
-      code: 'pt-br',
-      title: formatMessage({ defaultMessage: 'Portuguese (Brazilian)' }),
-      language: 'Português',
-    },
-    {
-      code: 'ro',
-      title: formatMessage({ defaultMessage: 'Romanian' }),
-      language: 'Română',
-    },
-    {
-      code: 'ar',
-      title: formatMessage({ defaultMessage: 'Arabic' }),
-      language: 'العربية',
-    },
-    {
-      code: 'de',
-      title: formatMessage({ defaultMessage: 'German' }),
-      language: 'Deutsch',
-    },
-    {
-      code: 'ja',
-      title: formatMessage({ defaultMessage: 'Japanese' }),
-      language: '日本語',
-    },
-    {
-      code: 'ru',
-      title: formatMessage({ defaultMessage: 'Russian' }),
-      language: 'Pусский',
-    },
-    {
-      code: 'tr',
-      title: formatMessage({ defaultMessage: 'Turkish' }),
-      language: 'Türkçe',
-    },
-    {
-      code: 'pl',
-      title: formatMessage({ defaultMessage: 'Polish' }),
-      language: 'Polskie',
-    },
+    // {
+    //   code: 'it',
+    //   title: formatMessage({ defaultMessage: 'Italian' }),
+    //   language: 'Italiano',
+    // },
+    // {
+    //   code: 'ko',
+    //   title: formatMessage({ defaultMessage: 'Korean' }),
+    //   language: '한국어',
+    // },
+    // {
+    //   code: 'es',
+    //   title: formatMessage({ defaultMessage: 'Spanish' }),
+    //   language: 'Español',
+    // },
+    // {
+    //   code: 'fr',
+    //   title: formatMessage({ defaultMessage: 'French' }),
+    //   language: 'Français',
+    // },
+    // {
+    //   code: 'el',
+    //   title: formatMessage({ defaultMessage: 'Greek' }),
+    //   language: 'Ελληνικά',
+    // },
+    // {
+    //   code: 'id',
+    //   title: formatMessage({ defaultMessage: 'Indonesian' }),
+    //   language: 'Bahasa Indonesia',
+    // },
+    // {
+    //   code: 'pt-br',
+    //   title: formatMessage({ defaultMessage: 'Portuguese (Brazilian)' }),
+    //   language: 'Português',
+    // },
+    // {
+    //   code: 'ro',
+    //   title: formatMessage({ defaultMessage: 'Romanian' }),
+    //   language: 'Română',
+    // },
+    // // {
+    // //   code: 'ar',
+    // //   title: formatMessage({ defaultMessage: 'Arabic' }),
+    // //   language: 'العربية',
+    // // },
+    // {
+    //   code: 'de',
+    //   title: formatMessage({ defaultMessage: 'German' }),
+    //   language: 'Deutsch',
+    // },
+    // {
+    //   code: 'ja',
+    //   title: formatMessage({ defaultMessage: 'Japanese' }),
+    //   language: '日本語',
+    // },
+    // {
+    //   code: 'ru',
+    //   title: formatMessage({ defaultMessage: 'Russian' }),
+    //   language: 'Pусский',
+    // },
+    // {
+    //   code: 'tr',
+    //   title: formatMessage({ defaultMessage: 'Turkish' }),
+    //   language: 'Türkçe',
+    // },
+    // {
+    //   code: 'pl',
+    //   title: formatMessage({ defaultMessage: 'Polish' }),
+    //   language: 'Polskie',
+    // },
   ]
     .filter(lang => supportedLanguages.includes(lang.code))
     .sort((a, b) => a.title.localeCompare(b.title));

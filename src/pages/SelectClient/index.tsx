@@ -2,27 +2,16 @@ import React, { useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import _shuffle from 'lodash/shuffle';
+import { useIntl } from 'react-intl';
 import { StoreState } from '../../store/reducers';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import SelectClientSection from './SelectClientSection';
 import SelectClientButtons from './SelectClientButtons';
 import { PrysmDetails } from '../Clients/Eth2/Prysm';
-import { LighthouseDetails } from '../Clients/Eth2/Lighthouse';
-import { TekuDetails } from '../Clients/Eth2/Teku';
-import { NimbusDetails } from '../Clients/Eth2/Nimbus';
 import { GethDetails } from '../Clients/Eth1/Geth';
-import { OpenEthereumDetails } from '../Clients/Eth1/OpenEthereum';
-import { BesuDetails } from '../Clients/Eth1/Besu';
-import { NethermindDetails } from '../Clients/Eth1/Nethermind';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
-import LighthouseCircle from '../../static/lighthouse-circle.png';
-import NimbusCircle from '../../static/nimbus-circle.png';
-import TekuCircle from '../../static/pegasys-teku-circle.png';
-import OpenEthereumCircle from '../../static/parity-circle.png';
 import GethCircle from '../../static/gethereum-mascot-circle.png';
-import BesuCircle from '../../static/hyperledger-besu-circle.png';
-import NethermindCircle from '../../static/nethermind-circle.png';
 
 import {
   DispatchWorkflowUpdateType,
@@ -35,7 +24,6 @@ import {
   ClientId,
 } from '../../store/actions/clientActions';
 import { clientState } from '../../store/reducers/clientReducer';
-import { useIntl } from 'react-intl';
 
 // Prop definitions
 interface OwnProps {}
@@ -51,14 +39,8 @@ interface DispatchProps {
 type Props = StateProps & DispatchProps & OwnProps;
 
 const clientDetails = {
-  [ClientId.TEKU]: <TekuDetails shortened />,
-  [ClientId.LIGHTHOUSE]: <LighthouseDetails shortened />,
   [ClientId.PRYSM]: <PrysmDetails shortened />,
-  [ClientId.NIMBUS]: <NimbusDetails shortened />,
   [ClientId.GETH]: <GethDetails />,
-  [ClientId.OPEN_ETHEREUM]: <OpenEthereumDetails />,
-  [ClientId.BESU]: <BesuDetails />,
-  [ClientId.NETHERMIND]: <NethermindDetails />,
 };
 
 export type Client = {
@@ -74,54 +56,18 @@ const ethClients: {
 } = {
   1: _shuffle([
     {
-      clientId: ClientId.OPEN_ETHEREUM,
-      name: 'OpenEthereum',
-      imgUrl: OpenEthereumCircle,
-      language: 'Rust',
-    },
-    {
       clientId: ClientId.GETH,
-      name: 'Geth',
+      name: 'Pandora',
       imgUrl: GethCircle,
       language: 'Go',
-    },
-    {
-      clientId: ClientId.BESU,
-      name: 'Besu',
-      imgUrl: BesuCircle,
-      language: 'Java',
-    },
-    {
-      clientId: ClientId.NETHERMIND,
-      name: 'Nethermind',
-      imgUrl: NethermindCircle,
-      language: 'C#, .NET',
     },
   ]),
   2: _shuffle([
     {
-      clientId: ClientId.TEKU,
-      name: 'Teku',
-      imgUrl: TekuCircle,
-      language: 'Java',
-    },
-    {
-      clientId: ClientId.LIGHTHOUSE,
-      name: 'Lighthouse',
-      imgUrl: LighthouseCircle,
-      language: 'Rust',
-    },
-    {
       clientId: ClientId.PRYSM,
-      name: 'Prysm',
+      name: 'Vanguard',
       imgUrl: PrysmaticCircle,
       language: 'Go',
-    },
-    {
-      clientId: ClientId.NIMBUS,
-      name: 'Nimbus',
-      imgUrl: NimbusCircle,
-      language: 'Nim',
     },
   ]),
 };

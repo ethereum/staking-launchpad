@@ -174,7 +174,7 @@ const _TopUpPage: React.FC<Props> = () => {
                     <Link
                       inline
                       primary
-                      to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+                      to="https://github.com/lukso-network/eth2.0-deposit-cli/issues/new"
                     >
                       GitHub
                     </Link>

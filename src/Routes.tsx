@@ -170,7 +170,7 @@ const _Routes = () => {
   const title = formatMessage({ defaultMessage: 'Eth2 Launchpad' });
   const description = formatMessage({
     defaultMessage:
-      'Become a validator and help secure the future of Ethereum.',
+      'Become a validator and help secure the future of LUKSO.',
   });
   return (
     <>

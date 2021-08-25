@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FormattedMessage } from 'react-intl';
-import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
+// import EthDiamondPlain from '../../static/eth-diamond-plain.svg';
 import EthRound from '../../static/eth-round-landing.svg';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
@@ -73,8 +73,8 @@ export const Introduction = (): JSX.Element => {
             <Text className="mt20">
               <FormattedMessage
                 defaultMessage="This launchpad will help you become a validator, so you can play
-                  an active part in Ethereum's future. Validators are key to the
-                  more secure, scalable, and sustainable Ethereum we're building
+                  an active part in LUKSO's future. Validators are key to the
+                  more secure, scalable, and sustainable LUKSO we're building
                   together."
               />
             </Text>
@@ -95,8 +95,8 @@ export const Introduction = (): JSX.Element => {
               <FormattedMessage
                 defaultMessage="Today, you'll secure the Beacon Chain, the first Eth2 upgrade.
                   It's a separate chain that uses a proof-of-stake consensus
-                  mechanism. Eventually you'll help secure all of Ethereum, once
-                  mainnet (the Ethereum we use today) merges with the Beacon Chain."
+                  mechanism. Eventually you'll help secure all of LUKSO, once
+                  mainnet (the LUKSO we use today) merges with the Beacon Chain."
               />
             </Text>
             <Link
@@ -107,7 +107,7 @@ export const Introduction = (): JSX.Element => {
             </Link>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="Validating in Ethereum is not the same as mining. The outcomes are
+                defaultMessage="Validating in LUKSO is not the same as mining. The outcomes are
                   similar: the work you do will extend and secure the chain. But the
                   process is completely different because they use different
                   consensus mechanisms."

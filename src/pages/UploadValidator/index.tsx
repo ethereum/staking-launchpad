@@ -156,7 +156,7 @@ const _UploadValidatorPage = ({
         <Link
           primary
           inline
-          to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+          to="https://github.com/lukso-network/eth2.0-deposit-cli/issues/new"
         >
           Open issue
         </Link>
@@ -228,9 +228,13 @@ const _UploadValidatorPage = ({
               // there are a couple special cases that can occur
               const { fork_version: forkVersion } = fileData[0] || {};
               const hasCorrectStructure = checkJsonStructure(fileData[0] || {});
+              const bytesForkVersion = Buffer.from(
+                forkVersion.replace(/0x/g, ''),
+                'hex'
+              );
               if (
                 hasCorrectStructure &&
-                forkVersion !== GENESIS_FORK_VERSION.toString()
+                bytesForkVersion.toString() !== GENESIS_FORK_VERSION.toString()
               ) {
                 // file doesn't match the correct network
                 handleWrongNetwork();

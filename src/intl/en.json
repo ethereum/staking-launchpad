@@ -1,9 +1,9 @@
 {
   "+3PPtT": {
-    "message": "Today, you'll secure the Beacon Chain, the first Eth2 upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
+    "message": "Today, you'll secure the Beacon Chain, the first Eth2 upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of LUKSO, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
   },
   "+L0IkF": {
-    "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
+    "message": "Step 2: Generate deposit keys using the LUKSO Foundation deposit tool"
   },
   "+UUcBt": {
     "message": "Choose a language"
@@ -20,9 +20,9 @@
   "+mDtA4": {
     "message": "6. Wait to become active"
   },
-  "+ozGrs": {
-    "message": "Polish"
-  },
+  // "+ozGrs": {
+  //   "message": "Polish"
+  // },
   "+s8Gac": {
     "message": "Connect {wallet} to {network}"
   },
@@ -32,9 +32,9 @@
   "//KCTE": {
     "message": "You can start all the transactions at once, or start them individually."
   },
-  "/5Hyyf": {
-    "message": "Indonesian"
-  },
+  // "/5Hyyf": {
+  //   "message": "Indonesian"
+  // },
   "/QPc9s": {
     "message": "You can signal your intent to stop validating by signing a voluntary exit message with your validator."
   },
@@ -60,7 +60,7 @@
     "message": "Understand the risks"
   },
   "/vPNsl": {
-    "message": "The merge, also known as the docking, will see the Ethereum mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
+    "message": "The merge, also known as the docking, will see the LUKSO mainnet we use today merge with the Beacon Chain. This is when LUKSO will fully transition to proof-of-stake."
   },
   "/vkCbT": {
     "message": "Validators get rewarded for proposing and attesting to blocks. The rewards are tied to the overall amount of {TICKER_NAME} staked in the network."
@@ -214,9 +214,6 @@
   "3QmqFf": {
     "message": "Top-up transaction"
   },
-  "3URRZK": {
-    "message": "Geth on Goerli documentation"
-  },
   "3XK21U": {
     "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
   },
@@ -263,9 +260,9 @@
   "5HJLBU": {
     "message": "Teku installation documentation"
   },
-  "5UH1sh": {
-    "message": "Romanian"
-  },
+  // "5UH1sh": {
+  //   "message": "Romanian"
+  // },
   "5t8oYl": {
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
@@ -313,6 +310,9 @@
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
     "message": "You can use your validator client's graffiti flag to add a personal touch to your proposed blocks (some text of your choice). You will be able to see it using {beaconchain} or {beaconscan} blockchain explorers."
   },
+  "7lhBkq": {
+    "message": "Use LYXt to sync the L15 testnet."
+  },
   "7s6XNV": {
     "message": "Staking and rewards"
   },
@@ -344,9 +344,9 @@
   "8Rj/6A": {
     "message": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
   },
-  "8WtyrD": {
-    "message": "Spanish"
-  },
+  // "8WtyrD": {
+  //   "message": "Spanish"
+  // },
   "8XQmxX": {
     "description": "{goerli} shows '--chain goerli' terminal command",
     "message": "Use {goerli} to sync the Goerli testnet."
@@ -355,7 +355,7 @@
     "message": "slashings"
   },
   "8wd0q5": {
-    "message": "An Ethereum client designed to be enterprise-friendly for both public and private, permissioned network use cases."
+    "message": "A LUKSO client designed to be enterprise-friendly for both public and private, permissioned network use cases."
   },
   "9+Ddtu": {
     "message": "Next"
@@ -403,7 +403,7 @@
     "message": "If you need help, check out the Python documentation."
   },
   "AEp7+F": {
-    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral - in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
+    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral - in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current LUKSO chain."
   },
   "AYKxmf": {
     "message": "Connect your hardware wallet to Metamask"
@@ -416,7 +416,7 @@
   },
   "Ad61gz": {
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
-    "message": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: {url}"
+    "message": "Please make sure that you are downloading from the official LUKSO Foundation GitHub account by verifying the url: {url}"
   },
   "Affixg": {
     "message": "The deposit"
@@ -437,7 +437,7 @@
     "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is one-way, and non-reversible."
   },
   "BB65vH": {
-    "message": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Eth2 validators."
+    "message": "You can think of the deposit contract as a transfer of funds between LUKSO accounts and Eth2 validators."
   },
   "BCsPjJ": {
     "message": "Start deposit process"
@@ -475,10 +475,10 @@
   },
   "C9fTX1": {
     "message": "Answers to common questions on becoming a validator."
-  },
-  "CACPC+": {
-    "message": "Czech"
-  },
+  // },
+  // "CACPC+": {
+  //   "message": "Czech"
+  // },
   "CBbRux": {
     "message": "OpenEthereum is written in Rust and licensed under the GPLv3."
   },
@@ -708,9 +708,9 @@
   "J455S4": {
     "message": "If you’re a git user, you can run {gitClone} to download the {master} branch."
   },
-  "J5Lzz1": {
-    "message": "Chinese (traditional)"
-  },
+  // "J5Lzz1": {
+  //   "message": "Chinese (traditional)"
+  // },
   "J7T0SR": {
     "message": "Nimbus installation documentation"
   },
@@ -843,7 +843,7 @@
     "message": "Using the terminal"
   },
   "MbsAo3": {
-    "message": "This launchpad will help you become a validator, so you can play an active part in Ethereum's future. Validators are key to the more secure, scalable, and sustainable Ethereum we're building together."
+    "message": "This launchpad will help you become a validator, so you can play an active part in LUKSO's future. Validators are key to the more secure, scalable, and sustainable LUKSO we're building together."
   },
   "Mc8nNE": {
     "message": "Transaction failed"
@@ -862,9 +862,9 @@
     "description": "{http} shows '--http' terminal command",
     "message": "Use {http} to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
   },
-  "NEmnAV": {
-    "message": "Italian"
-  },
+  // "NEmnAV": {
+  //   "message": "Italian"
+  // },
   "NLgogh": {
     "message": "Launchpad network:"
   },
@@ -929,7 +929,7 @@
     "message": "As a validator, you'll need to have funds at stake so you can be penalized for behaving dishonestly."
   },
   "P0kiYS": {
-    "message": "The Beacon Chain upgrade brings proof-of-stake consensus to Ethereum."
+    "message": "The Beacon Chain upgrade brings proof-of-stake consensus to LUKSO."
   },
   "P1QerV": {
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
@@ -953,15 +953,18 @@
   "PglO1W": {
     "message": "Formal verification report"
   },
+  "PlU6f3": {
+    "message": "Testing on L15"
+  },
   "PoBIK+": {
     "message": "You'll need SSD storage to consistently handle necessary read/write speeds."
   },
   "Pswssl": {
     "message": "Confirmation"
   },
-  "PurNgG": {
-    "message": "Turkish"
-  },
+  // "PurNgG": {
+  //   "message": "Turkish"
+  // },
   "Px7wWb": {
     "message": "pip documentation"
   },
@@ -1103,9 +1106,9 @@
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
-  "U/NPbq": {
-    "message": "German"
-  },
+  // "U/NPbq": {
+  //   "message": "German"
+  // },
   "U0yY/A": {
     "message": "View extensive client comparison"
   },
@@ -1124,7 +1127,7 @@
     "message": "Check {etherscan} for more details"
   },
   "UWv7yD": {
-    "message": "Check the deposit contract on your favorite Ethereum block explorer:"
+    "message": "Check the deposit contract on your favorite LUKSO block explorer:"
   },
   "Utck3E": {
     "message": "Language support"
@@ -1137,7 +1140,7 @@
     "message": "Being offline at the same time as more than 1/3 of the total number of validators leads to harsher penalties, since blocks do not finalize anymore. {strongText}"
   },
   "UygdAl": {
-    "message": "One of the three original implementations of the Ethereum protocol."
+    "message": "One of the three original implementations of the LUKSO protocol."
   },
   "UykRIk": {
     "message": "Becoming a validator is a big responsibility with important preparation steps. Only start the deposit process when you're ready."
@@ -1184,9 +1187,9 @@
   "W10U1b": {
     "message": "Teku is Apache 2 licensed and written in Java, a language notable for its maturity and ubiquity."
   },
-  "W3t7Ob": {
-    "message": "Japanese"
-  },
+  // "W3t7Ob": {
+  //   "message": "Japanese"
+  // },
   "W8nHSd": {
     "message": "FAQ"
   },
@@ -1385,7 +1388,7 @@
     "message": "The Geth documentation explains how to download and install the client."
   },
   "cPsIkp": {
-    "message": "Become a validator and help secure the future of Ethereum."
+    "message": "Become a validator and help secure the future of LUKSO."
   },
   "cRzxes": {
     "message": "Current APR"
@@ -1488,9 +1491,9 @@
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
   },
-  "fQ5yno": {
-    "message": "Arabic"
-  },
+// "fQ5yno": {
+//     "message": "Arabic"
+//   },
   "fR8+bQ": {
     "message": "During setup"
   },
@@ -1518,9 +1521,6 @@
   "gIauNz": {
     "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password. You can use your mnemonic to generate your withdrawal key when you wish to withdraw."
   },
-  "gN9D/h": {
-    "message": "Use {goerli} to sync the Goerli testnet."
-  },
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -1535,10 +1535,10 @@
   },
   "gjmx29": {
     "message": "YES"
-  },
-  "gsuLMm": {
-    "message": "Greek"
-  },
+  // },
+  // "gsuLMm": {
+  //   "message": "Greek"
+  // },
   "gtrcyK": {
     "description": "{code} values are terminal outputs to look for to confirm system time",
     "message": "Check if {code1}, {code2}, and {code3} are all correct."
@@ -1667,9 +1667,9 @@
   "kQTAe+": {
     "message": "Does the URL match what you’ve seen on other websites?"
   },
-  "kTt/ND": {
-    "message": "Russian"
-  },
+  // "kTt/ND": {
+  //   "message": "Russian"
+  // },
   "kXhUdD": {
     "message": "Become a validator on desktop"
   },
@@ -1713,7 +1713,7 @@
     "message": "Outstanding deposit"
   },
   "lJNmgK": {
-    "message": "How does Eth2 upgrade Ethereum?"
+    "message": "How does Eth2 upgrade LUKSO?"
   },
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",
@@ -1773,7 +1773,7 @@
     "message": "Service"
   },
   "nHk8Et": {
-    "message": "PoS is a more secure, decentralized, and environmentally-friendly consensus mechanism than the proof-of-work (PoW) that secures Ethereum today. It rewards validators for building the chain, but slashes their deposits if they try to attack it, incentivising healthy behaviour. This upgrade is already live in the form of the Beacon Chain."
+    "message": "PoS is a more secure, decentralized, and environmentally-friendly consensus mechanism than the proof-of-work (PoW) that secures LUKSO today. It rewards validators for building the chain, but slashes their deposits if they try to attack it, incentivising healthy behaviour. This upgrade is already live in the form of the Beacon Chain."
   },
   "nIb6XF": {
     "description": "{slashings} shows 'slashings' in bold for emphasis",
@@ -1788,9 +1788,9 @@
   "ndhFef": {
     "message": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
   },
-  "njAU72": {
-    "message": "French"
-  },
+  // "njAU72": {
+  //   "message": "French"
+  // },
   "njnn9P": {
     "message": "I've started running my validator client."
   },
@@ -1820,7 +1820,7 @@
     "message": "Responsibilities"
   },
   "okxBZ6": {
-    "message": "Formerly Parity, OpenEthereum is designed to be “the fastest, lightest, and most secure Ethereum client”."
+    "message": "Formerly Parity, OpenEthereum is designed to be “the fastest, lightest, and most secure LUKSO client”."
   },
   "omJNJw": {
     "message": "Warning!"
@@ -1857,7 +1857,7 @@
     "message": "The Besu documentation explains how to download and install the client."
   },
   "penFMT": {
-    "message": "Eth2 is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
+    "message": "Eth2 is a set of upgrades that will make LUKSO more scalable, secure, and sustainable. These upgrades will improve LUKSO while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
   },
   "pfJX2D": {
     "message": "More on phishing"
@@ -1902,9 +1902,9 @@
   "qPG/YN": {
     "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
   },
-  "qQ+Xla": {
-    "message": "Korean"
-  },
+  // "qQ+Xla": {
+  //   "message": "Korean"
+  // },
   "qZ59xY": {
     "message": "All validators"
   },
@@ -2019,14 +2019,17 @@
   "u28qA1": {
     "message": "After depositing"
   },
-  "u564LK": {
-    "message": "Portuguese (Brazilian)"
-  },
+  // "u564LK": {
+  //   "message": "Portuguese (Brazilian)"
+  // },
   "u81G9+": {
     "message": "Uptime"
   },
   "uCikFk": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~700-800 MB/hour, and is likely to increase."
+  },
+  "uHaXQZ": {
+    "message": "Geth on L15 documentation"
   },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
@@ -2055,7 +2058,7 @@
     "message": "Are there recent {ethAmount} deposits?"
   },
   "vBOf5K": {
-    "message": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
+    "message": "Your balance is updated periodically by the LUKSO network rules as you carry (or fail to carry) out your responsibilities."
   },
   "vCHTnu": {
     "message": "Withdrawal credentials"
@@ -2064,7 +2067,7 @@
     "message": "Protect your funds using monitoring software, and learn how to handle different real world scenarios."
   },
   "vIF140": {
-    "message": "Become a validator and help secure the future of Ethereum"
+    "message": "Become a validator and help secure the future of LUKSO"
   },
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
@@ -2075,9 +2078,9 @@
   "vYODEJ": {
     "message": "Get {TICKER_NAME}"
   },
-  "vYOWYI": {
-    "message": "Chinese (simplified)"
-  },
+  // "vYOWYI": {
+  //   "message": "Chinese (simplified)"
+  // },
   "va96SS": {
     "message": "I've forwarded the necessary ports to the correct machine(s) from my router (only open the ports that apply to your installation)."
   },
@@ -2092,7 +2095,7 @@
     "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
   },
   "w/ghcK": {
-    "message": "Dig deeper into how Eth2 upgrades Ethereum."
+    "message": "Dig deeper into how Eth2 upgrades LUKSO."
   },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
@@ -2111,7 +2114,7 @@
     "message": "More on proof of stake"
   },
   "wfSgCZ": {
-    "description": "{network} is either 'Ethereum mainnet' or 'Göerli testnet'",
+    "description": "{network} is either 'LUKSO mainnet' or 'Göerli testnet'",
     "message": "Connect to {network}"
   },
   "wm04oC": {
@@ -2127,7 +2130,7 @@
     "message": "Testnet simulations"
   },
   "x0tVK4": {
-    "message": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
+    "message": "Validating in LUKSO is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
   },
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",
@@ -2207,7 +2210,7 @@
   },
   "zbEBi9": {
     "description": "{mainnet} shows '--config mainnet' terminal command",
-    "message": "Use {mainnet} to sync the Ethereum mainnet."
+    "message": "Use {mainnet} to sync the LUKSO mainnet."
   },
   "zicXn7": {
     "message": "Node security"

@@ -250,7 +250,7 @@ export const Option2 = ({
           inline
           primary
           isTextLink={false}
-          to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
+          to="https://github.com/lukso-network/eth2.0-deposit-cli/archive/master.zip"
         >
           <Button
             className="my20"
@@ -268,7 +268,7 @@ export const Option2 = ({
               gitClone: (
                 <Code>
                   git clone -b master --single-branch
-                  https://github.com/ethereum/eth2.0-deposit-cli.git
+                  https://github.com/lukso-network/eth2.0-deposit-cli.git
                 </Code>
               ),
               master: <Code>master</Code>,
@@ -350,9 +350,9 @@ export const Option2 = ({
         <Link
           primary
           inline
-          to="https://github.com/ethereum/eth2.0-deposit-cli"
+          to="https://github.com/lukso-network/eth2.0-deposit-cli"
         >
-          https://github.com/ethereum/eth2.0-deposit-cli
+          https://github.com/lukso-network/eth2.0-deposit-cli
         </Link>
       </Alert>
     </div>

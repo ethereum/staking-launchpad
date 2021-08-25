@@ -293,7 +293,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Your balance is updated periodically by the Ethereum network rules
+                defaultMessage="Your balance is updated periodically by the LUKSO network rules
                   as you carry (or fail to carry) out your responsibilities."
               />
             </Text>

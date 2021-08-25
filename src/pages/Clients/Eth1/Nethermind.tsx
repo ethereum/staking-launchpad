@@ -44,7 +44,7 @@ export const NethermindDetails = () => (
         <>
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="Use {mainnet} to sync the Ethereum mainnet."
+              defaultMessage="Use {mainnet} to sync the LUKSO mainnet."
               values={{
                 mainnet: <Code className="mt20">--config mainnet</Code>,
               }}

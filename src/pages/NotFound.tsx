@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
-import EthDiamondPlain from '../static/eth-diamond-plain.svg';
+// import EthDiamondPlain from '../static/eth-diamond-plain.svg';
 import { Text } from '../components/Text';
 import { Link } from '../components/Link';
 

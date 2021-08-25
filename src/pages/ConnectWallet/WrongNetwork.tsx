@@ -21,7 +21,7 @@ export const WrongNetwork = () => {
       <AcknowledgementSection title={acknowledgementTitle}>
         <Text>
           <FormattedMessage
-            defaultMessage="Your wallet is on the wrong Ethereum network. To continue, connect to the 
+            defaultMessage="Your wallet is on the wrong LUKSO network. To continue, connect to the 
             {networkName} network."
             values={{ networkName: <span>{networkName}</span> }}
           />

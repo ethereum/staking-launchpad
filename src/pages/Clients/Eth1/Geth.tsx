@@ -31,7 +31,7 @@ export const GethDetails = () => (
       </Text>
       <Link
         primary
-        to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
+        to="https://docs.lukso.tech/networks/l15-testnet"
         className="mt10"
       >
         <FormattedMessage defaultMessage="Geth installation documentation" />
@@ -47,11 +47,11 @@ export const GethDetails = () => (
       {!IS_MAINNET && (
         <>
           <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Goerli" />
+            <FormattedMessage defaultMessage="Testing on L15" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              defaultMessage="Use LYXt to sync the L15 testnet."
               values={{
                 goerli: <Code className="mt20">--goerli</Code>,
               }}
@@ -61,7 +61,7 @@ export const GethDetails = () => (
             primary
             to="https://geth.ethereum.org/docs/interface/command-line-options"
           >
-            <FormattedMessage defaultMessage="Geth on Goerli documentation" />
+            <FormattedMessage defaultMessage="Geth on L15 documentation" />
           </Link>
         </>
       )}

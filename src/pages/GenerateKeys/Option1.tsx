@@ -45,7 +45,7 @@ export const Option1 = ({
       </Text>
       <Link
         isTextLink={false}
-        to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
+        to="https://github.com/lukso-network/network-deposit-cli/releases/tag/v1.2.0-l15"
         className="my40"
       >
         <Button
@@ -65,12 +65,12 @@ export const Option1 = ({
             style={{ wordBreak: 'break-word' }}
           >
             <FormattedMessage
-              defaultMessage="Please make sure that you are downloading from the official Ethereum
+              defaultMessage="Please make sure that you are downloading from the official LUKSO
               Foundation GitHub account by verifying the url: {url}"
               values={{
                 url: (
                   <strong>
-                    https://github.com/ethereum/eth2.0-deposit-cli/releases/
+                    https://github.com/lukso-network/eth2.0-deposit-cli/releases/
                   </strong>
                 ),
               }}

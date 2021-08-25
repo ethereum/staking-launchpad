@@ -22,7 +22,7 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="The Beacon Chain upgrade brings proof-of-stake consensus to Ethereum." />
+          <FormattedMessage defaultMessage="The Beacon Chain upgrade brings proof-of-stake consensus to LUKSO." />
         </Text>
         <Text size="medium" className="my10">
           <FormattedMessage
@@ -36,7 +36,7 @@ export const pageContent = {
             defaultMessage="Importantly, as a validator you'll need to post {TICKER_NAME} as
               collateral - in other words, have some funds at stake. The only way to become a
               validator is to make a one-way {TICKER_NAME} transaction to the deposit contract
-              on the current Ethereum chain."
+              on the current LUKSO chain."
             values={{ TICKER_NAME }}
           />
         </Text>

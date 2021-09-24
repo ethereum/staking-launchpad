@@ -32,7 +32,7 @@ type Props = {
   currentClient: ClientId;
   setCurrentClient: (client: ClientId) => void;
   clientDetails: any;
-  ethVersionStep: number;
+  ethConsensusProtocolStep: string;
 };
 
 const SelectClientSection = ({
@@ -41,17 +41,17 @@ const SelectClientSection = ({
   currentClient,
   setCurrentClient,
   clientDetails,
-  ethVersionStep,
+  ethConsensusProtocolStep,
 }: Props): JSX.Element => (
   <Paper>
     <Heading level={3} size="small" color="blueDark" className="mb20">
       {title}
     </Heading>
-    {ethVersionStep === 1 && (
+    {ethConsensusProtocolStep === 'proof-of-work' && (
       <div style={{ paddingBottom: '1rem' }}>
         <FormattedMessage
-          defaultMessage="To process incoming validator deposits from mainnet (the Eth1 chain),
-            you'll need to run an Eth1 client in parallel to your Eth2 client. While
+          defaultMessage="To process incoming validator deposits from mainnet (the PoW chain),
+            you'll need to run an PoW client in parallel to your PoS client. While
             you can use a third-party service like Infura, we recommend running your
             own client in order to ensure the network stays as decentralised as
             possible."
@@ -77,7 +77,7 @@ const SelectClientSection = ({
           );
         })}
       </ClientOptionContainer>
-      {ethVersionStep === 1 && (
+      {ethConsensusProtocolStep === 'proof-of-work' && (
         <Link
           to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
           primary

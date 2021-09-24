@@ -69,7 +69,7 @@ export const Footer = () => {
       <FooterStyles>
         <div className="col">
           <Heading level={4}>
-            <FormattedMessage defaultMessage="Eth2 Launchpad" />
+            <FormattedMessage defaultMessage="Staking Launchpad" />
           </Heading>
           <Link to={routesEnum.acknowledgementPage}>
             <FormattedMessage defaultMessage="Deposit" />
@@ -115,16 +115,16 @@ export const Footer = () => {
         )}
         <div className="col extra-links">
           <Heading level={4}>
-            <FormattedMessage defaultMessage="More on Eth2" />
+            <FormattedMessage defaultMessage="More on Ethereum upgrades" />
           </Heading>
           <Link to="https://ethereum.org/en/eth2/">
             <FormattedMessage defaultMessage="The Eth2 upgrades" />
           </Link>
           <Link to={routesEnum.phishingPage}>
-            <FormattedMessage defaultMessage="Avoid Eth2 phishing" />
+            <FormattedMessage defaultMessage="Avoid staking phishing" />
           </Link>
           <Link to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204">
-            <FormattedMessage defaultMessage="Eth2 economics" />
+            <FormattedMessage defaultMessage="Ethereum staking economics" />
           </Link>
           {/* TODO: add this link when page goes live */}
           {/* <Link to="http://activate.codefi.network/eth2"> */}

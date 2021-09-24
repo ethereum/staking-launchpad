@@ -19,7 +19,7 @@ export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10 mb20">
       <FormattedMessage
-        defaultMessage="An implementation of the Eth2 protocol with a focus on usability,
+        defaultMessage="An implementation of the Ethereum consensus protocol with a focus on usability,
           security, and reliability. Prysm is developed by Prysmatic Labs, a company with
           the sole focus on the development of their client."
       />
@@ -55,7 +55,7 @@ export const Prysm = () => {
   return (
     <PageTemplate
       title={formatMessage(
-        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { defaultMessage: 'PoS Clients: {clientName}' },
         { clientName: 'Prysm' }
       )}
     >

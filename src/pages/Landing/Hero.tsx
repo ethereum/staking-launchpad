@@ -135,7 +135,7 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
     <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
       <StyledLeslieImgNode
         src={LeslieTheRhinoPNG}
-        alt="Leslie the Rhino - eth2 mascot"
+        alt="Leslie the Rhino - Ethereum staking mascot"
         {...{ style }}
       />
     </ScrollAnimation>
@@ -166,7 +166,7 @@ export const Hero = () => {
                             <FormattedMessage defaultMessage="Eth2 Launchpad" />
                           ) : (
                             <FormattedMessage
-                              defaultMessage="Eth2 Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+                              defaultMessage="Ethereum Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
                               values={{ TESTNET_LAUNCHPAD_NAME }}
                               description="This phrase is a sentence "
                             />

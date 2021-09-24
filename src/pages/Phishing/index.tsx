@@ -21,7 +21,7 @@ export const Phishing = () => {
     >
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Phishing is a very real risk for Eth2 validators and, unfortunately,
+          defaultMessage="Phishing is a very real risk for proof-of-stake validators and, unfortunately,
         many people will lose funds due to these attacks."
         />
       </Text>
@@ -116,7 +116,7 @@ export const Phishing = () => {
           </li>
           <li>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Check your favorite Eth2 block explorer:" />
+              <FormattedMessage defaultMessage="Check your favorite beacon chain block explorer:" />
             </Text>
             <ul>
               <li>

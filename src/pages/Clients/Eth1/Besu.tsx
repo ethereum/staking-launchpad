@@ -45,7 +45,7 @@ export const BesuDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
+        <FormattedMessage defaultMessage="Make sure you do the following to get your PoW client working properly." />
       </Text>
       {!IS_MAINNET && (
         <>
@@ -68,7 +68,7 @@ export const BesuDetails = () => (
           >
             <FormattedMessage
               defaultMessage="Besu on Goerli documentation"
-              description="Link to documentation about eth1 client Besu, specifically for goerli testnet"
+              description="Link to documentation about PoW client Besu, specifically for goerli testnet"
             />
           </Link>
         </>
@@ -78,7 +78,7 @@ export const BesuDetails = () => (
       </Heading>
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          defaultMessage="Use {http} to connect your PoS node to the JSON RPC
           endpoint. This will enable the JSON RPC services on the default 8545
           port."
           values={{

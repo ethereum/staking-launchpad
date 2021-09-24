@@ -230,7 +230,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     if (value < minTopupValue)
       return formatMessage(
         {
-          defaultMessage: `The Eth2 deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted.`,
+          defaultMessage: `The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted.`,
         },
         { minTopupValue, TICKER_NAME }
       );

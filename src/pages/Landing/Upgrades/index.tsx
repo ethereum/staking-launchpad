@@ -79,7 +79,7 @@ export const Upgrades = (): JSX.Element => {
       title: formatMessage({ defaultMessage: 'Validators FAQ' }),
       subTitle: formatMessage({
         defaultMessage:
-          'Learn more about the roles and responsibilities of Eth2 validators.',
+          'Learn more about the roles and responsibilities of Ethereum proof-of-stake validators.',
       }),
       linkUrl: '/faq',
       link: formatMessage({ defaultMessage: 'More on validators' }),
@@ -93,13 +93,13 @@ export const Upgrades = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                <FormattedMessage defaultMessage="How does Eth2 upgrade Ethereum?" />
+                <FormattedMessage defaultMessage="How do the proof-of-Stake and sharding protocols upgrade Ethereum?" />
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20 mb40">
                 <FormattedMessage
-                  defaultMessage="Eth2 is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
+                  defaultMessage="The proof-of-stake and sharding protocols (Eth2) is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
                   of today. Here's more on the different upgrades:"
                 />
               </Text>

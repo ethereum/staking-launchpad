@@ -31,14 +31,14 @@ export const clientReducer = (
   action: Action
 ) => {
   if (action.type === ActionTypes.updateClient) {
-    if (action.payload.ethVersion === 1) {
+    if (action.payload.ethConsensusProtocol === 'proof-of-work') {
       return {
         ...state,
         eth1Client: action.payload.clientId,
       };
     }
 
-    if (action.payload.ethVersion === 2) {
+    if (action.payload.ethConsensusProtocol === 'proof-of-stake') {
       return {
         ...state,
         eth2Client: action.payload.clientId,

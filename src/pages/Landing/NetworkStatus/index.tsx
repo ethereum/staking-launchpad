@@ -105,7 +105,7 @@ export const NetworkStatus: React.FC<{
       <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
         <Content isMobile={m}>
           <Heading level={2} size="medium" color="blueDark" className="mb40">
-            <FormattedMessage defaultMessage="The Eth2 network" />
+            <FormattedMessage defaultMessage="The Ethereum network" />
           </Heading>
           <CardContainer>
             <Card>

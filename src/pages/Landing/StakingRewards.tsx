@@ -100,7 +100,7 @@ export const StakingRewards: React.FC<{ currentStaked?: number }> = ({
             primary
             inline
           >
-            <FormattedMessage defaultMessage="More on Eth2 economics" />
+            <FormattedMessage defaultMessage="More on Ethereum staking economics" />
           </Link>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce delay={450}>

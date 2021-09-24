@@ -233,7 +233,9 @@ export const Checklist = () => {
 
   return (
     <PageTemplate
-      title={formatMessage({ defaultMessage: 'Eth2 validator checklist' })}
+      title={formatMessage({
+        defaultMessage: 'Beacon chain validator checklist',
+      })}
     >
       <div id="top" />
       <Subtitle>
@@ -327,9 +329,9 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="To process incoming validator deposits from the Eth1
-                    chain, you'll need to run an Eth1 client as well as your
-                    Eth2 client. You can use a third-party service
+                  defaultMessage="To process incoming validator deposits from the PoW
+                    chain, you'll need to run an Ethereum PoW client as well as your
+                    PoS client. You can use a third-party service
                     like Infura, but we recommend running your own client to
                     keep the network as decentralised as possible."
                 />
@@ -338,7 +340,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
+                  defaultMessage="As of {date}, you'll need ~400GB for the mainnet PoW chain data alone (growing at ~1GB/day)."
                   values={{
                     date: (
                       <FormattedDate
@@ -444,7 +446,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Syncing your Eth1 client may take a few days in the worst-case scenario." />
+                <FormattedMessage defaultMessage="Syncing your PoW client may take a few days in the worst-case scenario." />
               </Text>
             </li>
           </ul>
@@ -661,13 +663,13 @@ export const Checklist = () => {
         </Alert>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Configure your Eth1 Client" />
+            <FormattedMessage defaultMessage="Configure your PoW Chain Client" />
           </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)."
+                  defaultMessage="I've installed and synced my PoW chain node on {network} (do not wait on this as it can take several days)."
                   values={{
                     network: IS_MAINNET ? 'mainnet' : 'Goerli',
                   }}
@@ -678,7 +680,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Configure your Eth2 client" />
+            <FormattedMessage defaultMessage="Configure your PoS chain client" />
           </Heading>
           <Link className="mt10" to="/faq" primary>
             <FormattedMessage defaultMessage="More on validator roles and responsibilities" />
@@ -702,7 +704,7 @@ export const Checklist = () => {
             </Heading>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="It is high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
+                defaultMessage="It is high risk to run your PoS validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
                 values={{
                   learnMore: (
                     <Link primary inline to="/faq#responsibilities">
@@ -719,7 +721,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've installed the {latestRelease} of my Eth2 client."
+                  defaultMessage="I've installed the {latestRelease} of my PoS client."
                   values={{
                     latestRelease: (
                       <strong>
@@ -737,7 +739,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Eth2 Beacon Node (BN)" />
+            <FormattedMessage defaultMessage="Beacon Node (BN)" />
           </Heading>
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Required" />
@@ -745,7 +747,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I'm able to connect my Eth2 beacon node to my Eth1 client via HTTP API(s)." />
+                <FormattedMessage defaultMessage="I'm able to connect my PoS beacon node to my PoW client via HTTP API(s)." />
               </Text>
             }
           />
@@ -765,7 +767,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
+                  defaultMessage="I've synced my beacon node on {ETH2_NETWORK_NAME}."
                   values={{ ETH2_NETWORK_NAME }}
                   description="{ETH2_NETWORK_NAME} is name of network, do not translate"
                 />
@@ -809,7 +811,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Eth2 Validator Client (VC)" />
+            <FormattedMessage defaultMessage="Validator Client (VC)" />
           </Heading>
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Required" />
@@ -817,7 +819,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I've imported my keystore(s) into my Eth2 validator client." />
+                <FormattedMessage defaultMessage="I've imported my keystore(s) into my PoS validator client." />
               </Text>
             }
           />
@@ -869,7 +871,7 @@ export const Checklist = () => {
           </Heading>
           <Text>
             <FormattedMessage
-              defaultMessage="The Eth2 clients support Prometheus and Grafana to help you
+              defaultMessage="The PoS clients support Prometheus and Grafana to help you
                 visualise important real-time metrics about your validator. You can
                 find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
               values={{
@@ -988,7 +990,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I've simulated how to migrate from one Eth2 client to another Eth2 client." />
+                <FormattedMessage defaultMessage="I've simulated how to migrate from one PoS client to another PoS client." />
               </Text>
             }
           />

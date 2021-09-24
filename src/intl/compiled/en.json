@@ -1,10 +1,4 @@
 {
-  "+3PPtT": [
-    {
-      "type": 0,
-      "value": "Today, you'll secure the Beacon Chain, the first Eth2 upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
-    }
-  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -289,16 +283,16 @@
       "value": "Second, install the dependency packages:"
     }
   ],
+  "0m4w1+": [
+    {
+      "type": 0,
+      "value": "Learn more about the roles and responsibilities of Ethereum proof-of-stake validators."
+    }
+  ],
   "0oNdmk": [
     {
       "type": 0,
       "value": "Validators FAQ"
-    }
-  ],
-  "0qvZJn": [
-    {
-      "type": 0,
-      "value": "More on the Eth2 vision"
     }
   ],
   "0uqjBl": [
@@ -373,10 +367,22 @@
       "value": "Check deposit contract details"
     }
   ],
-  "2+TGmE": [
+  "1ingnQ": [
     {
       "type": 0,
-      "value": "To process incoming validator deposits from the Eth1 chain, you'll need to run an Eth1 client as well as your Eth2 client. You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralised as possible."
+      "value": "More on Ethereum staking economics"
+    }
+  ],
+  "1jNkJO": [
+    {
+      "type": 0,
+      "value": "Syncing your PoW client may take a few days in the worst-case scenario."
+    }
+  ],
+  "1l9Tx4": [
+    {
+      "type": 0,
+      "value": "Ethereum staking economics"
     }
   ],
   "22EpKq": [
@@ -427,20 +433,6 @@
       "value": "Troubleshooting"
     }
   ],
-  "2DuJTX": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
-    }
-  ],
   "2a1GTh": [
     {
       "type": 0,
@@ -467,22 +459,36 @@
       "value": ". This file contains the public key(s) associated with your validator(s); You will need to upload this in the next step."
     }
   ],
+  "32gK2f": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " to connect your PoS node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+    }
+  ],
   "32rBNK": [
     {
       "type": 0,
       "value": "Terms of Service"
     }
   ],
-  "36KKVb": [
-    {
-      "type": 0,
-      "value": "More on Eth2 economics"
-    }
-  ],
   "38VH2G": [
     {
       "type": 0,
       "value": "Install deposit-cli tool"
+    }
+  ],
+  "38vQha": [
+    {
+      "type": 0,
+      "value": "I've simulated how to migrate from one PoS client to another PoS client."
     }
   ],
   "3CRtg8": [
@@ -539,20 +545,6 @@
     {
       "type": 0,
       "value": "Check the whole address, not just a portion of it. There could be just a few bytes different."
-    }
-  ],
-  "3Pmjlx": [
-    {
-      "type": 0,
-      "value": "I've installed the "
-    },
-    {
-      "type": 1,
-      "value": "latestRelease"
-    },
-    {
-      "type": 0,
-      "value": " of my Eth2 client."
     }
   ],
   "3Q43SM": [
@@ -647,6 +639,12 @@
     {
       "type": 0,
       "value": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
+    }
+  ],
+  "4gUYML": [
+    {
+      "type": 0,
+      "value": "Configure your PoS chain client"
     }
   ],
   "4hnEBA": [
@@ -753,12 +751,6 @@
       "value": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
     }
   ],
-  "6zye8g": [
-    {
-      "type": 0,
-      "value": "An implementation of the Eth2 protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
-    }
-  ],
   "7+Domh": [
     {
       "type": 0,
@@ -785,6 +777,12 @@
     {
       "type": 0,
       "value": " is not supported in offline mode."
+    }
+  ],
+  "7OmiDk": [
+    {
+      "type": 0,
+      "value": "The proof-of-stake and sharding protocols (Eth2) is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
     }
   ],
   "7UOvbT": [
@@ -843,20 +841,6 @@
     {
       "type": 0,
       "value": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
-    }
-  ],
-  "7y4xl1": [
-    {
-      "type": 0,
-      "value": "Eth2 Launchpad for "
-    },
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
-    {
-      "type": 0,
-      "value": " testnet"
     }
   ],
   "80eWKU": [
@@ -971,6 +955,12 @@
       "value": "There is no easy answer to this question as there are many factors that go into this calculation."
     }
   ],
+  "9Ko7db": [
+    {
+      "type": 0,
+      "value": "Beacon chain validator checklist"
+    }
+  ],
   "9VZ9oy": [
     {
       "type": 0,
@@ -1007,16 +997,30 @@
       "value": "Read options and subcommands documentation"
     }
   ],
+  "9uAFij": [
+    {
+      "type": 0,
+      "value": "Phishing is a very real risk for proof-of-stake validators and, unfortunately, many people will lose funds due to these attacks."
+    }
+  ],
   "9uOFF3": [
     {
       "type": 0,
       "value": "Overview"
     }
   ],
-  "A/iYbo": [
+  "A2+/MV": [
     {
       "type": 0,
-      "value": "The Eth2 upgrades will only be successful if validators understand the risks and responsibilities."
+      "value": "I've synced my beacon node on "
+    },
+    {
+      "type": 1,
+      "value": "ETH2_NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "A2b4uB": [
@@ -1057,6 +1061,28 @@
     {
       "type": 0,
       "value": " transaction to the deposit contract on the current Ethereum chain."
+    }
+  ],
+  "AJD+66": [
+    {
+      "type": 0,
+      "value": "The Ethereum staking deposit contract requires a minimum of "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to be sent at one time to be accepted."
     }
   ],
   "AYKxmf": [
@@ -1147,12 +1173,6 @@
       "value": " to the Beacon Chain is one-way, and non-reversible."
     }
   ],
-  "BB65vH": [
-    {
-      "type": 0,
-      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Eth2 validators."
-    }
-  ],
   "BCsPjJ": [
     {
       "type": 0,
@@ -1163,28 +1183,6 @@
     {
       "type": 0,
       "value": "Top up a validator"
-    }
-  ],
-  "BFfsSX": [
-    {
-      "type": 0,
-      "value": "The Eth2 deposit contract requires a minimum of "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to be sent at one time to be accepted."
     }
   ],
   "BFsUAH": [
@@ -1323,6 +1321,12 @@
     {
       "type": 0,
       "value": "How much ETH do I need to stake to become a validator?"
+    }
+  ],
+  "D7R46a": [
+    {
+      "type": 0,
+      "value": "PoS chain validator checklist"
     }
   ],
   "DCaq7N": [
@@ -1471,6 +1475,18 @@
       "value": "This is a test network ⚠️"
     }
   ],
+  "Ec29C1": [
+    {
+      "type": 0,
+      "value": "How do the proof-of-Stake and sharding protocols upgrade Ethereum?"
+    }
+  ],
+  "EcCME0": [
+    {
+      "type": 0,
+      "value": "Staking Launchpad"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1481,6 +1497,12 @@
     {
       "type": 0,
       "value": "Note: the Beacon Chain may take several minutes to verify your deposit"
+    }
+  ],
+  "FSRV5Y": [
+    {
+      "type": 0,
+      "value": "The Ethereum network"
     }
   ],
   "FSRfSJ": [
@@ -1505,12 +1527,6 @@
     {
       "type": 0,
       "value": "Try again"
-    }
-  ],
-  "FdbNS6": [
-    {
-      "type": 0,
-      "value": "Configure your Eth1 Client"
     }
   ],
   "FfLWt5": [
@@ -1553,16 +1569,6 @@
     {
       "type": 0,
       "value": "Download master branch source code"
-    }
-  ],
-  "G6kg26": [
-    {
-      "type": 0,
-      "value": "Eth2 Clients: "
-    },
-    {
-      "type": 1,
-      "value": "clientName"
     }
   ],
   "G8tAKU": [
@@ -1611,12 +1617,6 @@
     {
       "type": 0,
       "value": "Generate keys"
-    }
-  ],
-  "GrU/lp": [
-    {
-      "type": 0,
-      "value": "The Eth2 clients"
     }
   ],
   "GsBRWL": [
@@ -1759,12 +1759,6 @@
       "value": " there are two important scenarios to be aware of:"
     }
   ],
-  "J0DclJ": [
-    {
-      "type": 0,
-      "value": "Syncing your Eth1 client may take a few days in the worst-case scenario."
-    }
-  ],
   "J455S4": [
     {
       "type": 0,
@@ -1823,6 +1817,12 @@
     {
       "type": 0,
       "value": ")"
+    }
+  ],
+  "JMi7am": [
+    {
+      "type": 0,
+      "value": "Besu on Goerli documentation"
     }
   ],
   "JPT/TK": [
@@ -1919,12 +1919,6 @@
       "value": "A validator is an entity that participates in the consensus of the Ethereum 2.0 protocol."
     }
   ],
-  "KhEtqB": [
-    {
-      "type": 0,
-      "value": "Besu on Goerli documentation"
-    }
-  ],
   "KjcAm2": [
     {
       "type": 0,
@@ -2013,6 +2007,12 @@
       "value": " to sync the Goerli testnet."
     }
   ],
+  "LlClXS": [
+    {
+      "type": 0,
+      "value": "Thank you for supporting the Ethereum network!"
+    }
+  ],
   "Ltd/hJ": [
     {
       "type": 1,
@@ -2063,12 +2063,6 @@
       "value": "Connect new wallet"
     }
   ],
-  "MPHPEO": [
-    {
-      "type": 0,
-      "value": "I'm able to connect my Eth2 beacon node to my Eth1 client via HTTP API(s)."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2117,24 +2111,16 @@
       "value": "Transaction failed"
     }
   ],
+  "Mlc7Vr": [
+    {
+      "type": 0,
+      "value": "The Ethereum upgrades will only be successful if validators understand the risks and responsibilities."
+    }
+  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Top-up details"
-    }
-  ],
-  "N+2G1J": [
-    {
-      "type": 0,
-      "value": "Choose "
-    },
-    {
-      "type": 1,
-      "value": "ethereum"
-    },
-    {
-      "type": 0,
-      "value": " client"
     }
   ],
   "N0rwnt": [
@@ -2145,20 +2131,6 @@
     {
       "type": 0,
       "value": " isn't a valid deposit_data JSON file. Try again."
-    }
-  ],
-  "NBJR7v": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
     }
   ],
   "NEmnAV": [
@@ -2197,12 +2169,6 @@
       "value": "Download command line app"
     }
   ],
-  "NVQd7i": [
-    {
-      "type": 0,
-      "value": "To process incoming validator deposits from mainnet (the Eth1 chain), you'll need to run an Eth1 client in parallel to your Eth2 client. While you can use a third-party service like Infura, we recommend running your own client in order to ensure the network stays as decentralised as possible."
-    }
-  ],
   "NVljH4": [
     {
       "type": 0,
@@ -2233,12 +2199,6 @@
     {
       "type": 0,
       "value": "Remember that a validator’s vote is weighted by the amount it has at stake."
-    }
-  ],
-  "NZsVaA": [
-    {
-      "type": 0,
-      "value": "Validators and Eth2"
     }
   ],
   "Nb5DNK": [
@@ -2275,10 +2235,32 @@
       "value": "."
     }
   ],
-  "O54B/F": [
+  "O47FJR": [
     {
       "type": 0,
-      "value": "The Eth2 network"
+      "value": "As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", you'll need ~400GB for the mainnet PoW chain data alone (growing at ~1GB/day)."
+    }
+  ],
+  "OIp1v2": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " to connect your PoS node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
     }
   ],
   "OIvXIO": [
@@ -2375,12 +2357,6 @@
       "value": "We recommend you go through the entire process on a testnet first to get comfortable."
     }
   ],
-  "PboOCR": [
-    {
-      "type": 0,
-      "value": "Configure your Eth2 client"
-    }
-  ],
   "PfoT0C": [
     {
       "type": 0,
@@ -2409,6 +2385,12 @@
     {
       "type": 0,
       "value": "Turkish"
+    }
+  ],
+  "Pw9dkW": [
+    {
+      "type": 0,
+      "value": "An implementation of the Ethereum consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
     }
   ],
   "Px7wWb": [
@@ -2479,6 +2461,12 @@
       "value": "Key management"
     }
   ],
+  "QZvVCv": [
+    {
+      "type": 0,
+      "value": "You'll need to run an PoW and an PoS node to become a validator. Take a look at the checklist to prepare yourself and your equipment."
+    }
+  ],
   "QlsDcr": [
     {
       "type": 0,
@@ -2531,10 +2519,10 @@
       "value": "only way"
     }
   ],
-  "RIFLCz": [
+  "RKVQbN": [
     {
       "type": 0,
-      "value": "Phishing is a very real risk for Eth2 validators and, unfortunately, many people will lose funds due to these attacks."
+      "value": "Validator Client (VC)"
     }
   ],
   "ROHpFF": [
@@ -2555,16 +2543,30 @@
       "value": "congratulations"
     }
   ],
-  "RYUKCz": [
-    {
-      "type": 0,
-      "value": "I've simulated how to migrate from one Eth2 client to another Eth2 client."
-    }
-  ],
   "RaBZna": [
     {
       "type": 0,
       "value": "If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH."
+    }
+  ],
+  "RaIC7G": [
+    {
+      "type": 0,
+      "value": "Validators and Proof-of-Stake upgrades"
+    }
+  ],
+  "RbLObC": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " to connect your PoS node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
     }
   ],
   "Rg5ySE": [
@@ -2641,20 +2643,6 @@
       "value": "Your stake has reached the deposit contract!"
     }
   ],
-  "SMffKt": [
-    {
-      "type": 0,
-      "value": "Choose your Eth"
-    },
-    {
-      "type": 1,
-      "value": "ethVersionStep"
-    },
-    {
-      "type": 0,
-      "value": " client and set up a node"
-    }
-  ],
   "SR0qHv": [
     {
       "type": 0,
@@ -2719,6 +2707,22 @@
       "value": "wrench"
     }
   ],
+  "TBRZmq": [
+    {
+      "type": 0,
+      "value": "It is high risk to run your PoS validator in multiple places. It will lead to a slashable event and ejection from the network. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "TKI124": [
+    {
+      "type": 0,
+      "value": "More on Ethereum upgrades"
+    }
+  ],
   "TLEziZ": [
     {
       "type": 0,
@@ -2745,20 +2749,6 @@
       "value": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
     }
   ],
-  "TmYprU": [
-    {
-      "type": 0,
-      "value": "Eth2 "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Launchpad"
-    }
-  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -2781,40 +2771,6 @@
     {
       "type": 0,
       "value": "greater than 50%"
-    }
-  ],
-  "U7PMU1": [
-    {
-      "type": 0,
-      "value": "The Eth2 clients support Prometheus and Grafana to help you visualise important real-time metrics about your validator. You can find client-specific instructions here: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "UHbYCa": [
@@ -2881,6 +2837,12 @@
     {
       "type": 0,
       "value": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
+    }
+  ],
+  "V2lIAZ": [
+    {
+      "type": 0,
+      "value": "Check your favorite beacon chain block explorer:"
     }
   ],
   "VASo1/": [
@@ -2997,10 +2959,10 @@
       "value": "martial arts uniform"
     }
   ],
-  "VY3/Wo": [
+  "VbyLKr": [
     {
       "type": 0,
-      "value": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new Eth2 key pairs and installing the validator software are both done in the terminal."
+      "value": "The PoS clients"
     }
   ],
   "VctWDX": [
@@ -3033,10 +2995,18 @@
       "value": "FAQ"
     }
   ],
-  "W9JuAN": [
+  "W9NQns": [
     {
       "type": 0,
-      "value": "Eth2 Validator Client (VC)"
+      "value": "Choose your Ethereum "
+    },
+    {
+      "type": 1,
+      "value": "ethConsensusProtocolStep"
+    },
+    {
+      "type": 0,
+      "value": " client and set up a node"
     }
   ],
   "WFVzvu": [
@@ -3067,30 +3037,30 @@
       "value": " validators"
     }
   ],
-  "WRevBY": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " to connect your Eth2 node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
-    }
-  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "These steps are optional but are recommended to optimize your node."
     }
   ],
-  "Wao7OA": [
+  "WZu6D/": [
     {
       "type": 0,
-      "value": "Eth2 Beacon Node (BN)"
+      "value": "Ethereum "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " Staking Launchpad"
+    }
+  ],
+  "WeLwSn": [
+    {
+      "type": 0,
+      "value": "Nethermind on Goerli documentation"
     }
   ],
   "WkrNSk": [
@@ -3103,24 +3073,6 @@
     {
       "type": 0,
       "value": "Please accept the conditions above."
-    }
-  ],
-  "WxUcvB": [
-    {
-      "type": 0,
-      "value": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set "
-    },
-    {
-      "type": 1,
-      "value": "eth1AddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " when running deposit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
     }
   ],
   "WxqnJn": [
@@ -3139,16 +3091,6 @@
     {
       "type": 0,
       "value": "Has the block explorer named the contract?"
-    }
-  ],
-  "X0dSr0": [
-    {
-      "type": 0,
-      "value": "It is high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. "
-    },
-    {
-      "type": 1,
-      "value": "learnMore"
     }
   ],
   "X5KFEh": [
@@ -3267,20 +3209,6 @@
       "value": " service."
     }
   ],
-  "YZtdY1": [
-    {
-      "type": 0,
-      "value": "As of "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ", you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
-    }
-  ],
   "Yganfl": [
     {
       "type": 0,
@@ -3291,6 +3219,24 @@
     {
       "type": 0,
       "value": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
+    }
+  ],
+  "Yr4ORJ": [
+    {
+      "type": 0,
+      "value": "Eth1 address withdrawal: If you want to withdraw to PoW chain (Eth1) after the post-merge cleanup upgrade, you can set "
+    },
+    {
+      "type": 1,
+      "value": "eth1AddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " when running deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "YtwQyB": [
@@ -3377,12 +3323,6 @@
       "value": "Please ensure that you have control over the Eth1 address."
     }
   ],
-  "ZRbxwY": [
-    {
-      "type": 0,
-      "value": "Eth2 validator checklist"
-    }
-  ],
   "ZTo0Fl": [
     {
       "type": 0,
@@ -3425,10 +3365,10 @@
       "value": "2. Prep nodes"
     }
   ],
-  "aMcG1s": [
+  "aK1YX3": [
     {
       "type": 0,
-      "value": "Check your favorite Eth2 block explorer:"
+      "value": "Beacon Node (BN)"
     }
   ],
   "aS6dBe": [
@@ -3513,6 +3453,12 @@
       "value": "Be sure to account for enough space on your drive until you run maintenance on your node."
     }
   ],
+  "bbW9Vy": [
+    {
+      "type": 0,
+      "value": "More on the Ethereum upgrades vision"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -3573,6 +3519,20 @@
       "value": "More on PegaSys Teku"
     }
   ],
+  "ckKqnX": [
+    {
+      "type": 0,
+      "value": "Ethereum Staking Launchpad for "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -3589,12 +3549,6 @@
     {
       "type": 0,
       "value": "What are withdrawal credentials?"
-    }
-  ],
-  "cs9mQw": [
-    {
-      "type": 0,
-      "value": "Learn more about the roles and responsibilities of Eth2 validators."
     }
   ],
   "cyR7Kh": [
@@ -3703,12 +3657,6 @@
       "value": "code3"
     }
   ],
-  "eIRc60": [
-    {
-      "type": 0,
-      "value": "More on Eth2"
-    }
-  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -3737,6 +3685,12 @@
     {
       "type": 0,
       "value": "More on shard chains"
+    }
+  ],
+  "ek8pXb": [
+    {
+      "type": 0,
+      "value": "Make sure you do the following to get your PoW client working properly."
     }
   ],
   "elCkOU": [
@@ -3855,12 +3809,6 @@
       "value": "More on virtualenv"
     }
   ],
-  "gAdE9y": [
-    {
-      "type": 0,
-      "value": "Thank you for supporting the Eth2 network!"
-    }
-  ],
   "gIauNz": [
     {
       "type": 0,
@@ -3959,6 +3907,40 @@
       "value": "clock"
     }
   ],
+  "h8HEzY": [
+    {
+      "type": 0,
+      "value": "The PoS clients support Prometheus and Grafana to help you visualise important real-time metrics about your validator. You can find client-specific instructions here: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
+    }
+  ],
   "h8MTUo": [
     {
       "type": 0,
@@ -4045,12 +4027,6 @@
       "value": "I understand that it is important to keep my validator online and updated."
     }
   ],
-  "iBYfM0": [
-    {
-      "type": 0,
-      "value": "You'll need to run an Eth1 and an Eth2 node to become a validator. Take a look at the checklist to prepare yourself and your equipment."
-    }
-  ],
   "iCpuph": [
     {
       "type": 0,
@@ -4067,12 +4043,6 @@
     {
       "type": 0,
       "value": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
-    }
-  ],
-  "iRQxxL": [
-    {
-      "type": 0,
-      "value": "Nimbus is a client implementation for both Eth1 and Eth2 that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
     }
   ],
   "iWg7mL": [
@@ -4135,12 +4105,6 @@
       "value": " deposits"
     }
   ],
-  "j4ctVP": [
-    {
-      "type": 0,
-      "value": "The Eth2 specification"
-    }
-  ],
   "jDv/zO": [
     {
       "type": 0,
@@ -4157,12 +4121,6 @@
     {
       "type": 0,
       "value": "Lighthouse installation documentation"
-    }
-  ],
-  "jZVChZ": [
-    {
-      "type": 0,
-      "value": "I've imported my keystore(s) into my Eth2 validator client."
     }
   ],
   "jecC36": [
@@ -4211,6 +4169,12 @@
     {
       "type": 0,
       "value": "Nimbus documentation"
+    }
+  ],
+  "k4sa8a": [
+    {
+      "type": 0,
+      "value": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new PoS chain key pairs and installing the validator software are both done in the terminal."
     }
   ],
   "kFS5Sd": [
@@ -4327,12 +4291,6 @@
     {
       "type": 0,
       "value": "Outstanding deposit"
-    }
-  ],
-  "lJNmgK": [
-    {
-      "type": 0,
-      "value": "How does Eth2 upgrade Ethereum?"
     }
   ],
   "lLOZMD": [
@@ -4459,6 +4417,20 @@
       "value": "change your wallet"
     }
   ],
+  "lqaPRK": [
+    {
+      "type": 0,
+      "value": "I've installed and synced my PoW chain node on "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (do not wait on this as it can take several days)."
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -4469,6 +4441,12 @@
     {
       "type": 0,
       "value": "Hard drive"
+    }
+  ],
+  "mFHzZ0": [
+    {
+      "type": 0,
+      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and beacon chain validators."
     }
   ],
   "mZOXtM": [
@@ -4493,20 +4471,6 @@
     {
       "type": 0,
       "value": "Risks and acknowledgements:"
-    }
-  ],
-  "n6Uub0": [
-    {
-      "type": 0,
-      "value": "I've installed and synced my Eth1 node on "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " (do not wait on this as it can take several days)."
     }
   ],
   "n7yYXG": [
@@ -4749,12 +4713,6 @@
       "value": "The Besu documentation explains how to download and install the client."
     }
   ],
-  "penFMT": [
-    {
-      "type": 0,
-      "value": "Eth2 is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
-    }
-  ],
   "pfJX2D": [
     {
       "type": 0,
@@ -4799,12 +4757,6 @@
     {
       "type": 0,
       "value": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
-    }
-  ],
-  "q6sz6X": [
-    {
-      "type": 0,
-      "value": "Eth2 economics"
     }
   ],
   "qDcbPp": [
@@ -4919,6 +4871,12 @@
     {
       "type": 0,
       "value": "Phishing guide"
+    }
+  ],
+  "rEh8fQ": [
+    {
+      "type": 0,
+      "value": "I'm able to connect my PoS beacon node to my PoW client via HTTP API(s)."
     }
   ],
   "rFe61n": [
@@ -5057,24 +5015,16 @@
       "value": "Waiting to connect..."
     }
   ],
-  "svsq8J": [
-    {
-      "type": 0,
-      "value": "I've synced my Eth2 beacon node on "
-    },
-    {
-      "type": 1,
-      "value": "ETH2_NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "sy35J+": [
     {
       "type": 0,
       "value": "What is the deposit contract?"
+    }
+  ],
+  "syrzi0": [
+    {
+      "type": 0,
+      "value": "Today, you'll secure the Beacon Chain, the first Ethereum Proof-of-Stake upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
     }
   ],
   "szN3Fl": [
@@ -5087,6 +5037,12 @@
     {
       "type": 0,
       "value": "Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits."
+    }
+  ],
+  "tbYkT4": [
+    {
+      "type": 0,
+      "value": "The Ethereum consensus-layer specification"
     }
   ],
   "teyxVk": [
@@ -5113,6 +5069,12 @@
     {
       "type": 0,
       "value": "Balance after topping up"
+    }
+  ],
+  "tokll9": [
+    {
+      "type": 0,
+      "value": "I've imported my keystore(s) into my PoS validator client."
     }
   ],
   "tsfX5f": [
@@ -5233,6 +5195,20 @@
       "value": "Become a validator with Nimbus"
     }
   ],
+  "unkd/7": [
+    {
+      "type": 0,
+      "value": "I've installed the "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " of my PoS client."
+    }
+  ],
   "unzIoE": [
     {
       "type": 0,
@@ -5289,6 +5265,28 @@
     {
       "type": 0,
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
+    }
+  ],
+  "vOJ3GM": [
+    {
+      "type": 0,
+      "value": "PoS Clients: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "vQBDsN": [
+    {
+      "type": 0,
+      "value": "To process incoming validator deposits from mainnet (the PoW chain), you'll need to run an PoW client in parallel to your PoS client. While you can use a third-party service like Infura, we recommend running your own client in order to ensure the network stays as decentralised as possible."
+    }
+  ],
+  "vV3m6j": [
+    {
+      "type": 0,
+      "value": "To process incoming validator deposits from the PoW chain, you'll need to run an Ethereum PoW client as well as your PoS client. You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralised as possible."
     }
   ],
   "vY2wig": [
@@ -5449,16 +5447,16 @@
       "value": "ethereumorg"
     }
   ],
+  "xF0cQV": [
+    {
+      "type": 0,
+      "value": "Configure your PoW Chain Client"
+    }
+  ],
   "xH5GKj": [
     {
       "type": 0,
       "value": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
-    }
-  ],
-  "xOSMb1": [
-    {
-      "type": 0,
-      "value": "Nethermind on Goerli documentation"
     }
   ],
   "xP6BKs": [
@@ -5477,6 +5475,12 @@
     {
       "type": 0,
       "value": "Block rewards are calculated using a sliding scale based on the total amount of ETH staked on the network."
+    }
+  ],
+  "xYEPSB": [
+    {
+      "type": 0,
+      "value": "Avoid staking phishing"
     }
   ],
   "xYRzZY": [
@@ -5565,6 +5569,12 @@
       "value": "Make sure that your node has more than 20 peers."
     }
   ],
+  "z+Xb0Q": [
+    {
+      "type": 0,
+      "value": "Nimbus is a client implementation for both PoW chain and PoS chain that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
+    }
+  ],
   "z/ZhML": [
     {
       "type": 0,
@@ -5611,6 +5621,20 @@
     {
       "type": 0,
       "value": "More on Lighthouse and Sigma Prime"
+    }
+  ],
+  "zB21qC": [
+    {
+      "type": 0,
+      "value": "Choose "
+    },
+    {
+      "type": 1,
+      "value": "protocol"
+    },
+    {
+      "type": 0,
+      "value": " client"
     }
   ],
   "zGkAVo": [

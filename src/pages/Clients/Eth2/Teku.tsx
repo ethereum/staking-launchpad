@@ -226,7 +226,7 @@ export const Teku = () => {
   return (
     <PageTemplate
       title={formatMessage(
-        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { defaultMessage: 'PoS Clients: {clientName}' },
         { clientName: 'Teku' }
       )}
     >

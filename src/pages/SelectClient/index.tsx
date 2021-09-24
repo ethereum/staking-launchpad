@@ -70,9 +70,9 @@ export type Client = {
 
 // define and shuffle the clients
 const ethClients: {
-  [ethVersion: number]: Array<Client>;
+  [ethConsensusProtocol: string]: Array<Client>;
 } = {
-  1: _shuffle([
+  'proof-of-work': _shuffle([
     {
       clientId: ClientId.OPEN_ETHEREUM,
       name: 'OpenEthereum',
@@ -98,7 +98,7 @@ const ethClients: {
       language: 'C#, .NET',
     },
   ]),
-  2: _shuffle([
+  'proof-of-stake': _shuffle([
     {
       clientId: ClientId.TEKU,
       name: 'Teku',
@@ -133,26 +133,29 @@ const _SelectClientPage = ({
   dispatchClientUpdate,
 }: Props): JSX.Element => {
   // set the default the eth version to 1 on initial render
-  const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
+  const [ethConsensusProtocolStep, setEthConsensusProtocolStep] = useState<
+    'proof-of-work' | 'proof-of-stake'
+  >('proof-of-work');
 
   const { formatMessage } = useIntl();
 
   // filter the options based on the eth version the user is on
-  const clientOptions = React.useMemo(() => ethClients[ethVersionStep], [
-    ethVersionStep,
-  ]);
+  const clientOptions = React.useMemo(
+    () => ethClients[ethConsensusProtocolStep],
+    [ethConsensusProtocolStep]
+  );
 
   // memoize the chosen client by step
   const selectedClient: ClientId = React.useMemo(
     () =>
-      ethVersionStep === 1
+      ethConsensusProtocolStep === 'proof-of-work'
         ? chosenClients.eth1Client
         : chosenClients.eth2Client,
-    [ethVersionStep, chosenClients]
+    [ethConsensusProtocolStep, chosenClients]
   );
 
   const setClientFxn = (clientId: ClientId) => {
-    dispatchClientUpdate(clientId, ethVersionStep);
+    dispatchClientUpdate(clientId, ethConsensusProtocolStep);
   };
 
   React.useEffect(() => {
@@ -161,7 +164,7 @@ const _SelectClientPage = ({
     if (header) {
       header.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [ethVersionStep]);
+  }, [ethConsensusProtocolStep]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.SELECT_CLIENT) {
@@ -175,11 +178,11 @@ const _SelectClientPage = ({
 
   const title = formatMessage(
     {
-      defaultMessage: `Choose {ethereum} client`,
-      description: '{ethereum} injects Eth1 or Eth2 depending on step',
+      defaultMessage: `Choose {protocol} client`,
+      description: '{protocol} injects PoW or PoS depending on step',
     },
     {
-      ethereum: `Eth${ethVersionStep}`,
+      protocol: `${ethConsensusProtocolStep}`,
     }
   );
 
@@ -188,21 +191,21 @@ const _SelectClientPage = ({
       <SelectClientSection
         title={formatMessage(
           {
-            defaultMessage: `Choose your Eth{ethVersionStep} client and set up a node`,
-            description: `{ethVersionStep} is either 1 or 2, depending on which step user is on`,
+            defaultMessage: `Choose your Ethereum {ethConsensusProtocolStep} client and set up a node`,
+            description: `{ethConsensusProtocolStep} is either proof-of-work or proof-of-stake, depending on which step user is on`,
           },
-          { ethVersionStep }
+          { ethConsensusProtocolStep }
         )}
         clients={clientOptions}
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}
         clientDetails={clientDetails}
-        ethVersionStep={ethVersionStep}
+        ethConsensusProtocolStep={ethConsensusProtocolStep}
       />
       <div className="flex center p30">
         <SelectClientButtons
-          updateStep={setEthVersionStep}
-          ethVersionStep={ethVersionStep}
+          updateStep={setEthConsensusProtocolStep}
+          ethConsensusProtocolStep={ethConsensusProtocolStep}
           handleSubmit={handleSubmit}
           currentClient={selectedClient}
         />
@@ -217,8 +220,11 @@ const mapStateToProps = ({ workflow, client }: StoreState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchClientUpdate: (clientId: ClientId, ethVersion: 1 | 2) => {
-    dispatch(updateClient(clientId, ethVersion));
+  dispatchClientUpdate: (
+    clientId: ClientId,
+    ethConsensusProtocol: 'proof-of-work' | 'proof-of-stake'
+  ) => {
+    dispatch(updateClient(clientId, ethConsensusProtocol));
   },
   dispatchWorkflowUpdate: (step: WorkflowStep) => {
     dispatch(updateWorkflow(step));

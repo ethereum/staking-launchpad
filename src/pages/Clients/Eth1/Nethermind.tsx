@@ -81,7 +81,7 @@ export const NethermindDetails = () => (
           >
             <FormattedMessage
               defaultMessage="Nethermind on Goerli documentation"
-              description="Links to the documentation for the eth1 client Nethermind, specifically for testnet Goerli"
+              description="Links to the documentation for the PoW client Nethermind, specifically for testnet Goerli"
             />
           </Link>
         </>
@@ -91,7 +91,7 @@ export const NethermindDetails = () => (
       </Heading>
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          defaultMessage="Use {http} to connect your PoS node to the JSON RPC
           endpoint. This will enable the JSON RPC services on the default 8545
           port."
           values={{

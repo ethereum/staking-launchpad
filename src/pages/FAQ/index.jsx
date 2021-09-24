@@ -90,7 +90,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
-                  Eth2 validators."
+                  beacon chain validators."
               />
             </Text>
             <Text className="mt10">
@@ -628,7 +628,7 @@ export const FAQ = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to PoW chain (Eth1) after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
                     values={{
                       eth1AddressWithdraw: (
                         <code>

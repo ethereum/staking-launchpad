@@ -965,9 +965,6 @@
   "Px7wWb": {
     "message": "pip documentation"
   },
-  "PyArfT": {
-    "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
-  },
   "Q1ZwPT": {
     "message": "clipboard"
   },
@@ -1215,6 +1212,9 @@
   "Wl6cI3": {
     "message": "Please accept the conditions above."
   },
+  "WxUcvB": {
+    "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+  },
   "WxqnJn": {
     "message": "On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to invalid or contradicting blocks."
   },
@@ -1338,9 +1338,6 @@
   },
   "aXT3iO": {
     "message": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
-  },
-  "aXWL9X": {
-    "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the merge (which means your funds will remain inaccessible until then)."
   },
   "aZ7pUj": {
     "message": "Your wallet is on the wrong Ethereum network. To continue, connect to the {networkName} network."
@@ -2087,6 +2084,9 @@
   },
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
+  },
+  "vkozFq": {
+    "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
   },
   "vyvUB5": {
     "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."

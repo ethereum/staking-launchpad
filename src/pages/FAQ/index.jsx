@@ -224,9 +224,9 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="There’s no way for you to re-activate your validator, and
-                  you won’t be able to transfer or withdraw your funds until
-                  the merge (which means your funds will remain inaccessible until
-                  then)."
+                  you won’t be able to transfer or withdraw your funds until after the post-merge
+                  cleanup upgrade, currently planned to follow the merge (which means your funds will remain
+                  inaccessible until then)."
               />
               <Link className="mt20" to="https://ethereum.org/en/eth2/docking/">
                 <FormattedMessage defaultMessage="More on the merge" />
@@ -628,7 +628,7 @@ export const FAQ = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
                     values={{
                       eth1AddressWithdraw: (
                         <code>

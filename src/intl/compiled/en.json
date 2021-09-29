@@ -2417,24 +2417,6 @@
       "value": "pip documentation"
     }
   ],
-  "PyArfT": [
-    {
-      "type": 0,
-      "value": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set "
-    },
-    {
-      "type": 1,
-      "value": "eth1AddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " when running deposit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
-    }
-  ],
   "Q1ZwPT": [
     {
       "type": 0,
@@ -3123,6 +3105,24 @@
       "value": "Please accept the conditions above."
     }
   ],
+  "WxUcvB": [
+    {
+      "type": 0,
+      "value": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set "
+    },
+    {
+      "type": 1,
+      "value": "eth1AddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " when running deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
   "WxqnJn": [
     {
       "type": 0,
@@ -3441,12 +3441,6 @@
     {
       "type": 0,
       "value": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
-    }
-  ],
-  "aXWL9X": [
-    {
-      "type": 0,
-      "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the merge (which means your funds will remain inaccessible until then)."
     }
   ],
   "aZ7pUj": [
@@ -5343,6 +5337,12 @@
     {
       "type": 0,
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
+    }
+  ],
+  "vkozFq": [
+    {
+      "type": 0,
+      "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
     }
   ],
   "vyvUB5": [

@@ -797,7 +797,7 @@ export const FAQ = () => {
                   help! You can find support on {discord} or {reddit}."
                 values={{
                   discord: (
-                    <Link inline to="https://invite.gg/ethstaker">
+                    <Link inline to="https://discord.io/ethstaker">
                       Discord
                     </Link>
                   ),

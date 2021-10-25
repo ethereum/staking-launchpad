@@ -2,11 +2,11 @@ export interface CalculateEth2RewardsParams {
   slotTimeInSec?: number;
   slotsInEpoch?: number;
   baseRewardFactor?: number;
-  totalAtStake?: number;
+  totalAtStake?: number; // ETH
   averageNetworkPctOnline?: number;
   vaildatorUptime?: number;
-  validatorDeposit?: number;
-  effectiveBalanceIncrement?: number;
+  validatorDeposit?: number; // ETH
+  effectiveBalanceIncrement?: number; // gwei
   weightDenominator?: number;
   proposerWeight?: number;
 }
@@ -18,8 +18,8 @@ const calculateEth2Rewards = ({
   totalAtStake = 1_000_000, // ETH
   averageNetworkPctOnline = 0.95,
   vaildatorUptime = 0.99,
-  validatorDeposit = 32,
-  effectiveBalanceIncrement = 1_000_000_000,
+  validatorDeposit = 32, // ETH
+  effectiveBalanceIncrement = 1_000_000_000, // gwei
   weightDenominator = 64,
   proposerWeight = 8,
 }: CalculateEth2RewardsParams): number => {
@@ -32,7 +32,8 @@ const calculateEth2Rewards = ({
 
   // Calculate base reward for full validator (in gwei)
   const baseGweiRewardFullValidator =
-    ((32 * 10e8) / effectiveBalanceIncrement) * baseRewardPerIncrement;
+    ((validatorDeposit * 10e8) / effectiveBalanceIncrement) *
+    baseRewardPerIncrement;
 
   // Calculate offline per-validator penalty per epoch (in gwei)
   // Note: Inactivity penalty is not included in this simple calculation

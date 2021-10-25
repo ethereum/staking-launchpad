@@ -3,58 +3,46 @@ export interface CalculateEth2RewardsParams {
   slotsInEpoch?: number;
   baseRewardFactor?: number;
   totalAtStake?: number;
-  baseRewardsPerEpoch?: number;
-  baseRewardsPropotionalValidators?: number;
   averageNetworkPctOnline?: number;
-  oneSlotLatePenalty?: number;
   vaildatorUptime?: number;
   validatorDeposit?: number;
+  effectiveBalanceIncrement?: number;
+  weightDenominator?: number;
+  proposerWeight?: number;
 }
 
 const calculateEth2Rewards = ({
   slotTimeInSec = 12,
   slotsInEpoch = 32,
   baseRewardFactor = 64,
-  totalAtStake = 1_000_000,
-  baseRewardsPerEpoch = 4,
-  baseRewardsPropotionalValidators = 3,
+  totalAtStake = 1_000_000, // ETH
   averageNetworkPctOnline = 0.95,
-  oneSlotLatePenalty = 0.0156,
   vaildatorUptime = 0.99,
   validatorDeposit = 32,
+  effectiveBalanceIncrement = 1_000_000_000,
+  weightDenominator = 64,
+  proposerWeight = 8,
 }: CalculateEth2RewardsParams): number => {
   // Calculate number of epochs per year
   const avgSecInYear = 31556908.8; // 60 * 60 * 24 * 365.242
   const epochPerYear = avgSecInYear / (slotTimeInSec * slotsInEpoch);
+  const baseRewardPerIncrement =
+    (effectiveBalanceIncrement * baseRewardFactor) /
+    (totalAtStake * 10e8) ** 0.5;
 
   // Calculate base reward for full validator (in gwei)
   const baseGweiRewardFullValidator =
-    (32 * 10e8 * baseRewardFactor) /
-    (totalAtStake * 10e8) ** 0.5 /
-    baseRewardsPerEpoch;
+    ((32 * 10e8) / effectiveBalanceIncrement) * baseRewardPerIncrement;
 
   // Calculate offline per-validator penalty per epoch (in gwei)
-  const offlineEpochGweiPentalty = baseGweiRewardFullValidator * 4;
+  // Note: Inactivity penalty is not included in this simple calculation
+  const offlineEpochGweiPentalty =
+    baseGweiRewardFullValidator *
+    ((weightDenominator - proposerWeight) / weightDenominator);
 
   // Calculate online per-validator reward per epoch (in gwei)
-  const fullUptimeValidatorRewards =
-    baseGweiRewardFullValidator *
-    baseRewardsPropotionalValidators *
-    averageNetworkPctOnline;
-  const oneEighthReward =
-    0.125 * baseGweiRewardFullValidator * averageNetworkPctOnline;
-  const rewardAdjModifier =
-    averageNetworkPctOnline +
-    averageNetworkPctOnline *
-      (1 - averageNetworkPctOnline) *
-      (1 - oneSlotLatePenalty) +
-    averageNetworkPctOnline *
-      (1 - averageNetworkPctOnline) ** 2 *
-      (1 - 2 * oneSlotLatePenalty);
-  const sevenEighthsReward =
-    0.875 * baseGweiRewardFullValidator * rewardAdjModifier;
   const onlineEpochGweiReward =
-    fullUptimeValidatorRewards + oneEighthReward + sevenEighthsReward;
+    baseGweiRewardFullValidator * averageNetworkPctOnline;
 
   // Calculate net yearly staking reward (in gwei)
   const reward = onlineEpochGweiReward * vaildatorUptime;

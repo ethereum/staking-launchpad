@@ -62,9 +62,6 @@
   "/vPNsl": {
     "message": "The merge, also known as the docking, will see the Ethereum mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
   },
-  "/vkCbT": {
-    "message": "Validators get rewarded for proposing and attesting to blocks. The rewards are tied to the overall amount of {TICKER_NAME} staked in the network."
-  },
   "/w/KT4": {
     "description": "{eip2334} shows 'EIP2334' and links to EIP documentation. {strongText} is important information bolded for emphasis",
     "message": "However, all is not lost. Assuming you derive your keys using {eip2334} (as per the default onboarding flow) then {strongText}."
@@ -86,9 +83,6 @@
   },
   "07C4IQ": {
     "message": "Section 3 - After depositing"
-  },
-  "0GSZcr": {
-    "message": "Staked"
   },
   "0PlVao": {
     "message": "More on slashing prevention"
@@ -248,9 +242,6 @@
   "4l6vz1": {
     "message": "Copy"
   },
-  "52qGy6": {
-    "message": "CURRENT"
-  },
   "54J/qs": {
     "message": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
   },
@@ -312,9 +303,6 @@
   "7d3Nzd": {
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
     "message": "You can use your validator client's graffiti flag to add a personal touch to your proposed blocks (some text of your choice). You will be able to see it using {beaconchain} or {beaconscan} blockchain explorers."
-  },
-  "7s6XNV": {
-    "message": "Staking and rewards"
   },
   "7sZfCF": {
     "message": "More on Nimbus"
@@ -965,9 +953,6 @@
   "Px7wWb": {
     "message": "pip documentation"
   },
-  "PyArfT": {
-    "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the merge, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
-  },
   "Q1ZwPT": {
     "message": "clipboard"
   },
@@ -1027,9 +1012,6 @@
   },
   "RkbwNZ": {
     "message": "Withdrawing your deposit won't be possible until mainnet merges with the Beacon Chain."
-  },
-  "Rm2GQZ": {
-    "message": "Total {TICKER_NAME} staked (millions)"
   },
   "Rr2lI/": {
     "message": "You are responsible for this transaction!"
@@ -1215,6 +1197,9 @@
   "Wl6cI3": {
     "message": "Please accept the conditions above."
   },
+  "WxUcvB": {
+    "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+  },
   "WxqnJn": {
     "message": "On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to invalid or contradicting blocks."
   },
@@ -1339,9 +1324,6 @@
   "aXT3iO": {
     "message": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
   },
-  "aXWL9X": {
-    "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the merge (which means your funds will remain inaccessible until then)."
-  },
   "aZ7pUj": {
     "message": "Your wallet is on the wrong Ethereum network. To continue, connect to the {networkName} network."
   },
@@ -1431,10 +1413,6 @@
   },
   "deLJOg": {
     "message": "Upload a valid json file."
-  },
-  "do+Cyc": {
-    "description": "APR refers to Annual Percentage Rate",
-    "message": "Estimated APR ({TICKER_NAME})"
   },
   "dprf8W": {
     "message": "Where can I find troubleshooting support?"
@@ -1968,10 +1946,6 @@
   "rxttyC": {
     "message": "Your mnemonic is the backup for your signing keys and will be the ONLY way to withdraw your {TICKER_NAME} when the time comes and no one can help you recover your mnemonic if you lose it."
   },
-  "s0FTco": {
-    "description": "APR refers to Annual Percentage Rate",
-    "message": "APR"
-  },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
   },
@@ -2087,6 +2061,9 @@
   },
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
+  },
+  "vkozFq": {
+    "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
   },
   "vyvUB5": {
     "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."

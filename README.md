@@ -45,6 +45,16 @@ yarn
 yarn start
 ```
 
+## Launchpad translation
+
+As part of the [ethereum.org Translation Program](https://ethereum.org/en/contributing/translation-program), our community of translators is also working on translating the Eth2 Launchpad.
+
+If you are interested in getting involved and helping with the translations, please [visit the project in Crowdin](https://crowdin.com/project/launchpad-translation). 
+
+After joining the project, you can start translating by opening your desired language from the language list. If your language isn't available, please reach out to Ethereum.org Team on Crowdin or [open an issue](https://github.com/ethereum/staking-launchpad/issues/new) to request adding a new language for translation.
+
+Detailed information on using Crowdin is available in the [Crowdin Online Editor documentation](https://support.crowdin.com/online-editor/).
+
 ----
 ## Open source licensing info
 Creative Commons Zero v1.0 Universal - For more information read the [`LICENSE`](./LICENSE) file.

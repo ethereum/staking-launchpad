@@ -18,6 +18,7 @@ export const CONTRACT_ADDRESS           = process.env.REACT_APP_CONTRACT_ADDRESS
 export const MIN_DEPOSIT_CLI_VERSION    = process.env.REACT_APP_MIN_DEPOSIT_CLI_VERSION  || '1.0.0';
 export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/';
 export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://status-im.github.io/nimbus-eth2/intro.html';
+export const LODESTAR_INSTALLATION_URL  = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://chainsafe.github.io/lodestar/installation/';
 export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/install/install-with-script';
 export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATION_URL    || 'https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/';
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'

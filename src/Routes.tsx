@@ -26,6 +26,7 @@ import { Prysm } from './pages/Clients/Eth2/Prysm';
 import { Teku } from './pages/Clients/Eth2/Teku';
 import { Nimbus } from './pages/Clients/Eth2/Nimbus';
 import { Lighthouse } from './pages/Clients/Eth2/Lighthouse';
+import { Lodestar } from './pages/Clients/Eth2/Lodestar';
 
 type RouteType = {
   path: string;
@@ -48,6 +49,7 @@ export enum routesEnum {
   nimbus = '/nimbus',
   lighthouse = '/lighthouse',
   teku = '/teku',
+  lodestar = '/lodestar',
   phishingPage = '/phishing',
   checklistPage = '/checklist',
   topUpPage = '/top-up',
@@ -121,6 +123,11 @@ const routes: RouteType[] = [
     path: routesEnum.lighthouse,
     exact: true,
     component: Lighthouse,
+  },
+  {
+    path: routesEnum.lodestar,
+    exact: true,
+    component: Lodestar,
   },
   {
     path: routesEnum.phishingPage,

@@ -11,6 +11,7 @@ import { PrysmDetails } from '../Clients/Eth2/Prysm';
 import { LighthouseDetails } from '../Clients/Eth2/Lighthouse';
 import { TekuDetails } from '../Clients/Eth2/Teku';
 import { NimbusDetails } from '../Clients/Eth2/Nimbus';
+import { LodestarDetails } from '../Clients/Eth2/Lodestar';
 import { GethDetails } from '../Clients/Eth1/Geth';
 import { OpenEthereumDetails } from '../Clients/Eth1/OpenEthereum';
 import { BesuDetails } from '../Clients/Eth1/Besu';
@@ -18,6 +19,7 @@ import { NethermindDetails } from '../Clients/Eth1/Nethermind';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';
 import NimbusCircle from '../../static/nimbus-circle.png';
+import LodestarCircle from '../../static/lodestar-circle.png';
 import TekuCircle from '../../static/pegasys-teku-circle.png';
 import OpenEthereumCircle from '../../static/parity-circle.png';
 import GethCircle from '../../static/gethereum-mascot-circle.png';
@@ -55,6 +57,7 @@ const clientDetails = {
   [ClientId.LIGHTHOUSE]: <LighthouseDetails shortened />,
   [ClientId.PRYSM]: <PrysmDetails shortened />,
   [ClientId.NIMBUS]: <NimbusDetails shortened />,
+  [ClientId.LODESTAR]: <LodestarDetails shortened />,
   [ClientId.GETH]: <GethDetails />,
   [ClientId.OPEN_ETHEREUM]: <OpenEthereumDetails />,
   [ClientId.BESU]: <BesuDetails />,
@@ -122,6 +125,12 @@ const ethClients: {
       name: 'Nimbus',
       imgUrl: NimbusCircle,
       language: 'Nim',
+    },
+    {
+      clientId: ClientId.LODESTAR,
+      name: 'Lodestar',
+      imgUrl: LodestarCircle,
+      language: 'TypeScript',
     },
   ]),
 };

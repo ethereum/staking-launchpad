@@ -141,6 +141,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       pathname === routesEnum.lighthouse ||
       pathname === routesEnum.nimbus ||
       pathname === routesEnum.prysm ||
+      pathname === routesEnum.lodestar ||
       pathname === routesEnum.teku,
     [pathname]
   );
@@ -212,6 +213,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <Box pad="small">
               <DropdownLink to={routesEnum.lighthouse}>Lighthouse</DropdownLink>
               <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+              <DropdownLink to={routesEnum.lodestar}>Lodestar</DropdownLink>
               <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
               <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
             </Box>

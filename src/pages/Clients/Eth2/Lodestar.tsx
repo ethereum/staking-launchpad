@@ -19,8 +19,8 @@ export const LodestarDetails = ({ shortened }: { shortened?: boolean }) => (
     <Text className="mt10">
       <FormattedMessage
         defaultMessage="Lodestar is an open-sourced TypeScript implementation of the Ethereum Consensus (formerly known as eth2)
-                        specification maintained by ChainSafe Systems. Our goal is to develop, improve and diversify the Ethereum
-                        proof of stake ecosystem with our beacon chain and validator client with a focus on light client implementations."
+                        specification maintained by ChainSafe Systems. ChainSafe's goal is to develop, improve and diversify the Ethereum
+                        proof of stake ecosystem with their beacon chain and validator client with a focus on light client implementations."
       />
     </Text>
     <Link to="https://chainsafe.github.io/lodestar/" primary className="mt10">

@@ -37,7 +37,7 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import {
-  ETH2_NETWORK_NAME,
+  NETWORK_NAME,
   GENESIS_FORK_VERSION,
   IS_MAINNET,
 } from '../../utils/envVars';
@@ -134,7 +134,7 @@ const _UploadValidatorPage = ({
           values={{
             network: (
               <span>
-                {ETH2_NETWORK_NAME}
+                {NETWORK_NAME}
                 {IS_MAINNET ? '' : ' testnet'}
               </span>
             ),

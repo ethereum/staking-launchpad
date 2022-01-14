@@ -111,6 +111,9 @@
   "122+yR": {
     "message": "withdrawal key"
   },
+  "192AR6": {
+    "message": "More on staking"
+  },
   "19o6KO": {
     "message": "When can I withdraw my funds, and what’s the difference between exiting and withdrawing?"
   },
@@ -266,6 +269,9 @@
   },
   "6HBTTN": {
     "message": "Proof-of-stake (PoS) and the Beacon Chain"
+  },
+  "6S95Bo": {
+    "message": "Avoid phishing"
   },
   "6UUL73": {
     "message": "More on validators"
@@ -433,9 +439,6 @@
   "BFAvr/": {
     "message": "Top up a validator"
   },
-  "BFfsSX": {
-    "message": "The Eth2 deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
-  },
   "BFsUAH": {
     "description": "{code} values are terminal outputs to look for, should not translate",
     "message": "Check if {code1} is {code2}."
@@ -556,6 +559,9 @@
   "EXLB88": {
     "message": "This is a test network ⚠️"
   },
+  "EcCME0": {
+    "message": "Staking Launchpad"
+  },
   "FEbVwB": {
     "message": "The key concept is the following:"
   },
@@ -661,9 +667,6 @@
   "I5lWZA": {
     "message": "Can I change the withdrawal credentials of my validator after the first deposit?"
   },
-  "IAKvZ0": {
-    "message": "The Eth2 upgrades"
-  },
   "IJw06E": {
     "message": "Sign transaction with your wallet"
   },
@@ -713,9 +716,6 @@
   },
   "JPT/TK": {
     "message": "4. Avoid phishing"
-  },
-  "JYrJic": {
-    "message": "Avoid Eth2 phishing"
   },
   "JhUYU3": {
     "message": "Download CLI app"
@@ -1197,6 +1197,10 @@
   "Wl6cI3": {
     "message": "Please accept the conditions above."
   },
+  "WwIvMy": {
+    "description": "{NETWORK_NAME} is name of network, do not translate",
+    "message": "I've synced my Eth2 beacon node on {NETWORK_NAME}."
+  },
   "WxUcvB": {
     "message": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
   },
@@ -1430,9 +1434,6 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
-  "eIRc60": {
-    "message": "More on Eth2"
-  },
   "eKEL/g": {
     "message": "Pending"
   },
@@ -1465,6 +1466,9 @@
   },
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
+  },
+  "fOURjJ": {
+    "message": "The staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
   },
   "fQ5yno": {
     "message": "Arabic"
@@ -1859,9 +1863,6 @@
   "q2XW/k": {
     "message": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
   },
-  "q6sz6X": {
-    "message": "Eth2 economics"
-  },
   "qDcbPp": {
     "message": "Your 16 ETH can then be withdrawn – with your withdrawal key – after a delay of around a day."
   },
@@ -1958,10 +1959,6 @@
   "sraQ3P": {
     "message": "Waiting to connect..."
   },
-  "svsq8J": {
-    "description": "{ETH2_NETWORK_NAME} is name of network, do not translate",
-    "message": "I've synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
-  },
   "sy35J+": {
     "message": "What is the deposit contract?"
   },
@@ -1986,6 +1983,9 @@
   "tv5Cxs": {
     "description": "{effectiveBalance} shows 'effective balance' in bold. {article}\n                    shows 'excellent post' and links to an article.",
     "message": "Note however that this scaling mechanism works in a non-obvious way. To understand the precise details of how it works requires understanding a concept called {effectiveBalance}. If you’re not yet familiar with this concept, we recommend you read through {article}"
+  },
+  "txdGU9": {
+    "message": "The Ethereum upgrades"
   },
   "tzMNF3": {
     "message": "Status"
@@ -2181,6 +2181,9 @@
   },
   "zGkAVo": {
     "message": "At the other end of the spectrum, if your balance is closer to 31 ETH, it’s probably not worth adding the extra ETH required to get back to 32."
+  },
+  "zJicsO": {
+    "message": "Staking economics"
   },
   "zbEBi9": {
     "description": "{mainnet} shows '--config mainnet' terminal command",

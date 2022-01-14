@@ -293,6 +293,12 @@
       "value": "withdrawal key"
     }
   ],
+  "192AR6": [
+    {
+      "type": 0,
+      "value": "More on staking"
+    }
+  ],
   "19o6KO": [
     {
       "type": 0,
@@ -707,6 +713,12 @@
     {
       "type": 0,
       "value": "Proof-of-stake (PoS) and the Beacon Chain"
+    }
+  ],
+  "6S95Bo": [
+    {
+      "type": 0,
+      "value": "Avoid phishing"
     }
   ],
   "6UUL73": [
@@ -1133,28 +1145,6 @@
       "value": "Top up a validator"
     }
   ],
-  "BFfsSX": [
-    {
-      "type": 0,
-      "value": "The Eth2 deposit contract requires a minimum of "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to be sent at one time to be accepted."
-    }
-  ],
   "BFsUAH": [
     {
       "type": 0,
@@ -1439,6 +1429,12 @@
       "value": "This is a test network ⚠️"
     }
   ],
+  "EcCME0": [
+    {
+      "type": 0,
+      "value": "Staking Launchpad"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1657,12 +1653,6 @@
       "value": "Can I change the withdrawal credentials of my validator after the first deposit?"
     }
   ],
-  "IAKvZ0": [
-    {
-      "type": 0,
-      "value": "The Eth2 upgrades"
-    }
-  ],
   "IJw06E": [
     {
       "type": 0,
@@ -1797,12 +1787,6 @@
     {
       "type": 0,
       "value": "4. Avoid phishing"
-    }
-  ],
-  "JYrJic": [
-    {
-      "type": 0,
-      "value": "Avoid Eth2 phishing"
     }
   ],
   "JhUYU3": [
@@ -3059,6 +3043,20 @@
       "value": "Please accept the conditions above."
     }
   ],
+  "WwIvMy": [
+    {
+      "type": 0,
+      "value": "I've synced my Eth2 beacon node on "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "WxUcvB": [
     {
       "type": 0,
@@ -3643,12 +3641,6 @@
       "value": "code3"
     }
   ],
-  "eIRc60": [
-    {
-      "type": 0,
-      "value": "More on Eth2"
-    }
-  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -3745,6 +3737,28 @@
     {
       "type": 0,
       "value": "The answer to this question very much depends on how much ETH you have at your disposal."
+    }
+  ],
+  "fOURjJ": [
+    {
+      "type": 0,
+      "value": "The staking deposit contract requires a minimum of "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to be sent at one time to be accepted."
     }
   ],
   "fQ5yno": [
@@ -4741,12 +4755,6 @@
       "value": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
     }
   ],
-  "q6sz6X": [
-    {
-      "type": 0,
-      "value": "Eth2 economics"
-    }
-  ],
   "qDcbPp": [
     {
       "type": 0,
@@ -4991,20 +4999,6 @@
       "value": "Waiting to connect..."
     }
   ],
-  "svsq8J": [
-    {
-      "type": 0,
-      "value": "I've synced my Eth2 beacon node on "
-    },
-    {
-      "type": 1,
-      "value": "ETH2_NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "sy35J+": [
     {
       "type": 0,
@@ -5071,6 +5065,12 @@
     {
       "type": 1,
       "value": "article"
+    }
+  ],
+  "txdGU9": [
+    {
+      "type": 0,
+      "value": "The Ethereum upgrades"
     }
   ],
   "tzMNF3": [
@@ -5551,6 +5551,12 @@
     {
       "type": 0,
       "value": "At the other end of the spectrum, if your balance is closer to 31 ETH, it’s probably not worth adding the extra ETH required to get back to 32."
+    }
+  ],
+  "zJicsO": [
+    {
+      "type": 0,
+      "value": "Staking economics"
     }
   ],
   "zbEBi9": [

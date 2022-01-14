@@ -42,7 +42,7 @@ export const GethDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
+        <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
       {!IS_MAINNET && (
         <>

@@ -941,6 +941,24 @@
       "value": "Overview"
     }
   ],
+  "9xeLhs": [
+    {
+      "type": 0,
+      "value": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " when running deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
   "A2b4uB": [
     {
       "type": 0,
@@ -957,6 +975,20 @@
     {
       "type": 0,
       "value": "If you need help, check out the Python documentation."
+    }
+  ],
+  "ACstv9": [
+    {
+      "type": 0,
+      "value": "I've installed and synced my execution client on "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (do not wait on this as it can take several days)."
     }
   ],
   "AEp7+F": [
@@ -1401,12 +1433,6 @@
       "value": "Try again"
     }
   ],
-  "FdbNS6": [
-    {
-      "type": 0,
-      "value": "Configure your Eth1 Client"
-    }
-  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -1533,6 +1559,12 @@
       "value": "Balance"
     }
   ],
+  "HMgrdg": [
+    {
+      "type": 0,
+      "value": "Configure your execution client"
+    }
+  ],
   "HXvZ2L": [
     {
       "type": 0,
@@ -1649,12 +1681,6 @@
     {
       "type": 0,
       "value": " there are two important scenarios to be aware of:"
-    }
-  ],
-  "J0DclJ": [
-    {
-      "type": 0,
-      "value": "Syncing your Eth1 client may take a few days in the worst-case scenario."
     }
   ],
   "J455S4": [
@@ -1817,12 +1843,6 @@
     {
       "type": 0,
       "value": "Error"
-    }
-  ],
-  "KhEtqB": [
-    {
-      "type": 0,
-      "value": "Besu on Goerli documentation"
     }
   ],
   "KjcAm2": [
@@ -2275,6 +2295,12 @@
     {
       "type": 0,
       "value": "Formal verification report"
+    }
+  ],
+  "PmrcLE": [
+    {
+      "type": 0,
+      "value": "Nethermind on Goerli documentation"
     }
   ],
   "PoBIK+": [
@@ -2899,24 +2925,6 @@
       "value": "Please accept the conditions above."
     }
   ],
-  "WxUcvB": [
-    {
-      "type": 0,
-      "value": "Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set "
-    },
-    {
-      "type": 1,
-      "value": "eth1AddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " when running deposit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
-    }
-  ],
   "WxqnJn": [
     {
       "type": 0,
@@ -2945,6 +2953,12 @@
     {
       "type": 0,
       "value": "More on installing pip"
+    }
+  ],
+  "XRxD8r": [
+    {
+      "type": 0,
+      "value": "Besu on Goerli documentation"
     }
   ],
   "XVehvN": [
@@ -3099,20 +3113,6 @@
       "value": " service."
     }
   ],
-  "YZtdY1": [
-    {
-      "type": 0,
-      "value": "As of "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ", you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
-    }
-  ],
   "Yganfl": [
     {
       "type": 0,
@@ -3201,12 +3201,6 @@
     {
       "type": 0,
       "value": "Again, it depends. Behaving maliciously – for example attesting to invalid or contradicting blocks, will lead to your stake being slashed."
-    }
-  ],
-  "ZPpZDC": [
-    {
-      "type": 0,
-      "value": "Please ensure that you have control over the Eth1 address."
     }
   ],
   "ZTo0Fl": [
@@ -3435,6 +3429,16 @@
       "value": "You must sign a transaction for every deposit you want to make."
     }
   ],
+  "d75Ebj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
+    }
+  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -3457,6 +3461,20 @@
     {
       "type": 0,
       "value": "What exactly is a validator?"
+    }
+  ],
+  "dNh0YZ": [
+    {
+      "type": 0,
+      "value": "As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
     }
   ],
   "dTOtPO": [
@@ -3669,6 +3687,12 @@
     {
       "type": 0,
       "value": "impact of effective balance"
+    }
+  ],
+  "frIMm4": [
+    {
+      "type": 0,
+      "value": "Syncing your execution client may take a few days in the worst-case scenario."
     }
   ],
   "g/DxI7": [
@@ -4015,6 +4039,12 @@
       "value": "Connect a wallet"
     }
   ],
+  "jg9gEs": [
+    {
+      "type": 0,
+      "value": "Make sure you do the following to get your execution client working properly."
+    }
+  ],
   "jjLubH": [
     {
       "type": 0,
@@ -4345,20 +4375,6 @@
     {
       "type": 0,
       "value": "Risks and acknowledgements:"
-    }
-  ],
-  "n6Uub0": [
-    {
-      "type": 0,
-      "value": "I've installed and synced my Eth1 node on "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " (do not wait on this as it can take several days)."
     }
   ],
   "n7yYXG": [
@@ -4703,16 +4719,6 @@
       "value": "Note"
     }
   ],
-  "qPG/YN": [
-    {
-      "type": 1,
-      "value": "withdrawalCredentials"
-    },
-    {
-      "type": 0,
-      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Eth1 address withdrawal."
-    }
-  ],
   "qQ+Xla": [
     {
       "type": 0,
@@ -4741,12 +4747,6 @@
     {
       "type": 0,
       "value": "Save the key files and get the validator file ready"
-    }
-  ],
-  "quIMjo": [
-    {
-      "type": 0,
-      "value": "Make sure you do the following to get your Eth1 client working properly."
     }
   ],
   "qwh6gM": [
@@ -5347,12 +5347,6 @@
       "value": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
     }
   ],
-  "xOSMb1": [
-    {
-      "type": 0,
-      "value": "Nethermind on Goerli documentation"
-    }
-  ],
   "xP6BKs": [
     {
       "type": 0,
@@ -5405,6 +5399,12 @@
     {
       "type": 0,
       "value": "Importantly, a validator’s vote is weighted by the amount it has at stake."
+    }
+  ],
+  "yFtJza": [
+    {
+      "type": 0,
+      "value": "Please ensure that you have control over the keys to this address."
     }
   ],
   "yI/DO8": [

@@ -338,7 +338,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
+                  defaultMessage="As of {date}, you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
                   values={{
                     date: (
                       <FormattedDate
@@ -444,7 +444,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Syncing your Eth1 client may take a few days in the worst-case scenario." />
+                <FormattedMessage defaultMessage="Syncing your execution client may take a few days in the worst-case scenario." />
               </Text>
             </li>
           </ul>
@@ -661,13 +661,13 @@ export const Checklist = () => {
         </Alert>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Configure your Eth1 Client" />
+            <FormattedMessage defaultMessage="Configure your execution client" />
           </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)."
+                  defaultMessage="I've installed and synced my execution client on {network} (do not wait on this as it can take several days)."
                   values={{
                     network: IS_MAINNET ? 'mainnet' : 'Goerli',
                   }}

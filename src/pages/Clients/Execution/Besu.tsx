@@ -45,7 +45,7 @@ export const BesuDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
+        <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
       {!IS_MAINNET && (
         <>
@@ -68,7 +68,7 @@ export const BesuDetails = () => (
           >
             <FormattedMessage
               defaultMessage="Besu on Goerli documentation"
-              description="Link to documentation about eth1 client Besu, specifically for goerli testnet"
+              description="Link to documentation about execution client Besu, specifically for Goerli testnet"
             />
           </Link>
         </>

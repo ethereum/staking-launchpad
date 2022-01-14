@@ -585,7 +585,7 @@ export const FAQ = () => {
               <FormattedMessage
                 defaultMessage="{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the
                   destination of valid withdrawals. Currently, there are two types of
-                  withdrawals: BLS withdrawal and Eth1 address withdrawal."
+                  withdrawals: BLS withdrawal and Ethereum address withdrawal."
                 values={{
                   withdrawalCredentials: (
                     <Link
@@ -628,19 +628,19 @@ export const FAQ = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to Eth1 chain after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+                    defaultMessage="Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
                     values={{
-                      eth1AddressWithdraw: (
+                      ethAddressWithdraw: (
                         <code>
                           {' '}
-                          {`--eth1_withdrawal_address <YOUR ETH1 ADDRESS>`}{' '}
+                          {`--eth1_withdrawal_address <YOUR ETH ADDRESS>`}{' '}
                         </code>
                       ),
                       boldWarning: (
                         <strong>
                           {formatMessage({
                             defaultMessage:
-                              'Please ensure that you have control over the Eth1 address.',
+                              'Please ensure that you have control over the keys to this address.',
                           })}
                         </strong>
                       ),

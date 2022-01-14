@@ -38,7 +38,7 @@ export const NethermindDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
+        <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
       {IS_MAINNET && (
         <>
@@ -81,7 +81,7 @@ export const NethermindDetails = () => (
           >
             <FormattedMessage
               defaultMessage="Nethermind on Goerli documentation"
-              description="Links to the documentation for the eth1 client Nethermind, specifically for testnet Goerli"
+              description="Links to the documentation for the execution client Nethermind, specifically for testnet Goerli"
             />
           </Link>
         </>

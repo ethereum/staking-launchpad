@@ -53,7 +53,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="A validator is an entity that participates in the consensus of the
-                  Ethereum 2.0 protocol."
+                  Ethereum protocol."
               />
             </Text>
             <Text className="mt10">

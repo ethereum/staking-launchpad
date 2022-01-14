@@ -213,9 +213,6 @@
   "47svuN": {
     "message": "Installation"
   },
-  "4FcLja": {
-    "message": "Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability."
-  },
   "4NvAhl": {
     "message": "Start by setting up your chosen hardware and operating system."
   },
@@ -433,9 +430,6 @@
   },
   "BoEpk9": {
     "message": "Introduction"
-  },
-  "BvD9ay": {
-    "message": "Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security."
   },
   "C/gb74": {
     "message": "Configure Lighthouse"
@@ -732,9 +726,6 @@
   "KN7zKn": {
     "message": "Error"
   },
-  "KV017i": {
-    "message": "A validator is an entity that participates in the consensus of the Ethereum 2.0 protocol."
-  },
   "KhEtqB": {
     "description": "Link to documentation about eth1 client Besu, specifically for goerli testnet",
     "message": "Besu on Goerli documentation"
@@ -763,6 +754,9 @@
   },
   "L8jrV5": {
     "message": "reload your wallet"
+  },
+  "LHPZ+C": {
+    "message": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
   },
   "LVy+cS": {
     "message": "Check with client documentation to ensure the hardware you want to use is sufficient and supported."
@@ -1262,9 +1256,6 @@
   "ZTo0Fl": {
     "message": "Why is there a wait?"
   },
-  "Zi+EED": {
-    "message": "PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements."
-  },
   "Zspg8H": {
     "message": "Section 1 - Before you start"
   },
@@ -1349,6 +1340,9 @@
   "chw27s": {
     "message": "More on PegaSys Teku"
   },
+  "ckaUkz": {
+    "message": "A validator is an entity that participates in the consensus of the Ethereum protocol."
+  },
   "clUb0+": {
     "message": "Command Line"
   },
@@ -1369,6 +1363,9 @@
   },
   "dIgBOz": {
     "message": "Deposit"
+  },
+  "dJMce5": {
+    "message": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
   },
   "dM/KIM": {
     "message": "What exactly is a validator?"
@@ -1553,6 +1550,9 @@
   "ioj2Sj": {
     "message": "I've imported my keystore(s) into my validator client."
   },
+  "iqJ3LM": {
+    "message": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
+  },
   "irRdC0": {
     "message": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the merge and introduction of shard chains. Do your own research before depositing funds."
   },
@@ -1677,6 +1677,9 @@
   },
   "lVdzDK": {
     "message": "Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
+  },
+  "lfHCV+": {
+    "message": "Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices."
   },
   "lfV1bj": {
     "message": "Importing from Launchpad documentation"
@@ -2109,9 +2112,6 @@
   },
   "xXWzDf": {
     "message": "The Beacon Chain"
-  },
-  "xYRzZY": {
-    "message": "Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices."
   },
   "xbet2w": {
     "message": "Install python3.7+"

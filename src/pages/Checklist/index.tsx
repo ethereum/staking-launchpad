@@ -185,7 +185,7 @@ export const Checklist = () => {
       header: 'Lighthouse',
       text: formatMessage({
         defaultMessage:
-          'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
+          'Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security.',
       }),
       imgUrl: LighthouseBg,
       url: routesEnum.lighthouse,
@@ -197,7 +197,7 @@ export const Checklist = () => {
       header: 'Nimbus',
       text: formatMessage({
         defaultMessage:
-          'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
+          'Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices.',
       }),
       imgUrl: NimbusBg,
       url: routesEnum.nimbus,
@@ -209,7 +209,7 @@ export const Checklist = () => {
       header: 'Prysm',
       text: formatMessage({
         defaultMessage:
-          'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
+          'Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability.',
       }),
       imgUrl: PrysmaticBg,
       url: routesEnum.prysm,
@@ -221,7 +221,7 @@ export const Checklist = () => {
       header: 'Teku',
       text: formatMessage({
         defaultMessage:
-          'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
+          'PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements.',
       }),
       imgUrl: TekuBg,
       url: routesEnum.teku,

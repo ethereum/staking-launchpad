@@ -91,7 +91,7 @@ export const NethermindDetails = () => (
       </Heading>
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          defaultMessage="Use {http} to connect your consensus node to the JSON RPC
           endpoint. This will enable the JSON RPC services on the default 8545
           port."
           values={{

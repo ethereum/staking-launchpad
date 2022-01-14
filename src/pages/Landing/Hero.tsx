@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import Animate from 'animate.css-react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
+import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
 import { routesEnum } from '../../Routes';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
@@ -135,7 +135,7 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
     <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
       <StyledLeslieImgNode
         src={LeslieTheRhinoPNG}
-        alt="Leslie the Rhino - eth2 mascot"
+        alt="Leslie the Rhino - Staking mascot"
         {...{ style }}
       />
     </ScrollAnimation>
@@ -163,10 +163,10 @@ export const Hero = () => {
                       <LogoContainer className={m ? 'mb50' : undefined}>
                         <LogoText>
                           {IS_MAINNET ? (
-                            <FormattedMessage defaultMessage="Eth2 Launchpad" />
+                            <FormattedMessage defaultMessage="Staking Launchpad" />
                           ) : (
                             <FormattedMessage
-                              defaultMessage="Eth2 Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+                              defaultMessage="Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
                               values={{ TESTNET_LAUNCHPAD_NAME }}
                               description="This phrase is a sentence "
                             />

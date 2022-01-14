@@ -90,7 +90,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
-                  Eth2 validators."
+                  Ethereum validators."
               />
             </Text>
             <Text className="mt10">
@@ -559,7 +559,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Slashing has two purposes: (1) to make it prohibitively expensive
-                  to attack Eth2, and (2) to stop validators from being lazy by
+                  to attack the network, and (2) to stop validators from being lazy by
                   checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
               />
             </Text>
@@ -591,7 +591,7 @@ export const FAQ = () => {
                     <Link
                       primary
                       inline
-                      to="https://github.com/ethereum/eth2.0-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
+                      to="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
                     >
                       Withdrawal Credentials
                     </Link>

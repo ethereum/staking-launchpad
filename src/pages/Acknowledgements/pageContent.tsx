@@ -109,7 +109,7 @@ export const pageContent = {
           primary
           inline
         >
-          <FormattedMessage defaultMessage="More on Eth2 economics" />
+          <FormattedMessage defaultMessage="More on staking economics" />
         </Link>
       </>
     ),
@@ -128,11 +128,11 @@ export const pageContent = {
           />
         </Text>
         <Link
-          to="https://github.com/ethereum/eth2.0-specs"
+          to="https://github.com/ethereum/consensus-specs"
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="The Eth2 specification" />
+          <FormattedMessage defaultMessage="The consensus specification" />
         </Link>
         <Link shouldOpenNewTab={true} to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
@@ -254,7 +254,7 @@ export const pageContent = {
       <Text size="medium" className="my10">
         <FormattedMessage
           defaultMessage="To become a validator, you will need to be able to run commands in
-            the terminal on your computer. Generating your new Eth2 key pairs and installing
+            the terminal on your computer. Generating your new key pairs and installing
             the validator software are both done in the terminal."
         />
       </Text>
@@ -277,7 +277,7 @@ export const pageContent = {
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="Eth2 validator checklist" />
+          <FormattedMessage defaultMessage="Validator checklist" />
         </Link>
       </>
     ),

@@ -50,11 +50,11 @@ const SelectClientSection = ({
     {ethVersionStep === 1 && (
       <div style={{ paddingBottom: '1rem' }}>
         <FormattedMessage
-          defaultMessage="To process incoming validator deposits from mainnet (the Eth1 chain),
-            you'll need to run an Eth1 client in parallel to your Eth2 client. While
-            you can use a third-party service like Infura, we recommend running your
-            own client in order to ensure the network stays as decentralised as
-            possible."
+          defaultMessage="To process incoming validator deposits from the execution layer
+          (formerly 'Eth1' chain), you'll need to run an execution client as well as your
+          consensus client (formerly 'Eth2'). You can use a third-party service
+          like Infura, but we recommend running your own client to
+          keep the network as decentralized as possible."
         />
       </div>
     )}

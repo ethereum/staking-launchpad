@@ -146,8 +146,8 @@ const _SelectClientPage = ({
   const selectedClient: ClientId = React.useMemo(
     () =>
       ethVersionStep === 1
-        ? chosenClients.eth1Client
-        : chosenClients.eth2Client,
+        ? chosenClients.executionClient
+        : chosenClients.consensusClient,
     [ethVersionStep, chosenClients]
   );
 
@@ -176,10 +176,11 @@ const _SelectClientPage = ({
   const title = formatMessage(
     {
       defaultMessage: `Choose {ethereum} client`,
-      description: '{ethereum} injects Eth1 or Eth2 depending on step',
+      description:
+        '{ethereum} injects execution or consensus depending on step',
     },
     {
-      ethereum: `Eth${ethVersionStep}`,
+      ethereum: ethVersionStep === 1 ? `execution` : `consensus`,
     }
   );
 
@@ -188,10 +189,10 @@ const _SelectClientPage = ({
       <SelectClientSection
         title={formatMessage(
           {
-            defaultMessage: `Choose your Eth{ethVersionStep} client and set up a node`,
-            description: `{ethVersionStep} is either 1 or 2, depending on which step user is on`,
+            defaultMessage: `Choose your {ethereum} client and set up a node`,
+            description: `{ethereum} is either execution or consensus, depending on which step user is on`,
           },
-          { ethVersionStep }
+          { ethereum: ethVersionStep === 1 ? `execution` : `consensus` }
         )}
         clients={clientOptions}
         currentClient={selectedClient}

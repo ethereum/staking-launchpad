@@ -60,7 +60,7 @@ export const Upgrades = (): JSX.Element => {
       subTitle: formatMessage({
         defaultMessage: 'Dig deeper into how Eth2 upgrades Ethereum.',
       }),
-      linkUrl: 'https://ethereum.org/en/eth2/',
+      linkUrl: 'https://ethereum.org/upgrades/',
       link: formatMessage({ defaultMessage: 'How does this all happen?' }),
     },
     {
@@ -117,7 +117,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/beacon-chain/"
+                to="https://ethereum.org/upgrades/beacon-chain/"
               >
                 <FormattedMessage defaultMessage="More on the Beacon Chain" />
               </Link>
@@ -131,7 +131,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/docking/"
+                to="https://ethereum.org/upgrades/merge/"
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
@@ -141,7 +141,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/shard-chains/"
+                to="https://ethereum.org/upgrades/shard-chains/"
               >
                 <FormattedMessage defaultMessage="More on shard chains" />
               </Link>

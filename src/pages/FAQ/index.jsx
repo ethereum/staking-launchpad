@@ -228,7 +228,7 @@ export const FAQ = () => {
                   cleanup upgrade, currently planned to follow the merge (which means your funds will remain
                   inaccessible until then)."
               />
-              <Link className="mt20" to="https://ethereum.org/en/eth2/docking/">
+              <Link className="mt20" to="https://ethereum.org/upgrades/merge/">
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
             </Text>

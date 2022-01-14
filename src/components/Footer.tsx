@@ -117,7 +117,7 @@ export const Footer = () => {
           <Heading level={4}>
             <FormattedMessage defaultMessage="More on Eth2" />
           </Heading>
-          <Link to="https://ethereum.org/en/eth2/">
+          <Link to="https://ethereum.org/upgrades/">
             <FormattedMessage defaultMessage="The Eth2 upgrades" />
           </Link>
           <Link to={routesEnum.phishingPage}>

@@ -167,7 +167,7 @@ const _Routes = () => {
   const { locale, formatMessage } = useIntl();
   const localizedRoutes = localizeRoutes(locale, routes);
 
-  const title = formatMessage({ defaultMessage: 'Eth2 Launchpad' });
+  const title = formatMessage({ defaultMessage: 'Staking Launchpad' });
   const description = formatMessage({
     defaultMessage:
       'Become a validator and help secure the future of Ethereum.',

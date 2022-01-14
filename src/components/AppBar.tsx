@@ -175,7 +175,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               >
                 <Text>
                   <FormattedMessage
-                    defaultMessage="Eth2 {network} Launchpad"
+                    defaultMessage="Staking Launchpad {network}"
                     values={{
                       network: IS_MAINNET ? '' : `(${NETWORK_NAME})`,
                     }}
@@ -320,7 +320,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   </DropdownLink>
                   <Text className="my20">
                     <b>
-                      <FormattedMessage defaultMessage="The Eth2 clients" />
+                      <FormattedMessage defaultMessage="Consensus clients" />
                     </b>
                   </Text>
                   <DropdownLink to={routesEnum.lighthouse}>

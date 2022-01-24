@@ -32,7 +32,7 @@ type Props = {
   currentClient: ClientId;
   setCurrentClient: (client: ClientId) => void;
   clientDetails: any;
-  ethVersionStep: number;
+  ethClientStep: string;
 };
 
 const SelectClientSection = ({
@@ -41,13 +41,13 @@ const SelectClientSection = ({
   currentClient,
   setCurrentClient,
   clientDetails,
-  ethVersionStep,
+  ethClientStep,
 }: Props): JSX.Element => (
   <Paper>
     <Heading level={3} size="small" color="blueDark" className="mb20">
       {title}
     </Heading>
-    {ethVersionStep === 1 && (
+    {ethClientStep === 'execution' && (
       <div style={{ paddingBottom: '1rem' }}>
         <FormattedMessage
           defaultMessage="To process incoming validator deposits from the execution layer
@@ -77,7 +77,7 @@ const SelectClientSection = ({
           );
         })}
       </ClientOptionContainer>
-      {ethVersionStep === 1 && (
+      {ethClientStep === 'execution' && (
         <Link
           to="https://ethereum.org/en/developers/docs/nodes-and-clients/#clients"
           primary

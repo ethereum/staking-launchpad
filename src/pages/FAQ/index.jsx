@@ -90,7 +90,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
-                  Ethereum validators."
+                  Beacon Chain validators."
               />
             </Text>
             <Text className="mt10">

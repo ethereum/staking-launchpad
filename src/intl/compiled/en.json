@@ -341,6 +341,12 @@
       "value": "Check deposit contract details"
     }
   ],
+  "1ingnQ": [
+    {
+      "type": 0,
+      "value": "More on Ethereum staking economics"
+    }
+  ],
   "22EpKq": [
     {
       "type": 0,
@@ -817,12 +823,6 @@
       "value": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
     }
   ],
-  "8U4kLi": [
-    {
-      "type": 0,
-      "value": "The consensus specification"
-    }
-  ],
   "8WtyrD": [
     {
       "type": 0,
@@ -1011,6 +1011,28 @@
     {
       "type": 0,
       "value": " transaction to the deposit contract on the current Ethereum chain."
+    }
+  ],
+  "AJD+66": [
+    {
+      "type": 0,
+      "value": "The Ethereum staking deposit contract requires a minimum of "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to be sent at one time to be accepted."
     }
   ],
   "AYKxmf": [
@@ -2151,12 +2173,6 @@
       "value": "Become a validator with Teku"
     }
   ],
-  "Nqi05t": [
-    {
-      "type": 0,
-      "value": "More on staking economics"
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -2319,12 +2335,6 @@
     {
       "type": 0,
       "value": "Turkish"
-    }
-  ],
-  "Pwn9hP": [
-    {
-      "type": 0,
-      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Ethereum validators."
     }
   ],
   "Px7wWb": [
@@ -3539,6 +3549,12 @@
       "value": "code3"
     }
   ],
+  "eF9RbC": [
+    {
+      "type": 0,
+      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
+    }
+  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -3635,28 +3651,6 @@
     {
       "type": 0,
       "value": "The answer to this question very much depends on how much ETH you have at your disposal."
-    }
-  ],
-  "fOURjJ": [
-    {
-      "type": 0,
-      "value": "The staking deposit contract requires a minimum of "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to be sent at one time to be accepted."
     }
   ],
   "fQ5yno": [
@@ -4973,6 +4967,12 @@
     {
       "type": 0,
       "value": "Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits."
+    }
+  ],
+  "tbYkT4": [
+    {
+      "type": 0,
+      "value": "The Ethereum consensus-layer specification"
     }
   ],
   "teyxVk": [

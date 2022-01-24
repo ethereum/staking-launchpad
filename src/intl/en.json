@@ -135,6 +135,9 @@
   "1fytak": {
     "message": "Check deposit contract details"
   },
+  "1ingnQ": {
+    "message": "More on Ethereum staking economics"
+  },
   "22EpKq": {
     "description": "{JSON} is filetype extension",
     "message": "This isn't a valid {JSON} file"
@@ -314,9 +317,6 @@
   "8Rj/6A": {
     "message": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
   },
-  "8U4kLi": {
-    "message": "The consensus specification"
-  },
   "8WtyrD": {
     "message": "Spanish"
   },
@@ -380,6 +380,9 @@
   },
   "AEp7+F": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral - in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
+  },
+  "AJD+66": {
+    "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
   },
   "AYKxmf": {
     "message": "Connect your hardware wallet to Metamask"
@@ -861,9 +864,6 @@
   "Nb5DNK": {
     "message": "Become a validator with Teku"
   },
-  "Nqi05t": {
-    "message": "More on staking economics"
-  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -925,9 +925,6 @@
   },
   "PurNgG": {
     "message": "Turkish"
-  },
-  "Pwn9hP": {
-    "message": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Ethereum validators."
   },
   "Px7wWb": {
     "message": "pip documentation"
@@ -1396,6 +1393,9 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
+  "eF9RbC": {
+    "message": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
+  },
   "eKEL/g": {
     "message": "Pending"
   },
@@ -1428,9 +1428,6 @@
   },
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
-  },
-  "fOURjJ": {
-    "message": "The staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
   },
   "fQ5yno": {
     "message": "Arabic"
@@ -1952,6 +1949,9 @@
   },
   "tJcyUM": {
     "message": "Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits."
+  },
+  "tbYkT4": {
+    "message": "The Ethereum consensus-layer specification"
   },
   "teyxVk": {
     "message": "What should the address be?"

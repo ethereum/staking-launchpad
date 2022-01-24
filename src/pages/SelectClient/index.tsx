@@ -70,9 +70,9 @@ export type Client = {
 
 // define and shuffle the clients
 const ethClients: {
-  [ethVersion: number]: Array<Client>;
+  [ethClientType: string]: Array<Client>;
 } = {
-  1: _shuffle([
+  execution: _shuffle([
     {
       clientId: ClientId.OPEN_ETHEREUM,
       name: 'OpenEthereum',
@@ -98,7 +98,7 @@ const ethClients: {
       language: 'C#, .NET',
     },
   ]),
-  2: _shuffle([
+  consensus: _shuffle([
     {
       clientId: ClientId.TEKU,
       name: 'Teku',
@@ -133,26 +133,28 @@ const _SelectClientPage = ({
   dispatchClientUpdate,
 }: Props): JSX.Element => {
   // set the default the eth version to 1 on initial render
-  const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
+  const [ethClientStep, setEthClientStep] = useState<'execution' | 'consensus'>(
+    'execution'
+  );
 
   const { formatMessage } = useIntl();
 
   // filter the options based on the eth version the user is on
-  const clientOptions = React.useMemo(() => ethClients[ethVersionStep], [
-    ethVersionStep,
+  const clientOptions = React.useMemo(() => ethClients[ethClientStep], [
+    ethClientStep,
   ]);
 
   // memoize the chosen client by step
   const selectedClient: ClientId = React.useMemo(
     () =>
-      ethVersionStep === 1
+      ethClientStep === 'execution'
         ? chosenClients.executionClient
         : chosenClients.consensusClient,
-    [ethVersionStep, chosenClients]
+    [ethClientStep, chosenClients]
   );
 
   const setClientFxn = (clientId: ClientId) => {
-    dispatchClientUpdate(clientId, ethVersionStep);
+    dispatchClientUpdate(clientId, ethClientStep);
   };
 
   React.useEffect(() => {
@@ -161,7 +163,7 @@ const _SelectClientPage = ({
     if (header) {
       header.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [ethVersionStep]);
+  }, [ethClientStep]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.SELECT_CLIENT) {
@@ -179,9 +181,7 @@ const _SelectClientPage = ({
       description:
         '{ethereum} injects execution or consensus depending on step',
     },
-    {
-      ethereum: ethVersionStep === 1 ? `execution` : `consensus`,
-    }
+    { ethereum: ethClientStep }
   );
 
   return (
@@ -192,18 +192,18 @@ const _SelectClientPage = ({
             defaultMessage: `Choose your {ethereum} client and set up a node`,
             description: `{ethereum} is either execution or consensus, depending on which step user is on`,
           },
-          { ethereum: ethVersionStep === 1 ? `execution` : `consensus` }
+          { ethereum: ethClientStep }
         )}
         clients={clientOptions}
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}
         clientDetails={clientDetails}
-        ethVersionStep={ethVersionStep}
+        ethClientStep={ethClientStep}
       />
       <div className="flex center p30">
         <SelectClientButtons
-          updateStep={setEthVersionStep}
-          ethVersionStep={ethVersionStep}
+          updateStep={setEthClientStep}
+          ethClientStep={ethClientStep}
           handleSubmit={handleSubmit}
           currentClient={selectedClient}
         />
@@ -218,8 +218,11 @@ const mapStateToProps = ({ workflow, client }: StoreState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchClientUpdate: (clientId: ClientId, ethVersion: 1 | 2) => {
-    dispatch(updateClient(clientId, ethVersion));
+  dispatchClientUpdate: (
+    clientId: ClientId,
+    ethClientType: 'execution' | 'consensus'
+  ) => {
+    dispatch(updateClient(clientId, ethClientType));
   },
   dispatchWorkflowUpdate: (step: WorkflowStep) => {
     dispatch(updateWorkflow(step));

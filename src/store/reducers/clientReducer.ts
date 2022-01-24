@@ -31,15 +31,14 @@ export const clientReducer = (
   action: Action
 ) => {
   if (action.type === ActionTypes.updateClient) {
-    // TODO: replace with "execution"
-    if (action.payload.ethVersion === 1) {
+    if (action.payload.ethClientType === 'execution') {
       return {
         ...state,
         executionClient: action.payload.clientId,
       };
     }
 
-    if (action.payload.ethVersion === 2) {
+    if (action.payload.ethClientType === 'consensus') {
       return {
         ...state,
         consensusClient: action.payload.clientId,

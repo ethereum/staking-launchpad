@@ -135,7 +135,7 @@ const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
     <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
       <StyledLeslieImgNode
         src={LeslieTheRhinoPNG}
-        alt="Leslie the Rhino - Staking mascot"
+        alt="Leslie the Rhino - Ethereum staking mascot"
         {...{ style }}
       />
     </ScrollAnimation>

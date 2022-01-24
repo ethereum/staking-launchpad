@@ -109,7 +109,7 @@ export const pageContent = {
           primary
           inline
         >
-          <FormattedMessage defaultMessage="More on staking economics" />
+          <FormattedMessage defaultMessage="More on Ethereum staking economics" />
         </Link>
       </>
     ),
@@ -132,7 +132,7 @@ export const pageContent = {
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="The consensus specification" />
+          <FormattedMessage defaultMessage="The Ethereum consensus-layer specification" />
         </Link>
         <Link shouldOpenNewTab={true} to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />

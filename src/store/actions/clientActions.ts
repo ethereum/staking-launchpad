@@ -15,24 +15,24 @@ export interface UpdateClientAction {
   type: ActionTypes.updateClient;
   payload: {
     clientId: ClientId;
-    ethConsensusProtocol: 'proof-of-work' | 'proof-of-stake';
+    ethClientType: 'execution' | 'consensus';
   };
 }
 
 export const updateClient = (
   clientId: ClientId,
-  ethConsensusProtocol: 'proof-of-work' | 'proof-of-stake'
+  ethClientType: 'execution' | 'consensus'
 ): UpdateClientAction => {
   return {
     type: ActionTypes.updateClient,
     payload: {
       clientId,
-      ethConsensusProtocol,
+      ethClientType,
     },
   };
 };
 
 export type DispatchClientUpdate = (
   ValidatorId: ClientId,
-  ethConsensusProtocol: 'proof-of-work' | 'proof-of-stake'
+  ethClientType: 'execution' | 'consensus'
 ) => void;

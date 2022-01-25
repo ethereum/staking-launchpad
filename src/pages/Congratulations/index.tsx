@@ -19,7 +19,7 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
-import calculateEth2Rewards from '../../utils/calculateEth2Rewards';
+import calculateStakingRewards from '../../utils/calculateStakingRewards';
 import {
   PRICE_PER_VALIDATOR,
   TESTNET_LAUNCHPAD_NAME,
@@ -29,7 +29,7 @@ import {
   TICKER_NAME,
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
-import LeslieTheRhinoPNG from '../../static/eth2-leslie-rhino.png';
+import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
 import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
@@ -232,7 +232,7 @@ const _CongratulationsPage = ({
 
   const actualTxConfirmed = totalTxCount - remainingTxCount;
 
-  const currentAPR = calculateEth2Rewards({ totalAtStake: state.amountEth });
+  const currentAPR = calculateStakingRewards({ totalAtStake: state.amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
   const handleAllTransactionsClick = () => {

@@ -66,7 +66,7 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              <FormattedMessage defaultMessage="Validators and Proof-of-Stake upgrades" />
+              <FormattedMessage defaultMessage="Validators and Ethereum" />
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
@@ -80,9 +80,9 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              to="https://ethereum.org/en/eth2/vision/"
+              to="https://ethereum.org/upgrades/vision/"
             >
-              <FormattedMessage defaultMessage="More on the Ethereum upgrades vision" />
+              <FormattedMessage defaultMessage="More on the Ethereum vision" />
             </Link>
             <Text className="mt20">
               <FormattedMessage
@@ -93,7 +93,7 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="Today, you'll secure the Beacon Chain, the first Ethereum Proof-of-Stake upgrade.
+                defaultMessage="Today, you'll secure the Beacon Chain, the first main scaling upgrade.
                   It's a separate chain that uses a proof-of-stake consensus
                   mechanism. Eventually you'll help secure all of Ethereum, once
                   mainnet (the Ethereum we use today) merges with the Beacon Chain."
@@ -101,7 +101,7 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              to="https://ethereum.org/en/eth2/docking/"
+              to="https://ethereum.org/upgrades/merge/"
             >
               <FormattedMessage defaultMessage="More on the merge" />
             </Link>

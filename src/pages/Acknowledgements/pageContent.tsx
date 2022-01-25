@@ -73,7 +73,11 @@ export const pageContent = {
               with the Beacon Chain."
           />
         </Text>
-        <Link to="https://ethereum.org/eth2/docking/" className="my10" primary>
+        <Link
+          to="https://ethereum.org/upgrades/merge/"
+          className="my10"
+          primary
+        >
           <FormattedMessage defaultMessage="More on the merge" />
         </Link>
       </>
@@ -124,7 +128,7 @@ export const pageContent = {
           />
         </Text>
         <Link
-          to="https://github.com/ethereum/eth2.0-specs"
+          to="https://github.com/ethereum/consensus-specs"
           className="my10"
           primary
         >
@@ -195,11 +199,7 @@ export const pageContent = {
             values={{ TICKER_NAME }}
           />
         </Text>
-        <Link
-          to="https://ethereum.org/en/eth2/docking"
-          className="my10"
-          primary
-        >
+        <Link to="https://ethereum.org/upgrades/merge" className="my10" primary>
           <FormattedMessage defaultMessage="More on the merge" />
         </Link>
         <Text size="medium" className="my10">
@@ -254,7 +254,7 @@ export const pageContent = {
       <Text size="medium" className="my10">
         <FormattedMessage
           defaultMessage="To become a validator, you will need to be able to run commands in
-            the terminal on your computer. Generating your new PoS chain key pairs and installing
+            the terminal on your computer. Generating your new key pairs and installing
             the validator software are both done in the terminal."
         />
       </Text>
@@ -277,7 +277,7 @@ export const pageContent = {
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="PoS chain validator checklist" />
+          <FormattedMessage defaultMessage="Validator checklist" />
         </Link>
       </>
     ),

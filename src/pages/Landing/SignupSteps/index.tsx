@@ -80,7 +80,7 @@ export const SignupSteps = (): JSX.Element => {
             title={intl.formatMessage({ defaultMessage: '2. Prep nodes' })}
             content={intl.formatMessage({
               defaultMessage:
-                "You'll need to run an PoW and an PoS node to become a validator. Take a look at the checklist to prepare yourself and your equipment.",
+                "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment.",
             })}
           >
             <Link to={routesEnum.checklistPage} primary>

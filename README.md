@@ -1,6 +1,6 @@
-# Ethereum 2.0 Launchpad
+# Ethereum Staking Launchpad
 
-The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your Eth for Ethereum 2.0
+The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your ETH for staking on Ethereum
 
   - **Status**:  This Launchpad is in active development for testnet
 

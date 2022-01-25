@@ -53,7 +53,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="A validator is an entity that participates in the consensus of the
-                  Ethereum 2.0 protocol."
+                  Ethereum protocol."
               />
             </Text>
             <Text className="mt10">
@@ -90,7 +90,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
-                  beacon chain validators."
+                  Beacon Chain validators."
               />
             </Text>
             <Text className="mt10">
@@ -228,7 +228,7 @@ export const FAQ = () => {
                   cleanup upgrade, currently planned to follow the merge (which means your funds will remain
                   inaccessible until then)."
               />
-              <Link className="mt20" to="https://ethereum.org/en/eth2/docking/">
+              <Link className="mt20" to="https://ethereum.org/upgrades/merge/">
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
             </Text>
@@ -559,7 +559,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Slashing has two purposes: (1) to make it prohibitively expensive
-                  to attack Eth2, and (2) to stop validators from being lazy by
+                  to attack the network, and (2) to stop validators from being lazy by
                   checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
               />
             </Text>
@@ -585,13 +585,13 @@ export const FAQ = () => {
               <FormattedMessage
                 defaultMessage="{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the
                   destination of valid withdrawals. Currently, there are two types of
-                  withdrawals: BLS withdrawal and Eth1 address withdrawal."
+                  withdrawals: BLS withdrawal and Ethereum address withdrawal."
                 values={{
                   withdrawalCredentials: (
                     <Link
                       primary
                       inline
-                      to="https://github.com/ethereum/eth2.0-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
+                      to="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
                     >
                       Withdrawal Credentials
                     </Link>
@@ -628,19 +628,19 @@ export const FAQ = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Eth1 address withdrawal: If you want to withdraw to PoW chain (Eth1) after the post-merge cleanup upgrade, you can set {eth1AddressWithdraw} when running deposit-cli. {boldWarning}"
+                    defaultMessage="Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
                     values={{
-                      eth1AddressWithdraw: (
+                      ethAddressWithdraw: (
                         <code>
                           {' '}
-                          {`--eth1_withdrawal_address <YOUR ETH1 ADDRESS>`}{' '}
+                          {`--eth1_withdrawal_address <YOUR ETH ADDRESS>`}{' '}
                         </code>
                       ),
                       boldWarning: (
                         <strong>
                           {formatMessage({
                             defaultMessage:
-                              'Please ensure that you have control over the Eth1 address.',
+                              'Please ensure that you have control over the keys to this address.',
                           })}
                         </strong>
                       ),
@@ -797,7 +797,7 @@ export const FAQ = () => {
                   help! You can find support on {discord} or {reddit}."
                 values={{
                   discord: (
-                    <Link inline to="https://invite.gg/ethstaker">
+                    <Link inline to="https://discord.io/ethstaker">
                       Discord
                     </Link>
                   ),

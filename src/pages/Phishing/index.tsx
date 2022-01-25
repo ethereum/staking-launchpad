@@ -16,12 +16,10 @@ const SectionTitle = styled(Heading)`
 export const Phishing = () => {
   const { formatMessage } = useIntl();
   return (
-    <PageTemplate
-      title={formatMessage({ defaultMessage: 'Avoid Eth2 phishing' })}
-    >
+    <PageTemplate title={formatMessage({ defaultMessage: 'Avoid phishing' })}>
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Phishing is a very real risk for proof-of-stake validators and, unfortunately,
+          defaultMessage="Phishing is a very real risk for Ethereum validators and, unfortunately,
         many people will lose funds due to these attacks."
         />
       </Text>
@@ -71,7 +69,7 @@ export const Phishing = () => {
                   ethereumorg: (
                     <Link
                       inline
-                      to="https://ethereum.org/eth2/deposit-contract/"
+                      to="https://ethereum.org/staking/deposit-contract/"
                     >
                       ethereum.org
                     </Link>
@@ -116,7 +114,7 @@ export const Phishing = () => {
           </li>
           <li>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Check your favorite beacon chain block explorer:" />
+              <FormattedMessage defaultMessage="Check your favorite Beacon Chain block explorer:" />
             </Text>
             <ul>
               <li>

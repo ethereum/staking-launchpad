@@ -115,21 +115,17 @@ export const Footer = () => {
         )}
         <div className="col extra-links">
           <Heading level={4}>
-            <FormattedMessage defaultMessage="More on Ethereum upgrades" />
+            <FormattedMessage defaultMessage="More on staking" />
           </Heading>
-          <Link to="https://ethereum.org/en/eth2/">
-            <FormattedMessage defaultMessage="The Eth2 upgrades" />
+          <Link to="https://ethereum.org/upgrades/">
+            <FormattedMessage defaultMessage="The Ethereum upgrades" />
           </Link>
           <Link to={routesEnum.phishingPage}>
-            <FormattedMessage defaultMessage="Avoid staking phishing" />
+            <FormattedMessage defaultMessage="Avoid phishing" />
           </Link>
           <Link to="https://docs.google.com/spreadsheets/d/15tmPOvOgi3wKxJw7KQJKoUe-uonbYR6HF7u83LR5Mj4/edit#gid=842896204">
-            <FormattedMessage defaultMessage="Ethereum staking economics" />
+            <FormattedMessage defaultMessage="Staking economics" />
           </Link>
-          {/* TODO: add this link when page goes live */}
-          {/* <Link to="http://activate.codefi.network/eth2"> */}
-          {/*  Calculator */}
-          {/* </Link> */}
           <Link to="https://github.com/runtimeverification/deposit-contract-verification/blob/96434de/deposit-contract-verification.pdf">
             <FormattedMessage defaultMessage="Formal verification report" />
           </Link>

@@ -19,7 +19,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10">
       <FormattedMessage
-        defaultMessage="Nimbus is a client implementation for both PoW chain and PoS chain
+        defaultMessage="Nimbus is a client implementation for both execution and consensus layers
                         that strives to be as lightweight as possible in terms of resources used.
                         This allows it to perform well on embedded systems, resource-restricted devices --
                         including Raspberry Pis -- and multi-purpose servers."
@@ -92,7 +92,7 @@ export const Nimbus = () => {
   return (
     <PageTemplate
       title={formatMessage(
-        { defaultMessage: 'PoS Clients: {clientName}' },
+        { defaultMessage: 'Consensus Clients: {clientName}' },
         { clientName: 'Nimbus' }
       )}
     >
@@ -103,7 +103,7 @@ export const Nimbus = () => {
           <SectionTitle level={2} className="mb5">
             <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
-          <Link primary to="https://status-im.github.io/nimbus-eth2/intro.html">
+          <Link primary to="https://nimbus.guide/intro.html">
             <FormattedMessage defaultMessage="Nimbus documentation" />
           </Link>
         </section>

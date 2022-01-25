@@ -58,9 +58,9 @@ export const Upgrades = (): JSX.Element => {
     {
       title: formatMessage({ defaultMessage: 'The upgrades' }),
       subTitle: formatMessage({
-        defaultMessage: 'Dig deeper into how Eth2 upgrades Ethereum.',
+        defaultMessage: 'Dig deeper into Ethereum upgrades.',
       }),
-      linkUrl: 'https://ethereum.org/en/eth2/',
+      linkUrl: 'https://ethereum.org/upgrades/',
       link: formatMessage({ defaultMessage: 'How does this all happen?' }),
     },
     {
@@ -79,7 +79,7 @@ export const Upgrades = (): JSX.Element => {
       title: formatMessage({ defaultMessage: 'Validators FAQ' }),
       subTitle: formatMessage({
         defaultMessage:
-          'Learn more about the roles and responsibilities of Ethereum proof-of-stake validators.',
+          'Learn more about the roles and responsibilities of Ethereum validators.',
       }),
       linkUrl: '/faq',
       link: formatMessage({ defaultMessage: 'More on validators' }),
@@ -93,13 +93,13 @@ export const Upgrades = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                <FormattedMessage defaultMessage="How do the proof-of-Stake and sharding protocols upgrade Ethereum?" />
+                <FormattedMessage defaultMessage="How is Ethereum scaling?" />
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20 mb40">
                 <FormattedMessage
-                  defaultMessage="The proof-of-stake and sharding protocols (Eth2) is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
+                  defaultMessage="Several upgrades are underway that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
                   of today. Here's more on the different upgrades:"
                 />
               </Text>
@@ -117,21 +117,21 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/beacon-chain/"
+                to="https://ethereum.org/upgrades/beacon-chain/"
               >
                 <FormattedMessage defaultMessage="More on the Beacon Chain" />
               </Link>
-              <UpgradeTitle className="mt20">The Merge (docking)</UpgradeTitle>
+              <UpgradeTitle className="mt20">The Merge</UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="The merge, also known as the docking, will see the Ethereum
-                    mainnet we use today merge with the Beacon Chain. This is when
+                  defaultMessage="The merge will see the Ethereum
+                    Mainnet we use today merge with the Beacon Chain. This is when
                     Ethereum will fully transition to proof-of-stake."
                 />
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/docking/"
+                to="https://ethereum.org/upgrades/merge/"
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
@@ -141,7 +141,7 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/shard-chains/"
+                to="https://ethereum.org/upgrades/shard-chains/"
               >
                 <FormattedMessage defaultMessage="More on shard chains" />
               </Link>

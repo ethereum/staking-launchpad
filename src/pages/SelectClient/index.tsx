@@ -177,11 +177,11 @@ const _SelectClientPage = ({
 
   const title = formatMessage(
     {
-      defaultMessage: `Choose {ethereum} client`,
+      defaultMessage: `Choose {ethClientType} client`,
       description:
-        '{ethereum} injects execution or consensus depending on step',
+        '{ethClientType} injects execution or consensus depending on step',
     },
-    { ethereum: ethClientStep }
+    { ethClientType: ethClientStep }
   );
 
   return (
@@ -189,10 +189,10 @@ const _SelectClientPage = ({
       <SelectClientSection
         title={formatMessage(
           {
-            defaultMessage: `Choose your {ethereum} client and set up a node`,
-            description: `{ethereum} is either execution or consensus, depending on which step user is on`,
+            defaultMessage: `Choose your {ethClientType} client and set up a node`,
+            description: `{ethClientType} is either execution or consensus, depending on which step user is on`,
           },
-          { ethereum: ethClientStep }
+          { ethClientType: ethClientStep }
         )}
         clients={clientOptions}
         currentClient={selectedClient}

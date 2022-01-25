@@ -864,6 +864,10 @@
   "Nb5DNK": {
     "message": "Become a validator with Teku"
   },
+  "Ns8vbQ": {
+    "description": "{ethClientType} injects execution or consensus depending on step",
+    "message": "Choose {ethClientType} client"
+  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -1603,10 +1607,6 @@
   "jytPQU": {
     "message": "Nimbus documentation"
   },
-  "kA2biU": {
-    "description": "{ethereum} injects execution or consensus depending on step",
-    "message": "Choose {ethereum} client"
-  },
   "kFS5Sd": {
     "message": "Deposit contract formally verified"
   },
@@ -1903,10 +1903,6 @@
   "rcdxTW": {
     "message": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
   },
-  "riVKyl": {
-    "description": "{ethereum} is either execution or consensus, depending on which step user is on",
-    "message": "Choose your {ethereum} client and set up a node"
-  },
   "rnDgcN": {
     "message": "No, you cannot change your withdrawal credentials in top-ups."
   },
@@ -1961,6 +1957,10 @@
   },
   "tkFTZw": {
     "message": "Balance after topping up"
+  },
+  "toCscK": {
+    "description": "{ethClientType} is either execution or consensus, depending on which step user is on",
+    "message": "Choose your {ethClientType} client and set up a node"
   },
   "tsfX5f": {
     "message": "Confirm deposit"

@@ -121,7 +121,9 @@ export const Upgrades = (): JSX.Element => {
               >
                 <FormattedMessage defaultMessage="More on the Beacon Chain" />
               </Link>
-              <UpgradeTitle className="mt20">The Merge</UpgradeTitle>
+              <UpgradeTitle className="mt20">
+                <FormattedMessage defaultMessage="The Merge" />
+              </UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage
                   defaultMessage="The merge will see the Ethereum
@@ -135,7 +137,9 @@ export const Upgrades = (): JSX.Element => {
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
-              <UpgradeTitle className="mt20">Sharding </UpgradeTitle>
+              <UpgradeTitle className="mt20">
+                <FormattedMessage defaultMessage="Sharding" />
+              </UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage defaultMessage="Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more." />
               </Text>

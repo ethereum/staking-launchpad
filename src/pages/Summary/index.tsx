@@ -187,7 +187,7 @@ const _SummaryPage = ({
         <Row>
           <Link
             isTextLink={false}
-            to="https://ethereum.org/staking/deposit-contract/"
+            to="https://ethereum.org/en/staking/deposit-contract/"
             primary
           >
             <Button

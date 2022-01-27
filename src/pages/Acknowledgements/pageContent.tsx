@@ -74,7 +74,7 @@ export const pageContent = {
           />
         </Text>
         <Link
-          to="https://ethereum.org/upgrades/merge/"
+          to="https://ethereum.org/en/upgrades/merge/"
           className="my10"
           primary
         >
@@ -199,7 +199,11 @@ export const pageContent = {
             values={{ TICKER_NAME }}
           />
         </Text>
-        <Link to="https://ethereum.org/upgrades/merge" className="my10" primary>
+        <Link
+          to="https://ethereum.org/en/upgrades/merge"
+          className="my10"
+          primary
+        >
           <FormattedMessage defaultMessage="More on the merge" />
         </Link>
         <Text size="medium" className="my10">

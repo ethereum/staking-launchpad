@@ -2,11 +2,11 @@
   "+3PPtT": {
     "message": "Today, you'll secure the Beacon Chain, the first Eth2 upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
   },
-  "+G49wA": {
-    "message": "After merging 'Eth1' and 'Eth2' into a single chain, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
-  },
   "+L0IkF": {
     "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
+  },
+  "+M/NC/": {
+    "message": "After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum."
   },
   "+UUcBt": {
     "message": "Choose a language"
@@ -764,9 +764,6 @@
   "KjcAm2": {
     "message": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
   },
-  "KpIumF": {
-    "message": "'Eth2' is now the 'consensus layer', which handles proof-of-stake consensus."
-  },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
   },
@@ -844,6 +841,9 @@
   },
   "Mc8nNE": {
     "message": "Transaction failed"
+  },
+  "Mm7FSl": {
+    "message": "The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge."
   },
   "MmZjeu": {
     "message": "Top-up details"
@@ -1551,6 +1551,9 @@
   "hPCn9f": {
     "message": "--JsonRpc.Enabled documentation"
   },
+  "hSlWYo": {
+    "message": "Ethereum will consist the execution layer (handles data and transactions, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
+  },
   "hXE+0W": {
     "description": "Tells user to upload specific JSON file created during previous step",
     "message": "Upload {depositJSON}"
@@ -1629,15 +1632,9 @@
   "jjLubH": {
     "message": "Prysm installation documentation"
   },
-  "jkE4nT": {
-    "message": "'Eth1' is now the 'execution layer', which handles transactions and data."
-  },
   "jm79h1": {
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validators at once"
-  },
-  "josdUg": {
-    "message": "To limit confusion, the community has updated these terms:"
   },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
@@ -1989,6 +1986,9 @@
   "tJcyUM": {
     "message": "Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits."
   },
+  "tMHEEe": {
+    "message": "Learn more about the great renaming"
+  },
   "teyxVk": {
     "message": "What should the address be?"
   },
@@ -2169,9 +2169,6 @@
     "description": "{boldSummary} is styled with bold for emphasis",
     "message": "In other words, {boldSummary}. The more votes a block gets, the more likely it is to be added to the chain."
   },
-  "ycPJ44": {
-    "message": "Learn more about the 'Eth2' renaming"
-  },
   "ydh1KU": {
     "message": "Language information"
   },
@@ -2209,8 +2206,5 @@
   },
   "zicXn7": {
     "message": "Node security"
-  },
-  "zsVb+n": {
-    "message": "The term 'Eth2' is being phased out in preparation for the merge."
   }
 }

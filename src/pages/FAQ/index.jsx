@@ -238,22 +238,16 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What happened to 'Eth2?'" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="The term 'Eth2' is being phased out in preparation for the merge." />
+              <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge." />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="After merging 'Eth1' and 'Eth2' into a single chain, there will no
-                  longer be two distinct Ethereum networks; there will only be Ethereum."
+                defaultMessage="Ethereum will consist the execution layer (handles data and transactions, formerly 'Eth1'), and the
+                  consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
               />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage defaultMessage="To limit confusion, the community has updated these terms:" />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage defaultMessage="'Eth1' is now the 'execution layer', which handles transactions and data." />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage defaultMessage="'Eth2' is now the 'consensus layer', which handles proof-of-stake consensus." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
@@ -264,7 +258,7 @@ export const FAQ = () => {
                 className="mt20"
                 to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/"
               >
-                <FormattedMessage defaultMessage="Learn more about the 'Eth2' renaming" />
+                <FormattedMessage defaultMessage="Learn more about the great renaming" />
               </Link>
             </Text>
           </section>

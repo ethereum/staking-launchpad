@@ -1,4 +1,4 @@
-export interface CalculateEth2RewardsParams {
+export interface CalculateStakingRewardsParams {
   slotTimeInSec?: number;
   slotsInEpoch?: number;
   baseRewardFactor?: number;
@@ -11,7 +11,7 @@ export interface CalculateEth2RewardsParams {
   proposerWeight?: number;
 }
 
-const calculateEth2Rewards = ({
+const calculateStakingRewards = ({
   slotTimeInSec = 12,
   slotsInEpoch = 32,
   baseRewardFactor = 64,
@@ -22,7 +22,7 @@ const calculateEth2Rewards = ({
   effectiveBalanceIncrement = 1_000_000_000, // gwei
   weightDenominator = 64,
   proposerWeight = 8,
-}: CalculateEth2RewardsParams): number => {
+}: CalculateStakingRewardsParams): number => {
   // Calculate number of epochs per year
   const avgSecInYear = 31556908.8; // 60 * 60 * 24 * 365.242
   const epochPerYear = avgSecInYear / (slotTimeInSec * slotsInEpoch);
@@ -54,4 +54,4 @@ const calculateEth2Rewards = ({
   return netRewardPerYear / 10e8 / validatorDeposit;
 };
 
-export default calculateEth2Rewards;
+export default calculateStakingRewards;

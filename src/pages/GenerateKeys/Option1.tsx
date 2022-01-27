@@ -7,7 +7,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
@@ -129,7 +129,7 @@ export const Option1 = ({
               {`--${formatMessage({
                 defaultMessage: 'chain',
                 description: 'this is used as a command line flag',
-              })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
+              })} ${NETWORK_NAME.toLowerCase()}`}
             </span>
           </Pre>
         </Alert>
@@ -143,14 +143,12 @@ export const Option1 = ({
                     {`--${formatMessage({
                       defaultMessage: 'chain',
                       description: 'this is used as a command line flag',
-                    })} ${ETH2_NETWORK_NAME.toLowerCase()}`}
+                    })} ${NETWORK_NAME.toLowerCase()}`}
                   </Code>
                 ),
                 network: (
                   <span>
-                    {IS_MAINNET
-                      ? ETH2_NETWORK_NAME
-                      : `${ETH2_NETWORK_NAME} testnet`}
+                    {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
                   </span>
                 ),
               }}

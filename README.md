@@ -1,6 +1,6 @@
-# Ethereum 2.0 Launchpad
+# Ethereum Staking Launchpad
 
-The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your Eth for Ethereum 2.0
+The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your ETH for staking on Ethereum
 
 ## Dependencies
 
@@ -45,7 +45,7 @@ yarn start
 
 ## Launchpad translation
 
-As part of the [ethereum.org Translation Program](https://ethereum.org/en/contributing/translation-program), our community of translators is also working on translating the Eth2 Launchpad.
+As part of the [ethereum.org Translation Program](https://ethereum.org/en/contributing/translation-program), our community of translators is also working on translating the Ethereum Staking Launchpad.
 
 If you are interested in getting involved and helping with the translations, please [visit the project in Crowdin](https://crowdin.com/project/launchpad-translation). 
 

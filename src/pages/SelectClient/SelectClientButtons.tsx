@@ -7,21 +7,21 @@ import { routesEnum } from '../../Routes';
 import { ClientId } from '../../store/actions/clientActions';
 
 type Props = {
-  ethVersionStep: 1 | 2;
+  ethClientStep: 'execution' | 'consensus';
   currentClient: ClientId;
   handleSubmit: LinkProps['onClick'];
-  updateStep: (nextStep: 1 | 2) => void;
+  updateStep: (nextStep: 'execution' | 'consensus') => void;
 };
 
 const SelectClientButtons = ({
-  ethVersionStep,
+  ethClientStep,
   currentClient,
   handleSubmit,
   updateStep,
 }: Props) => {
   const { formatMessage } = useIntl();
 
-  if (ethVersionStep === 1) {
+  if (ethClientStep === 'execution') {
     return (
       <>
         <Link to={routesEnum.acknowledgementPage}>
@@ -36,7 +36,7 @@ const SelectClientButtons = ({
           rainbow
           disabled={!currentClient}
           label={formatMessage({ defaultMessage: 'Continue' })}
-          onClick={() => updateStep(2)}
+          onClick={() => updateStep('consensus')}
         />
       </>
     );
@@ -48,7 +48,7 @@ const SelectClientButtons = ({
         className="mr10"
         width={100}
         label={formatMessage({ defaultMessage: 'Back' })}
-        onClick={() => updateStep(1)}
+        onClick={() => updateStep('execution')}
       />
       <Link to={routesEnum.generateKeysPage} onClick={handleSubmit}>
         <Button

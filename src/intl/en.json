@@ -1524,9 +1524,6 @@
   "hPCn9f": {
     "message": "--JsonRpc.Enabled documentation"
   },
-  "hSlWYo": {
-    "message": "Ethereum will consist the execution layer (handles data and transactions, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
-  },
   "hXE+0W": {
     "description": "Tells user to upload specific JSON file created during previous step",
     "message": "Upload {depositJSON}"
@@ -1837,6 +1834,9 @@
   },
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."
+  },
+  "pofmhk": {
+    "message": "Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
   },
   "pqC+qt": {
     "message": "Slashing"

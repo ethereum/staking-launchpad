@@ -248,7 +248,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Ethereum will consist of the execution layer (handles data and transactions, formerly 'Eth1'), and the
+                defaultMessage="Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the
                   consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
               />
             </Text>

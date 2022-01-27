@@ -8,7 +8,7 @@ import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
 import { BEACONCHAIN_URL, TICKER_NAME } from '../../../utils/envVars';
-import calculateEth2Rewards from '../../../utils/calculateEth2Rewards';
+import calculateStakingRewards from '../../../utils/calculateStakingRewards';
 
 //
 // Styled Components
@@ -85,7 +85,7 @@ export const NetworkStatus: React.FC<{
     return () => window.removeEventListener('resize', resizeListener);
   }, []);
 
-  const currentAPR = calculateEth2Rewards({ totalAtStake: amountEth });
+  const currentAPR = calculateStakingRewards({ totalAtStake: amountEth });
   const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
 
   const LoadingHandler: React.FC<{
@@ -105,7 +105,7 @@ export const NetworkStatus: React.FC<{
       <ScrollAnimation delay={750} animateIn="fadeIn" animateOnce>
         <Content isMobile={m}>
           <Heading level={2} size="medium" color="blueDark" className="mb40">
-            <FormattedMessage defaultMessage="The Eth2 network" />
+            <FormattedMessage defaultMessage="The Beacon Chain" />
           </Heading>
           <CardContainer>
             <Card>

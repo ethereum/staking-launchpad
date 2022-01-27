@@ -2,6 +2,9 @@
   "+3PPtT": {
     "message": "Today, you'll secure the Beacon Chain, the first Eth2 upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
   },
+  "+G49wA": {
+    "message": "After merging 'Eth1' and 'Eth2' into a single chain, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
+  },
   "+L0IkF": {
     "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -207,6 +210,9 @@
   },
   "3QmqFf": {
     "message": "Top-up transaction"
+  },
+  "3SOKyg": {
+    "message": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
   },
   "3URRZK": {
     "message": "Geth on Goerli documentation"
@@ -757,6 +763,9 @@
   },
   "KjcAm2": {
     "message": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
+  },
+  "KpIumF": {
+    "message": "'Eth2' is now the 'consensus layer', which handles proof-of-stake consensus."
   },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
@@ -1620,9 +1629,15 @@
   "jjLubH": {
     "message": "Prysm installation documentation"
   },
+  "jkE4nT": {
+    "message": "'Eth1' is now the 'execution layer', which handles transactions and data."
+  },
   "jm79h1": {
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validators at once"
+  },
+  "josdUg": {
+    "message": "To limit confusion, the community has updated these terms:"
   },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
@@ -1861,6 +1876,9 @@
   },
   "q6sz6X": {
     "message": "Eth2 economics"
+  },
+  "qB6aU6": {
+    "message": "What happened to 'Eth2?'"
   },
   "qDcbPp": {
     "message": "Your 16 ETH can then be withdrawn – with your withdrawal key – after a delay of around a day."
@@ -2151,6 +2169,9 @@
     "description": "{boldSummary} is styled with bold for emphasis",
     "message": "In other words, {boldSummary}. The more votes a block gets, the more likely it is to be added to the chain."
   },
+  "ycPJ44": {
+    "message": "Learn more about the 'Eth2' renaming"
+  },
   "ydh1KU": {
     "message": "Language information"
   },
@@ -2188,5 +2209,8 @@
   },
   "zicXn7": {
     "message": "Node security"
+  },
+  "zsVb+n": {
+    "message": "The term 'Eth2' is being phased out in preparation for the merge."
   }
 }

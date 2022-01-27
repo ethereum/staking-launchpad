@@ -236,6 +236,35 @@ export const FAQ = () => {
               </Link>
             </Text>
           </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="What happened to 'Eth2?'" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge." />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum." />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the
+                  consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
+              />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="These terminology updates only change naming conventions; this does not alter
+                  Ethereum's goals or roadmap."
+              />
+              <Link
+                className="mt20"
+                to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/"
+              >
+                <FormattedMessage defaultMessage="Learn more about the great renaming" />
+              </Link>
+            </Text>
+          </section>
         </section>
         <section>
           <Anchor to="#responsibilities" id="responsibilities">

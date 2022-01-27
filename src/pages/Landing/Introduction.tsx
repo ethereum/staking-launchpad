@@ -100,6 +100,12 @@ export const Introduction = (): JSX.Element => {
               />
             </Text>
             <Link
+              className="mt20"
+              to="https://ethereum.org/en/upgrades/beacon-chain/"
+            >
+              <FormattedMessage defaultMessage="More on the Beacon Chain" />
+            </Link>
+            <Link
               className="mt20 mb40"
               to="https://ethereum.org/en/upgrades/merge/"
             >

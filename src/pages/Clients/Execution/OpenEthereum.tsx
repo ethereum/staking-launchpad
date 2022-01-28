@@ -46,7 +46,7 @@ export const OpenEthereumDetails = () => (
             <FormattedMessage defaultMessage="Setup" />
           </SectionTitle>
           <Text className="mb20 mt10">
-            <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
+            <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
           </Text>
           <Heading level={3} className="mt20">
             <FormattedMessage defaultMessage="Testing on Goerli" />

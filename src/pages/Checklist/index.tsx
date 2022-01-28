@@ -10,7 +10,7 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import {
   BEACONCHAIN_URL,
-  ETH2_NETWORK_NAME,
+  NETWORK_NAME,
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
@@ -185,7 +185,7 @@ export const Checklist = () => {
       header: 'Lighthouse',
       text: formatMessage({
         defaultMessage:
-          'Lighthouse is a Ethereum 2.0 implementation, written in Rust with a heavy focus on speed and security.',
+          'Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security.',
       }),
       imgUrl: LighthouseBg,
       url: routesEnum.lighthouse,
@@ -197,7 +197,7 @@ export const Checklist = () => {
       header: 'Nimbus',
       text: formatMessage({
         defaultMessage:
-          'Nimbus is a research project and a client implementation for Ethereum 2.0 designed to perform well on embedded systems and personal mobile devices.',
+          'Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices.',
       }),
       imgUrl: NimbusBg,
       url: routesEnum.nimbus,
@@ -209,7 +209,7 @@ export const Checklist = () => {
       header: 'Prysm',
       text: formatMessage({
         defaultMessage:
-          'Prysm is a Go implementation of Ethereum 2.0 protocol with a focus on usability, security, and reliability.',
+          'Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability.',
       }),
       imgUrl: PrysmaticBg,
       url: routesEnum.prysm,
@@ -221,7 +221,7 @@ export const Checklist = () => {
       header: 'Teku',
       text: formatMessage({
         defaultMessage:
-          'PegaSys Teku is a Java-based Ethereum 2.0 client built to meet institutional needs and security requirements.',
+          'PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements.',
       }),
       imgUrl: TekuBg,
       url: routesEnum.teku,
@@ -233,7 +233,7 @@ export const Checklist = () => {
 
   return (
     <PageTemplate
-      title={formatMessage({ defaultMessage: 'Eth2 validator checklist' })}
+      title={formatMessage({ defaultMessage: 'Validator checklist' })}
     >
       <div id="top" />
       <Subtitle>
@@ -327,18 +327,18 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="To process incoming validator deposits from the Eth1
-                    chain, you'll need to run an Eth1 client as well as your
-                    Eth2 client. You can use a third-party service
+                  defaultMessage="To process incoming validator deposits from the execution layer
+                    (formerly 'Eth1' chain), you'll need to run an execution client as well as your
+                    consensus client (formerly 'Eth2'). You can use a third-party service
                     like Infura, but we recommend running your own client to
-                    keep the network as decentralised as possible."
+                    keep the network as decentralized as possible."
                 />
               </Text>
             </li>
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="As of {date}, you'll need ~400GB for the Eth1 mainnet chain data alone (growing at ~1GB/day)."
+                  defaultMessage="As of {date}, you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
                   values={{
                     date: (
                       <FormattedDate
@@ -444,7 +444,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Syncing your Eth1 client may take a few days in the worst-case scenario." />
+                <FormattedMessage defaultMessage="Syncing your execution client may take a few days in the worst-case scenario." />
               </Text>
             </li>
           </ul>
@@ -661,13 +661,13 @@ export const Checklist = () => {
         </Alert>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Configure your Eth1 Client" />
+            <FormattedMessage defaultMessage="Configure your execution client" />
           </Heading>
           <CheckBox
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've installed and synced my Eth1 node on {network} (do not wait on this as it can take several days)."
+                  defaultMessage="I've installed and synced my execution client on {network} (do not wait on this as it can take several days)."
                   values={{
                     network: IS_MAINNET ? 'mainnet' : 'Goerli',
                   }}
@@ -678,7 +678,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Configure your Eth2 client" />
+            <FormattedMessage defaultMessage="Configure your consensus client" />
           </Heading>
           <Link className="mt10" to="/faq" primary>
             <FormattedMessage defaultMessage="More on validator roles and responsibilities" />
@@ -702,7 +702,7 @@ export const Checklist = () => {
             </Heading>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="It is high risk to run your Eth2 validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
+                defaultMessage="It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
                 values={{
                   learnMore: (
                     <Link primary inline to="/faq#responsibilities">
@@ -719,7 +719,7 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've installed the {latestRelease} of my Eth2 client."
+                  defaultMessage="I've installed the {latestRelease} of my consensus client."
                   values={{
                     latestRelease: (
                       <strong>
@@ -737,7 +737,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Eth2 Beacon Node (BN)" />
+            <FormattedMessage defaultMessage="Consensus Layer Beacon Node (BN)" />
           </Heading>
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Required" />
@@ -745,7 +745,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I'm able to connect my Eth2 beacon node to my Eth1 client via HTTP API(s)." />
+                <FormattedMessage defaultMessage="I'm able to connect my consensus client to my execution client via HTTP API(s)." />
               </Text>
             }
           />
@@ -765,9 +765,9 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've synced my Eth2 beacon node on {ETH2_NETWORK_NAME}."
-                  values={{ ETH2_NETWORK_NAME }}
-                  description="{ETH2_NETWORK_NAME} is name of network, do not translate"
+                  defaultMessage="I've synced my beacon node on {NETWORK_NAME}."
+                  values={{ NETWORK_NAME }}
+                  description="{NETWORK_NAME} is name of network, do not translate"
                 />
               </Text>
             }
@@ -809,7 +809,7 @@ export const Checklist = () => {
         </section>
         <section>
           <Heading level={3}>
-            <FormattedMessage defaultMessage="Eth2 Validator Client (VC)" />
+            <FormattedMessage defaultMessage="Consensus Layer Validator Client (VC)" />
           </Heading>
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Required" />
@@ -817,7 +817,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I've imported my keystore(s) into my Eth2 validator client." />
+                <FormattedMessage defaultMessage="I've imported my keystore(s) into my validator client." />
               </Text>
             }
           />
@@ -869,8 +869,8 @@ export const Checklist = () => {
           </Heading>
           <Text>
             <FormattedMessage
-              defaultMessage="The Eth2 clients support Prometheus and Grafana to help you
-                visualise important real-time metrics about your validator. You can
+              defaultMessage="The clients support Prometheus and Grafana to help you
+                visualize important real-time metrics about your validator. You can
                 find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
               values={{
                 lighthouse: (
@@ -886,7 +886,7 @@ export const Checklist = () => {
                   <Link
                     primary
                     inline
-                    to="https://status-im.github.io/nimbus-eth2/metrics-pretty-pictures.html"
+                    to="https://nimbus.guide/metrics-pretty-pictures.html"
                   >
                     Nimbus
                   </Link>
@@ -988,7 +988,7 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I've simulated how to migrate from one Eth2 client to another Eth2 client." />
+                <FormattedMessage defaultMessage="I've simulated how to safely migrate from one consensus client to another." />
               </Text>
             }
           />

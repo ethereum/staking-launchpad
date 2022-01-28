@@ -6,7 +6,7 @@ import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { ETH2_NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
 
@@ -164,7 +164,7 @@ export const Option2 = ({
                   description: 'this is used as a command line flag',
                 })
               : `chain`
-          } ${ETH2_NETWORK_NAME.toLowerCase()}`}
+          } ${NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -187,7 +187,7 @@ export const Option2 = ({
                   description: 'this is used as a command line flag',
                 })
               : `chain`
-          } ${ETH2_NETWORK_NAME.toLowerCase()}`}
+          } ${NETWORK_NAME.toLowerCase()}`}
         </Pre>
       );
     }
@@ -330,13 +330,11 @@ export const Option2 = ({
                 <Code>{`--${formatMessage({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
-                })} ${ETH2_NETWORK_NAME.toLowerCase()}`}</Code>
+                })} ${NETWORK_NAME.toLowerCase()}`}</Code>
               ),
               network: (
                 <span>
-                  {IS_MAINNET
-                    ? ETH2_NETWORK_NAME
-                    : `${ETH2_NETWORK_NAME} testnet`}
+                  {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
                 </span>
               ),
             }}

@@ -15,24 +15,24 @@ export interface UpdateClientAction {
   type: ActionTypes.updateClient;
   payload: {
     clientId: ClientId;
-    ethVersion: 1 | 2;
+    ethClientType: 'execution' | 'consensus';
   };
 }
 
 export const updateClient = (
   clientId: ClientId,
-  ethVersion: 1 | 2
+  ethClientType: 'execution' | 'consensus'
 ): UpdateClientAction => {
   return {
     type: ActionTypes.updateClient,
     payload: {
       clientId,
-      ethVersion,
+      ethClientType,
     },
   };
 };
 
 export type DispatchClientUpdate = (
   ValidatorId: ClientId,
-  ethVersion: 1 | 2
+  ethClientType: 'execution' | 'consensus'
 ) => void;

@@ -37,7 +37,7 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import {
-  ETH2_NETWORK_NAME,
+  NETWORK_NAME,
   GENESIS_FORK_VERSION,
   IS_MAINNET,
 } from '../../utils/envVars';
@@ -134,7 +134,7 @@ const _UploadValidatorPage = ({
           values={{
             network: (
               <span>
-                {ETH2_NETWORK_NAME}
+                {NETWORK_NAME}
                 {IS_MAINNET ? '' : ' testnet'}
               </span>
             ),
@@ -156,7 +156,7 @@ const _UploadValidatorPage = ({
         <Link
           primary
           inline
-          to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+          to="https://github.com/ethereum/staking-launchpad/issues/new"
         >
           Open issue
         </Link>

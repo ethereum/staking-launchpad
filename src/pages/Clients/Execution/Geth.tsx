@@ -8,36 +8,33 @@ import { Heading } from '../../../components/Heading';
 import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
-export const BesuDetails = () => (
+export const GethDetails = () => (
   <>
     <SectionTitle level={2} className="mb5">
-      Hyperledger Besu
+      Geth
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage
-        defaultMessage="An Ethereum client designed to be enterprise-friendly for
-          both public and private, permissioned network use cases."
-      />
+      <FormattedMessage defaultMessage="One of the three original implementations of the Ethereum protocol." />
     </Text>
     <SectionTitle level={2} className="mb5">
       <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="Besu is written in Java and released under the Apache 2.0 Licence." />
+      <FormattedMessage defaultMessage="Geth is written in Go, fully open source and licensed under the GNU LGPL v3." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
         <FormattedMessage defaultMessage="Installation" />
       </SectionTitle>
-      <Text className="mt10">
-        <FormattedMessage defaultMessage="The Besu documentation explains how to download and install the client." />
+      <Text>
+        <FormattedMessage defaultMessage="The Geth documentation explains how to download and install the client." />
       </Text>
       <Link
-        className="mt10"
         primary
-        to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/"
+        to="https://geth.ethereum.org/docs/install-and-build/installing-geth"
+        className="mt10"
       >
-        <FormattedMessage defaultMessage="Besu installation documentation" />
+        <FormattedMessage defaultMessage="Geth installation documentation" />
       </Link>
     </section>
     <section>
@@ -45,7 +42,7 @@ export const BesuDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your Eth1 client working properly." />
+        <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
       {!IS_MAINNET && (
         <>
@@ -56,20 +53,15 @@ export const BesuDetails = () => (
             <FormattedMessage
               defaultMessage="Use {goerli} to sync the Goerli testnet."
               values={{
-                goerli: <Code className="mt20">--network=goerli</Code>,
+                goerli: <Code className="mt20">--goerli</Code>,
               }}
-              description="{goerli} shows '--network=goerli' terminal command"
             />
           </Text>
           <Link
             primary
-            to="https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-on-goerli-testnet"
-            className="mt20"
+            to="https://geth.ethereum.org/docs/interface/command-line-options"
           >
-            <FormattedMessage
-              defaultMessage="Besu on Goerli documentation"
-              description="Link to documentation about eth1 client Besu, specifically for goerli testnet"
-            />
+            <FormattedMessage defaultMessage="Geth on Goerli documentation" />
           </Link>
         </>
       )}
@@ -78,21 +70,20 @@ export const BesuDetails = () => (
       </Heading>
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Use {http} to connect your Eth2 node to the JSON RPC
+          defaultMessage="Use {http} to connect your consensus node to the JSON RPC
           endpoint. This will enable the JSON RPC services on the default 8545
           port."
           values={{
-            http: <Code className="mt20">-rpc-http-enabled</Code>,
+            http: <Code className="mt20">--http</Code>,
           }}
-          description="{http} shows '-rpc-http-enabled' terminal command"
+          description="{http} shows '--http' terminal command"
         />
       </Text>
       <Link
         primary
-        to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled"
-        className="mt20"
+        to="https://geth.ethereum.org/docs/interface/command-line-options"
       >
-        <FormattedMessage defaultMessage="rpc-http-enabled documentation" />
+        <FormattedMessage defaultMessage="--http documentation" />
       </Link>
     </section>
   </>

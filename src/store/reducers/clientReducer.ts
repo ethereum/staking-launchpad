@@ -3,18 +3,18 @@ import { Action, ActionTypes } from '../actions';
 import { ClientId } from '../actions/clientActions';
 
 export type clientState = {
-  eth1Client: ClientId;
-  eth2Client: ClientId;
+  executionClient: ClientId;
+  consensusClient: ClientId;
 };
 
-const eth1ClientIds = [
+const executionClientIds = [
   ClientId.BESU,
   ClientId.NETHERMIND,
   ClientId.OPEN_ETHEREUM,
   ClientId.GETH,
 ];
 
-const eth2ClientIds = [
+const consensusClientIds = [
   ClientId.LIGHTHOUSE,
   ClientId.NIMBUS,
   ClientId.TEKU,
@@ -22,8 +22,8 @@ const eth2ClientIds = [
 ];
 
 const initialState: clientState = {
-  eth1Client: _sample(eth1ClientIds) || eth2ClientIds[0],
-  eth2Client: _sample(eth2ClientIds) || eth2ClientIds[0],
+  executionClient: _sample(executionClientIds) || consensusClientIds[0],
+  consensusClient: _sample(consensusClientIds) || consensusClientIds[0],
 };
 
 export const clientReducer = (
@@ -31,17 +31,17 @@ export const clientReducer = (
   action: Action
 ) => {
   if (action.type === ActionTypes.updateClient) {
-    if (action.payload.ethVersion === 1) {
+    if (action.payload.ethClientType === 'execution') {
       return {
         ...state,
-        eth1Client: action.payload.clientId,
+        executionClient: action.payload.clientId,
       };
     }
 
-    if (action.payload.ethVersion === 2) {
+    if (action.payload.ethClientType === 'consensus') {
       return {
         ...state,
-        eth2Client: action.payload.clientId,
+        consensusClient: action.payload.clientId,
       };
     }
   }

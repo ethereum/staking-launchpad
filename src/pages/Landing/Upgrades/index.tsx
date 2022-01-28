@@ -58,9 +58,9 @@ export const Upgrades = (): JSX.Element => {
     {
       title: formatMessage({ defaultMessage: 'The upgrades' }),
       subTitle: formatMessage({
-        defaultMessage: 'Dig deeper into how Eth2 upgrades Ethereum.',
+        defaultMessage: 'Dig deeper into Ethereum upgrades.',
       }),
-      linkUrl: 'https://ethereum.org/en/eth2/',
+      linkUrl: 'https://ethereum.org/en/upgrades/',
       link: formatMessage({ defaultMessage: 'How does this all happen?' }),
     },
     {
@@ -79,7 +79,7 @@ export const Upgrades = (): JSX.Element => {
       title: formatMessage({ defaultMessage: 'Validators FAQ' }),
       subTitle: formatMessage({
         defaultMessage:
-          'Learn more about the roles and responsibilities of Eth2 validators.',
+          'Learn more about the roles and responsibilities of Ethereum validators.',
       }),
       linkUrl: '/faq',
       link: formatMessage({ defaultMessage: 'More on validators' }),
@@ -93,13 +93,13 @@ export const Upgrades = (): JSX.Element => {
           <div className="px20">
             <ScrollAnimation animateIn="fadeIn" animateOnce>
               <StyledHeading margin="none" className="mt20" isMobile={m}>
-                <FormattedMessage defaultMessage="How does Eth2 upgrade Ethereum?" />
+                <FormattedMessage defaultMessage="How is Ethereum scaling?" />
               </StyledHeading>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce>
               <Text className="mt20 mb40">
                 <FormattedMessage
-                  defaultMessage="Eth2 is a set of upgrades that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
+                  defaultMessage="Several upgrades are underway that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain
                   of today. Here's more on the different upgrades:"
                 />
               </Text>
@@ -117,31 +117,35 @@ export const Upgrades = (): JSX.Element => {
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/beacon-chain/"
+                to="https://ethereum.org/en/upgrades/beacon-chain/"
               >
                 <FormattedMessage defaultMessage="More on the Beacon Chain" />
               </Link>
-              <UpgradeTitle className="mt20">The Merge (docking)</UpgradeTitle>
+              <UpgradeTitle className="mt20">
+                <FormattedMessage defaultMessage="The Merge" />
+              </UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="The merge, also known as the docking, will see the Ethereum
-                    mainnet we use today merge with the Beacon Chain. This is when
+                  defaultMessage="The merge will see the Ethereum
+                    Mainnet we use today merge with the Beacon Chain. This is when
                     Ethereum will fully transition to proof-of-stake."
                 />
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/docking/"
+                to="https://ethereum.org/en/upgrades/merge/"
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
-              <UpgradeTitle className="mt20">Sharding </UpgradeTitle>
+              <UpgradeTitle className="mt20">
+                <FormattedMessage defaultMessage="Sharding" />
+              </UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage defaultMessage="Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more." />
               </Text>
               <Link
                 className="mt20 mb40"
-                to="https://ethereum.org/eth2/shard-chains/"
+                to="https://ethereum.org/en/upgrades/shard-chains/"
               >
                 <FormattedMessage defaultMessage="More on shard chains" />
               </Link>

@@ -401,6 +401,12 @@
       "value": "Troubleshooting"
     }
   ],
+  "2HVWJL": [
+    {
+      "type": 0,
+      "value": "execution layer"
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
@@ -983,6 +989,12 @@
       "value": "Prysm offers step-by-step guidelines to run their client after completing your deposit through the launchpad."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "consensus layer"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
@@ -1045,6 +1057,12 @@
     {
       "type": 0,
       "value": " to be sent at one time to be accepted."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "execution client"
     }
   ],
   "AYKxmf": [
@@ -1525,6 +1543,12 @@
     {
       "type": 0,
       "value": "Make sure you aren't being phished"
+    }
+  ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "consensus client"
     }
   ],
   "GOHkCO": [
@@ -2775,6 +2799,28 @@
     {
       "type": 0,
       "value": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Ethereum will consist of the "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (handles transactions and execution, formerly 'Eth1'), and the "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
   "VASo1/": [
@@ -4671,12 +4717,6 @@
       "value": "Nimbus looks for keystores in your validators folder."
     }
   ],
-  "pofmhk": [
-    {
-      "type": 0,
-      "value": "Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
-    }
-  ],
   "pqC+qt": [
     {
       "type": 0,
@@ -5359,6 +5399,28 @@
     {
       "type": 0,
       "value": "Early adopter risks"
+    }
+  ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " as well as your "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
     }
   ],
   "wtTeex": [

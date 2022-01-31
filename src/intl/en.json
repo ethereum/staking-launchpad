@@ -155,6 +155,9 @@
   "2CYEJa": {
     "message": "Troubleshooting"
   },
+  "2HVWJL": {
+    "message": "execution layer"
+  },
   "2PI6Di": {
     "message": "Consensus Clients: {clientName}"
   },
@@ -378,6 +381,9 @@
   "A6Oppp": {
     "message": "Prysm offers step-by-step guidelines to run their client after completing your deposit through the launchpad."
   },
+  "A8r7Hg": {
+    "message": "consensus layer"
+  },
   "AC669U": {
     "message": "If you need help, check out the Python documentation."
   },
@@ -389,6 +395,9 @@
   },
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
+  },
+  "ATwOPg": {
+    "message": "execution client"
   },
   "AYKxmf": {
     "message": "Connect your hardware wallet to Metamask"
@@ -594,6 +603,9 @@
   },
   "GDaRAW": {
     "message": "Make sure you aren't being phished"
+  },
+  "GN2Cu5": {
+    "message": "consensus client"
   },
   "GOHkCO": {
     "message": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
@@ -1109,6 +1121,10 @@
   },
   "V0cb8p": {
     "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
+  },
+  "V19Udt": {
+    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
+    "message": "Ethereum will consist of the {executionLayer} (handles transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
   },
   "VASo1/": {
     "message": "Connect wallet"
@@ -1835,9 +1851,6 @@
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."
   },
-  "pofmhk": {
-    "message": "Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
-  },
   "pqC+qt": {
     "message": "Slashing"
   },
@@ -2105,6 +2118,10 @@
   },
   "wqUcy/": {
     "message": "Early adopter risks"
+  },
+  "wrnpoO": {
+    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
+    "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
   },
   "wtTeex": {
     "message": "Are there spelling mistakes?"

@@ -248,8 +248,27 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the
-                  consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
+                defaultMessage="Ethereum will consist of the {executionLayer} (handles transactions and execution, formerly 'Eth1'), and the
+                  {consensusLayer} (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
+                values={{
+                  executionLayer: (
+                    <Link
+                      to="https://ethereum.org/en/glossary/#execution-layer"
+                      inline
+                    >
+                      <FormattedMessage defaultMessage="execution layer" />
+                    </Link>
+                  ),
+                  consensusLayer: (
+                    <Link
+                      to="https://ethereum.org/en/glossary/#consensus-layer"
+                      inline
+                    >
+                      <FormattedMessage defaultMessage="consensus layer" />
+                    </Link>
+                  ),
+                }}
+                description="{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'"
               />
             </Text>
             <Text className="mt10">

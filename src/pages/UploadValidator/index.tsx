@@ -345,7 +345,7 @@ const _UploadValidatorPage = ({
             defaultMessage="Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
             values={{
               json: <Code>deposit_data-[timestamp].json</Code>,
-              validatorKeys: <Code>/eth2.0-deposit-cli/validator_keys</Code>,
+              validatorKeys: <Code>/staking-deposit-cli/validator_keys</Code>,
             }}
           />
         </Text>

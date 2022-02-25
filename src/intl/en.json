@@ -158,6 +158,9 @@
   "2HVWJL": {
     "message": "execution layer"
   },
+  "2Hk0nB": {
+    "message": "Follow the instructions presented to you in the application to generate your keys."
+  },
   "2PI6Di": {
     "message": "Consensus Clients: {clientName}"
   },
@@ -249,6 +252,9 @@
   "5CBhpq": {
     "message": "Commitment"
   },
+  "5H/J84": {
+    "message": "How do you want to generate your keys?"
+  },
   "5HJLBU": {
     "message": "Teku installation documentation"
   },
@@ -338,6 +344,9 @@
   },
   "8wd0q5": {
     "message": "An Ethereum client designed to be enterprise-friendly for both public and private, permissioned network use cases."
+  },
+  "8yom7x": {
+    "message": "Run the Wagyu Key Gen app from withing Applications by right clicking and clicking Open. You will get a warning stating macOS cannot verify the developer of “Wagyu Key Gen.app”. Are you sure you want to open it?. Click Open and the app will open."
   },
   "9+Ddtu": {
     "message": "Next"
@@ -622,6 +631,9 @@
   "Gbo300": {
     "message": "Generate keys"
   },
+  "GelBd9": {
+    "message": "Make the file you just downloaded executable."
+  },
   "GsBRWL": {
     "message": "Languages"
   },
@@ -749,6 +761,10 @@
   },
   "KN7zKn": {
     "message": "Error"
+  },
+  "KWWsDo": {
+    "description": "{url} is link to GitHub CLI release, made bold for emphasis",
+    "message": "Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: {url}"
   },
   "KjcAm2": {
     "message": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
@@ -1023,9 +1039,6 @@
   "Ryptmy": {
     "message": "Verify it with the following command to check if it returns the client version correctly:"
   },
-  "S0e/cN": {
-    "message": "How do you want to run the CLI?"
-  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -1034,6 +1047,9 @@
   },
   "SGzXoY": {
     "message": "Your stake has reached the deposit contract!"
+  },
+  "SHNw06": {
+    "message": "Execute the file you just downloaded."
   },
   "SR0qHv": {
     "message": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing."
@@ -1245,6 +1261,9 @@
     "description": "{grafana} is 'Grafana' service, with link to its homepage (do not translate name)",
     "message": "I've set up my {grafana} service."
   },
+  "YQJy4H": {
+    "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
+  },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
   },
@@ -1282,6 +1301,10 @@
   },
   "ZTo0Fl": {
     "message": "Why is there a wait?"
+  },
+  "ZlLjuq": {
+    "description": "{flag} and {network} are terminal commands styled as code.",
+    "message": "Please make sure you select {network} when prompted for a network, otherwise the deposit will be invalid."
   },
   "Zspg8H": {
     "message": "Section 1 - Before you start"
@@ -1330,6 +1353,9 @@
   },
   "bUk/lm": {
     "message": "Besu installation documentation"
+  },
+  "bUn2/Z": {
+    "message": "Download Wagyu Key Gen app"
   },
   "bVtlF7": {
     "message": "Be sure to account for enough space on your drive until you run maintenance on your node."
@@ -1381,6 +1407,9 @@
   },
   "cyR7Kh": {
     "message": "Back"
+  },
+  "d4g3yx": {
+    "message": "Step 2: Generate deposit keys using the Wagyu Key Gen app"
   },
   "d5KEM8": {
     "message": "You must sign a transaction for every deposit you want to make."
@@ -1842,6 +1871,9 @@
   "pA+UVF": {
     "message": "If you'd like to see the launchpad in another language, or if you can help translate, {getInTouch}!"
   },
+  "pHQwsN": {
+    "message": "Launch the app from your desktop environment by double clicking on it."
+  },
   "pXyH++": {
     "message": "The Besu documentation explains how to download and install the client."
   },
@@ -1962,6 +1994,9 @@
     "description": "{NETWORK_NAME} is name of network, do not translate",
     "message": "I've synced my beacon node on {NETWORK_NAME}."
   },
+  "sj/Zef": {
+    "message": "Download Key Gen GUI app"
+  },
   "smD5l/": {
     "message": "Consensus Layer Beacon Node (BN)"
   },
@@ -2067,6 +2102,9 @@
   },
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
+  },
+  "vV6ua0": {
+    "message": "Step 1: Download the Wagyu Key Gen app for your operating system"
   },
   "vY2wig": {
     "message": "Loading error"

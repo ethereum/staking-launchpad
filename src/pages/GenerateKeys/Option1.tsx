@@ -43,6 +43,14 @@ export const Option1 = ({ os }: { os: string }) => {
         />
       </Link>
 
+      <Link
+        shouldOpenNewTab={true}
+        to="https://github.com/stake-house/wagyu-key-gen/files/7693548/Wagyu.Key.Gen.Audit.Report.pdf"
+        className="my10"
+      >
+        <FormattedMessage defaultMessage="View Wagyu Key Gen audit by HashCloak" />
+      </Link>
+
       <Alert variant="warning" className="my40">
         <div className="flex">
           <AlertIcon />

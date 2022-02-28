@@ -36,7 +36,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10">
       <FormattedMessage
-        defaultMessage="An Eth2 client with a heavy focus on speed and security. Built by Sigma
+        defaultMessage="A consensus client with a heavy focus on speed and security. Built by Sigma
         Prime, an information security and software engineering firm who have
         funded Lighthouse along with the Ethereum Foundation, Consensys, and
         private individuals."
@@ -129,7 +129,7 @@ export const Lighthouse = () => {
   return (
     <PageTemplate
       title={formatMessage(
-        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { defaultMessage: 'Consensus Clients: {clientName}' },
         { clientName: 'Lighthouse' }
       )}
     >

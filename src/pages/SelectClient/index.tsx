@@ -7,15 +7,15 @@ import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPage
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import SelectClientSection from './SelectClientSection';
 import SelectClientButtons from './SelectClientButtons';
-import { PrysmDetails } from '../Clients/Eth2/Prysm';
-import { LighthouseDetails } from '../Clients/Eth2/Lighthouse';
-import { TekuDetails } from '../Clients/Eth2/Teku';
-import { NimbusDetails } from '../Clients/Eth2/Nimbus';
-import { LodestarDetails } from '../Clients/Eth2/Lodestar';
-import { GethDetails } from '../Clients/Eth1/Geth';
-import { OpenEthereumDetails } from '../Clients/Eth1/OpenEthereum';
-import { BesuDetails } from '../Clients/Eth1/Besu';
-import { NethermindDetails } from '../Clients/Eth1/Nethermind';
+import { PrysmDetails } from '../Clients/Consensus/Prysm';
+import { LighthouseDetails } from '../Clients/Consensus/Lighthouse';
+import { TekuDetails } from '../Clients/Consensus/Teku';
+import { NimbusDetails } from '../Clients/Consensus/Nimbus';
+import { LodestarDetails } from '../Clients/Consensus/Lodestar';
+import { GethDetails } from '../Clients/Execution/Geth';
+import { OpenEthereumDetails } from '../Clients/Execution/OpenEthereum';
+import { BesuDetails } from '../Clients/Execution/Besu';
+import { NethermindDetails } from '../Clients/Execution/Nethermind';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';
 import NimbusCircle from '../../static/nimbus-circle.png';
@@ -73,9 +73,9 @@ export type Client = {
 
 // define and shuffle the clients
 const ethClients: {
-  [ethVersion: number]: Array<Client>;
+  [ethClientType: string]: Array<Client>;
 } = {
-  1: _shuffle([
+  execution: _shuffle([
     {
       clientId: ClientId.OPEN_ETHEREUM,
       name: 'OpenEthereum',
@@ -101,7 +101,7 @@ const ethClients: {
       language: 'C#, .NET',
     },
   ]),
-  2: _shuffle([
+  consensus: _shuffle([
     {
       clientId: ClientId.TEKU,
       name: 'Teku',
@@ -142,26 +142,28 @@ const _SelectClientPage = ({
   dispatchClientUpdate,
 }: Props): JSX.Element => {
   // set the default the eth version to 1 on initial render
-  const [ethVersionStep, setEthVersionStep] = useState<1 | 2>(1);
+  const [ethClientStep, setEthClientStep] = useState<'execution' | 'consensus'>(
+    'execution'
+  );
 
   const { formatMessage } = useIntl();
 
   // filter the options based on the eth version the user is on
-  const clientOptions = React.useMemo(() => ethClients[ethVersionStep], [
-    ethVersionStep,
+  const clientOptions = React.useMemo(() => ethClients[ethClientStep], [
+    ethClientStep,
   ]);
 
   // memoize the chosen client by step
   const selectedClient: ClientId = React.useMemo(
     () =>
-      ethVersionStep === 1
-        ? chosenClients.eth1Client
-        : chosenClients.eth2Client,
-    [ethVersionStep, chosenClients]
+      ethClientStep === 'execution'
+        ? chosenClients.executionClient
+        : chosenClients.consensusClient,
+    [ethClientStep, chosenClients]
   );
 
   const setClientFxn = (clientId: ClientId) => {
-    dispatchClientUpdate(clientId, ethVersionStep);
+    dispatchClientUpdate(clientId, ethClientStep);
   };
 
   React.useEffect(() => {
@@ -170,7 +172,7 @@ const _SelectClientPage = ({
     if (header) {
       header.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [ethVersionStep]);
+  }, [ethClientStep]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.SELECT_CLIENT) {
@@ -184,12 +186,11 @@ const _SelectClientPage = ({
 
   const title = formatMessage(
     {
-      defaultMessage: `Choose {ethereum} client`,
-      description: '{ethereum} injects Eth1 or Eth2 depending on step',
+      defaultMessage: `Choose {ethClientType} client`,
+      description:
+        '{ethClientType} injects execution or consensus depending on step',
     },
-    {
-      ethereum: `Eth${ethVersionStep}`,
-    }
+    { ethClientType: ethClientStep }
   );
 
   return (
@@ -197,21 +198,21 @@ const _SelectClientPage = ({
       <SelectClientSection
         title={formatMessage(
           {
-            defaultMessage: `Choose your Eth{ethVersionStep} client and set up a node`,
-            description: `{ethVersionStep} is either 1 or 2, depending on which step user is on`,
+            defaultMessage: `Choose your {ethClientType} client and set up a node`,
+            description: `{ethClientType} is either execution or consensus, depending on which step user is on`,
           },
-          { ethVersionStep }
+          { ethClientType: ethClientStep }
         )}
         clients={clientOptions}
         currentClient={selectedClient}
         setCurrentClient={setClientFxn}
         clientDetails={clientDetails}
-        ethVersionStep={ethVersionStep}
+        ethClientStep={ethClientStep}
       />
       <div className="flex center p30">
         <SelectClientButtons
-          updateStep={setEthVersionStep}
-          ethVersionStep={ethVersionStep}
+          updateStep={setEthClientStep}
+          ethClientStep={ethClientStep}
           handleSubmit={handleSubmit}
           currentClient={selectedClient}
         />
@@ -226,8 +227,11 @@ const mapStateToProps = ({ workflow, client }: StoreState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchClientUpdate: (clientId: ClientId, ethVersion: 1 | 2) => {
-    dispatch(updateClient(clientId, ethVersion));
+  dispatchClientUpdate: (
+    clientId: ClientId,
+    ethClientType: 'execution' | 'consensus'
+  ) => {
+    dispatch(updateClient(clientId, ethClientType));
   },
   dispatchWorkflowUpdate: (step: WorkflowStep) => {
     dispatch(updateWorkflow(step));

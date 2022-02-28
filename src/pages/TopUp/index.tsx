@@ -76,7 +76,7 @@ const _TopUpPage: React.FC<Props> = () => {
     const fetchValidatorsForUserAddress = async () => {
       setLoading(true);
 
-      // beaconchain API requires two fetches - one that gets the public keys for an eth1 address, and one that
+      // beaconchain API requires two fetches - one that gets the public keys for an Ethereum address, and one that
       // queries by the validators public keys
 
       fetch(`${BEACONCHAIN_URL}/api/v1/validator/eth1/${account}`)
@@ -174,7 +174,7 @@ const _TopUpPage: React.FC<Props> = () => {
                     <Link
                       inline
                       primary
-                      to="https://github.com/ethereum/eth2.0-deposit/issues/new"
+                      to="https://github.com/ethereum/staking-launchpad/issues/new"
                     >
                       GitHub
                     </Link>

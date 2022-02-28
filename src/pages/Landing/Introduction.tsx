@@ -66,7 +66,7 @@ export const Introduction = (): JSX.Element => {
         <ContentContainer>
           <ScrollAnimation animateIn="fadeIn" animateOnce>
             <Heading level={2} size="medium" color="blueDark" margin="none">
-              <FormattedMessage defaultMessage="Validators and Eth2" />
+              <FormattedMessage defaultMessage="Validators and Ethereum" />
             </Heading>
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeInUp" animateOnce>
@@ -80,9 +80,9 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              to="https://ethereum.org/en/eth2/vision/"
+              to="https://ethereum.org/en/upgrades/vision/"
             >
-              <FormattedMessage defaultMessage="More on the Eth2 vision" />
+              <FormattedMessage defaultMessage="More on the Ethereum vision" />
             </Link>
             <Text className="mt20">
               <FormattedMessage
@@ -93,15 +93,21 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="Today, you'll secure the Beacon Chain, the first Eth2 upgrade.
+                defaultMessage="Today, you'll secure the Beacon Chain, the first main scaling upgrade.
                   It's a separate chain that uses a proof-of-stake consensus
                   mechanism. Eventually you'll help secure all of Ethereum, once
                   mainnet (the Ethereum we use today) merges with the Beacon Chain."
               />
             </Text>
             <Link
+              className="mt20"
+              to="https://ethereum.org/en/upgrades/beacon-chain/"
+            >
+              <FormattedMessage defaultMessage="More on the Beacon Chain" />
+            </Link>
+            <Link
               className="mt20 mb40"
-              to="https://ethereum.org/en/eth2/docking/"
+              to="https://ethereum.org/en/upgrades/merge/"
             >
               <FormattedMessage defaultMessage="More on the merge" />
             </Link>

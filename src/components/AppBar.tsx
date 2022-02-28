@@ -19,7 +19,7 @@ import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
 import {
   IS_MAINNET,
-  ETH2_NETWORK_NAME,
+  NETWORK_NAME,
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   TESTNET_LAUNCHPAD_URL,
@@ -176,9 +176,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               >
                 <Text>
                   <FormattedMessage
-                    defaultMessage="Eth2 {network} Launchpad"
+                    defaultMessage="Staking Launchpad {network}"
                     values={{
-                      network: IS_MAINNET ? '' : `${ETH2_NETWORK_NAME} `,
+                      network: IS_MAINNET ? '' : `(${NETWORK_NAME})`,
                     }}
                     description="{network} inserts the testnet name, only if on the testnet"
                   />
@@ -322,7 +322,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   </DropdownLink>
                   <Text className="my20">
                     <b>
-                      <FormattedMessage defaultMessage="The Eth2 clients" />
+                      <FormattedMessage defaultMessage="Consensus clients" />
                     </b>
                   </Text>
                   <DropdownLink to={routesEnum.lighthouse}>
@@ -341,7 +341,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="secondary-link"
             label={
               <NetworkText>
-                {IS_MAINNET ? `Mainnet` : `${ETH2_NETWORK_NAME}`}
+                {IS_MAINNET ? `Mainnet` : `${NETWORK_NAME}`}
                 <FormDown />
               </NetworkText>
             }

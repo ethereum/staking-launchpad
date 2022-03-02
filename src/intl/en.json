@@ -56,6 +56,9 @@
   "/jJLYy": {
     "message": "Transactions"
   },
+  "/rmnC0": {
+    "message": "If at all possible, consider running another client at this time to help protect yourself and the network."
+  },
   "/ub26/": {
     "message": "Understand the risks"
   },
@@ -1740,9 +1743,6 @@
   "mArJcj": {
     "message": "Hard drive"
   },
-  "mIkyPD": {
-    "message": "Currently the majority of validators run Prysm as their consensus client. Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a super-majority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
-  },
   "mZOXtM": {
     "message": "Validators"
   },
@@ -2137,6 +2137,9 @@
   },
   "x0tVK4": {
     "message": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
+  },
+  "x8+8fi": {
+    "message": "Currently the majority of validators run Prysm as their consensus client. Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",

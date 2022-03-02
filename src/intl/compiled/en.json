@@ -145,6 +145,12 @@
       "value": "Transactions"
     }
   ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "If at all possible, consider running another client at this time to help protect yourself and the network."
+    }
+  ],
   "/ub26/": [
     {
       "type": 0,
@@ -3459,6 +3465,12 @@
       "value": "However, bear in mind that for the foreseeable future, once you’ve exited, there’s no going back."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "More on client diversity"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -5537,6 +5549,12 @@
     {
       "type": 0,
       "value": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
+    }
+  ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Currently the majority of validators run Prysm as their consensus client. Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
     }
   ],
   "xDyl3T": [

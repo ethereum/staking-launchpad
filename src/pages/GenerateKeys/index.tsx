@@ -39,6 +39,12 @@ const osMapping: { [os: number]: 'mac' | 'linux' | 'windows' } = {
   [operatingSystem.WINDOWS]: 'windows',
 };
 
+export enum keysTool {
+  'GUI',
+  'CLI',
+  'CLISOURCE',
+}
+
 const Highlight = styled.span`
   background: ${p => p.theme.green.medium};
 `;
@@ -74,6 +80,7 @@ const _GenerateKeysPage = ({
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
+  const [chosenTool, setChosenTool] = useState<keysTool>(keysTool.GUI);
 
   const onCheckboxClick = (e: any) => {
     setMnemonicAcknowledgementChecked(e.target.checked);
@@ -132,24 +139,41 @@ const _GenerateKeysPage = ({
         <OperatingSystemButtons chosenOs={chosenOs} setChosenOs={setChosenOs} />
       </Paper>
 
-      <Instructions validatorCount={validatorCount} os={osMapping[chosenOs]} />
+      <Instructions
+        validatorCount={validatorCount}
+        os={osMapping[chosenOs]}
+        chosenTool={chosenTool}
+        setChosenTool={setChosenTool}
+      />
 
       <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="Save the key files and get the validator file ready" />
         </Heading>
         <Text className="mt20">
-          <FormattedMessage
-            defaultMessage="You should now have your mnemonic written down in a safe place and a
-            keystore saved for each of your {validatorCount} validators. Please
-            make sure you keep these safe, preferably offline. Your validator
-            keystores should be available in the newly created
-            {validatorKeys} directory."
-            values={{
-              validatorKeys: <Highlight>validator_keys</Highlight>,
-              validatorCount: <span>{validatorCount}</span>,
-            }}
-          />
+          {chosenTool === keysTool.GUI ? (
+            <FormattedMessage
+              defaultMessage="You should now have your mnemonic written down in a safe place and a
+              keystore saved for each of your {validatorCount} validators. Please
+              make sure you keep these safe, preferably offline. Your validator
+              keystores should be available in the selected directory."
+              values={{
+                validatorCount: <span>{validatorCount}</span>,
+              }}
+            />
+          ) : (
+            <FormattedMessage
+              defaultMessage="You should now have your mnemonic written down in a safe place and a
+              keystore saved for each of your {validatorCount} validators. Please
+              make sure you keep these safe, preferably offline. Your validator
+              keystores should be available in the newly created
+              {validatorKeys} directory."
+              values={{
+                validatorKeys: <Highlight>validator_keys</Highlight>,
+                validatorCount: <span>{validatorCount}</span>,
+              }}
+            />
+          )}
         </Text>
         <Alert variant="info" className="my40">
           <FormattedMessage

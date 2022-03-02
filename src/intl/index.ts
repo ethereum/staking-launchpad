@@ -1,10 +1,12 @@
 import ar from './compiled/ar.json';
+import bg from './compiled/bg.json';
 import cs from './compiled/cs.json';
 import de from './compiled/de.json';
 import el from './compiled/el.json';
 import en from './compiled/en.json';
 import es from './compiled/es.json';
 import fr from './compiled/fr.json';
+import hu from './compiled/hu.json';
 import id from './compiled/id.json';
 import it from './compiled/it.json';
 import ja from './compiled/ja.json';
@@ -13,17 +15,20 @@ import pl from './compiled/pl.json';
 import ptbr from './compiled/pt-br.json';
 import ro from './compiled/ro.json';
 import ru from './compiled/ru.json';
+import sl from './compiled/sl.json';
 import tr from './compiled/tr.json';
 import zh from './compiled/zh.json';
 
 export const messages: { [key: string]: any } = {
   ar,
+  bg,
   cs,
   de,
   el,
   en,
   es,
   fr,
+  hu,
   id,
   it,
   ja,
@@ -32,18 +37,21 @@ export const messages: { [key: string]: any } = {
   'pt-br': ptbr,
   ro,
   ru,
+  sl,
   tr,
   zh,
 };
 
 export enum AppLanguage {
   Arabic = 'ar',
+  Bulgarian = 'bg',
   Czech = 'cs',
   German = 'de',
   Greek = 'el',
   English = 'en',
   Spanish = 'es',
   French = 'fr',
+  Hungarian = 'hu',
   Indonesian = 'id',
   Italian = 'it',
   Japanese = 'ja',
@@ -52,6 +60,7 @@ export enum AppLanguage {
   PortugueseBrazilian = 'pt-br',
   Romanian = 'ro',
   Russian = 'ru',
+  Slovenian = 'sl',
   Turkish = 'tr',
   ChineseSimplified = 'zh',
 }

@@ -15,6 +15,7 @@ import { GethDetails } from '../Clients/Execution/Geth';
 import { OpenEthereumDetails } from '../Clients/Execution/OpenEthereum';
 import { BesuDetails } from '../Clients/Execution/Besu';
 import { NethermindDetails } from '../Clients/Execution/Nethermind';
+import { ErigonDetails } from '../Clients/Execution/Erigon';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';
 import NimbusCircle from '../../static/nimbus-circle.png';
@@ -23,6 +24,7 @@ import OpenEthereumCircle from '../../static/parity-circle.png';
 import GethCircle from '../../static/gethereum-mascot-circle.png';
 import BesuCircle from '../../static/hyperledger-besu-circle.png';
 import NethermindCircle from '../../static/nethermind-circle.png';
+import ErigonCircle from '../../static/erigon-circle.png';
 
 import {
   DispatchWorkflowUpdateType,
@@ -59,6 +61,7 @@ const clientDetails = {
   [ClientId.OPEN_ETHEREUM]: <OpenEthereumDetails />,
   [ClientId.BESU]: <BesuDetails />,
   [ClientId.NETHERMIND]: <NethermindDetails />,
+  [ClientId.ERIGON]: <ErigonDetails />,
 };
 
 export type Client = {
@@ -96,6 +99,12 @@ const ethClients: {
       name: 'Nethermind',
       imgUrl: NethermindCircle,
       language: 'C#, .NET',
+    },
+    {
+      clientId: ClientId.ERIGON,
+      name: 'Erigon',
+      imgUrl: ErigonCircle,
+      language: 'Go',
     },
   ]),
   consensus: _shuffle([

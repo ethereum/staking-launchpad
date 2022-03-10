@@ -23,6 +23,7 @@ export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATIO
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
 export const TUTORIAL_URL               = process.env.REACT_APP_TUTORIAL_URL  || '';
+export const FAUCET_LINK                =  IS_MERGE_TESTNET ? `https://faucet.${NETWORK_NAME.toLowerCase()}.themerge.dev` : 'https://faucet.goerli.mudit.blog/';
 
 let elExplorerURL =  'https://goerli.etherscan.io';
 if (IS_MERGE_TESTNET && process.env.REACT_APP_EL_EXPLORER_URL) {

@@ -6,6 +6,8 @@ import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
+import { changeToTestnet } from './Chains';
+import { TARGET_NETWORK_CHAIN_ID } from './web3Utils';
 import { FormattedMessage } from 'react-intl';
 
 export const Logo = styled.img`
@@ -77,6 +79,7 @@ export const WalletButton = ({
   const handleClick = async () => {
     if (!selectedWallet) {
       setShowSpinner(true);
+      changeToTestnet(TARGET_NETWORK_CHAIN_ID);
       setSelectedWallet(walletProvider);
       await activate(walletProvider);
       setSelectedWallet(undefined);

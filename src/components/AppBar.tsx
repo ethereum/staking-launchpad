@@ -9,7 +9,7 @@ import EthDiamond from '../static/eth-diamond-plain.svg';
 import { web3ReactInterface } from '../pages/ConnectWallet';
 import { trimString } from '../utils/trimString';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   NetworkChainId,
 } from '../pages/ConnectWallet/web3Utils';
 import { Dot } from './Dot';
@@ -23,6 +23,7 @@ import {
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   TESTNET_LAUNCHPAD_URL,
+  IS_MERGE_TESTNET,
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
 import { FormattedMessage } from 'react-intl';
@@ -129,7 +130,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
 
   if (chainId) {
     network = NetworkChainId[chainId];
-    networkAllowed = Object.values(AllowedNetworks).includes(network);
+    networkAllowed = Object.values(AllowedELNetworks).includes(network);
   }
 
   const pathname: string = React.useMemo(() => location.pathname, [
@@ -150,7 +151,13 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
-  const networkName = IS_MAINNET ? 'mainnet' : 'Göerli testnet';
+  let _networkName = 'Göerli testnet';
+  if (IS_MAINNET) {
+    _networkName = 'mainnet';
+  } else if (IS_MERGE_TESTNET) {
+    _networkName = NETWORK_NAME;
+  }
+  const networkName = _networkName;
 
   return (
     <RainbowBackground

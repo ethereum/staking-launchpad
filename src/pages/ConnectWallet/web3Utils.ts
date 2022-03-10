@@ -10,6 +10,7 @@ import { web3ReactInterface } from './index';
 import {
   FORTMATIC_KEY,
   IS_MAINNET,
+  IS_MERGE_TESTNET,
   NETWORK_NAME,
   PORTIS_DAPP_ID,
   RPC_URL,
@@ -36,6 +37,13 @@ export const NetworkChainIdDict: { [id: string]: number } = {
 };
 
 export const TARGET_NETWORK_CHAIN_ID = NetworkChainIdDict[NETWORK_NAME];
+let elNetworkName = 'Göerli';
+if (IS_MAINNET) {
+  elNetworkName = 'Mainnet';
+} else if (IS_MERGE_TESTNET) {
+  elNetworkName = NETWORK_NAME;
+}
+export const EL_NETWORK_NAME = elNetworkName;
 
 /*
   for UI purposes, all networks are "supported", but an error message
@@ -61,17 +69,7 @@ const portisSupportedNetworks = [
   NetworkChainId.Kovan,
 ];
 
-enum Testnet {
-  'Göerli',
-  'Kintsugi',
-  'Kiln',
-}
-
-enum Mainnet {
-  'Mainnet',
-}
-
-export const AllowedELNetworks = IS_MAINNET ? Mainnet : Testnet;
+export const AllowedELNetworks = [EL_NETWORK_NAME];
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
 });

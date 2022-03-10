@@ -11,6 +11,7 @@ import { trimString } from '../utils/trimString';
 import {
   AllowedELNetworks,
   NetworkChainId,
+  EL_NETWORK_NAME,
 } from '../pages/ConnectWallet/web3Utils';
 import { Dot } from './Dot';
 import { Link } from './Link';
@@ -23,7 +24,6 @@ import {
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   TESTNET_LAUNCHPAD_URL,
-  IS_MERGE_TESTNET,
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
 import { FormattedMessage } from 'react-intl';
@@ -150,14 +150,6 @@ const _AppBar = ({ location }: RouteComponentProps) => {
   const switchLaunchpadUrl = IS_MAINNET
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
-
-  let _networkName = 'Göerli testnet';
-  if (IS_MAINNET) {
-    _networkName = 'mainnet';
-  } else if (IS_MERGE_TESTNET) {
-    _networkName = NETWORK_NAME;
-  }
-  const networkName = _networkName;
 
   return (
     <RainbowBackground
@@ -403,7 +395,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                       <FormattedMessage
                         defaultMessage="Your wallet should be set to {networkName} to use this launchpad."
                         values={{
-                          networkName: <span>{networkName}</span>,
+                          networkName: <span>{EL_NETWORK_NAME}</span>,
                         }}
                       />
                     </Text>

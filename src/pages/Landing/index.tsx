@@ -17,11 +17,13 @@ export const LandingPage = (): JSX.Element => {
   useEffect(() => {
     (async () => {
       const response = await queryBeaconchain();
-      setState({
-        amountEth: response.body.amountEth,
-        totalValidators: response.body.totalValidators,
-        status: response.statusCode,
-      });
+      if (response.body.amountEth) {
+        setState({
+          amountEth: response.body.amountEth,
+          totalValidators: response.body.totalValidators,
+          status: response.statusCode,
+        });
+      }
     })();
   }, []);
 

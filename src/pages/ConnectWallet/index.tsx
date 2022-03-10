@@ -46,6 +46,7 @@ import {
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
   IS_MERGE_TESTNET,
+  FAUCET_LINK,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
@@ -409,10 +410,7 @@ const _ConnectWalletPage = ({
                       </>
                     )}
                     {!IS_MAINNET && lowBalance && (
-                      <FaucetLink
-                        to="https://faucet.goerli.mudit.blog/"
-                        primary
-                      >
+                      <FaucetLink to={FAUCET_LINK} primary>
                         <FormattedMessage
                           defaultMessage="Get {TICKER_NAME}"
                           values={{

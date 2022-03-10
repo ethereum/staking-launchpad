@@ -13,7 +13,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import { formatEther } from '@ethersproject/units';
 import { NoEthereumProviderError } from '@web3-react/injected-connector';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   fortmatic,
   metamask,
   NetworkChainId,
@@ -45,6 +45,7 @@ import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
+  IS_MERGE_TESTNET,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
@@ -275,7 +276,7 @@ const _ConnectWalletPage = ({
   useEffect(() => {
     if (chainId) {
       setNetwork(NetworkChainId[chainId]);
-      setNetworkAllowed(Object.values(AllowedNetworks).includes(network));
+      setNetworkAllowed(Object.values(AllowedELNetworks).includes(network));
     }
 
     if (
@@ -293,7 +294,7 @@ const _ConnectWalletPage = ({
           { defaultMessage: 'Connect {wallet} to {network}' },
           {
             wallet: getWalletName(walletProvider),
-            network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+            network: IS_MAINNET ? 'Ethereum mainnet' : 'Testnet',
           }
         )
       );
@@ -444,26 +445,28 @@ const _ConnectWalletPage = ({
                 title="Metamask"
                 error={walletProvider === metamask ? error : undefined}
               />
-
-              <WalletButton
-                invalid={PORTIS_DAPP_ID === ''}
-                selectedWallet={selectedWallet}
-                setSelectedWallet={setSelectedWallet}
-                logoSource={portisLogo}
-                walletProvider={portis}
-                title="Portis"
-                error={walletProvider === portis ? error : undefined}
-              />
-
-              <WalletButton
-                invalid={!ENABLE_RPC_FEATURES}
-                selectedWallet={selectedWallet}
-                setSelectedWallet={setSelectedWallet}
-                logoSource={fortmaticLogo}
-                walletProvider={fortmatic}
-                title="Fortmatic"
-                error={walletProvider === fortmatic ? error : undefined}
-              />
+              {!IS_MERGE_TESTNET && (
+                <WalletButton
+                  invalid={PORTIS_DAPP_ID === ''}
+                  selectedWallet={selectedWallet}
+                  setSelectedWallet={setSelectedWallet}
+                  logoSource={portisLogo}
+                  walletProvider={portis}
+                  title="Portis"
+                  error={walletProvider === portis ? error : undefined}
+                />
+              )}
+              {!IS_MERGE_TESTNET && (
+                <WalletButton
+                  invalid={!ENABLE_RPC_FEATURES}
+                  selectedWallet={selectedWallet}
+                  setSelectedWallet={setSelectedWallet}
+                  logoSource={fortmaticLogo}
+                  walletProvider={fortmatic}
+                  title="Fortmatic"
+                  error={walletProvider === fortmatic ? error : undefined}
+                />
+              )}
               <MetamaskHardwareButton />
             </WalletButtonSubContainer>
           </Animated>

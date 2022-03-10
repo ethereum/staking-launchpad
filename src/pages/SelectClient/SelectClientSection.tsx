@@ -8,6 +8,7 @@ import { Heading } from '../../components/Heading';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
 import { Client } from './index';
 import { ClientId } from '../../store/actions/clientActions';
+import { IS_MERGE, TUTORIAL_URL, NETWORK_NAME } from '../../utils/envVars';
 
 const ClientOptionContainer = styled.div`
   width: 100%;
@@ -47,7 +48,7 @@ const SelectClientSection = ({
     <Heading level={3} size="small" color="blueDark" className="mb20">
       {title}
     </Heading>
-    {ethClientStep === 'execution' && (
+    {ethClientStep === 'execution' && !IS_MERGE && (
       <div style={{ paddingBottom: '1rem' }}>
         <FormattedMessage
           defaultMessage="To process incoming validator deposits from the execution layer
@@ -56,6 +57,18 @@ const SelectClientSection = ({
           like Infura, but we recommend running your own client to
           keep the network as decentralized as possible."
         />
+      </div>
+    )}
+    {IS_MERGE && (
+      <div style={{ paddingBottom: '1rem' }}>
+        <Link to={TUTORIAL_URL} primary>
+          <FormattedMessage
+            defaultMessage="Check this document to learn how to run a node on {networkName}"
+            values={{
+              networkName: NETWORK_NAME,
+            }}
+          />
+        </Link>
       </div>
     )}
     <Box className="flex flex-column space-between mt10">

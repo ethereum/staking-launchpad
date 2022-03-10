@@ -14,6 +14,8 @@ import {
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
+  TUTORIAL_URL,
+  IS_MERGE_TESTNET,
 } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
@@ -178,6 +180,26 @@ interface Client {
   linkText: string;
 }
 
+const tutorialLinkBox = () => {
+  if (IS_MERGE_TESTNET) {
+    return (
+      <Alert variant="warning" className="my40 mx15">
+        <Heading level={4}>
+          <FormattedMessage defaultMessage="Testnet tutorial" />
+        </Heading>
+        <Link to={TUTORIAL_URL} primary>
+          <FormattedMessage
+            defaultMessage="Check this document to learn how to run a node on {networkName}"
+            values={{
+              networkName: NETWORK_NAME,
+            }}
+          />
+        </Link>
+      </Alert>
+    );
+  }
+  return;
+};
 export const Checklist = () => {
   const { formatMessage } = useIntl();
   const clientInfo: Client[] = _shuffle([
@@ -327,11 +349,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="To process incoming validator deposits from the execution layer
-                    (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your
-                    {consensusClient} (formerly 'Eth2'). You can use a third-party service
-                    like Infura, but we recommend running your own client to
-                    keep the network as decentralized as possible."
+                  defaultMessage="You need to run an {executionClient} as well as your
+                    {consensusClient} (formerly 'Eth2')."
                   values={{
                     executionClient: (
                       <Link
@@ -694,6 +713,7 @@ export const Checklist = () => {
               </Text>
             }
           />
+          {tutorialLinkBox()}
         </section>
         <section>
           <Heading level={3}>
@@ -715,7 +735,8 @@ export const Checklist = () => {
               />
             ))}
           </ClientContainer>
-          <Alert variant="error" className="mt30 mb20">
+          {tutorialLinkBox()}
+          <Alert variant="error" className="my40 mx15">
             <Heading level={4}>
               <FormattedMessage defaultMessage="Warning!" />
             </Heading>

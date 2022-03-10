@@ -10,8 +10,10 @@ import { web3ReactInterface } from './index';
 import {
   FORTMATIC_KEY,
   IS_MAINNET,
+  IS_MERGE_TESTNET,
+  NETWORK_NAME,
   PORTIS_DAPP_ID,
-  INFURA_URL,
+  RPC_URL,
 } from '../../utils/envVars';
 
 export enum NetworkChainId {
@@ -20,7 +22,28 @@ export enum NetworkChainId {
   'Rinkeby' = 4,
   'Göerli' = 5,
   'Kovan' = 42,
+  'Kintsugi' = 1337702,
+  'Kiln' = 1337802,
 }
+
+export const NetworkChainIdDict: { [id: string]: number } = {
+  Mainnet: 1,
+  Ropsten: 3,
+  Rinkeby: 4,
+  Göerli: 5,
+  Kovan: 42,
+  Kintsugi: 1337702,
+  Kiln: 1337802,
+};
+
+export const TARGET_NETWORK_CHAIN_ID = NetworkChainIdDict[NETWORK_NAME];
+let elNetworkName = 'Göerli';
+if (IS_MAINNET) {
+  elNetworkName = 'Mainnet';
+} else if (IS_MERGE_TESTNET) {
+  elNetworkName = NETWORK_NAME;
+}
+export const EL_NETWORK_NAME = elNetworkName;
 
 /*
   for UI purposes, all networks are "supported", but an error message
@@ -33,31 +56,33 @@ const supportedNetworks = [
   NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
   NetworkChainId.Kovan,
+  NetworkChainId.Kintsugi,
+  NetworkChainId.Kiln,
 ];
 
-enum Testnet {
-  'Göerli',
-}
+// FIXME: disabled Portis for now
+const portisSupportedNetworks = [
+  NetworkChainId['Göerli'],
+  NetworkChainId.Mainnet,
+  NetworkChainId.Rinkeby,
+  NetworkChainId.Ropsten,
+  NetworkChainId.Kovan,
+];
 
-enum Mainnet {
-  'Mainnet',
-}
-
-export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
-
+export const AllowedELNetworks = [EL_NETWORK_NAME];
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
 });
 
 export const portis: PortisConnector = new PortisConnector({
   dAppId: PORTIS_DAPP_ID,
-  networks: supportedNetworks,
+  networks: portisSupportedNetworks,
 });
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
   chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
-  rpcUrl: INFURA_URL,
+  rpcUrl: RPC_URL,
 });
 
 // sets up initial call to MM

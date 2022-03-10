@@ -167,6 +167,9 @@
   "2PI6Di": {
     "message": "Consensus Clients: {clientName}"
   },
+  "2SRLwR": {
+    "message": "Testnet tutorial"
+  },
   "2a1GTh": {
     "message": "you can always recalculate your signing key from your withdrawal key"
   },
@@ -567,6 +570,10 @@
   },
   "EcCME0": {
     "message": "Staking Launchpad"
+  },
+  "Ey/ttn": {
+    "description": "{network} is 'Mainnet' or 'Göerli' or other testnet names",
+    "message": "Connect to {network}"
   },
   "FEbVwB": {
     "message": "The key concept is the following:"
@@ -993,6 +1000,9 @@
   },
   "QWDxrk": {
     "message": "Key management"
+  },
+  "QeE86m": {
+    "message": "Check this document to learn how to run a node on {networkName}"
   },
   "QlsDcr": {
     "message": "Action"
@@ -1540,6 +1550,10 @@
   },
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
+  },
+  "gRMu7M": {
+    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
+    "message": "You need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2')."
   },
   "gVC0Wl": {
     "message": "It uses the assisted password in your secrets folder."
@@ -2165,19 +2179,11 @@
   "wdb1NC": {
     "message": "More on proof of stake"
   },
-  "wfSgCZ": {
-    "description": "{network} is either 'Ethereum mainnet' or 'Göerli testnet'",
-    "message": "Connect to {network}"
-  },
   "wm04oC": {
     "message": "Run the following command:"
   },
   "wqUcy/": {
     "message": "Early adopter risks"
-  },
-  "wrnpoO": {
-    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
-    "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
   },
   "wtTeex": {
     "message": "Are there spelling mistakes?"

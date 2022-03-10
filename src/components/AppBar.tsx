@@ -9,8 +9,9 @@ import EthDiamond from '../static/eth-diamond-plain.svg';
 import { web3ReactInterface } from '../pages/ConnectWallet';
 import { trimString } from '../utils/trimString';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   NetworkChainId,
+  EL_NETWORK_NAME,
 } from '../pages/ConnectWallet/web3Utils';
 import { Dot } from './Dot';
 import { Link } from './Link';
@@ -129,7 +130,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
 
   if (chainId) {
     network = NetworkChainId[chainId];
-    networkAllowed = Object.values(AllowedNetworks).includes(network);
+    networkAllowed = Object.values(AllowedELNetworks).includes(network);
   }
 
   const pathname: string = React.useMemo(() => location.pathname, [
@@ -149,8 +150,6 @@ const _AppBar = ({ location }: RouteComponentProps) => {
   const switchLaunchpadUrl = IS_MAINNET
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
-
-  const networkName = IS_MAINNET ? 'mainnet' : 'Göerli testnet';
 
   return (
     <RainbowBackground
@@ -396,7 +395,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                       <FormattedMessage
                         defaultMessage="Your wallet should be set to {networkName} to use this launchpad."
                         values={{
-                          networkName: <span>{networkName}</span>,
+                          networkName: <span>{EL_NETWORK_NAME}</span>,
                         }}
                       />
                     </Text>

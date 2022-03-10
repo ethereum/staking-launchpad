@@ -11,13 +11,13 @@ import {
   metamask,
   NetworkChainId,
   portis,
+  EL_NETWORK_NAME,
 } from '../../ConnectWallet/web3Utils';
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
 import {
   ENABLE_RPC_FEATURES,
-  IS_MAINNET,
   IS_MERGE_TESTNET,
   PORTIS_DAPP_ID,
 } from '../../../utils/envVars';
@@ -62,9 +62,9 @@ const WalletConnectModal: React.FC = () => {
             <FormattedMessage
               defaultMessage="Connect to {network}"
               values={{
-                network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+                network: EL_NETWORK_NAME,
               }}
-              description="{network} is either 'Ethereum mainnet' or 'Göerli testnet'"
+              description="{network} is 'Mainnet' or 'Göerli' or other testnet names"
             />
           </Text>
         </div>

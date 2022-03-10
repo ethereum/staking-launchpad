@@ -429,6 +429,12 @@
       "value": "clientName"
     }
   ],
+  "2SRLwR": [
+    {
+      "type": 0,
+      "value": "Testnet tutorial"
+    }
+  ],
   "2a1GTh": [
     {
       "type": 0,
@@ -1473,6 +1479,16 @@
       "value": "Staking Launchpad"
     }
   ],
+  "Ey/ttn": [
+    {
+      "type": 0,
+      "value": "Connect to "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -2511,6 +2527,16 @@
     {
       "type": 0,
       "value": "Key management"
+    }
+  ],
+  "QeE86m": [
+    {
+      "type": 0,
+      "value": "Check this document to learn how to run a node on "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
     }
   ],
   "QlsDcr": [
@@ -3919,6 +3945,28 @@
     {
       "type": 0,
       "value": "Generate deposit keys using the Ethereum Foundation deposit tool"
+    }
+  ],
+  "gRMu7M": [
+    {
+      "type": 0,
+      "value": "You need to run an "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " as well as your "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (formerly 'Eth2')."
     }
   ],
   "gVC0Wl": [
@@ -5507,16 +5555,6 @@
       "value": "More on proof of stake"
     }
   ],
-  "wfSgCZ": [
-    {
-      "type": 0,
-      "value": "Connect to "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "wm04oC": [
     {
       "type": 0,
@@ -5527,28 +5565,6 @@
     {
       "type": 0,
       "value": "Early adopter risks"
-    }
-  ],
-  "wrnpoO": [
-    {
-      "type": 0,
-      "value": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " as well as your "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
     }
   ],
   "wtTeex": [

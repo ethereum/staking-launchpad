@@ -11,7 +11,6 @@ export const RPC_URL                 = process.env.REACT_APP_RPC_URL ||  (`https
 
 // public
 export const NETWORK_NAME          = (IS_MAINNET || !process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME) ? 'mainnet' : process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME;
-export const EL_TRANSACTION_URL         = (IS_MERGE_TESTNET && process.env.REACT_APP_EL_TRANSACTION_URL) || (IS_MAINNET ? 'https://etherscan.io/tx' : 'https://goerli.etherscan.io/tx');
 export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/validator' : `https://beaconscan.com/${NETWORK_NAME.toLowerCase()}/validator`;
 export const BEACONCHAIN_URL            = (IS_MERGE_TESTNET && process.env.REACT_APP_BEACONCHAIN_URL) ||  `https://${NETWORK_NAME.toLowerCase()}.beaconcha.in`;
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
@@ -24,6 +23,15 @@ export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATIO
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
 export const TUTORIAL_URL               = process.env.REACT_APP_TUTORIAL_URL  || '';
+
+let elExplorerURL =  'https://goerli.etherscan.io';
+if (IS_MERGE_TESTNET && process.env.REACT_APP_EL_EXPLORER_URL) {
+    elExplorerURL = process.env.REACT_APP_EL_EXPLORER_URL;
+} else if (IS_MAINNET) {
+    elExplorerURL = 'https://etherscan.io'
+}
+export const EL_EXPLOER_URL = elExplorerURL
+export const EL_TRANSACTION_URL = elExplorerURL + '/tx'
 
 let tickerName = 'GöETH'
 if (IS_MERGE_TESTNET) {

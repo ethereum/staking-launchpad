@@ -9,6 +9,7 @@ import { Text } from '../../components/Text';
 import { changeToTestnet } from './Chains';
 import { TARGET_NETWORK_CHAIN_ID } from './web3Utils';
 import { FormattedMessage } from 'react-intl';
+import { IS_MERGE_TESTNET } from '../../utils/envVars';
 
 export const Logo = styled.img`
   height: 50px;
@@ -77,9 +78,11 @@ export const WalletButton = ({
   }, [error, active, setShowSpinner]);
 
   const handleClick = async () => {
+    if (IS_MERGE_TESTNET) {
+      await changeToTestnet(TARGET_NETWORK_CHAIN_ID);
+    }
     if (!selectedWallet) {
       setShowSpinner(true);
-      changeToTestnet(TARGET_NETWORK_CHAIN_ID);
       setSelectedWallet(walletProvider);
       await activate(walletProvider);
       setSelectedWallet(undefined);

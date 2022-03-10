@@ -1,5 +1,5 @@
 export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET !== 'false');  // If REACT_APP_IS_MAINNET is unset, set it to true by default
-export const IS_MERGE                 = Boolean(process.env.REACT_APP_IS_MERGE !== 'false');  // If REACT_APP_IS_MERGE is unset, set it to true by default
+export const IS_MERGE                 = Boolean(process.env.REACT_APP_IS_MERGE === 'true');  // If REACT_APP_IS_MERGE is unset, set it to false by default
 export const IS_MERGE_TESTNET           = !IS_MAINNET && IS_MERGE
 export const TESTNET_LAUNCHPAD_NAME     = process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME || 'Pyrmont';
 
@@ -23,6 +23,7 @@ export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATI
 export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATION_URL    || 'https://docs.teku.pegasys.tech/en/latest/HowTo/Get-Started/Build-From-Source/';
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
+export const TUTORIAL_URL               = process.env.REACT_APP_TUTORIAL_URL  || '';
 
 let tickerName = 'GöETH'
 if (IS_MERGE_TESTNET) {

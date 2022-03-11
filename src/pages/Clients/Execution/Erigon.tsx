@@ -14,9 +14,7 @@ export const ErigonDetails = () => (
       Erigon
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage
-        defaultMessage="Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimisations."
-      />
+      <FormattedMessage defaultMessage="Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations." />
     </Text>
     <SectionTitle level={2} className="mb5">
       <FormattedMessage defaultMessage="Language information" />
@@ -34,7 +32,11 @@ export const ErigonDetails = () => (
             install the client."
         />
       </Text>
-      <Link primary to="https://github.com/ledgerwatch/erigon#beacon-chain" className="mt10">
+      <Link
+        primary
+        to="https://github.com/ledgerwatch/erigon#beacon-chain"
+        className="mt10"
+      >
         <FormattedMessage defaultMessage="Erigon installation documentation" />
       </Link>
     </section>
@@ -59,7 +61,11 @@ export const ErigonDetails = () => (
               description="{goerli} shows '--chain goerli' terminal command"
             />
           </Text>
-          <Link className="mt20" primary to="https://github.com/ledgerwatch/erigon/blob/devel/README.md">
+          <Link
+            className="mt20"
+            primary
+            to="https://github.com/ledgerwatch/erigon/blob/devel/README.md"
+          >
             <FormattedMessage defaultMessage="Erigon documentation" />
           </Link>
         </section>

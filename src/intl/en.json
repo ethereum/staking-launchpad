@@ -455,6 +455,9 @@
     "description": "{code} values are terminal outputs to look for, should not translate",
     "message": "Check if {code1} is {code2}."
   },
+  "BHR1uy": {
+    "message": "Erigon is written in Go and licensed under the GNU LGPLv3."
+  },
   "BPpnlJ": {
     "message": "Download MetaMask"
   },
@@ -478,9 +481,6 @@
   },
   "CACPC+": {
     "message": "Czech"
-  },
-  "CBbRux": {
-    "message": "OpenEthereum is written in Rust and licensed under the GPLv3."
   },
   "CF9vMR": {
     "message": "Proof of stake"
@@ -605,9 +605,6 @@
   "FzkbsB": {
     "message": "validators"
   },
-  "G/VJJd": {
-    "message": "OpenEthereum installation documentation"
-  },
   "G0aacl": {
     "message": "As a validator you are rewarded for proposing / attesting to blocks that are included in the chain."
   },
@@ -687,6 +684,9 @@
   "I5lWZA": {
     "message": "Can I change the withdrawal credentials of my validator after the first deposit?"
   },
+  "I7MjRD": {
+    "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
+  },
   "IJw06E": {
     "message": "Sign transaction with your wallet"
   },
@@ -724,9 +724,6 @@
   },
   "JAiV0o": {
     "message": "In other words, to keep you honest, your actions need to have financial consequences."
-  },
-  "JDGiXT": {
-    "message": "The OpenEthereum documentation explains how to download and install the client."
   },
   "JMcBLZ": {
     "message": "Outstanding deposits ({remainingTxCount})"
@@ -1325,6 +1322,9 @@
     "description": "{flag} and {network} are terminal commands styled as code.",
     "message": "Please make sure you select {network} when prompted for a network, otherwise the deposit will be invalid."
   },
+  "ZsXdlw": {
+    "message": "Erigon installation documentation"
+  },
   "Zspg8H": {
     "message": "Section 1 - Before you start"
   },
@@ -1826,6 +1826,9 @@
   "nRdJct": {
     "message": "Continue without all transactions confirmed"
   },
+  "nW+xcT": {
+    "message": "Erigon documentation"
+  },
   "nZTFTz": {
     "message": "I understand that there is no advantage to depositing more than once per validator. Any extra {TICKER_NAME} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
   },
@@ -1868,9 +1871,6 @@
   },
   "ohspQX": {
     "message": "Responsibilities"
-  },
-  "okxBZ6": {
-    "message": "Formerly Parity, OpenEthereum is designed to be “the fastest, lightest, and most secure Ethereum client”."
   },
   "omJNJw": {
     "message": "Warning!"
@@ -1942,9 +1942,6 @@
   },
   "qK4+NQ": {
     "message": "The terminal"
-  },
-  "qLf68w": {
-    "message": "OpenEthereum documentation"
   },
   "qMePPG": {
     "message": "Note"
@@ -2175,6 +2172,9 @@
   },
   "wawegX": {
     "message": "fishing rod"
+  },
+  "wbxk7r": {
+    "message": "The Erigon documentation explains how to download and install the client."
   },
   "wdb1NC": {
     "message": "More on proof of stake"

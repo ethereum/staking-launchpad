@@ -44,8 +44,8 @@ const osMapping: { [os: number]: 'mac' | 'linux' | 'windows' } = {
 };
 
 export enum keysTool {
-  'GUI',
   'CLI',
+  'GUI',
   'CLISOURCE',
 }
 

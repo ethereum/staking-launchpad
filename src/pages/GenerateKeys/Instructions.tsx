@@ -29,18 +29,18 @@ export const Instructions = ({
       </Heading>
       <div className="my20" style={{ display: 'flex' }}>
         <TextSelectionBox
-          isActive={chosenTool === keysTool.GUI}
-          onClick={() => setChosenTool(keysTool.GUI)}
-          style={{ marginRight: '20px' }}
-        >
-          {formatMessage({ defaultMessage: 'Download Key Gen GUI app' })}
-        </TextSelectionBox>
-        <TextSelectionBox
           isActive={chosenTool === keysTool.CLI}
           onClick={() => setChosenTool(keysTool.CLI)}
           style={{ marginRight: '20px' }}
         >
           {formatMessage({ defaultMessage: 'Download CLI app' })}
+        </TextSelectionBox>
+        <TextSelectionBox
+          isActive={chosenTool === keysTool.GUI}
+          onClick={() => setChosenTool(keysTool.GUI)}
+          style={{ marginRight: '20px' }}
+        >
+          {formatMessage({ defaultMessage: 'Download Key Gen GUI app' })}
         </TextSelectionBox>
         <TextSelectionBox
           isActive={chosenTool === keysTool.CLISOURCE}
@@ -50,8 +50,8 @@ export const Instructions = ({
         </TextSelectionBox>
       </div>
       <div>
-        {chosenTool === keysTool.GUI && <Option1 {...{ os }} />}
-        {chosenTool === keysTool.CLI && <Option2 {...{ validatorCount, os }} />}
+        {chosenTool === keysTool.CLI && <Option1 {...{ validatorCount, os }} />}
+        {chosenTool === keysTool.GUI && <Option2 {...{ os }} />}
         {chosenTool === keysTool.CLISOURCE && (
           <Option3 {...{ validatorCount, os }} />
         )}

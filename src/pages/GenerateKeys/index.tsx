@@ -23,7 +23,11 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
+import {
+  IS_MAINNET,
+  PRICE_PER_VALIDATOR,
+  TICKER_NAME,
+} from '../../utils/envVars';
 import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
 
@@ -80,7 +84,10 @@ const _GenerateKeysPage = ({
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
-  const [chosenTool, setChosenTool] = useState<keysTool>(keysTool.GUI);
+
+  // Default to CLI on mainnet for now, once we have more confidence in it, switch to GUI as default.
+  const defaultKeysTool = IS_MAINNET ? keysTool.CLI : keysTool.GUI;
+  let [chosenTool, setChosenTool] = useState<keysTool>(defaultKeysTool);
 
   const onCheckboxClick = (e: any) => {
     setMnemonicAcknowledgementChecked(e.target.checked);

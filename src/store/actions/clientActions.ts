@@ -2,12 +2,12 @@ import { ActionTypes } from './index';
 
 export enum ClientId {
   'BESU' = 'BESU',
-  'OPEN_ETHEREUM' = 'OPEN_ETHEREUM',
-  'NETHERMIND' = 'NETHERMIND',
+  'ERIGON' = 'ERIGON',
   'GETH' = 'GETH',
-  'PRYSM' = 'PRYSM',
+  'NETHERMIND' = 'NETHERMIND',
   'LIGHTHOUSE' = 'LIGHTHOUSE',
   'NIMBUS' = 'NIMBUS',
+  'PRYSM' = 'PRYSM',
   'TEKU' = 'TEKU',
 }
 

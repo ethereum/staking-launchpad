@@ -85,7 +85,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
           </Text>
           <CodeSnippet>
             lighthouse account validator import --directory
-            eth2.0-deposit-cli/validator_keys
+            staking-deposit-cli/validator_keys
           </CodeSnippet>
           <Text className="mt10">
             <FormattedMessage defaultMessage="Once the process is complete, you should see the following:" />

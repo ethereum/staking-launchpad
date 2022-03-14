@@ -45,7 +45,7 @@ export const Option2 = ({
       </Text>
       <Link
         isTextLink={false}
-        to="https://github.com/ethereum/eth2.0-deposit-cli/releases/"
+        to="https://github.com/ethereum/staking-deposit-cli/releases/"
         className="my40"
       >
         <Button
@@ -70,7 +70,7 @@ export const Option2 = ({
               values={{
                 url: (
                   <strong>
-                    https://github.com/ethereum/eth2.0-deposit-cli/releases/
+                    https://github.com/ethereum/staking-deposit-cli/releases/
                   </strong>
                 ),
               }}

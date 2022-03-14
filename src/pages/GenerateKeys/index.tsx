@@ -87,7 +87,7 @@ const _GenerateKeysPage = ({
 
   // Default to CLI on mainnet for now, once we have more confidence in it, switch to GUI as default.
   const defaultKeysTool = IS_MAINNET ? keysTool.CLI : keysTool.GUI;
-  let [chosenTool, setChosenTool] = useState<keysTool>(defaultKeysTool);
+  const [chosenTool, setChosenTool] = useState<keysTool>(defaultKeysTool);
 
   const onCheckboxClick = (e: any) => {
     setMnemonicAcknowledgementChecked(e.target.checked);

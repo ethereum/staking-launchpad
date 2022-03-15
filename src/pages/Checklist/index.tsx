@@ -328,10 +328,29 @@ export const Checklist = () => {
               <Text>
                 <FormattedMessage
                   defaultMessage="To process incoming validator deposits from the execution layer
-                    (formerly 'Eth1' chain), you'll need to run an execution client as well as your
-                    consensus client (formerly 'Eth2'). You can use a third-party service
+                    (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your
+                    {consensusClient} (formerly 'Eth2'). You can use a third-party service
                     like Infura, but we recommend running your own client to
                     keep the network as decentralized as possible."
+                  values={{
+                    executionClient: (
+                      <Link
+                        to="https://ethereum.org/en/glossary/#execution-client"
+                        inline
+                      >
+                        <FormattedMessage defaultMessage="execution client" />
+                      </Link>
+                    ),
+                    consensusClient: (
+                      <Link
+                        to="https://ethereum.org/en/glossary/#consensus-client"
+                        inline
+                      >
+                        <FormattedMessage defaultMessage="consensus client" />
+                      </Link>
+                    ),
+                  }}
+                  description="{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'"
                 />
               </Text>
             </li>

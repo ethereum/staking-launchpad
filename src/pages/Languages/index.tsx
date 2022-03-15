@@ -53,14 +53,14 @@ export const Languages = () => {
   const { formatMessage } = useIntl();
   const langs = [
     {
-      code: 'zh',
-      title: formatMessage({ defaultMessage: 'Chinese (simplified)' }),
-      language: '简体中文',
+      code: 'ar',
+      title: formatMessage({ defaultMessage: 'Arabic' }),
+      language: 'العربية',
     },
     {
-      code: 'zh-tw',
-      title: formatMessage({ defaultMessage: 'Chinese (traditional)' }),
-      language: '繁體中文',
+      code: 'bg',
+      title: formatMessage({ defaultMessage: 'Bulgarian' }),
+      language: 'Български',
     },
     {
       code: 'cs',
@@ -68,19 +68,19 @@ export const Languages = () => {
       language: 'čeština',
     },
     {
+      code: 'de',
+      title: formatMessage({ defaultMessage: 'German' }),
+      language: 'Deutsch',
+    },
+    {
+      code: 'el',
+      title: formatMessage({ defaultMessage: 'Greek' }),
+      language: 'Ελληνικά',
+    },
+    {
       code: 'en',
       title: formatMessage({ defaultMessage: 'English' }),
       language: 'English',
-    },
-    {
-      code: 'it',
-      title: formatMessage({ defaultMessage: 'Italian' }),
-      language: 'Italiano',
-    },
-    {
-      code: 'ko',
-      title: formatMessage({ defaultMessage: 'Korean' }),
-      language: '한국어',
     },
     {
       code: 'es',
@@ -93,14 +93,34 @@ export const Languages = () => {
       language: 'Français',
     },
     {
-      code: 'el',
-      title: formatMessage({ defaultMessage: 'Greek' }),
-      language: 'Ελληνικά',
+      code: 'hu',
+      title: formatMessage({ defaultMessage: 'Hungarian' }),
+      language: 'Magyar',
     },
     {
       code: 'id',
       title: formatMessage({ defaultMessage: 'Indonesian' }),
       language: 'Bahasa Indonesia',
+    },
+    {
+      code: 'it',
+      title: formatMessage({ defaultMessage: 'Italian' }),
+      language: 'Italiano',
+    },
+    {
+      code: 'ja',
+      title: formatMessage({ defaultMessage: 'Japanese' }),
+      language: '日本語',
+    },
+    {
+      code: 'ko',
+      title: formatMessage({ defaultMessage: 'Korean' }),
+      language: '한국어',
+    },
+    {
+      code: 'pl',
+      title: formatMessage({ defaultMessage: 'Polish' }),
+      language: 'Polskie',
     },
     {
       code: 'pt-br',
@@ -113,24 +133,14 @@ export const Languages = () => {
       language: 'Română',
     },
     {
-      code: 'ar',
-      title: formatMessage({ defaultMessage: 'Arabic' }),
-      language: 'العربية',
-    },
-    {
-      code: 'de',
-      title: formatMessage({ defaultMessage: 'German' }),
-      language: 'Deutsch',
-    },
-    {
-      code: 'ja',
-      title: formatMessage({ defaultMessage: 'Japanese' }),
-      language: '日本語',
-    },
-    {
       code: 'ru',
       title: formatMessage({ defaultMessage: 'Russian' }),
       language: 'Pусский',
+    },
+    {
+      code: 'sl',
+      title: formatMessage({ defaultMessage: 'Slovenian' }),
+      language: 'Slovenščina',
     },
     {
       code: 'tr',
@@ -138,9 +148,14 @@ export const Languages = () => {
       language: 'Türkçe',
     },
     {
-      code: 'pl',
-      title: formatMessage({ defaultMessage: 'Polish' }),
-      language: 'Polskie',
+      code: 'zh',
+      title: formatMessage({ defaultMessage: 'Chinese (simplified)' }),
+      language: '简体中文',
+    },
+    {
+      code: 'zh-tw',
+      title: formatMessage({ defaultMessage: 'Chinese (traditional)' }),
+      language: '繁體中文',
     },
   ]
     .filter(lang => supportedLanguages.includes(lang.code))

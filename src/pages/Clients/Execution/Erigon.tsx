@@ -8,22 +8,19 @@ import { Code } from '../../../components/Code';
 import { FormattedMessage } from 'react-intl';
 
 // eslint-disable-next-line no-unused-vars
-export const OpenEthereumDetails = () => (
+export const ErigonDetails = () => (
   <>
     <SectionTitle level={2} className="mb5">
-      OpenEthereum
+      Erigon
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage
-        defaultMessage="Formerly Parity, OpenEthereum is designed to be “the fastest,
-          lightest, and most secure Ethereum client”."
-      />
+      <FormattedMessage defaultMessage="Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations." />
     </Text>
     <SectionTitle level={2} className="mb5">
       <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="OpenEthereum is written in Rust and licensed under the GPLv3." />
+      <FormattedMessage defaultMessage="Erigon is written in Go and licensed under the GNU LGPLv3." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
@@ -31,12 +28,16 @@ export const OpenEthereumDetails = () => (
       </SectionTitle>
       <Text>
         <FormattedMessage
-          defaultMessage="The OpenEthereum documentation explains how to download and
+          defaultMessage="The Erigon documentation explains how to download and
             install the client."
         />
       </Text>
-      <Link primary to="https://openethereum.github.io/Setup" className="mt10">
-        <FormattedMessage defaultMessage="OpenEthereum installation documentation" />
+      <Link
+        primary
+        to="https://github.com/ledgerwatch/erigon#beacon-chain"
+        className="mt10"
+      >
+        <FormattedMessage defaultMessage="Erigon installation documentation" />
       </Link>
     </section>
     {!IS_MAINNET && (
@@ -60,8 +61,12 @@ export const OpenEthereumDetails = () => (
               description="{goerli} shows '--chain goerli' terminal command"
             />
           </Text>
-          <Link className="mt20" primary to="https://openethereum.github.io/">
-            <FormattedMessage defaultMessage="OpenEthereum documentation" />
+          <Link
+            className="mt20"
+            primary
+            to="https://github.com/ledgerwatch/erigon/blob/devel/README.md"
+          >
+            <FormattedMessage defaultMessage="Erigon documentation" />
           </Link>
         </section>
       </>

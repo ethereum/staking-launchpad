@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { PageTemplate } from '../../../components/PageTemplate';
 import prysmBg from '../../../static/prysmatic-bg.png';
 import {
@@ -11,9 +12,38 @@ import { Link } from '../../../components/Link';
 import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+const ClientDiversityWarning = styled(Text as any)`
+  background: #ffdeb32e;
+  border: 1px solid burlywood;
+  padding: 30px;
+  border-radius: 4px;
+`;
+
 // eslint-disable-next-line no-unused-vars
 export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
+    <ClientDiversityWarning>
+      <p>
+        <FormattedMessage
+          defaultMessage="Currently the majority of validators run Prysm as their consensus client.
+            Client diversity is extremely important for the network health of Ethereum:
+            A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has
+            a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to
+            slashing."
+        />
+      </p>
+      <p>
+        <FormattedMessage defaultMessage="If at all possible, consider running another client at this time to help protect yourself and the network." />
+      </p>
+      <p>
+        <Link
+          to="https://ethereum.org/en/developers/docs/nodes-and-clients/client-diversity/"
+          primary
+        >
+          <FormattedMessage defaultMessage="More on client diversity" />
+        </Link>
+      </p>
+    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Prysm
     </SectionTitle>

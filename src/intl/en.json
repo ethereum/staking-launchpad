@@ -215,8 +215,8 @@
   "3URRZK": {
     "message": "Geth on Goerli documentation"
   },
-  "3XK21U": {
-    "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+  "3Y988c": {
+    "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until after the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
   },
   "3tR/V9": {
     "message": "Section 2 - During setup"
@@ -651,6 +651,9 @@
   },
   "H5+NAX": {
     "message": "Balance"
+  },
+  "HFBQjf": {
+    "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until after The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
   },
   "HMgrdg": {
     "message": "Configure your execution client"
@@ -1163,9 +1166,6 @@
   "VLDKor": {
     "message": "{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
   },
-  "VPpHAq": {
-    "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
-  },
   "VSSmNp": {
     "message": "In other words: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
   },
@@ -1466,6 +1466,9 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
+  "e5Ca4Y": {
+    "message": "Transfers between validators aren't possible yet. You will have to wait until a post-merge upgrade before you can withdraw or transfer your {TICKER_NAME}."
+  },
   "eF9RbC": {
     "message": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
   },
@@ -1568,9 +1571,6 @@
   },
   "h8MTUo": {
     "message": "Your stake"
-  },
-  "h8ZHus": {
-    "message": "Transfers between validators aren't possible yet. You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw or transfer your {TICKER_NAME}."
   },
   "hFzE1M": {
     "message": "Rewards are given for actions that help the network reach consensus."

@@ -553,10 +553,26 @@
       "value": "Geth on Goerli documentation"
     }
   ],
-  "3XK21U": [
+  "3Y988c": [
     {
       "type": 0,
-      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+      "value": "I understand that I "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " my stake for a while, and I "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " until after the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
     }
   ],
   "3tR/V9": [
@@ -1639,6 +1655,12 @@
     {
       "type": 0,
       "value": "Balance"
+    }
+  ],
+  "HFBQjf": [
+    {
+      "type": 0,
+      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until after The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
     }
   ],
   "HMgrdg": [
@@ -2943,28 +2965,6 @@
       "value": "."
     }
   ],
-  "VPpHAq": [
-    {
-      "type": 0,
-      "value": "I understand that I "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " my stake for a while, and I "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -3731,6 +3731,20 @@
       "value": "code3"
     }
   ],
+  "e5Ca4Y": [
+    {
+      "type": 0,
+      "value": "Transfers between validators aren't possible yet. You will have to wait until a post-merge upgrade before you can withdraw or transfer your "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "eF9RbC": [
     {
       "type": 0,
@@ -3997,20 +4011,6 @@
     {
       "type": 0,
       "value": "Your stake"
-    }
-  ],
-  "h8ZHus": [
-    {
-      "type": 0,
-      "value": "Transfers between validators aren't possible yet. You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw or transfer your "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "hFzE1M": [

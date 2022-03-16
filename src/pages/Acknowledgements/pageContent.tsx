@@ -166,7 +166,7 @@ export const pageContent = {
           />
         </Text>
         <Text size="medium" className="mt20">
-          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic." />
+          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until after The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic." />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
@@ -201,7 +201,7 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage
             defaultMessage={`Transfers between validators aren't possible yet. You will have to
-              wait until mainnet merges with the Beacon Chain (around two years) before you can
+              wait until a post-merge upgrade before you can
               withdraw or transfer your {TICKER_NAME}.`}
             values={{ TICKER_NAME }}
           />
@@ -224,7 +224,7 @@ export const pageContent = {
     acknowledgementText: (
       <FormattedMessage
         defaultMessage="I understand that I {cannotTransfer} my stake for a while, and I
-          {cannotWithdraw} until the merge. I understand that if I exit, I will not be able
+          {cannotWithdraw} until after the merge. I understand that if I exit, I will not be able
           to rejoin until much later. This is a long term commitment."
         values={{
           cannotTransfer: (

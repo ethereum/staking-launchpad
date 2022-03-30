@@ -8,7 +8,7 @@
   "+M/NC/": [
     {
       "type": 0,
-      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum."
+      "value": "Po združitvi ne bo več dveh ločenih omrežij Ethereum; obstajal bo samo Ethereum."
     }
   ],
   "+UUcBt": [
@@ -44,7 +44,7 @@
   "+ozGrs": [
     {
       "type": 0,
-      "value": "Polish"
+      "value": "Poljšina"
     }
   ],
   "+s8Gac": [
@@ -143,6 +143,12 @@
     {
       "type": 0,
       "value": "Transakcije"
+    }
+  ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "Če je le mogoče, sedaj razmislite o zagonu drugega odjemalca, da zaščitite sebe in omrežje."
     }
   ],
   "/ub26/": [
@@ -278,13 +284,13 @@
   "122+yR": [
     {
       "type": 0,
-      "value": "withdrawal key"
+      "value": "ključ za dvig"
     }
   ],
   "192AR6": [
     {
       "type": 0,
-      "value": "More on staking"
+      "value": "Več o zastavljanju"
     }
   ],
   "19o6KO": [
@@ -350,7 +356,7 @@
   "1ingnQ": [
     {
       "type": 0,
-      "value": "More on Ethereum staking economics"
+      "value": "Več o ekonomiji zastavljanja Ethereum"
     }
   ],
   "22EpKq": [
@@ -397,10 +403,22 @@
       "value": "Odpravljanje napak"
     }
   ],
+  "2HVWJL": [
+    {
+      "type": 0,
+      "value": "sloj za izvajanje"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "Sledite navodilom, ki so vam predstavljena v aplikaciji, da ustvarite svoje ključe."
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
-      "value": "Consensus Clients: "
+      "value": "Konsenz odjemalcev: "
     },
     {
       "type": 1,
@@ -442,7 +460,7 @@
   "36j2ls": [
     {
       "type": 0,
-      "value": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
+      "value": "Če želite obdelati dohodne pologe validatorja iz sloja za izvedbo (prej verige 'Eth1'), boste morali zagnati odjemalca za izvajanje in odjemalca za soglasje (prej 'Eth2'). Uporabite lahko storitev tretje osebe, kot je Infura, vendar priporočamo, da zaženete lastnega odjemalca, da bo omrežje čim bolj decentralizirano."
     }
   ],
   "38VH2G": [
@@ -522,7 +540,7 @@
   "3SOKyg": [
     {
       "type": 0,
-      "value": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
+      "value": "Te posodobitve terminologije spreminjajo samo konvencije o poimenovanju; ne spreminjajo ciljev ali načrta Ethereuma."
     }
   ],
   "3URRZK": [
@@ -534,7 +552,7 @@
   "3XK21U": [
     {
       "type": 0,
-      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+      "value": "Pomagali vam bomo ustvariti podpisni ključ za vsak validator, ki ga želite zagnati. Ker do spojitve ni nobenih dvigov, zdaj ne boste ustvarili svojih ključev za dvig. Ko boste lahko dvignili svoja sredstva, lahko svoje ključe za dvig izpeljete iz svojega mnemonika."
     }
   ],
   "3tR/V9": [
@@ -620,7 +638,7 @@
   "54J/qs": [
     {
       "type": 0,
-      "value": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
+      "value": "Kaj se zgodi, če uporabim BLS dvig in izgubim ključ za dvig?"
     }
   ],
   "58PXVy": [
@@ -632,7 +650,7 @@
   "5A6amM": [
     {
       "type": 0,
-      "value": "It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. "
+      "value": "Izvajanje validatorja na več lokacijah predstavlja visoko tveganje. To bo povzročilo zmanjšanje deleža in zavrnitev iz omrežja. "
     },
     {
       "type": 1,
@@ -643,6 +661,12 @@
     {
       "type": 0,
       "value": "Obveza"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "Kako želite ustvariti svoje ključe?"
     }
   ],
   "5HJLBU": [
@@ -698,7 +722,7 @@
   "6S95Bo": [
     {
       "type": 0,
-      "value": "Avoid phishing"
+      "value": "Izogibajte se lažnemu predstavljanju"
     }
   ],
   "6UUL73": [
@@ -867,6 +891,12 @@
       "value": "Ethereum odjemalec, zasnovan za uporabo s strani podjetij za primere uporabe na javnih in zasebnih omrežjih."
     }
   ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "Zaženite aplikacijo Wagyu Key Gen iz aplikacij, tako da z desno miškino tipko kliknete in kliknete Odpri. Prejeli boste opozorilo, da macOS ne more preveriti razvijalca »Wagyu Key Gen.app«. Ste prepričani, da ga želite odpreti? Kliknite Odpri in aplikacija se bo odprla."
+    }
+  ],
   "9+Ddtu": [
     {
       "type": 0,
@@ -956,7 +986,7 @@
   "9xeLhs": [
     {
       "type": 0,
-      "value": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set "
+      "value": "Dvig naslova Ethereum: Če želite dvigniti na naslov denarnice Mainnet (prej naslov 'Eth1') po nadgradnji čiščenja po združitvi, lahko nastavite "
     },
     {
       "type": 1,
@@ -964,7 +994,7 @@
     },
     {
       "type": 0,
-      "value": " when running deposit-cli. "
+      "value": ", ko zaženete depozit-cli. "
     },
     {
       "type": 1,
@@ -983,6 +1013,12 @@
       "value": "Prysm ponuja postopne smernice za izvajanje njihovega odjemalca po opravljenem pologu prek zagonske platforme."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "soglasna plast"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
@@ -992,7 +1028,7 @@
   "ACstv9": [
     {
       "type": 0,
-      "value": "I've installed and synced my execution client on "
+      "value": "Naložil/-a in sinhroniziral/-a sem svojega odjemalca za izvajanje v omrežju "
     },
     {
       "type": 1,
@@ -1000,7 +1036,7 @@
     },
     {
       "type": 0,
-      "value": " (do not wait on this as it can take several days)."
+      "value": " (ne odlašajte predolgo, saj lahko traja nekaj dni)."
     }
   ],
   "AEp7+F": [
@@ -1028,7 +1064,7 @@
   "AJD+66": [
     {
       "type": 0,
-      "value": "The Ethereum staking deposit contract requires a minimum of "
+      "value": "Zastavni polog Ethereum zahteva, da hkrati pošljete najmanj "
     },
     {
       "type": 1,
@@ -1044,7 +1080,13 @@
     },
     {
       "type": 0,
-      "value": " to be sent at one time to be accepted."
+      "value": ", sicer ne bo sprejeta."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "odjemalec za izvajanje"
     }
   ],
   "AYKxmf": [
@@ -1169,6 +1211,12 @@
       "value": "."
     }
   ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Erigon je napisan v Go in licenciran pod GNU LGPLv3."
+    }
+  ],
   "BPpnlJ": [
     {
       "type": 0,
@@ -1217,12 +1265,6 @@
       "value": "Češčina"
     }
   ],
-  "CBbRux": [
-    {
-      "type": 0,
-      "value": "OpenEthereum je napisan v jeziku Rust in licenciran v skladu z GPLv3."
-    }
-  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1238,7 +1280,7 @@
   "Cacfkx": [
     {
       "type": 0,
-      "value": "More on the Ethereum vision"
+      "value": "Več o viziji Ethereum"
     }
   ],
   "CdKEd/": [
@@ -1424,7 +1466,7 @@
   "EcCME0": [
     {
       "type": 0,
-      "value": "Staking Launchpad"
+      "value": "Zagonska platforma zastavljanja"
     }
   ],
   "FEbVwB": [
@@ -1487,12 +1529,6 @@
       "value": "validatorji"
     }
   ],
-  "G/VJJd": [
-    {
-      "type": 0,
-      "value": "Dokumentacija za namestitev odjemalca OpenEthereum"
-    }
-  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1523,10 +1559,16 @@
       "value": "Poskrbite, da niste žrtev lažnega predstavljanja"
     }
   ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "odjemalec za soglasje"
+    }
+  ],
   "GOHkCO": [
     {
       "type": 0,
-      "value": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
+      "value": "Danes boste varovali oddajniško verigo, prvo glavno nadgradnjo skaliranja. Gre za ločeno verigo, ki uporablja mehanizem za doseganje soglasja dokaz o deležu. Sčasoma boste pomagali varovati celoten Ethereum, ko se glavno omrežje (Ethereum, ki ga uporabljamo danes) združi z oddajniško verigo."
     }
   ],
   "GOc7cL": [
@@ -1551,6 +1593,12 @@
     {
       "type": 0,
       "value": "Ustvari ključe"
+    }
+  ],
+  "GelBd9": [
+    {
+      "type": 0,
+      "value": "Datoteko, ki ste jo pravkar prenesli, naredite izvedljivo."
     }
   ],
   "GsBRWL": [
@@ -1592,13 +1640,13 @@
   "HMgrdg": [
     {
       "type": 0,
-      "value": "Configure your execution client"
+      "value": "Konfigurirajte svojega odjemalca za izvajanje"
     }
   ],
   "HXvZ2L": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Uporabite "
     },
     {
       "type": 1,
@@ -1606,13 +1654,13 @@
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": " za povezovanje svojega vozlišča soglasja s končno točko JSON RPC. To bo omogočilo storitve JSON RPC na privzetih vratih 8545."
     }
   ],
   "Hczrvs": [
     {
       "type": 0,
-      "value": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
+      "value": "Zmanjšanje deleža ima dva namena: (1) zagotoviti, da so stroški napada na omrežje pretirano visoki, in (2) preprečiti leno delovanje validatorjev s preverjanjem, da dejansko opravijo svoje dolžnosti. Če bo vaš delež zmanjšan zaradi delovanja na dokazljivo uničevalen način, bo del vašega deleža uničen."
     }
   ],
   "HoahTd": [
@@ -1646,7 +1694,13 @@
   "I5lWZA": [
     {
       "type": 0,
-      "value": "Can I change the withdrawal credentials of my validator after the first deposit?"
+      "value": "Ali lahko po prvem pologu spremenim poverilnice za dvig svojega validatorja?"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "Erigon je prej TurboGeth odjemalec Ethereum, zgrajen za omogočanje optimizacije zmogljivosti."
     }
   ],
   "IJw06E": [
@@ -1749,12 +1803,6 @@
       "value": "Z drugimi besedami je namen, da ostanete pošteni, vaša dejanja morajo imeti finančne posledice."
     }
   ],
-  "JDGiXT": [
-    {
-      "type": 0,
-      "value": "Dokumentacija za Open Ethereum razlaga, kako prenesete in namestite odjemalca."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1778,7 +1826,7 @@
   "JbVlOE": [
     {
       "type": 0,
-      "value": "Dig deeper into Ethereum upgrades."
+      "value": "Poglobite se v nadgradnje Ethereuma."
     }
   ],
   "JhUYU3": [
@@ -1854,7 +1902,7 @@
   "KEfTSF": [
     {
       "type": 0,
-      "value": "I've installed the "
+      "value": "Namestil/-a sem "
     },
     {
       "type": 1,
@@ -1862,13 +1910,23 @@
     },
     {
       "type": 0,
-      "value": " of my consensus client."
+      "value": " svojega odjemalca za soglasje."
     }
   ],
   "KN7zKn": [
     {
       "type": 0,
       "value": "Napaka"
+    }
+  ],
+  "KWWsDo": [
+    {
+      "type": 0,
+      "value": "Poskrbite, da prenašate iz uradnega GitHub računa StakeHouse tako, da preverite url: "
+    },
+    {
+      "type": 1,
+      "value": "url"
     }
   ],
   "KjcAm2": [
@@ -1930,7 +1988,7 @@
   "LHPZ+C": [
     {
       "type": 0,
-      "value": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
+      "value": "Lighthouse je izvedba odjemalca za soglasje, napisana v jeziku Rust ter močno osredotočena na hitrost in varnost."
     }
   ],
   "LVy+cS": [
@@ -1965,10 +2023,16 @@
       "value": " za sinhronizacijo testnega omrežja Goerli."
     }
   ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "Bolgarščina"
+    }
+  ],
   "LlClXS": [
     {
       "type": 0,
-      "value": "Thank you for supporting the Ethereum network!"
+      "value": "Hvala, ker podpirate omrežje Ethereum!"
     }
   ],
   "Ltd/hJ": [
@@ -2054,7 +2118,7 @@
   "MZzOnU": [
     {
       "type": 0,
-      "value": "How is Ethereum scaling?"
+      "value": "Kako poteka nadgradnja Ethereum?"
     }
   ],
   "Mb3npQ": [
@@ -2078,13 +2142,13 @@
   "Mlc7Vr": [
     {
       "type": 0,
-      "value": "The Ethereum upgrades will only be successful if validators understand the risks and responsibilities."
+      "value": "Nadgradnje Ethereum bodo uspešne samo, če validatorji razumejo tveganja in odgovornosti."
     }
   ],
   "Mm7FSl": [
     {
       "type": 0,
-      "value": "The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge."
+      "value": "Izraza 'Eth1' in 'Eth2' se opuščata v pripravah na združitev."
     }
   ],
   "MmZjeu": [
@@ -2170,7 +2234,7 @@
   "NatYUJ": [
     {
       "type": 0,
-      "value": "Learn more about the roles and responsibilities of Ethereum validators."
+      "value": "Preverite več o vlogah in odgovornostih validatorjev Ethereum."
     }
   ],
   "Nb5DNK": [
@@ -2182,15 +2246,11 @@
   "Ns8vbQ": [
     {
       "type": 0,
-      "value": "Choose "
+      "value": "Izberite odjemalca za "
     },
     {
       "type": 1,
       "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " client"
     }
   ],
   "NwzcYT": [
@@ -2224,7 +2284,7 @@
   "O3qkOm": [
     {
       "type": 0,
-      "value": "Sharding"
+      "value": "Razdrobitev"
     }
   ],
   "OIvXIO": [
@@ -2270,7 +2330,7 @@
   "P/Oh91": [
     {
       "type": 0,
-      "value": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
+      "value": "Lažno predstavljanje je resnično tveganje za validatorje Razdrobitev in mnogi zaradi tega žal izgubijo svoja sredstva."
     }
   ],
   "P0kiYS": [
@@ -2338,7 +2398,7 @@
   "PmrcLE": [
     {
       "type": 0,
-      "value": "Nethermind on Goerli documentation"
+      "value": "Dokumentacija odjemalca Nethermind v omrežju Goerli"
     }
   ],
   "PoBIK+": [
@@ -2482,7 +2542,7 @@
   "RE2MaJ": [
     {
       "type": 0,
-      "value": "Consensus clients"
+      "value": "Odjemalci za soglasje"
     }
   ],
   "ROHpFF": [
@@ -2545,12 +2605,6 @@
       "value": "Za preverjanje uporabite naslednji ukaz, da preverite, če je različica odjemalca pravilno vrnjena:"
     }
   ],
-  "S0e/cN": [
-    {
-      "type": 0,
-      "value": "Kako želite izvajati CLI?"
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -2567,6 +2621,12 @@
     {
       "type": 0,
       "value": "Vaša zastavljena vsota je prispela na pogodbo za polog!"
+    }
+  ],
+  "SHNw06": [
+    {
+      "type": 0,
+      "value": "Izvedite datoteko, ki ste jo pravkar prenesli."
     }
   ],
   "SR0qHv": [
@@ -2608,7 +2668,7 @@
   "SdRBir": [
     {
       "type": 0,
-      "value": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new key pairs and installing the validator software are both done in the terminal."
+      "value": "Če želite postati validator, boste morali imeti sposobnost izvajanja ukazov v terminalu v svojem računalniku. Tako ustvarjanje novih parov ključev kot namestitev programske opreme za validacijo potekata v terminalu."
     }
   ],
   "SeW5ak": [
@@ -2642,7 +2702,7 @@
   "THIzw6": [
     {
       "type": 0,
-      "value": "Validators and Ethereum"
+      "value": "Validatorji in Ethereum"
     }
   ],
   "TLEziZ": [
@@ -2759,6 +2819,28 @@
     {
       "type": 0,
       "value": "Če nimate mape s testnim omrežjem, programa Nimbus verjetno niste pravilno vgradili in izvedli. Ponovno zaženite ukaze make."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Ethereum bo sestavljen iz "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (obdeluje transakcije in izvrševanje, prej 'Eth1') in "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (obdeluje oddajniško verigo za dokazovanje vloge, prej 'Eth2' ali 'Ethereum 2.0')."
     }
   ],
   "VASo1/": [
@@ -2938,7 +3020,7 @@
   "WdDGn6": [
     {
       "type": 0,
-      "value": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
+      "value": "Izvedba protokola soglasja, osredotočena na uporabnost, varnost in zanesljivost. Odjemalec Prysm je razvilo podjetje Prysmatic Labs, ki se osredotoča izključno na razvoj svojega odjemalca."
     }
   ],
   "WkrNSk": [
@@ -2986,7 +3068,7 @@
   "XRxD8r": [
     {
       "type": 0,
-      "value": "Besu on Goerli documentation"
+      "value": "Dokumentacija odjemalca Besu v omrežju Goerli"
     }
   ],
   "XVehvN": [
@@ -3022,7 +3104,7 @@
   "Xbt2gv": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Uporabite "
     },
     {
       "type": 1,
@@ -3030,7 +3112,7 @@
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": " za povezovanje svojega vozlišča za soglasje s končno točko JSON RPC. To bo omogočilo storitve JSON RPC na privzetih vratih 8545."
     }
   ],
   "XmddSV": [
@@ -3042,7 +3124,7 @@
   "XqbweH": [
     {
       "type": 0,
-      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: "
+      "value": "Odjemalci podpirajo orodji Prometheus in Grafana, da vam pomagajo pri vizualizaciji pomembnih metrik o svojem validatorju v realnem času. Navodila za določen odjemalec lahko najdete tukaj: "
     },
     {
       "type": 1,
@@ -3145,6 +3227,20 @@
       "value": "."
     }
   ],
+  "YQJy4H": [
+    {
+      "type": 0,
+      "value": "Na tej točki bi morali imeti mnemonično frazo napisano na varnem mestu in shranjeno shrambo ključev za vse svoje validatorje (št. validatorjev: "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": "). Poskrbite, da so varno shranjeni, po možnosti ne na spletu. Vaše shrambe ključev validatorjev bi morale biti na voljo v izbranem imeniku."
+    }
+  ],
   "Yganfl": [
     {
       "type": 0,
@@ -3155,6 +3251,12 @@
     {
       "type": 0,
       "value": "Če izgubite svoj ključ za dvig, ni mogoče dostopati do sredstev, shranjenih v vašem validatorju."
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "Slovenščina"
     }
   ],
   "YtwQyB": [
@@ -3233,6 +3335,26 @@
       "value": "Zakaj je potrebno čakati?"
     }
   ],
+  "ZlLjuq": [
+    {
+      "type": 0,
+      "value": "Ne pozabite izbrati omrežja "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", ko bo prikazan poziv za omrežje, sicer bo polog neveljaven."
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Dokumentacija za namestitev odjemalca Erigon"
+    }
+  ],
   "Zspg8H": [
     {
       "type": 0,
@@ -3242,7 +3364,7 @@
   "Zxm0fh": [
     {
       "type": 0,
-      "value": "The merge will see the Ethereum Mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
+      "value": "Pri združitvi se bo glavno omrežje Ethereum, ki ga uporabljamo danes, združilo z oddajniško verigo. Takrat bo Ethereum povsem prešel na dokaz o deležu."
     }
   ],
   "ZzTcj5": [
@@ -3327,6 +3449,12 @@
       "value": "Toda upoštevajte, da v primeru, da zapustite zastavljanje, v bližnji prihodnosti tega ne boste mogli preklicati."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "Več o raznolikosti odjemalca"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -3343,6 +3471,12 @@
     {
       "type": 0,
       "value": "Dokumentacija za namestitev odjemalca Besu"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "Prenesite aplikacijo Wagyu Key Gen"
     }
   ],
   "bVtlF7": [
@@ -3384,7 +3518,7 @@
   "cJX99/": [
     {
       "type": 0,
-      "value": "Check your favorite Beacon Chain block explorer:"
+      "value": "Preverite svoj najljubši pregledovalnik blokov oddajniške verige:"
     }
   ],
   "cPsIkp": [
@@ -3420,7 +3554,7 @@
   "ckaUkz": [
     {
       "type": 0,
-      "value": "A validator is an entity that participates in the consensus of the Ethereum protocol."
+      "value": "Validator je entiteta, ki sodeluje pri doseganju soglasja v protokolu Ethereum."
     }
   ],
   "clUb0+": [
@@ -3438,13 +3572,19 @@
   "cpxfOR": [
     {
       "type": 0,
-      "value": "What are withdrawal credentials?"
+      "value": "Kaj so poverilnice za dvig?"
     }
   ],
   "cyR7Kh": [
     {
       "type": 0,
       "value": "Nazaj"
+    }
+  ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "2. korak: Ustvarite ključe za depozit z aplikacijo Wagyu Key Gen"
     }
   ],
   "d5KEM8": [
@@ -3460,7 +3600,7 @@
     },
     {
       "type": 0,
-      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
+      "value": " je 32-bajtno polje v depozitu za preverjanje cilja veljavnih dvigov. Trenutno obstajata dve vrsti dvigov: dvig BLS in dvig z naslova Ethereum."
     }
   ],
   "dH5+MX": [
@@ -3478,7 +3618,7 @@
   "dJMce5": [
     {
       "type": 0,
-      "value": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
+      "value": "Prysm je odjemalec za soglasje protokola Ethereum za izvajanje Go, osredotočena na uporabnost, varnost in zanesljivost."
     }
   ],
   "dM/KIM": [
@@ -3490,7 +3630,7 @@
   "dNh0YZ": [
     {
       "type": 0,
-      "value": "As of "
+      "value": "Trenutno "
     },
     {
       "type": 1,
@@ -3498,7 +3638,7 @@
     },
     {
       "type": 0,
-      "value": ", you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
+      "value": " boste potrebovali ~400 Gb samo za podatke verige na glavnem omrežju (kar zraste za ~1 Gb/dan)."
     }
   ],
   "dTOtPO": [
@@ -3566,7 +3706,7 @@
   "eF9RbC": [
     {
       "type": 0,
-      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
+      "value": "O pogodbi za polog lahko razmišljate kot o prenosu sredstev med Ethereum računi in validatorji oddajniške verige."
     }
   ],
   "eKEL/g": [
@@ -3608,7 +3748,7 @@
   "eq0/34": [
     {
       "type": 0,
-      "value": "The Merge"
+      "value": "Spojitev"
     }
   ],
   "erZJkZ": [
@@ -3706,7 +3846,7 @@
   "frIMm4": [
     {
       "type": 0,
-      "value": "Syncing your execution client may take a few days in the worst-case scenario."
+      "value": "Sinhronizacija vašega odjemalca za izvajanje lahko v najslabšem primeru traja nekaj dni."
     }
   ],
   "g/DxI7": [
@@ -3879,6 +4019,12 @@
       "value": "Z drugimi besedami, svoje nagrade povečate tako, da zagotavljate čim večje ugodnosti za celotno omrežje."
     }
   ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "Madžarščina"
+    }
+  ],
   "hjrLbR": [
     {
       "type": 0,
@@ -3966,7 +4112,7 @@
   "ie5fDg": [
     {
       "type": 0,
-      "value": "Staking Launchpad "
+      "value": "Zagonska platforma zastavljanja omrežja "
     },
     {
       "type": 1,
@@ -3976,19 +4122,19 @@
   "im7uMt": [
     {
       "type": 0,
-      "value": "Consensus Layer Validator Client (VC)"
+      "value": "Odjemalec za preverjanje ravni soglasja (VC)"
     }
   ],
   "ioj2Sj": [
     {
       "type": 0,
-      "value": "I've imported my keystore(s) into my validator client."
+      "value": "Svoje shrambe ključev sem uvozil/-a v svojega odjemalca validatorja."
     }
   ],
   "iqJ3LM": [
     {
       "type": 0,
-      "value": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
+      "value": "PegaSys Teku je odjemalec za soglasje Ethereum, ki temelji na jeziku Java, in je zasnovan za izpolnjevanje institucionalnih potreb in varnostnih zahtev."
     }
   ],
   "irRdC0": [
@@ -4016,7 +4162,7 @@
   "j8GPOH": [
     {
       "type": 0,
-      "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
+      "value": "Teku, nekdaj imenovan Artemis, je odjemalec za soglasje, ustvarjen za izpolnjevanje institucionalnih potreb in varnostnih zahtev. PegaSys je enota družbe ConsenSys, predana razvoju odjemalcev in orodij, namenjenih podjetjem, za interakcijo z jedrno platformo Ethereum."
     }
   ],
   "jDv/zO": [
@@ -4052,7 +4198,7 @@
   "jg9gEs": [
     {
       "type": 0,
-      "value": "Make sure you do the following to get your execution client working properly."
+      "value": "Za pravilno delovanje svojega odjemalca za izvajanje storite naslednje."
     }
   ],
   "jjLubH": [
@@ -4083,6 +4229,12 @@
     {
       "type": 0,
       "value": "Dokumentacija Nimbus"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "Oglejte si revizijo Wagyu Key Gen s strani HashCloak"
     }
   ],
   "kFS5Sd": [
@@ -4204,7 +4356,7 @@
   "lHiz+K": [
     {
       "type": 0,
-      "value": "Nimbus is a client implementation for both execution and consensus layers that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
+      "value": "Nimbus je izvedba odjemalca tako izvrševalne plasti in plasti za soglasje, ki poskuša biti čimbolj lahek v smislu porabljenih virov. To mu omogoča učinkovito delovanje v vgrajenih sistemih, napravah z omejenimi viri -- vključno z računalniki Raspberry Pi -- in večnamenskih strežnikih."
     }
   ],
   "lLOZMD": [
@@ -4290,7 +4442,7 @@
   "lfHCV+": [
     {
       "type": 0,
-      "value": "Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices."
+      "value": "Nimbus je raziskovalni projekt in izvedba odjemalca za soglasje, zasnovana za kakovostno delovanje v vgrajenih sistemih in osebnih mobilnih napravah."
     }
   ],
   "lfV1bj": [
@@ -4302,7 +4454,7 @@
   "ljWKM1": [
     {
       "type": 0,
-      "value": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the "
+      "value": "Dvig BLS: privzeto bi depozit-cli ustvaril poverilnice za dvig z "
     },
     {
       "type": 1,
@@ -4310,7 +4462,7 @@
     },
     {
       "type": 0,
-      "value": " derived via mnemonics in "
+      "value": ", izpeljanimi prek mnemonike v formatu "
     },
     {
       "type": 1,
@@ -4318,7 +4470,7 @@
     },
     {
       "type": 0,
-      "value": " format."
+      "value": "."
     }
   ],
   "ll/zMW": [
@@ -4378,7 +4530,7 @@
   "nBhisA": [
     {
       "type": 0,
-      "value": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."
+      "value": "Če želite postati validator, boste morali zagnati odjemalca za izvajanje (prej 'Eth1') in odjemalca za soglasje (prej 'Eth2'). Oglejte si kontrolni seznam, da pripravite sebe in svojo opremo."
     }
   ],
   "nHk8Et": [
@@ -4405,6 +4557,12 @@
     {
       "type": 0,
       "value": "Nadaljuj brez potrditve vseh transakcij"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Dokumentacija Erigon"
     }
   ],
   "nZTFTz": [
@@ -4442,7 +4600,7 @@
   "nln+aO": [
     {
       "type": 0,
-      "value": "I've simulated how to safely migrate from one consensus client to another."
+      "value": "Simuliral sem, kako varno preiti z enega odjemalca za soglasje v drugega."
     }
   ],
   "ntG2by": [
@@ -4488,7 +4646,7 @@
   "oNohob": [
     {
       "type": 0,
-      "value": "Configure your consensus client"
+      "value": "Konfigurirajte svojega odjemalca za soglasje"
     }
   ],
   "oPdwwC": [
@@ -4537,12 +4695,6 @@
     {
       "type": 0,
       "value": "Odgovornosti"
-    }
-  ],
-  "okxBZ6": [
-    {
-      "type": 0,
-      "value": "OpenEthereum, nekdaj imenovan Parity, je zasnovan kot »najhitrejši, najlažji in najbolj varen odjemalec za Ethereum«."
     }
   ],
   "omJNJw": [
@@ -4621,6 +4773,12 @@
       "value": "."
     }
   ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "Zaženite aplikacijo iz namiznega okolja tako, da jo dvakrat kliknete."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
@@ -4637,12 +4795,6 @@
     {
       "type": 0,
       "value": "Nimbus shrambe ključev išče v mapah vaših validatorjev."
-    }
-  ],
-  "pofmhk": [
-    {
-      "type": 0,
-      "value": "Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
   "pqC+qt": [
@@ -4682,7 +4834,7 @@
   "qB6aU6": [
     {
       "type": 0,
-      "value": "What happened to 'Eth2?'"
+      "value": "Kaj se je zgodilo z 'Eth2?'"
     }
   ],
   "qDcbPp": [
@@ -4709,12 +4861,6 @@
     {
       "type": 0,
       "value": "Terminal"
-    }
-  ],
-  "qLf68w": [
-    {
-      "type": 0,
-      "value": "OpenEthereum dokumentacija"
     }
   ],
   "qMePPG": [
@@ -4786,7 +4932,7 @@
   "rMjMmc": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Uporabite "
     },
     {
       "type": 1,
@@ -4794,7 +4940,7 @@
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": " za povezovanje svojega vozlišča soglasja s končno točko JSON RPC. To bo omogočilo storitve JSON RPC na privzetih vratih 8545."
     }
   ],
   "rNEdex": [
@@ -4836,7 +4982,7 @@
   "rnDgcN": [
     {
       "type": 0,
-      "value": "No, you cannot change your withdrawal credentials in top-ups."
+      "value": "Ne, pri dopolnjevanju ne morete spremeniti svojih poverilnic za dvig."
     }
   ],
   "rs4eqr": [
@@ -4906,7 +5052,7 @@
   "sMHQRT": [
     {
       "type": 0,
-      "value": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
+      "value": "Odjemalec za soglasje, ki je močno osredotočen na hitrost in varnost. Razvilo ga je podjetje Sigma Prime, ki se ukvarja z informacijsko varnostjo in inženiringom programske opremo, skupaj z ustanovo Ethereum Foundation, podjetjem ConsenSys in zasebnimi posamezniki pa so financirali odjemalec Lighthouse."
     }
   ],
   "sXV95+": [
@@ -4918,7 +5064,7 @@
   "sdQRah": [
     {
       "type": 0,
-      "value": "I've synced my beacon node on "
+      "value": "Sinhroniziral/-a sem svoje vozlišče na oddajniški verigi Eth2 v omrežju "
     },
     {
       "type": 1,
@@ -4929,10 +5075,16 @@
       "value": "."
     }
   ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "Prenesite aplikacijo Key Gen GUI"
+    }
+  ],
   "smD5l/": [
     {
       "type": 0,
-      "value": "Consensus Layer Beacon Node (BN)"
+      "value": "Vozlišče na oddajniški verigi plasti za soglasje (BN)"
     }
   ],
   "soCLV+": [
@@ -4968,13 +5120,13 @@
   "tMHEEe": [
     {
       "type": 0,
-      "value": "Learn more about the great renaming"
+      "value": "Več o velikem preimenovanju"
     }
   ],
   "tbYkT4": [
     {
       "type": 0,
-      "value": "The Ethereum consensus-layer specification"
+      "value": "Specifikacije plasti za soglasje Ethereum"
     }
   ],
   "teyxVk": [
@@ -5006,7 +5158,7 @@
   "toCscK": [
     {
       "type": 0,
-      "value": "Choose your "
+      "value": "Izberite svojega odjemalca "
     },
     {
       "type": 1,
@@ -5014,7 +5166,7 @@
     },
     {
       "type": 0,
-      "value": " client and set up a node"
+      "value": " in nastavite vozlišče"
     }
   ],
   "tsfX5f": [
@@ -5044,7 +5196,7 @@
   "txdGU9": [
     {
       "type": 0,
-      "value": "The Ethereum upgrades"
+      "value": "Nadgradnje Ethereum"
     }
   ],
   "tzMNF3": [
@@ -5104,7 +5256,7 @@
   "uPECbE": [
     {
       "type": 0,
-      "value": "Validator checklist"
+      "value": "Kontrolni seznam za validatorje"
     }
   ],
   "ubKWX8": [
@@ -5184,7 +5336,7 @@
   "vCHTnu": [
     {
       "type": 0,
-      "value": "Withdrawal credentials"
+      "value": "Poverilnice za dvig"
     }
   ],
   "vEJDo8": [
@@ -5203,6 +5355,12 @@
     {
       "type": 0,
       "value": "Nadaljujte previdno. Naš vir podatkov na verigi je nedosegljiv in ne moremo označiti podvojenih pologov."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "1. korak: Prenesite aplikacijo Wagyu Key Gen za svoj operacijski sistem"
     }
   ],
   "vY2wig": [
@@ -5256,7 +5414,7 @@
   "vkozFq": [
     {
       "type": 0,
-      "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
+      "value": "Validatorja ni mogoče ponovno aktivirati, svojih sredstev pa ne boste mogli prenesti ali dvigniti po nadgradnji čiščenja po spojitvi, ki je trenutno načrtovana za izvršitev po spojitvi (kar pomeni, da bodo vaša sredstva do takrat ostala nedostopna)."
     }
   ],
   "vyvUB5": [
@@ -5301,6 +5459,12 @@
       "value": "ribiška palica"
     }
   ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Dokumentacija za Erigon razlaga, kako prenesete in namestite odjemalca."
+    }
+  ],
   "wdb1NC": [
     {
       "type": 0,
@@ -5329,6 +5493,28 @@
       "value": "Tveganja za zgodnje posvojitelje"
     }
   ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "Če želite obdelati dohodne pologe validatorja iz sloja za izvajanje (prej verige 'Eth1'), boste morali zagnati odjemalca za izvajanje "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " in odjemalca za soglasje "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (prej 'Eth2'). Uporabite lahko storitev tretje osebe, kot je Infura, vendar priporočamo, da zaženete lastnega odjemalca, da bo omrežje čim bolj decentralizirano."
+    }
+  ],
   "wtTeex": [
     {
       "type": 0,
@@ -5345,6 +5531,12 @@
     {
       "type": 0,
       "value": "Potrjevanje v Ethereumu ni enako kot rudarjenje. Rezultati so podobni: vaše delo bo razširilo in zaščitilo verigo. Vendar je postopek drugačen, saj uporabljata različne mehanizme za doseganje soglasja."
+    }
+  ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Trenutno večina validatorjev izvaja Prysm kot svojega odjemalca za soglasje. Raznolikost odjemalcev je izjemno pomembna za omrežno zdravje Ethereuma: napaka v odjemalcu z več kot 33-odstotnim deležem lahko povzroči, da Ethereum izklopi povezavo. Če ima odjemalec večino (> 66 %), lahko napaka povzroči, da se veriga napačno razdeli, kar lahko privede do razreza."
     }
   ],
   "xDyl3T": [
@@ -5384,7 +5576,7 @@
   "xXWzDf": [
     {
       "type": 0,
-      "value": "The Beacon Chain"
+      "value": "Oddajniška veriga"
     }
   ],
   "xbet2w": [
@@ -5402,7 +5594,7 @@
   "y44jV2": [
     {
       "type": 0,
-      "value": "Several upgrades are underway that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
+      "value": "V razvoju je več nadgradenj, ki bodo naredile Ethereum bolj nadgradljiv, varen in trajnosten. Te nadgradnje bodo izboljšale Ethereum ter hkrati brezhibno nadaljevale današnjo verigo. Tukaj najdete več informacij o različnih nadgradnjah:"
     }
   ],
   "y4dBsA": [
@@ -5420,7 +5612,7 @@
   "yFtJza": [
     {
       "type": 0,
-      "value": "Please ensure that you have control over the keys to this address."
+      "value": "Zagotovite, da imate nadzor nad ključi tega naslova."
     }
   ],
   "yI/DO8": [
@@ -5476,7 +5668,7 @@
   "ynB6C+": [
     {
       "type": 0,
-      "value": "I'm able to connect my consensus client to my execution client via HTTP API(s)."
+      "value": "Svojega odjemalca za soglasje na odjemalcu za izvajanje prek HTTP API(jev)."
     }
   ],
   "yoGtkz": [
@@ -5542,7 +5734,7 @@
   "zJicsO": [
     {
       "type": 0,
-      "value": "Staking economics"
+      "value": "Ekonomika zastavljanja"
     }
   ],
   "zbEBi9": [
@@ -5568,7 +5760,7 @@
   "zmMF+G": [
     {
       "type": 0,
-      "value": "Staking Launchpad for "
+      "value": "Zagonska platforma zastavljanja za "
     },
     {
       "type": 1,
@@ -5576,7 +5768,7 @@
     },
     {
       "type": 0,
-      "value": " testnet"
+      "value": " testno omrežje"
     }
   ]
 }

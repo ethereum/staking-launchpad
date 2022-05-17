@@ -10,7 +10,7 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { web3ReactInterface } from '../ConnectWallet';
-import { NetworkChainId } from '../ConnectWallet/web3Utils';
+import { LaunchpadChainId } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
@@ -28,11 +28,7 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import {
-  IS_MAINNET,
-  PRICE_PER_VALIDATOR,
-  TICKER_NAME,
-} from '../../utils/envVars';
+import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 import { Alert } from '../../components/Alert';
 import { BeaconChainStatus } from '../../store/actions/depositFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
@@ -51,7 +47,6 @@ const Row = styled.div`
 const Container = styled.div`
   width: 100%;
 `;
-const NETWORK_ID = IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli;
 
 // Prop definitions
 interface OwnProps {}
@@ -105,7 +100,7 @@ const _SummaryPage = ({
   }
 
   if (!account || !connector) return <WalletDisconnected />;
-  if (chainId !== NETWORK_ID) return <WrongNetwork />;
+  if (chainId !== LaunchpadChainId) return <WrongNetwork />;
 
   return (
     <WorkflowPageTemplate title={formatMessage({ defaultMessage: 'Summary' })}>

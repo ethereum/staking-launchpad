@@ -14,6 +14,7 @@ import {
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
+  EL_TESTNET_NAME,
 } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
@@ -688,7 +689,7 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="I've installed and synced my execution client on {network} (do not wait on this as it can take several days)."
                   values={{
-                    network: IS_MAINNET ? 'mainnet' : 'Goerli',
+                    network: IS_MAINNET ? 'mainnet' : EL_TESTNET_NAME,
                   }}
                 />
               </Text>

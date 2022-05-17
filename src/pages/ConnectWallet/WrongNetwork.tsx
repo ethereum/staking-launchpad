@@ -2,10 +2,12 @@ import React from 'react';
 import { AcknowledgementSection } from '../Summary/AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { IS_MAINNET } from '../../utils/envVars';
+import { IS_MAINNET, EL_TESTNET_NAME } from '../../utils/envVars';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-const networkName = IS_MAINNET ? 'Mainnet' : 'Goerli testnet';
+const networkName = IS_MAINNET
+  ? 'mainnet'
+  : `${EL_TESTNET_NAME.toLowerCase()} testnet`;
 
 export const WrongNetwork = () => {
   const { formatMessage } = useIntl();

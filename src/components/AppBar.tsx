@@ -23,6 +23,7 @@ import {
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   TESTNET_LAUNCHPAD_URL,
+  EL_TESTNET_NAME,
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
 import { FormattedMessage } from 'react-intl';
@@ -150,7 +151,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
-  const networkName = IS_MAINNET ? 'mainnet' : 'Goerli testnet';
+  const networkName = IS_MAINNET
+    ? 'mainnet'
+    : `${EL_TESTNET_NAME.toLowerCase()} testnet`;
 
   return (
     <RainbowBackground

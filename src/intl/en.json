@@ -495,6 +495,10 @@
   "CeeJfw": {
     "message": "I've set up a firewall."
   },
+  "Cm8zxo": {
+    "description": "{network} is either 'Ethereum mainnet' or '<EL_TESTNET_NAME> testnet'",
+    "message": "Connect to {network}"
+  },
   "D0Rigq": {
     "message": "NO"
   },
@@ -897,10 +901,6 @@
   },
   "NZUWs7": {
     "message": "Remember that a validator’s vote is weighted by the amount it has at stake."
-  },
-  "NZzzW1": {
-    "description": "{network} is either 'Ethereum mainnet' or 'Goerli testnet'",
-    "message": "Connect to {network}"
   },
   "NatYUJ": {
     "message": "Learn more about the roles and responsibilities of Ethereum validators."

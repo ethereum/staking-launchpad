@@ -16,7 +16,7 @@ import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
 import { handleMultipleTransactions } from './transactionUtils';
-import { NetworkChainId } from '../ConnectWallet/web3Utils';
+import { LaunchpadChainId } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
@@ -32,10 +32,7 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { IS_MAINNET } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-
-const NETWORK_ID = IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli;
 
 // Prop definitions
 interface OwnProps {}
@@ -143,7 +140,7 @@ const _TransactionsPage = ({
 
   if (!account || !connector) return <WalletDisconnected />;
 
-  if (chainId !== NETWORK_ID) return <WrongNetwork />;
+  if (chainId !== LaunchpadChainId) return <WrongNetwork />;
 
   return (
     <WorkflowPageTemplate

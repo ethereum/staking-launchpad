@@ -45,6 +45,8 @@ import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
+  EL_TESTNET_NAME,
+  FAUCET_URL,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
@@ -138,6 +140,10 @@ const MetaMaskError = styled.div`
   align-items: center;
   margin-top: 0px;
 `;
+
+const networkName = IS_MAINNET
+  ? 'mainnet'
+  : `${EL_TESTNET_NAME.toLowerCase()} testnet`;
 
 export interface web3ReactInterface {
   activate: (
@@ -293,7 +299,7 @@ const _ConnectWalletPage = ({
           { defaultMessage: 'Connect {wallet} to {network}' },
           {
             wallet: getWalletName(walletProvider),
-            network: IS_MAINNET ? 'Ethereum mainnet' : 'Goerli testnet',
+            network: networkName,
           }
         )
       );
@@ -408,10 +414,7 @@ const _ConnectWalletPage = ({
                       </>
                     )}
                     {!IS_MAINNET && lowBalance && (
-                      <FaucetLink
-                        to="https://faucet.goerli.mudit.blog/"
-                        primary
-                      >
+                      <FaucetLink to={FAUCET_URL} primary>
                         <FormattedMessage
                           defaultMessage="Get {TICKER_NAME}"
                           values={{

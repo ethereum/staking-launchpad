@@ -150,7 +150,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
-  const networkName = IS_MAINNET ? 'mainnet' : 'Göerli testnet';
+  const networkName = IS_MAINNET ? 'mainnet' : 'Goerli testnet';
 
   return (
     <RainbowBackground

@@ -18,7 +18,7 @@ export enum NetworkChainId {
   'Mainnet' = 1,
   'Ropsten' = 3,
   'Rinkeby' = 4,
-  'Göerli' = 5,
+  'Goerli' = 5,
   'Kovan' = 42,
 }
 
@@ -28,7 +28,7 @@ export enum NetworkChainId {
  */
 
 const supportedNetworks = [
-  NetworkChainId['Göerli'],
+  NetworkChainId.Goerli,
   NetworkChainId.Mainnet,
   NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
@@ -36,7 +36,7 @@ const supportedNetworks = [
 ];
 
 enum Testnet {
-  'Göerli',
+  'Goerli',
 }
 
 enum Mainnet {
@@ -56,7 +56,7 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
-  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
+  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli,
   rpcUrl: INFURA_URL,
 });
 

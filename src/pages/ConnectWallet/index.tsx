@@ -293,7 +293,7 @@ const _ConnectWalletPage = ({
           { defaultMessage: 'Connect {wallet} to {network}' },
           {
             wallet: getWalletName(walletProvider),
-            network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+            network: IS_MAINNET ? 'Ethereum mainnet' : 'Goerli testnet',
           }
         )
       );
@@ -489,7 +489,7 @@ const _ConnectWalletPage = ({
           <FormattedMessage
             defaultMessage="Your wallet is on the wrong network. Switch to {network}"
             values={{
-              network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+              network: IS_MAINNET ? 'Ethereum mainnet' : 'Goerli testnet',
             }}
           />
         </div>

@@ -51,9 +51,7 @@ const Row = styled.div`
 const Container = styled.div`
   width: 100%;
 `;
-const NETWORK_ID = IS_MAINNET
-  ? NetworkChainId.Mainnet
-  : NetworkChainId['Göerli'];
+const NETWORK_ID = IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli;
 
 // Prop definitions
 interface OwnProps {}

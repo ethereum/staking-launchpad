@@ -411,6 +411,10 @@
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
   },
+  "AQzmxW": {
+    "description": "{network} is 'Mainnet' or 'Goerli' or other testnet names",
+    "message": "Connect to {network}"
+  },
   "ATwOPg": {
     "message": "execution client"
   },
@@ -570,10 +574,6 @@
   },
   "EcCME0": {
     "message": "Staking Launchpad"
-  },
-  "Ey/ttn": {
-    "description": "{network} is 'Mainnet' or 'Göerli' or other testnet names",
-    "message": "Connect to {network}"
   },
   "FEbVwB": {
     "message": "The key concept is the following:"

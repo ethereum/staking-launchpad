@@ -2,13 +2,13 @@
   "+L0IkF": [
     {
       "type": 0,
-      "value": "Стъпка 2: Генерирайте депозитни ключове като използвате депозитния инструментариум на Фондация Ethereum"
+      "value": "Стъпка 2: Генерирайте депозитни ключове като използвате депозитния инструментариум на Фондация Етереум"
     }
   ],
   "+M/NC/": [
     {
       "type": 0,
-      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum."
+      "value": "След сливането няма да има повече две отделни мрежи на Eтереум; ще има само Eтереум."
     }
   ],
   "+UUcBt": [
@@ -44,7 +44,7 @@
   "+ozGrs": [
     {
       "type": 0,
-      "value": "Polish"
+      "value": "Полски"
     }
   ],
   "+s8Gac": [
@@ -74,7 +74,7 @@
   "//KCTE": [
     {
       "type": 0,
-      "value": "Може да започнете всички транзакции едновременно или поотделно."
+      "value": "Може да започнете всички трансакции едновременно или поотделно."
     }
   ],
   "/5Hyyf": [
@@ -86,7 +86,7 @@
   "/QPc9s": [
     {
       "type": 0,
-      "value": "Може да дадете знак за намерението си да спрете валидирането като подпишете доброволно съобщение за излизане със своя валидатор."
+      "value": "Може да дадете знак за намерението си да спрете валидирането, като подпишете доброволно съобщение за излизане със своя валидатор."
     }
   ],
   "/SbhtD": [
@@ -116,7 +116,7 @@
   "/VVB8t": [
     {
       "type": 0,
-      "value": "Прегледайте тази секция преди да решите да продължите с настройката за валидатор."
+      "value": "Прегледайте този раздел, преди да решите да продължите с настройката на валидатор."
     }
   ],
   "/Vc/P6": [
@@ -143,6 +143,12 @@
     {
       "type": 0,
       "value": "Трансакции"
+    }
+  ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "Ако е възможно, помислете за стартиране на друг клиент в момента, за да защитите себе си и мрежата."
     }
   ],
   "/ub26/": [
@@ -278,13 +284,13 @@
   "122+yR": [
     {
       "type": 0,
-      "value": "withdrawal key"
+      "value": "ключ за теглене"
     }
   ],
   "192AR6": [
     {
       "type": 0,
-      "value": "More on staking"
+      "value": "Повече за залагането"
     }
   ],
   "19o6KO": [
@@ -350,7 +356,7 @@
   "1ingnQ": [
     {
       "type": 0,
-      "value": "More on Ethereum staking economics"
+      "value": "Повече за икономиката на залагането на Eтереум"
     }
   ],
   "22EpKq": [
@@ -401,10 +407,22 @@
       "value": "Отстраняване на неизправности"
     }
   ],
+  "2HVWJL": [
+    {
+      "type": 0,
+      "value": "слой на изпълнение"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "Следвайте инструкциите, представени ви в приложението, за да генерирате вашите ключове."
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
-      "value": "Consensus Clients: "
+      "value": "Kонсенсусен клиент: "
     },
     {
       "type": 1,
@@ -446,7 +464,7 @@
   "36j2ls": [
     {
       "type": 0,
-      "value": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
+      "value": "За да обработите входящи депозити на валидатор от слоя за изпълнение (предишна „Eth1“ верига), ще трябва да стартирате клиент за изпълнение, както и вашия консенсусен клиент (предишен „Eth2“). Можете да използвате услуга на трета страна като Infura, но ние препоръчваме да стартирате свой собствен клиент, за да поддържате мрежата възможно най-децентрализирана."
     }
   ],
   "38VH2G": [
@@ -522,7 +540,7 @@
   "3SOKyg": [
     {
       "type": 0,
-      "value": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
+      "value": "Тези актуализации на терминологията променят само правилата за наименуване; това не променя целите или пътната карта на Eтереум."
     }
   ],
   "3URRZK": [
@@ -534,7 +552,7 @@
   "3XK21U": [
     {
       "type": 0,
-      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+      "value": "Ще ви помогнем да създадете ключ за подпис за всеки валидатор, който искате да управлявате. Тъй като няма да има тегления до Сливането, сега няма да може да създадете своите ключове за теглене. Когато стане възможно да си изтеглите сумите, може да получите своите ключове за теглене от мнемоника си."
     }
   ],
   "3tR/V9": [
@@ -616,7 +634,7 @@
   "54J/qs": [
     {
       "type": 0,
-      "value": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
+      "value": "Какво се случва, ако използвам теглене по BLS и загубя ключа си за теглене?"
     }
   ],
   "58PXVy": [
@@ -628,7 +646,7 @@
   "5A6amM": [
     {
       "type": 0,
-      "value": "It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. "
+      "value": "Голям риск представлява работата с вашия валидатор на няколко места. Това ще доведе до санкциониране и изхвърляне от мрежата. "
     },
     {
       "type": 1,
@@ -639,6 +657,12 @@
     {
       "type": 0,
       "value": "Обвързване"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "Как искате да генерирате ключовете си?"
     }
   ],
   "5HJLBU": [
@@ -688,13 +712,13 @@
   "6HBTTN": [
     {
       "type": 0,
-      "value": "Доказателство-за-залог (PoS) и Сигналната верига"
+      "value": "Доказателство-за-залог (PoS) и Бийкън чейн"
     }
   ],
   "6S95Bo": [
     {
       "type": 0,
-      "value": "Avoid phishing"
+      "value": "Избягвайте фишинг"
     }
   ],
   "6UUL73": [
@@ -804,7 +828,7 @@
   "82vl9l": [
     {
       "type": 0,
-      "value": "Не можем да открием MetaMask. Сменете браузърите или инсталирайте МетаМаск/MetaMask."
+      "value": "Не можем да открием MetaMask. Сменете браузърите или инсталирайте МетаМаск."
     }
   ],
   "8FmuYF": [
@@ -848,7 +872,7 @@
     },
     {
       "type": 0,
-      "value": " за синхронизиране на тест мрежата на Goerli."
+      "value": " за синхронизиране на тестовата мрежа на Goerli."
     }
   ],
   "8boRAk": [
@@ -860,7 +884,13 @@
   "8wd0q5": [
     {
       "type": 0,
-      "value": "Клиент на Ethereum, разработен да бъде лесен за професионална употреба както за публични, така и за частни случаи на използване на мрежа с разрешение."
+      "value": "Клиент на Eтереум, разработен да бъде лесен за професионална употреба както за публични, така и за частни случаи на използване на мрежа с разрешение."
+    }
+  ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "Стартирайте приложението Wagyu Key Gen от приложенията, като щракнете с десния бутон и щракнете върху Отвори. Ще получите предупреждение, че macOS не може да потвърди разработчика на „Wagyu Key Gen.app“. Сигурни ли сте, че искате да го отворите?. Щракнете върху Отвори и приложението ще се отвори."
     }
   ],
   "9+Ddtu": [
@@ -952,7 +982,7 @@
   "9xeLhs": [
     {
       "type": 0,
-      "value": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set "
+      "value": "Теглене на Eтереум адрес: Ако искате да изтеглите до адреса на портфейла си в Mainnet (предишен адрес „Eth1“) след надстройката за почистване след сливането можете да зададете "
     },
     {
       "type": 1,
@@ -960,7 +990,7 @@
     },
     {
       "type": 0,
-      "value": " when running deposit-cli. "
+      "value": ", когато изпълнявате deposit-cli. "
     },
     {
       "type": 1,
@@ -979,6 +1009,12 @@
       "value": "Prysm предлага указания как стъпка по стъпка да се управлява техния клиент, след като приключите с депозита си през стартовата лента."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "консенсусен слой"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
@@ -988,7 +1024,7 @@
   "ACstv9": [
     {
       "type": 0,
-      "value": "I've installed and synced my execution client on "
+      "value": "Инсталирал съм и съм синхронизирал мой клиент за изпълнение на "
     },
     {
       "type": 1,
@@ -996,7 +1032,7 @@
     },
     {
       "type": 0,
-      "value": " (do not wait on this as it can take several days)."
+      "value": " (не изчаквайте, тъй като може да отнеме няколко дни)."
     }
   ],
   "AEp7+F": [
@@ -1018,21 +1054,17 @@
     },
     {
       "type": 0,
-      "value": " трансакция към договора за депозит в настоящата верига на Ethereum."
+      "value": " трансакция към договора за депозит в настоящата верига на Eтереум."
     }
   ],
   "AJD+66": [
     {
       "type": 0,
-      "value": "The Ethereum staking deposit contract requires a minimum of "
+      "value": "Договорът за депозит за залагане на Eтереум изисква минимум "
     },
     {
       "type": 1,
       "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
     },
     {
       "type": 1,
@@ -1040,7 +1072,13 @@
     },
     {
       "type": 0,
-      "value": " to be sent at one time to be accepted."
+      "value": ", за да бъде изпратен и приет."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "клиент за изпълнение"
     }
   ],
   "AYKxmf": [
@@ -1064,7 +1102,7 @@
   "Ad61gz": [
     {
       "type": 0,
-      "value": "Моля, уверете се, че сваляте от официалния GitHub акаунт на Фондация Ethereum, като проверите url: "
+      "value": "Моля, уверете се, че сваляте от официалния GitHub акаунт на Фондация Етереум, като проверите url: "
     },
     {
       "type": 1,
@@ -1104,7 +1142,7 @@
   "B2EKj+": [
     {
       "type": 0,
-      "value": "Разбирам, че трябва да направя депозит "
+      "value": "Разбирам, че трябва да депозирам "
     },
     {
       "type": 1,
@@ -1124,7 +1162,7 @@
     },
     {
       "type": 0,
-      "value": " към Сигналната верига е еднопосочен и необратим."
+      "value": " към Бийкън чейн е еднопосочен и необратим."
     }
   ],
   "BCsPjJ": [
@@ -1159,6 +1197,12 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Erigon е написан на Go и е лицензиран съгласно GNU LGPLv3."
     }
   ],
   "BPpnlJ": [
@@ -1209,12 +1253,6 @@
       "value": "Чешки"
     }
   ],
-  "CBbRux": [
-    {
-      "type": 0,
-      "value": "OpenEthereum е написан в Rust и лицензиран от GPLv3."
-    }
-  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1230,7 +1268,7 @@
   "Cacfkx": [
     {
       "type": 0,
-      "value": "More on the Ethereum vision"
+      "value": "Повече за визията на Eтереум"
     }
   ],
   "CdKEd/": [
@@ -1416,7 +1454,7 @@
   "EcCME0": [
     {
       "type": 0,
-      "value": "Staking Launchpad"
+      "value": "Лаунчпад за залагане"
     }
   ],
   "FEbVwB": [
@@ -1458,7 +1496,7 @@
   "FfLWt5": [
     {
       "type": 0,
-      "value": "Клиент на Ethereum с голяма група разработчици. Идеално е за системи на ниво предприятия."
+      "value": "Клиент на Eтереум с голяма група разработчици. Идеално е за системи на ниво предприятия."
     }
   ],
   "FgraU0": [
@@ -1477,12 +1515,6 @@
     {
       "type": 0,
       "value": "валидатори"
-    }
-  ],
-  "G/VJJd": [
-    {
-      "type": 0,
-      "value": "Документация за инсталирането на OpenEthereum"
     }
   ],
   "G0aacl": [
@@ -1515,10 +1547,16 @@
       "value": "Уверете се, че няма опасност от фишинг атаки"
     }
   ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "консенсусен клиент"
+    }
+  ],
   "GOHkCO": [
     {
       "type": 0,
-      "value": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
+      "value": "Днес вие помагате да се осигури защитата на Бийкън чейн, първият ъпгрейд на мащабируемост. Това е отделна верига, която използва механизъм на консенсус на доказателство-за-залог. Впоследствие вие ще спомогнете за защитата на целия Eтереум, след като основната мрежа (Eтереум, който използваме понастоящем) се слее с Бийкън чейн."
     }
   ],
   "GOc7cL": [
@@ -1543,6 +1581,12 @@
     {
       "type": 0,
       "value": "Генериране на ключове"
+    }
+  ],
+  "GelBd9": [
+    {
+      "type": 0,
+      "value": "Направете файла, който току-що изтеглихте, изпълним."
     }
   ],
   "GsBRWL": [
@@ -1584,13 +1628,13 @@
   "HMgrdg": [
     {
       "type": 0,
-      "value": "Configure your execution client"
+      "value": "Конфигурирайте вашия клиент за изпълнение"
     }
   ],
   "HXvZ2L": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Използвайте "
     },
     {
       "type": 1,
@@ -1598,13 +1642,13 @@
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": ", за да свържете вашия консенсусен възел с крайната точка на JSON RPC. Това ще активира JSON RPC услугите на порт 8545 по подразбиране."
     }
   ],
   "Hczrvs": [
     {
       "type": 0,
-      "value": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
+      "value": "Налагането на наказание има две цели: (1) да направи ограничаващо скъпо да се атакува мрежата, и (2) да попречи на валидаторите да бъдат мързеливи, като ги проверява дали наистина изпълняват задълженията си. Ако имате наложено наказание, тъй като вероятно сте действали по деструктивен начин, част от вашия залог ще бъде унищожен."
     }
   ],
   "HoahTd": [
@@ -1622,7 +1666,7 @@
   "I212vY": [
     {
       "type": 0,
-      "value": "Трябва да изчакате малко преди вашият валидатор да стане активен в Сигналната верига. Използвайте това време да попълните контролния списък и да прекарате повече време за валидиране на "
+      "value": "Трябва да изчакате малко преди вашият валидатор да стане активен в Бийкън чейн. Използвайте това време да попълните контролния списък и да прекарате повече време за валидиране на "
     },
     {
       "type": 1,
@@ -1638,7 +1682,13 @@
   "I5lWZA": [
     {
       "type": 0,
-      "value": "Can I change the withdrawal credentials of my validator after the first deposit?"
+      "value": "Мога ли да променя идентификационните данни за теглене на моя валидатор след първия депозит?"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "Преди TurboGeth, Erigon е клиент на Eтереум, създаден за оптимизиране на ефективността."
     }
   ],
   "IJw06E": [
@@ -1745,12 +1795,6 @@
       "value": "С други думи, за да сте честни, действията ви трябва да имат финансови последствия."
     }
   ],
-  "JDGiXT": [
-    {
-      "type": 0,
-      "value": "Документацията на OpenEthereum разяснява как да свалите и инсталирате клиента."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1774,7 +1818,7 @@
   "JbVlOE": [
     {
       "type": 0,
-      "value": "Dig deeper into Ethereum upgrades."
+      "value": "Копайте по-дълбоко в ъпгрейдите на Eтереум."
     }
   ],
   "JhUYU3": [
@@ -1850,7 +1894,7 @@
   "KEfTSF": [
     {
       "type": 0,
-      "value": "I've installed the "
+      "value": "Инсталирал съм "
     },
     {
       "type": 1,
@@ -1858,13 +1902,23 @@
     },
     {
       "type": 0,
-      "value": " of my consensus client."
+      "value": " на своя консенсусен клиент."
     }
   ],
   "KN7zKn": [
     {
       "type": 0,
       "value": "Грешка"
+    }
+  ],
+  "KWWsDo": [
+    {
+      "type": 0,
+      "value": "Моля, уверете се, че сваляте от официалния StakeHouse GitHub акаунт, като проверите url: "
+    },
+    {
+      "type": 1,
+      "value": "url"
     }
   ],
   "KjcAm2": [
@@ -1926,7 +1980,7 @@
   "LHPZ+C": [
     {
       "type": 0,
-      "value": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
+      "value": "Lighthouse е изпълнение на консенсусен клиент, написано в Rust, със силен фокус върху скоростта и сигурността."
     }
   ],
   "LVy+cS": [
@@ -1961,10 +2015,16 @@
       "value": " за синхронизиране на тест мрежата на Goerli."
     }
   ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "Български"
+    }
+  ],
   "LlClXS": [
     {
       "type": 0,
-      "value": "Thank you for supporting the Ethereum network!"
+      "value": "Благодарим ви за подкрепата на мрежата на Eтереум!"
     }
   ],
   "Ltd/hJ": [
@@ -2050,7 +2110,7 @@
   "MZzOnU": [
     {
       "type": 0,
-      "value": "How is Ethereum scaling?"
+      "value": "Как е мащабируемостта на Eтереум?"
     }
   ],
   "Mb3npQ": [
@@ -2062,7 +2122,7 @@
   "MbsAo3": [
     {
       "type": 0,
-      "value": "Тази стартова лента ще ви помогне да станете валидатор, така че да може да играете активна роля в бъдещето на Ethereum. Валидаторите са ключ към по-сигурен, мащабируем и устойчив Ethereum, който можем да изградим заедно."
+      "value": "Този лаунчпад ще ви помогне да станете валидатор, така че да може да играете активна роля в бъдещето на Eтереум. Валидаторите са ключ към по-сигурен, мащабируем и устойчив Eтереум, който можем да изградим заедно."
     }
   ],
   "Mc8nNE": [
@@ -2074,13 +2134,13 @@
   "Mlc7Vr": [
     {
       "type": 0,
-      "value": "The Ethereum upgrades will only be successful if validators understand the risks and responsibilities."
+      "value": "Ъпгрейдите на Eтереум ще бъдат успешни само ако валидаторите разберат рисковете и отговорностите."
     }
   ],
   "Mm7FSl": [
     {
       "type": 0,
-      "value": "The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge."
+      "value": "Понятията „Eth1“ и „Eth2“ се отменят при подготовката за сливането."
     }
   ],
   "MmZjeu": [
@@ -2108,7 +2168,7 @@
   "NLgogh": [
     {
       "type": 0,
-      "value": "Мрежа на стартовата лента:"
+      "value": "Мрежа на лаунчпад:"
     }
   ],
   "NOTCV0": [
@@ -2170,7 +2230,7 @@
   "NatYUJ": [
     {
       "type": 0,
-      "value": "Learn more about the roles and responsibilities of Ethereum validators."
+      "value": "Научете повече за ролята и отговорностите на валидаторите на Eтереум."
     }
   ],
   "Nb5DNK": [
@@ -2182,7 +2242,7 @@
   "Ns8vbQ": [
     {
       "type": 0,
-      "value": "Choose "
+      "value": "Изберете "
     },
     {
       "type": 1,
@@ -2190,7 +2250,7 @@
     },
     {
       "type": 0,
-      "value": " client"
+      "value": " клиент"
     }
   ],
   "NwzcYT": [
@@ -2220,7 +2280,7 @@
   "O3qkOm": [
     {
       "type": 0,
-      "value": "Sharding"
+      "value": "Фрагментиране"
     }
   ],
   "OIvXIO": [
@@ -2270,13 +2330,13 @@
   "P/Oh91": [
     {
       "type": 0,
-      "value": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
+      "value": "Фишингът представлява много реален риск за валидаторите на Eтереум и за съжаление много хора ще загубят средства, заради тези атаки."
     }
   ],
   "P0kiYS": [
     {
       "type": 0,
-      "value": "Надстройките на Сигналната верига носят консенсуса на доказателство-за-залог в Ethereum."
+      "value": "Ъпгрейдът на Бийкън чейн носи консенсуса на доказателство-за-залог в Eтереум."
     }
   ],
   "P1QerV": [
@@ -2338,7 +2398,7 @@
   "PmrcLE": [
     {
       "type": 0,
-      "value": "Nethermind on Goerli documentation"
+      "value": "Nethermind в документацията на Goerli"
     }
   ],
   "PoBIK+": [
@@ -2474,7 +2534,7 @@
   "RE2MaJ": [
     {
       "type": 0,
-      "value": "Consensus clients"
+      "value": "Kонсенсусни клиенти"
     }
   ],
   "ROHpFF": [
@@ -2537,12 +2597,6 @@
       "value": "Верифицирайте със следната команда, за да проверите дали връща правилно клиентската версия:"
     }
   ],
-  "S0e/cN": [
-    {
-      "type": 0,
-      "value": "Как желаете да управлявате CLI?"
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -2559,6 +2613,12 @@
     {
       "type": 0,
       "value": "Вашият залог е достигнал договора за депозит!"
+    }
+  ],
+  "SHNw06": [
+    {
+      "type": 0,
+      "value": "Изпълнете файла, който току-що сте свалили."
     }
   ],
   "SR0qHv": [
@@ -2600,7 +2660,7 @@
   "SdRBir": [
     {
       "type": 0,
-      "value": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new key pairs and installing the validator software are both done in the terminal."
+      "value": "За да станете валидатор ще трябва да можете да издавате команди в терминала на своя компютър. Генерирането на вашите нови двойка ключове и инсталирането на валидаторския софтуер се извършват в терминала."
     }
   ],
   "SeW5ak": [
@@ -2634,7 +2694,7 @@
   "THIzw6": [
     {
       "type": 0,
-      "value": "Validators and Ethereum"
+      "value": "Валидатори и Eтереум"
     }
   ],
   "TLEziZ": [
@@ -2710,7 +2770,7 @@
   "UWv7yD": [
     {
       "type": 0,
-      "value": "Проверете договора за депозит на любимия си Ethereum експлорър на блокове:"
+      "value": "Проверете договора за депозит на любимия си Eтереум експлорър на блокове:"
     }
   ],
   "Utck3E": [
@@ -2738,7 +2798,7 @@
   "UygdAl": [
     {
       "type": 0,
-      "value": "Едно от трите оригинални приложения на протокола на Ethereum."
+      "value": "Едно от трите оригинални приложения на протокола на Eтереум."
     }
   ],
   "UykRIk": [
@@ -2751,6 +2811,28 @@
     {
       "type": 0,
       "value": "Ако нямате папка на тестова мрежа е вероятно да не сте изградили и стартирали правилно Nimbus. Започнете отново с командите."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Eтереум ще включва "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (обработва трансакции и изпълнение, предишен „Eth1“), и "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (обработва Бийкън чейн на доказателство-за-залог, предишен „Eth2“ или „Ethereum 2.0“)."
     }
   ],
   "VASo1/": [
@@ -2926,7 +3008,7 @@
   "WdDGn6": [
     {
       "type": 0,
-      "value": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
+      "value": "Прилагане на протокол за консенсус с фокус върху предназначението, сигурността и надеждността. Prysm е разработен от Prysmatic Labs, дружество, фокусирано единствено върху разработването на техния клиент."
     }
   ],
   "WkrNSk": [
@@ -2974,7 +3056,7 @@
   "XRxD8r": [
     {
       "type": 0,
-      "value": "Besu on Goerli documentation"
+      "value": "Besu в документацията на Goerli"
     }
   ],
   "XVehvN": [
@@ -3006,7 +3088,7 @@
   "Xbt2gv": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Използвайте "
     },
     {
       "type": 1,
@@ -3014,7 +3096,7 @@
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": ", за да свържете вашия консенсусен възел с крайната точка на JSON RPC. Това ще активира JSON RPC услугите на порт 8545 по подразбиране."
     }
   ],
   "XmddSV": [
@@ -3026,7 +3108,7 @@
   "XqbweH": [
     {
       "type": 0,
-      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: "
+      "value": "Клиентите поддържат Prometheus и Grafana, за да ви помогнат да си представите важните измервания в реално време за валидатора ви. Може да намерите специфичните инструкции за клиента тук: "
     },
     {
       "type": 1,
@@ -3129,6 +3211,20 @@
       "value": " услуга."
     }
   ],
+  "YQJy4H": [
+    {
+      "type": 0,
+      "value": "Сега е необходимо да си запишете вашия мнемоник на сигурно място и да запазите хранилището за ключове за всеки от валидаторите си "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": ". Моля, уверете се, че те са в безопасност, за предпочитане офлайн. Вашите хранилища за ключове на валидатор трябва да бъдат на разположение в избраната директория."
+    }
+  ],
   "Yganfl": [
     {
       "type": 0,
@@ -3139,6 +3235,12 @@
     {
       "type": 0,
       "value": "Ако загубите ключа си за теглене няма как да стигнете до сумите, които са при вашия валидатор."
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "Словенски"
     }
   ],
   "YtwQyB": [
@@ -3221,6 +3323,26 @@
       "value": "Защо има изчакване?"
     }
   ],
+  "ZlLjuq": [
+    {
+      "type": 0,
+      "value": "Моля, уверете се, че сте избрали "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", когато бъдете подканени за мрежа, в противен случай депозитът ще бъде невалиден."
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Документация за инсталирането на Erigon"
+    }
+  ],
   "Zspg8H": [
     {
       "type": 0,
@@ -3230,7 +3352,7 @@
   "Zxm0fh": [
     {
       "type": 0,
-      "value": "The merge will see the Ethereum Mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
+      "value": "Сливането ще види основната мрежа на Eтереум, която ползваме понастоящем, да се слее с Бийкън чейн. Това е моментът, когато Eтереум напълно ще премине към доказателство-за-залог."
     }
   ],
   "ZzTcj5": [
@@ -3272,7 +3394,7 @@
   "aZ7pUj": [
     {
       "type": 0,
-      "value": "Вашият портфейл е в грешната мрежа на Ethereum. За да продължите, свържете се с мрежата на "
+      "value": "Вашият портфейл е в грешната мрежа на Eтереум. За да продължите, свържете се с мрежата на "
     },
     {
       "type": 1,
@@ -3315,6 +3437,12 @@
       "value": "Имайте предвид обаче, че що се отнася до близкото бъдеще, щом веднъж сте напуснали, няма връщане назад."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "Повече за разнообразието на клиентите"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -3331,6 +3459,12 @@
     {
       "type": 0,
       "value": "Документация за инсталирането на Besu"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "Свалете Wagyu Key Gen app"
     }
   ],
   "bVtlF7": [
@@ -3372,13 +3506,13 @@
   "cJX99/": [
     {
       "type": 0,
-      "value": "Check your favorite Beacon Chain block explorer:"
+      "value": "Проверете любимия си експлорър на блокове на Бийкън чейн:"
     }
   ],
   "cPsIkp": [
     {
       "type": 0,
-      "value": "Станете валидатор и помогнете за осигуряване бъдещето на Ethereum."
+      "value": "Станете валидатор и помогнете за осигуряване бъдещето на Eтереум."
     }
   ],
   "cRzxes": [
@@ -3408,7 +3542,7 @@
   "ckaUkz": [
     {
       "type": 0,
-      "value": "A validator is an entity that participates in the consensus of the Ethereum protocol."
+      "value": "Валидатор е този, който участва в консенсус на протокола на Eтереум."
     }
   ],
   "clUb0+": [
@@ -3426,13 +3560,19 @@
   "cpxfOR": [
     {
       "type": 0,
-      "value": "What are withdrawal credentials?"
+      "value": "Какво представляват идентификационните данни за теглeне?"
     }
   ],
   "cyR7Kh": [
     {
       "type": 0,
       "value": "Назад"
+    }
+  ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "Стъпка 2: Генерирайте ключове за депозит с помощта на приложението Wagyu Key Gen"
     }
   ],
   "d5KEM8": [
@@ -3448,7 +3588,7 @@
     },
     {
       "type": 0,
-      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
+      "value": " е 32-байтово поле в депозита, за проверка на местоназначението на валидни тегления. В момента има два типа теглене: теглене на BLS и теглене на Eтереум адрес."
     }
   ],
   "dH5+MX": [
@@ -3466,7 +3606,7 @@
   "dJMce5": [
     {
       "type": 0,
-      "value": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
+      "value": "Prysm е изпълнение на консенсусния клиент на Go в протокола на Eтереум с фокус върху предназначението, сигурността и надеждността."
     }
   ],
   "dM/KIM": [
@@ -3478,7 +3618,7 @@
   "dNh0YZ": [
     {
       "type": 0,
-      "value": "As of "
+      "value": "Считано от "
     },
     {
       "type": 1,
@@ -3486,7 +3626,7 @@
     },
     {
       "type": 0,
-      "value": ", you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
+      "value": ", ще ви трябват ~400GB само за веригата с данни за изпълнение на основната мрежа (увеличава се с ~1GB/ден)."
     }
   ],
   "dTOtPO": [
@@ -3554,7 +3694,7 @@
   "eF9RbC": [
     {
       "type": 0,
-      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
+      "value": "Мислете за договора за депозит като превод на средства между акаунтите в Eтереум и валидаторите на Бийкън чейн."
     }
   ],
   "eKEL/g": [
@@ -3596,7 +3736,7 @@
   "eq0/34": [
     {
       "type": 0,
-      "value": "The Merge"
+      "value": "Сливането"
     }
   ],
   "erZJkZ": [
@@ -3690,13 +3830,13 @@
   "frIMm4": [
     {
       "type": 0,
-      "value": "Syncing your execution client may take a few days in the worst-case scenario."
+      "value": "В най-лошия случай синхронизирането на вашия клиент за изпълнение може да отнеме няколко дни."
     }
   ],
   "g/DxI7": [
     {
       "type": 0,
-      "value": "Освен това, може да настроите вашия Валидаторски Клиент (VC) и Сигналната Верига (BN) на различни машини и IP адреси, така че даже вашият сигнален възел да е уязвим, то хранилището ви за ключове да се съхранява на различна машина."
+      "value": "Освен това, може да настроите вашия Валидаторски Клиент (VC) и Сигнален възел (BN) на различни машини и IP адреси, така че даже вашият сигнален възел да е уязвим, то хранилището ви за ключове да се съхранява на различна машина."
     }
   ],
   "g0zIUd": [
@@ -3734,7 +3874,7 @@
   "gQkd2y": [
     {
       "type": 0,
-      "value": "Генерирайте депозитни ключове, като използвате депозитния инструментариум на Фондация Ethereum"
+      "value": "Генерирайте депозитни ключове, като използвате депозитния инструментариум на Фондация Етереум"
     }
   ],
   "gVC0Wl": [
@@ -3746,7 +3886,7 @@
   "gfLdAQ": [
     {
       "type": 0,
-      "value": "Повече за Сигналната Верига"
+      "value": "Повече за Бийкън чейн"
     }
   ],
   "gjBiyj": [
@@ -3863,6 +4003,12 @@
       "value": "С други думи, вие увеличавате наградите си, като осигурявате най-голяма полза за мрежата като цяло."
     }
   ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "Унгарски"
+    }
+  ],
   "hjrLbR": [
     {
       "type": 0,
@@ -3950,7 +4096,7 @@
   "ie5fDg": [
     {
       "type": 0,
-      "value": "Staking Launchpad "
+      "value": "Лаунчпад за залагане "
     },
     {
       "type": 1,
@@ -3960,19 +4106,19 @@
   "im7uMt": [
     {
       "type": 0,
-      "value": "Consensus Layer Validator Client (VC)"
+      "value": "Валидаторски клиент (VC) на консенсусен слой"
     }
   ],
   "ioj2Sj": [
     {
       "type": 0,
-      "value": "I've imported my keystore(s) into my validator client."
+      "value": "Импортирал съм моите хранилища за ключове във валидаторския си клиент."
     }
   ],
   "iqJ3LM": [
     {
       "type": 0,
-      "value": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
+      "value": "PegaSys Teku е консенсусен клиент на Eтереум, базиран на Java, изграден да задоволи институционалните нужди и изискванията за сигурност."
     }
   ],
   "irRdC0": [
@@ -4004,7 +4150,7 @@
   "j8GPOH": [
     {
       "type": 0,
-      "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
+      "value": "Познат преди като Artemis, Teku е консенсусен клиент, разработен да отговори на институционалните нужди и изискванията за сигурност. PegaSys е разширение на ConsenSys, посветено на изграждането на готови бизнес клиенти и инструменти за взаимодействие с основната платформа на Eтереум."
     }
   ],
   "jDv/zO": [
@@ -4040,7 +4186,7 @@
   "jg9gEs": [
     {
       "type": 0,
-      "value": "Make sure you do the following to get your execution client working properly."
+      "value": "Проверете дали сте направили следното, за да може вашият клиент за изпълнение да работи правилно."
     }
   ],
   "jjLubH": [
@@ -4071,6 +4217,12 @@
     {
       "type": 0,
       "value": "Документация на Nimbus"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "View Wagyu Key Gen одит от HashCloak"
     }
   ],
   "kFS5Sd": [
@@ -4192,7 +4344,7 @@
   "lHiz+K": [
     {
       "type": 0,
-      "value": "Nimbus is a client implementation for both execution and consensus layers that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
+      "value": "Nimbus е клиентско изпълнение, както за изпълнение, така и за консенсусни слоеве, което се стреми да бъде възможно най-леко по отношение на ползваните ресурси. Това му дава възможност да работи добре при внедрени системи, устройства с ограничен ресурс – в това число Raspberry Pis -- и многофункционални сървъри."
     }
   ],
   "lLOZMD": [
@@ -4278,7 +4430,7 @@
   "lfHCV+": [
     {
       "type": 0,
-      "value": "Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices."
+      "value": "Nimbus е изследователски проект и изпълнение на консенсусен клиент за Eтереум, разработено да функционира добре на внедрени системи и лични мобилни устройства."
     }
   ],
   "lfV1bj": [
@@ -4290,7 +4442,7 @@
   "ljWKM1": [
     {
       "type": 0,
-      "value": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the "
+      "value": "BLS теглене: По подразбиране deposit-cli генерира идентификационни данни за теглене с "
     },
     {
       "type": 1,
@@ -4298,7 +4450,7 @@
     },
     {
       "type": 0,
-      "value": " derived via mnemonics in "
+      "value": ", извлечен чрез мнемоника във формат "
     },
     {
       "type": 1,
@@ -4306,7 +4458,7 @@
     },
     {
       "type": 0,
-      "value": " format."
+      "value": "."
     }
   ],
   "ll/zMW": [
@@ -4366,13 +4518,13 @@
   "nBhisA": [
     {
       "type": 0,
-      "value": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."
+      "value": "Ще трябва да стартирате клиент за изпълнение (предишен „Eth1“), както и клиент за консенсус (предишен „Eth2“), за да станете валидатор. Разгледайте контролния списък, за да подготвите себе си и оборудването си."
     }
   ],
   "nHk8Et": [
     {
       "type": 0,
-      "value": "PoS, доказателство-за-залог, е по-сигурен, децентрализиран и екологичен механизъм за консенсус в сравнение с доказателството-за-работа (PoW), който понастоящем осигурява защитата на Ethereum. Той награждава валидаторите за изграждането на веригата, но налага санкции на депозитите им, ако те се опитат да го атакуват, като по този начин стимулира доброто поведение. Тази надстройка вече съществува под формата на Сигнална верига."
+      "value": "PoS, доказателство-за-залог, е по-сигурен, децентрализиран и екологичен механизъм за консенсус в сравнение с доказателството-за-работа (PoW), който понастоящем осигурява защитата на Eтереум. Той награждава валидаторите за изграждането на веригата, но налага санкции на депозитите им, ако те се опитат да го атакуват, като по този начин стимулира доброто поведение. Тази надстройка вече съществува под формата на Бийкън чейн."
     }
   ],
   "nIb6XF": [
@@ -4393,6 +4545,12 @@
     {
       "type": 0,
       "value": "Продължете без всички трансакции да бъдат потвърдени"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Документация на Erigon"
     }
   ],
   "nZTFTz": [
@@ -4430,7 +4588,7 @@
   "nln+aO": [
     {
       "type": 0,
-      "value": "I've simulated how to safely migrate from one consensus client to another."
+      "value": "Симулирах как безопасно да мигрирам от един консенсусен клиент към друг."
     }
   ],
   "ntG2by": [
@@ -4476,7 +4634,7 @@
   "oNohob": [
     {
       "type": 0,
-      "value": "Configure your consensus client"
+      "value": "Конфигурирайте вашия консенсусен клиент"
     }
   ],
   "oPdwwC": [
@@ -4521,12 +4679,6 @@
     {
       "type": 0,
       "value": "Отговорности"
-    }
-  ],
-  "okxBZ6": [
-    {
-      "type": 0,
-      "value": "Съществуващ преди под името Parity, OpenEthereum е програмиран да бъде „най-бързият, най-лекият и най-сигурният клиент на Ethereum“."
     }
   ],
   "omJNJw": [
@@ -4605,6 +4757,12 @@
       "value": "!"
     }
   ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "Стартирайте приложението от вашата среда на работния плот, като щракнете два пъти върху него."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
@@ -4621,12 +4779,6 @@
     {
       "type": 0,
       "value": "Nimbus търси хранилища за ключове във вашата валидаторска папка."
-    }
-  ],
-  "pofmhk": [
-    {
-      "type": 0,
-      "value": "Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
   "pqC+qt": [
@@ -4666,7 +4818,7 @@
   "qB6aU6": [
     {
       "type": 0,
-      "value": "What happened to 'Eth2?'"
+      "value": "Какво се случи с „Eth2?“"
     }
   ],
   "qDcbPp": [
@@ -4693,12 +4845,6 @@
     {
       "type": 0,
       "value": "Терминалът"
-    }
-  ],
-  "qLf68w": [
-    {
-      "type": 0,
-      "value": "Документация на OpenEthereum"
     }
   ],
   "qMePPG": [
@@ -4770,7 +4916,7 @@
   "rMjMmc": [
     {
       "type": 0,
-      "value": "Use "
+      "value": "Използвайте "
     },
     {
       "type": 1,
@@ -4778,7 +4924,7 @@
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": ", за да свържете вашия консенсусен възел с крайната точка на JSON RPC. Това ще активира JSON RPC услугите на порт 8545 по подразбиране."
     }
   ],
   "rNEdex": [
@@ -4820,7 +4966,7 @@
   "rnDgcN": [
     {
       "type": 0,
-      "value": "No, you cannot change your withdrawal credentials in top-ups."
+      "value": "Не, не можете да промените идентификационните си данни за теглене при презареждане."
     }
   ],
   "rs4eqr": [
@@ -4882,7 +5028,7 @@
   "sMHQRT": [
     {
       "type": 0,
-      "value": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
+      "value": "Kонсенсусен клиент с насочено внимание върху скоростта и сигурността. Изграден от Sigma Prime, фирма за информационна сигурност и софтуерно инженерство, която е субсидирала Lighthouse заедно с Фондация Етереум, Consensys и частни лица."
     }
   ],
   "sXV95+": [
@@ -4894,7 +5040,7 @@
   "sdQRah": [
     {
       "type": 0,
-      "value": "I've synced my beacon node on "
+      "value": "Синхронизирал съм своя сигнален възел на "
     },
     {
       "type": 1,
@@ -4905,10 +5051,16 @@
       "value": "."
     }
   ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "Изтеглете приложението Key Gen GUI"
+    }
+  ],
   "smD5l/": [
     {
       "type": 0,
-      "value": "Consensus Layer Beacon Node (BN)"
+      "value": "Сигнален възел (BN) на консенсусен слой"
     }
   ],
   "soCLV+": [
@@ -4944,13 +5096,13 @@
   "tMHEEe": [
     {
       "type": 0,
-      "value": "Learn more about the great renaming"
+      "value": "Разберете повече за голямото преименуване"
     }
   ],
   "tbYkT4": [
     {
       "type": 0,
-      "value": "The Ethereum consensus-layer specification"
+      "value": "Спецификация на консенсусния слой на Eтереум"
     }
   ],
   "teyxVk": [
@@ -4982,7 +5134,7 @@
   "toCscK": [
     {
       "type": 0,
-      "value": "Choose your "
+      "value": "Изберете вашия "
     },
     {
       "type": 1,
@@ -4990,7 +5142,7 @@
     },
     {
       "type": 0,
-      "value": " client and set up a node"
+      "value": " клиент и настройте възела"
     }
   ],
   "tsfX5f": [
@@ -5020,7 +5172,7 @@
   "txdGU9": [
     {
       "type": 0,
-      "value": "The Ethereum upgrades"
+      "value": "Ъпгрейди на Eтереум"
     }
   ],
   "tzMNF3": [
@@ -5080,7 +5232,7 @@
   "uPECbE": [
     {
       "type": 0,
-      "value": "Validator checklist"
+      "value": "Контролен списък на валидатор"
     }
   ],
   "ubKWX8": [
@@ -5154,13 +5306,13 @@
   "vBOf5K": [
     {
       "type": 0,
-      "value": "Вашият баланс периодично се актуализира от правилата в мрежата на Ethereum, докато изпълнявате (или не) своите задължения."
+      "value": "Вашият баланс периодично се актуализира от правилата в мрежата на Eтереум, докато изпълнявате (или не) своите задължения."
     }
   ],
   "vCHTnu": [
     {
       "type": 0,
-      "value": "Withdrawal credentials"
+      "value": "Идентификационни данни за теглене"
     }
   ],
   "vEJDo8": [
@@ -5172,13 +5324,19 @@
   "vIF140": [
     {
       "type": 0,
-      "value": "Станете валидатор и помогнете за гарантиране на бъдещето на Ethereum"
+      "value": "Станете валидатор и помогнете за гарантиране на бъдещето на Eтереум"
     }
   ],
   "vJez0K": [
     {
       "type": 0,
       "value": "Продължете внимателно. Нашият източник на данни по веригата не работи и не можем да отбелязваме никакви двойни депозити."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "Стъпка 1: Изтеглете приложението Wagyu Key Gen за вашата операционна система"
     }
   ],
   "vY2wig": [
@@ -5232,7 +5390,7 @@
   "vkozFq": [
     {
       "type": 0,
-      "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
+      "value": "Няма начин да активирате повторно вашия валидатор и няма да можете да прехвърляте или да теглите сумите си преди надстройката за почистване след сливането, която в момента се планира да последва сливането (което означава, че средствата ви ще останат недостъпни дотогава)."
     }
   ],
   "vyvUB5": [
@@ -5277,6 +5435,12 @@
       "value": "въдица"
     }
   ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Документацията на Erigon разяснява как да свалите и инсталирате клиента."
+    }
+  ],
   "wdb1NC": [
     {
       "type": 0,
@@ -5305,6 +5469,28 @@
       "value": "Рискове при ранното въвеждане"
     }
   ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "За да обработите входящи депозити на валидатор от слоя за изпълнение (предишна „Eth1“ верига), ще трябва да стартирате "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": ", както и вашия "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (предишен „Eth2“). Можете да използвате услуга на трета страна като Infura, но ние препоръчваме да стартирате свой собствен клиент, за да поддържате мрежата възможно най-децентрализирана."
+    }
+  ],
   "wtTeex": [
     {
       "type": 0,
@@ -5320,7 +5506,13 @@
   "x0tVK4": [
     {
       "type": 0,
-      "value": "Валидирането в Ethereum не е същото като копаенето. Резултатите са подобни: работата, която вършите, ще разшири и защити веригата. Процесът обаче е напълно различен, тъй като се използват различни механизми за консенсус."
+      "value": "Валидирането в Eтереум не е същото като копаенето. Резултатите са подобни: работата, която вършите, ще разшири и защити веригата. Процесът обаче е напълно различен, тъй като се използват различни механизми за консенсус."
+    }
+  ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Понастоящем повечето валидатори изпълняват Prysm като техен консенсусен клиент. Разнообразието на клиентите е изключително важно за здравето на мрежата на Eтереум: грешка в клиент с дял от над 33% може да накара Eтереум да излезе офлайн. Ако клиентът има свръхмнозинство (>66%), грешка може да доведе до неправилно разделяне на веригата, което потенциално може да доведе до наказание."
     }
   ],
   "xDyl3T": [
@@ -5360,7 +5552,7 @@
   "xXWzDf": [
     {
       "type": 0,
-      "value": "The Beacon Chain"
+      "value": "Бийкън чейн"
     }
   ],
   "xbet2w": [
@@ -5378,7 +5570,7 @@
   "y44jV2": [
     {
       "type": 0,
-      "value": "Several upgrades are underway that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
+      "value": "Няколко надстройки ще направят Eтереум по-мащабируем, сигурен и устойчив. Тези надстройки ще подобряват Eтереум, докато безпроблемно продължава в настоящата верига. Ето повече подробности за различните надстройки:"
     }
   ],
   "y4dBsA": [
@@ -5396,7 +5588,7 @@
   "yFtJza": [
     {
       "type": 0,
-      "value": "Please ensure that you have control over the keys to this address."
+      "value": "Моля, уверете се, че имате контрол върху ключовете на този адрес."
     }
   ],
   "yI/DO8": [
@@ -5452,7 +5644,7 @@
   "ynB6C+": [
     {
       "type": 0,
-      "value": "I'm able to connect my consensus client to my execution client via HTTP API(s)."
+      "value": "Ще мога да свържа моя консенсусен клиент към клиента си за изпълнение чрез HTTP API(s)."
     }
   ],
   "yoGtkz": [
@@ -5518,7 +5710,7 @@
   "zJicsO": [
     {
       "type": 0,
-      "value": "Staking economics"
+      "value": "Икономика на залагането"
     }
   ],
   "zbEBi9": [
@@ -5532,7 +5724,7 @@
     },
     {
       "type": 0,
-      "value": " за синхронизиране с основната мрежа на Ethereum."
+      "value": " за синхронизиране с основната мрежа на Eтереум."
     }
   ],
   "zicXn7": [
@@ -5544,15 +5736,11 @@
   "zmMF+G": [
     {
       "type": 0,
-      "value": "Staking Launchpad for "
+      "value": "Лаунчпад за залагане за тестова мрежа "
     },
     {
       "type": 1,
       "value": "TESTNET_LAUNCHPAD_NAME"
-    },
-    {
-      "type": 0,
-      "value": " testnet"
     }
   ]
 }

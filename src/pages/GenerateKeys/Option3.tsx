@@ -149,7 +149,7 @@ export const Option3 = ({
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
-          python3 ./eth2deposit/deposit.py new-mnemonic{' '}
+          python3 ./staking_deposit/deposit.py new-mnemonic{' '}
           {validatorCount > 0
             ? `--${formatMessage({
                 defaultMessage: 'num_validators',
@@ -172,7 +172,7 @@ export const Option3 = ({
     if (os === 'windows') {
       return (
         <Pre className="my0">
-          .\eth2deposit\deposit.py new-mnemonic{' '}
+          .\staking_deposit\deposit.py new-mnemonic{' '}
           {validatorCount > 0
             ? `--${formatMessage({
                 defaultMessage: 'num_validators',
@@ -250,7 +250,7 @@ export const Option3 = ({
           inline
           primary
           isTextLink={false}
-          to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
+          to="https://github.com/ethereum/staking-deposit-cli/archive/master.zip"
         >
           <Button
             className="my20"
@@ -268,7 +268,7 @@ export const Option3 = ({
               gitClone: (
                 <Code>
                   git clone -b master --single-branch
-                  https://github.com/ethereum/eth2.0-deposit-cli.git
+                  https://github.com/ethereum/staking-deposit-cli.git
                 </Code>
               ),
               master: <Code>master</Code>,
@@ -348,9 +348,9 @@ export const Option3 = ({
         <Link
           primary
           inline
-          to="https://github.com/ethereum/eth2.0-deposit-cli"
+          to="https://github.com/ethereum/staking-deposit-cli"
         >
-          https://github.com/ethereum/eth2.0-deposit-cli
+          https://github.com/ethereum/staking-deposit-cli
         </Link>
       </Alert>
     </div>

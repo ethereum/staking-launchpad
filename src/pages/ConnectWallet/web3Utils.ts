@@ -20,7 +20,7 @@ export enum NetworkChainId {
   'Mainnet' = 1,
   'Ropsten' = 3,
   'Rinkeby' = 4,
-  'Göerli' = 5,
+  'Goerli' = 5,
   'Kovan' = 42,
   'Kintsugi' = 1337702,
   'Kiln' = 1337802,
@@ -51,7 +51,7 @@ export const EL_NETWORK_NAME = elNetworkName;
  */
 
 const supportedNetworks = [
-  NetworkChainId['Göerli'],
+  NetworkChainId.Goerli,
   NetworkChainId.Mainnet,
   NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
@@ -62,7 +62,7 @@ const supportedNetworks = [
 
 // FIXME: disabled Portis for now
 const portisSupportedNetworks = [
-  NetworkChainId['Göerli'],
+  NetworkChainId.Goerli,
   NetworkChainId.Mainnet,
   NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
@@ -81,7 +81,7 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
-  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId['Göerli'],
+  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli,
   rpcUrl: RPC_URL,
 });
 

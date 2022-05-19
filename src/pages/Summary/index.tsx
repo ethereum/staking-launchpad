@@ -10,7 +10,7 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { web3ReactInterface } from '../ConnectWallet';
-import { LaunchpadChainId } from '../ConnectWallet/web3Utils';
+import { TARGET_NETWORK_CHAIN_ID } from '../ConnectWallet/web3Utils';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
@@ -100,7 +100,7 @@ const _SummaryPage = ({
   }
 
   if (!account || !connector) return <WalletDisconnected />;
-  if (chainId !== LaunchpadChainId) return <WrongNetwork />;
+  if (chainId !== TARGET_NETWORK_CHAIN_ID) return <WrongNetwork />;
 
   return (
     <WorkflowPageTemplate title={formatMessage({ defaultMessage: 'Summary' })}>

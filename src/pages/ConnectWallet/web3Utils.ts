@@ -47,7 +47,7 @@ export const NetworkNameToChainId: { [key: string]: NetworkChainId } = {
   Goerli: NetworkChainId.Goerli,
 };
 
-export const LaunchpadChainId = IS_MAINNET
+export const TARGET_NETWORK_CHAIN_ID = IS_MAINNET
   ? NetworkChainId.Mainnet
   : NetworkNameToChainId[EL_TESTNET_NAME];
 
@@ -64,7 +64,7 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
-  chainId: LaunchpadChainId,
+  chainId: TARGET_NETWORK_CHAIN_ID,
   rpcUrl: INFURA_URL,
 });
 

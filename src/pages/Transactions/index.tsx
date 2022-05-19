@@ -16,7 +16,7 @@ import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
 import { handleMultipleTransactions } from './transactionUtils';
-import { LaunchpadChainId } from '../ConnectWallet/web3Utils';
+import { TARGET_NETWORK_CHAIN_ID } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
@@ -140,7 +140,7 @@ const _TransactionsPage = ({
 
   if (!account || !connector) return <WalletDisconnected />;
 
-  if (chainId !== LaunchpadChainId) return <WrongNetwork />;
+  if (chainId !== TARGET_NETWORK_CHAIN_ID) return <WrongNetwork />;
 
   return (
     <WorkflowPageTemplate

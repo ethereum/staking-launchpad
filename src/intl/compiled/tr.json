@@ -1,14 +1,14 @@
 {
-  "GOHkCO": [
-    {
-      "type": 0,
-      "value": "Bugün, ilk Eth2 yükseltmesi olan İşaret Zinciri'ni güvence altına alacaksınız. Hisse ispatı konsensüs mekanizması kullanan ayrı bir zincirdir. Sonunda, ana ağ (bugün kullandığımız Ethereum) İşaret Zinciri ile birleştiğinde, tüm Ethereum'un güvenliğini sağlamaya yardımcı olursunuz."
-    }
-  ],
   "+L0IkF": [
     {
       "type": 0,
       "value": "2. Adım: Ethereum Vakfı para yatırma aracını kullanarak para yatırma anahtarları oluşturun"
+    }
+  ],
+  "+M/NC/": [
+    {
+      "type": 0,
+      "value": "Birleştirmeden sonra iki farklı Ethereum ağı değil, sadece Ethereum olacaktır."
     }
   ],
   "+UUcBt": [
@@ -41,10 +41,10 @@
       "value": "6. Aktif olmayı bekle"
     }
   ],
-  "3XK21U": [
+  "+ozGrs": [
     {
       "type": 0,
-      "value": "Çalıştırmak istediğiniz her doğrulayıcı için bir imzalama anahtarı oluşturmanıza yardımcı olacağız. The Merge'e kadar para çekme işlemi olmadığından, para çekme anahtarlarınızı şimdi oluşturmayacaksınız. Paranızı çekmek mümkün olduğunda, para çekme anahtarlarınızı anımsatıcınızdan elde edebilirsiniz."
+      "value": "Lehçe"
     }
   ],
   "+s8Gac": [
@@ -149,16 +149,16 @@
       "value": "İşlemler"
     }
   ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "Herhangi bir şekilde mümkünse kendinizi ve ağı korumak için bir istemci daha çalıştırmayı düşünebilirsiniz."
+    }
+  ],
   "/ub26/": [
     {
       "type": 0,
       "value": "Riskleri anlıyorum"
-    }
-  ],
-  "Zxm0fh": [
-    {
-      "type": 0,
-      "value": "Docking olarak da bilinen birleştirme, bugün kullandığımız Ethereum ana ağının İşaret Zinciri ile birleştiğini görecek. Bu, Ethereum'un tamamen stake-of-stake'e geçeceği zamandır."
     }
   ],
   "/w/KT4": [
@@ -279,16 +279,22 @@
       "value": "Doğrulayıcılar SSS"
     }
   ],
-  "Cacfkx": [
-    {
-      "type": 0,
-      "value": "Eth2 vision hakkında daha fazla bilgi"
-    }
-  ],
   "0uqjBl": [
     {
       "type": 0,
       "value": "Topluma yarar sağladığınız için sürekli ödüller kazanın."
+    }
+  ],
+  "122+yR": [
+    {
+      "type": 0,
+      "value": "para çekme anahtarı"
+    }
+  ],
+  "192AR6": [
+    {
+      "type": 0,
+      "value": "Stake etme hakkında daha fazla bilgi"
     }
   ],
   "19o6KO": [
@@ -351,10 +357,10 @@
       "value": "Para yatırma sözleşme detaylarını kontrol edin"
     }
   ],
-  "36j2ls": [
+  "1ingnQ": [
     {
       "type": 0,
-      "value": "Eth1 zincirinden gelen doğrulayıcı para yatırma işlemlerini yapmak için, Eth1 istemcisinin yanı sıra Eth2 istemcinizi de çalıştırmanız gerekir. Infura gibi bir üçüncü taraf hizmeti kullanabilirsiniz, ancak ağı olabildiğince merkezi olmayan bir şekilde tutmak için kendi istemcinizi çalıştırmanızı öneririz."
+      "value": "Ethereum stake etme ekonomisi hakkında daha fazla bilgi"
     }
   ],
   "22EpKq": [
@@ -405,18 +411,26 @@
       "value": "Sorun giderme"
     }
   ],
-  "2DuJTX": [
+  "2HVWJL": [
     {
       "type": 0,
-      "value": "Eth2 düğümünüzü JSON RPC uç noktasına bağlamak için "
+      "value": "yürütüm katmanı"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "Anahtarlarınızı oluşturmak için uygulamada size sunulan talimatları izleyin."
+    }
+  ],
+  "2PI6Di": [
+    {
+      "type": 0,
+      "value": "Mutabakat İstemcileri: "
     },
     {
       "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
+      "value": "clientName"
     }
   ],
   "2a1GTh": [
@@ -451,10 +465,10 @@
       "value": "Hizmet Şartları"
     }
   ],
-  "1ingnQ": [
+  "36j2ls": [
     {
       "type": 0,
-      "value": "Eth2 ekonomileri hakkında daha fazla bilgi"
+      "value": "Yürütüm katmanından (eskiden \"Eth1\" zinciri) gelen doğrulayıcı para yatırma işlemlerini işlemek için bir yürütüm istemcisi ve bir mutabakat istemcisi (eskiden \"Eth2\") çalıştırmanız gerekiyor. Infura gibi üçüncü taraf hizmetler kullanabilirsiniz ancak ağı olabildiğince merkeziyetsiz tutmak için kendi istemcinizi çalıştırmayı öneririz."
     }
   ],
   "38VH2G": [
@@ -523,20 +537,6 @@
       "value": "Adresin adece bir kısmını değil tamamını kontrol edin. Sadece birkaç bayt farklı olabilir."
     }
   ],
-  "KEfTSF": [
-    {
-      "type": 0,
-      "value": "Eth2 istemcimin "
-    },
-    {
-      "type": 1,
-      "value": "latestRelease"
-    },
-    {
-      "type": 0,
-      "value": " sürümünü yükledim."
-    }
-  ],
   "3Q43SM": [
     {
       "type": 0,
@@ -549,10 +549,22 @@
       "value": "Yükleme işlemi"
     }
   ],
+  "3SOKyg": [
+    {
+      "type": 0,
+      "value": "Bu terminoloji güncellemeleri, Ethereum'un amaçlarını veya yol haritasını değil, sadece adlandırma alışkanlıklarını değiştirir."
+    }
+  ],
   "3URRZK": [
     {
       "type": 0,
       "value": "Geth on Goerli belgesi"
+    }
+  ],
+  "3XK21U": [
+    {
+      "type": 0,
+      "value": "Çalıştırmak istediğiniz her doğrulayıcı için bir imzalama anahtarı oluşturmanıza yardımcı olacağız. The Merge'e kadar para çekme işlemi olmadığından, para çekme anahtarlarınızı şimdi oluşturmayacaksınız. Paranızı çekmek mümkün olduğunda, para çekme anahtarlarınızı anımsatıcınızdan elde edebilirsiniz."
     }
   ],
   "3tR/V9": [
@@ -607,12 +619,6 @@
       "value": "Kurulum"
     }
   ],
-  "dJMce5": [
-    {
-      "type": 0,
-      "value": "Prysm, kullanılabilirlik, güvenlik ve güvenilirliğe odaklanan, Ethereum 2.0 protokolünün bir Go uygulamasıdır."
-    }
-  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -637,16 +643,38 @@
       "value": "Kopyala"
     }
   ],
+  "54J/qs": [
+    {
+      "type": 0,
+      "value": "BLS'ye para çekme kullanıp para çekme anahtarımı kaybedersem ne olur?"
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
       "value": "Neden bir yerine iki anahtar?"
     }
   ],
+  "5A6amM": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcınızı birden çok yerde çalıştırmak yüksek risk taşır. İptal edilebilir (slashable) bir duruma ve ağdan çıkarılmaya yol açabilir. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
   "5CBhpq": [
     {
       "type": 0,
       "value": "Taahhüt"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "Anahtarlarınızı nasıl oluşturmak istersiniz?"
     }
   ],
   "5HJLBU": [
@@ -703,6 +731,12 @@
       "value": "İşaret Zincirinde hisse ispatı (PoS)"
     }
   ],
+  "6S95Bo": [
+    {
+      "type": 0,
+      "value": "Oltalamayı (phishing) önleyin"
+    }
+  ],
   "6UUL73": [
     {
       "type": 0,
@@ -719,12 +753,6 @@
     {
       "type": 0,
       "value": "Bir ağa erken aşamalarında katılıyorsunuz. Herhangi bir yeni yazılım parçasında olduğu gibi, yazılım hatası ihtimali vardır. Pek olası olmasa da, olası hatalar kesme ile sonuçlanabilir."
-    }
-  ],
-  "WdDGn6": [
-    {
-      "type": 0,
-      "value": "Kullanılabilirlik, güvenlik ve güvenilirliğe odaklanan bir Eth2 protokolü uygulaması. Prysm, yalnızca müşterilerinin gelişimine odaklanan bir şirket olan Prysmatic Labs tarafından geliştirilmiştir."
     }
   ],
   "7+Domh": [
@@ -807,16 +835,6 @@
       "value": "Her dönemde ağ her doğrulayıcının eylemlerini değerlendirir ve ödüllerinizi veya cezalarınızı uygun şekilde verir."
     }
   ],
-  "zmMF+G": [
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
-    {
-      "type": 0,
-      "value": " testnet için Eth2 Launchpad"
-    }
-  ],
   "80eWKU": [
     {
       "type": 0,
@@ -883,6 +901,12 @@
     {
       "type": 0,
       "value": "Hem genel hem de özel, izinli ağ kullanım durumları için kurumsal dostu olacak şekilde tasarlanmış bir Ethereum istemcisi."
+    }
+  ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "Uygulamalar kısmından sağ tıklayıp \"Aç\"a tıklayarak Wagyu Key Gen uygulamasını çalıştırın. macOS'un \"Waygu Key Gen.app\"in geliştiricisini doğrulamayadığına ve uygulamayı açmak istediğinizden emin olup olmadığını sorgulayan bir uyarı alacaksınız. \"Aç\"a tıklayarak uygulamayı açın."
     }
   ],
   "9+Ddtu": [
@@ -971,10 +995,22 @@
       "value": "Özet"
     }
   ],
-  "Mlc7Vr": [
+  "9xeLhs": [
     {
       "type": 0,
-      "value": "Eth2 yükseltmeleri sadece doğrulayıcılar riskleri ve sorumlulukları anladığında başarılı olur."
+      "value": "Ethereum adresine para çekme: Birleştirme sonrası temizlik yükseltmesi sonrasında Mainnet cüzdan adresinize (eskiden \"Eth1\" adresi) para çekmek istiyorsanız deposit-cli'yi çalıştırırken "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " ayarlayabilirsiniz. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "A2b4uB": [
@@ -989,10 +1025,30 @@
       "value": "Prysm, başlatma panosu yoluyla para yatırma işleminizi tamamladıktan sonra istemcilerini çalıştırmak için adım adım yönergeler sunar."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "mutabakat katmanı"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
       "value": "Yardıma ihtiyaç duyarsanız Python belgesine bakın."
+    }
+  ],
+  "ACstv9": [
+    {
+      "type": 0,
+      "value": "Yürütüm istemcimi "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " üzerinde kurdum ve senkronize ettim (birkaç gün sürebileceğinden bunun için beklemeyin)."
     }
   ],
   "AEp7+F": [
@@ -1015,6 +1071,34 @@
     {
       "type": 0,
       "value": " işlemi yaptırmaktır."
+    }
+  ],
+  "AJD+66": [
+    {
+      "type": 0,
+      "value": "The Ethereum staking yatırma sözleşmesinin kabul edilmesi, tek seferde minimum "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " gönderilmesini gerektirmektedir."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "yürütüm istemcisi"
     }
   ],
   "AYKxmf": [
@@ -1105,12 +1189,6 @@
       "value": "'in İşaret Zinciri'ne aktarımının tek yönlü ve geri döndürülemez olduğunu kabul ediyorum."
     }
   ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "Para yatırma sözleşmesini Ethereum hesapları ve Eth2 doğrulayıcıları arasında bir para transferi olarak düşünebilirsiniz."
-    }
-  ],
   "BCsPjJ": [
     {
       "type": 0,
@@ -1121,28 +1199,6 @@
     {
       "type": 0,
       "value": "Doğrulayıcıyı yükseltin"
-    }
-  ],
-  "BFfsSX": [
-    {
-      "type": 0,
-      "value": "The Eth2 para yatırma sözleşmesinin kabul edilmesi tek seferde gönderilmesi gereken minimum "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " gerektirmektedir."
     }
   ],
   "BFsUAH": [
@@ -1161,6 +1217,12 @@
     {
       "type": 0,
       "value": " olup olmadığını kontrol edin."
+    }
+  ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Erigon, Go üzerinden yazılmıştır ve GNU LGPLv3 lisanslıdır."
     }
   ],
   "BPpnlJ": [
@@ -1193,12 +1255,6 @@
       "value": "Giriş"
     }
   ],
-  "LHPZ+C": [
-    {
-      "type": 0,
-      "value": "Lighthouse, hız ve güvenliğe yoğun bir şekilde odaklanarak Rust'ta yazılmış bir Ethereum 2.0 uygulamasıdır."
-    }
-  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1217,12 +1273,6 @@
       "value": "Çekçe"
     }
   ],
-  "CBbRux": [
-    {
-      "type": 0,
-      "value": "OpenEthereum Rust'ta yazılmıştır ve GPLv3 altında lisanslanmıştır."
-    }
-  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1233,6 +1283,12 @@
     {
       "type": 0,
       "value": "Bakiyeniz 16 ETH'ye yakınsa kesinlikle yükseltmelisiniz. Bu, doğrulayıcı grubundan atılmamanızı sağlamak içindir (bu durum bakiyeniz 16 ETH'nin altına düşerse otomatik olarak gerçekleşir)."
+    }
+  ],
+  "Cacfkx": [
+    {
+      "type": 0,
+      "value": "Ethereum vizyonu hakkında daha fazla bilgi"
     }
   ],
   "CdKEd/": [
@@ -1253,12 +1309,6 @@
     {
       "type": 0,
       "value": "Bir güvenlik duvarı oluşturdum."
-    }
-  ],
-  "Hczrvs": [
-    {
-      "type": 0,
-      "value": "Slashing'in iki amacı vardır: (1) Eth2'ye saldırmayı engelleyici şekilde pahalı hale getirmek ve (2) doğrulayıcıların görevlerini gerçekten yerine getirip getirmediklerini kontrol ederek tembel olmalarını önlemek. İspatlanabilecek şekilde zarar verici davrandığınız için slashing'e uğrarsanız, hissenizin bir kısmı imha edilir."
     }
   ],
   "D0Rigq": [
@@ -1425,6 +1475,12 @@
       "value": "Bu bir test ağıdır ⚠️"
     }
   ],
+  "EcCME0": [
+    {
+      "type": 0,
+      "value": "Stake Başlama Noktası"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1461,12 +1517,6 @@
       "value": "Tekrar deneyin"
     }
   ],
-  "HMgrdg": [
-    {
-      "type": 0,
-      "value": "Eth1 İstemcinizi yapılandırın"
-    }
-  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -1491,12 +1541,6 @@
       "value": "doğrulayıcılar"
     }
   ],
-  "G/VJJd": [
-    {
-      "type": 0,
-      "value": "OpenEthereum kurulum belgesi"
-    }
-  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1507,16 +1551,6 @@
     {
       "type": 0,
       "value": "Ana bölüm kaynak kodunu indirin"
-    }
-  ],
-  "2PI6Di": [
-    {
-      "type": 0,
-      "value": "Eth2 İstemcileri: "
-    },
-    {
-      "type": 1,
-      "value": "clientName"
     }
   ],
   "G8tAKU": [
@@ -1531,16 +1565,22 @@
       "value": "İşlemlerin doğrulanması için kazanılan ödüller üzerinde muhtemelen en etkili faktör, ağdaki toplam stake (hisse) miktarıdır. Başka bir deyişle, toplam doğrulayıcı sayısı. Bu rakama bağlı olarak, bir doğrulayıcı için maksimum yıllık getiri oranı% 2 ile % 20 arasında herhangi bir yerde olabilir."
     }
   ],
-  "j8GPOH": [
-    {
-      "type": 0,
-      "value": "Daha önce Artemis olarak bilinen Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş bir Eth2 istemcisidir. PegaSys, kurumsal kullanıma hazır istemciler ve çekirdek Ethereum platformuyla etkileşim için araçlar oluşturmaya yönelik olan ConsenSys'un bir koludur."
-    }
-  ],
   "GDaRAW": [
     {
       "type": 0,
       "value": "Kimlik avına maruz kalmadığınızdan emin olun"
+    }
+  ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "mutabakat istemcisi"
+    }
+  ],
+  "GOHkCO": [
+    {
+      "type": 0,
+      "value": "Bugün, ilk ana ölçeklendirme yükseltmesi olan İşaret Zincirini güvence altına alacaksınız. Bu, hisse ispatı mutabakat mekanizması kullanan ayrı bir zincirdir. Sonunda, ana ağ (bugün kullandığımız Ethereum) İşaret Zinciri ile birleştiğinde, tüm Ethereum'un güvenliğini sağlamaya yardımcı olursunuz."
     }
   ],
   "GOc7cL": [
@@ -1567,10 +1607,10 @@
       "value": "Anahtarları oluştur"
     }
   ],
-  "GrU/lp": [
+  "GelBd9": [
     {
       "type": 0,
-      "value": "Eth2 istemcileri"
+      "value": "Az önce indirdiğiniz dosyayı yürütülebilir hâle getirin."
     }
   ],
   "GsBRWL": [
@@ -1609,6 +1649,32 @@
       "value": "Bakiye"
     }
   ],
+  "HMgrdg": [
+    {
+      "type": 0,
+      "value": "Yürütüm istemcinizi yapılandırın"
+    }
+  ],
+  "HXvZ2L": [
+    {
+      "type": 0,
+      "value": "Mutabakat düğümünüzü JSON RPC uç noktasına bağlamak için "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
+    }
+  ],
+  "Hczrvs": [
+    {
+      "type": 0,
+      "value": "İptal etmenin (slashing) iki amacı vardır: (1) Ağa saldırmayı engelleyici düzeyde pahalı hâle getirmek ve (2) doğrulayıcıların görevlerini gerçekten yerine getirip getirmediklerini kontrol ederek tembelleşmelerini önlemek. İspatlanabilecek şekilde zarar verici davrandığınız için iptal etmeye uğrarsanız, stake ettiğiniz miktarın bir kısmı imha edilir."
+    }
+  ],
   "HoahTd": [
     {
       "type": 0,
@@ -1641,10 +1707,16 @@
       "value": "Ağ"
     }
   ],
-  "txdGU9": [
+  "I5lWZA": [
     {
       "type": 0,
-      "value": "Eth2 yükseltmeleri"
+      "value": "İlk para yatırmadan sonra doğrulayıcımın para çekme bilgilerini değiştirebilir miyim?"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "Eskiden TurboGeth olan Erigon, performans optimizasyonlarını mümkün kılmak için geliştirilmiş bir Ethereum istemcisidir."
     }
   ],
   "IJw06E": [
@@ -1707,12 +1779,6 @@
       "value": "'e ek olarak bilinmesi gereken iki önemli senaryo vardır:"
     }
   ],
-  "frIMm4": [
-    {
-      "type": 0,
-      "value": "Eth1 istemcinizi senkronize etmek en kötü durumda birkaç gün sürer."
-    }
-  ],
   "J455S4": [
     {
       "type": 0,
@@ -1753,12 +1819,6 @@
       "value": "Başka bir deyişle dürüstlüğünüzü korumak için işlemlerinizin mali sonuçları olması gerekir."
     }
   ],
-  "JDGiXT": [
-    {
-      "type": 0,
-      "value": "OpenEthereum belgesi istemcinin nasıl indirilip kurulacağını anlatır."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1779,10 +1839,10 @@
       "value": "4. Kimlik avını önleyin"
     }
   ],
-  "6S95Bo": [
+  "JbVlOE": [
     {
       "type": 0,
-      "value": "Eth2 kimlik avını önleyin"
+      "value": "Ethereum yükseltmelerini yakından inceleyin."
     }
   ],
   "JhUYU3": [
@@ -1855,22 +1915,34 @@
       "value": "Donanım kontrol listesi"
     }
   ],
+  "KEfTSF": [
+    {
+      "type": 0,
+      "value": "Mutabakat istemcimin "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " sürümünü yükledim."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
       "value": "Hata"
     }
   ],
-  "ckaUkz": [
+  "KWWsDo": [
     {
       "type": 0,
-      "value": "Doğrulayıcı, Ethereum 2.0 protokolünün konsensüsüne katılan bir kişidir."
-    }
-  ],
-  "KhEtqB": [
+      "value": "Bağlantıyı doğrulayarak resmi StakeHouse Github hesabından indirme yaptığınızdan emin olun: "
+    },
     {
-      "type": 0,
-      "value": "Besu on Goerli belgesi"
+      "type": 1,
+      "value": "url"
     }
   ],
   "KjcAm2": [
@@ -1929,6 +2001,12 @@
       "value": "cüzdanınızı yeniden yükleyin"
     }
   ],
+  "LHPZ+C": [
+    {
+      "type": 0,
+      "value": "Lighthouse, hız ve güvenliğe yoğun bir şekilde odaklanarak Rust'ta yazılmış bir mutabakat istemcisi uygulamasıdır."
+    }
+  ],
   "LVy+cS": [
     {
       "type": 0,
@@ -1959,6 +2037,18 @@
     {
       "type": 0,
       "value": " kullanın."
+    }
+  ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "Bulgarca"
+    }
+  ],
+  "LlClXS": [
+    {
+      "type": 0,
+      "value": "Ethereum ağını desteklediğiniz için teşekkür ederiz!"
     }
   ],
   "Ltd/hJ": [
@@ -2011,12 +2101,6 @@
       "value": "Yeni cüzdanı bağla"
     }
   ],
-  "ynB6C+": [
-    {
-      "type": 0,
-      "value": "HTTP API(ları) yoluyla Eth2 işaret düğümünü Eth1 istemcime bağlayabiliyorum."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2047,6 +2131,12 @@
       "value": "Yükseltmeler"
     }
   ],
+  "MZzOnU": [
+    {
+      "type": 0,
+      "value": "Ethereum nasıl ölçekleniyor?"
+    }
+  ],
   "Mb3npQ": [
     {
       "type": 0,
@@ -2065,20 +2155,22 @@
       "value": "İşlem başarısız oldu"
     }
   ],
+  "Mlc7Vr": [
+    {
+      "type": 0,
+      "value": "Ethereum yükseltmeleri sadece doğrulayıcılar riskleri ve sorumlulukları anladığında başarılı olur."
+    }
+  ],
+  "Mm7FSl": [
+    {
+      "type": 0,
+      "value": "\"Eth1\" ve \"Eth2\" terimleri, Birleştirme hazırlıkları için kullanımdan kaldırılmaktadır."
+    }
+  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Yükleme bilgileri"
-    }
-  ],
-  "Ns8vbQ": [
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " istemcisini belirleyin"
     }
   ],
   "N0rwnt": [
@@ -2089,20 +2181,6 @@
     {
       "type": 0,
       "value": " geçerli bir deposit_data JSON dosyası değildir. Yeniden deneyin."
-    }
-  ],
-  "rMjMmc": [
-    {
-      "type": 0,
-      "value": "Eth2 düğümünüzü JSON RPC uç noktasına bağlamak için "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
     }
   ],
   "NEmnAV": [
@@ -2141,12 +2219,6 @@
       "value": "Komut satırı uygulamasını indir"
     }
   ],
-  "36j2ls": [
-    {
-      "type": 0,
-      "value": "Ana ağdan (Eth1 zinciri) gelen doğrulayıcının yatırım tutarlarını işlemek için, Eth2 istemcinize paralel olarak bir Eth1 istemcisi çalıştırmanız gerekir. Infura gibi bir üçüncü taraf hizmeti kullanabilirsiniz, ancak ağın olabildiğince merkezi olmayan bir şekilde kalmasını sağlamak için kendi istemcinizi çalıştırmanızı öneririz."
-    }
-  ],
   "NVljH4": [
     {
       "type": 0,
@@ -2179,16 +2251,26 @@
       "value": "Bir doğrulayıcı oyunun, stake edilen miktara göre ağırlıklandırıldığını unutmayın."
     }
   ],
-  "THIzw6": [
+  "NatYUJ": [
     {
       "type": 0,
-      "value": "Doğrulayıcılar ve Eth2"
+      "value": "Ethereum doğrulayıcılarının rolleri ve sorumlulukları hakkında daha fazla bilgi edinin."
     }
   ],
   "Nb5DNK": [
     {
       "type": 0,
       "value": "Teku ile doğrulayıcı olun"
+    }
+  ],
+  "Ns8vbQ": [
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " istemcisini belirleyin"
     }
   ],
   "NwzcYT": [
@@ -2219,10 +2301,10 @@
       "value": "."
     }
   ],
-  "xXWzDf": [
+  "O3qkOm": [
     {
       "type": 0,
-      "value": "Eth2 ağı"
+      "value": "Parçalama"
     }
   ],
   "OIvXIO": [
@@ -2267,6 +2349,12 @@
     {
       "type": 0,
       "value": "Doğrulayıcı olarak, dürüst olmayan bir şekilde davranmanız halinde cezalandırılabilmeniz için stake edilen paranız olması gerekir."
+    }
+  ],
+  "P/Oh91": [
+    {
+      "type": 0,
+      "value": "Oltalama, Ethereum doğrulayıcıları için çok olası bir risktir ve maalesef birçok kişi bu saldırılar nedeniyle para kaybedecektir."
     }
   ],
   "P0kiYS": [
@@ -2319,12 +2407,6 @@
       "value": "Rahat etmek için önce tüm süreci bir test ağında yaşamanızı öneririz."
     }
   ],
-  "oNohob": [
-    {
-      "type": 0,
-      "value": "Eth2 istemcinizi yapılandırın"
-    }
-  ],
   "PfoT0C": [
     {
       "type": 0,
@@ -2335,6 +2417,12 @@
     {
       "type": 0,
       "value": "Resmi doğrulama raporu"
+    }
+  ],
+  "PmrcLE": [
+    {
+      "type": 0,
+      "value": "Goerli belgeleri üzerinde Nethermind"
     }
   ],
   "PoBIK+": [
@@ -2475,10 +2563,10 @@
       "value": "tek yol"
     }
   ],
-  "P/Oh91": [
+  "RE2MaJ": [
     {
       "type": 0,
-      "value": "Kimlik avı, Eth2 doğrulayıcıları için çok gerçek bir risktir ve maalesef birçok kişi bu saldırılar nedeniyle para kaybedecektir."
+      "value": "Mutabakat istemcileri"
     }
   ],
   "ROHpFF": [
@@ -2497,12 +2585,6 @@
     {
       "type": 0,
       "value": "tebrikler"
-    }
-  ],
-  "nln+aO": [
-    {
-      "type": 0,
-      "value": "Bir Eth2 istemcisinden başka bir Eth2 istemcisine nasıl geçileceğini simüle ettim."
     }
   ],
   "RaBZna": [
@@ -2547,12 +2629,6 @@
       "value": "İstemci sürümünü doğru döndürüp döndürmediğini kontrol etmek için aşağıdaki komutla doğrulayın:"
     }
   ],
-  "S0e/cN": [
-    {
-      "type": 0,
-      "value": "CLI'yı nasıl çalıştırmak istersiniz?"
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -2571,18 +2647,10 @@
       "value": "Stake'iniz para yatırma sözleşmesine ulaştı!"
     }
   ],
-  "toCscK": [
+  "SHNw06": [
     {
       "type": 0,
-      "value": "Eth"
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " istemcinizi seçin ve bir düğüm oluşturun"
+      "value": "Az önce indirdiğiniz dosyayı yürütün."
     }
   ],
   "SR0qHv": [
@@ -2621,6 +2689,12 @@
       "value": "Kesinti riskleri hakkında daha fazla bilgi"
     }
   ],
+  "SdRBir": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı olmak için, bilgisayarınızdaki terminalde komutları çalıştırabilmeniz gerekir. Yeni anahtar çiftlerinizi oluşturma ve doğrulayıcı yazılımını kurma işlemlerinin her ikisi de terminalde yapılır."
+    }
+  ],
   "SeW5ak": [
     {
       "type": 0,
@@ -2649,6 +2723,12 @@
       "value": "ingiliz anahtarı"
     }
   ],
+  "THIzw6": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcılar ve Ethereum"
+    }
+  ],
   "TLEziZ": [
     {
       "type": 0,
@@ -2675,20 +2755,6 @@
       "value": "virtualenv, para yatırma aracı için yalıtılmış bir Python ortamı oluşturmanıza yardımcı olur."
     }
   ],
-  "ie5fDg": [
-    {
-      "type": 0,
-      "value": "Eth2 "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Launchpad"
-    }
-  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -2711,40 +2777,6 @@
     {
       "type": 0,
       "value": "%50'den büyük"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "Eth2 istemcileri, doğrulayıcınız hakkında önemli gerçek zamanlı ölçümleri görselleştirmenize yardımcı olmak için Prometheus ve Grafana'yı destekler. İstemciye özel talimatları burada bulabilirsiniz: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "UHbYCa": [
@@ -2811,6 +2843,28 @@
     {
       "type": 0,
       "value": "Bir test ağı klasörünüz yoksa, büyük olasılıkla Nimbus'ı doğru bir şekilde oluşturmamış ve çalıştırmamışsınızdır. Make komutlarını tekrar çalıştırın."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Ethereum, "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (eskiden \"Eth1\", işlem ve yürütmeyi kapsar) ve "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (eskiden \"Eth2 veya \"Ethereum 2.0\", hisse ispatı İşaret Zincirini kapsar) katmanlarını içerecektir."
     }
   ],
   "VASo1/": [
@@ -2923,12 +2977,6 @@
       "value": "dövüş sanatları forması"
     }
   ],
-  "SdRBir": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcı olmak için, bilgisayarınızdaki terminalde komutları çalıştırabilmeniz gerekir. Yeni Eth2 anahtar çiftlerinizi oluşturma ve doğrulayıcı yazılımını kurma işlemlerinin her ikisi de terminalde yapılır."
-    }
-  ],
   "VctWDX": [
     {
       "type": 0,
@@ -2959,12 +3007,6 @@
       "value": "SSS"
     }
   ],
-  "im7uMt": [
-    {
-      "type": 0,
-      "value": "Eth2 Doğrulayıcı İstemcisi (VC)"
-    }
-  ],
   "WFVzvu": [
     {
       "type": 1,
@@ -2993,30 +3035,16 @@
       "value": " doğrulayıcılar"
     }
   ],
-  "Xbt2gv": [
-    {
-      "type": 0,
-      "value": "Eth2 düğümünüzü JSON RPC uç noktasına bağlamak için "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
-    }
-  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "Bu adımlar isteğe bağlıdır ancak düğümünüzü optimize etmeniz önerilir."
     }
   ],
-  "smD5l/": [
+  "WdDGn6": [
     {
       "type": 0,
-      "value": "Eth2 İşaret Düğümü (BN)"
+      "value": "Kullanılabilirlik, güvenlik ve güvenilirliğe odaklanan mutabakat protokolü uygulaması. Prysm, yalnızca müşterilerinin gelişimine odaklanan bir şirket olan Prysmatic Labs tarafından geliştirilmiştir."
     }
   ],
   "WkrNSk": [
@@ -3049,16 +3077,6 @@
       "value": "Blok gezgini sözleşmeyi adlandırdı mı?"
     }
   ],
-  "5A6amM": [
-    {
-      "type": 0,
-      "value": "Eth2 doğrulayıcınızı birden çok yerde çalıştırmak yüksek risklidir. Slashing durumuna ve ağdan çıkarmaya yol açabilir "
-    },
-    {
-      "type": 1,
-      "value": "dahaFazlabilgiedinin"
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -3069,6 +3087,12 @@
     {
       "type": 0,
       "value": "Pip kurulumu hakkında daha fazla bilgi"
+    }
+  ],
+  "XRxD8r": [
+    {
+      "type": 0,
+      "value": "Goerli belgeleri üzerinde Besu"
     }
   ],
   "XVehvN": [
@@ -3097,10 +3121,58 @@
       "value": " olmasını bekler."
     }
   ],
+  "Xbt2gv": [
+    {
+      "type": 0,
+      "value": "Mutabakat düğümünüzü JSON RPC uç noktasına bağlamak için "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
       "value": "Kaynaktan oluşturma"
+    }
+  ],
+  "XqbweH": [
+    {
+      "type": 0,
+      "value": "İstemciler, doğrulayıcınız hakkında önemli gerçek zamanlı ölçümleri görselleştirmenize yardımcı olmak için Prometheus ve Grafana'yı destekler. İstemciye özel talimatları burada bulabilirsiniz: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
     }
   ],
   "Y47aYU": [
@@ -3171,14 +3243,18 @@
       "value": " hizmetimi kurdum."
     }
   ],
-  "dNh0YZ": [
+  "YQJy4H": [
+    {
+      "type": 0,
+      "value": "Artık anımsatıcınızı güvenli bir yere not etmelisiniz ve "
+    },
     {
       "type": 1,
-      "value": "date"
+      "value": "validatorCount"
     },
     {
       "type": 0,
-      "value": " itibariyle, yalnızca Eth1 ana ağ zinciri verileri için ~ 400 GB'a ihtiyacınız olacak (günde yaklaşık 1 GB artışla)."
+      "value": " doğrulayıcılarınızın her biri için bir anahtar deposu kaydetmelisiniz. Lütfen bunları güvende tuttuğunuzdan, tercihen çevrimdışı olduğundan emin olun. Doğrulayıcı anahtar depolarınız, seçili dizinde bulunacaktır."
     }
   ],
   "Yganfl": [
@@ -3191,6 +3267,12 @@
     {
       "type": 0,
       "value": "Para çekme anahtarınızı kaybederseniz, doğrulayıcınızın bulundurduğu paraya erişmenizin bir yolu yoktur."
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "Slovakça"
     }
   ],
   "YtwQyB": [
@@ -3271,28 +3353,42 @@
       "value": "Yine değişir. Kötü niyetli davranmak - örneğin geçersiz veya çelişkili blokları onaylamak, stake'inizin iptaline yol açacaktır."
     }
   ],
-  "uPECbE": [
-    {
-      "type": 0,
-      "value": "Eth2 doğrulayıcı kontrol listesi"
-    }
-  ],
   "ZTo0Fl": [
     {
       "type": 0,
       "value": "Neden bir bekleme var?"
     }
   ],
-  "iqJ3LM": [
+  "ZlLjuq": [
     {
       "type": 0,
-      "value": "PegaSys Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş Java tabanlı bir Ethereum 2.0 istemcisidir."
+      "value": "Lütfen sizden bir ağ belirtmeniz istediğinde "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " seçtiğinizden emin olun, aksi takdirde para yatırma geçersiz olacaktır."
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Erigon kurulum belgesi"
     }
   ],
   "Zspg8H": [
     {
       "type": 0,
       "value": "Bölüm 1 - Başlamadan önce"
+    }
+  ],
+  "Zxm0fh": [
+    {
+      "type": 0,
+      "value": "Birleştirme, bugün kullandığımız Ethereum Mainnet'i İşaret Zinciri ile birleştirecek. Ethereum bu andan itibaren tamamen hisse ispatına geçecektir."
     }
   ],
   "ZzTcj5": [
@@ -3319,12 +3415,6 @@
       "value": "2. Hazırlık düğümleri"
     }
   ],
-  "cJX99/": [
-    {
-      "type": 0,
-      "value": "En sevdiğiniz Eth2 blok gezginini kontrol edin:"
-    }
-  ],
   "aS6dBe": [
     {
       "type": 0,
@@ -3335,12 +3425,6 @@
     {
       "type": 0,
       "value": "Nimbus Apache 2 lisanslıdır ve C'ye derlenen Python benzeri söz dizimine sahip bir dil olan Nim ile yazılmıştır."
-    }
-  ],
-  "vkozFq": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcınızı yeniden etkinleştirmenizin bir yolu yoktur ve birleştirme işlemine kadar paranızı aktaramaz veya çekemezsiniz (bu, o zamana kadar paranıza erişilemeyeceği anlamına gelir)."
     }
   ],
   "aZ7pUj": [
@@ -3389,6 +3473,12 @@
       "value": "Ancak, öngörülebilir gelecekte, çıktıktan sonra geri dönüşün olmayacağını unutmayın."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "İstemci çeşitliliği hakkında daha fazla bilgi"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -3405,6 +3495,12 @@
     {
       "type": 0,
       "value": "Besu kurulum belgesi"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "Waygu Key Gen uygulamasını indirin"
     }
   ],
   "bVtlF7": [
@@ -3443,6 +3539,12 @@
       "value": "Geth belgeleri, istemcinin nasıl indirilip kurulacağını açıklar."
     }
   ],
+  "cJX99/": [
+    {
+      "type": 0,
+      "value": "En sevdiğiniz İşaret Zinciri blok arayıcılarını kontrol edin:"
+    }
+  ],
   "cPsIkp": [
     {
       "type": 0,
@@ -3473,6 +3575,12 @@
       "value": "PegaSys Teku hakkında daha fazlası"
     }
   ],
+  "ckaUkz": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı, Ethereum protokolünün mutabakatına katılan bir kişidir."
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -3485,10 +3593,10 @@
       "value": "Kötü niyetli davrandığım için ne kadar ceza alacağım?"
     }
   ],
-  "NatYUJ": [
+  "cpxfOR": [
     {
       "type": 0,
-      "value": "Eth2 doğrulayıcılarının rolleri ve sorumlulukları hakkında daha fazla bilgi edinin."
+      "value": "Para çekme belgeleri nelerdir?"
     }
   ],
   "cyR7Kh": [
@@ -3497,10 +3605,26 @@
       "value": "Geri"
     }
   ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "2. Adım: Wagyu Key Gen uygulamasını kullanarak para yatırma anahtarları oluşturun"
+    }
+  ],
   "d5KEM8": [
     {
       "type": 0,
       "value": "Yapmak istediğiniz her para yatırma işlemi için bir işlem imzalamalısınız."
+    }
+  ],
+  "d75Ebj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", geçerli para çekmelerin hedefini doğrulayan, para yatırma içerisindeki 32 bitlik bir alandır. Şu anda iki tür para çekme bulunuyor: BLS'ye para çekme ve Ethereum adresine para çekme."
     }
   ],
   "dH5+MX": [
@@ -3515,10 +3639,26 @@
       "value": "Para yatırma"
     }
   ],
+  "dJMce5": [
+    {
+      "type": 0,
+      "value": "Prysm, kullanılabilirlik, güvenlik ve güvenilirliğe odaklanan, Ethereum protokolünün bir Go mutabakat istemci uygulamasıdır."
+    }
+  ],
   "dM/KIM": [
     {
       "type": 0,
       "value": "Doğrulayıcı tam olarak nedir?"
+    }
+  ],
+  "dNh0YZ": [
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " itibariyle, yalnızca Mainnet yürütüm zinciri verileri için yaklaşık 400 GB'a ihtiyacınız olacak (günde yaklaşık 1 GB artışla)."
     }
   ],
   "dTOtPO": [
@@ -3579,10 +3719,10 @@
       "value": "code3"
     }
   ],
-  "192AR6": [
+  "eF9RbC": [
     {
       "type": 0,
-      "value": "Eth2 hakkında daha fazla bilgi"
+      "value": "Para yatırma sözleşmesini Ethereum hesapları ve işaret zinciri doğrulayıcıları arasında bir para transferi olarak düşünebilirsiniz."
     }
   ],
   "eKEL/g": [
@@ -3619,6 +3759,12 @@
     {
       "type": 0,
       "value": "Birleşme hakkında daha fazla bilgi"
+    }
+  ],
+  "eq0/34": [
+    {
+      "type": 0,
+      "value": "Birleştirme"
     }
   ],
   "erZJkZ": [
@@ -3713,6 +3859,12 @@
       "value": "etkin bakiyenin etkisi"
     }
   ],
+  "frIMm4": [
+    {
+      "type": 0,
+      "value": "Yürütme istemcinizi senkronize etmek en kötü durumda birkaç gün sürer."
+    }
+  ],
   "g/DxI7": [
     {
       "type": 0,
@@ -3729,12 +3881,6 @@
     {
       "type": 0,
       "value": "Virtualenv hakkında daha fazlası"
-    }
-  ],
-  "gAdE9y": [
-    {
-      "type": 0,
-      "value": "Eth2 ağını desteklediğiniz için teşekkür ederiz!"
     }
   ],
   "gIauNz": [
@@ -3885,6 +4031,12 @@
       "value": "Başka bir deyişle, bir bütün olarak ağa en büyük faydayı sağlayarak ödüllerinizi en üst düzeye çıkarırsınız."
     }
   ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "Macarca"
+    }
+  ],
   "hjrLbR": [
     {
       "type": 0,
@@ -3913,12 +4065,6 @@
       "value": "Doğrulayıcımı çevrimiçi ve güncel tutmanın önemli olduğunu anlıyorum."
     }
   ],
-  "nBhisA": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcı olmak için bir Eth1 ve bir Eth2 düğümü çalıştırmanız gerekir. Kendinizi ve ekipmanınızı hazırlamak için kontrol listesine göz atın."
-    }
-  ],
   "iCpuph": [
     {
       "type": 0,
@@ -3935,12 +4081,6 @@
     {
       "type": 0,
       "value": "Transferler şimdilik devre dışı bırakıldığında, kendi isteğinizle çıkıp daha sonra yeniden başlayamazsınız. Bu, uzun süre içinde olmanız gerektiği anlamına gelir."
-    }
-  ],
-  "lHiz+K": [
-    {
-      "type": 0,
-      "value": "Nimbus kullanılan kaynaklar açısından mümkün olduğunca hafif olmaya çalışan Eth1 ve Eth2 için bir istemci uygulamasıdır. Bu özelliği gömülü sistemlerde, Raspberry Pis dahil olmak üzere kaynak kısıtlı cihazlarda ve çok amaçlı sunucularda iyi performans göstermesini sağlar."
     }
   ],
   "iWg7mL": [
@@ -3977,6 +4117,34 @@
       "value": "Stake etmeyi mi düşünüyorsunuz?"
     }
   ],
+  "ie5fDg": [
+    {
+      "type": 0,
+      "value": "Stake Başlama Noktası "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "im7uMt": [
+    {
+      "type": 0,
+      "value": "Mutabakat Katmanı Doğrulayıcı İstemcisi (VC)"
+    }
+  ],
+  "ioj2Sj": [
+    {
+      "type": 0,
+      "value": "Anahtar depolarımı doğrulayıcı istemcime aktardım."
+    }
+  ],
+  "iqJ3LM": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş Java tabanlı bir Ethereum mutabakat istemcisidir."
+    }
+  ],
   "irRdC0": [
     {
       "type": 0,
@@ -4003,10 +4171,10 @@
       "value": " tutarın tamamını gönder"
     }
   ],
-  "tbYkT4": [
+  "j8GPOH": [
     {
       "type": 0,
-      "value": "Eth2 spesifikasyonu"
+      "value": "Daha önce Artemis olarak bilinen Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş bir mutabakat istemcisidir. PegaSys, kurumsal kullanıma hazır istemciler ve çekirdek Ethereum platformuyla etkileşim için araçlar oluşturmaya yönelik olan ConsenSys'un bir koludur."
     }
   ],
   "jDv/zO": [
@@ -4027,12 +4195,6 @@
       "value": "Lighthouse kurulum belgesi"
     }
   ],
-  "ioj2Sj": [
-    {
-      "type": 0,
-      "value": "Anahtar depolarımı Eth2 doğrulayıcı istemcime aktardım."
-    }
-  ],
   "jecC36": [
     {
       "type": 0,
@@ -4043,6 +4205,12 @@
     {
       "type": 0,
       "value": "Cüzdanı bağlayın"
+    }
+  ],
+  "jg9gEs": [
+    {
+      "type": 0,
+      "value": "Yürütme istemcinizin düzgün çalışmasını sağlamak için aşağıdakileri yaptığınızdan emin olun."
     }
   ],
   "jjLubH": [
@@ -4069,16 +4237,16 @@
       "value": "Ortam değişkenleri"
     }
   ],
-  "EcCME0": [
-    {
-      "type": 0,
-      "value": "Eth2 Launchpad"
-    }
-  ],
   "jytPQU": [
     {
       "type": 0,
       "value": "Nimbus belgesi"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "HashCloak'un Wagyu Key Gen denetimini görüntüleyin"
     }
   ],
   "kFS5Sd": [
@@ -4193,10 +4361,10 @@
       "value": "Eksik yatırma"
     }
   ],
-  "MZzOnU": [
+  "lHiz+K": [
     {
       "type": 0,
-      "value": "Eth2, Ethereum'u nasıl yükseltir?"
+      "value": "Nimbus kullanılan kaynaklar açısından mümkün olduğunca hafif olmaya çalışan yürütme ve mutabakat katmanı için bir istemci uygulamasıdır. Bu özelliği gömülü sistemlerde, Raspberry Pis dahil olmak üzere kaynak kısıtlı cihazlarda ve çok amaçlı sunucularda iyi performans göstermesini sağlar."
     }
   ],
   "lLOZMD": [
@@ -4279,10 +4447,38 @@
       "value": " dizininizde bulunur."
     }
   ],
+  "lfHCV+": [
+    {
+      "type": 0,
+      "value": "Nimbus, gömülü sistemlerde ve kişisel mobil cihazlarda iyi performans göstermesi için tasarlanmış bir araştırma projesi ve Ethereum için bir mutabakat istemci uygulamasıdır."
+    }
+  ],
   "lfV1bj": [
     {
       "type": 0,
       "value": "Launchpad belgelerinden içe aktarma"
+    }
+  ],
+  "ljWKM1": [
+    {
+      "type": 0,
+      "value": "BLS'ye para çekme: deposit-cli, varsayılan olarak anımsatıcılar aracılığıyla "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " formatında alınan "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " ile para çekme bilgilerini oluşturur."
     }
   ],
   "ll/zMW": [
@@ -4333,24 +4529,16 @@
       "value": "Riskler ve onaylar:"
     }
   ],
-  "n6Uub0": [
-    {
-      "type": 0,
-      "value": "Eth1 düğümümü "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " üzerinde kurdum ve senkronize ettim (birkaç gün sürebileceğinden bunun için beklemeyin)."
-    }
-  ],
   "n7yYXG": [
     {
       "type": 0,
       "value": "Hizmet"
+    }
+  ],
+  "nBhisA": [
+    {
+      "type": 0,
+      "value": "Bir doğrulayıcı olmak için bir yürütüm istemcisinin (eskiden \"Eth1\") yanı sıra bir mutabakat istemcisi (eskiden \"Eth2\") çalıştırmanız gerekecek. Kendinizi ve ekipmanınızı hazırlamak için kontrol listesine göz atın."
     }
   ],
   "nHk8Et": [
@@ -4377,6 +4565,12 @@
     {
       "type": 0,
       "value": "Tüm işlemler onaylanmadan devam edin"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Erigon belgesi"
     }
   ],
   "nZTFTz": [
@@ -4409,6 +4603,12 @@
     {
       "type": 0,
       "value": "Doğrulayıcı istemcimi çalıştırmaya başladım."
+    }
+  ],
+  "nln+aO": [
+    {
+      "type": 0,
+      "value": "Bir mutabakat istemcisinden diğerine güvenli bir şekilde nasıl geçileceğini simüle ettim."
     }
   ],
   "ntG2by": [
@@ -4449,6 +4649,12 @@
     {
       "type": 0,
       "value": "Artık anahtarlar içe aktarıldığına göre, tek yapmanız gereken (işaret düğümünüzün zaten çalıştığını varsayarak) doğrulayıcı istemcisini çalıştırmaktır."
+    }
+  ],
+  "oNohob": [
+    {
+      "type": 0,
+      "value": "Mutabakat istemcinizi yapılandırın"
     }
   ],
   "oPdwwC": [
@@ -4497,12 +4703,6 @@
     {
       "type": 0,
       "value": "Sorumluluklar"
-    }
-  ],
-  "okxBZ6": [
-    {
-      "type": 0,
-      "value": "Eskiden Parity olan OpenEthereum, \"en hızlı, en hafif ve en güvenli Ethereum istemcisi\" olacak şekilde tasarlanmıştır."
     }
   ],
   "omJNJw": [
@@ -4581,16 +4781,16 @@
       "value": "!"
     }
   ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "Masaüstü ortamınızdan çift sol tıklayarak uygulamayı çalıştırın."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
       "value": "Besu belgeleri, istemcinin nasıl indirilip kurulacağını açıklar."
-    }
-  ],
-  "y44jV2": [
-    {
-      "type": 0,
-      "value": "Eth2, Ethereum'u daha ölçeklenebilir, güvenli ve sürdürülebilir hale getirecek bir dizi yükseltmedir. Bu yükseltmeler, bugünün zincirinde sorunsuz bir şekilde devam ederken Ethereum'u iyileştirecek. İşte farklı yükseltmeler hakkında daha fazlası:"
     }
   ],
   "pfJX2D": [
@@ -4639,10 +4839,10 @@
       "value": "Para çekme anahtarınız çalınırsa, hırsız, doğrulayıcınızın bakiyesini ancak doğrulayıcı çıktıktan sonra aktarabilir."
     }
   ],
-  "zJicsO": [
+  "qB6aU6": [
     {
       "type": 0,
-      "value": "Eth2 ekonomileri"
+      "value": "\"Eth2\"ye ne oldu?"
     }
   ],
   "qDcbPp": [
@@ -4669,12 +4869,6 @@
     {
       "type": 0,
       "value": "Terminal"
-    }
-  ],
-  "qLf68w": [
-    {
-      "type": 0,
-      "value": "OpenEthereum belgesi"
     }
   ],
   "qMePPG": [
@@ -4713,18 +4907,6 @@
       "value": "Anahtar dosyaları kaydedin ve doğrulayıcı dosyayı hazır hale getirin"
     }
   ],
-  "sMHQRT": [
-    {
-      "type": 0,
-      "value": "Hız ve güvenliğe yoğun bir şekilde odaklanan bir Eth2 istemcisi. Ethereum Vakfı, Consensys ve özel şahıslarla birlikte Lighthouse'u finanse eden bir bilgi güvenliği ve yazılım mühendisliği firması olan Sigma Prime tarafından kurulmuştur."
-    }
-  ],
-  "jg9gEs": [
-    {
-      "type": 0,
-      "value": "Eth1 istemcinizin düzgün çalışmasını sağlamak için aşağıdakileri yaptığınızdan emin olun."
-    }
-  ],
   "qwh6gM": [
     {
       "type": 0,
@@ -4753,6 +4935,20 @@
     {
       "type": 0,
       "value": "Doğrulayıcı olarak, ağın güvenliğini sağlamaktan ve ağın fikir birliğine ulaşmasına yardımcı olan eylemler için sürekli ödeme almaktan sorumlu olacaksınız."
+    }
+  ],
+  "rMjMmc": [
+    {
+      "type": 0,
+      "value": "Mutabakat düğümünüzü JSON RPC uç noktasına bağlamak için "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
     }
   ],
   "rNEdex": [
@@ -4789,6 +4985,12 @@
     {
       "type": 0,
       "value": "Sabit bir toplam doğrulayıcı sayısı verildiğinde, ödüller / cezalar ağırlıklı olarak doğrulayıcının dengesiyle ölçeklenir - daha yüksek bir bakiye ile onaylamak daha büyük ödüller / cezalarla sonuçlanırken, daha düşük bir bakiye ile onaylamak daha düşük ödüller / cezalar ile sonuçlanır."
+    }
+  ],
+  "rnDgcN": [
+    {
+      "type": 0,
+      "value": "Hayır, yüklemelerdeki para çekme bilgilerinizi değiştiremezsiniz."
     }
   ],
   "rs4eqr": [
@@ -4855,10 +5057,42 @@
       "value": "Teku, birkaç farklı yolla iletilen bir YAML dosyası aracılığıyla da yapılandırılabilir."
     }
   ],
+  "sMHQRT": [
+    {
+      "type": 0,
+      "value": "Hız ve güvenliğe yoğun bir şekilde odaklanan bir mutabakat istemcisi. Ethereum Vakfı, Consensys ve özel şahıslarla birlikte Lighthouse'u finanse eden bir bilgi güvenliği ve yazılım mühendisliği firması olan Sigma Prime tarafından kurulmuştur."
+    }
+  ],
   "sXV95+": [
     {
       "type": 0,
       "value": "CPU ve RAM"
+    }
+  ],
+  "sdQRah": [
+    {
+      "type": 0,
+      "value": "İşaret düğümümü "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " üzerinde senkronize ettim."
+    }
+  ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "Key Gen GUI uygulamasını indirin"
+    }
+  ],
+  "smD5l/": [
+    {
+      "type": 0,
+      "value": "Mutabakat Katmanı İşaret Düğümü (BN)"
     }
   ],
   "soCLV+": [
@@ -4871,20 +5105,6 @@
     {
       "type": 0,
       "value": "Bağlanmak için bekleniyor..."
-    }
-  ],
-  "sdQRah": [
-    {
-      "type": 0,
-      "value": "Eth2 işaret düğümümü "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": " üzerinde senkronize ettim."
     }
   ],
   "sy35J+": [
@@ -4903,6 +5123,18 @@
     {
       "type": 0,
       "value": "Deposit_data.json dosyanız daha fazla doğrulayıcı oluşturmak istediğinizi gösteriyor. Bu tutarlar hala yatırılmamış. Bu tutarları yatırdığınızı düşünüyorsanız, mükerrer para yatırma işlemlerinden kaçınmak için tekrar denemeden önce bir saat bekleyin."
+    }
+  ],
+  "tMHEEe": [
+    {
+      "type": 0,
+      "value": "Büyük yeniden isimlendirme hakkında daha fazla bilgi edinin"
+    }
+  ],
+  "tbYkT4": [
+    {
+      "type": 0,
+      "value": "Ethereum mutabakat katmanı şartnamesi"
     }
   ],
   "teyxVk": [
@@ -4931,6 +5163,16 @@
       "value": "Yükledikten sonraki bakiye"
     }
   ],
+  "toCscK": [
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " istemcinizi seçin ve bir düğüm oluşturun"
+    }
+  ],
   "tsfX5f": [
     {
       "type": 0,
@@ -4957,6 +5199,12 @@
     {
       "type": 0,
       "value": " başlıklı makaleyi okumanızı öneririz"
+    }
+  ],
+  "txdGU9": [
+    {
+      "type": 0,
+      "value": "Ethereum yükseltmeleri"
     }
   ],
   "tzMNF3": [
@@ -5011,6 +5259,12 @@
     {
       "type": 1,
       "value": "reconnect"
+    }
+  ],
+  "uPECbE": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı kontrol listesi"
     }
   ],
   "ubKWX8": [
@@ -5087,6 +5341,12 @@
       "value": "Sorumluluklarınızı yerine getirirken (veya yerine getirmede başarısız olurken) bakiyeniz Ethereum ağ kuralları tarafından periyodik olarak güncellenir."
     }
   ],
+  "vCHTnu": [
+    {
+      "type": 0,
+      "value": "Para çekme kimlik bilgileri"
+    }
+  ],
   "vEJDo8": [
     {
       "type": 0,
@@ -5103,6 +5363,12 @@
     {
       "type": 0,
       "value": "Temkinli ilerleyin. Zincir üzerindeki veri kaynağımız arızalandı ve çifte yatırılan tutarları gösteremiyoruz."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "1. Adım: İşletim sisteminiz için Wagyu Key Gen uygulamasını indirin"
     }
   ],
   "vY2wig": [
@@ -5149,6 +5415,12 @@
       "value": "İmza anahtarınızla, doğrulayıcıdan hızlı bir şekilde çıkmayı deneyebilir ve ardından parayı - para çekme anahtarı ile - hırsızdan önce transfer edebilirsiniz."
     }
   ],
+  "vkozFq": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcınızı yeniden etkinleştirmenizin bir yolu yoktur ve şu anda birleştirmeyi takip etmesi planlanan birleştirme sonrası temizleme yükseltmesinden sonrasına kadar paranızı aktaramaz veya çekemezsiniz (bu, o zamana kadar paralarınıza erişilemeyecek anlamına gelir)."
+    }
+  ],
   "vyvUB5": [
     {
       "type": 0,
@@ -5161,12 +5433,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "JbVlOE": [
-    {
-      "type": 0,
-      "value": "Eth2'nin Ethereum'u nasıl yükselttiğini daha derinlemesine araştırın."
     }
   ],
   "w6qYSU": [
@@ -5197,6 +5463,12 @@
       "value": "olta"
     }
   ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Erigon belgeleri, istemcinin nasıl indirilip kurulacağını açıklar."
+    }
+  ],
   "wdb1NC": [
     {
       "type": 0,
@@ -5225,6 +5497,28 @@
       "value": "Erken kullanım riskleri"
     }
   ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "Yürütüm katmanından (eskiden \"Eth1\" zinciri) gelen doğrulayıcı para yatırma işlemlerini işlemek için bir "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " ve bir "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (eskiden \"Eth2\") çalıştırmanız gerekiyor. Infura gibi üçüncü taraf hizmetler kullanabilirsiniz ancak ağı olabildiğince merkeziyetsiz tutmak için kendi istemcinizi çalıştırmayı öneririz."
+    }
+  ],
   "wtTeex": [
     {
       "type": 0,
@@ -5241,6 +5535,12 @@
     {
       "type": 0,
       "value": "Ethereum'da doğrulama madencilikle aynı şey değildir. Sonuçları benzerdir: Yaptığınız iş zinciri genişletecek ve güvence altına alacaktır. Ancak süreç tamamen farklıdır çünkü farklı konsensüs mekanizmaları kullanırlar."
+    }
+  ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Şu anda doğrulayıcıların çoğu mutabakat istemcisi olarak Prysm'i çalıştırıyor. Ethereum'un ağ sağlığı için istemci çeşitliliği oldukça önemlidir: %33'ten büyük bir paya sahip bir istemcideki hata, Ethereum'u çevrimdışı hâle getirebilir. Bir istemci süper çoğunluğa sahipse (>%66) bir hata zincirin yanlış parçalanmasına neden olarak potansiyel olarak bir iptal edilmeye (slashing) yol açabilir."
     }
   ],
   "xDyl3T": [
@@ -5263,18 +5563,6 @@
       "value": "Ben erken benimsemiş biriyim ve yazılım ve tasarım hatalarının iptalime neden olabileceğini kabul ediyorum."
     }
   ],
-  "xJPCw/": [
-    {
-      "type": 0,
-      "value": "Para çekme anahtarımı kaybedersem ne olur?"
-    }
-  ],
-  "xOSMb1": [
-    {
-      "type": 0,
-      "value": "Nethermind on Goerli belgesi"
-    }
-  ],
   "xP6BKs": [
     {
       "type": 0,
@@ -5293,10 +5581,10 @@
       "value": "Blok ödülleri, ağda stake edilen toplam ETH miktarına göre kayan bir ölçek kullanılarak hesaplanır."
     }
   ],
-  "lfHCV+": [
+  "xXWzDf": [
     {
       "type": 0,
-      "value": "Nimbus, gömülü sistemlerde ve kişisel mobil cihazlarda iyi performans göstermesi için tasarlanmış bir araştırma projesi ve Ethereum 2.0 için bir istemci uygulamasıdır."
+      "value": "İşaret Zinciri"
     }
   ],
   "xbet2w": [
@@ -5311,6 +5599,12 @@
       "value": "Besu Java ile yazılmıştır ve Apache 2.0 Lisansı altında yayınlanmıştır."
     }
   ],
+  "y44jV2": [
+    {
+      "type": 0,
+      "value": "Ethereum'u daha ölçeklenebilir, güvenli ve sürdürülebilir hale getirecek çeşitli yükseltmeler devam ediyor. Bu yükseltmeler, bugünün zincirinde sorunsuz bir şekilde devam ederken Ethereum'u iyileştirecek. İşte farklı yükseltmeler hakkında daha fazlası:"
+    }
+  ],
   "y4dBsA": [
     {
       "type": 0,
@@ -5321,6 +5615,12 @@
     {
       "type": 0,
       "value": "Daha da önemlisi bir doğrulayıcı oyu, stake edilen miktara göre ağırlıklandırılır."
+    }
+  ],
+  "yFtJza": [
+    {
+      "type": 0,
+      "value": "Lütfen bu adresin anahtarları üzerinde kontrol sahibi olduğunuzdan emin olun."
     }
   ],
   "yI/DO8": [
@@ -5371,6 +5671,12 @@
     {
       "type": 0,
       "value": "Nethermind, .NET Core üzerine inşa edilmiştir. Genişletin, özelleştirin - sınırınız gökyüzüdür .."
+    }
+  ],
+  "ynB6C+": [
+    {
+      "type": 0,
+      "value": "HTTP API(ları) yoluyla mutabakat istemcimi yürütme istemcime bağlayabiliyorum."
     }
   ],
   "yoGtkz": [
@@ -5425,6 +5731,12 @@
       "value": "Spektrumun diğer ucunda, bakiyeniz 31 ETH'ye yakınsa, 32'ye geri dönmek için gereken ekstra ETH'yi eklemeye muhtemelen değmez."
     }
   ],
+  "zJicsO": [
+    {
+      "type": 0,
+      "value": "Staking ekonomisi"
+    }
+  ],
   "zbEBi9": [
     {
       "type": 0,
@@ -5443,6 +5755,16 @@
     {
       "type": 0,
       "value": "Düğüm güvenliği"
+    }
+  ],
+  "zmMF+G": [
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " test ağı için Stake Başlama Noktası"
     }
   ]
 }

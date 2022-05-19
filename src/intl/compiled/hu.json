@@ -8,7 +8,7 @@
   "+M/NC/": [
     {
       "type": 0,
-      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum."
+      "value": "Az egyesülés után a továbbiakban nem lesz két különálló Ethereum hálózat; csak az Ethereum."
     }
   ],
   "+UUcBt": [
@@ -44,7 +44,7 @@
   "+ozGrs": [
     {
       "type": 0,
-      "value": "Polish"
+      "value": "Lengyel"
     }
   ],
   "+s8Gac": [
@@ -143,6 +143,12 @@
     {
       "type": 0,
       "value": "Tranzakciók"
+    }
+  ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "Ha lehetséges, ilyenkor érdemes lehet megfontolni egy másik kliens futtatását, hogy megvédd magad és a hálózatot."
     }
   ],
   "/ub26/": [
@@ -278,13 +284,13 @@
   "122+yR": [
     {
       "type": 0,
-      "value": "withdrawal key"
+      "value": "kivételi kulcs"
     }
   ],
   "192AR6": [
     {
       "type": 0,
-      "value": "More on staking"
+      "value": "Bővebben a letétbe helyezésről"
     }
   ],
   "19o6KO": [
@@ -350,7 +356,7 @@
   "1ingnQ": [
     {
       "type": 0,
-      "value": "More on Ethereum staking economics"
+      "value": "Bővebben az Ethereum-letétbe helyezés gazdasági vonatkozásairól"
     }
   ],
   "22EpKq": [
@@ -401,10 +407,22 @@
       "value": "Hibaelhárítás"
     }
   ],
+  "2HVWJL": [
+    {
+      "type": 0,
+      "value": "végrehajtási réteg"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "Kövesd az alkalmazásban a kulcsok létrehozására vonatkozóan megjelenő utasításokat."
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
-      "value": "Consensus Clients: "
+      "value": "Konszenzusos kliensek: "
     },
     {
       "type": 1,
@@ -446,7 +464,7 @@
   "36j2ls": [
     {
       "type": 0,
-      "value": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
+      "value": "A végrehajtási rétegről (korábban „Eth1” lánc) érkező validátorletétek feldolgozásához egy végrehajtásos klienst és egy konszenzusos klienst (korábban „Eth2”) is futtatnod kell. Használhatsz harmadik féltől származó szolgáltatást, például az Infurát, de azt javasoljuk, hogy inkább a saját kliensedet futtasd, hogy a hálózat a lehető leginkább decentralizált legyen."
     }
   ],
   "38VH2G": [
@@ -530,7 +548,7 @@
   "3SOKyg": [
     {
       "type": 0,
-      "value": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
+      "value": "Ezek a terminológiai módosítások csak az elnevezési szabályokat változtatják meg; ez nem változtat az Ethereum céljain vagy ütemtervén."
     }
   ],
   "3URRZK": [
@@ -542,7 +560,7 @@
   "3XK21U": [
     {
       "type": 0,
-      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+      "value": "Segítünk minden általad futtatni kívánt validátorhoz aláírókulcsot létrehozni. Mivel az egyesülésig nincs pénzkivétel, ezért a kivételi kulcsaidat nem most fogod létrehozni. Amikor lehetséges lesz a pénzkivétel, a mnemonikus emlékeztetődből hozzájuthatsz a kivételi kulcsaidhoz."
     }
   ],
   "3tR/V9": [
@@ -628,7 +646,7 @@
   "54J/qs": [
     {
       "type": 0,
-      "value": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
+      "value": "Mi történik, ha BLS-kivételt használok, és elveszítem a kivételi kulcsomat?"
     }
   ],
   "58PXVy": [
@@ -640,7 +658,7 @@
   "5A6amM": [
     {
       "type": 0,
-      "value": "It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. "
+      "value": "Nagy kockázatot jelent, ha a validátorodat több helyen futtatod. Ez slashinghez és a hálózatból való kizáráshoz fog vezetni. "
     },
     {
       "type": 1,
@@ -651,6 +669,12 @@
     {
       "type": 0,
       "value": "Elkötelezettség"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "Hogyan szeretnéd létrehozni a kulcsokat?"
     }
   ],
   "5HJLBU": [
@@ -706,7 +730,7 @@
   "6S95Bo": [
     {
       "type": 0,
-      "value": "Avoid phishing"
+      "value": "Kerüld el az adathalászatot"
     }
   ],
   "6UUL73": [
@@ -879,6 +903,12 @@
       "value": "Egy Ethereum-kliens, amelyet vállalkozásbarátnak terveztek mind a nyilvános, mind a privát engedélyezett hálózathasználati esetekhez."
     }
   ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "Az Alkalmazások menüben jobb gombbal rákattintva, majd a Megnyitás lehetőséget választva futtasd a Wagyu Key Gen alkalmazást. Egy figyelmeztetés jelenik meg, amely szerint a macOS nem tudja ellenőrizni a „Wagyu Key Gen.app” fejlesztőjét, és megkérdezi, hogy biztosan meg szeretnéd-e nyitni az alkalmazást. Kattints a Megnyitás gombra, és megnyílik az alkalmazás."
+    }
+  ],
   "9+Ddtu": [
     {
       "type": 0,
@@ -968,7 +998,7 @@
   "9xeLhs": [
     {
       "type": 0,
-      "value": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set "
+      "value": "Ethereum-címre történő kivétel: Ha az egyesítés utáni tisztítási frissítést követően a főhálózati tárcád címére (korábban „Eth1” cím) szeretnéd kivenni a pénzed, beállíthatod a(z) "
     },
     {
       "type": 1,
@@ -976,7 +1006,7 @@
     },
     {
       "type": 0,
-      "value": " when running deposit-cli. "
+      "value": " értéket a deposit-cli futtatásakor. "
     },
     {
       "type": 1,
@@ -995,6 +1025,12 @@
       "value": "A Prysm iránymutatást ad lépésről lépésre saját kliense futtatásához, miután teljesítetted a befizetést az indítópulton."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "konszenzusos réteg"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
@@ -1003,16 +1039,12 @@
   ],
   "ACstv9": [
     {
-      "type": 0,
-      "value": "I've installed and synced my execution client on "
-    },
-    {
       "type": 1,
       "value": "network"
     },
     {
       "type": 0,
-      "value": " (do not wait on this as it can take several days)."
+      "value": " hálózaton telepítettem és szinkronizáltam a végrehajtásos kliensemet (ne várj erre, mert több napig is eltarthat)."
     }
   ],
   "AEp7+F": [
@@ -1040,7 +1072,7 @@
   "AJD+66": [
     {
       "type": 0,
-      "value": "The Ethereum staking deposit contract requires a minimum of "
+      "value": "Az Ethereum-letétbe helyezésről szóló szerződés elfogadásához legalább "
     },
     {
       "type": 1,
@@ -1056,7 +1088,13 @@
     },
     {
       "type": 0,
-      "value": " to be sent at one time to be accepted."
+      "value": " összeget kell egyszerre elküldeni."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "végrehajtásos kliens"
     }
   ],
   "AYKxmf": [
@@ -1181,6 +1219,12 @@
       "value": "."
     }
   ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Az Erigon Go nyelven íródott, és a GNU LGPLv3 licencével rendelkezik."
+    }
+  ],
   "BPpnlJ": [
     {
       "type": 0,
@@ -1229,12 +1273,6 @@
       "value": "Cseh"
     }
   ],
-  "CBbRux": [
-    {
-      "type": 0,
-      "value": "Az OpenEthereum Rust nyelven íródott, és a GPLv3 licencével rendelkezik."
-    }
-  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1250,7 +1288,7 @@
   "Cacfkx": [
     {
       "type": 0,
-      "value": "More on the Ethereum vision"
+      "value": "Bővebben az Ethereum-vízióról"
     }
   ],
   "CdKEd/": [
@@ -1436,7 +1474,7 @@
   "EcCME0": [
     {
       "type": 0,
-      "value": "Staking Launchpad"
+      "value": "Letétbe helyezési Indítópult"
     }
   ],
   "FEbVwB": [
@@ -1499,12 +1537,6 @@
       "value": "validátorok"
     }
   ],
-  "G/VJJd": [
-    {
-      "type": 0,
-      "value": "OpenEthereum telepítési dokumentáció"
-    }
-  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1535,10 +1567,16 @@
       "value": "Győződj meg arról, hogy nem lettél adathalászat áldozata"
     }
   ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "konszenzusos kliens"
+    }
+  ],
   "GOHkCO": [
     {
       "type": 0,
-      "value": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
+      "value": "Ma biztosítani fogod a Beacon Chaint, az első fő skálázási frissítést. Ez egy különálló lánc, amely proof-of-stake konszenzusmechanizmust használ. Végül az egész Ethereum működésének biztosításában fogsz segíteni, amint a főhálózat (az Ethereum, ahogy ma mondjuk) egybeolvad a Beacon Chainnel."
     }
   ],
   "GOc7cL": [
@@ -1563,6 +1601,12 @@
     {
       "type": 0,
       "value": "Kulcsok létrehozása"
+    }
+  ],
+  "GelBd9": [
+    {
+      "type": 0,
+      "value": "Tedd futtathatóvá az imént letöltött fájlt."
     }
   ],
   "GsBRWL": [
@@ -1604,27 +1648,23 @@
   "HMgrdg": [
     {
       "type": 0,
-      "value": "Configure your execution client"
+      "value": "Konfiguráld a végrehajtásos kliensedet"
     }
   ],
   "HXvZ2L": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
     {
       "type": 1,
       "value": "http"
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": " használatával csatlakoztasd a konszenzusos csomópontodat a JSON RPC-végponthoz. Ez engedélyezi a JSON RPC-szolgáltatásokat az alapértelmezett 8545-ös porton."
     }
   ],
   "Hczrvs": [
     {
       "type": 0,
-      "value": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
+      "value": "A slashingnek két célja van: (1) megfizethetetlenül drágává tenni a hálózat támadását, és (2) megakadályozni, hogy a validátorok lusták legyenek, ellenőrizve, hogy ténylegesen teljesítik-e feladataikat. Ha azért slashelnek, mert bizonyíthatóan romboló módon cselekedtél, az a letéted egy részének megsemmisítésével jár."
     }
   ],
   "HoahTd": [
@@ -1658,7 +1698,13 @@
   "I5lWZA": [
     {
       "type": 0,
-      "value": "Can I change the withdrawal credentials of my validator after the first deposit?"
+      "value": "Módosíthatom a validátorom kivételhez szükséges hitelesítő adatait az első befizetés után?"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "A korábban TurboGeth néven ismert Erigon egy Ethereum-kliens, amelyet a teljesítmény optimalizálására fejlesztettek ki."
     }
   ],
   "IJw06E": [
@@ -1761,12 +1807,6 @@
       "value": "Más szóval, ahhoz, hogy becsületes maradj, a tetteidnek pénzügyi következményekkel kell járnia."
     }
   ],
-  "JDGiXT": [
-    {
-      "type": 0,
-      "value": "Az OpenEthereum dokumentációja elmagyarázza, hogyan kell letölteni és telepíteni a klienst."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1790,7 +1830,7 @@
   "JbVlOE": [
     {
       "type": 0,
-      "value": "Dig deeper into Ethereum upgrades."
+      "value": "Merülj el mélyebben az Ethereum verziófrissítéseiben."
     }
   ],
   "JhUYU3": [
@@ -1866,7 +1906,7 @@
   "KEfTSF": [
     {
       "type": 0,
-      "value": "I've installed the "
+      "value": "Konszenzusos kliensem "
     },
     {
       "type": 1,
@@ -1874,13 +1914,23 @@
     },
     {
       "type": 0,
-      "value": " of my consensus client."
+      "value": " kiadását telepítettem."
     }
   ],
   "KN7zKn": [
     {
       "type": 0,
       "value": "Hiba"
+    }
+  ],
+  "KWWsDo": [
+    {
+      "type": 0,
+      "value": "Kérjük, győződj meg arról, hogy a hivatalos StakeHouse GitHub-fiókból töltesz le; ellenőrizd az URL-címet: "
+    },
+    {
+      "type": 1,
+      "value": "url"
     }
   ],
   "KjcAm2": [
@@ -1942,7 +1992,7 @@
   "LHPZ+C": [
     {
       "type": 0,
-      "value": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
+      "value": "A Lighthouse egy Rust nyelven írt konszenzusos kliensimplementáció, amelynél a sebesség és a biztonság áll a középpontban."
     }
   ],
   "LVy+cS": [
@@ -1977,10 +2027,16 @@
       "value": " használatával szinkronizáld a Goerli tesztnetet."
     }
   ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "Bolgár"
+    }
+  ],
   "LlClXS": [
     {
       "type": 0,
-      "value": "Thank you for supporting the Ethereum network!"
+      "value": "Köszönjük, hogy támogatod az Ethereum hálózatot!"
     }
   ],
   "Ltd/hJ": [
@@ -2070,7 +2126,7 @@
   "MZzOnU": [
     {
       "type": 0,
-      "value": "How is Ethereum scaling?"
+      "value": "Hogyan működik az Ethereum skálázása?"
     }
   ],
   "Mb3npQ": [
@@ -2094,13 +2150,13 @@
   "Mlc7Vr": [
     {
       "type": 0,
-      "value": "The Ethereum upgrades will only be successful if validators understand the risks and responsibilities."
+      "value": "Az Ethereum-verziófrissítések csak akkor lesznek sikeresek, ha a validátorok megértik a kockázatokat és feladataikat."
     }
   ],
   "Mm7FSl": [
     {
       "type": 0,
-      "value": "The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge."
+      "value": "Az „Eth1” és „Eth2” kifejezéseket kivezetik az egyesülés előkészítésével."
     }
   ],
   "MmZjeu": [
@@ -2194,7 +2250,7 @@
   "NatYUJ": [
     {
       "type": 0,
-      "value": "Learn more about the roles and responsibilities of Ethereum validators."
+      "value": "Tudj meg többet az Ethereum-validátorok szerepéről és feladatairól."
     }
   ],
   "Nb5DNK": [
@@ -2206,7 +2262,7 @@
   "Ns8vbQ": [
     {
       "type": 0,
-      "value": "Choose "
+      "value": "Válassz "
     },
     {
       "type": 1,
@@ -2214,7 +2270,7 @@
     },
     {
       "type": 0,
-      "value": " client"
+      "value": "-klienst"
     }
   ],
   "NwzcYT": [
@@ -2298,7 +2354,7 @@
   "P/Oh91": [
     {
       "type": 0,
-      "value": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
+      "value": "Az adathalászat valódi kockázatot jelent az Ethereum-validátorok számára, és sajnos sokan elveszítik a pénzüket ilyen támadások miatt."
     }
   ],
   "P0kiYS": [
@@ -2366,7 +2422,7 @@
   "PmrcLE": [
     {
       "type": 0,
-      "value": "Nethermind on Goerli documentation"
+      "value": "A Nethermind dokumentációja a Goerli teszthálózathoz"
     }
   ],
   "PoBIK+": [
@@ -2510,7 +2566,7 @@
   "RE2MaJ": [
     {
       "type": 0,
-      "value": "Consensus clients"
+      "value": "Konszenzusos kliensek"
     }
   ],
   "ROHpFF": [
@@ -2573,12 +2629,6 @@
       "value": "Ellenőrizd a következő paranccsal, hogy megállapítsd, helyesen adja-e vissza a kliensverziót:"
     }
   ],
-  "S0e/cN": [
-    {
-      "type": 0,
-      "value": "Hogyan szeretnéd futtatni a CLI-t?"
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -2595,6 +2645,12 @@
     {
       "type": 0,
       "value": "Az összeg, amelyet letétbe helyeztél, elérte a letéti szerződést!"
+    }
+  ],
+  "SHNw06": [
+    {
+      "type": 0,
+      "value": "Futtasd az imént letöltött fájlt."
     }
   ],
   "SR0qHv": [
@@ -2636,7 +2692,7 @@
   "SdRBir": [
     {
       "type": 0,
-      "value": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new key pairs and installing the validator software are both done in the terminal."
+      "value": "Ahhoz, hogy validátorrá válj, képesnek kell lenned parancsok futtatására a számítógép terminálján. Az új kulcspárok létrehozása és a validátorszoftver telepítése mind a terminálon történik."
     }
   ],
   "SeW5ak": [
@@ -2674,7 +2730,7 @@
   "THIzw6": [
     {
       "type": 0,
-      "value": "Validators and Ethereum"
+      "value": "Validátorok és az Ethereum"
     }
   ],
   "TLEziZ": [
@@ -2791,6 +2847,28 @@
     {
       "type": 0,
       "value": "Ha nincs teszthálózati mappád, akkor valószínűleg nem megfelelően építetted és futtattad a Nimbust. Futtasd újra a make-parancsokat."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Az Ethereum a tranzakciókat és a végrehajtást kezelő "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (korábban „Eth1”) és a proof-of-stake Beacon Chaint kezelő "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (korábban „Eth2” vagy „Ethereum 2.0”) rétegből fog állni."
     }
   ],
   "VASo1/": [
@@ -2974,7 +3052,7 @@
   "WdDGn6": [
     {
       "type": 0,
-      "value": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
+      "value": "A konszenzusos protokoll egy implementációja, amely a használhatóságra, biztonságra és megbízhatóságra összpontosít. A Prysm a kizárólag a saját kliense fejlesztésével foglalkozó Prysmatic Labs vállalat megoldása."
     }
   ],
   "WkrNSk": [
@@ -3022,7 +3100,7 @@
   "XRxD8r": [
     {
       "type": 0,
-      "value": "Besu on Goerli documentation"
+      "value": "A Besu dokumentációja a Goerli teszthálózathoz"
     }
   ],
   "XVehvN": [
@@ -3057,16 +3135,12 @@
   ],
   "Xbt2gv": [
     {
-      "type": 0,
-      "value": "Use "
-    },
-    {
       "type": 1,
       "value": "http"
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": " használatával csatlakoztasd a konszenzusos csomópontodat a JSON RPC-végponthoz. Ez engedélyezi a JSON RPC-szolgáltatásokat az alapértelmezett 8545-ös porton."
     }
   ],
   "XmddSV": [
@@ -3078,7 +3152,7 @@
   "XqbweH": [
     {
       "type": 0,
-      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: "
+      "value": "A kliensek támogatják a Prometheust és a Grafanát, hogy segítsenek a validátorod fontos, valós idejű mutatóinak megjelenítésében. Az ügyfélspecifikus utasításokat itt találod: "
     },
     {
       "type": 1,
@@ -3181,6 +3255,20 @@
       "value": " szolgáltatásomat."
     }
   ],
+  "YQJy4H": [
+    {
+      "type": 0,
+      "value": "Most írd le a mnemonikus emlékeztetődet egy biztonságos helyre, és mentsd a kulcstárolót az összesen "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validátorod mindegyikéhez. Ügyelj arra, hogy ezeket biztonságban tartsd, lehetőleg offline. A validátorod kulcstárolóinak elérhetőnek kell lenniük a kiválasztott könyvtárban."
+    }
+  ],
   "Yganfl": [
     {
       "type": 0,
@@ -3191,6 +3279,12 @@
     {
       "type": 0,
       "value": "Ha elveszíted a kivételi kulcsodat, nem fogsz tudni a validátorodon lévő pénzeszközökhöz hozzájutni."
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "Szlovén"
     }
   ],
   "YtwQyB": [
@@ -3273,6 +3367,26 @@
       "value": "Miért van várakozás?"
     }
   ],
+  "ZlLjuq": [
+    {
+      "type": 0,
+      "value": "Kérjük, ügyelj arra, hogy amikor a rendszer hálózat választására kér, a következő lehetőséget válaszd: "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", mert különben a befizetés érvénytelen lesz."
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Az Erigon telepítési dokumentációja"
+    }
+  ],
   "Zspg8H": [
     {
       "type": 0,
@@ -3282,7 +3396,7 @@
   "Zxm0fh": [
     {
       "type": 0,
-      "value": "The merge will see the Ethereum Mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
+      "value": "Az egyesítés során a ma használt Ethereum főhálózat egyesül a Beacon Chainnel. Ekkor lesz teljes az Ethereum átállása a proof-of-stake-re."
     }
   ],
   "ZzTcj5": [
@@ -3367,6 +3481,12 @@
       "value": "Ne feledd azonban, hogy miután kiléptél, belátható időn belül nincs visszaút."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "Bővebben a kliensdiverzitásról"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -3383,6 +3503,12 @@
     {
       "type": 0,
       "value": "Besu telepítési dokumentáció"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "Wagyu Key Gen alkalmazás letöltése"
     }
   ],
   "bVtlF7": [
@@ -3424,7 +3550,7 @@
   "cJX99/": [
     {
       "type": 0,
-      "value": "Check your favorite Beacon Chain block explorer:"
+      "value": "Nézd át a kedvenc Beacon Chain-blokkfelfedeződet:"
     }
   ],
   "cPsIkp": [
@@ -3460,7 +3586,7 @@
   "ckaUkz": [
     {
       "type": 0,
-      "value": "A validator is an entity that participates in the consensus of the Ethereum protocol."
+      "value": "A validátor egy olyan entitás, amely részt vesz az Ethereum-protokoll konszenzusában."
     }
   ],
   "clUb0+": [
@@ -3478,13 +3604,19 @@
   "cpxfOR": [
     {
       "type": 0,
-      "value": "What are withdrawal credentials?"
+      "value": "Mik azok a kivételi hitelesítő adatok?"
     }
   ],
   "cyR7Kh": [
     {
       "type": 0,
       "value": "Vissza"
+    }
+  ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "2. lépés: Letéti kulcsok generálása a Wagyu Key Gen alkalmazással"
     }
   ],
   "d5KEM8": [
@@ -3500,7 +3632,7 @@
     },
     {
       "type": 0,
-      "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
+      "value": ": az érvényes kivételek célhelyének ellenőrzésére szolgáló, 32 bájtos mező a befizetésnél. Jelenleg kétféle kivétel létezik: BLS-kivétel és Ethereum-címre történő kivétel."
     }
   ],
   "dH5+MX": [
@@ -3518,7 +3650,7 @@
   "dJMce5": [
     {
       "type": 0,
-      "value": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
+      "value": "A Prysm az Ethereum-protokollnak egy Go konszenzusos kliensimplementációja, amelynél a kihasználhatóság, a biztonság és megbízhatóság szerepel a középpontban."
     }
   ],
   "dM/KIM": [
@@ -3529,16 +3661,12 @@
   ],
   "dNh0YZ": [
     {
-      "type": 0,
-      "value": "As of "
-    },
-    {
       "type": 1,
       "value": "date"
     },
     {
       "type": 0,
-      "value": ", you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
+      "value": " napjával kezdődően ~400 GB-ra lesz szükséged csak a főhálózat végrehajtási láncon lévő adatokhoz (ami ~1 GB-tal növekszik naponta)."
     }
   ],
   "dTOtPO": [
@@ -3606,7 +3734,7 @@
   "eF9RbC": [
     {
       "type": 0,
-      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
+      "value": "A letétbe helyezésről szóló szerződésre úgy tekinthetsz, mint az Ethereum-fiókok és a Beacon Chain validátorok-közötti pénzátutalásra."
     }
   ],
   "eKEL/g": [
@@ -3648,7 +3776,7 @@
   "eq0/34": [
     {
       "type": 0,
-      "value": "The Merge"
+      "value": "Az egyesítés"
     }
   ],
   "erZJkZ": [
@@ -3746,7 +3874,7 @@
   "frIMm4": [
     {
       "type": 0,
-      "value": "Syncing your execution client may take a few days in the worst-case scenario."
+      "value": "A végrehajtásos kliensed szinkronizálása a legrosszabb esetben néhány napot is igénybe vehet."
     }
   ],
   "g/DxI7": [
@@ -3919,6 +4047,12 @@
       "value": "Más szóval, úgy maximalizálod a jutalmadat, ha a legnagyobb hasznot nyújtod a hálózat egészének."
     }
   ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "Magyar"
+    }
+  ],
   "hjrLbR": [
     {
       "type": 0,
@@ -4005,30 +4139,30 @@
   ],
   "ie5fDg": [
     {
-      "type": 0,
-      "value": "Staking Launchpad "
-    },
-    {
       "type": 1,
       "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " letétbe helyezési Indítópult"
     }
   ],
   "im7uMt": [
     {
       "type": 0,
-      "value": "Consensus Layer Validator Client (VC)"
+      "value": "Konszenzusos réteg validátorkliens (VC)"
     }
   ],
   "ioj2Sj": [
     {
       "type": 0,
-      "value": "I've imported my keystore(s) into my validator client."
+      "value": "Importáltam a kulcstároló(i)mat a validátorkliensembe."
     }
   ],
   "iqJ3LM": [
     {
       "type": 0,
-      "value": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
+      "value": "A PegaSys Teku egy Java-alapú Ethereum konszenzusos kliens, amelyet az intézményi igények és biztonsági követelmények kielégítését szem előtt tartva fejlesztettek ki."
     }
   ],
   "irRdC0": [
@@ -4060,7 +4194,7 @@
   "j8GPOH": [
     {
       "type": 0,
-      "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
+      "value": "A korábban Artemis néven ismert Teku egy konszenzusos kliens, amelyet az intézményi igények és biztonsági követelmények kielégítését szem előtt tartva fejlesztettek ki. A PegaSys a ConsenSys egyik ága, amely vállalati használatra kész kliensek és eszközök létrehozására szolgál az Ethereum alapfelületével való interakcióhoz."
     }
   ],
   "jDv/zO": [
@@ -4096,7 +4230,7 @@
   "jg9gEs": [
     {
       "type": 0,
-      "value": "Make sure you do the following to get your execution client working properly."
+      "value": "Feltétlenül tedd meg a következőket, hogy a végrehajtásos kliensed megfelelően működjön."
     }
   ],
   "jjLubH": [
@@ -4127,6 +4261,12 @@
     {
       "type": 0,
       "value": "Nimbus-dokumentáció"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "A Wagyu Key Gen audit megtekintése – HashCloak"
     }
   ],
   "kFS5Sd": [
@@ -4248,7 +4388,7 @@
   "lHiz+K": [
     {
       "type": 0,
-      "value": "Nimbus is a client implementation for both execution and consensus layers that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
+      "value": "A Nimbus a végrehajtási és a konszenzusos rétegnek szánt kliensimplementáció, amelynél a cél a lehető legkevesebb erőforrás felhasználása. Ez lehetővé teszi, hogy jól teljesítsen beágyazott rendszereken, erőforrás-korlátozott eszközökön – így például a Raspberry Pi számítógépeken – és a többcélú szervereken."
     }
   ],
   "lLOZMD": [
@@ -4338,7 +4478,7 @@
   "lfHCV+": [
     {
       "type": 0,
-      "value": "Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices."
+      "value": "A Nimbus egy kutatási projekt és az Ethereumhoz szánt konszenzusos kliensimplementáció, amelynek megalkotásakor a cél az volt, hogy jól teljesítsen beágyazott rendszereken és személyes mobileszközökön."
     }
   ],
   "lfV1bj": [
@@ -4350,7 +4490,7 @@
   "ljWKM1": [
     {
       "type": 0,
-      "value": "BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the "
+      "value": "BLS-kivétel: Alapértelmezés szerint a deposit-cli a kivételhez szükséges hitelesítési adatokat "
     },
     {
       "type": 1,
@@ -4358,7 +4498,7 @@
     },
     {
       "type": 0,
-      "value": " derived via mnemonics in "
+      "value": " segítségével állítja elő, a mnemonikus emlékeztetőből kivonva, "
     },
     {
       "type": 1,
@@ -4366,7 +4506,7 @@
     },
     {
       "type": 0,
-      "value": " format."
+      "value": " formátumban."
     }
   ],
   "ll/zMW": [
@@ -4426,7 +4566,7 @@
   "nBhisA": [
     {
       "type": 0,
-      "value": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."
+      "value": "Egy végrehajtásos klienst (korábban „Eth1”), valamint egy konszenzusos klienst (korábban „Eth2”) is futtatnod kell, hogy validátorrá válhass. Nézd át az ellenőrző listát, hogy felkészítsd magad és az eszközeidet."
     }
   ],
   "nHk8Et": [
@@ -4453,6 +4593,12 @@
     {
       "type": 0,
       "value": "Folytatás az összes tranzakció megerősítése nélkül"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Az Erigon dokumentációja"
     }
   ],
   "nZTFTz": [
@@ -4490,7 +4636,7 @@
   "nln+aO": [
     {
       "type": 0,
-      "value": "I've simulated how to safely migrate from one consensus client to another."
+      "value": "Szimuláltam, hogyan lehet biztonságosan migrálni egyik konszenzusos kliensről a másikra."
     }
   ],
   "ntG2by": [
@@ -4536,7 +4682,7 @@
   "oNohob": [
     {
       "type": 0,
-      "value": "Configure your consensus client"
+      "value": "Konfiguráld a konszenzusos kliensedet"
     }
   ],
   "oPdwwC": [
@@ -4585,12 +4731,6 @@
     {
       "type": 0,
       "value": "Kötelezettségek"
-    }
-  ],
-  "okxBZ6": [
-    {
-      "type": 0,
-      "value": "A korábban Paritynek nevezett OpenEthereumot úgy tervezték, hogy „a leggyorsabb, legkönnyebb és legbiztonságosabb Ethereum-kliens” legyen."
     }
   ],
   "omJNJw": [
@@ -4669,6 +4809,12 @@
       "value": "!"
     }
   ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "Az asztali környezetből dupla kattintással indítsd el az alkalmazást."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
@@ -4685,12 +4831,6 @@
     {
       "type": 0,
       "value": "A Nimbus kulcstárolókat keres a validátorod mappájában."
-    }
-  ],
-  "pofmhk": [
-    {
-      "type": 0,
-      "value": "Ethereum will consist of the execution layer (handles transactions and execution, formerly 'Eth1'), and the consensus layer (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
   "pqC+qt": [
@@ -4730,7 +4870,7 @@
   "qB6aU6": [
     {
       "type": 0,
-      "value": "What happened to 'Eth2?'"
+      "value": "Mi történt az „Eth2”-vel?"
     }
   ],
   "qDcbPp": [
@@ -4757,12 +4897,6 @@
     {
       "type": 0,
       "value": "A terminál"
-    }
-  ],
-  "qLf68w": [
-    {
-      "type": 0,
-      "value": "OpenEthereum-dokumentáció"
     }
   ],
   "qMePPG": [
@@ -4833,16 +4967,12 @@
   ],
   "rMjMmc": [
     {
-      "type": 0,
-      "value": "Use "
-    },
-    {
       "type": 1,
       "value": "http"
     },
     {
       "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+      "value": " használatával csatlakoztasd a konszenzusos csomópontodat a JSON RPC-végponthoz. Ez engedélyezi a JSON RPC-szolgáltatásokat az alapértelmezett 8545-ös porton."
     }
   ],
   "rNEdex": [
@@ -4884,7 +5014,7 @@
   "rnDgcN": [
     {
       "type": 0,
-      "value": "No, you cannot change your withdrawal credentials in top-ups."
+      "value": "Nem, a feltöltések során nem módosíthatod a kivételhez szükséges hitelesítő adataidat."
     }
   ],
   "rs4eqr": [
@@ -4954,7 +5084,7 @@
   "sMHQRT": [
     {
       "type": 0,
-      "value": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
+      "value": "Egy konszenzusos kliens, amely nagy hangsúlyt fektet a sebességre és a biztonságra. A Sigma Prime információbiztonsági és szoftverfejlesztő cég építette, amely az Ethereum Alapítvánnyal, a Consensys vállalattal és magánszemélyekkel együtt alapította a Lighthouse-t."
     }
   ],
   "sXV95+": [
@@ -4966,7 +5096,7 @@
   "sdQRah": [
     {
       "type": 0,
-      "value": "I've synced my beacon node on "
+      "value": "Szinkronizáltam a beaconcsomópontomat ezen a hálózaton: "
     },
     {
       "type": 1,
@@ -4977,10 +5107,16 @@
       "value": "."
     }
   ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "Key Gen GUI alkalmazás letöltése"
+    }
+  ],
   "smD5l/": [
     {
       "type": 0,
-      "value": "Consensus Layer Beacon Node (BN)"
+      "value": "Konszenzusos réteg beaconcsomópont (BN)"
     }
   ],
   "soCLV+": [
@@ -5016,13 +5152,13 @@
   "tMHEEe": [
     {
       "type": 0,
-      "value": "Learn more about the great renaming"
+      "value": "Tudj meg többet a nagy átnevezésről"
     }
   ],
   "tbYkT4": [
     {
       "type": 0,
-      "value": "The Ethereum consensus-layer specification"
+      "value": "Az Ethereum konszenzusos réteg részletes leírása"
     }
   ],
   "teyxVk": [
@@ -5054,7 +5190,7 @@
   "toCscK": [
     {
       "type": 0,
-      "value": "Choose your "
+      "value": "Válaszd ki "
     },
     {
       "type": 1,
@@ -5062,7 +5198,7 @@
     },
     {
       "type": 0,
-      "value": " client and set up a node"
+      "value": "-kliensedet, és állíts be egy csomópontot"
     }
   ],
   "tsfX5f": [
@@ -5092,7 +5228,7 @@
   "txdGU9": [
     {
       "type": 0,
-      "value": "The Ethereum upgrades"
+      "value": "Az Ethereum verziófrissítései"
     }
   ],
   "tzMNF3": [
@@ -5152,7 +5288,7 @@
   "uPECbE": [
     {
       "type": 0,
-      "value": "Validator checklist"
+      "value": "Validátor-ellenőrző lista"
     }
   ],
   "ubKWX8": [
@@ -5232,7 +5368,7 @@
   "vCHTnu": [
     {
       "type": 0,
-      "value": "Withdrawal credentials"
+      "value": "Kivételi hitelesítő adatok"
     }
   ],
   "vEJDo8": [
@@ -5251,6 +5387,12 @@
     {
       "type": 0,
       "value": "Óvatosan haladj tovább. A láncon lévő adatforrásunk leállt, és nem tudunk dupla letéteket megjelölni."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "1. lépés: Töltsd le az operációs rendszeredhez megfelelő Wagyu Key Gen alkalmazást"
     }
   ],
   "vY2wig": [
@@ -5304,7 +5446,7 @@
   "vkozFq": [
     {
       "type": 0,
-      "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
+      "value": "Nincs arra mód, hogy újraaktiváld a validátorodat, és az egyesítés utáni tisztítási frissítésig nem tudod átutalni vagy kivenni a pénzeszközeidet, amire a jelenlegi tervek szerint az egyesítést követően kerül majd sor (ez azt jelenti, hogy pénzeszközeid addig elérhetetlenek lesznek)."
     }
   ],
   "vyvUB5": [
@@ -5349,6 +5491,12 @@
       "value": "horgászbot"
     }
   ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Az Erigon dokumentációja elmagyarázza, hogy hogyan kell letölteni és telepíteni a klienst."
+    }
+  ],
   "wdb1NC": [
     {
       "type": 0,
@@ -5377,6 +5525,28 @@
       "value": "A korai adoptálás kockázata"
     }
   ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "A végrehajtási rétegről (korábban „Eth1” lánc) érkező validátorletétek feldolgozásához egy "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": "- és egy "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "-klienst (korábban „Eth2”) is futtatnod kell. Használhatsz harmadik féltől származó szolgáltatást, például az Infurát, de azt javasoljuk, hogy inkább a saját kliensedet futtasd, hogy a hálózat a lehető leginkább decentralizált legyen."
+    }
+  ],
   "wtTeex": [
     {
       "type": 0,
@@ -5393,6 +5563,12 @@
     {
       "type": 0,
       "value": "Az Ethereumban történő validálás nem ugyanaz, mint a bányászat. Az eredmények hasonlóak: az általad végzett munka növeli és biztosítja a láncot, de a folyamat teljesen más, mert különböző konszenzusmechanizmust használnak."
+    }
+  ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Jelenleg a validátorok többsége a Prysm klienst futtatja konszenzusos kliensként. A kliensdiverzitás rendkívül fontos az Ethereum hálózat állapota szempontjából: egy több mint 33%-ban előforduló hiba a kliensben az Ethereum offline állapotba kapcsolását eredményezheti. Ha a kliens túlnyomó többséggel rendelkezik (>66%), a hiba a lánc nem megfelelő kettéosztását okozhatja, ami lehetséges slashinghez vezethet."
     }
   ],
   "xDyl3T": [
@@ -5436,7 +5612,7 @@
   "xXWzDf": [
     {
       "type": 0,
-      "value": "The Beacon Chain"
+      "value": "A Beacon Chain"
     }
   ],
   "xbet2w": [
@@ -5454,7 +5630,7 @@
   "y44jV2": [
     {
       "type": 0,
-      "value": "Several upgrades are underway that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"
+      "value": "Több olyan frissítés is folyamatban van, amely skálázhatóbbá, biztonságosabbá és fenntarthatóbbá teszi majd az Ethereumot. Ezek a frissítések javítják az Ethereumot, miközben zökkenőmentesen folytatják a mai láncot. Bővebben a különböző frissítésekről:"
     }
   ],
   "y4dBsA": [
@@ -5472,7 +5648,7 @@
   "yFtJza": [
     {
       "type": 0,
-      "value": "Please ensure that you have control over the keys to this address."
+      "value": "Kérjük, győződj meg arról, hogy rendelkezel az ehhez a címhez tartozó kulcsokkal."
     }
   ],
   "yI/DO8": [
@@ -5528,7 +5704,7 @@
   "ynB6C+": [
     {
       "type": 0,
-      "value": "I'm able to connect my consensus client to my execution client via HTTP API(s)."
+      "value": "Tudom csatlakoztatni a konszenzusos kliensemet a végrehajtó kliensemhez a HTTP API-(ko)n keresztül."
     }
   ],
   "yoGtkz": [
@@ -5594,7 +5770,7 @@
   "zJicsO": [
     {
       "type": 0,
-      "value": "Staking economics"
+      "value": "A letétbe helyezés gazdasági vonatkozásai"
     }
   ],
   "zbEBi9": [
@@ -5620,7 +5796,7 @@
   "zmMF+G": [
     {
       "type": 0,
-      "value": "Staking Launchpad for "
+      "value": "Letétbe helyezési Indítópult "
     },
     {
       "type": 1,
@@ -5628,7 +5804,7 @@
     },
     {
       "type": 0,
-      "value": " testnet"
+      "value": "-tesztnethez"
     }
   ]
 }

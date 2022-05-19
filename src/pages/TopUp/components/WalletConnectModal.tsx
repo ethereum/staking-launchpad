@@ -64,7 +64,7 @@ const WalletConnectModal: React.FC = () => {
               values={{
                 network: EL_NETWORK_NAME,
               }}
-              description="{network} is 'Mainnet' or 'Göerli' or other testnet names"
+              description="{network} is 'Mainnet' or 'Goerli' or other testnet names"
             />
           </Text>
         </div>

@@ -1,14 +1,14 @@
 {
-  "GOHkCO": [
-    {
-      "type": 0,
-      "value": "Dziś zabezpieczysz Łańcuch śledzący (Beacon Chain), pierwszą aktualizację Eth2. To osobny łańcuch wykorzystujący mechanizm konsensusu dowodu stawki (proof-of-stake). Ostatecznie pomożesz zabezpieczyć wszystkie Ethereum, gdy tylko sieć główna (Ethereum, któregoużywamy dzisiaj) połączy się z Łańcuchem śledzącym (Beacon Chain)."
-    }
-  ],
   "+L0IkF": [
     {
       "type": 0,
       "value": "Krok 2: Wygeneruj klucze depozytowe za pomocą narzędzia depozytowego Fundacji Ethereum"
+    }
+  ],
+  "+M/NC/": [
+    {
+      "type": 0,
+      "value": "Po połączeniu nie będzie już dwóch oddzielnych sieci Ethereum; będzie tylko jedno Ethereum."
     }
   ],
   "+UUcBt": [
@@ -41,10 +41,10 @@
       "value": "6. Poczekaj, aż staniesz się aktywny"
     }
   ],
-  "+oBh8L": [
+  "+ozGrs": [
     {
       "type": 0,
-      "value": "Pomożemy Ci stworzyć klucz podpisu dla każdego walidatora, którego chcesz uruchomić. Ponieważ nie ma żadnych możliwości wycofania środków do czasu Połączenia, nie będziesz teraz tworzyć kluczy wycofania. Kiedy będzie możliwe wycofanie Twoich środków, będziesz mógł utworzyć klucze wycofania na podstawie swojego mnemonika."
+      "value": "Polski"
     }
   ],
   "+s8Gac": [
@@ -145,16 +145,16 @@
       "value": "Transakcje"
     }
   ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "Jeśli to możliwe, rozważ uruchomienie innego klienta w tym momencie, aby pomóc chronić siebie i sieć."
+    }
+  ],
   "/ub26/": [
     {
       "type": 0,
       "value": "Rozumiem ryzyko"
-    }
-  ],
-  "Zxm0fh": [
-    {
-      "type": 0,
-      "value": "Połączenie, znane również jako dokowanie, spowoduje, że sieć główna (mainnet) Ethereum, której używamy dzisiaj, połączy się z łańcuchem śledzącym (Beacon Chain). To wtedy Ethereum w pełni przejdzie na dowód stawki (proof-of-stake)."
     }
   ],
   "/w/KT4": [
@@ -275,16 +275,22 @@
       "value": "Najczęściej zadawane pytania dotyczące walidatorów"
     }
   ],
-  "Cacfkx": [
-    {
-      "type": 0,
-      "value": "Więcej informacji na temat wizji Eth2"
-    }
-  ],
   "0uqjBl": [
     {
       "type": 0,
       "value": "Zdobywaj ciągłe nagrody za dostarczanie dobra publicznego społeczności."
+    }
+  ],
+  "122+yR": [
+    {
+      "type": 0,
+      "value": "klucz wypłaty"
+    }
+  ],
+  "192AR6": [
+    {
+      "type": 0,
+      "value": "Więcej informacji o stakingu"
     }
   ],
   "19o6KO": [
@@ -347,10 +353,10 @@
       "value": "Sprawdź szczegóły umowy depozytowej"
     }
   ],
-  "36j2ls": [
+  "1ingnQ": [
     {
       "type": 0,
-      "value": "Aby przetworzyć przychodzące depozyty walidatora z łańcucha Eth1, musisz uruchomić klienta Eth1 oraz klienta Eth2. Możesz skorzystać z usługi innej firmy, takiej jak Infura, ale zalecamy uruchomienie własnego klienta, aby utrzymać sieć tak zdecentralizowaną, jak to możliwe."
+      "value": "Więcej informacji o ekonomii stakingu Ethereum"
     }
   ],
   "22EpKq": [
@@ -397,18 +403,26 @@
       "value": "Rozwiązywanie problemów"
     }
   ],
-  "2DuJTX": [
+  "2HVWJL": [
     {
       "type": 0,
-      "value": "Użyj "
+      "value": "warstwa wykonania"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "Postępuj zgodnie z instrukcjami przedstawionymi w aplikacji, aby wygenerować klucze."
+    }
+  ],
+  "2PI6Di": [
+    {
+      "type": 0,
+      "value": "Klienci konsensusu: "
     },
     {
       "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": ", aby połączyć swój węzeł Eth2 z punktem końcowym JSON RPC. Spowoduje to włączenie usług JSON RPC na domyślnym porcie 8545."
+      "value": "clientName"
     }
   ],
   "2a1GTh": [
@@ -443,10 +457,10 @@
       "value": "Warunki świadczenia usług"
     }
   ],
-  "1ingnQ": [
+  "36j2ls": [
     {
       "type": 0,
-      "value": "Więcej informacji na temat ekonomii Eth2"
+      "value": "Aby przetworzyć przychodzące depozyty walidatora z warstwy wykonania (dawniej „Eth1”), musisz uruchomić klienta wykonania oraz klienta konsensusu (dawniej „Eth2”). Możesz korzystać z usługi innej firmy, takiej jak Infura, ale zalecamy prowadzenie własnego klienta, aby utrzymać sieć jak najbardziej zdecentralizowaną."
     }
   ],
   "38VH2G": [
@@ -511,20 +525,6 @@
       "value": "Sprawdź cały adres, nie tylko jego część. Może być tylko kilka bajtów różnych."
     }
   ],
-  "KEfTSF": [
-    {
-      "type": 0,
-      "value": "Zainstalowałem "
-    },
-    {
-      "type": 1,
-      "value": "latestRelease"
-    },
-    {
-      "type": 0,
-      "value": " mojego klienta Eth2."
-    }
-  ],
   "3Q43SM": [
     {
       "type": 0,
@@ -537,10 +537,22 @@
       "value": "Transakcja doładowania"
     }
   ],
+  "3SOKyg": [
+    {
+      "type": 0,
+      "value": "Ta terminologia aktualizuje tylko konwencje nazewnictwa; nie zmienia to celów ani harmonogramu Ethereum."
+    }
+  ],
   "3URRZK": [
     {
       "type": 0,
       "value": "Dokumentacja Geth na Goerli"
+    }
+  ],
+  "3XK21U": [
+    {
+      "type": 0,
+      "value": "Pomożemy Ci stworzyć klucz podpisu dla każdego walidatora, którego chcesz uruchomić. Ponieważ nie ma żadnych możliwości wycofania środków do czasu Połączenia, nie będziesz teraz tworzyć kluczy wycofania. Kiedy będzie możliwe wycofanie Twoich środków, będziesz w stanie utworzyć klucze wycofania na podstawie swojego mnemonika."
     }
   ],
   "3tR/V9": [
@@ -595,12 +607,6 @@
       "value": "Instalacja"
     }
   ],
-  "dJMce5": [
-    {
-      "type": 0,
-      "value": "Prysm to implementacja Go protokołu Ethereum 2.0 z naciskiem na użyteczność, bezpieczeństwo i niezawodność."
-    }
-  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -625,16 +631,38 @@
       "value": "Kopiuj"
     }
   ],
+  "54J/qs": [
+    {
+      "type": 0,
+      "value": "Co się stanie, jeśli skorzystam z wypłaty BLS i utracę swój klucz wypłaty?"
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
       "value": "Dlaczego dwa klucze zamiast jednego?"
     }
   ],
+  "5A6amM": [
+    {
+      "type": 0,
+      "value": "Uruchamianie walidatora w wielu miejscach jest bardzo ryzykowne. Doprowadzi to do zdarzenia, które można slashować i wyrzucenia z sieci. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
   "5CBhpq": [
     {
       "type": 0,
       "value": "Zaangażowanie"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "Jak chcesz wygenerować klucze?"
     }
   ],
   "5HJLBU": [
@@ -687,6 +715,12 @@
       "value": "Proof-of-stake (PoS) i Łańcuch śledzący"
     }
   ],
+  "6S95Bo": [
+    {
+      "type": 0,
+      "value": "Unikaj wyłudzania"
+    }
+  ],
   "6UUL73": [
     {
       "type": 0,
@@ -703,12 +737,6 @@
     {
       "type": 0,
       "value": "Dołączasz do sieci na jej wczesnych etapach. Podobnie jak w przypadku każdego nowego oprogramowania, istnieje możliwość wystąpienia błędów programowych. Choć jest to mało prawdopodobne, potencjalne błędy mogą powodować odcinanie."
-    }
-  ],
-  "WdDGn6": [
-    {
-      "type": 0,
-      "value": "Implementacja protokołu Eth2 z naciskiem na użyteczność, bezpieczeństwo i niezawodność. Prysm jest rozwijany przez Prysmatic Labs, firmę skupiającą się wyłącznie na rozwoju swojego klienta."
     }
   ],
   "7+Domh": [
@@ -791,16 +819,6 @@
       "value": "W każdej epoce sieć mierzy działania każdego walidatora i odpowiednio przyznaje nagrody lub kary."
     }
   ],
-  "zmMF+G": [
-    {
-      "type": 0,
-      "value": "Eth2 Launchpad dla sieci testowej "
-    },
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    }
-  ],
   "80eWKU": [
     {
       "type": 0,
@@ -867,6 +885,12 @@
     {
       "type": 0,
       "value": "Klient Ethereum zaprojektowany tak, aby był przyjazny dla przedsiębiorstw, zarówno dla publicznych, jak i prywatnych autoryzowanych przypadków użycia sieci."
+    }
+  ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "Uruchom aplikację Wagyu Key Gen z pozycji Aplikacje, klikając prawym przyciskiem myszy i wybierając opcję Otwórz. Otrzymasz ostrzeżenie „System macOS nie może zweryfikować dewelopera »Wagyu Key Gen.app«. Czy na pewno chcesz otworzyć aplikację?”. Kliknij Otwórz i aplikacja zostanie otwarta."
     }
   ],
   "9+Ddtu": [
@@ -955,10 +979,22 @@
       "value": "Przegląd"
     }
   ],
-  "Mlc7Vr": [
+  "9xeLhs": [
     {
       "type": 0,
-      "value": "Aktualizacje Eth2 odniosą sukces tylko wtedy, gdy walidatorzy zrozumieją ryzyko i obowiązki."
+      "value": "Wycofanie na adres Ethereum: jeśli chcesz dokonać wycofania środków na swój adres portfela Mainnet (dawny adres „Eth1”) po aktualizacji czyszczenia po połączeniu, możesz ustawić "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " podczas uruchamiania polecenia deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "A2b4uB": [
@@ -973,10 +1009,30 @@
       "value": "Pryzm oferuje wytyczne krok po kroku do uruchomienia swojego klienta po zakończeniu wpłaty przez launchpad."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "warstwa konsensusu"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
       "value": "Jeśli potrzebujesz pomocy, sprawdź dokumentację Pythona."
+    }
+  ],
+  "ACstv9": [
+    {
+      "type": 0,
+      "value": "Klient wykonania w sieci "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " został przeze mnie zainstalowany i zsynchronizowany (nie czekaj, ponieważ może to potrwać kilka dni)."
     }
   ],
   "AEp7+F": [
@@ -999,6 +1055,34 @@
     {
       "type": 0,
       "value": " do kontraktu depozytowego w bieżącym łańcuchu Ethereum."
+    }
+  ],
+  "AJD+66": [
+    {
+      "type": 0,
+      "value": "Kontrakt depozytowy stakingu Ethereum wymaga wysłania minimum "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " w tym samym czasie, aby został zaakceptowany."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "klient wykonania"
     }
   ],
   "AYKxmf": [
@@ -1089,12 +1173,6 @@
       "value": " do Łańcucha śledzącego jest jednokierunkowy i nieodwracalny."
     }
   ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "Możesz pomyśleć o koncie depozytowym jako o transferze środków między rachunkami Ethereum a walidatorami Eth2."
-    }
-  ],
   "BCsPjJ": [
     {
       "type": 0,
@@ -1105,28 +1183,6 @@
     {
       "type": 0,
       "value": "Dokonaj wpłaty na rzecz walidatora"
-    }
-  ],
-  "BFfsSX": [
-    {
-      "type": 0,
-      "value": "Kontrakt depozytowy Eth2 wymaga wysłania minimum "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " w tym samym czasie, aby został zaakceptowany."
     }
   ],
   "BFsUAH": [
@@ -1149,6 +1205,12 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Klient Erigon jest napisany w języku Go i ma licencję w ramach GNU LGPLv3."
     }
   ],
   "BPpnlJ": [
@@ -1181,12 +1243,6 @@
       "value": "Wprowadzenie"
     }
   ],
-  "LHPZ+C": [
-    {
-      "type": 0,
-      "value": "Lighthouse to implementacja Ethereum 2.0, napisana w języku Rust z dużym naciskiem na szybkość i bezpieczeństwo."
-    }
-  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1205,12 +1261,6 @@
       "value": "Czeski"
     }
   ],
-  "CBbRux": [
-    {
-      "type": 0,
-      "value": "OpenEthereum jest napisany w języku Rust i licencjonowany na licencji GPLv3."
-    }
-  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1221,6 +1271,12 @@
     {
       "type": 0,
       "value": "Z pewnością powinieneś dokonać wpłaty, jeśli Twoje saldo jest bliskie 16 ETH. Ma to na celu zapewnienie, że nie zostaniesz usunięty z zestawu walidatorów (co dzieje się automatycznie, jeśli saldo spadnie poniżej 16 ETH)."
+    }
+  ],
+  "Cacfkx": [
+    {
+      "type": 0,
+      "value": "Więcej informacji na temat wizji Ethereum"
     }
   ],
   "CdKEd/": [
@@ -1241,12 +1297,6 @@
     {
       "type": 0,
       "value": "Ustawiłem zaporę."
-    }
-  ],
-  "Hczrvs": [
-    {
-      "type": 0,
-      "value": "Cięcie ma dwa cele: (1) uczynienie zaporowo kosztownym atakiem na Eth2 oraz (2) powstrzymanie walidatorów przed lenistwem poprzez sprawdzenie, czy faktycznie wykonują swoje obowiązki. Jeśli zostaniesz odcięty, ponieważ zachowałeś się w destrukcyjny sposób, część Twojej stawki zostanie zniszczona."
     }
   ],
   "D0Rigq": [
@@ -1409,6 +1459,12 @@
       "value": "To jest sieć testowa ⚠️"
     }
   ],
+  "EcCME0": [
+    {
+      "type": 0,
+      "value": "Staking Launchpad"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1445,12 +1501,6 @@
       "value": "Spróbuj ponownie"
     }
   ],
-  "HMgrdg": [
-    {
-      "type": 0,
-      "value": "Skonfiguruj swojego klienta Eth1"
-    }
-  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -1475,12 +1525,6 @@
       "value": "walidatorzy"
     }
   ],
-  "G/VJJd": [
-    {
-      "type": 0,
-      "value": "Dokumentacja instalacji OpenEthereum"
-    }
-  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1491,16 +1535,6 @@
     {
       "type": 0,
       "value": "Pobierz kod źródłowy oddziału głównego"
-    }
-  ],
-  "2PI6Di": [
-    {
-      "type": 0,
-      "value": "Klienci Eth2: "
-    },
-    {
-      "type": 1,
-      "value": "clientName"
     }
   ],
   "G8tAKU": [
@@ -1515,16 +1549,22 @@
       "value": "Prawdopodobnie czynnikiem mającym największy wpływ na wysokość nagród otrzymywanych za walidację transakcji jest łączna suma stawek w sieci. Innymi słowy, całkowita liczba walidatorów. W zależności od tej liczby, maksymalna roczna stopa zwrotu dla walidatora może wynosić od 2 do 20%."
     }
   ],
-  "j8GPOH": [
-    {
-      "type": 0,
-      "value": "Wcześniej znany jako Artemis, Teku jest klientem Eth2 zbudowanym w celu spełnienia potrzeb instytucjonalnych i wymagań bezpieczeństwa. PegaSys jest częścią ConsenSys, zajmującą się tworzeniem klientów gotowych do pracy w przedsiębiorstwach i narzędzi do interakcji z podstawową platformą Ethereum."
-    }
-  ],
   "GDaRAW": [
     {
       "type": 0,
       "value": "Upewnij się, że nie jesteś oszukiwany"
+    }
+  ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "klient konsensusu"
+    }
+  ],
+  "GOHkCO": [
+    {
+      "type": 0,
+      "value": "Dziś zabezpieczysz Łańcuch śledzący (Beacon Chain), pierwszą aktualizację głównego skalowania. To osobny łańcuch wykorzystujący mechanizm konsensusu dowodu stawki (proof-of-stake). Ostatecznie pomożesz zabezpieczyć wszystkie Ethereum, gdy tylko sieć główna (Ethereum, którego używamy dzisiaj) połączy się z Łańcuchem śledzącym (Beacon Chain)."
     }
   ],
   "GOc7cL": [
@@ -1551,10 +1591,10 @@
       "value": "Wygeneruj klucze"
     }
   ],
-  "GrU/lp": [
+  "GelBd9": [
     {
       "type": 0,
-      "value": "Klienci Eth2"
+      "value": "Zmień plik, który właśnie został pobrany, na plik wykonywalny."
     }
   ],
   "GsBRWL": [
@@ -1593,6 +1633,32 @@
       "value": "Saldo"
     }
   ],
+  "HMgrdg": [
+    {
+      "type": 0,
+      "value": "Skonfiguruj swojego klienta wykonania"
+    }
+  ],
+  "HXvZ2L": [
+    {
+      "type": 0,
+      "value": "Użyj "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ", aby połączyć swój węzeł konsensusu z punktem końcowym JSON RPC. Spowoduje to włączenie usług JSON RPC na domyślnym porcie 8545."
+    }
+  ],
+  "Hczrvs": [
+    {
+      "type": 0,
+      "value": "Slashing (cięcie) ma dwa cele: (1) uczynienie zaporowo kosztownym atakiem na sieć oraz (2) powstrzymanie walidatorów przed lenistwem poprzez sprawdzenie, czy faktycznie wykonują swoje obowiązki. Jeśli zostaniesz odcięty(-a), ponieważ zachowałeś(-aś) się w destrukcyjny sposób, część Twojej stawki zostanie zniszczona."
+    }
+  ],
   "HoahTd": [
     {
       "type": 0,
@@ -1621,10 +1687,16 @@
       "value": "Sieć"
     }
   ],
-  "txdGU9": [
+  "I5lWZA": [
     {
       "type": 0,
-      "value": "Ulepszenia Eth2"
+      "value": "Czy mogę zmienić dane uwierzytelniające mojego walidatora po pierwszym depozycie?"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "Wcześniej znany jako TurboGet, klient Erigon to klient Ethereum opracowany w celu umożliwienia optymalizacji wydajności."
     }
   ],
   "IJw06E": [
@@ -1691,12 +1763,6 @@
       "value": " istnieją dwa ważne scenariusze, o których należy pamiętać:"
     }
   ],
-  "frIMm4": [
-    {
-      "type": 0,
-      "value": "Synchronizacja klienta Eth1 może potrwać w najgorszym przypadku kilka dni."
-    }
-  ],
   "J455S4": [
     {
       "type": 0,
@@ -1737,12 +1803,6 @@
       "value": "Innymi słowy, abyś był uczciwy, Twoje działania muszą mieć konsekwencje finansowe."
     }
   ],
-  "JDGiXT": [
-    {
-      "type": 0,
-      "value": "Dokumentacja OpenEthereum wyjaśnia, jak pobrać i zainstalować klienta."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1763,10 +1823,10 @@
       "value": "4. Unikaj wyłudzania"
     }
   ],
-  "6S95Bo": [
+  "JbVlOE": [
     {
       "type": 0,
-      "value": "Unikaj wyłudzania Eth2"
+      "value": "Dowiedz się więcej o aktualizacjach Ethereum."
     }
   ],
   "JhUYU3": [
@@ -1839,22 +1899,34 @@
       "value": "Lista kontrolna sprzętu"
     }
   ],
+  "KEfTSF": [
+    {
+      "type": 0,
+      "value": "Zainstalowałem(-am) "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " mojego klienta konsensusu."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
       "value": "Błąd"
     }
   ],
-  "ckaUkz": [
+  "KWWsDo": [
     {
       "type": 0,
-      "value": "Walidator to podmiot, który uczestniczy w konsensusie protokołu Ethereum 2.0."
-    }
-  ],
-  "KhEtqB": [
+      "value": "Upewnij się, że pobierasz z oficjalnego konta StakeHouse GitHub, weryfikując adres URL: "
+    },
     {
-      "type": 0,
-      "value": "Dokumentacja Besu na Goerli"
+      "type": 1,
+      "value": "url"
     }
   ],
   "KjcAm2": [
@@ -1913,6 +1985,12 @@
       "value": "odśwież swój portfel"
     }
   ],
+  "LHPZ+C": [
+    {
+      "type": 0,
+      "value": "Lighthouse to implementacja klienta konsensusu napisana w języku Rust z dużym naciskiem na szybkość i bezpieczeństwo."
+    }
+  ],
   "LVy+cS": [
     {
       "type": 0,
@@ -1943,6 +2021,18 @@
     {
       "type": 0,
       "value": ", aby zsynchronizować sieć testową Goerli."
+    }
+  ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "Bułgarski"
+    }
+  ],
+  "LlClXS": [
+    {
+      "type": 0,
+      "value": "Dziękujemy za wsparcie sieci Ethereum!"
     }
   ],
   "Ltd/hJ": [
@@ -1995,12 +2085,6 @@
       "value": "Podłącz nowy portfel"
     }
   ],
-  "ynB6C+": [
-    {
-      "type": 0,
-      "value": "Mogę połączyć mój węzeł nawigacyjny Eth2 z moim klientem Eth1 za pośrednictwem interfejsu API HTTP."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2031,6 +2115,12 @@
       "value": "Ulepszenia"
     }
   ],
+  "MZzOnU": [
+    {
+      "type": 0,
+      "value": "Jak skaluje się Ethereum?"
+    }
+  ],
   "Mb3npQ": [
     {
       "type": 0,
@@ -2049,20 +2139,22 @@
       "value": "Transakcja nieudana"
     }
   ],
+  "Mlc7Vr": [
+    {
+      "type": 0,
+      "value": "Aktualizacje Ethereum odniosą sukces tylko wtedy, gdy walidatorzy zrozumieją ryzyko i obowiązki."
+    }
+  ],
+  "Mm7FSl": [
+    {
+      "type": 0,
+      "value": "Terminy „Eth1” i „Eth2” są wycofywane w ramach przygotowań do połączenia."
+    }
+  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Szczegóły doładowania"
-    }
-  ],
-  "Ns8vbQ": [
-    {
-      "type": 0,
-      "value": "Wybierz klienta "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
     }
   ],
   "N0rwnt": [
@@ -2073,20 +2165,6 @@
     {
       "type": 0,
       "value": " nie jest prawidłowym plikiem JSON deposit_data. Spróbuj ponownie."
-    }
-  ],
-  "rMjMmc": [
-    {
-      "type": 0,
-      "value": "Użyj "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": ", aby połączyć swój węzeł Eth2 z punktem końcowym JSON RPC. Spowoduje to włączenie usług JSON RPC na domyślnym porcie 8545."
     }
   ],
   "NEmnAV": [
@@ -2125,12 +2203,6 @@
       "value": "Pobierz aplikację wiersza polecenia"
     }
   ],
-  "36j2ls": [
-    {
-      "type": 0,
-      "value": "Aby przetworzyć przychodzące depozyty walidatorów z sieci głównej (łańcuch Eth1), musisz uruchomić klienta Eth1 równolegle z klientem Eth2. Chociaż możesz korzystać z usług innych firm, takich jak Infura, zalecamy uruchomienie własnego klienta, aby zapewnić, że sieć pozostanie tak zdecentralizowana, jak to możliwe."
-    }
-  ],
   "NVljH4": [
     {
       "type": 0,
@@ -2163,16 +2235,26 @@
       "value": "Pamiętaj, że głos walidatora jest ważony kwotą posiadaną przez walidatora."
     }
   ],
-  "THIzw6": [
+  "NatYUJ": [
     {
       "type": 0,
-      "value": "Walidatorzy i Eth2"
+      "value": "Dowiedz się więcej o rolach i obowiązkach walidatorów Ethereum."
     }
   ],
   "Nb5DNK": [
     {
       "type": 0,
       "value": "Zostań walidatorem z Teku"
+    }
+  ],
+  "Ns8vbQ": [
+    {
+      "type": 0,
+      "value": "Wybierz klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
     }
   ],
   "NwzcYT": [
@@ -2203,10 +2285,10 @@
       "value": "."
     }
   ],
-  "xXWzDf": [
+  "O3qkOm": [
     {
       "type": 0,
-      "value": "Sieć Eth2"
+      "value": "Sharding"
     }
   ],
   "OIvXIO": [
@@ -2251,6 +2333,12 @@
     {
       "type": 0,
       "value": "Jako walidator, musisz mieć odpowiednie środki, aby można było ukarać Cię za nieuczciwe zachowanie."
+    }
+  ],
+  "P/Oh91": [
+    {
+      "type": 0,
+      "value": "Phishing jest realnym zagrożeniem dla walidatorów Ethereum i niestety wiele osób straci środki finansowe na skutek tych ataków."
     }
   ],
   "P0kiYS": [
@@ -2303,12 +2391,6 @@
       "value": "Zalecamy, aby najpierw przejść przez cały proces w sieci testowej, aby poczuć się komfortowo."
     }
   ],
-  "oNohob": [
-    {
-      "type": 0,
-      "value": "Skonfiguruj swojego klienta Eth2"
-    }
-  ],
   "PfoT0C": [
     {
       "type": 0,
@@ -2319,6 +2401,12 @@
     {
       "type": 0,
       "value": "Formalne sprawozdanie z weryfikacji"
+    }
+  ],
+  "PmrcLE": [
+    {
+      "type": 0,
+      "value": "Dokumentacja Nethermind na Goerli"
     }
   ],
   "PoBIK+": [
@@ -2459,10 +2547,10 @@
       "value": "jedyny sposób"
     }
   ],
-  "P/Oh91": [
+  "RE2MaJ": [
     {
       "type": 0,
-      "value": "Phishing jest realnym zagrożeniem dla walidatorów Eth2 i niestety wiele osób straci środki finansowe na skutek tych ataków."
+      "value": "Klienci konsensusu"
     }
   ],
   "ROHpFF": [
@@ -2483,16 +2571,10 @@
       "value": "gratulacje"
     }
   ],
-  "nln+aO": [
-    {
-      "type": 0,
-      "value": "Zasymulowałem sposoby migracji z jednego klienta Eth2 do innego klienta Eth2."
-    }
-  ],
   "RaBZna": [
     {
       "type": 0,
-      "value": "Jeśli korzystasz z ETH w trybie offline przez kilka dni w normalnych warunkach, stracisz kwotę w przybliżeniu równą kwocie ETH, którą uzyskałbyś w tym okresie. Innymi słowy, gdybyś mógł zarabiać 0,01 ETH, zamiast tego zostałbyś ukarany 0,01 ETH."
+      "value": "Jeśli korzystasz z ETH w trybie offline przez kilka dni w normalnych warunkach, stracisz kwotę w przybliżeniu równą kwocie ETH, którą uzyskałbyś w tym okresie. Innymi słowy, gdybyś mógł zarabiać ≈0,01 ETH, zamiast tego zostałbyś ukarany ≈0,01 ETH."
     }
   ],
   "Rg5ySE": [
@@ -2531,12 +2613,6 @@
       "value": "Przeprowadź weryfikację za pomocą następującego polecenia, aby sprawdzić, czy jest zwracana poprawna wersja klienta:"
     }
   ],
-  "S0e/cN": [
-    {
-      "type": 0,
-      "value": "Jak chcesz uruchomić interfejs CLI?"
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -2555,18 +2631,10 @@
       "value": "Twoja stawka osiągnęła kontrakt depozytowy!"
     }
   ],
-  "toCscK": [
+  "SHNw06": [
     {
       "type": 0,
-      "value": "Wybierz klienta Eth"
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " i skonfiguruj węzeł"
+      "value": "Wykonaj właśnie pobrany plik."
     }
   ],
   "SR0qHv": [
@@ -2605,6 +2673,12 @@
       "value": "Więcej na temat ograniczenia ryzyka"
     }
   ],
+  "SdRBir": [
+    {
+      "type": 0,
+      "value": "Aby zostać walidatorem, musisz mieć możliwość uruchamiania poleceń w terminalu na swoim komputerze. Generowanie nowych par kluczy Ethereum i instalowanie oprogramowania walidatora odbywa się w terminalu."
+    }
+  ],
   "SeW5ak": [
     {
       "type": 0,
@@ -2633,6 +2707,12 @@
       "value": "klucz"
     }
   ],
+  "THIzw6": [
+    {
+      "type": 0,
+      "value": "Walidatorzy i Ethereum"
+    }
+  ],
   "TLEziZ": [
     {
       "type": 0,
@@ -2659,20 +2739,6 @@
       "value": "virtualenv pomoże ci stworzyć izolowane środowisko Pythona dla narzędzia deposit-cli."
     }
   ],
-  "ie5fDg": [
-    {
-      "type": 0,
-      "value": "Eth2 "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Launchpad"
-    }
-  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -2695,40 +2761,6 @@
     {
       "type": 0,
       "value": "więcej niż 50%"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "Klienci Eth2 obsługują Prometheus i Grafana, aby pomóc Ci wizualizować ważne dane w czasie rzeczywistym dotyczące Twojego walidatora. Instrukcje dotyczące konkretnego klienta można znaleźć tutaj: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "UHbYCa": [
@@ -2795,6 +2827,28 @@
     {
       "type": 0,
       "value": "Jeśli nie posiadasz folderu sieci testowej, prawdopodobnie nie zbudowałeś i nie uruchomiłeś prawidłowo Nimbus. Uruchom ponownie polecenia tworzenia aplikacji."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Ethereum będzie składać się z "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (obsługuje transakcje i wykonanie, dawniej „Eth1”) i "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (obsługuje łańcuch proof-of-stake Beacon Chain, dawniej „Eth2” lub „Ethereum 2.0”)."
     }
   ],
   "VASo1/": [
@@ -2907,12 +2961,6 @@
       "value": "mundur do sztuk walki"
     }
   ],
-  "SdRBir": [
-    {
-      "type": 0,
-      "value": "Aby zostać walidatorem, musisz mieć możliwość uruchamiania poleceń w terminalu na swoim komputerze. Generowanie nowych par kluczy Eth2 i instalowanie oprogramowania walidatora odbywa się w terminalu."
-    }
-  ],
   "VctWDX": [
     {
       "type": 0,
@@ -2943,12 +2991,6 @@
       "value": "Najczęściej zadawane pytania (FAQ)"
     }
   ],
-  "im7uMt": [
-    {
-      "type": 0,
-      "value": "Klient Walidatora Eth2 (VC)"
-    }
-  ],
   "WFVzvu": [
     {
       "type": 1,
@@ -2977,30 +3019,16 @@
       "value": "totalTxCount"
     }
   ],
-  "Xbt2gv": [
-    {
-      "type": 0,
-      "value": "Użyj "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": ", aby połączyć swój węzeł Eth2 z punktem końcowym JSON RPC. Spowoduje to włączenie usług JSON RPC na domyślnym porcie 8545."
-    }
-  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "Te kroki są opcjonalne, ale zaleca się zoptymalizowanie Twojego węzła."
     }
   ],
-  "smD5l/": [
+  "WdDGn6": [
     {
       "type": 0,
-      "value": "Węzeł śledzący Eth2 (BN)"
+      "value": "Implementacja protokołu konsensusu z naciskiem na użyteczność, bezpieczeństwo i niezawodność. Prysm jest rozwijany przez Prysmatic Labs, firmę skupiającą się wyłącznie na rozwoju swojego klienta."
     }
   ],
   "WkrNSk": [
@@ -3033,16 +3061,6 @@
       "value": "Czy eksplorator bloków nazwał umowę?"
     }
   ],
-  "5A6amM": [
-    {
-      "type": 0,
-      "value": "Uruchamianie walidatora Eth2 w wielu miejscach jest bardzo ryzykowne. Doprowadzi to do zdarzenia, które można slashować i wyrzucenia z sieci. "
-    },
-    {
-      "type": 1,
-      "value": "learnMore"
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -3053,6 +3071,12 @@
     {
       "type": 0,
       "value": "Więcej o instalacji pip"
+    }
+  ],
+  "XRxD8r": [
+    {
+      "type": 0,
+      "value": "Dokumentacja Besu na Goerli"
     }
   ],
   "XVehvN": [
@@ -3081,10 +3105,58 @@
       "value": "."
     }
   ],
+  "Xbt2gv": [
+    {
+      "type": 0,
+      "value": "Użyj "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ", aby połączyć swój węzeł konsensusu z punktem końcowym JSON RPC. Spowoduje to włączenie usług JSON RPC na domyślnym porcie 8545."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
       "value": "Budowa ze źródeł"
+    }
+  ],
+  "XqbweH": [
+    {
+      "type": 0,
+      "value": "Klienty obsługują Prometheus i Grafana, aby pomóc Ci wizualizować ważne dane w czasie rzeczywistym dotyczące Twojego walidatora. Instrukcje dotyczące konkretnego klienta można znaleźć tutaj: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
     }
   ],
   "Y47aYU": [
@@ -3159,18 +3231,18 @@
       "value": "."
     }
   ],
-  "dNh0YZ": [
+  "YQJy4H": [
     {
       "type": 0,
-      "value": "Od "
+      "value": "Twój mnemonik powinien być teraz zapisany w bezpiecznym miejscu, a magazyn kluczy zapisany dla każdego z walidatorów "
     },
     {
       "type": 1,
-      "value": "date"
+      "value": "validatorCount"
     },
     {
       "type": 0,
-      "value": " będziesz potrzebować ~400 Gb na same dane sieci głównej Eth1 (rosnące o ~1 Gb/dzień)."
+      "value": ". Upewnij się, że przechowujesz je bezpiecznie, najlepiej w trybie offline. Twoje magazyny kluczy walidatorów powinny być dostępne w wybranym katalogu."
     }
   ],
   "Yganfl": [
@@ -3183,6 +3255,12 @@
     {
       "type": 0,
       "value": "Jeśli zgubisz klucz do wycofania środków, nie ma możliwości uzyskania dostępu do środków przechowywanych przez Twojego walidatora."
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "Słoweński"
     }
   ],
   "YtwQyB": [
@@ -3263,28 +3341,42 @@
       "value": "To zależy. Zachowanie złośliwe – na przykład poświadczanie nieprawidłowych lub sprzecznych bloków, doprowadzi do obcięcia Twojej stawki."
     }
   ],
-  "uPECbE": [
-    {
-      "type": 0,
-      "value": "Lista kontrolna walidatora Eth2"
-    }
-  ],
   "ZTo0Fl": [
     {
       "type": 0,
       "value": "Dlaczego trzeba czekać?"
     }
   ],
-  "iqJ3LM": [
+  "ZlLjuq": [
     {
       "type": 0,
-      "value": "PegaSys Teku to oparty na Javie klient Ethereum 2.0, stworzony z myślą o potrzebach instytucjonalnych i wymaganiach bezpieczeństwa."
+      "value": "Upewnij się, że wybrano "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", gdy zostanie wyświetlony monit dla sieci, w przeciwnym razie depozyt będzie nieprawidłowy."
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Dokumentacja instalacji Erigon"
     }
   ],
   "Zspg8H": [
     {
       "type": 0,
       "value": "Sekcja 1 - Przed rozpoczęciem"
+    }
+  ],
+  "Zxm0fh": [
+    {
+      "type": 0,
+      "value": "Połączenie sprawi, że sieć główna Ethereum, której używamy dzisiaj, połączy się z łańcuchem śledzącym (Beacon Chain). To wtedy Ethereum w pełni przejdzie na dowód stawki (proof-of-stake)."
     }
   ],
   "ZzTcj5": [
@@ -3311,12 +3403,6 @@
       "value": "2. Wstępne węzły"
     }
   ],
-  "cJX99/": [
-    {
-      "type": 0,
-      "value": "Sprawdź swój ulubiony eksplorator bloków Eth2:"
-    }
-  ],
   "aS6dBe": [
     {
       "type": 0,
@@ -3327,12 +3413,6 @@
     {
       "type": 0,
       "value": "Nimbus jest licencjonowany przez Apache 2 i napisany w Nim, języku o składni podobnej do Pythona, który kompiluje się do C."
-    }
-  ],
-  "vkozFq": [
-    {
-      "type": 0,
-      "value": "Nie ma możliwości ponownej aktywacji walidatora i nie będziesz mógł przelać ani wycofać swoich środków do momentu połączenia (co oznacza, że ​​do tego czasu Twoje środki pozostaną niedostępne)."
     }
   ],
   "aZ7pUj": [
@@ -3381,6 +3461,12 @@
       "value": "Pamiętaj jednak, że w dającej się przewidzieć przyszłości, nie będzie możliwości powrotu po wyjściu."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "Więcej na temat różnorodności klientów"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -3397,6 +3483,12 @@
     {
       "type": 0,
       "value": "Dokumentacja instalacji Besu"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "Pobierz aplikację Wagyu Key Gen"
     }
   ],
   "bVtlF7": [
@@ -3435,6 +3527,12 @@
       "value": "Dokumentacja Geth wyjaśnia, jak pobrać i zainstalować klienta."
     }
   ],
+  "cJX99/": [
+    {
+      "type": 0,
+      "value": "Sprawdź swój ulubiony eksplorator bloków łańcucha Beacon Chain:"
+    }
+  ],
   "cPsIkp": [
     {
       "type": 0,
@@ -3465,6 +3563,12 @@
       "value": "Więcej na temat PegaSys Teku"
     }
   ],
+  "ckaUkz": [
+    {
+      "type": 0,
+      "value": "Walidator to podmiot, który uczestniczy w konsensusie protokołu Ethereum."
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -3477,10 +3581,10 @@
       "value": "Jak wysoka będzie kara za złośliwe działanie?"
     }
   ],
-  "NatYUJ": [
+  "cpxfOR": [
     {
       "type": 0,
-      "value": "Dowiedz się więcej o rolach i obowiązkach walidatorów Eth2."
+      "value": "Czym są poświadczenia wycofania środków?"
     }
   ],
   "cyR7Kh": [
@@ -3489,10 +3593,26 @@
       "value": "Wstecz"
     }
   ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "Krok 2: Wygeneruj klucze depozytowe przy użyciu aplikacji Wagyu Key Gen"
+    }
+  ],
   "d5KEM8": [
     {
       "type": 0,
       "value": "Musisz podpisać transakcję dla każdej wpłaty, którą chcesz dokonać."
+    }
+  ],
+  "d75Ebj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " to 32-bajtowe pole w depozycie do weryfikacji miejsca przeznaczenia prawidłowych wypłat środków. Obecnie istnieją dwa rodzaje wycofania środków: wycofanie z BLS i wycofanie z adresu Ethereum."
     }
   ],
   "dH5+MX": [
@@ -3507,10 +3627,30 @@
       "value": "Depozyt"
     }
   ],
+  "dJMce5": [
+    {
+      "type": 0,
+      "value": "Prysm to implementacja klienta konsensusu Go protokołu Ethereum z naciskiem na użyteczność, bezpieczeństwo i niezawodność."
+    }
+  ],
   "dM/KIM": [
     {
       "type": 0,
       "value": "Czym dokładnie jest walidator?"
+    }
+  ],
+  "dNh0YZ": [
+    {
+      "type": 0,
+      "value": "Od "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " będziesz potrzebować ~400 GB na same dane łańcucha wykonania sieci głównej (ze wzrostem ~1 GB/dzień)."
     }
   ],
   "dTOtPO": [
@@ -3575,10 +3715,10 @@
       "value": "code3"
     }
   ],
-  "192AR6": [
+  "eF9RbC": [
     {
       "type": 0,
-      "value": "Więcej na temat Eth2"
+      "value": "Możesz pomyśleć o koncie depozytowym jako o transferze środków między rachunkami Ethereum a walidatorami łańcucha Beacon Chain."
     }
   ],
   "eKEL/g": [
@@ -3615,6 +3755,12 @@
     {
       "type": 0,
       "value": "Więcej o połączeniu"
+    }
+  ],
+  "eq0/34": [
+    {
+      "type": 0,
+      "value": "Połączenie"
     }
   ],
   "erZJkZ": [
@@ -3709,6 +3855,12 @@
       "value": "wpływ efektywnego bilansu"
     }
   ],
+  "frIMm4": [
+    {
+      "type": 0,
+      "value": "Synchronizacja klienta wykonania może potrwać w najgorszym przypadku kilka dni."
+    }
+  ],
   "g/DxI7": [
     {
       "type": 0,
@@ -3725,12 +3877,6 @@
     {
       "type": 0,
       "value": "Więcej na temat wirtualnego środowiska"
-    }
-  ],
-  "gAdE9y": [
-    {
-      "type": 0,
-      "value": "Dziękujemy za wsparcie sieci Eth2!"
     }
   ],
   "gIauNz": [
@@ -3885,6 +4031,12 @@
       "value": "Innymi słowy, maksymalizujesz swoje nagrody, zapewniając największe korzyści całej sieci."
     }
   ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "Węgierski"
+    }
+  ],
   "hjrLbR": [
     {
       "type": 0,
@@ -3917,12 +4069,6 @@
       "value": "Rozumiem, że ważne jest, aby mój walidator był online i aktualizowany."
     }
   ],
-  "nBhisA": [
-    {
-      "type": 0,
-      "value": "Aby zostać walidatorem, musisz uruchomić węzeł Eth1 i Eth2. Zapoznaj się z listą kontrolną, aby przygotować siebie i swój sprzęt."
-    }
-  ],
   "iCpuph": [
     {
       "type": 0,
@@ -3939,12 +4085,6 @@
     {
       "type": 0,
       "value": "Ponieważ transfery są na razie wyłączone, nie będziesz mógł dobrowolnie zakończyć działania, a następnie ponownie go rozpocząć. Oznacza to, że musisz brać w tym udział przez długi czas."
-    }
-  ],
-  "lHiz+K": [
-    {
-      "type": 0,
-      "value": "Nimbus to implementacja klienta dla Eth1 i Eth2, która stara się być jak najlżejsza pod względem wykorzystywanych zasobów. Dzięki temu może dobrze działać na systemach wbudowanych, urządzeniach o ograniczonych zasobach – w tym Raspberry Pis – i serwerach wielofunkcyjnych."
     }
   ],
   "iWg7mL": [
@@ -3981,6 +4121,34 @@
       "value": "Myślisz o stakingu?"
     }
   ],
+  "ie5fDg": [
+    {
+      "type": 0,
+      "value": "Staking Launchpad "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "im7uMt": [
+    {
+      "type": 0,
+      "value": "Klient walidatora warstwy konsensusu (VC)"
+    }
+  ],
+  "ioj2Sj": [
+    {
+      "type": 0,
+      "value": "Zaimportowałem(-am) moje magazyny kluczy do mojego klienta walidatora."
+    }
+  ],
+  "iqJ3LM": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku to oparty na Javie klient konsensusu Ethereum, stworzony z myślą o potrzebach instytucjonalnych i wymaganiach bezpieczeństwa."
+    }
+  ],
   "irRdC0": [
     {
       "type": 0,
@@ -4003,10 +4171,10 @@
       "value": "totalTxCount"
     }
   ],
-  "tbYkT4": [
+  "j8GPOH": [
     {
       "type": 0,
-      "value": "Specyfikacja Eth2"
+      "value": "Wcześniej znany jako Artemis, Teku jest klientem konsensusu zbudowanym w celu spełnienia potrzeb instytucjonalnych i wymagań bezpieczeństwa. PegaSys jest częścią ConsenSys, zajmującą się tworzeniem klientów gotowych do pracy w przedsiębiorstwach i narzędzi do interakcji z podstawową platformą Ethereum."
     }
   ],
   "jDv/zO": [
@@ -4027,12 +4195,6 @@
       "value": "Dokumentacja instalacji Lighthouse"
     }
   ],
-  "ioj2Sj": [
-    {
-      "type": 0,
-      "value": "Zaimportowałem moje magazyny kluczy do mojego klienta walidatora Eth2."
-    }
-  ],
   "jecC36": [
     {
       "type": 0,
@@ -4043,6 +4205,12 @@
     {
       "type": 0,
       "value": "Połącz portfel"
+    }
+  ],
+  "jg9gEs": [
+    {
+      "type": 0,
+      "value": "Upewnij się, że wykonano następujące czynności, aby klient wykonania działał poprawnie."
     }
   ],
   "jjLubH": [
@@ -4069,16 +4237,16 @@
       "value": "Zmienne środowiskowe"
     }
   ],
-  "EcCME0": [
-    {
-      "type": 0,
-      "value": "Eth2 Launchpad"
-    }
-  ],
   "jytPQU": [
     {
       "type": 0,
       "value": "Dokumentacja Nimbus"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "Zobacz audyt aplikacji Wagyu Key Gen opracowany przez HashCloak"
     }
   ],
   "kFS5Sd": [
@@ -4197,10 +4365,10 @@
       "value": "Niespłacone depozyty"
     }
   ],
-  "MZzOnU": [
+  "lHiz+K": [
     {
       "type": 0,
-      "value": "W jaki sposób Eth2 udoskonala Ethereum?"
+      "value": "Nimbus to implementacja klienta dla warstw wykonania i konsensusu, która stara się być jak najlżejsza pod względem wykorzystywanych zasobów. Dzięki temu może dobrze działać na systemach wbudowanych, urządzeniach o ograniczonych zasobach – w tym urządzeniach Raspberry Pi – i serwerach wielofunkcyjnych."
     }
   ],
   "lLOZMD": [
@@ -4283,10 +4451,38 @@
       "value": "."
     }
   ],
+  "lfHCV+": [
+    {
+      "type": 0,
+      "value": "Nimbus to projekt badawczy i implementacja klienta konsensusu dla sieci Ethereum, zaprojektowane tak, aby działały dobrze na systemach wbudowanych i osobistych urządzeniach mobilnych."
+    }
+  ],
   "lfV1bj": [
     {
       "type": 0,
       "value": "Importowanie z dokumentacji Launchpada"
+    }
+  ],
+  "ljWKM1": [
+    {
+      "type": 0,
+      "value": "Wycofanie BLS: domyślnie polecenie deposit-cli generowałoby poświadczenia wycofania z kluczem "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " pochodzącym z mnemonika w formacie "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "ll/zMW": [
@@ -4337,24 +4533,16 @@
       "value": "Zagrożenia i podziękowania:"
     }
   ],
-  "n6Uub0": [
-    {
-      "type": 0,
-      "value": "Zainstalowałem i zsynchronizowałem mój węzeł Eth1 w sieci "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " (nie czekaj, ponieważ może to potrwać kilka dni)."
-    }
-  ],
   "n7yYXG": [
     {
       "type": 0,
       "value": "Usługa"
+    }
+  ],
+  "nBhisA": [
+    {
+      "type": 0,
+      "value": "Musisz uruchomić klienta wykonania (dawniej „Eth1”), a także klienta konsensusu (dawniej „Eth2”), aby stać się walidatorem. Spójrz na listę kontrolną, aby przygotować się i przygotować sprzęt."
     }
   ],
   "nHk8Et": [
@@ -4381,6 +4569,12 @@
     {
       "type": 0,
       "value": "Kontynuuj bez potwierdzenia wszystkich transakcji"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Dokumentacja Erigon"
     }
   ],
   "nZTFTz": [
@@ -4413,6 +4607,12 @@
     {
       "type": 0,
       "value": "Zacząłem uruchamiać mojego klienta walidatora."
+    }
+  ],
+  "nln+aO": [
+    {
+      "type": 0,
+      "value": "Przeprowadziłem(-am) symulację dotyczącą tego, jak bezpiecznie migrować z jednego klienta konsensusu do innego."
     }
   ],
   "ntG2by": [
@@ -4453,6 +4653,12 @@
     {
       "type": 0,
       "value": "Teraz, gdy klucze zostały zaimportowane, wszystko, co pozostało do zrobienia (zakładając, że Twój węzeł nawigacyjny już działa), to uruchomienie klienta walidatora."
+    }
+  ],
+  "oNohob": [
+    {
+      "type": 0,
+      "value": "Skonfiguruj klienta konsensusu"
     }
   ],
   "oPdwwC": [
@@ -4501,12 +4707,6 @@
     {
       "type": 0,
       "value": "Obowiązki"
-    }
-  ],
-  "okxBZ6": [
-    {
-      "type": 0,
-      "value": "Dawniej Parity, OpenEthereum ma być „najszybszym, najlżejszym i najbezpieczniejszym klientem Ethereum”."
     }
   ],
   "omJNJw": [
@@ -4585,16 +4785,16 @@
       "value": "!"
     }
   ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "Uruchom aplikację ze środowiska komputerowego poprzez podwójne kliknięcie."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
       "value": "Dokumentacja Besu wyjaśnia, jak pobrać i zainstalować klienta."
-    }
-  ],
-  "y44jV2": [
-    {
-      "type": 0,
-      "value": "Eth2 to zestaw ulepszeń, które sprawią, że Ethereum będzie bardziej skalowalne, bezpieczne i zrównoważone. Te ulepszenia poprawią Ethereum, jednocześnie płynnie kontynuując dzisiejszy łańcuch. Oto więcej na temat różnych ulepszeń:"
     }
   ],
   "pfJX2D": [
@@ -4643,10 +4843,10 @@
       "value": "Jeśli Twój klucz wycofania środków zostanie skradziony, złodziej może przenieść saldo Twojego walidatora, ale dopiero po jego wyjściu."
     }
   ],
-  "zJicsO": [
+  "qB6aU6": [
     {
       "type": 0,
-      "value": "Ekonomia Eth2"
+      "value": "Co się stało „Eth2”?"
     }
   ],
   "qDcbPp": [
@@ -4673,12 +4873,6 @@
     {
       "type": 0,
       "value": "Terminal"
-    }
-  ],
-  "qLf68w": [
-    {
-      "type": 0,
-      "value": "Dokumentacja OpenEthereum"
     }
   ],
   "qMePPG": [
@@ -4717,18 +4911,6 @@
       "value": "Zapisz pliki klucza i przygotuj plik walidatora"
     }
   ],
-  "sMHQRT": [
-    {
-      "type": 0,
-      "value": "Klient Eth2 z dużym naciskiem na szybkość i bezpieczeństwo. Zbudowany przez Sigma Prime, firmę zajmującą się bezpieczeństwem informacji i inżynierią oprogramowania, która sfinansowała Lighthouse wraz z Fundacją Ethereum, Consensys i osobami prywatnymi."
-    }
-  ],
-  "jg9gEs": [
-    {
-      "type": 0,
-      "value": "Upewnij się, że wykonałeś następujące czynności, aby klient Eth1 działał poprawnie."
-    }
-  ],
   "qwh6gM": [
     {
       "type": 0,
@@ -4757,6 +4939,20 @@
     {
       "type": 0,
       "value": "Jako walidator będziesz odpowiedzialny za zabezpieczenie sieci i otrzymywanie ciągłych wypłat za działania, które pomogą sieci osiągnąć konsensus."
+    }
+  ],
+  "rMjMmc": [
+    {
+      "type": 0,
+      "value": "Użyj "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ", aby połączyć swój węzeł konsensusu z punktem końcowym JSON RPC. Spowoduje to włączenie usług JSON RPC na domyślnym porcie 8545."
     }
   ],
   "rNEdex": [
@@ -4793,6 +4989,12 @@
     {
       "type": 0,
       "value": "Biorąc pod uwagę stałą całkowitą liczbę walidatorów, nagrody/kary przeważnie zależą od salda walidatora –poświadczenie z wyższym saldem skutkuje większymi nagrodami/karami, podczas gdy poświadczenie z niższym saldem skutkuje niższymi nagrodami/karami."
+    }
+  ],
+  "rnDgcN": [
+    {
+      "type": 0,
+      "value": "Nie, nie możesz zmienić danych do wycofania środków w uzupełnieniu."
     }
   ],
   "rs4eqr": [
@@ -4859,10 +5061,42 @@
       "value": "Teku można również skonfigurować za pomocą pliku YAML, który jest przekazywany na kilka różnych sposobów."
     }
   ],
+  "sMHQRT": [
+    {
+      "type": 0,
+      "value": "Klient konsensusu z dużym naciskiem na szybkość i bezpieczeństwo. Zbudowany przez Sigma Prime, firmę zajmującą się bezpieczeństwem informacji i inżynierią oprogramowania, która sfinansowała Lighthouse wraz z Fundacją Ethereum, Consensys i osobami prywatnymi."
+    }
+  ],
   "sXV95+": [
     {
       "type": 0,
       "value": "Procesory CPU i RAM"
+    }
+  ],
+  "sdQRah": [
+    {
+      "type": 0,
+      "value": "Zsynchronizowałem(-am) mój węzeł śledzący w sieci "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "Pobierz aplikację Key Gen GUI"
+    }
+  ],
+  "smD5l/": [
+    {
+      "type": 0,
+      "value": "Węzeł latarni (BN) warstwy konsensusu"
     }
   ],
   "soCLV+": [
@@ -4875,20 +5109,6 @@
     {
       "type": 0,
       "value": "Oczekiwanie na połączenie..."
-    }
-  ],
-  "sdQRah": [
-    {
-      "type": 0,
-      "value": "Zsynchronizowałem mój węzeł śledzący Eth2 na "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "sy35J+": [
@@ -4907,6 +5127,18 @@
     {
       "type": 0,
       "value": "Twój plik deposit_data.json sugeruje, że chcesz skonfigurować więcej walidatorów. Depozyty te są nadal nierozliczone. Jeśli uważasz, że już dokonałeś tych wpłat, odczekaj godzinę, zanim spróbujesz ponownie, aby uniknąć zduplikowanych wpłat."
+    }
+  ],
+  "tMHEEe": [
+    {
+      "type": 0,
+      "value": "Dowiedz się więcej o wspaniałej zmianie nazwy"
+    }
+  ],
+  "tbYkT4": [
+    {
+      "type": 0,
+      "value": "Specyfikacja warstwy konsensusu Ethereum"
     }
   ],
   "teyxVk": [
@@ -4935,6 +5167,20 @@
       "value": "Saldo po doładowaniu"
     }
   ],
+  "toCscK": [
+    {
+      "type": 0,
+      "value": "Wybierz klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " i skonfiguruj węzeł"
+    }
+  ],
   "tsfX5f": [
     {
       "type": 0,
@@ -4957,6 +5203,12 @@
     {
       "type": 1,
       "value": "article"
+    }
+  ],
+  "txdGU9": [
+    {
+      "type": 0,
+      "value": "Ulepszenia Ethereum"
     }
   ],
   "tzMNF3": [
@@ -5011,6 +5263,12 @@
     {
       "type": 1,
       "value": "reconnect"
+    }
+  ],
+  "uPECbE": [
+    {
+      "type": 0,
+      "value": "Lista kontrolna walidatora"
     }
   ],
   "ubKWX8": [
@@ -5087,6 +5345,12 @@
       "value": "Twoje saldo jest okresowo aktualizowane zgodnie z zasadami sieci Ethereum, gdy wykonujesz swoje obowiązki lub nie wykonujesz ich."
     }
   ],
+  "vCHTnu": [
+    {
+      "type": 0,
+      "value": "Poświadczenia wycofania środków"
+    }
+  ],
   "vEJDo8": [
     {
       "type": 0,
@@ -5103,6 +5367,12 @@
     {
       "type": 0,
       "value": "Postępuj ostrożnie. Nasze źródło danych w łańcuchu nie działa i nie jesteśmy w stanie oznaczyć żadnych podwójnych wpłat."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "Krok 1: Pobierz aplikację Wagyu Key Gen dla swojego systemu operacyjnego"
     }
   ],
   "vY2wig": [
@@ -5153,6 +5423,12 @@
       "value": "Za pomocą klucza podpisującego możesz spróbować szybko opuścić walidatora, a następnie przelać środki – za pomocą klucza wypłaty – przed złodziejem."
     }
   ],
+  "vkozFq": [
+    {
+      "type": 0,
+      "value": "Nie ma możliwości ponownej aktywacji walidatora i nie będziesz w stanie przelać ani wycofać swoich środków do momentu aktualizacji czyszczenia po połączeniu, obecnie planowanej po połączeniu (co oznacza, że ​​do tego czasu Twoje środki pozostaną niedostępne)."
+    }
+  ],
   "vyvUB5": [
     {
       "type": 0,
@@ -5165,12 +5441,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "JbVlOE": [
-    {
-      "type": 0,
-      "value": "Dowiedz się, jak Eth2 ulepsza Ethereum."
     }
   ],
   "w6qYSU": [
@@ -5201,6 +5471,12 @@
       "value": "wędka"
     }
   ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Dokumentacja Erigon zawiera instrukcje dotyczące pobierania i instalowania klienta."
+    }
+  ],
   "wdb1NC": [
     {
       "type": 0,
@@ -5229,6 +5505,28 @@
       "value": "Ryzyko wczesnego przyjęcia"
     }
   ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "Aby przetworzyć przychodzące depozyty walidatora z warstwy wykonania (dawniej „Eth1”), musisz uruchomić klienta "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " oraz klienta "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (dawniej „Eth2”). Możesz korzystać z usługi innej firmy, takiej jak Infura, ale zalecamy prowadzenie własnego klienta, aby utrzymać sieć jak najbardziej zdecentralizowaną."
+    }
+  ],
   "wtTeex": [
     {
       "type": 0,
@@ -5247,6 +5545,12 @@
       "value": "Walidacja w Ethereum to nie to samo co wydobywanie. Wyniki są podobne: praca, którą wykonasz, przedłuży i zabezpieczy łańcuch. Ale proces jest zupełnie inny, ponieważ procesy używają różnych mechanizmów konsensusu."
     }
   ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Obecnie większość walidatorów stosuje Pryzm w postaci klienta konsensusu. Różnorodność klientów jest niezmiernie ważna dla zdrowia sieci Ethereum: błąd w kliencie z udziałem na poziomie ponad 33% może spowodować, że sieć Ethereum przejdzie w tryb offline. Jeśli klient ma superwiększość udziałów (>66%), błąd może spowodować nieprawidłowy podział łańcucha, potencjalnie prowadząc do slashingu (cięcia)."
+    }
+  ],
   "xDyl3T": [
     {
       "type": 0,
@@ -5261,18 +5565,6 @@
     {
       "type": 0,
       "value": "Jestem wczesnym użytkownikiem i akceptuję fakt, że błędy w oprogramowaniu i projektowaniu mogą spowodować, że zostanę odcięty."
-    }
-  ],
-  "xJPCw/": [
-    {
-      "type": 0,
-      "value": "Co się stanie, jeśli zgubię klucz do wycofania środków?"
-    }
-  ],
-  "xOSMb1": [
-    {
-      "type": 0,
-      "value": "Dokumentacja Geth na Goerli"
     }
   ],
   "xP6BKs": [
@@ -5293,10 +5585,10 @@
       "value": "Nagrody za bloki są obliczane przy użyciu ruchomej skali opartej na całkowitej kwoty ETH zadeklarowanych w sieci."
     }
   ],
-  "lfHCV+": [
+  "xXWzDf": [
     {
       "type": 0,
-      "value": "Nimbus to projekt badawczy i implementacja kliencka dla Ethereum 2.0, zaprojektowany tak, aby działał dobrze na systemach wbudowanych i osobistych urządzeniach mobilnych."
+      "value": "Beacon Chain"
     }
   ],
   "xbet2w": [
@@ -5311,6 +5603,12 @@
       "value": "Besu jest napisany w Java i wydawany na licencji Apache 2.0."
     }
   ],
+  "y44jV2": [
+    {
+      "type": 0,
+      "value": "W przygotowaniu jest kilka ulepszeń, które sprawią, że Ethereum będzie bardziej skalowalne, bezpieczne i zrównoważone. Te ulepszenia poprawią Ethereum, jednocześnie płynnie kontynuując obecny łańcuch. Oto więcej informacji na temat różnych ulepszeń:"
+    }
+  ],
   "y4dBsA": [
     {
       "type": 0,
@@ -5321,6 +5619,12 @@
     {
       "type": 0,
       "value": "Co ważne, głos walidatora jest zależny od posiadanej przez niego kwoty."
+    }
+  ],
+  "yFtJza": [
+    {
+      "type": 0,
+      "value": "Upewnij się, że masz kontrolę nad kluczami do tego adresu."
     }
   ],
   "yI/DO8": [
@@ -5371,6 +5675,12 @@
     {
       "type": 0,
       "value": "Nethermind jest zbudowany na platformie .NET Core. Rozszerz go, dostosuj – nie ma ograniczeń."
+    }
+  ],
+  "ynB6C+": [
+    {
+      "type": 0,
+      "value": "Mogę połączyć klienta konsensusu z moim klientem wykonania za pośrednictwem interfejsu API HTTP."
     }
   ],
   "yoGtkz": [
@@ -5433,6 +5743,12 @@
       "value": "Z drugiej strony, jeśli twoje saldo jest bliższe 31 ETH, prawdopodobnie nie warto dodawać dodatkowego ETH wymaganego do powrotu do 32."
     }
   ],
+  "zJicsO": [
+    {
+      "type": 0,
+      "value": "Ekonomia stakingu"
+    }
+  ],
   "zbEBi9": [
     {
       "type": 0,
@@ -5451,6 +5767,16 @@
     {
       "type": 0,
       "value": "Zabezpieczenie węzła"
+    }
+  ],
+  "zmMF+G": [
+    {
+      "type": 0,
+      "value": "Staking Launchpad dla sieci testowej "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
     }
   ]
 }

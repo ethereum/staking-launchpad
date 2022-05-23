@@ -328,11 +328,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="To process incoming validator deposits from the execution layer
-                    (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your
-                    {consensusClient} (formerly 'Eth2'). You can use a third-party service
-                    like Infura, but we recommend running your own client to
-                    keep the network as decentralized as possible."
+                  defaultMessage="You need to run an {executionClient} as well as your
+                  {consensusClient} (formerly 'Eth2')."
                   values={{
                     executionClient: (
                       <Link

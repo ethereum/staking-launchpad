@@ -1303,6 +1303,16 @@
       "value": "I've set up a firewall."
     }
   ],
+  "Cm8zxo": [
+    {
+      "type": 0,
+      "value": "Connect to "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
   "D0Rigq": [
     {
       "type": 0,
@@ -2241,16 +2251,6 @@
     {
       "type": 0,
       "value": "Remember that a validator’s vote is weighted by the amount it has at stake."
-    }
-  ],
-  "NZzzW1": [
-    {
-      "type": 0,
-      "value": "Connect to "
-    },
-    {
-      "type": 1,
-      "value": "network"
     }
   ],
   "NatYUJ": [
@@ -3931,6 +3931,28 @@
       "value": "Generate deposit keys using the Ethereum Foundation deposit tool"
     }
   ],
+  "gRMu7M": [
+    {
+      "type": 0,
+      "value": "You need to run an "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " as well as your "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (formerly 'Eth2')."
+    }
+  ],
   "gVC0Wl": [
     {
       "type": 0,
@@ -5527,28 +5549,6 @@
     {
       "type": 0,
       "value": "Early adopter risks"
-    }
-  ],
-  "wrnpoO": [
-    {
-      "type": 0,
-      "value": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " as well as your "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
     }
   ],
   "wtTeex": [

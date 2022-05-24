@@ -6,6 +6,7 @@ import { Heading } from '../../../components/Heading';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { FormattedMessage } from 'react-intl';
+import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
 
 // eslint-disable-next-line no-unused-vars
 export const ErigonDetails = () => (
@@ -40,7 +41,7 @@ export const ErigonDetails = () => (
         <FormattedMessage defaultMessage="Erigon installation documentation" />
       </Link>
     </section>
-    {!IS_MAINNET && (
+    {!IS_MAINNET && IS_GOERLI && (
       <>
         <section>
           <SectionTitle level={2} className="mb5">

@@ -12,14 +12,13 @@ import {
   IS_MAINNET,
   PORTIS_DAPP_ID,
   INFURA_URL,
+  EL_TESTNET_NAME,
 } from '../../utils/envVars';
 
 export enum NetworkChainId {
   'Mainnet' = 1,
   'Ropsten' = 3,
-  'Rinkeby' = 4,
   'Goerli' = 5,
-  'Kovan' = 42,
 }
 
 /*
@@ -28,20 +27,31 @@ export enum NetworkChainId {
  */
 
 const supportedNetworks = [
-  NetworkChainId.Goerli,
   NetworkChainId.Mainnet,
-  NetworkChainId.Rinkeby,
   NetworkChainId.Ropsten,
-  NetworkChainId.Kovan,
+  NetworkChainId.Goerli,
 ];
 
 enum Testnet {
+  'Ropsten',
   'Goerli',
 }
 
 enum Mainnet {
   'Mainnet',
 }
+
+export const NetworkNameToChainId: { [key: string]: NetworkChainId } = {
+  Mainnet: NetworkChainId.Mainnet,
+  Ropsten: NetworkChainId.Ropsten,
+  Goerli: NetworkChainId.Goerli,
+};
+
+export const TARGET_NETWORK_CHAIN_ID = IS_MAINNET
+  ? NetworkChainId.Mainnet
+  : NetworkNameToChainId[EL_TESTNET_NAME];
+
+export const IS_GOERLI = TARGET_NETWORK_CHAIN_ID === NetworkChainId.Goerli;
 
 export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
@@ -56,7 +66,7 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
-  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli,
+  chainId: TARGET_NETWORK_CHAIN_ID,
   rpcUrl: INFURA_URL,
 });
 

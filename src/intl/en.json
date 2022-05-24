@@ -495,6 +495,10 @@
   "CeeJfw": {
     "message": "I've set up a firewall."
   },
+  "Cm8zxo": {
+    "description": "{network} is either 'Ethereum mainnet' or '<EL_TESTNET_NAME> testnet'",
+    "message": "Connect to {network}"
+  },
   "D0Rigq": {
     "message": "NO"
   },
@@ -1541,6 +1545,10 @@
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
   },
+  "gRMu7M": {
+    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
+    "message": "You need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2')."
+  },
   "gVC0Wl": {
     "message": "It uses the assisted password in your secrets folder."
   },
@@ -2165,19 +2173,11 @@
   "wdb1NC": {
     "message": "More on proof of stake"
   },
-  "wfSgCZ": {
-    "description": "{network} is either 'Ethereum mainnet' or 'Göerli testnet'",
-    "message": "Connect to {network}"
-  },
   "wm04oC": {
     "message": "Run the following command:"
   },
   "wqUcy/": {
     "message": "Early adopter risks"
-  },
-  "wrnpoO": {
-    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
-    "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
   },
   "wtTeex": {
     "message": "Are there spelling mistakes?"

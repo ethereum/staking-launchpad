@@ -19,6 +19,7 @@ import {
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
   PORTIS_DAPP_ID,
+  EL_TESTNET_NAME,
 } from '../../../utils/envVars';
 import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
@@ -61,9 +62,11 @@ const WalletConnectModal: React.FC = () => {
             <FormattedMessage
               defaultMessage="Connect to {network}"
               values={{
-                network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+                network: IS_MAINNET
+                  ? 'Ethereum mainnet'
+                  : `${EL_TESTNET_NAME.toLowerCase()} testnet`,
               }}
-              description="{network} is either 'Ethereum mainnet' or 'Göerli testnet'"
+              description="{network} is either 'Ethereum mainnet' or '<EL_TESTNET_NAME> testnet'"
             />
           </Text>
         </div>

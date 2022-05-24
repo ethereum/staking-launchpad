@@ -231,6 +231,7 @@ export const FAQ = () => {
               <Link
                 className="mt20"
                 to="https://ethereum.org/en/upgrades/merge/"
+                primary
               >
                 <FormattedMessage defaultMessage="More on the merge" />
               </Link>
@@ -254,6 +255,7 @@ export const FAQ = () => {
                   executionLayer: (
                     <Link
                       to="https://ethereum.org/en/glossary/#execution-layer"
+                      primary
                       inline
                     >
                       <FormattedMessage defaultMessage="execution layer" />
@@ -262,6 +264,7 @@ export const FAQ = () => {
                   consensusLayer: (
                     <Link
                       to="https://ethereum.org/en/glossary/#consensus-layer"
+                      primary
                       inline
                     >
                       <FormattedMessage defaultMessage="consensus layer" />
@@ -279,6 +282,7 @@ export const FAQ = () => {
               <Link
                 className="mt20"
                 to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/"
+                primary
               >
                 <FormattedMessage defaultMessage="Learn more about the great renaming" />
               </Link>
@@ -553,7 +557,11 @@ export const FAQ = () => {
                   your uptime is {greaterThan50Percent}."
                 values={{
                   greaterThan50Percent: (
-                    <Link to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/">
+                    <Link 
+                      to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/"
+                      primary
+                      inline
+                    >
                       {formatMessage({ defaultMessage: 'greater than 50%' })}
                     </Link>
                   ),
@@ -848,12 +856,12 @@ export const FAQ = () => {
                   help! You can find support on {discord} or {reddit}."
                 values={{
                   discord: (
-                    <Link inline to="https://discord.io/ethstaker">
+                    <Link primary inline to="https://discord.io/ethstaker">
                       Discord
                     </Link>
                   ),
                   reddit: (
-                    <Link inline to="https://reddit.com/r/ethstaker">
+                    <Link primary inline to="https://reddit.com/r/ethstaker">
                       Reddit
                     </Link>
                   ),

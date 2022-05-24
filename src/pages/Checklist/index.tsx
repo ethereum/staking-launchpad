@@ -14,6 +14,7 @@ import {
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
+  EL_TESTNET_NAME,
 } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
@@ -327,11 +328,8 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="To process incoming validator deposits from the execution layer
-                    (formerly 'Eth1' chain), you'll need to run an {executionClient} as well as your
-                    {consensusClient} (formerly 'Eth2'). You can use a third-party service
-                    like Infura, but we recommend running your own client to
-                    keep the network as decentralized as possible."
+                  defaultMessage="You need to run an {executionClient} as well as your
+                  {consensusClient} (formerly 'Eth2')."
                   values={{
                     executionClient: (
                       <Link
@@ -688,7 +686,7 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="I've installed and synced my execution client on {network} (do not wait on this as it can take several days)."
                   values={{
-                    network: IS_MAINNET ? 'mainnet' : 'Goerli',
+                    network: IS_MAINNET ? 'mainnet' : EL_TESTNET_NAME,
                   }}
                 />
               </Text>

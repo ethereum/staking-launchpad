@@ -6,6 +6,7 @@ import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
 import { FormattedMessage } from 'react-intl';
+import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
 
 // eslint-disable-next-line no-unused-vars
 export const GethDetails = () => (
@@ -44,7 +45,7 @@ export const GethDetails = () => (
       <Text className="mb20 mt10">
         <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
-      {!IS_MAINNET && (
+      {!IS_MAINNET && IS_GOERLI && (
         <>
           <Heading level={3} className="mt20">
             <FormattedMessage defaultMessage="Testing on Goerli" />

@@ -222,18 +222,13 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="There’s no way for you to re-activate your validator, and
-                  you won’t be able to transfer or withdraw your funds until after the post-merge
-                  cleanup upgrade, currently planned to follow the merge (which means your funds will remain
-                  inaccessible until then)."
-              />
+              <FormattedMessage defaultMessage="There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the Shanghai upgrade planned to follow the Merge (which means your funds will remain inaccessible until then)." />
               <Link
                 className="mt20"
                 to="https://ethereum.org/en/upgrades/merge/"
                 primary
               >
-                <FormattedMessage defaultMessage="More on the merge" />
+                <FormattedMessage defaultMessage="More on the Merge" />
               </Link>
             </Text>
           </section>
@@ -359,6 +354,16 @@ export const FAQ = () => {
                 your validator's balance over time."
               />
             </Text>
+            <BlockQuote>
+              <Text className="mt10">
+                <FormattedMessage defaultMessage="After the Merge, your validator will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with those transactions in blocks your validator proposes. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
+              </Text>
+            </BlockQuote>
+            <Text className="mt10">
+              <Link primary to="/checklist/#merge-readiness">
+                <FormattedMessage defaultMessage="Look over the Merge Readiness Checklist" />
+              </Link>
+            </Text>
           </section>
           <section>
             <Heading level={4}>
@@ -376,6 +381,16 @@ export const FAQ = () => {
                   and issues your rewards or penalties appropriately."
               />
             </Text>
+            <BlockQuote>
+              <Text className="mt10">
+                <FormattedMessage
+                  defaultMessage="Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days. "
+                  values={{
+                    average: <em>average</em>,
+                  }}
+                />
+              </Text>
+            </BlockQuote>
           </section>
           <section>
             <Heading level={4}>
@@ -557,7 +572,7 @@ export const FAQ = () => {
                   your uptime is {greaterThan50Percent}."
                 values={{
                   greaterThan50Percent: (
-                    <Link 
+                    <Link
                       to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/"
                       primary
                       inline

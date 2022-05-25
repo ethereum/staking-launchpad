@@ -1010,6 +1010,9 @@
   "Qs/oj3": {
     "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
   },
+  "QtNVQP": {
+    "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the Shanghai upgrade planned to follow the Merge (which means your funds will remain inaccessible until then)."
+  },
   "R8eePn": {
     "message": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
   },
@@ -1150,6 +1153,9 @@
   },
   "V0cb8p": {
     "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
+  },
+  "V0mmZE": {
+    "message": "After the Merge, your validator will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with those transactions in blocks your validator proposes. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client."
   },
   "V19Udt": {
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
@@ -1317,6 +1323,9 @@
   },
   "ZTo0Fl": {
     "message": "Why is there a wait?"
+  },
+  "ZdT9Bs": {
+    "message": "Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days."
   },
   "ZlLjuq": {
     "description": "{flag} and {network} are terminal commands styled as code.",
@@ -2154,9 +2163,6 @@
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
   },
-  "vkozFq": {
-    "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until after the post-merge cleanup upgrade, currently planned to follow the merge (which means your funds will remain inaccessible until then)."
-  },
   "vyvUB5": {
     "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
   },
@@ -2291,5 +2297,8 @@
   "zmMF+G": {
     "description": "This phrase is a sentence ",
     "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+  },
+  "zqOrZZ": {
+    "message": "Look over the Merge Readiness Checklist"
   }
 }

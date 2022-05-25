@@ -1923,6 +1923,12 @@
       "value": "In other words, to keep you honest, your actions need to have financial consequences."
     }
   ],
+  "JApiO1": [
+    {
+      "type": 0,
+      "value": "This is a new change and becomes a requirement at time of the Merge, so be sure you're running both before the upgrade."
+    }
+  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1977,6 +1983,12 @@
     {
       "type": 0,
       "value": "What is your current operating system?"
+    }
+  ],
+  "K2pv1v": [
+    {
+      "type": 0,
+      "value": "Why do I need to run an execution layer client now?"
     }
   ],
   "K6+jQ3": [
@@ -2863,6 +2875,12 @@
       "value": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
     }
   ],
+  "TfVy1O": [
+    {
+      "type": 0,
+      "value": "View the Merge Readiness Checklist"
+    }
+  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -3205,6 +3223,12 @@
     {
       "type": 0,
       "value": "More on installing pip"
+    }
+  ],
+  "XBYgM2": [
+    {
+      "type": 0,
+      "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus layer client AND an execution layer client."
     }
   ],
   "XRxD8r": [
@@ -3659,6 +3683,12 @@
       "value": " is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
     }
   ],
+  "bgyJfz": [
+    {
+      "type": 0,
+      "value": "What clients do I need to run?"
+    }
+  ],
   "bnuvhg": [
     {
       "type": 0,
@@ -3973,6 +4003,20 @@
     {
       "type": 0,
       "value": "What happens if I lose my signing key?"
+    }
+  ],
+  "fBCdim": [
+    {
+      "type": 0,
+      "value": "Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
     }
   ],
   "fHLKXR": [

@@ -737,6 +737,9 @@
   "JAiV0o": {
     "message": "In other words, to keep you honest, your actions need to have financial consequences."
   },
+  "JApiO1": {
+    "message": "This is a new change and becomes a requirement at time of the Merge, so be sure you're running both before the upgrade."
+  },
   "JMcBLZ": {
     "message": "Outstanding deposits ({remainingTxCount})"
   },
@@ -760,6 +763,9 @@
   },
   "JtAiN/": {
     "message": "What is your current operating system?"
+  },
+  "K2pv1v": {
+    "message": "Why do I need to run an execution layer client now?"
   },
   "K6+jQ3": {
     "message": "Geth installation documentation"
@@ -1119,6 +1125,9 @@
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
   },
+  "TfVy1O": {
+    "message": "View the Merge Readiness Checklist"
+  },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
@@ -1241,6 +1250,9 @@
   },
   "XBEBYR": {
     "message": "More on installing pip"
+  },
+  "XBYgM2": {
+    "message": "As a staker you are required to maintain and operate a node, running BOTH a consensus layer client AND an execution layer client."
   },
   "XRxD8r": {
     "description": "Link to documentation about execution client Besu, specifically for Goerli testnet",
@@ -1400,6 +1412,9 @@
   "be6WvD": {
     "message": "A {nodeOperator} is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
   },
+  "bgyJfz": {
+    "message": "What clients do I need to run?"
+  },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
   },
@@ -1526,6 +1541,9 @@
   },
   "f/N7FO": {
     "message": "What happens if I lose my signing key?"
+  },
+  "fBCdim": {
+    "message": "Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited {pricePerValidator} ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
   },
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."

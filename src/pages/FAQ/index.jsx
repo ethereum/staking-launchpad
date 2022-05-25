@@ -328,6 +328,35 @@ export const FAQ = () => {
           </Anchor>
           <section>
             <Heading level={4}>
+              <FormattedMessage defaultMessage="What clients do I need to run?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="As a staker you are required to maintain and operate a node, running BOTH a consensus layer client AND an execution layer client." />
+            </Text>
+            <BlockQuote>
+              <Text className="mt20 mb20">
+                <FormattedMessage defaultMessage="This is a new change and becomes a requirement at time of the Merge, so be sure you're running both before the upgrade." />
+              </Text>
+            </BlockQuote>
+            <Link primary to="/checklist/#merge-readiness">
+              <FormattedMessage defaultMessage="View the Merge Readiness Checklist" />
+            </Link>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="Why do I need to run an execution layer client now?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited {pricePerValidator} ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
               <FormattedMessage defaultMessage="How are validators incentivized to stay active and honest?" />
             </Heading>
             <Text className="mt10">

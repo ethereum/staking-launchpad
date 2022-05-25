@@ -139,6 +139,20 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "/h0DGY": [
+    {
+      "type": 0,
+      "value": "Why the "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH maximum?"
+    }
+  ],
   "/jJLYy": [
     {
       "type": 0,
@@ -517,6 +531,52 @@
       "value": "Testing on Goerli"
     }
   ],
+  "3ODqP9": [
+    {
+      "type": 0,
+      "value": "Depositing more than "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH, as each validator is limited to an "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": " of "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": ". This means that staking is done in "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH increments, each with its own set of keys and balance."
+    }
+  ],
   "3PZq07": [
     {
       "type": 0,
@@ -679,6 +739,20 @@
     {
       "type": 0,
       "value": "Romanian"
+    }
+  ],
+  "5dG331": [
+    {
+      "type": 0,
+      "value": "Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": ". It is possible to drop below this with poor node performance, but it is not possible to raise above it."
     }
   ],
   "5t8oYl": [
@@ -1539,6 +1613,20 @@
       "value": "Try again"
     }
   ],
+  "Felr8P": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "validatorClient"
+    },
+    {
+      "type": 0,
+      "value": " is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
+    }
+  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -2261,12 +2349,6 @@
       "value": " deposits"
     }
   ],
-  "NZUWs7": [
-    {
-      "type": 0,
-      "value": "Remember that a validator’s vote is weighted by the amount it has at stake."
-    }
-  ],
   "NatYUJ": [
     {
       "type": 0,
@@ -2623,12 +2705,6 @@
     {
       "type": 0,
       "value": "How many validators would you like to run?"
-    }
-  ],
-  "Rj0OAx": [
-    {
-      "type": 0,
-      "value": "Or in other words, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
     }
   ],
   "RkbwNZ": [
@@ -3569,6 +3645,20 @@
       "value": "The YAML files can have different syntaxes."
     }
   ],
+  "be6WvD": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "nodeOperator"
+    },
+    {
+      "type": 0,
+      "value": " is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+    }
+  ],
   "bnuvhg": [
     {
       "type": 0,
@@ -3579,6 +3669,12 @@
     {
       "type": 0,
       "value": "Python installation instructions"
+    }
+  ],
+  "by+LIm": [
+    {
+      "type": 0,
+      "value": "What is a validator client?"
     }
   ],
   "c9DSZ1": [
@@ -3633,12 +3729,6 @@
     {
       "type": 0,
       "value": "More on PegaSys Teku"
-    }
-  ],
-  "ckaUkz": [
-    {
-      "type": 0,
-      "value": "A validator is an entity that participates in the consensus of the Ethereum protocol."
     }
   ],
   "clUb0+": [
@@ -4017,6 +4107,28 @@
       "value": "YES"
     }
   ],
+  "grF2gm": [
+    {
+      "type": 0,
+      "value": "Each key-pair associated with a validator requires locking "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": " to be activated, which represents your initial balance as well as your "
+    },
+    {
+      "type": 1,
+      "value": "initialAndMaximum"
+    },
+    {
+      "type": 0,
+      "value": " voting power for any validator."
+    }
+  ],
   "gsuLMm": [
     {
       "type": 0,
@@ -4135,6 +4247,20 @@
     {
       "type": 0,
       "value": "More on effective balance"
+    }
+  ],
+  "hlxt3T": [
+    {
+      "type": 0,
+      "value": "Limiting the maximum stake to "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
     }
   ],
   "huEFUF": [
@@ -4611,10 +4737,38 @@
       "value": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
     }
   ],
+  "mXGBf6": [
+    {
+      "type": 0,
+      "value": "Do not deposit more than "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai update."
+    }
+  ],
   "mZOXtM": [
     {
       "type": 0,
       "value": "Validators"
+    }
+  ],
+  "mc27Pv": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    },
+    {
+      "type": 0,
+      "value": " is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
     }
   ],
   "mhyltV": [
@@ -4761,20 +4915,6 @@
     {
       "type": 0,
       "value": "Configure your consensus client"
-    }
-  ],
-  "oPdwwC": [
-    {
-      "type": 0,
-      "value": "Limiting the maximum stake to "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain."
     }
   ],
   "oWhj8Q": [
@@ -5049,12 +5189,6 @@
     {
       "type": 0,
       "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
-    }
-  ],
-  "rNEdex": [
-    {
-      "type": 0,
-      "value": "you can think of a validator as a voter for new blocks"
     }
   ],
   "rTSJI9": [
@@ -5407,20 +5541,6 @@
       "value": "Become a validator with Nimbus"
     }
   ],
-  "unzIoE": [
-    {
-      "type": 0,
-      "value": "Before you can run a validator and start to secure the network, you need to stake "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH. This forms your initial balance."
-    }
-  ],
   "up+5YH": [
     {
       "type": 0,
@@ -5679,10 +5799,10 @@
       "value": "Configure time sync"
     }
   ],
-  "y7dWNc": [
+  "y86+cK": [
     {
       "type": 0,
-      "value": "Importantly, a validator’s vote is weighted by the amount it has at stake."
+      "value": "What is a node operator?"
     }
   ],
   "yFtJza": [
@@ -5701,20 +5821,6 @@
     {
       "type": 0,
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
-    }
-  ],
-  "yT2EZO": [
-    {
-      "type": 0,
-      "value": "In other words, "
-    },
-    {
-      "type": 1,
-      "value": "boldSummary"
-    },
-    {
-      "type": 0,
-      "value": ". The more votes a block gets, the more likely it is to be added to the chain."
     }
   ],
   "ydh1KU": [

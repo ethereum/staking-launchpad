@@ -53,6 +53,9 @@
   "/WenEu": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending the {pricePerValidator} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
   },
+  "/h0DGY": {
+    "message": "Why the {pricePerValidator} ETH maximum?"
+  },
   "/jJLYy": {
     "message": "Transactions"
   },
@@ -197,6 +200,9 @@
   "3NHygY": {
     "message": "Testing on Goerli"
   },
+  "3ODqP9": {
+    "message": "Depositing more than {pricePerValidator} ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above {pricePerValidator} ETH, as each validator is limited to an {effectiveBalance} of {pricePerValidator}. This means that staking is done in {pricePerValidator} ETH increments, each with its own set of keys and balance."
+  },
   "3PZq07": {
     "message": "As such, it’s a good idea to create your keys from mnemonics which act as another backup. This will be the default for validators who join via this site’s onboarding process."
   },
@@ -263,6 +269,9 @@
   },
   "5UH1sh": {
     "message": "Romanian"
+  },
+  "5dG331": {
+    "message": "Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {pricePerValidator}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
   },
   "5t8oYl": {
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
@@ -596,6 +605,9 @@
   "FazwRl": {
     "message": "Try again"
   },
+  "Felr8P": {
+    "message": "A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
+  },
   "FfLWt5": {
     "message": "An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems."
   },
@@ -902,9 +914,6 @@
   "NZIM+F": {
     "message": "Send remaining {remainingTxCount} deposits"
   },
-  "NZUWs7": {
-    "message": "Remember that a validator’s vote is weighted by the amount it has at stake."
-  },
   "NatYUJ": {
     "message": "Learn more about the roles and responsibilities of Ethereum validators."
   },
@@ -1036,9 +1045,6 @@
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
-  },
-  "Rj0OAx": {
-    "message": "Or in other words, a human running a computer process. This process proposes and vouches for new blocks to be added to the blockchain."
   },
   "RkbwNZ": {
     "message": "Withdrawing your deposit won't be possible until mainnet merges with the Beacon Chain."
@@ -1391,11 +1397,17 @@
   "bbr+aD": {
     "message": "The YAML files can have different syntaxes."
   },
+  "be6WvD": {
+    "message": "A {nodeOperator} is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+  },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
   },
   "bxU6sX": {
     "message": "Python installation instructions"
+  },
+  "by+LIm": {
+    "message": "What is a validator client?"
   },
   "c9DSZ1": {
     "message": "We strongly recommended you complete these steps on the current testnet before mainnet."
@@ -1423,9 +1435,6 @@
   },
   "chw27s": {
     "message": "More on PegaSys Teku"
-  },
-  "ckaUkz": {
-    "message": "A validator is an entity that participates in the consensus of the Ethereum protocol."
   },
   "clUb0+": {
     "message": "Command Line"
@@ -1573,6 +1582,9 @@
   "gjmx29": {
     "message": "YES"
   },
+  "grF2gm": {
+    "message": "Each key-pair associated with a validator requires locking {ethPerValidator} to be activated, which represents your initial balance as well as your {initialAndMaximum} voting power for any validator."
+  },
   "gsuLMm": {
     "message": "Greek"
   },
@@ -1616,6 +1628,9 @@
   },
   "hkg3fb": {
     "message": "More on effective balance"
+  },
+  "hlxt3T": {
+    "message": "Limiting the maximum stake to {pricePerValidator} ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
   },
   "huEFUF": {
     "description": "Singular form, for only one deposit",
@@ -1807,8 +1822,14 @@
   "mUZnem": {
     "message": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
   },
+  "mXGBf6": {
+    "message": "Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai update."
+  },
   "mZOXtM": {
     "message": "Validators"
+  },
+  "mc27Pv": {
+    "message": "A {validator} is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
   },
   "mhyltV": {
     "message": "I've set my graffiti flag."
@@ -1868,9 +1889,6 @@
   },
   "oNohob": {
     "message": "Configure your consensus client"
-  },
-  "oPdwwC": {
-    "message": "Limiting the maximum stake to {pricePerValidator} ETH encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain."
   },
   "oWhj8Q": {
     "message": "How often are rewards/penalties issued?"
@@ -1985,9 +2003,6 @@
   "rMjMmc": {
     "description": "{http} shows '--JsonRpc.Enabled true' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
-  },
-  "rNEdex": {
-    "message": "you can think of a validator as a voter for new blocks"
   },
   "rTSJI9": {
     "message": "Try the testnet"
@@ -2115,10 +2130,6 @@
   "ukfwum": {
     "message": "Become a validator with Nimbus"
   },
-  "unzIoE": {
-    "description": "{pricePerValidator} represents deposit amount styled in bold",
-    "message": "Before you can run a validator and start to secure the network, you need to stake {pricePerValidator} ETH. This forms your initial balance."
-  },
   "up+5YH": {
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
     "message": "Are there recent {ethAmount} deposits?"
@@ -2234,8 +2245,8 @@
   "y4dBsA": {
     "message": "Configure time sync"
   },
-  "y7dWNc": {
-    "message": "Importantly, a validator’s vote is weighted by the amount it has at stake."
+  "y86+cK": {
+    "message": "What is a node operator?"
   },
   "yFtJza": {
     "message": "Please ensure that you have control over the keys to this address."
@@ -2245,10 +2256,6 @@
   },
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
-  },
-  "yT2EZO": {
-    "description": "{boldSummary} is styled with bold for emphasis",
-    "message": "In other words, {boldSummary}. The more votes a block gets, the more likely it is to be added to the chain."
   },
   "ydh1KU": {
     "message": "Language information"

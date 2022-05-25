@@ -52,35 +52,118 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="A validator is an entity that participates in the consensus of the
-                  Ethereum protocol."
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Or in other words, a human running a computer process. This
-                  process proposes and vouches for new blocks to be added to the blockchain."
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="In other words, {boldSummary}. The more votes a
-                  block gets, the more likely it is to be added to the chain."
+                defaultMessage="A {validator} is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
                 values={{
-                  boldSummary: (
-                    <strong>
-                      {formatMessage({
-                        defaultMessage:
-                          'you can think of a validator as a voter for new blocks',
-                      })}
-                    </strong>
+                  validator: <em>validator</em>,
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="What is a validator client?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
+                values={{
+                  validatorClient: <em>validator client</em>,
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="What is a node operator?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="A {nodeOperator} is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+                values={{
+                  nodeOperator: <em>node operator</em>,
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="How much ETH do I need to stake to become a validator?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Each key-pair associated with a validator requires locking {ethPerValidator} to be activated, which represents your initial balance as well as your {initialAndMaximum} voting power for any validator."
+                values={{
+                  ethPerValidator: <strong>{PRICE_PER_VALIDATOR} ETH</strong>,
+                  initialAndMaximum: <em>initial and maximum</em>,
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage
+                defaultMessage="Is there any advantage to having more than {pricePerValidator} ETH at stake?"
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="No. There is no advantage to having more than {pricePerValidator} ETH staked."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Depositing more than {pricePerValidator} ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above {pricePerValidator} ETH, as each validator is limited to an {effectiveBalance} of {pricePerValidator}. This means that staking is done in {pricePerValidator} ETH increments, each with its own set of keys and balance."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                  effectiveBalance: (
+                    <Link
+                      primary
+                      inline
+                      to="https://www.attestant.io/posts/understanding-validator-effective-balance/"
+                    >
+                      effective balance
+                    </Link>
                   ),
                 }}
-                description="{boldSummary} is styled with bold for emphasis"
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage
+                defaultMessage="Why the {pricePerValidator} ETH maximum?"
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+            <Text className="mt20 mb20">
+              <FormattedMessage
+                defaultMessage="Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {pricePerValidator}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Importantly, a validator’s vote is weighted by the amount it has at stake." />
+              <FormattedMessage
+                defaultMessage="Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai update."
+                values={{ pricePerValidator: PRICE_PER_VALIDATOR }}
+              />
             </Text>
           </section>
           <section>
@@ -116,53 +199,6 @@ export const FAQ = () => {
                   financial consequences."
               />
             </Text>
-          </section>
-          <section>
-            <Heading level={4}>
-              <FormattedMessage defaultMessage="How much ETH do I need to stake to become a validator?" />
-            </Heading>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Before you can run a validator and start to secure the network, you
-                  need to stake {pricePerValidator} ETH. This forms your initial balance."
-                values={{
-                  pricePerValidator: <strong>{PRICE_PER_VALIDATOR}</strong>,
-                }}
-                description="{pricePerValidator} represents deposit amount styled in bold"
-              />
-            </Text>
-          </section>
-          <section>
-            <Heading level={4}>
-              <FormattedMessage
-                defaultMessage="Is there any advantage to having more than {pricePerValidator} ETH at stake?"
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Heading>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="No. There is no advantage to having more than {pricePerValidator} ETH staked."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH encourages decentralization of power as it
-                  prevents any single validator from having an excessively large vote on the state of the chain."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <BlockQuote>
-              <Text>
-                <FormattedMessage defaultMessage="Remember that a validator’s vote is weighted by the amount it has at stake." />
-              </Text>
-            </BlockQuote>
           </section>
           <section>
             <Heading level={4}>

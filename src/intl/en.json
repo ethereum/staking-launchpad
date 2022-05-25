@@ -2293,6 +2293,9 @@
   "yoGtkz": {
     "message": "Make sure that your node has more than 20 peers."
   },
+  "z/ToMo": {
+    "message": "Once the transition to proof-of-stake is complete via the Merge, validators will be responsible for processing transactions and signing off on their validity. This data will {not} be available from popular third-party sources after the Merge and will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
+  },
   "z/ZhML": {
     "message": "Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
   },

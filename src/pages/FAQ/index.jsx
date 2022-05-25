@@ -354,6 +354,23 @@ export const FAQ = () => {
                 }}
               />
             </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Once the transition to proof-of-stake is complete via the Merge, validators will be responsible for processing transactions and signing off on their validity. This data will {not} be available from popular third-party sources after the Merge and will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
+                values={{
+                  not: <em>not</em>,
+                  pocGame: (
+                    <Link
+                      inline
+                      primary
+                      to="https://dankradfeist.de/ethereum/2021/09/30/proofs-of-custody.html"
+                    >
+                      proof-of-custody game
+                    </Link>
+                  ),
+                }}
+              />
+            </Text>
           </section>
           <section>
             <Heading level={4}>
@@ -420,7 +437,7 @@ export const FAQ = () => {
               />
             </Text>
             <BlockQuote>
-              <Text className="mt10">
+              <Text className="mt20 mb20">
                 <FormattedMessage defaultMessage="After the Merge, your validator will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with those transactions in blocks your validator proposes. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
               </Text>
             </BlockQuote>

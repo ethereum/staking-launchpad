@@ -915,12 +915,6 @@
       "value": "For security, we recommend you disconnect from the internet to complete this step."
     }
   ],
-  "96pen8": [
-    {
-      "type": 0,
-      "value": "Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more."
-    }
-  ],
   "9DZdsc": [
     {
       "type": 0,
@@ -1107,6 +1101,20 @@
       "value": "understanding validator effective balance"
     }
   ],
+  "AbR1dr": [
+    {
+      "type": 0,
+      "value": "This upgrade is rapidly approaching and brings a few changes that stakers should be aware of before hand. Check out the "
+    },
+    {
+      "type": 1,
+      "value": "mergeReadinessChecklist"
+    },
+    {
+      "type": 0,
+      "value": " to make sure you're prepared."
+    }
+  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1115,6 +1123,12 @@
     {
       "type": 1,
       "value": "url"
+    }
+  ],
+  "Ad8+R5": [
+    {
+      "type": 0,
+      "value": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
     }
   ],
   "Affixg": [
@@ -1263,6 +1277,12 @@
     {
       "type": 0,
       "value": "Czech"
+    }
+  ],
+  "CDx/FY": [
+    {
+      "type": 0,
+      "value": "By running a validator, you'll be responsible for securing the network and receive continuous payouts for actions that help the network reach consensus."
     }
   ],
   "CF9vMR": [
@@ -1577,12 +1597,6 @@
     {
       "type": 0,
       "value": "consensus client"
-    }
-  ],
-  "GOHkCO": [
-    {
-      "type": 0,
-      "value": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
     }
   ],
   "GOc7cL": [
@@ -2339,6 +2353,12 @@
       "value": "More on ConsenSys"
     }
   ],
+  "OmAmmi": [
+    {
+      "type": 0,
+      "value": "More on the Merge"
+    }
+  ],
   "OsO8ik": [
     {
       "type": 0,
@@ -2405,12 +2425,6 @@
     {
       "type": 0,
       "value": "Your network has changed"
-    }
-  ],
-  "PIQDar": [
-    {
-      "type": 0,
-      "value": "We recommend you go through the entire process on a testnet first to get comfortable."
     }
   ],
   "PfoT0C": [
@@ -2711,6 +2725,12 @@
     {
       "type": 0,
       "value": "Required"
+    }
+  ],
+  "SpI4Xu": [
+    {
+      "type": 0,
+      "value": "The Merge upgrade prepared the chain for future scaling upgrades by bringing proof-of-stake consensus together with Mainnet. This unlocks the ability to implement data sharding to further scale network capacity and throughput."
     }
   ],
   "SqKNq2": [
@@ -3399,12 +3419,6 @@
       "value": "Section 1 - Before you start"
     }
   ],
-  "Zxm0fh": [
-    {
-      "type": 0,
-      "value": "The merge will see the Ethereum Mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
-    }
-  ],
   "ZzTcj5": [
     {
       "type": 0,
@@ -3569,6 +3583,12 @@
     {
       "type": 0,
       "value": "Current APR"
+    }
+  ],
+  "cUvpWk": [
+    {
+      "type": 0,
+      "value": "More on data sharding"
     }
   ],
   "cav520": [
@@ -3769,12 +3789,6 @@
     {
       "type": 0,
       "value": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
-    }
-  ],
-  "egVO5r": [
-    {
-      "type": 0,
-      "value": "More on shard chains"
     }
   ],
   "elCkOU": [
@@ -4565,6 +4579,12 @@
       "value": "Hard drive"
     }
   ],
+  "mUZnem": [
+    {
+      "type": 0,
+      "value": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
+    }
+  ],
   "mZOXtM": [
     {
       "type": 0,
@@ -4989,12 +5009,6 @@
     {
       "type": 0,
       "value": "Phishing guide"
-    }
-  ],
-  "rFe61n": [
-    {
-      "type": 0,
-      "value": "As a validator, you'll be responsible for securing the network and receive continuous payouts for actions that help the network reach consensus."
     }
   ],
   "rMjMmc": [
@@ -5471,6 +5485,12 @@
     {
       "type": 0,
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
+    }
+  ],
+  "vej0DE": [
+    {
+      "type": 0,
+      "value": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Very soon you'll help secure all of Ethereum, after Mainnet (the Ethereum we use today) merges with the Beacon Chain."
     }
   ],
   "vg1dVR": [

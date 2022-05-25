@@ -360,9 +360,6 @@
   "94dQms": {
     "message": "For security, we recommend you disconnect from the internet to complete this step."
   },
-  "96pen8": {
-    "message": "Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more."
-  },
   "9DZdsc": {
     "message": "Is there any advantage to having more than {pricePerValidator} ETH at stake?"
   },
@@ -420,9 +417,15 @@
   "AbBgEs": {
     "message": "understanding validator effective balance"
   },
+  "AbR1dr": {
+    "message": "This upgrade is rapidly approaching and brings a few changes that stakers should be aware of before hand. Check out the {mergeReadinessChecklist} to make sure you're prepared."
+  },
   "Ad61gz": {
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
     "message": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: {url}"
+  },
+  "Ad8+R5": {
+    "message": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
   },
   "Affixg": {
     "message": "The deposit"
@@ -478,6 +481,9 @@
   },
   "CACPC+": {
     "message": "Czech"
+  },
+  "CDx/FY": {
+    "message": "By running a validator, you'll be responsible for securing the network and receive continuous payouts for actions that help the network reach consensus."
   },
   "CF9vMR": {
     "message": "Proof of stake"
@@ -619,9 +625,6 @@
   },
   "GN2Cu5": {
     "message": "consensus client"
-  },
-  "GOHkCO": {
-    "message": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Eventually you'll help secure all of Ethereum, once mainnet (the Ethereum we use today) merges with the Beacon Chain."
   },
   "GOc7cL": {
     "message": "How badly will I be penalized for being offline?"
@@ -930,6 +933,9 @@
   "OdYQYh": {
     "message": "More on ConsenSys"
   },
+  "OmAmmi": {
+    "message": "More on the Merge"
+  },
   "OsO8ik": {
     "message": "I am technically capable of setting up and running a validator."
   },
@@ -954,9 +960,6 @@
   },
   "P9mVZK": {
     "message": "Your network has changed"
-  },
-  "PIQDar": {
-    "message": "We recommend you go through the entire process on a testnet first to get comfortable."
   },
   "PfoT0C": {
     "message": "This checklist will help you understand the role of a validator and prepare you for the role."
@@ -1084,6 +1087,9 @@
   },
   "Seanpx": {
     "message": "Required"
+  },
+  "SpI4Xu": {
+    "message": "The Merge upgrade prepared the chain for future scaling upgrades by bringing proof-of-stake consensus together with Mainnet. This unlocks the ability to implement data sharding to further scale network capacity and throughput."
   },
   "SqKNq2": {
     "description": "{homebrew} = 'homebrew' and links to the homebrew package manager website documentation",
@@ -1322,9 +1328,6 @@
   "Zspg8H": {
     "message": "Section 1 - Before you start"
   },
-  "Zxm0fh": {
-    "message": "The merge will see the Ethereum Mainnet we use today merge with the Beacon Chain. This is when Ethereum will fully transition to proof-of-stake."
-  },
   "ZzTcj5": {
     "message": "Download python3 and follow the installation instructions."
   },
@@ -1399,6 +1402,9 @@
   },
   "cRzxes": {
     "message": "Current APR"
+  },
+  "cUvpWk": {
+    "message": "More on data sharding"
   },
   "cav520": {
     "message": "Download from GitHub"
@@ -1484,9 +1490,6 @@
   },
   "eaU/aL": {
     "message": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
-  },
-  "egVO5r": {
-    "message": "More on shard chains"
   },
   "elCkOU": {
     "message": "More on the merge"
@@ -1792,6 +1795,9 @@
   "mArJcj": {
     "message": "Hard drive"
   },
+  "mUZnem": {
+    "message": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
+  },
   "mZOXtM": {
     "message": "Validators"
   },
@@ -1967,9 +1973,6 @@
   "rD3ot9": {
     "message": "Phishing guide"
   },
-  "rFe61n": {
-    "message": "As a validator, you'll be responsible for securing the network and receive continuous payouts for actions that help the network reach consensus."
-  },
   "rMjMmc": {
     "description": "{http} shows '--JsonRpc.Enabled true' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
@@ -2144,6 +2147,9 @@
   "vbVsqW": {
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
+  },
+  "vej0DE": {
+    "message": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Very soon you'll help secure all of Ethereum, after Mainnet (the Ethereum we use today) merges with the Beacon Chain."
   },
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."

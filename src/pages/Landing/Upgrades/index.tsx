@@ -125,29 +125,37 @@ export const Upgrades = (): JSX.Element => {
                 <FormattedMessage defaultMessage="The Merge" />
               </UpgradeTitle>
               <Text className="mt20">
+                <FormattedMessage defaultMessage="The Merge upgrade prepared the chain for future scaling upgrades by bringing proof-of-stake consensus together with Mainnet. This unlocks the ability to implement data sharding to further scale network capacity and throughput." />
+              </Text>
+              <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="The merge will see the Ethereum
-                    Mainnet we use today merge with the Beacon Chain. This is when
-                    Ethereum will fully transition to proof-of-stake."
+                  defaultMessage="This upgrade is rapidly approaching and brings a few changes that stakers should be aware of before hand. Check out the {mergeReadinessChecklist} to make sure you're prepared."
+                  values={{
+                    mergeReadinessChecklist: (
+                      <Link primary inline to="/checklist/#merge-readiness">
+                        Merge Readiness Checklist
+                      </Link>
+                    ),
+                  }}
                 />
               </Text>
               <Link
                 className="mt20 mb40"
                 to="https://ethereum.org/en/upgrades/merge/"
               >
-                <FormattedMessage defaultMessage="More on the merge" />
+                <FormattedMessage defaultMessage="More on the Merge" />
               </Link>
               <UpgradeTitle className="mt20">
                 <FormattedMessage defaultMessage="Sharding" />
               </UpgradeTitle>
               <Text className="mt20">
-                <FormattedMessage defaultMessage="Sharding will make more data available to the network by introducing 64 parallel chains. Each new chain will be able to handle at least as much data as mainnet today, probably more." />
+                <FormattedMessage defaultMessage="Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized." />
               </Text>
               <Link
                 className="mt20 mb40"
                 to="https://ethereum.org/en/upgrades/shard-chains/"
               >
-                <FormattedMessage defaultMessage="More on shard chains" />
+                <FormattedMessage defaultMessage="More on data sharding" />
               </Link>
             </ScrollAnimation>
           </div>

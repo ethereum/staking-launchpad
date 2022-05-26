@@ -349,7 +349,7 @@ export const FAQ = () => {
                 <FormattedMessage defaultMessage="This is a new change and becomes a requirement at time of the Merge, so be sure you're running both before the upgrade." />
               </Text>
             </BlockQuote>
-            <Link primary to="/checklist/#merge-readiness">
+            <Link primary to="/merge-readiness">
               <FormattedMessage defaultMessage="View the Merge Readiness Checklist" />
             </Link>
           </section>
@@ -453,7 +453,7 @@ export const FAQ = () => {
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              <Link primary to="/checklist/#merge-readiness">
+              <Link primary to="/merge-readiness">
                 <FormattedMessage defaultMessage="Look over the Merge Readiness Checklist" />
               </Link>
             </Text>

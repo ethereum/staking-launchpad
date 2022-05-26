@@ -94,7 +94,7 @@ const SelectClientSection = ({
           <FormattedMessage defaultMessage="Remember" />
         </Heading>
         <FormattedMessage defaultMessage="All stakers must operate an execution layer client as well as a consensus layer client starting at the Merge. Make sure you're prepared." />
-        <Link primary to="#merge-readiness" className="mt10">
+        <Link primary to="/merge-readiness" className="mt10">
           <FormattedMessage defaultMessage="Merge Readiness Checklist" />
         </Link>
       </Alert>

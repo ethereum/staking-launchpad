@@ -132,7 +132,7 @@ export const Upgrades = (): JSX.Element => {
                   defaultMessage="This upgrade is rapidly approaching and brings a few changes that stakers should be aware of before hand. Check out the {mergeReadinessChecklist} to make sure you're prepared."
                   values={{
                     mergeReadinessChecklist: (
-                      <Link primary inline to="/checklist/#merge-readiness">
+                      <Link primary inline to="/merge-readiness">
                         Merge Readiness Checklist
                       </Link>
                     ),

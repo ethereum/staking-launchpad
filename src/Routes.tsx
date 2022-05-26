@@ -20,6 +20,7 @@ import {
   TermsOfService,
   Languages,
   TopUpPage,
+  MergeReadiness,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Consensus/Prysm';
@@ -58,6 +59,7 @@ export enum routesEnum {
   landingPage = '/',
   notFoundPage = '/*',
   languagesPage = '/languages',
+  mergeReadiness = '/merge-readiness',
 }
 const routes: RouteType[] = [
   {
@@ -145,6 +147,11 @@ const routes: RouteType[] = [
     path: routesEnum.topUpPage,
     exact: true,
     component: TopUpPage,
+  },
+  {
+    path: routesEnum.mergeReadiness,
+    exact: true,
+    component: MergeReadiness,
   },
   { path: routesEnum.landingPage, exact: true, component: LandingPage },
   // NOTE: this wildcard route must be the last index of the routes array

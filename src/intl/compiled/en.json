@@ -331,6 +331,18 @@
       "value": "JSON RPC endpoint"
     }
   ],
+  "1G0loj": [
+    {
+      "type": 0,
+      "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
+    }
+  ],
+  "1P25/2": [
+    {
+      "type": 0,
+      "value": "I am running my own consensus layer client"
+    }
+  ],
   "1P6GMj": [
     {
       "type": 0,
@@ -383,6 +395,12 @@
     {
       "type": 0,
       "value": "More on Ethereum staking economics"
+    }
+  ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "fee recipient"
     }
   ],
   "22EpKq": [
@@ -719,6 +737,28 @@
       "value": "Why two keys instead of one?"
     }
   ],
+  "59y+Ik": [
+    {
+      "type": 0,
+      "value": "Don't forget to head over to the "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " where you'll find a "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": " channel loaded with discussion on how you can get more involved and make sure you're prepared."
+    }
+  ],
   "5A6amM": [
     {
       "type": 0,
@@ -843,6 +883,12 @@
       "value": "You can improve the effective balance of this validator by topping up"
     }
   ],
+  "6iVtAr": [
+    {
+      "type": 0,
+      "value": "#TestingTheMerge"
+    }
+  ],
   "6nh4de": [
     {
       "type": 0,
@@ -935,6 +981,12 @@
       "value": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
     }
   ],
+  "8+8ZA1": [
+    {
+      "type": 0,
+      "value": "Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to was the staking deposit contract."
+    }
+  ],
   "80eWKU": [
     {
       "type": 0,
@@ -963,6 +1015,12 @@
     {
       "type": 0,
       "value": "Does the contract address listed on the website match?"
+    }
+  ],
+  "8MbqAe": [
+    {
+      "type": 0,
+      "value": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have access to the events of the execution layer."
     }
   ],
   "8Rj/6A": [
@@ -995,6 +1053,12 @@
     {
       "type": 0,
       "value": "slashings"
+    }
+  ],
+  "8t2y/7": [
+    {
+      "type": 0,
+      "value": "Fee recipient"
     }
   ],
   "8wd0q5": [
@@ -1117,6 +1181,12 @@
     {
       "type": 1,
       "value": "boldWarning"
+    }
+  ],
+  "9yw2yV": [
+    {
+      "type": 0,
+      "value": "I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited"
     }
   ],
   "A2b4uB": [
@@ -1329,6 +1399,12 @@
     {
       "type": 0,
       "value": "EthStaker community"
+    }
+  ],
+  "BXoiVG": [
+    {
+      "type": 0,
+      "value": "Additional reminders"
     }
   ],
   "Bf2QKg": [
@@ -1633,6 +1709,12 @@
       "value": "Note: the Beacon Chain may take several minutes to verify your deposit"
     }
   ],
+  "FM9lHC": [
+    {
+      "type": 0,
+      "value": "all of the merge testnet configurations"
+    }
+  ],
   "FSRfSJ": [
     {
       "type": 0,
@@ -1863,6 +1945,12 @@
       "value": "Network"
     }
   ],
+  "I5ZPR9": [
+    {
+      "type": 0,
+      "value": "When Merge?"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -1873,6 +1961,28 @@
     {
       "type": 0,
       "value": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
+    }
+  ],
+  "IG3tNR": [
+    {
+      "type": 0,
+      "value": "Reminder, the Merge upgrade will "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge. For more information, see the "
+    },
+    {
+      "type": 1,
+      "value": "shanghaiPlanning"
+    },
+    {
+      "type": 0,
+      "value": "[Shanghai Planning issue on GitHub](https://github.com/ethereum/pm/issues/450)."
     }
   ],
   "IJiJjD": [
@@ -1899,10 +2009,30 @@
       "value": "Ready"
     }
   ],
+  "IaZHuP": [
+    {
+      "type": 0,
+      "value": "Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the unburnt transaction fees."
+    }
+  ],
   "IdUtHu": [
     {
       "type": 0,
       "value": "Install virtualenv"
+    }
+  ],
+  "If09Ko": [
+    {
+      "type": 0,
+      "value": "As such, stakers must provide a "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": " address to their consensus client in order to receive these rewards. This is a normal Ethereum address that you're used to."
     }
   ],
   "IhDJWs": [
@@ -2021,6 +2151,12 @@
     {
       "type": 0,
       "value": "Download CLI app"
+    }
+  ],
+  "JluJPG": [
+    {
+      "type": 0,
+      "value": "Visit here to get the latest information on how to get involved with #TestingTheMerge on other public testnets as details unfold."
     }
   ],
   "JqVeL+": [
@@ -2279,6 +2415,20 @@
       "value": "Connect new wallet"
     }
   ],
+  "MKMIUm": [
+    {
+      "type": 0,
+      "value": "Public testnet progress is underway. When everything is safe and ready, the core developer teams will make this known, so stay tuned to the "
+    },
+    {
+      "type": 1,
+      "value": "blogLink"
+    },
+    {
+      "type": 0,
+      "value": " or other client team communication channels for the latest information."
+    }
+  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2499,6 +2649,12 @@
       "value": "."
     }
   ],
+  "O/dhpS": [
+    {
+      "type": 0,
+      "value": "EthStaker Discord"
+    }
+  ],
   "O3qkOm": [
     {
       "type": 0,
@@ -2541,6 +2697,12 @@
     {
       "type": 0,
       "value": "More on the Merge"
+    }
+  ],
+  "OptIze": [
+    {
+      "type": 0,
+      "value": "When Withdrawals?"
     }
   ],
   "OsO8ik": [
@@ -2609,6 +2771,18 @@
     {
       "type": 0,
       "value": "Your network has changed"
+    }
+  ],
+  "Pd0hC/": [
+    {
+      "type": 0,
+      "value": "Ethereum Foundation Blog"
+    }
+  ],
+  "PffL6Y": [
+    {
+      "type": 0,
+      "value": "I understand that unburnt gas fees from transactions contained in the blocks my validator are accounted for on the execution layer, not my validator balance"
     }
   ],
   "PfoT0C": [
@@ -2877,6 +3051,12 @@
     {
       "type": 0,
       "value": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing."
+    }
+  ],
+  "SVLpih": [
+    {
+      "type": 0,
+      "value": "The long awaited transition to proof-of-stake via the Merge is rapidly approaching, bringing Ethereum one step closer to a more sustainable ecosystem."
     }
   ],
   "SaR1pU": [
@@ -3211,6 +3391,12 @@
       "value": "I am certain that the validator I am topping up is my validator."
     }
   ],
+  "Vp4z/b": [
+    {
+      "type": 0,
+      "value": "Stakers running their own execution layer is necessary for the decentralization of the network."
+    }
+  ],
   "VzGJkB": [
     {
       "type": 0,
@@ -3299,6 +3485,12 @@
       "value": "Please accept the conditions above."
     }
   ],
+  "Wxmhku": [
+    {
+      "type": 0,
+      "value": "These fees are paid by whoever submitted the transaction and come in the form of ETH on the execution layer (Mainnet). These rewards are not accounted for in your validator balance which is maintained on the consensus layer."
+    }
+  ],
   "WxqnJn": [
     {
       "type": 0,
@@ -3315,6 +3507,12 @@
     {
       "type": 0,
       "value": "Has the block explorer named the contract?"
+    }
+  ],
+  "X3rOq5": [
+    {
+      "type": 0,
+      "value": "At time of the Merge, Infura and Alchemy will no longer be viable options to outsource execution layer responsibilities."
     }
   ],
   "X5KFEh": [
@@ -3517,6 +3715,12 @@
     {
       "type": 0,
       "value": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
+    }
+  ],
+  "Yn5qLy": [
+    {
+      "type": 0,
+      "value": "To prevent downtime at time of the Merge, be sure your node is running both an EL client, as well as a CL client."
     }
   ],
   "YqsgWz": [
@@ -3767,6 +3971,12 @@
       "value": "Be sure to account for enough space on your drive until you run maintenance on your node."
     }
   ],
+  "bX1fts": [
+    {
+      "type": 0,
+      "value": "Merge readiness checklist"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -3821,6 +4031,12 @@
     {
       "type": 0,
       "value": "Check your favorite Beacon Chain block explorer:"
+    }
+  ],
+  "cK92+s": [
+    {
+      "type": 0,
+      "value": "EL + CL = Ethereum"
     }
   ],
   "cPsIkp": [
@@ -3969,6 +4185,12 @@
     {
       "type": 0,
       "value": "Upload deposit data"
+    }
+  ],
+  "e1dCqL": [
+    {
+      "type": 0,
+      "value": "Shanghai Planning issue on GitHub"
     }
   ],
   "e4f94H": [
@@ -4269,6 +4491,12 @@
       "value": " voting power for any validator."
     }
   ],
+  "grUWd3": [
+    {
+      "type": 0,
+      "value": "Kiln is the latest public testnet to have undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
+    }
+  ],
   "gsuLMm": [
     {
       "type": 0,
@@ -4525,6 +4753,12 @@
     {
       "type": 0,
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
+    }
+  ],
+  "jFBk0z": [
+    {
+      "type": 0,
+      "value": "See you consensus layer client documentation for client-specific instructions on how to set this."
     }
   ],
   "jXer8/": [
@@ -4863,6 +5097,12 @@
     {
       "type": 0,
       "value": "File uploaded"
+    }
+  ],
+  "m0oSrF": [
+    {
+      "type": 0,
+      "value": "I am running my own execution layer client"
     }
   ],
   "mArJcj": [
@@ -5223,6 +5463,20 @@
     {
       "type": 0,
       "value": " to withdraw my funds."
+    }
+  ],
+  "qEsYC0": [
+    {
+      "type": 0,
+      "value": "You can also check out GitHub for "
+    },
+    {
+      "type": 1,
+      "value": "allConfigs"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "qK4+NQ": [
@@ -5745,6 +5999,12 @@
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
     }
   ],
+  "vmXkL3": [
+    {
+      "type": 0,
+      "value": "Before the switch, there are a couple things solo stakers and validator services need to be aware of."
+    }
+  ],
   "vyvUB5": [
     {
       "type": 0,
@@ -6047,6 +6307,12 @@
     {
       "type": 0,
       "value": "More on Lighthouse and Sigma Prime"
+    }
+  ],
+  "zFhvy5": [
+    {
+      "type": 0,
+      "value": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in #TestingTheMerge. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
     }
   ],
   "zGkAVo": [

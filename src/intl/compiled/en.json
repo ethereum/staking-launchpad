@@ -625,12 +625,6 @@
       "value": "Geth on Goerli documentation"
     }
   ],
-  "3XK21U": [
-    {
-      "type": 0,
-      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
-    }
-  ],
   "3tR/V9": [
     {
       "type": 0,
@@ -1143,28 +1137,6 @@
     {
       "type": 0,
       "value": "If you need help, check out the Python documentation."
-    }
-  ],
-  "AEp7+F": [
-    {
-      "type": 0,
-      "value": "Importantly, as a validator you'll need to post "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " as collateral - in other words, have some funds at stake. The only way to become a validator is to make a one-way "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " transaction to the deposit contract on the current Ethereum chain."
     }
   ],
   "AJD+66": [
@@ -2709,6 +2681,28 @@
       "value": "Key management"
     }
   ],
+  "QgOvR0": [
+    {
+      "type": 0,
+      "value": "Importantly, as a validator you'll need to post "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " transaction to the deposit contract on the current Ethereum chain."
+    }
+  ],
   "QlsDcr": [
     {
       "type": 0,
@@ -2801,12 +2795,6 @@
     {
       "type": 0,
       "value": "How many validators would you like to run?"
-    }
-  ],
-  "RkbwNZ": [
-    {
-      "type": 0,
-      "value": "Withdrawing your deposit won't be possible until mainnet merges with the Beacon Chain."
     }
   ],
   "Rr2lI/": [
@@ -3205,6 +3193,12 @@
     {
       "type": 0,
       "value": "Japanese"
+    }
+  ],
+  "W6w5Wb": [
+    {
+      "type": 0,
+      "value": "Transfers between validators and withdrawals aren't possible yet. Withdrawal functionality is currently a top priority, and is planned to be rolled out in the next network upgrade, known as the Shanghai upgrade."
     }
   ],
   "W8nHSd": [
@@ -3849,6 +3843,12 @@
       "value": "What are withdrawal credentials?"
     }
   ],
+  "cyNFM3": [
+    {
+      "type": 0,
+      "value": "Withdrawing your deposit will not be possible until the Shanghai upgrade planned for after the Merge."
+    }
+  ],
   "cyR7Kh": [
     {
       "type": 0,
@@ -4287,20 +4287,6 @@
     {
       "type": 0,
       "value": "Your stake"
-    }
-  ],
-  "h8ZHus": [
-    {
-      "type": 0,
-      "value": "Transfers between validators aren't possible yet. You will have to wait until mainnet merges with the Beacon Chain (around two years) before you can withdraw or transfer your "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "hFzE1M": [
@@ -6073,6 +6059,12 @@
     {
       "type": 0,
       "value": "Node security"
+    }
+  ],
+  "zkT9Jx": [
+    {
+      "type": 0,
+      "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
     }
   ],
   "zmMF+G": [

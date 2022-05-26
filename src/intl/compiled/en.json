@@ -165,6 +165,12 @@
       "value": "If at all possible, consider running another client at this time to help protect yourself and the network."
     }
   ],
+  "/tHxib": [
+    {
+      "type": 0,
+      "value": "Geth is one of the three original implementations of the Ethereum protocol, written in Go."
+    }
+  ],
   "/ub26/": [
     {
       "type": 0,
@@ -299,6 +305,12 @@
     {
       "type": 0,
       "value": "withdrawal key"
+    }
+  ],
+  "14vTrX": [
+    {
+      "type": 0,
+      "value": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for Mainnet:"
     }
   ],
   "192AR6": [
@@ -741,6 +753,20 @@
       "value": "Romanian"
     }
   ],
+  "5Vrs8S": [
+    {
+      "type": 0,
+      "value": "You need enough upload bandwidth too. As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
+    }
+  ],
   "5dG331": [
     {
       "type": 0,
@@ -843,6 +869,12 @@
     {
       "type": 0,
       "value": " is not supported in offline mode."
+    }
+  ],
+  "7Iz3JI": [
+    {
+      "type": 0,
+      "value": "Consensus Client"
     }
   ],
   "7UOvbT": [
@@ -983,6 +1015,20 @@
       "value": "Validating involves two keys for security reasons. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being hacked, it’s not a good idea to use the same key for withdrawals."
     }
   ],
+  "91YXqw": [
+    {
+      "type": 0,
+      "value": "I've installed the "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " of my consensus client and synced the Beacon Chain."
+    }
+  ],
   "94dQms": [
     {
       "type": 0,
@@ -1045,6 +1091,12 @@
       "value": "Read options and subcommands documentation"
     }
   ],
+  "9qpi9h": [
+    {
+      "type": 0,
+      "value": "Configure Nethermind"
+    }
+  ],
   "9uOFF3": [
     {
       "type": 0,
@@ -1091,20 +1143,6 @@
     {
       "type": 0,
       "value": "If you need help, check out the Python documentation."
-    }
-  ],
-  "ACstv9": [
-    {
-      "type": 0,
-      "value": "I've installed and synced my execution client on "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " (do not wait on this as it can take several days)."
     }
   ],
   "AEp7+F": [
@@ -1341,6 +1379,18 @@
       "value": "Configure Lighthouse"
     }
   ],
+  "C3jBPI": [
+    {
+      "type": 0,
+      "value": "Execution Client"
+    }
+  ],
+  "C82lUV": [
+    {
+      "type": 0,
+      "value": "All stakers must operate an execution layer client with their consensus layer client starting at the Merge. Make sure you're prepared."
+    }
+  ],
   "C9fTX1": [
     {
       "type": 0,
@@ -1455,10 +1505,22 @@
       "value": "Ideally your internet connection should be reliable and as close to 24/7 as possible without interruption."
     }
   ],
+  "Dayq/y": [
+    {
+      "type": 0,
+      "value": "Configure Erigon"
+    }
+  ],
   "DbnQg+": [
     {
       "type": 0,
       "value": "Verify the contract address"
+    }
+  ],
+  "DjhC7F": [
+    {
+      "type": 0,
+      "value": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
     }
   ],
   "DoCZT1": [
@@ -1581,6 +1643,12 @@
     {
       "type": 0,
       "value": "The key concept is the following:"
+    }
+  ],
+  "FFUr3c": [
+    {
+      "type": 0,
+      "value": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
     }
   ],
   "FM92S0": [
@@ -1747,6 +1815,12 @@
       "value": "Total amount required"
     }
   ],
+  "H0lQfu": [
+    {
+      "type": 0,
+      "value": "Merge Readiness Checklist"
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
@@ -1789,6 +1863,12 @@
     {
       "type": 0,
       "value": "Support"
+    }
+  ],
+  "I0BXSi": [
+    {
+      "type": 0,
+      "value": "Configure Geth"
     }
   ],
   "I212vY": [
@@ -2031,20 +2111,6 @@
       "value": "Hardware checklist"
     }
   ],
-  "KEfTSF": [
-    {
-      "type": 0,
-      "value": "I've installed the "
-    },
-    {
-      "type": 1,
-      "value": "latestRelease"
-    },
-    {
-      "type": 0,
-      "value": " of my consensus client."
-    }
-  ],
   "KN7zKn": [
     {
       "type": 0,
@@ -2059,6 +2125,12 @@
     {
       "type": 1,
       "value": "url"
+    }
+  ],
+  "KbUOQp": [
+    {
+      "type": 0,
+      "value": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
     }
   ],
   "KjcAm2": [
@@ -2089,6 +2161,12 @@
     {
       "type": 0,
       "value": "The python3 install process may differ depending on your linux build."
+    }
+  ],
+  "KwfNme": [
+    {
+      "type": 0,
+      "value": "Configure Besu"
     }
   ],
   "KxUgHu": [
@@ -2419,6 +2497,12 @@
     {
       "type": 0,
       "value": "Sharding"
+    }
+  ],
+  "OBmVqN": [
+    {
+      "type": 0,
+      "value": "Hyperledger Besu is an open-source Ethereum client developed under the Apache 2.0 license and written in Java."
     }
   ],
   "OIvXIO": [
@@ -2849,20 +2933,6 @@
       "value": "Validators and Ethereum"
     }
   ],
-  "TLEziZ": [
-    {
-      "type": 0,
-      "value": "The Beacon Chain had its genesis on "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ". It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
-    }
-  ],
   "TMw9oz": [
     {
       "type": 0,
@@ -3159,6 +3229,12 @@
     {
       "type": 0,
       "value": " will NOT be counted in your effective balance on the Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
+    }
+  ],
+  "WJA1/H": [
+    {
+      "type": 0,
+      "value": "Remember"
     }
   ],
   "WMLn/w": [
@@ -3707,12 +3783,6 @@
       "value": "What is a validator client?"
     }
   ],
-  "c9DSZ1": [
-    {
-      "type": 0,
-      "value": "We strongly recommended you complete these steps on the current testnet before mainnet."
-    }
-  ],
   "cHUoV9": [
     {
       "type": 0,
@@ -3831,20 +3901,6 @@
       "value": "What exactly is a validator?"
     }
   ],
-  "dNh0YZ": [
-    {
-      "type": 0,
-      "value": "As of "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ", you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
-    }
-  ],
   "dTOtPO": [
     {
       "type": 0,
@@ -3929,6 +3985,12 @@
     {
       "type": 0,
       "value": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
+    }
+  ],
+  "eX072N": [
+    {
+      "type": 0,
+      "value": "Erigon is an execution client on the efficiency frontier, written in Go."
     }
   ],
   "eaU/aL": [
@@ -4439,12 +4501,6 @@
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
     }
   ],
-  "jDv/zO": [
-    {
-      "type": 0,
-      "value": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for mainnet:"
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -4587,6 +4643,20 @@
     {
       "type": 0,
       "value": "You're on the testnet"
+    }
+  ],
+  "l3ztMu": [
+    {
+      "type": 0,
+      "value": "As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
     }
   ],
   "l4nLft": [
@@ -4831,12 +4901,6 @@
     {
       "type": 0,
       "value": "Risks and acknowledgements:"
-    }
-  ],
-  "n7yYXG": [
-    {
-      "type": 0,
-      "value": "Service"
     }
   ],
   "nBhisA": [
@@ -5509,20 +5573,6 @@
       "value": "Uptime"
     }
   ],
-  "uCikFk": [
-    {
-      "type": 0,
-      "value": "You need enough upload bandwidth too. As of "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " this is ~700-800 MB/hour, and is likely to increase."
-    }
-  ],
   "uJzGSb": [
     {
       "type": 0,
@@ -5599,6 +5649,12 @@
       "value": " deposits?"
     }
   ],
+  "vBJ79e": [
+    {
+      "type": 0,
+      "value": "I've simulated how to safely migrate from one execution client to another."
+    }
+  ],
   "vBOf5K": [
     {
       "type": 0,
@@ -5655,12 +5711,6 @@
     {
       "type": 0,
       "value": "Chinese (simplified)"
-    }
-  ],
-  "va96SS": [
-    {
-      "type": 0,
-      "value": "I've forwarded the necessary ports to the correct machine(s) from my router (only open the ports that apply to your installation)."
     }
   ],
   "vbVsqW": [
@@ -5773,6 +5823,12 @@
       "value": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
     }
   ],
+  "x4/9vY": [
+    {
+      "type": 0,
+      "value": "We strongly recommended you complete these steps on the current testnet before Mainnet."
+    }
+  ],
   "x8+8fi": [
     {
       "type": 0,
@@ -5811,6 +5867,20 @@
     {
       "type": 0,
       "value": "Block rewards are calculated using a sliding scale based on the total amount of ETH staked on the network."
+    }
+  ],
+  "xXKkhR": [
+    {
+      "type": 0,
+      "value": "I've installed and synced my "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " execution client (do not wait on this as it can take several days)."
     }
   ],
   "xXWzDf": [

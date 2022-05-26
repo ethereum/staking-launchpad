@@ -62,6 +62,9 @@
   "/rmnC0": {
     "message": "If at all possible, consider running another client at this time to help protect yourself and the network."
   },
+  "/tHxib": {
+    "message": "Geth is one of the three original implementations of the Ethereum protocol, written in Go."
+  },
   "/ub26/": {
     "message": "Understand the risks"
   },
@@ -110,6 +113,9 @@
   },
   "122+yR": {
     "message": "withdrawal key"
+  },
+  "14vTrX": {
+    "message": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for Mainnet:"
   },
   "192AR6": {
     "message": "More on staking"
@@ -270,6 +276,9 @@
   "5UH1sh": {
     "message": "Romanian"
   },
+  "5Vrs8S": {
+    "message": "You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
+  },
   "5dG331": {
     "message": "Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {pricePerValidator}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
   },
@@ -306,6 +315,9 @@
   },
   "793QlI": {
     "message": "{title} is not supported in offline mode."
+  },
+  "7Iz3JI": {
+    "message": "Consensus Client"
   },
   "7UOvbT": {
     "message": "Offline"
@@ -366,6 +378,10 @@
   "9/4mZe": {
     "message": "Validating involves two keys for security reasons. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being hacked, it’s not a good idea to use the same key for withdrawals."
   },
+  "91YXqw": {
+    "description": "{latestReleased} = 'latest stable software release', being styled in bold",
+    "message": "I've installed the {latestRelease} of my consensus client and synced the Beacon Chain."
+  },
   "94dQms": {
     "message": "For security, we recommend you disconnect from the internet to complete this step."
   },
@@ -387,6 +403,9 @@
   "9qMyhY": {
     "message": "Read options and subcommands documentation"
   },
+  "9qpi9h": {
+    "message": "Configure Nethermind"
+  },
   "9uOFF3": {
     "message": "Overview"
   },
@@ -404,9 +423,6 @@
   },
   "AC669U": {
     "message": "If you need help, check out the Python documentation."
-  },
-  "ACstv9": {
-    "message": "I've installed and synced my execution client on {network} (do not wait on this as it can take several days)."
   },
   "AEp7+F": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral - in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
@@ -485,6 +501,12 @@
   "C/gb74": {
     "message": "Configure Lighthouse"
   },
+  "C3jBPI": {
+    "message": "Execution Client"
+  },
+  "C82lUV": {
+    "message": "All stakers must operate an execution layer client with their consensus layer client starting at the Merge. Make sure you're prepared."
+  },
   "C9fTX1": {
     "message": "Answers to common questions on becoming a validator."
   },
@@ -539,8 +561,14 @@
   "DUnyVI": {
     "message": "Ideally your internet connection should be reliable and as close to 24/7 as possible without interruption."
   },
+  "Dayq/y": {
+    "message": "Configure Erigon"
+  },
   "DbnQg+": {
     "message": "Verify the contract address"
+  },
+  "DjhC7F": {
+    "message": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
   },
   "DoCZT1": {
     "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network",
@@ -589,6 +617,9 @@
   },
   "FEbVwB": {
     "message": "The key concept is the following:"
+  },
+  "FFUr3c": {
+    "message": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
   },
   "FM92S0": {
     "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
@@ -668,6 +699,9 @@
   "H+kIpp": {
     "message": "Total amount required"
   },
+  "H0lQfu": {
+    "message": "Merge Readiness Checklist"
+  },
   "H5+NAX": {
     "message": "Balance"
   },
@@ -686,6 +720,9 @@
   },
   "HqRNN8": {
     "message": "Support"
+  },
+  "I0BXSi": {
+    "message": "Configure Geth"
   },
   "I212vY": {
     "message": "There is a short wait before your validator becomes active on the Beacon Chain. Use this time to complete the checklist and spend some time validating the {testnet}"
@@ -780,16 +817,15 @@
   "KC9jbz": {
     "message": "Hardware checklist"
   },
-  "KEfTSF": {
-    "description": "{latestReleased} = 'latest stable software release', being styled in bold",
-    "message": "I've installed the {latestRelease} of my consensus client."
-  },
   "KN7zKn": {
     "message": "Error"
   },
   "KWWsDo": {
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
     "message": "Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: {url}"
+  },
+  "KbUOQp": {
+    "message": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
   },
   "KjcAm2": {
     "message": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
@@ -805,6 +841,9 @@
   },
   "Kw+pTr": {
     "message": "The python3 install process may differ depending on your linux build."
+  },
+  "KwfNme": {
+    "message": "Configure Besu"
   },
   "KxUgHu": {
     "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
@@ -938,6 +977,9 @@
   },
   "O3qkOm": {
     "message": "Sharding"
+  },
+  "OBmVqN": {
+    "message": "Hyperledger Besu is an open-source Ethereum client developed under the Apache 2.0 license and written in Java."
   },
   "OIvXIO": {
     "message": "Complete remaining {remainingTxCount} deposits"
@@ -1116,9 +1158,6 @@
   "THIzw6": {
     "message": "Validators and Ethereum"
   },
-  "TLEziZ": {
-    "message": "The Beacon Chain had its genesis on {date}. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
-  },
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
   },
@@ -1220,6 +1259,9 @@
   },
   "WFVzvu": {
     "message": "{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
+  },
+  "WJA1/H": {
+    "message": "Remember"
   },
   "WMLn/w": {
     "message": "{totalTxCount} validators"
@@ -1424,9 +1466,6 @@
   "by+LIm": {
     "message": "What is a validator client?"
   },
-  "c9DSZ1": {
-    "message": "We strongly recommended you complete these steps on the current testnet before mainnet."
-  },
   "cHUoV9": {
     "message": "The Geth documentation explains how to download and install the client."
   },
@@ -1484,9 +1523,6 @@
   "dM/KIM": {
     "message": "What exactly is a validator?"
   },
-  "dNh0YZ": {
-    "message": "As of {date}, you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
-  },
   "dTOtPO": {
     "message": "Top Up"
   },
@@ -1520,6 +1556,9 @@
   },
   "eOpZjd": {
     "message": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
+  },
+  "eX072N": {
+    "message": "Erigon is an execution client on the efficiency frontier, written in Go."
   },
   "eaU/aL": {
     "message": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
@@ -1701,9 +1740,6 @@
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
-  "jDv/zO": {
-    "message": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for mainnet:"
-  },
   "jXer8/": {
     "message": "Prysm documentation"
   },
@@ -1776,6 +1812,9 @@
   },
   "l/uCcX": {
     "message": "You're on the testnet"
+  },
+  "l3ztMu": {
+    "message": "As of {date}, you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
   },
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."
@@ -1857,9 +1896,6 @@
   },
   "mr1BWl": {
     "message": "Risks and acknowledgements:"
-  },
-  "n7yYXG": {
-    "message": "Service"
   },
   "nBhisA": {
     "message": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."
@@ -2124,9 +2160,6 @@
   "u81G9+": {
     "message": "Uptime"
   },
-  "uCikFk": {
-    "message": "You need enough upload bandwidth too. As of {date} this is ~700-800 MB/hour, and is likely to increase."
-  },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
   },
@@ -2151,6 +2184,9 @@
   "up+5YH": {
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
     "message": "Are there recent {ethAmount} deposits?"
+  },
+  "vBJ79e": {
+    "message": "I've simulated how to safely migrate from one execution client to another."
   },
   "vBOf5K": {
     "message": "Your balance is updated periodically by the Ethereum network rules as you carry (or fail to carry) out your responsibilities."
@@ -2178,9 +2214,6 @@
   },
   "vYOWYI": {
     "message": "Chinese (simplified)"
-  },
-  "va96SS": {
-    "message": "I've forwarded the necessary ports to the correct machine(s) from my router (only open the ports that apply to your installation)."
   },
   "vbVsqW": {
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
@@ -2229,6 +2262,9 @@
   "x0tVK4": {
     "message": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
   },
+  "x4/9vY": {
+    "message": "We strongly recommended you complete these steps on the current testnet before Mainnet."
+  },
   "x8+8fi": {
     "message": "Currently the majority of validators run Prysm as their consensus client. Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
@@ -2247,6 +2283,9 @@
   },
   "xSvJIi": {
     "message": "Block rewards are calculated using a sliding scale based on the total amount of ETH staked on the network."
+  },
+  "xXKkhR": {
+    "message": "I've installed and synced my {network} execution client (do not wait on this as it can take several days)."
   },
   "xXWzDf": {
     "message": "The Beacon Chain"

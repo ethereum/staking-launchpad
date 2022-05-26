@@ -947,6 +947,9 @@
   "NSK+Li": {
     "message": "I've secured the root account."
   },
+  "NTHTCh": {
+    "message": "Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned {shanghai} update."
+  },
   "NTWnJC": {
     "message": "Download command line app"
   },
@@ -1884,9 +1887,6 @@
   },
   "mUZnem": {
     "message": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
-  },
-  "mXGBf6": {
-    "message": "Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai update."
   },
   "mZOXtM": {
     "message": "Validators"

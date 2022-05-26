@@ -161,8 +161,19 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai update."
-                values={{ pricePerValidator: PRICE_PER_VALIDATOR }}
+                defaultMessage="Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned {shanghai} update."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                  shanghai: (
+                    <Link
+                      inline
+                      primary
+                      to="https://github.com/ethereum/pm/issues/450"
+                    >
+                      Shanghai
+                    </Link>
+                  ),
+                }}
               />
             </Text>
           </section>

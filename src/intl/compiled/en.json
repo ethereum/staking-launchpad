@@ -2391,6 +2391,28 @@
       "value": "I've secured the root account."
     }
   ],
+  "NTHTCh": [
+    {
+      "type": 0,
+      "value": "Do not deposit more than "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH for a single validator. It will not add to your rewards and will be locked until the planned "
+    },
+    {
+      "type": 1,
+      "value": "shanghai"
+    },
+    {
+      "type": 0,
+      "value": " update."
+    }
+  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -4853,20 +4875,6 @@
     {
       "type": 0,
       "value": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
-    }
-  ],
-  "mXGBf6": [
-    {
-      "type": 0,
-      "value": "Do not deposit more than "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai update."
     }
   ],
   "mZOXtM": [

@@ -240,6 +240,9 @@
   "47svuN": {
     "message": "Installation"
   },
+  "4AVfh5": {
+    "message": "I've joined my consensus client's Discord server."
+  },
   "4NvAhl": {
     "message": "Start by setting up your chosen hardware and operating system."
   },
@@ -375,10 +378,6 @@
   "9/4mZe": {
     "message": "Validating involves two keys for security reasons. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being hacked, it’s not a good idea to use the same key for withdrawals."
   },
-  "91YXqw": {
-    "description": "{latestReleased} = 'latest stable software release', being styled in bold",
-    "message": "I've installed the {latestRelease} of my consensus client and synced the Beacon Chain."
-  },
   "94dQms": {
     "message": "For security, we recommend you disconnect from the internet to complete this step."
   },
@@ -387,6 +386,9 @@
   },
   "9JktQX": {
     "message": "There is no easy answer to this question as there are many factors that go into this calculation."
+  },
+  "9RBO+X": {
+    "message": "Review validator roles and responsibilities"
   },
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
@@ -811,6 +813,10 @@
   "KC9jbz": {
     "message": "Hardware checklist"
   },
+  "KEfTSF": {
+    "description": "{latestReleased} = 'latest stable software release', being styled in bold",
+    "message": "I've installed the {latestRelease} of my consensus client."
+  },
   "KN7zKn": {
     "message": "Error"
   },
@@ -826,9 +832,6 @@
   },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
-  },
-  "KrVaDy": {
-    "message": "I've joined my client's Discord server."
   },
   "KvRSg5": {
     "message": "What exactly is slashing?"
@@ -877,9 +880,6 @@
   },
   "Lv3Pmp": {
     "message": "Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider."
-  },
-  "LyJqWj": {
-    "message": "More on validator roles and responsibilities"
   },
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
@@ -1705,6 +1705,9 @@
   "iWg7mL": {
     "description": "{flag} and {network} are terminal commands styled as code.",
     "message": "Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+  },
+  "iX90gu": {
+    "message": "I've joined my execution client's Discord server."
   },
   "iZuIgB": {
     "message": "Decompress the file you just downloaded"

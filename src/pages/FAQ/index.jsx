@@ -868,7 +868,7 @@ export const FAQ = () => {
             </BlockQuote>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Your 16 ETH can then be withdrawn – with your withdrawal key – after
+                defaultMessage="After the Shanghai upgrade, your 16 ETH can then be withdrawn – with your withdrawal key – after
                   a delay of around a day."
               />
             </Text>

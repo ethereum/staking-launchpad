@@ -6,6 +6,7 @@ import { Link } from '../../components/Link';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
+import { Alert } from '../../components/Alert';
 import { Client } from './index';
 import { ClientId } from '../../store/actions/clientActions';
 
@@ -88,6 +89,15 @@ const SelectClientSection = ({
       <ClientDescriptionContainer>
         {clientDetails[currentClient]}
       </ClientDescriptionContainer>
+      <Alert variant="warning" className="mt30 mb20">
+        <Heading level={4} className="mb10">
+          <FormattedMessage defaultMessage="Remember" />
+        </Heading>
+        <FormattedMessage defaultMessage="All stakers must operate an execution layer client as well as a consensus layer client starting at the Merge. Make sure you're prepared." />
+        <Link primary to="#merge-readiness" className="mt10">
+          <FormattedMessage defaultMessage="Merge Readiness Checklist" />
+        </Link>
+      </Alert>
     </Box>
   </Paper>
 );

@@ -290,7 +290,14 @@ export const MergeReadiness = () => {
                       <FormattedMessage defaultMessage="EthStaker Discord" />
                     </Link>
                   ),
-                  testingTheMerge: <Code>#TestingTheMerge🐼</Code>,
+                  testingTheMerge: (
+                    <Code>
+                      #TestingTheMerge
+                      <span role="img" aria-label="emoji">
+                        🐼
+                      </span>
+                    </Code>
+                  ),
                 }}
               />
             </Text>
@@ -315,9 +322,14 @@ export const MergeReadiness = () => {
           </Heading>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge. For more information, see the {shanghaiPlanning}[Shanghai Planning issue on GitHub](https://github.com/ethereum/pm/issues/450)."
+              defaultMessage="Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
+              values={{ not: <em>not</em> }}
+            />
+          </Text>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="For more information, see the {shanghaiPlanning}."
               values={{
-                not: <em>not</em>,
                 shanghaiPlanning: (
                   <Link
                     inline

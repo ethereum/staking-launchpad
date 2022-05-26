@@ -258,6 +258,9 @@
   "4QNsja": {
     "message": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
   },
+  "4VQUkR": {
+    "message": "For more information, see the {shanghaiPlanning}."
+  },
   "4hnEBA": {
     "message": "Has the smart contract code been verified?"
   },
@@ -771,9 +774,6 @@
   "I7MjRD": {
     "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
   },
-  "IG3tNR": {
-    "message": "Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge. For more information, see the {shanghaiPlanning}[Shanghai Planning issue on GitHub](https://github.com/ethereum/pm/issues/450)."
-  },
   "IJiJjD": {
     "message": "All stakers must operate an execution layer client as well as a consensus layer client starting at the Merge. Make sure you're prepared."
   },
@@ -1162,6 +1162,9 @@
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
+  },
+  "RkSC5Q": {
+    "message": "Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
   },
   "Rr2lI/": {
     "message": "You are responsible for this transaction!"

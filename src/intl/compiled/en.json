@@ -713,6 +713,20 @@
       "value": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
     }
   ],
+  "4VQUkR": [
+    {
+      "type": 0,
+      "value": "For more information, see the "
+    },
+    {
+      "type": 1,
+      "value": "shanghaiPlanning"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "4hnEBA": [
     {
       "type": 0,
@@ -1963,28 +1977,6 @@
       "value": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
     }
   ],
-  "IG3tNR": [
-    {
-      "type": 0,
-      "value": "Reminder, the Merge upgrade will "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge. For more information, see the "
-    },
-    {
-      "type": 1,
-      "value": "shanghaiPlanning"
-    },
-    {
-      "type": 0,
-      "value": "[Shanghai Planning issue on GitHub](https://github.com/ethereum/pm/issues/450)."
-    }
-  ],
   "IJiJjD": [
     {
       "type": 0,
@@ -3003,6 +2995,20 @@
     {
       "type": 0,
       "value": "How many validators would you like to run?"
+    }
+  ],
+  "RkSC5Q": [
+    {
+      "type": 0,
+      "value": "Reminder, the Merge upgrade will "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
     }
   ],
   "Rr2lI/": [

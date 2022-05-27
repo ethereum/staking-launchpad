@@ -218,11 +218,11 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               </Text>
               <Box pad="small">
                 <DropdownLink to={routesEnum.besu}>Besu</DropdownLink>
+                <DropdownLink to={routesEnum.erigon}>Erigon</DropdownLink>
+                <DropdownLink to={routesEnum.geth}>Geth</DropdownLink>
                 <DropdownLink to={routesEnum.nethermind}>
                   Nethermind
                 </DropdownLink>
-                <DropdownLink to={routesEnum.erigon}>Erigon</DropdownLink>
-                <DropdownLink to={routesEnum.geth}>Geth</DropdownLink>
               </Box>
               <Text className="my10">
                 <b>Consensus clients</b>
@@ -355,11 +355,11 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     </b>
                   </Text>
                   <DropdownLink to={routesEnum.besu}>Besu</DropdownLink>
+                  <DropdownLink to={routesEnum.erigon}>Erigon</DropdownLink>
+                  <DropdownLink to={routesEnum.geth}>Geth</DropdownLink>
                   <DropdownLink to={routesEnum.nethermind}>
                     Nethermind
                   </DropdownLink>
-                  <DropdownLink to={routesEnum.erigon}>Erigon</DropdownLink>
-                  <DropdownLink to={routesEnum.geth}>Geth</DropdownLink>
                   <Text className="my20">
                     <b>
                       <FormattedMessage defaultMessage="Consensus clients" />

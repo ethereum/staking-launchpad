@@ -55,6 +55,21 @@ const FakeLink = styled.span`
 
 const ButtonLink = styled(FakeLink)`
   text-decoration: none;
+  width: fit-content;
+  button {
+    padding: 16px 32px;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 518px) {
+    span,
+    button {
+      width: 100%;
+    }
+  }
 `;
 
 const _TopUpPage: React.FC<Props> = () => {
@@ -163,13 +178,14 @@ const _TopUpPage: React.FC<Props> = () => {
 
     if (!active) {
       return (
-        <ButtonLink onClick={handleConnect}>
-          <Button
-            className="flex"
-            rainbow
-            label={formatMessage({ defaultMessage: 'Connect wallet' })}
-          />
-        </ButtonLink>
+        <ButtonContainer>
+          <ButtonLink onClick={handleConnect}>
+            <Button
+              rainbow
+              label={formatMessage({ defaultMessage: 'Connect wallet' })}
+            />
+          </ButtonLink>
+        </ButtonContainer>
       );
     }
     if (validatorLoadError) {

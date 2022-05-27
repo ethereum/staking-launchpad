@@ -1,5 +1,6 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Box, DropButton } from 'grommet';
 import { Menu, Language, FormDown } from 'grommet-icons';
@@ -26,7 +27,6 @@ import {
   EL_TESTNET_NAME,
 } from '../utils/envVars';
 import useMobileCheck from '../hooks/useMobileCheck';
-import { FormattedMessage } from 'react-intl';
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -248,6 +248,16 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             active={pathname === routesEnum.topUpPage}
           >
             <FormattedMessage defaultMessage="Top Up" />
+          </BarLinkText>
+        </Link>
+        <Link to={routesEnum.mergeReadiness} className="mx10 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.mergeReadiness}
+          >
+            <FormattedMessage defaultMessage="The Merge" />
           </BarLinkText>
         </Link>
       </NavBarLinks>

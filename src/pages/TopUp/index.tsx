@@ -245,6 +245,8 @@ const _TopUpPage: React.FC<Props> = () => {
     validators,
     showDepositVerificationWarning,
     deactivate,
+    formatMessage,
+    handleConnect,
   ]);
 
   return (

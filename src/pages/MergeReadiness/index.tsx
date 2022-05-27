@@ -293,7 +293,12 @@ export const MergeReadiness = () => {
                   testingTheMerge: (
                     <Code>
                       #TestingTheMerge
-                      <span role="img" aria-label="emoji">
+                      <span
+                        role="img"
+                        aria-label={formatMessage({
+                          defaultMessage: 'Merge panda emoji',
+                        })}
+                      >
                         🐼
                       </span>
                     </Code>
@@ -318,7 +323,7 @@ export const MergeReadiness = () => {
         </section>
         <section>
           <Heading level={3} id="withdrawals">
-            <FormattedMessage defaultMessage="When Withdrawals?" />
+            <FormattedMessage defaultMessage="When withdrawals?" />
           </Heading>
           <Text className="mt20">
             <FormattedMessage
@@ -342,6 +347,59 @@ export const MergeReadiness = () => {
               }}
             />
           </Text>
+        </section>
+        <section>
+          <Heading level={3} id="further-reading">
+            <FormattedMessage defaultMessage="Further reading" />
+          </Heading>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://notes.ethereum.org/@MarioHavel/merge-resources"
+              >
+                <FormattedMessage defaultMessage="Mega Merge Resource List" />{' '}
+                <span
+                  role="img"
+                  aria-label={formatMessage({
+                    defaultMessage: 'Merge panda emoji',
+                  })}
+                >
+                  🐼
+                </span>
+              </Link>
+              {' - '}
+              <em>Mario Havel</em>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://twitter.com/trent_vanepps/status/1508478499325202435"
+              >
+                <FormattedMessage defaultMessage="Ongoing thread of Ethereum Merge info" />
+              </Link>
+              {' - '}
+              <em>trent.eth</em>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://github.com/timbeiko/eth-roadmap-faq"
+              >
+                <FormattedMessage defaultMessage="Ethereum Roadmap FAQ" />
+              </Link>
+              {' - '}
+              <em>Tim Beiko</em>
+            </li>
+            <li className="py5">
+              <Link primary inline to="https://ethereum.org/en/upgrades/merge/">
+                <FormattedMessage defaultMessage="Ethereum.org - The Merge" />
+              </Link>
+            </li>
+          </ul>
         </section>
       </ChecklistPageStyles>
     </PageTemplate>

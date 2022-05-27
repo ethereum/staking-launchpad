@@ -792,9 +792,6 @@
   "IZFEUg": {
     "message": "Ready"
   },
-  "IaZHuP": {
-    "message": "Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the unburnt transaction fees."
-  },
   "IdUtHu": {
     "message": "Install virtualenv"
   },
@@ -1118,8 +1115,8 @@
   "Q1ZwPT": {
     "message": "clipboard"
   },
-  "Q2382j": {
-    "message": "I understand that I will earn the unburnt transaction fees when I propose a block, and this is accounted for on the execution layer, not my validator balance."
+  "Q2CQuF": {
+    "message": "Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees."
   },
   "Q8P0rZ": {
     "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
@@ -2315,6 +2312,9 @@
   },
   "uPECbE": {
     "message": "Validator checklist"
+  },
+  "uUy3NQ": {
+    "message": "I understand that I will earn the unburnt transaction fees (tips/priority fees) when I propose a block, and this is accounted for on the execution layer, not my validator balance."
   },
   "ubKWX8": {
     "message": "Generate key pairs"

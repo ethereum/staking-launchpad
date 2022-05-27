@@ -108,7 +108,7 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="Fee recipient" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the unburnt transaction fees." />
+            <FormattedMessage defaultMessage="Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees." />
           </Text>
           <Text className="mt20">
             <FormattedMessage defaultMessage="These fees are paid by whoever submitted the transaction and come in the form of ETH on the execution layer (Mainnet). These rewards are not accounted for in your validator balance which is maintained on the consensus layer." />
@@ -137,6 +137,7 @@ export const MergeReadiness = () => {
             <li className="py5">
               <Link
                 primary
+                inline
                 to="https://docs.prylabs.network/docs/execution-node/fee-recipient/"
               >
                 Prysm: Configuring a Fee Recipient Address
@@ -145,6 +146,7 @@ export const MergeReadiness = () => {
             <li className="py5">
               <Link
                 primary
+                inline
                 to="https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient"
               >
                 Teku: Configure the fee recipient
@@ -153,13 +155,14 @@ export const MergeReadiness = () => {
             <li className="py5">
               <Link
                 primary
+                inline
                 to="https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html"
               >
                 Lighthouse: Suggested Fee Recipient
               </Link>
             </li>
             <li className="py5">
-              <Link primary to="https://nimbus.guide/">
+              <Link primary inline to="https://nimbus.guide/">
                 Nimbus: The Nimbus book
               </Link>
             </li>
@@ -167,7 +170,7 @@ export const MergeReadiness = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I understand that I will earn the unburnt transaction fees when I propose a block, and this is accounted for on the execution layer, not my validator balance." />
+                <FormattedMessage defaultMessage="I understand that I will earn the unburnt transaction fees (tips/priority fees) when I propose a block, and this is accounted for on the execution layer, not my validator balance." />
               </Text>
             }
           />

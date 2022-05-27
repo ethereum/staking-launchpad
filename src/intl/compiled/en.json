@@ -2013,12 +2013,6 @@
       "value": "Ready"
     }
   ],
-  "IaZHuP": [
-    {
-      "type": 0,
-      "value": "Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the unburnt transaction fees."
-    }
-  ],
   "IdUtHu": [
     {
       "type": 0,
@@ -2843,10 +2837,10 @@
       "value": "clipboard"
     }
   ],
-  "Q2382j": [
+  "Q2CQuF": [
     {
       "type": 0,
-      "value": "I understand that I will earn the unburnt transaction fees when I propose a block, and this is accounted for on the execution layer, not my validator balance."
+      "value": "Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees."
     }
   ],
   "Q8P0rZ": [
@@ -5979,6 +5973,12 @@
     {
       "type": 0,
       "value": "Validator checklist"
+    }
+  ],
+  "uUy3NQ": [
+    {
+      "type": 0,
+      "value": "I understand that I will earn the unburnt transaction fees (tips/priority fees) when I propose a block, and this is accounted for on the execution layer, not my validator balance."
     }
   ],
   "ubKWX8": [

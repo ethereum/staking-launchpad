@@ -6,9 +6,9 @@ import { Text } from './Text';
 
 export const ClientMergeNotification = (props: {
   client: string;
-  isConsensus: boolean;
+  isConsensus?: boolean;
 }): JSX.Element => {
-  const { client, isConsensus } = props;
+  const { client, isConsensus = false } = props;
   return (
     <Alert variant="warning" className="my40">
       <Text>
@@ -45,11 +45,9 @@ export const ClientMergeNotification = (props: {
             defaultMessage="Merge Readiness: In addition to an execution client, after the Merge node operators must also run an {alternateClient} to remain active."
             values={{
               alternateClient: (
-                <strong>
-                  <Link primary inline to="/checklist/#cl-client">
-                    <FormattedMessage defaultMessage="consensus client" />
-                  </Link>
-                </strong>
+                <Link primary inline to="/checklist/#cl-client">
+                  <FormattedMessage defaultMessage="consensus client" />
+                </Link>
               ),
             }}
           />

@@ -27,6 +27,10 @@ import { Prysm } from './pages/Clients/Consensus/Prysm';
 import { Teku } from './pages/Clients/Consensus/Teku';
 import { Nimbus } from './pages/Clients/Consensus/Nimbus';
 import { Lighthouse } from './pages/Clients/Consensus/Lighthouse';
+import { Besu } from './pages/Clients/Execution/Besu';
+import { Nethermind } from './pages/Clients/Execution/Nethermind';
+import { Erigon } from './pages/Clients/Execution/Erigon';
+import { Geth } from './pages/Clients/Execution/Geth';
 
 type RouteType = {
   path: string;
@@ -127,6 +131,26 @@ const routes: RouteType[] = [
     path: routesEnum.lighthouse,
     exact: true,
     component: Lighthouse,
+  },
+  {
+    path: routesEnum.besu,
+    exact: true,
+    component: Besu,
+  },
+  {
+    path: routesEnum.nethermind,
+    exact: true,
+    component: Nethermind,
+  },
+  {
+    path: routesEnum.erigon,
+    exact: true,
+    component: Erigon,
+  },
+  {
+    path: routesEnum.geth,
+    exact: true,
+    component: Geth,
   },
   {
     path: routesEnum.phishingPage,

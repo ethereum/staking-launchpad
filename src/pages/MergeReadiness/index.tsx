@@ -91,14 +91,14 @@ export const MergeReadiness = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I am running my own execution layer client" />
+                <FormattedMessage defaultMessage="I am running my own execution layer client." />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I am running my own consensus layer client" />
+                <FormattedMessage defaultMessage="I am running my own consensus layer client." />
               </Text>
             }
           />
@@ -167,14 +167,14 @@ export const MergeReadiness = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I understand that unburnt gas fees from transactions contained in the blocks my validator are accounted for on the execution layer, not my validator balance" />
+                <FormattedMessage defaultMessage="I understand that I will earn the unburnt transaction fees when I propose a block, and this is accounted for on the execution layer, not my validator balance." />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited" />
+                <FormattedMessage defaultMessage="I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited." />
               </Text>
             }
           />

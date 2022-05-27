@@ -129,9 +129,6 @@
   "1G0loj": {
     "message": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
   },
-  "1P25/2": {
-    "message": "I am running my own consensus layer client"
-  },
   "1P6GMj": {
     "message": "Monitoring"
   },
@@ -304,6 +301,9 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
+  "62zRxB": {
+    "message": "I am running my own consensus layer client."
+  },
   "6CK2Nu": {
     "message": "Your wallet is on the wrong network. Switch to {network}"
   },
@@ -443,9 +443,6 @@
   },
   "9xeLhs": {
     "message": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
-  },
-  "9yw2yV": {
-    "message": "I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited"
   },
   "A2b4uB": {
     "message": "Send deposit"
@@ -1087,9 +1084,6 @@
   "Pd0hC/": {
     "message": "Ethereum Foundation Blog"
   },
-  "PffL6Y": {
-    "message": "I understand that unburnt gas fees from transactions contained in the blocks my validator are accounted for on the execution layer, not my validator balance"
-  },
   "PfoT0C": {
     "message": "This checklist will help you understand the role of a validator and prepare you for the role."
   },
@@ -1114,6 +1108,9 @@
   },
   "Q1ZwPT": {
     "message": "clipboard"
+  },
+  "Q2382j": {
+    "message": "I understand that I will earn the unburnt transaction fees when I propose a block, and this is accounted for on the execution layer, not my validator balance."
   },
   "Q8P0rZ": {
     "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
@@ -1784,6 +1781,9 @@
   "hG0uP4": {
     "message": "Desktop only"
   },
+  "hICY9k": {
+    "message": "I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited."
+  },
   "hPCn9f": {
     "message": "--JsonRpc.Enabled documentation"
   },
@@ -1856,6 +1856,9 @@
   },
   "iv88b5": {
     "message": "Send all {totalTxCount} deposits"
+  },
+  "j0Ee5w": {
+    "message": "I am running my own execution layer client."
   },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
@@ -1998,9 +2001,6 @@
   },
   "lrdlY6": {
     "message": "File uploaded"
-  },
-  "m0oSrF": {
-    "message": "I am running my own execution layer client"
   },
   "mArJcj": {
     "message": "Hard drive"

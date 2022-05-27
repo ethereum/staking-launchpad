@@ -797,7 +797,7 @@ export const Checklist = () => {
           </Text>
         </Alert>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="el-client">
             <FormattedMessage defaultMessage="Configure your execution client" />
           </Heading>
           <Link className="mt10" to="/faq" primary>
@@ -870,7 +870,7 @@ export const Checklist = () => {
           </Text>
         </section>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="cl-client">
             <FormattedMessage defaultMessage="Configure your consensus client" />
           </Heading>
           <ClientContainer>

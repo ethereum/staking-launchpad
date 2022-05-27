@@ -3173,6 +3173,20 @@
       "value": "View the Merge Readiness Checklist"
     }
   ],
+  "ToUcj8": [
+    {
+      "type": 0,
+      "value": "Merge Readiness: In addition to an execution client, after the Merge node operators must also run an "
+    },
+    {
+      "type": 1,
+      "value": "alternateClient"
+    },
+    {
+      "type": 0,
+      "value": " to remain active."
+    }
+  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -3723,6 +3737,24 @@
     {
       "type": 0,
       "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
+    }
+  ],
+  "YX6pc0": [
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " is a "
+    },
+    {
+      "type": 1,
+      "value": "layerType"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Yganfl": [
@@ -5607,6 +5639,20 @@
     {
       "type": 0,
       "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
+    }
+  ],
+  "rgjQYI": [
+    {
+      "type": 0,
+      "value": "Merge Readiness: In addition to a consensus client, after the Merge node operators must also run an "
+    },
+    {
+      "type": 1,
+      "value": "alternateClient"
+    },
+    {
+      "type": 0,
+      "value": " to remain active."
     }
   ],
   "rnDgcN": [

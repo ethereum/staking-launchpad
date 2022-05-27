@@ -1242,6 +1242,9 @@
   "TfVy1O": {
     "message": "View the Merge Readiness Checklist"
   },
+  "ToUcj8": {
+    "message": "Merge Readiness: In addition to an execution client, after the Merge node operators must also run an {alternateClient} to remain active."
+  },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
@@ -1429,6 +1432,9 @@
   },
   "YQJy4H": {
     "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
+  },
+  "YX6pc0": {
+    "message": "{client} is a {layerType}."
   },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
@@ -2180,6 +2186,9 @@
   },
   "rcdxTW": {
     "message": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
+  },
+  "rgjQYI": {
+    "message": "Merge Readiness: In addition to a consensus client, after the Merge node operators must also run an {alternateClient} to remain active."
   },
   "rnDgcN": {
     "message": "No, you cannot change your withdrawal credentials in top-ups."

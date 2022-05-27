@@ -68,7 +68,7 @@ export const MergeReadiness = () => {
       </Subtitle>
       <ChecklistPageStyles>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="el-plus-cl">
             <FormattedMessage defaultMessage="EL + CL = Ethereum" />
           </Heading>
           <Text className="mt20">
@@ -104,7 +104,7 @@ export const MergeReadiness = () => {
           />
         </section>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="fee-recipient">
             <FormattedMessage defaultMessage="Fee recipient" />
           </Heading>
           <Text className="mt20">
@@ -179,7 +179,7 @@ export const MergeReadiness = () => {
             }
           />
         </section>
-        <Heading level={3} className="mt50 mb30">
+        <Heading level={3} className="mt50 mb30" id="additional-reminders">
           <FormattedMessage defaultMessage="Additional reminders" />
         </Heading>
         <section>
@@ -200,7 +200,7 @@ export const MergeReadiness = () => {
           </Text>
         </section>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="testing-the-merge">
             <FormattedMessage defaultMessage="#TestingTheMerge" />
           </Heading>
           <Text className="mt20">
@@ -317,7 +317,7 @@ export const MergeReadiness = () => {
           </Alert>
         </section>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="withdrawals">
             <FormattedMessage defaultMessage="When Withdrawals?" />
           </Heading>
           <Text className="mt20">

@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -15,6 +16,7 @@ import {
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
+import closeGlyph from '../../../static/close.svg';
 import {
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
@@ -27,7 +29,19 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
 
-const WalletConnectModal: React.FC = () => {
+const Close = styled.img`
+  height: 24px;
+  width: 24px;
+  display: block;
+  align-self: flex-end;
+  margin: 16px 16px 0 0;
+  cursor: pointer;
+`;
+
+const WalletConnectModal: React.FC<{
+  loading: boolean;
+  setLoading: any;
+}> = ({ loading, setLoading }: { loading: any; setLoading: any }) => {
   const {
     connector,
     error,
@@ -47,10 +61,14 @@ const WalletConnectModal: React.FC = () => {
     return !Object.values(AllowedNetworks).includes(network);
   }, [chainId]);
 
+  const handleClose = () => {
+    setLoading(false);
+  };
+
   if (isInvalidNetwork) {
     return (
       <Layer>
-        <div className="p20">
+        <div className="p20 flex">
           <Heading level={2} color="blueMedium" center className="mb20">
             <FormattedMessage defaultMessage="Wrong network" />
           </Heading>
@@ -74,10 +92,11 @@ const WalletConnectModal: React.FC = () => {
     );
   }
 
-  if (active) return null;
+  if (active || !loading) return null;
 
   return (
     <Layer>
+      <Close src={closeGlyph} onClick={handleClose} />
       <Heading level={2} color="blueMedium" style={{ margin: '20px auto' }}>
         <FormattedMessage defaultMessage="Connect a wallet" />
       </Heading>

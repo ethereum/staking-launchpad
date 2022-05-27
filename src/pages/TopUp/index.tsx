@@ -26,6 +26,7 @@ import {
 import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
+import { Button } from '../../components/Button';
 
 const Arrow = styled(props => <FormPrevious {...props} />)`
   position: absolute;
@@ -50,6 +51,10 @@ const FakeLink = styled.span`
   text-decoration: underline;
   cursor: pointer;
   display: inline;
+`;
+
+const ButtonLink = styled(FakeLink)`
+  text-decoration: none;
 `;
 
 const _TopUpPage: React.FC<Props> = () => {
@@ -146,11 +151,27 @@ const _TopUpPage: React.FC<Props> = () => {
     setSelectedValidator,
   ] = useState<BeaconChainValidator | null>(null);
 
+  const handleConnect = () => {
+    setLoading(true);
+    deactivate();
+  };
+
   const topUpPageContent = React.useMemo(() => {
-    if (loading || !active) {
+    if (loading) {
       return <Spinner className="mt40" />;
     }
 
+    if (!active) {
+      return (
+        <ButtonLink onClick={handleConnect}>
+          <Button
+            className="flex"
+            rainbow
+            label={formatMessage({ defaultMessage: 'Connect wallet' })}
+          />
+        </ButtonLink>
+      );
+    }
     if (validatorLoadError) {
       return (
         <Alert variant="warning" className="my10">
@@ -212,6 +233,7 @@ const _TopUpPage: React.FC<Props> = () => {
         <ValidatorTable
           validators={validators}
           setSelectedValidator={setSelectedValidator}
+          handleConnect={handleConnect}
         />
       </>
     );
@@ -228,7 +250,7 @@ const _TopUpPage: React.FC<Props> = () => {
   return (
     <>
       {/* the wallet connect modal controls it's own display, so it is always rendered here */}
-      <WalletConnectModal />
+      <WalletConnectModal loading={loading} setLoading={setLoading} />
 
       <PageTemplate
         title={formatMessage({ defaultMessage: 'Top up a validator' })}

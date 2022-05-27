@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -77,7 +77,7 @@ const _TopUpPage: React.FC<Props> = () => {
   const { formatMessage } = useIntl();
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
       setLoading(true);
 
@@ -151,12 +151,12 @@ const _TopUpPage: React.FC<Props> = () => {
     setSelectedValidator,
   ] = useState<BeaconChainValidator | null>(null);
 
-  const handleConnect = () => {
+  const handleConnect = useCallback(() => {
     setLoading(true);
     deactivate();
-  };
+  }, [setLoading, deactivate]);
 
-  const topUpPageContent = React.useMemo(() => {
+  const topUpPageContent = useMemo(() => {
     if (loading) {
       return <Spinner className="mt40" />;
     }

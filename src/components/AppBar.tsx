@@ -212,11 +212,29 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           }
           dropAlign={{ top: 'bottom', right: 'right' }}
           dropContent={
-            <Box pad="small">
-              <DropdownLink to={routesEnum.lighthouse}>Lighthouse</DropdownLink>
-              <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
-              <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
-              <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
+            <Box pad="medium">
+              <Text className="my10">
+                <b>Execution clients</b>
+              </Text>
+              <Box pad="small">
+                <DropdownLink to={routesEnum.besu}>Besu</DropdownLink>
+                <DropdownLink to={routesEnum.nethermind}>
+                  Nethermind
+                </DropdownLink>
+                <DropdownLink to={routesEnum.erigon}>Erigon</DropdownLink>
+                <DropdownLink to={routesEnum.geth}>Geth</DropdownLink>
+              </Box>
+              <Text className="my10">
+                <b>Consensus clients</b>
+              </Text>
+              <Box pad="small">
+                <DropdownLink to={routesEnum.lighthouse}>
+                  Lighthouse
+                </DropdownLink>
+                <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
+                <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
+                <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
+              </Box>
             </Box>
           }
         />
@@ -331,6 +349,17 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <DropdownLink to={routesEnum.languagesPage}>
                     <FormattedMessage defaultMessage="Languages" />
                   </DropdownLink>
+                  <Text className="my20">
+                    <b>
+                      <FormattedMessage defaultMessage="Execution clients" />
+                    </b>
+                  </Text>
+                  <DropdownLink to={routesEnum.besu}>Besu</DropdownLink>
+                  <DropdownLink to={routesEnum.nethermind}>
+                    Nethermind
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.erigon}>Erigon</DropdownLink>
+                  <DropdownLink to={routesEnum.geth}>Geth</DropdownLink>
                   <Text className="my20">
                     <b>
                       <FormattedMessage defaultMessage="Consensus clients" />

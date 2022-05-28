@@ -72,7 +72,7 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="EL + CL = Ethereum" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to was the staking deposit contract." />
+            <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to has been the staking deposit contract." />
           </Text>
           <Text className="mt20">
             <FormattedMessage defaultMessage="With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have access to the events of the execution layer." />
@@ -131,7 +131,7 @@ export const MergeReadiness = () => {
             </Text>
           </Alert>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="See you consensus layer client documentation for client-specific instructions on how to set this." />
+            <FormattedMessage defaultMessage="See your consensus layer client documentation for client-specific instructions on how to set this." />
           </Text>
           <ul className="sub-checklist-item">
             <li className="py5">

@@ -365,9 +365,6 @@
   "7tRtDE": {
     "message": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
   },
-  "8+8ZA1": {
-    "message": "Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to was the staking deposit contract."
-  },
   "80eWKU": {
     "message": "True balance"
   },
@@ -1359,6 +1356,9 @@
   "WFVzvu": {
     "message": "{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
   },
+  "WGPxqY": {
+    "message": "Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
+  },
   "WJA1/H": {
     "message": "Remember"
   },
@@ -1552,6 +1552,9 @@
   },
   "bR1R2M": {
     "message": "Use this as a reference during client setup to check off important steps."
+  },
+  "bRGoZZ": {
+    "message": "See your consensus layer client documentation for client-specific instructions on how to set this."
   },
   "bUk/lm": {
     "message": "Besu installation documentation"
@@ -1874,9 +1877,6 @@
   },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
-  },
-  "jFBk0z": {
-    "message": "See you consensus layer client documentation for client-specific instructions on how to set this."
   },
   "jXer8/": {
     "message": "Prysm documentation"

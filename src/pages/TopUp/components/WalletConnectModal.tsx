@@ -40,8 +40,14 @@ const Close = styled.img`
 
 const WalletConnectModal: React.FC<{
   loading: boolean;
-  setLoading: any;
-}> = ({ loading, setLoading }: { loading: any; setLoading: any }) => {
+  setLoading: (_: boolean) => void;
+}> = ({
+  loading,
+  setLoading,
+}: {
+  loading: boolean;
+  setLoading: (_: boolean) => void;
+}) => {
   const {
     connector,
     error,

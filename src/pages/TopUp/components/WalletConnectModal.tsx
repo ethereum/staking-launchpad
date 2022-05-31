@@ -40,13 +40,13 @@ const Close = styled.img`
 
 const WalletConnectModal: React.FC<{
   loading: boolean;
-  setLoading: (_: boolean) => void;
+  handleModalClose: () => void;
 }> = ({
   loading,
-  setLoading,
+  handleModalClose,
 }: {
   loading: boolean;
-  setLoading: (_: boolean) => void;
+  handleModalClose: () => void;
 }) => {
   const {
     connector,
@@ -66,10 +66,6 @@ const WalletConnectModal: React.FC<{
 
     return !Object.values(AllowedNetworks).includes(network);
   }, [chainId]);
-
-  const handleClose = () => {
-    setLoading(false);
-  };
 
   if (isInvalidNetwork) {
     return (
@@ -102,7 +98,7 @@ const WalletConnectModal: React.FC<{
 
   return (
     <Layer>
-      <Close src={closeGlyph} onClick={handleClose} />
+      <Close src={closeGlyph} onClick={handleModalClose} />
       <Heading level={2} color="blueMedium" style={{ margin: '20px auto' }}>
         <FormattedMessage defaultMessage="Connect a wallet" />
       </Heading>

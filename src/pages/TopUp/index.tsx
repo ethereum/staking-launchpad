@@ -166,10 +166,14 @@ const _TopUpPage: React.FC<Props> = () => {
     setSelectedValidator,
   ] = useState<BeaconChainValidator | null>(null);
 
-  const handleConnect = useCallback(() => {
+  const handleConnect = useCallback((): void => {
     setLoading(true);
     deactivate();
   }, [setLoading, deactivate]);
+
+  const handleModalClose = useCallback((): void => {
+    setLoading(false);
+  }, [setLoading]);
 
   const topUpPageContent = useMemo(() => {
     if (loading) {
@@ -268,7 +272,10 @@ const _TopUpPage: React.FC<Props> = () => {
   return (
     <>
       {/* the wallet connect modal controls it's own display, so it is always rendered here */}
-      <WalletConnectModal loading={loading} setLoading={setLoading} />
+      <WalletConnectModal
+        loading={loading}
+        handleModalClose={handleModalClose}
+      />
 
       <PageTemplate
         title={formatMessage({ defaultMessage: 'Top up a validator' })}

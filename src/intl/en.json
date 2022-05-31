@@ -56,6 +56,9 @@
   "/h0DGY": {
     "message": "Why the {pricePerValidator} ETH maximum?"
   },
+  "/iuoP7": {
+    "message": "{networkBold} will be the first longstanding public testnet to undergo The Merge. Historically a proof-of-work testnet, {network} now has its own proof-of-stake beacon chain which will be merged with the execution layer in the near future (if it hasn't happened already)."
+  },
   "/jJLYy": {
     "message": "Transactions"
   },
@@ -328,6 +331,9 @@
   "6nh4de": {
     "message": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
   },
+  "6uPbCH": {
+    "message": "{network} version of this page"
+  },
   "7+Domh": {
     "message": "Notes"
   },
@@ -379,6 +385,9 @@
   },
   "8JtiQS": {
     "message": "Does the contract address listed on the website match?"
+  },
+  "8L6ufI": {
+    "message": "Step-by-step guide for how to spin up a {network} node and validator"
   },
   "8MbqAe": {
     "message": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have access to the events of the execution layer."
@@ -458,6 +467,9 @@
   },
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
+  },
+  "ALEY4e": {
+    "message": "{community} {network} guide"
   },
   "ARyG2Z": {
     "message": "When withdrawals?"
@@ -839,9 +851,6 @@
   "JhUYU3": {
     "message": "Download CLI app"
   },
-  "JluJPG": {
-    "message": "Visit here to get the latest information on how to get involved with #TestingTheMerge on other public testnets as details unfold."
-  },
   "JqVeL+": {
     "message": "Resource usage can vary significantly between clients. Research the different clients if you're working with resource constraints."
   },
@@ -986,6 +995,9 @@
   "MmZjeu": {
     "message": "Top-up details"
   },
+  "MoIew2": {
+    "message": "Step-by-step guide for how to spin up a node and validator on merge testnets"
+  },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
   },
@@ -1059,6 +1071,9 @@
   "OmAmmi": {
     "message": "More on the Merge"
   },
+  "Oop93W": {
+    "message": "{site} {network} announcement"
+  },
   "OsO8ik": {
     "message": "I am technically capable of setting up and running a validator."
   },
@@ -1126,6 +1141,9 @@
   },
   "QWDxrk": {
     "message": "Key management"
+  },
+  "QapNAM": {
+    "message": "{network} homepage"
   },
   "QgOvR0": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
@@ -1247,6 +1265,12 @@
   },
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
+  },
+  "TNTj2N": {
+    "message": "{community} merge testnet guide"
+  },
+  "TbV4N8": {
+    "message": "{community} Discord (faucet)"
   },
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
@@ -1437,6 +1461,9 @@
   },
   "YFT4rG": {
     "message": "Keys"
+  },
+  "YIjr32": {
+    "message": "For those who want more control and less hand-holding"
   },
   "YP03/j": {
     "message": "Afterwards, validators are still encouraged to join (the more validators the more decentralized the network), but it’s not absolutely essential that they do so (so the interest rate can fall)."
@@ -1674,6 +1701,9 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
+  "e4wHN4": {
+    "message": "{network} Staking Launchpad"
+  },
   "eF9RbC": {
     "message": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
   },
@@ -1770,9 +1800,6 @@
   },
   "grF2gm": {
     "message": "Each key-pair associated with a validator requires locking {ethPerValidator} to be activated, which represents your initial balance as well as your {initialAndMaximum} voting power for any validator."
-  },
-  "grUWd3": {
-    "message": "Kiln is the latest public testnet to have undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
   },
   "gsuLMm": {
     "message": "Greek"
@@ -1878,6 +1905,9 @@
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
+  "jQTc9t": {
+    "message": "Visit here to get the latest information on how to get involved with {testingTheMerge} on other public testnets as details unfold."
+  },
   "jXer8/": {
     "message": "Prysm documentation"
   },
@@ -1911,6 +1941,9 @@
   },
   "jytPQU": {
     "message": "Nimbus documentation"
+  },
+  "jzGCBy": {
+    "message": "The {network} faucets have been abused, and are limited, but the folks at EthStaker will do their best to help you out"
   },
   "k43c+l": {
     "message": "View Wagyu Key Gen audit by HashCloak"
@@ -2026,6 +2059,9 @@
   "mc27Pv": {
     "message": "A {validator} is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
   },
+  "mcQpea": {
+    "message": "Everything you need to get started with the network, including a faucet"
+  },
   "mhyltV": {
     "message": "I've set my graffiti flag."
   },
@@ -2069,6 +2105,9 @@
   "ntG2by": {
     "message": "Advanced system architecture"
   },
+  "nyx/4g": {
+    "message": "How to run a node on {network}"
+  },
   "nz27+c": {
     "description": "{variables} social media platform links to Discord and Reddit (do not translate names)",
     "message": "If you have questions, EthStaker community is a good place to get help! You can find support on {discord} or {reddit}."
@@ -2093,6 +2132,9 @@
   },
   "ohspQX": {
     "message": "Responsibilities"
+  },
+  "olByWa": {
+    "message": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
   },
   "omJNJw": {
     "message": "Warning!"
@@ -2147,8 +2189,14 @@
   "ptWiT7": {
     "message": "I've simulated how to manually stop and restart my Beacon Node (BN) and Validator Client (VC) gracefully."
   },
+  "pxfiWL": {
+    "message": "{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some ETH, interacting with some contracts, or deploying your own."
+  },
   "pyWt01": {
     "message": "Deposit summary"
+  },
+  "q+ux+M": {
+    "message": "{network} is open for anyone to interact with. Try sending some transactions, running a validator on its new beacon chain, or see if you can get slashed!"
   },
   "q2XW/k": {
     "message": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
@@ -2503,9 +2551,6 @@
   },
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"
-  },
-  "zFhvy5": {
-    "message": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in #TestingTheMerge. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
   },
   "zGkAVo": {
     "message": "At the other end of the spectrum, if your balance is closer to 31 ETH, it’s probably not worth adding the extra ETH required to get back to 32."

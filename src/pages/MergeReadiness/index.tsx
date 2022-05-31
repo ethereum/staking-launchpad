@@ -207,19 +207,128 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="#TestingTheMerge" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in #TestingTheMerge. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup." />
+            <FormattedMessage
+              defaultMessage="While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
+              values={{ testingTheMerge: <code>#TestingTheMerge</code> }}
+            />
           </Text>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Kiln is the latest public testnet to have undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!" />
+            <FormattedMessage
+              defaultMessage="{networkBold} will be the first longstanding public testnet to undergo The Merge. Historically a proof-of-work testnet, {network} now has its own proof-of-stake beacon chain which will be merged with the execution layer in the near future (if it hasn't happened already)."
+              values={{
+                networkBold: <strong>Ropsten</strong>,
+                network: 'Ropsten',
+              }}
+            />
+          </Text>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="{network} is open for anyone to interact with. Try sending some transactions, running a validator on its new beacon chain, or see if you can get slashed!"
+              values={{ network: 'Ropsten' }}
+            />
+          </Text>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <Link primary inline to="https://discord.io/ethstaker">
+                  <FormattedMessage
+                    defaultMessage="{community} Discord (faucet)"
+                    values={{ community: 'EthStaker' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage
+                  defaultMessage="The {network} faucets have been abused, and are limited, but the folks at EthStaker will do their best to help you out"
+                  values={{ network: 'Ropsten' }}
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text className="inline">
+                <Link
+                  primary
+                  inline
+                  to="https://github.com/eth-educators/eth-docker/blob/merge-getready/MERGE-READY.md"
+                >
+                  <FormattedMessage
+                    defaultMessage="{community} merge testnet guide"
+                    values={{ community: 'EthStaker' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage defaultMessage="Step-by-step guide for how to spin up a node and validator on merge testnets" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://notes.ethereum.org/@launchpad/ropsten"
+                >
+                  <FormattedMessage
+                    defaultMessage="How to run a node on {network}"
+                    values={{ network: 'Ropsten' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage defaultMessage="For those who want more control and less hand-holding" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://ropsten.launchpad.ethereum.org"
+                >
+                  <FormattedMessage
+                    defaultMessage="{network} Staking Launchpad"
+                    values={{ network: 'Ropsten' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage
+                  defaultMessage="{network} version of this page"
+                  values={{ network: 'Ropsten' }}
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://blog.ethereum.org/2022/05/30/ropsten-merge-announcement/"
+                >
+                  <FormattedMessage
+                    defaultMessage="{site} {network} announcement"
+                    values={{
+                      site: 'EF Blog',
+                      network: 'Ropsten',
+                    }}
+                  />
+                </Link>
+              </Text>
+            </li>
+          </ul>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some ETH, interacting with some contracts, or deploying your own."
+              values={{ networkBold: <strong>Kiln</strong> }}
+            />
           </Text>
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
                 <Link primary inline to="https://kiln.themerge.dev/">
-                  Kiln Homepage
+                  <FormattedMessage
+                    defaultMessage="{network} homepage"
+                    values={{ network: 'Kiln' }}
+                  />
                 </Link>
-                - Everything you need to get started with the network, including
-                a faucet
+                {' - '}
+                <FormattedMessage defaultMessage="Everything you need to get started with the network, including a faucet" />
               </Text>
             </li>
             <li className="py5">
@@ -229,10 +338,19 @@ export const MergeReadiness = () => {
                   inline
                   to="https://github.com/remyroy/ethstaker/blob/main/merge-devnet.md"
                 >
-                  ETHStaker Kiln Guide
+                  <FormattedMessage
+                    defaultMessage="{community} {network} guide"
+                    values={{
+                      community: 'EthStaker',
+                      network: 'Kiln',
+                    }}
+                  />
                 </Link>
-                - Step-by-step guide for how to spin up a Kiln node and
-                validator
+                {' - '}
+                <FormattedMessage
+                  defaultMessage="Step-by-step guide for how to spin up a {network} node and validator"
+                  values={{ network: 'Kiln' }}
+                />
               </Text>
             </li>
             <li className="py5">
@@ -242,17 +360,28 @@ export const MergeReadiness = () => {
                   inline
                   to="https://notes.ethereum.org/@launchpad/kiln"
                 >
-                  How to run a node on Kiln
+                  <FormattedMessage
+                    defaultMessage="How to run a node on {network}"
+                    values={{ network: 'Kiln' }}
+                  />
                 </Link>
-                - For those who want more control and less hand-holding
+                {' - '}
+                <FormattedMessage defaultMessage="For those who want more control and less hand-holding" />
               </Text>
             </li>
             <li className="py5">
               <Text>
                 <Link primary inline to="https://kiln.launchpad.ethereum.org">
-                  Kiln Staking Launchpad
+                  <FormattedMessage
+                    defaultMessage="{network} Staking Launchpad"
+                    values={{ network: 'Kiln' }}
+                  />
                 </Link>
-                - Kiln version of this page
+                {' - '}
+                <FormattedMessage
+                  defaultMessage="{network} version of this page"
+                  values={{ network: 'Kiln' }}
+                />
               </Text>
             </li>
             <li className="py5">
@@ -262,7 +391,13 @@ export const MergeReadiness = () => {
                   inline
                   to="https://blog.ethereum.org/2022/03/14/kiln-merge-testnet/"
                 >
-                  EF Blog Announcement
+                  <FormattedMessage
+                    defaultMessage="{site} {network} announcement"
+                    values={{
+                      site: 'EF Blog',
+                      network: 'Kiln',
+                    }}
+                  />
                 </Link>
               </Text>
             </li>
@@ -311,7 +446,7 @@ export const MergeReadiness = () => {
             </Text>
             <Text className="mt20">
               <FormattedMessage
-                defaultMessage="Visit here to get the latest information on how to get involved with #TestingTheMerge on other public testnets as details unfold."
+                defaultMessage="Visit here to get the latest information on how to get involved with {testingTheMerge} on other public testnets as details unfold."
                 values={{
                   discord: (
                     <Link inline primary to="https://discord.io/ethstaker">

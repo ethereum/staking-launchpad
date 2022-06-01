@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { CheckBox } from 'grommet';
+import { FormNext } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import { Link } from '../../components/Link';
@@ -50,8 +51,87 @@ const Subtitle = styled.p`
   margin-bottom: 32px;
 `;
 
+const CardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 1rem;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    flex-direction: column;
+  }
+`;
+
+const Card = styled.div`
+  padding: 24px;
+  border: 1px solid ${p => p.theme.gray.dark};
+  border-radius: 4px;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
+    margin: 0px;
+    margin-top: 16px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
+`;
+
+const BoldGreen = styled.span`
+  color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
+  font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
+  font-weight: bold;
+`;
+
+const StyledLink = styled(Link as any)`
+  width: 100%;
+`;
+
+const SectionHeader = styled.div`
+  margin: 3rem 0 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &:before {
+    content: '';
+    display: block;
+    height: 3rem;
+    margin-top: -3rem;
+    visibility: hidden;
+  }
+`;
+
 export const MergeReadiness = () => {
   const { formatMessage } = useIntl();
+
+  const sections = [
+    {
+      heading: <FormattedMessage defaultMessage="Task 1" />,
+      title: <FormattedMessage defaultMessage="Both layers required" />,
+      id: 'el-plus-cl',
+    },
+    {
+      heading: <FormattedMessage defaultMessage="Task 2" />,
+      title: <FormattedMessage defaultMessage="Authenticate Engine API" />,
+      id: 'authenticate',
+    },
+    {
+      heading: <FormattedMessage defaultMessage="Task 3" />,
+      title: <FormattedMessage defaultMessage="Set fee recipient" />,
+      id: 'fee-recipient',
+    },
+    {
+      heading: <FormattedMessage defaultMessage="Bonus" />,
+      title: <FormattedMessage defaultMessage="Additional reminders" />,
+      id: 'additional-reminders',
+    },
+  ];
 
   return (
     <PageTemplate
@@ -63,26 +143,52 @@ export const MergeReadiness = () => {
           <FormattedMessage defaultMessage="The long awaited transition to proof-of-stake via the Merge is rapidly approaching, bringing Ethereum one step closer to a more sustainable ecosystem." />
         </Text>
         <Text className="mt20">
-          <FormattedMessage defaultMessage="Before the switch, there are a couple things solo stakers and validator services need to be aware of." />
+          <FormattedMessage defaultMessage="Before the switch, there are a couple things solo stakers and validator services need to be aware of, and a few tasks you may need to attend to." />
         </Text>
       </Subtitle>
+
+      <CardContainer>
+        {sections.map(({ heading, title, id }) => (
+          <StyledLink to={`#${id}`} inline isTextLink={false} key={id}>
+            <Card>
+              <div>
+                <Heading level={4} className="mb10">
+                  {heading}
+                </Heading>
+                <BoldGreen className="mr10" fontSize={24}>
+                  {title}
+                </BoldGreen>
+              </div>
+              <FormNext size="large" />
+            </Card>
+          </StyledLink>
+        ))}
+      </CardContainer>
+
       <ChecklistPageStyles>
-        <section>
-          <Heading level={3} id="el-plus-cl">
-            <FormattedMessage defaultMessage="EL + CL = Ethereum" />
+        <SectionHeader id={sections[0].id}>
+          <Heading level={3}>
+            {sections[0].heading}
+            {' - '}
+            {sections[0].title}
           </Heading>
+          <Text className="mt10">
+            <FormattedMessage defaultMessage="Post-merge, an Ethereum node will be comprised of both an execution layer (EL) client, and a consensus layer (CL) client. EL + CL = Ethereum." />
+          </Text>
+        </SectionHeader>
+        <section>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to has been the staking deposit contract." />
           </Text>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have access to the events of the execution layer." />
+            <FormattedMessage defaultMessage="With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have trusted access to the events of the execution layer. Trust only your own node." />
           </Text>
-          <Alert variant="error" className="my40">
+          <Alert variant="error" className="my30">
             <Text>
               <FormattedMessage defaultMessage="At time of the Merge, Infura and Alchemy will no longer be viable options to outsource execution layer responsibilities." />
             </Text>
             <Text className="mt20">
-              <FormattedMessage defaultMessage="To prevent downtime at time of the Merge, be sure your node is running both an EL client, as well as a CL client." />
+              <FormattedMessage defaultMessage="If you have not yet done so, be sure your node is running both an EL client, as well as a CL client, to prevent downtime at time of the Merge." />
             </Text>
           </Alert>
           <Text className="mb10">
@@ -103,13 +209,39 @@ export const MergeReadiness = () => {
             }
           />
         </section>
-        <section>
-          <Heading level={3} id="engine-api-jwt">
-            <FormattedMessage defaultMessage="Engine API and JWT" />
+        <SectionHeader id={sections[1].id}>
+          <Heading level={3}>
+            {sections[1].heading}
+            {' - '}
+            {sections[1].title}
           </Heading>
-          <Text className="mt20">
-            <FormattedMessage defaultMessage="Communication between the execution layer and consensus layer will occur using the Engine API. This is a new set of JSON RPC methods that can be used to communicate between the two client layers." />
+          <Text className="mt10">
+            <FormattedMessage defaultMessage="The execution and consensus layers work together tightly, and require authentication to stay safe. " />
           </Text>
+        </SectionHeader>
+        <section>
+          {/* <Heading level={3} id="engine-api-jwt">
+            <FormattedMessage defaultMessage="Engine API" />
+          </Heading> */}
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Communication between the execution layer and consensus layer will occur using the {engineApi}. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
+              values={{
+                engineApi: (
+                  <Link
+                    inline
+                    primary
+                    to="https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md"
+                  >
+                    Engine API
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          {/* <Heading level={3} id="engine-api-jwt">
+            <FormattedMessage defaultMessage="JWT" />
+          </Heading> */}
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both EL and CL) to properly authenticate the Engine API, allowing them to properly communicate between one another."
@@ -126,7 +258,7 @@ export const MergeReadiness = () => {
               }}
             />
           </Text>
-          <Alert variant="error" className="my40">
+          <Alert variant="error" className="my30">
             <Text>
               <FormattedMessage defaultMessage="Two-way communication between the EL client and CL client requires a JWT secret for authentication, and is essential for your node to be functional." />
             </Text>
@@ -223,17 +355,24 @@ export const MergeReadiness = () => {
             }
           />
         </section>
-        <section>
-          <Heading level={3} id="fee-recipient">
-            <FormattedMessage defaultMessage="Fee recipient" />
+        <SectionHeader id={sections[2].id}>
+          <Heading level={3}>
+            {sections[2].heading}
+            {' - '}
+            {sections[2].title}
           </Heading>
+          <Text className="mt10">
+            <FormattedMessage defaultMessage="Fees rewards are coming to validators, don't miss out!" />
+          </Text>
+        </SectionHeader>
+        <section>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees." />
           </Text>
           <Text className="mt20">
             <FormattedMessage defaultMessage="These fees are paid by whoever submitted the transaction and come in the form of ETH on the execution layer (Mainnet). These rewards are not accounted for in your validator balance which is maintained on the consensus layer." />
           </Text>
-          <Alert variant="warning" className="my40">
+          <Alert variant="warning" className="my30">
             <Text>
               <FormattedMessage
                 defaultMessage="As such, stakers must provide a {feeRecipient} address to their consensus client in order to receive these rewards. This is a normal Ethereum address that you're used to."
@@ -305,9 +444,9 @@ export const MergeReadiness = () => {
             }
           />
         </section>
-        <Heading level={3} className="mt50 mb30" id="additional-reminders">
-          <FormattedMessage defaultMessage="Additional reminders" />
-        </Heading>
+        <SectionHeader id={sections[3].id}>
+          <Heading level={3}>{sections[3].title}</Heading>
+        </SectionHeader>
         <section>
           <Heading level={3}>
             <FormattedMessage defaultMessage="When Merge?" />
@@ -541,7 +680,7 @@ export const MergeReadiness = () => {
               }}
             />
           </Text>
-          <Alert variant="info" className="my40">
+          <Alert variant="info" className="mt40">
             <Text>
               <FormattedMessage
                 defaultMessage="Don't forget to head over to the {discord} where you'll find a {testingTheMerge} channel loaded with discussion on how you can get more involved and make sure you're prepared."

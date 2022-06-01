@@ -404,9 +404,6 @@
   "8L6ufI": {
     "message": "Step-by-step guide for how to spin up a {network} node and validator"
   },
-  "8MbqAe": {
-    "message": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have access to the events of the execution layer."
-  },
   "8Rj/6A": {
     "message": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
   },
@@ -419,9 +416,6 @@
   },
   "8boRAk": {
     "message": "slashings"
-  },
-  "8t2y/7": {
-    "message": "Fee recipient"
   },
   "8wd0q5": {
     "message": "An Ethereum client designed to be enterprise-friendly for both public and private, permissioned network use cases."
@@ -734,6 +728,9 @@
   "GDaRAW": {
     "message": "Make sure you aren't being phished"
   },
+  "GKDM0r": {
+    "message": "If you have not yet done so, be sure your node is running both an EL client, as well as a CL client, to prevent downtime at time of the Merge."
+  },
   "GN2Cu5": {
     "message": "consensus client"
   },
@@ -769,6 +766,9 @@
   },
   "H0lQfu": {
     "message": "Merge Readiness Checklist"
+  },
+  "H4W8nj": {
+    "message": "Authenticate Engine API"
   },
   "H5+NAX": {
     "message": "Balance"
@@ -847,9 +847,6 @@
   },
   "J7T0SR": {
     "message": "Nimbus installation documentation"
-  },
-  "JAF4Ed": {
-    "message": "Engine API and JWT"
   },
   "JAiV0o": {
     "message": "In other words, to keep you honest, your actions need to have financial consequences."
@@ -1166,6 +1163,9 @@
   "QOAgQF": {
     "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
   },
+  "QRUdO6": {
+    "message": "Set fee recipient"
+  },
   "QWDxrk": {
     "message": "Key management"
   },
@@ -1192,6 +1192,9 @@
   },
   "R8eePn": {
     "message": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
+  },
+  "R9umf+": {
+    "message": "Fees rewards are coming to validators, don't miss out!"
   },
   "RCGrka": {
     "message": "only way"
@@ -1311,9 +1314,6 @@
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
-  "Ts47PO": {
-    "message": "Communication between the execution layer and consensus layer will occur using the Engine API. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
-  },
   "U/NPbq": {
     "message": "German"
   },
@@ -1422,6 +1422,9 @@
   "WTPUDZ": {
     "message": "These steps are optional but are recommended to optimize your node."
   },
+  "WTfeiS": {
+    "message": "Post-merge, an Ethereum node will be comprised of both an execution layer (EL) client, and a consensus layer (CL) client. EL + CL = Ethereum."
+  },
   "WdDGn6": {
     "message": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
   },
@@ -1430,6 +1433,9 @@
   },
   "Wl6cI3": {
     "message": "Please accept the conditions above."
+  },
+  "WptkFF": {
+    "message": "Both layers required"
   },
   "Wxmhku": {
     "message": "These fees are paid by whoever submitted the transaction and come in the form of ETH on the execution layer (Mainnet). These rewards are not accounted for in your validator balance which is maintained on the consensus layer."
@@ -1492,6 +1498,9 @@
   "YFT4rG": {
     "message": "Keys"
   },
+  "YHk9Pe": {
+    "message": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have trusted access to the events of the execution layer. Trust only your own node."
+  },
   "YIjr32": {
     "message": "For those who want more control and less hand-holding"
   },
@@ -1519,9 +1528,6 @@
   },
   "YkznEp": {
     "message": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
-  },
-  "Yn5qLy": {
-    "message": "To prevent downtime at time of the Merge, be sure your node is running both an EL client, as well as a CL client."
   },
   "YqsgWz": {
     "message": "Slovenian"
@@ -1652,9 +1658,6 @@
   "cJX99/": {
     "message": "Check your favorite Beacon Chain block explorer:"
   },
-  "cK92+s": {
-    "message": "EL + CL = Ethereum"
-  },
   "cPsIkp": {
     "message": "Become a validator and help secure the future of Ethereum."
   },
@@ -1681,6 +1684,9 @@
   },
   "cpxfOR": {
     "message": "What are withdrawal credentials?"
+  },
+  "cwYSyN": {
+    "message": "Task 3"
   },
   "cyNFM3": {
     "message": "Withdrawing your deposit will not be possible until the Shanghai upgrade planned for after the Merge."
@@ -1711,6 +1717,9 @@
   },
   "dTOtPO": {
     "message": "Top Up"
+  },
+  "da/gCQ": {
+    "message": "Task 2"
   },
   "deLJOg": {
     "message": "Upload a valid json file."
@@ -1890,6 +1899,9 @@
   },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
+  },
+  "hzX7K4": {
+    "message": "Task 1"
   },
   "iCpuph": {
     "message": "Clients"
@@ -2331,6 +2343,12 @@
   "sXV95+": {
     "message": "CPU and RAM"
   },
+  "saDFoR": {
+    "message": "Bonus"
+  },
+  "scfDDt": {
+    "message": "Communication between the execution layer and consensus layer will occur using the {engineApi}. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
+  },
   "sdQRah": {
     "description": "{NETWORK_NAME} is name of network, do not translate",
     "message": "I've synced my beacon node on {NETWORK_NAME}."
@@ -2471,9 +2489,6 @@
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
   },
-  "vmXkL3": {
-    "message": "Before the switch, there are a couple things solo stakers and validator services need to be aware of."
-  },
   "vyvUB5": {
     "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
   },
@@ -2487,6 +2502,9 @@
   "wJy3tO": {
     "message": "Initial setup"
   },
+  "wPR6Js": {
+    "message": "Before the switch, there are a couple things solo stakers and validator services need to be aware of, and a few tasks you may need to attend to."
+  },
   "wawegX": {
     "message": "fishing rod"
   },
@@ -2495,6 +2513,9 @@
   },
   "wdb1NC": {
     "message": "More on proof of stake"
+  },
+  "wea8Ie": {
+    "message": "The execution and consensus layers work together tightly, and require authentication to stay safe."
   },
   "wm04oC": {
     "message": "Run the following command:"

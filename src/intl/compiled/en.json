@@ -1113,12 +1113,6 @@
       "value": " node and validator"
     }
   ],
-  "8MbqAe": [
-    {
-      "type": 0,
-      "value": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have access to the events of the execution layer."
-    }
-  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -1149,12 +1143,6 @@
     {
       "type": 0,
       "value": "slashings"
-    }
-  ],
-  "8t2y/7": [
-    {
-      "type": 0,
-      "value": "Fee recipient"
     }
   ],
   "8wd0q5": [
@@ -1927,6 +1915,12 @@
       "value": "Make sure you aren't being phished"
     }
   ],
+  "GKDM0r": [
+    {
+      "type": 0,
+      "value": "If you have not yet done so, be sure your node is running both an EL client, as well as a CL client, to prevent downtime at time of the Merge."
+    }
+  ],
   "GN2Cu5": [
     {
       "type": 0,
@@ -1997,6 +1991,12 @@
     {
       "type": 0,
       "value": "Merge Readiness Checklist"
+    }
+  ],
+  "H4W8nj": [
+    {
+      "type": 0,
+      "value": "Authenticate Engine API"
     }
   ],
   "H5+NAX": [
@@ -2199,12 +2199,6 @@
     {
       "type": 0,
       "value": "Nimbus installation documentation"
-    }
-  ],
-  "JAF4Ed": [
-    {
-      "type": 0,
-      "value": "Engine API and JWT"
     }
   ],
   "JAiV0o": [
@@ -3027,6 +3021,12 @@
       "value": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
     }
   ],
+  "QRUdO6": [
+    {
+      "type": 0,
+      "value": "Set fee recipient"
+    }
+  ],
   "QWDxrk": [
     {
       "type": 0,
@@ -3115,6 +3115,12 @@
     {
       "type": 0,
       "value": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
+    }
+  ],
+  "R9umf+": [
+    {
+      "type": 0,
+      "value": "Fees rewards are coming to validators, don't miss out!"
     }
   ],
   "RCGrka": [
@@ -3385,12 +3391,6 @@
     {
       "type": 0,
       "value": "rpc-http-enabled documentation"
-    }
-  ],
-  "Ts47PO": [
-    {
-      "type": 0,
-      "value": "Communication between the execution layer and consensus layer will occur using the Engine API. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
     }
   ],
   "U/NPbq": [
@@ -3707,6 +3707,12 @@
       "value": "These steps are optional but are recommended to optimize your node."
     }
   ],
+  "WTfeiS": [
+    {
+      "type": 0,
+      "value": "Post-merge, an Ethereum node will be comprised of both an execution layer (EL) client, and a consensus layer (CL) client. EL + CL = Ethereum."
+    }
+  ],
   "WdDGn6": [
     {
       "type": 0,
@@ -3723,6 +3729,12 @@
     {
       "type": 0,
       "value": "Please accept the conditions above."
+    }
+  ],
+  "WptkFF": [
+    {
+      "type": 0,
+      "value": "Both layers required"
     }
   ],
   "Wxmhku": [
@@ -3911,6 +3923,12 @@
       "value": "Keys"
     }
   ],
+  "YHk9Pe": [
+    {
+      "type": 0,
+      "value": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have trusted access to the events of the execution layer. Trust only your own node."
+    }
+  ],
   "YIjr32": [
     {
       "type": 0,
@@ -3991,12 +4009,6 @@
     {
       "type": 0,
       "value": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
-    }
-  ],
-  "Yn5qLy": [
-    {
-      "type": 0,
-      "value": "To prevent downtime at time of the Merge, be sure your node is running both an EL client, as well as a CL client."
     }
   ],
   "YqsgWz": [
@@ -4315,12 +4327,6 @@
       "value": "Check your favorite Beacon Chain block explorer:"
     }
   ],
-  "cK92+s": [
-    {
-      "type": 0,
-      "value": "EL + CL = Ethereum"
-    }
-  ],
   "cPsIkp": [
     {
       "type": 0,
@@ -4373,6 +4379,12 @@
     {
       "type": 0,
       "value": "What are withdrawal credentials?"
+    }
+  ],
+  "cwYSyN": [
+    {
+      "type": 0,
+      "value": "Task 3"
     }
   ],
   "cyNFM3": [
@@ -4437,6 +4449,12 @@
     {
       "type": 0,
       "value": "Top Up"
+    }
+  ],
+  "da/gCQ": [
+    {
+      "type": 0,
+      "value": "Task 2"
     }
   ],
   "deLJOg": [
@@ -4933,6 +4951,12 @@
     {
       "type": 0,
       "value": "I understand that it is important to keep my validator online and updated."
+    }
+  ],
+  "hzX7K4": [
+    {
+      "type": 0,
+      "value": "Task 1"
     }
   ],
   "iCpuph": [
@@ -6101,6 +6125,26 @@
       "value": "CPU and RAM"
     }
   ],
+  "saDFoR": [
+    {
+      "type": 0,
+      "value": "Bonus"
+    }
+  ],
+  "scfDDt": [
+    {
+      "type": 0,
+      "value": "Communication between the execution layer and consensus layer will occur using the "
+    },
+    {
+      "type": 1,
+      "value": "engineApi"
+    },
+    {
+      "type": 0,
+      "value": ". This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
+    }
+  ],
   "sdQRah": [
     {
       "type": 0,
@@ -6447,12 +6491,6 @@
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
     }
   ],
-  "vmXkL3": [
-    {
-      "type": 0,
-      "value": "Before the switch, there are a couple things solo stakers and validator services need to be aware of."
-    }
-  ],
   "vyvUB5": [
     {
       "type": 0,
@@ -6489,6 +6527,12 @@
       "value": "Initial setup"
     }
   ],
+  "wPR6Js": [
+    {
+      "type": 0,
+      "value": "Before the switch, there are a couple things solo stakers and validator services need to be aware of, and a few tasks you may need to attend to."
+    }
+  ],
   "wawegX": [
     {
       "type": 0,
@@ -6505,6 +6549,12 @@
     {
       "type": 0,
       "value": "More on proof of stake"
+    }
+  ],
+  "wea8Ie": [
+    {
+      "type": 0,
+      "value": "The execution and consensus layers work together tightly, and require authentication to stay safe."
     }
   ],
   "wm04oC": [

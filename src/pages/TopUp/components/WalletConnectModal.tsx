@@ -27,15 +27,19 @@ import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
+import { NakedButton } from '../../../components/NakedButton';
 import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
+import { useKeyPress } from '../../../hooks/useKeyPress';
+
+const CloseButton = styled(NakedButton)`
+  padding: 1rem;
+  align-self: flex-end;
+`;
 
 const Close = styled.img`
   height: 24px;
   width: 24px;
   display: block;
-  align-self: flex-end;
-  margin: 16px 16px 0 0;
-  cursor: pointer;
 `;
 
 const WalletConnectModal: React.FC<{
@@ -66,6 +70,8 @@ const WalletConnectModal: React.FC<{
 
     return !Object.values(AllowedNetworks).includes(network);
   }, [chainId]);
+
+  useKeyPress('Escape', handleModalClose);
 
   if (isInvalidNetwork) {
     return (
@@ -98,7 +104,9 @@ const WalletConnectModal: React.FC<{
 
   return (
     <Layer>
-      <Close src={closeGlyph} onClick={handleModalClose} />
+      <CloseButton onClick={handleModalClose}>
+        <Close src={closeGlyph} />
+      </CloseButton>
       <Heading level={2} color="blueMedium" style={{ margin: '20px auto' }}>
         <FormattedMessage defaultMessage="Connect a wallet" />
       </Heading>

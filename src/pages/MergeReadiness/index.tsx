@@ -104,6 +104,126 @@ export const MergeReadiness = () => {
           />
         </section>
         <section>
+          <Heading level={3} id="engine-api-jwt">
+            <FormattedMessage defaultMessage="Engine API and JWT" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="Communication between the execution layer and consensus layer will occur using the Engine API. This is a new set of JSON RPC methods that can be used to communicate between the two client layers." />
+          </Text>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both EL and CL) to properly authenticate the Engine API, allowing them to properly communicate between one another."
+              values={{
+                jwt: (
+                  <Link
+                    inline
+                    primary
+                    to="https://en.wikipedia.org/wiki/JSON_Web_Token"
+                  >
+                    <FormattedMessage defaultMessage="JWT" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Alert variant="error" className="my40">
+            <Text>
+              <FormattedMessage defaultMessage="Two-way communication between the EL client and CL client requires a JWT secret for authentication, and is essential for your node to be functional." />
+            </Text>
+          </Alert>
+          <Text className="my10">
+            <FormattedMessage defaultMessage="Instructions for how to set this JWT secret vary depending on the client—node operators should refer to their clients' documentation for instructions about how to generate and configure these." />
+          </Text>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#engine-jwt-secret"
+              >
+                Besu:{' '}
+                <FormattedMessage
+                  defaultMessage="CLI Syntax {engineJwtSecret}"
+                  values={{ engineJwtSecret: <code>engine-jwt-secret</code> }}
+                />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://geth.ethereum.org/docs/interface/merge#el---cl-communication"
+              >
+                Geth:{' '}
+                <FormattedMessage defaultMessage="The Merge, EL - CL communication" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://github.com/ledgerwatch/erigon#authentication-api"
+              >
+                Erigon: <FormattedMessage defaultMessage="Authentication API" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link primary inline to="https://lighthouse-book.sigmaprime.io/">
+                Lighthouse:{' '}
+                <FormattedMessage defaultMessage="Lighthouse Book" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwtsecretfile"
+              >
+                Nethermind:{' '}
+                <FormattedMessage
+                  defaultMessage="Running Nethermind Post Merge {jwtSecretFile}"
+                  values={{ jwtSecretFile: <code>JwtSecretFile</code> }}
+                />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link primary inline to="https://nimbus.guide/">
+                Nimbus: <FormattedMessage defaultMessage="The Nimbus book" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://docs.prylabs.network/docs/execution-node/authentication"
+              >
+                Prysm:{' '}
+                <FormattedMessage defaultMessage="Authenticating Execution Node Connections" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#3-configure-the-java-web-token"
+              >
+                Teku:{' '}
+                <FormattedMessage defaultMessage="Configure the Java Web" />
+              </Link>
+            </li>
+          </ul>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage
+                  defaultMessage="I have set up a shared JWT secret and made it available to {both} my execution layer client, and my consensus layer client (beacon node)"
+                  values={{ both: <strong>both</strong> }}
+                />
+              </Text>
+            }
+          />
+        </section>
+        <section>
           <Heading level={3} id="fee-recipient">
             <FormattedMessage defaultMessage="Fee recipient" />
           </Heading>
@@ -138,9 +258,25 @@ export const MergeReadiness = () => {
               <Link
                 primary
                 inline
+                to="https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html"
+              >
+                Lighthouse:{' '}
+                <FormattedMessage defaultMessage="Suggested Fee Recipient" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link primary inline to="https://nimbus.guide/">
+                Nimbus: <FormattedMessage defaultMessage="The Nimbus book" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
                 to="https://docs.prylabs.network/docs/execution-node/fee-recipient/"
               >
-                Prysm: Configuring a Fee Recipient Address
+                Prysm:{' '}
+                <FormattedMessage defaultMessage="Configuring a Fee Recipient Address" />
               </Link>
             </li>
             <li className="py5">
@@ -149,21 +285,8 @@ export const MergeReadiness = () => {
                 inline
                 to="https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient"
               >
-                Teku: Configure the fee recipient
-              </Link>
-            </li>
-            <li className="py5">
-              <Link
-                primary
-                inline
-                to="https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html"
-              >
-                Lighthouse: Suggested Fee Recipient
-              </Link>
-            </li>
-            <li className="py5">
-              <Link primary inline to="https://nimbus.guide/">
-                Nimbus: The Nimbus book
+                Teku:{' '}
+                <FormattedMessage defaultMessage="Configure the fee recipient" />
               </Link>
             </li>
           </ul>

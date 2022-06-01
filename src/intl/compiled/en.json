@@ -83,6 +83,12 @@
       "value": "Indonesian"
     }
   ],
+  "/E/Zm8": [
+    {
+      "type": 0,
+      "value": "Configure the Java Web"
+    }
+  ],
   "/QPc9s": [
     {
       "type": 0,
@@ -503,6 +509,12 @@
       "value": "Nimbus key management documentation"
     }
   ],
+  "2s0gAx": [
+    {
+      "type": 0,
+      "value": "Configuring a Fee Recipient Address"
+    }
+  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -665,6 +677,12 @@
     {
       "type": 0,
       "value": "Section 2 - During setup"
+    }
+  ],
+  "3wfaSi": [
+    {
+      "type": 0,
+      "value": "The Merge, EL - CL communication"
     }
   ],
   "3zCA2i": [
@@ -921,6 +939,16 @@
       "value": "You can improve the effective balance of this validator by topping up"
     }
   ],
+  "6VswA4": [
+    {
+      "type": 0,
+      "value": "Running Nethermind Post Merge "
+    },
+    {
+      "type": 1,
+      "value": "jwtSecretFile"
+    }
+  ],
   "6iVtAr": [
     {
       "type": 0,
@@ -969,6 +997,12 @@
     {
       "type": 0,
       "value": " is not supported in offline mode."
+    }
+  ],
+  "7BhfPl": [
+    {
+      "type": 0,
+      "value": "Lighthouse Book"
     }
   ],
   "7C4ikM": [
@@ -1485,6 +1519,12 @@
     {
       "type": 0,
       "value": "Additional reminders"
+    }
+  ],
+  "BcUgLk": [
+    {
+      "type": 0,
+      "value": "Suggested Fee Recipient"
     }
   ],
   "Bf2QKg": [
@@ -2161,6 +2201,12 @@
       "value": "Nimbus installation documentation"
     }
   ],
+  "JAF4Ed": [
+    {
+      "type": 0,
+      "value": "Engine API and JWT"
+    }
+  ],
   "JAiV0o": [
     {
       "type": 0,
@@ -2315,6 +2361,16 @@
     {
       "type": 0,
       "value": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
+    }
+  ],
+  "KcdQCZ": [
+    {
+      "type": 0,
+      "value": "CLI Syntax "
+    },
+    {
+      "type": 1,
+      "value": "engineJwtSecret"
     }
   ],
   "KjcAm2": [
@@ -2503,6 +2559,12 @@
     {
       "type": 0,
       "value": "What happens if my withdrawal key is stolen?"
+    }
+  ],
+  "MXVVcY": [
+    {
+      "type": 0,
+      "value": "Authenticating Execution Node Connections"
     }
   ],
   "MZEcKL": [
@@ -3325,6 +3387,12 @@
       "value": "rpc-http-enabled documentation"
     }
   ],
+  "Ts47PO": [
+    {
+      "type": 0,
+      "value": "Communication between the execution layer and consensus layer will occur using the Engine API. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -3883,6 +3951,12 @@
       "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
     }
   ],
+  "YTNPFn": [
+    {
+      "type": 0,
+      "value": "Instructions for how to set this JWT secret vary depending on the client—node operators should refer to their clients' documentation for instructions about how to generate and configure these."
+    }
+  ],
   "YX6pc0": [
     {
       "type": 1,
@@ -4375,6 +4449,12 @@
     {
       "type": 0,
       "value": "Where can I find troubleshooting support?"
+    }
+  ],
+  "dsQVUw": [
+    {
+      "type": 0,
+      "value": "The Nimbus book"
     }
   ],
   "dvr19k": [
@@ -5251,6 +5331,20 @@
       "value": " deposit have a URL you expect?"
     }
   ],
+  "lNzqua": [
+    {
+      "type": 0,
+      "value": "I have set up a shared JWT secret and made it available to "
+    },
+    {
+      "type": 1,
+      "value": "both"
+    },
+    {
+      "type": 0,
+      "value": " my execution layer client, and my consensus layer client (beacon node)"
+    }
+  ],
   "lQzdpT": [
     {
       "type": 0,
@@ -5337,6 +5431,20 @@
     {
       "type": 0,
       "value": "This is a non-reversible transaction."
+    }
+  ],
+  "lmr40S": [
+    {
+      "type": 0,
+      "value": "This communication is secured using a "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both EL and CL) to properly authenticate the Engine API, allowing them to properly communicate between one another."
     }
   ],
   "lo+Qqn": [
@@ -5829,6 +5937,12 @@
       "value": "I understand the early adopter and slashing risks."
     }
   ],
+  "qx+3RQ": [
+    {
+      "type": 0,
+      "value": "JWT"
+    }
+  ],
   "r2BH1M": [
     {
       "type": 0,
@@ -6095,6 +6209,12 @@
       "value": " client and set up a node"
     }
   ],
+  "tp1IPS": [
+    {
+      "type": 0,
+      "value": "Configure the fee recipient"
+    }
+  ],
   "tsfX5f": [
     {
       "type": 0,
@@ -6215,6 +6335,12 @@
     {
       "type": 0,
       "value": "Become a validator with Nimbus"
+    }
+  ],
+  "uoKhQB": [
+    {
+      "type": 0,
+      "value": "Authentication API"
     }
   ],
   "up+5YH": [
@@ -6539,6 +6665,12 @@
     {
       "type": 0,
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
+    }
+  ],
+  "yaf+Vw": [
+    {
+      "type": 0,
+      "value": "Two-way communication between the EL client and CL client requires a JWT secret for authentication, and is essential for your node to be functional."
     }
   ],
   "ydh1KU": [

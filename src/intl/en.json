@@ -35,6 +35,9 @@
   "/5Hyyf": {
     "message": "Indonesian"
   },
+  "/E/Zm8": {
+    "message": "Configure the Java Web"
+  },
   "/QPc9s": {
     "message": "You can signal your intent to stop validating by signing a voluntary exit message with your validator."
   },
@@ -194,6 +197,9 @@
   "2iH8Zc": {
     "message": "Nimbus key management documentation"
   },
+  "2s0gAx": {
+    "message": "Configuring a Fee Recipient Address"
+  },
   "2t/3ab": {
     "message": "The other file you just generated is {depositDataJson}. This file contains the public key(s) associated with your validator(s); You will need to upload this in the next step."
   },
@@ -241,6 +247,9 @@
   },
   "3tR/V9": {
     "message": "Section 2 - During setup"
+  },
+  "3wfaSi": {
+    "message": "The Merge, EL - CL communication"
   },
   "3zCA2i": {
     "description": "{code} values are terminal outputs and commands.",
@@ -325,6 +334,9 @@
   "6VIBSR": {
     "message": "You can improve the effective balance of this validator by topping up"
   },
+  "6VswA4": {
+    "message": "Running Nethermind Post Merge {jwtSecretFile}"
+  },
   "6iVtAr": {
     "message": "#TestingTheMerge"
   },
@@ -345,6 +357,9 @@
   },
   "793QlI": {
     "message": "{title} is not supported in offline mode."
+  },
+  "7BhfPl": {
+    "message": "Lighthouse Book"
   },
   "7C4ikM": {
     "message": "Merge panda emoji"
@@ -535,6 +550,9 @@
   },
   "BXoiVG": {
     "message": "Additional reminders"
+  },
+  "BcUgLk": {
+    "message": "Suggested Fee Recipient"
   },
   "Bf2QKg": {
     "message": "Validating is a long-term commitment"
@@ -830,6 +848,9 @@
   "J7T0SR": {
     "message": "Nimbus installation documentation"
   },
+  "JAF4Ed": {
+    "message": "Engine API and JWT"
+  },
   "JAiV0o": {
     "message": "In other words, to keep you honest, your actions need to have financial consequences."
   },
@@ -892,6 +913,9 @@
   },
   "KbUOQp": {
     "message": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
+  },
+  "KcdQCZ": {
+    "message": "CLI Syntax {engineJwtSecret}"
   },
   "KjcAm2": {
     "message": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
@@ -967,6 +991,9 @@
   },
   "MX00UO": {
     "message": "What happens if my withdrawal key is stolen?"
+  },
+  "MXVVcY": {
+    "message": "Authenticating Execution Node Connections"
   },
   "MZEcKL": {
     "message": "Bad validator behaviour"
@@ -1284,6 +1311,9 @@
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
+  "Ts47PO": {
+    "message": "Communication between the execution layer and consensus layer will occur using the Engine API. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
+  },
   "U/NPbq": {
     "message": "German"
   },
@@ -1474,6 +1504,9 @@
   },
   "YQJy4H": {
     "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
+  },
+  "YTNPFn": {
+    "message": "Instructions for how to set this JWT secret vary depending on the client—node operators should refer to their clients' documentation for instructions about how to generate and configure these."
   },
   "YX6pc0": {
     "message": "{client} is a {layerType}."
@@ -1684,6 +1717,9 @@
   },
   "dprf8W": {
     "message": "Where can I find troubleshooting support?"
+  },
+  "dsQVUw": {
+    "message": "The Nimbus book"
   },
   "dvr19k": {
     "message": "Setup"
@@ -2016,6 +2052,9 @@
     "description": "{ethAmount} will generally refer to 32 ETH",
     "message": "Does the site asking you for your {ethAmount} deposit have a URL you expect?"
   },
+  "lNzqua": {
+    "message": "I have set up a shared JWT secret and made it available to {both} my execution layer client, and my consensus layer client (beacon node)"
+  },
   "lQzdpT": {
     "description": "this is used as a command line flag, short for \"number of validators\"",
     "message": "num_validators"
@@ -2040,6 +2079,9 @@
   },
   "ll/zMW": {
     "message": "This is a non-reversible transaction."
+  },
+  "lmr40S": {
+    "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both EL and CL) to properly authenticate the Engine API, allowing them to properly communicate between one another."
   },
   "lo+Qqn": {
     "message": "change your wallet"
@@ -2234,6 +2276,9 @@
   "qwh6gM": {
     "message": "I understand the early adopter and slashing risks."
   },
+  "qx+3RQ": {
+    "message": "JWT"
+  },
   "r2BH1M": {
     "message": "Configure Prysm"
   },
@@ -2330,6 +2375,9 @@
     "description": "{ethClientType} is either execution or consensus, depending on which step user is on",
     "message": "Choose your {ethClientType} client and set up a node"
   },
+  "tp1IPS": {
+    "message": "Configure the fee recipient"
+  },
   "tsfX5f": {
     "message": "Confirm deposit"
   },
@@ -2375,6 +2423,9 @@
   },
   "ukfwum": {
     "message": "Become a validator with Nimbus"
+  },
+  "uoKhQB": {
+    "message": "Authentication API"
   },
   "up+5YH": {
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
@@ -2517,6 +2568,9 @@
   },
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
+  },
+  "yaf+Vw": {
+    "message": "Two-way communication between the EL client and CL client requires a JWT secret for authentication, and is essential for your node to be functional."
   },
   "ydh1KU": {
     "message": "Language information"

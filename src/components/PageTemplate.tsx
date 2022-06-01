@@ -41,8 +41,9 @@ const _PageTemplate = ({
   title,
   header = title,
 }: Props): JSX.Element => {
-  const isMergeReadinessPage =
-    window.location.pathname.substring(3) === routesEnum.mergeReadiness;
+  const isMergeReadinessPage = window.location.pathname
+    .substring(3)
+    .includes(routesEnum.mergeReadiness);
   return (
     <RainbowBackground>
       <Helmet>

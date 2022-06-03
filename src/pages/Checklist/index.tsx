@@ -682,6 +682,15 @@ export const Checklist = () => {
               </tbody>
             </PortTable>
           </ClientLayerContainer>
+          <Text>
+            <Link
+              primary
+              to="https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/"
+              className="mt10"
+            >
+              <FormattedMessage defaultMessage="Learn about ports in networking" />
+            </Link>
+          </Text>
         </section>
         <section>
           <Heading level={3}>

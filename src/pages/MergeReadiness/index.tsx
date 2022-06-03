@@ -795,6 +795,24 @@ export const MergeReadiness = () => {
               <em>Tim Beiko</em>
             </li>
             <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://geth.ethereum.org/docs/interface/merge"
+              >
+                <FormattedMessage defaultMessage="Go Ethereum - The Merge" />
+              </Link>
+            </li>
+            <li className="py5">
+              <Link
+                primary
+                inline
+                to="https://docs.teku.consensys.net/en/latest/Concepts/Merge/"
+              >
+                <FormattedMessage defaultMessage="Teku - The Merge" />
+              </Link>
+            </li>
+            <li className="py5">
               <Link primary inline to="https://ethereum.org/en/upgrades/merge/">
                 <FormattedMessage defaultMessage="Ethereum.org - The Merge" />
               </Link>

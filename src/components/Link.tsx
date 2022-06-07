@@ -19,8 +19,9 @@ const styles = `
   color:inherit;
   display: inherit;
   text-decoration: none;
+  font-weight: 400;
   &:hover {
-    font-weight: 400;
+    opacity: 0.8;
   };
   &:focus,
   &:visited,

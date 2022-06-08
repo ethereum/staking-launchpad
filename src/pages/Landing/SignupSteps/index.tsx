@@ -99,7 +99,7 @@ export const SignupSteps = (): JSX.Element => {
             })}
             content={intl.formatMessage({
               defaultMessage:
-                'We recommend you go through the entire process on a testnet first to get comfortable.',
+                'We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH.',
             })}
           >
             {IS_MAINNET ? (

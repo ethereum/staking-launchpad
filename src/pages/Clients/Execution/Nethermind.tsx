@@ -1,12 +1,19 @@
 import React from 'react';
-import { SectionTitle } from '../ValidatorClientComponents';
-import { IS_MAINNET } from '../../../utils/envVars';
+import { FormattedMessage, useIntl } from 'react-intl';
+import nethermindBg from '../../../static/nethermind-bg.png';
+import {
+  Hero,
+  SectionTitle,
+  ValidatorClientPageStyles,
+} from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { FormattedMessage } from 'react-intl';
+import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
+import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const NethermindDetails = () => (
@@ -111,3 +118,29 @@ export const NethermindDetails = () => (
     </section>
   </>
 );
+
+export const Nethermind = () => {
+  const { formatMessage } = useIntl();
+  return (
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Execution Clients: {clientName}' },
+        { clientName: 'Nethermind' }
+      )}
+    >
+      <ValidatorClientPageStyles>
+        <Hero imgSrc={nethermindBg} />
+        <ClientMergeNotification client="Nethermind" />
+        <NethermindDetails />
+        <section>
+          <SectionTitle level={2} className="mb5">
+            <FormattedMessage defaultMessage="Documentation" />
+          </SectionTitle>
+          <Link primary to="https://docs.nethermind.io/nethermind/">
+            <FormattedMessage defaultMessage="Documentation on running Nethermind" />
+          </Link>
+        </section>
+      </ValidatorClientPageStyles>
+    </PageTemplate>
+  );
+};

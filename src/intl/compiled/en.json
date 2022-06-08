@@ -159,24 +159,6 @@
       "value": " ETH maximum?"
     }
   ],
-  "/iuoP7": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " will be the first longstanding public testnet to undergo The Merge. Historically a proof-of-work testnet, "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " now has its own proof-of-stake beacon chain which will be merged with the execution layer in the near future (if it hasn't happened already)."
-    }
-  ],
   "/jJLYy": [
     {
       "type": 0,
@@ -1987,6 +1969,24 @@
       "value": "Total amount required"
     }
   ],
+  "H/LXxz": [
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " was the first longstanding public testnet to undergo The Merge, which occurred on June 8, 2022. Historically a proof-of-work testnet, "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " has now transitioned to proof-of-stake by merging its historical execution layer with a new beacon chain."
+    }
+  ],
   "H0lQfu": [
     {
       "type": 0,
@@ -3169,6 +3169,16 @@
     {
       "type": 0,
       "value": "How many validators would you like to run?"
+    }
+  ],
+  "Riq4Yh": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
     }
   ],
   "RkSC5Q": [
@@ -5879,16 +5889,6 @@
     {
       "type": 0,
       "value": "Deposit summary"
-    }
-  ],
-  "q+ux+M": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " is open for anyone to interact with. Try sending some transactions, running a validator on its new beacon chain, or see if you can get slashed!"
     }
   ],
   "q2XW/k": [

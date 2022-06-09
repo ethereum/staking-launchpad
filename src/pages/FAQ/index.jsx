@@ -287,7 +287,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum." />
+              <FormattedMessage defaultMessage="After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum." />
             </Text>
             <Text className="mt10">
               <FormattedMessage

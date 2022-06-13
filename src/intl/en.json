@@ -59,9 +59,6 @@
   "/h0DGY": {
     "message": "Why the {pricePerValidator} ETH maximum?"
   },
-  "/iuoP7": {
-    "message": "{networkBold} will be the first longstanding public testnet to undergo The Merge. Historically a proof-of-work testnet, {network} now has its own proof-of-stake beacon chain which will be merged with the execution layer in the near future (if it hasn't happened already)."
-  },
   "/jJLYy": {
     "message": "Transactions"
   },
@@ -764,6 +761,9 @@
   "H+kIpp": {
     "message": "Total amount required"
   },
+  "H/LXxz": {
+    "message": "{networkBold} was the first longstanding public testnet to undergo The Merge, which occurred on June 8, 2022. Historically a proof-of-work testnet, {network} has now transitioned to proof-of-stake by merging its historical execution layer with a new beacon chain."
+  },
   "H0lQfu": {
     "message": "Merge Readiness Checklist"
   },
@@ -1219,6 +1219,9 @@
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
+  },
+  "Riq4Yh": {
+    "message": "{network} is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
   },
   "RkSC5Q": {
     "message": "Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
@@ -2257,9 +2260,6 @@
   },
   "pyWt01": {
     "message": "Deposit summary"
-  },
-  "q+ux+M": {
-    "message": "{network} is open for anyone to interact with. Try sending some transactions, running a validator on its new beacon chain, or see if you can get slashed!"
   },
   "q2XW/k": {
     "message": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."

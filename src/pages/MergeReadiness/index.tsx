@@ -476,7 +476,7 @@ export const MergeReadiness = () => {
           </Text>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="{networkBold} will be the first longstanding public testnet to undergo The Merge. Historically a proof-of-work testnet, {network} now has its own proof-of-stake beacon chain which will be merged with the execution layer in the near future (if it hasn't happened already)."
+              defaultMessage="{networkBold} was the first longstanding public testnet to undergo The Merge, which occurred on June 8, 2022. Historically a proof-of-work testnet, {network} has now transitioned to proof-of-stake by merging its historical execution layer with a new beacon chain."
               values={{
                 networkBold: <strong>Ropsten</strong>,
                 network: 'Ropsten',
@@ -485,7 +485,7 @@ export const MergeReadiness = () => {
           </Text>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="{network} is open for anyone to interact with. Try sending some transactions, running a validator on its new beacon chain, or see if you can get slashed!"
+              defaultMessage="{network} is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
               values={{ network: 'Ropsten' }}
             />
           </Text>

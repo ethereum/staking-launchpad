@@ -1,16 +1,17 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { PageTemplate } from '../../../components/PageTemplate';
 import tekuBg from '../../../static/teku-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
 } from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
+import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { TEKU_INSTALLATION_URL } from '../../../utils/envVars';
 
 export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
@@ -235,6 +236,7 @@ export const Teku = () => {
           imgSrc={tekuBg}
           style={{ objectPosition: '0 -110px', height: 300 }}
         />
+        <ClientMergeNotification client="Teku" isConsensus />
         <TekuDetails />
         <section>
           <SectionTitle level={2} className="mb5">

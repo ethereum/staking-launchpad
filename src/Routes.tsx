@@ -20,12 +20,17 @@ import {
   TermsOfService,
   Languages,
   TopUpPage,
+  MergeReadiness,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Consensus/Prysm';
 import { Teku } from './pages/Clients/Consensus/Teku';
 import { Nimbus } from './pages/Clients/Consensus/Nimbus';
 import { Lighthouse } from './pages/Clients/Consensus/Lighthouse';
+import { Besu } from './pages/Clients/Execution/Besu';
+import { Nethermind } from './pages/Clients/Execution/Nethermind';
+import { Erigon } from './pages/Clients/Execution/Erigon';
+import { Geth } from './pages/Clients/Execution/Geth';
 
 type RouteType = {
   path: string;
@@ -44,9 +49,13 @@ export enum routesEnum {
   uploadValidatorPage = '/upload-deposit-data',
   transactionsPage = '/transactions',
   FaqPage = '/faq',
-  prysm = '/prysm',
-  nimbus = '/nimbus',
+  besu = '/besu',
+  erigon = '/erigon',
+  geth = '/geth',
   lighthouse = '/lighthouse',
+  nethermind = '/nethermind',
+  nimbus = '/nimbus',
+  prysm = '/prysm',
   teku = '/teku',
   phishingPage = '/phishing',
   checklistPage = '/checklist',
@@ -54,6 +63,7 @@ export enum routesEnum {
   landingPage = '/',
   notFoundPage = '/*',
   languagesPage = '/languages',
+  mergeReadiness = '/merge-readiness',
 }
 const routes: RouteType[] = [
   {
@@ -103,14 +113,29 @@ const routes: RouteType[] = [
     component: FAQ,
   },
   {
-    path: routesEnum.teku,
+    path: routesEnum.besu,
     exact: true,
-    component: Teku,
+    component: Besu,
   },
   {
-    path: routesEnum.prysm,
+    path: routesEnum.erigon,
     exact: true,
-    component: Prysm,
+    component: Erigon,
+  },
+  {
+    path: routesEnum.geth,
+    exact: true,
+    component: Geth,
+  },
+  {
+    path: routesEnum.lighthouse,
+    exact: true,
+    component: Lighthouse,
+  },
+  {
+    path: routesEnum.nethermind,
+    exact: true,
+    component: Nethermind,
   },
   {
     path: routesEnum.nimbus,
@@ -118,9 +143,14 @@ const routes: RouteType[] = [
     component: Nimbus,
   },
   {
-    path: routesEnum.lighthouse,
+    path: routesEnum.prysm,
     exact: true,
-    component: Lighthouse,
+    component: Prysm,
+  },
+  {
+    path: routesEnum.teku,
+    exact: true,
+    component: Teku,
   },
   {
     path: routesEnum.phishingPage,
@@ -141,6 +171,11 @@ const routes: RouteType[] = [
     path: routesEnum.topUpPage,
     exact: true,
     component: TopUpPage,
+  },
+  {
+    path: routesEnum.mergeReadiness,
+    exact: true,
+    component: MergeReadiness,
   },
   { path: routesEnum.landingPage, exact: true, component: LandingPage },
   // NOTE: this wildcard route must be the last index of the routes array

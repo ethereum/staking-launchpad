@@ -12,7 +12,6 @@ import {
 import ReactTooltip from 'react-tooltip';
 import { Wifi, StatusWarning, Refresh, StatusDisabled } from 'grommet-icons';
 import numeral from 'numeral';
-import { useWeb3React } from '@web3-react/core';
 import { styledComponentsTheme as theme } from '../../../styles/styledComponentsTheme';
 import { BeaconChainValidator } from '../types';
 import { Text } from '../../../components/Text';
@@ -37,8 +36,8 @@ const FakeLink = styled.span`
 const ValidatorTable: React.FC<{
   validators: BeaconChainValidator[];
   setSelectedValidator: (validator: BeaconChainValidator) => void;
-}> = ({ validators, setSelectedValidator }) => {
-  const { deactivate } = useWeb3React();
+  handleConnect: () => void;
+}> = ({ validators, setSelectedValidator, handleConnect }) => {
   const { formatMessage } = useIntl();
 
   const validatorStatus = (validator: BeaconChainValidator) => {
@@ -246,7 +245,7 @@ const ValidatorTable: React.FC<{
           defaultMessage="You can {changeYourWallet} to load validators for a different address."
           values={{
             changeYourWallet: (
-              <FakeLink onClick={deactivate}>
+              <FakeLink onClick={handleConnect}>
                 <FormattedMessage defaultMessage="change your wallet" />
               </FakeLink>
             ),

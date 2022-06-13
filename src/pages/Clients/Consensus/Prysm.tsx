@@ -1,16 +1,17 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
-import { PageTemplate } from '../../../components/PageTemplate';
 import prysmBg from '../../../static/prysmatic-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
 } from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
+import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 const ClientDiversityWarning = styled(Text as any)`
   background: #ffdeb32e;
@@ -91,6 +92,7 @@ export const Prysm = () => {
     >
       <ValidatorClientPageStyles>
         <Hero imgSrc={prysmBg} style={{ objectPosition: '0 -80px' }} />
+        <ClientMergeNotification client="Prysm" isConsensus />
         <PrysmDetails />
         <section>
           <SectionTitle level={2} className="mb5">

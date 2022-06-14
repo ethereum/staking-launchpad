@@ -1,11 +1,19 @@
 import React from 'react';
-import { SectionTitle } from '../ValidatorClientComponents';
-import { IS_MAINNET } from '../../../utils/envVars';
+import { FormattedMessage, useIntl } from 'react-intl';
+import besuBg from '../../../static/besu-bg.png';
+import {
+  Hero,
+  SectionTitle,
+  ValidatorClientPageStyles,
+} from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { FormattedMessage } from 'react-intl';
+import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
+import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
+import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const BesuDetails = () => (
@@ -47,7 +55,7 @@ export const BesuDetails = () => (
       <Text className="mb20 mt10">
         <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
-      {!IS_MAINNET && (
+      {!IS_MAINNET && IS_GOERLI && (
         <>
           <Heading level={3} className="mt20">
             <FormattedMessage defaultMessage="Testing on Goerli" />
@@ -97,3 +105,29 @@ export const BesuDetails = () => (
     </section>
   </>
 );
+
+export const Besu = () => {
+  const { formatMessage } = useIntl();
+  return (
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Execution Clients: {clientName}' },
+        { clientName: 'Besu' }
+      )}
+    >
+      <ValidatorClientPageStyles>
+        <Hero imgSrc={besuBg} />
+        <ClientMergeNotification client="Besu" />
+        <BesuDetails />
+        <section>
+          <SectionTitle level={2} className="mb5">
+            <FormattedMessage defaultMessage="Documentation" />
+          </SectionTitle>
+          <Link primary to="https://besu.hyperledger.org/">
+            <FormattedMessage defaultMessage="Documentation on running Besu" />
+          </Link>
+        </section>
+      </ValidatorClientPageStyles>
+    </PageTemplate>
+  );
+};

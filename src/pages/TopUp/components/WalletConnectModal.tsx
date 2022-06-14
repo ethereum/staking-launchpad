@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -15,18 +16,42 @@ import {
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
+import closeGlyph from '../../../static/close.svg';
 import {
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
   PORTIS_DAPP_ID,
+  EL_TESTNET_NAME,
 } from '../../../utils/envVars';
 import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
+import { NakedButton } from '../../../components/NakedButton';
 import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
+import { useKeyPress } from '../../../hooks/useKeyPress';
 
-const WalletConnectModal: React.FC = () => {
+const CloseButton = styled(NakedButton)`
+  padding: 1rem;
+  align-self: flex-end;
+`;
+
+const Close = styled.img`
+  height: 24px;
+  width: 24px;
+  display: block;
+`;
+
+const WalletConnectModal: React.FC<{
+  loading: boolean;
+  handleModalClose: () => void;
+}> = ({
+  loading,
+  handleModalClose,
+}: {
+  loading: boolean;
+  handleModalClose: () => void;
+}) => {
   const {
     connector,
     error,
@@ -46,10 +71,12 @@ const WalletConnectModal: React.FC = () => {
     return !Object.values(AllowedNetworks).includes(network);
   }, [chainId]);
 
+  useKeyPress('Escape', handleModalClose);
+
   if (isInvalidNetwork) {
     return (
       <Layer>
-        <div className="p20">
+        <div className="p20 flex">
           <Heading level={2} color="blueMedium" center className="mb20">
             <FormattedMessage defaultMessage="Wrong network" />
           </Heading>
@@ -61,9 +88,11 @@ const WalletConnectModal: React.FC = () => {
             <FormattedMessage
               defaultMessage="Connect to {network}"
               values={{
-                network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+                network: IS_MAINNET
+                  ? 'Ethereum mainnet'
+                  : `${EL_TESTNET_NAME.toLowerCase()} testnet`,
               }}
-              description="{network} is either 'Ethereum mainnet' or 'Göerli testnet'"
+              description="{network} is either 'Ethereum mainnet' or '<EL_TESTNET_NAME> testnet'"
             />
           </Text>
         </div>
@@ -71,10 +100,13 @@ const WalletConnectModal: React.FC = () => {
     );
   }
 
-  if (active) return null;
+  if (active || !loading) return null;
 
   return (
     <Layer>
+      <CloseButton onClick={handleModalClose}>
+        <Close src={closeGlyph} />
+      </CloseButton>
       <Heading level={2} color="blueMedium" style={{ margin: '20px auto' }}>
         <FormattedMessage defaultMessage="Connect a wallet" />
       </Heading>

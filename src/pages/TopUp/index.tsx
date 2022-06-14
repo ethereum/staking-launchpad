@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -26,6 +26,7 @@ import {
 import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
+import { Button } from '../../components/Button';
 
 const Arrow = styled(props => <FormPrevious {...props} />)`
   position: absolute;
@@ -52,6 +53,25 @@ const FakeLink = styled.span`
   display: inline;
 `;
 
+const ButtonLink = styled(FakeLink)`
+  text-decoration: none;
+  width: fit-content;
+  button {
+    padding: 16px 32px;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 518px) {
+    span,
+    button {
+      width: 100%;
+    }
+  }
+`;
+
 const _TopUpPage: React.FC<Props> = () => {
   const {
     account,
@@ -72,7 +92,7 @@ const _TopUpPage: React.FC<Props> = () => {
   const { formatMessage } = useIntl();
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
       setLoading(true);
 
@@ -146,11 +166,32 @@ const _TopUpPage: React.FC<Props> = () => {
     setSelectedValidator,
   ] = useState<BeaconChainValidator | null>(null);
 
-  const topUpPageContent = React.useMemo(() => {
-    if (loading || !active) {
+  const handleConnect = useCallback((): void => {
+    setLoading(true);
+    deactivate();
+  }, [setLoading, deactivate]);
+
+  const handleModalClose = useCallback((): void => {
+    setLoading(false);
+  }, [setLoading]);
+
+  const topUpPageContent = useMemo(() => {
+    if (loading) {
       return <Spinner className="mt40" />;
     }
 
+    if (!active) {
+      return (
+        <ButtonContainer>
+          <ButtonLink onClick={handleConnect}>
+            <Button
+              rainbow
+              label={formatMessage({ defaultMessage: 'Connect wallet' })}
+            />
+          </ButtonLink>
+        </ButtonContainer>
+      );
+    }
     if (validatorLoadError) {
       return (
         <Alert variant="warning" className="my10">
@@ -212,6 +253,7 @@ const _TopUpPage: React.FC<Props> = () => {
         <ValidatorTable
           validators={validators}
           setSelectedValidator={setSelectedValidator}
+          handleConnect={handleConnect}
         />
       </>
     );
@@ -223,12 +265,17 @@ const _TopUpPage: React.FC<Props> = () => {
     validators,
     showDepositVerificationWarning,
     deactivate,
+    formatMessage,
+    handleConnect,
   ]);
 
   return (
     <>
       {/* the wallet connect modal controls it's own display, so it is always rendered here */}
-      <WalletConnectModal />
+      <WalletConnectModal
+        loading={loading}
+        handleModalClose={handleModalClose}
+      />
 
       <PageTemplate
         title={formatMessage({ defaultMessage: 'Top up a validator' })}

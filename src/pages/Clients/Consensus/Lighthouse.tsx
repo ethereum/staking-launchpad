@@ -1,16 +1,17 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
-import { PageTemplate } from '../../../components/PageTemplate';
 import lighthouseBg from '../../../static/lighthouse-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
 } from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
+import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { LIGHTHOUSE_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 const CodeSnippet = styled.div`
   padding: 10px;
@@ -135,6 +136,7 @@ export const Lighthouse = () => {
     >
       <ValidatorClientPageStyles>
         <Hero imgSrc={lighthouseBg} />
+        <ClientMergeNotification client="Lighthouse" isConsensus />
         <LighthouseDetails />
         <section>
           <SectionTitle level={2} className="mb5">

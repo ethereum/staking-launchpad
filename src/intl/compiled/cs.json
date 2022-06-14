@@ -1,14 +1,14 @@
 {
-  "GOHkCO": [
-    {
-      "type": 0,
-      "value": "V současnosti budete zabezpečovat Beacon Chain, první upgrade Eth2. Jedná se o samostatný blockchain, který používá mechanismus konsensu proof-of-stake. Až se hlavní síť (Ethereum, které dnes používáme) sloučí s Beacon Chainem, budete pomáhat se zabezpečením veškerého Etherea."
-    }
-  ],
   "+L0IkF": [
     {
       "type": 0,
       "value": "Krok 2: Pomocí nástroje pro vklady od Ethereum Foundation vygenerujte vkladové klíče"
+    }
+  ],
+  "+M/NC/": [
+    {
+      "type": 0,
+      "value": "Po sloučení již nebudou existovat dvě odlišné ethereové sítě, bude existovat jen Ethereum."
     }
   ],
   "+UUcBt": [
@@ -41,10 +41,10 @@
       "value": "6. Počkejte, až budete aktivní"
     }
   ],
-  "3XK21U": [
+  "+ozGrs": [
     {
       "type": 0,
-      "value": "Pomůžeme vám vytvořit podpisový klíč pro každý validátor, který chcete provozovat. Až do sloučení není možné provádět výběry, takže nyní nevytvoříte klíče pro výběr. Až bude možné vybírat finanční prostředky, můžete své klíče pro výběr odvodit od své mnemotechnické pomůcky."
+      "value": "polština"
     }
   ],
   "+s8Gac": [
@@ -149,16 +149,16 @@
       "value": "Transakce"
     }
   ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "Pokud je to vůbec možné, zvažte v tuto chvíli provozování jiného klienta, abyste pomohli chránit sebe a síť."
+    }
+  ],
   "/ub26/": [
     {
       "type": 0,
       "value": "Seznamte se s riziky"
-    }
-  ],
-  "Zxm0fh": [
-    {
-      "type": 0,
-      "value": "Sloučení (nebo také dokování) bude znamenat spojení hlavní sítě Etherea, kterou dnes používáme, s Beacon Chainem. Ethereum při tom plně přejde na proof-of-stake."
     }
   ],
   "/w/KT4": [
@@ -279,16 +279,22 @@
       "value": "Časté dotazy k validátorům"
     }
   ],
-  "Cacfkx": [
-    {
-      "type": 0,
-      "value": "Víc o vizi Eth2"
-    }
-  ],
   "0uqjBl": [
     {
       "type": 0,
       "value": "Dostávejte průběžně odměny za pomáhání komunitě."
+    }
+  ],
+  "122+yR": [
+    {
+      "type": 0,
+      "value": "klíč pro výběr"
+    }
+  ],
+  "192AR6": [
+    {
+      "type": 0,
+      "value": "Víc o uzamčení"
     }
   ],
   "19o6KO": [
@@ -351,10 +357,10 @@
       "value": "Zkontrolujte podrobnosti smlouvy o vkladu"
     }
   ],
-  "36j2ls": [
+  "1ingnQ": [
     {
       "type": 0,
-      "value": "Ke zpracovávání příchozích vkladů validátoru z řetězce Eth1 potřebujete provozovat klienta Eth1 i klienta Eth2. Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
+      "value": "Víc o ekonomice uzamčení Etherea"
     }
   ],
   "22EpKq": [
@@ -401,18 +407,26 @@
       "value": "Řešení problémů"
     }
   ],
-  "2DuJTX": [
+  "2HVWJL": [
     {
       "type": 0,
-      "value": "K připojení uzlu Eth2 ke koncovému bodu JSON RPC použijte "
+      "value": "exekuční vrstva"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "Podle pokynů v aplikaci vygenerujte klíče."
+    }
+  ],
+  "2PI6Di": [
+    {
+      "type": 0,
+      "value": "Klienti konsenzu: "
     },
     {
       "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
+      "value": "clientName"
     }
   ],
   "2a1GTh": [
@@ -447,10 +461,10 @@
       "value": "Podmínky služby"
     }
   ],
-  "1ingnQ": [
+  "36j2ls": [
     {
       "type": 0,
-      "value": "Víc o ekonomice Eth2"
+      "value": "Ke zpracovávání příchozích vkladů validátoru z exekuční vrstvy (dříve z řetězce Eth1) potřebujete provozovat exekučního klienta i vašeho klienta konsenzu (dříve Eth2). Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
     }
   ],
   "38VH2G": [
@@ -515,20 +529,6 @@
       "value": "Zkontrolujte celou adresu, ne jen její část. Několik bajtů by se mohlo lišit."
     }
   ],
-  "KEfTSF": [
-    {
-      "type": 0,
-      "value": "Mám nainstalovaného klienta Eth2 verze "
-    },
-    {
-      "type": 1,
-      "value": "latestRelease"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "3Q43SM": [
     {
       "type": 0,
@@ -541,10 +541,22 @@
       "value": "Dobíjecí transakce"
     }
   ],
+  "3SOKyg": [
+    {
+      "type": 0,
+      "value": "Tyto změny termínů slouží jen k úpravě názvosloví. Cíle ani plán Etherea nemění."
+    }
+  ],
   "3URRZK": [
     {
       "type": 0,
       "value": "Dokumentace Geth na Goerli"
+    }
+  ],
+  "3XK21U": [
+    {
+      "type": 0,
+      "value": "Pomůžeme vám vytvořit podpisový klíč pro každý validátor, který chcete provozovat. Až do sloučení není možné provádět výběry, takže nyní nevytvoříte klíče pro výběr. Až bude možné vybírat finanční prostředky, můžete své klíče pro výběr odvodit od své mnemotechnické pomůcky."
     }
   ],
   "3tR/V9": [
@@ -603,12 +615,6 @@
       "value": "Instalace"
     }
   ],
-  "dJMce5": [
-    {
-      "type": 0,
-      "value": "Prysm je implementace protokolu Ethereum 2.0 pomocí jazyka Go se zaměřením na použitelnost, bezpečnost a spolehlivost."
-    }
-  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -633,16 +639,38 @@
       "value": "Kopírovat"
     }
   ],
+  "54J/qs": [
+    {
+      "type": 0,
+      "value": "Co se stane, když použiji výběr BLS a ztratím svůj klíč pro výběr?"
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
       "value": "Proč dva klíče namísto jednoho?"
     }
   ],
+  "5A6amM": [
+    {
+      "type": 0,
+      "value": "Provozování validátoru z více míst je velmi rizikové. Můžete za to dostat postih a být vykopnuti ze sítě. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
   "5CBhpq": [
     {
       "type": 0,
       "value": "Závazek"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "Jak chcete vygenerovat klíče?"
     }
   ],
   "5HJLBU": [
@@ -699,6 +727,12 @@
       "value": "Proof-of-stake (PoS) a Beacon Chain"
     }
   ],
+  "6S95Bo": [
+    {
+      "type": 0,
+      "value": "Vyhněte se phishingu"
+    }
+  ],
   "6UUL73": [
     {
       "type": 0,
@@ -715,12 +749,6 @@
     {
       "type": 0,
       "value": "Připojujete se k síti v jejích raných fázích. Stejně jako u jiného nového softwaru se u ní mohou vyskytnout chyby. Sice je to nepravděpodobné, ale potenciální chyby mohou vést k postihu."
-    }
-  ],
-  "WdDGn6": [
-    {
-      "type": 0,
-      "value": "Implementace protokolu Eth2 se zaměřením na použitelnost, zabezpečení a spolehlivost. Prysm je vyvíjen společností Prysmatic Labs, která se zaměřuje výhradně na vývoj svého klienta."
     }
   ],
   "7+Domh": [
@@ -803,20 +831,6 @@
       "value": "Síť v každé epoše měří akce jednotlivých validátorů a podle výsledků měření dává odměny nebo sankce."
     }
   ],
-  "zmMF+G": [
-    {
-      "type": 0,
-      "value": "Eth2 Launchpad pro "
-    },
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
-    {
-      "type": 0,
-      "value": " testnet"
-    }
-  ],
   "80eWKU": [
     {
       "type": 0,
@@ -883,6 +897,12 @@
     {
       "type": 0,
       "value": "Ethereum klient navržený tak, aby byl vhodný pro veřejné i soukromé sítě s oprávněními v podnicích."
+    }
+  ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "Kliknutím pravým tlačítkem ve složce Aplikace a následným kliknutím na možnost Otevřít spusťte aplikaci Waygu Key Gen. Zobrazí se upozornění, že macOS nedokáže ověřit vývojáře „Wagyu Key Gen.app“, doprovázené dotazem, jestli aplikaci chcete otevřít. Kliknutím na tlačítko Otevřít danou aplikaci otevřete."
     }
   ],
   "9+Ddtu": [
@@ -971,10 +991,22 @@
       "value": "Přehled"
     }
   ],
-  "Mlc7Vr": [
+  "9xeLhs": [
     {
       "type": 0,
-      "value": "Upgrady Eth2 budou úspěšné jen v případě, že validátoři chápou rizika a povinnosti."
+      "value": "Výběr na ethereovou adresu: Pokud chcete po vyčištění po sloučení provést výběr na adresu peněženky na hlavní síti (dříve na adresu Eth1), můžete při používání rozhraní deposit-cli nastavit možnost "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": ". "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "A2b4uB": [
@@ -989,10 +1021,30 @@
       "value": "Prysm nabízí podrobné pokyny k tomu, jak po dokončení vkladu přes Launchpad spustit příslušného klienta."
     }
   ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "vrstva konsenzu"
+    }
+  ],
   "AC669U": [
     {
       "type": 0,
       "value": "Pokud potřebujete pomoc, podívejte se na dokumentaci Pythonu."
+    }
+  ],
+  "ACstv9": [
+    {
+      "type": 0,
+      "value": "Mám nainstalovaný a synchronizovaný svůj exekuční klient na síti "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (nečekejte na to, protože to může zabrat několik dnů)."
     }
   ],
   "AEp7+F": [
@@ -1015,6 +1067,34 @@
     {
       "type": 0,
       "value": " na smlouvu o vkladu na aktuálním ethereovém řetězci."
+    }
+  ],
+  "AJD+66": [
+    {
+      "type": 0,
+      "value": "Smlouva o vkladu na uzamčení Etherea ke svému přijetí vyžaduje jednorázové zaslání minimálně "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "exekuční klient"
     }
   ],
   "AYKxmf": [
@@ -1105,12 +1185,6 @@
       "value": " do Beacon Chainu je jednosměrný a nevratný."
     }
   ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "Smlouva o vkladu je v podstatě převod finančních prostředků mezi ethereovými účty a validátory Eth2."
-    }
-  ],
   "BCsPjJ": [
     {
       "type": 0,
@@ -1121,28 +1195,6 @@
     {
       "type": 0,
       "value": "Dobít validátor"
-    }
-  ],
-  "BFfsSX": [
-    {
-      "type": 0,
-      "value": "Smlouva o vkladu Eth2 ke svému přijetí vyžaduje jednorázové zaslání minimálně "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "BFsUAH": [
@@ -1165,6 +1217,12 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Erigon je napsán v jazyce Go a licencován pod GNU LGPLv3."
     }
   ],
   "BPpnlJ": [
@@ -1197,12 +1255,6 @@
       "value": "Úvod"
     }
   ],
-  "LHPZ+C": [
-    {
-      "type": 0,
-      "value": "Lighthouse je implementace Ethereum 2.0 napsaná v jazyce Rust s velkým důrazem na rychlost a bezpečnost."
-    }
-  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1221,12 +1273,6 @@
       "value": "Čeština"
     }
   ],
-  "CBbRux": [
-    {
-      "type": 0,
-      "value": "OpenEthereum je napsáno v jazyce Rust a licencováno pod licencí GPLv3."
-    }
-  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1237,6 +1283,12 @@
     {
       "type": 0,
       "value": "Pokud se váš zůstatek blíží 16 ETH, měli byste jej dobít. Tím zajistíte, že nebudete vyloučeni z řad validátorů (k tomu dochází automaticky, když vám zůstatek klesne pod 16 ETH)."
+    }
+  ],
+  "Cacfkx": [
+    {
+      "type": 0,
+      "value": "Víc o vizi Etherea"
     }
   ],
   "CdKEd/": [
@@ -1257,12 +1309,6 @@
     {
       "type": 0,
       "value": "Mám nastavený firewall."
-    }
-  ],
-  "Hczrvs": [
-    {
-      "type": 0,
-      "value": "Postihy mají dva účely: (1) zvyšují náklady na útoky na Eth2 na neúnosnou míru a (2) podněcují validátory k tomu, aby nebyli líní a plnili své povinnosti. Když dostanete postih, protože jste se chovali prokazatelně škodlivě, část vašeho podílu bude zničena."
     }
   ],
   "D0Rigq": [
@@ -1429,6 +1475,12 @@
       "value": "Toto je testovací síť ⚠️"
     }
   ],
+  "EcCME0": [
+    {
+      "type": 0,
+      "value": "Launchpad uzamčení"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1465,12 +1517,6 @@
       "value": "Zkusit znovu"
     }
   ],
-  "HMgrdg": [
-    {
-      "type": 0,
-      "value": "Nakonfigurujte svého klienta Eth1"
-    }
-  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -1495,12 +1541,6 @@
       "value": "validátory"
     }
   ],
-  "G/VJJd": [
-    {
-      "type": 0,
-      "value": "Dokumentace instalace OpenEthereum"
-    }
-  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1511,16 +1551,6 @@
     {
       "type": 0,
       "value": "Stáhnout zdrojový kód hlavní větve"
-    }
-  ],
-  "2PI6Di": [
-    {
-      "type": 0,
-      "value": "Klienti Eth2: "
-    },
-    {
-      "type": 1,
-      "value": "clientName"
     }
   ],
   "G8tAKU": [
@@ -1535,16 +1565,22 @@
       "value": "Asi největší vliv na odměny za validaci transakcí má celková částka podílu v síti. Jinými slovy, celková částka validátorů. Na základě této částky může být roční maximální míra návratnosti pro validátora někde mezi 2 a 20 %."
     }
   ],
-  "j8GPOH": [
-    {
-      "type": 0,
-      "value": "Teku (dříve Artemis) je klient Eth2 pro potřeby institucí a zabezpečení. PegaSys je odnož ConsenSys vyhrazená pro vývoj podnikových klientů a nástrojů k interakci s hlavní platformou Ethereum."
-    }
-  ],
   "GDaRAW": [
     {
       "type": 0,
       "value": "Ověřte, zda se vás někdo nepokouší podvést"
+    }
+  ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "klient konsenzu"
+    }
+  ],
+  "GOHkCO": [
+    {
+      "type": 0,
+      "value": "V současnosti budete zabezpečovat řetězovou vazbu, první významné vylepšení škálování. Jedná se o samostatný blockchain, který používá mechanismus konsenzu důkazem podílem. Až se hlavní síť (Ethereum, které dnes používáme) sloučí s řetězovou vazbou budete pomáhat se zabezpečením veškerého Etherea."
     }
   ],
   "GOc7cL": [
@@ -1571,10 +1607,10 @@
       "value": "Vygenerovat klíče"
     }
   ],
-  "GrU/lp": [
+  "GelBd9": [
     {
       "type": 0,
-      "value": "Klienti Eth2"
+      "value": "Ze staženého souboru udělejte soubor spustitelný."
     }
   ],
   "GsBRWL": [
@@ -1613,6 +1649,32 @@
       "value": "Zůstatek"
     }
   ],
+  "HMgrdg": [
+    {
+      "type": 0,
+      "value": "Nakonfigurujte svého exekučního klienta"
+    }
+  ],
+  "HXvZ2L": [
+    {
+      "type": 0,
+      "value": "K připojení uzlu konsenzu ke koncovému bodu JSON RPC použijte "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
+    }
+  ],
+  "Hczrvs": [
+    {
+      "type": 0,
+      "value": "Postihy mají dva účely: (1) zvyšují náklady na útoky na síť na neúnosnou míru a (2) podněcují validátory k tomu, aby nebyli líní a plnili své povinnosti. Když dostanete postih, protože jste se chovali prokazatelně škodlivě, část vašeho podílu bude zničena."
+    }
+  ],
   "HoahTd": [
     {
       "type": 0,
@@ -1645,10 +1707,16 @@
       "value": "Síť"
     }
   ],
-  "txdGU9": [
+  "I5lWZA": [
     {
       "type": 0,
-      "value": "Upgrady Eth2"
+      "value": "Mohu po prvním vkladu změnit přiklašovací údaje k výběru pro můj validátor?"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "Erigon (dříve TurboGeth) je ethereový klient navržený pro optimalizace výkonu."
     }
   ],
   "IJw06E": [
@@ -1715,12 +1783,6 @@
       "value": " existují dva důležité scénáře, na které je třeba pamatovat:"
     }
   ],
-  "frIMm4": [
-    {
-      "type": 0,
-      "value": "Synchronizace vašeho Eth1 klienta může v nejhorším případě trvat několik dní."
-    }
-  ],
   "J455S4": [
     {
       "type": 0,
@@ -1761,12 +1823,6 @@
       "value": "Jinými slovy, abyste jednali čestně, za své kroky odpovídáte svými finančními prostředky."
     }
   ],
-  "JDGiXT": [
-    {
-      "type": 0,
-      "value": "Dokumentace OpenEthereum vysvětluje, jak si stáhnout a nainstalovat klienta."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1787,10 +1843,10 @@
       "value": "4. Vyhněte se phishingu"
     }
   ],
-  "6S95Bo": [
+  "JbVlOE": [
     {
       "type": 0,
-      "value": "Vyhněte se phishingu zaměřenému na Eth2"
+      "value": "Přečtěte si víc o vylepšeních Etherea."
     }
   ],
   "JhUYU3": [
@@ -1863,22 +1919,34 @@
       "value": "Kontrolní seznam hardwaru"
     }
   ],
+  "KEfTSF": [
+    {
+      "type": 0,
+      "value": "Mám nainstalovaného klienta konsenzu verze "
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
       "value": "Chyba"
     }
   ],
-  "ckaUkz": [
+  "KWWsDo": [
     {
       "type": 0,
-      "value": "Validátor je subjekt, který se podílí na konsensu protokolu Ethereum 2.0."
-    }
-  ],
-  "KhEtqB": [
+      "value": "Ujistěte se, že stahujete z oficiálního účtu StakeHouse na GitHubu na následující webové adrese: "
+    },
     {
-      "type": 0,
-      "value": "Dokumentace Besu na Goerli"
+      "type": 1,
+      "value": "url"
     }
   ],
   "KjcAm2": [
@@ -1937,6 +2005,12 @@
       "value": "znovu načíst svou peněženku"
     }
   ],
+  "LHPZ+C": [
+    {
+      "type": 0,
+      "value": "Lighthouse je implementace klienta konsenzu napsaná v jazyce Rust s velkým důrazem na rychlost a bezpečnost."
+    }
+  ],
   "LVy+cS": [
     {
       "type": 0,
@@ -1967,6 +2041,18 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "bulharština"
+    }
+  ],
+  "LlClXS": [
+    {
+      "type": 0,
+      "value": "Děkujeme, že podporujete síť Etherea!"
     }
   ],
   "Ltd/hJ": [
@@ -2019,12 +2105,6 @@
       "value": "Připojit novou peněženku"
     }
   ],
-  "ynB6C+": [
-    {
-      "type": 0,
-      "value": "Dokážu připojit svůj beacon uzel Eth2 ke svému klientovi Eth1 přes HTTP API."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2055,6 +2135,12 @@
       "value": "Upgrady"
     }
   ],
+  "MZzOnU": [
+    {
+      "type": 0,
+      "value": "Jak se Ethereum škáluje?"
+    }
+  ],
   "Mb3npQ": [
     {
       "type": 0,
@@ -2073,20 +2159,22 @@
       "value": "Transakce selhala"
     }
   ],
+  "Mlc7Vr": [
+    {
+      "type": 0,
+      "value": "Vylepšení Etherea budou úspěšná jen v případě, že validátoři chápou rizika a povinnosti."
+    }
+  ],
+  "Mm7FSl": [
+    {
+      "type": 0,
+      "value": "Pojmy Eth1 a Eth2 jsou při přípravě na sloučení rušeny."
+    }
+  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Podrobnosti o dobití"
-    }
-  ],
-  "Ns8vbQ": [
-    {
-      "type": 0,
-      "value": "Vyberte klienta "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
     }
   ],
   "N0rwnt": [
@@ -2097,20 +2185,6 @@
     {
       "type": 0,
       "value": " není platný soubor JSON deposit_data. Zkuste to znovu."
-    }
-  ],
-  "rMjMmc": [
-    {
-      "type": 0,
-      "value": "K připojení uzlu Eth2 ke koncovému bodu JSON RPC použijte "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
     }
   ],
   "NEmnAV": [
@@ -2149,12 +2223,6 @@
       "value": "Stáhnout aplikaci příkazového řádku"
     }
   ],
-  "36j2ls": [
-    {
-      "type": 0,
-      "value": "Ke zpracovávání příchozích vkladů validátoru z mainnetu (z řetězce Eth1) potřebujete souběžně provozovat klienta Eth1 i klienta Eth2. Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
-    }
-  ],
   "NVljH4": [
     {
       "type": 0,
@@ -2187,16 +2255,26 @@
       "value": "Nezapomeňte, že hlas validátora je posuzován podle částky jeho podílu."
     }
   ],
-  "THIzw6": [
+  "NatYUJ": [
     {
       "type": 0,
-      "value": "Validátoři a Eth2"
+      "value": "Přečtěte si další informace o rolích a povinnostech validátorů Etherea."
     }
   ],
   "Nb5DNK": [
     {
       "type": 0,
       "value": "Staňte se validátorem s Teku"
+    }
+  ],
+  "Ns8vbQ": [
+    {
+      "type": 0,
+      "value": "Vyberte klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
     }
   ],
   "NwzcYT": [
@@ -2227,10 +2305,10 @@
       "value": "."
     }
   ],
-  "xXWzDf": [
+  "O3qkOm": [
     {
       "type": 0,
-      "value": "Síť Eth2"
+      "value": "Tříštění"
     }
   ],
   "OIvXIO": [
@@ -2275,6 +2353,12 @@
     {
       "type": 0,
       "value": "Jako validátor musíte dát finanční prostředky jako podíl, abyste mohli být postihováni na nečestné chování."
+    }
+  ],
+  "P/Oh91": [
+    {
+      "type": 0,
+      "value": "Phishingové útoky představují pro validátory Etherea velké riziko a mnoho lidí kvůli nim bohužel přichází o finanční prostředky."
     }
   ],
   "P0kiYS": [
@@ -2327,12 +2411,6 @@
       "value": "Doporučujeme vám nejdřív si projít celý proces na testnetu, abyste se s ním seznámili."
     }
   ],
-  "oNohob": [
-    {
-      "type": 0,
-      "value": "Nakonfigurujte svého klienta Eth2"
-    }
-  ],
   "PfoT0C": [
     {
       "type": 0,
@@ -2343,6 +2421,12 @@
     {
       "type": 0,
       "value": "Formální zpráva o ověření"
+    }
+  ],
+  "PmrcLE": [
+    {
+      "type": 0,
+      "value": "Dokumentace Nethermind na Goerli"
     }
   ],
   "PoBIK+": [
@@ -2483,10 +2567,10 @@
       "value": "jediný způsob"
     }
   ],
-  "P/Oh91": [
+  "RE2MaJ": [
     {
       "type": 0,
-      "value": "Phishingové útoky představují pro validátory Eth2 velké riziko a mnoho lidí kvůli nim bohužel přichází o finanční prostředky."
+      "value": "Klienti konsenzu"
     }
   ],
   "ROHpFF": [
@@ -2505,12 +2589,6 @@
     {
       "type": 0,
       "value": "gratulujeme"
-    }
-  ],
-  "nln+aO": [
-    {
-      "type": 0,
-      "value": "Nasimuloval(a) jsem migraci z jednoho klienta Eth2 na jiného klienta Eth2."
     }
   ],
   "RaBZna": [
@@ -2555,12 +2633,6 @@
       "value": "Následujícím příkazem zkontrolujte, zda vrátí správnou verzi klienta:"
     }
   ],
-  "S0e/cN": [
-    {
-      "type": 0,
-      "value": "Jak chcete spustit příkazový řádek?"
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -2579,18 +2651,10 @@
       "value": "Váš podíl dosáhl částky ve smlouvě o vkladu!"
     }
   ],
-  "toCscK": [
+  "SHNw06": [
     {
       "type": 0,
-      "value": "Vyberte klienta Eth"
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " a nastavte uzel"
+      "value": "Spusťte soubor, který jste právě stáhli."
     }
   ],
   "SR0qHv": [
@@ -2629,6 +2693,12 @@
       "value": "Víc o rizicích postihu"
     }
   ],
+  "SdRBir": [
+    {
+      "type": 0,
+      "value": "Pokud se chcete stát validátorem, musíte být schopní v příkazovém řádku na počítači spouštět příkazy. Generování nových párů klíčů a instalace validačního softwaru probíhá přes příkazový řádek."
+    }
+  ],
   "SeW5ak": [
     {
       "type": 0,
@@ -2657,6 +2727,12 @@
       "value": "maticový klíč"
     }
   ],
+  "THIzw6": [
+    {
+      "type": 0,
+      "value": "Validátoři a Ethereum"
+    }
+  ],
   "TLEziZ": [
     {
       "type": 0,
@@ -2683,20 +2759,6 @@
       "value": "virtualenv vám chce pomoci s vytvořením izolovaného pythonového prostředí pro nástroj deposit-cli."
     }
   ],
-  "ie5fDg": [
-    {
-      "type": 0,
-      "value": "Eth2 "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Launchpad"
-    }
-  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -2719,40 +2781,6 @@
     {
       "type": 0,
       "value": "více než 50%"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "Klienti Eth2 podporují Prometheus a Grafana, abyste mohli vizualizovat důležité statistiky vašeho validátoru v reálném čase. Pokyny specifické pro klienty najdete zde: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "UHbYCa": [
@@ -2815,6 +2843,28 @@
     {
       "type": 0,
       "value": "Pokud nemáte složku testnet, pravděpodobně jste nesestavili a nespustili Nimbus správně. Spusťte příkazy make znovu."
+    }
+  ],
+  "V19Udt": [
+    {
+      "type": 0,
+      "value": "Ethereum bude tvořeno dvěma vrstvami: "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (zpracovává transakce a exekuci, dříve Eth1) a "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (zpracovává řetězovou vazbu důkazu podílem, dříve Eth2 nebo Ethereum 2.0)."
     }
   ],
   "VASo1/": [
@@ -2931,12 +2981,6 @@
       "value": "oděv pro bojová umění"
     }
   ],
-  "SdRBir": [
-    {
-      "type": 0,
-      "value": "Pokud se chcete stát validátorem, musíte být schopní v příkazovém řádku na počítači spouštět příkazy. Generování nových párů klíčů Eth2 a instalace validačního softwaru probíhá přes příkazový řádek."
-    }
-  ],
   "VctWDX": [
     {
       "type": 0,
@@ -2967,12 +3011,6 @@
       "value": "Časté dotazy"
     }
   ],
-  "im7uMt": [
-    {
-      "type": 0,
-      "value": "Klient validátora Eth2 (VC)"
-    }
-  ],
   "WFVzvu": [
     {
       "type": 1,
@@ -3001,30 +3039,16 @@
       "value": "totalTxCount"
     }
   ],
-  "Xbt2gv": [
-    {
-      "type": 0,
-      "value": "K připojení uzlu Eth2 ke koncovému bodu JSON RPC použijte "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
-    }
-  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "Tyto kroky jsou volitelné, ale doporučujeme je k optimalizaci uzlu."
     }
   ],
-  "smD5l/": [
+  "WdDGn6": [
     {
       "type": 0,
-      "value": "Uzel Eth2 Beacon Node (BN)"
+      "value": "Implementace protokolu konsenzu se zaměřením na použitelnost, zabezpečení a spolehlivost. Prysm je vyvíjen společností Prysmatic Labs, která se zaměřuje výhradně na vývoj svého klienta."
     }
   ],
   "WkrNSk": [
@@ -3057,16 +3081,6 @@
       "value": "Pojmenoval průzkumník bloků danou smlouvu?"
     }
   ],
-  "5A6amM": [
-    {
-      "type": 0,
-      "value": "Provozování validátoru Eth2 z více míst je velmi rizikové. Můžete za to dostat postih a být vykopnuti ze sítě. "
-    },
-    {
-      "type": 1,
-      "value": "learnMore"
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -3077,6 +3091,12 @@
     {
       "type": 0,
       "value": "Víc o instalaci pip"
+    }
+  ],
+  "XRxD8r": [
+    {
+      "type": 0,
+      "value": "Dokumentace Besu na Goerli"
     }
   ],
   "XVehvN": [
@@ -3105,10 +3125,58 @@
       "value": "."
     }
   ],
+  "Xbt2gv": [
+    {
+      "type": 0,
+      "value": "K připojení uzlu konsenzu ke koncovému bodu JSON RPC použijte "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
       "value": "Sestavit ze zdroje"
+    }
+  ],
+  "XqbweH": [
+    {
+      "type": 0,
+      "value": "Klienti podporují Prometheus a Grafana, abyste mohli vizualizovat důležité statistiky vašeho validátoru v reálném čase. Pokyny specifické pro klienty najdete zde: "
+    },
+    {
+      "type": 1,
+      "value": "lighthouse"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "nimbus"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "prysm"
+    },
+    {
+      "type": 0,
+      "value": " | "
+    },
+    {
+      "type": 1,
+      "value": "teku"
     }
   ],
   "Y47aYU": [
@@ -3183,18 +3251,18 @@
       "value": "."
     }
   ],
-  "dNh0YZ": [
+  "YQJy4H": [
     {
       "type": 0,
-      "value": "K "
+      "value": "Mnemotechnickou pomůcku byste si měli zapsat a uložit na bezpečném místě. Stejně tak byste měli uložit úložiště klíčů pro každý ze svých "
     },
     {
       "type": 1,
-      "value": "date"
+      "value": "validatorCount"
     },
     {
       "type": 0,
-      "value": " budete potřebovat přibližně 400 GB jen pro data řetězců mainnetu Eth1 (objem dat roste asi o 1 GB denně)."
+      "value": " validátorů. Uchovávejte je na bezpečném, nejlépe offline místě. Úložiště klíčů vašich validátorů by měla být k dispozici ve vybraném adresáři."
     }
   ],
   "Yganfl": [
@@ -3207,6 +3275,12 @@
     {
       "type": 0,
       "value": "Pokud ztratíte klíč pro výběr, finanční prostředky zadržované validátorem nebudete mít jak vybrat."
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "slovinština"
     }
   ],
   "YtwQyB": [
@@ -3287,28 +3361,42 @@
       "value": "To také záleží na různých skutečnostech. Za škodlivé chování (například atestaci neplatných nebo protichůdných bloků) dostanete postih formou ztráty podílu."
     }
   ],
-  "uPECbE": [
-    {
-      "type": 0,
-      "value": "Kontrolní seznam validátora Eth2"
-    }
-  ],
   "ZTo0Fl": [
     {
       "type": 0,
       "value": "Proč je nutné čekat?"
     }
   ],
-  "iqJ3LM": [
+  "ZlLjuq": [
     {
       "type": 0,
-      "value": "PegaSys Teku je klient Ethereum 2.0 založený na Javě a je přizpůsobený potřebám institucí a požadavkům na zabezpečení."
+      "value": "Až se zobrazí výzva k výběru sítě, je nutné vybrat síť "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", jinak bude vklad neplatný."
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Dokumentace k instalaci Erigonu"
     }
   ],
   "Zspg8H": [
     {
       "type": 0,
       "value": "Oddíl 1 – Než začnete"
+    }
+  ],
+  "Zxm0fh": [
+    {
+      "type": 0,
+      "value": "Sloučení bude znamenat spojení hlavní sítě Etherea, kterou dnes používáme, s řetězovou vazbou. Ethereum při tom plně přejde na důkaz podílem."
     }
   ],
   "ZzTcj5": [
@@ -3335,12 +3423,6 @@
       "value": "2. Připravte uzly"
     }
   ],
-  "cJX99/": [
-    {
-      "type": 0,
-      "value": "Podívejte se na svůj oblíbený průzkumník bloků Eth2:"
-    }
-  ],
   "aS6dBe": [
     {
       "type": 0,
@@ -3351,12 +3433,6 @@
     {
       "type": 0,
       "value": "Nimbus je licencovaný pod Apache 2 a napsaný v jazyce Nim, který má syntaxi jako Python a kompiluje se do jazyka C."
-    }
-  ],
-  "vkozFq": [
-    {
-      "type": 0,
-      "value": "Až do sloučení nebude možné validátor znovu aktivovat a nebudete moci převádět ani vybírat finanční prostředky (to znamená, že do té doby zůstanou vaše finanční prostředky nedostupné)."
     }
   ],
   "aZ7pUj": [
@@ -3405,6 +3481,12 @@
       "value": "Vezměte ale na vědomí, že v dohledné době se po odchodu už nebude možné vrátit."
     }
   ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "Více o rozmanitosti klientů"
+    }
+  ],
   "bNFkSo": [
     {
       "type": 0,
@@ -3421,6 +3503,12 @@
     {
       "type": 0,
       "value": "Dokumentace k instalaci Besu"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "Stáhnout aplikaci Wagyu Key Gen"
     }
   ],
   "bVtlF7": [
@@ -3459,6 +3547,12 @@
       "value": "Dokumentace Geth vysvětluje, jak si stáhnout a nainstalovat klienta."
     }
   ],
+  "cJX99/": [
+    {
+      "type": 0,
+      "value": "Podívejte se na svůj oblíbený prohlížeč bloků řetězové vazby:"
+    }
+  ],
   "cPsIkp": [
     {
       "type": 0,
@@ -3489,6 +3583,12 @@
       "value": "Víc o PegaSys Teku"
     }
   ],
+  "ckaUkz": [
+    {
+      "type": 0,
+      "value": "Validátor je subjekt, který se podílí na konsenzu protokolu Ethereum."
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -3501,10 +3601,10 @@
       "value": "Jakou sankci dostanu za nevhodné chování?"
     }
   ],
-  "NatYUJ": [
+  "cpxfOR": [
     {
       "type": 0,
-      "value": "Přečtěte si další informace o rolích a povinnostech validátorů Eth2."
+      "value": "Co jsou přihlašovací údaje k výběru?"
     }
   ],
   "cyR7Kh": [
@@ -3513,10 +3613,26 @@
       "value": "Zpět"
     }
   ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "Krok 2: Pomocí aplikace Wagyu Key Gen vygenerujte vkladové klíče"
+    }
+  ],
   "d5KEM8": [
     {
       "type": 0,
       "value": "Musíte podeosat transakci u každého vkladu, který chcete provést."
+    }
+  ],
+  "d75Ebj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " jsou 32bajtové pole ve vkladu, které slouží k ověřování cíle platných výběrů. Momentálně existují dva typy výběrů: výběr BLS a výběr na ethereovou adresu."
     }
   ],
   "dH5+MX": [
@@ -3531,10 +3647,30 @@
       "value": "Vklad"
     }
   ],
+  "dJMce5": [
+    {
+      "type": 0,
+      "value": "Prysm je implementace protokolu Ethereum pomocí klienta konsenzu v jazyce Go se zaměřením na použitelnost, bezpečnost a spolehlivost."
+    }
+  ],
   "dM/KIM": [
     {
       "type": 0,
       "value": "Co přesně je validátor?"
+    }
+  ],
+  "dNh0YZ": [
+    {
+      "type": 0,
+      "value": "K "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " budete potřebovat přibližně 400 GB jen pro data exekučních řetězců hlavní sítě (objem dat roste asi o 1 GB denně)."
     }
   ],
   "dTOtPO": [
@@ -3599,10 +3735,10 @@
       "value": "code3"
     }
   ],
-  "192AR6": [
+  "eF9RbC": [
     {
       "type": 0,
-      "value": "Víc o Eth2"
+      "value": "Smlouva o vkladu je v podstatě převod finančních prostředků mezi ethereovými účty a validátory řetězové vazby."
     }
   ],
   "eKEL/g": [
@@ -3639,6 +3775,12 @@
     {
       "type": 0,
       "value": "Víc o sloučení"
+    }
+  ],
+  "eq0/34": [
+    {
+      "type": 0,
+      "value": "Sloučení"
     }
   ],
   "erZJkZ": [
@@ -3733,6 +3875,12 @@
       "value": "dopadu efektivního zůstatku"
     }
   ],
+  "frIMm4": [
+    {
+      "type": 0,
+      "value": "Synchronizace vašeho exekučního klienta může v nejhorším případě trvat několik dní."
+    }
+  ],
   "g/DxI7": [
     {
       "type": 0,
@@ -3749,12 +3897,6 @@
     {
       "type": 0,
       "value": "Víc o virtualenv"
-    }
-  ],
-  "gAdE9y": [
-    {
-      "type": 0,
-      "value": "Děkujeme, že podporujete síť Eth2!"
     }
   ],
   "gIauNz": [
@@ -3909,6 +4051,12 @@
       "value": "Jinými slovy, maximálních odměn dosáhnete tím, že budete síti jako celku co nejprospěšněji pomáhat."
     }
   ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "maďarština"
+    }
+  ],
   "hjrLbR": [
     {
       "type": 0,
@@ -3941,12 +4089,6 @@
       "value": "Chápu, že je důležité mát validátor online a aktualizovaný."
     }
   ],
-  "nBhisA": [
-    {
-      "type": 0,
-      "value": "Pokud se chcete stát validátorem, musíte provozovat uzly Eth1 a Eth2. Podle kontrolního seznamu připravte sebe a své vybavení."
-    }
-  ],
   "iCpuph": [
     {
       "type": 0,
@@ -3963,12 +4105,6 @@
     {
       "type": 0,
       "value": "Jelikož jsou převody pro tuto chvíli vypnuté, nebudete moci dobrovolně odejít a později znovu začít. To znamená, že dáváte dlouhodobý závazek."
-    }
-  ],
-  "lHiz+K": [
-    {
-      "type": 0,
-      "value": "Nimbus je implementace klienta pro Eth1 i Eth2, která se snaží být co nejméně náročná na hardwarové zdroje. Díky tomu dokáže dobře fungovat na vestavěných systémech, zařízeních s omezenými prostředky (včetně počítačů Raspberry Pi) a víceúčelových serverech."
     }
   ],
   "iWg7mL": [
@@ -4005,6 +4141,34 @@
       "value": "Uvažujete o podílu?"
     }
   ],
+  "ie5fDg": [
+    {
+      "type": 0,
+      "value": "Launchpad uzamčení "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "im7uMt": [
+    {
+      "type": 0,
+      "value": "Klient validátora (VC) vrstvy konsenzu"
+    }
+  ],
+  "ioj2Sj": [
+    {
+      "type": 0,
+      "value": "Naimportoval(a) jsem svá úložiště klíčů do svého klienta validátora."
+    }
+  ],
+  "iqJ3LM": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku je klient konsenzu pro Ethereum založený na Javě a je přizpůsobený potřebám institucí a požadavkům na zabezpečení."
+    }
+  ],
   "irRdC0": [
     {
       "type": 0,
@@ -4031,10 +4195,10 @@
       "value": ")"
     }
   ],
-  "tbYkT4": [
+  "j8GPOH": [
     {
       "type": 0,
-      "value": "Specifikace Eth2"
+      "value": "Teku (dříve Artemis) je klient konsenzu pro potřeby institucí a zabezpečení. PegaSys je odnož ConsenSys vyhrazená pro vývoj podnikových klientů a nástrojů k interakci s hlavní platformou Ethereum."
     }
   ],
   "jDv/zO": [
@@ -4055,12 +4219,6 @@
       "value": "Dokumentace k instalaci Lighthouse"
     }
   ],
-  "ioj2Sj": [
-    {
-      "type": 0,
-      "value": "Naimportoval(a) jsem svá úložiště klíčů do svého validátoru Eth2."
-    }
-  ],
   "jecC36": [
     {
       "type": 0,
@@ -4071,6 +4229,12 @@
     {
       "type": 0,
       "value": "Připojit peněženku"
+    }
+  ],
+  "jg9gEs": [
+    {
+      "type": 0,
+      "value": "Musíte provést následující, aby exekuční klient fungoval správně."
     }
   ],
   "jjLubH": [
@@ -4097,16 +4261,16 @@
       "value": "Proměnné prostředí"
     }
   ],
-  "EcCME0": [
-    {
-      "type": 0,
-      "value": "Eth2 Launchpad"
-    }
-  ],
   "jytPQU": [
     {
       "type": 0,
       "value": "Dokumentace Nimbusu"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "Zobrazit audit aplikace Wagyu Key Gen od HashCloak"
     }
   ],
   "kFS5Sd": [
@@ -4225,10 +4389,10 @@
       "value": "Neuhrazený vklad"
     }
   ],
-  "MZzOnU": [
+  "lHiz+K": [
     {
       "type": 0,
-      "value": "Jak Eth2 upgraduje Ethereum?"
+      "value": "Nimbus je implementace klienta pro exekuční vrstvu i vrstvu konsenzu, která se snaží být co nejméně náročná na hardwarové zdroje. Díky tomu dokáže dobře fungovat na vestavěných systémech, zařízeních s omezenými prostředky (včetně počítačů Raspberry Pi) a víceúčelových serverech."
     }
   ],
   "lLOZMD": [
@@ -4311,10 +4475,38 @@
       "value": "."
     }
   ],
+  "lfHCV+": [
+    {
+      "type": 0,
+      "value": "Nimbus je výzkumný projekt a implementace klienta konsenzu pro Ethereum navržená tak, aby dobře fungovala na vestavěných systémech a osobních mobilních zařízeních."
+    }
+  ],
   "lfV1bj": [
     {
       "type": 0,
       "value": "Importování z dokumentace Launchpadu"
+    }
+  ],
+  "ljWKM1": [
+    {
+      "type": 0,
+      "value": "Výběr BLS: Rozhraní deposit-cli ve výchozím stavu vygeneruje přihlašovací údaje k výběru přes "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " odvozený podle mnemotechnické pomůcky ve formátu "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "ll/zMW": [
@@ -4365,24 +4557,16 @@
       "value": "Rizika a potvrzení:"
     }
   ],
-  "n6Uub0": [
-    {
-      "type": 0,
-      "value": "Mám nainstalovaný svůj uzel Eht1 na síti "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " (nečekejte na to, protože to může zabrat několik dnů)."
-    }
-  ],
   "n7yYXG": [
     {
       "type": 0,
       "value": "Služba"
+    }
+  ],
+  "nBhisA": [
+    {
+      "type": 0,
+      "value": "Pokud se chcete stát validátorem, je nutné provozovat exekučního klienta (dříve Eth1) a také klienta konsenzu (dříve Eth2). Podívejte se na kontrolní seznam, podle kterého můžete sebe a své vybavení připravit."
     }
   ],
   "nHk8Et": [
@@ -4409,6 +4593,12 @@
     {
       "type": 0,
       "value": "Pokračovat bez potvrzení všech transakcí"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Dokumentace Erigonu"
     }
   ],
   "nZTFTz": [
@@ -4441,6 +4631,12 @@
     {
       "type": 0,
       "value": "Spustil(a) jsem svého klienta validátora."
+    }
+  ],
+  "nln+aO": [
+    {
+      "type": 0,
+      "value": "Nasimuloval(a) jsem bezpečnou migraci z jednoho klienta konsenzu na druhý."
     }
   ],
   "ntG2by": [
@@ -4481,6 +4677,12 @@
     {
       "type": 0,
       "value": "Po naimportování klíčů vám zbývá jen spustit klienta validátoru (za předpokladu, že Beacon uzel už je spuštěný)."
+    }
+  ],
+  "oNohob": [
+    {
+      "type": 0,
+      "value": "Nakonfigurujte svého klienta konsenzu"
     }
   ],
   "oPdwwC": [
@@ -4529,12 +4731,6 @@
     {
       "type": 0,
       "value": "Povinnosti"
-    }
-  ],
-  "okxBZ6": [
-    {
-      "type": 0,
-      "value": "OpenEthereum, dříve Parity, má být „nejrychlejší, nejméně náročný a nejbezpečnější Ethereum klient“."
     }
   ],
   "omJNJw": [
@@ -4613,16 +4809,16 @@
       "value": "."
     }
   ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "Dvojím kliknutím spusťte danou aplikaci z počítače."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
       "value": "Dokumentace Besu vysvětluje, jak si stáhnout a nainstalovat klienta."
-    }
-  ],
-  "y44jV2": [
-    {
-      "type": 0,
-      "value": "Eth2 je skupina upgradů, které zajistí vyšší škálovatelnost, bezpečnost a udržitelnost Etherea. Tyto upgrady vylepší Ethereum a plynule navážou na současný řetězec. Další informace o jednotlivých upgradech najdete tady:"
     }
   ],
   "pfJX2D": [
@@ -4671,10 +4867,10 @@
       "value": "Zloděj, který vám ukradne klíč pro výběr, může převést zůstatek vašeho validátoru, ale až po ukončení validátoru."
     }
   ],
-  "zJicsO": [
+  "qB6aU6": [
     {
       "type": 0,
-      "value": "Ekonomika Eth2"
+      "value": "Co se stalo s Eth2?"
     }
   ],
   "qDcbPp": [
@@ -4701,12 +4897,6 @@
     {
       "type": 0,
       "value": "Terminál"
-    }
-  ],
-  "qLf68w": [
-    {
-      "type": 0,
-      "value": "Dokumentace OpenEthereum"
     }
   ],
   "qMePPG": [
@@ -4745,18 +4935,6 @@
       "value": "Uložte si soubory klíčů a připravte si soubor validátoru"
     }
   ],
-  "sMHQRT": [
-    {
-      "type": 0,
-      "value": "Klient Eth2 silně zaměřený na rychlost a zabezpečení. Vyvinula jej firma Sigma Prime zabývající se zabezpečením dat a vývojem softwaru, která financuje Lighthouse a dále Ethereum Foundation, Consensys a různé jednotlivce."
-    }
-  ],
-  "jg9gEs": [
-    {
-      "type": 0,
-      "value": "Musíte provést následující, aby klient Eth1 fungoval správně."
-    }
-  ],
   "qwh6gM": [
     {
       "type": 0,
@@ -4785,6 +4963,20 @@
     {
       "type": 0,
       "value": "Jako validátor budete odpovědní za zabezpečování sítě a budete průběžně dostávat platby za kroky, které pomáhají síti v dosahování konsensu."
+    }
+  ],
+  "rMjMmc": [
+    {
+      "type": 0,
+      "value": "K připojení uzlu konsenzu ke koncovému bodu JSON RPC použijte "
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
     }
   ],
   "rNEdex": [
@@ -4821,6 +5013,12 @@
     {
       "type": 0,
       "value": "Vzhledem k fixnímu celkovému počtu validátorů jsou odměny a sankce škálovány především podle zůstatku validátoru – atestování s vyšším zůstatkem znamená vyšší odměny/sankce a atestování s nižším zůstatkem znamená nižší odměny/sankce."
+    }
+  ],
+  "rnDgcN": [
+    {
+      "type": 0,
+      "value": "Ne, při dobíjení nelze přihlašovací údaje k výběru změnit."
     }
   ],
   "rs4eqr": [
@@ -4887,10 +5085,42 @@
       "value": "Teku lze také nakonfigurovat pomocí YAML souboru, který je předán několika různými způsoby."
     }
   ],
+  "sMHQRT": [
+    {
+      "type": 0,
+      "value": "Klient konsenzu silně zaměřený na rychlost a zabezpečení. Vyvinula jej firma Sigma Prime zabývající se zabezpečením dat a vývojem softwaru, která financuje Lighthouse a dále Ethereum Foundation, Consensys a různé jednotlivce."
+    }
+  ],
   "sXV95+": [
     {
       "type": 0,
       "value": "Procesor a RAM"
+    }
+  ],
+  "sdQRah": [
+    {
+      "type": 0,
+      "value": "Synchronizoval(a) jsem svůj Beacon uzel na síti "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "Stáhnout aplikaci Key Gen GUI"
+    }
+  ],
+  "smD5l/": [
+    {
+      "type": 0,
+      "value": "Beacon uzel (BN) vrstvy konsenzu"
     }
   ],
   "soCLV+": [
@@ -4903,16 +5133,6 @@
     {
       "type": 0,
       "value": "Čeká se na připojení…"
-    }
-  ],
-  "sdQRah": [
-    {
-      "type": 0,
-      "value": "Synchronizoval(a) jsem svůj Beacon uzel Eth2 na síti "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
     }
   ],
   "sy35J+": [
@@ -4931,6 +5151,18 @@
     {
       "type": 0,
       "value": "Podle souboru deposit_data.json to vypadá, že jste chtěli nastavit víc validátorů. Tyto vklady stále čekají. Pokud si myslíte, že jste tyto vklady už provedli, počkejte hodinu a pak to zkuste znovu, aby nedošlo k duplicitním vkladům."
+    }
+  ],
+  "tMHEEe": [
+    {
+      "type": 0,
+      "value": "Další informace o velkém přejmenování"
+    }
+  ],
+  "tbYkT4": [
+    {
+      "type": 0,
+      "value": "Specifikace vrstvy konsenzu Etherea"
     }
   ],
   "teyxVk": [
@@ -4959,6 +5191,20 @@
       "value": "Zůstatek po dobití"
     }
   ],
+  "toCscK": [
+    {
+      "type": 0,
+      "value": "Vyberte klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " a nastavte uzel"
+    }
+  ],
   "tsfX5f": [
     {
       "type": 0,
@@ -4985,6 +5231,12 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "txdGU9": [
+    {
+      "type": 0,
+      "value": "Vylepšení Etherea"
     }
   ],
   "tzMNF3": [
@@ -5039,6 +5291,12 @@
     {
       "type": 1,
       "value": "reconnect"
+    }
+  ],
+  "uPECbE": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam validátora"
     }
   ],
   "ubKWX8": [
@@ -5115,6 +5373,12 @@
       "value": "Váš zůstatek je pravidelně aktualizován pravidly sítě Ethereum podle toho, jak plníte (nebo neplníte) své povinnosti."
     }
   ],
+  "vCHTnu": [
+    {
+      "type": 0,
+      "value": "Přihlašovací údaje k výběru"
+    }
+  ],
   "vEJDo8": [
     {
       "type": 0,
@@ -5131,6 +5395,12 @@
     {
       "type": 0,
       "value": "Postupujte opatrně. Náš zdroj dat na řetězci je mimo provoz a nejsme schopní nahlašovat duplicitní vklady."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "Krok 1: Stáhněte si aplikaci Wagyu Key Gen pro váš operační systém"
     }
   ],
   "vY2wig": [
@@ -5181,6 +5451,12 @@
       "value": "Pomocí svého podpisového klíče můžete zkusit validátor rychle ukončit a pak finanční prostředky převést s využitím klíče pro výběr, a to dřív, než to udělá zloděj."
     }
   ],
+  "vkozFq": [
+    {
+      "type": 0,
+      "value": "Až do vyčištění po sloučení, které je momentálně naplánováno po sloučení, nebude možné validátor znovu aktivovat a nebudete moci převádět ani vybírat finanční prostředky (to znamená, že do té doby zůstanou vaše finanční prostředky nedostupné)."
+    }
+  ],
   "vyvUB5": [
     {
       "type": 0,
@@ -5193,12 +5469,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "JbVlOE": [
-    {
-      "type": 0,
-      "value": "Přečtěte si víc o tom, jak Eth2 upgraduje Ethereum."
     }
   ],
   "w6qYSU": [
@@ -5229,6 +5499,12 @@
       "value": "rybářský prut"
     }
   ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Dokumentace Erigonu vysvětluje, jak si stáhnout a nainstalovat klienta."
+    }
+  ],
   "wdb1NC": [
     {
       "type": 0,
@@ -5257,6 +5533,28 @@
       "value": "Rizika předčasného přijetí"
     }
   ],
+  "wrnpoO": [
+    {
+      "type": 0,
+      "value": "Ke zpracovávání příchozích vkladů validátoru z exekuční vrstvy (dříve z řetězce Eth1) potřebujete provozovat klienta "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " i vašeho klienta "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (dříve Eth2). Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
+    }
+  ],
   "wtTeex": [
     {
       "type": 0,
@@ -5273,6 +5571,12 @@
     {
       "type": 0,
       "value": "Validace Etherea není to stejné co těžba. Výsledky jsou podobné: svou činností rozšiřujete a zabezpečujete řetězec. Ale proce se zcela liší, protože používá jiný mechanismus konsensu."
+    }
+  ],
+  "x8+8fi": [
+    {
+      "type": 0,
+      "value": "Většina validátorů momentálně jako klienta konsenzu používá Prysm. Rozmanitost klientů je velmi důležitá pro stav sítě Ethereum: Chyba v klientovi s více než 33% podílem může způsobit odpojení Etherea. Pokud má klient kvalifikovanou většinu (více než 66 %), případná chyba by mohla způsobit nesprávné rozdělení řetězce a mohla by vést i k postihu."
     }
   ],
   "xDyl3T": [
@@ -5295,18 +5599,6 @@
       "value": "Jako uživatel předčasné verze beru na vědomí, že za softwarové a jiné chyby mi může hrozit postih."
     }
   ],
-  "xJPCw/": [
-    {
-      "type": 0,
-      "value": "Co se stane, když ztratím klíč pro výběr?"
-    }
-  ],
-  "xOSMb1": [
-    {
-      "type": 0,
-      "value": "Dokumentace Nethermind na Goerli"
-    }
-  ],
   "xP6BKs": [
     {
       "type": 0,
@@ -5325,10 +5617,10 @@
       "value": "Odměny za bloky jsou počítány pomocí posuvné škály založené na celkové částce podílu ETH v síti."
     }
   ],
-  "lfHCV+": [
+  "xXWzDf": [
     {
       "type": 0,
-      "value": "Nimbus je výzkumný projekt a implementace klienta pro Ethereum 2.0 navržená tak, aby dobře fungovala na vestavěných systémech a osobních mobilních zařízeních."
+      "value": "Řetězová vazba"
     }
   ],
   "xbet2w": [
@@ -5343,6 +5635,12 @@
       "value": "Besu je napsán v Javě a vydáván pod licencí Apache 2.0."
     }
   ],
+  "y44jV2": [
+    {
+      "type": 0,
+      "value": "Probíhá několik vylepšení, která zajistí vyšší škálovatelnost, bezpečnost a udržitelnost Etherea. Tyto upgrady vylepší Ethereum a plynule navážou na současný řetězec. Další informace o jednotlivých upgradech najdete tady:"
+    }
+  ],
   "y4dBsA": [
     {
       "type": 0,
@@ -5353,6 +5651,12 @@
     {
       "type": 0,
       "value": "Je důležité vědět, že hlas validátora je posuzován podle částky jeho podílu."
+    }
+  ],
+  "yFtJza": [
+    {
+      "type": 0,
+      "value": "Ujistěte se, že máte kontrolu nad klíči k této adrese."
     }
   ],
   "yI/DO8": [
@@ -5403,6 +5707,12 @@
     {
       "type": 0,
       "value": "Nethermind je založený .NET Core a můžete jej bez omezení rozšiřovat a přizpůsobovat."
+    }
+  ],
+  "ynB6C+": [
+    {
+      "type": 0,
+      "value": "Dokážu připojit svůj konsenzus klient k mému exekučnímu klientovi přes HTTP API."
     }
   ],
   "yoGtkz": [
@@ -5465,6 +5775,12 @@
       "value": "Na druhou stranu, pokud je váš zůstatek blíž k 31 ETH, pravděpodobně není nutné dobíjet ETH, abyste se dostali zpět na 32."
     }
   ],
+  "zJicsO": [
+    {
+      "type": 0,
+      "value": "Ekonomika uzamčení"
+    }
+  ],
   "zbEBi9": [
     {
       "type": 0,
@@ -5483,6 +5799,20 @@
     {
       "type": 0,
       "value": "Zabezpečení uzlu"
+    }
+  ],
+  "zmMF+G": [
+    {
+      "type": 0,
+      "value": "Launchpad uzamčení pro "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
     }
   ]
 }

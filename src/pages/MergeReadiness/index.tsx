@@ -173,12 +173,12 @@ export const MergeReadiness = () => {
             {sections[0].title}
           </Heading>
           <Text className="mt10">
-            <FormattedMessage defaultMessage="Post-merge, an Ethereum node will be comprised of both an execution layer (EL) client, and a consensus layer (CL) client. EL + CL = Ethereum." />
+            <FormattedMessage defaultMessage="Post-merge, an Ethereum node will be comprised of both an execution client, and a consensus client." />
           </Text>
         </SectionHeader>
         <section>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to has been the staking deposit contract." />
+            <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract." />
           </Text>
           <Text className="mt20">
             <FormattedMessage defaultMessage="With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have trusted access to the events of the execution layer. Trust only your own node." />
@@ -197,14 +197,14 @@ export const MergeReadiness = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I am running my own execution layer client." />
+                <FormattedMessage defaultMessage="I am running my own execution client." />
               </Text>
             }
           />
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I am running my own consensus layer client." />
+                <FormattedMessage defaultMessage="I am running my own consensus client." />
               </Text>
             }
           />
@@ -348,7 +348,7 @@ export const MergeReadiness = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I have set up a shared JWT secret and made it available to {both} my execution layer client, and my consensus layer client (beacon node)"
+                  defaultMessage="I have set up a shared JWT secret and made it available to {both} my execution client, and my consensus client (beacon node)"
                   values={{ both: <strong>both</strong> }}
                 />
               </Text>
@@ -390,7 +390,7 @@ export const MergeReadiness = () => {
             </Text>
           </Alert>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="See your consensus layer client documentation for client-specific instructions on how to set this." />
+            <FormattedMessage defaultMessage="See your consensus client documentation for client-specific instructions on how to set this." />
           </Text>
           <ul className="sub-checklist-item">
             <li className="py5">

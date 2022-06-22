@@ -454,7 +454,7 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
-                  description="{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'"
+                  description="{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'"
                 />
               </Text>
             </li>
@@ -832,7 +832,7 @@ export const Checklist = () => {
               <FormattedMessage defaultMessage="Remember" />
             </Heading>
             <Text className="mt20">
-              <FormattedMessage defaultMessage="All stakers must operate an execution layer client with their consensus layer client starting at the Merge. Make sure you're prepared." />
+              <FormattedMessage defaultMessage="All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared." />
               <Link primary to="/merge-readiness" className="mt10">
                 {formatMessage({
                   defaultMessage: 'Merge Readiness Checklist',

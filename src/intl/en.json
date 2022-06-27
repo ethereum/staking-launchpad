@@ -191,6 +191,9 @@
   "2iH8Zc": {
     "message": "Nimbus key management documentation"
   },
+  "2rflCq": {
+    "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
+  },
   "2s0gAx": {
     "message": "Configuring a Fee Recipient Address"
   },
@@ -691,6 +694,9 @@
   },
   "FazwRl": {
     "message": "Try again"
+  },
+  "FcCHp4": {
+    "message": "Latest data on network client usage"
   },
   "Felr8P": {
     "message": "A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
@@ -1683,6 +1689,9 @@
   "clxIWO": {
     "message": "How much will I be penalized for acting maliciously?"
   },
+  "cnQKC2": {
+    "message": "Currently Geth is used by >66% of the network."
+  },
   "cpxfOR": {
     "message": "What are withdrawal credentials?"
   },
@@ -2169,6 +2178,9 @@
   "o9QvTP": {
     "message": "Before you start"
   },
+  "oF4os+": {
+    "message": "Currently Prysm is used by >33% of the network."
+  },
   "oLxfO1": {
     "message": "Now that the keys are imported, all that is left to do (assuming your beacon node is already running) is to run the validator client."
   },
@@ -2543,9 +2555,6 @@
   },
   "x4/9vY": {
     "message": "We strongly recommended you complete these steps on the current testnet before Mainnet."
-  },
-  "x8+8fi": {
-    "message": "Currently the majority of validators run Prysm as their consensus client. Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",

@@ -485,6 +485,12 @@
       "value": "Nimbus key management documentation"
     }
   ],
+  "2rflCq": [
+    {
+      "type": 0,
+      "value": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
+    }
+  ],
   "2s0gAx": [
     {
       "type": 0,
@@ -1821,6 +1827,12 @@
     {
       "type": 0,
       "value": "Try again"
+    }
+  ],
+  "FcCHp4": [
+    {
+      "type": 0,
+      "value": "Latest data on network client usage"
     }
   ],
   "Felr8P": [
@@ -4403,6 +4415,12 @@
       "value": "How much will I be penalized for acting maliciously?"
     }
   ],
+  "cnQKC2": [
+    {
+      "type": 0,
+      "value": "Currently Geth is used by >66% of the network."
+    }
+  ],
   "cpxfOR": [
     {
       "type": 0,
@@ -5663,6 +5681,12 @@
       "value": "Before you start"
     }
   ],
+  "oF4os+": [
+    {
+      "type": 0,
+      "value": "Currently Prysm is used by >33% of the network."
+    }
+  ],
   "oLxfO1": [
     {
       "type": 0,
@@ -6609,12 +6633,6 @@
     {
       "type": 0,
       "value": "We strongly recommended you complete these steps on the current testnet before Mainnet."
-    }
-  ],
-  "x8+8fi": [
-    {
-      "type": 0,
-      "value": "Currently the majority of validators run Prysm as their consensus client. Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
     }
   ],
   "xDyl3T": [

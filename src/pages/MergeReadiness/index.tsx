@@ -22,6 +22,10 @@ const ChecklistPageStyles = styled.div`
       margin-bottom: 5px;
     }
   }
+  section.pending {
+    filter: grayscale(100%);
+    opacity: 75%;
+  }
   label {
     padding: 1rem;
   }
@@ -54,6 +58,7 @@ const Subtitle = styled.p`
 const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-auto-rows: 1fr;
   gap: 1rem;
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     flex-direction: column;
@@ -61,12 +66,13 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
+  display: flex;
   padding: 24px;
   border: 1px solid ${p => p.theme.gray.dark};
   border-radius: 4px;
   width: 100%;
+  height: 100%;
   background: white;
-  display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
@@ -74,12 +80,24 @@ const Card = styled.div`
     margin: 0px;
     margin-top: 16px;
   }
+  &.pending {
+    filter: grayscale(75%);
+    opacity: 60%;
+  }
 
+  transform: scale(1);
+  transition: transform 0.1s;
   &:hover {
     cursor: pointer;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     transition: transform 0.1s;
     transform: scale(1.02);
+  }
+
+  p.timing {
+    font-size: 0.875rem;
+    line-height: 140%;
+    margin-bottom: 0;
   }
 `;
 
@@ -113,18 +131,23 @@ export const MergeReadiness = () => {
   const sections = [
     {
       heading: <FormattedMessage defaultMessage="Task 1" />,
+      timing: <FormattedMessage defaultMessage="Now" />,
       title: <FormattedMessage defaultMessage="Both layers required" />,
       id: 'el-plus-cl',
     },
     {
       heading: <FormattedMessage defaultMessage="Task 2" />,
+      timing: <FormattedMessage defaultMessage="After TTD client releases" />,
       title: <FormattedMessage defaultMessage="Authenticate Engine API" />,
       id: 'authenticate',
+      pending: true,
     },
     {
       heading: <FormattedMessage defaultMessage="Task 3" />,
+      timing: <FormattedMessage defaultMessage="After TTD client releases" />,
       title: <FormattedMessage defaultMessage="Set fee recipient" />,
       id: 'fee-recipient',
+      pending: true,
     },
     {
       heading: <FormattedMessage defaultMessage="Bonus" />,
@@ -132,6 +155,33 @@ export const MergeReadiness = () => {
       id: 'additional-reminders',
     },
   ];
+
+  const TimingWarning = () => (
+    <SectionHeader className="m0 pt0">
+      <Alert variant="error" className="m0">
+        <Text>
+          <FormattedMessage
+            defaultMessage="{note} This step should be performed on {testnetsOnly} until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
+            values={{
+              note: (
+                <strong>
+                  <FormattedMessage defaultMessage="Note:" />
+                </strong>
+              ),
+              testnetsOnly: (
+                <Link to="#testing-the-merge" inline primary>
+                  <FormattedMessage
+                    defaultMessage="testnets only (e.g. {kiln})"
+                    values={{ kiln: 'Kiln' }}
+                  />
+                </Link>
+              ),
+            }}
+          />
+        </Text>
+      </Alert>
+    </SectionHeader>
+  );
 
   return (
     <PageTemplate
@@ -148,9 +198,9 @@ export const MergeReadiness = () => {
       </Subtitle>
 
       <CardContainer>
-        {sections.map(({ heading, title, id }) => (
+        {sections.map(({ heading, title, timing, pending, id }) => (
           <StyledLink to={`#${id}`} inline isTextLink={false} key={id}>
-            <Card>
+            <Card className={pending ? 'pending' : ''}>
               <div>
                 <Heading level={4} className="mb10">
                   {heading}
@@ -158,13 +208,17 @@ export const MergeReadiness = () => {
                 <BoldGreen className="mr10" fontSize={24}>
                   {title}
                 </BoldGreen>
+                {timing && (
+                  <p className={`timing ${pending ? 'pending' : null}`}>
+                    <FormattedMessage defaultMessage="Timing:" /> {timing}
+                  </p>
+                )}
               </div>
               <FormNext size="large" />
             </Card>
           </StyledLink>
         ))}
       </CardContainer>
-
       <ChecklistPageStyles>
         <SectionHeader id={sections[0].id}>
           <Heading level={3}>
@@ -176,7 +230,7 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="Post-merge, an Ethereum node will be comprised of both an execution client, and a consensus client." />
           </Text>
         </SectionHeader>
-        <section>
+        <section className={sections[0].pending ? 'pending' : ''}>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract." />
           </Text>
@@ -219,10 +273,8 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="The execution and consensus layers work together tightly, and require authentication to stay safe. " />
           </Text>
         </SectionHeader>
-        <section>
-          {/* <Heading level={3} id="engine-api-jwt">
-            <FormattedMessage defaultMessage="Engine API" />
-          </Heading> */}
+        <TimingWarning />
+        <section className={sections[1].pending ? 'pending' : ''}>
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="Communication between the execution layer and consensus layer will occur using the {engineApi}. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
@@ -239,9 +291,6 @@ export const MergeReadiness = () => {
               }}
             />
           </Text>
-          {/* <Heading level={3} id="engine-api-jwt">
-            <FormattedMessage defaultMessage="JWT" />
-          </Heading> */}
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both EL and CL) to properly authenticate the Engine API, allowing them to properly communicate between one another."
@@ -353,6 +402,7 @@ export const MergeReadiness = () => {
                 />
               </Text>
             }
+            disabled={sections[1].pending}
           />
         </section>
         <SectionHeader id={sections[2].id}>
@@ -365,7 +415,8 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="Fees rewards are coming to validators, don't miss out!" />
           </Text>
         </SectionHeader>
-        <section>
+        <TimingWarning />
+        <section className={sections[2].pending ? 'pending' : ''}>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees." />
           </Text>
@@ -435,6 +486,7 @@ export const MergeReadiness = () => {
                 <FormattedMessage defaultMessage="I understand that I will earn the unburnt transaction fees (tips/priority fees) when I propose a block, and this is accounted for on the execution layer, not my validator balance." />
               </Text>
             }
+            disabled={sections[2].pending}
           />
           <CheckBox
             label={
@@ -442,6 +494,7 @@ export const MergeReadiness = () => {
                 <FormattedMessage defaultMessage="I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited." />
               </Text>
             }
+            disabled={sections[2].pending}
           />
         </section>
         <SectionHeader id={sections[3].id}>

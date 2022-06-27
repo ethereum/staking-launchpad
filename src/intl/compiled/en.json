@@ -5,12 +5,6 @@
       "value": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
     }
   ],
-  "+M/NC/": [
-    {
-      "type": 0,
-      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
-    }
-  ],
   "+UUcBt": [
     {
       "type": 0,
@@ -875,12 +869,6 @@
       "value": " at any time during your setup for some friendly help!"
     }
   ],
-  "62zRxB": [
-    {
-      "type": 0,
-      "value": "I am running my own consensus layer client."
-    }
-  ],
   "6CK2Nu": [
     {
       "type": 0,
@@ -1373,6 +1361,12 @@
       "value": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
     }
   ],
+  "AfH0eO": [
+    {
+      "type": 0,
+      "value": "All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared."
+    }
+  ],
   "Affixg": [
     {
       "type": 0,
@@ -1401,6 +1395,12 @@
     {
       "type": 0,
       "value": "Top up validator"
+    }
+  ],
+  "AzjyIx": [
+    {
+      "type": 0,
+      "value": "Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
     }
   ],
   "B2EKj+": [
@@ -1525,12 +1525,6 @@
     {
       "type": 0,
       "value": "Execution Client"
-    }
-  ],
-  "C82lUV": [
-    {
-      "type": 0,
-      "value": "All stakers must operate an execution layer client with their consensus layer client starting at the Merge. Make sure you're prepared."
     }
   ],
   "C9fTX1": [
@@ -2083,12 +2077,6 @@
       "value": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
     }
   ],
-  "IJiJjD": [
-    {
-      "type": 0,
-      "value": "All stakers must operate an execution layer client as well as a consensus layer client starting at the Merge. Make sure you're prepared."
-    }
-  ],
   "IJw06E": [
     {
       "type": 0,
@@ -2273,12 +2261,6 @@
     {
       "type": 0,
       "value": "What is your current operating system?"
-    }
-  ],
-  "K2pv1v": [
-    {
-      "type": 0,
-      "value": "Why do I need to run an execution layer client now?"
     }
   ],
   "K6+jQ3": [
@@ -2509,6 +2491,12 @@
     {
       "type": 0,
       "value": "Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider."
+    }
+  ],
+  "LwEHRm": [
+    {
+      "type": 0,
+      "value": "Why do I need to run an execution client now?"
     }
   ],
   "M3GwXS": [
@@ -3117,6 +3105,28 @@
       "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the Shanghai upgrade planned to follow the Merge (which means your funds will remain inaccessible until then)."
     }
   ],
+  "R58ea3": [
+    {
+      "type": 0,
+      "value": "You need to run an "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " as well as your "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (formerly 'Eth2')."
+    }
+  ],
   "R8eePn": [
     {
       "type": 0,
@@ -3521,6 +3531,20 @@
       "value": " (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "V5J3Uf": [
+    {
+      "type": 0,
+      "value": "I have set up a shared JWT secret and made it available to "
+    },
+    {
+      "type": 1,
+      "value": "both"
+    },
+    {
+      "type": 0,
+      "value": " my execution client, and my consensus client (beacon node)"
+    }
+  ],
   "VASo1/": [
     {
       "type": 0,
@@ -3695,12 +3719,6 @@
       "value": " will NOT be counted in your effective balance on the Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
     }
   ],
-  "WGPxqY": [
-    {
-      "type": 0,
-      "value": "Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
-    }
-  ],
   "WJA1/H": [
     {
       "type": 0,
@@ -3721,12 +3739,6 @@
     {
       "type": 0,
       "value": "These steps are optional but are recommended to optimize your node."
-    }
-  ],
-  "WTfeiS": [
-    {
-      "type": 0,
-      "value": "Post-merge, an Ethereum node will be comprised of both an execution layer (EL) client, and a consensus layer (CL) client. EL + CL = Ethereum."
     }
   ],
   "WdDGn6": [
@@ -3799,12 +3811,6 @@
     {
       "type": 0,
       "value": "More on installing pip"
-    }
-  ],
-  "XBYgM2": [
-    {
-      "type": 0,
-      "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus layer client AND an execution layer client."
     }
   ],
   "XRxD8r": [
@@ -4219,6 +4225,12 @@
       "value": "Continue"
     }
   ],
+  "aozN2h": [
+    {
+      "type": 0,
+      "value": "See your consensus client documentation for client-specific instructions on how to set this."
+    }
+  ],
   "azLmaD": [
     {
       "type": 0,
@@ -4261,12 +4273,6 @@
     {
       "type": 0,
       "value": "Use this as a reference during client setup to check off important steps."
-    }
-  ],
-  "bRGoZZ": [
-    {
-      "type": 0,
-      "value": "See your consensus layer client documentation for client-specific instructions on how to set this."
     }
   ],
   "bUk/lm": [
@@ -4441,6 +4447,12 @@
     {
       "type": 0,
       "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
+    }
+  ],
+  "dGWdPu": [
+    {
+      "type": 0,
+      "value": "All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared."
     }
   ],
   "dH5+MX": [
@@ -4767,28 +4779,6 @@
       "value": "Generate deposit keys using the Ethereum Foundation deposit tool"
     }
   ],
-  "gRMu7M": [
-    {
-      "type": 0,
-      "value": "You need to run an "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " as well as your "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (formerly 'Eth2')."
-    }
-  ],
   "gVC0Wl": [
     {
       "type": 0,
@@ -4881,6 +4871,12 @@
     {
       "type": 0,
       "value": "clock"
+    }
+  ],
+  "h/n5+N": [
+    {
+      "type": 0,
+      "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
     }
   ],
   "h8MTUo": [
@@ -5097,12 +5093,6 @@
     {
       "type": 0,
       "value": " deposits"
-    }
-  ],
-  "j0Ee5w": [
-    {
-      "type": 0,
-      "value": "I am running my own execution layer client."
     }
   ],
   "j8GPOH": [
@@ -5381,20 +5371,6 @@
     {
       "type": 0,
       "value": " deposit have a URL you expect?"
-    }
-  ],
-  "lNzqua": [
-    {
-      "type": 0,
-      "value": "I have set up a shared JWT secret and made it available to "
-    },
-    {
-      "type": 1,
-      "value": "both"
-    },
-    {
-      "type": 0,
-      "value": " my execution layer client, and my consensus layer client (beacon node)"
     }
   ],
   "lQzdpT": [
@@ -5891,6 +5867,12 @@
       "value": "Deposit summary"
     }
   ],
+  "q2PJEK": [
+    {
+      "type": 0,
+      "value": "I am running my own consensus client."
+    }
+  ],
   "q2XW/k": [
     {
       "type": 0,
@@ -6331,6 +6313,12 @@
       "value": "Uptime"
     }
   ],
+  "uGKswV": [
+    {
+      "type": 0,
+      "value": "Post-merge, an Ethereum node will be comprised of both an execution client, and a consensus client."
+    }
+  ],
   "uJzGSb": [
     {
       "type": 0,
@@ -6397,6 +6385,12 @@
     {
       "type": 0,
       "value": "Become a validator with Nimbus"
+    }
+  ],
+  "ulgIVs": [
+    {
+      "type": 0,
+      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
     }
   ],
   "uoKhQB": [
@@ -6591,6 +6585,12 @@
     {
       "type": 0,
       "value": "Are there spelling mistakes?"
+    }
+  ],
+  "wuhO1L": [
+    {
+      "type": 0,
+      "value": "I am running my own execution client."
     }
   ],
   "x+fF+M": [

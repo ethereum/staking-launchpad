@@ -2,9 +2,6 @@
   "+L0IkF": {
     "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
   },
-  "+M/NC/": {
-    "message": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
-  },
   "+UUcBt": {
     "message": "Choose a language"
   },
@@ -310,9 +307,6 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
-  "62zRxB": {
-    "message": "I am running my own consensus layer client."
-  },
   "6CK2Nu": {
     "message": "Your wallet is on the wrong network. Switch to {network}"
   },
@@ -502,6 +496,9 @@
   "Ad8+R5": {
     "message": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
   },
+  "AfH0eO": {
+    "message": "All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared."
+  },
   "Affixg": {
     "message": "The deposit"
   },
@@ -516,6 +513,9 @@
   },
   "Aw1mMs": {
     "message": "Top up validator"
+  },
+  "AzjyIx": {
+    "message": "Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
   },
   "B2EKj+": {
     "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is one-way, and non-reversible."
@@ -559,9 +559,6 @@
   },
   "C3jBPI": {
     "message": "Execution Client"
-  },
-  "C82lUV": {
-    "message": "All stakers must operate an execution layer client with their consensus layer client starting at the Merge. Make sure you're prepared."
   },
   "C9fTX1": {
     "message": "Answers to common questions on becoming a validator."
@@ -807,9 +804,6 @@
   "I7MjRD": {
     "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
   },
-  "IJiJjD": {
-    "message": "All stakers must operate an execution layer client as well as a consensus layer client starting at the Merge. Make sure you're prepared."
-  },
   "IJw06E": {
     "message": "Sign transaction with your wallet"
   },
@@ -880,9 +874,6 @@
   },
   "JtAiN/": {
     "message": "What is your current operating system?"
-  },
-  "K2pv1v": {
-    "message": "Why do I need to run an execution layer client now?"
   },
   "K6+jQ3": {
     "message": "Geth installation documentation"
@@ -970,6 +961,9 @@
   },
   "Lv3Pmp": {
     "message": "Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider."
+  },
+  "LwEHRm": {
+    "message": "Why do I need to run an execution client now?"
   },
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
@@ -1193,6 +1187,10 @@
   "QtNVQP": {
     "message": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the Shanghai upgrade planned to follow the Merge (which means your funds will remain inaccessible until then)."
   },
+  "R58ea3": {
+    "description": "{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'",
+    "message": "You need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2')."
+  },
   "R8eePn": {
     "message": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
   },
@@ -1365,6 +1363,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum will consist of the {executionLayer} (handles transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "V5J3Uf": {
+    "message": "I have set up a shared JWT secret and made it available to {both} my execution client, and my consensus client (beacon node)"
+  },
   "VASo1/": {
     "message": "Connect wallet"
   },
@@ -1416,9 +1417,6 @@
   "WFVzvu": {
     "message": "{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
   },
-  "WGPxqY": {
-    "message": "Since the genesis of the Beacon Chain, many validators running their own consensus layer (CL) client have opted to use third-party services for their execution layer (EL) connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
-  },
   "WJA1/H": {
     "message": "Remember"
   },
@@ -1427,9 +1425,6 @@
   },
   "WTPUDZ": {
     "message": "These steps are optional but are recommended to optimize your node."
-  },
-  "WTfeiS": {
-    "message": "Post-merge, an Ethereum node will be comprised of both an execution layer (EL) client, and a consensus layer (CL) client. EL + CL = Ethereum."
   },
   "WdDGn6": {
     "message": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
@@ -1466,9 +1461,6 @@
   },
   "XBEBYR": {
     "message": "More on installing pip"
-  },
-  "XBYgM2": {
-    "message": "As a staker you are required to maintain and operate a node, running BOTH a consensus layer client AND an execution layer client."
   },
   "XRxD8r": {
     "description": "Link to documentation about execution client Besu, specifically for Goerli testnet",
@@ -1610,6 +1602,9 @@
   "acrOoz": {
     "message": "Continue"
   },
+  "aozN2h": {
+    "message": "See your consensus client documentation for client-specific instructions on how to set this."
+  },
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
   },
@@ -1627,9 +1622,6 @@
   },
   "bR1R2M": {
     "message": "Use this as a reference during client setup to check off important steps."
-  },
-  "bRGoZZ": {
-    "message": "See your consensus layer client documentation for client-specific instructions on how to set this."
   },
   "bUk/lm": {
     "message": "Besu installation documentation"
@@ -1711,6 +1703,9 @@
   },
   "d75Ebj": {
     "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
+  },
+  "dGWdPu": {
+    "message": "All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared."
   },
   "dH5+MX": {
     "message": "Bad behaviour"
@@ -1839,10 +1834,6 @@
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
   },
-  "gRMu7M": {
-    "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
-    "message": "You need to run an {executionClient} as well as your {consensusClient} (formerly 'Eth2')."
-  },
   "gVC0Wl": {
     "message": "It uses the assisted password in your secrets folder."
   },
@@ -1870,6 +1861,9 @@
   },
   "gx6frf": {
     "message": "clock"
+  },
+  "h/n5+N": {
+    "message": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
   },
   "h8MTUo": {
     "message": "Your stake"
@@ -1958,9 +1952,6 @@
   },
   "iv88b5": {
     "message": "Send all {totalTxCount} deposits"
-  },
-  "j0Ee5w": {
-    "message": "I am running my own execution layer client."
   },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
@@ -2075,9 +2066,6 @@
   "lM/dEI": {
     "description": "{ethAmount} will generally refer to 32 ETH",
     "message": "Does the site asking you for your {ethAmount} deposit have a URL you expect?"
-  },
-  "lNzqua": {
-    "message": "I have set up a shared JWT secret and made it available to {both} my execution layer client, and my consensus layer client (beacon node)"
   },
   "lQzdpT": {
     "description": "this is used as a command line flag, short for \"number of validators\"",
@@ -2261,6 +2249,9 @@
   "pyWt01": {
     "message": "Deposit summary"
   },
+  "q2PJEK": {
+    "message": "I am running my own consensus client."
+  },
   "q2XW/k": {
     "message": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
   },
@@ -2427,6 +2418,9 @@
   "u81G9+": {
     "message": "Uptime"
   },
+  "uGKswV": {
+    "message": "Post-merge, an Ethereum node will be comprised of both an execution client, and a consensus client."
+  },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
   },
@@ -2450,6 +2444,9 @@
   },
   "ukfwum": {
     "message": "Become a validator with Nimbus"
+  },
+  "ulgIVs": {
+    "message": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
   },
   "uoKhQB": {
     "message": "Authentication API"
@@ -2534,6 +2531,9 @@
   },
   "wtTeex": {
     "message": "Are there spelling mistakes?"
+  },
+  "wuhO1L": {
+    "message": "I am running my own execution client."
   },
   "x+fF+M": {
     "message": "Testnet simulations"

@@ -2,9 +2,6 @@
   "+L0IkF": {
     "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
   },
-  "+M/NC/": {
-    "message": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
-  },
   "+UUcBt": {
     "message": "Choose a language"
   },
@@ -164,6 +161,9 @@
   },
   "1pUw7Y": {
     "message": "Documentation on running Nethermind"
+  },
+  "1wSJQU": {
+    "message": "Timing:"
   },
   "22EpKq": {
     "description": "{JSON} is filetype extension",
@@ -456,6 +456,9 @@
   "9uOFF3": {
     "message": "Overview"
   },
+  "9vLu6E": {
+    "message": "{note} This step should be performed on {testnetsOnly} until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
+  },
   "9xeLhs": {
     "message": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
   },
@@ -706,6 +709,9 @@
   },
   "FqgDIV": {
     "message": "Terms of service"
+  },
+  "FqztZR": {
+    "message": "Note:"
   },
   "FzkbsB": {
     "message": "validators"
@@ -1156,6 +1162,9 @@
   },
   "Q8P0rZ": {
     "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
+  },
+  "Q8fnvz": {
+    "message": "testnets only (e.g. {kiln})"
   },
   "QKFeMq": {
     "message": "Internet"
@@ -2392,6 +2401,9 @@
   "teyxVk": {
     "message": "What should the address be?"
   },
+  "tgvES0": {
+    "message": "Now"
+  },
   "tigMuZ": {
     "message": "Wait at least 30 minutes before trying to resubmit a transaction with this {depositData} file. This will give our on-chain data source time to flag any duplicate deposits."
   },
@@ -2451,6 +2463,9 @@
   "ukfwum": {
     "message": "Become a validator with Nimbus"
   },
+  "ulgIVs": {
+    "message": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
+  },
   "uoKhQB": {
     "message": "Authentication API"
   },
@@ -2475,6 +2490,9 @@
   },
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
+  },
+  "vUxy+H": {
+    "message": "After TTD client releases"
   },
   "vV6ua0": {
     "message": "Step 1: Download the Wagyu Key Gen app for your operating system"

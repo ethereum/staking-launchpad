@@ -5,12 +5,6 @@
       "value": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
     }
   ],
-  "+M/NC/": [
-    {
-      "type": 0,
-      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
-    }
-  ],
   "+UUcBt": [
     {
       "type": 0,
@@ -407,6 +401,12 @@
     {
       "type": 0,
       "value": "Documentation on running Nethermind"
+    }
+  ],
+  "1wSJQU": [
+    {
+      "type": 0,
+      "value": "Timing:"
     }
   ],
   "22EpKq": [
@@ -1231,6 +1231,24 @@
       "value": "Overview"
     }
   ],
+  "9vLu6E": [
+    {
+      "type": 1,
+      "value": "note"
+    },
+    {
+      "type": 0,
+      "value": " This step should be performed on "
+    },
+    {
+      "type": 1,
+      "value": "testnetsOnly"
+    },
+    {
+      "type": 0,
+      "value": " until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
+    }
+  ],
   "9xeLhs": [
     {
       "type": 0,
@@ -1859,6 +1877,12 @@
     {
       "type": 0,
       "value": "Terms of service"
+    }
+  ],
+  "FqztZR": [
+    {
+      "type": 0,
+      "value": "Note:"
     }
   ],
   "FzkbsB": [
@@ -3007,6 +3031,20 @@
     {
       "type": 0,
       "value": " to max out your effective balance."
+    }
+  ],
+  "Q8fnvz": [
+    {
+      "type": 0,
+      "value": "testnets only (e.g. "
+    },
+    {
+      "type": 1,
+      "value": "kiln"
+    },
+    {
+      "type": 0,
+      "value": ")"
     }
   ],
   "QKFeMq": [
@@ -6237,6 +6275,12 @@
       "value": "What should the address be?"
     }
   ],
+  "tgvES0": [
+    {
+      "type": 0,
+      "value": "Now"
+    }
+  ],
   "tigMuZ": [
     {
       "type": 0,
@@ -6399,6 +6443,12 @@
       "value": "Become a validator with Nimbus"
     }
   ],
+  "ulgIVs": [
+    {
+      "type": 0,
+      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
+    }
+  ],
   "uoKhQB": [
     {
       "type": 0,
@@ -6453,6 +6503,12 @@
     {
       "type": 0,
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
+    }
+  ],
+  "vUxy+H": [
+    {
+      "type": 0,
+      "value": "After TTD client releases"
     }
   ],
   "vV6ua0": [

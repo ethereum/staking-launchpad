@@ -131,20 +131,24 @@ export const MergeReadiness = () => {
   const sections = [
     {
       heading: <FormattedMessage defaultMessage="Task 1" />,
-      timing: <FormattedMessage defaultMessage="Now" />,
+      timing: <FormattedMessage defaultMessage="Do this now" />,
       title: <FormattedMessage defaultMessage="Both layers required" />,
       id: 'el-plus-cl',
     },
     {
       heading: <FormattedMessage defaultMessage="Task 2" />,
-      timing: <FormattedMessage defaultMessage="After TTD client releases" />,
+      timing: (
+        <FormattedMessage defaultMessage="Do this after TTD client releases" />
+      ),
       title: <FormattedMessage defaultMessage="Authenticate Engine API" />,
       id: 'authenticate',
       pending: true,
     },
     {
       heading: <FormattedMessage defaultMessage="Task 3" />,
-      timing: <FormattedMessage defaultMessage="After TTD client releases" />,
+      timing: (
+        <FormattedMessage defaultMessage="Do this after TTD client releases" />
+      ),
       title: <FormattedMessage defaultMessage="Set fee recipient" />,
       id: 'fee-recipient',
       pending: true,

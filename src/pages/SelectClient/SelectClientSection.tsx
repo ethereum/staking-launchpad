@@ -93,10 +93,20 @@ const SelectClientSection = ({
         <Heading level={4} className="mb10">
           <FormattedMessage defaultMessage="Remember" />
         </Heading>
-        <FormattedMessage defaultMessage="All stakers must operate an execution layer client as well as a consensus layer client starting at the Merge. Make sure you're prepared." />
-        <Link primary to="/merge-readiness" className="mt10">
-          <FormattedMessage defaultMessage="Merge Readiness Checklist" />
-        </Link>
+        <ul>
+          <li>
+            <FormattedMessage defaultMessage="After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days." />{' '}
+            <Link primary inline to="/checklist">
+              <FormattedMessage defaultMessage="Validator checklist" />
+            </Link>
+          </li>
+          <li>
+            <FormattedMessage defaultMessage="All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared." />{' '}
+            <Link primary inline to="/merge-readiness">
+              <FormattedMessage defaultMessage="Merge readiness checklist" />
+            </Link>
+          </li>
+        </ul>
       </Alert>
     </Box>
   </Paper>

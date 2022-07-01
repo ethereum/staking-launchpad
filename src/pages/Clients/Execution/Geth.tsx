@@ -13,11 +13,16 @@ import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
 import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
+import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
+
 import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const GethDetails = () => (
   <>
+    <ClientDiversityWarning>
+      <FormattedMessage defaultMessage="Currently Geth is used by >66% of the network." />
+    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Geth
     </SectionTitle>

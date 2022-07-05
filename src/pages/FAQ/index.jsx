@@ -342,7 +342,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What clients do I need to run?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="As a staker you are required to maintain and operate a node, running BOTH a consensus layer client AND an execution layer client." />
+              <FormattedMessage defaultMessage="As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client." />
             </Text>
             <BlockQuote>
               <Text className="mt20 mb20">
@@ -355,7 +355,7 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="Why do I need to run an execution layer client now?" />
+              <FormattedMessage defaultMessage="Why do I need to run an execution client now?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage

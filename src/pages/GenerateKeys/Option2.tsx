@@ -118,7 +118,6 @@ export const Option2 = ({ os }: { os: string }) => {
               values={{
                 network: <span>{NETWORK_NAME}</span>,
               }}
-              description="{flag} and {network} are terminal commands styled as code."
             />
           </Text>
         </Alert>

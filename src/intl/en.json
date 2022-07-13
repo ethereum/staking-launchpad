@@ -93,6 +93,9 @@
   "07C4IQ": {
     "message": "Section 3 - After depositing"
   },
+  "0FTs1T": {
+    "message": "not"
+  },
   "0PlVao": {
     "message": "More on slashing prevention"
   },
@@ -316,6 +319,9 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
+  "63gLLu": {
+    "message": "average"
+  },
   "6CK2Nu": {
     "message": "Your wallet is on the wrong network. Switch to {network}"
   },
@@ -450,11 +456,17 @@
   "9lBMQr": {
     "message": "{keyFile} of paths via the {validatorsKeys} option."
   },
+  "9mLaI9": {
+    "message": "deposit"
+  },
   "9qMyhY": {
     "message": "Read options and subcommands documentation"
   },
   "9qpi9h": {
     "message": "Configure Nethermind"
+  },
+  "9r8j5+": {
+    "message": "Engine API"
   },
   "9uOFF3": {
     "message": "Overview"
@@ -525,6 +537,9 @@
   },
   "Aw1mMs": {
     "message": "Top up validator"
+  },
+  "AyaNND": {
+    "message": "TestingTheMerge"
   },
   "AzjyIx": {
     "message": "Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
@@ -1315,6 +1330,9 @@
   "Szwbym": {
     "message": "wrench"
   },
+  "T2O2Gr": {
+    "message": "initial and maximum"
+  },
   "THIzw6": {
     "message": "Validators and Ethereum"
   },
@@ -1474,6 +1492,9 @@
   "X/fKmY": {
     "message": "Has the block explorer named the contract?"
   },
+  "X3NiFM": {
+    "message": "proof-of-custody game"
+  },
   "X3rOq5": {
     "message": "At time of the Merge, Infura and Alchemy will no longer be viable options to outsource execution layer responsibilities."
   },
@@ -1588,10 +1609,6 @@
   },
   "ZdT9Bs": {
     "message": "Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days."
-  },
-  "ZlLjuq": {
-    "description": "{flag} and {network} are terminal commands styled as code.",
-    "message": "Please make sure you select {network} when prompted for a network, otherwise the deposit will be invalid."
   },
   "ZsXdlw": {
     "message": "Erigon installation documentation"
@@ -1930,6 +1947,9 @@
     "description": "Singular form, for only one deposit",
     "message": "You have {remainingTxCount} outstanding deposit"
   },
+  "hwkLRc": {
+    "message": "node operator"
+  },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
   },
@@ -2127,6 +2147,9 @@
   },
   "lrdlY6": {
     "message": "File uploaded"
+  },
+  "lslEna": {
+    "message": "Please make sure you select {network} when prompted for a network, otherwise the deposit will be invalid."
   },
   "mArJcj": {
     "message": "Hard drive"
@@ -2326,6 +2349,9 @@
   },
   "r2BH1M": {
     "message": "Configure Prysm"
+  },
+  "r2j8jL": {
+    "message": "validator client"
   },
   "r4JsKB": {
     "message": "Transaction successful"
@@ -2533,6 +2559,9 @@
   },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
+  },
+  "wHvmSN": {
+    "message": "both"
   },
   "wJ1PbL": {
     "description": "Indicates which operating system the instructions are for",

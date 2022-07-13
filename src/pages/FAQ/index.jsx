@@ -54,7 +54,11 @@ export const FAQ = () => {
               <FormattedMessage
                 defaultMessage="A {validator} is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
                 values={{
-                  validator: <em>validator</em>,
+                  validator: (
+                    <em>
+                      <FormattedMessage defaultMessage="validator" />
+                    </em>
+                  ),
                 }}
               />
             </Text>
@@ -67,7 +71,11 @@ export const FAQ = () => {
               <FormattedMessage
                 defaultMessage="A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
                 values={{
-                  validatorClient: <em>validator client</em>,
+                  validatorClient: (
+                    <em>
+                      <FormattedMessage defaultMessage="validator client" />
+                    </em>
+                  ),
                 }}
               />
             </Text>
@@ -80,7 +88,11 @@ export const FAQ = () => {
               <FormattedMessage
                 defaultMessage="A {nodeOperator} is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
                 values={{
-                  nodeOperator: <em>node operator</em>,
+                  nodeOperator: (
+                    <em>
+                      <FormattedMessage defaultMessage="node operator" />
+                    </em>
+                  ),
                 }}
               />
             </Text>
@@ -94,7 +106,11 @@ export const FAQ = () => {
                 defaultMessage="Each key-pair associated with a validator requires locking {ethPerValidator} to be activated, which represents your initial balance as well as your {initialAndMaximum} voting power for any validator."
                 values={{
                   ethPerValidator: <strong>{PRICE_PER_VALIDATOR} ETH</strong>,
-                  initialAndMaximum: <em>initial and maximum</em>,
+                  initialAndMaximum: (
+                    <em>
+                      <FormattedMessage defaultMessage="initial and maximum" />
+                    </em>
+                  ),
                 }}
               />
             </Text>
@@ -369,14 +385,18 @@ export const FAQ = () => {
               <FormattedMessage
                 defaultMessage="Once the transition to proof-of-stake is complete via the Merge, validators will be responsible for processing transactions and signing off on their validity. This data will {not} be available from popular third-party sources after the Merge and will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
                 values={{
-                  not: <em>not</em>,
+                  not: (
+                    <em>
+                      <FormattedMessage defaultMessage="not" />
+                    </em>
+                  ),
                   pocGame: (
                     <Link
                       inline
                       primary
                       to="https://dankradfeist.de/ethereum/2021/09/30/proofs-of-custody.html"
                     >
-                      proof-of-custody game
+                      <FormattedMessage defaultMessage="proof-of-custody game" />
                     </Link>
                   ),
                 }}
@@ -479,7 +499,11 @@ export const FAQ = () => {
                 <FormattedMessage
                   defaultMessage="Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days. "
                   values={{
-                    average: <em>average</em>,
+                    average: (
+                      <em>
+                        <FormattedMessage defaultMessage="average" />
+                      </em>
+                    ),
                   }}
                 />
               </Text>

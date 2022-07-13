@@ -96,7 +96,11 @@ export const Option1 = ({
           <FormattedMessage
             defaultMessage="Use the terminal to move into the directory that contains the {deposit} executable"
             values={{
-              deposit: <code>deposit</code>,
+              deposit: (
+                <code>
+                  <FormattedMessage defaultMessage="deposit" />
+                </code>
+              ),
             }}
             description="{deposit} = 'deposit' styled as code"
           />

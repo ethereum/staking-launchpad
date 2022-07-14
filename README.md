@@ -1,5 +1,7 @@
 # Ethereum Staking Launchpad
 
+[![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/ethereum/staking-launchpad/badge)](https://www.gitpoap.io/gh/ethereum/staking-launchpad)
+
 The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your ETH for staking on Ethereum
 
 ## Dependencies

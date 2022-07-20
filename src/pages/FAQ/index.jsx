@@ -784,7 +784,7 @@ export const FAQ = () => {
                       inline
                       to="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
                     >
-                      Withdrawal Credentials
+                      <FormattedMessage defaultMessage="Withdrawal Credentials" />
                     </Link>
                   ),
                 }}

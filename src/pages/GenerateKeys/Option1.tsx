@@ -7,14 +7,11 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import {
-  NETWORK_NAME,
-  IS_MAINNET,
-  TESTNET_LAUNCHPAD_NAME,
-} from '../../utils/envVars';
+import { NETWORK_NAME } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
+import useNetworkName from '../../hooks/useIntlNetworkName';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -38,6 +35,7 @@ export const Option1 = ({
   os: string;
 }) => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useNetworkName();
 
   return (
     <div className="mt30">
@@ -144,7 +142,7 @@ export const Option1 = ({
         <Alert variant="error" className="my10">
           <Text>
             <FormattedMessage
-              defaultMessage="Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+              defaultMessage="Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
               values={{
                 flag: (
                   <Code>
@@ -154,14 +152,7 @@ export const Option1 = ({
                     })} ${NETWORK_NAME.toLowerCase()}`}
                   </Code>
                 ),
-                network: IS_MAINNET ? (
-                  <FormattedMessage defaultMessage="Mainnet" />
-                ) : (
-                  <FormattedMessage
-                    defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
-                    values={{ TESTNET_LAUNCHPAD_NAME }}
-                  />
-                ),
+                consensusLayerName,
               }}
               description="{flag} is a terminal command styled as code."
             />

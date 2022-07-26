@@ -41,7 +41,7 @@ const ButtonContainer = styled.div`
 
 export const SignupSteps = (): JSX.Element => {
   const m: boolean = (window as any).mobileCheck();
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   return (
     <Container className="py100">
       <ScrollAnimation animateIn="fadeIn" animateOnce>
@@ -59,11 +59,11 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce>
           <Step
             emoji="📚"
-            emojiAlt={intl.formatMessage({ defaultMessage: 'books' })}
-            title={intl.formatMessage({
+            emojiAlt={formatMessage({ defaultMessage: 'books' })}
+            title={formatMessage({
               defaultMessage: '1. Learn about your responsibilities',
             })}
-            content={intl.formatMessage({
+            content={formatMessage({
               defaultMessage:
                 'The Ethereum upgrades will only be successful if validators understand the risks and responsibilities.',
             })}
@@ -76,9 +76,9 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             emoji="🔧"
-            emojiAlt={intl.formatMessage({ defaultMessage: 'wrench' })}
-            title={intl.formatMessage({ defaultMessage: '2. Prep nodes' })}
-            content={intl.formatMessage({
+            emojiAlt={formatMessage({ defaultMessage: 'wrench' })}
+            title={formatMessage({ defaultMessage: '2. Prep nodes' })}
+            content={formatMessage({
               defaultMessage:
                 "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment.",
             })}
@@ -91,13 +91,13 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
           <Step
             emoji="🥋"
-            emojiAlt={intl.formatMessage({
+            emojiAlt={formatMessage({
               defaultMessage: 'martial arts uniform',
             })}
-            title={intl.formatMessage({
+            title={formatMessage({
               defaultMessage: '3. Practice on a testnet',
             })}
-            content={intl.formatMessage({
+            content={formatMessage({
               defaultMessage:
                 'We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH.',
             })}
@@ -114,11 +114,11 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             emoji="🎣"
-            emojiAlt={intl.formatMessage({
+            emojiAlt={formatMessage({
               defaultMessage: 'fishing rod',
             })}
-            title={intl.formatMessage({ defaultMessage: '4. Avoid phishing' })}
-            content={intl.formatMessage({
+            title={formatMessage({ defaultMessage: '4. Avoid phishing' })}
+            content={formatMessage({
               defaultMessage:
                 "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for.",
             })}
@@ -131,9 +131,9 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={150}>
           <Step
             emoji="💰"
-            emojiAlt={intl.formatMessage({ defaultMessage: 'money bag' })}
-            title={intl.formatMessage({ defaultMessage: '5. Time to deposit' })}
-            content={intl.formatMessage({
+            emojiAlt={formatMessage({ defaultMessage: 'money bag' })}
+            title={formatMessage({ defaultMessage: '5. Time to deposit' })}
+            content={formatMessage({
               defaultMessage:
                 "Once you're comfortable, you'll go through generating your keys and depositing your ETH.",
             })}
@@ -146,11 +146,11 @@ export const SignupSteps = (): JSX.Element => {
         <ScrollAnimation animateIn="fadeInUp" animateOnce delay={300}>
           <Step
             emoji="🕰"
-            emojiAlt={intl.formatMessage({ defaultMessage: 'clock' })}
-            title={intl.formatMessage({
+            emojiAlt={formatMessage({ defaultMessage: 'clock' })}
+            title={formatMessage({
               defaultMessage: '6. Wait to become active',
             })}
-            content={intl.formatMessage({
+            content={formatMessage({
               defaultMessage:
                 "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet.",
             })}
@@ -169,7 +169,7 @@ export const SignupSteps = (): JSX.Element => {
               className="m-auto"
               fullWidth
               width={m ? undefined : 400}
-              label={intl.formatMessage({
+              label={formatMessage({
                 defaultMessage: 'Become a validator',
               })}
             />

@@ -8,7 +8,6 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
 import { web3ReactInterface } from '../pages/ConnectWallet';
-import { trimString } from '../utils/trimString';
 import {
   AllowedNetworks,
   NetworkChainId,
@@ -24,8 +23,9 @@ import {
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   TESTNET_LAUNCHPAD_URL,
-  EL_TESTNET_NAME,
 } from '../utils/envVars';
+import { trimString } from '../utils/trimString';
+import useNetworkName from '../hooks/useIntlNetworkName';
 import useMobileCheck from '../hooks/useMobileCheck';
 
 const RainbowBackground = styled(Box)`
@@ -124,6 +124,15 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     account,
     chainId,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const { executionLayerName, consensusLayerName } = useNetworkName();
+  const oppositeNetwork = IS_MAINNET ? (
+    <FormattedMessage
+      defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+      values={{ TESTNET_LAUNCHPAD_NAME }}
+    />
+  ) : (
+    <FormattedMessage defaultMessage="Mainnet" />
+  );
 
   let network;
   let networkAllowed = false;
@@ -150,16 +159,6 @@ const _AppBar = ({ location }: RouteComponentProps) => {
   const switchLaunchpadUrl = IS_MAINNET
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
-
-  const networkName = IS_MAINNET ? (
-    <FormattedMessage defaultMessage="Mainnet" />
-  ) : (
-    <FormattedMessage
-      defaultMessage="{testNetwork} testnet"
-      values={{ testNetwork: EL_TESTNET_NAME }}
-      description="{testNetwork} is the proper testnet name; do not translate this name"
-    />
-  );
 
   return (
     <RainbowBackground
@@ -321,30 +320,12 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   )}
                   <span>
                     <FormattedMessage defaultMessage="Launchpad network:" />{' '}
-                    <b>
-                      {IS_MAINNET ? (
-                        <FormattedMessage defaultMessage="Mainnet" />
-                      ) : (
-                        <FormattedMessage
-                          defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
-                          values={{ TESTNET_LAUNCHPAD_NAME }}
-                        />
-                      )}
-                    </b>
+                    <b>{consensusLayerName}</b>
                   </span>
                   <Link primary to={switchLaunchpadUrl}>
                     <FormattedMessage
-                      defaultMessage="Switch to {network} launchpad"
-                      values={{
-                        network: IS_MAINNET ? (
-                          <FormattedMessage
-                            defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
-                            values={{ TESTNET_LAUNCHPAD_NAME }}
-                          />
-                        ) : (
-                          <FormattedMessage defaultMessage="Mainnet" />
-                        ),
-                      }}
+                      defaultMessage="Switch to {oppositeNetwork} launchpad"
+                      values={{ oppositeNetwork }}
                     />
                   </Link>
                   <Text className="mt20">
@@ -410,17 +391,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   )}
                   <DropdownLink to={switchLaunchpadUrl}>
                     <FormattedMessage
-                      defaultMessage="Switch to {network} launchpad"
-                      values={{
-                        network: IS_MAINNET ? (
-                          <FormattedMessage
-                            defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
-                            values={{ TESTNET_LAUNCHPAD_NAME }}
-                          />
-                        ) : (
-                          <FormattedMessage defaultMessage="Mainnet" />
-                        ),
-                      }}
+                      defaultMessage="Switch to {oppositeNetwork} launchpad"
+                      values={{ oppositeNetwork }}
                     />
                   </DropdownLink>
                 </Box>
@@ -453,8 +425,8 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <Box pad="small">
                     <Text>
                       <FormattedMessage
-                        defaultMessage="Your wallet should be set to {networkName} to use this launchpad."
-                        values={{ networkName }}
+                        defaultMessage="Your wallet should be set to {executionLayerName} to use this launchpad."
+                        values={{ executionLayerName }}
                       />
                     </Text>
                   </Box>

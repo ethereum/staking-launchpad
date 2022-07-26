@@ -27,6 +27,7 @@ import GethBg from '../../static/geth-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
 import { Alert } from '../../components/Alert';
+import useNetworkName from '../../hooks/useIntlNetworkName';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -197,6 +198,8 @@ interface Client {
 
 export const Checklist = () => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useNetworkName();
+
   const defaultExecutionPorts: {
     defaultTcp: number;
     defaultUdp: number;
@@ -994,17 +997,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've synced my beacon node on {network}."
-                  values={{
-                    network: IS_MAINNET ? (
-                      <FormattedMessage defaultMessage="Mainnet" />
-                    ) : (
-                      <FormattedMessage
-                        defaultMessage="{testNetwork} testnet"
-                        values={{ testNetwork: TESTNET_LAUNCHPAD_NAME }}
-                      />
-                    ),
-                  }}
+                  defaultMessage="I've synced my beacon node on {consensusLayerName}."
+                  values={{ consensusLayerName }}
                 />
               </Text>
             }

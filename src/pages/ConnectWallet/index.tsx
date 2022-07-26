@@ -45,11 +45,11 @@ import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
-  EL_TESTNET_NAME,
   FAUCET_URL,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
+import useNetworkName from '../../hooks/useIntlNetworkName';
 
 // styled components
 const Container = styled.div`
@@ -183,6 +183,7 @@ const _ConnectWalletPage = ({
     account,
     library,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const { executionLayerName } = useNetworkName();
 
   // initialize state
   const [balance, setBalance] = useState<number | null>(null);
@@ -202,13 +203,6 @@ const _ConnectWalletPage = ({
   }, [error]);
   const balanceRef = useRef<number | null>(null);
   const { formatMessage } = useIntl();
-
-  const networkName = IS_MAINNET
-    ? formatMessage({ defaultMessage: 'Mainnet' })
-    : formatMessage(
-        { defaultMessage: '{testNetwork} testnet' },
-        { testNetwork: EL_TESTNET_NAME }
-      );
 
   // sets balanceRef to always have current balance (to refer to in callbacks)
   balanceRef.current = balance;
@@ -299,10 +293,10 @@ const _ConnectWalletPage = ({
     } else if (!networkAllowed) {
       setStatus(
         formatMessage(
-          { defaultMessage: 'Connect {wallet} to {network}' },
+          { defaultMessage: 'Connect {wallet} to {executionLayerName}' },
           {
             wallet: getWalletName(walletProvider),
-            network: networkName,
+            executionLayerName,
           }
         )
       );
@@ -316,7 +310,7 @@ const _ConnectWalletPage = ({
     network,
     formatMessage,
     walletProvider,
-    networkName,
+    executionLayerName,
   ]);
 
   const handleSubmit = () => {
@@ -371,7 +365,7 @@ const _ConnectWalletPage = ({
                   </Heading>
                 </Row>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {networkName}
+                  {executionLayerName}
                 </Text>
               </Network>
               <div>
@@ -494,8 +488,8 @@ const _ConnectWalletPage = ({
       {isInvalidNetwork && (
         <div className="flex center mt20">
           <FormattedMessage
-            defaultMessage="Your wallet is on the wrong network. Switch to {networkName}"
-            values={{ networkName }}
+            defaultMessage="Your wallet is on the wrong network. Switch to {executionLayerName}"
+            values={{ executionLayerName }}
           />
         </div>
       )}

@@ -17,12 +17,7 @@ import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
 import closeGlyph from '../../../static/close.svg';
-import {
-  ENABLE_RPC_FEATURES,
-  IS_MAINNET,
-  PORTIS_DAPP_ID,
-  EL_TESTNET_NAME,
-} from '../../../utils/envVars';
+import { ENABLE_RPC_FEATURES, PORTIS_DAPP_ID } from '../../../utils/envVars';
 import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
@@ -30,6 +25,7 @@ import { Text } from '../../../components/Text';
 import { NakedButton } from '../../../components/NakedButton';
 import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
 import { useKeyPress } from '../../../hooks/useKeyPress';
+import useNetworkName from '../../../hooks/useIntlNetworkName';
 
 const CloseButton = styled(NakedButton)`
   padding: 1rem;
@@ -58,6 +54,7 @@ const WalletConnectModal: React.FC<{
     chainId,
     active,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const executionLayerName = useNetworkName();
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined
@@ -86,18 +83,9 @@ const WalletConnectModal: React.FC<{
           />
           <Text center>
             <FormattedMessage
-              defaultMessage="Connect to {network}"
-              values={{
-                network: IS_MAINNET ? (
-                  <FormattedMessage defaultMessage="Ethereum Mainnet" />
-                ) : (
-                  <FormattedMessage
-                    defaultMessage="{EL_TESTNET_NAME} testnet"
-                    values={{ EL_TESTNET_NAME }}
-                  />
-                ),
-              }}
-              description="{network} is either 'Ethereum Mainnet' or '<EL_TESTNET_NAME> testnet'"
+              defaultMessage="Connect to {executionLayerName}"
+              values={{ executionLayerName }}
+              description="{executionLayerName} is either 'Mainnet' or '<Execution Layer Testnet Name> testnet'"
             />
           </Text>
         </div>

@@ -3,17 +3,11 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { AcknowledgementSection } from '../Summary/AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { IS_MAINNET, EL_TESTNET_NAME } from '../../utils/envVars';
+import useNetworkName from '../../hooks/useIntlNetworkName';
 
 export const WrongNetwork = () => {
   const { formatMessage } = useIntl();
-
-  const networkName = IS_MAINNET
-    ? formatMessage({ defaultMessage: 'Mainnet' })
-    : formatMessage(
-        { defaultMessage: '{testNetwork} testnet' },
-        { testNetwork: EL_TESTNET_NAME }
-      );
+  const { executionLayerName } = useNetworkName();
 
   const acknowledgementTitle = formatMessage({
     defaultMessage: 'Your network has changed',
@@ -27,8 +21,8 @@ export const WrongNetwork = () => {
       <AcknowledgementSection title={acknowledgementTitle}>
         <Text>
           <FormattedMessage
-            defaultMessage="Your wallet is on the wrong Ethereum network. To continue, connect to {networkName}."
-            values={{ networkName }}
+            defaultMessage="Your wallet is on the wrong Ethereum network. To continue, connect to {executionLayerName}."
+            values={{ executionLayerName }}
           />
         </Text>
       </AcknowledgementSection>

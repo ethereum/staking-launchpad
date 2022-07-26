@@ -36,12 +36,9 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
-import {
-  TESTNET_LAUNCHPAD_NAME,
-  GENESIS_FORK_VERSION,
-  IS_MAINNET,
-} from '../../utils/envVars';
+import { GENESIS_FORK_VERSION } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import useNetworkName from '../../hooks/useIntlNetworkName';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -96,6 +93,7 @@ const _UploadValidatorPage = ({
   dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useNetworkName();
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
   const [fileError, setFileError] = useState<React.ReactElement | null>(null);
@@ -130,17 +128,8 @@ const _UploadValidatorPage = ({
     setFileError(
       <Text>
         <FormattedMessage
-          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
-          values={{
-            network: IS_MAINNET ? (
-              <FormattedMessage defaultMessage="Mainnet" />
-            ) : (
-              <FormattedMessage
-                defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
-                values={{ TESTNET_LAUNCHPAD_NAME }}
-              />
-            ),
-          }}
+          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {consensusLayerName}."
+          values={{ consensusLayerName }}
         />
       </Text>
     );

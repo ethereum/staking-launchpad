@@ -133,7 +133,7 @@ export const Upgrades = (): JSX.Element => {
                   values={{
                     mergeReadinessChecklist: (
                       <Link primary inline to="/merge-readiness">
-                        <FormattedMessage defaultMessage="Merge Readiness Checklist" />
+                        <FormattedMessage defaultMessage="Merge readiness checklist" />
                       </Link>
                     ),
                   }}

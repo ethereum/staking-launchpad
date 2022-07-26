@@ -331,6 +331,16 @@
       "value": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for Mainnet:"
     }
   ],
+  "17Epwt": [
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "192AR6": [
     {
       "type": 0,
@@ -389,6 +399,12 @@
     {
       "type": 0,
       "value": "Check that the password files don’t have trailing new-lines."
+    }
+  ],
+  "1Z0sad": [
+    {
+      "type": 0,
+      "value": "EF Blog"
     }
   ],
   "1fDfw7": [
@@ -843,6 +859,20 @@
       "value": "Teku installation documentation"
     }
   ],
+  "5T9IMn": [
+    {
+      "type": 0,
+      "value": "I've synced my beacon node on "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "5UH1sh": [
     {
       "type": 0,
@@ -877,6 +907,16 @@
       "value": ". It is possible to drop below this with poor node performance, but it is not possible to raise above it."
     }
   ],
+  "5f+3FF": [
+    {
+      "type": 0,
+      "value": "Your wallet is on the wrong network. Switch to "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    }
+  ],
   "5t8oYl": [
     {
       "type": 0,
@@ -903,16 +943,6 @@
     {
       "type": 0,
       "value": "average"
-    }
-  ],
-  "6CK2Nu": [
-    {
-      "type": 0,
-      "value": "Your wallet is on the wrong network. Switch to "
-    },
-    {
-      "type": 1,
-      "value": "network"
     }
   ],
   "6CN01C": [
@@ -1681,16 +1711,6 @@
       "value": "I've set up a firewall."
     }
   ],
-  "Cm8zxo": [
-    {
-      "type": 0,
-      "value": "Connect to "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "D0Rigq": [
     {
       "type": 0,
@@ -2135,6 +2155,20 @@
       "value": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
     }
   ],
+  "Hmxd5S": [
+    {
+      "type": 0,
+      "value": "Please make sure you select "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " when prompted for a network, otherwise the deposit will be invalid."
+    }
+  ],
   "HoahTd": [
     {
       "type": 0,
@@ -2377,6 +2411,16 @@
     {
       "type": 0,
       "value": "Geth installation documentation"
+    }
+  ],
+  "KAE6tZ": [
+    {
+      "type": 1,
+      "value": "testNetwork"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
     }
   ],
   "KBSbmP": [
@@ -2813,6 +2857,12 @@
       "value": " deposits"
     }
   ],
+  "NZYRdf": [
+    {
+      "type": 0,
+      "value": "Mainnet"
+    }
+  ],
   "NatYUJ": [
     {
       "type": 0,
@@ -2993,6 +3043,28 @@
     {
       "type": 0,
       "value": "Your network has changed"
+    }
+  ],
+  "PVtsnq": [
+    {
+      "type": 0,
+      "value": "Please make sure you have set "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " for "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", otherwise the deposit will be invalid."
     }
   ],
   "Pd0hC/": [
@@ -3471,6 +3543,12 @@
       "value": "initial and maximum"
     }
   ],
+  "TH/TNr": [
+    {
+      "type": 0,
+      "value": "Ethereum Mainnet"
+    }
+  ],
   "THIzw6": [
     {
       "type": 0,
@@ -3929,6 +4007,16 @@
       "value": "That is not a valid deposit_data JSON file."
     }
   ],
+  "X911Fz": [
+    {
+      "type": 0,
+      "value": "Connect to "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
   "XBEBYR": [
     {
       "type": 0,
@@ -4149,6 +4237,16 @@
       "value": "Execution clients"
     }
   ],
+  "Yep32z": [
+    {
+      "type": 1,
+      "value": "EL_TESTNET_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "Yganfl": [
     {
       "type": 0,
@@ -4311,20 +4409,6 @@
     {
       "type": 0,
       "value": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
-    }
-  ],
-  "aZ7pUj": [
-    {
-      "type": 0,
-      "value": "Your wallet is on the wrong Ethereum network. To continue, connect to the "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": " network."
     }
   ],
   "acrOoz": [
@@ -5127,28 +5211,6 @@
       "value": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
     }
   ],
-  "iWg7mL": [
-    {
-      "type": 0,
-      "value": "Please make sure you have set "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " for "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", otherwise the deposit will be invalid."
-    }
-  ],
   "iX90gu": [
     {
       "type": 0,
@@ -5513,6 +5575,20 @@
       "value": " deposit have a URL you expect?"
     }
   ],
+  "lNRvej": [
+    {
+      "type": 0,
+      "value": "Your wallet is on the wrong Ethereum network. To continue, connect to "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "lQzdpT": [
     {
       "type": 0,
@@ -5625,20 +5701,6 @@
     {
       "type": 0,
       "value": "File uploaded"
-    }
-  ],
-  "lslEna": [
-    {
-      "type": 0,
-      "value": "Please make sure you select "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " when prompted for a network, otherwise the deposit will be invalid."
     }
   ],
   "mArJcj": [
@@ -6317,20 +6379,6 @@
       "value": ". This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
     }
   ],
-  "sdQRah": [
-    {
-      "type": 0,
-      "value": "I've synced my beacon node on "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6687,6 +6735,16 @@
       "value": "both"
     }
   ],
+  "wIpuL/": [
+    {
+      "type": 1,
+      "value": "testNetwork"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "wJ1PbL": [
     {
       "type": 0,
@@ -6807,6 +6865,28 @@
     {
       "type": 0,
       "value": "Block rewards are calculated using a sliding scale based on the total amount of ETH staked on the network."
+    }
+  ],
+  "xTqOi7": [
+    {
+      "type": 0,
+      "value": "Make sure you have set "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " for "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": ", otherwise the deposit will be invalid."
     }
   ],
   "xXKkhR": [
@@ -6955,28 +7035,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "z/ZhML": [
-    {
-      "type": 0,
-      "value": "Make sure you have set "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " for "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", otherwise the deposit will be invalid."
     }
   ],
   "z63I56": [

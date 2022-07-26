@@ -635,7 +635,7 @@ export const MergeReadiness = () => {
                   <FormattedMessage
                     defaultMessage="{site} {network} announcement"
                     values={{
-                      site: 'EF Blog',
+                      site: <FormattedMessage defaultMessage="EF Blog" />,
                       network: 'Ropsten',
                     }}
                   />
@@ -725,7 +725,7 @@ export const MergeReadiness = () => {
                   <FormattedMessage
                     defaultMessage="{site} {network} announcement"
                     values={{
-                      site: 'EF Blog',
+                      site: <FormattedMessage defaultMessage="EF Blog" />,
                       network: 'Kiln',
                     }}
                   />

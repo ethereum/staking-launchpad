@@ -114,10 +114,8 @@ export const Option2 = ({ os }: { os: string }) => {
         <Alert variant="error" className="my10">
           <Text>
             <FormattedMessage
-              defaultMessage="Please make sure you select {network} when prompted for a network, otherwise the deposit will be invalid."
-              values={{
-                network: <span>{NETWORK_NAME}</span>,
-              }}
+              defaultMessage="Please make sure you select {NETWORK_NAME} when prompted for a network, otherwise the deposit will be invalid."
+              values={{ NETWORK_NAME }}
             />
           </Text>
         </Alert>

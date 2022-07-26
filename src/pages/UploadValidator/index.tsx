@@ -37,7 +37,7 @@ import {
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
 import {
-  NETWORK_NAME,
+  TESTNET_LAUNCHPAD_NAME,
   GENESIS_FORK_VERSION,
   IS_MAINNET,
 } from '../../utils/envVars';
@@ -132,11 +132,13 @@ const _UploadValidatorPage = ({
         <FormattedMessage
           defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
           values={{
-            network: (
-              <span>
-                {NETWORK_NAME}
-                {IS_MAINNET ? '' : ' testnet'}
-              </span>
+            network: IS_MAINNET ? (
+              <FormattedMessage defaultMessage="Mainnet" />
+            ) : (
+              <FormattedMessage
+                defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                values={{ TESTNET_LAUNCHPAD_NAME }}
+              />
             ),
           }}
         />

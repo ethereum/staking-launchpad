@@ -10,7 +10,6 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import {
   BEACONCHAIN_URL,
-  NETWORK_NAME,
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
@@ -846,7 +845,11 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="I've installed and synced my {network} execution client (do not wait on this as it can take several days)."
                   values={{
-                    network: IS_MAINNET ? 'Mainnet' : EL_TESTNET_NAME,
+                    network: IS_MAINNET ? (
+                      <FormattedMessage defaultMessage="Mainnet" />
+                    ) : (
+                      EL_TESTNET_NAME
+                    ),
                   }}
                 />
               </Text>
@@ -991,9 +994,17 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've synced my beacon node on {NETWORK_NAME}."
-                  values={{ NETWORK_NAME }}
-                  description="{NETWORK_NAME} is name of network, do not translate"
+                  defaultMessage="I've synced my beacon node on {network}."
+                  values={{
+                    network: IS_MAINNET ? (
+                      <FormattedMessage defaultMessage="Mainnet" />
+                    ) : (
+                      <FormattedMessage
+                        defaultMessage="{testNetwork} testnet"
+                        values={{ testNetwork: TESTNET_LAUNCHPAD_NAME }}
+                      />
+                    ),
+                  }}
                 />
               </Text>
             }

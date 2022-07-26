@@ -7,7 +7,11 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import {
+  NETWORK_NAME,
+  IS_MAINNET,
+  TESTNET_LAUNCHPAD_NAME,
+} from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
@@ -150,13 +154,16 @@ export const Option1 = ({
                     })} ${NETWORK_NAME.toLowerCase()}`}
                   </Code>
                 ),
-                network: (
-                  <span>
-                    {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
-                  </span>
+                network: IS_MAINNET ? (
+                  <FormattedMessage defaultMessage="Mainnet" />
+                ) : (
+                  <FormattedMessage
+                    defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                    values={{ TESTNET_LAUNCHPAD_NAME }}
+                  />
                 ),
               }}
-              description="{flag} and {network} are terminal commands styled as code."
+              description="{flag} is a terminal command styled as code."
             />
           </Text>
         </Alert>

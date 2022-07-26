@@ -141,10 +141,6 @@ const MetaMaskError = styled.div`
   margin-top: 0px;
 `;
 
-const networkName = IS_MAINNET
-  ? 'mainnet'
-  : `${EL_TESTNET_NAME.toLowerCase()} testnet`;
-
 export interface web3ReactInterface {
   activate: (
     connector: AbstractConnectorInterface,
@@ -206,6 +202,13 @@ const _ConnectWalletPage = ({
   }, [error]);
   const balanceRef = useRef<number | null>(null);
   const { formatMessage } = useIntl();
+
+  const networkName = IS_MAINNET
+    ? formatMessage({ defaultMessage: 'Mainnet' })
+    : formatMessage(
+        { defaultMessage: '{testNetwork} testnet' },
+        { testNetwork: EL_TESTNET_NAME }
+      );
 
   // sets balanceRef to always have current balance (to refer to in callbacks)
   balanceRef.current = balance;
@@ -313,6 +316,7 @@ const _ConnectWalletPage = ({
     network,
     formatMessage,
     walletProvider,
+    networkName,
   ]);
 
   const handleSubmit = () => {
@@ -367,7 +371,7 @@ const _ConnectWalletPage = ({
                   </Heading>
                 </Row>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {network === 'Mainnet' ? network : `${network} testnet`}
+                  {networkName}
                 </Text>
               </Network>
               <div>
@@ -490,10 +494,8 @@ const _ConnectWalletPage = ({
       {isInvalidNetwork && (
         <div className="flex center mt20">
           <FormattedMessage
-            defaultMessage="Your wallet is on the wrong network. Switch to {network}"
-            values={{
-              network: networkName,
-            }}
+            defaultMessage="Your wallet is on the wrong network. Switch to {networkName}"
+            values={{ networkName }}
           />
         </div>
       )}

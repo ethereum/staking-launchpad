@@ -6,7 +6,11 @@ import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import {
+  NETWORK_NAME,
+  IS_MAINNET,
+  TESTNET_LAUNCHPAD_NAME,
+} from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
 
@@ -327,17 +331,23 @@ export const Option3 = ({
             defaultMessage="Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
             values={{
               flag: (
-                <Code>{`--${formatMessage({
-                  defaultMessage: 'chain',
-                  description: 'this is used as a command line flag',
-                })} ${NETWORK_NAME.toLowerCase()}`}</Code>
+                <Code>
+                  {`--${formatMessage({
+                    defaultMessage: 'chain',
+                    description: 'this is used as a command line flag',
+                  })} ${NETWORK_NAME.toLowerCase()}`}
+                </Code>
               ),
-              network: (
-                <span>
-                  {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
-                </span>
+              network: IS_MAINNET ? (
+                <FormattedMessage defaultMessage="Mainnet" />
+              ) : (
+                <FormattedMessage
+                  defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                  values={{ TESTNET_LAUNCHPAD_NAME }}
+                />
               ),
             }}
+            description="{flag} is a terminal command styled as code."
           />
         </Text>
       </Alert>

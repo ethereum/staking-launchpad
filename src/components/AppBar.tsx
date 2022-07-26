@@ -151,9 +151,15 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
-  const networkName = IS_MAINNET
-    ? 'mainnet'
-    : `${EL_TESTNET_NAME.toLowerCase()} testnet`;
+  const networkName = IS_MAINNET ? (
+    <FormattedMessage defaultMessage="Mainnet" />
+  ) : (
+    <FormattedMessage
+      defaultMessage="{testNetwork} testnet"
+      values={{ testNetwork: EL_TESTNET_NAME }}
+      description="{testNetwork} is the proper testnet name; do not translate this name"
+    />
+  );
 
   return (
     <RainbowBackground
@@ -316,20 +322,28 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <span>
                     <FormattedMessage defaultMessage="Launchpad network:" />{' '}
                     <b>
-                      {IS_MAINNET
-                        ? `mainnet`
-                        : `${TESTNET_LAUNCHPAD_NAME} testnet`}
+                      {IS_MAINNET ? (
+                        <FormattedMessage defaultMessage="Mainnet" />
+                      ) : (
+                        <FormattedMessage
+                          defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                          values={{ TESTNET_LAUNCHPAD_NAME }}
+                        />
+                      )}
                     </b>
                   </span>
                   <Link primary to={switchLaunchpadUrl}>
                     <FormattedMessage
                       defaultMessage="Switch to {network} launchpad"
                       values={{
-                        network: `${
-                          IS_MAINNET
-                            ? `${TESTNET_LAUNCHPAD_NAME} testnet`
-                            : `mainnet`
-                        }`,
+                        network: IS_MAINNET ? (
+                          <FormattedMessage
+                            defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                            values={{ TESTNET_LAUNCHPAD_NAME }}
+                          />
+                        ) : (
+                          <FormattedMessage defaultMessage="Mainnet" />
+                        ),
                       }}
                     />
                   </Link>
@@ -398,11 +412,14 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     <FormattedMessage
                       defaultMessage="Switch to {network} launchpad"
                       values={{
-                        network: `${
-                          IS_MAINNET
-                            ? `${TESTNET_LAUNCHPAD_NAME} testnet`
-                            : `mainnet`
-                        }`,
+                        network: IS_MAINNET ? (
+                          <FormattedMessage
+                            defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                            values={{ TESTNET_LAUNCHPAD_NAME }}
+                          />
+                        ) : (
+                          <FormattedMessage defaultMessage="Mainnet" />
+                        ),
                       }}
                     />
                   </DropdownLink>
@@ -437,9 +454,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                     <Text>
                       <FormattedMessage
                         defaultMessage="Your wallet should be set to {networkName} to use this launchpad."
-                        values={{
-                          networkName: <span>{networkName}</span>,
-                        }}
+                        values={{ networkName }}
                       />
                     </Text>
                   </Box>

@@ -20,9 +20,6 @@
   "+ozGrs": {
     "message": "Polish"
   },
-  "+s8Gac": {
-    "message": "Connect {wallet} to {network}"
-  },
   "/+atl4": {
     "message": "Recommendation disclaimer"
   },
@@ -315,9 +312,6 @@
   "5HJLBU": {
     "message": "Teku installation documentation"
   },
-  "5T9IMn": {
-    "message": "I've synced my beacon node on {network}."
-  },
   "5UH1sh": {
     "message": "Romanian"
   },
@@ -326,9 +320,6 @@
   },
   "5dG331": {
     "message": "Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {pricePerValidator}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
-  },
-  "5f+3FF": {
-    "message": "Your wallet is on the wrong network. Switch to {networkName}"
   },
   "5t8oYl": {
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
@@ -381,6 +372,9 @@
   },
   "7C4ikM": {
     "message": "Merge panda emoji"
+  },
+  "7DFXQj": {
+    "message": "Switch to {oppositeNetwork} launchpad"
   },
   "7Iz3JI": {
     "message": "Consensus Client"
@@ -488,6 +482,9 @@
   },
   "9vLu6E": {
     "message": "{note} This step should be performed on {testnetsOnly} until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
+  },
+  "9vwGlT": {
+    "message": "I've synced my beacon node on {consensusLayerName}."
   },
   "9xeLhs": {
     "message": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
@@ -624,6 +621,9 @@
   "CVDzDs": {
     "message": "You should certainly top up if your balance is close to 16 ETH. This is to ensure you don’t get kicked out of the validator set (which automatically happens if your balance falls below 16 ETH)."
   },
+  "CWKE9c": {
+    "message": "Your wallet is on the wrong network. Switch to {executionLayerName}"
+  },
   "Cacfkx": {
     "message": "More on the Ethereum vision"
   },
@@ -728,6 +728,10 @@
   "FSRfSJ": {
     "message": "I understand that this transaction is not reversible."
   },
+  "FU7JYy": {
+    "description": "{flag} is a terminal command styled as code.",
+    "message": "Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
+  },
   "FZa0R+": {
     "message": "This scenario is very extreme and unlikely to happen."
   },
@@ -748,6 +752,9 @@
   },
   "FgraU0": {
     "message": "Step 1: Download the deposit command line interface app for your operating system"
+  },
+  "FmGmFH": {
+    "message": "Your wallet should be set to {executionLayerName} to use this launchpad."
   },
   "FqgDIV": {
     "message": "Terms of service"
@@ -932,10 +939,6 @@
   "K6+jQ3": {
     "message": "Geth installation documentation"
   },
-  "KAE6tZ": {
-    "description": "{testNetwork} is the proper testnet name; do not translate this name",
-    "message": "{testNetwork} testnet"
-  },
   "KBSbmP": {
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
     "message": "You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
@@ -987,6 +990,10 @@
   },
   "L7fPF+": {
     "message": "Complete your last deposit"
+  },
+  "L7wMQN": {
+    "description": "{executionLayerName} is either 'Mainnet' or '<Execution Layer Testnet Name> testnet'",
+    "message": "Connect to {executionLayerName}"
   },
   "L8jrV5": {
     "message": "reload your wallet"
@@ -1174,10 +1181,6 @@
   "P9mVZK": {
     "message": "Your network has changed"
   },
-  "PVtsnq": {
-    "description": "{flag} is a terminal command styled as code.",
-    "message": "Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
-  },
   "Pd0hC/": {
     "message": "Ethereum Foundation Blog"
   },
@@ -1238,9 +1241,6 @@
   },
   "QlsDcr": {
     "message": "Action"
-  },
-  "QnS0CA": {
-    "message": "Your wallet should be set to {networkName} to use this launchpad."
   },
   "QqqeNk": {
     "message": "Transaction rejected"
@@ -1361,9 +1361,6 @@
   "T2O2Gr": {
     "message": "initial and maximum"
   },
-  "TH/TNr": {
-    "message": "Ethereum Mainnet"
-  },
   "THIzw6": {
     "message": "Validators and Ethereum"
   },
@@ -1444,9 +1441,6 @@
   },
   "VIMMdE": {
     "message": "Do not submit any transaction with a {depositData} file that you did not create yourself, or that you do not own the mnemonic phrase for."
-  },
-  "VJZrCQ": {
-    "message": "Switch to {network} launchpad"
   },
   "VKfWR3": {
     "message": "Recommended"
@@ -1532,10 +1526,6 @@
   "X5KFEh": {
     "message": "That is not a valid deposit_data JSON file."
   },
-  "X911Fz": {
-    "description": "{network} is either 'Ethereum Mainnet' or '<EL_TESTNET_NAME> testnet'",
-    "message": "Connect to {network}"
-  },
   "XBEBYR": {
     "message": "More on installing pip"
   },
@@ -1557,6 +1547,9 @@
   "XqbweH": {
     "description": "{variables} are client names, each linking to documentation (do not translate names)",
     "message": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
+  },
+  "Y07Hwy": {
+    "message": "Connect {wallet} to {executionLayerName}"
   },
   "Y47aYU": {
     "message": "Top up"
@@ -2149,9 +2142,6 @@
     "description": "{ethAmount} will generally refer to 32 ETH",
     "message": "Does the site asking you for your {ethAmount} deposit have a URL you expect?"
   },
-  "lNRvej": {
-    "message": "Your wallet is on the wrong Ethereum network. To continue, connect to {networkName}."
-  },
   "lQzdpT": {
     "description": "this is used as a command line flag, short for \"number of validators\"",
     "message": "num_validators"
@@ -2243,6 +2233,9 @@
   },
   "ntG2by": {
     "message": "Advanced system architecture"
+  },
+  "nwgrRp": {
+    "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
   },
   "nyx/4g": {
     "message": "How to run a node on {network}"
@@ -2495,6 +2488,9 @@
   "tzMNF3": {
     "message": "Status"
   },
+  "u/3saa": {
+    "message": "Your wallet is on the wrong Ethereum network. To continue, connect to {executionLayerName}."
+  },
   "u28qA1": {
     "message": "After depositing"
   },
@@ -2581,17 +2577,11 @@
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
   },
-  "vyvUB5": {
-    "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
-  },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
   },
   "wHvmSN": {
     "message": "both"
-  },
-  "wIpuL/": {
-    "message": "{testNetwork} testnet"
   },
   "wJ1PbL": {
     "description": "Indicates which operating system the instructions are for",
@@ -2652,18 +2642,21 @@
   "xSvJIi": {
     "message": "Block rewards are calculated using a sliding scale based on the total amount of ETH staked on the network."
   },
-  "xTqOi7": {
-    "description": "{flag} is a terminal command styled as code.",
-    "message": "Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
-  },
   "xXKkhR": {
     "message": "I've installed and synced my {network} execution client (do not wait on this as it can take several days)."
   },
   "xXWzDf": {
     "message": "The Beacon Chain"
   },
+  "xXntjc": {
+    "description": "{flag} is a terminal command styled as code.",
+    "message": "Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
+  },
   "xbet2w": {
     "message": "Install python3.7+"
+  },
+  "xm3Ivd": {
+    "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {consensusLayerName}."
   },
   "xogY3N": {
     "message": "Besu is written in Java and released under the Apache 2.0 Licence."
@@ -2741,10 +2734,6 @@
   },
   "zkT9Jx": {
     "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
-  },
-  "zmMF+G": {
-    "description": "This phrase is a sentence ",
-    "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
   },
   "zqOrZZ": {
     "message": "Look over the Merge Readiness Checklist"

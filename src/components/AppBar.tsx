@@ -25,7 +25,7 @@ import {
   TESTNET_LAUNCHPAD_URL,
 } from '../utils/envVars';
 import { trimString } from '../utils/trimString';
-import useNetworkName from '../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../hooks/useIntlNetworkName';
 import useMobileCheck from '../hooks/useMobileCheck';
 
 const RainbowBackground = styled(Box)`
@@ -124,7 +124,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     account,
     chainId,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const { executionLayerName, consensusLayerName } = useNetworkName();
+  const { executionLayerName, consensusLayerName } = useIntlNetworkName();
   const oppositeNetwork = IS_MAINNET ? (
     <FormattedMessage
       defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"

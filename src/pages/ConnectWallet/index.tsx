@@ -49,7 +49,7 @@ import {
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
-import useNetworkName from '../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 // styled components
 const Container = styled.div`
@@ -183,7 +183,7 @@ const _ConnectWalletPage = ({
     account,
     library,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const { executionLayerName } = useNetworkName();
+  const { executionLayerName } = useIntlNetworkName();
 
   // initialize state
   const [balance, setBalance] = useState<number | null>(null);

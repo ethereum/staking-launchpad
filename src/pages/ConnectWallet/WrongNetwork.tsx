@@ -3,11 +3,11 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { AcknowledgementSection } from '../Summary/AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import useNetworkName from '../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 export const WrongNetwork = () => {
   const { formatMessage } = useIntl();
-  const { executionLayerName } = useNetworkName();
+  const { executionLayerName } = useIntlNetworkName();
 
   const acknowledgementTitle = formatMessage({
     defaultMessage: 'Your network has changed',

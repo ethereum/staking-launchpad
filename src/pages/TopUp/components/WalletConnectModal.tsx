@@ -25,7 +25,7 @@ import { Text } from '../../../components/Text';
 import { NakedButton } from '../../../components/NakedButton';
 import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
 import { useKeyPress } from '../../../hooks/useKeyPress';
-import useNetworkName from '../../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../../hooks/useIntlNetworkName';
 
 const CloseButton = styled(NakedButton)`
   padding: 1rem;
@@ -54,7 +54,7 @@ const WalletConnectModal: React.FC<{
     chainId,
     active,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const executionLayerName = useNetworkName();
+  const executionLayerName = useIntlNetworkName();
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined

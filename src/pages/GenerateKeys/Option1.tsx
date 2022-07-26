@@ -11,7 +11,7 @@ import { NETWORK_NAME } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
-import useNetworkName from '../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -35,7 +35,7 @@ export const Option1 = ({
   os: string;
 }) => {
   const { formatMessage } = useIntl();
-  const { consensusLayerName } = useNetworkName();
+  const { consensusLayerName } = useIntlNetworkName();
 
   return (
     <div className="mt30">

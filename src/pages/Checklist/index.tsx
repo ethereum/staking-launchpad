@@ -27,7 +27,7 @@ import GethBg from '../../static/geth-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
 import { Alert } from '../../components/Alert';
-import useNetworkName from '../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -198,7 +198,7 @@ interface Client {
 
 export const Checklist = () => {
   const { formatMessage } = useIntl();
-  const { consensusLayerName } = useNetworkName();
+  const { consensusLayerName } = useIntlNetworkName();
 
   const defaultExecutionPorts: {
     defaultTcp: number;

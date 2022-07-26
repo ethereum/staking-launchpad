@@ -38,7 +38,7 @@ import {
 import { FileUploadAnimation } from './FileUploadAnimation';
 import { GENESIS_FORK_VERSION } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-import useNetworkName from '../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -93,7 +93,7 @@ const _UploadValidatorPage = ({
   dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
   const { formatMessage } = useIntl();
-  const { consensusLayerName } = useNetworkName();
+  const { consensusLayerName } = useIntlNetworkName();
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
   const [fileError, setFileError] = useState<React.ReactElement | null>(null);

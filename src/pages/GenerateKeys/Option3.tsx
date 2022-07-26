@@ -9,7 +9,7 @@ import { Code } from '../../components/Code';
 import { NETWORK_NAME } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
-import useNetworkName from '../../hooks/useIntlNetworkName';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const Pre = styled.pre`
   white-space: normal;
@@ -23,7 +23,7 @@ export const Option3 = ({
   os: string;
 }) => {
   const { formatMessage } = useIntl();
-  const { consensusLayerName } = useNetworkName();
+  const { consensusLayerName } = useIntlNetworkName();
   const renderPythonInstructions = () => {
     if (os === 'linux')
       return (

@@ -5,7 +5,7 @@ import {
   TESTNET_LAUNCHPAD_NAME,
 } from '../utils/envVars';
 
-const useNetworkName = (): {
+const useIntlNetworkName = (): {
   executionLayerName: string;
   consensusLayerName: string;
 } => {
@@ -25,4 +25,4 @@ const useNetworkName = (): {
   return { executionLayerName, consensusLayerName };
 };
 
-export default useNetworkName;
+export default useIntlNetworkName;

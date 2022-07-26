@@ -376,6 +376,9 @@
   "7Iz3JI": {
     "message": "Consensus Client"
   },
+  "7Rw2uA": {
+    "message": "consensus"
+  },
   "7UOvbT": {
     "message": "Offline"
   },
@@ -480,6 +483,10 @@
   "9xeLhs": {
     "message": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
   },
+  "9ySJSP": {
+    "description": "{ethClientType} is either \"execution\" or \"consensus\", depending on which step user is on",
+    "message": "Choose your {ethClientType} client and set up a node"
+  },
   "A2b4uB": {
     "message": "Send deposit"
   },
@@ -580,6 +587,9 @@
   },
   "Bj5yI5": {
     "message": "Effective balance"
+  },
+  "BnwOUO": {
+    "message": "execution"
   },
   "BoEpk9": {
     "message": "Introduction"
@@ -1090,10 +1100,6 @@
   },
   "Nb5DNK": {
     "message": "Become a validator with Teku"
-  },
-  "Ns8vbQ": {
-    "description": "{ethClientType} injects execution or consensus depending on step",
-    "message": "Choose {ethClientType} client"
   },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
@@ -2034,6 +2040,10 @@
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validators at once"
   },
+  "jp9OG2": {
+    "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
+    "message": "Choose {ethClientType} client"
+  },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
   },
@@ -2450,10 +2460,6 @@
   },
   "tkFTZw": {
     "message": "Balance after topping up"
-  },
-  "toCscK": {
-    "description": "{ethClientType} is either execution or consensus, depending on which step user is on",
-    "message": "Choose your {ethClientType} client and set up a node"
   },
   "tp1IPS": {
     "message": "Configure the fee recipient"

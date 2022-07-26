@@ -74,7 +74,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
       dispatchTransactionStatusUpdate
     );
   };
-  const intl = useIntl();
+  const { formatMessage } = useIntl();
   return (
     <CustomPaper className="mt20">
       <Heading level={3} size="small" color="blueMedium" className="mb20">
@@ -106,7 +106,7 @@ const _KeyList = ({ depositKeys, dispatchTransactionStatusUpdate }: Props) => {
               return (
                 <CustomTableRow
                   data-for={`double-deposit-${i}`}
-                  data-tip={intl.formatMessage({
+                  data-tip={formatMessage({
                     defaultMessage:
                       'Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider.',
                   })}

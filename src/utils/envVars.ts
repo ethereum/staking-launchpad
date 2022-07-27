@@ -9,7 +9,7 @@ export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PR
 export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : EL_TESTNET_NAME.toLowerCase()}.infura.io/v3/${INFURA_PROJECT_ID}`;
 
 // public
-export const NETWORK_NAME          = (IS_MAINNET || !process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME) ? 'Mainnet' : process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME;
+export const NETWORK_NAME               = IS_MAINNET ? 'Mainnet' : TESTNET_LAUNCHPAD_NAME;
 export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'TestnetETH';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : `https://${EL_TESTNET_NAME.toLowerCase()}.etherscan.io/tx`;
 export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/validator' : `https://beaconscan.com/${NETWORK_NAME.toLowerCase()}/validator`;

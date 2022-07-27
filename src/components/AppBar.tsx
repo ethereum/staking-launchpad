@@ -376,7 +376,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             className="secondary-link"
             label={
               <NetworkText>
-                {IS_MAINNET ? `Mainnet` : `${NETWORK_NAME}`}
+                {NETWORK_NAME}
                 <FormDown />
               </NetworkText>
             }

@@ -10,14 +10,15 @@ const useIntlNetworkName = (): {
   consensusLayerName: string;
 } => {
   const { formatMessage } = useIntl();
+  const mainnet = formatMessage({ defaultMessage: 'Mainnet' });
   const executionLayerName: string = IS_MAINNET
-    ? formatMessage({ defaultMessage: 'Mainnet' })
+    ? mainnet
     : formatMessage(
         { defaultMessage: '{EL_TESTNET_NAME} testnet' },
         { EL_TESTNET_NAME }
       );
   const consensusLayerName: string = IS_MAINNET
-    ? formatMessage({ defaultMessage: 'Mainnet' })
+    ? mainnet
     : formatMessage(
         { defaultMessage: '{TESTNET_LAUNCHPAD_NAME} testnet' },
         { TESTNET_LAUNCHPAD_NAME }

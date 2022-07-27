@@ -289,7 +289,7 @@ export const MergeReadiness = () => {
                     primary
                     to="https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md"
                   >
-                    Engine API
+                    <FormattedMessage defaultMessage="Engine API" />
                   </Link>
                 ),
               }}
@@ -402,7 +402,13 @@ export const MergeReadiness = () => {
               <Text className="checkbox-label">
                 <FormattedMessage
                   defaultMessage="I have set up a shared JWT secret and made it available to {both} my execution client, and my consensus client (beacon node)"
-                  values={{ both: <strong>both</strong> }}
+                  values={{
+                    both: (
+                      <strong>
+                        <FormattedMessage defaultMessage="both" />
+                      </strong>
+                    ),
+                  }}
                 />
               </Text>
             }
@@ -528,7 +534,13 @@ export const MergeReadiness = () => {
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
-              values={{ testingTheMerge: <code>#TestingTheMerge</code> }}
+              values={{
+                testingTheMerge: (
+                  <code>
+                    #<FormattedMessage defaultMessage="TestingTheMerge" />
+                  </code>
+                ),
+              }}
             />
           </Text>
           <Text className="mt20">
@@ -623,7 +635,7 @@ export const MergeReadiness = () => {
                   <FormattedMessage
                     defaultMessage="{site} {network} announcement"
                     values={{
-                      site: 'EF Blog',
+                      site: <FormattedMessage defaultMessage="EF Blog" />,
                       network: 'Ropsten',
                     }}
                   />
@@ -713,7 +725,7 @@ export const MergeReadiness = () => {
                   <FormattedMessage
                     defaultMessage="{site} {network} announcement"
                     values={{
-                      site: 'EF Blog',
+                      site: <FormattedMessage defaultMessage="EF Blog" />,
                       network: 'Kiln',
                     }}
                   />
@@ -785,7 +797,13 @@ export const MergeReadiness = () => {
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
-              values={{ not: <em>not</em> }}
+              values={{
+                not: (
+                  <em>
+                    <FormattedMessage defaultMessage="not" />
+                  </em>
+                ),
+              }}
             />
           </Text>
           <Text className="mt20">

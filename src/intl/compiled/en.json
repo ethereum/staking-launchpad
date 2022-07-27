@@ -41,24 +41,6 @@
       "value": "Polish"
     }
   ],
-  "+s8Gac": [
-    {
-      "type": 0,
-      "value": "Connect "
-    },
-    {
-      "type": 1,
-      "value": "wallet"
-    },
-    {
-      "type": 0,
-      "value": " to "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "/+atl4": [
     {
       "type": 0,
@@ -257,6 +239,12 @@
       "value": "Section 3 - After depositing"
     }
   ],
+  "0FTs1T": [
+    {
+      "type": 0,
+      "value": "not"
+    }
+  ],
   "0PlVao": [
     {
       "type": 0,
@@ -273,6 +261,12 @@
     {
       "type": 0,
       "value": "Testnet practice"
+    }
+  ],
+  "0c06tl": [
+    {
+      "type": 0,
+      "value": "Withdrawal Credentials"
     }
   ],
   "0i4cCJ": [
@@ -317,6 +311,16 @@
     {
       "type": 0,
       "value": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for Mainnet:"
+    }
+  ],
+  "17Epwt": [
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
     }
   ],
   "192AR6": [
@@ -377,6 +381,12 @@
     {
       "type": 0,
       "value": "Check that the password files don’t have trailing new-lines."
+    }
+  ],
+  "1Z0sad": [
+    {
+      "type": 0,
+      "value": "EF Blog"
     }
   ],
   "1fDfw7": [
@@ -887,14 +897,10 @@
       "value": " at any time during your setup for some friendly help!"
     }
   ],
-  "6CK2Nu": [
+  "63gLLu": [
     {
       "type": 0,
-      "value": "Your wallet is on the wrong network. Switch to "
-    },
-    {
-      "type": 1,
-      "value": "network"
+      "value": "average"
     }
   ],
   "6CN01C": [
@@ -999,10 +1005,30 @@
       "value": "Merge panda emoji"
     }
   ],
+  "7DFXQj": [
+    {
+      "type": 0,
+      "value": "Switch to "
+    },
+    {
+      "type": 1,
+      "value": "oppositeNetwork"
+    },
+    {
+      "type": 0,
+      "value": " launchpad"
+    }
+  ],
   "7Iz3JI": [
     {
       "type": 0,
       "value": "Consensus Client"
+    }
+  ],
+  "7Rw2uA": [
+    {
+      "type": 0,
+      "value": "consensus"
     }
   ],
   "7UOvbT": [
@@ -1219,6 +1245,12 @@
       "value": " option."
     }
   ],
+  "9mLaI9": [
+    {
+      "type": 0,
+      "value": "deposit"
+    }
+  ],
   "9qMyhY": [
     {
       "type": 0,
@@ -1229,6 +1261,12 @@
     {
       "type": 0,
       "value": "Configure Nethermind"
+    }
+  ],
+  "9r8j5+": [
+    {
+      "type": 0,
+      "value": "Engine API"
     }
   ],
   "9uOFF3": [
@@ -1255,6 +1293,20 @@
       "value": " until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
     }
   ],
+  "9vwGlT": [
+    {
+      "type": 0,
+      "value": "I've synced my beacon node on "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "9xeLhs": [
     {
       "type": 0,
@@ -1271,6 +1323,20 @@
     {
       "type": 1,
       "value": "boldWarning"
+    }
+  ],
+  "9ySJSP": [
+    {
+      "type": 0,
+      "value": "Choose your "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " client and set up a node"
     }
   ],
   "A2b4uB": [
@@ -1433,6 +1499,12 @@
       "value": "Top up validator"
     }
   ],
+  "AyaNND": [
+    {
+      "type": 0,
+      "value": "TestingTheMerge"
+    }
+  ],
   "AzjyIx": [
     {
       "type": 0,
@@ -1545,6 +1617,12 @@
       "value": "Effective balance"
     }
   ],
+  "BnwOUO": [
+    {
+      "type": 0,
+      "value": "execution"
+    }
+  ],
   "BoEpk9": [
     {
       "type": 0,
@@ -1593,6 +1671,16 @@
       "value": "You should certainly top up if your balance is close to 16 ETH. This is to ensure you don’t get kicked out of the validator set (which automatically happens if your balance falls below 16 ETH)."
     }
   ],
+  "CWKE9c": [
+    {
+      "type": 0,
+      "value": "Your wallet is on the wrong network. Switch to "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    }
+  ],
   "Cacfkx": [
     {
       "type": 0,
@@ -1617,16 +1705,6 @@
     {
       "type": 0,
       "value": "I've set up a firewall."
-    }
-  ],
-  "Cm8zxo": [
-    {
-      "type": 0,
-      "value": "Connect to "
-    },
-    {
-      "type": 1,
-      "value": "network"
     }
   ],
   "D0Rigq": [
@@ -1841,6 +1919,28 @@
       "value": "I understand that this transaction is not reversible."
     }
   ],
+  "FU7JYy": [
+    {
+      "type": 0,
+      "value": "Make sure you have set "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " for "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": ", otherwise the deposit will be invalid."
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -1889,6 +1989,20 @@
     {
       "type": 0,
       "value": "Step 1: Download the deposit command line interface app for your operating system"
+    }
+  ],
+  "FmGmFH": [
+    {
+      "type": 0,
+      "value": "Your wallet should be set to "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": " to use this launchpad."
     }
   ],
   "FqgDIV": [
@@ -2071,6 +2185,20 @@
     {
       "type": 0,
       "value": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
+    }
+  ],
+  "Hmxd5S": [
+    {
+      "type": 0,
+      "value": "Please make sure you select "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " when prompted for a network, otherwise the deposit will be invalid."
     }
   ],
   "HoahTd": [
@@ -2453,6 +2581,16 @@
       "value": "Complete your last deposit"
     }
   ],
+  "L7wMQN": [
+    {
+      "type": 0,
+      "value": "Connect to "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    }
+  ],
   "L8jrV5": [
     {
       "type": 0,
@@ -2751,6 +2889,12 @@
       "value": " deposits"
     }
   ],
+  "NZYRdf": [
+    {
+      "type": 0,
+      "value": "Mainnet"
+    }
+  ],
   "NatYUJ": [
     {
       "type": 0,
@@ -2761,20 +2905,6 @@
     {
       "type": 0,
       "value": "Become a validator with Teku"
-    }
-  ],
-  "Ns8vbQ": [
-    {
-      "type": 0,
-      "value": "Choose "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " client"
     }
   ],
   "NwzcYT": [
@@ -3127,20 +3257,6 @@
       "value": "Action"
     }
   ],
-  "QnS0CA": [
-    {
-      "type": 0,
-      "value": "Your wallet should be set to "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": " to use this launchpad."
-    }
-  ],
   "QqqeNk": [
     {
       "type": 0,
@@ -3417,6 +3533,12 @@
       "value": "wrench"
     }
   ],
+  "T2O2Gr": [
+    {
+      "type": 0,
+      "value": "initial and maximum"
+    }
+  ],
   "THIzw6": [
     {
       "type": 0,
@@ -3633,20 +3755,6 @@
       "value": " file that you did not create yourself, or that you do not own the mnemonic phrase for."
     }
   ],
-  "VJZrCQ": [
-    {
-      "type": 0,
-      "value": "Switch to "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " launchpad"
-    }
-  ],
   "VKfWR3": [
     {
       "type": 0,
@@ -3857,6 +3965,12 @@
       "value": "Has the block explorer named the contract?"
     }
   ],
+  "X3NiFM": [
+    {
+      "type": 0,
+      "value": "proof-of-custody game"
+    }
+  ],
   "X3rOq5": [
     {
       "type": 0,
@@ -3959,6 +4073,24 @@
     {
       "type": 1,
       "value": "teku"
+    }
+  ],
+  "Y07Hwy": [
+    {
+      "type": 0,
+      "value": "Connect "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " to "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
     }
   ],
   "Y47aYU": [
@@ -4089,6 +4221,16 @@
       "value": "Execution clients"
     }
   ],
+  "Yep32z": [
+    {
+      "type": 1,
+      "value": "EL_TESTNET_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "Yganfl": [
     {
       "type": 0,
@@ -4205,20 +4347,6 @@
       "value": " a block proposal every 50 days."
     }
   ],
-  "ZlLjuq": [
-    {
-      "type": 0,
-      "value": "Please make sure you select "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " when prompted for a network, otherwise the deposit will be invalid."
-    }
-  ],
   "ZsXdlw": [
     {
       "type": 0,
@@ -4265,20 +4393,6 @@
     {
       "type": 0,
       "value": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
-    }
-  ],
-  "aZ7pUj": [
-    {
-      "type": 0,
-      "value": "Your wallet is on the wrong Ethereum network. To continue, connect to the "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": " network."
     }
   ],
   "acrOoz": [
@@ -5045,6 +5159,12 @@
       "value": " outstanding deposit"
     }
   ],
+  "hwkLRc": [
+    {
+      "type": 0,
+      "value": "node operator"
+    }
+  ],
   "hzLd+/": [
     {
       "type": 0,
@@ -5073,28 +5193,6 @@
     {
       "type": 0,
       "value": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
-    }
-  ],
-  "iWg7mL": [
-    {
-      "type": 0,
-      "value": "Please make sure you have set "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " for "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", otherwise the deposit will be invalid."
     }
   ],
   "iX90gu": [
@@ -5235,6 +5333,20 @@
     {
       "type": 0,
       "value": "Warning: Do not store keys on multiple (backup) validators at once"
+    }
+  ],
+  "jp9OG2": [
+    {
+      "type": 0,
+      "value": "Choose "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " client"
     }
   ],
   "jse8rl": [
@@ -5699,6 +5811,20 @@
       "value": "Advanced system architecture"
     }
   ],
+  "nwgrRp": [
+    {
+      "type": 0,
+      "value": "Staking Launchpad for "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "nyx/4g": [
     {
       "type": 0,
@@ -6059,6 +6185,12 @@
       "value": "Configure Prysm"
     }
   ],
+  "r2j8jL": [
+    {
+      "type": 0,
+      "value": "validator client"
+    }
+  ],
   "r4JsKB": [
     {
       "type": 0,
@@ -6231,20 +6363,6 @@
       "value": ". This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
     }
   ],
-  "sdQRah": [
-    {
-      "type": 0,
-      "value": "I've synced my beacon node on "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6325,20 +6443,6 @@
       "value": "Balance after topping up"
     }
   ],
-  "toCscK": [
-    {
-      "type": 0,
-      "value": "Choose your "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " client and set up a node"
-    }
-  ],
   "tp1IPS": [
     {
       "type": 0,
@@ -6379,6 +6483,20 @@
     {
       "type": 0,
       "value": "Status"
+    }
+  ],
+  "u/3saa": [
+    {
+      "type": 0,
+      "value": "Your wallet is on the wrong Ethereum network. To continue, connect to "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "u28qA1": [
@@ -6589,24 +6707,16 @@
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
     }
   ],
-  "vyvUB5": [
-    {
-      "type": 0,
-      "value": "This JSON file isn't for the right network. Upload a file generated for your current network: "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Run the following command to launch the app"
+    }
+  ],
+  "wHvmSN": [
+    {
+      "type": 0,
+      "value": "both"
     }
   ],
   "wJ1PbL": [
@@ -6751,10 +6861,46 @@
       "value": "The Beacon Chain"
     }
   ],
+  "xXntjc": [
+    {
+      "type": 0,
+      "value": "Please make sure you have set "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " for "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": ", otherwise the deposit will be invalid."
+    }
+  ],
   "xbet2w": [
     {
       "type": 0,
       "value": "Install python3.7+"
+    }
+  ],
+  "xm3Ivd": [
+    {
+      "type": 0,
+      "value": "This JSON file isn't for the right network. Upload a file generated for your current network: "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "xogY3N": [
@@ -6879,28 +7025,6 @@
       "value": "."
     }
   ],
-  "z/ZhML": [
-    {
-      "type": 0,
-      "value": "Make sure you have set "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " for "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", otherwise the deposit will be invalid."
-    }
-  ],
   "z63I56": [
     {
       "type": 0,
@@ -6963,20 +7087,6 @@
     {
       "type": 0,
       "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
-    }
-  ],
-  "zmMF+G": [
-    {
-      "type": 0,
-      "value": "Staking Launchpad for "
-    },
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
-    {
-      "type": 0,
-      "value": " testnet"
     }
   ],
   "zqOrZZ": [

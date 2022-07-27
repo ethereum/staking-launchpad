@@ -168,7 +168,6 @@ export const Hero = () => {
                             <FormattedMessage
                               defaultMessage="Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
                               values={{ TESTNET_LAUNCHPAD_NAME }}
-                              description="This phrase is a sentence "
                             />
                           )}
                         </LogoText>

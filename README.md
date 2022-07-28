@@ -45,7 +45,7 @@ yarn
 yarn start
 ```
 
-## Development pull requests (PRs)
+## Development workflow
 
 By default, `dev` acts as the primary base branch which all PRs should merge into. Make sure any pull requests target this branch.
 

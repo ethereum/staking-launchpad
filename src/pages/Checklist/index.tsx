@@ -14,6 +14,8 @@ import {
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   EL_TESTNET_NAME,
+  TUTORIAL_URL,
+  NETWORK_NAME,
 } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
@@ -195,6 +197,27 @@ interface Client {
   defaultTcp: number;
   defaultUdp: number;
 }
+
+const tutorialLinkBox = () => {
+  if (TUTORIAL_URL !== null) {
+    return (
+      <Alert variant="warning" className="my40 mx15">
+        <Heading level={4}>
+          <FormattedMessage defaultMessage="Node Setup Tutorial" />
+        </Heading>
+        <Link to={TUTORIAL_URL} primary>
+          <FormattedMessage
+            defaultMessage="Check this document to learn how to run a node on {networkName}"
+            values={{
+              networkName: NETWORK_NAME,
+            }}
+          />
+        </Link>
+      </Alert>
+    );
+  }
+  return;
+};
 
 export const Checklist = () => {
   const { formatMessage } = useIntl();
@@ -903,7 +926,8 @@ export const Checklist = () => {
                 />
               ))}
           </ClientContainer>
-          <Alert variant="error" className="mt30 mb20">
+          {tutorialLinkBox()}
+          <Alert variant="error" className="my40 mx15">
             <Heading level={4}>
               <FormattedMessage defaultMessage="Warning!" />
             </Heading>

@@ -301,7 +301,10 @@ const _CongratulationsPage = ({
                   values={{
                     testnet: (
                       <Link primary inline to={TESTNET_LAUNCHPAD_URL}>
-                        {TESTNET_LAUNCHPAD_NAME} testnet
+                        <FormattedMessage
+                          defaultMessage="{TESTNET_LAUNCHPAD_NAME} testnet"
+                          values={{ TESTNET_LAUNCHPAD_NAME }}
+                        />
                       </Link>
                     ),
                   }}
@@ -321,7 +324,7 @@ const _CongratulationsPage = ({
                 values={{
                   mainnet: (
                     <Link primary inline to={MAINNET_LAUNCHPAD_URL}>
-                      mainnet
+                      <FormattedMessage defaultMessage="Mainnet" />
                     </Link>
                   ),
                 }}

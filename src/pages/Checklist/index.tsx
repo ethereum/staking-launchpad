@@ -10,11 +10,12 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import {
   BEACONCHAIN_URL,
-  NETWORK_NAME,
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   EL_TESTNET_NAME,
+  TUTORIAL_URL,
+  NETWORK_NAME,
 } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
@@ -28,6 +29,7 @@ import GethBg from '../../static/geth-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
 import { Alert } from '../../components/Alert';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -196,8 +198,31 @@ interface Client {
   defaultUdp: number;
 }
 
+const tutorialLinkBox = () => {
+  if (TUTORIAL_URL !== null) {
+    return (
+      <Alert variant="warning" className="my40 mx15">
+        <Heading level={4}>
+          <FormattedMessage defaultMessage="Node Setup Tutorial" />
+        </Heading>
+        <Link to={TUTORIAL_URL} primary>
+          <FormattedMessage
+            defaultMessage="Check this document to learn how to run a node on {networkName}"
+            values={{
+              networkName: NETWORK_NAME,
+            }}
+          />
+        </Link>
+      </Alert>
+    );
+  }
+  return;
+};
+
 export const Checklist = () => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useIntlNetworkName();
+
   const defaultExecutionPorts: {
     defaultTcp: number;
     defaultUdp: number;
@@ -846,7 +871,11 @@ export const Checklist = () => {
                 <FormattedMessage
                   defaultMessage="I've installed and synced my {network} execution client (do not wait on this as it can take several days)."
                   values={{
-                    network: IS_MAINNET ? 'Mainnet' : EL_TESTNET_NAME,
+                    network: IS_MAINNET ? (
+                      <FormattedMessage defaultMessage="Mainnet" />
+                    ) : (
+                      EL_TESTNET_NAME
+                    ),
                   }}
                 />
               </Text>
@@ -897,7 +926,8 @@ export const Checklist = () => {
                 />
               ))}
           </ClientContainer>
-          <Alert variant="error" className="mt30 mb20">
+          {tutorialLinkBox()}
+          <Alert variant="error" className="my40 mx15">
             <Heading level={4}>
               <FormattedMessage defaultMessage="Warning!" />
             </Heading>
@@ -991,9 +1021,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've synced my beacon node on {NETWORK_NAME}."
-                  values={{ NETWORK_NAME }}
-                  description="{NETWORK_NAME} is name of network, do not translate"
+                  defaultMessage="I've synced my beacon node on {consensusLayerName}."
+                  values={{ consensusLayerName }}
                 />
               </Text>
             }

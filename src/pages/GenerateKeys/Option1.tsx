@@ -7,10 +7,11 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { NETWORK_NAME } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -34,6 +35,7 @@ export const Option1 = ({
   os: string;
 }) => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useIntlNetworkName();
 
   return (
     <div className="mt30">
@@ -96,7 +98,11 @@ export const Option1 = ({
           <FormattedMessage
             defaultMessage="Use the terminal to move into the directory that contains the {deposit} executable"
             values={{
-              deposit: <code>deposit</code>,
+              deposit: (
+                <code>
+                  <FormattedMessage defaultMessage="deposit" />
+                </code>
+              ),
             }}
             description="{deposit} = 'deposit' styled as code"
           />
@@ -136,7 +142,7 @@ export const Option1 = ({
         <Alert variant="error" className="my10">
           <Text>
             <FormattedMessage
-              defaultMessage="Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+              defaultMessage="Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
               values={{
                 flag: (
                   <Code>
@@ -146,13 +152,9 @@ export const Option1 = ({
                     })} ${NETWORK_NAME.toLowerCase()}`}
                   </Code>
                 ),
-                network: (
-                  <span>
-                    {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
-                  </span>
-                ),
+                consensusLayerName,
               }}
-              description="{flag} and {network} are terminal commands styled as code."
+              description="{flag} is a terminal command styled as code."
             />
           </Text>
         </Alert>

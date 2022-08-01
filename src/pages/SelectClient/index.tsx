@@ -179,9 +179,14 @@ const _SelectClientPage = ({
     {
       defaultMessage: `Choose {ethClientType} client`,
       description:
-        '{ethClientType} injects execution or consensus depending on step',
+        '{ethClientType} injects "execution" or "consensus" depending on step',
     },
-    { ethClientType: ethClientStep }
+    {
+      ethClientType:
+        ethClientStep === 'execution'
+          ? formatMessage({ defaultMessage: 'execution' })
+          : formatMessage({ defaultMessage: 'consensus' }),
+    }
   );
 
   return (
@@ -189,10 +194,17 @@ const _SelectClientPage = ({
       <SelectClientSection
         title={formatMessage(
           {
-            defaultMessage: `Choose your {ethClientType} client and set up a node`,
-            description: `{ethClientType} is either execution or consensus, depending on which step user is on`,
+            defaultMessage:
+              'Choose your {ethClientType} client and set up a node',
+            description:
+              '{ethClientType} is either "execution" or "consensus", depending on which step user is on',
           },
-          { ethClientType: ethClientStep }
+          {
+            ethClientType:
+              ethClientStep === 'execution'
+                ? formatMessage({ defaultMessage: 'execution' })
+                : formatMessage({ defaultMessage: 'consensus' }),
+          }
         )}
         clients={clientOptions}
         currentClient={selectedClient}

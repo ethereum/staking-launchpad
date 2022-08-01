@@ -20,9 +20,6 @@
   "+ozGrs": {
     "message": "Polish"
   },
-  "+s8Gac": {
-    "message": "Connect {wallet} to {network}"
-  },
   "/+atl4": {
     "message": "Recommendation disclaimer"
   },
@@ -93,6 +90,9 @@
   "07C4IQ": {
     "message": "Section 3 - After depositing"
   },
+  "0FTs1T": {
+    "message": "not"
+  },
   "0PlVao": {
     "message": "More on slashing prevention"
   },
@@ -101,6 +101,9 @@
   },
   "0S8/Wo": {
     "message": "Testnet practice"
+  },
+  "0c06tl": {
+    "message": "Withdrawal Credentials"
   },
   "0i4cCJ": {
     "message": "Confirm deposits ({depositKeys})"
@@ -119,6 +122,9 @@
   },
   "14vTrX": {
     "message": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for Mainnet:"
+  },
+  "17Epwt": {
+    "message": "{TESTNET_LAUNCHPAD_NAME} testnet"
   },
   "192AR6": {
     "message": "More on staking"
@@ -149,6 +155,9 @@
   },
   "1Vkpd0": {
     "message": "Check that the password files don’t have trailing new-lines."
+  },
+  "1Z0sad": {
+    "message": "EF Blog"
   },
   "1fDfw7": {
     "message": "How does this all happen?"
@@ -316,8 +325,8 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
-  "6CK2Nu": {
-    "message": "Your wallet is on the wrong network. Switch to {network}"
+  "63gLLu": {
+    "message": "average"
   },
   "6CN01C": {
     "message": "After the Shanghai upgrade, your 16 ETH can then be withdrawn – with your withdrawal key – after a delay of around a day."
@@ -364,8 +373,14 @@
   "7C4ikM": {
     "message": "Merge panda emoji"
   },
+  "7DFXQj": {
+    "message": "Switch to {oppositeNetwork} launchpad"
+  },
   "7Iz3JI": {
     "message": "Consensus Client"
+  },
+  "7Rw2uA": {
+    "message": "consensus"
   },
   "7UOvbT": {
     "message": "Offline"
@@ -450,11 +465,17 @@
   "9lBMQr": {
     "message": "{keyFile} of paths via the {validatorsKeys} option."
   },
+  "9mLaI9": {
+    "message": "deposit"
+  },
   "9qMyhY": {
     "message": "Read options and subcommands documentation"
   },
   "9qpi9h": {
     "message": "Configure Nethermind"
+  },
+  "9r8j5+": {
+    "message": "Engine API"
   },
   "9uOFF3": {
     "message": "Overview"
@@ -462,8 +483,15 @@
   "9vLu6E": {
     "message": "{note} This step should be performed on {testnetsOnly} until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
   },
+  "9vwGlT": {
+    "message": "I've synced my beacon node on {consensusLayerName}."
+  },
   "9xeLhs": {
     "message": "Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
+  },
+  "9ySJSP": {
+    "description": "{ethClientType} is either \"execution\" or \"consensus\", depending on which step user is on",
+    "message": "Choose your {ethClientType} client and set up a node"
   },
   "A2b4uB": {
     "message": "Send deposit"
@@ -526,6 +554,9 @@
   "Aw1mMs": {
     "message": "Top up validator"
   },
+  "AyaNND": {
+    "message": "TestingTheMerge"
+  },
   "AzjyIx": {
     "message": "Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
   },
@@ -563,6 +594,9 @@
   "Bj5yI5": {
     "message": "Effective balance"
   },
+  "BnwOUO": {
+    "message": "execution"
+  },
   "BoEpk9": {
     "message": "Introduction"
   },
@@ -587,6 +621,9 @@
   "CVDzDs": {
     "message": "You should certainly top up if your balance is close to 16 ETH. This is to ensure you don’t get kicked out of the validator set (which automatically happens if your balance falls below 16 ETH)."
   },
+  "CWKE9c": {
+    "message": "Your wallet is on the wrong network. Switch to {executionLayerName}"
+  },
   "Cacfkx": {
     "message": "More on the Ethereum vision"
   },
@@ -596,10 +633,6 @@
   },
   "CeeJfw": {
     "message": "I've set up a firewall."
-  },
-  "Cm8zxo": {
-    "description": "{network} is either 'Ethereum mainnet' or '<EL_TESTNET_NAME> testnet'",
-    "message": "Connect to {network}"
   },
   "D0Rigq": {
     "message": "NO"
@@ -695,6 +728,10 @@
   "FSRfSJ": {
     "message": "I understand that this transaction is not reversible."
   },
+  "FU7JYy": {
+    "description": "{flag} is a terminal command styled as code.",
+    "message": "Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
+  },
   "FZa0R+": {
     "message": "This scenario is very extreme and unlikely to happen."
   },
@@ -715,6 +752,9 @@
   },
   "FgraU0": {
     "message": "Step 1: Download the deposit command line interface app for your operating system"
+  },
+  "FmGmFH": {
+    "message": "Your wallet should be set to {executionLayerName} to use this launchpad."
   },
   "FqgDIV": {
     "message": "Terms of service"
@@ -797,6 +837,9 @@
   },
   "Hczrvs": {
     "message": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
+  },
+  "Hmxd5S": {
+    "message": "Please make sure you select {NETWORK_NAME} when prompted for a network, otherwise the deposit will be invalid."
   },
   "HoahTd": {
     "message": "If you do not supply a password, Nimbus will interactively ask for it on startup."
@@ -948,6 +991,10 @@
   "L7fPF+": {
     "message": "Complete your last deposit"
   },
+  "L7wMQN": {
+    "description": "{executionLayerName} is either 'Mainnet' or '<Execution Layer Testnet Name> testnet'",
+    "message": "Connect to {executionLayerName}"
+  },
   "L8jrV5": {
     "message": "reload your wallet"
   },
@@ -1067,15 +1114,14 @@
   "NZIM+F": {
     "message": "Send remaining {remainingTxCount} deposits"
   },
+  "NZYRdf": {
+    "message": "Mainnet"
+  },
   "NatYUJ": {
     "message": "Learn more about the roles and responsibilities of Ethereum validators."
   },
   "Nb5DNK": {
     "message": "Become a validator with Teku"
-  },
-  "Ns8vbQ": {
-    "description": "{ethClientType} injects execution or consensus depending on step",
-    "message": "Choose {ethClientType} client"
   },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
@@ -1190,14 +1236,14 @@
   "QapNAM": {
     "message": "{network} homepage"
   },
+  "QeE86m": {
+    "message": "Check this document to learn how to run a node on {networkName}"
+  },
   "QgOvR0": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
   },
   "QlsDcr": {
     "message": "Action"
-  },
-  "QnS0CA": {
-    "message": "Your wallet should be set to {networkName} to use this launchpad."
   },
   "QqqeNk": {
     "message": "Transaction rejected"
@@ -1315,6 +1361,9 @@
   "Szwbym": {
     "message": "wrench"
   },
+  "T2O2Gr": {
+    "message": "initial and maximum"
+  },
   "THIzw6": {
     "message": "Validators and Ethereum"
   },
@@ -1396,9 +1445,6 @@
   "VIMMdE": {
     "message": "Do not submit any transaction with a {depositData} file that you did not create yourself, or that you do not own the mnemonic phrase for."
   },
-  "VJZrCQ": {
-    "message": "Switch to {network} launchpad"
-  },
   "VKfWR3": {
     "message": "Recommended"
   },
@@ -1474,6 +1520,9 @@
   "X/fKmY": {
     "message": "Has the block explorer named the contract?"
   },
+  "X3NiFM": {
+    "message": "proof-of-custody game"
+  },
   "X3rOq5": {
     "message": "At time of the Merge, Infura and Alchemy will no longer be viable options to outsource execution layer responsibilities."
   },
@@ -1501,6 +1550,9 @@
   "XqbweH": {
     "description": "{variables} are client names, each linking to documentation (do not translate names)",
     "message": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
+  },
+  "Y07Hwy": {
+    "message": "Connect {wallet} to {executionLayerName}"
   },
   "Y47aYU": {
     "message": "Top up"
@@ -1544,6 +1596,9 @@
   },
   "Yd6MEN": {
     "message": "Execution clients"
+  },
+  "Yep32z": {
+    "message": "{EL_TESTNET_NAME} testnet"
   },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
@@ -1589,10 +1644,6 @@
   "ZdT9Bs": {
     "message": "Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days."
   },
-  "ZlLjuq": {
-    "description": "{flag} and {network} are terminal commands styled as code.",
-    "message": "Please make sure you select {network} when prompted for a network, otherwise the deposit will be invalid."
-  },
   "ZsXdlw": {
     "message": "Erigon installation documentation"
   },
@@ -1616,9 +1667,6 @@
   },
   "aXT3iO": {
     "message": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
-  },
-  "aZ7pUj": {
-    "message": "Your wallet is on the wrong Ethereum network. To continue, connect to the {networkName} network."
   },
   "acrOoz": {
     "message": "Continue"
@@ -1930,6 +1978,9 @@
     "description": "Singular form, for only one deposit",
     "message": "You have {remainingTxCount} outstanding deposit"
   },
+  "hwkLRc": {
+    "message": "node operator"
+  },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
   },
@@ -1944,10 +1995,6 @@
   },
   "iPRnRG": {
     "message": "With transfers disabled for now, you won't be able to voluntarily exit and then restart later. This means you need to be in it for the long haul."
-  },
-  "iWg7mL": {
-    "description": "{flag} and {network} are terminal commands styled as code.",
-    "message": "Please make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
   },
   "iX90gu": {
     "message": "I've joined my execution client's Discord server."
@@ -2010,6 +2057,10 @@
   "jm79h1": {
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validators at once"
+  },
+  "jp9OG2": {
+    "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
+    "message": "Choose {ethClientType} client"
   },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
@@ -2101,6 +2152,9 @@
   "lS9VhN": {
     "message": "Total {TICKER_NAME} staked"
   },
+  "lV3Ttw": {
+    "message": "Node Setup Tutorial"
+  },
   "lVARlA": {
     "message": "Please enter a valid top-up value."
   },
@@ -2185,6 +2239,9 @@
   },
   "ntG2by": {
     "message": "Advanced system architecture"
+  },
+  "nwgrRp": {
+    "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
   },
   "nyx/4g": {
     "message": "How to run a node on {network}"
@@ -2327,6 +2384,9 @@
   "r2BH1M": {
     "message": "Configure Prysm"
   },
+  "r2j8jL": {
+    "message": "validator client"
+  },
   "r4JsKB": {
     "message": "Transaction successful"
   },
@@ -2382,10 +2442,6 @@
   "scfDDt": {
     "message": "Communication between the execution layer and consensus layer will occur using the {engineApi}. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
   },
-  "sdQRah": {
-    "description": "{NETWORK_NAME} is name of network, do not translate",
-    "message": "I've synced my beacon node on {NETWORK_NAME}."
-  },
   "sj/Zef": {
     "message": "Download Key Gen GUI app"
   },
@@ -2422,10 +2478,6 @@
   "tkFTZw": {
     "message": "Balance after topping up"
   },
-  "toCscK": {
-    "description": "{ethClientType} is either execution or consensus, depending on which step user is on",
-    "message": "Choose your {ethClientType} client and set up a node"
-  },
   "tp1IPS": {
     "message": "Configure the fee recipient"
   },
@@ -2441,6 +2493,9 @@
   },
   "tzMNF3": {
     "message": "Status"
+  },
+  "u/3saa": {
+    "message": "Your wallet is on the wrong Ethereum network. To continue, connect to {executionLayerName}."
   },
   "u28qA1": {
     "message": "After depositing"
@@ -2528,11 +2583,11 @@
   "vg1dVR": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
   },
-  "vyvUB5": {
-    "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
-  },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
+  },
+  "wHvmSN": {
+    "message": "both"
   },
   "wJ1PbL": {
     "description": "Indicates which operating system the instructions are for",
@@ -2599,8 +2654,15 @@
   "xXWzDf": {
     "message": "The Beacon Chain"
   },
+  "xXntjc": {
+    "description": "{flag} is a terminal command styled as code.",
+    "message": "Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
+  },
   "xbet2w": {
     "message": "Install python3.7+"
+  },
+  "xm3Ivd": {
+    "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {consensusLayerName}."
   },
   "xogY3N": {
     "message": "Besu is written in Java and released under the Apache 2.0 Licence."
@@ -2653,9 +2715,6 @@
   "z/ToMo": {
     "message": "Once the transition to proof-of-stake is complete via the Merge, validators will be responsible for processing transactions and signing off on their validity. This data will {not} be available from popular third-party sources after the Merge and will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
   },
-  "z/ZhML": {
-    "message": "Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
-  },
   "z63I56": {
     "message": "validator"
   },
@@ -2681,10 +2740,6 @@
   },
   "zkT9Jx": {
     "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
-  },
-  "zmMF+G": {
-    "description": "This phrase is a sentence ",
-    "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
   },
   "zqOrZZ": {
     "message": "Look over the Merge Readiness Checklist"

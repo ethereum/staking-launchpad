@@ -1,5 +1,7 @@
 # Ethereum Staking Launchpad
 
+[![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/ethereum/staking-launchpad/badge)](https://www.gitpoap.io/gh/ethereum/staking-launchpad)
+
 The [Launchpad](https://launchpad.ethereum.org/) is the Ethereum Foundation's official way to deposit your ETH for staking on Ethereum
 
 ## Dependencies
@@ -42,6 +44,15 @@ You will also see any lint errors in the console.
 yarn
 yarn start
 ```
+
+## Development workflow
+
+By default, `dev` acts as the primary base branch which all PRs should merge into. Make sure any pull requests target this branch.
+
+## Launchpad deployment
+
+- The `master` branch represents the live **testnet** version of the Launchpad. Open a PR to merge `dev` into `master` to deploy a testnet Launchpad (e.g. #517 for https://goerli.launchpad.ethereum.org/ )
+- The `mainnet` branch represents the live **Mainnet** version of the Launchpad. Open a PR to merge `master` into `mainnet` to deploy the Mainnet Launchpad (e.g. #518 for https://launchpad.ethereum.org/)
 
 ## Launchpad translation
 

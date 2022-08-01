@@ -6,9 +6,10 @@ import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { NETWORK_NAME } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const Pre = styled.pre`
   white-space: normal;
@@ -22,6 +23,7 @@ export const Option3 = ({
   os: string;
 }) => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useIntlNetworkName();
   const renderPythonInstructions = () => {
     if (os === 'linux')
       return (
@@ -324,20 +326,19 @@ export const Option3 = ({
       <Alert variant="error" className="my10">
         <Text>
           <FormattedMessage
-            defaultMessage="Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+            defaultMessage="Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
             values={{
               flag: (
-                <Code>{`--${formatMessage({
-                  defaultMessage: 'chain',
-                  description: 'this is used as a command line flag',
-                })} ${NETWORK_NAME.toLowerCase()}`}</Code>
+                <Code>
+                  {`--${formatMessage({
+                    defaultMessage: 'chain',
+                    description: 'this is used as a command line flag',
+                  })} ${NETWORK_NAME.toLowerCase()}`}
+                </Code>
               ),
-              network: (
-                <span>
-                  {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
-                </span>
-              ),
+              consensusLayerName,
             }}
+            description="{flag} is a terminal command styled as code."
           />
         </Text>
       </Alert>

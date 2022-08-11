@@ -22,10 +22,6 @@ const ChecklistPageStyles = styled.div`
       margin-bottom: 5px;
     }
   }
-  section.pending {
-    filter: grayscale(100%);
-    opacity: 75%;
-  }
   label {
     padding: 1rem;
   }
@@ -80,11 +76,6 @@ const Card = styled.div`
     margin: 0px;
     margin-top: 16px;
   }
-  &.pending {
-    filter: grayscale(75%);
-    opacity: 60%;
-  }
-
   transform: scale(1);
   transition: transform 0.1s;
   &:hover {
@@ -127,7 +118,6 @@ const SectionHeader = styled.div`
 
 export const MergeReadiness = () => {
   const { formatMessage } = useIntl();
-
   const sections = [
     {
       heading: <FormattedMessage defaultMessage="Task 1" />,
@@ -137,21 +127,15 @@ export const MergeReadiness = () => {
     },
     {
       heading: <FormattedMessage defaultMessage="Task 2" />,
-      timing: (
-        <FormattedMessage defaultMessage="Do this after TTD client releases" />
-      ),
+      timing: <FormattedMessage defaultMessage="Do this now" />,
       title: <FormattedMessage defaultMessage="Authenticate Engine API" />,
       id: 'authenticate',
-      pending: true,
     },
     {
       heading: <FormattedMessage defaultMessage="Task 3" />,
-      timing: (
-        <FormattedMessage defaultMessage="Do this after TTD client releases" />
-      ),
+      timing: <FormattedMessage defaultMessage="Do this now" />,
       title: <FormattedMessage defaultMessage="Set fee recipient" />,
       id: 'fee-recipient',
-      pending: true,
     },
     {
       heading: <FormattedMessage defaultMessage="Bonus" />,
@@ -160,24 +144,21 @@ export const MergeReadiness = () => {
     },
   ];
 
-  const TimingWarning = () => (
+  const ActNow = () => (
     <SectionHeader className="m0 pt0">
-      <Alert variant="error" className="m0">
+      <Alert variant="error" className="mt40">
         <Text>
           <FormattedMessage
-            defaultMessage="{note} This step should be performed on {testnetsOnly} until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
+            defaultMessage="{attention} Mainnet total terminal difficulty (TTD) has been set to 58750000000000000000000. Ethereum is estimated to reach this TTD on the 15h of September, plus-or-minus a few days (Follow {link} for latest estimate). Act now to update your nodes with the latest client releases, and use the steps below to make sure you're prepared."
             values={{
-              note: (
+              attention: (
                 <strong>
-                  <FormattedMessage defaultMessage="Note:" />
+                  <FormattedMessage defaultMessage="Attention:" />
                 </strong>
               ),
-              testnetsOnly: (
-                <Link to="#testing-the-merge" inline primary>
-                  <FormattedMessage
-                    defaultMessage="testnets only (e.g. {kiln})"
-                    values={{ kiln: 'Kiln' }}
-                  />
+              link: (
+                <Link to="https://bordel.wtf" inline primary>
+                  <FormattedMessage defaultMessage="bordel.wtf" />
                 </Link>
               ),
             }}
@@ -202,9 +183,9 @@ export const MergeReadiness = () => {
       </Subtitle>
 
       <CardContainer>
-        {sections.map(({ heading, title, timing, pending, id }) => (
+        {sections.map(({ heading, title, timing, id }) => (
           <StyledLink to={`#${id}`} inline isTextLink={false} key={id}>
-            <Card className={pending ? 'pending' : ''}>
+            <Card>
               <div>
                 <Heading level={4} className="mb10">
                   {heading}
@@ -213,7 +194,7 @@ export const MergeReadiness = () => {
                   {title}
                 </BoldGreen>
                 {timing && (
-                  <p className={`timing ${pending ? 'pending' : null}`}>
+                  <p className="timing">
                     <FormattedMessage defaultMessage="Timing:" /> {timing}
                   </p>
                 )}
@@ -223,6 +204,7 @@ export const MergeReadiness = () => {
           </StyledLink>
         ))}
       </CardContainer>
+      <ActNow />
       <ChecklistPageStyles>
         <SectionHeader id={sections[0].id}>
           <Heading level={3}>
@@ -234,7 +216,7 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="Post-merge, an Ethereum node will be comprised of both an execution client, and a consensus client." />
           </Text>
         </SectionHeader>
-        <section className={sections[0].pending ? 'pending' : ''}>
+        <section>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract." />
           </Text>
@@ -248,21 +230,27 @@ export const MergeReadiness = () => {
             <Text className="mt20">
               <FormattedMessage defaultMessage="If you have not yet done so, be sure your node is running both an EL client, as well as a CL client, to prevent downtime at time of the Merge." />
             </Text>
+            <Text className="mt20">
+              <FormattedMessage defaultMessage="Stakers running their own execution layer is necessary for the decentralization of the network." />
+            </Text>
           </Alert>
           <Text className="mb10">
-            <FormattedMessage defaultMessage="Stakers running their own execution layer is necessary for the decentralization of the network." />
+            <FormattedMessage defaultMessage="All execution and consensus clients have recently released updates including this TTD to be merge-ready. Be sure to update your clients." />
           </Text>
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I am running my own execution client." />
+                <FormattedMessage defaultMessage="I am running my own execution client, and have updated to a merge-ready release." />
               </Text>
             }
           />
+          {/* <Text className="mb10">
+            <FormattedMessage defaultMessage="Bellatrix hard fork is to prepare the consensus layer for the merge" />
+          </Text> */}
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I am running my own consensus client." />
+                <FormattedMessage defaultMessage="I am running my own consensus client, and have updated to a merge-ready release" />
               </Text>
             }
           />
@@ -277,8 +265,7 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="The execution and consensus layers work together tightly, and require authentication to stay safe. " />
           </Text>
         </SectionHeader>
-        <TimingWarning />
-        <section className={sections[1].pending ? 'pending' : ''}>
+        <section>
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="Communication between the execution layer and consensus layer will occur using the {engineApi}. This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
@@ -412,7 +399,6 @@ export const MergeReadiness = () => {
                 />
               </Text>
             }
-            disabled={sections[1].pending}
           />
         </section>
         <SectionHeader id={sections[2].id}>
@@ -425,8 +411,7 @@ export const MergeReadiness = () => {
             <FormattedMessage defaultMessage="Fees rewards are coming to validators, don't miss out!" />
           </Text>
         </SectionHeader>
-        <TimingWarning />
-        <section className={sections[2].pending ? 'pending' : ''}>
+        <section>
           <Text className="mt20">
             <FormattedMessage defaultMessage="Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees." />
           </Text>
@@ -496,7 +481,6 @@ export const MergeReadiness = () => {
                 <FormattedMessage defaultMessage="I understand that I will earn the unburnt transaction fees (tips/priority fees) when I propose a block, and this is accounted for on the execution layer, not my validator balance." />
               </Text>
             }
-            disabled={sections[2].pending}
           />
           <CheckBox
             label={
@@ -504,7 +488,6 @@ export const MergeReadiness = () => {
                 <FormattedMessage defaultMessage="I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited." />
               </Text>
             }
-            disabled={sections[2].pending}
           />
         </section>
         <SectionHeader id={sections[3].id}>
@@ -533,7 +516,7 @@ export const MergeReadiness = () => {
           </Heading>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
+              defaultMessage="While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. Goerli was recently the final public Ethereum testnet to successfully undergo The Merge, and will persist as a longstanding PoS testnet. Setting up a Goerli node can be a great way to learn more about operating a post-merge Ethereum node, and gain confidence in your setup."
               values={{
                 testingTheMerge: (
                   <code>
@@ -545,6 +528,146 @@ export const MergeReadiness = () => {
           </Text>
           <Text className="mt20">
             <FormattedMessage
+              defaultMessage="{networkBold} is a long-standing public testnet that began as a proof-of-authority chain, and has now undergone its transition to proof-of-stake via a successful Merge in August 2022. {network} is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try interacting with some contracts or operating a validating node."
+              values={{
+                networkBold: <strong>Goerli</strong>,
+                network: 'Goerli',
+              }}
+            />
+          </Text>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <Link primary inline to="https://goerli.net/">
+                  <FormattedMessage
+                    defaultMessage="{network} homepage"
+                    values={{ network: 'Goerli' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage defaultMessage="Everything you need to get started with the network, including faucets" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://notes.ethereum.org/@launchpad/goerli"
+                >
+                  <FormattedMessage
+                    defaultMessage="How to run a node on {network}"
+                    values={{ network: 'Goerli' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage defaultMessage="Thorough guide to setting up a testnet node" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link primary inline to="https://goerli.launchpad.ethereum.org">
+                  <FormattedMessage
+                    defaultMessage="{network} Staking Launchpad"
+                    values={{ network: 'Goerli' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage
+                  defaultMessage="{network} version of this page"
+                  values={{ network: 'Goerli' }}
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://blog.ethereum.org/2022/07/27/goerli-prater-merge-announcement/"
+                >
+                  <FormattedMessage
+                    defaultMessage="{site} {network} announcement"
+                    values={{
+                      site: <FormattedMessage defaultMessage="EF Blog" />,
+                      network: 'Goerli',
+                    }}
+                  />
+                </Link>
+              </Text>
+            </li>
+          </ul>
+          {/* !!!!!!! */}
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. {network} is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try sending some ETH, interacting with some contracts, or deploying your own."
+              values={{ networkBold: <strong>Kiln</strong>, network: 'Kiln' }}
+            />
+          </Text>
+          <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <Link primary inline to="https://kiln.themerge.dev/">
+                  <FormattedMessage
+                    defaultMessage="{network} homepage"
+                    values={{ network: 'Kiln' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage defaultMessage="Everything you need to get started with the network, including a faucet" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://notes.ethereum.org/@launchpad/kiln"
+                >
+                  <FormattedMessage
+                    defaultMessage="How to run a node on {network}"
+                    values={{ network: 'Kiln' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage defaultMessage="Thorough guide For those who want more control and less hand-holding" />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link primary inline to="https://kiln.launchpad.ethereum.org">
+                  <FormattedMessage
+                    defaultMessage="{network} Staking Launchpad"
+                    values={{ network: 'Kiln' }}
+                  />
+                </Link>
+                {' - '}
+                <FormattedMessage
+                  defaultMessage="{network} version of this page"
+                  values={{ network: 'Kiln' }}
+                />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <Link
+                  primary
+                  inline
+                  to="https://blog.ethereum.org/2022/03/14/kiln-merge-testnet/"
+                >
+                  <FormattedMessage
+                    defaultMessage="{site} {network} announcement"
+                    values={{
+                      site: <FormattedMessage defaultMessage="EF Blog" />,
+                      network: 'Kiln',
+                    }}
+                  />
+                </Link>
+              </Text>
+            </li>
+          </ul>
+          <Text className="mt20">
+            <FormattedMessage
               defaultMessage="{networkBold} was the first longstanding public testnet to undergo The Merge, which occurred on June 8, 2022. Historically a proof-of-work testnet, {network} has now transitioned to proof-of-stake by merging its historical execution layer with a new beacon chain."
               values={{
                 networkBold: <strong>Ropsten</strong>,
@@ -554,7 +677,7 @@ export const MergeReadiness = () => {
           </Text>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="{network} is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
+              defaultMessage="{network} is open for anyone to interact with, but is being deprecated moving forward and will not undergo any further network updates."
               values={{ network: 'Ropsten' }}
             />
           </Text>
@@ -637,96 +760,6 @@ export const MergeReadiness = () => {
                     values={{
                       site: <FormattedMessage defaultMessage="EF Blog" />,
                       network: 'Ropsten',
-                    }}
-                  />
-                </Link>
-              </Text>
-            </li>
-          </ul>
-          <Text className="mt20">
-            <FormattedMessage
-              defaultMessage="{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some ETH, interacting with some contracts, or deploying your own."
-              values={{ networkBold: <strong>Kiln</strong> }}
-            />
-          </Text>
-          <ul className="sub-checklist-item">
-            <li className="py5">
-              <Text>
-                <Link primary inline to="https://kiln.themerge.dev/">
-                  <FormattedMessage
-                    defaultMessage="{network} homepage"
-                    values={{ network: 'Kiln' }}
-                  />
-                </Link>
-                {' - '}
-                <FormattedMessage defaultMessage="Everything you need to get started with the network, including a faucet" />
-              </Text>
-            </li>
-            <li className="py5">
-              <Text className="inline">
-                <Link
-                  primary
-                  inline
-                  to="https://github.com/remyroy/ethstaker/blob/main/merge-devnet.md"
-                >
-                  <FormattedMessage
-                    defaultMessage="{community} {network} guide"
-                    values={{
-                      community: 'EthStaker',
-                      network: 'Kiln',
-                    }}
-                  />
-                </Link>
-                {' - '}
-                <FormattedMessage
-                  defaultMessage="Step-by-step guide for how to spin up a {network} node and validator"
-                  values={{ network: 'Kiln' }}
-                />
-              </Text>
-            </li>
-            <li className="py5">
-              <Text>
-                <Link
-                  primary
-                  inline
-                  to="https://notes.ethereum.org/@launchpad/kiln"
-                >
-                  <FormattedMessage
-                    defaultMessage="How to run a node on {network}"
-                    values={{ network: 'Kiln' }}
-                  />
-                </Link>
-                {' - '}
-                <FormattedMessage defaultMessage="For those who want more control and less hand-holding" />
-              </Text>
-            </li>
-            <li className="py5">
-              <Text>
-                <Link primary inline to="https://kiln.launchpad.ethereum.org">
-                  <FormattedMessage
-                    defaultMessage="{network} Staking Launchpad"
-                    values={{ network: 'Kiln' }}
-                  />
-                </Link>
-                {' - '}
-                <FormattedMessage
-                  defaultMessage="{network} version of this page"
-                  values={{ network: 'Kiln' }}
-                />
-              </Text>
-            </li>
-            <li className="py5">
-              <Text>
-                <Link
-                  primary
-                  inline
-                  to="https://blog.ethereum.org/2022/03/14/kiln-merge-testnet/"
-                >
-                  <FormattedMessage
-                    defaultMessage="{site} {network} announcement"
-                    values={{
-                      site: <FormattedMessage defaultMessage="EF Blog" />,
-                      network: 'Kiln',
                     }}
                   />
                 </Link>

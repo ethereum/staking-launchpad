@@ -10,7 +10,7 @@ import { CONTRACT_ADDRESS, PRICE_PER_VALIDATOR } from '../../utils/envVars';
 import { DepositKeyInterface } from '../../store/reducers';
 
 const pricePerValidator = new BigNumber(PRICE_PER_VALIDATOR);
-const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
+const TX_VALUE = pricePerValidator.multipliedBy(1e18).toFixed();
 
 const isUserRejectionError = (error: any) => {
   if (error.code === 4001) return true; // Metamask reject

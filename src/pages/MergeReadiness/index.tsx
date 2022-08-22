@@ -149,7 +149,7 @@ export const MergeReadiness = () => {
       <Alert variant="error" className="mt40">
         <Text>
           <FormattedMessage
-            defaultMessage="{attention} Mainnet total terminal difficulty (TTD) has been set to 58750000000000000000000. Ethereum is estimated to reach this TTD on the 15h of September, plus-or-minus a few days (Follow {link} for latest estimate). Act now to update your nodes with the latest client releases, and use the steps below to make sure you're prepared."
+            defaultMessage="{attention} Mainnet total terminal difficulty (TTD) has been set to 5.875e22. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
             values={{
               attention: (
                 <strong>

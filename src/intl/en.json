@@ -105,6 +105,10 @@
   "0i4cCJ": {
     "message": "Confirm deposits ({depositKeys})"
   },
+  "0i90U5": {
+    "description": "Total terminal difficulty written in scientific notation",
+    "message": "5.875e22"
+  },
   "0lHkrT": {
     "message": "Second, install the dependency packages:"
   },
@@ -624,6 +628,9 @@
   },
   "CeeJfw": {
     "message": "I've set up a firewall."
+  },
+  "CmbwEn": {
+    "message": "{attention} Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
   },
   "D0Rigq": {
     "message": "NO"
@@ -1490,9 +1497,6 @@
   "WdDGn6": {
     "message": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
   },
-  "WeQbEO": {
-    "message": "{attention} Mainnet total terminal difficulty (TTD) has been set to 5.875e22. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
-  },
   "Wj99ga": {
     "message": "Go Ethereum - The Merge"
   },
@@ -2193,6 +2197,10 @@
   },
   "mArJcj": {
     "message": "Hard drive"
+  },
+  "mTW7PE": {
+    "description": "Total terminal difficulty written out fully, without commas, so it can be copied easily. ",
+    "message": "58750000000000000000000"
   },
   "mUZnem": {
     "message": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."

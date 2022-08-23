@@ -11,6 +11,9 @@ import { Text } from '../../components/Text';
 import { Code } from '../../components/Code';
 import { Alert } from '../../components/Alert';
 
+import { screenSizes } from '../../styles/styledComponentsTheme';
+import useMobileCheck from '../../hooks/useMobileCheck';
+
 const ChecklistPageStyles = styled.div`
   section {
     background-color: white;
@@ -118,6 +121,7 @@ const SectionHeader = styled.div`
 
 export const MergeReadiness = () => {
   const { formatMessage } = useIntl();
+  const isMobile = useMobileCheck(screenSizes.small);
   const sections = [
     {
       heading: <FormattedMessage defaultMessage="Task 1" />,
@@ -149,12 +153,23 @@ export const MergeReadiness = () => {
       <Alert variant="error" className="mt40">
         <Text>
           <FormattedMessage
-            defaultMessage="{attention} Mainnet total terminal difficulty (TTD) has been set to 5.875e22. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
+            defaultMessage="{attention} Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
             values={{
               attention: (
                 <strong>
                   <FormattedMessage defaultMessage="Attention:" />
                 </strong>
+              ),
+              difficulty: isMobile ? (
+                <FormattedMessage
+                  defaultMessage="5.875e22"
+                  description="Total terminal difficulty written in scientific notation"
+                />
+              ) : (
+                <FormattedMessage
+                  defaultMessage="58750000000000000000000"
+                  description="Total terminal difficulty written out fully, without commas, so it can be copied easily. "
+                />
               ),
               link: (
                 <Link to="https://bordel.wtf" inline primary>

@@ -32,9 +32,6 @@
   "/E/Zm8": {
     "message": "Configure the Java Web"
   },
-  "/FpD8O": {
-    "message": "Do this after TTD client releases"
-  },
   "/QPc9s": {
     "message": "You can signal your intent to stop validating by signing a voluntary exit message with your validator."
   },
@@ -107,6 +104,10 @@
   },
   "0i4cCJ": {
     "message": "Confirm deposits ({depositKeys})"
+  },
+  "0i90U5": {
+    "description": "Total terminal difficulty written in scientific notation",
+    "message": "5.875e22"
   },
   "0lHkrT": {
     "message": "Second, install the dependency packages:"
@@ -291,6 +292,9 @@
   "4l6vz1": {
     "message": "Copy"
   },
+  "4yPejZ": {
+    "message": "All execution and consensus clients have recently released updates including this TTD to be merge-ready. Be sure to update your clients."
+  },
   "54J/qs": {
     "message": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
   },
@@ -416,9 +420,6 @@
   "8JtiQS": {
     "message": "Does the contract address listed on the website match?"
   },
-  "8L6ufI": {
-    "message": "Step-by-step guide for how to spin up a {network} node and validator"
-  },
   "8Rj/6A": {
     "message": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
   },
@@ -480,9 +481,6 @@
   "9uOFF3": {
     "message": "Overview"
   },
-  "9vLu6E": {
-    "message": "{note} This step should be performed on {testnetsOnly} until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
-  },
   "9vwGlT": {
     "message": "I've synced my beacon node on {consensusLayerName}."
   },
@@ -507,9 +505,6 @@
   },
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
-  },
-  "ALEY4e": {
-    "message": "{community} {network} guide"
   },
   "ARyG2Z": {
     "message": "When withdrawals?"
@@ -634,8 +629,14 @@
   "CeeJfw": {
     "message": "I've set up a firewall."
   },
+  "CmbwEn": {
+    "message": "{attention} Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
+  },
   "D0Rigq": {
     "message": "NO"
+  },
+  "D1oCWM": {
+    "message": "{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. {network} is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try sending some ETH, interacting with some contracts, or deploying your own."
   },
   "D33f/7": {
     "description": "APR refers to Annual Percentage Rate",
@@ -759,9 +760,6 @@
   "FqgDIV": {
     "message": "Terms of service"
   },
-  "FqztZR": {
-    "message": "Note:"
-  },
   "FzkbsB": {
     "message": "validators"
   },
@@ -847,6 +845,9 @@
   "HqRNN8": {
     "message": "Support"
   },
+  "Hy1z78": {
+    "message": "Thorough guide For those who want more control and less hand-holding"
+  },
   "I0BXSi": {
     "message": "Configure Geth"
   },
@@ -902,6 +903,9 @@
   },
   "J7T0SR": {
     "message": "Nimbus installation documentation"
+  },
+  "JA1956": {
+    "message": "Attention:"
   },
   "JAiV0o": {
     "message": "In other words, to keep you honest, your actions need to have financial consequences."
@@ -1150,6 +1154,9 @@
   "OdYQYh": {
     "message": "More on ConsenSys"
   },
+  "Odx4qP": {
+    "message": "Everything you need to get started with the network, including faucets"
+  },
   "OmAmmi": {
     "message": "More on the Merge"
   },
@@ -1214,9 +1221,6 @@
   },
   "Q8P0rZ": {
     "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
-  },
-  "Q8fnvz": {
-    "message": "testnets only (e.g. {kiln})"
   },
   "QKFeMq": {
     "message": "Internet"
@@ -1284,9 +1288,6 @@
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
-  },
-  "Riq4Yh": {
-    "message": "{network} is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
   },
   "RkSC5Q": {
     "message": "Reminder, the Merge upgrade will {not} implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
@@ -1535,6 +1536,9 @@
   "XRxD8r": {
     "description": "Link to documentation about execution client Besu, specifically for Goerli testnet",
     "message": "Besu on Goerli documentation"
+  },
+  "XSlPoq": {
+    "message": "Thorough guide to setting up a testnet node"
   },
   "XVehvN": {
     "description": "{filesPattern} refers to a computer command which will find {keyFile} and\n                {passwordFile} - both files within a computer.",
@@ -1906,6 +1910,9 @@
   "gN9D/h": {
     "message": "Use {goerli} to sync the Goerli testnet."
   },
+  "gOJmxl": {
+    "message": "I am running my own consensus client, and have updated to a merge-ready release"
+  },
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -1952,6 +1959,9 @@
   "hICY9k": {
     "message": "I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited."
   },
+  "hKPjQW": {
+    "message": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. Goerli was recently the final public Ethereum testnet to successfully undergo The Merge, and will persist as a longstanding PoS testnet. Setting up a Goerli node can be a great way to learn more about operating a post-merge Ethereum node, and gain confidence in your setup."
+  },
   "hPCn9f": {
     "message": "--JsonRpc.Enabled documentation"
   },
@@ -1964,6 +1974,9 @@
   },
   "hfXlpq": {
     "message": "Hungarian"
+  },
+  "hgU42i": {
+    "message": "{network} is open for anyone to interact with, but is being deprecated moving forward and will not undergo any further network updates."
   },
   "hjrLbR": {
     "message": "For this, we need active participants - known as validators - to propose, verify, and vouch for the validity of blocks. In exchange, honest validators receive financial rewards."
@@ -2185,6 +2198,10 @@
   "mArJcj": {
     "message": "Hard drive"
   },
+  "mTW7PE": {
+    "description": "Total terminal difficulty written out fully, without commas, so it can be copied easily. ",
+    "message": "58750000000000000000000"
+  },
   "mUZnem": {
     "message": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
   },
@@ -2253,6 +2270,9 @@
   "o9QvTP": {
     "message": "Before you start"
   },
+  "oAuBZQ": {
+    "message": "I am running my own execution client, and have updated to a merge-ready release."
+  },
   "oF4os+": {
     "message": "Currently Prysm is used by >33% of the network."
   },
@@ -2273,9 +2293,6 @@
   },
   "ohspQX": {
     "message": "Responsibilities"
-  },
-  "olByWa": {
-    "message": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in {testingTheMerge}. This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
   },
   "omJNJw": {
     "message": "Warning!"
@@ -2333,14 +2350,8 @@
   "ptWiT7": {
     "message": "I've simulated how to manually stop and restart my Beacon Node (BN) and Validator Client (VC) gracefully."
   },
-  "pxfiWL": {
-    "message": "{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some ETH, interacting with some contracts, or deploying your own."
-  },
   "pyWt01": {
     "message": "Deposit summary"
-  },
-  "q2PJEK": {
-    "message": "I am running my own consensus client."
   },
   "q2XW/k": {
     "message": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
@@ -2392,6 +2403,9 @@
   },
   "rD3ot9": {
     "message": "Phishing guide"
+  },
+  "rEokPY": {
+    "message": "bordel.wtf"
   },
   "rMjMmc": {
     "description": "{http} shows '--JsonRpc.Enabled true' terminal command",
@@ -2620,9 +2634,6 @@
   "wtTeex": {
     "message": "Are there spelling mistakes?"
   },
-  "wuhO1L": {
-    "message": "I am running my own execution client."
-  },
   "x+fF+M": {
     "message": "Testnet simulations"
   },
@@ -2743,5 +2754,8 @@
   },
   "zqOrZZ": {
     "message": "Look over the Merge Readiness Checklist"
+  },
+  "zrK3hS": {
+    "message": "{networkBold} is a long-standing public testnet that began as a proof-of-authority chain, and has now undergone its transition to proof-of-stake via a successful Merge in August 2022. {network} is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try interacting with some contracts or operating a validating node."
   }
 }

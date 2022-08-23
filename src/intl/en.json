@@ -222,6 +222,9 @@
   "36j2ls": {
     "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
   },
+  "38Fedn": {
+    "message": "More on ChainSafe"
+  },
   "38VH2G": {
     "message": "Install deposit-cli tool"
   },
@@ -350,6 +353,9 @@
   "6VswA4": {
     "message": "Running Nethermind Post Merge {jwtSecretFile}"
   },
+  "6eA+mW": {
+    "message": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
+  },
   "6iVtAr": {
     "message": "#TestingTheMerge"
   },
@@ -379,6 +385,9 @@
   },
   "7DFXQj": {
     "message": "Switch to {oppositeNetwork} launchpad"
+  },
+  "7FD/J/": {
+    "message": "Lodestar key management documentation"
   },
   "7Iz3JI": {
     "message": "Consensus Client"
@@ -410,6 +419,9 @@
   },
   "82vl9l": {
     "message": "We can't detect MetaMask. Switch browsers or install MetaMask."
+  },
+  "8BXroN": {
+    "message": "Lodestar documentation"
   },
   "8FmuYF": {
     "message": "Install pip3"
@@ -769,6 +781,9 @@
   "G5IMoZ": {
     "message": "Download master branch source code"
   },
+  "G6kg26": {
+    "message": "Eth2 Clients: {clientName}"
+  },
   "G8tAKU": {
     "message": "Choose client"
   },
@@ -1023,6 +1038,9 @@
   },
   "LlClXS": {
     "message": "Thank you for supporting the Ethereum network!"
+  },
+  "LpnfTF": {
+    "message": "Lodestar installation documentation"
   },
   "Ltd/hJ": {
     "description": "{directoriesPattern} refers to a computer command which will find {keyDirectory} and\n                {passwordDirectory} - both folders within a computer.",
@@ -2417,6 +2435,9 @@
   "rULiIc": {
     "message": "Complete the staker checklist"
   },
+  "rW+ivM": {
+    "message": "More on Lodestar"
+  },
   "raRw6Z": {
     "message": "Launchpad home"
   },
@@ -2491,6 +2512,9 @@
   },
   "tkFTZw": {
     "message": "Balance after topping up"
+  },
+  "tlVvjH": {
+    "message": "Become a validator with Lodestar"
   },
   "tp1IPS": {
     "message": "Configure the fee recipient"
@@ -2732,6 +2756,9 @@
   "z6K3D6": {
     "description": "{prometheus} is 'Prometheus' service, with link to its homepage (do not translate name)",
     "message": "I've set up my {prometheus} service."
+  },
+  "z8zpxp": {
+    "message": "Lodestar is an open-sourced TypeScript implementation of the Ethereum Consensus (formerly known as eth2) specification maintained by ChainSafe Systems. ChainSafe's goal is to develop, improve and diversify the Ethereum proof of stake ecosystem with their beacon chain and validator client with a focus on light client implementations."
   },
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"

@@ -7,10 +7,17 @@ const StyledAlert = styled(Alert)`
   text-align: center;
 `;
 
+const AllCaps = styled.span`
+  text-transform: uppercase;
+`;
+
 export const TestnetNotification = (): JSX.Element => {
   return (
-    <StyledAlert variant="warning" round="none" pad="small">
-      <FormattedMessage defaultMessage="Warning: This is a staking launchpad for TESTNET." />
+    <StyledAlert variant="error" round="none" pad="small">
+      <FormattedMessage
+        defaultMessage="Warning: This is a staking launchpad for the {testnet}."
+        values={{ testnet: <AllCaps><FormattedMessage defaultMessage="testnet" /></AllCaps> }}
+      />
     </StyledAlert>
   );
 };

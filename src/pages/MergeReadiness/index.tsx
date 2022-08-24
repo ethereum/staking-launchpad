@@ -179,6 +179,13 @@ export const MergeReadiness = () => {
             }}
           />
         </Text>
+        <Link
+          primary
+          to="https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement/"
+          className="mt20"
+        >
+          <FormattedMessage defaultMessage="View EF blog mainnet merge announcement" />
+        </Link>
       </Alert>
     </SectionHeader>
   );

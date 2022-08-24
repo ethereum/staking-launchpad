@@ -65,12 +65,6 @@
       "value": "Configure the Java Web"
     }
   ],
-  "/FpD8O": [
-    {
-      "type": 0,
-      "value": "Do this after TTD client releases"
-    }
-  ],
   "/QPc9s": [
     {
       "type": 0,
@@ -281,6 +275,12 @@
     {
       "type": 0,
       "value": ")"
+    }
+  ],
+  "0i90U5": [
+    {
+      "type": 0,
+      "value": "5.875e22"
     }
   ],
   "0lHkrT": [
@@ -779,6 +779,12 @@
       "value": "Copy"
     }
   ],
+  "4yPejZ": [
+    {
+      "type": 0,
+      "value": "All execution and consensus clients have recently released updates including this TTD to be merge-ready. Be sure to update your clients."
+    }
+  ],
   "54J/qs": [
     {
       "type": 0,
@@ -1113,20 +1119,6 @@
       "value": "Does the contract address listed on the website match?"
     }
   ],
-  "8L6ufI": [
-    {
-      "type": 0,
-      "value": "Step-by-step guide for how to spin up a "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " node and validator"
-    }
-  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -1275,24 +1267,6 @@
       "value": "Overview"
     }
   ],
-  "9vLu6E": [
-    {
-      "type": 1,
-      "value": "note"
-    },
-    {
-      "type": 0,
-      "value": " This step should be performed on "
-    },
-    {
-      "type": 1,
-      "value": "testnetsOnly"
-    },
-    {
-      "type": 0,
-      "value": " until the Mainnet TTD (terminal total difficulty) has been announced and clients have released an update. Info is presented for preparation in the meantime."
-    }
-  ],
   "9vwGlT": [
     {
       "type": 0,
@@ -1383,24 +1357,6 @@
     {
       "type": 0,
       "value": " to be sent at one time to be accepted."
-    }
-  ],
-  "ALEY4e": [
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " guide"
     }
   ],
   "ARyG2Z": [
@@ -1707,10 +1663,54 @@
       "value": "I've set up a firewall."
     }
   ],
+  "CmbwEn": [
+    {
+      "type": 1,
+      "value": "attention"
+    },
+    {
+      "type": 0,
+      "value": " Mainnet total terminal difficulty (TTD) has been set to "
+    },
+    {
+      "type": 1,
+      "value": "difficulty"
+    },
+    {
+      "type": 0,
+      "value": ". Ethereum is estimated to reach this TTD within a day of the 15th of September (follow "
+    },
+    {
+      "type": 1,
+      "value": "link"
+    },
+    {
+      "type": 0,
+      "value": " for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
+    }
+  ],
   "D0Rigq": [
     {
       "type": 0,
       "value": "NO"
+    }
+  ],
+  "D1oCWM": [
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try sending some ETH, interacting with some contracts, or deploying your own."
     }
   ],
   "D33f/7": [
@@ -2011,12 +2011,6 @@
       "value": "Terms of service"
     }
   ],
-  "FqztZR": [
-    {
-      "type": 0,
-      "value": "Note:"
-    }
-  ],
   "FzkbsB": [
     {
       "type": 0,
@@ -2213,6 +2207,12 @@
       "value": "Support"
     }
   ],
+  "Hy1z78": [
+    {
+      "type": 0,
+      "value": "Thorough guide For those who want more control and less hand-holding"
+    }
+  ],
   "I0BXSi": [
     {
       "type": 0,
@@ -2363,6 +2363,12 @@
     {
       "type": 0,
       "value": "Nimbus installation documentation"
+    }
+  ],
+  "JA1956": [
+    {
+      "type": 0,
+      "value": "Attention:"
     }
   ],
   "JAiV0o": [
@@ -2985,6 +2991,12 @@
       "value": "More on ConsenSys"
     }
   ],
+  "Odx4qP": [
+    {
+      "type": 0,
+      "value": "Everything you need to get started with the network, including faucets"
+    }
+  ],
   "OmAmmi": [
     {
       "type": 0,
@@ -3175,20 +3187,6 @@
       "value": " to max out your effective balance."
     }
   ],
-  "Q8fnvz": [
-    {
-      "type": 0,
-      "value": "testnets only (e.g. "
-    },
-    {
-      "type": 1,
-      "value": "kiln"
-    },
-    {
-      "type": 0,
-      "value": ")"
-    }
-  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -3367,16 +3365,6 @@
     {
       "type": 0,
       "value": "How many validators would you like to run?"
-    }
-  ],
-  "Riq4Yh": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " is open for anyone to interact with. Try sending some transactions, running a validator, or see if you can get slashed!"
     }
   ],
   "RkSC5Q": [
@@ -3863,6 +3851,20 @@
       "value": "Teku is Apache 2 licensed and written in Java, a language notable for its maturity and ubiquity."
     }
   ],
+  "W2Eues": [
+    {
+      "type": 0,
+      "value": "Warning: This is a staking launchpad for the "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "W3t7Ob": [
     {
       "type": 0,
@@ -4003,6 +4005,12 @@
     {
       "type": 0,
       "value": "Besu on Goerli documentation"
+    }
+  ],
+  "XSlPoq": [
+    {
+      "type": 0,
+      "value": "Thorough guide to setting up a testnet node"
     }
   ],
   "XVehvN": [
@@ -4971,6 +4979,12 @@
       "value": " to sync the Goerli testnet."
     }
   ],
+  "gOJmxl": [
+    {
+      "type": 0,
+      "value": "I am running my own consensus client, and have updated to a merge-ready release"
+    }
+  ],
   "gQkd2y": [
     {
       "type": 0,
@@ -5101,6 +5115,20 @@
       "value": "I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited."
     }
   ],
+  "hKPjQW": [
+    {
+      "type": 0,
+      "value": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": ". Goerli was recently the final public Ethereum testnet to successfully undergo The Merge, and will persist as a longstanding PoS testnet. Setting up a Goerli node can be a great way to learn more about operating a post-merge Ethereum node, and gain confidence in your setup."
+    }
+  ],
   "hPCn9f": [
     {
       "type": 0,
@@ -5127,6 +5155,16 @@
     {
       "type": 0,
       "value": "Hungarian"
+    }
+  ],
+  "hgU42i": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " is open for anyone to interact with, but is being deprecated moving forward and will not undergo any further network updates."
     }
   ],
   "hjrLbR": [
@@ -5695,6 +5733,12 @@
       "value": "Hard drive"
     }
   ],
+  "mTW7PE": [
+    {
+      "type": 0,
+      "value": "58750000000000000000000"
+    }
+  ],
   "mUZnem": [
     {
       "type": 0,
@@ -5879,6 +5923,12 @@
       "value": "Before you start"
     }
   ],
+  "oAuBZQ": [
+    {
+      "type": 0,
+      "value": "I am running my own execution client, and have updated to a merge-ready release."
+    }
+  ],
   "oF4os+": [
     {
       "type": 0,
@@ -5935,20 +5985,6 @@
     {
       "type": 0,
       "value": "Responsibilities"
-    }
-  ],
-  "olByWa": [
-    {
-      "type": 0,
-      "value": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": ". This is a great way to learn more about the Merge, practice going through it before Mainnet, and gain confidence in your setup."
     }
   ],
   "omJNJw": [
@@ -6019,6 +6055,12 @@
       "value": "Copied"
     }
   ],
+  "p8CuT9": [
+    {
+      "type": 0,
+      "value": "View EF blog mainnet merge announcement"
+    }
+  ],
   "pA+UVF": [
     {
       "type": 0,
@@ -6079,26 +6121,10 @@
       "value": "I've simulated how to manually stop and restart my Beacon Node (BN) and Validator Client (VC) gracefully."
     }
   ],
-  "pxfiWL": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. Kiln is open for anyone to interact with. Try sending some ETH, interacting with some contracts, or deploying your own."
-    }
-  ],
   "pyWt01": [
     {
       "type": 0,
       "value": "Deposit summary"
-    }
-  ],
-  "q2PJEK": [
-    {
-      "type": 0,
-      "value": "I am running my own consensus client."
     }
   ],
   "q2XW/k": [
@@ -6217,6 +6243,12 @@
     {
       "type": 0,
       "value": "Phishing guide"
+    }
+  ],
+  "rEokPY": [
+    {
+      "type": 0,
+      "value": "bordel.wtf"
     }
   ],
   "rMjMmc": [
@@ -6799,12 +6831,6 @@
       "value": "Are there spelling mistakes?"
     }
   ],
-  "wuhO1L": [
-    {
-      "type": 0,
-      "value": "I am running my own execution client."
-    }
-  ],
   "x+fF+M": [
     {
       "type": 0,
@@ -6897,6 +6923,12 @@
     {
       "type": 0,
       "value": ", otherwise the deposit will be invalid."
+    }
+  ],
+  "xZZMZ5": [
+    {
+      "type": 0,
+      "value": "testnet"
     }
   ],
   "xbet2w": [
@@ -7109,6 +7141,24 @@
     {
       "type": 0,
       "value": "Look over the Merge Readiness Checklist"
+    }
+  ],
+  "zrK3hS": [
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " is a long-standing public testnet that began as a proof-of-authority chain, and has now undergone its transition to proof-of-stake via a successful Merge in August 2022. "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try interacting with some contracts or operating a validating node."
     }
   ]
 }

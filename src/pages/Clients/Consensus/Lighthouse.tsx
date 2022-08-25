@@ -44,7 +44,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
       />
     </Text>
     <Link
-      to="https://lighthouse.sigmaprime.io/update-00.html"
+      to="https://lighthouse-blog.sigmaprime.io/update-00.html"
       primary
       className="mt10"
     >

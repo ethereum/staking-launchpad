@@ -120,7 +120,7 @@ const SectionHeader = styled.div`
 `;
 
 export const MergeReadiness = () => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const isMobile = useMobileCheck(screenSizes.small);
   const sections = [
     {
@@ -148,47 +148,90 @@ export const MergeReadiness = () => {
     },
   ];
 
-  const ActNow = () => (
-    <SectionHeader className="m0 pt0">
-      <Alert variant="error" className="mt40">
-        <Text>
-          <FormattedMessage
-            defaultMessage="{attention} Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
-            values={{
-              attention: (
-                <strong>
-                  <FormattedMessage defaultMessage="Attention:" />
-                </strong>
-              ),
-              difficulty: isMobile ? (
-                <FormattedMessage
-                  defaultMessage="5.875e22"
-                  description="Total terminal difficulty written in scientific notation"
-                />
-              ) : (
-                <FormattedMessage
-                  defaultMessage="58750000000000000000000"
-                  description="Total terminal difficulty written out fully, without commas, so it can be copied easily. "
-                />
-              ),
-              link: (
-                <Link to="https://bordel.wtf" inline primary>
-                  <FormattedMessage defaultMessage="bordel.wtf" />
-                </Link>
-              ),
-            }}
-          />
-        </Text>
-        <Link
-          primary
-          to="https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement/"
-          className="mt20"
-        >
-          <FormattedMessage defaultMessage="View EF blog mainnet merge announcement" />
-        </Link>
-      </Alert>
-    </SectionHeader>
-  );
+  interface DateTimeFormatOptions {
+    formatMatcher?: 'basic' | 'best fit' | 'best fit' | undefined;
+    dateStyle?: 'full' | 'long' | 'medium' | 'short' | undefined;
+    timeStyle?: 'full' | 'long' | 'medium' | 'short' | undefined;
+  }
+  const ActNow = () => {
+    const bellatrixDate = new Date('2022-09-06T11:34:47.000Z');
+    const bellatrixDateTimeOptions: DateTimeFormatOptions = {
+      dateStyle: 'medium',
+      timeStyle: 'medium',
+    };
+    const bellatrixDateTime = new Intl.DateTimeFormat(
+      locale,
+      bellatrixDateTimeOptions
+    ).format(bellatrixDate);
+    const bellatrixDateOnlyOptions: DateTimeFormatOptions = {
+      dateStyle: 'medium',
+    };
+    const bellatrixDateOnly = new Intl.DateTimeFormat(
+      locale,
+      bellatrixDateOnlyOptions
+    ).format(bellatrixDate);
+    const ttdDate = new Date('2022-09-15T04:00:00.000Z');
+    const ttdOptions: DateTimeFormatOptions = { dateStyle: 'medium' };
+    const ttdDateOnly = new Intl.DateTimeFormat(locale, ttdOptions).format(
+      ttdDate
+    );
+    return (
+      <SectionHeader className="m0 pt0">
+        <Alert variant="error" className="mt40">
+          <Text className="mb20">
+            <strong>
+              <FormattedMessage defaultMessage="Attention:" />
+            </strong>
+          </Text>
+          <Text className="mb20">
+            <FormattedMessage
+              defaultMessage="The Bellatrix upgrade to the Beacon Chain is scheduled for epoch 144896, set to occur at {bellatrixDateTime}."
+              values={{ bellatrixDateTime }}
+            />
+          </Text>
+          <Text className="mb20">
+            <FormattedMessage
+              defaultMessage="Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of {ttdDateTime} (follow {link} for latest estimate)."
+              values={{
+                difficulty: isMobile ? (
+                  <FormattedMessage
+                    defaultMessage="5.875e22"
+                    description="Total terminal difficulty written in scientific notation"
+                  />
+                ) : (
+                  <FormattedMessage
+                    defaultMessage="58750000000000000000000"
+                    description="Total terminal difficulty written out fully, without commas, so it can be copied easily. "
+                  />
+                ),
+                ttdDateTime: ttdDateOnly,
+                link: (
+                  <Link to="https://bordel.wtf" inline primary>
+                    <FormattedMessage defaultMessage="bordel.wtf" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Text className="mb20">
+            <FormattedMessage defaultMessage="Act now to update your node with the latest client releases." />{' '}
+            <strong>
+              <FormattedMessage
+                defaultMessage="Complete the steps below before {bellatrixDateOnly} to make sure you're prepared."
+                values={{ bellatrixDateOnly }}
+              />
+            </strong>
+          </Text>
+          <Link
+            primary
+            to="https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement/"
+          >
+            <FormattedMessage defaultMessage="View EF blog mainnet merge announcement" />
+          </Link>
+        </Alert>
+      </SectionHeader>
+    );
+  };
 
   return (
     <PageTemplate
@@ -266,9 +309,6 @@ export const MergeReadiness = () => {
               </Text>
             }
           />
-          {/* <Text className="mb10">
-            <FormattedMessage defaultMessage="Bellatrix hard fork is to prepare the consensus layer for the merge" />
-          </Text> */}
           <CheckBox
             label={
               <Text className="checkbox-label">
@@ -619,7 +659,6 @@ export const MergeReadiness = () => {
               </Text>
             </li>
           </ul>
-          {/* !!!!!!! */}
           <Text className="mt20">
             <FormattedMessage
               defaultMessage="{networkBold} is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. {network} is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try sending some ETH, interacting with some contracts, or deploying your own."

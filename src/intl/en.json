@@ -118,6 +118,9 @@
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
+  "0vW9Qm": {
+    "message": "Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of {ttdDateTime} (follow {link} for latest estimate)."
+  },
   "122+yR": {
     "message": "withdrawal key"
   },
@@ -629,9 +632,6 @@
   "CeeJfw": {
     "message": "I've set up a firewall."
   },
-  "CmbwEn": {
-    "message": "{attention} Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of the 15th of September (follow {link} for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
-  },
   "D0Rigq": {
     "message": "NO"
   },
@@ -713,6 +713,9 @@
   },
   "EcCME0": {
     "message": "Staking Launchpad"
+  },
+  "Erv97D": {
+    "message": "The Bellatrix upgrade to the Beacon Chain is scheduled for epoch 144896, set to occur at {bellatrixDateTime}."
   },
   "FEbVwB": {
     "message": "The key concept is the following:"
@@ -1222,6 +1225,9 @@
   "Q8P0rZ": {
     "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
   },
+  "QAhumw": {
+    "message": "Act now to update your node with the latest client releases."
+  },
   "QKFeMq": {
     "message": "Internet"
   },
@@ -1463,6 +1469,9 @@
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
+  },
+  "VkpMgu": {
+    "message": "Complete the steps below before {bellatrixDateOnly} to make sure you're prepared."
   },
   "Vp4z/b": {
     "message": "Stakers running their own execution layer is necessary for the decentralization of the network."

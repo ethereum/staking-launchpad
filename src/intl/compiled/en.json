@@ -301,6 +301,36 @@
       "value": "Earn continuous rewards for providing a public good to the community."
     }
   ],
+  "0vW9Qm": [
+    {
+      "type": 0,
+      "value": "Mainnet total terminal difficulty (TTD) has been set to "
+    },
+    {
+      "type": 1,
+      "value": "difficulty"
+    },
+    {
+      "type": 0,
+      "value": ". Ethereum is estimated to reach this TTD within a day of "
+    },
+    {
+      "type": 1,
+      "value": "ttdDateTime"
+    },
+    {
+      "type": 0,
+      "value": " (follow "
+    },
+    {
+      "type": 1,
+      "value": "link"
+    },
+    {
+      "type": 0,
+      "value": " for latest estimate)."
+    }
+  ],
   "122+yR": [
     {
       "type": 0,
@@ -1663,32 +1693,6 @@
       "value": "I've set up a firewall."
     }
   ],
-  "CmbwEn": [
-    {
-      "type": 1,
-      "value": "attention"
-    },
-    {
-      "type": 0,
-      "value": " Mainnet total terminal difficulty (TTD) has been set to "
-    },
-    {
-      "type": 1,
-      "value": "difficulty"
-    },
-    {
-      "type": 0,
-      "value": ". Ethereum is estimated to reach this TTD within a day of the 15th of September (follow "
-    },
-    {
-      "type": 1,
-      "value": "link"
-    },
-    {
-      "type": 0,
-      "value": " for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
-    }
-  ],
   "D0Rigq": [
     {
       "type": 0,
@@ -1887,6 +1891,20 @@
     {
       "type": 0,
       "value": "Staking Launchpad"
+    }
+  ],
+  "Erv97D": [
+    {
+      "type": 0,
+      "value": "The Bellatrix upgrade to the Beacon Chain is scheduled for epoch 144896, set to occur at "
+    },
+    {
+      "type": 1,
+      "value": "bellatrixDateTime"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "FEbVwB": [
@@ -3187,6 +3205,12 @@
       "value": " to max out your effective balance."
     }
   ],
+  "QAhumw": [
+    {
+      "type": 0,
+      "value": "Act now to update your node with the latest client releases."
+    }
+  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -3831,6 +3855,20 @@
     {
       "type": 0,
       "value": "I am certain that the validator I am topping up is my validator."
+    }
+  ],
+  "VkpMgu": [
+    {
+      "type": 0,
+      "value": "Complete the steps below before "
+    },
+    {
+      "type": 1,
+      "value": "bellatrixDateOnly"
+    },
+    {
+      "type": 0,
+      "value": " to make sure you're prepared."
     }
   ],
   "Vp4z/b": [

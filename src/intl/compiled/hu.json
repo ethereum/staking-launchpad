@@ -5,12 +5,6 @@
       "value": "2. Lépés: A letéti kulcsok generálása az Ethereum Foundation letéti eszköz használatával"
     }
   ],
-  "+M/NC/": [
-    {
-      "type": 0,
-      "value": "Az egyesülés után a továbbiakban nem lesz két különálló Ethereum hálózat; csak az Ethereum."
-    }
-  ],
   "+UUcBt": [
     {
       "type": 0,
@@ -47,24 +41,6 @@
       "value": "Lengyel"
     }
   ],
-  "+s8Gac": [
-    {
-      "type": 1,
-      "value": "wallet"
-    },
-    {
-      "type": 0,
-      "value": " pénztárca csatlakoztatása a(z) "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " hálózathoz"
-    }
-  ],
   "/+atl4": [
     {
       "type": 0,
@@ -81,6 +57,18 @@
     {
       "type": 0,
       "value": "Indonéz"
+    }
+  ],
+  "/E/Zm8": [
+    {
+      "type": 0,
+      "value": "Konfiguráld a Java Web alkalmazást"
+    }
+  ],
+  "/FpD8O": [
+    {
+      "type": 0,
+      "value": "A TTD-klienskiadások után végezd ezt el"
     }
   ],
   "/QPc9s": [
@@ -139,6 +127,20 @@
       "value": ". Győződj meg arról, hogy a tranzakciót a helyes címre küldöd."
     }
   ],
+  "/h0DGY": [
+    {
+      "type": 0,
+      "value": "Miért van szükség a "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH a maximális érték?"
+    }
+  ],
   "/jJLYy": [
     {
       "type": 0,
@@ -149,6 +151,12 @@
     {
       "type": 0,
       "value": "Ha lehetséges, ilyenkor érdemes lehet megfontolni egy másik kliens futtatását, hogy megvédd magad és a hálózatot."
+    }
+  ],
+  "/tHxib": [
+    {
+      "type": 0,
+      "value": "A geth az Ethereum-protokoll három eredeti kivitelezésének egyike, amely Go nyelven van megírva."
     }
   ],
   "/ub26/": [
@@ -231,6 +239,12 @@
       "value": "3. szakasz - A letétbe helyezés után"
     }
   ],
+  "0FTs1T": [
+    {
+      "type": 0,
+      "value": "nem"
+    }
+  ],
   "0PlVao": [
     {
       "type": 0,
@@ -247,6 +261,12 @@
     {
       "type": 0,
       "value": "Gyakorlás a teszthálózaton"
+    }
+  ],
+  "0c06tl": [
+    {
+      "type": 0,
+      "value": "Kivételi hitelesítő adatok"
     }
   ],
   "0i4cCJ": [
@@ -287,6 +307,22 @@
       "value": "kivételi kulcs"
     }
   ],
+  "14vTrX": [
+    {
+      "type": 0,
+      "value": "A tesztneten történő validálás során hajtsd végre ezeket a szimulációkat, hogy többet tudhass meg a csomópontodról, és jobban felkészülhess a főhálózatra:"
+    }
+  ],
+  "17Epwt": [
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " tesztnet"
+    }
+  ],
   "192AR6": [
     {
       "type": 0,
@@ -303,6 +339,12 @@
     {
       "type": 0,
       "value": "JSON RPC-végpont"
+    }
+  ],
+  "1G0loj": [
+    {
+      "type": 0,
+      "value": "Ha nem biztosítasz címet a kliensed számára, akkor nem kapsz majd tranzakciós díjat, amikor a validátorod blokkol."
     }
   ],
   "1P6GMj": [
@@ -341,6 +383,12 @@
       "value": "Ellenőrizd, hogy a jelszófájlok nem tartalmaznak-e üres új sorokat a fájl végén."
     }
   ],
+  "1Z0sad": [
+    {
+      "type": 0,
+      "value": "EF blog"
+    }
+  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -357,6 +405,24 @@
     {
       "type": 0,
       "value": "Bővebben az Ethereum-letétbe helyezés gazdasági vonatkozásairól"
+    }
+  ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "díj kedvezményezettje"
+    }
+  ],
+  "1pUw7Y": [
+    {
+      "type": 0,
+      "value": "Dokumentáció a Nethermind futtatásáról"
+    }
+  ],
+  "1wSJQU": [
+    {
+      "type": 0,
+      "value": "Időzítés:"
     }
   ],
   "22EpKq": [
@@ -441,6 +507,18 @@
       "value": "Nimbus kulcskezelési dokumentáció"
     }
   ],
+  "2rflCq": [
+    {
+      "type": 0,
+      "value": "A kliensdiverzitás rendkívül fontos az Ethereum hálózat állapota szempontjából: egy több mint 33%-ban előforduló hiba a kliensben az Ethereum offline állapotba kapcsolását eredményezheti. Ha a kliens túlnyomó többséggel rendelkezik (>66%), a hiba a lánc nem megfelelő kettéosztását okozhatja, ami lehetséges slashinghez vezethet."
+    }
+  ],
+  "2s0gAx": [
+    {
+      "type": 0,
+      "value": "Díj kedvezményezettje címének konfigurálása"
+    }
+  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -521,6 +599,52 @@
       "value": "Tesztelés a Goerliben"
     }
   ],
+  "3ODqP9": [
+    {
+      "type": 0,
+      "value": "Több mint "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH egyetlen kulcskészlethez való letétbe helyezése nem növeli a jutalompotenciált, és a "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH fölé sem gyűjti a jutalmakat, mivel minden validátor esetében ott van a korlát: "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": "/"
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": ". Ez azt jelenti, hogy a letétbe helyezés "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH-növekményekben történik, mindegyik növekmény esetében saját kulcskészlettel és egyenleggel."
+    }
+  ],
   "3PZq07": [
     {
       "type": 0,
@@ -557,16 +681,16 @@
       "value": "A Geth dokumentációja a Goerli teszthálózathoz"
     }
   ],
-  "3XK21U": [
-    {
-      "type": 0,
-      "value": "Segítünk minden általad futtatni kívánt validátorhoz aláírókulcsot létrehozni. Mivel az egyesülésig nincs pénzkivétel, ezért a kivételi kulcsaidat nem most fogod létrehozni. Amikor lehetséges lesz a pénzkivétel, a mnemonikus emlékeztetődből hozzájuthatsz a kivételi kulcsaidhoz."
-    }
-  ],
   "3tR/V9": [
     {
       "type": 0,
       "value": "2. szakasz - A beállítás során"
+    }
+  ],
+  "3wfaSi": [
+    {
+      "type": 0,
+      "value": "Az egyesülés, EL–CL-kommunikáció"
     }
   ],
   "3zCA2i": [
@@ -619,6 +743,12 @@
       "value": "Telepítés"
     }
   ],
+  "4AVfh5": [
+    {
+      "type": 0,
+      "value": "Csatlakoztam a konszenzusos kliensem Discord-szerveréhez."
+    }
+  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -629,6 +759,20 @@
     {
       "type": 0,
       "value": "Miért csúszó léptékű díjak? Bár itt nem térünk ki a részletekre, alapvetően a hálózat megfelelő működéséhez szükség van minimális számú validátorra (és ennélfogva minimális mennyiségű ETH-ra). Tehát ahhoz, hogy további validátorokat ösztönözzenek a csatlakozásra, fontos, hogy a kamatláb magas maradjon, amíg el nem érjük ezt a minimális számot."
+    }
+  ],
+  "4VQUkR": [
+    {
+      "type": 0,
+      "value": "További információért lásd: "
+    },
+    {
+      "type": 1,
+      "value": "shanghaiPlanning"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "4hnEBA": [
@@ -653,6 +797,28 @@
     {
       "type": 0,
       "value": "Miért két kulcs van egy helyett?"
+    }
+  ],
+  "59y+Ik": [
+    {
+      "type": 0,
+      "value": "Ne felejtsd el felkeresni a "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " diszkordot, ahol egy "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": " csatornát találhatsz, tele megbeszélésekkel arról, hogy miként tudsz még jobban részt venni, és hogyan tudsz felkészülni."
     }
   ],
   "5A6amM": [
@@ -689,6 +855,42 @@
       "value": "Román"
     }
   ],
+  "5Vrs8S": [
+    {
+      "type": 0,
+      "value": "Szükséged van elegendő feltöltési sávszélességre is. "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " napján ez kb. 1,2–1,3 GB/óra a letöltés, és kb. 0,9–1 GB/óra a feltöltés esetén, és valószínűleg növekedni fog."
+    }
+  ],
+  "5dG331": [
+    {
+      "type": 0,
+      "value": "Bár a validátor szavazatát a tétként feltett összeggel súlyozzuk, az egyes validátorok szavazati súlya "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " értéknél kezdődik, és "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " értéken van maximalizálva. A csomópontok gyenge teljesítménye esetén ez alá eshet az érték, de föléje nem emelhető."
+    }
+  ],
   "5t8oYl": [
     {
       "type": 0,
@@ -711,14 +913,16 @@
       "value": " felületén baráti segítségért!"
     }
   ],
-  "6CK2Nu": [
+  "63gLLu": [
     {
       "type": 0,
-      "value": "A pénztárcád rossz hálózaton van. Válts erre: "
-    },
+      "value": "átlag"
+    }
+  ],
+  "6CN01C": [
     {
-      "type": 1,
-      "value": "network"
+      "type": 0,
+      "value": "A Shanghai-frissítés után a 16 ETH-t körülbelül egynapos késleltetéssel lehet kivenni – a kivételi kulccsal."
     }
   ],
   "6HBTTN": [
@@ -745,10 +949,44 @@
       "value": "Ennek a validátornak a hatásos egyenlegét feltöltéssel javíthatod"
     }
   ],
+  "6VswA4": [
+    {
+      "type": 0,
+      "value": "A Nethermind "
+    },
+    {
+      "type": 1,
+      "value": "jwtSecretFile"
+    },
+    {
+      "type": 0,
+      "value": " egyesülés utáni fájljának futtatása"
+    }
+  ],
+  "6iVtAr": [
+    {
+      "type": 0,
+      "value": "#TestingTheMerge"
+    }
+  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "A hálózathoz a korai szakaszban csatlakozol. Mint minden új szoftver esetében, itt is előfordulhatnak szoftverhibák. Bár valószínűtlen, a potenciális hibák slashinghez, azaz nagy büntetéshez és a hálózatból való kizáráshoz vezethetnek."
+    }
+  ],
+  "6uPbCH": [
+    {
+      "type": 0,
+      "value": "Az oldal "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "-verziója"
     }
   ],
   "7+Domh": [
@@ -781,6 +1019,44 @@
     {
       "type": 0,
       "value": " nem támogatott offline módban."
+    }
+  ],
+  "7BhfPl": [
+    {
+      "type": 0,
+      "value": "Lighthouse-könyv"
+    }
+  ],
+  "7C4ikM": [
+    {
+      "type": 0,
+      "value": "Merge-pandaemoji"
+    }
+  ],
+  "7DFXQj": [
+    {
+      "type": 0,
+      "value": "Váltás "
+    },
+    {
+      "type": 1,
+      "value": "oppositeNetwork"
+    },
+    {
+      "type": 0,
+      "value": "-indítópultra"
+    }
+  ],
+  "7Iz3JI": [
+    {
+      "type": 0,
+      "value": "Konszenzusos kliens"
+    }
+  ],
+  "7Rw2uA": [
+    {
+      "type": 0,
+      "value": "konszenzus"
     }
   ],
   "7UOvbT": [
@@ -865,6 +1141,20 @@
       "value": "Megegyezik a honlapon feltüntetett szerződéscím?"
     }
   ],
+  "8L6ufI": [
+    {
+      "type": 0,
+      "value": "Részletes útmutató a(z) "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "-csomópont és -validátor felpörgetéséhez"
+    }
+  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -927,12 +1217,6 @@
       "value": "A biztonság érdekében javasoljuk, hogy ennek a lépésnek a végrehajtásához szakítsd meg az internetkapcsolatot."
     }
   ],
-  "96pen8": [
-    {
-      "type": 0,
-      "value": "A sharding 64 párhuzamos láncot bevezetve több adatot fog a hálózat rendelkezésére bocsátani. Minden új lánc legalább annyi adatot lesz képes kezelni, mint ma a főhálózat, valószínűleg még többet is."
-    }
-  ],
   "9DZdsc": [
     {
       "type": 0,
@@ -951,6 +1235,12 @@
     {
       "type": 0,
       "value": "Erre a kérdésre nincs egyszerű válasz, mivel számos tényező vesz részt ebben a számításban."
+    }
+  ],
+  "9RBO+X": [
+    {
+      "type": 0,
+      "value": "A validátori szerepkörök és kötelességek felülvizsgálata"
     }
   ],
   "9VZ9oy": [
@@ -983,16 +1273,66 @@
       "value": " opción keresztül."
     }
   ],
+  "9mLaI9": [
+    {
+      "type": 0,
+      "value": "letét"
+    }
+  ],
   "9qMyhY": [
     {
       "type": 0,
       "value": "Olvasd el az opciók és az alparancsok dokumentációját"
     }
   ],
+  "9qpi9h": [
+    {
+      "type": 0,
+      "value": "A Nethermind konfigurálása"
+    }
+  ],
+  "9r8j5+": [
+    {
+      "type": 0,
+      "value": "Engine API"
+    }
+  ],
   "9uOFF3": [
     {
       "type": 0,
       "value": "Áttekintés"
+    }
+  ],
+  "9vLu6E": [
+    {
+      "type": 1,
+      "value": "note"
+    },
+    {
+      "type": 0,
+      "value": " Ezt a lépést "
+    },
+    {
+      "type": 1,
+      "value": "testnetsOnly"
+    },
+    {
+      "type": 0,
+      "value": " hálózaton kell végrehajtani, amíg meg nem történik a főhálózati TTD (végső teljes nehézség) bejelentése, a kliensek pedig frissítést nem adtak ki. Addig is az előkészítésre vonatkozó információk közlésére kerül sor."
+    }
+  ],
+  "9vwGlT": [
+    {
+      "type": 0,
+      "value": "Szinkronizáltam a beaconcsomópontomat a következőn: "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "9xeLhs": [
@@ -1011,6 +1351,20 @@
     {
       "type": 1,
       "value": "boldWarning"
+    }
+  ],
+  "9ySJSP": [
+    {
+      "type": 0,
+      "value": "Válaszd ki "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": "-kliensedet, és állíts be csomópontot"
     }
   ],
   "A2b4uB": [
@@ -1037,38 +1391,6 @@
       "value": "Ha segítségre van szükséged, nézd meg a Python dokumentációját."
     }
   ],
-  "ACstv9": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " hálózaton telepítettem és szinkronizáltam a végrehajtásos kliensemet (ne várj erre, mert több napig is eltarthat)."
-    }
-  ],
-  "AEp7+F": [
-    {
-      "type": 0,
-      "value": "Fontos, hogy validátorként a(z) "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " fedezetként való benyújtása szükséges; más szóval, letétbe helyezed az összeget. Csak akkor válhatsz validátorrá, ha egy egyirányú "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "-tranzakciót küldesz a letétbe helyezési szerződésnek az aktuális Ethereum-láncon."
-    }
-  ],
   "AJD+66": [
     {
       "type": 0,
@@ -1089,6 +1411,30 @@
     {
       "type": 0,
       "value": " összeget kell egyszerre elküldeni."
+    }
+  ],
+  "ALEY4e": [
+    {
+      "type": 1,
+      "value": "community"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "-útmutató"
+    }
+  ],
+  "ARyG2Z": [
+    {
+      "type": 0,
+      "value": "Mikor történjen a kivétel?"
     }
   ],
   "ATwOPg": [
@@ -1115,6 +1461,20 @@
       "value": "a validátor hatékony egyenlegének megértése"
     }
   ],
+  "AbR1dr": [
+    {
+      "type": 0,
+      "value": "Ez a frissítés gyorsan közeledik, és néhány olyan változást hoz, amelyekkel a letétbe helyezőknek érdemes tisztában lenniük. Hogy biztosan felkészült legyél, fusd át az ellenőrzőlistát: "
+    },
+    {
+      "type": 1,
+      "value": "mergeReadinessChecklist"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1123,6 +1483,18 @@
     {
       "type": 1,
       "value": "url"
+    }
+  ],
+  "Ad8+R5": [
+    {
+      "type": 0,
+      "value": "A sharding megváltoztatja azt a követelményt, amely szerint teljes csomópontok hordozzák a lánc teljes előzményeit: ehelyett a terhelést a hálózat között osztja el, miközben továbbra is biztosítja az adatok rendelkezésre állását. Ez jelentősen megnöveli az Ethereum 1. rétegének kapacitását, miközben fenntartja a teljes csomópontok üzemeltetésének lehetőségét fogyasztói hardveren, megőrizve a hálózat decentralizáltságát."
+    }
+  ],
+  "AfH0eO": [
+    {
+      "type": 0,
+      "value": "Minden letétbe helyező köteles az egyesüléstől kezdődően végrehajtásos klienst működtetni a konszenzusos kliensével. Ügyelj arra, hogy felkészült legyél."
     }
   ],
   "Affixg": [
@@ -1153,6 +1525,18 @@
     {
       "type": 0,
       "value": "Validátor feltöltése"
+    }
+  ],
+  "AyaNND": [
+    {
+      "type": 0,
+      "value": "TestingTheMerge"
+    }
+  ],
+  "AzjyIx": [
+    {
+      "type": 0,
+      "value": "A Beacon Chain létrejötte óta számos, saját konszenzusos klienst futtató validátor döntött úgy, hogy harmadik fél szolgáltatásait használja a végrehajtási réteghez való csatlakozáshoz. Ez elfogadható volt, mivel az egyetlen dolog, amire figyeltek, a letétbe helyezési szerződés volt."
     }
   ],
   "B2EKj+": [
@@ -1237,6 +1621,18 @@
       "value": "EthStaker-közösség"
     }
   ],
+  "BXoiVG": [
+    {
+      "type": 0,
+      "value": "További emlékeztetők"
+    }
+  ],
+  "BcUgLk": [
+    {
+      "type": 0,
+      "value": "Díj javasolt kedvezményezettje"
+    }
+  ],
   "Bf2QKg": [
     {
       "type": 0,
@@ -1247,6 +1643,12 @@
     {
       "type": 0,
       "value": "Hatékony egyenleg"
+    }
+  ],
+  "BnwOUO": [
+    {
+      "type": 0,
+      "value": "végrehajtás"
     }
   ],
   "BoEpk9": [
@@ -1261,6 +1663,12 @@
       "value": "A Lighthouse konfigurálása"
     }
   ],
+  "C3jBPI": [
+    {
+      "type": 0,
+      "value": "Végrehajtásos kliens"
+    }
+  ],
   "C9fTX1": [
     {
       "type": 0,
@@ -1273,6 +1681,12 @@
       "value": "Cseh"
     }
   ],
+  "CDx/FY": [
+    {
+      "type": 0,
+      "value": "Validátor futtatásával felelős leszel a hálózat biztosításáért, és folyamatos kifizetéseket kapsz azokért a műveletekért, amelyek segítik a hálózat konszenzusának elérését."
+    }
+  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1283,6 +1697,16 @@
     {
       "type": 0,
       "value": "Mindenképpen töltsd fel az egyenlegedet, ha az megközelíti a 16 ETH -t. Ez biztosítja, hogy ne zárjanak ki az validátorok közül (ez automatikusan megtörténik, ha az egyenleged 16 ETH alá esik)."
+    }
+  ],
+  "CWKE9c": [
+    {
+      "type": 0,
+      "value": "A tárcád rossz hálózaton van. Válts erre: "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
     }
   ],
   "Cacfkx": [
@@ -1359,10 +1783,22 @@
       "value": "Ideális esetben az internetkapcsolatodnak megbízhatónak és a nap 24 órájában megszakítás nélkülinek kell lennie."
     }
   ],
+  "Dayq/y": [
+    {
+      "type": 0,
+      "value": "Az Erigon konfigurálása"
+    }
+  ],
   "DbnQg+": [
     {
       "type": 0,
       "value": "Ellenőrizd a szerződés címét"
+    }
+  ],
+  "DjhC7F": [
+    {
+      "type": 0,
+      "value": "A szükséges portokat az EL- és CL-kliensem esetében is átirányítottam a megfelelő gép(ek)re a routeremről (csak azokat a portokat nyisd meg, amelyek a Te telepítésedre vonatkoznak)."
     }
   ],
   "DoCZT1": [
@@ -1483,16 +1919,50 @@
       "value": "A kulcsfogalom a következő:"
     }
   ],
+  "FFUr3c": [
+    {
+      "type": 0,
+      "value": "Az Ethereum 2015. július 30-án keletkezett. Idővel nő a mérete, és a sharding bevezetése növelni fogja a tárhely-, a memória- és a sávszélességi követelményeket is."
+    }
+  ],
   "FM92S0": [
     {
       "type": 0,
       "value": "Megjegyzés: több percig is eltarthat, amíg a Beacon Chain ellenőrzi a befizetést"
     }
   ],
+  "FM9lHC": [
+    {
+      "type": 0,
+      "value": "az összes egyesülési tesztnet-konfiguráció"
+    }
+  ],
   "FSRfSJ": [
     {
       "type": 0,
       "value": "Megértettem, hogy ez a tranzakció nem visszafordítható."
+    }
+  ],
+  "FU7JYy": [
+    {
+      "type": 0,
+      "value": "Győződj meg arról, hogy a(z) "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": " esetében a(z) "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " be van állítva, különben a befizetés érvénytelen lesz."
     }
   ],
   "FZa0R+": [
@@ -1513,6 +1983,26 @@
       "value": "Próbáld meg újra"
     }
   ],
+  "FcCHp4": [
+    {
+      "type": 0,
+      "value": "A hálózatikliens-használat legfrissebb adatai"
+    }
+  ],
+  "Felr8P": [
+    {
+      "type": 0,
+      "value": "A(z) "
+    },
+    {
+      "type": 1,
+      "value": "validatorClient"
+    },
+    {
+      "type": 0,
+      "value": " az a szoftver, amely a validátor nevében jár el olyan módon, hogy birtokolja és használja a magánkulcsát a lánc állapotáról szóló tanúsítványok készítéséhez. Egyetlen validátorkliens több kulcspárral is rendelkezhet, és sok validátort ellenőrizhet."
+    }
+  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -1525,10 +2015,30 @@
       "value": "1. lépés: Töltsd le a letéti parancssoros felhasználói felület applikációt az operációs rendszeredhez"
     }
   ],
+  "FmGmFH": [
+    {
+      "type": 0,
+      "value": "Ennek az indítópultnak a használatához a tárcádat "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": " értékre kell állítani."
+    }
+  ],
   "FqgDIV": [
     {
       "type": 0,
       "value": "Szolgáltatási feltételek"
+    }
+  ],
+  "FqztZR": [
+    {
+      "type": 0,
+      "value": "Megjegyzés:"
     }
   ],
   "FzkbsB": [
@@ -1567,16 +2077,16 @@
       "value": "Győződj meg arról, hogy nem lettél adathalászat áldozata"
     }
   ],
+  "GKDM0r": [
+    {
+      "type": 0,
+      "value": "Ha még nem tetted meg, győződj meg arról, hogy a csomópontodon egy EL- és egy CL-kliens is fut, hogy az egyesülés idején ne legyen leállás."
+    }
+  ],
   "GN2Cu5": [
     {
       "type": 0,
       "value": "konszenzusos kliens"
-    }
-  ],
-  "GOHkCO": [
-    {
-      "type": 0,
-      "value": "Ma biztosítani fogod a Beacon Chaint, az első fő skálázási frissítést. Ez egy különálló lánc, amely proof-of-stake konszenzusmechanizmust használ. Végül az egész Ethereum működésének biztosításában fogsz segíteni, amint a főhálózat (az Ethereum, ahogy ma mondjuk) egybeolvad a Beacon Chainnel."
     }
   ],
   "GOc7cL": [
@@ -1639,6 +2149,40 @@
       "value": "Szükséges teljes összeg"
     }
   ],
+  "H/LXxz": [
+    {
+      "type": 0,
+      "value": "A hosszú ideig működő nyilvános tesztnetek közül a "
+    },
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " volt az első, amely (2022. június 8-án) átesett az egyesülésen. A(z) előzményeit tekintve proof-of-work tesztnet "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " most átalakult proof-of-stake hálózattá azáltal, hogy a történelmi végrehajtási rétegét egy új beacon chainnel egyesítette."
+    }
+  ],
+  "H0lQfu": [
+    {
+      "type": 0,
+      "value": "Ellenőrzőlista az egyesülésre való alkalmasság megállapításához"
+    }
+  ],
+  "H4W8nj": [
+    {
+      "type": 0,
+      "value": "Authenticate Engine API"
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
@@ -1667,6 +2211,20 @@
       "value": "A slashingnek két célja van: (1) megfizethetetlenül drágává tenni a hálózat támadását, és (2) megakadályozni, hogy a validátorok lusták legyenek, ellenőrizve, hogy ténylegesen teljesítik-e feladataikat. Ha azért slashelnek, mert bizonyíthatóan romboló módon cselekedtél, az a letéted egy részének megsemmisítésével jár."
     }
   ],
+  "Hmxd5S": [
+    {
+      "type": 0,
+      "value": "Kérjük, ügyelj arra, hogy amikor a rendszer hálózat választására kér, a(z) "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " lehetőséget válaszd, különben a befizetés érvénytelen lesz."
+    }
+  ],
   "HoahTd": [
     {
       "type": 0,
@@ -1677,6 +2235,12 @@
     {
       "type": 0,
       "value": "Támogatás"
+    }
+  ],
+  "I0BXSi": [
+    {
+      "type": 0,
+      "value": "A geth konfigurálása"
     }
   ],
   "I212vY": [
@@ -1693,6 +2257,12 @@
     {
       "type": 0,
       "value": "Hálózat"
+    }
+  ],
+  "I5ZPR9": [
+    {
+      "type": 0,
+      "value": "Mikor kerüljön sor az egyesülésre?"
     }
   ],
   "I5lWZA": [
@@ -1729,6 +2299,20 @@
     {
       "type": 0,
       "value": "Telepítsd a virtualenvet"
+    }
+  ],
+  "If09Ko": [
+    {
+      "type": 0,
+      "value": "Ezért a letétbe helyezőknek meg kell adniuk egy "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": "-címet a konszenzusos kliensük számára, hogy megkaphassák ezeket a jutalmakat. Ez egy normál Ethereum-cím, amit már ismersz."
     }
   ],
   "IhDJWs": [
@@ -1807,6 +2391,12 @@
       "value": "Más szóval, ahhoz, hogy becsületes maradj, a tetteidnek pénzügyi következményekkel kell járnia."
     }
   ],
+  "JApiO1": [
+    {
+      "type": 0,
+      "value": "Ez egy új változás, és az egyesüléskor válik követelménnyé, ezért ügyelj arra, hogy mindkettőt futtasd frissítés előtt."
+    }
+  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1825,6 +2415,12 @@
     {
       "type": 0,
       "value": "4. Kerüld az adathalászatot"
+    }
+  ],
+  "Ja5vXW": [
+    {
+      "type": 0,
+      "value": "További információ"
     }
   ],
   "JbVlOE": [
@@ -1933,6 +2529,22 @@
       "value": "url"
     }
   ],
+  "KbUOQp": [
+    {
+      "type": 0,
+      "value": "A Nethermind a .NET magja köré épült, és a teljesítmény, a sokoldalúság és a testreszabhatóság biztosítása a célja."
+    }
+  ],
+  "KcdQCZ": [
+    {
+      "type": 0,
+      "value": "CLI-szintaxis "
+    },
+    {
+      "type": 1,
+      "value": "engineJwtSecret"
+    }
+  ],
   "KjcAm2": [
     {
       "type": 0,
@@ -1945,12 +2557,6 @@
       "value": "A folyamat befejezése után a következőket kell látnod:"
     }
   ],
-  "KrVaDy": [
-    {
-      "type": 0,
-      "value": "Csatlakoztam a kliensem Discord-szerveréhez."
-    }
-  ],
   "KvRSg5": [
     {
       "type": 0,
@@ -1961,6 +2567,12 @@
     {
       "type": 0,
       "value": "A python3 telepítési folyamata a linuxod felépítésétől függően eltérő lehet."
+    }
+  ],
+  "KwfNme": [
+    {
+      "type": 0,
+      "value": "A Besu konfigurálása"
     }
   ],
   "KxUgHu": [
@@ -1977,10 +2589,26 @@
       "value": "."
     }
   ],
+  "L1PK14": [
+    {
+      "type": 0,
+      "value": "Ethereum.org – Az egyesülés"
+    }
+  ],
   "L7fPF+": [
     {
       "type": 0,
       "value": "Végezd el az utolsó befizetésedet"
+    }
+  ],
+  "L7wMQN": [
+    {
+      "type": 0,
+      "value": "Csatlakozás a következőhöz: "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
     }
   ],
   "L8jrV5": [
@@ -2075,10 +2703,10 @@
       "value": "Az első befizetés már megtörtént az ehhez a validátorhoz tartozó nyilvános kulcshoz. Kérjük, hogy várj, és ellenőrizd a befizetés állapotát a Beaconchain adatszolgáltatónál."
     }
   ],
-  "LyJqWj": [
+  "LwEHRm": [
     {
       "type": 0,
-      "value": "További információ a validátori szerepkörökről és kötelességekről"
+      "value": "Miért kell most végrehajtásos klienst futtatnom?"
     }
   ],
   "M3GwXS": [
@@ -2091,6 +2719,20 @@
     {
       "type": 0,
       "value": "Új pénztárca csatlakoztatása"
+    }
+  ],
+  "MKMIUm": [
+    {
+      "type": 0,
+      "value": "A nyilvános tesztnet fejlesztése folyamatban van. Ha minden jól működik, a fejlesztőcsapatok ezt közölni fogják: a legfrissebb információkért figyeld a blogot ("
+    },
+    {
+      "type": 1,
+      "value": "blogLink"
+    },
+    {
+      "type": 0,
+      "value": ") vagy más klienscsapatok kommunikációs csatornáit."
     }
   ],
   "MQTBvH": [
@@ -2109,6 +2751,12 @@
     {
       "type": 0,
       "value": "Mi történik, ha ellopják a pénzfelvételi kulcsomat?"
+    }
+  ],
+  "MXVVcY": [
+    {
+      "type": 0,
+      "value": "Végrehajtásicsomópont-kapcsolatok hitelesítése"
     }
   ],
   "MZEcKL": [
@@ -2165,6 +2813,12 @@
       "value": "Feltöltési részletek"
     }
   ],
+  "MoIew2": [
+    {
+      "type": 0,
+      "value": "Részletes útmutató csomópont és validátor felpörgetéséhez egyesülési tesztneten"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 0,
@@ -2209,6 +2863,28 @@
       "value": "Biztosítottam a gyökérszámlafiókot."
     }
   ],
+  "NTHTCh": [
+    {
+      "type": 0,
+      "value": "Egyetlen validátorhoz ne tégy be letétként több mint "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH-t: ezzel nem nőne a jutalmad, és a tervezett "
+    },
+    {
+      "type": 1,
+      "value": "shanghai"
+    },
+    {
+      "type": 0,
+      "value": "-frissítésig zárolva marad."
+    }
+  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -2241,10 +2917,10 @@
       "value": " letétet"
     }
   ],
-  "NZUWs7": [
+  "NZYRdf": [
     {
       "type": 0,
-      "value": "Ne feledd, hogy a validátor szavazatát a letétének összege súlyozza."
+      "value": "Főhálózat"
     }
   ],
   "NatYUJ": [
@@ -2257,20 +2933,6 @@
     {
       "type": 0,
       "value": "Legyél validátor a Tekuval"
-    }
-  ],
-  "Ns8vbQ": [
-    {
-      "type": 0,
-      "value": "Válassz "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": "-klienst"
     }
   ],
   "NwzcYT": [
@@ -2301,10 +2963,22 @@
       "value": "."
     }
   ],
+  "O/dhpS": [
+    {
+      "type": 0,
+      "value": "EthStaker diszkord"
+    }
+  ],
   "O3qkOm": [
     {
       "type": 0,
       "value": "Sharding"
+    }
+  ],
+  "OBmVqN": [
+    {
+      "type": 0,
+      "value": "A Hyperledger Besu egy nyílt forrású, az Apache 2.0 licenc alapján kifejlesztett, és Java nyelven megírt Ethereum-kliens."
     }
   ],
   "OIvXIO": [
@@ -2321,6 +2995,12 @@
       "value": " befizetést"
     }
   ],
+  "OJOu1W": [
+    {
+      "type": 0,
+      "value": "Dokumentáció az Erigon futtatásáról"
+    }
+  ],
   "ON2tXT": [
     {
       "type": 0,
@@ -2331,6 +3011,30 @@
     {
       "type": 0,
       "value": "További információ a ConsenSysről"
+    }
+  ],
+  "OmAmmi": [
+    {
+      "type": 0,
+      "value": "További információ az összeolvadásról"
+    }
+  ],
+  "Oop93W": [
+    {
+      "type": 1,
+      "value": "site"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "-bejelentés"
     }
   ],
   "OsO8ik": [
@@ -2401,10 +3105,10 @@
       "value": "A hálózatod megváltozott"
     }
   ],
-  "PIQDar": [
+  "Pd0hC/": [
     {
       "type": 0,
-      "value": "Javasoljuk, hogy először próbáld végig az egész folyamatot egy teszthálózaton, hogy magabiztossá válj."
+      "value": "Ethereum Foundation-blog"
     }
   ],
   "PfoT0C": [
@@ -2455,6 +3159,12 @@
       "value": "vágólap"
     }
   ],
+  "Q2CQuF": [
+    {
+      "type": 0,
+      "value": "Most, hogy a tranzakciókat validátoroknak kell feldolgozniuk, az ezeket a tranzakciókat tartalmazó blokkokat javasló validátorok jogosultak a tranzakciósdíj-támogatásra. Ezeket elsőbbségi díjaknak is nevezik, és az üzemanyagdíjak fel nem használt részét jelentik."
+    }
+  ],
   "Q8P0rZ": [
     {
       "type": 0,
@@ -2493,6 +3203,20 @@
       "value": " összeget, hogy maximalizáld a hatékony egyenlegedet."
     }
   ],
+  "Q8fnvz": [
+    {
+      "type": 0,
+      "value": "csak tesztnetek (pl. "
+    },
+    {
+      "type": 1,
+      "value": "kiln"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -2505,30 +3229,60 @@
       "value": "Megjegyzés: Alapértelmezés szerint a virtuális gépek letilthatják az NTP-t, ezért előfordulhat, hogy meg kell találnod a környezetednek megfelelő megoldást."
     }
   ],
+  "QRUdO6": [
+    {
+      "type": 0,
+      "value": "Lásd a díj kedvezményezettjét"
+    }
+  ],
+  "QRwpD3": [
+    {
+      "type": 0,
+      "value": "További információ a portok szerepéről a hálózatok építésében"
+    }
+  ],
   "QWDxrk": [
     {
       "type": 0,
       "value": "Kulcskezelés"
     }
   ],
+  "QapNAM": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "-kezdőoldal"
+    }
+  ],
+  "QgOvR0": [
+    {
+      "type": 0,
+      "value": "Fontos, hogy validátorként a(z) "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " fedezetként való benyújtása szükséges; más szóval, letétbe helyezed az összeget. Csak akkor válhatsz validátorrá, ha egy egyirányú "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "-tranzakciót küldesz a letétbe helyezési szerződésnek az aktuális Ethereum-láncon."
+    }
+  ],
   "QlsDcr": [
     {
       "type": 0,
       "value": "Művelet"
-    }
-  ],
-  "QnS0CA": [
-    {
-      "type": 0,
-      "value": "Ennek az indítópultnak a használatához a pénztárcádat "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": " értékre kell állítani."
     }
   ],
   "QqqeNk": [
@@ -2551,10 +3305,40 @@
       "value": " befizetésed el lett fogadva, de a láncban érvényesítési folyamat alatt áll. Itt lesz elérhető, ha a beaconcha.in megerősítette a 2048 blokkot."
     }
   ],
+  "QtNVQP": [
+    {
+      "type": 0,
+      "value": "Nincs arra mód, hogy újraaktiváld a validátorodat, és az egyesülés utánra tervezett Shanghai-frissítésig nem tudod átutalni vagy kivenni a pénzeszközeidet (ez azt jelenti, hogy pénzeszközeid addig elérhetetlenek lesznek)."
+    }
+  ],
+  "R58ea3": [
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": "-klienst is futtatnod kell, valamint a "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " konszenzusos kliensedet is (korábban „Eth2”)."
+    }
+  ],
   "R8eePn": [
     {
       "type": 0,
       "value": "Ha slasheltek, ki vagy zárva a protokollban való további részvételből, és rá vagy kényszerítve a kilépésre."
+    }
+  ],
+  "R9umf+": [
+    {
+      "type": 0,
+      "value": "A validátorok díjjutalmat kapnak majd – ne maradj le róla!"
     }
   ],
   "RCGrka": [
@@ -2599,16 +3383,38 @@
       "value": "Hány validátort szeretnél futtatni?"
     }
   ],
-  "Rj0OAx": [
+  "Riq4Yh": [
     {
       "type": 0,
-      "value": "Vagy más szóval, egy számítógépes folyamatot futtató ember. Ez a folyamat új blokkokat javasol és erősít meg, amelyek hozzáadódnak a blokklánchoz."
+      "value": "A(z) "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " hálózata bárki számára nyitott, hogy kapcsolatba lépjen vele. Próbáld ki, hogy küldesz néhány tranzakciót, validátort futtatsz, vagy hogy tudod-e slashelni magadat!"
     }
   ],
-  "RkbwNZ": [
+  "RkSC5Q": [
     {
       "type": 0,
-      "value": "A pénzfelvétel addig nem lesz lehetséges, amíg a főhálózat nem egyesül a Beacon Chainnel."
+      "value": "Emlékeztetőül: az egyesülési frissítés "
+    },
+    {
+      "type": 1,
+      "value": "nem"
+    },
+    {
+      "type": 0,
+      "value": " valósítja meg a letétbe helyezett ETH-k felvételét vagy átutalását. Ezt a funkciót az egyesülést követőenre tervezett Shanghai-frissítés tartalmazza majd."
+    }
+  ],
+  "RqTB/U": [
+    {
+      "type": 0,
+      "value": "Gyakori kérdések az Ethereum ütemtervével kapcsolatban"
     }
   ],
   "Rr2lI/": [
@@ -2641,6 +3447,12 @@
       "value": "A Teku konfigurációs fájl környezeti változója"
     }
   ],
+  "SEt7ZX": [
+    {
+      "type": 0,
+      "value": "Az Ethereum-egyesüléssel kapcsolatos információ folyamatos témaszálja"
+    }
+  ],
   "SGzXoY": [
     {
       "type": 0,
@@ -2659,10 +3471,30 @@
       "value": "Kerüld a túl bonyolult beállításokat, és legyél tisztában a kompromisszumokkal. Ha rövid ideig offline állapotban vagy, az alacsony büntetést von maga után a tétlenségért, de ezt könnyen visszaszerezheted, amint körülbelül ugyanannyi ideig ismét online vagy. A bonyolult biztonsági mentések növelhetik a telepítés költségeit, a felesleges biztonsági háttérvalidátorok pedig slashinghez vezethetnek."
     }
   ],
+  "SVLpih": [
+    {
+      "type": 0,
+      "value": "A proof-of-stake-re való, az egyesülésen keresztül megvalósuló, régóta várt átállás gyorsan közeledik, ami egy lépéssel közelebb hozza az Ethereumot egy fenntarthatóbb ökoszisztémához."
+    }
+  ],
   "SaR1pU": [
     {
       "type": 0,
       "value": "A letét már létezik"
+    }
+  ],
+  "Sb67Wo": [
+    {
+      "type": 0,
+      "value": "Letétbe helyezők, figyelem! Közeleg az egyesülést! Hogy biztosan készen álljatok, olvassátok el ezt: "
+    },
+    {
+      "type": 1,
+      "value": "mergeReadinessChecklist"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Sd+Pq6": [
@@ -2707,6 +3539,12 @@
       "value": "Kötelező"
     }
   ],
+  "SpI4Xu": [
+    {
+      "type": 0,
+      "value": "Az egyesülésfrissítés előkészítette a láncot a jövőbeli skálázási frissítésekre azáltal, hogy a proof-of-stake konszenzust összehozta a főhálózattal. Ez lehetővé teszi az adatsharding megvalósítását a hálózati kapacitás és az áteresztőképesség további skálázása érdekében."
+    }
+  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -2727,24 +3565,16 @@
       "value": "csavarkulcs"
     }
   ],
+  "T2O2Gr": [
+    {
+      "type": 0,
+      "value": "kezdeti és maximum"
+    }
+  ],
   "THIzw6": [
     {
       "type": 0,
       "value": "Validátorok és az Ethereum"
-    }
-  ],
-  "TLEziZ": [
-    {
-      "type": 0,
-      "value": "A Beacon Chain ekkor keletkezett:"
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ". Idővel nő a mérete, és a sharding bevezetése növeli fogja a tárolási, a memória- és sávszélességi követelményeket is."
     }
   ],
   "TMw9oz": [
@@ -2753,10 +3583,50 @@
       "value": "Látogass el erre a webhelyre az asztali számítógépedről, hogy validátorrá válj."
     }
   ],
+  "TNTj2N": [
+    {
+      "type": 1,
+      "value": "community"
+    },
+    {
+      "type": 0,
+      "value": " – egyesülési tesztnetútmutató"
+    }
+  ],
+  "TbV4N8": [
+    {
+      "type": 1,
+      "value": "community"
+    },
+    {
+      "type": 0,
+      "value": " – diszkord (csap)"
+    }
+  ],
   "TfNuWP": [
     {
       "type": 0,
       "value": "a virtualenv segít egy elszigetelt Python-környezet létrehozásában a deposit-cli eszköz számára."
+    }
+  ],
+  "TfVy1O": [
+    {
+      "type": 0,
+      "value": "Tekintsd meg az egyesülésre való alkalmasság megállapítására szolgáló ellenőrzőlistát"
+    }
+  ],
+  "ToUcj8": [
+    {
+      "type": 0,
+      "value": "A végrehajtásos kliens mellett az egyesülési csomópont után az operátoroknak "
+    },
+    {
+      "type": 1,
+      "value": "alternateClient"
+    },
+    {
+      "type": 0,
+      "value": "-klienst is futtatniuk kell, hogy aktívak maradjanak."
     }
   ],
   "Tpe6yK": [
@@ -2849,6 +3719,12 @@
       "value": "Ha nincs teszthálózati mappád, akkor valószínűleg nem megfelelően építetted és futtattad a Nimbust. Futtasd újra a make-parancsokat."
     }
   ],
+  "V0mmZE": [
+    {
+      "type": 0,
+      "value": "Az egyesülés után a validátorod a tranzakciók feldolgozásáért is felelős lesz, és így jogosulttá válik az általad javasolt blokkokban a validátorod által javasolt tranzakciókhoz kapcsolódó, fel nem használt üzemanyagdíjakra. Ezeknek a díjaknak az elszámolása a végrehajtásos rétegben történik, nem a konszenzus rétegben, és így egy hagyományos Ethereum-címet kell a kliensednek megadni."
+    }
+  ],
   "V19Udt": [
     {
       "type": 0,
@@ -2869,6 +3745,20 @@
     {
       "type": 0,
       "value": " (korábban „Eth2” vagy „Ethereum 2.0”) rétegből fog állni."
+    }
+  ],
+  "V5J3Uf": [
+    {
+      "type": 0,
+      "value": "Létrehoztam egy megosztott JWT titkos kódot, és "
+    },
+    {
+      "type": 1,
+      "value": "egyaránt"
+    },
+    {
+      "type": 0,
+      "value": " elérhetővé tettem a végrehajtási kliensem és a konszenzusos kliensem (beacon csomópont) számára"
     }
   ],
   "VASo1/": [
@@ -2895,20 +3785,6 @@
     {
       "type": 0,
       "value": " fájllal, amelyet nem te hoztál létre, vagy amelyhez nincs birtokodban a mnemonikus kifejezés."
-    }
-  ],
-  "VJZrCQ": [
-    {
-      "type": 0,
-      "value": "Válts a(z) "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": "-indítópultra"
     }
   ],
   "VKfWR3": [
@@ -2991,6 +3867,12 @@
       "value": "Biztos vagyok benne, hogy a validátor, amelyre fel akarok tölteni, az én validátorom."
     }
   ],
+  "Vp4z/b": [
+    {
+      "type": 0,
+      "value": "A hálózat decentralizációjához a saját végrehajtási rétegüket futtató letétbe helyezők szükségesek."
+    }
+  ],
   "VzGJkB": [
     {
       "type": 0,
@@ -3007,6 +3889,12 @@
     {
       "type": 0,
       "value": "Japán"
+    }
+  ],
+  "W6w5Wb": [
+    {
+      "type": 0,
+      "value": "A validátorok közötti átutalás és a felvétel még nem lehetséges. A pénzkivételi funkció jelenleg kiemelt prioritást élvez, és a tervek szerint a következő, Shanghai-frissítésként ismert hálózatfrissítéssel kerülnek bevezetésre."
     }
   ],
   "W8nHSd": [
@@ -3033,6 +3921,12 @@
       "value": ", NEM számít bele a hatékony egyenlegedbe a Beacon Chainben. Emellett kivenni sem tudod addig, amíg a Beacon Chain nem egyesül a főhálózattal."
     }
   ],
+  "WJA1/H": [
+    {
+      "type": 0,
+      "value": "Fontos"
+    }
+  ],
   "WMLn/w": [
     {
       "type": 1,
@@ -3055,6 +3949,12 @@
       "value": "A konszenzusos protokoll egy implementációja, amely a használhatóságra, biztonságra és megbízhatóságra összpontosít. A Prysm a kizárólag a saját kliense fejlesztésével foglalkozó Prysmatic Labs vállalat megoldása."
     }
   ],
+  "Wj99ga": [
+    {
+      "type": 0,
+      "value": "Go-ethereum – Az egyesülés"
+    }
+  ],
   "WkrNSk": [
     {
       "type": 0,
@@ -3065,6 +3965,18 @@
     {
       "type": 0,
       "value": "Kérjük, fogadd el a fenti feltételeket."
+    }
+  ],
+  "WptkFF": [
+    {
+      "type": 0,
+      "value": "Mindkét réteg szükséges"
+    }
+  ],
+  "Wxmhku": [
+    {
+      "type": 0,
+      "value": "Ezeket a díjakat az fizeti, aki a tranzakciót benyújtotta, és ETH formájában érkeznek a végrehajtási rétegre (a főhálózatra). Ezek a jutalmak nem szerepelnek a validátor egyenlegében, amelynek vezetése a konszenzusos rétegben történik."
     }
   ],
   "WxqnJn": [
@@ -3083,6 +3995,18 @@
     {
       "type": 0,
       "value": "Megnevezte a blokkfelfedező a szerződést?"
+    }
+  ],
+  "X3NiFM": [
+    {
+      "type": 0,
+      "value": "proof-of-custody játék"
+    }
+  ],
+  "X3rOq5": [
+    {
+      "type": 0,
+      "value": "Az egyesülés időpontjában az Infura és az Alchemy már nem lesz járható út a végrehajtási réteg feladatainak kiszervezésére."
     }
   ],
   "X5KFEh": [
@@ -3183,6 +4107,20 @@
       "value": "teku"
     }
   ],
+  "Y07Hwy": [
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " csatlakoztatása a következőhöz: "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    }
+  ],
   "Y47aYU": [
     {
       "type": 0,
@@ -3235,6 +4173,18 @@
       "value": "Kulcsok"
     }
   ],
+  "YHk9Pe": [
+    {
+      "type": 0,
+      "value": "Az egyesüléssel a tranzakciók feldolgozásának terhe a validátorokra hárul, mivel a proof-of-work elavult. Ahhoz, hogy aláírja a tranzakciók érvényességét, a validátornak megbízható hozzáféréssel kell rendelkeznie a végrehajtási réteg eseményeihez. Csak a saját csomópontjában bízhat."
+    }
+  ],
+  "YIjr32": [
+    {
+      "type": 0,
+      "value": "Azoknak, akik jobban kézben szeretnék tartani az irányítást, és kevesebb sorvezetőt akarnak"
+    }
+  ],
   "YP03/j": [
     {
       "type": 0,
@@ -3267,6 +4217,50 @@
     {
       "type": 0,
       "value": " validátorod mindegyikéhez. Ügyelj arra, hogy ezeket biztonságban tartsd, lehetőleg offline. A validátorod kulcstárolóinak elérhetőnek kell lenniük a kiválasztott könyvtárban."
+    }
+  ],
+  "YTNPFn": [
+    {
+      "type": 0,
+      "value": "A JWT titkos kód beállítására vonatkozó utasítások a klienstől függően változnak – a csomópontok üzemeltetőinek a kliensek dokumentációjából kell tájékozódniuk arról, hogy miként kell ezeket a titkos kódokat létrehozni és konfigurálni."
+    }
+  ],
+  "YX6pc0": [
+    {
+      "type": 0,
+      "value": "A(z) "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " kliens "
+    },
+    {
+      "type": 1,
+      "value": "layerType"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Yd6MEN": [
+    {
+      "type": 0,
+      "value": "Végrehajtásos kliensek"
+    }
+  ],
+  "Yep32z": [
+    {
+      "type": 1,
+      "value": "EL_TESTNET_NAME"
+    },
+    {
+      "type": 0,
+      "value": " tesztnet"
     }
   ],
   "Yganfl": [
@@ -3367,18 +4361,18 @@
       "value": "Miért van várakozás?"
     }
   ],
-  "ZlLjuq": [
+  "ZdT9Bs": [
     {
       "type": 0,
-      "value": "Kérjük, ügyelj arra, hogy amikor a rendszer hálózat választására kér, a következő lehetőséget válaszd: "
+      "value": "Validátorod a blokkokra vonatkozó javaslattételkor a fel nem használt üzemanyag díját is megkapja. A validátorokat a protokoll véletlenszerűen választja ki, hogy blokkokat javasoljanak, és minden 12 másodperces slotra csak egy validátor javasolhat blokkot. Minden napra 7200 slot áll rendelkezésre, így minden validátornak naponta 7200 alkalma van blokkot javasolni. Ha 360 000 validátor van, akkor minden validátor "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "átlagosan"
     },
     {
       "type": 0,
-      "value": ", mert különben a befizetés érvénytelen lesz."
+      "value": " 50 naponta tesz egy blokkjavaslatot."
     }
   ],
   "ZsXdlw": [
@@ -3391,12 +4385,6 @@
     {
       "type": 0,
       "value": "1. szakasz - Mielőtt elkezdenéd"
-    }
-  ],
-  "Zxm0fh": [
-    {
-      "type": 0,
-      "value": "Az egyesítés során a ma használt Ethereum főhálózat egyesül a Beacon Chainnel. Ekkor lesz teljes az Ethereum átállása a proof-of-stake-re."
     }
   ],
   "ZzTcj5": [
@@ -3435,24 +4423,16 @@
       "value": "A Nimbus Apache 2-licenccel rendelkezik, és Nim nyelven íródott, amely egy Python-szerű szintaxissal rendelkező nyelv, amely C nyelvre fordít."
     }
   ],
-  "aZ7pUj": [
-    {
-      "type": 0,
-      "value": "A pénztárcád rossz Ethereum hálózaton van. A folytatáshoz csatlakozz a(z) "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": " hálózathoz."
-    }
-  ],
   "acrOoz": [
     {
       "type": 0,
       "value": "Folytatás"
+    }
+  ],
+  "aozN2h": [
+    {
+      "type": 0,
+      "value": "Az ennek beállításával kapcsolatos kliensspecifikus utasítások a konszenzusos kliensre vonatkozó dokumentációban találhatók."
     }
   ],
   "azLmaD": [
@@ -3517,10 +4497,36 @@
       "value": "Ügyelj arra, hogy elegendő hely legyen a meghajtódon, amíg karbantartást nem futtatsz a csomópontodon."
     }
   ],
+  "bX1fts": [
+    {
+      "type": 0,
+      "value": "Ellenőrzőlista az egyesülésre való alkalmasság megállapításához"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
       "value": "A YAML-fájlok különböző szintaxisokkal rendelkezhetnek."
+    }
+  ],
+  "be6WvD": [
+    {
+      "type": 0,
+      "value": "A(z) "
+    },
+    {
+      "type": 1,
+      "value": "nodeOperator"
+    },
+    {
+      "type": 0,
+      "value": " az arról gondoskodó emberi lény, hogy a kliens szoftver megfelelően fusson, és szükség szerint karbantartja a hardvert."
+    }
+  ],
+  "bgyJfz": [
+    {
+      "type": 0,
+      "value": "Milyen klienseket kell futtatnom?"
     }
   ],
   "bnuvhg": [
@@ -3535,10 +4541,10 @@
       "value": "Python telepítési útmutató"
     }
   ],
-  "c9DSZ1": [
+  "by+LIm": [
     {
       "type": 0,
-      "value": "Erősen javasoljuk, hogy ezeket a lépéseket először az aktuális teszthálózaton végezd el, a főhálózat használata előtt."
+      "value": "Mi az a validátori kliens?"
     }
   ],
   "cHUoV9": [
@@ -3565,6 +4571,12 @@
       "value": "Aktuális THM"
     }
   ],
+  "cUvpWk": [
+    {
+      "type": 0,
+      "value": "További információ az adatshardingról"
+    }
+  ],
   "cav520": [
     {
       "type": 0,
@@ -3583,12 +4595,6 @@
       "value": "További információ a PegaSys Tekuról"
     }
   ],
-  "ckaUkz": [
-    {
-      "type": 0,
-      "value": "A validátor egy olyan entitás, amely részt vesz az Ethereum-protokoll konszenzusában."
-    }
-  ],
   "clUb0+": [
     {
       "type": 0,
@@ -3601,10 +4607,28 @@
       "value": "Mennyi büntetést kapok azért, ha rosszindulatúan viselkedem?"
     }
   ],
+  "cnQKC2": [
+    {
+      "type": 0,
+      "value": "Jelenleg a hálózat több mint 66%-a használja a geth-et."
+    }
+  ],
   "cpxfOR": [
     {
       "type": 0,
       "value": "Mik azok a kivételi hitelesítő adatok?"
+    }
+  ],
+  "cwYSyN": [
+    {
+      "type": 0,
+      "value": "3. feladat"
+    }
+  ],
+  "cyNFM3": [
+    {
+      "type": 0,
+      "value": "A letét felvétele nem lesz lehetséges az egyesülés utánra tervezett Shanghai-frissítésig."
     }
   ],
   "cyR7Kh": [
@@ -3635,6 +4659,12 @@
       "value": ": az érvényes kivételek célhelyének ellenőrzésére szolgáló, 32 bájtos mező a befizetésnél. Jelenleg kétféle kivétel létezik: BLS-kivétel és Ethereum-címre történő kivétel."
     }
   ],
+  "dGWdPu": [
+    {
+      "type": 0,
+      "value": "Minden letétbe helyező köteles az egyesüléstől kezdődően végrehajtásos klienst, valamint konszenzusos klienst működtetni. Ügyelj arra, hogy felkészült legyél."
+    }
+  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -3659,20 +4689,16 @@
       "value": "Mi is pontosan a validátor?"
     }
   ],
-  "dNh0YZ": [
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " napjával kezdődően ~400 GB-ra lesz szükséged csak a főhálózat végrehajtási láncon lévő adatokhoz (ami ~1 GB-tal növekszik naponta)."
-    }
-  ],
   "dTOtPO": [
     {
       "type": 0,
       "value": "Feltöltés"
+    }
+  ],
+  "da/gCQ": [
+    {
+      "type": 0,
+      "value": "2. feladat"
     }
   ],
   "deLJOg": [
@@ -3685,6 +4711,12 @@
     {
       "type": 0,
       "value": "Hol találok hibaelhárítási támogatást?"
+    }
+  ],
+  "dsQVUw": [
+    {
+      "type": 0,
+      "value": "A Nimbus-könyv"
     }
   ],
   "dvr19k": [
@@ -3703,6 +4735,12 @@
     {
       "type": 0,
       "value": "Töltse fel a letéti adatokat"
+    }
+  ],
+  "e1dCqL": [
+    {
+      "type": 0,
+      "value": "A Shanghai-frissítés tervezésével kapcsolatos probléma a GitHubon"
     }
   ],
   "e4f94H": [
@@ -3731,6 +4769,16 @@
       "value": "code3"
     }
   ],
+  "e4wHN4": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " letétbe helyezési Indítópult"
+    }
+  ],
   "eF9RbC": [
     {
       "type": 0,
@@ -3755,16 +4803,16 @@
       "value": "Meghatározza, hogy ki helyez letétbe, ki érvényesít, mennyi letét lett letétbe helyezve, és ki veheti ki a pénzeszközöket."
     }
   ],
+  "eX072N": [
+    {
+      "type": 0,
+      "value": "Az Erigon egy Go nyelven írt végrehajtásos kliens a hatékonyságfrontieren."
+    }
+  ],
   "eaU/aL": [
     {
       "type": 0,
       "value": "A csomópontod biztonságának és hatékonyságának maximalizálása érdekében használj megfelelő hardvert a klienseid futtatásához. Ez csökkenti a rosszindulatú programoknak való kitettség kockázatát, és minimálisra csökkenti a versenyt a számítási erőforrásokért, biztosítva ezzel, hogy a csomópontod mindig képes kezelni a hálózati terhelést, és hogy a validátora ellátja a feladatait."
-    }
-  ],
-  "egVO5r": [
-    {
-      "type": 0,
-      "value": "Bővebben a shardláncokról"
     }
   ],
   "elCkOU": [
@@ -3835,6 +4883,26 @@
       "value": "Mi történik, ha elveszítem az aláírókulcsomat?"
     }
   ],
+  "fBCdim": [
+    {
+      "type": 0,
+      "value": "Korábban a beaconcsomópontnak (konszenzusos réteg) csak a letétbe helyezési szerződést kellett figyelnie a végrehajtási rétegben ahhoz, hogy tudja, mely validátorszámlák helyeztek letétbe "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH-t. Ezt az információt könnyen megjelenítették olyan harmadik fél szolgáltatók (és beszerezhetők voltak olyan harmadik fél szolgáltatóktól), mint az Infura vagy az Alchemy."
+    }
+  ],
+  "fDY/uQ": [
+    {
+      "type": 0,
+      "value": "Teku – Az egyesülés"
+    }
+  ],
   "fHLKXR": [
     {
       "type": 0,
@@ -3851,6 +4919,12 @@
     {
       "type": 0,
       "value": "A beállítás során"
+    }
+  ],
+  "fZwn+P": [
+    {
+      "type": 0,
+      "value": "A klienstelepítés után győződj meg arról, hogy teljesen szinkronizálva vagy, mielőtt elküldenéd a letétbe helyezést. Ez több napot is igénybe vehet."
     }
   ],
   "fbiteI": [
@@ -3945,6 +5019,28 @@
       "value": "IGEN"
     }
   ],
+  "grF2gm": [
+    {
+      "type": 0,
+      "value": "Minden egyes validátorhoz kapcsolódó kulcspár aktiválásához az "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": " lezárása szükséges, amely a kezdeti egyenlegedet, valamint az "
+    },
+    {
+      "type": 1,
+      "value": "initialAndMaximum"
+    },
+    {
+      "type": 0,
+      "value": " szavazati súlyát jelenti bármely validátor esetében."
+    }
+  ],
   "gsuLMm": [
     {
       "type": 0,
@@ -3993,24 +5089,16 @@
       "value": "óra"
     }
   ],
+  "h/n5+N": [
+    {
+      "type": 0,
+      "value": "Letétbe helyezőként csomópontot kell fenntartanod és üzemeltetned, ahol egy konszenzusos kliens ÉS egy végrehajtásos kliens egyaránt fut."
+    }
+  ],
   "h8MTUo": [
     {
       "type": 0,
       "value": "A letéted"
-    }
-  ],
-  "h8ZHus": [
-    {
-      "type": 0,
-      "value": "A validátorok közötti pénzátutalás még nem lehetséges. Meg kell várnod, amíg a főhálózat összeolvad a Beacon Chainnel (körülbelül két év), mielőtt kiveheted vagy átutalhatod a következőt: "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "hFzE1M": [
@@ -4023,6 +5111,12 @@
     {
       "type": 0,
       "value": "Csak asztali számítógépen"
+    }
+  ],
+  "hICY9k": [
+    {
+      "type": 0,
+      "value": "Megadtam a validátoromnak azt az Ethereum-címet, ahová szeretném, ha a díjjutalmaimat befizetnék."
     }
   ],
   "hPCn9f": [
@@ -4065,6 +5159,20 @@
       "value": "Bővebben a hatékony egyenlegről"
     }
   ],
+  "hlxt3T": [
+    {
+      "type": 0,
+      "value": "A maximális letét validátoronkénti "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH-ra korlátozása a hatalom decentralizálását ösztönzi, mivel megakadályozza, hogy egyetlen validátornak túl nagy súlyú szavazati joga legyen a lánc állapotáról. Emellett korlátozza a letétből bármikor kiléptethető ETH mennyiségét is, mivel az adott időszakban kilépő validátorok száma korlátozott. Ez segít megvédeni a hálózatot bizonyos támadások ellen."
+    }
+  ],
   "huEFUF": [
     {
       "type": 0,
@@ -4079,10 +5187,22 @@
       "value": " befizetendő letéted"
     }
   ],
+  "hwkLRc": [
+    {
+      "type": 0,
+      "value": "csomópont-operátor"
+    }
+  ],
   "hzLd+/": [
     {
       "type": 0,
       "value": "Megértettem, hogy fontos, hogy a validátorom online és naprakész legyen."
+    }
+  ],
+  "hzX7K4": [
+    {
+      "type": 0,
+      "value": "1. feladat"
     }
   ],
   "iCpuph": [
@@ -4103,26 +5223,10 @@
       "value": "Mivel az átutalások egyelőre nem lehetségesek, nem léphetsz ki önkéntesen, majd később újra vissza. Ez azt jelenti, hogy hosszú távon kell részt venned."
     }
   ],
-  "iWg7mL": [
+  "iX90gu": [
     {
       "type": 0,
-      "value": "Kérjük, győződj meg róla, hogy beállítottad a "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " értéket a "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " számára, különben a befizetés érvénytelen lesz."
+      "value": "Csatlakoztam a végrehajtásos kliensem Discord-szerveréhez."
     }
   ],
   "iZuIgB": [
@@ -4197,10 +5301,18 @@
       "value": "A korábban Artemis néven ismert Teku egy konszenzusos kliens, amelyet az intézményi igények és biztonsági követelmények kielégítését szem előtt tartva fejlesztettek ki. A PegaSys a ConsenSys egyik ága, amely vállalati használatra kész kliensek és eszközök létrehozására szolgál az Ethereum alapfelületével való interakcióhoz."
     }
   ],
-  "jDv/zO": [
+  "jQTc9t": [
     {
       "type": 0,
-      "value": "A teszthálózaton történő validálás során hajtsd végre ezeket a szimulációkat, hogy többet megtudj a csomópontodról, és jobban felkészülj a főhálózatra:"
+      "value": "Ide látogatva megkaphatod a legfrissebb információkat arról, hogy miként vehetsz részt a(z) "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": " segítségével más nyilvános tesztneteken, amint a részletek kibontakoznak."
     }
   ],
   "jXer8/": [
@@ -4239,10 +5351,30 @@
       "value": "Prysm telepítési dokumentáció"
     }
   ],
+  "jlx7pU": [
+    {
+      "type": 0,
+      "value": "Dokumentáció a geth futtatásáról"
+    }
+  ],
   "jm79h1": [
     {
       "type": 0,
       "value": "Figyelmeztetés: Ne tárolj kulcsokat egyszerre több (biztonsági tartalék) validátoron"
+    }
+  ],
+  "jp9OG2": [
+    {
+      "type": 0,
+      "value": "Válassz "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": "-klienst"
     }
   ],
   "jse8rl": [
@@ -4261,6 +5393,20 @@
     {
       "type": 0,
       "value": "Nimbus-dokumentáció"
+    }
+  ],
+  "jzGCBy": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": "-csapokkal visszaéltek, és a csapok korlátozottak, de az EthStaker emberei mindent megtesznek, hogy segítsenek neked"
     }
   ],
   "k43c+l": [
@@ -4345,6 +5491,16 @@
     {
       "type": 0,
       "value": "A teszthálózaton vagy"
+    }
+  ],
+  "l3ztMu": [
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " napjával kezdődően kb. 1 TB-ra lesz szükséged csak egyedül a főhálózat végrehajtási láncon lévő adatokhoz (ami több mint 1 GB-tal növekszik naponta)."
     }
   ],
   "l4nLft": [
@@ -4515,6 +5671,20 @@
       "value": "Ez egy nem visszafordítható tranzakció."
     }
   ],
+  "lmr40S": [
+    {
+      "type": 0,
+      "value": "A kommunikáció egy "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": " titkos kód segítségével van biztosítva, amely egy titkos kulcs, melyet csak a két kliens oszt meg egymással egymás hitelesítéséhez. Ezt a megosztott JWT titkos kódot minden kliens (EL és CL egyaránt) számára elérhetővé kell tenni az Engine API megfelelő hitelesítéséhez, lehetővé téve számukra az egymás közötti megfelelő kommunikációt."
+    }
+  ],
   "lo+Qqn": [
     {
       "type": 0,
@@ -4533,10 +5703,36 @@
       "value": "Merevlemez"
     }
   ],
+  "mUZnem": [
+    {
+      "type": 0,
+      "value": "Határozottan javasoljuk, hogy először próbáld végig az egész folyamatot egy tesztneten, hogy a valódi ETH kockáztatása előtt magabiztossá válj."
+    }
+  ],
   "mZOXtM": [
     {
       "type": 0,
       "value": "Validátorok"
+    }
+  ],
+  "mc27Pv": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "validátor"
+    },
+    {
+      "type": 0,
+      "value": " validátor egy virtuális entitás, amely a Beacon Chainen él, egy egyenleg, egy publikus kulcs és egyéb tulajdonságok által reprezentálva, és részt vesz az Ethereum-hálózat konszenzusában."
+    }
+  ],
+  "mcQpea": [
+    {
+      "type": 0,
+      "value": "Minden, ami a hálózat használatának megkezdéséhez szükséges, beleértve a csapot is"
     }
   ],
   "mhyltV": [
@@ -4555,12 +5751,6 @@
     {
       "type": 0,
       "value": "Kockázatok és tudomásulvétel:"
-    }
-  ],
-  "n7yYXG": [
-    {
-      "type": 0,
-      "value": "Szolgáltatás"
     }
   ],
   "nBhisA": [
@@ -4645,6 +5835,34 @@
       "value": "Fejlett rendszerfelépítés"
     }
   ],
+  "nwgrRp": [
+    {
+      "type": 0,
+      "value": "Letétbe helyezési Indítópult "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": "-tesztnethez"
+    }
+  ],
+  "nyx/4g": [
+    {
+      "type": 0,
+      "value": "Hogyan futtass csomópontot "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " hálózaton"
+    }
+  ],
   "nz27+c": [
     {
       "type": 0,
@@ -4673,6 +5891,12 @@
       "value": "Mielőtt belevágnál"
     }
   ],
+  "oF4os+": [
+    {
+      "type": 0,
+      "value": "Jelenleg a hálózat több mint 33%-a használja a Prysmet."
+    }
+  ],
   "oLxfO1": [
     {
       "type": 0,
@@ -4685,24 +5909,16 @@
       "value": "Konfiguráld a konszenzusos kliensedet"
     }
   ],
-  "oPdwwC": [
-    {
-      "type": 0,
-      "value": "A maximális ETH-letét ("
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": ") megszabása elősegíti a hatalom decentralizálását, mivel megakadályozza, hogy egyetlen validátor túlzottan nagy szavazatot kapjon a lánc állapotát illetően."
-    }
-  ],
   "oWhj8Q": [
     {
       "type": 0,
       "value": "Milyen gyakran kerülnek kiosztásra a jutalmak/büntetések?"
+    }
+  ],
+  "obp8vV": [
+    {
+      "type": 0,
+      "value": "Dokumentáció a Besu futtatásáról"
     }
   ],
   "ogbG7r": [
@@ -4733,6 +5949,20 @@
       "value": "Kötelezettségek"
     }
   ],
+  "olByWa": [
+    {
+      "type": 0,
+      "value": "Amíg a főhálózat proof-of-stake-re való átállására várunk, a letétbe helyezőket arra bátorítjuk, hogy vegyenek részt az egyesülés tesztelésében ("
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": "). Ez egy nagyszerű módja annak, hogy többet is megtudj az egyesülésről, gyakorolj a rajta való átmeneten a főhálózat előtt, és megteremtsd a konfigurációd iránti bizalmat."
+    }
+  ],
   "omJNJw": [
     {
       "type": 0,
@@ -4755,6 +5985,12 @@
     {
       "type": 0,
       "value": "Nagy a szerződés egyenlege?"
+    }
+  ],
+  "ouMFoC": [
+    {
+      "type": 0,
+      "value": "Végezd el most"
     }
   ],
   "ouW9ov": [
@@ -4855,10 +6091,30 @@
       "value": "Szimuláltam, hogy hogyan kell a Beacon-csomópontomat (BN) és a validátorkliensemet (VC) manuálisan leállítani és újraindítani."
     }
   ],
+  "pxfiWL": [
+    {
+      "type": 0,
+      "value": "A(z) "
+    },
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " egy fiatalabb nyilvános tesztnet, amely a 2022 márciusában végrehajtott sikeres egyesülési frissítés után már átesett a proof-of-stake-re való átmeneten. A Kiln bárki számára nyitva áll, hogy interakcióba lépjen vele. Próbálkozz azzal, hogy némi ETH-t küldesz, interakcióba lépsz néhány szerződéssel, vagy hogy telepíted a sajátodat."
+    }
+  ],
   "pyWt01": [
     {
       "type": 0,
       "value": "Letéti összefoglaló"
+    }
+  ],
+  "q2PJEK": [
+    {
+      "type": 0,
+      "value": "A saját konszenzusos kliensemet futtatom."
     }
   ],
   "q2XW/k": [
@@ -4873,12 +6129,6 @@
       "value": "Mi történt az „Eth2”-vel?"
     }
   ],
-  "qDcbPp": [
-    {
-      "type": 0,
-      "value": "A 16 ETH-t ezután körülbelül egynapos késleltetéssel lehet kivenni – a kivételi kulccsal."
-    }
-  ],
   "qDvaNm": [
     {
       "type": 0,
@@ -4891,6 +6141,20 @@
     {
       "type": 0,
       "value": " arra, hogy kivegyem a pénzemet."
+    }
+  ],
+  "qEsYC0": [
+    {
+      "type": 0,
+      "value": "Megtekintheted a GitHub for "
+    },
+    {
+      "type": 1,
+      "value": "allConfigs"
+    },
+    {
+      "type": 0,
+      "value": " verziót is."
     }
   ],
   "qK4+NQ": [
@@ -4941,10 +6205,22 @@
       "value": "Megértettem a korai részvétellel és a slashinggel járó kockázatokat."
     }
   ],
+  "qx+3RQ": [
+    {
+      "type": 0,
+      "value": "JWT"
+    }
+  ],
   "r2BH1M": [
     {
       "type": 0,
       "value": "A Prysm konfigurálása"
+    }
+  ],
+  "r2j8jL": [
+    {
+      "type": 0,
+      "value": "validátorkliens"
     }
   ],
   "r4JsKB": [
@@ -4959,12 +6235,6 @@
       "value": "Adathalászati útmutató"
     }
   ],
-  "rFe61n": [
-    {
-      "type": 0,
-      "value": "Validátorként felelős leszel a hálózat biztosításáért, és folyamatos kifizetéseket kapsz azokért a műveletekért, amelyek segítik a hálózat konszenzusának elérését."
-    }
-  ],
   "rMjMmc": [
     {
       "type": 1,
@@ -4973,12 +6243,6 @@
     {
       "type": 0,
       "value": " használatával csatlakoztasd a konszenzusos csomópontodat a JSON RPC-végponthoz. Ez engedélyezi a JSON RPC-szolgáltatásokat az alapértelmezett 8545-ös porton."
-    }
-  ],
-  "rNEdex": [
-    {
-      "type": 0,
-      "value": "az érvényesítőre új blokkok szavazójaként gondolhatsz"
     }
   ],
   "rTSJI9": [
@@ -5009,6 +6273,20 @@
     {
       "type": 0,
       "value": "Az összes validátor rögzített száma miatt a jutalmak/büntetések többnyire a validátor egyenlegével arányosak – a magasabb egyenleggel való validálás nagyobb jutalmat/büntetést eredményez, míg az alacsonyabb egyenleggel történő validálás alacsonyabb jutalmat/büntetést eredményez."
+    }
+  ],
+  "rgjQYI": [
+    {
+      "type": 0,
+      "value": "Az egyesülésre való alkalmasság: a konszenzusos kliens mellett az egyesülési csomópont után az operátoroknak "
+    },
+    {
+      "type": 1,
+      "value": "alternateClient"
+    },
+    {
+      "type": 0,
+      "value": " klienst is futtatniuk kell, hogy aktívak maradjanak."
     }
   ],
   "rnDgcN": [
@@ -5093,18 +6371,24 @@
       "value": "CPU és RAM"
     }
   ],
-  "sdQRah": [
+  "saDFoR": [
     {
       "type": 0,
-      "value": "Szinkronizáltam a beaconcsomópontomat ezen a hálózaton: "
+      "value": "Bónusz"
+    }
+  ],
+  "scfDDt": [
+    {
+      "type": 0,
+      "value": "A végrehajtásos réteg és a konszenzusos réteg közötti kommunikáció a(z) "
     },
     {
       "type": 1,
-      "value": "NETWORK_NAME"
+      "value": "engineApi"
     },
     {
       "type": 0,
-      "value": "."
+      "value": " segítségével történik. Ez egy új JSON RPC-metóduskészlet, amely a két kliensréteg közötti kommunikációra használható."
     }
   ],
   "sj/Zef": [
@@ -5187,18 +6471,10 @@
       "value": "A feltöltés utáni egyenleg"
     }
   ],
-  "toCscK": [
+  "tp1IPS": [
     {
       "type": 0,
-      "value": "Válaszd ki "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": "-kliensedet, és állíts be egy csomópontot"
+      "value": "A díj kedvezményezettjének konfigurálása"
     }
   ],
   "tsfX5f": [
@@ -5237,6 +6513,20 @@
       "value": "Állapot"
     }
   ],
+  "u/3saa": [
+    {
+      "type": 0,
+      "value": "A tárcád rossz Ethereum-hálózaton van. A folytatáshoz csatlakozz a következőhöz: "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "u28qA1": [
     {
       "type": 0,
@@ -5255,18 +6545,10 @@
       "value": "Üzemidő"
     }
   ],
-  "uCikFk": [
+  "uGKswV": [
     {
       "type": 0,
-      "value": "Szükséged van elegendő feltöltési sávszélességre is. "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " után ez ~700–800 MB/óra, és valószínűleg növekedni fog."
+      "value": "Az egyesülés után az Ethereum-csomópontokat egy végrehajtásos kliens és egy konszenzusos kliens alkotja majd."
     }
   ],
   "uJzGSb": [
@@ -5289,6 +6571,12 @@
     {
       "type": 0,
       "value": "Validátor-ellenőrző lista"
+    }
+  ],
+  "uUy3NQ": [
+    {
+      "type": 0,
+      "value": "Tudomásul veszem, hogy az el nem égetett tranzakciós díjakat (támogatások/prioritási díjak) akkor kapom meg, amikor blokkot javaslok, és ez a végrehajtási rétegben kerül elszámolásra, nem pedig a validátori egyenlegemen."
     }
   ],
   "ubKWX8": [
@@ -5331,18 +6619,16 @@
       "value": "Legyél validátor a Nimbus segítségével"
     }
   ],
-  "unzIoE": [
+  "ulgIVs": [
     {
       "type": 0,
-      "value": "Mielőtt futtatsz egy validátort, és elkezded biztosítani a hálózatot, letétetbe kell helyezned "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
+      "value": "Az egyesülés után a továbbiakban nem lesz két különálló Ethereum hálózat; csak az Ethereum lesz majd."
+    }
+  ],
+  "uoKhQB": [
     {
       "type": 0,
-      "value": " ETH-t. Ez képezi a kezdeti egyenlegedet."
+      "value": "Hitelesítés API"
     }
   ],
   "up+5YH": [
@@ -5357,6 +6643,12 @@
     {
       "type": 0,
       "value": " letétek?"
+    }
+  ],
+  "vBJ79e": [
+    {
+      "type": 0,
+      "value": "Szimuláltam, hogyan lehet biztonságosan migrálni egyik végrehajtásos kliensről a másikra."
     }
   ],
   "vBOf5K": [
@@ -5417,12 +6709,6 @@
       "value": "Kínai (egyszerűsített)"
     }
   ],
-  "va96SS": [
-    {
-      "type": 0,
-      "value": "A szükséges portokat átirányítottam a megfelelő gép(ek)re a routeremről (csak azokat a portokat nyisd meg, amelyek a te telepítésedre vonatkoznak)."
-    }
-  ],
   "vbVsqW": [
     {
       "type": 0,
@@ -5437,36 +6723,28 @@
       "value": " pontjain, és csatlakozz az EthStaker-közösséghez segítségért és a többi validátorral való csevegésért."
     }
   ],
+  "vej0DE": [
+    {
+      "type": 0,
+      "value": "Ma biztosítani fogod a Beacon Chaint, az első fő skálázási frissítést. Ez egy különálló lánc, amely proof-of-stake konszenzusmechanizmust használ. A közeljövőben az egész Ethereum működésének biztosításában fogsz segíteni, amint a főhálózat (az Ethereum, ahogy ma mondjuk) egybeolvad a Beacon Chainnel."
+    }
+  ],
   "vg1dVR": [
     {
       "type": 0,
       "value": "Az aláírókulcsoddal megpróbálhatsz gyorsan kilépni a validátorodból, majd a pénzeszközöket átutalni – a kivételi kulccsal –, megelőzve a tolvajt."
     }
   ],
-  "vkozFq": [
-    {
-      "type": 0,
-      "value": "Nincs arra mód, hogy újraaktiváld a validátorodat, és az egyesítés utáni tisztítási frissítésig nem tudod átutalni vagy kivenni a pénzeszközeidet, amire a jelenlegi tervek szerint az egyesítést követően kerül majd sor (ez azt jelenti, hogy pénzeszközeid addig elérhetetlenek lesznek)."
-    }
-  ],
-  "vyvUB5": [
-    {
-      "type": 0,
-      "value": "Ez a JSON-fájl nem a megfelelő hálózathoz való. Töltsd fel az aktuális hálózatodhoz létrehozott fájlt: "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Futtasd a következő parancsot az alkalmazás elindításához"
+    }
+  ],
+  "wHvmSN": [
+    {
+      "type": 0,
+      "value": "mindkettő"
     }
   ],
   "wJ1PbL": [
@@ -5483,6 +6761,12 @@
     {
       "type": 0,
       "value": "Kezdeti beállítás"
+    }
+  ],
+  "wPR6Js": [
+    {
+      "type": 0,
+      "value": "A váltás előtt van néhány dolog, amivel a szóló letétbe helyezőknek és a validátorszolgáltatásoknak tisztában kell lenniük, és van néhány feladat, amit esetleg el kell végezniük."
     }
   ],
   "wawegX": [
@@ -5503,14 +6787,10 @@
       "value": "További információ a letéti bizonyítékról"
     }
   ],
-  "wfSgCZ": [
+  "wea8Ie": [
     {
       "type": 0,
-      "value": "Csatlakozás a hálózathoz: "
-    },
-    {
-      "type": 1,
-      "value": "network"
+      "value": "A végrehajtásos és a konszenzusos rétegek szorosan együttműködnek, és hitelesítést igényelnek, hogy biztonságosak maradhassanak."
     }
   ],
   "wm04oC": [
@@ -5525,32 +6805,16 @@
       "value": "A korai adoptálás kockázata"
     }
   ],
-  "wrnpoO": [
-    {
-      "type": 0,
-      "value": "A végrehajtási rétegről (korábban „Eth1” lánc) érkező validátorletétek feldolgozásához egy "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": "- és egy "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": "-klienst (korábban „Eth2”) is futtatnod kell. Használhatsz harmadik féltől származó szolgáltatást, például az Infurát, de azt javasoljuk, hogy inkább a saját kliensedet futtasd, hogy a hálózat a lehető leginkább decentralizált legyen."
-    }
-  ],
   "wtTeex": [
     {
       "type": 0,
       "value": "Vannak helyesírási hibák?"
+    }
+  ],
+  "wuhO1L": [
+    {
+      "type": 0,
+      "value": "A saját végrehajtásos kliensemet futtatom."
     }
   ],
   "x+fF+M": [
@@ -5565,10 +6829,10 @@
       "value": "Az Ethereumban történő validálás nem ugyanaz, mint a bányászat. Az eredmények hasonlóak: az általad végzett munka növeli és biztosítja a láncot, de a folyamat teljesen más, mert különböző konszenzusmechanizmust használnak."
     }
   ],
-  "x8+8fi": [
+  "x4/9vY": [
     {
       "type": 0,
-      "value": "Jelenleg a validátorok többsége a Prysm klienst futtatja konszenzusos kliensként. A kliensdiverzitás rendkívül fontos az Ethereum hálózat állapota szempontjából: egy több mint 33%-ban előforduló hiba a kliensben az Ethereum offline állapotba kapcsolását eredményezheti. Ha a kliens túlnyomó többséggel rendelkezik (>66%), a hiba a lánc nem megfelelő kettéosztását okozhatja, ami lehetséges slashinghez vezethet."
+      "value": "Erősen javasoljuk, hogy ezeket a lépéseket először az aktuális tesztneten végezd el, a főhálózat használata előtt."
     }
   ],
   "xDyl3T": [
@@ -5609,10 +6873,42 @@
       "value": "A blokkjutalmakat csúszóskála segítségével számítják ki a hálózaton letétbe helyezett ETH teljes mennyisége alapján."
     }
   ],
+  "xXKkhR": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " hálózaton telepítettem és szinkronizáltam a végrehajtásos kliensemet (ne várj erre, mert több napig is eltarthat)."
+    }
+  ],
   "xXWzDf": [
     {
       "type": 0,
       "value": "A Beacon Chain"
+    }
+  ],
+  "xXntjc": [
+    {
+      "type": 0,
+      "value": "Kérjük, győződj meg arról, hogy a(z) "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": " esetében a(z) "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " be van állítva, különben a befizetés érvénytelen lesz."
     }
   ],
   "xbet2w": [
@@ -5621,10 +6917,40 @@
       "value": "A python3.7+ telepítése"
     }
   ],
+  "xm3Ivd": [
+    {
+      "type": 0,
+      "value": "Ez a JSON-fájl nem a megfelelő hálózathoz való. Tölts fel az aktuális hálózatodhoz létrehozott fájlt: "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "xogY3N": [
     {
       "type": 0,
       "value": "A Besu a Java nyelven íródott, és Apache 2.0-licenc alatt jelent meg."
+    }
+  ],
+  "xxbUJa": [
+    {
+      "type": 0,
+      "value": "Végrehajtásos kliensek: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "xyMh/n": [
+    {
+      "type": 0,
+      "value": "Megaméretű egyesülési erőforráslista"
     }
   ],
   "y44jV2": [
@@ -5639,10 +6965,10 @@
       "value": "Állítsd be az időszinkronizálást"
     }
   ],
-  "y7dWNc": [
+  "y86+cK": [
     {
       "type": 0,
-      "value": "Fontos, hogy a validátor szavazatát a letétének összege súlyozza."
+      "value": "Mi az a csomópont-operátor?"
     }
   ],
   "yFtJza": [
@@ -5663,18 +6989,10 @@
       "value": "Biztonságban tartom a kulcsaimat, és leírtam a mnemonikus emlékeztetőmet."
     }
   ],
-  "yT2EZO": [
+  "yaf+Vw": [
     {
       "type": 0,
-      "value": "Más szóval: "
-    },
-    {
-      "type": 1,
-      "value": "boldSummary"
-    },
-    {
-      "type": 0,
-      "value": ". Minél több szavazatot kap egy blokk, annál valószínűbb, hogy felkerül a láncba."
+      "value": "Az EL-kliens és a CL-kliens közötti kétirányú kommunikáció JWT titkos kódot igényel a hitelesítéshez, és ez elengedhetetlen a csomópont működéséhez."
     }
   ],
   "ydh1KU": [
@@ -5713,26 +7031,26 @@
       "value": "Győződj meg arról, hogy a csomópontodnak több mint 20 társa van."
     }
   ],
-  "z/ZhML": [
+  "z/ToMo": [
     {
       "type": 0,
-      "value": "Győződj meg róla, hogy be van állítva a "
+      "value": "Amint az egyesülésen keresztül megvalósul a proof-of-stake-re való áttérés, a tranzakciók feldolgozásáért és érvényességük ellenőrzéséért a validátorok lesznek felelősek. Ezek az adatok "
     },
     {
       "type": 1,
-      "value": "flag"
+      "value": "nem"
     },
     {
       "type": 0,
-      "value": " a hálzató ("
+      "value": " lesznek elérhetők a népszerű harmadik féltől származó forrásokból az egyesülés után, ami azt eredményezi, hogy a validátorod offline lesz. Az adatsharding megvalósításakor a validátorok is ki lesznek téve a slashinggel járó kockázatoknak a(z) "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "pocGame"
     },
     {
       "type": 0,
-      "value": ") számára, különben a befizetés érvénytelen lesz."
+      "value": " alapján."
     }
   ],
   "z63I56": [
@@ -5793,18 +7111,16 @@
       "value": "Csomóponti biztonság"
     }
   ],
-  "zmMF+G": [
+  "zkT9Jx": [
     {
       "type": 0,
-      "value": "Letétbe helyezési Indítópult "
-    },
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
+      "value": "Segítünk minden általad futtatni kívánt validátorhoz aláírókulcsot létrehozni. Mivel az egyesülést követő Shanghai-frissítésig nincs pénzkivétel, ezért a kivételi kulcsaidat nem most fogod létrehozni. Amikor lehetséges lesz a pénzkivétel, a mnemonikus emlékeztetődből hozzájuthatsz a kivételi kulcsaidhoz."
+    }
+  ],
+  "zqOrZZ": [
     {
       "type": 0,
-      "value": "-tesztnethez"
+      "value": "Tekintsd át az egyesülésre való alkalmasság megállapítására szolgáló ellenőrzőlistát"
     }
   ]
 }

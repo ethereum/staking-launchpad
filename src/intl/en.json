@@ -833,9 +833,6 @@
     "description": "{http} shows '-rpc-http-enabled' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
   },
-  "HbCJso": {
-    "message": "Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a few days of {ttdDateTime}, depending on hash rate (follow {link} for latest estimate)."
-  },
   "Hczrvs": {
     "message": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
   },
@@ -1043,9 +1040,6 @@
   "MIsmjW": {
     "message": "Connect new wallet"
   },
-  "MKMIUm": {
-    "message": "Public testnet progress is underway. When everything is safe and ready, the core developer teams will make this known, so stay tuned to the {blogLink} or other client team communication channels for the latest information."
-  },
   "MQTBvH": {
     "message": "Protect yourself against double deposits"
   },
@@ -1190,9 +1184,6 @@
   },
   "P9mVZK": {
     "message": "Your network has changed"
-  },
-  "Pd0hC/": {
-    "message": "Ethereum Foundation Blog"
   },
   "PfoT0C": {
     "message": "This checklist will help you understand the role of a validator and prepare you for the role."
@@ -1804,6 +1795,9 @@
   "dJMce5": {
     "message": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
   },
+  "dM+izw": {
+    "message": "Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD between {ttdDateLow} and {ttdDateHigh}, depending on hash rate (follow {linkBordel} and {link797} for latest estimates)."
+  },
   "dM/KIM": {
     "message": "What exactly is a validator?"
   },
@@ -2342,6 +2336,9 @@
   },
   "pA+UVF": {
     "message": "If you'd like to see the launchpad in another language, or if you can help translate, {getInTouch}!"
+  },
+  "pA2SgX": {
+    "message": "797.io/themerge"
   },
   "pHQwsN": {
     "message": "Launch the app from your desktop environment by double clicking on it."

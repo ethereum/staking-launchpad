@@ -148,33 +148,82 @@ export const MergeReadiness = () => {
     },
   ];
 
+  // Set up relevant dates with Intl
   interface DateTimeFormatOptions {
     formatMatcher?: 'basic' | 'best fit' | 'best fit' | undefined;
     dateStyle?: 'full' | 'long' | 'medium' | 'short' | undefined;
     timeStyle?: 'full' | 'long' | 'medium' | 'short' | undefined;
   }
+  const bellatrixDate = new Date('2022-09-06T11:34:47.000Z');
+  const bellatrixDateTimeOptions: DateTimeFormatOptions = {
+    dateStyle: 'medium',
+    timeStyle: 'medium',
+  };
+  const bellatrixDateTime = new Intl.DateTimeFormat(
+    locale,
+    bellatrixDateTimeOptions
+  ).format(bellatrixDate);
+  const bellatrixDateOnlyOptions: DateTimeFormatOptions = {
+    dateStyle: 'medium',
+  };
+  const bellatrixDateOnly = new Intl.DateTimeFormat(
+    locale,
+    bellatrixDateOnlyOptions
+  ).format(bellatrixDate);
+  const ttdDateLow = new Date('2022-09-10T12:00:00.000Z');
+  const ttdDateHigh = new Date('2022-09-20T12:00:00.000Z');
+  const ttdOptionsLow: DateTimeFormatOptions = { dateStyle: 'medium' };
+  const ttdOptionsHigh: DateTimeFormatOptions = { dateStyle: 'medium' };
+  const ttdDateOnlyLow = new Intl.DateTimeFormat(locale, ttdOptionsLow).format(
+    ttdDateLow
+  );
+  const ttdDateOnlyHigh = new Intl.DateTimeFormat(
+    locale,
+    ttdOptionsHigh
+  ).format(ttdDateHigh);
+
+  const WhenMerge = () => (
+    <>
+      <Text className="my20">
+        <FormattedMessage
+          defaultMessage="The Bellatrix upgrade to the Beacon Chain is scheduled for epoch 144896, set to occur at {bellatrixDateTime}."
+          values={{ bellatrixDateTime }}
+        />
+      </Text>
+      <Text className="mb20">
+        <FormattedMessage
+          defaultMessage="Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD between {ttdDateLow} and {ttdDateHigh}, depending on hash rate (follow {linkBordel} and {link797} for latest estimates)."
+          values={{
+            difficulty: isMobile ? (
+              <FormattedMessage
+                defaultMessage="5.875e22"
+                description="Total terminal difficulty written in scientific notation"
+              />
+            ) : (
+              <FormattedMessage
+                defaultMessage="58750000000000000000000"
+                description="Total terminal difficulty written out fully, without commas, so it can be copied easily. "
+              />
+            ),
+            ttdDateLow: ttdDateOnlyLow,
+            ttdDateHigh: ttdDateOnlyHigh,
+            linkBordel: (
+              <Link to="https://bordel.wtf" inline primary>
+                <FormattedMessage defaultMessage="bordel.wtf" />
+              </Link>
+            ),
+            link797: (
+              <Link to="https://797.io/themerge/" inline primary>
+                <FormattedMessage defaultMessage="797.io/themerge" />
+              </Link>
+            ),
+          }}
+        />
+      </Text>
+    </>
+  );
+
   const ActNow = () => {
-    const bellatrixDate = new Date('2022-09-06T11:34:47.000Z');
-    const bellatrixDateTimeOptions: DateTimeFormatOptions = {
-      dateStyle: 'medium',
-      timeStyle: 'medium',
-    };
-    const bellatrixDateTime = new Intl.DateTimeFormat(
-      locale,
-      bellatrixDateTimeOptions
-    ).format(bellatrixDate);
-    const bellatrixDateOnlyOptions: DateTimeFormatOptions = {
-      dateStyle: 'medium',
-    };
-    const bellatrixDateOnly = new Intl.DateTimeFormat(
-      locale,
-      bellatrixDateOnlyOptions
-    ).format(bellatrixDate);
-    const ttdDate = new Date('2022-09-15T04:00:00.000Z');
-    const ttdOptions: DateTimeFormatOptions = { dateStyle: 'medium' };
-    const ttdDateOnly = new Intl.DateTimeFormat(locale, ttdOptions).format(
-      ttdDate
-    );
     return (
       <SectionHeader className="m0 pt0">
         <Alert variant="error" className="mt40">
@@ -183,36 +232,7 @@ export const MergeReadiness = () => {
               <FormattedMessage defaultMessage="Attention:" />
             </strong>
           </Text>
-          <Text className="mb20">
-            <FormattedMessage
-              defaultMessage="The Bellatrix upgrade to the Beacon Chain is scheduled for epoch 144896, set to occur at {bellatrixDateTime}."
-              values={{ bellatrixDateTime }}
-            />
-          </Text>
-          <Text className="mb20">
-            <FormattedMessage
-              defaultMessage="Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a few days of {ttdDateTime}, depending on hash rate (follow {link} for latest estimate)."
-              values={{
-                difficulty: isMobile ? (
-                  <FormattedMessage
-                    defaultMessage="5.875e22"
-                    description="Total terminal difficulty written in scientific notation"
-                  />
-                ) : (
-                  <FormattedMessage
-                    defaultMessage="58750000000000000000000"
-                    description="Total terminal difficulty written out fully, without commas, so it can be copied easily. "
-                  />
-                ),
-                ttdDateTime: ttdDateOnly,
-                link: (
-                  <Link to="https://bordel.wtf" inline primary>
-                    <FormattedMessage defaultMessage="bordel.wtf" />
-                  </Link>
-                ),
-              }}
-            />
-          </Text>
+          <WhenMerge />
           <Text className="mb20">
             <FormattedMessage defaultMessage="Act now to update your node with the latest client releases." />{' '}
             <strong>
@@ -559,18 +579,13 @@ export const MergeReadiness = () => {
           <Heading level={3}>
             <FormattedMessage defaultMessage="When Merge?" />
           </Heading>
-          <Text className="mt20">
-            <FormattedMessage
-              defaultMessage="Public testnet progress is underway. When everything is safe and ready, the core developer teams will make this known, so stay tuned to the {blogLink} or other client team communication channels for the latest information."
-              values={{
-                blogLink: (
-                  <Link inline primary to="https://blog.ethereum.org">
-                    <FormattedMessage defaultMessage="Ethereum Foundation Blog" />
-                  </Link>
-                ),
-              }}
-            />
-          </Text>
+          <WhenMerge />
+          <Link
+            primary
+            to="https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement/"
+          >
+            <FormattedMessage defaultMessage="View EF blog mainnet merge announcement" />
+          </Link>
         </section>
         <section>
           <Heading level={3} id="testing-the-merge">

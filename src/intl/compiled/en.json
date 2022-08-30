@@ -2163,36 +2163,6 @@
       "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
     }
   ],
-  "HbCJso": [
-    {
-      "type": 0,
-      "value": "Mainnet total terminal difficulty (TTD) has been set to "
-    },
-    {
-      "type": 1,
-      "value": "difficulty"
-    },
-    {
-      "type": 0,
-      "value": ". Ethereum is estimated to reach this TTD within a few days of "
-    },
-    {
-      "type": 1,
-      "value": "ttdDateTime"
-    },
-    {
-      "type": 0,
-      "value": ", depending on hash rate (follow "
-    },
-    {
-      "type": 1,
-      "value": "link"
-    },
-    {
-      "type": 0,
-      "value": " for latest estimate)."
-    }
-  ],
   "Hczrvs": [
     {
       "type": 0,
@@ -2721,20 +2691,6 @@
       "value": "Connect new wallet"
     }
   ],
-  "MKMIUm": [
-    {
-      "type": 0,
-      "value": "Public testnet progress is underway. When everything is safe and ready, the core developer teams will make this known, so stay tuned to the "
-    },
-    {
-      "type": 1,
-      "value": "blogLink"
-    },
-    {
-      "type": 0,
-      "value": " or other client team communication channels for the latest information."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -3105,12 +3061,6 @@
     {
       "type": 0,
       "value": "Your network has changed"
-    }
-  ],
-  "Pd0hC/": [
-    {
-      "type": 0,
-      "value": "Ethereum Foundation Blog"
     }
   ],
   "PfoT0C": [
@@ -4711,6 +4661,52 @@
       "value": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
     }
   ],
+  "dM+izw": [
+    {
+      "type": 0,
+      "value": "Mainnet total terminal difficulty (TTD) has been set to "
+    },
+    {
+      "type": 1,
+      "value": "difficulty"
+    },
+    {
+      "type": 0,
+      "value": ". Ethereum is estimated to reach this TTD between "
+    },
+    {
+      "type": 1,
+      "value": "ttdDateLow"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "ttdDateHigh"
+    },
+    {
+      "type": 0,
+      "value": ", depending on hash rate (follow "
+    },
+    {
+      "type": 1,
+      "value": "linkBordel"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "link797"
+    },
+    {
+      "type": 0,
+      "value": " for latest estimates)."
+    }
+  ],
   "dM/KIM": [
     {
       "type": 0,
@@ -6111,6 +6107,12 @@
     {
       "type": 0,
       "value": "!"
+    }
+  ],
+  "pA2SgX": [
+    {
+      "type": 0,
+      "value": "797.io/themerge"
     }
   ],
   "pHQwsN": [

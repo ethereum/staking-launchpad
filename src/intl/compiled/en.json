@@ -301,36 +301,6 @@
       "value": "Earn continuous rewards for providing a public good to the community."
     }
   ],
-  "0vW9Qm": [
-    {
-      "type": 0,
-      "value": "Mainnet total terminal difficulty (TTD) has been set to "
-    },
-    {
-      "type": 1,
-      "value": "difficulty"
-    },
-    {
-      "type": 0,
-      "value": ". Ethereum is estimated to reach this TTD within a day of "
-    },
-    {
-      "type": 1,
-      "value": "ttdDateTime"
-    },
-    {
-      "type": 0,
-      "value": " (follow "
-    },
-    {
-      "type": 1,
-      "value": "link"
-    },
-    {
-      "type": 0,
-      "value": " for latest estimate)."
-    }
-  ],
   "122+yR": [
     {
       "type": 0,
@@ -2191,6 +2161,36 @@
     {
       "type": 0,
       "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+    }
+  ],
+  "HbCJso": [
+    {
+      "type": 0,
+      "value": "Mainnet total terminal difficulty (TTD) has been set to "
+    },
+    {
+      "type": 1,
+      "value": "difficulty"
+    },
+    {
+      "type": 0,
+      "value": ". Ethereum is estimated to reach this TTD within a few days of "
+    },
+    {
+      "type": 1,
+      "value": "ttdDateTime"
+    },
+    {
+      "type": 0,
+      "value": ", depending on hash rate (follow "
+    },
+    {
+      "type": 1,
+      "value": "link"
+    },
+    {
+      "type": 0,
+      "value": " for latest estimate)."
     }
   ],
   "Hczrvs": [

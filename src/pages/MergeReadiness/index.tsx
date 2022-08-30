@@ -191,7 +191,7 @@ export const MergeReadiness = () => {
           </Text>
           <Text className="mb20">
             <FormattedMessage
-              defaultMessage="Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of {ttdDateTime} (follow {link} for latest estimate)."
+              defaultMessage="Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a few days of {ttdDateTime}, depending on hash rate (follow {link} for latest estimate)."
               values={{
                 difficulty: isMobile ? (
                   <FormattedMessage

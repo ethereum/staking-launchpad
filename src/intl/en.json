@@ -118,9 +118,6 @@
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
-  "0vW9Qm": {
-    "message": "Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a day of {ttdDateTime} (follow {link} for latest estimate)."
-  },
   "122+yR": {
     "message": "withdrawal key"
   },
@@ -835,6 +832,9 @@
   "HXvZ2L": {
     "description": "{http} shows '-rpc-http-enabled' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+  },
+  "HbCJso": {
+    "message": "Mainnet total terminal difficulty (TTD) has been set to {difficulty}. Ethereum is estimated to reach this TTD within a few days of {ttdDateTime}, depending on hash rate (follow {link} for latest estimate)."
   },
   "Hczrvs": {
     "message": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."

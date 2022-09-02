@@ -1,0 +1,10 @@
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[context.production.environment]
+  NODE_VERSION = "14.19.2"
+[context.deploy-preview.environment]
+  NODE_VERSION = "14.19.2"
+[context.branch-deploy.environment]
+  NODE_VERSION = "14.19.2"
+[context.dev.environment]
+  NODE_VERSION = "14.19.2"

@@ -5,12 +5,6 @@
       "value": "Krok 2: Pomocí nástroje pro vklady od Ethereum Foundation vygenerujte vkladové klíče"
     }
   ],
-  "+M/NC/": [
-    {
-      "type": 0,
-      "value": "Po sloučení již nebudou existovat dvě odlišné ethereové sítě, bude existovat jen Ethereum."
-    }
-  ],
   "+UUcBt": [
     {
       "type": 0,
@@ -47,24 +41,6 @@
       "value": "polština"
     }
   ],
-  "+s8Gac": [
-    {
-      "type": 0,
-      "value": "Připojit peněženku "
-    },
-    {
-      "type": 1,
-      "value": "wallet"
-    },
-    {
-      "type": 0,
-      "value": " k síti "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "/+atl4": [
     {
       "type": 0,
@@ -81,6 +57,18 @@
     {
       "type": 0,
       "value": "Indonéština"
+    }
+  ],
+  "/E/Zm8": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Java Web"
+    }
+  ],
+  "/FpD8O": [
+    {
+      "type": 0,
+      "value": "Udělejte to po vydání klienta TTD"
     }
   ],
   "/QPc9s": [
@@ -143,6 +131,20 @@
       "value": " poslali jim, a ne na oficiáln kontrakt pro vklady. Zkontrolujte správnost adresy, na kterou transakci posíláte."
     }
   ],
+  "/h0DGY": [
+    {
+      "type": 0,
+      "value": "Proč maximum "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH?"
+    }
+  ],
   "/jJLYy": [
     {
       "type": 0,
@@ -153,6 +155,12 @@
     {
       "type": 0,
       "value": "Pokud je to vůbec možné, zvažte v tuto chvíli provozování jiného klienta, abyste pomohli chránit sebe a síť."
+    }
+  ],
+  "/tHxib": [
+    {
+      "type": 0,
+      "value": "Geth je jedna ze tří původních implementací protokolu Ethereum napsaná v jazyce Go."
     }
   ],
   "/ub26/": [
@@ -235,6 +243,12 @@
       "value": "Oddíl 3 – Po vkladu"
     }
   ],
+  "0FTs1T": [
+    {
+      "type": 0,
+      "value": "ne"
+    }
+  ],
   "0PlVao": [
     {
       "type": 0,
@@ -251,6 +265,12 @@
     {
       "type": 0,
       "value": "Postup testnetu"
+    }
+  ],
+  "0c06tl": [
+    {
+      "type": 0,
+      "value": "Přihlašovací údaje k výběru"
     }
   ],
   "0i4cCJ": [
@@ -291,6 +311,22 @@
       "value": "klíč pro výběr"
     }
   ],
+  "14vTrX": [
+    {
+      "type": 0,
+      "value": "Při validaci na testovací síti proveďte tyto simulace, abyste se dozvěděli více o svém uzlu a abyste se mohli lépe připravit na hlavní síť:"
+    }
+  ],
+  "17Epwt": [
+    {
+      "type": 0,
+      "value": "Testovací síť "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    }
+  ],
   "192AR6": [
     {
       "type": 0,
@@ -307,6 +343,12 @@
     {
       "type": 0,
       "value": "Koncový bod JSON RPC"
+    }
+  ],
+  "1G0loj": [
+    {
+      "type": 0,
+      "value": "Pokud do klienta nezadáte adresu, nebudete dostávat transakční poplatky, když validátor navrhne bloky."
     }
   ],
   "1P6GMj": [
@@ -345,6 +387,12 @@
       "value": "Zkontrolujte, zda soubory s hesly na začátku a na konci neobsahují prázdné řádky."
     }
   ],
+  "1Z0sad": [
+    {
+      "type": 0,
+      "value": "Blog EF"
+    }
+  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -361,6 +409,24 @@
     {
       "type": 0,
       "value": "Víc o ekonomice uzamčení Etherea"
+    }
+  ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "příjemce poplatku"
+    }
+  ],
+  "1pUw7Y": [
+    {
+      "type": 0,
+      "value": "Dokumentace k provozování Nethermind"
+    }
+  ],
+  "1wSJQU": [
+    {
+      "type": 0,
+      "value": "Časový rozvrh:"
     }
   ],
   "22EpKq": [
@@ -422,7 +488,7 @@
   "2PI6Di": [
     {
       "type": 0,
-      "value": "Klienti konsenzu: "
+      "value": "Konsenzus klienty: "
     },
     {
       "type": 1,
@@ -439,6 +505,18 @@
     {
       "type": 0,
       "value": "Dokumentace ke správě klíčů Nimbus"
+    }
+  ],
+  "2rflCq": [
+    {
+      "type": 0,
+      "value": "Rozmanitost klientů je velmi důležitá pro stav sítě Ethereum: Chyba v klientovi s více než 33% podílem může způsobit odpojení Etherea. Pokud má klient kvalifikovanou většinu (více než 66 %), případná chyba by mohla způsobit nesprávné rozdělení řetězce a mohla by vést i k postihu."
+    }
+  ],
+  "2s0gAx": [
+    {
+      "type": 0,
+      "value": "Konfigurace adresy příjemce poplatku"
     }
   ],
   "2t/3ab": [
@@ -517,6 +595,52 @@
       "value": "Testování na Goerli"
     }
   ],
+  "3ODqP9": [
+    {
+      "type": 0,
+      "value": "Když vložíte více než "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH do jedné sady klíčů, nezvýšíte tím potenciál získání odměny. To samé platí i pro nahromadění odměn nad "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH, protože pro každý validátor platí omezení zvané "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": " ve výši "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": ". To znamená, že uzamčení probíhá v přírůstcích "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH, a to pokaždé s vlastní sadou klíčů a zůstatkem."
+    }
+  ],
   "3PZq07": [
     {
       "type": 0,
@@ -553,16 +677,16 @@
       "value": "Dokumentace Geth na Goerli"
     }
   ],
-  "3XK21U": [
-    {
-      "type": 0,
-      "value": "Pomůžeme vám vytvořit podpisový klíč pro každý validátor, který chcete provozovat. Až do sloučení není možné provádět výběry, takže nyní nevytvoříte klíče pro výběr. Až bude možné vybírat finanční prostředky, můžete své klíče pro výběr odvodit od své mnemotechnické pomůcky."
-    }
-  ],
   "3tR/V9": [
     {
       "type": 0,
       "value": "Oddíl 2 – Během nastavování"
+    }
+  ],
+  "3wfaSi": [
+    {
+      "type": 0,
+      "value": "Sloučení, komunikace EL–CL"
     }
   ],
   "3zCA2i": [
@@ -615,6 +739,12 @@
       "value": "Instalace"
     }
   ],
+  "4AVfh5": [
+    {
+      "type": 0,
+      "value": "Připojil(a) jsem se na Discord server svého konsenzus klienta."
+    }
+  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -625,6 +755,20 @@
     {
       "type": 0,
       "value": "Proč posuvná škála? Nechceme zacházet do zbytečných detailů, ale aby síť fungovala správně, musí existovat určitý minimální počet validátorů (to znamená, že musí být vložen určitý podíl v ETH). Takže abychom přilákali více validátorů, musí úroková sazba zůstat vysoká, dokud daný minimální počet nebude dosažen."
+    }
+  ],
+  "4VQUkR": [
+    {
+      "type": 0,
+      "value": "Další informace viz: "
+    },
+    {
+      "type": 1,
+      "value": "shanghaiPlanning"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "4hnEBA": [
@@ -649,6 +793,28 @@
     {
       "type": 0,
       "value": "Proč dva klíče namísto jednoho?"
+    }
+  ],
+  "59y+Ik": [
+    {
+      "type": 0,
+      "value": "Nezapomeňte navštívit "
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": ", kde najdete kanál "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": " s diskusí o tom, jak se zapojit a připravit."
     }
   ],
   "5A6amM": [
@@ -685,6 +851,34 @@
       "value": "Rumunština"
     }
   ],
+  "5Vrs8S": [
+    {
+      "type": 0,
+      "value": "Také potřebujete mít dostatečnou rychlost odesílání dat. K "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " potřebujete stahovat asi 1,2–1,3 GB za hodinu a odesílat asi 0,9–1 GB za hodinu. Tento objem může vzrůst."
+    }
+  ],
+  "5dG331": [
+    {
+      "type": 0,
+      "value": "Ačkoli je hlas validátora vážen množstvím podílu, váha každého hlasování validátorů začíná a je omezena na "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": ". Při nedostatečném výkonu uzlu je možné spadnout pod tuto hodnotu, ale není možné se dostat nad ni."
+    }
+  ],
   "5t8oYl": [
     {
       "type": 0,
@@ -707,18 +901,16 @@
       "value": ", kde najdete užitečnou nápovědu."
     }
   ],
-  "6CK2Nu": [
+  "63gLLu": [
     {
       "type": 0,
-      "value": "Vaše peněženka je na nesprávné síti. Přejděte na síť "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
+      "value": "průměr"
+    }
+  ],
+  "6CN01C": [
     {
       "type": 0,
-      "value": "."
+      "value": "Po vylepšení Shanghai můžete vybrat svých 16 ETH, a to pomocí svého klíče pro výběr a s odstupem přibližně jednoho dne."
     }
   ],
   "6HBTTN": [
@@ -745,10 +937,40 @@
       "value": "Dobitím můžete zlepšit efektivní zůstatek tohoto validátoru"
     }
   ],
+  "6VswA4": [
+    {
+      "type": 0,
+      "value": "Provozování Nethermindu po Sloučení "
+    },
+    {
+      "type": 1,
+      "value": "jwtSecretFile"
+    }
+  ],
+  "6iVtAr": [
+    {
+      "type": 0,
+      "value": "#TestingTheMerge"
+    }
+  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "Připojujete se k síti v jejích raných fázích. Stejně jako u jiného nového softwaru se u ní mohou vyskytnout chyby. Sice je to nepravděpodobné, ale potenciální chyby mohou vést k postihu."
+    }
+  ],
+  "6uPbCH": [
+    {
+      "type": 0,
+      "value": "Verze "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " této stránky"
     }
   ],
   "7+Domh": [
@@ -777,6 +999,44 @@
     {
       "type": 0,
       "value": " nepodporujeme v offline režimu."
+    }
+  ],
+  "7BhfPl": [
+    {
+      "type": 0,
+      "value": "Kniha Lighthouse"
+    }
+  ],
+  "7C4ikM": [
+    {
+      "type": 0,
+      "value": "Emoji pandy Sloučení"
+    }
+  ],
+  "7DFXQj": [
+    {
+      "type": 0,
+      "value": "Přepnout na "
+    },
+    {
+      "type": 1,
+      "value": "oppositeNetwork"
+    },
+    {
+      "type": 0,
+      "value": " Launchpad"
+    }
+  ],
+  "7Iz3JI": [
+    {
+      "type": 0,
+      "value": "Konsenzus klient"
+    }
+  ],
+  "7Rw2uA": [
+    {
+      "type": 0,
+      "value": "konsenzus"
     }
   ],
   "7UOvbT": [
@@ -861,6 +1121,16 @@
       "value": "Shoduje se adresa smlouvy uvedená na webu?"
     }
   ],
+  "8L6ufI": [
+    {
+      "type": 0,
+      "value": "Podrobný návod k tomu, jak zprovoznit uzel a validátor sítě "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -923,12 +1193,6 @@
       "value": "Z bezpečnostních důvodů vám doporučujeme dokončit tento krok po odpojení se od internetu."
     }
   ],
-  "96pen8": [
-    {
-      "type": 0,
-      "value": "Sharding umožní dostupnost více dat na síti, protože zavede 64 paralelních řetězců. Každý nový řetězec dokáže pojmout nejméně tolik dat, co dnešní mainnet, ale možná i víc."
-    }
-  ],
   "9DZdsc": [
     {
       "type": 0,
@@ -947,6 +1211,12 @@
     {
       "type": 0,
       "value": "Na tuto otázku neexistuje jednoduchá odpověď, protože se do daného výpočtu zapojuje mnoho faktorů."
+    }
+  ],
+  "9RBO+X": [
+    {
+      "type": 0,
+      "value": "Informace o rolích a povinnostech validátora"
     }
   ],
   "9VZ9oy": [
@@ -979,16 +1249,66 @@
       "value": "."
     }
   ],
+  "9mLaI9": [
+    {
+      "type": 0,
+      "value": "vklad"
+    }
+  ],
   "9qMyhY": [
     {
       "type": 0,
       "value": "Přečtěte si dokumentaci k možnostem a dílčím příkazům"
     }
   ],
+  "9qpi9h": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Nethermind"
+    }
+  ],
+  "9r8j5+": [
+    {
+      "type": 0,
+      "value": "Rozhraní API pro engine"
+    }
+  ],
   "9uOFF3": [
     {
       "type": 0,
       "value": "Přehled"
+    }
+  ],
+  "9vLu6E": [
+    {
+      "type": 1,
+      "value": "note"
+    },
+    {
+      "type": 0,
+      "value": " Tento krok by měl být prováděn "
+    },
+    {
+      "type": 1,
+      "value": "testnetsOnly"
+    },
+    {
+      "type": 0,
+      "value": ", dokud nebude oznámena celková konečná obtížnost (TTD) pro Mainnet a pro klienty nebude vydána aktualizace. Informace jsou mezitím zobrazovány za účelem přípravy."
+    }
+  ],
+  "9vwGlT": [
+    {
+      "type": 0,
+      "value": "Synchronizoval(a) jsem svůj Beacon uzel na vrstvě "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "9xeLhs": [
@@ -1007,6 +1327,20 @@
     {
       "type": 1,
       "value": "boldWarning"
+    }
+  ],
+  "9ySJSP": [
+    {
+      "type": 0,
+      "value": "Vyberte klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " a nastavte uzel"
     }
   ],
   "A2b4uB": [
@@ -1033,42 +1367,6 @@
       "value": "Pokud potřebujete pomoc, podívejte se na dokumentaci Pythonu."
     }
   ],
-  "ACstv9": [
-    {
-      "type": 0,
-      "value": "Mám nainstalovaný a synchronizovaný svůj exekuční klient na síti "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " (nečekejte na to, protože to může zabrat několik dnů)."
-    }
-  ],
-  "AEp7+F": [
-    {
-      "type": 0,
-      "value": "Jako validátor musíte vložit finanční podíl v "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". Jediná možnost, jak se stát validátorem, je provedení jednosměrné transakce "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " na smlouvu o vkladu na aktuálním ethereovém řetězci."
-    }
-  ],
   "AJD+66": [
     {
       "type": 0,
@@ -1089,6 +1387,30 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "ALEY4e": [
+    {
+      "type": 1,
+      "value": "community"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " – příručka"
+    }
+  ],
+  "ARyG2Z": [
+    {
+      "type": 0,
+      "value": "Kdy vybrat?"
     }
   ],
   "ATwOPg": [
@@ -1115,6 +1437,20 @@
       "value": "vysvětlení efektivního zůstatku validátoru"
     }
   ],
+  "AbR1dr": [
+    {
+      "type": 0,
+      "value": "Toto vylepšení se rychle blíží a zavede několik změn, se kterými by se podílníci měli dopředu seznámit. Podívejte se na "
+    },
+    {
+      "type": 1,
+      "value": "mergeReadinessChecklist"
+    },
+    {
+      "type": 0,
+      "value": ", abyste se připravili."
+    }
+  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1123,6 +1459,18 @@
     {
       "type": 1,
       "value": "url"
+    }
+  ],
+  "Ad8+R5": [
+    {
+      "type": 0,
+      "value": "Tříštění změní požadavek, že celé uzly mají nést celou historii řetězce. Nyní se místo toho bude tato zátěž distribuovat v síti, přičemž dostupnost dat bude i nadále zajištěna. Tím se výrazně zvýší kapacita ethereové vrstvy 1 a zároveň bude možné dále provozovat celý uzel na hardwaru spotřebitele a síť zůstane decentralizovaná."
+    }
+  ],
+  "AfH0eO": [
+    {
+      "type": 0,
+      "value": "Všichni podílníci musí od Sloučení provozovat exekučního klienta společně s konsenzus klientem. Nezapomeňte se na to připravit."
     }
   ],
   "Affixg": [
@@ -1153,6 +1501,18 @@
     {
       "type": 0,
       "value": "Dobít validátor"
+    }
+  ],
+  "AyaNND": [
+    {
+      "type": 0,
+      "value": "TestingTheMerge"
+    }
+  ],
+  "AzjyIx": [
+    {
+      "type": 0,
+      "value": "Po vzniku řetězové vazby se spousta validátorů provozujících vlastního konsenzus klienta rozhodla pro své připojení k exekuční vrstvě používat služby třetích stran. Bylo to přijatelné, protože jedinou naslouchanou věcí byl kontrakt o vkladu uzamčení."
     }
   ],
   "B2EKj+": [
@@ -1237,6 +1597,18 @@
       "value": "Komunita EthStaker"
     }
   ],
+  "BXoiVG": [
+    {
+      "type": 0,
+      "value": "Další připomenutí"
+    }
+  ],
+  "BcUgLk": [
+    {
+      "type": 0,
+      "value": "Navrhovaný příjemce poplatku"
+    }
+  ],
   "Bf2QKg": [
     {
       "type": 0,
@@ -1247,6 +1619,12 @@
     {
       "type": 0,
       "value": "Efektivní zůstatek"
+    }
+  ],
+  "BnwOUO": [
+    {
+      "type": 0,
+      "value": "provedení"
     }
   ],
   "BoEpk9": [
@@ -1261,6 +1639,12 @@
       "value": "Nakonfigurovat Lighthouse"
     }
   ],
+  "C3jBPI": [
+    {
+      "type": 0,
+      "value": "Exekuční klient"
+    }
+  ],
   "C9fTX1": [
     {
       "type": 0,
@@ -1273,6 +1657,12 @@
       "value": "Čeština"
     }
   ],
+  "CDx/FY": [
+    {
+      "type": 0,
+      "value": "Jako provozovatel validátoru budete odpovědní za zabezpečování sítě a budete průběžně dostávat platby za kroky, které pomáhají síti v dosahování konsenzu."
+    }
+  ],
   "CF9vMR": [
     {
       "type": 0,
@@ -1283,6 +1673,20 @@
     {
       "type": 0,
       "value": "Pokud se váš zůstatek blíží 16 ETH, měli byste jej dobít. Tím zajistíte, že nebudete vyloučeni z řad validátorů (k tomu dochází automaticky, když vám zůstatek klesne pod 16 ETH)."
+    }
+  ],
+  "CWKE9c": [
+    {
+      "type": 0,
+      "value": "Vaše peněženka je na nesprávné síti. Přejděte na vrstvu "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Cacfkx": [
@@ -1359,10 +1763,22 @@
       "value": "Vaše připojení by mělo být ideálně nepřetržitě funkční a spolehlivě stabilní."
     }
   ],
+  "Dayq/y": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Erigon"
+    }
+  ],
   "DbnQg+": [
     {
       "type": 0,
       "value": "Ověřte adresu smlouvy"
+    }
+  ],
+  "DjhC7F": [
+    {
+      "type": 0,
+      "value": "Přesměroval(a) jsem potřebné porty na routeru na správné počítače, a to pro svého klienta EL i CL (otevírejte pouze porty týkající se příslušných instalací)."
     }
   ],
   "DoCZT1": [
@@ -1487,16 +1903,50 @@
       "value": "Klíčový koncept je následující:"
     }
   ],
+  "FFUr3c": [
+    {
+      "type": 0,
+      "value": "Ethereum vzniklo 30. července 2015. Postupně nabírá na velikosti a zavedením tříštění se také zvýší jeho požadavky na úložiště, paměť a rychlost připojení."
+    }
+  ],
   "FM92S0": [
     {
       "type": 0,
       "value": "Poznámka: Beacon Chain může na ověření vašeho vkladu potřebovat několik minut."
     }
   ],
+  "FM9lHC": [
+    {
+      "type": 0,
+      "value": "všechny konfigurace testovací sítě sloučení"
+    }
+  ],
   "FSRfSJ": [
     {
       "type": 0,
       "value": "Chápu, že tato transakce je nevratná."
+    }
+  ],
+  "FU7JYy": [
+    {
+      "type": 0,
+      "value": "Musíte nastavit "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " pro vrstvu "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": ", jinak bude vklad neplatný."
     }
   ],
   "FZa0R+": [
@@ -1517,6 +1967,22 @@
       "value": "Zkusit znovu"
     }
   ],
+  "FcCHp4": [
+    {
+      "type": 0,
+      "value": "Nejnovější data o využití síťového klienta"
+    }
+  ],
+  "Felr8P": [
+    {
+      "type": 1,
+      "value": "validatorClient"
+    },
+    {
+      "type": 0,
+      "value": " je software, který pracuje za validátora a drží a používá jeho privátní klíč k atestacím stavu řetězce. Jeden klient validátora může držet více párů klíčů a ovládat mnoho validátorů."
+    }
+  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -1529,10 +1995,30 @@
       "value": "Krok 1: Stáhněte si aplikaci příkazového řádku pro vklady, která je vhodná pro váš operační systém"
     }
   ],
+  "FmGmFH": [
+    {
+      "type": 0,
+      "value": "Chcete-li používat tento Launchpad, peněženku je třeba nastavit na vrstvu "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "FqgDIV": [
     {
       "type": 0,
       "value": "Podmínky služby"
+    }
+  ],
+  "FqztZR": [
+    {
+      "type": 0,
+      "value": "Poznámka:"
     }
   ],
   "FzkbsB": [
@@ -1571,16 +2057,16 @@
       "value": "Ověřte, zda se vás někdo nepokouší podvést"
     }
   ],
+  "GKDM0r": [
+    {
+      "type": 0,
+      "value": "Pokud jste to ještě neudělali, postarejte se o to, aby váš uzel provozoval klienta EL i klienta CL. Předejdete tím prostojům v době Sloučení."
+    }
+  ],
   "GN2Cu5": [
     {
       "type": 0,
       "value": "klient konsenzu"
-    }
-  ],
-  "GOHkCO": [
-    {
-      "type": 0,
-      "value": "V současnosti budete zabezpečovat řetězovou vazbu, první významné vylepšení škálování. Jedná se o samostatný blockchain, který používá mechanismus konsenzu důkazem podílem. Až se hlavní síť (Ethereum, které dnes používáme) sloučí s řetězovou vazbou budete pomáhat se zabezpečením veškerého Etherea."
     }
   ],
   "GOc7cL": [
@@ -1643,6 +2129,36 @@
       "value": "Celková požadovaná částka"
     }
   ],
+  "H/LXxz": [
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " byla první dlouhodobě fungující veřejná testovací síť, která 8. června 2022 prošla Sloučením. "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " byla původně testovací síť založená na důkazu prací a sloučením své původní exekuční vrstvy s novou řetězovou vazbou přešla na důkaz podílem."
+    }
+  ],
+  "H0lQfu": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam připravenosti na sloučení"
+    }
+  ],
+  "H4W8nj": [
+    {
+      "type": 0,
+      "value": "Rozhraní API modulu ověření"
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
@@ -1675,6 +2191,20 @@
       "value": "Postihy mají dva účely: (1) zvyšují náklady na útoky na síť na neúnosnou míru a (2) podněcují validátory k tomu, aby nebyli líní a plnili své povinnosti. Když dostanete postih, protože jste se chovali prokazatelně škodlivě, část vašeho podílu bude zničena."
     }
   ],
+  "Hmxd5S": [
+    {
+      "type": 0,
+      "value": "Až se zobrazí výzva k výběru sítě, je nutné vybrat síť "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", jinak bude vklad neplatný."
+    }
+  ],
   "HoahTd": [
     {
       "type": 0,
@@ -1685,6 +2215,12 @@
     {
       "type": 0,
       "value": "Podpora"
+    }
+  ],
+  "I0BXSi": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Geth"
     }
   ],
   "I212vY": [
@@ -1705,6 +2241,12 @@
     {
       "type": 0,
       "value": "Síť"
+    }
+  ],
+  "I5ZPR9": [
+    {
+      "type": 0,
+      "value": "Kdy sloučit?"
     }
   ],
   "I5lWZA": [
@@ -1741,6 +2283,20 @@
     {
       "type": 0,
       "value": "Nainstalovat virtualenv"
+    }
+  ],
+  "If09Ko": [
+    {
+      "type": 0,
+      "value": "Proto podílníci musí do svého konsenzu klienta zadat adresu "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", aby mohli tyto odměny dostávat. Jedná se o normální ethereovou adresu, na kterou jste zvyklí."
     }
   ],
   "IhDJWs": [
@@ -1823,6 +2379,12 @@
       "value": "Jinými slovy, abyste jednali čestně, za své kroky odpovídáte svými finančními prostředky."
     }
   ],
+  "JApiO1": [
+    {
+      "type": 0,
+      "value": "Jedná se o novinku, která bude po Sloučení povinností, takže před vylepšením musíte provozovat obojí."
+    }
+  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -1841,6 +2403,12 @@
     {
       "type": 0,
       "value": "4. Vyhněte se phishingu"
+    }
+  ],
+  "Ja5vXW": [
+    {
+      "type": 0,
+      "value": "Další informace"
     }
   ],
   "JbVlOE": [
@@ -1949,6 +2517,22 @@
       "value": "url"
     }
   ],
+  "KbUOQp": [
+    {
+      "type": 0,
+      "value": "Nethermind  je robustní klient založený na jádře .NET a navržený pro výkon, všestrannost a přizpůsobitelnost."
+    }
+  ],
+  "KcdQCZ": [
+    {
+      "type": 0,
+      "value": "Syntaxe pro CLI "
+    },
+    {
+      "type": 1,
+      "value": "engineJwtSecret"
+    }
+  ],
   "KjcAm2": [
     {
       "type": 0,
@@ -1961,12 +2545,6 @@
       "value": "Po dokončení procesu byste měli vidět následující:"
     }
   ],
-  "KrVaDy": [
-    {
-      "type": 0,
-      "value": "Připojil(a) jsem se na Discord server svého klienta."
-    }
-  ],
   "KvRSg5": [
     {
       "type": 0,
@@ -1977,6 +2555,12 @@
     {
       "type": 0,
       "value": "Instalační proces prostředí python3 se může lišit v závislosti na linuxovém sestavení."
+    }
+  ],
+  "KwfNme": [
+    {
+      "type": 0,
+      "value": "Nakonfigurovat Besu"
     }
   ],
   "KxUgHu": [
@@ -1993,10 +2577,26 @@
       "value": "."
     }
   ],
+  "L1PK14": [
+    {
+      "type": 0,
+      "value": "Ethereum.org – Sloučení"
+    }
+  ],
   "L7fPF+": [
     {
       "type": 0,
       "value": "Dokončete poslední vklad"
+    }
+  ],
+  "L7wMQN": [
+    {
+      "type": 0,
+      "value": "Připojit k vrstvě "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
     }
   ],
   "L8jrV5": [
@@ -2087,10 +2687,10 @@
       "value": "Prvotní vklad pro tento veřejný klíč validátoru už byl provede. Počkejte a zkontrolujte stav vkladu na poskytovateli dat Beaconchain."
     }
   ],
-  "LyJqWj": [
+  "LwEHRm": [
     {
       "type": 0,
-      "value": "Víc o rolích a povinnostech validátora"
+      "value": "Proč teď musím provozovat exekučního klienta?"
     }
   ],
   "M3GwXS": [
@@ -2103,6 +2703,20 @@
     {
       "type": 0,
       "value": "Připojit novou peněženku"
+    }
+  ],
+  "MKMIUm": [
+    {
+      "type": 0,
+      "value": "Probíhá testování na veřejné testovací síti. Až bude všechno bezpečné a připravené, hlavní tým vývojářů o tom dá vědět. Proto sledujte "
+    },
+    {
+      "type": 1,
+      "value": "blogLink"
+    },
+    {
+      "type": 0,
+      "value": " a další komunikační kanály klientského týmu, kde se dozvíte nejnovější informace."
     }
   ],
   "MQTBvH": [
@@ -2121,6 +2735,12 @@
     {
       "type": 0,
       "value": "Co se stane, když mi někdo ukradne klíč pro výběr?"
+    }
+  ],
+  "MXVVcY": [
+    {
+      "type": 0,
+      "value": "Ověřování připojení exekučního uzlu"
     }
   ],
   "MZEcKL": [
@@ -2177,6 +2797,12 @@
       "value": "Podrobnosti o dobití"
     }
   ],
+  "MoIew2": [
+    {
+      "type": 0,
+      "value": "Podrobný návod k tomu, jak zprovoznit uzel a validátor sítě na testovacích sítích Sloučení"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -2217,6 +2843,28 @@
       "value": "Zabezpečil(a) jsem účet root."
     }
   ],
+  "NTHTCh": [
+    {
+      "type": 0,
+      "value": "Pro jeden validátor nevkládejte více než "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Nebude vám přidávat odměny a bude zamčený až do plánované aktualizace "
+    },
+    {
+      "type": 1,
+      "value": "shanghai"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -2249,10 +2897,10 @@
       "value": ")"
     }
   ],
-  "NZUWs7": [
+  "NZYRdf": [
     {
       "type": 0,
-      "value": "Nezapomeňte, že hlas validátora je posuzován podle částky jeho podílu."
+      "value": "Hlavní síť"
     }
   ],
   "NatYUJ": [
@@ -2265,16 +2913,6 @@
     {
       "type": 0,
       "value": "Staňte se validátorem s Teku"
-    }
-  ],
-  "Ns8vbQ": [
-    {
-      "type": 0,
-      "value": "Vyberte klienta "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
     }
   ],
   "NwzcYT": [
@@ -2305,10 +2943,22 @@
       "value": "."
     }
   ],
+  "O/dhpS": [
+    {
+      "type": 0,
+      "value": "EthStaker Discord"
+    }
+  ],
   "O3qkOm": [
     {
       "type": 0,
       "value": "Tříštění"
+    }
+  ],
+  "OBmVqN": [
+    {
+      "type": 0,
+      "value": "Hyperledger Besu je opensourcový Ethereum klient vyvinutý pod licencí Apache 2.0 a napsaný v Javě."
     }
   ],
   "OIvXIO": [
@@ -2325,6 +2975,12 @@
       "value": ")"
     }
   ],
+  "OJOu1W": [
+    {
+      "type": 0,
+      "value": "Dokumentace k provozování Erigonu"
+    }
+  ],
   "ON2tXT": [
     {
       "type": 0,
@@ -2335,6 +2991,30 @@
     {
       "type": 0,
       "value": "Víc o ConsenSys"
+    }
+  ],
+  "OmAmmi": [
+    {
+      "type": 0,
+      "value": "Víc o Sloučení"
+    }
+  ],
+  "Oop93W": [
+    {
+      "type": 1,
+      "value": "site"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " – oznámení"
     }
   ],
   "OsO8ik": [
@@ -2405,10 +3085,10 @@
       "value": "Vaše síť se změnila"
     }
   ],
-  "PIQDar": [
+  "Pd0hC/": [
     {
       "type": 0,
-      "value": "Doporučujeme vám nejdřív si projít celý proces na testnetu, abyste se s ním seznámili."
+      "value": "Blog Ethereum Foundation"
     }
   ],
   "PfoT0C": [
@@ -2459,6 +3139,12 @@
       "value": "schránka"
     }
   ],
+  "Q2CQuF": [
+    {
+      "type": 0,
+      "value": "Když nyní musí být transakce zpracovávány validátory, validátoři, kteří navrhují bloky včetně těchto transakcí mají nárok na spropitné formou transakčních poplatků. Říká se jim také prioritní poplatky a jedná se o nespálenou část poplatků za palivo."
+    }
+  ],
   "Q8P0rZ": [
     {
       "type": 0,
@@ -2497,6 +3183,20 @@
       "value": "."
     }
   ],
+  "Q8fnvz": [
+    {
+      "type": 0,
+      "value": "pouze na testovacích sítích (např. "
+    },
+    {
+      "type": 1,
+      "value": "kiln"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -2509,30 +3209,60 @@
       "value": "Poznámka: Virtuální počítače ve výchozím nastavení mohou mít vypnutý protokol NTP, takže možná pro své prostředí musíte najít alternativní řešení."
     }
   ],
+  "QRUdO6": [
+    {
+      "type": 0,
+      "value": "Nastavit příjemce poplatku"
+    }
+  ],
+  "QRwpD3": [
+    {
+      "type": 0,
+      "value": "Informace o portech v síti"
+    }
+  ],
   "QWDxrk": [
     {
       "type": 0,
       "value": "Správa klíčů"
     }
   ],
+  "QapNAM": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " – domovská stránka"
+    }
+  ],
+  "QgOvR0": [
+    {
+      "type": 0,
+      "value": "Jako validátor musíte vložit finanční podíl v "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Jediná možnost, jak se stát validátorem, je provedení jednosměrné transakce "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " na smlouvu o vkladu na aktuálním ethereovém řetězci."
+    }
+  ],
   "QlsDcr": [
     {
       "type": 0,
       "value": "Činnost"
-    }
-  ],
-  "QnS0CA": [
-    {
-      "type": 0,
-      "value": "Chcete-li používat tento Launchpad, peněženku je třeba nastavit na síť "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "QqqeNk": [
@@ -2555,10 +3285,44 @@
       "value": ", který byl přijat, ale je ověřován v řetězci. Bude zde k dispozici, až beaconcha.in potvrdí 2048 bloků."
     }
   ],
+  "QtNVQP": [
+    {
+      "type": 0,
+      "value": "Až do vylepšení Shanghai, které je naplánováno po Sloučení, nebude možné validátor znovu aktivovat a nebudete moci převádět ani vybírat finanční prostředky (to znamená, že do té doby zůstanou vaše finanční prostředky nedostupné)."
+    }
+  ],
+  "R58ea3": [
+    {
+      "type": 0,
+      "value": "Musíte provozovat "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " a také "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " (dříve Eth2)."
+    }
+  ],
   "R8eePn": [
     {
       "type": 0,
       "value": "Když dostanete postih, nebudete se moci dále podílet na protokolu a bude vynucen váš odchod."
+    }
+  ],
+  "R9umf+": [
+    {
+      "type": 0,
+      "value": "Validátoři dostanou odměny formou poplatků, tak si je nenechte utéct!"
     }
   ],
   "RCGrka": [
@@ -2570,7 +3334,7 @@
   "RE2MaJ": [
     {
       "type": 0,
-      "value": "Klienti konsenzu"
+      "value": "Konsenzus klienty"
     }
   ],
   "ROHpFF": [
@@ -2603,16 +3367,34 @@
       "value": "Kolik validátorů chcete spustit?"
     }
   ],
-  "Rj0OAx": [
+  "Riq4Yh": [
+    {
+      "type": 1,
+      "value": "network"
+    },
     {
       "type": 0,
-      "value": "Jinými slovy, jedná se o člověka, který provozuje počítačový proces. Tento proces navrhuje nové bloky k přidání do blockchainu a zaručuje se za ně."
+      "value": " je síť otevřená všem. Zkuste odeslat transakce, provozovat validátor nebo zjistit, jestli můžete dostat postih."
     }
   ],
-  "RkbwNZ": [
+  "RkSC5Q": [
     {
       "type": 0,
-      "value": "Dokud se mainnet nesloučí s Beacon Chainem, nebudete moci vybrat svůj vklad."
+      "value": "Připomínáme, že vylepšení Sloučení "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": "implementuje výběr ani převody uzamčených ETH. Tato funkce bude přidána ve vylepšení Shanghai, které bude podle plánu následovat Sloučení."
+    }
+  ],
+  "RqTB/U": [
+    {
+      "type": 0,
+      "value": "Časté dotazy k plánu Etherea"
     }
   ],
   "Rr2lI/": [
@@ -2645,6 +3427,12 @@
       "value": "Proměnná prostředí konfiguračního souboru Teku"
     }
   ],
+  "SEt7ZX": [
+    {
+      "type": 0,
+      "value": "Průběžné vlákno s informacemi o Sloučení Etherea"
+    }
+  ],
   "SGzXoY": [
     {
       "type": 0,
@@ -2663,10 +3451,30 @@
       "value": "Vyhněte se zbytečně komplikovaným nastavením a mějte na paměti kompromisy. Když budete krátkodobě offline, dostanete malé sankce za nečinnost. Ty si ale můžete snadno vykompenzovat tím, že budete po stejnou dobu offline. Komplikovaná záložní napájení vám mohou zvýšit provozní náklady a za nadbytečné záložní validátory vám může hrozit postih."
     }
   ],
+  "SVLpih": [
+    {
+      "type": 0,
+      "value": "Dlouho očekávaný přechod na důkaz podílem prostřednictvím Sloučení se rychle blíží a Ethereum je tak o krok blíž k udržitelnějšímu ekosystému."
+    }
+  ],
   "SaR1pU": [
     {
       "type": 0,
       "value": "Vklad už existuje"
+    }
+  ],
+  "Sb67Wo": [
+    {
+      "type": 0,
+      "value": "Upozornění pro podílníky: Sloučení se blíží. Podívejte se na "
+    },
+    {
+      "type": 1,
+      "value": "mergeReadinessChecklist"
+    },
+    {
+      "type": 0,
+      "value": " a zkontrolujte, jestli jste připraveni."
     }
   ],
   "Sd+Pq6": [
@@ -2711,6 +3519,12 @@
       "value": "Povinné"
     }
   ],
+  "SpI4Xu": [
+    {
+      "type": 0,
+      "value": "Vylepšení Sloučení připravilo řetězec na budoucí škálovací upgrady tím, že přineslo konsenzus důkazu podílem společně s hlavní sítí. Tato skutečnost odemyká možnost implementace tříštění dat, které umožní dále škálovat kapacitu a propustnost sítě."
+    }
+  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -2727,24 +3541,16 @@
       "value": "maticový klíč"
     }
   ],
+  "T2O2Gr": [
+    {
+      "type": 0,
+      "value": "počáteční a maximální"
+    }
+  ],
   "THIzw6": [
     {
       "type": 0,
       "value": "Validátoři a Ethereum"
-    }
-  ],
-  "TLEziZ": [
-    {
-      "type": 0,
-      "value": "Beacon Chain vznikl "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ". Postupně nabírá na velikosti a zavedením shardování se také zvýší jeho požadavky na úložiště, paměť a rychlost připojení."
     }
   ],
   "TMw9oz": [
@@ -2753,10 +3559,50 @@
       "value": "Jestli se chcete stát validátorem, navštivte tento web na počítači."
     }
   ],
+  "TNTj2N": [
+    {
+      "type": 1,
+      "value": "community"
+    },
+    {
+      "type": 0,
+      "value": " – příručka k testovací síti sloučení"
+    }
+  ],
+  "TbV4N8": [
+    {
+      "type": 1,
+      "value": "community"
+    },
+    {
+      "type": 0,
+      "value": " Discord (faucet)"
+    }
+  ],
   "TfNuWP": [
     {
       "type": 0,
       "value": "virtualenv vám chce pomoci s vytvořením izolovaného pythonového prostředí pro nástroj deposit-cli."
+    }
+  ],
+  "TfVy1O": [
+    {
+      "type": 0,
+      "value": "Zobrazit kontrolní seznam připravenosti na Sloučení"
+    }
+  ],
+  "ToUcj8": [
+    {
+      "type": 0,
+      "value": "Připravenost na Sloučení: Kromě exekučního klienta musí operátoři uzlů po Sloučení provozovat také "
+    },
+    {
+      "type": 1,
+      "value": "alternateClient"
+    },
+    {
+      "type": 0,
+      "value": ", aby zůstali aktivní."
     }
   ],
   "Tpe6yK": [
@@ -2845,6 +3691,12 @@
       "value": "Pokud nemáte složku testnet, pravděpodobně jste nesestavili a nespustili Nimbus správně. Spusťte příkazy make znovu."
     }
   ],
+  "V0mmZE": [
+    {
+      "type": 0,
+      "value": "Váš validátor bude po Sloučení odpovědný také za zpracování transakcí a bude mít tak nárok na poplatky za nespálené palivo související s danými transakcemi v blocích, které navrhne. Tyto poplatky jsou brány v potaz na exekuční vrstvě, a ne na vrstvě konsenzu, takže vyžadují, abyste do svého klienta zadali tradiční ethereovou adresu."
+    }
+  ],
   "V19Udt": [
     {
       "type": 0,
@@ -2865,6 +3717,20 @@
     {
       "type": 0,
       "value": " (zpracovává řetězovou vazbu důkazu podílem, dříve Eth2 nebo Ethereum 2.0)."
+    }
+  ],
+  "V5J3Uf": [
+    {
+      "type": 0,
+      "value": "Nastavil(a) jsem sdílený tajný kód JWT a zpřístupnil(a) jsem ho přes "
+    },
+    {
+      "type": 1,
+      "value": "both"
+    },
+    {
+      "type": 0,
+      "value": ": mého exekučního klienta i mého konsenzus klienta (beacon uzel)."
     }
   ],
   "VASo1/": [
@@ -2891,20 +3757,6 @@
     {
       "type": 0,
       "value": ", který jste sami nevytvořili nebo ke kterému nemáte mnemotechnickou pomůcku."
-    }
-  ],
-  "VJZrCQ": [
-    {
-      "type": 0,
-      "value": "Přepnout na "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Launchpad"
     }
   ],
   "VKfWR3": [
@@ -2987,6 +3839,12 @@
       "value": "Mohu s jistotou potvrdit, že validátor, který dobíjím, je můj."
     }
   ],
+  "Vp4z/b": [
+    {
+      "type": 0,
+      "value": "Podílníci provozující vlastní exekuční vrstvu jsou nezbytní pro decentralizaci sítě."
+    }
+  ],
   "VzGJkB": [
     {
       "type": 0,
@@ -3003,6 +3861,12 @@
     {
       "type": 0,
       "value": "Japonština"
+    }
+  ],
+  "W6w5Wb": [
+    {
+      "type": 0,
+      "value": "Převody mezi validátory a výběry zatím nejsou možné. Funkce výběrů je momentálně hlavní prioritou a její vydání je plánováno na příští vylepšení sítě zvané Shanghai."
     }
   ],
   "W8nHSd": [
@@ -3029,6 +3893,12 @@
       "value": " nebude započítán do efektivního zůstatku na Beacon Chainu. Také ho nebudete moci vybrat, dokud se Beacon Chain nesloučí s mainnetem."
     }
   ],
+  "WJA1/H": [
+    {
+      "type": 0,
+      "value": "Pamatujte si"
+    }
+  ],
   "WMLn/w": [
     {
       "type": 0,
@@ -3051,6 +3921,12 @@
       "value": "Implementace protokolu konsenzu se zaměřením na použitelnost, zabezpečení a spolehlivost. Prysm je vyvíjen společností Prysmatic Labs, která se zaměřuje výhradně na vývoj svého klienta."
     }
   ],
+  "Wj99ga": [
+    {
+      "type": 0,
+      "value": "Go Ethereum – Sloučení"
+    }
+  ],
   "WkrNSk": [
     {
       "type": 0,
@@ -3061,6 +3937,18 @@
     {
       "type": 0,
       "value": "Přijměte výše uvedené podmínky."
+    }
+  ],
+  "WptkFF": [
+    {
+      "type": 0,
+      "value": "Jsou vyžadovány obě vrstvy"
+    }
+  ],
+  "Wxmhku": [
+    {
+      "type": 0,
+      "value": "Tyto poplatky platí každý, kdo odešle transakci, a přicházejí formou ETH na exekuční vrstvě (hlavní síť). Tyto odměny nejsou brány v potaz v zůstatku validátoru, který se nachází na vrstvě konsenzu."
     }
   ],
   "WxqnJn": [
@@ -3079,6 +3967,18 @@
     {
       "type": 0,
       "value": "Pojmenoval průzkumník bloků danou smlouvu?"
+    }
+  ],
+  "X3NiFM": [
+    {
+      "type": 0,
+      "value": "hra na důkaz uchování"
+    }
+  ],
+  "X3rOq5": [
+    {
+      "type": 0,
+      "value": "Po Sloučení už Infura a Alchemy nebudou použitelné k outsourcování povinností na exekuční vrstvě."
     }
   ],
   "X5KFEh": [
@@ -3148,7 +4048,7 @@
   "XqbweH": [
     {
       "type": 0,
-      "value": "Klienti podporují Prometheus a Grafana, abyste mohli vizualizovat důležité statistiky vašeho validátoru v reálném čase. Pokyny specifické pro klienty najdete zde: "
+      "value": "Klienty podporují Prometheus a Grafanu, abyste mohli vizualizovat důležité statistiky vašeho validátoru v reálném čase. Pokyny specifické pro klienty najdete zde: "
     },
     {
       "type": 1,
@@ -3177,6 +4077,24 @@
     {
       "type": 1,
       "value": "teku"
+    }
+  ],
+  "Y07Hwy": [
+    {
+      "type": 0,
+      "value": "Připojit peněženku "
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " k vrstvě "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
     }
   ],
   "Y47aYU": [
@@ -3231,6 +4149,18 @@
       "value": "Klíče"
     }
   ],
+  "YHk9Pe": [
+    {
+      "type": 0,
+      "value": "Po Sloučení bude zpracovávání transakcí úkolem validátorů, protože důkaz prací už nebude používán. Pokud chce validátor potvrzovat platnost transakcí, musí mít důvěryhodný přístup k událostem na exekuční vrstvě. Důvěřujte pouze svému vlastnímu uzlu."
+    }
+  ],
+  "YIjr32": [
+    {
+      "type": 0,
+      "value": "Pro ty, kteří chtějí větší kontrolu a chtějí držet méně"
+    }
+  ],
   "YP03/j": [
     {
       "type": 0,
@@ -3263,6 +4193,46 @@
     {
       "type": 0,
       "value": " validátorů. Uchovávejte je na bezpečném, nejlépe offline místě. Úložiště klíčů vašich validátorů by měla být k dispozici ve vybraném adresáři."
+    }
+  ],
+  "YTNPFn": [
+    {
+      "type": 0,
+      "value": "Pokyny k nastavení tohoto tajného kódu JWT záleží na klientu. Operátoři uzlů by pokyny k jeho vygenerování a konfiguraci měli vyhledat v dokumentaci jejich klientu."
+    }
+  ],
+  "YX6pc0": [
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " je "
+    },
+    {
+      "type": 1,
+      "value": "layerType"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Yd6MEN": [
+    {
+      "type": 0,
+      "value": "Exekuční klienty"
+    }
+  ],
+  "Yep32z": [
+    {
+      "type": 0,
+      "value": "Testovací síť "
+    },
+    {
+      "type": 1,
+      "value": "EL_TESTNET_NAME"
     }
   ],
   "Yganfl": [
@@ -3367,18 +4337,18 @@
       "value": "Proč je nutné čekat?"
     }
   ],
-  "ZlLjuq": [
+  "ZdT9Bs": [
     {
       "type": 0,
-      "value": "Až se zobrazí výzva k výběru sítě, je nutné vybrat síť "
+      "value": "Když váš validátor navrhuje bloky, bude rovněž dostávat poplatky za nespálené palivo. Validátory jsou protokolem vybírány náhodně a navrhují bloky. Jeden validátor může v každém 12sekundovém intervalu navrhnout jeden blok. Každý den je k dispozici 7200 intervalů, což znamená, že váš validátor má 7200 šancí k navržení bloku za den. Pokud existuje 360 000 validátorů, každý validátor bude "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "average"
     },
     {
       "type": 0,
-      "value": ", jinak bude vklad neplatný."
+      "value": " návrh bloku každých 50 dnů."
     }
   ],
   "ZsXdlw": [
@@ -3391,12 +4361,6 @@
     {
       "type": 0,
       "value": "Oddíl 1 – Než začnete"
-    }
-  ],
-  "Zxm0fh": [
-    {
-      "type": 0,
-      "value": "Sloučení bude znamenat spojení hlavní sítě Etherea, kterou dnes používáme, s řetězovou vazbou. Ethereum při tom plně přejde na důkaz podílem."
     }
   ],
   "ZzTcj5": [
@@ -3435,24 +4399,16 @@
       "value": "Nimbus je licencovaný pod Apache 2 a napsaný v jazyce Nim, který má syntaxi jako Python a kompiluje se do jazyka C."
     }
   ],
-  "aZ7pUj": [
-    {
-      "type": 0,
-      "value": "Vaše peněženka je na nesprávné síti Ethereum. Chcete-li pokračovat, připojte se k síti "
-    },
-    {
-      "type": 1,
-      "value": "networkName"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "acrOoz": [
     {
       "type": 0,
       "value": "Pokračovat"
+    }
+  ],
+  "aozN2h": [
+    {
+      "type": 0,
+      "value": "Pokyny k tomu, jak to nastavit na vašem klientu, najdete v dokumentaci konsenzus klienta."
     }
   ],
   "azLmaD": [
@@ -3517,10 +4473,32 @@
       "value": "Dokud nespustíte údržbu uzlu, musíte mít na disku dostatek místa."
     }
   ],
+  "bX1fts": [
+    {
+      "type": 0,
+      "value": "Kontrolní seznam připravenosti na sloučení"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
       "value": "Soubory YAML mohou mít různé syntaxe."
+    }
+  ],
+  "be6WvD": [
+    {
+      "type": 1,
+      "value": "nodeOperator"
+    },
+    {
+      "type": 0,
+      "value": " je osoba, která se stará o správné fungování klientského softwaru a o případnou údržbu příslušného hardwaru."
+    }
+  ],
+  "bgyJfz": [
+    {
+      "type": 0,
+      "value": "Které klienty potřebuji provozovat?"
     }
   ],
   "bnuvhg": [
@@ -3535,10 +4513,10 @@
       "value": "Pokyny k instalaci Pythonu"
     }
   ],
-  "c9DSZ1": [
+  "by+LIm": [
     {
       "type": 0,
-      "value": "Důrazně doporučujeme, abyste tento postup uskutečnili na aktuálním testnetu a teprvé poté až na mainnetu."
+      "value": "Co je klient validátora?"
     }
   ],
   "cHUoV9": [
@@ -3565,6 +4543,12 @@
       "value": "Aktuální RPS"
     }
   ],
+  "cUvpWk": [
+    {
+      "type": 0,
+      "value": "Víc o tříštění dat"
+    }
+  ],
   "cav520": [
     {
       "type": 0,
@@ -3583,12 +4567,6 @@
       "value": "Víc o PegaSys Teku"
     }
   ],
-  "ckaUkz": [
-    {
-      "type": 0,
-      "value": "Validátor je subjekt, který se podílí na konsenzu protokolu Ethereum."
-    }
-  ],
   "clUb0+": [
     {
       "type": 0,
@@ -3601,10 +4579,28 @@
       "value": "Jakou sankci dostanu za nevhodné chování?"
     }
   ],
+  "cnQKC2": [
+    {
+      "type": 0,
+      "value": "V současné době používá Geth méně než 66 % sítě."
+    }
+  ],
   "cpxfOR": [
     {
       "type": 0,
       "value": "Co jsou přihlašovací údaje k výběru?"
+    }
+  ],
+  "cwYSyN": [
+    {
+      "type": 0,
+      "value": "Úloha 3"
+    }
+  ],
+  "cyNFM3": [
+    {
+      "type": 0,
+      "value": "Výběr vkladu není možný, dokud po Sloučení neproběhne naplánované vylepšení Shanghai."
     }
   ],
   "cyR7Kh": [
@@ -3635,6 +4631,12 @@
       "value": " jsou 32bajtové pole ve vkladu, které slouží k ověřování cíle platných výběrů. Momentálně existují dva typy výběrů: výběr BLS a výběr na ethereovou adresu."
     }
   ],
+  "dGWdPu": [
+    {
+      "type": 0,
+      "value": "Všichni podílníci musí od Sloučení provozovat exekučního klienta a také konsenzus klienta. Nezapomeňte se na to připravit."
+    }
+  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -3659,24 +4661,16 @@
       "value": "Co přesně je validátor?"
     }
   ],
-  "dNh0YZ": [
-    {
-      "type": 0,
-      "value": "K "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " budete potřebovat přibližně 400 GB jen pro data exekučních řetězců hlavní sítě (objem dat roste asi o 1 GB denně)."
-    }
-  ],
   "dTOtPO": [
     {
       "type": 0,
       "value": "Dobít"
+    }
+  ],
+  "da/gCQ": [
+    {
+      "type": 0,
+      "value": "Úloha 2"
     }
   ],
   "deLJOg": [
@@ -3689,6 +4683,12 @@
     {
       "type": 0,
       "value": "Kde mohu najít pomoc s řešením problémů?"
+    }
+  ],
+  "dsQVUw": [
+    {
+      "type": 0,
+      "value": "Kniha Nimbus"
     }
   ],
   "dvr19k": [
@@ -3707,6 +4707,12 @@
     {
       "type": 0,
       "value": "Nahrát data o vkladu"
+    }
+  ],
+  "e1dCqL": [
+    {
+      "type": 0,
+      "value": "Problém s plánováním vylepšení Shanghai na GitHubu"
     }
   ],
   "e4f94H": [
@@ -3735,6 +4741,16 @@
       "value": "code3"
     }
   ],
+  "e4wHN4": [
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " – Launchpad pro uzamčení"
+    }
+  ],
   "eF9RbC": [
     {
       "type": 0,
@@ -3759,16 +4775,16 @@
       "value": "Určuje, kdo má podíl, kdo validuje, jaký je podíl a kdo může vybírat finanční prostředky."
     }
   ],
+  "eX072N": [
+    {
+      "type": 0,
+      "value": "Erigon je exekuční klient na hranici účinnosti napsaný v jazyce Go."
+    }
+  ],
   "eaU/aL": [
     {
       "type": 0,
       "value": "Kvůli maximálnímu zabezpečení a efektivitě uzlu provozujte klienty na vyhrazeném hardwaru. Tím omezíte riziko jeho vystavení malwaru a vyhradíte mu výpočetní prostředky, které potřebuje k neustálému plnění svých povinností a zpracovávání dat ze sítě."
-    }
-  ],
-  "egVO5r": [
-    {
-      "type": 0,
-      "value": "Víc o shard řetězcích"
     }
   ],
   "elCkOU": [
@@ -3839,6 +4855,26 @@
       "value": "Co se stane, když ztratím podpisový klíč?"
     }
   ],
+  "fBCdim": [
+    {
+      "type": 0,
+      "value": "Beacon uzel (vrstva konsenzu) dříve pouze musel sledovat kontrakt o vkladu na exekuční vrstvě, aby věděl, které účty validátorů vložily "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Tuto informaci bylo možné snadno získávat od nezávislých poskytovatelů, jako jsou Infura nebo Alchemy."
+    }
+  ],
+  "fDY/uQ": [
+    {
+      "type": 0,
+      "value": "Teku – Sloučení"
+    }
+  ],
   "fHLKXR": [
     {
       "type": 0,
@@ -3855,6 +4891,12 @@
     {
       "type": 0,
       "value": "Během instalace"
+    }
+  ],
+  "fZwn+P": [
+    {
+      "type": 0,
+      "value": "Až nainstalujete klienta, před odesláním vkladu k uzamčení se ujistěte, jestli jste plně synchronizováni. To může trvat několik dní."
     }
   ],
   "fbiteI": [
@@ -3949,6 +4991,28 @@
       "value": "ANO"
     }
   ],
+  "grF2gm": [
+    {
+      "type": 0,
+      "value": "Každý pár klíčů související s validátorem vyžaduje aktivaci uzamčení "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": ", což představuje váš počáteční zůstatek a také vaše hlasovací právo "
+    },
+    {
+      "type": 1,
+      "value": "initialAndMaximum"
+    },
+    {
+      "type": 0,
+      "value": " pro libovolný validátor."
+    }
+  ],
   "gsuLMm": [
     {
       "type": 0,
@@ -3997,24 +5061,16 @@
       "value": "hodiny"
     }
   ],
+  "h/n5+N": [
+    {
+      "type": 0,
+      "value": "Jako podílník musíte provozovat uzel, na kterém běží konsenzus klient i exekuční klient."
+    }
+  ],
   "h8MTUo": [
     {
       "type": 0,
       "value": "Váš podíl"
-    }
-  ],
-  "h8ZHus": [
-    {
-      "type": 0,
-      "value": "Převody mezi validátory zatím nejsou možné. Budete muset počkat, dokud se mainnet nesloučí s Beacon Chainem (asi za dva roky). Až pak budete moci vybrat nebo převést své "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "hFzE1M": [
@@ -4027,6 +5083,12 @@
     {
       "type": 0,
       "value": "Pouze pro počítače"
+    }
+  ],
+  "hICY9k": [
+    {
+      "type": 0,
+      "value": "Zadal(a) jsem do svého validátoru ethereovou adresu, na kterou chci dostávat odměny formou poplatků."
     }
   ],
   "hPCn9f": [
@@ -4069,6 +5131,20 @@
       "value": "Víc o efektivním zůstatku"
     }
   ],
+  "hlxt3T": [
+    {
+      "type": 0,
+      "value": "Omezení maximálního podílu na "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH na validátor vede k decentralizaci moci a brání tomu, že libovolný validátor bude mít nadměrně velké hlasovací právo ohledně stavu řetězce. Také to omezuje částku ETH, kterou lze kdykoli vybrat z podílu, jelikož počet validátorů, které mohou v daném časovém období odejít, je omezený. Pomáhá to chránit síť před určitými útoky."
+    }
+  ],
   "huEFUF": [
     {
       "type": 0,
@@ -4083,16 +5159,28 @@
       "value": " čekající vklad"
     }
   ],
+  "hwkLRc": [
+    {
+      "type": 0,
+      "value": "provozovatel uzlu"
+    }
+  ],
   "hzLd+/": [
     {
       "type": 0,
       "value": "Chápu, že je důležité mát validátor online a aktualizovaný."
     }
   ],
+  "hzX7K4": [
+    {
+      "type": 0,
+      "value": "Úloha 1"
+    }
+  ],
   "iCpuph": [
     {
       "type": 0,
-      "value": "Klienti"
+      "value": "Klienty"
     }
   ],
   "iMvXLd": [
@@ -4107,26 +5195,10 @@
       "value": "Jelikož jsou převody pro tuto chvíli vypnuté, nebudete moci dobrovolně odejít a později znovu začít. To znamená, že dáváte dlouhodobý závazek."
     }
   ],
-  "iWg7mL": [
+  "iX90gu": [
     {
       "type": 0,
-      "value": "Musíte nastavit "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " pro "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", jinak bude vklad neplatný."
+      "value": "Připojil(a) jsem se na Discord server svého exekučního klienta."
     }
   ],
   "iZuIgB": [
@@ -4201,10 +5273,18 @@
       "value": "Teku (dříve Artemis) je klient konsenzu pro potřeby institucí a zabezpečení. PegaSys je odnož ConsenSys vyhrazená pro vývoj podnikových klientů a nástrojů k interakci s hlavní platformou Ethereum."
     }
   ],
-  "jDv/zO": [
+  "jQTc9t": [
     {
       "type": 0,
-      "value": "Při validaci na testnetu proveďte tyto simulace, abyste se dozvěděli více o svém uzlu a abyste se mohli lépe připravit na mainnet:"
+      "value": "Zde najdete nejnovější informace o tom, jak se zapojit do "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": " na ostatních veřejných testovacích sítích, až budou k dispozici podrobnosti."
     }
   ],
   "jXer8/": [
@@ -4243,10 +5323,26 @@
       "value": "Dokumentace k instalaci Prysmu"
     }
   ],
+  "jlx7pU": [
+    {
+      "type": 0,
+      "value": "Dokumentace k provozování Gethu"
+    }
+  ],
   "jm79h1": [
     {
       "type": 0,
       "value": "Pozor: Neukládejte klíče na několika validátorech zároveň (například jako zálohu)."
+    }
+  ],
+  "jp9OG2": [
+    {
+      "type": 0,
+      "value": "Vyberte klienta "
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
     }
   ],
   "jse8rl": [
@@ -4265,6 +5361,20 @@
     {
       "type": 0,
       "value": "Dokumentace Nimbusu"
+    }
+  ],
+  "jzGCBy": [
+    {
+      "type": 0,
+      "value": "Faucety "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " byly zneužívány a jsou omezeny, ale lidé z EthStakeru se vám vynasnaží pomoci"
     }
   ],
   "k43c+l": [
@@ -4349,6 +5459,20 @@
     {
       "type": 0,
       "value": "Jste na testnetu"
+    }
+  ],
+  "l3ztMu": [
+    {
+      "type": 0,
+      "value": "K "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " budete potřebovat přibližně 1 TB jen pro data exekučních řetězců hlavní sítě (objem dat roste asi o 1 GB denně)."
     }
   ],
   "l4nLft": [
@@ -4515,6 +5639,20 @@
       "value": "Tato transakce je nevratná."
     }
   ],
+  "lmr40S": [
+    {
+      "type": 0,
+      "value": "Tato komunikace je zabezpečena tajným kódem "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": ", který je sdílen pouze mezi dvěma klienty pro účely vzájemného ověření. Sdílený tajný kód JWT musí být k dispozici v každém klientu (EL i CL), aby bylo možné řádně ověřit rozhraní API modulu a aby klienty mohly řádně vzájemně komunikovat."
+    }
+  ],
   "lo+Qqn": [
     {
       "type": 0,
@@ -4533,10 +5671,32 @@
       "value": "Pevný disk"
     }
   ],
+  "mUZnem": [
+    {
+      "type": 0,
+      "value": "Důrazně vám doporučujeme nejdřív si projít celý proces na testovací síti, abyste se s ním seznámili a neriskovali ztrátu skutečných ETH."
+    }
+  ],
   "mZOXtM": [
     {
       "type": 0,
       "value": "Validátoři"
+    }
+  ],
+  "mc27Pv": [
+    {
+      "type": 1,
+      "value": "validator"
+    },
+    {
+      "type": 0,
+      "value": " je virtuální entita, která žije v řetězové vazbě, je reprezentována zůstatkem, veřejným klíčem a dalšími vlastnostmi a účastní se konsenzu v ethereové síti."
+    }
+  ],
+  "mcQpea": [
+    {
+      "type": 0,
+      "value": "Vše, co potřebujete do začátků se sítí, včetně faucetu"
     }
   ],
   "mhyltV": [
@@ -4555,12 +5715,6 @@
     {
       "type": 0,
       "value": "Rizika a potvrzení:"
-    }
-  ],
-  "n7yYXG": [
-    {
-      "type": 0,
-      "value": "Služba"
     }
   ],
   "nBhisA": [
@@ -4645,6 +5799,26 @@
       "value": "Pokročilá systémová architektura"
     }
   ],
+  "nwgrRp": [
+    {
+      "type": 0,
+      "value": "Launchpad uzamčení pro testovací síť "
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    }
+  ],
+  "nyx/4g": [
+    {
+      "type": 0,
+      "value": "Jak provozovat uzel na síti "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
   "nz27+c": [
     {
       "type": 0,
@@ -4673,6 +5847,12 @@
       "value": "Než začnete"
     }
   ],
+  "oF4os+": [
+    {
+      "type": 0,
+      "value": "V současné době používá Prysm přes 33 % sítě."
+    }
+  ],
   "oLxfO1": [
     {
       "type": 0,
@@ -4685,24 +5865,16 @@
       "value": "Nakonfigurujte svého klienta konsenzu"
     }
   ],
-  "oPdwwC": [
-    {
-      "type": 0,
-      "value": "Omezení maximálního podílu na "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH napomáhá k decentralizaci moci, protože brání tomu, aby kterýkoli validátor měl příliš velké slovo při hlasování o stavu řetězce."
-    }
-  ],
   "oWhj8Q": [
     {
       "type": 0,
       "value": "Jak často jsou dávány odměny/sankce?"
+    }
+  ],
+  "obp8vV": [
+    {
+      "type": 0,
+      "value": "Dokumentace k provozování Besu"
     }
   ],
   "ogbG7r": [
@@ -4733,6 +5905,20 @@
       "value": "Povinnosti"
     }
   ],
+  "olByWa": [
+    {
+      "type": 0,
+      "value": "Zatímco podílníci čekají na přechod hlavní sítě na důkaz podílem, zveme je, aby se zapojili do "
+    },
+    {
+      "type": 1,
+      "value": "testingTheMerge"
+    },
+    {
+      "type": 0,
+      "value": ". Dozví se tak více o Sloučení, mohou si vše vyzkoušet dřív, než se to dostane do hlavní sítě, a mohou si osvojit znalosti nastavení."
+    }
+  ],
   "omJNJw": [
     {
       "type": 0,
@@ -4755,6 +5941,12 @@
     {
       "type": 0,
       "value": "Má smlouva velký zůstatek?"
+    }
+  ],
+  "ouMFoC": [
+    {
+      "type": 0,
+      "value": "Udělejte to teď."
     }
   ],
   "ouW9ov": [
@@ -4855,10 +6047,26 @@
       "value": "Úspěšně jsem nasimuloval(a) ruční zastavení a opětovné spuštění svého uzlu Beacon Node (BN) a klienta Validator Client (VC)."
     }
   ],
+  "pxfiWL": [
+    {
+      "type": 1,
+      "value": "networkBold"
+    },
+    {
+      "type": 0,
+      "value": " je mladší veřejná testovací síť, která po úspěšném upgradu sloučením v březnu 2022 přešla na důkaz podílem. Síť Kiln je otevřená všem. Zkuste poslat ETH, pracovat s kontrakty nebo nasadit vlastní kontrakt."
+    }
+  ],
   "pyWt01": [
     {
       "type": 0,
       "value": "Shrnutí vkladu"
+    }
+  ],
+  "q2PJEK": [
+    {
+      "type": 0,
+      "value": "Provozuji vlastního konsenzus klienta."
     }
   ],
   "q2XW/k": [
@@ -4873,12 +6081,6 @@
       "value": "Co se stalo s Eth2?"
     }
   ],
-  "qDcbPp": [
-    {
-      "type": 0,
-      "value": "Poté můžete vybrat svých 16 ETH, a to pomocí vašeho klíče pro výběr a s odstupem přibližně jednoho dne."
-    }
-  ],
   "qDvaNm": [
     {
       "type": 0,
@@ -4891,6 +6093,20 @@
     {
       "type": 0,
       "value": ", kterým mohu vybrat své finanční prostředky."
+    }
+  ],
+  "qEsYC0": [
+    {
+      "type": 0,
+      "value": "Také se můžete podívat na náš GitHub, kde najdete "
+    },
+    {
+      "type": 1,
+      "value": "allConfigs"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "qK4+NQ": [
@@ -4941,10 +6157,22 @@
       "value": "Chápu rizika předčasného přijetí a postihů."
     }
   ],
+  "qx+3RQ": [
+    {
+      "type": 0,
+      "value": "JWT"
+    }
+  ],
   "r2BH1M": [
     {
       "type": 0,
       "value": "Nakonfigurovat Prysm"
+    }
+  ],
+  "r2j8jL": [
+    {
+      "type": 0,
+      "value": "klient validátora"
     }
   ],
   "r4JsKB": [
@@ -4959,12 +6187,6 @@
       "value": "Průvodce phishingem"
     }
   ],
-  "rFe61n": [
-    {
-      "type": 0,
-      "value": "Jako validátor budete odpovědní za zabezpečování sítě a budete průběžně dostávat platby za kroky, které pomáhají síti v dosahování konsensu."
-    }
-  ],
   "rMjMmc": [
     {
       "type": 0,
@@ -4977,12 +6199,6 @@
     {
       "type": 0,
       "value": ". Tím zapnete služby JSON RPC na výchozím portu 8545."
-    }
-  ],
-  "rNEdex": [
-    {
-      "type": 0,
-      "value": "validátor můžete považovat za hlasujícího pro nové bloky"
     }
   ],
   "rTSJI9": [
@@ -5013,6 +6229,20 @@
     {
       "type": 0,
       "value": "Vzhledem k fixnímu celkovému počtu validátorů jsou odměny a sankce škálovány především podle zůstatku validátoru – atestování s vyšším zůstatkem znamená vyšší odměny/sankce a atestování s nižším zůstatkem znamená nižší odměny/sankce."
+    }
+  ],
+  "rgjQYI": [
+    {
+      "type": 0,
+      "value": "Připravenost na Sloučení: Kromě konsenzu klienta musí operátoři uzlů po Sloučení provozovat také "
+    },
+    {
+      "type": 1,
+      "value": "alternateClient"
+    },
+    {
+      "type": 0,
+      "value": ", aby zůstali aktivní."
     }
   ],
   "rnDgcN": [
@@ -5097,18 +6327,24 @@
       "value": "Procesor a RAM"
     }
   ],
-  "sdQRah": [
+  "saDFoR": [
     {
       "type": 0,
-      "value": "Synchronizoval(a) jsem svůj Beacon uzel na síti "
+      "value": "Bonus"
+    }
+  ],
+  "scfDDt": [
+    {
+      "type": 0,
+      "value": "Komunikace mezi exekuční vrstvou a vrstvou konsenzu proběhne pomocí "
     },
     {
       "type": 1,
-      "value": "NETWORK_NAME"
+      "value": "engineApi"
     },
     {
       "type": 0,
-      "value": "."
+      "value": ". Jedná se o novou sadu metod JSON RPC, které lze používat ke komunikaci mezi těmito dvěma vrstvami klientů."
     }
   ],
   "sj/Zef": [
@@ -5191,18 +6427,10 @@
       "value": "Zůstatek po dobití"
     }
   ],
-  "toCscK": [
+  "tp1IPS": [
     {
       "type": 0,
-      "value": "Vyberte klienta "
-    },
-    {
-      "type": 1,
-      "value": "ethClientType"
-    },
-    {
-      "type": 0,
-      "value": " a nastavte uzel"
+      "value": "Nakonfigurovat příjemce poplatku"
     }
   ],
   "tsfX5f": [
@@ -5245,6 +6473,20 @@
       "value": "Stav"
     }
   ],
+  "u/3saa": [
+    {
+      "type": 0,
+      "value": "Vaše peněženka je na nesprávné síti Ethereum. Chcete-li pokračovat, připojte se k vrstvě "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "u28qA1": [
     {
       "type": 0,
@@ -5263,18 +6505,10 @@
       "value": "Doba činnosti"
     }
   ],
-  "uCikFk": [
+  "uGKswV": [
     {
       "type": 0,
-      "value": "Také potřebujete mít dostatečnou rychlost odesílání dat. K "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " potřebujete odesílat asi 700–800 MB za hodinu a tento objem může vzrůst."
+      "value": "Ethereový uzel bude po sloučení tvořen exekučním klientem i konsenzus klientem."
     }
   ],
   "uJzGSb": [
@@ -5297,6 +6531,12 @@
     {
       "type": 0,
       "value": "Kontrolní seznam validátora"
+    }
+  ],
+  "uUy3NQ": [
+    {
+      "type": 0,
+      "value": "Chápu, že budu dostávat nespálené transakční poplatky (spropitné / prioritní poplatky), když navrhnu blok a že se mi tyto poplatky budou započítávat na exekuční vrstvě, a nikoli do zůstatku validátoru."
     }
   ],
   "ubKWX8": [
@@ -5339,18 +6579,16 @@
       "value": "Staňte se validátorem s Nimbusem"
     }
   ],
-  "unzIoE": [
+  "ulgIVs": [
     {
       "type": 0,
-      "value": "Než budete moci spustit validátor a začít zabezpečovat síť, musíte vložit podíl "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
+      "value": "Po sloučení již nebudou existovat dvě odlišné ethereové sítě, bude existovat jen Ethereum."
+    }
+  ],
+  "uoKhQB": [
     {
       "type": 0,
-      "value": " ETH. Tento podíl bude představovat váš prvotní zůstatek."
+      "value": "Ověřovací rozhraní API"
     }
   ],
   "up+5YH": [
@@ -5365,6 +6603,12 @@
     {
       "type": 0,
       "value": "?"
+    }
+  ],
+  "vBJ79e": [
+    {
+      "type": 0,
+      "value": "Nasimuloval(a) jsem bezpečnou migraci z jednoho exekučního klienta na druhý."
     }
   ],
   "vBOf5K": [
@@ -5425,12 +6669,6 @@
       "value": "Čínština (zjednodušená)"
     }
   ],
-  "va96SS": [
-    {
-      "type": 0,
-      "value": "Přesměroval(a) jsem potřebné porty na routeru na správné počítače (otevírejte pouze porty týkající se příslušné instalace)."
-    }
-  ],
   "vbVsqW": [
     {
       "type": 0,
@@ -5445,36 +6683,28 @@
       "value": ". Pokud potřebujete pomoc nebo něco prodiskutovat s ostatními validátory, zapojte se do komunity EthStaker."
     }
   ],
+  "vej0DE": [
+    {
+      "type": 0,
+      "value": "V současnosti budete zabezpečovat řetězovou vazbu, první významné vylepšení škálování. Jedná se o samostatný blockchain, který používá mechanismus konsenzu důkazem podílem. Až se hlavní síť (Ethereum, které dnes používáme) sloučí s řetězovou vazbou, což nastane velmi brzy, budete pomáhat se zabezpečením veškerého Etherea."
+    }
+  ],
   "vg1dVR": [
     {
       "type": 0,
       "value": "Pomocí svého podpisového klíče můžete zkusit validátor rychle ukončit a pak finanční prostředky převést s využitím klíče pro výběr, a to dřív, než to udělá zloděj."
     }
   ],
-  "vkozFq": [
-    {
-      "type": 0,
-      "value": "Až do vyčištění po sloučení, které je momentálně naplánováno po sloučení, nebude možné validátor znovu aktivovat a nebudete moci převádět ani vybírat finanční prostředky (to znamená, že do té doby zůstanou vaše finanční prostředky nedostupné)."
-    }
-  ],
-  "vyvUB5": [
-    {
-      "type": 0,
-      "value": "Soubor JSON je určený pro jinou síť. Nahrajte soubor vygenerovaný pro aktuální síť: "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Aplikaci spusťte následujícím příkazem"
+    }
+  ],
+  "wHvmSN": [
+    {
+      "type": 0,
+      "value": "obojí"
     }
   ],
   "wJ1PbL": [
@@ -5491,6 +6721,12 @@
     {
       "type": 0,
       "value": "Počáteční nastavení"
+    }
+  ],
+  "wPR6Js": [
+    {
+      "type": 0,
+      "value": "Před přechodem existuje několik věcí, které by samostatní podílníci a poskytovatelé služeb validátoru měli vědět, a několik věcí, kterým byste možná měli věnovat pozornost."
     }
   ],
   "wawegX": [
@@ -5511,14 +6747,10 @@
       "value": "Víc o Proof-of-stake"
     }
   ],
-  "wfSgCZ": [
+  "wea8Ie": [
     {
       "type": 0,
-      "value": "Připojit k síti "
-    },
-    {
-      "type": 1,
-      "value": "network"
+      "value": "Exekuční vrstva a vrstva konsenzu spolu úzce spolupracují a z bezpečnostních důvodů vyžadují ověření."
     }
   ],
   "wm04oC": [
@@ -5533,32 +6765,16 @@
       "value": "Rizika předčasného přijetí"
     }
   ],
-  "wrnpoO": [
-    {
-      "type": 0,
-      "value": "Ke zpracovávání příchozích vkladů validátoru z exekuční vrstvy (dříve z řetězce Eth1) potřebujete provozovat klienta "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " i vašeho klienta "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (dříve Eth2). Můžete používat externí službu, jako je Infura, ale doručujeme používat vlastního klienta, aby byla síť co nejvíce decentralizovaná."
-    }
-  ],
   "wtTeex": [
     {
       "type": 0,
       "value": "Našli jste pravopisné chyby?"
+    }
+  ],
+  "wuhO1L": [
+    {
+      "type": 0,
+      "value": "Provozuji vlastního exekučního klienta."
     }
   ],
   "x+fF+M": [
@@ -5573,10 +6789,10 @@
       "value": "Validace Etherea není to stejné co těžba. Výsledky jsou podobné: svou činností rozšiřujete a zabezpečujete řetězec. Ale proce se zcela liší, protože používá jiný mechanismus konsensu."
     }
   ],
-  "x8+8fi": [
+  "x4/9vY": [
     {
       "type": 0,
-      "value": "Většina validátorů momentálně jako klienta konsenzu používá Prysm. Rozmanitost klientů je velmi důležitá pro stav sítě Ethereum: Chyba v klientovi s více než 33% podílem může způsobit odpojení Etherea. Pokud má klient kvalifikovanou většinu (více než 66 %), případná chyba by mohla způsobit nesprávné rozdělení řetězce a mohla by vést i k postihu."
+      "value": "Důrazně doporučujeme, abyste tento postup uskutečnili na aktuální testovací síti a teprvé poté na hlavní síti."
     }
   ],
   "xDyl3T": [
@@ -5617,10 +6833,46 @@
       "value": "Odměny za bloky jsou počítány pomocí posuvné škály založené na celkové částce podílu ETH v síti."
     }
   ],
+  "xXKkhR": [
+    {
+      "type": 0,
+      "value": "Mám nainstalovaný a synchronizovaný svůj exekuční klient sítě "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " (nečekejte na to, protože to může zabrat několik dnů)."
+    }
+  ],
   "xXWzDf": [
     {
       "type": 0,
       "value": "Řetězová vazba"
+    }
+  ],
+  "xXntjc": [
+    {
+      "type": 0,
+      "value": "Musíte nastavit "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " pro vrstvu "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": ", jinak bude vklad neplatný."
     }
   ],
   "xbet2w": [
@@ -5629,10 +6881,40 @@
       "value": "Nainstalovat python3.7+"
     }
   ],
+  "xm3Ivd": [
+    {
+      "type": 0,
+      "value": "Soubor JSON je určený pro jinou síť. Nahrajte soubor vygenerovaný pro aktuální síť: "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "xogY3N": [
     {
       "type": 0,
       "value": "Besu je napsán v Javě a vydáván pod licencí Apache 2.0."
+    }
+  ],
+  "xxbUJa": [
+    {
+      "type": 0,
+      "value": "Exekuční klienty: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "xyMh/n": [
+    {
+      "type": 0,
+      "value": "Velký seznam zdrojů informací o Sloučení"
     }
   ],
   "y44jV2": [
@@ -5647,10 +6929,10 @@
       "value": "Nakonfigurovat synchronizaci času"
     }
   ],
-  "y7dWNc": [
+  "y86+cK": [
     {
       "type": 0,
-      "value": "Je důležité vědět, že hlas validátora je posuzován podle částky jeho podílu."
+      "value": "Co je operátor uzlu?"
     }
   ],
   "yFtJza": [
@@ -5671,18 +6953,10 @@
       "value": "Uchovávám své klíče v bezpečí a svou mnemotechnickou pomůcku mám někde zapsanou."
     }
   ],
-  "yT2EZO": [
+  "yaf+Vw": [
     {
       "type": 0,
-      "value": "Jinými slovy, "
-    },
-    {
-      "type": 1,
-      "value": "boldSummary"
-    },
-    {
-      "type": 0,
-      "value": ". Čím víc hlasů blok dostane, tím pravděpodobnější je, že bude přidán do řetězce."
+      "value": "Obousměrná komunikace mezi klientem EL a klientem CL vyžaduje ověření pomocí tajného kódu JWT a je nezbytná k fungování vašeho uzlu."
     }
   ],
   "ydh1KU": [
@@ -5721,26 +6995,26 @@
       "value": "Ujistěte se, že má uzel více než 20 klientů."
     }
   ],
-  "z/ZhML": [
+  "z/ToMo": [
     {
       "type": 0,
-      "value": "Musíte nastavit "
+      "value": "Až bude přechod na důkaz podílem přes Sloučení dokončen, validátoři budou odpovídat za zpracovávání transakcí a ověřování jejich platnosti. Tato data po Sloučení "
     },
     {
       "type": 1,
-      "value": "flag"
+      "value": "not"
     },
     {
       "type": 0,
-      "value": " pro "
+      "value": "budou k dispozici z populárních zdrojů třetích stran a způsobí, že váš validátor bude offline. Až bude implementováno tříštění dat, validátoři také budou ohroženi postihy, jak uvádí "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "pocGame"
     },
     {
       "type": 0,
-      "value": ", jinak bude vklad neplatný."
+      "value": "."
     }
   ],
   "z63I56": [
@@ -5801,18 +7075,16 @@
       "value": "Zabezpečení uzlu"
     }
   ],
-  "zmMF+G": [
+  "zkT9Jx": [
     {
       "type": 0,
-      "value": "Launchpad uzamčení pro "
-    },
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
+      "value": "Pomůžeme vám vytvořit podpisový klíč pro každý validátor, který chcete provozovat. Až do vylepšení Shanghai plánovaného po Sloučení není možné provádět výběry, takže nyní nevytvoříte klíče pro výběr. Až bude možné vybírat finanční prostředky, můžete své klíče pro výběr odvodit od své mnemotechnické pomůcky."
+    }
+  ],
+  "zqOrZZ": [
     {
       "type": 0,
-      "value": " testnet"
+      "value": "Podívejte se na kontrolní seznam připravenosti na Sloučení"
     }
   ]
 }

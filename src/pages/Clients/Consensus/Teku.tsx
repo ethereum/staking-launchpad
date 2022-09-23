@@ -11,7 +11,6 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { TEKU_INSTALLATION_URL } from '../../../utils/envVars';
 
 export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
@@ -236,7 +235,6 @@ export const Teku = () => {
           imgSrc={tekuBg}
           style={{ objectPosition: '0 -110px', height: 300 }}
         />
-        <ClientMergeNotification client="Teku" isConsensus />
         <TekuDetails />
         <section>
           <SectionTitle level={2} className="mb5">

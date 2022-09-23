@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
+import _sortBy from 'lodash/sortBy';
 import { CheckBox } from 'grommet';
 import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import { FormNext } from 'grommet-icons';
@@ -99,6 +100,10 @@ const PortTable = styled.table`
   margin: 1rem auto;
   color: #212529;
 
+  * {
+    text-align: start;
+  }
+
   th,
   td {
     padding: 0.75rem;
@@ -196,6 +201,10 @@ interface Client {
   discord: string;
   defaultTcp: number;
   defaultUdp: number;
+  jwtReference: ReactNode;
+  jwtUrl: string;
+  feeRecipientReference?: ReactNode;
+  feeRecipientUrl?: string;
 }
 
 const tutorialLinkBox = () => {
@@ -216,7 +225,7 @@ const tutorialLinkBox = () => {
       </Alert>
     );
   }
-  return;
+  return null;
 };
 
 export const Checklist = () => {
@@ -254,6 +263,9 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/hyperledger',
       ...defaultExecutionPorts,
+      jwtReference: formatMessage({ defaultMessage: 'Command line options' }),
+      jwtUrl:
+        'https://besu.hyperledger.org/en/stable/public-networks/reference/cli/options/#engine-jwt-secret',
     },
     {
       header: 'Nethermind',
@@ -269,6 +281,9 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/PaCMRFdvWT',
       ...defaultExecutionPorts,
+      jwtReference: formatMessage({ defaultMessage: 'JWT Secrets' }),
+      jwtUrl:
+        'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
     },
     {
       header: 'Erigon',
@@ -284,6 +299,9 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://github.com/ledgerwatch/erigon#erigon-discord-server',
       ...defaultExecutionPorts,
+      jwtReference: formatMessage({ defaultMessage: 'Authentication API' }),
+      jwtUrl:
+        'https://github.com/ledgerwatch/erigon#beacon-chain-consensus-layer',
     },
     {
       header: 'Geth',
@@ -299,6 +317,10 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/nthXNEv',
       ...defaultExecutionPorts,
+      jwtReference: formatMessage({
+        defaultMessage: 'Connecting to Consensus Clients',
+      }),
+      jwtUrl: 'https://geth.ethereum.org/docs/interface/consensus-clients',
     },
     {
       header: 'Lighthouse',
@@ -314,6 +336,16 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/uC7TuaH',
       ...defaultConsensusPorts,
+      jwtReference: formatMessage({
+        defaultMessage: 'Connecting to an execution engine',
+      }),
+      jwtUrl:
+        'https://lighthouse-book.sigmaprime.io/merge-migration.html#connecting-to-an-execution-engine',
+      feeRecipientReference: formatMessage({
+        defaultMessage: 'Suggested Fee Recipient',
+      }),
+      feeRecipientUrl:
+        'https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html',
     },
     {
       header: 'Nimbus',
@@ -329,6 +361,15 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/YbTCNat',
       ...defaultConsensusPorts,
+      jwtReference: formatMessage({
+        defaultMessage: 'Pass the URL and JWT secret to Nimbus',
+      }),
+      jwtUrl:
+        'https://nimbus.guide/eth1.html#3-pass-the-url-and-jwt-secret-to-nimbus',
+      feeRecipientReference: formatMessage({
+        defaultMessage: 'Set up suggested fee recipient',
+      }),
+      feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
     },
     {
       header: 'Prysm',
@@ -345,6 +386,15 @@ export const Checklist = () => {
       discord: 'https://discord.gg/z9efH7e',
       defaultTcp: 13000,
       defaultUdp: 12000,
+      jwtReference: formatMessage({
+        defaultMessage: 'Configure JWT authentication',
+      }),
+      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      feeRecipientReference: formatMessage({
+        defaultMessage: 'Configure Fee Recipient',
+      }),
+      feeRecipientUrl:
+        'https://docs.prylabs.network/docs/execution-node/fee-recipient',
     },
     {
       header: 'Teku',
@@ -360,6 +410,15 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/7hPv2T6',
       ...defaultConsensusPorts,
+      jwtReference: formatMessage({
+        defaultMessage: 'Configure the JSON Web Token',
+      }),
+      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      feeRecipientReference: formatMessage({
+        defaultMessage: 'Configure the fee recipient',
+      }),
+      feeRecipientUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
     },
   ]);
 
@@ -444,11 +503,7 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage
-              defaultMessage="Hardware suggestions are an ever-evolving target. Current
-                    minimum requirements are likely to increase by an order of magnitude after the merge and 
-                    introduction of shard chains. Do your own research before depositing funds."
-            />
+            <FormattedMessage defaultMessage="Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds." />
           </Text>
         </Alert>
         <section>
@@ -460,7 +515,7 @@ export const Checklist = () => {
               <Text>
                 <FormattedMessage
                   defaultMessage="You need to run an {executionClient} as well as your
-                  {consensusClient} (formerly 'Eth2')."
+                  {consensusClient}."
                   values={{
                     executionClient: (
                       <Link
@@ -481,6 +536,11 @@ export const Checklist = () => {
                   }}
                   description="{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'"
                 />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="At time of the Merge, third-party providers (such as Infura and Alchemy) will no longer be viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network." />
               </Text>
             </li>
             <li className="py5">
@@ -583,7 +643,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing." />{' '}
+                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing." />{' '}
                 <Link primary to="/faq#responsibilities" className="mt10">
                   <FormattedMessage defaultMessage="More on slashing risks" />
                 </Link>
@@ -707,7 +767,7 @@ export const Checklist = () => {
               </tbody>
             </PortTable>
           </ClientLayerContainer>
-          <Text>
+          <Text className="ml20">
             <Link
               primary
               to="https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/"
@@ -990,6 +1050,143 @@ export const Checklist = () => {
                 </span>
               ))}
           </Text>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="JWT Authentication" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Communication between the execution layer and consensus layer occurs using the {engineApi}. This is a set of JSON RPC methods that can be used to communicate between the two client layers."
+              values={{
+                engineApi: (
+                  <Link
+                    inline
+                    primary
+                    to="https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md"
+                  >
+                    <FormattedMessage defaultMessage="Engine API" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to properly authenticate the Engine API, allowing them to properly communicate between one another."
+              values={{
+                jwt: (
+                  <Link
+                    inline
+                    primary
+                    to="https://en.wikipedia.org/wiki/JSON_Web_Token"
+                  >
+                    <FormattedMessage defaultMessage="JWT" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <ClientLayerContainer>
+            <PortTable>
+              <thead>
+                <tr>
+                  <th>
+                    <FormattedMessage defaultMessage="Execution Client" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="JWT Docs" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {_sortBy(clientInfo, 'header')
+                  .filter(({ layer }) => layer === layerEnum.execution)
+                  .map(({ header, jwtReference, jwtUrl }) => (
+                    <tr key={header}>
+                      <td>{header}</td>
+                      <td>
+                        <Link to={jwtUrl} inline primary>
+                          {jwtReference}
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </PortTable>
+            <PortTable>
+              <thead>
+                <tr>
+                  <th>
+                    <FormattedMessage defaultMessage="Consensus Client" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="JWT Docs" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {_sortBy(clientInfo, 'header')
+                  .filter(({ layer }) => layer === layerEnum.consensus)
+                  .map(({ header, jwtReference, jwtUrl }) => (
+                    <tr key={header}>
+                      <td>{header}</td>
+                      <td>
+                        <Link to={jwtUrl} inline primary>
+                          {jwtReference}
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </PortTable>
+          </ClientLayerContainer>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)" />
+              </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Set fee recipient" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to." />
+          </Text>
+          <Alert variant="warning" className="my30">
+            <Text>
+              <FormattedMessage defaultMessage="If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks." />
+            </Text>
+          </Alert>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="See your consensus client documentation for client-specific instructions on how to set this." />
+          </Text>
+          <ul className="sub-checklist-item">
+            {_sortBy(clientInfo, 'header')
+              .filter(
+                ({ layer, feeRecipientUrl, feeRecipientReference }) =>
+                  layer === layerEnum.consensus &&
+                  !!feeRecipientUrl &&
+                  !!feeRecipientReference
+              )
+              .map(({ header, feeRecipientReference, feeRecipientUrl }) => (
+                <li key={header} className="py5">
+                  <Link to={feeRecipientUrl!} inline primary>
+                    {header}: {feeRecipientReference}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've provided an Ethereum address to my validator where I would like my fee rewards to be deposited." />
+              </Text>
+            }
+          />
         </section>
         <section>
           <Heading level={3}>

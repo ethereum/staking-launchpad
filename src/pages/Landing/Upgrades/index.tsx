@@ -104,15 +104,13 @@ export const Upgrades = (): JSX.Element => {
                 />
               </Text>
               <UpgradeTitle className="mt20">
-                <FormattedMessage defaultMessage="Proof-of-stake (PoS) and the Beacon Chain" />
+                <FormattedMessage defaultMessage="Proof-of-stake and the Beacon Chain" />
               </UpgradeTitle>
               <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="PoS is a more secure, decentralized, and environmentally-friendly consensus mechanism than the proof-of-work (PoW) that
-                    secures Ethereum today. It rewards validators for
-                    building the chain, but slashes their deposits if they try to
-                    attack it, incentivising healthy behaviour. This upgrade is
-                    already live in the form of the Beacon Chain."
+                  defaultMessage="Ethereum is secured by proof-of-stake, although this was not always the case.
+                  The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in in parallel to Mainnet in December 2020.
+                  This allowed participants to start staking their ETH and prepare the network for the formal transition from proof-of-work to proof-of-stake via The Merge."
                 />
               </Text>
               <Link
@@ -125,19 +123,10 @@ export const Upgrades = (): JSX.Element => {
                 <FormattedMessage defaultMessage="The Merge" />
               </UpgradeTitle>
               <Text className="mt20">
-                <FormattedMessage defaultMessage="The Merge upgrade prepared the chain for future scaling upgrades by bringing proof-of-stake consensus together with Mainnet. This unlocks the ability to implement data sharding to further scale network capacity and throughput." />
+                <FormattedMessage defaultMessage="The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as data sharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%." />
               </Text>
               <Text className="mt20">
-                <FormattedMessage
-                  defaultMessage="This upgrade is rapidly approaching and brings a few changes that stakers should be aware of before hand. Check out the {mergeReadinessChecklist} to make sure you're prepared."
-                  values={{
-                    mergeReadinessChecklist: (
-                      <Link primary inline to="/merge-readiness">
-                        <FormattedMessage defaultMessage="Merge readiness checklist" />
-                      </Link>
-                    ),
-                  }}
-                />
+                <FormattedMessage defaultMessage="This marked the merging of the execution layer (existing Mainnet) with the new consensus layer (the Beacon Chain) to form the single Ethereum chain of today." />
               </Text>
               <Link
                 className="mt20 mb40"

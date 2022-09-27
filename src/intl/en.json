@@ -622,6 +622,9 @@
   "DjhC7F": {
     "message": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
   },
+  "DmKneH": {
+    "message": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
+  },
   "DoCZT1": {
     "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network",
     "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
@@ -1376,10 +1379,6 @@
   "XmddSV": {
     "message": "Build from source"
   },
-  "XqbweH": {
-    "description": "{variables} are client names, each linking to documentation (do not translate names)",
-    "message": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
-  },
   "Y07Hwy": {
     "message": "Connect {wallet} to {executionLayerName}"
   },
@@ -1905,6 +1904,9 @@
   },
   "km7b1A": {
     "message": "Over time, your balance will decrease as you are punished for not participating in the consensus process. When your balance reaches 16 ETH, you will be automatically exited from the validator pool."
+  },
+  "kn06Zz": {
+    "message": "Monitoring docs:"
   },
   "kn7kJd": {
     "message": "More on consensus mechanisms"

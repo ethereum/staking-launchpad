@@ -203,6 +203,7 @@ interface Client {
   defaultUdp: number;
   jwtUrl: string;
   feeRecipientUrl?: string;
+  metricsUrl?: string;
 }
 
 const tutorialLinkBox = () => {
@@ -332,6 +333,7 @@ export const Checklist = () => {
         'https://lighthouse-book.sigmaprime.io/merge-migration.html#connecting-to-an-execution-engine',
       feeRecipientUrl:
         'https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html',
+      metricsUrl: 'https://github.com/sigp/lighthouse-metrics',
     },
     {
       header: 'Nimbus',
@@ -350,6 +352,7 @@ export const Checklist = () => {
       jwtUrl:
         'https://nimbus.guide/eth1.html#3-pass-the-url-and-jwt-secret-to-nimbus',
       feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
+      metricsUrl: 'https://nimbus.guide/metrics-pretty-pictures.html',
     },
     {
       header: 'Prysm',
@@ -369,6 +372,8 @@ export const Checklist = () => {
       jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
       feeRecipientUrl:
         'https://docs.prylabs.network/docs/execution-node/fee-recipient',
+      metricsUrl:
+        'https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/',
     },
     {
       header: 'Teku',
@@ -387,6 +392,8 @@ export const Checklist = () => {
       jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
       feeRecipientUrl:
         'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
+      metricsUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/',
     },
   ]);
 
@@ -1240,48 +1247,23 @@ export const Checklist = () => {
           <Text>
             <FormattedMessage
               defaultMessage="The clients support Prometheus and Grafana to help you
-                visualize important real-time metrics about your validator. You can
-                find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
-              values={{
-                lighthouse: (
-                  <Link
-                    primary
-                    inline
-                    to="https://github.com/sigp/lighthouse-metrics"
-                  >
-                    Lighthouse
-                  </Link>
-                ),
-                nimbus: (
-                  <Link
-                    primary
-                    inline
-                    to="https://nimbus.guide/metrics-pretty-pictures.html"
-                  >
-                    Nimbus
-                  </Link>
-                ),
-                prysm: (
-                  <Link
-                    primary
-                    inline
-                    to="https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/"
-                  >
-                    Prysm
-                  </Link>
-                ),
-                teku: (
-                  <Link
-                    primary
-                    inline
-                    to="https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/"
-                  >
-                    Teku
-                  </Link>
-                ),
-              }}
-              description="{variables} are client names, each linking to documentation (do not translate names)"
+                visualize important real-time metrics about your validator."
             />
+            <Text className="my10">
+              <b>
+                <FormattedMessage defaultMessage="Monitoring docs:" />
+              </b>{' '}
+              {_sortBy(clientInfo, 'header')
+                .filter(({ metricsUrl }) => !!metricsUrl)
+                .map(({ header, metricsUrl }, idx) => (
+                  <span key={header}>
+                    {idx !== 0 && ' | '}
+                    <Link to={metricsUrl!} inline primary>
+                      {header}
+                    </Link>
+                  </span>
+                ))}
+            </Text>
           </Text>
           <CheckBox
             label={

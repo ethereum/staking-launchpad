@@ -1645,6 +1645,12 @@
       "value": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
     }
   ],
+  "DmKneH": [
+    {
+      "type": 0,
+      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
+    }
+  ],
   "DoCZT1": [
     {
       "type": 0,
@@ -3553,40 +3559,6 @@
       "value": "Build from source"
     }
   ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
-    }
-  ],
   "Y07Hwy": [
     {
       "type": 0,
@@ -4865,6 +4837,12 @@
     {
       "type": 0,
       "value": "Over time, your balance will decrease as you are punished for not participating in the consensus process. When your balance reaches 16 ETH, you will be automatically exited from the validator pool."
+    }
+  ],
+  "kn06Zz": [
+    {
+      "type": 0,
+      "value": "Monitoring docs:"
     }
   ],
   "kn7kJd": [

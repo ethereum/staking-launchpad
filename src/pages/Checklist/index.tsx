@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
 import _sortBy from 'lodash/sortBy';
@@ -201,7 +201,6 @@ interface Client {
   discord: string;
   defaultTcp: number;
   defaultUdp: number;
-  jwtReference: ReactNode;
   jwtUrl: string;
   feeRecipientUrl?: string;
 }
@@ -262,7 +261,6 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/hyperledger',
       ...defaultExecutionPorts,
-      jwtReference: formatMessage({ defaultMessage: 'Command line options' }),
       jwtUrl:
         'https://besu.hyperledger.org/en/stable/public-networks/reference/cli/options/#engine-jwt-secret',
     },
@@ -280,7 +278,6 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/PaCMRFdvWT',
       ...defaultExecutionPorts,
-      jwtReference: formatMessage({ defaultMessage: 'JWT Secrets' }),
       jwtUrl:
         'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
     },
@@ -298,7 +295,6 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://github.com/ledgerwatch/erigon#erigon-discord-server',
       ...defaultExecutionPorts,
-      jwtReference: formatMessage({ defaultMessage: 'Authentication API' }),
       jwtUrl:
         'https://github.com/ledgerwatch/erigon#beacon-chain-consensus-layer',
     },
@@ -316,9 +312,6 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/nthXNEv',
       ...defaultExecutionPorts,
-      jwtReference: formatMessage({
-        defaultMessage: 'Connecting to Consensus Clients',
-      }),
       jwtUrl: 'https://geth.ethereum.org/docs/interface/consensus-clients',
     },
     {
@@ -335,9 +328,6 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/uC7TuaH',
       ...defaultConsensusPorts,
-      jwtReference: formatMessage({
-        defaultMessage: 'Connecting to an execution engine',
-      }),
       jwtUrl:
         'https://lighthouse-book.sigmaprime.io/merge-migration.html#connecting-to-an-execution-engine',
       feeRecipientUrl:
@@ -357,9 +347,6 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/YbTCNat',
       ...defaultConsensusPorts,
-      jwtReference: formatMessage({
-        defaultMessage: 'Pass the URL and JWT secret to Nimbus',
-      }),
       jwtUrl:
         'https://nimbus.guide/eth1.html#3-pass-the-url-and-jwt-secret-to-nimbus',
       feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
@@ -379,9 +366,6 @@ export const Checklist = () => {
       discord: 'https://discord.gg/z9efH7e',
       defaultTcp: 13000,
       defaultUdp: 12000,
-      jwtReference: formatMessage({
-        defaultMessage: 'Configure JWT authentication',
-      }),
       jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
       feeRecipientUrl:
         'https://docs.prylabs.network/docs/execution-node/fee-recipient',
@@ -400,9 +384,6 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/7hPv2T6',
       ...defaultConsensusPorts,
-      jwtReference: formatMessage({
-        defaultMessage: 'Configure the JSON Web Token',
-      }),
       jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
       feeRecipientUrl:
         'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
@@ -1074,60 +1055,36 @@ export const Checklist = () => {
               }}
             />
           </Text>
-          <ClientLayerContainer>
-            <PortTable>
-              <thead>
-                <tr>
-                  <th>
-                    <FormattedMessage defaultMessage="Execution Client" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="JWT Docs" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {_sortBy(clientInfo, 'header')
-                  .filter(({ layer }) => layer === layerEnum.execution)
-                  .map(({ header, jwtReference, jwtUrl }) => (
-                    <tr key={header}>
-                      <td>{header}</td>
-                      <td>
-                        <Link to={jwtUrl} inline primary>
-                          {jwtReference}
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </PortTable>
-            <PortTable>
-              <thead>
-                <tr>
-                  <th>
-                    <FormattedMessage defaultMessage="Consensus Client" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="JWT Docs" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {_sortBy(clientInfo, 'header')
-                  .filter(({ layer }) => layer === layerEnum.consensus)
-                  .map(({ header, jwtReference, jwtUrl }) => (
-                    <tr key={header}>
-                      <td>{header}</td>
-                      <td>
-                        <Link to={jwtUrl} inline primary>
-                          {jwtReference}
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </PortTable>
-          </ClientLayerContainer>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Consensus JWT docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(({ layer }) => layer === layerEnum.consensus)
+              .map(({ header, jwtUrl }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link to={jwtUrl} inline primary>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Execution JWT docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(({ layer }) => layer === layerEnum.execution)
+              .map(({ header, jwtUrl }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link to={jwtUrl} inline primary>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
           <CheckBox
             label={
               <Text className="checkbox-label">

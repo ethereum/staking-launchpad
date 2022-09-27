@@ -203,7 +203,6 @@ interface Client {
   defaultUdp: number;
   jwtReference: ReactNode;
   jwtUrl: string;
-  feeRecipientReference?: ReactNode;
   feeRecipientUrl?: string;
 }
 
@@ -341,9 +340,6 @@ export const Checklist = () => {
       }),
       jwtUrl:
         'https://lighthouse-book.sigmaprime.io/merge-migration.html#connecting-to-an-execution-engine',
-      feeRecipientReference: formatMessage({
-        defaultMessage: 'Suggested Fee Recipient',
-      }),
       feeRecipientUrl:
         'https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html',
     },
@@ -366,9 +362,6 @@ export const Checklist = () => {
       }),
       jwtUrl:
         'https://nimbus.guide/eth1.html#3-pass-the-url-and-jwt-secret-to-nimbus',
-      feeRecipientReference: formatMessage({
-        defaultMessage: 'Set up suggested fee recipient',
-      }),
       feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
     },
     {
@@ -390,9 +383,6 @@ export const Checklist = () => {
         defaultMessage: 'Configure JWT authentication',
       }),
       jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
-      feeRecipientReference: formatMessage({
-        defaultMessage: 'Configure Fee Recipient',
-      }),
       feeRecipientUrl:
         'https://docs.prylabs.network/docs/execution-node/fee-recipient',
     },
@@ -414,9 +404,6 @@ export const Checklist = () => {
         defaultMessage: 'Configure the JSON Web Token',
       }),
       jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
-      feeRecipientReference: formatMessage({
-        defaultMessage: 'Configure the fee recipient',
-      }),
       feeRecipientUrl:
         'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
     },
@@ -1164,22 +1151,23 @@ export const Checklist = () => {
           <Text className="mt20">
             <FormattedMessage defaultMessage="See your consensus client documentation for client-specific instructions on how to set this." />
           </Text>
-          <ul className="sub-checklist-item">
+          <Text className="ml20 my10">
             {_sortBy(clientInfo, 'header')
               .filter(
-                ({ layer, feeRecipientUrl, feeRecipientReference }) =>
-                  layer === layerEnum.consensus &&
-                  !!feeRecipientUrl &&
-                  !!feeRecipientReference
+                ({ layer, feeRecipientUrl }) =>
+                  layer === layerEnum.consensus && !!feeRecipientUrl
               )
-              .map(({ header, feeRecipientReference, feeRecipientUrl }) => (
-                <li key={header} className="py5">
-                  <Link to={feeRecipientUrl!} inline primary>
-                    {header}: {feeRecipientReference}
-                  </Link>
-                </li>
+              .map(({ header, feeRecipientUrl }, idx) => (
+                <>
+                  <span key={header}>
+                    {idx !== 0 && ' | '}
+                    <Link to={feeRecipientUrl!} inline primary>
+                      {header}
+                    </Link>
+                  </span>
+                </>
               ))}
-          </ul>
+          </Text>
           <CheckBox
             label={
               <Text className="checkbox-label">

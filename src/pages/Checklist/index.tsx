@@ -926,7 +926,10 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <Text className="ml20">
+          <Text>
+            <b>
+              <FormattedMessage defaultMessage="Discord:" />
+            </b>{' '}
             {clientInfo
               .filter(
                 ({ discord, layer }) =>
@@ -1010,7 +1013,10 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <Text className="ml20">
+          <Text>
+            <b>
+              <FormattedMessage defaultMessage="Discord:" />
+            </b>{' '}
             {clientInfo
               .filter(
                 ({ discord, layer }) =>
@@ -1115,7 +1121,10 @@ export const Checklist = () => {
           <Text className="mt20">
             <FormattedMessage defaultMessage="See your consensus client documentation for client-specific instructions on how to set this." />
           </Text>
-          <Text className="ml20 my10">
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Fee recipient docs:" />
+            </b>{' '}
             {_sortBy(clientInfo, 'header')
               .filter(
                 ({ layer, feeRecipientUrl }) =>

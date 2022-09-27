@@ -496,9 +496,6 @@
   "Ad8+R5": {
     "message": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
   },
-  "AfH0eO": {
-    "message": "All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared."
-  },
   "Affixg": {
     "message": "The deposit"
   },
@@ -772,9 +769,6 @@
   },
   "H+kIpp": {
     "message": "Total amount required"
-  },
-  "H0lQfu": {
-    "message": "Merge Readiness Checklist"
   },
   "H5+NAX": {
     "message": "Balance"
@@ -1523,9 +1517,6 @@
   "bVtlF7": {
     "message": "Be sure to account for enough space on your drive until you run maintenance on your node."
   },
-  "bX1fts": {
-    "message": "Merge readiness checklist"
-  },
   "bbr+aD": {
     "message": "The YAML files can have different syntaxes."
   },
@@ -1594,9 +1585,6 @@
   },
   "d75Ebj": {
     "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
-  },
-  "dGWdPu": {
-    "message": "All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared."
   },
   "dH5+MX": {
     "message": "Bad behaviour"
@@ -2015,6 +2003,9 @@
   },
   "mhyltV": {
     "message": "I've set my graffiti flag."
+  },
+  "mloLQ5": {
+    "message": "All stakers must operate an execution client with their consensus client."
   },
   "mpmFDY": {
     "message": "No pending deposits"

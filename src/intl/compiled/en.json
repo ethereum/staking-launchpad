@@ -1339,12 +1339,6 @@
       "value": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
     }
   ],
-  "AfH0eO": [
-    {
-      "type": 0,
-      "value": "All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared."
-    }
-  ],
   "Affixg": [
     {
       "type": 0,
@@ -2001,12 +1995,6 @@
     {
       "type": 0,
       "value": "Total amount required"
-    }
-  ],
-  "H0lQfu": [
-    {
-      "type": 0,
-      "value": "Merge Readiness Checklist"
     }
   ],
   "H5+NAX": [
@@ -3929,12 +3917,6 @@
       "value": "Be sure to account for enough space on your drive until you run maintenance on your node."
     }
   ],
-  "bX1fts": [
-    {
-      "type": 0,
-      "value": "Merge readiness checklist"
-    }
-  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -4083,12 +4065,6 @@
     {
       "type": 0,
       "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
-    }
-  ],
-  "dGWdPu": [
-    {
-      "type": 0,
-      "value": "All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared."
     }
   ],
   "dH5+MX": [
@@ -5141,6 +5117,12 @@
     {
       "type": 0,
       "value": "I've set my graffiti flag."
+    }
+  ],
+  "mloLQ5": [
+    {
+      "type": 0,
+      "value": "All stakers must operate an execution client with their consensus client."
     }
   ],
   "mpmFDY": [

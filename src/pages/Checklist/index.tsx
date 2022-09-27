@@ -892,12 +892,7 @@ export const Checklist = () => {
               <FormattedMessage defaultMessage="Remember" />
             </Heading>
             <Text className="mt20">
-              <FormattedMessage defaultMessage="All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared." />
-              <Link primary to="/merge-readiness" className="mt10">
-                {formatMessage({
-                  defaultMessage: 'Merge Readiness Checklist',
-                })}
-              </Link>
+              <FormattedMessage defaultMessage="All stakers must operate an execution client with their consensus client." />
             </Text>
           </Alert>
           <CheckBox

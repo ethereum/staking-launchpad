@@ -237,7 +237,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="Can I stop running my validator for a few days and then start it back up again?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH." />
+              <FormattedMessage defaultMessage="Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH." />
             </Text>
           </section>
           <section>
@@ -895,7 +895,7 @@ export const FAQ = () => {
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Withdrawals are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your 16 ETH can then be withdrawn—with your withdrawal key—after a minimum delay of around a day." />
+              <FormattedMessage defaultMessage="Withdrawal features are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day." />
             </Text>
             <BlockQuote>
               <Text className="mt10">

@@ -109,7 +109,7 @@ export const Upgrades = (): JSX.Element => {
               <Text className="mt20">
                 <FormattedMessage
                   defaultMessage="Ethereum is secured by proof-of-stake, although this was not always the case.
-                  The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in in parallel to Mainnet in December 2020.
+                  The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in parallel to Mainnet in December 2020.
                   This allowed participants to start staking their ETH and prepare the network for the formal transition from proof-of-work to proof-of-stake via The Merge."
                 />
               </Text>

@@ -515,7 +515,7 @@ export const Checklist = () => {
             </li>
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="At time of the Merge, third-party providers (such as Infura and Alchemy) will no longer be viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network." />
+                <FormattedMessage defaultMessage="Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network." />
               </Text>
             </li>
             <li className="py5">

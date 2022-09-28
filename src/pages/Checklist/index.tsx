@@ -1049,7 +1049,7 @@ export const Checklist = () => {
           </Text>
           <Text className="mt20">
             <FormattedMessage
-              defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to properly authenticate the Engine API, allowing them to properly communicate between one another."
+              defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
               values={{
                 jwt: (
                   <Link

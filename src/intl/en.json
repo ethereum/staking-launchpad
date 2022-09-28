@@ -474,9 +474,6 @@
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
   },
-  "ARyZDI": {
-    "message": "At time of the Merge, third-party providers (such as Infura and Alchemy) will no longer be viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network."
-  },
   "ATwOPg": {
     "message": "execution client"
   },
@@ -594,9 +591,6 @@
   },
   "DGHD9y": {
     "message": "Lighthouse has dedicated tooling to make the transfer from the Launchpad as easy as possible."
-  },
-  "DKBCNF": {
-    "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to properly authenticate the Engine API, allowing them to properly communicate between one another."
   },
   "DKSrR+": {
     "message": "I understand that if I act contrary to the specification, I am liable to be slashed."
@@ -1309,6 +1303,9 @@
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
+  },
+  "Vm6cRY": {
+    "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
   },
   "VzGJkB": {
     "message": "Staker checklist"
@@ -2492,6 +2489,9 @@
   },
   "zJicsO": {
     "message": "Staking economics"
+  },
+  "zMiMCs": {
+    "message": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network."
   },
   "zbEBi9": {
     "description": "{mainnet} shows '--config mainnet' terminal command",

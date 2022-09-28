@@ -1293,12 +1293,6 @@
       "value": " to be sent at one time to be accepted."
     }
   ],
-  "ARyZDI": [
-    {
-      "type": 0,
-      "value": "At time of the Merge, third-party providers (such as Infura and Alchemy) will no longer be viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network."
-    }
-  ],
   "ATwOPg": [
     {
       "type": 0,
@@ -1581,20 +1575,6 @@
     {
       "type": 0,
       "value": "Lighthouse has dedicated tooling to make the transfer from the Launchpad as easy as possible."
-    }
-  ],
-  "DKBCNF": [
-    {
-      "type": 0,
-      "value": "This communication is secured using a "
-    },
-    {
-      "type": 1,
-      "value": "jwt"
-    },
-    {
-      "type": 0,
-      "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to properly authenticate the Engine API, allowing them to properly communicate between one another."
     }
   ],
   "DKSrR+": [
@@ -3373,6 +3353,20 @@
     {
       "type": 0,
       "value": "I am certain that the validator I am topping up is my validator."
+    }
+  ],
+  "Vm6cRY": [
+    {
+      "type": 0,
+      "value": "This communication is secured using a "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
     }
   ],
   "VzGJkB": [
@@ -6355,6 +6349,12 @@
     {
       "type": 0,
       "value": "Staking economics"
+    }
+  ],
+  "zMiMCs": [
+    {
+      "type": 0,
+      "value": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network."
     }
   ],
   "zbEBi9": [

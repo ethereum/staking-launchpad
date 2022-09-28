@@ -1627,12 +1627,6 @@
       "value": "Verify the contract address"
     }
   ],
-  "DdgmBp": [
-    {
-      "type": 0,
-      "value": "Withdrawals are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your 16 ETH can then be withdrawn—with your withdrawal key—after a minimum delay of around a day."
-    }
-  ],
   "DhKDS3": [
     {
       "type": 0,
@@ -2477,6 +2471,12 @@
     {
       "type": 0,
       "value": "Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider."
+    }
+  ],
+  "Lv57+8": [
+    {
+      "type": 0,
+      "value": "Ethereum is secured by proof-of-stake, although this was not always the case. The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in parallel to Mainnet in December 2020. This allowed participants to start staking their ETH and prepare the network for the formal transition from proof-of-work to proof-of-stake via The Merge."
     }
   ],
   "LwEHRm": [
@@ -3837,12 +3837,6 @@
       "value": "Nimbus is Apache 2 licensed and written in Nim, a language with Python-like syntax that compiles to C."
     }
   ],
-  "aXysGN": [
-    {
-      "type": 0,
-      "value": "Ethereum is secured by proof-of-stake, although this was not always the case. The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in in parallel to Mainnet in December 2020. This allowed participants to start staking their ETH and prepare the network for the formal transition from proof-of-work to proof-of-stake via The Merge."
-    }
-  ],
   "acrOoz": [
     {
       "type": 0,
@@ -4245,12 +4239,6 @@
       "value": " (the minimum allowed by the deposit contract) will max out your effective balance."
     }
   ],
-  "exwgxJ": [
-    {
-      "type": 0,
-      "value": "Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH."
-    }
-  ],
   "eyK2E3": [
     {
       "type": 0,
@@ -4607,6 +4595,28 @@
     {
       "type": 0,
       "value": "Running the validator client"
+    }
+  ],
+  "iN1PPs": [
+    {
+      "type": 0,
+      "value": "Each "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
     }
   ],
   "iPRnRG": [
@@ -5387,6 +5397,12 @@
       "value": "!"
     }
   ],
+  "pGnk/z": [
+    {
+      "type": 0,
+      "value": "Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH."
+    }
+  ],
   "pHQwsN": [
     {
       "type": 0,
@@ -5439,24 +5455,16 @@
       "value": "Deposit summary"
     }
   ],
+  "q/ZayM": [
+    {
+      "type": 0,
+      "value": "Withdrawal features are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day."
+    }
+  ],
   "q2XW/k": [
     {
       "type": 0,
       "value": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
-    }
-  ],
-  "q8BG4E": [
-    {
-      "type": 0,
-      "value": "Each 32 ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
     }
   ],
   "qB6aU6": [

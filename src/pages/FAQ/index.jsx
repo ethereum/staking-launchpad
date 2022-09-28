@@ -161,7 +161,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt20 mb20">
               <FormattedMessage
-                defaultMessage="Each 32 ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. {pricePerValidator} ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
+                defaultMessage="Each {pricePerValidator} ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. {pricePerValidator} ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
                 values={{
                   pricePerValidator: PRICE_PER_VALIDATOR,
                 }}

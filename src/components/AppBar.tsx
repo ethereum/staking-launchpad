@@ -273,16 +273,6 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="Top Up" />
           </BarLinkText>
         </Link>
-        <Link to={routesEnum.mergeReadiness} className="mx10 secondary-link">
-          <BarLinkText
-            level={4}
-            margin="none"
-            className="bar-link-text"
-            active={pathname === routesEnum.mergeReadiness}
-          >
-            <FormattedMessage defaultMessage="The Merge" />
-          </BarLinkText>
-        </Link>
       </NavBarLinks>
       <NavLinksRight>
         {!mobile && (

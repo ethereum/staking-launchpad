@@ -9,7 +9,6 @@ import {
 import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
 import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
 
@@ -66,7 +65,6 @@ export const Prysm = () => {
     >
       <ValidatorClientPageStyles>
         <Hero imgSrc={prysmBg} style={{ objectPosition: '0 -80px' }} />
-        <ClientMergeNotification client="Prysm" isConsensus />
         <PrysmDetails />
         <section>
           <SectionTitle level={2} className="mb5">

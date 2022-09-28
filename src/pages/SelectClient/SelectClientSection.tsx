@@ -5,6 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from '../../components/Link';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
 import { Alert } from '../../components/Alert';
 import { Client } from './index';
@@ -93,20 +94,12 @@ const SelectClientSection = ({
         <Heading level={4} className="mb10">
           <FormattedMessage defaultMessage="Remember" />
         </Heading>
-        <ul>
-          <li>
-            <FormattedMessage defaultMessage="After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days." />{' '}
-            <Link primary inline to="/checklist">
-              <FormattedMessage defaultMessage="Validator checklist" />
-            </Link>
-          </li>
-          <li>
-            <FormattedMessage defaultMessage="All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared." />{' '}
-            <Link primary inline to="/merge-readiness">
-              <FormattedMessage defaultMessage="Merge readiness checklist" />
-            </Link>
-          </li>
-        </ul>
+        <Text className="my10">
+          <FormattedMessage defaultMessage="After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days." />{' '}
+          <Link primary inline to="/checklist">
+            <FormattedMessage defaultMessage="Validator checklist" />
+          </Link>
+        </Text>
       </Alert>
     </Box>
   </Paper>

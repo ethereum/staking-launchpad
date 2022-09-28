@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
+import _sortBy from 'lodash/sortBy';
 import { CheckBox } from 'grommet';
 import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import { FormNext } from 'grommet-icons';
@@ -99,6 +100,10 @@ const PortTable = styled.table`
   margin: 1rem auto;
   color: #212529;
 
+  * {
+    text-align: start;
+  }
+
   th,
   td {
     padding: 0.75rem;
@@ -196,6 +201,9 @@ interface Client {
   discord: string;
   defaultTcp: number;
   defaultUdp: number;
+  jwtUrl: string;
+  feeRecipientUrl?: string;
+  metricsUrl?: string;
 }
 
 const tutorialLinkBox = () => {
@@ -216,7 +224,7 @@ const tutorialLinkBox = () => {
       </Alert>
     );
   }
-  return;
+  return null;
 };
 
 export const Checklist = () => {
@@ -254,6 +262,8 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/hyperledger',
       ...defaultExecutionPorts,
+      jwtUrl:
+        'https://besu.hyperledger.org/en/stable/public-networks/reference/cli/options/#engine-jwt-secret',
     },
     {
       header: 'Nethermind',
@@ -269,6 +279,8 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/PaCMRFdvWT',
       ...defaultExecutionPorts,
+      jwtUrl:
+        'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
     },
     {
       header: 'Erigon',
@@ -284,6 +296,8 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://github.com/ledgerwatch/erigon#erigon-discord-server',
       ...defaultExecutionPorts,
+      jwtUrl:
+        'https://github.com/ledgerwatch/erigon#beacon-chain-consensus-layer',
     },
     {
       header: 'Geth',
@@ -299,6 +313,7 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://discord.gg/nthXNEv',
       ...defaultExecutionPorts,
+      jwtUrl: 'https://geth.ethereum.org/docs/interface/consensus-clients',
     },
     {
       header: 'Lighthouse',
@@ -314,6 +329,11 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/uC7TuaH',
       ...defaultConsensusPorts,
+      jwtUrl:
+        'https://lighthouse-book.sigmaprime.io/merge-migration.html#connecting-to-an-execution-engine',
+      feeRecipientUrl:
+        'https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html',
+      metricsUrl: 'https://github.com/sigp/lighthouse-metrics',
     },
     {
       header: 'Nimbus',
@@ -329,6 +349,10 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/YbTCNat',
       ...defaultConsensusPorts,
+      jwtUrl:
+        'https://nimbus.guide/eth1.html#3-pass-the-url-and-jwt-secret-to-nimbus',
+      feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
+      metricsUrl: 'https://nimbus.guide/metrics-pretty-pictures.html',
     },
     {
       header: 'Prysm',
@@ -345,6 +369,11 @@ export const Checklist = () => {
       discord: 'https://discord.gg/z9efH7e',
       defaultTcp: 13000,
       defaultUdp: 12000,
+      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      feeRecipientUrl:
+        'https://docs.prylabs.network/docs/execution-node/fee-recipient',
+      metricsUrl:
+        'https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/',
     },
     {
       header: 'Teku',
@@ -360,6 +389,11 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/7hPv2T6',
       ...defaultConsensusPorts,
+      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      feeRecipientUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
+      metricsUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/',
     },
   ]);
 
@@ -444,11 +478,7 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage
-              defaultMessage="Hardware suggestions are an ever-evolving target. Current
-                    minimum requirements are likely to increase by an order of magnitude after the merge and 
-                    introduction of shard chains. Do your own research before depositing funds."
-            />
+            <FormattedMessage defaultMessage="Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds." />
           </Text>
         </Alert>
         <section>
@@ -460,7 +490,7 @@ export const Checklist = () => {
               <Text>
                 <FormattedMessage
                   defaultMessage="You need to run an {executionClient} as well as your
-                  {consensusClient} (formerly 'Eth2')."
+                  {consensusClient}."
                   values={{
                     executionClient: (
                       <Link
@@ -481,6 +511,11 @@ export const Checklist = () => {
                   }}
                   description="{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'"
                 />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network." />
               </Text>
             </li>
             <li className="py5">
@@ -583,7 +618,7 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing." />{' '}
+                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing." />{' '}
                 <Link primary to="/faq#responsibilities" className="mt10">
                   <FormattedMessage defaultMessage="More on slashing risks" />
                 </Link>
@@ -707,7 +742,7 @@ export const Checklist = () => {
               </tbody>
             </PortTable>
           </ClientLayerContainer>
-          <Text>
+          <Text className="ml20">
             <Link
               primary
               to="https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/"
@@ -857,12 +892,7 @@ export const Checklist = () => {
               <FormattedMessage defaultMessage="Remember" />
             </Heading>
             <Text className="mt20">
-              <FormattedMessage defaultMessage="All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared." />
-              <Link primary to="/merge-readiness" className="mt10">
-                {formatMessage({
-                  defaultMessage: 'Merge Readiness Checklist',
-                })}
-              </Link>
+              <FormattedMessage defaultMessage="All stakers must operate an execution client with their consensus client." />
             </Text>
           </Alert>
           <CheckBox
@@ -891,7 +921,10 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <Text className="ml20">
+          <Text>
+            <b>
+              <FormattedMessage defaultMessage="Discord:" />
+            </b>{' '}
             {clientInfo
               .filter(
                 ({ discord, layer }) =>
@@ -975,7 +1008,10 @@ export const Checklist = () => {
               </Text>
             }
           />
-          <Text className="ml20">
+          <Text>
+            <b>
+              <FormattedMessage defaultMessage="Discord:" />
+            </b>{' '}
             {clientInfo
               .filter(
                 ({ discord, layer }) =>
@@ -990,6 +1026,123 @@ export const Checklist = () => {
                 </span>
               ))}
           </Text>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="JWT Authentication" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Communication between the execution layer and consensus layer occurs using the {engineApi}. This is a set of JSON RPC methods that can be used to communicate between the two client layers."
+              values={{
+                engineApi: (
+                  <Link
+                    inline
+                    primary
+                    to="https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md"
+                  >
+                    <FormattedMessage defaultMessage="Engine API" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
+              values={{
+                jwt: (
+                  <Link
+                    inline
+                    primary
+                    to="https://en.wikipedia.org/wiki/JSON_Web_Token"
+                  >
+                    <FormattedMessage defaultMessage="JWT" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Consensus JWT docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(({ layer }) => layer === layerEnum.consensus)
+              .map(({ header, jwtUrl }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link to={jwtUrl} inline primary>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Execution JWT docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(({ layer }) => layer === layerEnum.execution)
+              .map(({ header, jwtUrl }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link to={jwtUrl} inline primary>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)" />
+              </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Set fee recipient" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to." />
+          </Text>
+          <Alert variant="warning" className="my30">
+            <Text>
+              <FormattedMessage defaultMessage="If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks." />
+            </Text>
+          </Alert>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="See your consensus client documentation for client-specific instructions on how to set this." />
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Fee recipient docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(
+                ({ layer, feeRecipientUrl }) =>
+                  layer === layerEnum.consensus && !!feeRecipientUrl
+              )
+              .map(({ header, feeRecipientUrl }, idx) => (
+                <>
+                  <span key={header}>
+                    {idx !== 0 && ' | '}
+                    <Link to={feeRecipientUrl!} inline primary>
+                      {header}
+                    </Link>
+                  </span>
+                </>
+              ))}
+          </Text>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've provided an Ethereum address to my validator where I would like my fee rewards to be deposited." />
+              </Text>
+            }
+          />
         </section>
         <section>
           <Heading level={3}>
@@ -1098,48 +1251,23 @@ export const Checklist = () => {
           <Text>
             <FormattedMessage
               defaultMessage="The clients support Prometheus and Grafana to help you
-                visualize important real-time metrics about your validator. You can
-                find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
-              values={{
-                lighthouse: (
-                  <Link
-                    primary
-                    inline
-                    to="https://github.com/sigp/lighthouse-metrics"
-                  >
-                    Lighthouse
-                  </Link>
-                ),
-                nimbus: (
-                  <Link
-                    primary
-                    inline
-                    to="https://nimbus.guide/metrics-pretty-pictures.html"
-                  >
-                    Nimbus
-                  </Link>
-                ),
-                prysm: (
-                  <Link
-                    primary
-                    inline
-                    to="https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/"
-                  >
-                    Prysm
-                  </Link>
-                ),
-                teku: (
-                  <Link
-                    primary
-                    inline
-                    to="https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/"
-                  >
-                    Teku
-                  </Link>
-                ),
-              }}
-              description="{variables} are client names, each linking to documentation (do not translate names)"
+                visualize important real-time metrics about your validator."
             />
+            <Text className="my10">
+              <b>
+                <FormattedMessage defaultMessage="Monitoring docs:" />
+              </b>{' '}
+              {_sortBy(clientInfo, 'header')
+                .filter(({ metricsUrl }) => !!metricsUrl)
+                .map(({ header, metricsUrl }, idx) => (
+                  <span key={header}>
+                    {idx !== 0 && ' | '}
+                    <Link to={metricsUrl!} inline primary>
+                      {header}
+                    </Link>
+                  </span>
+                ))}
+            </Text>
           </Text>
           <CheckBox
             label={

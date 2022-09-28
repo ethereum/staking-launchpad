@@ -159,6 +159,14 @@ export const FAQ = () => {
                 }}
               />
             </Heading>
+            <Text className="mt20 mb20">
+              <FormattedMessage
+                defaultMessage="Each {pricePerValidator} ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. {pricePerValidator} ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
@@ -198,10 +206,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What is the deposit contract?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
-                  Beacon Chain validators."
-              />
+              <FormattedMessage defaultMessage="You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
@@ -232,12 +237,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="Can I stop running my validator for a few days and then start it back up again?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="If you go offline for a number of days under normal conditions you will lose an amount of ETH
-                  roughly equivalent to the amount of ETH you would have gained in
-                  that period. In other words, if you stood to earn ≈0.01 ETH, you
-                  would instead be penalised ≈0.01 ETH."
-              />
+              <FormattedMessage defaultMessage="Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH." />
             </Text>
           </section>
           <section>
@@ -285,13 +285,20 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the Shanghai upgrade planned to follow the Merge (which means your funds will remain inaccessible until then)." />
+              <FormattedMessage defaultMessage="Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled. This is proposed to be included in the next network upgrade, known as the Shanghai upgrade. This means your funds will remain inaccessible at least until then." />
               <Link
                 className="mt20"
-                to="https://ethereum.org/en/upgrades/merge/"
+                to="https://ethereum-magicians.org/t/shanghai-core-eip-consideration/10777"
                 primary
               >
-                <FormattedMessage defaultMessage="More on the Merge" />
+                <FormattedMessage defaultMessage="Shanghai Core EIP Consideration" />
+              </Link>
+              <Link
+                className="mt20"
+                to="https://github.com/ethereum/pm/issues/450"
+                primary
+              >
+                <FormattedMessage defaultMessage="Shanghai Planning (GitHub issue)" />
               </Link>
             </Text>
           </section>
@@ -300,15 +307,12 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What happened to 'Eth2?'" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge." />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage defaultMessage="After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum." />
+              <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Ethereum will consist of the {executionLayer} (handles transactions and execution, formerly 'Eth1'), and the
-                  {consensusLayer} (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
+                defaultMessage="Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the
+                  {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
                 values={{
                   executionLayer: (
                     <Link
@@ -362,11 +366,11 @@ export const FAQ = () => {
             </Text>
             <BlockQuote>
               <Text className="mt20 mb20">
-                <FormattedMessage defaultMessage="This is a new change and becomes a requirement at time of the Merge, so be sure you're running both before the upgrade." />
+                <FormattedMessage defaultMessage="This became a requirement at time of the Merge, so be sure you're running both before staking." />
               </Text>
             </BlockQuote>
-            <Link primary to="/merge-readiness">
-              <FormattedMessage defaultMessage="View the Merge Readiness Checklist" />
+            <Link primary to="/checklist">
+              <FormattedMessage defaultMessage="View the Staking Checklist" />
             </Link>
           </section>
           <section>
@@ -383,7 +387,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Once the transition to proof-of-stake is complete via the Merge, validators will be responsible for processing transactions and signing off on their validity. This data will {not} be available from popular third-party sources after the Merge and will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
+                defaultMessage="With the transition to proof-of-stake complete via the Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources since the Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
                 values={{
                   not: (
                     <em>
@@ -415,7 +419,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to
+                defaultMessage="On the other hand, you can be penalized for being offline and behaving maliciously—for example attesting to
                 invalid or contradicting blocks."
               />
             </Text>
@@ -431,7 +435,7 @@ export const FAQ = () => {
               </li>
               <li>
                 <FormattedMessage
-                  defaultMessage="And major penalities – or {slashings} – are given for malicious actions."
+                  defaultMessage="And major penalities—or {slashings}—are given for malicious actions."
                   values={{
                     slashings: (
                       <strong>
@@ -462,19 +466,19 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Your validator has its own balance – with the
+                defaultMessage="Your validator has its own balance, with the
                 initial balance outlined in the deposit contract. Your rewards and penalties are reflected in
                 your validator's balance over time."
               />
             </Text>
             <BlockQuote>
               <Text className="mt20 mb20">
-                <FormattedMessage defaultMessage="After the Merge, your validator will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with those transactions in blocks your validator proposes. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
+                <FormattedMessage defaultMessage="Since the Merge, validators will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with included transactions when proposing blocks. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              <Link primary to="/merge-readiness">
-                <FormattedMessage defaultMessage="Look over the Merge Readiness Checklist" />
+              <Link primary to="/checklist">
+                <FormattedMessage defaultMessage="View the Staking Checklist" />
               </Link>
             </Text>
           </section>
@@ -484,7 +488,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Rewards and penalties are issued roughly every six and a half minutes – a period of time
+                defaultMessage="Rewards and penalties are issued roughly every six and a half minutes—a period of time
                   known as an epoch."
               />
             </Text>
@@ -531,7 +535,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Given a fixed total number of validators, the rewards/penalties
-                  predominantly scale with the balance of the validator – attesting
+                  predominantly scale with the balance of the validator—attesting
                   with a higher balance results in larger rewards/penalties whereas
                   attesting with a lower balance results in lower rewards/penalties."
               />
@@ -702,11 +706,7 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="This means that you don't need to go to extreme lengths with
-                  backup clients or redundant internet connections as the
-                  repercussions of being offline are not so severe."
-              />
+              <FormattedMessage defaultMessage="This means that you don't need to go to extreme lengths with backup clients or redundant internet connections as the repercussions of being offline are not so severe." />
             </Text>
           </section>
           <section>
@@ -714,11 +714,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="How much will I be penalized for acting maliciously?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Again, it depends. Behaving maliciously – for example attesting to
-                  invalid or contradicting blocks, will lead to your stake
-                  being slashed."
-              />
+              <FormattedMessage defaultMessage="Again, it depends. Behaving maliciously—for example attesting to invalid or contradicting blocks—will lead to your stake being slashed." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
@@ -737,10 +733,7 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="The idea behind this is to minimize the losses from honest
-                  mistakes, but strongly disincentivize coordinated attacks."
-              />
+              <FormattedMessage defaultMessage="The idea behind this is to minimize the losses from honest mistakes, but strongly disincentivize coordinated attacks." />
             </Text>
           </section>
           <section>
@@ -902,10 +895,7 @@ export const FAQ = () => {
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="After the Shanghai upgrade, your 16 ETH can then be withdrawn – with your withdrawal key – after
-                  a delay of around a day."
-              />
+              <FormattedMessage defaultMessage="Withdrawal features are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day." />
             </Text>
             <BlockQuote>
               <Text className="mt10">
@@ -945,17 +935,10 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="If your signing key is not under the thief’s control, the thief
-                  cannot exit your validator."
-              />
+              <FormattedMessage defaultMessage="If your signing key is not under the thief’s control, the thief cannot exit your validator." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="With your signing key, you could attempt to quickly exit the
-                  validator and then transfer the funds – with the withdrawal key –
-                  before the thief."
-              />
+              <FormattedMessage defaultMessage="With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief." />
             </Text>
           </section>
           <section>

@@ -4,8 +4,6 @@ import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { AppBar } from './AppBar';
 import { Heading } from './Heading';
-import { MergeNotification } from './MergeNotification';
-import { routesEnum } from '../Routes';
 
 const Content = styled.div`
   width: 100%;
@@ -41,9 +39,6 @@ const _PageTemplate = ({
   title,
   header = title,
 }: Props): JSX.Element => {
-  const isMergeReadinessPage = window.location.pathname
-    .substring(3)
-    .includes(routesEnum.mergeReadiness);
   return (
     <RainbowBackground>
       <Helmet>
@@ -55,7 +50,6 @@ const _PageTemplate = ({
         <meta property="twitter:description" content={description} />
       </Helmet>
       <AppBar />
-      {!isMergeReadinessPage && <MergeNotification />}
       <Gutter>
         <Content>
           <Heading level={2} size="medium" color="blueDark" className="mb40">

@@ -10,7 +10,7 @@ import {
 import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
+import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
 import { LIGHTHOUSE_INSTALLATION_URL } from '../../../utils/envVars';
 
 const CodeSnippet = styled.div`
@@ -32,6 +32,9 @@ const CodeSnippet = styled.div`
 
 export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
+    <ClientDiversityWarning>
+      <FormattedMessage defaultMessage="Currently Lighthouse is used by >33% of the network." />
+    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Lighthouse
     </SectionTitle>
@@ -136,7 +139,6 @@ export const Lighthouse = () => {
     >
       <ValidatorClientPageStyles>
         <Hero imgSrc={lighthouseBg} />
-        <ClientMergeNotification client="Lighthouse" isConsensus />
         <LighthouseDetails />
         <section>
           <SectionTitle level={2} className="mb5">

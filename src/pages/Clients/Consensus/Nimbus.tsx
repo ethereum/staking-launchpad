@@ -10,7 +10,6 @@ import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
-import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { NIMBUS_INSTALLATION_URL } from '../../../utils/envVars';
 
 export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
@@ -99,7 +98,6 @@ export const Nimbus = () => {
     >
       <ValidatorClientPageStyles>
         <Hero imgSrc={nimbusBg} />
-        <ClientMergeNotification client="Nimbus" isConsensus />
         <NimbusDetails />
         <section>
           <SectionTitle level={2} className="mb5">

@@ -16,7 +16,13 @@ export const TestnetNotification = (): JSX.Element => {
     <StyledAlert variant="error" round="none" pad="small">
       <FormattedMessage
         defaultMessage="Warning: This is a staking launchpad for the {testnet}."
-        values={{ testnet: <AllCaps><FormattedMessage defaultMessage="testnet" /></AllCaps> }}
+        values={{
+          testnet: (
+            <AllCaps>
+              <FormattedMessage defaultMessage="testnet" />
+            </AllCaps>
+          ),
+        }}
       />
     </StyledAlert>
   );

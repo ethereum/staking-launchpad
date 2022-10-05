@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { AppBar } from '../../components/AppBar';
-import { MergeNotification } from '../../components/MergeNotification';
 import { TestnetNotification } from '../../components/TestnetNotification';
 import { Hero } from './Hero';
 import { NetworkStatus } from './NetworkStatus';
@@ -32,7 +31,6 @@ export const LandingPage = (): JSX.Element => {
     <>
       <AppBar />
       {!IS_MAINNET && <TestnetNotification />}
-      <MergeNotification />
       <Hero />
       <NetworkStatus {...{ state }} />
       <Introduction />

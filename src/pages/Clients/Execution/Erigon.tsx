@@ -11,7 +11,6 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { ClientMergeNotification } from '../../../components/ClientMergeNotification';
 import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
 import { IS_MAINNET } from '../../../utils/envVars';
 
@@ -93,7 +92,6 @@ export const Erigon = () => {
     >
       <ValidatorClientPageStyles>
         <Hero imgSrc={erigonBg} />
-        <ClientMergeNotification client="Erigon" />
         <ErigonDetails />
         <section>
           <SectionTitle level={2} className="mb5">

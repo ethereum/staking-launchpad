@@ -11,11 +11,6 @@
 
 # Redirects
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  force = true
-  status = 200
-[[redirects]]
   from = "/merge-readiness"
   to = "/checklist"
   force = true

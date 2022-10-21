@@ -1,4 +1,26 @@
 {
+  "+2VHUU": [
+    {
+      "type": 0,
+      "value": "Ethereum składa się z "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (obsługa transakcji i wykonania, dawniej „Eth1”) i "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (obsługa zadań konsensusu dowodu stawki, dawniej „Eth2” lub „Ethereum 2.0”)."
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -41,6 +63,12 @@
       "value": "język polski"
     }
   ],
+  "+wJuhm": [
+    {
+      "type": 0,
+      "value": "Discord:"
+    }
+  ],
   "/+atl4": [
     {
       "type": 0,
@@ -57,18 +85,6 @@
     {
       "type": 0,
       "value": "język indonezyjski"
-    }
-  ],
-  "/E/Zm8": [
-    {
-      "type": 0,
-      "value": "Skonfiguruj Java Web"
-    }
-  ],
-  "/FpD8O": [
-    {
-      "type": 0,
-      "value": "Zrób to po wydaniu klienta TTD"
     }
   ],
   "/QPc9s": [
@@ -283,6 +299,12 @@
       "value": ")"
     }
   ],
+  "0kxaf/": [
+    {
+      "type": 0,
+      "value": "Walidator otrzymał adres Ethereum, na który mają być wpłacane moje nagrody za opłaty."
+    }
+  ],
   "0lHkrT": [
     {
       "type": 0,
@@ -383,12 +405,6 @@
       "value": "Sprawdź, czy w plikach z hasłami nie ma końcowych znaków nowego wiersza."
     }
   ],
-  "1Z0sad": [
-    {
-      "type": 0,
-      "value": "Blog EF"
-    }
-  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -407,22 +423,10 @@
       "value": "Więcej informacji o ekonomii stakingu Ethereum"
     }
   ],
-  "1p+pb5": [
-    {
-      "type": 0,
-      "value": "odbiorca opłaty"
-    }
-  ],
   "1pUw7Y": [
     {
       "type": 0,
       "value": "Dokumentacja dotycząca uruchamiania Nethermind"
-    }
-  ],
-  "1wSJQU": [
-    {
-      "type": 0,
-      "value": "Termin:"
     }
   ],
   "22EpKq": [
@@ -497,6 +501,12 @@
       "value": "zawsze możesz przeliczyć swój klucz podpisu z klucza wycofania"
     }
   ],
+  "2c8F5x": [
+    {
+      "type": 0,
+      "value": "Dokumenty odbiorcy opłaty:"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
@@ -507,12 +517,6 @@
     {
       "type": 0,
       "value": "Różnorodność klientów jest niezmiernie ważna dla stanu sieci Ethereum: błąd w kliencie z udziałem na poziomie ponad 33% może spowodować, że sieć Ethereum przejdzie w tryb offline. Jeśli klient ma superwiększość udziałów (>66%), błąd może spowodować nieprawidłowy podział łańcucha, potencjalnie prowadząc do slashingu (cięcia)."
-    }
-  ],
-  "2s0gAx": [
-    {
-      "type": 0,
-      "value": "Konfigurowanie adresu odbiorcy opłaty"
     }
   ],
   "2t/3ab": [
@@ -679,12 +683,6 @@
       "value": "Sekcja 2 - Podczas konfiguracji"
     }
   ],
-  "3wfaSi": [
-    {
-      "type": 0,
-      "value": "Połączenie, komunikacja EL–CL"
-    }
-  ],
   "3zCA2i": [
     {
       "type": 0,
@@ -749,20 +747,6 @@
       "value": "Dlaczego skala przesuwna? Nie będziemy tutaj wchodzić w szczegóły, ale podstawowa intencja jest taka, że musi istnieć minimalna liczba walidatorów (a co za tym idzie, minimalna ilość ETH w stakach), aby sieć funkcjonowała prawidłowo. Tak więc, aby zachęcić więcej walidatorów do przyłączenia się, ważne jest, aby stopa procentowa pozostała wysoka, dopóki ta minimalna liczba nie zostanie osiągnięta."
     }
   ],
-  "4VQUkR": [
-    {
-      "type": 0,
-      "value": "Aby uzyskać więcej informacji, zobacz "
-    },
-    {
-      "type": 1,
-      "value": "shanghaiPlanning"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "4hnEBA": [
     {
       "type": 0,
@@ -785,28 +769,6 @@
     {
       "type": 0,
       "value": "Dlaczego dwa klucze zamiast jednego?"
-    }
-  ],
-  "59y+Ik": [
-    {
-      "type": 0,
-      "value": "Nie zapomnij przejść do serwisu "
-    },
-    {
-      "type": 1,
-      "value": "discord"
-    },
-    {
-      "type": 0,
-      "value": ", gdzie znajdziesz kanał "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " z załadowaną dyskusją na temat tego, jak możesz bardziej się zaangażować i przygotować."
     }
   ],
   "5A6amM": [
@@ -899,18 +861,6 @@
       "value": "średnio"
     }
   ],
-  "6CN01C": [
-    {
-      "type": 0,
-      "value": "Po uaktualnieniu Shanghai Twoje 16 ETH można będzie wypłacić — za pomocą klucza wypłaty — z opóźnieniem około jednego dnia."
-    }
-  ],
-  "6HBTTN": [
-    {
-      "type": 0,
-      "value": "Proof-of-stake (PoS) i Łańcuch śledzący"
-    }
-  ],
   "6S95Bo": [
     {
       "type": 0,
@@ -929,40 +879,10 @@
       "value": "Możesz zwiększyć efektywne saldo tego walidatora poprzez dofinansowanie"
     }
   ],
-  "6VswA4": [
-    {
-      "type": 0,
-      "value": "Uruchamianie Nethermind po połączeniu "
-    },
-    {
-      "type": 1,
-      "value": "jwtSecretFile"
-    }
-  ],
-  "6iVtAr": [
-    {
-      "type": 0,
-      "value": "#TestingTheMerge"
-    }
-  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "Dołączasz do sieci na jej wczesnych etapach. Podobnie jak w przypadku każdego nowego oprogramowania, istnieje możliwość wystąpienia błędów programowych. Choć jest to mało prawdopodobne, potencjalne błędy mogą powodować odcinanie."
-    }
-  ],
-  "6uPbCH": [
-    {
-      "type": 0,
-      "value": "Wersja "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " tej strony"
     }
   ],
   "7+Domh": [
@@ -993,18 +913,6 @@
       "value": " nie jest obsługiwany w trybie offline."
     }
   ],
-  "7BhfPl": [
-    {
-      "type": 0,
-      "value": "Księga Lighthouse"
-    }
-  ],
-  "7C4ikM": [
-    {
-      "type": 0,
-      "value": "Połącz emotikony pandy"
-    }
-  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1013,6 +921,28 @@
     {
       "type": 1,
       "value": "oppositeNetwork"
+    }
+  ],
+  "7FcGxU": [
+    {
+      "type": 0,
+      "value": "Musisz uruchomić "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " oraz "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "7Iz3JI": [
@@ -1109,16 +1039,6 @@
       "value": "Czy adres umowy podany na stronie jest zgodny?"
     }
   ],
-  "8L6ufI": [
-    {
-      "type": 0,
-      "value": "Przewodnik przedstawiający krok po kroku, jak utworzyć węzeł i walidatora "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -1149,6 +1069,12 @@
     {
       "type": 0,
       "value": "odcięcia"
+    }
+  ],
+  "8mEWVB": [
+    {
+      "type": 0,
+      "value": "Biorąc pod uwagę stałą całkowitą liczbę walidatorów, nagrody/kary przeważnie zależą od salda walidatora — poświadczenie z wyższym saldem skutkuje większymi nagrodami/karami, podczas gdy poświadczenie z niższym saldem skutkuje niższymi nagrodami/karami."
     }
   ],
   "8wd0q5": [
@@ -1267,24 +1193,6 @@
       "value": "Przegląd"
     }
   ],
-  "9vLu6E": [
-    {
-      "type": 1,
-      "value": "note"
-    },
-    {
-      "type": 0,
-      "value": " Ten krok należy wykonywać w "
-    },
-    {
-      "type": 1,
-      "value": "testnetsOnly"
-    },
-    {
-      "type": 0,
-      "value": " do czasu ogłoszenia TTD (końcowa trudność łączna) sieci głównej i wydania przez klientów aktualizacji. W międzyczasie przedstawiane są informacje dotyczące przygotowania."
-    }
-  ],
   "9vwGlT": [
     {
       "type": 0,
@@ -1377,30 +1285,6 @@
       "value": " w tym samym czasie, aby został zaakceptowany."
     }
   ],
-  "ALEY4e": [
-    {
-      "type": 0,
-      "value": "Przewodnik "
-    },
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
-  "ARyG2Z": [
-    {
-      "type": 0,
-      "value": "Kiedy następują wypłaty?"
-    }
-  ],
   "ATwOPg": [
     {
       "type": 0,
@@ -1425,20 +1309,6 @@
       "value": "zrozumienie efektywnego bilansu walidatora"
     }
   ],
-  "AbR1dr": [
-    {
-      "type": 0,
-      "value": "To uaktualnienie zbliża się wielkimi krokami i niesie ze sobą kilka zmian, o których stakerzy powinni wiedzieć wcześniej. Sprawdź "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": ", aby upewnić się, że masz wszystko przygotowane."
-    }
-  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1453,12 +1323,6 @@
     {
       "type": 0,
       "value": "Sharding zmieni wymóg, aby pełne węzły zawierały całą historię łańcucha, a zamiast tego rozdzieli to obciążenie między sieć, zapewniając jednocześnie dostępność danych. Dzięki temu znacznie zwiększy się pojemność warstwy 1 Ethereum, a jednocześnie zachowana zostanie możliwość obsługi pełnego węzła na sprzęcie konsumenckim, co pozwoli zachować decentralizację sieci."
-    }
-  ],
-  "AfH0eO": [
-    {
-      "type": 0,
-      "value": "Wszyscy stakerzy muszą obsługiwać klienta wykonania wraz z ich klientem konsensusu, począwszy od połączenia. Przygotuj się."
     }
   ],
   "Affixg": [
@@ -1489,18 +1353,6 @@
     {
       "type": 0,
       "value": "Dokonaj wpłaty na rzecz walidatora"
-    }
-  ],
-  "AyaNND": [
-    {
-      "type": 0,
-      "value": "TestingTheMerge"
-    }
-  ],
-  "AzjyIx": [
-    {
-      "type": 0,
-      "value": "Od czasu powstania łańcucha śledzącego wielu walidatorów mających własnego klienta konsensusu zdecydowało się na korzystanie z usług innych firm w celu połączenia z warstwą wykonania. Było to dopuszczalne, ponieważ nasłuchiwany był jedynie kontrakt depozytowy na stakowanie."
     }
   ],
   "B2EKj+": [
@@ -1583,18 +1435,6 @@
     {
       "type": 0,
       "value": "Społeczność EthStaker"
-    }
-  ],
-  "BXoiVG": [
-    {
-      "type": 0,
-      "value": "Dodatkowe przypomnienia"
-    }
-  ],
-  "BcUgLk": [
-    {
-      "type": 0,
-      "value": "Sugerowany odbiorca opłaty"
     }
   ],
   "Bf2QKg": [
@@ -1759,10 +1599,28 @@
       "value": "Zweryfikuj adres kontraktu"
     }
   ],
+  "DhKDS3": [
+    {
+      "type": 0,
+      "value": "Dowód stawki i łańcuch śledzący"
+    }
+  ],
+  "Di1/yX": [
+    {
+      "type": 0,
+      "value": "Dokumenty JWT konsensusu:"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
       "value": "Niezbędne porty zostały przekierowane do odpowiednich komputerów z mojego routera zarówno dla klienta EL, jak i klienta CL (otwórz tylko te porty, które dotyczą Twoich instalacji)."
+    }
+  ],
+  "DmKneH": [
+    {
+      "type": 0,
+      "value": "Klienci wspierają Prometheus i Grafana, aby pomóc Ci wizualizować ważne dane w czasie rzeczywistym dotyczące Twojego walidatora."
     }
   ],
   "DoCZT1": [
@@ -1871,6 +1729,12 @@
       "value": "To jest sieć testowa ⚠️"
     }
   ],
+  "EXt8Xd": [
+    {
+      "type": 0,
+      "value": "Stakerzy muszą podać adres odbiorcy opłaty swojemu klientowi konsensusu, aby otrzymać nagrody za opłaty transakcyjne. Jest to zwykły adres Ethereum, do którego wszyscy są przyzwyczajeni."
+    }
+  ],
   "EcCME0": [
     {
       "type": 0,
@@ -1893,12 +1757,6 @@
     {
       "type": 0,
       "value": "Uwaga: weryfikacja wpłaty może potrwać kilka minut w przypadku Łańcucha śledzącego"
-    }
-  ],
-  "FM9lHC": [
-    {
-      "type": 0,
-      "value": "wszystkie konfiguracje sieci testowej połączenia"
     }
   ],
   "FSRfSJ": [
@@ -1995,12 +1853,6 @@
       "value": "Warunki usługi"
     }
   ],
-  "FqztZR": [
-    {
-      "type": 0,
-      "value": "Uwaga:"
-    }
-  ],
   "FzkbsB": [
     {
       "type": 0,
@@ -2035,12 +1887,6 @@
     {
       "type": 0,
       "value": "Upewnij się, że nie jesteś oszukiwany"
-    }
-  ],
-  "GKDM0r": [
-    {
-      "type": 0,
-      "value": "W razie potrzeby upewnij się, że w węźle działa zarówno klient EL, jak i klient CL, aby zapobiec przestojom w czasie połączenia."
     }
   ],
   "GN2Cu5": [
@@ -2107,40 +1953,6 @@
     {
       "type": 0,
       "value": "Całkowita wymagana kwota"
-    }
-  ],
-  "H/LXxz": [
-    {
-      "type": 0,
-      "value": "Sieć "
-    },
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " była pierwszą długo działającą publiczną siecią testową, która przeszła połączenie, do którego doszło 8 czerwca 2022 roku. W przeszłości sieć testowa proof-of-work "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " przeszła na algorytm proof-of-stake poprzez połączenie swojej historycznej warstwy wykonania z nowym łańcuchem śledzącym."
-    }
-  ],
-  "H0lQfu": [
-    {
-      "type": 0,
-      "value": "Lista kontrolna gotowości do połączenia"
-    }
-  ],
-  "H4W8nj": [
-    {
-      "type": 0,
-      "value": "Interfejs API mechanizmu uwierzytelniania"
     }
   ],
   "H5+NAX": [
@@ -2223,12 +2035,6 @@
       "value": "Sieć"
     }
   ],
-  "I5ZPR9": [
-    {
-      "type": 0,
-      "value": "Kiedy połączenie?"
-    }
-  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2263,20 +2069,6 @@
     {
       "type": 0,
       "value": "Zainstaluj virtualenv"
-    }
-  ],
-  "If09Ko": [
-    {
-      "type": 0,
-      "value": "W związku z tym stakerzy muszą podać adres "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": " swojemu klientowi konsensusu, aby otrzymać te nagrody. Jest to zwykły adres Ethereum, do którego wszyscy są przyzwyczajeni."
     }
   ],
   "IhDJWs": [
@@ -2359,12 +2151,6 @@
       "value": "Innymi słowy, abyś był uczciwy, Twoje działania muszą mieć konsekwencje finansowe."
     }
   ],
-  "JApiO1": [
-    {
-      "type": 0,
-      "value": "Jest to nowa zmiana i staje się wymogiem w momencie połączenia, więc upewnij się przed aktualizacją, że oba te elementy są uruchomione."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -2383,12 +2169,6 @@
     {
       "type": 0,
       "value": "4. Unikaj wyłudzania"
-    }
-  ],
-  "Ja5vXW": [
-    {
-      "type": 0,
-      "value": "Przeczytaj także"
     }
   ],
   "JbVlOE": [
@@ -2425,6 +2205,12 @@
     {
       "type": 0,
       "value": "Jaki jest twój obecny system operacyjny?"
+    }
+  ],
+  "K37W0m": [
+    {
+      "type": 0,
+      "value": "Za pomocą klucza podpisującego możesz spróbować szybko opuścić walidatora, a następnie przelać środki — za pomocą klucza wypłaty — przed złodziejem."
     }
   ],
   "K6+jQ3": [
@@ -2503,20 +2289,10 @@
       "value": "Nethermind to solidny klient zbudowany na rdzeniu środowiska .NET, zaprojektowany do zapewniania wydajności, wszechstronności i możliwości dostosowania."
     }
   ],
-  "KcdQCZ": [
+  "KhJBVZ": [
     {
       "type": 0,
-      "value": "Składnia interfejsu CLI "
-    },
-    {
-      "type": 1,
-      "value": "engineJwtSecret"
-    }
-  ],
-  "KjcAm2": [
-    {
-      "type": 0,
-      "value": "Nagrody i kary są przyznawane mniej więcej co sześć i pół minuty – w okresie znanym jako epoka."
+      "value": "Zobacz listę kontrolną stawek"
     }
   ],
   "KqGKRA": [
@@ -2555,12 +2331,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "L1PK14": [
-    {
-      "type": 0,
-      "value": "Ethereum.org — połączenie"
     }
   ],
   "L7fPF+": [
@@ -2667,6 +2437,12 @@
       "value": "Twoja początkowa wpłata została już dokonana dla tego klucza publicznego walidatora. Poczekaj i sprawdź status swojego depozytu u dostawcy danych łańcucha śledzącego."
     }
   ],
+  "Lv57+8": [
+    {
+      "type": 0,
+      "value": "Zabezpieczeniem Ethereum jest dowód stawki (PoS), aczkolwiek nie zawsze tak było. Pierwszy krok w kierunku ustanowienia warstwy konsensusu PoS w Ethereum stanowił Łańcuch śledzący, uruchomiony równolegle z siecią główną w 2020 r. To pozwoliło uczestnikom na rozpoczęcie stawkowania ETH i przygotowanie sieci do formalnego przejścia od dowodu pracy do dowodu stawki w drodze połączenia."
+    }
+  ],
   "LwEHRm": [
     {
       "type": 0,
@@ -2685,20 +2461,6 @@
       "value": "Podłącz nowy portfel"
     }
   ],
-  "MKMIUm": [
-    {
-      "type": 0,
-      "value": "Trwają prace nad publiczną siecią testową. Kiedy wszystko będzie bezpieczne i gotowe, główny zespół programistów poinformuje o tym, więc obserwuj "
-    },
-    {
-      "type": 1,
-      "value": "blogLink"
-    },
-    {
-      "type": 0,
-      "value": " lub inne kanały komunikacji zespołu ds. klientów, aby mieć najnowsze informacje."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2715,12 +2477,6 @@
     {
       "type": 0,
       "value": "Co się stanie, jeśli mój klucz do wycofania zostanie skradziony?"
-    }
-  ],
-  "MXVVcY": [
-    {
-      "type": 0,
-      "value": "Uwierzytelnianie połączeń węzła wykonania"
     }
   ],
   "MZEcKL": [
@@ -2765,22 +2521,10 @@
       "value": "Aktualizacje Ethereum odniosą sukces tylko wtedy, gdy walidatorzy zrozumieją ryzyko i obowiązki."
     }
   ],
-  "Mm7FSl": [
-    {
-      "type": 0,
-      "value": "Terminy „Eth1” i „Eth2” są wycofywane w ramach przygotowań do połączenia."
-    }
-  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Szczegóły doładowania"
-    }
-  ],
-  "MoIew2": [
-    {
-      "type": 0,
-      "value": "Przewodnik przedstawiający krok po kroku, jak utworzyć węzeł i walidatora w sieciach testowych połączenia"
     }
   ],
   "N0rwnt": [
@@ -2923,12 +2667,6 @@
       "value": "."
     }
   ],
-  "O/dhpS": [
-    {
-      "type": 0,
-      "value": "EthStaker w Discord"
-    }
-  ],
   "O3qkOm": [
     {
       "type": 0,
@@ -2977,24 +2715,6 @@
     {
       "type": 0,
       "value": "Więcej o połączeniu"
-    }
-  ],
-  "Oop93W": [
-    {
-      "type": 1,
-      "value": "site"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " — ogłoszenie"
     }
   ],
   "OsO8ik": [
@@ -3049,6 +2769,12 @@
       "value": "."
     }
   ],
+  "P8FrVE": [
+    {
+      "type": 0,
+      "value": "Uwierzytelnianie JWT"
+    }
+  ],
   "P91KmA": [
     {
       "type": 0,
@@ -3063,12 +2789,6 @@
     {
       "type": 0,
       "value": "Twoja sieć została zmieniona"
-    }
-  ],
-  "Pd0hC/": [
-    {
-      "type": 0,
-      "value": "Blog Ethereum Foundation"
     }
   ],
   "PfoT0C": [
@@ -3119,12 +2839,6 @@
       "value": "schowek"
     }
   ],
-  "Q2CQuF": [
-    {
-      "type": 0,
-      "value": "Teraz, kiedy transakcje muszą być przetwarzane przez walidatorów, walidatorzy proponujący bloki zawierające te transakcje są uprawnieni do otrzymywania napiwków od opłat za transakcje. Są one znane również jako opłaty za pierwszeństwo i stanowią niespaloną część opłat za gaz."
-    }
-  ],
   "Q8P0rZ": [
     {
       "type": 0,
@@ -3163,20 +2877,6 @@
       "value": ", aby maksymalnie zwiększyć swoje efektywne saldo."
     }
   ],
-  "Q8fnvz": [
-    {
-      "type": 0,
-      "value": "tylko sieci testowe (np. "
-    },
-    {
-      "type": 1,
-      "value": "kiln"
-    },
-    {
-      "type": 0,
-      "value": ")"
-    }
-  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -3207,14 +2907,14 @@
       "value": "Zarządzanie kluczami"
     }
   ],
-  "QapNAM": [
+  "QeE86m": [
     {
       "type": 0,
-      "value": "Strona główna "
+      "value": "Zapoznaj się z tym dokumentem, aby dowiedzieć się, jak uruchomić węzeł w sieci "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "networkName"
     }
   ],
   "QgOvR0": [
@@ -3265,44 +2965,10 @@
       "value": ", który został zaakceptowany, ale jest zatwierdzany w łańcuchu. Będzie on dostępny tutaj, gdy firma Beaconcha.in potwierdzi 2048 bloków."
     }
   ],
-  "QtNVQP": [
-    {
-      "type": 0,
-      "value": "Nie ma możliwości ponownej aktywacji walidatora i nie będziesz w stanie przelewać ani wypłacać swoich środków do czasu uaktualnienia Shanghai, które ma nastąpić po połączeniu (co znaczy, że do tego czasu Twoje środki pozostaną niedostępne)."
-    }
-  ],
-  "R58ea3": [
-    {
-      "type": 0,
-      "value": "Musisz uruchomić "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " oraz "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (dawniej „Eth2”)."
-    }
-  ],
   "R8eePn": [
     {
       "type": 0,
       "value": "Jeśli zostaniesz odcięty, nie będziesz mógł dalej uczestniczyć w protokole i zostaniesz przymusowo usunięty."
-    }
-  ],
-  "R9umf+": [
-    {
-      "type": 0,
-      "value": "Nadchodzą nagrody za opłaty dla walidatorów, nie przegap ich!"
     }
   ],
   "RCGrka": [
@@ -3335,50 +3001,10 @@
       "value": "gratulacje"
     }
   ],
-  "RaBZna": [
-    {
-      "type": 0,
-      "value": "Jeśli korzystasz z ETH w trybie offline przez kilka dni w normalnych warunkach, stracisz kwotę w przybliżeniu równą kwocie ETH, którą uzyskałbyś w tym okresie. Innymi słowy, gdybyś mógł zarabiać ~0,01 ETH, zamiast tego zostałbyś ukarany ~0,01 ETH."
-    }
-  ],
   "Rg5ySE": [
     {
       "type": 0,
       "value": "Ilu walidatorów chcesz uruchomić?"
-    }
-  ],
-  "Riq4Yh": [
-    {
-      "type": 0,
-      "value": "Sieć "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " jest otwarta na interakcje z wszystkimi. Spróbuj wysłać niektóre transakcje, uruchamiając walidatora, lub sprawdź, czy może Cię spotkać cięcie!"
-    }
-  ],
-  "RkSC5Q": [
-    {
-      "type": 0,
-      "value": "Przypominamy, że uaktualnienie połączenia "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " wprowadzi wypłat ani przekazywania stakowanych ETH. Ta funkcja zostanie włączona do uaktualnienia Shanghai, które ma nastąpić po połączeniu."
-    }
-  ],
-  "RqTB/U": [
-    {
-      "type": 0,
-      "value": "Często zadawane pytania dotyczące planu działania Ethereum"
     }
   ],
   "Rr2lI/": [
@@ -3411,12 +3037,6 @@
       "value": "Zmienna środowiskowa pliku konfiguracyjnego Teku"
     }
   ],
-  "SEt7ZX": [
-    {
-      "type": 0,
-      "value": "Bieżący wątek informacji o połączeniu Ethereum"
-    }
-  ],
   "SGzXoY": [
     {
       "type": 0,
@@ -3429,36 +3049,10 @@
       "value": "Wykonaj właśnie pobrany plik."
     }
   ],
-  "SR0qHv": [
-    {
-      "type": 0,
-      "value": "Unikaj zbyt skomplikowanych ustawień i miej świadomość kompromisów. Bycie offline przez krótki czas spowoduje niewielkie kary za brak aktywności, ale zostaną one łatwo odzyskane po ponownym przejściu online na mniej więcej taki sam okres. Skomplikowane kopie zapasowe mogą zwiększyć koszty konfiguracji, a nadmiarowi zapasowi walidatorzy mogą prowadzić do odcinania."
-    }
-  ],
-  "SVLpih": [
-    {
-      "type": 0,
-      "value": "Długo oczekiwane przejście na algorytm proof-of-stake poprzez połączenie nadchodzi wielkimi krokami, przybliżając Ethereum do bardziej zrównoważonego ekosystemu."
-    }
-  ],
   "SaR1pU": [
     {
       "type": 0,
       "value": "Depozyt już istnieje"
-    }
-  ],
-  "Sb67Wo": [
-    {
-      "type": 0,
-      "value": "Uwaga stakerzy: zbliża się połączenie! Sprawdźcie listę kontrolną "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": ", aby upewnić się, że jesteście gotowi."
     }
   ],
   "Sd+Pq6": [
@@ -3503,12 +3097,6 @@
       "value": "Wymagany"
     }
   ],
-  "SpI4Xu": [
-    {
-      "type": 0,
-      "value": "W ramach uaktualnienia połączenie przygotowano łańcuch na przyszłe uaktualnienia skalujące poprzez połączenie konsensusu opartego na proof-of-stake z siecią główną. Otwiera to możliwość wdrożenia shardingu danych w celu dalszego skalowania pojemności i przepustowości sieci."
-    }
-  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3543,50 +3131,16 @@
       "value": "Odwiedź tę witrynę na komputerze, aby zostać walidatorem."
     }
   ],
-  "TNTj2N": [
+  "TZtYuA": [
     {
       "type": 0,
-      "value": "Przewodnik po połączeniu sieci testowej "
-    },
-    {
-      "type": 1,
-      "value": "community"
-    }
-  ],
-  "TbV4N8": [
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " w Discord (kran)"
+      "value": "Od czasu połączenia terminy „Eth1” i „Eth2” wyszły z użycia. Po przejściu do zastosowania dowodu stawki, co udało się dzięki połączeniu, nie ma już dwóch odrębnych sieci Ethereum; jest tylko Ethereum."
     }
   ],
   "TfNuWP": [
     {
       "type": 0,
       "value": "virtualenv pomoże ci stworzyć izolowane środowisko Pythona dla narzędzia deposit-cli."
-    }
-  ],
-  "TfVy1O": [
-    {
-      "type": 0,
-      "value": "Wyświetl listę kontrolną gotowości do połączenia"
-    }
-  ],
-  "ToUcj8": [
-    {
-      "type": 0,
-      "value": "Gotowość do połączenia: oprócz klienta wykonania po połączeniu węzłów operatorzy muszą uruchomić również "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": ", aby pozostać aktywni."
     }
   ],
   "Tpe6yK": [
@@ -3613,12 +3167,6 @@
       "value": "więcej niż 50%"
     }
   ],
-  "UHbYCa": [
-    {
-      "type": 0,
-      "value": "Twój walidator ma swoje własne saldo – z początkowym saldem określonym w umowie depozytowej. Twoje nagrody i kary są z czasem odzwierciedlane w saldzie Twojego walidatora."
-    }
-  ],
   "UJMct0": [
     {
       "type": 0,
@@ -3631,6 +3179,12 @@
     {
       "type": 0,
       "value": ", aby uzyskać więcej informacji"
+    }
+  ],
+  "UUDnWR": [
+    {
+      "type": 0,
+      "value": "Planowanie uaktualnienia Shanghai (problem w GitHub)"
     }
   ],
   "UWv7yD": [
@@ -3677,48 +3231,6 @@
     {
       "type": 0,
       "value": "Jeśli nie posiadasz folderu sieci testowej, prawdopodobnie nie zbudowałeś i nie uruchomiłeś prawidłowo Nimbus. Uruchom ponownie polecenia tworzenia aplikacji."
-    }
-  ],
-  "V0mmZE": [
-    {
-      "type": 0,
-      "value": "Po połączeniu Twój walidator będzie również odpowiedzialny za przetwarzanie transakcji, a tym samym będzie mieć prawo do opłat za niespalony gaz związanych z tymi transakcjami w blokach proponowanych przez walidatora. Opłaty te są rozliczane w warstwie wykonania, a nie konsensusu, dlatego wymagają podania klientowi tradycyjnego adresu Ethereum."
-    }
-  ],
-  "V19Udt": [
-    {
-      "type": 0,
-      "value": "Ethereum będzie składać się z "
-    },
-    {
-      "type": 1,
-      "value": "executionLayer"
-    },
-    {
-      "type": 0,
-      "value": " (obsługuje transakcje i wykonanie, dawniej „Eth1”) i "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayer"
-    },
-    {
-      "type": 0,
-      "value": " (obsługuje łańcuch proof-of-stake Beacon Chain, dawniej „Eth2” lub „Ethereum 2.0”)."
-    }
-  ],
-  "V5J3Uf": [
-    {
-      "type": 0,
-      "value": "Ustawiono wspólny klucz tajny JWT i udostępniono go "
-    },
-    {
-      "type": 1,
-      "value": "both"
-    },
-    {
-      "type": 0,
-      "value": " mojemu klientowi wykonania i klientowi konsensusu (węzłowi śledzącemu)"
     }
   ],
   "VASo1/": [
@@ -3827,10 +3339,18 @@
       "value": "Jestem pewien, że walidator, na rzecz którego dokonam wpłaty, jest moim walidatorem."
     }
   ],
-  "Vp4z/b": [
+  "Vm6cRY": [
     {
       "type": 0,
-      "value": "Stakerzy z własną warstwą wykonania są niezbędni do decentralizacji sieci."
+      "value": "Komunikacja ta jest zabezpieczona za pomocą "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": ", czyli klucza tajnego, który jest współużytkowany tylko między dwoma klientami w celu wzajemnego uwierzytelniania. Ten wspólny klucz tajny JWT musi zostać udostępniony każdemu klientowi (zarówno klientowi wykonania, jak i klientowi konsensusu), aby umożliwić im prawidłową komunikację między sobą."
     }
   ],
   "VzGJkB": [
@@ -3843,6 +3363,20 @@
     {
       "type": 0,
       "value": "Teku jest językiem z licencją Apache 2 napisanym w Javie, znanym ze swojej dojrzałości i wszechobecności."
+    }
+  ],
+  "W2Eues": [
+    {
+      "type": 0,
+      "value": "Ostrzeżenie: Jest to launchpad stakowania sieci "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "W3t7Ob": [
@@ -3909,12 +3443,6 @@
       "value": "Implementacja protokołu konsensusu z naciskiem na użyteczność, bezpieczeństwo i niezawodność. Prysm jest rozwijany przez Prysmatic Labs, firmę skupiającą się wyłącznie na rozwoju swojego klienta."
     }
   ],
-  "Wj99ga": [
-    {
-      "type": 0,
-      "value": "Go Ethereum — połączenie"
-    }
-  ],
   "WkrNSk": [
     {
       "type": 0,
@@ -3925,24 +3453,6 @@
     {
       "type": 0,
       "value": "Proszę zaakceptować powyższe warunki."
-    }
-  ],
-  "WptkFF": [
-    {
-      "type": 0,
-      "value": "Wymagane są obie warstwy"
-    }
-  ],
-  "Wxmhku": [
-    {
-      "type": 0,
-      "value": "Opłaty te są wnoszone przez tego, kto zgłosił transakcję, i mają postać ETH w warstwie wykonania (w sieci głównej). Te nagrody nie są uwzględniane w Twoim saldzie walidatora, które jest utrzymywane w warstwie konsensusu."
-    }
-  ],
-  "WxqnJn": [
-    {
-      "type": 0,
-      "value": "Z drugiej strony możesz zostać ukarany za bycie offline i złośliwe zachowanie – na przykład zaświadczanie o nieprawidłowych lub sprzecznych blokach."
     }
   ],
   "Wxzght": [
@@ -3963,12 +3473,6 @@
       "value": "gra w dowód powiernictwa"
     }
   ],
-  "X3rOq5": [
-    {
-      "type": 0,
-      "value": "Z chwilą połączenia Infura i Alchemy przestaną być realnymi opcjami outsourcingu odpowiedzialności za warstwę wykonania."
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -3985,6 +3489,12 @@
     {
       "type": 0,
       "value": "Dokumentacja Besu na Goerli"
+    }
+  ],
+  "XVRQoq": [
+    {
+      "type": 0,
+      "value": "Od czasu połączenia dostawcy zewnętrzni (tacy jak Infura i Alchemy) przestali być realnymi opcjami outsourcingu odpowiedzialności za warstwę wykonania. Wszyscy stakerzy muszą uruchomić zarówno klienta wykonania, jak i konsensu w celu prawidłowego poświadczenia w sieci."
     }
   ],
   "XVehvN": [
@@ -4031,40 +3541,6 @@
     {
       "type": 0,
       "value": "Budowa ze źródeł"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "Klienty obsługują Prometheus i Grafana, aby pomóc Ci wizualizować ważne dane w czasie rzeczywistym dotyczące Twojego walidatora. Instrukcje dotyczące konkretnego klienta można znaleźć tutaj: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "Y07Hwy": [
@@ -4137,18 +3613,6 @@
       "value": "Klucze"
     }
   ],
-  "YHk9Pe": [
-    {
-      "type": 0,
-      "value": "W wyniku połączenia ciężar przetwarzania transakcji spadnie na walidatorów, ponieważ metoda proof-of-work zostanie wycofana. Aby potwierdzić ważność tych transakcji, walidator musi mieć zaufany dostęp do zdarzeń w warstwie wykonania. Ufaj tylko swojemu własnemu węzłowi."
-    }
-  ],
-  "YIjr32": [
-    {
-      "type": 0,
-      "value": "Dla tych, którzy chcą mieć więcej kontroli, a potrzebują mniej pomocy"
-    }
-  ],
   "YP03/j": [
     {
       "type": 0,
@@ -4181,30 +3645,6 @@
     {
       "type": 0,
       "value": ". Upewnij się, że przechowujesz je bezpiecznie, najlepiej w trybie offline. Twoje magazyny kluczy walidatorów powinny być dostępne w wybranym katalogu."
-    }
-  ],
-  "YTNPFn": [
-    {
-      "type": 0,
-      "value": "Instrukcje dotyczące ustawiania klucza tajnego JWT zależą od klienta — operatorzy węzłów powinni zapoznać się z dokumentacją swoich klientów, aby dowiedzieć się, jak wygenerować i skonfigurować klucze tajne."
-    }
-  ],
-  "YX6pc0": [
-    {
-      "type": 1,
-      "value": "client"
-    },
-    {
-      "type": 0,
-      "value": " jest "
-    },
-    {
-      "type": 1,
-      "value": "layerType"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "Yd6MEN": [
@@ -4311,12 +3751,6 @@
     {
       "type": 0,
       "value": "Dlaczego muszę mieć fundusze na stawkę?"
-    }
-  ],
-  "ZPRDyW": [
-    {
-      "type": 0,
-      "value": "To zależy. Zachowanie złośliwe – na przykład poświadczanie nieprawidłowych lub sprzecznych bloków, doprowadzi do obcięcia Twojej stawki."
     }
   ],
   "ZTo0Fl": [
@@ -4461,12 +3895,6 @@
       "value": "Pamiętaj, aby uwzględnić wystarczającą ilość miejsca na dysku, dopóki nie uruchomisz konserwacji w węźle."
     }
   ],
-  "bX1fts": [
-    {
-      "type": 0,
-      "value": "Lista kontrolna gotowości do połączenia"
-    }
-  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -4579,12 +4007,6 @@
       "value": "Czym są poświadczenia wycofania środków?"
     }
   ],
-  "cwYSyN": [
-    {
-      "type": 0,
-      "value": "Zadanie 3"
-    }
-  ],
   "cyNFM3": [
     {
       "type": 0,
@@ -4619,12 +4041,6 @@
       "value": " to 32-bajtowe pole w depozycie do weryfikacji miejsca przeznaczenia prawidłowych wypłat środków. Obecnie istnieją dwa rodzaje wycofania środków: wycofanie z BLS i wycofanie z adresu Ethereum."
     }
   ],
-  "dGWdPu": [
-    {
-      "type": 0,
-      "value": "Wszyscy stakerzy muszą obsługiwać klienta wykonania wraz z ich klientem konsensusu, począwszy od połączenia. Przygotuj się."
-    }
-  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -4655,12 +4071,6 @@
       "value": "Doładuj"
     }
   ],
-  "da/gCQ": [
-    {
-      "type": 0,
-      "value": "Zadanie 2"
-    }
-  ],
   "deLJOg": [
     {
       "type": 0,
@@ -4671,12 +4081,6 @@
     {
       "type": 0,
       "value": "Gdzie mogę znaleźć pomoc w rozwiązywaniu problemów?"
-    }
-  ],
-  "dsQVUw": [
-    {
-      "type": 0,
-      "value": "Księga Nimbus"
     }
   ],
   "dvr19k": [
@@ -4691,16 +4095,16 @@
       "value": "Port domyślny"
     }
   ],
+  "e+9dMk": [
+    {
+      "type": 0,
+      "value": "Dokumenty wykonania JWT:"
+    }
+  ],
   "e/PSgJ": [
     {
       "type": 0,
       "value": "Prześlij dane depozytu"
-    }
-  ],
-  "e1dCqL": [
-    {
-      "type": 0,
-      "value": "Problem z planowaniem uaktualnienia Shanghai w GitHub"
     }
   ],
   "e4f94H": [
@@ -4727,22 +4131,6 @@
     {
       "type": 1,
       "value": "code3"
-    }
-  ],
-  "e4wHN4": [
-    {
-      "type": 0,
-      "value": "Launchpad stakowania sieci "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "Możesz pomyśleć o koncie depozytowym jako o transferze środków między rachunkami Ethereum a walidatorami łańcucha Beacon Chain."
     }
   ],
   "eKEL/g": [
@@ -4837,6 +4225,12 @@
       "value": "Pełna lista kontrolna"
     }
   ],
+  "ezCT4A": [
+    {
+      "type": 0,
+      "value": "Uwzględnienie podstawowego EIP Shanghai"
+    }
+  ],
   "f/N7FO": [
     {
       "type": 0,
@@ -4855,12 +4249,6 @@
     {
       "type": 0,
       "value": " ETH. Informacje te można było z łatwością uzyskać od dostawców zewnętrznych, takich jak Infura lub Alchemy."
-    }
-  ],
-  "fDY/uQ": [
-    {
-      "type": 0,
-      "value": "Teku — połączenie"
     }
   ],
   "fHLKXR": [
@@ -4921,6 +4309,12 @@
     {
       "type": 0,
       "value": "nie można wycofać"
+    }
+  ],
+  "g2k5M/": [
+    {
+      "type": 0,
+      "value": "Sugestie sprzętowe stale ewoluują. Obecne minimalne wymagania mogą wzrosnąć o rząd wielkości po wprowadzeniu shardingu. Zrób własne badania przed wpłaceniem środków."
     }
   ],
   "g37XKP": [
@@ -5061,6 +4455,12 @@
       "value": "Twój udział"
     }
   ],
+  "hBIbQ+": [
+    {
+      "type": 0,
+      "value": "Unikaj zbyt skomplikowanych ustawień i miej świadomość kompromisów. Bycie offline przez krótki czas spowoduje niewielkie kary za brak aktywności, ale zostaną one łatwo odzyskane po ponownym przejściu w tryb online na mniej więcej taki sam okres. Skomplikowane kopie zapasowe mogą zwiększyć koszty konfiguracji, a nadmiarowi zapasowi walidatorzy mogą prowadzić do poważniejszej kary, znanej jako odcinanie."
+    }
+  ],
   "hFzE1M": [
     {
       "type": 0,
@@ -5071,12 +4471,6 @@
     {
       "type": 0,
       "value": "Tylko komputer stacjonarny"
-    }
-  ],
-  "hICY9k": [
-    {
-      "type": 0,
-      "value": "Walidator otrzymał adres Ethereum, na który mają być wpłacane moje nagrody za opłaty."
     }
   ],
   "hPCn9f": [
@@ -5159,10 +4553,10 @@
       "value": "Rozumiem, że ważne jest, aby mój walidator był online i aktualizowany."
     }
   ],
-  "hzX7K4": [
+  "i7alIW": [
     {
       "type": 0,
-      "value": "Zadanie 1"
+      "value": "Stało się to wymogiem w momencie połączenia, więc upewnij się przed stakowaniem, że oba te elementy są uruchomione."
     }
   ],
   "iCpuph": [
@@ -5171,10 +4565,38 @@
       "value": "Klienci"
     }
   ],
+  "iFWLYC": [
+    {
+      "type": 0,
+      "value": "Możesz pomyśleć o kontrakcie depozytowym jako o transferze środków z rachunku Ethereum na rachunek walidatora dowodu stawki."
+    }
+  ],
   "iMvXLd": [
     {
       "type": 0,
       "value": "Uruchamianie klienta walidatora"
+    }
+  ],
+  "iN1PPs": [
+    {
+      "type": 0,
+      "value": "Każdy depozyt "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH aktywuje jeden zestaw kluczy walidatora. Te klucze służą do potwierdzenia stanu sieci. Im niższy wymóg ETH, tym więcej wynikowych podpisów musi zostać zapisanych przez sieć. "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH wybrano jako wartość umożliwiającą stakowanie możliwie największej liczbie osób bez nadmiernego powiększania każdego bloku podpisami."
     }
   ],
   "iPRnRG": [
@@ -5229,12 +4651,6 @@
       "value": "PegaSys Teku to oparty na Javie klient konsensusu Ethereum, stworzony z myślą o potrzebach instytucjonalnych i wymaganiach bezpieczeństwa."
     }
   ],
-  "irRdC0": [
-    {
-      "type": 0,
-      "value": "Sugestie sprzętowe stale ewoluują. Obecne minimalne wymagania mogą wzrosnąć o rząd wielkości po fuzji i wprowadzeniu łańcuchów odłamków. Zrób własne badania przed wpłaceniem środków."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
@@ -5255,20 +4671,6 @@
     {
       "type": 0,
       "value": "Wcześniej znany jako Artemis, Teku jest klientem konsensusu zbudowanym w celu spełnienia potrzeb instytucjonalnych i wymagań bezpieczeństwa. PegaSys jest częścią ConsenSys, zajmującą się tworzeniem klientów gotowych do pracy w przedsiębiorstwach i narzędzi do interakcji z podstawową platformą Ethereum."
-    }
-  ],
-  "jQTc9t": [
-    {
-      "type": 0,
-      "value": "Odwiedź tę stronę, aby uzyskać najnowsze informacje o tym, jak zaangażować się w "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " w innych publicznych sieciach testowych, w miarę jak będą pojawiać się szczegóły."
     }
   ],
   "jXer8/": [
@@ -5347,24 +4749,16 @@
       "value": "Dokumentacja Nimbus"
     }
   ],
-  "jzGCBy": [
-    {
-      "type": 0,
-      "value": "Krany sieci "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " były nadużywane i są ograniczone, ale ludzie z EthStaker zrobią wszystko, aby Ci pomóc"
-    }
-  ],
   "k43c+l": [
     {
       "type": 0,
       "value": "Zobacz audyt aplikacji Wagyu Key Gen opracowany przez HashCloak"
+    }
+  ],
+  "k4x6Ud": [
+    {
+      "type": 0,
+      "value": "To oznaczało połączenie warstwy egzekucyjnej (istniejącej sieci głównej) z nową warstwą konsensusu (łańcuch śledzący), w efekcie czego powstał dzisiejszy pojedynczy łańcuch Ethereum."
     }
   ],
   "kFS5Sd": [
@@ -5415,6 +4809,12 @@
       "value": "Z biegiem czasu Twoje saldo zmniejszy się, ponieważ zostaniesz ukarany za nieuczestniczenie w procesie konsensusu. Kiedy Twoje saldo osiągnie 16 ETH, zostaniesz automatycznie usunięty z puli walidatorów."
     }
   ],
+  "kn06Zz": [
+    {
+      "type": 0,
+      "value": "Dokumenty monitorowania:"
+    }
+  ],
   "kn7kJd": [
     {
       "type": 0,
@@ -5427,6 +4827,12 @@
       "value": "Bądźmy w kontakcie"
     }
   ],
+  "krxu73": [
+    {
+      "type": 0,
+      "value": "Dowód stawki oficjalnie wprowadzono w Ethereum w dniu 15 września 2022 r. w drodze uaktualnienia zwanego połączeniem, a dowód pracy wyszedł zarazem z użycia. W ten sposób przygotowano łańcuch na przyszłe uaktualnienia skalujące, takie jak sharding danych, przez połączenie konsensusu dowodu stawki z siecią główną, przy jednoczesnym obniżeniu zużycia energii o ponad 99,9%."
+    }
+  ],
   "kuYpoI": [
     {
       "type": 0,
@@ -5437,6 +4843,12 @@
     {
       "type": 0,
       "value": "Zakończono"
+    }
+  ],
+  "kzGlnG": [
+    {
+      "type": 0,
+      "value": "Nagrody i kary są przyznawane mniej więcej co sześć i pół minuty — w okresie znanym jako epoka."
     }
   ],
   "l/uCcX": [
@@ -5555,6 +4967,12 @@
       "value": "TICKER_NAME"
     }
   ],
+  "lV3Ttw": [
+    {
+      "type": 0,
+      "value": "Samouczek konfiguracji węzła"
+    }
+  ],
   "lVARlA": [
     {
       "type": 0,
@@ -5623,20 +5041,6 @@
       "value": "Jest to transakcja nieodwracalna."
     }
   ],
-  "lmr40S": [
-    {
-      "type": 0,
-      "value": "Komunikacja ta jest zabezpieczona za pomocą klucza tajnego "
-    },
-    {
-      "type": 1,
-      "value": "jwt"
-    },
-    {
-      "type": 0,
-      "value": ", czyli klucza tajnego, który jest współużytkowany tylko między dwoma klientami w celu wzajemnego uwierzytelniania. Ten wspólny klucz tajny JWT musi zostać udostępniony każdemu klientowi (zarówno EL, jak i CL), aby prawidłowo uwierzytelnić interfejs API mechanizmu, co pozwoli im na prawidłową komunikację między sobą."
-    }
-  ],
   "lo+Qqn": [
     {
       "type": 0,
@@ -5653,6 +5057,12 @@
     {
       "type": 0,
       "value": "Dysk twardy"
+    }
+  ],
+  "mH6bSl": [
+    {
+      "type": 0,
+      "value": "Od czasu udanego przejścia na dowód stawki, które odbyło się w drodze połączenia, Ethereum jest w pełni zabezpieczone przez walidatorów dowodu stawki. Uruchamiając walidatora, pomagasz zabezpieczyć sieć Ethereum."
     }
   ],
   "mUZnem": [
@@ -5677,16 +5087,16 @@
       "value": " to uczestniczący w konsensusie sieci Ethereum wirtualny obiekt w łańcuchu śledzącym, reprezentowany przez saldo, klucz publiczny i inne właściwości."
     }
   ],
-  "mcQpea": [
-    {
-      "type": 0,
-      "value": "Wszystko, czego potrzebujesz, aby rozpocząć pracę w sieci, włącznie z kranem"
-    }
-  ],
   "mhyltV": [
     {
       "type": 0,
       "value": "Ustawiłem moją flagę graffiti."
+    }
+  ],
+  "mloLQ5": [
+    {
+      "type": 0,
+      "value": "Wszyscy stakerzy muszą obsługiwać klienta wykonania wraz z klientem konsensusu."
     }
   ],
   "mpmFDY": [
@@ -5707,24 +5117,10 @@
       "value": "Musisz uruchomić klienta wykonania (dawniej „Eth1”), a także klienta konsensusu (dawniej „Eth2”), aby stać się walidatorem. Spójrz na listę kontrolną, aby przygotować się i przygotować sprzęt."
     }
   ],
-  "nHk8Et": [
+  "nRWZl3": [
     {
       "type": 0,
-      "value": "PoS jest bezpieczniejszym, zdecentralizowanym i przyjaznym dla środowiska mechanizmem konsensusu niż dowód pracy (PoW, proof-of-work), który zabezpiecza dziś Ethereum. Nagradza walidatorów za zbudowanie łańcucha, ale obcina ich depozyty, jeśli spróbują go zaatakować, zachęcając w ten sposób do właściwego zachowania. To ulepszenie jest już dostępne w postaci Łańcucha śledzącego."
-    }
-  ],
-  "nIb6XF": [
-    {
-      "type": 0,
-      "value": "A poważne kary – lub "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": " – są nakładane za złośliwe działania."
+      "value": "To zależy. Zachowanie złośliwe — na przykład poświadczanie nieprawidłowych lub sprzecznych bloków, doprowadzi do obcięcia Twojej stawki."
     }
   ],
   "nRdJct": [
@@ -5793,16 +5189,6 @@
       "value": "TESTNET_LAUNCHPAD_NAME"
     }
   ],
-  "nyx/4g": [
-    {
-      "type": 0,
-      "value": "Jak uruchomić węzeł w sieci "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "nz27+c": [
     {
       "type": 0,
@@ -5841,6 +5227,12 @@
     {
       "type": 0,
       "value": "Teraz, gdy klucze zostały zaimportowane, wszystko, co pozostało do zrobienia (zakładając, że Twój węzeł nawigacyjny już działa), to uruchomienie klienta walidatora."
+    }
+  ],
+  "oNP2EG": [
+    {
+      "type": 0,
+      "value": "Obecnie z Lighthouse korzysta ponad 33% sieci."
     }
   ],
   "oNohob": [
@@ -5889,20 +5281,6 @@
       "value": "Obowiązki"
     }
   ],
-  "olByWa": [
-    {
-      "type": 0,
-      "value": "W oczekiwaniu na przejście sieci głównej na metodę proof-of-stake stakerzy są zachęcani do udziału w "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": ". Jest to świetny sposób, aby dowiedzieć się więcej o połączeniu, przećwiczyć przechodzenie przez nie przed siecią główną i zyskać zaufanie do swojej konfiguracji."
-    }
-  ],
   "omJNJw": [
     {
       "type": 0,
@@ -5925,12 +5303,6 @@
     {
       "type": 0,
       "value": "Czy umowa ma duże saldo?"
-    }
-  ],
-  "ouMFoC": [
-    {
-      "type": 0,
-      "value": "Zrób to teraz"
     }
   ],
   "ouW9ov": [
@@ -5985,6 +5357,12 @@
       "value": "!"
     }
   ],
+  "pGnk/z": [
+    {
+      "type": 0,
+      "value": "Tak, ale wiąże się to z drobnymi karami. Jeśli korzystasz z ETH w trybie offline przez kilka dni w normalnych warunkach, stracisz kwotę w przybliżeniu równą kwocie ETH, którą uzyskałoby się w tym okresie. Innymi słowy, gdyby móc zarabiać 0,01 ETH, zamiast tego mozna by otrzymać karę w wysokości 0,01 ETH."
+    }
+  ],
   "pHQwsN": [
     {
       "type": 0,
@@ -6031,30 +5409,16 @@
       "value": "Symulowałem, jak ręcznie zatrzymać i ponownie uruchomić mój węzeł śledzący (BN) i klienta walidatora (VC)."
     }
   ],
-  "pxfiWL": [
-    {
-      "type": 0,
-      "value": "Sieć "
-    },
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " jest młodszą publiczną siecią testową, która przeszła już na metodę proof-of-stake po udanym uaktualnieniu połączenia w marcu 2022 roku. Sieć Kiln jest otwarta dla każdego, kto chce wejść z nią w interakcję. Spróbuj wysłać trochę ETH, wejść w interakcję z niektórymi kontraktami lub wdrożyć swój własny."
-    }
-  ],
   "pyWt01": [
     {
       "type": 0,
       "value": "Podsumowanie wpłaty"
     }
   ],
-  "q2PJEK": [
+  "q/ZayM": [
     {
       "type": 0,
-      "value": "Korzystam z własnego klienta konsensusu."
+      "value": "Proponuje się włączenie funkcji wypłaty do nadchodzącego uaktualnienia Shanghai. Po dodaniu tej funkcjonalności będziesz mieć możliwość wypłaty salda za pomocą klucza wypłaty — z minimalnym opóźnieniem wynoszącym około jednego dnia."
     }
   ],
   "q2XW/k": [
@@ -6081,20 +5445,6 @@
     {
       "type": 0,
       "value": " na wycofanie moich środków."
-    }
-  ],
-  "qEsYC0": [
-    {
-      "type": 0,
-      "value": "Możesz również sprawdzić "
-    },
-    {
-      "type": 1,
-      "value": "allConfigs"
-    },
-    {
-      "type": 0,
-      "value": " w GitHub."
     }
   ],
   "qK4+NQ": [
@@ -6213,26 +5563,6 @@
       "value": "Zamknij"
     }
   ],
-  "rcdxTW": [
-    {
-      "type": 0,
-      "value": "Biorąc pod uwagę stałą całkowitą liczbę walidatorów, nagrody/kary przeważnie zależą od salda walidatora –poświadczenie z wyższym saldem skutkuje większymi nagrodami/karami, podczas gdy poświadczenie z niższym saldem skutkuje niższymi nagrodami/karami."
-    }
-  ],
-  "rgjQYI": [
-    {
-      "type": 0,
-      "value": "Gotowość do połączenia: oprócz klienta konsensusu po połączeniu węzłów operatorzy muszą uruchomić również "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": ", aby pozostać aktywni."
-    }
-  ],
   "rnDgcN": [
     {
       "type": 0,
@@ -6315,26 +5645,6 @@
       "value": "Procesory CPU i RAM"
     }
   ],
-  "saDFoR": [
-    {
-      "type": 0,
-      "value": "Bonus"
-    }
-  ],
-  "scfDDt": [
-    {
-      "type": 0,
-      "value": "Komunikacja między warstwą wykonania a warstwą konsensusu będzie odbywać się za pomocą "
-    },
-    {
-      "type": 1,
-      "value": "engineApi"
-    },
-    {
-      "type": 0,
-      "value": ". Jest to nowy zestaw metod JSON-RPC, które mogą być używane do komunikacji między dwoma warstwami klienckimi."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6371,6 +5681,12 @@
       "value": "Rozumiem i zgadzam się na warunki korzystania z usługi oraz na wszystko, co zostało określone w poprzednich sekcjach."
     }
   ],
+  "szh4Xy": [
+    {
+      "type": 0,
+      "value": "Ustawiono wspólny klucz tajny JWT i udostępniono go zarówno mojemu klientowi wykonania, jak i klientowi konsensusu (węzłowi śledzącemu)"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -6381,6 +5697,12 @@
     {
       "type": 0,
       "value": "Dowiedz się więcej o wspaniałej zmianie nazwy"
+    }
+  ],
+  "taENNR": [
+    {
+      "type": 0,
+      "value": "Nie ma obecnie możliwości ponownej aktywacji walidatora i nie będziesz w stanie przelewać ani wypłacać swoich środków do czasu włączenia wypłat. Proponuje się włączenie ich do kolejnego uaktualnienia sieci, znanego jako uaktualnienie Shanghai. To znaczy, że co najmniej do tego czasu Twoje środki pozostaną niedostępne."
     }
   ],
   "tbYkT4": [
@@ -6413,12 +5735,6 @@
     {
       "type": 0,
       "value": "Saldo po doładowaniu"
-    }
-  ],
-  "tp1IPS": [
-    {
-      "type": 0,
-      "value": "Skonfiguruj odbiorcę opłaty"
     }
   ],
   "tsfX5f": [
@@ -6477,6 +5793,12 @@
       "value": "Po zdeponowaniu"
     }
   ],
+  "u4em9Z": [
+    {
+      "type": 0,
+      "value": "Od połączenia walidatorzy będą również odpowiedzialni za przetwarzanie transakcji, a tym samym proponując bloki, będą mieć prawo do opłat za niespalony gaz związany z uwzględnionymi transakcjami. Opłaty te są rozliczane w warstwie wykonania, a nie konsensusu, dlatego wymagają podania klientowi tradycyjnego adresu Ethereum."
+    }
+  ],
   "u564LK": [
     {
       "type": 0,
@@ -6487,12 +5809,6 @@
     {
       "type": 0,
       "value": "Czas działania"
-    }
-  ],
-  "uGKswV": [
-    {
-      "type": 0,
-      "value": "Po połączeniu węzeł Ethereum będzie składać się zarówno z klienta wykonania, jak i klienta konsensusu."
     }
   ],
   "uJzGSb": [
@@ -6515,12 +5831,6 @@
     {
       "type": 0,
       "value": "Lista kontrolna walidatora"
-    }
-  ],
-  "uUy3NQ": [
-    {
-      "type": 0,
-      "value": "Rozumiem, że zarobię niespalone opłaty transakcyjne (napiwki / opłaty za pierwszeństwo), gdy zaproponuję blok, i jest to rozliczane na poziomie wykonawczym, a nie na moim saldzie walidatora."
     }
   ],
   "ubKWX8": [
@@ -6563,18 +5873,6 @@
       "value": "Zostań walidatorem z Nimbus"
     }
   ],
-  "ulgIVs": [
-    {
-      "type": 0,
-      "value": "Po połączeniu nie będzie już dwóch oddzielnych sieci Ethereum; będzie tylko Ethereum."
-    }
-  ],
-  "uoKhQB": [
-    {
-      "type": 0,
-      "value": "Interfejs API uwierzytelniania"
-    }
-  ],
   "up+5YH": [
     {
       "type": 0,
@@ -6587,6 +5885,20 @@
     {
       "type": 0,
       "value": "?"
+    }
+  ],
+  "v6ytKW": [
+    {
+      "type": 0,
+      "value": "A poważne kary — czyli "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": " — są nakładane za złośliwe działania."
     }
   ],
   "vBJ79e": [
@@ -6667,28 +5979,10 @@
       "value": ". Dołącz do społeczności EthStaker, aby uzyskać wsparcie i możliwość rozmowy z innymi walidatorami."
     }
   ],
-  "vej0DE": [
-    {
-      "type": 0,
-      "value": "Dziś zabezpieczysz łańcuch śledzący, pierwsze główne uaktualnienie skalowania. Jest to osobny łańcuch wykorzystujący mechanizm konsensusu proof-of-stake. Wkrótce pomożesz zabezpieczyć wszystkie Ethereum, gdy sieć główna (Ethereum, której używamy dzisiaj) połączy się z łańcuchem śledzącym."
-    }
-  ],
-  "vg1dVR": [
-    {
-      "type": 0,
-      "value": "Za pomocą klucza podpisującego możesz spróbować szybko opuścić walidatora, a następnie przelać środki – za pomocą klucza wypłaty – przed złodziejem."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Uruchom następujące polecenie, aby uruchomić aplikację"
-    }
-  ],
-  "wHvmSN": [
-    {
-      "type": 0,
-      "value": "oba"
     }
   ],
   "wJ1PbL": [
@@ -6705,12 +5999,6 @@
     {
       "type": 0,
       "value": "Wstępna konfiguracja"
-    }
-  ],
-  "wPR6Js": [
-    {
-      "type": 0,
-      "value": "Przed wprowadzeniem zmian należy pamiętać o kilku sprawach dotyczących oddzielnych usług stakerów i walidatorów oraz o kilku zadaniach, których wykonanie może okazać się konieczne."
     }
   ],
   "wawegX": [
@@ -6731,12 +6019,6 @@
       "value": "Więcej o dowodzie stawki (proof of stake)"
     }
   ],
-  "wea8Ie": [
-    {
-      "type": 0,
-      "value": "Warstwy wykonania i konsensusu ściśle współpracują ze sobą i wymagają uwierzytelniania w celu zachowania bezpieczeństwa."
-    }
-  ],
   "wm04oC": [
     {
       "type": 0,
@@ -6755,12 +6037,6 @@
       "value": "Czy występują błędy pisowni?"
     }
   ],
-  "wuhO1L": [
-    {
-      "type": 0,
-      "value": "Używam własnego klienta wykonania."
-    }
-  ],
   "x+fF+M": [
     {
       "type": 0,
@@ -6777,6 +6053,28 @@
     {
       "type": 0,
       "value": "Zdecydowanie zalecamy wykonanie tych kroków w bieżącej sieci testowej przed siecią główną."
+    }
+  ],
+  "x9xppN": [
+    {
+      "type": 0,
+      "value": "Po przejściu na dowód stawki w drodze połączenia walidatorzy są teraz odpowiedzialni za przetwarzanie transakcji i potwierdzanie ich ważności. Od czasu połączenia dane te "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " są dostępne z popularnych źródeł zewnętrznych. Korzystanie z dostawcy zewnętrznego sprawi, że Twój walidator przejdzie w tryb offline. Gdy zostanie wprowadzony sharding danych, walidatorzy będą również narażeni na ryzyko cięcia w ramach "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "xDyl3T": [
@@ -6855,6 +6153,12 @@
       "value": ", w przeciwnym razie wpłata będzie nieważna."
     }
   ],
+  "xZZMZ5": [
+    {
+      "type": 0,
+      "value": "sieć testowa"
+    }
+  ],
   "xbet2w": [
     {
       "type": 0,
@@ -6891,10 +6195,10 @@
       "value": "clientName"
     }
   ],
-  "xyMh/n": [
+  "xzmWbJ": [
     {
       "type": 0,
-      "value": "Lista zasobów megapołączenia"
+      "value": "Twój walidator ma swoje własne saldo, z początkowym saldem określonym w kontrakcie depozytowym. Twoje nagrody i kary są z czasem odzwierciedlane w saldzie Twojego walidatora."
     }
   ],
   "y44jV2": [
@@ -6933,12 +6237,6 @@
       "value": "Przechowuję klucze w bezpiecznym miejscu i zapisałem mnemoniczną frazę."
     }
   ],
-  "yaf+Vw": [
-    {
-      "type": 0,
-      "value": "Dwukierunkowa komunikacja między klientem EL a klientem CL wymaga uwierzytelnienia za pomocą klucza tajnego JWT i jest niezbędna do działania Twojego węzła."
-    }
-  ],
   "ydh1KU": [
     {
       "type": 0,
@@ -6975,18 +6273,10 @@
       "value": "Upewnij się, że Twój węzeł ma więcej niż 20 użytkowników."
     }
   ],
-  "z/ToMo": [
+  "yw4vsX": [
     {
       "type": 0,
-      "value": "Po zakończeniu przejścia na proof-of-stake poprzez połączenie walidatorzy będą odpowiedzialni za przetwarzanie transakcji i potwierdzanie ich ważności. Dane te nie będą dostępne z popularnych źródeł zewnętrznych po połączeniu i spowodują, że Twój walidator przejdzie w tryb offline. Gdy zostanie wprowadzony sharding danych, walidatorzy będą również narażeni na ryzyko cięcia w ramach "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Z drugiej strony możesz zostać ukarany za bycie offline i złośliwe zachowanie — na przykład zaświadczanie o nieprawidłowych lub sprzecznych blokach."
     }
   ],
   "z63I56": [
@@ -7053,10 +6343,18 @@
       "value": "Pomożemy Ci utworzyć klucz podpisu dla każdego walidatora, którego chcesz uruchomić. Nie ma żadnych wypłat do czasu uaktualnienia Shanghai, które ma nastąpić po połączeniu, więc nie będziesz teraz tworzyć kluczy wypłat. Gdy będzie można wypłacić środki, klucze wypłat możesz wyprowadzić z mnemonika."
     }
   ],
-  "zqOrZZ": [
+  "zpmjjy": [
     {
       "type": 0,
-      "value": "Spójrz na listę kontrolną gotowości do połączenia"
+      "value": "Komunikacja między warstwą wykonania a warstwą konsensusu odbywa się za pomocą "
+    },
+    {
+      "type": 1,
+      "value": "engineApi"
+    },
+    {
+      "type": 0,
+      "value": ". Jest to zestaw metod JSON-RPC, które mogą być używane do komunikacji między dwoma warstwami klienckimi."
     }
   ]
 }

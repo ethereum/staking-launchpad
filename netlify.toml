@@ -8,13 +8,3 @@
   NODE_VERSION = "14.19.2"
 [context.dev.environment]
   NODE_VERSION = "14.19.2"
-
-# Redirects
-[[redirects]]
-  from = "/merge-readiness"
-  to = "/checklist"
-  force = true
-[[redirects]]
-  from = "/*/merge-readiness"
-  to = "/:splat/checklist"
-  force = true

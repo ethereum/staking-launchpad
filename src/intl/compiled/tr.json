@@ -1,4 +1,26 @@
 {
+  "+2VHUU": [
+    {
+      "type": 0,
+      "value": "Ethereum şunlardan oluşur: "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (önceden 'Eth1' olan işlemleri ve yürütmeyi uygulama) ve "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (önceden 'Eth2' veya 'Ethereum 2.0' olan hisse ispatı mutabakatı görevlerini uygulama)."
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -41,6 +63,12 @@
       "value": "Lehçe"
     }
   ],
+  "+wJuhm": [
+    {
+      "type": 0,
+      "value": "Discord:"
+    }
+  ],
   "/+atl4": [
     {
       "type": 0,
@@ -57,18 +85,6 @@
     {
       "type": 0,
       "value": "Endonezce"
-    }
-  ],
-  "/E/Zm8": [
-    {
-      "type": 0,
-      "value": "Java Web'i yapılandırın"
-    }
-  ],
-  "/FpD8O": [
-    {
-      "type": 0,
-      "value": "Bunu TTD istemcisi yayınlandıktan sonra yapın"
     }
   ],
   "/QPc9s": [
@@ -287,6 +303,12 @@
       "value": ")"
     }
   ],
+  "0kxaf/": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcıma, ücret ödüllerimin yatırılmasını istediğim bir Ethereum adresi verdim."
+    }
+  ],
   "0lHkrT": [
     {
       "type": 0,
@@ -387,12 +409,6 @@
       "value": "Parola dosyalarının sonunda yeni satırlar olup olmadığını kontrol edin."
     }
   ],
-  "1Z0sad": [
-    {
-      "type": 0,
-      "value": "EF Blog'u"
-    }
-  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -411,22 +427,10 @@
       "value": "Ethereum stake etme ekonomisi hakkında daha fazla bilgi"
     }
   ],
-  "1p+pb5": [
-    {
-      "type": 0,
-      "value": "ücret alıcısı"
-    }
-  ],
   "1pUw7Y": [
     {
       "type": 0,
       "value": "Nethermind çalıştırma belgeleri"
-    }
-  ],
-  "1wSJQU": [
-    {
-      "type": 0,
-      "value": "Zamanlama:"
     }
   ],
   "22EpKq": [
@@ -505,6 +509,12 @@
       "value": "imza anahtarınızı her zaman para çekme anahtarınızdan yeniden hesaplayabilirsiniz"
     }
   ],
+  "2c8F5x": [
+    {
+      "type": 0,
+      "value": "Ücret alıcısı belgeleri:"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
@@ -515,12 +525,6 @@
     {
       "type": 0,
       "value": "Ethereum'un ağ sağlığı için istemci çeşitliliği oldukça önemlidir: %33'ten büyük bir paya sahip bir istemcideki hata, Ethereum'u çevrimdışı hâle getirebilir. Bir istemci süper çoğunluğa sahipse (>%66) bir hata, zincirin yanlış parçalanmasına neden olarak olası bir iptal edilmeye yol açabilir."
-    }
-  ],
-  "2s0gAx": [
-    {
-      "type": 0,
-      "value": "Ücret Alıcı Adresini Yapılandırma"
     }
   ],
   "2t/3ab": [
@@ -691,12 +695,6 @@
       "value": "Bölüm 2 - Kurulum sırasında"
     }
   ],
-  "3wfaSi": [
-    {
-      "type": 0,
-      "value": "Birleşim, Yürütüm Katmanı - Konsensus Katmanı iletişimi"
-    }
-  ],
   "3zCA2i": [
     {
       "type": 1,
@@ -761,20 +759,6 @@
       "value": "Neden kayan ölçek? Burada can sıkıcı ayrıntılara girmeyeceğiz zira temel fikir, ağın düzgün çalışması için minimum sayıda doğrulayıcı (ve dolayısıyla minimum miktarda ETH) olması gerektiğidir. Bu nedenle, daha fazla doğrulayıcıyı katılıma teşvik etmek için, faiz oranının bu minimum sayıya ulaşılana kadar yüksek kalması önemlidir."
     }
   ],
-  "4VQUkR": [
-    {
-      "type": 0,
-      "value": "Daha fazla bilgi için bkz. "
-    },
-    {
-      "type": 1,
-      "value": "shanghaiPlanning"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "4hnEBA": [
     {
       "type": 0,
@@ -797,28 +781,6 @@
     {
       "type": 0,
       "value": "Neden bir yerine iki anahtar?"
-    }
-  ],
-  "59y+Ik": [
-    {
-      "type": 0,
-      "value": "Nasıl daha fazla dahil olabileceğinize dair tartışmalarla dolu bir "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " kanalı bulacağınız "
-    },
-    {
-      "type": 1,
-      "value": "discord"
-    },
-    {
-      "type": 0,
-      "value": "'a gitmeyi unutmayın ve hazır olduğunuzdan emin olun."
     }
   ],
   "5A6amM": [
@@ -911,18 +873,6 @@
       "value": "ortalama"
     }
   ],
-  "6CN01C": [
-    {
-      "type": 0,
-      "value": "Şanghay yükseltmesinden sonra, yaklaşık bir günlük bir gecikmenin ardından, para çekme anahtarınızla 16 ETH'niz geri çekilebilir."
-    }
-  ],
-  "6HBTTN": [
-    {
-      "type": 0,
-      "value": "İşaret Zincirinde hisse ispatı (PoS)"
-    }
-  ],
   "6S95Bo": [
     {
       "type": 0,
@@ -941,40 +891,10 @@
       "value": "Yükseltme yoluyla bu doğrulayıcının etkin bakiyesini artırabilirsiniz"
     }
   ],
-  "6VswA4": [
-    {
-      "type": 0,
-      "value": "Birleşim Sonrası Nethermind Çalıştırma "
-    },
-    {
-      "type": 1,
-      "value": "jwtSecretFile"
-    }
-  ],
-  "6iVtAr": [
-    {
-      "type": 0,
-      "value": "#TestingTheMerge"
-    }
-  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "Bir ağa erken aşamalarında katılıyorsunuz. Herhangi bir yeni yazılım parçasında olduğu gibi, yazılım hatası ihtimali vardır. Pek olası olmasa da, olası hatalar kesme ile sonuçlanabilir."
-    }
-  ],
-  "6uPbCH": [
-    {
-      "type": 0,
-      "value": "Bu sayfanın "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " versiyonu"
     }
   ],
   "7+Domh": [
@@ -1005,18 +925,6 @@
       "value": " çevrimdışı modda desteklenmiyor."
     }
   ],
-  "7BhfPl": [
-    {
-      "type": 0,
-      "value": "Lighthouse Kitabı"
-    }
-  ],
-  "7C4ikM": [
-    {
-      "type": 0,
-      "value": "Panda emojisini birleştir"
-    }
-  ],
   "7DFXQj": [
     {
       "type": 1,
@@ -1025,6 +933,24 @@
     {
       "type": 0,
       "value": " launchpad'e geçiş yapın"
+    }
+  ],
+  "7FcGxU": [
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": " ile birlikte bir "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " çalıştırmanız gerekir."
     }
   ],
   "7Iz3JI": [
@@ -1121,20 +1047,6 @@
       "value": "İnternet sitesinde belirtilen iletişim adresi eşleşiyor mu?"
     }
   ],
-  "8L6ufI": [
-    {
-      "type": 0,
-      "value": "Bir "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " düğümünün ve doğrulayıcısının nasıl döndürüleceğine ilişkin adım adım kılavuz"
-    }
-  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -1165,6 +1077,12 @@
     {
       "type": 0,
       "value": "slashing (iptaller)"
+    }
+  ],
+  "8mEWVB": [
+    {
+      "type": 0,
+      "value": "Sabit bir toplam doğrulayıcı sayısı olduunda, ödüller/cezalar ağırlıklı olarak doğrulayıcının bakiyesine göre ölçeklenir; daha yüksek bir bakiye ile onay vermek daha büyük ödülleri/cezaları, daha düşük bir bakiye ile onaylamak ise daha düşük ödülleri/cezaları beraberinde getirir."
     }
   ],
   "8wd0q5": [
@@ -1283,24 +1201,6 @@
       "value": "Özet"
     }
   ],
-  "9vLu6E": [
-    {
-      "type": 1,
-      "value": "note"
-    },
-    {
-      "type": 0,
-      "value": " Bu adım, Ana Ağ TTD'si (terminal toplam zorluk) duyurulana ve istemciler bir güncelleme yayınlayana kadar "
-    },
-    {
-      "type": 1,
-      "value": "testnetsOnly"
-    },
-    {
-      "type": 0,
-      "value": " üzerinde gerçekleştirilmelidir. Bu arada hazırlık için bilgi sunulur."
-    }
-  ],
   "9vwGlT": [
     {
       "type": 0,
@@ -1389,30 +1289,6 @@
       "value": " gönderilmesini gerektirmektedir."
     }
   ],
-  "ALEY4e": [
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " rehberi"
-    }
-  ],
-  "ARyG2Z": [
-    {
-      "type": 0,
-      "value": "Para çekme ne zaman?"
-    }
-  ],
   "ATwOPg": [
     {
       "type": 0,
@@ -1437,20 +1313,6 @@
       "value": "doğrulayıcı etkin bakiyesini anlama"
     }
   ],
-  "AbR1dr": [
-    {
-      "type": 0,
-      "value": "Bu yükseltme hızla yaklaşıyor ve stake edenlerin önceden bilmesi gereken birkaç değişiklik getiriyor. Hazır olduğunuzdan emin olmak için "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": "'ne göz atın."
-    }
-  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1465,12 +1327,6 @@
     {
       "type": 0,
       "value": "Parçalama, tam düğümlerin zincirin tüm geçmişini taşıması gerekliliğini değiştirecek ve bunun yerine veri kullanılabilirliğini sağlarken bu yükü ağ arasında dağıtacaktır. Bu, tüketici donanımında tam bir düğüm çalıştırma yeteneğini koruyup ağı merkeziyetsiz hâlde tutarken katman 1 Ethereum'un kapasitesini önemli ölçüde genişletecektir."
-    }
-  ],
-  "AfH0eO": [
-    {
-      "type": 0,
-      "value": "Tüm staker'lar, Birleştirme'den başlayarak bir yürütüm katmanı istemcisiyle bir konsensus katmanı istemcisi çalıştırmalıdır. Hazır olduğunuzdan emin olun."
     }
   ],
   "Affixg": [
@@ -1501,18 +1357,6 @@
     {
       "type": 0,
       "value": "Doğrulayıcıyı yükseltin"
-    }
-  ],
-  "AyaNND": [
-    {
-      "type": 0,
-      "value": "TestingTheMerge"
-    }
-  ],
-  "AzjyIx": [
-    {
-      "type": 0,
-      "value": "İşaret Zincirinin doğuşundan bu yana, kendi konsensus istemcisini çalıştıran birçok doğrulayıcı, yürütüm katmanı bağlantıları için üçüncü taraf hizmetlerini kullanmayı seçti. Dinlenen tek şey stake depozitosu sözleşmesi olduğundan bu kabul edilebilir."
     }
   ],
   "B2EKj+": [
@@ -1591,18 +1435,6 @@
     {
       "type": 0,
       "value": "EthStaker topluluğu"
-    }
-  ],
-  "BXoiVG": [
-    {
-      "type": 0,
-      "value": "Ek anımsatıcılar"
-    }
-  ],
-  "BcUgLk": [
-    {
-      "type": 0,
-      "value": "Tavsiye Edilen Ücret Alıcısı"
     }
   ],
   "Bf2QKg": [
@@ -1771,10 +1603,28 @@
       "value": "İletişim adresini doğrulayın"
     }
   ],
+  "DhKDS3": [
+    {
+      "type": 0,
+      "value": "Hisse ispatı ve İşaret Zinciri"
+    }
+  ],
+  "Di1/yX": [
+    {
+      "type": 0,
+      "value": "Mutabakat JWT belgeleri:"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
       "value": "Hem EL hem de CL istemcim için gerekli bağlantı noktalarını yönlendiricimden doğru makineye/makinelere yönlendirdim (yalnızca kurulumlarınız için geçerli olan bağlantı noktalarını açın)."
+    }
+  ],
+  "DmKneH": [
+    {
+      "type": 0,
+      "value": "Müşteriler, doğrulayıcınızla ilgili önemli gerçek zamanlı ölçümleri görselleştirmenize yardımcı olmak için Prometheus ve Grafana'yı destekler."
     }
   ],
   "DoCZT1": [
@@ -1887,6 +1737,12 @@
       "value": "Bu bir test ağıdır ⚠️"
     }
   ],
+  "EXt8Xd": [
+    {
+      "type": 0,
+      "value": "Paydaşlar, işlem ücreti ödüllerini almak için fikir birliği istemcisine bir ücret alıcı adresi sağlamalıdır. Bu alışkın olduğunuz normal bir Ethereum adresidir."
+    }
+  ],
   "EcCME0": [
     {
       "type": 0,
@@ -1909,12 +1765,6 @@
     {
       "type": 0,
       "value": "Not: İşaret Zincirinin yatırdığınız tutarı doğrulaması birkaç dakika sürebilir"
-    }
-  ],
-  "FM9lHC": [
-    {
-      "type": 0,
-      "value": "tüm birleştirme test ağı yapılandırmaları"
     }
   ],
   "FSRfSJ": [
@@ -2007,12 +1857,6 @@
       "value": "Hizmet koşulları"
     }
   ],
-  "FqztZR": [
-    {
-      "type": 0,
-      "value": "Not:"
-    }
-  ],
   "FzkbsB": [
     {
       "type": 0,
@@ -2047,12 +1891,6 @@
     {
       "type": 0,
       "value": "Kimlik avına maruz kalmadığınızdan emin olun"
-    }
-  ],
-  "GKDM0r": [
-    {
-      "type": 0,
-      "value": "Henüz yapmadıysanız Birleşim sırasında kapalı kalma süresini önlemek için düğümünüzün hem bir yürütüm katmanı istemcisi hem de bir konsensus katmanı istemcisi çalıştırdığından emin olun."
     }
   ],
   "GN2Cu5": [
@@ -2119,36 +1957,6 @@
     {
       "type": 0,
       "value": "Gerekli toplam tutar"
-    }
-  ],
-  "H/LXxz": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": ", 8 Haziran 2022'de gerçekleşen Birleşim işleminden geçen uzun süredir devam eden herkese açık test ağıydı. Tarihsel olarak bir iş ispatı test ağı olan "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", geçmiş yürütüm katmanını, yeni bir işaret zinciriyle birleştirerek artık hisse ispatına geçti."
-    }
-  ],
-  "H0lQfu": [
-    {
-      "type": 0,
-      "value": "Birleştirme Hazırlığı Kontrol Listesi"
-    }
-  ],
-  "H4W8nj": [
-    {
-      "type": 0,
-      "value": "Makine API'sini Doğrula"
     }
   ],
   "H5+NAX": [
@@ -2235,12 +2043,6 @@
       "value": "Ağ"
     }
   ],
-  "I5ZPR9": [
-    {
-      "type": 0,
-      "value": "Birleşim ne zaman?"
-    }
-  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2275,20 +2077,6 @@
     {
       "type": 0,
       "value": "Virtualenv kurun"
-    }
-  ],
-  "If09Ko": [
-    {
-      "type": 0,
-      "value": "Bu nedenle, staker'lar bu ödülleri alabilmek için konsensus istemcilerine bir "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": " adresi sağlamalıdır. Bu alışkın olduğunuz, normal bir Ethereum adresidir."
     }
   ],
   "IhDJWs": [
@@ -2367,12 +2155,6 @@
       "value": "Başka bir deyişle dürüstlüğünüzü korumak için işlemlerinizin mali sonuçları olması gerekir."
     }
   ],
-  "JApiO1": [
-    {
-      "type": 0,
-      "value": "Bu yeni bir değişikliktir ve Birleştirme sırasında bir gereklilik hâline gelir, bu nedenle yükseltmeden önce her ikisini de çalıştırdığınızdan emin olun."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -2391,12 +2173,6 @@
     {
       "type": 0,
       "value": "4. Kimlik avını önleyin"
-    }
-  ],
-  "Ja5vXW": [
-    {
-      "type": 0,
-      "value": "Ek okumalar"
     }
   ],
   "JbVlOE": [
@@ -2433,6 +2209,12 @@
     {
       "type": 0,
       "value": "Mevcut işletim sisteminiz nedir?"
+    }
+  ],
+  "K37W0m": [
+    {
+      "type": 0,
+      "value": "İmza anahtarınızla doğrulayıcıdan hızlı bir şekilde çıkmayı deneyebilir ve ardından para çekme anahtarını kullanarak hırsızdan önce parayı transfer edebilirsiniz."
     }
   ],
   "K6+jQ3": [
@@ -2511,20 +2293,10 @@
       "value": "Nethermind, performans, çok yönlülük ve özelleştirilebilirlik için tasarlanmış .NET çekirdeği üzerine kurulu sağlam bir istemcidir."
     }
   ],
-  "KcdQCZ": [
+  "KhJBVZ": [
     {
       "type": 0,
-      "value": "CLI Syntax "
-    },
-    {
-      "type": 1,
-      "value": "engineJwtSecret"
-    }
-  ],
-  "KjcAm2": [
-    {
-      "type": 0,
-      "value": "Ödüller ve cezalar yaklaşık altı buçuk dakikada bir verilir, bu süre zarfı epoch zamanı olarak bilinir."
+      "value": "Hisseleme Kontrol Listesini Görüntüle"
     }
   ],
   "KqGKRA": [
@@ -2563,12 +2335,6 @@
     {
       "type": 0,
       "value": " olmasını sağladım."
-    }
-  ],
-  "L1PK14": [
-    {
-      "type": 0,
-      "value": "Ethereum.org - Birleşim"
     }
   ],
   "L7fPF+": [
@@ -2675,6 +2441,12 @@
       "value": "Bu genel doğrulayıcı anahtarı için ilk para yatırma işleminiz zaten yapıldı. Lütfen bekleyin ve İşaret zinciri veri sağlayıcısında yatırdığınız paranın durumunu kontrol edin."
     }
   ],
+  "Lv57+8": [
+    {
+      "type": 0,
+      "value": "Ethereum, her zaman geçerli olmasa da, hisse ispatı ile güvence altına alınmıştır. İşaret Zinciri, Ana Ağ'a paralel olarak Aralık 2020'de başlatılan ve Ethereum'da bir PoS fikir birliği katmanı oluşturmanın ilk adımıydı. Bu, katılımcıların ETH'lerini hisselemeye başlamalarına ve Birleşim üzerinden iş ispatından hisse ispatına resmi geçiş için ağı hazırlamalarına olanak verdi."
+    }
+  ],
   "LwEHRm": [
     {
       "type": 0,
@@ -2693,20 +2465,6 @@
       "value": "Yeni cüzdanı bağla"
     }
   ],
-  "MKMIUm": [
-    {
-      "type": 0,
-      "value": "Herkese açık test ağı ilerlemesi devam ediyor. Her şey güvenli ve hazır olduğunda, çekirdek geliştirici ekipleri bunu bildirecektir, bu nedenle en son bilgiler için "
-    },
-    {
-      "type": 1,
-      "value": "blogLink"
-    },
-    {
-      "type": 0,
-      "value": " veya diğer istemci ekibi iletişim kanallarını takip etmeye devam edin."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2723,12 +2481,6 @@
     {
       "type": 0,
       "value": "Para çekme anahtarım çalınırsa ne olur?"
-    }
-  ],
-  "MXVVcY": [
-    {
-      "type": 0,
-      "value": "Yürütüm Düğümü Bağlantılarının Doğrulanması"
     }
   ],
   "MZEcKL": [
@@ -2773,22 +2525,10 @@
       "value": "Ethereum yükseltmeleri sadece doğrulayıcılar riskleri ve sorumlulukları anladığında başarılı olur."
     }
   ],
-  "Mm7FSl": [
-    {
-      "type": 0,
-      "value": "\"Eth1\" ve \"Eth2\" terimleri, Birleştirme hazırlıkları için kullanımdan kaldırılmaktadır."
-    }
-  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Yükleme bilgileri"
-    }
-  ],
-  "MoIew2": [
-    {
-      "type": 0,
-      "value": "Birleşim test ağında düğümün ve doğrulayıcının nasıl döndürüleceğine ilişkin adım adım kılavuz"
     }
   ],
   "N0rwnt": [
@@ -2931,12 +2671,6 @@
       "value": "."
     }
   ],
-  "O/dhpS": [
-    {
-      "type": 0,
-      "value": "EthStaker Discord'u"
-    }
-  ],
   "O3qkOm": [
     {
       "type": 0,
@@ -2985,24 +2719,6 @@
     {
       "type": 0,
       "value": "Birleşme hakkında daha fazlası"
-    }
-  ],
-  "Oop93W": [
-    {
-      "type": 1,
-      "value": "site"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " duyurusu"
     }
   ],
   "OsO8ik": [
@@ -3057,6 +2773,12 @@
       "value": " üzerinden destek bulabilirsiniz."
     }
   ],
+  "P8FrVE": [
+    {
+      "type": 0,
+      "value": "JWT Kimlik Doğrulama"
+    }
+  ],
   "P91KmA": [
     {
       "type": 0,
@@ -3071,12 +2793,6 @@
     {
       "type": 0,
       "value": "Ağınız değişti"
-    }
-  ],
-  "Pd0hC/": [
-    {
-      "type": 0,
-      "value": "Ethereum Vakfı Blogu"
     }
   ],
   "PfoT0C": [
@@ -3127,12 +2843,6 @@
       "value": "pano"
     }
   ],
-  "Q2CQuF": [
-    {
-      "type": 0,
-      "value": "Artık işlemlerin doğrulayıcılar tarafından işlenmesi gerektiğine göre bu işlemleri içeren bloklar öneren doğrulayıcılar, işlem ücreti ipuçlarını almaya hak kazanır. Bunlar aynı zamanda öncelikli ücretler olarak da bilinir ve gaz ücretlerinin yanmamış kısmıdır."
-    }
-  ],
   "Q8P0rZ": [
     {
       "type": 0,
@@ -3171,20 +2881,6 @@
       "value": " yüklemeniz gerekir."
     }
   ],
-  "Q8fnvz": [
-    {
-      "type": 0,
-      "value": "yalnızca test ağları (ör. "
-    },
-    {
-      "type": 1,
-      "value": "kiln"
-    },
-    {
-      "type": 0,
-      "value": ")"
-    }
-  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -3215,14 +2911,14 @@
       "value": "Anahtar yönetimi"
     }
   ],
-  "QapNAM": [
+  "QeE86m": [
     {
       "type": 1,
-      "value": "network"
+      "value": "networkName"
     },
     {
       "type": 0,
-      "value": " ana sayfası"
+      "value": " üzerinde bir düğümün nasıl çalıştırılacağını öğrenmek için bu belgeye bakın"
     }
   ],
   "QgOvR0": [
@@ -3273,44 +2969,10 @@
       "value": " yatırım tutarınız olabilir. Beaconcha.in 2048 bloğu onayladığında bu tutar kullanılabilir olacaktır."
     }
   ],
-  "QtNVQP": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcınızı yeniden etkinleştirmenizin bir yolu yoktur ve Birleşimi takip etmesi planlanan Şanghay yükseltmesine kadar paranızı aktaramaz veya çekemezsiniz (bu, o zamana kadar paranızın erişilemez durumda kalacağı anlamına gelir)."
-    }
-  ],
-  "R58ea3": [
-    {
-      "type": 0,
-      "value": "Bir "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " ve "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (eski adıyla \"Eth2\") çalıştırmanız gerekir."
-    }
-  ],
   "R8eePn": [
     {
       "type": 0,
       "value": "Slashing gerçekleşirse, protokole daha fazla katılmanız engellenir ve zorla çıkarılırsınız."
-    }
-  ],
-  "R9umf+": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcılara ücret ödülleri geliyor, kaçırmayın!"
     }
   ],
   "RCGrka": [
@@ -3343,38 +3005,10 @@
       "value": "tebrikler"
     }
   ],
-  "RaBZna": [
-    {
-      "type": 0,
-      "value": "Normal koşullar altında birkaç gün çevrimdışı kalırsanız, o dönemde kazanmış olacağınız ETH miktarına kabaca eşdeğer bir miktar ETH kaybedersiniz. Başka bir deyişle, ≈0.01 ETH kazanmaya devam ederseniz, bunun yerine ≈0.01 ETH cezası alırsınız."
-    }
-  ],
   "Rg5ySE": [
     {
       "type": 0,
       "value": "Kaç doğrulayıcı çalıştırmak istersiniz?"
-    }
-  ],
-  "Riq4Yh": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": ", herkesin etkileşime girmesine açıktır. Bazı işlemler göndermeyi, bir doğrulayıcı çalıştırmayı deneyin ya da kesintiye uğrayıp uğramayacağınızı görün!"
-    }
-  ],
-  "RkSC5Q": [
-    {
-      "type": 0,
-      "value": "Hatırlatma, Birleşim yükseltmesi, stake edilen ETH'nin geri çekilmesini veya aktarılmasını uygulamaz. Bu özellik, Birleşimi takip etmesi planlanan Şanghay yükseltmesine dâhil edilecektir."
-    }
-  ],
-  "RqTB/U": [
-    {
-      "type": 0,
-      "value": "Ethereum Yol Haritası Hakkında SSS"
     }
   ],
   "Rr2lI/": [
@@ -3407,12 +3041,6 @@
       "value": "Teku yapılandırma dosyası ortam değişkeni"
     }
   ],
-  "SEt7ZX": [
-    {
-      "type": 0,
-      "value": "Devam eden Ethereum Birleşim bilgi dizisi"
-    }
-  ],
   "SGzXoY": [
     {
       "type": 0,
@@ -3425,36 +3053,10 @@
       "value": "Az önce indirdiğiniz dosyayı yürütün."
     }
   ],
-  "SR0qHv": [
-    {
-      "type": 0,
-      "value": "Aşırı karmaşık kurulumlardan kaçının ve takasların farkında olun. Kısa bir süre çevrimdışı olmak, küçük hareketsizlik cezalarına neden olur, ancak yaklaşık aynı süre boyunca tekrar çevrimiçi olduktan sonra kolayca telafi edilecektir. Karmaşık güç yedeklemeleri kurulumunuzun maliyetini artırabilir ve istenmeyen yedekleme doğrulayıcıları kesintiye neden olabilir."
-    }
-  ],
-  "SVLpih": [
-    {
-      "type": 0,
-      "value": "Birleşim yoluyla uzun zamandır beklenen hisse ispatına geçiş, hızla yaklaşıyor ve Ethereum'u daha sürdürülebilir bir ekosisteme bir adım daha yaklaştırıyor."
-    }
-  ],
   "SaR1pU": [
     {
       "type": 0,
       "value": "Para zaten yatırılmış"
-    }
-  ],
-  "Sb67Wo": [
-    {
-      "type": 0,
-      "value": "Dikkatli olun: Birleşim yaklaşıyor! Hazır olduğunuzdan emin olmak için "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": "'ni inceleyin."
     }
   ],
   "Sd+Pq6": [
@@ -3499,12 +3101,6 @@
       "value": "Gereklidir"
     }
   ],
-  "SpI4Xu": [
-    {
-      "type": 0,
-      "value": "Birleşim yükseltmesi, Ana Ağ ile birlikte hisse ispatı konsensusunu bir araya getirerek zinciri gelecekteki ölçeklendirme yükseltmeleri için hazırladı. Bu, ağ kapasitesini ve verimini daha da ölçeklendirmek için veri paylaşımı uygulama yeteneğinin kilidini açar."
-    }
-  ],
   "SqKNq2": [
     {
       "type": 1,
@@ -3539,50 +3135,16 @@
       "value": "Doğrulayıcı olmak için masa üstünüzden bu siteyi ziyaret edin."
     }
   ],
-  "TNTj2N": [
-    {
-      "type": 1,
-      "value": "community"
-    },
+  "TZtYuA": [
     {
       "type": 0,
-      "value": " birleşim test ağı rehberi"
-    }
-  ],
-  "TbV4N8": [
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " Discord'u (musluk)"
+      "value": "'Eth1' ve 'Eth2' terimleri Birleşim üzerinden kullanımdan kaldırıldı. Birleşim üzerinden hisse ispatına başarılı bir şekilde geçiş yapıldığından bu yana iki farklı Ethereum ağı bulunmuyor; sadece Ethereum bulunuyor."
     }
   ],
   "TfNuWP": [
     {
       "type": 0,
       "value": "virtualenv, para yatırma aracı için yalıtılmış bir Python ortamı oluşturmanıza yardımcı olur."
-    }
-  ],
-  "TfVy1O": [
-    {
-      "type": 0,
-      "value": "Birleşim Hazırlığı Kontrol Listesini görün"
-    }
-  ],
-  "ToUcj8": [
-    {
-      "type": 0,
-      "value": "Birleştirme Hazırlığı: Bir yürütüm istemcisine ek olarak, Birleştirme düğümü operatörlerinin etkin kalması için bir "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": " çalıştırması gerekir."
     }
   ],
   "Tpe6yK": [
@@ -3609,12 +3171,6 @@
       "value": "%50'den büyük"
     }
   ],
-  "UHbYCa": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcınızın kendi bakiyesi vardır - ilk bakiye, depozito sözleşmesinde özetlenmiştir. Ödülleriniz ve cezalarınız zaman içinde doğrulayıcınızın bakiyesine yansıtılır."
-    }
-  ],
   "UJMct0": [
     {
       "type": 0,
@@ -3627,6 +3183,12 @@
     {
       "type": 0,
       "value": "'a bakın"
+    }
+  ],
+  "UUDnWR": [
+    {
+      "type": 0,
+      "value": "Şanghay Planlama (GitHub meselesi)"
     }
   ],
   "UWv7yD": [
@@ -3673,40 +3235,6 @@
     {
       "type": 0,
       "value": "Bir test ağı klasörünüz yoksa, büyük olasılıkla Nimbus'ı doğru bir şekilde oluşturmamış ve çalıştırmamışsınızdır. Make komutlarını tekrar çalıştırın."
-    }
-  ],
-  "V0mmZE": [
-    {
-      "type": 0,
-      "value": "Birleştirmeden sonra doğrulayıcınız, işlemlerin işlenmesinden de sorumlu olacak ve bu nedenle doğrulayıcınızın önerdiği bloklar hâlinde bu işlemlerle ilişkili yanmamış gaz ücretlerine hak kazanacaktır. Bu ücretler, konsensus katmanında değil, yürütüm katmanında hesaba katılır ve bu nedenle istemcinize sağlanacak geleneksel bir Ethereum adresini gerektirir."
-    }
-  ],
-  "V19Udt": [
-    {
-      "type": 0,
-      "value": "Ethereum, "
-    },
-    {
-      "type": 1,
-      "value": "executionLayer"
-    },
-    {
-      "type": 0,
-      "value": " (eskiden \"Eth1\", işlem ve yürütmeyi kapsar) ve "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayer"
-    },
-    {
-      "type": 0,
-      "value": " (eskiden \"Eth2 veya \"Ethereum 2.0\", hisse ispatı İşaret Zincirini kapsar) katmanlarını içerecektir."
-    }
-  ],
-  "V5J3Uf": [
-    {
-      "type": 0,
-      "value": "Paylaşılan bir JWT gizli anahtarı oluşturdum ve bunu yürütüm ve konsensus istemcilerimin (işaret düğümü) ikisi için de kullanılabilir hâle getirdim"
     }
   ],
   "VASo1/": [
@@ -3815,10 +3343,18 @@
       "value": "Yükleme yaptığım doğrulayıcının doğrulayıcım olduğundan eminim."
     }
   ],
-  "Vp4z/b": [
+  "Vm6cRY": [
     {
       "type": 0,
-      "value": "Kendi yürütme katmanını çalıştıran Staker'lar, ağın merkeziyetsizliği için gereklidir."
+      "value": "Bu iletişim yalnızca birbirinin kimliğini doğrulamak için iki müşteri arasında paylaşılan bir "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": " gizli anahtarıyla korunur. Paylaşılan bu JWT gizli anahtarı birbirleriyle düzgün bir şekilde iletişim kurmalarına olanak sağlamak için her iki müşteriye de (hem yürütme hem de fikir birliği istemcileri) temin edilmelidir."
     }
   ],
   "VzGJkB": [
@@ -3831,6 +3367,20 @@
     {
       "type": 0,
       "value": "Teku, Apache 2 lisanslı ve oturmuşluğu ve erişilebilir olmasıyla dikkat çeken bir dil olan Java ile yazılmıştır."
+    }
+  ],
+  "W2Eues": [
+    {
+      "type": 0,
+      "value": "Uyarı: Bu, "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " için bir hisseleme başlama noktasıdır."
     }
   ],
   "W3t7Ob": [
@@ -3897,12 +3447,6 @@
       "value": "Kullanılabilirlik, güvenlik ve güvenilirliğe odaklanan mutabakat protokolü uygulaması. Prysm, yalnızca müşterilerinin gelişimine odaklanan bir şirket olan Prysmatic Labs tarafından geliştirilmiştir."
     }
   ],
-  "Wj99ga": [
-    {
-      "type": 0,
-      "value": "Go Ethereum - Birleşim"
-    }
-  ],
   "WkrNSk": [
     {
       "type": 0,
@@ -3913,24 +3457,6 @@
     {
       "type": 0,
       "value": "Lütfen yukarıdaki koşulları kabul edin."
-    }
-  ],
-  "WptkFF": [
-    {
-      "type": 0,
-      "value": "Her iki katman da gerekli"
-    }
-  ],
-  "Wxmhku": [
-    {
-      "type": 0,
-      "value": "Bu ücretler, işlemi gönderen kişi tarafından ödenir ve yürütme katmanında (Ana Ağ) ETH biçiminde gelir. Bu ödüller, konsensus katmanında tutulan doğrulayıcı bakiyenizde hesaba katılmaz."
-    }
-  ],
-  "WxqnJn": [
-    {
-      "type": 0,
-      "value": "Öte yandan, çevrimdışı olduğunuz ve kötü niyetli davrandığınız için cezalandırılabilirsiniz - söz gelimi geçersiz veya çelişik engellemeleri onaylamak gibi."
     }
   ],
   "Wxzght": [
@@ -3951,12 +3477,6 @@
       "value": "oyun ispatı"
     }
   ],
-  "X3rOq5": [
-    {
-      "type": 0,
-      "value": "Birleşim sırasında Infura ve Alchemy, yürütme katmanı sorumluluklarının dış kaynaklandırılması için artık uygun seçenekler olmayacak."
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -3973,6 +3493,12 @@
     {
       "type": 0,
       "value": "Goerli belgeleri üzerinde Besu"
+    }
+  ],
+  "XVRQoq": [
+    {
+      "type": 0,
+      "value": "Üçüncü taraf sağlayıcılar (Infura ve Alchemy gibi) Birleşim'den bu yana artık yürütüm katmanı sorumluluklarını dışarıdan temin etmek için uygun seçenekler olmaktan çıkmıştır. Tüm paydaşlar ağa uygun şekilde onay vermek için hem yürütüm hem de fikir birliği istemcisini çalıştırmalıdır."
     }
   ],
   "XVehvN": [
@@ -4019,40 +3545,6 @@
     {
       "type": 0,
       "value": "Kaynaktan oluşturma"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "İstemciler, doğrulayıcınız hakkında önemli gerçek zamanlı ölçümleri görselleştirmenize yardımcı olmak için Prometheus ve Grafana'yı destekler. İstemciye özel talimatları burada bulabilirsiniz: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "Y07Hwy": [
@@ -4125,18 +3617,6 @@
       "value": "Anahtarlar"
     }
   ],
-  "YHk9Pe": [
-    {
-      "type": 0,
-      "value": "Birleşim ile iş ispatı kullanımdan kaldırıldığı için işlemlerin işlenmesi yükü, doğrulayıcılara düşecektir. Bu işlemlerin geçerliliğini onaylamak için bir doğrulayıcının yürütüm katmanının olaylarına güvenilir erişimi olması gerekir. Yalnızca kendi düğümünüze güvenin."
-    }
-  ],
-  "YIjr32": [
-    {
-      "type": 0,
-      "value": "Daha fazla kontrol isteyen ve daha az yardıma ihtiyaç duyanlar için"
-    }
-  ],
   "YP03/j": [
     {
       "type": 0,
@@ -4165,30 +3645,6 @@
     {
       "type": 0,
       "value": " doğrulayıcılarınızın her biri için bir anahtar deposu kaydetmelisiniz. Lütfen bunları güvende tuttuğunuzdan, tercihen çevrimdışı olduğundan emin olun. Doğrulayıcı anahtar depolarınız, seçili dizinde bulunacaktır."
-    }
-  ],
-  "YTNPFn": [
-    {
-      "type": 0,
-      "value": "Bu JWT gizli anahtarının nasıl ayarlanacağına ilişkin talimatlar, istemciye bağlı olarak değişir; düğüm operatörleri, bunların nasıl oluşturulacağı ve yapılandırılacağına ilişkin talimatlar için istemcilerinin belgelerine bakmalıdır."
-    }
-  ],
-  "YX6pc0": [
-    {
-      "type": 1,
-      "value": "client"
-    },
-    {
-      "type": 0,
-      "value": ", bir "
-    },
-    {
-      "type": 1,
-      "value": "layerType"
-    },
-    {
-      "type": 0,
-      "value": " öğesidir."
     }
   ],
   "Yd6MEN": [
@@ -4295,12 +3751,6 @@
     {
       "type": 0,
       "value": "Neden stake edilen paraya ihtiyacım var?"
-    }
-  ],
-  "ZPRDyW": [
-    {
-      "type": 0,
-      "value": "Yine değişir. Kötü niyetli davranmak - örneğin geçersiz veya çelişkili blokları onaylamak, stake'inizin iptaline yol açacaktır."
     }
   ],
   "ZTo0Fl": [
@@ -4437,12 +3887,6 @@
       "value": "Düğümünüzde bakım çalıştırana kadar sürücünüzde yeterli alan sağladığınızdan emin olun."
     }
   ],
-  "bX1fts": [
-    {
-      "type": 0,
-      "value": "Birleştirme hazırlığı kontrol listesi"
-    }
-  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -4559,12 +4003,6 @@
       "value": "Para çekme belgeleri nelerdir?"
     }
   ],
-  "cwYSyN": [
-    {
-      "type": 0,
-      "value": "Görev 3"
-    }
-  ],
   "cyNFM3": [
     {
       "type": 0,
@@ -4599,12 +4037,6 @@
       "value": ", geçerli para çekmelerin hedefini doğrulayan, para yatırma içerisindeki 32 bitlik bir alandır. Şu anda iki tür para çekme bulunuyor: BLS'ye para çekme ve Ethereum adresine para çekme."
     }
   ],
-  "dGWdPu": [
-    {
-      "type": 0,
-      "value": "Tüm staker'lar, Birleştirme'den başlayarak bir yürütüm katmanı istemcisinin yanı sıra bir konsensus katmanı istemcisi çalıştırmalıdır. Hazır olduğunuzdan emin olun."
-    }
-  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -4635,12 +4067,6 @@
       "value": "Yükleme"
     }
   ],
-  "da/gCQ": [
-    {
-      "type": 0,
-      "value": "Görev 2"
-    }
-  ],
   "deLJOg": [
     {
       "type": 0,
@@ -4651,12 +4077,6 @@
     {
       "type": 0,
       "value": "Sorun giderme desteğini nerede bulabilirim?"
-    }
-  ],
-  "dsQVUw": [
-    {
-      "type": 0,
-      "value": "The Nimbus kitabı"
     }
   ],
   "dvr19k": [
@@ -4671,16 +4091,16 @@
       "value": "Ön Tanımlı Giriş"
     }
   ],
+  "e+9dMk": [
+    {
+      "type": 0,
+      "value": "Yürütme JWT belgeleri:"
+    }
+  ],
   "e/PSgJ": [
     {
       "type": 0,
       "value": "Para yatırma verilerini yükleyin"
-    }
-  ],
-  "e1dCqL": [
-    {
-      "type": 0,
-      "value": "GitHub'da Şanghay Planlama meselesi"
     }
   ],
   "e4f94H": [
@@ -4703,22 +4123,6 @@
     {
       "type": 1,
       "value": "code3"
-    }
-  ],
-  "e4wHN4": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Staking Launchpad'i"
-    }
-  ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "Para yatırma sözleşmesini Ethereum hesapları ve işaret zinciri doğrulayıcıları arasında bir para transferi olarak düşünebilirsiniz."
     }
   ],
   "eKEL/g": [
@@ -4813,6 +4217,12 @@
       "value": "Kontrol listesini tamamlayın"
     }
   ],
+  "ezCT4A": [
+    {
+      "type": 0,
+      "value": "Şanghay Ana EIP Değerlendirmesi"
+    }
+  ],
   "f/N7FO": [
     {
       "type": 0,
@@ -4831,12 +4241,6 @@
     {
       "type": 0,
       "value": " ETH yatırdığını bilmek için yalnızca yürütüm katmanındaki stake depozito sözleşmesini izlemek zorundaydı. Bu bilgiler, Infura veya Alchemy gibi üçüncü taraf sağlayıcılar tarafından elde edildi ve kolayca hizmete sunuldu."
-    }
-  ],
-  "fDY/uQ": [
-    {
-      "type": 0,
-      "value": "Teku - Birleşim"
     }
   ],
   "fHLKXR": [
@@ -4897,6 +4301,12 @@
     {
       "type": 0,
       "value": "çekilemiyor"
+    }
+  ],
+  "g2k5M/": [
+    {
+      "type": 0,
+      "value": "Donanım önerileri sürekli gelişen bir hedeftir. Mevcut asgari gereksinimlerin, parçalamanın hizmete sunulmasından sonra bir büyüklük sırasına göre artması muhtemeldir. Para yatırmadan önce kendi araştırmanızı yapın."
     }
   ],
   "g37XKP": [
@@ -5033,6 +4443,12 @@
       "value": "Stake'iniz"
     }
   ],
+  "hBIbQ+": [
+    {
+      "type": 0,
+      "value": "Aşırı karmaşık kurulumlardan kaçının ve alışverişlerin farkında olun. Kısa süreler için çevrimdışı olduğunuzda küçük hareketsizlik cezaları alabilirsiniz, ancak yaklaşık aynı süre boyunca tekrar çevrimiçi olduktan sonra bu cezalar kolaylıkla tazmin edilebilir. Karmaşık güç yedeklemeleri kurulumunuzun maliyetini artırabilir ve kullanılmayan yedek doğrulayıcılar, \"kesilme\" olarak bilinen daha ciddi bir cezaya yol açabilir."
+    }
+  ],
   "hFzE1M": [
     {
       "type": 0,
@@ -5043,12 +4459,6 @@
     {
       "type": 0,
       "value": "Yalnızca masa üstü"
-    }
-  ],
-  "hICY9k": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcıma ücret ödüllerimin yatırılmasını istediğim bir Ethereum adresi verdim."
     }
   ],
   "hPCn9f": [
@@ -5127,10 +4537,10 @@
       "value": "Doğrulayıcımı çevrimiçi ve güncel tutmanın önemli olduğunu anlıyorum."
     }
   ],
-  "hzX7K4": [
+  "i7alIW": [
     {
       "type": 0,
-      "value": "Görev 1"
+      "value": "Bu, Birleşim esnasında bir gereklilik haline geldi; bu yüzden hisseleme yapmadan önce her ikisini de çalıştırdığınızdan emin olun."
     }
   ],
   "iCpuph": [
@@ -5139,10 +4549,38 @@
       "value": "İstemciler"
     }
   ],
+  "iFWLYC": [
+    {
+      "type": 0,
+      "value": "Para yatırma sözleşmesini, bir Ethereum hesabından bir hisse ispatı doğrulayıcı hesabına para transferi olarak düşünebilirsiniz."
+    }
+  ],
   "iMvXLd": [
     {
       "type": 0,
       "value": "Doğrulayıcı istemci çalıştırma"
+    }
+  ],
+  "iN1PPs": [
+    {
+      "type": 0,
+      "value": "Her "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH para yatırma uygulaması bir dizi doğrulayıcı anahtarını etkinleştirir. Bu anahtarlar, ağın durumunu kapatmak için kullanılır. ETH gereksinimi ne kadar düşük olursa ağ tarafından daha fazla imzanın kaydedilmesi gerekir. "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH, her blokun boyutunu imzalarla şişirerek merkezsizleşmesinin engellenmesi ile mümkün olduğunca çok kişinin hisseleme yapmasını sağlamak arasında bir denge unsuru olarak seçildi."
     }
   ],
   "iPRnRG": [
@@ -5197,12 +4635,6 @@
       "value": "PegaSys Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş Java tabanlı bir Ethereum mutabakat istemcisidir."
     }
   ],
-  "irRdC0": [
-    {
-      "type": 0,
-      "value": "Donanım önerileri sürekli gelişen bir hedeftir. Mevcut minimum gereksinimlerin, parça zincirlerinin birleştirilmesi ve sunulmasından sonra bir miktar artması muhtemeldir. Para yatırmadan önce kendi araştırmanızı yapın."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
@@ -5227,20 +4659,6 @@
     {
       "type": 0,
       "value": "Daha önce Artemis olarak bilinen Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş bir mutabakat istemcisidir. PegaSys, kurumsal kullanıma hazır istemciler ve çekirdek Ethereum platformuyla etkileşim için araçlar oluşturmaya yönelik olan ConsenSys'un bir koludur."
-    }
-  ],
-  "jQTc9t": [
-    {
-      "type": 0,
-      "value": "Ayrıntılar ortaya çıktıkça diğer herkese açık test ağlarında "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " ile nasıl ilgileneceğinize ilişkin en son bilgileri almak için burayı ziyaret edin."
     }
   ],
   "jXer8/": [
@@ -5319,20 +4737,16 @@
       "value": "Nimbus belgesi"
     }
   ],
-  "jzGCBy": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " muslukları suistimal edildi ve sınırlandırıldı ancak EthStaker'daki insanlar size yardımcı olmak için ellerinden geleni yapacaktır"
-    }
-  ],
   "k43c+l": [
     {
       "type": 0,
       "value": "HashCloak'un Wagyu Key Gen denetimini görüntüleyin"
+    }
+  ],
+  "k4x6Ud": [
+    {
+      "type": 0,
+      "value": "Bu, yürütme katmanı (mevcut Ana Ağ) ile yeni fikir birliği katmanının (İşaret Zinciri) günümüzün tek Ethereum zincirini oluşturmak için birleştirilmesini simgeledi."
     }
   ],
   "kFS5Sd": [
@@ -5383,6 +4797,12 @@
       "value": "Zaman içinde, konsensüs sürecine katılmadığınız için cezalandırıldığınızdan bakiyeniz azalacaktır. Bakiyeniz 16 ETH'ye ulaştığında, onaylayıcı havuzundan otomatik olarak çıkarsınız."
     }
   ],
+  "kn06Zz": [
+    {
+      "type": 0,
+      "value": "Belgelerin izlenmesi:"
+    }
+  ],
   "kn7kJd": [
     {
       "type": 0,
@@ -5395,6 +4815,12 @@
       "value": "İletişime geçin"
     }
   ],
+  "krxu73": [
+    {
+      "type": 0,
+      "value": "Birleşim yükseltmesi, hisse ispatını 15 Eylül 2022'de Ethereum'a resmen getirdi ve eş zamanlı olarak iş ispatını kullanımdan kaldırdı. Bu, zinciri veri parçalama gibi gelecekte uygulanacak ölçeklendirme yükseltmeleri için hazırladı. Ana Ağın hisse ispatı mutabakatıyla bir araya getirilmesiyle atılan bu adım sayesinde enerji sarfiyatı %99,9'un üzerinde bir oranda azaldı."
+    }
+  ],
   "kuYpoI": [
     {
       "type": 0,
@@ -5405,6 +4831,12 @@
     {
       "type": 0,
       "value": "Çıkıldı"
+    }
+  ],
+  "kzGlnG": [
+    {
+      "type": 0,
+      "value": "Ödüller ve cezalar, yaklaşık olarak her altı buçuk dakikada bir verilir; bu süre genel olarak \"dönem\" olarak bilinir."
     }
   ],
   "l/uCcX": [
@@ -5515,6 +4947,12 @@
       "value": "TICKER_NAME"
     }
   ],
+  "lV3Ttw": [
+    {
+      "type": 0,
+      "value": "Düğüm Kurulumu Öğreticisi"
+    }
+  ],
   "lVARlA": [
     {
       "type": 0,
@@ -5583,20 +5021,6 @@
       "value": "Bu geri alınamaz bir işlemdir."
     }
   ],
-  "lmr40S": [
-    {
-      "type": 0,
-      "value": "Bu iletişim, yalnızca birbirinin kimliğini doğrulamak için iki istemci arasında paylaşılan bir gizli anahtar olan bir "
-    },
-    {
-      "type": 1,
-      "value": "jwt"
-    },
-    {
-      "type": 0,
-      "value": " gizli anahtarı kullanılarak güvence altına alınır. Bu paylaşılan JWT gizli anahtarı, Engine API'nin kimliğini doğru bir şekilde doğrulamak için her istemciye (hem EL hem de CL) sunulmalıdır, bu da onların birbirleri arasında düzgün bir şekilde iletişim kurmalarına olanak tanır."
-    }
-  ],
   "lo+Qqn": [
     {
       "type": 0,
@@ -5613,6 +5037,12 @@
     {
       "type": 0,
       "value": "Sabit disk"
+    }
+  ],
+  "mH6bSl": [
+    {
+      "type": 0,
+      "value": "Birleşim aracılığıyla hisse ispatına başarılı bir geçişten bu yana Ethereum, hisse ispatı doğrulayıcıları tarafından tam olarak güvence altına alınmıştır. Siz de bir doğrulayıcı çalıştırarak, Ethereum ağının güvenliğini sağlamaya yardımcı olabilirsiniz."
     }
   ],
   "mUZnem": [
@@ -5641,16 +5071,16 @@
       "value": ", bir denge, ortak anahtar ve diğer özellikler ile temsil edilen İşaret Zincirinde yaşayan ve Ethereum ağının konsensusuna katılan sanal bir varlıktır."
     }
   ],
-  "mcQpea": [
-    {
-      "type": 0,
-      "value": "Musluk dâhil olmak üzere ağa başlamak için ihtiyacınız olan her şey"
-    }
-  ],
   "mhyltV": [
     {
       "type": 0,
       "value": "Grafiti bayrağımı oluşturdum."
+    }
+  ],
+  "mloLQ5": [
+    {
+      "type": 0,
+      "value": "Tüm paydaşlar, bir fikir birliği istemcisiyle bir yürütüm istemcisi çalıştırmalıdır."
     }
   ],
   "mpmFDY": [
@@ -5671,24 +5101,10 @@
       "value": "Bir doğrulayıcı olmak için bir yürütüm istemcisinin (eskiden \"Eth1\") yanı sıra bir mutabakat istemcisi (eskiden \"Eth2\") çalıştırmanız gerekecek. Kendinizi ve ekipmanınızı hazırlamak için kontrol listesine göz atın."
     }
   ],
-  "nHk8Et": [
+  "nRWZl3": [
     {
       "type": 0,
-      "value": "PoS, bugün Ethereum'u güvence altına alan iş ispatından (PoW) daha güvenli, merkezî olmayan ve çevre dostu bir konsensüs mekanizmasıdır. Doğrulayıcıları zinciri oluşturdukları için ödüllendirir ancak ona saldırmaya çalışırlarsa yatırdıkları tutarları iptal ederek sağlıklı davranışları teşvik eder. Bu yükseltme, İşaret Zinciri biçiminde zaten yayındadır."
-    }
-  ],
-  "nIb6XF": [
-    {
-      "type": 0,
-      "value": "Ve kötü niyetli eylemler için büyük cezalar - veya "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": " - verilir."
+      "value": "Her zaman olduğu gibi bu duruma göre değişir. Kötü niyetli davranışlar (örneğin, geçersiz veya çelişen blokları onaylamak) hisse tutarınızın kesilmesine yol açacaktır."
     }
   ],
   "nRdJct": [
@@ -5757,16 +5173,6 @@
       "value": " testnet için Staking Launchpad'i"
     }
   ],
-  "nyx/4g": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " üzerinde bir düğüm nasıl çalıştırılır"
-    }
-  ],
   "nz27+c": [
     {
       "type": 0,
@@ -5805,6 +5211,12 @@
     {
       "type": 0,
       "value": "Artık anahtarlar içe aktarıldığına göre, tek yapmanız gereken (işaret düğümünüzün zaten çalıştığını varsayarak) doğrulayıcı istemcisini çalıştırmaktır."
+    }
+  ],
+  "oNP2EG": [
+    {
+      "type": 0,
+      "value": "Lighthouse, mevcut durumda ağ üzerinde %33'ten daha az bir oranda kullanılıyor."
     }
   ],
   "oNohob": [
@@ -5853,20 +5265,6 @@
       "value": "Sorumluluklar"
     }
   ],
-  "olByWa": [
-    {
-      "type": 0,
-      "value": "Ana Ağın hisse ispatına geçişini beklerken stake edenler "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": "'e katılmaya teşvik edilir. Bu, Birleşim hakkında daha fazla bilgi edinmenin, Ana Ağdan önce uygulama alıştırması yapmanın ve kurulumunuzda güven kazanmanın harika bir yoludur."
-    }
-  ],
   "omJNJw": [
     {
       "type": 0,
@@ -5889,12 +5287,6 @@
     {
       "type": 0,
       "value": "Sözleşmenin büyük bir bakiyesi var mı?"
-    }
-  ],
-  "ouMFoC": [
-    {
-      "type": 0,
-      "value": "Bunu şimdi yap"
     }
   ],
   "ouW9ov": [
@@ -5949,6 +5341,12 @@
       "value": "!"
     }
   ],
+  "pGnk/z": [
+    {
+      "type": 0,
+      "value": "Durum böyle, ancak bunun sonucunda küçük cezalar alınıyor. Birkaç gün çevrimdışı kalırsanız, normal koşullarda kaba bir hesapla o dönemde kazanacağınız ETH miktarına denk miktarda ETH kaybedersiniz. Başka bir deyişle, ≈0,01 ETH kazanma durumunda, bunun yerine ≈0,01 ETH cezalandırılırsınız."
+    }
+  ],
   "pHQwsN": [
     {
       "type": 0,
@@ -5995,26 +5393,16 @@
       "value": "İşaret Zinciri (BN) ve Doğrulayıcı İstemcimi (VC) manuel olarak nasıl durduracağımı ve yeniden başlatacağımı incelikle simüle ettim."
     }
   ],
-  "pxfiWL": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": ", Mart 2022'de başarılı bir birleştirme yükseltmesinden geçtikten sonra hisse ispatı geçişini gerçekleştirmiş olan, daha genç bir herkese açık test ağıdır. Kiln, herkesin etkileşime girmesine açıktır. Biraz ETH göndermeyi, bazı sözleşmelerle etkileşimde bulunmayı veya kendinizinkini dağıtmayı deneyin."
-    }
-  ],
   "pyWt01": [
     {
       "type": 0,
       "value": "Para yatırma özeti"
     }
   ],
-  "q2PJEK": [
+  "q/ZayM": [
     {
       "type": 0,
-      "value": "Kendi konsensus istemcimi çalıştırıyorum."
+      "value": "Para çekme özelliklerinin yaklaşmakta olan Şanghay yükseltmesine dahil edilmesi öneriliyor. Bu işlev eklendikten sonra bakiyeniz, yaklaşık bir günlük gecikmeyle, para çekme anahtarınız kullanılarak çekilebilir."
     }
   ],
   "q2XW/k": [
@@ -6041,16 +5429,6 @@
     {
       "type": 0,
       "value": " yolu olacağını anlıyorum."
-    }
-  ],
-  "qEsYC0": [
-    {
-      "type": 1,
-      "value": "allConfigs"
-    },
-    {
-      "type": 0,
-      "value": " için GitHub'a da göz atabilirsiniz."
     }
   ],
   "qK4+NQ": [
@@ -6169,26 +5547,6 @@
       "value": "Kapat"
     }
   ],
-  "rcdxTW": [
-    {
-      "type": 0,
-      "value": "Sabit bir toplam doğrulayıcı sayısı verildiğinde, ödüller / cezalar ağırlıklı olarak doğrulayıcının dengesiyle ölçeklenir - daha yüksek bir bakiye ile onaylamak daha büyük ödüller / cezalarla sonuçlanırken, daha düşük bir bakiye ile onaylamak daha düşük ödüller / cezalar ile sonuçlanır."
-    }
-  ],
-  "rgjQYI": [
-    {
-      "type": 0,
-      "value": "Birleştirme Hazırlığı: Bir konsensus istemcisine ek olarak, Birleştirme düğümü operatörlerinin etkin kalması için bir "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": " çalıştırması gerekir."
-    }
-  ],
   "rnDgcN": [
     {
       "type": 0,
@@ -6271,26 +5629,6 @@
       "value": "CPU ve RAM"
     }
   ],
-  "saDFoR": [
-    {
-      "type": 0,
-      "value": "Bonus"
-    }
-  ],
-  "scfDDt": [
-    {
-      "type": 0,
-      "value": "Yürütüm katmanı ile konsensus katmanı arasındaki iletişim, "
-    },
-    {
-      "type": 1,
-      "value": "engineApi"
-    },
-    {
-      "type": 0,
-      "value": " kullanılarak gerçekleşir. Bu, iki istemci katmanı arasında iletişim kurmak için kullanılabilecek yeni bir JSON RPC yöntemleri kümesidir."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6327,6 +5665,12 @@
       "value": "Hizmet şartlarını ve önceki bölümlerde belirtilen her şeyi anlıyor ve kabul ediyorum."
     }
   ],
+  "szh4Xy": [
+    {
+      "type": 0,
+      "value": "Ortak bir JWT gizli anahtarı oluşturdum ve bunu hem yürütüm istemcim hem de fikir birliği istemcim (işaret düğümü) tarafından kullanılabilir hale getirdim."
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -6337,6 +5681,12 @@
     {
       "type": 0,
       "value": "Büyük yeniden isimlendirme hakkında daha fazla bilgi edinin"
+    }
+  ],
+  "taENNR": [
+    {
+      "type": 0,
+      "value": "Mevcut durumda doğrulayıcınızı yeniden etkinleştirmenin bir yolu yoktur ve para çekme özelliği etkinleştirilene kadar paranızı aktaramaz veya çekemezsiniz. Bunun, Şanghay yükseltmesi olarak bilinen bir sonraki ağ yükseltmesine dahil edilmesi önerilmektedir. Bu, paranıza en azından o zamana kadar erişilemeyeceği anlamına gelir."
     }
   ],
   "tbYkT4": [
@@ -6369,12 +5719,6 @@
     {
       "type": 0,
       "value": "Yükledikten sonraki bakiye"
-    }
-  ],
-  "tp1IPS": [
-    {
-      "type": 0,
-      "value": "Ücret alıcısını yapılandırın"
     }
   ],
   "tsfX5f": [
@@ -6437,6 +5781,12 @@
       "value": "Para yatırdıktan sonra"
     }
   ],
+  "u4em9Z": [
+    {
+      "type": 0,
+      "value": "Birleşim'den bu yana doğrulayıcılar işlemlerin yerine getirilmesinden de sorumlu hale geldiler ve bu nedenle blok teklif ederken dahil edilen işlemlerle ilişkili yanmamış gaz ücretlerine de hak kazanacaklardır. Bu ücretler, fikir birliği katmanında değil, yürütüm katmanında hesaba katılır ve bu nedenle müşterinize verilecek geleneksel bir Ethereum adresini gerektirir."
+    }
+  ],
   "u564LK": [
     {
       "type": 0,
@@ -6447,12 +5797,6 @@
     {
       "type": 0,
       "value": "Çalışma süresi"
-    }
-  ],
-  "uGKswV": [
-    {
-      "type": 0,
-      "value": "Birleşim sonrası, bir Ethereum düğümü hem yürütüm istemcisinden hem de konsensus istemcisinden oluşacaktır."
     }
   ],
   "uJzGSb": [
@@ -6475,12 +5819,6 @@
     {
       "type": 0,
       "value": "Doğrulayıcı kontrol listesi"
-    }
-  ],
-  "uUy3NQ": [
-    {
-      "type": 0,
-      "value": "Bir blok önerdiğimde yanmamış işlem ücretlerini (bahşiş/öncelik ücretleri) kazanacağımı anlıyorum ve bu, benim doğrulayıcı bakiyem değil, yürütüm katmanında dikkate alınır."
     }
   ],
   "ubKWX8": [
@@ -6523,18 +5861,6 @@
       "value": "Nimbus ile doğrulayıcı olun"
     }
   ],
-  "ulgIVs": [
-    {
-      "type": 0,
-      "value": "Birleştirmeden sonra iki farklı Ethereum ağı değil, sadece Ethereum olacaktır."
-    }
-  ],
-  "uoKhQB": [
-    {
-      "type": 0,
-      "value": "Kimlik Doğrulama API'si"
-    }
-  ],
   "up+5YH": [
     {
       "type": 0,
@@ -6547,6 +5873,20 @@
     {
       "type": 0,
       "value": " tutarları var mı?"
+    }
+  ],
+  "v6ytKW": [
+    {
+      "type": 0,
+      "value": "Kötü niyetli eylemler için "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": " olarak bilinen büyük cezalar verilir."
     }
   ],
   "vBJ79e": [
@@ -6623,28 +5963,10 @@
       "value": " 'i mümkün olan en kısa sürede tamamladığınızdan emin olun. Doğrulayıcı arkadaşlarınızla aranızda destek ve tartışma için EthStaker topluluğuna katılın."
     }
   ],
-  "vej0DE": [
-    {
-      "type": 0,
-      "value": "Bugün, ilk ana ölçeklendirme yükseltmesi olan İşaret Zincirini güvence altına alacaksınız. Bu, bir hisse ispatı konsensus mekanizması kullanan ayrı bir zincirdir. Çok yakında Ana Ağ (bugün kullandığımız Ethereum) İşaret Zinciriyle birleştikten sonra tüm Ethereum'un güvenliğini sağlamaya yardımcı olacaksınız."
-    }
-  ],
-  "vg1dVR": [
-    {
-      "type": 0,
-      "value": "İmza anahtarınızla, doğrulayıcıdan hızlı bir şekilde çıkmayı deneyebilir ve ardından parayı - para çekme anahtarı ile - hırsızdan önce transfer edebilirsiniz."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Uygulamayı başlatmak için aşağıdaki komutu çalıştırın."
-    }
-  ],
-  "wHvmSN": [
-    {
-      "type": 0,
-      "value": "her ikisi"
     }
   ],
   "wJ1PbL": [
@@ -6661,12 +5983,6 @@
     {
       "type": 0,
       "value": "İlk kurulum"
-    }
-  ],
-  "wPR6Js": [
-    {
-      "type": 0,
-      "value": "Geçişten önce, solo staker'ların ve doğrulayıcı servislerin bilmesi gereken birkaç şey ve katılmanız gerekebilecek birkaç görev var."
     }
   ],
   "wawegX": [
@@ -6687,12 +6003,6 @@
       "value": "Hisse ispatı hakkında daha fazlası"
     }
   ],
-  "wea8Ie": [
-    {
-      "type": 0,
-      "value": "Yürütüm ve konsensus katmanları birlikte sıkı bir şekilde çalışır ve güvende kalmak için kimlik doğrulama gerektirir."
-    }
-  ],
   "wm04oC": [
     {
       "type": 0,
@@ -6711,12 +6021,6 @@
       "value": "Yazım hataları var mı?"
     }
   ],
-  "wuhO1L": [
-    {
-      "type": 0,
-      "value": "Kendi yürütüm istemcimi çalıştırıyorum."
-    }
-  ],
   "x+fF+M": [
     {
       "type": 0,
@@ -6733,6 +6037,20 @@
     {
       "type": 0,
       "value": "Bu adımları, Ana Ağdan önce mevcut test ağında tamamlamanızı önemle tavsiye ederiz."
+    }
+  ],
+  "x9xppN": [
+    {
+      "type": 0,
+      "value": "Birleşim yoluyla hisse ispatına geçişin artık tamamlanmasıyla birlikte doğrulayıcılar da işlemleri yerine getirmekten ve geçerliliklerine onay imzası vermekten sorumludur. Bu veriler, Birleşim'den bu yana popüler üçüncü taraf kaynaklardan sağlanmamaktadır. Üçüncü taraf bir sağlayıcı kullanmanız doğrulayıcınızın çevrimdışı olmasına neden olur. Veri parçalama uygulandığında, doğrulayıcılar da "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": " kapsamında kesinti riskiyle karşı karşıya kalır."
     }
   ],
   "xDyl3T": [
@@ -6811,6 +6129,12 @@
       "value": " ayarladığınızdan emin olun, aksi takdirde para yatırma geçersiz olacaktır."
     }
   ],
+  "xZZMZ5": [
+    {
+      "type": 0,
+      "value": "test ağı"
+    }
+  ],
   "xbet2w": [
     {
       "type": 0,
@@ -6847,10 +6171,10 @@
       "value": "clientName"
     }
   ],
-  "xyMh/n": [
+  "xzmWbJ": [
     {
       "type": 0,
-      "value": "Mega Birleşim Kaynak Listesi"
+      "value": "Doğrulayıcınızın kendi bakiyesi vardır, başlangıç bakiyesi para yatırma sözleşmesinde belirtilir. Ödülleriniz ve cezalarınız da zaman içinde doğrulayıcınızın bakiyesinde yansıtılır."
     }
   ],
   "y44jV2": [
@@ -6889,12 +6213,6 @@
       "value": "Anahtarlarımı güvende tutuyorum ve anımsatıcı ifademi yazdım."
     }
   ],
-  "yaf+Vw": [
-    {
-      "type": 0,
-      "value": "EL istemcisi ile CL istemcisi arasındaki iki yönlü iletişim, kimlik doğrulama için bir JWT gizli anahtarı gerektirir ve düğümünüzün işlevsel olması için gereklidir."
-    }
-  ],
   "ydh1KU": [
     {
       "type": 0,
@@ -6931,18 +6249,10 @@
       "value": "Düğümünüzün 20'den fazla eşi olduğundan emin olun."
     }
   ],
-  "z/ToMo": [
+  "yw4vsX": [
     {
       "type": 0,
-      "value": "Birleştirme yoluyla hisse ispatına geçiş tamamlandığında, doğrulayıcılar işlemleri işlemekten ve geçerliliklerini imzalamaktan sorumlu olacaktır. Bu veriler, Birleştirmeden sonra popüler üçüncü taraf kaynaklardan elde edilemez ve doğrulayıcınızın çevrimdışı olmasına neden olur. Veri parçalama uygulandığında, doğrulayıcılar da "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": " kapsamında kesinti riskiyle karşı karşıya kalacaklardır."
+      "value": "Öte yandan, çevrimdışı olduğunuz ve kötü niyetli davrandığınız için (örneğin, geçersiz veya çelişen blokları tasdik ettiğiniz için) cezalandırılabilirsiniz."
     }
   ],
   "z63I56": [
@@ -7005,10 +6315,18 @@
       "value": "Çalıştırmak istediğiniz her doğrulayıcı için bir imzalama anahtarı oluşturmanıza yardımcı olacağız. Birleştirmeyi takip etmesi planlanan Şanghay yükseltmesine kadar para çekme işlemi olmadığı için şimdi para çekme anahtarlarınızı oluşturmayacaksınız. Paranızı çekmek mümkün olduğunda, para çekme anahtarlarınızı mnemonik anımsatıcınızdan türetebilirsiniz."
     }
   ],
-  "zqOrZZ": [
+  "zpmjjy": [
     {
       "type": 0,
-      "value": "Birleştirme Hazırlığı Kontrol Listesine bakın"
+      "value": "Yürütüm katmanı ile fikir birliği katmanı arasındaki iletişim "
+    },
+    {
+      "type": 1,
+      "value": "engineApi"
+    },
+    {
+      "type": 0,
+      "value": " kullanılarak sağlanır. Bunlar, iki istemci katmanı arasında iletişim kurmak için kullanılabilecek bir dizi JSON RPC yöntemidir."
     }
   ]
 }

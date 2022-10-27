@@ -1365,6 +1365,9 @@
     "description": "Link to documentation about execution client Besu, specifically for Goerli testnet",
     "message": "Besu on Goerli documentation"
   },
+  "XVRQoq": {
+    "message": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run both an execution and a consensus client to properly attest to the network."
+  },
   "XVehvN": {
     "description": "{filesPattern} refers to a computer command which will find {keyFile} and\n                {passwordFile} - both files within a computer.",
     "message": "{filesPattern} will expect that the {keyFile} exists, and the file containing the password for it is {passwordFile}."
@@ -2489,9 +2492,6 @@
   },
   "zJicsO": {
     "message": "Staking economics"
-  },
-  "zMiMCs": {
-    "message": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run a pair of both an execution and consensus client to properly attest to the network."
   },
   "zbEBi9": {
     "description": "{mainnet} shows '--config mainnet' terminal command",

@@ -1,4 +1,26 @@
 {
+  "+2VHUU": [
+    {
+      "type": 0,
+      "value": "Ethereum terdiri dari "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (menangani transaksi dan eksekusi, sebelumnya 'Eth1'), dan "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (menangani tugas konsensus bukti taruhan, sebelumnya 'Eth2' atau 'Ethereum 2.0')."
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -41,6 +63,12 @@
       "value": "Polandia"
     }
   ],
+  "+wJuhm": [
+    {
+      "type": 0,
+      "value": "Discord:"
+    }
+  ],
   "/+atl4": [
     {
       "type": 0,
@@ -57,18 +85,6 @@
     {
       "type": 0,
       "value": "Bahasa Indonesia"
-    }
-  ],
-  "/E/Zm8": [
-    {
-      "type": 0,
-      "value": "Mengonfigurasi Web Java"
-    }
-  ],
-  "/FpD8O": [
-    {
-      "type": 0,
-      "value": "Lakukan ini setelah rilis klien TTD"
     }
   ],
   "/QPc9s": [
@@ -283,6 +299,12 @@
       "value": ")"
     }
   ],
+  "0kxaf/": [
+    {
+      "type": 0,
+      "value": "Saya telah memberikan alamat Ethereum kepada validator saya yang menjadi tempat disetorkannya imbalan biaya saya."
+    }
+  ],
   "0lHkrT": [
     {
       "type": 0,
@@ -383,12 +405,6 @@
       "value": "Pastikan berkas kata sandi tidak memiliki baris baru di belakangnya."
     }
   ],
-  "1Z0sad": [
-    {
-      "type": 0,
-      "value": "Blog EF"
-    }
-  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -407,22 +423,10 @@
       "value": "Selengkapnya tentang ekonomi penaruhan Ethereum"
     }
   ],
-  "1p+pb5": [
-    {
-      "type": 0,
-      "value": "penerima biaya"
-    }
-  ],
   "1pUw7Y": [
     {
       "type": 0,
       "value": "Dokumentasi tentang menjalankan Nethermind"
-    }
-  ],
-  "1wSJQU": [
-    {
-      "type": 0,
-      "value": "Pengaturan waktu:"
     }
   ],
   "22EpKq": [
@@ -501,6 +505,12 @@
       "value": "Anda selalu dapat menghitung ulang kunci penandatanganan Anda dari kunci penarikan Anda"
     }
   ],
+  "2c8F5x": [
+    {
+      "type": 0,
+      "value": "Dokumen penerima biaya:"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
@@ -511,12 +521,6 @@
     {
       "type": 0,
       "value": "Keragaman klien sangat penting untuk kesehatan jaringan Ethereum: Bug di klien dengan saham lebih dari 33% dapat menyebabkan Ethereum menjadi offline. Jika klien memiliki supermayoritas (>66%), bug dapat menyebabkan rantai terbagi dengan tidak benar, yang berpotensi menyebabkan pemotongan."
-    }
-  ],
-  "2s0gAx": [
-    {
-      "type": 0,
-      "value": "Mengonfigurasi Alamat Penerima Biaya"
     }
   ],
   "2t/3ab": [
@@ -683,12 +687,6 @@
       "value": "Bagian 2 - Selama penyiapan"
     }
   ],
-  "3wfaSi": [
-    {
-      "type": 0,
-      "value": "Penggabungan, komunikasi EL - CL"
-    }
-  ],
   "3zCA2i": [
     {
       "type": 0,
@@ -753,20 +751,6 @@
       "value": "Mengapa skala geser? Kami tidak akan membahas detail yang berlebihan di sini, intinya adalah perlu ada jumlah validator minimum (dan karenanya jumlah minimum yang dipertaruhkan) agar jaringan berfungsi dengan baik. Jadi, demi mendorong lebih banyak validator untuk bergabung, penting agar suku bunga tetap tinggi hingga jumlah minimum ini tercapai."
     }
   ],
-  "4VQUkR": [
-    {
-      "type": 0,
-      "value": "Untuk informasi selengkapnya, lihat "
-    },
-    {
-      "type": 1,
-      "value": "shanghaiPlanning"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "4hnEBA": [
     {
       "type": 0,
@@ -789,28 +773,6 @@
     {
       "type": 0,
       "value": "Mengapa dua kunci, bukan satu?"
-    }
-  ],
-  "59y+Ik": [
-    {
-      "type": 0,
-      "value": "Jangan lupa untuk membuka "
-    },
-    {
-      "type": 1,
-      "value": "discord"
-    },
-    {
-      "type": 0,
-      "value": " di mana Anda akan menemukan kanal "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " yang sarat akan diskusi tentang cara untuk terlibat lebih dalam dan memastikan Anda sudah siap."
     }
   ],
   "5A6amM": [
@@ -903,18 +865,6 @@
       "value": "rata-rata"
     }
   ],
-  "6CN01C": [
-    {
-      "type": 0,
-      "value": "Setelah peningkatan Shanghai, 16 ETH Anda kemudian dapat ditarik – dengan kunci penarikan Anda – setelah penundaan sekitar satu hari."
-    }
-  ],
-  "6HBTTN": [
-    {
-      "type": 0,
-      "value": "Proof-of-stake (PoS) dan Beacon Chain"
-    }
-  ],
   "6S95Bo": [
     {
       "type": 0,
@@ -933,40 +883,10 @@
       "value": "Anda dapat meningkatkan saldo efektif validator ini dengan melakukan isi ulang"
     }
   ],
-  "6VswA4": [
-    {
-      "type": 0,
-      "value": "Menjalankan Nethermind Pasca Penggabungan "
-    },
-    {
-      "type": 1,
-      "value": "jwtSecretFile"
-    }
-  ],
-  "6iVtAr": [
-    {
-      "type": 0,
-      "value": "#TestingTheMerge"
-    }
-  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "Anda bergabung dengan jaringan di tahap awal. Seperti halnya perangkat lunak baru, terdapat potensi bug perangkat lunak. Meskipun tidak mungkin, potensi bug dapat mengakibatkan pemotongan."
-    }
-  ],
-  "6uPbCH": [
-    {
-      "type": 0,
-      "value": "Versi "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " halaman ini"
     }
   ],
   "7+Domh": [
@@ -997,18 +917,6 @@
       "value": " tidak didukung dalam mode offline."
     }
   ],
-  "7BhfPl": [
-    {
-      "type": 0,
-      "value": "Buku Lighthouse"
-    }
-  ],
-  "7C4ikM": [
-    {
-      "type": 0,
-      "value": "Emoji panda penggabungan"
-    }
-  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1017,6 +925,28 @@
     {
       "type": 1,
       "value": "oppositeNetwork"
+    }
+  ],
+  "7FcGxU": [
+    {
+      "type": 0,
+      "value": "Anda perlu menjalankan "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " serta "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "7Iz3JI": [
@@ -1113,16 +1043,6 @@
       "value": "Apakah alamat kontrak yang tercantum di situs web cocok?"
     }
   ],
-  "8L6ufI": [
-    {
-      "type": 0,
-      "value": "Panduan langkah demi langkah tentang cara menjalankan simpul dan validator "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "8Rj/6A": [
     {
       "type": 0,
@@ -1153,6 +1073,12 @@
     {
       "type": 0,
       "value": "slashing"
+    }
+  ],
+  "8mEWVB": [
+    {
+      "type": 0,
+      "value": "Dengan jumlah total validator yang tetap, imbalan/penalti sebagian besar diskalakan dengan saldo validator—membuktikan dengan saldo yang lebih tinggi menghasilkan imbalan/penalti yang lebih besar sebaliknya membuktikan dengan saldo yang lebih rendah menghasilkan imbalan/penalti yang lebih rendah."
     }
   ],
   "8wd0q5": [
@@ -1271,24 +1197,6 @@
       "value": "Ikhtisar"
     }
   ],
-  "9vLu6E": [
-    {
-      "type": 1,
-      "value": "note"
-    },
-    {
-      "type": 0,
-      "value": " Langkah ini harus dilakukan di "
-    },
-    {
-      "type": 1,
-      "value": "testnetsOnly"
-    },
-    {
-      "type": 0,
-      "value": " hingga TTD (total tingkat kesulitan terminal) Jaringan Utama telah diumumkan dan klien telah merilis pembaruan. Untuk sementara waktu info disajikan untuk persiapan."
-    }
-  ],
   "9vwGlT": [
     {
       "type": 0,
@@ -1381,30 +1289,6 @@
       "value": " untuk dikirim sekaligus agar dapat diterima."
     }
   ],
-  "ALEY4e": [
-    {
-      "type": 0,
-      "value": "Panduan "
-    },
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
-  "ARyG2Z": [
-    {
-      "type": 0,
-      "value": "Kapan penarikan?"
-    }
-  ],
   "ATwOPg": [
     {
       "type": 0,
@@ -1429,20 +1313,6 @@
       "value": "memahami keseimbangan efektif validator"
     }
   ],
-  "AbR1dr": [
-    {
-      "type": 0,
-      "value": "Peningkatan ini semakin mendekat dan membawa beberapa perubahan yang harus diperhatikan oleh penaruh sebelumnya. Lihat "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": " untuk memastikan Anda siap."
-    }
-  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1457,12 +1327,6 @@
     {
       "type": 0,
       "value": "Pecahan akan mengubah persyaratan bahwa simpul penuh membawa seluruh riwayat rantai, dan sebagai gantinya akan mendistribusikan beban ini di antara jaringan sambil tetap memastikan ketersediaan data. Ini akan memperluas kapasitas lapisan 1 Ethereum secara signifikan sekaligus mempertahankan kemampuan untuk mengoperasikan simpul penuh di perangkat keras konsumen, menjaga jaringan tetap terdesentralisasi."
-    }
-  ],
-  "AfH0eO": [
-    {
-      "type": 0,
-      "value": "Semua penaruh harus mengoperasikan klien eksekusi dengan klien konsensus mereka dimulai pada Penggabungan. Pastikan Anda sudah siap."
     }
   ],
   "Affixg": [
@@ -1493,18 +1357,6 @@
     {
       "type": 0,
       "value": "Isi ulang validator"
-    }
-  ],
-  "AyaNND": [
-    {
-      "type": 0,
-      "value": "TestingTheMerge"
-    }
-  ],
-  "AzjyIx": [
-    {
-      "type": 0,
-      "value": "Sejak dimulainya Rantai Suar, banyak validator yang menjalankan klien konsensus mereka sendiri telah memilih untuk menggunakan layanan pihak ketiga untuk koneksi lapisan eksekusi mereka. Ini dapat diterima karena satu-satunya hal yang didengarkan adalah kontrak deposit penaruhan."
     }
   ],
   "B2EKj+": [
@@ -1587,18 +1439,6 @@
     {
       "type": 0,
       "value": "Komunitas EthStaker"
-    }
-  ],
-  "BXoiVG": [
-    {
-      "type": 0,
-      "value": "Pengingat tambahan"
-    }
-  ],
-  "BcUgLk": [
-    {
-      "type": 0,
-      "value": "Penerima Biaya yang Disarankan"
     }
   ],
   "Bf2QKg": [
@@ -1763,10 +1603,28 @@
       "value": "Verifikasi alamat kontrak"
     }
   ],
+  "DhKDS3": [
+    {
+      "type": 0,
+      "value": "Bukti taruhan dan Rantai Suar"
+    }
+  ],
+  "Di1/yX": [
+    {
+      "type": 0,
+      "value": "Dokumen JWT Konsensus:"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
       "value": "Saya telah meneruskan port yang diperlukan ke mesin yang benar dari router saya baik untuk klien EL dan CL saya (hanya buka port yang sesuai untuk instalasi Anda)."
+    }
+  ],
+  "DmKneH": [
+    {
+      "type": 0,
+      "value": "Klien mendukung Prometheus dan Grafana untuk membantu Anda memvisualisasikan metrik waktu nyata yang penting tentang validator Anda."
     }
   ],
   "DoCZT1": [
@@ -1879,6 +1737,12 @@
       "value": "Ini adalah jaringan untuk uji ⚠️"
     }
   ],
+  "EXt8Xd": [
+    {
+      "type": 0,
+      "value": "Penaruh harus memberikan alamat penerima biaya kepada klien konsensus mereka untuk menerima imbalan biaya transaksi. Ini adalah alamat Ethereum normal yang biasa Anda gunakan."
+    }
+  ],
   "EcCME0": [
     {
       "type": 0,
@@ -1901,12 +1765,6 @@
     {
       "type": 0,
       "value": "Catatan: Rantai Beacon mungkin perlu beberapa menit untuk memverifikasi setoran Anda"
-    }
-  ],
-  "FM9lHC": [
-    {
-      "type": 0,
-      "value": "semua konfigurasi jaringan percobaan penggabungan"
     }
   ],
   "FSRfSJ": [
@@ -2003,12 +1861,6 @@
       "value": "Ketentuan layanan"
     }
   ],
-  "FqztZR": [
-    {
-      "type": 0,
-      "value": "Catatan:"
-    }
-  ],
   "FzkbsB": [
     {
       "type": 0,
@@ -2043,12 +1895,6 @@
     {
       "type": 0,
       "value": "Pastikan Anda tidak sedang terkena phishing"
-    }
-  ],
-  "GKDM0r": [
-    {
-      "type": 0,
-      "value": "Jika Anda belum melakukannya, pastikan simpul Anda menjalankan klien EL, serta klien CL, untuk mencegah waktu henti pada saat Penggabungan."
     }
   ],
   "GN2Cu5": [
@@ -2115,36 +1961,6 @@
     {
       "type": 0,
       "value": "Jumlah total yang diperlukan"
-    }
-  ],
-  "H/LXxz": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " adalah jaringan percobaan publik lama pertama yang menjalani Penggabungan, yang berlangsung pada tanggal 8 Juni 2022. Secara historis jaringan percobaan bukti kerja, "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " sekarang telah bertransisi ke bukti taruhan dengan menggabungkan lapisan eksekusi historisnya dengan rantai suar baru."
-    }
-  ],
-  "H0lQfu": [
-    {
-      "type": 0,
-      "value": "Daftar Periksa Kesiapan Penggabungan"
-    }
-  ],
-  "H4W8nj": [
-    {
-      "type": 0,
-      "value": "Autentikasi API Mesin"
     }
   ],
   "H5+NAX": [
@@ -2227,12 +2043,6 @@
       "value": "Jaringan"
     }
   ],
-  "I5ZPR9": [
-    {
-      "type": 0,
-      "value": "Kapan Penggabungan?"
-    }
-  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2267,20 +2077,6 @@
     {
       "type": 0,
       "value": "Instal virtualenv"
-    }
-  ],
-  "If09Ko": [
-    {
-      "type": 0,
-      "value": "Dengan demikian, penaruh harus memberikan alamat "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": " kepada klien konsensus mereka untuk menerima imbalan ini. Ini adalah alamat Ethereum normal yang biasa Anda gunakan."
     }
   ],
   "IhDJWs": [
@@ -2363,12 +2159,6 @@
       "value": "Dengan kata lain, agar Anda tetap jujur, tindakan Anda harus memiliki konsekuensi finansial."
     }
   ],
-  "JApiO1": [
-    {
-      "type": 0,
-      "value": "Ini adalah perubahan baru dan menjadi persyaratan pada saat Penggabungan, jadi pastikan Anda menjalankan keduanya sebelum peningkatan."
-    }
-  ],
   "JMcBLZ": [
     {
       "type": 0,
@@ -2387,12 +2177,6 @@
     {
       "type": 0,
       "value": "4. Hindari phishing"
-    }
-  ],
-  "Ja5vXW": [
-    {
-      "type": 0,
-      "value": "Bacaan lebih lanjut"
     }
   ],
   "JbVlOE": [
@@ -2429,6 +2213,12 @@
     {
       "type": 0,
       "value": "Apa sistem operasi Anda saat ini?"
+    }
+  ],
+  "K37W0m": [
+    {
+      "type": 0,
+      "value": "Dengan kunci penandatanganan, Anda dapat mencoba untuk keluar dari validator dengan cepat dan kemudia mentransfer dana—dengan kunci penarikan—sebelum pencuri."
     }
   ],
   "K6+jQ3": [
@@ -2507,20 +2297,10 @@
       "value": "Nethermind adalah klien kuat yang dibangun pada inti .NET yang dirancang untuk kinerja, keserbagunaan, dan kemampuan untuk penyesuaian."
     }
   ],
-  "KcdQCZ": [
+  "KhJBVZ": [
     {
       "type": 0,
-      "value": "Sintaks CLI "
-    },
-    {
-      "type": 1,
-      "value": "engineJwtSecret"
-    }
-  ],
-  "KjcAm2": [
-    {
-      "type": 0,
-      "value": "Hadiah dan penalti diberikan kira-kira setiap enam setengah menit - periode waktu yang dikenal sebagai epoch."
+      "value": "Lihat Daftar Periksa Penaruhan"
     }
   ],
   "KqGKRA": [
@@ -2559,12 +2339,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "L1PK14": [
-    {
-      "type": 0,
-      "value": "Ethereum.org - Penggabungan"
     }
   ],
   "L7fPF+": [
@@ -2671,6 +2445,12 @@
       "value": "Setoran awal Anda telah dibuat untuk kunci publik validator ini. Harap tunggu dan periksa status setoran Anda di penyedia data Beaconchain."
     }
   ],
+  "Lv57+8": [
+    {
+      "type": 0,
+      "value": "Ethereum diamankan oleh bukti taruhan, meskipun tidak selalu demikian. Rantai Suar adalah langkah pertama untuk membangun lapisan konsensus PoS di Ethereum, yang diluncurkan secara paralel dengan Jaringan Utama pada bulan Desember 2020. Ini mempermudah peserta untuk mulai mempertaruhkan ETH mereka dan menyiapkan jaringan untuk transisi formal dari bukti kerja ke bukti taruhan melalui Penggabungan."
+    }
+  ],
   "LwEHRm": [
     {
       "type": 0,
@@ -2689,20 +2469,6 @@
       "value": "Hubungkan dompet baru"
     }
   ],
-  "MKMIUm": [
-    {
-      "type": 0,
-      "value": "Kemajuan jaringan percobaan publik sedang berlangsung. Bila semuanya aman dan siap, tim pengembang inti akan mengumumkannya, jadi pantau terus "
-    },
-    {
-      "type": 1,
-      "value": "blogLink"
-    },
-    {
-      "type": 0,
-      "value": " atau kanal komunikasi tim klien lainnya untuk mendapatkan informasi terbaru."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2719,12 +2485,6 @@
     {
       "type": 0,
       "value": "Apa yang terjadi jika kunci penarikan saya dicuri?"
-    }
-  ],
-  "MXVVcY": [
-    {
-      "type": 0,
-      "value": "Mengautentikasi Koneksi Simpul Eksekusi"
     }
   ],
   "MZEcKL": [
@@ -2769,22 +2529,10 @@
       "value": "Pembaharuan Ethereum hanya akan berhasil jika validator memahami risiko dan tanggung jawab."
     }
   ],
-  "Mm7FSl": [
-    {
-      "type": 0,
-      "value": "Istilah 'Eth1' dan 'Eth2' tidak digunakan lagi untuk persiapan penggabungan."
-    }
-  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Detail isi ulang"
-    }
-  ],
-  "MoIew2": [
-    {
-      "type": 0,
-      "value": "Panduan langkah demi langkah tentang cara menjalankan simpul dan validator di jaringan percobaan penggabungan"
     }
   ],
   "N0rwnt": [
@@ -2927,12 +2675,6 @@
       "value": "."
     }
   ],
-  "O/dhpS": [
-    {
-      "type": 0,
-      "value": "Discord EthStaker"
-    }
-  ],
   "O3qkOm": [
     {
       "type": 0,
@@ -2981,24 +2723,6 @@
     {
       "type": 0,
       "value": "Selengkapnya tentang Penggabungan"
-    }
-  ],
-  "Oop93W": [
-    {
-      "type": 0,
-      "value": "Pengumuman "
-    },
-    {
-      "type": 1,
-      "value": "site"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
     }
   ],
   "OsO8ik": [
@@ -3053,6 +2777,12 @@
       "value": "."
     }
   ],
+  "P8FrVE": [
+    {
+      "type": 0,
+      "value": "Autentikasi JWT"
+    }
+  ],
   "P91KmA": [
     {
       "type": 0,
@@ -3067,12 +2797,6 @@
     {
       "type": 0,
       "value": "Jaringan Anda telah diubah"
-    }
-  ],
-  "Pd0hC/": [
-    {
-      "type": 0,
-      "value": "Blog Ethereum Foundation"
     }
   ],
   "PfoT0C": [
@@ -3123,12 +2847,6 @@
       "value": "papan klip"
     }
   ],
-  "Q2CQuF": [
-    {
-      "type": 0,
-      "value": "Karena sekarang transaksi harus diproses oleh validator, validator yang mengusulkan blok yang menyertakan transaksi ini berhak menerima tips biaya transaksi. Ini juga dikenal sebagai biaya prioritas, dan merupakan bagian yang tidak terbakar dari biaya gas."
-    }
-  ],
   "Q8P0rZ": [
     {
       "type": 0,
@@ -3167,20 +2885,6 @@
       "value": " untuk memaksimalkan saldo efektif Anda."
     }
   ],
-  "Q8fnvz": [
-    {
-      "type": 0,
-      "value": "jaringan percobaan saja (mis. "
-    },
-    {
-      "type": 1,
-      "value": "kiln"
-    },
-    {
-      "type": 0,
-      "value": ")"
-    }
-  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -3211,14 +2915,14 @@
       "value": "Manajemen kunci"
     }
   ],
-  "QapNAM": [
+  "QeE86m": [
     {
       "type": 0,
-      "value": "Laman "
+      "value": "Lihat dokumen ini untuk mempelajari cara menjalankan simpul di "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "networkName"
     }
   ],
   "QgOvR0": [
@@ -3269,44 +2973,10 @@
       "value": " yang telah diterima tetapi sedang divalidasi di rantai. Ini akan tersedia di sini ketika beaconcha.in telah mengkonfirmasi 2048 blok."
     }
   ],
-  "QtNVQP": [
-    {
-      "type": 0,
-      "value": "Tidak ada cara bagi Anda untuk mengaktifkan kembali validator, dan Anda tidak akan dapat mentransfer atau menarik dana sampai peningkatan Shanghai yang direncanakan setelah Penggabungan (yang berarti dana Anda tetap tidak dapat diakses sampai saat itu)."
-    }
-  ],
-  "R58ea3": [
-    {
-      "type": 0,
-      "value": "Anda perlu menjalankan "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " serta "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (sebelumnya 'Eth2')."
-    }
-  ],
   "R8eePn": [
     {
       "type": 0,
       "value": "Jika Anda dipotong, Anda dicegah untuk berpartisipasi dalam protokol lebih lanjut dan dikeluarkan secara paksa."
-    }
-  ],
-  "R9umf+": [
-    {
-      "type": 0,
-      "value": "Imbalan biaya akan hadir untuk validator, jangan lewatkan!"
     }
   ],
   "RCGrka": [
@@ -3339,46 +3009,10 @@
       "value": "selamat"
     }
   ],
-  "RaBZna": [
-    {
-      "type": 0,
-      "value": "Jika Anda offline selama beberapa hari dalam kondisi normal, Anda akan kehilangan sejumlah ETH yang kira-kira setara dengan jumlah ETH yang akan Anda peroleh dalam periode itu. Dengan kata lain, jika Anda berhasil mendapatkan ≈0,01 ETH, Anda akan mendapat penalti ≈0,01 ETH."
-    }
-  ],
   "Rg5ySE": [
     {
       "type": 0,
       "value": "Berapa banyak validator yang ingin Anda jalankan?"
-    }
-  ],
-  "Riq4Yh": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " terbuka bagi siapa saja untuk berinteraksi. Cobalah mengirimkan beberapa transaksi, menjalankan validator, atau lihat apakah Anda bisa mendapatkan pemotongan!"
-    }
-  ],
-  "RkSC5Q": [
-    {
-      "type": 0,
-      "value": "Pengingat, peningkatan Penggabungan "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " akan mengimplementasikan penarikan atau transfer ETH yang dipertaruhkan. Fitur ini akan disertakan dalam peningkatan Shanghai yang direncanakan setelah Penggabungan."
-    }
-  ],
-  "RqTB/U": [
-    {
-      "type": 0,
-      "value": "Pertanyaan yang Sering Ditanyakan Peta Perjalanan Ethereum"
     }
   ],
   "Rr2lI/": [
@@ -3411,12 +3045,6 @@
       "value": "Variabel lingkungan file konfigurasi Teku"
     }
   ],
-  "SEt7ZX": [
-    {
-      "type": 0,
-      "value": "Utas info Penggabungan Ethereum yang sedang berlangsung"
-    }
-  ],
   "SGzXoY": [
     {
       "type": 0,
@@ -3429,36 +3057,10 @@
       "value": "Eksekusi file yang baru saja Anda unduh."
     }
   ],
-  "SR0qHv": [
-    {
-      "type": 0,
-      "value": "Hindari penyiapan yang terlalu rumit dan waspadai pertukaran. Offline dalam periode waktu yang singkat akan mengakibatkan hukuman ketidakaktifan kecil, tetapi akan diperoleh kembali dengan mudah setelah kembali online selama jangka waktu yang kurang lebih sama. Cadangan daya yang rumit dapat menambah biaya penyiapan Anda, dan validator cadangan yang berlebihan dapat menyebabkan pemotongan."
-    }
-  ],
-  "SVLpih": [
-    {
-      "type": 0,
-      "value": "Transisi yang telah lama ditunggu ke bukti taruhan melalui Penggabungan semakin dekat, membawa Ethereum selangkah lebih dekat ke ekosistem yang lebih berkelanjutan."
-    }
-  ],
   "SaR1pU": [
     {
       "type": 0,
       "value": "Deposit sudah ada"
-    }
-  ],
-  "Sb67Wo": [
-    {
-      "type": 0,
-      "value": "Perhatian penaruh: Penggabungan semakin dekat! Tinjau "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": " untuk memastikan Anda siap."
     }
   ],
   "Sd+Pq6": [
@@ -3503,12 +3105,6 @@
       "value": "Diperlukan"
     }
   ],
-  "SpI4Xu": [
-    {
-      "type": 0,
-      "value": "Peningkatan Penggabungan mempersiapkan rantai untuk peningkatan penskalaan di masa mendatang dengan menyatukan konsensus bukti taruhan dengan Jaringan Utama. Ini membuka kemampuan untuk mengimplementasikan pecahan data guna lebih meningkatkan kapasitas dan keluaran jaringan."
-    }
-  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3543,54 +3139,16 @@
       "value": "Kunjungi situs ini di desktop untuk menjadi validator."
     }
   ],
-  "TNTj2N": [
+  "TZtYuA": [
     {
       "type": 0,
-      "value": "Panduan jaringan percobaan penggabungan "
-    },
-    {
-      "type": 1,
-      "value": "community"
-    }
-  ],
-  "TbV4N8": [
-    {
-      "type": 0,
-      "value": "Discord "
-    },
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " (keran)"
+      "value": "Istilah 'Eth1' dan 'Eth2' sudah tidak digunakan lagi dengan Penggabungan. Sejak keberhasilan transisi ke bukti taruhan melalui Penggabungan, tidak ada lagi dua jaringan Ethereum berbeda; hanya ada Ethereum."
     }
   ],
   "TfNuWP": [
     {
       "type": 0,
       "value": "virtualenv akan membantu Anda membuat lingkungan Python yang terisolasi untuk alat deposit-cli."
-    }
-  ],
-  "TfVy1O": [
-    {
-      "type": 0,
-      "value": "Lihat Daftar Periksa Kesiapan Penggabungan"
-    }
-  ],
-  "ToUcj8": [
-    {
-      "type": 0,
-      "value": "Kesiapan Penggabungan: Selain klien eksekusi, setelah Penggabungan operator simpul juga harus menjalankan "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": " agar tetap aktif."
     }
   ],
   "Tpe6yK": [
@@ -3617,12 +3175,6 @@
       "value": "lebih besar dari 50%"
     }
   ],
-  "UHbYCa": [
-    {
-      "type": 0,
-      "value": "Validator Anda memiliki saldonya sendiri - dengan saldo awal yang dijelaskan dalam kontrak deposit. Imbalan dan penalti Anda tercermin dalam saldo validator Anda dari waktu ke waktu."
-    }
-  ],
   "UJMct0": [
     {
       "type": 0,
@@ -3635,6 +3187,12 @@
     {
       "type": 0,
       "value": " untuk lebih jelasnya"
+    }
+  ],
+  "UUDnWR": [
+    {
+      "type": 0,
+      "value": "Perencanaan Shanghai (masalah GitHub)"
     }
   ],
   "UWv7yD": [
@@ -3681,48 +3239,6 @@
     {
       "type": 0,
       "value": "Jika Anda tidak memiliki folder testnet, kemungkinan Anda belum membangun dan menjalankan Nimbus dengan benar. Jalankan kembali perintah make."
-    }
-  ],
-  "V0mmZE": [
-    {
-      "type": 0,
-      "value": "Setelah Penggabungan, validator Anda juga akan bertanggung jawab untuk memroses transaksi, dan oleh karena itu berhak atas biaya gas yang tidak terbakar yang terkait dengan transaksi tersebut di blok yang diusulkan validator Anda. Biaya ini diperhitungkan pada lapisan eksekusi, bukan lapisan konsensus, dan oleh karena itu mengharuskan alamat Ethereum tradisional diberikan kepada klien Anda."
-    }
-  ],
-  "V19Udt": [
-    {
-      "type": 0,
-      "value": "Ethereum akan terdiri dari "
-    },
-    {
-      "type": 1,
-      "value": "executionLayer"
-    },
-    {
-      "type": 0,
-      "value": " (menangani transaksi dan eksekusi, sebelumnya 'Eth1'), dan "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayer"
-    },
-    {
-      "type": 0,
-      "value": " (menangani Rantai Suar bukti taruhan, sebelumnya 'Eth2' atau 'Ethereum 2.0')."
-    }
-  ],
-  "V5J3Uf": [
-    {
-      "type": 0,
-      "value": "Saya telah menyiapkan rahasia JWT bersama dan membuatnya tersedia untuk "
-    },
-    {
-      "type": 1,
-      "value": "both"
-    },
-    {
-      "type": 0,
-      "value": " klien eksekusi saya, dan klien konsensus saya (simpul suar)"
     }
   ],
   "VASo1/": [
@@ -3831,10 +3347,18 @@
       "value": "Saya yakin validator yang saya isi ulang adalah validator saya."
     }
   ],
-  "Vp4z/b": [
+  "Vm6cRY": [
     {
       "type": 0,
-      "value": "Penaruh yang menjalankan lapisan eksekusi mereka sendiri diperlukan untuk desentralisasi jaringan."
+      "value": "Komunikasi ini diamankan menggunakan rahasia "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": ", yang merupakan kunci rahasia yang hanya dibagikan di antara kedua klien untuk mengautentikasi satu sama lain. Rahasia JWT bersama ini harus tersedia untuk setiap klien (baik klien eksekusi dan konsensus) untuk memungkinkan mereka berkomunikasi dengan benar satu sama lain."
     }
   ],
   "VzGJkB": [
@@ -3847,6 +3371,20 @@
     {
       "type": 0,
       "value": "Teku berlisensi Apache 2 dan ditulis dalam Java, bahasa yang terkenal karena pengalamannya dan sangat populer."
+    }
+  ],
+  "W2Eues": [
+    {
+      "type": 0,
+      "value": "Peringatan: Ini adalah landasan peluncuran penaruhan untuk "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "W3t7Ob": [
@@ -3913,12 +3451,6 @@
       "value": "Implementasi protokol konsensus dengan fokus pada kegunaan, keamanan, dan keandalan. Prysm dikembangkan oleh Prysmatic Labs, sebuah perusahaan dengan fokus tunggal pada pengembangan klien mereka."
     }
   ],
-  "Wj99ga": [
-    {
-      "type": 0,
-      "value": "Go Ethereum - Penggabungan"
-    }
-  ],
   "WkrNSk": [
     {
       "type": 0,
@@ -3929,24 +3461,6 @@
     {
       "type": 0,
       "value": "Harap terima ketentuan di atas."
-    }
-  ],
-  "WptkFF": [
-    {
-      "type": 0,
-      "value": "Kedua lapisan diperlukan"
-    }
-  ],
-  "Wxmhku": [
-    {
-      "type": 0,
-      "value": "Biaya ini dibayarkan oleh siapa pun yang mengirimkan transaksi dan masuk dalam bentuk ETH di lapisan eksekusi (Jaringan Utama). Imbalan ini tidak diperhitungkan dalam saldo validator Anda yang dipertahankan pada lapisan konsensus."
-    }
-  ],
-  "WxqnJn": [
-    {
-      "type": 0,
-      "value": "Di sisi lain, Anda dapat dihukum karena offline dan berperilaku jahat - misalnya membuktikan pemblokiran yang tidak valid atau bertentangan."
     }
   ],
   "Wxzght": [
@@ -3967,12 +3481,6 @@
       "value": "permainan bukti penitipan"
     }
   ],
-  "X3rOq5": [
-    {
-      "type": 0,
-      "value": "Pada saat Penggabungan, Infura dan Alchemy tidak lagi menjadi opsi yang layak untuk mengalihdayakan tanggung jawab lapisan eksekusi."
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -3989,6 +3497,12 @@
     {
       "type": 0,
       "value": "Besu di dokumentasi Goerli"
+    }
+  ],
+  "XVRQoq": [
+    {
+      "type": 0,
+      "value": "Setelah Penggabungan, penyedia pihak ketiga (seperti Infura dan Alchemy) tidak lagi menjadi opsi yang layak untuk mengalihdayakan tanggung jawab lapisan eksekusi. Semua penaruh harus menjalankan baik klien eksekusi maupun konsensus untuk membuktikan jaringan dengan benar."
     }
   ],
   "XVehvN": [
@@ -4035,40 +3549,6 @@
     {
       "type": 0,
       "value": "Membangunan dari sumber"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "Klien mendukung Prometheus dan Grafana untuk membantu Anda memvisualisasikan metrik waktu nyata yang penting tentang validator Anda. Anda dapat menemukan petunjuk khusus klien di sini: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "Y07Hwy": [
@@ -4141,18 +3621,6 @@
       "value": "Kunci"
     }
   ],
-  "YHk9Pe": [
-    {
-      "type": 0,
-      "value": "Dengan Penggabungan, beban pemrosesan transaksi akan dibebankan kepada validator, karena bukti kerja sudah tidak digunakan lagi. Untuk menandatangani validitas transaksi ini, validator harus memiliki akses tepercaya ke aksi lapisan eksekusi. Hanya percayai simpul Anda sendiri."
-    }
-  ],
-  "YIjr32": [
-    {
-      "type": 0,
-      "value": "Bagi mereka yang menginginkan lebih banyak kontrol dan lebih sedikit instruksi"
-    }
-  ],
   "YP03/j": [
     {
       "type": 0,
@@ -4185,30 +3653,6 @@
     {
       "type": 0,
       "value": " Anda. Pastikan Anda menyimpannya dengan aman, lebih bagus saat offline. Keystore validator Anda akan tersedia di direktori yang baru dibuat."
-    }
-  ],
-  "YTNPFn": [
-    {
-      "type": 0,
-      "value": "Petunjuk tentang cara mengatur rahasia JWT ini berbeda-beda bergantung pada klien—operator simpul harus merujuk ke dokumentasi klien mereka untuk mendapatkan petunjuk tentang cara membuat dan mengonfigurasinya."
-    }
-  ],
-  "YX6pc0": [
-    {
-      "type": 1,
-      "value": "client"
-    },
-    {
-      "type": 0,
-      "value": " adalah "
-    },
-    {
-      "type": 1,
-      "value": "layerType"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "Yd6MEN": [
@@ -4315,12 +3759,6 @@
     {
       "type": 0,
       "value": "Mengapa saya perlu mempertaruhkan dana?"
-    }
-  ],
-  "ZPRDyW": [
-    {
-      "type": 0,
-      "value": "Sekali lagi, hal itu tergantung. Berperilaku jahat - misalnya membuktikan blok yang tidak valid atau bertentangan, akan menyebabkan taruhan Anda dipotong."
     }
   ],
   "ZTo0Fl": [
@@ -4465,12 +3903,6 @@
       "value": "Pastikan untuk memperhitungkan cukup ruang pada drive Anda sampai Anda menjalankan pemeliharaan pada node Anda."
     }
   ],
-  "bX1fts": [
-    {
-      "type": 0,
-      "value": "Daftar periksa kesiapan penggabungan"
-    }
-  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -4583,12 +4015,6 @@
       "value": "Apa itu kredensial penarikan?"
     }
   ],
-  "cwYSyN": [
-    {
-      "type": 0,
-      "value": "Tugas 3"
-    }
-  ],
   "cyNFM3": [
     {
       "type": 0,
@@ -4623,12 +4049,6 @@
       "value": " adalah field 32-bita dalam deposit, untuk memverifikasi tujuan penarikan yang valid. Saat ini, ada dua jenis penarikan: Penarikan BLS dan penarikan alamat Ethereum."
     }
   ],
-  "dGWdPu": [
-    {
-      "type": 0,
-      "value": "Semua penaruh harus mengoperasikan klien eksekusi serta klien konsensus yang dimulai pada Penggabungan. Pastikan Anda sudah siap."
-    }
-  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -4659,12 +4079,6 @@
       "value": "Isi ulang"
     }
   ],
-  "da/gCQ": [
-    {
-      "type": 0,
-      "value": "Tugas 2"
-    }
-  ],
   "deLJOg": [
     {
       "type": 0,
@@ -4675,12 +4089,6 @@
     {
       "type": 0,
       "value": "Di mana saya dapat menemukan dukungan pemecahan masalah?"
-    }
-  ],
-  "dsQVUw": [
-    {
-      "type": 0,
-      "value": "Buku Nimbus"
     }
   ],
   "dvr19k": [
@@ -4695,16 +4103,16 @@
       "value": "Port Default"
     }
   ],
+  "e+9dMk": [
+    {
+      "type": 0,
+      "value": "Dokumen JWT eksekusi:"
+    }
+  ],
   "e/PSgJ": [
     {
       "type": 0,
       "value": "Unggah data deposit"
-    }
-  ],
-  "e1dCqL": [
-    {
-      "type": 0,
-      "value": "Masalah Perencanaan Shanghai di GitHub"
     }
   ],
   "e4f94H": [
@@ -4731,22 +4139,6 @@
     {
       "type": 1,
       "value": "code3"
-    }
-  ],
-  "e4wHN4": [
-    {
-      "type": 0,
-      "value": "Landasan Peluncuran Penaruhan "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "Anda dapat menganggap kontrak deposit sebagai transfer dana antara akun Ethereum dan validator Rantai Suar."
     }
   ],
   "eKEL/g": [
@@ -4841,6 +4233,12 @@
       "value": "Selesaikan daftar periksa"
     }
   ],
+  "ezCT4A": [
+    {
+      "type": 0,
+      "value": "Pertimbangan EIP Inti Shanghai"
+    }
+  ],
   "f/N7FO": [
     {
       "type": 0,
@@ -4859,12 +4257,6 @@
     {
       "type": 0,
       "value": " ETH. Informasi ini dengan mudah disajikan oleh dan didapatkan dari penyedia pihak ketiga seperti Infura atau Alchemy."
-    }
-  ],
-  "fDY/uQ": [
-    {
-      "type": 0,
-      "value": "Teku - Penggabungan"
     }
   ],
   "fHLKXR": [
@@ -4925,6 +4317,12 @@
     {
       "type": 0,
       "value": "tidak dapat melakukan penarikan"
+    }
+  ],
+  "g2k5M/": [
+    {
+      "type": 0,
+      "value": "Saran perangkat keras merupakan target yang terus berkembang. Persyaratan minimum saat ini cenderung meningkat dengan urutan besarnya setelah pengenalan pecahan. Lakukan riset Anda sendiri sebelum menyetorkan dana."
     }
   ],
   "g37XKP": [
@@ -5065,6 +4463,12 @@
       "value": "Taruhan Anda"
     }
   ],
+  "hBIbQ+": [
+    {
+      "type": 0,
+      "value": "Hindari penyiapan yang terlalu rumit dan waspadai kompromi. Luring dalam periode waktu yang singkat akan mengakibatkan penalti ketidakaktifan kecil, tetapi akan diperoleh kembali dengan mudah setelah kembali daring selama jangka waktu yang kurang lebih sama. Cadangan daya yang rumit dapat menambah biaya penyiapan Anda, dan validator cadangan yang berlebihan dapat menyebabkan penalti yang lebih serius yang dikenal sebagai pemotongan."
+    }
+  ],
   "hFzE1M": [
     {
       "type": 0,
@@ -5075,12 +4479,6 @@
     {
       "type": 0,
       "value": "Hanya desktop"
-    }
-  ],
-  "hICY9k": [
-    {
-      "type": 0,
-      "value": "Saya telah memberikan alamat Ethereum kepada validator saya yang menjadi tempat disetorkannya imbalan biaya saya."
     }
   ],
   "hPCn9f": [
@@ -5163,10 +4561,10 @@
       "value": "Saya memahami bahwa penting untuk menjaga validator saya tetap online dan terbarukan."
     }
   ],
-  "hzX7K4": [
+  "i7alIW": [
     {
       "type": 0,
-      "value": "Tugas 1"
+      "value": "Ini menjadi persyaratan pada saat Penggabungan, jadi pastikan Anda menjalankan keduanya sebelum penaruhan."
     }
   ],
   "iCpuph": [
@@ -5175,10 +4573,38 @@
       "value": "Klien"
     }
   ],
+  "iFWLYC": [
+    {
+      "type": 0,
+      "value": "Anda dapat menganggap kontrak deposit sebagai transfer dana dari akun Ethereum ke akun validator bukti taruhan."
+    }
+  ],
   "iMvXLd": [
     {
       "type": 0,
       "value": "Menjalankan klien validator"
+    }
+  ],
+  "iN1PPs": [
+    {
+      "type": 0,
+      "value": "Setiap deposit "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH mengaktifkan satu set kunci validator. Kunci ini digunakan untuk menandatangani state jaringan. Semakin rendah persyaratan ETH, semakin banyak tanda tangan dihasilkan yang harus disimpan oleh jaringan. "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH dipilih sebagai saldo antara memungkinkan sebanyak mungkin orang untuk mempertaruhkan tanpa menghambat desentralisasi dengan membengkakkan ukuran setiap blok dengan tanda tangan."
     }
   ],
   "iPRnRG": [
@@ -5233,12 +4659,6 @@
       "value": "PegaSys Teku adalah klien konsensus Ethereum berbasis Java yang dibangun untuk memenuhi kebutuhan institusional dan persyaratan keamanan."
     }
   ],
-  "irRdC0": [
-    {
-      "type": 0,
-      "value": "Saran perangkat keras merupakan target yang terus berkembang. Persyaratan minimum saat ini cenderung meningkat dengan urutan besarnya setelah penggabungan dan pengenalan rantai pecahan. Lakukan riset Anda sendiri sebelum menyetorkan dana."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
@@ -5259,20 +4679,6 @@
     {
       "type": 0,
       "value": "Sebelumnya dikenal sebagai Artemis, Teku adalah klien konsensus yang dibangun untuk memenuhi kebutuhan institusional dan persyaratan keamanan. PegaSys adalah cabang dari ConsenSys, yang didedikasikan untuk membangun klien dan perangkat yang siap untuk perusahaan untuk berinteraksi dengan platform inti Ethereum."
-    }
-  ],
-  "jQTc9t": [
-    {
-      "type": 0,
-      "value": "Kunjungi di sini untuk mendapatkan informasi terbaru tentang cara agar bisa terlibat dengan "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " di jaringan percobaan publik lainnya saat detailnya terbuka."
     }
   ],
   "jXer8/": [
@@ -5351,24 +4757,16 @@
       "value": "Dokumentasi Nimbus"
     }
   ],
-  "jzGCBy": [
-    {
-      "type": 0,
-      "value": "Keran "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " telah disalahgunakan, dan dibatasi, tetapi orang-orang di EthStaker akan melakukan yang terbaik untuk membantu Anda"
-    }
-  ],
   "k43c+l": [
     {
       "type": 0,
       "value": "Lihat audit Wagyu Key Gen oleh HashCloak"
+    }
+  ],
+  "k4x6Ud": [
+    {
+      "type": 0,
+      "value": "Ini menandai penggabungan lapisan eksekusi (Jaringan Utama yang ada) dengan lapisan konsensus baru (Rantai Suar) untuk membentuk rantai Ethereum tunggal saat ini."
     }
   ],
   "kFS5Sd": [
@@ -5419,6 +4817,12 @@
       "value": "Seiring waktu, saldo Anda akan berkurang karena Anda dihukum akibat tidak berpartisipasi dalam proses konsensus. Ketika saldo Anda mencapai 16 ETH, Anda akan secara otomatis keluar dari kumpulan validator."
     }
   ],
+  "kn06Zz": [
+    {
+      "type": 0,
+      "value": "Dokumen pemantauan:"
+    }
+  ],
   "kn7kJd": [
     {
       "type": 0,
@@ -5431,6 +4835,12 @@
       "value": "Hubungi kami"
     }
   ],
+  "krxu73": [
+    {
+      "type": 0,
+      "value": "Meningkatkan Penggabungan secara resmi membawa bukti taruhan ke Ethereum pada tanggal 15 September 2022, yang secara bersamaan tidak lagi menggunakan bukti kerja. Ini mempersiapkan rantai untuk meningkatkan penskalaan mendatang seperti pecahan data dengan membawa konsensus bukti taruhan bersama dengan Penggabungan, sekaligus mengurangi konsumsi energi hingga lebih dari 99,9%."
+    }
+  ],
   "kuYpoI": [
     {
       "type": 0,
@@ -5441,6 +4851,12 @@
     {
       "type": 0,
       "value": "Keluar"
+    }
+  ],
+  "kzGlnG": [
+    {
+      "type": 0,
+      "value": "Imbalan dan penalti diberikan kira-kira setiap enam setengah menit—periode waktu yang dikenal sebagai jangka waktu."
     }
   ],
   "l/uCcX": [
@@ -5563,6 +4979,12 @@
       "value": " yang dipertaruhkan"
     }
   ],
+  "lV3Ttw": [
+    {
+      "type": 0,
+      "value": "Tutorial Penyiapan Simpul"
+    }
+  ],
   "lVARlA": [
     {
       "type": 0,
@@ -5631,20 +5053,6 @@
       "value": "Ini adalah transaksi yang tidak dapat dikembalikan."
     }
   ],
-  "lmr40S": [
-    {
-      "type": 0,
-      "value": "Komunikasi ini diamankan menggunakan rahasia "
-    },
-    {
-      "type": 1,
-      "value": "jwt"
-    },
-    {
-      "type": 0,
-      "value": ", yang merupakan kunci rahasia yang hanya dibagikan di antara kedua klien untuk mengautentikasi satu sama lain. Rahasia JWT bersama ini harus tersedia untuk setiap klien (baik EL dan CL) untuk mengautentikasi API Mesin dengan benar, yang memungkinkan mereka berkomunikasi dengan benar antara satu sama lain."
-    }
-  ],
   "lo+Qqn": [
     {
       "type": 0,
@@ -5661,6 +5069,12 @@
     {
       "type": 0,
       "value": "Hard drive"
+    }
+  ],
+  "mH6bSl": [
+    {
+      "type": 0,
+      "value": "Sejak keberhasilan transisi ke bukti taruhan melalui Penggabungan, Ethereum diamankan sepenuhnya oleh validator bukti taruhan. Dengan menjalankan validator, Anda akan membantu mengamankan jaringan Ethereum."
     }
   ],
   "mUZnem": [
@@ -5685,16 +5099,16 @@
       "value": " adalah entitas virtual yang ada di Rantai Suar, yang diwakili oleh saldo, kunci publik, dan properti lainnya, dan berpartisipasi dalam konsensus jaringan Ethereum."
     }
   ],
-  "mcQpea": [
-    {
-      "type": 0,
-      "value": "Semua yang Anda butuhkan untuk memulai jaringan, termasuk keran"
-    }
-  ],
   "mhyltV": [
     {
       "type": 0,
       "value": "Saya telah mengatur bendera grafiti saya."
+    }
+  ],
+  "mloLQ5": [
+    {
+      "type": 0,
+      "value": "Semua penaruh harus mengoperasikan klien eksekusi dengan klien konsensus mereka."
     }
   ],
   "mpmFDY": [
@@ -5715,24 +5129,10 @@
       "value": "Anda harus menjalankan klien eksekusi (sebelumnya 'Eth1') serta klien konsensus (sebelumnya 'Eth2') untuk menjadi validator. Lihatlah daftar periksa untuk mempersiapkan diri dan peralatan Anda."
     }
   ],
-  "nHk8Et": [
+  "nRWZl3": [
     {
       "type": 0,
-      "value": "PoS adalah mekanisme konsensus yang lebih aman, terdesentralisasi, dan ramah lingkungan daripada bukti kerja (PoW) yang mengamankan Ethereum saat ini. Ini memberi hadiah kepada validator untuk membangun rantai, tetapi memotong deposit mereka jika mencoba menyerangnya, hal ini demi mendorong perilaku yang sehat. Peningkatan ini sudah berjalan dalam bentuk Rantai Beacon."
-    }
-  ],
-  "nIb6XF": [
-    {
-      "type": 0,
-      "value": "Dan hukuman berat - atau "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": " - diberikan untuk tindakan jahat."
+      "value": "Sekali lagi, hal itu tergantung. Berperilaku jahat—misalnya membuktikan blok yang tidak valid atau bertentangan—akan menyebabkan taruhan Anda dipotong."
     }
   ],
   "nRdJct": [
@@ -5801,16 +5201,6 @@
       "value": "TESTNET_LAUNCHPAD_NAME"
     }
   ],
-  "nyx/4g": [
-    {
-      "type": 0,
-      "value": "Cara menjalankan simpul di "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "nz27+c": [
     {
       "type": 0,
@@ -5849,6 +5239,12 @@
     {
       "type": 0,
       "value": "Setelah kunci diimpor, yang harus dilakukan (dengan asumsi node beacon Anda sudah berjalan) adalah menjalankan klien validator."
+    }
+  ],
+  "oNP2EG": [
+    {
+      "type": 0,
+      "value": "Saat ini Lighthouse digunakan oleh >33% jaringan."
     }
   ],
   "oNohob": [
@@ -5897,20 +5293,6 @@
       "value": "Tanggung jawab"
     }
   ],
-  "olByWa": [
-    {
-      "type": 0,
-      "value": "Sambil menunggu transisi Jaringan Utama ke bukti taruhan, penaruh didorong untuk berpartisipasi dalam "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": ". Ini adalah cara yang bagus untuk mempelajari selengkapnya tentang Penggabungan, berlatih menelusurinya sebelum Jaringan Utama, dan mendapatkan kepercayaan diri dalam pengaturan Anda."
-    }
-  ],
   "omJNJw": [
     {
       "type": 0,
@@ -5933,12 +5315,6 @@
     {
       "type": 0,
       "value": "Apakah kontrak memiliki saldo yang besar?"
-    }
-  ],
-  "ouMFoC": [
-    {
-      "type": 0,
-      "value": "Lakukan ini sekarang"
     }
   ],
   "ouW9ov": [
@@ -5993,6 +5369,12 @@
       "value": "!"
     }
   ],
+  "pGnk/z": [
+    {
+      "type": 0,
+      "value": "Ya, tetapi dengan penalti kecil. Jika Anda luring selama beberapa hari dalam kondisi normal, Anda akan kehilangan sejumlah ETH yang kira-kira setara dengan jumlah ETH yang akan Anda peroleh dalam periode itu. Dengan kata lain, jika Anda berhasil mendapatkan ≈0,01 ETH, Anda akan mendapat penalti ≈0,01 ETH."
+    }
+  ],
   "pHQwsN": [
     {
       "type": 0,
@@ -6039,26 +5421,16 @@
       "value": "Saya telah mensimulasikan cara menghentikan dan memulai ulang Node Beacon (BN) dan Klien Validator (VC) saya dengan baik."
     }
   ],
-  "pxfiWL": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " adalah jaringan percobaan publik yang lebih muda yang telah menjalani transisi ke bukti taruhan setelah berhasil menjalani peningkatan penggabungan pada bulan Maret 2022. Kiln terbuka bagi siapa saja untuk berinteraksi. Cobalah mengirimkan beberapa ETH, berinteraksi dengan beberapa kontraktor, atau menyebarkan milik Anda."
-    }
-  ],
   "pyWt01": [
     {
       "type": 0,
       "value": "Ringkasan deposit"
     }
   ],
-  "q2PJEK": [
+  "q/ZayM": [
     {
       "type": 0,
-      "value": "Saya menjalankan klien konsensus sendiri."
+      "value": "Fitur penarikan diusulkan untuk dimasukkan dalam peningkatan Shanghai yang akan datang. Setelah fungsionalitas ini ditambahkan, saldo Anda kemudian dapat ditarik—dengan kunci penarikan Anda—setelah penundaan minumum sekitar satu hari."
     }
   ],
   "q2XW/k": [
@@ -6085,20 +5457,6 @@
     {
       "type": 0,
       "value": " untuk menarik dana saya."
-    }
-  ],
-  "qEsYC0": [
-    {
-      "type": 0,
-      "value": "Anda juga dapat melihat GitHub untuk "
-    },
-    {
-      "type": 1,
-      "value": "allConfigs"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "qK4+NQ": [
@@ -6217,26 +5575,6 @@
       "value": "Tutup"
     }
   ],
-  "rcdxTW": [
-    {
-      "type": 0,
-      "value": "Dengan jumlah total validator yang tetap, hadiah / penalti sebagian besar berskala dengan keseimbangan validator - membuktikan dengan saldo yang lebih tinggi menghasilkan hadiah / penalti yang lebih besar sedangkan membuktikan dengan saldo yang lebih rendah menghasilkan hadiah / penalti yang lebih rendah."
-    }
-  ],
-  "rgjQYI": [
-    {
-      "type": 0,
-      "value": "Kesiapan Penggabungan: Selain klien konsensus, setelah Penggabungan operator simpul juga harus menjalankan "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": " agar tetap aktif."
-    }
-  ],
   "rnDgcN": [
     {
       "type": 0,
@@ -6319,26 +5657,6 @@
       "value": "CPU dan RAM"
     }
   ],
-  "saDFoR": [
-    {
-      "type": 0,
-      "value": "Bonus"
-    }
-  ],
-  "scfDDt": [
-    {
-      "type": 0,
-      "value": "Komunikasi antara lapisan eksekusi dan lapisan konsensus akan terjadi menggunakan "
-    },
-    {
-      "type": 1,
-      "value": "engineApi"
-    },
-    {
-      "type": 0,
-      "value": ". Ini adalah kumpulan metode JSON RPC baru yang dapat digunakan untuk berkomunikasi di antara kedua lapisan klien."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6375,6 +5693,12 @@
       "value": "Saya memahami dan menyetujui ketentuan layanan dan semua yang disebutkan di bagian sebelumnya."
     }
   ],
+  "szh4Xy": [
+    {
+      "type": 0,
+      "value": "Saya telah menyiapkan rahasia JWT bersama dan membuatnya tersedia baik untuk klien eksekusi saya, dan klien konsensus saya (simpul suar)"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -6385,6 +5709,12 @@
     {
       "type": 0,
       "value": "Pelajari selengkapnya tentang penggantian nama yang hebat"
+    }
+  ],
+  "taENNR": [
+    {
+      "type": 0,
+      "value": "Saat ini tidak ada cara bagi Anda untuk mengaktifkan kembali validator, dan Anda tidak akan dapat mentransfer atau menarik dana sampai penarikan diaktifkan. Hal ini diusulkan untuk dimasukkan dalam meningkatkan jaringan berikutnya, yang dikenal sebagai peningkatan Shanghai. Ini berarti dana Anda tetap tidak dapat diakses sampai saat itu."
     }
   ],
   "tbYkT4": [
@@ -6417,12 +5747,6 @@
     {
       "type": 0,
       "value": "Saldo setelah isi ulang"
-    }
-  ],
-  "tp1IPS": [
-    {
-      "type": 0,
-      "value": "Mengonfigurasi penerima biaya"
     }
   ],
   "tsfX5f": [
@@ -6481,6 +5805,12 @@
       "value": "Setelah melakukan deposit"
     }
   ],
+  "u4em9Z": [
+    {
+      "type": 0,
+      "value": "Setelah Penggabungan, validator juga akan bertanggung jawab untuk memroses transaksi, dan oleh karena itu berhak atas biaya gas yang tidak terbakar yang terkait dengan transaksi yang disertakan saat mengusulkan blok. Biaya ini diperhitungkan pada lapisan eksekusi, bukan lapisan konsensus, dan oleh karena itu mengharuskan alamat Ethereum tradisional diberikan kepada klien Anda."
+    }
+  ],
   "u564LK": [
     {
       "type": 0,
@@ -6491,12 +5821,6 @@
     {
       "type": 0,
       "value": "Waktu nyala"
-    }
-  ],
-  "uGKswV": [
-    {
-      "type": 0,
-      "value": "Setelah penggabungan, simpul Ethereum akan terdiri dari klien eksekusi, dan klien konsensus."
     }
   ],
   "uJzGSb": [
@@ -6519,12 +5843,6 @@
     {
       "type": 0,
       "value": "Daftar periksa validator"
-    }
-  ],
-  "uUy3NQ": [
-    {
-      "type": 0,
-      "value": "Saya memahami bahwa saya akan mendapatkan biaya transaksi yang tidak terbakar (tips/biaya prioritas) saat mengusulkan sebuah blok, dan ini diperhitungkan di lapisan eksekusi, bukan saldo validator saya."
     }
   ],
   "ubKWX8": [
@@ -6567,18 +5885,6 @@
       "value": "Menjadi validator dengan Nimbus"
     }
   ],
-  "ulgIVs": [
-    {
-      "type": 0,
-      "value": "Setelah penggabungan, tidak akan ada lagi dua jaringan Ethereum yang berbeda; hanya akan ada Ethereum."
-    }
-  ],
-  "uoKhQB": [
-    {
-      "type": 0,
-      "value": "API Autentikasi"
-    }
-  ],
   "up+5YH": [
     {
       "type": 0,
@@ -6591,6 +5897,20 @@
     {
       "type": 0,
       "value": " baru-baru ini?"
+    }
+  ],
+  "v6ytKW": [
+    {
+      "type": 0,
+      "value": "Dan penalti berat—atau "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": "—diberikan untuk tindakan jahat."
     }
   ],
   "vBJ79e": [
@@ -6671,28 +5991,10 @@
       "value": " sesegeraa mungkin. Kemudian bergabunglah dengan komunitas EthStaker untuk mendapatkan dukungan dan diskusi dengan sesama validator."
     }
   ],
-  "vej0DE": [
-    {
-      "type": 0,
-      "value": "Hari ini, Anda akan mengamankan Rantai Suar, peningkatan penskalaan utama pertama. Ini adalah rantai terpisah yang menggunakan mekanisme konsensus bukti taruhan. Secepatnya Anda akan membantu mengamankan semua Ethereum, setelah Jaringan Utama (Ethereum yang kita gunakan hari ini) bergabung dengan Rantai Suar."
-    }
-  ],
-  "vg1dVR": [
-    {
-      "type": 0,
-      "value": "Dengan kunci penandatanganan Anda, Anda dapat mencoba untuk keluar dari validator dengan cepat dan kemudian mentransfer dana - dengan kunci penarikan - sebelum pencuri."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Jalankan perintah berikut untuk meluncurkan aplikasi"
-    }
-  ],
-  "wHvmSN": [
-    {
-      "type": 0,
-      "value": "keduanya"
     }
   ],
   "wJ1PbL": [
@@ -6709,12 +6011,6 @@
     {
       "type": 0,
       "value": "Pengaturan awal"
-    }
-  ],
-  "wPR6Js": [
-    {
-      "type": 0,
-      "value": "Sebelum beralih, ada beberapa hal yang perlu diperhatikan penaruh solo dan layanan validator, serta beberapa tugas yang mungkin perlu Anda tangani."
     }
   ],
   "wawegX": [
@@ -6735,12 +6031,6 @@
       "value": "Lebih lanjut tentang Proof of Stake"
     }
   ],
-  "wea8Ie": [
-    {
-      "type": 0,
-      "value": "Lapisan eksekusi dan konsensus bekerja sama dengan erat, dan memerlukan autentikasi agar tetap aman."
-    }
-  ],
   "wm04oC": [
     {
       "type": 0,
@@ -6759,12 +6049,6 @@
       "value": "Apakah ada kesalahan ejaan?"
     }
   ],
-  "wuhO1L": [
-    {
-      "type": 0,
-      "value": "Saya menjalankan klien eksekusi saya sendiri."
-    }
-  ],
   "x+fF+M": [
     {
       "type": 0,
@@ -6781,6 +6065,28 @@
     {
       "type": 0,
       "value": "Kami sangat menyarankan Anda menyelesaikan langkah-langkah ini di jaringan percobaan sebelum Jaringan Utama."
+    }
+  ],
+  "x9xppN": [
+    {
+      "type": 0,
+      "value": "Dengan selesainya transisi ke bukti taruhan melalui Penggabungan, sekarang validator akan bertanggung jawab untuk memroses transaksi dan menandatangani validitasnya. Data ini "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " akan tersedia dari sumber pihak ketiga yang populer setelah Penggabungan. Penggunaan penyedia pihak ketiga akan menyebabkan validator Anda luring. Ketika pecahan data diimplementasikan, validator juga akan berisiko mendapatkan pemotongan berdasarkan "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "xDyl3T": [
@@ -6859,6 +6165,12 @@
       "value": ", jika tidak, deposit tidak akan valid."
     }
   ],
+  "xZZMZ5": [
+    {
+      "type": 0,
+      "value": "jaringan percobaan"
+    }
+  ],
   "xbet2w": [
     {
       "type": 0,
@@ -6895,10 +6207,10 @@
       "value": "clientName"
     }
   ],
-  "xyMh/n": [
+  "xzmWbJ": [
     {
       "type": 0,
-      "value": "Daftar Sumber Daya Penggabungan Mega"
+      "value": "Validator Anda memiliki saldo sendiri, dengan saldo awal yang dijelaskan dalam kontrak deposit. Imbalan dan penalti Anda tercermin dalam saldo validator Anda dari waktu ke waktu."
     }
   ],
   "y44jV2": [
@@ -6937,12 +6249,6 @@
       "value": "Saya menyimpan kunci saya dengan aman dan telah menuliskan frasa mnemonik saya."
     }
   ],
-  "yaf+Vw": [
-    {
-      "type": 0,
-      "value": "Komunikasi dua arah antara klien EL dan klien CL memerlukan rahasia JWT untuk autentikasi, dan sangat penting agar simpul Anda berfungsi."
-    }
-  ],
   "ydh1KU": [
     {
       "type": 0,
@@ -6979,26 +6285,10 @@
       "value": "Pastikan node Anda memiliki lebih dari 20 peer."
     }
   ],
-  "z/ToMo": [
+  "yw4vsX": [
     {
       "type": 0,
-      "value": "Setelah transisi ke bukti taruhan selesai melalui Penggabungan, validator akan bertanggung jawab untuk memroses transaksi dan menandatangani validitasnya. Data ini "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " akan tersedia dari sumber pihak ketiga yang populer setelah Penggabungan dan akan menyebabkan validator Anda offline. Ketika pecahan data diimplementasikan, validator juga akan berisiko mendapatkan pemotongan berdasarkan "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Di sisi lain, Anda bisa mendapat penalti karena luring dan berperilaku jahat—misalnya membuktikan blok yang tidak valid atau bertentangan."
     }
   ],
   "z63I56": [
@@ -7065,10 +6355,18 @@
       "value": "Kami akan membantu Anda membuat kunci penandatanganan untuk setiap validator yang ingin Anda jalankan. Karena tidak ada penarikan sampai peningkatan Shanghai yang direncanakan setelah Penggabungan, Anda tidak akan membuat kunci penarikan sekarang. Jika memungkinkan untuk menarik dana, Anda dapat memperoleh kunci penarikan dari mnemonik Anda."
     }
   ],
-  "zqOrZZ": [
+  "zpmjjy": [
     {
       "type": 0,
-      "value": "Lihat Daftar Periksa Kesiapan Penggabungan"
+      "value": "Komunikasi antara lapisan eksekusi dan lapisan konsensus akan terjadi menggunakan "
+    },
+    {
+      "type": 1,
+      "value": "engineApi"
+    },
+    {
+      "type": 0,
+      "value": ". Ini adalah kumpulan metode JSON RPC yang dapat digunakan untuk berkomunikasi di antara kedua lapisan klien."
     }
   ]
 }

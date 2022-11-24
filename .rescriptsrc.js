@@ -12,6 +12,13 @@ module.exports = [
             ast: true,
           },
         ],
+        [
+          'babel-plugin-styled-components',
+          {
+            displayName: true,
+            fileName: false,
+          },
+        ],
       ],
     },
   ],

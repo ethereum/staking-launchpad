@@ -1,0 +1,21 @@
+@import '../functions/number';
+
+/**
+ * Define CSS variable styles.
+ *
+ * Example:
+ * @include define-color('neutral', 206, 30%, [20, 50]);
+ * will generate following styles:
+ * --neutral-20;
+ * --neutral-50;
+ *
+ * @param name - name of the color
+ * @param hue - hue of the color
+ * @param saturation - saturation of the color
+ * @param lightness - array of the lightness values for the color
+ */
+@mixin define-color($name, $hue, $saturation, $lightness) {
+  @each $light in $lightness {
+    --#{$name}-#{$light}: #{hsla($hue, $saturation, number($light) * 1%)};
+  }
+}

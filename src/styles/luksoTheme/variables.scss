@@ -1,0 +1,55 @@
+@import './mixins/define-color';
+
+:root {
+  // Neutral colors
+  @include define-color(
+    'neutral',
+    206,
+    30%,
+    [10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    97,
+    98,
+    100]
+  );
+
+  // Accent colors
+  @include define-color('honey', 42, 93%, [72, 75, 82, 85, 92]);
+  @include define-color('coral', 14, 87%, [65, 74, 75, 84, 85, 94]);
+  @include define-color('warm', 25, 100%, [77, 87, 97]);
+  @include define-color('sea-salt', 180, 17%, [57, 67, 88]);
+  @include define-color('cloud', 200, 38%, [43, 75, 88]);
+  @include define-color('ocean', 209, 38%, [38, 75, 88]);
+  @include define-color('sky', 209, 64%, [64, 75, 85]);
+  @include define-color('lukso', 335, 33%, [70, 80, 90]);
+
+  // Utility colors
+  @include define-color('yellow', 36, 100%, [65, 75, 85]);
+  @include define-color('green', 135, 57%, [54, 75, 85]);
+  @include define-color('blue', 216, 96%, [60, 75, 85]);
+  @include define-color('red', 0, 75%, [65, 75, 85]);
+
+  // Purples
+  @include define-color('purple', 230, 24%, [94, 82, 63, 51, 41, 31, 15]);
+
+  // Font
+  --font-family-primary: apax, sans-serif;
+  --font-family-secondary: inter, sans-serif;
+  --font-family-mono: 'PT Mono', sans-serif;
+}

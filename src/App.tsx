@@ -13,6 +13,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import { reducers } from './store/reducers';
 import { LocalizedRouter } from './components/LocalizedRouter';
 import { Footer } from './components/Footer';
+import './styles/luksoTheme.scss';
 
 export const store = createStore(
   reducers,

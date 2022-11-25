@@ -1,0 +1,16 @@
+div[class*='StyledDrop'] {
+  border-radius: 12px !important;
+  border: 1px solid var(--neutral-90) !important;
+  padding: 12px !important;
+  box-shadow: var(--shadow-1xl) !important;
+
+  a[class*='StyledExternalLink'] {
+    color: var(--purple-41) !important;
+    white-space: nowrap !important;
+    @extend %landing-pages-nav-12-medium;
+
+    &::after {
+      display: none; // hide link icon
+    }
+  }
+}

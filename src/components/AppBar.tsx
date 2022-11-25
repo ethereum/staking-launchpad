@@ -6,7 +6,7 @@ import { Box, DropButton } from 'grommet';
 import { Menu, Language, FormDown } from 'grommet-icons';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import EthDiamond from '../static/eth-diamond-plain.svg';
+import LuksoLogo from '../static/lukso-logo.svg';
 import { web3ReactInterface } from '../pages/ConnectWallet';
 import {
   AllowedNetworks,
@@ -172,7 +172,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     >
       <NavBarLinks>
         <Link to={routesEnum.landingPage} className="mr30">
-          <EthLogo src={EthDiamond} alt="eth-diamond" />
+          <EthLogo src={LuksoLogo} alt="Lukso Logo" />
           {!mobile && (
             <div className="flex flex-column center ml5">
               <BarLinkText

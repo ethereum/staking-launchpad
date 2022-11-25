@@ -1,6 +1,5 @@
+@import './font';
 @import './variables';
 @import './typography';
-
-[class^='InfoContainer'] [class^='StyledHeading'] {
-  @extend %landing-pages-h1-title-bold;
-}
+@import './header';
+@import './dropdown';

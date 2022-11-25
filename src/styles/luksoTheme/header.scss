@@ -1,0 +1,63 @@
+header[class*='AppBar__RainbowBackground'] {
+  background-image: none;
+  background-color: var(--neutral-100);
+  box-shadow: var(--shadow-1xl);
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  [class*='BarLinkText'],
+  [class*='StyledText'] {
+    color: var(--purple-41);
+    @extend %landing-pages-nav-12-medium;
+  }
+
+  [class*='StyledText'] {
+    font-size: 14px;
+    width: 100px;
+  }
+
+  div[class*='NavLinksRight'] {
+    a[class*='StyledLink'] {
+      display: none; // we hide language selection as we will use English only
+    }
+
+    button[class*='ValidatorDropdown'] {
+      div[class*='NetworkText'] {
+        border-radius: 12px;
+        border-color: var(--neutral-90);
+        padding: 11px 17px;
+        color: var(--purple-41);
+        display: flex;
+        align-items: center;
+        @extend %landing-pages-nav-12-medium;
+
+        svg {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          background-image: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  img[class*='EthLogo'] {
+    height: 26px;
+    width: 112px;
+    margin-right: 16px;
+  }
+
+  [class*='AppBar__NavBarLinks'] {
+    width: 100%;
+
+    [class*='StyledLink'] {
+      &:first-child {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+      }
+    }
+  }
+}

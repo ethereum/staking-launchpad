@@ -45,21 +45,21 @@ that should be used together with @extend keyword.
 }
 
 %landing-pages-paragraph-16-regular-link {
-  font-family: var(--font-family-secondary);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
+  font-family: var(--font-family-secondary) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
 }
 
 %landing-pages-nav-12-medium {
-  font-family: var(--font-family-primary);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--font-family-primary) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  line-height: 14px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
 }
 
 // Heading

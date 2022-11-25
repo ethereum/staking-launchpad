@@ -6,247 +6,247 @@ that should be used together with @extend keyword.
 @example
 ```scss
 .my-class {
-  @extend %paragraph-16-regular !important;
+  @extend %paragraph-16-regular;
 }
 ```
 */
 
 // Landing pages
 %landing-pages-h1-title-bold {
-  font-family: var(--font-family-primary) !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 48px !important;
-  line-height: 58px !important;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 58px;
 }
 
 %landing-pages-h1-title-regular {
-  font-family: var(--font-family-primary) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 48px !important;
-  line-height: 58px !important;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
 }
 
 %landing-pages-h2-title-bold {
-  font-family: var(--font-family-primary) !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 40px !important;
-  line-height: 48px !important;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 %landing-pages-h2-title-regular {
-  font-family: var(--font-family-primary) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 40px !important;
-  line-height: 48px !important;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 %landing-pages-paragraph-16-regular-link {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 %landing-pages-nav-12-medium {
-  font-family: var(--font-family-primary) !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 12px !important;
-  line-height: 14px !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 // Heading
 
 %h1 {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 26px !important;
-  line-height: 31px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
 }
 
 %h2 {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 21px !important;
-  line-height: 26px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 %h3 {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 17px !important;
-  line-height: 22px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
 }
 
 %h4 {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 12px !important;
-  line-height: 15px !important;
-  letter-spacing: 0.02em !important;
-  text-transform: uppercase !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 %h5 {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 14px !important;
-  line-height: 17px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 // Paragraph
 
 %paragraph-16-regular {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 %paragraph-14-regular {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 14px !important;
-  line-height: 22px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 %paragraph-14-medium {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 14px !important;
-  line-height: 22px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 %paragraph-14-semi-bold {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 14px !important;
-  line-height: 22px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 %paragraph-12-regular {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 12px !important;
-  line-height: 20px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 %paragraph-12-medium {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 12px !important;
-  line-height: 20px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 %paragraph-12-semi-bold {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  line-height: 20px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 // Currency
 
 %currency-10-semi-bold {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 10px !important;
-  line-height: 12px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
 }
 
 %currency-10-bold-uppercase {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 10px !important;
-  line-height: 12px !important;
-  text-transform: uppercase !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
 }
 
 %currency-14-semi-bold {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 14px !important;
-  line-height: 17px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 // utility
 
 %link {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 17px !important;
-  line-height: 140.52% !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 140.52%;
 }
 
 %button-text {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 17px !important;
-  line-height: 17px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 17px;
 }
 
 %caption {
-  font-family: var(--font-family-secondary) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 13px !important;
-  line-height: 20px !important;
+  font-family: var(--font-family-secondary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 // Monospaced
 
 %monospace-16-regular {
-  font-family: var(--font-family-mono) !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 22px !important;
+  font-family: var(--font-family-mono);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 %monospace-16-bold {
-  font-family: var(--font-family-mono) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 16px !important;
-  line-height: 22px !important;
+  font-family: var(--font-family-mono);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 %monospace-12-bold {
-  font-family: var(--font-family-mono) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 12px !important;
-  line-height: 14px !important;
+  font-family: var(--font-family-mono);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 %monospace-10-bold {
-  font-family: var(--font-family-mono) !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 10px !important;
-  line-height: 14px !important;
+  font-family: var(--font-family-mono);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 14px;
 }

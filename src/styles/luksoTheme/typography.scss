@@ -64,7 +64,7 @@ that should be used together with @extend keyword.
 
 // Heading
 
-%h1 {
+%heading-h1 {
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: 600;
@@ -72,7 +72,7 @@ that should be used together with @extend keyword.
   line-height: 31px;
 }
 
-%h2 {
+%heading-h2 {
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: 600;
@@ -80,7 +80,7 @@ that should be used together with @extend keyword.
   line-height: 26px;
 }
 
-%h3 {
+%heading-h3 {
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: 600;
@@ -88,7 +88,7 @@ that should be used together with @extend keyword.
   line-height: 22px;
 }
 
-%h4 {
+%heading-h4 {
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: 700;
@@ -98,7 +98,7 @@ that should be used together with @extend keyword.
   text-transform: uppercase;
 }
 
-%h5 {
+%heading-h5 {
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: 700;

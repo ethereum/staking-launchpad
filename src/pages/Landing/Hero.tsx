@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import Animate from 'animate.css-react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
+import LuksoHero from '../../static/lukso-hero.png';
 import { routesEnum } from '../../Routes';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
@@ -133,11 +133,7 @@ const ButtonContainer = styled.div`
 const LeslieImage: React.FC<{ style?: React.CSSProperties }> = ({ style }) => (
   <div>
     <ScrollAnimation animateIn="fadeIn" delay={750} animateOnce>
-      <StyledLeslieImgNode
-        src={LeslieTheRhinoPNG}
-        alt="Leslie the Rhino - Ethereum staking mascot"
-        {...{ style }}
-      />
+      <StyledLeslieImgNode src={LuksoHero} alt="Lukso Hero" {...{ style }} />
     </ScrollAnimation>
   </div>
 );

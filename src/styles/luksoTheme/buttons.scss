@@ -1,0 +1,51 @@
+%button {
+  background-image: none;
+  padding: 0 24px;
+  height: 48px;
+  border-radius: 12px;
+  text-transform: none;
+  letter-spacing: initial;
+  transition: var(--transition-02);
+  transform: scale(1);
+  @extend %heading-h3;
+
+  &:active,
+  &:focus {
+    transition: var(--transition-01);
+  }
+}
+
+%button-primary {
+  background-color: var(--purple-51);
+  border-color: var(--purple-51);
+  color: var(--neutral-100);
+  @extend %button;
+
+  &:hover {
+    background-color: var(--purple-58);
+    border-color: var(--purple-58);
+    box-shadow: var(--buttons-hover-primary);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: var(--buttons-press-primary);
+  }
+}
+
+%button-secondary {
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-90);
+  color: var(--neutral-20);
+  @extend %button;
+
+  &:hover {
+    box-shadow: var(--buttons-hover-secondary);
+    color: var(--neutral-25);
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: var(--buttons-press-secondary);
+  }
+}

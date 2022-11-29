@@ -1,0 +1,53 @@
+@import './breakpoints';
+@import './buttons';
+
+div[class*='Hero__RainbowBackground'] {
+  background-image: url('../../static/lukso-hero-bg.png');
+  background-color: var(--pink-97);
+
+  div[class*='Hero__ContentContainer'] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h2[class*='Heading'] {
+    color: var(--neutral-20);
+    margin-bottom: 0;
+    @extend %landing-pages-h1-title-regular;
+  }
+
+  span[class*='StyledText'] {
+    color: var(--neutral-20);
+    @extend %paragraph-16-regular;
+  }
+
+  div[class*='Hero__ButtonRow'] {
+    margin-top: -60px;
+
+    div[class*='Hero__ButtonContainer'] {
+      a[class*='Link__StyledLink'] {
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:first-child {
+        button {
+          @extend %button-primary;
+        }
+      }
+
+      &:last-child {
+        button {
+          @extend %button-secondary;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    div[class*='Hero__ContentContainer'] {
+      grid-template-columns: 1fr;
+    }
+  }
+}

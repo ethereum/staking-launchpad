@@ -44,9 +44,8 @@
   @include define-color('green', 135, 57%, [54, 75, 85]);
   @include define-color('blue', 216, 96%, [60, 75, 85]);
   @include define-color('red', 0, 75%, [65, 75, 85]);
-
-  // Purples
-  @include define-color('purple', 230, 24%, [94, 82, 63, 51, 41, 31, 15]);
+  @include define-color('purple', 230, 24%, [94, 82, 63, 58, 51, 41, 31, 15]);
+  @include define-color('pink', 11, 73%, [97, 96, 95, 94, 93, 92, 91, 90]);
 
   // Font
   --font-family-primary: apax, sans-serif;
@@ -54,5 +53,26 @@
   --font-family-mono: 'PT Mono', sans-serif;
 
   // Shadows
-  --shadow-1xl: 0 0 16px rgb(189 206 219 / 40%);
+  --objects-shadow-1xl: 0 0 16px rgb(189 206 219 / 40%);
+  --objects-shadow-2xl: 0px 36px 80px rgba(189, 206, 219, 0.3),
+    0px 5.01331px 33.4221px rgba(189, 206, 219, 0.0503198),
+    0px 2.68036px 17.869px rgba(189, 206, 219, 0.0417275),
+    0px 1.50259px 10.0172px rgba(189, 206, 219, 0.035),
+    0px 0.798012px 5.32008px rgba(189, 206, 219, 0.0282725),
+    0px 0.332071px 2.21381px rgba(189, 206, 219, 0.0196802);
+  --objects-shadow-3xl: 0px 12px 80px rgba(189, 206, 219, 0.3),
+    0px 73.78px 33.4221px rgba(189, 206, 219, 0.0803),
+    0px 22.3363px 17.869px rgba(189, 206, 219, 0.0417275),
+    0px 12.5216px 10.0172px rgba(189, 206, 219, 0.035),
+    0px 6.6501px 5.32008px rgba(189, 206, 219, 0.0282725),
+    0px 2.76726px 2.21381px rgba(189, 206, 219, 0.0196802);
+  --landing-pages-shadow-1xl: 0px 2px 16px rgba(0, 0, 0, 0.12);
+  --buttons-hover-primary: 0px 20px 16px -16px rgba(0, 0, 0, 0.4);
+  --buttons-press-primary: 0px 12px 16px -16px rgba(0, 0, 0, 0.4);
+  --buttons-hover-secondary: 0px 20px 16px -16px rgba(0, 0, 0, 0.12);
+  --buttons-press-secondary: 0px 12px 16px -16px rgba(0, 0, 0, 0.12);
+
+  // Effects
+  --transition-01: all 0.15s ease-out;
+  --transition-02: all 0.25s ease-out;
 }

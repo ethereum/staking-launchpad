@@ -1,9 +1,19 @@
 @import './breakpoints';
 @import './buttons';
 
+// Hero section
+
 div[class*='Hero__RainbowBackground'] {
   background-image: url('../../static/lukso-hero-bg.png');
   background-color: var(--pink-97);
+
+  [class*='Hero__MainContainer'] {
+    padding: 0 120px 200px;
+
+    @media only screen and (max-width: $breakpoint-largest) {
+      padding: 0 60px 180px;
+    }
+  }
 
   div[class*='Hero__ContentContainer'] {
     display: grid;
@@ -48,6 +58,112 @@ div[class*='Hero__RainbowBackground'] {
   @media (max-width: $breakpoint-medium) {
     div[class*='Hero__ContentContainer'] {
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Networks section
+
+div[class*='NetworkStatus__Container'] {
+  padding: 0;
+  height: 0;
+
+  h2[class*='StyledHeading'],
+  div[class*='NetworkStatus__ButtonContainer'] {
+    display: none;
+  }
+
+  div[class*='NetworkStatus__Card-'] {
+    box-shadow: var(--landing-pages-shadow-1xl);
+    border-radius: 16px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 32px 32px;
+
+    [class*='StyledHeading'] {
+      color: var(--neutral-35);
+      @extend %heading-h4;
+    }
+
+    [class*='StyledText'] span {
+      color: var(--neutral-20);
+      @extend %heading-h2;
+    }
+
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      top: -36px;
+    }
+
+    &:nth-child(1) {
+      &::before {
+        background-image: url('../../static/lukso-asset-01.png');
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background-image: url('../../static/lukso-asset-02.png');
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background-image: url('../../static/lukso-asset-03.png');
+      }
+    }
+  }
+
+  div[class*='NetworkStatus__Content'] {
+    position: relative;
+    top: -90px;
+    padding: 0 200px;
+
+    @media only screen and (max-width: $breakpoint-largest) {
+      padding: 0 60px;
+    }
+  }
+}
+
+// Introduction section
+
+div[class*='Introduction__Container'] {
+  padding-top: 80px;
+  box-shadow: inset 0px -16px 72px #fdf4f2;
+  text-align: center;
+  color: var(--neutral-20);
+
+  [class*='StyledText'] {
+    @extend %paragraph-16-regular;
+  }
+
+  [class*='Link__StyledExternalLink'] {
+    @extend %landing-pages-paragraph-16-regular-link;
+  }
+
+  [class*='Introduction__ImgContainer'] {
+    display: none;
+  }
+
+  [class*='StyledHeading'] {
+    @extend %landing-pages-h2-title-bold;
+  }
+
+  [class*='Introduction__SubContainer'] {
+    padding-left: 200px;
+    padding-right: 200px;
+
+    @media only screen and (max-width: $breakpoint-largest) {
+      padding-left: 60px;
+      padding-right: 60px;
     }
   }
 }

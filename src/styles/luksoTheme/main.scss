@@ -4,3 +4,13 @@
 @import './header';
 @import './dropdown';
 @import './landing-page';
+
+body {
+  background-color: var(--pink-97);
+}
+
+a[class*='Link__StyledLink'] {
+  &:hover {
+    opacity: 1;
+  }
+}

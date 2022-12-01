@@ -35,12 +35,6 @@ div[class*='Hero__RainbowBackground'] {
     margin-top: -60px;
 
     div[class*='Hero__ButtonContainer'] {
-      a[class*='Link__StyledLink'] {
-        &:hover {
-          opacity: 1;
-        }
-      }
-
       &:first-child {
         button {
           @extend %button-primary;
@@ -138,6 +132,7 @@ div[class*='NetworkStatus__Container'] {
 div[class*='Introduction__Container'] {
   padding-top: 80px;
   box-shadow: inset 0px -16px 72px #fdf4f2;
+  border: 2px solid var(--neutral-100);
   text-align: center;
   color: var(--neutral-20);
 
@@ -146,7 +141,13 @@ div[class*='Introduction__Container'] {
   }
 
   [class*='Link__StyledExternalLink'] {
+    color: var(--purple-41);
+    display: inline-block;
     @extend %landing-pages-paragraph-16-regular-link;
+
+    &:after {
+      display: none;
+    }
   }
 
   [class*='Introduction__ImgContainer'] {
@@ -158,12 +159,164 @@ div[class*='Introduction__Container'] {
   }
 
   [class*='Introduction__SubContainer'] {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 740px;
+  }
+}
 
-    @media only screen and (max-width: $breakpoint-largest) {
-      padding-left: 60px;
-      padding-right: 60px;
+// Sign Up Steps section
+
+div[class*='SignupSteps__Container'] {
+  background: var(--neutral-100);
+  box-shadow: var(--landing-pages-shadow-1xl);
+  border-radius: 24px;
+  padding: 32px 0 32px;
+  padding-bottom: 0;
+  max-width: 740px;
+  margin-top: -50px;
+  margin-bottom: 150px;
+  position: relative;
+
+  [class*='SignupSteps__ButtonContainer'] {
+    padding: 0;
+    height: 0;
+
+    [class*='StyledButton'] {
+      width: initial;
+      margin-top: -24px;
+      @extend %button-primary;
     }
   }
+
+  [class*='StyledHeading'] {
+    text-align: center;
+    padding: 0 32px;
+    @extend %landing-pages-h2-title-regular;
+  }
+
+  [class*='SignupSteps__Subtitle'] {
+    text-align: center;
+    padding: 0 32px;
+    @extend %paragraph-16-regular;
+  }
+
+  [class*='SignupSteps__StepsContainer'] {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--neutral-98);
+    border-radius: 16px 16px 24px 24px;
+    margin-top: 0;
+    padding-top: 48px;
+
+    [class*='Step__Container'] {
+      max-width: initial;
+      margin: 0 72px 0;
+      border-bottom: 1px var(--purple-82) solid;
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+
+      [class*='Step__EmojiBackground'] {
+        display: none;
+      }
+
+      [class*='Step__Body'] {
+        padding-left: 106px;
+        height: auto;
+        position: relative;
+
+        &:before {
+          content: '1';
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 56px;
+          height: 80px;
+          border: 2px solid var(--purple-41);
+          border-radius: 40px;
+          color: var(--purple-41);
+          position: absolute;
+          left: 0;
+          @extend %heading-h1;
+        }
+      }
+
+      [class*='StyledHeading'] {
+        text-align: left;
+        padding: 0;
+        margin: 0 0 8px;
+        color: var(--neutral-20);
+        @extend %heading-h3;
+      }
+
+      [class*='StyledText'] {
+        color: var(--neutral-20);
+        @extend %paragraph-16-regular;
+      }
+
+      [class*='Link__StyledLink'],
+      [class*='Link__StyledExternalLink'] {
+        color: var(--purple-41);
+        @extend %landing-pages-paragraph-16-regular-link;
+      }
+    }
+
+    & > div {
+      @for $i from 2 through 6 {
+        &:nth-child(#{$i}) {
+          [class*='Step__Container'] {
+            [class*='Step__Body'] {
+              &:before {
+                content: '#{$i}';
+              }
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        [class*='Step__Container'] {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+  }
+
+  &::before {
+    width: 194px;
+    height: 221px;
+    top: -20px;
+    left: -150px;
+    background-image: url('../../static/lukso-validator-02.png');
+  }
+
+  &::after {
+    width: 139px;
+    height: 224px;
+    top: -20px;
+    right: -120px;
+    background-image: url('../../static/lukso-validator-01.png');
+  }
+
+  @media screen and (max-width: $breakpoint-larger) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// Upgrades section
+div[class*='Upgrades__Container'] {
+  display: none; // we hide section completely
 }

@@ -12,7 +12,7 @@ import { Routes as RoutedContent } from './Routes';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { reducers } from './store/reducers';
 import { LocalizedRouter } from './components/LocalizedRouter';
-import { Footer } from './components/Footer';
+import { CustomFooter } from './components/Custom/Footer';
 import './styles/luksoTheme/main.scss';
 
 export const store = createStore(
@@ -38,7 +38,7 @@ export const App: React.FC = () => {
             <ThemeProvider theme={styledComponentsTheme}>
               <GlobalStyles />
               <RoutedContent />
-              <Footer />
+              <CustomFooter />
             </ThemeProvider>
           </Grommet>
         </Provider>

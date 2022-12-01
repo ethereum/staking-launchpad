@@ -1,0 +1,35 @@
+div[class*='Footer__FooterWrapper'] {
+  [class*='StyledHeading'] {
+    color: var(--neutral-20);
+    @extend %heading-h3;
+  }
+
+  [class*='Link__StyledLink'],
+  [class*='Link__StyledExternalLink'] {
+    color: var(--neutral-40);
+    margin-top: 24px;
+    @extend %landing-pages-nav-12-medium;
+  }
+
+  [class*='Footer__Whitepaper'] {
+    margin-top: 0;
+  }
+
+  [class*='Footer__SocialLinks'] {
+    [class*='Link__StyledLink'] {
+      margin-top: 0;
+    }
+  }
+
+  [class*='Footer__FooterBottom'] {
+    @extend %paragraph-12-medium;
+  }
+
+  [class*='Footer__BottomLinks'] a {
+    color: var(--neutral-20);
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    @extend %paragraph-12-medium;
+  }
+}

@@ -93,7 +93,7 @@ div[class*='NetworkStatus__Container'] {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      width: 100%;
+      width: 100px;
       height: 100px;
       position: absolute;
       top: -36px;
@@ -126,13 +126,16 @@ div[class*='NetworkStatus__Container'] {
     @media only screen and (max-width: $breakpoint-largest) {
       padding: 0 60px;
     }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      top: 90px;
+    }
   }
 
   @media screen and (max-width: $breakpoint-medium) {
-    margin-bottom: -150px;
+    margin-bottom: 50px;
     background-color: transparent;
     height: initial;
-    padding: 0;
   }
 }
 
@@ -171,6 +174,12 @@ div[class*='Introduction__Container'] {
     padding-left: 0;
     padding-right: 0;
     max-width: 740px;
+  }
+
+  [class*='Introduction__ContentContainer'] {
+    &:before {
+      display: none;
+    }
   }
 
   @media screen and (max-width: $breakpoint-medium) {

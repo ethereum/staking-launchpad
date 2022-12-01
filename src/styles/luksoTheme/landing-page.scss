@@ -6,6 +6,8 @@
 div[class*='Hero__RainbowBackground'] {
   background-image: url('../../static/lukso-hero-bg.png');
   background-color: var(--pink-97);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   [class*='Hero__MainContainer'] {
     padding: 0 120px 200px;
@@ -125,6 +127,13 @@ div[class*='NetworkStatus__Container'] {
       padding: 0 60px;
     }
   }
+
+  @media screen and (max-width: $breakpoint-medium) {
+    margin-bottom: -150px;
+    background-color: transparent;
+    height: initial;
+    padding: 0;
+  }
 }
 
 // Introduction section
@@ -162,6 +171,11 @@ div[class*='Introduction__Container'] {
     padding-left: 0;
     padding-right: 0;
     max-width: 740px;
+  }
+
+  @media screen and (max-width: $breakpoint-medium) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -313,6 +327,12 @@ div[class*='SignupSteps__Container'] {
     &::after {
       display: none;
     }
+  }
+
+  @media screen and (max-width: $breakpoint-medium) {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: auto;
   }
 }
 

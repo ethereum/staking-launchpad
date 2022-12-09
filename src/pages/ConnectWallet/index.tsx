@@ -45,9 +45,11 @@ import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
+  FAUCET_URL,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 // styled components
 const Container = styled.div`
@@ -181,6 +183,7 @@ const _ConnectWalletPage = ({
     account,
     library,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const { executionLayerName } = useIntlNetworkName();
 
   // initialize state
   const [balance, setBalance] = useState<number | null>(null);
@@ -290,10 +293,10 @@ const _ConnectWalletPage = ({
     } else if (!networkAllowed) {
       setStatus(
         formatMessage(
-          { defaultMessage: 'Connect {wallet} to {network}' },
+          { defaultMessage: 'Connect {wallet} to {executionLayerName}' },
           {
             wallet: getWalletName(walletProvider),
-            network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
+            executionLayerName,
           }
         )
       );
@@ -307,6 +310,7 @@ const _ConnectWalletPage = ({
     network,
     formatMessage,
     walletProvider,
+    executionLayerName,
   ]);
 
   const handleSubmit = () => {
@@ -361,7 +365,7 @@ const _ConnectWalletPage = ({
                   </Heading>
                 </Row>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {network === 'Mainnet' ? network : `${network} testnet`}
+                  {executionLayerName}
                 </Text>
               </Network>
               <div>
@@ -408,10 +412,7 @@ const _ConnectWalletPage = ({
                       </>
                     )}
                     {!IS_MAINNET && lowBalance && (
-                      <FaucetLink
-                        to="https://faucet.goerli.mudit.blog/"
-                        primary
-                      >
+                      <FaucetLink to={FAUCET_URL} primary>
                         <FormattedMessage
                           defaultMessage="Get {TICKER_NAME}"
                           values={{
@@ -487,10 +488,8 @@ const _ConnectWalletPage = ({
       {isInvalidNetwork && (
         <div className="flex center mt20">
           <FormattedMessage
-            defaultMessage="Your wallet is on the wrong network. Switch to {network}"
-            values={{
-              network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
-            }}
+            defaultMessage="Your wallet is on the wrong network. Switch to {executionLayerName}"
+            values={{ executionLayerName }}
           />
         </div>
       )}

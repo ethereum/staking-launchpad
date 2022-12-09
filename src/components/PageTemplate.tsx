@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import styled from 'styled-components';
 import { AppBar } from './AppBar';
 import { Heading } from './Heading';
-import { Helmet } from 'react-helmet';
 
 const Content = styled.div`
   width: 100%;

@@ -5,7 +5,9 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from '../../components/Link';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
+import { Text } from '../../components/Text';
 import { ImageSelectionBox } from '../../components/ImageSelectionBox';
+import { Alert } from '../../components/Alert';
 import { Client } from './index';
 import { ClientId } from '../../store/actions/clientActions';
 
@@ -88,6 +90,17 @@ const SelectClientSection = ({
       <ClientDescriptionContainer>
         {clientDetails[currentClient]}
       </ClientDescriptionContainer>
+      <Alert variant="warning" className="mt30 mb20">
+        <Heading level={4} className="mb10">
+          <FormattedMessage defaultMessage="Remember" />
+        </Heading>
+        <Text className="my10">
+          <FormattedMessage defaultMessage="After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days." />{' '}
+          <Link primary inline to="/checklist">
+            <FormattedMessage defaultMessage="Validator checklist" />
+          </Link>
+        </Text>
+      </Alert>
     </Box>
   </Paper>
 );

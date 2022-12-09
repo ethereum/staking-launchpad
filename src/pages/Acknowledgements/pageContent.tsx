@@ -214,8 +214,8 @@ export const pageContent = {
     acknowledgementText: (
       <FormattedMessage
         defaultMessage="I understand that I {cannotTransfer} my stake for a while, and I
-          {cannotWithdraw} until after the merge. I understand that if I exit, I will not be able
-          to rejoin until much later. This is a long term commitment."
+          {cannotWithdraw} until the Shanghai upgrade. I understand that if I exit, I
+          will not be able to rejoin until that time. This is a long term commitment."
         values={{
           cannotTransfer: (
             <BoldCaps>

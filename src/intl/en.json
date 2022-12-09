@@ -1292,9 +1292,6 @@
   "VLDKor": {
     "message": "{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
   },
-  "VPpHAq": {
-    "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
-  },
   "VSSmNp": {
     "message": "In other words: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
   },
@@ -2052,6 +2049,9 @@
   },
   "oF4os+": {
     "message": "Currently Prysm is used by >33% of the network."
+  },
+  "oJHeMC": {
+    "message": "I understand that I {cannotTransfer} my stake for a while, and I {cannotWithdraw} until the Shanghai upgrade. I understand that if I exit, I will not be able to rejoin until that time. This is a long term commitment."
   },
   "oLxfO1": {
     "message": "Now that the keys are imported, all that is left to do (assuming your beacon node is already running) is to run the validator client."

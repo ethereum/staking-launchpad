@@ -1,4 +1,26 @@
 {
+  "+2VHUU": [
+    {
+      "type": 0,
+      "value": "Ethereum consists of the "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (handling transactions and execution, formerly 'Eth1'), and the "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -41,6 +63,12 @@
       "value": "Polish"
     }
   ],
+  "+wJuhm": [
+    {
+      "type": 0,
+      "value": "Discord:"
+    }
+  ],
   "/+atl4": [
     {
       "type": 0,
@@ -57,12 +85,6 @@
     {
       "type": 0,
       "value": "Indonesian"
-    }
-  ],
-  "/E/Zm8": [
-    {
-      "type": 0,
-      "value": "Configure the Java Web"
     }
   ],
   "/QPc9s": [
@@ -277,10 +299,10 @@
       "value": ")"
     }
   ],
-  "0i90U5": [
+  "0kxaf/": [
     {
       "type": 0,
-      "value": "5.875e22"
+      "value": "I've provided an Ethereum address to my validator where I would like my fee rewards to be deposited."
     }
   ],
   "0lHkrT": [
@@ -383,12 +405,6 @@
       "value": "Check that the password files don’t have trailing new-lines."
     }
   ],
-  "1Z0sad": [
-    {
-      "type": 0,
-      "value": "EF Blog"
-    }
-  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -407,22 +423,10 @@
       "value": "More on Ethereum staking economics"
     }
   ],
-  "1p+pb5": [
-    {
-      "type": 0,
-      "value": "fee recipient"
-    }
-  ],
   "1pUw7Y": [
     {
       "type": 0,
       "value": "Documentation on running Nethermind"
-    }
-  ],
-  "1wSJQU": [
-    {
-      "type": 0,
-      "value": "Timing:"
     }
   ],
   "22EpKq": [
@@ -501,6 +505,12 @@
       "value": "you can always recalculate your signing key from your withdrawal key"
     }
   ],
+  "2c8F5x": [
+    {
+      "type": 0,
+      "value": "Fee recipient docs:"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
@@ -511,12 +521,6 @@
     {
       "type": 0,
       "value": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
-    }
-  ],
-  "2s0gAx": [
-    {
-      "type": 0,
-      "value": "Configuring a Fee Recipient Address"
     }
   ],
   "2t/3ab": [
@@ -689,12 +693,6 @@
       "value": "Section 2 - During setup"
     }
   ],
-  "3wfaSi": [
-    {
-      "type": 0,
-      "value": "The Merge, EL - CL communication"
-    }
-  ],
   "3zCA2i": [
     {
       "type": 0,
@@ -759,20 +757,6 @@
       "value": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
     }
   ],
-  "4VQUkR": [
-    {
-      "type": 0,
-      "value": "For more information, see the "
-    },
-    {
-      "type": 1,
-      "value": "shanghaiPlanning"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "4hnEBA": [
     {
       "type": 0,
@@ -785,12 +769,6 @@
       "value": "Copy"
     }
   ],
-  "4yPejZ": [
-    {
-      "type": 0,
-      "value": "All execution and consensus clients have recently released updates including this TTD to be merge-ready. Be sure to update your clients."
-    }
-  ],
   "54J/qs": [
     {
       "type": 0,
@@ -801,28 +779,6 @@
     {
       "type": 0,
       "value": "Why two keys instead of one?"
-    }
-  ],
-  "59y+Ik": [
-    {
-      "type": 0,
-      "value": "Don't forget to head over to the "
-    },
-    {
-      "type": 1,
-      "value": "discord"
-    },
-    {
-      "type": 0,
-      "value": " where you'll find a "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " channel loaded with discussion on how you can get more involved and make sure you're prepared."
     }
   ],
   "5A6amM": [
@@ -915,18 +871,6 @@
       "value": "average"
     }
   ],
-  "6CN01C": [
-    {
-      "type": 0,
-      "value": "After the Shanghai upgrade, your 16 ETH can then be withdrawn – with your withdrawal key – after a delay of around a day."
-    }
-  ],
-  "6HBTTN": [
-    {
-      "type": 0,
-      "value": "Proof-of-stake (PoS) and the Beacon Chain"
-    }
-  ],
   "6S95Bo": [
     {
       "type": 0,
@@ -945,42 +889,16 @@
       "value": "You can improve the effective balance of this validator by topping up"
     }
   ],
-  "6VswA4": [
-    {
-      "type": 0,
-      "value": "Running Nethermind Post Merge "
-    },
-    {
-      "type": 1,
-      "value": "jwtSecretFile"
-    }
-  ],
   "6eA+mW": [
     {
       "type": 0,
       "value": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
     }
   ],
-  "6iVtAr": [
-    {
-      "type": 0,
-      "value": "#TestingTheMerge"
-    }
-  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
-    }
-  ],
-  "6uPbCH": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " version of this page"
     }
   ],
   "7+Domh": [
@@ -1011,18 +929,6 @@
       "value": " is not supported in offline mode."
     }
   ],
-  "7BhfPl": [
-    {
-      "type": 0,
-      "value": "Lighthouse Book"
-    }
-  ],
-  "7C4ikM": [
-    {
-      "type": 0,
-      "value": "Merge panda emoji"
-    }
-  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1041,6 +947,28 @@
     {
       "type": 0,
       "value": "Lodestar key management documentation"
+    }
+  ],
+  "7FcGxU": [
+    {
+      "type": 0,
+      "value": "You need to run an "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " as well as your "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "7Iz3JI": [
@@ -1173,6 +1101,12 @@
     {
       "type": 0,
       "value": "slashings"
+    }
+  ],
+  "8mEWVB": [
+    {
+      "type": 0,
+      "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator—attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
     }
   ],
   "8wd0q5": [
@@ -1383,12 +1317,6 @@
       "value": " to be sent at one time to be accepted."
     }
   ],
-  "ARyG2Z": [
-    {
-      "type": 0,
-      "value": "When withdrawals?"
-    }
-  ],
   "ATwOPg": [
     {
       "type": 0,
@@ -1413,20 +1341,6 @@
       "value": "understanding validator effective balance"
     }
   ],
-  "AbR1dr": [
-    {
-      "type": 0,
-      "value": "This upgrade is rapidly approaching and brings a few changes that stakers should be aware of before hand. Check out the "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": " to make sure you're prepared."
-    }
-  ],
   "Ad61gz": [
     {
       "type": 0,
@@ -1441,12 +1355,6 @@
     {
       "type": 0,
       "value": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
-    }
-  ],
-  "AfH0eO": [
-    {
-      "type": 0,
-      "value": "All stakers must operate an execution client with their consensus client starting at the Merge. Make sure you're prepared."
     }
   ],
   "Affixg": [
@@ -1477,18 +1385,6 @@
     {
       "type": 0,
       "value": "Top up validator"
-    }
-  ],
-  "AyaNND": [
-    {
-      "type": 0,
-      "value": "TestingTheMerge"
-    }
-  ],
-  "AzjyIx": [
-    {
-      "type": 0,
-      "value": "Since the genesis of the Beacon Chain, many validators running their own consensus client have opted to use third-party services for their execution layer connection. This has been acceptable since the only thing being listened to has been the staking deposit contract."
     }
   ],
   "B2EKj+": [
@@ -1571,18 +1467,6 @@
     {
       "type": 0,
       "value": "EthStaker community"
-    }
-  ],
-  "BXoiVG": [
-    {
-      "type": 0,
-      "value": "Additional reminders"
-    }
-  ],
-  "BcUgLk": [
-    {
-      "type": 0,
-      "value": "Suggested Fee Recipient"
     }
   ],
   "Bf2QKg": [
@@ -1687,54 +1571,10 @@
       "value": "I've set up a firewall."
     }
   ],
-  "CmbwEn": [
-    {
-      "type": 1,
-      "value": "attention"
-    },
-    {
-      "type": 0,
-      "value": " Mainnet total terminal difficulty (TTD) has been set to "
-    },
-    {
-      "type": 1,
-      "value": "difficulty"
-    },
-    {
-      "type": 0,
-      "value": ". Ethereum is estimated to reach this TTD within a day of the 15th of September (follow "
-    },
-    {
-      "type": 1,
-      "value": "link"
-    },
-    {
-      "type": 0,
-      "value": " for latest estimate). Act now to update your node with the latest client releases, and use the steps below to make sure you're prepared."
-    }
-  ],
   "D0Rigq": [
     {
       "type": 0,
       "value": "NO"
-    }
-  ],
-  "D1oCWM": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " is a younger public testnet that has already undergone its transition to proof-of-stake after undergoing a successful merge upgrade in March 2022. "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try sending some ETH, interacting with some contracts, or deploying your own."
     }
   ],
   "D33f/7": [
@@ -1791,10 +1631,28 @@
       "value": "Verify the contract address"
     }
   ],
+  "DhKDS3": [
+    {
+      "type": 0,
+      "value": "Proof-of-stake and the Beacon Chain"
+    }
+  ],
+  "Di1/yX": [
+    {
+      "type": 0,
+      "value": "Consensus JWT docs:"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
       "value": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
+    }
+  ],
+  "DmKneH": [
+    {
+      "type": 0,
+      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
     }
   ],
   "DoCZT1": [
@@ -1907,6 +1765,12 @@
       "value": "This is a test network ⚠️"
     }
   ],
+  "EXt8Xd": [
+    {
+      "type": 0,
+      "value": "Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to."
+    }
+  ],
   "EcCME0": [
     {
       "type": 0,
@@ -1929,12 +1793,6 @@
     {
       "type": 0,
       "value": "Note: the Beacon Chain may take several minutes to verify your deposit"
-    }
-  ],
-  "FM9lHC": [
-    {
-      "type": 0,
-      "value": "all of the merge testnet configurations"
     }
   ],
   "FSRfSJ": [
@@ -2081,12 +1939,6 @@
       "value": "Make sure you aren't being phished"
     }
   ],
-  "GKDM0r": [
-    {
-      "type": 0,
-      "value": "If you have not yet done so, be sure your node is running both an EL client, as well as a CL client, to prevent downtime at time of the Merge."
-    }
-  ],
   "GN2Cu5": [
     {
       "type": 0,
@@ -2153,36 +2005,6 @@
       "value": "Total amount required"
     }
   ],
-  "H/LXxz": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " was the first longstanding public testnet to undergo The Merge, which occurred on June 8, 2022. Historically a proof-of-work testnet, "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " has now transitioned to proof-of-stake by merging its historical execution layer with a new beacon chain."
-    }
-  ],
-  "H0lQfu": [
-    {
-      "type": 0,
-      "value": "Merge Readiness Checklist"
-    }
-  ],
-  "H4W8nj": [
-    {
-      "type": 0,
-      "value": "Authenticate Engine API"
-    }
-  ],
   "H5+NAX": [
     {
       "type": 0,
@@ -2241,12 +2063,6 @@
       "value": "Support"
     }
   ],
-  "Hy1z78": [
-    {
-      "type": 0,
-      "value": "Thorough guide For those who want more control and less hand-holding"
-    }
-  ],
   "I0BXSi": [
     {
       "type": 0,
@@ -2267,12 +2083,6 @@
     {
       "type": 0,
       "value": "Network"
-    }
-  ],
-  "I5ZPR9": [
-    {
-      "type": 0,
-      "value": "When Merge?"
     }
   ],
   "I5lWZA": [
@@ -2309,20 +2119,6 @@
     {
       "type": 0,
       "value": "Install virtualenv"
-    }
-  ],
-  "If09Ko": [
-    {
-      "type": 0,
-      "value": "As such, stakers must provide a "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": " address to their consensus client in order to receive these rewards. This is a normal Ethereum address that you're used to."
     }
   ],
   "IhDJWs": [
@@ -2399,22 +2195,10 @@
       "value": "Nimbus installation documentation"
     }
   ],
-  "JA1956": [
-    {
-      "type": 0,
-      "value": "Attention:"
-    }
-  ],
   "JAiV0o": [
     {
       "type": 0,
       "value": "In other words, to keep you honest, your actions need to have financial consequences."
-    }
-  ],
-  "JApiO1": [
-    {
-      "type": 0,
-      "value": "This is a new change and becomes a requirement at time of the Merge, so be sure you're running both before the upgrade."
     }
   ],
   "JMcBLZ": [
@@ -2435,12 +2219,6 @@
     {
       "type": 0,
       "value": "4. Avoid phishing"
-    }
-  ],
-  "Ja5vXW": [
-    {
-      "type": 0,
-      "value": "Further reading"
     }
   ],
   "JbVlOE": [
@@ -2477,6 +2255,12 @@
     {
       "type": 0,
       "value": "What is your current operating system?"
+    }
+  ],
+  "K37W0m": [
+    {
+      "type": 0,
+      "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief."
     }
   ],
   "K6+jQ3": [
@@ -2555,20 +2339,10 @@
       "value": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
     }
   ],
-  "KcdQCZ": [
+  "KhJBVZ": [
     {
       "type": 0,
-      "value": "CLI Syntax "
-    },
-    {
-      "type": 1,
-      "value": "engineJwtSecret"
-    }
-  ],
-  "KjcAm2": [
-    {
-      "type": 0,
-      "value": "Rewards and penalties are issued roughly every six and a half minutes – a period of time known as an epoch."
+      "value": "View the Staking Checklist"
     }
   ],
   "KqGKRA": [
@@ -2607,12 +2381,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "L1PK14": [
-    {
-      "type": 0,
-      "value": "Ethereum.org - The Merge"
     }
   ],
   "L7fPF+": [
@@ -2725,6 +2493,12 @@
       "value": "Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider."
     }
   ],
+  "Lv57+8": [
+    {
+      "type": 0,
+      "value": "Ethereum is secured by proof-of-stake, although this was not always the case. The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in parallel to Mainnet in December 2020. This allowed participants to start staking their ETH and prepare the network for the formal transition from proof-of-work to proof-of-stake via The Merge."
+    }
+  ],
   "LwEHRm": [
     {
       "type": 0,
@@ -2743,20 +2517,6 @@
       "value": "Connect new wallet"
     }
   ],
-  "MKMIUm": [
-    {
-      "type": 0,
-      "value": "Public testnet progress is underway. When everything is safe and ready, the core developer teams will make this known, so stay tuned to the "
-    },
-    {
-      "type": 1,
-      "value": "blogLink"
-    },
-    {
-      "type": 0,
-      "value": " or other client team communication channels for the latest information."
-    }
-  ],
   "MQTBvH": [
     {
       "type": 0,
@@ -2773,12 +2533,6 @@
     {
       "type": 0,
       "value": "What happens if my withdrawal key is stolen?"
-    }
-  ],
-  "MXVVcY": [
-    {
-      "type": 0,
-      "value": "Authenticating Execution Node Connections"
     }
   ],
   "MZEcKL": [
@@ -2823,22 +2577,10 @@
       "value": "The Ethereum upgrades will only be successful if validators understand the risks and responsibilities."
     }
   ],
-  "Mm7FSl": [
-    {
-      "type": 0,
-      "value": "The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge."
-    }
-  ],
   "MmZjeu": [
     {
       "type": 0,
       "value": "Top-up details"
-    }
-  ],
-  "MoIew2": [
-    {
-      "type": 0,
-      "value": "Step-by-step guide for how to spin up a node and validator on merge testnets"
     }
   ],
   "N0rwnt": [
@@ -2981,12 +2723,6 @@
       "value": "."
     }
   ],
-  "O/dhpS": [
-    {
-      "type": 0,
-      "value": "EthStaker Discord"
-    }
-  ],
   "O3qkOm": [
     {
       "type": 0,
@@ -3031,34 +2767,10 @@
       "value": "More on ConsenSys"
     }
   ],
-  "Odx4qP": [
-    {
-      "type": 0,
-      "value": "Everything you need to get started with the network, including faucets"
-    }
-  ],
   "OmAmmi": [
     {
       "type": 0,
       "value": "More on the Merge"
-    }
-  ],
-  "Oop93W": [
-    {
-      "type": 1,
-      "value": "site"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " announcement"
     }
   ],
   "OsO8ik": [
@@ -3113,6 +2825,12 @@
       "value": "."
     }
   ],
+  "P8FrVE": [
+    {
+      "type": 0,
+      "value": "JWT Authentication"
+    }
+  ],
   "P91KmA": [
     {
       "type": 0,
@@ -3127,12 +2845,6 @@
     {
       "type": 0,
       "value": "Your network has changed"
-    }
-  ],
-  "Pd0hC/": [
-    {
-      "type": 0,
-      "value": "Ethereum Foundation Blog"
     }
   ],
   "PfoT0C": [
@@ -3181,12 +2893,6 @@
     {
       "type": 0,
       "value": "clipboard"
-    }
-  ],
-  "Q2CQuF": [
-    {
-      "type": 0,
-      "value": "Now that transactions must be processed by validators, the validators that propose blocks including these transactions are eligible to receive the transaction fee tips. These are also known as priority fees, and are the unburnt portion of gas fees."
     }
   ],
   "Q8P0rZ": [
@@ -3257,16 +2963,6 @@
       "value": "Key management"
     }
   ],
-  "QapNAM": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " homepage"
-    }
-  ],
   "QeE86m": [
     {
       "type": 0,
@@ -3325,44 +3021,10 @@
       "value": " deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
     }
   ],
-  "QtNVQP": [
-    {
-      "type": 0,
-      "value": "There’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until the Shanghai upgrade planned to follow the Merge (which means your funds will remain inaccessible until then)."
-    }
-  ],
-  "R58ea3": [
-    {
-      "type": 0,
-      "value": "You need to run an "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " as well as your "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": " (formerly 'Eth2')."
-    }
-  ],
   "R8eePn": [
     {
       "type": 0,
       "value": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
-    }
-  ],
-  "R9umf+": [
-    {
-      "type": 0,
-      "value": "Fees rewards are coming to validators, don't miss out!"
     }
   ],
   "RCGrka": [
@@ -3395,36 +3057,10 @@
       "value": "congratulations"
     }
   ],
-  "RaBZna": [
-    {
-      "type": 0,
-      "value": "If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalised ≈0.01 ETH."
-    }
-  ],
   "Rg5ySE": [
     {
       "type": 0,
       "value": "How many validators would you like to run?"
-    }
-  ],
-  "RkSC5Q": [
-    {
-      "type": 0,
-      "value": "Reminder, the Merge upgrade will "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " implement withdrawing or transferring of staked ETH. This feature will be included in the Shanghai upgrade planned to follow the Merge."
-    }
-  ],
-  "RqTB/U": [
-    {
-      "type": 0,
-      "value": "Ethereum Roadmap FAQ"
     }
   ],
   "Rr2lI/": [
@@ -3457,12 +3093,6 @@
       "value": "The Teku config file environment variable"
     }
   ],
-  "SEt7ZX": [
-    {
-      "type": 0,
-      "value": "Ongoing thread of Ethereum Merge info"
-    }
-  ],
   "SGzXoY": [
     {
       "type": 0,
@@ -3475,36 +3105,10 @@
       "value": "Execute the file you just downloaded."
     }
   ],
-  "SR0qHv": [
-    {
-      "type": 0,
-      "value": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing."
-    }
-  ],
-  "SVLpih": [
-    {
-      "type": 0,
-      "value": "The long awaited transition to proof-of-stake via the Merge is rapidly approaching, bringing Ethereum one step closer to a more sustainable ecosystem."
-    }
-  ],
   "SaR1pU": [
     {
       "type": 0,
       "value": "Deposit already exists"
-    }
-  ],
-  "Sb67Wo": [
-    {
-      "type": 0,
-      "value": "Attention stakers: The Merge is approaching! Review the "
-    },
-    {
-      "type": 1,
-      "value": "mergeReadinessChecklist"
-    },
-    {
-      "type": 0,
-      "value": " to make sure you're ready."
     }
   ],
   "Sd+Pq6": [
@@ -3549,12 +3153,6 @@
       "value": "Required"
     }
   ],
-  "SpI4Xu": [
-    {
-      "type": 0,
-      "value": "The Merge upgrade prepared the chain for future scaling upgrades by bringing proof-of-stake consensus together with Mainnet. This unlocks the ability to implement data sharding to further scale network capacity and throughput."
-    }
-  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3589,50 +3187,16 @@
       "value": "Visit this site on desktop to become a validator."
     }
   ],
-  "TNTj2N": [
-    {
-      "type": 1,
-      "value": "community"
-    },
+  "TZtYuA": [
     {
       "type": 0,
-      "value": " merge testnet guide"
-    }
-  ],
-  "TbV4N8": [
-    {
-      "type": 1,
-      "value": "community"
-    },
-    {
-      "type": 0,
-      "value": " Discord (faucet)"
+      "value": "The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum."
     }
   ],
   "TfNuWP": [
     {
       "type": 0,
       "value": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
-    }
-  ],
-  "TfVy1O": [
-    {
-      "type": 0,
-      "value": "View the Merge Readiness Checklist"
-    }
-  ],
-  "ToUcj8": [
-    {
-      "type": 0,
-      "value": "Merge Readiness: In addition to an execution client, after the Merge node operators must also run an "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": " to remain active."
     }
   ],
   "Tpe6yK": [
@@ -3659,12 +3223,6 @@
       "value": "greater than 50%"
     }
   ],
-  "UHbYCa": [
-    {
-      "type": 0,
-      "value": "Your validator has its own balance – with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
-    }
-  ],
   "UJMct0": [
     {
       "type": 0,
@@ -3677,6 +3235,12 @@
     {
       "type": 0,
       "value": " for more details"
+    }
+  ],
+  "UUDnWR": [
+    {
+      "type": 0,
+      "value": "Shanghai Planning (GitHub issue)"
     }
   ],
   "UWv7yD": [
@@ -3723,48 +3287,6 @@
     {
       "type": 0,
       "value": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
-    }
-  ],
-  "V0mmZE": [
-    {
-      "type": 0,
-      "value": "After the Merge, your validator will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with those transactions in blocks your validator proposes. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client."
-    }
-  ],
-  "V19Udt": [
-    {
-      "type": 0,
-      "value": "Ethereum will consist of the "
-    },
-    {
-      "type": 1,
-      "value": "executionLayer"
-    },
-    {
-      "type": 0,
-      "value": " (handles transactions and execution, formerly 'Eth1'), and the "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayer"
-    },
-    {
-      "type": 0,
-      "value": " (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
-    }
-  ],
-  "V5J3Uf": [
-    {
-      "type": 0,
-      "value": "I have set up a shared JWT secret and made it available to "
-    },
-    {
-      "type": 1,
-      "value": "both"
-    },
-    {
-      "type": 0,
-      "value": " my execution client, and my consensus client (beacon node)"
     }
   ],
   "VASo1/": [
@@ -3833,28 +3355,6 @@
       "value": "."
     }
   ],
-  "VPpHAq": [
-    {
-      "type": 0,
-      "value": "I understand that I "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " my stake for a while, and I "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " until the merge. I understand that if I exit, I will not be able to rejoin until much later. This is a long term commitment."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -3873,10 +3373,18 @@
       "value": "I am certain that the validator I am topping up is my validator."
     }
   ],
-  "Vp4z/b": [
+  "Vm6cRY": [
     {
       "type": 0,
-      "value": "Stakers running their own execution layer is necessary for the decentralization of the network."
+      "value": "This communication is secured using a "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
     }
   ],
   "VzGJkB": [
@@ -3889,6 +3397,20 @@
     {
       "type": 0,
       "value": "Teku is Apache 2 licensed and written in Java, a language notable for its maturity and ubiquity."
+    }
+  ],
+  "W2Eues": [
+    {
+      "type": 0,
+      "value": "Warning: This is a staking launchpad for the "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "W3t7Ob": [
@@ -3955,12 +3477,6 @@
       "value": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
     }
   ],
-  "Wj99ga": [
-    {
-      "type": 0,
-      "value": "Go Ethereum - The Merge"
-    }
-  ],
   "WkrNSk": [
     {
       "type": 0,
@@ -3971,24 +3487,6 @@
     {
       "type": 0,
       "value": "Please accept the conditions above."
-    }
-  ],
-  "WptkFF": [
-    {
-      "type": 0,
-      "value": "Both layers required"
-    }
-  ],
-  "Wxmhku": [
-    {
-      "type": 0,
-      "value": "These fees are paid by whoever submitted the transaction and come in the form of ETH on the execution layer (Mainnet). These rewards are not accounted for in your validator balance which is maintained on the consensus layer."
-    }
-  ],
-  "WxqnJn": [
-    {
-      "type": 0,
-      "value": "On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to invalid or contradicting blocks."
     }
   ],
   "Wxzght": [
@@ -4009,12 +3507,6 @@
       "value": "proof-of-custody game"
     }
   ],
-  "X3rOq5": [
-    {
-      "type": 0,
-      "value": "At time of the Merge, Infura and Alchemy will no longer be viable options to outsource execution layer responsibilities."
-    }
-  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -4033,10 +3525,10 @@
       "value": "Besu on Goerli documentation"
     }
   ],
-  "XSlPoq": [
+  "XVRQoq": [
     {
       "type": 0,
-      "value": "Thorough guide to setting up a testnet node"
+      "value": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run both an execution and a consensus client to properly attest to the network."
     }
   ],
   "XVehvN": [
@@ -4083,40 +3575,6 @@
     {
       "type": 0,
       "value": "Build from source"
-    }
-  ],
-  "XqbweH": [
-    {
-      "type": 0,
-      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator. You can find client-specific instructions here: "
-    },
-    {
-      "type": 1,
-      "value": "lighthouse"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "nimbus"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "prysm"
-    },
-    {
-      "type": 0,
-      "value": " | "
-    },
-    {
-      "type": 1,
-      "value": "teku"
     }
   ],
   "Y07Hwy": [
@@ -4189,18 +3647,6 @@
       "value": "Keys"
     }
   ],
-  "YHk9Pe": [
-    {
-      "type": 0,
-      "value": "With the Merge, the burden of processing transactions will fall on validators, as proof-of-work is deprecated. To sign off on the validity of these transactions, a validator must have trusted access to the events of the execution layer. Trust only your own node."
-    }
-  ],
-  "YIjr32": [
-    {
-      "type": 0,
-      "value": "For those who want more control and less hand-holding"
-    }
-  ],
   "YP03/j": [
     {
       "type": 0,
@@ -4233,30 +3679,6 @@
     {
       "type": 0,
       "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
-    }
-  ],
-  "YTNPFn": [
-    {
-      "type": 0,
-      "value": "Instructions for how to set this JWT secret vary depending on the client—node operators should refer to their clients' documentation for instructions about how to generate and configure these."
-    }
-  ],
-  "YX6pc0": [
-    {
-      "type": 1,
-      "value": "client"
-    },
-    {
-      "type": 0,
-      "value": " is a "
-    },
-    {
-      "type": 1,
-      "value": "layerType"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "Yd6MEN": [
@@ -4363,12 +3785,6 @@
     {
       "type": 0,
       "value": "Why do I need to have funds at stake?"
-    }
-  ],
-  "ZPRDyW": [
-    {
-      "type": 0,
-      "value": "Again, it depends. Behaving maliciously – for example attesting to invalid or contradicting blocks, will lead to your stake being slashed."
     }
   ],
   "ZTo0Fl": [
@@ -4513,12 +3929,6 @@
       "value": "Be sure to account for enough space on your drive until you run maintenance on your node."
     }
   ],
-  "bX1fts": [
-    {
-      "type": 0,
-      "value": "Merge readiness checklist"
-    }
-  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -4635,12 +4045,6 @@
       "value": "What are withdrawal credentials?"
     }
   ],
-  "cwYSyN": [
-    {
-      "type": 0,
-      "value": "Task 3"
-    }
-  ],
   "cyNFM3": [
     {
       "type": 0,
@@ -4675,12 +4079,6 @@
       "value": " is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
     }
   ],
-  "dGWdPu": [
-    {
-      "type": 0,
-      "value": "All stakers must operate an execution client as well as a consensus client starting at the Merge. Make sure you're prepared."
-    }
-  ],
   "dH5+MX": [
     {
       "type": 0,
@@ -4711,12 +4109,6 @@
       "value": "Top Up"
     }
   ],
-  "da/gCQ": [
-    {
-      "type": 0,
-      "value": "Task 2"
-    }
-  ],
   "deLJOg": [
     {
       "type": 0,
@@ -4727,12 +4119,6 @@
     {
       "type": 0,
       "value": "Where can I find troubleshooting support?"
-    }
-  ],
-  "dsQVUw": [
-    {
-      "type": 0,
-      "value": "The Nimbus book"
     }
   ],
   "dvr19k": [
@@ -4747,16 +4133,16 @@
       "value": "Default Port"
     }
   ],
+  "e+9dMk": [
+    {
+      "type": 0,
+      "value": "Execution JWT docs:"
+    }
+  ],
   "e/PSgJ": [
     {
       "type": 0,
       "value": "Upload deposit data"
-    }
-  ],
-  "e1dCqL": [
-    {
-      "type": 0,
-      "value": "Shanghai Planning issue on GitHub"
     }
   ],
   "e4f94H": [
@@ -4783,22 +4169,6 @@
     {
       "type": 1,
       "value": "code3"
-    }
-  ],
-  "e4wHN4": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " Staking Launchpad"
-    }
-  ],
-  "eF9RbC": [
-    {
-      "type": 0,
-      "value": "You can think of the deposit contract as a transfer of funds between Ethereum accounts and Beacon Chain validators."
     }
   ],
   "eKEL/g": [
@@ -4893,6 +4263,12 @@
       "value": "Complete checklist"
     }
   ],
+  "ezCT4A": [
+    {
+      "type": 0,
+      "value": "Shanghai Core EIP Consideration"
+    }
+  ],
   "f/N7FO": [
     {
       "type": 0,
@@ -4911,12 +4287,6 @@
     {
       "type": 0,
       "value": " ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
-    }
-  ],
-  "fDY/uQ": [
-    {
-      "type": 0,
-      "value": "Teku - The Merge"
     }
   ],
   "fHLKXR": [
@@ -4979,6 +4349,12 @@
       "value": "cannot withdraw"
     }
   ],
+  "g2k5M/": [
+    {
+      "type": 0,
+      "value": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds."
+    }
+  ],
   "g37XKP": [
     {
       "type": 0,
@@ -5003,12 +4379,6 @@
     {
       "type": 0,
       "value": " to sync the Goerli testnet."
-    }
-  ],
-  "gOJmxl": [
-    {
-      "type": 0,
-      "value": "I am running my own consensus client, and have updated to a merge-ready release"
     }
   ],
   "gQkd2y": [
@@ -5123,6 +4493,12 @@
       "value": "Your stake"
     }
   ],
+  "hBIbQ+": [
+    {
+      "type": 0,
+      "value": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing."
+    }
+  ],
   "hFzE1M": [
     {
       "type": 0,
@@ -5133,26 +4509,6 @@
     {
       "type": 0,
       "value": "Desktop only"
-    }
-  ],
-  "hICY9k": [
-    {
-      "type": 0,
-      "value": "I have provided an Ethereum address to my validator where I would like my fee rewards to be deposited."
-    }
-  ],
-  "hKPjQW": [
-    {
-      "type": 0,
-      "value": "While waiting for the Mainnet transition to proof-of-stake, stakers are encouraged to participate in "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": ". Goerli was recently the final public Ethereum testnet to successfully undergo The Merge, and will persist as a longstanding PoS testnet. Setting up a Goerli node can be a great way to learn more about operating a post-merge Ethereum node, and gain confidence in your setup."
     }
   ],
   "hPCn9f": [
@@ -5181,16 +4537,6 @@
     {
       "type": 0,
       "value": "Hungarian"
-    }
-  ],
-  "hgU42i": [
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " is open for anyone to interact with, but is being deprecated moving forward and will not undergo any further network updates."
     }
   ],
   "hjrLbR": [
@@ -5245,10 +4591,10 @@
       "value": "I understand that it is important to keep my validator online and updated."
     }
   ],
-  "hzX7K4": [
+  "i7alIW": [
     {
       "type": 0,
-      "value": "Task 1"
+      "value": "This became a requirement at time of the Merge, so be sure you're running both before staking."
     }
   ],
   "iCpuph": [
@@ -5257,10 +4603,38 @@
       "value": "Clients"
     }
   ],
+  "iFWLYC": [
+    {
+      "type": 0,
+      "value": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
+    }
+  ],
   "iMvXLd": [
     {
       "type": 0,
       "value": "Running the validator client"
+    }
+  ],
+  "iN1PPs": [
+    {
+      "type": 0,
+      "value": "Each "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
     }
   ],
   "iPRnRG": [
@@ -5315,12 +4689,6 @@
       "value": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
     }
   ],
-  "irRdC0": [
-    {
-      "type": 0,
-      "value": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the merge and introduction of shard chains. Do your own research before depositing funds."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
@@ -5345,20 +4713,6 @@
     {
       "type": 0,
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
-    }
-  ],
-  "jQTc9t": [
-    {
-      "type": 0,
-      "value": "Visit here to get the latest information on how to get involved with "
-    },
-    {
-      "type": 1,
-      "value": "testingTheMerge"
-    },
-    {
-      "type": 0,
-      "value": " on other public testnets as details unfold."
     }
   ],
   "jXer8/": [
@@ -5441,24 +4795,16 @@
       "value": "Nimbus documentation"
     }
   ],
-  "jzGCBy": [
-    {
-      "type": 0,
-      "value": "The "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " faucets have been abused, and are limited, but the folks at EthStaker will do their best to help you out"
-    }
-  ],
   "k43c+l": [
     {
       "type": 0,
       "value": "View Wagyu Key Gen audit by HashCloak"
+    }
+  ],
+  "k4x6Ud": [
+    {
+      "type": 0,
+      "value": "This marked the merging of the execution layer (existing Mainnet) with the new consensus layer (the Beacon Chain) to form the single Ethereum chain of today."
     }
   ],
   "kFS5Sd": [
@@ -5509,6 +4855,12 @@
       "value": "Over time, your balance will decrease as you are punished for not participating in the consensus process. When your balance reaches 16 ETH, you will be automatically exited from the validator pool."
     }
   ],
+  "kn06Zz": [
+    {
+      "type": 0,
+      "value": "Monitoring docs:"
+    }
+  ],
   "kn7kJd": [
     {
       "type": 0,
@@ -5521,6 +4873,12 @@
       "value": "Get in touch"
     }
   ],
+  "krxu73": [
+    {
+      "type": 0,
+      "value": "The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as data sharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%."
+    }
+  ],
   "kuYpoI": [
     {
       "type": 0,
@@ -5531,6 +4889,12 @@
     {
       "type": 0,
       "value": "Exited"
+    }
+  ],
+  "kzGlnG": [
+    {
+      "type": 0,
+      "value": "Rewards and penalties are issued roughly every six and a half minutes—a period of time known as an epoch."
     }
   ],
   "l/uCcX": [
@@ -5727,20 +5091,6 @@
       "value": "This is a non-reversible transaction."
     }
   ],
-  "lmr40S": [
-    {
-      "type": 0,
-      "value": "This communication is secured using a "
-    },
-    {
-      "type": 1,
-      "value": "jwt"
-    },
-    {
-      "type": 0,
-      "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both EL and CL) to properly authenticate the Engine API, allowing them to properly communicate between one another."
-    }
-  ],
   "lo+Qqn": [
     {
       "type": 0,
@@ -5759,10 +5109,10 @@
       "value": "Hard drive"
     }
   ],
-  "mTW7PE": [
+  "mH6bSl": [
     {
       "type": 0,
-      "value": "58750000000000000000000"
+      "value": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
     }
   ],
   "mUZnem": [
@@ -5791,16 +5141,16 @@
       "value": " is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
     }
   ],
-  "mcQpea": [
-    {
-      "type": 0,
-      "value": "Everything you need to get started with the network, including a faucet"
-    }
-  ],
   "mhyltV": [
     {
       "type": 0,
       "value": "I've set my graffiti flag."
+    }
+  ],
+  "mloLQ5": [
+    {
+      "type": 0,
+      "value": "All stakers must operate an execution client with their consensus client."
     }
   ],
   "mpmFDY": [
@@ -5821,24 +5171,10 @@
       "value": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."
     }
   ],
-  "nHk8Et": [
+  "nRWZl3": [
     {
       "type": 0,
-      "value": "PoS is a more secure, decentralized, and environmentally-friendly consensus mechanism than the proof-of-work (PoW) that secures Ethereum today. It rewards validators for building the chain, but slashes their deposits if they try to attack it, incentivising healthy behaviour. This upgrade is already live in the form of the Beacon Chain."
-    }
-  ],
-  "nIb6XF": [
-    {
-      "type": 0,
-      "value": "And major penalities – or "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": " – are given for malicious actions."
+      "value": "Again, it depends. Behaving maliciously—for example attesting to invalid or contradicting blocks—will lead to your stake being slashed."
     }
   ],
   "nRdJct": [
@@ -5911,16 +5247,6 @@
       "value": " testnet"
     }
   ],
-  "nyx/4g": [
-    {
-      "type": 0,
-      "value": "How to run a node on "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    }
-  ],
   "nz27+c": [
     {
       "type": 0,
@@ -5949,22 +5275,44 @@
       "value": "Before you start"
     }
   ],
-  "oAuBZQ": [
-    {
-      "type": 0,
-      "value": "I am running my own execution client, and have updated to a merge-ready release."
-    }
-  ],
   "oF4os+": [
     {
       "type": 0,
       "value": "Currently Prysm is used by >33% of the network."
     }
   ],
+  "oJHeMC": [
+    {
+      "type": 0,
+      "value": "I understand that I "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " my stake for a while, and I "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " until the Shanghai upgrade. I understand that if I exit, I will not be able to rejoin until that time. This is a long term commitment."
+    }
+  ],
   "oLxfO1": [
     {
       "type": 0,
       "value": "Now that the keys are imported, all that is left to do (assuming your beacon node is already running) is to run the validator client."
+    }
+  ],
+  "oNP2EG": [
+    {
+      "type": 0,
+      "value": "Currently Lighthouse is used by >33% of the network."
     }
   ],
   "oNohob": [
@@ -6037,12 +5385,6 @@
       "value": "Does the contract have a large balance?"
     }
   ],
-  "ouMFoC": [
-    {
-      "type": 0,
-      "value": "Do this now"
-    }
-  ],
   "ouW9ov": [
     {
       "type": 0,
@@ -6093,6 +5435,12 @@
     {
       "type": 0,
       "value": "!"
+    }
+  ],
+  "pGnk/z": [
+    {
+      "type": 0,
+      "value": "Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH."
     }
   ],
   "pHQwsN": [
@@ -6147,6 +5495,12 @@
       "value": "Deposit summary"
     }
   ],
+  "q/ZayM": [
+    {
+      "type": 0,
+      "value": "Withdrawal features are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day."
+    }
+  ],
   "q2XW/k": [
     {
       "type": 0,
@@ -6171,20 +5525,6 @@
     {
       "type": 0,
       "value": " to withdraw my funds."
-    }
-  ],
-  "qEsYC0": [
-    {
-      "type": 0,
-      "value": "You can also check out GitHub for "
-    },
-    {
-      "type": 1,
-      "value": "allConfigs"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "qK4+NQ": [
@@ -6265,12 +5605,6 @@
       "value": "Phishing guide"
     }
   ],
-  "rEokPY": [
-    {
-      "type": 0,
-      "value": "bordel.wtf"
-    }
-  ],
   "rMjMmc": [
     {
       "type": 0,
@@ -6313,26 +5647,6 @@
     {
       "type": 0,
       "value": "Close"
-    }
-  ],
-  "rcdxTW": [
-    {
-      "type": 0,
-      "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator – attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
-    }
-  ],
-  "rgjQYI": [
-    {
-      "type": 0,
-      "value": "Merge Readiness: In addition to a consensus client, after the Merge node operators must also run an "
-    },
-    {
-      "type": 1,
-      "value": "alternateClient"
-    },
-    {
-      "type": 0,
-      "value": " to remain active."
     }
   ],
   "rnDgcN": [
@@ -6417,26 +5731,6 @@
       "value": "CPU and RAM"
     }
   ],
-  "saDFoR": [
-    {
-      "type": 0,
-      "value": "Bonus"
-    }
-  ],
-  "scfDDt": [
-    {
-      "type": 0,
-      "value": "Communication between the execution layer and consensus layer will occur using the "
-    },
-    {
-      "type": 1,
-      "value": "engineApi"
-    },
-    {
-      "type": 0,
-      "value": ". This is a new set of JSON RPC methods that can be used to communicate between the two client layers."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6473,6 +5767,12 @@
       "value": "I understand and agree to the terms-of-service and everything stated in the previous sections."
     }
   ],
+  "szh4Xy": [
+    {
+      "type": 0,
+      "value": "I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -6483,6 +5783,12 @@
     {
       "type": 0,
       "value": "Learn more about the great renaming"
+    }
+  ],
+  "taENNR": [
+    {
+      "type": 0,
+      "value": "Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled. This is proposed to be included in the next network upgrade, known as the Shanghai upgrade. This means your funds will remain inaccessible at least until then."
     }
   ],
   "tbYkT4": [
@@ -6521,12 +5827,6 @@
     {
       "type": 0,
       "value": "Become a validator with Lodestar"
-    }
-  ],
-  "tp1IPS": [
-    {
-      "type": 0,
-      "value": "Configure the fee recipient"
     }
   ],
   "tsfX5f": [
@@ -6585,6 +5885,12 @@
       "value": "After depositing"
     }
   ],
+  "u4em9Z": [
+    {
+      "type": 0,
+      "value": "Since the Merge, validators will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with included transactions when proposing blocks. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client."
+    }
+  ],
   "u564LK": [
     {
       "type": 0,
@@ -6595,12 +5901,6 @@
     {
       "type": 0,
       "value": "Uptime"
-    }
-  ],
-  "uGKswV": [
-    {
-      "type": 0,
-      "value": "Post-merge, an Ethereum node will be comprised of both an execution client, and a consensus client."
     }
   ],
   "uJzGSb": [
@@ -6623,12 +5923,6 @@
     {
       "type": 0,
       "value": "Validator checklist"
-    }
-  ],
-  "uUy3NQ": [
-    {
-      "type": 0,
-      "value": "I understand that I will earn the unburnt transaction fees (tips/priority fees) when I propose a block, and this is accounted for on the execution layer, not my validator balance."
     }
   ],
   "ubKWX8": [
@@ -6671,18 +5965,6 @@
       "value": "Become a validator with Nimbus"
     }
   ],
-  "ulgIVs": [
-    {
-      "type": 0,
-      "value": "After the merge, there will no longer be two distinct Ethereum networks; there will only be Ethereum."
-    }
-  ],
-  "uoKhQB": [
-    {
-      "type": 0,
-      "value": "Authentication API"
-    }
-  ],
   "up+5YH": [
     {
       "type": 0,
@@ -6695,6 +5977,20 @@
     {
       "type": 0,
       "value": " deposits?"
+    }
+  ],
+  "v6ytKW": [
+    {
+      "type": 0,
+      "value": "And major penalities—or "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": "—are given for malicious actions."
     }
   ],
   "vBJ79e": [
@@ -6775,28 +6071,10 @@
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
     }
   ],
-  "vej0DE": [
-    {
-      "type": 0,
-      "value": "Today, you'll secure the Beacon Chain, the first main scaling upgrade. It's a separate chain that uses a proof-of-stake consensus mechanism. Very soon you'll help secure all of Ethereum, after Mainnet (the Ethereum we use today) merges with the Beacon Chain."
-    }
-  ],
-  "vg1dVR": [
-    {
-      "type": 0,
-      "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds – with the withdrawal key – before the thief."
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Run the following command to launch the app"
-    }
-  ],
-  "wHvmSN": [
-    {
-      "type": 0,
-      "value": "both"
     }
   ],
   "wJ1PbL": [
@@ -6815,12 +6093,6 @@
       "value": "Initial setup"
     }
   ],
-  "wPR6Js": [
-    {
-      "type": 0,
-      "value": "Before the switch, there are a couple things solo stakers and validator services need to be aware of, and a few tasks you may need to attend to."
-    }
-  ],
   "wawegX": [
     {
       "type": 0,
@@ -6837,12 +6109,6 @@
     {
       "type": 0,
       "value": "More on proof of stake"
-    }
-  ],
-  "wea8Ie": [
-    {
-      "type": 0,
-      "value": "The execution and consensus layers work together tightly, and require authentication to stay safe."
     }
   ],
   "wm04oC": [
@@ -6879,6 +6145,28 @@
     {
       "type": 0,
       "value": "We strongly recommended you complete these steps on the current testnet before Mainnet."
+    }
+  ],
+  "x9xppN": [
+    {
+      "type": 0,
+      "value": "With the transition to proof-of-stake complete via the Merge, validators are now responsible for processing transactions and signing off on their validity. This data is "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " available from popular third-party sources since the Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "xDyl3T": [
@@ -6957,6 +6245,12 @@
       "value": ", otherwise the deposit will be invalid."
     }
   ],
+  "xZZMZ5": [
+    {
+      "type": 0,
+      "value": "testnet"
+    }
+  ],
   "xbet2w": [
     {
       "type": 0,
@@ -6993,10 +6287,10 @@
       "value": "clientName"
     }
   ],
-  "xyMh/n": [
+  "xzmWbJ": [
     {
       "type": 0,
-      "value": "Mega Merge Resource List"
+      "value": "Your validator has its own balance, with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
     }
   ],
   "y44jV2": [
@@ -7035,12 +6329,6 @@
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
     }
   ],
-  "yaf+Vw": [
-    {
-      "type": 0,
-      "value": "Two-way communication between the EL client and CL client requires a JWT secret for authentication, and is essential for your node to be functional."
-    }
-  ],
   "ydh1KU": [
     {
       "type": 0,
@@ -7077,26 +6365,10 @@
       "value": "Make sure that your node has more than 20 peers."
     }
   ],
-  "z/ToMo": [
+  "yw4vsX": [
     {
       "type": 0,
-      "value": "Once the transition to proof-of-stake is complete via the Merge, validators will be responsible for processing transactions and signing off on their validity. This data will "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " be available from popular third-party sources after the Merge and will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "On the other hand, you can be penalized for being offline and behaving maliciously—for example attesting to invalid or contradicting blocks."
     }
   ],
   "z63I56": [
@@ -7169,28 +6441,18 @@
       "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
     }
   ],
-  "zqOrZZ": [
+  "zpmjjy": [
     {
       "type": 0,
-      "value": "Look over the Merge Readiness Checklist"
-    }
-  ],
-  "zrK3hS": [
-    {
-      "type": 1,
-      "value": "networkBold"
-    },
-    {
-      "type": 0,
-      "value": " is a long-standing public testnet that began as a proof-of-authority chain, and has now undergone its transition to proof-of-stake via a successful Merge in August 2022. "
+      "value": "Communication between the execution layer and consensus layer occurs using the "
     },
     {
       "type": 1,
-      "value": "network"
+      "value": "engineApi"
     },
     {
       "type": 0,
-      "value": " is open for anyone to interact with, and will continue to be maintained after the Mainnet merge. Try interacting with some contracts or operating a validating node."
+      "value": ". This is a set of JSON RPC methods that can be used to communicate between the two client layers."
     }
   ]
 }

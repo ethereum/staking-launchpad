@@ -1,4 +1,4 @@
-# Ethereum Staking Launchpad
+# Ethereum-Shibarium Staking Launchpad
 
 [![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/ethereum/staking-launchpad/badge)](https://www.gitpoap.io/gh/ethereum/staking-launchpad)
 

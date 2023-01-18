@@ -1941,6 +1941,12 @@
       "value": "Make the file you just downloaded executable."
     }
   ],
+  "GlKjxX": [
+    {
+      "type": 0,
+      "value": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
+    }
+  ],
   "GsBRWL": [
     {
       "type": 0,
@@ -2233,6 +2239,12 @@
     {
       "type": 0,
       "value": "Geth installation documentation"
+    }
+  ],
+  "K7xnjy": [
+    {
+      "type": 0,
+      "value": "Warning: Do not store keys on multiple (backup) validator clients at once"
     }
   ],
   "KBSbmP": [
@@ -3531,10 +3543,22 @@
       "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
     }
   ],
+  "Xf71C8": [
+    {
+      "type": 0,
+      "value": "Withdrawals will automatically go to the withdrawal address provided after the Shanghai upgrade is completed. If you do not provide a withdrawal address (not recommended), you can use your mnemonic to generate your withdrawal key to sign a message when you wish to provide a permanent withdrawal address (after Capella consensus update)."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
       "value": "Build from source"
+    }
+  ],
+  "XszRWL": [
+    {
+      "type": 0,
+      "value": "eth1_withdrawal_address"
     }
   ],
   "Y07Hwy": [
@@ -4321,12 +4345,6 @@
       "value": "More on virtualenv"
     }
   ],
-  "gIauNz": [
-    {
-      "type": 0,
-      "value": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password. You can use your mnemonic to generate your withdrawal key when you wish to withdraw."
-    }
-  ],
   "gN9D/h": [
     {
       "type": 0,
@@ -4715,12 +4733,6 @@
     {
       "type": 0,
       "value": "Documentation on running Geth"
-    }
-  ],
-  "jm79h1": [
-    {
-      "type": 0,
-      "value": "Warning: Do not store keys on multiple (backup) validators at once"
     }
   ],
   "jp9OG2": [
@@ -5673,6 +5685,20 @@
       "value": "Teku can also be configured via a YAML file which is passed in via a few different ways."
     }
   ],
+  "sHXPzG": [
+    {
+      "type": 0,
+      "value": "Make sure you set a withdrawal address using "
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": ", which is required for withdrawals. Failure to provide this will result in the need to sign another message to indicate your chosen withdrawal address, until which funds will remain locked."
+    }
+  ],
   "sMHQRT": [
     {
       "type": 0,
@@ -6169,28 +6195,6 @@
     {
       "type": 0,
       "value": "The Beacon Chain"
-    }
-  ],
-  "xXntjc": [
-    {
-      "type": 0,
-      "value": "Please make sure you have set "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " for "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayerName"
-    },
-    {
-      "type": 0,
-      "value": ", otherwise the deposit will be invalid."
     }
   ],
   "xZZMZ5": [

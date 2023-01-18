@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -49,6 +49,42 @@ export enum keysTool {
   'CLISOURCE',
 }
 
+const AddressInputContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+const AddressInput = styled.input`
+  height: 50px;
+  flex: 1;
+  font-size: 18px;
+  line-height: 24px;
+  color: #444444;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background-color: ${(p: any) => p.theme.gray.lightest};
+  border-radius: ${(p: any) => p.theme.borderRadius};
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  border: 1px solid #ddd;
+  display: inline-flex;
+  :focus {
+    outline: none;
+  }
+`;
+
+const AddressIndicator = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+`;
+
 const Highlight = styled.span`
   background: ${p => p.theme.green.medium};
 `;
@@ -84,6 +120,7 @@ const _GenerateKeysPage = ({
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
+  const [withdrawalAddress, setWithdrawalAddress] = useState<string>('');
 
   // Default to CLI on mainnet for now, once we have more confidence in it, switch to GUI as default.
   const defaultKeysTool = IS_MAINNET ? keysTool.CLI : keysTool.GUI;
@@ -92,6 +129,22 @@ const _GenerateKeysPage = ({
   const onCheckboxClick = (e: any) => {
     setMnemonicAcknowledgementChecked(e.target.checked);
   };
+
+  const handleAddressChange = (e: any) => {
+    const value = e.target.value.replace(/[^0-9a-fx]/gi, '');
+    setWithdrawalAddress(value);
+  };
+
+  const isValidWithdrawalAddress = useMemo<boolean>(
+    () => /^0x[0-9a-f]{40}$/i.test(withdrawalAddress),
+    [withdrawalAddress]
+  );
+
+  const addressIndicatorEmoji = useMemo<string>(() => {
+    if (!withdrawalAddress) return '⬅';
+    if (isValidWithdrawalAddress) return '✅';
+    return '❌';
+  }, [withdrawalAddress, isValidWithdrawalAddress]);
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.GENERATE_KEY_PAIRS) {
@@ -108,7 +161,7 @@ const _GenerateKeysPage = ({
       title={formatMessage({ defaultMessage: 'Generate key pairs' })}
     >
       <Paper>
-        <Heading level={2} size="small" color="blueDark">
+        <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="How many validators would you like to run?" />
         </Heading>
         <div className="flex mt20">
@@ -133,6 +186,33 @@ const _GenerateKeysPage = ({
         </div>
       </Paper>
       <Paper className="mt20">
+        <Heading level={2} size="small" color="blueMedium" className="mb20">
+          Withdrawal address
+        </Heading>
+        <Text className="mb20">
+          Choose an Ethereum withdrawal address. This address must be to a
+          regular Ethereum address and will be the only address funds can be
+          sent to from your new validator accounts.
+        </Text>
+        <Text className="mb20">
+          Paste your chosen address here to include it in the copy/paste CLI
+          command below:
+        </Text>
+        <AddressInputContainer className="mb40">
+          <AddressInput
+            onChange={handleAddressChange}
+            value={withdrawalAddress}
+            placeholder="0x... (no ENS)"
+            maxLength={42}
+          />
+          <AddressIndicator>{addressIndicatorEmoji}</AddressIndicator>
+        </AddressInputContainer>
+        <Alert variant="error">
+          Make sure you have control over the address provided as this cannot be
+          changed.
+        </Alert>
+      </Paper>
+      <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="What is your current operating system?" />
         </Heading>
@@ -148,6 +228,11 @@ const _GenerateKeysPage = ({
 
       <Instructions
         validatorCount={validatorCount}
+        withdrawalAddress={
+          isValidWithdrawalAddress
+            ? withdrawalAddress
+            : '<ethereum-withdrawal-address>'
+        }
         os={osMapping[chosenOs]}
         chosenTool={chosenTool}
         setChosenTool={setChosenTool}
@@ -182,13 +267,14 @@ const _GenerateKeysPage = ({
             />
           )}
         </Text>
-        <Alert variant="info" className="my40">
+        <Alert variant="info" className="mt40 mb20">
           <FormattedMessage
             defaultMessage="You should see that you have one keystore per validator. This keystore
-              contains your signing key, encrypted with your password. You can use
-              your mnemonic to generate your withdrawal key when you wish to
-              withdraw."
+            contains your signing key, encrypted with your password."
           />
+        </Alert>
+        <Alert variant="info" className="mb40">
+          <FormattedMessage defaultMessage="Withdrawals will automatically go to the withdrawal address provided after the Shanghai upgrade is completed. If you do not provide a withdrawal address (not recommended), you can use your mnemonic to generate your withdrawal key to sign a message when you wish to provide a permanent withdrawal address (after Capella consensus update)." />
         </Alert>
         <InstructionImgContainer>
           <img src={instructions1} alt="" />
@@ -209,7 +295,7 @@ const _GenerateKeysPage = ({
         </InstructionImgContainer>
         <Alert variant="error">
           <FormattedMessage
-            defaultMessage="Warning: Do not store keys on multiple (backup) validators at once"
+            defaultMessage="Warning: Do not store keys on multiple (backup) validator clients at once"
             description="Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once."
           />
           <Link

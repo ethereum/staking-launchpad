@@ -746,6 +746,9 @@
   "GelBd9": {
     "message": "Make the file you just downloaded executable."
   },
+  "GlKjxX": {
+    "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
+  },
   "GsBRWL": {
     "message": "Languages"
   },
@@ -865,6 +868,10 @@
   },
   "K6+jQ3": {
     "message": "Geth installation documentation"
+  },
+  "K7xnjy": {
+    "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
+    "message": "Warning: Do not store keys on multiple (backup) validator clients at once"
   },
   "KBSbmP": {
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
@@ -1373,8 +1380,15 @@
     "description": "{http} shows '--http' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
   },
+  "Xf71C8": {
+    "message": "Withdrawals will automatically go to the withdrawal address provided after the Shanghai upgrade is completed. If you do not provide a withdrawal address (not recommended), you can use your mnemonic to generate your withdrawal key to sign a message when you wish to provide a permanent withdrawal address (after Capella consensus update)."
+  },
   "XmddSV": {
     "message": "Build from source"
+  },
+  "XszRWL": {
+    "description": "this is used as a command line flag",
+    "message": "eth1_withdrawal_address"
   },
   "Y07Hwy": {
     "message": "Connect {wallet} to {executionLayerName}"
@@ -1692,9 +1706,6 @@
   "g37XKP": {
     "message": "More on virtualenv"
   },
-  "gIauNz": {
-    "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password. You can use your mnemonic to generate your withdrawal key when you wish to withdraw."
-  },
   "gN9D/h": {
     "message": "Use {goerli} to sync the Goerli testnet."
   },
@@ -1845,10 +1856,6 @@
   },
   "jlx7pU": {
     "message": "Documentation on running Geth"
-  },
-  "jm79h1": {
-    "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
-    "message": "Warning: Do not store keys on multiple (backup) validators at once"
   },
   "jp9OG2": {
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
@@ -2215,6 +2222,10 @@
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
   },
+  "sHXPzG": {
+    "description": "{flag} is a terminal command styled as code.",
+    "message": "Make sure you set a withdrawal address using {flag}, which is required for withdrawals. Failure to provide this will result in the need to sign another message to indicate your chosen withdrawal address, until which funds will remain locked."
+  },
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
   },
@@ -2415,10 +2426,6 @@
   },
   "xXWzDf": {
     "message": "The Beacon Chain"
-  },
-  "xXntjc": {
-    "description": "{flag} is a terminal command styled as code.",
-    "message": "Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
   },
   "xZZMZ5": {
     "message": "testnet"

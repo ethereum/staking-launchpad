@@ -17,9 +17,11 @@ const Pre = styled.pre`
 
 export const Option3 = ({
   validatorCount,
+  withdrawalAddress,
   os,
 }: {
   validatorCount: number | string;
+  withdrawalAddress: string;
   os: string;
 }) => {
   const { formatMessage } = useIntl();
@@ -166,7 +168,8 @@ export const Option3 = ({
                   description: 'this is used as a command line flag',
                 })
               : `chain`
-          } ${NETWORK_NAME.toLowerCase()}`}
+          } ${NETWORK_NAME.toLowerCase()}`}{' '}
+          --eth1_withdrawal_address {withdrawalAddress}
         </Pre>
       );
     }
@@ -323,7 +326,7 @@ export const Option3 = ({
       <Alert variant="secondary" className="my10">
         {renderDepositKeyCommand()}
       </Alert>
-      <Alert variant="error" className="my10">
+      <Alert variant="error" className="my20">
         <Text>
           <FormattedMessage
             defaultMessage="Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
@@ -342,7 +345,25 @@ export const Option3 = ({
           />
         </Text>
       </Alert>
-      <Alert variant="warning" className="my10">
+      <Alert variant="warning" className="my20">
+        <Text>
+          <FormattedMessage
+            defaultMessage="Make sure you set a withdrawal address using {flag}, which is required for withdrawals. Failure to provide this will result in the need to sign another message to indicate your chosen withdrawal address, until which funds will remain locked."
+            values={{
+              flag: (
+                <Code>
+                  {`--${formatMessage({
+                    defaultMessage: 'eth1_withdrawal_address',
+                    description: 'this is used as a command line flag',
+                  })}`}
+                </Code>
+              ),
+            }}
+            description="{flag} is a terminal command styled as code."
+          />
+        </Text>
+      </Alert>
+      <Text className="my20">
         <Text>
           <FormattedMessage defaultMessage="If you have questions about deposit-cli, please visit the GitHub repository." />
         </Text>
@@ -353,7 +374,7 @@ export const Option3 = ({
         >
           https://github.com/ethereum/staking-deposit-cli
         </Link>
-      </Alert>
+      </Text>
     </div>
   );
 };

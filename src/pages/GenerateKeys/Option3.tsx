@@ -6,7 +6,7 @@ import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME } from '../../utils/envVars';
+import { NETWORK_NAME, TRANSLATE_CLI_FLAGS } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
@@ -148,28 +148,38 @@ export const Option3 = ({
   };
 
   const renderDepositKeyCommand = () => {
-    const translateFlags = false;
-
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
           python3 ./staking_deposit/deposit.py new-mnemonic{' '}
           {validatorCount > 0
-            ? `--${formatMessage({
-                defaultMessage: 'num_validators',
-                description:
-                  'this is used as a command line flag, short for "number of validators"',
-              })} ${validatorCount}`
+            ? `--${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'num_validators',
+                      description:
+                        'this is used as a command line flag, short for "number of validators"',
+                    })
+                  : 'num_validators'
+              } ${validatorCount}`
             : ''}{' '}
           {`--${
-            translateFlags
+            TRANSLATE_CLI_FLAGS
               ? formatMessage({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
                 })
               : `chain`
           } ${NETWORK_NAME.toLowerCase()}`}{' '}
-          --eth1_withdrawal_address {withdrawalAddress}
+          {`--${
+            TRANSLATE_CLI_FLAGS
+              ? formatMessage({
+                  defaultMessage: 'eth1_withdrawal_address',
+                  description: 'this is used as a command line flag',
+                })
+              : `eth1_withdrawal_address`
+          }`}{' '}
+          {withdrawalAddress}
         </Pre>
       );
     }
@@ -179,14 +189,18 @@ export const Option3 = ({
         <Pre className="my0">
           .\staking_deposit\deposit.py new-mnemonic{' '}
           {validatorCount > 0
-            ? `--${formatMessage({
-                defaultMessage: 'num_validators',
-                description:
-                  'this is used as a command line flag, short for "number of validators"',
-              })} ${validatorCount}`
+            ? `--${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'num_validators',
+                      description:
+                        'this is used as a command line flag, short for "number of validators"',
+                    })
+                  : 'num_validators'
+              } ${validatorCount}`
             : ''}{' '}
           {`--${
-            translateFlags
+            TRANSLATE_CLI_FLAGS
               ? formatMessage({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
@@ -333,10 +347,14 @@ export const Option3 = ({
             values={{
               flag: (
                 <Code>
-                  {`--${formatMessage({
-                    defaultMessage: 'chain',
-                    description: 'this is used as a command line flag',
-                  })} ${NETWORK_NAME.toLowerCase()}`}
+                  {`--${
+                    TRANSLATE_CLI_FLAGS
+                      ? formatMessage({
+                          defaultMessage: 'chain',
+                          description: 'this is used as a command line flag',
+                        })
+                      : 'chain'
+                  } ${NETWORK_NAME.toLowerCase()}`}
                 </Code>
               ),
               consensusLayerName,

@@ -7,7 +7,7 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME } from '../../utils/envVars';
+import { NETWORK_NAME, TRANSLATE_CLI_FLAGS } from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
@@ -121,22 +121,34 @@ export const Option1 = ({
                 <span style={{ color: colors.purple.dark }}>.exe </span>
               </>
             )}
-            new-mnemonic
+            new-mnemonic{' '}
             {validatorCount > 0
-              ? ` --${formatMessage({
-                  defaultMessage: 'num_validators',
-                  description:
-                    'this is used as a command line flag, short for "number of validators"',
-                })} ${validatorCount}`
+              ? `--${
+                  TRANSLATE_CLI_FLAGS
+                    ? formatMessage({
+                        defaultMessage: 'num_validators',
+                        description:
+                          'this is used as a command line flag, short for "number of validators"',
+                      })
+                    : 'num_validators'
+                } ${validatorCount}`
               : ''}{' '}
-            {`--${formatMessage({
-              defaultMessage: 'chain',
-              description: 'this is used as a command line flag',
-            })} ${NETWORK_NAME.toLowerCase()}`}{' '}
-            {`--${formatMessage({
-              defaultMessage: 'eth1_withdrawal_address',
-              description: 'this is used as a command line flag',
-            })} ${withdrawalAddress}`}
+            {`--${
+              TRANSLATE_CLI_FLAGS
+                ? formatMessage({
+                    defaultMessage: 'chain',
+                    description: 'this is used as a command line flag',
+                  })
+                : 'chain'
+            } ${NETWORK_NAME.toLowerCase()}`}{' '}
+            {`--${
+              TRANSLATE_CLI_FLAGS
+                ? formatMessage({
+                    defaultMessage: 'eth1_withrawal_address',
+                    description: 'this is used as a command line flag',
+                  })
+                : 'eth1_withrawal_address'
+            } ${withdrawalAddress}`}
           </Pre>
         </Alert>
         <Alert variant="error" className="my20">
@@ -146,10 +158,14 @@ export const Option1 = ({
               values={{
                 flag: (
                   <Code>
-                    {`--${formatMessage({
-                      defaultMessage: 'chain',
-                      description: 'this is used as a command line flag',
-                    })} ${NETWORK_NAME.toLowerCase()}`}
+                    {`--${
+                      TRANSLATE_CLI_FLAGS
+                        ? formatMessage({
+                            defaultMessage: 'chain',
+                            description: 'this is used as a command line flag',
+                          })
+                        : 'chain'
+                    } ${NETWORK_NAME.toLowerCase()}`}
                   </Code>
                 ),
                 consensusLayerName,
@@ -165,10 +181,14 @@ export const Option1 = ({
               values={{
                 flag: (
                   <Code>
-                    {`--${formatMessage({
-                      defaultMessage: 'eth1_withdrawal_address',
-                      description: 'this is used as a command line flag',
-                    })}`}
+                    {`--${
+                      TRANSLATE_CLI_FLAGS
+                        ? formatMessage({
+                            defaultMessage: 'eth1_withdrawal_address',
+                            description: 'this is used as a command line flag',
+                          })
+                        : 'eth1_withrawal_address'
+                    }`}
                   </Code>
                 ),
               }}

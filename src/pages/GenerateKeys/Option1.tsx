@@ -144,10 +144,10 @@ export const Option1 = ({
             {`--${
               TRANSLATE_CLI_FLAGS
                 ? formatMessage({
-                    defaultMessage: 'eth1_withrawal_address',
+                    defaultMessage: 'eth1_withdrawal_address',
                     description: 'this is used as a command line flag',
                   })
-                : 'eth1_withrawal_address'
+                : 'eth1_withdrawal_address'
             } ${withdrawalAddress}`}
           </Pre>
         </Alert>
@@ -187,7 +187,7 @@ export const Option1 = ({
                             defaultMessage: 'eth1_withdrawal_address',
                             description: 'this is used as a command line flag',
                           })
-                        : 'eth1_withrawal_address'
+                        : 'eth1_withdrawal_address'
                     }`}
                   </Code>
                 ),

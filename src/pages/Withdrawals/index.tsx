@@ -29,6 +29,13 @@ const ComponentStyles = styled.div`
     margin-top: 10px;
     font-weight: 300;
   }
+  strong {
+    font-weight: 500;
+  }
+`;
+
+const HashCode = styled(Code)`
+  word-break: break-all;
 `;
 
 const SectionTitle = styled(Heading)`
@@ -205,9 +212,9 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Which looks something like this:" />
             </Text>
             <Text className="mb10">
-              <Code>
+              <HashCode>
                 0x00fa5662b9cf43965d20062ceb2321dead12319ff43965db26dbaa3cecb49df9
-              </Code>
+              </HashCode>
             </Text>
             <Text className="mb10">
               <FormattedMessage
@@ -243,9 +250,9 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Which looks something like this:" />
             </Text>
             <Text className="mb10">
-              <Code>
+              <HashCode>
                 0x01000000000000000000000034e404116a149c24f698f312ba8cfdeade052c48
-              </Code>
+              </HashCode>
             </Text>
             <Text className="mb10">
               <FormattedMessage
@@ -255,7 +262,7 @@ export const Withdrawals = () => {
               />
             </Text>
             <Text className="mb10">
-              <Code>0x34e404116a149c24f698f312ba8cfdeade052c48.</Code>
+              <HashCode>0x34e404116a149c24f698f312ba8cfdeade052c48.</HashCode>
             </Text>
           </section>
           <section>

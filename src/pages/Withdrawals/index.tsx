@@ -83,7 +83,7 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Upgrade your keys: BLS to execution change" />
             </SectionTitle>
           </Anchor>
-          <Text className="">
+          <Text className="mb10">
             <FormattedMessage
               defaultMessage="If your validator account still has BLS withdrawal credentials ({type0}),
               a one-time message must be broadcast signaling which execution layer account should be
@@ -91,6 +91,7 @@ export const Withdrawals = () => {
               values={{ type0: <Code>0x00</Code> }}
             />
           </Text>
+
           <section>
             <Heading level={3} className="mb10">
               <FormattedMessage defaultMessage="Available tools" />
@@ -175,11 +176,11 @@ export const Withdrawals = () => {
           </Text>
           <Text className="mb10">
             <FormattedMessage
-              defaultMessage='Every validator account has a stored value known as its "withdrawal credentials".
+              defaultMessage="Every validator account has a stored value known as its “withdrawal credentials”.
               This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if
               and where funds can be sent to from this account. These values are prefixed with {type0} or {type1} as the
               first byte, to indicate whether the keys are in the old BLS format ({type0}, not capable of withdrawals),
-              or have been upgraded to an execution layer address ({type1}, capable of withdrawals).'
+              or have been upgraded to an execution layer address ({type1}, capable of withdrawals)."
               values={{ type0: <Code>0x00</Code>, type1: <Code>0x01</Code> }}
             />
           </Text>
@@ -329,8 +330,7 @@ export const Withdrawals = () => {
             </Text>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="EIP-4895, titled {eip4895}, implements a
-                design that simplified this whole process for stakers."
+                defaultMessage="EIP-4895, titled {eip4895}, implements a design that simplified this whole process for stakers."
                 values={{
                   eip4895: (
                     <Link
@@ -403,7 +403,9 @@ export const Withdrawals = () => {
             </Text>
             <Alert variant="primary" className="mb10">
               <Text className="mb10">
-                📝{' '}
+                <span role="img" aria-label="note">
+                  📝
+                </span>{' '}
                 <FormattedMessage defaultMessage="Note the “withdrawal” and “BLS-to-execution” queues are independent and do not compete. Each are limited on a per-block basis." />
               </Text>
             </Alert>
@@ -416,7 +418,7 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="A decision tree is followed, and if the validator being checked has ETH that is
-                eligible to be withdrawn, it is added to the withdrawal queue. If there isn't, the account is skipped."
+                eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
               />
             </Text>
             <ol className="mb10">
@@ -602,7 +604,9 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. " />
             </Text>
             <Alert variant="error">
-              📝{' '}
+              <span role="img" aria-label="note">
+                📝
+              </span>{' '}
               <FormattedMessage defaultMessage="It is not possible to manually request specific amounts of ETH to be withdrawn" />
             </Alert>
           </section>
@@ -652,7 +656,7 @@ export const Withdrawals = () => {
             <ol>
               <li>
                 <FormattedMessage
-                  defaultMessage="Make sure you've updated your withdrawal credentials and have a withdrawal
+                  defaultMessage="Make sure you’ve updated your withdrawal credentials and have a withdrawal
                   address registered to this account"
                 />
               </li>
@@ -665,7 +669,7 @@ export const Withdrawals = () => {
             </ol>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="By completing step one, you'll enable withdrawals from your validator account.
+                defaultMessage="By completing step one, you’ll enable withdrawals from your validator account.
                 This will automatically trigger rewards payments (partial withdrawals) to be processed, but this
                 does not automatically unlock the rest of your funds, or trigger an exit from the network."
               />
@@ -802,7 +806,9 @@ export const Withdrawals = () => {
 
             <Alert variant="primary" className="mb10">
               <Text className="mb10">
-                📝{' '}
+                <span role="img" aria-label="note">
+                  📝
+                </span>{' '}
                 <FormattedMessage defaultMessage="Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis." />
               </Text>
             </Alert>

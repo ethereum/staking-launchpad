@@ -288,9 +288,6 @@
   "3URRZK": {
     "message": "Geth on Goerli documentation"
   },
-  "3p0pIq": {
-    "message": "By completing step one, you'll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
-  },
   "3tR/V9": {
     "message": "Section 2 - During setup"
   },
@@ -394,6 +391,9 @@
   },
   "793QlI": {
     "message": "{title} is not supported in offline mode."
+  },
+  "7COHso": {
+    "message": "Make sure you’ve updated your withdrawal credentials and have a withdrawal address registered to this account"
   },
   "7DFXQj": {
     "message": "Switch to {oppositeNetwork} launchpad"
@@ -1003,6 +1003,10 @@
   "KQrlTP": {
     "message": "join"
   },
+  "KWWsDo": {
+    "description": "{url} is link to GitHub CLI release, made bold for emphasis",
+    "message": "Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: {url}"
+  },
   "KbUOQp": {
     "message": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
   },
@@ -1041,9 +1045,6 @@
   "LHPZ+C": {
     "message": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
   },
-  "LJ/kKj": {
-    "message": "A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn't, the account is skipped."
-  },
   "LVy+cS": {
     "message": "Check with client documentation to ensure the hardware you want to use is sufficient and supported."
   },
@@ -1066,9 +1067,6 @@
   "Ltd/hJ": {
     "description": "{directoriesPattern} refers to a computer command which will find {keyDirectory} and\n                {passwordDirectory} - both folders within a computer.",
     "message": "{directoriesPattern} will find {keyDirectory}, and expect to find {passwordDirectory}."
-  },
-  "LuUv45": {
-    "message": "Make sure you've updated your withdrawal credentials and have a withdrawal address registered to this account"
   },
   "Lv3Pmp": {
     "message": "Your initial deposit has already been made for this validator public key. Please wait and check the status of your deposit on the Beaconchain data provider."
@@ -1121,6 +1119,9 @@
   "MmZjeu": {
     "message": "Top-up details"
   },
+  "Mzl9EK": {
+    "message": "A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+  },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
   },
@@ -1129,6 +1130,9 @@
   },
   "NEmnAV": {
     "message": "Italian"
+  },
+  "NLPhkp": {
+    "message": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
   },
   "NLgogh": {
     "message": "Launchpad network:"
@@ -1335,6 +1339,9 @@
   },
   "Ryptmy": {
     "message": "Verify it with the following command to check if it returns the client version correctly:"
+  },
+  "S0CvB8": {
+    "message": "Every validator account has a stored value known as its “withdrawal credentials”. This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if and where funds can be sent to from this account. These values are prefixed with {type0} or {type1} as the first byte, to indicate whether the keys are in the old BLS format ({type0}, not capable of withdrawals), or have been upgraded to an execution layer address ({type1}, capable of withdrawals)."
   },
   "S943uU": {
     "message": "Double check the URL"
@@ -2037,9 +2044,6 @@
     "description": "{network} inserts the testnet name, only if on the testnet",
     "message": "Staking Launchpad {network}"
   },
-  "ikXsvK": {
-    "message": "Every validator account has a stored value known as its \"withdrawal credentials\". This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if and where funds can be sent to from this account. These values are prefixed with {type0} or {type1} as the first byte, to indicate whether the keys are in the old BLS format ({type0}, not capable of withdrawals), or have been upgraded to an execution layer address ({type1}, capable of withdrawals)."
-  },
   "im7uMt": {
     "message": "Consensus Layer Validator Client (VC)"
   },
@@ -2422,10 +2426,6 @@
   },
   "qB6aU6": {
     "message": "What happened to 'Eth2?'"
-  },
-  "qCXVHK": {
-    "description": "{url} is link to GitHub GUI release, made bold for emphasis",
-    "message": "Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: {url}"
   },
   "qDvaNm": {
     "message": "I understand that keys are my responsibility and that my mnemonic (seed) will be the {onlyWay} to withdraw my funds."

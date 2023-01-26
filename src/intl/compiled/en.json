@@ -777,12 +777,6 @@
       "value": "Geth on Goerli documentation"
     }
   ],
-  "3p0pIq": [
-    {
-      "type": 0,
-      "value": "By completing step one, you'll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
-    }
-  ],
   "3tR/V9": [
     {
       "type": 0,
@@ -1053,6 +1047,12 @@
     {
       "type": 0,
       "value": " is not supported in offline mode."
+    }
+  ],
+  "7COHso": [
+    {
+      "type": 0,
+      "value": "Make sure you’ve updated your withdrawal credentials and have a withdrawal address registered to this account"
     }
   ],
   "7DFXQj": [
@@ -2601,6 +2601,16 @@
       "value": "join"
     }
   ],
+  "KWWsDo": [
+    {
+      "type": 0,
+      "value": "Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
   "KbUOQp": [
     {
       "type": 0,
@@ -2685,12 +2695,6 @@
       "value": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
     }
   ],
-  "LJ/kKj": [
-    {
-      "type": 0,
-      "value": "A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn't, the account is skipped."
-    }
-  ],
   "LVy+cS": [
     {
       "type": 0,
@@ -2759,12 +2763,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "LuUv45": [
-    {
-      "type": 0,
-      "value": "Make sure you've updated your withdrawal credentials and have a withdrawal address registered to this account"
     }
   ],
   "Lv3Pmp": [
@@ -2869,6 +2867,12 @@
       "value": "Top-up details"
     }
   ],
+  "Mzl9EK": [
+    {
+      "type": 0,
+      "value": "A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -2889,6 +2893,12 @@
     {
       "type": 0,
       "value": "Italian"
+    }
+  ],
+  "NLPhkp": [
+    {
+      "type": 0,
+      "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
     }
   ],
   "NLgogh": [
@@ -3469,6 +3479,44 @@
     {
       "type": 0,
       "value": "Verify it with the following command to check if it returns the client version correctly:"
+    }
+  ],
+  "S0CvB8": [
+    {
+      "type": 0,
+      "value": "Every validator account has a stored value known as its “withdrawal credentials”. This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if and where funds can be sent to from this account. These values are prefixed with "
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " or "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " as the first byte, to indicate whether the keys are in the old BLS format ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ", not capable of withdrawals), or have been upgraded to an execution layer address ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ", capable of withdrawals)."
     }
   ],
   "S943uU": [
@@ -5225,44 +5273,6 @@
       "value": "network"
     }
   ],
-  "ikXsvK": [
-    {
-      "type": 0,
-      "value": "Every validator account has a stored value known as its \"withdrawal credentials\". This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if and where funds can be sent to from this account. These values are prefixed with "
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " or "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " as the first byte, to indicate whether the keys are in the old BLS format ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ", not capable of withdrawals), or have been upgraded to an execution layer address ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ", capable of withdrawals)."
-    }
-  ],
   "im7uMt": [
     {
       "type": 0,
@@ -6223,16 +6233,6 @@
     {
       "type": 0,
       "value": "What happened to 'Eth2?'"
-    }
-  ],
-  "qCXVHK": [
-    {
-      "type": 0,
-      "value": "Please make sure that you are downloading from the official StakeHouse GitHub account by verifying the url: "
-    },
-    {
-      "type": 1,
-      "value": "url"
     }
   ],
   "qDvaNm": [

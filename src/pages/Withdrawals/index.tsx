@@ -200,7 +200,7 @@ export const Withdrawals = () => {
             </Heading>
             <ul>
               <li>
-                <strong>ethodo</strong> -{' '}
+                <strong>ethdo</strong> -{' '}
                 <Link
                   inline
                   primary
@@ -564,7 +564,7 @@ export const Withdrawals = () => {
                     />
                   </li>
                   <li>
-                    <FormattedMessage defaultMessage="If so, move to next question" />
+                    <FormattedMessage defaultMessage="If so, reward payment processed" />
                   </li>
                 </ul>
               </li>

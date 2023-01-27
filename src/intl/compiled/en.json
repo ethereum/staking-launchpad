@@ -39,6 +39,12 @@
       "value": "Validator uptime"
     }
   ],
+  "+V/yNx": [
+    {
+      "type": 0,
+      "value": "Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off. When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
+    }
+  ],
   "+e8bO+": [
     {
       "type": 0,
@@ -163,6 +169,12 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "/g4DH6": [
+    {
+      "type": 0,
+      "value": "The status of the validator at time of evaluation is what will determine if, and what type of withdrawal will be initiated. A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+    }
+  ],
   "/h0DGY": [
     {
       "type": 0,
@@ -181,12 +193,6 @@
     {
       "type": 0,
       "value": "Transactions"
-    }
-  ],
-  "/jo/gx": [
-    {
-      "type": 0,
-      "value": "Validators are processed for available withdrawals in an endless cycle, a few at a time, automatically, with one block picking up where the last block left off."
     }
   ],
   "/rmnC0": [
@@ -599,6 +605,12 @@
     {
       "type": 0,
       "value": "Nimbus key management documentation"
+    }
+  ],
+  "2o7cAq": [
+    {
+      "type": 0,
+      "value": "Exit max per day"
     }
   ],
   "2rflCq": [
@@ -1173,12 +1185,6 @@
       "value": "We can't detect MetaMask. Switch browsers or install MetaMask."
     }
   ],
-  "8CdwjH": [
-    {
-      "type": 0,
-      "value": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). This starts with the validator at index in order, starting from index 0, for possible withdrawals on a continuous loop. A max of 16 withdrawals can be added to the withdrawal queue for each block, starting where the last block left off."
-    }
-  ],
   "8FmuYF": [
     {
       "type": 0,
@@ -1437,6 +1443,12 @@
     {
       "type": 0,
       "value": "If you need help, check out the Python documentation."
+    }
+  ],
+  "AGWcB0": [
+    {
+      "type": 0,
+      "value": "Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over again from the beginning."
     }
   ],
   "AJD+66": [
@@ -1917,6 +1929,12 @@
     {
       "type": 0,
       "value": " executable"
+    }
+  ],
+  "EJExgE": [
+    {
+      "type": 0,
+      "value": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism. On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below)."
     }
   ],
   "EPCHZV": [
@@ -2867,12 +2885,6 @@
       "value": "Top-up details"
     }
   ],
-  "Mzl9EK": [
-    {
-      "type": 0,
-      "value": "A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
-    }
-  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -3277,6 +3289,12 @@
       "value": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
     }
   ],
+  "QQV5jY": [
+    {
+      "type": 0,
+      "value": "(Also written as)"
+    }
+  ],
   "QRUdO6": [
     {
       "type": 0,
@@ -3675,12 +3693,6 @@
       "value": "View extensive client comparison"
     }
   ],
-  "U1PA2f": [
-    {
-      "type": 0,
-      "value": "The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning."
-    }
-  ],
   "U6jzBs": [
     {
       "type": 0,
@@ -3973,6 +3985,12 @@
       "value": "Please accept the conditions above."
     }
   ],
+  "WuddUL": [
+    {
+      "type": 0,
+      "value": "Min active validators"
+    }
+  ],
   "Wxzght": [
     {
       "type": 0,
@@ -4169,6 +4187,12 @@
     {
       "type": 0,
       "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
+    }
+  ],
+  "YQpEI1": [
+    {
+      "type": 0,
+      "value": "At each validator along the way, the account is evaluated for potential withdrawals."
     }
   ],
   "YRHdUj": [
@@ -4815,12 +4839,6 @@
     {
       "type": 0,
       "value": " (the minimum allowed by the deposit contract) will max out your effective balance."
-    }
-  ],
-  "evwdGf": [
-    {
-      "type": 0,
-      "value": "Now instead of 1 through 12, imagine the clock has 0 through N (the total number of validator accounts that have ever been registered on the Beacon Chain, over 500,000 as of Jan 2023)."
     }
   ],
   "eyK2E3": [
@@ -5609,12 +5627,6 @@
       "value": "Outstanding deposit"
     }
   ],
-  "lDpZQZ": [
-    {
-      "type": 0,
-      "value": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts."
-    }
-  ],
   "lHiz+K": [
     {
       "type": 0,
@@ -6255,6 +6267,12 @@
       "value": "The terminal"
     }
   ],
+  "qLK8Vf": [
+    {
+      "type": 0,
+      "value": "Activationlimit per epoch"
+    }
+  ],
   "qMePPG": [
     {
       "type": 0,
@@ -6457,12 +6475,6 @@
       "value": "CPU and RAM"
     }
   ],
-  "sfa50l": [
-    {
-      "type": 0,
-      "value": "Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached."
-    }
-  ],
   "shdKcK": [
     {
       "type": 0,
@@ -6505,6 +6517,12 @@
     {
       "type": 0,
       "value": "What is the deposit contract?"
+    }
+  ],
+  "syzucV": [
+    {
+      "type": 0,
+      "value": "Exit limit per epoch"
     }
   ],
   "szN3Fl": [
@@ -6701,6 +6719,12 @@
     {
       "type": 0,
       "value": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
+    }
+  ],
+  "uN055l": [
+    {
+      "type": 0,
+      "value": "Activation max per day"
     }
   ],
   "uNfxNg": [

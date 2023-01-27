@@ -12,6 +12,9 @@
   "+V+ZX+": {
     "message": "Validator uptime"
   },
+  "+V/yNx": {
+    "message": "Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off. When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
+  },
   "+e8bO+": {
     "message": "I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase."
   },
@@ -60,14 +63,14 @@
   "/WenEu": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending the {pricePerValidator} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
   },
+  "/g4DH6": {
+    "message": "The status of the validator at time of evaluation is what will determine if, and what type of withdrawal will be initiated. A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+  },
   "/h0DGY": {
     "message": "Why the {pricePerValidator} ETH maximum?"
   },
   "/jJLYy": {
     "message": "Transactions"
-  },
-  "/jo/gx": {
-    "message": "Validators are processed for available withdrawals in an endless cycle, a few at a time, automatically, with one block picking up where the last block left off."
   },
   "/rmnC0": {
     "message": "If at all possible, consider running another client at this time to help protect yourself and the network."
@@ -233,6 +236,9 @@
   },
   "2iH8Zc": {
     "message": "Nimbus key management documentation"
+  },
+  "2o7cAq": {
+    "message": "Exit max per day"
   },
   "2rflCq": {
     "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
@@ -436,9 +442,6 @@
   "82vl9l": {
     "message": "We can't detect MetaMask. Switch browsers or install MetaMask."
   },
-  "8CdwjH": {
-    "message": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). This starts with the validator at index in order, starting from index 0, for possible withdrawals on a continuous loop. A max of 16 withdrawals can be added to the withdrawal queue for each block, starting where the last block left off."
-  },
   "8FmuYF": {
     "message": "Install pip3"
   },
@@ -542,6 +545,9 @@
   },
   "AC669U": {
     "message": "If you need help, check out the Python documentation."
+  },
+  "AGWcB0": {
+    "message": "Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over again from the beginning."
   },
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
@@ -729,6 +735,9 @@
   "EIUapL": {
     "description": "{deposit} = 'deposit' styled as code",
     "message": "Use the terminal to move into the directory that contains the {deposit} executable"
+  },
+  "EJExgE": {
+    "message": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism. On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below)."
   },
   "EPCHZV": {
     "message": "If you lose your signing key, your validator can no longer propose or attest."
@@ -1119,9 +1128,6 @@
   "MmZjeu": {
     "message": "Top-up details"
   },
-  "Mzl9EK": {
-    "message": "A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
-  },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
   },
@@ -1267,6 +1273,9 @@
   },
   "QOAgQF": {
     "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
+  },
+  "QQV5jY": {
+    "message": "(Also written as)"
   },
   "QRUdO6": {
     "message": "Set fee recipient"
@@ -1416,9 +1425,6 @@
   "U0yY/A": {
     "message": "View extensive client comparison"
   },
-  "U1PA2f": {
-    "message": "The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning."
-  },
   "U6jzBs": {
     "message": "How to join the public withdrawals testnet"
   },
@@ -1523,6 +1529,9 @@
   "Wl6cI3": {
     "message": "Please accept the conditions above."
   },
+  "WuddUL": {
+    "message": "Min active validators"
+  },
   "Wxzght": {
     "message": "Drag file to upload or browse"
   },
@@ -1589,6 +1598,9 @@
   },
   "YQJy4H": {
     "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
+  },
+  "YQpEI1": {
+    "message": "At each validator along the way, the account is evaluated for potential withdrawals."
   },
   "YRHdUj": {
     "message": "{type1} withdrawal credentials (BLS, not capable of withdrawals)"
@@ -1859,9 +1871,6 @@
   },
   "esDvdR": {
     "message": "Validator balance is over {PRICE_PER_VALIDATOR}, but effective balance is low ({effectiveBalance}). Adding {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance."
-  },
-  "evwdGf": {
-    "message": "Now instead of 1 through 12, imagine the clock has 0 through N (the total number of validator accounts that have ever been registered on the Beacon Chain, over 500,000 as of Jan 2023)."
   },
   "eyK2E3": {
     "message": "Complete checklist"
@@ -2190,9 +2199,6 @@
   "lD66ab": {
     "message": "Outstanding deposit"
   },
-  "lDpZQZ": {
-    "message": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts."
-  },
   "lHiz+K": {
     "message": "Nimbus is a client implementation for both execution and consensus layers that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
   },
@@ -2433,6 +2439,9 @@
   "qK4+NQ": {
     "message": "The terminal"
   },
+  "qLK8Vf": {
+    "message": "Activationlimit per epoch"
+  },
   "qMePPG": {
     "message": "Note"
   },
@@ -2509,9 +2518,6 @@
   "sXV95+": {
     "message": "CPU and RAM"
   },
-  "sfa50l": {
-    "message": "Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached."
-  },
   "shdKcK": {
     "message": "You can also check {beaconchain} to search for your validators by the associated address used to deposit your stake."
   },
@@ -2529,6 +2535,9 @@
   },
   "sy35J+": {
     "message": "What is the deposit contract?"
+  },
+  "syzucV": {
+    "message": "Exit limit per epoch"
   },
   "szN3Fl": {
     "message": "I understand and agree to the terms-of-service and everything stated in the previous sections."
@@ -2602,6 +2611,9 @@
   },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
+  },
+  "uN055l": {
+    "message": "Activation max per day"
   },
   "uNfxNg": {
     "message": "To continue, {reconnect}"

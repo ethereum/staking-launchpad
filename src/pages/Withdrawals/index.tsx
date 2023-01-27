@@ -32,6 +32,29 @@ const ComponentStyles = styled.div`
   strong {
     font-weight: 500;
   }
+  table {
+    margin: 1rem auto;
+    color: #212529;
+
+    * {
+      text-align: start;
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+
+    thead th {
+      vertical-align: bottom;
+    }
+
+    tbody + tbody {
+      border-top: 2px solid #dee2e6;
+    }
+  }
 `;
 
 const HashCode = styled(Code)`
@@ -46,6 +69,50 @@ const SectionTitle = styled(Heading)`
 
 export const Withdrawals = () => {
   const { formatMessage } = useIntl();
+  const exitQueueRateLimitData = [
+    {
+      minValidators: 0,
+      baseTwo: '0',
+      maxPerEpoch: 4,
+      maxPerDay: 900,
+    },
+    {
+      minValidators: 2 ** 18 + 1 * 2 ** 16,
+      baseTwo: '2¹⁸ + 1 * 2¹⁶',
+      maxPerEpoch: 5,
+      maxPerDay: 1125,
+    },
+    {
+      minValidators: 2 ** 18 + 2 * 2 ** 16,
+      baseTwo: '2¹⁸ + 2 * 2¹⁶',
+      maxPerEpoch: 6,
+      maxPerDay: 1350,
+    },
+    {
+      minValidators: 2 ** 18 + 3 * 2 ** 16,
+      baseTwo: '2¹⁸ + 3 * 2¹⁶',
+      maxPerEpoch: 7,
+      maxPerDay: 1575,
+    },
+    {
+      minValidators: 2 ** 18 + 4 * 2 ** 16,
+      baseTwo: '2¹⁸ + 4 * 2¹⁶',
+      maxPerEpoch: 8,
+      maxPerDay: 1800,
+    },
+    {
+      minValidators: 2 ** 18 + 5 * 2 ** 16,
+      baseTwo: '2¹⁸ + 5 * 2¹⁶',
+      maxPerEpoch: 9,
+      maxPerDay: 2025,
+    },
+    {
+      minValidators: 2 ** 18 + 6 * 2 ** 16,
+      baseTwo: '2¹⁸ + 6 * 2¹⁶',
+      maxPerEpoch: 10,
+      maxPerDay: 2250,
+    },
+  ];
   return (
     <PageTemplate
       title={formatMessage({ defaultMessage: 'Withdrawals' })}
@@ -368,45 +435,28 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="The withdrawal queue is automatically filled and processed by block proposers, who
-                automatically check for any available payouts."
+                automatically check for any available payouts via a sweeping mechanism. On a never-ending loop, every
+                single validator account is continuously evaluated for eligible ETH withdrawals (of which there are
+                two types, more on this below)."
               />
             </Text>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="On a never-ending loop, every single validator account is continuously evaluated
-                for eligible ETH withdrawals (of which there are two types, more on this below). This starts with
-                the validator at index in order, starting from index 0, for possible withdrawals on a continuous
-                loop. A max of 16 withdrawals can be added to the withdrawal queue for each block, starting where
-                the last block left off."
-              />
-            </Text>
-            <Alert variant="info" className="mb10">
-              <Text className="mb10">
-                <FormattedMessage
-                  defaultMessage="Think about an analogue clock. The hand on the clock points to the hour,
-                  progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning
-                  again after the last number is reached."
-                />
-              </Text>
-              <Text>
-                <FormattedMessage
-                  defaultMessage="Now instead of 1 through 12, imagine the clock has 0 through N (the total number of
-                  validator accounts that have ever been registered on the Beacon Chain, over 500,000 as of Jan 2023)."
-                />
-              </Text>
-            </Alert>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="The hand on the clock points to the next validator that needs to be checked for
-                eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts.
-                When the last validator is reached, the cycle continues back at the beginning."
+                defaultMessage="
+                Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off.
+                When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals.
+                During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in
+                the next block."
               />
             </Text>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="Validators are processed for available withdrawals in an endless cycle, a few at a time,
-                automatically, with one block picking up where the last block left off."
+                defaultMessage="Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over
+                again from the beginning."
               />
+            </Text>
+            <Text className="mb10">
+              <FormattedMessage defaultMessage="At each validator along the way, the account is evaluated for potential withdrawals." />
             </Text>
             <Alert variant="primary" className="mb10">
               <Text className="mb10">
@@ -424,7 +474,8 @@ export const Withdrawals = () => {
             </Heading>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="A decision tree is followed, and if the validator being checked has ETH that is
+                defaultMessage="The status of the validator at time of evaluation is what will determine if, and what type of withdrawal will be initiated.
+                A decision tree is followed, and if the validator being checked has ETH that is
                 eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
               />
             </Text>
@@ -514,13 +565,13 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Rate-limits set on withdrawal queue (could change through testing before Shanghai)" />
               <ul>
                 <li>
-                  <Code>MAX_WITHDRAWALS_PER_PAYLOAD: 16 (2^4)</Code>
+                  <Code>MAX_WITHDRAWALS_PER_PAYLOAD: 16 (2⁴)</Code>
                   <br />
                   <FormattedMessage defaultMessage="Maximum number of withdrawals that can be processed in a single block" />
                 </li>
                 <li>
                   <Code>
-                    MAX_VALIDATORS_PER_WITHDRAWALS_SWEEP: 16,384 (2^14)
+                    MAX_VALIDATORS_PER_WITHDRAWALS_SWEEP: 16,384 (2¹⁴)
                   </Code>
                   <br />
                   <FormattedMessage
@@ -809,7 +860,44 @@ export const Withdrawals = () => {
               />
             </Text>
 
-            {/* TODO: Add activations/exits per day table */}
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <FormattedMessage defaultMessage="Min active validators" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="(Also written as)" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Activationlimit per epoch" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Exit limit per epoch" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Activation max per day" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Exit max per day" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {exitQueueRateLimitData.map(
+                  ({ minValidators, baseTwo, maxPerEpoch, maxPerDay }) => (
+                    <tr key={minValidators}>
+                      <td>{minValidators}</td>
+                      <td>{baseTwo}</td>
+                      <td>{maxPerEpoch}</td>
+                      <td>{maxPerEpoch}</td>
+                      <td>{maxPerDay}</td>
+                      <td>{maxPerDay}</td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
 
             <Alert variant="primary" className="mb10">
               <Text className="mb10">

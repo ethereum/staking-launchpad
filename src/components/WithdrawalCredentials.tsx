@@ -90,7 +90,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     if (!validator) return ' ';
     if (validator.isUpgraded)
       return (
-        <Alert variant="warning">
+        <Alert variant="success">
           <FormattedMessage
             defaultMessage="Validator index {validatorIndex} is ready to start
             receiving rewards! Withdrawal credentials linked to execution address {address}"
@@ -108,7 +108,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
         </Alert>
       );
     return (
-      <Alert variant="warning">
+      <Alert variant="error">
         <FormattedMessage
           defaultMessage="This {network} validator needs to be upgraded."
           values={{
@@ -147,7 +147,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           disabled={!inputValue.length}
         />
       </FlexRow>
-      <section>{resultText}</section>
+      <FlexRow>{resultText}</FlexRow>
     </Container>
   );
 };

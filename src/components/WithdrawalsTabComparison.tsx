@@ -14,6 +14,10 @@ const HashCode = styled(Code)`
 `;
 
 const StyledTabs = styled(Tabs)`
+  margin-top: 30px;
+  button:focus {
+    outline: 2px solid ${p => p.theme.red.light};
+  }
   div {
     border: 0px;
   }
@@ -26,15 +30,20 @@ const StyledTabs = styled(Tabs)`
     letter-spacing: 0.01em;
     font-size: 1rem;
   }
+  button[role='tab'] {
+    border-radius: 4px 4px 0 0;
+  }
   button[aria-expanded='true'] {
     background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
-    border-radius: 4px 4px 0 0;
     * {
       font-weight: 600 !important;
     }
   }
-
+  button div {
+    padding: 0;
+  }
   section {
+    margin-top: 10px !important;
     border-radius: 10px;
     border: 1px solid ${p => p.theme.gray.light};
     background: white;

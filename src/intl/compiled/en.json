@@ -1241,6 +1241,16 @@
       "value": "Fortunately, this is only a one-time message that needs to be processed, and validators who provided withdrawal credentials at time of deposit are exempt from this step. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
     }
   ],
+  "8k1RjX": [
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
   "8kLV25": [
     {
       "type": 0,
@@ -1737,6 +1747,12 @@
     {
       "type": 0,
       "value": "I've set up a firewall."
+    }
+  ],
+  "Cgrsge": [
+    {
+      "type": 0,
+      "value": "Current validators"
     }
   ],
   "D0Rigq": [
@@ -2385,6 +2401,12 @@
       "value": " outstanding deposits"
     }
   ],
+  "IhHhea": [
+    {
+      "type": 0,
+      "value": "Enter your validator index here to check if you're account is ready for withdrawals or not:"
+    }
+  ],
   "IklK9V": [
     {
       "type": 0,
@@ -2867,6 +2889,12 @@
       "value": "How is Ethereum scaling?"
     }
   ],
+  "MaZo9k": [
+    {
+      "type": 0,
+      "value": "Wagyu Key Gen GUI"
+    }
+  ],
   "Mb3npQ": [
     {
       "type": 0,
@@ -2923,6 +2951,20 @@
     {
       "type": 0,
       "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
+    }
+  ],
+  "NLfK07": [
+    {
+      "type": 0,
+      "value": "This "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " validator needs to be upgraded."
     }
   ],
   "NLgogh": [
@@ -3295,6 +3337,16 @@
       "value": "Internet"
     }
   ],
+  "QLpTKu": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": if you provided a withdrawal address when generating your keys, you're good to go (previously under “advanced mode”)"
+    }
+  ],
   "QOAgQF": [
     {
       "type": 0,
@@ -3423,6 +3475,24 @@
     {
       "type": 0,
       "value": "How do I exit and get my ETH back?"
+    }
+  ],
+  "R6z/mc": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": if you used the "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " flag when generating your keys, you're good to go"
     }
   ],
   "R8eePn": [
@@ -3749,6 +3819,12 @@
     {
       "type": 0,
       "value": "Check the deposit contract on your favorite Ethereum block explorer:"
+    }
+  ],
+  "UYoRgC": [
+    {
+      "type": 0,
+      "value": "Depending how you set up your initial deposit, your account may or may not be ready for withdrawals already:"
     }
   ],
   "Utck3E": [
@@ -4211,6 +4287,12 @@
       "value": " withdrawal credentials (BLS, not capable of withdrawals)"
     }
   ],
+  "YZtVDX": [
+    {
+      "type": 0,
+      "value": "Oops! Double check validator index number and try again."
+    }
+  ],
   "Yd6MEN": [
     {
       "type": 0,
@@ -4513,6 +4595,24 @@
     {
       "type": 0,
       "value": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
+    }
+  ],
+  "bs0vEf": [
+    {
+      "type": 0,
+      "value": "Validator index "
+    },
+    {
+      "type": 1,
+      "value": "validatorIndex"
+    },
+    {
+      "type": 0,
+      "value": " is ready to start receiving rewards! Withdrawal credentials linked to execution address "
+    },
+    {
+      "type": 1,
+      "value": "address"
     }
   ],
   "bxU6sX": [
@@ -5861,6 +5961,12 @@
       "value": "Risks and acknowledgements:"
     }
   ],
+  "muV9Fg": [
+    {
+      "type": 0,
+      "value": "New validators (not yet deposited)"
+    }
+  ],
   "n2Dn3F": [
     {
       "type": 0,
@@ -6313,6 +6419,12 @@
     {
       "type": 0,
       "value": "reconnect your wallet"
+    }
+  ],
+  "qkEXNd": [
+    {
+      "type": 0,
+      "value": "Staking Deposit CLI"
     }
   ],
   "qkhah0": [
@@ -6807,6 +6919,16 @@
     {
       "type": 0,
       "value": " deposits?"
+    }
+  ],
+  "uq1DMk": [
+    {
+      "type": 0,
+      "value": "Check "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
     }
   ],
   "v6ytKW": [

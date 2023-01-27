@@ -467,6 +467,9 @@
   "8fXTDo": {
     "message": "Fortunately, this is only a one-time message that needs to be processed, and validators who provided withdrawal credentials at time of deposit are exempt from this step. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
   },
+  "8k1RjX": {
+    "message": "{NETWORK_NAME} testnet"
+  },
   "8kLV25": {
     "message": "Has a withdrawal address been provided?"
   },
@@ -659,6 +662,9 @@
   },
   "CeeJfw": {
     "message": "I've set up a firewall."
+  },
+  "Cgrsge": {
+    "message": "Current validators"
   },
   "D0Rigq": {
     "message": "NO"
@@ -928,6 +934,9 @@
     "description": "Plural form, for multiple remaining deposits",
     "message": "You have {remainingTxCount} outstanding deposits"
   },
+  "IhHhea": {
+    "message": "Enter your validator index here to check if you're account is ready for withdrawals or not:"
+  },
   "IklK9V": {
     "message": "no"
   },
@@ -1119,6 +1128,9 @@
   "MZzOnU": {
     "message": "How is Ethereum scaling?"
   },
+  "MaZo9k": {
+    "message": "Wagyu Key Gen GUI"
+  },
   "Mb3npQ": {
     "message": "Using the terminal"
   },
@@ -1145,6 +1157,9 @@
   },
   "NLPhkp": {
     "message": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
+  },
+  "NLfK07": {
+    "message": "This {network} validator needs to be upgraded."
   },
   "NLgogh": {
     "message": "Launchpad network:"
@@ -1277,6 +1292,9 @@
   "QKFeMq": {
     "message": "Internet"
   },
+  "QLpTKu": {
+    "message": "{wagyuKeyGenGui}: if you provided a withdrawal address when generating your keys, you're good to go (previously under “advanced mode”)"
+  },
   "QOAgQF": {
     "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
   },
@@ -1315,6 +1333,9 @@
   },
   "Qy1ShF": {
     "message": "How do I exit and get my ETH back?"
+  },
+  "R6z/mc": {
+    "message": "{stakingDepositCli}: if you used the {eth1WithdrawalAddress} flag when generating your keys, you're good to go"
   },
   "R8eePn": {
     "message": "If you're slashed you're prevented from participating in the protocol further and are forcibly exited."
@@ -1446,6 +1467,9 @@
   },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
+  },
+  "UYoRgC": {
+    "message": "Depending how you set up your initial deposit, your account may or may not be ready for withdrawals already:"
   },
   "Utck3E": {
     "message": "Language support"
@@ -1608,6 +1632,9 @@
   "YRHdUj": {
     "message": "{type1} withdrawal credentials (BLS, not capable of withdrawals)"
   },
+  "YZtVDX": {
+    "message": "Oops! Double check validator index number and try again."
+  },
   "Yd6MEN": {
     "message": "Execution clients"
   },
@@ -1735,6 +1762,9 @@
   },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
+  },
+  "bs0vEf": {
+    "message": "Validator index {validatorIndex} is ready to start receiving rewards! Withdrawal credentials linked to execution address {address}"
   },
   "bxU6sX": {
     "message": "Python installation instructions"
@@ -2283,6 +2313,9 @@
   "mr1BWl": {
     "message": "Risks and acknowledgements:"
   },
+  "muV9Fg": {
+    "message": "New validators (not yet deposited)"
+  },
   "n2Dn3F": {
     "message": "Withdrawal queue"
   },
@@ -2463,6 +2496,9 @@
   "qgqVCE": {
     "message": "reconnect your wallet"
   },
+  "qkEXNd": {
+    "message": "Staking Deposit CLI"
+  },
   "qkhah0": {
     "message": "Save the key files and get the validator file ready"
   },
@@ -2642,6 +2678,9 @@
   "up+5YH": {
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
     "message": "Are there recent {ethAmount} deposits?"
+  },
+  "uq1DMk": {
+    "message": "Check {NETWORK_NAME}"
   },
   "v6ytKW": {
     "description": "{slashings} shows 'slashings' in bold for emphasis",

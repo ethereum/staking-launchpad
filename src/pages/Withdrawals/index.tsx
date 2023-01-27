@@ -10,6 +10,7 @@ import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Text } from '../../components/Text';
 import { Code } from '../../components/Code';
+import { WithdrawalsTabComparison } from '../../components/WithdrawalsTabComparison';
 
 const ComponentStyles = styled.div`
   * {
@@ -175,7 +176,7 @@ export const Withdrawals = () => {
             />
           </Text>
 
-          {/* TODO: Add <WithdrawalsTabComparison /> */}
+          <WithdrawalsTabComparison />
         </section>
 
         <section>

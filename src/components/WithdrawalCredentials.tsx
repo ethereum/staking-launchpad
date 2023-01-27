@@ -124,7 +124,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
         />
       </Alert>
     );
-  }, [isLoading, hasError, validator, longAddress, shortAddress]);
+  }, [isLoading, hasError, validator, longAddress, shortAddress, locale]);
 
   return (
     <Container>

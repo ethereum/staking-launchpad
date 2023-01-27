@@ -1,6 +1,6 @@
 // Import libraries
 import React, { FC } from 'react';
-import { Box, Tabs, Tab } from 'grommet';
+import { Tabs, Tab } from 'grommet';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 // Components
@@ -70,7 +70,60 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
           <FormattedMessage defaultMessage="New validators (not yet deposited)" />
         }
       >
-        <Box pad="medium">New val</Box>
+        <section>
+          <Heading level={3} className="mb10">
+            <FormattedMessage defaultMessage="New validators (not yet deposited)" />
+          </Heading>
+          <Text className="mb10">
+            <FormattedMessage
+              defaultMessage="If you’re preparing to make a deposit to activate a new
+              validator, you can (and should) provide a withdrawal address with your initial deposit. This is
+              done at time of key generation, and is then included in your {depositData} file
+              which is submitted with your 32 ETH deposit transaction."
+              values={{
+                depositData: <Code>{'deposit_data-<timestamp>.json'}</Code>,
+              }}
+            />
+          </Text>
+          <Text className="mb10">
+            <FormattedMessage defaultMessage="Depending which method you use to generate your keys:" />
+          </Text>
+          <ul>
+            <li>
+              <FormattedMessage
+                defaultMessage="{stakingDepositCli}: This is done by using the {eth1WithdrawalAddress}
+                flag when generating your keys with the Staking Deposit CLI."
+                values={{
+                  stakingDepositCli: (
+                    <strong>
+                      <FormattedMessage defaultMessage="Staking Deposit CLI" />
+                    </strong>
+                  ),
+                  eth1WithdrawalAddress: <Code>--eth1_withdrawal_address</Code>,
+                }}
+              />
+            </li>
+            <li>
+              <FormattedMessage
+                defaultMessage="{wagyuKeyGenGui}: This software is being updated to require users to provide a withdrawal address during key generation. In the meantime, you may have to check “Advanced” during setup to enter a withdrawal address."
+                values={{
+                  wagyuKeyGenGui: (
+                    <strong>
+                      <FormattedMessage defaultMessage="Wagyu Key Gen GUI" />
+                    </strong>
+                  ),
+                }}
+              />
+            </li>
+            <Text>
+              <FormattedMessage
+                defaultMessage="By providing this flag, your withdrawal credentials will contain the {type0} prefix and
+                your withdrawal address, signaling that your account is ready for withdrawals."
+                values={{ type0: <Code>0x00</Code> }}
+              />
+            </Text>
+          </ul>
+        </section>
       </Tab>
     </Tabs>
   );

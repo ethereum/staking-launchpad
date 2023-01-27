@@ -408,6 +408,9 @@
     "description": "{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'",
     "message": "You need to run an {executionClient} as well as your {consensusClient}."
   },
+  "7GLK15": {
+    "message": "Depending which method you use to generate your keys:"
+  },
   "7Iz3JI": {
     "message": "Consensus Client"
   },
@@ -505,6 +508,9 @@
   },
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
+  },
+  "9eCnJb": {
+    "message": "By providing this flag, your withdrawal credentials will contain the {type0} prefix and your withdrawal address, signaling that your account is ready for withdrawals."
   },
   "9k7tO9": {
     "message": "Wrong network"
@@ -1173,6 +1179,9 @@
   "NSK+Li": {
     "message": "I've secured the root account."
   },
+  "NSl1Q5": {
+    "message": "{stakingDepositCli}: This is done by using the {eth1WithdrawalAddress} flag when generating your keys with the Staking Deposit CLI."
+  },
   "NTHTCh": {
     "message": "Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned {shanghai} update."
   },
@@ -1632,6 +1641,9 @@
   "YRHdUj": {
     "message": "{type1} withdrawal credentials (BLS, not capable of withdrawals)"
   },
+  "YXrp+b": {
+    "message": "{wagyuKeyGenGui}: This software is being updated to require users to provide a withdrawal address during key generation. In the meantime, you may have to check “Advanced” during setup to enter a withdrawal address."
+  },
   "YZtVDX": {
     "message": "Oops! Double check validator index number and try again."
   },
@@ -1696,6 +1708,9 @@
   },
   "a/140i": {
     "message": "Exit queue and activation queue"
+  },
+  "a9ats7": {
+    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your {depositData} file which is submitted with your 32 ETH deposit transaction."
   },
   "aDomwX": {
     "message": "If you try to cheat the system, or act contrary to the specification, you will be liable to incur a penalty, known as slashing. Running your validator keys simultaneously on two or more machines will result in slashing."

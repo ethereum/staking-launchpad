@@ -1103,6 +1103,12 @@
       "value": "."
     }
   ],
+  "7GLK15": [
+    {
+      "type": 0,
+      "value": "Depending which method you use to generate your keys:"
+    }
+  ],
   "7Iz3JI": [
     {
       "type": 0,
@@ -1329,6 +1335,20 @@
     {
       "type": 0,
       "value": "How are validators incentivized to stay active and honest?"
+    }
+  ],
+  "9eCnJb": [
+    {
+      "type": 0,
+      "value": "By providing this flag, your withdrawal credentials will contain the "
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " prefix and your withdrawal address, signaling that your account is ready for withdrawals."
     }
   ],
   "9k7tO9": [
@@ -2991,6 +3011,24 @@
       "value": "I've secured the root account."
     }
   ],
+  "NSl1Q5": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": This is done by using the "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " flag when generating your keys with the Staking Deposit CLI."
+    }
+  ],
   "NTHTCh": [
     {
       "type": 0,
@@ -4287,6 +4325,16 @@
       "value": " withdrawal credentials (BLS, not capable of withdrawals)"
     }
   ],
+  "YXrp+b": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": This software is being updated to require users to provide a withdrawal address during key generation. In the meantime, you may have to check “Advanced” during setup to enter a withdrawal address."
+    }
+  ],
   "YZtVDX": [
     {
       "type": 0,
@@ -4447,6 +4495,20 @@
     {
       "type": 0,
       "value": "Exit queue and activation queue"
+    }
+  ],
+  "a9ats7": [
+    {
+      "type": 0,
+      "value": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " file which is submitted with your 32 ETH deposit transaction."
     }
   ],
   "aDomwX": [

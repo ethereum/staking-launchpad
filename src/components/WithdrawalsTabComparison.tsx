@@ -5,7 +5,6 @@ import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 // Components
 import { Heading } from './Heading';
-// import { Link } from './Link';
 import { Text } from './Text';
 import { Code } from './Code';
 import { WithdrawalCredentials } from './WithdrawalCredentials';
@@ -14,10 +13,39 @@ const HashCode = styled(Code)`
   word-break: break-all;
 `;
 
+const StyledTabs = styled(Tabs)`
+  div {
+    border: 0px;
+  }
+  div[class*='StyledTabsHeader'] {
+    border-bottom: 1px solid #d6d7d6;
+    max-width: fit-content;
+  }
+  div[class*='StyledTab'][class*='StyledBox'] {
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+  }
+  button[aria-expanded='true'] {
+    background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+    border-radius: 4px 4px 0 0;
+    * {
+      font-weight: 600 !important;
+    }
+  }
+
+  section {
+    border-radius: 10px;
+    border: 1px solid ${p => p.theme.gray.light};
+    background: white;
+    padding: 20px;
+  }
+`;
+
 interface IProps {}
 export const WithdrawalsTabComparison: FC<IProps> = () => {
   return (
-    <Tabs>
+    <StyledTabs>
       <Tab title={<FormattedMessage defaultMessage="Current validators" />}>
         <section>
           <Heading level={3} className="mb10">
@@ -29,7 +57,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
               may not be ready for withdrawals already:"
             />
           </Text>
-          <ul>
+          <ul className="mb20">
             <li>
               <FormattedMessage
                 defaultMessage="{stakingDepositCli}: if you used the {eth1WithdrawalAddress} flag when generating your keys, you're good to go"
@@ -58,7 +86,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
               />
             </li>
           </ul>
-          <Text className="mb10">
+          <Text className="mb20">
             <FormattedMessage defaultMessage="Enter your validator index here to check if you're account is ready for withdrawals or not:" />
           </Text>
 
@@ -125,6 +153,6 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
           </ul>
         </section>
       </Tab>
-    </Tabs>
+    </StyledTabs>
   );
 };

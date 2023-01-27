@@ -46,6 +46,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
   const [hasError, setHasError] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
   const [validator, setValidator] = useState<Validator | null>(null);
+  const isMobile: boolean = (window as any).mobileCheck();
 
   const checkWithdrawalCredentials = async () => {
     setHasError(false);
@@ -142,9 +143,9 @@ export const WithdrawalCredentials: FC<IProps> = () => {
               values={{ NETWORK_NAME }}
             />
           }
-          // rainbow
           onClick={checkWithdrawalCredentials}
           disabled={!inputValue.length}
+          fullWidth={isMobile}
         />
       </FlexRow>
       <FlexRow>{resultText}</FlexRow>

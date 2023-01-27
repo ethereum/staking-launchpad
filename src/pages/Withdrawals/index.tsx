@@ -57,6 +57,10 @@ const ComponentStyles = styled.div`
   }
 `;
 
+const TableContainer = styled.div`
+  overflow-x: scroll;
+`;
+
 const HashCode = styled(Code)`
   word-break: break-all;
 `;
@@ -68,51 +72,74 @@ const SectionTitle = styled(Heading)`
 `;
 
 export const Withdrawals = () => {
-  const { formatMessage } = useIntl();
-  const exitQueueRateLimitData = [
+  const { formatMessage, locale } = useIntl();
+  const exitQueueRateLimitData: Array<{
+    minValidators: number;
+    maxPerEpoch: number;
+    maxPerDay: number;
+  }> = [
     {
       minValidators: 0,
-      baseTwo: '0',
       maxPerEpoch: 4,
       maxPerDay: 900,
     },
     {
       minValidators: 2 ** 18 + 1 * 2 ** 16,
-      baseTwo: '2¹⁸ + 1 * 2¹⁶',
       maxPerEpoch: 5,
       maxPerDay: 1125,
     },
     {
       minValidators: 2 ** 18 + 2 * 2 ** 16,
-      baseTwo: '2¹⁸ + 2 * 2¹⁶',
       maxPerEpoch: 6,
       maxPerDay: 1350,
     },
     {
       minValidators: 2 ** 18 + 3 * 2 ** 16,
-      baseTwo: '2¹⁸ + 3 * 2¹⁶',
       maxPerEpoch: 7,
       maxPerDay: 1575,
     },
     {
       minValidators: 2 ** 18 + 4 * 2 ** 16,
-      baseTwo: '2¹⁸ + 4 * 2¹⁶',
       maxPerEpoch: 8,
       maxPerDay: 1800,
     },
     {
       minValidators: 2 ** 18 + 5 * 2 ** 16,
-      baseTwo: '2¹⁸ + 5 * 2¹⁶',
       maxPerEpoch: 9,
       maxPerDay: 2025,
     },
     {
       minValidators: 2 ** 18 + 6 * 2 ** 16,
-      baseTwo: '2¹⁸ + 6 * 2¹⁶',
       maxPerEpoch: 10,
       maxPerDay: 2250,
     },
   ];
+
+  const withdrawalRateData: Array<{
+    numWithdrawals: number;
+    timeToComplete: number;
+  }> = [
+    {
+      numWithdrawals: 500_000,
+      timeToComplete: 4.3,
+    },
+    {
+      numWithdrawals: 600_000,
+      timeToComplete: 5.2,
+    },
+    {
+      numWithdrawals: 700_000,
+      timeToComplete: 6.1,
+    },
+    {
+      numWithdrawals: 800_000,
+      timeToComplete: 7.0,
+    },
+  ];
+
+  const formatNumber = (num: number): string =>
+    new Intl.NumberFormat(locale).format(num);
+
   return (
     <PageTemplate
       title={formatMessage({ defaultMessage: 'Withdrawals' })}
@@ -565,14 +592,14 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Rate-limits set on withdrawal queue (could change through testing before Shanghai)" />
               <ul>
                 <li>
-                  <Code>MAX_WITHDRAWALS_PER_PAYLOAD: 16 (2⁴)</Code>
+                  <HashCode>MAX_WITHDRAWALS_PER_PAYLOAD: 16 (2⁴)</HashCode>
                   <br />
                   <FormattedMessage defaultMessage="Maximum number of withdrawals that can be processed in a single block" />
                 </li>
                 <li>
-                  <Code>
+                  <HashCode>
                     MAX_VALIDATORS_PER_WITHDRAWALS_SWEEP: 16,384 (2¹⁴)
-                  </Code>
+                  </HashCode>
                   <br />
                   <FormattedMessage
                     defaultMessage="Maximum number of accounts that can be checked in a block. Stops when 16
@@ -860,44 +887,42 @@ export const Withdrawals = () => {
               />
             </Text>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    <FormattedMessage defaultMessage="Min active validators" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="(Also written as)" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Activationlimit per epoch" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Exit limit per epoch" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Activation max per day" />
-                  </th>
-                  <th>
-                    <FormattedMessage defaultMessage="Exit max per day" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {exitQueueRateLimitData.map(
-                  ({ minValidators, baseTwo, maxPerEpoch, maxPerDay }) => (
-                    <tr key={minValidators}>
-                      <td>{minValidators}</td>
-                      <td>{baseTwo}</td>
-                      <td>{maxPerEpoch}</td>
-                      <td>{maxPerEpoch}</td>
-                      <td>{maxPerDay}</td>
-                      <td>{maxPerDay}</td>
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </table>
+            <TableContainer>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <FormattedMessage defaultMessage="Min active validators" />
+                    </th>
+                    <th>
+                      <FormattedMessage defaultMessage="Activation limit per epoch" />
+                    </th>
+                    <th>
+                      <FormattedMessage defaultMessage="Exit limit per epoch" />
+                    </th>
+                    <th>
+                      <FormattedMessage defaultMessage="Activation max per day" />
+                    </th>
+                    <th>
+                      <FormattedMessage defaultMessage="Exit max per day" />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {exitQueueRateLimitData.map(
+                    ({ minValidators, maxPerEpoch, maxPerDay }) => (
+                      <tr key={minValidators}>
+                        <td>{formatNumber(minValidators)}</td>
+                        <td>{formatNumber(maxPerEpoch)}</td>
+                        <td>{formatNumber(maxPerEpoch)}</td>
+                        <td>{formatNumber(maxPerDay)}</td>
+                        <td>{formatNumber(maxPerDay)}</td>
+                      </tr>
+                    )
+                  )}
+                </tbody>
+              </table>
+            </TableContainer>
 
             <Alert variant="primary" className="mb10">
               <Text className="mb10">
@@ -929,15 +954,39 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Frequently asked questions" />
             </SectionTitle>
           </Anchor>
+          {/* TODO: Complete FAQ */}
 
           <section>
             <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="How many withdrawals can be processed each day?" />
+              <FormattedMessage defaultMessage="How soon will I get my rewards payments?" />
             </Heading>
             <Text className="mb10">
-              {/* TODO: Complete FAQ */}
               <FormattedMessage defaultMessage="TODO" />
             </Text>
+            <TableContainer>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <FormattedMessage defaultMessage="Number of withdrawals" />
+                    </th>
+                    <th>
+                      <FormattedMessage defaultMessage="Time to complete all (days)" />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {withdrawalRateData.map(
+                    ({ numWithdrawals, timeToComplete }) => (
+                      <tr key={numWithdrawals}>
+                        <td>{formatNumber(numWithdrawals)}</td>
+                        <td>{formatNumber(timeToComplete)}</td>
+                      </tr>
+                    )
+                  )}
+                </tbody>
+              </table>
+            </TableContainer>
           </section>
         </section>
 

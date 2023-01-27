@@ -992,6 +992,9 @@
   "K6+jQ3": {
     "message": "Geth installation documentation"
   },
+  "K981VQ": {
+    "message": "Activation limit per epoch"
+  },
   "KBSbmP": {
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
     "message": "You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
@@ -1037,6 +1040,9 @@
   "KxUgHu": {
     "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
     "message": "I've ensured my keystore(s) is/are {boldCaution}."
+  },
+  "L11u/A": {
+    "message": "How soon will I get my rewards payments?"
   },
   "L7fPF+": {
     "message": "Complete your last deposit"
@@ -1273,9 +1279,6 @@
   },
   "QOAgQF": {
     "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
-  },
-  "QQV5jY": {
-    "message": "(Also written as)"
   },
   "QRUdO6": {
     "message": "Set fee recipient"
@@ -2077,6 +2080,9 @@
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
+  "jTi4Pi": {
+    "message": "Time to complete all (days)"
+  },
   "jXer8/": {
     "message": "Prysm documentation"
   },
@@ -2262,6 +2268,9 @@
   "mc27Pv": {
     "message": "A {validator} is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
   },
+  "mdmA4f": {
+    "message": "Number of withdrawals"
+  },
   "mhyltV": {
     "message": "I've set my graffiti flag."
   },
@@ -2438,9 +2447,6 @@
   },
   "qK4+NQ": {
     "message": "The terminal"
-  },
-  "qLK8Vf": {
-    "message": "Activationlimit per epoch"
   },
   "qMePPG": {
     "message": "Note"
@@ -2752,9 +2758,6 @@
   },
   "xZZMZ5": {
     "message": "testnet"
-  },
-  "xau29Y": {
-    "message": "How many withdrawals can be processed each day?"
   },
   "xbet2w": {
     "message": "Install python3.7+"

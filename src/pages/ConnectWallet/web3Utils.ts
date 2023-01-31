@@ -9,9 +9,7 @@ import { FortmaticConnector } from './fortmaticConnector';
 import { web3ReactInterface } from './index';
 import {
   FORTMATIC_KEY,
-  INFURA_URL,
   IS_MAINNET,
-  IS_NON_INFURA_TESTNET,
   NETWORK_NAME,
   PORTIS_DAPP_ID,
   RPC_URL,
@@ -44,7 +42,6 @@ const supportedNetworks = [
   NetworkChainId.Ropsten,
   NetworkChainId.Goerli,
   NetworkChainId.Sepolia,
-  NetworkChainId.Zhejiang,
 ];
 
 // FIXME: disabled Portis for now
@@ -52,12 +49,13 @@ const portisSupportedNetworks = [
   NetworkChainId.Goerli,
   NetworkChainId.Mainnet,
   NetworkChainId.Ropsten,
-  NetworkChainId.Goerli,
 ];
 
 enum Testnet {
   'Ropsten',
   'Goerli',
+  'Sepolia',
+  'Zhejiang',
 }
 
 enum Mainnet {
@@ -68,11 +66,14 @@ export const NetworkNameToChainId: { [key: string]: NetworkChainId } = {
   Mainnet: NetworkChainId.Mainnet,
   Ropsten: NetworkChainId.Ropsten,
   Goerli: NetworkChainId.Goerli,
+  Zhejiang: NetworkChainId.Zhejiang,
 };
 
 export const TARGET_NETWORK_CHAIN_ID = IS_MAINNET
   ? NetworkChainId.Mainnet
   : NetworkNameToChainId[TESTNET_LAUNCHPAD_NAME];
+
+export const IS_GOERLI = TARGET_NETWORK_CHAIN_ID === NetworkChainId.Goerli;
 
 export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
@@ -88,8 +89,8 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
-  chainId: TARGET_NETWORK_CHAIN_ID,
-  rpcUrl: IS_NON_INFURA_TESTNET ? RPC_URL : INFURA_URL,
+  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli,
+  rpcUrl: RPC_URL,
 });
 
 // sets up initial call to MM

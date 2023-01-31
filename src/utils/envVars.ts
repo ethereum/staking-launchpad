@@ -9,9 +9,6 @@ export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PR
 export const RPC_URL                    = process.env.REACT_APP_RPC_URL ||  (`https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`);
 
 // public
-export const INFURA_URL                 = `https://${IS_MAINNET ? "mainnet" : TESTNET_LAUNCHPAD_NAME.toLowerCase()}.infura.io/v3/${INFURA_PROJECT_ID}`;
-
-// public
 export const NETWORK_NAME               = IS_MAINNET ? 'Mainnet' : TESTNET_LAUNCHPAD_NAME;
 export const TICKER_NAME                = IS_MAINNET ? 'ETH' : 'TestnetETH';
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.etherscan.io/tx`;

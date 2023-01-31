@@ -10,7 +10,7 @@ import { ImageSelectionBox } from '../../components/ImageSelectionBox';
 import { Alert } from '../../components/Alert';
 import { Client } from './index';
 import { ClientId } from '../../store/actions/clientActions';
-import { IS_MERGE, TUTORIAL_URL, NETWORK_NAME } from '../../utils/envVars';
+import { TUTORIAL_URL, NETWORK_NAME } from '../../utils/envVars';
 
 const ClientOptionContainer = styled.div`
   width: 100%;
@@ -50,7 +50,7 @@ const SelectClientSection = ({
     <Heading level={3} size="small" color="blueDark" className="mb20">
       {title}
     </Heading>
-    {ethClientStep === 'execution' && !IS_MERGE && (
+    {ethClientStep === 'execution' && (
       <div style={{ paddingBottom: '1rem' }}>
         <FormattedMessage
           defaultMessage="To process incoming validator deposits from the execution layer
@@ -61,7 +61,7 @@ const SelectClientSection = ({
         />
       </div>
     )}
-    {IS_MERGE && (
+    {TUTORIAL_URL !== null && (
       <div style={{ paddingBottom: '1rem' }}>
         <Link to={TUTORIAL_URL} primary>
           <FormattedMessage

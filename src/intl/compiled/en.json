@@ -39,12 +39,6 @@
       "value": "Validator uptime"
     }
   ],
-  "+V/yNx": [
-    {
-      "type": 0,
-      "value": "Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off. When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
-    }
-  ],
   "+e8bO+": [
     {
       "type": 0,
@@ -105,6 +99,12 @@
     {
       "type": 0,
       "value": "Indonesian"
+    }
+  ],
+  "/JiR8D": [
+    {
+      "type": 0,
+      "value": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
     }
   ],
   "/OAba6": [
@@ -413,12 +413,6 @@
       "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
     }
   ],
-  "1MC4x4": [
-    {
-      "type": 0,
-      "value": "Exiting from staking"
-    }
-  ],
   "1P6GMj": [
     {
       "type": 0,
@@ -527,20 +521,6 @@
       "value": "Troubleshooting"
     }
   ],
-  "2FiVZR": [
-    {
-      "type": 0,
-      "value": "Accounts with withdrawal credentials displaying a "
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " prefix are not yet capable of withdrawals, and must be upgraded to the new format before withdrawals can be enabled."
-    }
-  ],
   "2HVWJL": [
     {
       "type": 0,
@@ -569,20 +549,6 @@
       "value": "What factors affect the frequency of payouts?"
     }
   ],
-  "2TJH7D": [
-    {
-      "type": 0,
-      "value": "A "
-    },
-    {
-      "type": 1,
-      "value": "fullRewards"
-    },
-    {
-      "type": 0,
-      "value": " is processed for any inactivated accounts that are no longer considered to be staking. that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities."
-    }
-  ],
   "2XWJdH": [
     {
       "type": 0,
@@ -605,12 +571,6 @@
     {
       "type": 0,
       "value": "Nimbus key management documentation"
-    }
-  ],
-  "2o7cAq": [
-    {
-      "type": 0,
-      "value": "Exit max per day"
     }
   ],
   "2rflCq": [
@@ -997,12 +957,6 @@
       "value": "average"
     }
   ],
-  "6Bm6AP": [
-    {
-      "type": 0,
-      "value": "Looking to change your withdrawal address again?"
-    }
-  ],
   "6NndcB": [
     {
       "type": 0,
@@ -1025,6 +979,20 @@
     {
       "type": 0,
       "value": "You can improve the effective balance of this validator by topping up"
+    }
+  ],
+  "6i0uIt": [
+    {
+      "type": 0,
+      "value": "If so, "
+    },
+    {
+      "type": 1,
+      "value": "rewardPayment"
+    },
+    {
+      "type": 0,
+      "value": " processed"
     }
   ],
   "6nh4de": [
@@ -1115,12 +1083,6 @@
       "value": "Consensus Client"
     }
   ],
-  "7Rm1x6": [
-    {
-      "type": 0,
-      "value": "Frequently asked questions"
-    }
-  ],
   "7Rw2uA": [
     {
       "type": 0,
@@ -1165,6 +1127,12 @@
     {
       "type": 0,
       "value": " blockchain explorers."
+    }
+  ],
+  "7kWKe0": [
+    {
+      "type": 0,
+      "value": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism."
     }
   ],
   "7sZfCF": [
@@ -1475,12 +1443,6 @@
       "value": "If you need help, check out the Python documentation."
     }
   ],
-  "AGWcB0": [
-    {
-      "type": 0,
-      "value": "Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over again from the beginning."
-    }
-  ],
   "AJD+66": [
     {
       "type": 0,
@@ -1501,12 +1463,6 @@
     {
       "type": 0,
       "value": " to be sent at one time to be accepted."
-    }
-  ],
-  "ALh3re": [
-    {
-      "type": 0,
-      "value": "Looking to withdrawal custom amounts?"
     }
   ],
   "ATwOPg": [
@@ -1967,12 +1923,6 @@
       "value": " executable"
     }
   ],
-  "EJExgE": [
-    {
-      "type": 0,
-      "value": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism. On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below)."
-    }
-  ],
   "EPCHZV": [
     {
       "type": 0,
@@ -1983,6 +1933,20 @@
     {
       "type": 0,
       "value": "I've simulated power loss (server and internet) and automatic resumption."
+    }
+  ],
+  "EQVEKQ": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " is processed for any inactivated accounts that are no longer considered to be staking. that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities."
     }
   ],
   "ETJ2T5": [
@@ -2179,12 +2143,6 @@
       "value": "Make sure you aren't being phished"
     }
   ],
-  "GK014J": [
-    {
-      "type": 0,
-      "value": "Upgrade your keys: BLS to execution change"
-    }
-  ],
   "GN2Cu5": [
     {
       "type": 0,
@@ -2361,28 +2319,6 @@
       "value": "Maximum number of withdrawals that can be processed in a single block"
     }
   ],
-  "IIWLCD": [
-    {
-      "type": 0,
-      "value": "Accounts that have provided a withdrawal address, either on initial deposit or by rolling forward their BLS keys forward using "
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": ", have withdrawal credentials that are prefixed with "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ", followed by 11 bytes of zeros, then their chosen Ethereum address."
-    }
-  ],
   "IJw06E": [
     {
       "type": 0,
@@ -2425,12 +2361,6 @@
     {
       "type": 0,
       "value": "Enter your validator index here to check if you're account is ready for withdrawals or not:"
-    }
-  ],
-  "IklK9V": [
-    {
-      "type": 0,
-      "value": "no"
     }
   ],
   "Il9tBQ": [
@@ -2519,28 +2449,6 @@
       "value": ")"
     }
   ],
-  "JOBaO3": [
-    {
-      "type": 0,
-      "value": "What are withdrawal credentials and what are these "
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " and "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " prefixes that have been mentioned?"
-    }
-  ],
   "JPT/TK": [
     {
       "type": 0,
@@ -2599,12 +2507,6 @@
     {
       "type": 0,
       "value": "Geth installation documentation"
-    }
-  ],
-  "K981VQ": [
-    {
-      "type": 0,
-      "value": "Activation limit per epoch"
     }
   ],
   "KBSbmP": [
@@ -2727,12 +2629,6 @@
       "value": "."
     }
   ],
-  "L11u/A": [
-    {
-      "type": 0,
-      "value": "How soon will I get my rewards payments?"
-    }
-  ],
   "L7fPF+": [
     {
       "type": 0,
@@ -2753,12 +2649,6 @@
     {
       "type": 0,
       "value": "reload your wallet"
-    }
-  ],
-  "LGTzUg": [
-    {
-      "type": 0,
-      "value": "Mechanics of withdrawals—how they work"
     }
   ],
   "LHPZ+C": [
@@ -2853,6 +2743,12 @@
     {
       "type": 0,
       "value": "Why do I need to run an execution client now?"
+    }
+  ],
+  "M1rSWt": [
+    {
+      "type": 0,
+      "value": "reward payment"
     }
   ],
   "M3GwXS": [
@@ -2967,12 +2863,6 @@
       "value": "Italian"
     }
   ],
-  "NLPhkp": [
-    {
-      "type": 0,
-      "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger rewards payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
-    }
-  ],
   "NLfK07": [
     {
       "type": 0,
@@ -3063,12 +2953,6 @@
       "value": "More on Prysmatic Labs"
     }
   ],
-  "NXzo7c": [
-    {
-      "type": 0,
-      "value": "If so, reward payment processed"
-    }
-  ],
   "NYFKzu": [
     {
       "type": 0,
@@ -3133,24 +3017,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "O3Ty+8": [
-    {
-      "type": 0,
-      "value": "Understanding withdrawal credentials: "
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " vs "
-    },
-    {
-      "type": 1,
-      "value": "type1"
     }
   ],
   "O3qkOm": [
@@ -3483,16 +3349,16 @@
       "value": " transaction to the deposit contract on the current Ethereum chain."
     }
   ],
+  "QhAWQO": [
+    {
+      "type": 0,
+      "value": "Reward payments (partial withdrawals)"
+    }
+  ],
   "QlsDcr": [
     {
       "type": 0,
       "value": "Action"
-    }
-  ],
-  "QprFsj": [
-    {
-      "type": 0,
-      "value": "Withdrawal types"
     }
   ],
   "QqqeNk": [
@@ -3513,12 +3379,6 @@
     {
       "type": 0,
       "value": " deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
-    }
-  ],
-  "Qy1ShF": [
-    {
-      "type": 0,
-      "value": "How do I exit and get my ETH back?"
     }
   ],
   "R6z/mc": [
@@ -3577,12 +3437,6 @@
       "value": "1. Learn about your responsibilities"
     }
   ],
-  "RVf7gC": [
-    {
-      "type": 0,
-      "value": "TODO"
-    }
-  ],
   "RVyb7r": [
     {
       "type": 0,
@@ -3617,44 +3471,6 @@
     {
       "type": 0,
       "value": "Verify it with the following command to check if it returns the client version correctly:"
-    }
-  ],
-  "S0CvB8": [
-    {
-      "type": 0,
-      "value": "Every validator account has a stored value known as its “withdrawal credentials”. This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if and where funds can be sent to from this account. These values are prefixed with "
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " or "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " as the first byte, to indicate whether the keys are in the old BLS format ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ", not capable of withdrawals), or have been upgraded to an execution layer address ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ", capable of withdrawals)."
     }
   ],
   "S943uU": [
@@ -3729,20 +3545,6 @@
       "value": "Required"
     }
   ],
-  "Sh8gZV": [
-    {
-      "type": 0,
-      "value": "If not, "
-    },
-    {
-      "type": 1,
-      "value": "no"
-    },
-    {
-      "type": 0,
-      "value": " withdrawal will be processed and account skipped"
-    }
-  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3757,12 +3559,6 @@
     {
       "type": 0,
       "value": "wrench"
-    }
-  ],
-  "T/m5Cq": [
-    {
-      "type": 0,
-      "value": "Full withdrawals (staking exit)"
     }
   ],
   "T2O2Gr": [
@@ -3825,20 +3621,6 @@
       "value": "greater than 50%"
     }
   ],
-  "UCRUvl": [
-    {
-      "type": 0,
-      "value": "A "
-    },
-    {
-      "type": 1,
-      "value": "rewardsPayment"
-    },
-    {
-      "type": 0,
-      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator account cannot utilize more than 32 ETH to contribute towards its stake, and thus these accounts will have any extra balance skimmed off in the form of a withdrawal operation."
-    }
-  ],
   "UJMct0": [
     {
       "type": 0,
@@ -3863,6 +3645,12 @@
     {
       "type": 0,
       "value": "Check the deposit contract on your favorite Ethereum block explorer:"
+    }
+  ],
+  "UYRyWv": [
+    {
+      "type": 0,
+      "value": "Mechanics of withdrawals: How they work"
     }
   ],
   "UYoRgC": [
@@ -4111,12 +3899,6 @@
       "value": "Please accept the conditions above."
     }
   ],
-  "WuddUL": [
-    {
-      "type": 0,
-      "value": "Min active validators"
-    }
-  ],
   "Wxzght": [
     {
       "type": 0,
@@ -4313,22 +4095,6 @@
     {
       "type": 0,
       "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
-    }
-  ],
-  "YQpEI1": [
-    {
-      "type": 0,
-      "value": "At each validator along the way, the account is evaluated for potential withdrawals."
-    }
-  ],
-  "YRHdUj": [
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " withdrawal credentials (BLS, not capable of withdrawals)"
     }
   ],
   "YXrp+b": [
@@ -4743,6 +4509,12 @@
       "value": "How each validator is evaluated for withdrawals"
     }
   ],
+  "chsS1X": [
+    {
+      "type": 0,
+      "value": "If not, stop. No withdrawal will be processed and account skipped"
+    }
+  ],
   "chw27s": [
     {
       "type": 0,
@@ -4771,12 +4543,6 @@
     {
       "type": 0,
       "value": "What are withdrawal credentials?"
-    }
-  ],
-  "cqRTH8": [
-    {
-      "type": 0,
-      "value": "BLS-to-execution queue"
     }
   ],
   "cyNFM3": [
@@ -4831,6 +4597,12 @@
       "value": "Prysm is a Go consensus client implementation of the Ethereum protocol with a focus on usability, security, and reliability."
     }
   ],
+  "dLE9FH": [
+    {
+      "type": 0,
+      "value": "If not, no withdrawal will be processed and account skipped"
+    }
+  ],
   "dM/KIM": [
     {
       "type": 0,
@@ -4847,12 +4619,6 @@
     {
       "type": 0,
       "value": "Upload a valid json file."
-    }
-  ],
-  "dmk39S": [
-    {
-      "type": 0,
-      "value": "Before users upgrade their BLS keys, withdrawal credentials are derived as the hash of the BLS public key, swapping out the first byte with a zero byte:"
     }
   ],
   "dprf8W": [
@@ -4951,12 +4717,6 @@
     {
       "type": 0,
       "value": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
-    }
-  ],
-  "edYm1x": [
-    {
-      "type": 0,
-      "value": "Where do I check my withdrawal credentials?"
     }
   ],
   "elCkOU": [
@@ -5169,6 +4929,12 @@
       "value": "It uses the assisted password in your secrets folder."
     }
   ],
+  "gWC0Rt": [
+    {
+      "type": 0,
+      "value": "Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over again from the beginning. At each validator along the way, the account is evaluated for potential withdrawals."
+    }
+  ],
   "gfLdAQ": [
     {
       "type": 0,
@@ -5269,12 +5035,6 @@
       "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
     }
   ],
-  "h5Jtfv": [
-    {
-      "type": 0,
-      "value": "Reassurance and testing"
-    }
-  ],
   "h8MTUo": [
     {
       "type": 0,
@@ -5285,6 +5045,12 @@
     {
       "type": 0,
       "value": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing."
+    }
+  ],
+  "hCwX6+": [
+    {
+      "type": 0,
+      "value": "BLS To Execution Change (BTEC) queue"
     }
   ],
   "hFzE1M": [
@@ -5351,12 +5117,6 @@
     {
       "type": 0,
       "value": " ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
-    }
-  ],
-  "hu+OeB": [
-    {
-      "type": 0,
-      "value": "There are two types of withdrawals that can be generated depending on the state of a given validator: reward payments (aka: “partial withdrawals”), and full withdrawals."
     }
   ],
   "huEFUF": [
@@ -5495,12 +5255,6 @@
       "value": "Documentation"
     }
   ],
-  "iukUKz": [
-    {
-      "type": 0,
-      "value": "Available tools"
-    }
-  ],
   "iv88b5": [
     {
       "type": 0,
@@ -5519,12 +5273,6 @@
     {
       "type": 0,
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
-    }
-  ],
-  "jTi4Pi": [
-    {
-      "type": 0,
-      "value": "Time to complete all (days)"
     }
   ],
   "jXer8/": [
@@ -5697,20 +5445,6 @@
     {
       "type": 0,
       "value": "More on consensus mechanisms"
-    }
-  ],
-  "knN0b1": [
-    {
-      "type": 0,
-      "value": "You can use the "
-    },
-    {
-      "type": 1,
-      "value": "toolAbove"
-    },
-    {
-      "type": 0,
-      "value": " to check your validator(s) by its index number. Your validator index can be queried from your validator client, or found in the validator client logs."
     }
   ],
   "krEziQ": [
@@ -5949,12 +5683,6 @@
       "value": "change your wallet"
     }
   ],
-  "lp23xF": [
-    {
-      "type": 0,
-      "value": "Withdrawal addresses are permanently linked to the account they are assigned to. Once an address has been chosen, this cannot be changed or undone."
-    }
-  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -5999,12 +5727,6 @@
       "value": " is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
     }
   ],
-  "mdmA4f": [
-    {
-      "type": 0,
-      "value": "Number of withdrawals"
-    }
-  ],
   "mhyltV": [
     {
       "type": 0,
@@ -6041,10 +5763,10 @@
       "value": "Withdrawal queue"
     }
   ],
-  "n3rMKh": [
+  "n4o1vR": [
     {
       "type": 0,
-      "value": "Which looks something like this:"
+      "value": "How to exit from staking (full withdrawals)"
     }
   ],
   "nBhisA": [
@@ -6215,12 +5937,6 @@
       "value": "Configure your consensus client"
     }
   ],
-  "oUWADl": [
-    {
-      "type": 0,
-      "value": "No"
-    }
-  ],
   "oWhj8Q": [
     {
       "type": 0,
@@ -6329,20 +6045,6 @@
       "value": "Copied"
     }
   ],
-  "p8zOo7": [
-    {
-      "type": 0,
-      "value": "If not, stop. "
-    },
-    {
-      "type": 1,
-      "value": "no"
-    },
-    {
-      "type": 0,
-      "value": " withdrawal will be processed and account skipped"
-    }
-  ],
   "pA+UVF": [
     {
       "type": 0,
@@ -6357,6 +6059,20 @@
       "value": "!"
     }
   ],
+  "pGbQgE": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "rewardPayment"
+    },
+    {
+      "type": 0,
+      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator account cannot utilize more than 32 ETH to contribute towards its stake, and thus these accounts will have any extra balance skimmed off in the form of a withdrawal operation."
+    }
+  ],
   "pGnk/z": [
     {
       "type": 0,
@@ -6367,6 +6083,12 @@
     {
       "type": 0,
       "value": "Launch the app from your desktop environment by double clicking on it."
+    }
+  ],
+  "pWuGLy": [
+    {
+      "type": 0,
+      "value": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
     }
   ],
   "pXyH++": [
@@ -6431,6 +6153,12 @@
     {
       "type": 0,
       "value": "If your withdrawal key is stolen, the thief can transfer your validator’s balance, but only once the validator has exited."
+    }
+  ],
+  "q5Xl0M": [
+    {
+      "type": 0,
+      "value": "Verify"
     }
   ],
   "qB6aU6": [
@@ -6575,16 +6303,6 @@
       "value": "Close"
     }
   ],
-  "rl4jA5": [
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " withdrawal credentials (BLS, not capable of withdrawals)"
-    }
-  ],
   "rnDgcN": [
     {
       "type": 0,
@@ -6667,20 +6385,6 @@
       "value": "CPU and RAM"
     }
   ],
-  "shdKcK": [
-    {
-      "type": 0,
-      "value": "You can also check "
-    },
-    {
-      "type": 1,
-      "value": "beaconchain"
-    },
-    {
-      "type": 0,
-      "value": " to search for your validators by the associated address used to deposit your stake."
-    }
-  ],
   "sj/Zef": [
     {
       "type": 0,
@@ -6711,12 +6415,6 @@
       "value": "What is the deposit contract?"
     }
   ],
-  "syzucV": [
-    {
-      "type": 0,
-      "value": "Exit limit per epoch"
-    }
-  ],
   "szN3Fl": [
     {
       "type": 0,
@@ -6727,20 +6425,6 @@
     {
       "type": 0,
       "value": "I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)"
-    }
-  ],
-  "t8ob1k": [
-    {
-      "type": 0,
-      "value": "Accounts with withdrawal credentials displaying a "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " prefix are capable of withdrawals. In this example, the linked execution withdrawal address would be:"
     }
   ],
   "tJcyUM": [
@@ -6803,6 +6487,12 @@
     {
       "type": 0,
       "value": "Balance after topping up"
+    }
+  ],
+  "tnp55K": [
+    {
+      "type": 0,
+      "value": "Tools available"
     }
   ],
   "tsfX5f": [
@@ -6879,12 +6569,6 @@
       "value": "Uptime"
     }
   ],
-  "u9YQyf": [
-    {
-      "type": 0,
-      "value": "Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake."
-    }
-  ],
   "uDMtC8": [
     {
       "type": 0,
@@ -6911,12 +6595,6 @@
     {
       "type": 0,
       "value": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
-    }
-  ],
-  "uN055l": [
-    {
-      "type": 0,
-      "value": "Activation max per day"
     }
   ],
   "uNfxNg": [
@@ -6989,16 +6667,6 @@
       "value": " deposits?"
     }
   ],
-  "uq1DMk": [
-    {
-      "type": 0,
-      "value": "Check "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
-    }
-  ],
   "v6ytKW": [
     {
       "type": 0,
@@ -7061,12 +6729,6 @@
     {
       "type": 0,
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
-    }
-  ],
-  "vOGurt": [
-    {
-      "type": 0,
-      "value": "Rewards payments (partial withdrawals)"
     }
   ],
   "vV6ua0": [
@@ -7173,6 +6835,12 @@
     {
       "type": 0,
       "value": "Testnet simulations"
+    }
+  ],
+  "x/vooX": [
+    {
+      "type": 0,
+      "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger reward payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
     }
   ],
   "x0tVK4": [
@@ -7345,6 +7013,18 @@
       "value": "clientName"
     }
   ],
+  "xyfoga": [
+    {
+      "type": 0,
+      "value": "Staking withdrawals"
+    }
+  ],
+  "xzjRos": [
+    {
+      "type": 0,
+      "value": "How to update validator keys"
+    }
+  ],
   "xzmWbJ": [
     {
       "type": 0,
@@ -7465,12 +7145,6 @@
     {
       "type": 0,
       "value": "Staking economics"
-    }
-  ],
-  "zL9dji": [
-    {
-      "type": 0,
-      "value": "You should take extra caution to ensure you are providing an address that you have control over. Providing an address that you do not control will result in loss of funds. Losing access to the keys that control your chosen withdrawal address will ultimately result in loss of funds, as this is the only address your validator can transfer ETH to."
     }
   ],
   "zbEBi9": [

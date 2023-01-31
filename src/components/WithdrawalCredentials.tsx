@@ -22,6 +22,24 @@ const FlexRow = styled.div`
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  button {
+    border-radius: 4px;
+    color: white;
+    background: ${p => p.theme.blue.medium};
+    text-transform: none;
+    :hover {
+      background: ${p => p.theme.blue.light};
+      color: black;
+    }
+    :active {
+      background: ${p => p.theme.blue.lightest};
+      color: black;
+    }
+    :disabled {
+      background: ${p => p.theme.gray.medium};
+      color: black;
+    }
+  }
 `;
 
 const Input = styled.input`
@@ -137,12 +155,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           placeholder="Validator index"
         />
         <Button
-          label={
-            <FormattedMessage
-              defaultMessage="Check {NETWORK_NAME}"
-              values={{ NETWORK_NAME }}
-            />
-          }
+          label={<FormattedMessage defaultMessage="Verify" />}
           onClick={checkWithdrawalCredentials}
           disabled={!inputValue.length}
           fullWidth={isMobile}

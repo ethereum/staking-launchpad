@@ -1,16 +1,17 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
-import { PageTemplate } from '../../../components/PageTemplate';
 import lighthouseBg from '../../../static/lighthouse-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
 } from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
+import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
 import { LIGHTHOUSE_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 const CodeSnippet = styled.div`
   padding: 10px;
@@ -31,6 +32,9 @@ const CodeSnippet = styled.div`
 
 export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
+    <ClientDiversityWarning>
+      <FormattedMessage defaultMessage="Currently Lighthouse is used by >33% of the network." />
+    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Lighthouse
     </SectionTitle>
@@ -43,7 +47,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
       />
     </Text>
     <Link
-      to="https://lighthouse.sigmaprime.io/update-00.html"
+      to="https://lighthouse-blog.sigmaprime.io/update-00.html"
       primary
       className="mt10"
     >
@@ -85,7 +89,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
           </Text>
           <CodeSnippet>
             lighthouse account validator import --directory
-            eth2.0-deposit-cli/validator_keys
+            staking-deposit-cli/validator_keys
           </CodeSnippet>
           <Text className="mt10">
             <FormattedMessage defaultMessage="Once the process is complete, you should see the following:" />

@@ -34,7 +34,7 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage
             defaultMessage="Importantly, as a validator you'll need to post {TICKER_NAME} as
-              collateral - in other words, have some funds at stake. The only way to become a
+              collateral—in other words, have some funds at stake. The only way to become a
               validator is to make a one-way {TICKER_NAME} transaction to the deposit contract
               on the current Ethereum chain."
             values={{ TICKER_NAME }}
@@ -75,10 +75,7 @@ export const pageContent = {
           <FormattedMessage defaultMessage="This is a non-reversible transaction." />
         </Text>
         <Text size="medium" className="my20">
-          <FormattedMessage
-            defaultMessage="Withdrawing your deposit won't be possible until mainnet merges
-              with the Beacon Chain."
-          />
+          <FormattedMessage defaultMessage="Withdrawing your deposit will not be possible until the Shanghai upgrade planned for after the Merge." />
         </Text>
         <Link
           to="https://ethereum.org/en/upgrades/merge/"
@@ -166,13 +163,11 @@ export const pageContent = {
           />
         </Text>
         <Text size="medium" className="mt20">
-          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until The Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic." />
+          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic." />
         </Text>
         <Text size="medium" className="mt20">
           <FormattedMessage
-            defaultMessage="Your mnemonic is the backup for your signing keys and will be the ONLY way to
-              withdraw your {TICKER_NAME} when the time comes and no one can help you recover your mnemonic if
-              you lose it."
+            defaultMessage="Your mnemonic is the backup for your signing keys and will be the ONLY way to withdraw your {TICKER_NAME} when the time comes and no one can help you recover your mnemonic if you lose it."
             values={{ TICKER_NAME }}
           />
         </Text>
@@ -199,12 +194,7 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="my10">
-          <FormattedMessage
-            defaultMessage={`Transfers between validators aren't possible yet. You will have to
-              wait until mainnet merges with the Beacon Chain (around two years) before you can
-              withdraw or transfer your {TICKER_NAME}.`}
-            values={{ TICKER_NAME }}
-          />
+          <FormattedMessage defaultMessage="Transfers between validators and withdrawals aren't possible yet. Withdrawal functionality is currently a top priority, and is planned to be rolled out in the next network upgrade, known as the Shanghai upgrade." />
         </Text>
         <Link
           to="https://ethereum.org/en/upgrades/merge"
@@ -224,8 +214,8 @@ export const pageContent = {
     acknowledgementText: (
       <FormattedMessage
         defaultMessage="I understand that I {cannotTransfer} my stake for a while, and I
-          {cannotWithdraw} until the merge. I understand that if I exit, I will not be able
-          to rejoin until much later. This is a long term commitment."
+          {cannotWithdraw} until the Shanghai upgrade. I understand that if I exit, I
+          will not be able to rejoin until that time. This is a long term commitment."
         values={{
           cannotTransfer: (
             <BoldCaps>

@@ -12,7 +12,7 @@ import {
   BEACONCHAIN_URL,
   BEACONSCAN_URL,
   EL_TRANSACTION_URL,
-  IS_MERGE_TESTNET,
+  IS_NON_INFURA_TESTNET,
 } from '../../../utils/envVars';
 import ReactTooltip from 'react-tooltip';
 
@@ -111,7 +111,7 @@ export const ActionButton = ({
           </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
-        {!IS_MERGE_TESTNET && (
+        {!IS_NON_INFURA_TESTNET && (
           // Probably no Bellatrix beaconscan explorer
           <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>
             Beaconscan

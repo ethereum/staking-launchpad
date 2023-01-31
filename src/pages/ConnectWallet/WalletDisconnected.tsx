@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { AcknowledgementSection } from '../Summary/AcknowledgementSection';
 import { Text } from '../../components/Text';
 import { routesEnum } from '../../Routes';
 import { Link as L } from '../../components/Link';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 const Link = styled(L)`
   display: inline;
@@ -15,7 +15,6 @@ const Link = styled(L)`
 
 export const WalletDisconnected = () => {
   const { formatMessage } = useIntl();
-  const intl = useIntl();
   const acknowledgementTitle = formatMessage({
     defaultMessage: 'Your wallet has disconnected',
   });
@@ -32,7 +31,7 @@ export const WalletDisconnected = () => {
             values={{
               reconnect: (
                 <Link to={routesEnum.connectWalletPage}>
-                  {intl.formatMessage({
+                  {formatMessage({
                     defaultMessage: 'reconnect your wallet',
                   })}
                 </Link>

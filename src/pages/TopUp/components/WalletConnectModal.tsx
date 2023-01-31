@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -11,29 +12,53 @@ import {
   metamask,
   NetworkChainId,
   portis,
-  EL_NETWORK_NAME,
 } from '../../ConnectWallet/web3Utils';
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
 import {
   ENABLE_RPC_FEATURES,
-  IS_MERGE_TESTNET,
+  IS_NON_INFURA_TESTNET,
   PORTIS_DAPP_ID,
 } from '../../../utils/envVars';
+import closeGlyph from '../../../static/close.svg';
 import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
+import { NakedButton } from '../../../components/NakedButton';
 import { MetamaskHardwareButton } from '../../ConnectWallet/MetamaskHardwareButton';
+import { useKeyPress } from '../../../hooks/useKeyPress';
+import useIntlNetworkName from '../../../hooks/useIntlNetworkName';
 
-const WalletConnectModal: React.FC = () => {
+const CloseButton = styled(NakedButton)`
+  padding: 1rem;
+  align-self: flex-end;
+`;
+
+const Close = styled.img`
+  height: 24px;
+  width: 24px;
+  display: block;
+`;
+
+const WalletConnectModal: React.FC<{
+  loading: boolean;
+  handleModalClose: () => void;
+}> = ({
+  loading,
+  handleModalClose,
+}: {
+  loading: boolean;
+  handleModalClose: () => void;
+}) => {
   const {
     connector,
     error,
     chainId,
     active,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const executionLayerName = useIntlNetworkName();
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined
@@ -47,10 +72,12 @@ const WalletConnectModal: React.FC = () => {
     return !Object.values(AllowedELNetworks).includes(network);
   }, [chainId]);
 
+  useKeyPress('Escape', handleModalClose);
+
   if (isInvalidNetwork) {
     return (
       <Layer>
-        <div className="p20">
+        <div className="p20 flex">
           <Heading level={2} color="blueMedium" center className="mb20">
             <FormattedMessage defaultMessage="Wrong network" />
           </Heading>
@@ -60,11 +87,9 @@ const WalletConnectModal: React.FC = () => {
           />
           <Text center>
             <FormattedMessage
-              defaultMessage="Connect to {network}"
-              values={{
-                network: EL_NETWORK_NAME,
-              }}
-              description="{network} is 'Mainnet' or 'Göerli' or other testnet names"
+              defaultMessage="Connect to {executionLayerName}"
+              values={{ executionLayerName }}
+              description="{executionLayerName} is either 'Mainnet' or '<Execution Layer Testnet Name> testnet'"
             />
           </Text>
         </div>
@@ -72,10 +97,13 @@ const WalletConnectModal: React.FC = () => {
     );
   }
 
-  if (active) return null;
+  if (active || !loading) return null;
 
   return (
     <Layer>
+      <CloseButton onClick={handleModalClose}>
+        <Close src={closeGlyph} />
+      </CloseButton>
       <Heading level={2} color="blueMedium" style={{ margin: '20px auto' }}>
         <FormattedMessage defaultMessage="Connect a wallet" />
       </Heading>
@@ -88,7 +116,7 @@ const WalletConnectModal: React.FC = () => {
           title="Metamask"
           error={connector === metamask ? error : undefined}
         />
-        {!IS_MERGE_TESTNET && (
+        {!IS_NON_INFURA_TESTNET && (
           <WalletButton
             invalid={PORTIS_DAPP_ID === ''}
             selectedWallet={selectedWallet}
@@ -99,7 +127,7 @@ const WalletConnectModal: React.FC = () => {
             error={connector === portis ? error : undefined}
           />
         )}
-        {!IS_MERGE_TESTNET && (
+        {!IS_NON_INFURA_TESTNET && (
           <WalletButton
             invalid={!ENABLE_RPC_FEATURES}
             selectedWallet={selectedWallet}

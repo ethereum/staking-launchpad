@@ -1,11 +1,18 @@
 import React from 'react';
-import { SectionTitle } from '../ValidatorClientComponents';
-import { IS_MAINNET } from '../../../utils/envVars';
+import { FormattedMessage, useIntl } from 'react-intl';
+import erigonBg from '../../../static/geth-bg.png';
+import {
+  Hero,
+  SectionTitle,
+  ValidatorClientPageStyles,
+} from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
-import { Heading } from '../../../components/Heading';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
-import { FormattedMessage } from 'react-intl';
+import { Heading } from '../../../components/Heading';
+import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
+import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const ErigonDetails = () => (
@@ -40,7 +47,7 @@ export const ErigonDetails = () => (
         <FormattedMessage defaultMessage="Erigon installation documentation" />
       </Link>
     </section>
-    {!IS_MAINNET && (
+    {!IS_MAINNET && IS_GOERLI && (
       <>
         <section>
           <SectionTitle level={2} className="mb5">
@@ -73,3 +80,28 @@ export const ErigonDetails = () => (
     )}
   </>
 );
+
+export const Erigon = () => {
+  const { formatMessage } = useIntl();
+  return (
+    <PageTemplate
+      title={formatMessage(
+        { defaultMessage: 'Execution Clients: {clientName}' },
+        { clientName: 'Erigon' }
+      )}
+    >
+      <ValidatorClientPageStyles>
+        <Hero imgSrc={erigonBg} />
+        <ErigonDetails />
+        <section>
+          <SectionTitle level={2} className="mb5">
+            <FormattedMessage defaultMessage="Documentation" />
+          </SectionTitle>
+          <Link primary to="https://github.com/ledgerwatch/erigon">
+            <FormattedMessage defaultMessage="Documentation on running Erigon" />
+          </Link>
+        </section>
+      </ValidatorClientPageStyles>
+    </PageTemplate>
+  );
+};

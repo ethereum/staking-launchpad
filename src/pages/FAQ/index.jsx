@@ -52,35 +52,153 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="A validator is an entity that participates in the consensus of the
-                  Ethereum protocol."
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Or in other words, a human running a computer process. This
-                  process proposes and vouches for new blocks to be added to the blockchain."
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="In other words, {boldSummary}. The more votes a
-                  block gets, the more likely it is to be added to the chain."
+                defaultMessage="A {validator} is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
                 values={{
-                  boldSummary: (
-                    <strong>
-                      {formatMessage({
-                        defaultMessage:
-                          'you can think of a validator as a voter for new blocks',
-                      })}
-                    </strong>
+                  validator: (
+                    <em>
+                      <FormattedMessage defaultMessage="validator" />
+                    </em>
                   ),
                 }}
-                description="{boldSummary} is styled with bold for emphasis"
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="What is a validator client?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
+                values={{
+                  validatorClient: (
+                    <em>
+                      <FormattedMessage defaultMessage="validator client" />
+                    </em>
+                  ),
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="What is a node operator?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="A {nodeOperator} is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+                values={{
+                  nodeOperator: (
+                    <em>
+                      <FormattedMessage defaultMessage="node operator" />
+                    </em>
+                  ),
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="How much ETH do I need to stake to become a validator?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Each key-pair associated with a validator requires locking {ethPerValidator} to be activated, which represents your initial balance as well as your {initialAndMaximum} voting power for any validator."
+                values={{
+                  ethPerValidator: <strong>{PRICE_PER_VALIDATOR} ETH</strong>,
+                  initialAndMaximum: (
+                    <em>
+                      <FormattedMessage defaultMessage="initial and maximum" />
+                    </em>
+                  ),
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage
+                defaultMessage="Is there any advantage to having more than {pricePerValidator} ETH at stake?"
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="No. There is no advantage to having more than {pricePerValidator} ETH staked."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Importantly, a validator’s vote is weighted by the amount it has at stake." />
+              <FormattedMessage
+                defaultMessage="Depositing more than {pricePerValidator} ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above {pricePerValidator} ETH, as each validator is limited to an {effectiveBalance} of {pricePerValidator}. This means that staking is done in {pricePerValidator} ETH increments, each with its own set of keys and balance."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                  effectiveBalance: (
+                    <Link
+                      primary
+                      inline
+                      to="https://www.attestant.io/posts/understanding-validator-effective-balance/"
+                    >
+                      effective balance
+                    </Link>
+                  ),
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage
+                defaultMessage="Why the {pricePerValidator} ETH maximum?"
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Heading>
+            <Text className="mt20 mb20">
+              <FormattedMessage
+                defaultMessage="Each {pricePerValidator} ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. {pricePerValidator} ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+            <Text className="mt20 mb20">
+              <FormattedMessage
+                defaultMessage="Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {pricePerValidator}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned {shanghai} update."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                  shanghai: (
+                    <Link
+                      inline
+                      primary
+                      to="https://github.com/ethereum/pm/issues/450"
+                    >
+                      Shanghai
+                    </Link>
+                  ),
+                }}
+              />
             </Text>
           </section>
           <section>
@@ -88,10 +206,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What is the deposit contract?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="You can think of the deposit contract as a transfer of funds between Ethereum accounts and
-                  Beacon Chain validators."
-              />
+              <FormattedMessage defaultMessage="You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
@@ -119,62 +234,10 @@ export const FAQ = () => {
           </section>
           <section>
             <Heading level={4}>
-              <FormattedMessage defaultMessage="How much ETH do I need to stake to become a validator?" />
-            </Heading>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Before you can run a validator and start to secure the network, you
-                  need to stake {pricePerValidator} ETH. This forms your initial balance."
-                values={{
-                  pricePerValidator: <strong>{PRICE_PER_VALIDATOR}</strong>,
-                }}
-                description="{pricePerValidator} represents deposit amount styled in bold"
-              />
-            </Text>
-          </section>
-          <section>
-            <Heading level={4}>
-              <FormattedMessage
-                defaultMessage="Is there any advantage to having more than {pricePerValidator} ETH at stake?"
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Heading>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="No. There is no advantage to having more than {pricePerValidator} ETH staked."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH encourages decentralization of power as it
-                  prevents any single validator from having an excessively large vote on the state of the chain."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <BlockQuote>
-              <Text>
-                <FormattedMessage defaultMessage="Remember that a validator’s vote is weighted by the amount it has at stake." />
-              </Text>
-            </BlockQuote>
-          </section>
-          <section>
-            <Heading level={4}>
               <FormattedMessage defaultMessage="Can I stop running my validator for a few days and then start it back up again?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="If you go offline for a number of days under normal conditions you will lose an amount of ETH
-                  roughly equivalent to the amount of ETH you would have gained in
-                  that period. In other words, if you stood to earn ≈0.01 ETH, you
-                  would instead be penalised ≈0.01 ETH."
-              />
+              <FormattedMessage defaultMessage="Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH." />
             </Text>
           </section>
           <section>
@@ -222,17 +285,20 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="There’s no way for you to re-activate your validator, and
-                  you won’t be able to transfer or withdraw your funds until after the post-merge
-                  cleanup upgrade, currently planned to follow the merge (which means your funds will remain
-                  inaccessible until then)."
-              />
+              <FormattedMessage defaultMessage="Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled. This is proposed to be included in the next network upgrade, known as the Shanghai upgrade. This means your funds will remain inaccessible at least until then." />
               <Link
                 className="mt20"
-                to="https://ethereum.org/en/upgrades/merge/"
+                to="https://ethereum-magicians.org/t/shanghai-core-eip-consideration/10777"
+                primary
               >
-                <FormattedMessage defaultMessage="More on the merge" />
+                <FormattedMessage defaultMessage="Shanghai Core EIP Consideration" />
+              </Link>
+              <Link
+                className="mt20"
+                to="https://github.com/ethereum/pm/issues/450"
+                primary
+              >
+                <FormattedMessage defaultMessage="Shanghai Planning (GitHub issue)" />
               </Link>
             </Text>
           </section>
@@ -241,19 +307,17 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What happened to 'Eth2?'" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' are being deprecated in preparation for the merge." />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage defaultMessage="After the merge, there will no longer be two distinct Ethereum networks; there will only Ethereum." />
+              <FormattedMessage defaultMessage="The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Ethereum will consist of the {executionLayer} (handles transactions and execution, formerly 'Eth1'), and the
-                  {consensusLayer} (handles proof-of-stake Beacon Chain, formerly 'Eth2' or 'Ethereum 2.0')."
+                defaultMessage="Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the
+                  {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
                 values={{
                   executionLayer: (
                     <Link
                       to="https://ethereum.org/en/glossary/#execution-layer"
+                      primary
                       inline
                     >
                       <FormattedMessage defaultMessage="execution layer" />
@@ -262,6 +326,7 @@ export const FAQ = () => {
                   consensusLayer: (
                     <Link
                       to="https://ethereum.org/en/glossary/#consensus-layer"
+                      primary
                       inline
                     >
                       <FormattedMessage defaultMessage="consensus layer" />
@@ -279,6 +344,7 @@ export const FAQ = () => {
               <Link
                 className="mt20"
                 to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/"
+                primary
               >
                 <FormattedMessage defaultMessage="Learn more about the great renaming" />
               </Link>
@@ -293,6 +359,56 @@ export const FAQ = () => {
           </Anchor>
           <section>
             <Heading level={4}>
+              <FormattedMessage defaultMessage="What clients do I need to run?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client." />
+            </Text>
+            <BlockQuote>
+              <Text className="mt20 mb20">
+                <FormattedMessage defaultMessage="This became a requirement at time of the Merge, so be sure you're running both before staking." />
+              </Text>
+            </BlockQuote>
+            <Link primary to="/checklist">
+              <FormattedMessage defaultMessage="View the Staking Checklist" />
+            </Link>
+          </section>
+          <section>
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="Why do I need to run an execution client now?" />
+            </Heading>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited {pricePerValidator} ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
+                values={{
+                  pricePerValidator: PRICE_PER_VALIDATOR,
+                }}
+              />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="With the transition to proof-of-stake complete via the Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources since the Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
+                values={{
+                  not: (
+                    <em>
+                      <FormattedMessage defaultMessage="not" />
+                    </em>
+                  ),
+                  pocGame: (
+                    <Link
+                      inline
+                      primary
+                      to="https://dankradfeist.de/ethereum/2021/09/30/proofs-of-custody.html"
+                    >
+                      <FormattedMessage defaultMessage="proof-of-custody game" />
+                    </Link>
+                  ),
+                }}
+              />
+            </Text>
+          </section>
+          <section>
+            <Heading level={4}>
               <FormattedMessage defaultMessage="How are validators incentivized to stay active and honest?" />
             </Heading>
             <Text className="mt10">
@@ -303,7 +419,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="On the other hand, you can be penalized for being offline and behaving maliciously – for example attesting to
+                defaultMessage="On the other hand, you can be penalized for being offline and behaving maliciously—for example attesting to
                 invalid or contradicting blocks."
               />
             </Text>
@@ -319,7 +435,7 @@ export const FAQ = () => {
               </li>
               <li>
                 <FormattedMessage
-                  defaultMessage="And major penalities – or {slashings} – are given for malicious actions."
+                  defaultMessage="And major penalities—or {slashings}—are given for malicious actions."
                   values={{
                     slashings: (
                       <strong>
@@ -350,10 +466,20 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Your validator has its own balance – with the
+                defaultMessage="Your validator has its own balance, with the
                 initial balance outlined in the deposit contract. Your rewards and penalties are reflected in
                 your validator's balance over time."
               />
+            </Text>
+            <BlockQuote>
+              <Text className="mt20 mb20">
+                <FormattedMessage defaultMessage="Since the Merge, validators will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with included transactions when proposing blocks. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
+              </Text>
+            </BlockQuote>
+            <Text className="mt10">
+              <Link primary to="/checklist">
+                <FormattedMessage defaultMessage="View the Staking Checklist" />
+              </Link>
             </Text>
           </section>
           <section>
@@ -362,7 +488,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Rewards and penalties are issued roughly every six and a half minutes – a period of time
+                defaultMessage="Rewards and penalties are issued roughly every six and a half minutes—a period of time
                   known as an epoch."
               />
             </Text>
@@ -372,6 +498,20 @@ export const FAQ = () => {
                   and issues your rewards or penalties appropriately."
               />
             </Text>
+            <BlockQuote>
+              <Text className="mt10">
+                <FormattedMessage
+                  defaultMessage="Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days. "
+                  values={{
+                    average: (
+                      <em>
+                        <FormattedMessage defaultMessage="average" />
+                      </em>
+                    ),
+                  }}
+                />
+              </Text>
+            </BlockQuote>
           </section>
           <section>
             <Heading level={4}>
@@ -395,7 +535,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="Given a fixed total number of validators, the rewards/penalties
-                  predominantly scale with the balance of the validator – attesting
+                  predominantly scale with the balance of the validator—attesting
                   with a higher balance results in larger rewards/penalties whereas
                   attesting with a lower balance results in lower rewards/penalties."
               />
@@ -553,7 +693,11 @@ export const FAQ = () => {
                   your uptime is {greaterThan50Percent}."
                 values={{
                   greaterThan50Percent: (
-                    <Link to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/">
+                    <Link
+                      to="https://blog.ethereum.org/2020/01/13/validated-staking-on-eth2-1-incentives/"
+                      primary
+                      inline
+                    >
                       {formatMessage({ defaultMessage: 'greater than 50%' })}
                     </Link>
                   ),
@@ -562,11 +706,7 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="This means that you don't need to go to extreme lengths with
-                  backup clients or redundant internet connections as the
-                  repercussions of being offline are not so severe."
-              />
+              <FormattedMessage defaultMessage="This means that you don't need to go to extreme lengths with backup clients or redundant internet connections as the repercussions of being offline are not so severe." />
             </Text>
           </section>
           <section>
@@ -574,11 +714,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="How much will I be penalized for acting maliciously?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Again, it depends. Behaving maliciously – for example attesting to
-                  invalid or contradicting blocks, will lead to your stake
-                  being slashed."
-              />
+              <FormattedMessage defaultMessage="Again, it depends. Behaving maliciously—for example attesting to invalid or contradicting blocks—will lead to your stake being slashed." />
             </Text>
             <Text className="mt10">
               <FormattedMessage
@@ -597,10 +733,7 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="The idea behind this is to minimize the losses from honest
-                  mistakes, but strongly disincentivize coordinated attacks."
-              />
+              <FormattedMessage defaultMessage="The idea behind this is to minimize the losses from honest mistakes, but strongly disincentivize coordinated attacks." />
             </Text>
           </section>
           <section>
@@ -644,7 +777,7 @@ export const FAQ = () => {
                       inline
                       to="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/validator.md#withdrawal-credentials"
                     >
-                      Withdrawal Credentials
+                      <FormattedMessage defaultMessage="Withdrawal Credentials" />
                     </Link>
                   ),
                 }}
@@ -762,10 +895,7 @@ export const FAQ = () => {
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Your 16 ETH can then be withdrawn – with your withdrawal key – after
-                  a delay of around a day."
-              />
+              <FormattedMessage defaultMessage="Withdrawal features are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day." />
             </Text>
             <BlockQuote>
               <Text className="mt10">
@@ -805,17 +935,10 @@ export const FAQ = () => {
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="If your signing key is not under the thief’s control, the thief
-                  cannot exit your validator."
-              />
+              <FormattedMessage defaultMessage="If your signing key is not under the thief’s control, the thief cannot exit your validator." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="With your signing key, you could attempt to quickly exit the
-                  validator and then transfer the funds – with the withdrawal key –
-                  before the thief."
-              />
+              <FormattedMessage defaultMessage="With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief." />
             </Text>
           </section>
           <section>
@@ -848,12 +971,12 @@ export const FAQ = () => {
                   help! You can find support on {discord} or {reddit}."
                 values={{
                   discord: (
-                    <Link inline to="https://discord.io/ethstaker">
+                    <Link primary inline to="https://discord.io/ethstaker">
                       Discord
                     </Link>
                   ),
                   reddit: (
-                    <Link inline to="https://reddit.com/r/ethstaker">
+                    <Link primary inline to="https://reddit.com/r/ethstaker">
                       Reddit
                     </Link>
                   ),

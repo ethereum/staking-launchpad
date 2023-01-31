@@ -36,12 +36,9 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { FileUploadAnimation } from './FileUploadAnimation';
-import {
-  NETWORK_NAME,
-  GENESIS_FORK_VERSION,
-  IS_MAINNET,
-} from '../../utils/envVars';
+import { GENESIS_FORK_VERSION } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const Container = styled(Paper)`
   margin: auto;
@@ -96,6 +93,7 @@ const _UploadValidatorPage = ({
   dispatchBeaconChainAPIStatusUpdate,
 }: Props): JSX.Element => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useIntlNetworkName();
   const [isFileStaged, setIsFileStaged] = useState(depositKeys.length > 0);
   const [isFileAccepted, setIsFileAccepted] = useState(depositKeys.length > 0);
   const [fileError, setFileError] = useState<React.ReactElement | null>(null);
@@ -130,15 +128,8 @@ const _UploadValidatorPage = ({
     setFileError(
       <Text>
         <FormattedMessage
-          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {network}."
-          values={{
-            network: (
-              <span>
-                {NETWORK_NAME}
-                {IS_MAINNET ? '' : ' testnet'}
-              </span>
-            ),
-          }}
+          defaultMessage="This JSON file isn't for the right network. Upload a file generated for your current network: {consensusLayerName}."
+          values={{ consensusLayerName }}
         />
       </Text>
     );
@@ -345,7 +336,7 @@ const _UploadValidatorPage = ({
             defaultMessage="Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
             values={{
               json: <Code>deposit_data-[timestamp].json</Code>,
-              validatorKeys: <Code>/eth2.0-deposit-cli/validator_keys</Code>,
+              validatorKeys: <Code>/staking-deposit-cli/validator_keys</Code>,
             }}
           />
         </Text>

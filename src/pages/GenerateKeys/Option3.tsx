@@ -6,9 +6,10 @@ import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, IS_MAINNET } from '../../utils/envVars';
+import { NETWORK_NAME } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const Pre = styled.pre`
   white-space: normal;
@@ -22,6 +23,7 @@ export const Option3 = ({
   os: string;
 }) => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useIntlNetworkName();
   const renderPythonInstructions = () => {
     if (os === 'linux')
       return (
@@ -149,7 +151,7 @@ export const Option3 = ({
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
-          python3 ./eth2deposit/deposit.py new-mnemonic{' '}
+          python3 ./staking_deposit/deposit.py new-mnemonic{' '}
           {validatorCount > 0
             ? `--${formatMessage({
                 defaultMessage: 'num_validators',
@@ -172,7 +174,7 @@ export const Option3 = ({
     if (os === 'windows') {
       return (
         <Pre className="my0">
-          .\eth2deposit\deposit.py new-mnemonic{' '}
+          .\staking_deposit\deposit.py new-mnemonic{' '}
           {validatorCount > 0
             ? `--${formatMessage({
                 defaultMessage: 'num_validators',
@@ -250,7 +252,7 @@ export const Option3 = ({
           inline
           primary
           isTextLink={false}
-          to="https://github.com/ethereum/eth2.0-deposit-cli/archive/master.zip"
+          to="https://github.com/ethereum/staking-deposit-cli/archive/master.zip"
         >
           <Button
             className="my20"
@@ -268,7 +270,7 @@ export const Option3 = ({
               gitClone: (
                 <Code>
                   git clone -b master --single-branch
-                  https://github.com/ethereum/eth2.0-deposit-cli.git
+                  https://github.com/ethereum/staking-deposit-cli.git
                 </Code>
               ),
               master: <Code>master</Code>,
@@ -324,20 +326,19 @@ export const Option3 = ({
       <Alert variant="error" className="my10">
         <Text>
           <FormattedMessage
-            defaultMessage="Make sure you have set {flag} for {network}, otherwise the deposit will be invalid."
+            defaultMessage="Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
             values={{
               flag: (
-                <Code>{`--${formatMessage({
-                  defaultMessage: 'chain',
-                  description: 'this is used as a command line flag',
-                })} ${NETWORK_NAME.toLowerCase()}`}</Code>
+                <Code>
+                  {`--${formatMessage({
+                    defaultMessage: 'chain',
+                    description: 'this is used as a command line flag',
+                  })} ${NETWORK_NAME.toLowerCase()}`}
+                </Code>
               ),
-              network: (
-                <span>
-                  {IS_MAINNET ? NETWORK_NAME : `${NETWORK_NAME} testnet`}
-                </span>
-              ),
+              consensusLayerName,
             }}
+            description="{flag} is a terminal command styled as code."
           />
         </Text>
       </Alert>
@@ -348,9 +349,9 @@ export const Option3 = ({
         <Link
           primary
           inline
-          to="https://github.com/ethereum/eth2.0-deposit-cli"
+          to="https://github.com/ethereum/staking-deposit-cli"
         >
-          https://github.com/ethereum/eth2.0-deposit-cli
+          https://github.com/ethereum/staking-deposit-cli
         </Link>
       </Alert>
     </div>

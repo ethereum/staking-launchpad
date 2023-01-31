@@ -45,11 +45,12 @@ import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
-  IS_MERGE_TESTNET,
-  FAUCET_LINK,
+  IS_NON_INFURA_TESTNET,
+  FAUCET_URL,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 // styled components
 const Container = styled.div`
@@ -183,6 +184,7 @@ const _ConnectWalletPage = ({
     account,
     library,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const { executionLayerName } = useIntlNetworkName();
 
   // initialize state
   const [balance, setBalance] = useState<number | null>(null);
@@ -292,10 +294,10 @@ const _ConnectWalletPage = ({
     } else if (!networkAllowed) {
       setStatus(
         formatMessage(
-          { defaultMessage: 'Connect {wallet} to {network}' },
+          { defaultMessage: 'Connect {wallet} to {executionLayerName}' },
           {
             wallet: getWalletName(walletProvider),
-            network: IS_MAINNET ? 'Ethereum mainnet' : 'Testnet',
+            executionLayerName,
           }
         )
       );
@@ -309,6 +311,7 @@ const _ConnectWalletPage = ({
     network,
     formatMessage,
     walletProvider,
+    executionLayerName,
   ]);
 
   const handleSubmit = () => {
@@ -363,7 +366,7 @@ const _ConnectWalletPage = ({
                   </Heading>
                 </Row>
                 <Text color={networkAllowed ? 'greenDark' : 'redMedium'}>
-                  {network === 'Mainnet' ? network : `${network} testnet`}
+                  {executionLayerName}
                 </Text>
               </Network>
               <div>
@@ -410,7 +413,7 @@ const _ConnectWalletPage = ({
                       </>
                     )}
                     {!IS_MAINNET && lowBalance && (
-                      <FaucetLink to={FAUCET_LINK} primary>
+                      <FaucetLink to={FAUCET_URL} primary>
                         <FormattedMessage
                           defaultMessage="Get {TICKER_NAME}"
                           values={{
@@ -443,7 +446,7 @@ const _ConnectWalletPage = ({
                 title="Metamask"
                 error={walletProvider === metamask ? error : undefined}
               />
-              {!IS_MERGE_TESTNET && (
+              {!IS_NON_INFURA_TESTNET && (
                 <WalletButton
                   invalid={PORTIS_DAPP_ID === ''}
                   selectedWallet={selectedWallet}
@@ -454,7 +457,7 @@ const _ConnectWalletPage = ({
                   error={walletProvider === portis ? error : undefined}
                 />
               )}
-              {!IS_MERGE_TESTNET && (
+              {!IS_NON_INFURA_TESTNET && (
                 <WalletButton
                   invalid={!ENABLE_RPC_FEATURES}
                   selectedWallet={selectedWallet}
@@ -488,10 +491,8 @@ const _ConnectWalletPage = ({
       {isInvalidNetwork && (
         <div className="flex center mt20">
           <FormattedMessage
-            defaultMessage="Your wallet is on the wrong network. Switch to {network}"
-            values={{
-              network: IS_MAINNET ? 'Ethereum mainnet' : 'Göerli testnet',
-            }}
+            defaultMessage="Your wallet is on the wrong network. Switch to {executionLayerName}"
+            values={{ executionLayerName }}
           />
         </div>
       )}

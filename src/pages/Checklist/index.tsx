@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import _shuffle from 'lodash/shuffle';
+import _sortBy from 'lodash/sortBy';
 import { CheckBox } from 'grommet';
 import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
 import { FormNext } from 'grommet-icons';
@@ -10,21 +11,25 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import {
   BEACONCHAIN_URL,
-  NETWORK_NAME,
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
   TUTORIAL_URL,
-  IS_MERGE_TESTNET,
+  NETWORK_NAME,
 } from '../../utils/envVars';
 import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
+import BesuBg from '../../static/besu-bg.png';
+import NethermindBg from '../../static/nethermind-bg.png';
+import ErigonBg from '../../static/erigon-bg.png';
+import GethBg from '../../static/geth-bg.png';
 import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
 import { Alert } from '../../components/Alert';
+import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -94,6 +99,10 @@ const PortTable = styled.table`
   margin: 1rem auto;
   color: #212529;
 
+  * {
+    text-align: start;
+  }
+
   th,
   td {
     padding: 0.75rem;
@@ -108,6 +117,10 @@ const PortTable = styled.table`
   tbody + tbody {
     border-top: 2px solid #dee2e6;
   }
+`;
+
+const ClientLayerContainer = styled.section`
+  display: flex;
 `;
 
 const SectionHeader = styled.div`
@@ -172,20 +185,32 @@ const StyledLink = styled(Link as any)`
   width: 100%;
 `;
 
+enum layerEnum {
+  execution = 'execution',
+  consensus = 'consensus',
+}
+
 interface Client {
   header: string;
   text: string;
   imgUrl: any;
   url: routesEnum;
   linkText: string;
+  layer: layerEnum;
+  discord: string;
+  defaultTcp: number;
+  defaultUdp: number;
+  jwtUrl: string;
+  feeRecipientUrl?: string;
+  metricsUrl?: string;
 }
 
 const tutorialLinkBox = () => {
-  if (IS_MERGE_TESTNET) {
+  if (TUTORIAL_URL !== null) {
     return (
       <Alert variant="warning" className="my40 mx15">
         <Heading level={4}>
-          <FormattedMessage defaultMessage="Testnet tutorial" />
+          <FormattedMessage defaultMessage="Node Setup Tutorial" />
         </Heading>
         <Link to={TUTORIAL_URL} primary>
           <FormattedMessage
@@ -198,11 +223,97 @@ const tutorialLinkBox = () => {
       </Alert>
     );
   }
-  return;
+  return null;
 };
+
 export const Checklist = () => {
   const { formatMessage } = useIntl();
+  const { consensusLayerName } = useIntlNetworkName();
+
+  const defaultExecutionPorts: {
+    defaultTcp: number;
+    defaultUdp: number;
+  } = {
+    defaultTcp: 30303,
+    defaultUdp: 30303,
+  };
+
+  const defaultConsensusPorts: {
+    defaultTcp: number;
+    defaultUdp: number;
+  } = {
+    defaultTcp: 9000,
+    defaultUdp: 9000,
+  };
+
   const clientInfo: Client[] = _shuffle([
+    {
+      header: 'Besu',
+      text: formatMessage({
+        defaultMessage:
+          'Hyperledger Besu is an open-source Ethereum client developed under the Apache 2.0 license and written in Java.',
+      }),
+      imgUrl: BesuBg,
+      url: routesEnum.besu,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Besu',
+      }),
+      layer: layerEnum.execution,
+      discord: 'https://discord.gg/hyperledger',
+      ...defaultExecutionPorts,
+      jwtUrl:
+        'https://besu.hyperledger.org/en/stable/public-networks/reference/cli/options/#engine-jwt-secret',
+    },
+    {
+      header: 'Nethermind',
+      text: formatMessage({
+        defaultMessage:
+          'Nethermind is a robust client built on .NET core designed for performance, versatility and customizability.',
+      }),
+      imgUrl: NethermindBg,
+      url: routesEnum.nethermind,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Nethermind',
+      }),
+      layer: layerEnum.execution,
+      discord: 'https://discord.gg/PaCMRFdvWT',
+      ...defaultExecutionPorts,
+      jwtUrl:
+        'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
+    },
+    {
+      header: 'Erigon',
+      text: formatMessage({
+        defaultMessage:
+          'Erigon is an execution client on the efficiency frontier, written in Go.',
+      }),
+      imgUrl: ErigonBg,
+      url: routesEnum.erigon,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Erigon',
+      }),
+      layer: layerEnum.execution,
+      discord: 'https://github.com/ledgerwatch/erigon#erigon-discord-server',
+      ...defaultExecutionPorts,
+      jwtUrl:
+        'https://github.com/ledgerwatch/erigon#beacon-chain-consensus-layer',
+    },
+    {
+      header: 'Geth',
+      text: formatMessage({
+        defaultMessage:
+          'Geth is one of the three original implementations of the Ethereum protocol, written in Go.',
+      }),
+      imgUrl: GethBg,
+      url: routesEnum.geth,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Geth',
+      }),
+      layer: layerEnum.execution,
+      discord: 'https://discord.gg/nthXNEv',
+      ...defaultExecutionPorts,
+      jwtUrl: 'https://geth.ethereum.org/docs/interface/consensus-clients',
+    },
     {
       header: 'Lighthouse',
       text: formatMessage({
@@ -214,6 +325,14 @@ export const Checklist = () => {
       linkText: formatMessage({
         defaultMessage: 'Configure Lighthouse',
       }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/uC7TuaH',
+      ...defaultConsensusPorts,
+      jwtUrl:
+        'https://lighthouse-book.sigmaprime.io/merge-migration.html#connecting-to-an-execution-engine',
+      feeRecipientUrl:
+        'https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html',
+      metricsUrl: 'https://github.com/sigp/lighthouse-metrics',
     },
     {
       header: 'Nimbus',
@@ -226,6 +345,13 @@ export const Checklist = () => {
       linkText: formatMessage({
         defaultMessage: 'Configure Nimbus',
       }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/YbTCNat',
+      ...defaultConsensusPorts,
+      jwtUrl:
+        'https://nimbus.guide/eth1.html#3-pass-the-url-and-jwt-secret-to-nimbus',
+      feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
+      metricsUrl: 'https://nimbus.guide/metrics-pretty-pictures.html',
     },
     {
       header: 'Prysm',
@@ -238,6 +364,15 @@ export const Checklist = () => {
       linkText: formatMessage({
         defaultMessage: 'Configure Prysm',
       }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/z9efH7e',
+      defaultTcp: 13000,
+      defaultUdp: 12000,
+      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      feeRecipientUrl:
+        'https://docs.prylabs.network/docs/execution-node/fee-recipient',
+      metricsUrl:
+        'https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/',
     },
     {
       header: 'Teku',
@@ -250,6 +385,15 @@ export const Checklist = () => {
       linkText: formatMessage({
         defaultMessage: 'Configure Teku',
       }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/7hPv2T6',
+      ...defaultConsensusPorts,
+      jwtUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Connect/Connect-To-Mainnet/#1-generate-the-shared-secret',
+      feeRecipientUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
+      metricsUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/',
     },
   ]);
 
@@ -334,11 +478,7 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage
-              defaultMessage="Hardware suggestions are an ever-evolving target. Current
-                    minimum requirements are likely to increase by an order of magnitude after the merge and 
-                    introduction of shard chains. Do your own research before depositing funds."
-            />
+            <FormattedMessage defaultMessage="Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds." />
           </Text>
         </Alert>
         <section>
@@ -350,7 +490,7 @@ export const Checklist = () => {
               <Text>
                 <FormattedMessage
                   defaultMessage="You need to run an {executionClient} as well as your
-                    {consensusClient} (formerly 'Eth2')."
+                  {consensusClient}."
                   values={{
                     executionClient: (
                       <Link
@@ -369,18 +509,23 @@ export const Checklist = () => {
                       </Link>
                     ),
                   }}
-                  description="{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'"
+                  description="{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'"
                 />
               </Text>
             </li>
             <li className="py5">
               <Text>
+                <FormattedMessage defaultMessage="Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run both an execution and a consensus client to properly attest to the network." />
+              </Text>
+            </li>
+            <li className="py5">
+              <Text>
                 <FormattedMessage
-                  defaultMessage="As of {date}, you'll need ~400GB for the mainnet execution chain data alone (growing at ~1GB/day)."
+                  defaultMessage="As of {date}, you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
                   values={{
                     date: (
                       <FormattedDate
-                        value={new Date(2021, 1)}
+                        value={new Date(2022, 4)}
                         year="numeric"
                         month="long"
                       />
@@ -392,12 +537,11 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="The Beacon Chain had its genesis on {date}. It is growing in size over time, and the
-                    introduction of sharding will also increase storage, memory, and bandwidth requirements."
+                  defaultMessage="Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
                   values={{
                     date: (
                       <FormattedDate
-                        value={new Date(Date.UTC(2020, 11, 1, 12, 0, 23))}
+                        value={new Date(Date.UTC(2015, 6, 30, 3, 26, 13))}
                         year="numeric"
                         month="long"
                         day="2-digit"
@@ -454,11 +598,11 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="You need enough upload bandwidth too. As of {date} this is ~700-800 MB/hour, and is likely to increase."
+                  defaultMessage="You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
                   values={{
                     date: (
                       <FormattedDate
-                        value={new Date(2021, 1)}
+                        value={new Date(2022, 4)}
                         year="numeric"
                         month="long"
                       />
@@ -474,8 +618,8 @@ export const Checklist = () => {
           <ul className="sub-checklist-item">
             <li className="py5">
               <Text>
-                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to slashing." />{' '}
-                <Link primary inline to="/faq#responsibilities">
+                <FormattedMessage defaultMessage="Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing." />{' '}
+                <Link primary to="/faq#responsibilities" className="mt10">
                   <FormattedMessage defaultMessage="More on slashing risks" />
                 </Link>
               </Text>
@@ -539,47 +683,74 @@ export const Checklist = () => {
           <CheckBox
             label={
               <Text className="checkbox-label">
-                <FormattedMessage
-                  defaultMessage="I've forwarded the necessary ports to the correct machine(s)
-                    from my router (only open the ports that apply to your installation)."
-                />
+                <FormattedMessage defaultMessage="I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)." />
               </Text>
             }
           />
-          <PortTable>
-            <thead>
-              <tr>
-                <th>
-                  <FormattedMessage defaultMessage="Service" />
-                </th>
-                <th>
-                  <FormattedMessage defaultMessage="Default Port" />
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Geth</td>
-                <td>30303 TCP/UDP</td>
-              </tr>
-              <tr>
-                <td>Lighthouse</td>
-                <td>9000 TCP/UDP</td>
-              </tr>
-              <tr>
-                <td>Nimbus</td>
-                <td>9000 UDP/TCP</td>
-              </tr>
-              <tr>
-                <td>Prysm</td>
-                <td>12000 UDP, 13000 TCP</td>
-              </tr>
-              <tr>
-                <td>Teku</td>
-                <td>9000 TCP/UDP</td>
-              </tr>
-            </tbody>
-          </PortTable>
+          <ClientLayerContainer>
+            <PortTable>
+              <thead>
+                <tr>
+                  <th>
+                    <FormattedMessage defaultMessage="Execution Client" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Default Port" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {clientInfo
+                  .filter(({ layer }) => layer === layerEnum.execution)
+                  .sort((a, b) => b.defaultTcp - a.defaultTcp)
+                  .map(({ header, defaultTcp, defaultUdp }) => (
+                    <tr key={header}>
+                      <td>{header}</td>
+                      <td>
+                        {defaultTcp === defaultUdp
+                          ? `${defaultUdp} TCP/UDP`
+                          : `${defaultTcp} TCP, ${defaultUdp} UDP`}
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </PortTable>
+            <PortTable>
+              <thead>
+                <tr>
+                  <th>
+                    <FormattedMessage defaultMessage="Consensus Client" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Default Port" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {clientInfo
+                  .filter(({ layer }) => layer === layerEnum.consensus)
+                  .map(({ header, defaultTcp, defaultUdp }) => (
+                    <tr key={header}>
+                      <td>{header}</td>
+                      <td>
+                        {defaultTcp === defaultUdp
+                          ? `${defaultUdp} TCP/UDP`
+                          : `${defaultTcp} TCP, ${defaultUdp} UDP`}
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </PortTable>
+          </ClientLayerContainer>
+          <Text className="ml20">
+            <Link
+              primary
+              to="https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/"
+              className="mt10"
+            >
+              <FormattedMessage defaultMessage="Learn about ports in networking" />
+            </Link>
+          </Text>
         </section>
         <section>
           <Heading level={3}>
@@ -687,10 +858,7 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Testnet practice" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage
-              defaultMessage="We strongly recommended you complete these steps on the current testnet
-                before mainnet."
-            />
+            <FormattedMessage defaultMessage="We strongly recommended you complete these steps on the current testnet before Mainnet." />
             {'  '}
             <Link inline primary to={TESTNET_LAUNCHPAD_URL}>
               {TESTNET_LAUNCHPAD_NAME}
@@ -698,42 +866,99 @@ export const Checklist = () => {
           </Text>
         </Alert>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="el-client">
             <FormattedMessage defaultMessage="Configure your execution client" />
           </Heading>
+          <Link className="mt10" to="/faq" primary>
+            <FormattedMessage defaultMessage="Review validator roles and responsibilities" />
+          </Link>
+          <ClientContainer>
+            {clientInfo
+              .filter(({ layer }) => layer === layerEnum.execution)
+              .map(client => (
+                <ClientCard
+                  className="mt10"
+                  header={client.header}
+                  imgUrl={client.imgUrl}
+                  text={client.text}
+                  key={client.header}
+                  url={client.url}
+                  linkText={client.linkText}
+                />
+              ))}
+          </ClientContainer>
+          <Alert variant="warning" className="mt30 mb20">
+            <Heading level={4}>
+              <FormattedMessage defaultMessage="Remember" />
+            </Heading>
+            <Text className="mt20">
+              <FormattedMessage defaultMessage="All stakers must operate an execution client with their consensus client." />
+            </Text>
+          </Alert>
           <CheckBox
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've installed and synced my execution client on {network} (do not wait on this as it can take several days)."
+                  defaultMessage="I've installed and synced my {network} execution client (do not wait on this as it can take several days)."
                   values={{
-                    network: IS_MAINNET ? 'mainnet' : 'Goerli',
+                    network: IS_MAINNET ? (
+                      <FormattedMessage defaultMessage="Mainnet" />
+                    ) : (
+                      TESTNET_LAUNCHPAD_NAME
+                    ),
                   }}
                 />
               </Text>
             }
           />
           {tutorialLinkBox()}
+          <Heading level={4} className="mt10">
+            <FormattedMessage defaultMessage="Recommended" />
+          </Heading>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've joined my execution client's Discord server." />
+              </Text>
+            }
+          />
+          <Text>
+            <b>
+              <FormattedMessage defaultMessage="Discord:" />
+            </b>{' '}
+            {clientInfo
+              .filter(
+                ({ discord, layer }) =>
+                  !!discord && layer === layerEnum.execution
+              )
+              .map(({ header, discord }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link primary inline to={discord!}>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
         </section>
         <section>
-          <Heading level={3}>
+          <Heading level={3} id="cl-client">
             <FormattedMessage defaultMessage="Configure your consensus client" />
           </Heading>
-          <Link className="mt10" to="/faq" primary>
-            <FormattedMessage defaultMessage="More on validator roles and responsibilities" />
-          </Link>
           <ClientContainer>
-            {clientInfo.map(client => (
-              <ClientCard
-                className="mt10"
-                header={client.header}
-                imgUrl={client.imgUrl}
-                text={client.text}
-                key={client.header}
-                url={client.url}
-                linkText={client.linkText}
-              />
-            ))}
+            {clientInfo
+              .filter(({ layer }) => layer === layerEnum.consensus)
+              .map(client => (
+                <ClientCard
+                  className="mt10"
+                  header={client.header}
+                  imgUrl={client.imgUrl}
+                  text={client.text}
+                  key={client.header}
+                  url={client.url}
+                  linkText={client.linkText}
+                />
+              ))}
           </ClientContainer>
           {tutorialLinkBox()}
           <Alert variant="error" className="my40 mx15">
@@ -774,6 +999,151 @@ export const Checklist = () => {
               </Text>
             }
           />
+          <Heading level={4} className="mt10">
+            <FormattedMessage defaultMessage="Recommended" />
+          </Heading>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've joined my consensus client's Discord server." />
+              </Text>
+            }
+          />
+          <Text>
+            <b>
+              <FormattedMessage defaultMessage="Discord:" />
+            </b>{' '}
+            {clientInfo
+              .filter(
+                ({ discord, layer }) =>
+                  !!discord && layer === layerEnum.consensus
+              )
+              .map(({ header, discord }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link primary inline to={discord!}>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="JWT Authentication" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Communication between the execution layer and consensus layer occurs using the {engineApi}. This is a set of JSON RPC methods that can be used to communicate between the two client layers."
+              values={{
+                engineApi: (
+                  <Link
+                    inline
+                    primary
+                    to="https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md"
+                  >
+                    <FormattedMessage defaultMessage="Engine API" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
+              values={{
+                jwt: (
+                  <Link
+                    inline
+                    primary
+                    to="https://en.wikipedia.org/wiki/JSON_Web_Token"
+                  >
+                    <FormattedMessage defaultMessage="JWT" />
+                  </Link>
+                ),
+              }}
+            />
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Consensus JWT docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(({ layer }) => layer === layerEnum.consensus)
+              .map(({ header, jwtUrl }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link to={jwtUrl} inline primary>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Execution JWT docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(({ layer }) => layer === layerEnum.execution)
+              .map(({ header, jwtUrl }, idx) => (
+                <span key={header}>
+                  {idx !== 0 && ' | '}
+                  <Link to={jwtUrl} inline primary>
+                    {header}
+                  </Link>
+                </span>
+              ))}
+          </Text>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)" />
+              </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Set fee recipient" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to." />
+          </Text>
+          <Alert variant="warning" className="my30">
+            <Text>
+              <FormattedMessage defaultMessage="If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks." />
+            </Text>
+          </Alert>
+          <Text className="mt20">
+            <FormattedMessage defaultMessage="See your consensus client documentation for client-specific instructions on how to set this." />
+          </Text>
+          <Text className="mt20">
+            <b>
+              <FormattedMessage defaultMessage="Fee recipient docs:" />
+            </b>{' '}
+            {_sortBy(clientInfo, 'header')
+              .filter(
+                ({ layer, feeRecipientUrl }) =>
+                  layer === layerEnum.consensus && !!feeRecipientUrl
+              )
+              .map(({ header, feeRecipientUrl }, idx) => (
+                <>
+                  <span key={header}>
+                    {idx !== 0 && ' | '}
+                    <Link to={feeRecipientUrl!} inline primary>
+                      {header}
+                    </Link>
+                  </span>
+                </>
+              ))}
+          </Text>
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've provided an Ethereum address to my validator where I would like my fee rewards to be deposited." />
+              </Text>
+            }
+          />
         </section>
         <section>
           <Heading level={3}>
@@ -805,9 +1175,8 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage
-                  defaultMessage="I've synced my beacon node on {NETWORK_NAME}."
-                  values={{ NETWORK_NAME }}
-                  description="{NETWORK_NAME} is name of network, do not translate"
+                  defaultMessage="I've synced my beacon node on {consensusLayerName}."
+                  values={{ consensusLayerName }}
                 />
               </Text>
             }
@@ -819,33 +1188,6 @@ export const Checklist = () => {
               </Text>
             </li>
           </ul>
-          <Heading level={4} className="mt10">
-            <FormattedMessage defaultMessage="Recommended" />
-          </Heading>
-          <CheckBox
-            label={
-              <Text className="checkbox-label">
-                <FormattedMessage defaultMessage="I've joined my client's Discord server." />
-              </Text>
-            }
-          />
-          <Text className="ml20">
-            <Link primary inline to="https://discord.gg/uC7TuaH">
-              Lighthouse
-            </Link>{' '}
-            |{' '}
-            <Link primary inline to="https://discord.gg/YbTCNat">
-              Nimbus
-            </Link>{' '}
-            |{' '}
-            <Link primary inline to="https://discord.gg/z9efH7e">
-              Prysm
-            </Link>{' '}
-            |{' '}
-            <Link primary inline to="https://discord.gg/7hPv2T6">
-              Teku
-            </Link>
-          </Text>
         </section>
         <section>
           <Heading level={3}>
@@ -910,48 +1252,23 @@ export const Checklist = () => {
           <Text>
             <FormattedMessage
               defaultMessage="The clients support Prometheus and Grafana to help you
-                visualize important real-time metrics about your validator. You can
-                find client-specific instructions here: {lighthouse} | {nimbus} | {prysm} | {teku}"
-              values={{
-                lighthouse: (
-                  <Link
-                    primary
-                    inline
-                    to="https://github.com/sigp/lighthouse-metrics"
-                  >
-                    Lighthouse
-                  </Link>
-                ),
-                nimbus: (
-                  <Link
-                    primary
-                    inline
-                    to="https://nimbus.guide/metrics-pretty-pictures.html"
-                  >
-                    Nimbus
-                  </Link>
-                ),
-                prysm: (
-                  <Link
-                    primary
-                    inline
-                    to="https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/"
-                  >
-                    Prysm
-                  </Link>
-                ),
-                teku: (
-                  <Link
-                    primary
-                    inline
-                    to="https://docs.teku.consensys.net/en/latest/HowTo/Monitor/Metrics/"
-                  >
-                    Teku
-                  </Link>
-                ),
-              }}
-              description="{variables} are client names, each linking to documentation (do not translate names)"
+                visualize important real-time metrics about your validator."
             />
+            <Text className="my10">
+              <b>
+                <FormattedMessage defaultMessage="Monitoring docs:" />
+              </b>{' '}
+              {_sortBy(clientInfo, 'header')
+                .filter(({ metricsUrl }) => !!metricsUrl)
+                .map(({ header, metricsUrl }, idx) => (
+                  <span key={header}>
+                    {idx !== 0 && ' | '}
+                    <Link to={metricsUrl!} inline primary>
+                      {header}
+                    </Link>
+                  </span>
+                ))}
+            </Text>
           </Text>
           <CheckBox
             label={
@@ -1005,7 +1322,7 @@ export const Checklist = () => {
           <Text className="my10">
             <FormattedMessage
               defaultMessage="While validating on the testnet, perform these simulations to learn more about your
-                node, and better prepare yourself for mainnet:"
+                node, and better prepare yourself for Mainnet:"
             />
           </Text>
           <CheckBox
@@ -1029,6 +1346,13 @@ export const Checklist = () => {
             label={
               <Text className="checkbox-label">
                 <FormattedMessage defaultMessage="I've simulated how to safely migrate from one consensus client to another." />
+              </Text>
+            }
+          />
+          <CheckBox
+            label={
+              <Text className="checkbox-label">
+                <FormattedMessage defaultMessage="I've simulated how to safely migrate from one execution client to another." />
               </Text>
             }
           />

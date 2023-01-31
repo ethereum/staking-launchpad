@@ -1,12 +1,12 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { PageTemplate } from '../../../components/PageTemplate';
 import tekuBg from '../../../static/teku-bg.png';
 import {
   Hero,
   SectionTitle,
   ValidatorClientPageStyles,
 } from '../ValidatorClientComponents';
+import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';

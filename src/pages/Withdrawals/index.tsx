@@ -154,10 +154,17 @@ export const Withdrawals = () => {
           <Text className="mb10">
             <FormattedMessage
               defaultMessage="The Shanghai/Capella upgrade enabled Beacon Chain staking
-              withdrawals, with the inclusion of EIP-4895. This Ethereum improvement proposal
+              withdrawals, with the inclusion of {eip}. This Ethereum improvement proposal
               provides a mechanism of continuously distributing rewards to stakers, and also
               providing a way for exited validators to unlock their entire balance—no gas
               required."
+              values={{
+                eip: (
+                  <Link to="https://eips.ethereum.org/EIPS/eip-4895">
+                    <FormattedMessage defaultMessage="EIP-4895" />
+                  </Link>
+                ),
+              }}
             />
           </Text>
         </section>

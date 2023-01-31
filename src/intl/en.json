@@ -790,9 +790,6 @@
   "FM92S0": {
     "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
   },
-  "FN8NiY": {
-    "message": "The Shanghai/Capella upgrade enabled Beacon Chain staking withdrawals, with the inclusion of EIP-4895. This Ethereum improvement proposal provides a mechanism of continuously distributing rewards to stakers, and also providing a way for exited validators to unlock their entire balance—no gas required."
-  },
   "FSRfSJ": {
     "message": "I understand that this transaction is not reversible."
   },
@@ -1218,6 +1215,9 @@
   "Nb5DNK": {
     "message": "Become a validator with Teku"
   },
+  "NeW5tq": {
+    "message": "The Shanghai/Capella upgrade enabled Beacon Chain staking withdrawals, with the inclusion of {eip}. This Ethereum improvement proposal provides a mechanism of continuously distributing rewards to stakers, and also providing a way for exited validators to unlock their entire balance—no gas required."
+  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -1378,6 +1378,9 @@
   },
   "ROHpFF": {
     "message": "1. Learn about your responsibilities"
+  },
+  "ROwygg": {
+    "message": "EIP-4895"
   },
   "RVf7gC": {
     "message": "TODO"

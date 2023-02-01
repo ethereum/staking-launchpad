@@ -227,7 +227,7 @@ export const Withdrawals = () => {
                   <Link
                     inline
                     primary
-                    to="https://notes.ethereum.org/@hww/btec"
+                    to="https://notes.ethereum.org/@launchpad/btec"
                   >
                     Walkthrough tutorial
                   </Link>

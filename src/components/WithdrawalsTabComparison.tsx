@@ -95,7 +95,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
               />
             </li>
           </ul>
-          <Text className="mb20">
+          <Text className="my20">
             <FormattedMessage defaultMessage="Enter your validator index here to check if you're account is ready for withdrawals or not:" />
           </Text>
 

@@ -77,6 +77,10 @@ const SectionTitle = styled(Heading)`
   padding-bottom: 10px;
 `;
 
+const SubSectionTitle = styled(SectionTitle)`
+  border-bottom: 0;
+`;
+
 export const Withdrawals = () => {
   const { formatMessage } = useIntl();
   return (
@@ -89,12 +93,7 @@ export const Withdrawals = () => {
     >
       <ComponentStyles>
         <section>
-          <Anchor to="#introduction" id="introduction">
-            <SectionTitle level={2} className="mb10">
-              <FormattedMessage defaultMessage="Introduction" />
-            </SectionTitle>
-          </Anchor>
-          <Text className="mb10">
+          <Text>
             <FormattedMessage
               defaultMessage="The Shanghai/Capella upgrade enabled Beacon Chain staking
               withdrawals, with the inclusion of EIP-4895. This Ethereum improvement proposal
@@ -106,7 +105,7 @@ export const Withdrawals = () => {
 
           <section>
             <Anchor to="#enabling-withdrawals" id="enabling-withdrawals">
-              <SectionTitle level={3} className="mb10">
+              <SectionTitle level={2} className="mb10">
                 <FormattedMessage defaultMessage="Enabling withdrawals" />
               </SectionTitle>
             </Anchor>
@@ -123,9 +122,9 @@ export const Withdrawals = () => {
 
           <section>
             <Anchor to="#update-your-keys" id="update-your-keys">
-              <SectionTitle level={3} className="mb10">
+              <SubSectionTitle level={3} className="mb10">
                 <FormattedMessage defaultMessage="How to update validator keys" />
-              </SectionTitle>
+              </SubSectionTitle>
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
@@ -209,9 +208,11 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Reward payments (partial withdrawals)" />
-            </Heading>
+            <Anchor to="#reward-payments" id="reward-payments">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="Reward payments (partial withdrawals)" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="A {rewardPayment} is processed when an active validator has a maxed out
@@ -233,9 +234,11 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="How to exit from staking (full withdrawals)" />
-            </Heading>
+            <Anchor to="#how-to-exit" id="how-to-exit">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="How to exit from staking (full withdrawals)" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="A {fullWithdrawal} is processed for any inactivated accounts that are no longer considered to be staking. that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities. "
@@ -391,9 +394,11 @@ export const Withdrawals = () => {
           </Anchor>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Withdrawals as an operation, not a new transaction type" />
-            </Heading>
+            <Anchor to="#operations" id="operations">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="Withdrawals as an operation, not a new transaction type" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="Ethereum users are used to transactions being executed in a manual way—if
@@ -427,9 +432,11 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Withdrawal queue" />
-            </Heading>
+            <Anchor to="#withdrawal-queue" id="withdrawal-queue">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="Withdrawal queue" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="The withdrawal queue is automatically filled and processed by block proposers, who
@@ -467,9 +474,11 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Exit queue and activation queue" />
-            </Heading>
+            <Anchor to="#exit-queue" id="exit-queue">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="Exit queue and activation queue" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="As anyone who has already gone through the process of activating a validator knows,
@@ -527,9 +536,11 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="How each validator is evaluated for withdrawals" />
-            </Heading>
+            <Anchor to="#validator-evaluation" id="validator-evaluation">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="How each validator is evaluated for withdrawals" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="The status of the validator at time of evaluation is what will determine if, and what type of withdrawal will be initiated.
@@ -602,9 +613,11 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="What factors affect the frequency of payouts?" />
-            </Heading>
+            <Anchor to="#payout-frequency" id="payout-frequency">
+              <SubSectionTitle level={3} className="mb10">
+                <FormattedMessage defaultMessage="What factors affect the frequency of payouts?" />
+              </SubSectionTitle>
+            </Anchor>
             <Text className="mb10">
               <FormattedMessage defaultMessage="How long the cycle takes to check every account depends on:" />
             </Text>
@@ -679,7 +692,7 @@ export const Withdrawals = () => {
               <Link
                 primary
                 inline
-                to="https://notes.ethereum.org/@bbusa/withdrawals"
+                to="https://notes.ethereum.org/@launchpad/withdrawals-guide"
               >
                 <FormattedMessage defaultMessage="How to trigger withdrawals, credential change" />
               </Link>
@@ -688,7 +701,7 @@ export const Withdrawals = () => {
               <Link
                 primary
                 inline
-                to="https://notes.ethereum.org/@bbusa/Zhejiang"
+                to="https://notes.ethereum.org/@launchpad/zhejiang"
               >
                 <FormattedMessage defaultMessage="How to join the public withdrawals testnet" />
               </Link>

@@ -67,10 +67,6 @@ const ComponentStyles = styled.div`
   }
 `;
 
-// const TableContainer = styled.div`
-//   overflow-x: scroll;
-// `;
-
 const HashCode = styled(Code)`
   word-break: break-all;
 `;
@@ -82,74 +78,7 @@ const SectionTitle = styled(Heading)`
 `;
 
 export const Withdrawals = () => {
-  const { formatMessage /* locale */ } = useIntl();
-  // const exitQueueRateLimitData: Array<{
-  //   minValidators: number;
-  //   maxPerEpoch: number;
-  //   maxPerDay: number;
-  // }> = [
-  //   {
-  //     minValidators: 0,
-  //     maxPerEpoch: 4,
-  //     maxPerDay: 900,
-  //   },
-  //   {
-  //     minValidators: 2 ** 18 + 1 * 2 ** 16,
-  //     maxPerEpoch: 5,
-  //     maxPerDay: 1125,
-  //   },
-  //   {
-  //     minValidators: 2 ** 18 + 2 * 2 ** 16,
-  //     maxPerEpoch: 6,
-  //     maxPerDay: 1350,
-  //   },
-  //   {
-  //     minValidators: 2 ** 18 + 3 * 2 ** 16,
-  //     maxPerEpoch: 7,
-  //     maxPerDay: 1575,
-  //   },
-  //   {
-  //     minValidators: 2 ** 18 + 4 * 2 ** 16,
-  //     maxPerEpoch: 8,
-  //     maxPerDay: 1800,
-  //   },
-  //   {
-  //     minValidators: 2 ** 18 + 5 * 2 ** 16,
-  //     maxPerEpoch: 9,
-  //     maxPerDay: 2025,
-  //   },
-  //   {
-  //     minValidators: 2 ** 18 + 6 * 2 ** 16,
-  //     maxPerEpoch: 10,
-  //     maxPerDay: 2250,
-  //   },
-  // ];
-
-  // const withdrawalRateData: Array<{
-  //   numWithdrawals: number;
-  //   timeToComplete: number;
-  // }> = [
-  //   {
-  //     numWithdrawals: 500_000,
-  //     timeToComplete: 4.3,
-  //   },
-  //   {
-  //     numWithdrawals: 600_000,
-  //     timeToComplete: 5.2,
-  //   },
-  //   {
-  //     numWithdrawals: 700_000,
-  //     timeToComplete: 6.1,
-  //   },
-  //   {
-  //     numWithdrawals: 800_000,
-  //     timeToComplete: 7.0,
-  //   },
-  // ];
-
-  // const formatNumber = (num: number): string =>
-  //   new Intl.NumberFormat(locale).format(num);
-
+  const { formatMessage } = useIntl();
   return (
     <PageTemplate
       title={formatMessage({ defaultMessage: 'Staking withdrawals' })}
@@ -454,161 +383,6 @@ export const Withdrawals = () => {
           </section>
         </section>
 
-        {/* <section>
-          <Anchor
-            to="#understanding-withdrawal-credentials"
-            id="understanding-withdrawal-credentials"
-          >
-            <SectionTitle level={2} className="mb10">
-              <FormattedMessage
-                defaultMessage="Understanding withdrawal credentials: {type0} vs {type1}"
-                values={{ type0: <code>0x00</code>, type1: <code>0x01</code> }}
-              />
-            </SectionTitle>
-          </Anchor>
-          <Text className="mb10">
-            <FormattedMessage
-              defaultMessage="What are withdrawal credentials and what are these {type0} and {type1} prefixes that
-              have been mentioned?"
-              values={{ type0: <Code>0x00</Code>, type1: <Code>0x01</Code> }}
-            />
-          </Text>
-          <Text className="mb10">
-            <FormattedMessage
-              defaultMessage="Every validator account has a stored value known as its “withdrawal credentials”.
-              This is a 32-byte value (64 hex characters, 1 byte = 2 hex characters) that is used to determine if
-              and where funds can be sent to from this account. These values are prefixed with {type0} or {type1} as the
-              first byte, to indicate whether the keys are in the old BLS format ({type0}, not capable of withdrawals),
-              or have been upgraded to an execution layer address ({type1}, capable of withdrawals)."
-              values={{ type0: <Code>0x00</Code>, type1: <Code>0x01</Code> }}
-            />
-          </Text>
-
-          <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage
-                defaultMessage="{type0} withdrawal credentials (BLS, not capable of withdrawals)"
-                values={{ type0: <code>0x00</code> }}
-              />
-            </Heading>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="Before users upgrade their BLS keys, withdrawal credentials are derived as the hash of the BLS public key, swapping out the first byte with a zero byte:"
-                values={{ type0: <Code>0x00</Code>, type1: <Code>0x01</Code> }}
-              />
-            </Text>
-            <Text className="mb10">
-              <Code>0x00</Code> + <Code>HASH(pubKey)[1:]</Code>
-            </Text>
-            <Text className="mb10">
-              <FormattedMessage defaultMessage="Which looks something like this:" />
-            </Text>
-            <Text className="mb10">
-              <HashCode>
-                0x00fa5662b9cf43965d20062ceb2321dead12319ff43965db26dbaa3cecb49df9
-              </HashCode>
-            </Text>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="Accounts with withdrawal credentials displaying a {type0} prefix are not yet
-                capable of withdrawals, and must be upgraded to the new format before withdrawals can be
-                enabled."
-                values={{ type0: <Code>0x00</Code> }}
-              />
-            </Text>
-          </section>
-          <section>
-            <Heading level={3}>
-              <FormattedMessage
-                defaultMessage="{type1} withdrawal credentials (BLS, not capable of withdrawals)"
-                values={{ type1: <code>0x01</code> }}
-              />
-            </Heading>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="Accounts that have provided a withdrawal address, either on initial deposit or by rolling forward their BLS keys forward using {message}, have withdrawal credentials that are prefixed with {type1}, followed by 11 bytes of zeros, then their chosen Ethereum address."
-                values={{
-                  message: <Code>BLS_To_Execution_Change</Code>,
-                  type1: <Code>0x01</Code>,
-                }}
-              />
-            </Text>
-            <Text className="mb10">
-              <Code>0x01</Code> + <Code>0x00 * 11</Code> +{' '}
-              <Code>20-byte Ethereum address</Code>
-            </Text>
-            <Text className="mb10">
-              <FormattedMessage defaultMessage="Which looks something like this:" />
-            </Text>
-            <Text className="mb10">
-              <HashCode>
-                0x01000000000000000000000034e404116a149c24f698f312ba8cfdeade052c48
-              </HashCode>
-            </Text>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="Accounts with withdrawal credentials displaying a {type1} prefix are capable
-                of withdrawals. In this example, the linked execution withdrawal address would be:"
-                values={{ type1: <Code>0x01</Code> }}
-              />
-            </Text>
-            <Text className="mb10">
-              <HashCode>0x34e404116a149c24f698f312ba8cfdeade052c48.</HashCode>
-            </Text>
-          </section>
-          <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Where do I check my withdrawal credentials?" />
-            </Heading>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="You can use the {toolAbove} to check your validator(s) by its index number.
-                Your validator index can be queried from your validator client, or found in the validator
-                client logs."
-                values={{
-                  toolAbove: (
-                    <Link inline primary to="#CHECK_VALIDATOR">
-                      tool above
-                    </Link>
-                  ),
-                }} // TODO: Update hash link
-              />
-            </Text>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="You can also check {beaconchain} to search for your validators by the associated
-                address used to deposit your stake."
-                values={{
-                  beaconchain: (
-                    <Link primary inline to="https://beaconcha.in/">
-                      Beaconcha.in
-                    </Link>
-                  ),
-                }}
-              />
-            </Text>
-          </section>
-          <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Looking to change your withdrawal address again?" />
-            </Heading>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="Withdrawal addresses are permanently linked to the account they are
-                assigned to. Once an address has been chosen, this cannot be changed or undone."
-              />
-            </Text>
-            <Text className="mb10">
-              <FormattedMessage
-                defaultMessage="You should take extra caution to ensure you are providing an address that you
-                have control over. Providing an address that you do not control will result in loss of funds.
-                Losing access to the keys that control your chosen withdrawal address will ultimately result in
-                loss of funds, as this is the only address your validator can transfer ETH to."
-              />
-            </Text>
-          </section>
-        </section> */}
-
         <section>
           <Anchor to="#mechanics-of-withdrawals" id="mechanics-of-withdrawals">
             <SectionTitle level={2} className="mb10">
@@ -617,8 +391,6 @@ export const Withdrawals = () => {
           </Anchor>
 
           <section>
-            {' '}
-            {/* H3: Withdrawals as an operation */}
             <Heading level={3} className="mb10">
               <FormattedMessage defaultMessage="Withdrawals as an operation, not a new transaction type" />
             </Heading>
@@ -695,8 +467,6 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            {' '}
-            {/* H3: Exit queue and activation queue */}
             <Heading level={3} className="mb10">
               <FormattedMessage defaultMessage="Exit queue and activation queue" />
             </Heading>
@@ -754,42 +524,6 @@ export const Withdrawals = () => {
                 <FormattedMessage defaultMessage="Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis." />
               </Text>
             </Alert>
-            {/* <TableContainer>
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <FormattedMessage defaultMessage="Min active validators" />
-                    </th>
-                    <th>
-                      <FormattedMessage defaultMessage="Activation limit per epoch" />
-                    </th>
-                    <th>
-                      <FormattedMessage defaultMessage="Exit limit per epoch" />
-                    </th>
-                    <th>
-                      <FormattedMessage defaultMessage="Activation max per day" />
-                    </th>
-                    <th>
-                      <FormattedMessage defaultMessage="Exit max per day" />
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {exitQueueRateLimitData.map(
-                    ({ minValidators, maxPerEpoch, maxPerDay }) => (
-                      <tr key={minValidators}>
-                        <td>{formatNumber(minValidators)}</td>
-                        <td>{formatNumber(maxPerEpoch)}</td>
-                        <td>{formatNumber(maxPerEpoch)}</td>
-                        <td>{formatNumber(maxPerDay)}</td>
-                        <td>{formatNumber(maxPerDay)}</td>
-                      </tr>
-                    )
-                  )}
-                </tbody>
-              </table>
-            </TableContainer> */}
           </section>
 
           <section>
@@ -923,95 +657,6 @@ export const Withdrawals = () => {
             </li>
           </ol>
         </section>
-
-        {/* <section>
-          <Anchor to="#withdrawal-types" id="withdrawal-types">
-            <SectionTitle level={2} className="mb10">
-              <FormattedMessage defaultMessage="Withdrawal types" />
-            </SectionTitle>
-          </Anchor>
-          <Text className="mb10">
-            <FormattedMessage
-              defaultMessage="There are two types of withdrawals that can be generated depending on the
-              state of a given validator: reward payments (aka: “partial withdrawals”), and full withdrawals."
-            />
-          </Text>
-
-
-          <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="Looking to withdrawal custom amounts?" />
-            </Heading>
-            <Text className="mb10">
-              <FormattedMessage defaultMessage="Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. " />
-            </Text>
-          </section>
-        </section> */}
-
-        {/* <section>
-          <Anchor to="#exiting-from-staking" id="exiting-from-staking">
-            <SectionTitle level={2} className="mb10">
-              <FormattedMessage defaultMessage="Exiting from staking" />
-            </SectionTitle>
-          </Anchor>
-
-
-        </section> */}
-
-        {/* <section>
-          <Anchor to="#reassurance-testing" id="reassurance-testing">
-            <SectionTitle level={2} className="mb10">
-              <FormattedMessage defaultMessage="Reassurance and testing" />
-            </SectionTitle>
-          </Anchor>
-
-          <Text className="mb10">
-            TODO
-            <FormattedMessage defaultMessage="TODO" />
-          </Text>
-        </section> */}
-
-        {/* TODO: Complete FAQ */}
-        {/* <section>
-          <Anchor to="#faq" id="faq">
-            <SectionTitle level={2} className="mb10">
-              <FormattedMessage defaultMessage="Frequently asked questions" />
-            </SectionTitle>
-          </Anchor>
-
-          <section>
-            <Heading level={3} className="mb10">
-              <FormattedMessage defaultMessage="How soon will I get my reward payments?" />
-            </Heading>
-            <Text className="mb10">
-              <FormattedMessage defaultMessage="TODO" />
-            </Text>
-            <TableContainer>
-              <table>
-                <thead>
-                  <tr>
-                    <th>
-                      <FormattedMessage defaultMessage="Number of withdrawals" />
-                    </th>
-                    <th>
-                      <FormattedMessage defaultMessage="Time to complete all (days)" />
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {withdrawalRateData.map(
-                    ({ numWithdrawals, timeToComplete }) => (
-                      <tr key={numWithdrawals}>
-                        <td>{formatNumber(numWithdrawals)}</td>
-                        <td>{formatNumber(timeToComplete)}</td>
-                      </tr>
-                    )
-                  )}
-                </tbody>
-              </table>
-            </TableContainer>
-          </section>
-        </section> */}
 
         <section>
           <Anchor to="#further-reading" id="further-reading">

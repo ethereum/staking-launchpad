@@ -42,6 +42,7 @@ const supportedNetworks = [
   NetworkChainId.Ropsten,
   NetworkChainId.Goerli,
   NetworkChainId.Sepolia,
+  NetworkChainId.Zhejiang,
 ];
 
 // FIXME: disabled Portis for now

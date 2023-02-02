@@ -102,7 +102,7 @@ export const Withdrawals = () => {
               required."
               values={{
                 eip: (
-                  <Link to="https://eips.ethereum.org/EIPS/eip-4895">
+                  <Link inline to="https://eips.ethereum.org/EIPS/eip-4895">
                     <FormattedMessage defaultMessage="EIP-4895" />
                   </Link>
                 ),
@@ -248,7 +248,7 @@ export const Withdrawals = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="A {fullWithdrawal} is processed for any inactivated accounts that are no longer considered to be staking. that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities. "
+                defaultMessage="A {fullWithdrawal} is processed for any inactivated accounts that are no longer considered to be staking, that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities. "
                 values={{ fullWithdrawal: <strong>full withdrawal</strong> }}
               />
             </Text>
@@ -433,7 +433,7 @@ export const Withdrawals = () => {
                 defaultMessage="Instead of a new transaction type being used for stakers to manually request
                 withdrawals, accounts are automatically checked for eligible payouts every few days. All validators
                 are checked on an endless loop, and any available rewards or exited funds are automatically “pushed”
-                into a provided withdrawal accounts."
+                into a provided withdrawal account."
               />
             </Text>
           </section>
@@ -550,7 +550,7 @@ export const Withdrawals = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="The status of the validator at time of evaluation is what will determine if, and what type of withdrawal will be initiated.
+                defaultMessage="The status of the validator at time of evaluation is what will determine what type of withdrawal will be initiated.
                 A decision tree is followed, and if the validator being checked has ETH that is
                 eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
               />

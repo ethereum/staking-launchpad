@@ -22,24 +22,6 @@ const FlexRow = styled.div`
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  button {
-    border-radius: 4px;
-    color: white;
-    background: ${p => p.theme.blue.medium};
-    text-transform: none;
-    :hover {
-      background: ${p => p.theme.blue.light};
-      color: black;
-    }
-    :active {
-      background: ${p => p.theme.blue.lightest};
-      color: black;
-    }
-    :disabled {
-      background: ${p => p.theme.gray.medium};
-      color: black;
-    }
-  }
 `;
 
 const Input = styled.input`

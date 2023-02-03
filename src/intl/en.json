@@ -130,6 +130,9 @@
   "0oNdmk": {
     "message": "Validators FAQ"
   },
+  "0sMzHb": {
+    "message": "As noted above, this step is completed by signing a message known as {message}. These are accepted into blocks as of the first slot after the Shanghai/Capella upgrade."
+  },
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
@@ -194,6 +197,9 @@
   "25suT4": {
     "description": "The {semicolon} and {colon} variables refer to the keyboard characters ';' and ':'.",
     "message": "The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+  },
+  "2A6Wjz": {
+    "message": "By providing this flag, your withdrawal credentials will contain the {type1} prefix and your withdrawal address, signaling that your account is ready for withdrawals."
   },
   "2AHkym": {
     "message": "There was an error loading your validator information from Beaconcha.in"
@@ -337,6 +343,9 @@
   "5HJLBU": {
     "message": "Teku installation documentation"
   },
+  "5PHRzL": {
+    "message": "Validator index {validatorIndex} is ready to start receiving rewards to their execution layer address at {address}"
+  },
   "5UH1sh": {
     "message": "Romanian"
   },
@@ -386,9 +395,6 @@
   "793QlI": {
     "message": "{title} is not supported in offline mode."
   },
-  "7COHso": {
-    "message": "Make sure you’ve updated your withdrawal credentials and have a withdrawal address registered to this account"
-  },
   "7DFXQj": {
     "message": "Switch to {oppositeNetwork} launchpad"
   },
@@ -426,6 +432,9 @@
   },
   "7tRtDE": {
     "message": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
+  },
+  "8/nhr4": {
+    "message": "For your validator to be capable of withdrawals of any kind, a withdrawal address must be provided and registered to your account on the Beacon Chain. This should be an address you control, and cannot be changed once set."
   },
   "80eWKU": {
     "message": "True balance"
@@ -496,9 +505,6 @@
   },
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
-  },
-  "9eCnJb": {
-    "message": "By providing this flag, your withdrawal credentials will contain the {type0} prefix and your withdrawal address, signaling that your account is ready for withdrawals."
   },
   "9k7tO9": {
     "message": "Wrong network"
@@ -797,6 +803,9 @@
   "FmGmFH": {
     "message": "Your wallet should be set to {executionLayerName} to use this launchpad."
   },
+  "FqgCK/": {
+    "message": "A {rewardPayment} is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
+  },
   "FqgDIV": {
     "message": "Terms of service"
   },
@@ -905,6 +914,9 @@
   },
   "IVyWYt": {
     "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
+  },
+  "IYvwsI": {
+    "message": "Tools available for generating key change message"
   },
   "IZFEUg": {
     "message": "Ready"
@@ -1125,9 +1137,6 @@
   "NEmnAV": {
     "message": "Italian"
   },
-  "NLfK07": {
-    "message": "This {network} validator needs to be upgraded."
-  },
   "NLgogh": {
     "message": "Launchpad network:"
   },
@@ -1166,9 +1175,6 @@
   },
   "Nb5DNK": {
     "message": "Become a validator with Teku"
-  },
-  "NeW5tq": {
-    "message": "The Shanghai/Capella upgrade enabled Beacon Chain staking withdrawals, with the inclusion of {eip}. This Ethereum improvement proposal provides a mechanism of continuously distributing rewards to stakers, and also providing a way for exited validators to unlock their entire balance—no gas required."
   },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
@@ -1315,9 +1321,6 @@
   },
   "RE2MaJ": {
     "message": "Consensus clients"
-  },
-  "RJXGuc": {
-    "message": "As noted above, this step is completed by signing a message known as {message}. These will start being accepted into blocks as of the first slot after the Shanghai/Capella upgrade."
   },
   "ROHpFF": {
     "message": "1. Learn about your responsibilities"
@@ -1574,6 +1577,9 @@
   "YFT4rG": {
     "message": "Keys"
   },
+  "YJI2xv": {
+    "message": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+  },
   "YP03/j": {
     "message": "Afterwards, validators are still encouraged to join (the more validators the more decentralized the network), but it’s not absolutely essential that they do so (so the interest rate can fall)."
   },
@@ -1595,6 +1601,9 @@
   },
   "Yep32z": {
     "message": "{EL_TESTNET_NAME} testnet"
+  },
+  "Yg8vug": {
+    "message": "Make sure you’ve updated your withdrawal credentials with an execution withdrawal address"
   },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
@@ -1636,6 +1645,9 @@
   },
   "ZdT9Bs": {
     "message": "Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days."
+  },
+  "ZjETLm": {
+    "message": "This {network} validator needs to be configured for withdrawals."
   },
   "ZsXdlw": {
     "message": "Erigon installation documentation"
@@ -1720,9 +1732,6 @@
   },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
-  },
-  "bs0vEf": {
-    "message": "Validator index {validatorIndex} is ready to start receiving rewards! Withdrawal credentials linked to execution address {address}"
   },
   "bxU6sX": {
     "message": "Python installation instructions"
@@ -1917,11 +1926,17 @@
   "g37XKP": {
     "message": "More on virtualenv"
   },
+  "gHJegi": {
+    "message": "Validators still need to complete their validation duties until they are exited"
+  },
   "gIauNz": {
     "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password. You can use your mnemonic to generate your withdrawal key when you wish to withdraw."
   },
   "gN9D/h": {
     "message": "Use {goerli} to sync the Goerli testnet."
+  },
+  "gQjDVA": {
+    "message": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain withdrawals, with the inclusion of {eip}. This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
   },
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
@@ -1990,9 +2005,6 @@
   },
   "hfXlpq": {
     "message": "Hungarian"
-  },
-  "hfqH6K": {
-    "message": "A {fullWithdrawal} is processed for any inactivated accounts that are no longer considered to be staking, that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities."
   },
   "hjrLbR": {
     "message": "For this, we need active participants - known as validators - to propose, verify, and vouch for the validity of blocks. In exchange, honest validators receive financial rewards."
@@ -2064,9 +2076,6 @@
   },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
-  },
-  "jQTnOh": {
-    "message": "The status of the validator at time of evaluation is what will determine what type of withdrawal will be initiated. A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
   },
   "jXer8/": {
     "message": "Prysm documentation"
@@ -2381,9 +2390,6 @@
   "pA+UVF": {
     "message": "If you'd like to see the launchpad in another language, or if you can help translate, {getInTouch}!"
   },
-  "pGbQgE": {
-    "message": "A {rewardPayment} is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator account cannot utilize more than 32 ETH to contribute towards its stake, and thus these accounts will have any extra balance skimmed off in the form of a withdrawal operation."
-  },
   "pGnk/z": {
     "message": "Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH."
   },
@@ -2462,6 +2468,9 @@
   },
   "qx+3RQ": {
     "message": "JWT"
+  },
+  "r/G+qN": {
+    "message": "A {fullWithdrawal} is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
   },
   "r2BH1M": {
     "message": "Configure Prysm"
@@ -2559,9 +2568,6 @@
   },
   "tkFTZw": {
     "message": "Balance after topping up"
-  },
-  "tnp55K": {
-    "message": "Tools available"
   },
   "tsfX5f": {
     "message": "Confirm deposit"
@@ -2746,9 +2752,6 @@
   },
   "xogY3N": {
     "message": "Besu is written in Java and released under the Apache 2.0 Licence."
-  },
-  "xpOTZB": {
-    "message": "For your validator account to be capable of withdrawals of any kind, a withdrawal address must be provided and registered to your account on the Beacon Chain. This should be an address you control, and cannot be changed once set."
   },
   "xxbUJa": {
     "message": "Execution Clients: {clientName}"

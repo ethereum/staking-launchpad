@@ -349,6 +349,20 @@
       "value": "Validators FAQ"
     }
   ],
+  "0sMzHb": [
+    {
+      "type": 0,
+      "value": "As noted above, this step is completed by signing a message known as "
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": ". These are accepted into blocks as of the first slot after the Shanghai/Capella upgrade."
+    }
+  ],
   "0uqjBl": [
     {
       "type": 0,
@@ -501,6 +515,20 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "2A6Wjz": [
+    {
+      "type": 0,
+      "value": "By providing this flag, your withdrawal credentials will contain the "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " prefix and your withdrawal address, signaling that your account is ready for withdrawals."
     }
   ],
   "2AHkym": [
@@ -893,6 +921,24 @@
       "value": "Teku installation documentation"
     }
   ],
+  "5PHRzL": [
+    {
+      "type": 0,
+      "value": "Validator index "
+    },
+    {
+      "type": 1,
+      "value": "validatorIndex"
+    },
+    {
+      "type": 0,
+      "value": " is ready to start receiving rewards to their execution layer address at "
+    },
+    {
+      "type": 1,
+      "value": "address"
+    }
+  ],
   "5UH1sh": [
     {
       "type": 0,
@@ -1033,12 +1079,6 @@
       "value": " is not supported in offline mode."
     }
   ],
-  "7COHso": [
-    {
-      "type": 0,
-      "value": "Make sure you’ve updated your withdrawal credentials and have a withdrawal address registered to this account"
-    }
-  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1149,6 +1189,12 @@
     {
       "type": 0,
       "value": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
+    }
+  ],
+  "8/nhr4": [
+    {
+      "type": 0,
+      "value": "For your validator to be capable of withdrawals of any kind, a withdrawal address must be provided and registered to your account on the Beacon Chain. This should be an address you control, and cannot be changed once set."
     }
   ],
   "80eWKU": [
@@ -1307,20 +1353,6 @@
     {
       "type": 0,
       "value": "How are validators incentivized to stay active and honest?"
-    }
-  ],
-  "9eCnJb": [
-    {
-      "type": 0,
-      "value": "By providing this flag, your withdrawal credentials will contain the "
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": " prefix and your withdrawal address, signaling that your account is ready for withdrawals."
     }
   ],
   "9k7tO9": [
@@ -2099,6 +2131,20 @@
       "value": " to use this launchpad."
     }
   ],
+  "FqgCK/": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "rewardPayment"
+    },
+    {
+      "type": 0,
+      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
+    }
+  ],
   "FqgDIV": [
     {
       "type": 0,
@@ -2333,6 +2379,12 @@
     {
       "type": 0,
       "value": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
+    }
+  ],
+  "IYvwsI": [
+    {
+      "type": 0,
+      "value": "Tools available for generating key change message"
     }
   ],
   "IZFEUg": [
@@ -2867,20 +2919,6 @@
       "value": "Italian"
     }
   ],
-  "NLfK07": [
-    {
-      "type": 0,
-      "value": "This "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " validator needs to be upgraded."
-    }
-  ],
   "NLgogh": [
     {
       "type": 0,
@@ -2993,20 +3031,6 @@
     {
       "type": 0,
       "value": "Become a validator with Teku"
-    }
-  ],
-  "NeW5tq": [
-    {
-      "type": 0,
-      "value": "The Shanghai/Capella upgrade enabled Beacon Chain staking withdrawals, with the inclusion of "
-    },
-    {
-      "type": 1,
-      "value": "eip"
-    },
-    {
-      "type": 0,
-      "value": ". This Ethereum improvement proposal provides a mechanism of continuously distributing rewards to stakers, and also providing a way for exited validators to unlock their entire balance—no gas required."
     }
   ],
   "NwzcYT": [
@@ -3435,20 +3459,6 @@
     {
       "type": 0,
       "value": "Consensus clients"
-    }
-  ],
-  "RJXGuc": [
-    {
-      "type": 0,
-      "value": "As noted above, this step is completed by signing a message known as "
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": ". These will start being accepted into blocks as of the first slot after the Shanghai/Capella upgrade."
     }
   ],
   "ROHpFF": [
@@ -4089,6 +4099,12 @@
       "value": "Keys"
     }
   ],
+  "YJI2xv": [
+    {
+      "type": 0,
+      "value": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+    }
+  ],
   "YP03/j": [
     {
       "type": 0,
@@ -4153,6 +4169,12 @@
     {
       "type": 0,
       "value": " testnet"
+    }
+  ],
+  "Yg8vug": [
+    {
+      "type": 0,
+      "value": "Make sure you’ve updated your withdrawal credentials with an execution withdrawal address"
     }
   ],
   "Yganfl": [
@@ -4263,6 +4285,20 @@
     {
       "type": 0,
       "value": " a block proposal every 50 days."
+    }
+  ],
+  "ZjETLm": [
+    {
+      "type": 0,
+      "value": "This "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " validator needs to be configured for withdrawals."
     }
   ],
   "ZsXdlw": [
@@ -4455,24 +4491,6 @@
     {
       "type": 0,
       "value": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
-    }
-  ],
-  "bs0vEf": [
-    {
-      "type": 0,
-      "value": "Validator index "
-    },
-    {
-      "type": 1,
-      "value": "validatorIndex"
-    },
-    {
-      "type": 0,
-      "value": " is ready to start receiving rewards! Withdrawal credentials linked to execution address "
-    },
-    {
-      "type": 1,
-      "value": "address"
     }
   ],
   "bxU6sX": [
@@ -4923,6 +4941,12 @@
       "value": "More on virtualenv"
     }
   ],
+  "gHJegi": [
+    {
+      "type": 0,
+      "value": "Validators still need to complete their validation duties until they are exited"
+    }
+  ],
   "gIauNz": [
     {
       "type": 0,
@@ -4941,6 +4965,20 @@
     {
       "type": 0,
       "value": " to sync the Goerli testnet."
+    }
+  ],
+  "gQjDVA": [
+    {
+      "type": 0,
+      "value": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain withdrawals, with the inclusion of "
+    },
+    {
+      "type": 1,
+      "value": "eip"
+    },
+    {
+      "type": 0,
+      "value": ". This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
     }
   ],
   "gQkd2y": [
@@ -5117,20 +5155,6 @@
     {
       "type": 0,
       "value": "Hungarian"
-    }
-  ],
-  "hfqH6K": [
-    {
-      "type": 0,
-      "value": "A "
-    },
-    {
-      "type": 1,
-      "value": "fullWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " is processed for any inactivated accounts that are no longer considered to be staking, that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities."
     }
   ],
   "hjrLbR": [
@@ -5313,12 +5337,6 @@
     {
       "type": 0,
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
-    }
-  ],
-  "jQTnOh": [
-    {
-      "type": 0,
-      "value": "The status of the validator at time of evaluation is what will determine what type of withdrawal will be initiated. A decision tree is followed, and if the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
     }
   ],
   "jXer8/": [
@@ -6125,20 +6143,6 @@
       "value": "!"
     }
   ],
-  "pGbQgE": [
-    {
-      "type": 0,
-      "value": "A "
-    },
-    {
-      "type": 1,
-      "value": "rewardPayment"
-    },
-    {
-      "type": 0,
-      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator account cannot utilize more than 32 ETH to contribute towards its stake, and thus these accounts will have any extra balance skimmed off in the form of a withdrawal operation."
-    }
-  ],
   "pGnk/z": [
     {
       "type": 0,
@@ -6305,6 +6309,20 @@
     {
       "type": 0,
       "value": "JWT"
+    }
+  ],
+  "r/G+qN": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
     }
   ],
   "r2BH1M": [
@@ -6553,12 +6571,6 @@
     {
       "type": 0,
       "value": "Balance after topping up"
-    }
-  ],
-  "tnp55K": [
-    {
-      "type": 0,
-      "value": "Tools available"
     }
   ],
   "tsfX5f": [
@@ -7061,12 +7073,6 @@
     {
       "type": 0,
       "value": "Besu is written in Java and released under the Apache 2.0 Licence."
-    }
-  ],
-  "xpOTZB": [
-    {
-      "type": 0,
-      "value": "For your validator account to be capable of withdrawals of any kind, a withdrawal address must be provided and registered to your account on the Beacon Chain. This should be an address you control, and cannot be changed once set."
     }
   ],
   "xxbUJa": [

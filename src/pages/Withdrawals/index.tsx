@@ -268,9 +268,7 @@ export const Withdrawals = () => {
               </Heading>
               <ol>
                 <li>
-                  <FormattedMessage
-                    defaultMessage="Make sure you’ve updated your withdrawal credentials with an execution withdrawal address"
-                  />
+                  <FormattedMessage defaultMessage="Make sure you’ve updated your withdrawal credentials with an execution withdrawal address" />
                 </li>
                 <li>
                   <FormattedMessage
@@ -398,6 +396,12 @@ export const Withdrawals = () => {
                 instantaneous, and depends on how many other accounts are exiting at the same time."
               />
             </Text>
+            <Alert variant="warning" className="mt30">
+              <span role="img" aria-label="note">
+                📝
+              </span>{' '}
+              <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
+            </Alert>
           </section>
         </section>
 

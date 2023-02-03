@@ -579,10 +579,10 @@ export const Withdrawals = () => {
                 <FormattedMessage defaultMessage="Has a withdrawal address been provided?" />
                 <ul>
                   <li>
-                    <FormattedMessage defaultMessage="If not, stop. No withdrawal will be processed and account skipped" />
+                    <FormattedMessage defaultMessage="If so, move to next question" />
                   </li>
                   <li>
-                    <FormattedMessage defaultMessage="If so, move to next question" />
+                    <FormattedMessage defaultMessage="If not, stop. No withdrawal will be processed and account skipped" />
                   </li>
                 </ul>
               </li>
@@ -610,9 +610,6 @@ export const Withdrawals = () => {
                 <FormattedMessage defaultMessage="Is the effective balance maxed out at 32?" />
                 <ul>
                   <li>
-                    <FormattedMessage defaultMessage="If not, no withdrawal will be processed and account skipped" />
-                  </li>
-                  <li>
                     <FormattedMessage
                       defaultMessage="If so, {excessBalanceWithdrawal} processed"
                       values={{
@@ -623,6 +620,9 @@ export const Withdrawals = () => {
                         ),
                       }}
                     />
+                  </li>
+                  <li>
+                    <FormattedMessage defaultMessage="If not, no withdrawal will be processed and account skipped" />
                   </li>
                 </ul>
               </li>

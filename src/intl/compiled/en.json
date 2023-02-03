@@ -3543,12 +3543,6 @@
       "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
     }
   ],
-  "Xf71C8": [
-    {
-      "type": 0,
-      "value": "Withdrawals will automatically go to the withdrawal address provided after the Shanghai upgrade is completed. If you do not provide a withdrawal address (not recommended), you can use your mnemonic to generate your withdrawal key to sign a message when you wish to provide a permanent withdrawal address (after Capella consensus update)."
-    }
-  ],
   "XmddSV": [
     {
       "type": 0,
@@ -5683,20 +5677,6 @@
     {
       "type": 0,
       "value": "Teku can also be configured via a YAML file which is passed in via a few different ways."
-    }
-  ],
-  "sHXPzG": [
-    {
-      "type": 0,
-      "value": "Make sure you set a withdrawal address using "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": ", which is required for withdrawals. Failure to provide this will result in the need to sign another message to indicate your chosen withdrawal address, until which funds will remain locked."
     }
   ],
   "sMHQRT": [

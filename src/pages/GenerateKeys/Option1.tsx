@@ -141,14 +141,15 @@ export const Option1 = ({
                   })
                 : 'chain'
             } ${NETWORK_NAME.toLowerCase()}`}{' '}
-            {`--${
-              TRANSLATE_CLI_FLAGS
-                ? formatMessage({
-                    defaultMessage: 'eth1_withdrawal_address',
-                    description: 'this is used as a command line flag',
-                  })
-                : 'eth1_withdrawal_address'
-            } ${withdrawalAddress}`}
+            {withdrawalAddress.length &&
+              `--${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'eth1_withdrawal_address',
+                      description: 'this is used as a command line flag',
+                    })
+                  : 'eth1_withdrawal_address'
+              } ${withdrawalAddress}`}
           </Pre>
         </Alert>
         <Alert variant="error" className="my20">
@@ -169,28 +170,6 @@ export const Option1 = ({
                   </Code>
                 ),
                 consensusLayerName,
-              }}
-              description="{flag} is a terminal command styled as code."
-            />
-          </Text>
-        </Alert>
-        <Alert variant="warning" className="my20">
-          <Text>
-            <FormattedMessage
-              defaultMessage="Make sure you set a withdrawal address using {flag}, which is required for withdrawals. Failure to provide this will result in the need to sign another message to indicate your chosen withdrawal address, until which funds will remain locked."
-              values={{
-                flag: (
-                  <Code>
-                    {`--${
-                      TRANSLATE_CLI_FLAGS
-                        ? formatMessage({
-                            defaultMessage: 'eth1_withdrawal_address',
-                            description: 'this is used as a command line flag',
-                          })
-                        : 'eth1_withdrawal_address'
-                    }`}
-                  </Code>
-                ),
               }}
               description="{flag} is a terminal command styled as code."
             />

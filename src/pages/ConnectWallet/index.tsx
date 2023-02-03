@@ -451,10 +451,8 @@ const _ConnectWalletPage = ({
                     ) : (
                       <span>
                         A withdrawal address has not been set for these
-                        validators. It is recommended to do this while
-                        generating your deposit data, otherwise you will have
-                        additional steps to enable withdrawals once the Shanghai
-                        upgrade is live.
+                        validators. Staked funds and rewards will remain locked
+                        until withdrawal credentials are provided.
                       </span>
                     )}
                   </Alert>

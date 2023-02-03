@@ -1380,9 +1380,6 @@
     "description": "{http} shows '--http' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
   },
-  "Xf71C8": {
-    "message": "Withdrawals will automatically go to the withdrawal address provided after the Shanghai upgrade is completed. If you do not provide a withdrawal address (not recommended), you can use your mnemonic to generate your withdrawal key to sign a message when you wish to provide a permanent withdrawal address (after Capella consensus update)."
-  },
   "XmddSV": {
     "message": "Build from source"
   },
@@ -2221,10 +2218,6 @@
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
-  },
-  "sHXPzG": {
-    "description": "{flag} is a terminal command styled as code.",
-    "message": "Make sure you set a withdrawal address using {flag}, which is required for withdrawals. Failure to provide this will result in the need to sign another message to indicate your chosen withdrawal address, until which funds will remain locked."
   },
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."

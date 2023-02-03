@@ -190,9 +190,11 @@ const _GenerateKeysPage = ({
           Withdrawal address
         </Heading>
         <Text className="mb20">
-          Choose an Ethereum withdrawal address. This address must be to a
-          regular Ethereum address and will be the only address funds can be
-          sent to from your new validator accounts.
+          You may choose to provide a withdrawal address with your initial
+          deposit to automatically enable reward payments and also the ability
+          to fully exit your funds anytime after the Shanghai/Capella upgrade.
+          This address should be to a regular Ethereum address and will be the
+          only address funds can be sent to from your new validator accounts.
         </Text>
         <Text className="mb20">
           Paste your chosen address here to include it in the copy/paste CLI
@@ -208,8 +210,19 @@ const _GenerateKeysPage = ({
           <AddressIndicator>{addressIndicatorEmoji}</AddressIndicator>
         </AddressInputContainer>
         <Alert variant="error">
-          Make sure you have control over the address provided as this cannot be
-          changed.
+          {isValidWithdrawalAddress ? (
+            <span>
+              Make sure you have control over this address as this cannot be
+              changed.
+            </span>
+          ) : (
+            <span>
+              If this is not provided now, your deposited funds will remain
+              locked on the Beacon Chain until an address is provided. Unlocking
+              will require signing a message with your withdrawal keys,
+              generated from your mnemonic seed phrase (so keep it safe).
+            </span>
+          )}
         </Alert>
       </Paper>
       <Paper className="mt20">
@@ -228,11 +241,7 @@ const _GenerateKeysPage = ({
 
       <Instructions
         validatorCount={validatorCount}
-        withdrawalAddress={
-          isValidWithdrawalAddress
-            ? withdrawalAddress
-            : '<ethereum-withdrawal-address>'
-        }
+        withdrawalAddress={isValidWithdrawalAddress ? withdrawalAddress : ''}
         os={osMapping[chosenOs]}
         chosenTool={chosenTool}
         setChosenTool={setChosenTool}
@@ -272,9 +281,6 @@ const _GenerateKeysPage = ({
             defaultMessage="You should see that you have one keystore per validator. This keystore
             contains your signing key, encrypted with your password."
           />
-        </Alert>
-        <Alert variant="info" className="mb40">
-          <FormattedMessage defaultMessage="Withdrawals will automatically go to the withdrawal address provided after the Shanghai upgrade is completed. If you do not provide a withdrawal address (not recommended), you can use your mnemonic to generate your withdrawal key to sign a message when you wish to provide a permanent withdrawal address (after Capella consensus update)." />
         </Alert>
         <InstructionImgContainer>
           <img src={instructions1} alt="" />

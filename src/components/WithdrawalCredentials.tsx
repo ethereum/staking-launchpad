@@ -112,7 +112,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
         <Alert variant="success">
           <FormattedMessage
             defaultMessage="Validator index {validatorIndex} is ready to start
-            receiving rewards! Withdrawal credentials linked to execution address {address}"
+            receiving rewards to their execution layer address at {address}"
             values={{
               validatorIndex: (
                 <strong>
@@ -129,7 +129,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     return (
       <Alert variant="error">
         <FormattedMessage
-          defaultMessage="This {network} validator needs to be upgraded."
+          defaultMessage="This {network} validator needs to be configured for withdrawals."
           values={{
             network: IS_MAINNET ? (
               ''

@@ -154,9 +154,9 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
             </li>
             <Text>
               <FormattedMessage
-                defaultMessage="By providing this flag, your withdrawal credentials will contain the {type0} prefix and
+                defaultMessage="By providing this flag, your withdrawal credentials will contain the {type1} prefix and
                 your withdrawal address, signaling that your account is ready for withdrawals."
-                values={{ type0: <Code>0x00</Code> }}
+                values={{ type1: <Code>0x01</Code> }}
               />
             </Text>
           </ul>

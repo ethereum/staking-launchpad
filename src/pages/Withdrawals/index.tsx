@@ -23,6 +23,11 @@ const ComponentStyles = styled.div`
   a {
     text-decoration: none;
   }
+  p,
+  ol,
+  ul {
+    color: ${(p: any) => p.theme.blue.dark};
+  }
   ul {
     margin-bottom: 10px;
   }
@@ -102,7 +107,11 @@ export const Withdrawals = () => {
               required."
               values={{
                 eip: (
-                  <Link inline to="https://eips.ethereum.org/EIPS/eip-4895">
+                  <Link
+                    primary
+                    inline
+                    to="https://eips.ethereum.org/EIPS/eip-4895"
+                  >
                     <FormattedMessage defaultMessage="EIP-4895" />
                   </Link>
                 ),

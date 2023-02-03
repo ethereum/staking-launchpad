@@ -100,8 +100,8 @@ export const Withdrawals = () => {
         <section>
           <Text>
             <FormattedMessage
-              defaultMessage="As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain
-              withdrawals, with the inclusion of {eip}. This Ethereum Improvement Proposal
+              defaultMessage="As of the Shanghai/Capella upgrade withdrawals have been enabled on
+              the Beacon Chain, with the inclusion of {eip}. This Ethereum Improvement Proposal
               enables rewards to be automatically withdrawn to the execution layer, and also
               provides a way for exited validators to unlock their entire balance—no gas
               required."
@@ -224,18 +224,25 @@ export const Withdrawals = () => {
           </section>
 
           <section>
-            <Anchor to="#reward-payments" id="reward-payments">
+            <Anchor
+              to="#excess-balance-withdrawals"
+              id="excess-balance-withdrawals"
+            >
               <SubSectionTitle level={3} className="mb10">
-                <FormattedMessage defaultMessage="Reward payments (partial withdrawals)" />
+                <FormattedMessage defaultMessage="Excess balance withdrawals (partial withdrawals)" />
               </SubSectionTitle>
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="A {rewardPayment} is processed when an active validator has a maxed out
+                defaultMessage="An {excessBalanceWithdrawal} is processed when an active validator has a maxed out
                 effective balance of 32, and has a total balance over 32. A single validator cannot
                 get rewards on excess balance over 32 ETH, and thus these accounts will have
                 any extra balance automatically withdrawn to their Ethereum address."
-                values={{ rewardPayment: <strong>reward payment</strong> }}
+                values={{
+                  excessBalanceWithdrawal: (
+                    <strong>excess balance withdrawal</strong>
+                  ),
+                }}
               />
             </Text>
             <Text className="mb10">
@@ -280,7 +287,7 @@ export const Withdrawals = () => {
               <Text className="mb10">
                 <FormattedMessage
                   defaultMessage="By completing step one, you’ll enable withdrawals from your validator account.
-                  This will automatically trigger reward payments (partial withdrawals) to be processed, but this
+                  This will automatically trigger excess balance payments (partial withdrawals) to be processed, but this
                   does not automatically unlock the rest of your funds, or trigger an exit from the network."
                 />
               </Text>
@@ -580,11 +587,11 @@ export const Withdrawals = () => {
                 </ul>
               </li>
               <li>
-                <FormattedMessage defaultMessage="Is the validator still active?" />
+                <FormattedMessage defaultMessage="Has the validator completed the exiting process?" />
                 <ul>
                   <li>
                     <FormattedMessage
-                      defaultMessage="If not, stop. {fullWithdrawal} processed for any remaining balance"
+                      defaultMessage="If so, stop. {fullWithdrawal} processed for any remaining balance"
                       values={{
                         fullWithdrawal: (
                           <strong>
@@ -595,7 +602,7 @@ export const Withdrawals = () => {
                     />
                   </li>
                   <li>
-                    <FormattedMessage defaultMessage="If so, move to next question" />
+                    <FormattedMessage defaultMessage="If not, move to next question" />
                   </li>
                 </ul>
               </li>
@@ -607,11 +614,11 @@ export const Withdrawals = () => {
                   </li>
                   <li>
                     <FormattedMessage
-                      defaultMessage="If so, {rewardPayment} processed"
+                      defaultMessage="If so, {excessBalanceWithdrawal} processed"
                       values={{
-                        rewardPayment: (
+                        excessBalanceWithdrawal: (
                           <strong>
-                            <FormattedMessage defaultMessage="reward payment" />
+                            <FormattedMessage defaultMessage="excess balance withdrawal" />
                           </strong>
                         ),
                       }}

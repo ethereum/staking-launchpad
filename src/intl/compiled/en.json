@@ -589,6 +589,12 @@
       "value": "Fee recipient docs:"
     }
   ],
+  "2ebz/N": [
+    {
+      "type": 0,
+      "value": "excess balance withdrawal"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
@@ -1029,20 +1035,6 @@
     {
       "type": 0,
       "value": "You can improve the effective balance of this validator by topping up"
-    }
-  ],
-  "6i0uIt": [
-    {
-      "type": 0,
-      "value": "If so, "
-    },
-    {
-      "type": 1,
-      "value": "rewardPayment"
-    },
-    {
-      "type": 0,
-      "value": " processed"
     }
   ],
   "6nh4de": [
@@ -1575,6 +1567,20 @@
     {
       "type": 0,
       "value": "Top up validator"
+    }
+  ],
+  "B0BAqm": [
+    {
+      "type": 0,
+      "value": "An "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
     }
   ],
   "B2EKj+": [
@@ -2131,20 +2137,6 @@
       "value": " to use this launchpad."
     }
   ],
-  "FqgCK/": [
-    {
-      "type": 0,
-      "value": "A "
-    },
-    {
-      "type": 1,
-      "value": "rewardPayment"
-    },
-    {
-      "type": 0,
-      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
-    }
-  ],
   "FqgDIV": [
     {
       "type": 0,
@@ -2227,6 +2219,12 @@
     {
       "type": 0,
       "value": "Generate keys"
+    }
+  ],
+  "Ge62/G": [
+    {
+      "type": 0,
+      "value": "Excess balance withdrawals (partial withdrawals)"
     }
   ],
   "GelBd9": [
@@ -2801,12 +2799,6 @@
       "value": "Why do I need to run an execution client now?"
     }
   ],
-  "M1rSWt": [
-    {
-      "type": 0,
-      "value": "reward payment"
-    }
-  ],
   "M3GwXS": [
     {
       "type": 0,
@@ -2895,6 +2887,20 @@
     {
       "type": 0,
       "value": "Top-up details"
+    }
+  ],
+  "Mne5iM": [
+    {
+      "type": 0,
+      "value": "If so, stop. "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " processed for any remaining balance"
     }
   ],
   "N0rwnt": [
@@ -3169,12 +3175,6 @@
       "value": "."
     }
   ],
-  "P77hES": [
-    {
-      "type": 0,
-      "value": "Is the validator still active?"
-    }
-  ],
   "P8FrVE": [
     {
       "type": 0,
@@ -3379,12 +3379,6 @@
     {
       "type": 0,
       "value": " transaction to the deposit contract on the current Ethereum chain."
-    }
-  ],
-  "QhAWQO": [
-    {
-      "type": 0,
-      "value": "Reward payments (partial withdrawals)"
     }
   ],
   "QlsDcr": [
@@ -4161,6 +4155,12 @@
       "value": "Execution clients"
     }
   ],
+  "YeJh+/": [
+    {
+      "type": 0,
+      "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger excess balance payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
+    }
+  ],
   "Yep32z": [
     {
       "type": 1,
@@ -4491,6 +4491,12 @@
     {
       "type": 0,
       "value": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
+    }
+  ],
+  "bugMfW": [
+    {
+      "type": 0,
+      "value": "If not, move to next question"
     }
   ],
   "bxU6sX": [
@@ -4965,20 +4971,6 @@
     {
       "type": 0,
       "value": " to sync the Goerli testnet."
-    }
-  ],
-  "gQjDVA": [
-    {
-      "type": 0,
-      "value": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain withdrawals, with the inclusion of "
-    },
-    {
-      "type": 1,
-      "value": "eip"
-    },
-    {
-      "type": 0,
-      "value": ". This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
     }
   ],
   "gQkd2y": [
@@ -5469,6 +5461,20 @@
       "value": "Does the URL match what you’ve seen on other websites?"
     }
   ],
+  "kSt9db": [
+    {
+      "type": 0,
+      "value": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain, with the inclusion of "
+    },
+    {
+      "type": 1,
+      "value": "eip"
+    },
+    {
+      "type": 0,
+      "value": ". This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
+    }
+  ],
   "kTt/ND": [
     {
       "type": 0,
@@ -5597,6 +5603,20 @@
     {
       "type": 0,
       "value": "First, create a venv virtualenv under repository directory:"
+    }
+  ],
+  "l926sJ": [
+    {
+      "type": 0,
+      "value": "If so, "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " processed"
     }
   ],
   "lD66ab": [
@@ -6759,20 +6779,6 @@
       "value": "—are given for malicious actions."
     }
   ],
-  "vAI9qI": [
-    {
-      "type": 0,
-      "value": "If not, stop. "
-    },
-    {
-      "type": 1,
-      "value": "fullWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " processed for any remaining balance"
-    }
-  ],
   "vBJ79e": [
     {
       "type": 0,
@@ -6915,12 +6921,6 @@
       "value": "Testnet simulations"
     }
   ],
-  "x/vooX": [
-    {
-      "type": 0,
-      "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger reward payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
-    }
-  ],
   "x0tVK4": [
     {
       "type": 0,
@@ -6963,6 +6963,12 @@
     {
       "type": 1,
       "value": "ethereumorg"
+    }
+  ],
+  "xGQ38+": [
+    {
+      "type": 0,
+      "value": "Has the validator completed the exiting process?"
     }
   ],
   "xH5GKj": [

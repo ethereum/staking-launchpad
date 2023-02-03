@@ -228,6 +228,9 @@
   "2c8F5x": {
     "message": "Fee recipient docs:"
   },
+  "2ebz/N": {
+    "message": "excess balance withdrawal"
+  },
   "2iH8Zc": {
     "message": "Nimbus key management documentation"
   },
@@ -376,9 +379,6 @@
   },
   "6VIBSR": {
     "message": "You can improve the effective balance of this validator by topping up"
-  },
-  "6i0uIt": {
-    "message": "If so, {rewardPayment} processed"
   },
   "6nh4de": {
     "message": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
@@ -588,6 +588,9 @@
   },
   "Aw1mMs": {
     "message": "Top up validator"
+  },
+  "B0BAqm": {
+    "message": "An {excessBalanceWithdrawal} is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
   },
   "B2EKj+": {
     "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is one-way, and non-reversible."
@@ -803,9 +806,6 @@
   "FmGmFH": {
     "message": "Your wallet should be set to {executionLayerName} to use this launchpad."
   },
-  "FqgCK/": {
-    "message": "A {rewardPayment} is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
-  },
   "FqgDIV": {
     "message": "Terms of service"
   },
@@ -847,6 +847,9 @@
   },
   "Gbo300": {
     "message": "Generate keys"
+  },
+  "Ge62/G": {
+    "message": "Excess balance withdrawals (partial withdrawals)"
   },
   "GelBd9": {
     "message": "Make the file you just downloaded executable."
@@ -1080,9 +1083,6 @@
   "LwEHRm": {
     "message": "Why do I need to run an execution client now?"
   },
-  "M1rSWt": {
-    "message": "reward payment"
-  },
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
   },
@@ -1127,6 +1127,9 @@
   },
   "MmZjeu": {
     "message": "Top-up details"
+  },
+  "Mne5iM": {
+    "message": "If so, stop. {fullWithdrawal} processed for any remaining balance"
   },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
@@ -1225,9 +1228,6 @@
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
     "message": "If you have questions, EthStaker community is a good place to get help! You can find support on {discord} or {reddit}."
   },
-  "P77hES": {
-    "message": "Is the validator still active?"
-  },
   "P8FrVE": {
     "message": "JWT Authentication"
   },
@@ -1291,9 +1291,6 @@
   },
   "QgOvR0": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
-  },
-  "QhAWQO": {
-    "message": "Reward payments (partial withdrawals)"
   },
   "QlsDcr": {
     "message": "Action"
@@ -1599,6 +1596,9 @@
   "Yd6MEN": {
     "message": "Execution clients"
   },
+  "YeJh+/": {
+    "message": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger excess balance payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
+  },
   "Yep32z": {
     "message": "{EL_TESTNET_NAME} testnet"
   },
@@ -1732,6 +1732,9 @@
   },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
+  },
+  "bugMfW": {
+    "message": "If not, move to next question"
   },
   "bxU6sX": {
     "message": "Python installation instructions"
@@ -1935,9 +1938,6 @@
   "gN9D/h": {
     "message": "Use {goerli} to sync the Goerli testnet."
   },
-  "gQjDVA": {
-    "message": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain withdrawals, with the inclusion of {eip}. This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
-  },
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -2136,6 +2136,9 @@
   "kQTAe+": {
     "message": "Does the URL match what you’ve seen on other websites?"
   },
+  "kSt9db": {
+    "message": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip}. This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
+  },
   "kTt/ND": {
     "message": "Russian"
   },
@@ -2192,6 +2195,9 @@
   },
   "l6OJpv": {
     "message": "First, create a venv virtualenv under repository directory:"
+  },
+  "l926sJ": {
+    "message": "If so, {excessBalanceWithdrawal} processed"
   },
   "lD66ab": {
     "message": "Outstanding deposit"
@@ -2629,9 +2635,6 @@
     "description": "{slashings} shows 'slashings' in bold for emphasis",
     "message": "And major penalities—or {slashings}—are given for malicious actions."
   },
-  "vAI9qI": {
-    "message": "If not, stop. {fullWithdrawal} processed for any remaining balance"
-  },
   "vBJ79e": {
     "message": "I've simulated how to safely migrate from one execution client to another."
   },
@@ -2697,9 +2700,6 @@
   "x+fF+M": {
     "message": "Testnet simulations"
   },
-  "x/vooX": {
-    "message": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger reward payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
-  },
   "x0tVK4": {
     "message": "Validating in Ethereum is not the same as mining. The outcomes are similar: the work you do will extend and secure the chain. But the process is completely different because they use different consensus mechanisms."
   },
@@ -2712,6 +2712,9 @@
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",
     "message": "Cross check the deposit contract address against other websites – for example: Reddit, Twitter, and GitHub. There's also a list of trusted sources on {ethereumorg}"
+  },
+  "xGQ38+": {
+    "message": "Has the validator completed the exiting process?"
   },
   "xH5GKj": {
     "message": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."

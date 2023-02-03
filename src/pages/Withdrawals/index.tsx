@@ -100,10 +100,10 @@ export const Withdrawals = () => {
         <section>
           <Text>
             <FormattedMessage
-              defaultMessage="The Shanghai/Capella upgrade enabled Beacon Chain staking
-              withdrawals, with the inclusion of {eip}. This Ethereum improvement proposal
-              provides a mechanism of continuously distributing rewards to stakers, and also
-              providing a way for exited validators to unlock their entire balance—no gas
+              defaultMessage="As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain
+              withdrawals, with the inclusion of {eip}. This Ethereum Improvement Proposal
+              enables rewards to be automatically withdrawn to the execution layer, and also
+              provides a way for exited validators to unlock their entire balance—no gas
               required."
               values={{
                 eip: (
@@ -127,7 +127,7 @@ export const Withdrawals = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="For your validator account to be capable of withdrawals of any
+                defaultMessage="For your validator to be capable of withdrawals of any
                 kind, a withdrawal address must be provided and registered to your account on the
                 Beacon Chain. This should be an address you control, and cannot be changed once set."
               />
@@ -153,19 +153,9 @@ export const Withdrawals = () => {
 
             <section className="actionable">
               <Heading level={4} className="mb10">
-                <FormattedMessage defaultMessage="Tools available" />
+                <FormattedMessage defaultMessage="Tools available for generating key change message" />
               </Heading>
               <ul>
-                <li>
-                  <strong>ethdo</strong> -{' '}
-                  <Link
-                    inline
-                    primary
-                    to="https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md"
-                  >
-                    Changing withdrawal credentials
-                  </Link>
-                </li>
                 <li>
                   <strong>Staking Deposit CLI</strong> -{' '}
                   <Link
@@ -174,6 +164,16 @@ export const Withdrawals = () => {
                     to="https://notes.ethereum.org/@launchpad/btec"
                   >
                     Walkthrough tutorial
+                  </Link>
+                </li>
+                <li>
+                  <strong>ethdo</strong> -{' '}
+                  <Link
+                    inline
+                    primary
+                    to="https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md"
+                  >
+                    Changing withdrawal credentials
                   </Link>
                 </li>
               </ul>
@@ -194,7 +194,7 @@ export const Withdrawals = () => {
                 <Text className="mb10">
                   <FormattedMessage
                     defaultMessage="As noted above, this step is completed by signing a message known as {message}.
-                    These will start being accepted into blocks as of the first slot after the Shanghai/Capella
+                    These are accepted into blocks as of the first slot after the Shanghai/Capella
                     upgrade."
                     values={{ message: <Code>BLS_To_Execution_Change</Code> }}
                   />
@@ -232,9 +232,9 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="A {rewardPayment} is processed when an active validator has a maxed out
-                effective balance of 32, and has a total balance over 32. A single validator account cannot
-                utilize more than 32 ETH to contribute towards its stake, and thus these accounts will have
-                any extra balance skimmed off in the form of a withdrawal operation."
+                effective balance of 32, and has a total balance over 32. A single validator cannot
+                get rewards on excess balance over 32 ETH, and thus these accounts will have
+                any extra balance automatically withdrawn to their Ethereum address."
                 values={{ rewardPayment: <strong>reward payment</strong> }}
               />
             </Text>
@@ -257,7 +257,7 @@ export const Withdrawals = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="A {fullWithdrawal} is processed for any inactivated accounts that are no longer considered to be staking, that has fully exited from its validator responsibilities. For an account to be processed as a full withdrawal, it must first complete the process of exiting from its validator responsibilities. "
+                defaultMessage="A {fullWithdrawal} is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
                 values={{ fullWithdrawal: <strong>full withdrawal</strong> }}
               />
             </Text>
@@ -269,8 +269,7 @@ export const Withdrawals = () => {
               <ol>
                 <li>
                   <FormattedMessage
-                    defaultMessage="Make sure you’ve updated your withdrawal credentials and have a withdrawal
-                    address registered to this account"
+                    defaultMessage="Make sure you’ve updated your withdrawal credentials with an execution withdrawal address"
                   />
                 </li>
                 <li>
@@ -559,9 +558,9 @@ export const Withdrawals = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="The status of the validator at time of evaluation is what will determine what type of withdrawal will be initiated.
-                A decision tree is followed, and if the validator being checked has ETH that is
-                eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+                defaultMessage="A decision tree is followed to determine what type of withdrawal will be initiated.
+                If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal
+                queue. If there isn’t, the account is skipped."
               />
             </Text>
             <ol className="mb10">

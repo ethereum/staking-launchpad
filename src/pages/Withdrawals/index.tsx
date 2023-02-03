@@ -450,7 +450,7 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="Instead of a new transaction type being used for stakers to manually request
-                withdrawals, accounts are automatically checked for eligible payouts every few days. All validators
+                withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators
                 are checked on an endless loop, and any available rewards or exited funds are automatically “pushed”
                 into a provided withdrawal account."
               />

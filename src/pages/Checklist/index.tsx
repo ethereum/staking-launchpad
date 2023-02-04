@@ -14,7 +14,6 @@ import {
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
-  EL_TESTNET_NAME,
   TUTORIAL_URL,
   NETWORK_NAME,
 } from '../../utils/envVars';
@@ -905,13 +904,14 @@ export const Checklist = () => {
                     network: IS_MAINNET ? (
                       <FormattedMessage defaultMessage="Mainnet" />
                     ) : (
-                      EL_TESTNET_NAME
+                      TESTNET_LAUNCHPAD_NAME
                     ),
                   }}
                 />
               </Text>
             }
           />
+          {tutorialLinkBox()}
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Recommended" />
           </Heading>

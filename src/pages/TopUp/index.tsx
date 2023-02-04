@@ -23,7 +23,7 @@ import {
   EJECTION_PRICE,
   TICKER_NAME,
 } from '../../utils/envVars';
-import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
+import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
@@ -154,7 +154,7 @@ const _TopUpPage: React.FC<Props> = () => {
 
     const network = NetworkChainId[chainId as number];
 
-    const isValidNetwork = Object.values(AllowedNetworks).includes(network);
+    const isValidNetwork = Object.values(AllowedELNetworks).includes(network);
 
     if (active && account && isValidNetwork) {
       fetchValidatorsForUserAddress();

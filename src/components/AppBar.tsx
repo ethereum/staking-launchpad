@@ -9,7 +9,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
 import { web3ReactInterface } from '../pages/ConnectWallet';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   NetworkChainId,
 } from '../pages/ConnectWallet/web3Utils';
 import { Dot } from './Dot';
@@ -139,7 +139,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
 
   if (chainId) {
     network = NetworkChainId[chainId];
-    networkAllowed = Object.values(AllowedNetworks).includes(network);
+    networkAllowed = Object.values(AllowedELNetworks).includes(network);
   }
 
   const pathname: string = React.useMemo(() => location.pathname, [

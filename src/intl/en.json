@@ -1599,9 +1599,6 @@
   "YeJh+/": {
     "message": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger excess balance payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
   },
-  "Yep32z": {
-    "message": "{EL_TESTNET_NAME} testnet"
-  },
   "Yg8vug": {
     "message": "Make sure you’ve updated your withdrawal credentials with an execution withdrawal address"
   },
@@ -2277,9 +2274,6 @@
   "mr1BWl": {
     "message": "Risks and acknowledgements:"
   },
-  "mtxHYN": {
-    "message": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible payouts every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
-  },
   "muV9Fg": {
     "message": "New validators (not yet deposited)"
   },
@@ -2526,6 +2520,9 @@
   },
   "sXV95+": {
     "message": "CPU and RAM"
+  },
+  "sZK38z": {
+    "message": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
   },
   "sj/Zef": {
     "message": "Download Key Gen GUI app"

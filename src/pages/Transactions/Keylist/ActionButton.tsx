@@ -11,7 +11,8 @@ import {
 import {
   BEACONCHAIN_URL,
   BEACONSCAN_URL,
-  ETHERSCAN_URL,
+  EL_TRANSACTION_URL,
+  IS_NON_INFURA_TESTNET,
 } from '../../../utils/envVars';
 import ReactTooltip from 'react-tooltip';
 
@@ -85,7 +86,9 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
-        <ButtonLink to={`${ETHERSCAN_URL}/${txHash}`}>Etherscan</ButtonLink>
+        <ButtonLink to={`${EL_TRANSACTION_URL}/${txHash}`}>
+          EL Explorer
+        </ButtonLink>
       </div>
     );
   }
@@ -108,8 +111,12 @@ export const ActionButton = ({
           </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
-
-        <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>Beaconscan</ButtonLink>
+        {!IS_NON_INFURA_TESTNET && (
+          // Probably no Bellatrix beaconscan explorer
+          <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>
+            Beaconscan
+          </ButtonLink>
+        )}
       </div>
     );
   }

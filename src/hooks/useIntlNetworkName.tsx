@@ -1,9 +1,5 @@
 import { useIntl } from 'react-intl';
-import {
-  IS_MAINNET,
-  EL_TESTNET_NAME,
-  TESTNET_LAUNCHPAD_NAME,
-} from '../utils/envVars';
+import { IS_MAINNET, TESTNET_LAUNCHPAD_NAME } from '../utils/envVars';
 
 const useIntlNetworkName = (): {
   executionLayerName: string;
@@ -14,8 +10,8 @@ const useIntlNetworkName = (): {
   const executionLayerName: string = IS_MAINNET
     ? mainnet
     : formatMessage(
-        { defaultMessage: '{EL_TESTNET_NAME} testnet' },
-        { EL_TESTNET_NAME }
+        { defaultMessage: '{TESTNET_LAUNCHPAD_NAME} testnet' },
+        { TESTNET_LAUNCHPAD_NAME }
       );
   const consensusLayerName: string = IS_MAINNET
     ? mainnet

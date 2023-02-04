@@ -20,6 +20,7 @@ import {
   TermsOfService,
   Languages,
   TopUpPage,
+  Withdrawals,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Consensus/Prysm';
@@ -62,6 +63,7 @@ export enum routesEnum {
   landingPage = '/',
   notFoundPage = '/*',
   languagesPage = '/languages',
+  withdrawals = '/withdrawals',
 }
 const routes: RouteType[] = [
   {
@@ -79,11 +81,7 @@ const routes: RouteType[] = [
     exact: true,
     component: ConnectWalletPage,
   },
-  {
-    path: routesEnum.selectClient,
-    exact: true,
-    component: SelectClientPage,
-  },
+  { path: routesEnum.selectClient, exact: true, component: SelectClientPage },
   {
     path: routesEnum.generateKeysPage,
     exact: true,
@@ -105,71 +103,20 @@ const routes: RouteType[] = [
     exact: true,
     component: TransactionsPage,
   },
-  {
-    path: routesEnum.FaqPage,
-    exact: true,
-    component: FAQ,
-  },
-  {
-    path: routesEnum.besu,
-    exact: true,
-    component: Besu,
-  },
-  {
-    path: routesEnum.erigon,
-    exact: true,
-    component: Erigon,
-  },
-  {
-    path: routesEnum.geth,
-    exact: true,
-    component: Geth,
-  },
-  {
-    path: routesEnum.lighthouse,
-    exact: true,
-    component: Lighthouse,
-  },
-  {
-    path: routesEnum.nethermind,
-    exact: true,
-    component: Nethermind,
-  },
-  {
-    path: routesEnum.nimbus,
-    exact: true,
-    component: Nimbus,
-  },
-  {
-    path: routesEnum.prysm,
-    exact: true,
-    component: Prysm,
-  },
-  {
-    path: routesEnum.teku,
-    exact: true,
-    component: Teku,
-  },
-  {
-    path: routesEnum.phishingPage,
-    exact: true,
-    component: Phishing,
-  },
-  {
-    path: routesEnum.checklistPage,
-    exact: true,
-    component: Checklist,
-  },
-  {
-    path: routesEnum.languagesPage,
-    exact: true,
-    component: Languages,
-  },
-  {
-    path: routesEnum.topUpPage,
-    exact: true,
-    component: TopUpPage,
-  },
+  { path: routesEnum.FaqPage, exact: true, component: FAQ },
+  { path: routesEnum.besu, exact: true, component: Besu },
+  { path: routesEnum.erigon, exact: true, component: Erigon },
+  { path: routesEnum.geth, exact: true, component: Geth },
+  { path: routesEnum.lighthouse, exact: true, component: Lighthouse },
+  { path: routesEnum.nethermind, exact: true, component: Nethermind },
+  { path: routesEnum.nimbus, exact: true, component: Nimbus },
+  { path: routesEnum.prysm, exact: true, component: Prysm },
+  { path: routesEnum.teku, exact: true, component: Teku },
+  { path: routesEnum.phishingPage, exact: true, component: Phishing },
+  { path: routesEnum.checklistPage, exact: true, component: Checklist },
+  { path: routesEnum.languagesPage, exact: true, component: Languages },
+  { path: routesEnum.topUpPage, exact: true, component: TopUpPage },
+  { path: routesEnum.withdrawals, exact: true, component: Withdrawals },
   { path: routesEnum.landingPage, exact: true, component: LandingPage },
   // NOTE: this wildcard route must be the last index of the routes array
   { path: routesEnum.notFoundPage, component: NotFoundPage },

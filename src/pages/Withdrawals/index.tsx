@@ -334,7 +334,7 @@ export const Withdrawals = () => {
                   <Link
                     primary
                     inline
-                    to="https://docs.teku.consensys.net/en/latest/HowTo/Voluntary-Exit/"
+                    to="https://docs.teku.consensys.net/Reference/CLI/Subcommands/Voluntary-Exit"
                   >
                     Exiting a Teku validator
                   </Link>

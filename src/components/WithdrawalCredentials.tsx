@@ -137,7 +137,12 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           placeholder="Validator index"
         />
         <Button
-          label={<FormattedMessage defaultMessage="Verify" />}
+          label={
+            <FormattedMessage
+              defaultMessage="Verify on {NETWORK_NAME}"
+              values={{ NETWORK_NAME }}
+            />
+          }
           onClick={checkWithdrawalCredentials}
           disabled={!inputValue.length}
           fullWidth={isMobile}

@@ -27,6 +27,7 @@ import { Prysm } from './pages/Clients/Consensus/Prysm';
 import { Teku } from './pages/Clients/Consensus/Teku';
 import { Nimbus } from './pages/Clients/Consensus/Nimbus';
 import { Lighthouse } from './pages/Clients/Consensus/Lighthouse';
+import { Lodestar } from './pages/Clients/Consensus/Lodestar';
 import { Besu } from './pages/Clients/Execution/Besu';
 import { Nethermind } from './pages/Clients/Execution/Nethermind';
 import { Erigon } from './pages/Clients/Execution/Erigon';
@@ -57,6 +58,7 @@ export enum routesEnum {
   nimbus = '/nimbus',
   prysm = '/prysm',
   teku = '/teku',
+  lodestar = '/lodestar',
   phishingPage = '/phishing',
   checklistPage = '/checklist',
   topUpPage = '/top-up',
@@ -112,6 +114,7 @@ const routes: RouteType[] = [
   { path: routesEnum.nimbus, exact: true, component: Nimbus },
   { path: routesEnum.prysm, exact: true, component: Prysm },
   { path: routesEnum.teku, exact: true, component: Teku },
+  { path: routesEnum.lodestar, exact: true, component: Lodestar },
   { path: routesEnum.phishingPage, exact: true, component: Phishing },
   { path: routesEnum.checklistPage, exact: true, component: Checklist },
   { path: routesEnum.languagesPage, exact: true, component: Languages },

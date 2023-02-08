@@ -491,6 +491,9 @@
   "8mEWVB": {
     "message": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator—attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
   },
+  "8mybVV": {
+    "message": "{type0} = \"Type 0\" = BLS keys = Old withdrawal credentials: {withdrawalsDisabled}"
+  },
   "8uq59n": {
     "message": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
   },
@@ -535,6 +538,9 @@
   },
   "9qpi9h": {
     "message": "Configure Nethermind"
+  },
+  "9r6K1F": {
+    "message": "Not eligible for withdrawals"
   },
   "9r8j5+": {
     "message": "Engine API"
@@ -1211,6 +1217,9 @@
   },
   "Nb5DNK": {
     "message": "Become a validator with Teku"
+  },
+  "NiWtxk": {
+    "message": "{type1} = \"Type 1\" = Execution keys = New withdrawal credentials: {withdrawalsEnabled}"
   },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."

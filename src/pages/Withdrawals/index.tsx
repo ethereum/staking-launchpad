@@ -150,6 +150,36 @@ export const Withdrawals = () => {
                 values={{ type0: <Code>0x00</Code> }}
               />
             </Text>
+            <section>
+              <ul>
+                <li>
+                  <FormattedMessage
+                    defaultMessage='{type0} = "Type 0" = BLS keys = Old withdrawal credentials: {withdrawalsDisabled}'
+                    values={{
+                      type0: <Code>0x00</Code>,
+                      withdrawalsDisabled: (
+                        <em>
+                          <FormattedMessage defaultMessage="Not eligible for withdrawals" />
+                        </em>
+                      ),
+                    }}
+                  />
+                </li>
+                <li>
+                  <FormattedMessage
+                    defaultMessage='{type1} = "Type 1" = Execution keys = New withdrawal credentials: {withdrawalsEnabled}'
+                    values={{
+                      type1: <Code>0x01</Code>,
+                      withdrawalsEnabled: (
+                        <em>
+                          <FormattedMessage defaultMessage="Withdrawals enabled" />
+                        </em>
+                      ),
+                    }}
+                  />
+                </li>
+              </ul>
+            </section>
 
             <section className="actionable">
               <Heading level={4} className="mb10">

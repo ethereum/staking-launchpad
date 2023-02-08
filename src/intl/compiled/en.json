@@ -1301,6 +1301,20 @@
       "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator—attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
     }
   ],
+  "8mybVV": [
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 0\" = BLS keys = Old withdrawal credentials: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsDisabled"
+    }
+  ],
   "8uq59n": [
     {
       "type": 0,
@@ -1409,6 +1423,12 @@
     {
       "type": 0,
       "value": "Configure Nethermind"
+    }
+  ],
+  "9r6K1F": [
+    {
+      "type": 0,
+      "value": "Not eligible for withdrawals"
     }
   ],
   "9r8j5+": [
@@ -3107,6 +3127,20 @@
     {
       "type": 0,
       "value": "Become a validator with Teku"
+    }
+  ],
+  "NiWtxk": [
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 1\" = Execution keys = New withdrawal credentials: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsEnabled"
     }
   ],
   "NwzcYT": [

@@ -9,6 +9,12 @@ import { stepStatus } from '../types';
 const Container = styled.div`
   justify-content: space-around;
   flex-direction: column;
+  gap: 30px;
+`;
+
+const Item = styled.div`
+  display: flex;
+  gap: 15px;
 `;
 
 const CircleDiv = styled.div`
@@ -68,12 +74,12 @@ const Circle = ({
 
 const CloseIcon = styled(p => <Close {...p} />)`
   position: absolute;
-  left: -7px;
+  inset-inline-start: -7px;
   top: -1px;
 `;
 const CheckIcon = styled(p => <Checkmark {...p} />)`
   position: absolute;
-  left: -7px;
+  inset-inline-start: -7px;
   top: -1px;
 `;
 
@@ -110,18 +116,18 @@ const TransactionProgress: React.FC<TransactionProgressProps> = ({
 }) => {
   return (
     <Container>
-      <div className="flex">
+      <Item>
         <ProgressCircle step={1} status={signTxStatus} />
-        <Text className="mt10 ml15">
+        <Text className="mt10">
           <FormattedMessage defaultMessage="Sign transaction with your wallet" />
         </Text>
-      </div>
-      <div className="mt30 flex">
+      </Item>
+      <Item>
         <ProgressCircle step={2} status={confirmOnChainStatus} />
-        <Text className="mt10 ml15">
+        <Text className="mt10">
           <FormattedMessage defaultMessage="Confirm on-chain" />
         </Text>
-      </div>
+      </Item>
     </Container>
   );
 };

@@ -212,14 +212,12 @@ const _SelectClientPage = ({
         clientDetails={clientDetails}
         ethClientStep={ethClientStep}
       />
-      <div className="flex center p30">
-        <SelectClientButtons
-          updateStep={setEthClientStep}
-          ethClientStep={ethClientStep}
-          handleSubmit={handleSubmit}
-          currentClient={selectedClient}
-        />
-      </div>
+      <SelectClientButtons
+        updateStep={setEthClientStep}
+        ethClientStep={ethClientStep}
+        handleSubmit={handleSubmit}
+        currentClient={selectedClient}
+      />
     </WorkflowPageTemplate>
   );
 };

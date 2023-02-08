@@ -28,7 +28,13 @@ const Input = styled.input`
   font-size: 1.25rem;
   padding: 15px;
   width: 20ch;
-  @media (max-width: ${screenSizes.smaller}) {
+  @media (max-width: ${screenSizes.small}) {
+    width: 100%;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  @media (max-width: ${screenSizes.small}) {
     width: 100%;
   }
 `;
@@ -136,7 +142,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           onChange={handleChange}
           placeholder="Validator index"
         />
-        <Button
+        <StyledButton
           label={
             <FormattedMessage
               defaultMessage="Verify on {NETWORK_NAME}"

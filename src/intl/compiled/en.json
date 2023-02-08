@@ -287,6 +287,12 @@
       "value": "Section 3 - After depositing"
     }
   ],
+  "09ZPhN": [
+    {
+      "type": 0,
+      "value": "Withdrawal credentials:"
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
@@ -947,24 +953,6 @@
     {
       "type": 0,
       "value": "Teku installation documentation"
-    }
-  ],
-  "5PHRzL": [
-    {
-      "type": 0,
-      "value": "Validator index "
-    },
-    {
-      "type": 1,
-      "value": "validatorIndex"
-    },
-    {
-      "type": 0,
-      "value": " is ready to start receiving rewards to their execution layer address at "
-    },
-    {
-      "type": 1,
-      "value": "address"
     }
   ],
   "5UH1sh": [
@@ -1723,6 +1711,12 @@
       "value": "Introduction"
     }
   ],
+  "Bp0clV": [
+    {
+      "type": 0,
+      "value": "Validator index:"
+    }
+  ],
   "Bp9Dxf": [
     {
       "type": 0,
@@ -2059,6 +2053,12 @@
     {
       "type": 0,
       "value": "Staking Launchpad"
+    }
+  ],
+  "Ej2jo1": [
+    {
+      "type": 0,
+      "value": "Withdrawal address:"
     }
   ],
   "FEbVwB": [
@@ -2861,6 +2861,12 @@
       "value": "Rate-limits set on withdrawal queue (could change through testing before Shanghai)"
     }
   ],
+  "MCmGYv": [
+    {
+      "type": 0,
+      "value": "Copied ✓"
+    }
+  ],
   "MIsmjW": [
     {
       "type": 0,
@@ -3043,6 +3049,20 @@
     {
       "type": 0,
       "value": "Download command line app"
+    }
+  ],
+  "NUCB4G": [
+    {
+      "type": 0,
+      "value": "This "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
     }
   ],
   "NVljH4": [
@@ -3981,6 +4001,12 @@
       "value": "That is not a valid deposit_data JSON file."
     }
   ],
+  "X72hpo": [
+    {
+      "type": 0,
+      "value": "This validator is ready to start receiving rewards to the withdrawal address below. No further action is needed."
+    }
+  ],
   "XBEBYR": [
     {
       "type": 0,
@@ -4305,20 +4331,6 @@
       "value": " a block proposal every 50 days."
     }
   ],
-  "ZjETLm": [
-    {
-      "type": 0,
-      "value": "This "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " validator needs to be configured for withdrawals."
-    }
-  ],
   "ZsXdlw": [
     {
       "type": 0,
@@ -4497,6 +4509,12 @@
     {
       "type": 0,
       "value": " is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+    }
+  ],
+  "bembWf": [
+    {
+      "type": 0,
+      "value": "Withdrawals not enabled"
     }
   ],
   "bgyJfz": [
@@ -6005,6 +6023,12 @@
     {
       "type": 0,
       "value": "Before you start"
+    }
+  ],
+  "o9rUg+": [
+    {
+      "type": 0,
+      "value": "Withdrawals enabled"
     }
   ],
   "oF4os+": [

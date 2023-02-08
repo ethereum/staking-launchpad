@@ -659,12 +659,6 @@
       "value": "Terms of Service"
     }
   ],
-  "34fnd+": [
-    {
-      "type": 0,
-      "value": "Accounts without upgrades withdrawal credentials will be skipped"
-    }
-  ],
   "36j2ls": [
     {
       "type": 0,
@@ -3393,28 +3387,6 @@
       "value": "networkName"
     }
   ],
-  "Qg62Br": [
-    {
-      "type": 0,
-      "value": "One of the queues worth noting is a queue that limits how many BLS ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ") withdrawal addresses can be upgraded to an execution address ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ") during a given block."
-    }
-  ],
   "QgOvR0": [
     {
       "type": 0,
@@ -5265,6 +5237,12 @@
       "value": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
     }
   ],
+  "iK1COM": [
+    {
+      "type": 0,
+      "value": "Accounts without updated withdrawal credentials will be skipped"
+    }
+  ],
   "iMvXLd": [
     {
       "type": 0,
@@ -6953,6 +6931,28 @@
     {
       "type": 0,
       "value": "Run the following command:"
+    }
+  ],
+  "wpM7Y5": [
+    {
+      "type": 0,
+      "value": "One of the queues worth noting is a queue that limits how many BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") withdrawal addresses can be updated to an execution address ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") during a given block."
     }
   ],
   "wqUcy/": [

@@ -255,9 +255,6 @@
   "32rBNK": {
     "message": "Terms of Service"
   },
-  "34fnd+": {
-    "message": "Accounts without upgrades withdrawal credentials will be skipped"
-  },
   "36j2ls": {
     "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
   },
@@ -1310,9 +1307,6 @@
   "QeE86m": {
     "message": "Check this document to learn how to run a node on {networkName}"
   },
-  "Qg62Br": {
-    "message": "One of the queues worth noting is a queue that limits how many BLS ({type0}) withdrawal addresses can be upgraded to an execution address ({type1}) during a given block."
-  },
   "QgOvR0": {
     "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
   },
@@ -2055,6 +2049,9 @@
   "iFWLYC": {
     "message": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
   },
+  "iK1COM": {
+    "message": "Accounts without updated withdrawal credentials will be skipped"
+  },
   "iMvXLd": {
     "message": "Running the validator client"
   },
@@ -2714,6 +2711,9 @@
   },
   "wm04oC": {
     "message": "Run the following command:"
+  },
+  "wpM7Y5": {
+    "message": "One of the queues worth noting is a queue that limits how many BLS ({type0}) withdrawal addresses can be updated to an execution address ({type1}) during a given block."
   },
   "wqUcy/": {
     "message": "Early adopter risks"

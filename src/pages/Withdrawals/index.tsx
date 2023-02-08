@@ -184,7 +184,7 @@ export const Withdrawals = () => {
                 <Text className="mb10">
                   <FormattedMessage
                     defaultMessage="One of the queues worth noting is a queue that limits how many BLS ({type0})
-                    withdrawal addresses can be upgraded to an execution address ({type1}) during a given block."
+                    withdrawal addresses can be updated to an execution address ({type1}) during a given block."
                     values={{
                       type0: <Code>0x00</Code>,
                       type1: <Code>0x01</Code>,
@@ -687,7 +687,7 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Total number of validator accounts that have eligible withdrawals (variable)" />
               <ul>
                 <li>
-                  <FormattedMessage defaultMessage="Accounts without upgrades withdrawal credentials will be skipped" />
+                  <FormattedMessage defaultMessage="Accounts without updated withdrawal credentials will be skipped" />
                 </li>
                 <li>
                   <FormattedMessage defaultMessage="Accounts that have fully withdrawn and have a zero balance will be skipped" />

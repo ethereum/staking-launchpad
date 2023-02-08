@@ -316,6 +316,15 @@ export const Withdrawals = () => {
                   <Link
                     primary
                     inline
+                    to="https://chainsafe.github.io/lodestar/reference/cli/#validator-voluntary-exit"
+                  >
+                    Exiting a Lodestar validator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    primary
+                    inline
                     to="https://nimbus.guide/voluntary-exit.html"
                   >
                     Exiting a Nimbus validator

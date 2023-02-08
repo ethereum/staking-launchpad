@@ -112,7 +112,6 @@ const _TopUpPage: React.FC<Props> = () => {
         // No validators for that user's wallet address, exit early
         if (dataEth1.length === 0) {
           setValidators([]);
-          setLoading(false);
           return;
         }
         // Prepare comma delimited list of pubKeys for eth1 address provided

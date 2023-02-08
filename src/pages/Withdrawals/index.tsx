@@ -316,6 +316,15 @@ export const Withdrawals = () => {
                   <Link
                     primary
                     inline
+                    to="https://chainsafe.github.io/lodestar/reference/cli/#validator-voluntary-exit"
+                  >
+                    Exiting a Lodestar validator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    primary
+                    inline
                     to="https://nimbus.guide/voluntary-exit.html"
                   >
                     Exiting a Nimbus validator
@@ -334,7 +343,7 @@ export const Withdrawals = () => {
                   <Link
                     primary
                     inline
-                    to="https://docs.teku.consensys.net/en/latest/HowTo/Voluntary-Exit/"
+                    to="https://docs.teku.consensys.net/Reference/CLI/Subcommands/Voluntary-Exit"
                   >
                     Exiting a Teku validator
                   </Link>

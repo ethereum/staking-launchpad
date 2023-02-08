@@ -23,7 +23,7 @@ export interface BeaconChainValidatorTransaction {
   withdrawal_credentials: string;
 }
 
-export interface BeaconChainValidatorResponse {
+export interface BeaconChainValidatorEth1Deposit {
   publickey: string;
   valid_signature: boolean;
   validatorindex: number;

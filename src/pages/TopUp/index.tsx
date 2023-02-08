@@ -7,7 +7,7 @@ import { FormPrevious } from 'grommet-icons';
 import { Alert as AlertIcon } from 'grommet-icons/icons';
 import {
   BeaconChainValidator,
-  BeaconChainValidatorResponse,
+  BeaconChainValidatorEth1Deposit,
   Props,
 } from './types';
 import { Text } from '../../components/Text';
@@ -105,7 +105,9 @@ const _TopUpPage: React.FC<Props> = () => {
           ({
             data,
           }: {
-            data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
+            data:
+              | BeaconChainValidatorEth1Deposit[]
+              | BeaconChainValidatorEth1Deposit;
           }) => {
             setShowDepositVerificationWarning(false);
             const response = Array.isArray(data) ? data : [data];
@@ -114,11 +116,6 @@ const _TopUpPage: React.FC<Props> = () => {
               setValidators([]);
               setLoading(false);
               return;
-            }
-
-            if (response.length === 0) {
-              setValidators([]);
-              setLoading(false);
             } else {
               // query by public keys
               const pubKeysCommaDelineated = `${response
@@ -130,13 +127,20 @@ const _TopUpPage: React.FC<Props> = () => {
                 `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
               )
                 .then(r => r.json())
-                .then(({ data }: { data: BeaconChainValidator[] }) => {
-                  if (data.length === 0) {
-                    setShowDepositVerificationWarning(true);
+                .then(
+                  ({
+                    data,
+                  }: {
+                    data: BeaconChainValidator[] | BeaconChainValidator;
+                  }) => {
+                    const response = Array.isArray(data) ? data : [data];
+                    if (response.length === 0) {
+                      setShowDepositVerificationWarning(true);
+                    }
+                    setValidators(response);
+                    setLoading(false);
                   }
-                  setValidators(data);
-                  setLoading(false);
-                })
+                )
                 .catch(error => {
                   console.log(error);
                   setLoading(false);

@@ -221,6 +221,13 @@ export const Withdrawals = () => {
                   </Link>
                 </li>
               </ul>
+              <Text className="mt20">
+                <FormattedMessage
+                  defaultMessage="These tools will assist you in generating the necessary keys and message to sign. This requires
+                  use of your mnemonic seed phrase, and should be performed on an offline air-gapped machine. Signed messages can
+                  be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
+                />
+              </Text>
               <section>
                 <Heading level={4} className="mb10">
                   <FormattedMessage defaultMessage="BLS To Execution Change (BTEC) queue" />

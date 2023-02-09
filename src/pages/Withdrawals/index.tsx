@@ -30,6 +30,17 @@ const ComponentStyles = styled.div`
   }
   ul {
     margin-bottom: 10px;
+    &.key-types {
+      li span {
+        margin-inline-start: 0.5rem;
+      }
+      li:nth-of-type(1) {
+        list-style: '⚠️';
+      }
+      li:nth-of-type(2) {
+        list-style: '✅';
+      }
+    }
   }
   li {
     margin-top: 10px;
@@ -69,6 +80,9 @@ const ComponentStyles = styled.div`
     }
     margin: 2rem 0;
     border-radius: 4px;
+  }
+  .inline {
+    display: inline;
   }
 `;
 
@@ -150,6 +164,36 @@ export const Withdrawals = () => {
                 values={{ type0: <Code>0x00</Code> }}
               />
             </Text>
+            <section>
+              <ul className="key-types">
+                <li>
+                  <FormattedMessage
+                    defaultMessage='{type0} = "Type 0" = BLS keys = Old withdrawal credentials: {withdrawalsDisabled}'
+                    values={{
+                      type0: <Code>0x00</Code>,
+                      withdrawalsDisabled: (
+                        <em>
+                          <FormattedMessage defaultMessage="Not eligible for withdrawals" />
+                        </em>
+                      ),
+                    }}
+                  />
+                </li>
+                <li>
+                  <FormattedMessage
+                    defaultMessage='{type1} = "Type 1" = Execution keys = New withdrawal credentials: {withdrawalsEnabled}'
+                    values={{
+                      type1: <Code>0x01</Code>,
+                      withdrawalsEnabled: (
+                        <em>
+                          <FormattedMessage defaultMessage="Withdrawals enabled" />
+                        </em>
+                      ),
+                    }}
+                  />
+                </li>
+              </ul>
+            </section>
 
             <section className="actionable">
               <Heading level={4} className="mb10">
@@ -184,7 +228,7 @@ export const Withdrawals = () => {
                 <Text className="mb10">
                   <FormattedMessage
                     defaultMessage="One of the queues worth noting is a queue that limits how many BLS ({type0})
-                    withdrawal addresses can be upgraded to an execution address ({type1}) during a given block."
+                    withdrawal addresses can be updated to an execution address ({type1}) during a given block."
                     values={{
                       type0: <Code>0x00</Code>,
                       type1: <Code>0x01</Code>,
@@ -252,7 +296,9 @@ export const Withdrawals = () => {
               <span role="img" aria-label="note">
                 📝
               </span>{' '}
-              <FormattedMessage defaultMessage="It is not possible to manually request specific amounts of ETH to be withdrawn" />
+              <Text className="inline">
+                <FormattedMessage defaultMessage="It is not possible to manually request specific amounts of ETH to be withdrawn" />
+              </Text>
             </Alert>
           </section>
 
@@ -416,7 +462,9 @@ export const Withdrawals = () => {
               <span role="img" aria-label="note">
                 📝
               </span>{' '}
-              <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
+              <Text className="inline">
+                <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
+              </Text>
             </Alert>
           </section>
         </section>
@@ -557,7 +605,13 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="The number of validators that can be activated or exited in a given epoch (6.4 minutes)
-                is determined by how many active validators are currently on the network:"
+                is determined by how many active validators are currently on the network."
+              />
+            </Text>
+            <Text className="mb10">
+              <FormattedMessage
+                defaultMessage="Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators
+                over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
               />
             </Text>
             <Alert variant="warning" className="mt30 mb10">
@@ -568,6 +622,104 @@ export const Withdrawals = () => {
                 <FormattedMessage defaultMessage="Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis." />
               </Text>
             </Alert>
+            <section>
+              <Heading level={4} className="mb10">
+                <FormattedMessage defaultMessage="Exit epoch and withdrawable epoch" />
+              </Heading>
+              <Text className="mb10">
+                <FormattedMessage
+                  defaultMessage="Immediately upon broadcasting a signed voluntary exit message, the {exitEpoch} and {withdrawableEpoch} values
+                  are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required
+                  to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
+                  values={{
+                    exitEpoch: (
+                      <strong>
+                        <FormattedMessage defaultMessage="exit epoch" />
+                      </strong>
+                    ),
+                    withdrawableEpoch: (
+                      <strong>
+                        <FormattedMessage defaultMessage="withdrawable epoch" />
+                      </strong>
+                    ),
+                  }}
+                />
+              </Text>
+              <section className="ml20">
+                <Text className="mb10">
+                  <FormattedMessage
+                    defaultMessage="{exitEpochLabel} - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
+                    values={{
+                      exitEpochLabel: (
+                        <strong>
+                          <FormattedMessage defaultMessage="Exit epoch" />
+                        </strong>
+                      ),
+                    }}
+                  />
+                </Text>
+                <Text className="mb10">
+                  <FormattedMessage
+                    defaultMessage="This epoch is determined by the first available epoch that isn't already maxed out with other validators
+                    exiting (rate limit depends on total validators on the network), and must be at least 4 epochs after the exit was initiated."
+                  />
+                </Text>
+                <Alert variant="error" className="my20">
+                  <Text>
+                    <FormattedMessage
+                      defaultMessage='Up until this epoch (while "in the queue") your validator is expected to be online and is held to the same
+                      slashing rules as always. Do not turn your validator off until this epoch is reached.'
+                    />
+                  </Text>
+                </Alert>
+              </section>
+              <section className="ml20 mb30">
+                <Text className="mb10">
+                  <FormattedMessage
+                    defaultMessage="{withdrawableEpochLabel} - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
+                    values={{
+                      withdrawableEpochLabel: (
+                        <strong>
+                          <FormattedMessage defaultMessage="Withdrawable epoch" />
+                        </strong>
+                      ),
+                    }}
+                  />
+                </Text>
+                <Text>
+                  <FormattedMessage defaultMessage="This occurs 256 epochs after the exit epoch, which takes ~27.3 hours." />
+                </Text>
+              </section>
+              <Text className="mb10">
+                <strong>
+                  <FormattedMessage defaultMessage="Exit queue summary" />
+                </strong>
+              </Text>
+              <Text className="mb10">
+                <FormattedMessage
+                  defaultMessage="Once a signed voluntary exit message is broadcast, it takes at least four (4) epochs (25.6 minutes) from the
+                  current epoch before reaching the exit epoch (with no others in the queue, highly variable), and then another 256 epochs (~27.3 hours)
+                  before those funds are flagged as withdrawable."
+                />
+              </Text>
+              <Text className="mb10">
+                <FormattedMessage
+                  defaultMessage="Users must then wait until their validator is checked again during the next validator sweep before their full withdrawal
+                  will be executed (assuming {type1} withdrawal credentials)."
+                  values={{ type1: <Code>0x01</Code> }}
+                />{' '}
+                <Link inline primary to="#payment-frequency">
+                  <FormattedMessage defaultMessage="More on frequency of payouts below." />
+                </Link>
+              </Text>
+              <Text className="mb10">
+                <FormattedMessage
+                  defaultMessage="Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit,
+                  there is no further action required until the processing is complete."
+                  values={{ type1: <Code>0x01</Code> }}
+                />
+              </Text>
+            </section>
           </section>
 
           <section>
@@ -687,7 +839,7 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Total number of validator accounts that have eligible withdrawals (variable)" />
               <ul>
                 <li>
-                  <FormattedMessage defaultMessage="Accounts without upgrades withdrawal credentials will be skipped" />
+                  <FormattedMessage defaultMessage="Accounts without updated withdrawal credentials will be skipped" />
                 </li>
                 <li>
                   <FormattedMessage defaultMessage="Accounts that have fully withdrawn and have a zero balance will be skipped" />

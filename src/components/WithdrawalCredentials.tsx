@@ -1,7 +1,8 @@
 // Import libraries
 import React, { FC, useState, useMemo, ChangeEvent } from 'react';
 import styled from 'styled-components';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
+import CopyToClipboard from 'react-copy-to-clipboard';
 // Components
 import { Alert } from './Alert';
 import { Button } from './Button';
@@ -14,6 +15,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  * {
+    color: ${(p: any) => p.theme.blue.dark};
+  }
 `;
 
 const FlexRow = styled.div`
@@ -28,8 +32,69 @@ const Input = styled.input`
   font-size: 1.25rem;
   padding: 15px;
   width: 20ch;
-  @media (max-width: ${screenSizes.smaller}) {
+  @media (max-width: ${screenSizes.small}) {
     width: 100%;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  @media (max-width: ${screenSizes.small}) {
+    width: 100%;
+  }
+`;
+
+const ResultsLineItem = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  @media (max-width: ${screenSizes.small}) {
+    flex-direction: column;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+`;
+
+const ResultsLineItemDesktopOnly = styled(ResultsLineItem)`
+  @media (max-width: ${screenSizes.medium}) {
+    display: none;
+  }
+`;
+
+const ResultLabel = styled.div`
+  white-space: nowrap;
+  font-weight: bold;
+`;
+
+const AddressCopyContainer = styled.div`
+  gap: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+`;
+
+const LongAddress = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const CopyContainer = styled.button`
+  font-family: monospace;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 0 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  background: rgb(255 255 255 / 50%);
+  letter-spacing: 1.5px;
+  border: 1px solid ${p => p.theme.blue.dark};
+  border-radius: 4px;
+  &:hover {
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(to right, ${p => p.theme.rainbow});
+  }
+  &:focus {
+    outline-offset: -2px;
   }
 `;
 
@@ -41,11 +106,11 @@ interface Validator {
 
 interface IProps {}
 export const WithdrawalCredentials: FC<IProps> = () => {
-  const { locale } = useIntl();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [hasError, setHasError] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
   const [validator, setValidator] = useState<Validator | null>(null);
+  const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
   const isMobile: boolean = (window as any).mobileCheck();
 
   const checkWithdrawalCredentials = async () => {
@@ -67,6 +132,12 @@ export const WithdrawalCredentials: FC<IProps> = () => {
       setIsLoading(false);
     }
   };
+  const onCopy = (key: string) => {
+    setCopied(prev => ({ ...prev, [key]: true }));
+    setTimeout(() => {
+      setCopied(prev => ({ ...prev, [key]: false }));
+    }, 2000);
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     setInputValue(e.target.value.replace(/\D/g, ''));
@@ -75,11 +146,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     () => (validator ? `0x${validator.withdrawalCredentials.slice(-40)}` : ''),
     [validator]
   );
-  const shortAddress = useMemo<string>(
-    () =>
-      longAddress ? `${longAddress.slice(0, 6)}…${longAddress.slice(-4)}` : '',
-    [longAddress]
-  );
+
   const resultText = useMemo<string | JSX.Element>(() => {
     if (isLoading) return <Spinner />;
     if (hasError)
@@ -92,40 +159,140 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     if (validator.isUpgraded)
       return (
         <Alert variant="success">
-          <FormattedMessage
-            defaultMessage="Validator index {validatorIndex} is ready to start
-            receiving rewards to their execution layer address at {address}"
-            values={{
-              validatorIndex: (
-                <strong>
-                  {new Intl.NumberFormat(locale).format(
-                    validator.validatorIndex
+          <strong>
+            <FormattedMessage defaultMessage="Withdrawals enabled" />
+          </strong>
+          <p>
+            <FormattedMessage
+              defaultMessage="This validator is ready to start receiving rewards to the
+              withdrawal address below. No further action is needed."
+            />
+          </p>
+          <ResultsLineItem>
+            <ResultLabel>
+              <FormattedMessage defaultMessage="Validator index:" />{' '}
+            </ResultLabel>
+            <AddressCopyContainer>
+              <LongAddress>{validator.validatorIndex}</LongAddress>
+              <CopyToClipboard
+                text={validator.validatorIndex.toString()}
+                onCopy={() => onCopy('validatorIndex')}
+              >
+                <CopyContainer>
+                  {copied.validatorIndex ? (
+                    <FormattedMessage defaultMessage="Copied ✓" />
+                  ) : (
+                    <FormattedMessage defaultMessage="Copy" />
                   )}
-                </strong>
-              ),
-              address: <strong title={longAddress}>{shortAddress}</strong>,
-            }}
-          />
+                </CopyContainer>
+              </CopyToClipboard>
+            </AddressCopyContainer>
+          </ResultsLineItem>
+          <ResultsLineItemDesktopOnly>
+            <ResultLabel>
+              <FormattedMessage defaultMessage="Withdrawal credentials:" />{' '}
+            </ResultLabel>
+            <AddressCopyContainer>
+              <LongAddress>{validator.withdrawalCredentials}</LongAddress>
+              <CopyToClipboard
+                text={validator.withdrawalCredentials}
+                onCopy={() => onCopy('withdrawalCredentials')}
+              >
+                <CopyContainer>
+                  {copied.withdrawalCredentials ? (
+                    <FormattedMessage defaultMessage="Copied ✓" />
+                  ) : (
+                    <FormattedMessage defaultMessage="Copy" />
+                  )}
+                </CopyContainer>
+              </CopyToClipboard>
+            </AddressCopyContainer>
+          </ResultsLineItemDesktopOnly>
+          <ResultsLineItem>
+            <ResultLabel>
+              <FormattedMessage defaultMessage="Withdrawal address:" />{' '}
+            </ResultLabel>
+            <AddressCopyContainer>
+              <LongAddress>{longAddress}</LongAddress>
+              <CopyToClipboard
+                text={longAddress}
+                onCopy={() => onCopy('longAddress')}
+              >
+                <CopyContainer>
+                  {copied.longAddress ? (
+                    <FormattedMessage defaultMessage="Copied ✓" />
+                  ) : (
+                    <FormattedMessage defaultMessage="Copy" />
+                  )}
+                </CopyContainer>
+              </CopyToClipboard>
+            </AddressCopyContainer>
+          </ResultsLineItem>
         </Alert>
       );
     return (
       <Alert variant="error">
-        <FormattedMessage
-          defaultMessage="This {network} validator needs to be configured for withdrawals."
-          values={{
-            network: IS_MAINNET ? (
-              ''
-            ) : (
-              <FormattedMessage
-                defaultMessage="{NETWORK_NAME} testnet"
-                values={{ NETWORK_NAME }}
-              />
-            ),
-          }}
-        />
+        <strong>
+          <FormattedMessage defaultMessage="Withdrawals not enabled" />
+        </strong>
+        <p>
+          <FormattedMessage
+            defaultMessage="This {network} validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
+            values={{
+              network: IS_MAINNET ? (
+                ''
+              ) : (
+                <FormattedMessage
+                  defaultMessage="{NETWORK_NAME} testnet"
+                  values={{ NETWORK_NAME }}
+                />
+              ),
+            }}
+          />
+        </p>
+        <ResultsLineItem>
+          <ResultLabel>
+            <FormattedMessage defaultMessage="Validator index:" />{' '}
+          </ResultLabel>
+          <AddressCopyContainer>
+            <LongAddress>{validator.validatorIndex}</LongAddress>
+            <CopyToClipboard
+              text={validator.validatorIndex.toString()}
+              onCopy={() => onCopy('validatorIndex')}
+            >
+              <CopyContainer>
+                {copied.validatorIndex ? (
+                  <FormattedMessage defaultMessage="Copied ✓" />
+                ) : (
+                  <FormattedMessage defaultMessage="Copy" />
+                )}
+              </CopyContainer>
+            </CopyToClipboard>
+          </AddressCopyContainer>
+        </ResultsLineItem>
+        <ResultsLineItem>
+          <ResultLabel>
+            <FormattedMessage defaultMessage="Withdrawal credentials:" />{' '}
+          </ResultLabel>
+          <AddressCopyContainer>
+            <LongAddress>{validator.withdrawalCredentials}</LongAddress>
+            <CopyToClipboard
+              text={validator.withdrawalCredentials}
+              onCopy={() => onCopy('withdrawalCredentials')}
+            >
+              <CopyContainer>
+                {copied.withdrawalCredentials ? (
+                  <FormattedMessage defaultMessage="Copied ✓" />
+                ) : (
+                  <FormattedMessage defaultMessage="Copy" />
+                )}
+              </CopyContainer>
+            </CopyToClipboard>
+          </AddressCopyContainer>
+        </ResultsLineItem>
       </Alert>
     );
-  }, [isLoading, hasError, validator, longAddress, shortAddress, locale]);
+  }, [isLoading, hasError, validator, longAddress, copied]);
 
   return (
     <Container>
@@ -136,7 +303,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           onChange={handleChange}
           placeholder="Validator index"
         />
-        <Button
+        <StyledButton
           label={
             <FormattedMessage
               defaultMessage="Verify on {NETWORK_NAME}"

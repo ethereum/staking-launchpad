@@ -175,6 +175,12 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "/e+qAC": [
+    {
+      "type": 0,
+      "value": "withdrawable epoch"
+    }
+  ],
   "/h0DGY": [
     {
       "type": 0,
@@ -285,6 +291,12 @@
     {
       "type": 0,
       "value": "Section 3 - After depositing"
+    }
+  ],
+  "09ZPhN": [
+    {
+      "type": 0,
+      "value": "Withdrawal credentials:"
     }
   ],
   "0FTs1T": [
@@ -659,12 +671,6 @@
       "value": "Terms of Service"
     }
   ],
-  "34fnd+": [
-    {
-      "type": 0,
-      "value": "Accounts without upgrades withdrawal credentials will be skipped"
-    }
-  ],
   "36j2ls": [
     {
       "type": 0,
@@ -953,24 +959,6 @@
     {
       "type": 0,
       "value": "Teku installation documentation"
-    }
-  ],
-  "5PHRzL": [
-    {
-      "type": 0,
-      "value": "Validator index "
-    },
-    {
-      "type": 1,
-      "value": "validatorIndex"
-    },
-    {
-      "type": 0,
-      "value": " is ready to start receiving rewards to their execution layer address at "
-    },
-    {
-      "type": 1,
-      "value": "address"
     }
   ],
   "5UH1sh": [
@@ -1319,6 +1307,20 @@
       "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator—attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
     }
   ],
+  "8mybVV": [
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 0\" = BLS keys = Old withdrawal credentials: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsDisabled"
+    }
+  ],
   "8uq59n": [
     {
       "type": 0,
@@ -1427,6 +1429,12 @@
     {
       "type": 0,
       "value": "Configure Nethermind"
+    }
+  ],
+  "9r6K1F": [
+    {
+      "type": 0,
+      "value": "Not eligible for withdrawals"
     }
   ],
   "9r8j5+": [
@@ -1727,6 +1735,12 @@
     {
       "type": 0,
       "value": "Introduction"
+    }
+  ],
+  "Bp0clV": [
+    {
+      "type": 0,
+      "value": "Validator index:"
     }
   ],
   "Bp9Dxf": [
@@ -2067,6 +2081,12 @@
       "value": "Staking Launchpad"
     }
   ],
+  "Ej2jo1": [
+    {
+      "type": 0,
+      "value": "Withdrawal address:"
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -2317,12 +2337,6 @@
     {
       "type": 0,
       "value": "Balance"
-    }
-  ],
-  "HMNJhY": [
-    {
-      "type": 0,
-      "value": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network:"
     }
   ],
   "HMgrdg": [
@@ -2607,6 +2621,12 @@
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief."
     }
   ],
+  "K4TRB7": [
+    {
+      "type": 0,
+      "value": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
+    }
+  ],
   "K6+jQ3": [
     {
       "type": 0,
@@ -2867,6 +2887,12 @@
       "value": "Rate-limits set on withdrawal queue (could change through testing before Shanghai)"
     }
   ],
+  "MCmGYv": [
+    {
+      "type": 0,
+      "value": "Copied ✓"
+    }
+  ],
   "MIsmjW": [
     {
       "type": 0,
@@ -3051,6 +3077,20 @@
       "value": "Download command line app"
     }
   ],
+  "NUCB4G": [
+    {
+      "type": 0,
+      "value": "This "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
+    }
+  ],
   "NVljH4": [
     {
       "type": 0,
@@ -3093,6 +3133,20 @@
     {
       "type": 0,
       "value": "Become a validator with Teku"
+    }
+  ],
+  "NiWtxk": [
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 1\" = Execution keys = New withdrawal credentials: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsEnabled"
     }
   ],
   "NwzcYT": [
@@ -3165,6 +3219,28 @@
     {
       "type": 0,
       "value": "The Nethermind documentation explains how to download and install the client."
+    }
+  ],
+  "OSEFbC": [
+    {
+      "type": 0,
+      "value": "Immediately upon broadcasting a signed voluntary exit message, the "
+    },
+    {
+      "type": 1,
+      "value": "exitEpoch"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "withdrawableEpoch"
+    },
+    {
+      "type": 0,
+      "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
     }
   ],
   "OdYQYh": [
@@ -3393,28 +3469,6 @@
       "value": "networkName"
     }
   ],
-  "Qg62Br": [
-    {
-      "type": 0,
-      "value": "One of the queues worth noting is a queue that limits how many BLS ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ") withdrawal addresses can be upgraded to an execution address ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ") during a given block."
-    }
-  ],
   "QgOvR0": [
     {
       "type": 0,
@@ -3583,6 +3637,20 @@
       "value": "Execute the file you just downloaded."
     }
   ],
+  "SVUntz": [
+    {
+      "type": 0,
+      "value": "Note that once a user has "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
+    }
+  ],
   "SaR1pU": [
     {
       "type": 0,
@@ -3631,6 +3699,12 @@
       "value": "Required"
     }
   ],
+  "SjBRHd": [
+    {
+      "type": 0,
+      "value": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least 4 epochs after the exit was initiated."
+    }
+  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3639,6 +3713,12 @@
     {
       "type": 1,
       "value": "homebrew"
+    }
+  ],
+  "Su0UFr": [
+    {
+      "type": 0,
+      "value": "Exit queue summary"
     }
   ],
   "Szwbym": [
@@ -4009,6 +4089,12 @@
       "value": "That is not a valid deposit_data JSON file."
     }
   ],
+  "X72hpo": [
+    {
+      "type": 0,
+      "value": "This validator is ready to start receiving rewards to the withdrawal address below. No further action is needed."
+    }
+  ],
   "XBEBYR": [
     {
       "type": 0,
@@ -4333,20 +4419,6 @@
       "value": " a block proposal every 50 days."
     }
   ],
-  "ZjETLm": [
-    {
-      "type": 0,
-      "value": "This "
-    },
-    {
-      "type": 1,
-      "value": "network"
-    },
-    {
-      "type": 0,
-      "value": " validator needs to be configured for withdrawals."
-    }
-  ],
   "ZsXdlw": [
     {
       "type": 0,
@@ -4525,6 +4597,12 @@
     {
       "type": 0,
       "value": " is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+    }
+  ],
+  "bembWf": [
+    {
+      "type": 0,
+      "value": "Withdrawals not enabled"
     }
   ],
   "bgyJfz": [
@@ -5131,6 +5209,12 @@
       "value": "clock"
     }
   ],
+  "gzXQDW": [
+    {
+      "type": 0,
+      "value": "Withdrawable epoch"
+    }
+  ],
   "h/n5+N": [
     {
       "type": 0,
@@ -5265,6 +5349,12 @@
       "value": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
     }
   ],
+  "iK1COM": [
+    {
+      "type": 0,
+      "value": "Accounts without updated withdrawal credentials will be skipped"
+    }
+  ],
   "iMvXLd": [
     {
       "type": 0,
@@ -5375,6 +5465,12 @@
     {
       "type": 0,
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
+    }
+  ],
+  "jGVfQG": [
+    {
+      "type": 0,
+      "value": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
     }
   ],
   "jXer8/": [
@@ -5819,6 +5915,20 @@
       "value": "File uploaded"
     }
   ],
+  "m9Cvgx": [
+    {
+      "type": 0,
+      "value": "Users must then wait until their validator is checked again during the next validator sweep before their full withdrawal will be executed (assuming "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials)."
+    }
+  ],
   "mArJcj": [
     {
       "type": 0,
@@ -5871,6 +5981,12 @@
       "value": " is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
     }
   ],
+  "mcyp2f": [
+    {
+      "type": 0,
+      "value": "More on frequency of payouts below."
+    }
+  ],
   "mhyltV": [
     {
       "type": 0,
@@ -5911,6 +6027,12 @@
     {
       "type": 0,
       "value": "How to exit from staking (full withdrawals)"
+    }
+  ],
+  "n5PQND": [
+    {
+      "type": 0,
+      "value": "Exit epoch"
     }
   ],
   "nBhisA": [
@@ -6027,6 +6149,12 @@
     {
       "type": 0,
       "value": "Before you start"
+    }
+  ],
+  "o9rUg+": [
+    {
+      "type": 0,
+      "value": "Withdrawals enabled"
     }
   ],
   "oF4os+": [
@@ -6215,6 +6343,12 @@
       "value": "Launch the app from your desktop environment by double clicking on it."
     }
   ],
+  "pIaGLQ": [
+    {
+      "type": 0,
+      "value": "Once a signed voluntary exit message is broadcast, it takes at least four (4) epochs (25.6 minutes) from the current epoch before reaching the exit epoch (with no others in the queue, highly variable), and then another 256 epochs (~27.3 hours) before those funds are flagged as withdrawable."
+    }
+  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6291,6 +6425,12 @@
       "value": "What happened to 'Eth2?'"
     }
   ],
+  "qBorVY": [
+    {
+      "type": 0,
+      "value": "Exit epoch and withdrawable epoch"
+    }
+  ],
   "qDvaNm": [
     {
       "type": 0,
@@ -6321,6 +6461,16 @@
     {
       "type": 0,
       "value": "Korean"
+    }
+  ],
+  "qUSPh2": [
+    {
+      "type": 1,
+      "value": "exitEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
     }
   ],
   "qZ59xY": [
@@ -6763,6 +6913,12 @@
       "value": "Validator checklist"
     }
   ],
+  "uUkmGX": [
+    {
+      "type": 0,
+      "value": "exit epoch"
+    }
+  ],
   "ubKWX8": [
     {
       "type": 0,
@@ -6867,6 +7023,12 @@
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
     }
   ],
+  "vUFLsB": [
+    {
+      "type": 0,
+      "value": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always. Do not turn your validator off until this epoch is reached."
+    }
+  ],
   "vV6ua0": [
     {
       "type": 0,
@@ -6907,6 +7069,12 @@
     {
       "type": 0,
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
+    }
+  ],
+  "vz8WK7": [
+    {
+      "type": 0,
+      "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
     }
   ],
   "w6qYSU": [
@@ -6953,6 +7121,28 @@
     {
       "type": 0,
       "value": "Run the following command:"
+    }
+  ],
+  "wpM7Y5": [
+    {
+      "type": 0,
+      "value": "One of the queues worth noting is a queue that limits how many BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") withdrawal addresses can be updated to an execution address ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") during a given block."
     }
   ],
   "wqUcy/": [
@@ -7195,6 +7385,16 @@
     {
       "type": 0,
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
+    }
+  ],
+  "ydOJD+": [
+    {
+      "type": 1,
+      "value": "withdrawableEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
     }
   ],
   "ydh1KU": [

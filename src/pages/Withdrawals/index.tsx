@@ -31,8 +31,9 @@ const ComponentStyles = styled.div`
   ul {
     margin-bottom: 10px;
     &.key-types {
+      padding-inline-start: 1em;
       li span {
-        margin-inline-start: 0.5rem;
+        margin-inline-start: 0.5em;
       }
       li:nth-of-type(1) {
         list-style: '⚠️';

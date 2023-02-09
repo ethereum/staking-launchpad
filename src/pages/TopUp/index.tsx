@@ -91,69 +91,61 @@ const _TopUpPage: React.FC<Props> = () => {
 
   const { formatMessage } = useIntl();
 
-  // an effect that fetches validators from beaconchain when the user connects or changes their wallet
+  // an effect that fetches validators from Beaconcha.in when the user connects or changes their wallet
   useEffect(() => {
     const fetchValidatorsForUserAddress = async () => {
       setLoading(true);
+      setShowDepositVerificationWarning(false);
 
-      // beaconchain API requires two fetches - one that gets the public keys for an Ethereum address, and one that
-      // queries by the validators public keys
-
-      fetch(`${BEACONCHAIN_URL}/api/v1/validator/eth1/${account}`)
-        .then(r => r.json())
-        .then(
-          ({
-            data,
-          }: {
-            data:
-              | BeaconChainValidatorEth1Deposit[]
-              | BeaconChainValidatorEth1Deposit;
-          }) => {
-            setShowDepositVerificationWarning(false);
-            const response = Array.isArray(data) ? data : [data];
-            // no validators for that user's wallet address
-            if (response.length === 0) {
-              setValidators([]);
-              setLoading(false);
-              return;
-            } else {
-              // query by public keys
-              const pubKeysCommaDelineated = `${response
-                .slice(0, 50)
-                .map(validator => validator.publickey)
-                .join(',')}`;
-
-              fetch(
-                `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
-              )
-                .then(r => r.json())
-                .then(
-                  ({
-                    data,
-                  }: {
-                    data: BeaconChainValidator[] | BeaconChainValidator;
-                  }) => {
-                    const response = Array.isArray(data) ? data : [data];
-                    if (response.length === 0) {
-                      setShowDepositVerificationWarning(true);
-                    }
-                    setValidators(response);
-                    setLoading(false);
-                  }
-                )
-                .catch(error => {
-                  console.log(error);
-                  setLoading(false);
-                  setValidatorLoadError(true);
-                });
-            }
-          }
-        )
-        .catch(error => {
-          console.log(error);
-          setLoading(false);
-          setValidatorLoadError(true);
-        });
+      // Beaconcha.in API requires two fetches - one that gets the public keys for an Ethereum address,
+      // and one that queries by the validators public keys
+      try {
+        // Fetch list of validator accounts by given eth1 address
+        const resEth1 = await fetch(
+          new URL(`api/v1/validator/eth1/${account}`, BEACONCHAIN_URL).href
+        );
+        // Confirm ok response
+        if (!resEth1.ok) throw new Error(resEth1.statusText);
+        const {
+          data: dataEth1,
+        }: { data: BeaconChainValidatorEth1Deposit[] } = await resEth1.json();
+        // No validators for that user's wallet address, exit early
+        if (dataEth1.length === 0) {
+          setValidators([]);
+          return;
+        }
+        // Prepare comma delimited list of pubKeys for eth1 address provided
+        const pubKeysCommaDelineated = `${dataEth1
+          .slice(0, 50)
+          .map(({ publickey }) => publickey)
+          .join(',')}`;
+        // Fetch validator details by public key(s)
+        const resPubKeys = await fetch(
+          new URL(`api/v1/validator/${pubKeysCommaDelineated}`, BEACONCHAIN_URL)
+            .href
+        );
+        // Confirm ok response
+        if (!resPubKeys.ok) {
+          setShowDepositVerificationWarning(true);
+          throw new Error(resPubKeys.statusText);
+        }
+        const {
+          data,
+        }: {
+          data: BeaconChainValidator | BeaconChainValidator[];
+        } = await resPubKeys.json();
+        const dataPubKeys: BeaconChainValidator[] = Array.isArray(data)
+          ? data
+          : [data];
+        if (!dataPubKeys.length) setShowDepositVerificationWarning(true);
+        setValidators(dataPubKeys);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.warn(error);
+        setValidatorLoadError(true);
+      } finally {
+        setLoading(false);
+      }
     };
 
     const network = NetworkChainId[chainId as number];

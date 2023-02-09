@@ -1,7 +1,7 @@
 // Import libraries
 import React, { FC, useState, useMemo, ChangeEvent } from 'react';
 import styled from 'styled-components';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import CopyToClipboard from 'react-copy-to-clipboard';
 // Components
 import { Alert } from './Alert';
@@ -106,7 +106,6 @@ interface Validator {
 
 interface IProps {}
 export const WithdrawalCredentials: FC<IProps> = () => {
-  const { locale } = useIntl();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [hasError, setHasError] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
@@ -147,11 +146,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     () => (validator ? `0x${validator.withdrawalCredentials.slice(-40)}` : ''),
     [validator]
   );
-  const shortAddress = useMemo<string>(
-    () =>
-      longAddress ? `${longAddress.slice(0, 6)}…${longAddress.slice(-4)}` : '',
-    [longAddress]
-  );
+
   const resultText = useMemo<string | JSX.Element>(() => {
     if (isLoading) return <Spinner />;
     if (hasError)
@@ -297,15 +292,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
         </ResultsLineItem>
       </Alert>
     );
-  }, [
-    isLoading,
-    hasError,
-    validator,
-    longAddress,
-    shortAddress,
-    locale,
-    copied,
-  ]);
+  }, [isLoading, hasError, validator, longAddress, copied]);
 
   return (
     <Container>

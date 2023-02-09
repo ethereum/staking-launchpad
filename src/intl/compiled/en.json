@@ -175,6 +175,12 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "/e+qAC": [
+    {
+      "type": 0,
+      "value": "withdrawable epoch"
+    }
+  ],
   "/h0DGY": [
     {
       "type": 0,
@@ -2333,12 +2339,6 @@
       "value": "Balance"
     }
   ],
-  "HMNJhY": [
-    {
-      "type": 0,
-      "value": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network:"
-    }
-  ],
   "HMgrdg": [
     {
       "type": 0,
@@ -2619,6 +2619,12 @@
     {
       "type": 0,
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief."
+    }
+  ],
+  "K4TRB7": [
+    {
+      "type": 0,
+      "value": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
     }
   ],
   "K6+jQ3": [
@@ -3215,6 +3221,28 @@
       "value": "The Nethermind documentation explains how to download and install the client."
     }
   ],
+  "OSEFbC": [
+    {
+      "type": 0,
+      "value": "Immediately upon broadcasting a signed voluntary exit message, the "
+    },
+    {
+      "type": 1,
+      "value": "exitEpoch"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "withdrawableEpoch"
+    },
+    {
+      "type": 0,
+      "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
+    }
+  ],
   "OdYQYh": [
     {
       "type": 0,
@@ -3609,6 +3637,20 @@
       "value": "Execute the file you just downloaded."
     }
   ],
+  "SVUntz": [
+    {
+      "type": 0,
+      "value": "Note that once a user has "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
+    }
+  ],
   "SaR1pU": [
     {
       "type": 0,
@@ -3657,6 +3699,12 @@
       "value": "Required"
     }
   ],
+  "SjBRHd": [
+    {
+      "type": 0,
+      "value": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least 4 epochs after the exit was initiated."
+    }
+  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3665,6 +3713,12 @@
     {
       "type": 1,
       "value": "homebrew"
+    }
+  ],
+  "Su0UFr": [
+    {
+      "type": 0,
+      "value": "Exit queue summary"
     }
   ],
   "Szwbym": [
@@ -5155,6 +5209,12 @@
       "value": "clock"
     }
   ],
+  "gzXQDW": [
+    {
+      "type": 0,
+      "value": "Withdrawable epoch"
+    }
+  ],
   "h/n5+N": [
     {
       "type": 0,
@@ -5405,6 +5465,12 @@
     {
       "type": 0,
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
+    }
+  ],
+  "jGVfQG": [
+    {
+      "type": 0,
+      "value": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
     }
   ],
   "jXer8/": [
@@ -5849,6 +5915,20 @@
       "value": "File uploaded"
     }
   ],
+  "m9Cvgx": [
+    {
+      "type": 0,
+      "value": "Users must then wait until their validator is checked again during the next validator sweep before their full withdrawal will be executed (assuming "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials)."
+    }
+  ],
   "mArJcj": [
     {
       "type": 0,
@@ -5901,6 +5981,12 @@
       "value": " is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
     }
   ],
+  "mcyp2f": [
+    {
+      "type": 0,
+      "value": "More on frequency of payouts below."
+    }
+  ],
   "mhyltV": [
     {
       "type": 0,
@@ -5941,6 +6027,12 @@
     {
       "type": 0,
       "value": "How to exit from staking (full withdrawals)"
+    }
+  ],
+  "n5PQND": [
+    {
+      "type": 0,
+      "value": "Exit epoch"
     }
   ],
   "nBhisA": [
@@ -6251,6 +6343,12 @@
       "value": "Launch the app from your desktop environment by double clicking on it."
     }
   ],
+  "pIaGLQ": [
+    {
+      "type": 0,
+      "value": "Once a signed voluntary exit message is broadcast, it takes at least four (4) epochs (25.6 minutes) from the current epoch before reaching the exit epoch (with no others in the queue, highly variable), and then another 256 epochs (~27.3 hours) before those funds are flagged as withdrawable."
+    }
+  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6327,6 +6425,12 @@
       "value": "What happened to 'Eth2?'"
     }
   ],
+  "qBorVY": [
+    {
+      "type": 0,
+      "value": "Exit epoch and withdrawable epoch"
+    }
+  ],
   "qDvaNm": [
     {
       "type": 0,
@@ -6357,6 +6461,16 @@
     {
       "type": 0,
       "value": "Korean"
+    }
+  ],
+  "qUSPh2": [
+    {
+      "type": 1,
+      "value": "exitEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
     }
   ],
   "qZ59xY": [
@@ -6799,6 +6913,12 @@
       "value": "Validator checklist"
     }
   ],
+  "uUkmGX": [
+    {
+      "type": 0,
+      "value": "exit epoch"
+    }
+  ],
   "ubKWX8": [
     {
       "type": 0,
@@ -6903,6 +7023,12 @@
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
     }
   ],
+  "vUFLsB": [
+    {
+      "type": 0,
+      "value": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always. Do not turn your validator off until this epoch is reached."
+    }
+  ],
   "vV6ua0": [
     {
       "type": 0,
@@ -6943,6 +7069,12 @@
     {
       "type": 0,
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
+    }
+  ],
+  "vz8WK7": [
+    {
+      "type": 0,
+      "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
     }
   ],
   "w6qYSU": [
@@ -7253,6 +7385,16 @@
     {
       "type": 0,
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
+    }
+  ],
+  "ydOJD+": [
+    {
+      "type": 1,
+      "value": "withdrawableEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
     }
   ],
   "ydh1KU": [

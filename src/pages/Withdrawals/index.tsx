@@ -30,6 +30,17 @@ const ComponentStyles = styled.div`
   }
   ul {
     margin-bottom: 10px;
+    &.key-types {
+      li span {
+        margin-inline-start: 0.5rem;
+      }
+      li:nth-of-type(1) {
+        list-style: '⚠️';
+      }
+      li:nth-of-type(2) {
+        list-style: '✅';
+      }
+    }
   }
   li {
     margin-top: 10px;
@@ -151,7 +162,7 @@ export const Withdrawals = () => {
               />
             </Text>
             <section>
-              <ul>
+              <ul className="key-types">
                 <li>
                   <FormattedMessage
                     defaultMessage='{type0} = "Type 0" = BLS keys = Old withdrawal credentials: {withdrawalsDisabled}'

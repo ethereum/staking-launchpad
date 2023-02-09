@@ -237,10 +237,10 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 <DropdownLink to={routesEnum.lighthouse}>
                   Lighthouse
                 </DropdownLink>
+                <DropdownLink to={routesEnum.lodestar}>Lodestar</DropdownLink>
                 <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
                 <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
                 <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>
-                <DropdownLink to={routesEnum.lodestar}>Lodestar</DropdownLink>
               </Box>
             </Box>
           }
@@ -368,6 +368,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <DropdownLink to={routesEnum.lighthouse}>
                     Lighthouse
                   </DropdownLink>
+                  <DropdownLink to={routesEnum.lodestar}>Lodestar</DropdownLink>
                   <DropdownLink to={routesEnum.nimbus}>Nimbus</DropdownLink>
                   <DropdownLink to={routesEnum.prysm}>Prysm</DropdownLink>
                   <DropdownLink to={routesEnum.teku}>Teku</DropdownLink>

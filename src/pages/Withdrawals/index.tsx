@@ -81,6 +81,9 @@ const ComponentStyles = styled.div`
     margin: 2rem 0;
     border-radius: 4px;
   }
+  .inline {
+    display: inline;
+  }
 `;
 
 const HashCode = styled(Code)`
@@ -293,7 +296,9 @@ export const Withdrawals = () => {
               <span role="img" aria-label="note">
                 📝
               </span>{' '}
-              <FormattedMessage defaultMessage="It is not possible to manually request specific amounts of ETH to be withdrawn" />
+              <Text className="inline">
+                <FormattedMessage defaultMessage="It is not possible to manually request specific amounts of ETH to be withdrawn" />
+              </Text>
             </Alert>
           </section>
 
@@ -457,7 +462,9 @@ export const Withdrawals = () => {
               <span role="img" aria-label="note">
                 📝
               </span>{' '}
-              <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
+              <Text className="inline">
+                <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
+              </Text>
             </Alert>
           </section>
         </section>

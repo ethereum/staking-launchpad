@@ -31,8 +31,9 @@ const ComponentStyles = styled.div`
   ul {
     margin-bottom: 10px;
     &.key-types {
+      padding-inline-start: 1em;
       li span {
-        margin-inline-start: 0.5rem;
+        margin-inline-start: 0.5em;
       }
       li:nth-of-type(1) {
         list-style: '⚠️';
@@ -48,29 +49,6 @@ const ComponentStyles = styled.div`
   }
   strong {
     font-weight: 500;
-  }
-  table {
-    margin: 1rem auto;
-    color: #212529;
-
-    * {
-      text-align: start;
-    }
-
-    th,
-    td {
-      padding: 0.75rem;
-      vertical-align: top;
-      border-top: 1px solid #dee2e6;
-    }
-
-    thead th {
-      vertical-align: bottom;
-    }
-
-    tbody + tbody {
-      border-top: 2px solid #dee2e6;
-    }
   }
   section.actionable {
     background-color: white;
@@ -100,8 +78,45 @@ const SubSectionTitle = styled(SectionTitle)`
   border-bottom: 0;
 `;
 
+const TableContainer = styled.div`
+  width: fit-content;
+  margin-inline: 0;
+  @media (max-width: ${p => p.theme.screenSizes.medium}) {
+    margin-inline: auto;
+  }
+  table {
+    margin: 1rem auto;
+    * {
+      color: ${(p: any) => p.theme.blue.dark};
+      text-align: center;
+    }
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+
+    thead th {
+      vertical-align: bottom;
+    }
+
+    tbody + tbody {
+      border-top: 2px solid #dee2e6;
+    }
+  }
+`;
+
 export const Withdrawals = () => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
+
+  const withdrawalRateData = [
+    { num: 400000, days: 3.5 },
+    { num: 500000, days: 4.3 },
+    { num: 600000, days: 5.2 },
+    { num: 700000, days: 6.1 },
+    { num: 800000, days: 7.0 },
+  ];
   return (
     <PageTemplate
       title={formatMessage({ defaultMessage: 'Staking withdrawals' })}
@@ -221,6 +236,25 @@ export const Withdrawals = () => {
                   </Link>
                 </li>
               </ul>
+              <Text className="my20">
+                <FormattedMessage defaultMessage="These tools will assist you in generating the necessary keys and message to sign. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade." />
+              </Text>
+              <Alert variant="error">
+                <Text>
+                  <FormattedMessage
+                    defaultMessage="This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
+                    values={{
+                      offline: (
+                        <strong>
+                          <FormattedMessage defaultMessage="offline" />
+                        </strong>
+                      ),
+                    }}
+                  />
+                </Text>
+              </Alert>
+            </section>
+            <section>
               <section>
                 <Heading level={4} className="mb10">
                   <FormattedMessage defaultMessage="BLS To Execution Change (BTEC) queue" />
@@ -248,7 +282,7 @@ export const Withdrawals = () => {
                     defaultMessage="These messages are limited to 16 per block ({message}), so if more than 16
                     requests are being made at one time, a queue will be formed and these will be processed in
                     subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users
-                    submitting this message are likely to see delays up to an estimated 2-3 days before this request
+                    submitting this message may see delays up to an estimated 2-3 days before this request
                     is processed."
                     values={{
                       message: <Code>MAX_BLS_TO_EXECUTION_CHANGES</Code>,
@@ -290,7 +324,7 @@ export const Withdrawals = () => {
               />
             </Text>
             <Text className="mb10">
-              <FormattedMessage defaultMessage="These are also referred to as “partial withdrawals” as the remaining 32 ETH stays locked and staked." />
+              <FormattedMessage defaultMessage="These are also referred to as “partial withdrawals” or “reward payments” as the remaining 32 ETH stays locked and staked." />
             </Text>
             <Alert variant="warning" className="mt30">
               <span role="img" aria-label="note">
@@ -648,7 +682,7 @@ export const Withdrawals = () => {
               <section className="ml20">
                 <Text className="mb10">
                   <FormattedMessage
-                    defaultMessage="{exitEpochLabel} - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
+                    defaultMessage="{exitEpochLabel} - epoch at which your validator is no longer active, no longer earning rewards, and is no longer subject to slashing rules."
                     values={{
                       exitEpochLabel: (
                         <strong>
@@ -661,22 +695,23 @@ export const Withdrawals = () => {
                 <Text className="mb10">
                   <FormattedMessage
                     defaultMessage="This epoch is determined by the first available epoch that isn't already maxed out with other validators
-                    exiting (rate limit depends on total validators on the network), and must be at least 4 epochs after the exit was initiated."
+                    exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
                   />
                 </Text>
-                <Alert variant="error" className="my20">
-                  <Text>
-                    <FormattedMessage
-                      defaultMessage='Up until this epoch (while "in the queue") your validator is expected to be online and is held to the same
-                      slashing rules as always. Do not turn your validator off until this epoch is reached.'
-                    />
-                  </Text>
-                </Alert>
+                <Text>
+                  <FormattedMessage
+                    defaultMessage='Up until this epoch (while "in the queue") your validator is expected to be online and is held to the same
+                    slashing rules as always.'
+                  />{' '}
+                  <em>
+                    <FormattedMessage defaultMessage="Do not turn your validator off until this epoch is reached." />
+                  </em>
+                </Text>
               </section>
               <section className="ml20 mb30">
                 <Text className="mb10">
                   <FormattedMessage
-                    defaultMessage="{withdrawableEpochLabel} - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
+                    defaultMessage="{withdrawableEpochLabel} - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
                     values={{
                       withdrawableEpochLabel: (
                         <strong>
@@ -696,29 +731,70 @@ export const Withdrawals = () => {
                 </strong>
               </Text>
               <Text className="mb10">
-                <FormattedMessage
-                  defaultMessage="Once a signed voluntary exit message is broadcast, it takes at least four (4) epochs (25.6 minutes) from the
-                  current epoch before reaching the exit epoch (with no others in the queue, highly variable), and then another 256 epochs (~27.3 hours)
-                  before those funds are flagged as withdrawable."
-                />
+                <FormattedMessage defaultMessage="Once a signed voluntary exit message is broadcast, it takes:" />
               </Text>
+              <ul>
+                <li>
+                  <FormattedMessage
+                    defaultMessage="At least {time} (four epochs) from the current epoch before reaching the exit
+                    epoch (with no others in the queue, {highlyVariable})"
+                    values={{
+                      time: (
+                        <strong>
+                          <FormattedMessage defaultMessage="~25 minutes" />
+                        </strong>
+                      ),
+                      highlyVariable: (
+                        <em>
+                          <FormattedMessage defaultMessage="highly variable" />
+                        </em>
+                      ),
+                    }}
+                  />
+                </li>
+                <li>
+                  <FormattedMessage
+                    defaultMessage="Then another {time} (256 epochs) before those funds are flagged as withdrawable"
+                    values={{
+                      time: (
+                        <strong>
+                          <FormattedMessage defaultMessage="~27 hours" />
+                        </strong>
+                      ),
+                    }}
+                  />
+                </li>
+                <li>
+                  <FormattedMessage
+                    defaultMessage="Then up to {time} for the next validator sweep to execute the full withdrawal
+                    (assumes {type1} withdrawal credentials)"
+                    values={{
+                      type1: <Code>0x01</Code>,
+                      time: (
+                        <strong>
+                          <FormattedMessage defaultMessage="a few more days" />
+                        </strong>
+                      ),
+                    }}
+                  />
+                </li>
+              </ul>
               <Text className="mb10">
-                <FormattedMessage
-                  defaultMessage="Users must then wait until their validator is checked again during the next validator sweep before their full withdrawal
-                  will be executed (assuming {type1} withdrawal credentials)."
-                  values={{ type1: <Code>0x01</Code> }}
-                />{' '}
-                <Link inline primary to="#payment-frequency">
+                This timing of this last step is variable depending on validator
+                index, current sweep position, and number of validators.{' '}
+                <Link inline primary to="#payout-frequency">
                   <FormattedMessage defaultMessage="More on frequency of payouts below." />
                 </Link>
               </Text>
-              <Text className="mb10">
-                <FormattedMessage
-                  defaultMessage="Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit,
-                  there is no further action required until the processing is complete."
-                  values={{ type1: <Code>0x01</Code> }}
-                />
-              </Text>
+              <Alert variant="success">
+                <Text>
+                  <FormattedMessage
+                    defaultMessage="Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit,
+                    there is no further action required until the processing is complete."
+                    values={{ type1: <Code>0x01</Code> }}
+                  />
+                </Text>
+              </Alert>
             </section>
           </section>
 
@@ -793,8 +869,8 @@ export const Withdrawals = () => {
                 defaultMessage="The block producer then checks the next validator in line, and once again
                 determines if a withdrawal needs to be processed or not. This process is repeated until either
                 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever
-                comes first. At that point, the withdrawal queue is sent to the execution layer to be included in
-                a block."
+                comes first. At that point, the withdrawal queue is sent to the execution layer to be included at
+                the end of the next block."
               />
             </Text>
           </section>
@@ -856,6 +932,37 @@ export const Withdrawals = () => {
               <FormattedMessage defaultMessage="Consensus layer slot timing: 12 seconds (no plans to change)" />
             </li>
           </ol>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="This can be summarized to estimate the upper limit of how long a complete sweep
+            takes depending on how many withdrawals need processing:"
+            />
+          </Text>
+          <TableContainer>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <FormattedMessage defaultMessage="Number of withdrawals" />
+                  </th>
+                  <th>
+                    <FormattedMessage defaultMessage="Time to complete" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {withdrawalRateData.map(({ num, days }) => (
+                  <tr>
+                    <td>{Intl.NumberFormat(locale).format(num)}</td>
+                    <td>
+                      {Intl.NumberFormat(locale).format(days)}{' '}
+                      <FormattedMessage defaultMessage="days" />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </TableContainer>
         </section>
 
         <section>

@@ -36,9 +36,6 @@
   "//KCTE": {
     "message": "You can start all the transactions at once, or start them individually."
   },
-  "/3K8q4": {
-    "message": "These messages are limited to 16 per block ({message}), so if more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users submitting this message are likely to see delays up to an estimated 2-3 days before this request is processed."
-  },
   "/5Hyyf": {
     "message": "Indonesian"
   },
@@ -346,6 +343,9 @@
   "57MWKW": {
     "message": "Withdrawals as an operation, not a new transaction type"
   },
+  "57h5ur": {
+    "message": "Then up to {time} for the next validator sweep to execute the full withdrawal (assumes {type1} withdrawal credentials)"
+  },
   "58PXVy": {
     "message": "Why two keys instead of one?"
   },
@@ -423,6 +423,9 @@
   "7Iz3JI": {
     "message": "Consensus Client"
   },
+  "7Nwe5A": {
+    "message": "{exitEpochLabel} - epoch at which your validator is no longer active, no longer earning rewards, and is no longer subject to slashing rules."
+  },
   "7Rw2uA": {
     "message": "consensus"
   },
@@ -482,6 +485,9 @@
   "8boRAk": {
     "message": "slashings"
   },
+  "8echXf": {
+    "message": "Do not turn your validator off until this epoch is reached."
+  },
   "8fXTDo": {
     "message": "Fortunately, this is only a one-time message that needs to be processed, and validators who provided withdrawal credentials at time of deposit are exempt from this step. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
   },
@@ -496,6 +502,9 @@
   },
   "8mybVV": {
     "message": "{type0} = \"Type 0\" = BLS keys = Old withdrawal credentials: {withdrawalsDisabled}"
+  },
+  "8rxaqc": {
+    "message": "{withdrawableEpochLabel} - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
   },
   "8uq59n": {
     "message": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
@@ -637,6 +646,9 @@
   },
   "BUFaRV": {
     "message": "EthStaker community"
+  },
+  "Bc20la": {
+    "message": "days"
   },
   "Bf2QKg": {
     "message": "Validating is a long-term commitment"
@@ -1019,6 +1031,9 @@
   "K37W0m": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief."
   },
+  "K3uH1C": {
+    "message": "offline"
+  },
   "K4TRB7": {
     "message": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
   },
@@ -1155,6 +1170,9 @@
   "Mb3npQ": {
     "message": "Using the terminal"
   },
+  "MbLMTq": {
+    "message": "This can be summarized to estimate the upper limit of how long a complete sweep takes depending on how many withdrawals need processing:"
+  },
   "MbsAo3": {
     "message": "This launchpad will help you become a validator, so you can play an active part in Ethereum's future. Validators are key to the more secure, scalable, and sustainable Ethereum we're building together."
   },
@@ -1172,6 +1190,9 @@
   },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
+  },
+  "N6QzJ5": {
+    "message": "a few more days"
   },
   "NDrMCw": {
     "message": "Total number of validator accounts that have eligible withdrawals (variable)"
@@ -1224,6 +1245,9 @@
   "NiWtxk": {
     "message": "{type1} = \"Type 1\" = Execution keys = New withdrawal credentials: {withdrawalsEnabled}"
   },
+  "NkFxlX": {
+    "message": "At least {time} (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, {highlyVariable})"
+  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -1247,6 +1271,9 @@
   },
   "ON2tXT": {
     "message": "The Nethermind documentation explains how to download and install the client."
+  },
+  "ORVjVH": {
+    "message": "Then another {time} (256 epochs) before those funds are flagged as withdrawable"
   },
   "OSEFbC": {
     "message": "Immediately upon broadcasting a signed voluntary exit message, the {exitEpoch} and {withdrawableEpoch} values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
@@ -1284,6 +1311,9 @@
   },
   "P9mVZK": {
     "message": "Your network has changed"
+  },
+  "PQgBnI": {
+    "message": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
   },
   "PfoT0C": {
     "message": "This checklist will help you understand the role of a validator and prepare you for the role."
@@ -1388,6 +1418,9 @@
   "Ryptmy": {
     "message": "Verify it with the following command to check if it returns the client version correctly:"
   },
+  "S+FY5u": {
+    "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
+  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -1426,9 +1459,6 @@
   },
   "Seanpx": {
     "message": "Required"
-  },
-  "SjBRHd": {
-    "message": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least 4 epochs after the exit was initiated."
   },
   "SqKNq2": {
     "description": "{homebrew} = 'homebrew' and links to the homebrew package manager website documentation",
@@ -1486,6 +1516,9 @@
   "UYoRgC": {
     "message": "Depending how you set up your initial deposit, your account may or may not be ready for withdrawals already:"
   },
+  "UZkvC5": {
+    "message": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always."
+  },
   "Utck3E": {
     "message": "Language support"
   },
@@ -1532,11 +1565,17 @@
   "Vm6cRY": {
     "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
   },
+  "VwWGD9": {
+    "message": "These messages are limited to 16 per block ({message}), so if more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users submitting this message may see delays up to an estimated 2-3 days before this request is processed."
+  },
   "VzGJkB": {
     "message": "Staker checklist"
   },
   "W10U1b": {
     "message": "Teku is Apache 2 licensed and written in Java, a language notable for its maturity and ubiquity."
+  },
+  "W1mus6": {
+    "message": "Once a signed voluntary exit message is broadcast, it takes:"
   },
   "W2Eues": {
     "message": "Warning: This is a staking launchpad for the {testnet}."
@@ -1603,6 +1642,9 @@
   "Xbt2gv": {
     "description": "{http} shows '--http' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+  },
+  "XcItS7": {
+    "message": "~25 minutes"
   },
   "XmddSV": {
     "message": "Build from source"
@@ -1708,6 +1750,9 @@
   },
   "ZzTcj5": {
     "message": "Download python3 and follow the installation instructions."
+  },
+  "a+Xw/D": {
+    "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining 32 ETH stays locked and staked."
   },
   "a+xjjV": {
     "message": "Become a validator with Prysm"
@@ -1877,9 +1922,6 @@
   "dprf8W": {
     "message": "Where can I find troubleshooting support?"
   },
-  "duDhm0": {
-    "message": "The block producer then checks the next validator in line, and once again determines if a withdrawal needs to be processed or not. This process is repeated until either 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever comes first. At that point, the withdrawal queue is sent to the execution layer to be included in a block."
-  },
   "dvr19k": {
     "message": "Setup"
   },
@@ -1983,6 +2025,9 @@
   "g37XKP": {
     "message": "More on virtualenv"
   },
+  "gFj3By": {
+    "message": "highly variable"
+  },
   "gHJegi": {
     "message": "Validators still need to complete their validation duties until they are exited"
   },
@@ -2003,9 +2048,6 @@
   },
   "gfLdAQ": {
     "message": "More on the Beacon Chain"
-  },
-  "giPHLY": {
-    "message": "These are also referred to as “partial withdrawals” as the remaining 32 ETH stays locked and staked."
   },
   "gjBiyj": {
     "message": "Loading..."
@@ -2199,6 +2241,9 @@
   "kQTAe+": {
     "message": "Does the URL match what you’ve seen on other websites?"
   },
+  "kRQqpE": {
+    "message": "Time to complete"
+  },
   "kSt9db": {
     "message": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip}. This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
   },
@@ -2310,9 +2355,6 @@
   "lrdlY6": {
     "message": "File uploaded"
   },
-  "m9Cvgx": {
-    "message": "Users must then wait until their validator is checked again during the next validator sweep before their full withdrawal will be executed (assuming {type1} withdrawal credentials)."
-  },
   "mArJcj": {
     "message": "Hard drive"
   },
@@ -2333,6 +2375,9 @@
   },
   "mcyp2f": {
     "message": "More on frequency of payouts below."
+  },
+  "mdmA4f": {
+    "message": "Number of withdrawals"
   },
   "mhyltV": {
     "message": "I've set my graffiti flag."
@@ -2474,14 +2519,14 @@
   "pHQwsN": {
     "message": "Launch the app from your desktop environment by double clicking on it."
   },
-  "pIaGLQ": {
-    "message": "Once a signed voluntary exit message is broadcast, it takes at least four (4) epochs (25.6 minutes) from the current epoch before reaching the exit epoch (with no others in the queue, highly variable), and then another 256 epochs (~27.3 hours) before those funds are flagged as withdrawable."
-  },
   "pWuGLy": {
     "message": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
   },
   "pXyH++": {
     "message": "The Besu documentation explains how to download and install the client."
+  },
+  "pb2jYe": {
+    "message": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
   },
   "pfJX2D": {
     "message": "More on phishing"
@@ -2528,9 +2573,6 @@
   },
   "qQ+Xla": {
     "message": "Korean"
-  },
-  "qUSPh2": {
-    "message": "{exitEpochLabel} - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
   },
   "qZ59xY": {
     "message": "All validators"
@@ -2604,6 +2646,9 @@
   },
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
+  },
+  "sToVAS": {
+    "message": "The block producer then checks the next validator in line, and once again determines if a withdrawal needs to be processed or not. This process is repeated until either 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever comes first. At that point, the withdrawal queue is sent to the execution layer to be included at the end of the next block."
   },
   "sXV95+": {
     "message": "CPU and RAM"
@@ -2742,9 +2787,6 @@
   },
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
-  },
-  "vUFLsB": {
-    "message": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always. Do not turn your validator off until this epoch is reached."
   },
   "vV6ua0": {
     "message": "Step 1: Download the Wagyu Key Gen app for your operating system"
@@ -2885,9 +2927,6 @@
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
   },
-  "ydOJD+": {
-    "message": "{withdrawableEpochLabel} - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
-  },
   "ydh1KU": {
     "message": "Language information"
   },
@@ -2937,6 +2976,9 @@
   },
   "zkT9Jx": {
     "message": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+  },
+  "znyxZv": {
+    "message": "~27 hours"
   },
   "zpmjjy": {
     "message": "Communication between the execution layer and consensus layer occurs using the {engineApi}. This is a set of JSON RPC methods that can be used to communicate between the two client layers."

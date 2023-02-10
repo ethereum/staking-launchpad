@@ -187,18 +187,19 @@ const _GenerateKeysPage = ({
       </Paper>
       <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium" className="mb20">
-          Withdrawal address
+          <FormattedMessage defaultMessage="Withdrawal address" />
         </Heading>
         <Text className="mb20">
-          You may choose to provide a withdrawal address with your initial
-          deposit to automatically enable reward payments and also the ability
-          to fully exit your funds anytime after the Shanghai/Capella upgrade.
-          This address should be to a regular Ethereum address and will be the
-          only address funds can be sent to from your new validator accounts.
+          <FormattedMessage
+            defaultMessage="You may choose to provide a withdrawal address with your initial
+            deposit to automatically enable reward payments and also the ability
+            to fully exit your funds anytime after the Shanghai/Capella upgrade.
+            This address should be to a regular Ethereum address and will be the
+            only address funds can be sent to from your new validator accounts."
+          />
         </Text>
         <Text className="mb20">
-          Paste your chosen address here to include it in the copy/paste CLI
-          command below:
+          <FormattedMessage defaultMessage="Paste your chosen address here to include it in the copy/paste CLI command below:" />
         </Text>
         <AddressInputContainer className="mb40">
           <AddressInput
@@ -211,17 +212,14 @@ const _GenerateKeysPage = ({
         </AddressInputContainer>
         <Alert variant="error">
           {isValidWithdrawalAddress ? (
-            <span>
-              Make sure you have control over this address as this cannot be
-              changed.
-            </span>
+            <FormattedMessage defaultMessage="Make sure you have control over this address as this cannot be changed." />
           ) : (
-            <span>
-              If this is not provided now, your deposited funds will remain
+            <FormattedMessage
+              defaultMessage="If this is not provided now, your deposited funds will remain
               locked on the Beacon Chain until an address is provided. Unlocking
               will require signing a message with your withdrawal keys,
-              generated from your mnemonic seed phrase (so keep it safe).
-            </span>
+              generated from your mnemonic seed phrase (so keep it safe)."
+            />
           )}
         </Alert>
       </Paper>

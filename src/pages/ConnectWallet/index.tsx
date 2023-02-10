@@ -439,21 +439,22 @@ const _ConnectWalletPage = ({
                     className="mt20"
                   >
                     {withdrawalAddress ? (
-                      <span>
-                        The withdrawal address for these validators will be set
-                        to{' '}
-                        <span title={withdrawalAddress}>
-                          {withdrawalAddressShort}
-                        </span>
-                        . Make 100% sure you control this address before
-                        depositing, as this cannot be changed.
-                      </span>
+                      <FormattedMessage
+                        defaultMessage="The withdrawal address for these validators will be set to {withdrawalAddress}.
+                        Make 100% sure you control this address before depositing, as this cannot be changed."
+                        values={{
+                          withdrawalAddress: (
+                            <span title={withdrawalAddress}>
+                              {withdrawalAddressShort}
+                            </span>
+                          ),
+                        }}
+                      />
                     ) : (
-                      <span>
-                        A withdrawal address has not been set for these
-                        validators. Staked funds and rewards will remain locked
-                        until withdrawal credentials are provided.
-                      </span>
+                      <FormattedMessage
+                        defaultMessage="A withdrawal address has not been set for these validators.
+                        Staked funds and rewards will remain locked until withdrawal credentials are provided."
+                      />
                     )}
                   </Alert>
                 </>

@@ -389,7 +389,8 @@ export const Checklist = () => {
       layer: layerEnum.consensus,
       discord: 'https://discord.gg/7hPv2T6',
       ...defaultConsensusPorts,
-      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      jwtUrl:
+        'https://docs.teku.consensys.net/en/latest/HowTo/Get-Started/Connect/Connect-To-Mainnet/#1-generate-the-shared-secret',
       feeRecipientUrl:
         'https://docs.teku.consensys.net/en/latest/HowTo/Prepare-for-The-Merge/#configure-the-fee-recipient',
       metricsUrl:
@@ -409,7 +410,7 @@ export const Checklist = () => {
             defaultMessage="Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
             values={{
               discord: (
-                <Link primary inline to="https://invite.gg/ethstaker">
+                <Link primary inline to="https://discord.io/ethstaker">
                   Discord
                 </Link>
               ),

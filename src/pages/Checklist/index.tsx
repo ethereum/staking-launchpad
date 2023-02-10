@@ -409,7 +409,7 @@ export const Checklist = () => {
             defaultMessage="Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
             values={{
               discord: (
-                <Link primary inline to="https://invite.gg/ethstaker">
+                <Link primary inline to="https://discord.io/ethstaker">
                   Discord
                 </Link>
               ),

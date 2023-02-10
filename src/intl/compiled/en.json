@@ -2621,6 +2621,12 @@
       "value": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief."
     }
   ],
+  "K3uH1C": [
+    {
+      "type": 0,
+      "value": "offline"
+    }
+  ],
   "K4TRB7": [
     {
       "type": 0,
@@ -3613,6 +3619,20 @@
       "value": "Verify it with the following command to check if it returns the client version correctly:"
     }
   ],
+  "S+FY5u": [
+    {
+      "type": 0,
+      "value": "This requires use of your mnemonic seed phrase, and should be performed on an "
+    },
+    {
+      "type": 1,
+      "value": "offline"
+    },
+    {
+      "type": 0,
+      "value": " air-gapped machine."
+    }
+  ],
   "S943uU": [
     {
       "type": 0,
@@ -3999,12 +4019,6 @@
     {
       "type": 0,
       "value": "Transfers between validators and withdrawals aren't possible yet. Withdrawal functionality is currently a top priority, and is planned to be rolled out in the next network upgrade, known as the Shanghai upgrade."
-    }
-  ],
-  "W7ORrJ": [
-    {
-      "type": 0,
-      "value": "These tools will assist you in generating the necessary keys and message to sign. This requires use of your mnemonic seed phrase, and should be performed on an offline air-gapped machine. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
     }
   ],
   "W8nHSd": [
@@ -6365,6 +6379,12 @@
     {
       "type": 0,
       "value": "The Besu documentation explains how to download and install the client."
+    }
+  ],
+  "pb2jYe": [
+    {
+      "type": 0,
+      "value": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
     }
   ],
   "pfJX2D": [

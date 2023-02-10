@@ -1019,6 +1019,9 @@
   "K37W0m": {
     "message": "With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief."
   },
+  "K3uH1C": {
+    "message": "offline"
+  },
   "K4TRB7": {
     "message": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
   },
@@ -1388,6 +1391,9 @@
   "Ryptmy": {
     "message": "Verify it with the following command to check if it returns the client version correctly:"
   },
+  "S+FY5u": {
+    "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
+  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -1546,9 +1552,6 @@
   },
   "W6w5Wb": {
     "message": "Transfers between validators and withdrawals aren't possible yet. Withdrawal functionality is currently a top priority, and is planned to be rolled out in the next network upgrade, known as the Shanghai upgrade."
-  },
-  "W7ORrJ": {
-    "message": "These tools will assist you in generating the necessary keys and message to sign. This requires use of your mnemonic seed phrase, and should be performed on an offline air-gapped machine. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
   },
   "W8nHSd": {
     "message": "FAQ"
@@ -2485,6 +2488,9 @@
   },
   "pXyH++": {
     "message": "The Besu documentation explains how to download and install the client."
+  },
+  "pb2jYe": {
+    "message": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
   },
   "pfJX2D": {
     "message": "More on phishing"

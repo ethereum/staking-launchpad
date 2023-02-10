@@ -87,20 +87,6 @@
       "value": "You can start all the transactions at once, or start them individually."
     }
   ],
-  "/3K8q4": [
-    {
-      "type": 0,
-      "value": "These messages are limited to 16 per block ("
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": "), so if more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users submitting this message are likely to see delays up to an estimated 2-3 days before this request is processed."
-    }
-  ],
   "/5Hyyf": [
     {
       "type": 0,
@@ -927,6 +913,28 @@
       "value": "Withdrawals as an operation, not a new transaction type"
     }
   ],
+  "57h5ur": [
+    {
+      "type": 0,
+      "value": "Then up to "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " for the next validator sweep to execute the full withdrawal (assumes "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials)"
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
@@ -1141,6 +1149,16 @@
       "value": "Consensus Client"
     }
   ],
+  "7Nwe5A": [
+    {
+      "type": 1,
+      "value": "exitEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator is no longer active, no longer earning rewards, and is no longer subject to slashing rules."
+    }
+  ],
   "7Rw2uA": [
     {
       "type": 0,
@@ -1279,6 +1297,12 @@
       "value": "slashings"
     }
   ],
+  "8echXf": [
+    {
+      "type": 0,
+      "value": "Do not turn your validator off until this epoch is reached."
+    }
+  ],
   "8fXTDo": [
     {
       "type": 0,
@@ -1319,6 +1343,16 @@
     {
       "type": 1,
       "value": "withdrawalsDisabled"
+    }
+  ],
+  "8rxaqc": [
+    {
+      "type": 1,
+      "value": "withdrawableEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
     }
   ],
   "8uq59n": [
@@ -1711,6 +1745,12 @@
     {
       "type": 0,
       "value": "EthStaker community"
+    }
+  ],
+  "Bc20la": [
+    {
+      "type": 0,
+      "value": "days"
     }
   ],
   "Bf2QKg": [
@@ -2953,6 +2993,12 @@
       "value": "Using the terminal"
     }
   ],
+  "MbLMTq": [
+    {
+      "type": 0,
+      "value": "This can be summarized to estimate the upper limit of how long a complete sweep takes depending on how many withdrawals need processing:"
+    }
+  ],
   "MbsAo3": [
     {
       "type": 0,
@@ -2999,6 +3045,12 @@
     {
       "type": 0,
       "value": " isn't a valid deposit_data JSON file. Try again."
+    }
+  ],
+  "N6QzJ5": [
+    {
+      "type": 0,
+      "value": "a few more days"
     }
   ],
   "NDrMCw": [
@@ -3155,6 +3207,28 @@
       "value": "withdrawalsEnabled"
     }
   ],
+  "NkFxlX": [
+    {
+      "type": 0,
+      "value": "At least "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, "
+    },
+    {
+      "type": 1,
+      "value": "highlyVariable"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3225,6 +3299,20 @@
     {
       "type": 0,
       "value": "The Nethermind documentation explains how to download and install the client."
+    }
+  ],
+  "ORVjVH": [
+    {
+      "type": 0,
+      "value": "Then another "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (256 epochs) before those funds are flagged as withdrawable"
     }
   ],
   "OSEFbC": [
@@ -3333,6 +3421,12 @@
     {
       "type": 0,
       "value": "Your network has changed"
+    }
+  ],
+  "PQgBnI": [
+    {
+      "type": 0,
+      "value": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
     }
   ],
   "PfoT0C": [
@@ -3719,12 +3813,6 @@
       "value": "Required"
     }
   ],
-  "SjBRHd": [
-    {
-      "type": 0,
-      "value": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least 4 epochs after the exit was initiated."
-    }
-  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -3843,6 +3931,12 @@
     {
       "type": 0,
       "value": "Depending how you set up your initial deposit, your account may or may not be ready for withdrawals already:"
+    }
+  ],
+  "UZkvC5": [
+    {
+      "type": 0,
+      "value": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always."
     }
   ],
   "Utck3E": [
@@ -3983,6 +4077,20 @@
       "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
     }
   ],
+  "VwWGD9": [
+    {
+      "type": 0,
+      "value": "These messages are limited to 16 per block ("
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": "), so if more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users submitting this message may see delays up to an estimated 2-3 days before this request is processed."
+    }
+  ],
   "VzGJkB": [
     {
       "type": 0,
@@ -3993,6 +4101,12 @@
     {
       "type": 0,
       "value": "Teku is Apache 2 licensed and written in Java, a language notable for its maturity and ubiquity."
+    }
+  ],
+  "W1mus6": [
+    {
+      "type": 0,
+      "value": "Once a signed voluntary exit message is broadcast, it takes:"
     }
   ],
   "W2Eues": [
@@ -4171,6 +4285,12 @@
     {
       "type": 0,
       "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
+    }
+  ],
+  "XcItS7": [
+    {
+      "type": 0,
+      "value": "~25 minutes"
     }
   ],
   "XmddSV": [
@@ -4455,6 +4575,12 @@
     {
       "type": 0,
       "value": "Download python3 and follow the installation instructions."
+    }
+  ],
+  "a+Xw/D": [
+    {
+      "type": 0,
+      "value": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining 32 ETH stays locked and staked."
     }
   ],
   "a+xjjV": [
@@ -4821,12 +4947,6 @@
       "value": "Where can I find troubleshooting support?"
     }
   ],
-  "duDhm0": [
-    {
-      "type": 0,
-      "value": "The block producer then checks the next validator in line, and once again determines if a withdrawal needs to be processed or not. This process is repeated until either 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever comes first. At that point, the withdrawal queue is sent to the execution layer to be included in a block."
-    }
-  ],
   "dvr19k": [
     {
       "type": 0,
@@ -5091,6 +5211,12 @@
       "value": "More on virtualenv"
     }
   ],
+  "gFj3By": [
+    {
+      "type": 0,
+      "value": "highly variable"
+    }
+  ],
   "gHJegi": [
     {
       "type": 0,
@@ -5139,12 +5265,6 @@
     {
       "type": 0,
       "value": "More on the Beacon Chain"
-    }
-  ],
-  "giPHLY": [
-    {
-      "type": 0,
-      "value": "These are also referred to as “partial withdrawals” as the remaining 32 ETH stays locked and staked."
     }
   ],
   "gjBiyj": [
@@ -5623,6 +5743,12 @@
       "value": "Does the URL match what you’ve seen on other websites?"
     }
   ],
+  "kRQqpE": [
+    {
+      "type": 0,
+      "value": "Time to complete"
+    }
+  ],
   "kSt9db": [
     {
       "type": 0,
@@ -5935,20 +6061,6 @@
       "value": "File uploaded"
     }
   ],
-  "m9Cvgx": [
-    {
-      "type": 0,
-      "value": "Users must then wait until their validator is checked again during the next validator sweep before their full withdrawal will be executed (assuming "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " withdrawal credentials)."
-    }
-  ],
   "mArJcj": [
     {
       "type": 0,
@@ -6005,6 +6117,12 @@
     {
       "type": 0,
       "value": "More on frequency of payouts below."
+    }
+  ],
+  "mdmA4f": [
+    {
+      "type": 0,
+      "value": "Number of withdrawals"
     }
   ],
   "mhyltV": [
@@ -6363,12 +6481,6 @@
       "value": "Launch the app from your desktop environment by double clicking on it."
     }
   ],
-  "pIaGLQ": [
-    {
-      "type": 0,
-      "value": "Once a signed voluntary exit message is broadcast, it takes at least four (4) epochs (25.6 minutes) from the current epoch before reaching the exit epoch (with no others in the queue, highly variable), and then another 256 epochs (~27.3 hours) before those funds are flagged as withdrawable."
-    }
-  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6487,16 +6599,6 @@
     {
       "type": 0,
       "value": "Korean"
-    }
-  ],
-  "qUSPh2": [
-    {
-      "type": 1,
-      "value": "exitEpochLabel"
-    },
-    {
-      "type": 0,
-      "value": " - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
     }
   ],
   "qZ59xY": [
@@ -6697,6 +6799,12 @@
     {
       "type": 0,
       "value": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
+    }
+  ],
+  "sToVAS": [
+    {
+      "type": 0,
+      "value": "The block producer then checks the next validator in line, and once again determines if a withdrawal needs to be processed or not. This process is repeated until either 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever comes first. At that point, the withdrawal queue is sent to the execution layer to be included at the end of the next block."
     }
   ],
   "sXV95+": [
@@ -7047,12 +7155,6 @@
     {
       "type": 0,
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
-    }
-  ],
-  "vUFLsB": [
-    {
-      "type": 0,
-      "value": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always. Do not turn your validator off until this epoch is reached."
     }
   ],
   "vV6ua0": [
@@ -7413,16 +7515,6 @@
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
     }
   ],
-  "ydOJD+": [
-    {
-      "type": 1,
-      "value": "withdrawableEpochLabel"
-    },
-    {
-      "type": 0,
-      "value": " - epoch at which your validator is no longer active, no longer earns rewards, and is no longer subject to slashing rules."
-    }
-  ],
   "ydh1KU": [
     {
       "type": 0,
@@ -7533,6 +7625,12 @@
     {
       "type": 0,
       "value": "We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic."
+    }
+  ],
+  "znyxZv": [
+    {
+      "type": 0,
+      "value": "~27 hours"
     }
   ],
   "zpmjjy": [

@@ -24,6 +24,8 @@ const StyledTabs = styled(Tabs)`
   div[class*='StyledTabsHeader'] {
     border-bottom: 1px solid #d6d7d6;
     max-width: fit-content;
+    flex-wrap: nowrap;
+    text-align: center;
   }
   div[class*='StyledTab'][class*='StyledBox'] {
     font-weight: 400;

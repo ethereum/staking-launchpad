@@ -86,20 +86,15 @@ const TableContainer = styled.div`
   }
   table {
     margin: 1rem auto;
-    color: #212529;
-    /* border-collapse: separate; */
-    /* border-spacing: 1rem 0; */
-
     * {
-      text-align: start;
+      color: ${(p: any) => p.theme.blue.dark};
+      text-align: center;
     }
-
     th,
     td {
       padding: 0.75rem;
       vertical-align: top;
       border-top: 1px solid #dee2e6;
-      text-align: center;
     }
 
     thead th {

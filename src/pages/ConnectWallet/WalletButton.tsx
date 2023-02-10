@@ -46,7 +46,6 @@ const ConnectingContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 8px;
-  cursor: pointer;
 `;
 
 const SpinnerContainer = styled.span`

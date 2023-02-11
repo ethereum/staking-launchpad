@@ -217,12 +217,8 @@ export const Withdrawals = () => {
               <ul>
                 <li>
                   <strong>Staking Deposit CLI</strong> -{' '}
-                  <Link
-                    inline
-                    primary
-                    to="https://notes.ethereum.org/@launchpad/btec"
-                  >
-                    Walkthrough tutorial
+                  <Link inline primary to="/btec/">
+                    Launchpad walkthrough tutorial
                   </Link>
                 </li>
                 <li>

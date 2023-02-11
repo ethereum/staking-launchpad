@@ -3,6 +3,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+EZ9E/": {
+    "message": "Interactive mode"
+  },
   "+L0IkF": {
     "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -109,6 +112,9 @@
   "0FTs1T": {
     "message": "not"
   },
+  "0GWhvr": {
+    "message": "Expected outputs"
+  },
   "0MIRQ5": {
     "message": "Is the effective balance maxed out at 32?"
   },
@@ -186,6 +192,9 @@
   },
   "1Vkpd0": {
     "message": "Check that the password files don’t have trailing new-lines."
+  },
+  "1Yybuc": {
+    "message": "docs of full arguments here"
   },
   "1fDfw7": {
     "message": "How does this all happen?"
@@ -278,6 +287,9 @@
   },
   "3H3ygi": {
     "message": "No validators found for your connected wallet"
+  },
+  "3KP7+U": {
+    "message": "Command line with flags"
   },
   "3NHygY": {
     "message": "Testing on Goerli"
@@ -560,6 +572,9 @@
   "9uOFF3": {
     "message": "Overview"
   },
+  "9vcjcW": {
+    "message": "PR description"
+  },
   "9vwGlT": {
     "message": "I've synced my beacon node on {consensusLayerName}."
   },
@@ -581,6 +596,9 @@
   },
   "AC669U": {
     "message": "If you need help, check out the Python documentation."
+  },
+  "AEbKyt": {
+    "message": "For devnet, you can add a param:"
   },
   "AJD+66": {
     "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
@@ -686,6 +704,9 @@
   "CF9vMR": {
     "message": "Proof of stake"
   },
+  "CT+gEC": {
+    "message": "Upload to Beacon Node {btec} pool"
+  },
   "CVDzDs": {
     "message": "You should certainly top up if your balance is close to 16 ETH. This is to ensure you don’t get kicked out of the validator set (which automatically happens if your balance falls below 16 ETH)."
   },
@@ -705,6 +726,9 @@
   "Cgrsge": {
     "message": "Current validators"
   },
+  "Co67tK": {
+    "message": "BLS To Execution Change"
+  },
   "D0Rigq": {
     "message": "NO"
   },
@@ -717,6 +741,9 @@
   },
   "D4cQV/": {
     "message": "How much ETH do I need to stake to become a validator?"
+  },
+  "D5NvkC": {
+    "message": "Download {btec} branch:"
   },
   "DCaq7N": {
     "message": "Your wallet is connected to the right network!"
@@ -807,6 +834,9 @@
   },
   "Ej2jo1": {
     "message": "Withdrawal address:"
+  },
+  "F8yf1S": {
+    "message": "You can find {docsHere}."
   },
   "FEbVwB": {
     "message": "The key concept is the following:"
@@ -1134,6 +1164,9 @@
   "LwEHRm": {
     "message": "Why do I need to run an execution client now?"
   },
+  "M35Dz/": {
+    "message": "Upload to Beacon Node BLSToExecutionChange pool"
+  },
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
   },
@@ -1224,6 +1257,9 @@
   "NUCB4G": {
     "message": "This {network} validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
   },
+  "NUcFVA": {
+    "message": "[Example]"
+  },
   "NVljH4": {
     "message": "More on Prysmatic Labs"
   },
@@ -1247,6 +1283,9 @@
   },
   "NkFxlX": {
     "message": "At least {time} (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, {highlyVariable})"
+  },
+  "NpIOoJ": {
+    "message": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s {signature} pool {after} Capella/Shanghai hard fork."
   },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
@@ -1405,6 +1444,9 @@
   },
   "RWqrlk": {
     "message": "congratulations"
+  },
+  "RdHdwG": {
+    "message": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
@@ -1622,6 +1664,9 @@
   "X5KFEh": {
     "message": "That is not a valid deposit_data JSON file."
   },
+  "X6/BRy": {
+    "message": "You can find the {file} file in the {folder} folder by default."
+  },
   "X72hpo": {
     "message": "This validator is ready to start receiving rewards to the withdrawal address below. No further action is needed."
   },
@@ -1707,6 +1752,9 @@
   "YkznEp": {
     "message": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
   },
+  "Yo9B64": {
+    "message": "execution layer (Eth1) address"
+  },
   "YqsgWz": {
     "message": "Slovenian"
   },
@@ -1747,6 +1795,9 @@
   },
   "Zspg8H": {
     "message": "Section 1 - Before you start"
+  },
+  "ZtpRuA": {
+    "message": "Install and set virtualenv:"
   },
   "ZzTcj5": {
     "message": "Download python3 and follow the installation instructions."
@@ -1817,6 +1868,9 @@
   "bVtlF7": {
     "message": "Be sure to account for enough space on your drive until you run maintenance on your node."
   },
+  "bat2FM": {
+    "message": "after"
+  },
   "bbr+aD": {
     "message": "The YAML files can have different syntaxes."
   },
@@ -1840,6 +1894,9 @@
   },
   "by+LIm": {
     "message": "What is a validator client?"
+  },
+  "cE71F9": {
+    "message": "[Example: {fork}]"
   },
   "cHUoV9": {
     "message": "The Geth documentation explains how to download and install the client."
@@ -2133,6 +2190,9 @@
   "iFWLYC": {
     "message": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
   },
+  "iJXdUH": {
+    "message": "docs"
+  },
   "iK1COM": {
     "message": "Accounts without updated withdrawal credentials will be skipped"
   },
@@ -2211,6 +2271,9 @@
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
     "message": "Choose {ethClientType} client"
   },
+  "jrK21r": {
+    "message": "You can find the binary files in {pr}"
+  },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
   },
@@ -2228,6 +2291,9 @@
   },
   "k4x6Ud": {
     "message": "This marked the merging of the execution layer (existing Mainnet) with the new consensus layer (the Beacon Chain) to form the single Ethereum chain of today."
+  },
+  "k67L48": {
+    "message": "Install dependencies:"
   },
   "k8bkck": {
     "message": "EIP-4895, titled {eip4895}, implements a design that simplified this whole process for stakers."
@@ -2367,6 +2433,9 @@
   "mUZnem": {
     "message": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
   },
+  "mXSzq5": {
+    "message": "Option 1: binary files"
+  },
   "mZOXtM": {
     "message": "Validators"
   },
@@ -2438,6 +2507,9 @@
   },
   "nwgrRp": {
     "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
+  },
+  "nyOMKZ": {
+    "message": "Execute with params"
   },
   "nz27+c": {
     "description": "{variables} social media platform links to Discord and Reddit (do not translate names)",
@@ -2519,6 +2591,9 @@
   "pHQwsN": {
     "message": "Launch the app from your desktop environment by double clicking on it."
   },
+  "pQxML4": {
+    "message": "Generate {json} file"
+  },
   "pWuGLy": {
     "message": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
   },
@@ -2564,6 +2639,9 @@
   },
   "qDvaNm": {
     "message": "I understand that keys are my responsibility and that my mnemonic (seed) will be the {onlyWay} to withdraw my funds."
+  },
+  "qIDtPw": {
+    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {exeuctionAddress}, you can use the {cli} tool to generate the {signed} message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
   },
   "qK4+NQ": {
     "message": "The terminal"
@@ -2838,6 +2916,9 @@
   "wtTeex": {
     "message": "Are there spelling mistakes?"
   },
+  "wtwIax": {
+    "message": "Option 2: source code + virtualenv"
+  },
   "x+fF+M": {
     "message": "Testnet simulations"
   },
@@ -2894,6 +2975,9 @@
   "xm3Ivd": {
     "message": "This JSON file isn't for the right network. Upload a file generated for your current network: {consensusLayerName}."
   },
+  "xns5Uh": {
+    "message": "Assume you have generated deposit in {eip2334} format and have BLS withdrawal credentials. If not, you can generate it by following {docs}."
+  },
   "xogY3N": {
     "message": "Besu is written in Java and released under the Apache 2.0 Licence."
   },
@@ -2938,6 +3022,9 @@
   },
   "yjBvUO": {
     "message": "Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.."
+  },
+  "ylZLi4": {
+    "message": "EIP-2334"
   },
   "ynB6C+": {
     "message": "I'm able to connect my consensus client to my execution client via HTTP API(s)."

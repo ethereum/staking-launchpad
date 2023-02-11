@@ -15,3 +15,4 @@ export * from './Languages';
 export * from './TermsOfService';
 export * from './TopUp';
 export * from './Withdrawals';
+export * from './BtecGuide';

@@ -16,9 +16,6 @@ const ComponentStyles = styled.div`
     scroll-behavior: smooth;
     scroll-margin-top: 2rem;
   }
-  section {
-    margin-top: 30px;
-  }
   a {
     text-decoration: none;
   }
@@ -27,33 +24,16 @@ const ComponentStyles = styled.div`
   ul {
     color: ${(p: any) => p.theme.blue.dark};
   }
-  ul {
-    margin-bottom: 10px;
-    &.key-types {
-      padding-inline-start: 1em;
-      li span {
-        margin-inline-start: 0.5em;
-      }
-      li:nth-of-type(1) {
-        list-style: '⚠️';
-      }
-      li:nth-of-type(2) {
-        list-style: '✅';
-      }
-    }
-  }
   li {
     font-weight: 300;
   }
   strong {
     font-weight: 500;
   }
-  .inline {
-    display: inline;
-  }
 `;
 
 const CodeBlock = styled.code`
+  display: block;
   padding: 20px;
   font-family: Courier, sans-serif;
   font-size: 1em;
@@ -62,7 +42,6 @@ const CodeBlock = styled.code`
   background-color: #d0ddee;
   border-radius: 6px;
   margin-block: 20px;
-  display: block;
   overflow: scroll;
   &.indent > *:not(:first-child) {
     margin-inline-start: 2ex;
@@ -76,9 +55,6 @@ const CodeBlock = styled.code`
   }
   .custom {
     color: ${(p: any) => p.theme.red.medium};
-  }
-  .value {
-    color: ${(p: any) => p.theme.green.medium};
   }
 `;
 const SectionTitle = styled(Heading)`
@@ -344,7 +320,7 @@ export const BtecGuide = () => {
                   generate-bls-to-execution-change \
                 </span>
                 <br />
-                <span className="dimmed">{`--chain=mainnet \\`}</span>
+                <span className="dimmed">--chain=mainnet \</span>
                 <br />
                 <span className="dimmed">
                   --mnemonic="

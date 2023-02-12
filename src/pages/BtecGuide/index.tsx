@@ -465,7 +465,7 @@ export const BtecGuide = () => {
                 <br />
                 <span className="dimmed">
                   --validator_indices="
-                  <span className="custom">{`<YOUR VALIDATOR INDEICES>`}</span>"
+                  <span className="custom">{`<YOUR VALIDATOR INDICES>`}</span>"
                   \
                 </span>
                 <br />

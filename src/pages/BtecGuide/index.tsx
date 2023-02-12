@@ -14,7 +14,7 @@ import { Code } from '../../components/Code';
 const ComponentStyles = styled.div`
   * {
     scroll-behavior: smooth;
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 2rem;
   }
   section {
     margin-top: 30px;
@@ -62,17 +62,23 @@ const CodeBlock = styled.code`
   background-color: #d0ddee;
   border-radius: 6px;
   margin-block: 20px;
-
   display: block;
   overflow: scroll;
+  &.indent > *:not(:first-child) {
+    margin-inline-start: 2ex;
+  }
+
   span {
     white-space: nowrap;
   }
-  span.flag {
-    color: rgb(0 0 0 / 0.5);
+  .dimmed {
+    opacity: 0.75;
   }
-  &.indent > *:not(:first-child) {
-    margin-inline-start: 2ex;
+  .custom {
+    color: ${(p: any) => p.theme.red.medium};
+  }
+  .value {
+    color: ${(p: any) => p.theme.green.medium};
   }
 `;
 const SectionTitle = styled(Heading)`
@@ -333,38 +339,76 @@ export const BtecGuide = () => {
                 </strong>
               </Text>
               <CodeBlock className="indent">
-                <span>{`./deposit --language=english generate-bls-to-execution-change \\`}</span>
+                <span>
+                  ./deposit <span className="dimmed">--language=english</span>{' '}
+                  generate-bls-to-execution-change \
+                </span>
                 <br />
-                <span className="flag">{`--chain=mainnet \\`}</span>
+                <span className="dimmed">{`--chain=mainnet \\`}</span>
                 <br />
-                <span className="flag">{`--mnemonic="<YOUR MNEMONIC>" \\`}</span>
+                <span className="dimmed">
+                  --mnemonic="
+                  <span className="custom">{`<YOUR MNEMONIC>`}</span>" \
+                </span>
                 <br />
-                <span className="flag">{`--bls_withdrawal_credentials_list="<YOUR OLD BLS WITHDRAWAL>" \\`}</span>
+                <span className="dimmed">
+                  --bls_withdrawal_credentials_list="
+                  <span className="custom">{`<YOUR OLD BLS WITHDRAWAL>`}</span>"
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--validator_start_index=<THE KEY START INDEX IN EIP-2334> \\`}</span>
+                <span className="dimmed">
+                  --validator_start_index=
+                  <span className="custom">{`<THE KEY START INDEX IN EIP-2334>`}</span>{' '}
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--validator_indices="<YOUR VALIDATOR INDEICES>" \\`}</span>
+                <span className="dimmed">
+                  --validator_indices="
+                  <span className="custom">{`<YOUR VALIDATOR INDICES>`}</span>"
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--execution_address="<THE EXECUTION ADDRESS FOR WITHDRAWALS>"`}</span>
+                <span className="dimmed">
+                  --execution_address="
+                  <span className="custom">{`<THE EXECUTION ADDRESS FOR WITHDRAWALS>`}</span>
+                  "
+                </span>
                 <br />
               </CodeBlock>
               <Text className="mb10">
                 <FormattedMessage defaultMessage="[Example]" />
               </Text>
               <CodeBlock className="indent">
-                <span>{`./deposit --language=english generate-bls-to-execution-change \\`}</span>
+                <span>
+                  ./deposit{` `}
+                  <span className="dimmed">--language=english</span>
+                  {` `}
+                  generate-bls-to-execution-change \
+                </span>
                 <br />
-                <span className="flag">{`--chain=mainnet \\`}</span>
+                <span className="dimmed">--chain=mainnet \</span>
                 <br />
-                <span className="flag">{`--mnemonic="sister protect peanut hill ready work profit fit wish want small inflict flip member tail between sick setup bright duck morning sell paper worry" \\`}</span>
+                <span className="dimmed">
+                  --mnemonic="sister protect peanut hill ready work profit fit
+                  wish want small inflict flip member tail between sick setup
+                  bright duck morning sell paper worry" \
+                </span>
                 <br />
-                <span className="flag">{`--bls_withdrawal_credentials_list="0x003bd3b4c03835e3dca951120970813f6ad421986760f8362c6cadb4e99ad5e3,0x00a88d6648fc70789979baf6276c8afeeb23cae6010a6152a9a94cd5ad72b28f" \\`}</span>
+                <span className="dimmed">
+                  --bls_withdrawal_credentials_list="0x00bd0b5a34de5fb17df08410b5e615dda87caf4fb72d0aac91ce5e52fc6aa8de,0x00a75d83f169fa6923f3dd78386d9608fab710d8f7fcf71ba9985893675d5382"
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--validator_start_index=0 \\`}</span>
+                <span className="dimmed">--validator_start_index=0 \</span>
                 <br />
-                <span className="flag">{`--validator_indices="50000, 50001" \\`}</span>
+                <span className="dimmed">
+                  --validator_indices="50000, 50001" \
+                </span>
                 <br />
-                <span className="flag">{`--execution_address="0x3434343434343434343434343434343434343434"`}</span>
+                <span className="dimmed">
+                  --execution_address="0x3434343434343434343434343434343434343434"
+                </span>
                 <br />
               </CodeBlock>
             </section>
@@ -393,38 +437,78 @@ export const BtecGuide = () => {
                 </strong>
               </Text>
               <CodeBlock className="indent">
-                <span>{`python ./staking_deposit/deposit.py --language=english generate-bls-to-execution-change \\`}</span>
+                <span>
+                  python ./staking_deposit/deposit.py{` `}
+                  <span className="dimmed">--language=english</span>
+                  {` `}
+                  generate-bls-to-execution-change \
+                </span>
                 <br />
-                <span className="flag">{`--chain=mainnet \\`}</span>
+                <span className="dimmed">--chain=mainnet \</span>
                 <br />
-                <span className="flag">{`--mnemonic="<YOUR MNEMONIC>" \\`}</span>
+                <span className="dimmed">
+                  --mnemonic="
+                  <span className="custom">{`<YOUR MNEMONIC>`}</span>" \
+                </span>
                 <br />
-                <span className="flag">{`--bls_withdrawal_credentials_list="<YOUR OLD BLS WITHDRAWAL>" \\`}</span>
+                <span className="dimmed">
+                  --bls_withdrawal_credentials_list="
+                  <span className="custom">{`<YOUR OLD BLS WITHDRAWAL>`}</span>"
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--validator_start_index=<THE KEY START INDEX IN EIP-2334> \\`}</span>
+                <span className="dimmed">
+                  --validator_start_index=
+                  <span className="custom">{`<THE KEY START INDEX IN EIP-2334>`}</span>
+                  {` `} \
+                </span>
                 <br />
-                <span className="flag">{`--validator_indices="<YOUR VALIDATOR INDEICES>" \\`}</span>
+                <span className="dimmed">
+                  --validator_indices="
+                  <span className="custom">{`<YOUR VALIDATOR INDEICES>`}</span>"
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--execution_address="<THE EXECUTION ADDRESS FOR WITHDRAWALS>"`}</span>
+                <span className="dimmed">
+                  --execution_address="
+                  <span className="custom">{`<THE EXECUTION ADDRESS FOR WITHDRAWALS>`}</span>
+                  "
+                </span>
                 <br />
               </CodeBlock>
               <Text className="mb10">
                 <FormattedMessage defaultMessage="[Example]" />
               </Text>
               <CodeBlock className="indent">
-                <span>{`python ./staking_deposit/deposit.py --language=english generate-bls-to-execution-change \\`}</span>
+                <span>
+                  python ./staking_deposit/deposit.py{` `}
+                  <span className="dimmed">--language=english</span>
+                  {` `}
+                  generate-bls-to-execution-change \
+                </span>
                 <br />
-                <span className="flag">{`--chain=mainnet \\`}</span>
+                <span className="dimmed">--chain=mainnet \</span>
                 <br />
-                <span className="flag">{`--mnemonic="sister protect peanut hill ready work profit fit wish want small inflict flip member tail between sick setup bright duck morning sell paper worry" \\`}</span>
+                <span className="dimmed">
+                  --mnemonic="sister protect peanut hill ready work profit fit
+                  wish want small inflict flip member tail between sick setup
+                  bright duck morning sell paper worry" \
+                </span>
                 <br />
-                <span className="flag">{`--bls_withdrawal_credentials_list="0x003bd3b4c03835e3dca951120970813f6ad421986760f8362c6cadb4e99ad5e3,0x00a88d6648fc70789979baf6276c8afeeb23cae6010a6152a9a94cd5ad72b28f" \\`}</span>
+                <span className="dimmed">
+                  --bls_withdrawal_credentials_list="0x00bd0b5a34de5fb17df08410b5e615dda87caf4fb72d0aac91ce5e52fc6aa8de,0x00a75d83f169fa6923f3dd78386d9608fab710d8f7fcf71ba9985893675d5382"
+                  \
+                </span>
                 <br />
-                <span className="flag">{`--validator_start_index=0 \\`}</span>
+                <span className="dimmed">--validator_start_index=0 \</span>
                 <br />
-                <span className="flag">{`--validator_indices="50000, 50001" \\`}</span>
+                <span className="dimmed">
+                  --validator_indices="50000, 50001" \
+                </span>
                 <br />
-                <span className="flag">{`--execution_address="0x3434343434343434343434343434343434343434"`}</span>
+                <span className="dimmed">
+                  --execution_address="0x3434343434343434343434343434343434343434"
+                </span>
                 <br />
               </CodeBlock>
 
@@ -475,13 +559,6 @@ export const BtecGuide = () => {
             </span>
             <br />
             <br />
-            <br />
-            <span>
-              **[Warning] Using devnet chain setting to generate the
-              SignedBLSToExecutionChange.**
-            </span>
-            <br />
-            <br />
             <span>
               Verifying your BLSToExecutionChange file:
               [####################################] N/N
@@ -494,7 +571,6 @@ export const BtecGuide = () => {
               Your SignedBLSToExecutionChange JSON file can be found at:
               /.../staking-deposit-cli/bls_to_execution_changes
             </span>
-            <br />
             <br />
             <br />
             <span>Press any key.</span>
@@ -519,7 +595,10 @@ export const BtecGuide = () => {
             </SectionTitle>
           </Anchor>
           <CodeBlock className="indent">
-            <span>{`curl -X POST -H “Content-type: application/json” -d @<@FILENAME DESTINATION> \\`}</span>
+            <span>
+              curl -X POST -H “Content-type: application/json” -d @
+              <span className="custom">{`<@FILENAME DESTINATION> \\`}</span>
+            </span>
             <br />
             <span>{`http://<BEACON_NODE_HTTP_API_URL>/eth/v1/beacon/pool/bls_to_execution_changes`}</span>
           </CodeBlock>

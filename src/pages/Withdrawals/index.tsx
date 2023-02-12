@@ -15,7 +15,7 @@ import { WithdrawalsTabComparison } from '../../components/WithdrawalsTabCompari
 const ComponentStyles = styled.div`
   * {
     scroll-behavior: smooth;
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 2rem;
   }
   section {
     margin-top: 30px;

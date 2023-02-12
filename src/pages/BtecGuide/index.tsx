@@ -597,7 +597,8 @@ export const BtecGuide = () => {
           <CodeBlock className="indent">
             <span>
               curl -X POST -H “Content-type: application/json” -d @
-              <span className="custom">{`<@FILENAME DESTINATION> \\`}</span>
+              <span className="custom">{`<@FILENAME DESTINATION>`}</span>
+              {` `}\
             </span>
             <br />
             <span>{`http://<BEACON_NODE_HTTP_API_URL>/eth/v1/beacon/pool/bls_to_execution_changes`}</span>

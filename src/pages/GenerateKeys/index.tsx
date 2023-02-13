@@ -131,7 +131,9 @@ const _GenerateKeysPage = ({
   };
 
   const handleAddressChange = (e: any) => {
-    const value = e.target.value.replace(/[^0-9a-fx]/gi, '');
+    // Only allow hexadecimal characters and 'x' (for 0x prefix)
+    const re = /[^0-9a-fx]/gi;
+    const value = e.target.value.replace(re, '');
     setWithdrawalAddress(value);
   };
 
@@ -205,7 +207,7 @@ const _GenerateKeysPage = ({
           <AddressInput
             onChange={handleAddressChange}
             value={withdrawalAddress}
-            placeholder="0x... (no ENS)"
+            placeholder="0x..."
             maxLength={42}
           />
           <AddressIndicator>{addressIndicatorEmoji}</AddressIndicator>

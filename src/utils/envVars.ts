@@ -62,4 +62,4 @@ export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
 
 // Boolean to translate CLI command flags, or keep in English
-export const TRANSLATE_CLI_FLAGS        = process.env.REACT_APP_TRANSLATE_CLI_FLAGS === 'true' || false;
+export const TRANSLATE_CLI_FLAGS        = process.env.REACT_APP_TRANSLATE_CLI_FLAGS === 'true';

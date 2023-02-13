@@ -21,6 +21,7 @@ import {
   Languages,
   TopUpPage,
   Withdrawals,
+  BtecGuide,
 } from './pages';
 import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Consensus/Prysm';
@@ -66,6 +67,7 @@ export enum routesEnum {
   notFoundPage = '/*',
   languagesPage = '/languages',
   withdrawals = '/withdrawals',
+  btecGuide = '/btec',
 }
 const routes: RouteType[] = [
   {
@@ -120,6 +122,7 @@ const routes: RouteType[] = [
   { path: routesEnum.languagesPage, exact: true, component: Languages },
   { path: routesEnum.topUpPage, exact: true, component: TopUpPage },
   { path: routesEnum.withdrawals, exact: true, component: Withdrawals },
+  { path: routesEnum.btecGuide, exact: true, component: BtecGuide },
   { path: routesEnum.landingPage, exact: true, component: LandingPage },
   // NOTE: this wildcard route must be the last index of the routes array
   { path: routesEnum.notFoundPage, component: NotFoundPage },

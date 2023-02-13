@@ -21,6 +21,12 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+EZ9E/": [
+    {
+      "type": 0,
+      "value": "Interactive mode"
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -291,6 +297,12 @@
       "value": "not"
     }
   ],
+  "0GWhvr": [
+    {
+      "type": 0,
+      "value": "Expected outputs"
+    }
+  ],
   "0MIRQ5": [
     {
       "type": 0,
@@ -469,6 +481,12 @@
     {
       "type": 0,
       "value": "Check that the password files don’t have trailing new-lines."
+    }
+  ],
+  "1Yybuc": [
+    {
+      "type": 0,
+      "value": "docs of full arguments here"
     }
   ],
   "1fDfw7": [
@@ -717,6 +735,12 @@
     {
       "type": 0,
       "value": "No validators found for your connected wallet"
+    }
+  ],
+  "3KP7+U": [
+    {
+      "type": 0,
+      "value": "Command line with flags"
     }
   ],
   "3NHygY": [
@@ -1483,6 +1507,12 @@
       "value": "Overview"
     }
   ],
+  "9vcjcW": [
+    {
+      "type": 0,
+      "value": "PR description"
+    }
+  ],
   "9vwGlT": [
     {
       "type": 0,
@@ -1551,6 +1581,12 @@
     {
       "type": 0,
       "value": "If you need help, check out the Python documentation."
+    }
+  ],
+  "AEbKyt": [
+    {
+      "type": 0,
+      "value": "For devnet, you can add a param:"
     }
   ],
   "AJD+66": [
@@ -1825,6 +1861,20 @@
       "value": "Proof of stake"
     }
   ],
+  "CT+gEC": [
+    {
+      "type": 0,
+      "value": "Upload to Beacon Node "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " pool"
+    }
+  ],
   "CVDzDs": [
     {
       "type": 0,
@@ -1873,6 +1923,12 @@
       "value": "Current validators"
     }
   ],
+  "Co67tK": [
+    {
+      "type": 0,
+      "value": "BLS To Execution Change"
+    }
+  ],
   "D0Rigq": [
     {
       "type": 0,
@@ -1903,6 +1959,20 @@
     {
       "type": 0,
       "value": "How much ETH do I need to stake to become a validator?"
+    }
+  ],
+  "D5NvkC": [
+    {
+      "type": 0,
+      "value": "Download "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " branch:"
     }
   ],
   "DCaq7N": [
@@ -2125,6 +2195,20 @@
     {
       "type": 0,
       "value": "Withdrawal address:"
+    }
+  ],
+  "F8yf1S": [
+    {
+      "type": 0,
+      "value": "You can find "
+    },
+    {
+      "type": 1,
+      "value": "docsHere"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "FEbVwB": [
@@ -2921,6 +3005,12 @@
       "value": "Why do I need to run an execution client now?"
     }
   ],
+  "M35Dz/": [
+    {
+      "type": 0,
+      "value": "Upload to Beacon Node BLSToExecutionChange pool"
+    }
+  ],
   "M3GwXS": [
     {
       "type": 0,
@@ -3149,6 +3239,12 @@
       "value": " validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
     }
   ],
+  "NUcFVA": [
+    {
+      "type": 0,
+      "value": "[Example]"
+    }
+  ],
   "NVljH4": [
     {
       "type": 0,
@@ -3227,6 +3323,28 @@
     {
       "type": 0,
       "value": ")"
+    }
+  ],
+  "NpIOoJ": [
+    {
+      "type": 0,
+      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s "
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": " pool "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " Capella/Shanghai hard fork."
     }
   ],
   "NwzcYT": [
@@ -3687,6 +3805,12 @@
     {
       "type": 0,
       "value": "congratulations"
+    }
+  ],
+  "RdHdwG": [
+    {
+      "type": 0,
+      "value": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
     }
   ],
   "Rg5ySE": [
@@ -4223,6 +4347,28 @@
       "value": "That is not a valid deposit_data JSON file."
     }
   ],
+  "X6/BRy": [
+    {
+      "type": 0,
+      "value": "You can find the "
+    },
+    {
+      "type": 1,
+      "value": "file"
+    },
+    {
+      "type": 0,
+      "value": " file in the "
+    },
+    {
+      "type": 1,
+      "value": "folder"
+    },
+    {
+      "type": 0,
+      "value": " folder by default."
+    }
+  ],
   "X72hpo": [
     {
       "type": 0,
@@ -4461,6 +4607,12 @@
       "value": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
     }
   ],
+  "Yo9B64": [
+    {
+      "type": 0,
+      "value": "execution layer (Eth1) address"
+    }
+  ],
   "YqsgWz": [
     {
       "type": 0,
@@ -4569,6 +4721,12 @@
     {
       "type": 0,
       "value": "Section 1 - Before you start"
+    }
+  ],
+  "ZtpRuA": [
+    {
+      "type": 0,
+      "value": "Install and set virtualenv:"
     }
   ],
   "ZzTcj5": [
@@ -4725,6 +4883,12 @@
       "value": "Be sure to account for enough space on your drive until you run maintenance on your node."
     }
   ],
+  "bat2FM": [
+    {
+      "type": 0,
+      "value": "after"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -4779,6 +4943,20 @@
     {
       "type": 0,
       "value": "What is a validator client?"
+    }
+  ],
+  "cE71F9": [
+    {
+      "type": 0,
+      "value": "[Example: "
+    },
+    {
+      "type": 1,
+      "value": "fork"
+    },
+    {
+      "type": 0,
+      "value": "]"
     }
   ],
   "cHUoV9": [
@@ -5489,6 +5667,12 @@
       "value": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
     }
   ],
+  "iJXdUH": [
+    {
+      "type": 0,
+      "value": "docs"
+    }
+  ],
   "iK1COM": [
     {
       "type": 0,
@@ -5675,6 +5859,16 @@
       "value": " client"
     }
   ],
+  "jrK21r": [
+    {
+      "type": 0,
+      "value": "You can find the binary files in "
+    },
+    {
+      "type": 1,
+      "value": "pr"
+    }
+  ],
   "jse8rl": [
     {
       "type": 0,
@@ -5709,6 +5903,12 @@
     {
       "type": 0,
       "value": "This marked the merging of the execution layer (existing Mainnet) with the new consensus layer (the Beacon Chain) to form the single Ethereum chain of today."
+    }
+  ],
+  "k67L48": [
+    {
+      "type": 0,
+      "value": "Install dependencies:"
     }
   ],
   "k8bkck": [
@@ -6093,6 +6293,12 @@
       "value": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
     }
   ],
+  "mXSzq5": [
+    {
+      "type": 0,
+      "value": "Option 1: binary files"
+    }
+  ],
   "mZOXtM": [
     {
       "type": 0,
@@ -6259,6 +6465,12 @@
     {
       "type": 0,
       "value": " testnet"
+    }
+  ],
+  "nyOMKZ": [
+    {
+      "type": 0,
+      "value": "Execute with params"
     }
   ],
   "nz27+c": [
@@ -6481,6 +6693,20 @@
       "value": "Launch the app from your desktop environment by double clicking on it."
     }
   ],
+  "pQxML4": [
+    {
+      "type": 0,
+      "value": "Generate "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " file"
+    }
+  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6581,6 +6807,36 @@
     {
       "type": 0,
       "value": " to withdraw my funds."
+    }
+  ],
+  "qIDtPw": [
+    {
+      "type": 0,
+      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
+    },
+    {
+      "type": 1,
+      "value": "exeuctionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", you can use the "
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": " tool to generate the "
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": " message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
     }
   ],
   "qK4+NQ": [
@@ -7285,6 +7541,12 @@
       "value": "Are there spelling mistakes?"
     }
   ],
+  "wtwIax": [
+    {
+      "type": 0,
+      "value": "Option 2: source code + virtualenv"
+    }
+  ],
   "x+fF+M": [
     {
       "type": 0,
@@ -7445,6 +7707,28 @@
       "value": "."
     }
   ],
+  "xns5Uh": [
+    {
+      "type": 0,
+      "value": "Assume you have generated deposit in "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " format and have BLS withdrawal credentials. If not, you can generate it by following "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "xogY3N": [
     {
       "type": 0,
@@ -7537,6 +7821,12 @@
     {
       "type": 0,
       "value": "Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.."
+    }
+  ],
+  "ylZLi4": [
+    {
+      "type": 0,
+      "value": "EIP-2334"
     }
   ],
   "ynB6C+": [

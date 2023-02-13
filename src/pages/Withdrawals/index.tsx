@@ -15,7 +15,7 @@ import { WithdrawalsTabComparison } from '../../components/WithdrawalsTabCompari
 const ComponentStyles = styled.div`
   * {
     scroll-behavior: smooth;
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 2rem;
   }
   section {
     margin-top: 30px;
@@ -217,12 +217,8 @@ export const Withdrawals = () => {
               <ul>
                 <li>
                   <strong>Staking Deposit CLI</strong> -{' '}
-                  <Link
-                    inline
-                    primary
-                    to="https://notes.ethereum.org/@launchpad/btec"
-                  >
-                    Walkthrough tutorial
+                  <Link inline primary to="/btec/">
+                    Launchpad walkthrough tutorial
                   </Link>
                 </li>
                 <li>

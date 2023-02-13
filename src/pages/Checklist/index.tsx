@@ -1419,7 +1419,7 @@ export const Checklist = () => {
                 You can find support on {discord} or {reddit}."
             values={{
               discord: (
-                <Link primary inline to="https://invite.gg/ethstaker">
+                <Link primary inline to="https://discord.io/ethstaker">
                   Discord
                 </Link>
               ),

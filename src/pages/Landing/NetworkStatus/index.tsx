@@ -6,7 +6,6 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
-import { numberWithCommas } from '../../../utils/numberWithCommas';
 import { BEACONCHAIN_URL, TICKER_NAME } from '../../../utils/envVars';
 
 //
@@ -61,9 +60,9 @@ const ButtonContainer = styled.div`
 `;
 
 export type NetworkState = {
-  amountEth: number;
-  apr: number;
-  totalValidators: number;
+  amountEth: string;
+  apr: string;
+  totalValidators: string;
   status: number;
 };
 
@@ -73,7 +72,7 @@ export type NetworkState = {
 export const NetworkStatus: React.FC<{
   state: NetworkState;
 }> = ({ state }): JSX.Element | null => {
-  const { locale, formatMessage } = useIntl();
+  const { formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
   const { amountEth, apr, totalValidators, status } = state;
 
@@ -85,11 +84,6 @@ export const NetworkStatus: React.FC<{
     return () => window.removeEventListener('resize', resizeListener);
   }, []);
 
-  const formattedAPR = Intl.NumberFormat(locale, {
-    minimumSignificantDigits: 3,
-    maximumSignificantDigits: 3,
-    style: 'percent',
-  }).format(apr);
   const LoadingHandler: React.FC<{
     value?: string;
   }> = ({ value }): JSX.Element => {
@@ -119,9 +113,7 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  <LoadingHandler
-                    value={`${numberWithCommas(amountEth)} ${TICKER_NAME}`}
-                  />
+                  <LoadingHandler value={`${amountEth} ${TICKER_NAME}`} />
                 </BoldGreen>
               </Text>
             </Card>
@@ -131,7 +123,7 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  <LoadingHandler value={numberWithCommas(totalValidators)} />
+                  <LoadingHandler value={totalValidators} />
                 </BoldGreen>
               </Text>
             </Card>
@@ -144,7 +136,7 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {formattedAPR}
+                  {apr}
                 </BoldGreen>
               </Text>
             </Card>

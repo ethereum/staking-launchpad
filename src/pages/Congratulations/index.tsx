@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useWeb3React } from '@web3-react/core';
@@ -17,14 +17,6 @@ import { Link } from '../../components/Link';
 import { KeyList } from '../Transactions/Keylist';
 import { handleMultipleTransactions } from '../Transactions/transactionUtils';
 import { web3ReactInterface } from '../ConnectWallet';
-import {
-  fetchTotalStakeAndAPR,
-  FetchTotalStakeAndAPRResponse,
-} from '../../utils/fetchTotalStakeAndAPR';
-import {
-  fetchTotalValidators,
-  FetchTotalValidatorsResponse,
-} from '../../utils/fetchTotalValidators';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
@@ -45,7 +37,7 @@ import {
   updateTransactionStatus,
 } from '../../store/actions/depositFileActions';
 // Types
-import { NetworkState } from '../Landing/NetworkStatus';
+import { useBeaconchainData } from '../../hooks/useBeaconchainData';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -212,13 +204,9 @@ const _CongratulationsPage = ({
   workflow,
   dispatchTransactionStatusUpdate,
 }: Props): JSX.Element => {
-  const [state, setState] = useState<Omit<NetworkState, 'totalValidators'>>({
-    amountEth: 0,
-    apr: 0,
-    status: 0,
-  });
-  const { status } = state;
-  const { locale, formatMessage } = useIntl();
+  const { state } = useBeaconchainData();
+  const { status, apr } = state;
+  const { formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -241,12 +229,6 @@ const _CongratulationsPage = ({
 
   const actualTxConfirmed = totalTxCount - remainingTxCount;
 
-  const formattedAPR = Intl.NumberFormat(locale, {
-    minimumSignificantDigits: 3,
-    maximumSignificantDigits: 3,
-    style: 'percent',
-  }).format(state.apr);
-
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
       depositKeys.filter(
@@ -257,28 +239,6 @@ const _CongratulationsPage = ({
       dispatchTransactionStatusUpdate
     );
   };
-
-  useEffect(() => {
-    // Fetch Total Stake and APR
-    (async () => {
-      const response: FetchTotalStakeAndAPRResponse = await fetchTotalStakeAndAPR();
-      setState(prev => ({
-        ...prev,
-        amountEth: response.body.amountEth,
-        apr: response.body.apr,
-        // TODO: Split out status codes for the separate fetches
-      }));
-    })();
-    // Fetch Total Validators
-    (async () => {
-      const response: FetchTotalValidatorsResponse = await fetchTotalValidators();
-      setState(prev => ({
-        ...prev,
-        totalValidators: response.body.totalValidators,
-        status: response.statusCode,
-      }));
-    })();
-  }, []);
 
   const LoadingHandler: React.FC<{
     value?: string;
@@ -417,7 +377,7 @@ const _CongratulationsPage = ({
                 </Heading>
                 <Text size="x-large" className="mt20">
                   <BoldGreen className="mr10" fontSize={24}>
-                    <LoadingHandler value={`${formattedAPR}`} />
+                    <LoadingHandler value={apr} />
                   </BoldGreen>
                 </Text>
               </Card>

@@ -1,35 +1,42 @@
-import React, { useState, useMemo } from 'react';
+// Import libraries
+import React, { useEffect, useState, useMemo } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import BigNumber from 'bignumber.js';
 import { CheckBox } from 'grommet';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
-import { Paper } from '../../components/Paper';
-import { OperatingSystemButtons } from './OperatingSystemButtons';
+import { toChecksumAddress } from 'ethereumjs-util';
+// Components
 import { Instructions } from './Instructions';
-import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
-import { StoreState } from '../../store/reducers';
-import { Button } from '../../components/Button';
-import { routesEnum } from '../../Routes';
-import { Alert } from '../../components/Alert';
-import { Link } from '../../components/Link';
-import { Text } from '../../components/Text';
-import { Heading } from '../../components/Heading';
 import { NumberInput } from './NumberInput';
+import { OperatingSystemButtons } from './OperatingSystemButtons';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
+import { Alert } from '../../components/Alert';
+import { Button } from '../../components/Button';
+import { Heading } from '../../components/Heading';
+import { Link } from '../../components/Link';
+import { Paper } from '../../components/Paper';
+import { Text } from '../../components/Text';
+// Store management
 import {
   DispatchWorkflowUpdateType,
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
+import { StoreState } from '../../store/reducers';
+// Utilities
 import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
 } from '../../utils/envVars';
+import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+// Images
 import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
+// Routes
+import { routesEnum } from '../../Routes';
 
 export enum operatingSystem {
   'MAC',
@@ -141,6 +148,11 @@ const _GenerateKeysPage = ({
     () => /^0x[0-9a-f]{40}$/i.test(withdrawalAddress),
     [withdrawalAddress]
   );
+
+  useEffect(() => {
+    if (!isValidWithdrawalAddress) return;
+    setWithdrawalAddress(toChecksumAddress(withdrawalAddress));
+  }, [isValidWithdrawalAddress, withdrawalAddress]);
 
   const addressIndicatorEmoji = useMemo<string>(() => {
     if (!withdrawalAddress) return '⬅';

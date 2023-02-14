@@ -21,17 +21,17 @@ export const useBeaconchainData = () => {
     status: 0,
   });
 
-  // Number formatters
-  const formatPercent = (value: number): string =>
-    new Intl.NumberFormat(locale, {
-      style: 'percent',
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 3,
-    }).format(value);
-  const formatNumber = (value: number): string =>
-    new Intl.NumberFormat(locale).format(value);
-
   useEffect(() => {
+    // Number formatters
+    const formatPercent = (value: number): string =>
+      new Intl.NumberFormat(locale, {
+        style: 'percent',
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 3,
+      }).format(value);
+    const formatNumber = (value: number): string =>
+      new Intl.NumberFormat(locale).format(value);
+
     // Fetch Total Stake and APR
     (async () => {
       const {
@@ -59,6 +59,6 @@ export const useBeaconchainData = () => {
         status: Math.max(statusCode, prev.status),
       }));
     })();
-  }, []);
+  }, [locale]);
   return { state };
 };

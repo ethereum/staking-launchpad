@@ -8,7 +8,6 @@ import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
 import { numberWithCommas } from '../../../utils/numberWithCommas';
 import { BEACONCHAIN_URL, TICKER_NAME } from '../../../utils/envVars';
-import calculateStakingRewards from '../../../utils/calculateStakingRewards';
 
 //
 // Styled Components
@@ -61,8 +60,9 @@ const ButtonContainer = styled.div`
   justify-content: center;
 `;
 
-type PropData = {
+export type NetworkState = {
   amountEth: number;
+  apr: number;
   totalValidators: number;
   status: number;
 };
@@ -71,11 +71,11 @@ type PropData = {
 // Main Component
 
 export const NetworkStatus: React.FC<{
-  state: PropData;
+  state: NetworkState;
 }> = ({ state }): JSX.Element | null => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const [m, setM] = React.useState<boolean>((window as any).mobileCheck());
-  const { amountEth, totalValidators, status } = state;
+  const { amountEth, apr, totalValidators, status } = state;
 
   React.useEffect(() => {
     const resizeListener = () => {
@@ -85,9 +85,11 @@ export const NetworkStatus: React.FC<{
     return () => window.removeEventListener('resize', resizeListener);
   }, []);
 
-  const currentAPR = calculateStakingRewards({ totalAtStake: amountEth });
-  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
-
+  const formattedAPR = Intl.NumberFormat(locale, {
+    minimumSignificantDigits: 3,
+    maximumSignificantDigits: 3,
+    style: 'percent',
+  }).format(apr);
   const LoadingHandler: React.FC<{
     value?: string;
   }> = ({ value }): JSX.Element => {
@@ -142,7 +144,7 @@ export const NetworkStatus: React.FC<{
               </Heading>
               <Text size="x-large" className="mt20">
                 <BoldGreen className="mr10" fontSize={24}>
-                  {formattedAPR}%
+                  {formattedAPR}
                 </BoldGreen>
               </Text>
             </Card>

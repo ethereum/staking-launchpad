@@ -9,6 +9,7 @@ import { FormNext, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import _every from 'lodash/every';
 import { AppBar } from '../../components/AppBar';
+import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
@@ -16,10 +17,16 @@ import { Link } from '../../components/Link';
 import { KeyList } from '../Transactions/Keylist';
 import { handleMultipleTransactions } from '../Transactions/transactionUtils';
 import { web3ReactInterface } from '../ConnectWallet';
-import { queryBeaconchain } from '../../utils/queryBeaconchain';
+import {
+  fetchTotalStakeAndAPR,
+  FetchTotalStakeAndAPRResponse,
+} from '../../utils/fetchTotalStakeAndAPR';
+import {
+  fetchTotalValidators,
+  FetchTotalValidatorsResponse,
+} from '../../utils/fetchTotalValidators';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
-import calculateStakingRewards from '../../utils/calculateStakingRewards';
 import {
   PRICE_PER_VALIDATOR,
   TESTNET_LAUNCHPAD_NAME,
@@ -30,7 +37,6 @@ import {
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
-import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
   DepositStatus,
@@ -38,6 +44,8 @@ import {
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../store/actions/depositFileActions';
+// Types
+import { NetworkState } from '../Landing/NetworkStatus';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -204,12 +212,13 @@ const _CongratulationsPage = ({
   workflow,
   dispatchTransactionStatusUpdate,
 }: Props): JSX.Element => {
-  const [state, setState] = useState({
+  const [state, setState] = useState<Omit<NetworkState, 'totalValidators'>>({
     amountEth: 0,
+    apr: 0,
     status: 0,
   });
   const { status } = state;
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -232,8 +241,11 @@ const _CongratulationsPage = ({
 
   const actualTxConfirmed = totalTxCount - remainingTxCount;
 
-  const currentAPR = calculateStakingRewards({ totalAtStake: state.amountEth });
-  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
+  const formattedAPR = Intl.NumberFormat(locale, {
+    minimumSignificantDigits: 3,
+    maximumSignificantDigits: 3,
+    style: 'percent',
+  }).format(state.apr);
 
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
@@ -247,12 +259,24 @@ const _CongratulationsPage = ({
   };
 
   useEffect(() => {
+    // Fetch Total Stake and APR
     (async () => {
-      const response = await queryBeaconchain();
-      setState({
+      const response: FetchTotalStakeAndAPRResponse = await fetchTotalStakeAndAPR();
+      setState(prev => ({
+        ...prev,
         amountEth: response.body.amountEth,
+        apr: response.body.apr,
+        // TODO: Split out status codes for the separate fetches
+      }));
+    })();
+    // Fetch Total Validators
+    (async () => {
+      const response: FetchTotalValidatorsResponse = await fetchTotalValidators();
+      setState(prev => ({
+        ...prev,
+        totalValidators: response.body.totalValidators,
         status: response.statusCode,
-      });
+      }));
     })();
   }, []);
 
@@ -393,7 +417,7 @@ const _CongratulationsPage = ({
                 </Heading>
                 <Text size="x-large" className="mt20">
                   <BoldGreen className="mr10" fontSize={24}>
-                    <LoadingHandler value={`${formattedAPR}%`} />
+                    <LoadingHandler value={`${formattedAPR}`} />
                   </BoldGreen>
                 </Text>
               </Card>

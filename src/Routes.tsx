@@ -211,7 +211,7 @@ const _Routes = () => {
     <>
       <ScrollToTop>
         <Helmet>
-          <html lang={locale} />
+          <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} />
           <title>{title}</title>
           <meta property="og:title" content={title} />
           <meta property="twitter:title" content={title} />

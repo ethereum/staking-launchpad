@@ -34,8 +34,8 @@ const HighlightStyles = styled.div`
     padding: 5px;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.04);
-    margin-right: 3px;
-    margin-left: 3px;
+    margin-inline-end: 3px;
+    margin-inline-start: 3px;
   }
 `;
 

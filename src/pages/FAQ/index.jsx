@@ -19,8 +19,8 @@ const FAQStyles = styled.div`
 
 const BlockQuote = styled.div`
   margin-top: 10px;
-  padding-left: 20px;
-  border-left: 5px solid lightgray;
+  padding-inline-start: 20px;
+  border-inline-start: 5px solid lightgray;
 `;
 
 const SectionTitle = styled(Heading)`

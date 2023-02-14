@@ -22,6 +22,7 @@ const CodeSnippet = styled.div`
   background-color: #597ea3;
   border-radius: 6px;
   margin: 10px 0;
+  direction: ltr;
 
   code {
     display: block;

@@ -21,31 +21,42 @@ export const useBeaconchainData = () => {
     status: 0,
   });
 
-  const formatPercent = new Intl.NumberFormat(locale, {
-    style: 'percent',
-    minimumSignificantDigits: 3,
-    maximumSignificantDigits: 3,
-  });
-  const formatNumber = new Intl.NumberFormat(locale);
+  // Number formatters
+  const formatPercent = (value: number): string =>
+    new Intl.NumberFormat(locale, {
+      style: 'percent',
+      minimumSignificantDigits: 3,
+      maximumSignificantDigits: 3,
+    }).format(value);
+  const formatNumber = (value: number): string =>
+    new Intl.NumberFormat(locale).format(value);
 
   useEffect(() => {
     // Fetch Total Stake and APR
     (async () => {
-      const response: FetchTotalStakeAndAPRResponse = await fetchTotalStakeAndAPR();
+      const {
+        body: { amountEth, apr },
+        statusCode,
+      }: FetchTotalStakeAndAPRResponse = await fetchTotalStakeAndAPR();
       setState(prev => ({
         ...prev,
-        amountEth: formatNumber.format(response.body.amountEth),
-        apr: formatPercent.format(response.body.apr),
-        // TODO: Split out status codes for the separate fetches
+        amountEth: formatNumber(amountEth),
+        apr: formatPercent(apr),
+        // Status Code: 0 default, bumps to 200 if successful, 500 if error
+        // This approach accounts for an error on either endpoint
+        status: Math.max(statusCode, prev.status),
       }));
     })();
     // Fetch Total Validators
     (async () => {
-      const response: FetchTotalValidatorsResponse = await fetchTotalValidators();
+      const {
+        body: { totalValidators },
+        statusCode,
+      }: FetchTotalValidatorsResponse = await fetchTotalValidators();
       setState(prev => ({
         ...prev,
-        totalValidators: formatNumber.format(response.body.totalValidators),
-        status: response.statusCode,
+        totalValidators: formatNumber(totalValidators),
+        status: Math.max(statusCode, prev.status),
       }));
     })();
   }, []);

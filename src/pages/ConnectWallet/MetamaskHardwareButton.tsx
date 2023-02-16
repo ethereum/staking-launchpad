@@ -1,10 +1,10 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
 import ledger from '../../static/ledger.png';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
-import { FormattedMessage } from 'react-intl';
 
 const Logo = styled.img`
   height: 50px;
@@ -16,6 +16,7 @@ const Logo = styled.img`
 const StyledText = styled(Text)`
   margin: 10px;
   font-size: 14px;
+  margin-inline-end: 20px;
 `;
 const StyledPaper = styled(Paper)`
   width: 350px;
@@ -26,9 +27,11 @@ const StyledPaper = styled(Paper)`
     transition: transform 0.1s;
     transform: scale(1.02);
   }
+  outline: 3px solid purple;
 `;
 
 export const MetamaskHardwareButton = () => {
+  const { locale } = useIntl();
   return (
     <Link
       isTextLink={false}
@@ -42,7 +45,7 @@ export const MetamaskHardwareButton = () => {
         <StyledText>
           <FormattedMessage defaultMessage="Connect your hardware wallet to Metamask" />
         </StyledText>
-        <StyledText className="mr20">↗</StyledText>
+        <StyledText>{locale === 'ar' ? '↖' : '↗'}</StyledText>
       </StyledPaper>
     </Link>
   );

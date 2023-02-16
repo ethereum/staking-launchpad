@@ -20,6 +20,7 @@ const AlertIcon = styled(p => <GrommetAlert {...p} />)`
 
 const Pre = styled.pre`
   white-space: normal;
+  direction: ltr;
 `;
 
 const GithubScreenshot = styled.img.attrs({ src: githubScreenshot })`

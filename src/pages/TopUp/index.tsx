@@ -43,7 +43,7 @@ const BackText = styled(Text)`
     text-decoration: underline;
   }
   position: relative;
-  padding-left: 25px;
+  padding-inline-start: 25px;
 `;
 
 const FakeLink = styled.span`
@@ -195,9 +195,11 @@ const _TopUpPage: React.FC<Props> = () => {
     if (validatorLoadError) {
       return (
         <Alert variant="warning" className="my10">
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div
+            style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}
+          >
             <AlertIcon color="redLight" />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="There was an error loading your validator information from Beaconcha.in" />
             </Text>
           </div>
@@ -237,9 +239,11 @@ const _TopUpPage: React.FC<Props> = () => {
       <>
         {showDepositVerificationWarning && (
           <Alert variant="warning" className="my10">
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div
+              style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}
+            >
               <AlertIcon color="redLight" />
-              <Text className="ml10">
+              <Text>
                 <FormattedMessage
                   defaultMessage="You may have an {TICKER_NAME} deposit that was accepted but is being
                     validated on chain. It will be available here when beaconcha.in

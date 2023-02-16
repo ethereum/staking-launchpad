@@ -104,6 +104,19 @@ const InstructionImgContainer = styled.div`
   justify-content: center;
 `;
 
+const NumValidatorContainer = styled.div`
+  display: flex;
+  margin-top: 20px;
+  gap: 50px;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 10px;
+`;
+
 // Prop definitions
 interface OwnProps {}
 interface StateProps {
@@ -178,14 +191,14 @@ const _GenerateKeysPage = ({
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="How many validators would you like to run?" />
         </Heading>
-        <div className="flex mt20">
+        <NumValidatorContainer>
           <div>
             <Text className="mb5">
               <FormattedMessage defaultMessage="Validators" />
             </Text>
             <NumberInput value={validatorCount} setValue={setValidatorCount} />
           </div>
-          <div className="ml50">
+          <div>
             <Text className="mb5">Cost</Text>
             <Text>
               {validatorCount === ''
@@ -197,7 +210,7 @@ const _GenerateKeysPage = ({
               {TICKER_NAME}
             </Text>
           </div>
-        </div>
+        </NumValidatorContainer>
       </Paper>
       <Paper className="mt20">
         <Heading level={2} size="small" color="blueMedium" className="mb20">
@@ -337,10 +350,9 @@ const _GenerateKeysPage = ({
         />
       </Paper>
 
-      <div className="flex center p30">
+      <ButtonContainer>
         <Link to={routesEnum.selectClient}>
           <Button
-            className="mr10"
             width={100}
             label={formatMessage({ defaultMessage: 'Back' })}
           />
@@ -353,7 +365,7 @@ const _GenerateKeysPage = ({
             label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
-      </div>
+      </ButtonContainer>
     </WorkflowPageTemplate>
   );
 };

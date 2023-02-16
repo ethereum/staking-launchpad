@@ -38,6 +38,7 @@ const WalletText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const ConnectingContainer = styled.div`
@@ -45,6 +46,12 @@ const ConnectingContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 8px;
+`;
+
+const SpinnerContainer = styled.span`
+  margin-top: 20px;
+  display: flex;
+  margin-inline-end: 10px;
 `;
 
 export const WalletButton = ({
@@ -104,16 +111,17 @@ export const WalletButton = ({
               />
             )}
           </StyledText>
+          // TODO: Finish search for className=".*[mp][lr][\d]*"
           {showSpinner && (
-            <Text className="ml10" size="small">
+            <Text size="small">
               <FormattedMessage defaultMessage="Waiting to connect..." />
             </Text>
           )}
         </WalletText>
         {showSpinner && (
-          <span className="mt20 flex flex-row mr10">
+          <SpinnerContainer>
             <Spinning kind="pulse" />
-          </span>
+          </SpinnerContainer>
         )}
       </ConnectingContainer>
     </StyledPaper>

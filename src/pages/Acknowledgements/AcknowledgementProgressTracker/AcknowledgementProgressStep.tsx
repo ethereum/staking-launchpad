@@ -51,7 +51,7 @@ const StyledText = styled(Text)`
   font-weight: ${(p: Props) => (p.isActive ? 600 : 200)};
   font-size: 18px;
   line-height: 40px;
-  margin-left: 15px;
+  margin-inline-start: 15px;
 `;
 
 interface ProgressItemProps {

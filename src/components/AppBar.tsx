@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { Box, DropButton } from 'grommet';
 import { Menu, Language, FormDown } from 'grommet-icons';
@@ -27,6 +27,12 @@ import {
 import { trimString } from '../utils/trimString';
 import useIntlNetworkName from '../hooks/useIntlNetworkName';
 import useMobileCheck from '../hooks/useMobileCheck';
+
+const HomeLink = styled(Link)`
+  margin-inline-end: 30px;
+  display: flex;
+  gap: 5px;
+`;
 
 const RainbowBackground = styled(Box)`
   background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
@@ -58,6 +64,7 @@ const NetworkText = styled.div`
 
 const NavBarLinks = styled.div`
   display: flex;
+  gap: 20px;
   @media only screen and (max-width: 1080px) {
     .secondary-link {
       display: none;
@@ -75,6 +82,18 @@ const ValidatorDropdown = styled(DropButton)`
     border: none;
     box-shadow: none;
   }
+`;
+
+const DotBox = styled(Box)`
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+`;
+
+const DotDropdownBox = styled(Box)`
+  display: flex;
+  margin-inline-end: 20px;
+  gap: 10px;
 `;
 
 const DotDropdown = styled(DropButton)`
@@ -124,6 +143,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     account,
     chainId,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
+  const { locale } = useIntl();
   const { executionLayerName, consensusLayerName } = useIntlNetworkName();
   const oppositeNetwork = IS_MAINNET ? (
     <FormattedMessage
@@ -161,21 +181,25 @@ const _AppBar = ({ location }: RouteComponentProps) => {
     ? TESTNET_LAUNCHPAD_URL
     : MAINNET_LAUNCHPAD_URL;
 
+  const dropAlignInline = React.useMemo(
+    () => (locale === 'ar' ? 'left' : 'right'),
+    [locale]
+  );
   return (
     <RainbowBackground
       tag="header"
       direction="row"
       align="center"
       justify="between"
-      pad={{ left: 'medium', right: 'small', vertical: 'small' }}
+      pad={{ start: 'medium', end: 'small', vertical: 'small' }}
       elevation="medium"
       style={{ zIndex: 1 }}
     >
       <NavBarLinks>
-        <Link to={routesEnum.landingPage} className="mr30">
+        <HomeLink to={routesEnum.landingPage}>
           <EthLogo src={EthDiamond} alt="eth-diamond" />
           {!mobile && (
-            <div className="flex flex-column center ml5">
+            <div className="flex flex-column center">
               <BarLinkText
                 active={pathname === routesEnum.landingPage}
                 level={4}
@@ -194,11 +218,11 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               </BarLinkText>
             </div>
           )}
-        </Link>
+        </HomeLink>
 
         <Link
           to={routesEnum.acknowledgementPage}
-          className="mx10 secondary-link"
+          className="secondary-link" // RTL
         >
           <BarLinkText
             level={4}
@@ -216,7 +240,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
               <FormattedMessage defaultMessage="Clients" />
             </BarLinkText>
           }
-          dropAlign={{ top: 'bottom', right: 'right' }}
+          dropAlign={{ top: 'bottom', right: dropAlignInline }}
           dropContent={
             <Box pad="medium">
               <Text className="my10">
@@ -245,7 +269,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             </Box>
           }
         />
-        <Link to={routesEnum.checklistPage} className="mx10 secondary-link">
+        <Link to={routesEnum.checklistPage} className="secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -255,7 +279,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="Checklist" />
           </BarLinkText>
         </Link>
-        <Link to={routesEnum.FaqPage} className="mx10 secondary-link">
+        <Link to={routesEnum.FaqPage} className="secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -265,7 +289,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="FAQ" />
           </BarLinkText>
         </Link>
-        <Link to={routesEnum.topUpPage} className="mx10 secondary-link">
+        <Link to={routesEnum.topUpPage} className="secondary-link">
           <BarLinkText
             level={4}
             margin="none"
@@ -288,7 +312,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
       </NavBarLinks>
       <NavLinksRight>
         {!mobile && (
-          <Link to={routesEnum.languagesPage} className="mx10 secondary-link">
+          <Link to={routesEnum.languagesPage} className="secondary-link">
             <BarLinkText
               level={4}
               margin="none"
@@ -308,17 +332,17 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           <ValidatorDropdown
             className="secondary-link"
             label={<Menu color="black" />}
-            dropAlign={{ top: 'bottom', right: 'right' }}
+            dropAlign={{ top: 'bottom', right: dropAlignInline }}
             dropContent={
               <Card>
                 <NetworkInfo>
                   {walletConnected && (
-                    <Box className="flex flex-row mb20">
+                    <DotBox>
                       <Dot success={networkAllowed} error={!networkAllowed} />
-                      <Text size="small" className="ml10" color="blueDark">
+                      <Text size="small" color="blueDark">
                         {trimString(account as string, 10)}
                       </Text>
-                    </Box>
+                    </DotBox>
                   )}
                   <span>
                     <FormattedMessage defaultMessage="Launchpad network:" />{' '}
@@ -386,7 +410,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 <FormDown />
               </NetworkText>
             }
-            dropAlign={{ top: 'bottom', right: 'right' }}
+            dropAlign={{ top: 'bottom', right: dropAlignInline }}
             dropContent={
               <Card>
                 <Box pad="small" className="mt0">
@@ -407,12 +431,12 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           />
         )}
         {!mobile && walletConnected && (
-          <Box className="flex flex-row mr20">
-            {networkAllowed && (
+          <DotDropdownBox>
+            {networkAllowed ? (
               <DotDropdown
                 className="secondary-link"
                 label={<Dot success={networkAllowed} error={!networkAllowed} />}
-                dropAlign={{ top: 'bottom', right: 'right' }}
+                dropAlign={{ top: 'bottom', right: dropAlignInline }}
                 dropContent={
                   <Box pad="small">
                     <Text>
@@ -421,12 +445,11 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   </Box>
                 }
               />
-            )}
-            {!networkAllowed && (
+            ) : (
               <DotDropdown
                 className="secondary-link"
                 label={<Dot error={!networkAllowed} />}
-                dropAlign={{ top: 'bottom', right: 'right' }}
+                dropAlign={{ top: 'bottom', right: dropAlignInline }}
                 dropContent={
                   <Box pad="small">
                     <Text>
@@ -439,10 +462,10 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 }
               />
             )}
-            <Text size="small" className="ml10" color="blueDark">
+            <Text size="small" color="blueDark">
               {trimString(account as string, 10)}
             </Text>
-          </Box>
+          </DotDropdownBox>
         )}
       </NavLinksRight>
     </RainbowBackground>

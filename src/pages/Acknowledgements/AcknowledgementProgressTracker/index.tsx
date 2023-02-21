@@ -12,7 +12,7 @@ import { AcknowledgementProgressStep } from './AcknowledgementProgressStep';
 
 const Container = styled.div`
   min-width: 250px;
-  margin-right: 40px;
+  margin-inline-end: 40px;
   @media only screen and (max-width: 940px) {
     display: none;
   }

@@ -6,13 +6,14 @@ import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME } from '../../utils/envVars';
+import { NETWORK_NAME, TRANSLATE_CLI_FLAGS } from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
 import { FormattedMessage, useIntl } from 'react-intl';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
 
 const Pre = styled.pre`
   white-space: normal;
+  direction: ltr;
 `;
 
 export const Option3 = ({
@@ -146,21 +147,23 @@ export const Option3 = ({
   };
 
   const renderDepositKeyCommand = () => {
-    const translateFlags = false;
-
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
           python3 ./staking_deposit/deposit.py new-mnemonic{' '}
           {validatorCount > 0
-            ? `--${formatMessage({
-                defaultMessage: 'num_validators',
-                description:
-                  'this is used as a command line flag, short for "number of validators"',
-              })} ${validatorCount}`
+            ? `--${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'num_validators',
+                      description:
+                        'this is used as a command line flag, short for "number of validators"',
+                    })
+                  : 'num_validators'
+              } ${validatorCount}`
             : ''}{' '}
           {`--${
-            translateFlags
+            TRANSLATE_CLI_FLAGS
               ? formatMessage({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
@@ -176,14 +179,18 @@ export const Option3 = ({
         <Pre className="my0">
           .\staking_deposit\deposit.py new-mnemonic{' '}
           {validatorCount > 0
-            ? `--${formatMessage({
-                defaultMessage: 'num_validators',
-                description:
-                  'this is used as a command line flag, short for "number of validators"',
-              })} ${validatorCount}`
+            ? `--${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'num_validators',
+                      description:
+                        'this is used as a command line flag, short for "number of validators"',
+                    })
+                  : `num_validators`
+              } ${validatorCount}`
             : ''}{' '}
           {`--${
-            translateFlags
+            TRANSLATE_CLI_FLAGS
               ? formatMessage({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
@@ -282,19 +289,19 @@ export const Option3 = ({
         <FormattedMessage defaultMessage="First, create a venv virtualenv under repository directory:" />
       </Text>
       <Alert variant="secondary" className="my10">
-        <pre className="my0">
+        <Pre className="my0">
           <span style={{ color: colors.blue.medium }}>virtualenv</span> venv
-        </pre>
+        </Pre>
         {(os === 'linux' || os === 'mac') && (
-          <pre className="my0">source venv/bin/activate</pre>
+          <Pre className="my0">source venv/bin/activate</Pre>
         )}
-        {os === 'windows' && <pre className="my0">.\venv\Scripts\activate</pre>}
+        {os === 'windows' && <Pre className="my0">.\venv\Scripts\activate</Pre>}
       </Alert>
       <Text>
         <FormattedMessage defaultMessage="Second, install the dependency packages:" />
       </Text>
       <Alert variant="secondary" className="my10">
-        <pre className="my0">
+        <Pre className="my0">
           {(os === 'linux' || os === 'mac') && (
             <span style={{ color: colors.red.medium }}>python3 setup</span>
           )}
@@ -303,13 +310,13 @@ export const Option3 = ({
           )}
           <span style={{ color: colors.purple.dark }}>.py</span>{' '}
           <span style={{ color: colors.red.medium }}>install</span>
-        </pre>
-        <pre className="my0">
+        </Pre>
+        <Pre className="my0">
           <span style={{ color: colors.red.medium }}>
             pip3 install -r requirements
           </span>
           <span style={{ color: colors.purple.dark }}>.txt</span>
-        </pre>
+        </Pre>
       </Alert>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
         <FormattedMessage defaultMessage="Generate deposit keys using the Ethereum Foundation deposit tool" />
@@ -330,10 +337,14 @@ export const Option3 = ({
             values={{
               flag: (
                 <Code>
-                  {`--${formatMessage({
-                    defaultMessage: 'chain',
-                    description: 'this is used as a command line flag',
-                  })} ${NETWORK_NAME.toLowerCase()}`}
+                  {`--${
+                    TRANSLATE_CLI_FLAGS
+                      ? formatMessage({
+                          defaultMessage: 'chain',
+                          description: 'this is used as a command line flag',
+                        })
+                      : 'chain'
+                  } ${NETWORK_NAME.toLowerCase()}`}
                 </Code>
               ),
               consensusLayerName,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormNextLink } from 'grommet-icons';
+import { FormNextLink, FormPreviousLink } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
@@ -58,7 +58,11 @@ export const ActionButton = ({
   onClick,
   pubkey,
 }: Props) => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
+  const formArrowLink = React.useMemo(
+    () => (locale === 'ar' ? <FormPreviousLink /> : <FormNextLink />),
+    [locale]
+  );
 
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
@@ -127,7 +131,7 @@ export const ActionButton = ({
         <ButtonText>
           <FormattedMessage defaultMessage="Try again" />
         </ButtonText>
-        <FormNextLink />
+        {formArrowLink}
       </Container>
     );
   }

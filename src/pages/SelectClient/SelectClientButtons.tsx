@@ -1,10 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
 import { LinkProps } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import { Button } from '../../components/Button';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
 import { ClientId } from '../../store/actions/clientActions';
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+  @media (max-width: ${p => p.theme.screenSizes.small}) {
+    flex-direction: column;
+    padding-inline: 0;
+    button,
+    a {
+      width: 100% !important;
+    }
+  }
+`;
 
 type Props = {
   ethClientStep: 'execution' | 'consensus';
@@ -23,10 +40,9 @@ const SelectClientButtons = ({
 
   if (ethClientStep === 'execution') {
     return (
-      <>
+      <Container>
         <Link to={routesEnum.acknowledgementPage}>
           <Button
-            className="mr10"
             width={100}
             label={formatMessage({ defaultMessage: 'Back' })}
           />
@@ -38,14 +54,13 @@ const SelectClientButtons = ({
           label={formatMessage({ defaultMessage: 'Continue' })}
           onClick={() => updateStep('consensus')}
         />
-      </>
+      </Container>
     );
   }
 
   return (
-    <>
+    <Container>
       <Button
-        className="mr10"
         width={100}
         label={formatMessage({ defaultMessage: 'Back' })}
         onClick={() => updateStep('execution')}
@@ -58,7 +73,7 @@ const SelectClientButtons = ({
           label={formatMessage({ defaultMessage: 'Continue' })}
         />
       </Link>
-    </>
+    </Container>
   );
 };
 

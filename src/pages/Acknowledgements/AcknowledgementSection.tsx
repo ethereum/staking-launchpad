@@ -22,6 +22,13 @@ const AcknowledgementText = styled(Text as any)`
   border-radius: 4px;
 `;
 
+const FlexRowGap = styled.div`
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 30px;
+`;
+
 export interface AcknowledgementSectionData {
   title: JSX.Element;
   content: JSX.Element;
@@ -54,9 +61,8 @@ export const AcknowledgementSection = ({
   const renderButtons = () => {
     if (isConfirmationSection) {
       return (
-        <div className="flex center p30">
+        <FlexRowGap>
           <Button
-            className="mr10"
             onClick={() =>
               handleGoBackClick(AcknowledgementIdsEnum.confirmation)
             }
@@ -77,17 +83,16 @@ export const AcknowledgementSection = ({
               label={formatMessage({ defaultMessage: 'Continue' })}
             />
           </Link>
-        </div>
+        </FlexRowGap>
       );
     }
     return (
-      <div className="flex center p30">
+      <FlexRowGap>
         {!isIntroSection && (
           <Button
             width={100}
             onClick={() => handleGoBackClick(acknowledgementId)}
             label={formatMessage({ defaultMessage: 'Back' })}
-            className="mr10"
           />
         )}
         <Button
@@ -100,7 +105,7 @@ export const AcknowledgementSection = ({
           }
           width={300}
         />
-      </div>
+      </FlexRowGap>
     );
   };
 

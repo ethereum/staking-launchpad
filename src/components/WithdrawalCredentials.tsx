@@ -1,5 +1,5 @@
 // Import libraries
-import React, { FC, useState, useMemo, ChangeEvent } from 'react';
+import React, { FC, useState, ChangeEvent } from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -104,150 +104,46 @@ interface Validator {
   isUpgraded: boolean;
 }
 
-interface IProps {}
-export const WithdrawalCredentials: FC<IProps> = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [hasError, setHasError] = useState<boolean>(false);
-  const [inputValue, setInputValue] = useState<string>('');
-  const [validator, setValidator] = useState<Validator | null>(null);
-  const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
-  const isMobile: boolean = (window as any).mobileCheck();
+interface ResultTextProps {
+  isLoading: boolean;
+  hasError: boolean;
+  validator: Validator | null;
+}
 
-  const checkWithdrawalCredentials = async () => {
-    setHasError(false);
-    setIsLoading(true);
-    const endpoint = `${BEACONCHAIN_URL}/api/v1/validator/${inputValue}`;
-    try {
-      const response = await fetch(endpoint);
-      const { data } = await response.json();
-      const withdrawalCredentials = data.withdrawalcredentials;
-      setValidator({
-        validatorIndex: parseInt(inputValue, 10),
-        withdrawalCredentials,
-        isUpgraded: withdrawalCredentials.startsWith('0x01'),
-      });
-    } catch (error) {
-      setHasError(true);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+const ResultText: React.FC<ResultTextProps> = ({
+  isLoading,
+  hasError,
+  validator,
+}) => {
+  const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
   const onCopy = (key: string) => {
     setCopied(prev => ({ ...prev, [key]: true }));
     setTimeout(() => {
       setCopied(prev => ({ ...prev, [key]: false }));
     }, 2000);
   };
+  const longAddress = validator
+    ? `0x${validator.withdrawalCredentials.slice(-40)}`
+    : '';
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
-    setInputValue(e.target.value.replace(/\D/g, ''));
-
-  const longAddress = useMemo<string>(
-    () => (validator ? `0x${validator.withdrawalCredentials.slice(-40)}` : ''),
-    [validator]
-  );
-
-  function ResultText(): JSX.Element {
-    if (isLoading) return <Spinner />;
-    if (hasError)
-      return (
-        <Alert variant="error">
-          <FormattedMessage defaultMessage="Oops! Double check validator index number and try again." />
-        </Alert>
-      );
-    if (!validator) return <span> </span>;
-    if (validator.isUpgraded)
-      return (
-        <Alert variant="success">
-          <strong>
-            <FormattedMessage defaultMessage="Withdrawals enabled" />
-          </strong>
-          <p>
-            <FormattedMessage
-              defaultMessage="This validator is ready to start receiving rewards to the
-              withdrawal address below. No further action is needed."
-            />
-          </p>
-          <ResultsLineItem>
-            <ResultLabel>
-              <FormattedMessage defaultMessage="Validator index:" />{' '}
-            </ResultLabel>
-            <AddressCopyContainer>
-              <LongAddress>{validator.validatorIndex}</LongAddress>
-              <CopyToClipboard
-                text={validator.validatorIndex.toString()}
-                onCopy={() => onCopy('validatorIndex')}
-              >
-                <CopyContainer>
-                  {copied.validatorIndex ? (
-                    <FormattedMessage defaultMessage="Copied ✓" />
-                  ) : (
-                    <FormattedMessage defaultMessage="Copy" />
-                  )}
-                </CopyContainer>
-              </CopyToClipboard>
-            </AddressCopyContainer>
-          </ResultsLineItem>
-          <ResultsLineItemDesktopOnly>
-            <ResultLabel>
-              <FormattedMessage defaultMessage="Withdrawal credentials:" />{' '}
-            </ResultLabel>
-            <AddressCopyContainer>
-              <LongAddress>{validator.withdrawalCredentials}</LongAddress>
-              <CopyToClipboard
-                text={validator.withdrawalCredentials}
-                onCopy={() => onCopy('withdrawalCredentials')}
-              >
-                <CopyContainer>
-                  {copied.withdrawalCredentials ? (
-                    <FormattedMessage defaultMessage="Copied ✓" />
-                  ) : (
-                    <FormattedMessage defaultMessage="Copy" />
-                  )}
-                </CopyContainer>
-              </CopyToClipboard>
-            </AddressCopyContainer>
-          </ResultsLineItemDesktopOnly>
-          <ResultsLineItem>
-            <ResultLabel>
-              <FormattedMessage defaultMessage="Withdrawal address:" />{' '}
-            </ResultLabel>
-            <AddressCopyContainer>
-              <LongAddress>{longAddress}</LongAddress>
-              <CopyToClipboard
-                text={longAddress}
-                onCopy={() => onCopy('longAddress')}
-              >
-                <CopyContainer>
-                  {copied.longAddress ? (
-                    <FormattedMessage defaultMessage="Copied ✓" />
-                  ) : (
-                    <FormattedMessage defaultMessage="Copy" />
-                  )}
-                </CopyContainer>
-              </CopyToClipboard>
-            </AddressCopyContainer>
-          </ResultsLineItem>
-        </Alert>
-      );
+  if (isLoading) return <Spinner />;
+  if (hasError)
     return (
       <Alert variant="error">
+        <FormattedMessage defaultMessage="Oops! Double check validator index number and try again." />
+      </Alert>
+    );
+  if (!validator) return <span> </span>;
+  if (validator.isUpgraded)
+    return (
+      <Alert variant="success">
         <strong>
-          <FormattedMessage defaultMessage="Withdrawals not enabled" />
+          <FormattedMessage defaultMessage="Withdrawals enabled" />
         </strong>
         <p>
           <FormattedMessage
-            defaultMessage="This {network} validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
-            values={{
-              network: IS_MAINNET ? (
-                ''
-              ) : (
-                <FormattedMessage
-                  defaultMessage="{NETWORK_NAME} testnet"
-                  values={{ NETWORK_NAME }}
-                />
-              ),
-            }}
+            defaultMessage="This validator is ready to start receiving rewards to the
+            withdrawal address below. No further action is needed."
           />
         </p>
         <ResultsLineItem>
@@ -270,7 +166,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
             </CopyToClipboard>
           </AddressCopyContainer>
         </ResultsLineItem>
-        <ResultsLineItem>
+        <ResultsLineItemDesktopOnly>
           <ResultLabel>
             <FormattedMessage defaultMessage="Withdrawal credentials:" />{' '}
           </ResultLabel>
@@ -289,10 +185,124 @@ export const WithdrawalCredentials: FC<IProps> = () => {
               </CopyContainer>
             </CopyToClipboard>
           </AddressCopyContainer>
+        </ResultsLineItemDesktopOnly>
+        <ResultsLineItem>
+          <ResultLabel>
+            <FormattedMessage defaultMessage="Withdrawal address:" />{' '}
+          </ResultLabel>
+          <AddressCopyContainer>
+            <LongAddress>{longAddress}</LongAddress>
+            <CopyToClipboard
+              text={longAddress}
+              onCopy={() => onCopy('longAddress')}
+            >
+              <CopyContainer>
+                {copied.longAddress ? (
+                  <FormattedMessage defaultMessage="Copied ✓" />
+                ) : (
+                  <FormattedMessage defaultMessage="Copy" />
+                )}
+              </CopyContainer>
+            </CopyToClipboard>
+          </AddressCopyContainer>
         </ResultsLineItem>
       </Alert>
     );
-  }
+  return (
+    <Alert variant="error">
+      <strong>
+        <FormattedMessage defaultMessage="Withdrawals not enabled" />
+      </strong>
+      <p>
+        <FormattedMessage
+          defaultMessage="This {network} validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
+          values={{
+            network: IS_MAINNET ? (
+              ''
+            ) : (
+              <FormattedMessage
+                defaultMessage="{NETWORK_NAME} testnet"
+                values={{ NETWORK_NAME }}
+              />
+            ),
+          }}
+        />
+      </p>
+      <ResultsLineItem>
+        <ResultLabel>
+          <FormattedMessage defaultMessage="Validator index:" />{' '}
+        </ResultLabel>
+        <AddressCopyContainer>
+          <LongAddress>{validator.validatorIndex}</LongAddress>
+          <CopyToClipboard
+            text={validator.validatorIndex.toString()}
+            onCopy={() => onCopy('validatorIndex')}
+          >
+            <CopyContainer>
+              {copied.validatorIndex ? (
+                <FormattedMessage defaultMessage="Copied ✓" />
+              ) : (
+                <FormattedMessage defaultMessage="Copy" />
+              )}
+            </CopyContainer>
+          </CopyToClipboard>
+        </AddressCopyContainer>
+      </ResultsLineItem>
+      <ResultsLineItem>
+        <ResultLabel>
+          <FormattedMessage defaultMessage="Withdrawal credentials:" />{' '}
+        </ResultLabel>
+        <AddressCopyContainer>
+          <LongAddress>{validator.withdrawalCredentials}</LongAddress>
+          <CopyToClipboard
+            text={validator.withdrawalCredentials}
+            onCopy={() => onCopy('withdrawalCredentials')}
+          >
+            <CopyContainer>
+              {copied.withdrawalCredentials ? (
+                <FormattedMessage defaultMessage="Copied ✓" />
+              ) : (
+                <FormattedMessage defaultMessage="Copy" />
+              )}
+            </CopyContainer>
+          </CopyToClipboard>
+        </AddressCopyContainer>
+      </ResultsLineItem>
+    </Alert>
+  );
+};
+
+interface IProps {}
+export const WithdrawalCredentials: FC<IProps> = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [hasError, setHasError] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState<string>('');
+  const [validator, setValidator] = useState<Validator | null>(null);
+  const isMobile: boolean = (window as any).mobileCheck();
+
+  const checkWithdrawalCredentials = async () => {
+    setHasError(false);
+    setIsLoading(true);
+    const endpoint = `${BEACONCHAIN_URL}/api/v1/validator/${inputValue}`;
+    try {
+      const response = await fetch(endpoint);
+      const { data } = await response.json();
+      const withdrawalCredentials = data.withdrawalcredentials;
+      setValidator({
+        validatorIndex: parseInt(inputValue, 10),
+        withdrawalCredentials,
+        isUpgraded: withdrawalCredentials.startsWith('0x01'),
+      });
+    } catch (error) {
+      setHasError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setInputValue(e.target.value.replace(/\D/g, ''));
+
   return (
     <Container>
       <FlexRow>
@@ -315,7 +325,11 @@ export const WithdrawalCredentials: FC<IProps> = () => {
         />
       </FlexRow>
       <FlexRow>
-        <ResultText />
+        <ResultText
+          isLoading={isLoading}
+          hasError={hasError}
+          validator={validator}
+        />
       </FlexRow>
     </Container>
   );

@@ -42,7 +42,7 @@ const CodeBlock = styled.code`
   background-color: #d0ddee;
   border-radius: 6px;
   margin-block: 20px;
-  overflow: scroll;
+  overflow: auto;
   &.indent > *:not(:first-child) {
     margin-inline-start: 2ex;
   }

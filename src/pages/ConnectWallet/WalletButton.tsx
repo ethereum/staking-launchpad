@@ -1,14 +1,17 @@
+// Import libraries
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Spinning } from 'grommet-controls';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
+// Components and pages
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
 import { changeToTestnet } from './Chains';
 import { TARGET_NETWORK_CHAIN_ID } from './web3Utils';
-import { FormattedMessage } from 'react-intl';
+// Utilities
 import { IS_NON_INFURA_TESTNET } from '../../utils/envVars';
 
 export const Logo = styled.img`

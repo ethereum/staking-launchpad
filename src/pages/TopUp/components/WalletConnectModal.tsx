@@ -69,7 +69,7 @@ const WalletConnectModal: React.FC<{
 
     const network = NetworkChainId[chainId as number];
 
-    return !Object.values(AllowedELNetworks).includes(network);
+    return !AllowedELNetworks.includes(network);
   }, [chainId]);
 
   useKeyPress('Escape', handleModalClose);

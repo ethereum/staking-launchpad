@@ -147,7 +147,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     [validator]
   );
 
-  const resultText = useMemo<string | JSX.Element>(() => {
+  function ResultText(): JSX.Element {
     if (isLoading) return <Spinner />;
     if (hasError)
       return (
@@ -155,7 +155,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           <FormattedMessage defaultMessage="Oops! Double check validator index number and try again." />
         </Alert>
       );
-    if (!validator) return ' ';
+    if (!validator) return <span> </span>;
     if (validator.isUpgraded)
       return (
         <Alert variant="success">
@@ -292,8 +292,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
         </ResultsLineItem>
       </Alert>
     );
-  }, [isLoading, hasError, validator, longAddress, copied]);
-
+  }
   return (
     <Container>
       <FlexRow>
@@ -315,7 +314,9 @@ export const WithdrawalCredentials: FC<IProps> = () => {
           fullWidth={isMobile}
         />
       </FlexRow>
-      <FlexRow>{resultText}</FlexRow>
+      <FlexRow>
+        <ResultText />
+      </FlexRow>
     </Container>
   );
 };

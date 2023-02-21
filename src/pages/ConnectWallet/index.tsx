@@ -281,7 +281,7 @@ const _ConnectWalletPage = ({
   useEffect(() => {
     if (chainId) {
       setNetwork(NetworkChainId[chainId]);
-      setNetworkAllowed(Object.values(AllowedELNetworks).includes(network));
+      setNetworkAllowed(AllowedELNetworks.includes(network));
     }
 
     if (

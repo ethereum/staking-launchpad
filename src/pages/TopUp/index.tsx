@@ -154,7 +154,7 @@ const _TopUpPage: React.FC<Props> = () => {
 
     const network = NetworkChainId[chainId as number];
 
-    const isValidNetwork = Object.values(AllowedELNetworks).includes(network);
+    const isValidNetwork = AllowedELNetworks.includes(network);
 
     if (active && account && isValidNetwork) {
       fetchValidatorsForUserAddress();

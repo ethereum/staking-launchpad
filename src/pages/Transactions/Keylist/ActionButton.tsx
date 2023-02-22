@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormNextLink } from 'grommet-icons';
+import { FormNextLink, FormPreviousLink } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
@@ -11,7 +11,8 @@ import {
 import {
   BEACONCHAIN_URL,
   BEACONSCAN_URL,
-  ETHERSCAN_URL,
+  EL_TRANSACTION_URL,
+  IS_NON_INFURA_TESTNET,
 } from '../../../utils/envVars';
 import ReactTooltip from 'react-tooltip';
 
@@ -57,7 +58,11 @@ export const ActionButton = ({
   onClick,
   pubkey,
 }: Props) => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
+  const formArrowLink = React.useMemo(
+    () => (locale === 'ar' ? <FormPreviousLink /> : <FormNextLink />),
+    [locale]
+  );
 
   if (depositStatus === DepositStatus.ALREADY_DEPOSITED) {
     return (
@@ -85,7 +90,9 @@ export const ActionButton = ({
   if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
-        <ButtonLink to={`${ETHERSCAN_URL}/${txHash}`}>Etherscan</ButtonLink>
+        <ButtonLink to={`${EL_TRANSACTION_URL}/${txHash}`}>
+          EL Explorer
+        </ButtonLink>
       </div>
     );
   }
@@ -108,8 +115,12 @@ export const ActionButton = ({
           </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
-
-        <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>Beaconscan</ButtonLink>
+        {!IS_NON_INFURA_TESTNET && (
+          // Probably no Bellatrix beaconscan explorer
+          <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>
+            Beaconscan
+          </ButtonLink>
+        )}
       </div>
     );
   }
@@ -120,7 +131,7 @@ export const ActionButton = ({
         <ButtonText>
           <FormattedMessage defaultMessage="Try again" />
         </ButtonText>
-        <FormNextLink />
+        {formArrowLink}
       </Container>
     );
   }

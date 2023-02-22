@@ -12,6 +12,7 @@ interface LinkProps {
   href?: string;
   inline?: boolean;
   isTextLink?: boolean;
+  isRtl?: boolean;
 }
 
 const styles = `
@@ -31,8 +32,9 @@ const styles = `
   };
  `;
 
+// Add isRtl boolean to props for StyledExternalLink
 const StyledExternalLink = styled.a<
-  Pick<LinkProps, 'primary' | 'theme' | 'inline' | 'isTextLink'>
+  Pick<LinkProps, 'primary' | 'theme' | 'inline' | 'isTextLink' | 'isRtl'>
 >`
   ${styles};
   color: ${(props: any) =>
@@ -40,17 +42,17 @@ const StyledExternalLink = styled.a<
   display: ${(props: any) => (props.inline ? 'inline' : 'inherit')};
   &:after {
     display: ${(props: any) => (props.isTextLink ? `inline` : `none`)};
-    margin-left: 0.125em;
-    margin-right: 0.3em;
-    content: '↗';
+    margin-inline-start: 0.125em;
+    margin-inline-end: 0.3em;
+    content: '${({ isRtl }: any) => (isRtl ? '↖' : '↗')}';
     transition: all 0.1s ease-in-out;
     font-style: normal;
   }
   & > button:after {
     display: ${(props: any) => (props.isTextLink ? `none` : `inline`)};
-    margin-left: 0.25em;
-    margin-right: 0.3em;
-    content: '↗';
+    margin-inline-start: 0.25em;
+    margin-inline-end: 0.3em;
+    content: '${({ isRtl }: any) => (isRtl ? '↖' : '↗')}';
     font-style: normal;
   }
 `;
@@ -147,6 +149,7 @@ export const Link = (props: LinkProps) => {
         target="_blank"
         inline={inline}
         isTextLink={isTextLink}
+        isRtl={locale === 'ar'}
       >
         {children}
       </StyledExternalLink>

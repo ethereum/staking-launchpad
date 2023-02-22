@@ -7,7 +7,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import { Layer } from 'grommet';
 import { Network } from 'grommet-icons';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   fortmatic,
   metamask,
   NetworkChainId,
@@ -16,8 +16,12 @@ import {
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
 import metamaskLogo from '../../../static/metamask.svg';
+import {
+  ENABLE_RPC_FEATURES,
+  IS_NON_INFURA_TESTNET,
+  PORTIS_DAPP_ID,
+} from '../../../utils/envVars';
 import closeGlyph from '../../../static/close.svg';
-import { ENABLE_RPC_FEATURES, PORTIS_DAPP_ID } from '../../../utils/envVars';
 import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
@@ -65,7 +69,7 @@ const WalletConnectModal: React.FC<{
 
     const network = NetworkChainId[chainId as number];
 
-    return !Object.values(AllowedNetworks).includes(network);
+    return !AllowedELNetworks.includes(network);
   }, [chainId]);
 
   useKeyPress('Escape', handleModalClose);
@@ -112,25 +116,28 @@ const WalletConnectModal: React.FC<{
           title="Metamask"
           error={connector === metamask ? error : undefined}
         />
-        <WalletButton
-          invalid={PORTIS_DAPP_ID === ''}
-          selectedWallet={selectedWallet}
-          setSelectedWallet={setSelectedWallet}
-          logoSource={portisLogo}
-          walletProvider={portis}
-          title="Portis"
-          error={connector === portis ? error : undefined}
-        />
-
-        <WalletButton
-          invalid={!ENABLE_RPC_FEATURES}
-          selectedWallet={selectedWallet}
-          setSelectedWallet={setSelectedWallet}
-          logoSource={fortmaticLogo}
-          walletProvider={fortmatic}
-          title="Fortmatic"
-          error={connector === fortmatic ? error : undefined}
-        />
+        {!IS_NON_INFURA_TESTNET && (
+          <WalletButton
+            invalid={PORTIS_DAPP_ID === ''}
+            selectedWallet={selectedWallet}
+            setSelectedWallet={setSelectedWallet}
+            logoSource={portisLogo}
+            walletProvider={portis}
+            title="Portis"
+            error={connector === portis ? error : undefined}
+          />
+        )}
+        {!IS_NON_INFURA_TESTNET && (
+          <WalletButton
+            invalid={!ENABLE_RPC_FEATURES}
+            selectedWallet={selectedWallet}
+            setSelectedWallet={setSelectedWallet}
+            logoSource={fortmaticLogo}
+            walletProvider={fortmatic}
+            title="Fortmatic"
+            error={connector === fortmatic ? error : undefined}
+          />
+        )}
 
         <MetamaskHardwareButton />
       </div>

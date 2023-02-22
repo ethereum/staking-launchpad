@@ -30,7 +30,7 @@ const StyledInput = styled.input`
   font-size: 18px;
   line-height: 24px;
   color: #444444;
-  padding-left: 10px;
+  padding-inline-start: 10px;
   box-sizing: border-box;
   background-color: ${(p: any) => p.theme.gray.lightest};
   border-radius: ${(p: any) =>
@@ -43,7 +43,7 @@ const StyledInput = styled.input`
     -webkit-appearance: none;
   }
   border: 1px solid #ddd;
-  border-right: none;
+  border-inline-end: none;
   display: inline-flex;
   :focus {
     outline: none;

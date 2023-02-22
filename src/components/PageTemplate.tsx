@@ -52,7 +52,7 @@ const _PageTemplate = ({
       <AppBar />
       <Gutter>
         <Content>
-          <Heading level={2} size="medium" color="blueDark" className="mb40">
+          <Heading level={1} size="medium" color="blueDark" className="mb40">
             {header}
           </Heading>
           {children}

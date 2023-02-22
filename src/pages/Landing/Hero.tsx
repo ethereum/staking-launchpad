@@ -114,6 +114,7 @@ const StyledLeslieImgNode = styled.img`
 const ButtonRow = styled.div`
   width: fit-content;
   display: flex;
+  gap: 20px;
   @media screen and (max-width: 1080px) {
     flex-direction: column;
   }
@@ -217,9 +218,7 @@ export const Hero = () => {
                           />
                         </Link>
                       </ButtonContainer>
-                      <ButtonContainer
-                        className={isMediumScreen || m ? `mt20` : `ml20`}
-                      >
+                      <ButtonContainer>
                         <Link to={routesEnum.checklistPage}>
                           <Button
                             fullWidth={m || isSmallScreen}

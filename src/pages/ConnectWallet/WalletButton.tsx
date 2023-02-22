@@ -1,12 +1,18 @@
+// Import libraries
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Spinning } from 'grommet-controls';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
+// Components and pages
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
-import { FormattedMessage } from 'react-intl';
+import { changeToTestnet } from './Chains';
+import { TARGET_NETWORK_CHAIN_ID } from './web3Utils';
+// Utilities
+import { IS_NON_INFURA_TESTNET } from '../../utils/envVars';
 
 export const Logo = styled.img`
   height: 50px;
@@ -38,6 +44,7 @@ const WalletText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const ConnectingContainer = styled.div`
@@ -45,6 +52,12 @@ const ConnectingContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 8px;
+`;
+
+const SpinnerContainer = styled.span`
+  margin-top: 20px;
+  display: flex;
+  margin-inline-end: 10px;
 `;
 
 export const WalletButton = ({
@@ -74,6 +87,9 @@ export const WalletButton = ({
   }, [error, active, setShowSpinner]);
 
   const handleClick = async () => {
+    if (IS_NON_INFURA_TESTNET) {
+      await changeToTestnet(TARGET_NETWORK_CHAIN_ID);
+    }
     if (!selectedWallet) {
       setShowSpinner(true);
       setSelectedWallet(walletProvider);
@@ -104,16 +120,17 @@ export const WalletButton = ({
               />
             )}
           </StyledText>
+          // TODO: Finish search for className=".*[mp][lr][\d]*"
           {showSpinner && (
-            <Text className="ml10" size="small">
+            <Text size="small">
               <FormattedMessage defaultMessage="Waiting to connect..." />
             </Text>
           )}
         </WalletText>
         {showSpinner && (
-          <span className="mt20 flex flex-row mr10">
+          <SpinnerContainer>
             <Spinning kind="pulse" />
-          </span>
+          </SpinnerContainer>
         )}
       </ConnectingContainer>
     </StyledPaper>

@@ -40,6 +40,9 @@ const Card = styled.div`
   width: 100%;
   margin: 16px;
   background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     margin: 0px;
     margin-top: 16px;

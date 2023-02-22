@@ -10,4 +10,5 @@ export const Code = styled(Text)`
   color: #ad2b2a;
   font-size: 14px;
   line-height: 16px;
+  direction: ltr;
 `;

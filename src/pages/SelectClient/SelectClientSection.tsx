@@ -10,6 +10,7 @@ import { ImageSelectionBox } from '../../components/ImageSelectionBox';
 import { Alert } from '../../components/Alert';
 import { Client } from './index';
 import { ClientId } from '../../store/actions/clientActions';
+import { TUTORIAL_URL, NETWORK_NAME } from '../../utils/envVars';
 
 const ClientOptionContainer = styled.div<{ overFour: boolean }>`
   width: min(${({ overFour }) => (overFour ? '700' : '1000')}px, 100%);
@@ -59,6 +60,18 @@ const SelectClientSection = ({
           like Infura, but we recommend running your own client to
           keep the network as decentralized as possible."
         />
+      </div>
+    )}
+    {TUTORIAL_URL !== null && (
+      <div style={{ paddingBottom: '1rem' }}>
+        <Link to={TUTORIAL_URL} primary>
+          <FormattedMessage
+            defaultMessage="Check this document to learn how to run a node on {networkName}"
+            values={{
+              networkName: NETWORK_NAME,
+            }}
+          />
+        </Link>
       </div>
     )}
     <Box className="flex flex-column space-between mt10">

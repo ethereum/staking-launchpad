@@ -14,7 +14,6 @@ import {
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
-  EL_TESTNET_NAME,
   TUTORIAL_URL,
   NETWORK_NAME,
 } from '../../utils/envVars';
@@ -920,13 +919,14 @@ export const Checklist = () => {
                     network: IS_MAINNET ? (
                       <FormattedMessage defaultMessage="Mainnet" />
                     ) : (
-                      EL_TESTNET_NAME
+                      TESTNET_LAUNCHPAD_NAME
                     ),
                   }}
                 />
               </Text>
             }
           />
+          {tutorialLinkBox()}
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Recommended" />
           </Heading>
@@ -1114,6 +1114,56 @@ export const Checklist = () => {
               <Text className="checkbox-label">
                 <FormattedMessage defaultMessage="I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)" />
               </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Set withdrawal address" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Stakers must set a withdrawal address to unlock reward payments from the consensus layer.
+              This is set when generating your validator keys."
+              values={{
+                eth1WithdrawalAddress: <Code>--eth1-withdrawal-address</Code>,
+              }}
+            />
+          </Text>
+          <Alert variant="warning" className="my30">
+            <Text>
+              <FormattedMessage
+                defaultMessage="If you do not provide a withdrawal address prior to depositing, you will have to perform an
+                additional step to update your keys and enable withdrawals. Funds will be locked in the meantime."
+              />
+            </Text>
+          </Alert>
+          <Text className="mt20">
+            <Link inline primary to="/withdrawals">
+              <FormattedMessage defaultMessage="More on staking withdrawals" />
+            </Link>
+          </Text>
+          <CheckBox
+            label={
+              <div className="flex flex-column">
+                <Text className="checkbox-label mb10">
+                  <FormattedMessage
+                    defaultMessage="I provided an Ethereum address when generating my {depositData} file before depositing where I would
+                    like all validator rewards and withdrawals to be deposited into."
+                    values={{
+                      depositData: (
+                        <Code>{`deposit_data<timestamp>.json`}</Code>
+                      ),
+                    }}
+                  />
+                </Text>
+                <Text className="checkbox-label mb10">
+                  <FormattedMessage
+                    defaultMessage="If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials (requires Shanghai/Capella upgrade)."
+                    values={{ btec: <Code>BLS_To_Execution_Change</Code> }}
+                  />
+                </Text>
+              </div>
             }
           />
         </section>

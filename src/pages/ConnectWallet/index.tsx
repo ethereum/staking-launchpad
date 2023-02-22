@@ -13,7 +13,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import { formatEther } from '@ethersproject/units';
 import { NoEthereumProviderError } from '@web3-react/injected-connector';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   fortmatic,
   metamask,
   NetworkChainId,
@@ -45,6 +45,7 @@ import {
   IS_MAINNET,
   PRICE_PER_VALIDATOR,
   TICKER_NAME,
+  IS_NON_INFURA_TESTNET,
   FAUCET_URL,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
@@ -104,6 +105,7 @@ const FaucetLink = styled(Link)`
 const Row = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 
 const Network = styled.div`
@@ -126,6 +128,7 @@ const ButtonRow = styled.div`
   width: 100%;
   justify-content: center;
   margin-top: 128px;
+  gap: 10px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
     flex-direction: column;
     align-items: center;
@@ -278,7 +281,7 @@ const _ConnectWalletPage = ({
   useEffect(() => {
     if (chainId) {
       setNetwork(NetworkChainId[chainId]);
-      setNetworkAllowed(Object.values(AllowedNetworks).includes(network));
+      setNetworkAllowed(AllowedELNetworks.includes(network));
     }
 
     if (
@@ -350,11 +353,7 @@ const _ConnectWalletPage = ({
               </WalletInfoContainer>
               <Network>
                 <Row>
-                  <Dot
-                    className="mr10"
-                    success={networkAllowed}
-                    error={!networkAllowed}
-                  />
+                  <Dot success={networkAllowed} error={!networkAllowed} />
                   <Heading
                     level={3}
                     size="small"
@@ -379,11 +378,7 @@ const _ConnectWalletPage = ({
                 <>
                   <Balance>
                     <Row>
-                      <Dot
-                        className="mr10"
-                        success={!lowBalance}
-                        error={lowBalance}
-                      />
+                      <Dot success={!lowBalance} error={lowBalance} />
                       <Heading level={3} size="small" color="blueDark">
                         <FormattedMessage defaultMessage="Balance" />
                       </Heading>
@@ -445,26 +440,28 @@ const _ConnectWalletPage = ({
                 title="Metamask"
                 error={walletProvider === metamask ? error : undefined}
               />
-
-              <WalletButton
-                invalid={PORTIS_DAPP_ID === ''}
-                selectedWallet={selectedWallet}
-                setSelectedWallet={setSelectedWallet}
-                logoSource={portisLogo}
-                walletProvider={portis}
-                title="Portis"
-                error={walletProvider === portis ? error : undefined}
-              />
-
-              <WalletButton
-                invalid={!ENABLE_RPC_FEATURES}
-                selectedWallet={selectedWallet}
-                setSelectedWallet={setSelectedWallet}
-                logoSource={fortmaticLogo}
-                walletProvider={fortmatic}
-                title="Fortmatic"
-                error={walletProvider === fortmatic ? error : undefined}
-              />
+              {!IS_NON_INFURA_TESTNET && (
+                <WalletButton
+                  invalid={PORTIS_DAPP_ID === ''}
+                  selectedWallet={selectedWallet}
+                  setSelectedWallet={setSelectedWallet}
+                  logoSource={portisLogo}
+                  walletProvider={portis}
+                  title="Portis"
+                  error={walletProvider === portis ? error : undefined}
+                />
+              )}
+              {!IS_NON_INFURA_TESTNET && (
+                <WalletButton
+                  invalid={!ENABLE_RPC_FEATURES}
+                  selectedWallet={selectedWallet}
+                  setSelectedWallet={setSelectedWallet}
+                  logoSource={fortmaticLogo}
+                  walletProvider={fortmatic}
+                  title="Fortmatic"
+                  error={walletProvider === fortmatic ? error : undefined}
+                />
+              )}
               <MetamaskHardwareButton />
             </WalletButtonSubContainer>
           </Animated>
@@ -478,7 +475,6 @@ const _ConnectWalletPage = ({
           </Text>
           <Link isTextLink={false} to="https://metamask.io/">
             <Button
-              className="mr10"
               label={formatMessage({ defaultMessage: 'Download MetaMask' })}
             />
           </Link>
@@ -498,7 +494,6 @@ const _ConnectWalletPage = ({
         {!walletConnected && (
           <Link to={routesEnum.uploadValidatorPage}>
             <Button
-              className="mr10"
               width={100}
               label={formatMessage({ defaultMessage: 'Back' })}
             />
@@ -509,7 +504,6 @@ const _ConnectWalletPage = ({
             width={300}
             onClick={deactivate}
             label={formatMessage({ defaultMessage: 'Connect new wallet' })}
-            className="mr10"
             color="blueDark"
           />
         )}

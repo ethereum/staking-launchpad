@@ -4,7 +4,7 @@ import _shuffle from 'lodash/shuffle';
 import _sortBy from 'lodash/sortBy';
 import { CheckBox } from 'grommet';
 import { FormattedDate, FormattedMessage, useIntl } from 'react-intl';
-import { FormNext } from 'grommet-icons';
+import { FormNext, FormPrevious } from 'grommet-icons';
 import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
@@ -14,7 +14,6 @@ import {
   IS_MAINNET,
   TESTNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_NAME,
-  EL_TESTNET_NAME,
   TUTORIAL_URL,
   NETWORK_NAME,
 } from '../../utils/envVars';
@@ -48,13 +47,13 @@ const ChecklistPageStyles = styled.div`
   }
   .sub-checklist-item {
     margin-top: -0.5rem;
-    margin-left: 1.5rem;
+    margin-inline-start: 1.5rem;
   }
   .checkbox-label {
-    margin-left: 0.5rem;
+    margin-inline-start: 0.5rem;
   }
   ul {
-    padding-left: 0px;
+    padding-inline-start: 0px;
     padding-top: 16px;
   }
   @media screen and (max-width: 1080px) {
@@ -76,6 +75,7 @@ const CodeSnippet = styled.div`
   background-color: #597ea3;
   border-radius: 6px;
   margin: 10px 0;
+  direction: ltr;
 
   code {
     display: block;
@@ -177,13 +177,18 @@ const Card = styled.div`
 `;
 
 const BoldGreen = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
-  font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
+  color: ${(p: { theme: any }) => p.theme.green.dark};
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-inline-end: 10px;
 `;
 
 const StyledLink = styled(Link as any)`
   width: 100%;
+`;
+
+const IndentedText = styled(Text)`
+  margin-inline-start: 20px;
 `;
 
 enum layerEnum {
@@ -228,7 +233,7 @@ const tutorialLinkBox = () => {
 };
 
 export const Checklist = () => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const { consensusLayerName } = useIntlNetworkName();
 
   const defaultExecutionPorts: {
@@ -398,6 +403,15 @@ export const Checklist = () => {
     },
   ]);
 
+  const formArrow = React.useMemo(
+    () =>
+      locale === 'ar' ? (
+        <FormPrevious size="large" />
+      ) : (
+        <FormNext size="large" />
+      ),
+    [locale]
+  );
   return (
     <PageTemplate
       title={formatMessage({ defaultMessage: 'Validator checklist' })}
@@ -431,11 +445,11 @@ export const Checklist = () => {
               <Heading level={4} className="mb10">
                 <FormattedMessage defaultMessage="Section 1" />
               </Heading>
-              <BoldGreen className="mr10" fontSize={24}>
+              <BoldGreen>
                 <FormattedMessage defaultMessage="Before you start" />
               </BoldGreen>
             </div>
-            <FormNext size="large" />
+            {formArrow}
           </Card>
         </StyledLink>
         <StyledLink to="#section-two" inline isTextLink={false}>
@@ -444,11 +458,11 @@ export const Checklist = () => {
               <Heading level={4} className="mb10">
                 <FormattedMessage defaultMessage="Section 2" />
               </Heading>
-              <BoldGreen className="mr10" fontSize={24}>
+              <BoldGreen>
                 <FormattedMessage defaultMessage="During setup" />
               </BoldGreen>
             </div>
-            <FormNext size="large" />
+            {formArrow}
           </Card>
         </StyledLink>
         <StyledLink to="#section-three" inline isTextLink={false}>
@@ -457,11 +471,11 @@ export const Checklist = () => {
               <Heading level={4} className="mb10">
                 <FormattedMessage defaultMessage="Section 3" />
               </Heading>
-              <BoldGreen className="mr10" fontSize={24}>
+              <BoldGreen>
                 <FormattedMessage defaultMessage="After depositing" />
               </BoldGreen>
             </div>
-            <FormNext size="large" />
+            {formArrow}
           </Card>
         </StyledLink>
       </CardContainer>
@@ -743,7 +757,7 @@ export const Checklist = () => {
               </tbody>
             </PortTable>
           </ClientLayerContainer>
-          <Text className="ml20">
+          <IndentedText>
             <Link
               primary
               to="https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/"
@@ -751,7 +765,7 @@ export const Checklist = () => {
             >
               <FormattedMessage defaultMessage="Learn about ports in networking" />
             </Link>
-          </Text>
+          </IndentedText>
         </section>
         <section>
           <Heading level={3}>
@@ -905,13 +919,14 @@ export const Checklist = () => {
                     network: IS_MAINNET ? (
                       <FormattedMessage defaultMessage="Mainnet" />
                     ) : (
-                      EL_TESTNET_NAME
+                      TESTNET_LAUNCHPAD_NAME
                     ),
                   }}
                 />
               </Text>
             }
           />
+          {tutorialLinkBox()}
           <Heading level={4} className="mt10">
             <FormattedMessage defaultMessage="Recommended" />
           </Heading>
@@ -1099,6 +1114,56 @@ export const Checklist = () => {
               <Text className="checkbox-label">
                 <FormattedMessage defaultMessage="I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)" />
               </Text>
+            }
+          />
+        </section>
+        <section>
+          <Heading level={3}>
+            <FormattedMessage defaultMessage="Set withdrawal address" />
+          </Heading>
+          <Text className="mt20">
+            <FormattedMessage
+              defaultMessage="Stakers must set a withdrawal address to unlock reward payments from the consensus layer.
+              This is set when generating your validator keys."
+              values={{
+                eth1WithdrawalAddress: <Code>--eth1-withdrawal-address</Code>,
+              }}
+            />
+          </Text>
+          <Alert variant="warning" className="my30">
+            <Text>
+              <FormattedMessage
+                defaultMessage="If you do not provide a withdrawal address prior to depositing, you will have to perform an
+                additional step to update your keys and enable withdrawals. Funds will be locked in the meantime."
+              />
+            </Text>
+          </Alert>
+          <Text className="mt20">
+            <Link inline primary to="/withdrawals">
+              <FormattedMessage defaultMessage="More on staking withdrawals" />
+            </Link>
+          </Text>
+          <CheckBox
+            label={
+              <div className="flex flex-column">
+                <Text className="checkbox-label mb10">
+                  <FormattedMessage
+                    defaultMessage="I provided an Ethereum address when generating my {depositData} file before depositing where I would
+                    like all validator rewards and withdrawals to be deposited into."
+                    values={{
+                      depositData: (
+                        <Code>{`deposit_data<timestamp>.json`}</Code>
+                      ),
+                    }}
+                  />
+                </Text>
+                <Text className="checkbox-label mb10">
+                  <FormattedMessage
+                    defaultMessage="If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials (requires Shanghai/Capella upgrade)."
+                    values={{ btec: <Code>BLS_To_Execution_Change</Code> }}
+                  />
+                </Text>
+              </div>
             }
           />
         </section>

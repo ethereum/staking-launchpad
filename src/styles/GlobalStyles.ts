@@ -6,16 +6,16 @@ const shorthandSpacing = range(0, 150, 5).map(n => {
   .m${n}{ margin: ${n}px; }
   .mt${n}{ margin-top: ${n}px; }
   .mb${n}{ margin-bottom: ${n}px; }
-  .ml${n}{ margin-left: ${n}px; }
-  .mr${n}{ margin-right: ${n}px; }
-  .mx${n}{ margin-right: ${n}px;  margin-left: ${n}px; }
+  .ml${n}{ margin-inline-start: ${n}px; }
+  .mr${n}{ margin-inline-end: ${n}px; }
+  .mx${n}{ margin-inline: ${n}px; }
   .my${n}{ margin-top: ${n}px;  margin-bottom: ${n}px; }
   .p${n}{ padding: ${n}px; }
   .pt${n}{ padding-top: ${n}px; }
   .pb${n}{ padding-bottom: ${n}px; }
-  .pl${n}{ padding-left: ${n}px; }
-  .pr${n}{ padding-right: ${n}px; }
-  .px${n}{ padding-right: ${n}px;  padding-left: ${n}px; }
+  .pl${n}{ padding-inline-start: ${n}px; }
+  .pr${n}{ padding-inline-end: ${n}px; }
+  .px${n}{ padding-inline: ${n}px; }
   .py${n}{ padding-top: ${n}px;  padding-bottom: ${n}px; }
   `;
 });

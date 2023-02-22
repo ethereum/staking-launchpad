@@ -31,14 +31,14 @@ export const Instructions = ({
         <TextSelectionBox
           isActive={chosenTool === keysTool.CLI}
           onClick={() => setChosenTool(keysTool.CLI)}
-          style={{ marginRight: '20px' }}
+          style={{ marginEnd: '20px' }}
         >
           {formatMessage({ defaultMessage: 'Download CLI app' })}
         </TextSelectionBox>
         <TextSelectionBox
           isActive={chosenTool === keysTool.GUI}
           onClick={() => setChosenTool(keysTool.GUI)}
-          style={{ marginRight: '20px' }}
+          style={{ marginEnd: '20px' }}
         >
           {formatMessage({ defaultMessage: 'Download Key Gen GUI app' })}
         </TextSelectionBox>

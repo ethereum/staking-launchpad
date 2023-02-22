@@ -30,20 +30,21 @@ const Step = styled.div`
   font-weight: ${p => (p.active ? 600 : undefined)};
 `;
 
-const Arrow = styled(FormNext)`
-  stroke: ${p => p.color || p.theme.gray.medium};
-`;
-
 interface Props {
   workflow: WorkflowStep;
 }
 
 export const WorkflowProgressBar = ({ workflow }: Props): JSX.Element => {
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
   interface step {
     step: WorkflowStep;
     text: string;
   }
+
+  const Arrow = styled(FormNext)`
+    stroke: ${p => p.color || p.theme.gray.medium};
+    rotate: ${locale === 'ar' ? '180' : '0'}deg;
+  `;
 
   const steps: step[] = [
     {

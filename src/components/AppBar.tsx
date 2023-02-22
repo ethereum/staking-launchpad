@@ -9,7 +9,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import EthDiamond from '../static/eth-diamond-plain.svg';
 import { web3ReactInterface } from '../pages/ConnectWallet';
 import {
-  AllowedNetworks,
+  AllowedELNetworks,
   NetworkChainId,
 } from '../pages/ConnectWallet/web3Utils';
 import { Dot } from './Dot';
@@ -159,7 +159,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
 
   if (chainId) {
     network = NetworkChainId[chainId];
-    networkAllowed = Object.values(AllowedNetworks).includes(network);
+    networkAllowed = AllowedELNetworks.includes(network);
   }
 
   const pathname: string = React.useMemo(() => location.pathname, [
@@ -299,6 +299,16 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="Top Up" />
           </BarLinkText>
         </Link>
+        <Link to={routesEnum.withdrawals} className="mx10 secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.withdrawals}
+          >
+            <FormattedMessage defaultMessage="Withdrawals" />
+          </BarLinkText>
+        </Link>
       </NavBarLinks>
       <NavLinksRight>
         {!mobile && (
@@ -356,6 +366,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   </DropdownLink>
                   <DropdownLink to={routesEnum.checklistPage}>
                     <FormattedMessage defaultMessage="Staker checklist" />
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.withdrawals}>
+                    <FormattedMessage defaultMessage="Withdrawals" />
                   </DropdownLink>
                   <DropdownLink to={routesEnum.languagesPage}>
                     <FormattedMessage defaultMessage="Languages" />

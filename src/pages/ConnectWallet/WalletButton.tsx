@@ -120,7 +120,6 @@ export const WalletButton = ({
               />
             )}
           </StyledText>
-          // TODO: Finish search for className=".*[mp][lr][\d]*"
           {showSpinner && (
             <Text size="small">
               <FormattedMessage defaultMessage="Waiting to connect..." />

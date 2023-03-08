@@ -488,7 +488,7 @@ export const Withdrawals = () => {
                 instantaneous, and depends on how many other accounts are exiting at the same time."
               />
             </Text>
-            <Alert variant="warning" className="mt30">
+            <Alert variant="warning" className="my30">
               <span role="img" aria-label="note">
                 📝
               </span>{' '}
@@ -496,6 +496,9 @@ export const Withdrawals = () => {
                 <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
               </Text>
             </Alert>
+            <Text className="mb10">
+              <FormattedMessage defaultMessage="Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated." />
+            </Text>
           </section>
         </section>
 

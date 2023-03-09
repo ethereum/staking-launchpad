@@ -42,10 +42,27 @@ const Row = styled.div`
   display: flex;
   margin: 2rem 0rem;
   align-items: center;
+  gap: 20px;
 `;
 
 const Container = styled.div`
   width: 100%;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+  @media (max-width: ${p => p.theme.screenSizes.small}) {
+    flex-direction: column;
+    padding-inline: 0;
+    button,
+    a {
+      width: 100% !important;
+    }
+  }
 `;
 
 // Prop definitions
@@ -190,12 +207,7 @@ const _SummaryPage = ({
               })}
             />
           </Link>
-          <Link
-            shouldOpenNewTab
-            to={routesEnum.phishingPage}
-            primary
-            className="ml20"
-          >
+          <Link shouldOpenNewTab to={routesEnum.phishingPage} primary>
             <FormattedMessage defaultMessage="More on phishing" />
           </Link>
         </Row>
@@ -293,10 +305,9 @@ const _SummaryPage = ({
           />
         </span>
       </AcknowledgementSection>
-      <div className="flex center p30">
+      <ButtonContainer>
         <Link to={routesEnum.connectWalletPage}>
           <Button
-            className="mr10"
             width={100}
             label={formatMessage({ defaultMessage: 'Back' })}
           />
@@ -309,7 +320,7 @@ const _SummaryPage = ({
             label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
-      </div>
+      </ButtonContainer>
     </WorkflowPageTemplate>
   );
 };

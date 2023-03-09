@@ -62,6 +62,16 @@ const Dropzone = styled.div`
 `;
 // @ts-ignore
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+`;
+
+const PaddedButtonContainer = styled(ButtonContainer)`
+  padding: 30px;
+`;
+
 const DeleteBtn = styled.span`
   cursor: pointer;
   padding: 3px;
@@ -287,9 +297,9 @@ const _UploadValidatorPage = ({
 
     if (isFileStaged || fileError) {
       return (
-        <div className="flex center">
+        <ButtonContainer>
           <DeleteBtn onClick={handleFileDelete}>
-            <Close size="15px" className="mr10" />
+            <Close size="15px" />
           </DeleteBtn>
           {fileError || (
             <>
@@ -306,7 +316,7 @@ const _UploadValidatorPage = ({
               )}
             </>
           )}
-        </div>
+        </ButtonContainer>
       );
     }
 
@@ -359,10 +369,9 @@ const _UploadValidatorPage = ({
           </Text>
         </Dropzone>
       </Container>
-      <div className="flex center p30">
+      <PaddedButtonContainer>
         <Link to={routesEnum.generateKeysPage}>
           <Button
-            className="mr10"
             width={100}
             label={formatMessage({ defaultMessage: 'Back' })}
           />
@@ -375,7 +384,7 @@ const _UploadValidatorPage = ({
             label={formatMessage({ defaultMessage: 'Continue' })}
           />
         </Link>
-      </div>
+      </PaddedButtonContainer>
     </WorkflowPageTemplate>
   );
 };

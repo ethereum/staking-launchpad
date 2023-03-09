@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { keysTool } from './index';
 import { Paper } from '../../components/Paper';
 import { TextSelectionBox } from '../../components/TextSelectionBox';
@@ -6,10 +7,10 @@ import { Option1 } from './Option1';
 import { Option2 } from './Option2';
 import { Option3 } from './Option3';
 import { Heading } from '../../components/Heading';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 interface Props {
   validatorCount: number | string;
+  withdrawalAddress: string;
   os: 'mac' | 'linux' | 'windows';
   chosenTool: keysTool;
   setChosenTool: (tool: keysTool) => void;
@@ -17,6 +18,7 @@ interface Props {
 
 export const Instructions = ({
   validatorCount,
+  withdrawalAddress,
   os,
   chosenTool,
   setChosenTool,
@@ -31,14 +33,14 @@ export const Instructions = ({
         <TextSelectionBox
           isActive={chosenTool === keysTool.CLI}
           onClick={() => setChosenTool(keysTool.CLI)}
-          style={{ marginRight: '20px' }}
+          style={{ marginEnd: '20px' }}
         >
           {formatMessage({ defaultMessage: 'Download CLI app' })}
         </TextSelectionBox>
         <TextSelectionBox
           isActive={chosenTool === keysTool.GUI}
           onClick={() => setChosenTool(keysTool.GUI)}
-          style={{ marginRight: '20px' }}
+          style={{ marginEnd: '20px' }}
         >
           {formatMessage({ defaultMessage: 'Download Key Gen GUI app' })}
         </TextSelectionBox>
@@ -50,10 +52,12 @@ export const Instructions = ({
         </TextSelectionBox>
       </div>
       <div>
-        {chosenTool === keysTool.CLI && <Option1 {...{ validatorCount, os }} />}
+        {chosenTool === keysTool.CLI && (
+          <Option1 {...{ validatorCount, withdrawalAddress, os }} />
+        )}
         {chosenTool === keysTool.GUI && <Option2 {...{ os }} />}
         {chosenTool === keysTool.CLISOURCE && (
-          <Option3 {...{ validatorCount, os }} />
+          <Option3 {...{ validatorCount, withdrawalAddress, os }} />
         )}
       </div>
     </Paper>

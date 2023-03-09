@@ -5,7 +5,7 @@ import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import styled from 'styled-components';
-import { FormNext, FlagFill } from 'grommet-icons';
+import { FormNext, FormPrevious, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import _every from 'lodash/every';
 import { AppBar } from '../../components/AppBar';
@@ -58,9 +58,10 @@ const Content = styled.div`
 `;
 
 const BoldGreen = styled.span`
-  color: ${(p: { theme: any; fontSize: number }) => p.theme.green.dark};
-  font-size: ${(p: { theme: any; fontSize: number }) => p.fontSize}px;
+  color: ${(p: { theme: any }) => p.theme.green.dark};
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-inline-end: 10px;
 `;
 
 const Card = styled.div`
@@ -133,11 +134,13 @@ const WarningRow = styled.div`
   width: 100%;
   color: ${p => p.theme.red.medium};
   margin-top: 1rem;
+  gap: 20px;
 `;
 
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
+  gap: 20px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     flex-direction: column;
     align-items: flex-start;
@@ -167,7 +170,7 @@ const ChecklistAlert = styled.div`
   background: #5da2b2;
   border-radius: 4px;
   > div {
-    margin-left: 5rem;
+    margin-inline-start: 5rem;
   }
   .flex {
     height: 100%;
@@ -177,7 +180,7 @@ const ChecklistAlert = styled.div`
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     flex-direction: column;
     > div {
-      margin-left: 0rem;
+      margin-inline-start: 0rem;
     }
   }
 `;
@@ -209,7 +212,7 @@ const _CongratulationsPage = ({
     status: 0,
   });
   const { status } = state;
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
@@ -267,6 +270,16 @@ const _CongratulationsPage = ({
     }
     return <FormattedMessage defaultMessage="Loading..." />;
   };
+
+  const formArrow = React.useMemo(
+    () =>
+      locale === 'ar' ? (
+        <FormPrevious size="large" />
+      ) : (
+        <FormNext size="large" />
+      ),
+    [locale]
+  );
 
   if (workflow < WorkflowStep.CONGRATULATIONS) {
     return routeToCorrectWorkflowStep(workflow);
@@ -347,7 +360,7 @@ const _CongratulationsPage = ({
                   <FormattedMessage defaultMessage="Your stake" />
                 </Heading>
                 <Text size="x-large" className="mt20">
-                  <BoldGreen className="mr10" fontSize={24}>
+                  <BoldGreen>
                     {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
                   </BoldGreen>
                 </Text>
@@ -357,7 +370,7 @@ const _CongratulationsPage = ({
                   <FormattedMessage defaultMessage="Your validators" />
                 </Heading>
                 <Text size="x-large" className="mt20">
-                  <BoldGreen className="mr10" fontSize={24}>
+                  <BoldGreen>
                     <FormattedMessage
                       defaultMessage="{totalTxCount} validators"
                       values={{
@@ -369,7 +382,7 @@ const _CongratulationsPage = ({
                 {!allTxConfirmed && (
                   <WarningRow>
                     <FlagFill color="red" />
-                    <WarningText className="ml20">
+                    <WarningText>
                       {remainingTxCount === 1 ? (
                         <FormattedMessage
                           defaultMessage="You have {remainingTxCount} outstanding deposit"
@@ -392,7 +405,7 @@ const _CongratulationsPage = ({
                   <FormattedMessage defaultMessage="Current APR" />
                 </Heading>
                 <Text size="x-large" className="mt20">
-                  <BoldGreen className="mr10" fontSize={24}>
+                  <BoldGreen>
                     <LoadingHandler value={`${formattedAPR}%`} />
                   </BoldGreen>
                 </Text>
@@ -433,7 +446,7 @@ const _CongratulationsPage = ({
                         </Text>
                       )}
                     </div>
-                    <FormNext size="large" />
+                    {formArrow}
                   </Row>
                 </CardButton>
               ) : (
@@ -460,7 +473,7 @@ const _CongratulationsPage = ({
                         <FormattedMessage defaultMessage="Complete the staker checklist" />
                       </Text>
                     </div>
-                    <FormNext size="large" />
+                    {formArrow}
                   </Row>
                 </CardLink>
               )}
@@ -513,13 +526,12 @@ const _CongratulationsPage = ({
                   <Link to={routesEnum.checklistPage} className="mt20">
                     <Button
                       label={formatMessage({ defaultMessage: 'Checklist' })}
-                      className="mr20"
                       rainbow
                     />
                   </Link>
                   <Link
                     isTextLink={false}
-                    to="https://invite.gg/ethstaker"
+                    to="https://discord.io/ethstaker"
                     className="mt20"
                   >
                     <Button

@@ -133,6 +133,9 @@
   "0S8/Wo": {
     "message": "Testnet practice"
   },
+  "0U17DC": {
+    "message": "withdrawal credentials"
+  },
   "0c06tl": {
     "message": "Withdrawal Credentials"
   },
@@ -213,6 +216,9 @@
   },
   "1ingnQ": {
     "message": "More on Ethereum staking economics"
+  },
+  "1p+pb5": {
+    "message": "fee recipient"
   },
   "1pUw7Y": {
     "message": "Documentation on running Nethermind"
@@ -700,6 +706,9 @@
   },
   "C/gb74": {
     "message": "Configure Lighthouse"
+  },
+  "C2Jn1z": {
+    "message": "Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed. These can both be set to the same address, but must each be set separately."
   },
   "C3jBPI": {
     "message": "Execution Client"

@@ -208,6 +208,23 @@ export const Withdrawals = () => {
                   />
                 </li>
               </ul>
+              <Text className="mt20">
+                <FormattedMessage
+                  defaultMessage="Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed. These can both be set to the same address, but must each be set separately."
+                  values={{
+                    withdrawalCredentials: (
+                      <strong>
+                        <FormattedMessage defaultMessage="withdrawal credentials" />
+                      </strong>
+                    ),
+                    feeRecipient: (
+                      <strong>
+                        <FormattedMessage defaultMessage="fee recipient" />
+                      </strong>
+                    ),
+                  }}
+                />
+              </Text>
             </section>
 
             <section className="actionable">
@@ -270,7 +287,7 @@ export const Withdrawals = () => {
                     defaultMessage="As noted above, this step is completed by signing a message known as {message}.
                     These are accepted into blocks as of the first slot after the Shanghai/Capella
                     upgrade."
-                    values={{ message: <Code>BLS_To_Execution_Change</Code> }}
+                    values={{ message: <Code>BLSToExecutionChange</Code> }}
                   />
                 </Text>
                 <Text className="mb10">

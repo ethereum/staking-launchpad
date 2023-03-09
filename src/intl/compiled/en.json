@@ -339,6 +339,12 @@
       "value": "Testnet practice"
     }
   ],
+  "0U17DC": [
+    {
+      "type": 0,
+      "value": "withdrawal credentials"
+    }
+  ],
   "0c06tl": [
     {
       "type": 0,
@@ -523,6 +529,12 @@
     {
       "type": 0,
       "value": "More on Ethereum staking economics"
+    }
+  ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "fee recipient"
     }
   ],
   "1pUw7Y": [
@@ -1849,6 +1861,28 @@
     {
       "type": 0,
       "value": "Configure Lighthouse"
+    }
+  ],
+  "C2Jn1z": [
+    {
+      "type": 0,
+      "value": "Note that your "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " are not the same as your "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", which receives transaction fees from proposed. These can both be set to the same address, but must each be set separately."
     }
   ],
   "C3jBPI": [

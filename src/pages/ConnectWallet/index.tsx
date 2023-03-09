@@ -21,6 +21,7 @@ import {
   useMetamaskEagerConnect,
   useMetamaskListener,
 } from './web3Utils';
+import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
@@ -316,6 +317,17 @@ const _ConnectWalletPage = ({
     executionLayerName,
   ]);
 
+  const withdrawalAddress = useMemo<string>(() => {
+    // eslint-disable-next-line camelcase
+    const credentials = depositKeys[0]?.withdrawal_credentials ?? '';
+    if (credentials.startsWith('01')) return `0x${credentials.slice(-40)}`;
+    return '';
+  }, [depositKeys]);
+  const withdrawalAddressShort = useMemo<string>(
+    () => `${withdrawalAddress.slice(0, 6)}...${withdrawalAddress.slice(-4)}`,
+    [withdrawalAddress]
+  );
+
   const handleSubmit = () => {
     if (workflow === WorkflowStep.CONNECT_WALLET) {
       dispatchWorkflowUpdate(WorkflowStep.SUMMARY);
@@ -417,6 +429,29 @@ const _ConnectWalletPage = ({
                       </FaucetLink>
                     )}
                   </div>
+                  <Alert
+                    variant={withdrawalAddress ? 'warning' : 'error'}
+                    className="mt20"
+                  >
+                    {withdrawalAddress ? (
+                      <FormattedMessage
+                        defaultMessage="The withdrawal address for these validators will be set to {withdrawalAddress}.
+                        Make 100% sure you control this address before depositing, as this cannot be changed."
+                        values={{
+                          withdrawalAddress: (
+                            <span title={withdrawalAddress}>
+                              {withdrawalAddressShort}
+                            </span>
+                          ),
+                        }}
+                      />
+                    ) : (
+                      <FormattedMessage
+                        defaultMessage="A withdrawal address has not been set for these validators.
+                        Staked funds and rewards will remain locked until withdrawal credentials are provided."
+                      />
+                    )}
+                  </Alert>
                 </>
               )}
             </Paper>

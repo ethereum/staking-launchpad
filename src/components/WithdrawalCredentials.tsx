@@ -287,7 +287,9 @@ export const WithdrawalCredentials: FC<IProps> = () => {
     try {
       const response = await fetch(endpoint);
       const { data } = await response.json();
-      const withdrawalCredentials = data.withdrawalcredentials;
+      const withdrawalCredentials = data.length
+        ? data[0].withdrawalcredentials
+        : data.withdrawalcredentials;
       setValidator({
         validatorIndex: parseInt(inputValue, 10),
         withdrawalCredentials,

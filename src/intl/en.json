@@ -355,6 +355,9 @@
   "4QNsja": {
     "message": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
   },
+  "4hb+GK": {
+    "message": "Withdrawal address"
+  },
   "4hnEBA": {
     "message": "Has the smart contract code been verified?"
   },
@@ -390,6 +393,9 @@
   },
   "5HJLBU": {
     "message": "Teku installation documentation"
+  },
+  "5KtHYT": {
+    "message": "If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
   },
   "5UH1sh": {
     "message": "Romanian"
@@ -956,6 +962,9 @@
   "GelBd9": {
     "message": "Make the file you just downloaded executable."
   },
+  "GlKjxX": {
+    "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
+  },
   "GsBRWL": {
     "message": "Languages"
   },
@@ -1096,6 +1105,10 @@
   },
   "K6canA": {
     "message": "Withdrawal features are planned to be included in the upcoming Shanghai/Capella upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day."
+  },
+  "K7xnjy": {
+    "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
+    "message": "Warning: Do not store keys on multiple (backup) validator clients at once"
   },
   "KBSbmP": {
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
@@ -1733,6 +1746,10 @@
   "XsZtDM": {
     "message": "Capella - Formal specification"
   },
+  "XszRWL": {
+    "description": "this is used as a command line flag",
+    "message": "eth1_withdrawal_address"
+  },
   "Y07Hwy": {
     "message": "Connect {wallet} to {executionLayerName}"
   },
@@ -2025,6 +2042,9 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
+  "e4mdEQ": {
+    "message": "Make sure you have control over this address as this cannot be changed."
+  },
   "eD1NDX": {
     "message": "Withdrawing your deposit will not be possible until the Shanghai/Capella upgrade planned for Q1/Q2 2023."
   },
@@ -2091,6 +2111,9 @@
   "fSi2R/": {
     "message": "Information for validator operators regarding staking withdrawals."
   },
+  "fU1Pp5": {
+    "message": "You may choose to provide a withdrawal address with your initial deposit to automatically enable reward payments and also the ability to fully exit your funds anytime after the Shanghai/Capella upgrade. This address should be to a regular Ethereum address and will be the only address funds can be sent to from your new validator accounts."
+  },
   "fZwn+P": {
     "message": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
   },
@@ -2124,14 +2147,14 @@
   "g37XKP": {
     "message": "More on virtualenv"
   },
+  "g8tzOu": {
+    "message": "Paste your chosen address here to include it in the copy/paste CLI command below:"
+  },
   "gFj3By": {
     "message": "highly variable"
   },
   "gHJegi": {
     "message": "Validators still need to complete their validation duties until they are exited"
-  },
-  "gIauNz": {
-    "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password. You can use your mnemonic to generate your withdrawal key when you wish to withdraw."
   },
   "gN9D/h": {
     "message": "Use {goerli} to sync the Goerli testnet."
@@ -2275,6 +2298,9 @@
   "iv88b5": {
     "message": "Send all {totalTxCount} deposits"
   },
+  "j2f6y2": {
+    "message": "A withdrawal address has not been set for these validators. Staked funds and rewards will remain locked until withdrawal credentials are provided."
+  },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
@@ -2301,10 +2327,6 @@
   },
   "jlx7pU": {
     "message": "Documentation on running Geth"
-  },
-  "jm79h1": {
-    "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
-    "message": "Warning: Do not store keys on multiple (backup) validators at once"
   },
   "jp9OG2": {
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
@@ -2761,6 +2783,9 @@
   "smD5l/": {
     "message": "Consensus Layer Beacon Node (BN)"
   },
+  "smTQJU": {
+    "message": "The withdrawal address for these validators will be set to {withdrawalAddress}. Make 100% sure you control this address before depositing, as this cannot be changed."
+  },
   "soCLV+": {
     "message": "Checklist"
   },
@@ -2982,10 +3007,6 @@
   },
   "xXWzDf": {
     "message": "The Beacon Chain"
-  },
-  "xXntjc": {
-    "description": "{flag} is a terminal command styled as code.",
-    "message": "Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
   },
   "xZZMZ5": {
     "message": "testnet"

@@ -30,9 +30,11 @@ const GithubScreenshot = styled.img.attrs({ src: githubScreenshot })`
 
 export const Option1 = ({
   validatorCount,
+  withdrawalAddress,
   os,
 }: {
   validatorCount: number | string;
+  withdrawalAddress: string;
   os: string;
 }) => {
   const { formatMessage } = useIntl();
@@ -112,46 +114,49 @@ export const Option1 = ({
           <FormattedMessage defaultMessage="Run the following command to launch the app" />
         </li>
         <Alert variant="secondary" className="my10">
-          <Pre className="my10">
-            {(os === 'linux' || os === 'mac') && (
-              <span style={{ color: colors.red.medium }}>./deposit </span>
-            )}
+          <Pre className="my10" style={{ color: colors.red.medium }}>
+            {(os === 'linux' || os === 'mac') && './deposit '}
             {os === 'windows' && (
               <>
-                <span style={{ color: colors.red.medium }}>.\deposit</span>
+                <span>.\deposit</span>
                 <span style={{ color: colors.purple.dark }}>.exe </span>
               </>
             )}
-            <span style={{ color: colors.red.medium }}>new-mnemonic</span>
-            <span style={{ color: colors.red.medium }}>
-              {validatorCount > 0
-                ? ` --${
-                    TRANSLATE_CLI_FLAGS
-                      ? formatMessage({
-                          defaultMessage: 'num_validators',
-                          description:
-                            'this is used as a command line flag, short for "number of validators"',
-                        })
-                      : 'num_validators'
-                  } ${validatorCount}`
-                : ''}{' '}
-            </span>
-            <span style={{ color: colors.red.medium }}>
-              {`--${
+            new-mnemonic{' '}
+            {validatorCount > 0
+              ? `--${
+                  TRANSLATE_CLI_FLAGS
+                    ? formatMessage({
+                        defaultMessage: 'num_validators',
+                        description:
+                          'this is used as a command line flag, short for "number of validators"',
+                      })
+                    : 'num_validators'
+                } ${validatorCount}`
+              : ''}{' '}
+            {`--${
+              TRANSLATE_CLI_FLAGS
+                ? formatMessage({
+                    defaultMessage: 'chain',
+                    description: 'this is used as a command line flag',
+                  })
+                : 'chain'
+            } ${NETWORK_NAME.toLowerCase()}`}{' '}
+            {withdrawalAddress.length &&
+              `--${
                 TRANSLATE_CLI_FLAGS
                   ? formatMessage({
-                      defaultMessage: 'chain',
+                      defaultMessage: 'eth1_withdrawal_address',
                       description: 'this is used as a command line flag',
                     })
-                  : 'chain'
-              } ${NETWORK_NAME.toLowerCase()}`}
-            </span>
+                  : 'eth1_withdrawal_address'
+              } ${withdrawalAddress}`}
           </Pre>
         </Alert>
-        <Alert variant="error" className="my10">
+        <Alert variant="error" className="my20">
           <Text>
             <FormattedMessage
-              defaultMessage="Please make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
+              defaultMessage="Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
               values={{
                 flag: (
                   <Code>

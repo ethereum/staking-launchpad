@@ -18,9 +18,11 @@ const Pre = styled.pre`
 
 export const Option3 = ({
   validatorCount,
+  withdrawalAddress,
   os,
 }: {
   validatorCount: number | string;
+  withdrawalAddress: string;
   os: string;
 }) => {
   const { formatMessage } = useIntl();
@@ -169,7 +171,17 @@ export const Option3 = ({
                   description: 'this is used as a command line flag',
                 })
               : `chain`
-          } ${NETWORK_NAME.toLowerCase()}`}
+          } ${NETWORK_NAME.toLowerCase()}`}{' '}
+          {withdrawalAddress &&
+            `--${
+              TRANSLATE_CLI_FLAGS
+                ? formatMessage({
+                    defaultMessage: 'eth1_withdrawal_address',
+                    description: 'this is used as a command line flag',
+                  })
+                : `eth1_withdrawal_address`
+            }`}{' '}
+          {withdrawalAddress}
         </Pre>
       );
     }
@@ -186,7 +198,7 @@ export const Option3 = ({
                       description:
                         'this is used as a command line flag, short for "number of validators"',
                     })
-                  : `num_validators`
+                  : 'num_validators'
               } ${validatorCount}`
             : ''}{' '}
           {`--${
@@ -330,7 +342,7 @@ export const Option3 = ({
       <Alert variant="secondary" className="my10">
         {renderDepositKeyCommand()}
       </Alert>
-      <Alert variant="error" className="my10">
+      <Alert variant="error" className="my20">
         <Text>
           <FormattedMessage
             defaultMessage="Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
@@ -353,7 +365,7 @@ export const Option3 = ({
           />
         </Text>
       </Alert>
-      <Alert variant="warning" className="my10">
+      <Text className="my20">
         <Text>
           <FormattedMessage defaultMessage="If you have questions about deposit-cli, please visit the GitHub repository." />
         </Text>
@@ -364,7 +376,7 @@ export const Option3 = ({
         >
           https://github.com/ethereum/staking-deposit-cli
         </Link>
-      </Alert>
+      </Text>
     </div>
   );
 };

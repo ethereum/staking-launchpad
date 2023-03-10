@@ -58,7 +58,8 @@ const depositDataContainer = new ContainerType({
 });
 
 const InputContainer = styled.div`
-  margin: 0 auto;
+  margin: 30px auto 0;
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -84,6 +85,10 @@ const TopUpDetailsContainer = styled.div`
       justify-content: space-between;
     }
   }
+`;
+
+const IndentedText = styled(Text)`
+  margin-inline-start: 10px;
 `;
 
 const TopupPage: React.FC<Props> = ({ validator }) => {
@@ -302,9 +307,9 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             checked={termA}
             onChange={() => setTermA(!termA)}
             label={
-              <Text className="checkbox-label ml10">
+              <IndentedText className="checkbox-label">
                 <FormattedMessage defaultMessage="I am certain that the validator I am topping up is my validator." />
-              </Text>
+              </IndentedText>
             }
           />
         </div>
@@ -312,11 +317,11 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           <Alert variant="warning" className="mt30">
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <AlertIcon color="redLight" />
-              <Text className="ml10 center">{alertText}</Text>
+              <IndentedText className="center">{alertText}</IndentedText>
             </div>
           </Alert>
         </div>
-        <InputContainer className="mt30">
+        <InputContainer>
           <TopupInput
             value={value}
             setValue={setValue}
@@ -324,7 +329,6 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           />
           <span data-tip={submitBtnTooltipText}>
             <SubmitButton
-              className="ml10"
               label={formatMessage({ defaultMessage: 'Top up validator' })}
               rainbow
               onClick={submitTopupTransaction}

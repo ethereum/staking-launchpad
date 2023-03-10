@@ -6,7 +6,7 @@ import { Text } from '../../../components/Text';
 import TransactionProgress from './TransactionProgress';
 import { stepStatus, TransactionStatus } from '../types';
 import { Button } from '../../../components/Button';
-import { ETHERSCAN_URL } from '../../../utils/envVars';
+import { EL_TRANSACTION_URL } from '../../../utils/envVars';
 import { Link } from '../../../components/Link';
 
 interface TopUpTransactionModalProps {
@@ -66,8 +66,8 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
               defaultMessage="Check {etherscan} for more details"
               values={{
                 etherscan: (
-                  <Link primary inline to={`${ETHERSCAN_URL}/${txHash}`}>
-                    Etherscan
+                  <Link primary inline to={`${EL_TRANSACTION_URL}/${txHash}`}>
+                    EL Explorer
                   </Link>
                 ),
               }}

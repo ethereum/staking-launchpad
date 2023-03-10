@@ -23,10 +23,8 @@ const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   padding-bottom: 3rem; // adds space for footer
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-inline: 15px;
+  margin-inline: auto;
 
   /* mobile landscape*/
   @media (min-width: 576px) {

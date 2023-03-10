@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
 import tekuBg from '../../../static/teku-bg.png';
 import {
@@ -12,6 +13,10 @@ import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
 import { TEKU_INSTALLATION_URL } from '../../../utils/envVars';
+
+const IndentedCode = styled(Code)`
+  margin-inline-start: 5px;
+`;
 
 export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -87,7 +92,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
                       </Code>
                     ),
                     validatorsKeys: (
-                      <Code className="px5 ml5">--validators-keys</Code>
+                      <IndentedCode>--validators-keys</IndentedCode>
                     ),
                   }}
                 />
@@ -103,7 +108,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
                 from the paths found in the validator keys environment variable."
             />
           </Text>
-          <Code className="px5 ml5">TEKU_VALIDATORS_KEYS</Code>
+          <IndentedCode>TEKU_VALIDATORS_KEYS</IndentedCode>
           <Heading level={3} className="mt20 mb5">
             <FormattedMessage defaultMessage="Configuration file" />
           </Heading>
@@ -121,7 +126,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             </li>
             <ul>
               <li>
-                <Code className="px5 ml5">--config-file</Code>
+                <IndentedCode>--config-file</IndentedCode>
               </li>
             </ul>
             <li>
@@ -131,7 +136,7 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
             </li>
             <ul>
               <li>
-                <Code className="px5 ml5">TEKU_CONFIG_FILE</Code>
+                <IndentedCode>TEKU_CONFIG_FILE</IndentedCode>
               </li>
             </ul>
           </ul>
@@ -140,14 +145,14 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
           </Text>
           <ul>
             <li>
-              <Code className="px5 ml5">
+              <IndentedCode>
                 {`validators-keys: [<KEY_DIR>:<PASS_DIR>]`}
-              </Code>
+              </IndentedCode>
             </li>
             <li>
-              <Code className="px5 ml5">
+              <IndentedCode>
                 {`validators-keys: [<KEY_FILE_1>:<PASS_FILE_1>,...,<KEY_FILE_N>:<PASS_FILE_N>]`}
-              </Code>
+              </IndentedCode>
             </li>
           </ul>
           <Heading level={4} className="mt10 mb5">
@@ -160,13 +165,13 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
                 {passwordDirectory} - both folders within a computer."
               values={{
                 directoriesPattern: (
-                  <Code className="px5 ml5">{`<KEY_DIR>:<PASS_DIR>`}</Code>
+                  <IndentedCode>{`<KEY_DIR>:<PASS_DIR>`}</IndentedCode>
                 ),
                 keyDirectory: (
-                  <Code className="px5 ml5">{`<KEY_DIR>/**.json`}</Code>
+                  <IndentedCode>{`<KEY_DIR>/**.json`}</IndentedCode>
                 ),
                 passwordDirectory: (
-                  <Code className="px5 ml5">{`<PASS_DIR>/**.txt`}</Code>
+                  <IndentedCode>{`<PASS_DIR>/**.txt`}</IndentedCode>
                 ),
               }}
             />{' '}
@@ -177,10 +182,10 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
                 {passwordFile} - both files within a computer."
               values={{
                 filesPattern: (
-                  <Code className="px5 ml5">{`<KEY_FILE>:<PASS_FILE>`}</Code>
+                  <IndentedCode>{`<KEY_FILE>:<PASS_FILE>`}</IndentedCode>
                 ),
-                keyFile: <Code className="px5 ml5">{'<KEY_FILE>'}</Code>,
-                passwordFile: <Code className="px5 ml5">{'<PASS_FILE>'}</Code>,
+                keyFile: <IndentedCode>{'<KEY_FILE>'}</IndentedCode>,
+                passwordFile: <IndentedCode>{'<PASS_FILE>'}</IndentedCode>,
               }}
             />{' '}
             <FormattedMessage
@@ -188,8 +193,8 @@ export const TekuDetails = ({ shortened }: { shortened?: boolean }) => (
                 in Windows rather than {colon}."
               description="The {semicolon} and {colon} variables refer to the keyboard characters ';' and ':'."
               values={{
-                semicolon: <Code className="px5 ml5">;</Code>,
-                colon: <Code className="px5 ml5">:</Code>,
+                semicolon: <IndentedCode>;</IndentedCode>,
+                colon: <IndentedCode>:</IndentedCode>,
               }}
             />
           </Text>

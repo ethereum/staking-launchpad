@@ -23,7 +23,7 @@ import {
   EJECTION_PRICE,
   TICKER_NAME,
 } from '../../utils/envVars';
-import { AllowedNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
+import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
@@ -43,7 +43,7 @@ const BackText = styled(Text)`
     text-decoration: underline;
   }
   position: relative;
-  padding-left: 25px;
+  padding-inline-start: 25px;
 `;
 
 const FakeLink = styled.span`
@@ -154,7 +154,7 @@ const _TopUpPage: React.FC<Props> = () => {
 
     const network = NetworkChainId[chainId as number];
 
-    const isValidNetwork = Object.values(AllowedNetworks).includes(network);
+    const isValidNetwork = AllowedELNetworks.includes(network);
 
     if (active && account && isValidNetwork) {
       fetchValidatorsForUserAddress();
@@ -195,9 +195,11 @@ const _TopUpPage: React.FC<Props> = () => {
     if (validatorLoadError) {
       return (
         <Alert variant="warning" className="my10">
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div
+            style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}
+          >
             <AlertIcon color="redLight" />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="There was an error loading your validator information from Beaconcha.in" />
             </Text>
           </div>
@@ -237,9 +239,11 @@ const _TopUpPage: React.FC<Props> = () => {
       <>
         {showDepositVerificationWarning && (
           <Alert variant="warning" className="my10">
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div
+              style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}
+            >
               <AlertIcon color="redLight" />
-              <Text className="ml10">
+              <Text>
                 <FormattedMessage
                   defaultMessage="You may have an {TICKER_NAME} deposit that was accepted but is being
                     validated on chain. It will be available here when beaconcha.in

@@ -42,6 +42,9 @@ const Card = styled.div`
   width: 100%;
   margin: 16px;
   background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.medium}) {
     margin: 0px;
     margin-top: 16px;
@@ -116,7 +119,7 @@ export const NetworkStatus: React.FC<{
                 />
               </Heading>
               <Text size="x-large" className="mt20">
-                <BoldGreen className="mr10" fontSize={24}>
+                <BoldGreen fontSize={24}>
                   <LoadingHandler
                     value={`${numberWithCommas(amountEth)} ${TICKER_NAME}`}
                   />
@@ -128,7 +131,7 @@ export const NetworkStatus: React.FC<{
                 <FormattedMessage defaultMessage="Total validators" />
               </Heading>
               <Text size="x-large" className="mt20">
-                <BoldGreen className="mr10" fontSize={24}>
+                <BoldGreen fontSize={24}>
                   <LoadingHandler value={numberWithCommas(totalValidators)} />
                 </BoldGreen>
               </Text>
@@ -141,9 +144,7 @@ export const NetworkStatus: React.FC<{
                 />
               </Heading>
               <Text size="x-large" className="mt20">
-                <BoldGreen className="mr10" fontSize={24}>
-                  {formattedAPR}%
-                </BoldGreen>
+                <BoldGreen fontSize={24}>{formattedAPR}%</BoldGreen>
               </Text>
             </Card>
           </CardContainer>

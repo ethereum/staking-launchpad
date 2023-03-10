@@ -17,7 +17,7 @@ interface Props {
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
-  margin-right: 10px;
+  margin-inline-end: 10px;
   height: 23px;
   stroke: red;
 `;

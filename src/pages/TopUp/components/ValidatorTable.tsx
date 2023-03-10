@@ -33,6 +33,11 @@ const FakeLink = styled.span`
   display: inline;
 `;
 
+const Item = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
 const ValidatorTable: React.FC<{
   validators: BeaconChainValidator[];
   setSelectedValidator: (validator: BeaconChainValidator) => void;
@@ -46,72 +51,72 @@ const ValidatorTable: React.FC<{
     switch (status) {
       case 'pending': {
         return (
-          <div className="flex">
+          <Item>
             <Refresh color="blueLight" />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Pending" />
             </Text>
-          </div>
+          </Item>
         );
       }
       case 'slashing': {
         return (
-          <div className="flex">
+          <Item>
             <StatusWarning color={theme.red.light} />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Slashing" />
             </Text>
-          </div>
+          </Item>
         );
       }
       case 'slashed': {
         return (
-          <div className="flex">
+          <Item>
             <StatusWarning color={theme.red.light} />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Slashed" />
             </Text>
-          </div>
+          </Item>
         );
       }
       case 'exiting': {
         return (
-          <div className="flex">
+          <Item>
             <StatusWarning color="yellowDark" />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Exiting" />
             </Text>
-          </div>
+          </Item>
         );
       }
       case 'exited': {
         return (
-          <div className="flex">
+          <Item>
             <StatusDisabled color={theme.gray.medium} />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Exited" />
             </Text>
-          </div>
+          </Item>
         );
       }
       case 'active_offline': {
         return (
-          <div className="flex">
+          <Item>
             <Wifi color={theme.gray.medium} />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Offline" />
             </Text>
-          </div>
+          </Item>
         );
       }
       case 'active_online': {
         return (
-          <div className="flex">
+          <Item>
             <Wifi color={theme.green.dark} />
-            <Text className="ml10">
+            <Text>
               <FormattedMessage defaultMessage="Online" />
             </Text>
-          </div>
+          </Item>
         );
       }
       default:

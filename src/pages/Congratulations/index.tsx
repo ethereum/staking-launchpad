@@ -207,7 +207,7 @@ const _CongratulationsPage = ({
   workflow,
   dispatchTransactionStatusUpdate,
 }: Props): JSX.Element => {
-  const { state } = useBeaconchainData();
+  const state = useBeaconchainData();
   const { status, apr } = state;
   const { locale, formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<

@@ -10,7 +10,7 @@ import { IS_MAINNET } from '../../utils/envVars';
 import { useBeaconchainData } from '../../hooks/useBeaconchainData';
 
 export const LandingPage = (): JSX.Element => {
-  const { state } = useBeaconchainData();
+  const state = useBeaconchainData();
 
   return (
     <>

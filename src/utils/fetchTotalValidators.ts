@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { BEACONCHAIN_URL } from './envVars';
 
 interface EpochData {
@@ -17,9 +17,9 @@ export interface FetchTotalValidatorsResponse {
 export const fetchTotalValidators = async (): Promise<FetchTotalValidatorsResponse> => {
   const { href } = new URL('/api/v1/epoch/latest', BEACONCHAIN_URL);
   try {
-    const response: AxiosResponse = await axios.get(href);
+    const response = await axios.get<EpochData>(href);
     if (response.status !== 200) throw new Error(response.statusText);
-    const { data }: { data: EpochData } = response;
+    const { data } = response;
     const { validatorscount: totalValidators } = data.data;
     return { statusCode: 200, body: { totalValidators } };
   } catch (error) {

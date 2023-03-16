@@ -1821,6 +1821,12 @@
       "value": "Erigon is written in Go and licensed under the GNU LGPLv3."
     }
   ],
+  "BKDxOx": [
+    {
+      "type": 0,
+      "value": "Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated."
+    }
+  ],
   "BPpnlJ": [
     {
       "type": 0,

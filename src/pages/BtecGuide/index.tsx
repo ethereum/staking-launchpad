@@ -188,9 +188,9 @@ export const BtecGuide = () => {
                     <Link
                       primary
                       inline
-                      to="https://github.com/ethereum/staking-deposit-cli/pull/313"
+                      to="https://github.com/ethereum/staking-deposit-cli/releases"
                     >
-                      <FormattedMessage defaultMessage="PR description" />
+                      <FormattedMessage defaultMessage="Staking Deposit CLI releases" />
                     </Link>
                   ),
                 }}

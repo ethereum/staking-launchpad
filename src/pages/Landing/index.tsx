@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { AppBar } from '../../components/AppBar';
 import { TestnetNotification } from '../../components/TestnetNotification';
 import { Hero } from './Hero';
@@ -6,28 +6,11 @@ import { NetworkStatus } from './NetworkStatus';
 import { Introduction } from './Introduction';
 import { SignupSteps } from './SignupSteps';
 import { Upgrades } from './Upgrades';
-import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { IS_MAINNET } from '../../utils/envVars';
+import { useBeaconchainData } from '../../hooks/useBeaconchainData';
 
 export const LandingPage = (): JSX.Element => {
-  const [state, setState] = useState({
-    amountEth: 0,
-    totalValidators: 0,
-    status: 0,
-  });
-
-  useEffect(() => {
-    (async () => {
-      const response = await queryBeaconchain();
-      if (response.body.amountEth) {
-        setState({
-          amountEth: response.body.amountEth,
-          totalValidators: response.body.totalValidators,
-          status: response.statusCode,
-        });
-      }
-    })();
-  }, []);
+  const state = useBeaconchainData();
 
   return (
     <>

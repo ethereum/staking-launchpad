@@ -142,7 +142,7 @@ export const Option1 = ({
                   })
                 : 'chain'
             } ${NETWORK_NAME.toLowerCase()}`}{' '}
-            {withdrawalAddress.length &&
+            {withdrawalAddress &&
               `--${
                 TRANSLATE_CLI_FLAGS
                   ? formatMessage({

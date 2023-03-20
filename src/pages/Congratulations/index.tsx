@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { useWeb3React } from '@web3-react/core';
@@ -9,6 +9,7 @@ import { FormNext, FormPrevious, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import _every from 'lodash/every';
 import { AppBar } from '../../components/AppBar';
+import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Alert } from '../../components/Alert';
@@ -16,10 +17,8 @@ import { Link } from '../../components/Link';
 import { KeyList } from '../Transactions/Keylist';
 import { handleMultipleTransactions } from '../Transactions/transactionUtils';
 import { web3ReactInterface } from '../ConnectWallet';
-import { queryBeaconchain } from '../../utils/queryBeaconchain';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
-import calculateStakingRewards from '../../utils/calculateStakingRewards';
 import {
   PRICE_PER_VALIDATOR,
   TESTNET_LAUNCHPAD_NAME,
@@ -30,7 +29,6 @@ import {
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
-import { Button } from '../../components/Button';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
   DepositStatus,
@@ -38,6 +36,8 @@ import {
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../store/actions/depositFileActions';
+// Types
+import { useBeaconchainData } from '../../hooks/useBeaconchainData';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -207,11 +207,8 @@ const _CongratulationsPage = ({
   workflow,
   dispatchTransactionStatusUpdate,
 }: Props): JSX.Element => {
-  const [state, setState] = useState({
-    amountEth: 0,
-    status: 0,
-  });
-  const { status } = state;
+  const state = useBeaconchainData();
+  const { status, apr } = state;
   const { locale, formatMessage } = useIntl();
   const { account, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
@@ -235,9 +232,6 @@ const _CongratulationsPage = ({
 
   const actualTxConfirmed = totalTxCount - remainingTxCount;
 
-  const currentAPR = calculateStakingRewards({ totalAtStake: state.amountEth });
-  const formattedAPR = (Math.round(currentAPR * 1000) / 10).toLocaleString();
-
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
       depositKeys.filter(
@@ -248,16 +242,6 @@ const _CongratulationsPage = ({
       dispatchTransactionStatusUpdate
     );
   };
-
-  useEffect(() => {
-    (async () => {
-      const response = await queryBeaconchain();
-      setState({
-        amountEth: response.body.amountEth,
-        status: response.statusCode,
-      });
-    })();
-  }, []);
 
   const LoadingHandler: React.FC<{
     value?: string;
@@ -405,8 +389,8 @@ const _CongratulationsPage = ({
                   <FormattedMessage defaultMessage="Current APR" />
                 </Heading>
                 <Text size="x-large" className="mt20">
-                  <BoldGreen>
-                    <LoadingHandler value={`${formattedAPR}%`} />
+                  <BoldGreen className="mr10">
+                    <LoadingHandler value={apr} />
                   </BoldGreen>
                 </Text>
               </Card>

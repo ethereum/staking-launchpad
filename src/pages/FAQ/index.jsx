@@ -6,7 +6,7 @@ import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
-import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
 
 const FAQStyles = styled.div`
   section {
@@ -14,6 +14,10 @@ const FAQStyles = styled.div`
   }
   a {
     text-decoration: none;
+  }
+  ul {
+    color: ${p => p.theme.blue.dark};
+    font-family: 'inherit';
   }
 `;
 
@@ -149,6 +153,12 @@ export const FAQ = () => {
                 }}
               />
             </Text>
+            <Text className="mt10">
+              <FormattedMessage
+                defaultMessage="Once withdrawals are enabled with the Shanghai/Capella update, validators with a maxed our effective balance and a linked execution withdrawal address will have any balance over {PRICE_PER_VALIDATOR} {TICKER_NAME} automatically withdrawal as excess balance."
+                values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
+              />
+            </Text>
           </section>
           <section>
             <Heading level={4}>
@@ -177,29 +187,19 @@ export const FAQ = () => {
             </Text>
             <Text className="mt20 mb20">
               <FormattedMessage
-                defaultMessage="Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {pricePerValidator}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
+                defaultMessage="Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {PRICE_PER_VALIDATOR}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
+                values={{ PRICE_PER_VALIDATOR }}
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Do not deposit more than {pricePerValidator} ETH for a single validator. It will not add to your rewards and will be locked until the planned {shanghai} update."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                  shanghai: (
-                    <Link
-                      inline
-                      primary
-                      to="https://github.com/ethereum/pm/issues/450"
-                    >
-                      Shanghai
-                    </Link>
-                  ),
-                }}
+                defaultMessage="Do not deposit more than {PRICE_PER_VALIDATOR} ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai/Capella upgrade."
+                values={{ PRICE_PER_VALIDATOR }}
               />
             </Text>
+            <Link to="/withdrawals" primary className="mt20">
+              <FormattedMessage defaultMessage="More on withdrawals" />
+            </Link>
           </section>
           <section>
             <Heading level={4}>
@@ -280,12 +280,12 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="However, bear in mind that for the foreseeable future, once
+                defaultMessage="However, bear in mind that until the Shanghai/Capella upgrade planned for Q1/Q2 2023, once
                   you’ve exited, there’s no going back."
               />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled. This is proposed to be included in the next network upgrade, known as the Shanghai upgrade. This means your funds will remain inaccessible at least until then." />
+              <FormattedMessage defaultMessage="Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled with the Shanghai/Capella upgrade. This means your funds will remain inaccessible at least until then." />
               <Link
                 className="mt20"
                 to="https://ethereum-magicians.org/t/shanghai-core-eip-consideration/10777"
@@ -293,11 +293,7 @@ export const FAQ = () => {
               >
                 <FormattedMessage defaultMessage="Shanghai Core EIP Consideration" />
               </Link>
-              <Link
-                className="mt20"
-                to="https://github.com/ethereum/pm/issues/450"
-                primary
-              >
+              <Link to="https://github.com/ethereum/pm/issues/450" primary>
                 <FormattedMessage defaultMessage="Shanghai Planning (GitHub issue)" />
               </Link>
             </Text>
@@ -365,8 +361,8 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client." />
             </Text>
             <BlockQuote>
-              <Text className="mt20 mb20">
-                <FormattedMessage defaultMessage="This became a requirement at time of the Merge, so be sure you're running both before staking." />
+              <Text className="my20">
+                <FormattedMessage defaultMessage="This became a requirement at time of The Merge, so be sure you're running both before staking." />
               </Text>
             </BlockQuote>
             <Link primary to="/checklist">
@@ -387,7 +383,7 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="With the transition to proof-of-stake complete via the Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources since the Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
+                defaultMessage="With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources since The Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
                 values={{
                   not: (
                     <em>
@@ -472,8 +468,8 @@ export const FAQ = () => {
               />
             </Text>
             <BlockQuote>
-              <Text className="mt20 mb20">
-                <FormattedMessage defaultMessage="Since the Merge, validators will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with included transactions when proposing blocks. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
+              <Text className="my20">
+                <FormattedMessage defaultMessage="Since The Merge, validators will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with included transactions when proposing blocks. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client." />
               </Text>
             </BlockQuote>
             <Text className="mt10">
@@ -488,7 +484,7 @@ export const FAQ = () => {
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Rewards and penalties are issued roughly every six and a half minutes—a period of time
+                defaultMessage="Rewards and penalties are issued every 6.4 minutes—a period of time
                   known as an epoch."
               />
             </Text>
@@ -499,9 +495,9 @@ export const FAQ = () => {
               />
             </Text>
             <BlockQuote>
-              <Text className="mt10">
+              <Text className="my20">
                 <FormattedMessage
-                  defaultMessage="Your validator will also receive unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 360,000 validators, each validator will {average} a block proposal every 50 days. "
+                  defaultMessage="Your validator will also receives unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 500,000 validators, each validator will {average} a block proposal every 70 days. "
                   values={{
                     average: (
                       <em>
@@ -541,7 +537,7 @@ export const FAQ = () => {
               />
             </Text>
             <BlockQuote>
-              <Text className="mt10">
+              <Text className="my20">
                 <FormattedMessage
                   defaultMessage="Note however that this scaling mechanism works in a non-obvious
                     way. To understand the precise details of how it works requires
@@ -673,7 +669,7 @@ export const FAQ = () => {
               </li>
             </ol>
             <BlockQuote>
-              <Text className="mt10">
+              <Text className="my20">
                 <FormattedMessage
                   defaultMessage="Note that in the second (unlikely) scenario, you stand to
                     progressively lose up to 50% (16 ETH) of your stake over 21
@@ -787,7 +783,7 @@ export const FAQ = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="BLS withdrawal: By default, deposit-cli would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format."
+                    defaultMessage="BLS withdrawal: By default, the deposit-cli would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format."
                     values={{
                       boldWithdrawalKey: (
                         <strong>
@@ -812,7 +808,7 @@ export const FAQ = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Ethereum address withdrawal: If you want to withdraw to your Mainnet wallet address (formerly 'Eth1' address) after the post-merge cleanup upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
+                    defaultMessage="Ethereum address withdrawal: If you want to withdraw to your execution wallet address after the Shanghai/Capella upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
                     values={{
                       ethAddressWithdraw: (
                         <code>
@@ -867,7 +863,7 @@ export const FAQ = () => {
               />
             </Text>
             <BlockQuote>
-              <Text className="mt10">
+              <Text className="my20">
                 <FormattedMessage
                   defaultMessage="However, all is not lost. Assuming you derive your keys
                     using {eip2334} (as per the default onboarding flow) then {strongText}."
@@ -895,10 +891,13 @@ export const FAQ = () => {
               </Text>
             </BlockQuote>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="Withdrawal features are proposed to be included in the upcoming Shanghai upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day." />
+              <FormattedMessage defaultMessage="Withdrawal features are planned to be included in the upcoming Shanghai/Capella upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day." />
+              Withdrawal features are planned ot be included in the upcoming
+              Shanghai/Capella upgrade. After this functionality is addes, your
+              balance
             </Text>
             <BlockQuote>
-              <Text className="mt10">
+              <Text className="my20">
                 <FormattedMessage
                   defaultMessage="Note that this delay can be longer if many others are exiting or
                     being kicked out at the same time."
@@ -919,7 +918,7 @@ export const FAQ = () => {
             <Text className="mt10">
               <FormattedMessage
                 defaultMessage="As such, it’s a good idea to create your keys from mnemonics which
-                  act as another backup. This will be the default for validators who
+                  act as another backup. This is the default for validators who
                   join via this site’s onboarding process."
               />
             </Text>
@@ -929,16 +928,13 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="What happens if my withdrawal key is stolen?" />
             </Heading>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="If your withdrawal key is stolen, the thief can transfer your
-                  validator’s balance, but only once the validator has exited."
-              />
+              <FormattedMessage defaultMessage="If you provided a withdrawal address when initially generating your keys, the withdrawal key no longer has any use. The only address that validator funds can be transferred to is this address, and it cannot be changed once set." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="If your signing key is not under the thief’s control, the thief cannot exit your validator." />
+              <FormattedMessage defaultMessage="If this was not provided, the withdrawal keys will be needed to sign a message declaring a withdrawal address. This requires access to the mnemonic used when setting up the keys." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage defaultMessage="With your signing key, you could attempt to quickly exit the validator and then transfer the funds—with the withdrawal key—before the thief." />
+              <FormattedMessage defaultMessage="If a withdrawal address has not been set, and you have lost access to the mnemonic seed phrase, your funds will remain locked in the validator account indefinitely." />
             </Text>
           </section>
           <section>

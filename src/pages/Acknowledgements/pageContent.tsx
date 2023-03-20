@@ -75,7 +75,7 @@ export const pageContent = {
           <FormattedMessage defaultMessage="This is a non-reversible transaction." />
         </Text>
         <Text size="medium" className="my20">
-          <FormattedMessage defaultMessage="Withdrawing your deposit will not be possible until the Shanghai upgrade planned for after the Merge." />
+          <FormattedMessage defaultMessage="Withdrawing your deposit will not be possible until the Shanghai/Capella upgrade planned for Q1/Q2 2023." />
         </Text>
         <Link
           to="https://ethereum.org/en/upgrades/merge/"
@@ -131,6 +131,9 @@ export const pageContent = {
               you will be liable to incur a penalty, known as slashing. Running your validator keys simultaneously on two or more machines will result in slashing."
           />
         </Text>
+        <Text size="medium" className="my10">
+          <FormattedMessage defaultMessage="Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties." />
+        </Text>
         <Link
           to="https://github.com/ethereum/consensus-specs"
           className="my10"
@@ -138,7 +141,7 @@ export const pageContent = {
         >
           <FormattedMessage defaultMessage="The Ethereum consensus-layer specification" />
         </Link>
-        <Link shouldOpenNewTab={true} to="/faq" className="my10" primary>
+        <Link shouldOpenNewTab to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
         </Link>
       </>
@@ -155,28 +158,26 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="mt10">
-          <FormattedMessage
-            defaultMessage="To become a validator you'll need to know about managing keys and
-              protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please
-              do not proceed. Note that during this process you will not derive the keys needed to
-              withdraw later, so store your mnemonic safely in order to be able to withdraw later."
-          />
+          <FormattedMessage defaultMessage="To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed." />
         </Text>
-        <Text size="medium" className="mt20">
-          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. Because there are no withdrawals until the Shanghai upgrade planned to follow the Merge, you will not create your withdrawal keys now. When it is possible to withdraw your funds, you can derive your withdrawal keys from your mnemonic." />
+        <Text size="medium" className="mt10">
+          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address." />
         </Text>
-        <Text size="medium" className="mt20">
+        <Text size="medium" className="mt10">
           <FormattedMessage
-            defaultMessage="Your mnemonic is the backup for your signing keys and will be the ONLY way to withdraw your {TICKER_NAME} when the time comes and no one can help you recover your mnemonic if you lose it."
+            defaultMessage="If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so store your mnemonic safely—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
             values={{ TICKER_NAME }}
           />
         </Text>
+        <Link to="/withdrawals" className="mt10" primary>
+          <FormattedMessage defaultMessage="More on withdrawals" />
+        </Link>
       </>
     ),
     acknowledgementText: (
       <FormattedMessage
         defaultMessage="I understand that keys are my responsibility and that my mnemonic (seed)
-          will be the {onlyWay} to withdraw my funds."
+          will be the {onlyWay} to withdraw my funds if I don't provide a withdrawal address with initial deposit data."
         values={{
           onlyWay: (
             <BoldCaps>
@@ -188,27 +189,29 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.commitment]: {
-    title: (
-      <FormattedMessage defaultMessage="Validating is a long-term commitment" />
-    ),
+    title: <FormattedMessage defaultMessage="Validating is a commitment" />,
     content: (
       <>
         <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="Transfers between validators and withdrawals aren't possible yet. Withdrawal functionality is currently a top priority, and is planned to be rolled out in the next network upgrade, known as the Shanghai upgrade." />
+          <FormattedMessage defaultMessage="Withdrawing from a validator is not yet possible. This functionality is planned to be included in the Shanghai/Capella upgrade planned for Q1/Q2 2023." />
         </Text>
         <Text size="medium" className="my10">
-          <FormattedMessage
-            defaultMessage="With transfers disabled for now, you won't be able to voluntarily exit
-            and then restart later. This means you need to be in it for the long haul."
-          />
+          <FormattedMessage defaultMessage="You can prepare for this by providing a withdrawal address when generating your keys and deposit data." />
+        </Text>
+        <Text size="medium" className="my10">
+          <FormattedMessage defaultMessage="You are still able to voluntarily exit your validator to be removed from the active validator set, but until withdrawals are enabled these funds would remain locked and unable to be withdrawn or re-staked." />
+        </Text>
+        <Link to="/withdrawals" className="my10" primary>
+          <FormattedMessage defaultMessage="More on withdrawals" />
+        </Link>
+        <Text size="medium" className="my10">
+          <FormattedMessage defaultMessage="Note, there are no current plans to enable transfers of ETH between validators." />
         </Text>
       </>
     ),
     acknowledgementText: (
       <FormattedMessage
-        defaultMessage="I understand that I {cannotTransfer} my stake for a while, and I
-          {cannotWithdraw} until the Shanghai upgrade. I understand that if I exit, I
-          will not be able to rejoin until that time. This is a long term commitment."
+        defaultMessage="I understand that I {cannotWithdraw} my stake until the Shanghai/Capella upgrade, and I {cannotTransfer} {TICKER_NAME} between validators. I understand that if I exit, I will not be able to rejoin until that time. Staking is a commitment."
         values={{
           cannotTransfer: (
             <BoldCaps>
@@ -220,6 +223,7 @@ export const pageContent = {
               <FormattedMessage defaultMessage="cannot withdraw" />
             </BoldCaps>
           ),
+          TICKER_NAME,
         }}
       />
     ),
@@ -264,19 +268,25 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage defaultMessage="Please review the staking checklist prior to proceeding. Use this as a guide to check off tasks as you complete validator setup." />
         </Text>
+        <Link inline shouldOpenNewTab to="/checklist" className="my10" primary>
+          <FormattedMessage defaultMessage="Validator checklist" />
+        </Link>
+        <Text size="medium" className="my20">
+          <FormattedMessage defaultMessage="Also be sure you understand how staking withdrawals work before setting up your keys and deposit data." />
+        </Text>
         <Link
           inline
-          shouldOpenNewTab={true}
-          to="/checklist"
+          shouldOpenNewTab
+          to="/withdrawals"
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="Validator checklist" />
+          <FormattedMessage defaultMessage="Staking withdrawals" />
         </Link>
       </>
     ),
     acknowledgementText: (
-      <FormattedMessage defaultMessage="I have reviewed the checklist." />
+      <FormattedMessage defaultMessage="I have reviewed the checklist and understand how withdrawals work." />
     ),
   },
   [AcknowledgementIdsEnum.confirmation]: {
@@ -288,7 +298,7 @@ export const pageContent = {
         </Text>
         <Link
           inline
-          shouldOpenNewTab={true}
+          shouldOpenNewTab
           to="/terms-of-service"
           className="my10"
           primary

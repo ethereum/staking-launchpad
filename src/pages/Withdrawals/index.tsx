@@ -208,6 +208,23 @@ export const Withdrawals = () => {
                   />
                 </li>
               </ul>
+              <Text className="mt20">
+                <FormattedMessage
+                  defaultMessage="Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed. These can both be set to the same address, but must each be set separately."
+                  values={{
+                    withdrawalCredentials: (
+                      <strong>
+                        <FormattedMessage defaultMessage="withdrawal credentials" />
+                      </strong>
+                    ),
+                    feeRecipient: (
+                      <strong>
+                        <FormattedMessage defaultMessage="fee recipient" />
+                      </strong>
+                    ),
+                  }}
+                />
+              </Text>
             </section>
 
             <section className="actionable">
@@ -270,7 +287,7 @@ export const Withdrawals = () => {
                     defaultMessage="As noted above, this step is completed by signing a message known as {message}.
                     These are accepted into blocks as of the first slot after the Shanghai/Capella
                     upgrade."
-                    values={{ message: <Code>BLS_To_Execution_Change</Code> }}
+                    values={{ message: <Code>BLSToExecutionChange</Code> }}
                   />
                 </Text>
                 <Text className="mb10">
@@ -488,7 +505,7 @@ export const Withdrawals = () => {
                 instantaneous, and depends on how many other accounts are exiting at the same time."
               />
             </Text>
-            <Alert variant="warning" className="mt30">
+            <Alert variant="warning" className="my30">
               <span role="img" aria-label="note">
                 📝
               </span>{' '}
@@ -496,6 +513,9 @@ export const Withdrawals = () => {
                 <FormattedMessage defaultMessage="Validators still need to complete their validation duties until they are exited" />
               </Text>
             </Alert>
+            <Text className="mb10">
+              <FormattedMessage defaultMessage="Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated." />
+            </Text>
           </section>
         </section>
 

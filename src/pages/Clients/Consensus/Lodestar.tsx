@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { PageTemplate } from '../../../components/PageTemplate';
 import lodestarBg from '../../../static/lodestar-bg.png';
 import {
@@ -9,7 +10,6 @@ import {
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { LODESTAR_INSTALLATION_URL } from '../../../utils/envVars';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 export const LodestarDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
@@ -66,7 +66,7 @@ export const Lodestar = () => {
   return (
     <PageTemplate
       title={formatMessage(
-        { defaultMessage: 'Eth2 Clients: {clientName}' },
+        { defaultMessage: 'Consensus Clients: {clientName}' },
         { clientName: 'Lodestar' }
       )}
     >

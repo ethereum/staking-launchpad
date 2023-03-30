@@ -10,6 +10,8 @@ import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Text } from '../../components/Text';
 import { Code } from '../../components/Code';
+// Constants
+import { NETWORK_NAME } from '../../utils/envVars';
 
 const ComponentStyles = styled.div`
   * {
@@ -57,6 +59,7 @@ const CodeBlock = styled.code`
     color: ${(p: any) => p.theme.red.medium};
   }
 `;
+
 const SectionTitle = styled(Heading)`
   margin-top: 30px;
   border-bottom: 1px solid lightgray;
@@ -570,6 +573,14 @@ export const BtecGuide = () => {
               />
             </SectionTitle>
           </Anchor>
+          <Text className="my20">
+            <FormattedMessage
+              defaultMessage="You can broadcast your signed message from the command line using the {curl} command:"
+              values={{
+                curl: <Code>curl</Code>,
+              }}
+            />
+          </Text>
           <CodeBlock className="indent">
             <span>
               curl -X POST -H “Content-type: application/json” -d @
@@ -579,6 +590,16 @@ export const BtecGuide = () => {
             <br />
             <span>{`http://<BEACON_NODE_HTTP_API_URL>/eth/v1/beacon/pool/bls_to_execution_changes`}</span>
           </CodeBlock>
+          <Text className="my20">
+            <FormattedMessage defaultMessage="You can also use the Beaconcha.in broadcasting tool to upload your message using a web user interface:" />
+          </Text>
+          <Link
+            primary
+            to={`https://${NETWORK_NAME.toLowerCase()}.beaconcha.in/tools/broadcast`}
+            className="cta-button"
+          >
+            <FormattedMessage defaultMessage="Beaconcha.in Broadcast Tool" />
+          </Link>
         </section>
       </ComponentStyles>
     </PageTemplate>

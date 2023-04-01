@@ -375,7 +375,7 @@ export const BtecGuide = () => {
                 </span>
                 <br />
                 <span className="dimmed">
-                  --bls_withdrawal_credentials_list="0x00bd0b5a34de5fb17df08410b5e615dda87caf4fb72d0aac91ce5e52fc6aa8de,0x00a75d83f169fa6923f3dd78386d9608fab710d8f7fcf71ba9985893675d5382"
+                  --bls_withdrawal_credentials_list="00bd0b5a34de5fb17df08410b5e615dda87caf4fb72d0aac91ce5e52fc6aa8de,00a75d83f169fa6923f3dd78386d9608fab710d8f7fcf71ba9985893675d5382"
                   \
                 </span>
                 <br />

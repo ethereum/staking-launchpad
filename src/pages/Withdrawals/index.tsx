@@ -210,7 +210,7 @@ export const Withdrawals = () => {
               </ul>
               <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed. These can both be set to the same address, but must each be set separately."
+                  defaultMessage="Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
                   values={{
                     withdrawalCredentials: (
                       <strong>

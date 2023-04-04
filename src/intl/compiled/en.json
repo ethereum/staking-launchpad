@@ -1103,6 +1103,20 @@
       "value": " at any time during your setup for some friendly help!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Exiting a "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " validator"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1833,6 +1847,12 @@
       "value": "Download MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "The key start index in EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1873,6 +1893,12 @@
     {
       "type": 0,
       "value": "How to trigger withdrawals, credential change"
+    }
+  ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Genesis validator root"
     }
   ],
   "C/gb74": [
@@ -2359,6 +2385,12 @@
       "value": ", otherwise the deposit will be invalid."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Your validator indices"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2519,6 +2551,12 @@
       "value": "Make the file you just downloaded executable."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Genesis fork version"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2635,6 +2673,12 @@
       "value": "Network"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Changing withdrawal credentials"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2663,6 +2707,12 @@
     {
       "type": 0,
       "value": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "full withdrawal"
     }
   ],
   "IYvwsI": [
@@ -2835,6 +2885,12 @@
     {
       "type": 0,
       "value": "What is your current operating system?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Your mnemonic"
     }
   ],
   "K3uH1C": [
@@ -3435,28 +3491,6 @@
       "value": ")"
     }
   ],
-  "NpIOoJ": [
-    {
-      "type": 0,
-      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " pool "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " Capella/Shanghai hard fork."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3649,6 +3683,12 @@
     {
       "type": 0,
       "value": "Your network has changed"
+    }
+  ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Launchpad walkthrough tutorial"
     }
   ],
   "PQgBnI": [
@@ -4827,6 +4867,20 @@
       "value": "Why do I need to have funds at stake?"
     }
   ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Exiting a "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " minipool"
+    }
+  ],
   "ZTo0Fl": [
     {
       "type": 0,
@@ -5973,10 +6027,46 @@
       "value": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "The execution address for withdrawals"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
+    }
+  ],
+  "jHrZXR": [
+    {
+      "type": 0,
+      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
+    },
+    {
+      "type": 1,
+      "value": "exeuctionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", you can use the staking deposit CLI ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") tool to generate the signed BLS-to-execution-change ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
     }
   ],
   "jXer8/": [
@@ -6155,6 +6245,12 @@
     {
       "type": 0,
       "value": "Teku documentation"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Network name"
     }
   ],
   "kd/f4u": [
@@ -6391,6 +6487,12 @@
       "value": "Importing from Launchpad documentation"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Filename destination"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6589,6 +6691,28 @@
     {
       "type": 0,
       "value": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") pool "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " Capella/Shanghai hard fork."
     }
   ],
   "njAU72": [
@@ -6923,36 +7047,6 @@
       "value": "Exit epoch and withdrawable epoch"
     }
   ],
-  "qIDtPw": [
-    {
-      "type": 0,
-      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
-    },
-    {
-      "type": 1,
-      "value": "exeuctionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", you can use the "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " tool to generate the "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": " message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6999,6 +7093,20 @@
     {
       "type": 0,
       "value": "Save the key files and get the validator file ready"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Exiting a "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " validator"
     }
   ],
   "qntIRb": [
@@ -7957,6 +8065,12 @@
     {
       "type": 0,
       "value": "On the other hand, you can be penalized for being offline and behaving maliciously—for example attesting to invalid or contradicting blocks."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Your old BLS withdrawal credentials"
     }
   ],
   "z26FXa": [

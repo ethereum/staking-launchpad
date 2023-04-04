@@ -413,6 +413,9 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
+  "5v36Is": {
+    "message": "Exiting a {client} validator"
+  },
   "63gLLu": {
     "message": "average"
   },
@@ -692,6 +695,9 @@
   "BPpnlJ": {
     "message": "Download MetaMask"
   },
+  "BQXsbH": {
+    "message": "The key start index in EIP-2334"
+  },
   "BUFaRV": {
     "message": "EthStaker community"
   },
@@ -712,6 +718,9 @@
   },
   "Bp9Dxf": {
     "message": "How to trigger withdrawals, credential change"
+  },
+  "Bxe+HB": {
+    "message": "Genesis validator root"
   },
   "C/gb74": {
     "message": "Configure Lighthouse"
@@ -893,6 +902,9 @@
     "description": "{flag} is a terminal command styled as code.",
     "message": "Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
   },
+  "FZCdw+": {
+    "message": "Your validator indices"
+  },
   "FZa0R+": {
     "message": "This scenario is very extreme and unlikely to happen."
   },
@@ -965,6 +977,9 @@
   "GelBd9": {
     "message": "Make the file you just downloaded executable."
   },
+  "Ght9ln": {
+    "message": "Genesis fork version"
+  },
   "GlKjxX": {
     "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
   },
@@ -1014,6 +1029,9 @@
   "I3JhPS": {
     "message": "Network"
   },
+  "I3hwdP": {
+    "message": "Changing withdrawal credentials"
+  },
   "I5lWZA": {
     "message": "Can I change the withdrawal credentials of my validator after the first deposit?"
   },
@@ -1028,6 +1046,9 @@
   },
   "IVyWYt": {
     "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
+  },
+  "IWlazt": {
+    "message": "full withdrawal"
   },
   "IYvwsI": {
     "message": "Tools available for generating key change message"
@@ -1096,6 +1117,9 @@
   },
   "JtAiN/": {
     "message": "What is your current operating system?"
+  },
+  "Jvu600": {
+    "message": "Your mnemonic"
   },
   "K3uH1C": {
     "message": "offline"
@@ -1330,9 +1354,6 @@
   "NkFxlX": {
     "message": "At least {time} (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, {highlyVariable})"
   },
-  "NpIOoJ": {
-    "message": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s {signature} pool {after} Capella/Shanghai hard fork."
-  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -1396,6 +1417,9 @@
   },
   "P9mVZK": {
     "message": "Your network has changed"
+  },
+  "PHZO0L": {
+    "message": "Launchpad walkthrough tutorial"
   },
   "PQgBnI": {
     "message": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
@@ -1839,6 +1863,10 @@
   },
   "ZOXuIe": {
     "message": "Why do I need to have funds at stake?"
+  },
+  "ZQo9kO": {
+    "description": "A minipool is a Rocket Pool-specific term for a validator that shares stake with others",
+    "message": "Exiting a {software} minipool"
   },
   "ZTo0Fl": {
     "message": "Why is there a wait?"
@@ -2310,8 +2338,14 @@
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
+  "jBr8vs": {
+    "message": "The execution address for withdrawals"
+  },
   "jGVfQG": {
     "message": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
+  },
+  "jHrZXR": {
+    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {exeuctionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed BLS-to-execution-change ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
   },
   "jXer8/": {
     "message": "Prysm documentation"
@@ -2388,6 +2422,9 @@
   },
   "kZ1+zq": {
     "message": "Teku documentation"
+  },
+  "ka+Ucy": {
+    "message": "Network name"
   },
   "kd/f4u": {
     "message": "Key list"
@@ -2473,6 +2510,9 @@
   "lfV1bj": {
     "message": "Importing from Launchpad documentation"
   },
+  "ljGIvm": {
+    "message": "Filename destination"
+  },
   "ll/zMW": {
     "message": "This is a non-reversible transaction."
   },
@@ -2556,6 +2596,9 @@
   },
   "ndhFef": {
     "message": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
+  },
+  "nf2aBN": {
+    "message": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ({signature}) pool {after} Capella/Shanghai hard fork."
   },
   "njAU72": {
     "message": "French"
@@ -2692,9 +2735,6 @@
   "qBorVY": {
     "message": "Exit epoch and withdrawable epoch"
   },
-  "qIDtPw": {
-    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {exeuctionAddress}, you can use the {cli} tool to generate the {signed} message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
-  },
   "qK4+NQ": {
     "message": "The terminal"
   },
@@ -2718,6 +2758,9 @@
   },
   "qkhah0": {
     "message": "Save the key files and get the validator file ready"
+  },
+  "qlwUud": {
+    "message": "Exiting a {software} validator"
   },
   "qntIRb": {
     "message": "If this was not provided, the withdrawal keys will be needed to sign a message declaring a withdrawal address. This requires access to the mnemonic used when setting up the keys."
@@ -3088,6 +3131,9 @@
   },
   "yw4vsX": {
     "message": "On the other hand, you can be penalized for being offline and behaving maliciously—for example attesting to invalid or contradicting blocks."
+  },
+  "yzvSUC": {
+    "message": "Your old BLS withdrawal credentials"
   },
   "z26FXa": {
     "message": "With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources since The Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."

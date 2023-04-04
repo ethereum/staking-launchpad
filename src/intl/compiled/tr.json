@@ -21,6 +21,18 @@
       "value": " (önceden 'Eth2' veya 'Ethereum 2.0' olan hisse ispatı mutabakatı görevlerini uygulama)."
     }
   ],
+  "+EZ9E/": [
+    {
+      "type": 0,
+      "value": "Etkileşimli mod"
+    }
+  ],
+  "+Gj8F4": [
+    {
+      "type": 0,
+      "value": "Anahtarlarınızı ve para yatırma verilerinizi oluştururken bir para çekme adresi sağlayarak buna hazırlanabilirsiniz."
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -63,6 +75,12 @@
       "value": "Lehçe"
     }
   ],
+  "+vHhHz": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı yönetimi"
+    }
+  ],
   "+wJuhm": [
     {
       "type": 0,
@@ -81,10 +99,28 @@
       "value": "Tüm işlemleri tek seferde veya tek tek başlatabilirsiniz."
     }
   ],
+  "/4e3mN": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcılar, Birleşimden bu yana, aynı zamanda işlemlerin işlenmesinden sorumlu olacak ve bu nedenle, blok teklifi yaparken dahil edilen işlemlerle ilişkili yanmamış gaz ücretlerine hak kazanacaktır. Bu ücretler fikir birliği katmanında değil yürütüm katmanında hesaba katılır ve bu nedenle müşterinize geleneksel bir Ethereum adresinin sağlanmasını gerektirir."
+    }
+  ],
   "/5Hyyf": [
     {
       "type": 0,
       "value": "Endonezce"
+    }
+  ],
+  "/JiR8D": [
+    {
+      "type": 0,
+      "value": "Hiç bitmeyen bir döngüde, her bir doğrulayıcı hesabı, uygun ETH çekme işlemleri için sürekli olarak değerlendirilir (bunların iki türü vardır, aşağıda bu konuda daha fazla bilgi vardır). Doğrulayıcılar, orijinal olarak 0'dan başlayarak dizin numarasına göre sırayla işlenir ve sonraki teklif verenlerin her biri, bir öncekinin kaldığı yerden devam eder."
+    }
+  ],
+  "/OAba6": [
+    {
+      "type": 0,
+      "value": "\"Aktivasyon\" ve \"çıkış\" sıralarının bağımsız olduğunu ve rekabet halinde olmadığını unutmayın. Her biri dönem bazında sınırlıdır."
     }
   ],
   "/QPc9s": [
@@ -145,6 +181,12 @@
     {
       "type": 0,
       "value": " 'ı kendilerine göndermeye çalışabilir ve çekebilir. İşlemi gönderdiğiniz adresin doğru adres olduğundan emin olun."
+    }
+  ],
+  "/e+qAC": [
+    {
+      "type": 0,
+      "value": "çekilebilir dönem"
     }
   ],
   "/h0DGY": [
@@ -259,10 +301,28 @@
       "value": "Bölüm 3 - Para yatırdıktan sonra"
     }
   ],
+  "09ZPhN": [
+    {
+      "type": 0,
+      "value": "Para çekme kimlik bilgileri:"
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
       "value": "değil"
+    }
+  ],
+  "0GWhvr": [
+    {
+      "type": 0,
+      "value": "Beklenen çıktılar"
+    }
+  ],
+  "0MIRQ5": [
+    {
+      "type": 0,
+      "value": "Etkili bakiye 32'de maksimuma mı çıktı?"
     }
   ],
   "0PlVao": [
@@ -281,6 +341,12 @@
     {
       "type": 0,
       "value": "Test ağı uygulaması"
+    }
+  ],
+  "0U17DC": [
+    {
+      "type": 0,
+      "value": "para çekme kimlik bilgileri"
     }
   ],
   "0c06tl": [
@@ -315,16 +381,46 @@
       "value": "İkinci olarak, bağlılık paketlerini oluşturun:"
     }
   ],
+  "0mc/JV": [
+    {
+      "type": 0,
+      "value": "Doğrulama bir taahhüttür"
+    }
+  ],
   "0oNdmk": [
     {
       "type": 0,
       "value": "Doğrulayıcılar SSS"
     }
   ],
+  "0sMzHb": [
+    {
+      "type": 0,
+      "value": "Yukarıda belirtildiği gibi, bu adım "
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": " olarak bilinen bir mesajın imzalanmasıyla tamamlanır. Bunlar, Shanghai/Capella yükseltmesinden sonraki ilk yuvadan itibaren bloklara kabul edilir."
+    }
+  ],
   "0uqjBl": [
     {
       "type": 0,
       "value": "Topluma yarar sağladığınız için sürekli ödüller kazanın."
+    }
+  ],
+  "0wEZ8X": [
+    {
+      "type": 0,
+      "value": "Şurada doğrula "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
     }
   ],
   "122+yR": [
@@ -337,6 +433,12 @@
     {
       "type": 0,
       "value": "Test ağında doğrulama yaparken, düğümünüz hakkında daha fazla bilgi edinmek için şu simülasyonları gerçekleştirin ve kendinizi Ana ağa daha iyi hazırlayın:"
+    }
+  ],
+  "15B2Xk": [
+    {
+      "type": 0,
+      "value": "Stakerler, fikir birliği katmanından ödül ödemelerinin kilidini açmak için bir para çekme adresi belirlemelidir. Bu, doğrulayıcı anahtarlarınız oluşturulerken ayarlanır."
     }
   ],
   "17Epwt": [
@@ -409,6 +511,12 @@
       "value": "Parola dosyalarının sonunda yeni satırlar olup olmadığını kontrol edin."
     }
   ],
+  "1Yybuc": [
+    {
+      "type": 0,
+      "value": "tam argüman belgeleri burada"
+    }
+  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -427,10 +535,22 @@
       "value": "Ethereum stake etme ekonomisi hakkında daha fazla bilgi"
     }
   ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "ücret alıcısı"
+    }
+  ],
   "1pUw7Y": [
     {
       "type": 0,
       "value": "Nethermind çalıştırma belgeleri"
+    }
+  ],
+  "21EI3f": [
+    {
+      "type": 0,
+      "value": "Lodestar doğrulayıcı anahtar yönetimi belgeleri"
     }
   ],
   "22EpKq": [
@@ -445,6 +565,12 @@
     {
       "type": 0,
       "value": " dosyası değildir"
+    }
+  ],
+  "25IJMT": [
+    {
+      "type": 0,
+      "value": "Bir para çekme adresi belirlenmemişse ve anımsatıcı güvenlik kelimelerine erişiminizi kaybettiyseniz, paranız süresiz olarak doğrulayıcı hesabında kilitli kalacaktır."
     }
   ],
   "25suT4": [
@@ -467,6 +593,20 @@
     {
       "type": 0,
       "value": " olmalıdır."
+    }
+  ],
+  "2A6Wjz": [
+    {
+      "type": 0,
+      "value": "Bu bayrağı temin ettiğinizde, para çekme kimlik bilgileriniz "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " ön ekini ve hesabınızın para çekmeye hazır olduğunu gösteren para çekme adresinizi içerecektir."
     }
   ],
   "2AHkym": [
@@ -503,6 +643,18 @@
       "value": "clientName"
     }
   ],
+  "2RXbJd": [
+    {
+      "type": 0,
+      "value": "Ödeme sıklığını hangi faktörler etkiler?"
+    }
+  ],
+  "2XWJdH": [
+    {
+      "type": 0,
+      "value": "Şayet öyleyse bir sonraki soruya geçin"
+    }
+  ],
   "2a1GTh": [
     {
       "type": 0,
@@ -515,10 +667,26 @@
       "value": "Ücret alıcısı belgeleri:"
     }
   ],
+  "2ebz/N": [
+    {
+      "type": 0,
+      "value": "fazla bakiye çekme"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
       "value": "Nimbus anahtar yönetimi belgeleri"
+    }
+  ],
+  "2rFwzp": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": anahtarlarınızı oluştururken bir para çekme adresi verdiyseniz, hazırsınız damektir (bu, \"gelişmiş mod\" altında bulunur)"
     }
   ],
   "2rflCq": [
@@ -553,10 +721,22 @@
       "value": "Yürütüm katmanından (eskiden \"Eth1\" zinciri) gelen doğrulayıcı para yatırma işlemlerini işlemek için bir yürütüm istemcisi ve bir mutabakat istemcisi (eskiden \"Eth2\") çalıştırmanız gerekiyor. Infura gibi üçüncü taraf hizmetler kullanabilirsiniz ancak ağı olabildiğince merkeziyetsiz tutmak için kendi istemcinizi çalıştırmayı öneririz."
     }
   ],
+  "38Fedn": [
+    {
+      "type": 0,
+      "value": "ChainSafe hakkında daha fazlası"
+    }
+  ],
   "38VH2G": [
     {
       "type": 0,
       "value": "Deposit-cli aracının kurulumu"
+    }
+  ],
+  "39ZKg5": [
+    {
+      "type": 0,
+      "value": "Para çekimleri"
     }
   ],
   "3CRtg8": [
@@ -599,6 +779,12 @@
     {
       "type": 0,
       "value": "Bağlı cüzdanınız için doğrulayıcı bulunamadı"
+    }
+  ],
+  "3KP7+U": [
+    {
+      "type": 0,
+      "value": "Bayraklı komut satırı"
     }
   ],
   "3NHygY": [
@@ -653,12 +839,6 @@
       "value": " ETH artışlarıyla yapıldığı anlamına gelir."
     }
   ],
-  "3PZq07": [
-    {
-      "type": 0,
-      "value": "Bu nedenle, anahtarlarınızı başka bir yedek görevi gören anımsatıcılardan oluşturmak iyi bir fikirdir. Bu, sitenin devreye girmesiyle katılan doğrulayıcılar için varsayılan ayar olacaktır."
-    }
-  ],
   "3PbtmF": [
     {
       "type": 0,
@@ -687,6 +867,20 @@
     {
       "type": 0,
       "value": "Geth on Goerli belgesi"
+    }
+  ],
+  "3aykgN": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcınız ayrıca blok teklif ederken yanmamış gaz ücretleri alacaktır. Doğrulayıcılar, blok önermek için protokol tarafından rastgele seçilir ve her 12 saniyelik dilim için yalnızca bir doğrulayıcı bir blok önerebilir. Her gün 7.200 yuva vardır, bu nedenle her doğrulayıcının bir blok önermek için günde 7.200 şansı vardır. 500.000 doğrulayıcı varsa her doğrulayıcı her 70 günde ortalama "
+    },
+    {
+      "type": 1,
+      "value": "average"
+    },
+    {
+      "type": 0,
+      "value": " bir blok teklifi alacaktır."
     }
   ],
   "3tR/V9": [
@@ -759,10 +953,22 @@
       "value": "Neden kayan ölçek? Burada can sıkıcı ayrıntılara girmeyeceğiz zira temel fikir, ağın düzgün çalışması için minimum sayıda doğrulayıcı (ve dolayısıyla minimum miktarda ETH) olması gerektiğidir. Bu nedenle, daha fazla doğrulayıcıyı katılıma teşvik etmek için, faiz oranının bu minimum sayıya ulaşılana kadar yüksek kalması önemlidir."
     }
   ],
+  "4hb+GK": [
+    {
+      "type": 0,
+      "value": "Para çekme adresi"
+    }
+  ],
   "4hnEBA": [
     {
       "type": 0,
       "value": "Akıllı sözleşme kodu doğrulandı mı?"
+    }
+  ],
+  "4kNER3": [
+    {
+      "type": 0,
+      "value": "Gönüllü olsun ya da olmasın herhangi bir çıkış, çıkış kuyruğu üzerinden ilerlemelidir. Bu anlık bir işlem değildir ve aynı anda başka kaç hesabın çıkış yaptığına bağlıdır."
     }
   ],
   "4l6vz1": [
@@ -771,10 +977,44 @@
       "value": "Kopyala"
     }
   ],
+  "4uFys5": [
+    {
+      "type": 0,
+      "value": "İptal edilen veya bakiyesi yetersiz olan hesaplar, ağ kurallarına göre çıkış yapmak zorundadır. Bu otomatiktir ve başlatıldıktan sonra durdurulamaz."
+    }
+  ],
   "54J/qs": [
     {
       "type": 0,
       "value": "BLS'ye para çekme kullanıp para çekme anahtarımı kaybedersem ne olur?"
+    }
+  ],
+  "57MWKW": [
+    {
+      "type": 0,
+      "value": "Yeni bir işlem türü olarak değil, bir operasyon olarak para çekme işlemleri"
+    }
+  ],
+  "57h5ur": [
+    {
+      "type": 0,
+      "value": "Ardından, tam para çekme işlemini gerçekleştirmek için bir sonraki doğrulayıcı taramasına kadar en fazla "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " kez ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " para çekme kimlik bilgilerini varsayar)"
     }
   ],
   "58PXVy": [
@@ -811,6 +1051,12 @@
       "value": "Teku kurulum belgesi"
     }
   ],
+  "5KtHYT": [
+    {
+      "type": 0,
+      "value": "Bu şimdi sağlanmazsa, yatırılan paralarınız bir adres sağlanana kadar İşaret Zincirinde kilitli kalacaktır. Kilit açma, güvenlik kelimelerinden oluşturulan para çekme anahtarlarınızla bir mesajın imzalanmasını gerektirecektir (bu yüzden onu güvenli bir şekilde tutun)."
+    }
+  ],
   "5UH1sh": [
     {
       "type": 0,
@@ -831,18 +1077,10 @@
       "value": " itibarıyla bu, saatte yaklaşık 1,2-1,3 GB indirme ve 0,9-1 GB yüklemedir ve muhtemelen artacaktır."
     }
   ],
-  "5dG331": [
+  "5hW6Gf": [
     {
       "type": 0,
-      "value": "Bir doğrulayıcının oyu, söz konusu miktarla ağırlıklandırılsa da her doğrulayıcının oylama ağırlığı "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ile başlar ve sınırlandırılır. Düşük düğüm performansıyla bunun altına düşmek mümkündür, ancak üstüne çıkmak mümkün değildir."
+      "value": "Fikir Birliği Katmanı Para Çekme Koruması"
     }
   ],
   "5t8oYl": [
@@ -873,6 +1111,12 @@
       "value": "ortalama"
     }
   ],
+  "6NndcB": [
+    {
+      "type": 0,
+      "value": "ayrıl"
+    }
+  ],
   "6S95Bo": [
     {
       "type": 0,
@@ -889,6 +1133,12 @@
     {
       "type": 0,
       "value": "Yükseltme yoluyla bu doğrulayıcının etkin bakiyesini artırabilirsiniz"
+    }
+  ],
+  "6eA+mW": [
+    {
+      "type": 0,
+      "value": "Lodestar, GNU Kısıtlı Genel Kamu Lisansı v3.0 kapsamında TypeScript kullanılarak oluşturulmuştur."
     }
   ],
   "6nh4de": [
@@ -953,10 +1203,26 @@
       "value": " çalıştırmanız gerekir."
     }
   ],
+  "7GLK15": [
+    {
+      "type": 0,
+      "value": "Anahtarlarınızı oluşturmak için hangi yöntemi kullandığınıza bağlı olarak:"
+    }
+  ],
   "7Iz3JI": [
     {
       "type": 0,
       "value": "Konsensus İstemcisi"
+    }
+  ],
+  "7Nwe5A": [
+    {
+      "type": 1,
+      "value": "exitEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - doğrulayıcınızın artık aktif olmadığı, ödül kazanmadığı ve artık iptal kurallarına tabi olmadığı dönem."
     }
   ],
   "7Rw2uA": [
@@ -1005,6 +1271,12 @@
       "value": " blok zinciri kaşiflerinden yararlanarak görebilirsiniz."
     }
   ],
+  "7kWKe0": [
+    {
+      "type": 0,
+      "value": "Para çekme sırası, bir tarama mekanizması aracılığıyla mevcut ödemeleri otomatik olarak kontrol eden blok önericiler tarafından otomatik olarak oluşturulup işleme tabi tutulur."
+    }
+  ],
   "7sZfCF": [
     {
       "type": 0,
@@ -1017,6 +1289,12 @@
       "value": "Her dönemde ağ her doğrulayıcının eylemlerini değerlendirir ve ödüllerinizi veya cezalarınızı uygun şekilde verir."
     }
   ],
+  "8/nhr4": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcınızın herhangi bir şekilde para çekebilmesi için, bir para çekme adresi sağlanmalı ve İşaret Zincirindeki hesabınıza kaydedilmelidir. Bu, kontrol ettiğiniz bir adres olmalıdır; ve ayarlandıktan sonra değiştirilemez."
+    }
+  ],
   "80eWKU": [
     {
       "type": 0,
@@ -1027,6 +1305,12 @@
     {
       "type": 0,
       "value": "MetaMask'ı tespit edemiyoruz. Tarayıcıları değiştirin veya MetaMask'ı yükleyin."
+    }
+  ],
+  "8BXroN": [
+    {
+      "type": 0,
+      "value": "Lodestar dokümanları"
     }
   ],
   "8FmuYF": [
@@ -1079,10 +1363,68 @@
       "value": "slashing (iptaller)"
     }
   ],
+  "8echXf": [
+    {
+      "type": 0,
+      "value": "Bu döneme ulaşmadan önce doğrulayıcınızı kapatmayın."
+    }
+  ],
+  "8fXTDo": [
+    {
+      "type": 0,
+      "value": "Neyse ki bu, işlenmesi gereken tek seferlik bir mesajdır ve para yatırma sırasında para çekme kimlik bilgilerini sağlayan doğrulayıcılar bu adımdan muaftır. Tamamlandığında, doğrulayıcınız para çekme işlemleri için kalıcı olarak etkinleştirilir ve bir sonraki tarama sırasında ödeme almaya hak kazanır."
+    }
+  ],
+  "8k1RjX": [
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " test ağı"
+    }
+  ],
+  "8kLV25": [
+    {
+      "type": 0,
+      "value": "Bir para çekme adresi verildi mi?"
+    }
+  ],
   "8mEWVB": [
     {
       "type": 0,
       "value": "Sabit bir toplam doğrulayıcı sayısı olduunda, ödüller/cezalar ağırlıklı olarak doğrulayıcının bakiyesine göre ölçeklenir; daha yüksek bir bakiye ile onay vermek daha büyük ödülleri/cezaları, daha düşük bir bakiye ile onaylamak ise daha düşük ödülleri/cezaları beraberinde getirir."
+    }
+  ],
+  "8mybVV": [
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " = \"Tip 0\" = BLS anahtarları = Eski para çekme kimlik bilgileri: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsDisabled"
+    }
+  ],
+  "8rxaqc": [
+    {
+      "type": 1,
+      "value": "withdrawableEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - doğrulayıcı paralarınızın bir sonraki doğrulayıcı taraması sırasında tam olarak çekilmeye uygun olduğu dönem."
+    }
+  ],
+  "8uq59n": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı anahtarlarınızı ve doğrulayıcı müşterinizi kullanarak gönüllü bir çıkış mesajını imzalayıp ağda yayınlayarak hisselemeden çıkma niyetinizi belirtin"
     }
   ],
   "8wd0q5": [
@@ -1189,6 +1531,12 @@
       "value": "Nethermind'i yapılandırın"
     }
   ],
+  "9r6K1F": [
+    {
+      "type": 0,
+      "value": "Para çekme hakkı bulunmuyor"
+    }
+  ],
   "9r8j5+": [
     {
       "type": 0,
@@ -1213,24 +1561,6 @@
     {
       "type": 0,
       "value": " üzerinde senkronize ettim."
-    }
-  ],
-  "9xeLhs": [
-    {
-      "type": 0,
-      "value": "Ethereum adresine para çekme: Birleştirme sonrası temizlik yükseltmesi sonrasında Mainnet cüzdan adresinize (eskiden \"Eth1\" adresi) para çekmek istiyorsanız deposit-cli'yi çalıştırırken "
-    },
-    {
-      "type": 1,
-      "value": "ethAddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " ayarlayabilirsiniz. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
     }
   ],
   "9ySJSP": [
@@ -1265,6 +1595,32 @@
     {
       "type": 0,
       "value": "Yardıma ihtiyaç duyarsanız Python belgesine bakın."
+    }
+  ],
+  "AEbKyt": [
+    {
+      "type": 0,
+      "value": "Devnet için bir parametre ekleyebilirsiniz:"
+    }
+  ],
+  "AFzWcM": [
+    {
+      "type": 0,
+      "value": "Anahtarların benim sorumluluğumda olduğunu ve ilk para yatırma verileriyle birlikte bir para çekme adresi vermezsem paramı çekmek için anımsatıcımın (kaynak) "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": " tek yol olacağını anlıyorum."
+    }
+  ],
+  "AH6XsN": [
+    {
+      "type": 0,
+      "value": "Ayrıca, anahtarlarınızı ayarlamadan ve veri yatırmadan önce hisseleme para çekme işlemlerinin nasıl çalıştığını anladığınızdan emin olun."
     }
   ],
   "AJD+66": [
@@ -1347,6 +1703,12 @@
       "value": "Özellikle, lighthouse doğrulayıcı istemcinizi başlatırken, onu anahtar depolarınızın bulunduğu dizine yönlendirebilirsiniz ve anahtar depolarınızı içe aktaracak ve etkileşimli olarak parolalarınızı isteyecektir. Parola sağlamazsanız, lighthouse her başladığında tekrar soracaktır."
     }
   ],
+  "Andk3R": [
+    {
+      "type": 0,
+      "value": "Para yatırmadan önce bir para çekme adresi sağlamazsanız, anahtarlarınızı güncellemek ve para çekme işlemlerini etkinleştirmek için ek bir adımı gerçekleştirmeniz gerekecektir. Bu arada paralarınız kilit altında kalır."
+    }
+  ],
   "Anqi3n": [
     {
       "type": 0,
@@ -1357,6 +1719,26 @@
     {
       "type": 0,
       "value": "Doğrulayıcıyı yükseltin"
+    }
+  ],
+  "AyoE3t": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcıdan para çekilmesi henüz mümkün değildir. Bu işlevin 2023 yılının birinci ve ikinci çeğreği için planlanan Shanghai/Capella yükseltmesine dahil edilmesi planlanmaktadır."
+    }
+  ],
+  "B0BAqm": [
+    {
+      "type": 0,
+      "value": "Bir "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": ", etkin bir doğrulayıcının maksimum etkin bakiyesi 32 olduğunda ve toplam bakiyesi 32'nin üzerinde olduğunda işlemle konulur. Tek bir doğrulayıcı, 32 ETH üzerindeki fazla bakiye için ödül alamaz ve bu nedenle bu hesaplarda Ethereum adreslerine otomatik olarak çekilen fazladan bakiye olacaktır."
     }
   ],
   "B2EKj+": [
@@ -1425,6 +1807,12 @@
       "value": "Erigon, Go üzerinden yazılmıştır ve GNU LGPLv3 lisanslıdır."
     }
   ],
+  "BKDxOx": [
+    {
+      "type": 0,
+      "value": "Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu doğrulayıcıya yatırılan tüm ek paralar, bir sonraki doğrulayıcı taraması sırasında otomatik olarak çekim adresine aktarılacaktır. ETH'yi yeniden hisselemek için yeni bir doğrulayıcı etkinleştirilmelidir."
+    }
+  ],
   "BPpnlJ": [
     {
       "type": 0,
@@ -1437,10 +1825,10 @@
       "value": "EthStaker topluluğu"
     }
   ],
-  "Bf2QKg": [
+  "Bc20la": [
     {
       "type": 0,
-      "value": "Doğrulama uzun vadeli bir taahhüttür"
+      "value": "gün"
     }
   ],
   "Bj5yI5": [
@@ -1461,10 +1849,44 @@
       "value": "Giriş"
     }
   ],
+  "Bp0clV": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı dizini:"
+    }
+  ],
+  "Bp9Dxf": [
+    {
+      "type": 0,
+      "value": "Para çekme işlemleri ve kimlik bilgisi değişikliği nasıl başlatılır"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
       "value": "Lighthouse'u yapılandırın"
+    }
+  ],
+  "C2Jn1z": [
+    {
+      "type": 0,
+      "value": "Size ait olan "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " ile teklif edilen işlem ücretlerini alan "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": " tarafın aynı olmadığını unutmayın. Bunların her ikisi de aynı adrese ve fakat her biri ayrı ayrı ayarlanmalıdır."
     }
   ],
   "C3jBPI": [
@@ -1495,6 +1917,32 @@
     {
       "type": 0,
       "value": "Hisse İspatı"
+    }
+  ],
+  "CGMYrU": [
+    {
+      "type": 0,
+      "value": "Hisseleme Para Yatırma CLI sürümleri"
+    }
+  ],
+  "CPl2hh": [
+    {
+      "type": 0,
+      "value": "Kontrol listesini inceledim ve para çekme işlemlerinin nasıl gerçekleştiğini anladım."
+    }
+  ],
+  "CT+gEC": [
+    {
+      "type": 0,
+      "value": "İşaret Düğümü "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " havuzuna yükle"
     }
   ],
   "CVDzDs": [
@@ -1543,10 +1991,36 @@
       "value": "Bir güvenlik duvarı oluşturdum."
     }
   ],
+  "Cgrsge": [
+    {
+      "type": 0,
+      "value": "Mevcut doğrulayıcılar"
+    }
+  ],
+  "Co67tK": [
+    {
+      "type": 0,
+      "value": "BLS'den Yürütüm Değişikliğine"
+    }
+  ],
   "D0Rigq": [
     {
       "type": 0,
       "value": "NO"
+    }
+  ],
+  "D19C0b": [
+    {
+      "type": 0,
+      "value": "Aksi halde, para çekme kimlik bilgilerimi güncellemek için BLS para çekme anahtarlarımla imzalanmış bir "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " mesajı gönderdim (Shanghai/Capella yükseltmesi gereklidir)."
     }
   ],
   "D33f/7": [
@@ -1559,6 +2033,16 @@
     {
       "type": 0,
       "value": "Doğrulayıcı olmak ne kadar ETH stake etmeliyim?"
+    }
+  ],
+  "D5NvkC": [
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " bölümünü indir:"
     }
   ],
   "DCaq7N": [
@@ -1577,6 +2061,28 @@
     {
       "type": 0,
       "value": "Şartnameye aykırı hareket ettiğimde, slashing'e tabi olacağımı anlıyorum."
+    }
+  ],
+  "DLWOxX": [
+    {
+      "type": 0,
+      "value": "Benzer şekilde, doğrulayıcıların ağdan ne kadar hızlı "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " çıkabileceğini sınırlayan bir "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": " sıradan çıkış yöntemi de vardır. Bu güvenlik nedeniyledir. Her doğrulayıcı 32 ETH'lik maksimum efektif bakiye ile sınırlıdır, bu sayede ETH'nin büyük bölümlerinin potansiyel olarak bir saldırıda kullanılması ve ardından topluca ve hızlı bir şekilde ağdan çırakılması önlenir."
     }
   ],
   "DNRQa7": [
@@ -1649,6 +2155,12 @@
       "value": " (para yatırma sözleşmesi tarafından izin verilen minimum değeri) ekleyebilirsiniz"
     }
   ],
+  "Ds66AU": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı olmak için, anahtarları yönetme ve anımsatıcıları koruma hakkında bilgi sahibi olmanız gerekir. Henüz anahtarlara ve anımsatıcılara aşina değilseniz, lütfen devam etmeyin."
+    }
+  ],
   "DsJ/Mk": [
     {
       "type": 0,
@@ -1681,10 +2193,10 @@
       "value": "zincir"
     }
   ],
-  "E8t6ru": [
+  "E4rtgi": [
     {
       "type": 0,
-      "value": "Doğrulayıcı olmak için, anahtarları yönetme ve bir anımsatıcıyı koruma hakkında bilgi sahibi olmanız gerekir. Anahtarlara ve anımsatıcılara henüz aşina değilseniz, lütfen devam etmeyin. Bu süreçte daha sonra çekim yapmak için gereken anahtarları türetemeyeceğinizi unutmayın, bu nedenle daha sonra çekim yapabilmek için anımsatıcınızı güvenli bir şekilde saklayın."
+      "value": "Fikir birliği istemcileri:"
     }
   ],
   "EFjTSf": [
@@ -1749,6 +2261,26 @@
       "value": "Staking Launchpad'i"
     }
   ],
+  "Ej2jo1": [
+    {
+      "type": 0,
+      "value": "Para çekme adresi:"
+    }
+  ],
+  "F8yf1S": [
+    {
+      "type": 0,
+      "value": "Burada bulabilirsiniz: "
+    },
+    {
+      "type": 1,
+      "value": "docsHere"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1771,6 +2303,24 @@
     {
       "type": 0,
       "value": "Bu işlemin geri alınamayacağını anlıyorum."
+    }
+  ],
+  "FSp9ip": [
+    {
+      "type": 0,
+      "value": "Ethereum adresinden para çekme: Shanghai/Capella yükseltmesinden sonra yürütme cüzdanı adresinize para çekmek isterseniz, para yatırma-cli'yi çalıştırırken "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " ayarını yapabilirsiniz. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "FU7JYy": [
@@ -1863,6 +2413,12 @@
       "value": "doğrulayıcılar"
     }
   ],
+  "G0ZD5H": [
+    {
+      "type": 0,
+      "value": "Bir hesabı tam para çekme işlemine uygun hale getirmek için önce doğrulayıcı hesaptan çıkılmalıdır. Doğrulayıcı hesaplar hisselemeder iki ana yöntemle: gönüllü olarak veya zorla."
+    }
+  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1905,6 +2461,12 @@
       "value": "Çevrimdışı olduğum için ne kadar cezalandırılırım?"
     }
   ],
+  "GTkW7D": [
+    {
+      "type": 0,
+      "value": "Belirli miktarlarda ETH'nin çekilmesini manuel olarak talep etmek mümkün değildir"
+    }
+  ],
   "GUDhpC": [
     {
       "type": 0,
@@ -1923,10 +2485,22 @@
       "value": "Anahtarları oluştur"
     }
   ],
+  "Ge62/G": [
+    {
+      "type": 0,
+      "value": "Fazla bakiye çekme (kısmi para çekme)"
+    }
+  ],
   "GelBd9": [
     {
       "type": 0,
       "value": "Az önce indirdiğiniz dosyayı yürütülebilir hâle getirin."
+    }
+  ],
+  "GlKjxX": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı başına bir anahtar deponuz olduğunu görmelisiniz. Bu anahtar deposu, parolanızla şifrelenmiş imzalama anahtarınızı içerir."
     }
   ],
   "GsBRWL": [
@@ -2055,6 +2629,12 @@
       "value": "Eskiden TurboGeth olan Erigon, performans optimizasyonlarını mümkün kılmak için geliştirilmiş bir Ethereum istemcisidir."
     }
   ],
+  "ID3Pgm": [
+    {
+      "type": 0,
+      "value": "Tek bir blokta işleme konulabilecek maksimum para çekme sayısı"
+    }
+  ],
   "IJw06E": [
     {
       "type": 0,
@@ -2065,6 +2645,12 @@
     {
       "type": 0,
       "value": "İkinci (olası olmayan) senaryoda, 21 gün içinde hissenizin% 50'sine (16 ETH) kadar kademeli olarak kaybedeceğinizi unutmayın. 21 gün sonra doğrulama havuzundan çıkarılırsınız. Bu, blokların bir noktada yeniden tamamlanmaya başlamasını sağlar."
+    }
+  ],
+  "IYvwsI": [
+    {
+      "type": 0,
+      "value": "Anahtar değişiklik mesajı oluşturmak için mevcut araçlar"
     }
   ],
   "IZFEUg": [
@@ -2089,10 +2675,22 @@
       "value": " eksik para yatırma işleminiz var"
     }
   ],
+  "IhHhea": [
+    {
+      "type": 0,
+      "value": "Hesabınızın para çekmeye hazır olup olmadığını kontrol etmek için doğrulayıcı dizininizi buraya girin:"
+    }
+  ],
   "Il9tBQ": [
     {
       "type": 0,
       "value": "Geth Go'da yazılmış, tamamen açık bir kaynaktır ve GNU LGPL v3'e göre lisanslıdır."
+    }
+  ],
+  "InUvmv": [
+    {
+      "type": 0,
+      "value": "Operasyonlar olarak işaret zinciri anında iletmeli para çekme işlemleri"
     }
   ],
   "IugT5/": [
@@ -2175,6 +2773,12 @@
       "value": "4. Kimlik avını önleyin"
     }
   ],
+  "Ja5vXW": [
+    {
+      "type": 0,
+      "value": "Ek okumalar"
+    }
+  ],
   "JbVlOE": [
     {
       "type": 0,
@@ -2211,16 +2815,34 @@
       "value": "Mevcut işletim sisteminiz nedir?"
     }
   ],
-  "K37W0m": [
+  "K3uH1C": [
     {
       "type": 0,
-      "value": "İmza anahtarınızla doğrulayıcıdan hızlı bir şekilde çıkmayı deneyebilir ve ardından para çekme anahtarını kullanarak hırsızdan önce parayı transfer edebilirsiniz."
+      "value": "çevrimdışı"
+    }
+  ],
+  "K4TRB7": [
+    {
+      "type": 0,
+      "value": "Belirli bir dönemde (6,4 dakika) etkinleştirilebilen veya çıkılabilen doğrulayıcı sayısı, ağda o anda kaç etkin doğrulayıcı olduğuna göre belirlenir."
     }
   ],
   "K6+jQ3": [
     {
       "type": 0,
       "value": "Geth kurulum belgesi"
+    }
+  ],
+  "K6canA": [
+    {
+      "type": 0,
+      "value": "Para çekme özelliklerinin yaklaşan Shanghai/Capella yükseltmesine dahil edilmesi planlanıyor. Bu işlevsellik eklendikten sonra, minimum yaklaşık bir günlük gecikmenin ardından para çekme anahtarınızla bakiyeniz çekilebilir."
+    }
+  ],
+  "K7xnjy": [
+    {
+      "type": 0,
+      "value": "Uyarı: Anahtarları aynı anda birden çok (yedek) doğrulayıcı müşteride saklamayın"
     }
   ],
   "KBSbmP": [
@@ -2275,6 +2897,12 @@
     {
       "type": 0,
       "value": "Hata"
+    }
+  ],
+  "KQrlTP": [
+    {
+      "type": 0,
+      "value": "katıl"
     }
   ],
   "KWWsDo": [
@@ -2365,6 +2993,28 @@
       "value": "Lighthouse, hız ve güvenliğe yoğun bir şekilde odaklanarak Rust'ta yazılmış bir mutabakat istemcisi uygulamasıdır."
     }
   ],
+  "LOtXFT": [
+    {
+      "type": 0,
+      "value": "BLS para çekme: Varsayılan olarak, deposit-cli, "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " biçiminde anımsatıcılar üzerinden türetilen "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " ile para çekme kimlik bilgilerini oluşturur."
+    }
+  ],
   "LVy+cS": [
     {
       "type": 0,
@@ -2407,6 +3057,12 @@
     {
       "type": 0,
       "value": "Ethereum ağını desteklediğiniz için teşekkür ederiz!"
+    }
+  ],
+  "LpnfTF": [
+    {
+      "type": 0,
+      "value": "Lodestar kurulum dokümanları"
     }
   ],
   "Ltd/hJ": [
@@ -2453,10 +3109,28 @@
       "value": "Neden şimdi bir yürütüm istemcisi çalıştırmam gerekiyor?"
     }
   ],
+  "M35Dz/": [
+    {
+      "type": 0,
+      "value": "İşaret Düğümünü BLS'den Yürütüm Değişikliği havuzuna yükle"
+    }
+  ],
   "M3GwXS": [
     {
       "type": 0,
       "value": "Ödüllerinizin tamamını yalnızca doğrulayıcınız çevrimiçiyse ve güncelse alırsınız. Bu sizin sorumluluğunuzdur. Doğrulayıcınız çevrimdışı olursa ceza alırsınız. Çevrimdışı olmanın cezaları, kabaca aktif olarak katılmanın ödüllerine eşittir."
+    }
+  ],
+  "M6nefR": [
+    {
+      "type": 0,
+      "value": "Para çekme kuyruğunda ayarlanan hız limitleri (Şangay öncesindeki testlerle değişebilir)"
+    }
+  ],
+  "MCmGYv": [
+    {
+      "type": 0,
+      "value": "Kopyalandı ✓"
     }
   ],
   "MIsmjW": [
@@ -2501,10 +3175,22 @@
       "value": "Ethereum nasıl ölçekleniyor?"
     }
   ],
+  "MaZo9k": [
+    {
+      "type": 0,
+      "value": "Wagyu Key Gen GUI"
+    }
+  ],
   "Mb3npQ": [
     {
       "type": 0,
       "value": "Terminalin kullanılması"
+    }
+  ],
+  "MbLMTq": [
+    {
+      "type": 0,
+      "value": "Bu, kaç para çekme işleminin işlenmesi gerektiğine bağlı olarak tam bir taramanın ne kadar süreceğine ilişkin üst sınırı tahmin etmek için özetlenebilir:"
     }
   ],
   "MbsAo3": [
@@ -2531,6 +3217,20 @@
       "value": "Yükleme bilgileri"
     }
   ],
+  "Mne5iM": [
+    {
+      "type": 0,
+      "value": "Eğer öyleyse, dur. Kalan bakiye için "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " tam para çekme işlemi"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -2539,6 +3239,18 @@
     {
       "type": 0,
       "value": " geçerli bir deposit_data JSON dosyası değildir. Yeniden deneyin."
+    }
+  ],
+  "N6QzJ5": [
+    {
+      "type": 0,
+      "value": "birkaç gün daha"
+    }
+  ],
+  "NDrMCw": [
+    {
+      "type": 0,
+      "value": "Uygun para çekme işlemlerine sahip doğrulayıcı hesapların toplam sayısı (değişken)"
     }
   ],
   "NEmnAV": [
@@ -2571,32 +3283,54 @@
       "value": "Kök hesabın güvenliğini sağladım."
     }
   ],
-  "NTHTCh": [
+  "NSl1Q5": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
     {
       "type": 0,
-      "value": "Tek bir doğrulayıcı için "
+      "value": ": Bu, Hisseleme Para Yatırma CLI ile anahtarlarınızı oluştururken "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "eth1WithdrawalAddress"
     },
     {
       "type": 0,
-      "value": " ETH'den fazla para yatırmayın. Ödüllerinize eklenmeyecek ve planlanan "
-    },
-    {
-      "type": 1,
-      "value": "shanghai"
-    },
-    {
-      "type": 0,
-      "value": " güncellemesine kadar kilitlenecektir."
+      "value": " bayrağı kullanılarak yapılır."
     }
   ],
   "NTWnJC": [
     {
       "type": 0,
       "value": "Komut satırı uygulamasını indir"
+    }
+  ],
+  "NTdFPX": [
+    {
+      "type": 0,
+      "value": "Ödüller ve cezalar, dönem olarak bilinen bir süre olan her 6,4 dakikada bir verilir."
+    }
+  ],
+  "NUCB4G": [
+    {
+      "type": 0,
+      "value": "Bu "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " ağ doğrulayıcısının para çekme işlemleri için yapılandırılması gerekiyor. Anahtarlarınızı güncellemek için buna ihtiyacınız olacağından para çekme kimlik bilgilerinizi not edin."
+    }
+  ],
+  "NUcFVA": [
+    {
+      "type": 0,
+      "value": "[Example]"
     }
   ],
   "NVljH4": [
@@ -2643,6 +3377,64 @@
       "value": "Teku ile doğrulayıcı olun"
     }
   ],
+  "NiWtxk": [
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " = \"Tip 1\" = Yürütüm anahtarları = Yeni para çekme kimlik bilgileri: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsEnabled"
+    }
+  ],
+  "NkFxlX": [
+    {
+      "type": 0,
+      "value": "Çıkış dönemine ulaşmadan önce mevcut çağdan en az "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (dört dönem) (sırada başka kimse yokken, "
+    },
+    {
+      "type": 1,
+      "value": "highlyVariable"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "NpIOoJ": [
+    {
+      "type": 0,
+      "value": "Bu mesajın Mainnet'e dahil edilmesini sağlamanız için, bu mesajı Capella/Shanghai sert çatallanmasından "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " sonra bir işaret düğümünün "
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": " imza havuzuna yüklemeniz gerekecek."
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -2677,6 +3469,12 @@
       "value": "Parçalama"
     }
   ],
+  "O4kYrf": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı hesaplarının toplam sayısı (dizin sayısı, şimdiye kadar kaydedilen tüm doğrulayıcı hesapları, zaman geçtikçe yalnızca yukarı yönlü)"
+    }
+  ],
   "OBmVqN": [
     {
       "type": 0,
@@ -2707,6 +3505,42 @@
     {
       "type": 0,
       "value": "Nethermind belgeleri, istemcinin nasıl indirilip kurulacağını açıklar."
+    }
+  ],
+  "ORVjVH": [
+    {
+      "type": 0,
+      "value": "Ardından, bu paralar çekilebilir olarak işaretlenmeden önce başka bir "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (256 dönem)"
+    }
+  ],
+  "OSEFbC": [
+    {
+      "type": 0,
+      "value": "İmzalı bir gönüllü çıkış mesajı yayınlandıktan hemen sonra, "
+    },
+    {
+      "type": 1,
+      "value": "exitEpoch"
+    },
+    {
+      "type": 0,
+      "value": " ve "
+    },
+    {
+      "type": 1,
+      "value": "withdrawableEpoch"
+    },
+    {
+      "type": 0,
+      "value": " değerleri mevcut dönem numarasına göre hesaplanır. Bu değerler, doğrulayıcının tam olarak ne zaman çevrimiçi doğrulama gerçekleştirmesi gerekmeyeceğini ve sırasıyla doğrulayıcının tam olarak ne zaman tam para çekmeye uygun olduğunu belirler."
     }
   ],
   "OdYQYh": [
@@ -2793,6 +3627,12 @@
     {
       "type": 0,
       "value": "Ağınız değişti"
+    }
+  ],
+  "PQgBnI": [
+    {
+      "type": 0,
+      "value": "Bu dönem, diğer doğrulayıcıların çıkışıyla henüz maksimuma ulaşmamış olan ilk kullanılabilir dönem tarafından belirlenir (oran sınırı, ağdaki toplam doğrulayıcılara bağlıdır) ve çıkış başlatıldıktan sonra en az dört (4) dönem olmalıdır."
     }
   ],
   "PfoT0C": [
@@ -2911,6 +3751,20 @@
       "value": "Anahtar yönetimi"
     }
   ],
+  "QcnkjI": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı hesabınızda hala BLS para çekme kimlik bilgileri ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") varsa, tüm para çekme işlemleri için hangi yürütüm katmanı hesabının kullanılması gerektiğine işaret eden tek seferlik bir mesaj yayınlanmalıdır."
+    }
+  ],
   "QeE86m": [
     {
       "type": 1,
@@ -2949,6 +3803,12 @@
       "value": "İşlem"
     }
   ],
+  "Qo9UHj": [
+    {
+      "type": 0,
+      "value": "Hisselemeli para çekmeleri hakkında daha fazlası"
+    }
+  ],
   "QqqeNk": [
     {
       "type": 0,
@@ -2967,6 +3827,30 @@
     {
       "type": 0,
       "value": " yatırım tutarınız olabilir. Beaconcha.in 2048 bloğu onayladığında bu tutar kullanılabilir olacaktır."
+    }
+  ],
+  "R6z/mc": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": Anahtarlarınızı oluştururken "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " işaretini kullandıysanız, hazırsınız"
+    }
+  ],
+  "R7v7y3": [
+    {
+      "type": 0,
+      "value": "Para çekme adresini ayarla"
     }
   ],
   "R8eePn": [
@@ -2993,6 +3877,12 @@
       "value": "1. Sorumluluklarınız hakkında bilgi alın"
     }
   ],
+  "ROwygg": [
+    {
+      "type": 0,
+      "value": "EIP-4895"
+    }
+  ],
   "RVyb7r": [
     {
       "type": 0,
@@ -3003,6 +3893,12 @@
     {
       "type": 0,
       "value": "tebrikler"
+    }
+  ],
+  "RdHdwG": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı para çekme kimlik bilgilerini güncellemek için bir İmzalı BLS'den Yürütüm Değişikliğine mesajı oluşturmak ve yayınlamak için hisseleme deposit-cli aracının nasıl kullanılacağına ilişkin talimatlar."
     }
   ],
   "Rg5ySE": [
@@ -3029,6 +3925,20 @@
       "value": "İstemci sürümünü doğru döndürüp döndürmediğini kontrol etmek için aşağıdaki komutla doğrulayın:"
     }
   ],
+  "S+FY5u": [
+    {
+      "type": 0,
+      "value": "Bu, anımsatıcı güvenlik kelimeleri kullanılmasını gerektirir ve "
+    },
+    {
+      "type": 1,
+      "value": "offline"
+    },
+    {
+      "type": 0,
+      "value": " hava boşluklu bir makinede gerçekleştirilmelidir."
+    }
+  ],
   "S943uU": [
     {
       "type": 0,
@@ -3051,6 +3961,20 @@
     {
       "type": 0,
       "value": "Az önce indirdiğiniz dosyayı yürütün."
+    }
+  ],
+  "SVUntz": [
+    {
+      "type": 0,
+      "value": "Bir kullanıcı "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " para çekme kimlik bilgilerine sahip olduğunda ve gönüllü bir çıkış yayınladığında, işlem tamamlanana kadar başka bir eylem yapılması gerekmediğini unutmayın."
     }
   ],
   "SaR1pU": [
@@ -3111,6 +4035,12 @@
       "value": " kullanarak macOS cihazından python3'ü kurabilirsin"
     }
   ],
+  "Su0UFr": [
+    {
+      "type": 0,
+      "value": "Sıra özetinden çık"
+    }
+  ],
   "Szwbym": [
     {
       "type": 0,
@@ -3165,6 +4095,12 @@
       "value": "Geniş istemci karşılaştırmasına bakın"
     }
   ],
+  "U6jzBs": [
+    {
+      "type": 0,
+      "value": "Herkese açık para çekme test ağına katılım"
+    }
+  ],
   "U7AOxj": [
     {
       "type": 0,
@@ -3195,6 +4131,24 @@
     {
       "type": 0,
       "value": "En sevdiğiniz Ethereum blok gezgini üzerindeki para yatırma sözleşmesini kontrol edin:"
+    }
+  ],
+  "UYRyWv": [
+    {
+      "type": 0,
+      "value": "Para çekmeni mekaniği: Nasıl çalışır?"
+    }
+  ],
+  "UYoRgC": [
+    {
+      "type": 0,
+      "value": "İlk para yatırma işleminizi nasıl ayarladığınıza bağlı olarak, hesabınız halihazırda para çekmeye hazır olabilir veya olmayabilir:"
+    }
+  ],
+  "UZkvC5": [
+    {
+      "type": 0,
+      "value": "Bu döneme kadar (\"sıradayken\") doğrulayıcınızın çevrimiçi olması beklenir ve her zaman olduğu gibi aynı iptal kurallarına tabi tutulur."
     }
   ],
   "Utck3E": [
@@ -3229,6 +4183,12 @@
     {
       "type": 0,
       "value": "Doğrulayıcı olmak, önemli hazırlık adımları ile büyük bir sorumluluktur. Para yatırma işlemini yalnızca hazır olduğunuzda başlatın."
+    }
+  ],
+  "V+P6OJ": [
+    {
+      "type": 0,
+      "value": "Bu, Birleşim sırasında bir gereklilik haline geldi, bu yüzden hisseleme yapmadan önce ikisini de çalıştırdığınızdan emin olun."
     }
   ],
   "V0cb8p": [
@@ -3303,28 +4263,6 @@
       "value": " altına düşerse daha az kazanacaksınız."
     }
   ],
-  "VPpHAq": [
-    {
-      "type": 0,
-      "value": "Bir süreliğine hissemi "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " yapamam ve birleşmeye kadar "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " yapamam. Eğer çıkarsam çok geçmeden tekrar katılamayacağımı anlıyorum. Bu uzun vadeli bir taahhüttür."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -3357,6 +4295,20 @@
       "value": " gizli anahtarıyla korunur. Paylaşılan bu JWT gizli anahtarı birbirleriyle düzgün bir şekilde iletişim kurmalarına olanak sağlamak için her iki müşteriye de (hem yürütme hem de fikir birliği istemcileri) temin edilmelidir."
     }
   ],
+  "VwWGD9": [
+    {
+      "type": 0,
+      "value": "Bu mesajlar, blok başına 16 ("
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": ") mesaj ile sınırlıdır, bu nedenle, bir seferde 16'dan fazla istek yapılırsa, bir sıra oluşturulur ve bunlar sonraki bloklarda işlenir. Bu, Şanghay/Capella yükseltmesinin hemen ardından, bu mesajı gönderen kullanıcıların bu isteğin işleme alınmasından önce tahmini 2-3 güne kadar gecikmeler yaşayabileceği anlamına gelir."
+    }
+  ],
   "VzGJkB": [
     {
       "type": 0,
@@ -3367,6 +4319,12 @@
     {
       "type": 0,
       "value": "Teku, Apache 2 lisanslı ve oturmuşluğu ve erişilebilir olmasıyla dikkat çeken bir dil olan Java ile yazılmıştır."
+    }
+  ],
+  "W1mus6": [
+    {
+      "type": 0,
+      "value": "İmzalı bir gönüllü çıkış mesajı yayınlandıktan sonra:"
     }
   ],
   "W2Eues": [
@@ -3387,12 +4345,6 @@
     {
       "type": 0,
       "value": "Japonca"
-    }
-  ],
-  "W6w5Wb": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcılar ve para çekme işlemleri arasında transferler henüz mümkün değil. Geri çekme işlevi şu anda en önemli önceliktir ve Şanghay yükseltmesi olarak bilinen bir sonraki ağ yükseltmesinde kullanıma sunulması planlanmaktadır."
     }
   ],
   "W8nHSd": [
@@ -3441,6 +4393,20 @@
       "value": "Bu adımlar isteğe bağlıdır ancak düğümünüzü optimize etmeniz önerilir."
     }
   ],
+  "WbCafE": [
+    {
+      "type": 0,
+      "value": "İlk para yatırma verilerinizle birlikte bir para çekme adresi sağlamazsanız, daha sonra anımsatıcınızdan para çekme anahtarlarınızı almanız gerekecek, bu nedenle anımsatıcınızı güvenli bir şekilde saklayın—bu, para çekme işlemlerini etkinleştirdiğinizde "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " çekmenin TEK yolu olacaktır."
+    }
+  ],
   "WdDGn6": [
     {
       "type": 0,
@@ -3481,6 +4447,30 @@
     {
       "type": 0,
       "value": "Bu geçerli bir deposit_data JSON dosyası değil."
+    }
+  ],
+  "X6/BRy": [
+    {
+      "type": 1,
+      "value": "file"
+    },
+    {
+      "type": 0,
+      "value": " dosyasını varsayılan olarak "
+    },
+    {
+      "type": 1,
+      "value": "folder"
+    },
+    {
+      "type": 0,
+      "value": " klasöründe bulabilirsiniz."
+    }
+  ],
+  "X72hpo": [
+    {
+      "type": 0,
+      "value": "Bu doğrulayıcı, ödülleri aşağıdaki para çekme adresine almaya hazır. Başka bir işlem gerekmez."
     }
   ],
   "XBEBYR": [
@@ -3541,10 +4531,34 @@
       "value": " kullanın. Bu, varsayılan 8545 bağlantı noktasında JSON RPC hizmetlerini etkinleştirir."
     }
   ],
+  "XcItS7": [
+    {
+      "type": 0,
+      "value": "yaklaşık 25 dakika"
+    }
+  ],
+  "XgOPc8": [
+    {
+      "type": 0,
+      "value": "Mevcut durumda, doğrulayıcılar arasında ETH transferlerini etkinleştirmek için bir plan olmadığını unutmayın."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
       "value": "Kaynaktan oluşturma"
+    }
+  ],
+  "XsZtDM": [
+    {
+      "type": 0,
+      "value": "Capella - Resmi spefikasyon"
+    }
+  ],
+  "XszRWL": [
+    {
+      "type": 0,
+      "value": "eth1_withdrawal_address"
     }
   ],
   "Y07Hwy": [
@@ -3569,12 +4583,6 @@
     {
       "type": 0,
       "value": "Yükselt"
-    }
-  ],
-  "Y8YLHs": [
-    {
-      "type": 0,
-      "value": "İmza anahtarınız hırsızın kontrolü altında değilse, hırsız doğrulayıcınızdan çıkamaz."
     }
   ],
   "Y9S0NE": [
@@ -3617,6 +4625,12 @@
       "value": "Anahtarlar"
     }
   ],
+  "YJI2xv": [
+    {
+      "type": 0,
+      "value": "Ne tür bir para çekme işleminin başlatılacağını belirlemek için bir karar ağacı izlenir. Kontrol edilen doğrulayıcının çekilmeye uygun ETH'si varsa, para çekme sırasında eklenir; eğer yoksa, hesap atlanır."
+    }
+  ],
   "YP03/j": [
     {
       "type": 0,
@@ -3647,20 +4661,38 @@
       "value": " doğrulayıcılarınızın her biri için bir anahtar deposu kaydetmelisiniz. Lütfen bunları güvende tuttuğunuzdan, tercihen çevrimdışı olduğundan emin olun. Doğrulayıcı anahtar depolarınız, seçili dizinde bulunacaktır."
     }
   ],
+  "YXrp+b": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": Bu yazılım, kullanıcıların anahtar oluşturma sırasında bir para çekme adresi sağlamasını gerektirecek şekilde güncellenmektedir. Bu arada, bir para çekme adresi girmek için kurulum sırasında \"Gelişmiş\" seçeneğini işaretlemeniz gerekebilir."
+    }
+  ],
+  "YZtVDX": [
+    {
+      "type": 0,
+      "value": "Aman! Doğrulayıcı dizin numarasını kontrol edip tekrar deneyin."
+    }
+  ],
   "Yd6MEN": [
     {
       "type": 0,
       "value": "Yürütüm istemcileri"
     }
   ],
-  "Yep32z": [
-    {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
-    },
+  "YeJh+/": [
     {
       "type": 0,
-      "value": " testnet"
+      "value": "Birinci adımı tamamlayarak, doğrulayıcı hesabınızdan para çekmeyi etkinleştireceksiniz. Bu, fazla bakiye ödemelerinin (kısmi para çekme) işlenmesini otomatik olarak tetikler, ancak bu otomatik olarak geri kalan paranızın kilidini açmaz veya ağdan çıkış sürecini başlatmaz."
+    }
+  ],
+  "Yg8vug": [
+    {
+      "type": 0,
+      "value": "Para çekme kimlik bilgilerinizi bir yürütüm para çekme adresiyle güncellediğinizden emin olun"
     }
   ],
   "Yganfl": [
@@ -3673,6 +4705,12 @@
     {
       "type": 0,
       "value": "Para çekme anahtarınızı kaybederseniz, doğrulayıcınızın bulundurduğu paraya erişmenizin bir yolu yoktur."
+    }
+  ],
+  "Yo9B64": [
+    {
+      "type": 0,
+      "value": "yürütüm katmanı (Eth1) adresi"
     }
   ],
   "YqsgWz": [
@@ -3729,10 +4767,10 @@
       "value": " olduğu sürece doğrulayıcınızın net kârlı olmasını bekleriz."
     }
   ],
-  "ZBtnGs": [
+  "ZDI2t3": [
     {
       "type": 0,
-      "value": "Kontrol listesini inceledim."
+      "value": "Sağlıklı bir ağda çevrimdışı olmak iptale neden olmaz; ancak küçük hareketsizlik cezaları verilebilir."
     }
   ],
   "ZK6NmY": [
@@ -3759,12 +4797,6 @@
       "value": "Neden bir bekleme var?"
     }
   ],
-  "ZdT9Bs": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcınız ayrıca blok teklif ederken yanmamış gaz ücretleri alacaktır. Doğrulayıcılar, blok önermek için protokol tarafından rastgele seçilir ve her 12 saniyelik dilim için yalnızca bir doğrulayıcı bir blok önerebilir. Her gün 7.200 yuva vardır, bu nedenle her doğrulayıcının bir blok önermek için günde 7.200 şansı vardır. 360.000 doğrulayıcı varsa her doğrulayıcı her 50 günde ortalama bir blok teklifi alacaktır."
-    }
-  ],
   "ZsXdlw": [
     {
       "type": 0,
@@ -3777,16 +4809,48 @@
       "value": "Bölüm 1 - Başlamadan önce"
     }
   ],
+  "ZtpRuA": [
+    {
+      "type": 0,
+      "value": "Virtualenv için kurulum ve ayarlar:"
+    }
+  ],
   "ZzTcj5": [
     {
       "type": 0,
       "value": "Python3'ü indirin ve kurulum talimatlarını izleyin."
     }
   ],
+  "a+Xw/D": [
+    {
+      "type": 0,
+      "value": "Kalan 32 ETH kilitli ve hisselenmiş durumda kaldığı için bunlara “kısmi para çekme” veya “ödül ödemeleri” de denir."
+    }
+  ],
   "a+xjjV": [
     {
       "type": 0,
       "value": "Prysm ile doğrulayıcı olun"
+    }
+  ],
+  "a/140i": [
+    {
+      "type": 0,
+      "value": "Sıradan çık; aktivasyon sırasından çık"
+    }
+  ],
+  "a9ats7": [
+    {
+      "type": 0,
+      "value": "Yeni bir doğrulayıcıyı etkinleştirmek için para yatırmaya hazırlanıyorsanız, ilk para yatırma işleminizle birlikte bir para çekme adresi sağlayabilirsiniz (ve sağlamalısınız). Bu, anahtar oluşturma sırasında yapılır ve ardından 32 ETH para yatırma işleminizle birlikte gönderilen "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " dosyanıza dahil edilir."
     }
   ],
   "aDomwX": [
@@ -3799,6 +4863,18 @@
     {
       "type": 0,
       "value": "2. Hazırlık düğümleri"
+    }
+  ],
+  "aEpxVo": [
+    {
+      "type": 0,
+      "value": "Etkin bakiyesi veya toplam bakiyesi 32'den az olan aktif hesaplar atlanacak"
+    }
+  ],
+  "aR50Oc": [
+    {
+      "type": 0,
+      "value": "Hisseleme yapmaktan çıkmak ve kalan bakiyenizin tamamını çekmek için iki şey yapmalısınız:"
     }
   ],
   "aS6dBe": [
@@ -3845,16 +4921,22 @@
       "value": " ETH'den fazla stake'e sahip olmanın hiçbir avantajı yoktur."
     }
   ],
-  "b4csjU": [
+  "b5LQY1": [
     {
       "type": 0,
-      "value": "Ancak, öngörülebilir gelecekte, çıktıktan sonra geri dönüşün olmayacağını unutmayın."
+      "value": "\"Para çekme\" ve \"BLS'den yürütüme\" sıralarının birbirinden bağımsız olduğunu unutmayın. Her biri blok bazında sınırlıdır."
     }
   ],
   "b8APBK": [
     {
       "type": 0,
       "value": "İstemci çeşitliliği hakkında daha fazla bilgi"
+    }
+  ],
+  "bMMVVN": [
+    {
+      "type": 0,
+      "value": "Şu anda doğrulayıcınızı yeniden etkinleştirmenizin bir yolu yoktur ve Shanghai/Capella yükseltmesi ile para çekme işlemleri etkinleştirilene kadar paranızı transfer edemez veya çekemezsiniz. Bu, paranıza en azından o zamana kadar erişilemeyeceği anlamına gelir."
     }
   ],
   "bNFkSo": [
@@ -3887,6 +4969,12 @@
       "value": "Düğümünüzde bakım çalıştırana kadar sürücünüzde yeterli alan sağladığınızdan emin olun."
     }
   ],
+  "bat2FM": [
+    {
+      "type": 0,
+      "value": "sonra"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -3907,16 +4995,34 @@
       "value": ", istemci yazılımının gerektiği gibi çalıştığından emin olan ve gerektiğinde donanımın bakımını yapan kişidir."
     }
   ],
+  "bembWf": [
+    {
+      "type": 0,
+      "value": "Para çekme etkinleştirilmedi"
+    }
+  ],
   "bgyJfz": [
     {
       "type": 0,
       "value": "Hangi istemcileri çalıştırmam gerekiyor?"
     }
   ],
+  "bhFma7": [
+    {
+      "type": 0,
+      "value": "Para çekme hakkında daha fazlası"
+    }
+  ],
   "bnuvhg": [
     {
       "type": 0,
       "value": "Lighthouse, Rust'ta oluşturulmuştur ve Apache 2.0 Lisansı altında sunulmaktadır."
+    }
+  ],
+  "bugMfW": [
+    {
+      "type": 0,
+      "value": "Şayet öyle değilse bir sonraki soruya geçin"
     }
   ],
   "bxU6sX": [
@@ -3929,6 +5035,20 @@
     {
       "type": 0,
       "value": "Doğrulayıcı istemci nedir?"
+    }
+  ],
+  "cE71F9": [
+    {
+      "type": 0,
+      "value": "[Örnek: "
+    },
+    {
+      "type": 1,
+      "value": "fork"
+    },
+    {
+      "type": 0,
+      "value": "]"
     }
   ],
   "cHUoV9": [
@@ -3973,6 +5093,18 @@
       "value": "Çevrimiçi"
     }
   ],
+  "cdkI09": [
+    {
+      "type": 0,
+      "value": "Her doğrulayıcı, para çekme işlemleri için nasıl değerlendirilir?"
+    }
+  ],
+  "chsS1X": [
+    {
+      "type": 0,
+      "value": "Öyle değilse, durun. Para çekme işlemi gerçekleştirilmez ve hesap atlanır"
+    }
+  ],
   "chw27s": [
     {
       "type": 0,
@@ -4001,12 +5133,6 @@
     {
       "type": 0,
       "value": "Para çekme belgeleri nelerdir?"
-    }
-  ],
-  "cyNFM3": [
-    {
-      "type": 0,
-      "value": "Birleştirmeden sonra planlanan Şanghay yükseltmesine kadar depozitonuzu çekmek mümkün olmayacaktır."
     }
   ],
   "cyR7Kh": [
@@ -4053,6 +5179,12 @@
     {
       "type": 0,
       "value": "Prysm, kullanılabilirlik, güvenlik ve güvenilirliğe odaklanan, Ethereum protokolünün bir Go mutabakat istemci uygulamasıdır."
+    }
+  ],
+  "dLE9FH": [
+    {
+      "type": 0,
+      "value": "Öyle değilse, para çekme işlemi gerçekleştirilmez ve hesap atlanır"
     }
   ],
   "dM/KIM": [
@@ -4125,6 +5257,18 @@
       "value": "code3"
     }
   ],
+  "e4mdEQ": [
+    {
+      "type": 0,
+      "value": "Bu adresle ilgili kontrol elinizde olmalıdır, zira bu adres değiştirilemez."
+    }
+  ],
+  "eD1NDX": [
+    {
+      "type": 0,
+      "value": "2023'ün birinci ve ikinci çeyrekleri için planlanan Şangay/Capella yükseltmesine kadar paranızı çekmeniz mümkün olmayacaktır."
+    }
+  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -4143,6 +5287,42 @@
       "value": "Kimin stake ettiğini, kimin onayladığını, ne kadar stake edildiğini ve fonları kimin çekebileceğini belirtir."
     }
   ],
+  "eP2Czm": [
+    {
+      "type": 0,
+      "value": "Shanghai/Capella yükseltmesine kadar payımı "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " çekemeyeceğimi ve doğrulayıcılar arasında "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " transfer yapamayacağımı anlıyorum. Çıkış yaparsam, o zamana kadar tekrar katılamayacağımı anlıyorum. Hisseleme bir taahhüttür."
+    }
+  ],
+  "eTenzU": [
+    {
+      "type": 0,
+      "value": "aktivasyon sırası"
+    }
+  ],
   "eX072N": [
     {
       "type": 0,
@@ -4153,6 +5333,12 @@
     {
       "type": 0,
       "value": "Düğümünüzün güvenliğini ve verimliliğini en üst seviyeye çıkarmak için, istemcilerinizi çalıştırma amaçlı özel donanım kullanın. Bu, kötü amaçlı yazılımlara maruz kalma riskini azaltır ve bilgi işlem kaynakları için rekabeti en aza indirerek düğümünüzün ağ yükünü ve doğrulayıcı sorumluluklarını her zaman yönetmesini sağlar."
+    }
+  ],
+  "eatd1u": [
+    {
+      "type": 0,
+      "value": "Çalıştırmak istediğiniz her doğrulayıcı için bir imzalama anahtarı oluşturmanıza yardımcı olacağız. Para yatırma verilerinizi oluştururken, para çekme adresini kalıcı olarak ayarlayacak olan doğrulayıcınız için bir para çekme adresi sağlayabilirsiniz."
     }
   ],
   "elCkOU": [
@@ -4261,10 +5447,34 @@
       "value": "Kurulum sırasında"
     }
   ],
+  "fRCqob": [
+    {
+      "type": 0,
+      "value": "Tamamen çekilmiş ve bakiyesi sıfır olan hesaplar atlanacaktır"
+    }
+  ],
+  "fSi2R/": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı operatörler için hisselemeli para çekme işlemlerine ilişkin bilgiler."
+    }
+  ],
+  "fU1Pp5": [
+    {
+      "type": 0,
+      "value": "Ödül ödemelerini otomatik olarak etkinleştirmek ve ayrıca Shanghai/Capella yükseltmesinden sonra herhangi bir zamanda fonlarınızdan tamamen çıkma olanağı sağlamak için ilk para yatırma işleminizde bir para çekme adresi sağlamayı seçebilirsiniz. Bu adres normal bir Ethereum adresine olmalıdır; ayrıca bu adres yeni doğrulayıcı hesaplarınızdan paraların gönderilebileceği tek adres olacaktır."
+    }
+  ],
   "fZwn+P": [
     {
       "type": 0,
       "value": "İstemci kurulumundan sonra, stake depozitonuzu göndermeden önce tamamen senkronize olduğunuzdan emin olun. Bu, birkaç gün sürebilir."
+    }
+  ],
+  "fa8Quz": [
+    {
+      "type": 0,
+      "value": "Ancak, 2023'ün birinci ve ikinci çeyrekleri için planlanan Şangay/Capella yükseltmesine kadar, bir kez çıktıktan sonra geri dönüşün olmadığını unutmayın."
     }
   ],
   "fbiteI": [
@@ -4291,6 +5501,12 @@
       "value": "Yürütme istemcinizi senkronize etmek en kötü durumda birkaç gün sürer."
     }
   ],
+  "fzrOtJ": [
+    {
+      "type": 0,
+      "value": "Fikir birliği katmanı yuvası: 12 saniye (bunun değiştirilmesi planlanmıyor)"
+    }
+  ],
   "g/DxI7": [
     {
       "type": 0,
@@ -4315,10 +5531,22 @@
       "value": "Virtualenv hakkında daha fazlası"
     }
   ],
-  "gIauNz": [
+  "g8tzOu": [
     {
       "type": 0,
-      "value": "Doğrulayıcı başına bir anahtar deponuz olduğunu görmelisiniz. Bu anahtar deposu, şifrenizle şifrelenmiş imza anahtarınızı içerir. Para çekmek istediğinizde para çekme anahtarınızı oluşturmak için anımsatıcınızı kullanabilirsiniz."
+      "value": "Aşağıdaki CLI'yi kopyala/yapıştır komutuna eklemek için seçtiğiniz adresi buraya yapıştırın:"
+    }
+  ],
+  "gFj3By": [
+    {
+      "type": 0,
+      "value": "yüksek değişkenlik"
+    }
+  ],
+  "gHJegi": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcıların, çıkış yapılana kadar doğrulama görevlerini tamamlamaları gerekir"
     }
   ],
   "gN9D/h": [
@@ -4345,6 +5573,12 @@
     {
       "type": 0,
       "value": "Gizli bilgiler klasörünüzdeki yardımlı parolayı kullanır."
+    }
+  ],
+  "gWC0Rt": [
+    {
+      "type": 0,
+      "value": "Bu süreç adeta bir saat ibresi gibi tek yönde ilerler ve son doğrulayıcıya ulaşıldığında tarama baştan tekrar başlar. Yol boyunca her doğrulayıcıda, hesap potansiyel para çekme işlemleri için değerlendirilir."
     }
   ],
   "gfLdAQ": [
@@ -4431,6 +5665,12 @@
       "value": "saat"
     }
   ],
+  "gzXQDW": [
+    {
+      "type": 0,
+      "value": "Para çekilebilen dönem"
+    }
+  ],
   "h/n5+N": [
     {
       "type": 0,
@@ -4447,6 +5687,12 @@
     {
       "type": 0,
       "value": "Aşırı karmaşık kurulumlardan kaçının ve alışverişlerin farkında olun. Kısa süreler için çevrimdışı olduğunuzda küçük hareketsizlik cezaları alabilirsiniz, ancak yaklaşık aynı süre boyunca tekrar çevrimiçi olduktan sonra bu cezalar kolaylıkla tazmin edilebilir. Karmaşık güç yedeklemeleri kurulumunuzun maliyetini artırabilir ve kullanılmayan yedek doğrulayıcılar, \"kesilme\" olarak bilinen daha ciddi bir cezaya yol açabilir."
+    }
+  ],
+  "hCwX6+": [
+    {
+      "type": 0,
+      "value": "BLS'den Yürütüm Değişikliğine (BTEC) sırası"
     }
   ],
   "hFzE1M": [
@@ -4537,12 +5783,6 @@
       "value": "Doğrulayıcımı çevrimiçi ve güncel tutmanın önemli olduğunu anlıyorum."
     }
   ],
-  "i7alIW": [
-    {
-      "type": 0,
-      "value": "Bu, Birleşim esnasında bir gereklilik haline geldi; bu yüzden hisseleme yapmadan önce her ikisini de çalıştırdığınızdan emin olun."
-    }
-  ],
   "iCpuph": [
     {
       "type": 0,
@@ -4553,6 +5793,18 @@
     {
       "type": 0,
       "value": "Para yatırma sözleşmesini, bir Ethereum hesabından bir hisse ispatı doğrulayıcı hesabına para transferi olarak düşünebilirsiniz."
+    }
+  ],
+  "iJXdUH": [
+    {
+      "type": 0,
+      "value": "belgeler"
+    }
+  ],
+  "iK1COM": [
+    {
+      "type": 0,
+      "value": "Güncellenmiş para çekme kimlik bilgileri olmayan hesaplar atlanacaktır"
     }
   ],
   "iMvXLd": [
@@ -4581,12 +5833,6 @@
     {
       "type": 0,
       "value": " ETH, her blokun boyutunu imzalarla şişirerek merkezsizleşmesinin engellenmesi ile mümkün olduğunca çok kişinin hisseleme yapmasını sağlamak arasında bir denge unsuru olarak seçildi."
-    }
-  ],
-  "iPRnRG": [
-    {
-      "type": 0,
-      "value": "Transferler şimdilik devre dışı bırakıldığında, kendi isteğinizle çıkıp daha sonra yeniden başlayamazsınız. Bu, uzun süre içinde olmanız gerektiği anlamına gelir."
     }
   ],
   "iX90gu": [
@@ -4629,10 +5875,22 @@
       "value": "Anahtar depolarımı doğrulayıcı istemcime aktardım."
     }
   ],
+  "iouULJ": [
+    {
+      "type": 0,
+      "value": "Boş yuva sayısı (kaçırılan blok fırsatları, değişken, genellikle minimum)"
+    }
+  ],
   "iqJ3LM": [
     {
       "type": 0,
       "value": "PegaSys Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş Java tabanlı bir Ethereum mutabakat istemcisidir."
+    }
+  ],
+  "irh2nI": [
+    {
+      "type": 0,
+      "value": "Bu nedenle, anahtarlarınızı başka bir yedek görevi gören anımsatıcılardan oluşturmak iyi bir fikirdir. Bu, bu sitenin katılım süreciyle katılan doğrulayıcılar için varsayılan değerdir."
     }
   ],
   "isGKnz": [
@@ -4655,10 +5913,22 @@
       "value": " tutarın tamamını gönder"
     }
   ],
+  "j2f6y2": [
+    {
+      "type": 0,
+      "value": "Bu doğrulayıcılar için bir para çekme adresi belirlenmedi. Hisseleme yapılmış para ve ödüller, para çekme kimlik bilgileri sağlanana kadar kilitli kalacaktır."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
       "value": "Daha önce Artemis olarak bilinen Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş bir mutabakat istemcisidir. PegaSys, kurumsal kullanıma hazır istemciler ve çekirdek Ethereum platformuyla etkileşim için araçlar oluşturmaya yönelik olan ConsenSys'un bir koludur."
+    }
+  ],
+  "jGVfQG": [
+    {
+      "type": 0,
+      "value": "Dönem başına dört (4) doğrulayıcı çıkışına ve ayrıca 327.680 içindeki her 65.536 toplam aktif doğrulayıcı için bir (1) çıkışa izin verilir. Şubat 2023 itibarıyla bu sınır yedi (7) olmuştur ve doğrulayıcı sayısı 524.288'e ulaştığında sekize (8) çıkacaktır."
     }
   ],
   "jXer8/": [
@@ -4703,12 +5973,6 @@
       "value": "Geth çalıştırma belgeleri"
     }
   ],
-  "jm79h1": [
-    {
-      "type": 0,
-      "value": "Uyarı: Anahtarları aynı anda birden fazla (yedek) doğrulayıcıda saklamayın"
-    }
-  ],
   "jp9OG2": [
     {
       "type": 1,
@@ -4717,6 +5981,20 @@
     {
       "type": 0,
       "value": " istemcisini seçin"
+    }
+  ],
+  "jrK21r": [
+    {
+      "type": 0,
+      "value": "İkili dosyaları "
+    },
+    {
+      "type": 1,
+      "value": "pr"
+    },
+    {
+      "type": 0,
+      "value": " içinde bulabilirsiniz"
     }
   ],
   "jse8rl": [
@@ -4737,6 +6015,12 @@
       "value": "Nimbus belgesi"
     }
   ],
+  "k/4DOL": [
+    {
+      "type": 0,
+      "value": "Tam para çekme"
+    }
+  ],
   "k43c+l": [
     {
       "type": 0,
@@ -4747,6 +6031,22 @@
     {
       "type": 0,
       "value": "Bu, yürütme katmanı (mevcut Ana Ağ) ile yeni fikir birliği katmanının (İşaret Zinciri) günümüzün tek Ethereum zincirini oluşturmak için birleştirilmesini simgeledi."
+    }
+  ],
+  "k67L48": [
+    {
+      "type": 0,
+      "value": "Bağımlılıkları yükleme:"
+    }
+  ],
+  "k8bkck": [
+    {
+      "type": 1,
+      "value": "eip4895"
+    },
+    {
+      "type": 0,
+      "value": " adlı EIP-4895, hisseleme yapanlar için tüm bu süreci basitleştiren bir tasarım uygular."
     }
   ],
   "kFS5Sd": [
@@ -4765,6 +6065,26 @@
     {
       "type": 0,
       "value": "URL, diğer web sitelerinde gördüklerinizle eşleşiyor mu?"
+    }
+  ],
+  "kRQqpE": [
+    {
+      "type": 0,
+      "value": "Bitirme zamanı"
+    }
+  ],
+  "kSt9db": [
+    {
+      "type": 0,
+      "value": "Şanghay/Capella yükseltmesinden itibaren "
+    },
+    {
+      "type": 1,
+      "value": "eip"
+    },
+    {
+      "type": 0,
+      "value": "'nin eklenmesiyle İşaret Zincirinde para çekme işlemleri etkinleştirildi. Bu Ethereum İyileştirme Önerisi, ödüllerin otomatik olarak yürütüm katmanına çekilmesini sağlar ve aynı zamanda çıkış yapan doğrulayıcıların bakiyelerinin tamamının kilidini açmaları için bir olanak sağlar - gas gerektirmez."
     }
   ],
   "kTt/ND": [
@@ -4833,12 +6153,6 @@
       "value": "Çıkıldı"
     }
   ],
-  "kzGlnG": [
-    {
-      "type": 0,
-      "value": "Ödüller ve cezalar, yaklaşık olarak her altı buçuk dakikada bir verilir; bu süre genel olarak \"dönem\" olarak bilinir."
-    }
-  ],
   "l/uCcX": [
     {
       "type": 0,
@@ -4865,6 +6179,12 @@
       "value": " adımı doğru para yatırma sözleşmesine gönderdiğimi nasıl kontrol edeceğimi biliyorum ve bunu yapacağım."
     }
   ],
+  "l4sDVJ": [
+    {
+      "type": 0,
+      "value": "sıradan çık"
+    }
+  ],
   "l5XCJW": [
     {
       "type": 0,
@@ -4881,6 +6201,20 @@
     {
       "type": 0,
       "value": "İlk olarak, depo dizini altında bir venv virtualenv oluşturun:"
+    }
+  ],
+  "l926sJ": [
+    {
+      "type": 0,
+      "value": "Şayet öyleyse "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " işlendi"
     }
   ],
   "lD66ab": [
@@ -4993,28 +6327,6 @@
       "value": "Launchpad belgelerinden içe aktarma"
     }
   ],
-  "ljWKM1": [
-    {
-      "type": 0,
-      "value": "BLS'ye para çekme: deposit-cli, varsayılan olarak anımsatıcılar aracılığıyla "
-    },
-    {
-      "type": 1,
-      "value": "eip2334"
-    },
-    {
-      "type": 0,
-      "value": " formatında alınan "
-    },
-    {
-      "type": 1,
-      "value": "boldWithdrawalKey"
-    },
-    {
-      "type": 0,
-      "value": " ile para çekme bilgilerini oluşturur."
-    }
-  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -5045,10 +6357,30 @@
       "value": "Birleşim aracılığıyla hisse ispatına başarılı bir geçişten bu yana Ethereum, hisse ispatı doğrulayıcıları tarafından tam olarak güvence altına alınmıştır. Siz de bir doğrulayıcı çalıştırarak, Ethereum ağının güvenliğini sağlamaya yardımcı olabilirsiniz."
     }
   ],
+  "mROPz+": [
+    {
+      "type": 0,
+      "value": "Tüm doğrulayıcı ödüllerinin ve para çekme işlemlerinin yatırılmasını istediğim yere para yatırmadan önce, "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " dosyamı oluştururken bir Ethereum adresi verdim."
+    }
+  ],
   "mUZnem": [
     {
       "type": 0,
       "value": "Gerçek ETH'yi riske atmadan önce, rahat olmanız için tüm süreci bir test ağında gözden geçirmenizi önemle tavsiye ederiz."
+    }
+  ],
+  "mXSzq5": [
+    {
+      "type": 0,
+      "value": "1. Seçenek: İkili dosyalar"
     }
   ],
   "mZOXtM": [
@@ -5069,6 +6401,18 @@
     {
       "type": 0,
       "value": ", bir denge, ortak anahtar ve diğer özellikler ile temsil edilen İşaret Zincirinde yaşayan ve Ethereum ağının konsensusuna katılan sanal bir varlıktır."
+    }
+  ],
+  "mcyp2f": [
+    {
+      "type": 0,
+      "value": "Ödemelerin sıklığı hakkında daha fazla bilgi aşağıdadır."
+    }
+  ],
+  "mdmA4f": [
+    {
+      "type": 0,
+      "value": "Para çekme işlemlerinin sayısı"
     }
   ],
   "mhyltV": [
@@ -5093,6 +6437,30 @@
     {
       "type": 0,
       "value": "Riskler ve onaylar:"
+    }
+  ],
+  "muV9Fg": [
+    {
+      "type": 0,
+      "value": "Yeni doğrulayıcılar (henüz para yatırılmayan)"
+    }
+  ],
+  "n2Dn3F": [
+    {
+      "type": 0,
+      "value": "Para çekme sırası"
+    }
+  ],
+  "n4o1vR": [
+    {
+      "type": 0,
+      "value": "Hisselemeden nasıl çıkılır (tam para çekmeler)"
+    }
+  ],
+  "n5PQND": [
+    {
+      "type": 0,
+      "value": "Dönemden çık"
     }
   ],
   "nBhisA": [
@@ -5131,6 +6499,12 @@
     {
       "type": 0,
       "value": ", geçerli doğrulayıcı bakiyeme dahil edilmez ve onu geri çekemem."
+    }
+  ],
+  "naHAvS": [
+    {
+      "type": 0,
+      "value": "Para çekmeler etkinleştiriliyor"
     }
   ],
   "ndhFef": [
@@ -5173,6 +6547,12 @@
       "value": " testnet için Staking Launchpad'i"
     }
   ],
+  "nyOMKZ": [
+    {
+      "type": 0,
+      "value": "Parametreleri kullanarak gerçekleştir"
+    }
+  ],
   "nz27+c": [
     {
       "type": 0,
@@ -5201,10 +6581,22 @@
       "value": "Başlamadan önce"
     }
   ],
+  "o9rUg+": [
+    {
+      "type": 0,
+      "value": "Para çekme işlemleri etkinleştirildi"
+    }
+  ],
   "oF4os+": [
     {
       "type": 0,
       "value": "Şu anda Prysm, ağın 33'ünden fazlası tarafından kullanılmaktadır."
+    }
+  ],
+  "oF6xvJ": [
+    {
+      "type": 0,
+      "value": "EthStaker Bilgi Tabanı"
     }
   ],
   "oLxfO1": [
@@ -5315,6 +6707,12 @@
       "value": " kullanın."
     }
   ],
+  "p+kDTB": [
+    {
+      "type": 0,
+      "value": "Ethereum kullanıcıları, manuel olarak yürütülen işlemlere alışkındır - para transferi yapmak istiyorsanız, bir işlem imzalamanız ve gazı ödemeniz gerekir."
+    }
+  ],
   "p0b6zX": [
     {
       "type": 0,
@@ -5353,16 +6751,44 @@
       "value": "Masaüstü ortamınızdan çift sol tıklayarak uygulamayı çalıştırın."
     }
   ],
+  "pQxML4": [
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " dosyası oluştur"
+    }
+  ],
+  "pWuGLy": [
+    {
+      "type": 0,
+      "value": "Bir doğrulayıcının bir sonraki bloğu önermesi planlandığında, uygun para çekme işlemlerini arayan doğrulayıcı hesaplarında bir tarama gerçekleştirir. Tarama sırasında, doğrulayıcı maksimum 16.384 hesabı kontrol ederek bir sonraki blokta işlenmek üzere 16 kullanılabilir para çekme işlemi bulmaya çalışır."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
       "value": "Besu belgeleri, istemcinin nasıl indirilip kurulacağını açıklar."
     }
   ],
+  "pb2jYe": [
+    {
+      "type": 0,
+      "value": "Bu araçlar, imzalamak için gerekli anahtarları ve mesajı oluşturmanıza yardımcı olacaktır. İmzalı mesajlar, Shanghai/Capella yükseltmesiyle bloklara dahil edilmek üzere yayınlanabilir."
+    }
+  ],
   "pfJX2D": [
     {
       "type": 0,
       "value": "Kimlik avı hakkında daha fazlası"
+    }
+  ],
+  "plXBe0": [
+    {
+      "type": 0,
+      "value": "Alternatif düğüm işleme:"
     }
   ],
   "pnxB8A": [
@@ -5399,36 +6825,46 @@
       "value": "Para yatırma özeti"
     }
   ],
-  "q/ZayM": [
-    {
-      "type": 0,
-      "value": "Para çekme özelliklerinin yaklaşmakta olan Şanghay yükseltmesine dahil edilmesi öneriliyor. Bu işlev eklendikten sonra bakiyeniz, yaklaşık bir günlük gecikmeyle, para çekme anahtarınız kullanılarak çekilebilir."
-    }
-  ],
-  "q2XW/k": [
-    {
-      "type": 0,
-      "value": "Para çekme anahtarınız çalınırsa, hırsız, doğrulayıcınızın bakiyesini ancak doğrulayıcı çıktıktan sonra aktarabilir."
-    }
-  ],
   "qB6aU6": [
     {
       "type": 0,
       "value": "\"Eth2\"ye ne oldu?"
     }
   ],
-  "qDvaNm": [
+  "qBorVY": [
     {
       "type": 0,
-      "value": "Anahtarların benim sorumluluğumda olduğunu ve anımsatıcımın (kaynak) paramı çekmenin "
+      "value": "Dönemden ve para çekilebilir dönemden çık"
+    }
+  ],
+  "qIDtPw": [
+    {
+      "type": 0,
+      "value": "İşaret Zinciri doğrulayıcılarınızın "
     },
     {
       "type": 1,
-      "value": "onlyWay"
+      "value": "exeuctionAddress"
     },
     {
       "type": 0,
-      "value": " yolu olacağını anlıyorum."
+      "value": " hesabınıza otomatik olarak bakiye çekmesini sağlamak için, "
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": " imzalı JSON dosyasını oluşturmak için "
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": " aracını kullanabilirsiniz. Bu mesaj, eski BLS para çekme kimlik bilgilerinizi, yürütüm adresi biçimindeki yeni para çekme kimlik bilgileriyle değiştirme talebini içerir."
     }
   ],
   "qK4+NQ": [
@@ -5467,10 +6903,22 @@
       "value": "cüzdanınızı yeniden bağlayın"
     }
   ],
+  "qkEXNd": [
+    {
+      "type": 0,
+      "value": "Hisseleme Para Yatırma CLI"
+    }
+  ],
   "qkhah0": [
     {
       "type": 0,
       "value": "Anahtar dosyaları kaydedin ve doğrulayıcı dosyayı hazır hâle getirin"
+    }
+  ],
+  "qntIRb": [
+    {
+      "type": 0,
+      "value": "Bu verilmediyse, para çekme adresini bildiren bir mesajı imzalamak için para çekme anahtarlarına ihtiyaç duyulacaktır. Bu, anahtarları ayarlarken kullanılan anımsatıcıya erişim gerektirir."
     }
   ],
   "qwh6gM": [
@@ -5483,6 +6931,20 @@
     {
       "type": 0,
       "value": "JWT"
+    }
+  ],
+  "r/G+qN": [
+    {
+      "type": 0,
+      "value": "Artık hisseleme olarak kabul edilmeyen, doğrulama sorumluluklarını tamamen terk etmiş, devre dışı bırakılmış doğrulayıcılar için bir "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " işlenir. Bu nedenle bir doğrulayıcının bakiyesini tamamen çekebilmesi için öncelikle çıkış sürecini tamamlaması gerekir."
     }
   ],
   "r2BH1M": [
@@ -5533,6 +6995,12 @@
     {
       "type": 0,
       "value": "Staker kontrol listesini tamamlayın"
+    }
+  ],
+  "rW+ivM": [
+    {
+      "type": 0,
+      "value": "Lodestar hakkında daha fazlası"
     }
   ],
   "raRw6Z": [
@@ -5597,20 +7065,6 @@
       "value": "Launchpad özeti"
     }
   ],
-  "rxttyC": [
-    {
-      "type": 0,
-      "value": "Anımsatıcınız, imzalama anahtarlarınızın yedeğidir ve zamanı geldiğinde bu "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " kartınızı geri çekmenin TEK yolu olacaktır ve anımsatıcınızı kaybederseniz kurtarmanıza kimse yardımcı olamaz."
-    }
-  ],
   "s6gImC": [
     {
       "type": 0,
@@ -5623,10 +7077,22 @@
       "value": "Hız ve güvenliğe yoğun bir şekilde odaklanan bir mutabakat istemcisi. Ethereum Vakfı, Consensys ve özel şahıslarla birlikte Lighthouse'u finanse eden bir bilgi güvenliği ve yazılım mühendisliği firması olan Sigma Prime tarafından kurulmuştur."
     }
   ],
+  "sToVAS": [
+    {
+      "type": 0,
+      "value": "Blok üreticisi daha sonra sıradaki doğrulayıcıyı kontrol eder ve bir kez daha para çekme işleminin işlenmesi gerekip gerekmediğini belirler. Bu süreç, hangisi önce gelirse, 16 uygun para çekme işlemi bulunana kadar veya 16.384 doğrulayıcı kontrol edilene kadar tekrarlanır. Bu noktada, para çekme sırası bir sonraki bloğun sonuna dahil edilmek üzere yürütüm katmanına gönderilir."
+    }
+  ],
   "sXV95+": [
     {
       "type": 0,
       "value": "CPU ve RAM"
+    }
+  ],
+  "sZK38z": [
+    {
+      "type": 0,
+      "value": "Hisseleme yapanların manuel olarak para çekme talebinde bulunmaları için kullanılan yeni bir işlem türü yerine, hesaplar birkaç günde bir uygun fazla bakiye için otomatik olarak kontrol edilir. Tüm doğrulayıcılar sonsuz bir döngüde kontrol edilir ve mevcut ödüller veya çıkarılan paralar otomatik olarak sağlanan bir para çekme hesabına \"aktarılır\"."
     }
   ],
   "sj/Zef": [
@@ -5639,6 +7105,20 @@
     {
       "type": 0,
       "value": "Mutabakat Katmanı İşaret Düğümü (BN)"
+    }
+  ],
+  "smTQJU": [
+    {
+      "type": 0,
+      "value": "Bu doğrulayıcılar için para çekme adresi "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " olarak ayarlanacaktır. Para yatırmadan önce bu adresi kontrol ettiğinizden %100 emin olun çünkü bu değiştirilemez."
     }
   ],
   "soCLV+": [
@@ -5683,10 +7163,10 @@
       "value": "Büyük yeniden isimlendirme hakkında daha fazla bilgi edinin"
     }
   ],
-  "taENNR": [
+  "tWoq1e": [
     {
       "type": 0,
-      "value": "Mevcut durumda doğrulayıcınızı yeniden etkinleştirmenin bir yolu yoktur ve para çekme özelliği etkinleştirilene kadar paranızı aktaramaz veya çekemezsiniz. Bunun, Şanghay yükseltmesi olarak bilinen bir sonraki ağ yükseltmesine dahil edilmesi önerilmektedir. Bu, paranıza en azından o zamana kadar erişilemeyeceği anlamına gelir."
+      "value": "Bir blokta kontrol edilebilecek maksimum hesap sayısı. 16 para çekme işlemi bulunduğunda durur. Kontrol edilen ilk 16.384 hesapta 16 uygun ödül bulunmazsa, o blok için para çekme sırası olduğu gibi gönderilir; ve bir sonraki teklif sahibi kalınan yerden devam eder."
     }
   ],
   "tbYkT4": [
@@ -5715,10 +7195,22 @@
       "value": " dosyasıyla bir işlemi yeniden göndermeyi denemeden önce en az 30 dakika bekleyin. Bu, zincir üzerindeki veri kaynağımıza, yinelenen para yatırma tutarlarını işaretlemek için zaman verecektir."
     }
   ],
+  "tjEnDp": [
+    {
+      "type": 0,
+      "value": "Her hesabı kontrol etme döngüsünün ne kadar sürdüğü şunlara bağlıdır:"
+    }
+  ],
   "tkFTZw": [
     {
       "type": 0,
       "value": "Yükledikten sonraki bakiye"
+    }
+  ],
+  "tlVvjH": [
+    {
+      "type": 0,
+      "value": "Bir Lodestar doğrulayıcısı olun"
     }
   ],
   "tsfX5f": [
@@ -5781,12 +7273,6 @@
       "value": "Para yatırdıktan sonra"
     }
   ],
-  "u4em9Z": [
-    {
-      "type": 0,
-      "value": "Birleşim'den bu yana doğrulayıcılar işlemlerin yerine getirilmesinden de sorumlu hale geldiler ve bu nedenle blok teklif ederken dahil edilen işlemlerle ilişkili yanmamış gaz ücretlerine de hak kazanacaklardır. Bu ücretler, fikir birliği katmanında değil, yürütüm katmanında hesaba katılır ve bu nedenle müşterinize verilecek geleneksel bir Ethereum adresini gerektirir."
-    }
-  ],
   "u564LK": [
     {
       "type": 0,
@@ -5799,10 +7285,38 @@
       "value": "Çalışma süresi"
     }
   ],
+  "uDMtC8": [
+    {
+      "type": 0,
+      "value": "Bir doğrulayıcıyı etkinleştirme sürecinden geçmiş olan herkesin bildiği gibi, özellikle aynı anda katılmaya çalışan çok sayıda başka kullanıcı varsa, bu süreç otomatik olarak ilerlemez. Bunun nedeni, fikir birliği katmanının yeni doğrulayıcı hesapların ağa "
+    },
+    {
+      "type": 1,
+      "value": "join"
+    },
+    {
+      "type": 0,
+      "value": " katılma hızını sınırlamak için bir "
+    },
+    {
+      "type": 1,
+      "value": "activationQueue"
+    },
+    {
+      "type": 0,
+      "value": " etkinleştirme sırası kullanmasıdır."
+    }
+  ],
   "uJzGSb": [
     {
       "type": 0,
       "value": "Kimlik avı saldırılarından nasıl kaçınacağınızı bildiğinizden emin olun. Dikkat etmeniz gereken şeylerin bir listesini hazırladık."
+    }
+  ],
+  "uMpYkE": [
+    {
+      "type": 0,
+      "value": "Anahtarlarınızı ilk kez oluştururken bir para çekme adresi sağladıysanız, para çekme anahtarının artık herhangi bir işlevi yoktur. Doğrulayıcıların paralarının aktarılabileceği tek adres bu adrestir ve ayarlandıktan sonra değiştirilemez."
     }
   ],
   "uNfxNg": [
@@ -5819,6 +7333,34 @@
     {
       "type": 0,
       "value": "Doğrulayıcı kontrol listesi"
+    }
+  ],
+  "uUkmGX": [
+    {
+      "type": 0,
+      "value": "dönemden çık"
+    }
+  ],
+  "uYF99H": [
+    {
+      "type": 0,
+      "value": "Bir doğrulayıcının oyu, sahip olduğu miktara göre ağırlıklandırılsa da, her doğrulayıcının oy ağırlığı "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " ile başlar ve en fazla "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " olur. Düşük düğüm performansı ile bunun altına düşmek mümkündür ama üzerine çıkmak mümkün değildir."
     }
   ],
   "ubKWX8": [
@@ -5953,6 +7495,28 @@
       "value": "Çince (basitleştirilmiş)"
     }
   ],
+  "vZxdbJ": [
+    {
+      "type": 0,
+      "value": "Şangay/Capella güncellemesiyle para çekme işlemleri etkinleştirildikten sonra, etkin bakiyemizi maksimize eden doğrulayıcılar ve bağlantılı bir yürütüm para çekme adresi, fazla bakiyede otomatik olarak "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " gibi herhangi bir bakiyeye sahip olacaktır."
+    }
+  ],
   "vbVsqW": [
     {
       "type": 1,
@@ -5963,10 +7527,22 @@
       "value": " 'i mümkün olan en kısa sürede tamamladığınızdan emin olun. Doğrulayıcı arkadaşlarınızla aranızda destek ve tartışma için EthStaker topluluğuna katılın."
     }
   ],
+  "vz8WK7": [
+    {
+      "type": 0,
+      "value": "Bu, yaklaşık 27,3 saat süren çıkış döneminden 256 dönem sonra gerçekleşir."
+    }
+  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Uygulamayı başlatmak için aşağıdaki komutu çalıştırın."
+    }
+  ],
+  "wDlux8": [
+    {
+      "type": 0,
+      "value": "Aktif doğrulayıcı setinden çıkarılmak için doğrulayıcınızdan gönüllü olarak çıkabilirsiniz, ancak para çekme işlemleri etkinleştirilene kadar bu fonlar kilitli kalır, çekilemez veya yeniden hisseleme yapılamaz."
     }
   ],
   "wJ1PbL": [
@@ -6009,6 +7585,28 @@
       "value": "Aşağıdaki komutları çalıştır:"
     }
   ],
+  "wpM7Y5": [
+    {
+      "type": 0,
+      "value": "Kayda değer sıralardan biri, belirli bir blok sırasında kaç tane BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") çekme adresinin bir yürütüm adresine ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") güncellenebileceğini sınırlayan bir sıradır."
+    }
+  ],
   "wqUcy/": [
     {
       "type": 0,
@@ -6019,6 +7617,12 @@
     {
       "type": 0,
       "value": "Yazım hataları var mı?"
+    }
+  ],
+  "wtwIax": [
+    {
+      "type": 0,
+      "value": "2. seçenek: Kaynak kodu + virtualenv"
     }
   ],
   "x+fF+M": [
@@ -6039,20 +7643,6 @@
       "value": "Bu adımları, Ana Ağdan önce mevcut test ağında tamamlamanızı önemle tavsiye ederiz."
     }
   ],
-  "x9xppN": [
-    {
-      "type": 0,
-      "value": "Birleşim yoluyla hisse ispatına geçişin artık tamamlanmasıyla birlikte doğrulayıcılar da işlemleri yerine getirmekten ve geçerliliklerine onay imzası vermekten sorumludur. Bu veriler, Birleşim'den bu yana popüler üçüncü taraf kaynaklardan sağlanmamaktadır. Üçüncü taraf bir sağlayıcı kullanmanız doğrulayıcınızın çevrimdışı olmasına neden olur. Veri parçalama uygulandığında, doğrulayıcılar da "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": " kapsamında kesinti riskiyle karşı karşıya kalır."
-    }
-  ],
   "xDyl3T": [
     {
       "type": 0,
@@ -6067,10 +7657,22 @@
       "value": " üzerinde güvenilir kaynakların bir listesi de vardır"
     }
   ],
+  "xGQ38+": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı çıkış sürecini tamamladı mı?"
+    }
+  ],
   "xH5GKj": [
     {
       "type": 0,
       "value": "Ben erken benimsemiş biriyim ve yazılım ve tasarım hatalarının iptalime neden olabileceğini kabul ediyorum."
+    }
+  ],
+  "xMOzv2": [
+    {
+      "type": 0,
+      "value": "Hisseleme yükümlülüklerini sonlandırmak isteyen herkes, süreci başlatmak için İşaret Zinciri'ne yayınlanan bir \"gönüllü çıkış\" mesajını imzalayabilir. Bu manuel bir adımdır."
     }
   ],
   "xP6BKs": [
@@ -6107,28 +7709,6 @@
       "value": "İşaret Zinciri"
     }
   ],
-  "xXntjc": [
-    {
-      "type": 0,
-      "value": "Lütfen "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayerName"
-    },
-    {
-      "type": 0,
-      "value": " için "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " ayarladığınızdan emin olun, aksi takdirde para yatırma geçersiz olacaktır."
-    }
-  ],
   "xZZMZ5": [
     {
       "type": 0,
@@ -6141,6 +7721,12 @@
       "value": "python3.7+ kurulumunu yapın"
     }
   ],
+  "xh7oVn": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcılarını hisselemeden çıkarmak ve ETH'lerini çekmek isteyenler, kurulumunuza denk gelen aşağıdaki kılavuza göz atmalıdır:"
+    }
+  ],
   "xm3Ivd": [
     {
       "type": 0,
@@ -6149,6 +7735,24 @@
     {
       "type": 1,
       "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "xns5Uh": [
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " biçiminde para yatırma işlemi oluşturduğunuzu ve BLS para çekme kimlik bilgilerine sahip olduğunuzu varsayalım. Değilse, şunu takip ederek oluşturabilirsiniz: "
+    },
+    {
+      "type": 1,
+      "value": "docs"
     },
     {
       "type": 0,
@@ -6169,6 +7773,18 @@
     {
       "type": 1,
       "value": "clientName"
+    }
+  ],
+  "xyfoga": [
+    {
+      "type": 0,
+      "value": "Para çekmeyi hisseleme"
+    }
+  ],
+  "xzjRos": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı anahtarları nasıl güncellenir?"
     }
   ],
   "xzmWbJ": [
@@ -6237,6 +7853,12 @@
       "value": "Nethermind, .NET Core üzerine inşa edilmiştir. Genişletin, özelleştirin - sınırınız gökyüzüdür .."
     }
   ],
+  "ylZLi4": [
+    {
+      "type": 0,
+      "value": "EIP-2334"
+    }
+  ],
   "ynB6C+": [
     {
       "type": 0,
@@ -6255,6 +7877,20 @@
       "value": "Öte yandan, çevrimdışı olduğunuz ve kötü niyetli davrandığınız için (örneğin, geçersiz veya çelişen blokları tasdik ettiğiniz için) cezalandırılabilirsiniz."
     }
   ],
+  "z26FXa": [
+    {
+      "type": 0,
+      "value": "Birleşim yoluyla hisse ispatına geçişin artık tamamlanmasıyla birlikte doğrulayıcılar da işlemleri yerine getirmekten ve geçerliliklerine onay imzası vermekten sorumludur. Bu veriler, Birleşim'den bu yana popüler üçüncü taraf kaynaklardan sağlanmamaktadır. Üçüncü taraf bir sağlayıcı kullanmanız doğrulayıcınızın çevrimdışı olmasına neden olur. Veri parçalama uygulandığında, doğrulayıcılar da "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": " kapsamında kesinti riskiyle karşı karşıya kalır."
+    }
+  ],
   "z63I56": [
     {
       "type": 0,
@@ -6269,6 +7905,12 @@
     {
       "type": 0,
       "value": " hizmetimi kurdum."
+    }
+  ],
+  "z8zpxp": [
+    {
+      "type": 0,
+      "value": "Lodestar, ChainSafe Systems tarafından sağlanan Ethereum Consensus (eski adıyla eth2) spesifikasyonunun açık kaynaklı bir TypeScript uygulamasıdır. ChainSafe'in amacı, açık müşteri uygulamalarına odaklanan işaret zinciri ve doğrulayıcı müşteri ile Ethereum hisse ispatı ekosistemini geliştirmek, iyileştirmek ve çeşitlendirmektir."
     }
   ],
   "zAVb0/": [
@@ -6287,6 +7929,20 @@
     {
       "type": 0,
       "value": "Staking ekonomisi"
+    }
+  ],
+  "zVb+z+": [
+    {
+      "type": 0,
+      "value": "Tek bir doğrulayıcı için en fazla "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " ETH yatırın. Bunlar ödüllerinize eklenmeyecek ve planlanan Shanghai/Capella yükseltmesine kadar kilitli kalacak."
     }
   ],
   "zbEBi9": [
@@ -6309,10 +7965,10 @@
       "value": "Düğüm güvenliği"
     }
   ],
-  "zkT9Jx": [
+  "znyxZv": [
     {
       "type": 0,
-      "value": "Çalıştırmak istediğiniz her doğrulayıcı için bir imzalama anahtarı oluşturmanıza yardımcı olacağız. Birleştirmeyi takip etmesi planlanan Şanghay yükseltmesine kadar para çekme işlemi olmadığı için şimdi para çekme anahtarlarınızı oluşturmayacaksınız. Paranızı çekmek mümkün olduğunda, para çekme anahtarlarınızı mnemonik anımsatıcınızdan türetebilirsiniz."
+      "value": "yaklaşık 27 saat"
     }
   ],
   "zpmjjy": [
@@ -6327,6 +7983,12 @@
     {
       "type": 0,
       "value": " kullanılarak sağlanır. Bunlar, iki istemci katmanı arasında iletişim kurmak için kullanılabilecek bir dizi JSON RPC yöntemidir."
+    }
+  ],
+  "zrb2Xo": [
+    {
+      "type": 0,
+      "value": "Topluluk çağrıları - PM repoda duyuruldu"
     }
   ]
 }

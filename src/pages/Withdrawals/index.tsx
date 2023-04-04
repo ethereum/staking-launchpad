@@ -236,7 +236,7 @@ export const Withdrawals = () => {
                 <li>
                   <strong>Staking Deposit CLI</strong> -{' '}
                   <Link inline primary to="/btec/">
-                    Launchpad walkthrough tutorial
+                    <FormattedMessage defaultMessage="Launchpad walkthrough tutorial" />
                   </Link>
                 </li>
                 <li>
@@ -246,7 +246,7 @@ export const Withdrawals = () => {
                     primary
                     to="https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md"
                   >
-                    Changing withdrawal credentials
+                    <FormattedMessage defaultMessage="Changing withdrawal credentials" />
                   </Link>
                 </li>
               </ul>
@@ -332,7 +332,9 @@ export const Withdrawals = () => {
                 any extra balance automatically withdrawn to their Ethereum address."
                 values={{
                   excessBalanceWithdrawal: (
-                    <strong>excess balance withdrawal</strong>
+                    <strong>
+                      <FormattedMessage defaultMessage="excess balance withdrawal" />
+                    </strong>
                   ),
                 }}
               />
@@ -359,7 +361,13 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="A {fullWithdrawal} is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
-                values={{ fullWithdrawal: <strong>full withdrawal</strong> }}
+                values={{
+                  fullWithdrawal: (
+                    <strong>
+                      <FormattedMessage defaultMessage="full withdrawal" />
+                    </strong>
+                  ),
+                }}
               />
             </Text>
 
@@ -403,7 +411,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://lighthouse-book.sigmaprime.io/voluntary-exit.html"
                   >
-                    Exiting a Lighthouse validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {client} validator"
+                      values={{ client: 'Lighthouse' }}
+                    />
                   </Link>
                 </li>
                 <li>
@@ -412,7 +423,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://chainsafe.github.io/lodestar/reference/cli/#validator-voluntary-exit"
                   >
-                    Exiting a Lodestar validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {client} validator"
+                      values={{ client: 'Lodestar' }}
+                    />
                   </Link>
                 </li>
                 <li>
@@ -421,7 +435,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://nimbus.guide/voluntary-exit.html"
                   >
-                    Exiting a Nimbus validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {client} validator"
+                      values={{ client: 'Nimbus' }}
+                    />
                   </Link>
                 </li>
                 <li>
@@ -430,7 +447,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://docs.prylabs.network/docs/wallet/exiting-a-validator"
                   >
-                    Exiting a Prysm validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {client} validator"
+                      values={{ client: 'Prysm' }}
+                    />
                   </Link>
                 </li>
                 <li>
@@ -439,7 +459,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://docs.teku.consensys.net/Reference/CLI/Subcommands/Voluntary-Exit"
                   >
-                    Exiting a Teku validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {client} validator"
+                      values={{ client: 'Teku' }}
+                    />
                   </Link>
                 </li>
               </ul>
@@ -455,7 +478,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://forum.dappnode.io/t/how-to-exit-an-eth2-validator/786"
                   >
-                    Exiting a DAppNode validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {software} validator"
+                      values={{ software: 'DAppNode' }}
+                    />
                   </Link>
                 </li>
                 <li>
@@ -464,7 +490,10 @@ export const Withdrawals = () => {
                     inline
                     to="https://eth-docker.net/Support/Exit/"
                   >
-                    Exiting an eth-docker validator
+                    <FormattedMessage
+                      defaultMessage="Exiting a {software} validator"
+                      values={{ software: 'eth-docker' }}
+                    />
                   </Link>
                 </li>
                 <li>
@@ -473,7 +502,11 @@ export const Withdrawals = () => {
                     inline
                     to="https://docs.rocketpool.net/guides/node/cli-intro.html#minipool-commands"
                   >
-                    Exiting a Rocket Pool minipool
+                    <FormattedMessage
+                      defaultMessage="Exiting a {software} minipool"
+                      values={{ software: 'Rocket Pool' }}
+                      description="A minipool is a Rocket Pool-specific term for a validator that shares stake with others"
+                    />
                   </Link>
                 </li>
               </ul>

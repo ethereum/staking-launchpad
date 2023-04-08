@@ -346,6 +346,9 @@
   "4+3cIr": {
     "message": "You've successfully set up a testnet validator! We recommend you complete the checklist before validating on {mainnet}"
   },
+  "40/5Sf": {
+    "message": "Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
+  },
   "47svuN": {
     "message": "Installation"
   },
@@ -724,9 +727,6 @@
   },
   "C/gb74": {
     "message": "Configure Lighthouse"
-  },
-  "C2Jn1z": {
-    "message": "Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
   },
   "C3jBPI": {
     "message": "Execution Client"

@@ -32,8 +32,7 @@ const ComponentStyles = styled.div`
     margin-bottom: 10px;
     &.key-types {
       padding-inline-start: 1em;
-      li span {
-        direction: inherit;
+      li > span {
         margin-inline-start: 0.5em;
       }
       li:nth-of-type(1) {

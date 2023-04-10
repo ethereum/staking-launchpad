@@ -2908,6 +2908,9 @@
   "u81G9+": {
     "message": "Uptime"
   },
+  "uAXXOX": {
+    "message": "This timing of this last step is variable depending on validator index, current sweep position, and number of validators."
+  },
   "uDMtC8": {
     "message": "As anyone who has already gone through the process of activating a validator knows, this process is not automatic, especially if there are a lot of other users trying to join at the same time. This is because the consensus layer uses an {activationQueue} to limit how quickly new validator accounts can {join} the network."
   },

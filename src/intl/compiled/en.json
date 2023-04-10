@@ -6039,36 +6039,6 @@
       "value": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
     }
   ],
-  "jHrZXR": [
-    {
-      "type": 0,
-      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
-    },
-    {
-      "type": 1,
-      "value": "exeuctionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", you can use the staking deposit CLI ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") tool to generate the signed BLS-to-execution-change ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -7195,6 +7165,36 @@
     {
       "type": 0,
       "value": "More on Lodestar"
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", you can use the staking deposit CLI ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") tool to generate the signed BLS-to-execution-change ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
     }
   ],
   "raRw6Z": [

@@ -2344,9 +2344,6 @@
   "jGVfQG": {
     "message": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
   },
-  "jHrZXR": {
-    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {exeuctionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed BLS-to-execution-change ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
-  },
   "jXer8/": {
     "message": "Prysm documentation"
   },
@@ -2798,6 +2795,9 @@
   },
   "rW+ivM": {
     "message": "More on Lodestar"
+  },
+  "rW219B": {
+    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {executionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed BLS-to-execution-change ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
   },
   "raRw6Z": {
     "message": "Launchpad home"

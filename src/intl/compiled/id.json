@@ -21,6 +21,18 @@
       "value": " (menangani tugas konsensus bukti taruhan, sebelumnya 'Eth2' atau 'Ethereum 2.0')."
     }
   ],
+  "+EZ9E/": [
+    {
+      "type": 0,
+      "value": "Mode interaktif"
+    }
+  ],
+  "+Gj8F4": [
+    {
+      "type": 0,
+      "value": "Anda dapat mempersiapkannya dengan menyediakan alamat penarikan saat membuat kunci dan data setoran."
+    }
+  ],
   "+L0IkF": [
     {
       "type": 0,
@@ -63,6 +75,12 @@
       "value": "Polandia"
     }
   ],
+  "+vHhHz": [
+    {
+      "type": 0,
+      "value": "Pengelolaan validator"
+    }
+  ],
   "+wJuhm": [
     {
       "type": 0,
@@ -81,10 +99,28 @@
       "value": "Anda dapat memulai semua transaksi sekaligus, atau memulainya satu per satu."
     }
   ],
+  "/4e3mN": [
+    {
+      "type": 0,
+      "value": "Setelah Penggabungan, validator juga akan bertanggung jawab untuk memroses transaksi, dan oleh karena itu berhak atas biaya gas yang tidak terbakar yang terkait dengan transaksi yang disertakan saat mengusulkan blok. Biaya ini diperhitungkan pada lapisan eksekusi, bukan lapisan konsensus, dan oleh karena itu mengharuskan alamat Ethereum tradisional diberikan kepada klien Anda."
+    }
+  ],
   "/5Hyyf": [
     {
       "type": 0,
       "value": "Bahasa Indonesia"
+    }
+  ],
+  "/JiR8D": [
+    {
+      "type": 0,
+      "value": "Pada putaran tanpa akhir, setiap akun validator terus dievaluasi atas kelayakan penarikan ETH (yang ada dua jenis, selengkapnya tentang hal ini dijelaskan di bawah). Validator diproses secara berurutan berdasarkan nomor indeks, yang awalnya dimulai dari 0, dengan setiap pengusul berikutnya melanjutkan dari nomor yang terakhir."
+    }
+  ],
+  "/OAba6": [
+    {
+      "type": 0,
+      "value": "Perhatikan bahwa antrean \"aktivasi\" dan \"keluar\" bersifat independen dan tidak saling bersaing. Masing-masing dibatasi berdasarkan jangka waktu."
     }
   ],
   "/QPc9s": [
@@ -141,6 +177,12 @@
     {
       "type": 0,
       "value": " kepada mereka, alih-alih kontrak deposit resmi. Pastikan alamat tujuan pengiriman transaksi adalah alamat yang benar."
+    }
+  ],
+  "/e+qAC": [
+    {
+      "type": 0,
+      "value": "jangka waktu yang dapat ditarik"
     }
   ],
   "/h0DGY": [
@@ -255,10 +297,28 @@
       "value": "Bagian 3 - Setelah penyetoran"
     }
   ],
+  "09ZPhN": [
+    {
+      "type": 0,
+      "value": "Kredensial penarikan:"
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
       "value": "tidak"
+    }
+  ],
+  "0GWhvr": [
+    {
+      "type": 0,
+      "value": "Output yang diharapkan"
+    }
+  ],
+  "0MIRQ5": [
+    {
+      "type": 0,
+      "value": "Apakah saldo efektif masksimal pada 32?"
     }
   ],
   "0PlVao": [
@@ -277,6 +337,12 @@
     {
       "type": 0,
       "value": "Latihan testnet"
+    }
+  ],
+  "0U17DC": [
+    {
+      "type": 0,
+      "value": "kredensial penarikan"
     }
   ],
   "0c06tl": [
@@ -311,16 +377,46 @@
       "value": "Kedua, instal paket dependensi:"
     }
   ],
+  "0mc/JV": [
+    {
+      "type": 0,
+      "value": "Pemvalidasian merupakan komitmen"
+    }
+  ],
   "0oNdmk": [
     {
       "type": 0,
       "value": "FAQ validator"
     }
   ],
+  "0sMzHb": [
+    {
+      "type": 0,
+      "value": "Seperti yang disebutkan di atas, langkah ini diselesaikan dengan menandatangani pesan yang dikenal sebagai "
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": ". Pesan diterima ke dalam blok sebagai ruang pertama setelah peningkatan Shanghai/Capella."
+    }
+  ],
   "0uqjBl": [
     {
       "type": 0,
       "value": "Dapatkan imbalan berkelanjutan karena menyediakan barang publik kepada komunitas."
+    }
+  ],
+  "0wEZ8X": [
+    {
+      "type": 0,
+      "value": "Verifikasi di "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
     }
   ],
   "122+yR": [
@@ -333,6 +429,12 @@
     {
       "type": 0,
       "value": "Saat memvalidasi di jaringan percobaan, lakukan simulasi ini untuk mempelajari selengkapnya tentang simpul Anda, dan lebih mempersiapkan diri Anda untuk Jaringan Utama:"
+    }
+  ],
+  "15B2Xk": [
+    {
+      "type": 0,
+      "value": "Penaruh harus mengatur alamat penarikan untuk membuka pembayaran imbalan dari lapisan konsensus. Ini diatur saat membuat kunci validator Anda."
     }
   ],
   "17Epwt": [
@@ -405,6 +507,12 @@
       "value": "Pastikan berkas kata sandi tidak memiliki baris baru di belakangnya."
     }
   ],
+  "1Yybuc": [
+    {
+      "type": 0,
+      "value": "dokumen argumen lengkap ada di sini"
+    }
+  ],
   "1fDfw7": [
     {
       "type": 0,
@@ -423,10 +531,22 @@
       "value": "Selengkapnya tentang ekonomi penaruhan Ethereum"
     }
   ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "penerima biaya"
+    }
+  ],
   "1pUw7Y": [
     {
       "type": 0,
       "value": "Dokumentasi tentang menjalankan Nethermind"
+    }
+  ],
+  "21EI3f": [
+    {
+      "type": 0,
+      "value": "Dokumentasi pengelolaan kunci validator Lodestar"
     }
   ],
   "22EpKq": [
@@ -441,6 +561,12 @@
     {
       "type": 0,
       "value": " yang valid"
+    }
+  ],
+  "25IJMT": [
+    {
+      "type": 0,
+      "value": "Jika alamat penarikan belum diatur, dan Anda telah kehilangan akses ke fase benih mnemonik, dana Anda masih tetap terkunci di akun validator tanpa batas waktu."
     }
   ],
   "25suT4": [
@@ -463,6 +589,20 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "2A6Wjz": [
+    {
+      "type": 0,
+      "value": "Dengan memberikan bendera ini, kredensial penarikan akan berisi awalan "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " dan alamat penarikan, yang menandakan akun Anda siap untuk penarikan."
     }
   ],
   "2AHkym": [
@@ -499,6 +639,18 @@
       "value": "clientName"
     }
   ],
+  "2RXbJd": [
+    {
+      "type": 0,
+      "value": "Faktor apa saja yang memengaruhi pembayaran?"
+    }
+  ],
+  "2XWJdH": [
+    {
+      "type": 0,
+      "value": "Jika demikian, beralih ke pertanyaan berikutnya"
+    }
+  ],
   "2a1GTh": [
     {
       "type": 0,
@@ -511,10 +663,26 @@
       "value": "Dokumen penerima biaya:"
     }
   ],
+  "2ebz/N": [
+    {
+      "type": 0,
+      "value": "penarikan kelebihan saldo"
+    }
+  ],
   "2iH8Zc": [
     {
       "type": 0,
       "value": "Dokumentasi manajemen kunci Nimbus"
+    }
+  ],
+  "2rFwzp": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": jika Anda memberikan alamat penarikan ketika membuat kunci, Anda sudah siap (ditemukan di bagian “mode lanjutan”)"
     }
   ],
   "2rflCq": [
@@ -549,10 +717,22 @@
       "value": "Untuk memroses deposit validator dari lapisan eksekusi (sebelumnya rantai 'Eth1'), Anda harus menjalankan klien eksekusi serta klien konsensus Anda (sebelumnya 'Eth2'). Anda dapat menggunakan layanan pihak ketiga seperti Infura, tetapi kami menyarankan untuk menjalankan klien Anda sendiri untuk menjaga jaringan tetap terdesentralisasi."
     }
   ],
+  "38Fedn": [
+    {
+      "type": 0,
+      "value": "Selengkapnya tentang ChainSafe"
+    }
+  ],
   "38VH2G": [
     {
       "type": 0,
       "value": "Instal alat deposit-cli"
+    }
+  ],
+  "39ZKg5": [
+    {
+      "type": 0,
+      "value": "Penarikan"
     }
   ],
   "3CRtg8": [
@@ -591,6 +771,12 @@
     {
       "type": 0,
       "value": "Tidak ada validator yang ditemukan untuk dompet Anda yang terhubung"
+    }
+  ],
+  "3KP7+U": [
+    {
+      "type": 0,
+      "value": "Baris perintah dengan bendera"
     }
   ],
   "3NHygY": [
@@ -645,12 +831,6 @@
       "value": " ETH, masing-masing dengan kumpulan kunci dan saldo sendiri."
     }
   ],
-  "3PZq07": [
-    {
-      "type": 0,
-      "value": "Karena itu, sebaiknya buat kunci Anda dari mnemonik yang berfungsi sebagai cadangan lain. Ini akan menjadi default untuk validator yang bergabung melalui proses orientasi situs ini."
-    }
-  ],
   "3PbtmF": [
     {
       "type": 0,
@@ -679,6 +859,20 @@
     {
       "type": 0,
       "value": "Geth di dokumentasi Goerli"
+    }
+  ],
+  "3aykgN": [
+    {
+      "type": 0,
+      "value": "Validator Anda juga akan menerima biaya gas yang tidak terbakar saat mengusulkan blok. Validator dipilih secara acak oleh protokol untuk mengusulkan blok, dan hanya satu validator yang dapat mengusulkan sebuah blok untuk setiap ruang 12 detik. Ada 7200 ruang setiap hari, jadi setiap validator memiliki 7200 peluang setiap hari untuk mengusulkan sebuah blok. Jika ada 500.000 validator, setiap validator akan memiliki usulan blok "
+    },
+    {
+      "type": 1,
+      "value": "average"
+    },
+    {
+      "type": 0,
+      "value": " setiap 70 hari."
     }
   ],
   "3tR/V9": [
@@ -751,10 +945,22 @@
       "value": "Mengapa skala geser? Kami tidak akan membahas detail yang berlebihan di sini, intinya adalah perlu ada jumlah validator minimum (dan karenanya jumlah minimum yang dipertaruhkan) agar jaringan berfungsi dengan baik. Jadi, demi mendorong lebih banyak validator untuk bergabung, penting agar suku bunga tetap tinggi hingga jumlah minimum ini tercapai."
     }
   ],
+  "4hb+GK": [
+    {
+      "type": 0,
+      "value": "Alamat penarikan"
+    }
+  ],
   "4hnEBA": [
     {
       "type": 0,
       "value": "Apakah kode kontrak pintar telah diverifikasi?"
+    }
+  ],
+  "4kNER3": [
+    {
+      "type": 0,
+      "value": "Keluar, baik sukarela atau tidak, harus diproses melalui antrean keluar. Ini tidak instan, dan bergantung berapa banyak akun lain yang keluar pada saat bersamaan."
     }
   ],
   "4l6vz1": [
@@ -763,10 +969,44 @@
       "value": "Salin"
     }
   ],
+  "4uFys5": [
+    {
+      "type": 0,
+      "value": "Akun yang telah dipotong, atau yang tidak punya saldo memadai, akan dipaksa untuk keluar sesuai dengan aturan jaringan. Ini otomatis dan tidak dapat dihentikan setelah dimulai."
+    }
+  ],
   "54J/qs": [
     {
       "type": 0,
       "value": "Apa yang terjadi jika saya menggunakan penarikan BLS dan saya kehilangan kunci penarikan saya?"
+    }
+  ],
+  "57MWKW": [
+    {
+      "type": 0,
+      "value": "Penarikan sebagai sebuah operasi, bukan jenis transaksi baru"
+    }
+  ],
+  "57h5ur": [
+    {
+      "type": 0,
+      "value": "Kemudian hingga "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " untuk penyisiran validator berikutnya guna mengeksekusi penarikan penuh (dengan asusmsi kredensial penarikan "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ")"
     }
   ],
   "58PXVy": [
@@ -803,6 +1043,12 @@
       "value": "Dokumentasi instalasi Teku"
     }
   ],
+  "5KtHYT": [
+    {
+      "type": 0,
+      "value": "Jika ini tidak diberikan sekarang, dana setoran Anda akan tetap dikunci di Rantai Suar hingga alamat diberikan. Membuka kunci akan memerlukan penandatanganan pesan dengan kunci penarikan Anda, yang dihasilkan dari fase benih mnemonik (jadi jaga agar tetap aman)."
+    }
+  ],
   "5UH1sh": [
     {
       "type": 0,
@@ -823,18 +1069,10 @@
       "value": " jumlahnya ~1,2-1,3 GB unduhan dan ~0,9-1 GB unggahan per jam, dan kemungkinan akan meningkat."
     }
   ],
-  "5dG331": [
+  "5hW6Gf": [
     {
       "type": 0,
-      "value": "Meskipun suara validator diberi bobot berdasarkan jumlah yang dipertaruhkan, bobot pemungutan suara setiap validator dimulai pada, dan dibatasi pada "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": ". Dimungkinkan untuk turun di bawah ini dengan kinerja simpul yang buruk, tetapi tidak dimungkinkan untuk naik di atasnya."
+      "value": "Perlindungan Penarikan Lapisan Konsensus"
     }
   ],
   "5t8oYl": [
@@ -865,6 +1103,12 @@
       "value": "rata-rata"
     }
   ],
+  "6NndcB": [
+    {
+      "type": 0,
+      "value": "tinggalkan"
+    }
+  ],
   "6S95Bo": [
     {
       "type": 0,
@@ -881,6 +1125,12 @@
     {
       "type": 0,
       "value": "Anda dapat meningkatkan saldo efektif validator ini dengan melakukan isi ulang"
+    }
+  ],
+  "6eA+mW": [
+    {
+      "type": 0,
+      "value": "Lodestar dibuat menggunakan TypeScript berdasarkan GNU Lesser General Public License v3.0."
     }
   ],
   "6nh4de": [
@@ -949,10 +1199,26 @@
       "value": "."
     }
   ],
+  "7GLK15": [
+    {
+      "type": 0,
+      "value": "Bergantung metode mana yang Anda gunakan untuk membuat kunci:"
+    }
+  ],
   "7Iz3JI": [
     {
       "type": 0,
       "value": "Klien Konsensus"
+    }
+  ],
+  "7Nwe5A": [
+    {
+      "type": 1,
+      "value": "exitEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - jangka waktu ketika validator Anda tidak lagi aktif, tidak lagi mendapatkan imbalan, dan tidak lagi tunduk pada aturan pemotongan."
     }
   ],
   "7Rw2uA": [
@@ -1001,6 +1267,12 @@
       "value": "."
     }
   ],
+  "7kWKe0": [
+    {
+      "type": 0,
+      "value": "Antrean penarikan akan diisi otomatis dan diproses oleh pengusul blok, yang otomatis memeriksa ketersediaan pembayaran melalui mekanisme penyisiran."
+    }
+  ],
   "7sZfCF": [
     {
       "type": 0,
@@ -1013,6 +1285,12 @@
       "value": "Setiap masa, jaringan mengukur tindakan setiap validator dan mengeluarkan hadiah atau penalti Anda dengan tepat."
     }
   ],
+  "8/nhr4": [
+    {
+      "type": 0,
+      "value": "Agar validator Anda dapat melakukan penarikan dalam bentuk apa pun, alamat penarikan harus diberikan dan didaftarkan untuk akun Anda di Rantai Suar. Ini harus berupa alamat yang Anda kendalikan, dan tidak dapat diubah setelah ditetapkan."
+    }
+  ],
   "80eWKU": [
     {
       "type": 0,
@@ -1023,6 +1301,12 @@
     {
       "type": 0,
       "value": "Kami tidak dapat mendeteksi MetaMask. Beralih browser atau instal MetaMask."
+    }
+  ],
+  "8BXroN": [
+    {
+      "type": 0,
+      "value": "Dokumentasi Lodestar"
     }
   ],
   "8FmuYF": [
@@ -1075,10 +1359,68 @@
       "value": "slashing"
     }
   ],
+  "8echXf": [
+    {
+      "type": 0,
+      "value": "Jangan nonaktifkan validator Anda hingga jangka waktu ini dicapai."
+    }
+  ],
+  "8fXTDo": [
+    {
+      "type": 0,
+      "value": "Untungnya, ini hanya pesan satu kali yang perlu diproses, dan validator yang memberikan kredensial penarikan pada saat penyetoran tidak perlu melakukan langkah ini. Setelah selesai, validator Anda akan diaktifkan secara permanen untuk penarikan, dan akan memenuhi syarat untuk pembayaran selama penarikan berikutnya."
+    }
+  ],
+  "8k1RjX": [
+    {
+      "type": 0,
+      "value": "Jaringan percobaan "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    }
+  ],
+  "8kLV25": [
+    {
+      "type": 0,
+      "value": "Apakah sudah memberikan alamat penarikan?"
+    }
+  ],
   "8mEWVB": [
     {
       "type": 0,
       "value": "Dengan jumlah total validator yang tetap, imbalan/penalti sebagian besar diskalakan dengan saldo validator—membuktikan dengan saldo yang lebih tinggi menghasilkan imbalan/penalti yang lebih besar sebaliknya membuktikan dengan saldo yang lebih rendah menghasilkan imbalan/penalti yang lebih rendah."
+    }
+  ],
+  "8mybVV": [
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " = \"Jenis 0\" = Kunci BLS = Kredensial penarikan yang lama: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsDisabled"
+    }
+  ],
+  "8rxaqc": [
+    {
+      "type": 1,
+      "value": "withdrawableEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - jangka waktu ketika dana validator Anda memenuhi syarat untuk penarikan penuh saat penyisiran validator berikutnya."
+    }
+  ],
+  "8uq59n": [
+    {
+      "type": 0,
+      "value": "Beri sinyal niat Anda untuk keluar dari penaruhan dengan menandatangani dan menyiarkan pesan keluar sukarela ke jaringan menggunakan kunci validator dan klien validator Anda"
     }
   ],
   "8wd0q5": [
@@ -1185,6 +1527,12 @@
       "value": "Mengonfigurasi Nethermind"
     }
   ],
+  "9r6K1F": [
+    {
+      "type": 0,
+      "value": "Tidak memenuhi syarat untuk penarikan"
+    }
+  ],
   "9r8j5+": [
     {
       "type": 0,
@@ -1209,24 +1557,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "9xeLhs": [
-    {
-      "type": 0,
-      "value": "Penarikan alamat Ethereum: Jika ingin menarik ke alamat dompet Jaringan Utama Anda (sebelumnya alamat 'Eth1') setelah peningkatan pembersihan pasca-penggabungan, Anda dapat mengatur "
-    },
-    {
-      "type": 1,
-      "value": "ethAddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " saat menjalankan deposit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
     }
   ],
   "9ySJSP": [
@@ -1265,6 +1595,32 @@
     {
       "type": 0,
       "value": "Jika butuh bantuan, lihat dokumentasi Python."
+    }
+  ],
+  "AEbKyt": [
+    {
+      "type": 0,
+      "value": "Untuk devnet, Anda dapat menambahkan parameter:"
+    }
+  ],
+  "AFzWcM": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa kunci adalah tanggung jawab saya dan mnemonik (benih) akan menjadi "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": " untuk menarik dana jika saya tidak memberikan alamat penarikan dengan data setoran awal."
+    }
+  ],
+  "AH6XsN": [
+    {
+      "type": 0,
+      "value": "Pastikan juga Anda memahami cara kerja penarikan penaruhan sebelum menyiapkan kunci dan data setoran."
     }
   ],
   "AJD+66": [
@@ -1347,6 +1703,12 @@
       "value": "Khususnya, saat memulai klien validator lighthouse, Anda dapat mengarahkannya ke direktori dengan keystore Anda yang kemudian akan mengimpor keystore Anda dan secara interaktif meminta sandi Anda. Jika Anda tidak memberikan kata sandi, lighthouse akan memintanya lagi setiap kali dinyalakan."
     }
   ],
+  "Andk3R": [
+    {
+      "type": 0,
+      "value": "Jika Anda tidak memberikan alamat penarikan sebelum melakukan penyetoran, Anda perlu melakukan langkah tambahan untuk memperbarui kunci dan mengaktifkan penarikan. Sementara itu, dana akan dikunci."
+    }
+  ],
   "Anqi3n": [
     {
       "type": 0,
@@ -1357,6 +1719,22 @@
     {
       "type": 0,
       "value": "Isi ulang validator"
+    }
+  ],
+  "AyoE3t": [
+    {
+      "type": 0,
+      "value": "Belum dimungkinkan melakukan penarikan dari validator. Fungsi ini direncanakan akan disertakan dalam pembaruan Shanghai/Capella yang direncanakan untuk Q1/Q2 2023."
+    }
+  ],
+  "B0BAqm": [
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " diproses ketika validator aktif memiliki saldo efektif maksimal 32, dan memiliki total saldo lebih dari 32. Satu validator tidak bisa mendapatkan imbalan atas kelebihan saldo lebih dari 32 ETH, sehingga akun ini akan memiliki saldo ekstra yang otomatis ditarik ke alamat Ethereum mereka."
     }
   ],
   "B2EKj+": [
@@ -1429,6 +1807,12 @@
       "value": "Erigon ditulis dalam Go dan di bawah lisensi GNU LGPLv3."
     }
   ],
+  "BKDxOx": [
+    {
+      "type": 0,
+      "value": "Setelah validator keluar dan saldo penuhnya telah ditarik, dana lain yang disetorkan ke validator tersebut akan otomatis ditransfer ke alamat penarikan saat penyisiran validator berikutnya. Untuk melakukan penaruhan ulang ETH, validator baru harus diaktifkan."
+    }
+  ],
   "BPpnlJ": [
     {
       "type": 0,
@@ -1441,10 +1825,10 @@
       "value": "Komunitas EthStaker"
     }
   ],
-  "Bf2QKg": [
+  "Bc20la": [
     {
       "type": 0,
-      "value": "Pemvalidasian merupakan komitmen jangka panjang"
+      "value": "hari"
     }
   ],
   "Bj5yI5": [
@@ -1465,10 +1849,44 @@
       "value": "Pengenalan"
     }
   ],
+  "Bp0clV": [
+    {
+      "type": 0,
+      "value": "Indeks validator:"
+    }
+  ],
+  "Bp9Dxf": [
+    {
+      "type": 0,
+      "value": "Cara memicu penarikan, perubahan kredensial"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
       "value": "Konfigurasi Lighthouse"
+    }
+  ],
+  "C2Jn1z": [
+    {
+      "type": 0,
+      "value": "Perhatikan bahwa "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " Anda tidak sama dengan "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", yang menerima biaya transaksi dari yang diusulkan. Keduanya dapat diatur ke alamat yang sama, tetapi masing-masing harus diatur secara terpisah."
     }
   ],
   "C3jBPI": [
@@ -1499,6 +1917,28 @@
     {
       "type": 0,
       "value": "Proof of Stake"
+    }
+  ],
+  "CGMYrU": [
+    {
+      "type": 0,
+      "value": "Rilis CLI Setoran Penaruhan"
+    }
+  ],
+  "CPl2hh": [
+    {
+      "type": 0,
+      "value": "Saya telah meninjau daftar periksa dan memahami cara kerja penarikan."
+    }
+  ],
+  "CT+gEC": [
+    {
+      "type": 0,
+      "value": "Unggah ke kumpulan Simpul Suar "
+    },
+    {
+      "type": 1,
+      "value": "btec"
     }
   ],
   "CVDzDs": [
@@ -1543,10 +1983,36 @@
       "value": "Saya telah menyiapkan firewall."
     }
   ],
+  "Cgrsge": [
+    {
+      "type": 0,
+      "value": "Validator saat ini"
+    }
+  ],
+  "Co67tK": [
+    {
+      "type": 0,
+      "value": "BLS Untuk Perubahan Eksekusi"
+    }
+  ],
   "D0Rigq": [
     {
       "type": 0,
       "value": "TIDAK"
+    }
+  ],
+  "D19C0b": [
+    {
+      "type": 0,
+      "value": "Jika tidak, saya telah mengirimkan pesan "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " yang ditandatangani dengan kunci penarikan BLS untuk memperbarui kredensial penarikan saya (memerlukan peningkatan Shanghai/Capella)."
     }
   ],
   "D33f/7": [
@@ -1559,6 +2025,20 @@
     {
       "type": 0,
       "value": "Berapa banyak ETH yang diperlukan untuk menjadi validator?"
+    }
+  ],
+  "D5NvkC": [
+    {
+      "type": 0,
+      "value": "Unduh cabang "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "DCaq7N": [
@@ -1577,6 +2057,28 @@
     {
       "type": 0,
       "value": "Saya memahami bahwa jika saya bertindak bertentangan dengan spesifikasi, saya bertanggung jawab untuk diputus."
+    }
+  ],
+  "DLWOxX": [
+    {
+      "type": 0,
+      "value": "Demikian halnya, ada juga "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": ", yang membatasi seberapa cepat validator dapat "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " jaringan. Ini untuk alasan keamanan. Mengingat setiap validator dibatasi hingga saldo efektif maksimal 32 ETH, hal ini mencegah sebagian besar ETH kemungkinan digunakan dalam serangan lalu dengan cepat keluar dari jaringan sekaligus."
     }
   ],
   "DNRQa7": [
@@ -1649,6 +2151,12 @@
       "value": " (jumlah minimum yang diizinkan oleh kontrak setoran)"
     }
   ],
+  "Ds66AU": [
+    {
+      "type": 0,
+      "value": "Untuk menjadi validator, Anda perlu mengetahui tentang mengelola kunci dan melindungi mnemonik. Jika Anda belum terbiasa dengan kunci dan mnemonik, jangan lanjutkan."
+    }
+  ],
   "DsJ/Mk": [
     {
       "type": 0,
@@ -1681,10 +2189,10 @@
       "value": "chain"
     }
   ],
-  "E8t6ru": [
+  "E4rtgi": [
     {
       "type": 0,
-      "value": "Untuk menjadi validator, Anda harus tahu tentang mengelola kunci dan melindungi mnemonik. Jika Anda belum terbiasa dengan kunci dan mnemomik, jangan lanjutkan. Perhatikan bahwa selama proses ini Anda tidak akan mendapatkan kunci yang diperlukan untuk menarik, jadi simpan mnemonik Anda dengan aman agar dapat menariknya di kemudian hari."
+      "value": "Klien konsensus:"
     }
   ],
   "EFjTSf": [
@@ -1749,6 +2257,26 @@
       "value": "Landasan Peluncuran Penaruhan"
     }
   ],
+  "Ej2jo1": [
+    {
+      "type": 0,
+      "value": "Alamat penarikan:"
+    }
+  ],
+  "F8yf1S": [
+    {
+      "type": 0,
+      "value": "Anda dapat menemukan "
+    },
+    {
+      "type": 1,
+      "value": "docsHere"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "FEbVwB": [
     {
       "type": 0,
@@ -1771,6 +2299,24 @@
     {
       "type": 0,
       "value": "Saya memahami bahwa transaksi ini tidak dapat dibatalkan."
+    }
+  ],
+  "FSp9ip": [
+    {
+      "type": 0,
+      "value": "Penarikan alamat Ethereum: Jika Anda ingin menarik alamat dompet eksekusi setelah peningkatan Shanghai/Capella, Anda dapat mengatur "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " saat menjalankan deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
     }
   ],
   "FU7JYy": [
@@ -1867,6 +2413,12 @@
       "value": "validator"
     }
   ],
+  "G0ZD5H": [
+    {
+      "type": 0,
+      "value": "Agar akun memenuhi syarat untuk penarikan penuh, akun validator harus keluar terlebih dahulu. Akun validator dapat keluar dari penaruhan dengan dua cara utama: secara sukarela atau dipaksa."
+    }
+  ],
   "G0aacl": [
     {
       "type": 0,
@@ -1909,6 +2461,12 @@
       "value": "Seberapa parah saya akan dihukum karena offline?"
     }
   ],
+  "GTkW7D": [
+    {
+      "type": 0,
+      "value": "Tidak dimungkinkan meminta ETH yang akan ditarik dengan jumlah tertentu secara manual"
+    }
+  ],
   "GUDhpC": [
     {
       "type": 0,
@@ -1927,10 +2485,22 @@
       "value": "Membuat kunci"
     }
   ],
+  "Ge62/G": [
+    {
+      "type": 0,
+      "value": "Penarikan kelebihan saldo (penarikan parsial)"
+    }
+  ],
   "GelBd9": [
     {
       "type": 0,
       "value": "Buat file yang baru saja Anda unduh dapat dieksekusi."
+    }
+  ],
+  "GlKjxX": [
+    {
+      "type": 0,
+      "value": "Anda akan melihat bahwa Anda memiliki satu keystore per validator. Keystore ini berisi kunci penandatanganan, yang dienskripsi dengan kata sandi."
     }
   ],
   "GsBRWL": [
@@ -2055,6 +2625,12 @@
       "value": "Sebelumnya TurboGeth, Erigon adalah klien Ethereum yang dibuat untuk memungkinkan pengoptimalan kinerja."
     }
   ],
+  "ID3Pgm": [
+    {
+      "type": 0,
+      "value": "Jumlah maksimal penarikan yang dapat diproses dalam satu blok"
+    }
+  ],
   "IJw06E": [
     {
       "type": 0,
@@ -2065,6 +2641,12 @@
     {
       "type": 0,
       "value": "Perhatikan bahwa dalam skenario kedua (sangat kecil kemungkinan), Anda akan secara bertahap kehilangan hingga 50% (16 ETH) dari taruhan Anda selama 21 hari. Setelah 21 hari, Anda akan dikeluarkan dari kumpulan validator. Ini memastikan bahwa blok mulai difinalisasi lagi."
+    }
+  ],
+  "IYvwsI": [
+    {
+      "type": 0,
+      "value": "Perangkat yang tersedia untuk membuat pesan perubahan kunci"
     }
   ],
   "IZFEUg": [
@@ -2093,10 +2675,22 @@
       "value": " setoran terutang"
     }
   ],
+  "IhHhea": [
+    {
+      "type": 0,
+      "value": "Masukkan indeks validator Anda di sini untuk memeriksa apakah akun siap untuk penarikan atau tidak:"
+    }
+  ],
   "Il9tBQ": [
     {
       "type": 0,
       "value": "Geth ditulis dalam Go, sumber terbuka sepenuhnya dan berlisensi di bawah GNU LGPL v3."
+    }
+  ],
+  "InUvmv": [
+    {
+      "type": 0,
+      "value": "Rantai suar mendorong penarikan sebagai operasi"
     }
   ],
   "IugT5/": [
@@ -2179,6 +2773,12 @@
       "value": "4. Hindari phishing"
     }
   ],
+  "Ja5vXW": [
+    {
+      "type": 0,
+      "value": "Bacaan lebih lanjut"
+    }
+  ],
   "JbVlOE": [
     {
       "type": 0,
@@ -2215,16 +2815,34 @@
       "value": "Apa sistem operasi Anda saat ini?"
     }
   ],
-  "K37W0m": [
+  "K3uH1C": [
     {
       "type": 0,
-      "value": "Dengan kunci penandatanganan, Anda dapat mencoba untuk keluar dari validator dengan cepat dan kemudia mentransfer dana—dengan kunci penarikan—sebelum pencuri."
+      "value": "offline"
+    }
+  ],
+  "K4TRB7": [
+    {
+      "type": 0,
+      "value": "Jumlah validator yang dapat diaktifkan atau dikeluarkan dalam jangka waktu tertentu (6,4 menit) ditentukan oleh berapa banyak validator aktif yang saat ini ada di jaringan."
     }
   ],
   "K6+jQ3": [
     {
       "type": 0,
       "value": "Dokumentasi instalasi Geth"
+    }
+  ],
+  "K6canA": [
+    {
+      "type": 0,
+      "value": "Fitur penarikan direncanakan untuk dimasukkan dalam peningkatan Shanghai/Capella yang akan datang. Setelah fungsionalitas ini ditambahkan, saldo Anda kemudian dapat ditarik—dengan kunci penarikan Anda—setelah penundaan minumum sekitar satu hari."
+    }
+  ],
+  "K7xnjy": [
+    {
+      "type": 0,
+      "value": "Peringatan: Jangan menyimpan kunci pada beberapa klien validator (cadangan) sekaligus"
     }
   ],
   "KBSbmP": [
@@ -2279,6 +2897,12 @@
     {
       "type": 0,
       "value": "Kesalahan"
+    }
+  ],
+  "KQrlTP": [
+    {
+      "type": 0,
+      "value": "bergabung"
     }
   ],
   "KWWsDo": [
@@ -2369,6 +2993,28 @@
       "value": "Lighthouse adalah implementasi klien konsensus, ditulis dalam Rust dengan fokus utama pada kecepatan dan keamanan."
     }
   ],
+  "LOtXFT": [
+    {
+      "type": 0,
+      "value": "Penarikan BLS: Secara default, deposit-cli akan menghasilkan kredensial penarikan dengan "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " yang diturunkan melalui mnemonik dalam format "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "LVy+cS": [
     {
       "type": 0,
@@ -2411,6 +3057,12 @@
     {
       "type": 0,
       "value": "Terima kasih telah mendukung jaringan Ethereum!"
+    }
+  ],
+  "LpnfTF": [
+    {
+      "type": 0,
+      "value": "Dokumentasi instalasi Lodestar"
     }
   ],
   "Ltd/hJ": [
@@ -2457,10 +3109,28 @@
       "value": "Mengapa saya perlu menjalankan klien eksekusi sekarang?"
     }
   ],
+  "M35Dz/": [
+    {
+      "type": 0,
+      "value": "Unggah ke kumpulan BLSToExecutionChange Simpul Suar"
+    }
+  ],
   "M3GwXS": [
     {
       "type": 0,
       "value": "Anda hanya akan mendapatkan hadiah penuh jika validator Anda online dan terbarukan. Ini tanggung jawab Anda. Jika validator Anda offline, Anda akan dihukum. Hukuman untuk offline kira-kira sama dengan hadiah untuk berpartisipasi secara aktif."
+    }
+  ],
+  "M6nefR": [
+    {
+      "type": 0,
+      "value": "Batas tarif yang ditetapkan pada antrean penarikan (dapat berubah melalui pengujian sebelum Shanghai)"
+    }
+  ],
+  "MCmGYv": [
+    {
+      "type": 0,
+      "value": "Disalin ✓"
     }
   ],
   "MIsmjW": [
@@ -2505,10 +3175,22 @@
       "value": "Bagaimana penskalaan Ethereum?"
     }
   ],
+  "MaZo9k": [
+    {
+      "type": 0,
+      "value": "Wagyu Key Gen GUI"
+    }
+  ],
   "Mb3npQ": [
     {
       "type": 0,
       "value": "Menggunakan terminal"
+    }
+  ],
+  "MbLMTq": [
+    {
+      "type": 0,
+      "value": "Ini dapat diringkas untuk memperkirakan batas atas berapa lama waktu yang dibutuhkan penyisiran lengkap berdasarkan berapa banyak penarikan yang perlu diproses:"
     }
   ],
   "MbsAo3": [
@@ -2535,6 +3217,20 @@
       "value": "Detail isi ulang"
     }
   ],
+  "Mne5iM": [
+    {
+      "type": 0,
+      "value": "Jika demikian, hentikan. "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " diproses untuk setiap saldo yang tersisa"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -2543,6 +3239,18 @@
     {
       "type": 0,
       "value": " bukan file JSON deposit_data yang valid. Coba lagi."
+    }
+  ],
+  "N6QzJ5": [
+    {
+      "type": 0,
+      "value": "beberapa hari lagi"
+    }
+  ],
+  "NDrMCw": [
+    {
+      "type": 0,
+      "value": "Total jumlah akun validator yang memenuhi syarat untuk penarikan (bisa bervariasi)"
     }
   ],
   "NEmnAV": [
@@ -2575,32 +3283,54 @@
       "value": "Saya telah mengamankan akun root."
     }
   ],
-  "NTHTCh": [
+  "NSl1Q5": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
     {
       "type": 0,
-      "value": "Jangan menyetorkan lebih dari "
+      "value": ": Ini dilakukan dengan menggunakan bendera "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "eth1WithdrawalAddress"
     },
     {
       "type": 0,
-      "value": " ETH untuk satu validator. Itu tidak akan menambah imbalan Anda dan akan dikunci hingga pembaruan "
-    },
-    {
-      "type": 1,
-      "value": "shanghai"
-    },
-    {
-      "type": 0,
-      "value": " yang direncanakan."
+      "value": " saat membuat kunci dengan CLI Setoran Penaruhan."
     }
   ],
   "NTWnJC": [
     {
       "type": 0,
       "value": "Unduh aplikasi baris perintah"
+    }
+  ],
+  "NTdFPX": [
+    {
+      "type": 0,
+      "value": "Imbalan dan penalti diberikan setiap 6,4 menit—periode waktu yang dikenal sebagai jangka waktu."
+    }
+  ],
+  "NUCB4G": [
+    {
+      "type": 0,
+      "value": "Validator "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " ini perlu dikonfigurasi untuk penarikan. Catat kredensial penarikan karena Anda akan membutuhkannya untuk memperbarui kunci."
+    }
+  ],
+  "NUcFVA": [
+    {
+      "type": 0,
+      "value": "[Example]"
     }
   ],
   "NVljH4": [
@@ -2647,6 +3377,64 @@
       "value": "Menjadi validator dengan Teku"
     }
   ],
+  "NiWtxk": [
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " = \"Jenis 1\" = Kunci eksekusi = Kredensial penarikan yang baru: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsEnabled"
+    }
+  ],
+  "NkFxlX": [
+    {
+      "type": 0,
+      "value": "Setidaknya "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (empat jangka waktu) dari jangka waktu saat ini sebelum mencapai jangka waktu keluar (tanpa yang lain dalam antrean, "
+    },
+    {
+      "type": 1,
+      "value": "highlyVariable"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "NpIOoJ": [
+    {
+      "type": 0,
+      "value": "Untuk membuat pesan ini disertakan di Jaringan Utama, Anda perlu mengunggah pesan ini ke kumpulan "
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": " simpul suar "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " garpu keras Capella/Shanghai."
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -2681,6 +3469,12 @@
       "value": "Pecahan"
     }
   ],
+  "O4kYrf": [
+    {
+      "type": 0,
+      "value": "Total jumlah akun validator (jumlah indeks, setiap akun validator yang pernah didaftarkan, hanya naik seiring waktu)"
+    }
+  ],
   "OBmVqN": [
     {
       "type": 0,
@@ -2711,6 +3505,42 @@
     {
       "type": 0,
       "value": "Dokumentasi Nethermind menjelaskan cara mengunduh dan menginstal klien."
+    }
+  ],
+  "ORVjVH": [
+    {
+      "type": 0,
+      "value": "Lalu "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (256 jangka waktu) lainnya sebelum dana tersebut diberi bendera sebagai dapat ditarik"
+    }
+  ],
+  "OSEFbC": [
+    {
+      "type": 0,
+      "value": "Segera setelah menyiarkan pesan keluar sukarela yang ditandatangani, nilai "
+    },
+    {
+      "type": 1,
+      "value": "exitEpoch"
+    },
+    {
+      "type": 0,
+      "value": " dan "
+    },
+    {
+      "type": 1,
+      "value": "withdrawableEpoch"
+    },
+    {
+      "type": 0,
+      "value": " dihitung berdasarkan jumlah jangka waktu saat ini. Nilai ini menentukan dengan tepat kapan validator tidak lagi diharuskan melakukan validasi secara online, dan kapan validator memenuhi syarat untuk penarikan penuh."
     }
   ],
   "OdYQYh": [
@@ -2797,6 +3627,12 @@
     {
       "type": 0,
       "value": "Jaringan Anda telah diubah"
+    }
+  ],
+  "PQgBnI": [
+    {
+      "type": 0,
+      "value": "Jangka waktu ini ditentukan berdasarkan yang pertama tersedia yang belum dimaksimalkan dengan keluarnya validator lain (batas tarif bergantung pada total validator yang ada di jaringan), dan minimal harus empat (4) jangka waktu setelah keluar dimulai."
     }
   ],
   "PfoT0C": [
@@ -2915,6 +3751,20 @@
       "value": "Manajemen kunci"
     }
   ],
+  "QcnkjI": [
+    {
+      "type": 0,
+      "value": "Jika akun validator Anda masih memiliki kredensial penarikan BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": "), pesan satu kali harus disiarkan yang memberi sinyal akun lapisan eksekusi mana yang harus digunakan untuk semua penarikan."
+    }
+  ],
   "QeE86m": [
     {
       "type": 0,
@@ -2953,6 +3803,12 @@
       "value": "Tindakan"
     }
   ],
+  "Qo9UHj": [
+    {
+      "type": 0,
+      "value": "Selengkapnya tentang penarikan penaruhan"
+    }
+  ],
   "QqqeNk": [
     {
       "type": 0,
@@ -2971,6 +3827,30 @@
     {
       "type": 0,
       "value": " yang telah diterima tetapi sedang divalidasi di rantai. Ini akan tersedia di sini ketika beaconcha.in telah mengkonfirmasi 2048 blok."
+    }
+  ],
+  "R6z/mc": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": jika Anda menggunakan bendera "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " saat membuat kunci, Anda sudah siap melanjutkan"
+    }
+  ],
+  "R7v7y3": [
+    {
+      "type": 0,
+      "value": "Atur alamat penarikan"
     }
   ],
   "R8eePn": [
@@ -2997,6 +3877,12 @@
       "value": "1. Pelajari tentang tanggung jawab Anda"
     }
   ],
+  "ROwygg": [
+    {
+      "type": 0,
+      "value": "EIP-4895"
+    }
+  ],
   "RVyb7r": [
     {
       "type": 0,
@@ -3007,6 +3893,12 @@
     {
       "type": 0,
       "value": "selamat"
+    }
+  ],
+  "RdHdwG": [
+    {
+      "type": 0,
+      "value": "Petunjuk tentang cara menggunakan alat staking-deposit-cli untuk membuat dan menyiarkan pesan SignedBLSToExecutionChange untuk memperbarui kredensial penarikan validator."
     }
   ],
   "Rg5ySE": [
@@ -3033,6 +3925,20 @@
       "value": "Verifikasi dengan perintah berikut untuk memeriksa apakah mengembalikan versi klien dengan benar:"
     }
   ],
+  "S+FY5u": [
+    {
+      "type": 0,
+      "value": "Ini mengharuskan penggunaan fase benih mnemonik Anda, dan harus dilakukan di mesin bercelah udara "
+    },
+    {
+      "type": 1,
+      "value": "offline"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "S943uU": [
     {
       "type": 0,
@@ -3055,6 +3961,20 @@
     {
       "type": 0,
       "value": "Eksekusi file yang baru saja Anda unduh."
+    }
+  ],
+  "SVUntz": [
+    {
+      "type": 0,
+      "value": "Perhatikan bahwa setelah pengguna memiliki kredensial penarikan "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " dan telah menyiarkan keluar sukarela, tidak diperlukan tindakan lebih lanjut hingga pemrosesan selesai."
     }
   ],
   "SaR1pU": [
@@ -3115,6 +4035,12 @@
       "value": "homebrew"
     }
   ],
+  "Su0UFr": [
+    {
+      "type": 0,
+      "value": "Ringkasan antrean keluar"
+    }
+  ],
   "Szwbym": [
     {
       "type": 0,
@@ -3169,6 +4095,12 @@
       "value": "Lihat perbandingan ekstensif klien"
     }
   ],
+  "U6jzBs": [
+    {
+      "type": 0,
+      "value": "Cara bergabung dengan jaringan percobaan penarikan publik"
+    }
+  ],
   "U7AOxj": [
     {
       "type": 0,
@@ -3199,6 +4131,24 @@
     {
       "type": 0,
       "value": "Periksa kontrak deposit pada penjelajah blok Ethereum favorit Anda:"
+    }
+  ],
+  "UYRyWv": [
+    {
+      "type": 0,
+      "value": "Mekanisme penarikan: Cara kerjanya"
+    }
+  ],
+  "UYoRgC": [
+    {
+      "type": 0,
+      "value": "Bergantung cara Anda menyiapkan setoran awal, akun Anda mungkin sudah siap atau belum siap untuk melakukan penarikan:"
+    }
+  ],
+  "UZkvC5": [
+    {
+      "type": 0,
+      "value": "Hingga jangka waktu ini (saat \"dalam antrean\"), validator Anda diharapkan untuk online dan melakukan aturan pemotongan yang sama seperti biasanya."
     }
   ],
   "Utck3E": [
@@ -3233,6 +4183,12 @@
     {
       "type": 0,
       "value": "Menjadi validator adalah tanggung jawab besar dengan langkah-langkah persiapan yang penting. Hanya mulai proses deposit saat Anda siap."
+    }
+  ],
+  "V+P6OJ": [
+    {
+      "type": 0,
+      "value": "Ini menjadi persyaratan pada saat Penggabungan, jadi pastikan Anda menjalankan keduanya sebelum penaruhan."
     }
   ],
   "V0cb8p": [
@@ -3307,28 +4263,6 @@
       "value": "."
     }
   ],
-  "VPpHAq": [
-    {
-      "type": 0,
-      "value": "Saya memahami bahwa saya "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " saham saya untuk sementara waktu, dan saya "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " hingga penggabungan. Saya mengerti bahwa jika saya keluar, saya tidak akan dapat bergabung kembali sampai waktu nanti. Ini adalah komitmen jangka panjang."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -3361,6 +4295,20 @@
       "value": ", yang merupakan kunci rahasia yang hanya dibagikan di antara kedua klien untuk mengautentikasi satu sama lain. Rahasia JWT bersama ini harus tersedia untuk setiap klien (baik klien eksekusi dan konsensus) untuk memungkinkan mereka berkomunikasi dengan benar satu sama lain."
     }
   ],
+  "VwWGD9": [
+    {
+      "type": 0,
+      "value": "Pesan ini dibatasi hingga 16 per blok ("
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": "), jadi jika lebih dari 16 permintaan dilakukan pada saat bersamaan, antrean akan terbentuk dan ini akan diproses di blok berikutnya. Ini berarti bahwa segera setelah peningkatan Shanghai/Capella, pengguna yang mengirimkan pesan ini mungkin mengalami penundaan hingga sekitar 2-3 hari sebelum permintaan ini diproses."
+    }
+  ],
   "VzGJkB": [
     {
       "type": 0,
@@ -3371,6 +4319,12 @@
     {
       "type": 0,
       "value": "Teku berlisensi Apache 2 dan ditulis dalam Java, bahasa yang terkenal karena pengalamannya dan sangat populer."
+    }
+  ],
+  "W1mus6": [
+    {
+      "type": 0,
+      "value": "Setelah pesan keluar sukarela yang ditandatangani disiarkan, butuh waktu:"
     }
   ],
   "W2Eues": [
@@ -3391,12 +4345,6 @@
     {
       "type": 0,
       "value": "Bahasa Jepang"
-    }
-  ],
-  "W6w5Wb": [
-    {
-      "type": 0,
-      "value": "Transfer antar validator dan penarikan belum dimungkinkan. Fungsionalitas penarikan saat ini menjadi prioritas utama, dan direncanakan akan diluncurkan pada peningkatkan jaringan berikutnya, yang dikenal sebagai peningkatan Shanghai."
     }
   ],
   "W8nHSd": [
@@ -3445,6 +4393,20 @@
       "value": "Langkah-langkah ini opsional tetapi disarankan untuk mengoptimalkan node Anda."
     }
   ],
+  "WbCafE": [
+    {
+      "type": 0,
+      "value": "Jika Anda tidak memberikan alamat penarikan dengan data deposit awal, Anda perlu mendapatkan kunci penarikan dari mnemonik di lain waktu, jadi simpan mnemonik Anda dengan aman—itu akan menjadi SATU-SATUNYA cara untuk menarik "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " saat Anda memilih untuk mengaktifkan penarikan."
+    }
+  ],
   "WdDGn6": [
     {
       "type": 0,
@@ -3485,6 +4447,34 @@
     {
       "type": 0,
       "value": "Itu bukan file JSON deposit_data yang valid."
+    }
+  ],
+  "X6/BRy": [
+    {
+      "type": 0,
+      "value": "Anda dapat menemukan file "
+    },
+    {
+      "type": 1,
+      "value": "file"
+    },
+    {
+      "type": 0,
+      "value": " di folder "
+    },
+    {
+      "type": 1,
+      "value": "folder"
+    },
+    {
+      "type": 0,
+      "value": " secara default."
+    }
+  ],
+  "X72hpo": [
+    {
+      "type": 0,
+      "value": "Validator siap untuk mulai menerima imbalan ke alamat penarikan di bawah ini. Tidak diperlukan tindakan lebih lanjut."
     }
   ],
   "XBEBYR": [
@@ -3545,10 +4535,34 @@
       "value": " untuk menghubungkan simpul konsensus Anda ke titik akhir JSON RPC. Ini akan mengaktifkan layanan JSON RPC pada port 8545 default."
     }
   ],
+  "XcItS7": [
+    {
+      "type": 0,
+      "value": "~25 menit"
+    }
+  ],
+  "XgOPc8": [
+    {
+      "type": 0,
+      "value": "Perhatikan, saat ini tidak ada rencana mengaktifkan transfer ETH antar validator."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
       "value": "Membangunan dari sumber"
+    }
+  ],
+  "XsZtDM": [
+    {
+      "type": 0,
+      "value": "Capella - Spesifikasi formal"
+    }
+  ],
+  "XszRWL": [
+    {
+      "type": 0,
+      "value": "eth1_withdrawal_address"
     }
   ],
   "Y07Hwy": [
@@ -3573,12 +4587,6 @@
     {
       "type": 0,
       "value": "Isi ulang"
-    }
-  ],
-  "Y8YLHs": [
-    {
-      "type": 0,
-      "value": "Jika kunci penandatanganan Anda tidak di bawah kendali pencuri, pencuri tidak dapat keluar dari validator Anda."
     }
   ],
   "Y9S0NE": [
@@ -3621,6 +4629,12 @@
       "value": "Kunci"
     }
   ],
+  "YJI2xv": [
+    {
+      "type": 0,
+      "value": "Pohon keputusan diikuti untuk menentukan jenis penarikan mana yang akan dimulai. Jika validator yang diperiksa memiliki ETH yang memenuhi syarat untuk ditarik, validator akan ditambahkan ke antrean penarikan. Jika tidak ada, akun akan dilewati."
+    }
+  ],
   "YP03/j": [
     {
       "type": 0,
@@ -3655,20 +4669,38 @@
       "value": " Anda. Pastikan Anda menyimpannya dengan aman, lebih bagus saat offline. Keystore validator Anda akan tersedia di direktori yang baru dibuat."
     }
   ],
+  "YXrp+b": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": Perangkat lunak ini sedang diperbarui agar mengharuskan pengguna memberikan alamat penarikan selama pembuatan kunci. Sementara itu, Anda harus mencentang “Lanjutan” selama penyiapan untuk memasukkan alamat penarikan."
+    }
+  ],
+  "YZtVDX": [
+    {
+      "type": 0,
+      "value": "Ups! Periksa kembali nomor indeks validator dan coba lagi."
+    }
+  ],
   "Yd6MEN": [
     {
       "type": 0,
       "value": "Klien eksekusi"
     }
   ],
-  "Yep32z": [
+  "YeJh+/": [
     {
       "type": 0,
-      "value": "Jaringan percobaan "
-    },
+      "value": "Dengan menyelesaikan langkah satu, Anda akan memungkinkan penarikan dari akun validator. Ini akan otomatis memicu pembayaran kelebihan saldo (penarikan parsial) untuk diproses, tetapi ini tidak otomatis membuka kunci dana Anda lainnya, atau memicu keluar dari jaringan."
+    }
+  ],
+  "Yg8vug": [
     {
-      "type": 1,
-      "value": "TESTNET_LAUNCHPAD_NAME"
+      "type": 0,
+      "value": "Pastikan Anda telah memperbarui kredensial penarikan dengan alamat penarikan eksekusi"
     }
   ],
   "Yganfl": [
@@ -3681,6 +4713,12 @@
     {
       "type": 0,
       "value": "Jika Anda kehilangan kunci penarikan Anda, tidak ada cara untuk mengakses dana yang dipegang oleh validator Anda."
+    }
+  ],
+  "Yo9B64": [
+    {
+      "type": 0,
+      "value": "alamat lapisan eksekusi (Eth1)"
     }
   ],
   "YqsgWz": [
@@ -3737,10 +4775,10 @@
       "value": "."
     }
   ],
-  "ZBtnGs": [
+  "ZDI2t3": [
     {
       "type": 0,
-      "value": "Saya telah meninjau daftar periksa."
+      "value": "Menjadi offline dengan jaringan yang sehat tidak akan menyebabkan pemotongan, tetapi akan menyebabkan penalti kecil berupa ketidakaktifan."
     }
   ],
   "ZK6NmY": [
@@ -3767,20 +4805,6 @@
       "value": "Mengapa ada waktu tunggu?"
     }
   ],
-  "ZdT9Bs": [
-    {
-      "type": 0,
-      "value": "Validator Anda juga akan menerima biaya gas yang tidak terbakar saat mengusulkan blok. Validator dipilih secara acak oleh protokol untuk mengusulkan blok, dan hanya satu validator yang dapat mengusulkan sebuah blok untuk setiap ruang 12 detik. Ada 7200 ruang setiap hari, jadi setiap validator memiliki 7200 peluang setiap hari untuk mengusulkan sebuah blok. Jika ada 360.000 validator, setiap validator akan memiliki usulan blok "
-    },
-    {
-      "type": 1,
-      "value": "average"
-    },
-    {
-      "type": 0,
-      "value": " setiap 50 hari."
-    }
-  ],
   "ZsXdlw": [
     {
       "type": 0,
@@ -3793,16 +4817,48 @@
       "value": "Bagian 1 - Sebelum Anda mulai"
     }
   ],
+  "ZtpRuA": [
+    {
+      "type": 0,
+      "value": "Instal dan atur virtualenv:"
+    }
+  ],
   "ZzTcj5": [
     {
       "type": 0,
       "value": "Unduh python3 dan ikuti petunjuk instalasi."
     }
   ],
+  "a+Xw/D": [
+    {
+      "type": 0,
+      "value": "Ini juga disebut sebagai “penarikan parsial” atau “pembayaran imbalan” karena 32 ETH yang tersisa tetap dikunci dan dipertaruhkan."
+    }
+  ],
   "a+xjjV": [
     {
       "type": 0,
       "value": "Menjadi validator dengan Prysm"
+    }
+  ],
+  "a/140i": [
+    {
+      "type": 0,
+      "value": "Antrean keluar dan antrean aktivasi"
+    }
+  ],
+  "a9ats7": [
+    {
+      "type": 0,
+      "value": "Jika Anda bersiap melakukan setoran untuk mengaktifkan validator baru, Anda dapat (dan harus) memberikan alamat penarikan dengan setoran awal Anda. Ini dilakukan pada saat pembuatan kunci, dan kemudian disertakan dalam file "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " yang dikirimkan bersama transaksi setoran 32 ETH Anda."
     }
   ],
   "aDomwX": [
@@ -3815,6 +4871,18 @@
     {
       "type": 0,
       "value": "2. Mempersiapkan node"
+    }
+  ],
+  "aEpxVo": [
+    {
+      "type": 0,
+      "value": "Akun aktif dengan saldo efektif atau total saldo kurang dari 32 akan dilewatkan"
+    }
+  ],
+  "aR50Oc": [
+    {
+      "type": 0,
+      "value": "Untuk keluar dari penaruhan dan menarik sepenuhnya seluruh saldo yang tersisa, Anda harus melakukan dua hal:"
     }
   ],
   "aS6dBe": [
@@ -3861,16 +4929,22 @@
       "value": " ETH yang dipertaruhkan."
     }
   ],
-  "b4csjU": [
+  "b5LQY1": [
     {
       "type": 0,
-      "value": "Namun, perlu diingat bahwa di masa mendatang, setelah Anda keluar, tidak ada jalan untuk kembali."
+      "value": "Perhatikan bahwa antrean \"penarikan\" dan \"BLS-untuk-eksekusi\" bersifat independen dan tidak saling bersaing. Masing-masing dibatasi berdasarkan blok."
     }
   ],
   "b8APBK": [
     {
       "type": 0,
       "value": "Selengkapnya tentang keragaman klien"
+    }
+  ],
+  "bMMVVN": [
+    {
+      "type": 0,
+      "value": "Saat ini tidak ada cara bagi Anda untuk mengaktifkan kembali validator, dan Anda tidak akan dapat mentransfer atau menarik dana sampai penarikan diaktifkan dengan peningkatan Shanghai/Capella. Ini berarti dana Anda tetap tidak dapat diakses sampai saat itu."
     }
   ],
   "bNFkSo": [
@@ -3903,6 +4977,12 @@
       "value": "Pastikan untuk memperhitungkan cukup ruang pada drive Anda sampai Anda menjalankan pemeliharaan pada node Anda."
     }
   ],
+  "bat2FM": [
+    {
+      "type": 0,
+      "value": "setelah"
+    }
+  ],
   "bbr+aD": [
     {
       "type": 0,
@@ -3919,16 +4999,34 @@
       "value": " adalah manusia yang memastikan perangkat lunak klien berjalan dengan benar, memelihara perangkat keras sesuai kebutuhan."
     }
   ],
+  "bembWf": [
+    {
+      "type": 0,
+      "value": "Penarikan tidak diaktifkan"
+    }
+  ],
   "bgyJfz": [
     {
       "type": 0,
       "value": "Klien apa saja yang perlu saya jalankan?"
     }
   ],
+  "bhFma7": [
+    {
+      "type": 0,
+      "value": "Selengkapnya tentang penarikan"
+    }
+  ],
   "bnuvhg": [
     {
       "type": 0,
       "value": "Lighthouse dibangun di Rust dan dihadirkan di bawah Lisensi Apache 2.0."
+    }
+  ],
+  "bugMfW": [
+    {
+      "type": 0,
+      "value": "Jika tidak, beralih ke pertanyaan berikutnya"
     }
   ],
   "bxU6sX": [
@@ -3941,6 +5039,20 @@
     {
       "type": 0,
       "value": "Apa yang dimaksud dengan klien validator?"
+    }
+  ],
+  "cE71F9": [
+    {
+      "type": 0,
+      "value": "[Contoh: "
+    },
+    {
+      "type": 1,
+      "value": "fork"
+    },
+    {
+      "type": 0,
+      "value": "]"
     }
   ],
   "cHUoV9": [
@@ -3985,6 +5097,18 @@
       "value": "Online"
     }
   ],
+  "cdkI09": [
+    {
+      "type": 0,
+      "value": "Bagaimana cara mengevaluasi setiap validator untuk penarikan"
+    }
+  ],
+  "chsS1X": [
+    {
+      "type": 0,
+      "value": "Jika tidak, hentikan. Tidak ada penarikan yang akan diproses dan akun akan dilewatkan"
+    }
+  ],
   "chw27s": [
     {
       "type": 0,
@@ -4013,12 +5137,6 @@
     {
       "type": 0,
       "value": "Apa itu kredensial penarikan?"
-    }
-  ],
-  "cyNFM3": [
-    {
-      "type": 0,
-      "value": "Menarik deposit Anda tidak akan dimungkinkan hingga peningkatan Shanghai yang direncanakan setelah Penggabungan."
     }
   ],
   "cyR7Kh": [
@@ -4065,6 +5183,12 @@
     {
       "type": 0,
       "value": "Prysm adalah implementasi klien konsensus Go dari protokol Ethereum dengan fokus pada kegunaan, keamanan, dan keandalan."
+    }
+  ],
+  "dLE9FH": [
+    {
+      "type": 0,
+      "value": "Jika tidak, tidak ada penarikan yang akan diproses dan akun akan dilewatkan"
     }
   ],
   "dM/KIM": [
@@ -4141,6 +5265,18 @@
       "value": "code3"
     }
   ],
+  "e4mdEQ": [
+    {
+      "type": 0,
+      "value": "Pastikan Anda memiliki kendali atas alamat ini karena ini tidak dapat diubah."
+    }
+  ],
+  "eD1NDX": [
+    {
+      "type": 0,
+      "value": "Menarik setoran Anda tidak akan dimungkinkan hingga peningkatan Shanghai/Capella yang direncanakan setelah Q1/Q2 2023."
+    }
+  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -4159,6 +5295,42 @@
       "value": "Ini menentukan siapa yang mempertaruhkan, siapa yang memvalidasi, berapa banyak yang dipertaruhkan, dan siapa yang dapat menarik dana."
     }
   ],
+  "eP2Czm": [
+    {
+      "type": 0,
+      "value": "Saya memahami bahwa saya "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " taruhan saya hingga peningkatan Shanghai/Capella, dan saya "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " antar validator. Saya memahami bahwa jika saya keluar, saya tidak akan dapat bergabung kembali hingga saat itu. Penaruhan adalah komitmen."
+    }
+  ],
+  "eTenzU": [
+    {
+      "type": 0,
+      "value": "antrean aktivasi"
+    }
+  ],
   "eX072N": [
     {
       "type": 0,
@@ -4169,6 +5341,12 @@
     {
       "type": 0,
       "value": "Untuk memaksimalkan keamanan dan efisiensi node Anda, gunakan perangkat keras khusus untuk menjalankan klien Anda. Hal ini mengurangi risiko terkena malware dan meminimalkan persaingan untuk sumber daya komputasi, memastikan node Anda menangani beban jaringan dan tanggung jawab validatornya setiap saat."
+    }
+  ],
+  "eatd1u": [
+    {
+      "type": 0,
+      "value": "Kami akan membantu Anda membuat kunci penandatanganan untuk setiap validator yang ingin dijalankan. Anda dapat memilih memberikan alamat penarikan untuk validator Anda saat membuat data setoran, yang akan mengatur alamat penarikan secara permanen."
     }
   ],
   "elCkOU": [
@@ -4277,10 +5455,34 @@
       "value": "Selama penyiapan"
     }
   ],
+  "fRCqob": [
+    {
+      "type": 0,
+      "value": "Akun yang telah ditarik sepenuhnya dan memiliki saldo nol akan dilewatkan"
+    }
+  ],
+  "fSi2R/": [
+    {
+      "type": 0,
+      "value": "Informasi untuk operator validator terkait penarikan penaruhan."
+    }
+  ],
+  "fU1Pp5": [
+    {
+      "type": 0,
+      "value": "Anda dapat memilih memberikan alamat penarikan dengan setoran awal agar otomatis mengaktifkan pembayaran imbalan dan juga kemampuan untuk mengeluarkan dana Anda sepenuhnya setelah peningkatan Shanghai/Capella. Alamat ini harus alamat Ethereum yang biasa dan akan menjadi satu-satunya alamat yang dapat dikirimi dana dari akun validator baru Anda."
+    }
+  ],
   "fZwn+P": [
     {
       "type": 0,
       "value": "Setelah penginstalan klien, pastikan Anda disinkronkan sepenuhnya sebelum mengirimkan deposit penaruhan. Ini bisa memakan waktu beberapa hari."
+    }
+  ],
+  "fa8Quz": [
+    {
+      "type": 0,
+      "value": "Namun, perlu diingat bahwa hingga peningkatan Shanghai/Capella yang direncanakan untuk Q1/Q2 2023, setelah Anda keluar, tidak ada cara untuk kembali."
     }
   ],
   "fbiteI": [
@@ -4307,6 +5509,12 @@
       "value": "Menyinkronkan klien eksekusi Anda mungkin memakan waktu beberapa hari dalam skenario terburuk."
     }
   ],
+  "fzrOtJ": [
+    {
+      "type": 0,
+      "value": "Pengaturan waktu ruang lapisan konsensus: 12 detik (tidak ada rencana untuk diubah)"
+    }
+  ],
   "g/DxI7": [
     {
       "type": 0,
@@ -4331,10 +5539,22 @@
       "value": "Lebih lanjut tentang virtualenv"
     }
   ],
-  "gIauNz": [
+  "g8tzOu": [
     {
       "type": 0,
-      "value": "Anda akan melihat bahwa Anda memiliki satu keystore per validator. Keystore ini berisi kunci penandatanganan Anda, yang dienkripsi dengan sandi Anda. Anda dapat menggunakan mnemonik Anda demi menghasilkan kunci penarikan Anda saat ingin menarik."
+      "value": "Tempelkan alamat yang Anda pilih di sini untuk menyertakannya dalam perintah CLI salin/tempel di bawah ini:"
+    }
+  ],
+  "gFj3By": [
+    {
+      "type": 0,
+      "value": "sangat bervariasi"
+    }
+  ],
+  "gHJegi": [
+    {
+      "type": 0,
+      "value": "Validator masih harus menyelesaikan tugas validasi hingga mereka keluar"
     }
   ],
   "gN9D/h": [
@@ -4361,6 +5581,12 @@
     {
       "type": 0,
       "value": "Ini menggunakan kata sandi yang dibantu di folder rahasia Anda."
+    }
+  ],
+  "gWC0Rt": [
+    {
+      "type": 0,
+      "value": "Seperti jarum jam, proses ini berlangsung dalam satu arah, dan ketika mencapai validator terakhir, penyisiran akan dimulai lagi dari awal. Di setiap validator selama ini, akun dievaluasi untuk potensi penarikan."
     }
   ],
   "gfLdAQ": [
@@ -4451,6 +5677,12 @@
       "value": "jam"
     }
   ],
+  "gzXQDW": [
+    {
+      "type": 0,
+      "value": "Jangka waktu yang dapat ditarik"
+    }
+  ],
   "h/n5+N": [
     {
       "type": 0,
@@ -4467,6 +5699,12 @@
     {
       "type": 0,
       "value": "Hindari penyiapan yang terlalu rumit dan waspadai kompromi. Luring dalam periode waktu yang singkat akan mengakibatkan penalti ketidakaktifan kecil, tetapi akan diperoleh kembali dengan mudah setelah kembali daring selama jangka waktu yang kurang lebih sama. Cadangan daya yang rumit dapat menambah biaya penyiapan Anda, dan validator cadangan yang berlebihan dapat menyebabkan penalti yang lebih serius yang dikenal sebagai pemotongan."
+    }
+  ],
+  "hCwX6+": [
+    {
+      "type": 0,
+      "value": "Antrean BLS Untuk Perubahan Eksekusi (BTEC)"
     }
   ],
   "hFzE1M": [
@@ -4561,12 +5799,6 @@
       "value": "Saya memahami bahwa penting untuk menjaga validator saya tetap online dan terbarukan."
     }
   ],
-  "i7alIW": [
-    {
-      "type": 0,
-      "value": "Ini menjadi persyaratan pada saat Penggabungan, jadi pastikan Anda menjalankan keduanya sebelum penaruhan."
-    }
-  ],
   "iCpuph": [
     {
       "type": 0,
@@ -4577,6 +5809,18 @@
     {
       "type": 0,
       "value": "Anda dapat menganggap kontrak deposit sebagai transfer dana dari akun Ethereum ke akun validator bukti taruhan."
+    }
+  ],
+  "iJXdUH": [
+    {
+      "type": 0,
+      "value": "dokumen"
+    }
+  ],
+  "iK1COM": [
+    {
+      "type": 0,
+      "value": "Akun tanpa pembaruan kredensial penarikan akan dilewatkan"
     }
   ],
   "iMvXLd": [
@@ -4605,12 +5849,6 @@
     {
       "type": 0,
       "value": " ETH dipilih sebagai saldo antara memungkinkan sebanyak mungkin orang untuk mempertaruhkan tanpa menghambat desentralisasi dengan membengkakkan ukuran setiap blok dengan tanda tangan."
-    }
-  ],
-  "iPRnRG": [
-    {
-      "type": 0,
-      "value": "Dengan transfer yang dinonaktifkan untuk saat ini, Anda tidak akan dapat keluar secara sukarela untuk kemudian memulai ulang nanti. Ini berarti Anda harus berada di dalamnya untuk jangka panjang."
     }
   ],
   "iX90gu": [
@@ -4653,10 +5891,22 @@
       "value": "Saya telah mengimpor keystore saya ke klien validator saya."
     }
   ],
+  "iouULJ": [
+    {
+      "type": 0,
+      "value": "Jumlah ruang kosong (peluang blok yang terlewatkan, bisa bervariasi, biasanya minimal)"
+    }
+  ],
   "iqJ3LM": [
     {
       "type": 0,
       "value": "PegaSys Teku adalah klien konsensus Ethereum berbasis Java yang dibangun untuk memenuhi kebutuhan institusional dan persyaratan keamanan."
+    }
+  ],
+  "irh2nI": [
+    {
+      "type": 0,
+      "value": "Karena itu, sebaiknya buat kunci Anda dari mnemonik yang berfungsi sebagai cadangan lain. Ini adalah default untuk validator yang bergabung melalui proses orientasi situs ini."
     }
   ],
   "isGKnz": [
@@ -4675,10 +5925,22 @@
       "value": "totalTxCount"
     }
   ],
+  "j2f6y2": [
+    {
+      "type": 0,
+      "value": "Alamat penarikan belum diatur untuk validator ini. Dana yang dipertaruhkan dan imbalan akan tetap dikunci hingga kredensial penarikan diberikan."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
       "value": "Sebelumnya dikenal sebagai Artemis, Teku adalah klien konsensus yang dibangun untuk memenuhi kebutuhan institusional dan persyaratan keamanan. PegaSys adalah cabang dari ConsenSys, yang didedikasikan untuk membangun klien dan perangkat yang siap untuk perusahaan untuk berinteraksi dengan platform inti Ethereum."
+    }
+  ],
+  "jGVfQG": [
+    {
+      "type": 0,
+      "value": "Empat (4) validator keluar diizinkan per jangka waktu, ditambah satu (1) lagi untuk setiap total 65.536 validator aktif atas 327.680. Mulai Februari 2023 batas ini adalah tujuh (7), dan akan meningkat hingga (8) jika/bila jumlah validator mencapai 524.288."
     }
   ],
   "jXer8/": [
@@ -4723,12 +5985,6 @@
       "value": "Dokumentasi tentang menjalankan Geth"
     }
   ],
-  "jm79h1": [
-    {
-      "type": 0,
-      "value": "Peringatan: Jangan menyimpan kunci pada beberapa validator (cadangan) sekaligus"
-    }
-  ],
   "jp9OG2": [
     {
       "type": 0,
@@ -4737,6 +5993,16 @@
     {
       "type": 1,
       "value": "ethClientType"
+    }
+  ],
+  "jrK21r": [
+    {
+      "type": 0,
+      "value": "Anda dapat menemukan file biner di "
+    },
+    {
+      "type": 1,
+      "value": "pr"
     }
   ],
   "jse8rl": [
@@ -4757,6 +6023,12 @@
       "value": "Dokumentasi Nimbus"
     }
   ],
+  "k/4DOL": [
+    {
+      "type": 0,
+      "value": "Penarikan penuh"
+    }
+  ],
   "k43c+l": [
     {
       "type": 0,
@@ -4767,6 +6039,26 @@
     {
       "type": 0,
       "value": "Ini menandai penggabungan lapisan eksekusi (Jaringan Utama yang ada) dengan lapisan konsensus baru (Rantai Suar) untuk membentuk rantai Ethereum tunggal saat ini."
+    }
+  ],
+  "k67L48": [
+    {
+      "type": 0,
+      "value": "Instal dependensi:"
+    }
+  ],
+  "k8bkck": [
+    {
+      "type": 0,
+      "value": "EIP-4895, berjudul "
+    },
+    {
+      "type": 1,
+      "value": "eip4895"
+    },
+    {
+      "type": 0,
+      "value": ", menerapkan desain yang menyederhanakan seluruh proses ini bagi penaruh."
     }
   ],
   "kFS5Sd": [
@@ -4785,6 +6077,26 @@
     {
       "type": 0,
       "value": "Apakah URL tersebut cocok dengan yang Anda lihat di situs web lain?"
+    }
+  ],
+  "kRQqpE": [
+    {
+      "type": 0,
+      "value": "Waktu untuk penyelesaian"
+    }
+  ],
+  "kSt9db": [
+    {
+      "type": 0,
+      "value": "Sejak peningkatan Shanghai/Capella, penarikan telah diaktifkan di Rantai Suar, dengan penyertaan "
+    },
+    {
+      "type": 1,
+      "value": "eip"
+    },
+    {
+      "type": 0,
+      "value": ". Proposal Peningkatan Ethereum ini memungkinkan imbalan otomatis ditarik ke lapisan eksekusi, dan juga memberikan cara bagi validator yang keluar untuk membuka kunci seluruh saldo mereka—gas tidak diperlukan."
     }
   ],
   "kTt/ND": [
@@ -4853,12 +6165,6 @@
       "value": "Keluar"
     }
   ],
-  "kzGlnG": [
-    {
-      "type": 0,
-      "value": "Imbalan dan penalti diberikan kira-kira setiap enam setengah menit—periode waktu yang dikenal sebagai jangka waktu."
-    }
-  ],
   "l/uCcX": [
     {
       "type": 0,
@@ -4893,6 +6199,12 @@
       "value": " saya ke dalam kontrak setoran yang benar dan akan melakukannya."
     }
   ],
+  "l4sDVJ": [
+    {
+      "type": 0,
+      "value": "antrean keluar"
+    }
+  ],
   "l5XCJW": [
     {
       "type": 0,
@@ -4909,6 +6221,20 @@
     {
       "type": 0,
       "value": "Pertama, buat virtualenv venv di bawah direktori repositori:"
+    }
+  ],
+  "l926sJ": [
+    {
+      "type": 0,
+      "value": "Jika demikian, "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " akan diproses"
     }
   ],
   "lD66ab": [
@@ -5025,28 +6351,6 @@
       "value": "Mengimpor dari dokumentasi Launchpad"
     }
   ],
-  "ljWKM1": [
-    {
-      "type": 0,
-      "value": "Penarikan BLS: Secara default, deposit-cli akan menghasilkan kredensial penarikan dengan "
-    },
-    {
-      "type": 1,
-      "value": "boldWithdrawalKey"
-    },
-    {
-      "type": 0,
-      "value": " yang diturunkan melalui mnemonik dalam format "
-    },
-    {
-      "type": 1,
-      "value": "eip2334"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -5077,10 +6381,30 @@
       "value": "Sejak keberhasilan transisi ke bukti taruhan melalui Penggabungan, Ethereum diamankan sepenuhnya oleh validator bukti taruhan. Dengan menjalankan validator, Anda akan membantu mengamankan jaringan Ethereum."
     }
   ],
+  "mROPz+": [
+    {
+      "type": 0,
+      "value": "Saya memberikan alamat Ethereum saat membuat file "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " sebelum melakukan penyetoran di mana saya ingin semua imbalan validator dan penarikan akan disetorkan."
+    }
+  ],
   "mUZnem": [
     {
       "type": 0,
       "value": "Kami sangat menyarankan agar Anda melalui seluruh prosesnya di jaringan percobaan terlebih dahulu agar merasa nyaman sebelum mempertaruhkan ETH yang sebenarnya."
+    }
+  ],
+  "mXSzq5": [
+    {
+      "type": 0,
+      "value": "Opsi 1: file biner"
     }
   ],
   "mZOXtM": [
@@ -5097,6 +6421,18 @@
     {
       "type": 0,
       "value": " adalah entitas virtual yang ada di Rantai Suar, yang diwakili oleh saldo, kunci publik, dan properti lainnya, dan berpartisipasi dalam konsensus jaringan Ethereum."
+    }
+  ],
+  "mcyp2f": [
+    {
+      "type": 0,
+      "value": "Selengkapnya tentang frekuensi pembayaran di bawah ini."
+    }
+  ],
+  "mdmA4f": [
+    {
+      "type": 0,
+      "value": "Jumlah penarikan"
     }
   ],
   "mhyltV": [
@@ -5121,6 +6457,30 @@
     {
       "type": 0,
       "value": "Resiko dan pernyataan:"
+    }
+  ],
+  "muV9Fg": [
+    {
+      "type": 0,
+      "value": "Validator baru (belum melakukan penyetoran)"
+    }
+  ],
+  "n2Dn3F": [
+    {
+      "type": 0,
+      "value": "Antrean penarikan"
+    }
+  ],
+  "n4o1vR": [
+    {
+      "type": 0,
+      "value": "Cara keluar dari penaruhan (penarikan penuh)"
+    }
+  ],
+  "n5PQND": [
+    {
+      "type": 0,
+      "value": "Jangka waktu keluar"
     }
   ],
   "nBhisA": [
@@ -5159,6 +6519,12 @@
     {
       "type": 0,
       "value": " yang dikirim dalam setoran ganda tidak akan dihitung dalam saldo validator efektif saya dan saya tidak dapat menariknya."
+    }
+  ],
+  "naHAvS": [
+    {
+      "type": 0,
+      "value": "Mengaktifkan penarikan"
     }
   ],
   "ndhFef": [
@@ -5201,6 +6567,12 @@
       "value": "TESTNET_LAUNCHPAD_NAME"
     }
   ],
+  "nyOMKZ": [
+    {
+      "type": 0,
+      "value": "Eksekusi dengan parameter"
+    }
+  ],
   "nz27+c": [
     {
       "type": 0,
@@ -5229,10 +6601,22 @@
       "value": "Sebelum Anda mulai"
     }
   ],
+  "o9rUg+": [
+    {
+      "type": 0,
+      "value": "Penarikan diaktifkan"
+    }
+  ],
   "oF4os+": [
     {
       "type": 0,
       "value": "Saat ini Prysm digunakan oleh >33% jaringan."
+    }
+  ],
+  "oF6xvJ": [
+    {
+      "type": 0,
+      "value": "Basis Pengetahuan EthStaker"
     }
   ],
   "oLxfO1": [
@@ -5343,6 +6727,12 @@
       "value": " untuk menyinkronkan testnet Goerli."
     }
   ],
+  "p+kDTB": [
+    {
+      "type": 0,
+      "value": "Pengguna Ethereum digunakan untuk transaksi yang akan dijalankan dengan cara manual—jika Anda ingin mentransfer dana, Anda harus menandatangani transaksi dan membayar gas."
+    }
+  ],
   "p0b6zX": [
     {
       "type": 0,
@@ -5381,16 +6771,44 @@
       "value": "Luncurkan aplikasi dari lingkungan desktop Anda dengan mengklik dua kali aplikasi tersebut."
     }
   ],
+  "pQxML4": [
+    {
+      "type": 0,
+      "value": "Buat file "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    }
+  ],
+  "pWuGLy": [
+    {
+      "type": 0,
+      "value": "Saat validator dijadwalkan untuk mengusulkan blok berikutnya, akan dijalankan penyisiran akun validator untuk mencari penarikan yang memenuhi syarat. Selama penyisiran, validator akan memeriksa maksimal 16.384 akun, berupaya menemukan 16 penarikan yang tersedia untuk diproses di blok berikutnya."
+    }
+  ],
   "pXyH++": [
     {
       "type": 0,
       "value": "Dokumentasi Besu menjelaskan cara mengunduh dan menginstal klien."
     }
   ],
+  "pb2jYe": [
+    {
+      "type": 0,
+      "value": "Perangkat ini akan membantu Anda membuat kunci dan pesan yang diperlukan untuk penandatanganan. Pesan yang ditandatangani dapat disiarkan ke blok yang dimulai dengan peningkatan Shanghai/Capella."
+    }
+  ],
   "pfJX2D": [
     {
       "type": 0,
       "value": "Lebih lanjut tentang phishing"
+    }
+  ],
+  "plXBe0": [
+    {
+      "type": 0,
+      "value": "Perangkat simpul alternatif:"
     }
   ],
   "pnxB8A": [
@@ -5427,36 +6845,46 @@
       "value": "Ringkasan deposit"
     }
   ],
-  "q/ZayM": [
-    {
-      "type": 0,
-      "value": "Fitur penarikan diusulkan untuk dimasukkan dalam peningkatan Shanghai yang akan datang. Setelah fungsionalitas ini ditambahkan, saldo Anda kemudian dapat ditarik—dengan kunci penarikan Anda—setelah penundaan minumum sekitar satu hari."
-    }
-  ],
-  "q2XW/k": [
-    {
-      "type": 0,
-      "value": "Jika kunci penarikan Anda dicuri, pencuri dapat mentransfer saldo validator Anda, tetapi hanya setelah validator keluar."
-    }
-  ],
   "qB6aU6": [
     {
       "type": 0,
       "value": "Apa yang terjadi pada 'Eth2?'"
     }
   ],
-  "qDvaNm": [
+  "qBorVY": [
     {
       "type": 0,
-      "value": "Saya memahami bahwa kunci merupakan tanggung jawab saya dan mnemonik (benih) saya akan menjadi "
+      "value": "Jangka waktu keluar dan jangka waktu yang dapat ditarik"
+    }
+  ],
+  "qIDtPw": [
+    {
+      "type": 0,
+      "value": "Untuk memungkinkan validator Rantai Suar menarik saldo secara otomatis ke "
     },
     {
       "type": 1,
-      "value": "onlyWay"
+      "value": "exeuctionAddress"
     },
     {
       "type": 0,
-      "value": " untuk menarik dana saya."
+      "value": ", Anda dapat menggunakan perangkat "
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": " untuk membuat file JSON pesan "
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ". Pesan ini menyertakan permintaan untuk mengubah kredensial penarikan BLS lama Anda ke kredensial penarikan baru dalam format alamat eksekusi."
     }
   ],
   "qK4+NQ": [
@@ -5495,10 +6923,22 @@
       "value": "hubungkan ulang dompet Anda"
     }
   ],
+  "qkEXNd": [
+    {
+      "type": 0,
+      "value": "CLI Setoran Penaruhan"
+    }
+  ],
   "qkhah0": [
     {
       "type": 0,
       "value": "Simpan file kunci dan siapkan file validator"
+    }
+  ],
+  "qntIRb": [
+    {
+      "type": 0,
+      "value": "Jika ini tidak diberikan, kunci penarikan akan diperlukan untuk menandatangani pesan yang menyatakan alamat penarikan. Ini memerlukan akses ke mnemonik yang digunakan saat menyiapkan kunci."
     }
   ],
   "qwh6gM": [
@@ -5511,6 +6951,16 @@
     {
       "type": 0,
       "value": "JWT"
+    }
+  ],
+  "r/G+qN": [
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " diproses untuk aktivitas validator yang tidak aktif yang tidak lagi dianggap sebagai penaruhan, yang telah keluar sepenuhnya dari tanggung jawab validasi mereka. Jadi agar validator dapat menarik saldonya sepenuhnya, mereka harus menyelesaikan proses keluar terlebih dahulu."
     }
   ],
   "r2BH1M": [
@@ -5561,6 +7011,12 @@
     {
       "type": 0,
       "value": "Selesaikan daftar periksa Staker"
+    }
+  ],
+  "rW+ivM": [
+    {
+      "type": 0,
+      "value": "Selengkapnya tentang Lodestar"
     }
   ],
   "raRw6Z": [
@@ -5625,20 +7081,6 @@
       "value": "Ringkasan Launchpad"
     }
   ],
-  "rxttyC": [
-    {
-      "type": 0,
-      "value": "Mnemonik Anda adalah cadangan untuk kunci penandatanganan Anda dan akan menjadi SATU-SATUNYA cara untuk menarik "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " Anda ketika tiba waktunya dan tidak ada yang dapat membantu Anda memulihkan mnemonik Anda jika Anda kehilangannya."
-    }
-  ],
   "s6gImC": [
     {
       "type": 0,
@@ -5651,10 +7093,22 @@
       "value": "Klien konsensus dengan fokus utama pada kecepatan dan keamanan. Dibangun oleh Sigma Prime, perusahaan keamanan informasi dan rekayasa perangkat lunak yang telah mendanai Lighthouse bersama dengan Yayasan Ethereum, Consensys, dan perorangan."
     }
   ],
+  "sToVAS": [
+    {
+      "type": 0,
+      "value": "Produser blok kemudian memeriksa validator berikutnya, dan sekali lagi setelah menentukan apakah penarikan perlu diproses atau tidak. Proses ini diulangi hingga 16 penarikan yang memenuhi syarat ditemukan, atau hingga 16.384 validator telah diperiksa, mana pun yang terlebih dahulu dicapai. Pada saat itu, antrean penarikan dikirimkan ke lapisan eksekusi untuk disertakan pada akhir blok berikutnya."
+    }
+  ],
   "sXV95+": [
     {
       "type": 0,
       "value": "CPU dan RAM"
+    }
+  ],
+  "sZK38z": [
+    {
+      "type": 0,
+      "value": "Alih-alih jenis transaksi baru yang akan digunakan bagi penaruh untuk meminta penarikan secara manual, akun otomatis diperiksa atas kelebihan saldo yang memenuhi syarat setiap beberapa hari. Semua validator diperiksa pada putaran tanpa akhir, dan imbalan yang tersedia atau dana yang dikeluarkan otomatis “didorong” ke akun penarikan yang diberikan."
     }
   ],
   "sj/Zef": [
@@ -5667,6 +7121,26 @@
     {
       "type": 0,
       "value": "Simpul Suar Lapisan Konsensus (BN)"
+    }
+  ],
+  "smTQJU": [
+    {
+      "type": 0,
+      "value": "Alamat penarikan untuk validator ini akan diatur ke "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ". Pastikan 100% Anda yang mengendalikan alamat ini sebelum melakukan penyetoran, karena ini tidak dapat diubah."
+    }
+  ],
+  "smd9Oc": [
+    {
+      "type": 0,
+      "value": "Indeks validator"
     }
   ],
   "soCLV+": [
@@ -5711,10 +7185,10 @@
       "value": "Pelajari selengkapnya tentang penggantian nama yang hebat"
     }
   ],
-  "taENNR": [
+  "tWoq1e": [
     {
       "type": 0,
-      "value": "Saat ini tidak ada cara bagi Anda untuk mengaktifkan kembali validator, dan Anda tidak akan dapat mentransfer atau menarik dana sampai penarikan diaktifkan. Hal ini diusulkan untuk dimasukkan dalam meningkatkan jaringan berikutnya, yang dikenal sebagai peningkatan Shanghai. Ini berarti dana Anda tetap tidak dapat diakses sampai saat itu."
+      "value": "Jumlah maksimal akun yang dapat diperiksa dalam satu blok. Hentikan ketika 16 penarikan ditemukan. Jika 16 imbalan yang memenuhi syarat tidak ditemukan di 16.384 akun pertama yang diperiksa, antrean penarikan untuk blok tersebut akan dikirimkan apa adanya, dan pengusul berikutnya akan melanjutkannya."
     }
   ],
   "tbYkT4": [
@@ -5743,10 +7217,22 @@
       "value": " ini. Ini akan memberi waktu sumber data on-chain kami untuk menandai setiap setoran duplikat."
     }
   ],
+  "tjEnDp": [
+    {
+      "type": 0,
+      "value": "Berapa lama waktu yang dibutuhkan siklus untuk memeriksa setiap akun bergantung pada:"
+    }
+  ],
   "tkFTZw": [
     {
       "type": 0,
       "value": "Saldo setelah isi ulang"
+    }
+  ],
+  "tlVvjH": [
+    {
+      "type": 0,
+      "value": "Menjadi validator dengan Lodestar"
     }
   ],
   "tsfX5f": [
@@ -5805,12 +7291,6 @@
       "value": "Setelah melakukan deposit"
     }
   ],
-  "u4em9Z": [
-    {
-      "type": 0,
-      "value": "Setelah Penggabungan, validator juga akan bertanggung jawab untuk memroses transaksi, dan oleh karena itu berhak atas biaya gas yang tidak terbakar yang terkait dengan transaksi yang disertakan saat mengusulkan blok. Biaya ini diperhitungkan pada lapisan eksekusi, bukan lapisan konsensus, dan oleh karena itu mengharuskan alamat Ethereum tradisional diberikan kepada klien Anda."
-    }
-  ],
   "u564LK": [
     {
       "type": 0,
@@ -5823,10 +7303,38 @@
       "value": "Waktu nyala"
     }
   ],
+  "uDMtC8": [
+    {
+      "type": 0,
+      "value": "Seperti yang diketahui oleh semua orang yang telah melakukan proses mengaktifkan validator, proses ini tidak otomatis, terutama jika ada banyak pengguna lain yang mencoba bergabung pada saat yang sama. Ini karena lapisan konsensus menggunakan "
+    },
+    {
+      "type": 1,
+      "value": "activationQueue"
+    },
+    {
+      "type": 0,
+      "value": " untuk membatasi seberapa cepat akun validator baru dapat "
+    },
+    {
+      "type": 1,
+      "value": "join"
+    },
+    {
+      "type": 0,
+      "value": " dengan jaringan."
+    }
+  ],
   "uJzGSb": [
     {
       "type": 0,
       "value": "Pastikan Anda mengetahui cara menghindari serangan phishing. Kami telah menyiapkan daftar hal-hal yang harus diperhatikan."
+    }
+  ],
+  "uMpYkE": [
+    {
+      "type": 0,
+      "value": "Jika Anda memberikan alamat penarikan saat pertama kali membuat kunci, kunci penarikan tidak lagi digunakan. Satu-satunya alamat yang dapat ditransfer dana oleh validator adalah alamat ini, dan ini tidak dapat diubah setelah ditetapkan."
     }
   ],
   "uNfxNg": [
@@ -5843,6 +7351,26 @@
     {
       "type": 0,
       "value": "Daftar periksa validator"
+    }
+  ],
+  "uUkmGX": [
+    {
+      "type": 0,
+      "value": "jangka waktu keluar"
+    }
+  ],
+  "uYF99H": [
+    {
+      "type": 0,
+      "value": "Meskipun suara validator dihitung berdasarkan jumlah yang dipertaruhkan, bobot suara setiap validator dimulai pada, dan dibatasi pada "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ". Dimungkinkan untuk turun di bawah ini dengan kinerja simpul yang buruk, tetapi tidak dimungkinkan untuk naik di atasnya."
     }
   ],
   "ubKWX8": [
@@ -5977,6 +7505,28 @@
       "value": "Bahasa Mandarin (yang disederhanakan)"
     }
   ],
+  "vZxdbJ": [
+    {
+      "type": 0,
+      "value": "Setelah penarikan diaktifkan dengan peningkatan Shanghai/Capella, validator dengan saldo efektif maksimal dan alamat penarikan eksekusi tertaut akan memiliki saldo melebihi "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " yang akan otomatis ditarik sebagai kelebihan saldo."
+    }
+  ],
   "vbVsqW": [
     {
       "type": 0,
@@ -5991,10 +7541,22 @@
       "value": " sesegeraa mungkin. Kemudian bergabunglah dengan komunitas EthStaker untuk mendapatkan dukungan dan diskusi dengan sesama validator."
     }
   ],
+  "vz8WK7": [
+    {
+      "type": 0,
+      "value": "Ini terjadi 256 jangka waktu setelah jangka waktu keluar, yang butuh waktu ~27,3 jam."
+    }
+  ],
   "w6qYSU": [
     {
       "type": 0,
       "value": "Jalankan perintah berikut untuk meluncurkan aplikasi"
+    }
+  ],
+  "wDlux8": [
+    {
+      "type": 0,
+      "value": "Anda masih dapat keluar dari validator secara sukarela agar dikeluarkan dari rangkaian validator aktif, tetapi hingga penarikan diaktifkan, dana ini akan tetap dikunci dan tidak dapat ditarik atau dipertaruhkan ulang."
     }
   ],
   "wJ1PbL": [
@@ -6037,6 +7599,28 @@
       "value": "Jalankan perintah berikut:"
     }
   ],
+  "wpM7Y5": [
+    {
+      "type": 0,
+      "value": "Salah satu antrean yang perlu diperhatikan adalah antrean yang membatasi berapa banyak alamat penarikan ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") BLS yang dapat diperbarui ke alamat eksekusi ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") selama blok tertentu."
+    }
+  ],
   "wqUcy/": [
     {
       "type": 0,
@@ -6047,6 +7631,12 @@
     {
       "type": 0,
       "value": "Apakah ada kesalahan ejaan?"
+    }
+  ],
+  "wtwIax": [
+    {
+      "type": 0,
+      "value": "Opsi 2: kode sumber + virtualenv"
     }
   ],
   "x+fF+M": [
@@ -6067,28 +7657,6 @@
       "value": "Kami sangat menyarankan Anda menyelesaikan langkah-langkah ini di jaringan percobaan sebelum Jaringan Utama."
     }
   ],
-  "x9xppN": [
-    {
-      "type": 0,
-      "value": "Dengan selesainya transisi ke bukti taruhan melalui Penggabungan, sekarang validator akan bertanggung jawab untuk memroses transaksi dan menandatangani validitasnya. Data ini "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " akan tersedia dari sumber pihak ketiga yang populer setelah Penggabungan. Penggunaan penyedia pihak ketiga akan menyebabkan validator Anda luring. Ketika pecahan data diimplementasikan, validator juga akan berisiko mendapatkan pemotongan berdasarkan "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "xDyl3T": [
     {
       "type": 0,
@@ -6099,10 +7667,22 @@
       "value": "ethereumorg"
     }
   ],
+  "xGQ38+": [
+    {
+      "type": 0,
+      "value": "Apakah validator telah menyelesaikan proses keluar?"
+    }
+  ],
   "xH5GKj": [
     {
       "type": 0,
       "value": "Saya adalah pengguna awal, dan saya menerima bahwa bug perangkat lunak dan desain dapat menyebabkan saya dipotong."
+    }
+  ],
+  "xMOzv2": [
+    {
+      "type": 0,
+      "value": "Siapa pun yang ingin menyelesaikan kewajiban penaruhan mereka dapat menandatangani pesan “keluar sukarela” yang kemudian menyiarkannya ke Rantai Suar untuk memulai proses tersebut. Ini adalah langkah manual."
     }
   ],
   "xP6BKs": [
@@ -6143,28 +7723,6 @@
       "value": "Rantai Suar"
     }
   ],
-  "xXntjc": [
-    {
-      "type": 0,
-      "value": "Pastikan Anda telah menyetel "
-    },
-    {
-      "type": 1,
-      "value": "flag"
-    },
-    {
-      "type": 0,
-      "value": " untuk "
-    },
-    {
-      "type": 1,
-      "value": "consensusLayerName"
-    },
-    {
-      "type": 0,
-      "value": ", jika tidak, deposit tidak akan valid."
-    }
-  ],
   "xZZMZ5": [
     {
       "type": 0,
@@ -6177,6 +7735,12 @@
       "value": "Instal python3.7+"
     }
   ],
+  "xh7oVn": [
+    {
+      "type": 0,
+      "value": "Mereka yang ingin keluar dari validator dari penaruhan dan penarikan ETH mereka harus melihat panduan di bawah ini yang sesuai dengan pengaturan Anda:"
+    }
+  ],
   "xm3Ivd": [
     {
       "type": 0,
@@ -6185,6 +7749,28 @@
     {
       "type": 1,
       "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "xns5Uh": [
+    {
+      "type": 0,
+      "value": "Anggaplah Anda telah membuat setoran dalam format "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " dan memiliki kredensial penarikan BLS. Jika tidak, Anda dapat membuatnya dengan mengikuti "
+    },
+    {
+      "type": 1,
+      "value": "docs"
     },
     {
       "type": 0,
@@ -6205,6 +7791,18 @@
     {
       "type": 1,
       "value": "clientName"
+    }
+  ],
+  "xyfoga": [
+    {
+      "type": 0,
+      "value": "Penarikan penaruhan"
+    }
+  ],
+  "xzjRos": [
+    {
+      "type": 0,
+      "value": "Cara memperbarui kunci validator"
     }
   ],
   "xzmWbJ": [
@@ -6273,6 +7871,12 @@
       "value": "Nethermind dibangun di atas .NET Core. Perluas, kustomisasi - tidak ada batasnya .."
     }
   ],
+  "ylZLi4": [
+    {
+      "type": 0,
+      "value": "EIP-2334"
+    }
+  ],
   "ynB6C+": [
     {
       "type": 0,
@@ -6289,6 +7893,28 @@
     {
       "type": 0,
       "value": "Di sisi lain, Anda bisa mendapat penalti karena luring dan berperilaku jahat—misalnya membuktikan blok yang tidak valid atau bertentangan."
+    }
+  ],
+  "z26FXa": [
+    {
+      "type": 0,
+      "value": "Dengan selesainya transisi ke bukti taruhan melalui Penggabungan, validator kini bertanggung jawab untuk memroses transaksi dan menandatangani validitasnya. Data ini "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " tersedia dari sumber pihak ketiga yang populer sejak Penggabungan. Menggunakan penyedia pihak ketiga akan menyebabkan validator Anda offline. Saat pecahan data diterapkan, validator juga akan berisiko terkena pemotongan berdasarkan "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "z63I56": [
@@ -6311,6 +7937,12 @@
       "value": " saya."
     }
   ],
+  "z8zpxp": [
+    {
+      "type": 0,
+      "value": "Lodestar adalah implementasi TypeScript sumber terbuka dari spesifikasi Konsensus Ethereum (sebelumnya dikenal sebagai eth2) yang dikelola oleh Sistem ChainSafe. Tujuan ChainSafe adalah untuk mengembangkan, meningkatkan, dan mendiversifikasi ekosistem bukti taruhan Ethereum dengan rantai suar dan klien validator mereka dengan fokus pada implementasi klien ringan."
+    }
+  ],
   "zAVb0/": [
     {
       "type": 0,
@@ -6327,6 +7959,20 @@
     {
       "type": 0,
       "value": "Ekonomi penaruhan"
+    }
+  ],
+  "zVb+z+": [
+    {
+      "type": 0,
+      "value": "Jangan menyetorkan lebih dari "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " ETH untuk satu validator. Setoran ini tidak akan ditambahkan ke imbalan Anda dan akan dikunci hingga peningkatan Shanghai/Capella yang direncanakan."
     }
   ],
   "zbEBi9": [
@@ -6349,10 +7995,10 @@
       "value": "Keamanan node"
     }
   ],
-  "zkT9Jx": [
+  "znyxZv": [
     {
       "type": 0,
-      "value": "Kami akan membantu Anda membuat kunci penandatanganan untuk setiap validator yang ingin Anda jalankan. Karena tidak ada penarikan sampai peningkatan Shanghai yang direncanakan setelah Penggabungan, Anda tidak akan membuat kunci penarikan sekarang. Jika memungkinkan untuk menarik dana, Anda dapat memperoleh kunci penarikan dari mnemonik Anda."
+      "value": "~27 jam"
     }
   ],
   "zpmjjy": [
@@ -6367,6 +8013,12 @@
     {
       "type": 0,
       "value": ". Ini adalah kumpulan metode JSON RPC yang dapat digunakan untuk berkomunikasi di antara kedua lapisan klien."
+    }
+  ],
+  "zrb2Xo": [
+    {
+      "type": 0,
+      "value": "Panggilan komunitas - diumumkan dalam laporan PM"
     }
   ]
 }

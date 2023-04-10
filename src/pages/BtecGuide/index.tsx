@@ -143,9 +143,9 @@ export const BtecGuide = () => {
           <Text className="mb10">
             <FormattedMessage
               defaultMessage="To enable your Beacon Chain validator(s) to automatically withdraw balances to your
-              {executionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed BLS-to-execution-change ({signed}) message JSON file. This message
-              includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in
-              execution address format."
+              {executionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed
+              BLS-to-execution-change ({signed}) message JSON file. This message includes the request to change
+              your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
               values={{
                 executionAddress: (
                   <strong>
@@ -378,7 +378,7 @@ export const BtecGuide = () => {
                 <br />
               </CodeBlock>
               <Text className="mb10">
-                <FormattedMessage defaultMessage="[Example]" />
+                [<FormattedMessage defaultMessage="Example" />]
               </Text>
               <CodeBlock className="indent">
                 <span>
@@ -499,7 +499,7 @@ export const BtecGuide = () => {
                 <br />
               </CodeBlock>
               <Text className="mb10">
-                <FormattedMessage defaultMessage="[Example]" />
+                [<FormattedMessage defaultMessage="Example" />]
               </Text>
               <CodeBlock className="indent">
                 <span>

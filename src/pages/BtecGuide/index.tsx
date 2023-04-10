@@ -57,6 +57,7 @@ const CodeBlock = styled.code`
   }
   .custom {
     color: ${(p: any) => p.theme.red.medium};
+    text-transform: uppercase;
   }
 `;
 
@@ -142,7 +143,7 @@ export const BtecGuide = () => {
           <Text className="mb10">
             <FormattedMessage
               defaultMessage="To enable your Beacon Chain validator(s) to automatically withdraw balances to your
-              {exeuctionAddress}, you can use the {cli} tool to generate the {signed} message JSON file. This message
+              {exeuctionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed BLS-to-execution-change ({signed}) message JSON file. This message
               includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in
               execution address format."
               values={{
@@ -159,7 +160,7 @@ export const BtecGuide = () => {
           <Text className="mb10">
             <FormattedMessage
               defaultMessage="To make this message to be included in Mainnet, you will need to upload this message to
-              a beacon node’s {signature} pool {after} Capella/Shanghai hard fork."
+              a beacon node’s message ({signature}) pool {after} Capella/Shanghai hard fork."
               values={{
                 signature: <Code>SignedBLSToExecutionChange</Code>,
                 after: (
@@ -327,30 +328,51 @@ export const BtecGuide = () => {
                 <br />
                 <span className="dimmed">
                   --mnemonic="
-                  <span className="custom">{`<YOUR MNEMONIC>`}</span>" \
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="Your mnemonic" />
+                    {`>`}
+                  </span>
+                  " \
                 </span>
                 <br />
                 <span className="dimmed">
                   --bls_withdrawal_credentials_list="
-                  <span className="custom">{`<YOUR OLD BLS WITHDRAWAL>`}</span>"
-                  \
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="Your old BLS withdrawal credentials" />
+                    {`>`}
+                  </span>
+                  " \
                 </span>
                 <br />
                 <span className="dimmed">
                   --validator_start_index=
-                  <span className="custom">{`<THE KEY START INDEX IN EIP-2334>`}</span>{' '}
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="The key start index in EIP-2334" />
+                    {`>`}
+                  </span>{' '}
                   \
                 </span>
                 <br />
                 <span className="dimmed">
                   --validator_indices="
-                  <span className="custom">{`<YOUR VALIDATOR INDICES>`}</span>"
-                  \
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="Your validator indices" />
+                    {`>`}
+                  </span>
+                  " \
                 </span>
                 <br />
                 <span className="dimmed">
                   --execution_address="
-                  <span className="custom">{`<THE EXECUTION ADDRESS FOR WITHDRAWALS>`}</span>
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="The execution address for withdrawals" />
+                    {`>`}
+                  </span>
                   "
                 </span>
                 <br />
@@ -427,30 +449,51 @@ export const BtecGuide = () => {
                 <br />
                 <span className="dimmed">
                   --mnemonic="
-                  <span className="custom">{`<YOUR MNEMONIC>`}</span>" \
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="Your mnemonic" />
+                    {`>`}
+                  </span>
+                  " \
                 </span>
                 <br />
                 <span className="dimmed">
                   --bls_withdrawal_credentials_list="
-                  <span className="custom">{`<YOUR OLD BLS WITHDRAWAL>`}</span>"
-                  \
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="Your old BLS withdrawal credentials" />
+                    {`>`}
+                  </span>
+                  " \
                 </span>
                 <br />
                 <span className="dimmed">
                   --validator_start_index=
-                  <span className="custom">{`<THE KEY START INDEX IN EIP-2334>`}</span>
-                  {` `} \
-                </span>
-                <br />
-                <span className="dimmed">
-                  --validator_indices="
-                  <span className="custom">{`<YOUR VALIDATOR INDICES>`}</span>"
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="The key start index in EIP-2334" />
+                    {`>`}
+                  </span>{' '}
                   \
                 </span>
                 <br />
                 <span className="dimmed">
+                  --validator_indices="
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="Your validator indices" />
+                    {`>`}
+                  </span>
+                  " \
+                </span>
+                <br />
+                <span className="dimmed">
                   --execution_address="
-                  <span className="custom">{`<THE EXECUTION ADDRESS FOR WITHDRAWALS>`}</span>
+                  <span className="custom">
+                    {`<`}
+                    <FormattedMessage defaultMessage="The execution address for withdrawals" />
+                    {`>`}
+                  </span>
                   "
                 </span>
                 <br />
@@ -497,11 +540,25 @@ export const BtecGuide = () => {
                 </Text>
                 <CodeBlock>
                   <span>
-                    {`--devnet_chain_setting='{
-                       "network_name": "<NETWORK_NAME>",
-                       "genesis_fork_version": "<GENESIS_FORK_VERSION>",
-                       "genesis_validator_root": "<GENESIS_VALIDATOR_ROOT>"
-                    }'`}
+                    {`--devnet_chain_setting='{ "network_name": "`}
+                    <span className="custom">
+                      {`<`}
+                      <FormattedMessage defaultMessage="Network name" />
+                      {`>`}
+                    </span>
+                    ", "genesis_fork_version": "
+                    <span className="custom">
+                      {`<`}
+                      <FormattedMessage defaultMessage="Genesis fork version" />
+                      {`>`}
+                    </span>
+                    ", "genesis_validator_root": "
+                    <span className="custom">
+                      {`<`}
+                      <FormattedMessage defaultMessage="Genesis validator root" />
+                      {`>`}
+                    </span>
+                    {`" }'`}
                   </span>
                 </CodeBlock>
                 <Text className="mb10">
@@ -584,7 +641,11 @@ export const BtecGuide = () => {
           <CodeBlock className="indent">
             <span>
               curl -X POST -H “Content-type: application/json” -d @
-              <span className="custom">{`<@FILENAME DESTINATION>`}</span>
+              <span className="custom">
+                {`<@${formatMessage({
+                  defaultMessage: 'Filename destination',
+                })}>`}
+              </span>
               {` `}\
             </span>
             <br />

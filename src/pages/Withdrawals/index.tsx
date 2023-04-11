@@ -829,8 +829,7 @@ export const Withdrawals = () => {
                 </li>
               </ul>
               <Text className="mb10">
-                This timing of this last step is variable depending on validator
-                index, current sweep position, and number of validators.{' '}
+                <FormattedMessage defaultMessage="This timing of this last step is variable depending on validator index, current sweep position, and number of validators." />{' '}
                 <Link inline primary to="#payout-frequency">
                   <FormattedMessage defaultMessage="More on frequency of payouts below." />
                 </Link>

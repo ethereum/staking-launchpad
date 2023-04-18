@@ -209,6 +209,12 @@
       "value": "Transakce"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "K nahrání své zprávy můžete také použít webové uživatelské rozhraní vysílacího nástroje Beaconcha.in:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1101,6 +1107,16 @@
       "value": ", kde najdete užitečnou nápovědu."
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Ukončování validátoru "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1831,6 +1847,12 @@
       "value": "Stáhnout MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Index začátku klíče v EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1873,13 +1895,19 @@
       "value": "Jak spustit výběry, změny přihlašovacích údajů"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Kořen validátoru Genesis"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
       "value": "Nakonfigurovat Lighthouse"
     }
   ],
-  "40/5Sf": [
+  "C2Jn1z": [
     {
       "type": 0,
       "value": "Mějte na paměti, že vaše "
@@ -1898,7 +1926,7 @@
     },
     {
       "type": 0,
-      "value": ", který u navrhovaných transakcí obdrží transakční poplatky. Obě strany mohou mít nastaveny stejnou adresu, ale každou z nich je třeba nastavit samostatně."
+      "value": ", který u navrhovaných transakcí obdrží transakční poplatky z navržených bloků. Obě strany mohou mít nastaveny stejnou adresu, ale každou z nich je třeba nastavit samostatně."
     }
   ],
   "C3jBPI": [
@@ -2357,6 +2385,12 @@
       "value": ", jinak bude vklad neplatný."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Vaše indexy validátoru"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2513,6 +2547,12 @@
       "value": "Ze staženého souboru udělejte soubor spustitelný."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Verze větvení Genesis"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2633,6 +2673,12 @@
       "value": "Síť"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Probíhá změna přihlašovacích údajů k výběru"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2661,6 +2707,12 @@
     {
       "type": 0,
       "value": "Ve druhé (nepravděpodobné) situaci v průběhu 21 dnů postupně přijdete až o 50 % svého podílu (16 ETH). Po 21 dnech budete vyloučeni z řad validátorů. Tím je zajištěno, že bloky se znovu v určitou dobu začnou dokončovat."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "úplný výběr"
     }
   ],
   "IYvwsI": [
@@ -2833,6 +2885,12 @@
     {
       "type": 0,
       "value": "Který operační systém aktuálně používáte?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Vaše mnemotechnická pomůcka"
     }
   ],
   "K3uH1C": [
@@ -3433,28 +3491,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Chcete-li tuto zprávu zahrnout do hlavní sítě, bude nutné odeslat tuto zprávu do fondu "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " Beacon Node "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " po trvalém větvení Capella/Shanghai."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3649,6 +3685,12 @@
       "value": "Vaše síť se změnila"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Průvodce Launchpadem"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3695,6 +3737,12 @@
     {
       "type": 0,
       "value": "Dokumentace pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Vysílací nástroj Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4813,6 +4861,16 @@
     {
       "type": 0,
       "value": "Proč musím mít finanční podíl?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Ukončování minipoolu "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5957,10 +6015,46 @@
       "value": "Teku (dříve Artemis) je klient konsenzu pro potřeby institucí a zabezpečení. PegaSys je odnož ConsenSys vyhrazená pro vývoj podnikových klientů a nástrojů k interakci s hlavní platformou Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Exekuční adresa pro výběry"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Pro každou epochu jsou povoleny čtyři (4) odchody validátorů a jeden (1) další za každých 65 536 celkových aktivních validátorů nad 327 680. K únoru 2023 je tento limit sedm (7) a zvýší se na osm (8), jakmile počet validátorů dosáhne počtu 524 288."
+    }
+  ],
+  "jHrZXR": [
+    {
+      "type": 0,
+      "value": "Abyste validátoru (validátorům) řetězové vazby povolili automatický výběr zůstatků na "
+    },
+    {
+      "type": 1,
+      "value": "exeuctionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", můžete použít nástroj CLI vkladu pro uzamčení ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") a vygenerovat podepsanou zprávu BLS-to-execution-change ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") ve formátu JSON. Tato zpráva zahrnuje požadavek na změnu původních BLS přihlašovacích údajů pro výběr na nové přihlašovací údaje pro výběr ve formátu exekuční adresy."
     }
   ],
   "jXer8/": [
@@ -6135,6 +6229,12 @@
     {
       "type": 0,
       "value": "Dokumentace Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Název sítě"
     }
   ],
   "kd/f4u": [
@@ -6367,6 +6467,12 @@
       "value": "Importování z dokumentace Launchpadu"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Cíl názvu souboru"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6383,6 +6489,20 @@
     {
       "type": 0,
       "value": "Soubor byl nahrán"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Svou podepsanou zprávu můžete vysílat z příkazového řádku pomocí příkazu "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "mArJcj": [
@@ -6547,6 +6667,28 @@
     {
       "type": 0,
       "value": "Až vše zkontrolujete, vygenerujete klíče a provedete vklad ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Chcete-li tuto zprávu zahrnout do hlavní sítě, bude nutné odeslat tuto zprávu do fondu ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") zprávy Beacon Node "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " po trvalém větvení Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6873,36 +7015,6 @@
       "value": "Epocha pro ukončení a epocha pro výběr"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Jakmile validátorům řetězové vazby povolíte automatický výběr zůstatků na "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", můžete použít nástroj "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " a vygenerovat "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": " soubor se zprávou ve formátu JSON. Tato zpráva zahrnuje požadavek na změnu původních BLS přihlašovacích údajů pro výběr na nové přihlašovací údaje pro výběr ve formátu exekuční adresy."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6949,6 +7061,16 @@
     {
       "type": 0,
       "value": "Uložte si soubory klíčů a připravte si soubor validátoru"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Ukončování validátoru "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "qntIRb": [
@@ -7156,7 +7278,7 @@
   "smd9Oc": [
     {
       "type": 0,
-      "value": "Index validátora"
+      "value": "Index validátoru"
     }
   ],
   "soCLV+": [
@@ -7917,6 +8039,12 @@
     {
       "type": 0,
       "value": "Na druhou stranu můžete být postihnuti za to, že jste offline nebo se chováte škodlivě – například za potvrzování neplatných nebo protichůdných bloků."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Vaše staré přihlašovací údaje pro výběr BLS"
     }
   ],
   "z26FXa": [

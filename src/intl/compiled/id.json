@@ -205,6 +205,12 @@
       "value": "Transaksi"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Anda juga dapat menggunakan perangkat penyiaran Beaconcha.in untuk mengunggah pesan Anda menggunakan antarmuka pengguna web:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1097,6 +1103,16 @@
       "value": " kapan saja selama penyiapan Anda untuk mendapatkan bantuan!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Keluar dari validator "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1819,6 +1835,12 @@
       "value": "Unduh MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Indeks awal kunci dalam EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1861,13 +1883,19 @@
       "value": "Cara memicu penarikan, perubahan kredensial"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Akar validator genesis"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
       "value": "Konfigurasi Lighthouse"
     }
   ],
-  "40/5Sf": [
+  "C2Jn1z": [
     {
       "type": 0,
       "value": "Perhatikan bahwa "
@@ -1886,7 +1914,7 @@
     },
     {
       "type": 0,
-      "value": ", yang menerima biaya transaksi dari yang diusulkan. Keduanya dapat diatur ke alamat yang sama, tetapi masing-masing harus diatur secara terpisah."
+      "value": ", yang menerima biaya transaksi dari blok yang diusulkan. Keduanya dapat diatur ke alamat yang sama, tetapi masing-masing harus diatur secara terpisah."
     }
   ],
   "C3jBPI": [
@@ -2341,6 +2369,12 @@
       "value": ", jika tidak, deposit tidak akan valid."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Indeks validator Anda"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2497,6 +2531,12 @@
       "value": "Buat file yang baru saja Anda unduh dapat dieksekusi."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Versi garpu genesis"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2613,6 +2653,12 @@
       "value": "Jaringan"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Mengubah kredensial penarikan"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2641,6 +2687,12 @@
     {
       "type": 0,
       "value": "Perhatikan bahwa dalam skenario kedua (sangat kecil kemungkinan), Anda akan secara bertahap kehilangan hingga 50% (16 ETH) dari taruhan Anda selama 21 hari. Setelah 21 hari, Anda akan dikeluarkan dari kumpulan validator. Ini memastikan bahwa blok mulai difinalisasi lagi."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "penarikan penuh"
     }
   ],
   "IYvwsI": [
@@ -2813,6 +2865,12 @@
     {
       "type": 0,
       "value": "Apa sistem operasi Anda saat ini?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Mnemonik Anda"
     }
   ],
   "K3uH1C": [
@@ -3413,28 +3471,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Untuk membuat pesan ini disertakan di Jaringan Utama, Anda perlu mengunggah pesan ini ke kumpulan "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " simpul suar "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " garpu keras Capella/Shanghai."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3629,6 +3665,12 @@
       "value": "Jaringan Anda telah diubah"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Tutorial panduan landasan peluncuran"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3675,6 +3717,12 @@
     {
       "type": 0,
       "value": "dokumentasi pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Perangkat Penyiaran Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4797,6 +4845,16 @@
     {
       "type": 0,
       "value": "Mengapa saya perlu mempertaruhkan dana?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Keluar dari kumpulan mini "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5937,10 +5995,46 @@
       "value": "Sebelumnya dikenal sebagai Artemis, Teku adalah klien konsensus yang dibangun untuk memenuhi kebutuhan institusional dan persyaratan keamanan. PegaSys adalah cabang dari ConsenSys, yang didedikasikan untuk membangun klien dan perangkat yang siap untuk perusahaan untuk berinteraksi dengan platform inti Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Alamat eksekusi untuk penarikan"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Empat (4) validator keluar diizinkan per jangka waktu, ditambah satu (1) lagi untuk setiap total 65.536 validator aktif atas 327.680. Mulai Februari 2023 batas ini adalah tujuh (7), dan akan meningkat hingga (8) jika/bila jumlah validator mencapai 524.288."
+    }
+  ],
+  "jHrZXR": [
+    {
+      "type": 0,
+      "value": "Untuk memungkinkan validator Rantai Suar menarik saldo secara otomatis ke "
+    },
+    {
+      "type": 1,
+      "value": "exeuctionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", Anda dapat menggunakan perangkat setoran penaruhan CLI ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") untuk membuat file JSON pesan BLS-to-execution-change yang ditandatangani ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": "). Pesan ini menyertakan permintaan untuk mengubah kredensial penarikan BLS lama Anda ke kredensial penarikan baru dalam format alamat eksekusi."
     }
   ],
   "jXer8/": [
@@ -6115,6 +6209,12 @@
     {
       "type": 0,
       "value": "Dokumentasi Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Nama jaringan"
     }
   ],
   "kd/f4u": [
@@ -6351,6 +6451,12 @@
       "value": "Mengimpor dari dokumentasi Launchpad"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Tujuan nama file"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6367,6 +6473,20 @@
     {
       "type": 0,
       "value": "Berkas diunggah"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Anda dapat menyiarkan pesan yang ditandatangani dari baris perintah menggunakan perintah "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "mArJcj": [
@@ -6531,6 +6651,28 @@
     {
       "type": 0,
       "value": "Setelah Anda sudah merasa nyaman, Anda dapat mulai membuat kunci dan menyetor ETH Anda."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Untuk membuat pesan ini disertakan di Jaringan Utama, Anda perlu mengunggah pesan ini ke kumpulan ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") pesan simpul suar "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " garpu keras Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6857,36 +6999,6 @@
       "value": "Jangka waktu keluar dan jangka waktu yang dapat ditarik"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Untuk memungkinkan validator Rantai Suar menarik saldo secara otomatis ke "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", Anda dapat menggunakan perangkat "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " untuk membuat file JSON pesan "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ". Pesan ini menyertakan permintaan untuk mengubah kredensial penarikan BLS lama Anda ke kredensial penarikan baru dalam format alamat eksekusi."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6933,6 +7045,16 @@
     {
       "type": 0,
       "value": "Simpan file kunci dan siapkan file validator"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Keluar dari validator "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "qntIRb": [
@@ -7893,6 +8015,12 @@
     {
       "type": 0,
       "value": "Di sisi lain, Anda bisa mendapat penalti karena luring dan berperilaku jahat—misalnya membuktikan blok yang tidak valid atau bertentangan."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Kredensial penarikan BLS lama Anda"
     }
   ],
   "z26FXa": [

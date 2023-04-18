@@ -205,6 +205,12 @@
       "value": "Transakcije"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Za nalaganje sporočila prek spletnega uporabniškega vmesnika lahko uporabite tudi orodje za oddajanje Beaconcha.in:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1097,6 +1103,16 @@
       "value": " za malce prijazne pomoči."
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Izhod iz validatorja "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1823,6 +1839,12 @@
       "value": "Prenesi MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Začetni indeks ključa v EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1865,13 +1887,19 @@
       "value": "Kako sprožiti dvige, spremembo poverilnice"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Koren validatorja izvora"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
       "value": "Konfiguriraj Lighthouse"
     }
   ],
-  "40/5Sf": [
+  "C2Jn1z": [
     {
       "type": 0,
       "value": "Upoštevajte, da vaše "
@@ -1890,7 +1918,7 @@
     },
     {
       "type": 0,
-      "value": ", ki prejema transakcijske provizije od predlaganih. Oba sta lahko nastavljena na isti naslov, vendar morata biti nastavljena vsak posebej."
+      "value": ", ki prejema transakcijske provizije od predlaganih blokov. Oba sta lahko nastavljena na isti naslov, vendar morata biti nastavljena vsak posebej."
     }
   ],
   "C3jBPI": [
@@ -2341,6 +2369,12 @@
       "value": ", sicer bo polog neveljaven."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Indeksi vašega validatorja"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2497,6 +2531,12 @@
       "value": "Datoteko, ki ste jo pravkar prenesli, naredite izvedljivo."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Različica razcepa izvora"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2613,6 +2653,12 @@
       "value": "Omrežje"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Spreminjanje poverilnic za dvig"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2641,6 +2687,12 @@
     {
       "type": 0,
       "value": "Upoštevajte, da lahko v drugem (malo verjetnem) scenariju postopoma izgubite do 50 % (16 ETH) svojega deleža v obdobju 21 dni. Po 21 dneh ste izvrženi iz nabora validatorjev. To zagotavlja, da se bodo začeli bloki na določeni točki ponovno zaključevati."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "poln dvig"
     }
   ],
   "IYvwsI": [
@@ -2809,6 +2861,12 @@
     {
       "type": 0,
       "value": "Kakšen je vaš trenutni operacijski sistem?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Vaša mnemonična fraza"
     }
   ],
   "K3uH1C": [
@@ -3405,28 +3463,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Če želite, da bo to sporočilo vključeno v glavno omrežje, ga boste morali naložiti v skupino "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " vozlišča svetilnika "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " trajnem razcepu Capella/Shanghai."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3617,6 +3653,12 @@
       "value": "Vaše omrežje se je spremenilo"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Vadnica po korakih za Launchpad"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3663,6 +3705,12 @@
     {
       "type": 0,
       "value": "dokumentacija programa za namestitev"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Orodje za oddajanje Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4781,6 +4829,16 @@
     {
       "type": 0,
       "value": "Zakaj moram imeti zastavljena sredstva?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Izhod iz mini nabora "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5921,10 +5979,46 @@
       "value": "Teku, nekdaj imenovan Artemis, je odjemalec za soglasje, ustvarjen za izpolnjevanje institucionalnih potreb in varnostnih zahtev. PegaSys je enota družbe ConsenSys, predana razvoju odjemalcev in orodij, namenjenih podjetjem, za interakcijo z jedrno platformo Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Naslov za izvršitev za dvige"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Dovoljeni so štirje (4) izstopi validatorjev na epoho in še en (1) več za vsakih 65.536 skupno aktivnih validatorjev nad 327.680. Od februarja 2023 je ta omejitev sedem (7) in se bo povečala na osem (8), če/ko število validatorjev doseže 524.288."
+    }
+  ],
+  "jHrZXR": [
+    {
+      "type": 0,
+      "value": "Če želite svojim validatorjem oddajniške verige omogočiti samodejni dvig stanja na vaš "
+    },
+    {
+      "type": 1,
+      "value": "exeuctionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", lahko uporabite orodje Staking Deposit CLI ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") za ustvarjanje podpisane datoteke JSON s sporočilom BLS-to-execution-change ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": "). To sporočilo vključuje zahtevo za spremembo vaših starih poverilnic za dvig BLS v nove poverilnice za dvig v obliki naslova za izvršitev."
     }
   ],
   "jXer8/": [
@@ -6099,6 +6193,12 @@
     {
       "type": 0,
       "value": "Dokumentacija Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Ime omrežja"
     }
   ],
   "kd/f4u": [
@@ -6331,6 +6431,12 @@
       "value": "Uvažanje iz dokumentacije zagonske platforme"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Cilj imena datoteke"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6347,6 +6453,20 @@
     {
       "type": 0,
       "value": "Datoteka je naložena"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Svoje podpisano sporočilo lahko oddajate iz ukazne vrstice z ukazom "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "mArJcj": [
@@ -6511,6 +6631,28 @@
     {
       "type": 0,
       "value": "Ko boste seznanjeni, boste opravili postopek generiranja svojih ključev in pologa svojega ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Če želite, da bo to sporočilo vključeno v glavno omrežje, ga boste morali naložiti v sporočilo skupine ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") vozlišča svetilnika "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " trajnem razcepu Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6841,36 +6983,6 @@
       "value": "Izstopno obdobje in obdobje možnosti dviga"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Če želite svojim validatorjem oddajniške verigeChain omogočiti samodejni dvig stanja na vaš "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", lahko uporabite orodje "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " za ustvarjanje datoteke JSON s sporočilom "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ". To sporočilo vključuje zahtevo za spremembo vaših starih poverilnic za dvig BLS v nove poverilnice za dvig v obliki naslova za izvršitev."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6917,6 +7029,16 @@
     {
       "type": 0,
       "value": "Shranite datoteke s ključi in pripravite datoteko validatorja"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Izhod iz validatorja "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "qntIRb": [
@@ -7877,6 +7999,12 @@
     {
       "type": 0,
       "value": "Po drugi strani ste lahko kaznovani za prekinitev povezave in zlonamerno vedenje – na primer potrjevanje neveljavnih ali nasprotujočih si blokov."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Vaše stare poverilnice za dvig BLS"
     }
   ],
   "z26FXa": [

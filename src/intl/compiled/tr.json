@@ -209,6 +209,12 @@
       "value": "İşlemler"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Bir web kullanıcı arayüzü kullanarak mesajınızı yüklemek için Beaconcha.in yayın aracını da kullanabilirsiniz:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1105,6 +1111,20 @@
       "value": " üzerinde EthStaker'ı ziyaret edin!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Mevcut bir "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " doğrulayıcısı"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1819,6 +1839,12 @@
       "value": "MetaMask'i indirin"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "EIP-2334'teki anahtar başlangıç dizini"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1861,24 +1887,26 @@
       "value": "Para çekme işlemleri ve kimlik bilgisi değişikliği nasıl başlatılır"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Başlangıç doğrulayıcı kökü"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
       "value": "Lighthouse'u yapılandırın"
     }
   ],
-  "40/5Sf": [
-    {
-      "type": 0,
-      "value": "Size ait olan "
-    },
+  "C2Jn1z": [
     {
       "type": 1,
       "value": "withdrawalCredentials"
     },
     {
       "type": 0,
-      "value": " ile teklif edilen işlem ücretlerini alan "
+      "value": " kimlik bilgilerinizin, önerilen bloklardan işlem ücretleri alan "
     },
     {
       "type": 1,
@@ -1886,7 +1914,7 @@
     },
     {
       "type": 0,
-      "value": " tarafın aynı olmadığını unutmayın. Bunların her ikisi de aynı adrese ve fakat her biri ayrı ayrı ayarlanmalıdır."
+      "value": " bilgileriniz ile aynı olmadığını unutmayın. Bunların her ikisi de aynı adrese ayarlanabilir, ancak her birinin ayrı olarak ayarlanması gerekir."
     }
   ],
   "C3jBPI": [
@@ -2341,6 +2369,12 @@
       "value": " ayarladığınızdan emin olun, aksi takdirde para yatırma geçersiz olacaktır."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcı dizinleriniz"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2497,6 +2531,12 @@
       "value": "Az önce indirdiğiniz dosyayı yürütülebilir hâle getirin."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Başlangıç çatallanma sürümü"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2617,6 +2657,12 @@
       "value": "Ağ"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Para çekim kimlik bilgilerini değiştirme"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2645,6 +2691,12 @@
     {
       "type": 0,
       "value": "İkinci (olası olmayan) senaryoda, 21 gün içinde hissenizin% 50'sine (16 ETH) kadar kademeli olarak kaybedeceğinizi unutmayın. 21 gün sonra doğrulama havuzundan çıkarılırsınız. Bu, blokların bir noktada yeniden tamamlanmaya başlamasını sağlar."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "tam para çekme"
     }
   ],
   "IYvwsI": [
@@ -2813,6 +2865,12 @@
     {
       "type": 0,
       "value": "Mevcut işletim sisteminiz nedir?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Mnemonic'iniz"
     }
   ],
   "K3uH1C": [
@@ -3413,28 +3471,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Bu mesajın Mainnet'e dahil edilmesini sağlamanız için, bu mesajı Capella/Shanghai sert çatallanmasından "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " sonra bir işaret düğümünün "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " imza havuzuna yüklemeniz gerekecek."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3629,6 +3665,12 @@
       "value": "Ağınız değişti"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Başlama noktası kontrol öğreticisi"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3675,6 +3717,12 @@
     {
       "type": 0,
       "value": "pip belgesi"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Beaconcha.in Yayın Aracı"
     }
   ],
   "Q1ZwPT": [
@@ -4789,6 +4837,20 @@
     {
       "type": 0,
       "value": "Neden stake edilen paraya ihtiyacım var?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Mevcut bir "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " mini havuzu"
     }
   ],
   "ZTo0Fl": [
@@ -5925,10 +5987,46 @@
       "value": "Daha önce Artemis olarak bilinen Teku, kurumsal ihtiyaçları ve güvenlik gereksinimlerini karşılamak için oluşturulmuş bir mutabakat istemcisidir. PegaSys, kurumsal kullanıma hazır istemciler ve çekirdek Ethereum platformuyla etkileşim için araçlar oluşturmaya yönelik olan ConsenSys'un bir koludur."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Para çekimleri için yürütüm adresi"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Dönem başına dört (4) doğrulayıcı çıkışına ve ayrıca 327.680 içindeki her 65.536 toplam aktif doğrulayıcı için bir (1) çıkışa izin verilir. Şubat 2023 itibarıyla bu sınır yedi (7) olmuştur ve doğrulayıcı sayısı 524.288'e ulaştığında sekize (8) çıkacaktır."
+    }
+  ],
+  "jHrZXR": [
+    {
+      "type": 0,
+      "value": "Bakiyeleri otomatik olarak "
+    },
+    {
+      "type": 1,
+      "value": "exeuctionAddress"
+    },
+    {
+      "type": 0,
+      "value": " adresinize çekmek adına İşaret Zinciri doğrulayıcı(ları)nızı etkinleştirmek için, imzalı BLS-yürütüm değişimi ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") mesajı JSON dosyasını oluşturmak üzere hisseleme para yatırma ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") aracını kullanabilirsiniz. Bu mesaj, eski BLS para çekme kimlik bilgilerinizi, yürütüm adresi formatında yeni para çekme kimlik bilgileri ile değiştirme talebini içerir."
     }
   ],
   "jXer8/": [
@@ -6103,6 +6201,12 @@
     {
       "type": 0,
       "value": "Teku belgesi"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Ağ adı"
     }
   ],
   "kd/f4u": [
@@ -6327,6 +6431,12 @@
       "value": "Launchpad belgelerinden içe aktarma"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Dosya adı hedefi"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6343,6 +6453,16 @@
     {
       "type": 0,
       "value": "Dosya yüklendi"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": " komutunu kullanarak komut satırından imzalı mesajınızı yayınlayabilirsiniz:"
     }
   ],
   "mArJcj": [
@@ -6511,6 +6631,28 @@
     {
       "type": 0,
       "value": "Kendinizi rahat hissettiğinizde, anahtarlarınızı oluşturmaya ve ETH'nizi yatırmaya başlarsınız."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Bu mesajın Ana Ağa dahil edilmesini sağlamak için bu mesajı, Capella/Shanghai sert çatallanmasından "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " bir işaret düğümü mesajı ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") havuzuna yüklemeniz gerekecektir."
     }
   ],
   "njAU72": [
@@ -6837,36 +6979,6 @@
       "value": "Dönemden ve para çekilebilir dönemden çık"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "İşaret Zinciri doğrulayıcılarınızın "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": " hesabınıza otomatik olarak bakiye çekmesini sağlamak için, "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": " imzalı JSON dosyasını oluşturmak için "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " aracını kullanabilirsiniz. Bu mesaj, eski BLS para çekme kimlik bilgilerinizi, yürütüm adresi biçimindeki yeni para çekme kimlik bilgileriyle değiştirme talebini içerir."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6913,6 +7025,20 @@
     {
       "type": 0,
       "value": "Anahtar dosyaları kaydedin ve doğrulayıcı dosyayı hazır hâle getirin"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Mevcut bir "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " doğrulayıcısı"
     }
   ],
   "qntIRb": [
@@ -7881,6 +8007,12 @@
     {
       "type": 0,
       "value": "Öte yandan, çevrimdışı olduğunuz ve kötü niyetli davrandığınız için (örneğin, geçersiz veya çelişen blokları tasdik ettiğiniz için) cezalandırılabilirsiniz."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Eski BLS para çekme kimlik bilgileriniz"
     }
   ],
   "z26FXa": [

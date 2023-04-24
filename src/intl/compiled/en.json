@@ -2429,6 +2429,28 @@
       "value": " is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
     }
   ],
+  "FenrLm": [
+    {
+      "type": 0,
+      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") pool "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " Shanghai/Capella hard fork."
+    }
+  ],
   "FfLWt5": [
     {
       "type": 0,
@@ -2851,12 +2873,6 @@
       "value": "Further reading"
     }
   ],
-  "JbVlOE": [
-    {
-      "type": 0,
-      "value": "Dig deeper into Ethereum upgrades."
-    }
-  ],
   "JhUYU3": [
     {
       "type": 0,
@@ -3197,12 +3213,6 @@
     {
       "type": 0,
       "value": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
-    }
-  ],
-  "M6nefR": [
-    {
-      "type": 0,
-      "value": "Rate-limits set on withdrawal queue (could change through testing before Shanghai)"
     }
   ],
   "MCmGYv": [
@@ -4193,6 +4203,12 @@
     {
       "type": 0,
       "value": "Check the deposit contract on your favorite Ethereum block explorer:"
+    }
+  ],
+  "UYHId+": [
+    {
+      "type": 0,
+      "value": "Rate-limits set on withdrawal queue (could change through testing before Shanghai/Capella)"
     }
   ],
   "UYRyWv": [
@@ -6033,6 +6049,12 @@
       "value": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
     }
   ],
+  "jVlgXS": [
+    {
+      "type": 0,
+      "value": "Dig deeper into the Ethereum roadmap."
+    }
+  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6571,6 +6593,12 @@
       "value": "All stakers must operate an execution client with their consensus client."
     }
   ],
+  "mm+OKT": [
+    {
+      "type": 0,
+      "value": "The Ethereum roadmap"
+    }
+  ],
   "mpmFDY": [
     {
       "type": 0,
@@ -6655,28 +6683,6 @@
     {
       "type": 0,
       "value": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
-    }
-  ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") pool "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " Capella/Shanghai hard fork."
     }
   ],
   "njAU72": [
@@ -7429,12 +7435,6 @@
     {
       "type": 1,
       "value": "article"
-    }
-  ],
-  "txdGU9": [
-    {
-      "type": 0,
-      "value": "The Ethereum upgrades"
     }
   ],
   "tzMNF3": [

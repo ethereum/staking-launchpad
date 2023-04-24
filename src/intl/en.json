@@ -920,6 +920,9 @@
   "Felr8P": {
     "message": "A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
   },
+  "FenrLm": {
+    "message": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ({signature}) pool {after} Shanghai/Capella hard fork."
+  },
   "FfLWt5": {
     "message": "An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems."
   },
@@ -1100,9 +1103,6 @@
   "Ja5vXW": {
     "message": "Further reading"
   },
-  "JbVlOE": {
-    "message": "Dig deeper into Ethereum upgrades."
-  },
   "JhUYU3": {
     "message": "Download CLI app"
   },
@@ -1239,9 +1239,6 @@
   },
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
-  },
-  "M6nefR": {
-    "message": "Rate-limits set on withdrawal queue (could change through testing before Shanghai)"
   },
   "MCmGYv": {
     "message": "Copied ✓"
@@ -1621,6 +1618,9 @@
   },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
+  },
+  "UYHId+": {
+    "message": "Rate-limits set on withdrawal queue (could change through testing before Shanghai/Capella)"
   },
   "UYRyWv": {
     "message": "Mechanics of withdrawals: How they work"
@@ -2341,6 +2341,9 @@
   "jGVfQG": {
     "message": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
   },
+  "jVlgXS": {
+    "message": "Dig deeper into the Ethereum roadmap."
+  },
   "jXer8/": {
     "message": "Prysm documentation"
   },
@@ -2552,6 +2555,9 @@
   "mloLQ5": {
     "message": "All stakers must operate an execution client with their consensus client."
   },
+  "mm+OKT": {
+    "message": "The Ethereum roadmap"
+  },
   "mpmFDY": {
     "message": "No pending deposits"
   },
@@ -2590,9 +2596,6 @@
   },
   "ndhFef": {
     "message": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
-  },
-  "nf2aBN": {
-    "message": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ({signature}) pool {after} Capella/Shanghai hard fork."
   },
   "njAU72": {
     "message": "French"
@@ -2886,9 +2889,6 @@
   "tv5Cxs": {
     "description": "{effectiveBalance} shows 'effective balance' in bold. {article}\n                    shows 'excellent post' and links to an article.",
     "message": "Note however that this scaling mechanism works in a non-obvious way. To understand the precise details of how it works requires understanding a concept called {effectiveBalance}. If you’re not yet familiar with this concept, we recommend you read through {article}"
-  },
-  "txdGU9": {
-    "message": "The Ethereum upgrades"
   },
   "tzMNF3": {
     "message": "Status"

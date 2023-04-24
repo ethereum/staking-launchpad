@@ -41,7 +41,7 @@ export const pageContent = {
           />
         </Text>
         <Link
-          to="https://ethereum.org/en/upgrades/beacon-chain/"
+          to="https://ethereum.org/en/roadmap/beacon-chain/"
           className="my10"
           primary
         >
@@ -78,7 +78,7 @@ export const pageContent = {
           <FormattedMessage defaultMessage="Withdrawing your deposit will not be possible until the Shanghai/Capella upgrade planned for Q1/Q2 2023." />
         </Text>
         <Link
-          to="https://ethereum.org/en/upgrades/merge/"
+          to="https://ethereum.org/en/roadmap/merge/"
           className="my10"
           primary
         >

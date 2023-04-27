@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
+import {
+  NETWORK_NAME,
+  PRICE_PER_VALIDATOR,
+  TICKER_NAME,
+} from '../../utils/envVars';
 
 const BoldCaps = styled.strong`
   text-transform: uppercase;
@@ -22,11 +26,11 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="The Beacon Chain upgrade brings proof-of-stake consensus to Ethereum." />
+          <FormattedMessage defaultMessage="Ethereum uses proof-of-stake to reach consensus." />
         </Text>
         <Text size="medium" className="my10">
           <FormattedMessage
-            defaultMessage="For this, we need active participants - known as validators - to
+            defaultMessage="For this, we need active participants—known as validators—to
               propose, verify, and vouch for the validity of blocks. In exchange, honest
               validators receive financial rewards."
           />
@@ -36,8 +40,9 @@ export const pageContent = {
             defaultMessage="Importantly, as a validator you'll need to post {TICKER_NAME} as
               collateral—in other words, have some funds at stake. The only way to become a
               validator is to make a one-way {TICKER_NAME} transaction to the deposit contract
-              on the current Ethereum chain."
-            values={{ TICKER_NAME }}
+              on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used
+              in parallel to keep track of all validator activity."
+            values={{ TICKER_NAME, NETWORK_NAME }}
           />
         </Text>
         <Link
@@ -72,25 +77,18 @@ export const pageContent = {
           />
         </Text>
         <Text size="medium" className="my20">
-          <FormattedMessage defaultMessage="This is a non-reversible transaction." />
+          <FormattedMessage
+            defaultMessage="Like all Ethereum transactions, deposits are non-reversible, but
+            the ability to withdrawal your funds via a separate process after depositing remains
+            under your control."
+          />
         </Text>
-        <Text size="medium" className="my20">
-          <FormattedMessage defaultMessage="Withdrawing your deposit will not be possible until the Shanghai/Capella upgrade planned for Q1/Q2 2023." />
-        </Text>
-        <Link
-          to="https://ethereum.org/en/roadmap/merge/"
-          className="my10"
-          primary
-        >
-          <FormattedMessage defaultMessage="More on the merge" />
-        </Link>
       </>
     ),
     acknowledgementText: (
       <FormattedMessage
         defaultMessage="I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME}
-          to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is
-          one-way, and non-reversible."
+          onto the Beacon Chain to become a validator. Withdrawing deposited {TICKER_NAME} from the Beacon Chain is accomplished via a separate process."
         values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
       />
     ),
@@ -122,24 +120,24 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.slashing]: {
-    title: <FormattedMessage defaultMessage="Bad validator behaviour" />,
+    title: <FormattedMessage defaultMessage="Bad validator behavior" />,
     content: (
       <>
         <Text size="medium" className="my10">
           <FormattedMessage
             defaultMessage="If you try to cheat the system, or act contrary to the specification,
-              you will be liable to incur a penalty, known as slashing. Running your validator keys simultaneously on two or more machines will result in slashing."
+              you will be liable to incur a penalty known as slashing*. Running your validator keys simultaneously on two or more machines will result in slashing."
           />
         </Text>
         <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties." />
+          <FormattedMessage defaultMessage="*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties." />
         </Text>
         <Link
           to="https://github.com/ethereum/consensus-specs"
           className="my10"
           primary
         >
-          <FormattedMessage defaultMessage="The Ethereum consensus-layer specification" />
+          <FormattedMessage defaultMessage="The Ethereum consensus layer specification" />
         </Link>
         <Link shouldOpenNewTab to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
@@ -158,15 +156,22 @@ export const pageContent = {
     content: (
       <>
         <Text size="medium" className="mt10">
-          <FormattedMessage defaultMessage="To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed." />
+          <FormattedMessage defaultMessage="To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemonics, please do not proceed." />
         </Text>
         <Text size="medium" className="mt10">
-          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address." />
+          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address. This is recommended for most users." />
         </Text>
         <Text size="medium" className="mt10">
           <FormattedMessage
-            defaultMessage="If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so store your mnemonic safely—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
-            values={{ TICKER_NAME }}
+            defaultMessage="If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so {boldWarning}—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
+            values={{
+              TICKER_NAME,
+              boldWarning: (
+                <strong>
+                  <FormattedMessage defaultMessage="store your mnemonic safely" />
+                </strong>
+              ),
+            }}
           />
         </Text>
         <Link to="/withdrawals" className="mt10" primary>
@@ -184,46 +189,6 @@ export const pageContent = {
               <FormattedMessage defaultMessage="only way" />
             </BoldCaps>
           ),
-        }}
-      />
-    ),
-  },
-  [AcknowledgementIdsEnum.commitment]: {
-    title: <FormattedMessage defaultMessage="Validating is a commitment" />,
-    content: (
-      <>
-        <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="Withdrawing from a validator is not yet possible. This functionality is planned to be included in the Shanghai/Capella upgrade planned for Q1/Q2 2023." />
-        </Text>
-        <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="You can prepare for this by providing a withdrawal address when generating your keys and deposit data." />
-        </Text>
-        <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="You are still able to voluntarily exit your validator to be removed from the active validator set, but until withdrawals are enabled these funds would remain locked and unable to be withdrawn or re-staked." />
-        </Text>
-        <Link to="/withdrawals" className="my10" primary>
-          <FormattedMessage defaultMessage="More on withdrawals" />
-        </Link>
-        <Text size="medium" className="my10">
-          <FormattedMessage defaultMessage="Note, there are no current plans to enable transfers of ETH between validators." />
-        </Text>
-      </>
-    ),
-    acknowledgementText: (
-      <FormattedMessage
-        defaultMessage="I understand that I {cannotWithdraw} my stake until the Shanghai/Capella upgrade, and I {cannotTransfer} {TICKER_NAME} between validators. I understand that if I exit, I will not be able to rejoin until that time. Staking is a commitment."
-        values={{
-          cannotTransfer: (
-            <BoldCaps>
-              <FormattedMessage defaultMessage="cannot transfer" />
-            </BoldCaps>
-          ),
-          cannotWithdraw: (
-            <BoldCaps>
-              <FormattedMessage defaultMessage="cannot withdraw" />
-            </BoldCaps>
-          ),
-          TICKER_NAME,
         }}
       />
     ),

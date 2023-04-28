@@ -123,7 +123,7 @@
       "value": "Należy zauważyć, że kolejki „aktywacji” i „wyjścia” są niezależne i nie konkurują ze sobą. Każda z nich jest ograniczona na poziomie epoki."
     }
   ],
-  "/QPc9s": [
+  "hrJ1oM": [
     {
       "type": 0,
       "value": "Możesz zasygnalizować swój zamiar zaprzestania walidacji, podpisując dobrowolną wiadomość o wyjściu ze swojego walidatora."
@@ -315,7 +315,7 @@
       "value": "Oczekiwane wyniki"
     }
   ],
-  "0MIRQ5": [
+  "wU8vxS": [
     {
       "type": 0,
       "value": "Czy efektywne saldo wynosi maksymalnie 32?"
@@ -345,7 +345,7 @@
       "value": "poświadczenia do wycofywania środków"
     }
   ],
-  "0c06tl": [
+  "vCHTnu": [
     {
       "type": 0,
       "value": "Poświadczenia do wycofywania środków"
@@ -389,7 +389,7 @@
       "value": "Najczęściej zadawane pytania dotyczące walidatorów"
     }
   ],
-  "0sMzHb": [
+  "cJ9MRI": [
     {
       "type": 0,
       "value": "Jak zauważono powyżej, ten krok kończy się podpisaniem komunikatu znanego jako "
@@ -559,7 +559,7 @@
       "value": "JSON"
     }
   ],
-  "25IJMT": [
+  "mre8Tb": [
     {
       "type": 0,
       "value": "Jeśli adres do wycofania środków nie został ustawiony i utracisz dostęp do frazy ziarna mnemonika, środki pozostaną zablokowane na koncie walidatora na czas nieokreślony."
@@ -647,7 +647,7 @@
       "value": "Jeśli tak, przejdź do następnego pytania"
     }
   ],
-  "2a1GTh": [
+  "3zWAPC": [
     {
       "type": 0,
       "value": "zawsze możesz przeliczyć swój klucz podpisu z klucza wycofania"
@@ -707,7 +707,7 @@
       "value": "Warunki świadczenia usług"
     }
   ],
-  "36j2ls": [
+  "om4EMq": [
     {
       "type": 0,
       "value": "Aby przetworzyć przychodzące depozyty walidatora z warstwy wykonania (dawniej „Eth1”), musisz uruchomić klienta wykonania oraz klienta konsensusu (dawniej „Eth2”). Możesz korzystać z usługi innej firmy, takiej jak Infura, ale zalecamy prowadzenie własnego klienta, aby utrzymać sieć jak najbardziej zdecentralizowaną."
@@ -971,7 +971,7 @@
       "value": "Konta, które zostały odcięte lub mają niewystarczające saldo, będą zmuszane do wyjścia zgodnie z zasadami sieci. Proces ten jest automatyczny i nie może zostać zatrzymany po rozpoczęciu."
     }
   ],
-  "54J/qs": [
+  "sgn0wo": [
     {
       "type": 0,
       "value": "Co się stanie, jeśli skorzystam z wypłaty BLS i utracę swój klucz wypłaty?"
@@ -1437,7 +1437,7 @@
       "value": "Dalej"
     }
   ],
-  "9/4mZe": [
+  "hAwuqj": [
     {
       "type": 0,
       "value": "Walidacja wymaga dwóch kluczy ze względów bezpieczeństwa. Twój klucz do podpisywania musi być dostępny przez cały czas. W związku z tym, będzie musiał być przechowywany online. Ponieważ wszystko w sieci jest podatne na włamania, nie jest dobrym pomysłem używanie tego samego klucza do wycofywania środków."
@@ -1723,7 +1723,7 @@
       "value": "Wycofywanie środków od walidatora nie jest jeszcze możliwe. Przewidziano włączenie tej funkcjonalności do uaktualnienia Shanghai/Capella zaplanowanego na 1./2. kwartał 2023 r."
     }
   ],
-  "B0BAqm": [
+  "ky7VbK": [
     {
       "type": 0,
       "value": "Operacja "
@@ -1737,7 +1737,7 @@
       "value": " jest przetwarzana, gdy aktywny walidator ma maksymalne efektywne saldo 32 i całkowite saldo powyżej 32. Pojedynczy walidator nie może otrzymywać nagród do nadmiarowego salda powyżej 32 ETH, dlatego dodatkowe saldo tych kont będzie automatycznie wycofywane na jego adres Ethereum."
     }
   ],
-  "B2EKj+": [
+  "RY4SP0": [
     {
       "type": 0,
       "value": "Rozumiem, że muszę wpłacić "
@@ -1945,7 +1945,7 @@
       "value": " węzła śledzącego"
     }
   ],
-  "CVDzDs": [
+  "0WPDnu": [
     {
       "type": 0,
       "value": "Z pewnością powinieneś dokonać wpłaty, jeśli Twoje saldo jest bliskie 16 ETH. Ma to na celu zapewnienie, że nie zostaniesz usunięty z zestawu walidatorów (co dzieje się automatycznie, jeśli saldo spadnie poniżej 16 ETH)."
@@ -2005,7 +2005,7 @@
       "value": "NIE"
     }
   ],
-  "D19C0b": [
+  "sNUrEO": [
     {
       "type": 0,
       "value": "Jeśli nie, przesyłam komunikat "
@@ -2031,7 +2031,7 @@
       "value": "Ile ETH muszę postawić, aby zostać walidatorem?"
     }
   ],
-  "D5NvkC": [
+  "5q9Lgv": [
     {
       "type": 0,
       "value": "Pobierz oddział "
@@ -2063,7 +2063,7 @@
       "value": "Rozumiem, że jeśli postąpię niezgodnie ze specyfikacją, grozi mi odcięcie."
     }
   ],
-  "DLWOxX": [
+  "Ox4e26": [
     {
       "type": 0,
       "value": "Podobnie istnieje także kolejka "
@@ -2155,7 +2155,7 @@
       "value": " (minimum dozwolone w umowie depozytowej)"
     }
   ],
-  "Ds66AU": [
+  "jrbRLT": [
     {
       "type": 0,
       "value": "Aby zostać walidatorem, trzeba znać zasady zarządzania kluczami i ochrony mnemonika. Jeśli jeszcze nie rozumiesz kwestii kluczy i mnemoniki, nie kontynuuj."
@@ -2199,7 +2199,7 @@
       "value": "Klienci konsensusu:"
     }
   ],
-  "EFjTSf": [
+  "yK2eQ+": [
     {
       "type": 0,
       "value": "Za przypadkowe działania (lub zaniechania), które utrudniają osiągnięcie konsensusu, nakładane są drobne kary."
@@ -2301,7 +2301,7 @@
       "value": "Rozumiem, że ta transakcja nie jest odwracalna."
     }
   ],
-  "FSp9ip": [
+  "uEB8++": [
     {
       "type": 0,
       "value": "Wycofanie środków na adres Etherium: jeśli chcesz wycofać środki na adres portfela wykonawczego po uaktualnieniu Shanghai/Capella, możesz ustawić "
@@ -2419,7 +2419,7 @@
       "value": "Aby konto kwalifikowało się do pełnego wycofania środków, wymagane jest uprzednie wyjście z konta walidatora. Istnieją dwa główne sposoby wyjścia kont walidatora ze stakingu: dobrowolne lub wymuszone."
     }
   ],
-  "G0aacl": [
+  "q0thwm": [
     {
       "type": 0,
       "value": "Jako walidator jesteś nagradzany za proponowanie / poświadczanie bloków zawartych w łańcuchu."
@@ -2637,7 +2637,7 @@
       "value": "Podpisz transakcję swoim portfelem"
     }
   ],
-  "IVyWYt": [
+  "bFiejS": [
     {
       "type": 0,
       "value": "Zauważ, że w drugim (mało prawdopodobnym) scenariuszu możesz stopniowo tracić do 50% (16 ETH) stawki w ciągu 21 dni. Po 21 dniach zostaniesz usunięty z puli walidatorów. Gwarantuje to, że w pewnym momencie bloki zaczną się ponownie finalizować."
@@ -2779,7 +2779,7 @@
       "value": "Przeczytaj także"
     }
   ],
-  "JbVlOE": [
+  "jVlgXS": [
     {
       "type": 0,
       "value": "Dowiedz się więcej o aktualizacjach Ethereum."
@@ -2833,7 +2833,7 @@
       "value": "Dokumentacja instalacji Geth"
     }
   ],
-  "K6canA": [
+  "bagKCF": [
     {
       "type": 0,
       "value": "Zaplanowano włączenie funkcji wypłaty do uaktualnienia Shanghai/Capella. Po dodaniu tej funkcjonalności będziesz mieć możliwość wypłaty salda za pomocą klucza wypłaty — z minimalnym opóźnieniem wynoszącym około jednego dnia."
@@ -2993,7 +2993,7 @@
       "value": "Lighthouse to implementacja klienta konsensusu napisana w języku Rust z dużym naciskiem na szybkość i bezpieczeństwo."
     }
   ],
-  "LOtXFT": [
+  "q8Cxf5": [
     {
       "type": 0,
       "value": "Wypłata BLS: domyślnie polecenie deposit-cli generowałoby poświadczenia wycofania z kluczem "
@@ -3121,7 +3121,7 @@
       "value": "Otrzymasz pełne nagrody tylko wtedy, gdy Twój walidator jest online i aktualny. To Twoja odpowiedzialność. Jeśli Twój walidator przejdzie w tryb offline, zostaniesz ukarany. Kary za bycie offline są w przybliżeniu równe nagrodom za aktywne uczestnictwo."
     }
   ],
-  "M6nefR": [
+  "28aik1": [
     {
       "type": 0,
       "value": "Ograniczenia prędkości nałożone na kolejkę wypłat (mogą ulec zmianie podczas testów przed uaktualnieniem Shanghai)"
@@ -3157,7 +3157,7 @@
       "value": "Co się stanie, jeśli mój klucz do wycofania zostanie skradziony?"
     }
   ],
-  "MZEcKL": [
+  "Mor0Ih": [
     {
       "type": 0,
       "value": "Złe zachowanie walidatora"
@@ -3413,7 +3413,7 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
+  "LxtU/N": [
     {
       "type": 0,
       "value": "Aby włączyć ten komunikat do sieci głównej, musisz przesłać go do puli węzła śledzącego "
@@ -3579,7 +3579,7 @@
       "value": "Phishing jest realnym zagrożeniem dla walidatorów Ethereum i niestety wiele osób straci środki finansowe na skutek tych ataków."
     }
   ],
-  "P0kiYS": [
+  "cU/ZP6": [
     {
       "type": 0,
       "value": "Ulepszenie Łańcucha śledzącego zapewnia konsensus dowodu stawki (proof-of-stake) w Ethereum."
@@ -3775,7 +3775,7 @@
       "value": "networkName"
     }
   ],
-  "QgOvR0": [
+  "dtVSdl": [
     {
       "type": 0,
       "value": "Co ważne, jako walidator musisz zaksięgować "
@@ -3829,7 +3829,7 @@
       "value": ", który został zaakceptowany, ale jest zatwierdzany w łańcuchu. Będzie on dostępny tutaj, gdy firma Beaconcha.in potwierdzi 2048 bloków."
     }
   ],
-  "R6z/mc": [
+  "zBl8d5": [
     {
       "type": 1,
       "value": "stakingDepositCli"
@@ -4393,7 +4393,7 @@
       "value": "Te kroki są opcjonalne, ale zaleca się zoptymalizowanie Twojego węzła."
     }
   ],
-  "WbCafE": [
+  "9MIPCp": [
     {
       "type": 0,
       "value": "Jeśli nie podasz adresu do wycofywania środków w danych początkowej wpłaty, konieczne będzie uzyskanie kluczy wypłat z mnemonika później, dlatego należy przechowywać mnemonik bezpiecznie — będzie to JEDYNY sposób wypłaty "
@@ -4709,7 +4709,7 @@
       "value": "Wpisz następujące wiersze w oknie terminala:"
     }
   ],
-  "YkznEp": [
+  "xETYo6": [
     {
       "type": 0,
       "value": "Jeśli zgubisz klucz do wycofania środków, nie ma możliwości uzyskania dostępu do środków przechowywanych przez Twojego walidatora."
@@ -4775,7 +4775,7 @@
       "value": "."
     }
   ],
-  "ZDI2t3": [
+  "MAVs3a": [
     {
       "type": 0,
       "value": "W przypadku zdrowej sieci samo bycie offline nie powoduje odcięcia, ale wiąże się z niewielkimi karami za nieaktywność."
@@ -4829,7 +4829,7 @@
       "value": "Pobierz python3 i postępuj zgodnie z instrukcjami instalacji."
     }
   ],
-  "a+Xw/D": [
+  "hzsgQ5": [
     {
       "type": 0,
       "value": "Są one określane także jako „wypłaty częściowe” lub „płatności z tytułu nagród”, podczas gdy pozostałe 32 ETH pozostaje zablokowane i w stakingu."
@@ -4861,7 +4861,7 @@
       "value": " przesyłanym z transakcją wpłaty 32 ETH."
     }
   ],
-  "aDomwX": [
+  "9/yem6": [
     {
       "type": 0,
       "value": "Jeśli spróbujesz oszukać system lub postąpić niezgodnie ze specyfikacją, narażasz się na karę, zwaną odcięciem. Uruchomienie kluczy walidatora jednocześnie na dwóch lub więcej komputerach spowoduje odcięcie."
@@ -4873,7 +4873,7 @@
       "value": "2. Wstępne węzły"
     }
   ],
-  "aEpxVo": [
+  "lbQVsh": [
     {
       "type": 0,
       "value": "Aktywne konta z efektywnym saldem lub całkowitym saldem poniżej 32 zostaną pominięte"
@@ -4929,7 +4929,7 @@
       "value": " ETH."
     }
   ],
-  "b5LQY1": [
+  "FWtWw3": [
     {
       "type": 0,
       "value": "Należy zauważyć, że kolejki „wypłaty” i „polecenia BLS-to-execution” są niezależne i nie konkurują. Każda z nich jest ograniczona na poziomie bloku."
@@ -4941,7 +4941,7 @@
       "value": "Więcej na temat różnorodności klientów"
     }
   ],
-  "bMMVVN": [
+  "9h8yTf": [
     {
       "type": 0,
       "value": "Nie ma obecnie możliwości ponownej aktywacji walidatora i nie będziesz w stanie przelewać ani wypłacać środków do czasu włączenia wypłat w uaktualnieniu Shanghai/Capella. To znaczy, że co najmniej do tego czasu środki pozostaną niedostępne."
@@ -5157,7 +5157,7 @@
       "value": "Musisz podpisać transakcję dla każdej wpłaty, którą chcesz dokonać."
     }
   ],
-  "d75Ebj": [
+  "6vdHjj": [
     {
       "type": 1,
       "value": "withdrawalCredentials"
@@ -5167,7 +5167,7 @@
       "value": " to 32-bajtowe pole w depozycie do weryfikacji miejsca przeznaczenia prawidłowych wypłat środków. Obecnie istnieją dwa rodzaje wycofania środków: wycofanie z BLS i wycofanie z adresu Ethereum."
     }
   ],
-  "dH5+MX": [
+  "8FjJDx": [
     {
       "type": 0,
       "value": "Nieprawidłowe zachowanie"
@@ -5265,7 +5265,7 @@
       "value": "code3"
     }
   ],
-  "e4mdEQ": [
+  "vPvQyf": [
     {
       "type": 0,
       "value": "Upewnij się, że masz kontrolę nad tym adresem, ponieważ nie można go zmienić."
@@ -5343,7 +5343,7 @@
       "value": "Aby zmaksymalizować bezpieczeństwo i wydajność swojego węzła, użyj dedykowanego sprzętu do obsługi klientów. Zmniejsza to ryzyko narażenia na złośliwe oprogramowanie i minimalizuje konkurencję o zasoby obliczeniowe, zapewniając, że Twój węzeł przez cały czas radzi sobie z obciążeniem sieci i obowiązkami sprawdzania poprawności."
     }
   ],
-  "eatd1u": [
+  "Vbv7Uw": [
     {
       "type": 0,
       "value": "Pomożemy utworzyć klucz podpisu dla każdego walidatora, którego chcesz uruchomić. Możesz podać adres do wycofywania środków dla walidatora podczas generowania danych wpłaty, co spowoduje trwałe ustawienie adresu do wycofywania środków."
@@ -5467,7 +5467,7 @@
       "value": "Informacje o wypłatach w stakingu dla operatorów walidatorów."
     }
   ],
-  "fU1Pp5": [
+  "dwahMV": [
     {
       "type": 0,
       "value": "Możesz podać adres do obsługi wypłat z początkową wpłatą, aby automatycznie włączyć płatności z tytułu nagród, a także możliwość pełnego wyjścia środków w dowolnej chwili po uaktualnieniu Shanghai/Capella. Adres ten powinien być standardowym adresem Ethereum i będzie on jedynym adresem, na który będą mogły być wysyłane środki z nowych kont walidatorów."
@@ -5479,7 +5479,7 @@
       "value": "Po zainstalowaniu klienta upewnij się, że masz pełną synchronizację, nim prześlesz wpłatę w celu stakowania. Może to potrwać kilka dni."
     }
   ],
-  "fa8Quz": [
+  "9oWUO0": [
     {
       "type": 0,
       "value": "Należy jednak pamiętać, że do chwili uaktualnienia Shanghai/Capella zaplanowanego na 1./2. kwartał 2023 r. po wyjściu nie będzie powrotu."
@@ -5707,7 +5707,7 @@
       "value": "Kolejka polecenia BLS To Execution Change (BTEC)"
     }
   ],
-  "hFzE1M": [
+  "ZwqwuN": [
     {
       "type": 0,
       "value": "Nagrody są przyznawane za działania, które pomagają sieci osiągnąć konsensus."
@@ -5747,7 +5747,7 @@
       "value": "Węgierski"
     }
   ],
-  "hjrLbR": [
+  "nIf7QZ": [
     {
       "type": 0,
       "value": "W tym celu potrzebujemy aktywnych uczestników – zwanych walidatorami – którzy proponują, weryfikują i ręczą za ważność bloków. W zamian uczciwi walidatorzy otrzymują nagrody finansowe."
@@ -5903,7 +5903,7 @@
       "value": "PegaSys Teku to oparty na Javie klient konsensusu Ethereum, stworzony z myślą o potrzebach instytucjonalnych i wymaganiach bezpieczeństwa."
     }
   ],
-  "irh2nI": [
+  "XRUCUL": [
     {
       "type": 0,
       "value": "Dobrym pomysłem jest tworzenie kluczy z mnemoników, które działają jako kolejna kopia zapasowa. Jest to domyślna opcja dla walidatorów, którzy dołączą za pośrednictwem procesu dołączania do tej witryny."
@@ -5937,7 +5937,7 @@
       "value": "Wcześniej znany jako Artemis, Teku jest klientem konsensusu zbudowanym w celu spełnienia potrzeb instytucjonalnych i wymagań bezpieczeństwa. PegaSys jest częścią ConsenSys, zajmującą się tworzeniem klientów gotowych do pracy w przedsiębiorstwach i narzędzi do interakcji z podstawową platformą Ethereum."
     }
   ],
-  "jGVfQG": [
+  "RGD1CX": [
     {
       "type": 0,
       "value": "Dozwolone są cztery (4) wyjścia walidatorów na epokę plus jedno (1) kolejne na każdych 65 536 aktywnych walidatorów powyżej 327 680. Od lutego 2023 r. limit ten wynosi siedem (7) i zostanie zwiększony do ośmiu (8), jeśli/gdy liczba walidatorów osiągnie 524 288."
@@ -6123,7 +6123,7 @@
       "value": "Lista kluczy"
     }
   ],
-  "km7b1A": [
+  "36P4ra": [
     {
       "type": 0,
       "value": "Z biegiem czasu Twoje saldo zmniejszy się, ponieważ zostaniesz ukarany za nieuczestniczenie w procesie konsensusu. Kiedy Twoje saldo osiągnie 16 ETH, zostaniesz automatycznie usunięty z puli walidatorów."
@@ -6343,7 +6343,7 @@
       "value": "Importowanie z dokumentacji Launchpada"
     }
   ],
-  "ll/zMW": [
+  "OCl7KQ": [
     {
       "type": 0,
       "value": "Jest to transakcja nieodwracalna."
@@ -6785,7 +6785,7 @@
       "value": "Dokumentacja Besu wyjaśnia, jak pobrać i zainstalować klienta."
     }
   ],
-  "pb2jYe": [
+  "qwFYIS": [
     {
       "type": 0,
       "value": "Narzędzia te pomogą w wygenerowaniu niezbędnych kluczy i wysłaniu komunikatu do podpisu. Podpisane komunikaty mogą być nadawane w celu włączenia do bloków, począwszy od uaktualnienia Shanghai/Capella."
@@ -6849,7 +6849,7 @@
       "value": "Epoka wyjścia i epoka z możliwością wypłaty"
     }
   ],
-  "rW219B": [
+  "iqy/7c": [
     {
       "type": 0,
       "value": "Aby umożliwić walidatorom łańcucha śledzącego automatyczne wypłaty sald na "
@@ -6927,7 +6927,7 @@
       "value": "Zapisz pliki klucza i przygotuj plik walidatora"
     }
   ],
-  "qntIRb": [
+  "p1ynue": [
     {
       "type": 0,
       "value": "Jeśli nie został podany, klucze wypłaty będą wymagały podpisania komunikatu z deklaracją adresu do wycofywania środków. Wymaga to dostępu do mnemonika użytego podczas konfiguracji kluczy."
@@ -7027,7 +7027,7 @@
       "value": "Zamknij"
     }
   ],
-  "rnDgcN": [
+  "oDObOQ": [
     {
       "type": 0,
       "value": "Nie, nie możesz zmienić danych do wycofania środków w uzupełnieniu."
@@ -7187,7 +7187,7 @@
       "value": "Maksymalna liczba kont, które można sprawdzić w bloku. Zatrzymuje się po znalezieniu 16 wypłat. Jeśli 16 kwalifikujących się nagród nie zostanie znalezione w pierwszych 16 384 sprawdzonych kontach, kolejka wypłat dla tego bloku zostanie przesłana tak, jak jest, a następny proponujący rozpoczyna tam, gdzie skończył poprzedni."
     }
   ],
-  "tbYkT4": [
+  "KJ7R/V": [
     {
       "type": 0,
       "value": "Specyfikacja warstwy konsensusu Ethereum"
@@ -7255,7 +7255,7 @@
       "value": "article"
     }
   ],
-  "txdGU9": [
+  "mm+OKT": [
     {
       "type": 0,
       "value": "Ulepszenia Ethereum"
@@ -7423,7 +7423,7 @@
       "value": "?"
     }
   ],
-  "v6ytKW": [
+  "zkTSvw": [
     {
       "type": 0,
       "value": "A poważne kary — czyli "
@@ -7501,7 +7501,7 @@
       "value": "Chiński (uproszczony)"
     }
   ],
-  "vZxdbJ": [
+  "okGJD+": [
     {
       "type": 0,
       "value": "Po włączeniu wypłat w uaktualnieniu Shanghai/Capella u walidatorów z maksymalnym efektywnym saldem i powiązanym adresem wykonawczym do wycofywania środków saldo powyżej "
@@ -7595,7 +7595,7 @@
       "value": "Uruchom następujące polecenie:"
     }
   ],
-  "wpM7Y5": [
+  "HemvTL": [
     {
       "type": 0,
       "value": "Kolejką, na którą warto zwrócić uwagę, jest kolejka ograniczająca liczbę adresów do wycofywania środków BLS ("
@@ -7891,7 +7891,7 @@
       "value": "Z drugiej strony możesz zostać ukarany za bycie offline i złośliwe zachowanie — na przykład zaświadczanie o nieprawidłowych lub sprzecznych blokach."
     }
   ],
-  "z26FXa": [
+  "Sy5bAo": [
     {
       "type": 0,
       "value": "Po całkowitym przejściu na dowód stawki poprzez Połączenie walidatorzy są teraz odpowiedzialni za przetwarzanie transakcji i potwierdzanie ich ważności. Dane te "
@@ -7957,7 +7957,7 @@
       "value": "Ekonomia stakingu"
     }
   ],
-  "zVb+z+": [
+  "cD0jre": [
     {
       "type": 0,
       "value": "Nie wpłacaj więcej niż "

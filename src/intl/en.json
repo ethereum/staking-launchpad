@@ -1282,9 +1282,6 @@
   "NSK+Li": {
     "message": "I've secured the root account."
   },
-  "NSl1Q5": {
-    "message": "{stakingDepositCli}: This is done by using the {eth1WithdrawalAddress} flag when generating your keys with the Staking Deposit CLI."
-  },
   "NTWnJC": {
     "message": "Download command line app"
   },
@@ -1549,6 +1546,9 @@
   "Su0UFr": {
     "message": "Exit queue summary"
   },
+  "Sv30z9": {
+    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file {depositData} which is submitted with your 32 ETH deposit transaction."
+  },
   "Sy5bAo": {
     "message": "With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources as of The Merge. Using a third-party provider will result in your validator being offline. When Danksharding is implemented, validators may also be at risk of slashing under the {pocGame}."
   },
@@ -1707,6 +1707,9 @@
   "X3NiFM": {
     "message": "proof-of-custody game"
   },
+  "X4qc7f": {
+    "message": "timestamp"
+  },
   "X5KFEh": {
     "message": "That is not a valid deposit_data JSON file."
   },
@@ -1855,9 +1858,6 @@
   },
   "a/140i": {
     "message": "Exit queue and activation queue"
-  },
-  "a9ats7": {
-    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your {depositData} file which is submitted with your 32 ETH deposit transaction."
   },
   "a9e29d": {
     "message": "store your mnemonic safely"
@@ -2014,6 +2014,9 @@
   },
   "dTOtPO": {
     "message": "Top Up"
+  },
+  "dVJcJt": {
+    "message": "{stakingDepositCli}: This is done by using the “eth1 withdrawal address” ({eth1WithdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
   },
   "deLJOg": {
     "message": "Upload a valid json file."

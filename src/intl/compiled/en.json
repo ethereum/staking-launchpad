@@ -3311,24 +3311,6 @@
       "value": "I've secured the root account."
     }
   ],
-  "NSl1Q5": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": This is done by using the "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": " flag when generating your keys with the Staking Deposit CLI."
-    }
-  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -4087,6 +4069,20 @@
       "value": "Exit queue summary"
     }
   ],
+  "Sv30z9": [
+    {
+      "type": 0,
+      "value": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " which is submitted with your 32 ETH deposit transaction."
+    }
+  ],
   "Sy5bAo": [
     {
       "type": 0,
@@ -4495,6 +4491,12 @@
       "value": "proof-of-custody game"
     }
   ],
+  "X4qc7f": [
+    {
+      "type": 0,
+      "value": "timestamp"
+    }
+  ],
   "X5KFEh": [
     {
       "type": 0,
@@ -4901,20 +4903,6 @@
       "value": "Exit queue and activation queue"
     }
   ],
-  "a9ats7": [
-    {
-      "type": 0,
-      "value": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your "
-    },
-    {
-      "type": 1,
-      "value": "depositData"
-    },
-    {
-      "type": 0,
-      "value": " file which is submitted with your 32 ETH deposit transaction."
-    }
-  ],
   "a9e29d": [
     {
       "type": 0,
@@ -5265,6 +5253,24 @@
     {
       "type": 0,
       "value": "Top Up"
+    }
+  ],
+  "dVJcJt": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": This is done by using the “eth1 withdrawal address” ("
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") flag when generating your keys with the Staking Deposit CLI."
     }
   ],
   "deLJOg": [

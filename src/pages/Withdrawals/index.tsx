@@ -637,8 +637,10 @@ export const Withdrawals = () => {
             </Text>
             <Alert variant="warning" className="my30">
               <Text className="mb10">
-                <EmojiPrefix role="img" aria-label="note">
-                  📝
+                <EmojiPrefix>
+                  <span role="img" aria-label="note">
+                    📝
+                  </span>
                 </EmojiPrefix>
                 <FormattedMessage
                   defaultMessage="Note the “withdrawal” and “BLS To Execution Change” queues are independent and
@@ -711,8 +713,10 @@ export const Withdrawals = () => {
             </Text>
             <Alert variant="warning" className="my30">
               <Text className="mb10">
-                <EmojiPrefix role="img" aria-label="note">
-                  📝
+                <EmojiPrefix>
+                  <span role="img" aria-label="note">
+                    📝
+                  </span>
                 </EmojiPrefix>
                 <FormattedMessage defaultMessage="Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis." />
               </Text>

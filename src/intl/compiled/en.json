@@ -5531,6 +5531,28 @@
       "value": "Waiting for wallet confirmation"
     }
   ],
+  "fpe4Gx": [
+    {
+      "type": 0,
+      "value": "Active accounts with an effective balance or total balance less than "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " will be skipped"
+    }
+  ],
   "frGVRP": [
     {
       "type": 0,
@@ -6251,52 +6273,6 @@
       "value": "Exited"
     }
   ],
-  "ky7VbK": [
-    {
-      "type": 0,
-      "value": "An "
-    },
-    {
-      "type": 1,
-      "value": "excessBalanceWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " is processed when an active validator has a maxed out effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ", and has a total balance over "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". A single validator cannot get rewards on excess balance over "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
-    }
-  ],
   "l/uCcX": [
     {
       "type": 0,
@@ -6469,20 +6445,6 @@
     {
       "type": 0,
       "value": " directory."
-    }
-  ],
-  "lbQVsh": [
-    {
-      "type": 0,
-      "value": "Active accounts with an effective balance or total balance less than "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " will be skipped"
     }
   ],
   "lfHCV+": [
@@ -7023,6 +6985,28 @@
     {
       "type": 0,
       "value": " file"
+    }
+  ],
+  "pUAoW1": [
+    {
+      "type": 0,
+      "value": "Is the effective balance maxed out at "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "?"
     }
   ],
   "pWuGLy": [
@@ -7613,6 +7597,68 @@
       "value": "boldWarning"
     }
   ],
+  "uHSqYx": [
+    {
+      "type": 0,
+      "value": "An "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " is processed when an active validator has a maxed out effective balance of "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", and has a total balance over "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". A single validator cannot get rewards on excess balance over "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
+    }
+  ],
   "uJzGSb": [
     {
       "type": 0,
@@ -7825,20 +7871,6 @@
     {
       "type": 0,
       "value": "Initial setup"
-    }
-  ],
-  "wU8vxS": [
-    {
-      "type": 0,
-      "value": "Is the effective balance maxed out at "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": "?"
     }
   ],
   "wawegX": [

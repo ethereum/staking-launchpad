@@ -323,7 +323,7 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="An {excessBalanceWithdrawal} is processed when an active validator has a maxed out
-                effective balance of {PRICE_PER_VALIDATOR}, and has a total balance over {PRICE_PER_VALIDATOR}.
+                effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, and has a total balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}.
                 A single validator cannot get rewards on excess balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}, and thus these accounts will have
                 any extra balance automatically withdrawn to their Ethereum address."
                 values={{
@@ -909,8 +909,8 @@ export const Withdrawals = () => {
               </li>
               <li>
                 <FormattedMessage
-                  defaultMessage="Is the effective balance maxed out at {PRICE_PER_VALIDATOR}?"
-                  values={{ PRICE_PER_VALIDATOR }}
+                  defaultMessage="Is the effective balance maxed out at {PRICE_PER_VALIDATOR} {TICKER_NAME}?"
+                  values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
                 />
                 <ul>
                   <li>
@@ -993,8 +993,8 @@ export const Withdrawals = () => {
                 </li>
                 <li>
                   <FormattedMessage
-                    defaultMessage="Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} will be skipped"
-                    values={{ PRICE_PER_VALIDATOR }}
+                    defaultMessage="Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"
+                    values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
                   />
                 </li>
               </ul>

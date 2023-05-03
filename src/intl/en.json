@@ -2106,6 +2106,9 @@
   "fnMHGO": {
     "message": "Waiting for wallet confirmation"
   },
+  "fpe4Gx": {
+    "message": "Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"
+  },
   "frGVRP": {
     "message": "impact of effective balance"
   },
@@ -2393,9 +2396,6 @@
   "kv1nqx": {
     "message": "Exited"
   },
-  "ky7VbK": {
-    "message": "An {excessBalanceWithdrawal} is processed when an active validator has a maxed out effective balance of {PRICE_PER_VALIDATOR}, and has a total balance over {PRICE_PER_VALIDATOR}. A single validator cannot get rewards on excess balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
-  },
   "l/uCcX": {
     "message": "You're on the testnet"
   },
@@ -2449,9 +2449,6 @@
   },
   "lVdzDK": {
     "message": "Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
-  },
-  "lbQVsh": {
-    "message": "Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} will be skipped"
   },
   "lfHCV+": {
     "message": "Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices."
@@ -2664,6 +2661,9 @@
   },
   "pQxML4": {
     "message": "Generate {json} file"
+  },
+  "pUAoW1": {
+    "message": "Is the effective balance maxed out at {PRICE_PER_VALIDATOR} {TICKER_NAME}?"
   },
   "pWuGLy": {
     "message": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
@@ -2884,6 +2884,9 @@
   "uEB8++": {
     "message": "Execution credentials: If you want to withdraw to your execution wallet address you can set an “eth1 withdrawal address” using {ethAddressWithdraw} when running the deposit CLI. {boldWarning}"
   },
+  "uHSqYx": {
+    "message": "An {excessBalanceWithdrawal} is processed when an active validator has a maxed out effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, and has a total balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}. A single validator cannot get rewards on excess balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
+  },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
   },
@@ -2967,9 +2970,6 @@
   },
   "wJy3tO": {
     "message": "Initial setup"
-  },
-  "wU8vxS": {
-    "message": "Is the effective balance maxed out at {PRICE_PER_VALIDATOR}?"
   },
   "wawegX": {
     "message": "fishing rod"

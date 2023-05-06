@@ -205,6 +205,12 @@
       "value": "Transaktionen"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Sie können auch das Übertragungswerkzeug Beaconcha.in verwenden, um Ihre Nachricht über eine Web-Benutzeroberfläche hochzuladen:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1109,6 +1115,20 @@
       "value": " während des Setups, um etwas Hilfe zu bekommen!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Einen "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": "-Validator beenden"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1839,6 +1859,12 @@
       "value": "MetaMask herunterladen"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Der Key-Startindex in EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1881,6 +1907,12 @@
       "value": "So lassen sich Abhebungen auslösen, Änderung der Zugangsdaten"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Genesis-Validator-Root"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1890,7 +1922,7 @@
   "40/5Sf": [
     {
       "type": 0,
-      "value": "Hinweis: Deine "
+      "value": "Hinweis: Ihre "
     },
     {
       "type": 1,
@@ -1906,7 +1938,7 @@
     },
     {
       "type": 0,
-      "value": ", der die Transaktionsgebühren aus Vorschlägen erhält. Es kann sich um die gleiche Adresse handeln, doch es muss eine getrennte Festlegung erfolgen."
+      "value": ", der die Transaktionsgebühren aus vorgeschlagenen Blocks erhält. Es kann sich um die gleiche Adresse handeln, doch es muss eine getrennte Festlegung erfolgen."
     }
   ],
   "C3jBPI": [
@@ -2361,6 +2393,12 @@
       "value": " gesetzt hast; andernfalls ist die Einzahlung ungültig."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Ihre Validator-Indizes"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2521,6 +2559,12 @@
       "value": "Mache die Datei, die du gerade heruntergeladen hast, ausführbar."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Genesis-Abspaltungsversion"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2641,6 +2685,12 @@
       "value": "Netzwerk"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Ändern der Zugangsdaten zum Abheben"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2669,6 +2719,12 @@
     {
       "type": 0,
       "value": "Beachte, dass du im zweiten (unwahrscheinlichen) Szenario schrittweise bis zu 50 % (16 ETH) deines Einsatzes im Verlauf von 21 Tagen verlieren kannst. Nach 21 Tagen wirst du aus dem Validator-Pool herausgeschmissen. Dadurch wird sichergestellt, dass Blöcke irgendwann wieder finalisiert werden."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "vollständige Abhebung"
     }
   ],
   "IYvwsI": [
@@ -2841,6 +2897,12 @@
     {
       "type": 0,
       "value": "Was ist dein aktuelles Betriebssystem?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Ihre Erinnerungshilfe"
     }
   ],
   "K3uH1C": [
@@ -3445,28 +3507,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Wenn du diese Nachricht in das Mainnet integrieren möchtest, musst du die Nachricht in den "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": "-Pool eines Beacon-Node "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " der Capella/Shanghai-Hard Fork hochladen."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3661,6 +3701,12 @@
       "value": "Dein Netzwerk hat sich geändert"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Schritt-für-Schritt-Anleitung für Launchpad"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3707,6 +3753,12 @@
     {
       "type": 0,
       "value": "pip-Dokumentation"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Übertragungswerkzeug Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4837,6 +4889,20 @@
     {
       "type": 0,
       "value": "Warum muss ich Anlagen gestaked haben?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Einen "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": "-Minipool verlassen"
     }
   ],
   "ZTo0Fl": [
@@ -5985,10 +6051,46 @@
       "value": "Teku, ein Konsens-Client, früher bekannt als Artemis, wurde für die Erfüllung von internationalen Anforderungen und Sicherheitsvoraussetzungen erstellt. PegaSys ist ein Teil von ConcenSys, die sich dem Erstellen von unternehmensfertigen Clients und Tools, zur Interaktion mit der Core-Ethereum-Plattform, gewidmet haben."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Die Ausführungsadresse für Abhebungen"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Pro Epoche sind vier (4) Validatoraustritte zulässig, plus einem (1) weiteren für jeden 65.536. Validator aus insgesamt mehr als 327.680 aktiven Validatoren. Ab Februar 2023 beträgt der Grenzwert sieben (7) und wird sich bei Erreichen einer Validatorgesamtanzahl von 524.288 auf acht (8) erhöhen."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Wenn Sie festlegen möchten, dass Ihre Beacon Chain-Validatoren Salden automatisch von Ihrer "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": " abheben, können Sie mit dem CLI("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ")-Tool für Staking-Einzahlungen die JSON-Datei mit unterzeichneter Nachricht „BLS zur Ausführungsänderung“ ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") erstellen. Diese Nachricht enthält die Anforderung zur Änderung Ihrer alten BLS-Zugangsdaten zum Abheben in die neuen Zugangsdaten zum Abheben im Ausführungsadressformat."
     }
   ],
   "jXer8/": [
@@ -6167,6 +6269,12 @@
     {
       "type": 0,
       "value": "Teku-Dokumentation"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Netzwerkname"
     }
   ],
   "kd/f4u": [
@@ -6403,6 +6511,12 @@
       "value": "Import aus Launchpad-Dokumentation"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Ziel des Dateinamens"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6419,6 +6533,20 @@
     {
       "type": 0,
       "value": "Datei hochgeladen"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Sie können Ihre signierte Nachricht über die Kommandozeile mit dem Befehl "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": " übertragen:"
     }
   ],
   "mArJcj": [
@@ -6587,6 +6715,28 @@
     {
       "type": 0,
       "value": "Sobald du dich eingerichtet hast, kannst du dich mit dem Generieren deiner Schlüssel und dem Einzahlen deiner ETH beschäftigen."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Wenn Sie diese Nachricht in das Mainnet integrieren möchten, müssen Sie die Nachricht in den "
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": "-Nachrichtenpool eines Beacon-Node "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " der Capella/Shanghai-Hard Fork hochladen."
     }
   ],
   "njAU72": [
@@ -6917,36 +7067,6 @@
       "value": "Austrittsepoche und Abhebungsepoche"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Wenn Sie festlegen möchten, dass Ihre Beacon Chain-Validatoren Salden automatisch von Ihrer "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": " abheben, können Sie mit dem "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": "-Tool die JSON-Datei mit "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": " Nachricht erstellen. Diese Nachricht enthält die Anforderung zur Änderung Ihrer alten BLS-Zugangsdaten zum Abheben in die neuen Zugangsdaten zum Abheben im Ausführungsadressformat."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6993,6 +7113,20 @@
     {
       "type": 0,
       "value": "Speichere die Schlüsseldateien und bereite die Validierungsdateien vor"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Einen "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": "-Validator beenden"
     }
   ],
   "qntIRb": [
@@ -7961,6 +8095,12 @@
     {
       "type": 0,
       "value": "Auf der anderen Seite können Sie für Offlinesein oder bösartiges Vorgehen bestraft werden – zum Beispiel für das ungültige oder widersprüchliche Bescheinigen von Blöcken."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Ihre alten BLS-Abhebungsdaten"
     }
   ],
   "z26FXa": [

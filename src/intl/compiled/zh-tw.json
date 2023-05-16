@@ -1,0 +1,8192 @@
+{
+  "+2VHUU": [
+    {
+      "type": 0,
+      "value": "Ethereum consists of the "
+    },
+    {
+      "type": 1,
+      "value": "executionLayer"
+    },
+    {
+      "type": 0,
+      "value": " (handling transactions and execution, formerly 'Eth1'), and the "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayer"
+    },
+    {
+      "type": 0,
+      "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
+    }
+  ],
+  "+EZ9E/": [
+    {
+      "type": 0,
+      "value": "Interactive mode"
+    }
+  ],
+  "+Gj8F4": [
+    {
+      "type": 0,
+      "value": "You can prepare for this by providing a withdrawal address when generating your keys and deposit data."
+    }
+  ],
+  "+L0IkF": [
+    {
+      "type": 0,
+      "value": "第2步驟: 使用以太坊基金會存入工具來生成存入密鑰"
+    }
+  ],
+  "+UUcBt": [
+    {
+      "type": 0,
+      "value": "選擇一語言"
+    }
+  ],
+  "+V+ZX+": [
+    {
+      "type": 0,
+      "value": "驗證者運行時間"
+    }
+  ],
+  "+e8bO+": [
+    {
+      "type": 0,
+      "value": "我了解我將不能提取資金如果助記詞被丟失."
+    }
+  ],
+  "+fnRDB": [
+    {
+      "type": 0,
+      "value": "我接受"
+    }
+  ],
+  "+mDtA4": [
+    {
+      "type": 0,
+      "value": "6. 等待激活"
+    }
+  ],
+  "+ozGrs": [
+    {
+      "type": 0,
+      "value": "波蘭語"
+    }
+  ],
+  "+vHhHz": [
+    {
+      "type": 0,
+      "value": "Validator management"
+    }
+  ],
+  "+wJuhm": [
+    {
+      "type": 0,
+      "value": "Discord:"
+    }
+  ],
+  "/+atl4": [
+    {
+      "type": 0,
+      "value": "推薦免責聲明"
+    }
+  ],
+  "//KCTE": [
+    {
+      "type": 0,
+      "value": "您能同時一次執行所有交易, 或個別執行其."
+    }
+  ],
+  "/4e3mN": [
+    {
+      "type": 0,
+      "value": "Since The Merge, validators will also be responsible for processing transactions, and thus be entitled to unburnt gas fees associated with included transactions when proposing blocks. These fees are accounted for on the execution layer, not the consensus layer, and thus require a traditional Ethereum address to be provided to your client."
+    }
+  ],
+  "/5Hyyf": [
+    {
+      "type": 0,
+      "value": "印尼語"
+    }
+  ],
+  "/JiR8D": [
+    {
+      "type": 0,
+      "value": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
+    }
+  ],
+  "/OAba6": [
+    {
+      "type": 0,
+      "value": "Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis."
+    }
+  ],
+  "/QPc9s": [
+    {
+      "type": 0,
+      "value": "您能藉由簽署一自願退出訊息與驗證者來聲明您想停止驗證之意願."
+    }
+  ],
+  "/SbhtD": [
+    {
+      "type": 0,
+      "value": "您能使用"
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    },
+    {
+      "type": 0,
+      "value": " 來安裝pip3. 為下載最新pip3之相關說明, 請參考"
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    }
+  ],
+  "/U09hN": [
+    {
+      "type": 0,
+      "value": "來避免暴露您驗證者身分至網路, 您能使用一可信任之VPN來幫助減低IP地址洩漏風險."
+    }
+  ],
+  "/VVB8t": [
+    {
+      "type": 0,
+      "value": "進行驗證者設置前, 請先詳讀審查此區域."
+    }
+  ],
+  "/Vc/P6": [
+    {
+      "type": 0,
+      "value": "抱歉, 此頁面並不存在."
+    }
+  ],
+  "/WenEu": [
+    {
+      "type": 0,
+      "value": "您將負責為您交易. 詐騙網站可能會嘗試想要欺騙您送至"
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": ", 而不是一官方合約. 請確保此傳送至之地址確實為正確的."
+    }
+  ],
+  "/e+qAC": [
+    {
+      "type": 0,
+      "value": "withdrawable epoch"
+    }
+  ],
+  "/h0DGY": [
+    {
+      "type": 0,
+      "value": "Why the "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH maximum?"
+    }
+  ],
+  "/jJLYy": [
+    {
+      "type": 0,
+      "value": "交易"
+    }
+  ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "You can also use the Beaconcha.in broadcasting tool to upload your message using a web user interface:"
+    }
+  ],
+  "/rmnC0": [
+    {
+      "type": 0,
+      "value": "請最好考慮運行另一個客戶端，以保護您自己和網絡。"
+    }
+  ],
+  "/tHxib": [
+    {
+      "type": 0,
+      "value": "Geth is one of the three original implementations of the Ethereum protocol, written in Go."
+    }
+  ],
+  "/ub26/": [
+    {
+      "type": 0,
+      "value": "了解風險"
+    }
+  ],
+  "/w/KT4": [
+    {
+      "type": 0,
+      "value": "然而, 此將非完全丟失. 假設您鑰鍵使用"
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": "(默認入職流程) 則"
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/wNiYN": [
+    {
+      "type": 0,
+      "value": "為確保您安全, 存入合約已進行一字節碼等級之安全驗證檢查."
+    }
+  ],
+  "/ydZdf": [
+    {
+      "type": 0,
+      "value": "獎勵/懲處多龐大?"
+    }
+  ],
+  "00OWFk": [
+    {
+      "type": 0,
+      "value": "最低儲值價值為"
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "00d8uq": [
+    {
+      "type": 0,
+      "value": "一旦設置, 您的驗證者將不會立即被激活. 使用此時間來完成檢查表並於測試鏈多加練習練習."
+    }
+  ],
+  "03xT/J": [
+    {
+      "type": 0,
+      "value": "此背後想法為減低誠實錯誤造成之損失, 但也強烈預防同步協調之攻擊."
+    }
+  ],
+  "07C4IQ": [
+    {
+      "type": 0,
+      "value": "第3部分 -- 存款後"
+    }
+  ],
+  "09ZPhN": [
+    {
+      "type": 0,
+      "value": "提款證明:"
+    }
+  ],
+  "0FTs1T": [
+    {
+      "type": 0,
+      "value": "not"
+    }
+  ],
+  "0GWhvr": [
+    {
+      "type": 0,
+      "value": "Expected outputs"
+    }
+  ],
+  "0MIRQ5": [
+    {
+      "type": 0,
+      "value": "Is the effective balance maxed out at 32?"
+    }
+  ],
+  "0PlVao": [
+    {
+      "type": 0,
+      "value": "更多關於懲處預防"
+    }
+  ],
+  "0RmIrh": [
+    {
+      "type": 0,
+      "value": "您的 deposit_data.json 建議您再設置一個驗證者. 這筆保證金仍未結清. 如您認為自己已完成了這筆保證金交易, 請至少等一小時後再次嘗試來避免重複付款."
+    }
+  ],
+  "0S8/Wo": [
+    {
+      "type": 0,
+      "value": "測試網練習"
+    }
+  ],
+  "0U17DC": [
+    {
+      "type": 0,
+      "value": "提款證明"
+    }
+  ],
+  "0c06tl": [
+    {
+      "type": 0,
+      "value": "Withdrawal Credentials"
+    }
+  ],
+  "0i4cCJ": [
+    {
+      "type": 0,
+      "value": "確認存款("
+    },
+    {
+      "type": 1,
+      "value": "depositKeys"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "0kxaf/": [
+    {
+      "type": 0,
+      "value": "I've provided an Ethereum address to my validator where I would like my fee rewards to be deposited."
+    }
+  ],
+  "0lHkrT": [
+    {
+      "type": 0,
+      "value": "第二, 下載獨立包裹:"
+    }
+  ],
+  "0mc/JV": [
+    {
+      "type": 0,
+      "value": "Validating is a commitment"
+    }
+  ],
+  "0oNdmk": [
+    {
+      "type": 0,
+      "value": "驗證者常見問題"
+    }
+  ],
+  "0sMzHb": [
+    {
+      "type": 0,
+      "value": "As noted above, this step is completed by signing a message known as "
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": ". These are accepted into blocks as of the first slot after the Shanghai/Capella upgrade."
+    }
+  ],
+  "0uqjBl": [
+    {
+      "type": 0,
+      "value": "來提供公共財並賺取持續獎勵."
+    }
+  ],
+  "0wEZ8X": [
+    {
+      "type": 0,
+      "value": "Verify on "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    }
+  ],
+  "122+yR": [
+    {
+      "type": 0,
+      "value": "取款鍵"
+    }
+  ],
+  "14vTrX": [
+    {
+      "type": 0,
+      "value": "While validating on the testnet, perform these simulations to learn more about your node, and better prepare yourself for Mainnet:"
+    }
+  ],
+  "15B2Xk": [
+    {
+      "type": 0,
+      "value": "Stakers must set a withdrawal address to unlock reward payments from the consensus layer. This is set when generating your validator keys."
+    }
+  ],
+  "17Epwt": [
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
+  "192AR6": [
+    {
+      "type": 0,
+      "value": "更多關於質押"
+    }
+  ],
+  "19o6KO": [
+    {
+      "type": 0,
+      "value": "我甚麼時候能提取資產, 且撤出與提取資產有何差別?"
+    }
+  ],
+  "1FdDAV": [
+    {
+      "type": 0,
+      "value": "JSON RPC 端點"
+    }
+  ],
+  "1G0loj": [
+    {
+      "type": 0,
+      "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
+    }
+  ],
+  "1P6GMj": [
+    {
+      "type": 0,
+      "value": "監控"
+    }
+  ],
+  "1PPGHb": [
+    {
+      "type": 0,
+      "value": "我已驗證我的伺服器時間與掛鐘匹配."
+    }
+  ],
+  "1QW89r": [
+    {
+      "type": 0,
+      "value": "更多的統計數據"
+    }
+  ],
+  "1UmyRL": [
+    {
+      "type": 0,
+      "value": "最新之穩定軟體版本"
+    }
+  ],
+  "1VJ05X": [
+    {
+      "type": 0,
+      "value": "第3部分"
+    }
+  ],
+  "1Vkpd0": [
+    {
+      "type": 0,
+      "value": "查看密碼文件是否有無新行尾."
+    }
+  ],
+  "1Yybuc": [
+    {
+      "type": 0,
+      "value": "docs of full arguments here"
+    }
+  ],
+  "1fDfw7": [
+    {
+      "type": 0,
+      "value": "這一切如何發生的?"
+    }
+  ],
+  "1fytak": [
+    {
+      "type": 0,
+      "value": "查看存入金合約細節"
+    }
+  ],
+  "1ingnQ": [
+    {
+      "type": 0,
+      "value": "有關以太坊質押經濟學的更多信息"
+    }
+  ],
+  "1p+pb5": [
+    {
+      "type": 0,
+      "value": "fee recipient"
+    }
+  ],
+  "1pUw7Y": [
+    {
+      "type": 0,
+      "value": "Documentation on running Nethermind"
+    }
+  ],
+  "21EI3f": [
+    {
+      "type": 0,
+      "value": "Lodestar validator key management documentation"
+    }
+  ],
+  "22EpKq": [
+    {
+      "type": 0,
+      "value": "此為非一有效"
+    },
+    {
+      "type": 1,
+      "value": "JSON"
+    },
+    {
+      "type": 0,
+      "value": " 文件"
+    }
+  ],
+  "25IJMT": [
+    {
+      "type": 0,
+      "value": "If a withdrawal address has not been set, and you have lost access to the mnemonic seed phrase, your funds will remain locked in the validator account indefinitely."
+    }
+  ],
+  "25suT4": [
+    {
+      "type": 0,
+      "value": "此路徑分隔符依賴操作系統, 並應該被運作於"
+    },
+    {
+      "type": 1,
+      "value": "semicolon"
+    },
+    {
+      "type": 0,
+      "value": " Windows 而非"
+    },
+    {
+      "type": 1,
+      "value": "colon"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2A6Wjz": [
+    {
+      "type": 0,
+      "value": "By providing this flag, your withdrawal credentials will contain the "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " prefix and your withdrawal address, signaling that your account is ready for withdrawals."
+    }
+  ],
+  "2AHkym": [
+    {
+      "type": 0,
+      "value": "一錯誤產生當您驗證者下載資訊從Beaconcha.in"
+    }
+  ],
+  "2CYEJa": [
+    {
+      "type": 0,
+      "value": "故障排查"
+    }
+  ],
+  "2HVWJL": [
+    {
+      "type": 0,
+      "value": "執行層"
+    }
+  ],
+  "2Hk0nB": [
+    {
+      "type": 0,
+      "value": "請按應用程序所提供的說明生成您的密鑰"
+    }
+  ],
+  "2PI6Di": [
+    {
+      "type": 0,
+      "value": "共識用戶端"
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "2RXbJd": [
+    {
+      "type": 0,
+      "value": "What factors affect the frequency of payouts?"
+    }
+  ],
+  "2XWJdH": [
+    {
+      "type": 0,
+      "value": "If so, move to next question"
+    }
+  ],
+  "2a1GTh": [
+    {
+      "type": 0,
+      "value": "您能隨時重新計算您的簽章密鑰利用您的取款密鑰"
+    }
+  ],
+  "2c8F5x": [
+    {
+      "type": 0,
+      "value": "Fee recipient docs:"
+    }
+  ],
+  "2ebz/N": [
+    {
+      "type": 0,
+      "value": "excess balance withdrawal"
+    }
+  ],
+  "2iH8Zc": [
+    {
+      "type": 0,
+      "value": "Nimbus 密鑰管理文檔"
+    }
+  ],
+  "2rFwzp": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": if you provided a withdrawal address when generating your keys, you're good to go (found under “advanced mode”)"
+    }
+  ],
+  "2rflCq": [
+    {
+      "type": 0,
+      "value": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
+    }
+  ],
+  "2t/3ab": [
+    {
+      "type": 0,
+      "value": "另一文件您產生為"
+    },
+    {
+      "type": 1,
+      "value": "depositDataJson"
+    },
+    {
+      "type": 0,
+      "value": ". 此文件包含一公共鑰連結與您的驗證者; 步入下一階段前, 您將需要上傳此."
+    }
+  ],
+  "32rBNK": [
+    {
+      "type": 0,
+      "value": "服務條款"
+    }
+  ],
+  "36j2ls": [
+    {
+      "type": 0,
+      "value": "若要處理來自共識層的驗證者存款(之前的‘Eth1’鏈), 您將需要運行一個"
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " 以及您的"
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "(之前的‘Eth2’). 您可以使用 Infura 這樣的第三方服務, 但我們建議運行您自己的客戶端以盡可能保持網絡分散."
+    }
+  ],
+  "38Fedn": [
+    {
+      "type": 0,
+      "value": "More on ChainSafe"
+    }
+  ],
+  "38VH2G": [
+    {
+      "type": 0,
+      "value": "下載deposit-cli 工具"
+    }
+  ],
+  "39ZKg5": [
+    {
+      "type": 0,
+      "value": "Withdrawals"
+    }
+  ],
+  "3CRtg8": [
+    {
+      "type": 0,
+      "value": "您不具足夠"
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " 於此帳戶為"
+    },
+    {
+      "type": 1,
+      "value": "numberOfValidators"
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    }
+  ],
+  "3GbrWR": [
+    {
+      "type": 0,
+      "value": "為何獎勵變化依據網路驗證者總數?"
+    }
+  ],
+  "3H3ygi": [
+    {
+      "type": 0,
+      "value": "沒發現任何驗證者連結至您的錢包"
+    }
+  ],
+  "3KP7+U": [
+    {
+      "type": 0,
+      "value": "Command line with flags"
+    }
+  ],
+  "3NHygY": [
+    {
+      "type": 0,
+      "value": "測試於Goerli"
+    }
+  ],
+  "3ODqP9": [
+    {
+      "type": 0,
+      "value": "Depositing more than "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH, as each validator is limited to an "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": " of "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": ". This means that staking is done in "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH increments, each with its own set of keys and balance."
+    }
+  ],
+  "3PbtmF": [
+    {
+      "type": 0,
+      "value": "查看全體地址, 而非一部分而已. 此應當為幾字節不同."
+    }
+  ],
+  "3Q43SM": [
+    {
+      "type": 0,
+      "value": "成為一驗證者"
+    }
+  ],
+  "3QmqFf": [
+    {
+      "type": 0,
+      "value": "交易充值"
+    }
+  ],
+  "3SOKyg": [
+    {
+      "type": 0,
+      "value": "這些術語的更新僅會改變命名約定；不會改變以太坊的目標及路線圖。"
+    }
+  ],
+  "3URRZK": [
+    {
+      "type": 0,
+      "value": "Geth於Goerli文檔"
+    }
+  ],
+  "3aykgN": [
+    {
+      "type": 0,
+      "value": "Your validator will also receives unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 500,000 validators, each validator will "
+    },
+    {
+      "type": 1,
+      "value": "average"
+    },
+    {
+      "type": 0,
+      "value": " a block proposal every 70 days."
+    }
+  ],
+  "3tR/V9": [
+    {
+      "type": 0,
+      "value": "第2部分 -- 設置期間"
+    }
+  ],
+  "3zCA2i": [
+    {
+      "type": 0,
+      "value": "如您看到錯誤訊息"
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", 您將需要來安裝"
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " 或"
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " 包裹."
+    }
+  ],
+  "4+3cIr": [
+    {
+      "type": 0,
+      "value": "您已成功設置一測試網驗證者!! 我們推薦您完成此確認清單再驗證於"
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    }
+  ],
+  "47svuN": [
+    {
+      "type": 0,
+      "value": "安裝"
+    }
+  ],
+  "4AVfh5": [
+    {
+      "type": 0,
+      "value": "I've joined my consensus client's Discord server."
+    }
+  ],
+  "4NvAhl": [
+    {
+      "type": 0,
+      "value": "藉由設置您的硬體設備及操作系統來開始."
+    }
+  ],
+  "4QNsja": [
+    {
+      "type": 0,
+      "value": "為何使用滑動縮放? 雖然我們不會在這裡討論令人難忘的細節, 但基本上直覺理由為, 如網絡要正常工作, 其需要最少數量的驗證者(因此需要最少數量的以太/ETEH). 因此, 為了激勵更多的驗證者加入, 維持利率在較高水平為非常重要的是, 直到使驗證者數量達到最低目標數值."
+    }
+  ],
+  "4hb+GK": [
+    {
+      "type": 0,
+      "value": "Withdrawal address"
+    }
+  ],
+  "4hnEBA": [
+    {
+      "type": 0,
+      "value": "智能合約程式已被驗證了嗎?"
+    }
+  ],
+  "4kNER3": [
+    {
+      "type": 0,
+      "value": "Any exit, voluntary or not, must be processed through the exit queue. This is not instantaneous, and depends on how many other accounts are exiting at the same time."
+    }
+  ],
+  "4l6vz1": [
+    {
+      "type": 0,
+      "value": "複製"
+    }
+  ],
+  "4uFys5": [
+    {
+      "type": 0,
+      "value": "Accounts that have been slashed, or have insufficient balance, will be forced to exit according to the network rules. This is automatic and cannot be stopped once initiated."
+    }
+  ],
+  "54J/qs": [
+    {
+      "type": 0,
+      "value": "如果我使用BLS提款然後丟失提款密鑰, 將會有甚麼後果發生呢?"
+    }
+  ],
+  "57MWKW": [
+    {
+      "type": 0,
+      "value": "Withdrawals as an operation, not a new transaction type"
+    }
+  ],
+  "57h5ur": [
+    {
+      "type": 0,
+      "value": "Then up to "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " for the next validator sweep to execute the full withdrawal (assumes "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials)"
+    }
+  ],
+  "58PXVy": [
+    {
+      "type": 0,
+      "value": "為何兩鑰鍵而非一個就好?"
+    }
+  ],
+  "5A6amM": [
+    {
+      "type": 0,
+      "value": "於多方運行您的驗證程式之風險極高. 其將容易導致一個可懲處之事件並強制從網路中彈出. "
+    },
+    {
+      "type": 1,
+      "value": "learnMore"
+    }
+  ],
+  "5CBhpq": [
+    {
+      "type": 0,
+      "value": "承諾"
+    }
+  ],
+  "5H/J84": [
+    {
+      "type": 0,
+      "value": "您要如何生成您的金鑰？"
+    }
+  ],
+  "5HJLBU": [
+    {
+      "type": 0,
+      "value": "Teku 安裝文檔"
+    }
+  ],
+  "5KtHYT": [
+    {
+      "type": 0,
+      "value": "If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
+    }
+  ],
+  "5UH1sh": [
+    {
+      "type": 0,
+      "value": "羅馬尼亞語"
+    }
+  ],
+  "5Vrs8S": [
+    {
+      "type": 0,
+      "value": "You need enough upload bandwidth too. As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
+    }
+  ],
+  "5hW6Gf": [
+    {
+      "type": 0,
+      "value": "Consensus Layer Withdrawal Protection"
+    }
+  ],
+  "5t8oYl": [
+    {
+      "type": 0,
+      "value": "歡迎隨時訪問EthStaker於"
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " 或"
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": " 當您設置驗證裝備中並想一些友好建議!"
+    }
+  ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Exiting a "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " validator"
+    }
+  ],
+  "63gLLu": [
+    {
+      "type": 0,
+      "value": "average"
+    }
+  ],
+  "6NndcB": [
+    {
+      "type": 0,
+      "value": "leave"
+    }
+  ],
+  "6S95Bo": [
+    {
+      "type": 0,
+      "value": "避免詐騙"
+    }
+  ],
+  "6UUL73": [
+    {
+      "type": 0,
+      "value": "更多關於驗證者"
+    }
+  ],
+  "6VIBSR": [
+    {
+      "type": 0,
+      "value": "您能改善驗證者有效餘額藉由充值其"
+    }
+  ],
+  "6eA+mW": [
+    {
+      "type": 0,
+      "value": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
+    }
+  ],
+  "6nh4de": [
+    {
+      "type": 0,
+      "value": "您正在加入一個處於早期階段的網絡. 與任何新軟件一樣, 其存在潛在的軟件錯誤. 雖然不太可能, 但潛在的漏洞可能會導致懲處."
+    }
+  ],
+  "7+Domh": [
+    {
+      "type": 0,
+      "value": "備註"
+    }
+  ],
+  "738tqz": [
+    {
+      "type": 0,
+      "value": "Prysm編輯於Go並由 GPL-3.0證書許可發行."
+    }
+  ],
+  "74QdCu": [
+    {
+      "type": 0,
+      "value": "交易開始"
+    }
+  ],
+  "793QlI": [
+    {
+      "type": 1,
+      "value": "title"
+    },
+    {
+      "type": 0,
+      "value": " 並不支持下線節點."
+    }
+  ],
+  "7DFXQj": [
+    {
+      "type": 0,
+      "value": "切換至"
+    },
+    {
+      "type": 1,
+      "value": "oppositeNetwork"
+    },
+    {
+      "type": 0,
+      "value": " launchpad"
+    }
+  ],
+  "7FcGxU": [
+    {
+      "type": 0,
+      "value": "You need to run an "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " as well as your "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "7GLK15": [
+    {
+      "type": 0,
+      "value": "Depending which method you use to generate your keys:"
+    }
+  ],
+  "7Iz3JI": [
+    {
+      "type": 0,
+      "value": "共識用戶端"
+    }
+  ],
+  "7Nwe5A": [
+    {
+      "type": 1,
+      "value": "exitEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator is no longer active, no longer earning rewards, and is no longer subject to slashing rules."
+    }
+  ],
+  "7Rw2uA": [
+    {
+      "type": 0,
+      "value": "consensus"
+    }
+  ],
+  "7UOvbT": [
+    {
+      "type": 0,
+      "value": "下線"
+    }
+  ],
+  "7V/8wz": [
+    {
+      "type": 0,
+      "value": "配置文件"
+    }
+  ],
+  "7XiYRi": [
+    {
+      "type": 0,
+      "value": "被懲處?"
+    }
+  ],
+  "7d3Nzd": [
+    {
+      "type": 0,
+      "value": "您可以使用驗證者客戶端的拼寫標誌為您建議之區塊 (您選擇的一些文節) 並添加個人風格. 您也可以使用 "
+    },
+    {
+      "type": 1,
+      "value": "beaconchain"
+    },
+    {
+      "type": 0,
+      "value": " 或 "
+    },
+    {
+      "type": 1,
+      "value": "beaconscan"
+    },
+    {
+      "type": 0,
+      "value": " 區塊鏈瀏覽器查看其."
+    }
+  ],
+  "7kWKe0": [
+    {
+      "type": 0,
+      "value": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism."
+    }
+  ],
+  "7sZfCF": [
+    {
+      "type": 0,
+      "value": "更多關於Nimbus"
+    }
+  ],
+  "7tRtDE": [
+    {
+      "type": 0,
+      "value": "各epoch/時期, 網路將測量每個驗證者之行動並應其發布您的獎賞或懲處."
+    }
+  ],
+  "8/nhr4": [
+    {
+      "type": 0,
+      "value": "For your validator to be capable of withdrawals of any kind, a withdrawal address must be provided and registered to your account on the Beacon Chain. This should be an address you control, and cannot be changed once set."
+    }
+  ],
+  "80eWKU": [
+    {
+      "type": 0,
+      "value": "真實餘額"
+    }
+  ],
+  "82vl9l": [
+    {
+      "type": 0,
+      "value": "我們無法偵查Metamask. 請切換瀏覽器或下載MetaMask."
+    }
+  ],
+  "8BXroN": [
+    {
+      "type": 0,
+      "value": "Lodestar documentation"
+    }
+  ],
+  "8FmuYF": [
+    {
+      "type": 0,
+      "value": "下載pip3"
+    }
+  ],
+  "8HxLGA": [
+    {
+      "type": 0,
+      "value": "配置Teku"
+    }
+  ],
+  "8JtiQS": [
+    {
+      "type": 0,
+      "value": "請問網站所列合約是否相符?"
+    }
+  ],
+  "8Rj/6A": [
+    {
+      "type": 0,
+      "value": "選擇您目前使用的計算機的操作系統. 這將是您用來生成密鑰之計算機, 且其不一定要成為您想要用於節點之操作系統."
+    }
+  ],
+  "8WtyrD": [
+    {
+      "type": 0,
+      "value": "西班牙語"
+    }
+  ],
+  "8XQmxX": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 來同步協調Goerli測試網."
+    }
+  ],
+  "8boRAk": [
+    {
+      "type": 0,
+      "value": "懲處"
+    }
+  ],
+  "8echXf": [
+    {
+      "type": 0,
+      "value": "Do not turn your validator off until this epoch is reached."
+    }
+  ],
+  "8fXTDo": [
+    {
+      "type": 0,
+      "value": "Fortunately, this is only a one-time message that needs to be processed, and validators who provided withdrawal credentials at time of deposit are exempt from this step. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
+    }
+  ],
+  "8k1RjX": [
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " testnet"
+    }
+  ],
+  "8kLV25": [
+    {
+      "type": 0,
+      "value": "Has a withdrawal address been provided?"
+    }
+  ],
+  "8mEWVB": [
+    {
+      "type": 0,
+      "value": "Given a fixed total number of validators, the rewards/penalties predominantly scale with the balance of the validator—attesting with a higher balance results in larger rewards/penalties whereas attesting with a lower balance results in lower rewards/penalties."
+    }
+  ],
+  "8mybVV": [
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 0\" = BLS keys = Old withdrawal credentials: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsDisabled"
+    }
+  ],
+  "8rxaqc": [
+    {
+      "type": 1,
+      "value": "withdrawableEpochLabel"
+    },
+    {
+      "type": 0,
+      "value": " - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
+    }
+  ],
+  "8uq59n": [
+    {
+      "type": 0,
+      "value": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
+    }
+  ],
+  "8wd0q5": [
+    {
+      "type": 0,
+      "value": "一以太坊客戶帳戶設計用於成為私/公商業友善, 及許可限制網路之用途."
+    }
+  ],
+  "8yom7x": [
+    {
+      "type": 0,
+      "value": "單擊右鍵然後單擊“打開”，從應用中運行 Wagyu Key Gen 應用。您將收到壹個警告，表明 macOS 無法驗證“Wagyu Key Gen”應用的開發者。您確定要打開它嗎？單擊“打開”，該應用將打開。"
+    }
+  ],
+  "9+Ddtu": [
+    {
+      "type": 0,
+      "value": "接著"
+    }
+  ],
+  "9/4mZe": [
+    {
+      "type": 0,
+      "value": "基於安全原因, 您必須驗證涉及兩個密鑰. 您的簽章密鑰必須隨時可用. 因此, 其必須於線上保存. 因為線上的任何內容都容易受到駭客攻擊, 所以使用相同的密鑰進行提款並非一個好主意."
+    }
+  ],
+  "94dQms": [
+    {
+      "type": 0,
+      "value": "為安全理由, 我們推薦您網路下線後在完成此步驟."
+    }
+  ],
+  "9DZdsc": [
+    {
+      "type": 0,
+      "value": "擁有超過"
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH有甚麼好處呢?"
+    }
+  ],
+  "9JktQX": [
+    {
+      "type": 0,
+      "value": "此無一完美解答因其關於許多考量因素."
+    }
+  ],
+  "9RBO+X": [
+    {
+      "type": 0,
+      "value": "Review validator roles and responsibilities"
+    }
+  ],
+  "9VZ9oy": [
+    {
+      "type": 0,
+      "value": "如何激勵驗證者使其正常及誠實運作?"
+    }
+  ],
+  "9k7tO9": [
+    {
+      "type": 0,
+      "value": "錯誤網路"
+    }
+  ],
+  "9lBMQr": [
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " 選擇路徑藉由"
+    },
+    {
+      "type": 1,
+      "value": "validatorsKeys"
+    },
+    {
+      "type": 0,
+      "value": " 選項."
+    }
+  ],
+  "9mLaI9": [
+    {
+      "type": 0,
+      "value": "存款"
+    }
+  ],
+  "9qMyhY": [
+    {
+      "type": 0,
+      "value": "詳讀選項及子命令文檔"
+    }
+  ],
+  "9qpi9h": [
+    {
+      "type": 0,
+      "value": "Configure Nethermind"
+    }
+  ],
+  "9r6K1F": [
+    {
+      "type": 0,
+      "value": "Not eligible for withdrawals"
+    }
+  ],
+  "9r8j5+": [
+    {
+      "type": 0,
+      "value": "Engine API"
+    }
+  ],
+  "9uOFF3": [
+    {
+      "type": 0,
+      "value": "概覽"
+    }
+  ],
+  "9vwGlT": [
+    {
+      "type": 0,
+      "value": "我已同步我的信標鏈節點於"
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "9ySJSP": [
+    {
+      "type": 0,
+      "value": "選擇您的"
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " 用户端並設置一節點"
+    }
+  ],
+  "A2b4uB": [
+    {
+      "type": 0,
+      "value": "傳送存款"
+    }
+  ],
+  "A6Oppp": [
+    {
+      "type": 0,
+      "value": "當藉由launchpad完成您的存款後, Prysm 提供一步步簡介來運行其客戶."
+    }
+  ],
+  "A8r7Hg": [
+    {
+      "type": 0,
+      "value": "共識層"
+    }
+  ],
+  "AC669U": [
+    {
+      "type": 0,
+      "value": "如您需要更多幫助, 請查看Python 文檔."
+    }
+  ],
+  "AEbKyt": [
+    {
+      "type": 0,
+      "value": "For devnet, you can add a param:"
+    }
+  ],
+  "AFzWcM": [
+    {
+      "type": 0,
+      "value": "I understand that keys are my responsibility and that my mnemonic (seed) will be the "
+    },
+    {
+      "type": 1,
+      "value": "onlyWay"
+    },
+    {
+      "type": 0,
+      "value": " to withdraw my funds if I don't provide a withdrawal address with initial deposit data."
+    }
+  ],
+  "AH6XsN": [
+    {
+      "type": 0,
+      "value": "Also be sure you understand how staking withdrawals work before setting up your keys and deposit data."
+    }
+  ],
+  "AJD+66": [
+    {
+      "type": 0,
+      "value": "此以太坊質押存款保證金合約要求一最低傳送之"
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 額量來使其被接受."
+    }
+  ],
+  "ATwOPg": [
+    {
+      "type": 0,
+      "value": "執行用戶端"
+    }
+  ],
+  "AYKxmf": [
+    {
+      "type": 0,
+      "value": "連結您的硬體錢包至Metamask"
+    }
+  ],
+  "AZaw+B": [
+    {
+      "type": 0,
+      "value": "正在退出"
+    }
+  ],
+  "AbBgEs": [
+    {
+      "type": 0,
+      "value": "了解驗證者有效餘額"
+    }
+  ],
+  "Ad61gz": [
+    {
+      "type": 0,
+      "value": "請確認您確實下載從以太坊基金會官方GitHub帳戶藉由驗證以下URL: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "Ad8+R5": [
+    {
+      "type": 0,
+      "value": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
+    }
+  ],
+  "Affixg": [
+    {
+      "type": 0,
+      "value": "保證金存款"
+    }
+  ],
+  "AkVktj": [
+    {
+      "type": 0,
+      "value": "查看保證金額合約地址"
+    }
+  ],
+  "An37jY": [
+    {
+      "type": 0,
+      "value": "具體而言, 當您啟動 Lighthouse 驗證者客戶端時, 您可以在您的密鑰庫目錄中指向其, 而其將導入您的密鑰庫並交互請求您的密碼. 如果您不提供密碼, Lighthouse 會在每次啟動時再次詢問密碼."
+    }
+  ],
+  "Andk3R": [
+    {
+      "type": 0,
+      "value": "If you do not provide a withdrawal address prior to depositing, you will have to perform an additional step to update your keys and enable withdrawals. Funds will be locked in the meantime."
+    }
+  ],
+  "Anqi3n": [
+    {
+      "type": 0,
+      "value": "藉由Lighthouse 成為驗證者"
+    }
+  ],
+  "Aw1mMs": [
+    {
+      "type": 0,
+      "value": "充值驗證者"
+    }
+  ],
+  "AyoE3t": [
+    {
+      "type": 0,
+      "value": "Withdrawing from a validator is not yet possible. This functionality is planned to be included in the Shanghai/Capella upgrade planned for Q1/Q2 2023."
+    }
+  ],
+  "B0BAqm": [
+    {
+      "type": 0,
+      "value": "An "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
+    }
+  ],
+  "B2EKj+": [
+    {
+      "type": 0,
+      "value": "我了解我需要存款"
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 來成為驗證者, 且"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 之傳送交易至信標鏈為單向, 且其無法被逆轉."
+    }
+  ],
+  "BCsPjJ": [
+    {
+      "type": 0,
+      "value": "開始保證金存款程序"
+    }
+  ],
+  "BFAvr/": [
+    {
+      "type": 0,
+      "value": "充值一驗證者"
+    }
+  ],
+  "BFsUAH": [
+    {
+      "type": 0,
+      "value": "查看"
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " 是否為"
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "BHR1uy": [
+    {
+      "type": 0,
+      "value": "Erigon 是用 Go 編寫的，並依照 GNU LGPLv3 獲得許可。"
+    }
+  ],
+  "BKDxOx": [
+    {
+      "type": 0,
+      "value": "Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated."
+    }
+  ],
+  "BPpnlJ": [
+    {
+      "type": 0,
+      "value": "下載MetaMask"
+    }
+  ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "The key start index in EIP-2334"
+    }
+  ],
+  "BUFaRV": [
+    {
+      "type": 0,
+      "value": "EthStaker 社群"
+    }
+  ],
+  "Bc20la": [
+    {
+      "type": 0,
+      "value": "days"
+    }
+  ],
+  "Bj5yI5": [
+    {
+      "type": 0,
+      "value": "有效餘額"
+    }
+  ],
+  "BnwOUO": [
+    {
+      "type": 0,
+      "value": "execution"
+    }
+  ],
+  "BoEpk9": [
+    {
+      "type": 0,
+      "value": "簡介"
+    }
+  ],
+  "Bp0clV": [
+    {
+      "type": 0,
+      "value": "Validator index:"
+    }
+  ],
+  "Bp9Dxf": [
+    {
+      "type": 0,
+      "value": "How to trigger withdrawals, credential change"
+    }
+  ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Genesis validator root"
+    }
+  ],
+  "C/gb74": [
+    {
+      "type": 0,
+      "value": "配置Lighthouse"
+    }
+  ],
+  "40/5Sf": [
+    {
+      "type": 0,
+      "value": "Note that your "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " are not the same as your "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
+    }
+  ],
+  "C3jBPI": [
+    {
+      "type": 0,
+      "value": "執行用戶端"
+    }
+  ],
+  "C9fTX1": [
+    {
+      "type": 0,
+      "value": "回答常見問題來成為驗證者."
+    }
+  ],
+  "CACPC+": [
+    {
+      "type": 0,
+      "value": "捷克語"
+    }
+  ],
+  "CDx/FY": [
+    {
+      "type": 0,
+      "value": "By running a validator, you'll be responsible for securing the network and receive continuous payouts for actions that help the network reach consensus."
+    }
+  ],
+  "CF9vMR": [
+    {
+      "type": 0,
+      "value": "權益證明"
+    }
+  ],
+  "CGMYrU": [
+    {
+      "type": 0,
+      "value": "Staking Deposit CLI releases"
+    }
+  ],
+  "CPl2hh": [
+    {
+      "type": 0,
+      "value": "I have reviewed the checklist and understand how withdrawals work."
+    }
+  ],
+  "CT+gEC": [
+    {
+      "type": 0,
+      "value": "Upload to Beacon Node "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " pool"
+    }
+  ],
+  "CVDzDs": [
+    {
+      "type": 0,
+      "value": "您應充值如您的餘額接近16ETH. 此未來確保您並不會被踢出驗證組 (其將自動剔除您如餘額少於16ETH)."
+    }
+  ],
+  "CWKE9c": [
+    {
+      "type": 0,
+      "value": "您的錢包在一錯誤網路上. 請切換至"
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    }
+  ],
+  "Cacfkx": [
+    {
+      "type": 0,
+      "value": "更多關於以太坊的理念"
+    }
+  ],
+  "CdKEd/": [
+    {
+      "type": 0,
+      "value": "最低懲處金額為1ETH, 但"
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "CeeJfw": [
+    {
+      "type": 0,
+      "value": "我已設置一防火牆."
+    }
+  ],
+  "Cgrsge": [
+    {
+      "type": 0,
+      "value": "Current validators"
+    }
+  ],
+  "Co67tK": [
+    {
+      "type": 0,
+      "value": "BLS To Execution Change"
+    }
+  ],
+  "D0Rigq": [
+    {
+      "type": 0,
+      "value": "否"
+    }
+  ],
+  "D19C0b": [
+    {
+      "type": 0,
+      "value": "If not, I've submitted a "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " message signed with my BLS withdrawal keys to update my withdrawal credentials (requires Shanghai/Capella upgrade)."
+    }
+  ],
+  "D33f/7": [
+    {
+      "type": 0,
+      "value": "目前APR"
+    }
+  ],
+  "D4cQV/": [
+    {
+      "type": 0,
+      "value": "需要質押多少ETH來成為一驗證者?"
+    }
+  ],
+  "D5NvkC": [
+    {
+      "type": 0,
+      "value": "Download "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " branch:"
+    }
+  ],
+  "DCaq7N": [
+    {
+      "type": 0,
+      "value": "您的錢包連結至一正確網路!"
+    }
+  ],
+  "DGHD9y": [
+    {
+      "type": 0,
+      "value": "Lighthouse具一專門工具來幫助傳送至Launchpad/啟動面板程序更為簡單."
+    }
+  ],
+  "DKSrR+": [
+    {
+      "type": 0,
+      "value": "我了解如果我違反規定, 我將承受應當懲處."
+    }
+  ],
+  "DLWOxX": [
+    {
+      "type": 0,
+      "value": "Similarly, there is also an "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": ", which limits how quickly validators can "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " the network. This is for security reasons. Given each validator is limited to a max effective balance of 32 ETH, this prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
+    }
+  ],
+  "DNRQa7": [
+    {
+      "type": 0,
+      "value": "我已詳讀並同意Launchpad服務條款."
+    }
+  ],
+  "DUnyVI": [
+    {
+      "type": 0,
+      "value": "理想上, 您的網路連結應該接近24/7可行並確保其為非常可靠."
+    }
+  ],
+  "Dayq/y": [
+    {
+      "type": 0,
+      "value": "Configure Erigon"
+    }
+  ],
+  "DbnQg+": [
+    {
+      "type": 0,
+      "value": "驗證合約地址"
+    }
+  ],
+  "DhKDS3": [
+    {
+      "type": 0,
+      "value": "Proof-of-stake and the Beacon Chain"
+    }
+  ],
+  "Di1/yX": [
+    {
+      "type": 0,
+      "value": "Consensus JWT docs:"
+    }
+  ],
+  "DjhC7F": [
+    {
+      "type": 0,
+      "value": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
+    }
+  ],
+  "DmKneH": [
+    {
+      "type": 0,
+      "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
+    }
+  ],
+  "DoCZT1": [
+    {
+      "type": 0,
+      "value": "驗證者有效餘額當前已達到最大值. 如果有需要, 您可以添加 "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (保證金合約允許的最小值)"
+    }
+  ],
+  "Ds66AU": [
+    {
+      "type": 0,
+      "value": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed."
+    }
+  ],
+  "DsJ/Mk": [
+    {
+      "type": 0,
+      "value": "千萬不要相信合約地址被列於此網站."
+    }
+  ],
+  "E+Y27g": [
+    {
+      "type": 0,
+      "value": "您能查看Python版本藉由輸入"
+    },
+    {
+      "type": 1,
+      "value": "terminalCommand"
+    },
+    {
+      "type": 0,
+      "value": " 於您的終端."
+    }
+  ],
+  "E/P9zo": [
+    {
+      "type": 0,
+      "value": "3. 練習於測試網"
+    }
+  ],
+  "E1Mywn": [
+    {
+      "type": 0,
+      "value": "鏈"
+    }
+  ],
+  "E4rtgi": [
+    {
+      "type": 0,
+      "value": "共識用戶端:"
+    }
+  ],
+  "EFjTSf": [
+    {
+      "type": 0,
+      "value": "輕懲處可能實施如一疏忽(不小心) 行為阻礙共識."
+    }
+  ],
+  "EIUapL": [
+    {
+      "type": 0,
+      "value": "使用終端來移動至包含"
+    },
+    {
+      "type": 1,
+      "value": "deposit"
+    },
+    {
+      "type": 0,
+      "value": " 執行性之目錄"
+    }
+  ],
+  "EPCHZV": [
+    {
+      "type": 0,
+      "value": "如您喪失您的簽章密鑰, 您的驗證者將沒辦法持續提案或證明."
+    }
+  ],
+  "EPlepr": [
+    {
+      "type": 0,
+      "value": "我已模擬斷電(伺服器與網路) 及自動恢復程序."
+    }
+  ],
+  "ETJ2T5": [
+    {
+      "type": 0,
+      "value": "如您對deposit-cli有任何相關問題, 歡迎造訪GitHub存儲庫."
+    }
+  ],
+  "EThT2C": [
+    {
+      "type": 0,
+      "value": "5. 存入時間"
+    }
+  ],
+  "EXLB88": [
+    {
+      "type": 0,
+      "value": "此為一測試網⚠️"
+    }
+  ],
+  "EXt8Xd": [
+    {
+      "type": 0,
+      "value": "Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to."
+    }
+  ],
+  "EcCME0": [
+    {
+      "type": 0,
+      "value": "質押啟動面板"
+    }
+  ],
+  "Ej2jo1": [
+    {
+      "type": 0,
+      "value": "Withdrawal address:"
+    }
+  ],
+  "F8yf1S": [
+    {
+      "type": 0,
+      "value": "You can find "
+    },
+    {
+      "type": 1,
+      "value": "docsHere"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "FEbVwB": [
+    {
+      "type": 0,
+      "value": "重要概念如下:"
+    }
+  ],
+  "FFUr3c": [
+    {
+      "type": 0,
+      "value": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
+    }
+  ],
+  "FM92S0": [
+    {
+      "type": 0,
+      "value": "注意: 信標鏈可能需要花幾分鐘來驗證您的存入"
+    }
+  ],
+  "FSRfSJ": [
+    {
+      "type": 0,
+      "value": "我已了解此交易為非可逆."
+    }
+  ],
+  "FSp9ip": [
+    {
+      "type": 0,
+      "value": "Ethereum address withdrawal: If you want to withdraw to your execution wallet address after the Shanghai/Capella upgrade, you can set "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " when running deposit-cli. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
+  "FU7JYy": [
+    {
+      "type": 0,
+      "value": "確保您設置"
+    },
+    {
+      "type": 1,
+      "value": "flag"
+    },
+    {
+      "type": 0,
+      "value": " 至"
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": ", 否則此存款將被無效."
+    }
+  ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Your validator indices"
+    }
+  ],
+  "FZa0R+": [
+    {
+      "type": 0,
+      "value": "此情況為非常極端且不太可能發生."
+    }
+  ],
+  "Fa2pjg": [
+    {
+      "type": 0,
+      "value": "配置文件CLI參數"
+    }
+  ],
+  "FazwRl": [
+    {
+      "type": 0,
+      "value": "請再次嘗試"
+    }
+  ],
+  "FcCHp4": [
+    {
+      "type": 0,
+      "value": "Latest data on network client usage"
+    }
+  ],
+  "Felr8P": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "validatorClient"
+    },
+    {
+      "type": 0,
+      "value": " is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
+    }
+  ],
+  "FfLWt5": [
+    {
+      "type": 0,
+      "value": "一以太坊客戶具一龐大數量之開發者. 此適合一商業等級系統."
+    }
+  ],
+  "FgraU0": [
+    {
+      "type": 0,
+      "value": "步驟1: 下載存入指令行介面應用程式於您的操作系統"
+    }
+  ],
+  "FmGmFH": [
+    {
+      "type": 0,
+      "value": "您的錢包需要被設置於"
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": " 來使用launhpad."
+    }
+  ],
+  "FqgDIV": [
+    {
+      "type": 0,
+      "value": "服務條款"
+    }
+  ],
+  "FzkbsB": [
+    {
+      "type": 0,
+      "value": "驗證者"
+    }
+  ],
+  "G0ZD5H": [
+    {
+      "type": 0,
+      "value": "To make an account eligible for a full withdrawal, the validator account must first be exited. Validator accounts can be exited from staking in two main ways: voluntarily or forcefully."
+    }
+  ],
+  "G0aacl": [
+    {
+      "type": 0,
+      "value": "身為一驗證者, 您被獎賞當提案/證明被納入鏈上之區塊."
+    }
+  ],
+  "G5IMoZ": [
+    {
+      "type": 0,
+      "value": "下載主分支源程式碼"
+    }
+  ],
+  "G8tAKU": [
+    {
+      "type": 0,
+      "value": "選擇一客戶"
+    }
+  ],
+  "GBXzeJ": [
+    {
+      "type": 0,
+      "value": "可以說, 驗證交易所得報酬的影響最大的因素是網路中的全部質押股權. 換而言之, 驗證者的總金額. 依據其佔有率數字, 驗證者的最大年回報率可以在 2% 至 20% 之間."
+    }
+  ],
+  "GDaRAW": [
+    {
+      "type": 0,
+      "value": "確認您並非正被懲處"
+    }
+  ],
+  "GN2Cu5": [
+    {
+      "type": 0,
+      "value": "共識用戶端"
+    }
+  ],
+  "GOc7cL": [
+    {
+      "type": 0,
+      "value": "如我運行下線, 我將被懲罰的多嚴重?"
+    }
+  ],
+  "GTkW7D": [
+    {
+      "type": 0,
+      "value": "It is not possible to manually request specific amounts of ETH to be withdrawn"
+    }
+  ],
+  "GUDhpC": [
+    {
+      "type": 0,
+      "value": "第1部分"
+    }
+  ],
+  "GadkjP": [
+    {
+      "type": 0,
+      "value": "文檔關於Lighthouse運行"
+    }
+  ],
+  "Gbo300": [
+    {
+      "type": 0,
+      "value": "生成密鑰"
+    }
+  ],
+  "Ge62/G": [
+    {
+      "type": 0,
+      "value": "Excess balance withdrawals (partial withdrawals)"
+    }
+  ],
+  "GelBd9": [
+    {
+      "type": 0,
+      "value": "解鎖您剛下載之文檔."
+    }
+  ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Genesis fork version"
+    }
+  ],
+  "GlKjxX": [
+    {
+      "type": 0,
+      "value": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
+    }
+  ],
+  "GsBRWL": [
+    {
+      "type": 0,
+      "value": "語言"
+    }
+  ],
+  "Gsixxx": [
+    {
+      "type": 0,
+      "value": "初期採納者風險"
+    }
+  ],
+  "GuIwY6": [
+    {
+      "type": 0,
+      "value": "我應何時充值我的驗證者餘額?"
+    }
+  ],
+  "H+Wcch": [
+    {
+      "type": 0,
+      "value": "第2部分"
+    }
+  ],
+  "H+kIpp": [
+    {
+      "type": 0,
+      "value": "全體需要總量"
+    }
+  ],
+  "H5+NAX": [
+    {
+      "type": 0,
+      "value": "餘額"
+    }
+  ],
+  "HMgrdg": [
+    {
+      "type": 0,
+      "value": "配置您的執行用戶端"
+    }
+  ],
+  "HXvZ2L": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " 來連結共識節點至JSON RPC終端。 這會啟動JSON RPC服務於默認8545接口。"
+    }
+  ],
+  "Hczrvs": [
+    {
+      "type": 0,
+      "value": "罰沒有兩個目的：(1) 使攻擊網絡的成本高得令人望而卻步，(2) 通過檢查驗證者是否實際履行其職責阻止他們變得懶惰。如果您因爲可能從事破壞行爲而被罰沒，您的壹部分質押將被銷毀。"
+    }
+  ],
+  "Hmxd5S": [
+    {
+      "type": 0,
+      "value": "當提示您選擇網絡時，請確保選擇 "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": "，否則存款將無效。"
+    }
+  ],
+  "HoahTd": [
+    {
+      "type": 0,
+      "value": "如您不提供一密碼, Nimbus將於啟動時要求一密碼."
+    }
+  ],
+  "HqRNN8": [
+    {
+      "type": 0,
+      "value": "支援"
+    }
+  ],
+  "I0BXSi": [
+    {
+      "type": 0,
+      "value": "Configure Geth"
+    }
+  ],
+  "I212vY": [
+    {
+      "type": 0,
+      "value": "您的驗證者在信標鏈上處於活動狀態之前有一個短暫之等待期間. 使用此時間來完成核對確認清單並花一些時間驗證 "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    }
+  ],
+  "I3JhPS": [
+    {
+      "type": 0,
+      "value": "網路"
+    }
+  ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Changing withdrawal credentials"
+    }
+  ],
+  "I5lWZA": [
+    {
+      "type": 0,
+      "value": "我可以在第壹次存款後修改我的驗證者提款憑據嗎？"
+    }
+  ],
+  "I7MjRD": [
+    {
+      "type": 0,
+      "value": "Erigon 原爲 TurboGeth，是壹個以太坊客戶端，旨在實現性能優化。"
+    }
+  ],
+  "ID3Pgm": [
+    {
+      "type": 0,
+      "value": "Maximum number of withdrawals that can be processed in a single block"
+    }
+  ],
+  "IJw06E": [
+    {
+      "type": 0,
+      "value": "利用錢包來簽署交易"
+    }
+  ],
+  "IVyWYt": [
+    {
+      "type": 0,
+      "value": "請注意, 於此第二種(不太可能) 之情況下, 您將在 21 天內逐步損失高達50% (16 ETH) 的股份. 而21 天後, 您將被逐出驗證者池. 這確保了區塊在某個時刻能再次開始最終確定."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "full withdrawal"
+    }
+  ],
+  "IYvwsI": [
+    {
+      "type": 0,
+      "value": "Tools available for generating key change message"
+    }
+  ],
+  "IZFEUg": [
+    {
+      "type": 0,
+      "value": "已就緒"
+    }
+  ],
+  "IdUtHu": [
+    {
+      "type": 0,
+      "value": "下載virtualenv"
+    }
+  ],
+  "IhDJWs": [
+    {
+      "type": 0,
+      "value": "您具"
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 筆未完成保證金交易"
+    }
+  ],
+  "IhHhea": [
+    {
+      "type": 0,
+      "value": "Enter your validator index here to check if you're account is ready for withdrawals or not:"
+    }
+  ],
+  "Il9tBQ": [
+    {
+      "type": 0,
+      "value": "Geth 被編輯於Go, 完全開源且運行於GNU LGPL證照下."
+    }
+  ],
+  "InUvmv": [
+    {
+      "type": 0,
+      "value": "Beacon chain push withdrawals as operations"
+    }
+  ],
+  "IugT5/": [
+    {
+      "type": 0,
+      "value": "無法傳送"
+    }
+  ],
+  "IwrKbS": [
+    {
+      "type": 0,
+      "value": "此依照情況所變. 除了"
+    },
+    {
+      "type": 1,
+      "value": "impact"
+    },
+    {
+      "type": 0,
+      "value": " 外, 其還有些重要情況需要關注:"
+    }
+  ],
+  "J455S4": [
+    {
+      "type": 0,
+      "value": "如您為一git用戶, 您能運行"
+    },
+    {
+      "type": 1,
+      "value": "gitClone"
+    },
+    {
+      "type": 0,
+      "value": " 來下載"
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": " 分支."
+    }
+  ],
+  "J5Lzz1": [
+    {
+      "type": 0,
+      "value": "中文(繁體)"
+    }
+  ],
+  "J7T0SR": [
+    {
+      "type": 0,
+      "value": "Nimbus 安裝文檔"
+    }
+  ],
+  "JAiV0o": [
+    {
+      "type": 0,
+      "value": "換句話說, 請保持誠實, 而您的行為將有經濟後果."
+    }
+  ],
+  "JMcBLZ": [
+    {
+      "type": 0,
+      "value": "為完成保證金存款("
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "JPT/TK": [
+    {
+      "type": 0,
+      "value": "4. 避免詐騙"
+    }
+  ],
+  "Ja5vXW": [
+    {
+      "type": 0,
+      "value": "Further reading"
+    }
+  ],
+  "JbVlOE": [
+    {
+      "type": 0,
+      "value": "更深入的了解以太坊升級"
+    }
+  ],
+  "JhUYU3": [
+    {
+      "type": 0,
+      "value": "下載CLI 應用程式"
+    }
+  ],
+  "JqVeL+": [
+    {
+      "type": 0,
+      "value": "使用資源能大大依據由客戶. 推薦您徹底研究客戶如您使用資源有限."
+    }
+  ],
+  "Js4uuA": [
+    {
+      "type": 0,
+      "value": "有效餘額"
+    }
+  ],
+  "JsTbFu": [
+    {
+      "type": 0,
+      "value": "懲處"
+    }
+  ],
+  "JtAiN/": [
+    {
+      "type": 0,
+      "value": "您目前操作系統為何?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Your mnemonic"
+    }
+  ],
+  "K3uH1C": [
+    {
+      "type": 0,
+      "value": "下線"
+    }
+  ],
+  "K4TRB7": [
+    {
+      "type": 0,
+      "value": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
+    }
+  ],
+  "K6+jQ3": [
+    {
+      "type": 0,
+      "value": "Geth 安裝文檔"
+    }
+  ],
+  "K6canA": [
+    {
+      "type": 0,
+      "value": "Withdrawal features are planned to be included in the upcoming Shanghai/Capella upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day."
+    }
+  ],
+  "K7xnjy": [
+    {
+      "type": 0,
+      "value": "Warning: Do not store keys on multiple (backup) validator clients at once"
+    }
+  ],
+  "KBSbmP": [
+    {
+      "type": 0,
+      "value": "您能"
+    },
+    {
+      "type": 1,
+      "value": "reloadYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " 來重新嘗試, 或重新刷新頁面. 如載入問題依舊存在, 請聯繫我們於"
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "KBjoXt": [
+    {
+      "type": 0,
+      "value": "從GitHub下載並解壓縮分支源碼."
+    }
+  ],
+  "KC9jbz": [
+    {
+      "type": 0,
+      "value": "硬體設備檢查清單"
+    }
+  ],
+  "KEfTSF": [
+    {
+      "type": 0,
+      "value": "我已安裝"
+    },
+    {
+      "type": 1,
+      "value": "latestRelease"
+    },
+    {
+      "type": 0,
+      "value": " 於我的共識用戶端."
+    }
+  ],
+  "KN7zKn": [
+    {
+      "type": 0,
+      "value": "錯誤"
+    }
+  ],
+  "KQrlTP": [
+    {
+      "type": 0,
+      "value": "join"
+    }
+  ],
+  "KWWsDo": [
+    {
+      "type": 0,
+      "value": "請確認您正在從 StakeHouse GitHub 官方帳戶下載，驗證網址："
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "KbUOQp": [
+    {
+      "type": 0,
+      "value": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
+    }
+  ],
+  "KhJBVZ": [
+    {
+      "type": 0,
+      "value": "View the Staking Checklist"
+    }
+  ],
+  "KqGKRA": [
+    {
+      "type": 0,
+      "value": "一旦程序完成, 您應該可見以下:"
+    }
+  ],
+  "KvRSg5": [
+    {
+      "type": 0,
+      "value": "懲處具體內容為何?"
+    }
+  ],
+  "Kw+pTr": [
+    {
+      "type": 0,
+      "value": "Python 下載程序可能依據您的linux建立而有所不同."
+    }
+  ],
+  "KwfNme": [
+    {
+      "type": 0,
+      "value": "Configure Besu"
+    }
+  ],
+  "KxUgHu": [
+    {
+      "type": 0,
+      "value": "我已確定我的密鑰存儲為"
+    },
+    {
+      "type": 1,
+      "value": "boldCaution"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "L7fPF+": [
+    {
+      "type": 0,
+      "value": "完成您的上個存款"
+    }
+  ],
+  "L7wMQN": [
+    {
+      "type": 0,
+      "value": "連結至 "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    }
+  ],
+  "L8jrV5": [
+    {
+      "type": 0,
+      "value": "重新載入您的錢包"
+    }
+  ],
+  "LHPZ+C": [
+    {
+      "type": 0,
+      "value": "Lighthouse 為一共識用戶端實現版本, 其編輯於Rust並注重於速度與安全."
+    }
+  ],
+  "LOtXFT": [
+    {
+      "type": 0,
+      "value": "BLS withdrawal: By default, the deposit-cli would generate withdrawal credentials with the "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " derived via mnemonics in "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " format."
+    }
+  ],
+  "LVy+cS": [
+    {
+      "type": 0,
+      "value": "查看客戶文檔來確保您欲使用之硬體為有效支持."
+    }
+  ],
+  "LWIlKS": [
+    {
+      "type": 0,
+      "value": "您也能單獨確認以下存款..."
+    }
+  ],
+  "LeHQQm": [
+    {
+      "type": 0,
+      "value": "驗證者常見問題"
+    }
+  ],
+  "LibVut": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 來同步與Goerli測試網."
+    }
+  ],
+  "Ljo9dF": [
+    {
+      "type": 0,
+      "value": "保加利亞語"
+    }
+  ],
+  "LlClXS": [
+    {
+      "type": 0,
+      "value": "感謝您貢獻於以太坊網路!"
+    }
+  ],
+  "LpnfTF": [
+    {
+      "type": 0,
+      "value": "Lodestar installation documentation"
+    }
+  ],
+  "Ltd/hJ": [
+    {
+      "type": 1,
+      "value": "directoriesPattern"
+    },
+    {
+      "type": 0,
+      "value": " 將會發現 "
+    },
+    {
+      "type": 1,
+      "value": "keyDirectory"
+    },
+    {
+      "type": 0,
+      "value": ", 並期待發現 "
+    },
+    {
+      "type": 1,
+      "value": "passwordDirectory"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Lv3Pmp": [
+    {
+      "type": 0,
+      "value": "您已為此驗證者之公鑰支付了初始存款. 請稍候, 並確認您在信標鏈數據提供程序上的存款狀態."
+    }
+  ],
+  "Lv57+8": [
+    {
+      "type": 0,
+      "value": "Ethereum is secured by proof-of-stake, although this was not always the case. The Beacon Chain was the first step to establishing a PoS consensus layer on Ethereum, launching in parallel to Mainnet in December 2020. This allowed participants to start staking their ETH and prepare the network for the formal transition from proof-of-work to proof-of-stake via The Merge."
+    }
+  ],
+  "LwEHRm": [
+    {
+      "type": 0,
+      "value": "Why do I need to run an execution client now?"
+    }
+  ],
+  "M35Dz/": [
+    {
+      "type": 0,
+      "value": "Upload to Beacon Node BLSToExecutionChange pool"
+    }
+  ],
+  "M3GwXS": [
+    {
+      "type": 0,
+      "value": "只有於您的驗證者於在線且最新的情況下, 您才能獲得全部獎勵. 這是您的職責. 而如果您的驗證者離線, 您將受到懲處. 離線的懲處大致等同於積極參與的獎勵."
+    }
+  ],
+  "M6nefR": [
+    {
+      "type": 0,
+      "value": "Rate-limits set on withdrawal queue (could change through testing before Shanghai)"
+    }
+  ],
+  "MCmGYv": [
+    {
+      "type": 0,
+      "value": "已複製 ✓"
+    }
+  ],
+  "MIsmjW": [
+    {
+      "type": 0,
+      "value": "連接至一新錢包"
+    }
+  ],
+  "MQTBvH": [
+    {
+      "type": 0,
+      "value": "保護自己來預防雙重花費攻擊"
+    }
+  ],
+  "MSanFQ": [
+    {
+      "type": 0,
+      "value": "書籍"
+    }
+  ],
+  "MX00UO": [
+    {
+      "type": 0,
+      "value": "如我的提款密鑰被偷竊, 甚麼事會發生呢?"
+    }
+  ],
+  "MZEcKL": [
+    {
+      "type": 0,
+      "value": "劣等驗證者行為"
+    }
+  ],
+  "MZvoWG": [
+    {
+      "type": 0,
+      "value": "升級"
+    }
+  ],
+  "MZzOnU": [
+    {
+      "type": 0,
+      "value": "以太坊是如何擴張的？"
+    }
+  ],
+  "MaZo9k": [
+    {
+      "type": 0,
+      "value": "Wagyu Key Gen GUI"
+    }
+  ],
+  "Mb3npQ": [
+    {
+      "type": 0,
+      "value": "使用終端"
+    }
+  ],
+  "MbLMTq": [
+    {
+      "type": 0,
+      "value": "This can be summarized to estimate the upper limit of how long a complete sweep takes depending on how many withdrawals need processing:"
+    }
+  ],
+  "MbsAo3": [
+    {
+      "type": 0,
+      "value": "Launchpad 將引導您成為一名驗證者, 並使您能於以太坊的未來擔任活躍的角色. 驗證者是我們建造更安全, 更可擴展, 更可持續的以太坊之重要關鍵."
+    }
+  ],
+  "Mc8nNE": [
+    {
+      "type": 0,
+      "value": "交易失敗"
+    }
+  ],
+  "Mlc7Vr": [
+    {
+      "type": 0,
+      "value": "Eth2升級只能成功當驗證者們完全了解其風險及責任."
+    }
+  ],
+  "MmZjeu": [
+    {
+      "type": 0,
+      "value": "充值詳情"
+    }
+  ],
+  "Mne5iM": [
+    {
+      "type": 0,
+      "value": "If so, stop. "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " processed for any remaining balance"
+    }
+  ],
+  "N0rwnt": [
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": " 非一有效deposit_data JSON文件. 請再次嘗試."
+    }
+  ],
+  "N6QzJ5": [
+    {
+      "type": 0,
+      "value": "a few more days"
+    }
+  ],
+  "NDrMCw": [
+    {
+      "type": 0,
+      "value": "Total number of validator accounts that have eligible withdrawals (variable)"
+    }
+  ],
+  "NEmnAV": [
+    {
+      "type": 0,
+      "value": "義大利語"
+    }
+  ],
+  "NLgogh": [
+    {
+      "type": 0,
+      "value": "Lauchpad網路:"
+    }
+  ],
+  "NOTCV0": [
+    {
+      "type": 0,
+      "value": "Prometheus 及 Grafana監視器"
+    }
+  ],
+  "NPmm0q": [
+    {
+      "type": 0,
+      "value": "您必須於一桌上型設備才能使用此應用程式."
+    }
+  ],
+  "NSK+Li": [
+    {
+      "type": 0,
+      "value": "我已確保根帳戶之安全."
+    }
+  ],
+  "NSl1Q5": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": This is done by using the "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " flag when generating your keys with the Staking Deposit CLI."
+    }
+  ],
+  "NTWnJC": [
+    {
+      "type": 0,
+      "value": "下載指令行應用程式"
+    }
+  ],
+  "NTdFPX": [
+    {
+      "type": 0,
+      "value": "Rewards and penalties are issued every 6.4 minutes—a period of time known as an epoch."
+    }
+  ],
+  "NUCB4G": [
+    {
+      "type": 0,
+      "value": "This "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " validator needs to be configured for withdrawals. Take note of your withdrawal credentials as you'll need this to update your keys."
+    }
+  ],
+  "NUcFVA": [
+    {
+      "type": 0,
+      "value": "[Example]"
+    }
+  ],
+  "NVljH4": [
+    {
+      "type": 0,
+      "value": "更多詳情關於Prysmatic Labs"
+    }
+  ],
+  "NYFKzu": [
+    {
+      "type": 0,
+      "value": "權益質押確認清單"
+    }
+  ],
+  "NZIM+F": [
+    {
+      "type": 0,
+      "value": "傳送剩餘"
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 存款"
+    }
+  ],
+  "NZYRdf": [
+    {
+      "type": 0,
+      "value": "Mainnet"
+    }
+  ],
+  "NatYUJ": [
+    {
+      "type": 0,
+      "value": "學習更多關於Eth2驗證者各職位相關責任."
+    }
+  ],
+  "Nb5DNK": [
+    {
+      "type": 0,
+      "value": "成為驗證者利用Teku"
+    }
+  ],
+  "NiWtxk": [
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 1\" = Execution keys = New withdrawal credentials: "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalsEnabled"
+    }
+  ],
+  "NkFxlX": [
+    {
+      "type": 0,
+      "value": "At least "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, "
+    },
+    {
+      "type": 1,
+      "value": "highlyVariable"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
+  "NwzcYT": [
+    {
+      "type": 0,
+      "value": "Teku 需要於啟動時指向包含密鑰庫及其關聯密碼之文件. 有三種方法能達成此."
+    }
+  ],
+  "O+3LJ1": [
+    {
+      "type": 0,
+      "value": "驗證者餘額正為最大化有效: "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "O3qkOm": [
+    {
+      "type": 0,
+      "value": "分片"
+    }
+  ],
+  "O4kYrf": [
+    {
+      "type": 0,
+      "value": "Total number of validator accounts (index count, every validator account ever registered, up-only over time)"
+    }
+  ],
+  "OBmVqN": [
+    {
+      "type": 0,
+      "value": "Hyperledger Besu is an open-source Ethereum client developed under the Apache 2.0 license and written in Java."
+    }
+  ],
+  "OIvXIO": [
+    {
+      "type": 0,
+      "value": "完成剩餘"
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 保證金存入"
+    }
+  ],
+  "OJOu1W": [
+    {
+      "type": 0,
+      "value": "Documentation on running Erigon"
+    }
+  ],
+  "ON2tXT": [
+    {
+      "type": 0,
+      "value": "Nethermind 文檔解釋如何下載及安裝客戶."
+    }
+  ],
+  "ORVjVH": [
+    {
+      "type": 0,
+      "value": "Then another "
+    },
+    {
+      "type": 1,
+      "value": "time"
+    },
+    {
+      "type": 0,
+      "value": " (256 epochs) before those funds are flagged as withdrawable"
+    }
+  ],
+  "OSEFbC": [
+    {
+      "type": 0,
+      "value": "Immediately upon broadcasting a signed voluntary exit message, the "
+    },
+    {
+      "type": 1,
+      "value": "exitEpoch"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "withdrawableEpoch"
+    },
+    {
+      "type": 0,
+      "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
+    }
+  ],
+  "OdYQYh": [
+    {
+      "type": 0,
+      "value": "更多關於ConsenSys"
+    }
+  ],
+  "OmAmmi": [
+    {
+      "type": 0,
+      "value": "More on the Merge"
+    }
+  ],
+  "OsO8ik": [
+    {
+      "type": 0,
+      "value": "我具專業技術能力來設置及運行一驗證者."
+    }
+  ],
+  "Ou/o3H": [
+    {
+      "type": 0,
+      "value": "成為驗證者前, 必須了解之完整重要事項."
+    }
+  ],
+  "P+nziG": [
+    {
+      "type": 0,
+      "value": "身為驗證者, 您必須質押資金來確保當您有任何惡意行為時, 您能夠被應情況懲處."
+    }
+  ],
+  "P/Oh91": [
+    {
+      "type": 0,
+      "value": "對於Eth2 驗證者, 詐騙為非常高風險, 且, 非常不幸的是, 許多人將損失大筆資金當遭受詐騙攻擊."
+    }
+  ],
+  "P0kiYS": [
+    {
+      "type": 0,
+      "value": "信標鏈升級為以太坊帶入權益證明共識機制."
+    }
+  ],
+  "P1QerV": [
+    {
+      "type": 0,
+      "value": "如您有任何問題, EthStaker為一社群來尋求幫助! 您能找到支持幫助於"
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " 或"
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "P8FrVE": [
+    {
+      "type": 0,
+      "value": "JWT Authentication"
+    }
+  ],
+  "P91KmA": [
+    {
+      "type": 0,
+      "value": "成為一驗證者"
+    },
+    {
+      "type": 1,
+      "value": "emoji"
+    }
+  ],
+  "P9mVZK": [
+    {
+      "type": 0,
+      "value": "您的網路已變更"
+    }
+  ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Launchpad walkthrough tutorial"
+    }
+  ],
+  "PQgBnI": [
+    {
+      "type": 0,
+      "value": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
+    }
+  ],
+  "PfoT0C": [
+    {
+      "type": 0,
+      "value": "此確認清單將幫助您了解驗證者角色並為您擔當之角色做準備."
+    }
+  ],
+  "PglO1W": [
+    {
+      "type": 0,
+      "value": "正式驗證報告"
+    }
+  ],
+  "PmrcLE": [
+    {
+      "type": 0,
+      "value": "Nethermind 於Goerli 文檔"
+    }
+  ],
+  "PoBIK+": [
+    {
+      "type": 0,
+      "value": "您需SSD存儲來持續驗證所需之讀取/編輯時間."
+    }
+  ],
+  "Pswssl": [
+    {
+      "type": 0,
+      "value": "確認"
+    }
+  ],
+  "PurNgG": [
+    {
+      "type": 0,
+      "value": "土耳其語"
+    }
+  ],
+  "Px7wWb": [
+    {
+      "type": 0,
+      "value": "pip文檔"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Beaconcha.in Broadcast Tool"
+    }
+  ],
+  "Q1ZwPT": [
+    {
+      "type": 0,
+      "value": "剪貼簿"
+    }
+  ],
+  "Q8P0rZ": [
+    {
+      "type": 0,
+      "value": "驗證者需要一最大有效性餘額"
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". 您只需要充值您的"
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 來最大化您的餘額."
+    }
+  ],
+  "QKFeMq": [
+    {
+      "type": 0,
+      "value": "網路"
+    }
+  ],
+  "QOAgQF": [
+    {
+      "type": 0,
+      "value": "注意: 默認狀態下, VMs將無效NTP所以您可能尋找另一解決方案為您環境狀態."
+    }
+  ],
+  "QRUdO6": [
+    {
+      "type": 0,
+      "value": "Set fee recipient"
+    }
+  ],
+  "QRwpD3": [
+    {
+      "type": 0,
+      "value": "Learn about ports in networking"
+    }
+  ],
+  "QWDxrk": [
+    {
+      "type": 0,
+      "value": "重要管理"
+    }
+  ],
+  "QcnkjI": [
+    {
+      "type": 0,
+      "value": "If your validator account still has BLS withdrawal credentials ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": "), a one-time message must be broadcast signaling which execution layer account should be used for all withdrawals."
+    }
+  ],
+  "QeE86m": [
+    {
+      "type": 0,
+      "value": "Check this document to learn how to run a node on "
+    },
+    {
+      "type": 1,
+      "value": "networkName"
+    }
+  ],
+  "QgOvR0": [
+    {
+      "type": 0,
+      "value": "Importantly, as a validator you'll need to post "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " transaction to the deposit contract on the current Ethereum chain."
+    }
+  ],
+  "QlsDcr": [
+    {
+      "type": 0,
+      "value": "行動"
+    }
+  ],
+  "Qo9UHj": [
+    {
+      "type": 0,
+      "value": "More on staking withdrawals"
+    }
+  ],
+  "QqqeNk": [
+    {
+      "type": 0,
+      "value": "交易拒絕"
+    }
+  ],
+  "Qs/oj3": [
+    {
+      "type": 0,
+      "value": "您需要一接受之"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 存款且其被驗證於鏈上. 此將成為可用當beaconcha.in 已確認2048區塊."
+    }
+  ],
+  "R6z/mc": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": if you used the "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " flag when generating your keys, you're good to go"
+    }
+  ],
+  "R7v7y3": [
+    {
+      "type": 0,
+      "value": "Set withdrawal address"
+    }
+  ],
+  "R8eePn": [
+    {
+      "type": 0,
+      "value": "如您遭懲處, 您將被預防來參與任何未來協議活動且被強制退出."
+    }
+  ],
+  "RCGrka": [
+    {
+      "type": 0,
+      "value": "唯一方式"
+    }
+  ],
+  "RE2MaJ": [
+    {
+      "type": 0,
+      "value": "共識用戶端"
+    }
+  ],
+  "ROHpFF": [
+    {
+      "type": 0,
+      "value": "1. 學習關於您的責任"
+    }
+  ],
+  "ROwygg": [
+    {
+      "type": 0,
+      "value": "EIP-4895"
+    }
+  ],
+  "RVyb7r": [
+    {
+      "type": 0,
+      "value": "我能幾天暫停我的驗證者然後再事後重啟它嗎?"
+    }
+  ],
+  "RWqrlk": [
+    {
+      "type": 0,
+      "value": "恭喜"
+    }
+  ],
+  "RdHdwG": [
+    {
+      "type": 0,
+      "value": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
+    }
+  ],
+  "Rg5ySE": [
+    {
+      "type": 0,
+      "value": "您欲想運行多少驗證者呢?"
+    }
+  ],
+  "Rr2lI/": [
+    {
+      "type": 0,
+      "value": "您將負責交易!!"
+    }
+  ],
+  "RrCui3": [
+    {
+      "type": 0,
+      "value": "總結"
+    }
+  ],
+  "Ryptmy": [
+    {
+      "type": 0,
+      "value": "利用以下指令來驗證其並查看其是否具正確版本:"
+    }
+  ],
+  "S+FY5u": [
+    {
+      "type": 0,
+      "value": "This requires use of your mnemonic seed phrase, and should be performed on an "
+    },
+    {
+      "type": 1,
+      "value": "offline"
+    },
+    {
+      "type": 0,
+      "value": " air-gapped machine."
+    }
+  ],
+  "S943uU": [
+    {
+      "type": 0,
+      "value": "雙重確認URL"
+    }
+  ],
+  "SB6yx7": [
+    {
+      "type": 0,
+      "value": "此Teku配置文件環境參數"
+    }
+  ],
+  "SGzXoY": [
+    {
+      "type": 0,
+      "value": "您的質押金已內入保證金從款合約!!"
+    }
+  ],
+  "SHNw06": [
+    {
+      "type": 0,
+      "value": "解鎖您剛下載之文檔."
+    }
+  ],
+  "SVUntz": [
+    {
+      "type": 0,
+      "value": "Note that once a user has "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
+    }
+  ],
+  "SaR1pU": [
+    {
+      "type": 0,
+      "value": "存款已存在"
+    }
+  ],
+  "Sd+Pq6": [
+    {
+      "type": 0,
+      "value": "全體驗證者"
+    }
+  ],
+  "Sd0I/u": [
+    {
+      "type": 0,
+      "value": "驗證者公鑰"
+    }
+  ],
+  "Sd3VAH": [
+    {
+      "type": 0,
+      "value": "驗證者被退出或懲處將無法再次充值"
+    }
+  ],
+  "Sd9qhL": [
+    {
+      "type": 0,
+      "value": "更多關於懲處風險"
+    }
+  ],
+  "SdRBir": [
+    {
+      "type": 0,
+      "value": "要成為驗證者, 您需要能夠在您的計算機上的終端中運行命令. 生成新的 Eth2 密鑰對及安裝驗證者軟件都是在終端中完成的."
+    }
+  ],
+  "SeW5ak": [
+    {
+      "type": 0,
+      "value": "簽章前, 請確實驗證地址於您的錢包."
+    }
+  ],
+  "Seanpx": [
+    {
+      "type": 0,
+      "value": "需求"
+    }
+  ],
+  "SqKNq2": [
+    {
+      "type": 0,
+      "value": "您能安裝python3於您的macOS 設備利用"
+    },
+    {
+      "type": 1,
+      "value": "homebrew"
+    }
+  ],
+  "Su0UFr": [
+    {
+      "type": 0,
+      "value": "Exit queue summary"
+    }
+  ],
+  "Szwbym": [
+    {
+      "type": 0,
+      "value": "修理扳手"
+    }
+  ],
+  "T2O2Gr": [
+    {
+      "type": 0,
+      "value": "initial and maximum"
+    }
+  ],
+  "THIzw6": [
+    {
+      "type": 0,
+      "value": "驗證者及以太坊"
+    }
+  ],
+  "TMw9oz": [
+    {
+      "type": 0,
+      "value": "訪造此網站來成為驗證者."
+    }
+  ],
+  "TZtYuA": [
+    {
+      "type": 0,
+      "value": "The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum."
+    }
+  ],
+  "TfNuWP": [
+    {
+      "type": 0,
+      "value": "virtualenv 將幫助您創建一單獨Python環境來為deposit-cli 工具."
+    }
+  ],
+  "Tpe6yK": [
+    {
+      "type": 0,
+      "value": "rpc-http-enabled 文檔"
+    }
+  ],
+  "U/NPbq": [
+    {
+      "type": 0,
+      "value": "德語"
+    }
+  ],
+  "U0yY/A": [
+    {
+      "type": 0,
+      "value": "查看廣泛之客戶比較"
+    }
+  ],
+  "U6jzBs": [
+    {
+      "type": 0,
+      "value": "How to join the public withdrawals testnet"
+    }
+  ],
+  "U7AOxj": [
+    {
+      "type": 0,
+      "value": "大於50%"
+    }
+  ],
+  "UJMct0": [
+    {
+      "type": 0,
+      "value": "查看"
+    },
+    {
+      "type": 1,
+      "value": "etherscan"
+    },
+    {
+      "type": 0,
+      "value": " 以獲取進一步詳情"
+    }
+  ],
+  "UUDnWR": [
+    {
+      "type": 0,
+      "value": "Shanghai Planning (GitHub issue)"
+    }
+  ],
+  "UWv7yD": [
+    {
+      "type": 0,
+      "value": "查看存款保證金合約於您喜好之以太坊區塊瀏覽器:"
+    }
+  ],
+  "UYRyWv": [
+    {
+      "type": 0,
+      "value": "Mechanics of withdrawals: How they work"
+    }
+  ],
+  "UYoRgC": [
+    {
+      "type": 0,
+      "value": "Depending how you set up your initial deposit, your account may or may not be ready for withdrawals already:"
+    }
+  ],
+  "UZkvC5": [
+    {
+      "type": 0,
+      "value": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always."
+    }
+  ],
+  "Utck3E": [
+    {
+      "type": 0,
+      "value": "語言支持"
+    }
+  ],
+  "Uxs0RD": [
+    {
+      "type": 0,
+      "value": "塗鴉"
+    }
+  ],
+  "Uy8THS": [
+    {
+      "type": 0,
+      "value": "在驗證者總數超過 1/3 的情況下離線會導致更嚴厲的懲罰, 因為區塊不再能被最終確定. "
+    },
+    {
+      "type": 1,
+      "value": "strongText"
+    }
+  ],
+  "UygdAl": [
+    {
+      "type": 0,
+      "value": "以太坊最原始三大協議之一."
+    }
+  ],
+  "UykRIk": [
+    {
+      "type": 0,
+      "value": "成為驗證者為一重大責任且需要一完整準備階段. 請只開始存款程序當您確實完全準備好了."
+    }
+  ],
+  "V+P6OJ": [
+    {
+      "type": 0,
+      "value": "This became a requirement at time of The Merge, so be sure you're running both before staking."
+    }
+  ],
+  "V0cb8p": [
+    {
+      "type": 0,
+      "value": "如您不具一測試網文件, 很高可能性為您可能運作Nimbus錯誤. 請重新運作指令."
+    }
+  ],
+  "VASo1/": [
+    {
+      "type": 0,
+      "value": "連結錢包"
+    }
+  ],
+  "VEj6nh": [
+    {
+      "type": 0,
+      "value": "Nethermind 安裝文檔"
+    }
+  ],
+  "VIMMdE": [
+    {
+      "type": 0,
+      "value": "如果不是您自己創建的, 或者您不擁有其助記詞, 請不要提交任何包含 "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " 文件之交易."
+    }
+  ],
+  "VKfWR3": [
+    {
+      "type": 0,
+      "value": "推薦"
+    }
+  ],
+  "VLDKor": [
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 為最大有效驗證者余額. 此意味著如果驗證者的餘額超過 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", 您將不會獲得更多獎勵. 但是, 如果價格降至 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " 以下, 您的收入將會減少."
+    }
+  ],
+  "VSSmNp": [
+    {
+      "type": 0,
+      "value": "換句話說, 如果以太/ETH質押之總金額較低, 回報(利率) 就相對較高, 但隨著總質押數的增加, 支付給每個驗證者的回報(利息) 將開始下降."
+    }
+  ],
+  "VUuZsb": [
+    {
+      "type": 0,
+      "value": "武術制服"
+    }
+  ],
+  "VctWDX": [
+    {
+      "type": 0,
+      "value": "我很確認我充值之驗證者為確實我的驗證者."
+    }
+  ],
+  "Vm6cRY": [
+    {
+      "type": 0,
+      "value": "This communication is secured using a "
+    },
+    {
+      "type": 1,
+      "value": "jwt"
+    },
+    {
+      "type": 0,
+      "value": " secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
+    }
+  ],
+  "VwWGD9": [
+    {
+      "type": 0,
+      "value": "These messages are limited to 16 per block ("
+    },
+    {
+      "type": 1,
+      "value": "message"
+    },
+    {
+      "type": 0,
+      "value": "), so if more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users submitting this message may see delays up to an estimated 2-3 days before this request is processed."
+    }
+  ],
+  "VzGJkB": [
+    {
+      "type": 0,
+      "value": "驗證者確認清單"
+    }
+  ],
+  "W10U1b": [
+    {
+      "type": 0,
+      "value": "Teku 為一Apache2認證且其編輯由Java, 一語言知名於其成熟及普遍度."
+    }
+  ],
+  "W1mus6": [
+    {
+      "type": 0,
+      "value": "Once a signed voluntary exit message is broadcast, it takes:"
+    }
+  ],
+  "W2Eues": [
+    {
+      "type": 0,
+      "value": "Warning: This is a staking launchpad for the "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "W3t7Ob": [
+    {
+      "type": 0,
+      "value": "日文"
+    }
+  ],
+  "W8nHSd": [
+    {
+      "type": 0,
+      "value": "常見問題"
+    }
+  ],
+  "WFVzvu": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " 使用相同密鑰文件公鑰的重複存款將被視為雙重存款. 超過 "
+    },
+    {
+      "type": 1,
+      "value": "eth"
+    },
+    {
+      "type": 0,
+      "value": " 的任何額外餘額將不會計入您在信標鏈上的有效餘額. 在信標鍊和主網合併之前, 您將不能撤回此資金."
+    }
+  ],
+  "WJA1/H": [
+    {
+      "type": 0,
+      "value": "Remember"
+    }
+  ],
+  "WMLn/w": [
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 驗證者"
+    }
+  ],
+  "WTPUDZ": [
+    {
+      "type": 0,
+      "value": "此為選擇性步驟, 但強烈推薦如您想最優良化您的節點."
+    }
+  ],
+  "WbCafE": [
+    {
+      "type": 0,
+      "value": "If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so store your mnemonic safely—it will be the ONLY way to withdraw your "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " when you chose to activate withdrawals."
+    }
+  ],
+  "WdDGn6": [
+    {
+      "type": 0,
+      "value": "Prysm 是共識協議的壹種實現，注重可用性、安全性和可靠性，它由 Prysmatic Labs 開發，後者是壹家專注于客戶端開發的公司。"
+    }
+  ],
+  "WkrNSk": [
+    {
+      "type": 0,
+      "value": "英文"
+    }
+  ],
+  "Wl6cI3": [
+    {
+      "type": 0,
+      "value": "請接受以上條件."
+    }
+  ],
+  "Wxzght": [
+    {
+      "type": 0,
+      "value": "滑脫文件來下載或瀏覽"
+    }
+  ],
+  "X/fKmY": [
+    {
+      "type": 0,
+      "value": "區塊瀏覽器已命名合約了嗎?"
+    }
+  ],
+  "X3NiFM": [
+    {
+      "type": 0,
+      "value": "proof-of-custody game"
+    }
+  ],
+  "X5KFEh": [
+    {
+      "type": 0,
+      "value": "此並非一有效deposit_data JSON文件."
+    }
+  ],
+  "X6/BRy": [
+    {
+      "type": 0,
+      "value": "You can find the "
+    },
+    {
+      "type": 1,
+      "value": "file"
+    },
+    {
+      "type": 0,
+      "value": " file in the "
+    },
+    {
+      "type": 1,
+      "value": "folder"
+    },
+    {
+      "type": 0,
+      "value": " folder by default."
+    }
+  ],
+  "X72hpo": [
+    {
+      "type": 0,
+      "value": "This validator is ready to start receiving rewards to the withdrawal address below. No further action is needed."
+    }
+  ],
+  "XBEBYR": [
+    {
+      "type": 0,
+      "value": "更多關於安裝pip"
+    }
+  ],
+  "XRxD8r": [
+    {
+      "type": 0,
+      "value": "Besu on Goerli 文檔"
+    }
+  ],
+  "XVRQoq": [
+    {
+      "type": 0,
+      "value": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run both an execution and a consensus client to properly attest to the network."
+    }
+  ],
+  "XVehvN": [
+    {
+      "type": 1,
+      "value": "filesPattern"
+    },
+    {
+      "type": 0,
+      "value": " 將預期 "
+    },
+    {
+      "type": 1,
+      "value": "keyFile"
+    },
+    {
+      "type": 0,
+      "value": " 之存在, 並且包含其文件之密碼為"
+    },
+    {
+      "type": 1,
+      "value": "passwordFile"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Xbt2gv": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " 來連結共識節點至JSON RPC終端。 這會啟動JSON RPC服務於默認8545接口。"
+    }
+  ],
+  "XcItS7": [
+    {
+      "type": 0,
+      "value": "~25 minutes"
+    }
+  ],
+  "XgOPc8": [
+    {
+      "type": 0,
+      "value": "Note, there are no current plans to enable transfers of ETH between validators."
+    }
+  ],
+  "XmddSV": [
+    {
+      "type": 0,
+      "value": "從源代碼重建"
+    }
+  ],
+  "XsZtDM": [
+    {
+      "type": 0,
+      "value": "Capella - Formal specification"
+    }
+  ],
+  "XszRWL": [
+    {
+      "type": 0,
+      "value": "eth1_withdrawal_address"
+    }
+  ],
+  "Y07Hwy": [
+    {
+      "type": 0,
+      "value": "連結"
+    },
+    {
+      "type": 1,
+      "value": "wallet"
+    },
+    {
+      "type": 0,
+      "value": " 至"
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    }
+  ],
+  "Y47aYU": [
+    {
+      "type": 0,
+      "value": "充值"
+    }
+  ],
+  "Y9S0NE": [
+    {
+      "type": 0,
+      "value": "傳送最後存款"
+    }
+  ],
+  "YBs4dR": [
+    {
+      "type": 0,
+      "value": "最新版本的 pip 應該已與 python3.x.x 一起安裝. 有關於 Windows 上安裝 pip 之詳細信息, 請訪問 "
+    },
+    {
+      "type": 1,
+      "value": "windowsInstallGuide"
+    },
+    {
+      "type": 0,
+      "value": ". 或者您也可以通過 "
+    },
+    {
+      "type": 1,
+      "value": "chocolatey"
+    },
+    {
+      "type": 0,
+      "value": " 安裝 pip 軟件包."
+    }
+  ],
+  "YFFqcn": [
+    {
+      "type": 0,
+      "value": "我已了解權益證明及驗證者必要性."
+    }
+  ],
+  "YFT4rG": [
+    {
+      "type": 0,
+      "value": "密鑰"
+    }
+  ],
+  "YJI2xv": [
+    {
+      "type": 0,
+      "value": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+    }
+  ],
+  "YP03/j": [
+    {
+      "type": 0,
+      "value": "之後, 我們依然鼓勵更多驗證者來加入(驗證者越多, 網路就越分散), 但他們這樣做並不是絕對必要的 (這樣可以降低利率)."
+    }
+  ],
+  "YPsbIU": [
+    {
+      "type": 0,
+      "value": "我已設置我的"
+    },
+    {
+      "type": 1,
+      "value": "grafana"
+    },
+    {
+      "type": 0,
+      "value": " 服務."
+    }
+  ],
+  "YQJy4H": [
+    {
+      "type": 0,
+      "value": "現在，您應該將助記符記錄在安全場所，並爲您的 "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " 個驗證者保存壹個密鑰庫。請確保這些內容的安全，最好離線儲存。您的驗證者密鑰庫應該位于選定目錄中。"
+    }
+  ],
+  "YXrp+b": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": This software is being updated to require users to provide a withdrawal address during key generation. In the meantime, you may have to check “Advanced” during setup to enter a withdrawal address."
+    }
+  ],
+  "YZtVDX": [
+    {
+      "type": 0,
+      "value": "Oops! Double check validator index number and try again."
+    }
+  ],
+  "Yd6MEN": [
+    {
+      "type": 0,
+      "value": "Execution clients"
+    }
+  ],
+  "YeJh+/": [
+    {
+      "type": 0,
+      "value": "By completing step one, you’ll enable withdrawals from your validator account. This will automatically trigger excess balance payments (partial withdrawals) to be processed, but this does not automatically unlock the rest of your funds, or trigger an exit from the network."
+    }
+  ],
+  "Yg8vug": [
+    {
+      "type": 0,
+      "value": "Make sure you’ve updated your withdrawal credentials with an execution withdrawal address"
+    }
+  ],
+  "Yganfl": [
+    {
+      "type": 0,
+      "value": "輸入以下指令於終端窗口:"
+    }
+  ],
+  "YkznEp": [
+    {
+      "type": 0,
+      "value": "如您丟失您的提款密鑰, 您將無法來獲得驗證者掌控之資金."
+    }
+  ],
+  "Yo9B64": [
+    {
+      "type": 0,
+      "value": "execution layer (Eth1) address"
+    }
+  ],
+  "YqsgWz": [
+    {
+      "type": 0,
+      "value": "斯洛文尼亞"
+    }
+  ],
+  "YtwQyB": [
+    {
+      "type": 0,
+      "value": "您能"
+    },
+    {
+      "type": 1,
+      "value": "changeYourWallet"
+    },
+    {
+      "type": 0,
+      "value": " 來重載驗證者為不同地址."
+    }
+  ],
+  "Yu78N6": [
+    {
+      "type": 0,
+      "value": "錢袋"
+    }
+  ],
+  "Z07LQm": [
+    {
+      "type": 0,
+      "value": "由於出現錯誤, 無法上傳"
+    },
+    {
+      "type": 1,
+      "value": "depositFileName"
+    },
+    {
+      "type": 0,
+      "value": ". 於GitHub中回報問題以便我們進行調查."
+    }
+  ],
+  "Z1aGQe": [
+    {
+      "type": 0,
+      "value": "整體, 如您的運行時間為"
+    },
+    {
+      "type": 1,
+      "value": "greaterThan50Percent"
+    },
+    {
+      "type": 0,
+      "value": ", 我們期待您的驗證者能賺取淨利益."
+    }
+  ],
+  "ZDI2t3": [
+    {
+      "type": 0,
+      "value": "Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
+    }
+  ],
+  "ZK6NmY": [
+    {
+      "type": 0,
+      "value": "注意: RTC(Real-Time Clock) 時間可能被設置於您的當地時間而非UTC, 尤其是VM排至其時鐘於Windows."
+    }
+  ],
+  "ZOU+p7": [
+    {
+      "type": 0,
+      "value": "--http documentation"
+    }
+  ],
+  "ZOXuIe": [
+    {
+      "type": 0,
+      "value": "為何我需要質押資金呢?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Exiting a "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " minipool"
+    }
+  ],
+  "ZTo0Fl": [
+    {
+      "type": 0,
+      "value": "為何其需要等待時間?"
+    }
+  ],
+  "ZsXdlw": [
+    {
+      "type": 0,
+      "value": "Erigon 安裝文檔"
+    }
+  ],
+  "Zspg8H": [
+    {
+      "type": 0,
+      "value": "第1部分 -- 開始前"
+    }
+  ],
+  "ZtpRuA": [
+    {
+      "type": 0,
+      "value": "Install and set virtualenv:"
+    }
+  ],
+  "ZzTcj5": [
+    {
+      "type": 0,
+      "value": "下載Python3 並遵照安裝手續."
+    }
+  ],
+  "a+Xw/D": [
+    {
+      "type": 0,
+      "value": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining 32 ETH stays locked and staked."
+    }
+  ],
+  "a+xjjV": [
+    {
+      "type": 0,
+      "value": "成為驗證者利用Prysm"
+    }
+  ],
+  "a/140i": [
+    {
+      "type": 0,
+      "value": "Exit queue and activation queue"
+    }
+  ],
+  "a9ats7": [
+    {
+      "type": 0,
+      "value": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " file which is submitted with your 32 ETH deposit transaction."
+    }
+  ],
+  "aDomwX": [
+    {
+      "type": 0,
+      "value": "如果您試圖欺騙系統, 或違反規範, 您將可能被處罰, 而其為所謂的資金懲處. 於兩台或更多機器上同時運行您的驗證者將導致懲處."
+    }
+  ],
+  "aEBE6s": [
+    {
+      "type": 0,
+      "value": "2. 準備節點"
+    }
+  ],
+  "aEpxVo": [
+    {
+      "type": 0,
+      "value": "Active accounts with an effective balance or total balance less than 32 will be skipped"
+    }
+  ],
+  "aR50Oc": [
+    {
+      "type": 0,
+      "value": "To exit staking and fully withdrawal your entire remaining balance, you must do two things:"
+    }
+  ],
+  "aS6dBe": [
+    {
+      "type": 0,
+      "value": "配置Nimbus"
+    }
+  ],
+  "aXT3iO": [
+    {
+      "type": 0,
+      "value": "Nimbus 列於Apache 2證照下, 且其被編寫由Nim. Nim為一語言具Python與感且能編輯於C語言."
+    }
+  ],
+  "acrOoz": [
+    {
+      "type": 0,
+      "value": "繼續"
+    }
+  ],
+  "aozN2h": [
+    {
+      "type": 0,
+      "value": "See your consensus client documentation for client-specific instructions on how to set this."
+    }
+  ],
+  "azLmaD": [
+    {
+      "type": 0,
+      "value": "從Python源碼建立deposit-cli"
+    }
+  ],
+  "b3J7Pw": [
+    {
+      "type": 0,
+      "value": "否. 質押額超過"
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH 將無任何好處."
+    }
+  ],
+  "b5LQY1": [
+    {
+      "type": 0,
+      "value": "Note the “withdrawal” and “BLS-to-execution” queues are independent and do not compete. Each are limited on a per-block basis."
+    }
+  ],
+  "b8APBK": [
+    {
+      "type": 0,
+      "value": "于客戶端多樣性的更多信息"
+    }
+  ],
+  "bMMVVN": [
+    {
+      "type": 0,
+      "value": "Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled with the Shanghai/Capella upgrade. This means your funds will remain inaccessible at least until then."
+    }
+  ],
+  "bNFkSo": [
+    {
+      "type": 0,
+      "value": "現在遵照提供之指示於終端窗口並生成您的密鑰."
+    }
+  ],
+  "bR1R2M": [
+    {
+      "type": 0,
+      "value": "使用此介面於客戶設置來確定重要步驟."
+    }
+  ],
+  "bUk/lm": [
+    {
+      "type": 0,
+      "value": "Besu 安裝文檔"
+    }
+  ],
+  "bUn2/Z": [
+    {
+      "type": 0,
+      "value": "下載 Wagyu Key Gen 應用"
+    }
+  ],
+  "bVtlF7": [
+    {
+      "type": 0,
+      "value": "請確保帳戶具足夠驅動器空間來維持運行節點."
+    }
+  ],
+  "bat2FM": [
+    {
+      "type": 0,
+      "value": "after"
+    }
+  ],
+  "bbr+aD": [
+    {
+      "type": 0,
+      "value": "YAML 文件能具多種不同語感."
+    }
+  ],
+  "be6WvD": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "nodeOperator"
+    },
+    {
+      "type": 0,
+      "value": " is the human being who makes sure the client software is running appropriately, maintaining hardware as needed."
+    }
+  ],
+  "bembWf": [
+    {
+      "type": 0,
+      "value": "Withdrawals not enabled"
+    }
+  ],
+  "bgyJfz": [
+    {
+      "type": 0,
+      "value": "What clients do I need to run?"
+    }
+  ],
+  "bhFma7": [
+    {
+      "type": 0,
+      "value": "More on withdrawals"
+    }
+  ],
+  "bnuvhg": [
+    {
+      "type": 0,
+      "value": "Lighthouse 被建立於Rust 並列於Apache 2.0證照下."
+    }
+  ],
+  "bugMfW": [
+    {
+      "type": 0,
+      "value": "If not, move to next question"
+    }
+  ],
+  "bxU6sX": [
+    {
+      "type": 0,
+      "value": "Python 安裝指示"
+    }
+  ],
+  "by+LIm": [
+    {
+      "type": 0,
+      "value": "What is a validator client?"
+    }
+  ],
+  "cE71F9": [
+    {
+      "type": 0,
+      "value": "[Example: "
+    },
+    {
+      "type": 1,
+      "value": "fork"
+    },
+    {
+      "type": 0,
+      "value": "]"
+    }
+  ],
+  "cHUoV9": [
+    {
+      "type": 0,
+      "value": "Geth 文檔解釋如何下載及安裝客戶."
+    }
+  ],
+  "cJX99/": [
+    {
+      "type": 0,
+      "value": "檢查您最喜歡的信標鏈區塊浏覽器："
+    }
+  ],
+  "cPsIkp": [
+    {
+      "type": 0,
+      "value": "成為驗證者並幫助確保以太坊未來安全."
+    }
+  ],
+  "cRzxes": [
+    {
+      "type": 0,
+      "value": "目前APR"
+    }
+  ],
+  "cUvpWk": [
+    {
+      "type": 0,
+      "value": "More on data sharding"
+    }
+  ],
+  "cav520": [
+    {
+      "type": 0,
+      "value": "下載從GitHub"
+    }
+  ],
+  "ccU6l/": [
+    {
+      "type": 0,
+      "value": "在線"
+    }
+  ],
+  "cdkI09": [
+    {
+      "type": 0,
+      "value": "How each validator is evaluated for withdrawals"
+    }
+  ],
+  "chsS1X": [
+    {
+      "type": 0,
+      "value": "If not, stop. No withdrawal will be processed and account skipped"
+    }
+  ],
+  "chw27s": [
+    {
+      "type": 0,
+      "value": "更多關於PegaSys Teku"
+    }
+  ],
+  "clUb0+": [
+    {
+      "type": 0,
+      "value": "指令行"
+    }
+  ],
+  "clxIWO": [
+    {
+      "type": 0,
+      "value": "我將被懲處多少當執行惡意行為?"
+    }
+  ],
+  "cnQKC2": [
+    {
+      "type": 0,
+      "value": "Currently Geth is used by >66% of the network."
+    }
+  ],
+  "cpxfOR": [
+    {
+      "type": 0,
+      "value": "什麽是提款憑證？"
+    }
+  ],
+  "cyR7Kh": [
+    {
+      "type": 0,
+      "value": "返回"
+    }
+  ],
+  "d4g3yx": [
+    {
+      "type": 0,
+      "value": "第 2 步：使用 Wagyu Key Gen 應用生成存款密鑰"
+    }
+  ],
+  "d5KEM8": [
+    {
+      "type": 0,
+      "value": "您需要簽署為每一筆欲想執行之交易."
+    }
+  ],
+  "d75Ebj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " 是存款中的壹個 32 字節字段，用于驗證有效提款的目標地址。當前，有兩種類型的提款：BLS 提款和以太坊地址提款。"
+    }
+  ],
+  "dH5+MX": [
+    {
+      "type": 0,
+      "value": "惡意行為"
+    }
+  ],
+  "dIgBOz": [
+    {
+      "type": 0,
+      "value": "存款"
+    }
+  ],
+  "dJMce5": [
+    {
+      "type": 0,
+      "value": "Prysm 是以太坊協議上用 Go 語言實現的共識客戶端，注重可用性、安全性和可靠性。"
+    }
+  ],
+  "dLE9FH": [
+    {
+      "type": 0,
+      "value": "If not, no withdrawal will be processed and account skipped"
+    }
+  ],
+  "dM/KIM": [
+    {
+      "type": 0,
+      "value": "驗證者究竟為何?"
+    }
+  ],
+  "dTOtPO": [
+    {
+      "type": 0,
+      "value": "充值"
+    }
+  ],
+  "deLJOg": [
+    {
+      "type": 0,
+      "value": "上傳一有效json 文件"
+    }
+  ],
+  "dprf8W": [
+    {
+      "type": 0,
+      "value": "我能從何處尋求問題排除支持服務?"
+    }
+  ],
+  "dvr19k": [
+    {
+      "type": 0,
+      "value": "設置"
+    }
+  ],
+  "dzdAcD": [
+    {
+      "type": 0,
+      "value": "默認接口"
+    }
+  ],
+  "e+9dMk": [
+    {
+      "type": 0,
+      "value": "Execution JWT docs:"
+    }
+  ],
+  "e/PSgJ": [
+    {
+      "type": 0,
+      "value": "上傳存款數據"
+    }
+  ],
+  "e4f94H": [
+    {
+      "type": 0,
+      "value": "如"
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": " 並非"
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": ", 執行: "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    }
+  ],
+  "e4mdEQ": [
+    {
+      "type": 0,
+      "value": "Make sure you have control over this address as this cannot be changed."
+    }
+  ],
+  "eD1NDX": [
+    {
+      "type": 0,
+      "value": "Withdrawing your deposit will not be possible until the Shanghai/Capella upgrade planned for Q1/Q2 2023."
+    }
+  ],
+  "eKEL/g": [
+    {
+      "type": 0,
+      "value": "等待中"
+    }
+  ],
+  "eOVXJz": [
+    {
+      "type": 0,
+      "value": "提交一交易來完成您的存款步驟."
+    }
+  ],
+  "eOpZjd": [
+    {
+      "type": 0,
+      "value": "此特別指出誰正質押, 誰在驗證, 多少數量被質押中, 以及誰能提取質押資金."
+    }
+  ],
+  "eP2Czm": [
+    {
+      "type": 0,
+      "value": "I understand that I "
+    },
+    {
+      "type": 1,
+      "value": "cannotWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " my stake until the Shanghai/Capella upgrade, and I "
+    },
+    {
+      "type": 1,
+      "value": "cannotTransfer"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " between validators. I understand that if I exit, I will not be able to rejoin until that time. Staking is a commitment."
+    }
+  ],
+  "eTenzU": [
+    {
+      "type": 0,
+      "value": "activation queue"
+    }
+  ],
+  "eX072N": [
+    {
+      "type": 0,
+      "value": "Erigon is an execution client on the efficiency frontier, written in Go."
+    }
+  ],
+  "eaU/aL": [
+    {
+      "type": 0,
+      "value": "要為達成最大節點安全性及效率性, 請使用專用硬件來運行客戶端. 此降低了惡意軟件暴露的風險, 並最大限度地減少了對計算資源的競爭, 同時確保您的節點始終處理網路負載及其驗證者職責."
+    }
+  ],
+  "eatd1u": [
+    {
+      "type": 0,
+      "value": "We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address."
+    }
+  ],
+  "elCkOU": [
+    {
+      "type": 0,
+      "value": "更多詳情關於合併"
+    }
+  ],
+  "eq0/34": [
+    {
+      "type": 0,
+      "value": "合併"
+    }
+  ],
+  "erZJkZ": [
+    {
+      "type": 0,
+      "value": "當啟用Teku, 密鑰及密碼能被提供藉由多方不同管道."
+    }
+  ],
+  "esDvdR": [
+    {
+      "type": 0,
+      "value": "驗證者餘額超過 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ", 但有效餘額低於 ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": "). 添加 "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (存款合同允許之最小值) 將使您的有效餘額最大化."
+    }
+  ],
+  "eyK2E3": [
+    {
+      "type": 0,
+      "value": "完整確認清單"
+    }
+  ],
+  "ezCT4A": [
+    {
+      "type": 0,
+      "value": "Shanghai Core EIP Consideration"
+    }
+  ],
+  "f/N7FO": [
+    {
+      "type": 0,
+      "value": "如果我丟失簽署密鑰, 將會有甚麼後果發生呢?"
+    }
+  ],
+  "fBCdim": [
+    {
+      "type": 0,
+      "value": "Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
+    }
+  ],
+  "fHLKXR": [
+    {
+      "type": 0,
+      "value": "其回答依據您質押之ETH存款數量."
+    }
+  ],
+  "fQ5yno": [
+    {
+      "type": 0,
+      "value": "阿拉伯語"
+    }
+  ],
+  "fR8+bQ": [
+    {
+      "type": 0,
+      "value": "設置期間"
+    }
+  ],
+  "fRCqob": [
+    {
+      "type": 0,
+      "value": "Accounts that have fully withdrawn and have a zero balance will be skipped"
+    }
+  ],
+  "fSi2R/": [
+    {
+      "type": 0,
+      "value": "Information for validator operators regarding staking withdrawals."
+    }
+  ],
+  "fU1Pp5": [
+    {
+      "type": 0,
+      "value": "You may choose to provide a withdrawal address with your initial deposit to automatically enable reward payments and also the ability to fully exit your funds anytime after the Shanghai/Capella upgrade. This address should be to a regular Ethereum address and will be the only address funds can be sent to from your new validator accounts."
+    }
+  ],
+  "fZwn+P": [
+    {
+      "type": 0,
+      "value": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
+    }
+  ],
+  "fa8Quz": [
+    {
+      "type": 0,
+      "value": "However, bear in mind that until the Shanghai/Capella upgrade planned for Q1/Q2 2023, once you’ve exited, there’s no going back."
+    }
+  ],
+  "fbiteI": [
+    {
+      "type": 0,
+      "value": "請只存於一驗證者機器"
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "等待錢包確認"
+    }
+  ],
+  "frGVRP": [
+    {
+      "type": 0,
+      "value": "有效餘額影響"
+    }
+  ],
+  "frIMm4": [
+    {
+      "type": 0,
+      "value": "在最壞的情況下，同步您的執行客戶端可能需要幾天時間。"
+    }
+  ],
+  "fzrOtJ": [
+    {
+      "type": 0,
+      "value": "Consensus layer slot timing: 12 seconds (no plans to change)"
+    }
+  ],
+  "g/DxI7": [
+    {
+      "type": 0,
+      "value": "更多的是, 您可以在不同的計算機和 IP 上設置驗證者客戶端 (VC) 和信標節點 (BN), 所以即使您的信標節點易受攻擊, 您的密鑰庫也存儲在不同的機器設備上."
+    }
+  ],
+  "g0zIUd": [
+    {
+      "type": 0,
+      "value": "無法提取"
+    }
+  ],
+  "g2k5M/": [
+    {
+      "type": 0,
+      "value": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds."
+    }
+  ],
+  "g37XKP": [
+    {
+      "type": 0,
+      "value": "更多關於virtualenv"
+    }
+  ],
+  "g8tzOu": [
+    {
+      "type": 0,
+      "value": "Paste your chosen address here to include it in the copy/paste CLI command below:"
+    }
+  ],
+  "gFj3By": [
+    {
+      "type": 0,
+      "value": "highly variable"
+    }
+  ],
+  "gHJegi": [
+    {
+      "type": 0,
+      "value": "Validators still need to complete their validation duties until they are exited"
+    }
+  ],
+  "gN9D/h": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 來同步與Goerli測試網."
+    }
+  ],
+  "gQkd2y": [
+    {
+      "type": 0,
+      "value": "生成取款密鑰利用以太坊基金會取款池"
+    }
+  ],
+  "gVC0Wl": [
+    {
+      "type": 0,
+      "value": "其使用輔助密碼於您的機密文件夾內."
+    }
+  ],
+  "gWC0Rt": [
+    {
+      "type": 0,
+      "value": "Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over again from the beginning. At each validator along the way, the account is evaluated for potential withdrawals."
+    }
+  ],
+  "gfLdAQ": [
+    {
+      "type": 0,
+      "value": "更多詳情關於信標鏈"
+    }
+  ],
+  "gjBiyj": [
+    {
+      "type": 0,
+      "value": "載入中..."
+    }
+  ],
+  "gjmx29": [
+    {
+      "type": 0,
+      "value": "是"
+    }
+  ],
+  "grF2gm": [
+    {
+      "type": 0,
+      "value": "Each key-pair associated with a validator requires locking "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": " to be activated, which represents your initial balance as well as your "
+    },
+    {
+      "type": 1,
+      "value": "initialAndMaximum"
+    },
+    {
+      "type": 0,
+      "value": " voting power for any validator."
+    }
+  ],
+  "gsuLMm": [
+    {
+      "type": 0,
+      "value": "希臘語"
+    }
+  ],
+  "gtrcyK": [
+    {
+      "type": 0,
+      "value": "確認"
+    },
+    {
+      "type": 1,
+      "value": "code1"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "code2"
+    },
+    {
+      "type": 0,
+      "value": " 及 "
+    },
+    {
+      "type": 1,
+      "value": "code3"
+    },
+    {
+      "type": 0,
+      "value": " 是否正確."
+    }
+  ],
+  "guMfKn": [
+    {
+      "type": 0,
+      "value": "這意味著您不需要使用備份之客戶端或冗餘的極端網路連結, 因為離線的影響並不是那麼的嚴重."
+    }
+  ],
+  "gx6frf": [
+    {
+      "type": 0,
+      "value": "時鐘"
+    }
+  ],
+  "gzXQDW": [
+    {
+      "type": 0,
+      "value": "Withdrawable epoch"
+    }
+  ],
+  "h/n5+N": [
+    {
+      "type": 0,
+      "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
+    }
+  ],
+  "h8MTUo": [
+    {
+      "type": 0,
+      "value": "您的質押"
+    }
+  ],
+  "hBIbQ+": [
+    {
+      "type": 0,
+      "value": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing."
+    }
+  ],
+  "hCwX6+": [
+    {
+      "type": 0,
+      "value": "BLS To Execution Change (BTEC) queue"
+    }
+  ],
+  "hFzE1M": [
+    {
+      "type": 0,
+      "value": "獎勵被分發給幫助網路達成共識之行為."
+    }
+  ],
+  "hG0uP4": [
+    {
+      "type": 0,
+      "value": "桌上型專屬"
+    }
+  ],
+  "hPCn9f": [
+    {
+      "type": 0,
+      "value": "--JsonRpc.Enabled 文檔"
+    }
+  ],
+  "hXE+0W": [
+    {
+      "type": 0,
+      "value": "上傳"
+    },
+    {
+      "type": 1,
+      "value": "depositJSON"
+    }
+  ],
+  "hZrkPB": [
+    {
+      "type": 0,
+      "value": "換句話說, 您將最大化您的獎勵藉由提供網路全體最高共同利益."
+    }
+  ],
+  "hfXlpq": [
+    {
+      "type": 0,
+      "value": "匈牙利語"
+    }
+  ],
+  "hjrLbR": [
+    {
+      "type": 0,
+      "value": "為此, 我們需要積極參與者 -- 也稱為驗證者 - 來提案, 驗證, 並擔保區塊之有效性. 作為交換, 誠實驗證者將接收經濟性獎賞."
+    }
+  ],
+  "hkg3fb": [
+    {
+      "type": 0,
+      "value": "更多詳情關於有效餘額"
+    }
+  ],
+  "hlxt3T": [
+    {
+      "type": 0,
+      "value": "Limiting the maximum stake to "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
+    }
+  ],
+  "huEFUF": [
+    {
+      "type": 0,
+      "value": "您有"
+    },
+    {
+      "type": 1,
+      "value": "remainingTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 筆未完成保證金交易"
+    }
+  ],
+  "hwkLRc": [
+    {
+      "type": 0,
+      "value": "node operator"
+    }
+  ],
+  "hzLd+/": [
+    {
+      "type": 0,
+      "value": "我已了解保持驗證者於線上並隨時更新此為非常重要."
+    }
+  ],
+  "iCpuph": [
+    {
+      "type": 0,
+      "value": "客戶"
+    }
+  ],
+  "iFWLYC": [
+    {
+      "type": 0,
+      "value": "You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account."
+    }
+  ],
+  "iJXdUH": [
+    {
+      "type": 0,
+      "value": "docs"
+    }
+  ],
+  "iK1COM": [
+    {
+      "type": 0,
+      "value": "Accounts without updated withdrawal credentials will be skipped"
+    }
+  ],
+  "iMvXLd": [
+    {
+      "type": 0,
+      "value": "運行驗證者客戶"
+    }
+  ],
+  "iN1PPs": [
+    {
+      "type": 0,
+      "value": "Each "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. "
+    },
+    {
+      "type": 1,
+      "value": "pricePerValidator"
+    },
+    {
+      "type": 0,
+      "value": " ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
+    }
+  ],
+  "iX90gu": [
+    {
+      "type": 0,
+      "value": "I've joined my execution client's Discord server."
+    }
+  ],
+  "iZuIgB": [
+    {
+      "type": 0,
+      "value": "解鎖您剛下載之文檔"
+    }
+  ],
+  "idDbou": [
+    {
+      "type": 0,
+      "value": "考慮關於質押?"
+    }
+  ],
+  "ie5fDg": [
+    {
+      "type": 0,
+      "value": "質押啟動面板"
+    },
+    {
+      "type": 1,
+      "value": "network"
+    }
+  ],
+  "im7uMt": [
+    {
+      "type": 0,
+      "value": "共識層驗證者客戶端 (VC)"
+    }
+  ],
+  "ioj2Sj": [
+    {
+      "type": 0,
+      "value": "我已經將我的密鑰庫導入到我的驗證者客戶端。"
+    }
+  ],
+  "iouULJ": [
+    {
+      "type": 0,
+      "value": "Number of empty slots (missed block opportunities, variable, typically minimal)"
+    }
+  ],
+  "iqJ3LM": [
+    {
+      "type": 0,
+      "value": "PegaSys Teku 是壹個基于 Java 的以太坊共識客戶端，旨在滿足機構需求和安全要求。"
+    }
+  ],
+  "irh2nI": [
+    {
+      "type": 0,
+      "value": "As such, it’s a good idea to create your keys from mnemonics which act as another backup. This is the default for validators who join via this site’s onboarding process."
+    }
+  ],
+  "isGKnz": [
+    {
+      "type": 0,
+      "value": "文檔"
+    }
+  ],
+  "iv88b5": [
+    {
+      "type": 0,
+      "value": "傳送所有 "
+    },
+    {
+      "type": 1,
+      "value": "totalTxCount"
+    },
+    {
+      "type": 0,
+      "value": " 存款"
+    }
+  ],
+  "j2f6y2": [
+    {
+      "type": 0,
+      "value": "A withdrawal address has not been set for these validators. Staked funds and rewards will remain locked until withdrawal credentials are provided."
+    }
+  ],
+  "j8GPOH": [
+    {
+      "type": 0,
+      "value": "Teku 前身爲 Artemis，是壹款專爲滿足機構需求和安全要求而構建的共識客戶端。PegaSys 是 ConsenSys 的壹個分支，致力于構建企業級客戶端和工具，用于與核心以太坊平台交互。"
+    }
+  ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "The execution address for withdrawals"
+    }
+  ],
+  "jGVfQG": [
+    {
+      "type": 0,
+      "value": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", you can use the staking deposit CLI ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") tool to generate the signed BLS-to-execution-change ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
+    }
+  ],
+  "jXer8/": [
+    {
+      "type": 0,
+      "value": "Prysm 文檔"
+    }
+  ],
+  "jYVeq4": [
+    {
+      "type": 0,
+      "value": "Lighthouse 安裝文檔"
+    }
+  ],
+  "jecC36": [
+    {
+      "type": 0,
+      "value": "公鑰"
+    }
+  ],
+  "jfHMKL": [
+    {
+      "type": 0,
+      "value": "連結一錢包"
+    }
+  ],
+  "jg9gEs": [
+    {
+      "type": 0,
+      "value": "請確保執行以下操作，以使您的執行客戶端正常工作。"
+    }
+  ],
+  "jjLubH": [
+    {
+      "type": 0,
+      "value": "Prysm 安裝文檔"
+    }
+  ],
+  "jlx7pU": [
+    {
+      "type": 0,
+      "value": "Documentation on running Geth"
+    }
+  ],
+  "jp9OG2": [
+    {
+      "type": 0,
+      "value": "選擇"
+    },
+    {
+      "type": 1,
+      "value": "ethClientType"
+    },
+    {
+      "type": 0,
+      "value": " 用戶端"
+    }
+  ],
+  "jrK21r": [
+    {
+      "type": 0,
+      "value": "You can find the binary files in "
+    },
+    {
+      "type": 1,
+      "value": "pr"
+    }
+  ],
+  "jse8rl": [
+    {
+      "type": 0,
+      "value": "我需要多少線上運行時間來使驗證者能賺取利益?"
+    }
+  ],
+  "jvB4W9": [
+    {
+      "type": 0,
+      "value": "環境參數"
+    }
+  ],
+  "jytPQU": [
+    {
+      "type": 0,
+      "value": "Nimbus 文檔"
+    }
+  ],
+  "k/4DOL": [
+    {
+      "type": 0,
+      "value": "Full withdrawal"
+    }
+  ],
+  "k43c+l": [
+    {
+      "type": 0,
+      "value": "查看由 HashCloak 進行的 Wagyu Key Gen 審計"
+    }
+  ],
+  "k4x6Ud": [
+    {
+      "type": 0,
+      "value": "This marked the merging of the execution layer (existing Mainnet) with the new consensus layer (the Beacon Chain) to form the single Ethereum chain of today."
+    }
+  ],
+  "k67L48": [
+    {
+      "type": 0,
+      "value": "Install dependencies:"
+    }
+  ],
+  "k8bkck": [
+    {
+      "type": 0,
+      "value": "EIP-4895, titled "
+    },
+    {
+      "type": 1,
+      "value": "eip4895"
+    },
+    {
+      "type": 0,
+      "value": ", implements a design that simplified this whole process for stakers."
+    }
+  ],
+  "kFS5Sd": [
+    {
+      "type": 0,
+      "value": "存款合約正式驗證"
+    }
+  ],
+  "kGnu3F": [
+    {
+      "type": 0,
+      "value": "獎勵/懲處如何備分發?"
+    }
+  ],
+  "kQTAe+": [
+    {
+      "type": 0,
+      "value": "此URL 確實匹配與您所見於網站嗎?"
+    }
+  ],
+  "kRQqpE": [
+    {
+      "type": 0,
+      "value": "Time to complete"
+    }
+  ],
+  "kSt9db": [
+    {
+      "type": 0,
+      "value": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain, with the inclusion of "
+    },
+    {
+      "type": 1,
+      "value": "eip"
+    },
+    {
+      "type": 0,
+      "value": ". This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
+    }
+  ],
+  "kTt/ND": [
+    {
+      "type": 0,
+      "value": "俄文"
+    }
+  ],
+  "kXhUdD": [
+    {
+      "type": 0,
+      "value": "成為一驗證者於桌上設備"
+    }
+  ],
+  "kZ1+zq": [
+    {
+      "type": 0,
+      "value": "Teku 文檔"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Network name"
+    }
+  ],
+  "kd/f4u": [
+    {
+      "type": 0,
+      "value": "金鑰清單"
+    }
+  ],
+  "km7b1A": [
+    {
+      "type": 0,
+      "value": "隨著時間的推移, 您的餘額將會減少, 因為您會因為沒有參與共識過程而受到懲處. 而當您的餘額少於 16 以太/ETH時, 您將自動退出驗證者池."
+    }
+  ],
+  "kn06Zz": [
+    {
+      "type": 0,
+      "value": "Monitoring docs:"
+    }
+  ],
+  "kn7kJd": [
+    {
+      "type": 0,
+      "value": "更多關於共識機制"
+    }
+  ],
+  "krEziQ": [
+    {
+      "type": 0,
+      "value": "聯繫我們"
+    }
+  ],
+  "krxu73": [
+    {
+      "type": 0,
+      "value": "The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as data sharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%."
+    }
+  ],
+  "kuYpoI": [
+    {
+      "type": 0,
+      "value": "目前餘額"
+    }
+  ],
+  "kv1nqx": [
+    {
+      "type": 0,
+      "value": "已退出"
+    }
+  ],
+  "l/uCcX": [
+    {
+      "type": 0,
+      "value": "您正於測試網"
+    }
+  ],
+  "l3ztMu": [
+    {
+      "type": 0,
+      "value": "As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
+    }
+  ],
+  "l4nLft": [
+    {
+      "type": 0,
+      "value": "我了解如何查看我是否傳送"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 至正確存款合約並會確實做檢查."
+    }
+  ],
+  "l4sDVJ": [
+    {
+      "type": 0,
+      "value": "exit queue"
+    }
+  ],
+  "l5XCJW": [
+    {
+      "type": 0,
+      "value": "諮詢"
+    }
+  ],
+  "l5kq/q": [
+    {
+      "type": 0,
+      "value": "驗證於鏈上"
+    }
+  ],
+  "l6OJpv": [
+    {
+      "type": 0,
+      "value": "首先, 創建一資源庫目錄創建一 venv virtualenv:"
+    }
+  ],
+  "l926sJ": [
+    {
+      "type": 0,
+      "value": "If so, "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " processed"
+    }
+  ],
+  "lD66ab": [
+    {
+      "type": 0,
+      "value": "未完成之存款"
+    }
+  ],
+  "lHiz+K": [
+    {
+      "type": 0,
+      "value": "Nimbus 是執行層和共識層的客戶端實現，力求在資源使用方面盡可能輕量化。這使它能夠在嵌入式系統、資源受限設備（包括 Raspberry Pis）以及多功能服務器上運行良好。"
+    }
+  ],
+  "lLOZMD": [
+    {
+      "type": 0,
+      "value": "您能下載pip使用Linux 包裹管理者如"
+    },
+    {
+      "type": 1,
+      "value": "apt"
+    },
+    {
+      "type": 0,
+      "value": " 或"
+    },
+    {
+      "type": 1,
+      "value": "yum"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "lM/dEI": [
+    {
+      "type": 0,
+      "value": "請求您來存款"
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " 之網站是否具有正確URL?"
+    }
+  ],
+  "lQzdpT": [
+    {
+      "type": 0,
+      "value": "num_validators"
+    }
+  ],
+  "lS9VhN": [
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 質押總量"
+    }
+  ],
+  "lV3Ttw": [
+    {
+      "type": 0,
+      "value": "Node Setup Tutorial"
+    }
+  ],
+  "lVARlA": [
+    {
+      "type": 0,
+      "value": "請傳送一有效充值價值."
+    }
+  ],
+  "lVdzDK": [
+    {
+      "type": 0,
+      "value": "請上傳先前生成之存款數據檔件. 此"
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " 存置於您的"
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " 目錄."
+    }
+  ],
+  "lfHCV+": [
+    {
+      "type": 0,
+      "value": "Nimbus 為一個研究項目, 也是一個 Etherum 的共識客戶端實現, 而此代表其於嵌入式系統與個人移動設備上能夠良好運行."
+    }
+  ],
+  "lfV1bj": [
+    {
+      "type": 0,
+      "value": "從Launchpad 文檔導入"
+    }
+  ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Filename destination"
+    }
+  ],
+  "ll/zMW": [
+    {
+      "type": 0,
+      "value": "此為一非可逆交易."
+    }
+  ],
+  "lo+Qqn": [
+    {
+      "type": 0,
+      "value": "變更您的錢包"
+    }
+  ],
+  "lrdlY6": [
+    {
+      "type": 0,
+      "value": "文件已上傳"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "You can broadcast your signed message from the command line using the "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": " command:"
+    }
+  ],
+  "mArJcj": [
+    {
+      "type": 0,
+      "value": "硬碟機"
+    }
+  ],
+  "mH6bSl": [
+    {
+      "type": 0,
+      "value": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
+    }
+  ],
+  "mROPz+": [
+    {
+      "type": 0,
+      "value": "I provided an Ethereum address when generating my "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " file before depositing where I would like all validator rewards and withdrawals to be deposited into."
+    }
+  ],
+  "mUZnem": [
+    {
+      "type": 0,
+      "value": "We strongly recommend you go through the entire process on a testnet first to get comfortable before risking real ETH."
+    }
+  ],
+  "mXSzq5": [
+    {
+      "type": 0,
+      "value": "Option 1: binary files"
+    }
+  ],
+  "mZOXtM": [
+    {
+      "type": 0,
+      "value": "驗證者"
+    }
+  ],
+  "mc27Pv": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "validator"
+    },
+    {
+      "type": 0,
+      "value": " is a virtual entity that lives on the Beacon Chain, represented by a balance, public key, and other properties, and participates in consensus of the Ethereum network."
+    }
+  ],
+  "mcyp2f": [
+    {
+      "type": 0,
+      "value": "More on frequency of payouts below."
+    }
+  ],
+  "mdmA4f": [
+    {
+      "type": 0,
+      "value": "Number of withdrawals"
+    }
+  ],
+  "mhyltV": [
+    {
+      "type": 0,
+      "value": "我已設置塗鴉旗幟."
+    }
+  ],
+  "mloLQ5": [
+    {
+      "type": 0,
+      "value": "All stakers must operate an execution client with their consensus client."
+    }
+  ],
+  "mpmFDY": [
+    {
+      "type": 0,
+      "value": "無等待中存款"
+    }
+  ],
+  "mr1BWl": [
+    {
+      "type": 0,
+      "value": "風險與確認:"
+    }
+  ],
+  "muV9Fg": [
+    {
+      "type": 0,
+      "value": "New validators (not yet deposited)"
+    }
+  ],
+  "n2Dn3F": [
+    {
+      "type": 0,
+      "value": "Withdrawal queue"
+    }
+  ],
+  "n4o1vR": [
+    {
+      "type": 0,
+      "value": "How to exit from staking (full withdrawals)"
+    }
+  ],
+  "n5PQND": [
+    {
+      "type": 0,
+      "value": "Exit epoch"
+    }
+  ],
+  "nBhisA": [
+    {
+      "type": 0,
+      "value": "您需要運行一個 執行客戶端(之前的'Eth1') 及一個 共識客戶端(之前的'Eth2') 來成為驗證者. 請查看確認清單來事前準備並預備需要設備."
+    }
+  ],
+  "nRWZl3": [
+    {
+      "type": 0,
+      "value": "Again, it depends. Behaving maliciously—for example attesting to invalid or contradicting blocks—will lead to your stake being slashed."
+    }
+  ],
+  "nRdJct": [
+    {
+      "type": 0,
+      "value": "於無交易確認之情況下持續進行"
+    }
+  ],
+  "nW+xcT": [
+    {
+      "type": 0,
+      "value": "Erigon 文檔"
+    }
+  ],
+  "nZTFTz": [
+    {
+      "type": 0,
+      "value": "我已明白每個驗證者存款超過一次為沒有好處的. 於重複存款中發送的任何額外的 "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 將不會計入我的有效驗證者餘額中, 且我將無法提取此存款資金."
+    }
+  ],
+  "naHAvS": [
+    {
+      "type": 0,
+      "value": "Enabling withdrawals"
+    }
+  ],
+  "ndhFef": [
+    {
+      "type": 0,
+      "value": "一旦熟悉, 您將生成您的密鑰並存款您的ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") pool "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " Capella/Shanghai hard fork."
+    }
+  ],
+  "njAU72": [
+    {
+      "type": 0,
+      "value": "法語"
+    }
+  ],
+  "njnn9P": [
+    {
+      "type": 0,
+      "value": "我已開始運行我的驗證者客戶."
+    }
+  ],
+  "nln+aO": [
+    {
+      "type": 0,
+      "value": "我已模擬如何安全的遷移從一共識客戶端至另一共識客戶端."
+    }
+  ],
+  "ntG2by": [
+    {
+      "type": 0,
+      "value": "先進系統結構"
+    }
+  ],
+  "nwgrRp": [
+    {
+      "type": 0,
+      "value": "質押啟動面板之"
+    },
+    {
+      "type": 1,
+      "value": "TESTNET_LAUNCHPAD_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 測試網"
+    }
+  ],
+  "nyOMKZ": [
+    {
+      "type": 0,
+      "value": "Execute with params"
+    }
+  ],
+  "nz27+c": [
+    {
+      "type": 0,
+      "value": "如您有任何問題, EthStaker為一社群來尋求幫助! 您能找到支持幫助於"
+    },
+    {
+      "type": 1,
+      "value": "discord"
+    },
+    {
+      "type": 0,
+      "value": " 或"
+    },
+    {
+      "type": 1,
+      "value": "reddit"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "o9QvTP": [
+    {
+      "type": 0,
+      "value": "在開始之前"
+    }
+  ],
+  "o9rUg+": [
+    {
+      "type": 0,
+      "value": "Withdrawals enabled"
+    }
+  ],
+  "oF4os+": [
+    {
+      "type": 0,
+      "value": "Currently Prysm is used by >33% of the network."
+    }
+  ],
+  "oF6xvJ": [
+    {
+      "type": 0,
+      "value": "EthStaker Knowledge Base"
+    }
+  ],
+  "oLxfO1": [
+    {
+      "type": 0,
+      "value": "現在所有密鑰已被導入, 剩下的一件事為(假設您的信標鏈節點已正運行) 運行驗證者客戶."
+    }
+  ],
+  "oNP2EG": [
+    {
+      "type": 0,
+      "value": "Currently Lighthouse is used by >33% of the network."
+    }
+  ],
+  "oNohob": [
+    {
+      "type": 0,
+      "value": "配置您的共識用戶端"
+    }
+  ],
+  "oWhj8Q": [
+    {
+      "type": 0,
+      "value": "獎勵/懲處多久分發一次呢?"
+    }
+  ],
+  "obp8vV": [
+    {
+      "type": 0,
+      "value": "Documentation on running Besu"
+    }
+  ],
+  "ogbG7r": [
+    {
+      "type": 0,
+      "value": "要成為一驗證者於信標鏈, 您需要存款"
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " 為每個您欲運行之驗證者."
+    }
+  ],
+  "ohspQX": [
+    {
+      "type": 0,
+      "value": "責任"
+    }
+  ],
+  "omJNJw": [
+    {
+      "type": 0,
+      "value": "警告!!"
+    }
+  ],
+  "on8WXn": [
+    {
+      "type": 0,
+      "value": "我已導入儀表板配置至我的Granfa伺服器並二重確認節點是否正常運作."
+    }
+  ],
+  "orM+1T": [
+    {
+      "type": 0,
+      "value": "Teku 也會從驗證者密鑰環境變量中找到之路徑加載源於密鑰庫(和密碼) 之驗證者."
+    }
+  ],
+  "orczlb": [
+    {
+      "type": 0,
+      "value": "其合約是否具有一龐大餘額?"
+    }
+  ],
+  "ouW9ov": [
+    {
+      "type": 0,
+      "value": "您的驗證者"
+    }
+  ],
+  "ox304v": [
+    {
+      "type": 0,
+      "value": "發生了一錯誤"
+    }
+  ],
+  "ozEkVY": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "goerli"
+    },
+    {
+      "type": 0,
+      "value": " 來同步與Goerli測試網."
+    }
+  ],
+  "p+kDTB": [
+    {
+      "type": 0,
+      "value": "Ethereum users are used to transactions being executed in a manual way—if you want to transfer funds, you have to sign a transaction and pay the gas."
+    }
+  ],
+  "p0b6zX": [
+    {
+      "type": 0,
+      "value": "更多關於狀態"
+    }
+  ],
+  "p556q3": [
+    {
+      "type": 0,
+      "value": "已複製"
+    }
+  ],
+  "pA+UVF": [
+    {
+      "type": 0,
+      "value": "如您想閱覽launchpad於其他語言, 您可尋求翻譯幫助, "
+    },
+    {
+      "type": 1,
+      "value": "getInTouch"
+    },
+    {
+      "type": 0,
+      "value": "!!"
+    }
+  ],
+  "pGnk/z": [
+    {
+      "type": 0,
+      "value": "Yes, but with small penalties. If you go offline for a number of days under normal conditions you will lose an amount of ETH roughly equivalent to the amount of ETH you would have gained in that period. In other words, if you stood to earn ≈0.01 ETH, you would instead be penalized ≈0.01 ETH."
+    }
+  ],
+  "pHQwsN": [
+    {
+      "type": 0,
+      "value": "在您的桌面環境下雙擊應用啟動."
+    }
+  ],
+  "pQxML4": [
+    {
+      "type": 0,
+      "value": "Generate "
+    },
+    {
+      "type": 1,
+      "value": "json"
+    },
+    {
+      "type": 0,
+      "value": " file"
+    }
+  ],
+  "pWuGLy": [
+    {
+      "type": 0,
+      "value": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
+    }
+  ],
+  "pXyH++": [
+    {
+      "type": 0,
+      "value": "此Besu 文檔解釋如何下載及安裝此客戶."
+    }
+  ],
+  "pb2jYe": [
+    {
+      "type": 0,
+      "value": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
+    }
+  ],
+  "pfJX2D": [
+    {
+      "type": 0,
+      "value": "更多關於詐欺"
+    }
+  ],
+  "plXBe0": [
+    {
+      "type": 0,
+      "value": "Alternative node tooling:"
+    }
+  ],
+  "pnxB8A": [
+    {
+      "type": 0,
+      "value": "Nimbus 尋求一密鑰庫於您的驗證者文件夾."
+    }
+  ],
+  "pqC+qt": [
+    {
+      "type": 0,
+      "value": "懲處"
+    }
+  ],
+  "ps8lLk": [
+    {
+      "type": 0,
+      "value": "於絕大多數 (2/3) 驗證者仍在線的情況下離線將會導致相對較小的處罰, 因為仍有足夠的驗證者在線以供鏈完成最終狀態. "
+    },
+    {
+      "type": 1,
+      "value": "expected"
+    }
+  ],
+  "ptWiT7": [
+    {
+      "type": 0,
+      "value": "我已模擬如何妥善手動停止並重啟我的信標鏈節點(BN) 及驗證者客戶(VC)."
+    }
+  ],
+  "pyWt01": [
+    {
+      "type": 0,
+      "value": "存款總結"
+    }
+  ],
+  "qB6aU6": [
+    {
+      "type": 0,
+      "value": "‘Eth2’發生了什麼事？"
+    }
+  ],
+  "qBorVY": [
+    {
+      "type": 0,
+      "value": "Exit epoch and withdrawable epoch"
+    }
+  ],
+  "qK4+NQ": [
+    {
+      "type": 0,
+      "value": "終端"
+    }
+  ],
+  "qMePPG": [
+    {
+      "type": 0,
+      "value": "備註"
+    }
+  ],
+  "qQ+Xla": [
+    {
+      "type": 0,
+      "value": "韓文"
+    }
+  ],
+  "qZ59xY": [
+    {
+      "type": 0,
+      "value": "所有驗證者"
+    }
+  ],
+  "qdk7Hp": [
+    {
+      "type": 0,
+      "value": "您的錢包以脫離連結"
+    }
+  ],
+  "qgqVCE": [
+    {
+      "type": 0,
+      "value": "重新連結您的錢包"
+    }
+  ],
+  "qkEXNd": [
+    {
+      "type": 0,
+      "value": "Staking Deposit CLI"
+    }
+  ],
+  "qkhah0": [
+    {
+      "type": 0,
+      "value": "存儲密鑰文件並準備好驗證者文件"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Exiting a "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " validator"
+    }
+  ],
+  "qntIRb": [
+    {
+      "type": 0,
+      "value": "If this was not provided, the withdrawal keys will be needed to sign a message declaring a withdrawal address. This requires access to the mnemonic used when setting up the keys."
+    }
+  ],
+  "qwh6gM": [
+    {
+      "type": 0,
+      "value": "我已了解早期採納者之懲處風險."
+    }
+  ],
+  "qx+3RQ": [
+    {
+      "type": 0,
+      "value": "JWT"
+    }
+  ],
+  "r/G+qN": [
+    {
+      "type": 0,
+      "value": "A "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
+    }
+  ],
+  "r2BH1M": [
+    {
+      "type": 0,
+      "value": "配置Prysm"
+    }
+  ],
+  "r2j8jL": [
+    {
+      "type": 0,
+      "value": "validator client"
+    }
+  ],
+  "r4JsKB": [
+    {
+      "type": 0,
+      "value": "交易成功"
+    }
+  ],
+  "rD3ot9": [
+    {
+      "type": 0,
+      "value": "預防詐欺指引"
+    }
+  ],
+  "rMjMmc": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "http"
+    },
+    {
+      "type": 0,
+      "value": " 來連結共識節點至JSON RPC終端. 這會啟動JSON RPC服務於默認8545接口."
+    }
+  ],
+  "rTSJI9": [
+    {
+      "type": 0,
+      "value": "嘗試測試網"
+    }
+  ],
+  "rULiIc": [
+    {
+      "type": 0,
+      "value": "完成質押者確認清單"
+    }
+  ],
+  "rW+ivM": [
+    {
+      "type": 0,
+      "value": "More on Lodestar"
+    }
+  ],
+  "raRw6Z": [
+    {
+      "type": 0,
+      "value": "Lauchpad主頁"
+    }
+  ],
+  "rbrahO": [
+    {
+      "type": 0,
+      "value": "關閉"
+    }
+  ],
+  "rnDgcN": [
+    {
+      "type": 0,
+      "value": "不, 您在充值的時候不能更改提款憑證."
+    }
+  ],
+  "rs4eqr": [
+    {
+      "type": 0,
+      "value": "基於兩個重要原因, 您可能需要補充驗證者的餘額. 如果您的驗證者之有效餘額低於 "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", 您將無法獲得全部的質押獎勵. 如果它降至 "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", 系統將強制逐出您的驗證者."
+    }
+  ],
+  "rswUPu": [
+    {
+      "type": 0,
+      "value": "Lauchpad總結"
+    }
+  ],
+  "s6gImC": [
+    {
+      "type": 0,
+      "value": "Teku 能被配置藉由YAML文件, 而其文件能被傳遞利用多重管道."
+    }
+  ],
+  "sMHQRT": [
+    {
+      "type": 0,
+      "value": "一個非常注重速度和安全性的共識客戶端. 此由訊息安全和軟體工程公司 Sigma Prime 所構建, 該公司與 Ethereum Foundation, Consensys 及個人投資家共同資助 Lighthouse."
+    }
+  ],
+  "sToVAS": [
+    {
+      "type": 0,
+      "value": "The block producer then checks the next validator in line, and once again determines if a withdrawal needs to be processed or not. This process is repeated until either 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever comes first. At that point, the withdrawal queue is sent to the execution layer to be included at the end of the next block."
+    }
+  ],
+  "sXV95+": [
+    {
+      "type": 0,
+      "value": "CPU及RAM"
+    }
+  ],
+  "sZK38z": [
+    {
+      "type": 0,
+      "value": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
+    }
+  ],
+  "sj/Zef": [
+    {
+      "type": 0,
+      "value": "下載 Wagyu Key Gen 應用"
+    }
+  ],
+  "smD5l/": [
+    {
+      "type": 0,
+      "value": "共識層 信標 節點(BN)"
+    }
+  ],
+  "smTQJU": [
+    {
+      "type": 0,
+      "value": "The withdrawal address for these validators will be set to "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ". Make 100% sure you control this address before depositing, as this cannot be changed."
+    }
+  ],
+  "smd9Oc": [
+    {
+      "type": 0,
+      "value": "Validator index"
+    }
+  ],
+  "soCLV+": [
+    {
+      "type": 0,
+      "value": "確認清單"
+    }
+  ],
+  "sraQ3P": [
+    {
+      "type": 0,
+      "value": "等待連結中..."
+    }
+  ],
+  "sy35J+": [
+    {
+      "type": 0,
+      "value": "存款合約為何?"
+    }
+  ],
+  "szN3Fl": [
+    {
+      "type": 0,
+      "value": "我已了解並同意以上敘述之服務相關條約及一切規範."
+    }
+  ],
+  "szh4Xy": [
+    {
+      "type": 0,
+      "value": "I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)"
+    }
+  ],
+  "tJcyUM": [
+    {
+      "type": 0,
+      "value": "您的 deposit_data.json 建議您再設置一個驗證者. 這筆保證金仍未結清. 如您認為自己已完成了這筆保證金交易, 請至少等一小時後再次嘗試來避免重複付款."
+    }
+  ],
+  "tMHEEe": [
+    {
+      "type": 0,
+      "value": "了解更多與偉大更名相關的"
+    }
+  ],
+  "tWoq1e": [
+    {
+      "type": 0,
+      "value": "Maximum number of accounts that can be checked in a block. Stops when 16 withdrawals are found. If 16 eligible rewards are not found in the first 16,384 accounts checked, the withdrawal queue for that block will be submitted as is, and the following proposer will pick up where this left off."
+    }
+  ],
+  "tbYkT4": [
+    {
+      "type": 0,
+      "value": "以太坊共識層規範"
+    }
+  ],
+  "teyxVk": [
+    {
+      "type": 0,
+      "value": "地址應當為何?"
+    }
+  ],
+  "tigMuZ": [
+    {
+      "type": 0,
+      "value": "請至少等待 30 分鐘, 然後再重新嘗試提交包含此 "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " 文件之交易. 其將使我們的鏈上數據源有充足時間來標記任何重複的保證金交易."
+    }
+  ],
+  "tjEnDp": [
+    {
+      "type": 0,
+      "value": "How long the cycle takes to check every account depends on:"
+    }
+  ],
+  "tkFTZw": [
+    {
+      "type": 0,
+      "value": "充值後餘額"
+    }
+  ],
+  "tlVvjH": [
+    {
+      "type": 0,
+      "value": "Become a validator with Lodestar"
+    }
+  ],
+  "tsfX5f": [
+    {
+      "type": 0,
+      "value": "確認存款"
+    }
+  ],
+  "tv5Cxs": [
+    {
+      "type": 0,
+      "value": "請注意的是, 這種縮放機制利用一種不明顯的方式工作. 欲了解其工作原理的確切細節, 需要先理解一個名為 "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalance"
+    },
+    {
+      "type": 0,
+      "value": " 的概念. 如果您還不熟悉此概念, 我們建議您詳讀"
+    },
+    {
+      "type": 1,
+      "value": "article"
+    }
+  ],
+  "txdGU9": [
+    {
+      "type": 0,
+      "value": "以太坊升級"
+    }
+  ],
+  "tzMNF3": [
+    {
+      "type": 0,
+      "value": "狀態"
+    }
+  ],
+  "u/3saa": [
+    {
+      "type": 0,
+      "value": "Your wallet is on the wrong Ethereum network. To continue, connect to "
+    },
+    {
+      "type": 1,
+      "value": "executionLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "u28qA1": [
+    {
+      "type": 0,
+      "value": "存款後"
+    }
+  ],
+  "u564LK": [
+    {
+      "type": 0,
+      "value": "葡萄牙語 (巴西)"
+    }
+  ],
+  "u81G9+": [
+    {
+      "type": 0,
+      "value": "上線時間"
+    }
+  ],
+  "uDMtC8": [
+    {
+      "type": 0,
+      "value": "As anyone who has already gone through the process of activating a validator knows, this process is not automatic, especially if there are a lot of other users trying to join at the same time. This is because the consensus layer uses an "
+    },
+    {
+      "type": 1,
+      "value": "activationQueue"
+    },
+    {
+      "type": 0,
+      "value": " to limit how quickly new validator accounts can "
+    },
+    {
+      "type": 1,
+      "value": "join"
+    },
+    {
+      "type": 0,
+      "value": " the network."
+    }
+  ],
+  "uJzGSb": [
+    {
+      "type": 0,
+      "value": "請確認您已了解如何預防詐騙攻擊. 為您, 我們準備了些許需注意之確認清單."
+    }
+  ],
+  "uMpYkE": [
+    {
+      "type": 0,
+      "value": "If you provided a withdrawal address when initially generating your keys, the withdrawal key no longer has any use. The only address that validator funds can be transferred to is this address, and it cannot be changed once set."
+    }
+  ],
+  "uNfxNg": [
+    {
+      "type": 0,
+      "value": "來繼續, "
+    },
+    {
+      "type": 1,
+      "value": "reconnect"
+    }
+  ],
+  "uPECbE": [
+    {
+      "type": 0,
+      "value": "驗證者確認清單"
+    }
+  ],
+  "uUkmGX": [
+    {
+      "type": 0,
+      "value": "exit epoch"
+    }
+  ],
+  "uYF99H": [
+    {
+      "type": 0,
+      "value": "Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": ". It is possible to drop below this with poor node performance, but it is not possible to raise above it."
+    }
+  ],
+  "ubKWX8": [
+    {
+      "type": 0,
+      "value": "生成密鑰配對"
+    }
+  ],
+  "uhapiE": [
+    {
+      "type": 0,
+      "value": "確保您的寬帶將不會被限制或封頂, 並保持您的節點能隨時準備好來驗證當被調用."
+    }
+  ],
+  "ujVT29": [
+    {
+      "type": 0,
+      "value": "現在, 您應將助記詞寫放於安全地點, 並為每個 "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " 驗證者保存一個密鑰庫. 請確保這些內容的安全, 最好是存儲於離線狀態. 您的驗證者密鑰庫應該位於一新創建之 "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " 目錄中."
+    }
+  ],
+  "ukfwum": [
+    {
+      "type": 0,
+      "value": "利用Nimbus成為一驗證者"
+    }
+  ],
+  "up+5YH": [
+    {
+      "type": 0,
+      "value": "近期是否有執行"
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": " 保證金交易?"
+    }
+  ],
+  "v6ytKW": [
+    {
+      "type": 0,
+      "value": "And major penalities—or "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": "—are given for malicious actions."
+    }
+  ],
+  "vBJ79e": [
+    {
+      "type": 0,
+      "value": "I've simulated how to safely migrate from one execution client to another."
+    }
+  ],
+  "vBOf5K": [
+    {
+      "type": 0,
+      "value": "當您履行(或未能履行) 您的責任時, 以太坊網路規範將定期更新您的餘額."
+    }
+  ],
+  "vCHTnu": [
+    {
+      "type": 0,
+      "value": "提款證明"
+    }
+  ],
+  "vEJDo8": [
+    {
+      "type": 0,
+      "value": "利用管理軟體來保護您的資金, 並學習如何處理多類型之真實世界狀況."
+    }
+  ],
+  "vIF140": [
+    {
+      "type": 0,
+      "value": "成為驗證者並幫助保護以太坊未來."
+    }
+  ],
+  "vJez0K": [
+    {
+      "type": 0,
+      "value": "請謹慎行事. 我們的鏈上數據源已關閉, 而我們無法標記任何重複之存款."
+    }
+  ],
+  "vV6ua0": [
+    {
+      "type": 0,
+      "value": "步驟1: 下載 Wagyu Key Gen 應用程式於您的操作系統"
+    }
+  ],
+  "vY2wig": [
+    {
+      "type": 0,
+      "value": "載入錯誤"
+    }
+  ],
+  "vYODEJ": [
+    {
+      "type": 0,
+      "value": "取得"
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "vYOWYI": [
+    {
+      "type": 0,
+      "value": "中文 (簡體)"
+    }
+  ],
+  "vZxdbJ": [
+    {
+      "type": 0,
+      "value": "Once withdrawals are enabled with the Shanghai/Capella update, validators with a maxed our effective balance and a linked execution withdrawal address will have any balance over "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " automatically withdrawal as excess balance."
+    }
+  ],
+  "vbVsqW": [
+    {
+      "type": 0,
+      "value": "請務必盡快完成 "
+    },
+    {
+      "type": 1,
+      "value": "stakerChecklist"
+    },
+    {
+      "type": 0,
+      "value": ". 並加入 EthStaker 社群, 以獲得支持並與其他驗證者進行討論."
+    }
+  ],
+  "vz8WK7": [
+    {
+      "type": 0,
+      "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
+    }
+  ],
+  "w6qYSU": [
+    {
+      "type": 0,
+      "value": "運行下列指令來啟用應用程式"
+    }
+  ],
+  "wDlux8": [
+    {
+      "type": 0,
+      "value": "You are still able to voluntarily exit your validator to be removed from the active validator set, but until withdrawals are enabled these funds would remain locked and unable to be withdrawn or re-staked."
+    }
+  ],
+  "wJ1PbL": [
+    {
+      "type": 0,
+      "value": "適用於 "
+    },
+    {
+      "type": 1,
+      "value": "operatingSystem"
+    }
+  ],
+  "wJy3tO": [
+    {
+      "type": 0,
+      "value": "初始設置"
+    }
+  ],
+  "wawegX": [
+    {
+      "type": 0,
+      "value": "釣竿"
+    }
+  ],
+  "wbxk7r": [
+    {
+      "type": 0,
+      "value": "Erigon 文檔解釋了如何下載和安裝客戶端。"
+    }
+  ],
+  "wdb1NC": [
+    {
+      "type": 0,
+      "value": "更多權益證明相關詳情"
+    }
+  ],
+  "wm04oC": [
+    {
+      "type": 0,
+      "value": "運行下列指令:"
+    }
+  ],
+  "wpM7Y5": [
+    {
+      "type": 0,
+      "value": "One of the queues worth noting is a queue that limits how many BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") withdrawal addresses can be updated to an execution address ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") during a given block."
+    }
+  ],
+  "wqUcy/": [
+    {
+      "type": 0,
+      "value": "初期採納者風險"
+    }
+  ],
+  "wtTeex": [
+    {
+      "type": 0,
+      "value": "此具任何拚音編寫錯誤嗎?"
+    }
+  ],
+  "wtwIax": [
+    {
+      "type": 0,
+      "value": "Option 2: source code + virtualenv"
+    }
+  ],
+  "x+fF+M": [
+    {
+      "type": 0,
+      "value": "測試網模擬"
+    }
+  ],
+  "x0tVK4": [
+    {
+      "type": 0,
+      "value": "驗證於以太坊與採礦不同. 但結果是相似的: 您所做的工作將延伸並對鏈條進行保護. 此一過程完全不同, 因為驗證與挖礦使用的微不同之共識機制."
+    }
+  ],
+  "x4/9vY": [
+    {
+      "type": 0,
+      "value": "We strongly recommended you complete these steps on the current testnet before Mainnet."
+    }
+  ],
+  "xDyl3T": [
+    {
+      "type": 0,
+      "value": "對照其他網站交叉檢查保證金之合約地址 – 例如: Reddit, Twitter 和 GitHub. "
+    },
+    {
+      "type": 1,
+      "value": "ethereumorg"
+    },
+    {
+      "type": 0,
+      "value": " 上還具有一個可信來源列表"
+    }
+  ],
+  "xGQ38+": [
+    {
+      "type": 0,
+      "value": "Has the validator completed the exiting process?"
+    }
+  ],
+  "xH5GKj": [
+    {
+      "type": 0,
+      "value": "我為一早期採納者, 而我接受了解軟體及設計bug可能導致我的資金遭懲處."
+    }
+  ],
+  "xMOzv2": [
+    {
+      "type": 0,
+      "value": "Anyone wishing to conclude their staking obligations can sign a “voluntary exit” message which is then broadcast to the Beacon Chain to start the process. This is a manual step."
+    }
+  ],
+  "xP6BKs": [
+    {
+      "type": 0,
+      "value": "權益質押者確認清單"
+    }
+  ],
+  "xQrU13": [
+    {
+      "type": 0,
+      "value": "執行前請先確認質押確認清單. 當圍成驗證者設備, 請使用此清單為一指南來檢查各任務."
+    }
+  ],
+  "xSvJIi": [
+    {
+      "type": 0,
+      "value": "區塊獎勵為依據網路上之質押以太/ETH總量來滑動計算出的."
+    }
+  ],
+  "xXKkhR": [
+    {
+      "type": 0,
+      "value": "I've installed and synced my "
+    },
+    {
+      "type": 1,
+      "value": "network"
+    },
+    {
+      "type": 0,
+      "value": " execution client (do not wait on this as it can take several days)."
+    }
+  ],
+  "xXWzDf": [
+    {
+      "type": 0,
+      "value": "信標鏈"
+    }
+  ],
+  "xZZMZ5": [
+    {
+      "type": 0,
+      "value": "testnet"
+    }
+  ],
+  "xbet2w": [
+    {
+      "type": 0,
+      "value": "安裝pytjon3.7+"
+    }
+  ],
+  "xh7oVn": [
+    {
+      "type": 0,
+      "value": "Those looking to exit their validator from staking and withdrawal their ETH should check out the guide below that matches your setup:"
+    }
+  ],
+  "xm3Ivd": [
+    {
+      "type": 0,
+      "value": "此JSON 文件並非於正常網路. 請上傳一文件生成為您的目前網路: "
+    },
+    {
+      "type": 1,
+      "value": "consensusLayerName"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "xns5Uh": [
+    {
+      "type": 0,
+      "value": "Assume you have generated deposit in "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": " format and have BLS withdrawal credentials. If not, you can generate it by following "
+    },
+    {
+      "type": 1,
+      "value": "docs"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "xogY3N": [
+    {
+      "type": 0,
+      "value": "Besu編輯於Java並發布於Apache 2.0證照下."
+    }
+  ],
+  "xxbUJa": [
+    {
+      "type": 0,
+      "value": "Execution Clients: "
+    },
+    {
+      "type": 1,
+      "value": "clientName"
+    }
+  ],
+  "xyfoga": [
+    {
+      "type": 0,
+      "value": "Staking withdrawals"
+    }
+  ],
+  "xzjRos": [
+    {
+      "type": 0,
+      "value": "How to update validator keys"
+    }
+  ],
+  "xzmWbJ": [
+    {
+      "type": 0,
+      "value": "Your validator has its own balance, with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
+    }
+  ],
+  "y44jV2": [
+    {
+      "type": 0,
+      "value": "一系列的升級正在進行, 其將使以太坊更具可擴展性, 安全性及可持續發展性. 此類升級將改進以太坊, 並同時與今日之主鏈無縫延續. 以下是關於不同升級的更多信息:"
+    }
+  ],
+  "y4dBsA": [
+    {
+      "type": 0,
+      "value": "配置時間同步"
+    }
+  ],
+  "y86+cK": [
+    {
+      "type": 0,
+      "value": "What is a node operator?"
+    }
+  ],
+  "yFtJza": [
+    {
+      "type": 0,
+      "value": "請確保您能擁有這個地址的密鑰."
+    }
+  ],
+  "yI/DO8": [
+    {
+      "type": 0,
+      "value": "此數額增加如其他驗證者被同時懲處."
+    }
+  ],
+  "ySYWBD": [
+    {
+      "type": 0,
+      "value": "我已確保我密鑰安全並已抄寫下助記種詞."
+    }
+  ],
+  "ydh1KU": [
+    {
+      "type": 0,
+      "value": "語言情報"
+    }
+  ],
+  "yeI1Zq": [
+    {
+      "type": 0,
+      "value": "請注意, 如其他驗證者同時被逐出或退出, 此延遲時間可能更加延長."
+    }
+  ],
+  "yis3aS": [
+    {
+      "type": 0,
+      "value": "此為一預測之場景."
+    }
+  ],
+  "yjBvUO": [
+    {
+      "type": 0,
+      "value": "Nethermind 建立基由 .NET 核心架構. 擴張此, 客製化此 - 想像力為您的極限..."
+    }
+  ],
+  "ylZLi4": [
+    {
+      "type": 0,
+      "value": "EIP-2334"
+    }
+  ],
+  "ynB6C+": [
+    {
+      "type": 0,
+      "value": "我能連結我的共識客戶端 至我的執行用戶端 藉由HTTP API(s)."
+    }
+  ],
+  "yoGtkz": [
+    {
+      "type": 0,
+      "value": "確保您的節點具至少20對等節點."
+    }
+  ],
+  "yw4vsX": [
+    {
+      "type": 0,
+      "value": "On the other hand, you can be penalized for being offline and behaving maliciously—for example attesting to invalid or contradicting blocks."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Your old BLS withdrawal credentials"
+    }
+  ],
+  "z26FXa": [
+    {
+      "type": 0,
+      "value": "With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " available from popular third-party sources since The Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "z63I56": [
+    {
+      "type": 0,
+      "value": "驗證者"
+    }
+  ],
+  "z6K3D6": [
+    {
+      "type": 0,
+      "value": "我已設置我的"
+    },
+    {
+      "type": 1,
+      "value": "prometheus"
+    },
+    {
+      "type": 0,
+      "value": " 服務."
+    }
+  ],
+  "z8zpxp": [
+    {
+      "type": 0,
+      "value": "Lodestar is an open-sourced TypeScript implementation of the Ethereum Consensus (formerly known as eth2) specification maintained by ChainSafe Systems. ChainSafe's goal is to develop, improve and diversify the Ethereum proof of stake ecosystem with their beacon chain and validator client with a focus on light client implementations."
+    }
+  ],
+  "zAVb0/": [
+    {
+      "type": 0,
+      "value": "更多詳情關於Lighthouse及Sigma Prime"
+    }
+  ],
+  "zGkAVo": [
+    {
+      "type": 0,
+      "value": "於範圍的另一端, 如果您的餘額接近 31ETH/以太, 此可能不值得來增加額外之ETH來使餘額回到 32 ETH."
+    }
+  ],
+  "zJicsO": [
+    {
+      "type": 0,
+      "value": "質押經濟學"
+    }
+  ],
+  "zVb+z+": [
+    {
+      "type": 0,
+      "value": "Do not deposit more than "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai/Capella upgrade."
+    }
+  ],
+  "zbEBi9": [
+    {
+      "type": 0,
+      "value": "使用"
+    },
+    {
+      "type": 1,
+      "value": "mainnet"
+    },
+    {
+      "type": 0,
+      "value": " 來同步協調以太坊主網."
+    }
+  ],
+  "zicXn7": [
+    {
+      "type": 0,
+      "value": "節點安全"
+    }
+  ],
+  "znyxZv": [
+    {
+      "type": 0,
+      "value": "~27 hours"
+    }
+  ],
+  "zpmjjy": [
+    {
+      "type": 0,
+      "value": "Communication between the execution layer and consensus layer occurs using the "
+    },
+    {
+      "type": 1,
+      "value": "engineApi"
+    },
+    {
+      "type": 0,
+      "value": ". This is a set of JSON RPC methods that can be used to communicate between the two client layers."
+    }
+  ],
+  "zrb2Xo": [
+    {
+      "type": 0,
+      "value": "Community calls - announced in the PM repo"
+    }
+  ]
+}

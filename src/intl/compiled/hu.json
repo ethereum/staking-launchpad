@@ -205,6 +205,12 @@
       "value": "Tranzakciók"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Használhatja a Beaconcha.in továbbítóeszközt is, ha az üzenetet webes felhasználói felületen akarja feltölteni:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1109,6 +1115,20 @@
       "value": " felületén baráti segítségért!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Kilépés a(z) "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    },
+    {
+      "type": 0,
+      "value": " validátorból"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1843,6 +1863,12 @@
       "value": "A MetaMask letöltése"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Az indulóindex kulcsa az EIP-2334-ben"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1883,6 +1909,12 @@
     {
       "type": 0,
       "value": "Hogyan lehet elindítani a kivételeket, a hitelesítő adatok megváltoztatása"
+    }
+  ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Genesis validátor gyökér"
     }
   ],
   "C/gb74": [
@@ -2361,6 +2393,12 @@
       "value": " be van állítva, különben a befizetés érvénytelen lesz."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Az Ön validátorindexei"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2521,6 +2559,12 @@
       "value": "Tegye futtathatóvá az imént letöltött fájlt."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Genesis elágazási verzió"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2633,6 +2677,12 @@
       "value": "Hálózat"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "A pénzfelvételi hitelesítési adatok módosítása"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2661,6 +2711,12 @@
     {
       "type": 0,
       "value": "Ne feledje, hogy a második (valószínűtlen) forgatókönyv szerint 21 napon belül fokozatosan elveszíti a letétének 50%-át (16 ETH). 21 nap elteltével kizáródik a validátorok közül. Ez biztosítja, hogy a blokkok valamikor újra elkezdjenek véglegesülni."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "teljes kivétel"
     }
   ],
   "IYvwsI": [
@@ -2829,6 +2885,12 @@
     {
       "type": 0,
       "value": "Mi a jelenlegi operációs rendszere?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Az Ön hívójele"
     }
   ],
   "K3uH1C": [
@@ -3437,28 +3499,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Ahhoz, hogy ez az üzenet bekerüljön a fő hálózatba, fel kell töltenie ezt az üzenetet egy beacon-csomópont "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " poolba a Capella/Shanghai kemény elágazás "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3653,6 +3693,12 @@
       "value": "A hálózata megváltozott"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Indítóállás lépésenkénti útmutatója"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3699,6 +3745,12 @@
     {
       "type": 0,
       "value": "pip-dokumentáció"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Beaconcha.in adattovábbító eszköz"
     }
   ],
   "Q1ZwPT": [
@@ -4817,6 +4869,20 @@
     {
       "type": 0,
       "value": "Miért van szükség a tőkém letétbe helyezésére?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Kilépés a(z) "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " minipooljából"
     }
   ],
   "ZTo0Fl": [
@@ -5965,10 +6031,46 @@
       "value": "A korábban Artemis néven ismert Teku egy konszenzusos kliens, amelyet az intézményi igények és biztonsági követelmények kielégítését szem előtt tartva fejlesztettek ki. A PegaSys a ConsenSys egyik ága, amely vállalati használatra kész kliensek és eszközök létrehozására szolgál az Ethereum alapfelületével való interakcióhoz."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "A pénzfelvétel végrehajtási címe"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Korszakonként négy (4) validátor kilépése engedélyezett, plusz egy (1) további minden 65 536 aktív, 327 680 feletti validátor után. 2023 februárjától ez a határ hétre (7) és nyolcra (8) emelkedik, ha/amikor a validátorok száma eléri az 524 288-at."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Ahhoz, hogy a Beacon lánc validátor(ok) automatikusan kivehessék az egyenlegeket a(z) "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": " címre, a ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") eszközzel létrehozhatja a(z) ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") üzenet JSON-fájlját. Ez az üzenet tartalmazza a régi BLS kivételi hitelesítő adatainak az új, végrehajtási cím formátumú kivételi hitelesítő adatokra történő módosítására vonatkozó kérést."
     }
   ],
   "jXer8/": [
@@ -6147,6 +6249,12 @@
     {
       "type": 0,
       "value": "Teku-dokumentáció"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Hálózat neve"
     }
   ],
   "kd/f4u": [
@@ -6379,6 +6487,12 @@
       "value": "Importálás az indítópultból dokumentáció"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Fájlnév rendeltetési helye"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6395,6 +6509,20 @@
     {
       "type": 0,
       "value": "Fájl feltöltve"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Továbbíthatja az aláírt üzenetét a parancssorbül a "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": " paranccsal:"
     }
   ],
   "mArJcj": [
@@ -6563,6 +6691,28 @@
     {
       "type": 0,
       "value": "Amint magabiztos lesz, végig fog menni a kulcsok létrehozásán és az ETH letétbe helyezésén."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Ahhoz, hogy ez az üzenet bekerüljön a fő hálózatba, fel kell töltenie ezt az üzenetet egy beacon-csomópont ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") poolba a Capella/Shanghai kemény elágazás "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "njAU72": [
@@ -6893,36 +7043,6 @@
       "value": "Kilépési korszak és kivehető korszak"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Ahhoz, hogy a Beacon lánc validátor(ok) automatikusan kivehessék az egyenlegeket a(z) "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": " címre, a "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " eszközzel létrehozhatja a(z) "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": " üzenet JSON-fájlját. Ez az üzenet tartalmazza a régi BLS kivételi hitelesítő adatainak az új, végrehajtási cím formátumú kivételi hitelesítő adatokra történő módosítására vonatkozó kérést."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6969,6 +7089,20 @@
     {
       "type": 0,
       "value": "Mentse el a kulcsfájlokat, és készítse elő a validátorfájlt"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Kilépés a(z) "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " validátorból"
     }
   ],
   "qntIRb": [
@@ -7172,7 +7306,7 @@
   "smd9Oc": [
     {
       "type": 0,
-      "value": "Validátor index"
+      "value": "Validátorindex"
     }
   ],
   "soCLV+": [
@@ -7933,6 +8067,12 @@
     {
       "type": 0,
       "value": "Másrészt büntetést kaphat azért, mert offline állapotban van és rosszindulatúan viselkedik – például érvénytelen vagy ellentmondó blokkokról igazol."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Az Ön régi BLS-pénzfelvételi hozzáférési adatai"
     }
   ],
   "z26FXa": [

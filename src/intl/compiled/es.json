@@ -205,6 +205,12 @@
       "value": "Transacciones"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "También puede utilizar la herramienta de difusión Beaconcha.in para subir su mensaje usando una interfaz de usuario web:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1097,6 +1103,16 @@
       "value": " en cualquier momento durante la configuración si necesitas ayuda desinteresada."
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Saliendo de un validador "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1823,6 +1839,12 @@
       "value": "Descargar MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "El índice de inicio de clave en EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1865,6 +1887,12 @@
       "value": "Cómo activar retiradas, cambio de credenciales"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Raíz de validador en Genesis"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1890,7 +1918,7 @@
     },
     {
       "type": 0,
-      "value": ", que recibe comisiones de transacción de la propuesta. Ambas pueden establecerse en la misma dirección, pero cada una debe establecerse por separado."
+      "value": ", que recibe comisiones de transacción de bloques propuestos. Ambas pueden establecerse en la misma dirección, pero cada una debe establecerse por separado."
     }
   ],
   "C3jBPI": [
@@ -2349,6 +2377,12 @@
       "value": ", de lo contrario el depósito no será válido."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Sus índices de validador"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2509,6 +2543,12 @@
       "value": "Convierta el archivo que acaba de descargar en ejecutable."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Versión de bifurcación de Genesis"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2625,6 +2665,12 @@
       "value": "Red"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Cambiar las credenciales de retirada"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2653,6 +2699,12 @@
     {
       "type": 0,
       "value": "Ten en cuenta que en el segundo escenario (poco probable) puedes perder progresivamente hasta el 50% (16 ETH) de tu apuesta en 21 días. Después de 21 días, se te expulsará del grupo de validadores. Esto garantiza que los bloques empiecen a finalizar de nuevo en algún momento."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "retirada completa"
     }
   ],
   "IYvwsI": [
@@ -2825,6 +2877,12 @@
     {
       "type": 0,
       "value": "¿Cuál es tu sistema operativo actual?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Su frase mnemotécnica"
     }
   ],
   "K3uH1C": [
@@ -3425,28 +3483,6 @@
       "value": ")"
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Para hacer que este mensaje se incluya en la red principal, necesitará subir este mensaje a un grupo "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " de nodo de la baliza "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " de tenedor duro de Shanghai/Capella."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -3641,6 +3677,12 @@
       "value": "Tu red ha cambiado"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Tutorial guía de de la plataforma de lanzamiento"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3687,6 +3729,12 @@
     {
       "type": 0,
       "value": "documentación de pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Herramienta de difusión Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4809,6 +4857,16 @@
     {
       "type": 0,
       "value": "¿Por qué necesito tener fondos para apostar?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Saliendo de minipool "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5957,10 +6015,46 @@
       "value": "Teku, anteriormente conocido como Artemis, es un cliente de consenso desarrollado para satisfacer las necesidades institucionales y los requisitos de seguridad. PegaSys es una rama de ConsenSys, dedicada a la creación de clientes y herramientas para empresas a fin de interactuar con la plataforma principal de Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "La dirección de ejecución para retiradas"
+    }
+  ],
   "jGVfQG": [
     {
       "type": 0,
       "value": "Se permiten cuatro (4) salidas de validadores por época, más una (1) más por cada 65.536 validadores activos de un total de 327.680. En febrero de 2023 este límite es de siete (7), y aumentará a ocho (8) si el número de validadores alcanza/cuando el cuando el número de validadores alcance los 524.288."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Para habilitar su(s) validador(es) de la cadena de baliza a retirar automáticamente los saldos a su "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", puede utilizar la herramienta de apuesta deposit CLI "
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": " para generar el archivo JSON de mensaje "
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": " firmado BLS-to-execution-change. Este mensaje incluye la solicitud de cambio de sus credenciales antiguas de retirada de BLS a las nuevas en formato de dirección de ejecución."
     }
   ],
   "jXer8/": [
@@ -6135,6 +6229,12 @@
     {
       "type": 0,
       "value": "Documentación de Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Nombre de la red"
     }
   ],
   "kd/f4u": [
@@ -6371,6 +6471,12 @@
       "value": "Importando desde la documentación de Launchpad"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Destino del nombre de archivo"
+    }
+  ],
   "ll/zMW": [
     {
       "type": 0,
@@ -6387,6 +6493,20 @@
     {
       "type": 0,
       "value": "Archivo cargado"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Puede transmitir su mensaje firmado desde la línea de comandos con el comando "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "mArJcj": [
@@ -6555,6 +6675,28 @@
     {
       "type": 0,
       "value": "Una vez que te sientas cómodo, pasarás a generar tus claves y a depositar tu ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Para hacer que este mensaje se incluya en la red principal, necesitará subirlo al grupo "
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": " de mensajes de nodo de la baliza "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " de bifurcación dura de Shanghai/Capella."
     }
   ],
   "njAU72": [
@@ -6881,36 +7023,6 @@
       "value": "Periodo de salida y periodo de retirada"
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Para habilitar su(s) validador(es) de la cadena de baliza para retirar automáticamente los saldos a su "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", puede utilizar la herramienta "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " para generar el archivo JSON de mensaje "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ". Este mensaje incluye la solicitud de cambio de sus credenciales antiguas de retirada de BLS a las nuevas en formato de dirección de ejecución."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -6957,6 +7069,16 @@
     {
       "type": 0,
       "value": "Guarda los archivos clave y prepara el archivo validador"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Saliendo de un validador "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "qntIRb": [
@@ -7921,6 +8043,12 @@
     {
       "type": 0,
       "value": "Por otra parte, se lo puede penalizar por no estar en línea y comportarse de forma malintencionada; por ejemplo, por certificar con bloques no válidos o contradictorios."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Sus antiguas credenciales de retirada de BLS"
     }
   ],
   "z26FXa": [

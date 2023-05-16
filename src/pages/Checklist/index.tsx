@@ -1159,7 +1159,7 @@ export const Checklist = () => {
                 </Text>
                 <Text className="checkbox-label mb10">
                   <FormattedMessage
-                    defaultMessage="If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials (requires Shanghai/Capella upgrade)."
+                    defaultMessage="If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials."
                     values={{ btec: <Code>BLSToExecutionChange</Code> }}
                   />
                 </Text>

@@ -143,32 +143,23 @@ export const BtecGuide = () => {
           <Text className="mb10">
             <FormattedMessage
               defaultMessage="To enable your Beacon Chain validator(s) to automatically withdraw balances to your
-              {executionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed
-              BLS-to-execution-change ({signed}) message JSON file. This message includes the request to change
-              your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
+              {executionAddress}, you can use the staking deposit CLI tool to generate the signed “BLS To Execution
+              Change” ({signed}) message JSON file. This message includes the request to change your old BLS
+              withdrawal credentials to the new withdrawal credentials in execution address format."
               values={{
                 executionAddress: (
                   <strong>
                     <FormattedMessage defaultMessage="execution layer (Eth1) address" />
                   </strong>
                 ),
-                cli: <Code>staking-deposit-cli</Code>,
                 signed: <Code>SignedBLSToExecutionChange</Code>,
               }}
             />
           </Text>
           <Text className="mb10">
             <FormattedMessage
-              defaultMessage="To make this message to be included in Mainnet, you will need to upload this message to
-              a beacon node’s message ({signature}) pool {after} Capella/Shanghai hard fork."
-              values={{
-                signature: <Code>SignedBLSToExecutionChange</Code>,
-                after: (
-                  <strong>
-                    <FormattedMessage defaultMessage="after" />
-                  </strong>
-                ),
-              }}
+              defaultMessage="To include this message on Mainnet, you will need to upload this message to
+              a beacon node’s message “Signed BLS To Execution Change” pool."
             />
           </Text>
         </section>
@@ -209,13 +200,12 @@ export const BtecGuide = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="Download {btec} branch:"
-                values={{ btec: <Code>bls-to-execution-change</Code> }}
+                defaultMessage="Download {master} branch:"
+                values={{ master: <Code>master</Code> }}
               />
             </Text>
             <CodeBlock>
-              git clone -b bls-to-execution-change
-              git@github.com:ethereum/staking-deposit-cli.git
+              git clone https://github.com/ethereum/staking-deposit-cli.git
             </CodeBlock>
             <Text className="mb10">
               <FormattedMessage defaultMessage="Install and set virtualenv:" />

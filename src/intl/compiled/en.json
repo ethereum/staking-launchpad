@@ -469,6 +469,12 @@
       "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
     }
   ],
+  "1ONfru": [
+    {
+      "type": 0,
+      "value": "To include this message on Mainnet, you will need to upload this message to a beacon node’s message “Signed BLS To Execution Change” pool."
+    }
+  ],
   "1P6GMj": [
     {
       "type": 0,
@@ -3129,12 +3135,6 @@
     {
       "type": 0,
       "value": "Why do I need to run an execution client now?"
-    }
-  ],
-  "LxtU/N": [
-    {
-      "type": 0,
-      "value": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message “Signed BLS To Execution Change” pool."
     }
   ],
   "M35Dz/": [

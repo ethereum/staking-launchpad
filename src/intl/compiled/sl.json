@@ -3463,22 +3463,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Če želite, da bo to sporočilo vključeno v glavno omrežje, ga boste morali naložiti v skupino "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " vozlišča svetilnika "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6013,36 +6005,6 @@
       "value": "Dovoljeni so štirje (4) izstopi validatorjev na epoho in še en (1) več za vsakih 65.536 skupno aktivnih validatorjev nad 327.680. Od februarja 2023 je ta omejitev sedem (7) in se bo povečala na osem (8), če/ko število validatorjev doseže 524.288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Če želite svojim validatorjem oddajniške verige omogočiti samodejni dvig stanja na vaš "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", lahko uporabite orodje Staking Deposit CLI ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") za ustvarjanje podpisane datoteke JSON s sporočilom BLS-to-execution-change ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": "). To sporočilo vključuje zahtevo za spremembo vaših starih poverilnic za dvig BLS v nove poverilnice za dvig v obliki naslova za izvršitev."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6655,28 +6617,6 @@
       "value": "Ko boste seznanjeni, boste opravili postopek generiranja svojih ključev in pologa svojega ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Če želite, da bo to sporočilo vključeno v glavno omrežje, ga boste morali naložiti v sporočilo skupine ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") vozlišča svetilnika "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " trajnem razcepu Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7017,10 +6957,6 @@
     {
       "type": 0,
       "value": ", lahko uporabite orodje "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

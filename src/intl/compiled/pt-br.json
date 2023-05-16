@@ -3479,22 +3479,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Para fazer com que essa mensagem seja incluída na Rede principal, você precisará enviá-la para um pool de "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " do nó de beacon "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6045,36 +6037,6 @@
       "value": "São permitidas quatro (4) saídas de validador por época, mais uma (1) a cada 65.536 validadores ativos no total de 327.680. Desde fevereiro de 2023 esse limite é sete (7), e aumentará para oito (8) se/quando o número de validadores atingir 524.288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Para permitir que seu(s) validador(es) da Beacon Chain saquem automaticamente os saldos para o seu "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", você pode usar a ferramenta "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " CLI de depósito de stake para gerar o arquivo JSON da mensagem ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") BLS-to-execution-change. Essa mensagem inclui a solicitação para alterar suas credenciais de saque BLS antigas para as novas credenciais de saque no formato de endereço de execução."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6695,28 +6657,6 @@
       "value": "Quando você estiver confortável, gerará suas chaves e depositará seus ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Para fazer essa mensagem ser incluída na Rede principal, você precisará carregar essa mensagem para um pool de mensagens ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") de um nó beacon "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " o fork Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7053,14 +6993,6 @@
     {
       "type": 0,
       "value": ", você pode usar a ferramenta "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " para gerar o arquivo JSON de mensagem "
     },
     {
       "type": 1,

@@ -3471,22 +3471,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Untuk membuat pesan ini disertakan di Jaringan Utama, Anda perlu mengunggah pesan ini ke kumpulan "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " simpul suar "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6029,36 +6021,6 @@
       "value": "Empat (4) validator keluar diizinkan per jangka waktu, ditambah satu (1) lagi untuk setiap total 65.536 validator aktif atas 327.680. Mulai Februari 2023 batas ini adalah tujuh (7), dan akan meningkat hingga (8) jika/bila jumlah validator mencapai 524.288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Untuk memungkinkan validator Rantai Suar menarik saldo secara otomatis ke "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", Anda dapat menggunakan perangkat setoran penaruhan CLI ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") untuk membuat file JSON pesan BLS-to-execution-change yang ditandatangani ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": "). Pesan ini menyertakan permintaan untuk mengubah kredensial penarikan BLS lama Anda ke kredensial penarikan baru dalam format alamat eksekusi."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6675,28 +6637,6 @@
       "value": "Setelah Anda sudah merasa nyaman, Anda dapat mulai membuat kunci dan menyetor ETH Anda."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Untuk membuat pesan ini disertakan di Jaringan Utama, Anda perlu mengunggah pesan ini ke kumpulan ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") pesan simpul suar "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " garpu keras Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7033,10 +6973,6 @@
     {
       "type": 0,
       "value": ", Anda dapat menggunakan perangkat "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

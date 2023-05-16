@@ -3491,22 +3491,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Chcete-li tuto zprávu zahrnout do hlavní sítě, bude nutné odeslat tuto zprávu do fondu "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " Beacon Node "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6049,36 +6041,6 @@
       "value": "Pro každou epochu jsou povoleny čtyři (4) odchody validátorů a jeden (1) další za každých 65 536 celkových aktivních validátorů nad 327 680. K únoru 2023 je tento limit sedm (7) a zvýší se na osm (8), jakmile počet validátorů dosáhne počtu 524 288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Abyste validátoru (validátorům) řetězové vazby povolili automatický výběr zůstatků na "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", můžete použít nástroj CLI vkladu pro uzamčení ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") a vygenerovat podepsanou zprávu BLS-to-execution-change ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") ve formátu JSON. Tato zpráva zahrnuje požadavek na změnu původních BLS přihlašovacích údajů pro výběr na nové přihlašovací údaje pro výběr ve formátu exekuční adresy."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6691,28 +6653,6 @@
       "value": "Až vše zkontrolujete, vygenerujete klíče a provedete vklad ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Chcete-li tuto zprávu zahrnout do hlavní sítě, bude nutné odeslat tuto zprávu do fondu ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") zprávy Beacon Node "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " po trvalém větvení Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7049,10 +6989,6 @@
     {
       "type": 0,
       "value": ", můžete použít nástroj "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

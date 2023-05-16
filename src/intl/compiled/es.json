@@ -3483,22 +3483,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Para hacer que este mensaje se incluya en la red principal, necesitará subir este mensaje a un grupo "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " de nodo de la baliza "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6049,36 +6041,6 @@
       "value": "Se permiten cuatro (4) salidas de validadores por época, más una (1) más por cada 65.536 validadores activos de un total de 327.680. En febrero de 2023 este límite es de siete (7), y aumentará a ocho (8) si el número de validadores alcanza/cuando el cuando el número de validadores alcance los 524.288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Para habilitar su(s) validador(es) de la cadena de baliza a retirar automáticamente los saldos a su "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", puede utilizar la herramienta de apuesta deposit CLI "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " para generar el archivo JSON de mensaje "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": " firmado BLS-to-execution-change. Este mensaje incluye la solicitud de cambio de sus credenciales antiguas de retirada de BLS a las nuevas en formato de dirección de ejecución."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6699,28 +6661,6 @@
       "value": "Una vez que te sientas cómodo, pasarás a generar tus claves y a depositar tu ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Para hacer que este mensaje se incluya en la red principal, necesitará subirlo al grupo "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": " de mensajes de nodo de la baliza "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " de bifurcación dura de Shanghai/Capella."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7057,10 +6997,6 @@
     {
       "type": 0,
       "value": ", puede utilizar la herramienta "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

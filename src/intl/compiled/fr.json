@@ -3467,22 +3467,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Pour que ce message soit inclus dans le réseau principal, vous devrez télécharger ce message dans le pool "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " d'un nœud de balise "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6041,36 +6033,6 @@
       "value": "Quatre (4) sorties de validateur sont autorisées par époque, plus une (1) supplémentaire pour un total de 65 536 validateurs actifs sur 327 680. En février 2023, cette limite est de sept (7) et passera à huit (8) si/lorsque le nombre de validateurs atteindra 524 288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Pour permettre à votre ou vos validateurs de la chaîne phare de retirer automatiquement des soldes sur votre "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", vous pouvez utiliser l'outil "
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": " CLI de dépôt de staking pour générer le fichier JSON du message ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") BLS-to-execution-change. Ce message inclut la demande de modification de vos anciens identifiants de retrait BLS vers les nouveaux identifiants de retrait au format de l'adresse d'exécution."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6687,28 +6649,6 @@
       "value": "Une fois que vous serez à l'aise, vous pourrez générer vos clés et déposer vos ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Pour que ce message soit inclus dans le réseau principal, vous devrez téléverser ce message dans le pool de messages ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") d'un nœud de balise "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " de la fourche majeure Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7045,10 +6985,6 @@
     {
       "type": 0,
       "value": ", vous pouvez utiliser l'outil "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

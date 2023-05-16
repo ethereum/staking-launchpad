@@ -3499,22 +3499,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Ahhoz, hogy ez az üzenet bekerüljön a fő hálózatba, fel kell töltenie ezt az üzenetet egy beacon-csomópont "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " poolba a Capella/Shanghai kemény elágazás "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6065,36 +6057,6 @@
       "value": "Korszakonként négy (4) validátor kilépése engedélyezett, plusz egy (1) további minden 65 536 aktív, 327 680 feletti validátor után. 2023 februárjától ez a határ hétre (7) és nyolcra (8) emelkedik, ha/amikor a validátorok száma eléri az 524 288-at."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Ahhoz, hogy a Beacon lánc validátor(ok) automatikusan kivehessék az egyenlegeket a(z) "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": " címre, a ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") eszközzel létrehozhatja a(z) ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") üzenet JSON-fájlját. Ez az üzenet tartalmazza a régi BLS kivételi hitelesítő adatainak az új, végrehajtási cím formátumú kivételi hitelesítő adatokra történő módosítására vonatkozó kérést."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6715,28 +6677,6 @@
       "value": "Amint magabiztos lesz, végig fog menni a kulcsok létrehozásán és az ETH letétbe helyezésén."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Ahhoz, hogy ez az üzenet bekerüljön a fő hálózatba, fel kell töltenie ezt az üzenetet egy beacon-csomópont ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") poolba a Capella/Shanghai kemény elágazás "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7077,10 +7017,6 @@
     {
       "type": 0,
       "value": " címre, a "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

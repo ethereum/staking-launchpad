@@ -3475,22 +3475,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Pentru a include acest mesaj în Mainnet, va trebuie să încărcați acest mesaj în bifurcația majoră a grupului nodului beacon "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6037,36 +6029,6 @@
       "value": "Patru (4) ieșiri de validator sunt permise per epocă, plus încă una (1) pentru fiecare 65.536 validatori activi, în total peste 327.680. Începând din februarie 2023, această limită este de șapte (7) și va crește la opt (8) în cazul în care numărul de validatori atinge 524.288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Pentru a activa validatorul(ii) Lanțului Beacon pentru a retrage automat soldurile în "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", puteți folosi instrumentul de mizare depozit ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") pentru a genera fișierul JSON BLS-la-modificare-execuție cu mesajul ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": "). Acest mesaj include solicitarea de a schimba vechile acreditări de retragere BLS cu noile acreditări de retragere în formatul adresei de executare."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6683,28 +6645,6 @@
       "value": "Când simți că te-ai familiarizat cu sistemul, poți să treci la generarea cheilor și la depunerea de ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Pentru a include acest mesaj în Rețeaua principală, va trebuie să încărcați acest mesaj în grupul mesajului nodului beacon ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " bifurcația majoră Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7041,10 +6981,6 @@
     {
       "type": 0,
       "value": ", puteți folosi instrumentul "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

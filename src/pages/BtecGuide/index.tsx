@@ -158,7 +158,7 @@ export const BtecGuide = () => {
           </Text>
           <Text className="mb10">
             <FormattedMessage
-              defaultMessage="To make this message to be included in Mainnet, you will need to upload this message to
+              defaultMessage="To include this message on Mainnet, you will need to upload this message to
               a beacon node’s message “Signed BLS To Execution Change” pool."
             />
           </Text>

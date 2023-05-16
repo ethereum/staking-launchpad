@@ -3507,22 +3507,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Wenn du diese Nachricht in das Mainnet integrieren möchtest, musst du die Nachricht in den "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": "-Pool eines Beacon-Node "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6085,36 +6077,6 @@
       "value": "Pro Epoche sind vier (4) Validatoraustritte zulässig, plus einem (1) weiteren für jeden 65.536. Validator aus insgesamt mehr als 327.680 aktiven Validatoren. Ab Februar 2023 beträgt der Grenzwert sieben (7) und wird sich bei Erreichen einer Validatorgesamtanzahl von 524.288 auf acht (8) erhöhen."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Wenn Sie festlegen möchten, dass Ihre Beacon Chain-Validatoren Salden automatisch von Ihrer "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": " abheben, können Sie mit dem CLI("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ")-Tool für Staking-Einzahlungen die JSON-Datei mit unterzeichneter Nachricht „BLS zur Ausführungsänderung“ ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") erstellen. Diese Nachricht enthält die Anforderung zur Änderung Ihrer alten BLS-Zugangsdaten zum Abheben in die neuen Zugangsdaten zum Abheben im Ausführungsadressformat."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6739,28 +6701,6 @@
       "value": "Sobald du dich eingerichtet hast, kannst du dich mit dem Generieren deiner Schlüssel und dem Einzahlen deiner ETH beschäftigen."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Wenn Sie diese Nachricht in das Mainnet integrieren möchten, müssen Sie die Nachricht in den "
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": "-Nachrichtenpool eines Beacon-Node "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " der Capella/Shanghai-Hard Fork hochladen."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7101,10 +7041,6 @@
     {
       "type": 0,
       "value": " abheben, können Sie mit dem "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

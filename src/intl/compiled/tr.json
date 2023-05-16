@@ -3471,22 +3471,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Bu mesajın Mainnet'e dahil edilmesini sağlamanız için, bu mesajı Capella/Shanghai sert çatallanmasından "
     },
     {
-      "type": 1,
-      "value": "after"
-    },
-    {
       "type": 0,
       "value": " sonra bir işaret düğümünün "
-    },
-    {
-      "type": 1,
-      "value": "signature"
     },
     {
       "type": 0,
@@ -6021,36 +6013,6 @@
       "value": "Dönem başına dört (4) doğrulayıcı çıkışına ve ayrıca 327.680 içindeki her 65.536 toplam aktif doğrulayıcı için bir (1) çıkışa izin verilir. Şubat 2023 itibarıyla bu sınır yedi (7) olmuştur ve doğrulayıcı sayısı 524.288'e ulaştığında sekize (8) çıkacaktır."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Bakiyeleri otomatik olarak "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": " adresinize çekmek adına İşaret Zinciri doğrulayıcı(ları)nızı etkinleştirmek için, imzalı BLS-yürütüm değişimi ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") mesajı JSON dosyasını oluşturmak üzere hisseleme para yatırma ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") aracını kullanabilirsiniz. Bu mesaj, eski BLS para çekme kimlik bilgilerinizi, yürütüm adresi formatında yeni para çekme kimlik bilgileri ile değiştirme talebini içerir."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6655,28 +6617,6 @@
       "value": "Kendinizi rahat hissettiğinizde, anahtarlarınızı oluşturmaya ve ETH'nizi yatırmaya başlarsınız."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Bu mesajın Ana Ağa dahil edilmesini sağlamak için bu mesajı, Capella/Shanghai sert çatallanmasından "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " bir işaret düğümü mesajı ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") havuzuna yüklemeniz gerekecektir."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7021,10 +6961,6 @@
     {
       "type": 0,
       "value": " imzalı JSON dosyasını oluşturmak için "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

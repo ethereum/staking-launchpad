@@ -3471,22 +3471,14 @@
       "value": ")"
     }
   ],
-  "LxtU/N": [
+  "1ONfru": [
     {
       "type": 0,
       "value": "Aby włączyć ten komunikat do sieci głównej, musisz przesłać go do puli węzła śledzącego "
     },
     {
-      "type": 1,
-      "value": "signature"
-    },
-    {
       "type": 0,
       "value": " "
-    },
-    {
-      "type": 1,
-      "value": "after"
     },
     {
       "type": 0,
@@ -6029,36 +6021,6 @@
       "value": "Dozwolone są cztery (4) wyjścia walidatorów na epokę plus jedno (1) kolejne na każdych 65 536 aktywnych walidatorów powyżej 327 680. Od lutego 2023 r. limit ten wynosi siedem (7) i zostanie zwiększony do ośmiu (8), jeśli/gdy liczba walidatorów osiągnie 524 288."
     }
   ],
-  "rW219B": [
-    {
-      "type": 0,
-      "value": "Aby umożliwić walidatorom łańcucha śledzącego automatyczne wypłaty sald na adres "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", możesz użyć narzędzia CLI wpłaty do stakingu ("
-    },
-    {
-      "type": 1,
-      "value": "cli"
-    },
-    {
-      "type": 0,
-      "value": ") i wygenerować plik JSON komunikatu z podpisaną zmianą BLS do wykonania ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": "). Komunikat ten zawiera żądanie zmiany starych poświadczeń do wycofywania środków BLS na nowe poświadczenia w formacie adresu wykonania."
-    }
-  ],
   "jXer8/": [
     {
       "type": 0,
@@ -6667,28 +6629,6 @@
       "value": "Gdy poczujesz się komfortowo, przejdziesz przez generowanie kluczy i deponowanie ETH."
     }
   ],
-  "nf2aBN": [
-    {
-      "type": 0,
-      "value": "Aby włączyć ten komunikat do sieci głównej, musisz przesłać go do puli węzła śledzącego komunikatu ("
-    },
-    {
-      "type": 1,
-      "value": "signature"
-    },
-    {
-      "type": 0,
-      "value": ") "
-    },
-    {
-      "type": 1,
-      "value": "after"
-    },
-    {
-      "type": 0,
-      "value": " hard fork Capella/Shanghai."
-    }
-  ],
   "njAU72": [
     {
       "type": 0,
@@ -7025,10 +6965,6 @@
     {
       "type": 0,
       "value": ", możesz użyć narzędzia "
-    },
-    {
-      "type": 1,
-      "value": "cli"
     },
     {
       "type": 0,

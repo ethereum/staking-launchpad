@@ -205,6 +205,12 @@
       "value": "Tranzacții"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "De asemenea, puteți utiliza instrumentul de transmisie Beaconcha.in pentru a încărca mesajul folosind o interfață web utilizator:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1097,6 +1103,16 @@
       "value": " în orice moment în timpul configurării pentru a primi ajutor!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Ieșind dintr-un validator de "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1823,6 +1839,12 @@
       "value": "Descărcați MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Indicele de început cheie în EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1865,6 +1887,12 @@
       "value": "Declanșarea retragerilor, modificarea acreditărilor"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Root validator geneză"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1890,7 +1918,7 @@
     },
     {
       "type": 0,
-      "value": ", care primește comisioanele de tranzacție din propunere. Acestea pot fi setate la aceeași adresă, dar fiecare trebuie setată separat."
+      "value": ", care primește comisioanele de tranzacție din blocurile propuse. Acestea pot fi setate la aceeași adresă, dar fiecare trebuie setată separat."
     }
   ],
   "C3jBPI": [
@@ -2341,6 +2369,12 @@
       "value": ". În caz contrar, depunerea nu va fi validă."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Indicii dumneavoastră de validator"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2501,6 +2535,12 @@
       "value": "Transformați fișierul pe care tocmai l-ați descărcat în fișier executabil"
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Versiune bifurcație geneză"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2617,6 +2657,12 @@
       "value": "Rețea"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Modificarea acreditărilor pentru retragere"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2645,6 +2691,12 @@
     {
       "type": 0,
       "value": "Reține: în cel de-al doilea scenariu (puțin probabil), veți pierde progresiv până la 50% (16 ETH) din miză pe parcursul a 21 de zile. După 21 de zile ești scos din grupul de validatori. Astfel este sigur că, la un moment dat, blocurile încep din nou să se finalizeze."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "retragere completă"
     }
   ],
   "IYvwsI": [
@@ -2817,6 +2869,12 @@
     {
       "type": 0,
       "value": "Ce sistem de operare folosiți?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Mnemonicul dumneavoastră"
     }
   ],
   "K3uH1C": [
@@ -3633,6 +3691,12 @@
       "value": "Rețeaua s-a schimbat"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Tutorial de prezentare a platformei de lansare"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3679,6 +3743,12 @@
     {
       "type": 0,
       "value": "Documentație pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Instrumentul de transmisie Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4801,6 +4871,16 @@
     {
       "type": 0,
       "value": "De ce trebuie să depun niște fonduri ca miză?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Ieșind dintr-un mini grup "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5945,10 +6025,46 @@
       "value": "Cunoscut anterior ca Artemis, Teku este un client cu nivel de consens al cărui scop este de a satisface necesitățile instituționale și cerințele privind securitatea. PegaSys este o ramură a ConsenSys consacrată creării de clienți și instrumente enterprise gata de a interacționa cu platforma centrală Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Adresa de executare pentru retrageri"
+    }
+  ],
   "RGD1CX": [
     {
       "type": 0,
       "value": "Patru (4) ieșiri de validator sunt permise per epocă, plus încă una (1) pentru fiecare 65.536 validatori activi, în total peste 327.680. Începând din februarie 2023, această limită este de șapte (7) și va crește la opt (8) în cazul în care numărul de validatori atinge 524.288."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Pentru a activa validatorul(ii) Lanțului Beacon pentru a retrage automat soldurile în "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", puteți folosi instrumentul de mizare depozit ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") pentru a genera fișierul JSON BLS-la-modificare-execuție cu mesajul ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": "). Acest mesaj include solicitarea de a schimba vechile acreditări de retragere BLS cu noile acreditări de retragere în formatul adresei de executare."
     }
   ],
   "jXer8/": [
@@ -6123,6 +6239,12 @@
     {
       "type": 0,
       "value": "Documentație Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Nume rețea"
     }
   ],
   "kd/f4u": [
@@ -6355,6 +6477,12 @@
       "value": "Se importă din documentația Launchpad"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Destinație nume fișier"
+    }
+  ],
   "OCl7KQ": [
     {
       "type": 0,
@@ -6371,6 +6499,20 @@
     {
       "type": 0,
       "value": "Fișier încărcat"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Puteți transmite mesajul semnat din linia de comandă folosind comanda "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "mArJcj": [
@@ -6539,6 +6681,28 @@
     {
       "type": 0,
       "value": "Când simți că te-ai familiarizat cu sistemul, poți să treci la generarea cheilor și la depunerea de ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Pentru a include acest mesaj în Rețeaua principală, va trebuie să încărcați acest mesaj în grupul mesajului nodului beacon ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " bifurcația majoră Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6941,6 +7105,16 @@
     {
       "type": 0,
       "value": "Salvează fișierele cheie și pregătește fișierul de validator"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Ieșind dintr-un validator "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "p1ynue": [
@@ -7909,6 +8083,12 @@
     {
       "type": 0,
       "value": "Pe de altă parte, puteți fi penalizați dacă stați offline și dacă dați dovadă de comportament nociv, de exemplu dacă atestați blocuri incorecte sau contradictorii."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Vechile acreditări de retragere BLS"
     }
   ],
   "Sy5bAo": [

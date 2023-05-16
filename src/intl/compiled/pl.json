@@ -205,6 +205,12 @@
       "value": "Transakcje"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Możesz też użyć narzędzia do nadawania Beaconcha.in, aby przesłać komunikat za pomocą interfejsu webowego:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1093,6 +1099,16 @@
       "value": " w dowolnym momencie podczas konfiguracji, aby uzyskać przyjazną pomoc!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Zamykanie walidatora: "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1819,6 +1835,12 @@
       "value": "Pobierz MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "Indeks początkowy klucza w EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1861,6 +1883,12 @@
       "value": "Jak inicjować wypłaty, zmiana poświadczeń"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Konto root walidatora genezy"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1870,7 +1898,7 @@
   "40/5Sf": [
     {
       "type": 0,
-      "value": "Należy zauważyć, że "
+      "value": "Pamiętaj, że Twoje poświadczenia "
     },
     {
       "type": 1,
@@ -1878,7 +1906,7 @@
     },
     {
       "type": 0,
-      "value": " nie są takie same jak "
+      "value": " nie są takie same jak odbiorcy ("
     },
     {
       "type": 1,
@@ -1886,7 +1914,7 @@
     },
     {
       "type": 0,
-      "value": ", który otrzymuje opłaty transakcyjne od proponowanych. Obydwie opcje mogą być ustawione na ten sam adres, ale każdą należy ustawić oddzielnie."
+      "value": "), który otrzymuje opłaty transakcyjne z proponowanych bloków. Obie opcje mogą być ustawione na ten sam adres, ale każdą należy ustawić oddzielnie."
     }
   ],
   "C3jBPI": [
@@ -2341,6 +2369,12 @@
       "value": ", w przeciwnym razie wpłata będzie nieważna."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Indeksy Twojego walidatora"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2497,6 +2531,12 @@
       "value": "Zmień plik, który właśnie został pobrany, na plik wykonywalny."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Wersja fork genezy"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2613,6 +2653,12 @@
       "value": "Sieć"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Zmienianie poświadczeń do wycofywania środków"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2641,6 +2687,12 @@
     {
       "type": 0,
       "value": "Zauważ, że w drugim (mało prawdopodobnym) scenariuszu możesz stopniowo tracić do 50% (16 ETH) stawki w ciągu 21 dni. Po 21 dniach zostaniesz usunięty z puli walidatorów. Gwarantuje to, że w pewnym momencie bloki zaczną się ponownie finalizować."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "pełne wycofanie"
     }
   ],
   "IYvwsI": [
@@ -2813,6 +2865,12 @@
     {
       "type": 0,
       "value": "Jaki jest twój obecny system operacyjny?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Twój mnemonik"
     }
   ],
   "K3uH1C": [
@@ -3629,6 +3687,12 @@
       "value": "Twoja sieć została zmieniona"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Launchpad – samouczek wprowadzający"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3675,6 +3739,12 @@
     {
       "type": 0,
       "value": "dokumentacja pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Narzędzie do nadawania Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4797,6 +4867,16 @@
     {
       "type": 0,
       "value": "Dlaczego muszę mieć fundusze na stawkę?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Zamykanie minipuli "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5937,10 +6017,46 @@
       "value": "Wcześniej znany jako Artemis, Teku jest klientem konsensusu zbudowanym w celu spełnienia potrzeb instytucjonalnych i wymagań bezpieczeństwa. PegaSys jest częścią ConsenSys, zajmującą się tworzeniem klientów gotowych do pracy w przedsiębiorstwach i narzędzi do interakcji z podstawową platformą Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "Adres wykonania do wycofywania środków"
+    }
+  ],
   "RGD1CX": [
     {
       "type": 0,
       "value": "Dozwolone są cztery (4) wyjścia walidatorów na epokę plus jedno (1) kolejne na każdych 65 536 aktywnych walidatorów powyżej 327 680. Od lutego 2023 r. limit ten wynosi siedem (7) i zostanie zwiększony do ośmiu (8), jeśli/gdy liczba walidatorów osiągnie 524 288."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Aby umożliwić walidatorom łańcucha śledzącego automatyczne wypłaty sald na adres "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", możesz użyć narzędzia CLI wpłaty do stakingu ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") i wygenerować plik JSON komunikatu z podpisaną zmianą BLS do wykonania ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": "). Komunikat ten zawiera żądanie zmiany starych poświadczeń do wycofywania środków BLS na nowe poświadczenia w formacie adresu wykonania."
     }
   ],
   "jXer8/": [
@@ -6115,6 +6231,12 @@
     {
       "type": 0,
       "value": "Dokumentacja Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Nazwa sieci"
     }
   ],
   "kd/f4u": [
@@ -6343,6 +6465,12 @@
       "value": "Importowanie z dokumentacji Launchpada"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Miejsca przeznaczenia nazwy pliku"
+    }
+  ],
   "OCl7KQ": [
     {
       "type": 0,
@@ -6359,6 +6487,20 @@
     {
       "type": 0,
       "value": "Przesłano plik"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Podpisany komunikat możesz nadać, używając polecenia "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": " w wierszu polecenia:"
     }
   ],
   "mArJcj": [
@@ -6523,6 +6665,28 @@
     {
       "type": 0,
       "value": "Gdy poczujesz się komfortowo, przejdziesz przez generowanie kluczy i deponowanie ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Aby włączyć ten komunikat do sieci głównej, musisz przesłać go do puli węzła śledzącego komunikatu ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " hard fork Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6925,6 +7089,16 @@
     {
       "type": 0,
       "value": "Zapisz pliki klucza i przygotuj plik walidatora"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Zamykanie walidatora: "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "p1ynue": [
@@ -7889,6 +8063,12 @@
     {
       "type": 0,
       "value": "Z drugiej strony możesz zostać ukarany za bycie offline i złośliwe zachowanie — na przykład zaświadczanie o nieprawidłowych lub sprzecznych blokach."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Twoje stare poświadczenia do wycofywania środków BLS"
     }
   ],
   "Sy5bAo": [

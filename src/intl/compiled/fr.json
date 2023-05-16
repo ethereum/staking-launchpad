@@ -209,6 +209,12 @@
       "value": "Transactions"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "Vous pouvez également utiliser l'outil de diffusion Beaconcha.in pour téléverser votre message à l'aide d'une interface utilisateur web :"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1085,6 +1091,16 @@
       "value": " à tout moment pendant que vous effectuez votre configuration pour obtenir une aide amicale !"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Sortie d'un validateur "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1811,6 +1827,12 @@
       "value": "Télécharger MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "L'index de démarrage de la clé dans EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1853,6 +1875,12 @@
       "value": "Comment déclencher les retraits, modification des identifiants"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Racine du validateur Genesis"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1878,7 +1906,7 @@
     },
     {
       "type": 0,
-      "value": ", qui reçoit des frais de transaction des propositions. Ceux-ci peuvent tous deux être réglés sur la même adresse, mais doivent chacun être réglés séparément."
+      "value": ", qui reçoit des frais de transaction des blocs proposés. Ceux-ci peuvent tous deux être configurés sur la même adresse, mais doivent chacun être configurés séparément."
     }
   ],
   "C3jBPI": [
@@ -2337,6 +2365,12 @@
       "value": ", sinon le dépôt ne sera pas valide."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "Vos indices de validateur"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2497,6 +2531,12 @@
       "value": "Faites du fichier que vous venez de télécharger un fichier exécutable."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Version du fork Genesis"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2617,6 +2657,12 @@
       "value": "Réseau"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Modification des identifiants de retrait"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2645,6 +2691,12 @@
     {
       "type": 0,
       "value": "Notez que dans le second scénario (improbable), vous risquez de perdre progressivement jusqu'à 50 % (16 ETH) de votre participation sur 21 jours. Après 21 jours, vous serez exclu du pool de validateurs. Cela garantit que la finalisation des blocs recommence à un moment donné."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "retrait total"
     }
   ],
   "IYvwsI": [
@@ -2809,6 +2861,12 @@
     {
       "type": 0,
       "value": "Quel est votre système d'exploitation actuel ?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Votre clé mnémonique"
     }
   ],
   "K3uH1C": [
@@ -3625,6 +3683,12 @@
       "value": "Votre réseau a changé."
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Tutoriel guidé sur la plateforme de lancement"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3671,6 +3735,12 @@
     {
       "type": 0,
       "value": "documentation pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Outil de diffusion Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4797,6 +4867,16 @@
     {
       "type": 0,
       "value": "Pourquoi dois-je engager des fonds ?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Sortie d'un minipool "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "ZTo0Fl": [
@@ -5949,10 +6029,46 @@
       "value": "Anciennement connu sous le nom d'Artemis, Teku est un client de consensus conçu pour répondre aux besoins institutionnels et aux exigences de sécurité. PegaSys est une branche de ConsenSys qui se consacre à la création de clients et d'outils prêts à l'emploi pour interagir avec la plateforme Ethereum principale."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "L'adresse d'exécution pour les retraits"
+    }
+  ],
   "RGD1CX": [
     {
       "type": 0,
       "value": "Quatre (4) sorties de validateur sont autorisées par époque, plus une (1) supplémentaire pour un total de 65 536 validateurs actifs sur 327 680. En février 2023, cette limite est de sept (7) et passera à huit (8) si/lorsque le nombre de validateurs atteindra 524 288."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Pour permettre à votre ou vos validateurs de la chaîne phare de retirer automatiquement des soldes sur votre "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", vous pouvez utiliser l'outil "
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": " CLI de dépôt de staking pour générer le fichier JSON du message ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") BLS-to-execution-change. Ce message inclut la demande de modification de vos anciens identifiants de retrait BLS vers les nouveaux identifiants de retrait au format de l'adresse d'exécution."
     }
   ],
   "jXer8/": [
@@ -6127,6 +6243,12 @@
     {
       "type": 0,
       "value": "Documentation Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Nom du réseau"
     }
   ],
   "kd/f4u": [
@@ -6359,6 +6481,12 @@
       "value": "Importation depuis la documentation de la plateforme de lancement"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Destination du nom du fichier"
+    }
+  ],
   "OCl7KQ": [
     {
       "type": 0,
@@ -6375,6 +6503,20 @@
     {
       "type": 0,
       "value": "Fichier chargé"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "Vous pouvez diffuser votre message signé depuis la ligne de commande en utilisant la commande "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": " :"
     }
   ],
   "mArJcj": [
@@ -6543,6 +6685,28 @@
     {
       "type": 0,
       "value": "Une fois que vous serez à l'aise, vous pourrez générer vos clés et déposer vos ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Pour que ce message soit inclus dans le réseau principal, vous devrez téléverser ce message dans le pool de messages ("
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") d'un nœud de balise "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " de la fourche majeure Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6945,6 +7109,16 @@
     {
       "type": 0,
       "value": "Enregistrer les fichiers de clés et préparer le fichier de validateur"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Sortie d'un validateur "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "p1ynue": [
@@ -7917,6 +8091,12 @@
     {
       "type": 0,
       "value": "D’autre part, vous pouvez être pénalisé pour avoir été hors ligne et vous être comporté de manière malveillante, par exemple en certifiant des blocs non valides ou contradictoires."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Vos anciens identifiants de retrait BLS"
     }
   ],
   "Sy5bAo": [

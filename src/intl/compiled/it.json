@@ -205,6 +205,12 @@
       "value": "Transazioni"
     }
   ],
+  "/jlnsn": [
+    {
+      "type": 0,
+      "value": "È anche possibile utilizzare lo strumento di trasmissione Beaconcha.in per caricare il messaggio utilizzando un'interfaccia utente web:"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1097,6 +1103,16 @@
       "value": " in qualsiasi momento durante l'installazione per avere un aiuto!"
     }
   ],
+  "5v36Is": [
+    {
+      "type": 0,
+      "value": "Uscita da un validatore "
+    },
+    {
+      "type": 1,
+      "value": "client"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1815,6 +1831,12 @@
       "value": "Scarica MetaMask"
     }
   ],
+  "BQXsbH": [
+    {
+      "type": 0,
+      "value": "L'indice di inizio della chiave in EIP-2334"
+    }
+  ],
   "BUFaRV": [
     {
       "type": 0,
@@ -1857,6 +1879,12 @@
       "value": "Come attivare i prelievi, modifica delle credenziali"
     }
   ],
+  "Bxe+HB": [
+    {
+      "type": 0,
+      "value": "Root validatore Genesi"
+    }
+  ],
   "C/gb74": [
     {
       "type": 0,
@@ -1882,7 +1910,7 @@
     },
     {
       "type": 0,
-      "value": ", che riceve le commissioni di transazione dalla proposta. Entrambe possono essere impostate sullo stesso indirizzo, ma ciascuna deve essere impostata separatamente."
+      "value": ", che riceve le commissioni di transazione dai blocchi proposti. Entrambe possono essere impostate sullo stesso indirizzo, ma ciascuna deve essere impostata separatamente."
     }
   ],
   "C3jBPI": [
@@ -2337,6 +2365,12 @@
       "value": ", altrimenti il deposito non sarà valido."
     }
   ],
+  "FZCdw+": [
+    {
+      "type": 0,
+      "value": "I tuoi indici validatore"
+    }
+  ],
   "FZa0R+": [
     {
       "type": 0,
@@ -2497,6 +2531,12 @@
       "value": "Rendi eseguibile il file che hai appena scaricato."
     }
   ],
+  "Ght9ln": [
+    {
+      "type": 0,
+      "value": "Versione della biforcazione Genesi"
+    }
+  ],
   "GlKjxX": [
     {
       "type": 0,
@@ -2613,6 +2653,12 @@
       "value": "Rete"
     }
   ],
+  "I3hwdP": [
+    {
+      "type": 0,
+      "value": "Modifica delle credenziali di prelievo"
+    }
+  ],
   "I5lWZA": [
     {
       "type": 0,
@@ -2641,6 +2687,12 @@
     {
       "type": 0,
       "value": "Tieni presente che, nel secondo scenario (improbabile), rischi di perdere progressivamente fino al 50% (16 ETH) della tua quota in 21 giorni. Dopo 21 giorni sarai espulso dal pool di validatori. Questo assicura che a un certo punto i blocchi inizino a finalizzarsi di nuovo."
+    }
+  ],
+  "IWlazt": [
+    {
+      "type": 0,
+      "value": "prelievo completo"
     }
   ],
   "IYvwsI": [
@@ -2805,6 +2857,12 @@
     {
       "type": 0,
       "value": "Qual è il tuo sistema operativo?"
+    }
+  ],
+  "Jvu600": [
+    {
+      "type": 0,
+      "value": "Il tuo mnemonico"
     }
   ],
   "K3uH1C": [
@@ -3621,6 +3679,12 @@
       "value": "La tua rete è cambiata"
     }
   ],
+  "PHZO0L": [
+    {
+      "type": 0,
+      "value": "Tutorial del Launchpad"
+    }
+  ],
   "PQgBnI": [
     {
       "type": 0,
@@ -3667,6 +3731,12 @@
     {
       "type": 0,
       "value": "documentazione pip"
+    }
+  ],
+  "Q/HeiY": [
+    {
+      "type": 0,
+      "value": "Strumento di trasmissione Beaconcha.in"
     }
   ],
   "Q1ZwPT": [
@@ -4789,6 +4859,20 @@
     {
       "type": 0,
       "value": "Perché devo mettere a disposizione fondi?"
+    }
+  ],
+  "ZQo9kO": [
+    {
+      "type": 0,
+      "value": "Uscita da un minipool "
+    },
+    {
+      "type": 1,
+      "value": "software"
+    },
+    {
+      "type": 0,
+      "value": " "
     }
   ],
   "ZTo0Fl": [
@@ -5937,10 +6021,46 @@
       "value": "Precedentemente noto come Artemis, Teku è un client di consenso creato per soddisfare i requisiti istituzionali e di sicurezza. PegaSys è una variante di ConsensSys, dedicata a creare client e strumenti pronti per un uso aziendale, per interagire con la piattaforma principale di Ethereum."
     }
   ],
+  "jBr8vs": [
+    {
+      "type": 0,
+      "value": "L'indirizzo di esecuzione per i prelievi"
+    }
+  ],
   "RGD1CX": [
     {
       "type": 0,
       "value": "Sono consentite quattro (4) uscite dei validatori per ogni epoca, più un'altra (1) ogni 65.536 validatori attivi totali su 327.680. A partire da febbraio 2023, questo limite è di sette (7) e arriverà a otto (8) se/quando il numero di validatori arriva a 524.288."
+    }
+  ],
+  "rW219B": [
+    {
+      "type": 0,
+      "value": "Per consentire al tuo o ai tuoi validatori della beacon chain di prelevare automaticamente i saldi sul tuo "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", è possibile utilizzare lo strumento di deposito di staking CLI ("
+    },
+    {
+      "type": 1,
+      "value": "cli"
+    },
+    {
+      "type": 0,
+      "value": ") per generare il file JSON del messaggio firmato ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") di passaggio da BLS a esecuzione. Questo messaggio include la richiesta di modificare le vecchie credenziali di prelievo BLS in nuove credenziali di prelievo in formato indirizzo di esecuzione."
     }
   ],
   "jXer8/": [
@@ -6115,6 +6235,12 @@
     {
       "type": 0,
       "value": "Documentazione Teku"
+    }
+  ],
+  "ka+Ucy": [
+    {
+      "type": 0,
+      "value": "Nome della rete"
     }
   ],
   "kd/f4u": [
@@ -6351,6 +6477,12 @@
       "value": "Importazione dalla documentazione di Launchpad"
     }
   ],
+  "ljGIvm": [
+    {
+      "type": 0,
+      "value": "Nome file destinazione"
+    }
+  ],
   "OCl7KQ": [
     {
       "type": 0,
@@ -6367,6 +6499,20 @@
     {
       "type": 0,
       "value": "File caricato"
+    }
+  ],
+  "mAZHi2": [
+    {
+      "type": 0,
+      "value": "È possibile trasmettere il messaggio firmato dalla riga di comando utilizzando il comando "
+    },
+    {
+      "type": 1,
+      "value": "curl"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "mArJcj": [
@@ -6535,6 +6681,28 @@
     {
       "type": 0,
       "value": "Quando ti senti pronto, puoi passare alla generazione delle chiavi e al deposito dei tuoi ETH."
+    }
+  ],
+  "nf2aBN": [
+    {
+      "type": 0,
+      "value": "Per includere questo messaggio nella rete principale, dovrai caricare questo messaggio su un pool (di "
+    },
+    {
+      "type": 1,
+      "value": "signature"
+    },
+    {
+      "type": 0,
+      "value": ") di messaggi del nodo beacon "
+    },
+    {
+      "type": 1,
+      "value": "after"
+    },
+    {
+      "type": 0,
+      "value": " una diramazione permanente Capella/Shanghai."
     }
   ],
   "njAU72": [
@@ -6937,6 +7105,16 @@
     {
       "type": 0,
       "value": "Salva i file delle chiavi e tieni pronto il file del validatore"
+    }
+  ],
+  "qlwUud": [
+    {
+      "type": 0,
+      "value": "Uscita da un validatore "
+    },
+    {
+      "type": 1,
+      "value": "software"
     }
   ],
   "p1ynue": [
@@ -7901,6 +8079,12 @@
     {
       "type": 0,
       "value": "D'altra parte, si può essere ricevere una penalità per essere offline e aver tenuto un comportamento malevolo, ad esempio attestando blocchi non validi o contraddittori."
+    }
+  ],
+  "yzvSUC": [
+    {
+      "type": 0,
+      "value": "Le tue precedenti credenziali di prelievo BLS"
     }
   ],
   "Sy5bAo": [

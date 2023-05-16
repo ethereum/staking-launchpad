@@ -44,13 +44,10 @@ export const _AcknowledgementProgressTracker = ({
       defaultMessage: 'Uptime',
     }),
     [AcknowledgementIdsEnum.slashing]: formatMessage({
-      defaultMessage: 'Bad behaviour',
+      defaultMessage: 'Bad behavior',
     }),
     [AcknowledgementIdsEnum.keyManagement]: formatMessage({
       defaultMessage: 'Key management',
-    }),
-    [AcknowledgementIdsEnum.commitment]: formatMessage({
-      defaultMessage: 'Commitment',
     }),
     [AcknowledgementIdsEnum.earlyAdoptionRisks]: formatMessage({
       defaultMessage: 'Early adoption risks',

@@ -1809,12 +1809,6 @@
       "value": "url"
     }
   ],
-  "Ad8+R5": [
-    {
-      "type": 0,
-      "value": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
-    }
-  ],
   "Affixg": [
     {
       "type": 0,
@@ -2237,6 +2231,12 @@
       "value": "I've simulated power loss (server and internet) and automatic resumption."
     }
   ],
+  "ER2q1V": [
+    {
+      "type": 0,
+      "value": "The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as Danksharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%."
+    }
+  ],
   "ETJ2T5": [
     {
       "type": 0,
@@ -2291,12 +2291,6 @@
     {
       "type": 0,
       "value": "The key concept is the following:"
-    }
-  ],
-  "FFUr3c": [
-    {
-      "type": 0,
-      "value": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
     }
   ],
   "FM92S0": [
@@ -2839,6 +2833,12 @@
     {
       "type": 0,
       "value": "Resource usage can vary significantly between clients. Research the different clients if you're working with resource constraints."
+    }
+  ],
+  "Jrg1Me": [
+    {
+      "type": 0,
+      "value": "Danksharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
     }
   ],
   "Js4uuA": [
@@ -3713,6 +3713,12 @@
     {
       "type": 0,
       "value": "clipboard"
+    }
+  ],
+  "Q6N+C6": [
+    {
+      "type": 0,
+      "value": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of Danksharding will also increase storage, memory, and bandwidth requirements."
     }
   ],
   "Q8P0rZ": [
@@ -5147,12 +5153,6 @@
       "value": "Ethereum uses proof-of-stake to reach consensus."
     }
   ],
-  "cUvpWk": [
-    {
-      "type": 0,
-      "value": "More on data sharding"
-    }
-  ],
   "cav520": [
     {
       "type": 0,
@@ -5575,12 +5575,6 @@
     {
       "type": 0,
       "value": "Moreover, you can set your Validator Client (VC) and Beacon Node (BN) on separate machines and IPs so that even if your beacon node is vulnerable, your keystore is stored on a different machine."
-    }
-  ],
-  "g2k5M/": [
-    {
-      "type": 0,
-      "value": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds."
     }
   ],
   "g37XKP": [
@@ -6255,12 +6249,6 @@
       "value": "Get in touch"
     }
   ],
-  "krxu73": [
-    {
-      "type": 0,
-      "value": "The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as data sharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%."
-    }
-  ],
   "kuYpoI": [
     {
       "type": 0,
@@ -6805,6 +6793,12 @@
       "value": "Configure your consensus client"
     }
   ],
+  "oWBn+a": [
+    {
+      "type": 0,
+      "value": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of Danksharding. Do your own research before depositing funds."
+    }
+  ],
   "oWhj8Q": [
     {
       "type": 0,
@@ -6815,6 +6809,12 @@
     {
       "type": 0,
       "value": "Documentation on running Besu"
+    }
+  ],
+  "odjJFL": [
+    {
+      "type": 0,
+      "value": "More on Danksharding"
     }
   ],
   "ogbG7r": [

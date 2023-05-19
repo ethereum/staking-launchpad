@@ -123,7 +123,7 @@ export const Upgrades = (): JSX.Element => {
                 <FormattedMessage defaultMessage="The Merge" />
               </UpgradeTitle>
               <Text className="mt20">
-                <FormattedMessage defaultMessage="The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as data sharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%." />
+                <FormattedMessage defaultMessage="The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as Danksharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%." />
               </Text>
               <Text className="mt20">
                 <FormattedMessage defaultMessage="This marked the merging of the execution layer (existing Mainnet) with the new consensus layer (the Beacon Chain) to form the single Ethereum chain of today." />
@@ -138,13 +138,13 @@ export const Upgrades = (): JSX.Element => {
                 <FormattedMessage defaultMessage="Sharding" />
               </UpgradeTitle>
               <Text className="mt20">
-                <FormattedMessage defaultMessage="Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized." />
+                <FormattedMessage defaultMessage="Danksharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized." />
               </Text>
               <Link
                 className="mt20 mb40"
                 to="https://ethereum.org/en/roadmap/danksharding/"
               >
-                <FormattedMessage defaultMessage="More on data sharding" />
+                <FormattedMessage defaultMessage="More on Danksharding" />
               </Link>
             </ScrollAnimation>
           </div>

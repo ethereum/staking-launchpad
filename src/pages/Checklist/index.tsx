@@ -493,7 +493,7 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="Recommendation disclaimer" />
           </Heading>
           <Text className="mt20">
-            <FormattedMessage defaultMessage="Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds." />
+            <FormattedMessage defaultMessage="Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of Danksharding. Do your own research before depositing funds." />
           </Text>
         </Alert>
         <section>
@@ -552,7 +552,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
+                  defaultMessage="Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of Danksharding will also increase storage, memory, and bandwidth requirements."
                   values={{
                     date: (
                       <FormattedDate
@@ -1159,7 +1159,7 @@ export const Checklist = () => {
                 </Text>
                 <Text className="checkbox-label mb10">
                   <FormattedMessage
-                    defaultMessage="If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials (requires Shanghai/Capella upgrade)."
+                    defaultMessage="If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials."
                     values={{ btec: <Code>BLSToExecutionChange</Code> }}
                   />
                 </Text>

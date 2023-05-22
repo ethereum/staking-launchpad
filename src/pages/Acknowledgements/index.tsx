@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
 import _every from 'lodash/every';
 import _pickBy from 'lodash/pickBy';
 import _values from 'lodash/values';
-import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import {
   AcknowledgementIdsEnum,
   AcknowledgementStateInterface,
   StoreState,
 } from '../../store/reducers';
-import { pageContent, PageContentInterface } from './pageContent';
-import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
-import { AcknowledgementSection } from './AcknowledgementSection';
 import {
   DispatchWorkflowUpdateType,
   WorkflowStep,
@@ -23,8 +20,11 @@ import {
   DispatchAcknowledgementStateUpdateType,
   updateAcknowledgementState,
 } from '../../store/actions/acknowledgementActions';
+import { pageContent, PageContentInterface } from './pageContent';
+import { AcknowledgementProgressTracker } from './AcknowledgementProgressTracker';
+import { AcknowledgementSection } from './AcknowledgementSection';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Paper } from '../../components/Paper';
-import { FormattedMessage, useIntl } from 'react-intl';
 
 interface OwnProps {}
 interface StateProps {

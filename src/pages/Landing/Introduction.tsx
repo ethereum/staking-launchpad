@@ -80,7 +80,7 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20 mb40"
-              to="https://ethereum.org/en/upgrades/vision/"
+              to="https://ethereum.org/en/roadmap/vision/"
             >
               <FormattedMessage defaultMessage="More on the Ethereum vision" />
             </Link>
@@ -92,13 +92,13 @@ export const Introduction = (): JSX.Element => {
             </Text>
             <Link
               className="mt20"
-              to="https://ethereum.org/en/upgrades/beacon-chain/"
+              to="https://ethereum.org/en/roadmap/beacon-chain/"
             >
               <FormattedMessage defaultMessage="More on the Beacon Chain" />
             </Link>
             <Link
               className="mt20 mb40"
-              to="https://ethereum.org/en/upgrades/merge/"
+              to="https://ethereum.org/en/roadmap/merge/"
             >
               <FormattedMessage defaultMessage="More on the Merge" />
             </Link>

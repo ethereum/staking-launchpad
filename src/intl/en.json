@@ -6,9 +6,6 @@
   "+EZ9E/": {
     "message": "Interactive mode"
   },
-  "+Gj8F4": {
-    "message": "You can prepare for this by providing a withdrawal address when generating your keys and deposit data."
-  },
   "+L0IkF": {
     "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -53,9 +50,6 @@
   },
   "/OAba6": {
     "message": "Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis."
-  },
-  "/QPc9s": {
-    "message": "You can signal your intent to stop validating by signing a voluntary exit message with your validator."
   },
   "/SbhtD": {
     "message": "You can also use {homebrew} to install pip3. For the most-up-to-date instructions on installing pip3, and for a direct download link, reference the {docs}"
@@ -124,9 +118,6 @@
   "0GWhvr": {
     "message": "Expected outputs"
   },
-  "0MIRQ5": {
-    "message": "Is the effective balance maxed out at 32?"
-  },
   "0PlVao": {
     "message": "More on slashing prevention"
   },
@@ -139,8 +130,11 @@
   "0U17DC": {
     "message": "withdrawal credentials"
   },
-  "0c06tl": {
-    "message": "Withdrawal Credentials"
+  "0WPDnu": {
+    "message": "You should certainly top up if your balance is close to {EJECTION_PRICE} ETH. This is to ensure you don’t get kicked out of the validator set (which automatically happens if your balance falls below {EJECTION_PRICE} ETH)."
+  },
+  "0XRY0E": {
+    "message": "If your mnemonic is stolen/compromised, and you have not yet set a withdrawal address, you should attempt this {immediately} to prevent permanent lose of funds, before the attacker irreversibly designates their own withdrawal address for your validator."
   },
   "0i4cCJ": {
     "message": "Confirm deposits ({depositKeys})"
@@ -151,14 +145,8 @@
   "0lHkrT": {
     "message": "Second, install the dependency packages:"
   },
-  "0mc/JV": {
-    "message": "Validating is a commitment"
-  },
   "0oNdmk": {
     "message": "Validators FAQ"
-  },
-  "0sMzHb": {
-    "message": "As noted above, this step is completed by signing a message known as {message}. These are accepted into blocks as of the first slot after the Shanghai/Capella upgrade."
   },
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
@@ -189,6 +177,9 @@
   },
   "1G0loj": {
     "message": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
+  },
+  "1ONfru": {
+    "message": "To include this message on Mainnet, you will need to upload this message to a beacon node’s message “Signed BLS To Execution Change” pool."
   },
   "1P6GMj": {
     "message": "Monitoring"
@@ -226,6 +217,9 @@
   "1pUw7Y": {
     "message": "Documentation on running Nethermind"
   },
+  "2/VDay": {
+    "message": "Max validators per withdrawals sweep: 16,384 (2{exp})"
+  },
   "21EI3f": {
     "message": "Lodestar validator key management documentation"
   },
@@ -233,12 +227,12 @@
     "description": "{JSON} is filetype extension",
     "message": "This isn't a valid {JSON} file"
   },
-  "25IJMT": {
-    "message": "If a withdrawal address has not been set, and you have lost access to the mnemonic seed phrase, your funds will remain locked in the validator account indefinitely."
-  },
   "25suT4": {
     "description": "The {semicolon} and {colon} variables refer to the keyboard characters ';' and ':'.",
     "message": "The path separator is operating system dependent, and should be {semicolon} in Windows rather than {colon}."
+  },
+  "28aik1": {
+    "message": "Rate-limits set on withdrawal queue"
   },
   "2A6Wjz": {
     "message": "By providing this flag, your withdrawal credentials will contain the {type1} prefix and your withdrawal address, signaling that your account is ready for withdrawals."
@@ -264,9 +258,6 @@
   "2XWJdH": {
     "message": "If so, move to next question"
   },
-  "2a1GTh": {
-    "message": "you can always recalculate your signing key from your withdrawal key"
-  },
   "2c8F5x": {
     "message": "Fee recipient docs:"
   },
@@ -288,8 +279,8 @@
   "32rBNK": {
     "message": "Terms of Service"
   },
-  "36j2ls": {
-    "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2'). You can use a third-party service like Infura, but we recommend running your own client to keep the network as decentralized as possible."
+  "36P4ra": {
+    "message": "Over time, your balance will decrease as you are penalized for not participating in the consensus process. When your balance reaches {EJECTION_PRICE} ETH, you will be automatically exited from the validator set."
   },
   "38Fedn": {
     "message": "More on ChainSafe"
@@ -343,6 +334,9 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If you see error message {code1}, you may need to install {code2} or {code3} package."
   },
+  "3zWAPC": {
+    "message": "you can always recalculate your signing key from your mnemonic"
+  },
   "4+3cIr": {
     "message": "You've successfully set up a testnet validator! We recommend you complete the checklist before validating on {mainnet}"
   },
@@ -376,9 +370,6 @@
   "4uFys5": {
     "message": "Accounts that have been slashed, or have insufficient balance, will be forced to exit according to the network rules. This is automatic and cannot be stopped once initiated."
   },
-  "54J/qs": {
-    "message": "What happens if I use BLS withdrawal and I lose my withdrawal key?"
-  },
   "57MWKW": {
     "message": "Withdrawals as an operation, not a new transaction type"
   },
@@ -390,9 +381,6 @@
   },
   "5A6amM": {
     "message": "It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
-  },
-  "5CBhpq": {
-    "message": "Commitment"
   },
   "5H/J84": {
     "message": "How do you want to generate your keys?"
@@ -409,8 +397,8 @@
   "5Vrs8S": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
   },
-  "5hW6Gf": {
-    "message": "Consensus Layer Withdrawal Protection"
+  "5q9Lgv": {
+    "message": "Download {master} branch:"
   },
   "5t8oYl": {
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
@@ -439,6 +427,9 @@
   },
   "6nh4de": {
     "message": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
+  },
+  "6vdHjj": {
+    "message": "{withdrawalCredentials} is a 32-byte field associated with every validator, initially set during deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawal credentials: BLS credentials (Type 0, or {type0}) and execution (Ethereum address) credentials (Type 1, or {type1})."
   },
   "7+Domh": {
     "message": "Notes"
@@ -505,6 +496,9 @@
   "8BXroN": {
     "message": "Lodestar documentation"
   },
+  "8FjJDx": {
+    "message": "Bad behavior"
+  },
   "8FmuYF": {
     "message": "Install pip3"
   },
@@ -529,9 +523,6 @@
   },
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
-  },
-  "8fXTDo": {
-    "message": "Fortunately, this is only a one-time message that needs to be processed, and validators who provided withdrawal credentials at time of deposit are exempt from this step. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
   },
   "8k1RjX": {
     "message": "{NETWORK_NAME} testnet"
@@ -560,8 +551,8 @@
   "9+Ddtu": {
     "message": "Next"
   },
-  "9/4mZe": {
-    "message": "Validating involves two keys for security reasons. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being hacked, it’s not a good idea to use the same key for withdrawals."
+  "9/yem6": {
+    "message": "If you try to cheat the system, or act contrary to the specification, you will be liable to incur a penalty known as slashing*. Running your validator keys simultaneously on two or more machines will result in slashing."
   },
   "94dQms": {
     "message": "For security, we recommend you disconnect from the internet to complete this step."
@@ -572,11 +563,17 @@
   "9JktQX": {
     "message": "There is no easy answer to this question as there are many factors that go into this calculation."
   },
+  "9MIPCp": {
+    "message": "If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so {boldWarning}—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
+  },
   "9RBO+X": {
     "message": "Review validator roles and responsibilities"
   },
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
+  },
+  "9h8yTf": {
+    "message": "A “withdrawable epoch” will also be calculated, which is 256 epochs after the calculated exit epoch (~27.3 hours later). When this epoch is reached, your validator will be eligible for a {fullWithdrawal} of all remaining funds."
   },
   "9k7tO9": {
     "message": "Wrong network"
@@ -586,6 +583,9 @@
   },
   "9mLaI9": {
     "message": "deposit"
+  },
+  "9oWUO0": {
+    "message": "This will start the process of ending your commitments on the network. An “exit epoch” will be calculated based on how many other validators are exiting at the same time. When this epoch is reached, your validator account will no longer be eligible for rewards, and will no longer be at risk of losing funds from being offline."
   },
   "9qMyhY": {
     "message": "Read options and subcommands documentation"
@@ -649,9 +649,6 @@
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
     "message": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: {url}"
   },
-  "Ad8+R5": {
-    "message": "Sharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
-  },
   "Affixg": {
     "message": "The deposit"
   },
@@ -669,15 +666,6 @@
   },
   "Aw1mMs": {
     "message": "Top up validator"
-  },
-  "AyoE3t": {
-    "message": "Withdrawing from a validator is not yet possible. This functionality is planned to be included in the Shanghai/Capella upgrade planned for Q1/Q2 2023."
-  },
-  "B0BAqm": {
-    "message": "An {excessBalanceWithdrawal} is processed when an active validator has a maxed out effective balance of 32, and has a total balance over 32. A single validator cannot get rewards on excess balance over 32 ETH, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
-  },
-  "B2EKj+": {
-    "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} to become a validator, and that the transfer of {TICKER_NAME} to the Beacon Chain is one-way, and non-reversible."
   },
   "BCsPjJ": {
     "message": "Start deposit process"
@@ -752,9 +740,6 @@
   "CT+gEC": {
     "message": "Upload to Beacon Node {btec} pool"
   },
-  "CVDzDs": {
-    "message": "You should certainly top up if your balance is close to 16 ETH. This is to ensure you don’t get kicked out of the validator set (which automatically happens if your balance falls below 16 ETH)."
-  },
   "CWKE9c": {
     "message": "Your wallet is on the wrong network. Switch to {executionLayerName}"
   },
@@ -777,18 +762,12 @@
   "D0Rigq": {
     "message": "NO"
   },
-  "D19C0b": {
-    "message": "If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials (requires Shanghai/Capella upgrade)."
-  },
   "D33f/7": {
     "description": "APR refers to Annual Percentage Rate",
     "message": "Current APR"
   },
   "D4cQV/": {
     "message": "How much ETH do I need to stake to become a validator?"
-  },
-  "D5NvkC": {
-    "message": "Download {btec} branch:"
   },
   "DCaq7N": {
     "message": "Your wallet is connected to the right network!"
@@ -798,9 +777,6 @@
   },
   "DKSrR+": {
     "message": "I understand that if I act contrary to the specification, I am liable to be slashed."
-  },
-  "DLWOxX": {
-    "message": "Similarly, there is also an {exitQueue}, which limits how quickly validators can {leave} the network. This is for security reasons. Given each validator is limited to a max effective balance of 32 ETH, this prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
   },
   "DNRQa7": {
     "message": "I have read and agree to the Launchpad terms of service."
@@ -830,9 +806,6 @@
     "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network",
     "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
   },
-  "Ds66AU": {
-    "message": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemomics, please do not proceed."
-  },
   "DsJ/Mk": {
     "message": "Don’t just trust the contract address listed on this website."
   },
@@ -849,9 +822,6 @@
   "E4rtgi": {
     "message": "Consensus clients:"
   },
-  "EFjTSf": {
-    "message": "Minor penalties are given for inadvertant actions (or inactions) that hinder consensus."
-  },
   "EIUapL": {
     "description": "{deposit} = 'deposit' styled as code",
     "message": "Use the terminal to move into the directory that contains the {deposit} executable"
@@ -861,6 +831,9 @@
   },
   "EPlepr": {
     "message": "I've simulated power loss (server and internet) and automatic resumption."
+  },
+  "ER2q1V": {
+    "message": "The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as Danksharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%."
   },
   "ETJ2T5": {
     "message": "If you have questions about deposit-cli, please visit the GitHub repository."
@@ -886,21 +859,18 @@
   "FEbVwB": {
     "message": "The key concept is the following:"
   },
-  "FFUr3c": {
-    "message": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of sharding will also increase storage, memory, and bandwidth requirements."
-  },
   "FM92S0": {
     "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
   },
   "FSRfSJ": {
     "message": "I understand that this transaction is not reversible."
   },
-  "FSp9ip": {
-    "message": "Ethereum address withdrawal: If you want to withdraw to your execution wallet address after the Shanghai/Capella upgrade, you can set {ethAddressWithdraw} when running deposit-cli. {boldWarning}"
-  },
   "FU7JYy": {
     "description": "{flag} is a terminal command styled as code.",
     "message": "Make sure you have set {flag} for {consensusLayerName}, otherwise the deposit will be invalid."
+  },
+  "FWtWw3": {
+    "message": "Note the “withdrawal” and “BLS To Execution Change” queues are independent and do not compete. Each are limited on a per-block basis."
   },
   "FZCdw+": {
     "message": "Your validator indices"
@@ -929,6 +899,9 @@
   "FmGmFH": {
     "message": "Your wallet should be set to {executionLayerName} to use this launchpad."
   },
+  "Fogk92": {
+    "message": "Max withdrawals per payload: 16 (2{exp})"
+  },
   "FqgDIV": {
     "message": "Terms of service"
   },
@@ -937,9 +910,6 @@
   },
   "G0ZD5H": {
     "message": "To make an account eligible for a full withdrawal, the validator account must first be exited. Validator accounts can be exited from staking in two main ways: voluntarily or forcefully."
-  },
-  "G0aacl": {
-    "message": "As a validator you are rewarded for proposing / attesting to blocks that are included in the chain."
   },
   "G5IMoZ": {
     "message": "Download master branch source code"
@@ -1011,6 +981,9 @@
   "Hczrvs": {
     "message": "Slashing has two purposes: (1) to make it prohibitively expensive to attack the network, and (2) to stop validators from being lazy by checking that they actually perform their duties. If you're slashed because you've acted in a provably destructive manner, a portion of your stake will be destroyed."
   },
+  "HemvTL": {
+    "message": "BLS withdrawal credentials ({type0}) can be updated to an execution address ({type1}) by broadcasting a BLS To Execution Change (BTEC) message, signed with your BLS withdrawal key. These messages are included in blocks at a max rate of 16 per block."
+  },
   "Hmxd5S": {
     "message": "Please make sure you select {NETWORK_NAME} when prompted for a network, otherwise the deposit will be invalid."
   },
@@ -1044,9 +1017,6 @@
   "IJw06E": {
     "message": "Sign transaction with your wallet"
   },
-  "IVyWYt": {
-    "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% (16 ETH) of your stake over 21 days. After 21 days you are ejected out of the validator pool. This ensures that blocks start finalizing again at some point."
-  },
   "IWlazt": {
     "message": "full withdrawal"
   },
@@ -1055,6 +1025,9 @@
   },
   "IZFEUg": {
     "message": "Ready"
+  },
+  "Icu389": {
+    "message": "Understanding validator effective balance"
   },
   "IdUtHu": {
     "message": "Install virtualenv"
@@ -1071,9 +1044,6 @@
   },
   "InUvmv": {
     "message": "Beacon chain push withdrawals as operations"
-  },
-  "IugT5/": {
-    "message": "cannot transfer"
   },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
@@ -1100,14 +1070,14 @@
   "Ja5vXW": {
     "message": "Further reading"
   },
-  "JbVlOE": {
-    "message": "Dig deeper into Ethereum upgrades."
-  },
   "JhUYU3": {
     "message": "Download CLI app"
   },
   "JqVeL+": {
     "message": "Resource usage can vary significantly between clients. Research the different clients if you're working with resource constraints."
+  },
+  "Jrg1Me": {
+    "message": "Danksharding will change the requirement that full nodes carry the entire history of the chain, and instead will distribute this load amongst the network while still ensuring data availability. This will significantly expand the capacity of layer 1 Ethereum while maintaining the ability to operate a full node on consumer hardware, keeping the network decentralized."
   },
   "Js4uuA": {
     "message": "effective balance"
@@ -1130,9 +1100,6 @@
   "K6+jQ3": {
     "message": "Geth installation documentation"
   },
-  "K6canA": {
-    "message": "Withdrawal features are planned to be included in the upcoming Shanghai/Capella upgrade. After this functionality is added, your balance can then be withdrawn—with your withdrawal key—after a minimum delay of around a day."
-  },
   "K7xnjy": {
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validator clients at once"
@@ -1150,6 +1117,9 @@
   "KEfTSF": {
     "description": "{latestReleased} = 'latest stable software release', being styled in bold",
     "message": "I've installed the {latestRelease} of my consensus client."
+  },
+  "KJ7R/V": {
+    "message": "The Ethereum consensus layer specification"
   },
   "KN7zKn": {
     "message": "Error"
@@ -1196,9 +1166,6 @@
   "LHPZ+C": {
     "message": "Lighthouse is a consensus client implementation, written in Rust with a heavy focus on speed and security."
   },
-  "LOtXFT": {
-    "message": "BLS withdrawal: By default, the deposit-cli would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format."
-  },
   "LVy+cS": {
     "message": "Check with client documentation to ensure the hardware you want to use is sufficient and supported."
   },
@@ -1240,8 +1207,8 @@
   "M3GwXS": {
     "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
   },
-  "M6nefR": {
-    "message": "Rate-limits set on withdrawal queue (could change through testing before Shanghai)"
+  "MAVs3a": {
+    "message": "*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
   },
   "MCmGYv": {
     "message": "Copied ✓"
@@ -1257,9 +1224,6 @@
   },
   "MX00UO": {
     "message": "What happens if my withdrawal key is stolen?"
-  },
-  "MZEcKL": {
-    "message": "Bad validator behaviour"
   },
   "MZvoWG": {
     "message": "The upgrades"
@@ -1291,6 +1255,9 @@
   "Mne5iM": {
     "message": "If so, stop. {fullWithdrawal} processed for any remaining balance"
   },
+  "Mor0Ih": {
+    "message": "Bad validator behavior"
+  },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
   },
@@ -1314,9 +1281,6 @@
   },
   "NSK+Li": {
     "message": "I've secured the root account."
-  },
-  "NSl1Q5": {
-    "message": "{stakingDepositCli}: This is done by using the {eth1WithdrawalAddress} flag when generating your keys with the Staking Deposit CLI."
   },
   "NTWnJC": {
     "message": "Download command line app"
@@ -1366,6 +1330,9 @@
   "OBmVqN": {
     "message": "Hyperledger Besu is an open-source Ethereum client developed under the Apache 2.0 license and written in Java."
   },
+  "OCl7KQ": {
+    "message": "Like all Ethereum transactions, deposits are non-reversible, but the ability to withdrawal your funds via a separate process after depositing remains under your control."
+  },
   "OIvXIO": {
     "message": "Complete remaining {remainingTxCount} deposits"
   },
@@ -1393,14 +1360,14 @@
   "Ou/o3H": {
     "message": "Everything you should understand before becoming a validator."
   },
+  "Ox4e26": {
+    "message": "Similarly, there is also an {exitQueue}, which limits how quickly validators can {leave} the network. This is for security reasons. Given each validator is limited to a max effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, this prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
+  },
   "P+nziG": {
     "message": "As a validator, you'll need to have funds at stake so you can be penalized for behaving dishonestly."
   },
   "P/Oh91": {
     "message": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
-  },
-  "P0kiYS": {
-    "message": "The Beacon Chain upgrade brings proof-of-stake consensus to Ethereum."
   },
   "P1QerV": {
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
@@ -1449,6 +1416,9 @@
   "Q1ZwPT": {
     "message": "clipboard"
   },
+  "Q6N+C6": {
+    "message": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of Danksharding will also increase storage, memory, and bandwidth requirements."
+  },
   "Q8P0rZ": {
     "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
   },
@@ -1473,9 +1443,6 @@
   "QeE86m": {
     "message": "Check this document to learn how to run a node on {networkName}"
   },
-  "QgOvR0": {
-    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the current Ethereum chain."
-  },
   "QlsDcr": {
     "message": "Action"
   },
@@ -1487,9 +1454,6 @@
   },
   "Qs/oj3": {
     "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
-  },
-  "R6z/mc": {
-    "message": "{stakingDepositCli}: if you used the {eth1WithdrawalAddress} flag when generating your keys, you're good to go"
   },
   "R7v7y3": {
     "message": "Set withdrawal address"
@@ -1503,6 +1467,9 @@
   "RE2MaJ": {
     "message": "Consensus clients"
   },
+  "RGD1CX": {
+    "message": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of April 2023 this limit is eight (8), and will increase to nine (9) if/when the active validator count reaches 655,360."
+  },
   "ROHpFF": {
     "message": "1. Learn about your responsibilities"
   },
@@ -1514,6 +1481,9 @@
   },
   "RWqrlk": {
     "message": "congratulations"
+  },
+  "RY4SP0": {
+    "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} onto the Beacon Chain to become a validator. Withdrawing deposited {TICKER_NAME} from the Beacon Chain is accomplished via a separate process."
   },
   "RdHdwG": {
     "message": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
@@ -1579,6 +1549,12 @@
   "Su0UFr": {
     "message": "Exit queue summary"
   },
+  "Sv30z9": {
+    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file {depositData} which is submitted with your 32 ETH deposit transaction."
+  },
+  "Sy5bAo": {
+    "message": "With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources as of The Merge. Using a third-party provider will result in your validator being offline. When Danksharding is implemented, validators may also be at risk of slashing under the {pocGame}."
+  },
   "Szwbym": {
     "message": "wrench"
   },
@@ -1587,6 +1563,9 @@
   },
   "THIzw6": {
     "message": "Validators and Ethereum"
+  },
+  "TKCr16": {
+    "message": "This full withdraw of funds requires that a withdrawal address be set, and will be automatically transferred in the next validator sweep."
   },
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
@@ -1616,9 +1595,6 @@
     "description": "{etherscan} is a share link to this transaction on etherscan.io, labeled 'Etherscan'",
     "message": "Check {etherscan} for more details"
   },
-  "UUDnWR": {
-    "message": "Shanghai Planning (GitHub issue)"
-  },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
   },
@@ -1630,6 +1606,9 @@
   },
   "UZkvC5": {
     "message": "Up until this epoch (while \"in the queue\") your validator is expected to be online and is held to the same slashing rules as always."
+  },
+  "UdDXU6": {
+    "message": "immediately"
   },
   "Utck3E": {
     "message": "Language support"
@@ -1674,14 +1653,14 @@
   "VUuZsb": {
     "message": "martial arts uniform"
   },
+  "Vbv7Uw": {
+    "message": "We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address. This is recommended for most users."
+  },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
   },
   "Vm6cRY": {
     "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
-  },
-  "VwWGD9": {
-    "message": "These messages are limited to 16 per block ({message}), so if more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. This means that immediately following the Shanghai/Capella upgrade, users submitting this message may see delays up to an estimated 2-3 days before this request is processed."
   },
   "VzGJkB": {
     "message": "Staker checklist"
@@ -1713,9 +1692,6 @@
   "WTPUDZ": {
     "message": "These steps are optional but are recommended to optimize your node."
   },
-  "WbCafE": {
-    "message": "If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so store your mnemonic safely—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
-  },
   "WdDGn6": {
     "message": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
   },
@@ -1734,6 +1710,9 @@
   "X3NiFM": {
     "message": "proof-of-custody game"
   },
+  "X4qc7f": {
+    "message": "timestamp"
+  },
   "X5KFEh": {
     "message": "That is not a valid deposit_data JSON file."
   },
@@ -1745,6 +1724,9 @@
   },
   "XBEBYR": {
     "message": "More on installing pip"
+  },
+  "XRUCUL": {
+    "message": "Once an execution address has been provided by signing the BLS To Execution Change message, the withdrawal keys derived from your validator mnemonic are no longer utilized. Therefore, providing an execution address that you control as early as possible is the recommended option for most users, and is the default path for those who join via this site's onboarding process. This protects you against permanent loss of all funds in the event you are unable to recover your mnemonic and withdrawal keys."
   },
   "XRxD8r": {
     "description": "Link to documentation about execution client Besu, specifically for Goerli testnet",
@@ -1763,9 +1745,6 @@
   },
   "XcItS7": {
     "message": "~25 minutes"
-  },
-  "XgOPc8": {
-    "message": "Note, there are no current plans to enable transfers of ETH between validators."
   },
   "XmddSV": {
     "message": "Build from source"
@@ -1826,9 +1805,6 @@
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
   },
-  "YkznEp": {
-    "message": "If you lose your withdrawal key, there is no way to access to the funds held by your validator."
-  },
   "Yo9B64": {
     "message": "execution layer (Eth1) address"
   },
@@ -1848,9 +1824,6 @@
   "Z1aGQe": {
     "description": "{greater than 50%} shows 'greater than 50%' and is a link to validator incentives article",
     "message": "Overall, we'd expect your validator to be net profitable as long as your uptime is {greaterThan50Percent}."
-  },
-  "ZDI2t3": {
-    "message": "Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
   },
   "ZK6NmY": {
     "message": "Note: the RTC (Real-Time Clock) time may be set to your local timezone instead of UTC, especially in a VM which has its clock configured on Windows."
@@ -1877,11 +1850,11 @@
   "ZtpRuA": {
     "message": "Install and set virtualenv:"
   },
+  "ZwqwuN": {
+    "message": "Rewards are given for actions that help the network reach consensus"
+  },
   "ZzTcj5": {
     "message": "Download python3 and follow the installation instructions."
-  },
-  "a+Xw/D": {
-    "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining 32 ETH stays locked and staked."
   },
   "a+xjjV": {
     "message": "Become a validator with Prysm"
@@ -1889,17 +1862,11 @@
   "a/140i": {
     "message": "Exit queue and activation queue"
   },
-  "a9ats7": {
-    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your {depositData} file which is submitted with your 32 ETH deposit transaction."
-  },
-  "aDomwX": {
-    "message": "If you try to cheat the system, or act contrary to the specification, you will be liable to incur a penalty, known as slashing. Running your validator keys simultaneously on two or more machines will result in slashing."
+  "a9e29d": {
+    "message": "store your mnemonic safely"
   },
   "aEBE6s": {
     "message": "2. Prep nodes"
-  },
-  "aEpxVo": {
-    "message": "Active accounts with an effective balance or total balance less than 32 will be skipped"
   },
   "aR50Oc": {
     "message": "To exit staking and fully withdrawal your entire remaining balance, you must do two things:"
@@ -1922,14 +1889,11 @@
   "b3J7Pw": {
     "message": "No. There is no advantage to having more than {pricePerValidator} ETH staked."
   },
-  "b5LQY1": {
-    "message": "Note the “withdrawal” and “BLS-to-execution” queues are independent and do not compete. Each are limited on a per-block basis."
-  },
   "b8APBK": {
     "message": "More on client diversity"
   },
-  "bMMVVN": {
-    "message": "Currently there’s no way for you to re-activate your validator, and you won’t be able to transfer or withdraw your funds until withdrawals are enabled with the Shanghai/Capella upgrade. This means your funds will remain inaccessible at least until then."
+  "bFiejS": {
+    "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% ({EJECTION_PRICE} ETH) of your stake over 21 days. After 21 days you are ejected out of the validator set. This ensures that blocks start finalizing again at some point."
   },
   "bNFkSo": {
     "message": "Now follow the instructions presented to you in the terminal window to generate your keys."
@@ -1946,8 +1910,8 @@
   "bVtlF7": {
     "message": "Be sure to account for enough space on your drive until you run maintenance on your node."
   },
-  "bat2FM": {
-    "message": "after"
+  "bagKCF": {
+    "message": "If you've already provided an Ethereum withdrawal address for your withdrawal credentials, your entire remaining balance will be transferred to this address upon exit. If not, your mnemonic will still be needed to generate your withdrawal key to set your withdrawal address."
   },
   "bbr+aD": {
     "message": "The YAML files can have different syntaxes."
@@ -1976,11 +1940,17 @@
   "by+LIm": {
     "message": "What is a validator client?"
   },
+  "cD0jre": {
+    "message": "Do not deposit more than {PRICE_PER_VALIDATOR} ETH for a single validator—it will not add to your rewards."
+  },
   "cE71F9": {
     "message": "[Example: {fork}]"
   },
   "cHUoV9": {
     "message": "The Geth documentation explains how to download and install the client."
+  },
+  "cJ9MRI": {
+    "message": "If more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
   },
   "cJX99/": {
     "message": "Check your favorite Beacon Chain block explorer:"
@@ -1991,8 +1961,8 @@
   "cRzxes": {
     "message": "Current APR"
   },
-  "cUvpWk": {
-    "message": "More on data sharding"
+  "cU/ZP6": {
+    "message": "Ethereum uses proof-of-stake to reach consensus."
   },
   "cav520": {
     "message": "Download from GitHub"
@@ -2030,12 +2000,6 @@
   "d5KEM8": {
     "message": "You must sign a transaction for every deposit you want to make."
   },
-  "d75Ebj": {
-    "message": "{withdrawalCredentials} is a 32-byte field in the deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawals: BLS withdrawal and Ethereum address withdrawal."
-  },
-  "dH5+MX": {
-    "message": "Bad behaviour"
-  },
   "dIgBOz": {
     "message": "Deposit"
   },
@@ -2051,14 +2015,23 @@
   "dTOtPO": {
     "message": "Top Up"
   },
+  "dVJcJt": {
+    "message": "{stakingDepositCli}: This is done by using the “eth1 withdrawal address” ({eth1WithdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
+  },
   "deLJOg": {
     "message": "Upload a valid json file."
   },
   "dprf8W": {
     "message": "Where can I find troubleshooting support?"
   },
+  "dtVSdl": {
+    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
+  },
   "dvr19k": {
     "message": "Setup"
+  },
+  "dwahMV": {
+    "message": "You may choose to provide a withdrawal address with your initial deposit to automatically enable reward payments and also the ability to fully exit your funds at anytime (recommended). This address should be to a regular Ethereum address and will be the only address funds can be sent to from your new validator accounts, and cannot be changed once chosen."
   },
   "dzdAcD": {
     "message": "Default Port"
@@ -2073,12 +2046,6 @@
     "description": "{code} values are terminal outputs and commands.",
     "message": "If {code1} is not {code2}, run: {code3}"
   },
-  "e4mdEQ": {
-    "message": "Make sure you have control over this address as this cannot be changed."
-  },
-  "eD1NDX": {
-    "message": "Withdrawing your deposit will not be possible until the Shanghai/Capella upgrade planned for Q1/Q2 2023."
-  },
   "eKEL/g": {
     "message": "Pending"
   },
@@ -2088,9 +2055,6 @@
   "eOpZjd": {
     "message": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
   },
-  "eP2Czm": {
-    "message": "I understand that I {cannotWithdraw} my stake until the Shanghai/Capella upgrade, and I {cannotTransfer} {TICKER_NAME} between validators. I understand that if I exit, I will not be able to rejoin until that time. Staking is a commitment."
-  },
   "eTenzU": {
     "message": "activation queue"
   },
@@ -2099,12 +2063,6 @@
   },
   "eaU/aL": {
     "message": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
-  },
-  "eatd1u": {
-    "message": "We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address."
-  },
-  "elCkOU": {
-    "message": "More on the merge"
   },
   "eq0/34": {
     "message": "The Merge"
@@ -2117,9 +2075,6 @@
   },
   "eyK2E3": {
     "message": "Complete checklist"
-  },
-  "ezCT4A": {
-    "message": "Shanghai Core EIP Consideration"
   },
   "f/N7FO": {
     "message": "What happens if I lose my signing key?"
@@ -2142,20 +2097,17 @@
   "fSi2R/": {
     "message": "Information for validator operators regarding staking withdrawals."
   },
-  "fU1Pp5": {
-    "message": "You may choose to provide a withdrawal address with your initial deposit to automatically enable reward payments and also the ability to fully exit your funds anytime after the Shanghai/Capella upgrade. This address should be to a regular Ethereum address and will be the only address funds can be sent to from your new validator accounts."
-  },
   "fZwn+P": {
     "message": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
-  },
-  "fa8Quz": {
-    "message": "However, bear in mind that until the Shanghai/Capella upgrade planned for Q1/Q2 2023, once you’ve exited, there’s no going back."
   },
   "fbiteI": {
     "message": "only stored on one validator machine"
   },
   "fnMHGO": {
     "message": "Waiting for wallet confirmation"
+  },
+  "fpe4Gx": {
+    "message": "Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"
   },
   "frGVRP": {
     "message": "impact of effective balance"
@@ -2168,12 +2120,6 @@
   },
   "g/DxI7": {
     "message": "Moreover, you can set your Validator Client (VC) and Beacon Node (BN) on separate machines and IPs so that even if your beacon node is vulnerable, your keystore is stored on a different machine."
-  },
-  "g0zIUd": {
-    "message": "cannot withdraw"
-  },
-  "g2k5M/": {
-    "message": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of sharding. Do your own research before depositing funds."
   },
   "g37XKP": {
     "message": "More on virtualenv"
@@ -2233,14 +2179,14 @@
   "h8MTUo": {
     "message": "Your stake"
   },
+  "hAwuqj": {
+    "message": "Validating involves two keys for security reasons. Your signing key must be available at all times. As such, it will need to be held online. Since anything online is vulnerable to being exposed, it’s not a good idea to use the same key for withdrawals."
+  },
   "hBIbQ+": {
     "message": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing."
   },
   "hCwX6+": {
     "message": "BLS To Execution Change (BTEC) queue"
-  },
-  "hFzE1M": {
-    "message": "Rewards are given for actions that help the network reach consensus."
   },
   "hG0uP4": {
     "message": "Desktop only"
@@ -2258,14 +2204,14 @@
   "hfXlpq": {
     "message": "Hungarian"
   },
-  "hjrLbR": {
-    "message": "For this, we need active participants - known as validators - to propose, verify, and vouch for the validity of blocks. In exchange, honest validators receive financial rewards."
-  },
   "hkg3fb": {
     "message": "More on effective balance"
   },
   "hlxt3T": {
     "message": "Limiting the maximum stake to {pricePerValidator} ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
+  },
+  "hrJ1oM": {
+    "message": "You can signal your intent to stop validating by signing a voluntary exit message with your validator at any time."
   },
   "huEFUF": {
     "description": "Singular form, for only one deposit",
@@ -2276,6 +2222,9 @@
   },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
+  },
+  "hzsgQ5": {
+    "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining {PRICE_PER_VALIDATOR} {TICKER_NAME} stays locked and staked."
   },
   "iCpuph": {
     "message": "Clients"
@@ -2320,8 +2269,8 @@
   "iqJ3LM": {
     "message": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
   },
-  "irh2nI": {
-    "message": "As such, it’s a good idea to create your keys from mnemonics which act as another backup. This is the default for validators who join via this site’s onboarding process."
+  "iqy/7c": {
+    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {executionAddress}, you can use the staking deposit CLI tool to generate the signed “BLS To Execution Change” ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
   },
   "isGKnz": {
     "message": "Documentation"
@@ -2338,8 +2287,8 @@
   "jBr8vs": {
     "message": "The execution address for withdrawals"
   },
-  "jGVfQG": {
-    "message": "Four (4) validator exits are allowed per epoch, plus one (1) more for every 65,536 total active validators over 327,680. As of February 2023 this limit is seven (7), and will increase to eight (8) if/when the validator count reaches 524,288."
+  "jVlgXS": {
+    "message": "Dig deeper into the Ethereum roadmap."
   },
   "jXer8/": {
     "message": "Prysm documentation"
@@ -2368,6 +2317,9 @@
   },
   "jrK21r": {
     "message": "You can find the binary files in {pr}"
+  },
+  "jrbRLT": {
+    "message": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemonics, please do not proceed."
   },
   "jse8rl": {
     "message": "How great does my uptime need to be for my validator to be net profitable?"
@@ -2423,9 +2375,6 @@
   "kd/f4u": {
     "message": "Key list"
   },
-  "km7b1A": {
-    "message": "Over time, your balance will decrease as you are punished for not participating in the consensus process. When your balance reaches 16 ETH, you will be automatically exited from the validator pool."
-  },
   "kn06Zz": {
     "message": "Monitoring docs:"
   },
@@ -2434,9 +2383,6 @@
   },
   "krEziQ": {
     "message": "Get in touch"
-  },
-  "krxu73": {
-    "message": "The Merge upgrade officially brought proof-of-stake to Ethereum on September 15, 2022, simultaneously deprecating proof-of-work. This prepared the chain for future scaling upgrades such as data sharding by bringing proof-of-stake consensus together with Mainnet, while simultaneously reducing energy consumption by over 99.9%."
   },
   "kuYpoI": {
     "message": "Current balance"
@@ -2507,9 +2453,6 @@
   "ljGIvm": {
     "message": "Filename destination"
   },
-  "ll/zMW": {
-    "message": "This is a non-reversible transaction."
-  },
   "lo+Qqn": {
     "message": "change your wallet"
   },
@@ -2552,11 +2495,17 @@
   "mloLQ5": {
     "message": "All stakers must operate an execution client with their consensus client."
   },
+  "mm+OKT": {
+    "message": "The Ethereum roadmap"
+  },
   "mpmFDY": {
     "message": "No pending deposits"
   },
   "mr1BWl": {
     "message": "Risks and acknowledgements:"
+  },
+  "mre8Tb": {
+    "message": "If a withdrawal address has not been set, and you have lost access to the mnemonic seed phrase without it being stolen/compromised, your funds will remain locked in the validator account indefinitely."
   },
   "muV9Fg": {
     "message": "New validators (not yet deposited)"
@@ -2573,6 +2522,9 @@
   "nBhisA": {
     "message": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."
   },
+  "nIf7QZ": {
+    "message": "For this, we need active participants—known as validators—to propose, verify, and vouch for the validity of blocks. In exchange, honest validators receive financial rewards."
+  },
   "nRWZl3": {
     "message": "Again, it depends. Behaving maliciously—for example attesting to invalid or contradicting blocks—will lead to your stake being slashed."
   },
@@ -2588,11 +2540,11 @@
   "naHAvS": {
     "message": "Enabling withdrawals"
   },
+  "naZC3k": {
+    "message": "Your ETH address"
+  },
   "ndhFef": {
     "message": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
-  },
-  "nf2aBN": {
-    "message": "To make this message to be included in Mainnet, you will need to upload this message to a beacon node’s message ({signature}) pool {after} Capella/Shanghai hard fork."
   },
   "njAU72": {
     "message": "French"
@@ -2622,6 +2574,9 @@
   "o9rUg+": {
     "message": "Withdrawals enabled"
   },
+  "oDObOQ": {
+    "message": "If the “eth1 withdrawal address” was not provided on initial deposit, you can submit a once-only {BTEC} message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."
+  },
   "oF4os+": {
     "message": "Currently Prysm is used by >33% of the network."
   },
@@ -2637,17 +2592,29 @@
   "oNohob": {
     "message": "Configure your consensus client"
   },
+  "oWBn+a": {
+    "message": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of Danksharding. Do your own research before depositing funds."
+  },
   "oWhj8Q": {
     "message": "How often are rewards/penalties issued?"
   },
   "obp8vV": {
     "message": "Documentation on running Besu"
   },
+  "odjJFL": {
+    "message": "More on Danksharding"
+  },
   "ogbG7r": {
     "message": "To become a validator on the Beacon Chain, you need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} per validator that you wish to run."
   },
   "ohspQX": {
     "message": "Responsibilities"
+  },
+  "okGJD+": {
+    "message": "Validators with a maxed-out effective balance and a linked execution withdrawal address will have any balance over {PRICE_PER_VALIDATOR} {TICKER_NAME} automatically withdrawn as excess balance."
+  },
+  "om4EMq": {
+    "message": "To process incoming validator deposits from the execution layer (formerly 'Eth1' chain), you'll need to run an execution client as well as your consensus client (formerly 'Eth2')."
   },
   "omJNJw": {
     "message": "Warning!"
@@ -2677,6 +2644,9 @@
   "p0b6zX": {
     "message": "More on Status"
   },
+  "p1ynue": {
+    "message": "If this was not provided, the withdrawal key can be used to sign a message declaring a withdrawal address. The withdrawal key can be generated using your mnemonic. If your withdrawal key or mnemonic have been stolen, and a withdrawal address has not yet been set, the thief will have the ability to irreversibly designate their own account as the withdrawal address for your validator."
+  },
   "p556q3": {
     "message": "Copied"
   },
@@ -2692,14 +2662,14 @@
   "pQxML4": {
     "message": "Generate {json} file"
   },
+  "pUAoW1": {
+    "message": "Is the effective balance maxed out at {PRICE_PER_VALIDATOR} {TICKER_NAME}?"
+  },
   "pWuGLy": {
     "message": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
   },
   "pXyH++": {
     "message": "The Besu documentation explains how to download and install the client."
-  },
-  "pb2jYe": {
-    "message": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can be broadcast for inclusion into blocks starting with the Shanghai/Capella upgrade."
   },
   "pfJX2D": {
     "message": "More on phishing"
@@ -2722,6 +2692,12 @@
   },
   "pyWt01": {
     "message": "Deposit summary"
+  },
+  "q0thwm": {
+    "message": "As a validator you are rewarded for proposing/attesting to blocks that are included in the chain."
+  },
+  "q8Cxf5": {
+    "message": "BLS credentials: By default, the deposit CLI would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format. This format is not compatible with Beacon Chain withdrawals and must be updated to Ethereum address credentials to enable withdrawals."
   },
   "qB6aU6": {
     "message": "What happened to 'Eth2?'"
@@ -2756,8 +2732,8 @@
   "qlwUud": {
     "message": "Exiting a {software} validator"
   },
-  "qntIRb": {
-    "message": "If this was not provided, the withdrawal keys will be needed to sign a message declaring a withdrawal address. This requires access to the mnemonic used when setting up the keys."
+  "qwFYIS": {
+    "message": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can then be {broadcastLink} into blocks."
   },
   "qwh6gM": {
     "message": "I understand the early adopter and slashing risks."
@@ -2793,17 +2769,11 @@
   "rW+ivM": {
     "message": "More on Lodestar"
   },
-  "rW219B": {
-    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {executionAddress}, you can use the staking deposit CLI ({cli}) tool to generate the signed BLS-to-execution-change ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
-  },
   "raRw6Z": {
     "message": "Launchpad home"
   },
   "rbrahO": {
     "message": "Close"
-  },
-  "rnDgcN": {
-    "message": "No, you cannot change your withdrawal credentials in top-ups."
   },
   "rs4eqr": {
     "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
@@ -2817,6 +2787,9 @@
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
   },
+  "sNUrEO": {
+    "message": "If not, I've submitted a {btec} message signed with my BLS withdrawal keys to update my withdrawal credentials."
+  },
   "sToVAS": {
     "message": "The block producer then checks the next validator in line, and once again determines if a withdrawal needs to be processed or not. This process is repeated until either 16 eligible withdrawals have been found, or until 16,384 validators have been checked, whichever comes first. At that point, the withdrawal queue is sent to the execution layer to be included at the end of the next block."
   },
@@ -2825,6 +2798,9 @@
   },
   "sZK38z": {
     "message": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
+  },
+  "sgn0wo": {
+    "message": "What happens if I have BLS withdrawal credentials and I lose my withdrawal key?"
   },
   "sj/Zef": {
     "message": "Download Key Gen GUI app"
@@ -2862,9 +2838,6 @@
   "tWoq1e": {
     "message": "Maximum number of accounts that can be checked in a block. Stops when 16 withdrawals are found. If 16 eligible rewards are not found in the first 16,384 accounts checked, the withdrawal queue for that block will be submitted as is, and the following proposer will pick up where this left off."
   },
-  "tbYkT4": {
-    "message": "The Ethereum consensus-layer specification"
-  },
   "teyxVk": {
     "message": "What should the address be?"
   },
@@ -2887,9 +2860,6 @@
     "description": "{effectiveBalance} shows 'effective balance' in bold. {article}\n                    shows 'excellent post' and links to an article.",
     "message": "Note however that this scaling mechanism works in a non-obvious way. To understand the precise details of how it works requires understanding a concept called {effectiveBalance}. If you’re not yet familiar with this concept, we recommend you read through {article}"
   },
-  "txdGU9": {
-    "message": "The Ethereum upgrades"
-  },
   "tzMNF3": {
     "message": "Status"
   },
@@ -2910,6 +2880,12 @@
   },
   "uDMtC8": {
     "message": "As anyone who has already gone through the process of activating a validator knows, this process is not automatic, especially if there are a lot of other users trying to join at the same time. This is because the consensus layer uses an {activationQueue} to limit how quickly new validator accounts can {join} the network."
+  },
+  "uEB8++": {
+    "message": "Execution credentials: If you want to withdraw to your execution wallet address you can set an “eth1 withdrawal address” using {ethAddressWithdraw} when running the deposit CLI. {boldWarning}"
+  },
+  "uHSqYx": {
+    "message": "An {excessBalanceWithdrawal} is processed when an active validator has a maxed out effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, and has a total balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}. A single validator cannot get rewards on excess balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
   },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
@@ -2945,10 +2921,6 @@
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
     "message": "Are there recent {ethAmount} deposits?"
   },
-  "v6ytKW": {
-    "description": "{slashings} shows 'slashings' in bold for emphasis",
-    "message": "And major penalities—or {slashings}—are given for malicious actions."
-  },
   "vBJ79e": {
     "message": "I've simulated how to safely migrate from one execution client to another."
   },
@@ -2967,6 +2939,9 @@
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
   },
+  "vPvQyf": {
+    "message": "Make sure you have control over this address as this cannot be changed. Providing an account from a centralized exchange is not recommended."
+  },
   "vV6ua0": {
     "message": "Step 1: Download the Wagyu Key Gen app for your operating system"
   },
@@ -2979,9 +2954,6 @@
   "vYOWYI": {
     "message": "Chinese (simplified)"
   },
-  "vZxdbJ": {
-    "message": "Once withdrawals are enabled with the Shanghai/Capella update, validators with a maxed our effective balance and a linked execution withdrawal address will have any balance over {PRICE_PER_VALIDATOR} {TICKER_NAME} automatically withdrawal as excess balance."
-  },
   "vbVsqW": {
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
@@ -2991,9 +2963,6 @@
   },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
-  },
-  "wDlux8": {
-    "message": "You are still able to voluntarily exit your validator to be removed from the active validator set, but until withdrawals are enabled these funds would remain locked and unable to be withdrawn or re-staked."
   },
   "wJ1PbL": {
     "description": "Indicates which operating system the instructions are for",
@@ -3013,9 +2982,6 @@
   },
   "wm04oC": {
     "message": "Run the following command:"
-  },
-  "wpM7Y5": {
-    "message": "One of the queues worth noting is a queue that limits how many BLS ({type0}) withdrawal addresses can be updated to an execution address ({type1}) during a given block."
   },
   "wqUcy/": {
     "message": "Early adopter risks"
@@ -3038,6 +3004,9 @@
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",
     "message": "Cross check the deposit contract address against other websites – for example: Reddit, Twitter, and GitHub. There's also a list of trusted sources on {ethereumorg}"
+  },
+  "xETYo6": {
+    "message": "If you lose your withdrawal key, your mnemonic will be needed to recover. If your mnemonic is lost, and you have not updated your withdrawal credentials with an Ethereum (execution) withdrawal address, there is no way to access to the funds held by your validator. As such, it is essential to ensure your validator mnemonic is safely backed up."
   },
   "xGQ38+": {
     "message": "Has the validator completed the exiting process?"
@@ -3111,14 +3080,14 @@
   "yI/DO8": {
     "message": "this number increases if other validators are slashed at the same time"
   },
+  "yK2eQ+": {
+    "message": "Minor penalties are given for inadvertent actions (or inactions) that hinder consensus"
+  },
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
   },
   "ydh1KU": {
     "message": "Language information"
-  },
-  "yeI1Zq": {
-    "message": "Note that this delay can be longer if many others are exiting or being kicked out at the same time."
   },
   "yis3aS": {
     "message": "This is the expected scenario."
@@ -3141,9 +3110,6 @@
   "yzvSUC": {
     "message": "Your old BLS withdrawal credentials"
   },
-  "z26FXa": {
-    "message": "With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources since The Merge. Using a third-party provider will result in your validator being offline. When data sharding is implemented, validators will also be at risk of slashing under the {pocGame}."
-  },
   "z63I56": {
     "message": "validator"
   },
@@ -3157,14 +3123,14 @@
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"
   },
+  "zBl8d5": {
+    "message": "{stakingDepositCli}: if you used the “eth1 withdrawal address” ({eth1WithdrawalAddress}) flag when generating your keys, you're good to go"
+  },
   "zGkAVo": {
     "message": "At the other end of the spectrum, if your balance is closer to 31 ETH, it’s probably not worth adding the extra ETH required to get back to 32."
   },
   "zJicsO": {
     "message": "Staking economics"
-  },
-  "zVb+z+": {
-    "message": "Do not deposit more than {PRICE_PER_VALIDATOR} ETH for a single validator. It will not add to your rewards and will be locked until the planned Shanghai/Capella upgrade."
   },
   "zbEBi9": {
     "description": "{mainnet} shows '--config mainnet' terminal command",
@@ -3173,13 +3139,14 @@
   "zicXn7": {
     "message": "Node security"
   },
+  "zkTSvw": {
+    "description": "{slashings} shows 'slashings' in bold for emphasis",
+    "message": "Major penalities—or {slashings}—are given for malicious actions"
+  },
   "znyxZv": {
     "message": "~27 hours"
   },
   "zpmjjy": {
     "message": "Communication between the execution layer and consensus layer occurs using the {engineApi}. This is a set of JSON RPC methods that can be used to communicate between the two client layers."
-  },
-  "zrb2Xo": {
-    "message": "Community calls - announced in the PM repo"
   }
 }

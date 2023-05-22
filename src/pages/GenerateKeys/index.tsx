@@ -219,14 +219,17 @@ const _GenerateKeysPage = ({
         <Text className="mb20">
           <FormattedMessage
             defaultMessage="You may choose to provide a withdrawal address with your initial
-            deposit to automatically enable reward payments and also the ability
-            to fully exit your funds anytime after the Shanghai/Capella upgrade.
-            This address should be to a regular Ethereum address and will be the
-            only address funds can be sent to from your new validator accounts."
+            deposit to automatically enable reward payments and also the ability to fully
+            exit your funds at anytime (recommended). This address should be to a regular
+            Ethereum address and will be the only address funds can be sent to from your new
+            validator accounts, and cannot be changed once chosen."
           />
         </Text>
         <Text className="mb20">
-          <FormattedMessage defaultMessage="Paste your chosen address here to include it in the copy/paste CLI command below:" />
+          <FormattedMessage
+            defaultMessage="Paste your chosen address here to include it in the copy/paste CLI
+            command below:"
+          />
         </Text>
         <AddressInputContainer className="mb40">
           <AddressInput
@@ -239,7 +242,10 @@ const _GenerateKeysPage = ({
         </AddressInputContainer>
         <Alert variant="error">
           {isValidWithdrawalAddress ? (
-            <FormattedMessage defaultMessage="Make sure you have control over this address as this cannot be changed." />
+            <FormattedMessage
+              defaultMessage="Make sure you have control over this address as this cannot be changed.
+              Providing an account from a centralized exchange is not recommended."
+            />
           ) : (
             <FormattedMessage
               defaultMessage="If this is not provided now, your deposited funds will remain

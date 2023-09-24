@@ -120,7 +120,7 @@ export const Languages = () => {
     {
       code: 'pl',
       title: formatMessage({ defaultMessage: 'Polish' }),
-      language: 'Polskie',
+      language: 'Polski',
     },
     {
       code: 'pt-br',

@@ -168,7 +168,6 @@ const _Routes = () => {
         <Switch>
           {localizedRoutes.map((route: RouteType) => (
             <Route
-              onUpdate={() => window.scrollTo(0, 0)}
               {...route}
               key={route.path}
             />

@@ -29,12 +29,14 @@ export const onMouseMove = (
 
   const rightDatum = data[bisectIdx];
   const leftDatum = data[bisectIdx - 1];
+  const l_x = leftDatum[x];
+  const r_x = rightDatum[x];
   let datum;
 
-  if (leftDatum && rightDatum) {
+  if (leftDatum && rightDatum && leftDatum[x] !== undefined  && rightDatum[x] !== undefined) {
     // Find closest datum
     datum =
-      Math.abs(x0! - leftDatum[x]) < Math.abs(x0! - rightDatum[x])
+      Math.abs(x0! - l_x!) < Math.abs(x0! - r_x!)
         ? leftDatum
         : rightDatum;
   } else if (leftDatum) {

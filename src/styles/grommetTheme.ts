@@ -1,14 +1,14 @@
 import { styledComponentsTheme } from './styledComponentsTheme';
+import { ThemeType } from 'grommet';
 
 const { blue, transparent, gray, red, green, yellow } = styledComponentsTheme;
 
-export const grommetTheme = {
+export const grommetTheme: ThemeType = {
   global: {
     focus: {
       border: {
         color: transparent,
       },
-      outline: 'none',
     },
     colors: {
       brand: blue.dark, // needed to override default grommet component styling
@@ -56,14 +56,13 @@ export const grommetTheme = {
   checkBox: {
     border: {
       color: 'gray',
-      radius: '2px',
     },
-    check: {
-      extend: ({ checked }: { checked: boolean }) =>
-        `background-color: white; border: 2px solid ${
-          checked ? 'black' : 'gray'
-        }`,
-    },
+    // check: {
+    //   extend: ({ checked }: { checked: boolean }) =>
+    //     `background-color: white; border: 2px solid ${
+    //       checked ? 'black' : 'gray'
+    //     }`,
+    // },
     color: {
       light: 'neutral-3',
       dark: 'neutral-3',

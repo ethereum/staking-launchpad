@@ -430,6 +430,15 @@ const _ConnectWalletPage = ({
                     )}
                   </div>
                   <Alert
+                    variant='warning'
+                    className="mt20"
+                  >
+                    console.log({'networkAllowed' + networkAllowed})
+                    console.log({'walletConnected' + walletConnected})
+                    console.log({'walletProvider' + walletProvider})
+
+                  </Alert>
+                  <Alert
                     variant={withdrawalAddress ? 'warning' : 'error'}
                     className="mt20"
                   >

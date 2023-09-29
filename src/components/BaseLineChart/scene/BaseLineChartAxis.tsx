@@ -63,7 +63,7 @@ const BaseLineChartAxis: React.FC<Props> = ({
                     'right',
                     -margin.left,
                     state!.chart.y!(+range[0] + interval),
-                    state!.chart.x!(0) + margin.left,
+                    state!.chart.x!(0) ?? 0 + margin.left,
                     dimensions.width - margin.left - margin.right,
                     0,
                     0,
@@ -71,7 +71,7 @@ const BaseLineChartAxis: React.FC<Props> = ({
                 : [
                     'middle',
                     state!.chart.x!(+range[0] + interval),
-                    state!.chart.y!(0) + 20,
+                    state!.chart.y!(0) ?? 0 + 20,
                     0,
                     0,
                     -(dimensions.height - margin.top - margin.bottom) * 0.95 +

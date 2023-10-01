@@ -87,7 +87,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
             </li>
             <li>
               <FormattedMessage
-                defaultMessage="{wagyuKeyGenGui}: if you provided a withdrawal address when generating your keys, you're good to go (found under “advanced mode”)"
+                defaultMessage="{wagyuKeyGenGui}: if you provided a withdrawal address when generating your keys, you're good to go"
                 values={{
                   wagyuKeyGenGui: (
                     <strong>

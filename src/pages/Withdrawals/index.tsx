@@ -242,6 +242,16 @@ export const Withdrawals = () => {
                   </Link>
                 </li>
                 <li>
+                  <strong>Wagyu Key Gen GUI</strong> -{' '}
+                  <Link
+                    inline
+                    primary
+                    to="https://www.youtube.com/watch?v=EMQoVtxNaxo"
+                  >
+                    <FormattedMessage defaultMessage="Adding a withdrawal address with Wagyu Key Gen" />
+                  </Link>
+                </li>
+                <li>
                   <strong>ethdo</strong> -{' '}
                   <Link
                     inline

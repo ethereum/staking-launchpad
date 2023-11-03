@@ -128,7 +128,7 @@ const ButtonRow = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 128px;
+  margin-top: 256px;
   gap: 10px;
   @media only screen and (max-width: ${p => p.theme.screenSizes.large}) {
     flex-direction: column;

@@ -23,6 +23,7 @@ export enum NetworkChainId {
   'Sepolia' = 11155111,
   'Zhejiang' = 1337803,
   'Holesky' = 17000,
+  'Patronium' = 1971,
 }
 
 export const NetworkChainIdDict: { [id: string]: number } = {
@@ -32,6 +33,7 @@ export const NetworkChainIdDict: { [id: string]: number } = {
   Sepolia: 11155111,
   Zhejiang: 1337803,
   Holesky: 17000,
+  Patronium: 1971,
 };
 
 /*
@@ -46,6 +48,7 @@ const supportedNetworks = [
   NetworkChainId.Sepolia,
   NetworkChainId.Zhejiang,
   NetworkChainId.Holesky,
+  NetworkChainId.Patronium,
 ];
 
 // FIXME: disabled Portis for now
@@ -61,6 +64,7 @@ enum Testnet {
   'Sepolia',
   'Zhejiang',
   'Holesky',
+  'Patronium',
 }
 
 enum Mainnet {
@@ -73,6 +77,7 @@ export const NetworkNameToChainId: { [key: string]: NetworkChainId } = {
   Goerli: NetworkChainId.Goerli,
   Zhejiang: NetworkChainId.Zhejiang,
   Holesky: NetworkChainId.Holesky,
+  Patronium: NetworkChainId.Patronium,
 };
 
 export const TARGET_NETWORK_CHAIN_ID = IS_MAINNET

@@ -398,8 +398,7 @@ export const Checklist = () => {
         'https://docs.teku.consensys.net/get-started/connect/mainnet#1-generate-the-shared-secret',
       feeRecipientUrl:
         'https://docs.teku.consensys.net/reference/cli#validators-proposer-default-fee-recipient',
-      metricsUrl:
-        'https://docs.teku.consensys.net/how-to/monitor/use-metrics',
+      metricsUrl: 'https://docs.teku.consensys.net/how-to/monitor/use-metrics',
     },
   ]);
 

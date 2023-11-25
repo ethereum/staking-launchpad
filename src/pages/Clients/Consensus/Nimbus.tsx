@@ -21,8 +21,8 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       <FormattedMessage
         defaultMessage="Nimbus is a client implementation for both execution and consensus layers
                         that strives to be as lightweight as possible in terms of resources used.
-                        This allows it to perform well on embedded systems, resource-restricted devices —
-                        including Raspberry Pis — and multi-purpose servers."
+                        This allows it to perform well on embedded systems, resource-restricted
+                        devices—including Raspberry Pis—and multi-purpose servers."
       />
     </Text>
     <Link to="https://nimbus.team/" primary className="mt10">
@@ -78,10 +78,10 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
             />
           </Text>
           <Code className="my20">make -j4 nimbus_beacon_node</Code>
-          <Link primary to="https://nimbus.guide/quick-start.html">
+          <Link primary to="https://nimbus.guide/quick-start">
             <FormattedMessage defaultMessage="Nimbus beacon node documentation" />
           </Link>
-          <Link primary to="https://nimbus.guide/run-a-validator.html">
+          <Link primary to="https://nimbus.guide/run-a-validator">
             <FormattedMessage defaultMessage="Nimbus validator documentation" />
           </Link>
         </section>
@@ -106,7 +106,7 @@ export const Nimbus = () => {
           <SectionTitle level={2} className="mb5">
             <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
-          <Link primary to="https://nimbus.guide/index.html">
+          <Link primary to="https://nimbus.guide/">
             <FormattedMessage defaultMessage="Nimbus documentation" />
           </Link>
         </section>

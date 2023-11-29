@@ -515,7 +515,7 @@ const _CongratulationsPage = ({
                   </Link>
                   <Link
                     isTextLink={false}
-                    to="https://discord.io/ethstaker"
+                    to="https://dsc.gg/ethstaker"
                     className="mt20"
                   >
                     <Button

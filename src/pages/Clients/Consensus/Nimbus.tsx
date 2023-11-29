@@ -21,8 +21,8 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
       <FormattedMessage
         defaultMessage="Nimbus is a client implementation for both execution and consensus layers
                         that strives to be as lightweight as possible in terms of resources used.
-                        This allows it to perform well on embedded systems, resource-restricted devices --
-                        including Raspberry Pis -- and multi-purpose servers."
+                        This allows it to perform well on embedded systems, resource-restricted
+                        devices—including Raspberry Pis—and multi-purpose servers."
       />
     </Text>
     <Link to="https://nimbus.team/" primary className="mt10">
@@ -62,7 +62,7 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
           <Text className="mt10">
             <FormattedMessage defaultMessage="It uses the assisted password in your secrets folder." />
           </Text>
-          <Code className="my20">/build/data/[testnet_name]/secrets</Code>
+          <Code className="my20">./build/data/[testnet_name]/secrets</Code>
           <Text className="mt10">
             <FormattedMessage defaultMessage="If you do not supply a password, Nimbus will interactively ask for it on startup." />
           </Text>
@@ -74,12 +74,15 @@ export const NimbusDetails = ({ shortened }: { shortened?: boolean }) => (
           <Text className="mt10">
             <FormattedMessage
               defaultMessage="If you do not have a testnet folder it is likely you have not built and run Nimbus
-                correctly. Run the make commands again."
+                correctly. Run the make command again."
             />
           </Text>
-          <Code className="my20">./build/data/[testnet_name]/</Code>
-          <Link primary to="https://nimbus.guide/keys.html">
-            <FormattedMessage defaultMessage="Nimbus key management documentation" />
+          <Code className="my20">make -j4 nimbus_beacon_node</Code>
+          <Link primary to="https://nimbus.guide/quick-start">
+            <FormattedMessage defaultMessage="Nimbus beacon node documentation" />
+          </Link>
+          <Link primary to="https://nimbus.guide/run-a-validator">
+            <FormattedMessage defaultMessage="Nimbus validator documentation" />
           </Link>
         </section>
       </>
@@ -103,7 +106,7 @@ export const Nimbus = () => {
           <SectionTitle level={2} className="mb5">
             <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
-          <Link primary to="https://nimbus.guide/intro.html">
+          <Link primary to="https://nimbus.guide/">
             <FormattedMessage defaultMessage="Nimbus documentation" />
           </Link>
         </section>

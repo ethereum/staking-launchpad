@@ -264,12 +264,6 @@
   "2ebz/N": {
     "message": "excess balance withdrawal"
   },
-  "2iH8Zc": {
-    "message": "Nimbus key management documentation"
-  },
-  "2rFwzp": {
-    "message": "{wagyuKeyGenGui}: if you provided a withdrawal address when generating your keys, you're good to go (found under “advanced mode”)"
-  },
   "2rflCq": {
     "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
@@ -382,6 +376,9 @@
   "5A6amM": {
     "message": "It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
   },
+  "5CdqwI": {
+    "message": "Nimbus beacon node documentation"
+  },
   "5H/J84": {
     "message": "How do you want to generate your keys?"
   },
@@ -412,6 +409,9 @@
   },
   "6NndcB": {
     "message": "leave"
+  },
+  "6NyPVb": {
+    "message": "Nimbus is a client implementation for both execution and consensus layers that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices—including Raspberry Pis—and multi-purpose servers."
   },
   "6S95Bo": {
     "message": "Avoid phishing"
@@ -568,6 +568,9 @@
   },
   "9RBO+X": {
     "message": "Review validator roles and responsibilities"
+  },
+  "9Ur2de": {
+    "message": "Adding a withdrawal address with Wagyu Key Gen"
   },
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
@@ -1054,6 +1057,9 @@
   },
   "J5Lzz1": {
     "message": "Chinese (traditional)"
+  },
+  "J6xb7K": {
+    "message": "{wagyuKeyGenGui}: if you provided a withdrawal address when generating your keys, you're good to go"
   },
   "J7T0SR": {
     "message": "Nimbus installation documentation"
@@ -1628,9 +1634,6 @@
   },
   "V+P6OJ": {
     "message": "This became a requirement at time of The Merge, so be sure you're running both before staking."
-  },
-  "V0cb8p": {
-    "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make commands again."
   },
   "VASo1/": {
     "message": "Connect wallet"
@@ -2247,6 +2250,9 @@
   "iX90gu": {
     "message": "I've joined my execution client's Discord server."
   },
+  "iXbM1G": {
+    "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make command again."
+  },
   "iZuIgB": {
     "message": "Decompress the file you just downloaded"
   },
@@ -2310,6 +2316,9 @@
   },
   "jlx7pU": {
     "message": "Documentation on running Geth"
+  },
+  "jmKQY9": {
+    "message": "Nimbus validator documentation"
   },
   "jp9OG2": {
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
@@ -2416,9 +2425,6 @@
   },
   "lD66ab": {
     "message": "Outstanding deposit"
-  },
-  "lHiz+K": {
-    "message": "Nimbus is a client implementation for both execution and consensus layers that strives to be as lightweight as possible in terms of resources used. This allows it to perform well on embedded systems, resource-restricted devices -- including Raspberry Pis -- and multi-purpose servers."
   },
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",

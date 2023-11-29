@@ -1052,7 +1052,7 @@ export const FAQ = () => {
                   help! You can find support on {discord} or {reddit}."
                 values={{
                   discord: (
-                    <Link primary inline to="https://discord.io/ethstaker">
+                    <Link primary inline to="https://dsc.gg/ethstaker">
                       Discord
                     </Link>
                   ),

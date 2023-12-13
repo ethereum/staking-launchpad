@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import nimbusBg from '../../../static/nimbus-bg.png';
+import nimbusBg from '../../../static/nimbus-bg-new.png';
 import {
   Hero,
   SectionTitle,

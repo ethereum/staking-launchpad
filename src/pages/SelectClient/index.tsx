@@ -18,7 +18,7 @@ import { NethermindDetails } from '../Clients/Execution/Nethermind';
 import { ErigonDetails } from '../Clients/Execution/Erigon';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';
-import NimbusCircle from '../../static/nimbus-circle.png';
+import NimbusCircle from '../../static/nimbus-circle-new.png';
 import LodestarCircle from '../../static/lodestar-circle.png';
 import TekuCircle from '../../static/pegasys-teku-circle.png';
 import GethCircle from '../../static/gethereum-mascot-circle.png';

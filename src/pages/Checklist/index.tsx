@@ -398,8 +398,7 @@ export const Checklist = () => {
         'https://docs.teku.consensys.net/get-started/connect/mainnet#1-generate-the-shared-secret',
       feeRecipientUrl:
         'https://docs.teku.consensys.net/reference/cli#validators-proposer-default-fee-recipient',
-      metricsUrl:
-        'https://docs.teku.consensys.net/how-to/monitor/use-metrics',
+      metricsUrl: 'https://docs.teku.consensys.net/how-to/monitor/use-metrics',
     },
   ]);
 
@@ -424,7 +423,7 @@ export const Checklist = () => {
             defaultMessage="Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
             values={{
               discord: (
-                <Link primary inline to="https://discord.io/ethstaker">
+                <Link primary inline to="https://dsc.gg/ethstaker">
                   Discord
                 </Link>
               ),
@@ -1484,7 +1483,7 @@ export const Checklist = () => {
                 You can find support on {discord} or {reddit}."
             values={{
               discord: (
-                <Link primary inline to="https://discord.io/ethstaker">
+                <Link primary inline to="https://dsc.gg/ethstaker">
                   Discord
                 </Link>
               ),

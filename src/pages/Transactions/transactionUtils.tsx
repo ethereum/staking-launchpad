@@ -50,6 +50,19 @@ const isUserRejectionError = (error: any) => {
   return false;
 };
 
+const isLedgerError = (error: any) => {
+  if (error.code === -32603) {
+    // Error message when rejecting from ledger or blind signing and debug not enabled
+    if (
+      error.message.includes('Ledger: Unknown error while signing transaction')
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
 /*
   Recursive func for calling each transaction in succession after
   the previous one has been signed
@@ -79,7 +92,8 @@ export const handleMultipleTransactions = async (
   const remainingTxs = depositKeys.filter(
     key =>
       key.transactionStatus === TransactionStatus.READY ||
-      key.transactionStatus === TransactionStatus.REJECTED
+      key.transactionStatus === TransactionStatus.REJECTED ||
+      key.transactionStatus === TransactionStatus.LEDGER_ERROR
   );
 
   const nextTransaction = remainingTxs.shift();
@@ -134,6 +148,8 @@ export const handleMultipleTransactions = async (
     .on('error', (error: any) => {
       if (isUserRejectionError(error)) {
         updateTransactionStatus(pubkey, TransactionStatus.REJECTED);
+      } else if (isLedgerError(error)) {
+        updateTransactionStatus(pubkey, TransactionStatus.LEDGER_ERROR);
       } else {
         updateTransactionStatus(pubkey, TransactionStatus.FAILED);
       }

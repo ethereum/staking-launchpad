@@ -302,8 +302,7 @@ export const Checklist = () => {
       layer: layerEnum.execution,
       discord: 'https://t.me/paradigm_reth',
       ...defaultExecutionPorts,
-      jwtUrl:
-        'https://reth.rs/run/mainnet.html#running-the-reth-node',
+      jwtUrl: 'https://reth.rs/run/mainnet.html#running-the-reth-node',
     },
     {
       header: 'Erigon',

@@ -15,6 +15,7 @@ import { LodestarDetails } from '../Clients/Consensus/Lodestar';
 import { GethDetails } from '../Clients/Execution/Geth';
 import { BesuDetails } from '../Clients/Execution/Besu';
 import { NethermindDetails } from '../Clients/Execution/Nethermind';
+import { RethDetails } from '../Clients/Execution/Reth';
 import { ErigonDetails } from '../Clients/Execution/Erigon';
 import PrysmaticCircle from '../../static/prysmatic-labs-circle.png';
 import LighthouseCircle from '../../static/lighthouse-circle.png';

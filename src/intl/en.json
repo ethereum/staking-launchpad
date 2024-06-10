@@ -136,6 +136,9 @@
   "0XRY0E": {
     "message": "If your mnemonic is stolen/compromised, and you have not yet set a withdrawal address, you should attempt this {immediately} to prevent permanent lose of funds, before the attacker irreversibly designates their own withdrawal address for your validator."
   },
+  "0fkPmg": {
+    "message": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, written in Rust."
+  },
   "0i4cCJ": {
     "message": "Confirm deposits ({depositKeys})"
   },
@@ -263,6 +266,9 @@
   },
   "2ebz/N": {
     "message": "excess balance withdrawal"
+  },
+  "2kkNXD": {
+    "message": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB."
   },
   "2rflCq": {
     "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
@@ -445,6 +451,9 @@
   },
   "7DFXQj": {
     "message": "Switch to {oppositeNetwork} launchpad"
+  },
+  "7EpPjk": {
+    "message": "Reth Releases"
   },
   "7FcGxU": {
     "description": "{executionLayer} is a link labeled 'execution client'. {consensusLayer} is a link labeled 'consensus client'",
@@ -799,6 +808,9 @@
   "Di1/yX": {
     "message": "Consensus JWT docs:"
   },
+  "DiXOHD": {
+    "message": "Documentation for building, running and debugging Reth"
+  },
   "DjhC7F": {
     "message": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
   },
@@ -855,6 +867,9 @@
   },
   "Ej2jo1": {
     "message": "Withdrawal address:"
+  },
+  "EsxlJB": {
+    "message": "Configure Reth"
   },
   "F8yf1S": {
     "message": "You can find {docsHere}."
@@ -973,6 +988,9 @@
   },
   "H5+NAX": {
     "message": "Balance"
+  },
+  "H84I+K": {
+    "message": "Reth installation documentation"
   },
   "HMgrdg": {
     "message": "Configure your execution client"
@@ -1635,6 +1653,9 @@
   "V+P6OJ": {
     "message": "This became a requirement at time of The Merge, so be sure you're running both before staking."
   },
+  "V1iY4C": {
+    "message": "Reth is built in Rust, a language empowering everyone to build reliable and efficient software. Rust is a general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector."
+  },
   "VASo1/": {
     "message": "Connect wallet"
   },
@@ -1727,6 +1748,9 @@
   },
   "XBEBYR": {
     "message": "More on installing pip"
+  },
+  "XLXSsV": {
+    "message": "Reth provides an active Telegram chat for technical discussion and troubleshooting."
   },
   "XRUCUL": {
     "message": "Once an execution address has been provided by signing the BLS To Execution Change message, the withdrawal keys derived from your validator mnemonic are no longer utilized. Therefore, providing an execution address that you control as early as possible is the recommended option for most users, and is the default path for those who join via this site's onboarding process. This protects you against permanent loss of all funds in the event you are unable to recover your mnemonic and withdrawal keys."
@@ -2147,6 +2171,9 @@
   },
   "gWC0Rt": {
     "message": "Like a clock hand, this process progresses in one direction, and when the last validator is reached, the sweep starts over again from the beginning. At each validator along the way, the account is evaluated for potential withdrawals."
+  },
+  "gXVf9n": {
+    "message": "Latest Reth Benchmarks"
   },
   "gfLdAQ": {
     "message": "More on the Beacon Chain"
@@ -3059,6 +3086,9 @@
   "xrCRnH": {
     "message": "Example"
   },
+  "xvkEAP": {
+    "message": "Reth Chat"
+  },
   "xxbUJa": {
     "message": "Execution Clients: {clientName}"
   },
@@ -3082,6 +3112,9 @@
   },
   "yFtJza": {
     "message": "Please ensure that you have control over the keys to this address."
+  },
+  "yGyozY": {
+    "message": "The Reth book explains how to download and install the client. We also provide versioned releases on Github."
   },
   "yI/DO8": {
     "message": "this number increases if other validators are slashed at the same time"

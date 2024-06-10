@@ -26,6 +26,16 @@ export const RethDetails = () => (
     >
       <FormattedMessage defaultMessage="Latest Reth Benchmarks" />
     </Link>
+    <Text className="mt10">
+      <FormattedMessage defaultMessage="Reth 1.0 was audited by Sigma Prime over the course of >8 weeks in May 2024, link below." />
+    </Text>
+    <Link
+      primary
+      to="https://github.com/paradigmxyz/reth/blob/1bc9d8b145e0131684b8b053fd31c7589bc76317/Sigma_Prime_Paradigm_Reth_Security_Assessment_Report_v1_0.pdf"
+      className="mt10"
+    >
+      <FormattedMessage defaultMessage="Reth Audit Report" />
+    </Link>
     <SectionTitle level={2} className="mb5">
       <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>

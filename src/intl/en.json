@@ -327,6 +327,9 @@
   "3aykgN": {
     "message": "Your validator will also receives unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 500,000 validators, each validator will {average} a block proposal every 70 days."
   },
+  "3fRpn0": {
+    "message": "Reth Audit Report"
+  },
   "3tR/V9": {
     "message": "Section 2 - During setup"
   },
@@ -483,6 +486,9 @@
   "7d3Nzd": {
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
     "message": "You can use your validator client's graffiti flag to add a personal touch to your proposed blocks (some text of your choice). You will be able to see it using {beaconchain} or {beaconscan} blockchain explorers."
+  },
+  "7dUCnj": {
+    "message": "Reth 1.0 was audited by Sigma Prime over the course of >8 weeks in May 2024, link below."
   },
   "7kWKe0": {
     "message": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism."

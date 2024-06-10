@@ -24,6 +24,7 @@ import TekuCircle from '../../static/pegasys-teku-circle.png';
 import GethCircle from '../../static/gethereum-mascot-circle.png';
 import BesuCircle from '../../static/hyperledger-besu-circle.png';
 import NethermindCircle from '../../static/nethermind-circle.png';
+import RethCircle from '../../static/reth-circle.png';
 import ErigonCircle from '../../static/erigon-circle.png';
 
 import {
@@ -61,6 +62,7 @@ const clientDetails = {
   [ClientId.GETH]: <GethDetails />,
   [ClientId.BESU]: <BesuDetails />,
   [ClientId.NETHERMIND]: <NethermindDetails />,
+  [ClientId.RETH]: <RethDetails />,
   [ClientId.ERIGON]: <ErigonDetails />,
 };
 
@@ -93,6 +95,12 @@ const ethClients: {
       name: 'Nethermind',
       imgUrl: NethermindCircle,
       language: 'C#, .NET',
+    },
+    {
+      clientId: ClientId.RETH,
+      name: 'Reth',
+      imgUrl: RethCircle,
+      language: 'Rust',
     },
     {
       clientId: ClientId.ERIGON,

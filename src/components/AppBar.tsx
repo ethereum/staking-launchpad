@@ -253,6 +253,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                 <DropdownLink to={routesEnum.nethermind}>
                   Nethermind
                 </DropdownLink>
+                <DropdownLink to={routesEnum.reth}>Reth</DropdownLink>
               </Box>
               <Text className="my10">
                 <b>Consensus clients</b>
@@ -384,6 +385,7 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <DropdownLink to={routesEnum.nethermind}>
                     Nethermind
                   </DropdownLink>
+                  <DropdownLink to={routesEnum.reth}>Reth</DropdownLink>
                   <Text className="my20">
                     <b>
                       <FormattedMessage defaultMessage="Consensus clients" />

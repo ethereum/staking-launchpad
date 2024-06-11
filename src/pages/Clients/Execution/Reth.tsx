@@ -17,7 +17,7 @@ export const RethDetails = () => (
       Reth
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB." />
+      <FormattedMessage defaultMessage="Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB in June 2024." />
     </Text>
     <Link
       primary

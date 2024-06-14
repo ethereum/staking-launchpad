@@ -50,18 +50,9 @@ const isUserRejectionError = (error: any) => {
   return false;
 };
 
-const isLedgerError = (error: any) => {
-  if (error.code === -32603) {
-    // Error message when rejecting from ledger or blind signing and debug not enabled
-    if (
-      error.message.includes('Ledger: Unknown error while signing transaction')
-    ) {
-      return true;
-    }
-  }
-
-  return false;
-};
+// Error message when rejecting from ledger or blind signing and debug not enabled
+const isLedgerError = (error: any) =>
+  error.code === -32603 && error.message.toLowerCase().includes('ledger');
 
 /*
   Recursive func for calling each transaction in succession after

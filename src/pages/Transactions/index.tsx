@@ -163,11 +163,13 @@ const _TransactionsPage = ({
           <Alert variant="error" className="mb20">
             <FormattedMessage
               defaultMessage="There was a problem trying to sign with your Ledger device. Please verify your Ledger
-              device has both {blindSigning} and {debugData} enabled. These can be accessed by selecting the Ethereum
-              application and then entering the Settings menu."
+              device has both {blindSigning} and {debugData} set to {enabled}. These can be accessed by selecting
+              the Ethereum application and then entering the {settings} menu."
               values={{
-                blindSigning: <b>Blind Signing</b>,
-                debugData: <b>Debug Data</b>,
+                blindSigning: <strong>Blind Signing</strong>,
+                debugData: <strong>Debug Data</strong>,
+                enabled: <strong>Enabled</strong>,
+                settings: <strong>Settings</strong>,
               }}
             />
           </Alert>

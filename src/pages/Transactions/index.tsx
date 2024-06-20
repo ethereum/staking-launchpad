@@ -9,11 +9,13 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import _every from 'lodash/every';
 import _some from 'lodash/some';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
+import { Alert } from '../../components/Alert';
+import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
+import { Link } from '../../components/Link';
 import { Paper } from '../../components/Paper';
 import { Text } from '../../components/Text';
-import { Button } from '../../components/Button';
-import { Link } from '../../components/Link';
+import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { routesEnum } from '../../Routes';
 import { KeyList } from './Keylist';
 import { handleMultipleTransactions } from './transactionUtils';
@@ -21,7 +23,6 @@ import { TARGET_NETWORK_CHAIN_ID } from '../ConnectWallet/web3Utils';
 import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
-import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import {
   DepositStatus,
   DispatchTransactionStatusUpdateType,
@@ -156,6 +157,23 @@ const _TransactionsPage = ({
       title={formatMessage({ defaultMessage: 'Transactions' })}
     >
       <Paper className="mt20">
+        {depositKeys.find(
+          k => k.transactionStatus === TransactionStatus.LEDGER_ERROR
+        ) && (
+          <Alert variant="error" className="mb20">
+            <FormattedMessage
+              defaultMessage="There was a problem trying to sign with your Ledger device. Please verify your Ledger
+              device has both {blindSigning} and {debugData} set to {enabled}. These can be accessed by selecting
+              the Ethereum application and then entering the {settings} menu."
+              values={{
+                blindSigning: <strong>Blind Signing</strong>,
+                debugData: <strong>Debug Data</strong>,
+                enabled: <strong>Enabled</strong>,
+                settings: <strong>Settings</strong>,
+              }}
+            />
+          </Alert>
+        )}
         <Heading level={3} size="small" color="blueMedium">
           {depositKeys.length === 1 ? (
             <FormattedMessage defaultMessage="Confirm deposit" />

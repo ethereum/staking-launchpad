@@ -2722,6 +2722,9 @@
   "pqC+qt": {
     "message": "Slashing"
   },
+  "prRNB6": {
+    "message": "There was a problem trying to sign with your Ledger device. Please verify your Ledger device has both {blindSigning} and {debugData} set to {enabled}. These can be accessed by selecting the Ethereum application and then entering the {settings} menu."
+  },
   "ps8lLk": {
     "description": "{expected} shows 'This is the expected scenario' and is bolded for emphasis",
     "message": "Being offline while a supermajority (2/3) of validators is still online leads to relatively small penalties as there are still enough validators online for the chain to finalize. {expected}"

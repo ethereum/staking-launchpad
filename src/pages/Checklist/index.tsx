@@ -24,6 +24,7 @@ import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import BesuBg from '../../static/besu-bg.png';
 import NethermindBg from '../../static/nethermind-bg.png';
+import RethBg from '../../static/reth-bg.png';
 import ErigonBg from '../../static/erigon-bg.png';
 import GethBg from '../../static/geth-bg.png';
 import { routesEnum } from '../../Routes';
@@ -286,6 +287,22 @@ export const Checklist = () => {
       ...defaultExecutionPorts,
       jwtUrl:
         'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
+    },
+    {
+      header: 'Reth',
+      text: formatMessage({
+        defaultMessage:
+          'Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, written in Rust.',
+      }),
+      imgUrl: RethBg,
+      url: routesEnum.reth,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Reth',
+      }),
+      layer: layerEnum.execution,
+      discord: 'https://t.me/paradigm_reth',
+      ...defaultExecutionPorts,
+      jwtUrl: 'https://reth.rs/run/mainnet.html#running-the-reth-node',
     },
     {
       header: 'Erigon',

@@ -31,6 +31,7 @@ import { Lighthouse } from './pages/Clients/Consensus/Lighthouse';
 import { Lodestar } from './pages/Clients/Consensus/Lodestar';
 import { Besu } from './pages/Clients/Execution/Besu';
 import { Nethermind } from './pages/Clients/Execution/Nethermind';
+import { Reth } from './pages/Clients/Execution/Reth';
 import { Erigon } from './pages/Clients/Execution/Erigon';
 import { Geth } from './pages/Clients/Execution/Geth';
 
@@ -56,6 +57,7 @@ export enum routesEnum {
   geth = '/geth',
   lighthouse = '/lighthouse',
   nethermind = '/nethermind',
+  reth = '/reth',
   nimbus = '/nimbus',
   prysm = '/prysm',
   teku = '/teku',
@@ -113,6 +115,7 @@ const routes: RouteType[] = [
   { path: routesEnum.geth, exact: true, component: Geth },
   { path: routesEnum.lighthouse, exact: true, component: Lighthouse },
   { path: routesEnum.nethermind, exact: true, component: Nethermind },
+  { path: routesEnum.reth, exact: true, component: Reth },
   { path: routesEnum.nimbus, exact: true, component: Nimbus },
   { path: routesEnum.prysm, exact: true, component: Prysm },
   { path: routesEnum.teku, exact: true, component: Teku },

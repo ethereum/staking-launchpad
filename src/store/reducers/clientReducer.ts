@@ -10,6 +10,7 @@ export type clientState = {
 const executionClientIds = [
   ClientId.BESU,
   ClientId.NETHERMIND,
+  ClientId.RETH,
   ClientId.ERIGON,
   ClientId.GETH,
 ];

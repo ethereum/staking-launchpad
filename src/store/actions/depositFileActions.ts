@@ -10,6 +10,7 @@ export enum TransactionStatus {
   'STARTED',
   'SUCCEEDED',
   'FAILED',
+  'LEDGER_ERROR',
   'REJECTED',
 }
 

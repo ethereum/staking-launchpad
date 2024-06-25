@@ -125,7 +125,11 @@ export const ActionButton = ({
     );
   }
 
-  if (transactionStatus === TransactionStatus.REJECTED) {
+  if (
+    [TransactionStatus.REJECTED, TransactionStatus.LEDGER_ERROR].includes(
+      transactionStatus
+    )
+  ) {
     return (
       <Container onClick={onClick}>
         <ButtonText>

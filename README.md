@@ -30,8 +30,35 @@ Note: The Portis wallet option is not available when running locally
 
 ## Installation
 
-**Available Scripts**
-### `yarn start`
+### Confirm node version
+
+This repo currently uses **Node v14.19.2**.
+
+If you have Node Version Manager (nvm) installed, you can run
+
+```sh
+nvm use
+```
+
+to switch versions, and
+
+```sh
+node --version
+```
+
+to confirm.
+
+### Install dependencies
+
+```sh
+yarn
+```
+
+### Start the application
+
+```sh
+yarn start
+```
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -39,11 +66,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-**Install Dependencies and Start the Application**
-```
-yarn
-yarn start
-```
 
 ## Development workflow
 

@@ -1,12 +1,12 @@
 export const IS_MAINNET                 = Boolean(process.env.REACT_APP_IS_MAINNET !== 'false');  // If REACT_APP_IS_MAINNET is unset, set it to true by default
 export const IS_NON_INFURA_TESTNET      = !IS_MAINNET && process.env.REACT_APP_RPC_URL
-export const TESTNET_LAUNCHPAD_NAME     = process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME || 'Goerli';
+export const TESTNET_LAUNCHPAD_NAME     = process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME || 'Holesky';
 
 // private vars (or derived from)
 export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
 export const INFURA_PROJECT_ID          = process.env.REACT_APP_INFURA_PROJECT_ID  || '';
 export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '');
-export const RPC_URL                    = process.env.REACT_APP_RPC_URL ||  (`https://${IS_MAINNET ? "mainnet" : "goerli"}.infura.io/v3/${INFURA_PROJECT_ID}`);
+export const RPC_URL                    = process.env.REACT_APP_RPC_URL ||  (`https://${IS_MAINNET ? "mainnet" : "holesky"}.infura.io/v3/${INFURA_PROJECT_ID}`);
 
 // public
 export const NETWORK_NAME               = IS_MAINNET ? 'Mainnet' : TESTNET_LAUNCHPAD_NAME;
@@ -25,17 +25,17 @@ export const LODESTAR_INSTALLATION_URL  = process.env.REACT_APP_LODESTAR_INSTALL
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
 
-let elExplorerURL =  'https://goerli.etherscan.io';
+let elExplorerURL =  'https://holesky.etherscan.io';
 if (IS_NON_INFURA_TESTNET && process.env.REACT_APP_EL_EXPLORER_URL) {
     elExplorerURL = process.env.REACT_APP_EL_EXPLORER_URL;
 } else if (IS_MAINNET) {
     elExplorerURL = 'https://etherscan.io'
 }
 export const EL_EXPLOER_URL = elExplorerURL
-export const EL_TRANSACTION_URL = elExplorerURL + '/tx'
+export const EL_TRANSACTION_URL = `${elExplorerURL}/tx`
 
 
-export const FAUCET_URL                 = process.env.REACT_APP_FAUCET_URL || 'https://faucet.goerli.mudit.blog'
+export const FAUCET_URL                 = process.env.REACT_APP_FAUCET_URL || 'https://www.holeskyfaucet.io/'
 export const TUTORIAL_URL               = process.env.REACT_APP_TUTORIAL_URL || null;
 
 if(process.env.REACT_APP_ETH_REQUIREMENT && Number.isNaN(Number(process.env.REACT_APP_ETH_REQUIREMENT))) {

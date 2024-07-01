@@ -1079,9 +1079,9 @@ export const Withdrawals = () => {
               <Link
                 primary
                 inline
-                to="https://notes.ethereum.org/@launchpad/goerli"
+                to="https://notes.ethereum.org/@launchpad/holesky"
               >
-                <FormattedMessage defaultMessage="How to join the public withdrawals testnet" />
+                <FormattedMessage defaultMessage="How to join the public testnet" />
               </Link>
             </li>
             <li>

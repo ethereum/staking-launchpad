@@ -18,19 +18,13 @@ import {
 
 export enum NetworkChainId {
   'Mainnet' = 1,
-  'Ropsten' = 3,
-  'Goerli' = 5,
   'Sepolia' = 11155111,
-  'Zhejiang' = 1337803,
   'Holesky' = 17000,
 }
 
 export const NetworkChainIdDict: { [id: string]: number } = {
   Mainnet: 1,
-  Ropsten: 3,
-  Goerli: 5,
   Sepolia: 11155111,
-  Zhejiang: 1337803,
   Holesky: 17000,
 };
 
@@ -41,25 +35,15 @@ export const NetworkChainIdDict: { [id: string]: number } = {
 
 const supportedNetworks = [
   NetworkChainId.Mainnet,
-  NetworkChainId.Ropsten,
-  NetworkChainId.Goerli,
   NetworkChainId.Sepolia,
-  NetworkChainId.Zhejiang,
   NetworkChainId.Holesky,
 ];
 
 // FIXME: disabled Portis for now
-const portisSupportedNetworks = [
-  NetworkChainId.Goerli,
-  NetworkChainId.Mainnet,
-  NetworkChainId.Ropsten,
-];
+const portisSupportedNetworks = [NetworkChainId.Mainnet];
 
 enum Testnet {
-  'Ropsten',
-  'Goerli',
   'Sepolia',
-  'Zhejiang',
   'Holesky',
 }
 
@@ -68,18 +52,16 @@ enum Mainnet {
 }
 
 export const NetworkNameToChainId: { [key: string]: NetworkChainId } = {
-  Mainnet: NetworkChainId.Mainnet,
-  Ropsten: NetworkChainId.Ropsten,
-  Goerli: NetworkChainId.Goerli,
-  Zhejiang: NetworkChainId.Zhejiang,
   Holesky: NetworkChainId.Holesky,
+  Mainnet: NetworkChainId.Mainnet,
+  Sepolia: NetworkChainId.Sepolia,
 };
 
 export const TARGET_NETWORK_CHAIN_ID = IS_MAINNET
   ? NetworkChainId.Mainnet
   : NetworkNameToChainId[TESTNET_LAUNCHPAD_NAME];
 
-export const IS_GOERLI = TARGET_NETWORK_CHAIN_ID === NetworkChainId.Goerli;
+export const IS_HOLESKY = TARGET_NETWORK_CHAIN_ID === NetworkChainId.Holesky;
 
 export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 
@@ -95,7 +77,7 @@ export const portis: PortisConnector = new PortisConnector({
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({
   apiKey: FORTMATIC_KEY as string,
-  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Goerli,
+  chainId: IS_MAINNET ? NetworkChainId.Mainnet : NetworkChainId.Holesky,
   rpcUrl: RPC_URL,
 });
 

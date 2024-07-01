@@ -208,7 +208,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           defaultMessage:
             'Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)',
           description:
-            '{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network',
+            '{minTopupValue} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network',
         },
         { TICKER_NAME, minTopupValue }
       );

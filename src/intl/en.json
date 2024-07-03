@@ -66,6 +66,10 @@
   "/WenEu": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending the {pricePerValidator} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
   },
+  "/Z5X80": {
+    "description": "{testnet} shows '--config holesky' terminal command",
+    "message": "Use {testnet} to sync the Holesky testnet."
+  },
   "/e+qAC": {
     "message": "withdrawable epoch"
   },
@@ -267,9 +271,6 @@
   "2ebz/N": {
     "message": "excess balance withdrawal"
   },
-  "2kkNXD": {
-    "message": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB."
-  },
   "2rflCq": {
     "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
@@ -303,9 +304,6 @@
   "3KP7+U": {
     "message": "Command line with flags"
   },
-  "3NHygY": {
-    "message": "Testing on Goerli"
-  },
   "3ODqP9": {
     "message": "Depositing more than {pricePerValidator} ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above {pricePerValidator} ETH, as each validator is limited to an {effectiveBalance} of {pricePerValidator}. This means that staking is done in {pricePerValidator} ETH increments, each with its own set of keys and balance."
   },
@@ -320,9 +318,6 @@
   },
   "3SOKyg": {
     "message": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
-  },
-  "3URRZK": {
-    "message": "Geth on Goerli documentation"
   },
   "3aykgN": {
     "message": "Your validator will also receives unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 500,000 validators, each validator will {average} a block proposal every 70 days."
@@ -434,8 +429,15 @@
   "6eA+mW": {
     "message": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
   },
+  "6glcFX": {
+    "message": "How to join the public testnet"
+  },
   "6nh4de": {
     "message": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
+  },
+  "6stJTU": {
+    "description": "{testnet} shows '--network=holesky' terminal command",
+    "message": "Use {testnet} to sync the Holesky testnet."
   },
   "6vdHjj": {
     "message": "{withdrawalCredentials} is a 32-byte field associated with every validator, initially set during deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawal credentials: BLS credentials (Type 0, or {type0}) and execution (Ethereum address) credentials (Type 1, or {type1})."
@@ -528,10 +530,6 @@
   },
   "8WtyrD": {
     "message": "Spanish"
-  },
-  "8XQmxX": {
-    "description": "{goerli} shows '--chain goerli' terminal command",
-    "message": "Use {goerli} to sync the Goerli testnet."
   },
   "8boRAk": {
     "message": "slashings"
@@ -682,6 +680,10 @@
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
   },
+  "Aq9Prx": {
+    "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network",
+    "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
+  },
   "Aw1mMs": {
     "message": "Top up validator"
   },
@@ -823,10 +825,6 @@
   "DmKneH": {
     "message": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
   },
-  "DoCZT1": {
-    "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or GöETH depending on network",
-    "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
-  },
   "DsJ/Mk": {
     "message": "Don’t just trust the contract address listed on this website."
   },
@@ -846,6 +844,10 @@
   "EIUapL": {
     "description": "{deposit} = 'deposit' styled as code",
     "message": "Use the terminal to move into the directory that contains the {deposit} executable"
+  },
+  "EMCxvJ": {
+    "description": "{testnet} shows '--chain holesky' terminal command",
+    "message": "Use {testnet} to sync the Holesky testnet."
   },
   "EPCHZV": {
     "message": "If you lose your signing key, your validator can no longer propose or attest."
@@ -1205,10 +1207,6 @@
   "LeHQQm": {
     "message": "Validator FAQs"
   },
-  "LibVut": {
-    "description": "{goerli} shows '--config goerli' terminal command",
-    "message": "Use {goerli} to sync the Goerli testnet."
-  },
   "Ljo9dF": {
     "message": "Bulgarian"
   },
@@ -1263,6 +1261,9 @@
   },
   "MaZo9k": {
     "message": "Wagyu Key Gen GUI"
+  },
+  "MalGck": {
+    "message": "Geth on Holesky documentation"
   },
   "Mb3npQ": {
     "message": "Using the terminal"
@@ -1424,10 +1425,6 @@
   "PglO1W": {
     "message": "Formal verification report"
   },
-  "PmrcLE": {
-    "description": "Links to the documentation for the execution client Nethermind, specifically for testnet Goerli",
-    "message": "Nethermind on Goerli documentation"
-  },
   "PoBIK+": {
     "message": "You'll need SSD storage to consistently handle necessary read/write speeds."
   },
@@ -1520,6 +1517,10 @@
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
+  },
+  "RqcJGJ": {
+    "description": "Link to documentation about execution client Besu, specifically for Holesky testnet",
+    "message": "Besu on Holesky documentation"
   },
   "Rr2lI/": {
     "message": "You are responsible for this transaction!"
@@ -1614,9 +1615,6 @@
   },
   "U0yY/A": {
     "message": "View extensive client comparison"
-  },
-  "U6jzBs": {
-    "message": "How to join the public withdrawals testnet"
   },
   "U7AOxj": {
     "message": "greater than 50%"
@@ -1722,6 +1720,13 @@
   "WTPUDZ": {
     "message": "These steps are optional but are recommended to optimize your node."
   },
+  "WVsePo": {
+    "message": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB in June 2024."
+  },
+  "WYlfSC": {
+    "description": "Links to the documentation for the execution client Nethermind, specifically for testnet Holesky",
+    "message": "Nethermind on Holesky documentation"
+  },
   "WdDGn6": {
     "message": "An implementation of the consensus protocol with a focus on usability, security, and reliability. Prysm is developed by Prysmatic Labs, a company with the sole focus on the development of their client."
   },
@@ -1760,10 +1765,6 @@
   },
   "XRUCUL": {
     "message": "Once an execution address has been provided by signing the BLS To Execution Change message, the withdrawal keys derived from your validator mnemonic are no longer utilized. Therefore, providing an execution address that you control as early as possible is the recommended option for most users, and is the default path for those who join via this site's onboarding process. This protects you against permanent loss of all funds in the event you are unable to recover your mnemonic and withdrawal keys."
-  },
-  "XRxD8r": {
-    "description": "Link to documentation about execution client Besu, specifically for Goerli testnet",
-    "message": "Besu on Goerli documentation"
   },
   "XVRQoq": {
     "message": "Since the Merge, third-party providers (such as Infura and Alchemy) are no longer viable options to outsource execution layer responsibilities. All stakers must run both an execution and a consensus client to properly attest to the network."
@@ -2166,9 +2167,6 @@
   "gHJegi": {
     "message": "Validators still need to complete their validation duties until they are exited"
   },
-  "gN9D/h": {
-    "message": "Use {goerli} to sync the Goerli testnet."
-  },
   "gQkd2y": {
     "message": "Generate deposit keys using the Ethereum Foundation deposit tool"
   },
@@ -2498,6 +2496,9 @@
   "lrdlY6": {
     "message": "File uploaded"
   },
+  "m0FJdr": {
+    "message": "Use {testnet} to sync the Holesky testnet."
+  },
   "mAZHi2": {
     "message": "You can broadcast your signed message from the command line using the {curl} command:"
   },
@@ -2672,10 +2673,6 @@
   },
   "ox304v": {
     "message": "An error occurred"
-  },
-  "ozEkVY": {
-    "description": "{goerli} shows '--network=goerli' terminal command",
-    "message": "Use {goerli} to sync the Goerli testnet."
   },
   "p+kDTB": {
     "message": "Ethereum users are used to transactions being executed in a manual way—if you want to transfer funds, you have to sign a transaction and pay the gas."
@@ -2962,6 +2959,9 @@
   "up+5YH": {
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
     "message": "Are there recent {ethAmount} deposits?"
+  },
+  "v0ygo6": {
+    "message": "Testing on Holesky"
   },
   "vBJ79e": {
     "message": "I've simulated how to safely migrate from one execution client to another."

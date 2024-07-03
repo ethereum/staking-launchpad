@@ -11,7 +11,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
+import { IS_HOLESKY } from '../../ConnectWallet/web3Utils';
 import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
@@ -67,28 +67,28 @@ export const NethermindDetails = () => (
           </Link>
         </>
       )}
-      {!IS_MAINNET && IS_GOERLI && (
+      {!IS_MAINNET && IS_HOLESKY && (
         <>
           <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Goerli" />
+            <FormattedMessage defaultMessage="Testing on Holesky" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              defaultMessage="Use {testnet} to sync the Holesky testnet."
               values={{
-                goerli: <Code className="mt20">--config goerli</Code>,
+                testnet: <Code className="mt20">--config holesky</Code>,
               }}
-              description="{goerli} shows '--config goerli' terminal command"
+              description="{testnet} shows '--config holesky' terminal command"
             />
           </Text>
           <Link
             primary
             className="mt20"
-            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#goerli-goerli"
+            to="https://docs.nethermind.io/get-started/installing-nethermind/#supported-networks"
           >
             <FormattedMessage
-              defaultMessage="Nethermind on Goerli documentation"
-              description="Links to the documentation for the execution client Nethermind, specifically for testnet Goerli"
+              defaultMessage="Nethermind on Holesky documentation"
+              description="Links to the documentation for the execution client Nethermind, specifically for testnet Holesky"
             />
           </Link>
         </>

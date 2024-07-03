@@ -167,6 +167,20 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "/Z5X80": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " to sync the Holesky testnet."
+    }
+  ],
   "/e+qAC": [
     {
       "type": 0,
@@ -687,12 +701,6 @@
       "value": "excess balance withdrawal"
     }
   ],
-  "2kkNXD": [
-    {
-      "type": 0,
-      "value": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB."
-    }
-  ],
   "2rflCq": [
     {
       "type": 0,
@@ -795,12 +803,6 @@
       "value": "Command line with flags"
     }
   ],
-  "3NHygY": [
-    {
-      "type": 0,
-      "value": "Testing on Goerli"
-    }
-  ],
   "3ODqP9": [
     {
       "type": 0,
@@ -869,12 +871,6 @@
     {
       "type": 0,
       "value": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
-    }
-  ],
-  "3URRZK": [
-    {
-      "type": 0,
-      "value": "Geth on Goerli documentation"
     }
   ],
   "3aykgN": [
@@ -1205,10 +1201,30 @@
       "value": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
     }
   ],
+  "6glcFX": [
+    {
+      "type": 0,
+      "value": "How to join the public testnet"
+    }
+  ],
   "6nh4de": [
     {
       "type": 0,
       "value": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
+    }
+  ],
+  "6stJTU": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " to sync the Holesky testnet."
     }
   ],
   "6vdHjj": [
@@ -1457,20 +1473,6 @@
     {
       "type": 0,
       "value": "Spanish"
-    }
-  ],
-  "8XQmxX": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Goerli testnet."
     }
   ],
   "8boRAk": [
@@ -1871,6 +1873,28 @@
       "value": "Become a validator with Lighthouse"
     }
   ],
+  "Aq9Prx": [
+    {
+      "type": 0,
+      "value": "Validator effective balance is currently maxed out. If desired, you may add "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (the minimum allowed by the deposit contract)"
+    }
+  ],
   "Aw1mMs": [
     {
       "type": 0,
@@ -2183,28 +2207,6 @@
       "value": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
     }
   ],
-  "DoCZT1": [
-    {
-      "type": 0,
-      "value": "Validator effective balance is currently maxed out. If desired, you may add "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (the minimum allowed by the deposit contract)"
-    }
-  ],
   "DsJ/Mk": [
     {
       "type": 0,
@@ -2255,6 +2257,20 @@
     {
       "type": 0,
       "value": " executable"
+    }
+  ],
+  "EMCxvJ": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " to sync the Holesky testnet."
     }
   ],
   "EPCHZV": [
@@ -3121,20 +3137,6 @@
       "value": "Validator FAQs"
     }
   ],
-  "LibVut": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Goerli testnet."
-    }
-  ],
   "Ljo9dF": [
     {
       "type": 0,
@@ -3261,6 +3263,12 @@
     {
       "type": 0,
       "value": "Wagyu Key Gen GUI"
+    }
+  ],
+  "MalGck": [
+    {
+      "type": 0,
+      "value": "Geth on Holesky documentation"
     }
   ],
   "Mb3npQ": [
@@ -3733,12 +3741,6 @@
       "value": "Formal verification report"
     }
   ],
-  "PmrcLE": [
-    {
-      "type": 0,
-      "value": "Nethermind on Goerli documentation"
-    }
-  ],
   "PoBIK+": [
     {
       "type": 0,
@@ -4001,6 +4003,12 @@
       "value": "How many validators would you like to run?"
     }
   ],
+  "RqcJGJ": [
+    {
+      "type": 0,
+      "value": "Besu on Holesky documentation"
+    }
+  ],
   "Rr2lI/": [
     {
       "type": 0,
@@ -4229,12 +4237,6 @@
     {
       "type": 0,
       "value": "View extensive client comparison"
-    }
-  ],
-  "U6jzBs": [
-    {
-      "type": 0,
-      "value": "How to join the public withdrawals testnet"
     }
   ],
   "U7AOxj": [
@@ -4521,6 +4523,18 @@
       "value": "These steps are optional but are recommended to optimize your node."
     }
   ],
+  "WVsePo": [
+    {
+      "type": 0,
+      "value": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB in June 2024."
+    }
+  ],
+  "WYlfSC": [
+    {
+      "type": 0,
+      "value": "Nethermind on Holesky documentation"
+    }
+  ],
   "WdDGn6": [
     {
       "type": 0,
@@ -4613,12 +4627,6 @@
     {
       "type": 0,
       "value": "Once an execution address has been provided by signing the BLS To Execution Change message, the withdrawal keys derived from your validator mnemonic are no longer utilized. Therefore, providing an execution address that you control as early as possible is the recommended option for most users, and is the default path for those who join via this site's onboarding process. This protects you against permanent loss of all funds in the event you are unable to recover your mnemonic and withdrawal keys."
-    }
-  ],
-  "XRxD8r": [
-    {
-      "type": 0,
-      "value": "Besu on Goerli documentation"
     }
   ],
   "XVRQoq": [
@@ -5667,20 +5675,6 @@
       "value": "Validators still need to complete their validation duties until they are exited"
     }
   ],
-  "gN9D/h": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Goerli testnet."
-    }
-  ],
   "gQkd2y": [
     {
       "type": 0,
@@ -6543,6 +6537,20 @@
       "value": "File uploaded"
     }
   ],
+  "m0FJdr": [
+    {
+      "type": 0,
+      "value": "Use "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " to sync the Holesky testnet."
+    }
+  ],
   "mAZHi2": [
     {
       "type": 0,
@@ -6985,20 +6993,6 @@
     {
       "type": 0,
       "value": "An error occurred"
-    }
-  ],
-  "ozEkVY": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Goerli testnet."
     }
   ],
   "p+kDTB": [
@@ -7875,6 +7869,12 @@
     {
       "type": 0,
       "value": " deposits?"
+    }
+  ],
+  "v0ygo6": [
+    {
+      "type": 0,
+      "value": "Testing on Holesky"
     }
   ],
   "vBJ79e": [

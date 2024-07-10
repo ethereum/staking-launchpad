@@ -21,7 +21,7 @@ export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INST
 export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://nimbus.guide/quick-start.html';
 export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/install/install-with-script';
 export const TEKU_INSTALLATION_URL      = process.env.REACT_APP_TEKU_INSTALLATION_URL    || 'https://docs.teku.consensys.io/get-started/install';
-export const LODESTAR_INSTALLATION_URL  = process.env.REACT_APP_LODESTAR_INSTALLATION_URL  || 'https://chainsafe.github.io/lodestar/install/docker/';
+export const LODESTAR_INSTALLATION_URL  = process.env.REACT_APP_LODESTAR_INSTALLATION_URL  || 'https://chainsafe.github.io/lodestar/run/getting-started/installation';
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
 

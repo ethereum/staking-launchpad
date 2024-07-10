@@ -51,7 +51,7 @@ export const LodestarDetails = ({ shortened }: { shortened?: boolean }) => (
           </SectionTitle>
           <Link
             primary
-            to="https://chainsafe.github.io/lodestar/usage/validator-management/"
+            to="https://chainsafe.github.io/lodestar/run/validator-management/vc-configuration"
           >
             <FormattedMessage defaultMessage="Lodestar validator key management documentation" />
           </Link>

@@ -97,8 +97,15 @@ export const Link = (props: LinkProps) => {
   const { locale } = useIntl();
   const isExternal = to && to.includes('http');
   // Check for ethereum.org root domain links
-  const ETHEREUM_DOT_ORG = `https://ethereum.org`;
-  const isEthereumDotOrg = to && to.includes(ETHEREUM_DOT_ORG);
+  const ETHEREUM_DOT_ORG_HOSTS = ['ethereum.org', 'www.ethereum.org'];
+  let isEthereumDotOrg = false;
+  try {
+    const url = new URL(to);
+    isEthereumDotOrg = ETHEREUM_DOT_ORG_HOSTS.includes(url.host);
+  } catch (e) {
+    // Invalid URL
+    isEthereumDotOrg = false;
+  }
   const isHash = isHashLink(to);
 
   if (isHash) {

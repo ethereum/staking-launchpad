@@ -36,7 +36,7 @@ export const NethermindDetails = () => (
       <Text>
         <FormattedMessage defaultMessage="The Nethermind documentation explains how to download and install the client." />
       </Text>
-      <Link primary to="https://downloads.nethermind.io/" className="mt10">
+      <Link primary to="https://docs.nethermind.io/get-started/installing-nethermind" className="mt10">
         <FormattedMessage defaultMessage="Nethermind installation documentation" />
       </Link>
     </section>
@@ -61,7 +61,7 @@ export const NethermindDetails = () => (
           <Link
             primary
             className="mt20"
-            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#mainnet"
+            to="https://docs.nethermind.io/get-started/running-node/#ethereum"
           >
             --config mainnet documentation
           </Link>
@@ -84,7 +84,7 @@ export const NethermindDetails = () => (
           <Link
             primary
             className="mt20"
-            to="https://docs.nethermind.io/get-started/installing-nethermind/#supported-networks"
+            to="https://docs.nethermind.io/get-started/running-node/#ethereum"
           >
             <FormattedMessage
               defaultMessage="Nethermind on Holesky documentation"
@@ -110,7 +110,7 @@ export const NethermindDetails = () => (
       <Link
         primary
         className="mt20"
-        to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
+        to="https://docs.nethermind.io/interacting/json-rpc-server"
       >
         <FormattedMessage defaultMessage="--JsonRpc.Enabled documentation" />
       </Link>
@@ -134,7 +134,7 @@ export const Nethermind = () => {
           <SectionTitle level={2} className="mb5">
             <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
-          <Link primary to="https://docs.nethermind.io/nethermind/">
+          <Link primary to="https://docs.nethermind.io">
             <FormattedMessage defaultMessage="Documentation on running Nethermind" />
           </Link>
         </section>

@@ -286,7 +286,7 @@ export const Checklist = () => {
       discord: 'https://discord.gg/PaCMRFdvWT',
       ...defaultExecutionPorts,
       jwtUrl:
-        'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
+        'https://docs.nethermind.io/get-started/running-node/consensus-clients#configuring-json-rpc-interface',
     },
     {
       header: 'Reth',

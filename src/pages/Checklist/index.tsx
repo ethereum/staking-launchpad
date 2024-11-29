@@ -275,7 +275,7 @@ export const Checklist = () => {
       header: 'Nethermind',
       text: formatMessage({
         defaultMessage:
-          'Nethermind is a robust client built on .NET core designed for performance, versatility and customizability.',
+          'The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing.',
       }),
       imgUrl: NethermindBg,
       url: routesEnum.nethermind,

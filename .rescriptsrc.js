@@ -1,12 +1,12 @@
 module.exports = [
   [
-    'use-babel-config',
+    '.env.mainnet',
     {
       presets: ['react-app'],
       plugins: [
         'react-require',
         [
-          'babel-plugin-formatjs',
+          '.env.mainnet',
           {
             idInterpolationPattern: '[sha512:contenthash:base64:6]',
             ast: true,

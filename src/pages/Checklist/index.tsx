@@ -22,6 +22,7 @@ import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
 import TekuBg from '../../static/teku-bg.png';
+import LodestarBg from '../../static/lodestar-bg.png';
 import BesuBg from '../../static/besu-bg.png';
 import NethermindBg from '../../static/nethermind-bg.png';
 import RethBg from '../../static/reth-bg.png';
@@ -416,6 +417,26 @@ export const Checklist = () => {
       feeRecipientUrl:
         'https://docs.teku.consensys.net/reference/cli#validators-proposer-default-fee-recipient',
       metricsUrl: 'https://docs.teku.consensys.net/how-to/monitor/use-metrics',
+    },
+    {
+      header: 'Lodestar',
+      text: formatMessage({
+        defaultMessage:
+          'Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping.',
+      }),
+      imgUrl: TekuBg,
+      url: routesEnum.teku,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Lodestar',
+      }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/yjyvFRP',
+      ...defaultConsensusPorts,
+      jwtUrl:
+        'https://chainsafe.github.io/lodestar/run/beacon-management/starting-a-node#configure-the-lodestar-jwt-authentication-token',
+      feeRecipientUrl:
+        'https://chainsafe.github.io/lodestar/run/validator-management/vc-configuration#configuring-the-fee-recipient-address',
+      metricsUrl: 'https://chainsafe.github.io/lodestar/run/logging-and-metrics/prometheus-grafana',
     },
   ]);
 

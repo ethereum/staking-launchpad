@@ -116,6 +116,9 @@
   "09ZPhN": {
     "message": "Withdrawal credentials:"
   },
+  "0Em8Cd": {
+    "message": "As of {date}, the Mainnet execution chain data alone is approaching 2TB (growing at >1GB/day). A 2TB SSD is a minimum requirement, while 4TB is now recommended."
+  },
   "0FTs1T": {
     "message": "not"
   },
@@ -590,6 +593,9 @@
   },
   "9h8yTf": {
     "message": "A “withdrawable epoch” will also be calculated, which is 256 epochs after the calculated exit epoch (~27.3 hours later). When this epoch is reached, your validator will be eligible for a {fullWithdrawal} of all remaining funds."
+  },
+  "9jnVGr": {
+    "message": "Typically a minimum of 32 GB RAM is required, with 64 GB being recommended."
   },
   "9k7tO9": {
     "message": "Wrong network"
@@ -2439,9 +2445,6 @@
   },
   "l/uCcX": {
     "message": "You're on the testnet"
-  },
-  "l3ztMu": {
-    "message": "As of {date}, you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
   },
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."

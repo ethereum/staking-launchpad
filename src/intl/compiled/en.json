@@ -311,6 +311,20 @@
       "value": "Withdrawal credentials:"
     }
   ],
+  "0Em8Cd": [
+    {
+      "type": 0,
+      "value": "As of "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", the Mainnet execution chain data alone is approaching 2TB (growing at >1GB/day). A 2TB SSD is a minimum requirement, while 4TB is now recommended."
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
@@ -1641,6 +1655,12 @@
     {
       "type": 0,
       "value": " of all remaining funds."
+    }
+  ],
+  "9jnVGr": [
+    {
+      "type": 0,
+      "value": "Typically a minimum of 32 GB RAM is required, with 64 GB being recommended."
     }
   ],
   "9k7tO9": [
@@ -6371,20 +6391,6 @@
     {
       "type": 0,
       "value": "You're on the testnet"
-    }
-  ],
-  "l3ztMu": [
-    {
-      "type": 0,
-      "value": "As of "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": ", you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
     }
   ],
   "l4nLft": [

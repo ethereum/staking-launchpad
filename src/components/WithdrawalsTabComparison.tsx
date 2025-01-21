@@ -71,8 +71,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
           <ul className="mb20">
             <li>
               <FormattedMessage
-                defaultMessage="{stakingDepositCli}: if you used the “eth1 withdrawal address” ({eth1WithdrawalAddress})
-                flag when generating your keys, you're good to go"
+                defaultMessage="{stakingDepositCli}: if you added a withdrawal address ({eth1WithdrawalAddress}, {executionAddress}, or {withdrawalAddress} flags) when generating your keys, you're good to go"
                 values={{
                   stakingDepositCli: (
                     <strong>
@@ -82,6 +81,8 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
                   eth1WithdrawalAddress: (
                     <HashCode>--eth1_withdrawal_address</HashCode>
                   ),
+                  executionAddress: <HashCode>--execution_address</HashCode>,
+                  withdrawalAddress: <HashCode>--withdrawal_address</HashCode>,
                 }}
               />
             </li>

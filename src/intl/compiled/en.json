@@ -715,6 +715,36 @@
       "value": "excess balance withdrawal"
     }
   ],
+  "2hZ+qP": [
+    {
+      "type": 0,
+      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", you can use the "
+    },
+    {
+      "type": 1,
+      "value": "ethstakerDepositCLI"
+    },
+    {
+      "type": 0,
+      "value": " tool to generate the signed “BLS To Execution Change” ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
+    }
+  ],
   "2rflCq": [
     {
       "type": 0,
@@ -2099,12 +2129,6 @@
     {
       "type": 0,
       "value": "Proof of stake"
-    }
-  ],
-  "CGMYrU": [
-    {
-      "type": 0,
-      "value": "Staking Deposit CLI releases"
     }
   ],
   "CPl2hh": [
@@ -4589,6 +4613,40 @@
       "value": " validators"
     }
   ],
+  "WO6Iek": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": if you added a withdrawal address ("
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", or "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " flags) when generating your keys, you're good to go"
+    }
+  ],
   "WTPUDZ": [
     {
       "type": 0,
@@ -4913,12 +4971,6 @@
     {
       "type": 0,
       "value": "Type the following lines into the terminal window:"
-    }
-  ],
-  "Yo9B64": [
-    {
-      "type": 0,
-      "value": "execution layer (Eth1) address"
     }
   ],
   "YqsgWz": [
@@ -6059,6 +6111,12 @@
       "value": "network"
     }
   ],
+  "ijnFHe": [
+    {
+      "type": 0,
+      "value": "execution layer address"
+    }
+  ],
   "im7uMt": [
     {
       "type": 0,
@@ -6081,28 +6139,6 @@
     {
       "type": 0,
       "value": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
-    }
-  ],
-  "iqy/7c": [
-    {
-      "type": 0,
-      "value": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", you can use the staking deposit CLI tool to generate the signed “BLS To Execution Change” ("
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ") message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
     }
   ],
   "isGKnz": [
@@ -6273,6 +6309,12 @@
     {
       "type": 0,
       "value": "Install dependencies:"
+    }
+  ],
+  "k7rnZP": [
+    {
+      "type": 0,
+      "value": "EthStaker Deposit CLI releases"
     }
   ],
   "k8bkck": [
@@ -8359,24 +8401,6 @@
     {
       "type": 0,
       "value": "More on Lighthouse and Sigma Prime"
-    }
-  ],
-  "zBl8d5": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": if you used the “eth1 withdrawal address” ("
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": ") flag when generating your keys, you're good to go"
     }
   ],
   "zGkAVo": [

@@ -274,6 +274,9 @@
   "2ebz/N": {
     "message": "excess balance withdrawal"
   },
+  "2hZ+qP": {
+    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {executionAddress}, you can use the {ethstakerDepositCLI} tool to generate the signed “BLS To Execution Change” ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
+  },
   "2rflCq": {
     "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
@@ -759,9 +762,6 @@
   },
   "CF9vMR": {
     "message": "Proof of stake"
-  },
-  "CGMYrU": {
-    "message": "Staking Deposit CLI releases"
   },
   "CPl2hh": {
     "message": "I have reviewed the checklist and understand how withdrawals work."
@@ -1730,6 +1730,9 @@
   "WMLn/w": {
     "message": "{totalTxCount} validators"
   },
+  "WO6Iek": {
+    "message": "{stakingDepositCli}: if you added a withdrawal address ({eth1WithdrawalAddress}, {executionAddress}, or {withdrawalAddress} flags) when generating your keys, you're good to go"
+  },
   "WTPUDZ": {
     "message": "These steps are optional but are recommended to optimize your node."
   },
@@ -1851,9 +1854,6 @@
   },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
-  },
-  "Yo9B64": {
-    "message": "execution layer (Eth1) address"
   },
   "YqsgWz": {
     "message": "Slovenian"
@@ -2304,6 +2304,9 @@
     "description": "{network} inserts the testnet name, only if on the testnet",
     "message": "Staking Launchpad {network}"
   },
+  "ijnFHe": {
+    "message": "execution layer address"
+  },
   "im7uMt": {
     "message": "Consensus Layer Validator Client (VC)"
   },
@@ -2315,9 +2318,6 @@
   },
   "iqJ3LM": {
     "message": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
-  },
-  "iqy/7c": {
-    "message": "To enable your Beacon Chain validator(s) to automatically withdraw balances to your {executionAddress}, you can use the staking deposit CLI tool to generate the signed “BLS To Execution Change” ({signed}) message JSON file. This message includes the request to change your old BLS withdrawal credentials to the new withdrawal credentials in execution address format."
   },
   "isGKnz": {
     "message": "Documentation"
@@ -2394,6 +2394,9 @@
   },
   "k67L48": {
     "message": "Install dependencies:"
+  },
+  "k7rnZP": {
+    "message": "EthStaker Deposit CLI releases"
   },
   "k8bkck": {
     "message": "EIP-4895, titled {eip4895}, implements a design that simplified this whole process for stakers."
@@ -3175,9 +3178,6 @@
   },
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"
-  },
-  "zBl8d5": {
-    "message": "{stakingDepositCli}: if you used the “eth1 withdrawal address” ({eth1WithdrawalAddress}) flag when generating your keys, you're good to go"
   },
   "zGkAVo": {
     "message": "At the other end of the spectrum, if your balance is closer to 31 ETH, it’s probably not worth adding the extra ETH required to get back to 32."

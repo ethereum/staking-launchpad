@@ -1971,6 +1971,44 @@
       "value": "days"
     }
   ],
+  "BhWRLC": [
+    {
+      "type": 0,
+      "value": "Importantly, as a validator you'll need to post "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " transaction to the "
+    },
+    {
+      "type": 1,
+      "value": "DEPOSIT_CONTRACT"
+    },
+    {
+      "type": 0,
+      "value": " on the "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
+    }
+  ],
   "Bj5yI5": [
     {
       "type": 0,
@@ -2865,6 +2903,20 @@
     {
       "type": 0,
       "value": "Nimbus installation documentation"
+    }
+  ],
+  "J9BaKo": [
+    {
+      "type": 0,
+      "value": "Are there recent deposits of at least "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": "?"
     }
   ],
   "JAiV0o": [
@@ -5359,36 +5411,6 @@
       "value": "Where can I find troubleshooting support?"
     }
   ],
-  "dtVSdl": [
-    {
-      "type": 0,
-      "value": "Importantly, as a validator you'll need to post "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " transaction to the deposit contract on the "
-    },
-    {
-      "type": 1,
-      "value": "NETWORK_NAME"
-    },
-    {
-      "type": 0,
-      "value": " execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
-    }
-  ],
   "dvr19k": [
     {
       "type": 0,
@@ -6203,6 +6225,12 @@
       "value": "Nimbus documentation"
     }
   ],
+  "jztMM9": [
+    {
+      "type": 0,
+      "value": "deposit contract"
+    }
+  ],
   "k/4DOL": [
     {
       "type": 0,
@@ -6437,20 +6465,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "lM/dEI": [
-    {
-      "type": 0,
-      "value": "Does the site asking you for your "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " deposit have a URL you expect?"
     }
   ],
   "lQzdpT": [
@@ -6903,28 +6917,6 @@
       "value": "More on Danksharding"
     }
   ],
-  "ogbG7r": [
-    {
-      "type": 0,
-      "value": "To become a validator on the Beacon Chain, you need to deposit "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " per validator that you wish to run."
-    }
-  ],
   "ohspQX": [
     {
       "type": 0,
@@ -7317,6 +7309,28 @@
     {
       "type": 0,
       "value": " is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
+    }
+  ],
+  "r0MJxb": [
+    {
+      "type": 0,
+      "value": "To become a validator on the Beacon Chain, you need to deposit a minimum of "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " per validator that you wish to run."
     }
   ],
   "r2BH1M": [
@@ -7857,20 +7871,6 @@
       "value": "Become a validator with Nimbus"
     }
   ],
-  "up+5YH": [
-    {
-      "type": 0,
-      "value": "Are there recent "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " deposits?"
-    }
-  ],
   "v0ygo6": [
     {
       "type": 0,
@@ -8047,6 +8047,12 @@
     {
       "type": 0,
       "value": "We strongly recommended you complete these steps on the current testnet before Mainnet."
+    }
+  ],
+  "x4HNJL": [
+    {
+      "type": 0,
+      "value": "Does the site asking you for your deposit have a URL you expect?"
     }
   ],
   "xDyl3T": [

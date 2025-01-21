@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
-import { FormattedMessage, useIntl } from 'react-intl';
 import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
 
 const SectionTitle = styled(Heading)`
@@ -31,12 +31,8 @@ export const Phishing = () => {
           <li>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Does the site asking you for your {ethAmount} deposit have a URL you
+                defaultMessage="Does the site asking you for your deposit have a URL you
                 expect?"
-                values={{
-                  ethAmount: `${PRICE_PER_VALIDATOR} ETH`,
-                }}
-                description="{ethAmount} will generally refer to 32 ETH"
               />
             </Text>
           </li>
@@ -87,7 +83,7 @@ export const Phishing = () => {
               <li>
                 <Text className="mt10">
                   <FormattedMessage
-                    defaultMessage="Are there recent {ethAmount} deposits?"
+                    defaultMessage="Are there recent deposits of at least {ethAmount}?"
                     values={{
                       ethAmount: `${PRICE_PER_VALIDATOR} ETH`,
                     }}

@@ -715,6 +715,9 @@
   "Bc20la": {
     "message": "days"
   },
+  "BhWRLC": {
+    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the {DEPOSIT_CONTRACT} on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
+  },
   "Bj5yI5": {
     "message": "Effective balance"
   },
@@ -1089,6 +1092,10 @@
   },
   "J7T0SR": {
     "message": "Nimbus installation documentation"
+  },
+  "J9BaKo": {
+    "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
+    "message": "Are there recent deposits of at least {ethAmount}?"
   },
   "JAiV0o": {
     "message": "In other words, to keep you honest, your actions need to have financial consequences."
@@ -2058,9 +2065,6 @@
   "dprf8W": {
     "message": "Where can I find troubleshooting support?"
   },
-  "dtVSdl": {
-    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the deposit contract on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
-  },
   "dvr19k": {
     "message": "Setup"
   },
@@ -2370,6 +2374,9 @@
   "jytPQU": {
     "message": "Nimbus documentation"
   },
+  "jztMM9": {
+    "message": "deposit contract"
+  },
   "k/4DOL": {
     "message": "Full withdrawal"
   },
@@ -2460,10 +2467,6 @@
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",
     "message": "You can install pip using a Linux Package Manager like {apt} or {yum}."
-  },
-  "lM/dEI": {
-    "description": "{ethAmount} will generally refer to 32 ETH",
-    "message": "Does the site asking you for your {ethAmount} deposit have a URL you expect?"
   },
   "lQzdpT": {
     "description": "this is used as a command line flag, short for \"number of validators\"",
@@ -2644,9 +2647,6 @@
   "odjJFL": {
     "message": "More on Danksharding"
   },
-  "ogbG7r": {
-    "message": "To become a validator on the Beacon Chain, you need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} per validator that you wish to run."
-  },
   "ohspQX": {
     "message": "Responsibilities"
   },
@@ -2782,6 +2782,9 @@
   },
   "r/G+qN": {
     "message": "A {fullWithdrawal} is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
+  },
+  "r0MJxb": {
+    "message": "To become a validator on the Beacon Chain, you need to deposit a minimum of {PRICE_PER_VALIDATOR} {TICKER_NAME} per validator that you wish to run."
   },
   "r2BH1M": {
     "message": "Configure Prysm"
@@ -2956,10 +2959,6 @@
   "ukfwum": {
     "message": "Become a validator with Nimbus"
   },
-  "up+5YH": {
-    "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
-    "message": "Are there recent {ethAmount} deposits?"
-  },
   "v0ygo6": {
     "message": "Testing on Holesky"
   },
@@ -3042,6 +3041,9 @@
   },
   "x4/9vY": {
     "message": "We strongly recommended you complete these steps on the current testnet before Mainnet."
+  },
+  "x4HNJL": {
+    "message": "Does the site asking you for your deposit have a URL you expect?"
   },
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",

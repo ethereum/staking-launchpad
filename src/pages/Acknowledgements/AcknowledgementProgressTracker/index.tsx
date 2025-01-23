@@ -34,9 +34,6 @@ export const _AcknowledgementProgressTracker = ({
     [AcknowledgementIdsEnum.introSection]: formatMessage({
       defaultMessage: 'Proof of stake',
     }),
-    [AcknowledgementIdsEnum.deposit]: formatMessage({
-      defaultMessage: 'Deposit',
-    }),
     [AcknowledgementIdsEnum.terminal]: formatMessage({
       defaultMessage: 'The terminal',
     }),
@@ -49,8 +46,11 @@ export const _AcknowledgementProgressTracker = ({
     [AcknowledgementIdsEnum.keyManagement]: formatMessage({
       defaultMessage: 'Key management',
     }),
+    [AcknowledgementIdsEnum.withdrawalAddress]: formatMessage({
+      defaultMessage: 'Withdrawal address',
+    }),
     [AcknowledgementIdsEnum.earlyAdoptionRisks]: formatMessage({
-      defaultMessage: 'Early adoption risks',
+      defaultMessage: 'Execution risks',
     }),
     [AcknowledgementIdsEnum.checklist]: formatMessage({
       defaultMessage: 'Checklist',

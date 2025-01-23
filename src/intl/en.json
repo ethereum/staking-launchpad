@@ -66,6 +66,9 @@
   "/WenEu": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending the {pricePerValidator} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
   },
+  "/Z2BBF": {
+    "message": "You're joining a network that functions via software. As with any software, there is the potential for accidental bugs. While unlikely, potential bugs may result in slashing."
+  },
   "/Z5X80": {
     "description": "{testnet} shows '--config holesky' terminal command",
     "message": "Use {testnet} to sync the Holesky testnet."
@@ -227,6 +230,9 @@
   "1pUw7Y": {
     "message": "Documentation on running Nethermind"
   },
+  "1vVSD6": {
+    "message": "If a withdrawal address is not set at time of deposit, your funds will be locked until one is provided. Your default withdrawal keys can be generated from your mnemonic to authenticate a one-time change to add a withdrawal address. Remember to {boldWarning}."
+  },
   "2/VDay": {
     "message": "Max validators per withdrawals sweep: 16,384 (2{exp})"
   },
@@ -386,6 +392,9 @@
   "5A6amM": {
     "message": "It is high risk to run your validator in multiple places. It will lead to a slashable event and ejection from the network. {learnMore}"
   },
+  "5B+zYt": {
+    "message": "I accept that software and design bugs may result in me being slashed."
+  },
   "5CdqwI": {
     "message": "Nimbus beacon node documentation"
   },
@@ -437,9 +446,6 @@
   },
   "6glcFX": {
     "message": "How to join the public testnet"
-  },
-  "6nh4de": {
-    "message": "You're joining a network in its early stages. As with any new piece of software, there is the potential for software bugs. While unlikely, potential bugs may result in slashing."
   },
   "6stJTU": {
     "description": "{testnet} shows '--network=holesky' terminal command",
@@ -516,6 +522,9 @@
   "82vl9l": {
     "message": "We can't detect MetaMask. Switch browsers or install MetaMask."
   },
+  "88pgOp": {
+    "message": "Importantly, as a validator you'll need to post a minimum of {PRICE_PER_VALIDATOR} {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the {DEPOSIT_CONTRACT} on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
+  },
   "8BXroN": {
     "message": "Lodestar documentation"
   },
@@ -582,9 +591,6 @@
   "9JktQX": {
     "message": "There is no easy answer to this question as there are many factors that go into this calculation."
   },
-  "9MIPCp": {
-    "message": "If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so {boldWarning}—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
-  },
   "9RBO+X": {
     "message": "Review validator roles and responsibilities"
   },
@@ -649,9 +655,6 @@
   "AEbKyt": {
     "message": "For devnet, you can add a param:"
   },
-  "AFzWcM": {
-    "message": "I understand that keys are my responsibility and that my mnemonic (seed) will be the {onlyWay} to withdraw my funds if I don't provide a withdrawal address with initial deposit data."
-  },
   "AH6XsN": {
     "message": "Also be sure you understand how staking withdrawals work before setting up your keys and deposit data."
   },
@@ -673,9 +676,6 @@
   "Ad61gz": {
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
     "message": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: {url}"
-  },
-  "Affixg": {
-    "message": "The deposit"
   },
   "AkVktj": {
     "message": "Check deposit contract address"
@@ -723,9 +723,6 @@
   },
   "Bc20la": {
     "message": "days"
-  },
-  "BhWRLC": {
-    "message": "Importantly, as a validator you'll need to post {TICKER_NAME} as collateral—in other words, have some funds at stake. The only way to become a validator is to make a one-way {TICKER_NAME} transaction to the {DEPOSIT_CONTRACT} on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used in parallel to keep track of all validator activity."
   },
   "Bj5yI5": {
     "message": "Effective balance"
@@ -991,9 +988,6 @@
   "GsBRWL": {
     "message": "Languages"
   },
-  "Gsixxx": {
-    "message": "Early adoption risks"
-  },
   "GuIwY6": {
     "message": "When should I top up my validator’s balance?"
   },
@@ -1163,9 +1157,6 @@
     "description": "{latestReleased} = 'latest stable software release', being styled in bold",
     "message": "I've installed the {latestRelease} of my consensus client."
   },
-  "KJ7R/V": {
-    "message": "The Ethereum consensus layer specification"
-  },
   "KN7zKn": {
     "message": "Error"
   },
@@ -1244,9 +1235,6 @@
   },
   "M35Dz/": {
     "message": "Upload to Beacon Node BLSToExecutionChange pool"
-  },
-  "M3GwXS": {
-    "message": "You'll only get your full rewards if your validator is online and up to date. This is your responsibility. If your validator goes offline you'll be penalized. The penalties for being offline are roughly equal to the rewards for actively participating."
   },
   "MAVs3a": {
     "message": "*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
@@ -1353,6 +1341,9 @@
   "Nb5DNK": {
     "message": "Become a validator with Teku"
   },
+  "NbiwbX": {
+    "message": "We'll help you generate a signing key for every validator you want to run. During which you'll set a withdrawal address that will be permanently tied to each validator account."
+  },
   "NiWtxk": {
     "message": "{type1} = \"Type 1\" = Execution keys = New withdrawal credentials: {withdrawalsEnabled}"
   },
@@ -1373,9 +1364,6 @@
   },
   "OBmVqN": {
     "message": "Hyperledger Besu is an open-source Ethereum client developed under the Apache 2.0 license and written in Java."
-  },
-  "OCl7KQ": {
-    "message": "Like all Ethereum transactions, deposits are non-reversible, but the ability to withdrawal your funds via a separate process after depositing remains under your control."
   },
   "OIvXIO": {
     "message": "Complete remaining {remainingTxCount} deposits"
@@ -1422,6 +1410,9 @@
   },
   "P91KmA": {
     "message": "Become a validator {emoji}"
+  },
+  "P99NKl": {
+    "message": "To maximize your rewards, you need to keep your validator online and up to date. This is your responsibility, and your account will be penalized if it goes offline. The penalties for being offline are roughly equal to the rewards for actively participating."
   },
   "P9mVZK": {
     "message": "Your network has changed"
@@ -1522,14 +1513,14 @@
   "RWqrlk": {
     "message": "congratulations"
   },
-  "RY4SP0": {
-    "message": "I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME} onto the Beacon Chain to become a validator. Withdrawing deposited {TICKER_NAME} from the Beacon Chain is accomplished via a separate process."
-  },
   "RdHdwG": {
     "message": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
   },
   "Rg5ySE": {
     "message": "How many validators would you like to run?"
+  },
+  "RhR6+a": {
+    "message": "We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons."
   },
   "RqcJGJ": {
     "description": "Link to documentation about execution client Besu, specifically for Holesky testnet",
@@ -1576,9 +1567,6 @@
   },
   "Sd9qhL": {
     "message": "More on slashing risks"
-  },
-  "SdRBir": {
-    "message": "To become a validator, you will need to be able to run commands in the terminal on your computer. Generating your new key pairs and installing the validator software are both done in the terminal."
   },
   "SeW5ak": {
     "message": "Verify the contract address in your wallet before you sign."
@@ -1693,9 +1681,6 @@
   },
   "VUuZsb": {
     "message": "martial arts uniform"
-  },
-  "Vbv7Uw": {
-    "message": "We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address. This is recommended for most users."
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
@@ -1909,9 +1894,6 @@
   "a/140i": {
     "message": "Exit queue and activation queue"
   },
-  "a9e29d": {
-    "message": "store your mnemonic safely"
-  },
   "aEBE6s": {
     "message": "2. Prep nodes"
   },
@@ -1926,6 +1908,9 @@
   },
   "acrOoz": {
     "message": "Continue"
+  },
+  "ai7NFR": {
+    "message": "always store your mnemonic safely"
   },
   "aozN2h": {
     "message": "See your consensus client documentation for client-specific instructions on how to set this."
@@ -2680,6 +2665,9 @@
   "ox304v": {
     "message": "An error occurred"
   },
+  "oxoSZx": {
+    "message": "I understand that keys along with my mnemonic (seed) are my responsibility."
+  },
   "p+kDTB": {
     "message": "Ethereum users are used to transactions being executed in a manual way—if you want to transfer funds, you have to sign a transaction and pay the gas."
   },
@@ -2762,6 +2750,9 @@
   "qZ59xY": {
     "message": "All validators"
   },
+  "qdZ2WQ": {
+    "message": "It is helpful to know how to run commands in the terminal on your computer. Generating your new key pairs and installing the validator software can be done using graphical interfaces (GUIs) with some software, but by default the terminal is typically used for full control."
+  },
   "qdk7Hp": {
     "message": "Your wallet has disconnected"
   },
@@ -2788,9 +2779,6 @@
   },
   "r/G+qN": {
     "message": "A {fullWithdrawal} is processed for any inactivated validators that are no longer considered to be staking, that have fully exited from their validation responsibilities. Thus for a validator to fully withdraw its balance, it must first complete the process of exiting."
-  },
-  "r0MJxb": {
-    "message": "To become a validator on the Beacon Chain, you need to deposit a minimum of {PRICE_PER_VALIDATOR} {TICKER_NAME} per validator that you wish to run."
   },
   "r2BH1M": {
     "message": "Configure Prysm"
@@ -2823,6 +2811,9 @@
   "rbrahO": {
     "message": "Close"
   },
+  "rk3ll8": {
+    "message": "I understand that not providing a withdrawal address with my initial deposit leaves my funds locked and the {onlyWay} to withdraw my funds requires my mnemonic."
+  },
   "rs4eqr": {
     "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
   },
@@ -2831,6 +2822,9 @@
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
+  },
+  "sJ3mwM": {
+    "message": "Execution risks"
   },
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
@@ -3030,9 +3024,6 @@
   "wm04oC": {
     "message": "Run the following command:"
   },
-  "wqUcy/": {
-    "message": "Early adopter risks"
-  },
   "wtTeex": {
     "message": "Are there spelling mistakes?"
   },
@@ -3060,9 +3051,6 @@
   },
   "xGQ38+": {
     "message": "Has the validator completed the exiting process?"
-  },
-  "xH5GKj": {
-    "message": "I am an early adopter, and I accept that software and design bugs may result in me being slashed."
   },
   "xMOzv2": {
     "message": "Anyone wishing to conclude their staking obligations can sign a “voluntary exit” message which is then broadcast to the Beacon Chain to start the process. This is a manual step."

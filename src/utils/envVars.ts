@@ -3,7 +3,6 @@ export const IS_NON_INFURA_TESTNET      = !IS_MAINNET && process.env.REACT_APP_R
 export const TESTNET_LAUNCHPAD_NAME     = process.env.REACT_APP_TESTNET_LAUNCHPAD_NAME || 'Holesky';
 
 // private vars (or derived from)
-export const PORTIS_DAPP_ID             = process.env.REACT_APP_PORTIS_DAPP_ID     || '';
 export const INFURA_PROJECT_ID          = process.env.REACT_APP_INFURA_PROJECT_ID  || '';
 export const ENABLE_RPC_FEATURES        = Boolean(INFURA_PROJECT_ID && INFURA_PROJECT_ID !== '');
 export const RPC_URL                    = process.env.REACT_APP_RPC_URL ||  (`https://${IS_MAINNET ? "mainnet" : "holesky"}.infura.io/v3/${INFURA_PROJECT_ID}`);

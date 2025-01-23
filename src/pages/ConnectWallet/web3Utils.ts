@@ -3,7 +3,6 @@ import {
   InjectedConnector,
   InjectedConnector as MetamaskConnector,
 } from '@web3-react/injected-connector';
-import { PortisConnector } from '@web3-react/portis-connector';
 import { useWeb3React } from '@web3-react/core';
 import { FortmaticConnector } from './fortmaticConnector';
 import { web3ReactInterface } from './index';
@@ -11,7 +10,6 @@ import {
   FORTMATIC_KEY,
   IS_MAINNET,
   NETWORK_NAME,
-  PORTIS_DAPP_ID,
   RPC_URL,
   TESTNET_LAUNCHPAD_NAME,
 } from '../../utils/envVars';
@@ -39,9 +37,6 @@ const supportedNetworks = [
   NetworkChainId.Holesky,
 ];
 
-// FIXME: disabled Portis for now
-const portisSupportedNetworks = [NetworkChainId.Mainnet];
-
 enum Testnet {
   'Sepolia',
   'Holesky',
@@ -68,11 +63,6 @@ export const AllowedNetworks = IS_MAINNET ? Mainnet : Testnet;
 export const AllowedELNetworks = [NETWORK_NAME];
 export const metamask: InjectedConnector = new MetamaskConnector({
   supportedChainIds: supportedNetworks,
-});
-
-export const portis: PortisConnector = new PortisConnector({
-  dAppId: PORTIS_DAPP_ID,
-  networks: portisSupportedNetworks,
 });
 
 export const fortmatic: FortmaticConnector = new FortmaticConnector({

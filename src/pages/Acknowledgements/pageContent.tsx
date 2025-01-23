@@ -203,7 +203,7 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
-    title: <FormattedMessage defaultMessage="Execution risks" />,
+    title: <FormattedMessage defaultMessage="Software risks" />,
     content: (
       <Text size="medium" className="my10">
         <FormattedMessage

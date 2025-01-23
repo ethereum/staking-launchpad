@@ -2786,6 +2786,9 @@
   "r2j8jL": {
     "message": "validator client"
   },
+  "r3C4x/": {
+    "message": "Software"
+  },
   "r4JsKB": {
     "message": "Transaction successful"
   },
@@ -2814,6 +2817,9 @@
   "rk3ll8": {
     "message": "I understand that not providing a withdrawal address with my initial deposit leaves my funds locked and the {onlyWay} to withdraw my funds requires my mnemonic."
   },
+  "rk9g0q": {
+    "message": "Software risks"
+  },
   "rs4eqr": {
     "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
   },
@@ -2822,9 +2828,6 @@
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
-  },
-  "sJ3mwM": {
-    "message": "Execution risks"
   },
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."

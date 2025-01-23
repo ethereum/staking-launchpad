@@ -50,7 +50,7 @@ export const _AcknowledgementProgressTracker = ({
       defaultMessage: 'Withdrawal address',
     }),
     [AcknowledgementIdsEnum.earlyAdoptionRisks]: formatMessage({
-      defaultMessage: 'Execution risks',
+      defaultMessage: 'Software',
     }),
     [AcknowledgementIdsEnum.checklist]: formatMessage({
       defaultMessage: 'Checklist',

@@ -3,6 +3,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+3gmIR": {
+    "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
+  },
   "+EZ9E/": {
     "message": "Interactive mode"
   },
@@ -374,6 +377,9 @@
   "57h5ur": {
     "message": "Then up to {time} for the next validator sweep to execute the full withdrawal (assumes {type1} withdrawal credentials)"
   },
+  "58LSsA": {
+    "message": "Lodestar is built using TypeScript under a combination of the Apache 2.0 and GNU Lesser General Public License v3.0."
+  },
   "58PXVy": {
     "message": "Why two keys instead of one?"
   },
@@ -425,9 +431,6 @@
   },
   "6VIBSR": {
     "message": "You can improve the effective balance of this validator by topping up"
-  },
-  "6eA+mW": {
-    "message": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
   },
   "6glcFX": {
     "message": "How to join the public testnet"
@@ -1660,6 +1663,9 @@
   "V1iY4C": {
     "message": "Reth is built in Rust, a language empowering everyone to build reliable and efficient software. Rust is a general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector."
   },
+  "V4X42O": {
+    "message": "Configure Lodestar"
+  },
   "VASo1/": {
     "message": "Connect wallet"
   },
@@ -2823,6 +2829,9 @@
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
   },
+  "sFD6T7": {
+    "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
+  },
   "sMHQRT": {
     "message": "A consensus client with a heavy focus on speed and security. Built by Sigma Prime, an information security and software engineering firm who have funded Lighthouse along with the Ethereum Foundation, Consensys, and private individuals."
   },
@@ -3164,9 +3173,6 @@
   "z6K3D6": {
     "description": "{prometheus} is 'Prometheus' service, with link to its homepage (do not translate name)",
     "message": "I've set up my {prometheus} service."
-  },
-  "z8zpxp": {
-    "message": "Lodestar is an open-sourced TypeScript implementation of the Ethereum Consensus (formerly known as eth2) specification maintained by ChainSafe Systems. ChainSafe's goal is to develop, improve and diversify the Ethereum proof of stake ecosystem with their beacon chain and validator client with a focus on light client implementations."
   },
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"

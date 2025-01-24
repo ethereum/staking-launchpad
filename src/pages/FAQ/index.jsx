@@ -281,8 +281,8 @@ export const FAQ = () => {
                 </em>
                 :{' '}
                 <FormattedMessage
-                  defaultMessage="Maximum effective balance of {MAX_EFFECTIVE_BALANCE}, a 64-times increase to previous types"
-                  values={{ MAX_EFFECTIVE_BALANCE }}
+                  defaultMessage="Maximum effective balance of {MAX_EFFECTIVE_BALANCE}, a 64x increase to previous types, and abilty to request partial withdrawal of any balance over {MIN_ACTIVATION_BALANCE} via smart contract interaction"
+                  values={{ MAX_EFFECTIVE_BALANCE, MIN_ACTIVATION_BALANCE }}
                 />
               </Text>
               <Text>

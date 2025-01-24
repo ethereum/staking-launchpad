@@ -677,6 +677,9 @@
   "AYKxmf": {
     "message": "Connect your hardware wallet to Metamask"
   },
+  "AYPu/E": {
+    "message": "What type of staking account?"
+  },
   "AZaw+B": {
     "message": "Exiting"
   },
@@ -1154,9 +1157,6 @@
   },
   "K4TRB7": {
     "message": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
-  },
-  "K5a8KU": {
-    "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE}, a 64-times increase to previous types"
   },
   "K6+jQ3": {
     "message": "Geth installation documentation"
@@ -1936,6 +1936,9 @@
   },
   "a/140i": {
     "message": "Exit queue and activation queue"
+  },
+  "a9gOIB": {
+    "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE}, a 64x increase to previous types, and abilty to request partial withdrawal of any balance over {MIN_ACTIVATION_BALANCE} via smart contract interaction"
   },
   "aEBE6s": {
     "message": "2. Prep nodes"

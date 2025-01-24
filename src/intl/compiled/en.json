@@ -1813,6 +1813,12 @@
       "value": "Connect your hardware wallet to Metamask"
     }
   ],
+  "AYPu/E": [
+    {
+      "type": 0,
+      "value": "What type of staking account?"
+    }
+  ],
   "AZaw+B": [
     {
       "type": 0,
@@ -2957,20 +2963,6 @@
     {
       "type": 0,
       "value": "The number of validators that can be activated or exited in a given epoch (6.4 minutes) is determined by how many active validators are currently on the network."
-    }
-  ],
-  "K5a8KU": [
-    {
-      "type": 0,
-      "value": "Maximum effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": ", a 64-times increase to previous types"
     }
   ],
   "K6+jQ3": [
@@ -5069,6 +5061,28 @@
     {
       "type": 0,
       "value": "Exit queue and activation queue"
+    }
+  ],
+  "a9gOIB": [
+    {
+      "type": 0,
+      "value": "Maximum effective balance of "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", a 64x increase to previous types, and abilty to request partial withdrawal of any balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " via smart contract interaction"
     }
   ],
   "aEBE6s": [

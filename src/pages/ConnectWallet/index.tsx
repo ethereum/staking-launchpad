@@ -41,7 +41,6 @@ import {
 import {
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
-  PRICE_PER_VALIDATOR,
   TICKER_NAME,
   IS_NON_INFURA_TESTNET,
   FAUCET_URL,
@@ -218,8 +217,10 @@ const _ConnectWalletPage = ({
           const formattedBalance = Number(
             parseFloat(formatEther(amount)).toPrecision(5)
           );
-          // @ts-ignore (type check performed in envVars.ts)
-          const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
+          const requiredBalance = depositKeys.reduce(
+            (acc, key) => acc + key.amount,
+            0
+          );
 
           setBalance(formattedBalance);
           if (formattedBalance < requiredBalance || formattedBalance === 0) {
@@ -245,8 +246,10 @@ const _ConnectWalletPage = ({
             );
             if (formattedBalance !== balanceRef.current) {
               setBalance(formattedBalance);
-              // @ts-ignore (type check performed in envVars.ts)
-              const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
+              const requiredBalance = depositKeys.reduce(
+                (acc, key) => acc + key.amount,
+                0
+              );
               if (
                 formattedBalance < requiredBalance ||
                 formattedBalance === 0

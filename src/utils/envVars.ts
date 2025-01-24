@@ -24,14 +24,14 @@ export const LODESTAR_INSTALLATION_URL  = process.env.REACT_APP_LODESTAR_INSTALL
 export const MAINNET_LAUNCHPAD_URL      = 'https://launchpad.ethereum.org/'
 export const TESTNET_LAUNCHPAD_URL      = `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.launchpad.ethereum.org/`
 
-let elExplorerURL =  'https://holesky.etherscan.io';
+let elExplorerURL                       = 'https://holesky.etherscan.io';
 if (IS_NON_INFURA_TESTNET && process.env.REACT_APP_EL_EXPLORER_URL) {
-    elExplorerURL = process.env.REACT_APP_EL_EXPLORER_URL;
+    elExplorerURL                       = process.env.REACT_APP_EL_EXPLORER_URL;
 } else if (IS_MAINNET) {
-    elExplorerURL = 'https://etherscan.io'
+    elExplorerURL                       = 'https://etherscan.io'
 }
-export const EL_EXPLOER_URL = elExplorerURL
-export const EL_TRANSACTION_URL = `${elExplorerURL}/tx`
+export const EL_EXPLOER_URL             = elExplorerURL
+export const EL_TRANSACTION_URL         = `${elExplorerURL}/tx`
 
 
 export const FAUCET_URL                 = process.env.REACT_APP_FAUCET_URL || 'https://www.holeskyfaucet.io/'
@@ -46,19 +46,23 @@ export const ETH_REQUIREMENT            = process.env.REACT_APP_ETH_REQUIREMENT 
 if(process.env.REACT_APP_ETH_DEPOSIT_OFFSET && Number.isNaN(Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET))) {
     throw new Error("REACT_APP_ETH_DEPOSIT_OFFSET must be of type: number")
 }
-export const ETH_DEPOSIT_OFFSET = Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET) * Number(!IS_MAINNET) || 0;
+export const ETH_DEPOSIT_OFFSET         = Number(process.env.REACT_APP_ETH_DEPOSIT_OFFSET) * Number(!IS_MAINNET) || 0;
 
-let forkVersion = Buffer.from('00000000', 'hex')
+let forkVersion                         = Buffer.from('00000000', 'hex')
 if(typeof process.env.REACT_APP_GENESIS_FORK_VERSION === 'string'){
-    forkVersion = Buffer.from(process.env.REACT_APP_GENESIS_FORK_VERSION.replace(/0x/g, ''), 'hex');
+    forkVersion                         = Buffer.from(process.env.REACT_APP_GENESIS_FORK_VERSION.replace(/0x/g, ''), 'hex');
 }
-export const GENESIS_FORK_VERSION = forkVersion;
+export const GENESIS_FORK_VERSION       = forkVersion;
 
-
-if(process.env.REACT_APP_PRICE_PER_VALIDATOR && Number.isNaN(Number(process.env.REACT_APP_PRICE_PER_VALIDATOR))) {
-    throw new Error("REACT_APP_PRICE_PER_VALIDATOR must be of type: number")
+if(process.env.REACT_APP_MIN_ACTIVATION_BALANCE && Number.isNaN(Number(process.env.REACT_APP_MIN_ACTIVATION_BALANCE))) {
+    throw new Error("REACT_APP_MIN_ACTIVATION_BALANCE must be of type: number")
 }
-export const PRICE_PER_VALIDATOR        = process.env.REACT_APP_PRICE_PER_VALIDATOR || 32;
+export const MIN_ACTIVATION_BALANCE     = process.env.REACT_APP_MIN_ACTIVATION_BALANCE || 32;
+
+if(process.env.REACT_APP_MAX_EFFECTIVE_BALANCE && Number.isNaN(Number(process.env.REACT_APP_MAX_EFFECTIVE_BALANCE))) {
+    throw new Error("REACT_APP_MAX_EFFECTIVE_BALANCE must be of type: number")
+}
+export const MAX_EFFECTIVE_BALANCE      = process.env.REACT_APP_MAX_EFFECTIVE_BALANCE || 2048;
 
 if(process.env.REACT_APP_EJECTION_PRICE && Number.isNaN(Number(process.env.REACT_APP_EJECTION_PRICE))) {
     throw new Error("REACT_APP_EJECTION_PRICE must be of type: number")

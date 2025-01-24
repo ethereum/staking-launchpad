@@ -30,7 +30,7 @@ import {
   metamaskTxRejected,
 } from '../../../utils/transactionErrorTypes';
 import {
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   CONTRACT_ADDRESS,
   ETHER_TO_GWEI,
@@ -104,7 +104,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   ]);
 
   const maxTopupValue = useMemo(
-    () => Math.max(1, Number(PRICE_PER_VALIDATOR) + 0.26 - Number(balance)),
+    () => Math.max(1, Number(MIN_ACTIVATION_BALANCE) + 0.26 - Number(balance)),
     [balance]
   );
 
@@ -196,13 +196,14 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
   const showAlert = React.useMemo(() => {
     return (
-      balanceAfterTopup > PRICE_PER_VALIDATOR || balance > PRICE_PER_VALIDATOR
+      balanceAfterTopup > MIN_ACTIVATION_BALANCE ||
+      balance > MIN_ACTIVATION_BALANCE
     );
   }, [balance, balanceAfterTopup]);
 
   const alertText = React.useMemo(() => {
     // If EB already maxed out
-    if (effectiveBalance >= PRICE_PER_VALIDATOR)
+    if (effectiveBalance >= MIN_ACTIVATION_BALANCE)
       return formatMessage(
         {
           defaultMessage:
@@ -213,13 +214,18 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
         { TICKER_NAME, minTopupValue }
       );
     // If EB is low (31 or less)
-    if (balance > PRICE_PER_VALIDATOR)
+    if (balance > MIN_ACTIVATION_BALANCE)
       return formatMessage(
         {
           defaultMessage:
             'Validator balance is over {PRICE_PER_VALIDATOR}, but effective balance is low ({effectiveBalance}). Adding {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance.',
         },
-        { PRICE_PER_VALIDATOR, effectiveBalance, minTopupValue, TICKER_NAME }
+        {
+          PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
+          effectiveBalance,
+          minTopupValue,
+          TICKER_NAME,
+        }
       );
     if (value > maxTopupValue)
       return formatMessage(
@@ -227,7 +233,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           defaultMessage: `Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance.`,
         },
         {
-          PRICE_PER_VALIDATOR,
+          PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
           TICKER_NAME,
           maxTopupValue: maxTopupValue.toFixed(4),
         }

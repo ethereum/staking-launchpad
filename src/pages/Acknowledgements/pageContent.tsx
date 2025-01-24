@@ -6,7 +6,7 @@ import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import {
   NETWORK_NAME,
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
 } from '../../utils/envVars';
 
@@ -37,13 +37,13 @@ export const pageContent = {
         </Text>
         <Text size="medium" className="my10">
           <FormattedMessage
-            defaultMessage="Importantly, as a validator you'll need to post a minimum of {PRICE_PER_VALIDATOR} {TICKER_NAME} as
+            defaultMessage="Importantly, as a validator you'll need to post a minimum of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} as
               collateral—in other words, have some funds at stake. The only way to become a
               validator is to make a one-way {TICKER_NAME} transaction to the {DEPOSIT_CONTRACT}
               on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used
               in parallel to keep track of all validator activity."
             values={{
-              PRICE_PER_VALIDATOR,
+              MIN_ACTIVATION_BALANCE,
               TICKER_NAME,
               NETWORK_NAME,
               DEPOSIT_CONTRACT: (

@@ -542,8 +542,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="You need to run an {executionClient} as well as your
-                  {consensusClient}."
+                  defaultMessage="You need to run an {executionClient} as well as a {consensusClient}."
                   values={{
                     executionClient: (
                       <Link

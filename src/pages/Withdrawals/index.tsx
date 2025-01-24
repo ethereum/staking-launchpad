@@ -11,7 +11,7 @@ import { Code } from '../../components/Code';
 import { WithdrawalsTabComparison } from '../../components/WithdrawalsTabComparison';
 import {
   NETWORK_NAME,
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
 } from '../../utils/envVars';
 
@@ -342,7 +342,7 @@ export const Withdrawals = () => {
                       <FormattedMessage defaultMessage="excess balance withdrawal" />
                     </strong>
                   ),
-                  PRICE_PER_VALIDATOR,
+                  PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
                   TICKER_NAME,
                 }}
               />
@@ -352,7 +352,7 @@ export const Withdrawals = () => {
                 defaultMessage="These are also referred to as “partial withdrawals” or “reward payments” as the remaining
                 {PRICE_PER_VALIDATOR} {TICKER_NAME} stays locked and staked."
                 values={{
-                  PRICE_PER_VALIDATOR,
+                  PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
                   TICKER_NAME,
                 }}
               />
@@ -703,7 +703,7 @@ export const Withdrawals = () => {
                       <FormattedMessage defaultMessage="leave" />
                     </em>
                   ),
-                  PRICE_PER_VALIDATOR,
+                  PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
                   TICKER_NAME,
                 }}
               />
@@ -920,7 +920,10 @@ export const Withdrawals = () => {
               <li>
                 <FormattedMessage
                   defaultMessage="Is the effective balance maxed out at {PRICE_PER_VALIDATOR} {TICKER_NAME}?"
-                  values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
+                  values={{
+                    PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
+                    TICKER_NAME,
+                  }}
                 />
                 <ul>
                   <li>
@@ -1004,7 +1007,10 @@ export const Withdrawals = () => {
                 <li>
                   <FormattedMessage
                     defaultMessage="Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"
-                    values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
+                    values={{
+                      PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
+                      TICKER_NAME,
+                    }}
                   />
                 </li>
               </ul>

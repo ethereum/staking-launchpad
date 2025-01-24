@@ -28,7 +28,7 @@ import { StoreState } from '../../store/reducers';
 // Utilities
 import {
   IS_MAINNET,
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
@@ -204,7 +204,7 @@ const _GenerateKeysPage = ({
               {validatorCount === ''
                 ? validatorCount
                 : new BigNumber(validatorCount)
-                    .times(new BigNumber(PRICE_PER_VALIDATOR))
+                    .times(new BigNumber(MIN_ACTIVATION_BALANCE))
                     .toFixed(1)
                     .toString()}{' '}
               {TICKER_NAME}

@@ -20,7 +20,7 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TESTNET_LAUNCHPAD_NAME,
   IS_MAINNET,
   MAINNET_LAUNCHPAD_URL,
@@ -345,7 +345,8 @@ const _CongratulationsPage = ({
                 </Heading>
                 <Text size="x-large" className="mt20">
                   <BoldGreen>
-                    {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
+                    {/* TODO Electra: Fix calculation for newly staked ETH */}
+                    {actualTxConfirmed * +MIN_ACTIVATION_BALANCE} {TICKER_NAME}
                   </BoldGreen>
                 </Text>
               </Card>

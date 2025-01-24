@@ -28,7 +28,11 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
+import {
+  MAX_EFFECTIVE_BALANCE,
+  MIN_ACTIVATION_BALANCE,
+  TICKER_NAME,
+} from '../../utils/envVars';
 import { Alert } from '../../components/Alert';
 import { BeaconChainStatus } from '../../store/actions/depositFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
@@ -90,7 +94,7 @@ const _SummaryPage = ({
   const [noPhish, setNoPhish] = useState(false);
   const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
   const amountValidators = new BigNumber(depositKeys.length);
-  const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
+  const convertedPrice = new BigNumber(MIN_ACTIVATION_BALANCE);
   const { formatMessage } = useIntl();
   const allChecked = React.useMemo(
     () =>
@@ -190,7 +194,7 @@ const _SummaryPage = ({
           instead of the official deposit contract. Make sure that the
           address you are sending the transaction to is the correct address."
             values={{
-              pricePerValidator: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
+              pricePerValidator: `${MIN_ACTIVATION_BALANCE} ${TICKER_NAME}`,
             }}
           />
         </Text>
@@ -253,10 +257,10 @@ const _SummaryPage = ({
 
         <Text>
           <FormattedMessage
-            defaultMessage="{warning} Duplicate
-          deposits with the same keyfile public key will be considered as a
-          double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the
-          Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
+            defaultMessage="{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit.
+              If this balance exceeds your accounts maximum effective balance ({MIN_ACTIVATION_BALANCE}) for regular withdrawals type, {MAX_EFFECTIVE_BALANCE} for compounding), extra will not be counted towards your stake.
+              Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated.
+              If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
             values={{
               warning: (
                 <em>
@@ -265,7 +269,8 @@ const _SummaryPage = ({
                   })}
                 </em>
               ),
-              eth: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
+              MIN_ACTIVATION_BALANCE,
+              MAX_EFFECTIVE_BALANCE,
             }}
           />
         </Text>

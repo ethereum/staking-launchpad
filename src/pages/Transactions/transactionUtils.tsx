@@ -6,10 +6,10 @@ import { SendOptions } from 'web3-eth-contract';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { TransactionStatus } from '../../store/actions/depositFileActions';
-import { CONTRACT_ADDRESS, PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { CONTRACT_ADDRESS, MIN_ACTIVATION_BALANCE } from '../../utils/envVars';
 import { DepositKeyInterface } from '../../store/reducers';
 
-const pricePerValidator = new BigNumber(PRICE_PER_VALIDATOR);
+const pricePerValidator = new BigNumber(MIN_ACTIVATION_BALANCE);
 const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 
 const isUserRejectionError = (error: any) => {

@@ -21,7 +21,7 @@ import { Paper } from '../../../components/Paper';
 import { Link } from '../../../components/Link';
 import {
   BEACONCHAIN_URL,
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   ETHER_TO_GWEI,
 } from '../../../utils/envVars';
@@ -128,7 +128,7 @@ const ValidatorTable: React.FC<{
     return validators.map(validator => {
       const alreadyToppedUp =
         validator.effectivebalance >=
-        Number(PRICE_PER_VALIDATOR) * ETHER_TO_GWEI;
+        Number(MIN_ACTIVATION_BALANCE) * ETHER_TO_GWEI;
       // No top-ups for exited or slashed validators:
       const statusIneligible =
         validator.status === 'slashed' || validator.status === 'exited';
@@ -145,7 +145,7 @@ const ValidatorTable: React.FC<{
               defaultMessage:
                 "This validator's balance is at the effective maximum: {PRICE_PER_VALIDATOR} {TICKER_NAME}.",
             },
-            { PRICE_PER_VALIDATOR, TICKER_NAME }
+            { PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE, TICKER_NAME }
           );
         return formatMessage({
           defaultMessage:

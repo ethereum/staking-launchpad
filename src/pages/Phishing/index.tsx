@@ -5,7 +5,7 @@ import { PageTemplate } from '../../components/PageTemplate';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
-import { PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { MIN_ACTIVATION_BALANCE } from '../../utils/envVars';
 
 const SectionTitle = styled(Heading)`
   margin-top: 30px;
@@ -85,7 +85,7 @@ export const Phishing = () => {
                   <FormattedMessage
                     defaultMessage="Are there recent deposits of at least {ethAmount}?"
                     values={{
-                      ethAmount: `${PRICE_PER_VALIDATOR} ETH`,
+                      ethAmount: `${MIN_ACTIVATION_BALANCE} ETH`,
                     }}
                     description="Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present"
                   />

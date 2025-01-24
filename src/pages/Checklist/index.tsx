@@ -424,8 +424,8 @@ export const Checklist = () => {
         defaultMessage:
           'Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping.',
       }),
-      imgUrl: TekuBg,
-      url: routesEnum.teku,
+      imgUrl: LodestarBg,
+      url: routesEnum.lodestar,
       linkText: formatMessage({
         defaultMessage: 'Configure Lodestar',
       }),
@@ -436,7 +436,8 @@ export const Checklist = () => {
         'https://chainsafe.github.io/lodestar/run/beacon-management/starting-a-node#configure-the-lodestar-jwt-authentication-token',
       feeRecipientUrl:
         'https://chainsafe.github.io/lodestar/run/validator-management/vc-configuration#configuring-the-fee-recipient-address',
-      metricsUrl: 'https://chainsafe.github.io/lodestar/run/logging-and-metrics/prometheus-grafana',
+      metricsUrl:
+        'https://chainsafe.github.io/lodestar/run/logging-and-metrics/prometheus-grafana',
     },
   ]);
 

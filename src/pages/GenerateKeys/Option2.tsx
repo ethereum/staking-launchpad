@@ -109,6 +109,9 @@ export const Option2 = ({ os }: { os: string }) => {
             <li>
               <FormattedMessage defaultMessage="Run the Wagyu Key Gen app from withing Applications by right clicking and clicking Open. You will get a warning stating macOS cannot verify the developer of “Wagyu Key Gen.app”. Are you sure you want to open it?. Click Open and the app will open." />
             </li>
+            <li>
+              <FormattedMessage defaultMessage="As of macOS Sequoia, users must approve these apps from their Privacy and Security settings after a failed attempt." />
+            </li>
           </>
         )}
         <Alert variant="error" className="my10">

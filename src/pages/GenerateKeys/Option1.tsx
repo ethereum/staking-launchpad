@@ -70,8 +70,7 @@ export const Option1 = ({
             style={{ wordBreak: 'break-word' }}
           >
             <FormattedMessage
-              defaultMessage="Please make sure that you are downloading from the official Ethereum
-              Foundation GitHub account by verifying the url: {url}"
+              defaultMessage="Please make sure that you are downloading from the official EthStaker GitHub account by verifying the url: {url}"
               values={{
                 url: (
                   <strong>
@@ -88,7 +87,7 @@ export const Option1 = ({
       <GithubScreenshot />
 
       <Text weight={500} className="mt20">
-        <FormattedMessage defaultMessage="Step 2: Generate deposit keys using the Ethereum Foundation deposit tool" />
+        <FormattedMessage defaultMessage="Step 2: Generate deposit keys using the EthStaker deposit tool" />
       </Text>
       <Alert className="my20" variant="info">
         <FormattedMessage defaultMessage="For security, we recommend you disconnect from the internet to complete this step." />
@@ -146,10 +145,10 @@ export const Option1 = ({
               `--${
                 TRANSLATE_CLI_FLAGS
                   ? formatMessage({
-                      defaultMessage: 'eth1_withdrawal_address',
+                      defaultMessage: 'withdrawal_address',
                       description: 'this is used as a command line flag',
                     })
-                  : 'eth1_withdrawal_address'
+                  : 'withdrawal_address'
               } ${withdrawalAddress}`}
           </Pre>
         </Alert>

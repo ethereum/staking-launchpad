@@ -28,8 +28,10 @@ import { StoreState } from '../../store/reducers';
 // Utilities
 import {
   IS_MAINNET,
+  MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
+  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 // Images
@@ -113,6 +115,12 @@ const NumValidatorContainer = styled.div`
   gap: 50px;
 `;
 
+const EthAmountContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`;
+
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -135,7 +143,11 @@ const _GenerateKeysPage = ({
   workflow,
 }: Props): JSX.Element => {
   const { formatMessage } = useIntl();
-  const [validatorCount, setValidatorCount] = useState<number | string>(0);
+  const [ethAmount, setStateEthAmount] = useState<number | string>(
+    MIN_ACTIVATION_BALANCE
+  );
+  const [validatorCount, setStateValidatorCount] = useState<number | string>(1);
+
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
@@ -179,6 +191,24 @@ const _GenerateKeysPage = ({
     if (isValidWithdrawalAddress) return '✅';
     return '❌';
   }, [withdrawalAddress, isValidWithdrawalAddress]);
+
+  const setValidatorCount = (count: number) => {
+    const newCount = Math.max(count, 1);
+    setStateValidatorCount(newCount);
+    setStateEthAmount(
+      Math.min(newCount * MIN_ACTIVATION_BALANCE, MAX_EFFECTIVE_BALANCE)
+    );
+  };
+
+  const setEthAmount = (amount: number) => {
+    const roundedToGwei = Math.floor(amount * ETHER_TO_GWEI) / ETHER_TO_GWEI;
+    const newAmount = Math.min(
+      MAX_EFFECTIVE_BALANCE,
+      Math.max(1, roundedToGwei)
+    );
+    setStateEthAmount(newAmount);
+    setStateValidatorCount(Math.floor(newAmount / MIN_ACTIVATION_BALANCE));
+  };
 
   const handleSubmit = () => {
     if (workflow === WorkflowStep.GENERATE_KEY_PAIRS) {
@@ -266,31 +296,73 @@ const _GenerateKeysPage = ({
         />
       </Paper>
 
-      <Paper className="mb20">
-        <Heading level={2} size="small" color="blueMedium">
-          <FormattedMessage defaultMessage="How many validators would you like to run?" />
-        </Heading>
-        <NumValidatorContainer>
-          <div>
-            <Text className="mb5">
-              <FormattedMessage defaultMessage="Validators" />
-            </Text>
-            <NumberInput value={validatorCount} setValue={setValidatorCount} />
-          </div>
-          <div>
-            <Text className="mb5">Cost</Text>
-            <Text>
-              {validatorCount === ''
-                ? validatorCount
-                : new BigNumber(validatorCount)
-                    .times(new BigNumber(MIN_ACTIVATION_BALANCE))
-                    .toFixed(1)
-                    .toString()}{' '}
-              {TICKER_NAME}
-            </Text>
-          </div>
-        </NumValidatorContainer>
-      </Paper>
+      {chosenType === '0x02' && (
+        <Paper className="mb20">
+          <Heading level={2} size="small" color="blueMedium" className="mb10">
+            <FormattedMessage
+              defaultMessage="How much {TICKER_NAME} would you like to stake?"
+              values={{ TICKER_NAME }}
+            />
+          </Heading>
+          <Text className="mb50">
+            <FormattedMessage
+              defaultMessage="This account type requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold a max of {MAX_EFFECTIVE_BALANCE}"
+              values={{
+                MAX_EFFECTIVE_BALANCE,
+                MIN_ACTIVATION_BALANCE,
+                TICKER_NAME,
+              }}
+            />
+          </Text>
+          <EthAmountContainer>
+            <NumberInput
+              value={ethAmount}
+              setValue={setEthAmount}
+              allowDecimals
+            />
+            <Text>{TICKER_NAME}</Text>
+          </EthAmountContainer>
+        </Paper>
+      )}
+
+      {chosenType === '0x01' && (
+        <Paper className="mb20">
+          <Heading level={2} size="small" color="blueMedium" className="mb10">
+            <FormattedMessage defaultMessage="How many accounts would you like to run?" />
+          </Heading>
+          <Text className="mb10">
+            <FormattedMessage
+              defaultMessage="Each validator of this account type requires exactly {MIN_ACTIVATION_BALANCE} {TICKER_NAME}."
+              values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
+            />
+          </Text>
+          <NumValidatorContainer>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage defaultMessage="Validators" />
+              </Text>
+              <NumberInput
+                value={validatorCount}
+                setValue={setValidatorCount}
+              />
+            </div>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage defaultMessage="Cost" />
+              </Text>
+              <Text>
+                {validatorCount === ''
+                  ? validatorCount
+                  : new BigNumber(validatorCount)
+                      .times(new BigNumber(MIN_ACTIVATION_BALANCE))
+                      .toFixed(0)
+                      .toString()}{' '}
+                {TICKER_NAME}
+              </Text>
+            </div>
+          </NumValidatorContainer>
+        </Paper>
+      )}
 
       <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium">
@@ -322,22 +394,36 @@ const _GenerateKeysPage = ({
           {chosenTool === keysTool.GUI ? (
             <FormattedMessage
               defaultMessage="You should now have your mnemonic written down in a safe place and a
-              keystore saved for each of your {validatorCount} validators. Please
+              keystore saved for {yourValidators}. Please
               make sure you keep these safe, preferably offline. Your validator
               keystores should be available in the selected directory."
               values={{
-                validatorCount: <span>{validatorCount}</span>,
+                yourValidators:
+                  validatorCount < 2 ? (
+                    <FormattedMessage defaultMessage="your validator" />
+                  ) : (
+                    <FormattedMessage
+                      defaultMessage="each of your {validatorCount} validators"
+                      values={{ validatorCount }}
+                    />
+                  ),
               }}
             />
           ) : (
             <FormattedMessage
-              defaultMessage="You should now have your mnemonic written down in a safe place and a
-              keystore saved for each of your {validatorCount} validators. Please
-              make sure you keep these safe, preferably offline. Your validator
-              keystores should be available in the newly created
-              {validatorKeys} directory."
+              defaultMessage="You should now have your mnemonic written down in a safe place and a keystore saved for {yourValidators}.
+                Please make sure you keep these safe, preferably offline.
+                Your validator keystores should be available in the newly created {validatorKeys} directory."
               values={{
-                validatorKeys: <Highlight>validator_keys</Highlight>,
+                yourValidators:
+                  validatorCount < 2 ? (
+                    <FormattedMessage defaultMessage="your validator" />
+                  ) : (
+                    <FormattedMessage
+                      defaultMessage="each of your {validatorCount} validators"
+                      values={{ validatorCount }}
+                    />
+                  ),
                 validatorCount: <span>{validatorCount}</span>,
               }}
             />

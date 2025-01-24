@@ -12,11 +12,11 @@ const Container = styled.div`
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 2rem 0;
 `;
 
 const ChoiceButton = styled.button<{ isActive: boolean }>`
-  box-shadow: ${({ isActive }) => (isActive ? '0 0 1rem 2px lightblue' : '')};
+  box-shadow: ${({ isActive }) => (isActive ? '0 0 10px rgba(0,0,0,0.5)' : '')};
   cursor: pointer;
   max-width: 400px;
   min-width: min(100%, 300px)

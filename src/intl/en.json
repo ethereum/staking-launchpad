@@ -1,4 +1,7 @@
 {
+  "+/eSwc": {
+    "message": "As of macOS Sequoia, users must approve these apps from their Privacy and Security settings after a failed attempt."
+  },
   "+2VHUU": {
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
@@ -8,9 +11,6 @@
   },
   "+EZ9E/": {
     "message": "Interactive mode"
-  },
-  "+L0IkF": {
-    "message": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
   },
   "+U6ozc": {
     "message": "Type"
@@ -689,10 +689,6 @@
   "AbBgEs": {
     "message": "understanding validator effective balance"
   },
-  "Ad61gz": {
-    "description": "{url} is link to GitHub CLI release, made bold for emphasis",
-    "message": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: {url}"
-  },
   "AkVktj": {
     "message": "Check deposit contract address"
   },
@@ -797,6 +793,9 @@
   },
   "Cgrsge": {
     "message": "Current validators"
+  },
+  "CmVlal": {
+    "message": "How much {TICKER_NAME} would you like to stake?"
   },
   "Co67tK": {
     "message": "BLS To Execution Change"
@@ -1171,6 +1170,10 @@
     "description": "Warns users to not run backup validators that have a live copy of their signing keys. Keys should only be on one validator machine at once.",
     "message": "Warning: Do not store keys on multiple (backup) validator clients at once"
   },
+  "K8gNLa": {
+    "description": "this is used as a command line flag",
+    "message": "withdrawal_address"
+  },
   "KBSbmP": {
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
     "message": "You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
@@ -1423,6 +1426,9 @@
   "Ou/o3H": {
     "message": "Everything you should understand before becoming a validator."
   },
+  "OuiAUJ": {
+    "message": "each of your {validatorCount} validators"
+  },
   "Ox4e26": {
     "message": "Similarly, there is also an {exitQueue}, which limits how quickly validators can {leave} the network. This is for security reasons. Given each validator is limited to a max effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, this prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
   },
@@ -1490,6 +1496,9 @@
   "QOAgQF": {
     "message": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
   },
+  "QOevre": {
+    "message": "You should now have your mnemonic written down in a safe place and a keystore saved for {yourValidators}. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the newly created {validatorKeys} directory."
+  },
   "QRUdO6": {
     "message": "Set fee recipient"
   },
@@ -1549,9 +1558,6 @@
   },
   "RdHdwG": {
     "message": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
-  },
-  "Rg5ySE": {
-    "message": "How many validators would you like to run?"
   },
   "RhR6+a": {
     "message": "We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons."
@@ -1871,9 +1877,6 @@
     "description": "{grafana} is 'Grafana' service, with link to its homepage (do not translate name)",
     "message": "I've set up my {grafana} service."
   },
-  "YQJy4H": {
-    "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
-  },
   "YXrp+b": {
     "message": "{wagyuKeyGenGui}: This software is being updated to require users to provide a withdrawal address during key generation. In the meantime, you may have to check “Advanced” during setup to enter a withdrawal address."
   },
@@ -2093,6 +2096,9 @@
   "d5KEM8": {
     "message": "You must sign a transaction for every deposit you want to make."
   },
+  "dAwg7N": {
+    "message": "Each validator of this account type requires exactly {MIN_ACTIVATION_BALANCE} {TICKER_NAME}."
+  },
   "dIgBOz": {
     "message": "Deposit"
   },
@@ -2166,8 +2172,18 @@
   "f/N7FO": {
     "message": "What happens if I lose my signing key?"
   },
+  "f5yGLr": {
+    "description": "{url} is link to GitHub CLI release, made bold for emphasis",
+    "message": "Please make sure that you are downloading from the official EthStaker GitHub account by verifying the url: {url}"
+  },
+  "fBG/Ge": {
+    "message": "Cost"
+  },
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
+  },
+  "fLOgM+": {
+    "message": "You should now have your mnemonic written down in a safe place and a keystore saved for {yourValidators}. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
   },
   "fQ5yno": {
     "message": "Arabic"
@@ -2217,6 +2233,9 @@
   "gFj3By": {
     "message": "highly variable"
   },
+  "gGc4ae": {
+    "message": "Download GUI app"
+  },
   "gHJegi": {
     "message": "Validators still need to complete their validation duties until they are exited"
   },
@@ -2259,6 +2278,9 @@
   },
   "h/n5+N": {
     "message": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
+  },
+  "h2Lpn3": {
+    "message": "This account type requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold a max of {MAX_EFFECTIVE_BALANCE}"
   },
   "h8MTUo": {
     "message": "Your stake"
@@ -2635,6 +2657,9 @@
   "ndhFef": {
     "message": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
   },
+  "nix/jD": {
+    "message": "How many accounts would you like to run?"
+  },
   "njAU72": {
     "message": "French"
   },
@@ -2680,6 +2705,12 @@
   },
   "oNohob": {
     "message": "Configure your consensus client"
+  },
+  "oPgUAj": {
+    "message": "your validator"
+  },
+  "oVx7Qe": {
+    "message": "Step 2: Generate deposit keys using the EthStaker deposit tool"
   },
   "oWBn+a": {
     "message": "Hardware suggestions are an ever-evolving target. Current minimum requirements are likely to increase by an order of magnitude after the introduction of Danksharding. Do your own research before depositing funds."
@@ -2910,9 +2941,6 @@
   "sgn0wo": {
     "message": "What happens if I have BLS withdrawal credentials and I lose my withdrawal key?"
   },
-  "sj/Zef": {
-    "message": "Download Key Gen GUI app"
-  },
   "smD5l/": {
     "message": "Consensus Layer Beacon Node (BN)"
   },
@@ -3015,9 +3043,6 @@
   },
   "uhapiE": {
     "message": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
-  },
-  "ujVT29": {
-    "message": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your {validatorCount} validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the newly created {validatorKeys} directory."
   },
   "ukfwum": {
     "message": "Become a validator with Nimbus"

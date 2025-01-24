@@ -25,24 +25,22 @@ export const Instructions = ({
 }: Props) => {
   const { formatMessage } = useIntl();
   return (
-    <Paper className="mt20" style={{ animation: 'fadeIn 1s' }}>
+    <Paper className="mb20" style={{ animation: 'fadeIn 1s' }}>
       <Heading level={2} size="small" color="blueMedium">
         <FormattedMessage defaultMessage="How do you want to generate your keys?" />
       </Heading>
-      <div className="my20" style={{ display: 'flex' }}>
-        <TextSelectionBox
-          isActive={chosenTool === keysTool.CLI}
-          onClick={() => setChosenTool(keysTool.CLI)}
-          style={{ marginEnd: '20px' }}
-        >
-          {formatMessage({ defaultMessage: 'Download CLI app' })}
-        </TextSelectionBox>
+      <div className="my20" style={{ display: 'flex', gap: '20px' }}>
         <TextSelectionBox
           isActive={chosenTool === keysTool.GUI}
           onClick={() => setChosenTool(keysTool.GUI)}
-          style={{ marginEnd: '20px' }}
         >
-          {formatMessage({ defaultMessage: 'Download Key Gen GUI app' })}
+          {formatMessage({ defaultMessage: 'Download GUI app' })}
+        </TextSelectionBox>
+        <TextSelectionBox
+          isActive={chosenTool === keysTool.CLI}
+          onClick={() => setChosenTool(keysTool.CLI)}
+        >
+          {formatMessage({ defaultMessage: 'Download CLI app' })}
         </TextSelectionBox>
         <TextSelectionBox
           isActive={chosenTool === keysTool.CLISOURCE}
@@ -52,10 +50,10 @@ export const Instructions = ({
         </TextSelectionBox>
       </div>
       <div>
+        {chosenTool === keysTool.GUI && <Option2 {...{ os }} />}
         {chosenTool === keysTool.CLI && (
           <Option1 {...{ validatorCount, withdrawalAddress, os }} />
         )}
-        {chosenTool === keysTool.GUI && <Option2 {...{ os }} />}
         {chosenTool === keysTool.CLISOURCE && (
           <Option3 {...{ validatorCount, withdrawalAddress, os }} />
         )}

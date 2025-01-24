@@ -56,12 +56,12 @@ export const GENESIS_FORK_VERSION       = forkVersion;
 if(process.env.REACT_APP_MIN_ACTIVATION_BALANCE && Number.isNaN(Number(process.env.REACT_APP_MIN_ACTIVATION_BALANCE))) {
     throw new Error("REACT_APP_MIN_ACTIVATION_BALANCE must be of type: number")
 }
-export const MIN_ACTIVATION_BALANCE     = process.env.REACT_APP_MIN_ACTIVATION_BALANCE || 32;
+export const MIN_ACTIVATION_BALANCE     = Number(process.env.REACT_APP_MIN_ACTIVATION_BALANCE) || 32;
 
 if(process.env.REACT_APP_MAX_EFFECTIVE_BALANCE && Number.isNaN(Number(process.env.REACT_APP_MAX_EFFECTIVE_BALANCE))) {
     throw new Error("REACT_APP_MAX_EFFECTIVE_BALANCE must be of type: number")
 }
-export const MAX_EFFECTIVE_BALANCE      = process.env.REACT_APP_MAX_EFFECTIVE_BALANCE || 2048;
+export const MAX_EFFECTIVE_BALANCE      = Number(process.env.REACT_APP_MAX_EFFECTIVE_BALANCE) || 2048;
 
 if(process.env.REACT_APP_EJECTION_PRICE && Number.isNaN(Number(process.env.REACT_APP_EJECTION_PRICE))) {
     throw new Error("REACT_APP_EJECTION_PRICE must be of type: number")

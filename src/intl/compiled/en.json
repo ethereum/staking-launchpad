@@ -1,4 +1,10 @@
 {
+  "+/eSwc": [
+    {
+      "type": 0,
+      "value": "As of macOS Sequoia, users must approve these apps from their Privacy and Security settings after a failed attempt."
+    }
+  ],
   "+2VHUU": [
     {
       "type": 0,
@@ -31,12 +37,6 @@
     {
       "type": 0,
       "value": "Interactive mode"
-    }
-  ],
-  "+L0IkF": [
-    {
-      "type": 0,
-      "value": "Step 2: Generate deposit keys using the Ethereum Foundation deposit tool"
     }
   ],
   "+U6ozc": [
@@ -1837,16 +1837,6 @@
       "value": "understanding validator effective balance"
     }
   ],
-  "Ad61gz": [
-    {
-      "type": 0,
-      "value": "Please make sure that you are downloading from the official Ethereum Foundation GitHub account by verifying the url: "
-    },
-    {
-      "type": 1,
-      "value": "url"
-    }
-  ],
   "AkVktj": [
     {
       "type": 0,
@@ -2101,6 +2091,20 @@
     {
       "type": 0,
       "value": "Current validators"
+    }
+  ],
+  "CmVlal": [
+    {
+      "type": 0,
+      "value": "How much "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " would you like to stake?"
     }
   ],
   "Co67tK": [
@@ -2997,6 +3001,12 @@
       "value": "Warning: Do not store keys on multiple (backup) validator clients at once"
     }
   ],
+  "K8gNLa": [
+    {
+      "type": 0,
+      "value": "withdrawal_address"
+    }
+  ],
   "KBSbmP": [
     {
       "type": 0,
@@ -3649,6 +3659,20 @@
       "value": "Everything you should understand before becoming a validator."
     }
   ],
+  "OuiAUJ": [
+    {
+      "type": 0,
+      "value": "each of your "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validators"
+    }
+  ],
   "Ox4e26": [
     {
       "type": 0,
@@ -3865,6 +3889,28 @@
       "value": "Note: by default, VMs may disable NTP so you may need to find a work-around for your environment."
     }
   ],
+  "QOevre": [
+    {
+      "type": 0,
+      "value": "You should now have your mnemonic written down in a safe place and a keystore saved for "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the newly created "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " directory."
+    }
+  ],
   "QRUdO6": [
     {
       "type": 0,
@@ -4003,12 +4049,6 @@
     {
       "type": 0,
       "value": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
-    }
-  ],
-  "Rg5ySE": [
-    {
-      "type": 0,
-      "value": "How many validators would you like to run?"
     }
   ],
   "RhR6+a": [
@@ -4909,20 +4949,6 @@
       "value": " service."
     }
   ],
-  "YQJy4H": [
-    {
-      "type": 0,
-      "value": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
-    }
-  ],
   "YXrp+b": [
     {
       "type": 1,
@@ -5455,6 +5481,28 @@
       "value": "You must sign a transaction for every deposit you want to make."
     }
   ],
+  "dAwg7N": [
+    {
+      "type": 0,
+      "value": "Each validator of this account type requires exactly "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "dIgBOz": [
     {
       "type": 0,
@@ -5703,10 +5751,40 @@
       "value": "What happens if I lose my signing key?"
     }
   ],
+  "f5yGLr": [
+    {
+      "type": 0,
+      "value": "Please make sure that you are downloading from the official EthStaker GitHub account by verifying the url: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "fBG/Ge": [
+    {
+      "type": 0,
+      "value": "Cost"
+    }
+  ],
   "fHLKXR": [
     {
       "type": 0,
       "value": "The answer to this question very much depends on how much ETH you have at your disposal."
+    }
+  ],
+  "fLOgM+": [
+    {
+      "type": 0,
+      "value": "You should now have your mnemonic written down in a safe place and a keystore saved for "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the selected directory."
     }
   ],
   "fQ5yno": [
@@ -5821,6 +5899,12 @@
       "value": "highly variable"
     }
   ],
+  "gGc4ae": [
+    {
+      "type": 0,
+      "value": "Download GUI app"
+    }
+  ],
   "gHJegi": [
     {
       "type": 0,
@@ -5927,6 +6011,32 @@
     {
       "type": 0,
       "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
+    }
+  ],
+  "h2Lpn3": [
+    {
+      "type": 0,
+      "value": "This account type requires at least "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", and can hold a max of "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
     }
   ],
   "h8MTUo": [
@@ -6863,6 +6973,12 @@
       "value": "Once you're comfortable, you'll go through generating your keys and depositing your ETH."
     }
   ],
+  "nix/jD": [
+    {
+      "type": 0,
+      "value": "How many accounts would you like to run?"
+    }
+  ],
   "njAU72": [
     {
       "type": 0,
@@ -6983,6 +7099,18 @@
     {
       "type": 0,
       "value": "Configure your consensus client"
+    }
+  ],
+  "oPgUAj": [
+    {
+      "type": 0,
+      "value": "your validator"
+    }
+  ],
+  "oVx7Qe": [
+    {
+      "type": 0,
+      "value": "Step 2: Generate deposit keys using the EthStaker deposit tool"
     }
   ],
   "oWBn+a": [
@@ -7605,12 +7733,6 @@
       "value": "What happens if I have BLS withdrawal credentials and I lose my withdrawal key?"
     }
   ],
-  "sj/Zef": [
-    {
-      "type": 0,
-      "value": "Download Key Gen GUI app"
-    }
-  ],
   "smD5l/": [
     {
       "type": 0,
@@ -7937,28 +8059,6 @@
     {
       "type": 0,
       "value": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
-    }
-  ],
-  "ujVT29": [
-    {
-      "type": 0,
-      "value": "You should now have your mnemonic written down in a safe place and a keystore saved for each of your "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": " validators. Please make sure you keep these safe, preferably offline. Your validator keystores should be available in the newly created "
-    },
-    {
-      "type": 1,
-      "value": "validatorKeys"
-    },
-    {
-      "type": 0,
-      "value": " directory."
     }
   ],
   "ukfwum": [

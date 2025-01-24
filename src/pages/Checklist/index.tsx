@@ -276,7 +276,7 @@ export const Checklist = () => {
       header: 'Nethermind',
       text: formatMessage({
         defaultMessage:
-          'Nethermind is a robust client built on .NET core designed for performance, versatility and customizability.',
+          'The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing.',
       }),
       imgUrl: NethermindBg,
       url: routesEnum.nethermind,
@@ -287,7 +287,7 @@ export const Checklist = () => {
       discord: 'https://discord.gg/PaCMRFdvWT',
       ...defaultExecutionPorts,
       jwtUrl:
-        'https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge#jwt-secrets',
+        'https://docs.nethermind.io/get-started/running-node/consensus-clients#configuring-json-rpc-interface',
     },
     {
       header: 'Reth',

@@ -21,13 +21,13 @@ export const NethermindDetails = () => (
       Nethermind
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems." />
+      <FormattedMessage defaultMessage="The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing. With its modular design and plugin system, it offers extensibility and features for new chains. As one of the most adopted execution clients on Ethereum, Nethermind plays a crucial role in enhancing the diversity and resilience of the Ethereum ecosystem." />
     </Text>
     <SectionTitle level={2} className="mb5">
       <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.." />
+      <FormattedMessage defaultMessage="Nethermind is built in C# with flexible plugin architecture and licensed under the LGPL-3.0." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
@@ -36,7 +36,7 @@ export const NethermindDetails = () => (
       <Text>
         <FormattedMessage defaultMessage="The Nethermind documentation explains how to download and install the client." />
       </Text>
-      <Link primary to="https://downloads.nethermind.io/" className="mt10">
+      <Link primary to="https://docs.nethermind.io/get-started/installing-nethermind" className="mt10">
         <FormattedMessage defaultMessage="Nethermind installation documentation" />
       </Link>
     </section>
@@ -45,74 +45,29 @@ export const NethermindDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
+        <FormattedMessage defaultMessage="Check out the following guide to get your execution client working properly." />
       </Text>
-      {IS_MAINNET && (
-        <>
-          <Text className="mt10">
-            <FormattedMessage
-              defaultMessage="Use {mainnet} to sync the Ethereum mainnet."
-              values={{
-                mainnet: <Code className="mt20">--config mainnet</Code>,
-              }}
-              description="{mainnet} shows '--config mainnet' terminal command"
-            />
-          </Text>
-          <Link
-            primary
-            className="mt20"
-            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#mainnet"
-          >
-            --config mainnet documentation
-          </Link>
-        </>
-      )}
-      {!IS_MAINNET && IS_HOLESKY && (
-        <>
-          <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Holesky" />
-          </Heading>
-          <Text className="mt10">
-            <FormattedMessage
-              defaultMessage="Use {testnet} to sync the Holesky testnet."
-              values={{
-                testnet: <Code className="mt20">--config holesky</Code>,
-              }}
-              description="{testnet} shows '--config holesky' terminal command"
-            />
-          </Text>
-          <Link
-            primary
-            className="mt20"
-            to="https://docs.nethermind.io/get-started/installing-nethermind/#supported-networks"
-          >
-            <FormattedMessage
-              defaultMessage="Nethermind on Holesky documentation"
-              description="Links to the documentation for the execution client Nethermind, specifically for testnet Holesky"
-            />
-          </Link>
-        </>
-      )}
+      <Link
+        primary
+        className="mt20"
+        to="https://docs.nethermind.io/get-started/running-node/"
+      >
+        Running a node with Nethermind
+      </Link>
       <Heading level={3} className="mt20">
-        <FormattedMessage defaultMessage="JSON RPC endpoint" />
+        <FormattedMessage defaultMessage="JSON-RPC endpoint" />
       </Heading>
       <Text className="mt10">
         <FormattedMessage
-          defaultMessage="Use {http} to connect your consensus node to the JSON RPC
-          endpoint. This will enable the JSON RPC services on the default 8545
-          port."
-          values={{
-            http: <Code className="mt20">--JsonRpc.Enabled true</Code>,
-          }}
-          description="{http} shows '--JsonRpc.Enabled true' terminal command"
+          defaultMessage="Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
         />
       </Text>
       <Link
         primary
         className="mt20"
-        to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
+        to="https://docs.nethermind.io/get-started/running-node/consensus-clients#configuring-json-rpc-interface"
       >
-        <FormattedMessage defaultMessage="--JsonRpc.Enabled documentation" />
+        <FormattedMessage defaultMessage="Configuring JSON-RPC interface" />
       </Link>
     </section>
   </>
@@ -134,7 +89,7 @@ export const Nethermind = () => {
           <SectionTitle level={2} className="mb5">
             <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
-          <Link primary to="https://docs.nethermind.io/nethermind/">
+          <Link primary to="https://docs.nethermind.io">
             <FormattedMessage defaultMessage="Documentation on running Nethermind" />
           </Link>
         </section>

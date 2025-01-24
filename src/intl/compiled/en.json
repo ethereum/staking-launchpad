@@ -21,6 +21,12 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+3gmIR": [
+    {
+      "type": 0,
+      "value": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
@@ -173,20 +179,6 @@
       "value": "You're joining a network that functions via software. As with any software, there is the potential for accidental bugs. While unlikely, potential bugs may result in slashing."
     }
   ],
-  "/Z5X80": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "testnet"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Holesky testnet."
-    }
-  ],
   "/e+qAC": [
     {
       "type": 0,
@@ -297,6 +289,12 @@
     {
       "type": 0,
       "value": "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet."
+    }
+  ],
+  "01AzGi": [
+    {
+      "type": 0,
+      "value": "Nethermind is built in C# with flexible plugin architecture and licensed under the LGPL-3.0."
     }
   ],
   "03xT/J": [
@@ -957,6 +955,12 @@
       "value": "Reth Audit Report"
     }
   ],
+  "3jhjXW": [
+    {
+      "type": 0,
+      "value": "Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
+    }
+  ],
   "3tR/V9": [
     {
       "type": 0,
@@ -1113,6 +1117,12 @@
       "value": " withdrawal credentials)"
     }
   ],
+  "58LSsA": [
+    {
+      "type": 0,
+      "value": "Lodestar is built using TypeScript under a combination of the Apache 2.0 and GNU Lesser General Public License v3.0."
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
@@ -1263,12 +1273,6 @@
     {
       "type": 0,
       "value": "You can improve the effective balance of this validator by topping up"
-    }
-  ],
-  "6eA+mW": [
-    {
-      "type": 0,
-      "value": "Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0."
     }
   ],
   "6glcFX": [
@@ -1835,6 +1839,12 @@
     {
       "type": 0,
       "value": "Send deposit"
+    }
+  ],
+  "A4nMs+": [
+    {
+      "type": 0,
+      "value": "Check out the following guide to get your execution client working properly."
     }
   ],
   "A6Oppp": [
@@ -2505,12 +2515,6 @@
       "value": " is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
     }
   ],
-  "FfLWt5": [
-    {
-      "type": 0,
-      "value": "An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems."
-    }
-  ],
   "FgraU0": [
     {
       "type": 0,
@@ -2821,6 +2825,12 @@
       "value": "Tools available for generating key change message"
     }
   ],
+  "IZEvbY": [
+    {
+      "type": 0,
+      "value": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing. With its modular design and plugin system, it offers extensibility and features for new chains. As one of the most adopted execution clients on Ethereum, Nethermind plays a crucial role in enhancing the diversity and resilience of the Ethereum ecosystem."
+    }
+  ],
   "IZFEUg": [
     {
       "type": 0,
@@ -3111,12 +3121,6 @@
       "value": "url"
     }
   ],
-  "KbUOQp": [
-    {
-      "type": 0,
-      "value": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
-    }
-  ],
   "KhJBVZ": [
     {
       "type": 0,
@@ -3181,6 +3185,12 @@
     {
       "type": 0,
       "value": "reload your wallet"
+    }
+  ],
+  "LBAaxu": [
+    {
+      "type": 0,
+      "value": "JSON-RPC endpoint"
     }
   ],
   "LHPZ+C": [
@@ -4375,6 +4385,12 @@
       "value": "Reth is built in Rust, a language empowering everyone to build reliable and efficient software. Rust is a general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector."
     }
   ],
+  "V4X42O": [
+    {
+      "type": 0,
+      "value": "Configure Lodestar"
+    }
+  ],
   "VASo1/": [
     {
       "type": 0,
@@ -4595,12 +4611,6 @@
     {
       "type": 0,
       "value": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB in June 2024."
-    }
-  ],
-  "WYlfSC": [
-    {
-      "type": 0,
-      "value": "Nethermind on Holesky documentation"
     }
   ],
   "WdDGn6": [
@@ -5689,6 +5699,12 @@
       "value": "More on virtualenv"
     }
   ],
+  "g8+DBf": [
+    {
+      "type": 0,
+      "value": "Configuring JSON-RPC interface"
+    }
+  ],
   "g8tzOu": [
     {
       "type": 0,
@@ -5859,12 +5875,6 @@
     {
       "type": 0,
       "value": "Desktop only"
-    }
-  ],
-  "hPCn9f": [
-    {
-      "type": 0,
-      "value": "--JsonRpc.Enabled documentation"
     }
   ],
   "hXE+0W": [
@@ -7339,20 +7349,6 @@
       "value": "Phishing guide"
     }
   ],
-  "rMjMmc": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
-    }
-  ],
   "rTSJI9": [
     {
       "type": 0,
@@ -7451,6 +7447,12 @@
     {
       "type": 0,
       "value": "Teku can also be configured via a YAML file which is passed in via a few different ways."
+    }
+  ],
+  "sFD6T7": [
+    {
+      "type": 0,
+      "value": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
     }
   ],
   "sMHQRT": [
@@ -7873,6 +7875,12 @@
       "value": "Become a validator with Nimbus"
     }
   ],
+  "v/nu/L": [
+    {
+      "type": 0,
+      "value": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing."
+    }
+  ],
   "v0ygo6": [
     {
       "type": 0,
@@ -8277,12 +8285,6 @@
       "value": "This is the expected scenario."
     }
   ],
-  "yjBvUO": [
-    {
-      "type": 0,
-      "value": "Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.."
-    }
-  ],
   "ylZLi4": [
     {
       "type": 0,
@@ -8333,12 +8335,6 @@
       "value": " service."
     }
   ],
-  "z8zpxp": [
-    {
-      "type": 0,
-      "value": "Lodestar is an open-sourced TypeScript implementation of the Ethereum Consensus (formerly known as eth2) specification maintained by ChainSafe Systems. ChainSafe's goal is to develop, improve and diversify the Ethereum proof of stake ecosystem with their beacon chain and validator client with a focus on light client implementations."
-    }
-  ],
   "zAVb0/": [
     {
       "type": 0,
@@ -8355,20 +8351,6 @@
     {
       "type": 0,
       "value": "Staking economics"
-    }
-  ],
-  "zbEBi9": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "mainnet"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Ethereum mainnet."
     }
   ],
   "zicXn7": [

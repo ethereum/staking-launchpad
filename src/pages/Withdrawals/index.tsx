@@ -436,7 +436,7 @@ export const Withdrawals = () => {
                   <Link
                     primary
                     inline
-                    to="https://chainsafe.github.io/lodestar/reference/cli/#validator-voluntary-exit"
+                    to="https://chainsafe.github.io/lodestar/run/validator-management/validator-cli#validator-voluntary-exit"
                   >
                     <FormattedMessage
                       defaultMessage="Exiting a {client} validator"

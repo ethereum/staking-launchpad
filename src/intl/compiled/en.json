@@ -185,6 +185,12 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "/X/iV+": [
+    {
+      "type": 0,
+      "value": "Make sure you have control over this address as this cannot be changed. Providing an account from a centralized exchange is not recommended. Cold storage is strongly recommended."
+    }
+  ],
   "/Z2BBF": [
     {
       "type": 0,
@@ -713,6 +719,12 @@
       "value": "What factors affect the frequency of payouts?"
     }
   ],
+  "2S/h9V": [
+    {
+      "type": 0,
+      "value": "you control"
+    }
+  ],
   "2XWJdH": [
     {
       "type": 0,
@@ -1119,12 +1131,6 @@
     {
       "type": 0,
       "value": "Teku installation documentation"
-    }
-  ],
-  "5KtHYT": [
-    {
-      "type": 0,
-      "value": "If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
     }
   ],
   "5UH1sh": [
@@ -2601,6 +2607,12 @@
       "value": "Configure your execution client"
     }
   ],
+  "HX93/h": [
+    {
+      "type": 0,
+      "value": "Setting a withdrawal address is considered best security practice. If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your BLS withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
+    }
+  ],
   "HXvZ2L": [
     {
       "type": 0,
@@ -3913,6 +3925,12 @@
     {
       "type": 0,
       "value": " deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
+    }
+  ],
+  "QugHo5": [
+    {
+      "type": 0,
+      "value": "cold storage techniques"
     }
   ],
   "R7v7y3": [
@@ -5269,6 +5287,36 @@
       "value": "Current APR"
     }
   ],
+  "cSiG/i": [
+    {
+      "type": 0,
+      "value": "Your withdrawal address should be a regular Ethereum account that "
+    },
+    {
+      "type": 1,
+      "value": "youControl"
+    },
+    {
+      "type": 0,
+      "value": ", ideally using "
+    },
+    {
+      "type": 1,
+      "value": "coldStorage"
+    },
+    {
+      "type": 0,
+      "value": " techniques. Setting this address establishes your validator's "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", and permanently links the execution account to your validator(s). This account is the only account that can receive withdrawn funds from your validator. It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
+    }
+  ],
   "cU/ZP6": [
     {
       "type": 0,
@@ -5463,12 +5511,6 @@
     {
       "type": 0,
       "value": "Setup"
-    }
-  ],
-  "dwahMV": [
-    {
-      "type": 0,
-      "value": "You may choose to provide a withdrawal address with your initial deposit to automatically enable reward payments and also the ability to fully exit your funds at anytime (recommended). This address should be to a regular Ethereum address and will be the only address funds can be sent to from your new validator accounts, and cannot be changed once chosen."
     }
   ],
   "dzdAcD": [
@@ -7905,12 +7947,6 @@
     {
       "type": 0,
       "value": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
-    }
-  ],
-  "vPvQyf": [
-    {
-      "type": 0,
-      "value": "Make sure you have control over this address as this cannot be changed. Providing an account from a centralized exchange is not recommended."
     }
   ],
   "vV6ua0": [

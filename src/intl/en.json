@@ -75,6 +75,9 @@
   "/WenEu": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending the {pricePerValidator} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
   },
+  "/X/iV+": {
+    "message": "Make sure you have control over this address as this cannot be changed. Providing an account from a centralized exchange is not recommended. Cold storage is strongly recommended."
+  },
   "/Z2BBF": {
     "message": "You're joining a network that functions via software. As with any software, there is the potential for accidental bugs. While unlikely, potential bugs may result in slashing."
   },
@@ -276,6 +279,9 @@
   "2RXbJd": {
     "message": "What factors affect the frequency of payouts?"
   },
+  "2S/h9V": {
+    "message": "you control"
+  },
   "2XWJdH": {
     "message": "If so, move to next question"
   },
@@ -414,9 +420,6 @@
   },
   "5HJLBU": {
     "message": "Teku installation documentation"
-  },
-  "5KtHYT": {
-    "message": "If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
   },
   "5UH1sh": {
     "message": "Romanian"
@@ -1016,6 +1019,9 @@
   "HMgrdg": {
     "message": "Configure your execution client"
   },
+  "HX93/h": {
+    "message": "Setting a withdrawal address is considered best security practice. If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your BLS withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
+  },
   "HXvZ2L": {
     "description": "{http} shows '-rpc-http-enabled' terminal command",
     "message": "Use {http} to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
@@ -1504,6 +1510,9 @@
   },
   "Qs/oj3": {
     "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
+  },
+  "QugHo5": {
+    "message": "cold storage techniques"
   },
   "R7v7y3": {
     "message": "Set withdrawal address"
@@ -2024,6 +2033,9 @@
   "cRzxes": {
     "message": "Current APR"
   },
+  "cSiG/i": {
+    "message": "Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques. Setting this address establishes your validator's {withdrawalCredentials}, and permanently links the execution account to your validator(s). This account is the only account that can receive withdrawn funds from your validator. It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
+  },
   "cU/ZP6": {
     "message": "Ethereum uses proof-of-stake to reach consensus."
   },
@@ -2095,9 +2107,6 @@
   },
   "dvr19k": {
     "message": "Setup"
-  },
-  "dwahMV": {
-    "message": "You may choose to provide a withdrawal address with your initial deposit to automatically enable reward payments and also the ability to fully exit your funds at anytime (recommended). This address should be to a regular Ethereum address and will be the only address funds can be sent to from your new validator accounts, and cannot be changed once chosen."
   },
   "dzdAcD": {
     "message": "Default Port"
@@ -3015,9 +3024,6 @@
   },
   "vJez0K": {
     "message": "Proceed with caution. Our on-chain data source is down and we are unable to flag any double deposits."
-  },
-  "vPvQyf": {
-    "message": "Make sure you have control over this address as this cannot be changed. Providing an account from a centralized exchange is not recommended."
   },
   "vV6ua0": {
     "message": "Step 1: Download the Wagyu Key Gen app for your operating system"

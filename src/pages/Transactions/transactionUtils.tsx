@@ -43,9 +43,6 @@ const isUserRejectionError = (error: any) => {
     // 7. Fortmatic reject
     if (error.message.includes('Fortmatic: User denied transaction.'))
       return true;
-    // 8. Portis Reject
-    if (error.message.includes('User denied transaction signature.'))
-      return true;
   }
   return false;
 };

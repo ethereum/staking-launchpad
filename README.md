@@ -26,8 +26,6 @@ The Infura Project ID will enable the network status progress bar showing the ba
 REACT_APP_INFURA_PROJECT_ID=your-infura-project-id-here
 ```
 
-Note: The Portis wallet option is not available when running locally
-
 ## Installation
 
 **Available Scripts**

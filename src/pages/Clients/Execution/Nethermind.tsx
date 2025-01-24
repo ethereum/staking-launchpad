@@ -9,12 +9,8 @@ import {
 import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { IS_HOLESKY } from '../../ConnectWallet/web3Utils';
-import { IS_MAINNET } from '../../../utils/envVars';
 
-// eslint-disable-next-line no-unused-vars
 export const NethermindDetails = () => (
   <>
     <SectionTitle level={2} className="mb5">
@@ -36,7 +32,11 @@ export const NethermindDetails = () => (
       <Text>
         <FormattedMessage defaultMessage="The Nethermind documentation explains how to download and install the client." />
       </Text>
-      <Link primary to="https://docs.nethermind.io/get-started/installing-nethermind" className="mt10">
+      <Link
+        primary
+        to="https://docs.nethermind.io/get-started/installing-nethermind"
+        className="mt10"
+      >
         <FormattedMessage defaultMessage="Nethermind installation documentation" />
       </Link>
     </section>
@@ -58,9 +58,7 @@ export const NethermindDetails = () => (
         <FormattedMessage defaultMessage="JSON-RPC endpoint" />
       </Heading>
       <Text className="mt10">
-        <FormattedMessage
-          defaultMessage="Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
-        />
+        <FormattedMessage defaultMessage="Check out the following guide to properly configure Engine JSON-RPC API for your consensus client." />
       </Text>
       <Link
         primary

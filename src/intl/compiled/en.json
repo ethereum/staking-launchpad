@@ -173,20 +173,6 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
-  "/Z5X80": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "testnet"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Holesky testnet."
-    }
-  ],
   "/e+qAC": [
     {
       "type": 0,
@@ -297,6 +283,12 @@
     {
       "type": 0,
       "value": "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet."
+    }
+  ],
+  "01AzGi": [
+    {
+      "type": 0,
+      "value": "Nethermind is built in C# with flexible plugin architecture and licensed under the LGPL-3.0."
     }
   ],
   "03xT/J": [
@@ -897,6 +889,12 @@
     {
       "type": 0,
       "value": "Reth Audit Report"
+    }
+  ],
+  "3jhjXW": [
+    {
+      "type": 0,
+      "value": "Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
     }
   ],
   "3tR/V9": [
@@ -1749,6 +1747,12 @@
       "value": "Send deposit"
     }
   ],
+  "A4nMs+": [
+    {
+      "type": 0,
+      "value": "Check out the following guide to get your execution client working properly."
+    }
+  ],
   "A6Oppp": [
     {
       "type": 0,
@@ -2443,12 +2447,6 @@
       "value": " is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
     }
   ],
-  "FfLWt5": [
-    {
-      "type": 0,
-      "value": "An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems."
-    }
-  ],
   "FgraU0": [
     {
       "type": 0,
@@ -2765,6 +2763,12 @@
       "value": "Tools available for generating key change message"
     }
   ],
+  "IZEvbY": [
+    {
+      "type": 0,
+      "value": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing. With its modular design and plugin system, it offers extensibility and features for new chains. As one of the most adopted execution clients on Ethereum, Nethermind plays a crucial role in enhancing the diversity and resilience of the Ethereum ecosystem."
+    }
+  ],
   "IZFEUg": [
     {
       "type": 0,
@@ -3047,12 +3051,6 @@
       "value": "url"
     }
   ],
-  "KbUOQp": [
-    {
-      "type": 0,
-      "value": "Nethermind is a robust client built on .NET core designed for performance, versatility and customizability."
-    }
-  ],
   "KhJBVZ": [
     {
       "type": 0,
@@ -3117,6 +3115,12 @@
     {
       "type": 0,
       "value": "reload your wallet"
+    }
+  ],
+  "LBAaxu": [
+    {
+      "type": 0,
+      "value": "JSON-RPC endpoint"
     }
   ],
   "LHPZ+C": [
@@ -4541,12 +4545,6 @@
       "value": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust. Reth is able to sync an archive node in less than 50 hours from genesis. A Reth mainnet archive node is only 2.1TB in June 2024."
     }
   ],
-  "WYlfSC": [
-    {
-      "type": 0,
-      "value": "Nethermind on Holesky documentation"
-    }
-  ],
   "WdDGn6": [
     {
       "type": 0,
@@ -5669,6 +5667,12 @@
       "value": "More on virtualenv"
     }
   ],
+  "g8+DBf": [
+    {
+      "type": 0,
+      "value": "Configuring JSON-RPC interface"
+    }
+  ],
   "g8tzOu": [
     {
       "type": 0,
@@ -5839,12 +5843,6 @@
     {
       "type": 0,
       "value": "Desktop only"
-    }
-  ],
-  "hPCn9f": [
-    {
-      "type": 0,
-      "value": "--JsonRpc.Enabled documentation"
     }
   ],
   "hXE+0W": [
@@ -7355,20 +7353,6 @@
       "value": "Phishing guide"
     }
   ],
-  "rMjMmc": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " to connect your consensus node to the JSON RPC endpoint. This will enable the JSON RPC services on the default 8545 port."
-    }
-  ],
   "rTSJI9": [
     {
       "type": 0,
@@ -7889,6 +7873,12 @@
       "value": " deposits?"
     }
   ],
+  "v/nu/L": [
+    {
+      "type": 0,
+      "value": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing."
+    }
+  ],
   "v0ygo6": [
     {
       "type": 0,
@@ -8299,12 +8289,6 @@
       "value": "This is the expected scenario."
     }
   ],
-  "yjBvUO": [
-    {
-      "type": 0,
-      "value": "Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.."
-    }
-  ],
   "ylZLi4": [
     {
       "type": 0,
@@ -8389,20 +8373,6 @@
     {
       "type": 0,
       "value": "Staking economics"
-    }
-  ],
-  "zbEBi9": [
-    {
-      "type": 0,
-      "value": "Use "
-    },
-    {
-      "type": 1,
-      "value": "mainnet"
-    },
-    {
-      "type": 0,
-      "value": " to sync the Ethereum mainnet."
     }
   ],
   "zicXn7": [

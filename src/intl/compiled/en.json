@@ -63,6 +63,12 @@
       "value": "I accept"
     }
   ],
+  "+jXRfC": [
+    {
+      "type": 0,
+      "value": "It holds the records of all the initial deposits made for all validator accounts, and is read by the Beacon Chain to credit these accounts accordingly."
+    }
+  ],
   "+mDtA4": [
     {
       "type": 0,
@@ -3139,32 +3145,6 @@
       "value": "Validator FAQs"
     }
   ],
-  "LhGJ8B": [
-    {
-      "type": 1,
-      "value": "warning"
-    },
-    {
-      "type": 0,
-      "value": " Duplicate deposits with the same keyfile public key will be considered as a double deposit. If this balance exceeds your accounts maximum effective balance ("
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": ") for regular withdrawals type, "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " for compounding), extra will not be counted towards your stake. Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated. If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
-    }
-  ],
   "Ljo9dF": [
     {
       "type": 0,
@@ -4251,6 +4231,32 @@
       "value": "greater than 50%"
     }
   ],
+  "UF6jVb": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " Duplicate deposits with the same keyfile public key will be considered as a double deposit. If this balance exceeds your accounts maximum effective balance ("
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " for regular withdrawals type, "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " for compounding), extra will not be counted towards your stake. Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated. If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
+    }
+  ],
   "UJE2gP": [
     {
       "type": 0,
@@ -4643,6 +4649,20 @@
     {
       "type": 0,
       "value": "\"Type 2\", \"compounding\""
+    }
+  ],
+  "XE77g4": [
+    {
+      "type": 0,
+      "value": "I understand that there is no advantage to deposit more ETH than the maximum effective balance for my account type. Any extra "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
     }
   ],
   "XLXSsV": [
@@ -5505,12 +5525,6 @@
     {
       "type": 0,
       "value": "Submit a transaction to finish your deposit."
-    }
-  ],
-  "eOpZjd": [
-    {
-      "type": 0,
-      "value": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
     }
   ],
   "eTenzU": [
@@ -6727,20 +6741,6 @@
     {
       "type": 0,
       "value": "Erigon documentation"
-    }
-  ],
-  "nZTFTz": [
-    {
-      "type": 0,
-      "value": "I understand that there is no advantage to depositing more than once per validator. Any extra "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
     }
   ],
   "naHAvS": [

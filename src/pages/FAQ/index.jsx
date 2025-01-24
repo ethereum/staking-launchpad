@@ -308,10 +308,7 @@ export const FAQ = () => {
               <FormattedMessage defaultMessage="You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="It specifies who is staking, who is validating, how much is being
-                  staked, and who can withdraw the funds."
-              />
+              <FormattedMessage defaultMessage="It holds the records of all the initial deposits made for all validator accounts, and is read by the Beacon Chain to credit these accounts accordingly." />
             </Text>
           </section>
           <section>

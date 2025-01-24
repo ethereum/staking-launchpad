@@ -258,7 +258,7 @@ const _SummaryPage = ({
         <Text>
           <FormattedMessage
             defaultMessage="{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit.
-              If this balance exceeds your accounts maximum effective balance ({MIN_ACTIVATION_BALANCE}) for regular withdrawals type, {MAX_EFFECTIVE_BALANCE} for compounding), extra will not be counted towards your stake.
+              If this balance exceeds your accounts maximum effective balance ({MIN_ACTIVATION_BALANCE} for regular withdrawals type, {MAX_EFFECTIVE_BALANCE} for compounding), extra will not be counted towards your stake.
               Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated.
               If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
             values={{
@@ -279,9 +279,7 @@ const _SummaryPage = ({
           <li>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Do not submit any transaction with a {depositData} file that you
-              did not create yourself, or that you do not own the mnemonic
-              phrase for."
+                defaultMessage="Do not submit any transaction with a {depositData} file that you did not create yourself, or that you do not own the mnemonic phrase for."
                 values={{ depositData: <Code>deposit_data</Code> }}
               />
             </Text>
@@ -302,7 +300,8 @@ const _SummaryPage = ({
             label={
               <Text>
                 <FormattedMessage
-                  defaultMessage="I understand that there is no advantage to depositing more than once per validator. Any extra {TICKER_NAME} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
+                  defaultMessage="I understand that there is no advantage to deposit more ETH than the maximum effective balance for my account type.
+                  Any extra {TICKER_NAME} sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
                   values={{ TICKER_NAME }}
                 />
               </Text>

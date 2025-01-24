@@ -24,6 +24,9 @@
   "+fnRDB": {
     "message": "I accept"
   },
+  "+jXRfC": {
+    "message": "It holds the records of all the initial deposits made for all validator accounts, and is read by the Beacon Chain to credit these accounts accordingly."
+  },
   "+mDtA4": {
     "message": "6. Wait to become active"
   },
@@ -1227,9 +1230,6 @@
   "LeHQQm": {
     "message": "Validator FAQs"
   },
-  "LhGJ8B": {
-    "message": "{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit. If this balance exceeds your accounts maximum effective balance ({MIN_ACTIVATION_BALANCE}) for regular withdrawals type, {MAX_EFFECTIVE_BALANCE} for compounding), extra will not be counted towards your stake. Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated. If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
-  },
   "Ljo9dF": {
     "message": "Bulgarian"
   },
@@ -1639,6 +1639,9 @@
   "U7AOxj": {
     "message": "greater than 50%"
   },
+  "UF6jVb": {
+    "message": "{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit. If this balance exceeds your accounts maximum effective balance ({MIN_ACTIVATION_BALANCE} for regular withdrawals type, {MAX_EFFECTIVE_BALANCE} for compounding), extra will not be counted towards your stake. Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated. If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
+  },
   "UJE2gP": {
     "message": "Controlled by"
   },
@@ -1781,6 +1784,9 @@
   },
   "XC3Z4Q": {
     "message": "\"Type 2\", \"compounding\""
+  },
+  "XE77g4": {
+    "message": "I understand that there is no advantage to deposit more ETH than the maximum effective balance for my account type. Any extra {TICKER_NAME} sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
   },
   "XLXSsV": {
     "message": "Reth provides an active Telegram chat for technical discussion and troubleshooting."
@@ -2111,9 +2117,6 @@
   },
   "eOVXJz": {
     "message": "Submit a transaction to finish your deposit."
-  },
-  "eOpZjd": {
-    "message": "It specifies who is staking, who is validating, how much is being staked, and who can withdraw the funds."
   },
   "eTenzU": {
     "message": "activation queue"
@@ -2595,9 +2598,6 @@
   },
   "nW+xcT": {
     "message": "Erigon documentation"
-  },
-  "nZTFTz": {
-    "message": "I understand that there is no advantage to depositing more than once per validator. Any extra {TICKER_NAME} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
   },
   "naHAvS": {
     "message": "Enabling withdrawals"

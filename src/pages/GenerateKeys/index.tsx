@@ -37,6 +37,9 @@ import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
 // Routes
 import { routesEnum } from '../../Routes';
+import { AccountTypeButtons } from './AccountTypeButtons';
+
+export type AccountType = '0x01' | '0x02';
 
 export enum operatingSystem {
   'MAC',
@@ -137,9 +140,13 @@ const _GenerateKeysPage = ({
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
   ] = useState<boolean>(workflow > WorkflowStep.GENERATE_KEY_PAIRS);
+
+  const [chosenType, setChosenType] = useState<AccountType>('0x02');
+
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
+
   const [withdrawalAddress, setWithdrawalAddress] = useState<string>('');
 
   // Default to CLI on mainnet for now, once we have more confidence in it, switch to GUI as default.
@@ -187,7 +194,7 @@ const _GenerateKeysPage = ({
     <WorkflowPageTemplate
       title={formatMessage({ defaultMessage: 'Generate key pairs' })}
     >
-      <Paper className="mt20">
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium" className="mb20">
           <FormattedMessage defaultMessage="Withdrawal address" />
         </Heading>
@@ -248,7 +255,18 @@ const _GenerateKeysPage = ({
         </Alert>
       </Paper>
 
-      <Paper>
+      <Paper className="mb20">
+        <Heading level={2} size="small" color="blueMedium">
+          <FormattedMessage defaultMessage="What type of staking account?" />
+        </Heading>
+
+        <AccountTypeButtons
+          chosenType={chosenType}
+          setChosenType={setChosenType}
+        />
+      </Paper>
+
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="How many validators would you like to run?" />
         </Heading>
@@ -274,7 +292,7 @@ const _GenerateKeysPage = ({
         </NumValidatorContainer>
       </Paper>
 
-      <Paper className="mt20">
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="What is your current operating system?" />
         </Heading>
@@ -296,7 +314,7 @@ const _GenerateKeysPage = ({
         setChosenTool={setChosenTool}
       />
 
-      <Paper className="mt20">
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="Save the key files and get the validator file ready" />
         </Heading>
@@ -362,7 +380,7 @@ const _GenerateKeysPage = ({
           </Link>
         </Alert>
       </Paper>
-      <Paper className="mt20">
+      <Paper>
         <CheckBox
           onChange={onCheckboxClick}
           checked={mnemonicAcknowledgementChecked}

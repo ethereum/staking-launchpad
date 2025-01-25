@@ -300,6 +300,16 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="Top Up" />
           </BarLinkText>
         </Link>
+        <Link to={routesEnum.actionsPage} className="secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.actionsPage}
+          >
+            <FormattedMessage defaultMessage="Actions" />
+          </BarLinkText>
+        </Link>
         <Link to={routesEnum.withdrawals} className="mx10 secondary-link">
           <BarLinkText
             level={4}

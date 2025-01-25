@@ -315,9 +315,6 @@
   "3Q43SM": {
     "message": "Become a validator"
   },
-  "3QmqFf": {
-    "message": "Top-up transaction"
-  },
   "3SOKyg": {
     "message": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
   },
@@ -326,6 +323,9 @@
   },
   "3fRpn0": {
     "message": "Reth Audit Report"
+  },
+  "3hmlu1": {
+    "message": "Select a validator"
   },
   "3jhjXW": {
     "message": "Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
@@ -399,6 +399,9 @@
   },
   "5KtHYT": {
     "message": "If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
+  },
+  "5OjDXz": {
+    "message": "Withdrawal Credentails: {credentials}"
   },
   "5UH1sh": {
     "message": "Romanian"
@@ -893,6 +896,9 @@
   "FEbVwB": {
     "message": "The key concept is the following:"
   },
+  "FFYAkU": {
+    "message": "Activation Epoch: {epoch}"
+  },
   "FM92S0": {
     "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
   },
@@ -1174,6 +1180,9 @@
   "KhJBVZ": {
     "message": "View the Staking Checklist"
   },
+  "Kkn4j7": {
+    "message": "You can learn how to perform this update by viewing the {LINK} section."
+  },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
   },
@@ -1217,6 +1226,9 @@
   },
   "Ljo9dF": {
     "message": "Bulgarian"
+  },
+  "Ll/uYX": {
+    "message": "Please connect to a new wallet"
   },
   "LlClXS": {
     "message": "Thank you for supporting the Ethereum network!"
@@ -1609,6 +1621,9 @@
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
   },
+  "TTbBhG": {
+    "message": "This validator has Type 0 (0x00) credentials and must be updated in order to perform validator actions."
+  },
   "TZtYuA": {
     "message": "The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum."
   },
@@ -1786,6 +1801,9 @@
   },
   "XcItS7": {
     "message": "~25 minutes"
+  },
+  "XjMz3s": {
+    "message": "No validators were discovered for the provided account."
   },
   "XmddSV": {
     "message": "Build from source"
@@ -2035,6 +2053,9 @@
   "cyR7Kh": {
     "message": "Back"
   },
+  "d3fRf2": {
+    "message": "There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues."
+  },
   "d4g3yx": {
     "message": "Step 2: Generate deposit keys using the Wagyu Key Gen app"
   },
@@ -2138,6 +2159,9 @@
   "fSi2R/": {
     "message": "Information for validator operators regarding staking withdrawals."
   },
+  "fVnFri": {
+    "message": "Validator Index: {index}"
+  },
   "fZwn+P": {
     "message": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
   },
@@ -2235,6 +2259,9 @@
   "hG0uP4": {
     "message": "Desktop only"
   },
+  "hIQWYg": {
+    "message": "Validator Actions"
+  },
   "hXE+0W": {
     "description": "Tells user to upload specific JSON file created during previous step",
     "message": "Upload {depositJSON}"
@@ -2290,6 +2317,9 @@
   },
   "iXbM1G": {
     "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make command again."
+  },
+  "iZW+Wc": {
+    "message": "{headerMessage}"
   },
   "iZuIgB": {
     "message": "Decompress the file you just downloaded"
@@ -2720,6 +2750,9 @@
   "plXBe0": {
     "message": "Alternative node tooling:"
   },
+  "pnFNq9": {
+    "message": "Public Key: {pubkey}"
+  },
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."
   },
@@ -2822,6 +2855,9 @@
   },
   "rswUPu": {
     "message": "Launchpad summary"
+  },
+  "rywDJ5": {
+    "message": "Connect your wallet to retrieve validators with corresponding withdrawal credentials to upgrade to compounding, consolidate, partially withdraw, or force an exit"
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
@@ -3009,6 +3045,9 @@
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
   },
+  "vclhrb": {
+    "message": "Balance: {balance}"
+  },
   "vz8WK7": {
     "message": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
   },
@@ -3021,6 +3060,9 @@
   },
   "wJy3tO": {
     "message": "Initial setup"
+  },
+  "wL7VAE": {
+    "message": "Actions"
   },
   "wawegX": {
     "message": "fishing rod"

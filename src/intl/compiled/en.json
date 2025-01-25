@@ -859,12 +859,6 @@
       "value": "Become a validator"
     }
   ],
-  "3QmqFf": [
-    {
-      "type": 0,
-      "value": "Top-up transaction"
-    }
-  ],
   "3SOKyg": [
     {
       "type": 0,
@@ -889,6 +883,12 @@
     {
       "type": 0,
       "value": "Reth Audit Report"
+    }
+  ],
+  "3hmlu1": [
+    {
+      "type": 0,
+      "value": "Select a validator"
     }
   ],
   "3jhjXW": [
@@ -1097,6 +1097,16 @@
     {
       "type": 0,
       "value": "If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
+    }
+  ],
+  "5OjDXz": [
+    {
+      "type": 0,
+      "value": "Withdrawal Credentails: "
+    },
+    {
+      "type": 1,
+      "value": "credentials"
     }
   ],
   "5UH1sh": [
@@ -2363,6 +2373,16 @@
       "value": "The key concept is the following:"
     }
   ],
+  "FFYAkU": [
+    {
+      "type": 0,
+      "value": "Activation Epoch: "
+    },
+    {
+      "type": 1,
+      "value": "epoch"
+    }
+  ],
   "FM92S0": [
     {
       "type": 0,
@@ -3057,6 +3077,20 @@
       "value": "View the Staking Checklist"
     }
   ],
+  "Kkn4j7": [
+    {
+      "type": 0,
+      "value": "You can learn how to perform this update by viewing the "
+    },
+    {
+      "type": 1,
+      "value": "LINK"
+    },
+    {
+      "type": 0,
+      "value": " section."
+    }
+  ],
   "KqGKRA": [
     {
       "type": 0,
@@ -3151,6 +3185,12 @@
     {
       "type": 0,
       "value": "Bulgarian"
+    }
+  ],
+  "Ll/uYX": [
+    {
+      "type": 0,
+      "value": "Please connect to a new wallet"
     }
   ],
   "LlClXS": [
@@ -4219,6 +4259,12 @@
       "value": "Visit this site on desktop to become a validator."
     }
   ],
+  "TTbBhG": [
+    {
+      "type": 0,
+      "value": "This validator has Type 0 (0x00) credentials and must be updated in order to perform validator actions."
+    }
+  ],
   "TZtYuA": [
     {
       "type": 0,
@@ -4689,6 +4735,12 @@
     {
       "type": 0,
       "value": "~25 minutes"
+    }
+  ],
+  "XjMz3s": [
+    {
+      "type": 0,
+      "value": "No validators were discovered for the provided account."
     }
   ],
   "XmddSV": [
@@ -5297,6 +5349,12 @@
       "value": "Back"
     }
   ],
+  "d3fRf2": [
+    {
+      "type": 0,
+      "value": "There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues."
+    }
+  ],
   "d4g3yx": [
     {
       "type": 0,
@@ -5597,6 +5655,16 @@
       "value": "Information for validator operators regarding staking withdrawals."
     }
   ],
+  "fVnFri": [
+    {
+      "type": 0,
+      "value": "Validator Index: "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
   "fZwn+P": [
     {
       "type": 0,
@@ -5845,6 +5913,12 @@
       "value": "Desktop only"
     }
   ],
+  "hIQWYg": [
+    {
+      "type": 0,
+      "value": "Validator Actions"
+    }
+  ],
   "hXE+0W": [
     {
       "type": 0,
@@ -6003,6 +6077,12 @@
     {
       "type": 0,
       "value": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make command again."
+    }
+  ],
+  "iZW+Wc": [
+    {
+      "type": 1,
+      "value": "headerMessage"
     }
   ],
   "iZuIgB": [
@@ -7115,6 +7195,16 @@
       "value": "Alternative node tooling:"
     }
   ],
+  "pnFNq9": [
+    {
+      "type": 0,
+      "value": "Public Key: "
+    },
+    {
+      "type": 1,
+      "value": "pubkey"
+    }
+  ],
   "pnxB8A": [
     {
       "type": 0,
@@ -7425,6 +7515,12 @@
     {
       "type": 0,
       "value": "Launchpad summary"
+    }
+  ],
+  "rywDJ5": [
+    {
+      "type": 0,
+      "value": "Connect your wallet to retrieve validators with corresponding withdrawal credentials to upgrade to compounding, consolidate, partially withdraw, or force an exit"
     }
   ],
   "s6gImC": [
@@ -7969,6 +8065,16 @@
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
     }
   ],
+  "vclhrb": [
+    {
+      "type": 0,
+      "value": "Balance: "
+    },
+    {
+      "type": 1,
+      "value": "balance"
+    }
+  ],
   "vz8WK7": [
     {
       "type": 0,
@@ -7995,6 +8101,12 @@
     {
       "type": 0,
       "value": "Initial setup"
+    }
+  ],
+  "wL7VAE": [
+    {
+      "type": 0,
+      "value": "Actions"
     }
   ],
   "wawegX": [

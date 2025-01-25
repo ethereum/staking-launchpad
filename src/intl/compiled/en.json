@@ -2335,6 +2335,24 @@
       "value": "Configure Reth"
     }
   ],
+  "EuU/4k": [
+    {
+      "type": 0,
+      "value": "Maximum effective balance of "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "F8yf1S": [
     {
       "type": 0,
@@ -2581,6 +2599,24 @@
       "value": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
     }
   ],
+  "GmKyht": [
+    {
+      "type": 0,
+      "value": "Regular gasless withdrawals of any balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "GsBRWL": [
     {
       "type": 0,
@@ -2735,20 +2771,6 @@
     {
       "type": 0,
       "value": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
-    }
-  ],
-  "I9biT1": [
-    {
-      "type": 0,
-      "value": "Rewards over "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " automatically withdrawn for free to withdrawal address on a regular basis"
     }
   ],
   "ID3Pgm": [
@@ -4005,6 +4027,16 @@
       "value": " deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
     }
   ],
+  "R1bFZQ": [
+    {
+      "type": 1,
+      "value": "recommended"
+    },
+    {
+      "type": 0,
+      "value": " for most users"
+    }
+  ],
   "R7v7y3": [
     {
       "type": 0,
@@ -4525,20 +4557,6 @@
     {
       "type": 0,
       "value": "martial arts uniform"
-    }
-  ],
-  "VZk4Kz": [
-    {
-      "type": 0,
-      "value": "Maximum effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " ETH"
     }
   ],
   "VctWDX": [
@@ -6293,6 +6311,24 @@
     {
       "type": 0,
       "value": "The execution address for withdrawals"
+    }
+  ],
+  "jM+e2M": [
+    {
+      "type": 0,
+      "value": "Maximum effective balance of "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "jVlgXS": [
@@ -8247,20 +8283,6 @@
     {
       "type": 0,
       "value": "Run the following command:"
-    }
-  ],
-  "wqFQAE": [
-    {
-      "type": 0,
-      "value": "Maximum effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " ETH"
     }
   ],
   "wtTeex": [

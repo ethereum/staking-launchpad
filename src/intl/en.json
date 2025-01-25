@@ -903,6 +903,9 @@
   "EsxlJB": {
     "message": "Configure Reth"
   },
+  "EuU/4k": {
+    "message": "Maximum effective balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+  },
   "F8yf1S": {
     "message": "You can find {docsHere}."
   },
@@ -1003,6 +1006,9 @@
   "GlKjxX": {
     "message": "You should see that you have one keystore per validator. This keystore contains your signing key, encrypted with your password."
   },
+  "GmKyht": {
+    "message": "Regular gasless withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+  },
   "GsBRWL": {
     "message": "Languages"
   },
@@ -1063,9 +1069,6 @@
   },
   "I7MjRD": {
     "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
-  },
-  "I9biT1": {
-    "message": "Rewards over {MIN_ACTIVATION_BALANCE} automatically withdrawn for free to withdrawal address on a regular basis"
   },
   "ID3Pgm": {
     "message": "Maximum number of withdrawals that can be processed in a single block"
@@ -1533,6 +1536,9 @@
   "Qs/oj3": {
     "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
   },
+  "R1bFZQ": {
+    "message": "{recommended} for most users"
+  },
   "R7v7y3": {
     "message": "Set withdrawal address"
   },
@@ -1737,9 +1743,6 @@
   },
   "VUuZsb": {
     "message": "martial arts uniform"
-  },
-  "VZk4Kz": {
-    "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE} ETH"
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
@@ -2393,6 +2396,9 @@
   },
   "jBr8vs": {
     "message": "The execution address for withdrawals"
+  },
+  "jM+e2M": {
+    "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
   },
   "jVlgXS": {
     "message": "Dig deeper into the Ethereum roadmap."
@@ -3124,9 +3130,6 @@
   },
   "wm04oC": {
     "message": "Run the following command:"
-  },
-  "wqFQAE": {
-    "message": "Maximum effective balance of {MIN_ACTIVATION_BALANCE} ETH"
   },
   "wtTeex": {
     "message": "Are there spelling mistakes?"

@@ -79,7 +79,7 @@ export const BtecGuide = () => {
       title={formatMessage({ defaultMessage: 'BLS To Execution Change' })}
       description={formatMessage({
         defaultMessage:
-          'Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials.',
+          'Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials.',
       })}
     >
       <ComponentStyles>
@@ -597,7 +597,7 @@ export const BtecGuide = () => {
             <br />
             <span>
               Your SignedBLSToExecutionChange JSON file can be found at:
-              /.../staking-deposit-cli/bls_to_execution_changes
+              /.../ethstaker-deposit-cli/bls_to_execution_changes
             </span>
             <br />
             <br />

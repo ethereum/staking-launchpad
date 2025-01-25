@@ -887,6 +887,12 @@
       "value": "Command line with flags"
     }
   ],
+  "3O/6JV": [
+    {
+      "type": 0,
+      "value": "Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
+    }
+  ],
   "3PbtmF": [
     {
       "type": 0,
@@ -2929,6 +2935,20 @@
       "value": "4. Avoid phishing"
     }
   ],
+  "JZm4pU": [
+    {
+      "type": 0,
+      "value": "Setting this address establishes your validator "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", and permanently links the chosen execution address to your validator. This account will be the only account that can receive withdrawn funds from your validator."
+    }
+  ],
   "Ja5vXW": [
     {
       "type": 0,
@@ -3923,6 +3943,12 @@
       "value": "Learn about ports in networking"
     }
   ],
+  "QUztYl": [
+    {
+      "type": 0,
+      "value": "amount"
+    }
+  ],
   "QWDxrk": [
     {
       "type": 0,
@@ -3985,12 +4011,6 @@
       "value": " deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
     }
   ],
-  "QugHo5": [
-    {
-      "type": 0,
-      "value": "cold storage techniques"
-    }
-  ],
   "R7v7y3": [
     {
       "type": 0,
@@ -4045,12 +4065,6 @@
       "value": "congratulations"
     }
   ],
-  "RdHdwG": [
-    {
-      "type": 0,
-      "value": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
-    }
-  ],
   "RhR6+a": [
     {
       "type": 0,
@@ -4079,6 +4093,12 @@
     {
       "type": 0,
       "value": "Summary"
+    }
+  ],
+  "RwXnhK": [
+    {
+      "type": 0,
+      "value": "cold storage"
     }
   ],
   "Ryptmy": [
@@ -5105,6 +5125,12 @@
       "value": "Install and set virtualenv:"
     }
   ],
+  "ZuQOEW": [
+    {
+      "type": 0,
+      "value": "It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
+    }
+  ],
   "ZwqwuN": [
     {
       "type": 0,
@@ -5323,6 +5349,28 @@
       "value": "What is a validator client?"
     }
   ],
+  "cDFQIx": [
+    {
+      "type": 0,
+      "value": "Your withdrawal address should be a regular Ethereum account that "
+    },
+    {
+      "type": 1,
+      "value": "youControl"
+    },
+    {
+      "type": 0,
+      "value": ", ideally using "
+    },
+    {
+      "type": 1,
+      "value": "coldStorage"
+    },
+    {
+      "type": 0,
+      "value": " techniques."
+    }
+  ],
   "cE71F9": [
     {
       "type": 0,
@@ -5365,36 +5413,6 @@
     {
       "type": 0,
       "value": "Current APR"
-    }
-  ],
-  "cSiG/i": [
-    {
-      "type": 0,
-      "value": "Your withdrawal address should be a regular Ethereum account that "
-    },
-    {
-      "type": 1,
-      "value": "youControl"
-    },
-    {
-      "type": 0,
-      "value": ", ideally using "
-    },
-    {
-      "type": 1,
-      "value": "coldStorage"
-    },
-    {
-      "type": 0,
-      "value": " techniques. Setting this address establishes your validator's "
-    },
-    {
-      "type": 1,
-      "value": "withdrawalCredentials"
-    },
-    {
-      "type": 0,
-      "value": ", and permanently links the execution account to your validator(s). This account is the only account that can receive withdrawn funds from your validator. It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
     }
   ],
   "cU/ZP6": [

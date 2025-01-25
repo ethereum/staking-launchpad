@@ -7,11 +7,17 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, TRANSLATE_CLI_FLAGS } from '../../utils/envVars';
+import {
+  NETWORK_NAME,
+  TRANSLATE_CLI_FLAGS,
+  MIN_ACTIVATION_BALANCE,
+  MAX_EFFECTIVE_BALANCE,
+} from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
+import { AccountType } from '.';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -28,15 +34,21 @@ const GithubScreenshot = styled.img.attrs({ src: githubScreenshot })`
   width: 100%;
 `;
 
+type Props = {
+  accountType: AccountType;
+  validatorCount: number | string;
+  ethAmount: number | string;
+  withdrawalAddress: string;
+  os: 'mac' | 'linux' | 'windows'; // string
+};
+
 export const Option1 = ({
+  accountType,
+  ethAmount,
   validatorCount,
   withdrawalAddress,
   os,
-}: {
-  validatorCount: number | string;
-  withdrawalAddress: string;
-  os: string;
-}) => {
+}: Props) => {
   const { formatMessage } = useIntl();
   const { consensusLayerName } = useIntlNetworkName();
 
@@ -122,8 +134,29 @@ export const Option1 = ({
               </>
             )}
             new-mnemonic{' '}
-            {validatorCount > 0
-              ? `--${
+            {accountType === '0x02' &&
+            ethAmount >= MIN_ACTIVATION_BALANCE &&
+            ethAmount <= MAX_EFFECTIVE_BALANCE
+              ? `--compounding --${
+                  TRANSLATE_CLI_FLAGS
+                    ? formatMessage({
+                        defaultMessage: 'num_validators',
+                        description:
+                          'this is used as a command line flag, short for "number of validators"',
+                      })
+                    : 'num_validators'
+                } 1 --${
+                  TRANSLATE_CLI_FLAGS
+                    ? formatMessage({
+                        defaultMessage: 'amount',
+                        description:
+                          'this is used as a command line flag, for the amount of ETH to be deposited',
+                      })
+                    : 'amount'
+                } ${ethAmount}`
+              : ''}{' '}
+            {accountType === '0x01' && validatorCount > 0
+              ? `--regular-withdrawal --${
                   TRANSLATE_CLI_FLAGS
                     ? formatMessage({
                         defaultMessage: 'num_validators',

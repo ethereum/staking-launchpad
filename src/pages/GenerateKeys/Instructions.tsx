@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { keysTool } from './index';
+import { keysTool, AccountType } from './index';
 import { Paper } from '../../components/Paper';
 import { TextSelectionBox } from '../../components/TextSelectionBox';
 import { Option1 } from './Option1';
@@ -9,7 +9,9 @@ import { Option3 } from './Option3';
 import { Heading } from '../../components/Heading';
 
 interface Props {
+  accountType: AccountType;
   validatorCount: number | string;
+  ethAmount: number | string;
   withdrawalAddress: string;
   os: 'mac' | 'linux' | 'windows';
   chosenTool: keysTool;
@@ -17,11 +19,9 @@ interface Props {
 }
 
 export const Instructions = ({
-  validatorCount,
-  withdrawalAddress,
-  os,
   chosenTool,
   setChosenTool,
+  ...optionProps
 }: Props) => {
   const { formatMessage } = useIntl();
   return (
@@ -50,13 +50,9 @@ export const Instructions = ({
         </TextSelectionBox>
       </div>
       <div>
-        {chosenTool === keysTool.GUI && <Option2 {...{ os }} />}
-        {chosenTool === keysTool.CLI && (
-          <Option1 {...{ validatorCount, withdrawalAddress, os }} />
-        )}
-        {chosenTool === keysTool.CLISOURCE && (
-          <Option3 {...{ validatorCount, withdrawalAddress, os }} />
-        )}
+        {chosenTool === keysTool.GUI && <Option2 os={optionProps.os} />}
+        {chosenTool === keysTool.CLI && <Option1 {...optionProps} />}
+        {chosenTool === keysTool.CLISOURCE && <Option3 {...optionProps} />}
       </div>
     </Paper>
   );

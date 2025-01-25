@@ -333,6 +333,9 @@
   "3KP7+U": {
     "message": "Command line with flags"
   },
+  "3O/6JV": {
+    "message": "Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
+  },
   "3PbtmF": {
     "message": "Check the whole address, not just a portion of it. There could be just a few bytes different."
   },
@@ -1133,6 +1136,9 @@
   "JPT/TK": {
     "message": "4. Avoid phishing"
   },
+  "JZm4pU": {
+    "message": "Setting this address establishes your validator {withdrawalCredentials}, and permanently links the chosen execution address to your validator. This account will be the only account that can receive withdrawn funds from your validator."
+  },
   "Ja5vXW": {
     "message": "Further reading"
   },
@@ -1505,6 +1511,10 @@
   "QRwpD3": {
     "message": "Learn about ports in networking"
   },
+  "QUztYl": {
+    "description": "this is used as a command line flag, for the amount of ETH to be deposited",
+    "message": "amount"
+  },
   "QWDxrk": {
     "message": "Key management"
   },
@@ -1525,9 +1535,6 @@
   },
   "Qs/oj3": {
     "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
-  },
-  "QugHo5": {
-    "message": "cold storage techniques"
   },
   "R7v7y3": {
     "message": "Set withdrawal address"
@@ -1556,9 +1563,6 @@
   "RWqrlk": {
     "message": "congratulations"
   },
-  "RdHdwG": {
-    "message": "Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
-  },
   "RhR6+a": {
     "message": "We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons."
   },
@@ -1574,6 +1578,9 @@
   },
   "RrCui3": {
     "message": "Summary"
+  },
+  "RwXnhK": {
+    "message": "cold storage"
   },
   "Ryptmy": {
     "message": "Verify it with the following command to check if it returns the client version correctly:"
@@ -1940,6 +1947,9 @@
   "ZtpRuA": {
     "message": "Install and set virtualenv:"
   },
+  "ZuQOEW": {
+    "message": "It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
+  },
   "ZwqwuN": {
     "message": "Rewards are given for actions that help the network reach consensus"
   },
@@ -2033,6 +2043,9 @@
   "by+LIm": {
     "message": "What is a validator client?"
   },
+  "cDFQIx": {
+    "message": "Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques."
+  },
   "cE71F9": {
     "message": "[Example: {fork}]"
   },
@@ -2050,9 +2063,6 @@
   },
   "cRzxes": {
     "message": "Current APR"
-  },
-  "cSiG/i": {
-    "message": "Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques. Setting this address establishes your validator's {withdrawalCredentials}, and permanently links the execution account to your validator(s). This account is the only account that can receive withdrawn funds from your validator. It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
   },
   "cU/ZP6": {
     "message": "Ethereum uses proof-of-stake to reach consensus."

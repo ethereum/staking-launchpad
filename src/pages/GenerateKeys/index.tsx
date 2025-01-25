@@ -40,6 +40,7 @@ import instructions2 from '../../static/instructions_2.svg';
 // Routes
 import { routesEnum } from '../../Routes';
 import { AccountTypeButtons } from './AccountTypeButtons';
+import { Code } from '../../components/Code';
 
 export type AccountType = '0x01' | '0x02';
 
@@ -216,7 +217,7 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
+  if (false && workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
     return routeToCorrectWorkflowStep(workflow);
   }
 
@@ -230,11 +231,7 @@ const _GenerateKeysPage = ({
         </Heading>
         <Text className="mb20">
           <FormattedMessage
-            // Context for AI: Setting a withdrawal address is now considered best practice for security reasons. It's technically still optional, but add complexity later if not done now. Here, we're going to guide the user through setting a withdrawal address
-            defaultMessage="Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques.
-              Setting this address establishes your validator's {withdrawalCredentials}, and permanently links the execution account to your validator(s).
-              This account is the only account that can receive withdrawn funds from your validator.
-              It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely."
+            defaultMessage="Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques."
             values={{
               youControl: (
                 <strong>
@@ -243,9 +240,17 @@ const _GenerateKeysPage = ({
               ),
               coldStorage: (
                 <em>
-                  <FormattedMessage defaultMessage="cold storage techniques" />
+                  <FormattedMessage defaultMessage="cold storage" />
                 </em>
               ),
+            }}
+          />
+        </Text>
+        <Text className="mb20">
+          <FormattedMessage
+            defaultMessage="Setting this address establishes your validator {withdrawalCredentials}, and permanently links the chosen execution address to your validator.
+              This account will be the only account that can receive withdrawn funds from your validator."
+            values={{
               withdrawalCredentials: (
                 <em>
                   <FormattedMessage defaultMessage="withdrawal credentials" />
@@ -253,6 +258,9 @@ const _GenerateKeysPage = ({
               ),
             }}
           />
+        </Text>
+        <Text className="mb20">
+          <FormattedMessage defaultMessage="It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely." />
         </Text>
         <Text className="mb20">
           <FormattedMessage
@@ -384,6 +392,8 @@ const _GenerateKeysPage = ({
         os={osMapping[chosenOs]}
         chosenTool={chosenTool}
         setChosenTool={setChosenTool}
+        accountType={chosenType}
+        ethAmount={ethAmount}
       />
 
       <Paper className="mb20">
@@ -393,10 +403,9 @@ const _GenerateKeysPage = ({
         <Text className="mt20">
           {chosenTool === keysTool.GUI ? (
             <FormattedMessage
-              defaultMessage="You should now have your mnemonic written down in a safe place and a
-              keystore saved for {yourValidators}. Please
-              make sure you keep these safe, preferably offline. Your validator
-              keystores should be available in the selected directory."
+              defaultMessage="You should now have your mnemonic written down in a safe place and a keystore saved for {yourValidators}.
+                Please make sure you keep these safe, preferably offline.
+                Your validator keystores should be available in the selected directory."
               values={{
                 yourValidators:
                   validatorCount < 2 ? (
@@ -424,7 +433,9 @@ const _GenerateKeysPage = ({
                       values={{ validatorCount }}
                     />
                   ),
-                validatorCount: <span>{validatorCount}</span>,
+                validatorKeys: (
+                  <Code>/ethstaker-deposit-cli/validator_keys</Code>
+                ),
               }}
             />
           )}

@@ -5,6 +5,7 @@ import { AccountType } from './index';
 import {
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
+  TICKER_NAME,
 } from '../../utils/envVars';
 
 const Container = styled.div`
@@ -64,14 +65,16 @@ export const AccountTypeButtons = ({
         onClick={() => setChosenType('0x02')}
         isActive={chosenType === '0x02'}
       >
-        <Label>
-          <FormattedMessage defaultMessage="Compounding" />
-        </Label>
+        <ButtonSection>
+          <Label>
+            <FormattedMessage defaultMessage="Compounding" />
+          </Label>
+        </ButtonSection>
         <ButtonSection>
           <Text>
             <FormattedMessage
-              defaultMessage="Maximum effective balance of {MAX_EFFECTIVE_BALANCE} ETH"
-              values={{ MAX_EFFECTIVE_BALANCE }}
+              defaultMessage="Maximum effective balance of {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
+              values={{ MAX_EFFECTIVE_BALANCE, TICKER_NAME }}
             />
           </Text>
           <Text>
@@ -86,6 +89,11 @@ export const AccountTypeButtons = ({
               values={{ MIN_ACTIVATION_BALANCE }}
             />
           </Text>
+          <Text>
+            <span style={{ textTransform: 'uppercase', fontSize: '0.875em' }}>
+              <FormattedMessage defaultMessage="Recommended for most users" />
+            </span>
+          </Text>
         </ButtonSection>
       </ChoiceButton>
       <ChoiceButton
@@ -98,15 +106,15 @@ export const AccountTypeButtons = ({
         <ButtonSection>
           <Text>
             <FormattedMessage
-              defaultMessage="Maximum effective balance of {MIN_ACTIVATION_BALANCE} ETH"
-              values={{ MIN_ACTIVATION_BALANCE }}
+              defaultMessage="Maximum effective balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+              values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
             />
           </Text>
 
           <Text>
             <FormattedMessage
-              defaultMessage="Rewards over {MIN_ACTIVATION_BALANCE} automatically withdrawn for free to withdrawal address on a regular basis"
-              values={{ MIN_ACTIVATION_BALANCE }}
+              defaultMessage="Regular gasless withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+              values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
             />
           </Text>
           <Text>

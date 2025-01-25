@@ -17,6 +17,8 @@ const Container = styled.div`
 
 const ChoiceButton = styled.button<{ isActive: boolean }>`
   box-shadow: ${({ isActive }) => (isActive ? '0 0 10px rgba(0,0,0,0.5)' : '')};
+  background: ${({ isActive }) =>
+    isActive ? 'rgba(0,0,0,0.05)' : 'transparent'};
   cursor: pointer;
   max-width: 400px;
   min-width: min(100%, 300px)
@@ -26,6 +28,7 @@ const ChoiceButton = styled.button<{ isActive: boolean }>`
   padding: 2rem;
   gap: 2rem;
   align-items: center;
+  transition: all 200ms ease-in-out;
 `;
 
 const ButtonSection = styled.div`
@@ -39,11 +42,6 @@ const Label = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-`;
-
-const Tag = styled.span`
-  font-size: 1.25rem;
-  font-weight: normal;
 `;
 
 const Text = styled.p`
@@ -66,14 +64,9 @@ export const AccountTypeButtons = ({
         onClick={() => setChosenType('0x02')}
         isActive={chosenType === '0x02'}
       >
-        <ButtonSection>
-          <Label>
-            <FormattedMessage defaultMessage="Compounding" />
-          </Label>
-          <Tag>
-            "<FormattedMessage defaultMessage="Type" /> 2"
-          </Tag>
-        </ButtonSection>
+        <Label>
+          <FormattedMessage defaultMessage="Compounding" />
+        </Label>
         <ButtonSection>
           <Text>
             <FormattedMessage
@@ -99,14 +92,9 @@ export const AccountTypeButtons = ({
         onClick={() => setChosenType('0x01')}
         isActive={chosenType === '0x01'}
       >
-        <ButtonSection>
-          <Label>
-            <FormattedMessage defaultMessage="Regular withdrawals" />
-          </Label>
-          <Tag>
-            "<FormattedMessage defaultMessage="Type" /> 1"
-          </Tag>
-        </ButtonSection>
+        <Label>
+          <FormattedMessage defaultMessage="Regular withdrawals" />
+        </Label>
         <ButtonSection>
           <Text>
             <FormattedMessage

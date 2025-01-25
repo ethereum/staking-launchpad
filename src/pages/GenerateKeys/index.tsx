@@ -217,7 +217,7 @@ const _GenerateKeysPage = ({
     }
   };
 
-  if (false && workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
+  if (workflow < WorkflowStep.GENERATE_KEY_PAIRS) {
     return routeToCorrectWorkflowStep(workflow);
   }
 

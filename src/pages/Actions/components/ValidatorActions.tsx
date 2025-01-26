@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
-import {
-  BLS_CREDENTIALS,
-  COMPOUNDING_CREDENTIALS,
-  EXECUTION_CREDENTIALS,
-} from '../../../utils/envVars';
+
+import { Text } from '../../../components/Text';
 import { Alert } from '../../../components/Alert';
 import { Link } from '../../../components/Link';
-import { Text } from '../../../components/Text';
-import { routesEnum } from '../../../Routes';
+
 import { Validator } from '../types';
 import Consolidate from './Consolidate';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import UpgradeCompounding from './UpgradeCompounding';
+
+import {
+  BLS_CREDENTIALS,
+  COMPOUNDING_CREDENTIALS,
+  EXECUTION_CREDENTIALS,
+} from '../../../utils/envVars';
+
+import { routesEnum } from '../../../Routes';
 
 interface Props {
   validator: Validator;

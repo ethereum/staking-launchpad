@@ -1,29 +1,34 @@
-import { Web3Provider } from '@ethersproject/providers';
-import { useWeb3React } from '@web3-react/core';
-import BigNumber from 'bignumber.js';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
+import { Web3Provider } from '@ethersproject/providers';
+import { useWeb3React } from '@web3-react/core';
+import BigNumber from 'bignumber.js';
+
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
 } from '../TopUp/types';
+import { Props, Validator } from './types';
+
+import ValidatorActions from './components/ValidatorActions';
+
+import { Button } from '../../components/Button';
+import { PageTemplate } from '../../components/PageTemplate';
+import { Alert } from '../../components/Alert';
+import Select from '../../components/Select';
+import Spinner from '../../components/Spinner';
+import { Text } from '../../components/Text';
+
+import { web3ReactInterface } from '../ConnectWallet';
+import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
+import WalletConnectModal from '../TopUp/components/WalletConnectModal';
+
 import {
   BEACONCHAIN_URL,
   ETHER_TO_GWEI,
   TICKER_NAME,
 } from '../../utils/envVars';
-import { Alert } from '../../components/Alert';
-import { Button } from '../../components/Button';
-import { PageTemplate } from '../../components/PageTemplate';
-import Select from '../../components/Select';
-import Spinner from '../../components/Spinner';
-import { Text } from '../../components/Text';
-import ValidatorActions from './components/ValidatorActions';
-import { web3ReactInterface } from '../ConnectWallet';
-import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
-import WalletConnectModal from '../TopUp/components/WalletConnectModal';
-import { Props, Validator } from './types';
 
 const Container = styled.div`
   background-color: white;
@@ -221,9 +226,39 @@ const _ActionsPage: React.FC<Props> = () => {
             <FormattedMessage defaultMessage="Select a validator" />
           </Text>
           <Select
+            placeholder={`Total validators: ${validators.length}`}
+            searchPlaceholder={formatMessage({
+              defaultMessage: 'Filter by index or pubkey',
+            })}
             options={validators.map(v => ({
               value: v.pubkey,
-              label: v.validatorindex.toString(),
+              searchContext: `${v.validatorindex.toString()}:${v.pubkey}`,
+              label: (
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr auto',
+                    flex: 1,
+                    gap: '1rem',
+                    width: '100%',
+                  }}
+                >
+                  <p style={{ margin: 0, textAlign: 'start' }}>
+                    {v.validatorindex.toString()}
+                  </p>
+                  <p
+                    style={{
+                      margin: 0,
+                      textAlign: 'end',
+                      marginInlineStart: 'auto',
+                      fontSize: '0.75em',
+                      color: '#444',
+                    }}
+                  >
+                    {(v.balance / ETHER_TO_GWEI).toFixed(9)} {TICKER_NAME}
+                  </p>
+                </div>
+              ),
             }))}
             value={selectedValidator?.pubkey || ''}
             onChange={(value: string) => {

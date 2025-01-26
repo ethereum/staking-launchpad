@@ -6,7 +6,7 @@ import { Checkmark, FormDown, FormUp } from 'grommet-icons';
 const Container = styled.div`
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
 `;
 
 const Trigger = styled.div`
@@ -22,8 +22,7 @@ const Trigger = styled.div`
 const Content = styled.div`
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -38,6 +37,7 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
 
   &:hover {
     background-color: #f0f0f0;
@@ -58,25 +58,36 @@ const SearchInput = styled.input`
 
 export type Option = {
   value: string;
-  label: string;
-};
+} & (
+  | {
+      label: string;
+      searchContext?: string;
+    }
+  | {
+      label: React.ReactNode;
+      searchContext: string;
+    }
+);
 
 export type SelectProps = {
   options: Option[];
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
+  searchPlaceholder?: string;
 };
 
-const Select = ({ options, value, onChange, placeholder }: SelectProps) => {
+const Select = ({
+  options,
+  value,
+  onChange,
+  placeholder,
+  searchPlaceholder,
+}: SelectProps) => {
   const { formatMessage } = useIntl();
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const filteredOptions = options.filter(option =>
-    option.label.toLowerCase().includes(search.toLowerCase())
-  );
 
   const handleSelect = (choice: string) => {
     onChange(choice);
@@ -100,12 +111,27 @@ const Select = ({ options, value, onChange, placeholder }: SelectProps) => {
     };
   }, []);
 
+  const selectedOption = options.find(option => option.value === value);
+
+  const filteredOptions = options.filter(option => {
+    const hasSearchContext = 'searchContext' in option;
+    const hasStringLabel = typeof option.label === 'string';
+    let fullSearchContext: string;
+
+    if (hasStringLabel && hasSearchContext) {
+      fullSearchContext = `${option.searchContext}${option.label}`;
+    } else if (hasSearchContext) {
+      fullSearchContext = option.searchContext!;
+    } else {
+      fullSearchContext = option.label as string;
+    }
+    return fullSearchContext.toLowerCase().includes(search.toLowerCase());
+  });
+
   return (
     <Container ref={containerRef}>
       <Trigger onClick={() => setIsOpen(!isOpen)}>
-        <span>
-          {options.find(option => option.value === value)?.label || placeholder}
-        </span>
+        <span>{selectedOption?.label || placeholder}</span>
         {isOpen ? <FormUp /> : <FormDown />}
       </Trigger>
       {isOpen && (
@@ -114,7 +140,10 @@ const Select = ({ options, value, onChange, placeholder }: SelectProps) => {
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder={formatMessage({ defaultMessage: 'Type to filter' })}
+            placeholder={
+              searchPlaceholder ||
+              formatMessage({ defaultMessage: 'Type to filter' })
+            }
           />
           {filteredOptions.map(option => (
             <Item
@@ -123,7 +152,12 @@ const Select = ({ options, value, onChange, placeholder }: SelectProps) => {
               onClick={() => handleSelect(option.value)}
             >
               {option.label}
-              {option.value === value && <Checkmark />}
+              <Checkmark
+                style={{
+                  fill: '#26AB83',
+                  visibility: option.value === value ? 'visible' : 'hidden',
+                }}
+              />
             </Item>
           ))}
         </Content>

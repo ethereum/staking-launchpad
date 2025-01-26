@@ -1,15 +1,9 @@
+import { Web3Provider } from '@ethersproject/providers';
+import { useWeb3React } from '@web3-react/core';
 import BigNumber from 'bignumber.js';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { Web3Provider } from '@ethersproject/providers';
-import { useWeb3React } from '@web3-react/core';
 import styled from 'styled-components';
-import { Props, Validator } from './types';
-import { web3ReactInterface } from '../ConnectWallet';
-import { Alert } from '../../components/Alert';
-import { Button } from '../../components/Button';
-import { PageTemplate } from '../../components/PageTemplate';
-import { Text } from '../../components/Text';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
@@ -19,11 +13,17 @@ import {
   ETHER_TO_GWEI,
   TICKER_NAME,
 } from '../../utils/envVars';
+import { Alert } from '../../components/Alert';
+import { Button } from '../../components/Button';
+import { PageTemplate } from '../../components/PageTemplate';
+import Select from '../../components/Select';
 import Spinner from '../../components/Spinner';
+import { Text } from '../../components/Text';
+import ValidatorActions from './components/ValidatorActions';
+import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
-import ValidatorActions from './components/ValidatorActions';
-import Select from '../../components/Select';
+import { Props, Validator } from './types';
 
 const Container = styled.div`
   background-color: white;
@@ -234,7 +234,10 @@ const _ActionsPage: React.FC<Props> = () => {
         </Container>
 
         {selectedValidator && (
-          <ValidatorActions validator={selectedValidator} />
+          <ValidatorActions
+            validator={selectedValidator}
+            validators={validators}
+          />
         )}
       </>
     );

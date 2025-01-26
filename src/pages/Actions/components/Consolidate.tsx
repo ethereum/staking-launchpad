@@ -4,45 +4,46 @@ import { Box, Button, Heading, Layer } from 'grommet';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Web3 from 'web3';
+import { Validator } from '../types';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
-import { Validator } from '../types';
-import { Text } from '../../../components/Text';
+import Select from '../../../components/Select';
 
 interface Props {
   validator: Validator;
+  validators: Validator[];
 }
 
-const ForceExit: React.FC<Props> = ({ validator }) => {
+const Consolidate: React.FC<Props> = ({ validator, validators }) => {
   const { connector, account } = useWeb3React();
 
-  const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(
-    false
+  const [selectedValidator, setSelectedValidator] = useState<Validator | null>(
+    null
   );
-  const [stepTwo, setStepTwo] = useState<boolean>(false);
-
+  const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
+    boolean
+  >(false);
   const [showTxModal, setShowTxModal] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
   const [txHash, setTxHash] = useState<string>('');
 
-  const confirmForceExit = () => {
-    setStepTwo(false);
-    setShowConfirmationModal(true);
+  const confirmConsolidate = () => {
+    setShowSelectValidatorModal(true);
+    setSelectedValidator(null);
   };
 
-  const closeConfirmationModal = () => {
-    setShowConfirmationModal(false);
-    setStepTwo(false);
+  const closeSelectValidatorModal = () => {
+    setShowSelectValidatorModal(false);
+    setSelectedValidator(null);
   };
 
-  const createExitTransaction = async () => {
+  const createConsolidationTransaction = async () => {
     setTransactionStatus('waiting_user_confirmation');
-    setShowConfirmationModal(false);
-    setStepTwo(false);
+    setShowSelectValidatorModal(false);
     setShowTxModal(true);
 
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
@@ -71,19 +72,27 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
 
   return (
     <>
-      {showConfirmationModal && (
-        <Layer position="center" onEsc={() => closeConfirmationModal()}>
+      {showSelectValidatorModal && (
+        <Layer position="center" onEsc={() => closeSelectValidatorModal()}>
           <Box pad="medium" gap="small" width="medium">
             <Heading level={3} margin="none">
               <FormattedMessage
-                defaultMessage="Are you sure you want to exit validator {index}?"
+                defaultMessage="Which validator would you like to consolidate into {index}"
                 values={{ index: validator.validatorindex }}
               />
             </Heading>
-            <Text center>
-              <FormattedMessage defaultMessage="You will be asked to sign a transaction to exit your validator." />
-              <FormattedMessage defaultMessage="Please understand that once you begin the exit process you will not be able to undo the decision. " />
-            </Text>
+            <Select
+              options={validators.map(v => ({
+                value: v.pubkey,
+                label: v.validatorindex.toString(),
+              }))}
+              value={selectedValidator?.pubkey || ''}
+              onChange={(value: string) => {
+                setSelectedValidator(
+                  validators.find(v => v.pubkey === value) || null
+                );
+              }}
+            />
           </Box>
           <Box
             as="footer"
@@ -93,30 +102,28 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
             justify="center"
             pad={{ top: 'medium', bottom: 'small' }}
           >
-            <Button label="Cancel" onClick={() => closeConfirmationModal()} />
-            {stepTwo ? (
-              <Button
-                label="I'm really sure"
-                onClick={() => createExitTransaction()}
-                color="dark-3"
-              />
-            ) : (
-              <Button
-                label="I'm sure"
-                onClick={() => setStepTwo(true)}
-                color="dark-3"
-              />
-            )}
+            <Button
+              label="Cancel"
+              onClick={() => closeSelectValidatorModal()}
+            />
+            <Button
+              disabled={!selectedValidator}
+              label="Consolidate"
+              onClick={() => createConsolidationTransaction()}
+            />
           </Box>
         </Layer>
       )}
 
-      {showTxModal && (
+      {showTxModal && selectedValidator && (
         <TransactionStatusModal
           headerMessage={
             <FormattedMessage
-              defaultMessage="Fully exit validator {index}"
-              values={{ index: validator.validatorindex }}
+              defaultMessage="Consolidate {index} into {otherIndex}"
+              values={{
+                index: selectedValidator.validatorindex,
+                otherIndex: validator.validatorindex,
+              }}
             />
           }
           txHash={txHash}
@@ -125,9 +132,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
         />
       )}
 
-      <Button label="Force exit" onClick={() => confirmForceExit()} />
+      <Button label="Consolidate" onClick={() => confirmConsolidate()} />
     </>
   );
 };
 
-export default ForceExit;
+export default Consolidate;

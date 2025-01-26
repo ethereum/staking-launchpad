@@ -75,6 +75,9 @@
   "/e+qAC": {
     "message": "withdrawable epoch"
   },
+  "/gME+2": {
+    "message": "Which validator would you like to consolidate into {index}"
+  },
   "/h0DGY": {
     "message": "Why the {pricePerValidator} ETH maximum?"
   },
@@ -547,6 +550,9 @@
   },
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
+  },
+  "8hf1a0": {
+    "message": "Fully exit validator {index}"
   },
   "8k1RjX": {
     "message": "{NETWORK_NAME} testnet"
@@ -1314,6 +1320,9 @@
   },
   "Mor0Ih": {
     "message": "Bad validator behavior"
+  },
+  "MpbZo9": {
+    "message": "Consolidate {index} into {otherIndex}"
   },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."

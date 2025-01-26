@@ -1,14 +1,14 @@
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+import { Button } from 'grommet';
 import React, { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+import Web3 from 'web3';
 import { Validator } from '../types';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
-import { AbstractConnector } from '@web3-react/abstract-connector';
-import Web3 from 'web3';
-import { useWeb3React } from '@web3-react/core';
-import { Button } from 'grommet';
-import { FormattedMessage } from 'react-intl';
 
 interface Props {
   validator: Validator;

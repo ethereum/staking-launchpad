@@ -1,7 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Text } from '../../../components/Text';
+import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 import {
   BLS_CREDENTIALS,
   COMPOUNDING_CREDENTIALS,
@@ -9,14 +8,17 @@ import {
 } from '../../../utils/envVars';
 import { Alert } from '../../../components/Alert';
 import { Link } from '../../../components/Link';
+import { Text } from '../../../components/Text';
 import { routesEnum } from '../../../Routes';
-import UpgradeCompounding from './UpgradeCompounding';
+import { Validator } from '../types';
+import Consolidate from './Consolidate';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
-import { Validator } from '../types';
+import UpgradeCompounding from './UpgradeCompounding';
 
 interface Props {
   validator: Validator;
+  validators: Validator[];
 }
 
 const InlineLink = styled(Link)`
@@ -38,7 +40,21 @@ const Actions = styled.div`
   margin-top: 10px;
 `;
 
-const ValidatorActions: React.FC<Props> = ({ validator }) => {
+const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
+  const [sharedValidators, setSharedValidators] = useState<Validator[]>([]);
+
+  useEffect(() => {
+    if (validators && validators) {
+      setSharedValidators(
+        validators.filter(
+          v => v.withdrawalcredentials === validator.withdrawalcredentials
+        )
+      );
+    } else {
+      setSharedValidators([]);
+    }
+  }, [validator, validators]);
+
   return (
     <>
       <ValidatorDetails>
@@ -113,6 +129,12 @@ const ValidatorActions: React.FC<Props> = ({ validator }) => {
             {validator.withdrawalcredentials.substring(0, 4) ===
               COMPOUNDING_CREDENTIALS && (
               <PartialWithdraw validator={validator} />
+            )}
+            {sharedValidators.length > 0 && (
+              <Consolidate
+                validator={validator}
+                validators={sharedValidators}
+              />
             )}
           </div>
           <ForceExit validator={validator} />

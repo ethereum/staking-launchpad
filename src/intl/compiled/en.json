@@ -193,6 +193,16 @@
       "value": "withdrawable epoch"
     }
   ],
+  "/gME+2": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to consolidate into "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
   "/h0DGY": [
     {
       "type": 0,
@@ -1513,6 +1523,16 @@
     {
       "type": 0,
       "value": "Do not turn your validator off until this epoch is reached."
+    }
+  ],
+  "8hf1a0": [
+    {
+      "type": 0,
+      "value": "Fully exit validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "8k1RjX": [
@@ -3403,6 +3423,24 @@
     {
       "type": 0,
       "value": "Bad validator behavior"
+    }
+  ],
+  "MpbZo9": [
+    {
+      "type": 0,
+      "value": "Consolidate "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " into "
+    },
+    {
+      "type": 1,
+      "value": "otherIndex"
     }
   ],
   "N0rwnt": [

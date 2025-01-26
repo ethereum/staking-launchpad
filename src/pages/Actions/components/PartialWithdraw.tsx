@@ -1,17 +1,17 @@
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+import { Box, Button, Heading, Layer } from 'grommet';
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+import Web3 from 'web3';
 import { Validator } from '../types';
+import { NumberInput } from '../../../components/NumberInput';
 import { Text } from '../../../components/Text';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
-import { AbstractConnector } from '@web3-react/abstract-connector';
-import Web3 from 'web3';
-import { useWeb3React } from '@web3-react/core';
-import { Box, Button, Heading, Layer } from 'grommet';
-import { FormattedMessage } from 'react-intl';
 import { MIN_VALIDATOR_BALANCE, TICKER_NAME } from '../../../utils/envVars';
-import { NumberInput } from '../../../components/NumberInput';
 
 interface Props {
   validator: Validator;

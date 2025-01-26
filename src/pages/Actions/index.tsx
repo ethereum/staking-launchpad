@@ -18,6 +18,7 @@ import Spinner from '../../components/Spinner';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 import ValidatorActions from './components/ValidatorActions';
+import Select from '../../components/Select';
 
 const Container = styled.div`
   background-color: white;
@@ -92,7 +93,7 @@ const _ActionsPage: React.FC<Props> = () => {
           }: {
             data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
           }) => {
-            //setShowDepositVerificationWarning(false);
+            // setShowDepositVerificationWarning(false);
             const response = Array.isArray(data) ? data : [data];
             // no validators for that user's wallet address
             if (response.length === 0) {
@@ -123,7 +124,7 @@ const _ActionsPage: React.FC<Props> = () => {
                   }) => {
                     const validatorsData = Array.isArray(data) ? data : [data];
                     if (validatorsData.length === 0) {
-                      //setShowDepositVerificationWarning(true);
+                      // setShowDepositVerificationWarning(true);
                     }
                     setValidators(validatorsData);
                     setLoading(false);
@@ -203,21 +204,17 @@ const _ActionsPage: React.FC<Props> = () => {
           <Text>
             <FormattedMessage defaultMessage="Select a validator" />
           </Text>
-          <select
-            onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-              const validator = validators.find(
-                v => v.pubkey === event.target.value
-              );
+          <Select
+            options={validators.map(v => ({
+              value: v.pubkey,
+              label: v.validatorindex.toString(),
+            }))}
+            value={selectedValidator?.pubkey || ''}
+            onChange={(value: string) => {
+              const validator = validators.find(v => v.pubkey === value);
               setSelectedValidator(validator || null);
             }}
-          >
-            <option value="">Select a validator</option>
-            {validators.map(v => (
-              <option key={v.validatorindex} value={v.pubkey}>
-                Validator {v.validatorindex}
-              </option>
-            ))}
-          </select>
+          />
         </Container>
 
         {selectedValidator && (

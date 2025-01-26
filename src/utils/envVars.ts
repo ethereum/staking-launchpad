@@ -73,6 +73,7 @@ export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000
 export const BLS_CREDENTIALS = "0x00";
 export const EXECUTION_CREDENTIALS = "0x01";
 export const COMPOUNDING_CREDENTIALS = "0x02";
+export const MIN_VALIDATOR_BALANCE = 32;
 
 // Boolean to translate CLI command flags, or keep in English
 export const TRANSLATE_CLI_FLAGS        = process.env.REACT_APP_TRANSLATE_CLI_FLAGS === 'true';

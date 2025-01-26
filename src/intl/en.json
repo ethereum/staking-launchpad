@@ -3,6 +3,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+3RpL0": {
+    "message": "Partial Withdraw of {amount}{ticker}"
+  },
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -1088,6 +1091,9 @@
   "InUvmv": {
     "message": "Beacon chain push withdrawals as operations"
   },
+  "IsyY5V": {
+    "message": "Upgrade validator {index} to compounding"
+  },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
     "message": "It depends. In addition to the {impact} there are two important scenarios to be aware of:"
@@ -1764,6 +1770,9 @@
   "X/fKmY": {
     "message": "Has the block explorer named the contract?"
   },
+  "X0yQPs": {
+    "message": "Are you sure you want to exit validator {index}?"
+  },
   "X3NiFM": {
     "message": "proof-of-custody game"
   },
@@ -2391,6 +2400,9 @@
   "jmKQY9": {
     "message": "Nimbus validator documentation"
   },
+  "jmoYdI": {
+    "message": "Please understand that once you begin the exit process you will not be able to undo the decision."
+  },
   "jp9OG2": {
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
     "message": "Choose {ethClientType} client"
@@ -2473,6 +2485,9 @@
   "l/uCcX": {
     "message": "You're on the testnet"
   },
+  "l0+Knx": {
+    "message": "You will be asked to sign a transaction to exit your validator."
+  },
   "l3ztMu": {
     "message": "As of {date}, you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
   },
@@ -2547,6 +2562,9 @@
   },
   "mH6bSl": {
     "message": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
+  },
+  "mHSz8x": {
+    "message": "Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance}{ticker} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
   },
   "mROPz+": {
     "message": "I provided an Ethereum address when generating my {depositData} file before depositing where I would like all validator rewards and withdrawals to be deposited into."
@@ -2786,6 +2804,9 @@
   },
   "qBorVY": {
     "message": "Exit epoch and withdrawable epoch"
+  },
+  "qIB0uh": {
+    "message": "Your validator must have a minimum balance of {minBalance}{ticker} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
   },
   "qK4+NQ": {
     "message": "The terminal"
@@ -3054,6 +3075,9 @@
   "vz8WK7": {
     "message": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
   },
+  "w2THbw": {
+    "message": "Your validator has a balance of {balance}"
+  },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
   },
@@ -3133,6 +3157,9 @@
   },
   "xbet2w": {
     "message": "Install python3.7+"
+  },
+  "xgSoMq": {
+    "message": "How much would you like to withdraw?"
   },
   "xh7oVn": {
     "message": "Those looking to exit their validator from staking and withdrawal their ETH should check out the guide below that matches your setup:"

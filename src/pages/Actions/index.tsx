@@ -1,9 +1,10 @@
+import BigNumber from 'bignumber.js';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Web3Provider } from '@ethersproject/providers';
 import { useWeb3React } from '@web3-react/core';
 import styled from 'styled-components';
-import { Props } from './types';
+import { Props, Validator } from './types';
 import { web3ReactInterface } from '../ConnectWallet';
 import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
@@ -13,7 +14,11 @@ import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
 } from '../TopUp/types';
-import { BEACONCHAIN_URL } from '../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  ETHER_TO_GWEI,
+  TICKER_NAME,
+} from '../../utils/envVars';
 import Spinner from '../../components/Spinner';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
@@ -63,14 +68,13 @@ const _ActionsPage: React.FC<Props> = () => {
   const { formatMessage } = useIntl();
 
   const [loading, setLoading] = React.useState<boolean>(false);
-  const [
-    selectedValidator,
-    setSelectedValidator,
-  ] = useState<BeaconChainValidator | null>(null);
+  const [selectedValidator, setSelectedValidator] = useState<Validator | null>(
+    null
+  );
   const [validatorLoadError, setValidatorLoadError] = React.useState<boolean>(
     false
   );
-  const [validators, setValidators] = useState<BeaconChainValidator[]>([]);
+  const [validators, setValidators] = useState<Validator[]>([]);
 
   const handleConnect = useCallback((): void => {
     setLoading(true);
@@ -126,7 +130,19 @@ const _ActionsPage: React.FC<Props> = () => {
                     if (validatorsData.length === 0) {
                       // setShowDepositVerificationWarning(true);
                     }
-                    setValidators(validatorsData);
+                    setValidators(
+                      validatorsData.map(v => {
+                        const coinBalance = new BigNumber(v.balance)
+                          .div(ETHER_TO_GWEI)
+                          .toNumber();
+
+                        return {
+                          ...v,
+                          balanceDisplay: `${coinBalance}${TICKER_NAME}`,
+                          coinBalance,
+                        };
+                      })
+                    );
                     setLoading(false);
                   }
                 )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Box, Layer } from 'grommet';
 import { Heading } from '../Heading';
@@ -10,7 +10,7 @@ import { EL_TRANSACTION_URL } from '../../utils/envVars';
 import { Link } from '../Link';
 
 interface TopUpTransactionModalProps {
-  headerMessage: string;
+  headerMessage: string | ReactNode;
   onClose: () => void;
   transactionStatus: TransactionStatus;
   txHash: string;
@@ -56,10 +56,14 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
     <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
       <Box pad="medium" gap="small" width="medium">
         <Heading level={3} margin="none">
-          <FormattedMessage
-            defaultMessage="{headerMessage}"
-            values={{ headerMessage }}
-          />
+          {typeof headerMessage === 'string' ? (
+            <FormattedMessage
+              defaultMessage="{headerMessage}"
+              values={{ headerMessage }}
+            />
+          ) : (
+            headerMessage
+          )}
         </Heading>
         <TransactionProgress
           signTxStatus={signTxStatus}

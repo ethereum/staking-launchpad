@@ -19,7 +19,7 @@ import { Text } from '../../../components/Text';
 import { Button } from '../../../components/Button';
 import { Paper } from '../../../components/Paper';
 import { Heading } from '../../../components/Heading';
-import { TopupInput } from './TopUpInput';
+import { NumberInput } from '../../../components/NumberInput';
 import shortenAddress from '../../../utils/shortenAddress';
 import { Alert } from '../../../components/Alert';
 import {
@@ -326,7 +326,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           </Alert>
         </div>
         <InputContainer>
-          <TopupInput
+          <NumberInput
+            allowDecimals
             value={value}
             setValue={setValue}
             maxValue={maxTopupValue}

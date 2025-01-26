@@ -21,6 +21,20 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+3RpL0": [
+    {
+      "type": 0,
+      "value": "Partial Withdraw of "
+    },
+    {
+      "type": 1,
+      "value": "amount"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -2839,6 +2853,20 @@
       "value": "Beacon chain push withdrawals as operations"
     }
   ],
+  "IsyY5V": [
+    {
+      "type": 0,
+      "value": "Upgrade validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " to compounding"
+    }
+  ],
   "IwrKbS": [
     {
       "type": 0,
@@ -4621,6 +4649,20 @@
       "value": "Has the block explorer named the contract?"
     }
   ],
+  "X0yQPs": [
+    {
+      "type": 0,
+      "value": "Are you sure you want to exit validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "X3NiFM": [
     {
       "type": 0,
@@ -6251,6 +6293,12 @@
       "value": "Nimbus validator documentation"
     }
   ],
+  "jmoYdI": [
+    {
+      "type": 0,
+      "value": "Please understand that once you begin the exit process you will not be able to undo the decision."
+    }
+  ],
   "jp9OG2": [
     {
       "type": 0,
@@ -6439,6 +6487,12 @@
     {
       "type": 0,
       "value": "You're on the testnet"
+    }
+  ],
+  "l0+Knx": [
+    {
+      "type": 0,
+      "value": "You will be asked to sign a transaction to exit your validator."
     }
   ],
   "l3ztMu": [
@@ -6671,6 +6725,36 @@
     {
       "type": 0,
       "value": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
+    }
+  ],
+  "mHSz8x": [
+    {
+      "type": 0,
+      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "minBalance"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": " for the validator to operate, you will be able to withdraw a maximum of "
+    },
+    {
+      "type": 1,
+      "value": "maxAmount"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "mROPz+": [
@@ -7321,6 +7405,24 @@
     {
       "type": 0,
       "value": "Exit epoch and withdrawable epoch"
+    }
+  ],
+  "qIB0uh": [
+    {
+      "type": 0,
+      "value": "Your validator must have a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "minBalance"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
     }
   ],
   "qK4+NQ": [
@@ -8087,6 +8189,16 @@
       "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
     }
   ],
+  "w2THbw": [
+    {
+      "type": 0,
+      "value": "Your validator has a balance of "
+    },
+    {
+      "type": 1,
+      "value": "balance"
+    }
+  ],
   "w6qYSU": [
     {
       "type": 0,
@@ -8257,6 +8369,12 @@
     {
       "type": 0,
       "value": "Install python3.7+"
+    }
+  ],
+  "xgSoMq": [
+    {
+      "type": 0,
+      "value": "How much would you like to withdraw?"
     }
   ],
   "xh7oVn": [

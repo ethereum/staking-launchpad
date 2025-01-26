@@ -9,7 +9,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { toChecksumAddress } from 'ethereumjs-util';
 // Components
 import { Instructions } from './Instructions';
-import { NumberInput } from './NumberInput';
+import { NumberInput } from '../../components/NumberInput';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Alert } from '../../components/Alert';
@@ -196,7 +196,10 @@ const _GenerateKeysPage = ({
             <Text className="mb5">
               <FormattedMessage defaultMessage="Validators" />
             </Text>
-            <NumberInput value={validatorCount} setValue={setValidatorCount} />
+            <NumberInput
+              value={parseInt(`${validatorCount}`, 10)}
+              setValue={setValidatorCount}
+            />
           </div>
           <div>
             <Text className="mb5">Cost</Text>

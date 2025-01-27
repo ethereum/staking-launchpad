@@ -1,15 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, TRANSLATE_CLI_FLAGS } from '../../utils/envVars';
+import {
+  NETWORK_NAME,
+  TRANSLATE_CLI_FLAGS,
+  MIN_ACTIVATION_BALANCE,
+  MAX_EFFECTIVE_BALANCE,
+} from '../../utils/envVars';
 import { colors } from '../../styles/styledComponentsTheme';
-import { FormattedMessage, useIntl } from 'react-intl';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
+import { CLIOptionProps } from './Option1';
 
 const Pre = styled.pre`
   white-space: normal;
@@ -17,16 +23,15 @@ const Pre = styled.pre`
 `;
 
 export const Option3 = ({
+  accountType,
+  ethAmount,
   validatorCount,
   withdrawalAddress,
   os,
-}: {
-  validatorCount: number | string;
-  withdrawalAddress: string;
-  os: string;
-}) => {
+}: CLIOptionProps) => {
   const { formatMessage } = useIntl();
   const { consensusLayerName } = useIntlNetworkName();
+
   const renderPythonInstructions = () => {
     if (os === 'linux')
       return (
@@ -152,9 +157,30 @@ export const Option3 = ({
     if (os === 'mac' || os === 'linux') {
       return (
         <Pre className="my0">
-          python3 ./staking_deposit/deposit.py new-mnemonic{' '}
-          {validatorCount > 0
-            ? `--${
+          python3 -m ethstaker_deposit new-mnemonic{' '}
+          {accountType === '0x02' &&
+          ethAmount >= MIN_ACTIVATION_BALANCE &&
+          ethAmount <= MAX_EFFECTIVE_BALANCE
+            ? `--compounding --${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'num_validators',
+                      description:
+                        'this is used as a command line flag, short for "number of validators"',
+                    })
+                  : 'num_validators'
+              } 1 --${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'amount',
+                      description:
+                        'this is used as a command line flag, for the amount of ETH to be deposited',
+                    })
+                  : 'amount'
+              } ${ethAmount}`
+            : ''}{' '}
+          {accountType === '0x01' && validatorCount > 0
+            ? `--regular-withdrawal --${
                 TRANSLATE_CLI_FLAGS
                   ? formatMessage({
                       defaultMessage: 'num_validators',
@@ -170,18 +196,17 @@ export const Option3 = ({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
                 })
-              : `chain`
+              : 'chain'
           } ${NETWORK_NAME.toLowerCase()}`}{' '}
           {withdrawalAddress &&
             `--${
               TRANSLATE_CLI_FLAGS
                 ? formatMessage({
-                    defaultMessage: 'eth1_withdrawal_address',
+                    defaultMessage: 'withdrawal_address',
                     description: 'this is used as a command line flag',
                   })
-                : `eth1_withdrawal_address`
-            }`}{' '}
-          {withdrawalAddress}
+                : 'withdrawal_address'
+            } ${withdrawalAddress}`}
         </Pre>
       );
     }
@@ -189,9 +214,30 @@ export const Option3 = ({
     if (os === 'windows') {
       return (
         <Pre className="my0">
-          .\staking_deposit\deposit.py new-mnemonic{' '}
-          {validatorCount > 0
-            ? `--${
+          .\ethstaker_deposit\deposit.py new-mnemonic{' '}
+          {accountType === '0x02' &&
+          ethAmount >= MIN_ACTIVATION_BALANCE &&
+          ethAmount <= MAX_EFFECTIVE_BALANCE
+            ? `--compounding --${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'num_validators',
+                      description:
+                        'this is used as a command line flag, short for "number of validators"',
+                    })
+                  : 'num_validators'
+              } 1 --${
+                TRANSLATE_CLI_FLAGS
+                  ? formatMessage({
+                      defaultMessage: 'amount',
+                      description:
+                        'this is used as a command line flag, for the amount of ETH to be deposited',
+                    })
+                  : 'amount'
+              } ${ethAmount}`
+            : ''}{' '}
+          {accountType === '0x01' && validatorCount > 0
+            ? `--regular-withdrawal --${
                 TRANSLATE_CLI_FLAGS
                   ? formatMessage({
                       defaultMessage: 'num_validators',
@@ -207,8 +253,17 @@ export const Option3 = ({
                   defaultMessage: 'chain',
                   description: 'this is used as a command line flag',
                 })
-              : `chain`
-          } ${NETWORK_NAME.toLowerCase()}`}
+              : 'chain'
+          } ${NETWORK_NAME.toLowerCase()}`}{' '}
+          {withdrawalAddress &&
+            `--${
+              TRANSLATE_CLI_FLAGS
+                ? formatMessage({
+                    defaultMessage: 'withdrawal_address',
+                    description: 'this is used as a command line flag',
+                  })
+                : 'withdrawal_address'
+            } ${withdrawalAddress}`}
         </Pre>
       );
     }
@@ -314,16 +369,6 @@ export const Option3 = ({
       </Text>
       <Alert variant="secondary" className="my10">
         <Pre className="my0">
-          {(os === 'linux' || os === 'mac') && (
-            <span style={{ color: colors.red.medium }}>python3 setup</span>
-          )}
-          {os === 'windows' && (
-            <span style={{ color: colors.red.medium }}>python setup</span>
-          )}
-          <span style={{ color: colors.purple.dark }}>.py</span>{' '}
-          <span style={{ color: colors.red.medium }}>install</span>
-        </Pre>
-        <Pre className="my0">
           <span style={{ color: colors.red.medium }}>
             pip3 install -r requirements
           </span>
@@ -331,7 +376,7 @@ export const Option3 = ({
         </Pre>
       </Alert>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
-        <FormattedMessage defaultMessage="Generate deposit keys using the Ethereum Foundation deposit tool" />
+        <FormattedMessage defaultMessage="Generate deposit keys using the EthStaker deposit tool" />
       </Heading>
       <Alert className="my20" variant="info">
         <FormattedMessage defaultMessage="For security, we recommend you disconnect from the internet to complete this step." />

@@ -34,7 +34,7 @@ const GithubScreenshot = styled.img.attrs({ src: githubScreenshot })`
   width: 100%;
 `;
 
-type Props = {
+export type CLIOptionProps = {
   accountType: AccountType;
   validatorCount: number | string;
   ethAmount: number | string;
@@ -48,7 +48,7 @@ export const Option1 = ({
   validatorCount,
   withdrawalAddress,
   os,
-}: Props) => {
+}: CLIOptionProps) => {
   const { formatMessage } = useIntl();
   const { consensusLayerName } = useIntlNetworkName();
 

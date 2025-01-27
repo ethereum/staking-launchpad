@@ -35,7 +35,7 @@ export const MetamaskHardwareButton = () => {
   return (
     <Link
       isTextLink={false}
-      to="https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet"
+      to="https://support.metamask.io/more-web3/wallets/user-guide-how-to-use-a-hardware-wallet/"
     >
       <StyledPaper
         pad="xsmall"

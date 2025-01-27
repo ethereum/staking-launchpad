@@ -44,6 +44,7 @@ import {
   TICKER_NAME,
   IS_NON_INFURA_TESTNET,
   FAUCET_URL,
+  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
@@ -213,21 +214,21 @@ const _ConnectWalletPage = ({
     if (!!account && !!library) {
       library
         .getBalance(account)
-        .then((amount: any) => {
-          const formattedBalance = Number(
-            parseFloat(formatEther(amount)).toPrecision(5)
+        .then((wei: any) => {
+          const etherBalance = Number(
+            parseFloat(formatEther(wei)).toPrecision(5)
           );
-          const requiredBalance = depositKeys.reduce(
+
+          const gweiBalance = etherBalance * ETHER_TO_GWEI;
+
+          const requiredGweiBalance = depositKeys.reduce(
             (acc, key) => acc + key.amount,
             0
           );
 
-          setBalance(formattedBalance);
-          if (formattedBalance < requiredBalance || formattedBalance === 0) {
-            setLowBalance(true);
-          } else {
-            setLowBalance(false);
-          }
+          setBalance(etherBalance);
+
+          setLowBalance(gweiBalance < requiredGweiBalance || gweiBalance === 0);
         })
         .catch(() => setBalance(null));
       return () => setBalance(null);
@@ -240,24 +241,22 @@ const _ConnectWalletPage = ({
       library.on('block', () => {
         library
           .getBalance(account)
-          .then((amount: any) => {
-            const formattedBalance = Number(
-              parseFloat(formatEther(amount)).toPrecision(5)
+          .then((wei: any) => {
+            const etherBalance = Number(
+              parseFloat(formatEther(wei)).toPrecision(5)
             );
-            if (formattedBalance !== balanceRef.current) {
-              setBalance(formattedBalance);
-              const requiredBalance = depositKeys.reduce(
+
+            const gweiBalance = etherBalance * ETHER_TO_GWEI;
+
+            if (etherBalance !== balanceRef.current) {
+              setBalance(etherBalance);
+              const requiredGweiBalance = depositKeys.reduce(
                 (acc, key) => acc + key.amount,
                 0
               );
-              if (
-                formattedBalance < requiredBalance ||
-                formattedBalance === 0
-              ) {
-                setLowBalance(true);
-              } else {
-                setLowBalance(false);
-              }
+              setLowBalance(
+                gweiBalance < requiredGweiBalance || gweiBalance === 0
+              );
             }
           })
           .catch(() => setBalance(null));

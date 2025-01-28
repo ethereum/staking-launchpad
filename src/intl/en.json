@@ -1229,6 +1229,9 @@
     "description": "{boldCaution} is states 'only stored on one validator machine', a bolded caution statement to users",
     "message": "I've ensured my keystore(s) is/are {boldCaution}."
   },
+  "Kzksr7": {
+    "message": "I understand the software and slashing risks."
+  },
   "L7fPF+": {
     "message": "Complete your last deposit"
   },
@@ -2871,9 +2874,6 @@
   },
   "qwFYIS": {
     "message": "These tools will assist you in generating the necessary keys and message to sign. Signed messages can then be {broadcastLink} into blocks."
-  },
-  "qwh6gM": {
-    "message": "I understand the early adopter and slashing risks."
   },
   "qx+3RQ": {
     "message": "JWT"

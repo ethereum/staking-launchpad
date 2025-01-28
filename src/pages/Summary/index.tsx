@@ -88,8 +88,11 @@ const _SummaryPage = ({
   depositKeys,
   beaconChainApiStatus,
 }: Props): JSX.Element => {
-  const [losePhrase, setLosePhrase] = useState(false);
-  const [earlyAdopt, setEarlyAdopt] = useState(false);
+  const hasBLSWithdrawalCredentials = depositKeys.some(value =>
+    (value.withdrawal_credentials || '').startsWith('00')
+  );
+  const [losePhrase, setLosePhrase] = useState(!hasBLSWithdrawalCredentials);
+  const [softwareRisk, setSoftwareRisk] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
@@ -99,11 +102,11 @@ const _SummaryPage = ({
   const allChecked = React.useMemo(
     () =>
       losePhrase &&
-      earlyAdopt &&
+      softwareRisk &&
       nonReverse &&
       noPhish &&
       duplicatesAcknowledged,
-    [losePhrase, earlyAdopt, nonReverse, noPhish, duplicatesAcknowledged]
+    [losePhrase, softwareRisk, nonReverse, noPhish, duplicatesAcknowledged]
   );
 
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
@@ -150,37 +153,39 @@ const _SummaryPage = ({
       <AcknowledgementSection
         title={formatMessage({ defaultMessage: 'Understand the risks' })}
       >
+        {hasBLSWithdrawalCredentials && (
+          <span className="mb20">
+            <CheckBox
+              onChange={e => setLosePhrase(e.target.checked)}
+              checked={losePhrase}
+              label={
+                <Text>
+                  <FormattedMessage defaultMessage="I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase." />
+                </Text>
+              }
+            />
+          </span>
+        )}
+        <span className="mb20">
+          <CheckBox
+            onChange={e => setSoftwareRisk(e.target.checked)}
+            checked={softwareRisk}
+            label={
+              <Text>
+                <FormattedMessage defaultMessage="I understand the software and slashing risks." />
+              </Text>
+            }
+          />
+        </span>
         <CheckBox
-          onChange={e => setLosePhrase(e.target.checked)}
-          checked={losePhrase}
+          onChange={e => setNonReverse(e.target.checked)}
+          checked={nonReverse}
           label={
             <Text>
-              <FormattedMessage defaultMessage="I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase." />
+              <FormattedMessage defaultMessage="I understand that this transaction is not reversible." />
             </Text>
           }
         />
-        <span className="mt20">
-          <CheckBox
-            onChange={e => setEarlyAdopt(e.target.checked)}
-            checked={earlyAdopt}
-            label={
-              <Text>
-                <FormattedMessage defaultMessage="I understand the early adopter and slashing risks." />
-              </Text>
-            }
-          />
-        </span>
-        <span className="mt20">
-          <CheckBox
-            onChange={e => setNonReverse(e.target.checked)}
-            checked={nonReverse}
-            label={
-              <Text>
-                <FormattedMessage defaultMessage="I understand that this transaction is not reversible." />
-              </Text>
-            }
-          />
-        </span>
       </AcknowledgementSection>
       <AcknowledgementSection
         title={formatMessage({

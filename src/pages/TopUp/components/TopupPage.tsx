@@ -192,7 +192,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       balanceAfterTopup > maxEffectiveBalanceEther ||
       balanceEther > maxEffectiveBalanceEther
     );
-  }, [balanceEther, balanceAfterTopup]);
+  }, [balanceEther, balanceAfterTopup, maxEffectiveBalanceEther]);
 
   const alertText = useMemo(() => {
     // If EB already maxed out
@@ -245,6 +245,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     formatMessage,
     effectiveBalanceEther,
     value,
+    maxEffectiveBalanceEther,
   ]);
 
   const submitBtnTooltipText = useMemo(() => {

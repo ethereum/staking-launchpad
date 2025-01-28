@@ -88,10 +88,8 @@ const _SummaryPage = ({
   depositKeys,
   beaconChainApiStatus,
 }: Props): JSX.Element => {
-  const hasBLSWithdrawalCredentials = depositKeys.some(value =>
-    (value.withdrawal_credentials || '').startsWith('00')
-  );
-  const [losePhrase, setLosePhrase] = useState(!hasBLSWithdrawalCredentials);
+  const accountType = +depositKeys[0].withdrawal_credentials.slice(0, 2);
+  const [losePhrase, setLosePhrase] = useState(accountType > 0);
   const [softwareRisk, setSoftwareRisk] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
@@ -119,7 +117,10 @@ const _SummaryPage = ({
     }
   };
 
-  if (workflow < WorkflowStep.SUMMARY) {
+  const maxEB =
+    accountType > 1 ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE;
+
+  if (false && workflow < WorkflowStep.SUMMARY) {
     return routeToCorrectWorkflowStep(workflow);
   }
 
@@ -153,7 +154,7 @@ const _SummaryPage = ({
       <AcknowledgementSection
         title={formatMessage({ defaultMessage: 'Understand the risks' })}
       >
-        {hasBLSWithdrawalCredentials && (
+        {accountType === 0 && (
           <span className="mb20">
             <CheckBox
               onChange={e => setLosePhrase(e.target.checked)}
@@ -195,12 +196,10 @@ const _SummaryPage = ({
         <Text>
           <FormattedMessage
             defaultMessage="You are responsible for the transaction. Fraudulent websites might
-          try and lure you into sending the {pricePerValidator} to them,
+          try and lure you into sending {TICKER_NAME} to them,
           instead of the official deposit contract. Make sure that the
           address you are sending the transaction to is the correct address."
-            values={{
-              pricePerValidator: `${MIN_ACTIVATION_BALANCE} ${TICKER_NAME}`,
-            }}
+            values={{ TICKER_NAME }}
           />
         </Text>
         <Row>
@@ -263,7 +262,7 @@ const _SummaryPage = ({
         <Text>
           <FormattedMessage
             defaultMessage="{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit.
-              If this balance exceeds your accounts maximum effective balance ({MIN_ACTIVATION_BALANCE} for regular withdrawals type, {MAX_EFFECTIVE_BALANCE} for compounding), extra will not be counted towards your stake.
+              If this balance exceeds your accounts maximum effective balance ({maxEB} {TICKER_NAME}), extra will not be counted towards your stake.
               Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated.
               If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
             values={{
@@ -274,8 +273,8 @@ const _SummaryPage = ({
                   })}
                 </em>
               ),
-              MIN_ACTIVATION_BALANCE,
-              MAX_EFFECTIVE_BALANCE,
+              maxEB,
+              TICKER_NAME,
             }}
           />
         </Text>
@@ -305,9 +304,9 @@ const _SummaryPage = ({
             label={
               <Text>
                 <FormattedMessage
-                  defaultMessage="I understand that there is no advantage to deposit more ETH than the maximum effective balance for my account type.
+                  defaultMessage="I understand that there is no advantage to deposit more ETH than the maximum effective balance ({maxEB} {TICKER_NAME} for my account type).
                   Any extra {TICKER_NAME} sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
-                  values={{ TICKER_NAME }}
+                  values={{ maxEB, TICKER_NAME }}
                 />
               </Text>
             }

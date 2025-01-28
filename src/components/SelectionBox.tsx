@@ -20,6 +20,7 @@ const LogoContainerBox = styled.button`
   -moz-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   -o-transition: border 500ms ease-out, box-shadow 500ms ease-out;
   transition: border 500ms ease-out, box-shadow 500ms ease-out;
+  padding: 0;
   @media only screen and (max-width: 770px) {
     width: 100%;
   }

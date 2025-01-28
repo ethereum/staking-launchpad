@@ -177,20 +177,6 @@
       "value": "Sorry, this page does not exist."
     }
   ],
-  "/WenEu": [
-    {
-      "type": 0,
-      "value": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending the "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
-    }
-  ],
   "/X/iV+": [
     {
       "type": 0,
@@ -2413,6 +2399,20 @@
       "value": "TICKER_NAME"
     }
   ],
+  "EwtSGs": [
+    {
+      "type": 0,
+      "value": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
+    }
+  ],
   "F8yf1S": [
     {
       "type": 0,
@@ -4383,32 +4383,6 @@
       "value": "greater than 50%"
     }
   ],
-  "UF6jVb": [
-    {
-      "type": 1,
-      "value": "warning"
-    },
-    {
-      "type": 0,
-      "value": " Duplicate deposits with the same keyfile public key will be considered as a double deposit. If this balance exceeds your accounts maximum effective balance ("
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " for regular withdrawals type, "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " for compounding), extra will not be counted towards your stake. Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated. If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
-    }
-  ],
   "UJE2gP": [
     {
       "type": 0,
@@ -4767,20 +4741,6 @@
     {
       "type": 0,
       "value": "\"Type 2\", \"compounding\""
-    }
-  ],
-  "XE77g4": [
-    {
-      "type": 0,
-      "value": "I understand that there is no advantage to deposit more ETH than the maximum effective balance for my account type. Any extra "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
     }
   ],
   "XLXSsV": [
@@ -7705,6 +7665,36 @@
       "value": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
     }
   ],
+  "sIgu5c": [
+    {
+      "type": 0,
+      "value": "I understand that there is no advantage to deposit more ETH than the maximum effective balance ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for my account type). Any extra "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
+    }
+  ],
   "sMHQRT": [
     {
       "type": 0,
@@ -8661,6 +8651,32 @@
     {
       "type": 0,
       "value": ". This is a set of JSON RPC methods that can be used to communicate between the two client layers."
+    }
+  ],
+  "zsu9e8": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
+    {
+      "type": 0,
+      "value": " Duplicate deposits with the same keyfile public key will be considered as a double deposit. If this balance exceeds your accounts maximum effective balance ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "), extra will not be counted towards your stake. Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated. If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
     }
   ]
 }

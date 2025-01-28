@@ -99,6 +99,12 @@
       "value": "Discord:"
     }
   ],
+  "+z2Qty": [
+    {
+      "type": 0,
+      "value": "Max EB"
+    }
+  ],
   "/+atl4": [
     {
       "type": 0,
@@ -203,6 +209,44 @@
       "value": "withdrawable epoch"
     }
   ],
+  "/hEGaO": [
+    {
+      "type": 0,
+      "value": "This validator account has a maximum effective balance of "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". You only need to top up "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to max out your effective balance."
+    }
+  ],
   "/jJLYy": [
     {
       "type": 0,
@@ -265,28 +309,6 @@
     {
       "type": 0,
       "value": "How large are the rewards/penalties?"
-    }
-  ],
-  "00OWFk": [
-    {
-      "type": 0,
-      "value": "Minimum top-up value is "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "00d8uq": [
@@ -881,6 +903,28 @@
       "value": "Command line with flags"
     }
   ],
+  "3LbIZa": [
+    {
+      "type": 0,
+      "value": "You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top us if you validator account is close to the ejection balance of "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "3O/6JV": [
     {
       "type": 0,
@@ -1209,10 +1253,70 @@
       "value": " validator"
     }
   ],
+  "5wl2cN": [
+    {
+      "type": 0,
+      "value": "Validator effective balance is currently maxed out. If desired, you may add "
+    },
+    {
+      "type": 1,
+      "value": "minTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (the minimum allowed by the deposit contract)"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
       "value": "average"
+    }
+  ],
+  "69FPys": [
+    {
+      "type": 0,
+      "value": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". These accounts do not benefit from balances over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", but can be upgraded to a Type 2 compounding account to support an increased max EF of "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "6NndcB": [
@@ -1785,28 +1889,6 @@
       "value": "Also be sure you understand how staking withdrawals work before setting up your keys and deposit data."
     }
   ],
-  "AJD+66": [
-    {
-      "type": 0,
-      "value": "The Ethereum staking deposit contract requires a minimum of "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to be sent at one time to be accepted."
-    }
-  ],
   "ATwOPg": [
     {
       "type": 0,
@@ -1859,28 +1941,6 @@
     {
       "type": 0,
       "value": "Become a validator with Lighthouse"
-    }
-  ],
-  "Aq9Prx": [
-    {
-      "type": 0,
-      "value": "Validator effective balance is currently maxed out. If desired, you may add "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (the minimum allowed by the deposit contract)"
     }
   ],
   "Aw1mMs": [
@@ -3581,28 +3641,6 @@
       "value": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
     }
   ],
-  "O+3LJ1": [
-    {
-      "type": 0,
-      "value": "This validator's balance is at the effective maximum: "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "O3qkOm": [
     {
       "type": 0,
@@ -3887,44 +3925,6 @@
       "value": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of Danksharding will also increase storage, memory, and bandwidth requirements."
     }
   ],
-  "Q8P0rZ": [
-    {
-      "type": 0,
-      "value": "Validators have a maximum effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". You only need to top up "
-    },
-    {
-      "type": 1,
-      "value": "maxTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to max out your effective balance."
-    }
-  ],
   "QKFeMq": [
     {
       "type": 0,
@@ -4149,6 +4149,12 @@
       "value": " air-gapped machine."
     }
   ],
+  "S3RTk+": [
+    {
+      "type": 0,
+      "value": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
+    }
+  ],
   "S943uU": [
     {
       "type": 0,
@@ -4257,6 +4263,28 @@
     {
       "type": 0,
       "value": " which is submitted with your 32 ETH deposit transaction."
+    }
+  ],
+  "SwXcZM": [
+    {
+      "type": 0,
+      "value": "Minimum top-up value is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Sy5bAo": [
@@ -4513,40 +4541,6 @@
     {
       "type": 0,
       "value": "Recommended"
-    }
-  ],
-  "VLDKor": [
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". However you will earn less if it dips below "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "VSSmNp": [
@@ -5727,44 +5721,6 @@
       "value": "When launching Teku, keystores and passwords can be provided in different ways."
     }
   ],
-  "esDvdR": [
-    {
-      "type": 0,
-      "value": "Validator balance is over "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ", but effective balance is low ("
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": "). Adding "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (the minimum allowed by the deposit contract) will max out your effective balance."
-    }
-  ],
   "eyK2E3": [
     {
       "type": 0,
@@ -6087,6 +6043,44 @@
     {
       "type": 0,
       "value": "Desktop only"
+    }
+  ],
+  "hUmIwN": [
+    {
+      "type": 0,
+      "value": "Validator balance is over "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": ", but effective balance is low ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": "). Adding "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (the minimum allowed by the deposit contract) will max out your effective balance."
     }
   ],
   "hXE+0W": [
@@ -7633,6 +7627,28 @@
       "value": "More on Lodestar"
     }
   ],
+  "rWEu7N": [
+    {
+      "type": 0,
+      "value": "This validator's balance is at the effective maximum: "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "rYa2OX": [
     {
       "type": 0,
@@ -7669,44 +7685,6 @@
     {
       "type": 0,
       "value": "Software risks"
-    }
-  ],
-  "rs4eqr": [
-    {
-      "type": 0,
-      "value": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " you won't be earning your full staker rewards. And if it drops as low as "
-    },
-    {
-      "type": 1,
-      "value": "EJECTION_PRICE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " the system will eject your validator."
     }
   ],
   "rswUPu": [
@@ -8621,6 +8599,28 @@
     {
       "type": 0,
       "value": "Staking economics"
+    }
+  ],
+  "zfkJaB": [
+    {
+      "type": 0,
+      "value": "The Ethereum staking deposit contract requires a minimum of "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to be sent at one time to be accepted."
     }
   ],
   "zicXn7": [

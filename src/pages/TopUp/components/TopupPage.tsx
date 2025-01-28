@@ -34,6 +34,8 @@ import {
   TICKER_NAME,
   CONTRACT_ADDRESS,
   ETHER_TO_GWEI,
+  MAX_EFFECTIVE_BALANCE,
+  EJECTION_PRICE,
 } from '../../../utils/envVars';
 
 interface Props {
@@ -93,39 +95,30 @@ const IndentedText = styled(Text)`
 
 const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
+  const { formatMessage } = useIntl();
 
-  const effectiveBalance = useMemo(
-    () => Number(validator.effectivebalance) / ETHER_TO_GWEI,
-    [validator]
+  const hasElectraMaxEB = validator.withdrawalcredentials.startsWith('02');
+  const maxEffectiveBalanceEther = Number(
+    hasElectraMaxEB ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE
   );
-
-  const balance = useMemo(() => Number(validator.balance) / ETHER_TO_GWEI, [
-    validator,
-  ]);
-
-  const maxTopupValue = useMemo(
-    () => Math.max(1, Number(MIN_ACTIVATION_BALANCE) + 0.26 - Number(balance)),
-    [balance]
+  const balanceEther = Number(validator.balance) / ETHER_TO_GWEI;
+  const MIN_TOPUP_VALUE = 1;
+  const maxTopupValue = Math.max(
+    MIN_TOPUP_VALUE,
+    maxEffectiveBalanceEther + 0.26 - Number(balanceEther)
   );
-
-  const minTopupValue = 1;
 
   const [value, setValue] = React.useState(maxTopupValue);
-
   const [showTxModal, setShowTxModal] = React.useState(false);
-
   const [txHash, setTxHash] = React.useState('');
-
-  const balanceAfterTopup = useMemo(() => +balance + Number(value), [
-    balance,
-    value,
-  ]);
-
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
 
-  const { formatMessage } = useIntl();
+  const effectiveBalanceEther =
+    Number(validator.effectivebalance) / ETHER_TO_GWEI;
+
+  const balanceAfterTopup = +balanceEther + Number(value);
 
   const submitTopupTransaction = async () => {
     setTransactionStatus('waiting_user_confirmation');
@@ -194,73 +187,79 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
 
   const [termA, setTermA] = useState(false);
 
-  const showAlert = React.useMemo(() => {
+  const showAlert = useMemo(() => {
     return (
-      balanceAfterTopup > MIN_ACTIVATION_BALANCE ||
-      balance > MIN_ACTIVATION_BALANCE
+      balanceAfterTopup > maxEffectiveBalanceEther ||
+      balanceEther > maxEffectiveBalanceEther
     );
-  }, [balance, balanceAfterTopup]);
+  }, [balanceEther, balanceAfterTopup]);
 
-  const alertText = React.useMemo(() => {
+  const alertText = useMemo(() => {
     // If EB already maxed out
-    if (effectiveBalance >= MIN_ACTIVATION_BALANCE)
+    if (effectiveBalanceEther >= maxEffectiveBalanceEther)
       return formatMessage(
         {
           defaultMessage:
             'Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)',
           description:
-            '{minTopupValue} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network',
+            '{MIN_TOPUP_VALUE} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network',
         },
-        { TICKER_NAME, minTopupValue }
+        { TICKER_NAME, MIN_TOPUP_VALUE }
       );
     // If EB is low (31 or less)
-    if (balance > MIN_ACTIVATION_BALANCE)
+    if (balanceEther > EJECTION_PRICE)
       return formatMessage(
         {
           defaultMessage:
-            'Validator balance is over {PRICE_PER_VALIDATOR}, but effective balance is low ({effectiveBalance}). Adding {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance.',
+            'Validator balance is over {EJECTION_PRICE}, but effective balance is low ({effectiveBalanceEther}). Adding {MIN_TOPUP_VALUE} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance.',
         },
         {
-          PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
-          effectiveBalance,
-          minTopupValue,
+          effectiveBalanceEther,
+          EJECTION_PRICE,
+          MIN_TOPUP_VALUE,
           TICKER_NAME,
         }
       );
     if (value > maxTopupValue)
       return formatMessage(
         {
-          defaultMessage: `Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance.`,
+          defaultMessage: `This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance.`,
         },
         {
-          PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
+          maxEffectiveBalanceEther,
           TICKER_NAME,
           maxTopupValue: maxTopupValue.toFixed(4),
         }
       );
-    if (value < minTopupValue)
+    if (value < MIN_TOPUP_VALUE)
       return formatMessage(
         {
-          defaultMessage: `The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted.`,
+          defaultMessage: `The Ethereum staking deposit contract requires a minimum of {MIN_TOPUP_VALUE} {TICKER_NAME} to be sent at one time to be accepted.`,
         },
-        { minTopupValue, TICKER_NAME }
+        { MIN_TOPUP_VALUE, TICKER_NAME }
       );
     return '';
-  }, [balance, maxTopupValue, formatMessage, effectiveBalance, value]);
+  }, [
+    balanceEther,
+    maxTopupValue,
+    formatMessage,
+    effectiveBalanceEther,
+    value,
+  ]);
 
-  const submitBtnTooltipText = React.useMemo(() => {
+  const submitBtnTooltipText = useMemo(() => {
     if (value <= 0 || value > maxTopupValue)
       return formatMessage({
         defaultMessage: 'Please enter a valid top-up value.',
       });
 
-    if (value < minTopupValue)
+    if (value < MIN_TOPUP_VALUE)
       return formatMessage(
         {
           defaultMessage:
-            'Minimum top-up value is {minTopupValue} {TICKER_NAME}.',
+            'Minimum top-up value is {MIN_TOPUP_VALUE} {TICKER_NAME}.',
         },
-        { minTopupValue, TICKER_NAME }
+        { MIN_TOPUP_VALUE, TICKER_NAME }
       );
 
     if (!termA)
@@ -296,7 +295,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
             <Text weight={600} color="blueDark">
               <FormattedMessage defaultMessage="Current balance" />
             </Text>
-            <Text>{`${balance.toFixed(8)} ${TICKER_NAME}`}</Text>
+            <Text>{`${balanceEther.toFixed(8)} ${TICKER_NAME}`}</Text>
           </div>
           <div className="details-item">
             <Text weight={600} color="blueDark">
@@ -341,7 +340,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
               disabled={
                 value <= 0 ||
                 value > maxTopupValue ||
-                value < minTopupValue ||
+                value < MIN_TOPUP_VALUE ||
                 !termA
               }
             />

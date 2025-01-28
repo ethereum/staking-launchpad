@@ -42,6 +42,9 @@
   "+wJuhm": {
     "message": "Discord:"
   },
+  "+z2Qty": {
+    "message": "Max EB"
+  },
   "/+atl4": {
     "message": "Recommendation disclaimer"
   },
@@ -84,6 +87,9 @@
   "/e+qAC": {
     "message": "withdrawable epoch"
   },
+  "/hEGaO": {
+    "message": "This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
+  },
   "/jJLYy": {
     "message": "Transactions"
   },
@@ -108,9 +114,6 @@
   },
   "/ydZdf": {
     "message": "How large are the rewards/penalties?"
-  },
-  "00OWFk": {
-    "message": "Minimum top-up value is {minTopupValue} {TICKER_NAME}."
   },
   "00d8uq": {
     "message": "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet."
@@ -330,6 +333,9 @@
   "3KP7+U": {
     "message": "Command line with flags"
   },
+  "3LbIZa": {
+    "message": "You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top us if you validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}."
+  },
   "3O/6JV": {
     "message": "Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
   },
@@ -440,8 +446,15 @@
   "5v36Is": {
     "message": "Exiting a {client} validator"
   },
+  "5wl2cN": {
+    "description": "{MIN_TOPUP_VALUE} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network",
+    "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
+  },
   "63gLLu": {
     "message": "average"
+  },
+  "69FPys": {
+    "message": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EF of {MAX_EFFECTIVE_BALANCE}."
   },
   "6NndcB": {
     "message": "leave"
@@ -671,9 +684,6 @@
   "AH6XsN": {
     "message": "Also be sure you understand how staking withdrawals work before setting up your keys and deposit data."
   },
-  "AJD+66": {
-    "message": "The Ethereum staking deposit contract requires a minimum of {minTopupValue} {TICKER_NAME} to be sent at one time to be accepted."
-  },
   "ATwOPg": {
     "message": "execution client"
   },
@@ -700,10 +710,6 @@
   },
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
-  },
-  "Aq9Prx": {
-    "description": "{minTopupValue} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network",
-    "message": "Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)"
   },
   "Aw1mMs": {
     "message": "Top up validator"
@@ -1399,9 +1405,6 @@
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
-  "O+3LJ1": {
-    "message": "This validator's balance is at the effective maximum: {PRICE_PER_VALIDATOR} {TICKER_NAME}."
-  },
   "O3qkOm": {
     "message": "Sharding"
   },
@@ -1499,9 +1502,6 @@
   "Q6N+C6": {
     "message": "Ethereum had its genesis on July 30, 2015. It is growing in size over time, and the introduction of Danksharding will also increase storage, memory, and bandwidth requirements."
   },
-  "Q8P0rZ": {
-    "message": "Validators have a maximum effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
-  },
   "QKFeMq": {
     "message": "Internet"
   },
@@ -1594,6 +1594,9 @@
   "S+FY5u": {
     "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
   },
+  "S3RTk+": {
+    "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
+  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -1639,6 +1642,9 @@
   },
   "Sv30z9": {
     "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file {depositData} which is submitted with your 32 ETH deposit transaction."
+  },
+  "SwXcZM": {
+    "message": "Minimum top-up value is {MIN_TOPUP_VALUE} {TICKER_NAME}."
   },
   "Sy5bAo": {
     "message": "With the transition to proof-of-stake complete via The Merge, validators are now responsible for processing transactions and signing off on their validity. This data is {not} available from popular third-party sources as of The Merge. Using a third-party provider will result in your validator being offline. When Danksharding is implemented, validators may also be at risk of slashing under the {pocGame}."
@@ -1737,9 +1743,6 @@
   },
   "VKfWR3": {
     "message": "Recommended"
-  },
-  "VLDKor": {
-    "message": "{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
   },
   "VSSmNp": {
     "message": "In other words: if the total amount of ETH staked is low, the reward (interest rate) is high, but as the total stake rises, the reward (interest) paid out to each validator starts to fall."
@@ -2172,9 +2175,6 @@
   "erZJkZ": {
     "message": "When launching Teku, keystores and passwords can be provided in different ways."
   },
-  "esDvdR": {
-    "message": "Validator balance is over {PRICE_PER_VALIDATOR}, but effective balance is low ({effectiveBalance}). Adding {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance."
-  },
   "eyK2E3": {
     "message": "Complete checklist"
   },
@@ -2302,6 +2302,9 @@
   },
   "hG0uP4": {
     "message": "Desktop only"
+  },
+  "hUmIwN": {
+    "message": "Validator balance is over {EJECTION_PRICE}, but effective balance is low ({effectiveBalanceEther}). Adding {MIN_TOPUP_VALUE} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance."
   },
   "hXE+0W": {
     "description": "Tells user to upload specific JSON file created during previous step",
@@ -2905,6 +2908,9 @@
   "rW+ivM": {
     "message": "More on Lodestar"
   },
+  "rWEu7N": {
+    "message": "This validator's balance is at the effective maximum: {maxEffectiveBalanceEther} {TICKER_NAME}."
+  },
   "rYa2OX": {
     "message": "What are the different validator types?"
   },
@@ -2919,9 +2925,6 @@
   },
   "rk9g0q": {
     "message": "Software risks"
-  },
-  "rs4eqr": {
-    "message": "You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
   },
   "rswUPu": {
     "message": "Launchpad summary"
@@ -3278,6 +3281,9 @@
   },
   "zJicsO": {
     "message": "Staking economics"
+  },
+  "zfkJaB": {
+    "message": "The Ethereum staking deposit contract requires a minimum of {MIN_TOPUP_VALUE} {TICKER_NAME} to be sent at one time to be accepted."
   },
   "zicXn7": {
     "message": "Node security"

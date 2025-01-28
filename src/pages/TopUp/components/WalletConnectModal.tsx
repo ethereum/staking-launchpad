@@ -55,7 +55,7 @@ const WalletConnectModal: React.FC<{
     chainId,
     active,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const executionLayerName = useIntlNetworkName();
+  const { executionLayerName } = useIntlNetworkName();
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined

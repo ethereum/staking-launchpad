@@ -243,7 +243,7 @@ export const FAQ = () => {
                   <FormattedMessage defaultMessage="Controlled by" />
                 </em>
                 :{' '}
-                <FormattedMessage defaultMessage="Withdrawal address private keys" />
+                <FormattedMessage defaultMessage="Withdrawal address private key" />
               </Text>
             </div>
 
@@ -278,7 +278,7 @@ export const FAQ = () => {
                   <FormattedMessage defaultMessage="Controlled by" />
                 </em>
                 :{' '}
-                <FormattedMessage defaultMessage="Withdrawal address private keys" />
+                <FormattedMessage defaultMessage="Withdrawal address private key" />
               </Text>
             </div>
 

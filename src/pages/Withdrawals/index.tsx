@@ -212,8 +212,12 @@ export const Withdrawals = () => {
                 </li>
               </ul>
               <Text className="mt20">
+                <FormattedMessage defaultMessage="There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types." />
+              </Text>
+              <Text className="mt20">
                 <FormattedMessage
-                  defaultMessage="Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
+                  defaultMessage="Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks.
+                    These can both be set to the same address, but must each be set separately."
                   values={{
                     withdrawalCredentials: (
                       <strong>

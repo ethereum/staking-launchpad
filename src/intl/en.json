@@ -258,9 +258,6 @@
   "28aik1": {
     "message": "Rate-limits set on withdrawal queue"
   },
-  "2A6Wjz": {
-    "message": "By providing this flag, your withdrawal credentials will contain the {type1} prefix and your withdrawal address, signaling that your account is ready for withdrawals."
-  },
   "2AHkym": {
     "message": "There was an error loading your validator information from Beaconcha.in"
   },
@@ -384,6 +381,9 @@
   },
   "4QNsja": {
     "message": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
+  },
+  "4Vgtcb": {
+    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file {depositData} which is submitted with your ETH deposit transaction."
   },
   "4hb+GK": {
     "message": "Withdrawal address"
@@ -1197,6 +1197,9 @@
     "description": "{latestReleased} = 'latest stable software release', being styled in bold",
     "message": "I've installed the {latestRelease} of my consensus client."
   },
+  "KMa0S7": {
+    "message": "By providing this flag, your withdrawal credentials will contain the {type1} (or greater) prefix and your withdrawal address, signaling that your account is ready for withdrawals."
+  },
   "KN7zKn": {
     "message": "Error"
   },
@@ -1637,9 +1640,6 @@
   "Su0UFr": {
     "message": "Exit queue summary"
   },
-  "Sv30z9": {
-    "message": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file {depositData} which is submitted with your 32 ETH deposit transaction."
-  },
   "SwXcZM": {
     "message": "Minimum top-up value is {MIN_TOPUP_VALUE} {TICKER_NAME}."
   },
@@ -1685,6 +1685,9 @@
   "UJMct0": {
     "description": "{etherscan} is a share link to this transaction on etherscan.io, labeled 'Etherscan'",
     "message": "Check {etherscan} for more details"
+  },
+  "UOFjs/": {
+    "message": "There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types."
   },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
@@ -2060,6 +2063,9 @@
   "cU/ZP6": {
     "message": "Ethereum uses proof-of-stake to reach consensus."
   },
+  "cZHvCU": {
+    "message": "{stakingDepositCli}: This is done by using the withdrawal address ({eth1WithdrawalAddress}, {executionAddress}, or {withdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
+  },
   "cav520": {
     "message": "Download from GitHub"
   },
@@ -2119,9 +2125,6 @@
   },
   "dTOtPO": {
     "message": "Top Up"
-  },
-  "dVJcJt": {
-    "message": "{stakingDepositCli}: This is done by using the “eth1 withdrawal address” ({eth1WithdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
   },
   "deLJOg": {
     "message": "Upload a valid json file."

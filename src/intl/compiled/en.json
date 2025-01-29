@@ -673,20 +673,6 @@
       "value": "Rate-limits set on withdrawal queue"
     }
   ],
-  "2A6Wjz": [
-    {
-      "type": 0,
-      "value": "By providing this flag, your withdrawal credentials will contain the "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " prefix and your withdrawal address, signaling that your account is ready for withdrawals."
-    }
-  ],
   "2AHkym": [
     {
       "type": 0,
@@ -1063,6 +1049,20 @@
     {
       "type": 0,
       "value": "Why a sliding scale? While we won’t get into the gory details here, the basic intution is that there needs to be a minimum number of validators (and hence a minimum amount of ETH staked) for the network to function properly. So, to incentivize more validators to join, it’s important that the interest rate remains high until this minimum number is reached."
+    }
+  ],
+  "4Vgtcb": [
+    {
+      "type": 0,
+      "value": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " which is submitted with your ETH deposit transaction."
     }
   ],
   "4hb+GK": [
@@ -3145,6 +3145,20 @@
       "value": " of my consensus client."
     }
   ],
+  "KMa0S7": [
+    {
+      "type": 0,
+      "value": "By providing this flag, your withdrawal credentials will contain the "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " (or greater) prefix and your withdrawal address, signaling that your account is ready for withdrawals."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
@@ -4245,20 +4259,6 @@
       "value": "Exit queue summary"
     }
   ],
-  "Sv30z9": [
-    {
-      "type": 0,
-      "value": "If you’re preparing to make a deposit to activate a new validator, you can (and should) provide a withdrawal address with your initial deposit. This is done at time of key generation, and is then included in your deposit data json file "
-    },
-    {
-      "type": 1,
-      "value": "depositData"
-    },
-    {
-      "type": 0,
-      "value": " which is submitted with your 32 ETH deposit transaction."
-    }
-  ],
   "SwXcZM": [
     {
       "type": 0,
@@ -4395,6 +4395,12 @@
     {
       "type": 0,
       "value": " for more details"
+    }
+  ],
+  "UOFjs/": [
+    {
+      "type": 0,
+      "value": "There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types."
     }
   ],
   "UWv7yD": [
@@ -5377,6 +5383,40 @@
       "value": "Ethereum uses proof-of-stake to reach consensus."
     }
   ],
+  "cZHvCU": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": This is done by using the withdrawal address ("
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", or "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") flag when generating your keys with the Staking Deposit CLI."
+    }
+  ],
   "cav520": [
     {
       "type": 0,
@@ -5551,24 +5591,6 @@
     {
       "type": 0,
       "value": "Top Up"
-    }
-  ],
-  "dVJcJt": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": This is done by using the “eth1 withdrawal address” ("
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": ") flag when generating your keys with the Staking Deposit CLI."
     }
   ],
   "deLJOg": [

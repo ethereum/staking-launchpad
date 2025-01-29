@@ -9,6 +9,7 @@ import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
+import { generateCompoundParams } from '../ActionUtils';
 
 interface Props {
   validator: Validator;
@@ -24,31 +25,38 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
   const [txHash, setTxHash] = useState<string>('');
 
   const createUpgradeMessage = async () => {
+    if (!account) {
+      return;
+    }
+
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
 
-    const walletProvider: any = await (connector as AbstractConnector).getProvider();
-    const web3: any = new Web3(walletProvider);
+    try {
+      const walletProvider = await (connector as AbstractConnector).getProvider();
+      const web3 = new Web3(walletProvider);
 
-    // TODO: Replace with contract call
-    const transactionParams = {
-      to: '0x40EDC53b0559D3A360DBe2DdB58f71A8833416E1',
-      from: account,
-      value: web3.utils.toWei('0.0001', 'ether'),
-    };
-
-    web3.eth
-      .sendTransaction(transactionParams)
-      .on('transactionHash', (hash: string): void => {
-        setTransactionStatus('confirm_on_chain');
-        setTxHash(hash);
-      })
-      .on('confirmation', (): any => {
-        setTransactionStatus('success');
-      })
-      .on('error', () => {
-        setTransactionStatus('error');
-      });
+      const params = await generateCompoundParams(
+        web3,
+        account,
+        validator.pubkey,
+        validator.pubkey
+      );
+      return web3.eth
+        .sendTransaction(params)
+        .on('transactionHash', (hash: string): void => {
+          setTransactionStatus('confirm_on_chain');
+          setTxHash(hash);
+        })
+        .on('confirmation', (): any => {
+          setTransactionStatus('success');
+        })
+        .on('error', () => {
+          setTransactionStatus('error');
+        });
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

@@ -93,8 +93,9 @@ const _ActionsPage: React.FC<Props> = () => {
 
       // beaconchain API requires two fetches - one that gets the public keys for an Ethereum address, and one that
       // queries by the validators public keys
-
-      fetch(`${BEACONCHAIN_URL}/api/v1/validator/eth1/${account}`)
+      fetch(
+        `${BEACONCHAIN_URL}/api/v1/validator/withdrawalCredentials/${account}?limit=100`
+      )
         .then(r => r.json())
         .then(
           ({
@@ -102,7 +103,6 @@ const _ActionsPage: React.FC<Props> = () => {
           }: {
             data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
           }) => {
-            // setShowDepositVerificationWarning(false);
             const response = Array.isArray(data) ? data : [data];
             // no validators for that user's wallet address
             if (response.length === 0) {
@@ -132,9 +132,6 @@ const _ActionsPage: React.FC<Props> = () => {
                     data: BeaconChainValidator | BeaconChainValidator[];
                   }) => {
                     const validatorsData = Array.isArray(data) ? data : [data];
-                    if (validatorsData.length === 0) {
-                      // setShowDepositVerificationWarning(true);
-                    }
                     setValidators(
                       validatorsData.map(v => {
                         const coinBalance = new BigNumber(v.balance)

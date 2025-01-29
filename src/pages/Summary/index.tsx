@@ -32,6 +32,7 @@ import {
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
+  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { Alert } from '../../components/Alert';
 import { BeaconChainStatus } from '../../store/actions/depositFileActions';
@@ -88,15 +89,16 @@ const _SummaryPage = ({
   depositKeys,
   beaconChainApiStatus,
 }: Props): JSX.Element => {
+  const { formatMessage } = useIntl();
+
   const accountType = +depositKeys[0].withdrawal_credentials.slice(0, 2);
+
   const [losePhrase, setLosePhrase] = useState(accountType > 0);
   const [softwareRisk, setSoftwareRisk] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
-  const amountValidators = new BigNumber(depositKeys.length);
-  const convertedPrice = new BigNumber(MIN_ACTIVATION_BALANCE);
-  const { formatMessage } = useIntl();
+
   const allChecked = React.useMemo(
     () =>
       losePhrase &&
@@ -120,7 +122,14 @@ const _SummaryPage = ({
   const maxEB =
     accountType > 1 ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE;
 
-  if (false && workflow < WorkflowStep.SUMMARY) {
+  const amountValidators = new BigNumber(depositKeys.length);
+
+  const requiredAmountEther = depositKeys.reduce((acc, key) => {
+    const bigAmount = new BigNumber(key.amount);
+    return acc.plus(bigAmount);
+  }, new BigNumber(0));
+
+  if (workflow < WorkflowStep.SUMMARY) {
     return routeToCorrectWorkflowStep(workflow);
   }
 
@@ -145,8 +154,7 @@ const _SummaryPage = ({
               <FormattedMessage defaultMessage="Total amount required" />
             </Text>
             <InfoBox>
-              {amountValidators.times(convertedPrice).toString()}
-              {TICKER_NAME}
+              {requiredAmountEther.div(ETHER_TO_GWEI).toString()} {TICKER_NAME}
             </InfoBox>
           </Container>
         </Box>
@@ -159,11 +167,11 @@ const _SummaryPage = ({
             <CheckBox
               onChange={e => setLosePhrase(e.target.checked)}
               checked={losePhrase}
-              label={
+              label={(
                 <Text>
                   <FormattedMessage defaultMessage="I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase." />
                 </Text>
-              }
+              )}
             />
           </span>
         )}
@@ -171,21 +179,21 @@ const _SummaryPage = ({
           <CheckBox
             onChange={e => setSoftwareRisk(e.target.checked)}
             checked={softwareRisk}
-            label={
+            label={(
               <Text>
                 <FormattedMessage defaultMessage="I understand the software and slashing risks." />
               </Text>
-            }
+            )}
           />
         </span>
         <CheckBox
           onChange={e => setNonReverse(e.target.checked)}
           checked={nonReverse}
-          label={
+          label={(
             <Text>
               <FormattedMessage defaultMessage="I understand that this transaction is not reversible." />
             </Text>
-          }
+          )}
         />
       </AcknowledgementSection>
       <AcknowledgementSection
@@ -223,7 +231,7 @@ const _SummaryPage = ({
           <CheckBox
             onChange={e => setNoPhish(e.target.checked)}
             checked={noPhish}
-            label={
+            label={(
               <Text>
                 <FormattedMessage
                   defaultMessage="I know how to check that I am sending my {TICKER_NAME} into the
@@ -231,7 +239,7 @@ const _SummaryPage = ({
                   values={{ TICKER_NAME }}
                 />
               </Text>
-            }
+            )}
           />
         </span>
       </AcknowledgementSection>
@@ -301,7 +309,7 @@ const _SummaryPage = ({
           <CheckBox
             onChange={e => setDuplicatesAcknowledged(e.target.checked)}
             checked={duplicatesAcknowledged}
-            label={
+            label={(
               <Text>
                 <FormattedMessage
                   defaultMessage="I understand that there is no advantage to deposit more ETH than the maximum effective balance ({maxEB} {TICKER_NAME} for my account type).
@@ -309,7 +317,7 @@ const _SummaryPage = ({
                   values={{ maxEB, TICKER_NAME }}
                 />
               </Text>
-            }
+            )}
           />
         </span>
       </AcknowledgementSection>

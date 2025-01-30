@@ -273,7 +273,15 @@ const _ActionsPage: React.FC<Props> = () => {
         )}
       </>
     );
-  }, [loading, active, selectedValidator, validators]);
+  }, [
+    loading,
+    active,
+    selectedValidator,
+    validators,
+    formatMessage,
+    handleConnect,
+    validatorLoadError,
+  ]);
 
   return (
     <>

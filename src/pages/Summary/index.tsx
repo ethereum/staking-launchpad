@@ -35,7 +35,10 @@ import {
   ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { Alert } from '../../components/Alert';
-import { BeaconChainStatus } from '../../store/actions/depositFileActions';
+import {
+  BeaconChainStatus,
+  DepositStatus,
+} from '../../store/actions/depositFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
@@ -122,7 +125,10 @@ const _SummaryPage = ({
   const maxEB =
     accountType > 1 ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE;
 
-  const amountValidators = new BigNumber(depositKeys.length);
+  const readyForDeposit = depositKeys.filter(
+    key => key.depositStatus === DepositStatus.READY_FOR_DEPOSIT
+  );
+  const amountValidators = new BigNumber(readyForDeposit.length);
 
   const requiredAmountEther = depositKeys.reduce((acc, key) => {
     const bigAmount = new BigNumber(key.amount);

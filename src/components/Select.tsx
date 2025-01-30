@@ -26,7 +26,7 @@ const Content = styled.div`
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto;
   z-index: 1000;
 `;
@@ -130,7 +130,13 @@ const Select = ({
 
   return (
     <Container ref={containerRef}>
-      <Trigger onClick={() => setIsOpen(!isOpen)}>
+      <Trigger
+        onClick={() => setIsOpen(!isOpen)}
+        style={{
+          padding: '1rem',
+          fontSize: '18px',
+        }}
+      >
         <span>{selectedOption?.label || placeholder}</span>
         {isOpen ? <FormUp /> : <FormDown />}
       </Trigger>

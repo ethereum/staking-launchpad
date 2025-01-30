@@ -8,6 +8,7 @@ interface CustomButtonProps {
   fullWidth?: boolean;
   rainbow?: boolean;
   onClick?: () => any;
+  destructive?: boolean;
 }
 
 const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
@@ -21,18 +22,22 @@ const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
 
 const StyledButton = styled(GrommetButton)`
   display: block;
-  padding: 15px;
   text-transform: uppercase;
   width: ${calculateWidth};
+  padding: 1rem;
   font-size: 18px;
   letter-spacing: 1.5px;
   background-color: ${p =>
     p.primary ? p.theme.blue.dark : p.theme.gray.light};
   border: ${p => `1px solid ${p.theme.gray.medium}`};
+  border-radius: 4px;
   &:hover {
-    border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+    background-image: ${p =>
+      `linear-gradient(to right, ${
+        // @ts-ignore
+        p.destructive ? 'none' : p.theme.rainbow
+      })`};
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -44,9 +49,23 @@ const StyledButton = styled(GrommetButton)`
      color: ${p.theme.blue.dark};
      border: 1px solid ${p.theme.blue.dark};
    `}
+  // destructive styles
+  ${p =>
+    // @ts-ignore
+    p.destructive &&
+    `background-color: ${p.theme.red.light};
+    color: black;
+    border: 1px solid ${p.theme.red.medium};
+    &:hover {
+      background-color: darkred;
+       color: white;
+     }
+   `}
 `;
 
-export const Button = (props: CustomButtonProps & ButtonProps) => {
-  const { className } = props;
-  return <StyledButton className={className} {...props} />;
-};
+export const Button = ({
+  className,
+  ...props
+}: CustomButtonProps & ButtonProps) => (
+  <StyledButton className={className} {...props} />
+);

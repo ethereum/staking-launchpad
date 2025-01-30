@@ -514,6 +514,9 @@
   "7Nwe5A": {
     "message": "{exitEpochLabel} - epoch at which your validator is no longer active, no longer earning rewards, and is no longer subject to slashing rules."
   },
+  "7OLqa4": {
+    "message": "Upgrade to \"Compounding\""
+  },
   "7Rw2uA": {
     "message": "consensus"
   },
@@ -736,6 +739,9 @@
   "BHR1uy": {
     "message": "Erigon is written in Go and licensed under the GNU LGPLv3."
   },
+  "BIpzEs": {
+    "message": "Partial Withdraw"
+  },
   "BKDxOx": {
     "message": "Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated."
   },
@@ -869,6 +875,9 @@
   },
   "DsJ/Mk": {
     "message": "Don’t just trust the contract address listed on this website."
+  },
+  "DxyGdq": {
+    "message": "Validator Index"
   },
   "E+Y27g": {
     "message": "You can check your Python version by typing {terminalCommand} in your terminal."
@@ -1169,6 +1178,9 @@
   "Ja5vXW": {
     "message": "Further reading"
   },
+  "Jge1Sx": {
+    "message": "Force exit"
+  },
   "JhUYU3": {
     "message": "Download CLI app"
   },
@@ -1239,9 +1251,6 @@
   },
   "KhJBVZ": {
     "message": "View the Staking Checklist"
-  },
-  "Kkn4j7": {
-    "message": "You can learn how to perform this update by viewing the {LINK} section."
   },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
@@ -1691,9 +1700,6 @@
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
   },
-  "TTbBhG": {
-    "message": "This validator has Type 0 (0x00) credentials and must be updated in order to perform validator actions."
-  },
   "TZtYuA": {
     "message": "The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum."
   },
@@ -2033,6 +2039,9 @@
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
   },
+  "b+yUd5": {
+    "message": "Fetch more"
+  },
   "b8APBK": {
     "message": "More on client diversity"
   },
@@ -2065,6 +2074,9 @@
   },
   "bembWf": {
     "message": "Withdrawals not enabled"
+  },
+  "bep9C3": {
+    "message": "Public Key"
   },
   "bgyJfz": {
     "message": "What clients do I need to run?"
@@ -2247,9 +2259,6 @@
   },
   "fSi2R/": {
     "message": "Information for validator operators regarding staking withdrawals."
-  },
-  "fVnFri": {
-    "message": "Validator Index: {index}"
   },
   "fZwn+P": {
     "message": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
@@ -2492,6 +2501,9 @@
   },
   "jrK21r": {
     "message": "You can find the binary files in {pr}"
+  },
+  "jrPsyP": {
+    "message": "Exit Epoch"
   },
   "jrbRLT": {
     "message": "To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemonics, please do not proceed."
@@ -2870,9 +2882,6 @@
   },
   "plXBe0": {
     "message": "Alternative node tooling:"
-  },
-  "pnFNq9": {
-    "message": "Public Key: {pubkey}"
   },
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."

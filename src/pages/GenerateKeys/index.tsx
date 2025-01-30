@@ -144,10 +144,10 @@ const _GenerateKeysPage = ({
   workflow,
 }: Props): JSX.Element => {
   const { formatMessage } = useIntl();
-  const [ethAmount, setStateEthAmount] = useState<number | string>(
+  const [ethAmount, setStateEthAmount] = useState<number>(
     MIN_ACTIVATION_BALANCE
   );
-  const [validatorCount, setStateValidatorCount] = useState<number | string>(1);
+  const [validatorCount, setStateValidatorCount] = useState<number>(1);
 
   const [
     mnemonicAcknowledgementChecked,
@@ -359,7 +359,7 @@ const _GenerateKeysPage = ({
                 <FormattedMessage defaultMessage="Cost" />
               </Text>
               <Text>
-                {validatorCount === ''
+                {validatorCount === 0
                   ? validatorCount
                   : new BigNumber(validatorCount)
                       .times(new BigNumber(MIN_ACTIVATION_BALANCE))

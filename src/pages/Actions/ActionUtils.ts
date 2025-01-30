@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { TransactionConfig } from 'web3-core';
 import {
   COMPOUNDING_CONTRACT_ADDRESS,
@@ -65,7 +66,7 @@ export const generateCompoundParams = async (
     to: COMPOUNDING_CONTRACT_ADDRESS,
     from: address,
     // calldata (96 bytes): sourceValidator.pubkey (48 bytes) + targetValidator.pubkey (48 bytes)
-    data: '0x' + pubkeyA.substring(2) + pubkeyB.substring(2),
+    data: `0x${pubkeyA.substring(2)}${pubkeyB.substring(2)}`,
     value: fee.toString(),
     gas: 200000,
   };
@@ -84,7 +85,7 @@ export const generateWithdrawalParams = async (
     to: WITHDRAWAL_CONTRACT_ADDRESS,
     from: address,
     // calldata (56 bytes): sourceValidator.pubkey (48 bytes) + amount (8 bytes)
-    data: '0x' + pubkey.substring(2) + amount.toString(16).padStart(16, '0'),
+    data: `0x${pubkey.substring(2)}${amount.toString(16).padStart(16, '0')}`,
     value: fee.toString(),
     gas: 200000,
   };

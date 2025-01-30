@@ -112,7 +112,15 @@
     "compile": "formatjs compile src/intl/en.json --format crowdin --out-file src/intl/compiled/en.json --ast"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ]
   },
   "browserslist": {
     "production": [

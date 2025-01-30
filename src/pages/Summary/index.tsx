@@ -28,7 +28,12 @@ import {
   updateWorkflow,
   WorkflowStep,
 } from '../../store/actions/workflowActions';
-import { PRICE_PER_VALIDATOR, TICKER_NAME } from '../../utils/envVars';
+import {
+  MAX_EFFECTIVE_BALANCE,
+  MIN_ACTIVATION_BALANCE,
+  TICKER_NAME,
+  ETHER_TO_GWEI,
+} from '../../utils/envVars';
 import { Alert } from '../../components/Alert';
 import { BeaconChainStatus } from '../../store/actions/depositFileActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
@@ -84,22 +89,24 @@ const _SummaryPage = ({
   depositKeys,
   beaconChainApiStatus,
 }: Props): JSX.Element => {
-  const [losePhrase, setLosePhrase] = useState(false);
-  const [earlyAdopt, setEarlyAdopt] = useState(false);
+  const { formatMessage } = useIntl();
+
+  const accountType = +depositKeys[0].withdrawal_credentials.slice(0, 2);
+
+  const [losePhrase, setLosePhrase] = useState(accountType > 0);
+  const [softwareRisk, setSoftwareRisk] = useState(false);
   const [nonReverse, setNonReverse] = useState(false);
   const [noPhish, setNoPhish] = useState(false);
   const [duplicatesAcknowledged, setDuplicatesAcknowledged] = useState(false);
-  const amountValidators = new BigNumber(depositKeys.length);
-  const convertedPrice = new BigNumber(PRICE_PER_VALIDATOR);
-  const { formatMessage } = useIntl();
+
   const allChecked = React.useMemo(
     () =>
       losePhrase &&
-      earlyAdopt &&
+      softwareRisk &&
       nonReverse &&
       noPhish &&
       duplicatesAcknowledged,
-    [losePhrase, earlyAdopt, nonReverse, noPhish, duplicatesAcknowledged]
+    [losePhrase, softwareRisk, nonReverse, noPhish, duplicatesAcknowledged]
   );
 
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
@@ -111,6 +118,16 @@ const _SummaryPage = ({
       dispatchWorkflowUpdate(WorkflowStep.TRANSACTION_SIGNING);
     }
   };
+
+  const maxEB =
+    accountType > 1 ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE;
+
+  const amountValidators = new BigNumber(depositKeys.length);
+
+  const requiredAmountEther = depositKeys.reduce((acc, key) => {
+    const bigAmount = new BigNumber(key.amount);
+    return acc.plus(bigAmount);
+  }, new BigNumber(0));
 
   if (workflow < WorkflowStep.SUMMARY) {
     return routeToCorrectWorkflowStep(workflow);
@@ -137,8 +154,7 @@ const _SummaryPage = ({
               <FormattedMessage defaultMessage="Total amount required" />
             </Text>
             <InfoBox>
-              {amountValidators.times(convertedPrice).toString()}
-              {TICKER_NAME}
+              {requiredAmountEther.div(ETHER_TO_GWEI).toString()} {TICKER_NAME}
             </InfoBox>
           </Container>
         </Box>
@@ -146,37 +162,39 @@ const _SummaryPage = ({
       <AcknowledgementSection
         title={formatMessage({ defaultMessage: 'Understand the risks' })}
       >
+        {accountType === 0 && (
+          <span className="mb20">
+            <CheckBox
+              onChange={e => setLosePhrase(e.target.checked)}
+              checked={losePhrase}
+              label={
+                <Text>
+                  <FormattedMessage defaultMessage="I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase." />
+                </Text>
+              }
+            />
+          </span>
+        )}
+        <span className="mb20">
+          <CheckBox
+            onChange={e => setSoftwareRisk(e.target.checked)}
+            checked={softwareRisk}
+            label={
+              <Text>
+                <FormattedMessage defaultMessage="I understand the software and slashing risks." />
+              </Text>
+            }
+          />
+        </span>
         <CheckBox
-          onChange={e => setLosePhrase(e.target.checked)}
-          checked={losePhrase}
+          onChange={e => setNonReverse(e.target.checked)}
+          checked={nonReverse}
           label={
             <Text>
-              <FormattedMessage defaultMessage="I understand that I will not be able to withdraw my funds if I lose my mnemonic phrase." />
+              <FormattedMessage defaultMessage="I understand that this transaction is not reversible." />
             </Text>
           }
         />
-        <span className="mt20">
-          <CheckBox
-            onChange={e => setEarlyAdopt(e.target.checked)}
-            checked={earlyAdopt}
-            label={
-              <Text>
-                <FormattedMessage defaultMessage="I understand the early adopter and slashing risks." />
-              </Text>
-            }
-          />
-        </span>
-        <span className="mt20">
-          <CheckBox
-            onChange={e => setNonReverse(e.target.checked)}
-            checked={nonReverse}
-            label={
-              <Text>
-                <FormattedMessage defaultMessage="I understand that this transaction is not reversible." />
-              </Text>
-            }
-          />
-        </span>
       </AcknowledgementSection>
       <AcknowledgementSection
         title={formatMessage({
@@ -186,12 +204,10 @@ const _SummaryPage = ({
         <Text>
           <FormattedMessage
             defaultMessage="You are responsible for the transaction. Fraudulent websites might
-          try and lure you into sending the {pricePerValidator} to them,
+          try and lure you into sending {TICKER_NAME} to them,
           instead of the official deposit contract. Make sure that the
           address you are sending the transaction to is the correct address."
-            values={{
-              pricePerValidator: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
-            }}
+            values={{ TICKER_NAME }}
           />
         </Text>
         <Row>
@@ -253,10 +269,10 @@ const _SummaryPage = ({
 
         <Text>
           <FormattedMessage
-            defaultMessage="{warning} Duplicate
-          deposits with the same keyfile public key will be considered as a
-          double deposit. Any extra balance more than {eth} will NOT be counted in your effective balance on the
-          Beacon Chain. You also won't be able to withdraw it until the Beacon Chain merges with mainnet."
+            defaultMessage="{warning} Duplicate deposits with the same keyfile public key will be considered as a double deposit.
+              If this balance exceeds your accounts maximum effective balance ({maxEB} {TICKER_NAME}), extra will not be counted towards your stake.
+              Assuming a withdrawal address was set, these funds will automatically be redistributed after the account is activated.
+              If no withdrawal address was provided, funds will remain locked until a withdrawal address is provided."
             values={{
               warning: (
                 <em>
@@ -265,7 +281,8 @@ const _SummaryPage = ({
                   })}
                 </em>
               ),
-              eth: `${PRICE_PER_VALIDATOR} ${TICKER_NAME}`,
+              maxEB,
+              TICKER_NAME,
             }}
           />
         </Text>
@@ -274,9 +291,7 @@ const _SummaryPage = ({
           <li>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Do not submit any transaction with a {depositData} file that you
-              did not create yourself, or that you do not own the mnemonic
-              phrase for."
+                defaultMessage="Do not submit any transaction with a {depositData} file that you did not create yourself, or that you do not own the mnemonic phrase for."
                 values={{ depositData: <Code>deposit_data</Code> }}
               />
             </Text>
@@ -297,8 +312,9 @@ const _SummaryPage = ({
             label={
               <Text>
                 <FormattedMessage
-                  defaultMessage="I understand that there is no advantage to depositing more than once per validator. Any extra {TICKER_NAME} sent in a duplicate deposit will not be counted in my effective validator balance and I will not be able to withdraw it."
-                  values={{ TICKER_NAME }}
+                  defaultMessage="I understand that there is no advantage to deposit more ETH than the maximum effective balance ({maxEB} {TICKER_NAME} for my account type).
+                  Any extra {TICKER_NAME} sent in excess of this value will not count towards my stake, and will be automatically withdrawn once the account is activated with a valid withdrawal address."
+                  values={{ maxEB, TICKER_NAME }}
                 />
               </Text>
             }

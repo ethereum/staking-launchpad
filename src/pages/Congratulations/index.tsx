@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import { FormNext, FormPrevious, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
 import _every from 'lodash/every';
+import BigNumber from 'bignumber.js';
 import { AppBar } from '../../components/AppBar';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
@@ -20,12 +21,12 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { WorkflowStep } from '../../store/actions/workflowActions';
 import {
-  PRICE_PER_VALIDATOR,
   TESTNET_LAUNCHPAD_NAME,
   IS_MAINNET,
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_URL,
   TICKER_NAME,
+  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
@@ -214,10 +215,6 @@ const _CongratulationsPage = ({
     Web3Provider
   >();
 
-  const totalTxCount = depositKeys.filter(
-    key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
-  ).length;
-
   const remainingTxCount = depositKeys.filter(
     file =>
       file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
@@ -230,7 +227,18 @@ const _CongratulationsPage = ({
     )
   );
 
-  const actualTxConfirmed = totalTxCount - remainingTxCount;
+  const succeededDeposits = depositKeys.filter(
+    key => key.transactionStatus === TransactionStatus.SUCCEEDED
+  );
+
+  const actualTxConfirmed = succeededDeposits.length;
+
+  const stakedGwei = succeededDeposits.reduce((acc, key) => {
+    const bigAmount = new BigNumber(key.amount);
+    return acc.plus(bigAmount);
+  }, new BigNumber(0));
+
+  const formattedStakedEther = stakedGwei.dividedBy(ETHER_TO_GWEI).toString();
 
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
@@ -345,7 +353,7 @@ const _CongratulationsPage = ({
                 </Heading>
                 <Text size="x-large" className="mt20">
                   <BoldGreen>
-                    {actualTxConfirmed * +PRICE_PER_VALIDATOR} {TICKER_NAME}
+                    {formattedStakedEther} {TICKER_NAME}
                   </BoldGreen>
                 </Text>
               </Card>

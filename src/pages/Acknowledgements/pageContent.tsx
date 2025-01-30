@@ -6,7 +6,7 @@ import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import {
   NETWORK_NAME,
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
 } from '../../utils/envVars';
 
@@ -37,12 +37,21 @@ export const pageContent = {
         </Text>
         <Text size="medium" className="my10">
           <FormattedMessage
-            defaultMessage="Importantly, as a validator you'll need to post {TICKER_NAME} as
+            defaultMessage="Importantly, as a validator you'll need to post a minimum of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} as
               collateral—in other words, have some funds at stake. The only way to become a
-              validator is to make a one-way {TICKER_NAME} transaction to the deposit contract
+              validator is to make a one-way {TICKER_NAME} transaction to the {DEPOSIT_CONTRACT}
               on the {NETWORK_NAME} execution layer. The Beacon Chain (consensus layer) is used
               in parallel to keep track of all validator activity."
-            values={{ TICKER_NAME, NETWORK_NAME }}
+            values={{
+              MIN_ACTIVATION_BALANCE,
+              TICKER_NAME,
+              NETWORK_NAME,
+              DEPOSIT_CONTRACT: (
+                <em>
+                  <FormattedMessage defaultMessage="deposit contract" />
+                </em>
+              ),
+            }}
           />
         </Text>
         <Link
@@ -65,32 +74,15 @@ export const pageContent = {
       <FormattedMessage defaultMessage="I understand proof-of-stake and why validators are needed." />
     ),
   },
-  [AcknowledgementIdsEnum.deposit]: {
-    title: <FormattedMessage defaultMessage="The deposit" />,
+  [AcknowledgementIdsEnum.terminal]: {
+    title: <FormattedMessage defaultMessage="Using the terminal" />,
     content: (
-      <>
-        <Text size="medium" className="my10">
-          <FormattedMessage
-            defaultMessage="To become a validator on the Beacon Chain, you need to deposit
-              {PRICE_PER_VALIDATOR} {TICKER_NAME} per validator that you wish to run."
-            values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
-          />
-        </Text>
-        <Text size="medium" className="my20">
-          <FormattedMessage
-            defaultMessage="Like all Ethereum transactions, deposits are non-reversible, but
-            the ability to withdrawal your funds via a separate process after depositing remains
-            under your control."
-          />
-        </Text>
-      </>
+      <Text size="medium" className="my10">
+        <FormattedMessage defaultMessage="It is helpful to know how to run commands in the terminal on your computer. Generating your new key pairs and installing the validator software can be done using graphical interfaces (GUIs) with some software, but by default the terminal is typically used for full control." />
+      </Text>
     ),
     acknowledgementText: (
-      <FormattedMessage
-        defaultMessage="I understand that I need to deposit {PRICE_PER_VALIDATOR} {TICKER_NAME}
-          onto the Beacon Chain to become a validator. Withdrawing deposited {TICKER_NAME} from the Beacon Chain is accomplished via a separate process."
-        values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
-      />
+      <FormattedMessage defaultMessage="I am technically capable of setting up and running a validator." />
     ),
   },
   [AcknowledgementIdsEnum.responsibilities]: {
@@ -99,10 +91,9 @@ export const pageContent = {
       <>
         <Text size="medium" className="my10">
           <FormattedMessage
-            defaultMessage="You'll only get your full rewards if your validator is online and up
-              to date. This is your responsibility. If your validator goes offline you'll be
-              penalized. The penalties for being offline are roughly equal to the rewards for
-              actively participating."
+            defaultMessage="To maximize your rewards, you need to keep your validator online and up to date.
+              This is your responsibility, and your account will be penalized if it goes offline.
+              The penalties for being offline are roughly equal to the rewards for actively participating."
           />
         </Text>
         <Link
@@ -132,13 +123,6 @@ export const pageContent = {
         <Text size="medium" className="my10">
           <FormattedMessage defaultMessage="*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties." />
         </Text>
-        <Link
-          to="https://github.com/ethereum/consensus-specs"
-          className="my10"
-          primary
-        >
-          <FormattedMessage defaultMessage="The Ethereum consensus layer specification" />
-        </Link>
         <Link shouldOpenNewTab to="/faq" className="my10" primary>
           <FormattedMessage defaultMessage="More on slashing risks" />
         </Link>
@@ -159,16 +143,42 @@ export const pageContent = {
           <FormattedMessage defaultMessage="To become a validator you'll need to know about managing keys and protecting a mnemonic. If you are not yet familiar with keys and mnemonics, please do not proceed." />
         </Text>
         <Text size="medium" className="mt10">
-          <FormattedMessage defaultMessage="We'll help you create a signing key for every validator you want to run. You may choose to provide a withdrawal address for your validator when generating your deposit data, which will permanently set the withdrawal address. This is recommended for most users." />
+          <FormattedMessage
+            defaultMessage="We'll help you generate a signing key for every validator you want to run.
+              During which you'll set a withdrawal address that will be permanently tied to each validator account."
+          />
+        </Text>
+      </>
+    ),
+    acknowledgementText: (
+      <FormattedMessage
+        defaultMessage="I understand that keys along with my mnemonic (seed) are my responsibility."
+        values={{
+          onlyWay: (
+            <BoldCaps>
+              <FormattedMessage defaultMessage="only way" />
+            </BoldCaps>
+          ),
+        }}
+      />
+    ),
+  },
+  [AcknowledgementIdsEnum.withdrawalAddress]: {
+    title: <FormattedMessage defaultMessage="Withdrawal address" />,
+    content: (
+      <>
+        <Text size="medium" className="mt10">
+          <FormattedMessage defaultMessage="We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons." />
         </Text>
         <Text size="medium" className="mt10">
           <FormattedMessage
-            defaultMessage="If you do not provide a withdrawal address with your initial deposit data, you will need to derive your withdrawal keys from your mnemonic at a later time, so {boldWarning}—it will be the ONLY way to withdraw your {TICKER_NAME} when you chose to activate withdrawals."
+            defaultMessage="If a withdrawal address is not set at time of deposit, your funds will be locked until one is provided.
+              Your default withdrawal keys can be generated from your mnemonic to authenticate a one-time change to add a withdrawal address.
+              Remember to {boldWarning}."
             values={{
-              TICKER_NAME,
               boldWarning: (
                 <strong>
-                  <FormattedMessage defaultMessage="store your mnemonic safely" />
+                  <FormattedMessage defaultMessage="always store your mnemonic safely" />
                 </strong>
               ),
             }}
@@ -181,8 +191,7 @@ export const pageContent = {
     ),
     acknowledgementText: (
       <FormattedMessage
-        defaultMessage="I understand that keys are my responsibility and that my mnemonic (seed)
-          will be the {onlyWay} to withdraw my funds if I don't provide a withdrawal address with initial deposit data."
+        defaultMessage="I understand that not providing a withdrawal address with my initial deposit leaves my funds locked and the {onlyWay} to withdraw my funds requires my mnemonic."
         values={{
           onlyWay: (
             <BoldCaps>
@@ -194,36 +203,18 @@ export const pageContent = {
     ),
   },
   [AcknowledgementIdsEnum.earlyAdoptionRisks]: {
-    title: <FormattedMessage defaultMessage="Early adopter risks" />,
+    title: <FormattedMessage defaultMessage="Software risks" />,
     content: (
       <Text size="medium" className="my10">
         <FormattedMessage
-          defaultMessage="You're joining a network in its early stages. As with any new piece of software,
-              there is the potential for software bugs. While unlikely, potential bugs may
+          defaultMessage="You're joining a network that functions via software. As with any software,
+              there is the potential for accidental bugs. While unlikely, potential bugs may
               result in slashing."
         />
       </Text>
     ),
     acknowledgementText: (
-      <FormattedMessage
-        defaultMessage="I am an early adopter, and I accept that software and design bugs may
-          result in me being slashed."
-      />
-    ),
-  },
-  [AcknowledgementIdsEnum.terminal]: {
-    title: <FormattedMessage defaultMessage="Using the terminal" />,
-    content: (
-      <Text size="medium" className="my10">
-        <FormattedMessage
-          defaultMessage="To become a validator, you will need to be able to run commands in
-            the terminal on your computer. Generating your new key pairs and installing
-            the validator software are both done in the terminal."
-        />
-      </Text>
-    ),
-    acknowledgementText: (
-      <FormattedMessage defaultMessage="I am technically capable of setting up and running a validator." />
+      <FormattedMessage defaultMessage="I accept that software and design bugs may result in me being slashed." />
     ),
   },
   [AcknowledgementIdsEnum.checklist]: {

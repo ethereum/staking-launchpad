@@ -7,11 +7,17 @@ import { Text } from '../../components/Text';
 import { Link } from '../../components/Link';
 import { Alert } from '../../components/Alert';
 import { Code } from '../../components/Code';
-import { NETWORK_NAME, TRANSLATE_CLI_FLAGS } from '../../utils/envVars';
+import {
+  NETWORK_NAME,
+  TRANSLATE_CLI_FLAGS,
+  MIN_ACTIVATION_BALANCE,
+  MAX_EFFECTIVE_BALANCE,
+} from '../../utils/envVars';
 import { Button } from '../../components/Button';
 import githubScreenshot from '../../static/github-cli-screenshot.png';
 import { colors } from '../../styles/styledComponentsTheme';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
+import { AccountType } from '.';
 
 const AlertIcon = styled(p => <GrommetAlert {...p} />)`
   display: block;
@@ -28,15 +34,21 @@ const GithubScreenshot = styled.img.attrs({ src: githubScreenshot })`
   width: 100%;
 `;
 
+export type CLIOptionProps = {
+  accountType: AccountType;
+  validatorCount: number | string;
+  ethAmount: number | string;
+  withdrawalAddress: string;
+  os: 'mac' | 'linux' | 'windows'; // string
+};
+
 export const Option1 = ({
+  accountType,
+  ethAmount,
   validatorCount,
   withdrawalAddress,
   os,
-}: {
-  validatorCount: number | string;
-  withdrawalAddress: string;
-  os: string;
-}) => {
+}: CLIOptionProps) => {
   const { formatMessage } = useIntl();
   const { consensusLayerName } = useIntlNetworkName();
 
@@ -50,7 +62,7 @@ export const Option1 = ({
       </Text>
       <Link
         isTextLink={false}
-        to="https://github.com/ethereum/staking-deposit-cli/releases/"
+        to="https://github.com/eth-educators/ethstaker-deposit-cli/releases/"
         className="my40"
       >
         <Button
@@ -70,12 +82,11 @@ export const Option1 = ({
             style={{ wordBreak: 'break-word' }}
           >
             <FormattedMessage
-              defaultMessage="Please make sure that you are downloading from the official Ethereum
-              Foundation GitHub account by verifying the url: {url}"
+              defaultMessage="Please make sure that you are downloading from the official EthStaker GitHub account by verifying the url: {url}"
               values={{
                 url: (
                   <strong>
-                    https://github.com/ethereum/staking-deposit-cli/releases/
+                    https://github.com/eth-educators/ethstaker-deposit-cli/releases/
                   </strong>
                 ),
               }}
@@ -88,7 +99,7 @@ export const Option1 = ({
       <GithubScreenshot />
 
       <Text weight={500} className="mt20">
-        <FormattedMessage defaultMessage="Step 2: Generate deposit keys using the Ethereum Foundation deposit tool" />
+        <FormattedMessage defaultMessage="Step 2: Generate deposit keys using the EthStaker deposit tool" />
       </Text>
       <Alert className="my20" variant="info">
         <FormattedMessage defaultMessage="For security, we recommend you disconnect from the internet to complete this step." />
@@ -123,8 +134,29 @@ export const Option1 = ({
               </>
             )}
             new-mnemonic{' '}
-            {validatorCount > 0
-              ? `--${
+            {accountType === '0x02' &&
+            ethAmount >= MIN_ACTIVATION_BALANCE &&
+            ethAmount <= MAX_EFFECTIVE_BALANCE
+              ? `--compounding --${
+                  TRANSLATE_CLI_FLAGS
+                    ? formatMessage({
+                        defaultMessage: 'num_validators',
+                        description:
+                          'this is used as a command line flag, short for "number of validators"',
+                      })
+                    : 'num_validators'
+                } 1 --${
+                  TRANSLATE_CLI_FLAGS
+                    ? formatMessage({
+                        defaultMessage: 'amount',
+                        description:
+                          'this is used as a command line flag, for the amount of ETH to be deposited',
+                      })
+                    : 'amount'
+                } ${ethAmount}`
+              : ''}{' '}
+            {accountType === '0x01' && validatorCount > 0
+              ? `--regular-withdrawal --${
                   TRANSLATE_CLI_FLAGS
                     ? formatMessage({
                         defaultMessage: 'num_validators',
@@ -146,10 +178,10 @@ export const Option1 = ({
               `--${
                 TRANSLATE_CLI_FLAGS
                   ? formatMessage({
-                      defaultMessage: 'eth1_withdrawal_address',
+                      defaultMessage: 'withdrawal_address',
                       description: 'this is used as a command line flag',
                     })
-                  : 'eth1_withdrawal_address'
+                  : 'withdrawal_address'
               } ${withdrawalAddress}`}
           </Pre>
         </Alert>

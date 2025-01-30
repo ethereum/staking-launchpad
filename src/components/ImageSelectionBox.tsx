@@ -37,6 +37,7 @@ const LanguageTag = styled.div`
   padding: 8px;
   font-size: 14px;
   text-align: center;
+  width: 100%;
 `;
 
 interface ImgSelectionBoxProps {

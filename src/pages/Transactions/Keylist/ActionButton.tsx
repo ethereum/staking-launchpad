@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
 import { FormNextLink, FormPreviousLink } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -14,7 +15,6 @@ import {
   EL_TRANSACTION_URL,
   IS_NON_INFURA_TESTNET,
 } from '../../../utils/envVars';
-import ReactTooltip from 'react-tooltip';
 
 const Container = styled.div`
   display: flex;

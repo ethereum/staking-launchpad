@@ -7,8 +7,6 @@ import { AbstractConnector } from '@web3-react/abstract-connector';
 import styled from 'styled-components';
 import { FormNext, FormPrevious, FlagFill } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
-import _every from 'lodash/every';
-import BigNumber from 'bignumber.js';
 import { AppBar } from '../../components/AppBar';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
@@ -26,19 +24,19 @@ import {
   MAINNET_LAUNCHPAD_URL,
   TESTNET_LAUNCHPAD_URL,
   TICKER_NAME,
-  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { routesEnum } from '../../Routes';
 import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import {
   DepositStatus,
-  TransactionStatus,
   DispatchTransactionStatusUpdateType,
   updateTransactionStatus,
 } from '../../store/actions/depositFileActions';
 // Types
 import { useBeaconchainData } from '../../hooks/useBeaconchainData';
+import { useDepositKeyList } from '../../hooks/useDepositKeyList';
+import { errorStatuses } from '../../utils/txStatus';
 
 const RainbowBackground = styled.div`
   background-image: ${p =>
@@ -100,7 +98,7 @@ const CardLink = styled(Link)`
   }
 `;
 
-const CardButton = styled.div`
+const CardButton = styled.button`
   padding: 24px;
   border: 1px solid ${p => p.theme.gray.dark};
   border-radius: 4px;
@@ -215,35 +213,19 @@ const _CongratulationsPage = ({
     Web3Provider
   >();
 
-  const remainingTxCount = depositKeys.filter(
-    file =>
-      file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
-      file.transactionStatus !== TransactionStatus.SUCCEEDED
-  ).length;
-
-  const allTxConfirmed = _every(
-    depositKeys.map(
-      file => file.transactionStatus === TransactionStatus.SUCCEEDED
-    )
-  );
-
-  const succeededDeposits = depositKeys.filter(
-    key => key.transactionStatus === TransactionStatus.SUCCEEDED
-  );
-
-  const actualTxConfirmed = succeededDeposits.length;
-
-  const stakedGwei = succeededDeposits.reduce((acc, key) => {
-    const bigAmount = new BigNumber(key.amount);
-    return acc.plus(bigAmount);
-  }, new BigNumber(0));
-
-  const formattedStakedEther = stakedGwei.dividedBy(ETHER_TO_GWEI).toString();
+  const {
+    remainingTxCount,
+    allTxConfirmed,
+    actualTxConfirmed,
+    formattedStakedEther,
+  } = useDepositKeyList(depositKeys);
 
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
       depositKeys.filter(
-        key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
+        key =>
+          key.depositStatus !== DepositStatus.ALREADY_DEPOSITED ||
+          errorStatuses.includes(key.transactionStatus)
       ),
       connector as AbstractConnector,
       account,

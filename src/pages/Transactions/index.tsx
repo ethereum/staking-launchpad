@@ -6,8 +6,6 @@ import { Web3Provider } from '@ethersproject/providers';
 import { connect } from 'react-redux';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { AbstractConnector } from '@web3-react/abstract-connector';
-import _every from 'lodash/every';
-import _some from 'lodash/some';
 import { DepositKeyInterface, StoreState } from '../../store/reducers';
 import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
@@ -24,7 +22,6 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { WalletDisconnected } from '../ConnectWallet/WalletDisconnected';
 import { WrongNetwork } from '../ConnectWallet/WrongNetwork';
 import {
-  DepositStatus,
   DispatchTransactionStatusUpdateType,
   TransactionStatus,
   updateTransactionStatus,
@@ -35,6 +32,7 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
+import { useDepositKeyList } from '../../hooks/useDepositKeyList';
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -66,29 +64,13 @@ const _TransactionsPage = ({
   const { account, chainId, connector }: web3ReactInterface = useWeb3React<
     Web3Provider
   >();
-
-  const totalTxCount = depositKeys.filter(
-    key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
-  ).length;
-
-  const remainingTxCount = depositKeys.filter(
-    file =>
-      file.depositStatus !== DepositStatus.ALREADY_DEPOSITED &&
-      (file.transactionStatus === TransactionStatus.READY ||
-        file.transactionStatus === TransactionStatus.REJECTED)
-  ).length;
-
-  const allTxConfirmed = _every(
-    depositKeys.map(
-      file => file.transactionStatus === TransactionStatus.SUCCEEDED
-    )
-  );
-
-  const oneTxConfirmed = _some(
-    depositKeys.map(
-      file => file.transactionStatus === TransactionStatus.SUCCEEDED
-    )
-  );
+  const {
+    totalTxCount,
+    remainingTxs,
+    remainingTxCount,
+    allTxConfirmed,
+    oneTxConfirmed,
+  } = useDepositKeyList(depositKeys);
 
   const createButtonText = (): string => {
     if (totalTxCount === 1) {
@@ -129,9 +111,7 @@ const _TransactionsPage = ({
 
   const handleAllTransactionsClick = () => {
     handleMultipleTransactions(
-      depositKeys.filter(
-        key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
-      ),
+      remainingTxs,
       connector as AbstractConnector,
       account,
       dispatchTransactionStatusUpdate

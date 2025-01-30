@@ -1,16 +1,20 @@
-import { AbstractConnector } from '@web3-react/abstract-connector';
-import { useWeb3React } from '@web3-react/core';
-import { Box, Button, Heading, Layer } from 'grommet';
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Box, Heading, Layer } from 'grommet';
 import Web3 from 'web3';
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+
 import { Validator } from '../types';
+
+import { Button } from '../../../components/Button';
 import { NumberInput } from '../../../components/NumberInput';
 import { Text } from '../../../components/Text';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
+
 import { MIN_VALIDATOR_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 
 interface Props {
@@ -148,7 +152,10 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
         />
       )}
 
-      <Button onClick={() => prepareInputModal()}>Partial Withdraw</Button>
+      <Button
+        onClick={() => prepareInputModal()}
+        label={<FormattedMessage defaultMessage="Partial Withdraw" />}
+      />
     </>
   );
 };

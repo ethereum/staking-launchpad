@@ -1,14 +1,17 @@
-import { AbstractConnector } from '@web3-react/abstract-connector';
-import { useWeb3React } from '@web3-react/core';
-import { Box, Button, Heading, Layer } from 'grommet';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Box, Heading, Layer } from 'grommet';
 import Web3 from 'web3';
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+
+import { Validator } from '../types';
+
+import { Button } from '../../../components/Button';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
-import { Validator } from '../types';
 import { Text } from '../../../components/Text';
 import { generateWithdrawalParams } from '../ActionUtils';
 
@@ -131,7 +134,11 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
         />
       )}
 
-      <Button label="Force exit" onClick={() => confirmForceExit()} />
+      <Button
+        label={<FormattedMessage defaultMessage="Force exit" />}
+        onClick={() => confirmForceExit()}
+        destructive
+      />
     </>
   );
 };

@@ -1,14 +1,17 @@
-import { AbstractConnector } from '@web3-react/abstract-connector';
-import { useWeb3React } from '@web3-react/core';
-import { Button } from 'grommet';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Web3 from 'web3';
+import { AbstractConnector } from '@web3-react/abstract-connector';
+import { useWeb3React } from '@web3-react/core';
+
 import { Validator } from '../types';
+
+import { Button } from '../../../components/Button';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
+
 import { generateCompoundParams } from '../ActionUtils';
 
 interface Props {
@@ -75,9 +78,10 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
         />
       )}
 
-      <Button onClick={() => createUpgradeMessage()}>
-        Upgrade to "Compounding"
-      </Button>
+      <Button
+        onClick={() => createUpgradeMessage()}
+        label={<FormattedMessage defaultMessage='Upgrade to "Compounding"' />}
+      />
     </>
   );
 };

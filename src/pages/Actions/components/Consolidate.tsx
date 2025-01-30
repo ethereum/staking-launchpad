@@ -1,6 +1,6 @@
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
-import { Box, Button, Heading, Layer } from 'grommet';
+import { Box, Heading, Layer } from 'grommet';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Web3 from 'web3';
@@ -11,6 +11,7 @@ import {
 } from '../../../components/TransactionStatusModal';
 import Select from '../../../components/Select';
 import { generateCompoundParams } from '../ActionUtils';
+import { Button } from '../../../components/Button';
 
 interface Props {
   validator: Validator;

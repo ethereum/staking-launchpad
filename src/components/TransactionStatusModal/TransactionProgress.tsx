@@ -2,9 +2,9 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Checkmark, Close } from 'grommet-icons';
-import Spinner from '../../../components/Spinner';
-import { Text } from '../../../components/Text';
-import { stepStatus } from '../types';
+import Spinner from '../Spinner';
+import { Text } from '../Text';
+import { stepStatus } from './types';
 
 const Container = styled.div`
   justify-content: space-around;
@@ -110,7 +110,7 @@ interface TransactionProgressProps {
   confirmOnChainStatus: stepStatus;
 }
 
-const TransactionProgress: React.FC<TransactionProgressProps> = ({
+export const TransactionProgress: React.FC<TransactionProgressProps> = ({
   signTxStatus,
   confirmOnChainStatus,
 }) => {
@@ -131,5 +131,3 @@ const TransactionProgress: React.FC<TransactionProgressProps> = ({
     </Container>
   );
 };
-
-export default TransactionProgress;

@@ -27,6 +27,20 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+3RpL0": [
+    {
+      "type": 0,
+      "value": "Partial Withdraw of "
+    },
+    {
+      "type": 1,
+      "value": "amount"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -193,6 +207,16 @@
     {
       "type": 0,
       "value": "withdrawable epoch"
+    }
+  ],
+  "/gME+2": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to consolidate into "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "/hEGaO": [
@@ -915,12 +939,6 @@
       "value": "Become a validator"
     }
   ],
-  "3QmqFf": [
-    {
-      "type": 0,
-      "value": "Top-up transaction"
-    }
-  ],
   "3SOKyg": [
     {
       "type": 0,
@@ -945,6 +963,12 @@
     {
       "type": 0,
       "value": "Reth Audit Report"
+    }
+  ],
+  "3hmlu1": [
+    {
+      "type": 0,
+      "value": "Select a validator"
     }
   ],
   "3jhjXW": [
@@ -1167,6 +1191,16 @@
     {
       "type": 0,
       "value": "Teku installation documentation"
+    }
+  ],
+  "5OjDXz": [
+    {
+      "type": 0,
+      "value": "Withdrawal Credentails: "
+    },
+    {
+      "type": 1,
+      "value": "credentials"
     }
   ],
   "5UH1sh": [
@@ -1593,6 +1627,16 @@
       "value": "Do not turn your validator off until this epoch is reached."
     }
   ],
+  "8hf1a0": [
+    {
+      "type": 0,
+      "value": "Fully exit validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
   "8k1RjX": [
     {
       "type": 1,
@@ -1637,6 +1681,12 @@
     {
       "type": 0,
       "value": " - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
+    }
+  ],
+  "8uE+mp": [
+    {
+      "type": 0,
+      "value": "Filter by index or pubkey"
     }
   ],
   "8uq59n": [
@@ -2433,6 +2483,16 @@
       "value": "The key concept is the following:"
     }
   ],
+  "FFYAkU": [
+    {
+      "type": 0,
+      "value": "Activation Epoch: "
+    },
+    {
+      "type": 1,
+      "value": "epoch"
+    }
+  ],
   "FM92S0": [
     {
       "type": 0,
@@ -2913,6 +2973,20 @@
       "value": "Beacon chain push withdrawals as operations"
     }
   ],
+  "IsyY5V": [
+    {
+      "type": 0,
+      "value": "Upgrade validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " to compounding"
+    }
+  ],
   "IwrKbS": [
     {
       "type": 0,
@@ -3199,6 +3273,20 @@
       "value": "View the Staking Checklist"
     }
   ],
+  "Kkn4j7": [
+    {
+      "type": 0,
+      "value": "You can learn how to perform this update by viewing the "
+    },
+    {
+      "type": 1,
+      "value": "LINK"
+    },
+    {
+      "type": 0,
+      "value": " section."
+    }
+  ],
   "KqGKRA": [
     {
       "type": 0,
@@ -3305,6 +3393,12 @@
     {
       "type": 0,
       "value": "Bulgarian"
+    }
+  ],
+  "Ll/uYX": [
+    {
+      "type": 0,
+      "value": "Please connect to a new wallet"
     }
   ],
   "LlClXS": [
@@ -3483,6 +3577,24 @@
     {
       "type": 0,
       "value": "Bad validator behavior"
+    }
+  ],
+  "MpbZo9": [
+    {
+      "type": 0,
+      "value": "Consolidate "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " into "
+    },
+    {
+      "type": 1,
+      "value": "otherIndex"
     }
   ],
   "N0rwnt": [
@@ -4333,6 +4445,12 @@
       "value": "Visit this site on desktop to become a validator."
     }
   ],
+  "TTbBhG": [
+    {
+      "type": 0,
+      "value": "This validator has Type 0 (0x00) credentials and must be updated in order to perform validator actions."
+    }
+  ],
   "TZtYuA": [
     {
       "type": 0,
@@ -4691,6 +4809,20 @@
       "value": "Has the block explorer named the contract?"
     }
   ],
+  "X0yQPs": [
+    {
+      "type": 0,
+      "value": "Are you sure you want to exit validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "X3NiFM": [
     {
       "type": 0,
@@ -4813,6 +4945,12 @@
       "value": "~25 minutes"
     }
   ],
+  "XjMz3s": [
+    {
+      "type": 0,
+      "value": "No validators were discovered for the provided account."
+    }
+  ],
   "XmddSV": [
     {
       "type": 0,
@@ -4909,6 +5047,12 @@
     {
       "type": 0,
       "value": "Keys"
+    }
+  ],
+  "YHS8Mc": [
+    {
+      "type": 0,
+      "value": "Type to filter"
     }
   ],
   "YJI2xv": [
@@ -5489,6 +5633,12 @@
       "value": "Back"
     }
   ],
+  "d3fRf2": [
+    {
+      "type": 0,
+      "value": "There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues."
+    }
+  ],
   "d4g3yx": [
     {
       "type": 0,
@@ -5775,6 +5925,16 @@
       "value": "Information for validator operators regarding staking withdrawals."
     }
   ],
+  "fVnFri": [
+    {
+      "type": 0,
+      "value": "Validator Index: "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
   "fZwn+P": [
     {
       "type": 0,
@@ -6027,6 +6187,12 @@
       "value": "Desktop only"
     }
   ],
+  "hIQWYg": [
+    {
+      "type": 0,
+      "value": "Validator Actions"
+    }
+  ],
   "hUmIwN": [
     {
       "type": 0,
@@ -6187,6 +6353,12 @@
     {
       "type": 0,
       "value": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make command again."
+    }
+  ],
+  "iZW+Wc": [
+    {
+      "type": 1,
+      "value": "headerMessage"
     }
   ],
   "iZuIgB": [
@@ -6369,6 +6541,12 @@
     {
       "type": 0,
       "value": "Nimbus validator documentation"
+    }
+  ],
+  "jmoYdI": [
+    {
+      "type": 0,
+      "value": "Please understand that once you begin the exit process you will not be able to undo the decision."
     }
   ],
   "jp9OG2": [
@@ -6603,6 +6781,12 @@
       "value": "You're on the testnet"
     }
   ],
+  "l0+Knx": [
+    {
+      "type": 0,
+      "value": "You will be asked to sign a transaction to exit your validator."
+    }
+  ],
   "l4nLft": [
     {
       "type": 0,
@@ -6825,6 +7009,36 @@
     {
       "type": 0,
       "value": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
+    }
+  ],
+  "mHSz8x": [
+    {
+      "type": 0,
+      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "minBalance"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": " for the validator to operate, you will be able to withdraw a maximum of "
+    },
+    {
+      "type": 1,
+      "value": "maxAmount"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "mROPz+": [
@@ -7333,6 +7547,16 @@
       "value": "Alternative node tooling:"
     }
   ],
+  "pnFNq9": [
+    {
+      "type": 0,
+      "value": "Public Key: "
+    },
+    {
+      "type": 1,
+      "value": "pubkey"
+    }
+  ],
   "pnxB8A": [
     {
       "type": 0,
@@ -7443,6 +7667,24 @@
     {
       "type": 0,
       "value": "Exit epoch and withdrawable epoch"
+    }
+  ],
+  "qIB0uh": [
+    {
+      "type": 0,
+      "value": "Your validator must have a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "minBalance"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
     }
   ],
   "qK4+NQ": [
@@ -7673,6 +7915,12 @@
     {
       "type": 0,
       "value": "Launchpad summary"
+    }
+  ],
+  "rywDJ5": [
+    {
+      "type": 0,
+      "value": "Connect your wallet to retrieve validators with corresponding withdrawal credentials to upgrade to compounding, consolidate, partially withdraw, or force an exit"
     }
   ],
   "s6gImC": [
@@ -8185,6 +8433,16 @@
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
     }
   ],
+  "vclhrb": [
+    {
+      "type": 0,
+      "value": "Balance: "
+    },
+    {
+      "type": 1,
+      "value": "balance"
+    }
+  ],
   "vj7TN7": [
     {
       "type": 0,
@@ -8213,6 +8471,16 @@
       "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
     }
   ],
+  "w2THbw": [
+    {
+      "type": 0,
+      "value": "Your validator has a balance of "
+    },
+    {
+      "type": 1,
+      "value": "balance"
+    }
+  ],
   "w6qYSU": [
     {
       "type": 0,
@@ -8239,6 +8507,12 @@
     {
       "type": 0,
       "value": "Initial setup"
+    }
+  ],
+  "wL7VAE": [
+    {
+      "type": 0,
+      "value": "Actions"
     }
   ],
   "wawegX": [
@@ -8383,6 +8657,12 @@
     {
       "type": 0,
       "value": "Install python3.7+"
+    }
+  ],
+  "xgSoMq": [
+    {
+      "type": 0,
+      "value": "How much would you like to withdraw?"
     }
   ],
   "xh7oVn": [

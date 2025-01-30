@@ -1,3 +1,4 @@
+export * from './Actions';
 export * from './Congratulations';
 export * from './ConnectWallet';
 export * from './GenerateKeys';

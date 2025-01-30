@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Box, Layer } from 'grommet';
-import { Heading } from '../../../components/Heading';
-import { Text } from '../../../components/Text';
-import TransactionProgress from './TransactionProgress';
-import { stepStatus, TransactionStatus } from '../types';
-import { Button } from '../../../components/Button';
-import { EL_TRANSACTION_URL } from '../../../utils/envVars';
-import { Link } from '../../../components/Link';
+import { Heading } from '../Heading';
+import { Text } from '../Text';
+import { TransactionProgress } from './TransactionProgress';
+import { stepStatus, TransactionStatus } from './types';
+import { Button } from '../Button';
+import { EL_TRANSACTION_URL } from '../../utils/envVars';
+import { Link } from '../Link';
 
 interface TopUpTransactionModalProps {
+  headerMessage: string | ReactNode;
   onClose: () => void;
   transactionStatus: TransactionStatus;
   txHash: string;
 }
 
-const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
+export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
+  headerMessage,
   onClose,
   transactionStatus,
   txHash,
@@ -54,7 +56,14 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
     <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
       <Box pad="medium" gap="small" width="medium">
         <Heading level={3} margin="none">
-          <FormattedMessage defaultMessage="Top-up transaction" />
+          {typeof headerMessage === 'string' ? (
+            <FormattedMessage
+              defaultMessage="{headerMessage}"
+              values={{ headerMessage }}
+            />
+          ) : (
+            headerMessage
+          )}
         </Heading>
         <TransactionProgress
           signTxStatus={signTxStatus}
@@ -89,5 +98,3 @@ const TopUpTransactionModal: React.FC<TopUpTransactionModalProps> = ({
     </Layer>
   );
 };
-
-export default TopUpTransactionModal;

@@ -135,7 +135,12 @@ const _TopUpPage: React.FC<Props> = () => {
                   if (data.length === 0) {
                     setShowDepositVerificationWarning(true);
                   }
-                  setValidators(data);
+                  // A single validator will not result in an array
+                  setValidators(
+                    response.length === 1
+                      ? (([data] as unknown) as BeaconChainValidator[])
+                      : data
+                  );
                   setLoading(false);
                 })
                 .catch(error => {

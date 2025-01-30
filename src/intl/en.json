@@ -6,6 +6,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+3RpL0": {
+    "message": "Partial Withdraw of {amount}{ticker}"
+  },
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -83,6 +86,9 @@
   },
   "/e+qAC": {
     "message": "withdrawable epoch"
+  },
+  "/gME+2": {
+    "message": "Which validator would you like to consolidate into {index}"
   },
   "/hEGaO": {
     "message": "This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
@@ -339,9 +345,6 @@
   "3Q43SM": {
     "message": "Become a validator"
   },
-  "3QmqFf": {
-    "message": "Top-up transaction"
-  },
   "3SOKyg": {
     "message": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
   },
@@ -350,6 +353,9 @@
   },
   "3fRpn0": {
     "message": "Reth Audit Report"
+  },
+  "3hmlu1": {
+    "message": "Select a validator"
   },
   "3jhjXW": {
     "message": "Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
@@ -426,6 +432,9 @@
   },
   "5HJLBU": {
     "message": "Teku installation documentation"
+  },
+  "5OjDXz": {
+    "message": "Withdrawal Credentails: {credentials}"
   },
   "5UH1sh": {
     "message": "Romanian"
@@ -569,6 +578,9 @@
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
   },
+  "8hf1a0": {
+    "message": "Fully exit validator {index}"
+  },
   "8k1RjX": {
     "message": "{NETWORK_NAME} testnet"
   },
@@ -583,6 +595,9 @@
   },
   "8rxaqc": {
     "message": "{withdrawableEpochLabel} - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
+  },
+  "8uE+mp": {
+    "message": "Filter by index or pubkey"
   },
   "8uq59n": {
     "message": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
@@ -918,6 +933,9 @@
   "FEbVwB": {
     "message": "The key concept is the following:"
   },
+  "FFYAkU": {
+    "message": "Activation Epoch: {epoch}"
+  },
   "FM92S0": {
     "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
   },
@@ -1113,6 +1131,9 @@
   "InUvmv": {
     "message": "Beacon chain push withdrawals as operations"
   },
+  "IsyY5V": {
+    "message": "Upgrade validator {index} to compounding"
+  },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
     "message": "It depends. In addition to the {impact} there are two important scenarios to be aware of:"
@@ -1219,6 +1240,9 @@
   "KhJBVZ": {
     "message": "View the Staking Checklist"
   },
+  "Kkn4j7": {
+    "message": "You can learn how to perform this update by viewing the {LINK} section."
+  },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
   },
@@ -1268,6 +1292,9 @@
   },
   "Ljo9dF": {
     "message": "Bulgarian"
+  },
+  "Ll/uYX": {
+    "message": "Please connect to a new wallet"
   },
   "LlClXS": {
     "message": "Thank you for supporting the Ethereum network!"
@@ -1344,6 +1371,9 @@
   },
   "Mor0Ih": {
     "message": "Bad validator behavior"
+  },
+  "MpbZo9": {
+    "message": "Consolidate {index} into {otherIndex}"
   },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
@@ -1661,6 +1691,9 @@
   "TMw9oz": {
     "message": "Visit this site on desktop to become a validator."
   },
+  "TTbBhG": {
+    "message": "This validator has Type 0 (0x00) credentials and must be updated in order to perform validator actions."
+  },
   "TZtYuA": {
     "message": "The terms 'Eth1' and 'Eth2' have been deprecated with The Merge. Since successfully transitioning to proof-of-stake via The Merge, there are no longer two distinct Ethereum networks; there is only Ethereum."
   },
@@ -1804,6 +1837,9 @@
   "X/fKmY": {
     "message": "Has the block explorer named the contract?"
   },
+  "X0yQPs": {
+    "message": "Are you sure you want to exit validator {index}?"
+  },
   "X3NiFM": {
     "message": "proof-of-custody game"
   },
@@ -1845,6 +1881,9 @@
   "XcItS7": {
     "message": "~25 minutes"
   },
+  "XjMz3s": {
+    "message": "No validators were discovered for the provided account."
+  },
   "XmddSV": {
     "message": "Build from source"
   },
@@ -1872,6 +1911,9 @@
   },
   "YFT4rG": {
     "message": "Keys"
+  },
+  "YHS8Mc": {
+    "message": "Type to filter"
   },
   "YJI2xv": {
     "message": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
@@ -2102,6 +2144,9 @@
   "cyR7Kh": {
     "message": "Back"
   },
+  "d3fRf2": {
+    "message": "There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues."
+  },
   "d4g3yx": {
     "message": "Step 2: Generate deposit keys using the Wagyu Key Gen app"
   },
@@ -2203,6 +2248,9 @@
   "fSi2R/": {
     "message": "Information for validator operators regarding staking withdrawals."
   },
+  "fVnFri": {
+    "message": "Validator Index: {index}"
+  },
   "fZwn+P": {
     "message": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
   },
@@ -2300,6 +2348,9 @@
   "hG0uP4": {
     "message": "Desktop only"
   },
+  "hIQWYg": {
+    "message": "Validator Actions"
+  },
   "hUmIwN": {
     "message": "Validator balance is over {EJECTION_PRICE}, but effective balance is low ({effectiveBalanceEther}). Adding {MIN_TOPUP_VALUE} {TICKER_NAME} (the minimum allowed by the deposit contract) will max out your effective balance."
   },
@@ -2352,6 +2403,9 @@
   },
   "iXbM1G": {
     "message": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make command again."
+  },
+  "iZW+Wc": {
+    "message": "{headerMessage}"
   },
   "iZuIgB": {
     "message": "Decompress the file you just downloaded"
@@ -2428,6 +2482,9 @@
   },
   "jmKQY9": {
     "message": "Nimbus validator documentation"
+  },
+  "jmoYdI": {
+    "message": "Please understand that once you begin the exit process you will not be able to undo the decision."
   },
   "jp9OG2": {
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
@@ -2520,6 +2577,9 @@
   "l/uCcX": {
     "message": "You're on the testnet"
   },
+  "l0+Knx": {
+    "message": "You will be asked to sign a transaction to exit your validator."
+  },
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."
   },
@@ -2593,6 +2653,9 @@
   },
   "mH6bSl": {
     "message": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
+  },
+  "mHSz8x": {
+    "message": "Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance}{ticker} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
   },
   "mROPz+": {
     "message": "I provided an Ethereum address when generating my {depositData} file before depositing where I would like all validator rewards and withdrawals to be deposited into."
@@ -2808,6 +2871,9 @@
   "plXBe0": {
     "message": "Alternative node tooling:"
   },
+  "pnFNq9": {
+    "message": "Public Key: {pubkey}"
+  },
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."
   },
@@ -2838,6 +2904,9 @@
   },
   "qBorVY": {
     "message": "Exit epoch and withdrawable epoch"
+  },
+  "qIB0uh": {
+    "message": "Your validator must have a minimum balance of {minBalance}{ticker} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
   },
   "qK4+NQ": {
     "message": "The terminal"
@@ -2925,6 +2994,9 @@
   },
   "rswUPu": {
     "message": "Launchpad summary"
+  },
+  "rywDJ5": {
+    "message": "Connect your wallet to retrieve validators with corresponding withdrawal credentials to upgrade to compounding, consolidate, partially withdraw, or force an exit"
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
@@ -3099,11 +3171,17 @@
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
   },
+  "vclhrb": {
+    "message": "Balance: {balance}"
+  },
   "vj7TN7": {
     "message": "This value is known as the maximum effective balance (the maximum amount of ETH that contributes to your stake). Older account types (Type 0, or Type 1) have an effective balance limited to {MIN_ACTIVATION_BALANCE}. In these accounts, any balance over {MIN_ACTIVATION_BALANCE} does not contribute to your principle, nor compound earnings."
   },
   "vz8WK7": {
     "message": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
+  },
+  "w2THbw": {
+    "message": "Your validator has a balance of {balance}"
   },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
@@ -3117,6 +3195,9 @@
   },
   "wJy3tO": {
     "message": "Initial setup"
+  },
+  "wL7VAE": {
+    "message": "Actions"
   },
   "wawegX": {
     "message": "fishing rod"
@@ -3184,6 +3265,9 @@
   },
   "xbet2w": {
     "message": "Install python3.7+"
+  },
+  "xgSoMq": {
+    "message": "How much would you like to withdraw?"
   },
   "xh7oVn": {
     "message": "Those looking to exit their validator from staking and withdrawal their ETH should check out the guide below that matches your setup:"

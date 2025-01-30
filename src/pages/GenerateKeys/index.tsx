@@ -9,7 +9,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { toChecksumAddress } from 'ethereumjs-util';
 // Components
 import { Instructions } from './Instructions';
-import { NumberInput } from './NumberInput';
+import { NumberInput } from '../../components/NumberInput';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Alert } from '../../components/Alert';

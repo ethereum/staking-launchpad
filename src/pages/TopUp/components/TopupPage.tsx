@@ -12,17 +12,20 @@ import { Alert as AlertIcon } from 'grommet-icons';
 import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
 import { contractAbi } from '../../../contractAbi';
-import { BeaconChainValidator, TransactionStatus } from '../types';
+import { BeaconChainValidator } from '../types';
 import { bufferHex } from '../../../utils/SSZ';
 import { buf2hex } from '../../../utils/buf2hex';
 import { Text } from '../../../components/Text';
 import { Button } from '../../../components/Button';
 import { Paper } from '../../../components/Paper';
 import { Heading } from '../../../components/Heading';
-import { TopupInput } from './TopUpInput';
+import { NumberInput } from '../../../components/NumberInput';
 import shortenAddress from '../../../utils/shortenAddress';
 import { Alert } from '../../../components/Alert';
-import TopUpTransactionModal from './TopUpTransactionModal';
+import {
+  TransactionStatusModal,
+  TransactionStatus,
+} from '../../../components/TransactionStatusModal';
 import {
   fortmaticTxRejected,
   isLedgerTimeoutError,
@@ -274,7 +277,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
     <div>
       <ReactTooltip />
       {showTxModal && (
-        <TopUpTransactionModal
+        <TransactionStatusModal
+          headerMessage="Top-up transaction"
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={() => setShowTxModal(false)}
@@ -328,7 +332,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
           </Alert>
         </div>
         <InputContainer>
-          <TopupInput
+          <NumberInput
+            allowDecimals
             value={value}
             setValue={setValue}
             maxValue={maxTopupValue}

@@ -8,6 +8,7 @@ import UpgradeCompounding from './UpgradeCompounding';
 
 import { Section } from './Shared';
 import { hasValidatorExited } from '../../../utils/validators';
+import { EXECUTION_CREDENTIALS } from '../../../utils/envVars';
 
 interface Props {
   validator: Validator;
@@ -25,7 +26,9 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
     const otherValidatorsSameCredentials = validators.filter(
       v =>
-        v.withdrawalcredentials === validator.withdrawalcredentials &&
+        v.withdrawalcredentials.substring(4) ===
+          validator.withdrawalcredentials.substring(4) &&
+        v.withdrawalcredentials.substring(0, 4) === EXECUTION_CREDENTIALS &&
         v.pubkey !== validator.pubkey
     );
     setSharedValidators(otherValidatorsSameCredentials);

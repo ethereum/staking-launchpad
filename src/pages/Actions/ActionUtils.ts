@@ -56,8 +56,8 @@ export const getWithdrawalFee = async (web3: Web3): Promise<BigNumber> => {
 export const generateCompoundParams = async (
   web3: Web3,
   address: string,
-  pubkeyA: string,
-  pubkeyB: string
+  source: string,
+  target: string
 ): Promise<TransactionConfig> => {
   const fee = await getCompoundingFee(web3);
 
@@ -66,7 +66,7 @@ export const generateCompoundParams = async (
     to: COMPOUNDING_CONTRACT_ADDRESS,
     from: address,
     // calldata (96 bytes): sourceValidator.pubkey (48 bytes) + targetValidator.pubkey (48 bytes)
-    data: `0x${pubkeyA.substring(2)}${pubkeyB.substring(2)}`,
+    data: `0x${source.substring(2)}${target.substring(2)}`,
     value: fee.toString(),
     gas: 200000,
   };

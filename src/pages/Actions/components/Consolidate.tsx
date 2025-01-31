@@ -59,8 +59,8 @@ const Consolidate: React.FC<Props> = ({ validator, validators }) => {
       const params = await generateCompoundParams(
         web3,
         account,
-        validator.pubkey,
-        selectedValidator.pubkey
+        selectedValidator.pubkey,
+        validator.pubkey
       );
       return web3.eth
         .sendTransaction(params)

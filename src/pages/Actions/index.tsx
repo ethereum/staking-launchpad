@@ -137,7 +137,7 @@ const _ActionsPage: React.FC<Props> = () => {
     deactivate();
   }, [setLoading, deactivate]);
 
-  const fetchMoreValidators = async () => {
+  const fetchMoreValidators = useCallback(async () => {
     if (!active || !account) return;
 
     setLoading(true);
@@ -162,7 +162,7 @@ const _ActionsPage: React.FC<Props> = () => {
 
     setValidators(prev => [...prev, ...newValidators]);
     setLoading(false);
-  };
+  }, [active, account, fetchOffset]);
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   useEffect(() => {
@@ -173,6 +173,7 @@ const _ActionsPage: React.FC<Props> = () => {
     if (!active || !account || !isValidNetwork) return;
 
     fetchMoreValidators();
+    // eslint-disable-next-line
   }, [account, active, chainId]);
 
   const moreToFetch = validators.length === fetchOffset;

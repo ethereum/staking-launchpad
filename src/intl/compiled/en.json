@@ -1213,6 +1213,16 @@
       "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
     }
   ],
+  "5eN8lL": [
+    {
+      "type": 0,
+      "value": "Fully exit validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
+    }
+  ],
   "5q9Lgv": [
     {
       "type": 0,
@@ -1615,16 +1625,6 @@
     {
       "type": 0,
       "value": "Do not turn your validator off until this epoch is reached."
-    }
-  ],
-  "8hf1a0": [
-    {
-      "type": 0,
-      "value": "Fully exit validator "
-    },
-    {
-      "type": 1,
-      "value": "index"
     }
   ],
   "8k1RjX": [
@@ -4793,20 +4793,6 @@
       "value": "Has the block explorer named the contract?"
     }
   ],
-  "X0yQPs": [
-    {
-      "type": 0,
-      "value": "Are you sure you want to exit validator "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    },
-    {
-      "type": 0,
-      "value": "?"
-    }
-  ],
   "X3NiFM": [
     {
       "type": 0,
@@ -5043,6 +5029,16 @@
     {
       "type": 0,
       "value": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+    }
+  ],
+  "YLFl88": [
+    {
+      "type": 0,
+      "value": "Exit validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
     }
   ],
   "YP03/j": [

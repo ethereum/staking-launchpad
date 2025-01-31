@@ -9,7 +9,13 @@ import UpgradeCompounding from './UpgradeCompounding';
 
 import { Section as SharedSection } from './Shared';
 import { hasValidatorExited } from '../../../utils/validators';
-import { EXECUTION_CREDENTIALS } from '../../../utils/envVars';
+import {
+  EXECUTION_CREDENTIALS,
+  MIN_ACTIVATION_BALANCE,
+  TICKER_NAME,
+  MAX_EFFECTIVE_BALANCE,
+} from '../../../utils/envVars';
+import { Text } from '../../../components/Text';
 
 const Section = styled(SharedSection)`
   display: flex;
@@ -35,22 +41,25 @@ interface Props {
 }
 
 const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
-  const [sharedValidators, setSharedValidators] = useState<Validator[]>([]);
+  const [targetValidators, setTargetValidators] = useState<Validator[]>([]);
 
   useEffect(() => {
     if (!validator || !validators) {
-      setSharedValidators([]);
+      setTargetValidators([]);
       return;
     }
 
-    const otherValidatorsSameCredentials = validators.filter(
-      v =>
+    const potentialTargetValidators = validators.filter(v => {
+      const isSamePrefix =
         v.withdrawalcredentials.substring(4) ===
-          validator.withdrawalcredentials.substring(4) &&
-        v.withdrawalcredentials.substring(0, 4) === EXECUTION_CREDENTIALS &&
-        v.pubkey !== validator.pubkey
-    );
-    setSharedValidators(otherValidatorsSameCredentials);
+        validator.withdrawalcredentials.substring(4);
+      const isCompoundingOrLater =
+        +v.withdrawalcredentials.substring(2, 4) >=
+        +EXECUTION_CREDENTIALS.substring(2, 4);
+      const isSameValidator = v.pubkey === validator.pubkey;
+      return isSamePrefix && isCompoundingOrLater && !isSameValidator;
+    });
+    setTargetValidators(potentialTargetValidators);
   }, [validator, validators]);
 
   const accountType = +validator.withdrawalcredentials.substring(2, 4);
@@ -59,7 +68,11 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       {accountType === 1 && (
         <Row>
           <div style={{ flex: 1 }}>
-            Title + Content explaining lorem ipseum lots of text here
+            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+              Upgrade account to compounding
+            </Text>
+            Increases the maximum effective balance from{' '}
+            {MIN_ACTIVATION_BALANCE} to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}.
           </div>
           <UpgradeCompounding validator={validator} />
         </Row>
@@ -76,25 +89,38 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
           }}
         >
           <div style={{ flex: 1 }}>
-            Title + Content explaining lorem ipseum lots of text here
+            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+              Request partial withdrawal
+            </Text>
+            You can withdrawal any portion of your staked {TICKER_NAME} over{' '}
+            {MIN_ACTIVATION_BALANCE}. You can currently withdrawal up to{' '}
+            {validator.coinBalance - MIN_ACTIVATION_BALANCE} {TICKER_NAME}.
           </div>
           <PartialWithdraw validator={validator} />
         </div>
       )}
 
-      {sharedValidators.length > 0 && (
+      {targetValidators.length > 0 && (
         <Row>
           <div style={{ flex: 1 }}>
-            Title + Content explaining lorem ipseum lots of text here
+            <Text style={{ margin: 0, fontWeight: 'bold' }}>Migrate funds</Text>
+            Transfer entire balance to another one of your validator accounts,
+            consolidating two accounts into one. Target account must be upgraded
+            to compounding type.
           </div>
-          <Consolidate validator={validator} validators={sharedValidators} />
+          <Consolidate validator={validator} validators={targetValidators} />
         </Row>
       )}
 
       {!hasValidatorExited(validator) && (
         <Row>
           <div style={{ flex: 1 }}>
-            Title + Content explaining lorem ipseum lots of text here
+            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+              Exit validator
+            </Text>
+            Initiates the process of permanently exiting your validator account
+            from the Ethereum proof-of-stake network, and withdrawing entire
+            balance.
           </div>
           <ForceExit validator={validator} />
         </Row>

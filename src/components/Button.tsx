@@ -9,7 +9,7 @@ interface CustomButtonProps {
   rainbow?: boolean;
   onClick?: () => any;
   destructive?: boolean;
-  destructiveSecondary?: boolean;
+  secondary?: boolean;
 }
 
 const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
@@ -50,24 +50,15 @@ const StyledButton = styled(GrommetButton)`
      color: ${p.theme.blue.dark};
      border: 1px solid ${p.theme.blue.dark};
    `}
+
   // destructive styles
   ${p =>
     // @ts-ignore
     p.destructive &&
-    `background-color: ${p.theme.red.light};
-    color: black;
-    border: 1px solid ${p.theme.red.medium};
-    &:hover {
-      background-color: darkred;
-       color: white;
-     }
-   `}
-  // secondary destructive styles
-  ${p =>
     // @ts-ignore
-    p.destructiveSecondary &&
-    `background-color: ${p.theme.gray.light};
-    color: red.medium;
+    `background-color: ${p.secondary ? p.theme.gray.light : p.theme.red.light};
+    // @ts-ignore
+    color: ${p.secondary ? p.theme.red.medium : p.theme.black};
     border: 1px solid ${p.theme.red.medium};
     &:hover {
       background-color: darkred;

@@ -154,7 +154,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
       <Button
         onClick={() => prepareInputModal()}
-        label={<FormattedMessage defaultMessage="Partial Withdraw" />}
+        label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />
     </>
   );

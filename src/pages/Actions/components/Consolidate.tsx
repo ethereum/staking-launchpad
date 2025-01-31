@@ -117,7 +117,7 @@ const Consolidate: React.FC<Props> = ({ validator, validators }) => {
             />
             <Button
               disabled={!selectedValidator}
-              label="Consolidate"
+              label="Migrate funds"
               onClick={() => createConsolidationTransaction()}
             />
           </Box>
@@ -141,7 +141,12 @@ const Consolidate: React.FC<Props> = ({ validator, validators }) => {
         />
       )}
 
-      <Button label="Consolidate" onClick={() => confirmConsolidate()} />
+      <Button
+        label="Migrate funds"
+        destructive
+        secondary
+        onClick={() => confirmConsolidate()}
+      />
     </>
   );
 };

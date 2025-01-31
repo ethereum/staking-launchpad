@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { Box, Heading, Layer } from 'grommet';
+import { FormattedMessage, useIntl } from 'react-intl';
+import styled from 'styled-components';
+import {
+  Box,
+  Button as GrommetButton,
+  Heading,
+  Layer,
+  Form,
+  TextInput,
+} from 'grommet';
+import { Alert as AlertIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
@@ -14,6 +23,22 @@ import {
 } from '../../../components/TransactionStatusModal';
 import { Text } from '../../../components/Text';
 import { generateWithdrawalParams } from '../ActionUtils';
+import { Alert } from '../../../components/Alert';
+
+const CloseButton = styled(GrommetButton)`
+  padding: 0.25rem 0.75rem;
+  border: none;
+  background: #eee;
+  border-radius: 4px;
+  &:hover {
+    box-shadow: none;
+    background: #ddd;
+  }
+`;
+
+const ModalSection = styled.div`
+  padding: 1rem;
+`;
 
 interface Props {
   validator: Validator;
@@ -21,6 +46,9 @@ interface Props {
 
 const ForceExit: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
+  const { locale, formatMessage } = useIntl();
+  const [userConfirmationValue, setUserConfirmationValue] = useState('');
+  const CONFIRM_EXIT_STRING = formatMessage({ defaultMessage: 'EXIT FULLY' });
 
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(
     false
@@ -78,21 +106,101 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
       });
   };
 
+  const { validatorindex } = validator;
   return (
     <>
       {showConfirmationModal && (
-        <Layer position="center" onEsc={() => closeConfirmationModal()}>
-          <Box pad="medium" gap="small" width="medium">
-            <Heading level={3} margin="none">
-              <FormattedMessage
-                defaultMessage="Are you sure you want to exit validator {index}?"
-                values={{ index: validator.validatorindex }}
+        <Layer
+          position="center"
+          onEsc={() => closeConfirmationModal()}
+          onClickOutside={() => closeConfirmationModal()}
+          style={{ background: '#EEEEEE' }}
+        >
+          <Box>
+            <ModalSection
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                borderBottom: '1px solid #dedede',
+                gap: '0.5rem',
+              }}
+            >
+              <Heading
+                level={3}
+                margin="none"
+                style={{
+                  flex: 1,
+                  fontSize: '1.5rem',
+                }}
+              >
+                <FormattedMessage
+                  defaultMessage="Exit validator {validatorindex}"
+                  values={{ validatorindex }}
+                />
+              </Heading>
+              <CloseButton
+                label="Close"
+                onClick={() => closeConfirmationModal()}
               />
-            </Heading>
-            <Text center>
-              <FormattedMessage defaultMessage="You will be asked to sign a transaction to exit your validator." />
-              <FormattedMessage defaultMessage="Please understand that once you begin the exit process you will not be able to undo the decision. " />
-            </Text>
+            </ModalSection>
+            <ModalSection style={{ borderBottom: '1px solid #dedede' }}>
+              <div style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>
+                <Alert variant="error">
+                  <div
+                    style={{
+                      display: 'flex',
+                      gap: '1rem',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <AlertIcon />
+                    <div>
+                      <Text>
+                        <strong>
+                          <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
+                        </strong>
+                      </Text>
+                      <Text>
+                        <FormattedMessage defaultMessage="This validator must remain online until exit epoch is reached." />
+                      </Text>
+                    </div>
+                  </div>
+                </Alert>
+              </div>
+              {/* TODO: Intl */}
+              <div
+                className="modal-body"
+                style={{
+                  display: 'flex',
+                  gap: '1rem',
+                  flexDirection: 'column',
+                }}
+              >
+                <Text>
+                  <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
+                </Text>
+                <Text>
+                  <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion." />
+                </Text>
+                <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
+                  <li>
+                    <Text as="span">
+                      <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+                    </Text>
+                  </li>
+                  <li>
+                    <Text as="span">
+                      <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
+                    </Text>
+                  </li>
+                  <li>
+                    <Text as="span">
+                      <FormattedMessage defaultMessage="All remaining funds will be transferred to this withdrawal address within a few days after exit epoch reached" />
+                    </Text>
+                  </li>
+                </ul>
+              </div>
+            </ModalSection>
           </Box>
           <Box
             as="footer"
@@ -100,20 +208,61 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
             direction="row"
             align="center"
             justify="center"
-            pad={{ top: 'medium', bottom: 'small' }}
+            border="top"
+            pad="1rem"
           >
-            <Button label="Cancel" onClick={() => closeConfirmationModal()} />
             {stepTwo ? (
-              <Button
-                label="I'm really sure"
-                onClick={() => createExitTransaction()}
-                color="dark-3"
-              />
+              <Form
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem',
+                }}
+              >
+                <label
+                  htmlFor="confirm-exit-input"
+                  style={{ marginBottom: '0.25rem' }}
+                >
+                  <Text>
+                    Please type <strong>{CONFIRM_EXIT_STRING}</strong> to
+                    confirm.
+                  </Text>
+                </label>
+                <TextInput
+                  id="confirm-exit-input"
+                  name="confirm-exit-input"
+                  value={userConfirmationValue}
+                  onChange={event =>
+                    setUserConfirmationValue(event.target.value)
+                  }
+                  style={{ background: 'white', border: '1px solid #ccc' }}
+                />
+                <Button
+                  style={{ fontSize: '1rem' }}
+                  label="I understand the consequences, exit this validator"
+                  onClick={() => createExitTransaction()}
+                  color="dark-3"
+                  fullWidth
+                  destructive
+                  disabled={
+                    userConfirmationValue.localeCompare(
+                      CONFIRM_EXIT_STRING,
+                      locale,
+                      {
+                        sensitivity: 'base',
+                      }
+                    ) !== 0
+                  }
+                />
+              </Form>
             ) : (
               <Button
-                label="I'm sure"
+                label="Fully exit validator"
                 onClick={() => setStepTwo(true)}
                 color="dark-3"
+                destructive
+                secondary
               />
             )}
           </Box>
@@ -124,8 +273,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
         <TransactionStatusModal
           headerMessage={
             <FormattedMessage
-              defaultMessage="Fully exit validator {index}"
-              values={{ index: validator.validatorindex }}
+              defaultMessage="Fully exit validator {validatorindex}"
+              values={{ validatorindex }}
             />
           }
           txHash={txHash}

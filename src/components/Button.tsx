@@ -42,6 +42,7 @@ const StyledButton = styled(GrommetButton)`
     transition: transform 0.1s;
     transform: scale(1.02);
   }
+  ${p => p.disabled && 'pointer-events: none;'}
   // rainbow styles
   ${p =>
     // @ts-ignore

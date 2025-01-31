@@ -27,20 +27,6 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
-  "+3RpL0": [
-    {
-      "type": 0,
-      "value": "Partial Withdraw of "
-    },
-    {
-      "type": 1,
-      "value": "amount"
-    },
-    {
-      "type": 1,
-      "value": "ticker"
-    }
-  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -207,6 +193,28 @@
     {
       "type": 0,
       "value": "withdrawable epoch"
+    }
+  ],
+  "/eUGwM": [
+    {
+      "type": 0,
+      "value": "You can withdrawal any portion of your staked "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "/gME+2": [
@@ -4369,6 +4377,20 @@
       "value": "Required"
     }
   ],
+  "SiPnkO": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to migrate "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " funds to?"
+    }
+  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -5625,10 +5647,54 @@
       "value": "How much will I be penalized for acting maliciously?"
     }
   ],
+  "cm5HC4": [
+    {
+      "type": 0,
+      "value": "You can currently withdrawal up to "
+    },
+    {
+      "type": 1,
+      "value": "surplusEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "cnQKC2": [
     {
       "type": 0,
       "value": "Currently Geth is used by >66% of the network."
+    }
+  ],
+  "co3BiU": [
+    {
+      "type": 0,
+      "value": "Your validator must have a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "minBalance"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
     }
   ],
   "cpxfOR": [
@@ -5851,6 +5917,40 @@
       "value": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
     }
   ],
+  "ekKlOB": [
+    {
+      "type": 0,
+      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "minBalance"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for the validator to operate, you will be able to withdraw a maximum of "
+    },
+    {
+      "type": 1,
+      "value": "maxAmount"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "eq0/34": [
     {
       "type": 0,
@@ -5933,6 +6033,24 @@
     {
       "type": 0,
       "value": "Information for validator operators regarding staking withdrawals."
+    }
+  ],
+  "fYfWrj": [
+    {
+      "type": 0,
+      "value": "Partial Withdraw of "
+    },
+    {
+      "type": 1,
+      "value": "amount"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "fZwn+P": [
@@ -7069,36 +7187,6 @@
       "value": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
     }
   ],
-  "mHSz8x": [
-    {
-      "type": 0,
-      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "minBalance"
-    },
-    {
-      "type": 1,
-      "value": "ticker"
-    },
-    {
-      "type": 0,
-      "value": " for the validator to operate, you will be able to withdraw a maximum of "
-    },
-    {
-      "type": 1,
-      "value": "maxAmount"
-    },
-    {
-      "type": 1,
-      "value": "ticker"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "mROPz+": [
     {
       "type": 0,
@@ -7717,24 +7805,6 @@
       "value": "Exit epoch and withdrawable epoch"
     }
   ],
-  "qIB0uh": [
-    {
-      "type": 0,
-      "value": "Your validator must have a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "minBalance"
-    },
-    {
-      "type": 1,
-      "value": "ticker"
-    },
-    {
-      "type": 0,
-      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
@@ -7885,44 +7955,6 @@
     {
       "type": 0,
       "value": "Phishing guide"
-    }
-  ],
-  "rSCnTP": [
-    {
-      "type": 0,
-      "value": "You can withdrawal any portion of your staked "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " over "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": ". You can currently withdrawal up to "
-    },
-    {
-      "type": 1,
-      "value": "surplus"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "rTSJI9": [

@@ -6,9 +6,6 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
-  "+3RpL0": {
-    "message": "Partial Withdraw of {amount}{ticker}"
-  },
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -86,6 +83,9 @@
   },
   "/e+qAC": {
     "message": "withdrawable epoch"
+  },
+  "/eUGwM": {
+    "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
   },
   "/gME+2": {
     "message": "Which validator would you like to consolidate into {index}"
@@ -1678,6 +1678,9 @@
   "Seanpx": {
     "message": "Required"
   },
+  "SiPnkO": {
+    "message": "Which validator would you like to migrate {index} funds to?"
+  },
   "SqKNq2": {
     "description": "{homebrew} = 'homebrew' and links to the homebrew package manager website documentation",
     "message": "You can install python3 on your macOS device using {homebrew}"
@@ -2150,8 +2153,14 @@
   "clxIWO": {
     "message": "How much will I be penalized for acting maliciously?"
   },
+  "cm5HC4": {
+    "message": "You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
+  },
   "cnQKC2": {
     "message": "Currently Geth is used by >66% of the network."
+  },
+  "co3BiU": {
+    "message": "Your validator must have a minimum balance of {minBalance} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
   },
   "cpxfOR": {
     "message": "What are withdrawal credentials?"
@@ -2226,6 +2235,9 @@
   "eaU/aL": {
     "message": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
   },
+  "ekKlOB": {
+    "message": "Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
+  },
   "eq0/34": {
     "message": "The Merge"
   },
@@ -2262,6 +2274,9 @@
   },
   "fSi2R/": {
     "message": "Information for validator operators regarding staking withdrawals."
+  },
+  "fYfWrj": {
+    "message": "Partial Withdraw of {amount} {TICKER_NAME}"
   },
   "fZwn+P": {
     "message": "After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days."
@@ -2681,9 +2696,6 @@
   "mH6bSl": {
     "message": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
   },
-  "mHSz8x": {
-    "message": "Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance}{ticker} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
-  },
   "mROPz+": {
     "message": "I provided an Ethereum address when generating my {depositData} file before depositing where I would like all validator rewards and withdrawals to be deposited into."
   },
@@ -2929,9 +2941,6 @@
   "qBorVY": {
     "message": "Exit epoch and withdrawable epoch"
   },
-  "qIB0uh": {
-    "message": "Your validator must have a minimum balance of {minBalance}{ticker} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-  },
   "qK4+NQ": {
     "message": "The terminal"
   },
@@ -2991,9 +3000,6 @@
   },
   "rD3ot9": {
     "message": "Phishing guide"
-  },
-  "rSCnTP": {
-    "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}. You can currently withdrawal up to {surplus} {TICKER_NAME}."
   },
   "rTSJI9": {
     "message": "Try the testnet"

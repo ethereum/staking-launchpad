@@ -18,19 +18,15 @@ import { Button } from '../../components/Button';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Section } from './components/Shared';
 import { Text } from '../../components/Text';
-import Select from '../../components/Select';
 import Spinner from '../../components/Spinner';
 import ValidatorDetails from './components/ValidatorDetails';
+import ValidatorSelector from './components/ValidatorSelector';
 
 import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import {
-  BEACONCHAIN_URL,
-  ETHER_TO_GWEI,
-  TICKER_NAME,
-} from '../../utils/envVars';
+import { BEACONCHAIN_URL, ETHER_TO_GWEI } from '../../utils/envVars';
 
 // https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
 const MAX_QUERY_LIMIT = 100;
@@ -231,46 +227,10 @@ const _ActionsPage: React.FC<Props> = () => {
           </Text>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <Select
-              placeholder={`Total validators: ${validators.length}`}
-              searchPlaceholder={formatMessage({
-                defaultMessage: 'Filter by index or pubkey',
-              })}
-              options={validators.map(v => ({
-                value: v.pubkey,
-                searchContext: `${v.validatorindex.toString()}:${v.pubkey}`,
-                label: (
-                  <div
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: '1fr auto',
-                      flex: 1,
-                      gap: '1rem',
-                      width: '100%',
-                    }}
-                  >
-                    <p style={{ margin: 0, textAlign: 'start' }}>
-                      {v.validatorindex.toString()}
-                    </p>
-                    <p
-                      style={{
-                        margin: 0,
-                        textAlign: 'end',
-                        marginInlineStart: 'auto',
-                        fontSize: '0.75em',
-                        color: '#444',
-                      }}
-                    >
-                      {(v.balance / ETHER_TO_GWEI).toFixed(9)} {TICKER_NAME}
-                    </p>
-                  </div>
-                ),
-              }))}
-              value={selectedValidator?.pubkey || ''}
-              onChange={(value: string) => {
-                const validator = validators.find(v => v.pubkey === value);
-                setSelectedValidator(validator || null);
-              }}
+            <ValidatorSelector
+              validators={validators}
+              selectedValidator={selectedValidator}
+              setSelectedValidator={setSelectedValidator}
             />
             {moreToFetch && (
               <Button

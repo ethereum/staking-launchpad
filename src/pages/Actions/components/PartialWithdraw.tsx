@@ -91,20 +91,20 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               />
               {validator.coinBalance <= MIN_VALIDATOR_BALANCE ? (
                 <FormattedMessage
-                  defaultMessage="Your validator must have a minimum balance of {minBalance}{ticker} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
+                  defaultMessage="Your validator must have a minimum balance of {minBalance} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
                   values={{
                     minBalance: MIN_VALIDATOR_BALANCE,
-                    ticker: TICKER_NAME,
+                    TICKER_NAME,
                   }}
                 />
               ) : (
                 <>
                   <FormattedMessage
-                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance}{ticker} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
+                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
                     values={{
                       minBalance: MIN_VALIDATOR_BALANCE,
                       maxAmount,
-                      ticker: TICKER_NAME,
+                      TICKER_NAME,
                     }}
                   />
 
@@ -142,8 +142,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
         <TransactionStatusModal
           headerMessage={
             <FormattedMessage
-              defaultMessage="Partial Withdraw of {amount}{ticker}"
-              values={{ amount, ticker: TICKER_NAME }}
+              defaultMessage="Partial Withdraw of {amount} {TICKER_NAME}"
+              values={{ amount, TICKER_NAME }}
             />
           }
           txHash={txHash}
@@ -153,6 +153,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
       )}
 
       <Button
+        disabled={maxAmount <= 0}
         onClick={() => prepareInputModal()}
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />

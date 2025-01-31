@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { FormattedMessage } from 'react-intl';
 import { Validator } from '../types';
-import ConsolidateTo from './ConsolidateTo';
+import MigrateFunds from './MigrateFunds';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import UpgradeCompounding from './UpgradeCompounding';
@@ -18,6 +18,7 @@ import {
   MAX_EFFECTIVE_BALANCE,
 } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
+import ConsolidateInto from './ConsolidateInto';
 
 const Section = styled(SharedSection)`
   display: flex;
@@ -37,6 +38,11 @@ const Row = styled.div`
   }
 `;
 
+const ActionTitle = styled(Text)`
+  margin: 0;
+  font-weight: bold;
+`;
+
 interface Props {
   validator: Validator;
   validators: Validator[];
@@ -44,12 +50,12 @@ interface Props {
 
 const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
   // eslint-disable-next-line
-  const [sourceValidators, setSourceValidators] = useState<Validator[]>([]);
-  const [targetValidators, setTargetValidators] = useState<Validator[]>([]);
+  const [sourceValidatorSet, setSourceValidatorSet] = useState<Validator[]>([]);
+  const [targetValidatorSet, setTargetValidatorSet] = useState<Validator[]>([]);
 
   useEffect(() => {
     if (!validator || !validators) {
-      setTargetValidators([]);
+      setTargetValidatorSet([]);
       return;
     }
 
@@ -65,7 +71,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       return isSameCredentials && isExecutionOrLater && !isSameValidator;
     });
 
-    setSourceValidators(potentialSourceValidators);
+    setSourceValidatorSet(potentialSourceValidators);
 
     const potentialTargetValidators = potentialSourceValidators.filter(v => {
       const isCompoundingOrLater =
@@ -74,18 +80,19 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       return isCompoundingOrLater;
     });
 
-    setTargetValidators(potentialTargetValidators);
+    setTargetValidatorSet(potentialTargetValidators);
   }, [validator, validators]);
 
   const accountType = +validator.withdrawalcredentials.substring(2, 4);
+  const surplusEther = validator.coinBalance - MIN_ACTIVATION_BALANCE;
   return (
     <Section>
       {accountType === 1 && (
         <Row>
           <div style={{ flex: 1 }}>
-            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+            <ActionTitle>
               <FormattedMessage defaultMessage="Upgrade account to compounding" />
-            </Text>
+            </ActionTitle>
             <FormattedMessage
               defaultMessage="Increases the maximum effective balance from {MIN_ACTIVATION_BALANCE} to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}."
               values={{
@@ -102,52 +109,68 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       {accountType >= 2 && (
         <Row>
           <div style={{ flex: 1 }}>
-            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+            <ActionTitle>
               <FormattedMessage defaultMessage="Request partial withdrawal" />
-            </Text>
+            </ActionTitle>
             <FormattedMessage
-              defaultMessage="You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}. You can currently withdrawal up to {surplus} {TICKER_NAME}."
+              defaultMessage="You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
               values={{
                 TICKER_NAME,
                 MIN_ACTIVATION_BALANCE,
-                surplus: validator.coinBalance - MIN_ACTIVATION_BALANCE,
               }}
-            />
+            />{' '}
+            {surplusEther > 0 && (
+              <FormattedMessage
+                defaultMessage="You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
+                values={{
+                  TICKER_NAME,
+                  surplusEther: (
+                    <span style={{ color: 'darkgreen' }}>{surplusEther}</span>
+                  ),
+                }}
+              />
+            )}
           </div>
           <PartialWithdraw validator={validator} />
         </Row>
       )}
 
-      {targetValidators.length > 0 && (
+      {targetValidatorSet.length > 0 && (
         <Row>
           <div style={{ flex: 1 }}>
-            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+            <ActionTitle>
               <FormattedMessage defaultMessage="Migrate funds" />
-            </Text>
+            </ActionTitle>
             <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />
           </div>
-          <ConsolidateTo validator={validator} validators={targetValidators} />
+          <MigrateFunds
+            sourceValidator={validator}
+            targetValidatorSet={targetValidatorSet}
+          />
         </Row>
       )}
 
       {accountType >= 2 && (
         <Row>
           <div style={{ flex: 1 }}>
-            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+            <ActionTitle>
               <FormattedMessage defaultMessage="Absorb another validator" />
-            </Text>
+            </ActionTitle>
             <FormattedMessage defaultMessage="Transfer entire balance from another validator account into this one, consolidating two accounts into one." />
           </div>
-          {/* TODO: <ConsolidateFrom validator={validator} validators={sourceValidators}} /> */}
+          <ConsolidateInto
+            targetValidator={validator}
+            sourceValidatorSet={sourceValidatorSet}
+          />
         </Row>
       )}
 
       {!hasValidatorExited(validator) && (
         <Row>
           <div style={{ flex: 1 }}>
-            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+            <ActionTitle>
               <FormattedMessage defaultMessage="Exit validator" />
-            </Text>
+            </ActionTitle>
             <FormattedMessage defaultMessage="Initiates the process of permanently exiting your validator account from the Ethereum proof-of-stake network, and withdrawing entire balance." />
           </div>
           <ForceExit validator={validator} />

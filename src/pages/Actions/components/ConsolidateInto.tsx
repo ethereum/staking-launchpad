@@ -13,12 +13,15 @@ import { generateCompoundParams } from '../ActionUtils';
 import { Button } from '../../../components/Button';
 import ValidatorSelector from './ValidatorSelector';
 
-interface Props {
-  validator: Validator;
-  validators: Validator[];
-}
+type ConsolidateIntoProps = {
+  targetValidator: Validator; // The selected validator to consolidate into (target)
+  sourceValidatorSet: Validator[]; // List of available source validators (Any 0x01 or higher, excluding the target)
+};
 
-const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
+const ConsolidateInto = ({
+  targetValidator,
+  sourceValidatorSet,
+}: ConsolidateIntoProps) => {
   const { connector, account } = useWeb3React();
 
   const [selectedValidator, setSelectedValidator] = useState<Validator | null>(
@@ -60,7 +63,7 @@ const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
         web3,
         account,
         selectedValidator.pubkey,
-        validator.pubkey
+        targetValidator.pubkey
       );
       return web3.eth
         .sendTransaction(params)
@@ -87,11 +90,11 @@ const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
             <Heading level={3} margin="none">
               <FormattedMessage
                 defaultMessage="Which validator would you like to consolidate into {index}"
-                values={{ index: validator.validatorindex }}
+                values={{ index: targetValidator.validatorindex }}
               />
             </Heading>
             <ValidatorSelector
-              validators={validators}
+              validators={sourceValidatorSet}
               selectedValidator={selectedValidator}
               setSelectedValidator={setSelectedValidator}
             />
@@ -110,7 +113,7 @@ const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
             />
             <Button
               disabled={!selectedValidator}
-              label="Migrate funds"
+              label="Pull funds"
               onClick={() => createConsolidationTransaction()}
             />
           </Box>
@@ -124,7 +127,7 @@ const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
               defaultMessage="Consolidate {index} into {otherIndex}"
               values={{
                 index: selectedValidator.validatorindex,
-                otherIndex: validator.validatorindex,
+                otherIndex: targetValidator.validatorindex,
               }}
             />
           }
@@ -135,7 +138,7 @@ const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
       )}
 
       <Button
-        label="Migrate funds"
+        label="Pull funds"
         destructive
         secondary
         onClick={() => confirmConsolidate()}
@@ -144,4 +147,4 @@ const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
   );
 };
 
-export default ConsolidateTo;
+export default ConsolidateInto;

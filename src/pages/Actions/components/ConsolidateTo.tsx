@@ -9,16 +9,16 @@ import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
-import Select from '../../../components/Select';
 import { generateCompoundParams } from '../ActionUtils';
 import { Button } from '../../../components/Button';
+import ValidatorSelector from './ValidatorSelector';
 
 interface Props {
   validator: Validator;
   validators: Validator[];
 }
 
-const Consolidate: React.FC<Props> = ({ validator, validators }) => {
+const ConsolidateTo: React.FC<Props> = ({ validator, validators }) => {
   const { connector, account } = useWeb3React();
 
   const [selectedValidator, setSelectedValidator] = useState<Validator | null>(
@@ -90,17 +90,10 @@ const Consolidate: React.FC<Props> = ({ validator, validators }) => {
                 values={{ index: validator.validatorindex }}
               />
             </Heading>
-            <Select
-              options={validators.map(v => ({
-                value: v.pubkey,
-                label: v.validatorindex.toString(),
-              }))}
-              value={selectedValidator?.pubkey || ''}
-              onChange={(value: string) => {
-                setSelectedValidator(
-                  validators.find(v => v.pubkey === value) || null
-                );
-              }}
+            <ValidatorSelector
+              validators={validators}
+              selectedValidator={selectedValidator}
+              setSelectedValidator={setSelectedValidator}
             />
           </Box>
           <Box
@@ -151,4 +144,4 @@ const Consolidate: React.FC<Props> = ({ validator, validators }) => {
   );
 };
 
-export default Consolidate;
+export default ConsolidateTo;

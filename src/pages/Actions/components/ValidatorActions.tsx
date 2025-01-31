@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { FormattedMessage } from 'react-intl';
 import { Validator } from '../types';
-import Consolidate from './Consolidate';
+import ConsolidateTo from './ConsolidateTo';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import UpgradeCompounding from './UpgradeCompounding';
@@ -12,6 +12,7 @@ import { Section as SharedSection } from './Shared';
 import { hasValidatorExited } from '../../../utils/validators';
 import {
   EXECUTION_CREDENTIALS,
+  COMPOUNDING_CREDENTIALS,
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   MAX_EFFECTIVE_BALANCE,
@@ -42,6 +43,8 @@ interface Props {
 }
 
 const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
+  // eslint-disable-next-line
+  const [sourceValidators, setSourceValidators] = useState<Validator[]>([]);
   const [targetValidators, setTargetValidators] = useState<Validator[]>([]);
 
   useEffect(() => {
@@ -50,16 +53,27 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       return;
     }
 
-    const potentialTargetValidators = validators.filter(v => {
-      const isSamePrefix =
+    const potentialSourceValidators = validators.filter(v => {
+      // Should be filtered out from API call for validators by withdrawal address; backup check
+      const isSameCredentials =
         v.withdrawalcredentials.substring(4) ===
         validator.withdrawalcredentials.substring(4);
-      const isCompoundingOrLater =
+      const isExecutionOrLater =
         +v.withdrawalcredentials.substring(2, 4) >=
         +EXECUTION_CREDENTIALS.substring(2, 4);
       const isSameValidator = v.pubkey === validator.pubkey;
-      return isSamePrefix && isCompoundingOrLater && !isSameValidator;
+      return isSameCredentials && isExecutionOrLater && !isSameValidator;
     });
+
+    setSourceValidators(potentialSourceValidators);
+
+    const potentialTargetValidators = potentialSourceValidators.filter(v => {
+      const isCompoundingOrLater =
+        +v.withdrawalcredentials.substring(2, 4) >=
+        +COMPOUNDING_CREDENTIALS.substring(2, 4);
+      return isCompoundingOrLater;
+    });
+
     setTargetValidators(potentialTargetValidators);
   }, [validator, validators]);
 
@@ -112,7 +126,19 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
             </Text>
             <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />
           </div>
-          <Consolidate validator={validator} validators={targetValidators} />
+          <ConsolidateTo validator={validator} validators={targetValidators} />
+        </Row>
+      )}
+
+      {accountType >= 2 && (
+        <Row>
+          <div style={{ flex: 1 }}>
+            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+              <FormattedMessage defaultMessage="Absorb another validator" />
+            </Text>
+            <FormattedMessage defaultMessage="Transfer entire balance from another validator account into this one, consolidating two accounts into one." />
+          </div>
+          {/* TODO: <ConsolidateFrom validator={validator} validators={sourceValidators}} /> */}
         </Row>
       )}
 

@@ -9,6 +9,7 @@ interface CustomButtonProps {
   rainbow?: boolean;
   onClick?: () => any;
   destructive?: boolean;
+  destructiveSecondary?: boolean;
 }
 
 const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
@@ -55,6 +56,18 @@ const StyledButton = styled(GrommetButton)`
     p.destructive &&
     `background-color: ${p.theme.red.light};
     color: black;
+    border: 1px solid ${p.theme.red.medium};
+    &:hover {
+      background-color: darkred;
+       color: white;
+     }
+   `}
+  // secondary destructive styles
+  ${p =>
+    // @ts-ignore
+    p.destructiveSecondary &&
+    `background-color: ${p.theme.gray.light};
+    color: red.medium;
     border: 1px solid ${p.theme.red.medium};
     &:hover {
       background-color: darkred;

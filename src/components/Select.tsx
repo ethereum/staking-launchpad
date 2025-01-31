@@ -15,16 +15,18 @@ const Trigger = styled.div`
   justify-content: space-between;
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
+  border-radius: 4px;
   background-color: #fff;
   cursor: pointer;
 `;
 
 const Content = styled.div`
   position: absolute;
-  top: 100%;
+  top: calc(100% + 0.25rem);
   inset-inline: 0;
   background-color: #fff;
   border: 1px solid #ccc;
+  border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-height: 400px;
   overflow-y: auto;

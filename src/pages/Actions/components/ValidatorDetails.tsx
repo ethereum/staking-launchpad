@@ -9,6 +9,7 @@ import { Validator } from '../types';
 import { hasValidatorExited } from '../../../utils/validators';
 import { Section, CopyContainer } from './Shared';
 import { TICKER_NAME } from '../../../utils/envVars';
+import { Heading } from '../../../components/Heading';
 
 const ValidatorDetails = ({ validator }: { validator: Validator }) => {
   const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
@@ -24,17 +25,16 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
   return (
     <Section>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <Text
+        <Heading
+          level={2}
           style={{
-            fontWeight: 'bold',
             textTransform: 'uppercase',
-            fontSize: '1.25rem',
-            marginBottom: '0.5rem',
+            fontSize: '1.5rem',
           }}
         >
           <FormattedMessage defaultMessage="Validator Index" />{' '}
           {validator.validatorindex}
-        </Text>
+        </Heading>
 
         <Text>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

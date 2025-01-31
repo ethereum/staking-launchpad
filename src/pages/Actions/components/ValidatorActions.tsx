@@ -13,12 +13,22 @@ import { EXECUTION_CREDENTIALS } from '../../../utils/envVars';
 
 const Section = styled(SharedSection)`
   display: flex;
+  flex-direction: column;
+  padding: 0;
+`;
+
+const Row = styled.div`
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  &:not(:last-child) {
+    border-bottom: 1px solid lightgray;
   }
 `;
+
 interface Props {
   validator: Validator;
   validators: Validator[];
@@ -45,19 +55,49 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
   const accountType = +validator.withdrawalcredentials.substring(2, 4);
   return (
-    <Section style={{ display: 'flex', gap: '1rem' }}>
-      {accountType === 1 && <UpgradeCompounding validator={validator} />}
+    <Section>
+      {accountType === 1 && (
+        <Row>
+          <div style={{ flex: 1 }}>
+            Title + Content explaining lorem ipseum lots of text here
+          </div>
+          <UpgradeCompounding validator={validator} />
+        </Row>
+      )}
 
-      {accountType >= 2 && <PartialWithdraw validator={validator} />}
+      {accountType >= 2 && (
+        <div
+          style={{
+            display: 'flex',
+            padding: '1rem',
+            alignItems: 'center',
+            gap: '1rem',
+            borderBottom: '1px solid lightgray',
+          }}
+        >
+          <div style={{ flex: 1 }}>
+            Title + Content explaining lorem ipseum lots of text here
+          </div>
+          <PartialWithdraw validator={validator} />
+        </div>
+      )}
 
       {sharedValidators.length > 0 && (
-        <Consolidate validator={validator} validators={sharedValidators} />
+        <Row>
+          <div style={{ flex: 1 }}>
+            Title + Content explaining lorem ipseum lots of text here
+          </div>
+          <Consolidate validator={validator} validators={sharedValidators} />
+        </Row>
       )}
 
       {!hasValidatorExited(validator) && (
-        <div style={{ marginInlineStart: 'auto' }}>
+        <Row>
+          <div style={{ flex: 1 }}>
+            Title + Content explaining lorem ipseum lots of text here
+          </div>
           <ForceExit validator={validator} />
-        </div>
+        </Row>
       )}
     </Section>
   );

@@ -13,12 +13,13 @@ import { Props, Validator } from './types';
 
 import ValidatorActions from './components/ValidatorActions';
 
+import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
 import { PageTemplate } from '../../components/PageTemplate';
-import { Alert } from '../../components/Alert';
+import { Section } from './components/Shared';
+import { Text } from '../../components/Text';
 import Select from '../../components/Select';
 import Spinner from '../../components/Spinner';
-import { Text } from '../../components/Text';
 import ValidatorDetails from './components/ValidatorDetails';
 
 import { web3ReactInterface } from '../ConnectWallet';
@@ -31,14 +32,8 @@ import {
   TICKER_NAME,
 } from '../../utils/envVars';
 
-const Section = styled.section`
-  background-color: white;
-  padding: 1rem;
-  border-radius: 4px;
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-`;
+// https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
+const MAX_QUERY_LIMIT = 100;
 
 const FakeLink = styled.span`
   color: blue;
@@ -66,7 +61,56 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const MAX_QUERY_LIMIT = 15;
+const fetchPubkeysByWithdrawalAddress = async (
+  address: string,
+  offset = 0,
+  limit = MAX_QUERY_LIMIT
+): Promise<string[] | null> => {
+  try {
+    const response = await fetch(
+      `${BEACONCHAIN_URL}/api/v1/validator/withdrawalCredentials/${address}?limit=${limit}&offset=${offset}`
+    );
+    if (!response.ok) throw new Error();
+    const json = await response.json();
+    const data: BeaconChainValidatorResponse[] = Array.isArray(json.data)
+      ? json.data
+      : [json.data];
+
+    return data.map(v => v.publickey);
+  } catch (error) {
+    console.warn(
+      `Error fetching pubkeys (address ${address}, limit ${limit}, offset ${offset}):`,
+      error
+    );
+    return null;
+  }
+};
+
+const fetchValidatorsByPubkeys = async (
+  pubkeys: string[]
+): Promise<Validator[] | null> => {
+  try {
+    const response = await fetch(
+      `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(',')}`
+    );
+    if (!response.ok) throw new Error();
+    const json = await response.json();
+    const data: BeaconChainValidator[] = Array.isArray(json.data)
+      ? json.data
+      : [json.data];
+    return data.map(v => ({
+      ...v,
+      // balanceDisplay: `${coinBalance}${TICKER_NAME}`,
+      coinBalance: new BigNumber(v.balance).div(ETHER_TO_GWEI).toNumber(),
+    }));
+  } catch (error) {
+    console.warn(
+      `Error fetching validators (pubkeys ${pubkeys.join(',')}):`,
+      error
+    );
+    return null;
+  }
+};
 
 const _ActionsPage: React.FC<Props> = () => {
   const {
@@ -86,96 +130,52 @@ const _ActionsPage: React.FC<Props> = () => {
   );
   const [validators, setValidators] = useState<Validator[]>([]);
 
+  const [fetchOffset, setFetchOffset] = useState(0);
+
   const handleConnect = useCallback((): void => {
     setLoading(true);
     deactivate();
   }, [setLoading, deactivate]);
 
+  const fetchMoreValidators = async () => {
+    if (!active || !account) return;
+
+    setLoading(true);
+
+    const pubkeys = await fetchPubkeysByWithdrawalAddress(account, fetchOffset);
+
+    setFetchOffset(prev => prev + MAX_QUERY_LIMIT);
+
+    if (!pubkeys) {
+      setValidatorLoadError(fetchOffset === 0 && pubkeys === null);
+      setLoading(false);
+      return;
+    }
+
+    const newValidators = await fetchValidatorsByPubkeys(pubkeys);
+
+    if (!newValidators) {
+      setValidatorLoadError(fetchOffset === 0 && newValidators === null);
+      setLoading(false);
+      return;
+    }
+
+    setValidators(prev => [...prev, ...newValidators]);
+    setLoading(false);
+  };
+
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   useEffect(() => {
-    const fetchValidatorsForUserAddress = async () => {
-      setLoading(true);
-
-      // beaconchain API requires two fetches - one that gets the public keys for an Ethereum address, and one that
-      // queries by the validators public keys
-      fetch(
-        `${BEACONCHAIN_URL}/api/v1/validator/withdrawalCredentials/${account}?limit=${MAX_QUERY_LIMIT}`
-      )
-        .then(r => r.json())
-        .then(
-          ({
-            data,
-          }: {
-            data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
-          }) => {
-            const response = Array.isArray(data) ? data : [data];
-            // no validators for that user's wallet address
-            if (response.length === 0) {
-              setValidators([]);
-              setLoading(false);
-              return;
-            }
-
-            if (response.length === 0) {
-              setValidators([]);
-              setLoading(false);
-            } else {
-              // query by public keys
-              const pubKeysCommaDelineated = `${response
-                .slice(0, MAX_QUERY_LIMIT)
-                .map(validator => validator.publickey)
-                .join(',')}`;
-
-              fetch(
-                `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
-              )
-                .then(r => r.json())
-                .then(
-                  ({
-                    data,
-                  }: {
-                    data: BeaconChainValidator | BeaconChainValidator[];
-                  }) => {
-                    const validatorsData = Array.isArray(data) ? data : [data];
-                    setValidators(
-                      validatorsData.map(v => {
-                        const coinBalance = new BigNumber(v.balance)
-                          .div(ETHER_TO_GWEI)
-                          .toNumber();
-
-                        return {
-                          ...v,
-                          balanceDisplay: `${coinBalance}${TICKER_NAME}`,
-                          coinBalance,
-                        };
-                      })
-                    );
-                    setLoading(false);
-                  }
-                )
-                .catch(error => {
-                  console.log(error);
-                  setLoading(false);
-                  setValidatorLoadError(true);
-                });
-            }
-          }
-        )
-        .catch(error => {
-          console.log(error);
-          setLoading(false);
-          setValidatorLoadError(true);
-        });
-    };
-
     const network = NetworkChainId[chainId as number];
 
     const isValidNetwork = AllowedELNetworks.includes(network);
 
-    if (active && account && isValidNetwork) {
-      fetchValidatorsForUserAddress();
-    }
+    if (!active || !account || !isValidNetwork) return;
+
+    fetchMoreValidators();
   }, [account, active, chainId]);
+
+  const moreToFetch = validators.length === fetchOffset;
 
   const actionsPageContent = useMemo(() => {
     if (loading) {
@@ -214,6 +214,7 @@ const _ActionsPage: React.FC<Props> = () => {
       return (
         <Alert variant="warning" className="my10">
           <FormattedMessage defaultMessage="No validators were discovered for the provided account." />{' '}
+          {/* TODO: Switch this to a button element */}
           <FakeLink onClick={handleConnect}>
             <FormattedMessage defaultMessage="Please connect to a new wallet" />
           </FakeLink>
@@ -270,10 +271,17 @@ const _ActionsPage: React.FC<Props> = () => {
                 setSelectedValidator(validator || null);
               }}
             />
-            <Button
-              label={<FormattedMessage defaultMessage="Fetch more" />}
-              // onClick={() => {}} // TODO: implement fetch more logic
-            />
+            {moreToFetch && (
+              <Button
+                label={
+                  <FormattedMessage
+                    defaultMessage="Fetch next {MAX_QUERY_LIMIT}"
+                    values={{ MAX_QUERY_LIMIT }}
+                  />
+                }
+                onClick={fetchMoreValidators}
+              />
+            )}
           </div>
         </Section>
 
@@ -297,6 +305,8 @@ const _ActionsPage: React.FC<Props> = () => {
     formatMessage,
     handleConnect,
     validatorLoadError,
+    fetchMoreValidators,
+    moreToFetch,
   ]);
 
   return (

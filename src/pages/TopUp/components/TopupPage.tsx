@@ -39,6 +39,7 @@ import {
   ETHER_TO_GWEI,
   MAX_EFFECTIVE_BALANCE,
   EJECTION_PRICE,
+  COMPOUNDING_CREDENTIALS,
 } from '../../../utils/envVars';
 
 interface Props {
@@ -100,7 +101,8 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const { formatMessage } = useIntl();
 
-  const hasElectraMaxEB = validator.withdrawalcredentials.startsWith('02');
+  const hasElectraMaxEB =
+    +validator.withdrawalcredentials.slice(0, 4) >= +COMPOUNDING_CREDENTIALS;
   const maxEffectiveBalanceEther = Number(
     hasElectraMaxEB ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE
   );
@@ -203,7 +205,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       return formatMessage(
         {
           defaultMessage:
-            'Validator effective balance is currently maxed out. If desired, you may add {minTopupValue} {TICKER_NAME} (the minimum allowed by the deposit contract)',
+            'Validator effective balance is currently maxed out. If desired, you may add {MIN_TOPUP_VALUE} {TICKER_NAME} (the minimum allowed by the deposit contract)',
           description:
             '{MIN_TOPUP_VALUE} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network',
         },

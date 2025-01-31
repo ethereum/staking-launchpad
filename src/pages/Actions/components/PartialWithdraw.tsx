@@ -96,18 +96,18 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               />
               {validator.coinBalance <= MIN_VALIDATOR_BALANCE ? (
                 <FormattedMessage
-                  defaultMessage="Your validator must have a minimum balance of {minBalance} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
+                  defaultMessage="Your validator must have a minimum balance of {MIN_VALIDATOR_BALANCE} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
                   values={{
-                    minBalance: MIN_VALIDATOR_BALANCE,
+                    MIN_VALIDATOR_BALANCE,
                     TICKER_NAME,
                   }}
                 />
               ) : (
                 <>
                   <FormattedMessage
-                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {minBalance} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount}{ticker}."
+                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {MIN_VALIDATOR_BALANCE} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount} {TICKER_NAME}."
                     values={{
-                      minBalance: MIN_VALIDATOR_BALANCE,
+                      MIN_VALIDATOR_BALANCE,
                       maxAmount,
                       TICKER_NAME,
                     }}

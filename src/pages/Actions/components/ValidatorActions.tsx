@@ -62,11 +62,10 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
     const potentialSourceValidators = validators.filter(v => {
       // Should be filtered out from API call for validators by withdrawal address; backup check
       const isSameCredentials =
-        v.withdrawalcredentials.substring(4) ===
-        validator.withdrawalcredentials.substring(4);
+        v.withdrawalcredentials.slice(4) ===
+        validator.withdrawalcredentials.slice(4);
       const isExecutionOrLater =
-        +v.withdrawalcredentials.substring(2, 4) >=
-        +EXECUTION_CREDENTIALS.substring(2, 4);
+        +v.withdrawalcredentials.slice(0, 4) >= +EXECUTION_CREDENTIALS;
       const isSameValidator = v.pubkey === validator.pubkey;
       return isSameCredentials && isExecutionOrLater && !isSameValidator;
     });
@@ -75,19 +74,18 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
     const potentialTargetValidators = potentialSourceValidators.filter(v => {
       const isCompoundingOrLater =
-        +v.withdrawalcredentials.substring(2, 4) >=
-        +COMPOUNDING_CREDENTIALS.substring(2, 4);
+        +v.withdrawalcredentials.slice(0, 4) >= +COMPOUNDING_CREDENTIALS;
       return isCompoundingOrLater;
     });
 
     setTargetValidatorSet(potentialTargetValidators);
   }, [validator, validators]);
 
-  const accountType = +validator.withdrawalcredentials.substring(2, 4);
+  const accountType = +validator.withdrawalcredentials.slice(0, 4);
   const surplusEther = validator.coinBalance - MIN_ACTIVATION_BALANCE;
   return (
     <Section>
-      {accountType === 1 && (
+      {accountType === +EXECUTION_CREDENTIALS && (
         <Row>
           <div style={{ flex: 1 }}>
             <ActionTitle>
@@ -106,7 +104,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         </Row>
       )}
 
-      {accountType >= 2 && (
+      {accountType >= +COMPOUNDING_CREDENTIALS && (
         <Row>
           <div style={{ flex: 1 }}>
             <ActionTitle>
@@ -150,7 +148,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         </Row>
       )}
 
-      {accountType >= 2 && (
+      {accountType >= +COMPOUNDING_CREDENTIALS && (
         <Row>
           <div style={{ flex: 1 }}>
             <ActionTitle>

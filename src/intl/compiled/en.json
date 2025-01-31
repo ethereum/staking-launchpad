@@ -277,6 +277,28 @@
       "value": "You can also use the Beaconcha.in broadcasting tool to upload your message using a web user interface:"
     }
   ],
+  "/qfQgA": [
+    {
+      "type": 0,
+      "value": "Validator effective balance is currently maxed out. If desired, you may add "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (the minimum allowed by the deposit contract)"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
@@ -1269,28 +1291,6 @@
     {
       "type": 0,
       "value": " validator"
-    }
-  ],
-  "5wl2cN": [
-    {
-      "type": 0,
-      "value": "Validator effective balance is currently maxed out. If desired, you may add "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (the minimum allowed by the deposit contract)"
     }
   ],
   "63gLLu": [
@@ -5679,28 +5679,6 @@
       "value": "Currently Geth is used by >66% of the network."
     }
   ],
-  "co3BiU": [
-    {
-      "type": 0,
-      "value": "Your validator must have a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "minBalance"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-    }
-  ],
   "cpxfOR": [
     {
       "type": 0,
@@ -5919,40 +5897,6 @@
     {
       "type": 0,
       "value": "To maximize security and efficiency of your node, use dedicated hardware to run your clients. This reduces risk of malware exposure and minimizes competition for computing resources, ensuring your node handles the network load and its validator responsibilities at all times."
-    }
-  ],
-  "ekKlOB": [
-    {
-      "type": 0,
-      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "minBalance"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " for the validator to operate, you will be able to withdraw a maximum of "
-    },
-    {
-      "type": 1,
-      "value": "maxAmount"
-    },
-    {
-      "type": 1,
-      "value": "ticker"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "eq0/34": [
@@ -8657,6 +8601,28 @@
       "value": "More on proof of stake"
     }
   ],
+  "wdmzfP": [
+    {
+      "type": 0,
+      "value": "Your validator must have a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "MIN_VALIDATOR_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
+    }
+  ],
   "wm04oC": [
     {
       "type": 0,
@@ -8875,6 +8841,44 @@
     {
       "type": 0,
       "value": "Your validator has its own balance, with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
+    }
+  ],
+  "y1mlHE": [
+    {
+      "type": 0,
+      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "MIN_VALIDATOR_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for the validator to operate, you will be able to withdraw a maximum of "
+    },
+    {
+      "type": 1,
+      "value": "maxAmount"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "y44jV2": [

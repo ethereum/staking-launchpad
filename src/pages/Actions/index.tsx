@@ -109,7 +109,6 @@ const fetchValidatorsByPubkeys = async (
       )
       .map(v => ({
         ...v,
-        // balanceDisplay: `${coinBalance}${TICKER_NAME}`,
         coinBalance: new BigNumber(v.balance).div(ETHER_TO_GWEI).toNumber(),
       }));
   } catch (error) {

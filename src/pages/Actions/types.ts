@@ -9,7 +9,6 @@ export interface Validator {
   activationeligibilityepoch: number;
   activationepoch: number;
   balance: number;
-  balanceDisplay?: string;
   coinBalance: number;
   effectivebalance: number;
   exitepoch: number;

@@ -275,6 +275,20 @@
       "value": "If at all possible, consider running another client at this time to help protect yourself and the network."
     }
   ],
+  "/t5Nnj": [
+    {
+      "type": 0,
+      "value": "Balance: "
+    },
+    {
+      "type": 1,
+      "value": "balance"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
+    }
+  ],
   "/tHxib": [
     {
       "type": 0,
@@ -8451,16 +8465,6 @@
       "value": " as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
     }
   ],
-  "vclhrb": [
-    {
-      "type": 0,
-      "value": "Balance: "
-    },
-    {
-      "type": 1,
-      "value": "balance"
-    }
-  ],
   "vj7TN7": [
     {
       "type": 0,
@@ -8487,16 +8491,6 @@
     {
       "type": 0,
       "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
-    }
-  ],
-  "w2THbw": [
-    {
-      "type": 0,
-      "value": "Your validator has a balance of "
-    },
-    {
-      "type": 1,
-      "value": "balance"
     }
   ],
   "w6qYSU": [
@@ -8591,6 +8585,20 @@
     {
       "type": 0,
       "value": "Does the site asking you for your deposit have a URL you expect?"
+    }
+  ],
+  "x6sPrj": [
+    {
+      "type": 0,
+      "value": "Your validator has a balance of "
+    },
+    {
+      "type": 1,
+      "value": "balance"
+    },
+    {
+      "type": 1,
+      "value": "ticker"
     }
   ],
   "xDyl3T": [

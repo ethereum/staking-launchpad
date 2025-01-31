@@ -86,8 +86,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
             </Heading>
             <Text center>
               <FormattedMessage
-                defaultMessage="Your validator has a balance of {balance}"
-                values={{ balance: validator.balanceDisplay }}
+                defaultMessage="Your validator has a balance of {balance}{ticker}"
+                values={{ balance: validator.coinBalance, ticker: TICKER_NAME }}
               />
               {validator.coinBalance <= MIN_VALIDATOR_BALANCE ? (
                 <FormattedMessage

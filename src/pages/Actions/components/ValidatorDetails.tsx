@@ -7,6 +7,7 @@ import { Text } from '../../../components/Text';
 import { Validator } from '../types';
 
 import { hasValidatorExited } from '../../../utils/validators';
+import { TICKER_NAME } from '../../../utils/envVars';
 import { Section, CopyContainer } from './Shared';
 
 const ValidatorDetails = ({ validator }: { validator: Validator }) => {
@@ -43,8 +44,8 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
       </Text>
       <Text>
         <FormattedMessage
-          defaultMessage="Balance: {balance}"
-          values={{ balance: validator.balanceDisplay }}
+          defaultMessage="Balance: {balance}{ticker}"
+          values={{ balance: validator.coinBalance, ticker: TICKER_NAME }}
         />
       </Text>
       <Text>

@@ -102,6 +102,9 @@
   "/rmnC0": {
     "message": "If at all possible, consider running another client at this time to help protect yourself and the network."
   },
+  "/t5Nnj": {
+    "message": "Balance: {balance}{ticker}"
+  },
   "/tHxib": {
     "message": "Geth is one of the three original implementations of the Ethereum protocol, written in Go."
   },
@@ -3186,17 +3189,11 @@
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
   },
-  "vclhrb": {
-    "message": "Balance: {balance}"
-  },
   "vj7TN7": {
     "message": "This value is known as the maximum effective balance (the maximum amount of ETH that contributes to your stake). Older account types (Type 0, or Type 1) have an effective balance limited to {MIN_ACTIVATION_BALANCE}. In these accounts, any balance over {MIN_ACTIVATION_BALANCE} does not contribute to your principle, nor compound earnings."
   },
   "vz8WK7": {
     "message": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
-  },
-  "w2THbw": {
-    "message": "Your validator has a balance of {balance}"
   },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
@@ -3243,6 +3240,9 @@
   },
   "x4HNJL": {
     "message": "Does the site asking you for your deposit have a URL you expect?"
+  },
+  "x6sPrj": {
+    "message": "Your validator has a balance of {balance}{ticker}"
   },
   "xDyl3T": {
     "description": "{ethereumorg} is a link to deposit contract page on ethereum.org",

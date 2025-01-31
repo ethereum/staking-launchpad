@@ -44,6 +44,7 @@ import {
 
 interface Props {
   validator: BeaconChainValidator;
+  backButton: React.ReactNode;
 }
 
 const depositDataContainer = new ContainerType({
@@ -97,7 +98,7 @@ const IndentedText = styled(Text)`
   margin-inline-start: 10px;
 `;
 
-const TopupPage: React.FC<Props> = ({ validator }) => {
+const TopupPage: React.FC<Props> = ({ validator, backButton }) => {
   const { connector, account } = useWeb3React();
   const { formatMessage } = useIntl();
 
@@ -211,6 +212,19 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
         },
         { TICKER_NAME, MIN_TOPUP_VALUE }
       );
+    // If EB over 32, below 2048 (0x02 Compounding type or later)
+    if (effectiveBalanceEther >= MIN_ACTIVATION_BALANCE)
+      return formatMessage(
+        {
+          defaultMessage:
+            'Depositing additional {TICKER_NAME} can increase the effective balance of this validator. Current effective balance is {effectiveBalanceEther}, with a max allowed of {MAX_EFFECTIVE_BALANCE}.',
+        },
+        {
+          effectiveBalanceEther,
+          MAX_EFFECTIVE_BALANCE,
+          TICKER_NAME,
+        }
+      );
     // If EB is low (31 or less)
     if (balanceEther > EJECTION_PRICE)
       return formatMessage(
@@ -288,6 +302,7 @@ const TopupPage: React.FC<Props> = ({ validator }) => {
       )}
 
       <Paper className="mt30">
+        {backButton}
         <Heading level={3} color="blueDark">
           <FormattedMessage defaultMessage="Top-up details" />
         </Heading>

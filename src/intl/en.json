@@ -209,6 +209,9 @@
   "1G0loj": {
     "message": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
   },
+  "1ICikH": {
+    "message": "This account will be permanently exited from the network."
+  },
   "1ONfru": {
     "message": "To include this message on Mainnet, you will need to upload this message to a beacon node’s message “Signed BLS To Execution Change” pool."
   },
@@ -443,6 +446,9 @@
   "5Vrs8S": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
   },
+  "5eN8lL": {
+    "message": "Fully exit validator {validatorindex}"
+  },
   "5q9Lgv": {
     "message": "Download {master} branch:"
   },
@@ -580,9 +586,6 @@
   },
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
-  },
-  "8hf1a0": {
-    "message": "Fully exit validator {index}"
   },
   "8k1RjX": {
     "message": "{NETWORK_NAME} testnet"
@@ -1474,6 +1477,9 @@
   "OSEFbC": {
     "message": "Immediately upon broadcasting a signed voluntary exit message, the {exitEpoch} and {withdrawableEpoch} values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
   },
+  "OZKK+w": {
+    "message": "You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion."
+  },
   "OdYQYh": {
     "message": "More on ConsenSys"
   },
@@ -1629,6 +1635,9 @@
   },
   "RrCui3": {
     "message": "Summary"
+  },
+  "RtQYaf": {
+    "message": "EXIT FULLY"
   },
   "RuFk89": {
     "message": "Absorb another validator"
@@ -1855,9 +1864,6 @@
   "X/fKmY": {
     "message": "Has the block explorer named the contract?"
   },
-  "X0yQPs": {
-    "message": "Are you sure you want to exit validator {index}?"
-  },
   "X3NiFM": {
     "message": "proof-of-custody game"
   },
@@ -1881,6 +1887,9 @@
   },
   "XLXSsV": {
     "message": "Reth provides an active Telegram chat for technical discussion and troubleshooting."
+  },
+  "XPKlzF": {
+    "message": "Action is permanent and irreversible"
   },
   "XRUCUL": {
     "message": "Once an execution address has been provided by signing the BLS To Execution Change message, the withdrawal keys derived from your validator mnemonic are no longer utilized. Therefore, providing an execution address that you control as early as possible is the recommended option for most users, and is the default path for those who join via this site's onboarding process. This protects you against permanent loss of all funds in the event you are unable to recover your mnemonic and withdrawal keys."
@@ -1936,6 +1945,9 @@
   "YJI2xv": {
     "message": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
   },
+  "YLFl88": {
+    "message": "Exit validator {validatorindex}"
+  },
   "YP03/j": {
     "message": "Afterwards, validators are still encouraged to join (the more validators the more decentralized the network), but it’s not absolutely essential that they do so (so the interest rate can fall)."
   },
@@ -1960,6 +1972,9 @@
   },
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
+  },
+  "YiGkjo": {
+    "message": "All remaining funds will be transferred to this withdrawal address within a few days after exit epoch reached"
   },
   "YqsgWz": {
     "message": "Slovenian"
@@ -2510,9 +2525,6 @@
   "jmKQY9": {
     "message": "Nimbus validator documentation"
   },
-  "jmoYdI": {
-    "message": "Please understand that once you begin the exit process you will not be able to undo the decision."
-  },
   "jp9OG2": {
     "description": "{ethClientType} injects \"execution\" or \"consensus\" depending on step",
     "message": "Choose {ethClientType} client"
@@ -2610,9 +2622,6 @@
   "l/uCcX": {
     "message": "You're on the testnet"
   },
-  "l0+Knx": {
-    "message": "You will be asked to sign a transaction to exit your validator."
-  },
   "l4nLft": {
     "message": "I know how to check that I am sending my {TICKER_NAME} into the correct deposit contract and will do so."
   },
@@ -2636,6 +2645,9 @@
   },
   "lD66ab": {
     "message": "Outstanding deposit"
+  },
+  "lG9weW": {
+    "message": "This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network."
   },
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",
@@ -2665,6 +2677,9 @@
   },
   "ljGIvm": {
     "message": "Filename destination"
+  },
+  "lkDZQI": {
+    "message": "Account still responsible for consensus duties until exit epoch reached (keep validator online)"
   },
   "ll5Sze": {
     "message": "Generate deposit keys using the EthStaker deposit tool"
@@ -2798,6 +2813,9 @@
   },
   "o9rUg+": {
     "message": "Withdrawals enabled"
+  },
+  "oC5q0q": {
+    "message": "This validator must remain online until exit epoch is reached."
   },
   "oDObOQ": {
     "message": "If the “eth1 withdrawal address” was not provided on initial deposit, you can submit a once-only {BTEC} message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."

@@ -72,6 +72,8 @@ const StyledButton = styled(GrommetButton)`
 export const Button = ({
   className,
   ...props
-}: CustomButtonProps & ButtonProps) => (
+}: CustomButtonProps &
+  ButtonProps &
+  Pick<React.HTMLAttributes<HTMLButtonElement>, 'style'>) => (
   <StyledButton className={className} {...props} />
 );

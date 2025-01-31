@@ -573,6 +573,12 @@
       "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
     }
   ],
+  "1ICikH": [
+    {
+      "type": 0,
+      "value": "This account will be permanently exited from the network."
+    }
+  ],
   "1ONfru": [
     {
       "type": 0,
@@ -1243,6 +1249,16 @@
       "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
     }
   ],
+  "5eN8lL": [
+    {
+      "type": 0,
+      "value": "Fully exit validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
+    }
+  ],
   "5q9Lgv": [
     {
       "type": 0,
@@ -1635,16 +1651,6 @@
     {
       "type": 0,
       "value": "Do not turn your validator off until this epoch is reached."
-    }
-  ],
-  "8hf1a0": [
-    {
-      "type": 0,
-      "value": "Fully exit validator "
-    },
-    {
-      "type": 1,
-      "value": "index"
     }
   ],
   "8k1RjX": [
@@ -3887,6 +3893,12 @@
       "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
     }
   ],
+  "OZKK+w": [
+    {
+      "type": 0,
+      "value": "You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion."
+    }
+  ],
   "OdYQYh": [
     {
       "type": 0,
@@ -4287,6 +4299,12 @@
     {
       "type": 0,
       "value": "Summary"
+    }
+  ],
+  "RtQYaf": [
+    {
+      "type": 0,
+      "value": "EXIT FULLY"
     }
   ],
   "RuFk89": [
@@ -4869,20 +4887,6 @@
       "value": "Has the block explorer named the contract?"
     }
   ],
-  "X0yQPs": [
-    {
-      "type": 0,
-      "value": "Are you sure you want to exit validator "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    },
-    {
-      "type": 0,
-      "value": "?"
-    }
-  ],
   "X3NiFM": [
     {
       "type": 0,
@@ -4945,6 +4949,12 @@
     {
       "type": 0,
       "value": "Reth provides an active Telegram chat for technical discussion and troubleshooting."
+    }
+  ],
+  "XPKlzF": [
+    {
+      "type": 0,
+      "value": "Action is permanent and irreversible"
     }
   ],
   "XRUCUL": [
@@ -5121,6 +5131,16 @@
       "value": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
     }
   ],
+  "YLFl88": [
+    {
+      "type": 0,
+      "value": "Exit validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
+    }
+  ],
   "YP03/j": [
     {
       "type": 0,
@@ -5179,6 +5199,12 @@
     {
       "type": 0,
       "value": "Type the following lines into the terminal window:"
+    }
+  ],
+  "YiGkjo": [
+    {
+      "type": 0,
+      "value": "All remaining funds will be transferred to this withdrawal address within a few days after exit epoch reached"
     }
   ],
   "YqsgWz": [
@@ -6645,12 +6671,6 @@
       "value": "Nimbus validator documentation"
     }
   ],
-  "jmoYdI": [
-    {
-      "type": 0,
-      "value": "Please understand that once you begin the exit process you will not be able to undo the decision."
-    }
-  ],
   "jp9OG2": [
     {
       "type": 0,
@@ -6899,12 +6919,6 @@
       "value": "You're on the testnet"
     }
   ],
-  "l0+Knx": [
-    {
-      "type": 0,
-      "value": "You will be asked to sign a transaction to exit your validator."
-    }
-  ],
   "l4nLft": [
     {
       "type": 0,
@@ -6975,6 +6989,12 @@
     {
       "type": 0,
       "value": "Outstanding deposit"
+    }
+  ],
+  "lG9weW": [
+    {
+      "type": 0,
+      "value": "This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network."
     }
   ],
   "lLOZMD": [
@@ -7069,6 +7089,12 @@
     {
       "type": 0,
       "value": "Filename destination"
+    }
+  ],
+  "lkDZQI": [
+    {
+      "type": 0,
+      "value": "Account still responsible for consensus duties until exit epoch reached (keep validator online)"
     }
   ],
   "ll5Sze": [
@@ -7413,6 +7439,12 @@
     {
       "type": 0,
       "value": "Withdrawals enabled"
+    }
+  ],
+  "oC5q0q": [
+    {
+      "type": 0,
+      "value": "This validator must remain online until exit epoch is reached."
     }
   ],
   "oDObOQ": [

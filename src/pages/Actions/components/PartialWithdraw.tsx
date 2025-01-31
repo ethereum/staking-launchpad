@@ -9,11 +9,12 @@ import { Validator } from '../types';
 
 import { Button } from '../../../components/Button';
 import { NumberInput } from '../../../components/NumberInput';
-import { Text } from '../../../components/Text';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
+import { Text } from '../../../components/Text';
+import { generateWithdrawalParams } from '../ActionUtils';
 
 import { MIN_VALIDATOR_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 
@@ -48,6 +49,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     if (!amount) {
       return;
     }
+    if (!account) {
+      return;
+    }
 
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
@@ -55,12 +59,13 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
 
-    // TODO: Replace with contract call
-    const transactionParams = {
-      to: '0x40EDC53b0559D3A360DBe2DdB58f71A8833416E1',
-      from: account,
-      value: web3.utils.toWei(amount, 'ether'),
-    };
+    // Partial withdrawal transaction
+    const transactionParams = await generateWithdrawalParams(
+      web3,
+      account,
+      validator.pubkey,
+      Math.floor(amount * 1000000000)
+    );
 
     web3.eth
       .sendTransaction(transactionParams)

@@ -7,6 +7,20 @@ export interface StateProps {}
 export interface DispatchProps {}
 export type Props = StateProps & DispatchProps & OwnProps;
 
+export enum BeaconChainValidatorStatus {
+  deposited = 'deposited',
+  deposited_invalid = 'deposited_invalid',
+  pending = 'pending',
+  active_online = 'active_online',
+  active_offline = 'active_offline',
+  exiting_online = 'exiting_online',
+  exiting_offline = 'exiting_offline',
+  slashing_online = 'slashing_online',
+  slashing_offline = 'slashing_offline',
+  exited = 'exited',
+  slashed = 'slashed',
+}
+
 export interface BeaconChainValidatorTransaction {
   amount: number;
   block_number: number;
@@ -39,7 +53,7 @@ export interface BeaconChainValidator {
   name: string;
   pubkey: string;
   slashed: boolean;
-  status: string;
+  status: BeaconChainValidatorStatus;
   validatorindex: number;
   withdrawableepoch: number;
   withdrawalcredentials: string;

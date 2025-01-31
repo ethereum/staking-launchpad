@@ -13,7 +13,7 @@ import ReactTooltip from 'react-tooltip';
 import { Wifi, StatusWarning, Refresh, StatusDisabled } from 'grommet-icons';
 import numeral from 'numeral';
 import { styledComponentsTheme as theme } from '../../../styles/styledComponentsTheme';
-import { BeaconChainValidator } from '../types';
+import { BeaconChainValidator, BeaconChainValidatorStatus } from '../types';
 import { Text } from '../../../components/Text';
 import shortenAddress from '../../../utils/shortenAddress';
 import { Button } from '../../../components/Button';
@@ -50,7 +50,27 @@ const ValidatorTable: React.FC<{
     const { status } = validator;
 
     switch (status) {
-      case 'pending': {
+      case BeaconChainValidatorStatus.deposited_invalid: {
+        return (
+          <Item>
+            <StatusWarning color={theme.red.light} />
+            <Text>
+              <FormattedMessage defaultMessage="Invalid Deposit" />
+            </Text>
+          </Item>
+        );
+      }
+      case BeaconChainValidatorStatus.deposited: {
+        return (
+          <Item>
+            <Refresh color="blueLight" />
+            <Text>
+              <FormattedMessage defaultMessage="Depositing" />
+            </Text>
+          </Item>
+        );
+      }
+      case BeaconChainValidatorStatus.pending: {
         return (
           <Item>
             <Refresh color="blueLight" />
@@ -60,7 +80,8 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
-      case 'slashing': {
+      case BeaconChainValidatorStatus.slashing_offline:
+      case BeaconChainValidatorStatus.slashing_online: {
         return (
           <Item>
             <StatusWarning color={theme.red.light} />
@@ -70,7 +91,7 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
-      case 'slashed': {
+      case BeaconChainValidatorStatus.slashed: {
         return (
           <Item>
             <StatusWarning color={theme.red.light} />
@@ -80,7 +101,8 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
-      case 'exiting': {
+      case BeaconChainValidatorStatus.exiting_offline:
+      case BeaconChainValidatorStatus.exiting_online: {
         return (
           <Item>
             <StatusWarning color="yellowDark" />
@@ -90,7 +112,7 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
-      case 'exited': {
+      case BeaconChainValidatorStatus.exited: {
         return (
           <Item>
             <StatusDisabled color={theme.gray.medium} />
@@ -100,7 +122,7 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
-      case 'active_offline': {
+      case BeaconChainValidatorStatus.active_offline: {
         return (
           <Item>
             <Wifi color={theme.gray.medium} />
@@ -110,7 +132,7 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
-      case 'active_online': {
+      case BeaconChainValidatorStatus.active_online: {
         return (
           <Item>
             <Wifi color={theme.green.dark} />
@@ -129,7 +151,8 @@ const ValidatorTable: React.FC<{
     return validators.map(validator => {
       // No top-ups for exited or slashed validators:
       const statusIneligible =
-        validator.status === 'slashed' || validator.status === 'exited';
+        validator.status === BeaconChainValidatorStatus.slashed ||
+        validator.status === BeaconChainValidatorStatus.exited;
 
       const maxEffectiveBalanceEther = statusIneligible
         ? 0

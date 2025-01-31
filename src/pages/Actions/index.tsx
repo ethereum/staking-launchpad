@@ -8,6 +8,7 @@ import BigNumber from 'bignumber.js';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
+  BeaconChainValidatorStatus,
 } from '../TopUp/types';
 import { Props, Validator } from './types';
 
@@ -98,11 +99,19 @@ const fetchValidatorsByPubkeys = async (
     const data: BeaconChainValidator[] = Array.isArray(json.data)
       ? json.data
       : [json.data];
-    return data.map(v => ({
-      ...v,
-      // balanceDisplay: `${coinBalance}${TICKER_NAME}`,
-      coinBalance: new BigNumber(v.balance).div(ETHER_TO_GWEI).toNumber(),
-    }));
+
+    return data
+      .filter(v =>
+        [
+          BeaconChainValidatorStatus.active_offline,
+          BeaconChainValidatorStatus.active_online,
+        ].includes(v.status)
+      )
+      .map(v => ({
+        ...v,
+        // balanceDisplay: `${coinBalance}${TICKER_NAME}`,
+        coinBalance: new BigNumber(v.balance).div(ETHER_TO_GWEI).toNumber(),
+      }));
   } catch (error) {
     console.warn(
       `Error fetching validators (pubkeys ${pubkeys.join(',')}):`,

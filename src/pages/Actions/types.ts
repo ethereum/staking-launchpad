@@ -1,3 +1,5 @@
+import { BeaconChainValidatorStatus } from '../TopUp/types';
+
 export interface OwnProps {}
 export interface StateProps {}
 export interface DispatchProps {}
@@ -15,7 +17,7 @@ export interface Validator {
   name: string;
   pubkey: string;
   slashed: boolean;
-  status: string;
+  status: BeaconChainValidatorStatus;
   validatorindex: number;
   withdrawableepoch: number;
   withdrawalcredentials: string;

@@ -433,9 +433,6 @@
   "5HJLBU": {
     "message": "Teku installation documentation"
   },
-  "5OjDXz": {
-    "message": "Withdrawal Credentails: {credentials}"
-  },
   "5UH1sh": {
     "message": "Romanian"
   },
@@ -513,9 +510,6 @@
   },
   "7Nwe5A": {
     "message": "{exitEpochLabel} - epoch at which your validator is no longer active, no longer earning rewards, and is no longer subject to slashing rules."
-  },
-  "7OLqa4": {
-    "message": "Upgrade to \"Compounding\""
   },
   "7Rw2uA": {
     "message": "consensus"
@@ -941,9 +935,6 @@
   },
   "FEbVwB": {
     "message": "The key concept is the following:"
-  },
-  "FFYAkU": {
-    "message": "Activation Epoch: {epoch}"
   },
   "FM92S0": {
     "message": "Note: the Beacon Chain may take several minutes to verify your deposit"
@@ -1691,6 +1682,9 @@
   "Szwbym": {
     "message": "wrench"
   },
+  "T5tldp": {
+    "message": "Upgrade account to compounding"
+  },
   "THIzw6": {
     "message": "Validators and Ethereum"
   },
@@ -2071,9 +2065,6 @@
   },
   "bembWf": {
     "message": "Withdrawals not enabled"
-  },
-  "bep9C3": {
-    "message": "Public Key"
   },
   "bgyJfz": {
     "message": "What clients do I need to run?"
@@ -2654,6 +2645,9 @@
   "lrdlY6": {
     "message": "File uploaded"
   },
+  "lt3tOB": {
+    "message": "Activation Epoch"
+  },
   "m0FJdr": {
     "message": "Use {testnet} to sync the Holesky testnet."
   },
@@ -3101,6 +3095,9 @@
   "u564LK": {
     "message": "Portuguese (Brazilian)"
   },
+  "u6aCQB": {
+    "message": "Withdrawal credential type"
+  },
   "u81G9+": {
     "message": "Uptime"
   },
@@ -3179,9 +3176,6 @@
   "vbVsqW": {
     "description": "{stakerChecklist} = 'Staker Checklist' bolded to draw attention",
     "message": "Be sure to complete the {stakerChecklist} as soon as possible. And join the EthStaker community for support and discussion with fellow validators."
-  },
-  "vclhrb": {
-    "message": "Balance: {balance}"
   },
   "vj7TN7": {
     "message": "This value is known as the maximum effective balance (the maximum amount of ETH that contributes to your stake). Older account types (Type 0, or Type 1) have an effective balance limited to {MIN_ACTIVATION_BALANCE}. In these accounts, any balance over {MIN_ACTIVATION_BALANCE} does not contribute to your principle, nor compound earnings."

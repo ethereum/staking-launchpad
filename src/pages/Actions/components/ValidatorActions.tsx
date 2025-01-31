@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import { Validator } from '../types';
 import Consolidate from './Consolidate';
@@ -6,9 +7,17 @@ import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import UpgradeCompounding from './UpgradeCompounding';
 
-import { Section } from './Shared';
+import { Section as SharedSection } from './Shared';
 import { hasValidatorExited } from '../../../utils/validators';
 
+const Section = styled(SharedSection)`
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
 interface Props {
   validator: Validator;
   validators: Validator[];
@@ -33,7 +42,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
   const accountType = +validator.withdrawalcredentials.substring(2, 4);
   return (
-    <Section style={{ display: 'flex', gap: '2rem' }}>
+    <Section style={{ display: 'flex', gap: '1rem' }}>
       {accountType === 1 && <UpgradeCompounding validator={validator} />}
 
       {accountType >= 2 && <PartialWithdraw validator={validator} />}
@@ -42,9 +51,11 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         <Consolidate validator={validator} validators={sharedValidators} />
       )}
 
-      <div className="spacer" style={{ flex: 1 }} />
-
-      {!hasValidatorExited(validator) && <ForceExit validator={validator} />}
+      {!hasValidatorExited(validator) && (
+        <div style={{ marginInlineStart: 'auto' }}>
+          <ForceExit validator={validator} />
+        </div>
+      )}
     </Section>
   );
 };

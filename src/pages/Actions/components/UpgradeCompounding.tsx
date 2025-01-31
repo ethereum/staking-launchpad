@@ -80,7 +80,9 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
 
       <Button
         onClick={() => createUpgradeMessage()}
-        label={<FormattedMessage defaultMessage='Upgrade to "Compounding"' />}
+        label={
+          <FormattedMessage defaultMessage="Upgrade account to compounding" />
+        }
       />
     </>
   );

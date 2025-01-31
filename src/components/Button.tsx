@@ -59,7 +59,8 @@ const StyledButton = styled(GrommetButton)`
     `background-color: ${p.secondary ? p.theme.gray.light : p.theme.red.light};
     // @ts-ignore
     color: ${p.secondary ? p.theme.red.medium : p.theme.black};
-    border: 1px solid ${p.theme.red.medium};
+    // @ts-ignore
+    border: 1px solid ${p.secondary ? p.theme.gray.medium : p.theme.red.medium};
     &:hover {
       background-color: darkred;
        color: white;

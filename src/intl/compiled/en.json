@@ -1543,6 +1543,12 @@
       "value": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism."
     }
   ],
+  "7rnL9U": [
+    {
+      "type": 0,
+      "value": "Exit validator"
+    }
+  ],
   "7sZfCF": [
     {
       "type": 0,
@@ -1607,6 +1613,12 @@
     {
       "type": 0,
       "value": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
+    }
+  ],
+  "8VlOTO": [
+    {
+      "type": 0,
+      "value": "Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type."
     }
   ],
   "8WtyrD": [
@@ -2413,6 +2425,12 @@
     {
       "type": 0,
       "value": "Staking Launchpad"
+    }
+  ],
+  "Ef+t8S": [
+    {
+      "type": 0,
+      "value": "Request partial withdrawal"
     }
   ],
   "Ej2jo1": [
@@ -4411,6 +4429,12 @@
       "value": "wrench"
     }
   ],
+  "T5tldp": [
+    {
+      "type": 0,
+      "value": "Upgrade account to compounding"
+    }
+  ],
   "THIzw6": [
     {
       "type": 0,
@@ -5987,6 +6011,12 @@
       "value": "Paste your chosen address here to include it in the copy/paste CLI command below:"
     }
   ],
+  "gAnk66": [
+    {
+      "type": 0,
+      "value": "Initiates the process of permanently exiting your validator account from the Ethereum proof-of-stake network, and withdrawing entire balance."
+    }
+  ],
   "gFj3By": [
     {
       "type": 0,
@@ -6997,6 +7027,36 @@
       "value": "Hard drive"
     }
   ],
+  "mF0eMi": [
+    {
+      "type": 0,
+      "value": "Increases the maximum effective balance from "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "mH6bSl": [
     {
       "type": 0,
@@ -7813,6 +7873,44 @@
     {
       "type": 0,
       "value": "Phishing guide"
+    }
+  ],
+  "rSCnTP": [
+    {
+      "type": 0,
+      "value": "You can withdrawal any portion of your staked "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ". You can currently withdrawal up to "
+    },
+    {
+      "type": 1,
+      "value": "surplus"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "rTSJI9": [
@@ -8789,6 +8887,12 @@
     {
       "type": 0,
       "value": "I am keeping my key(s) safe and have written down my mnemonic phrase."
+    }
+  ],
+  "yYe/CX": [
+    {
+      "type": 0,
+      "value": "Migrate funds"
     }
   ],
   "ydh1KU": [

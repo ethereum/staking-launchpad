@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import styled from 'styled-components';
 
+import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
+import { Section, CopyContainer } from './Shared';
 
 import { Validator } from '../types';
 
 import { hasValidatorExited } from '../../../utils/validators';
-import { Section, CopyContainer } from './Shared';
 import { TICKER_NAME } from '../../../utils/envVars';
-import { Heading } from '../../../components/Heading';
+
+const Hash = styled.span`
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  font-family: monospace;
+`;
 
 const ValidatorDetails = ({ validator }: { validator: Validator }) => {
   const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
@@ -38,18 +48,7 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
 
         <Text>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span
-              style={{
-                display: 'block',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-                flex: 1,
-                fontFamily: 'monospace',
-              }}
-            >
-              {validator.pubkey}
-            </span>
+            <Hash>{validator.pubkey}</Hash>
             <CopyToClipboard
               text={validator.pubkey.toString()}
               onCopy={() => onCopy('pubkey')}

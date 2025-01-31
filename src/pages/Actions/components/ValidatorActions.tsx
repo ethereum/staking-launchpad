@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import { FormattedMessage } from 'react-intl';
 import { Validator } from '../types';
 import Consolidate from './Consolidate';
 import ForceExit from './ForceExit';
@@ -69,44 +70,47 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         <Row>
           <div style={{ flex: 1 }}>
             <Text style={{ margin: 0, fontWeight: 'bold' }}>
-              Upgrade account to compounding
+              <FormattedMessage defaultMessage="Upgrade account to compounding" />
             </Text>
-            Increases the maximum effective balance from{' '}
-            {MIN_ACTIVATION_BALANCE} to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}.
+            <FormattedMessage
+              defaultMessage="Increases the maximum effective balance from {MIN_ACTIVATION_BALANCE} to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}."
+              values={{
+                MIN_ACTIVATION_BALANCE,
+                MAX_EFFECTIVE_BALANCE,
+                TICKER_NAME,
+              }}
+            />
           </div>
           <UpgradeCompounding validator={validator} />
         </Row>
       )}
 
       {accountType >= 2 && (
-        <div
-          style={{
-            display: 'flex',
-            padding: '1rem',
-            alignItems: 'center',
-            gap: '1rem',
-            borderBottom: '1px solid lightgray',
-          }}
-        >
+        <Row>
           <div style={{ flex: 1 }}>
             <Text style={{ margin: 0, fontWeight: 'bold' }}>
-              Request partial withdrawal
+              <FormattedMessage defaultMessage="Request partial withdrawal" />
             </Text>
-            You can withdrawal any portion of your staked {TICKER_NAME} over{' '}
-            {MIN_ACTIVATION_BALANCE}. You can currently withdrawal up to{' '}
-            {validator.coinBalance - MIN_ACTIVATION_BALANCE} {TICKER_NAME}.
+            <FormattedMessage
+              defaultMessage="You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}. You can currently withdrawal up to {surplus} {TICKER_NAME}."
+              values={{
+                TICKER_NAME,
+                MIN_ACTIVATION_BALANCE,
+                surplus: validator.coinBalance - MIN_ACTIVATION_BALANCE,
+              }}
+            />
           </div>
           <PartialWithdraw validator={validator} />
-        </div>
+        </Row>
       )}
 
       {targetValidators.length > 0 && (
         <Row>
           <div style={{ flex: 1 }}>
-            <Text style={{ margin: 0, fontWeight: 'bold' }}>Migrate funds</Text>
-            Transfer entire balance to another one of your validator accounts,
-            consolidating two accounts into one. Target account must be upgraded
-            to compounding type.
+            <Text style={{ margin: 0, fontWeight: 'bold' }}>
+              <FormattedMessage defaultMessage="Migrate funds" />
+            </Text>
+            <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />
           </div>
           <Consolidate validator={validator} validators={targetValidators} />
         </Row>
@@ -116,11 +120,9 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         <Row>
           <div style={{ flex: 1 }}>
             <Text style={{ margin: 0, fontWeight: 'bold' }}>
-              Exit validator
+              <FormattedMessage defaultMessage="Exit validator" />
             </Text>
-            Initiates the process of permanently exiting your validator account
-            from the Ethereum proof-of-stake network, and withdrawing entire
-            balance.
+            <FormattedMessage defaultMessage="Initiates the process of permanently exiting your validator account from the Ethereum proof-of-stake network, and withdrawing entire balance." />
           </div>
           <ForceExit validator={validator} />
         </Row>

@@ -536,6 +536,9 @@
   "7kWKe0": {
     "message": "The withdrawal queue is automatically filled and processed by block proposers, who automatically check for any available payouts via a sweeping mechanism."
   },
+  "7rnL9U": {
+    "message": "Exit validator"
+  },
   "7sZfCF": {
     "message": "More on Nimbus"
   },
@@ -568,6 +571,9 @@
   },
   "8Rj/6A": {
     "message": "Choose the OS of the computer you're currently using. This will be the computer you use to generate your keys. It doesn't need to be the OS you want to use for your node."
+  },
+  "8VlOTO": {
+    "message": "Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type."
   },
   "8WtyrD": {
     "message": "Spanish"
@@ -914,6 +920,9 @@
   },
   "EcCME0": {
     "message": "Staking Launchpad"
+  },
+  "Ef+t8S": {
+    "message": "Request partial withdrawal"
   },
   "Ej2jo1": {
     "message": "Withdrawal address:"
@@ -1682,6 +1691,9 @@
   "Szwbym": {
     "message": "wrench"
   },
+  "T5tldp": {
+    "message": "Upgrade account to compounding"
+  },
   "THIzw6": {
     "message": "Validators and Ethereum"
   },
@@ -2281,6 +2293,9 @@
   "g8tzOu": {
     "message": "Paste your chosen address here to include it in the copy/paste CLI command below:"
   },
+  "gAnk66": {
+    "message": "Initiates the process of permanently exiting your validator account from the Ethereum proof-of-stake network, and withdrawing entire balance."
+  },
   "gFj3By": {
     "message": "highly variable"
   },
@@ -2657,6 +2672,9 @@
   "mArJcj": {
     "message": "Hard drive"
   },
+  "mF0eMi": {
+    "message": "Increases the maximum effective balance from {MIN_ACTIVATION_BALANCE} to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}."
+  },
   "mH6bSl": {
     "message": "Since the successful transition to proof-of-stake via The Merge, Ethereum is fully secured by proof-of-stake validators. By running a validator, you'll be helping to secure the Ethereum network."
   },
@@ -2967,6 +2985,9 @@
   },
   "rD3ot9": {
     "message": "Phishing guide"
+  },
+  "rSCnTP": {
+    "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}. You can currently withdrawal up to {surplus} {TICKER_NAME}."
   },
   "rTSJI9": {
     "message": "Try the testnet"
@@ -3331,6 +3352,9 @@
   },
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
+  },
+  "yYe/CX": {
+    "message": "Migrate funds"
   },
   "ydh1KU": {
     "message": "Language information"

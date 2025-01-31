@@ -181,6 +181,19 @@ const _TopUpPage: React.FC<Props> = () => {
     setLoading(false);
   }, [setLoading]);
 
+  const BackButton = () => {
+    if (!selectedValidator) return null;
+    return (
+      <BackText
+        onClick={() => setSelectedValidator(null)}
+        color="blueMedium"
+        style={{ marginTop: '2px', marginBottom: '1rem' }}
+      >
+        <Arrow />
+        <FormattedMessage defaultMessage="All validators" />
+      </BackText>
+    );
+  };
   const topUpPageContent = useMemo(() => {
     if (loading) {
       return <Spinner className="mt40" />;
@@ -238,7 +251,9 @@ const _TopUpPage: React.FC<Props> = () => {
     }
 
     if (selectedValidator) {
-      return <TopupPage validator={selectedValidator} />;
+      return (
+        <TopupPage validator={selectedValidator} backButton={<BackButton />} />
+      );
     }
 
     return (
@@ -291,15 +306,7 @@ const _TopUpPage: React.FC<Props> = () => {
         title={formatMessage({ defaultMessage: 'Top up a validator' })}
       >
         {/* render a "back button" if there's a selected validator */}
-        {selectedValidator && (
-          <BackText
-            onClick={() => setSelectedValidator(null)}
-            color="blueMedium"
-          >
-            <Arrow />
-            <FormattedMessage defaultMessage="All validators" />
-          </BackText>
-        )}
+        <BackButton />
 
         <SubTextContainer className="my20">
           <Text className="mb20">

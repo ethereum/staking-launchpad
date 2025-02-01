@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
-import { Checkmark, FormDown, FormUp } from 'grommet-icons';
+import { FormDown, FormUp } from 'grommet-icons';
 
 const Container = styled.div`
   position: relative;
@@ -53,7 +53,12 @@ const Item = styled.div`
   }
 
   &[data-selected='true'] {
-    background-color: #e0e0e0;
+    outline: 1px solid #00000010;
+    outline-offset: -1px;
+    background-color: #b0e0e680;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    margin: 0.125rem 0.25rem;
   }
 `;
 
@@ -157,21 +162,18 @@ const Select = ({
             }
           />
           <GridCol4>
-            {filteredOptions.map(option => (
-              <Item
-                key={option.value}
-                data-selected={option.value === value}
-                onClick={() => handleSelect(option.value)}
-              >
-                {option.label}
-                <Checkmark
-                  style={{
-                    fill: '#26AB83',
-                    visibility: option.value === value ? 'visible' : 'hidden',
-                  }}
-                />
-              </Item>
-            ))}
+            {filteredOptions.map(option => {
+              const isSelected = option.value === value;
+              return (
+                <Item
+                  key={option.value}
+                  data-selected={isSelected}
+                  onClick={() => handleSelect(option.value)}
+                >
+                  {option.label}
+                </Item>
+              );
+            })}
           </GridCol4>
         </Content>
       )}

@@ -76,7 +76,7 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
         </Heading>
 
         <Text>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <Hash>{validator.pubkey}</Hash>
             <CopyToClipboard
               text={validator.pubkey.toString()}

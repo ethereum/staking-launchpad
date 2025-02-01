@@ -36,11 +36,22 @@ const Row = styled.div`
   &:not(:last-child) {
     border-bottom: 1px solid lightgray;
   }
+
+  @media (max-width: 32rem) {
+    flex-direction: column;
+    padding-block: 1.5rem;
+    gap: 1.5rem;
+    align-items: start;
+  }
 `;
 
 const ActionTitle = styled(Text)`
-  margin: 0;
   font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.25rem;
+  @media (max-width: 32rem) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 interface Props {

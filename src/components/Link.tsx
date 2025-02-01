@@ -43,7 +43,7 @@ const StyledExternalLink = styled.a<
     display: ${(props: any) => (props.isTextLink ? `inline` : `none`)};
     margin-inline-start: 0.125em;
     margin-inline-end: 0.3em;
-    content: '${({ isRtl }: any) => (isRtl ? '↖' : '↗')}';
+    content: '${({ isRtl }: any) => (isRtl ? '↖\uFE0E' : '↗\uFE0E')}';
     transition: all 0.1s ease-in-out;
     font-style: normal;
   }
@@ -51,7 +51,7 @@ const StyledExternalLink = styled.a<
     display: ${(props: any) => (props.isTextLink ? `none` : `inline`)};
     margin-inline-start: 0.25em;
     margin-inline-end: 0.3em;
-    content: '${({ isRtl }: any) => (isRtl ? '↖' : '↗')}';
+    content: '${({ isRtl }: any) => (isRtl ? '↖\uFE0E' : '↗\uFE0E')}';
     font-style: normal;
   }
 `;

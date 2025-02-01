@@ -11,7 +11,8 @@ export const CopyContainer = styled.button`
   background: rgb(255 255 255 / 50%);
   border: 1px solid ${p => p.theme.blue.dark};
   border-radius: 4px;
-  margin-inline-start: 1rem;
+  color: ${p => p.theme.gray.dark};
+
   &:hover {
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     background-image: linear-gradient(to right, ${p => p.theme.rainbow});

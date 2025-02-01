@@ -43,35 +43,44 @@ const ValidatorSelector = ({
       searchPlaceholder={formatMessage({
         defaultMessage: 'Filter by index or pubkey',
       })}
-      options={validators.map(v => ({
-        value: v.pubkey,
-        searchContext: `${v.validatorindex.toString()}:${v.pubkey}`,
-        label: (
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'subgrid',
-              gridColumn: 'span 3',
-            }}
-          >
-            <p style={{ margin: 0, textAlign: 'start' }}>
-              {v.validatorindex.toString()}
-            </p>
-            <AccountType>{v.withdrawalcredentials.slice(0, 4)}</AccountType>
-            <p
+      options={validators.map(v => {
+        return {
+          value: v.pubkey,
+          searchContext: `${v.validatorindex.toString()}:${v.pubkey}`,
+          label: (
+            <div
               style={{
-                margin: 0,
-                textAlign: 'end',
-                marginInlineStart: 'auto',
-                fontSize: '0.75em',
-                color: '#444',
+                display: 'grid',
+                gridTemplateColumns: 'subgrid',
+                gridColumn: 'span 3',
+                color:
+                  v.status.includes('exit') || v.status.includes('slash')
+                    ? '#808080'
+                    : '#202020',
               }}
             >
-              {(v.balance / ETHER_TO_GWEI).toFixed(9)} {TICKER_NAME}
-            </p>
-          </div>
-        ),
-      }))}
+              <p style={{ margin: 0, textAlign: 'start' }}>
+                {v.validatorindex.toString()}
+              </p>
+              <AccountType>{v.withdrawalcredentials.slice(0, 4)}</AccountType>
+              <p
+                style={{
+                  margin: 0,
+                  textAlign: 'end',
+                  marginInlineStart: 'auto',
+                  fontSize: '0.75em',
+                  color:
+                    v.status.includes('exit') || v.status.includes('slash')
+                      ? '#808080'
+                      : '#404040',
+                }}
+              >
+                {(v.balance / ETHER_TO_GWEI).toFixed(9)} {TICKER_NAME}
+              </p>
+            </div>
+          ),
+        };
+      })}
       value={selectedValidator?.pubkey || ''}
       onChange={(value: string) => {
         const validator = validators.find(v => v.pubkey === value);

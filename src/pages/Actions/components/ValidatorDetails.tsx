@@ -34,6 +34,9 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
   };
 
   const prefix = validator.withdrawalcredentials.slice(0, 4);
+  const hasExitCompleted =
+    hasValidatorExited(validator) &&
+    epochToDate(validator.exitepoch).getTime() < Date.now();
   return (
     <Section
       style={{
@@ -98,7 +101,16 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
         >
           <Text>
             <strong>
-              <FormattedMessage defaultMessage="Validator exit initiated - no further actions performable" />
+              <FormattedMessage
+                defaultMessage="Validator exit {pending} - no further performable actions"
+                values={{
+                  pending: hasExitCompleted ? (
+                    ''
+                  ) : (
+                    <FormattedMessage defaultMessage="pending" />
+                  ),
+                }}
+              />
             </strong>
           </Text>
           <Text>
@@ -114,6 +126,16 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
             })}
             )
           </Text>
+          {validator.balance > 0 && (
+            <Text>
+              {hasExitCompleted ? (
+                <FormattedMessage defaultMessage="The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to your connected withdrawal account within the next few days." />
+              ) : (
+                <FormattedMessage defaultMessage="The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to your connected withdrawal account within a few days." />
+              )}{' '}
+              <FormattedMessage defaultMessage="No further action is required." />
+            </Text>
+          )}
         </div>
       )}
     </Section>

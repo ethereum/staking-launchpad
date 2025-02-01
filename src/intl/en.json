@@ -170,6 +170,9 @@
   "0fkPmg": {
     "message": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, written in Rust."
   },
+  "0flw9D": {
+    "message": "No further action is required."
+  },
   "0i4cCJ": {
     "message": "Confirm deposits ({depositKeys})"
   },
@@ -369,6 +372,9 @@
   },
   "3hmlu1": {
     "message": "Select a validator"
+  },
+  "3ioB61": {
+    "message": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to your connected withdrawal account within a few days."
   },
   "3jhjXW": {
     "message": "Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
@@ -948,6 +954,9 @@
   "EwtSGs": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending {TICKER_NAME} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
   },
+  "F76RER": {
+    "message": "The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to your connected withdrawal account within the next few days."
+  },
   "F8yf1S": {
     "message": "You can find {docsHere}."
   },
@@ -1214,9 +1223,6 @@
   "Jvu600": {
     "message": "Your mnemonic"
   },
-  "K1TZPZ": {
-    "message": "Validator exit initiated - no further actions performable"
-  },
   "K3uH1C": {
     "message": "offline"
   },
@@ -1238,6 +1244,9 @@
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
     "message": "You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
   },
+  "KBXNOk": {
+    "message": "All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached"
+  },
   "KBjoXt": {
     "message": "Download and uncompress the master branch source code from GitHub."
   },
@@ -1256,6 +1265,9 @@
   },
   "KQrlTP": {
     "message": "join"
+  },
+  "KUz3Pf": {
+    "message": "pending"
   },
   "KWWsDo": {
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
@@ -1990,9 +2002,6 @@
   "Yganfl": {
     "message": "Type the following lines into the terminal window:"
   },
-  "YiGkjo": {
-    "message": "All remaining funds will be transferred to this withdrawal address within a few days after exit epoch reached"
-  },
   "YqsgWz": {
     "message": "Slovenian"
   },
@@ -2629,6 +2638,9 @@
   },
   "kuYpoI": {
     "message": "Current balance"
+  },
+  "kuzPja": {
+    "message": "Validator exit {pending} - no further performable actions"
   },
   "kv1nqx": {
     "message": "Exited"

@@ -181,7 +181,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   </li>
                   <li>
                     <Text as="span">
-                      <FormattedMessage defaultMessage="All remaining funds will be transferred to this withdrawal address within a few days after exit epoch reached" />
+                      <FormattedMessage defaultMessage="All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached" />
                     </Text>
                   </li>
                 </ul>

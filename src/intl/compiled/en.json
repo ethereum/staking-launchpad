@@ -479,6 +479,12 @@
       "value": "Reth is a modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, written in Rust."
     }
   ],
+  "0flw9D": [
+    {
+      "type": 0,
+      "value": "No further action is required."
+    }
+  ],
   "0i4cCJ": [
     {
       "type": 0,
@@ -1017,6 +1023,12 @@
     {
       "type": 0,
       "value": "Select a validator"
+    }
+  ],
+  "3ioB61": [
+    {
+      "type": 0,
+      "value": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to your connected withdrawal account within a few days."
     }
   ],
   "3jhjXW": [
@@ -2529,6 +2541,12 @@
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
     }
   ],
+  "F76RER": [
+    {
+      "type": 0,
+      "value": "The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to your connected withdrawal account within the next few days."
+    }
+  ],
   "F8yf1S": [
     {
       "type": 0,
@@ -3215,12 +3233,6 @@
       "value": "Your mnemonic"
     }
   ],
-  "K1TZPZ": [
-    {
-      "type": 0,
-      "value": "Validator exit initiated - no further actions performable"
-    }
-  ],
   "K3uH1C": [
     {
       "type": 0,
@@ -3273,6 +3285,12 @@
       "value": "."
     }
   ],
+  "KBXNOk": [
+    {
+      "type": 0,
+      "value": "All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached"
+    }
+  ],
   "KBjoXt": [
     {
       "type": 0,
@@ -3323,6 +3341,12 @@
     {
       "type": 0,
       "value": "join"
+    }
+  ],
+  "KUz3Pf": [
+    {
+      "type": 0,
+      "value": "pending"
     }
   ],
   "KWWsDo": [
@@ -5273,12 +5297,6 @@
       "value": "Type the following lines into the terminal window:"
     }
   ],
-  "YiGkjo": [
-    {
-      "type": 0,
-      "value": "All remaining funds will be transferred to this withdrawal address within a few days after exit epoch reached"
-    }
-  ],
   "YqsgWz": [
     {
       "type": 0,
@@ -6971,6 +6989,20 @@
     {
       "type": 0,
       "value": "Current balance"
+    }
+  ],
+  "kuzPja": [
+    {
+      "type": 0,
+      "value": "Validator exit "
+    },
+    {
+      "type": 1,
+      "value": "pending"
+    },
+    {
+      "type": 0,
+      "value": " - no further performable actions"
     }
   ],
   "kv1nqx": [

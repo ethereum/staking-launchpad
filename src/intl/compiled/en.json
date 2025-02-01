@@ -3347,6 +3347,44 @@
       "value": "View the Staking Checklist"
     }
   ],
+  "KiEciE": [
+    {
+      "type": 0,
+      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for the validator to operate, you will be able to withdraw a maximum of "
+    },
+    {
+      "type": 1,
+      "value": "maxAmount"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "KqGKRA": [
     {
       "type": 0,
@@ -3465,6 +3503,28 @@
     {
       "type": 0,
       "value": "Thank you for supporting the Ethereum network!"
+    }
+  ],
+  "LosS33": [
+    {
+      "type": 0,
+      "value": "Your validator must have a minimum balance of "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
     }
   ],
   "LpnfTF": [
@@ -8675,28 +8735,6 @@
       "value": "More on proof of stake"
     }
   ],
-  "wdmzfP": [
-    {
-      "type": 0,
-      "value": "Your validator must have a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "MIN_VALIDATOR_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-    }
-  ],
   "wm04oC": [
     {
       "type": 0,
@@ -8915,44 +8953,6 @@
     {
       "type": 0,
       "value": "Your validator has its own balance, with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
-    }
-  ],
-  "y1mlHE": [
-    {
-      "type": 0,
-      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "MIN_VALIDATOR_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " for the validator to operate, you will be able to withdraw a maximum of "
-    },
-    {
-      "type": 1,
-      "value": "maxAmount"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "y44jV2": [

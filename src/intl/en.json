@@ -1267,6 +1267,9 @@
   "KhJBVZ": {
     "message": "View the Staking Checklist"
   },
+  "KiEciE": {
+    "message": "Please select how much you would like to withdraw. Due to requiring a minimum balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount} {TICKER_NAME}."
+  },
   "KqGKRA": {
     "message": "Once the process is complete, you should see the following:"
   },
@@ -1322,6 +1325,9 @@
   },
   "LlClXS": {
     "message": "Thank you for supporting the Ethereum network!"
+  },
+  "LosS33": {
+    "message": "Your validator must have a minimum balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
   },
   "LpnfTF": {
     "message": "Lodestar installation documentation"
@@ -3270,9 +3276,6 @@
   "wdb1NC": {
     "message": "More on proof of stake"
   },
-  "wdmzfP": {
-    "message": "Your validator must have a minimum balance of {MIN_VALIDATOR_BALANCE} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-  },
   "wm04oC": {
     "message": "Run the following command:"
   },
@@ -3363,9 +3366,6 @@
   },
   "xzmWbJ": {
     "message": "Your validator has its own balance, with the initial balance outlined in the deposit contract. Your rewards and penalties are reflected in your validator's balance over time."
-  },
-  "y1mlHE": {
-    "message": "Please select how much you would like to withdraw. Due to requiring a minimum balance of {MIN_VALIDATOR_BALANCE} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount} {TICKER_NAME}."
   },
   "y44jV2": {
     "message": "Several upgrades are underway that will make Ethereum more scalable, secure, and sustainable. These upgrades will improve Ethereum while seamlessly continuing on the chain of today. Here's more on the different upgrades:"

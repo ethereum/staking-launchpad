@@ -70,21 +70,32 @@ if(process.env.REACT_APP_EJECTION_PRICE && Number.isNaN(Number(process.env.REACT
 }
 export const EJECTION_PRICE             = process.env.REACT_APP_EJECTION_PRICE || 16;
 
+if(process.env.REACT_APP_MIN_GENESIS_TIME && Number.isNaN(Number(process.env.REACT_APP_MIN_GENESIS_TIME))) {
+    throw new Error("REACT_APP_MIN_GENESIS_TIME must be of type: number")
+}
+export const BEACON_CHAIN_GENESIS_TIME  = Number(process.env.REACT_APP_MIN_GENESIS_TIME) || 1606824023_000 // 2020-12-01T12:00:23Z
+
+if(process.env.REACT_APP_SLOTS_PER_EPOCH && Number.isNaN(Number(process.env.REACT_APP_SLOTS_PER_EPOCH))) {
+    throw new Error("REACT_APP_SLOTS_PER_EPOCH must be of type: number")
+}
+export const SLOTS_PER_EPOCH            = Number(process.env.REACT_APP_SLOTS_PER_EPOCH)  || 32 // 2^5
+
+if(process.env.REACT_APP_SECONDS_PER_SLOT && Number.isNaN(Number(process.env.REACT_APP_SECONDS_PER_SLOT))) {
+    throw new Error("REACT_APP_SECONDS_PER_SLOT must be of type: number")
+}
+export const SECONDS_PER_SLOT           = Number(process.env.REACT_APP_SECONDS_PER_SLOT) || 12
+
+export const MS_PER_SLOT                = SECONDS_PER_SLOT * 1000
+
 // BLS signature verification variables
 export const ETHER_TO_GWEI              = 1e9;
 export const MIN_DEPOSIT_AMOUNT         = 1 * ETHER_TO_GWEI;
 export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
 
-export const BLS_CREDENTIALS = "0x00";
+export const BLS_CREDENTIALS            = "0x00";
 export const EXECUTION_CREDENTIALS = "0x01";
 export const COMPOUNDING_CREDENTIALS = "0x02";
-export const MIN_VALIDATOR_BALANCE = 32;
 
 // Boolean to translate CLI command flags, or keep in English
 export const TRANSLATE_CLI_FLAGS        = process.env.REACT_APP_TRANSLATE_CLI_FLAGS === 'true';
-
-// Beacon chain timing constants
-export const BEACON_CHAIN_GENESIS_TIME  = 1606824023_000 // 2020-12-01T12:00:23Z
-export const SLOTS_PER_EPOCH            = 32 // 2^5
-export const MS_PER_SLOT                = 12_000

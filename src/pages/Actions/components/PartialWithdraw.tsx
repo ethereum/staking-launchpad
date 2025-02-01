@@ -16,7 +16,7 @@ import {
 import { Text } from '../../../components/Text';
 import { generateWithdrawalParams } from '../ActionUtils';
 
-import { MIN_VALIDATOR_BALANCE, TICKER_NAME } from '../../../utils/envVars';
+import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 
 interface Props {
   validator: Validator;
@@ -36,7 +36,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
   useEffect(() => {
     setMaxAmount(
-      validator ? Math.max(0, validator.coinBalance - MIN_VALIDATOR_BALANCE) : 0
+      validator
+        ? Math.max(0, validator.coinBalance - MIN_ACTIVATION_BALANCE)
+        : 0
     );
   }, [validator]);
 
@@ -94,20 +96,17 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                 defaultMessage="Your validator has a balance of {balance}"
                 values={{ balance: validator.balanceDisplay }}
               />
-              {validator.coinBalance <= MIN_VALIDATOR_BALANCE ? (
+              {validator.coinBalance <= MIN_ACTIVATION_BALANCE ? (
                 <FormattedMessage
-                  defaultMessage="Your validator must have a minimum balance of {MIN_VALIDATOR_BALANCE} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-                  values={{
-                    MIN_VALIDATOR_BALANCE,
-                    TICKER_NAME,
-                  }}
+                  defaultMessage="Your validator must have a minimum balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
+                  values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
                 />
               ) : (
                 <>
                   <FormattedMessage
-                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {MIN_VALIDATOR_BALANCE} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount} {TICKER_NAME}."
+                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount} {TICKER_NAME}."
                     values={{
-                      MIN_VALIDATOR_BALANCE,
+                      MIN_ACTIVATION_BALANCE,
                       maxAmount,
                       TICKER_NAME,
                     }}

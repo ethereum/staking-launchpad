@@ -231,6 +231,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   color="dark-3"
                   fullWidth
                   destructive
+                  type="submit"
                   disabled={
                     userConfirmationValue.localeCompare(
                       CONFIRM_EXIT_STRING,
@@ -244,7 +245,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
               </Form>
             ) : (
               <Button
-                label="Fully exit validator"
+                label={
+                  <FormattedMessage defaultMessage="Fully exit validator" />
+                }
                 onClick={() => setStepTwo(true)}
                 color="dark-3"
                 destructive

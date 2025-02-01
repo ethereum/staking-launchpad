@@ -27,6 +27,7 @@ import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
 import { BEACONCHAIN_URL, ETHER_TO_GWEI } from '../../utils/envVars';
+import { hasValidatorExited } from '../../utils/validators';
 
 // https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
 const MAX_QUERY_LIMIT = 100;
@@ -250,10 +251,12 @@ const _ActionsPage: React.FC<Props> = () => {
           <>
             <ValidatorDetails validator={selectedValidator} />
 
-            <ValidatorActions
-              validator={selectedValidator}
-              validators={validators}
-            />
+            {!hasValidatorExited(selectedValidator) && (
+              <ValidatorActions
+                validator={selectedValidator}
+                validators={validators}
+              />
+            )}
           </>
         )}
       </>

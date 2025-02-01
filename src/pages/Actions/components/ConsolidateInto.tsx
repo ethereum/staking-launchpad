@@ -108,12 +108,12 @@ const ConsolidateInto = ({
             pad={{ top: 'medium', bottom: 'small' }}
           >
             <Button
-              label="Cancel"
+              label={<FormattedMessage defaultMessage="Cancel" />}
               onClick={() => closeSelectValidatorModal()}
             />
             <Button
               disabled={!selectedValidator}
-              label="Pull funds"
+              label={<FormattedMessage defaultMessage="Pull funds" />}
               onClick={() => createConsolidationTransaction()}
             />
           </Box>
@@ -134,6 +134,7 @@ const ConsolidateInto = ({
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={() => setShowTxModal(false)}
+          handleRetry={createConsolidationTransaction}
         />
       )}
 

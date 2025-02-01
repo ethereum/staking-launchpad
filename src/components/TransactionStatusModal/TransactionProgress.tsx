@@ -6,13 +6,6 @@ import Spinner from '../Spinner';
 import { Text } from '../Text';
 import { stepStatus } from './types';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  gap: 2rem;
-`;
-
 const Item = styled.div`
   display: flex;
   align-items: center;
@@ -118,7 +111,7 @@ export const TransactionProgress: React.FC<TransactionProgressProps> = ({
   confirmOnChainStatus,
 }) => {
   return (
-    <Container>
+    <div>
       <Item>
         <ProgressCircle step={1} status={signTxStatus} />
         <Text>
@@ -131,6 +124,6 @@ export const TransactionProgress: React.FC<TransactionProgressProps> = ({
           <FormattedMessage defaultMessage="Confirm on-chain" />
         </Text>
       </Item>
-    </Container>
+    </div>
   );
 };

@@ -511,6 +511,9 @@
   "793QlI": {
     "message": "{title} is not supported in offline mode."
   },
+  "7AL03B": {
+    "message": "I understand the consequences, consolidate funds"
+  },
   "7DFXQj": {
     "message": "Switch to {oppositeNetwork} launchpad"
   },
@@ -537,6 +540,9 @@
   },
   "7XiYRi": {
     "message": "Slashed?"
+  },
+  "7ceuUM": {
+    "message": "All remaining funds will be transferred to the {address} within a few days after exit epoch reached"
   },
   "7d3Nzd": {
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
@@ -1085,6 +1091,9 @@
   "HemvTL": {
     "message": "BLS withdrawal credentials ({type0}) can be updated to an execution address ({type1}) by broadcasting a BLS To Execution Change (BTEC) message, signed with your BLS withdrawal key. These messages are included in blocks at a max rate of 16 per block."
   },
+  "HgMYFB": {
+    "message": "This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network."
+  },
   "Hmxd5S": {
     "message": "Please make sure you select {NETWORK_NAME} when prompted for a network, otherwise the deposit will be invalid."
   },
@@ -1168,6 +1177,9 @@
   "J7T0SR": {
     "message": "Nimbus installation documentation"
   },
+  "J8hlId": {
+    "message": "Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
+  },
   "J9BaKo": {
     "description": "Asks users to check deposit contract address against a block explorer and confirm 32 ETH deposits are present",
     "message": "Are there recent deposits of at least {ethAmount}?"
@@ -1214,6 +1226,9 @@
   "Jvu600": {
     "message": "Your mnemonic"
   },
+  "Jy0Frw": {
+    "message": "validator index {index}"
+  },
   "K3uH1C": {
     "message": "offline"
   },
@@ -1234,9 +1249,6 @@
   "KBSbmP": {
     "description": "{reloadYourWallet} is a link labeled 'reload your wallet'",
     "message": "You can {reloadYourWallet} to try again, or refresh the page. If issue persists, let us know on {github}."
-  },
-  "KBXNOk": {
-    "message": "All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached"
   },
   "KBjoXt": {
     "message": "Download and uncompress the master branch source code from GitHub."
@@ -1497,9 +1509,6 @@
   },
   "OSEFbC": {
     "message": "Immediately upon broadcasting a signed voluntary exit message, the {exitEpoch} and {withdrawableEpoch} values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
-  },
-  "OZKK+w": {
-    "message": "You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion."
   },
   "OdYQYh": {
     "message": "More on ConsenSys"
@@ -2394,9 +2403,6 @@
   },
   "guMfKn": {
     "message": "This means that you don't need to go to extreme lengths with backup clients or redundant internet connections as the repercussions of being offline are not so severe."
-  },
-  "gwqDoe": {
-    "message": "This account will be exited from the network, and its full balance will be migrated to validator index {index}."
   },
   "gx6frf": {
     "message": "clock"
@@ -3430,6 +3436,9 @@
   "yK2eQ+": {
     "message": "Minor penalties are given for inadvertent actions (or inactions) that hinder consensus"
   },
+  "yRUNrr": {
+    "message": "You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion."
+  },
   "ySYWBD": {
     "message": "I am keeping my key(s) safe and have written down my mnemonic phrase."
   },
@@ -3438,6 +3447,9 @@
   },
   "ydh1KU": {
     "message": "Language information"
+  },
+  "yeOdna": {
+    "message": "connected execution withdrawal address"
   },
   "yis3aS": {
     "message": "This is the expected scenario."

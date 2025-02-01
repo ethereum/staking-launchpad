@@ -1467,6 +1467,12 @@
       "value": " is not supported in offline mode."
     }
   ],
+  "7AL03B": [
+    {
+      "type": 0,
+      "value": "I understand the consequences, consolidate funds"
+    }
+  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1531,6 +1537,20 @@
     {
       "type": 0,
       "value": "Slashed?"
+    }
+  ],
+  "7ceuUM": [
+    {
+      "type": 0,
+      "value": "All remaining funds will be transferred to the "
+    },
+    {
+      "type": 1,
+      "value": "address"
+    },
+    {
+      "type": 0,
+      "value": " within a few days after exit epoch reached"
     }
   ],
   "7d3Nzd": [
@@ -2879,6 +2899,12 @@
       "value": ") by broadcasting a BLS To Execution Change (BTEC) message, signed with your BLS withdrawal key. These messages are included in blocks at a max rate of 16 per block."
     }
   ],
+  "HgMYFB": [
+    {
+      "type": 0,
+      "value": "This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network."
+    }
+  ],
   "Hmxd5S": [
     {
       "type": 0,
@@ -3097,6 +3123,28 @@
       "value": "Nimbus installation documentation"
     }
   ],
+  "J8hlId": [
+    {
+      "type": 0,
+      "value": "Account "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    },
+    {
+      "type": 0,
+      "value": " will be exited from the network, and its full balance will be migrated to validator index "
+    },
+    {
+      "type": 1,
+      "value": "targetIndex"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "J9BaKo": [
     {
       "type": 0,
@@ -3211,6 +3259,16 @@
       "value": "Your mnemonic"
     }
   ],
+  "Jy0Frw": [
+    {
+      "type": 0,
+      "value": "validator index "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
   "K3uH1C": [
     {
       "type": 0,
@@ -3261,12 +3319,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "KBXNOk": [
-    {
-      "type": 0,
-      "value": "All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached"
     }
   ],
   "KBjoXt": [
@@ -3973,12 +4025,6 @@
     {
       "type": 0,
       "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
-    }
-  ],
-  "OZKK+w": [
-    {
-      "type": 0,
-      "value": "You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion."
     }
   ],
   "OdYQYh": [
@@ -6337,20 +6383,6 @@
     {
       "type": 0,
       "value": "This means that you don't need to go to extreme lengths with backup clients or redundant internet connections as the repercussions of being offline are not so severe."
-    }
-  ],
-  "gwqDoe": [
-    {
-      "type": 0,
-      "value": "This account will be exited from the network, and its full balance will be migrated to validator index "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "gx6frf": [
@@ -9089,6 +9121,12 @@
       "value": "Minor penalties are given for inadvertent actions (or inactions) that hinder consensus"
     }
   ],
+  "yRUNrr": [
+    {
+      "type": 0,
+      "value": "You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion."
+    }
+  ],
   "ySYWBD": [
     {
       "type": 0,
@@ -9105,6 +9143,12 @@
     {
       "type": 0,
       "value": "Language information"
+    }
+  ],
+  "yeOdna": [
+    {
+      "type": 0,
+      "value": "connected execution withdrawal address"
     }
   ],
   "yis3aS": [

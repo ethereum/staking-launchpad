@@ -58,6 +58,15 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
       .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
   };
+
+  const getStatusColor = (status: string) => {
+    if (status.includes('offline')) return '#e74c3c';
+    if (status.includes('slash')) return '#e74c3c';
+    if (status.includes('online')) return 'green';
+    if (status.includes('exit')) return 'darkred';
+    return 'inherit';
+  };
+
   return (
     <Section
       style={{
@@ -106,7 +115,9 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
 
         <Text>
           <FormattedMessage defaultMessage="Status" />:{' '}
-          {getStatus(validator.status)}
+          <span style={{ color: getStatusColor(validator.status) }}>
+            {getStatus(validator.status)}
+          </span>
         </Text>
 
         <Text>

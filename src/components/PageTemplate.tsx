@@ -14,9 +14,12 @@ const Content = styled.div`
 `;
 
 const Gutter = styled.div`
-  padding: 0 48px 5rem; // adds space for footer
+  padding: 0 3rem 5rem; // adds space for footer
   display: flex;
   justify-content: center;
+  @media (max-width: 48rem) {
+    padding: 0 1.5rem 4rem;
+  }
 `;
 
 const RainbowBackground = styled.div`

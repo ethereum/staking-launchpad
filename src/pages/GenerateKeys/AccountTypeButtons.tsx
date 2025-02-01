@@ -17,9 +17,8 @@ const Container = styled.div`
 `;
 
 const ChoiceButton = styled.button<{ isActive: boolean }>`
-  box-shadow: ${({ isActive }) => (isActive ? '0 0 10px rgba(0,0,0,0.5)' : '')};
-  background: ${({ isActive }) =>
-    isActive ? 'rgba(0,0,0,0.05)' : 'transparent'};
+  box-shadow: ${p => (p.isActive ? '0 0 10px rgba(0,0,0,0.5)' : '')};
+  background: ${p => (p.isActive ? 'rgba(0,0,0,0.05)' : 'transparent')};
   cursor: pointer;
   max-width: 400px;
   min-width: min(100%, 300px)
@@ -30,6 +29,7 @@ const ChoiceButton = styled.button<{ isActive: boolean }>`
   gap: 2rem;
   align-items: center;
   transition: all 200ms ease-in-out;
+  opacity: ${p => (p.isActive ? 1 : 0.5)};
 `;
 
 const ButtonSection = styled.div`

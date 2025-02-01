@@ -184,7 +184,7 @@ export const pageContent = {
             }}
           />
         </Text>
-        <Link to="/withdrawals" className="mt10" primary>
+        <Link to="/withdrawals" className="mt10" primary shouldOpenNewTab>
           <FormattedMessage defaultMessage="More on withdrawals" />
         </Link>
       </>

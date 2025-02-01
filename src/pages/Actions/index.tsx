@@ -223,7 +223,7 @@ const _ActionsPage: React.FC<Props> = () => {
     return (
       <>
         <Section>
-          <Text>
+          <Text className="mb10">
             <FormattedMessage defaultMessage="Select a validator" />
           </Text>
 

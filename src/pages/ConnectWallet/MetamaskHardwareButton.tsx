@@ -27,7 +27,6 @@ const StyledPaper = styled(Paper)`
     transition: transform 0.1s;
     transform: scale(1.02);
   }
-  outline: 3px solid purple;
 `;
 
 export const MetamaskHardwareButton = () => {
@@ -37,10 +36,7 @@ export const MetamaskHardwareButton = () => {
       isTextLink={false}
       to="https://support.metamask.io/more-web3/wallets/user-guide-how-to-use-a-hardware-wallet/"
     >
-      <StyledPaper
-        pad="xsmall"
-        className="wallet-button flex flex-row relative"
-      >
+      <StyledPaper pad="xsmall" className="flex flex-row relative">
         <Logo src={ledger} />
         <StyledText>
           <FormattedMessage defaultMessage="Connect your hardware wallet to MetaMask" />

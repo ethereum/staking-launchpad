@@ -275,7 +275,7 @@ export const Option3 = ({
         <FormattedMessage defaultMessage="Build deposit-cli from the Python source code" />
       </Heading>
       <Heading level={4} size="small" color="blueMedium" className="mb10">
-        <FormattedMessage defaultMessage="Install python3.7+" />
+        <FormattedMessage defaultMessage="Install python3.9+" />
       </Heading>
       <Text>{renderPythonInstructions()}</Text>
       <Text>
@@ -309,9 +309,10 @@ export const Option3 = ({
       </Heading>
       <Text>
         <FormattedMessage defaultMessage="virtualenv would help you to create an isolated Python environment for deposit-cli tool." />
+      </Text>
+      <Text>
         <Link
           to="https://virtualenv.pypa.io/en/latest/installation.html"
-          inline
           primary
         >
           <FormattedMessage defaultMessage="More on virtualenv" />

@@ -10,7 +10,11 @@ import { Section, CopyContainer } from './Shared';
 import { Validator } from '../types';
 
 import { hasValidatorExited } from '../../../utils/validators';
-import { TICKER_NAME } from '../../../utils/envVars';
+import {
+  TICKER_NAME,
+  COMPOUNDING_CREDENTIALS,
+  EXECUTION_CREDENTIALS,
+} from '../../../utils/envVars';
 import { epochToDate } from '../../../utils/beaconchain';
 
 const Hash = styled.span`
@@ -37,6 +41,23 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
   const hasExitCompleted =
     hasValidatorExited(validator) &&
     epochToDate(validator.exitepoch).getTime() < Date.now();
+
+  const getStatus = (status: string) => {
+    if (status === 'active_online')
+      return <FormattedMessage defaultMessage="Active Online" />;
+    if (status === 'active_offline')
+      return <FormattedMessage defaultMessage="Active Offline" />;
+    if (status === 'exiting_online')
+      return <FormattedMessage defaultMessage="Exiting Online" />;
+    if (status === 'exiting_offline')
+      return <FormattedMessage defaultMessage="Exiting Offline" />;
+    if (status === 'exited')
+      return <FormattedMessage defaultMessage="Exited" />;
+    return status
+      .split('_')
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
   return (
     <Section
       style={{
@@ -84,8 +105,23 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
         </Text>
 
         <Text>
+          <FormattedMessage defaultMessage="Status" />:{' '}
+          {getStatus(validator.status)}
+        </Text>
+
+        <Text>
           <FormattedMessage defaultMessage="Withdrawal credential type" />:{' '}
-          <span style={{ fontFamily: 'monospace' }}>{prefix}</span>
+          <span style={{ fontFamily: 'monospace' }}>{prefix}</span>{' '}
+          {prefix === COMPOUNDING_CREDENTIALS && (
+            <span>
+              <FormattedMessage defaultMessage="(Compounding)" />
+            </span>
+          )}
+          {prefix === EXECUTION_CREDENTIALS && (
+            <span>
+              <FormattedMessage defaultMessage="(Regular withdrawals)" />
+            </span>
+          )}
         </Text>
       </div>
       {hasValidatorExited(validator) && (
@@ -129,9 +165,9 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
           {validator.balance > 0 && (
             <Text>
               {hasExitCompleted ? (
-                <FormattedMessage defaultMessage="The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to your connected withdrawal account within the next few days." />
+                <FormattedMessage defaultMessage="The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within the next few days." />
               ) : (
-                <FormattedMessage defaultMessage="The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to your connected withdrawal account within a few days." />
+                <FormattedMessage defaultMessage="The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within a few days." />
               )}{' '}
               <FormattedMessage defaultMessage="No further action is required." />
             </Text>

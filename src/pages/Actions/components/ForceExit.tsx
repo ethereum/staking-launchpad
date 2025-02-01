@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import styled from 'styled-components';
-import { Box, Heading, Layer, Form, TextInput } from 'grommet';
+import { Box, Layer, Form, TextInput } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
+import styled from 'styled-components';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
@@ -17,7 +17,7 @@ import {
 import { Text } from '../../../components/Text';
 import { generateWithdrawalParams } from '../ActionUtils';
 import { Alert } from '../../../components/Alert';
-import { CloseButton } from './Shared';
+import ModalHeader from './ModalHeader';
 
 const ModalSection = styled.div`
   padding: 1rem;
@@ -95,7 +95,6 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
 
   const { validatorindex } = validator;
 
-  console.log({ transactionStatus }); // "not_started" > "waiting_user_confirmation" > "error" "user_rejected" | "success"
   return (
     <>
       {showConfirmationModal && (
@@ -105,89 +104,71 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
           onClickOutside={closeConfirmationModal}
           style={{ background: '#EEEEEE', maxWidth: '40rem' }}
         >
-          <Box>
-            <ModalSection
+          <ModalHeader onClose={closeConfirmationModal}>
+            <FormattedMessage
+              defaultMessage="Exit validator {validatorindex}"
+              values={{ validatorindex }}
+            />
+          </ModalHeader>
+
+          <ModalSection style={{ borderBottom: '1px solid #dedede' }}>
+            <div style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>
+              <Alert variant="error">
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '1rem',
+                    alignItems: 'center',
+                  }}
+                >
+                  <AlertIcon />
+                  <div>
+                    <Text>
+                      <strong>
+                        <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
+                      </strong>
+                    </Text>
+                    <Text>
+                      <FormattedMessage defaultMessage="This validator should remain online until exit epoch is reached." />
+                    </Text>
+                  </div>
+                </div>
+              </Alert>
+            </div>
+            <div
+              className="modal-body"
               style={{
                 display: 'flex',
-                alignItems: 'center',
-                borderBottom: '1px solid #dedede',
-                gap: '0.5rem',
-                justifyContent: 'space-between',
+                gap: '1rem',
+                flexDirection: 'column',
               }}
             >
-              <Heading
-                level={3}
-                margin="none"
-                style={{
-                  flex: 1,
-                  fontSize: '1.5rem',
-                }}
-              >
-                <FormattedMessage
-                  defaultMessage="Exit validator {validatorindex}"
-                  values={{ validatorindex }}
-                />
-              </Heading>
-              <CloseButton label="Close" onClick={closeConfirmationModal} />
-            </ModalSection>
-            <ModalSection style={{ borderBottom: '1px solid #dedede' }}>
-              <div style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>
-                <Alert variant="error">
-                  <div
-                    style={{
-                      display: 'flex',
-                      gap: '1rem',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <AlertIcon />
-                    <div>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
-                        </strong>
-                      </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="This validator should remain online until exit epoch is reached." />
-                      </Text>
-                    </div>
-                  </div>
-                </Alert>
-              </div>
-              <div
-                className="modal-body"
-                style={{
-                  display: 'flex',
-                  gap: '1rem',
-                  flexDirection: 'column',
-                }}
-              >
-                <Text>
-                  <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
-                </Text>
-                <Text>
-                  <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion." />
-                </Text>
-                <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
-                  <li>
-                    <Text as="span">
-                      <FormattedMessage defaultMessage="Action is permanent and irreversible" />
-                    </Text>
-                  </li>
-                  <li>
-                    <Text as="span">
-                      <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
-                    </Text>
-                  </li>
-                  <li>
-                    <Text as="span">
-                      <FormattedMessage defaultMessage="All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached" />
-                    </Text>
-                  </li>
-                </ul>
-              </div>
-            </ModalSection>
-          </Box>
+              <Text>
+                <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
+              </Text>
+              <Text>
+                <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion." />
+              </Text>
+              <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
+                <li>
+                  <Text as="span">
+                    <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+                  </Text>
+                </li>
+                <li>
+                  <Text as="span">
+                    <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
+                  </Text>
+                </li>
+                <li>
+                  <Text as="span">
+                    <FormattedMessage defaultMessage="All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached" />
+                  </Text>
+                </li>
+              </ul>
+            </div>
+          </ModalSection>
+
           <Box
             as="footer"
             gap="small"

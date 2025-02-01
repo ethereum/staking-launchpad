@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import styled from 'styled-components';
 
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
-import { Section, CopyContainer } from './Shared';
+import { Section, CopyContainer, Hash } from './Shared';
 
 import { Validator } from '../types';
 
@@ -16,15 +15,6 @@ import {
   EXECUTION_CREDENTIALS,
 } from '../../../utils/envVars';
 import { epochToDate } from '../../../utils/beaconchain';
-
-const Hash = styled.span`
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 1;
-  font-family: monospace;
-`;
 
 const ValidatorDetails = ({ validator }: { validator: Validator }) => {
   const { locale } = useIntl();

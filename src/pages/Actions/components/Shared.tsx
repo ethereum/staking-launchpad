@@ -39,3 +39,34 @@ export const CloseButton = styled(GrommetButton)`
     background: #dddddd;
   }
 `;
+
+export const ModalBody = styled.div`
+  borderbottom: 1px solid #dedede;
+  padding: 1rem;
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+`;
+
+export const AlertContainer = styled.div`
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+`;
+
+export const AlertContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+export const Hash = styled.span`
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  font-family: monospace;
+`;

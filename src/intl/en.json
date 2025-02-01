@@ -656,6 +656,9 @@
   "9h8yTf": {
     "message": "A “withdrawable epoch” will also be calculated, which is 256 epochs after the calculated exit epoch (~27.3 hours later). When this epoch is reached, your validator will be eligible for a {fullWithdrawal} of all remaining funds."
   },
+  "9j3hXO": {
+    "message": "To"
+  },
   "9jnVGr": {
     "message": "Typically a minimum of 32 GB RAM is required, with 64 GB being recommended."
   },
@@ -1420,6 +1423,9 @@
   "MpbZo9": {
     "message": "Consolidate {index} into {otherIndex}"
   },
+  "MtgVBi": {
+    "message": "UNSTAKE FUNDS"
+  },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
   },
@@ -1669,9 +1675,6 @@
   "RrCui3": {
     "message": "Summary"
   },
-  "RtQYaf": {
-    "message": "EXIT FULLY"
-  },
   "RuFk89": {
     "message": "Absorb another validator"
   },
@@ -1686,6 +1689,9 @@
   },
   "S+FY5u": {
     "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
+  },
+  "S+cLw1": {
+    "message": "Ending balance"
   },
   "S3RTk+": {
     "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
@@ -2242,6 +2248,9 @@
   "dLE9FH": {
     "message": "If not, no withdrawal will be processed and account skipped"
   },
+  "dM+p3/": {
+    "message": "From"
+  },
   "dM/KIM": {
     "message": "What exactly is a validator?"
   },
@@ -2424,6 +2433,9 @@
   },
   "hBIbQ+": {
     "message": "Avoid overly-complicated setups and be aware of trade offs. Being offline for brief periods of time will result in small inactivity penalities, but will be recouped easily after being online again for about the same amount of time. Complicated power backups can add to the expense of your setup, and redundant backup validators can lead to a more serious penalty known as slashing."
+  },
+  "hCkFMJ": {
+    "message": "Index"
   },
   "hCwX6+": {
     "message": "BLS To Execution Change (BTEC) queue"

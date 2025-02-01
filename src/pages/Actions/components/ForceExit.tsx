@@ -2,26 +2,28 @@ import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Box, Layer, Form, TextInput } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
-import styled from 'styled-components';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
 import { Validator } from '../types';
 
+import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
+import { Text } from '../../../components/Text';
 import {
   TransactionStatus,
   TransactionStatusModal,
 } from '../../../components/TransactionStatusModal';
-import { Text } from '../../../components/Text';
-import { generateWithdrawalParams } from '../ActionUtils';
-import { Alert } from '../../../components/Alert';
 import ModalHeader from './ModalHeader';
+import {
+  ModalBody,
+  AlertContainer,
+  AlertContent,
+  ModalContent,
+} from './Shared';
 
-const ModalSection = styled.div`
-  padding: 1rem;
-`;
+import { generateWithdrawalParams } from '../ActionUtils';
 
 interface Props {
   validator: Validator;
@@ -91,7 +93,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     closeConfirmationModal();
   };
 
-  const CONFIRM_EXIT_STRING = formatMessage({ defaultMessage: 'EXIT FULLY' });
+  const CONFIRM_EXIT_STRING = formatMessage({
+    defaultMessage: 'UNSTAKE FUNDS',
+  });
 
   const { validatorindex } = validator;
 
@@ -111,16 +115,10 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
             />
           </ModalHeader>
 
-          <ModalSection style={{ borderBottom: '1px solid #dedede' }}>
-            <div style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>
+          <ModalBody>
+            <AlertContainer>
               <Alert variant="error">
-                <div
-                  style={{
-                    display: 'flex',
-                    gap: '1rem',
-                    alignItems: 'center',
-                  }}
-                >
+                <AlertContent>
                   <AlertIcon />
                   <div>
                     <Text>
@@ -128,26 +126,19 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                         <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
                       </strong>
                     </Text>
-                    <Text>
+                    <Text style={{ fontSize: '1rem' }}>
                       <FormattedMessage defaultMessage="This validator should remain online until exit epoch is reached." />
                     </Text>
                   </div>
-                </div>
+                </AlertContent>
               </Alert>
-            </div>
-            <div
-              className="modal-body"
-              style={{
-                display: 'flex',
-                gap: '1rem',
-                flexDirection: 'column',
-              }}
-            >
+            </AlertContainer>
+            <ModalContent>
               <Text>
                 <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
               </Text>
               <Text>
-                <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediately, so account for several days before completion." />
+                <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion." />
               </Text>
               <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
                 <li>
@@ -162,12 +153,21 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 </li>
                 <li>
                   <Text as="span">
-                    <FormattedMessage defaultMessage="All remaining funds will be transferred to the connected withdrawal address within a few days after exit epoch reached" />
+                    <FormattedMessage
+                      defaultMessage="All remaining funds will be transferred to the {address} within a few days after exit epoch reached"
+                      values={{
+                        address: (
+                          <strong>
+                            <FormattedMessage defaultMessage="connected execution withdrawal address" />
+                          </strong>
+                        ),
+                      }}
+                    />
                   </Text>
                 </li>
               </ul>
-            </div>
-          </ModalSection>
+            </ModalContent>
+          </ModalBody>
 
           <Box
             as="footer"
@@ -233,6 +233,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 color="dark-3"
                 destructive
                 secondary
+                fullWidth
               />
             )}
           </Box>

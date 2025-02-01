@@ -129,6 +129,12 @@
       "value": "Indonesian"
     }
   ],
+  "/EhlLs": [
+    {
+      "type": 0,
+      "value": "This validator should remain online until exit epoch is reached."
+    }
+  ],
   "/JiR8D": [
     {
       "type": 0,
@@ -1247,16 +1253,6 @@
     {
       "type": 0,
       "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
-    }
-  ],
-  "5eN8lL": [
-    {
-      "type": 0,
-      "value": "Fully exit validator "
-    },
-    {
-      "type": 1,
-      "value": "validatorindex"
     }
   ],
   "5q9Lgv": [
@@ -6483,12 +6479,6 @@
       "value": "If you do not have a testnet folder it is likely you have not built and run Nimbus correctly. Run the make command again."
     }
   ],
-  "iZW+Wc": [
-    {
-      "type": 1,
-      "value": "headerMessage"
-    }
-  ],
   "iZuIgB": [
     {
       "type": 0,
@@ -7441,12 +7431,6 @@
       "value": "Withdrawals enabled"
     }
   ],
-  "oC5q0q": [
-    {
-      "type": 0,
-      "value": "This validator must remain online until exit epoch is reached."
-    }
-  ],
   "oDObOQ": [
     {
       "type": 0,
@@ -7965,6 +7949,12 @@
     {
       "type": 0,
       "value": "Phishing guide"
+    }
+  ],
+  "rElUnh": [
+    {
+      "type": 0,
+      "value": "Initiating exit"
     }
   ],
   "rTSJI9": [

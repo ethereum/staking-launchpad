@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
-import {
-  Box,
-  Button as GrommetButton,
-  Heading,
-  Layer,
-  Form,
-  TextInput,
-} from 'grommet';
+import { Box, Heading, Layer, Form, TextInput } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -24,17 +17,7 @@ import {
 import { Text } from '../../../components/Text';
 import { generateWithdrawalParams } from '../ActionUtils';
 import { Alert } from '../../../components/Alert';
-
-const CloseButton = styled(GrommetButton)`
-  padding: 0.25rem 0.75rem;
-  border: none;
-  background: #eee;
-  border-radius: 4px;
-  &:hover {
-    box-shadow: none;
-    background: #ddd;
-  }
-`;
+import { CloseButton } from './Shared';
 
 const ModalSection = styled.div`
   padding: 1rem;
@@ -48,7 +31,6 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const { locale, formatMessage } = useIntl();
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
-  const CONFIRM_EXIT_STRING = formatMessage({ defaultMessage: 'EXIT FULLY' });
 
   const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(
     false
@@ -61,24 +43,22 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   );
   const [txHash, setTxHash] = useState<string>('');
 
-  const confirmForceExit = () => {
+  const openExitModal = () => {
     setStepTwo(false);
+    setUserConfirmationValue('');
     setShowConfirmationModal(true);
   };
 
   const closeConfirmationModal = () => {
     setShowConfirmationModal(false);
     setStepTwo(false);
+    setUserConfirmationValue('');
   };
 
   const createExitTransaction = async () => {
-    if (!account) {
-      return;
-    }
+    if (!account) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    setShowConfirmationModal(false);
-    setStepTwo(false);
     setShowTxModal(true);
 
     const walletProvider = await (connector as AbstractConnector).getProvider();
@@ -106,15 +86,24 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
       });
   };
 
+  const handleTxModalClose = () => {
+    setShowTxModal(false);
+    closeConfirmationModal();
+  };
+
+  const CONFIRM_EXIT_STRING = formatMessage({ defaultMessage: 'EXIT FULLY' });
+
   const { validatorindex } = validator;
+
+  console.log({ transactionStatus }); // "not_started" > "waiting_user_confirmation" > "error" "user_rejected" | "success"
   return (
     <>
       {showConfirmationModal && (
         <Layer
           position="center"
-          onEsc={() => closeConfirmationModal()}
-          onClickOutside={() => closeConfirmationModal()}
-          style={{ background: '#EEEEEE' }}
+          onEsc={closeConfirmationModal}
+          onClickOutside={closeConfirmationModal}
+          style={{ background: '#EEEEEE', maxWidth: '40rem' }}
         >
           <Box>
             <ModalSection
@@ -123,6 +112,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 alignItems: 'center',
                 borderBottom: '1px solid #dedede',
                 gap: '0.5rem',
+                justifyContent: 'space-between',
               }}
             >
               <Heading
@@ -138,10 +128,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   values={{ validatorindex }}
                 />
               </Heading>
-              <CloseButton
-                label="Close"
-                onClick={() => closeConfirmationModal()}
-              />
+              <CloseButton label="Close" onClick={closeConfirmationModal} />
             </ModalSection>
             <ModalSection style={{ borderBottom: '1px solid #dedede' }}>
               <div style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>
@@ -161,13 +148,12 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                         </strong>
                       </Text>
                       <Text>
-                        <FormattedMessage defaultMessage="This validator must remain online until exit epoch is reached." />
+                        <FormattedMessage defaultMessage="This validator should remain online until exit epoch is reached." />
                       </Text>
                     </div>
                   </div>
                 </Alert>
               </div>
-              {/* TODO: Intl */}
               <div
                 className="modal-body"
                 style={{
@@ -241,7 +227,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 <Button
                   style={{ fontSize: '1rem' }}
                   label="I understand the consequences, exit this validator"
-                  onClick={() => createExitTransaction()}
+                  onClick={createExitTransaction}
                   color="dark-3"
                   fullWidth
                   destructive
@@ -273,19 +259,19 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
         <TransactionStatusModal
           headerMessage={
             <FormattedMessage
-              defaultMessage="Fully exit validator {validatorindex}"
+              defaultMessage="Initiating exit"
               values={{ validatorindex }}
             />
           }
           txHash={txHash}
           transactionStatus={transactionStatus}
-          onClose={() => setShowTxModal(false)}
+          onClose={handleTxModalClose}
         />
       )}
 
       <Button
         label={<FormattedMessage defaultMessage="Force exit" />}
-        onClick={() => confirmForceExit()}
+        onClick={openExitModal}
         destructive
       />
     </>

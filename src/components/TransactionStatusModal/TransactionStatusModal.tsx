@@ -1,13 +1,12 @@
 import React, { ReactNode } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Box, Layer } from 'grommet';
-import { Heading } from '../Heading';
 import { Text } from '../Text';
 import { TransactionProgress } from './TransactionProgress';
 import { stepStatus, TransactionStatus } from './types';
-import { Button } from '../Button';
 import { EL_TRANSACTION_URL } from '../../utils/envVars';
 import { Link } from '../Link';
+import ModalHeader from '../../pages/Actions/components/ModalHeader';
 
 interface TopUpTransactionModalProps {
   headerMessage: string | ReactNode;
@@ -29,7 +28,10 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
     ) {
       return 'loading';
     }
-    if (transactionStatus === 'user_rejected') {
+    if (
+      transactionStatus === 'user_rejected' ||
+      transactionStatus === 'error'
+    ) {
       return 'error';
     }
     return 'complete';
@@ -54,21 +56,14 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
 
   return (
     <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
-      <Box pad="medium" gap="small" width="medium">
-        <Heading level={3} margin="none">
-          {typeof headerMessage === 'string' ? (
-            <FormattedMessage
-              defaultMessage="{headerMessage}"
-              values={{ headerMessage }}
-            />
-          ) : (
-            headerMessage
-          )}
-        </Heading>
+      <Box width="medium">
+        <ModalHeader onClose={onClose}>{headerMessage}</ModalHeader>
+
         <TransactionProgress
           signTxStatus={signTxStatus}
           confirmOnChainStatus={confirmOnChainStatus}
         />
+
         {txHash?.length > 0 && (
           <Text center>
             <FormattedMessage
@@ -85,16 +80,16 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
           </Text>
         )}
       </Box>
-      <Box
+      {/* <Box
         as="footer"
         gap="small"
         direction="row"
         align="center"
         justify="center"
-        pad={{ top: 'medium', bottom: 'small' }}
+        // pad={{ top: 'medium', bottom: 'small' }}
       >
         <Button label="Close" onClick={onClose} color="dark-3" />
-      </Box>
+      </Box> */}
     </Layer>
   );
 };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button as GrommetButton } from 'grommet';
 
 export const CopyContainer = styled.button`
   font-family: monospace;
@@ -26,5 +27,15 @@ export const Section = styled.section`
   border-radius: 4px;
   &:not(:last-child) {
     margin-bottom: 1rem;
+  }
+`;
+
+export const CloseButton = styled(GrommetButton)`
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  &:hover {
+    box-shadow: none;
+    background: #dddddd;
   }
 `;

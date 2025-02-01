@@ -110,7 +110,7 @@ const WalletConnectModal: React.FC<{
           setSelectedWallet={setSelectedWallet}
           logoSource={metamaskLogo}
           walletProvider={metamask}
-          title="Metamask"
+          title="MetaMask"
           error={connector === metamask ? error : undefined}
         />
         {!IS_NON_INFURA_TESTNET && (

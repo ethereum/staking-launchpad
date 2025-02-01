@@ -268,7 +268,7 @@ const _ConnectWalletPage = ({
 
   const getWalletName = (provider?: AbstractConnector) => {
     if (!provider) return '';
-    if (provider === metamask) return 'Metamask';
+    if (provider === metamask) return 'MetaMask';
     if (provider === fortmatic) return 'Fortmatic';
     return '';
   };
@@ -469,7 +469,7 @@ const _ConnectWalletPage = ({
                   setSelectedWallet={setSelectedWallet}
                   logoSource={metamaskLogo}
                   walletProvider={metamask}
-                  title="Metamask"
+                  title="MetaMask"
                   error={walletProvider === metamask ? error : undefined}
                 />
                 {!IS_NON_INFURA_TESTNET && (

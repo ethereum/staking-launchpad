@@ -43,7 +43,7 @@ export const MetamaskHardwareButton = () => {
       >
         <Logo src={ledger} />
         <StyledText>
-          <FormattedMessage defaultMessage="Connect your hardware wallet to Metamask" />
+          <FormattedMessage defaultMessage="Connect your hardware wallet to MetaMask" />
         </StyledText>
         <StyledText>{locale === 'ar' ? '↖' : '↗'}</StyledText>
       </StyledPaper>

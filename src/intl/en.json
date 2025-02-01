@@ -90,9 +90,6 @@
   "/eUGwM": {
     "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
   },
-  "/gME+2": {
-    "message": "Which validator would you like to consolidate into {index}"
-  },
   "/hEGaO": {
     "message": "This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
   },
@@ -373,9 +370,6 @@
   "3hmlu1": {
     "message": "Select a validator"
   },
-  "3ioB61": {
-    "message": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to your connected withdrawal account within a few days."
-  },
   "3jhjXW": {
     "message": "Check out the following guide to properly configure Engine JSON-RPC API for your consensus client."
   },
@@ -394,9 +388,6 @@
   },
   "40/5Sf": {
     "message": "Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
-  },
-  "47FYwb": {
-    "message": "Cancel"
   },
   "47svuN": {
     "message": "Installation"
@@ -427,6 +418,9 @@
   },
   "4uFys5": {
     "message": "Accounts that have been slashed, or have insufficient balance, will be forced to exit according to the network rules. This is automatic and cannot be stopped once initiated."
+  },
+  "4zqUmR": {
+    "message": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within a few days."
   },
   "57MWKW": {
     "message": "Withdrawals as an operation, not a new transaction type"
@@ -473,6 +467,9 @@
   },
   "63gLLu": {
     "message": "average"
+  },
+  "67oM5N": {
+    "message": "Active Online"
   },
   "69FPys": {
     "message": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EF of {MAX_EFFECTIVE_BALANCE}."
@@ -714,9 +711,6 @@
   "ATwOPg": {
     "message": "execution client"
   },
-  "AYKxmf": {
-    "message": "Connect your hardware wallet to Metamask"
-  },
   "AYPu/E": {
     "message": "What type of staking account?"
   },
@@ -953,9 +947,6 @@
   },
   "EwtSGs": {
     "message": "You are responsible for the transaction. Fraudulent websites might try and lure you into sending {TICKER_NAME} to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
-  },
-  "F76RER": {
-    "message": "The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to your connected withdrawal account within the next few days."
   },
   "F8yf1S": {
     "message": "You can find {docsHere}."
@@ -1675,6 +1666,9 @@
   "RuFk89": {
     "message": "Absorb another validator"
   },
+  "RuoC+s": {
+    "message": "The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within the next few days."
+  },
   "RwXnhK": {
     "message": "cold storage"
   },
@@ -2295,6 +2289,9 @@
   "fBG/Ge": {
     "message": "Cost"
   },
+  "fH2WUb": {
+    "message": "(Regular withdrawals)"
+  },
   "fHLKXR": {
     "message": "The answer to this question very much depends on how much ETH you have at your disposal."
   },
@@ -2494,6 +2491,9 @@
   "iouULJ": {
     "message": "Number of empty slots (missed block opportunities, variable, typically minimal)"
   },
+  "iq4JF8": {
+    "message": "Exiting Offline"
+  },
   "iqJ3LM": {
     "message": "PegaSys Teku is a Java-based Ethereum consensus client built to meet institutional needs and security requirements."
   },
@@ -2593,6 +2593,9 @@
   },
   "k8bkck": {
     "message": "EIP-4895, titled {eip4895}, implements a design that simplified this whole process for stakers."
+  },
+  "kC4fpt": {
+    "message": "Connect your hardware wallet to MetaMask"
   },
   "kFS5Sd": {
     "message": "Deposit contract formally verified"
@@ -2824,6 +2827,9 @@
   "ntG2by": {
     "message": "Advanced system architecture"
   },
+  "nv2lXL": {
+    "message": "Exiting Online"
+  },
   "nwgrRp": {
     "message": "Staking Launchpad for {TESTNET_LAUNCHPAD_NAME} testnet"
   },
@@ -2848,6 +2854,9 @@
   },
   "oF6xvJ": {
     "message": "EthStaker Knowledge Base"
+  },
+  "oLlMBP": {
+    "message": "Active Offline"
   },
   "oLxfO1": {
     "message": "Now that the keys are imported, all that is left to do (assuming your beacon node is already running) is to run the validator client."
@@ -2945,6 +2954,9 @@
   "pfJX2D": {
     "message": "More on phishing"
   },
+  "pgX4FB": {
+    "message": "Absorb validator"
+  },
   "plXBe0": {
     "message": "Alternative node tooling:"
   },
@@ -2966,6 +2978,9 @@
   },
   "pyWt01": {
     "message": "Deposit summary"
+  },
+  "q/xjqK": {
+    "message": "Which validator would you like to pull from?"
   },
   "q0thwm": {
     "message": "As a validator you are rewarded for proposing/attesting to blocks that are included in the chain."
@@ -3210,6 +3225,9 @@
   },
   "uhapiE": {
     "message": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
+  },
+  "uhpVgs": {
+    "message": "(Compounding)"
   },
   "ukfwum": {
     "message": "Become a validator with Nimbus"

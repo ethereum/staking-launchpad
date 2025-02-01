@@ -223,16 +223,6 @@
       "value": "."
     }
   ],
-  "/gME+2": [
-    {
-      "type": 0,
-      "value": "Which validator would you like to consolidate into "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -1025,12 +1015,6 @@
       "value": "Select a validator"
     }
   ],
-  "3ioB61": [
-    {
-      "type": 0,
-      "value": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to your connected withdrawal account within a few days."
-    }
-  ],
   "3jhjXW": [
     {
       "type": 0,
@@ -1111,12 +1095,6 @@
       "value": ", which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
     }
   ],
-  "47FYwb": [
-    {
-      "type": 0,
-      "value": "Cancel"
-    }
-  ],
   "47svuN": [
     {
       "type": 0,
@@ -1183,6 +1161,12 @@
     {
       "type": 0,
       "value": "Accounts that have been slashed, or have insufficient balance, will be forced to exit according to the network rules. This is automatic and cannot be stopped once initiated."
+    }
+  ],
+  "4zqUmR": [
+    {
+      "type": 0,
+      "value": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within a few days."
     }
   ],
   "57MWKW": [
@@ -1333,6 +1317,12 @@
     {
       "type": 0,
       "value": "average"
+    }
+  ],
+  "67oM5N": [
+    {
+      "type": 0,
+      "value": "Active Online"
     }
   ],
   "69FPys": [
@@ -1961,12 +1951,6 @@
       "value": "execution client"
     }
   ],
-  "AYKxmf": [
-    {
-      "type": 0,
-      "value": "Connect your hardware wallet to Metamask"
-    }
-  ],
   "AYPu/E": [
     {
       "type": 0,
@@ -2539,12 +2523,6 @@
     {
       "type": 0,
       "value": " to them, instead of the official deposit contract. Make sure that the address you are sending the transaction to is the correct address."
-    }
-  ],
-  "F76RER": [
-    {
-      "type": 0,
-      "value": "The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to your connected withdrawal account within the next few days."
     }
   ],
   "F8yf1S": [
@@ -4423,6 +4401,12 @@
       "value": "Absorb another validator"
     }
   ],
+  "RuoC+s": [
+    {
+      "type": 0,
+      "value": "The exit epoch for this validator has been reached. The remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within the next few days."
+    }
+  ],
   "RwXnhK": [
     {
       "type": 0,
@@ -6085,6 +6069,12 @@
       "value": "Cost"
     }
   ],
+  "fH2WUb": [
+    {
+      "type": 0,
+      "value": "(Regular withdrawals)"
+    }
+  ],
   "fHLKXR": [
     {
       "type": 0,
@@ -6619,6 +6609,12 @@
       "value": "Number of empty slots (missed block opportunities, variable, typically minimal)"
     }
   ],
+  "iq4JF8": [
+    {
+      "type": 0,
+      "value": "Exiting Offline"
+    }
+  ],
   "iqJ3LM": [
     {
       "type": 0,
@@ -6867,6 +6863,12 @@
     {
       "type": 0,
       "value": ", implements a design that simplified this whole process for stakers."
+    }
+  ],
+  "kC4fpt": [
+    {
+      "type": 0,
+      "value": "Connect your hardware wallet to MetaMask"
     }
   ],
   "kFS5Sd": [
@@ -7485,6 +7487,12 @@
       "value": "Advanced system architecture"
     }
   ],
+  "nv2lXL": [
+    {
+      "type": 0,
+      "value": "Exiting Online"
+    }
+  ],
   "nwgrRp": [
     {
       "type": 0,
@@ -7563,6 +7571,12 @@
     {
       "type": 0,
       "value": "EthStaker Knowledge Base"
+    }
+  ],
+  "oLlMBP": [
+    {
+      "type": 0,
+      "value": "Active Offline"
     }
   ],
   "oLxfO1": [
@@ -7789,6 +7803,12 @@
       "value": "More on phishing"
     }
   ],
+  "pgX4FB": [
+    {
+      "type": 0,
+      "value": "Absorb validator"
+    }
+  ],
   "plXBe0": [
     {
       "type": 0,
@@ -7865,6 +7885,12 @@
     {
       "type": 0,
       "value": "Deposit summary"
+    }
+  ],
+  "q/xjqK": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to pull from?"
     }
   ],
   "q0thwm": [
@@ -8579,6 +8605,12 @@
     {
       "type": 0,
       "value": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
+    }
+  ],
+  "uhpVgs": [
+    {
+      "type": 0,
+      "value": "(Compounding)"
     }
   ],
   "ukfwum": [

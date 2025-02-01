@@ -7,12 +7,14 @@ import { stepStatus, TransactionStatus } from './types';
 import { EL_TRANSACTION_URL } from '../../utils/envVars';
 import { Link } from '../Link';
 import ModalHeader from '../../pages/Actions/components/ModalHeader';
+import { Button } from '../Button';
 
 interface TopUpTransactionModalProps {
   headerMessage: string | ReactNode;
   onClose: () => void;
   transactionStatus: TransactionStatus;
   txHash: string;
+  handleRetry: () => void;
 }
 
 export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
@@ -20,6 +22,7 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
   onClose,
   transactionStatus,
   txHash,
+  handleRetry,
 }) => {
   const signTxStatus: stepStatus = React.useMemo(() => {
     if (
@@ -65,31 +68,40 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
         />
 
         {txHash?.length > 0 && (
-          <Text center>
-            <FormattedMessage
-              defaultMessage="Check {etherscan} for more details"
-              values={{
-                etherscan: (
-                  <Link primary inline to={`${EL_TRANSACTION_URL}/${txHash}`}>
-                    EL Explorer
-                  </Link>
-                ),
-              }}
-              description="{etherscan} is a share link to this transaction on etherscan.io, labeled 'Etherscan'"
-            />
+          <Text center style={{ padding: '1rem' }}>
+            <Link primary inline to={`${EL_TRANSACTION_URL}/${txHash}`}>
+              <FormattedMessage defaultMessage="View transaction in block explorer" />
+            </Link>
           </Text>
         )}
       </Box>
-      {/* <Box
-        as="footer"
-        gap="small"
-        direction="row"
-        align="center"
-        justify="center"
-        // pad={{ top: 'medium', bottom: 'small' }}
-      >
-        <Button label="Close" onClick={onClose} color="dark-3" />
-      </Box> */}
+
+      {['error', 'complete'].includes(signTxStatus) && (
+        <Box
+          as="footer"
+          gap="small"
+          direction="row"
+          align="center"
+          justify="center"
+          border="top"
+          pad="1rem"
+        >
+          {signTxStatus === 'error' && (
+            <Button
+              label={<FormattedMessage defaultMessage="Try again" />}
+              onClick={handleRetry}
+              destructive
+              secondary
+            />
+          )}
+          {signTxStatus === 'complete' && (
+            <Button
+              label={<FormattedMessage defaultMessage="Finish" />}
+              onClick={onClose}
+            />
+          )}
+        </Box>
+      )}
     </Layer>
   );
 };

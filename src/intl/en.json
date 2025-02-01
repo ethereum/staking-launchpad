@@ -286,6 +286,9 @@
   "2Hk0nB": {
     "message": "Follow the instructions presented to you in the application to generate your keys."
   },
+  "2O2sfp": {
+    "message": "Finish"
+  },
   "2PI6Di": {
     "message": "Consensus Clients: {clientName}"
   },
@@ -385,6 +388,9 @@
   },
   "40/5Sf": {
     "message": "Note that your {withdrawalCredentials} are not the same as your {feeRecipient}, which receives transaction fees from proposed blocks. These can both be set to the same address, but must each be set separately."
+  },
+  "47FYwb": {
+    "message": "Cancel"
   },
   "47svuN": {
     "message": "Installation"
@@ -1205,6 +1211,9 @@
   "Jvu600": {
     "message": "Your mnemonic"
   },
+  "K1TZPZ": {
+    "message": "Validator exit initiated - no further actions performable"
+  },
   "K3uH1C": {
     "message": "offline"
   },
@@ -1508,6 +1517,9 @@
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
     "message": "If you have questions, EthStaker community is a good place to get help! You can find support on {discord} or {reddit}."
   },
+  "P2eds5": {
+    "message": "Pull funds"
+  },
   "P8FrVE": {
     "message": "JWT Authentication"
   },
@@ -1744,10 +1756,6 @@
   },
   "UJE2gP": {
     "message": "Controlled by"
-  },
-  "UJMct0": {
-    "description": "{etherscan} is a share link to this transaction on etherscan.io, labeled 'Etherscan'",
-    "message": "Check {etherscan} for more details"
   },
   "UOFjs/": {
     "message": "There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types."
@@ -3045,6 +3053,9 @@
   },
   "rywDJ5": {
     "message": "Connect your wallet to retrieve validators with corresponding withdrawal credentials to upgrade to compounding, consolidate, partially withdraw, or force an exit"
+  },
+  "s1Hm3H": {
+    "message": "View transaction in block explorer"
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."

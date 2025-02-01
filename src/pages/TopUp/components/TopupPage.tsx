@@ -298,6 +298,7 @@ const TopupPage: React.FC<Props> = ({ validator, backButton }) => {
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={() => setShowTxModal(false)}
+          handleRetry={submitTopupTransaction}
         />
       )}
 

@@ -135,6 +135,7 @@ const MigrateFunds = ({
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={() => setShowTxModal(false)}
+          handleRetry={createConsolidationTransaction}
         />
       )}
 

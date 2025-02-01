@@ -266,6 +266,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={handleTxModalClose}
+          handleRetry={createExitTransaction}
         />
       )}
 

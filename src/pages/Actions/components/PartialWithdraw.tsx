@@ -154,6 +154,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={() => setShowTxModal(false)}
+          handleRetry={createWithdrawTransaction}
         />
       )}
 

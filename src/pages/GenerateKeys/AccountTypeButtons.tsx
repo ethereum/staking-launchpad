@@ -50,6 +50,18 @@ const Text = styled.p`
   margin: 0;
 `;
 
+const PillTag = styled(Text)`
+  background: slategrey;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1rem;
+  margin-inline: auto;
+  margin-top: 0.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  width: fit-content;
+`;
+
 interface AccountTypeButtonsProps {
   chosenType: AccountType;
   setChosenType: (type: AccountType) => void;
@@ -89,11 +101,9 @@ export const AccountTypeButtons = ({
               values={{ MIN_ACTIVATION_BALANCE }}
             />
           </Text>
-          <Text>
-            <span style={{ textTransform: 'uppercase', fontSize: '0.875em' }}>
-              <FormattedMessage defaultMessage="Recommended for most users" />
-            </span>
-          </Text>
+          <PillTag>
+            <FormattedMessage defaultMessage="Recommended for most users" />
+          </PillTag>
         </ButtonSection>
       </ChoiceButton>
       <ChoiceButton

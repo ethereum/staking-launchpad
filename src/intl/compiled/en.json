@@ -5503,10 +5503,22 @@
       "value": "Max effective balance"
     }
   ],
+  "as94MP": [
+    {
+      "type": 0,
+      "value": "The chosen validator should remain online until exit epoch is reached."
+    }
+  ],
   "azLmaD": [
     {
       "type": 0,
       "value": "Build deposit-cli from the Python source code"
+    }
+  ],
+  "b+yUd5": [
+    {
+      "type": 0,
+      "value": "Fetch more"
     }
   ],
   "b8APBK": [
@@ -6327,6 +6339,20 @@
       "value": "This means that you don't need to go to extreme lengths with backup clients or redundant internet connections as the repercussions of being offline are not so severe."
     }
   ],
+  "gwqDoe": [
+    {
+      "type": 0,
+      "value": "This account will be exited from the network, and its full balance will be migrated to validator index "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "gx6frf": [
     {
       "type": 0,
@@ -6809,16 +6835,6 @@
     {
       "type": 0,
       "value": "Nimbus documentation"
-    }
-  ],
-  "jzAXUB": [
-    {
-      "type": 0,
-      "value": "Fetch next "
-    },
-    {
-      "type": 1,
-      "value": "MAX_QUERY_LIMIT"
     }
   ],
   "jztMM9": [

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Web3Provider } from '@ethersproject/providers';
 import { useWeb3React } from '@web3-react/core';
 import BigNumber from 'bignumber.js';
+import { Button as GrommetButton } from 'grommet';
 
 import {
   BeaconChainValidator,
@@ -44,6 +45,19 @@ const ButtonLink = styled(FakeLink)`
   width: fit-content;
   button {
     padding: 16px 32px;
+  }
+`;
+
+const FetchButton = styled(GrommetButton)`
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: none;
   }
 `;
 
@@ -234,13 +248,8 @@ const _ActionsPage: React.FC<Props> = () => {
               setSelectedValidator={setSelectedValidator}
             />
             {moreToFetch && (
-              <Button
-                label={
-                  <FormattedMessage
-                    defaultMessage="Fetch next {MAX_QUERY_LIMIT}"
-                    values={{ MAX_QUERY_LIMIT }}
-                  />
-                }
+              <FetchButton
+                label={<FormattedMessage defaultMessage="Fetch more" />}
                 onClick={fetchMoreValidators}
               />
             )}

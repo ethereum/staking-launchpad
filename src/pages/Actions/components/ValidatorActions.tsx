@@ -60,14 +60,20 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
     }
 
     const potentialSourceValidators = validators.filter(v => {
+      const isSameValidator = v.pubkey === validator.pubkey;
+      const hasBalance = v.balance > 0;
+      const isExecutionOrLater =
+        +v.withdrawalcredentials.slice(0, 4) >= +EXECUTION_CREDENTIALS;
       // Should be filtered out from API call for validators by withdrawal address; backup check
       const isSameCredentials =
         v.withdrawalcredentials.slice(4) ===
         validator.withdrawalcredentials.slice(4);
-      const isExecutionOrLater =
-        +v.withdrawalcredentials.slice(0, 4) >= +EXECUTION_CREDENTIALS;
-      const isSameValidator = v.pubkey === validator.pubkey;
-      return isSameCredentials && isExecutionOrLater && !isSameValidator;
+      return (
+        !isSameValidator &&
+        isExecutionOrLater &&
+        hasBalance &&
+        isSameCredentials
+      );
     });
 
     setSourceValidatorSet(potentialSourceValidators);

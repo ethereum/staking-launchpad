@@ -2086,8 +2086,14 @@
   "arfnPZ": {
     "message": "Max effective balance"
   },
+  "as94MP": {
+    "message": "The chosen validator should remain online until exit epoch is reached."
+  },
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
+  },
+  "b+yUd5": {
+    "message": "Fetch more"
   },
   "b8APBK": {
     "message": "More on client diversity"
@@ -2389,6 +2395,9 @@
   "guMfKn": {
     "message": "This means that you don't need to go to extreme lengths with backup clients or redundant internet connections as the repercussions of being offline are not so severe."
   },
+  "gwqDoe": {
+    "message": "This account will be exited from the network, and its full balance will be migrated to validator index {index}."
+  },
   "gx6frf": {
     "message": "clock"
   },
@@ -2572,9 +2581,6 @@
   },
   "jytPQU": {
     "message": "Nimbus documentation"
-  },
-  "jzAXUB": {
-    "message": "Fetch next {MAX_QUERY_LIMIT}"
   },
   "jztMM9": {
     "message": "deposit contract"

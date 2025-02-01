@@ -1,11 +1,25 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { useIntl } from 'react-intl';
+import styled from 'styled-components';
 
 import { Validator } from '../types';
 
 import Select from '../../../components/Select';
 
 import { ETHER_TO_GWEI, TICKER_NAME } from '../../../utils/envVars';
+
+const AccountType = styled.p`
+  font-size: 0.875rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 3px 4px;
+  line-height: 1;
+  align-self: center;
+  margin: 0;
+  text-align: center;
+  font-family: monospace;
+  color: gray;
+`;
 
 type ValidatorSelectorProps = {
   validators: Validator[];
@@ -32,15 +46,14 @@ const ValidatorSelector = ({
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr auto',
-              flex: 1,
-              gap: '1rem',
-              width: '100%',
+              gridTemplateColumns: 'subgrid',
+              gridColumn: 'span 3',
             }}
           >
             <p style={{ margin: 0, textAlign: 'start' }}>
               {v.validatorindex.toString()}
             </p>
+            <AccountType>{v.withdrawalcredentials.slice(0, 4)}</AccountType>
             <p
               style={{
                 margin: 0,

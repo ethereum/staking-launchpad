@@ -5,14 +5,19 @@ import { Checkmark, FormDown, FormUp } from 'grommet-icons';
 
 const Container = styled.div`
   position: relative;
-  width: 100%;
-  max-width: 380px;
+  width: clamp(min(100%, 400px), 50vw, 400px);
 `;
 
-const Trigger = styled.div`
-  display: flex;
+const GridCol4 = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  flex: 1;
+  column-gap: 1rem;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
+`;
+
+const Trigger = styled(GridCol4)`
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -36,7 +41,9 @@ const Content = styled.div`
 const Item = styled.div`
   padding: 0.5rem 1rem;
   cursor: pointer;
-  display: flex;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 4;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
@@ -132,14 +139,10 @@ const Select = ({
 
   return (
     <Container ref={containerRef}>
-      <Trigger
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          padding: '1rem',
-          fontSize: '18px',
-        }}
-      >
-        <span>{selectedOption?.label || placeholder}</span>
+      <Trigger onClick={() => setIsOpen(!isOpen)} style={{}}>
+        {selectedOption?.label || (
+          <div style={{ gridColumn: 'span 3' }}>{placeholder}</div>
+        )}
         {isOpen ? <FormUp /> : <FormDown />}
       </Trigger>
       {isOpen && (
@@ -153,21 +156,23 @@ const Select = ({
               formatMessage({ defaultMessage: 'Type to filter' })
             }
           />
-          {filteredOptions.map(option => (
-            <Item
-              key={option.value}
-              data-selected={option.value === value}
-              onClick={() => handleSelect(option.value)}
-            >
-              {option.label}
-              <Checkmark
-                style={{
-                  fill: '#26AB83',
-                  visibility: option.value === value ? 'visible' : 'hidden',
-                }}
-              />
-            </Item>
-          ))}
+          <GridCol4>
+            {filteredOptions.map(option => (
+              <Item
+                key={option.value}
+                data-selected={option.value === value}
+                onClick={() => handleSelect(option.value)}
+              >
+                {option.label}
+                <Checkmark
+                  style={{
+                    fill: '#26AB83',
+                    visibility: option.value === value ? 'visible' : 'hidden',
+                  }}
+                />
+              </Item>
+            ))}
+          </GridCol4>
         </Content>
       )}
     </Container>

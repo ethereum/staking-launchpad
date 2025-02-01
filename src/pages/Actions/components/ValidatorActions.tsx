@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { FormattedMessage } from 'react-intl';
 import { Validator } from '../types';
-import MigrateFunds from './MigrateFunds';
+import PushConsolidation from './PushConsolidation';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import UpgradeCompounding from './UpgradeCompounding';
@@ -18,7 +18,7 @@ import {
   MAX_EFFECTIVE_BALANCE,
 } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
-import ConsolidateInto from './ConsolidateInto';
+import PullConsolidation from './PullConsolidation';
 
 const Section = styled(SharedSection)`
   display: flex;
@@ -150,21 +150,6 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         </Row>
       )}
 
-      {targetValidatorSet.length > 0 && (
-        <Row>
-          <div style={{ flex: 1 }}>
-            <ActionTitle>
-              <FormattedMessage defaultMessage="Migrate funds" />
-            </ActionTitle>
-            <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />
-          </div>
-          <MigrateFunds
-            sourceValidator={validator}
-            targetValidatorSet={targetValidatorSet}
-          />
-        </Row>
-      )}
-
       {accountType >= +COMPOUNDING_CREDENTIALS && (
         <Row>
           <div style={{ flex: 1 }}>
@@ -173,9 +158,24 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
             </ActionTitle>
             <FormattedMessage defaultMessage="Transfer entire balance from another validator account into this one, consolidating two accounts into one." />
           </div>
-          <ConsolidateInto
+          <PullConsolidation
             targetValidator={validator}
             sourceValidatorSet={sourceValidatorSet}
+          />
+        </Row>
+      )}
+
+      {targetValidatorSet.length > 0 && (
+        <Row>
+          <div style={{ flex: 1 }}>
+            <ActionTitle>
+              <FormattedMessage defaultMessage="Migrate funds" />
+            </ActionTitle>
+            <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />
+          </div>
+          <PushConsolidation
+            sourceValidator={validator}
+            targetValidatorSet={targetValidatorSet}
           />
         </Row>
       )}

@@ -23,15 +23,15 @@ import ValidatorSelector from './ValidatorSelector';
 import { generateCompoundParams } from '../ActionUtils';
 import { TICKER_NAME } from '../../../utils/envVars';
 
-type ConsolidateIntoProps = {
+type PullConsolidationProps = {
   targetValidator: Validator; // The selected validator to consolidate into (target)
   sourceValidatorSet: Validator[]; // List of available source validators (Any 0x01 or higher, excluding the target)
 };
 
-const ConsolidateInto = ({
+const PullConsolidation = ({
   targetValidator,
   sourceValidatorSet,
-}: ConsolidateIntoProps) => {
+}: PullConsolidationProps) => {
   const { locale } = useIntl();
   const { connector, account } = useWeb3React();
 
@@ -334,4 +334,4 @@ const ConsolidateInto = ({
   );
 };
 
-export default ConsolidateInto;
+export default PullConsolidation;

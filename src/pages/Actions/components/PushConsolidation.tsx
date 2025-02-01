@@ -13,15 +13,15 @@ import { generateCompoundParams } from '../ActionUtils';
 import { Button } from '../../../components/Button';
 import ValidatorSelector from './ValidatorSelector';
 
-type MigrateToProps = {
+type PushConsolidationProps = {
   sourceValidator: Validator; // The selected validator to drain and migrate (source)
   targetValidatorSet: Validator[]; // List of available target validators (Any 0x02 or higher, excluding the source)
 };
 
-const MigrateFunds = ({
+const PushConsolidation = ({
   sourceValidator,
   targetValidatorSet,
-}: MigrateToProps) => {
+}: PushConsolidationProps) => {
   const { connector, account } = useWeb3React();
 
   const [
@@ -142,11 +142,10 @@ const MigrateFunds = ({
       <Button
         label="Migrate funds"
         destructive
-        secondary
         onClick={() => confirmConsolidate()}
       />
     </>
   );
 };
 
-export default MigrateFunds;
+export default PushConsolidation;

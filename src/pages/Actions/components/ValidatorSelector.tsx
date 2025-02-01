@@ -19,6 +19,10 @@ const AccountType = styled.p`
   text-align: center;
   font-family: monospace;
   color: gray;
+
+  @media (max-width: 32rem) {
+    display: none;
+  }
 `;
 
 type ValidatorSelectorProps = {

@@ -5,7 +5,7 @@ import { Web3Provider } from '@ethersproject/providers';
 import { useWeb3React } from '@web3-react/core';
 import BigNumber from 'bignumber.js';
 import { Button as GrommetButton } from 'grommet';
-
+import { Alert as AlertIcon } from 'grommet-icons';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
@@ -27,8 +27,13 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import { BEACONCHAIN_URL, ETHER_TO_GWEI } from '../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  ETHER_TO_GWEI,
+  TICKER_NAME,
+} from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
+import HelpCallout from '../../components/HelpCallout';
 
 // https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
 const MAX_QUERY_LIMIT = 100;
@@ -216,8 +221,33 @@ const _ActionsPage: React.FC<Props> = () => {
 
     if (validatorLoadError) {
       return (
-        <Alert variant="warning" className="my10">
-          <FormattedMessage defaultMessage="There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues." />
+        <Alert variant="warning" className="mb10">
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+            }}
+          >
+            <AlertIcon color="redLight" />
+            <div>
+              <Text className="mb10">
+                <strong>
+                  <FormattedMessage defaultMessage="No validators were found." />
+                </strong>
+              </Text>
+              <Text className="mb10">
+                <FormattedMessage
+                  defaultMessage="You may have a deposit that was accepted but is being validated on chain.
+                    It will be available here when beaconcha.in has confirmed 2048 blocks."
+                  values={{ TICKER_NAME }}
+                />
+              </Text>
+              <Text>
+                <FormattedMessage defaultMessage="Please wait and try again or seek assistance if this error continues." />
+              </Text>
+            </div>
+          </div>
         </Alert>
       );
     }
@@ -292,6 +322,10 @@ const _ActionsPage: React.FC<Props> = () => {
         title={formatMessage({ defaultMessage: 'Validator Actions' })}
       >
         {actionsPageContent}
+
+        <div className="mt30">
+          <HelpCallout />
+        </div>
       </PageTemplate>
     </>
   );

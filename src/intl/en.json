@@ -559,8 +559,14 @@
   "7V/8wz": {
     "message": "Configuration file"
   },
+  "7XWI5I": {
+    "message": "Please wait and try again or seek assistance if this error continues."
+  },
   "7XiYRi": {
     "message": "Slashed?"
+  },
+  "7d/puC": {
+    "message": "Initiate partial withdrawal"
   },
   "7d3Nzd": {
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
@@ -765,6 +771,9 @@
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
   },
+  "As7Kwv": {
+    "message": "You may have a deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
+  },
   "Aw1mMs": {
     "message": "Top up validator"
   },
@@ -968,9 +977,6 @@
   },
   "EcCME0": {
     "message": "Staking Launchpad"
-  },
-  "Ef+t8S": {
-    "message": "Request partial withdrawal"
   },
   "Ej2jo1": {
     "message": "Withdrawal address:"
@@ -1805,6 +1811,9 @@
   "UOFjs/": {
     "message": "There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types."
   },
+  "UROEny": {
+    "message": "Your account can hold up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}."
+  },
   "UWv7yD": {
     "message": "Check the deposit contract on your favorite Ethereum block explorer:"
   },
@@ -2209,6 +2218,9 @@
   "cU/ZP6": {
     "message": "Ethereum uses proof-of-stake to reach consensus."
   },
+  "cWvi0w": {
+    "message": "Add to stake"
+  },
   "cZHvCU": {
     "message": "{stakingDepositCli}: This is done by using the withdrawal address ({eth1WithdrawalAddress}, {executionAddress}, or {withdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
   },
@@ -2247,9 +2259,6 @@
   },
   "cyR7Kh": {
     "message": "Back"
-  },
-  "d3fRf2": {
-    "message": "There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues."
   },
   "d4g3yx": {
     "message": "Step 2: Generate deposit keys using the Wagyu Key Gen app"
@@ -2929,6 +2938,9 @@
   },
   "oPgUAj": {
     "message": "your validator"
+  },
+  "oUWdau": {
+    "message": "No validators were found."
   },
   "oVx7Qe": {
     "message": "Step 2: Generate deposit keys using the EthStaker deposit tool"

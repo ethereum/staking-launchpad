@@ -1575,10 +1575,22 @@
       "value": "Configuration file"
     }
   ],
+  "7XWI5I": [
+    {
+      "type": 0,
+      "value": "Please wait and try again or seek assistance if this error continues."
+    }
+  ],
   "7XiYRi": [
     {
       "type": 0,
       "value": "Slashed?"
+    }
+  ],
+  "7d/puC": [
+    {
+      "type": 0,
+      "value": "Initiate partial withdrawal"
     }
   ],
   "7d3Nzd": [
@@ -2057,6 +2069,12 @@
     {
       "type": 0,
       "value": "Become a validator with Lighthouse"
+    }
+  ],
+  "As7Kwv": [
+    {
+      "type": 0,
+      "value": "You may have a deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
     }
   ],
   "Aw1mMs": [
@@ -2553,12 +2571,6 @@
     {
       "type": 0,
       "value": "Staking Launchpad"
-    }
-  ],
-  "Ef+t8S": [
-    {
-      "type": 0,
-      "value": "Request partial withdrawal"
     }
   ],
   "Ej2jo1": [
@@ -4701,6 +4713,28 @@
       "value": "There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types."
     }
   ],
+  "UROEny": [
+    {
+      "type": 0,
+      "value": "Your account can hold up to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "UWv7yD": [
     {
       "type": 0,
@@ -5757,6 +5791,12 @@
       "value": "Ethereum uses proof-of-stake to reach consensus."
     }
   ],
+  "cWvi0w": [
+    {
+      "type": 0,
+      "value": "Add to stake"
+    }
+  ],
   "cZHvCU": [
     {
       "type": 1,
@@ -5877,12 +5917,6 @@
     {
       "type": 0,
       "value": "Back"
-    }
-  ],
-  "d3fRf2": [
-    {
-      "type": 0,
-      "value": "There was an error trying to get the validators for the provided wallet. Please try again or seek assistance if this error continues."
     }
   ],
   "d4g3yx": [
@@ -7697,6 +7731,12 @@
     {
       "type": 0,
       "value": "your validator"
+    }
+  ],
+  "oUWdau": [
+    {
+      "type": 0,
+      "value": "No validators were found."
     }
   ],
   "oVx7Qe": [

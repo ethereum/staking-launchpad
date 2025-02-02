@@ -212,6 +212,9 @@
   "1G0loj": {
     "message": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
   },
+  "1GAnQ9": {
+    "message": "validator index you choose below"
+  },
   "1ICikH": {
     "message": "This account will be permanently exited from the network."
   },
@@ -253,6 +256,9 @@
   },
   "1pUw7Y": {
     "message": "Documentation on running Nethermind"
+  },
+  "1v/5i7": {
+    "message": "Migrate and exit validator"
   },
   "1vVSD6": {
     "message": "If a withdrawal address is not set at time of deposit, your funds will be locked until one is provided. Your default withdrawal keys can be generated from your mnemonic to authenticate a one-time change to add a withdrawal address. Remember to {boldWarning}."
@@ -541,9 +547,6 @@
   "7XiYRi": {
     "message": "Slashed?"
   },
-  "7ceuUM": {
-    "message": "All remaining funds will be transferred to the {address} within a few days after exit epoch reached"
-  },
   "7d3Nzd": {
     "description": "{variables} are Beacon Chain block explorers, with links to each (do not translate names)",
     "message": "You can use your validator client's graffiti flag to add a personal touch to your proposed blocks (some text of your choice). You will be able to see it using {beaconchain} or {beaconscan} blockchain explorers."
@@ -574,6 +577,9 @@
   },
   "8BXroN": {
     "message": "Lodestar documentation"
+  },
+  "8C8bca": {
+    "message": "The exiting validator should remain online until exit epoch is reached."
   },
   "8FjJDx": {
     "message": "Bad behavior"
@@ -1420,9 +1426,6 @@
   "Mor0Ih": {
     "message": "Bad validator behavior"
   },
-  "MpbZo9": {
-    "message": "Consolidate {index} into {otherIndex}"
-  },
   "MtgVBi": {
     "message": "UNSTAKE FUNDS"
   },
@@ -1732,9 +1735,6 @@
   "Seanpx": {
     "message": "Required"
   },
-  "SiPnkO": {
-    "message": "Which validator would you like to migrate {index} funds to?"
-  },
   "SqKNq2": {
     "description": "{homebrew} = 'homebrew' and links to the homebrew package manager website documentation",
     "message": "You can install python3 on your macOS device using {homebrew}"
@@ -1804,6 +1804,9 @@
   },
   "UdDXU6": {
     "message": "immediately"
+  },
+  "UjKpPX": {
+    "message": "All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
   },
   "Utck3E": {
     "message": "Language support"
@@ -2100,9 +2103,6 @@
   },
   "arfnPZ": {
     "message": "Max effective balance"
-  },
-  "as94MP": {
-    "message": "The chosen validator should remain online until exit epoch is reached."
   },
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
@@ -2875,6 +2875,9 @@
   },
   "oDObOQ": {
     "message": "If the “eth1 withdrawal address” was not provided on initial deposit, you can submit a once-only {BTEC} message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."
+  },
+  "oEXI5W": {
+    "message": "Which validator would you like to migrate funds to?"
   },
   "oF4os+": {
     "message": "Currently Prysm is used by >33% of the network."

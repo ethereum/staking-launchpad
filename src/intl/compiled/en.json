@@ -575,6 +575,12 @@
       "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
     }
   ],
+  "1GAnQ9": [
+    {
+      "type": 0,
+      "value": "validator index you choose below"
+    }
+  ],
   "1ICikH": [
     {
       "type": 0,
@@ -657,6 +663,12 @@
     {
       "type": 0,
       "value": "Documentation on running Nethermind"
+    }
+  ],
+  "1v/5i7": [
+    {
+      "type": 0,
+      "value": "Migrate and exit validator"
     }
   ],
   "1vVSD6": [
@@ -1539,20 +1551,6 @@
       "value": "Slashed?"
     }
   ],
-  "7ceuUM": [
-    {
-      "type": 0,
-      "value": "All remaining funds will be transferred to the "
-    },
-    {
-      "type": 1,
-      "value": "address"
-    },
-    {
-      "type": 0,
-      "value": " within a few days after exit epoch reached"
-    }
-  ],
   "7d3Nzd": [
     {
       "type": 0,
@@ -1627,6 +1625,12 @@
     {
       "type": 0,
       "value": "Lodestar documentation"
+    }
+  ],
+  "8C8bca": [
+    {
+      "type": 0,
+      "value": "The exiting validator should remain online until exit epoch is reached."
     }
   ],
   "8FjJDx": [
@@ -3759,24 +3763,6 @@
       "value": "Bad validator behavior"
     }
   ],
-  "MpbZo9": [
-    {
-      "type": 0,
-      "value": "Consolidate "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    },
-    {
-      "type": 0,
-      "value": " into "
-    },
-    {
-      "type": 1,
-      "value": "otherIndex"
-    }
-  ],
   "MtgVBi": [
     {
       "type": 0,
@@ -4577,20 +4563,6 @@
       "value": "Required"
     }
   ],
-  "SiPnkO": [
-    {
-      "type": 0,
-      "value": "Which validator would you like to migrate "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    },
-    {
-      "type": 0,
-      "value": " funds to?"
-    }
-  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -4771,6 +4743,20 @@
     {
       "type": 0,
       "value": "immediately"
+    }
+  ],
+  "UjKpPX": [
+    {
+      "type": 0,
+      "value": "All remaining funds will be transferred to the "
+    },
+    {
+      "type": 1,
+      "value": "destination"
+    },
+    {
+      "type": 0,
+      "value": " within a few days after exit epoch reached"
     }
   ],
   "Utck3E": [
@@ -5559,12 +5545,6 @@
     {
       "type": 0,
       "value": "Max effective balance"
-    }
-  ],
-  "as94MP": [
-    {
-      "type": 0,
-      "value": "The chosen validator should remain online until exit epoch is reached."
     }
   ],
   "azLmaD": [
@@ -7637,6 +7617,12 @@
     {
       "type": 0,
       "value": " message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."
+    }
+  ],
+  "oEXI5W": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to migrate funds to?"
     }
   ],
   "oF4os+": [

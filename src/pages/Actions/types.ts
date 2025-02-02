@@ -3,6 +3,12 @@ export interface StateProps {}
 export interface DispatchProps {}
 export type Props = StateProps & DispatchProps & OwnProps;
 
+export enum ValidatorType {
+  BLS = 0,
+  Execution = 1,
+  Compounding = 2,
+}
+
 export interface Validator {
   activationeligibilityepoch: number;
   activationepoch: number;
@@ -16,6 +22,7 @@ export interface Validator {
   pubkey: string;
   slashed: boolean;
   status: string;
+  type: ValidatorType;
   validatorindex: number;
   withdrawableepoch: number;
   withdrawalcredentials: string;

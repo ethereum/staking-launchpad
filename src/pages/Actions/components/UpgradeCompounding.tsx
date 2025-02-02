@@ -168,7 +168,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
             pad="1rem"
           >
             <Button
-              label={<FormattedMessage defaultMessage="Upgrade validator" />}
+              label={<FormattedMessage defaultMessage="Upgrade account" />}
               onClick={createUpgradeMessage}
               color="dark-3"
               destructive
@@ -181,12 +181,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
 
       {showTxModal && (
         <TransactionStatusModal
-          headerMessage={
-            <FormattedMessage
-              defaultMessage="Upgrade {index} to compounding"
-              values={{ index: validator.validatorindex }}
-            />
-          }
+          headerMessage={<FormattedMessage defaultMessage="Upgrade account" />}
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={handleTxModalClose}

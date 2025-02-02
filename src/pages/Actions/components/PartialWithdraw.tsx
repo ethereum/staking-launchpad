@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Box, Heading, Layer } from 'grommet';
+import { Box, Layer, Form } from 'grommet';
+import { Alert as AlertIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
@@ -17,6 +18,16 @@ import { Text } from '../../../components/Text';
 import { generateWithdrawalParams } from '../ActionUtils';
 
 import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
+import ModalHeader from './ModalHeader';
+import {
+  ModalBody,
+  ModalContent,
+  Hash,
+  AlertContainer,
+  AlertContent,
+} from './Shared';
+import { Heading } from '../../../components/Heading';
+import { Alert } from '../../../components/Alert';
 
 interface Props {
   validator: Validator;
@@ -25,10 +36,10 @@ interface Props {
 const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
 
-  const [amount, setAmount] = useState<number>(0);
-  const [maxAmount, setMaxAmount] = useState<number>(0);
-  const [showInputModal, setShowInputModal] = useState<boolean>(false);
-  const [showTxModal, setShowTxModal] = useState<boolean>(false);
+  const [amount, setAmount] = useState(0);
+  const [maxAmount, setMaxAmount] = useState(0);
+  const [showInputModal, setShowInputModal] = useState(false);
+  const [showTxModal, setShowTxModal] = useState(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
@@ -42,18 +53,23 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     );
   }, [validator]);
 
-  const prepareInputModal = () => {
+  const openInputModal = () => {
     setAmount(0);
     setShowInputModal(true);
   };
 
+  const closeInputModal = () => {
+    setShowInputModal(false);
+    setAmount(0);
+  };
+
+  const handleTxClose = () => {
+    setShowTxModal(false);
+    closeInputModal();
+  };
+
   const createWithdrawTransaction = async () => {
-    if (!amount) {
-      return;
-    }
-    if (!account) {
-      return;
-    }
+    if (!amount || !account) return;
 
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
@@ -85,59 +101,190 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
   return (
     <>
-      {showInputModal && (
-        <Layer position="center" onEsc={() => setShowInputModal(false)}>
-          <Box pad="medium" gap="small" width="medium">
-            <Heading level={3} margin="none">
-              <FormattedMessage defaultMessage="How much would you like to withdraw?" />
-            </Heading>
-            <Text center>
-              <FormattedMessage
-                defaultMessage="Your validator has a balance of {balance}"
-                values={{ balance: validator.balanceDisplay }}
-              />
-              {validator.coinBalance <= MIN_ACTIVATION_BALANCE ? (
-                <FormattedMessage
-                  defaultMessage="Your validator must have a minimum balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
-                  values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
-                />
-              ) : (
-                <>
-                  <FormattedMessage
-                    defaultMessage="Please select how much you would like to withdraw. Due to requiring a minimum balance of {MIN_ACTIVATION_BALANCE} {TICKER_NAME} for the validator to operate, you will be able to withdraw a maximum of {maxAmount} {TICKER_NAME}."
-                    values={{
-                      MIN_ACTIVATION_BALANCE,
-                      maxAmount,
-                      TICKER_NAME,
-                    }}
-                  />
+      <Button
+        disabled={maxAmount <= 0}
+        onClick={openInputModal}
+        label={<FormattedMessage defaultMessage="Start withdrawal" />}
+      />
 
-                  <NumberInput
-                    value={amount}
-                    setValue={setAmount}
-                    allowDecimals
-                    maxValue={maxAmount}
-                  />
-                </>
-              )}
-            </Text>
-          </Box>
+      {showInputModal && (
+        <Layer
+          position="center"
+          onEsc={closeInputModal}
+          onClickOutside={closeInputModal}
+          style={{ background: '#EEEEEE', maxWidth: '40rem' }}
+        >
+          <ModalHeader onClose={closeInputModal}>
+            <FormattedMessage
+              defaultMessage="Withdrawal some {TICKER_NAME}"
+              values={{ TICKER_NAME }}
+            />
+          </ModalHeader>
+
+          <ModalBody>
+            <AlertContainer>
+              <Alert variant="info">
+                <AlertContent>
+                  <AlertIcon />
+                  <div>
+                    <Text>
+                      <strong>
+                        <FormattedMessage defaultMessage="Withdrawals request are added to a queue for processing." />
+                      </strong>
+                    </Text>
+                    <Text style={{ fontSize: '1rem' }}>
+                      <FormattedMessage defaultMessage="Network congestion may result in delays" />
+                    </Text>
+                  </div>
+                </AlertContent>
+              </Alert>
+            </AlertContainer>
+
+            <ModalContent>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '1rem',
+                }}
+              >
+                <div
+                  style={{
+                    background: '#fff',
+                    padding: '1rem',
+                    maxWidth: '100%',
+                    borderRadius: '8px',
+                  }}
+                >
+                  <Heading
+                    level={3}
+                    style={{
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    <FormattedMessage defaultMessage="From" />
+                  </Heading>
+                  <Text>
+                    <strong>
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {validator.validatorindex}
+                    </strong>
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: '14px',
+                      color: '#555',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
+                    <Hash>{validator.pubkey}</Hash>
+                  </Text>
+                  <Text className="mb10">
+                    <FormattedMessage defaultMessage="Current balance" />:{' '}
+                    {validator.coinBalance} {TICKER_NAME}
+                  </Text>
+                  <Text className="mb10">
+                    <FormattedMessage defaultMessage="Max withdrawable" />:{' '}
+                    {maxAmount} {TICKER_NAME}
+                  </Text>
+                  <Text>
+                    <FormattedMessage defaultMessage="Ending balance" />:{' '}
+                    <strong>
+                      {validator.coinBalance - amount} {TICKER_NAME}
+                    </strong>
+                  </Text>
+                </div>
+                <div
+                  style={{
+                    background: '#fff',
+                    padding: '1rem',
+                    maxWidth: '100%',
+                    borderRadius: '8px',
+                    border: '2px solid darkgreen',
+                  }}
+                >
+                  <Heading
+                    level={3}
+                    style={{
+                      textTransform: 'uppercase',
+                      color: 'darkgreen',
+                    }}
+                  >
+                    <FormattedMessage defaultMessage="To" />
+                  </Heading>
+                  <Text>
+                    <strong>
+                      <FormattedMessage defaultMessage="Execution account" />:
+                    </strong>
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: '14px',
+                      color: '#555',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
+                    <Hash style={{ fontSize: '1rem' }}>{account}</Hash>
+                  </Text>
+                  <Text>
+                    <FormattedMessage defaultMessage="Balance change" />:
+                    <strong>
+                      +{amount} {TICKER_NAME}
+                    </strong>
+                  </Text>
+                </div>
+              </div>
+            </ModalContent>
+          </ModalBody>
+
           <Box
             as="footer"
             gap="small"
             direction="row"
             align="center"
             justify="center"
-            pad={{ top: 'medium', bottom: 'small' }}
+            border="top"
+            pad="1rem"
           >
-            <Button label="Cancel" onClick={() => setShowInputModal(false)} />
-
-            <Button
-              disabled={!amount}
-              label="Withdraw"
-              onClick={() => createWithdrawTransaction()}
-              color="dark-3"
-            />
+            <Form
+              style={{
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.5rem',
+              }}
+            >
+              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+              <label
+                htmlFor="withdrawal-amount"
+                style={{ marginBottom: '0.25rem' }}
+              >
+                <Text>
+                  <FormattedMessage
+                    defaultMessage="How much {TICKER_NAME} would you like to withdraw?"
+                    values={{ TICKER_NAME }}
+                  />
+                </Text>
+              </label>
+              <NumberInput
+                id="withdrawal-amount"
+                value={amount}
+                setValue={value => {
+                  setAmount(Math.min(value, maxAmount));
+                }}
+                allowDecimals
+                maxValue={maxAmount}
+              />
+              <Button
+                style={{ fontSize: '1rem' }}
+                label="Withdrawal"
+                onClick={createWithdrawTransaction}
+                color="dark-3"
+                fullWidth
+                type="submit"
+                disabled={!amount}
+              />
+            </Form>
           </Box>
         </Layer>
       )}
@@ -146,22 +293,16 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
         <TransactionStatusModal
           headerMessage={
             <FormattedMessage
-              defaultMessage="Partial Withdraw of {amount} {TICKER_NAME}"
+              defaultMessage="Initiate withdrawal"
               values={{ amount, TICKER_NAME }}
             />
           }
           txHash={txHash}
           transactionStatus={transactionStatus}
-          onClose={() => setShowTxModal(false)}
+          onClose={handleTxClose}
           handleRetry={createWithdrawTransaction}
         />
       )}
-
-      <Button
-        disabled={maxAmount <= 0}
-        onClick={() => prepareInputModal()}
-        label={<FormattedMessage defaultMessage="Start withdrawal" />}
-      />
     </>
   );
 };

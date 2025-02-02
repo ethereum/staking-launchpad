@@ -55,6 +55,7 @@ interface Props {
   setValue: (e: number) => void;
   allowDecimals?: boolean;
   maxValue?: number;
+  id?: string;
 }
 
 export const NumberInput = ({
@@ -62,6 +63,7 @@ export const NumberInput = ({
   setValue,
   allowDecimals,
   maxValue,
+  id,
 }: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
     const val = e.target.value;
@@ -86,7 +88,12 @@ export const NumberInput = ({
 
   return (
     <div className="flex">
-      <StyledInput onChange={handleManualInput} value={value} type="number" />
+      <StyledInput
+        id={id}
+        onChange={handleManualInput}
+        value={value}
+        type="number"
+      />
       <ButtonContainer>
         <StyledButton onClick={increment} style={{ borderBottom: 'none' }}>
           <FormUp size="medium" />

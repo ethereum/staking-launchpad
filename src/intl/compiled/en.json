@@ -1125,6 +1125,12 @@
       "value": "I've joined my consensus client's Discord server."
     }
   ],
+  "4LvelA": [
+    {
+      "type": 0,
+      "value": "Max withdrawable"
+    }
+  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -1281,6 +1287,12 @@
       "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
     }
   ],
+  "5n6aCX": [
+    {
+      "type": 0,
+      "value": "Network congestion may result in delays"
+    }
+  ],
   "5q9Lgv": [
     {
       "type": 0,
@@ -1315,6 +1327,12 @@
     {
       "type": 0,
       "value": " at any time during your setup for some friendly help!"
+    }
+  ],
+  "5u71Xx": [
+    {
+      "type": 0,
+      "value": "Balance change"
     }
   ],
   "5v36Is": [
@@ -1631,20 +1649,6 @@
     {
       "type": 0,
       "value": "We can't detect MetaMask. Switch browsers or install MetaMask."
-    }
-  ],
-  "87q62B": [
-    {
-      "type": 0,
-      "value": "Upgrade "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    },
-    {
-      "type": 0,
-      "value": " to compounding"
     }
   ],
   "8BXroN": [
@@ -2159,6 +2163,20 @@
     {
       "type": 0,
       "value": "How to trigger withdrawals, credential change"
+    }
+  ],
+  "BswXIG": [
+    {
+      "type": 0,
+      "value": "How much "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " would you like to withdraw?"
     }
   ],
   "Bxe+HB": [
@@ -3429,44 +3447,6 @@
       "value": "View the Staking Checklist"
     }
   ],
-  "KiEciE": [
-    {
-      "type": 0,
-      "value": "Please select how much you would like to withdraw. Due to requiring a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " for the validator to operate, you will be able to withdraw a maximum of "
-    },
-    {
-      "type": 1,
-      "value": "maxAmount"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "KqGKRA": [
     {
       "type": 0,
@@ -3585,28 +3565,6 @@
     {
       "type": 0,
       "value": "Thank you for supporting the Ethereum network!"
-    }
-  ],
-  "LosS33": [
-    {
-      "type": 0,
-      "value": "Your validator must have a minimum balance of "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " to withdraw. If you want to withdraw the entirety of the validator balance you must exit."
     }
   ],
   "LpnfTF": [
@@ -4005,6 +3963,16 @@
     {
       "type": 0,
       "value": "The Nethermind documentation explains how to download and install the client."
+    }
+  ],
+  "ONXIv4": [
+    {
+      "type": 0,
+      "value": "Withdrawal some "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "ORVjVH": [
@@ -5409,6 +5377,12 @@
       "value": "."
     }
   ],
+  "ZCsoMo": [
+    {
+      "type": 0,
+      "value": "Withdrawals request are added to a queue for processing."
+    }
+  ],
   "ZK6NmY": [
     {
       "type": 0,
@@ -5445,12 +5419,6 @@
     {
       "type": 0,
       "value": "Why is there a wait?"
-    }
-  ],
-  "ZbFIA4": [
-    {
-      "type": 0,
-      "value": "Upgrade validator"
     }
   ],
   "ZsXdlw": [
@@ -5751,6 +5719,12 @@
     {
       "type": 0,
       "value": "The Geth documentation explains how to download and install the client."
+    }
+  ],
+  "cHfIGt": [
+    {
+      "type": 0,
+      "value": "Execution account"
     }
   ],
   "cJ9MRI": [
@@ -6107,6 +6081,12 @@
       "value": "activation queue"
     }
   ],
+  "eWA3GW": [
+    {
+      "type": 0,
+      "value": "Initiate withdrawal"
+    }
+  ],
   "eX072N": [
     {
       "type": 0,
@@ -6213,24 +6193,6 @@
     {
       "type": 0,
       "value": "Information for validator operators regarding staking withdrawals."
-    }
-  ],
-  "fYfWrj": [
-    {
-      "type": 0,
-      "value": "Partial Withdraw of "
-    },
-    {
-      "type": 1,
-      "value": "amount"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
     }
   ],
   "fZwn+P": [
@@ -8871,16 +8833,6 @@
       "value": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
     }
   ],
-  "w2THbw": [
-    {
-      "type": 0,
-      "value": "Your validator has a balance of "
-    },
-    {
-      "type": 1,
-      "value": "balance"
-    }
-  ],
   "w6qYSU": [
     {
       "type": 0,
@@ -9051,12 +9003,6 @@
     {
       "type": 0,
       "value": "testnet"
-    }
-  ],
-  "xgSoMq": [
-    {
-      "type": 0,
-      "value": "How much would you like to withdraw?"
     }
   ],
   "xh7oVn": [

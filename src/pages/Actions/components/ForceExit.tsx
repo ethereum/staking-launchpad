@@ -34,9 +34,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const { locale, formatMessage } = useIntl();
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
 
-  const [showConfirmationModal, setShowConfirmationModal] = useState<boolean>(
-    false
-  );
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [stepTwo, setStepTwo] = useState<boolean>(false);
 
   const [showTxModal, setShowTxModal] = useState<boolean>(false);
@@ -55,6 +53,11 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     setShowConfirmationModal(false);
     setStepTwo(false);
     setUserConfirmationValue('');
+  };
+
+  const handleTxModalClose = () => {
+    setShowTxModal(false);
+    closeConfirmationModal();
   };
 
   const createExitTransaction = async () => {
@@ -86,11 +89,6 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
       .on('error', () => {
         setTransactionStatus('error');
       });
-  };
-
-  const handleTxModalClose = () => {
-    setShowTxModal(false);
-    closeConfirmationModal();
   };
 
   const CONFIRM_EXIT_STRING = formatMessage({
@@ -154,9 +152,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 <li>
                   <Text as="span">
                     <FormattedMessage
-                      defaultMessage="All remaining funds will be transferred to the {address} within a few days after exit epoch reached"
+                      defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
                       values={{
-                        address: (
+                        destination: (
                           <strong>
                             <FormattedMessage defaultMessage="connected execution withdrawal address" />
                           </strong>

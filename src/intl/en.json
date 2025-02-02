@@ -206,6 +206,9 @@
   "19o6KO": {
     "message": "When can I withdraw my funds, and what’s the difference between exiting and withdrawing?"
   },
+  "1D3Svm": {
+    "message": "This validator account will be permanently upgraded to a compounding (Type 2) account."
+  },
   "1FdDAV": {
     "message": "JSON RPC endpoint"
   },
@@ -495,6 +498,9 @@
   "6VIBSR": {
     "message": "You can improve the effective balance of this validator by topping up"
   },
+  "6fBTXe": {
+    "message": "You'll be asked to sign a message with your wallet. Processing of upgrades is not immediate, so account for several days before completion."
+  },
   "6glcFX": {
     "message": "How to join the public testnet"
   },
@@ -574,6 +580,9 @@
   },
   "82vl9l": {
     "message": "We can't detect MetaMask. Switch browsers or install MetaMask."
+  },
+  "87q62B": {
+    "message": "Upgrade {index} to compounding"
   },
   "8BXroN": {
     "message": "Lodestar documentation"
@@ -658,6 +667,9 @@
   },
   "9VZ9oy": {
     "message": "How are validators incentivized to stay active and honest?"
+  },
+  "9Zv8ye": {
+    "message": "This will initiate the process of upgrading this validator from a Type 1 'regular withdrawals' or 'execution' account type, to a Type 2 'compounding' account type."
   },
   "9h8yTf": {
     "message": "A “withdrawable epoch” will also be calculated, which is 256 epochs after the calculated exit epoch (~27.3 hours later). When this epoch is reached, your validator will be eligible for a {fullWithdrawal} of all remaining funds."
@@ -1166,9 +1178,6 @@
   },
   "InUvmv": {
     "message": "Beacon chain push withdrawals as operations"
-  },
-  "IsyY5V": {
-    "message": "Upgrade validator {index} to compounding"
   },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
@@ -2053,6 +2062,9 @@
   "ZTo0Fl": {
     "message": "Why is there a wait?"
   },
+  "ZbFIA4": {
+    "message": "Upgrade validator"
+  },
   "ZsXdlw": {
     "message": "Erigon installation documentation"
   },
@@ -2160,6 +2172,9 @@
   },
   "by+LIm": {
     "message": "What is a validator client?"
+  },
+  "c8BPhf": {
+    "message": "Upgrade validator {index}"
   },
   "cDFQIx": {
     "message": "Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques."
@@ -2348,6 +2363,9 @@
   },
   "fnMHGO": {
     "message": "Waiting for wallet confirmation"
+  },
+  "fnV2qn": {
+    "message": "Compounding accounts eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
   },
   "fpe4Gx": {
     "message": "Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"
@@ -2656,6 +2674,9 @@
   },
   "kfks5a": {
     "message": "This depends on the type of withdrawal credentials a validator account has. Those using the newer {compounding} credential type (Type 2, 0x02) benefit from ETH balances beyond {MIN_ACTIVATION_BALANCE}, all the way up to {MAX_EFFECTIVE_BALANCE}."
+  },
+  "kiTJq4": {
+    "message": "Maximum effective account balance will increase to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
   },
   "kn06Zz": {
     "message": "Monitoring docs:"

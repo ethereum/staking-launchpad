@@ -61,7 +61,6 @@ const PullConsolidation = ({
     if (!account || !selectedValidator) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    // setShowSelectValidatorModal(false);
     setShowTxModal(true);
 
     try {
@@ -124,7 +123,7 @@ const PullConsolidation = ({
               </div>
               {selectedValidator && (
                 <div style={{ marginBlock: '1.5rem' }}>
-                  <Alert variant="error">
+                  <Alert variant="warning">
                     <AlertContent>
                       <AlertIcon />
                       <div>
@@ -140,7 +139,7 @@ const PullConsolidation = ({
                           </strong>
                         </Text>
                         <Text style={{ fontSize: '1rem' }}>
-                          <FormattedMessage defaultMessage="The chosen validator should remain online until exit epoch is reached." />
+                          <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
                         </Text>
                       </div>
                     </AlertContent>
@@ -265,9 +264,9 @@ const PullConsolidation = ({
                     <li>
                       <Text as="span">
                         <FormattedMessage
-                          defaultMessage="All remaining funds will be transferred to the {address} within a few days after exit epoch reached"
+                          defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
                           values={{
-                            address: (
+                            destination: (
                               <strong>
                                 <FormattedMessage
                                   defaultMessage="validator index {index}"
@@ -291,7 +290,6 @@ const PullConsolidation = ({
             <Button
               fullWidth
               destructive
-              secondary
               disabled={!selectedValidator}
               label={
                 selectedValidator ? (
@@ -328,7 +326,7 @@ const PullConsolidation = ({
         label="Pull funds"
         destructive
         secondary
-        onClick={() => confirmConsolidate()}
+        onClick={confirmConsolidate}
       />
     </>
   );

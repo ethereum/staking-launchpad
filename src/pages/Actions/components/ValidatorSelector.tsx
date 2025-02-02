@@ -39,7 +39,7 @@ const ValidatorSelector = ({
   const { formatMessage } = useIntl();
   return (
     <Select
-      placeholder={`Total validators: ${validators.length}`}
+      placeholder={`Available validators: ${validators.length}`}
       searchPlaceholder={formatMessage({
         defaultMessage: 'Filter by index or pubkey',
       })}

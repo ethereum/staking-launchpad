@@ -6,6 +6,7 @@ import { Validator, ValidatorType } from '../types';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import PushConsolidation from './PushConsolidation';
+import TopUp from './TopUp';
 import UpgradeCompounding from './UpgradeCompounding';
 
 import { Section as SharedSection } from './Shared';
@@ -96,6 +97,16 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
   const surplusEther = validator.coinBalance - MIN_ACTIVATION_BALANCE;
   return (
     <Section>
+      <Row>
+        <div style={{ flex: 1 }}>
+          <ActionTitle>
+            <FormattedMessage defaultMessage="Add funds to your validator" />
+          </ActionTitle>
+          <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's max EB can increase rewards and penalties." />
+        </div>
+        <TopUp validator={validator} />
+      </Row>
+
       {validator.type === ValidatorType.Execution && (
         <Row>
           <div style={{ flex: 1 }}>

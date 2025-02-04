@@ -483,6 +483,9 @@
   "5v36Is": {
     "message": "Exiting a {client} validator"
   },
+  "6/Tl+g": {
+    "message": "TO"
+  },
   "63gLLu": {
     "message": "average"
   },
@@ -1390,6 +1393,9 @@
   "M35Dz/": {
     "message": "Upload to Beacon Node BLSToExecutionChange pool"
   },
+  "MAOeyC": {
+    "message": "Depositing beyond the validators maximum effective balance will result in those excess funds being immediately withdrawn and will not impact the effectiveness of the validator"
+  },
   "MAVs3a": {
     "message": "*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
   },
@@ -1452,6 +1458,9 @@
   },
   "N6QzJ5": {
     "message": "a few more days"
+  },
+  "NB68I4": {
+    "message": "Add funds to your validator"
   },
   "NDrMCw": {
     "message": "Total number of validator accounts that have eligible withdrawals (variable)"
@@ -1789,6 +1798,9 @@
   },
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
+  },
+  "TkfeEf": {
+    "message": "Adding funds to a validator not yet at it's max EB can increase rewards and penalties."
   },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
@@ -3297,6 +3309,9 @@
   },
   "ukfwum": {
     "message": "Become a validator with Nimbus"
+  },
+  "upSHEn": {
+    "message": "FROM"
   },
   "v/nu/L": {
     "message": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing."

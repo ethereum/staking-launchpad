@@ -6,14 +6,10 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { Section, CopyContainer, Hash } from './Shared';
 
-import { Validator } from '../types';
+import { Validator, ValidatorType } from '../types';
 
 import { hasValidatorExited } from '../../../utils/validators';
-import {
-  TICKER_NAME,
-  COMPOUNDING_CREDENTIALS,
-  EXECUTION_CREDENTIALS,
-} from '../../../utils/envVars';
+import { TICKER_NAME } from '../../../utils/envVars';
 import { epochToDate } from '../../../utils/beaconchain';
 
 const ValidatorDetails = ({ validator }: { validator: Validator }) => {
@@ -27,7 +23,6 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
     }, 2000);
   };
 
-  const prefix = validator.withdrawalcredentials.slice(0, 4);
   const hasExitCompleted =
     hasValidatorExited(validator) &&
     epochToDate(validator.exitepoch).getTime() < Date.now();
@@ -112,13 +107,15 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
 
         <Text>
           <FormattedMessage defaultMessage="Withdrawal credential type" />:{' '}
-          <span style={{ fontFamily: 'monospace' }}>{prefix}</span>{' '}
-          {prefix === COMPOUNDING_CREDENTIALS && (
+          <span style={{ fontFamily: 'monospace' }}>
+            {validator.withdrawalcredentials.slice(0, 4)}
+          </span>{' '}
+          {validator.type === ValidatorType.Compounding && (
             <span>
               <FormattedMessage defaultMessage="(Compounding)" />
             </span>
           )}
-          {prefix === EXECUTION_CREDENTIALS && (
+          {validator.type === ValidatorType.Execution && (
             <span>
               <FormattedMessage defaultMessage="(Regular withdrawals)" />
             </span>

@@ -2,17 +2,15 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { FormattedMessage } from 'react-intl';
-import { Validator } from '../types';
-import PushConsolidation from './PushConsolidation';
+import { Validator, ValidatorType } from '../types';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
+import PushConsolidation from './PushConsolidation';
 import UpgradeCompounding from './UpgradeCompounding';
 
 import { Section as SharedSection } from './Shared';
 import { hasValidatorExited } from '../../../utils/validators';
 import {
-  EXECUTION_CREDENTIALS,
-  COMPOUNDING_CREDENTIALS,
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   MAX_EFFECTIVE_BALANCE,
@@ -73,8 +71,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
     const potentialSourceValidators = validators.filter(v => {
       const isSameValidator = v.pubkey === validator.pubkey;
       const hasBalance = v.balance > 0;
-      const isExecutionOrLater =
-        +v.withdrawalcredentials.slice(0, 4) >= +EXECUTION_CREDENTIALS;
+      const isExecutionOrLater = v.type >= ValidatorType.Execution;
       // Should be filtered out from API call for validators by withdrawal address; backup check
       const isSameCredentials =
         v.withdrawalcredentials.slice(4) ===
@@ -89,20 +86,17 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
     setSourceValidatorSet(potentialSourceValidators);
 
-    const potentialTargetValidators = potentialSourceValidators.filter(v => {
-      const isCompoundingOrLater =
-        +v.withdrawalcredentials.slice(0, 4) >= +COMPOUNDING_CREDENTIALS;
-      return isCompoundingOrLater;
-    });
+    const potentialTargetValidators = potentialSourceValidators.filter(
+      v => v.type >= ValidatorType.Compounding
+    );
 
     setTargetValidatorSet(potentialTargetValidators);
   }, [validator, validators]);
 
-  const accountType = +validator.withdrawalcredentials.slice(0, 4);
   const surplusEther = validator.coinBalance - MIN_ACTIVATION_BALANCE;
   return (
     <Section>
-      {accountType === +EXECUTION_CREDENTIALS && (
+      {validator.type === ValidatorType.Execution && (
         <Row>
           <div style={{ flex: 1 }}>
             <ActionTitle>
@@ -121,7 +115,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         </Row>
       )}
 
-      {accountType >= +COMPOUNDING_CREDENTIALS && (
+      {validator.type >= ValidatorType.Compounding && (
         <Row>
           <div style={{ flex: 1 }}>
             <ActionTitle>
@@ -150,7 +144,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         </Row>
       )}
 
-      {accountType >= +COMPOUNDING_CREDENTIALS && (
+      {validator.type >= ValidatorType.Compounding && (
         <Row>
           <div style={{ flex: 1 }}>
             <ActionTitle>

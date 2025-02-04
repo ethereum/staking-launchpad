@@ -10,7 +10,7 @@ import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
 } from '../TopUp/types';
-import { Props, Validator } from './types';
+import { Props, Validator, ValidatorType } from './types';
 
 import ValidatorActions from './components/ValidatorActions';
 
@@ -114,10 +114,11 @@ const fetchValidatorsByPubkeys = async (
     const data: BeaconChainValidator[] = Array.isArray(json.data)
       ? json.data
       : [json.data];
+
     return data.map(v => ({
       ...v,
-      // balanceDisplay: `${coinBalance}${TICKER_NAME}`,
       coinBalance: new BigNumber(v.balance).div(ETHER_TO_GWEI).toNumber(),
+      type: +v.withdrawalcredentials.slice(0, 4) as ValidatorType,
     }));
   } catch (error) {
     console.warn(

@@ -126,7 +126,7 @@ const _SummaryPage = ({
     accountType > 1 ? MAX_EFFECTIVE_BALANCE : MIN_ACTIVATION_BALANCE;
 
   const readyForDeposit = depositKeys.filter(
-    key => key.depositStatus === DepositStatus.READY_FOR_DEPOSIT
+    key => key.depositStatus !== DepositStatus.ALREADY_DEPOSITED
   );
   const amountValidators = new BigNumber(readyForDeposit.length);
 

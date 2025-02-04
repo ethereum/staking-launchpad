@@ -1,5 +1,4 @@
 import { AbstractConnector } from '@web3-react/abstract-connector';
-import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
@@ -96,7 +95,7 @@ export const handleMultipleTransactions = async (
     // gasLimit: '0x124f8', TODO set gas limit
     gasPrice: web3.utils.toHex(await web3.eth.getGasPrice()),
     from: account as string,
-    value: new BigNumber(amountInGwei).multipliedBy(1e9).toNumber(),
+    value: web3.utils.toWei(amountInGwei.toFixed(), 'gwei'),
   };
 
   contract.methods

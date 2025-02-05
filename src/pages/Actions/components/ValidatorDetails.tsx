@@ -6,13 +6,22 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { Section, CopyContainer, Hash } from './Shared';
 
-import { Validator, ValidatorType } from '../types';
+import { ValidatorType } from '../types';
+import { BeaconChainValidator } from '../../TopUp/types';
 
-import { hasValidatorExited } from '../../../utils/validators';
+import {
+  hasValidatorExited,
+  getCredentialType,
+  getEtherBalance,
+} from '../../../utils/validators';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { epochToDate } from '../../../utils/beaconchain';
 
-const ValidatorDetails = ({ validator }: { validator: Validator }) => {
+const ValidatorDetails = ({
+  validator,
+}: {
+  validator: BeaconChainValidator;
+}) => {
   const { locale } = useIntl();
   const [copied, setCopied] = useState<{ [key: string]: boolean }>({});
 
@@ -90,7 +99,7 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
 
         <Text>
           <FormattedMessage defaultMessage="Balance" />:{' '}
-          {validator.coinBalance.toString()} {TICKER_NAME}
+          {getEtherBalance(validator)} {TICKER_NAME}
         </Text>
 
         <Text>
@@ -110,12 +119,12 @@ const ValidatorDetails = ({ validator }: { validator: Validator }) => {
           <span style={{ fontFamily: 'monospace' }}>
             {validator.withdrawalcredentials.slice(0, 4)}
           </span>{' '}
-          {validator.type === ValidatorType.Compounding && (
+          {getCredentialType(validator) === ValidatorType.Compounding && (
             <span>
               <FormattedMessage defaultMessage="(Compounding)" />
             </span>
           )}
-          {validator.type === ValidatorType.Execution && (
+          {getCredentialType(validator) === ValidatorType.Execution && (
             <span>
               <FormattedMessage defaultMessage="(Regular withdrawals)" />
             </span>

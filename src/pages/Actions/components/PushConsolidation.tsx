@@ -6,7 +6,7 @@ import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
-import { Validator } from '../types';
+import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
@@ -22,10 +22,11 @@ import ValidatorSelector from './ValidatorSelector';
 
 import { generateCompoundParams } from '../ActionUtils';
 import { TICKER_NAME } from '../../../utils/envVars';
+import { getEtherBalance } from '../../../utils/validators';
 
 type PushConsolidationProps = {
-  sourceValidator: Validator; // The selected validator to consolidate into (target)
-  targetValidatorSet: Validator[]; // List of available source validators (Any 0x01 or higher, excluding the target)
+  sourceValidator: BeaconChainValidator; // The selected validator to consolidate into (target)
+  targetValidatorSet: BeaconChainValidator[]; // List of available source validators (Any 0x01 or higher, excluding the target)
 };
 
 const PushConsolidation = ({
@@ -35,9 +36,10 @@ const PushConsolidation = ({
   const { locale } = useIntl();
   const { connector, account } = useWeb3React();
 
-  const [selectedValidator, setSelectedValidator] = useState<Validator | null>(
-    null
-  );
+  const [
+    selectedValidator,
+    setSelectedValidator,
+  ] = useState<BeaconChainValidator | null>(null);
   const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
     boolean
   >(false);
@@ -231,7 +233,7 @@ const PushConsolidation = ({
                       </Text>
                       <Text>
                         <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {selectedValidator.coinBalance} {TICKER_NAME}
+                        {getEtherBalance(selectedValidator)} {TICKER_NAME}
                       </Text>
                       <Text>
                         <FormattedMessage defaultMessage="Ending balance" />:{' '}
@@ -273,13 +275,13 @@ const PushConsolidation = ({
                       </Text>
                       <Text>
                         <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {sourceValidator.coinBalance} {TICKER_NAME}
+                        {getEtherBalance(sourceValidator)} {TICKER_NAME}
                       </Text>
                       <Text>
                         <FormattedMessage defaultMessage="Ending balance" />:{' '}
                         <strong>
-                          {sourceValidator.coinBalance +
-                            selectedValidator.coinBalance}{' '}
+                          {getEtherBalance(sourceValidator) +
+                            getEtherBalance(selectedValidator)}{' '}
                           {TICKER_NAME}
                         </strong>
                       </Text>

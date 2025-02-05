@@ -3,14 +3,13 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { Web3Provider } from '@ethersproject/providers';
 import { useWeb3React } from '@web3-react/core';
-import BigNumber from 'bignumber.js';
 import { Button as GrommetButton } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
 } from '../TopUp/types';
-import { Props, Validator, ValidatorType } from './types';
+import { Props } from './types';
 
 import ValidatorActions from './components/ValidatorActions';
 
@@ -27,11 +26,7 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import {
-  BEACONCHAIN_URL,
-  ETHER_TO_GWEI,
-  TICKER_NAME,
-} from '../../utils/envVars';
+import { BEACONCHAIN_URL, TICKER_NAME } from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
 import HelpCallout from '../../components/HelpCallout';
 
@@ -104,7 +99,7 @@ const fetchPubkeysByWithdrawalAddress = async (
 
 const fetchValidatorsByPubkeys = async (
   pubkeys: string[]
-): Promise<Validator[] | null> => {
+): Promise<BeaconChainValidator[] | null> => {
   try {
     const response = await fetch(
       `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(',')}`
@@ -115,11 +110,7 @@ const fetchValidatorsByPubkeys = async (
       ? json.data
       : [json.data];
 
-    return data.map(v => ({
-      ...v,
-      coinBalance: new BigNumber(v.balance).div(ETHER_TO_GWEI).toNumber(),
-      type: +v.withdrawalcredentials.slice(0, 4) as ValidatorType,
-    }));
+    return data;
   } catch (error) {
     console.warn(
       `Error fetching validators (pubkeys ${pubkeys.join(',')}):`,
@@ -139,13 +130,14 @@ const _ActionsPage: React.FC<Props> = () => {
   const { formatMessage } = useIntl();
 
   const [loading, setLoading] = React.useState<boolean>(false);
-  const [selectedValidator, setSelectedValidator] = useState<Validator | null>(
-    null
-  );
+  const [
+    selectedValidator,
+    setSelectedValidator,
+  ] = useState<BeaconChainValidator | null>(null);
   const [validatorLoadError, setValidatorLoadError] = React.useState<boolean>(
     false
   );
-  const [validators, setValidators] = useState<Validator[]>([]);
+  const [validators, setValidators] = useState<BeaconChainValidator[]>([]);
 
   const [fetchOffset, setFetchOffset] = useState(0);
 

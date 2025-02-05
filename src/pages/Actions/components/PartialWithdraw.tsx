@@ -6,19 +6,13 @@ import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
-import { Validator } from '../types';
+import { BeaconChainValidator } from '../../TopUp/types';
 
+import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
-import { NumberInput } from '../../../components/NumberInput';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
-import { Text } from '../../../components/Text';
-import { generateWithdrawalParams } from '../ActionUtils';
-
-import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
+import { Heading } from '../../../components/Heading';
 import ModalHeader from './ModalHeader';
+import { NumberInput } from '../../../components/NumberInput';
 import {
   ModalBody,
   ModalContent,
@@ -26,15 +20,25 @@ import {
   AlertContainer,
   AlertContent,
 } from './Shared';
-import { Heading } from '../../../components/Heading';
-import { Alert } from '../../../components/Alert';
+import { Text } from '../../../components/Text';
+import {
+  TransactionStatus,
+  TransactionStatusModal,
+} from '../../../components/TransactionStatusModal';
+
+import { generateWithdrawalParams } from '../ActionUtils';
+import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
+import { getEtherBalance } from '../../../utils/validators';
+
+import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 
 interface Props {
-  validator: Validator;
+  validator: BeaconChainValidator;
 }
 
 const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
+  const executionEtherBalance = useExecutionBalance();
 
   const [amount, setAmount] = useState(0);
   const [maxAmount, setMaxAmount] = useState(0);
@@ -47,9 +51,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
   useEffect(() => {
     setMaxAmount(
-      validator
-        ? Math.max(0, validator.coinBalance - MIN_ACTIVATION_BALANCE)
-        : 0
+      Math.max(0, getEtherBalance(validator) - MIN_ACTIVATION_BALANCE)
     );
   }, [validator]);
 
@@ -181,7 +183,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   </Text>
                   <Text className="mb10">
                     <FormattedMessage defaultMessage="Current balance" />:{' '}
-                    {validator.coinBalance} {TICKER_NAME}
+                    {getEtherBalance(validator)} {TICKER_NAME}
                   </Text>
                   <Text className="mb10">
                     <FormattedMessage defaultMessage="Max withdrawable" />:{' '}
@@ -190,7 +192,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   <Text>
                     <FormattedMessage defaultMessage="Ending balance" />:{' '}
                     <strong>
-                      {validator.coinBalance - amount} {TICKER_NAME}
+                      {getEtherBalance(validator) - amount} {TICKER_NAME}
                     </strong>
                   </Text>
                 </div>
@@ -226,12 +228,27 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   >
                     <Hash style={{ fontSize: '1rem' }}>{account}</Hash>
                   </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="Balance change" />:
-                    <strong>
-                      +{amount} {TICKER_NAME}
-                    </strong>
-                  </Text>
+                  {executionEtherBalance ? (
+                    <>
+                      <Text className="mb10">
+                        <FormattedMessage defaultMessage="Current balance" />:{' '}
+                        {executionEtherBalance} {TICKER_NAME}
+                      </Text>
+                      <Text>
+                        <FormattedMessage defaultMessage="Ending balance" />:{' '}
+                        <strong>
+                          {executionEtherBalance - amount} {TICKER_NAME}
+                        </strong>
+                      </Text>
+                    </>
+                  ) : (
+                    <Text>
+                      <FormattedMessage defaultMessage="Balance change" />:
+                      <strong>
+                        +{amount} {TICKER_NAME}
+                      </strong>
+                    </Text>
+                  )}
                 </div>
               </div>
             </ModalContent>

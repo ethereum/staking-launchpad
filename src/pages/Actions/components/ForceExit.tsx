@@ -6,7 +6,7 @@ import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
-import { Validator } from '../types';
+import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
@@ -26,7 +26,7 @@ import {
 import { generateWithdrawalParams } from '../ActionUtils';
 
 interface Props {
-  validator: Validator;
+  validator: BeaconChainValidator;
 }
 
 const ForceExit: React.FC<Props> = ({ validator }) => {

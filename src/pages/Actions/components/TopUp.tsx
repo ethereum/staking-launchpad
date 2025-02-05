@@ -10,7 +10,8 @@ import { SendOptions } from 'web3-eth-contract';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
-import { Validator, ValidatorType } from '../types';
+import { ValidatorType } from '../types';
+import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Button } from '../../../components/Button';
 import { NumberInput } from '../../../components/NumberInput';
@@ -39,6 +40,7 @@ import { Heading } from '../../../components/Heading';
 import { Alert } from '../../../components/Alert';
 import { contractAbi } from '../../../contractAbi';
 import { buf2hex } from '../../../utils/buf2hex';
+import { getEtherBalance, getCredentialType } from '../../../utils/validators';
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -58,7 +60,7 @@ const depositDataContainer = new ContainerType({
 });
 
 interface Props {
-  validator: Validator;
+  validator: BeaconChainValidator;
 }
 
 const PartialWithdraw: React.FC<Props> = ({ validator }) => {
@@ -75,7 +77,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
   useEffect(() => {
     setMaxAmount(
-      validator.type >= ValidatorType.Compounding
+      getCredentialType(validator) >= ValidatorType.Compounding
         ? MAX_EFFECTIVE_BALANCE
         : MIN_ACTIVATION_BALANCE
     );
@@ -260,7 +262,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   </Text>
                   <Text className="mb10">
                     <FormattedMessage defaultMessage="Current balance" />:{' '}
-                    {validator.coinBalance} {TICKER_NAME}
+                    {getEtherBalance(validator)} {TICKER_NAME}
                   </Text>
                   <Text className="mb10">
                     <FormattedMessage defaultMessage="Max effective balance" />:{' '}
@@ -269,7 +271,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   <Text>
                     <FormattedMessage defaultMessage="Ending balance" />:{' '}
                     <strong>
-                      {validator.coinBalance + amount} {TICKER_NAME}
+                      {getEtherBalance(validator) + amount} {TICKER_NAME}
                     </strong>
                   </Text>
                 </div>

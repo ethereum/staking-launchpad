@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction } from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
-import { Validator } from '../types';
+import { BeaconChainValidator } from '../../TopUp/types';
 
 import Select from '../../../components/Select';
 
@@ -26,9 +26,9 @@ const AccountType = styled.p`
 `;
 
 type ValidatorSelectorProps = {
-  validators: Validator[];
-  setSelectedValidator: Dispatch<SetStateAction<Validator | null>>;
-  selectedValidator: Validator | null;
+  validators: BeaconChainValidator[];
+  setSelectedValidator: Dispatch<SetStateAction<BeaconChainValidator | null>>;
+  selectedValidator: BeaconChainValidator | null;
 };
 
 const ValidatorSelector = ({

@@ -106,6 +106,9 @@
   "/rmnC0": {
     "message": "If at all possible, consider running another client at this time to help protect yourself and the network."
   },
+  "/sp2Uu": {
+    "message": "How much {TICKER_NAME} would you like to add to your stake?"
+  },
   "/tHxib": {
     "message": "Geth is one of the three original implementations of the Ethereum protocol, written in Go."
   },
@@ -522,6 +525,9 @@
   },
   "6vdHjj": {
     "message": "{withdrawalCredentials} is a 32-byte field associated with every validator, initially set during deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawal credentials: BLS credentials (Type 0, or {type0}) and execution (Ethereum address) credentials (Type 1, or {type1})."
+  },
+  "6z/+77": {
+    "message": "Depositing to validator"
   },
   "7+Domh": {
     "message": "Notes"
@@ -3417,6 +3423,9 @@
   },
   "xMOzv2": {
     "message": "Anyone wishing to conclude their staking obligations can sign a “voluntary exit” message which is then broadcast to the Beacon Chain to start the process. This is a manual step."
+  },
+  "xP01Tv": {
+    "message": "Stake more funds"
   },
   "xP6BKs": {
     "message": "staker checklist"

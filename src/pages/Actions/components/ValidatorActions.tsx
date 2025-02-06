@@ -7,7 +7,7 @@ import { BeaconChainValidator } from '../../TopUp/types';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
 import PushConsolidation from './PushConsolidation';
-import TopUp from './TopUp';
+import AddFunds from './AddFunds';
 import UpgradeCompounding from './UpgradeCompounding';
 
 import { Section as SharedSection } from './Shared';
@@ -114,7 +114,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
           </ActionTitle>
           <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's max EB can increase rewards and penalties." />
         </div>
-        <TopUp validator={validator} />
+        <AddFunds validator={validator} />
       </Row>
 
       {getCredentialType(validator) === ValidatorType.Execution && (

@@ -25,8 +25,8 @@ import { bufferHex } from '../../../utils/SSZ';
 import {
   CONTRACT_ADDRESS,
   MAX_EFFECTIVE_BALANCE,
-  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
+  ETHER_TO_GWEI,
 } from '../../../utils/envVars';
 import ModalHeader from './ModalHeader';
 import {
@@ -41,6 +41,7 @@ import { Alert } from '../../../components/Alert';
 import { contractAbi } from '../../../contractAbi';
 import { buf2hex } from '../../../utils/buf2hex';
 import { getEtherBalance, getCredentialType } from '../../../utils/validators';
+import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -63,8 +64,9 @@ interface Props {
   validator: BeaconChainValidator;
 }
 
-const PartialWithdraw: React.FC<Props> = ({ validator }) => {
+const AddFunds: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
+  const executionBalance = useExecutionBalance();
 
   const [amount, setAmount] = useState(0);
   const [maxAmount, setMaxAmount] = useState(0);
@@ -76,11 +78,13 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const [txHash, setTxHash] = useState<string>('');
 
   useEffect(() => {
-    setMaxAmount(
-      getCredentialType(validator) >= ValidatorType.Compounding
-        ? MAX_EFFECTIVE_BALANCE
-        : MIN_ACTIVATION_BALANCE
+    // Must be 0x02 address
+    if (getCredentialType(validator) < ValidatorType.Compounding) return;
+    // Max is MAX_EFFECTIVE_BALANCE plus 0.25, accounting for hysteresis zones
+    const max = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.25).minus(
+      new BigNumber(validator.balance).div(ETHER_TO_GWEI)
     );
+    setMaxAmount(max.toNumber());
   }, [validator]);
 
   const openInputModal = () => {
@@ -152,7 +156,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     <>
       <Button
         onClick={openInputModal}
-        label={<FormattedMessage defaultMessage="Top up" />}
+        label={<FormattedMessage defaultMessage="Stake more funds" />}
       />
 
       {showInputModal && (
@@ -200,7 +204,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     level={3}
                     style={{
                       textTransform: 'uppercase',
-                      color: 'darkgreen',
+                      color: 'darkred',
                     }}
                   >
                     <FormattedMessage defaultMessage="FROM" />
@@ -219,12 +223,69 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   >
                     <Hash style={{ fontSize: '1rem' }}>{account}</Hash>
                   </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="Balance change" />:
-                    <strong>
-                      -{amount} {TICKER_NAME}
-                    </strong>
-                  </Text>
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                    }}
+                  >
+                    {executionBalance && (
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Current balance" />:
+                        </div>
+                        <div
+                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        >
+                          {executionBalance.toFixed(9)} {TICKER_NAME}
+                        </div>
+                      </Text>
+                    )}
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Balance change" />:
+                      </div>
+                      <div
+                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                      >
+                        {amount > 0 ? '-' : ''}
+                        {amount.toFixed(9)} {TICKER_NAME}
+                      </div>
+                    </Text>
+                    {executionBalance && (
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Ending balance" />:
+                        </div>
+                        <div
+                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        >
+                          {(executionBalance - amount).toFixed(9)} {TICKER_NAME}
+                        </div>
+                      </Text>
+                    )}
+                  </div>
                 </div>
 
                 <div
@@ -261,19 +322,71 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     <Hash>{validator.pubkey}</Hash>
                   </Text>
                   <Text className="mb10">
-                    <FormattedMessage defaultMessage="Current balance" />:{' '}
-                    {getEtherBalance(validator)} {TICKER_NAME}
-                  </Text>
-                  <Text className="mb10">
                     <FormattedMessage defaultMessage="Max effective balance" />:{' '}
                     {maxAmount} {TICKER_NAME}
                   </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                    <strong>
-                      {getEtherBalance(validator) + amount} {TICKER_NAME}
-                    </strong>
-                  </Text>
+
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                    }}
+                  >
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Current balance" />:
+                      </div>
+                      <div
+                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                      >
+                        {getEtherBalance(validator).toFixed(9)} {TICKER_NAME}
+                      </div>
+                    </Text>
+
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Balance change" />:
+                      </div>
+                      <div
+                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                      >
+                        {amount > 0 ? '+' : ''}
+                        {amount.toFixed(9)} {TICKER_NAME}
+                      </div>
+                    </Text>
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Ending balance" />:
+                      </div>
+                      <div
+                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                      >
+                        {(getEtherBalance(validator) + amount).toFixed(9)}{' '}
+                        {TICKER_NAME}
+                      </div>
+                    </Text>
+                  </div>
                 </div>
               </div>
             </ModalContent>
@@ -303,7 +416,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               >
                 <Text>
                   <FormattedMessage
-                    defaultMessage="How much {TICKER_NAME} would you like to withdraw?"
+                    defaultMessage="How much {TICKER_NAME} would you like to add to your stake?"
                     values={{ TICKER_NAME }}
                   />
                 </Text>
@@ -319,7 +432,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               />
               <Button
                 style={{ fontSize: '1rem' }}
-                label="Top up"
+                label="Stake more funds"
                 onClick={createTopUpTransaction}
                 color="dark-3"
                 fullWidth
@@ -333,7 +446,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
       {showTxModal && (
         <TransactionStatusModal
-          headerMessage={<FormattedMessage defaultMessage="Top up validator" />}
+          headerMessage={
+            <FormattedMessage defaultMessage="Depositing to validator" />
+          }
           txHash={txHash}
           transactionStatus={transactionStatus}
           onClose={handleTxClose}
@@ -344,4 +459,4 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   );
 };
 
-export default PartialWithdraw;
+export default AddFunds;

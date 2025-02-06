@@ -26,26 +26,32 @@ import { Text } from '../../../components/Text';
 import PullConsolidation from './PullConsolidation';
 
 const Section = styled(SharedSection)`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
   padding: 0;
+
+  @media (max-width: 32rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Row = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
   padding: 1rem;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem 2rem;
 
   &:not(:last-child) {
     border-bottom: 1px solid lightgray;
   }
 
   @media (max-width: 32rem) {
+    grid-column: span 1;
     flex-direction: column;
     padding-block: 1.5rem;
-    gap: 1.5rem;
     align-items: start;
   }
 `;
@@ -115,7 +121,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
     <Section>
       {getCredentialType(validator) === ValidatorType.Execution && (
         <Row>
-          <div style={{ flex: 1 }}>
+          <div>
             <ActionTitle>
               <FormattedMessage defaultMessage="Upgrade account to compounding" />
             </ActionTitle>
@@ -133,7 +139,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       )}
 
       <Row>
-        <div style={{ flex: 1 }}>
+        <div>
           <ActionTitle>
             <FormattedMessage defaultMessage="Add funds to your validator" />
           </ActionTitle>
@@ -159,7 +165,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
       {getCredentialType(validator) >= ValidatorType.Compounding && (
         <Row>
-          <div style={{ flex: 1 }}>
+          <div>
             <ActionTitle>
               <FormattedMessage defaultMessage="Request partial withdrawal" />
             </ActionTitle>
@@ -188,7 +194,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
       {getCredentialType(validator) >= ValidatorType.Compounding && (
         <Row>
-          <div style={{ flex: 1 }}>
+          <div>
             <ActionTitle>
               <FormattedMessage defaultMessage="Absorb another validator" />
             </ActionTitle>
@@ -203,7 +209,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
       {targetValidatorSet.length > 0 && (
         <Row>
-          <div style={{ flex: 1 }}>
+          <div>
             <ActionTitle>
               <FormattedMessage defaultMessage="Migrate funds" />
             </ActionTitle>
@@ -218,7 +224,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
       {!hasValidatorExited(validator) && (
         <Row>
-          <div style={{ flex: 1 }}>
+          <div>
             <ActionTitle>
               <FormattedMessage defaultMessage="Exit validator" />
             </ActionTitle>

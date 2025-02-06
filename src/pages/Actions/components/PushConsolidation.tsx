@@ -37,8 +37,8 @@ const PushConsolidation = ({
   const { connector, account } = useWeb3React();
 
   const [
-    selectedValidator,
-    setSelectedValidator,
+    targetValidator,
+    setTargetValidator,
   ] = useState<BeaconChainValidator | null>(null);
   const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
     boolean
@@ -51,16 +51,16 @@ const PushConsolidation = ({
 
   const confirmConsolidate = () => {
     setShowSelectValidatorModal(true);
-    setSelectedValidator(null);
+    setTargetValidator(null);
   };
 
   const closeSelectValidatorModal = () => {
     setShowSelectValidatorModal(false);
-    setSelectedValidator(null);
+    setTargetValidator(null);
   };
 
   const createConsolidationTransaction = async () => {
-    if (!account || !selectedValidator) return;
+    if (!account || !targetValidator) return;
 
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
@@ -72,7 +72,7 @@ const PushConsolidation = ({
       const params = await generateCompoundParams(
         web3,
         account,
-        selectedValidator.pubkey,
+        targetValidator.pubkey,
         sourceValidator.pubkey
       );
       return web3.eth
@@ -113,7 +113,7 @@ const PushConsolidation = ({
               <FormattedMessage defaultMessage="Migrate and exit validator" />
             </ModalHeader>
             <ModalBody>
-              {!selectedValidator && (
+              {!targetValidator && (
                 <ModalContent>
                   <Text>
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network." />
@@ -153,7 +153,7 @@ const PushConsolidation = ({
               <div
                 style={{
                   marginBottom: '1rem',
-                  marginTop: selectedValidator ? '0' : '1rem',
+                  marginTop: targetValidator ? '0' : '1rem',
                 }}
               >
                 <div style={{ marginBottom: '0.5rem' }}>
@@ -161,12 +161,12 @@ const PushConsolidation = ({
                 </div>
                 <ValidatorSelector
                   validators={targetValidatorSet}
-                  selectedValidator={selectedValidator}
-                  setSelectedValidator={setSelectedValidator}
+                  selectedValidator={targetValidator}
+                  setSelectedValidator={setTargetValidator}
                 />
               </div>
 
-              {selectedValidator && (
+              {targetValidator && (
                 <div style={{ marginBlock: '1.5rem' }}>
                   <Alert variant="warning">
                     <AlertContent>
@@ -178,7 +178,7 @@ const PushConsolidation = ({
                               defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
                               values={{
                                 sourceIndex: sourceValidator.validatorindex,
-                                targetIndex: selectedValidator.validatorindex,
+                                targetIndex: targetValidator.validatorindex,
                               }}
                             />
                           </strong>
@@ -192,7 +192,7 @@ const PushConsolidation = ({
                 </div>
               )}
 
-              {selectedValidator && (
+              {targetValidator && (
                 <ModalContent>
                   <div
                     style={{
@@ -219,7 +219,7 @@ const PushConsolidation = ({
                       <Text>
                         <strong>
                           <FormattedMessage defaultMessage="Index" />:{' '}
-                          {selectedValidator.validatorindex}
+                          {targetValidator.validatorindex}
                         </strong>
                       </Text>
                       <Text
@@ -229,16 +229,84 @@ const PushConsolidation = ({
                           marginBottom: '0.5rem',
                         }}
                       >
-                        <Hash>{selectedValidator.pubkey}</Hash>
+                        <Hash>{targetValidator.pubkey}</Hash>
                       </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {getEtherBalance(selectedValidator)} {TICKER_NAME}
-                      </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                        <strong>0 {TICKER_NAME}</strong>
-                      </Text>
+
+                      <div
+                        style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(2, 1fr)',
+                        }}
+                      >
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Current balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Balance change" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                              color: 'darkred',
+                            }}
+                          >
+                            {getEtherBalance(sourceValidator) > 0 ? '-' : ''}
+                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Ending balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {(0).toFixed(9)} {TICKER_NAME}
+                          </div>
+                        </Text>
+                      </div>
                     </div>
                     <div
                       style={{
@@ -273,18 +341,85 @@ const PushConsolidation = ({
                       >
                         <Hash>{sourceValidator.pubkey}</Hash>
                       </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {getEtherBalance(sourceValidator)} {TICKER_NAME}
-                      </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                        <strong>
-                          {getEtherBalance(sourceValidator) +
-                            getEtherBalance(selectedValidator)}{' '}
-                          {TICKER_NAME}
-                        </strong>
-                      </Text>
+                      <div
+                        style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(2, 1fr)',
+                        }}
+                      >
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Current balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {getEtherBalance(targetValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Balance change" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                              color: 'darkgreen',
+                            }}
+                          >
+                            {getEtherBalance(sourceValidator) > 0 ? '+' : ''}
+                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Ending balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {(
+                              getEtherBalance(targetValidator) +
+                              getEtherBalance(sourceValidator)
+                            ).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                      </div>
                     </div>
                   </div>
                 </ModalContent>
@@ -296,9 +431,9 @@ const PushConsolidation = ({
             <Button
               fullWidth
               destructive
-              disabled={!selectedValidator}
+              disabled={!targetValidator}
               label={
-                selectedValidator ? (
+                targetValidator ? (
                   <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
                 ) : (
                   <FormattedMessage defaultMessage="Migrate funds" />
@@ -310,7 +445,7 @@ const PushConsolidation = ({
         </Layer>
       )}
 
-      {showTxModal && selectedValidator && (
+      {showTxModal && targetValidator && (
         <TransactionStatusModal
           headerMessage={
             <>
@@ -318,7 +453,7 @@ const PushConsolidation = ({
               <span style={{ transform: locale === 'ar' ? 'scale(-1)' : '' }}>
                 {String.fromCodePoint(0x27a0)}
               </span>
-              <span>{selectedValidator.validatorindex}</span>
+              <span>{targetValidator.validatorindex}</span>
             </>
           }
           txHash={txHash}

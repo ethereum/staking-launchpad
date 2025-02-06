@@ -37,8 +37,8 @@ const PullConsolidation = ({
   const { connector, account } = useWeb3React();
 
   const [
-    selectedValidator,
-    setSelectedValidator,
+    sourceValidator,
+    setSourceValidator,
   ] = useState<BeaconChainValidator | null>(null);
   const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
     boolean
@@ -51,16 +51,16 @@ const PullConsolidation = ({
 
   const confirmConsolidate = () => {
     setShowSelectValidatorModal(true);
-    setSelectedValidator(null);
+    setSourceValidator(null);
   };
 
   const closeSelectValidatorModal = () => {
     setShowSelectValidatorModal(false);
-    setSelectedValidator(null);
+    setSourceValidator(null);
   };
 
   const createConsolidationTransaction = async () => {
-    if (!account || !selectedValidator) return;
+    if (!account || !sourceValidator) return;
 
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
@@ -72,7 +72,7 @@ const PullConsolidation = ({
       const params = await generateCompoundParams(
         web3,
         account,
-        selectedValidator.pubkey,
+        sourceValidator.pubkey,
         targetValidator.pubkey
       );
       return web3.eth
@@ -119,11 +119,11 @@ const PullConsolidation = ({
                 </div>
                 <ValidatorSelector
                   validators={sourceValidatorSet}
-                  selectedValidator={selectedValidator}
-                  setSelectedValidator={setSelectedValidator}
+                  selectedValidator={sourceValidator}
+                  setSelectedValidator={setSourceValidator}
                 />
               </div>
-              {selectedValidator && (
+              {sourceValidator && (
                 <div style={{ marginBlock: '1.5rem' }}>
                   <Alert variant="warning">
                     <AlertContent>
@@ -135,7 +135,7 @@ const PullConsolidation = ({
                               defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
                               values={{
                                 targetIndex: targetValidator.validatorindex,
-                                sourceIndex: selectedValidator.validatorindex,
+                                sourceIndex: sourceValidator.validatorindex,
                               }}
                             />
                           </strong>
@@ -148,7 +148,7 @@ const PullConsolidation = ({
                   </Alert>
                 </div>
               )}
-              {selectedValidator ? (
+              {sourceValidator ? (
                 <ModalContent>
                   <div
                     style={{
@@ -175,7 +175,7 @@ const PullConsolidation = ({
                       <Text>
                         <strong>
                           <FormattedMessage defaultMessage="Index" />:{' '}
-                          {selectedValidator.validatorindex}
+                          {sourceValidator.validatorindex}
                         </strong>
                       </Text>
                       <Text
@@ -185,16 +185,84 @@ const PullConsolidation = ({
                           marginBottom: '0.5rem',
                         }}
                       >
-                        <Hash>{selectedValidator.pubkey}</Hash>
+                        <Hash>{sourceValidator.pubkey}</Hash>
                       </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {getEtherBalance(selectedValidator)} {TICKER_NAME}
-                      </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                        <strong>0 {TICKER_NAME}</strong>
-                      </Text>
+
+                      <div
+                        style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(2, 1fr)',
+                        }}
+                      >
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Current balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Balance change" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                              color: 'darkred',
+                            }}
+                          >
+                            {getEtherBalance(sourceValidator) > 0 ? '-' : ''}
+                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Ending balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {(0).toFixed(9)} {TICKER_NAME}
+                          </div>
+                        </Text>
+                      </div>
                     </div>
                     <div
                       style={{
@@ -229,18 +297,86 @@ const PullConsolidation = ({
                       >
                         <Hash>{targetValidator.pubkey}</Hash>
                       </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {getEtherBalance(targetValidator)} {TICKER_NAME}
-                      </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                        <strong>
-                          {getEtherBalance(targetValidator) +
-                            getEtherBalance(selectedValidator)}{' '}
-                          {TICKER_NAME}
-                        </strong>
-                      </Text>
+
+                      <div
+                        style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(2, 1fr)',
+                        }}
+                      >
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Current balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {getEtherBalance(targetValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Balance change" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                              color: 'darkgreen',
+                            }}
+                          >
+                            {getEtherBalance(sourceValidator) > 0 ? '+' : ''}
+                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Ending balance" />
+                            :
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {(
+                              getEtherBalance(targetValidator) +
+                              getEtherBalance(sourceValidator)
+                            ).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                      </div>
                     </div>
                   </div>
                 </ModalContent>
@@ -292,9 +428,9 @@ const PullConsolidation = ({
             <Button
               fullWidth
               destructive
-              disabled={!selectedValidator}
+              disabled={!sourceValidator}
               label={
-                selectedValidator ? (
+                sourceValidator ? (
                   <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
                 ) : (
                   <FormattedMessage defaultMessage="Pull funds" />
@@ -306,11 +442,11 @@ const PullConsolidation = ({
         </Layer>
       )}
 
-      {showTxModal && selectedValidator && (
+      {showTxModal && sourceValidator && (
         <TransactionStatusModal
           headerMessage={
             <>
-              <span>{selectedValidator.validatorindex}</span>{' '}
+              <span>{sourceValidator.validatorindex}</span>{' '}
               <span style={{ transform: locale === 'ar' ? 'scale(-1)' : '' }}>
                 {String.fromCodePoint(0x27a0)}
               </span>

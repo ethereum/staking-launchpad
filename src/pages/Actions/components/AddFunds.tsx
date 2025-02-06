@@ -67,10 +67,10 @@ interface Props {
 
 const AddFunds: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
-  const executionBalance = useExecutionBalance();
+  const executionEtherBalance = useExecutionBalance();
 
-  const [amount, setAmount] = useState(0);
-  const [maxAmount, setMaxAmount] = useState(0);
+  const [etherAmount, setEtherAmount] = useState(0);
+  const [maxEtherAmount, setMaxEtherAmount] = useState(0);
   const [showInputModal, setShowInputModal] = useState(false);
   const [showTxModal, setShowTxModal] = useState(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
@@ -85,20 +85,20 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
 
   useEffect(() => {
     // Max is maxEB plus 0.26, accounting for hysteresis zones with 0.01 buffer
-    const max = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.26).minus(
+    const maxEther = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.26).minus(
       new BigNumber(validator.balance).div(ETHER_TO_GWEI)
     );
-    setMaxAmount(max.toNumber());
+    setMaxEtherAmount(maxEther.toNumber());
   }, [validator]);
 
   const openInputModal = () => {
-    setAmount(0);
+    setEtherAmount(0);
     setShowInputModal(true);
   };
 
   const closeInputModal = () => {
     setShowInputModal(false);
-    setAmount(0);
+    setEtherAmount(0);
   };
 
   const handleTxClose = () => {
@@ -107,7 +107,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   };
 
   const createTopUpTransaction = async () => {
-    if (!amount || !account) return;
+    if (!etherAmount || !account) return;
 
     setShowInputModal(false);
     setTransactionStatus('waiting_user_confirmation');
@@ -116,7 +116,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
     const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
-    const bnInput = new BigNumber(amount);
+    const bnInput = new BigNumber(etherAmount);
     const transactionAmount = bnInput.multipliedBy(1e18).toNumber();
     const reconstructedRootAmount = bnInput.multipliedBy(1e9).toNumber();
 
@@ -228,13 +228,14 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                   >
                     <Hash style={{ fontSize: '1rem' }}>{account}</Hash>
                   </Text>
+
                   <div
                     style={{
                       display: 'grid',
                       gridTemplateColumns: 'repeat(2, 1fr)',
                     }}
                   >
-                    {executionBalance && (
+                    {executionEtherBalance && (
                       <Text
                         style={{
                           display: 'grid',
@@ -249,7 +250,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         <div
                           style={{ textAlign: 'end', fontFamily: 'monospace' }}
                         >
-                          {executionBalance.toFixed(9)} {TICKER_NAME}
+                          {executionEtherBalance.toFixed(9)} {TICKER_NAME}
                         </div>
                       </Text>
                     )}
@@ -265,13 +266,17 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         <FormattedMessage defaultMessage="Balance change" />:
                       </div>
                       <div
-                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        style={{
+                          textAlign: 'end',
+                          fontFamily: 'monospace',
+                          color: 'darkred',
+                        }}
                       >
-                        {amount > 0 ? '-' : ''}
-                        {amount.toFixed(9)} {TICKER_NAME}
+                        {etherAmount > 0 ? '-' : ''}
+                        {etherAmount.toFixed(9)} {TICKER_NAME}
                       </div>
                     </Text>
-                    {executionBalance && (
+                    {executionEtherBalance && (
                       <Text
                         style={{
                           display: 'grid',
@@ -286,7 +291,8 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         <div
                           style={{ textAlign: 'end', fontFamily: 'monospace' }}
                         >
-                          {(executionBalance - amount).toFixed(9)} {TICKER_NAME}
+                          {(executionEtherBalance - etherAmount).toFixed(9)}{' '}
+                          {TICKER_NAME}
                         </div>
                       </Text>
                     )}
@@ -328,7 +334,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                   </Text>
                   <Text className="mb10">
                     <FormattedMessage defaultMessage="Max effective balance" />:{' '}
-                    {maxAmount} {TICKER_NAME}
+                    {maxEtherAmount} {TICKER_NAME}
                   </Text>
 
                   <div
@@ -367,10 +373,14 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         <FormattedMessage defaultMessage="Balance change" />:
                       </div>
                       <div
-                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        style={{
+                          textAlign: 'end',
+                          fontFamily: 'monospace',
+                          color: 'darkgreen',
+                        }}
                       >
-                        {amount > 0 ? '+' : ''}
-                        {amount.toFixed(9)} {TICKER_NAME}
+                        {etherAmount > 0 ? '+' : ''}
+                        {etherAmount.toFixed(9)} {TICKER_NAME}
                       </div>
                     </Text>
                     <Text
@@ -387,7 +397,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}
                       >
-                        {(getEtherBalance(validator) + amount).toFixed(9)}{' '}
+                        {(getEtherBalance(validator) + etherAmount).toFixed(9)}{' '}
                         {TICKER_NAME}
                       </div>
                     </Text>
@@ -428,12 +438,12 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
               </label>
               <NumberInput
                 id="withdrawal-amount"
-                value={amount}
+                value={etherAmount}
                 setValue={value => {
-                  setAmount(Math.min(value, maxAmount));
+                  setEtherAmount(Math.min(value, maxEtherAmount));
                 }}
                 allowDecimals
-                maxValue={maxAmount}
+                maxValue={maxEtherAmount}
               />
               <Button
                 style={{ fontSize: '1rem' }}
@@ -442,7 +452,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                 color="dark-3"
                 fullWidth
                 type="submit"
-                disabled={!amount}
+                disabled={!etherAmount}
               />
             </Form>
           </Box>

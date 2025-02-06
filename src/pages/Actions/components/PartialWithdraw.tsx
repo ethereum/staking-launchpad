@@ -40,7 +40,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const executionEtherBalance = useExecutionBalance();
 
-  const [amount, setAmount] = useState(0);
+  const [etherAmount, setEtherAmount] = useState(0);
   const [maxAmount, setMaxAmount] = useState(0);
   const [showInputModal, setShowInputModal] = useState(false);
   const [showTxModal, setShowTxModal] = useState(false);
@@ -56,13 +56,13 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   }, [validator]);
 
   const openInputModal = () => {
-    setAmount(0);
+    setEtherAmount(0);
     setShowInputModal(true);
   };
 
   const closeInputModal = () => {
     setShowInputModal(false);
-    setAmount(0);
+    setEtherAmount(0);
   };
 
   const handleTxClose = () => {
@@ -71,7 +71,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   };
 
   const createWithdrawTransaction = async () => {
-    if (!amount || !account) return;
+    if (!etherAmount || !account) return;
 
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
@@ -84,7 +84,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
       web3,
       account,
       validator.pubkey,
-      Math.floor(amount * 1000000000)
+      Math.floor(etherAmount * 1000000000)
     );
 
     web3.eth
@@ -162,6 +162,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     level={3}
                     style={{
                       textTransform: 'uppercase',
+                      color: 'darkred',
                     }}
                   >
                     <FormattedMessage defaultMessage="From" />
@@ -181,20 +182,77 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   >
                     <Hash>{validator.pubkey}</Hash>
                   </Text>
-                  <Text className="mb10">
-                    <FormattedMessage defaultMessage="Current balance" />:{' '}
-                    {getEtherBalance(validator)} {TICKER_NAME}
-                  </Text>
+
                   <Text className="mb10">
                     <FormattedMessage defaultMessage="Max withdrawable" />:{' '}
                     {maxAmount} {TICKER_NAME}
                   </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                    <strong>
-                      {getEtherBalance(validator) - amount} {TICKER_NAME}
-                    </strong>
-                  </Text>
+
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                    }}
+                  >
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Current balance" />:
+                      </div>
+                      <div
+                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                      >
+                        {getEtherBalance(validator).toFixed(9)} {TICKER_NAME}
+                      </div>
+                    </Text>
+
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Balance change" />:
+                      </div>
+                      <div
+                        style={{
+                          textAlign: 'end',
+                          fontFamily: 'monospace',
+                          color: 'darkred',
+                        }}
+                      >
+                        {etherAmount > 0 ? '-' : ''}
+                        {etherAmount.toFixed(9)} {TICKER_NAME}
+                      </div>
+                    </Text>
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Ending balance" />:
+                      </div>
+                      <div
+                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                      >
+                        {(getEtherBalance(validator) - etherAmount).toFixed(9)}{' '}
+                        {TICKER_NAME}
+                      </div>
+                    </Text>
+                  </div>
                 </div>
                 <div
                   style={{
@@ -228,27 +286,75 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   >
                     <Hash style={{ fontSize: '1rem' }}>{account}</Hash>
                   </Text>
-                  {executionEtherBalance ? (
-                    <>
-                      <Text className="mb10">
-                        <FormattedMessage defaultMessage="Current balance" />:{' '}
-                        {executionEtherBalance} {TICKER_NAME}
+
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                    }}
+                  >
+                    {executionEtherBalance && (
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Current balance" />:
+                        </div>
+                        <div
+                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        >
+                          {executionEtherBalance.toFixed(9)} {TICKER_NAME}
+                        </div>
                       </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="Ending balance" />:{' '}
-                        <strong>
-                          {executionEtherBalance - amount} {TICKER_NAME}
-                        </strong>
-                      </Text>
-                    </>
-                  ) : (
-                    <Text>
-                      <FormattedMessage defaultMessage="Balance change" />:
-                      <strong>
-                        +{amount} {TICKER_NAME}
-                      </strong>
+                    )}
+                    <Text
+                      style={{
+                        display: 'grid',
+                        gridColumn: 'span 2',
+                        gridTemplateColumns: 'subgrid',
+                        columnGap: '0.5rem',
+                      }}
+                    >
+                      <div>
+                        <FormattedMessage defaultMessage="Balance change" />:
+                      </div>
+                      <div
+                        style={{
+                          textAlign: 'end',
+                          fontFamily: 'monospace',
+                          color: 'darkgreen',
+                        }}
+                      >
+                        {etherAmount > 0 ? '+' : ''}
+                        {etherAmount.toFixed(9)} {TICKER_NAME}
+                      </div>
                     </Text>
-                  )}
+                    {executionEtherBalance && (
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Ending balance" />:
+                        </div>
+                        <div
+                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        >
+                          {(executionEtherBalance + etherAmount).toFixed(9)}{' '}
+                          {TICKER_NAME}
+                        </div>
+                      </Text>
+                    )}
+                  </div>
                 </div>
               </div>
             </ModalContent>
@@ -285,9 +391,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               </label>
               <NumberInput
                 id="withdrawal-amount"
-                value={amount}
+                value={etherAmount}
                 setValue={value => {
-                  setAmount(Math.min(value, maxAmount));
+                  setEtherAmount(Math.min(value, maxAmount));
                 }}
                 allowDecimals
                 maxValue={maxAmount}
@@ -299,7 +405,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                 color="dark-3"
                 fullWidth
                 type="submit"
-                disabled={!amount}
+                disabled={!etherAmount}
               />
             </Form>
           </Box>
@@ -311,7 +417,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
           headerMessage={
             <FormattedMessage
               defaultMessage="Initiate withdrawal"
-              values={{ amount, TICKER_NAME }}
+              values={{ amount: etherAmount, TICKER_NAME }}
             />
           }
           txHash={txHash}

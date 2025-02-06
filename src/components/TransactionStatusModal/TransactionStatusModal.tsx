@@ -11,7 +11,7 @@ import { Button } from '../Button';
 
 interface TopUpTransactionModalProps {
   headerMessage: string | ReactNode;
-  onClose: () => void;
+  onClose: (success: boolean) => void;
   transactionStatus: TransactionStatus;
   txHash: string;
   handleRetry: () => void;
@@ -57,10 +57,14 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
     return 'complete';
   }, [transactionStatus]);
 
+  const onCloseModal = () => {
+    onClose(signTxStatus === 'complete');
+  };
+
   return (
-    <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
+    <Layer position="center" onClickOutside={onCloseModal} onEsc={onCloseModal}>
       <Box width="medium">
-        <ModalHeader onClose={onClose}>{headerMessage}</ModalHeader>
+        <ModalHeader onClose={onCloseModal}>{headerMessage}</ModalHeader>
 
         <TransactionProgress
           signTxStatus={signTxStatus}
@@ -97,7 +101,7 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
           {signTxStatus === 'complete' && (
             <Button
               label={<FormattedMessage defaultMessage="Finish" />}
-              onClick={onClose}
+              onClick={onCloseModal}
             />
           )}
         </Box>

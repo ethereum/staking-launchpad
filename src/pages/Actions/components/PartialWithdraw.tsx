@@ -65,14 +65,19 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     setEtherAmount(0);
   };
 
-  const handleTxClose = () => {
+  const handleTxClose = (success: boolean) => {
     setShowTxModal(false);
-    closeInputModal();
+    if (success) {
+      closeInputModal();
+    } else {
+      setShowInputModal(true);
+    }
   };
 
   const createWithdrawTransaction = async () => {
     if (!etherAmount || !account) return;
 
+    setShowInputModal(false);
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
 

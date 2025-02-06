@@ -101,9 +101,13 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
     setEtherAmount(0);
   };
 
-  const handleTxClose = () => {
+  const handleTxClose = (success: boolean) => {
     setShowTxModal(false);
-    closeInputModal();
+    if (!success) {
+      setShowInputModal(true);
+    } else {
+      closeInputModal();
+    }
   };
 
   const createTopUpTransaction = async () => {

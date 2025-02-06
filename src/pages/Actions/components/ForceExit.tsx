@@ -55,14 +55,18 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     setUserConfirmationValue('');
   };
 
-  const handleTxModalClose = () => {
+  const handleTxModalClose = (success: boolean) => {
     setShowTxModal(false);
-    closeConfirmationModal();
+
+    if (!success) {
+      openExitModal();
+    }
   };
 
   const createExitTransaction = async () => {
     if (!account) return;
 
+    closeConfirmationModal();
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
 

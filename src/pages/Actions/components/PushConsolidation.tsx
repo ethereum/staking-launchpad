@@ -50,8 +50,8 @@ const PushConsolidation = ({
   const [txHash, setTxHash] = useState<string>('');
 
   const confirmConsolidate = () => {
-    setShowSelectValidatorModal(true);
     setTargetValidator(null);
+    setShowSelectValidatorModal(true);
   };
 
   const closeSelectValidatorModal = () => {
@@ -62,6 +62,7 @@ const PushConsolidation = ({
   const createConsolidationTransaction = async () => {
     if (!account || !targetValidator) return;
 
+    setShowSelectValidatorModal(false);
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
 
@@ -92,9 +93,13 @@ const PushConsolidation = ({
     }
   };
 
-  const handleClose = () => {
+  const handleClose = (success: boolean) => {
     setShowTxModal(false);
-    closeSelectValidatorModal();
+    if (success) {
+      closeSelectValidatorModal();
+    } else {
+      setShowSelectValidatorModal(true);
+    }
   };
   return (
     <>

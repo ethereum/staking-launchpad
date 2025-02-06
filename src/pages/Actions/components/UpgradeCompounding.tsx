@@ -54,9 +54,13 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
     setShowConfirmationModal(false);
   };
 
-  const handleTxModalClose = () => {
+  const handleTxModalClose = (success: boolean) => {
     setShowTxModal(false);
-    closeConfirmationModal();
+    if (success) {
+      closeConfirmationModal();
+    } else {
+      setShowConfirmationModal(true);
+    }
   };
 
   const createUpgradeMessage = async () => {
@@ -64,6 +68,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
       return;
     }
 
+    setShowConfirmationModal(false);
     setTransactionStatus('waiting_user_confirmation');
     setShowTxModal(true);
 

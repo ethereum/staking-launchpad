@@ -49,6 +49,7 @@ import {
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
+import { ValidatorType } from '../Actions/types';
 
 // styled components
 const Container = styled.div`
@@ -315,9 +316,10 @@ const _ConnectWalletPage = ({
   const withdrawalAddress = useMemo<string>(() => {
     // eslint-disable-next-line camelcase
     const credentials = depositKeys[0]?.withdrawal_credentials ?? '';
-    if (credentials.startsWith('01')) return `0x${credentials.slice(-40)}`;
-    return '';
+    if (+credentials.slice(0, 2) < ValidatorType.Execution) return '';
+    return `0x${credentials.slice(-40)}`;
   }, [depositKeys]);
+
   const withdrawalAddressShort = useMemo<string>(
     () => `${withdrawalAddress.slice(0, 6)}...${withdrawalAddress.slice(-4)}`,
     [withdrawalAddress]

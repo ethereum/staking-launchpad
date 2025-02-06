@@ -27,6 +27,7 @@ import {
   MAX_EFFECTIVE_BALANCE,
   TICKER_NAME,
   ETHER_TO_GWEI,
+  MIN_ACTIVATION_BALANCE,
 } from '../../../utils/envVars';
 import ModalHeader from './ModalHeader';
 import {
@@ -77,11 +78,14 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   );
   const [txHash, setTxHash] = useState<string>('');
 
+  const maxEBGwei =
+    (getCredentialType(validator) < ValidatorType.Compounding
+      ? MIN_ACTIVATION_BALANCE
+      : MAX_EFFECTIVE_BALANCE) * ETHER_TO_GWEI;
+
   useEffect(() => {
-    // Must be 0x02 address
-    if (getCredentialType(validator) < ValidatorType.Compounding) return;
-    // Max is MAX_EFFECTIVE_BALANCE plus 0.25, accounting for hysteresis zones
-    const max = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.25).minus(
+    // Max is maxEB plus 0.26, accounting for hysteresis zones with 0.01 buffer
+    const max = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.26).minus(
       new BigNumber(validator.balance).div(ETHER_TO_GWEI)
     );
     setMaxAmount(max.toNumber());
@@ -157,6 +161,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
       <Button
         onClick={openInputModal}
         label={<FormattedMessage defaultMessage="Stake more funds" />}
+        disabled={validator.effectivebalance >= maxEBGwei}
       />
 
       {showInputModal && (

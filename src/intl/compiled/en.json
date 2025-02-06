@@ -2931,6 +2931,12 @@
       "value": "Total amount required"
     }
   ],
+  "H0jTll": [
+    {
+      "type": 0,
+      "value": "Adding funds to a validator not yet at it's maximum effective balance can increase rewards and penalties."
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
@@ -4701,12 +4707,6 @@
       "value": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
     }
   ],
-  "TkfeEf": [
-    {
-      "type": 0,
-      "value": "Adding funds to a validator not yet at it's max EB can increase rewards and penalties."
-    }
-  ],
   "Tpe6yK": [
     {
       "type": 0,
@@ -5605,6 +5605,16 @@
     {
       "type": 0,
       "value": "Fetch more"
+    }
+  ],
+  "b3+Ive": [
+    {
+      "type": 0,
+      "value": "Upgrade account to compounding to increase the effective balance to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
     }
   ],
   "b8APBK": [
@@ -8491,6 +8501,12 @@
     {
       "type": 0,
       "value": "Learn more about the great renaming"
+    }
+  ],
+  "tRjHnF": [
+    {
+      "type": 0,
+      "value": "This validator is already max effective balance."
     }
   ],
   "tWoq1e": [

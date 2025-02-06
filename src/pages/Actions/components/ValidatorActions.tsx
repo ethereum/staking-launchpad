@@ -20,6 +20,7 @@ import {
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   MAX_EFFECTIVE_BALANCE,
+  ETHER_TO_GWEI,
 } from '../../../utils/envVars';
 import { Text } from '../../../components/Text';
 import PullConsolidation from './PullConsolidation';
@@ -105,18 +106,13 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
   }, [validator, validators]);
 
   const surplusEther = getEtherBalance(validator) - MIN_ACTIVATION_BALANCE;
+  const maxEBGwei =
+    (getCredentialType(validator) < ValidatorType.Compounding
+      ? MIN_ACTIVATION_BALANCE
+      : MAX_EFFECTIVE_BALANCE) * ETHER_TO_GWEI;
+
   return (
     <Section>
-      <Row>
-        <div style={{ flex: 1 }}>
-          <ActionTitle>
-            <FormattedMessage defaultMessage="Add funds to your validator" />
-          </ActionTitle>
-          <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's max EB can increase rewards and penalties." />
-        </div>
-        <AddFunds validator={validator} />
-      </Row>
-
       {getCredentialType(validator) === ValidatorType.Execution && (
         <Row>
           <div style={{ flex: 1 }}>
@@ -135,6 +131,31 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
           <UpgradeCompounding validator={validator} />
         </Row>
       )}
+
+      <Row>
+        <div style={{ flex: 1 }}>
+          <ActionTitle>
+            <FormattedMessage defaultMessage="Add funds to your validator" />
+          </ActionTitle>
+          <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's maximum effective balance can increase rewards and penalties." />
+          {validator.effectivebalance >= maxEBGwei && (
+            <>
+              {' '}
+              <FormattedMessage defaultMessage="This validator is already max effective balance." />
+              {getCredentialType(validator) < ValidatorType.Compounding && (
+                <>
+                  {' '}
+                  <FormattedMessage
+                    defaultMessage="Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE}"
+                    values={{ MAX_EFFECTIVE_BALANCE }}
+                  />
+                </>
+              )}
+            </>
+          )}
+        </div>
+        <AddFunds validator={validator} />
+      </Row>
 
       {getCredentialType(validator) >= ValidatorType.Compounding && (
         <Row>

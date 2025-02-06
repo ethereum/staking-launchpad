@@ -1114,6 +1114,9 @@
   "H+kIpp": {
     "message": "Total amount required"
   },
+  "H0jTll": {
+    "message": "Adding funds to a validator not yet at it's maximum effective balance can increase rewards and penalties."
+  },
   "H5+NAX": {
     "message": "Balance"
   },
@@ -1805,9 +1808,6 @@
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
   },
-  "TkfeEf": {
-    "message": "Adding funds to a validator not yet at it's max EB can increase rewards and penalties."
-  },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
   },
@@ -2151,6 +2151,9 @@
   },
   "b+yUd5": {
     "message": "Fetch more"
+  },
+  "b3+Ive": {
+    "message": "Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE}"
   },
   "b8APBK": {
     "message": "More on client diversity"
@@ -3233,6 +3236,9 @@
   },
   "tMHEEe": {
     "message": "Learn more about the great renaming"
+  },
+  "tRjHnF": {
+    "message": "This validator is already max effective balance."
   },
   "tWoq1e": {
     "message": "Maximum number of accounts that can be checked in a block. Stops when 16 withdrawals are found. If 16 eligible rewards are not found in the first 16,384 accounts checked, the withdrawal queue for that block will be submitted as is, and the following proposer will pick up where this left off."

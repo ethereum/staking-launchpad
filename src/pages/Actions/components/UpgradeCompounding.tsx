@@ -18,10 +18,7 @@ import {
   AlertContent,
 } from './Shared';
 import { Text } from '../../../components/Text';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
+import { TransactionStatus } from '../../../components/TransactionStatusModal';
 
 import { generateCompoundParams } from '../ActionUtils';
 
@@ -30,6 +27,8 @@ import {
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
 } from '../../../utils/envVars';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
+import { getSignTxStatus } from '../../../utils/txStatus';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -38,34 +37,29 @@ interface Props {
 const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
 
-  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-  const [showTxModal, setShowTxModal] = useState<boolean>(false);
+  const [showTx, setShowTx] = useState(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
-  const [txHash, setTxHash] = useState<string>('');
+  const [txHash, setTxHash] = useState('');
 
   const openConfirmationModal = () => {
-    setShowConfirmationModal(true);
+    setShowTx(false);
+    setShowModal(true);
   };
 
-  const closeConfirmationModal = () => {
-    setShowConfirmationModal(false);
-  };
-
-  const handleTxModalClose = () => {
-    setShowTxModal(false);
-    closeConfirmationModal();
+  const handleClose = () => {
+    setShowTx(false);
+    setShowModal(false);
   };
 
   const createUpgradeMessage = async () => {
-    if (!account) {
-      return;
-    }
+    if (!account) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    setShowTxModal(true);
+    setShowTx(true);
 
     try {
       const walletProvider = await (connector as AbstractConnector).getProvider();
@@ -94,16 +88,28 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
     }
   };
 
+  const signTxStatus = getSignTxStatus(transactionStatus);
+
+  const getModalButtonLabel = () => {
+    if (!showTx) return <FormattedMessage defaultMessage="Upgrade account" />;
+    return <FormattedMessage defaultMessage="Finish" />;
+  };
+
   return (
     <>
-      {showConfirmationModal && (
+      <Button
+        onClick={openConfirmationModal}
+        label={<FormattedMessage defaultMessage="Upgrade account" />}
+      />
+
+      {showModal && (
         <Layer
           position="center"
-          onEsc={closeConfirmationModal}
-          onClickOutside={closeConfirmationModal}
+          onEsc={handleClose}
+          onClickOutside={handleClose}
           style={{ background: '#EEEEEE', maxWidth: '40rem' }}
         >
-          <ModalHeader onClose={closeConfirmationModal}>
+          <ModalHeader onClose={handleClose}>
             <FormattedMessage
               defaultMessage="Upgrade validator {index}"
               values={{ index: validator.validatorindex }}
@@ -155,44 +161,51 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                   </Text>
                 </li>
               </ul>
+
+              {showTx && (
+                <TransactionStatusInsert
+                  headerMessage={
+                    <FormattedMessage defaultMessage="Upgrade account" />
+                  }
+                  txHash={txHash}
+                  transactionStatus={transactionStatus}
+                />
+              )}
             </ModalContent>
           </ModalBody>
 
-          <Box
-            as="footer"
-            gap="small"
-            direction="row"
-            align="center"
-            justify="center"
-            border="top"
-            pad="1rem"
-          >
-            <Button
-              label={<FormattedMessage defaultMessage="Upgrade account" />}
-              onClick={createUpgradeMessage}
-              color="dark-3"
-              destructive
-              secondary
-              fullWidth
-            />
+          <Box as="footer" pad="1rem">
+            {!['error', 'complete'].includes(signTxStatus) && (
+              <Button
+                fullWidth
+                disabled={
+                  !validator ||
+                  (showTx && !['error', 'complete'].includes(signTxStatus))
+                }
+                label={getModalButtonLabel()}
+                onClick={createUpgradeMessage}
+              />
+            )}
+
+            {signTxStatus === 'error' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Try again" />}
+                onClick={createUpgradeMessage}
+                destructive
+                secondary
+                fullWidth
+              />
+            )}
+
+            {signTxStatus === 'complete' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Finish" />}
+                onClick={handleClose}
+              />
+            )}
           </Box>
         </Layer>
       )}
-
-      {showTxModal && (
-        <TransactionStatusModal
-          headerMessage={<FormattedMessage defaultMessage="Upgrade account" />}
-          txHash={txHash}
-          transactionStatus={transactionStatus}
-          onClose={handleTxModalClose}
-          handleRetry={createUpgradeMessage}
-        />
-      )}
-
-      <Button
-        onClick={openConfirmationModal}
-        label={<FormattedMessage defaultMessage="Upgrade account" />}
-      />
     </>
   );
 };

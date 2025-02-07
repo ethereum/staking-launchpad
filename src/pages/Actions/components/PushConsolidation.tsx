@@ -25,8 +25,8 @@ import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 
 type PushConsolidationProps = {
-  sourceValidator: BeaconChainValidator; // The selected validator to consolidate into (target)
-  targetValidatorSet: BeaconChainValidator[]; // List of available source validators (Any 0x01 or higher, excluding the target)
+  sourceValidator: BeaconChainValidator; // The selected validator to migrate funds from (source)
+  targetValidatorSet: BeaconChainValidator[]; // List of available target validators (Any 0x02 or higher, excluding the source)
 };
 
 const PushConsolidation = ({

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import styled from 'styled-components';
 
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
@@ -13,9 +14,51 @@ import {
   hasValidatorExited,
   getCredentialType,
   getEtherBalance,
+  getMaxEB,
+  getEffectiveBalance,
 } from '../../../utils/validators';
-import { TICKER_NAME } from '../../../utils/envVars';
 import { epochToDate } from '../../../utils/beaconchain';
+
+const BalancesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+
+  @media (max-width: 32rem) {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  @media (max-width: 32rem) {
+    width: fit-content;
+    margin-inline: auto;
+  }
+`;
+
+const BalanceItem = styled.div`
+  grid-column: span 1;
+  grid-row: span 2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #f8f8f8;
+  & > *:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+`;
+
+const BalanceLabel = styled(Text)`
+  font-size: 0.875rem;
+  color: #444;
+  text-transform: uppercase;
+`;
+
+const BalanceValue = styled(Text)`
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: monospace;
+`;
 
 const ValidatorDetails = ({
   validator,
@@ -97,11 +140,26 @@ const ValidatorDetails = ({
           </div>
         </Text>
 
-        <Text>
-          <FormattedMessage defaultMessage="Balance" />:{' '}
-          {getEtherBalance(validator)} {TICKER_NAME}
-        </Text>
-
+        <BalancesContainer>
+          <BalanceItem>
+            <BalanceValue>{getEtherBalance(validator)}</BalanceValue>
+            <BalanceLabel>
+              <FormattedMessage defaultMessage="Balance" />
+            </BalanceLabel>
+          </BalanceItem>
+          <BalanceItem>
+            <BalanceValue>{getEffectiveBalance(validator)}</BalanceValue>
+            <BalanceLabel>
+              <FormattedMessage defaultMessage="Effective Balance" />
+            </BalanceLabel>
+          </BalanceItem>
+          <BalanceItem>
+            <BalanceValue>{getMaxEB(validator)}</BalanceValue>
+            <BalanceLabel>
+              <FormattedMessage defaultMessage="Max EB" />
+            </BalanceLabel>
+          </BalanceItem>
+        </BalancesContainer>
         <Text>
           <FormattedMessage defaultMessage="Activation Epoch" />:{' '}
           {validator.activationepoch}

@@ -42,7 +42,7 @@ const PullConsolidation = ({
   const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
     boolean
   >(false);
-  const [showTxModal, setShowTxModal] = useState<boolean>(false);
+  const [showTx, setShowTx] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
@@ -57,7 +57,7 @@ const PullConsolidation = ({
     if (!account || !sourceValidator) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    setShowTxModal(true);
+    setShowTx(true);
 
     try {
       const walletProvider = await (connector as AbstractConnector).getProvider();
@@ -91,7 +91,7 @@ const PullConsolidation = ({
   const getModalButtonLabel = () => {
     if (!sourceValidator)
       return <FormattedMessage defaultMessage="Pull funds" />;
-    if (!showTxModal)
+    if (!showTx)
       return (
         <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
       );
@@ -99,7 +99,7 @@ const PullConsolidation = ({
   };
 
   const handleClose = () => {
-    setShowTxModal(false);
+    setShowTx(false);
     setShowSelectValidatorModal(false);
     setSourceValidator(null);
   };
@@ -121,7 +121,7 @@ const PullConsolidation = ({
               <FormattedMessage defaultMessage="Absorb validator" />
             </ModalHeader>
             <ModalBody>
-              {!showTxModal && (
+              {!showTx && (
                 <div style={{ marginBottom: '1.5rem' }}>
                   <div style={{ marginBottom: '0.5rem' }}>
                     <FormattedMessage defaultMessage="Which validator would you like to pull from?" />
@@ -134,7 +134,7 @@ const PullConsolidation = ({
                 </div>
               )}
 
-              {sourceValidator && !showTxModal && (
+              {sourceValidator && !showTx && (
                 <div style={{ marginBlock: '1.5rem' }}>
                   <Alert variant="warning">
                     <AlertContent>
@@ -392,7 +392,7 @@ const PullConsolidation = ({
                     </div>
                   </div>
 
-                  {showTxModal && (
+                  {showTx && (
                     <TransactionStatusInsert
                       headerMessage={
                         <>
@@ -463,7 +463,7 @@ const PullConsolidation = ({
                 destructive
                 disabled={
                   !sourceValidator ||
-                  (showTxModal && !['error', 'complete'].includes(signTxStatus))
+                  (showTx && !['error', 'complete'].includes(signTxStatus))
                 }
                 label={getModalButtonLabel()}
                 onClick={createConsolidationTransaction}

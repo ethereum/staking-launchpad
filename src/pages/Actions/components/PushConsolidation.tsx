@@ -12,10 +12,7 @@ import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
+import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import ModalHeader from './ModalHeader';
 import { ModalBody, AlertContent, ModalContent, Hash } from './Shared';
 import ValidatorSelector from './ValidatorSelector';
@@ -23,6 +20,8 @@ import ValidatorSelector from './ValidatorSelector';
 import { generateCompoundParams } from '../ActionUtils';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
+import { getSignTxStatus } from '../../../utils/txStatus';
 
 type PushConsolidationProps = {
   sourceValidator: BeaconChainValidator; // The selected validator to migrate funds from (source)
@@ -43,7 +42,7 @@ const PushConsolidation = ({
   const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
     boolean
   >(false);
-  const [showTxModal, setShowTxModal] = useState<boolean>(false);
+  const [showTx, setShowTx] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
@@ -54,16 +53,11 @@ const PushConsolidation = ({
     setTargetValidator(null);
   };
 
-  const closeSelectValidatorModal = () => {
-    setShowSelectValidatorModal(false);
-    setTargetValidator(null);
-  };
-
   const createConsolidationTransaction = async () => {
     if (!account || !targetValidator) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    setShowTxModal(true);
+    setShowTx(true);
 
     try {
       const walletProvider = await (connector as AbstractConnector).getProvider();
@@ -92,24 +86,38 @@ const PushConsolidation = ({
     }
   };
 
+  const signTxStatus = getSignTxStatus(transactionStatus);
+
+  // TODO UPDATE LABELS for PUSH
+  const getModalButtonLabel = () => {
+    if (!targetValidator)
+      return <FormattedMessage defaultMessage="Migrate funds" />;
+    if (!showTx)
+      return (
+        <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
+      );
+    return <FormattedMessage defaultMessage="Finish" />;
+  };
+
   const handleClose = () => {
-    setShowTxModal(false);
-    closeSelectValidatorModal();
+    setShowTx(false);
+    setShowSelectValidatorModal(false);
+    setTargetValidator(null);
   };
   return (
     <>
       {showSelectValidatorModal && (
         <Layer
           position="center"
-          onEsc={closeSelectValidatorModal}
-          onClickOutside={closeSelectValidatorModal}
+          onEsc={handleClose}
+          onClickOutside={handleClose}
           style={{
             background: '#EEEEEE',
             width: 'clamp(min(432px,100%), 50vw, 40rem)',
           }}
         >
           <Box>
-            <ModalHeader onClose={closeSelectValidatorModal}>
+            <ModalHeader onClose={handleClose}>
               <FormattedMessage defaultMessage="Migrate and exit validator" />
             </ModalHeader>
             <ModalBody>
@@ -150,23 +158,25 @@ const PushConsolidation = ({
                 </ModalContent>
               )}
 
-              <div
-                style={{
-                  marginBottom: '1rem',
-                  marginTop: targetValidator ? '0' : '1rem',
-                }}
-              >
-                <div style={{ marginBottom: '0.5rem' }}>
-                  <FormattedMessage defaultMessage="Which validator would you like to migrate funds to?" />
+              {!showTx && (
+                <div
+                  style={{
+                    marginBottom: '1.5rem',
+                    marginTop: targetValidator ? '0' : '1rem',
+                  }}
+                >
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <FormattedMessage defaultMessage="Which validator would you like to migrate funds to?" />
+                  </div>
+                  <ValidatorSelector
+                    validators={targetValidatorSet}
+                    selectedValidator={targetValidator}
+                    setSelectedValidator={setTargetValidator}
+                  />
                 </div>
-                <ValidatorSelector
-                  validators={targetValidatorSet}
-                  selectedValidator={targetValidator}
-                  setSelectedValidator={setTargetValidator}
-                />
-              </div>
+              )}
 
-              {targetValidator && (
+              {targetValidator && !showTx && (
                 <div style={{ marginBlock: '1.5rem' }}>
                   <Alert variant="warning">
                     <AlertContent>
@@ -422,45 +432,57 @@ const PushConsolidation = ({
                       </div>
                     </div>
                   </div>
+
+                  {showTx && (
+                    <TransactionStatusInsert
+                      headerMessage={
+                        <>
+                          <span>{sourceValidator.validatorindex}</span>{' '}
+                          <span
+                            style={{
+                              transform: locale === 'ar' ? 'scale(-1)' : '',
+                            }}
+                          >
+                            {String.fromCodePoint(0x27a0)}
+                          </span>
+                          <span>{targetValidator.validatorindex}</span>
+                        </>
+                      }
+                      txHash={txHash}
+                      transactionStatus={transactionStatus}
+                    />
+                  )}
                 </ModalContent>
               )}
             </ModalBody>
           </Box>
 
           <Box as="footer" pad="1rem">
-            <Button
-              fullWidth
-              destructive
-              disabled={!targetValidator}
-              label={
-                targetValidator ? (
-                  <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
-                ) : (
-                  <FormattedMessage defaultMessage="Migrate funds" />
-                )
-              }
-              onClick={createConsolidationTransaction}
-            />
+            {!['error', 'complete'].includes(signTxStatus) && (
+              <Button
+                fullWidth
+                destructive
+                disabled={!targetValidator}
+                label={getModalButtonLabel()}
+                onClick={createConsolidationTransaction}
+              />
+            )}
+            {signTxStatus === 'error' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Try again" />}
+                onClick={createConsolidationTransaction}
+                destructive
+                secondary
+              />
+            )}
+            {signTxStatus === 'complete' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Finish" />}
+                onClick={handleClose}
+              />
+            )}
           </Box>
         </Layer>
-      )}
-
-      {showTxModal && targetValidator && (
-        <TransactionStatusModal
-          headerMessage={
-            <>
-              <span>{sourceValidator.validatorindex}</span>{' '}
-              <span style={{ transform: locale === 'ar' ? 'scale(-1)' : '' }}>
-                {String.fromCodePoint(0x27a0)}
-              </span>
-              <span>{targetValidator.validatorindex}</span>
-            </>
-          }
-          txHash={txHash}
-          transactionStatus={transactionStatus}
-          onClose={handleClose}
-          handleRetry={createConsolidationTransaction}
-        />
       )}
 
       <Button label="Migrate funds" destructive onClick={confirmConsolidate} />

@@ -434,7 +434,7 @@ const PullConsolidation = ({
                     <li>
                       <Text as="span">
                         <FormattedMessage
-                          defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
+                          defaultMessage="All remaining funds will be transferred to {destination} within a few days after exit epoch reached"
                           values={{
                             destination: (
                               <strong>

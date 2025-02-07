@@ -145,19 +145,19 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
           </ActionTitle>
           <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's maximum effective balance can increase rewards and penalties." />
           {validator.effectivebalance >= maxEBGwei && (
-            <>
+            <em>
               {' '}
-              <FormattedMessage defaultMessage="This validator is already max effective balance." />
+              <FormattedMessage defaultMessage="This validator is at its max effective balance." />
               {getCredentialType(validator) < ValidatorType.Compounding && (
                 <>
                   {' '}
                   <FormattedMessage
-                    defaultMessage="Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE}"
-                    values={{ MAX_EFFECTIVE_BALANCE }}
+                    defaultMessage="Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
+                    values={{ MAX_EFFECTIVE_BALANCE, TICKER_NAME }}
                   />
                 </>
               )}
-            </>
+            </em>
           )}
         </div>
         <AddFunds validator={validator} />

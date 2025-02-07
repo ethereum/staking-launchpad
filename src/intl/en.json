@@ -431,6 +431,9 @@
   "4l6vz1": {
     "message": "Copy"
   },
+  "4pGGSr": {
+    "message": "This validator is at its max effective balance."
+  },
   "4uFys5": {
     "message": "Accounts that have been slashed, or have insufficient balance, will be forced to exit according to the network rules. This is automatic and cannot be stopped once initiated."
   },
@@ -518,6 +521,9 @@
   },
   "6glcFX": {
     "message": "How to join the public testnet"
+  },
+  "6kX99Q": {
+    "message": "Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
   },
   "6stJTU": {
     "description": "{testnet} shows '--network=holesky' terminal command",
@@ -2152,9 +2158,6 @@
   "b+yUd5": {
     "message": "Fetch more"
   },
-  "b3+Ive": {
-    "message": "Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE}"
-  },
   "b8APBK": {
     "message": "More on client diversity"
   },
@@ -2196,6 +2199,9 @@
   },
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
+  },
+  "btyyX7": {
+    "message": "All remaining funds will be transferred to {destination} within a few days after exit epoch reached"
   },
   "bugMfW": {
     "message": "If not, move to next question"
@@ -3240,9 +3246,6 @@
   "tMHEEe": {
     "message": "Learn more about the great renaming"
   },
-  "tRjHnF": {
-    "message": "This validator is already max effective balance."
-  },
   "tWoq1e": {
     "message": "Maximum number of accounts that can be checked in a block. Stops when 16 withdrawals are found. If 16 eligible rewards are not found in the first 16,384 accounts checked, the withdrawal queue for that block will be submitted as is, and the following proposer will pick up where this left off."
   },
@@ -3559,6 +3562,9 @@
   },
   "zJicsO": {
     "message": "Staking economics"
+  },
+  "zNUzpT": {
+    "message": "Effective Balance"
   },
   "zfkJaB": {
     "message": "The Ethereum staking deposit contract requires a minimum of {MIN_TOPUP_VALUE} {TICKER_NAME} to be sent at one time to be accepted."

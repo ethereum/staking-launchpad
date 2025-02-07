@@ -103,6 +103,11 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
     setEtherAmount(0);
   };
 
+  const handleValueChange = (value: number) => {
+    const newValue = Math.max(Math.min(value, maxEtherAmount), 0);
+    setEtherAmount(newValue);
+  };
+
   const createAddFundsTransaction = async () => {
     if (!etherAmount || !account) return;
 
@@ -113,13 +118,17 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
     const web3: any = new Web3(walletProvider);
     const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
     const bnInput = new BigNumber(etherAmount);
-    const transactionAmount = bnInput.multipliedBy(1e18).toNumber();
-    const reconstructedRootAmount = bnInput.multipliedBy(1e9).toNumber();
+    const transactionAmount = bnInput
+      .multipliedBy(1e18)
+      .integerValue(BigNumber.ROUND_DOWN); // Convert to Wei and ensure it's an integer
+    const reconstructedRootAmount = bnInput
+      .multipliedBy(1e9)
+      .integerValue(BigNumber.ROUND_DOWN); // Convert to Gwei and ensure it's an integer
 
     const transactionParameters: SendOptions = {
       gasPrice: web3.utils.toHex(await web3.eth.getGasPrice()),
       from: account as string,
-      value: transactionAmount,
+      value: transactionAmount.toFixed(),
     };
 
     const reconstructedKeyFile = {
@@ -449,11 +458,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                 <NumberInput
                   id="withdrawal-amount"
                   value={etherAmount}
-                  setValue={value => {
-                    setEtherAmount(
-                      Math.max(Math.min(value, maxEtherAmount), 0)
-                    );
-                  }}
+                  setValue={handleValueChange}
                   allowDecimals
                   maxValue={maxEtherAmount}
                 />

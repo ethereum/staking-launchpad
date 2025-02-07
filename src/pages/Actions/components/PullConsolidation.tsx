@@ -12,10 +12,8 @@ import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
+import { TransactionStatus } from '../../../components/TransactionStatusModal';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import ModalHeader from './ModalHeader';
 import { ModalBody, AlertContent, ModalContent, Hash } from './Shared';
 import ValidatorSelector from './ValidatorSelector';
@@ -23,6 +21,7 @@ import ValidatorSelector from './ValidatorSelector';
 import { generateCompoundParams } from '../ActionUtils';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
+import { getSignTxStatus } from '../../../utils/txStatus';
 
 type PullConsolidationProps = {
   targetValidator: BeaconChainValidator; // The selected validator to consolidate into (target)
@@ -51,11 +50,6 @@ const PullConsolidation = ({
 
   const confirmConsolidate = () => {
     setShowSelectValidatorModal(true);
-    setSourceValidator(null);
-  };
-
-  const closeSelectValidatorModal = () => {
-    setShowSelectValidatorModal(false);
     setSourceValidator(null);
   };
 
@@ -92,38 +86,55 @@ const PullConsolidation = ({
     }
   };
 
+  const signTxStatus = getSignTxStatus(transactionStatus);
+
+  const getModalButtonLabel = () => {
+    if (!sourceValidator)
+      return <FormattedMessage defaultMessage="Pull funds" />;
+    if (!showTxModal)
+      return (
+        <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
+      );
+    return <FormattedMessage defaultMessage="Finish" />;
+  };
+
   const handleClose = () => {
     setShowTxModal(false);
-    closeSelectValidatorModal();
+    setShowSelectValidatorModal(false);
+    setSourceValidator(null);
   };
+
   return (
     <>
       {showSelectValidatorModal && (
         <Layer
           position="center"
-          onEsc={closeSelectValidatorModal}
-          onClickOutside={closeSelectValidatorModal}
+          onEsc={handleClose}
+          onClickOutside={handleClose}
           style={{
             background: '#EEEEEE',
             width: 'clamp(min(432px,100%), 50vw, 40rem)',
           }}
         >
           <Box>
-            <ModalHeader onClose={closeSelectValidatorModal}>
+            <ModalHeader onClose={handleClose}>
               <FormattedMessage defaultMessage="Absorb validator" />
             </ModalHeader>
             <ModalBody>
-              <div style={{ marginBottom: '2rem' }}>
-                <div style={{ marginBottom: '0.5rem' }}>
-                  <FormattedMessage defaultMessage="Which validator would you like to pull from?" />
+              {!showTxModal && (
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <FormattedMessage defaultMessage="Which validator would you like to pull from?" />
+                  </div>
+                  <ValidatorSelector
+                    validators={sourceValidatorSet}
+                    selectedValidator={sourceValidator}
+                    setSelectedValidator={setSourceValidator}
+                  />
                 </div>
-                <ValidatorSelector
-                  validators={sourceValidatorSet}
-                  selectedValidator={sourceValidator}
-                  setSelectedValidator={setSourceValidator}
-                />
-              </div>
-              {sourceValidator && (
+              )}
+
+              {sourceValidator && !showTxModal && (
                 <div style={{ marginBlock: '1.5rem' }}>
                   <Alert variant="warning">
                     <AlertContent>
@@ -148,6 +159,7 @@ const PullConsolidation = ({
                   </Alert>
                 </div>
               )}
+
               {sourceValidator ? (
                 <ModalContent>
                   <div
@@ -379,6 +391,26 @@ const PullConsolidation = ({
                       </div>
                     </div>
                   </div>
+
+                  {showTxModal && (
+                    <TransactionStatusInsert
+                      headerMessage={
+                        <>
+                          <span>{sourceValidator.validatorindex}</span>{' '}
+                          <span
+                            style={{
+                              transform: locale === 'ar' ? 'scale(-1)' : '',
+                            }}
+                          >
+                            {String.fromCodePoint(0x27a0)}
+                          </span>
+                          <span>{targetValidator.validatorindex}</span>
+                        </>
+                      }
+                      txHash={txHash}
+                      transactionStatus={transactionStatus}
+                    />
+                  )}
                 </ModalContent>
               ) : (
                 <ModalContent>
@@ -425,39 +457,34 @@ const PullConsolidation = ({
           </Box>
 
           <Box as="footer" pad="1rem">
-            <Button
-              fullWidth
-              destructive
-              disabled={!sourceValidator}
-              label={
-                sourceValidator ? (
-                  <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
-                ) : (
-                  <FormattedMessage defaultMessage="Pull funds" />
-                )
-              }
-              onClick={createConsolidationTransaction}
-            />
+            {!['error', 'complete'].includes(signTxStatus) && (
+              <Button
+                fullWidth
+                destructive
+                disabled={
+                  !sourceValidator ||
+                  (showTxModal && !['error', 'complete'].includes(signTxStatus))
+                }
+                label={getModalButtonLabel()}
+                onClick={createConsolidationTransaction}
+              />
+            )}
+            {signTxStatus === 'error' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Try again" />}
+                onClick={createConsolidationTransaction}
+                destructive
+                secondary
+              />
+            )}
+            {signTxStatus === 'complete' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Finish" />}
+                onClick={handleClose}
+              />
+            )}
           </Box>
         </Layer>
-      )}
-
-      {showTxModal && sourceValidator && (
-        <TransactionStatusModal
-          headerMessage={
-            <>
-              <span>{sourceValidator.validatorindex}</span>{' '}
-              <span style={{ transform: locale === 'ar' ? 'scale(-1)' : '' }}>
-                {String.fromCodePoint(0x27a0)}
-              </span>
-              <span>{targetValidator.validatorindex}</span>
-            </>
-          }
-          txHash={txHash}
-          transactionStatus={transactionStatus}
-          onClose={handleClose}
-          handleRetry={createConsolidationTransaction}
-        />
       )}
 
       <Button

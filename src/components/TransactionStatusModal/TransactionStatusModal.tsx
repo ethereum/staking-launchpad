@@ -3,11 +3,12 @@ import { FormattedMessage } from 'react-intl';
 import { Box, Layer } from 'grommet';
 import { Text } from '../Text';
 import { TransactionProgress } from './TransactionProgress';
-import { stepStatus, TransactionStatus } from './types';
+import { TransactionStatus } from './types';
 import { EL_TRANSACTION_URL } from '../../utils/envVars';
 import { Link } from '../Link';
 import ModalHeader from '../../pages/Actions/components/ModalHeader';
 import { Button } from '../Button';
+import { getSignTxStatus, getTxOnchainStatus } from '../../utils/txStatus';
 
 interface TopUpTransactionModalProps {
   headerMessage: string | ReactNode;
@@ -24,38 +25,9 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
   txHash,
   handleRetry,
 }) => {
-  const signTxStatus: stepStatus = React.useMemo(() => {
-    if (
-      transactionStatus === 'waiting_user_confirmation' ||
-      transactionStatus === 'not_started'
-    ) {
-      return 'loading';
-    }
-    if (
-      transactionStatus === 'user_rejected' ||
-      transactionStatus === 'error'
-    ) {
-      return 'error';
-    }
-    return 'complete';
-  }, [transactionStatus]);
+  const signTxStatus = getSignTxStatus(transactionStatus);
 
-  const confirmOnChainStatus: stepStatus = React.useMemo(() => {
-    if (
-      transactionStatus === 'waiting_user_confirmation' ||
-      transactionStatus === 'not_started' ||
-      transactionStatus === 'user_rejected'
-    ) {
-      return 'staged';
-    }
-    if (transactionStatus === 'confirm_on_chain') {
-      return 'loading';
-    }
-    if (transactionStatus === 'error') {
-      return 'error';
-    }
-    return 'complete';
-  }, [transactionStatus]);
+  const txOnchainStatus = getTxOnchainStatus(transactionStatus);
 
   return (
     <Layer position="center" onClickOutside={onClose} onEsc={onClose}>
@@ -64,7 +36,7 @@ export const TransactionStatusModal: React.FC<TopUpTransactionModalProps> = ({
 
         <TransactionProgress
           signTxStatus={signTxStatus}
-          confirmOnChainStatus={confirmOnChainStatus}
+          confirmOnChainStatus={txOnchainStatus}
         />
 
         {txHash?.length > 0 && (

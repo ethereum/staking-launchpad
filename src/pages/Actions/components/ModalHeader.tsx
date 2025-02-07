@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 type ModalHeaderProps = {
   children: React.ReactNode;
-  onClose: () => void;
+  onClose?: () => void;
 };
 
 const ModalHeader = ({ children, onClose }: ModalHeaderProps) => (
@@ -29,7 +29,7 @@ const ModalHeader = ({ children, onClose }: ModalHeaderProps) => (
     >
       {children}
     </Heading>
-    <CloseButton label="Close" onClick={onClose} />
+    {onClose && <CloseButton label="Close" onClick={onClose} />}
   </Wrapper>
 );
 

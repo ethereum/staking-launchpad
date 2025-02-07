@@ -88,7 +88,6 @@ const PushConsolidation = ({
 
   const signTxStatus = getSignTxStatus(transactionStatus);
 
-  // TODO UPDATE LABELS for PUSH
   const getModalButtonLabel = () => {
     if (!targetValidator)
       return <FormattedMessage defaultMessage="Migrate funds" />;

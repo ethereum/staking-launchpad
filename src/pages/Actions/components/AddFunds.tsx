@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { ByteVectorType, ContainerType, NumberUintType } from '@chainsafe/ssz';
 import BigNumber from 'bignumber.js';
 import React, { useEffect, useState } from 'react';
@@ -15,10 +16,7 @@ import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Button } from '../../../components/Button';
 import { NumberInput } from '../../../components/NumberInput';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
+import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { Text } from '../../../components/Text';
 import { bufferHex } from '../../../utils/SSZ';
 
@@ -43,6 +41,8 @@ import { contractAbi } from '../../../contractAbi';
 import { buf2hex } from '../../../utils/buf2hex';
 import { getEtherBalance, getCredentialType } from '../../../utils/validators';
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
+import { getSignTxStatus } from '../../../utils/txStatus';
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -72,7 +72,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   const [etherAmount, setEtherAmount] = useState(0);
   const [maxEtherAmount, setMaxEtherAmount] = useState(0);
   const [showInputModal, setShowInputModal] = useState(false);
-  const [showTxModal, setShowTxModal] = useState(false);
+  const [showTx, setShowTx] = useState(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
@@ -92,26 +92,22 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   }, [validator]);
 
   const openInputModal = () => {
+    setShowTx(false);
     setEtherAmount(0);
     setShowInputModal(true);
   };
 
-  const closeInputModal = () => {
+  const handleClose = () => {
+    setShowTx(false);
     setShowInputModal(false);
     setEtherAmount(0);
   };
 
-  const handleTxClose = () => {
-    setShowTxModal(false);
-    closeInputModal();
-  };
-
-  const createTopUpTransaction = async () => {
+  const createAddFundsTransaction = async () => {
     if (!etherAmount || !account) return;
 
-    setShowInputModal(false);
     setTransactionStatus('waiting_user_confirmation');
-    setShowTxModal(true);
+    setShowTx(true);
 
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
@@ -156,6 +152,8 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
       });
   };
 
+  const signTxStatus = getSignTxStatus(transactionStatus);
+
   return (
     <>
       <Button
@@ -167,27 +165,29 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
       {showInputModal && (
         <Layer
           position="center"
-          onEsc={closeInputModal}
-          onClickOutside={closeInputModal}
+          onEsc={handleClose}
+          onClickOutside={handleClose}
           style={{ background: '#EEEEEE', maxWidth: '40rem' }}
         >
-          <ModalHeader onClose={closeInputModal}>
-            <FormattedMessage defaultMessage="Top up validator" />
+          <ModalHeader onClose={handleClose}>
+            <FormattedMessage defaultMessage="Stake additional funds" />
           </ModalHeader>
 
           <ModalBody>
-            <AlertContainer>
-              <Alert variant="info">
-                <AlertContent>
-                  <AlertIcon />
-                  <div>
-                    <Text>
-                      <FormattedMessage defaultMessage="Depositing beyond the validators maximum effective balance will result in those excess funds being immediately withdrawn and will not impact the effectiveness of the validator" />
-                    </Text>
-                  </div>
-                </AlertContent>
-              </Alert>
-            </AlertContainer>
+            {!showTx && (
+              <AlertContainer>
+                <Alert variant="info">
+                  <AlertContent>
+                    <AlertIcon />
+                    <div>
+                      <Text>
+                        <FormattedMessage defaultMessage="Depositing beyond the validators maximum effective balance will result in those excess funds being immediately withdrawn and will not impact the effectiveness of the validator" />
+                      </Text>
+                    </div>
+                  </AlertContent>
+                </Alert>
+              </AlertContainer>
+            )}
 
             <ModalContent>
               <div
@@ -404,71 +404,89 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                   </div>
                 </div>
               </div>
+
+              {showTx && (
+                <TransactionStatusInsert
+                  headerMessage={
+                    <FormattedMessage defaultMessage="Depositing to validator" />
+                  }
+                  txHash={txHash}
+                  transactionStatus={transactionStatus}
+                />
+              )}
             </ModalContent>
           </ModalBody>
 
           <Box
             as="footer"
             gap="small"
-            direction="row"
+            direction="column"
             align="center"
             justify="center"
             border="top"
             pad="1rem"
           >
-            <Form
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.5rem',
-              }}
-            >
-              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-              <label
-                htmlFor="withdrawal-amount"
-                style={{ marginBottom: '0.25rem' }}
-              >
-                <Text>
-                  <FormattedMessage
-                    defaultMessage="How much {TICKER_NAME} would you like to add to your stake?"
-                    values={{ TICKER_NAME }}
-                  />
-                </Text>
-              </label>
-              <NumberInput
-                id="withdrawal-amount"
-                value={etherAmount}
-                setValue={value => {
-                  setEtherAmount(Math.min(value, maxEtherAmount));
+            {!showTx && (
+              <Form
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem',
                 }}
-                allowDecimals
-                maxValue={maxEtherAmount}
-              />
+              >
+                <label
+                  htmlFor="withdrawal-amount"
+                  style={{ marginBottom: '0.25rem' }}
+                >
+                  <Text>
+                    <FormattedMessage
+                      defaultMessage="How much {TICKER_NAME} would you like to add to your stake?"
+                      values={{ TICKER_NAME }}
+                    />
+                  </Text>
+                </label>
+                <NumberInput
+                  id="withdrawal-amount"
+                  value={etherAmount}
+                  setValue={value => {
+                    setEtherAmount(
+                      Math.max(Math.min(value, maxEtherAmount), 0)
+                    );
+                  }}
+                  allowDecimals
+                  maxValue={maxEtherAmount}
+                />
+              </Form>
+            )}
+            {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 style={{ fontSize: '1rem' }}
                 label="Stake more funds"
-                onClick={createTopUpTransaction}
+                onClick={createAddFundsTransaction}
                 color="dark-3"
                 fullWidth
                 type="submit"
                 disabled={!etherAmount}
               />
-            </Form>
+            )}
+            {signTxStatus === 'error' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Try again" />}
+                onClick={createAddFundsTransaction}
+                destructive
+                secondary
+                fullWidth
+              />
+            )}
+            {signTxStatus === 'complete' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Finish" />}
+                onClick={handleClose}
+              />
+            )}
           </Box>
         </Layer>
-      )}
-
-      {showTxModal && (
-        <TransactionStatusModal
-          headerMessage={
-            <FormattedMessage defaultMessage="Depositing to validator" />
-          }
-          txHash={txHash}
-          transactionStatus={transactionStatus}
-          onClose={handleTxClose}
-          handleRetry={createTopUpTransaction}
-        />
       )}
     </>
   );

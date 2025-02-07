@@ -475,6 +475,7 @@ const PullConsolidation = ({
                 onClick={createConsolidationTransaction}
                 destructive
                 secondary
+                fullWidth
               />
             )}
             {signTxStatus === 'complete' && (

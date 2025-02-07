@@ -11,10 +11,7 @@ import { BeaconChainValidator } from '../../TopUp/types';
 import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Text } from '../../../components/Text';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
+import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import ModalHeader from './ModalHeader';
 import {
   ModalBody,
@@ -24,6 +21,8 @@ import {
 } from './Shared';
 
 import { generateWithdrawalParams } from '../ActionUtils';
+import { getSignTxStatus } from '../../../utils/txStatus';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -34,37 +33,34 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const { locale, formatMessage } = useIntl();
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
 
-  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [stepTwo, setStepTwo] = useState<boolean>(false);
 
-  const [showTxModal, setShowTxModal] = useState<boolean>(false);
+  const [showTx, setShowTx] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
   const [txHash, setTxHash] = useState<string>('');
 
   const openExitModal = () => {
+    setShowTx(false);
     setStepTwo(false);
     setUserConfirmationValue('');
-    setShowConfirmationModal(true);
+    setShowModal(true);
   };
 
-  const closeConfirmationModal = () => {
-    setShowConfirmationModal(false);
+  const handleClose = () => {
+    setShowTx(false);
+    setShowModal(false);
     setStepTwo(false);
     setUserConfirmationValue('');
-  };
-
-  const handleTxModalClose = () => {
-    setShowTxModal(false);
-    closeConfirmationModal();
   };
 
   const createExitTransaction = async () => {
     if (!account) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    setShowTxModal(true);
+    setShowTx(true);
 
     const walletProvider = await (connector as AbstractConnector).getProvider();
     const web3 = new Web3(walletProvider);
@@ -97,16 +93,34 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
 
   const { validatorindex } = validator;
 
+  const signTxStatus = getSignTxStatus(transactionStatus);
+
+  // const getModalButtonLabel = () => {
+  //   if (!validator)
+  //     return <FormattedMessage defaultMessage="Pull funds" />;
+  //   if (!showTx)
+  //     return (
+  //       <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
+  //     );
+  //   return <FormattedMessage defaultMessage="Finish" />;
+  // };
+
   return (
     <>
-      {showConfirmationModal && (
+      <Button
+        label={<FormattedMessage defaultMessage="Force exit" />}
+        onClick={openExitModal}
+        destructive
+      />
+
+      {showModal && (
         <Layer
           position="center"
-          onEsc={closeConfirmationModal}
-          onClickOutside={closeConfirmationModal}
+          onEsc={handleClose}
+          onClickOutside={handleClose}
           style={{ background: '#EEEEEE', maxWidth: '40rem' }}
         >
-          <ModalHeader onClose={closeConfirmationModal}>
+          <ModalHeader onClose={handleClose}>
             <FormattedMessage
               defaultMessage="Exit validator {validatorindex}"
               values={{ validatorindex }}
@@ -132,132 +146,149 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
               </Alert>
             </AlertContainer>
             <ModalContent>
-              <Text>
-                <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
-              </Text>
-              <Text>
-                <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion." />
-              </Text>
-              <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
-                <li>
-                  <Text as="span">
-                    <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+              {!showTx && (
+                <>
+                  <Text>
+                    <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
                   </Text>
-                </li>
-                <li>
-                  <Text as="span">
-                    <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
+                  <Text>
+                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion." />
                   </Text>
-                </li>
-                <li>
-                  <Text as="span">
+                  <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+                      </Text>
+                    </li>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
+                      </Text>
+                    </li>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage
+                          defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
+                          values={{
+                            destination: (
+                              <strong>
+                                <FormattedMessage defaultMessage="connected execution withdrawal address" />
+                              </strong>
+                            ),
+                          }}
+                        />
+                      </Text>
+                    </li>
+                  </ul>
+                </>
+              )}
+
+              {showTx && (
+                <TransactionStatusInsert
+                  headerMessage={
                     <FormattedMessage
-                      defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
-                      values={{
-                        destination: (
-                          <strong>
-                            <FormattedMessage defaultMessage="connected execution withdrawal address" />
-                          </strong>
-                        ),
-                      }}
+                      defaultMessage="Initiating exit"
+                      values={{ validatorindex }}
                     />
-                  </Text>
-                </li>
-              </ul>
+                  }
+                  txHash={txHash}
+                  transactionStatus={transactionStatus}
+                />
+              )}
             </ModalContent>
           </ModalBody>
 
-          <Box
-            as="footer"
-            gap="small"
-            direction="row"
-            align="center"
-            justify="center"
-            border="top"
-            pad="1rem"
-          >
-            {stepTwo ? (
-              <Form
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.5rem',
-                }}
-              >
-                <label
-                  htmlFor="confirm-exit-input"
-                  style={{ marginBottom: '0.25rem' }}
+          {!['error', 'complete'].includes(signTxStatus) ? (
+            <Box
+              as="footer"
+              gap="small"
+              direction="row"
+              align="center"
+              justify="center"
+              border="top"
+              pad="1rem"
+            >
+              {stepTwo ? (
+                <Form
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem',
+                  }}
                 >
-                  <Text>
-                    Please type <strong>{CONFIRM_EXIT_STRING}</strong> to
-                    confirm.
-                  </Text>
-                </label>
-                <TextInput
-                  id="confirm-exit-input"
-                  name="confirm-exit-input"
-                  value={userConfirmationValue}
-                  onChange={event =>
-                    setUserConfirmationValue(event.target.value)
-                  }
-                  style={{ background: 'white', border: '1px solid #ccc' }}
-                />
+                  <label
+                    htmlFor="confirm-exit-input"
+                    style={{ marginBottom: '0.25rem' }}
+                  >
+                    <Text>
+                      Please type <strong>{CONFIRM_EXIT_STRING}</strong> to
+                      confirm.
+                    </Text>
+                  </label>
+                  <TextInput
+                    id="confirm-exit-input"
+                    name="confirm-exit-input"
+                    value={userConfirmationValue}
+                    onChange={event =>
+                      setUserConfirmationValue(event.target.value)
+                    }
+                    style={{ background: 'white', border: '1px solid #ccc' }}
+                  />
+                  <Button
+                    style={{ fontSize: '1rem' }}
+                    label="I understand the consequences, exit this validator"
+                    onClick={createExitTransaction}
+                    color="dark-3"
+                    fullWidth
+                    destructive
+                    type="submit"
+                    disabled={
+                      showTx ||
+                      userConfirmationValue.localeCompare(
+                        CONFIRM_EXIT_STRING,
+                        locale,
+                        {
+                          sensitivity: 'base',
+                        }
+                      ) !== 0
+                    }
+                  />
+                </Form>
+              ) : (
                 <Button
-                  style={{ fontSize: '1rem' }}
-                  label="I understand the consequences, exit this validator"
-                  onClick={createExitTransaction}
-                  color="dark-3"
-                  fullWidth
-                  destructive
-                  type="submit"
-                  disabled={
-                    userConfirmationValue.localeCompare(
-                      CONFIRM_EXIT_STRING,
-                      locale,
-                      {
-                        sensitivity: 'base',
-                      }
-                    ) !== 0
+                  label={
+                    <FormattedMessage defaultMessage="Fully exit validator" />
                   }
+                  onClick={() => setStepTwo(true)}
+                  color="dark-3"
+                  destructive
+                  secondary
+                  fullWidth
                 />
-              </Form>
-            ) : (
-              <Button
-                label={
-                  <FormattedMessage defaultMessage="Fully exit validator" />
-                }
-                onClick={() => setStepTwo(true)}
-                color="dark-3"
-                destructive
-                secondary
-                fullWidth
-              />
-            )}
-          </Box>
+              )}
+            </Box>
+          ) : (
+            <Box as="footer" pad="1rem">
+              {signTxStatus === 'error' && (
+                <Button
+                  label={<FormattedMessage defaultMessage="Try again" />}
+                  onClick={createExitTransaction}
+                  destructive
+                  secondary
+                  fullWidth
+                />
+              )}
+              {signTxStatus === 'complete' && (
+                <Button
+                  label={<FormattedMessage defaultMessage="Finish" />}
+                  onClick={handleClose}
+                />
+              )}
+            </Box>
+          )}
         </Layer>
       )}
-
-      {showTxModal && (
-        <TransactionStatusModal
-          headerMessage={
-            <FormattedMessage
-              defaultMessage="Initiating exit"
-              values={{ validatorindex }}
-            />
-          }
-          txHash={txHash}
-          transactionStatus={transactionStatus}
-          onClose={handleTxModalClose}
-          handleRetry={createExitTransaction}
-        />
-      )}
-
-      <Button
-        label={<FormattedMessage defaultMessage="Force exit" />}
-        onClick={openExitModal}
-        destructive
-      />
     </>
   );
 };

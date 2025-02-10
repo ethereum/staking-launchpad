@@ -4,12 +4,11 @@ import styled from 'styled-components';
 import { Web3Provider } from '@ethersproject/providers';
 import { useWeb3React } from '@web3-react/core';
 import { Button as GrommetButton } from 'grommet';
-import { Alert as AlertIcon } from 'grommet-icons';
+import { Alert as AlertIcon, FormRefresh as RefreshIcon } from 'grommet-icons';
 import {
   BeaconChainValidator,
   BeaconChainValidatorResponse,
 } from '../TopUp/types';
-import { Props } from './types';
 
 import ValidatorActions from './components/ValidatorActions';
 
@@ -59,6 +58,13 @@ const FetchButton = styled(GrommetButton)`
     background: rgba(0, 0, 0, 0.05);
     box-shadow: none;
   }
+`;
+
+const RefreshButton = styled(FetchButton)`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-wrap: nowrap;
 `;
 
 const ButtonContainer = styled.div`
@@ -120,24 +126,24 @@ const fetchValidatorsByPubkeys = async (
   }
 };
 
-const _ActionsPage: React.FC<Props> = () => {
+const _ActionsPage = () => {
   const {
     account,
     active,
     chainId,
     deactivate,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const { formatMessage } = useIntl();
+  const { locale, formatMessage } = useIntl();
 
-  const [loading, setLoading] = React.useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const [
     selectedValidator,
     setSelectedValidator,
   ] = useState<BeaconChainValidator | null>(null);
-  const [validatorLoadError, setValidatorLoadError] = React.useState<boolean>(
-    false
-  );
+  const [validatorLoadError, setValidatorLoadError] = useState(false);
   const [validators, setValidators] = useState<BeaconChainValidator[]>([]);
+  const [lastUpdate, setLastUpdate] = useState<Record<string, number>>({});
 
   const [fetchOffset, setFetchOffset] = useState(0);
 
@@ -145,6 +151,34 @@ const _ActionsPage: React.FC<Props> = () => {
     setLoading(true);
     deactivate();
   }, [setLoading, deactivate]);
+
+  const refreshValidator = useCallback(async () => {
+    if (!selectedValidator || !active || !account) return;
+
+    // Separate loading indicator?
+    setRefreshing(true);
+
+    const newValidator = await fetchValidatorsByPubkeys([
+      selectedValidator.pubkey,
+    ]);
+
+    if (!newValidator) {
+      setRefreshing(false);
+      return;
+    }
+
+    // Update validators state
+    const newValidators = validators.map(v =>
+      v.pubkey === selectedValidator.pubkey ? newValidator[0] : v
+    );
+    setValidators(newValidators);
+    setLastUpdate(prev => ({
+      ...prev,
+      [selectedValidator.pubkey]: Date.now(),
+    }));
+    setSelectedValidator(newValidator[0]);
+    setRefreshing(false);
+  }, [account, active, selectedValidator, validators]);
 
   const fetchMoreValidators = useCallback(async () => {
     if (!active || !account) return;
@@ -169,6 +203,14 @@ const _ActionsPage: React.FC<Props> = () => {
       return;
     }
 
+    setLastUpdate(prev => {
+      const now = Date.now();
+      const newTimestamps: Record<string, number> = {};
+      pubkeys.forEach(pubkey => {
+        newTimestamps[pubkey] = now;
+      });
+      return { ...prev, ...newTimestamps };
+    });
     setValidators(prev => [...prev, ...newValidators]);
     setLoading(false);
   }, [active, account, fetchOffset]);
@@ -264,7 +306,7 @@ const _ActionsPage: React.FC<Props> = () => {
             <FormattedMessage defaultMessage="Select a validator" />
           </Text>
 
-          <div style={{ display: 'flex', gap: '1rem' }}>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <ValidatorSelector
               validators={validators}
               selectedValidator={selectedValidator}
@@ -284,25 +326,82 @@ const _ActionsPage: React.FC<Props> = () => {
             <ValidatorDetails validator={selectedValidator} />
 
             {!hasValidatorExited(selectedValidator) && (
-              <ValidatorActions
-                validator={selectedValidator}
-                validators={validators}
-              />
+              <>
+                <div style={{ marginBottom: '1rem' }}>
+                  <Alert variant="info">
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '1rem',
+                      }}
+                    >
+                      <AlertIcon />
+                      <Text>
+                        <FormattedMessage defaultMessage="Recent transactions can take time to process and may not yet bet reflected in validator details. Use caution to avoid submitting duplicate requests." />
+                      </Text>
+                      <div
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <RefreshButton
+                          label={
+                            <>
+                              <RefreshIcon style={{ width: 20 }} />
+                              <FormattedMessage defaultMessage="Fetch latest" />
+                            </>
+                          }
+                          disabled={refreshing}
+                          onClick={refreshValidator}
+                          size="small"
+                        />
+                        <Text
+                          style={{
+                            fontSize: '0.875rem',
+                            color: 'darkslategray',
+                            textAlign: 'center',
+                            width: '100%',
+                            marginTop: '0.25rem',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          <FormattedMessage defaultMessage="Updated" />:{' '}
+                          {new Date(
+                            lastUpdate[selectedValidator.pubkey]
+                          ).toLocaleTimeString(locale)}
+                        </Text>
+                      </div>
+                    </div>
+                  </Alert>
+                </div>
+
+                <ValidatorActions
+                  validator={selectedValidator}
+                  validators={validators}
+                />
+              </>
             )}
           </>
         )}
       </>
     );
   }, [
-    loading,
     active,
-    selectedValidator,
-    validators,
+    fetchMoreValidators,
     formatMessage,
     handleConnect,
-    validatorLoadError,
-    fetchMoreValidators,
+    lastUpdate,
+    loading,
+    locale,
     moreToFetch,
+    refreshing,
+    refreshValidator,
+    selectedValidator,
+    validatorLoadError,
+    validators,
   ]);
 
   return (

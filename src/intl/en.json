@@ -57,9 +57,6 @@
   "/5Hyyf": {
     "message": "Indonesian"
   },
-  "/EhlLs": {
-    "message": "This validator should remain online until exit epoch is reached."
-  },
   "/JiR8D": {
     "message": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
   },
@@ -220,9 +217,6 @@
   },
   "1GAnQ9": {
     "message": "validator index you choose below"
-  },
-  "1ICikH": {
-    "message": "This account will be permanently exited from the network."
   },
   "1ONfru": {
     "message": "To include this message on Mainnet, you will need to upload this message to a beacon node’s message “Signed BLS To Execution Change” pool."
@@ -407,9 +401,6 @@
   "4AVfh5": {
     "message": "I've joined my consensus client's Discord server."
   },
-  "4LvelA": {
-    "message": "Max withdrawable"
-  },
   "4NvAhl": {
     "message": "Start by setting up your chosen hardware and operating system."
   },
@@ -472,9 +463,6 @@
   },
   "5Vrs8S": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
-  },
-  "5n6aCX": {
-    "message": "Network congestion may result in delays"
   },
   "5q9Lgv": {
     "message": "Download {master} branch:"
@@ -831,9 +819,6 @@
   },
   "Bp9Dxf": {
     "message": "How to trigger withdrawals, credential change"
-  },
-  "BswXIG": {
-    "message": "How much {TICKER_NAME} would you like to withdraw?"
   },
   "Bxe+HB": {
     "message": "Genesis validator root"
@@ -1250,17 +1235,11 @@
   "JPT/TK": {
     "message": "4. Avoid phishing"
   },
-  "JQtlrY": {
-    "message": "Fully exit validator"
-  },
   "JZm4pU": {
     "message": "Setting this address establishes your validator {withdrawalCredentials}, and permanently links the chosen execution address to your validator. This account will be the only account that can receive withdrawn funds from your validator."
   },
   "Ja5vXW": {
     "message": "Further reading"
-  },
-  "Jge1Sx": {
-    "message": "Force exit"
   },
   "JhUYU3": {
     "message": "Download CLI app"
@@ -1471,9 +1450,6 @@
   "Mor0Ih": {
     "message": "Bad validator behavior"
   },
-  "MtgVBi": {
-    "message": "UNSTAKE FUNDS"
-  },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
   },
@@ -1555,14 +1531,8 @@
   "OJOu1W": {
     "message": "Documentation on running Erigon"
   },
-  "OJcH8h": {
-    "message": "Start withdrawal"
-  },
   "ON2tXT": {
     "message": "The Nethermind documentation explains how to download and install the client."
-  },
-  "ONXIv4": {
-    "message": "Withdrawal some {TICKER_NAME}"
   },
   "ORVjVH": {
     "message": "Then another {time} (256 epochs) before those funds are flagged as withdrawable"
@@ -1749,9 +1719,6 @@
   },
   "S3RTk+": {
     "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-  },
-  "S8IknF": {
-    "message": "Withdrawal requests are added to a queue for processing."
   },
   "S943uU": {
     "message": "Double check the URL"
@@ -2039,9 +2006,6 @@
   },
   "YJI2xv": {
     "message": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
-  },
-  "YLFl88": {
-    "message": "Exit validator {validatorindex}"
   },
   "YP03/j": {
     "message": "Afterwards, validators are still encouraged to join (the more validators the more decentralized the network), but it’s not absolutely essential that they do so (so the interest rate can fall)."
@@ -2347,9 +2311,6 @@
   },
   "eTenzU": {
     "message": "activation queue"
-  },
-  "eWA3GW": {
-    "message": "Initiate withdrawal"
   },
   "eX072N": {
     "message": "Erigon is an execution client on the efficiency frontier, written in Go."
@@ -2768,9 +2729,6 @@
   "lD66ab": {
     "message": "Outstanding deposit"
   },
-  "lG9weW": {
-    "message": "This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network."
-  },
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",
     "message": "You can install pip using a Linux Package Manager like {apt} or {yum}."
@@ -3156,9 +3114,6 @@
   "rD3ot9": {
     "message": "Phishing guide"
   },
-  "rElUnh": {
-    "message": "Initiating exit"
-  },
   "rTSJI9": {
     "message": "Try the testnet"
   },
@@ -3537,9 +3492,6 @@
   },
   "ydh1KU": {
     "message": "Language information"
-  },
-  "yeOdna": {
-    "message": "connected execution withdrawal address"
   },
   "yis3aS": {
     "message": "This is the expected scenario."

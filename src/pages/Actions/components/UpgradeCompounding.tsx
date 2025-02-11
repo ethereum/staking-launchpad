@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Box, Layer } from 'grommet';
+import { Layer } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -16,6 +16,8 @@ import {
   ModalContent,
   AlertContainer,
   AlertContent,
+  modalLayerStyle,
+  ModalFooter,
 } from './Shared';
 import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
@@ -106,7 +108,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
           position="center"
           onEsc={handleClose}
           onClickOutside={handleClose}
-          style={{ background: '#EEEEEE', maxWidth: '40rem' }}
+          style={modalLayerStyle}
         >
           <ModalHeader onClose={handleClose}>
             <FormattedMessage
@@ -173,7 +175,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
             </ModalContent>
           </ModalBody>
 
-          <Box as="footer" pad="1rem">
+          <ModalFooter>
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 fullWidth
@@ -202,7 +204,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                 onClick={handleClose}
               />
             )}
-          </Box>
+          </ModalFooter>
         </Layer>
       )}
     </>

@@ -15,7 +15,14 @@ import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import ModalHeader from './ModalHeader';
-import { ModalBody, AlertContent, ModalContent, Hash } from './Shared';
+import {
+  ModalBody,
+  AlertContent,
+  ModalContent,
+  Hash,
+  modalLayerStyle,
+  ModalFooter,
+} from './Shared';
 import ValidatorSelector from './ValidatorSelector';
 
 import { generateCompoundParams } from '../ActionUtils';
@@ -116,10 +123,7 @@ const PullConsolidation = ({
           position="center"
           onEsc={handleClose}
           onClickOutside={handleClose}
-          style={{
-            background: '#EEEEEE',
-            width: 'clamp(min(432px,100%), 50vw, 40rem)',
-          }}
+          style={modalLayerStyle}
         >
           <Box>
             <ModalHeader onClose={handleClose}>
@@ -461,7 +465,7 @@ const PullConsolidation = ({
             </ModalBody>
           </Box>
 
-          <Box as="footer" pad="1rem">
+          <ModalFooter>
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 fullWidth
@@ -489,7 +493,7 @@ const PullConsolidation = ({
                 onClick={handleClose}
               />
             )}
-          </Box>
+          </ModalFooter>
         </Layer>
       )}
     </>

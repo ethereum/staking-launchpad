@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Box, Layer, Form } from 'grommet';
+import { Layer, Form } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -20,6 +20,8 @@ import {
   Hash,
   AlertContainer,
   AlertContent,
+  modalLayerStyle,
+  ModalFooter,
 } from './Shared';
 import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
@@ -113,7 +115,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
           position="center"
           onEsc={handleClose}
           onClickOutside={handleClose}
-          style={{ background: '#EEEEEE', maxWidth: '40rem' }}
+          style={modalLayerStyle}
         >
           <ModalHeader onClose={handleClose}>
             <FormattedMessage
@@ -121,7 +123,6 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               values={{ TICKER_NAME }}
             />
           </ModalHeader>
-
           <ModalBody>
             {!showTx && (
               <AlertContainer>
@@ -373,17 +374,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               )}
             </ModalContent>
           </ModalBody>
-
-          {!['error', 'complete'].includes(signTxStatus) ? (
-            <Box
-              as="footer"
-              gap="small"
-              direction="row"
-              align="center"
-              justify="center"
-              border="top"
-              pad="1rem"
-            >
+          <ModalFooter>
+            {!['error', 'complete'].includes(signTxStatus) && (
               <Form
                 style={{
                   width: '100%',
@@ -426,25 +418,24 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   disabled={!etherAmount || showTx}
                 />
               </Form>
-            </Box>
-          ) : (
-            <Box as="footer" pad="1rem">
-              {signTxStatus === 'error' && (
-                <Button
-                  label={<FormattedMessage defaultMessage="Try again" />}
-                  onClick={createWithdrawTransaction}
-                  destructive
-                  secondary
-                  fullWidth
-                />
-              )}
-              {signTxStatus === 'complete' && (
-                <Button
-                  label={<FormattedMessage defaultMessage="Finish" />}
-                  onClick={handleClose}
-                />
-              )}
-            </Box>
+            )}
+
+            {signTxStatus === 'error' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Try again" />}
+                onClick={createWithdrawTransaction}
+                destructive
+                secondary
+                fullWidth
+              />
+            )}
+            {signTxStatus === 'complete' && (
+              <Button
+                label={<FormattedMessage defaultMessage="Finish" />}
+                onClick={handleClose}
+              />
+            )}
+          </ModalFooter>
           )}
         </Layer>
       )}

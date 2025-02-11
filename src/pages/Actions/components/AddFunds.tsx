@@ -3,7 +3,7 @@ import { ByteVectorType, ContainerType, NumberUintType } from '@chainsafe/ssz';
 import BigNumber from 'bignumber.js';
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Box, Layer, Form } from 'grommet';
+import { Layer, Form } from 'grommet';
 import { Alert as AlertIcon } from 'grommet-icons';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -34,6 +34,8 @@ import {
   Hash,
   AlertContainer,
   AlertContent,
+  modalLayerStyle,
+  ModalFooter,
 } from './Shared';
 import { Heading } from '../../../components/Heading';
 import { Alert } from '../../../components/Alert';
@@ -178,7 +180,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
           position="center"
           onEsc={handleClose}
           onClickOutside={handleClose}
-          style={{ background: '#EEEEEE', maxWidth: '40rem' }}
+          style={modalLayerStyle}
         >
           <ModalHeader onClose={handleClose}>
             <FormattedMessage defaultMessage="Stake additional funds" />
@@ -428,15 +430,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
             </ModalContent>
           </ModalBody>
 
-          <Box
-            as="footer"
-            gap="small"
-            direction="column"
-            align="center"
-            justify="center"
-            border="top"
-            pad="1rem"
-          >
+          <ModalFooter>
             {!showTx && (
               <Form
                 style={{
@@ -492,7 +486,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                 onClick={handleClose}
               />
             )}
-          </Box>
+          </ModalFooter>
         </Layer>
       )}
     </>

@@ -41,8 +41,14 @@ export const CloseButton = styled(GrommetButton)`
   }
 `;
 
+export const modalLayerStyle = {
+  background: '#EEEEEE',
+  width: 'clamp(min(432px,100%), 50vw, 40rem)',
+  overflow: 'auto',
+};
+
 export const ModalBody = styled.div`
-  borderbottom: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
   padding: 1rem;
 `;
 
@@ -50,6 +56,16 @@ export const ModalContent = styled.div`
   display: flex;
   gap: 1rem;
   flex-direction: column;
+`;
+
+export const ModalFooter = styled.footer`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid lightgray;
+  align-items: center;
+  height: fit-content;
 `;
 
 export const AlertContainer = styled.div`

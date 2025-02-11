@@ -43,6 +43,7 @@ import { getEtherBalance, getCredentialType } from '../../../utils/validators';
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import { getSignTxStatus } from '../../../utils/txStatus';
+import { useModal } from '../../../hooks/useModal';
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -67,12 +68,13 @@ interface Props {
 
 const AddFunds: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
+  const { showModal, setShowModal, showTx, setShowTx } = useModal();
+
   const executionEtherBalance = useExecutionBalance();
 
   const [etherAmount, setEtherAmount] = useState(0);
   const [maxEtherAmount, setMaxEtherAmount] = useState(0);
-  const [showInputModal, setShowInputModal] = useState(false);
-  const [showTx, setShowTx] = useState(false);
+
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
@@ -94,12 +96,12 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   const openInputModal = () => {
     setShowTx(false);
     setEtherAmount(0);
-    setShowInputModal(true);
+    setShowModal(true);
   };
 
   const handleClose = () => {
     setShowTx(false);
-    setShowInputModal(false);
+    setShowModal(false);
     setEtherAmount(0);
   };
 
@@ -171,7 +173,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
         disabled={validator.effectivebalance >= maxEBGwei}
       />
 
-      {showInputModal && (
+      {showModal && (
         <Layer
           position="center"
           onEsc={handleClose}

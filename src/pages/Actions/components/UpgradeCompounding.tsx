@@ -29,6 +29,7 @@ import {
 } from '../../../utils/envVars';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import { getSignTxStatus } from '../../../utils/txStatus';
+import { useModal } from '../../../hooks/useModal';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -37,9 +38,7 @@ interface Props {
 const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
 
-  const [showModal, setShowModal] = useState(false);
-
-  const [showTx, setShowTx] = useState(false);
+  const { showModal, setShowModal, showTx, setShowTx } = useModal();
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );

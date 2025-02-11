@@ -22,6 +22,7 @@ import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import { getSignTxStatus } from '../../../utils/txStatus';
+import { useModal } from '../../../hooks/useModal';
 
 type PushConsolidationProps = {
   sourceValidator: BeaconChainValidator; // The selected validator to migrate funds from (source)
@@ -34,22 +35,19 @@ const PushConsolidation = ({
 }: PushConsolidationProps) => {
   const { locale } = useIntl();
   const { connector, account } = useWeb3React();
+  const { showModal, setShowModal, showTx, setShowTx } = useModal();
 
   const [
     targetValidator,
     setTargetValidator,
   ] = useState<BeaconChainValidator | null>(null);
-  const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
-    boolean
-  >(false);
-  const [showTx, setShowTx] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
-  const [txHash, setTxHash] = useState<string>('');
+  const [txHash, setTxHash] = useState('');
 
   const confirmConsolidate = () => {
-    setShowSelectValidatorModal(true);
+    setShowModal(true);
     setTargetValidator(null);
   };
 
@@ -100,12 +98,12 @@ const PushConsolidation = ({
 
   const handleClose = () => {
     setShowTx(false);
-    setShowSelectValidatorModal(false);
+    setShowModal(false);
     setTargetValidator(null);
   };
   return (
     <>
-      {showSelectValidatorModal && (
+      {showModal && (
         <Layer
           position="center"
           onEsc={handleClose}

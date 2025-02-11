@@ -22,6 +22,7 @@ import { generateCompoundParams } from '../ActionUtils';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
+import { useModal } from '../../../hooks/useModal';
 
 type PullConsolidationProps = {
   targetValidator: BeaconChainValidator; // The selected validator to consolidate into (target)
@@ -34,22 +35,19 @@ const PullConsolidation = ({
 }: PullConsolidationProps) => {
   const { locale } = useIntl();
   const { connector, account } = useWeb3React();
+  const { showModal, setShowModal, showTx, setShowTx } = useModal();
 
   const [
     sourceValidator,
     setSourceValidator,
   ] = useState<BeaconChainValidator | null>(null);
-  const [showSelectValidatorModal, setShowSelectValidatorModal] = useState<
-    boolean
-  >(false);
-  const [showTx, setShowTx] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
   const [txHash, setTxHash] = useState<string>('');
 
   const confirmConsolidate = () => {
-    setShowSelectValidatorModal(true);
+    setShowModal(true);
     setSourceValidator(null);
   };
 
@@ -100,13 +98,20 @@ const PullConsolidation = ({
 
   const handleClose = () => {
     setShowTx(false);
-    setShowSelectValidatorModal(false);
+    setShowModal(false);
     setSourceValidator(null);
   };
 
   return (
     <>
-      {showSelectValidatorModal && (
+      <Button
+        label="Pull funds"
+        destructive
+        secondary
+        onClick={confirmConsolidate}
+      />
+
+      {showModal && (
         <Layer
           position="center"
           onEsc={handleClose}
@@ -487,13 +492,6 @@ const PullConsolidation = ({
           </Box>
         </Layer>
       )}
-
-      <Button
-        label="Pull funds"
-        destructive
-        secondary
-        onClick={confirmConsolidate}
-      />
     </>
   );
 };

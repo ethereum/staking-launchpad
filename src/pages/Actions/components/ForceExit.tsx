@@ -12,6 +12,7 @@ import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import ModalHeader from './ModalHeader';
 import {
   ModalBody,
@@ -22,25 +23,24 @@ import {
 
 import { generateWithdrawalParams } from '../ActionUtils';
 import { getSignTxStatus } from '../../../utils/txStatus';
-import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
+import { useModal } from '../../../hooks/useModal';
 
 interface Props {
   validator: BeaconChainValidator;
 }
 
 const ForceExit: React.FC<Props> = ({ validator }) => {
-  const { connector, account } = useWeb3React();
   const { locale, formatMessage } = useIntl();
+  const { connector, account } = useWeb3React();
+  const { showModal, setShowModal, showTx, setShowTx } = useModal();
+
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
+  const [stepTwo, setStepTwo] = useState(false);
 
-  const [showModal, setShowModal] = useState(false);
-  const [stepTwo, setStepTwo] = useState<boolean>(false);
-
-  const [showTx, setShowTx] = useState<boolean>(false);
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
-  const [txHash, setTxHash] = useState<string>('');
+  const [txHash, setTxHash] = useState('');
 
   const openExitModal = () => {
     setShowTx(false);
@@ -94,16 +94,6 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const { validatorindex } = validator;
 
   const signTxStatus = getSignTxStatus(transactionStatus);
-
-  // const getModalButtonLabel = () => {
-  //   if (!validator)
-  //     return <FormattedMessage defaultMessage="Pull funds" />;
-  //   if (!showTx)
-  //     return (
-  //       <FormattedMessage defaultMessage="I understand the consequences, consolidate funds" />
-  //     );
-  //   return <FormattedMessage defaultMessage="Finish" />;
-  // };
 
   return (
     <>

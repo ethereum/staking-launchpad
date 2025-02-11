@@ -17,6 +17,7 @@ import { Button } from '../../components/Button';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Section } from './components/Shared';
 import { Text } from '../../components/Text';
+import HelpCallout from '../../components/HelpCallout';
 import Spinner from '../../components/Spinner';
 import ValidatorDetails from './components/ValidatorDetails';
 import ValidatorSelector from './components/ValidatorSelector';
@@ -27,7 +28,6 @@ import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
 import { BEACONCHAIN_URL, TICKER_NAME } from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
-import HelpCallout from '../../components/HelpCallout';
 
 // https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
 const MAX_QUERY_LIMIT = 100;
@@ -65,6 +65,19 @@ const RefreshButton = styled(FetchButton)`
   align-items: center;
   gap: 0.25rem;
   text-wrap: nowrap;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &:disabled svg {
+    animation: spin 1s linear infinite;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -242,6 +255,14 @@ const _ActionsPage = () => {
     // eslint-disable-next-line
   }, [account, active, chainId]);
 
+  // Refresh active validator every 30 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      refreshValidator();
+    }, 30_000);
+    return () => clearInterval(interval);
+  }, [refreshValidator]);
+
   const moreToFetch = validators.length === fetchOffset;
 
   const actionsPageContent = useMemo(() => {
@@ -359,7 +380,7 @@ const _ActionsPage = () => {
                         <RefreshButton
                           label={
                             <>
-                              <RefreshIcon style={{ width: 20 }} />
+                              <RefreshIcon />
                               <FormattedMessage defaultMessage="Fetch latest" />
                             </>
                           }

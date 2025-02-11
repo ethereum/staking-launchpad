@@ -1750,6 +1750,9 @@
   "S3RTk+": {
     "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
   },
+  "S8IknF": {
+    "message": "Withdrawal requests are added to a queue for processing."
+  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -2087,9 +2090,6 @@
   "Z1aGQe": {
     "description": "{greater than 50%} shows 'greater than 50%' and is a link to validator incentives article",
     "message": "Overall, we'd expect your validator to be net profitable as long as your uptime is {greaterThan50Percent}."
-  },
-  "ZCsoMo": {
-    "message": "Withdrawals request are added to a queue for processing."
   },
   "ZK6NmY": {
     "message": "Note: the RTC (Real-Time Clock) time may be set to your local timezone instead of UTC, especially in a VM which has its clock configured on Windows."

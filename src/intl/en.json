@@ -401,6 +401,9 @@
   "4AVfh5": {
     "message": "I've joined my consensus client's Discord server."
   },
+  "4LvelA": {
+    "message": "Max withdrawable"
+  },
   "4NvAhl": {
     "message": "Start by setting up your chosen hardware and operating system."
   },
@@ -463,6 +466,9 @@
   },
   "5Vrs8S": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
+  },
+  "5n6aCX": {
+    "message": "Network congestion may result in delays"
   },
   "5q9Lgv": {
     "message": "Download {master} branch:"
@@ -819,6 +825,9 @@
   },
   "Bp9Dxf": {
     "message": "How to trigger withdrawals, credential change"
+  },
+  "BswXIG": {
+    "message": "How much {TICKER_NAME} would you like to withdraw?"
   },
   "Bxe+HB": {
     "message": "Genesis validator root"
@@ -1531,8 +1540,14 @@
   "OJOu1W": {
     "message": "Documentation on running Erigon"
   },
+  "OJcH8h": {
+    "message": "Start withdrawal"
+  },
   "ON2tXT": {
     "message": "The Nethermind documentation explains how to download and install the client."
+  },
+  "ONXIv4": {
+    "message": "Withdrawal some {TICKER_NAME}"
   },
   "ORVjVH": {
     "message": "Then another {time} (256 epochs) before those funds are flagged as withdrawable"
@@ -1719,6 +1734,9 @@
   },
   "S3RTk+": {
     "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
+  },
+  "S8IknF": {
+    "message": "Withdrawal requests are added to a queue for processing."
   },
   "S943uU": {
     "message": "Double check the URL"
@@ -2311,6 +2329,9 @@
   },
   "eTenzU": {
     "message": "activation queue"
+  },
+  "eWA3GW": {
+    "message": "Initiate withdrawal"
   },
   "eX072N": {
     "message": "Erigon is an execution client on the efficiency frontier, written in Go."

@@ -436,7 +436,6 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
               />
             )}
           </ModalFooter>
-          )}
         </Layer>
       )}
     </>

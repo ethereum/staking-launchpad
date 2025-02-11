@@ -78,6 +78,21 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const AlertBody = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  @media (max-width: 32rem) {
+    flex-direction: column;
+  }
+`;
+
+const AlertText = styled(Text)`
+  @media (max-width: 32rem) {
+    text-align: center;
+  }
+`;
+
 const fetchPubkeysByWithdrawalAddress = async (
   address: string,
   offset = 0,
@@ -329,17 +344,11 @@ const _ActionsPage = () => {
               <>
                 <div style={{ marginBottom: '1rem' }}>
                   <Alert variant="info">
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '1rem',
-                      }}
-                    >
+                    <AlertBody>
                       <AlertIcon />
-                      <Text>
+                      <AlertText>
                         <FormattedMessage defaultMessage="Recent transactions can take time to process and may not yet bet reflected in validator details. Use caution to avoid submitting duplicate requests." />
-                      </Text>
+                      </AlertText>
                       <div
                         style={{
                           display: 'flex',
@@ -374,7 +383,7 @@ const _ActionsPage = () => {
                           ).toLocaleTimeString(locale)}
                         </Text>
                       </div>
-                    </div>
+                    </AlertBody>
                   </Alert>
                 </div>
 

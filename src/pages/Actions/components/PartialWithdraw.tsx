@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Box, Layer, Form } from 'grommet';
@@ -21,16 +22,16 @@ import {
   AlertContent,
 } from './Shared';
 import { Text } from '../../../components/Text';
-import {
-  TransactionStatus,
-  TransactionStatusModal,
-} from '../../../components/TransactionStatusModal';
+import { TransactionStatus } from '../../../components/TransactionStatusModal';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
 import { generateWithdrawalParams } from '../ActionUtils';
 import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
+import { useModal } from '../../../hooks/useModal';
+import { getSignTxStatus } from '../../../utils/txStatus';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -38,12 +39,12 @@ interface Props {
 
 const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
-  const executionEtherBalance = useExecutionBalance();
+  const { showModal, setShowModal, showTx, setShowTx } = useModal();
 
+  const executionEtherBalance = useExecutionBalance();
   const [etherAmount, setEtherAmount] = useState(0);
   const [maxAmount, setMaxAmount] = useState(0);
-  const [showInputModal, setShowInputModal] = useState(false);
-  const [showTxModal, setShowTxModal] = useState(false);
+
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
@@ -57,24 +58,20 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
 
   const openInputModal = () => {
     setEtherAmount(0);
-    setShowInputModal(true);
+    setShowModal(true);
   };
 
-  const closeInputModal = () => {
-    setShowInputModal(false);
+  const handleClose = () => {
+    setShowTx(false);
+    setShowModal(false);
     setEtherAmount(0);
-  };
-
-  const handleTxClose = () => {
-    setShowTxModal(false);
-    closeInputModal();
   };
 
   const createWithdrawTransaction = async () => {
     if (!etherAmount || !account) return;
 
     setTransactionStatus('waiting_user_confirmation');
-    setShowTxModal(true);
+    setShowTx(true);
 
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
@@ -101,6 +98,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
       });
   };
 
+  const signTxStatus = getSignTxStatus(transactionStatus);
+
   return (
     <>
       <Button
@@ -109,14 +108,14 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />
 
-      {showInputModal && (
+      {showModal && (
         <Layer
           position="center"
-          onEsc={closeInputModal}
-          onClickOutside={closeInputModal}
+          onEsc={handleClose}
+          onClickOutside={handleClose}
           style={{ background: '#EEEEEE', maxWidth: '40rem' }}
         >
-          <ModalHeader onClose={closeInputModal}>
+          <ModalHeader onClose={handleClose}>
             <FormattedMessage
               defaultMessage="Withdrawal some {TICKER_NAME}"
               values={{ TICKER_NAME }}
@@ -124,23 +123,25 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
           </ModalHeader>
 
           <ModalBody>
-            <AlertContainer>
-              <Alert variant="info">
-                <AlertContent>
-                  <AlertIcon />
-                  <div>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Withdrawals request are added to a queue for processing." />
-                      </strong>
-                    </Text>
-                    <Text style={{ fontSize: '1rem' }}>
-                      <FormattedMessage defaultMessage="Network congestion may result in delays" />
-                    </Text>
-                  </div>
-                </AlertContent>
-              </Alert>
-            </AlertContainer>
+            {!showTx && (
+              <AlertContainer>
+                <Alert variant="info">
+                  <AlertContent>
+                    <AlertIcon />
+                    <div>
+                      <Text>
+                        <strong>
+                          <FormattedMessage defaultMessage="Withdrawal requests are added to a queue for processing." />
+                        </strong>
+                      </Text>
+                      <Text style={{ fontSize: '1rem' }}>
+                        <FormattedMessage defaultMessage="Network congestion may result in delays" />
+                      </Text>
+                    </div>
+                  </AlertContent>
+                </Alert>
+              </AlertContainer>
+            )}
 
             <ModalContent>
               <div
@@ -357,74 +358,95 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   </div>
                 </div>
               </div>
+
+              {showTx && (
+                <TransactionStatusInsert
+                  headerMessage={
+                    <FormattedMessage
+                      defaultMessage="Initiate withdrawal"
+                      values={{ amount: etherAmount, TICKER_NAME }}
+                    />
+                  }
+                  txHash={txHash}
+                  transactionStatus={transactionStatus}
+                />
+              )}
             </ModalContent>
           </ModalBody>
 
-          <Box
-            as="footer"
-            gap="small"
-            direction="row"
-            align="center"
-            justify="center"
-            border="top"
-            pad="1rem"
-          >
-            <Form
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.5rem',
-              }}
+          {!['error', 'complete'].includes(signTxStatus) ? (
+            <Box
+              as="footer"
+              gap="small"
+              direction="row"
+              align="center"
+              justify="center"
+              border="top"
+              pad="1rem"
             >
-              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-              <label
-                htmlFor="withdrawal-amount"
-                style={{ marginBottom: '0.25rem' }}
-              >
-                <Text>
-                  <FormattedMessage
-                    defaultMessage="How much {TICKER_NAME} would you like to withdraw?"
-                    values={{ TICKER_NAME }}
-                  />
-                </Text>
-              </label>
-              <NumberInput
-                id="withdrawal-amount"
-                value={etherAmount}
-                setValue={value => {
-                  setEtherAmount(Math.min(value, maxAmount));
+              <Form
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem',
                 }}
-                allowDecimals
-                maxValue={maxAmount}
-              />
-              <Button
-                style={{ fontSize: '1rem' }}
-                label="Withdrawal"
-                onClick={createWithdrawTransaction}
-                color="dark-3"
-                fullWidth
-                type="submit"
-                disabled={!etherAmount}
-              />
-            </Form>
-          </Box>
+              >
+                {!showTx && (
+                  <label
+                    htmlFor="withdrawal-amount"
+                    style={{ marginBottom: '0.25rem' }}
+                  >
+                    <Text>
+                      <FormattedMessage
+                        defaultMessage="How much {TICKER_NAME} would you like to withdraw?"
+                        values={{ TICKER_NAME }}
+                      />
+                    </Text>
+                  </label>
+                )}
+                {!showTx && (
+                  <NumberInput
+                    id="withdrawal-amount"
+                    value={etherAmount}
+                    setValue={value => {
+                      setEtherAmount(Math.min(value, maxAmount));
+                    }}
+                    allowDecimals
+                    maxValue={maxAmount}
+                  />
+                )}
+                <Button
+                  style={{ fontSize: '1rem' }}
+                  label="Withdrawal"
+                  onClick={createWithdrawTransaction}
+                  color="dark-3"
+                  fullWidth
+                  type="submit"
+                  disabled={!etherAmount || showTx}
+                />
+              </Form>
+            </Box>
+          ) : (
+            <Box as="footer" pad="1rem">
+              {signTxStatus === 'error' && (
+                <Button
+                  label={<FormattedMessage defaultMessage="Try again" />}
+                  onClick={createWithdrawTransaction}
+                  destructive
+                  secondary
+                  fullWidth
+                />
+              )}
+              {signTxStatus === 'complete' && (
+                <Button
+                  label={<FormattedMessage defaultMessage="Finish" />}
+                  onClick={handleClose}
+                />
+              )}
+            </Box>
+          )}
         </Layer>
-      )}
-
-      {showTxModal && (
-        <TransactionStatusModal
-          headerMessage={
-            <FormattedMessage
-              defaultMessage="Initiate withdrawal"
-              values={{ amount: etherAmount, TICKER_NAME }}
-            />
-          }
-          txHash={txHash}
-          transactionStatus={transactionStatus}
-          onClose={handleTxClose}
-          handleRetry={createWithdrawTransaction}
-        />
       )}
     </>
   );

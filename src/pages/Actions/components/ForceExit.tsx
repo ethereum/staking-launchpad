@@ -264,7 +264,6 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 onClick={handleClose}
               />
             )}
-            )}
           </ModalFooter>
         </Layer>
       )}

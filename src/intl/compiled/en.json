@@ -129,6 +129,12 @@
       "value": "Indonesian"
     }
   ],
+  "/EhlLs": [
+    {
+      "type": 0,
+      "value": "This validator should remain online until exit epoch is reached."
+    }
+  ],
   "/JiR8D": [
     {
       "type": 0,
@@ -593,6 +599,12 @@
     {
       "type": 0,
       "value": "validator index you choose below"
+    }
+  ],
+  "1ICikH": [
+    {
+      "type": 0,
+      "value": "This account will be permanently exited from the network."
     }
   ],
   "1ONfru": [
@@ -3299,6 +3311,12 @@
       "value": "4. Avoid phishing"
     }
   ],
+  "JQtlrY": [
+    {
+      "type": 0,
+      "value": "Fully exit validator"
+    }
+  ],
   "JZm4pU": [
     {
       "type": 0,
@@ -3317,6 +3335,12 @@
     {
       "type": 0,
       "value": "Further reading"
+    }
+  ],
+  "Jge1Sx": [
+    {
+      "type": 0,
+      "value": "Force exit"
     }
   ],
   "JhUYU3": [
@@ -3799,6 +3823,12 @@
     {
       "type": 0,
       "value": "Bad validator behavior"
+    }
+  ],
+  "MtgVBi": [
+    {
+      "type": 0,
+      "value": "UNSTAKE FUNDS"
     }
   ],
   "N0rwnt": [
@@ -5307,6 +5337,16 @@
     {
       "type": 0,
       "value": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+    }
+  ],
+  "YLFl88": [
+    {
+      "type": 0,
+      "value": "Exit validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
     }
   ],
   "YP03/j": [
@@ -7241,6 +7281,12 @@
       "value": "Outstanding deposit"
     }
   ],
+  "lG9weW": [
+    {
+      "type": 0,
+      "value": "This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network."
+    }
+  ],
   "lLOZMD": [
     {
       "type": 0,
@@ -8247,6 +8293,12 @@
       "value": "Phishing guide"
     }
   ],
+  "rElUnh": [
+    {
+      "type": 0,
+      "value": "Initiating exit"
+    }
+  ],
   "rTSJI9": [
     {
       "type": 0,
@@ -9247,6 +9299,12 @@
     {
       "type": 0,
       "value": "Language information"
+    }
+  ],
+  "yeOdna": [
+    {
+      "type": 0,
+      "value": "connected execution withdrawal address"
     }
   ],
   "yis3aS": [

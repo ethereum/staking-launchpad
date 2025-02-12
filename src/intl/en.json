@@ -57,6 +57,9 @@
   "/5Hyyf": {
     "message": "Indonesian"
   },
+  "/EhlLs": {
+    "message": "This validator should remain online until exit epoch is reached."
+  },
   "/JiR8D": {
     "message": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
   },
@@ -217,6 +220,9 @@
   },
   "1GAnQ9": {
     "message": "validator index you choose below"
+  },
+  "1ICikH": {
+    "message": "This account will be permanently exited from the network."
   },
   "1ONfru": {
     "message": "To include this message on Mainnet, you will need to upload this message to a beacon node’s message “Signed BLS To Execution Change” pool."
@@ -1244,11 +1250,17 @@
   "JPT/TK": {
     "message": "4. Avoid phishing"
   },
+  "JQtlrY": {
+    "message": "Fully exit validator"
+  },
   "JZm4pU": {
     "message": "Setting this address establishes your validator {withdrawalCredentials}, and permanently links the chosen execution address to your validator. This account will be the only account that can receive withdrawn funds from your validator."
   },
   "Ja5vXW": {
     "message": "Further reading"
+  },
+  "Jge1Sx": {
+    "message": "Force exit"
   },
   "JhUYU3": {
     "message": "Download CLI app"
@@ -1458,6 +1470,9 @@
   },
   "Mor0Ih": {
     "message": "Bad validator behavior"
+  },
+  "MtgVBi": {
+    "message": "UNSTAKE FUNDS"
   },
   "N0rwnt": {
     "message": "{depositFileName} isn't a valid deposit_data JSON file. Try again."
@@ -2024,6 +2039,9 @@
   },
   "YJI2xv": {
     "message": "A decision tree is followed to determine what type of withdrawal will be initiated. If the validator being checked has ETH that is eligible to be withdrawn, it is added to the withdrawal queue. If there isn’t, the account is skipped."
+  },
+  "YLFl88": {
+    "message": "Exit validator {validatorindex}"
   },
   "YP03/j": {
     "message": "Afterwards, validators are still encouraged to join (the more validators the more decentralized the network), but it’s not absolutely essential that they do so (so the interest rate can fall)."
@@ -2750,6 +2768,9 @@
   "lD66ab": {
     "message": "Outstanding deposit"
   },
+  "lG9weW": {
+    "message": "This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network."
+  },
   "lLOZMD": {
     "description": "{apt} and {yum} are both package manager names styled as code",
     "message": "You can install pip using a Linux Package Manager like {apt} or {yum}."
@@ -3135,6 +3156,9 @@
   "rD3ot9": {
     "message": "Phishing guide"
   },
+  "rElUnh": {
+    "message": "Initiating exit"
+  },
   "rTSJI9": {
     "message": "Try the testnet"
   },
@@ -3513,6 +3537,9 @@
   },
   "ydh1KU": {
     "message": "Language information"
+  },
+  "yeOdna": {
+    "message": "connected execution withdrawal address"
   },
   "yis3aS": {
     "message": "This is the expected scenario."

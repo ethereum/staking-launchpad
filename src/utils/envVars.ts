@@ -15,8 +15,8 @@ export const BEACONSCAN_URL             = IS_MAINNET ? 'https://beaconscan.com/v
 export const BEACONCHAIN_URL            = (IS_NON_INFURA_TESTNET && process.env.REACT_APP_BEACONCHAIN_URL) ||  `https://${NETWORK_NAME.toLowerCase()}.beaconcha.in`;
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
 export const CONTRACT_ADDRESS           = IS_MAINNET ? '0x00000000219ab540356cBB839Cbe05303d7705Fa' : process.env.REACT_APP_CONTRACT_ADDRESS;
-export const COMPOUNDING_CONTRACT_ADDRESS = process.env.REACT_APP_COMPOUNDING_CONTRACT_ADDRESS || ''
-export const WITHDRAWAL_CONTRACT_ADDRESS = process.env.REACT_APP_WITHDRAWAL_CONTRACT_ADDRESS || ''
+export const COMPOUNDING_CONTRACT_ADDRESS = process.env.REACT_APP_COMPOUNDING_CONTRACT_ADDRESS || '0x0000BBdDc7CE488642fb579F8B00f3a590007251'
+export const WITHDRAWAL_CONTRACT_ADDRESS = process.env.REACT_APP_WITHDRAWAL_CONTRACT_ADDRESS || '0x00000961Ef480Eb55e80D19ad83579A64c007002'
 export const LIGHTHOUSE_INSTALLATION_URL = process.env.REACT_APP_LIGHTHOUSE_INSTALLATION_URL || 'https://lighthouse-book.sigmaprime.io/';
 export const NIMBUS_INSTALLATION_URL    = process.env.REACT_APP_NIMBUS_INSTALLATION_URL  || 'https://nimbus.guide/quick-start.html';
 export const PRYSM_INSTALLATION_URL     = process.env.REACT_APP_PRYSM_INSTALLATION_URL   || 'https://docs.prylabs.network/docs/install/install-with-script';
@@ -99,3 +99,9 @@ export const COMPOUNDING_CREDENTIALS    = "0x02";
 
 // Boolean to translate CLI command flags, or keep in English
 export const TRANSLATE_CLI_FLAGS        = process.env.REACT_APP_TRANSLATE_CLI_FLAGS === 'true';
+
+// https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
+if(process.env.REACT_APP_MAX_QUERY_LIMIT && Number.isNaN(Number(process.env.REACT_APP_MAX_QUERY_LIMIT))) {
+    throw new Error("REACT_APP_MAX_QUERY_LIMIT must be of type: number")
+}
+export const MAX_QUERY_LIMIT            = Number(process.env.REACT_APP_MAX_QUERY_LIMIT) || 100;

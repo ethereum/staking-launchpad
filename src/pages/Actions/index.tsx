@@ -26,11 +26,12 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import { BEACONCHAIN_URL, TICKER_NAME } from '../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  TICKER_NAME,
+  MAX_QUERY_LIMIT,
+} from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
-
-// https://beaconcha.in/api/v1/docs/index.html#/Validator/get_api_v1_validator__indexOrPubkey_
-const MAX_QUERY_LIMIT = 100;
 
 const FakeLink = styled.span`
   color: blue;

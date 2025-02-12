@@ -22,7 +22,7 @@ import {
 import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
 
-import { generateCompoundParams } from '../ActionUtils';
+import { generateCompoundParams } from '../utils';
 
 import {
   MAX_EFFECTIVE_BALANCE,

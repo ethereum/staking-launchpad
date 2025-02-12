@@ -23,7 +23,7 @@ import {
   ModalFooter,
 } from './Shared';
 
-import { generateWithdrawalParams } from '../ActionUtils';
+import { Queue, generateWithdrawalParams } from '../utils';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { useModal } from '../../../hooks/useModal';
 
@@ -43,6 +43,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     'not_started'
   );
   const [txHash, setTxHash] = useState('');
+  // eslint-disable-next-line
+  const [queue, setQueue] = useState<Queue | null>(null);
 
   const openExitModal = () => {
     setShowTx(false);
@@ -68,12 +70,12 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     const web3 = new Web3(walletProvider);
 
     // Force exits have withdrawal amount of 0
-    const transactionParams = await generateWithdrawalParams(
-      web3,
-      account,
-      validator.pubkey,
-      0
-    );
+    const {
+      transactionParams,
+      queue: withdrawalQueue,
+    } = await generateWithdrawalParams(web3, account, validator.pubkey, 0);
+
+    setQueue(withdrawalQueue);
 
     web3.eth
       .sendTransaction(transactionParams)

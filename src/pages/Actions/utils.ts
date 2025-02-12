@@ -7,6 +7,11 @@ import {
   WITHDRAWAL_CONTRACT_ADDRESS,
 } from '../../utils/envVars';
 
+export type Queue = {
+  length: BigNumber;
+  fee: BigNumber;
+};
+
 const getRequiredFee = (queueLength: BigNumber): BigNumber => {
   let i = new BigNumber(1);
   let output = new BigNumber(0);
@@ -25,7 +30,7 @@ const getRequiredFee = (queueLength: BigNumber): BigNumber => {
 export const getCompoundingFee = async (web3: Web3): Promise<BigNumber> => {
   const queueLengthHex = await web3.eth.getStorageAt(
     COMPOUNDING_CONTRACT_ADDRESS!,
-    0
+    0 // EXCESS_CONSOLIDATION_REQUESTS_STORAGE_SLOT
   );
 
   if (!queueLengthHex) {
@@ -37,20 +42,28 @@ export const getCompoundingFee = async (web3: Web3): Promise<BigNumber> => {
   return getRequiredFee(queueLength);
 };
 
-// https://eips.ethereum.org/EIPS/eip-7002#fee-calculation
-export const getWithdrawalFee = async (web3: Web3): Promise<BigNumber> => {
+export const getWithdrawalQueueLength = async (
+  web3: Web3
+): Promise<BigNumber> => {
   const queueLengthHex = await web3.eth.getStorageAt(
     WITHDRAWAL_CONTRACT_ADDRESS!,
-    0
+    0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
   );
 
   if (!queueLengthHex) {
     throw new Error('Unable to get withdrawal queue length');
   }
 
-  const queueLength = new BigNumber(queueLengthHex);
+  return new BigNumber(queueLengthHex);
+};
 
-  return getRequiredFee(queueLength);
+// https://eips.ethereum.org/EIPS/eip-7002#fee-calculation
+export const getWithdrawalQueue = async (web3: Web3): Promise<Queue> => {
+  const length = await getWithdrawalQueueLength(web3);
+
+  const fee = getRequiredFee(length);
+
+  return { length, fee };
 };
 
 export const generateCompoundParams = async (
@@ -77,16 +90,20 @@ export const generateWithdrawalParams = async (
   address: string,
   pubkey: string,
   amount: number
-): Promise<TransactionConfig> => {
-  const fee = await getWithdrawalFee(web3);
+): Promise<{
+  transactionParams: TransactionConfig;
+  queue: Queue;
+}> => {
+  const queue = await getWithdrawalQueue(web3);
 
   // https://eips.ethereum.org/EIPS/eip-7002#add-withdrawal-request
-  return {
+  const transactionParams = {
     to: WITHDRAWAL_CONTRACT_ADDRESS,
     from: address,
     // calldata (56 bytes): sourceValidator.pubkey (48 bytes) + amount (8 bytes)
     data: `0x${pubkey.substring(2)}${amount.toString(16).padStart(16, '0')}`,
-    value: fee.toString(),
+    value: queue.fee.toString(),
     gas: 200000,
   };
+  return { transactionParams, queue };
 };

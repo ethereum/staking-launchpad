@@ -27,7 +27,7 @@ import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
-import { generateWithdrawalParams } from '../ActionUtils';
+import { generateWithdrawalParams } from '../utils';
 import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 
@@ -79,7 +79,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     const web3: any = new Web3(walletProvider);
 
     // Partial withdrawal transaction
-    const transactionParams = await generateWithdrawalParams(
+    const { transactionParams } = await generateWithdrawalParams(
       web3,
       account,
       validator.pubkey,

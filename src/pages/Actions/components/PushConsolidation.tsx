@@ -24,7 +24,7 @@ import {
 } from './Shared';
 import ValidatorSelector from './ValidatorSelector';
 
-import { generateCompoundParams } from '../ActionUtils';
+import { generateCompoundParams } from '../utils';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';

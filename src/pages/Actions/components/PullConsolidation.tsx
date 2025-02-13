@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Box, Layer } from 'grommet';
-import { Alert as AlertIcon } from 'grommet-icons';
+import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
@@ -175,7 +175,6 @@ const PullConsolidation = ({
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '1rem',
                     }}
                   >
                     <div
@@ -191,7 +190,7 @@ const PullConsolidation = ({
                         level={3}
                         style={{ textTransform: 'uppercase', color: 'darkred' }}
                       >
-                        <FormattedMessage defaultMessage="From" />
+                        <FormattedMessage defaultMessage="Exit" />
                       </Heading>
                       <Text>
                         <strong>
@@ -224,8 +223,7 @@ const PullConsolidation = ({
                           }}
                         >
                           <div>
-                            <FormattedMessage defaultMessage="Current balance" />
-                            :
+                            <FormattedMessage defaultMessage="Balance" />:
                           </div>
                           <div
                             style={{
@@ -233,30 +231,6 @@ const PullConsolidation = ({
                               fontFamily: 'monospace',
                             }}
                           >
-                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Balance change" />
-                            :
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                              color: 'darkred',
-                            }}
-                          >
-                            {getEtherBalance(sourceValidator) > 0 ? '-' : ''}
                             {getEtherBalance(sourceValidator).toFixed(9)}{' '}
                             {TICKER_NAME}
                           </div>
@@ -271,8 +245,7 @@ const PullConsolidation = ({
                           }}
                         >
                           <div>
-                            <FormattedMessage defaultMessage="Ending balance" />
-                            :
+                            <FormattedMessage defaultMessage="New balance" />:
                           </div>
                           <div
                             style={{
@@ -285,6 +258,28 @@ const PullConsolidation = ({
                         </Text>
                       </div>
                     </div>
+
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        margin: '0.25rem auto',
+                      }}
+                    >
+                      <DownIcon />
+                      <Text
+                        style={{
+                          fontFamily: 'monospace',
+                          fontSize: '1rem',
+                          color: 'darkred',
+                        }}
+                      >
+                        {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                        {TICKER_NAME}
+                      </Text>
+                    </div>
+
                     <div
                       style={{
                         background: '#fff',
@@ -301,7 +296,7 @@ const PullConsolidation = ({
                           color: 'darkgreen',
                         }}
                       >
-                        <FormattedMessage defaultMessage="To" />
+                        <FormattedMessage defaultMessage="Migrate to" />
                       </Heading>
                       <Text>
                         <strong>
@@ -318,7 +313,6 @@ const PullConsolidation = ({
                       >
                         <Hash>{targetValidator.pubkey}</Hash>
                       </Text>
-
                       <div
                         style={{
                           display: 'grid',
@@ -334,8 +328,7 @@ const PullConsolidation = ({
                           }}
                         >
                           <div>
-                            <FormattedMessage defaultMessage="Current balance" />
-                            :
+                            <FormattedMessage defaultMessage="Current" />:
                           </div>
                           <div
                             style={{
@@ -344,30 +337,6 @@ const PullConsolidation = ({
                             }}
                           >
                             {getEtherBalance(targetValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Balance change" />
-                            :
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                              color: 'darkgreen',
-                            }}
-                          >
-                            {getEtherBalance(sourceValidator) > 0 ? '+' : ''}
-                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
                             {TICKER_NAME}
                           </div>
                         </Text>
@@ -381,13 +350,13 @@ const PullConsolidation = ({
                           }}
                         >
                           <div>
-                            <FormattedMessage defaultMessage="Ending balance" />
-                            :
+                            <FormattedMessage defaultMessage="New balance" />:
                           </div>
                           <div
                             style={{
                               textAlign: 'end',
                               fontFamily: 'monospace',
+                              color: 'darkgreen',
                             }}
                           >
                             {(
@@ -427,7 +396,7 @@ const PullConsolidation = ({
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network." />
                   </Text>
                   <Text>
-                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion." />
+                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
                   <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
                     <li>

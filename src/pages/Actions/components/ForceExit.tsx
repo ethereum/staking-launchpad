@@ -205,7 +205,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                         color: 'darkred',
                       }}
                     >
-                      <FormattedMessage defaultMessage="From" />
+                      <FormattedMessage defaultMessage="Exit" />
                     </Heading>
                     <Text>
                       <strong>
@@ -304,7 +304,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                         color: 'darkgreen',
                       }}
                     >
-                      <FormattedMessage defaultMessage="To" />
+                      <FormattedMessage defaultMessage="Withdrawal to" />
                     </Heading>
                     <Text>
                       <strong>

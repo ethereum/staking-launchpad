@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Box, Layer } from 'grommet';
-import { Alert as AlertIcon } from 'grommet-icons';
+import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
@@ -15,12 +15,12 @@ import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import ModalHeader from './ModalHeader';
 import {
-  ModalBody,
   AlertContent,
-  ModalContent,
   Hash,
-  modalLayerStyle,
+  ModalBody,
+  ModalContent,
   ModalFooter,
+  modalLayerStyle,
 } from './Shared';
 import ValidatorSelector from './ValidatorSelector';
 
@@ -128,7 +128,7 @@ const PushConsolidation = ({
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network." />
                   </Text>
                   <Text>
-                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion." />
+                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
                   <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
                     <li>
@@ -159,26 +159,8 @@ const PushConsolidation = ({
                 </ModalContent>
               )}
 
-              {!showTx && (
-                <div
-                  style={{
-                    marginBottom: '1.5rem',
-                    marginTop: targetValidator ? '0' : '1rem',
-                  }}
-                >
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <FormattedMessage defaultMessage="Which validator would you like to migrate funds to?" />
-                  </div>
-                  <ValidatorSelector
-                    validators={targetValidatorSet}
-                    selectedValidator={targetValidator}
-                    setSelectedValidator={setTargetValidator}
-                  />
-                </div>
-              )}
-
               {targetValidator && !showTx && (
-                <div style={{ marginBlock: '1.5rem' }}>
+                <div style={{ marginBottom: '1.5rem' }}>
                   <Alert variant="warning">
                     <AlertContent>
                       <AlertIcon />
@@ -203,13 +185,30 @@ const PushConsolidation = ({
                 </div>
               )}
 
+              {!showTx && (
+                <div
+                  style={{
+                    marginBottom: '1.5rem',
+                    marginTop: targetValidator ? '0' : '1rem',
+                  }}
+                >
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <FormattedMessage defaultMessage="Which validator would you like to migrate funds to?" />
+                  </div>
+                  <ValidatorSelector
+                    validators={targetValidatorSet}
+                    selectedValidator={targetValidator}
+                    setSelectedValidator={setTargetValidator}
+                  />
+                </div>
+              )}
+
               {targetValidator && (
                 <ModalContent>
                   <div
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '1rem',
                     }}
                   >
                     <div
@@ -225,117 +224,7 @@ const PushConsolidation = ({
                         level={3}
                         style={{ textTransform: 'uppercase', color: 'darkred' }}
                       >
-                        <FormattedMessage defaultMessage="From" />
-                      </Heading>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="Index" />:{' '}
-                          {targetValidator.validatorindex}
-                        </strong>
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: '14px',
-                          color: '#555',
-                          marginBottom: '0.5rem',
-                        }}
-                      >
-                        <Hash>{targetValidator.pubkey}</Hash>
-                      </Text>
-
-                      <div
-                        style={{
-                          display: 'grid',
-                          gridTemplateColumns: 'repeat(2, 1fr)',
-                        }}
-                      >
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Current balance" />
-                            :
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                            }}
-                          >
-                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Balance change" />
-                            :
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                              color: 'darkred',
-                            }}
-                          >
-                            {getEtherBalance(sourceValidator) > 0 ? '-' : ''}
-                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Ending balance" />
-                            :
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                            }}
-                          >
-                            {(0).toFixed(9)} {TICKER_NAME}
-                          </div>
-                        </Text>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        background: '#fff',
-                        padding: '1rem',
-                        maxWidth: '100%',
-                        borderRadius: '8px',
-                        border: '2px solid darkgreen',
-                      }}
-                    >
-                      <Heading
-                        level={3}
-                        style={{
-                          textTransform: 'uppercase',
-                          color: 'darkgreen',
-                        }}
-                      >
-                        <FormattedMessage defaultMessage="To" />
+                        <FormattedMessage defaultMessage="Exit" />
                       </Heading>
                       <Text>
                         <strong>
@@ -352,6 +241,7 @@ const PushConsolidation = ({
                       >
                         <Hash>{sourceValidator.pubkey}</Hash>
                       </Text>
+
                       <div
                         style={{
                           display: 'grid',
@@ -367,8 +257,7 @@ const PushConsolidation = ({
                           }}
                         >
                           <div>
-                            <FormattedMessage defaultMessage="Current balance" />
-                            :
+                            <FormattedMessage defaultMessage="Balance" />:
                           </div>
                           <div
                             style={{
@@ -376,30 +265,6 @@ const PushConsolidation = ({
                               fontFamily: 'monospace',
                             }}
                           >
-                            {getEtherBalance(targetValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Balance change" />
-                            :
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                              color: 'darkgreen',
-                            }}
-                          >
-                            {getEtherBalance(sourceValidator) > 0 ? '+' : ''}
                             {getEtherBalance(sourceValidator).toFixed(9)}{' '}
                             {TICKER_NAME}
                           </div>
@@ -414,13 +279,118 @@ const PushConsolidation = ({
                           }}
                         >
                           <div>
-                            <FormattedMessage defaultMessage="Ending balance" />
-                            :
+                            <FormattedMessage defaultMessage="New balance" />:
                           </div>
                           <div
                             style={{
                               textAlign: 'end',
                               fontFamily: 'monospace',
+                            }}
+                          >
+                            {(0).toFixed(9)} {TICKER_NAME}
+                          </div>
+                        </Text>
+                      </div>
+                    </div>
+
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        margin: '0.25rem auto',
+                      }}
+                    >
+                      <DownIcon />
+                      <Text
+                        style={{
+                          fontFamily: 'monospace',
+                          fontSize: '1rem',
+                          color: 'darkred',
+                        }}
+                      >
+                        {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                        {TICKER_NAME}
+                      </Text>
+                    </div>
+
+                    <div
+                      style={{
+                        background: '#fff',
+                        padding: '1rem',
+                        maxWidth: '100%',
+                        borderRadius: '8px',
+                        border: '2px solid darkgreen',
+                      }}
+                    >
+                      <Heading
+                        level={3}
+                        style={{
+                          textTransform: 'uppercase',
+                          color: 'darkgreen',
+                        }}
+                      >
+                        <FormattedMessage defaultMessage="Migrate to" />
+                      </Heading>
+                      <Text>
+                        <strong>
+                          <FormattedMessage defaultMessage="Index" />:{' '}
+                          {targetValidator.validatorindex}
+                        </strong>
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: '14px',
+                          color: '#555',
+                          marginBottom: '0.5rem',
+                        }}
+                      >
+                        <Hash>{targetValidator.pubkey}</Hash>
+                      </Text>
+                      <div
+                        style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(2, 1fr)',
+                        }}
+                      >
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Current" />:
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {getEtherBalance(targetValidator).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="New balance" />:
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                              color: 'darkgreen',
                             }}
                           >
                             {(

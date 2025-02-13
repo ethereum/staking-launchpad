@@ -1343,12 +1343,6 @@
       "value": " at any time during your setup for some friendly help!"
     }
   ],
-  "5u71Xx": [
-    {
-      "type": 0,
-      "value": "Balance change"
-    }
-  ],
   "5v36Is": [
     {
       "type": 0,
@@ -2503,6 +2497,12 @@
     {
       "type": 0,
       "value": "chain"
+    }
+  ],
+  "E2sGaF": [
+    {
+      "type": 0,
+      "value": "Exit"
     }
   ],
   "E4rtgi": [
@@ -5763,6 +5763,12 @@
       "value": "What is a validator client?"
     }
   ],
+  "c4K0U4": [
+    {
+      "type": 0,
+      "value": "Withdrawal to"
+    }
+  ],
   "c8BPhf": [
     {
       "type": 0,
@@ -7827,6 +7833,12 @@
     {
       "type": 0,
       "value": "A BLS key that can be generated from the same mnemonic used to generate your validator signing keys. This key is used to sign a message providing an execution (regular Ethereum) withdrawal address, which will be permanently assigned to the validator (migrating it to a Type 1 account)."
+    }
+  ],
+  "oXMl1C": [
+    {
+      "type": 0,
+      "value": "Migrate to"
     }
   ],
   "obp8vV": [

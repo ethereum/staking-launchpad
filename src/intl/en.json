@@ -480,9 +480,6 @@
     "description": "{variables} are social media platform links to Discord and Reddit (do not translate names)",
     "message": "Visit EthStaker on {discord} or {reddit} at any time during your setup for some friendly help!"
   },
-  "5u71Xx": {
-    "message": "Balance change"
-  },
   "5v36Is": {
     "message": "Exiting a {client} validator"
   },
@@ -951,6 +948,9 @@
   "E1Mywn": {
     "description": "this is used as a command line flag",
     "message": "chain"
+  },
+  "E2sGaF": {
+    "message": "Exit"
   },
   "E4rtgi": {
     "message": "Consensus clients:"
@@ -2212,6 +2212,9 @@
   "by+LIm": {
     "message": "What is a validator client?"
   },
+  "c4K0U4": {
+    "message": "Withdrawal to"
+  },
   "c8BPhf": {
     "message": "Upgrade validator {index}"
   },
@@ -2980,6 +2983,9 @@
   },
   "oWrId5": {
     "message": "A BLS key that can be generated from the same mnemonic used to generate your validator signing keys. This key is used to sign a message providing an execution (regular Ethereum) withdrawal address, which will be permanently assigned to the validator (migrating it to a Type 1 account)."
+  },
+  "oXMl1C": {
+    "message": "Migrate to"
   },
   "obp8vV": {
     "message": "Documentation on running Besu"

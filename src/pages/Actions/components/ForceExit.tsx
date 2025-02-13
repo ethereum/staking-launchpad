@@ -11,10 +11,11 @@ import { BeaconChainValidator } from '../../TopUp/types';
 import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Heading } from '../../../components/Heading';
+import ModalHeader from './ModalHeader';
+import QueueWarning from './QueueWarning';
 import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
-import ModalHeader from './ModalHeader';
 import {
   AlertContainer,
   AlertContent,
@@ -25,12 +26,13 @@ import {
   modalLayerStyle,
 } from './Shared';
 
-import { Queue, generateWithdrawalParams } from '../utils';
+import { generateWithdrawalParams } from '../utils';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { useModal } from '../../../hooks/useModal';
 import { getEtherBalance } from '../../../utils/validators';
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
+import { useWithdrawalQueue } from '../../../hooks/useWithdrawalQueue';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -49,8 +51,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     'not_started'
   );
   const [txHash, setTxHash] = useState('');
-  // eslint-disable-next-line
-  const [queue, setQueue] = useState<Queue | null>(null);
+
+  const { queue, setQueue } = useWithdrawalQueue(!showTx);
 
   const resetState = () => {
     setShowTx(false);
@@ -150,10 +152,16 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   <Text>
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
                   </Text>
-                  <Text>
+                  <Text style={{ fontSize: '1rem' }}>
                     <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
-                  <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
+                  <ul
+                    style={{
+                      paddingInlineStart: '1.5rem',
+                      marginTop: 0,
+                      fontSize: '1rem',
+                    }}
+                  >
                     <li>
                       <Text as="span">
                         <FormattedMessage defaultMessage="Action is permanent and irreversible" />
@@ -304,7 +312,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                         color: 'darkgreen',
                       }}
                     >
-                      <FormattedMessage defaultMessage="Withdrawal to" />
+                      <FormattedMessage defaultMessage="Withdraw to" />
                     </Heading>
                     <Text>
                       <strong>
@@ -396,6 +404,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
             </ModalContent>
           </ModalBody>
           <ModalFooter>
+            <QueueWarning queue={queue} />
+
             {!['error', 'complete'].includes(signTxStatus) &&
               (stepTwo ? (
                 <Form
@@ -426,7 +436,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   />
                   <Button
                     style={{ fontSize: '1rem' }}
-                    label="I understand the consequences, exit this validator"
+                    label={
+                      <FormattedMessage defaultMessage="I understand the consequences, exit this validator" />
+                    }
                     onClick={createExitTransaction}
                     color="dark-3"
                     fullWidth

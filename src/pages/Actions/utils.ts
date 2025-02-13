@@ -5,6 +5,7 @@ import { TransactionConfig } from 'web3-core';
 import {
   COMPOUNDING_CONTRACT_ADDRESS,
   WITHDRAWAL_CONTRACT_ADDRESS,
+  TICKER_NAME,
 } from '../../utils/envVars';
 
 export type Queue = {
@@ -107,3 +108,19 @@ export const generateWithdrawalParams = async (
   };
   return { transactionParams, queue };
 };
+
+export type FeeStatus = 'normal' | 'high' | 'volatile';
+
+/**
+ * @param fee Fee in wei
+ */
+export const getFeeStatus = (fee: BigNumber): FeeStatus => {
+  // If fee over 0.01 ETH
+  if (fee.gt(0.01 * 1e18)) return 'volatile';
+  // If fee over 6000 gwei
+  if (fee.gt(6_000 * 1e9)) return 'high';
+  return 'normal';
+};
+
+export const getEtherFeeFromQueue = (queue: Queue): string =>
+  `${queue.fee.dividedBy(1e18).toString()} ${TICKER_NAME}`;

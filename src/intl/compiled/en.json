@@ -1307,12 +1307,6 @@
       "value": " this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
     }
   ],
-  "5n6aCX": [
-    {
-      "type": 0,
-      "value": "Network congestion may result in delays"
-    }
-  ],
   "5q9Lgv": [
     {
       "type": 0,
@@ -1687,6 +1681,12 @@
     {
       "type": 0,
       "value": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
+    }
+  ],
+  "7w+OmC": [
+    {
+      "type": 0,
+      "value": "Recent changes may not be reflected in validator details, and network congestion may result in delays. Use caution to avoid submitting duplicate requests."
     }
   ],
   "8/nhr4": [
@@ -3065,12 +3065,6 @@
       "value": "Support"
     }
   ],
-  "HqsXnp": [
-    {
-      "type": 0,
-      "value": "Recent transactions can take time to process and may not yet bet reflected in validator details. Use caution to avoid submitting duplicate requests."
-    }
-  ],
   "I0BXSi": [
     {
       "type": 0,
@@ -3703,12 +3697,6 @@
       "value": "Upload to Beacon Node BLSToExecutionChange pool"
     }
   ],
-  "MAOeyC": [
-    {
-      "type": 0,
-      "value": "Depositing beyond the validators maximum effective balance will result in those excess funds being immediately withdrawn and will not impact the effectiveness of the validator"
-    }
-  ],
   "MAVs3a": [
     {
       "type": 0,
@@ -4265,6 +4253,12 @@
       "value": "This checklist will help you understand the role of a validator and prepare you for the role."
     }
   ],
+  "PgJGHT": [
+    {
+      "type": 0,
+      "value": "Available"
+    }
+  ],
   "PglO1W": [
     {
       "type": 0,
@@ -4549,22 +4543,10 @@
       "value": " air-gapped machine."
     }
   ],
-  "S+cLw1": [
-    {
-      "type": 0,
-      "value": "Ending balance"
-    }
-  ],
   "S3RTk+": [
     {
       "type": 0,
       "value": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-    }
-  ],
-  "S8IknF": [
-    {
-      "type": 0,
-      "value": "Withdrawal requests are added to a queue for processing."
     }
   ],
   "S943uU": [
@@ -4589,6 +4571,12 @@
     {
       "type": 0,
       "value": "Execute the file you just downloaded."
+    }
+  ],
+  "SPebP1": [
+    {
+      "type": 0,
+      "value": "New balance"
     }
   ],
   "SVUntz": [
@@ -6245,6 +6233,12 @@
       "value": "Cost"
     }
   ],
+  "fF376U": [
+    {
+      "type": 0,
+      "value": "Current"
+    }
+  ],
   "fH2WUb": [
     {
       "type": 0,
@@ -7245,6 +7239,12 @@
     {
       "type": 0,
       "value": "First, create a venv virtualenv under repository directory:"
+    }
+  ],
+  "l6agKv": [
+    {
+      "type": 0,
+      "value": "All actions are added to a queue for processing"
     }
   ],
   "l8zvXg": [

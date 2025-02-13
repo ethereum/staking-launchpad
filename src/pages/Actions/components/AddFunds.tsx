@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js';
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Layer, Form } from 'grommet';
-import { Alert as AlertIcon } from 'grommet-icons';
+import { LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
@@ -32,16 +32,17 @@ import {
   ModalBody,
   ModalContent,
   Hash,
-  AlertContainer,
-  AlertContent,
   modalLayerStyle,
   ModalFooter,
 } from './Shared';
 import { Heading } from '../../../components/Heading';
-import { Alert } from '../../../components/Alert';
 import { contractAbi } from '../../../contractAbi';
 import { buf2hex } from '../../../utils/buf2hex';
-import { getEtherBalance, getCredentialType } from '../../../utils/validators';
+import {
+  getEtherBalance,
+  getCredentialType,
+  getMaxEB,
+} from '../../../utils/validators';
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import { getSignTxStatus } from '../../../utils/txStatus';
@@ -80,7 +81,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
     'not_started'
   );
-  const [txHash, setTxHash] = useState<string>('');
+  const [txHash, setTxHash] = useState('');
 
   const maxEBGwei =
     (getCredentialType(validator) < ValidatorType.Compounding
@@ -95,16 +96,17 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
     setMaxEtherAmount(maxEther.toNumber());
   }, [validator]);
 
-  const openInputModal = () => {
-    setShowTx(false);
-    setEtherAmount(0);
-    setShowModal(true);
-  };
-
-  const handleClose = () => {
+  const resetState = () => {
     setShowTx(false);
     setShowModal(false);
     setEtherAmount(0);
+    setTxHash('');
+    setTransactionStatus('not_started');
+  };
+
+  const openInputModal = () => {
+    resetState();
+    setShowModal(true);
   };
 
   const handleValueChange = (value: number) => {
@@ -178,36 +180,50 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
       {showModal && (
         <Layer
           position="center"
-          onEsc={handleClose}
-          onClickOutside={handleClose}
+          onEsc={resetState}
+          onClickOutside={resetState}
           style={modalLayerStyle}
         >
-          <ModalHeader onClose={handleClose}>
+          <ModalHeader onClose={resetState}>
             <FormattedMessage defaultMessage="Stake additional funds" />
           </ModalHeader>
 
           <ModalBody>
-            {!showTx && (
-              <AlertContainer>
-                <Alert variant="info">
-                  <AlertContent>
-                    <AlertIcon />
-                    <div>
-                      <Text>
-                        <FormattedMessage defaultMessage="Depositing beyond the validators maximum effective balance will result in those excess funds being immediately withdrawn and will not impact the effectiveness of the validator" />
-                      </Text>
-                    </div>
-                  </AlertContent>
-                </Alert>
-              </AlertContainer>
-            )}
-
             <ModalContent>
+              {!showTx && (
+                <Form
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem',
+                  }}
+                >
+                  <label
+                    htmlFor="withdrawal-amount"
+                    style={{ marginBottom: '0.25rem' }}
+                  >
+                    <Text>
+                      <FormattedMessage
+                        defaultMessage="How much {TICKER_NAME} would you like to add to your stake?"
+                        values={{ TICKER_NAME }}
+                      />
+                    </Text>
+                  </label>
+                  <NumberInput
+                    id="withdrawal-amount"
+                    value={etherAmount}
+                    setValue={handleValueChange}
+                    allowDecimals
+                    maxValue={maxEtherAmount}
+                  />
+                </Form>
+              )}
+
               <div
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '1rem',
                 }}
               >
                 <div
@@ -258,7 +274,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         }}
                       >
                         <div>
-                          <FormattedMessage defaultMessage="Current balance" />:
+                          <FormattedMessage defaultMessage="Available" />:
                         </div>
                         <div
                           style={{ textAlign: 'end', fontFamily: 'monospace' }}
@@ -267,28 +283,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         </div>
                       </Text>
                     )}
-                    <Text
-                      style={{
-                        display: 'grid',
-                        gridColumn: 'span 2',
-                        gridTemplateColumns: 'subgrid',
-                        columnGap: '0.5rem',
-                      }}
-                    >
-                      <div>
-                        <FormattedMessage defaultMessage="Balance change" />:
-                      </div>
-                      <div
-                        style={{
-                          textAlign: 'end',
-                          fontFamily: 'monospace',
-                          color: 'darkred',
-                        }}
-                      >
-                        {etherAmount > 0 ? '-' : ''}
-                        {etherAmount.toFixed(9)} {TICKER_NAME}
-                      </div>
-                    </Text>
+
                     {executionEtherBalance && (
                       <Text
                         style={{
@@ -299,7 +294,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                         }}
                       >
                         <div>
-                          <FormattedMessage defaultMessage="Ending balance" />:
+                          <FormattedMessage defaultMessage="New balance" />:
                         </div>
                         <div
                           style={{ textAlign: 'end', fontFamily: 'monospace' }}
@@ -310,6 +305,26 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       </Text>
                     )}
                   </div>
+                </div>
+
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    margin: '0.25rem auto',
+                  }}
+                >
+                  <DownIcon />
+                  <Text
+                    style={{
+                      fontFamily: 'monospace',
+                      fontSize: '1rem',
+                      color: 'darkred',
+                    }}
+                  >
+                    {etherAmount.toFixed(9)} {TICKER_NAME}
+                  </Text>
                 </div>
 
                 <div
@@ -340,14 +355,20 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                     style={{
                       fontSize: '14px',
                       color: '#555',
-                      marginBottom: '0.5rem',
+                      lineHeight: '1.3',
                     }}
                   >
                     <Hash>{validator.pubkey}</Hash>
                   </Text>
-                  <Text className="mb10">
+                  <Text
+                    style={{
+                      fontSize: '14px',
+                      color: '#555',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
                     <FormattedMessage defaultMessage="Max effective balance" />:{' '}
-                    {maxEtherAmount} {TICKER_NAME}
+                    {getMaxEB(validator)} {TICKER_NAME}
                   </Text>
 
                   <div
@@ -365,7 +386,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Current balance" />:
+                        <FormattedMessage defaultMessage="Current" />:
                       </div>
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}
@@ -383,7 +404,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Balance change" />:
+                        <FormattedMessage defaultMessage="New balance" />:
                       </div>
                       <div
                         style={{
@@ -391,24 +412,6 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                           fontFamily: 'monospace',
                           color: 'darkgreen',
                         }}
-                      >
-                        {etherAmount > 0 ? '+' : ''}
-                        {etherAmount.toFixed(9)} {TICKER_NAME}
-                      </div>
-                    </Text>
-                    <Text
-                      style={{
-                        display: 'grid',
-                        gridColumn: 'span 2',
-                        gridTemplateColumns: 'subgrid',
-                        columnGap: '0.5rem',
-                      }}
-                    >
-                      <div>
-                        <FormattedMessage defaultMessage="Ending balance" />:
-                      </div>
-                      <div
-                        style={{ textAlign: 'end', fontFamily: 'monospace' }}
                       >
                         {(getEtherBalance(validator) + etherAmount).toFixed(9)}{' '}
                         {TICKER_NAME}
@@ -431,35 +434,6 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
           </ModalBody>
 
           <ModalFooter>
-            {!showTx && (
-              <Form
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.5rem',
-                }}
-              >
-                <label
-                  htmlFor="withdrawal-amount"
-                  style={{ marginBottom: '0.25rem' }}
-                >
-                  <Text>
-                    <FormattedMessage
-                      defaultMessage="How much {TICKER_NAME} would you like to add to your stake?"
-                      values={{ TICKER_NAME }}
-                    />
-                  </Text>
-                </label>
-                <NumberInput
-                  id="withdrawal-amount"
-                  value={etherAmount}
-                  setValue={handleValueChange}
-                  allowDecimals
-                  maxValue={maxEtherAmount}
-                />
-              </Form>
-            )}
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 style={{ fontSize: '1rem' }}
@@ -483,7 +457,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
             {signTxStatus === 'complete' && (
               <Button
                 label={<FormattedMessage defaultMessage="Finish" />}
-                onClick={handleClose}
+                onClick={resetState}
               />
             )}
           </ModalFooter>

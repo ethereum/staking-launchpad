@@ -473,9 +473,6 @@
   "5Vrs8S": {
     "message": "You need enough upload bandwidth too. As of {date} this is ~1.2-1.3 GB download and ~0.9-1 GB upload per hour, and is likely to increase."
   },
-  "5n6aCX": {
-    "message": "Network congestion may result in delays"
-  },
   "5q9Lgv": {
     "message": "Download {master} branch:"
   },
@@ -598,6 +595,9 @@
   },
   "7tRtDE": {
     "message": "Every epoch, the network measures the actions of each validator and issues your rewards or penalties appropriately."
+  },
+  "7w+OmC": {
+    "message": "Recent changes may not be reflected in validator details, and network congestion may result in delays. Use caution to avoid submitting duplicate requests."
   },
   "8/nhr4": {
     "message": "For your validator to be capable of withdrawals of any kind, a withdrawal address must be provided and registered to your account on the Beacon Chain. This should be an address you control, and cannot be changed once set."
@@ -1160,9 +1160,6 @@
   "HqRNN8": {
     "message": "Support"
   },
-  "HqsXnp": {
-    "message": "Recent transactions can take time to process and may not yet bet reflected in validator details. Use caution to avoid submitting duplicate requests."
-  },
   "I0BXSi": {
     "message": "Configure Geth"
   },
@@ -1414,9 +1411,6 @@
   "M35Dz/": {
     "message": "Upload to Beacon Node BLSToExecutionChange pool"
   },
-  "MAOeyC": {
-    "message": "Depositing beyond the validators maximum effective balance will result in those excess funds being immediately withdrawn and will not impact the effectiveness of the validator"
-  },
   "MAVs3a": {
     "message": "*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
   },
@@ -1622,6 +1616,9 @@
   "PfoT0C": {
     "message": "This checklist will help you understand the role of a validator and prepare you for the role."
   },
+  "PgJGHT": {
+    "message": "Available"
+  },
   "PglO1W": {
     "message": "Formal verification report"
   },
@@ -1744,14 +1741,8 @@
   "S+FY5u": {
     "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
   },
-  "S+cLw1": {
-    "message": "Ending balance"
-  },
   "S3RTk+": {
     "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-  },
-  "S8IknF": {
-    "message": "Withdrawal requests are added to a queue for processing."
   },
   "S943uU": {
     "message": "Double check the URL"
@@ -1764,6 +1755,9 @@
   },
   "SHNw06": {
     "message": "Execute the file you just downloaded."
+  },
+  "SPebP1": {
+    "message": "New balance"
   },
   "SVUntz": {
     "message": "Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
@@ -2379,6 +2373,9 @@
   "fBG/Ge": {
     "message": "Cost"
   },
+  "fF376U": {
+    "message": "Current"
+  },
   "fH2WUb": {
     "message": "(Regular withdrawals)"
   },
@@ -2758,6 +2755,9 @@
   },
   "l6OJpv": {
     "message": "First, create a venv virtualenv under repository directory:"
+  },
+  "l6agKv": {
+    "message": "All actions are added to a queue for processing"
   },
   "l8zvXg": {
     "message": "If you have a compounding account, any additional ETH up to 2048 will contribute to your effective balance. If you have a non-compounding withdrawal type, you will benefit from top-ups bringing the validator back to {MIN_ACTIVATION_BALANCE} ETH, but would not benefit from top-ups above this amount."

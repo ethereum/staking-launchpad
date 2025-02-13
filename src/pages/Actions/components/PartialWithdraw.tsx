@@ -2,14 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Layer, Form } from 'grommet';
-import { Alert as AlertIcon } from 'grommet-icons';
+import { LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
 import { BeaconChainValidator } from '../../TopUp/types';
 
-import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Heading } from '../../../components/Heading';
 import ModalHeader from './ModalHeader';
@@ -18,8 +17,6 @@ import {
   ModalBody,
   ModalContent,
   Hash,
-  AlertContainer,
-  AlertContent,
   modalLayerStyle,
   ModalFooter,
 } from './Shared';
@@ -58,15 +55,17 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
     );
   }, [validator]);
 
-  const openInputModal = () => {
+  const resetState = () => {
+    setShowTx(false);
     setEtherAmount(0);
-    setShowModal(true);
+    setShowModal(false);
+    setTxHash('');
+    setTransactionStatus('not_started');
   };
 
-  const handleClose = () => {
-    setShowTx(false);
-    setShowModal(false);
-    setEtherAmount(0);
+  const openInputModal = () => {
+    resetState();
+    setShowModal(true);
   };
 
   const createWithdrawTransaction = async () => {
@@ -113,43 +112,54 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
       {showModal && (
         <Layer
           position="center"
-          onEsc={handleClose}
-          onClickOutside={handleClose}
+          onEsc={resetState}
+          onClickOutside={resetState}
           style={modalLayerStyle}
         >
-          <ModalHeader onClose={handleClose}>
+          <ModalHeader onClose={resetState}>
             <FormattedMessage
               defaultMessage="Withdrawal some {TICKER_NAME}"
               values={{ TICKER_NAME }}
             />
           </ModalHeader>
           <ModalBody>
-            {!showTx && (
-              <AlertContainer>
-                <Alert variant="info">
-                  <AlertContent>
-                    <AlertIcon />
-                    <div>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="Withdrawal requests are added to a queue for processing." />
-                        </strong>
-                      </Text>
-                      <Text style={{ fontSize: '1rem' }}>
-                        <FormattedMessage defaultMessage="Network congestion may result in delays" />
-                      </Text>
-                    </div>
-                  </AlertContent>
-                </Alert>
-              </AlertContainer>
-            )}
-
             <ModalContent>
+              {!showTx && (
+                <Form
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem',
+                  }}
+                >
+                  <label
+                    htmlFor="withdrawal-amount"
+                    style={{ marginBottom: '0.25rem' }}
+                  >
+                    <Text>
+                      <FormattedMessage
+                        defaultMessage="How much {TICKER_NAME} would you like to withdraw?"
+                        values={{ TICKER_NAME }}
+                      />
+                    </Text>
+                  </label>
+                  <NumberInput
+                    id="withdrawal-amount"
+                    value={etherAmount}
+                    setValue={value => {
+                      setEtherAmount(Math.min(value, maxAmount));
+                    }}
+                    allowDecimals
+                    maxValue={maxAmount}
+                  />
+                </Form>
+              )}
+
               <div
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '1rem',
                 }}
               >
                 <div
@@ -179,13 +189,18 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     style={{
                       fontSize: '14px',
                       color: '#555',
-                      marginBottom: '0.5rem',
+                      lineHeight: '1.3',
                     }}
                   >
                     <Hash>{validator.pubkey}</Hash>
                   </Text>
-
-                  <Text className="mb10">
+                  <Text
+                    style={{
+                      fontSize: '14px',
+                      color: '#555',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
                     <FormattedMessage defaultMessage="Max withdrawable" />:{' '}
                     {maxAmount} {TICKER_NAME}
                   </Text>
@@ -205,12 +220,12 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Current balance" />:
+                        <FormattedMessage defaultMessage="Available" />:
                       </div>
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}
                       >
-                        {getEtherBalance(validator).toFixed(9)} {TICKER_NAME}
+                        {maxAmount.toFixed(9)} {TICKER_NAME}
                       </div>
                     </Text>
 
@@ -223,29 +238,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Balance change" />:
-                      </div>
-                      <div
-                        style={{
-                          textAlign: 'end',
-                          fontFamily: 'monospace',
-                          color: 'darkred',
-                        }}
-                      >
-                        {etherAmount > 0 ? '-' : ''}
-                        {etherAmount.toFixed(9)} {TICKER_NAME}
-                      </div>
-                    </Text>
-                    <Text
-                      style={{
-                        display: 'grid',
-                        gridColumn: 'span 2',
-                        gridTemplateColumns: 'subgrid',
-                        columnGap: '0.5rem',
-                      }}
-                    >
-                      <div>
-                        <FormattedMessage defaultMessage="Ending balance" />:
+                        <FormattedMessage defaultMessage="New balance" />:
                       </div>
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}
@@ -256,6 +249,27 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     </Text>
                   </div>
                 </div>
+
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    margin: '0.25rem auto',
+                  }}
+                >
+                  <DownIcon />
+                  <Text
+                    style={{
+                      fontFamily: 'monospace',
+                      fontSize: '1rem',
+                      color: 'darkred',
+                    }}
+                  >
+                    {etherAmount.toFixed(9)} {TICKER_NAME}
+                  </Text>
+                </div>
+
                 <div
                   style={{
                     background: '#fff',
@@ -305,7 +319,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                         }}
                       >
                         <div>
-                          <FormattedMessage defaultMessage="Current balance" />:
+                          <FormattedMessage defaultMessage="Current" />:
                         </div>
                         <div
                           style={{ textAlign: 'end', fontFamily: 'monospace' }}
@@ -314,28 +328,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                         </div>
                       </Text>
                     )}
-                    <Text
-                      style={{
-                        display: 'grid',
-                        gridColumn: 'span 2',
-                        gridTemplateColumns: 'subgrid',
-                        columnGap: '0.5rem',
-                      }}
-                    >
-                      <div>
-                        <FormattedMessage defaultMessage="Balance change" />:
-                      </div>
-                      <div
-                        style={{
-                          textAlign: 'end',
-                          fontFamily: 'monospace',
-                          color: 'darkgreen',
-                        }}
-                      >
-                        {etherAmount > 0 ? '+' : ''}
-                        {etherAmount.toFixed(9)} {TICKER_NAME}
-                      </div>
-                    </Text>
+
                     {executionEtherBalance && (
                       <Text
                         style={{
@@ -346,10 +339,14 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                         }}
                       >
                         <div>
-                          <FormattedMessage defaultMessage="Ending balance" />:
+                          <FormattedMessage defaultMessage="New balance" />:
                         </div>
                         <div
-                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                            color: 'darkgreen',
+                          }}
                         >
                           {(executionEtherBalance + etherAmount).toFixed(9)}{' '}
                           {TICKER_NAME}
@@ -376,50 +373,16 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
           </ModalBody>
           <ModalFooter>
             {!['error', 'complete'].includes(signTxStatus) && (
-              <Form
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.5rem',
-                }}
-              >
-                {!showTx && (
-                  <label
-                    htmlFor="withdrawal-amount"
-                    style={{ marginBottom: '0.25rem' }}
-                  >
-                    <Text>
-                      <FormattedMessage
-                        defaultMessage="How much {TICKER_NAME} would you like to withdraw?"
-                        values={{ TICKER_NAME }}
-                      />
-                    </Text>
-                  </label>
-                )}
-                {!showTx && (
-                  <NumberInput
-                    id="withdrawal-amount"
-                    value={etherAmount}
-                    setValue={value => {
-                      setEtherAmount(Math.min(value, maxAmount));
-                    }}
-                    allowDecimals
-                    maxValue={maxAmount}
-                  />
-                )}
-                <Button
-                  style={{ fontSize: '1rem' }}
-                  label="Withdrawal"
-                  onClick={createWithdrawTransaction}
-                  color="dark-3"
-                  fullWidth
-                  type="submit"
-                  disabled={!etherAmount || showTx}
-                />
-              </Form>
+              <Button
+                style={{ fontSize: '1rem' }}
+                label="Withdrawal"
+                onClick={createWithdrawTransaction}
+                color="dark-3"
+                fullWidth
+                type="submit"
+                disabled={!etherAmount || showTx}
+              />
             )}
-
             {signTxStatus === 'error' && (
               <Button
                 label={<FormattedMessage defaultMessage="Try again" />}
@@ -432,7 +395,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
             {signTxStatus === 'complete' && (
               <Button
                 label={<FormattedMessage defaultMessage="Finish" />}
-                onClick={handleClose}
+                onClick={resetState}
               />
             )}
           </ModalFooter>

@@ -13,6 +13,11 @@ export type Queue = {
   fee: BigNumber;
 };
 
+export type TxConfigQueue = {
+  transactionParams: TransactionConfig;
+  queue: Queue;
+};
+
 const getRequiredFee = (queueLength: BigNumber): BigNumber => {
   let i = new BigNumber(1);
   let output = new BigNumber(0);
@@ -27,20 +32,27 @@ const getRequiredFee = (queueLength: BigNumber): BigNumber => {
   return output.dividedBy(17);
 };
 
-// https://eips.ethereum.org/EIPS/eip-7251#fee-calculation
-export const getCompoundingFee = async (web3: Web3): Promise<BigNumber> => {
+export const getCompoundingQueueLength = async (
+  web3: Web3
+): Promise<BigNumber> => {
   const queueLengthHex = await web3.eth.getStorageAt(
     COMPOUNDING_CONTRACT_ADDRESS!,
-    0 // EXCESS_CONSOLIDATION_REQUESTS_STORAGE_SLOT
+    0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
   );
 
-  if (!queueLengthHex) {
+  if (!queueLengthHex)
     throw new Error('Unable to get compounding queue length');
-  }
 
-  const queueLength = new BigNumber(queueLengthHex);
+  return new BigNumber(queueLengthHex);
+};
 
-  return getRequiredFee(queueLength);
+// https://eips.ethereum.org/EIPS/eip-7251#fee-calculation
+export const getCompoundingQueue = async (web3: Web3): Promise<Queue> => {
+  const length = await getCompoundingQueueLength(web3);
+
+  const fee = getRequiredFee(length);
+
+  return { length, fee };
 };
 
 export const getWithdrawalQueueLength = async (
@@ -72,18 +84,20 @@ export const generateCompoundParams = async (
   address: string,
   source: string,
   target: string
-): Promise<TransactionConfig> => {
-  const fee = await getCompoundingFee(web3);
+): Promise<TxConfigQueue> => {
+  const queue = await getCompoundingQueue(web3);
 
   // https://eips.ethereum.org/EIPS/eip-7251#add-consolidation-request
-  return {
+  const transactionParams = {
     to: COMPOUNDING_CONTRACT_ADDRESS,
     from: address,
     // calldata (96 bytes): sourceValidator.pubkey (48 bytes) + targetValidator.pubkey (48 bytes)
     data: `0x${source.substring(2)}${target.substring(2)}`,
-    value: fee.toString(),
+    value: queue.fee.toString(),
     gas: 200000,
   };
+
+  return { transactionParams, queue };
 };
 
 export const generateWithdrawalParams = async (
@@ -91,10 +105,7 @@ export const generateWithdrawalParams = async (
   address: string,
   pubkey: string,
   amount: number
-): Promise<{
-  transactionParams: TransactionConfig;
-  queue: Queue;
-}> => {
+): Promise<TxConfigQueue> => {
   const queue = await getWithdrawalQueue(web3);
 
   // https://eips.ethereum.org/EIPS/eip-7002#add-withdrawal-request

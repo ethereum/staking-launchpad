@@ -16,37 +16,39 @@ import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Button } from '../../../components/Button';
 import { NumberInput } from '../../../components/NumberInput';
-import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { Text } from '../../../components/Text';
-import { bufferHex } from '../../../utils/SSZ';
 
 import {
-  CONTRACT_ADDRESS,
-  MAX_EFFECTIVE_BALANCE,
-  TICKER_NAME,
+  DEPOSIT_CONTRACT_ADDRESS,
   ETHER_TO_GWEI,
+  MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
+  TICKER_NAME,
 } from '../../../utils/envVars';
+import { Heading } from '../../../components/Heading';
 import ModalHeader from './ModalHeader';
 import {
+  Hash,
   ModalBody,
   ModalContent,
-  Hash,
-  modalLayerStyle,
   ModalFooter,
+  modalLayerStyle,
 } from './Shared';
-import { Heading } from '../../../components/Heading';
-import { contractAbi } from '../../../contractAbi';
+import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
+
 import { buf2hex } from '../../../utils/buf2hex';
 import {
   getEtherBalance,
   getCredentialType,
   getMaxEB,
 } from '../../../utils/validators';
-import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
-import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
+import { bufferHex } from '../../../utils/SSZ';
 import { getSignTxStatus } from '../../../utils/txStatus';
-import { useModal } from '../../../hooks/useModal';
+
+import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
+import { useTxModal } from '../../../hooks/useTxModal';
+
+import { contractAbi } from '../../../contractAbi';
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -71,17 +73,22 @@ interface Props {
 
 const AddFunds: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
-  const { showModal, setShowModal, showTx, setShowTx } = useModal();
+  const {
+    resetTxModal,
+    setShowModal,
+    setShowTx,
+    setTxHash,
+    setTxStatus,
+    showModal,
+    showTx,
+    txHash,
+    txStatus,
+  } = useTxModal();
 
   const executionEtherBalance = useExecutionBalance();
 
   const [etherAmount, setEtherAmount] = useState(0);
   const [maxEtherAmount, setMaxEtherAmount] = useState(0);
-
-  const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
-    'not_started'
-  );
-  const [txHash, setTxHash] = useState('');
 
   const maxEBGwei =
     (getCredentialType(validator) < ValidatorType.Compounding
@@ -97,14 +104,11 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   }, [validator]);
 
   const resetState = () => {
-    setShowTx(false);
-    setShowModal(false);
+    resetTxModal();
     setEtherAmount(0);
-    setTxHash('');
-    setTransactionStatus('not_started');
   };
 
-  const openInputModal = () => {
+  const handleOpen = () => {
     resetState();
     setShowModal(true);
   };
@@ -117,12 +121,15 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   const createAddFundsTransaction = async () => {
     if (!etherAmount || !account) return;
 
-    setTransactionStatus('waiting_user_confirmation');
+    setTxStatus('waiting_user_confirmation');
     setShowTx(true);
 
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
-    const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
+    const contract = new web3.eth.Contract(
+      contractAbi,
+      DEPOSIT_CONTRACT_ADDRESS
+    );
     const bnInput = new BigNumber(etherAmount);
     const transactionAmount = bnInput
       .multipliedBy(1e18)
@@ -156,25 +163,25 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
       )
       .send(transactionParameters)
       .on('transactionHash', (hash: string): void => {
-        setTransactionStatus('confirm_on_chain');
+        setTxStatus('confirm_on_chain');
         setTxHash(hash);
       })
       .on('confirmation', () => {
-        setTransactionStatus('success');
+        setTxStatus('success');
       })
       .on('error', () => {
-        setTransactionStatus('error');
+        setTxStatus('error');
       });
   };
 
-  const signTxStatus = getSignTxStatus(transactionStatus);
+  const signTxStatus = getSignTxStatus(txStatus);
 
   const primaryLabel = <FormattedMessage defaultMessage="Stake more funds" />;
 
   return (
     <>
       <Button
-        onClick={openInputModal}
+        onClick={handleOpen}
         label={primaryLabel}
         disabled={validator.effectivebalance >= maxEBGwei}
       />
@@ -429,7 +436,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                     <FormattedMessage defaultMessage="Depositing to validator" />
                   }
                   txHash={txHash}
-                  transactionStatus={transactionStatus}
+                  transactionStatus={txStatus}
                 />
               )}
             </ModalContent>

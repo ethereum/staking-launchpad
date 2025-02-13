@@ -12,9 +12,9 @@ import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
-import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import ModalHeader from './ModalHeader';
+import QueueWarning from './QueueWarning';
 import {
   ModalBody,
   AlertContent,
@@ -29,7 +29,8 @@ import { generateCompoundParams } from '../utils';
 import { TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
-import { useModal } from '../../../hooks/useModal';
+import { useTxModal } from '../../../hooks/useTxModal';
+import { useCompoundingQueue } from '../../../hooks/useCompoundingQueue';
 
 type PullConsolidationProps = {
   targetValidator: BeaconChainValidator; // The selected validator to consolidate into (target)
@@ -42,56 +43,74 @@ const PullConsolidation = ({
 }: PullConsolidationProps) => {
   const { locale } = useIntl();
   const { connector, account } = useWeb3React();
-  const { showModal, setShowModal, showTx, setShowTx } = useModal();
+  const {
+    resetTxModal,
+    setShowModal,
+    setShowTx,
+    setTxHash,
+    setTxStatus,
+    showModal,
+    showTx,
+    txHash,
+    txStatus,
+  } = useTxModal();
+  const { queue, setQueue } = useCompoundingQueue(!showTx);
 
   const [
     sourceValidator,
     setSourceValidator,
   ] = useState<BeaconChainValidator | null>(null);
-  const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
-    'not_started'
-  );
-  const [txHash, setTxHash] = useState<string>('');
 
-  const confirmConsolidate = () => {
-    setShowModal(true);
+  const resetState = () => {
+    resetTxModal();
     setSourceValidator(null);
+  };
+
+  const handleOpen = () => {
+    resetState();
+    setShowModal(true);
   };
 
   const createConsolidationTransaction = async () => {
     if (!account || !sourceValidator) return;
 
-    setTransactionStatus('waiting_user_confirmation');
+    setTxStatus('waiting_user_confirmation');
     setShowTx(true);
 
     try {
       const walletProvider = await (connector as AbstractConnector).getProvider();
       const web3 = new Web3(walletProvider);
 
-      const params = await generateCompoundParams(
+      const {
+        transactionParams,
+        queue: compoundingQueue,
+      } = await generateCompoundParams(
         web3,
         account,
         sourceValidator.pubkey,
         targetValidator.pubkey
       );
+
+      setQueue(compoundingQueue);
+
       return web3.eth
-        .sendTransaction(params)
+        .sendTransaction(transactionParams)
         .on('transactionHash', (hash: string): void => {
-          setTransactionStatus('confirm_on_chain');
+          setTxStatus('confirm_on_chain');
           setTxHash(hash);
         })
         .on('confirmation', (): any => {
-          setTransactionStatus('success');
+          setTxStatus('success');
         })
         .on('error', () => {
-          setTransactionStatus('error');
+          setTxStatus('error');
         });
     } catch (e) {
       console.log(e);
     }
   };
 
-  const signTxStatus = getSignTxStatus(transactionStatus);
+  const signTxStatus = getSignTxStatus(txStatus);
 
   const getModalButtonLabel = () => {
     if (!sourceValidator)
@@ -103,30 +122,24 @@ const PullConsolidation = ({
     return <FormattedMessage defaultMessage="Finish" />;
   };
 
-  const handleClose = () => {
-    setShowTx(false);
-    setShowModal(false);
-    setSourceValidator(null);
-  };
-
   return (
     <>
       <Button
         label={<FormattedMessage defaultMessage="Pull funds" />}
         destructive
         secondary
-        onClick={confirmConsolidate}
+        onClick={handleOpen}
       />
 
       {showModal && (
         <Layer
           position="center"
-          onEsc={handleClose}
-          onClickOutside={handleClose}
+          onEsc={resetState}
+          onClickOutside={resetState}
           style={modalLayerStyle}
         >
           <Box>
-            <ModalHeader onClose={handleClose}>
+            <ModalHeader onClose={resetState}>
               <FormattedMessage defaultMessage="Absorb validator" />
             </ModalHeader>
             <ModalBody>
@@ -395,7 +408,7 @@ const PullConsolidation = ({
                         </>
                       }
                       txHash={txHash}
-                      transactionStatus={transactionStatus}
+                      transactionStatus={txStatus}
                     />
                   )}
                 </ModalContent>
@@ -457,6 +470,8 @@ const PullConsolidation = ({
           </Box>
 
           <ModalFooter>
+            <QueueWarning queue={queue} />
+
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 fullWidth
@@ -481,7 +496,7 @@ const PullConsolidation = ({
             {signTxStatus === 'complete' && (
               <Button
                 label={<FormattedMessage defaultMessage="Finish" />}
-                onClick={handleClose}
+                onClick={resetState}
               />
             )}
           </ModalFooter>

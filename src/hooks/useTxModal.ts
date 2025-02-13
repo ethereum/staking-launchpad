@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
+import { TransactionStatus } from '../components/TransactionStatusModal';
 
 let modalCount = 0;
 
-export const useModal = () => {
+export const useTxModal = () => {
   const [showModal, setShowModal] = useState(false);
   const [showTx, setShowTx] = useState(false);
+  const [txStatus, setTxStatus] = useState<TransactionStatus>('not_started');
+  const [txHash, setTxHash] = useState('');
 
   useEffect(() => {
     if (showModal || showTx) {
@@ -44,5 +47,22 @@ export const useModal = () => {
     };
   }, [showModal, showTx]);
 
-  return { showModal, setShowModal, showTx, setShowTx };
+  const resetTxModal = () => {
+    setShowTx(false);
+    setShowModal(false);
+    setTxHash('');
+    setTxStatus('not_started');
+  };
+
+  return {
+    resetTxModal,
+    setShowModal,
+    setShowTx,
+    setTxHash,
+    setTxStatus,
+    showModal,
+    showTx,
+    txHash,
+    txStatus,
+  };
 };

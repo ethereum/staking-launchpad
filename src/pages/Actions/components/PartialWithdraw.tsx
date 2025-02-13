@@ -13,24 +13,25 @@ import { Button } from '../../../components/Button';
 import { Heading } from '../../../components/Heading';
 import ModalHeader from './ModalHeader';
 import { NumberInput } from '../../../components/NumberInput';
+import QueueWarning from './QueueWarning';
 import {
+  Hash,
   ModalBody,
   ModalContent,
-  Hash,
-  modalLayerStyle,
   ModalFooter,
+  modalLayerStyle,
 } from './Shared';
 import { Text } from '../../../components/Text';
-import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
 import { generateWithdrawalParams } from '../utils';
-import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 import { getEtherBalance } from '../../../utils/validators';
+import { getSignTxStatus } from '../../../utils/txStatus';
+import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
-import { useModal } from '../../../hooks/useModal';
-import { getSignTxStatus } from '../../../utils/txStatus';
+import { useTxModal } from '../../../hooks/useTxModal';
+import { useWithdrawalQueue } from '../../../hooks/useWithdrawalQueue';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -38,16 +39,22 @@ interface Props {
 
 const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
-  const { showModal, setShowModal, showTx, setShowTx } = useModal();
-
+  const {
+    resetTxModal,
+    setShowModal,
+    setShowTx,
+    setTxHash,
+    setTxStatus,
+    showModal,
+    showTx,
+    txHash,
+    txStatus,
+  } = useTxModal();
+  const { queue, setQueue } = useWithdrawalQueue(!showTx);
   const executionEtherBalance = useExecutionBalance();
+
   const [etherAmount, setEtherAmount] = useState(0);
   const [maxAmount, setMaxAmount] = useState(0);
-
-  const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
-    'not_started'
-  );
-  const [txHash, setTxHash] = useState<string>('');
 
   useEffect(() => {
     setMaxAmount(
@@ -56,14 +63,11 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   }, [validator]);
 
   const resetState = () => {
-    setShowTx(false);
+    resetTxModal();
     setEtherAmount(0);
-    setShowModal(false);
-    setTxHash('');
-    setTransactionStatus('not_started');
   };
 
-  const openInputModal = () => {
+  const handleOpen = () => {
     resetState();
     setShowModal(true);
   };
@@ -71,41 +75,46 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   const createWithdrawTransaction = async () => {
     if (!etherAmount || !account) return;
 
-    setTransactionStatus('waiting_user_confirmation');
+    setTxStatus('waiting_user_confirmation');
     setShowTx(true);
 
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
 
     // Partial withdrawal transaction
-    const { transactionParams } = await generateWithdrawalParams(
+    const {
+      transactionParams,
+      queue: withdrawalQueue,
+    } = await generateWithdrawalParams(
       web3,
       account,
       validator.pubkey,
       Math.floor(etherAmount * 1000000000)
     );
 
+    setQueue(withdrawalQueue);
+
     web3.eth
       .sendTransaction(transactionParams)
       .on('transactionHash', (hash: string): void => {
-        setTransactionStatus('confirm_on_chain');
+        setTxStatus('confirm_on_chain');
         setTxHash(hash);
       })
       .on('confirmation', (): any => {
-        setTransactionStatus('success');
+        setTxStatus('success');
       })
       .on('error', () => {
-        setTransactionStatus('error');
+        setTxStatus('error');
       });
   };
 
-  const signTxStatus = getSignTxStatus(transactionStatus);
+  const signTxStatus = getSignTxStatus(txStatus);
 
   return (
     <>
       <Button
         disabled={maxAmount <= 0}
-        onClick={openInputModal}
+        onClick={handleOpen}
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />
 
@@ -369,12 +378,14 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     />
                   }
                   txHash={txHash}
-                  transactionStatus={transactionStatus}
+                  transactionStatus={txStatus}
                 />
               )}
             </ModalContent>
           </ModalBody>
           <ModalFooter>
+            <QueueWarning queue={queue} />
+
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 style={{ fontSize: '1rem' }}

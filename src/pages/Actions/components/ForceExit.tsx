@@ -14,7 +14,6 @@ import { Heading } from '../../../components/Heading';
 import ModalHeader from './ModalHeader';
 import QueueWarning from './QueueWarning';
 import { Text } from '../../../components/Text';
-import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import {
   AlertContainer,
@@ -27,11 +26,12 @@ import {
 } from './Shared';
 
 import { generateWithdrawalParams } from '../utils';
-import { TICKER_NAME } from '../../../utils/envVars';
-import { getSignTxStatus } from '../../../utils/txStatus';
-import { useModal } from '../../../hooks/useModal';
 import { getEtherBalance } from '../../../utils/validators';
+import { getSignTxStatus } from '../../../utils/txStatus';
+import { TICKER_NAME } from '../../../utils/envVars';
+
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
+import { useTxModal } from '../../../hooks/useTxModal';
 import { useWithdrawalQueue } from '../../../hooks/useWithdrawalQueue';
 
 interface Props {
@@ -41,29 +41,30 @@ interface Props {
 const ForceExit: React.FC<Props> = ({ validator }) => {
   const { locale, formatMessage } = useIntl();
   const { connector, account } = useWeb3React();
-  const { showModal, setShowModal, showTx, setShowTx } = useModal();
-
+  const {
+    resetTxModal,
+    setShowModal,
+    setShowTx,
+    setTxHash,
+    setTxStatus,
+    showModal,
+    showTx,
+    txHash,
+    txStatus,
+  } = useTxModal();
+  const { queue, setQueue } = useWithdrawalQueue(!showTx);
   const executionEtherBalance = useExecutionBalance();
+
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
   const [stepTwo, setStepTwo] = useState(false);
 
-  const [transactionStatus, setTransactionStatus] = useState<TransactionStatus>(
-    'not_started'
-  );
-  const [txHash, setTxHash] = useState('');
-
-  const { queue, setQueue } = useWithdrawalQueue(!showTx);
-
   const resetState = () => {
-    setShowTx(false);
-    setShowModal(false);
+    resetTxModal();
     setStepTwo(false);
     setUserConfirmationValue('');
-    setTransactionStatus('not_started');
-    setTxHash('');
   };
 
-  const openExitModal = () => {
+  const handleOpen = () => {
     resetState();
     setShowModal(true);
   };
@@ -71,7 +72,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const createExitTransaction = async () => {
     if (!account) return;
 
-    setTransactionStatus('waiting_user_confirmation');
+    setTxStatus('waiting_user_confirmation');
     setShowTx(true);
 
     const walletProvider = await (connector as AbstractConnector).getProvider();
@@ -88,14 +89,14 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     web3.eth
       .sendTransaction(transactionParams)
       .on('transactionHash', (hash: string): void => {
-        setTransactionStatus('confirm_on_chain');
+        setTxStatus('confirm_on_chain');
         setTxHash(hash);
       })
       .on('confirmation', (): any => {
-        setTransactionStatus('success');
+        setTxStatus('success');
       })
       .on('error', () => {
-        setTransactionStatus('error');
+        setTxStatus('error');
       });
   };
 
@@ -105,13 +106,13 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
 
   const { validatorindex } = validator;
 
-  const signTxStatus = getSignTxStatus(transactionStatus);
+  const signTxStatus = getSignTxStatus(txStatus);
 
   return (
     <>
       <Button
         label={<FormattedMessage defaultMessage="Force exit" />}
-        onClick={openExitModal}
+        onClick={handleOpen}
         destructive
       />
 
@@ -398,7 +399,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     />
                   }
                   txHash={txHash}
-                  transactionStatus={transactionStatus}
+                  transactionStatus={txStatus}
                 />
               )}
             </ModalContent>

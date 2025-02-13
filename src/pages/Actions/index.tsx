@@ -368,9 +368,16 @@ const _ActionsPage = () => {
                   <Alert variant="info">
                     <AlertBody>
                       <AlertIcon />
-                      <AlertText>
-                        <FormattedMessage defaultMessage="Recent transactions can take time to process and may not yet bet reflected in validator details. Use caution to avoid submitting duplicate requests." />
-                      </AlertText>
+                      <div>
+                        <AlertText className="mb10">
+                          <strong>
+                            <FormattedMessage defaultMessage="All actions are added to a queue for processing" />
+                          </strong>
+                        </AlertText>
+                        <AlertText>
+                          <FormattedMessage defaultMessage="Recent changes may not be reflected in validator details, and network congestion may result in delays. Use caution to avoid submitting duplicate requests." />
+                        </AlertText>
+                      </div>
                       <div
                         style={{
                           display: 'flex',

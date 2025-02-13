@@ -1,13 +1,20 @@
 import React, { ReactNode } from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 import { Box } from 'grommet';
+
+import { TransactionStatus } from './types';
 import { Text } from '../Text';
 import { TransactionProgress } from './TransactionProgress';
-import { TransactionStatus } from './types';
-import { EL_TRANSACTION_URL } from '../../utils/envVars';
 import { Link } from '../Link';
 import ModalHeader from '../../pages/Actions/components/ModalHeader';
+
+import { EL_TRANSACTION_URL } from '../../utils/envVars';
 import { getSignTxStatus, getTxOnchainStatus } from '../../utils/txStatus';
+
+const Header = styled(ModalHeader)`
+  padding-inline: 0;
+`;
 
 type TransactionStatusInsertProps = {
   headerMessage: string | ReactNode;
@@ -25,7 +32,7 @@ export const TransactionStatusInsert = ({
   const txOnchainStatus = getTxOnchainStatus(transactionStatus);
   return (
     <Box width="full">
-      <ModalHeader>{headerMessage}</ModalHeader>
+      <Header>{headerMessage}</Header>
 
       <TransactionProgress
         signTxStatus={signTxStatus}
@@ -33,7 +40,7 @@ export const TransactionStatusInsert = ({
       />
 
       {txHash?.length > 0 && (
-        <Text center style={{ padding: '1rem' }}>
+        <Text center style={{ paddingBlock: '0.5rem' }}>
           <Link primary inline to={`${EL_TRANSACTION_URL}/${txHash}`}>
             <FormattedMessage defaultMessage="View transaction in block explorer" />
           </Link>

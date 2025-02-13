@@ -10,7 +10,7 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.25rem 1rem;
 `;
 
 const CircleDiv = styled.div`

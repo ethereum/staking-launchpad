@@ -13,12 +13,11 @@ const Wrapper = styled.div`
 `;
 
 type ModalHeaderProps = {
-  children: React.ReactNode;
   onClose?: () => void;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
-const ModalHeader = ({ children, onClose }: ModalHeaderProps) => (
-  <Wrapper>
+const ModalHeader = ({ children, className, onClose }: ModalHeaderProps) => (
+  <Wrapper className={className}>
     <Heading
       level={3}
       margin="none"

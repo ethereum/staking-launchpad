@@ -801,6 +801,9 @@
   "BFAvr/": {
     "message": "Top up a validator"
   },
+  "BFQdAm": {
+    "message": "Amount of {TICKER_NAME}"
+  },
   "BFsUAH": {
     "description": "{code} values are terminal outputs to look for, should not translate",
     "message": "Check if {code1} is {code2}."
@@ -1192,6 +1195,9 @@
   },
   "I7MjRD": {
     "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
+  },
+  "ICbItT": {
+    "message": "This approach creates a single compounding account. Requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold up to {MAX_EFFECTIVE_BALANCE}."
   },
   "ID3Pgm": {
     "message": "Maximum number of withdrawals that can be processed in a single block"
@@ -2525,9 +2531,6 @@
   },
   "h/n5+N": {
     "message": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
-  },
-  "h2Lpn3": {
-    "message": "This account type requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold a max of {MAX_EFFECTIVE_BALANCE}"
   },
   "h8MTUo": {
     "message": "Your stake"

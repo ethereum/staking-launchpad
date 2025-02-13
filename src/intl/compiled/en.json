@@ -2159,6 +2159,16 @@
       "value": "Top up a validator"
     }
   ],
+  "BFQdAm": [
+    {
+      "type": 0,
+      "value": "Amount of "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "BFsUAH": [
     {
       "type": 0,
@@ -3145,6 +3155,36 @@
     {
       "type": 0,
       "value": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
+    }
+  ],
+  "ICbItT": [
+    {
+      "type": 0,
+      "value": "This approach creates a single compounding account. Requires at least "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", and can hold up to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "ID3Pgm": [
@@ -6639,32 +6679,6 @@
     {
       "type": 0,
       "value": "As a staker you are required to maintain and operate a node, running BOTH a consensus client AND an execution client."
-    }
-  ],
-  "h2Lpn3": [
-    {
-      "type": 0,
-      "value": "This account type requires at least "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", and can hold a max of "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
     }
   ],
   "h8MTUo": [

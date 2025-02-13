@@ -116,12 +116,6 @@ const NumValidatorContainer = styled.div`
   gap: 50px;
 `;
 
-const EthAmountContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-`;
-
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -312,9 +306,9 @@ const _GenerateKeysPage = ({
               values={{ TICKER_NAME }}
             />
           </Heading>
-          <Text className="mb50">
+          <Text className="mb10">
             <FormattedMessage
-              defaultMessage="This account type requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold a max of {MAX_EFFECTIVE_BALANCE}"
+              defaultMessage="This approach creates a single compounding account. Requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold up to {MAX_EFFECTIVE_BALANCE}."
               values={{
                 MAX_EFFECTIVE_BALANCE,
                 MIN_ACTIVATION_BALANCE,
@@ -322,14 +316,30 @@ const _GenerateKeysPage = ({
               }}
             />
           </Text>
-          <EthAmountContainer>
-            <NumberInput
-              value={ethAmount}
-              setValue={setEthAmount}
-              allowDecimals
-            />
-            <Text>{TICKER_NAME}</Text>
-          </EthAmountContainer>
+
+          <NumValidatorContainer>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage
+                  defaultMessage="Amount of {TICKER_NAME}"
+                  values={{ TICKER_NAME }}
+                />
+              </Text>
+              <NumberInput
+                value={ethAmount}
+                setValue={setEthAmount}
+                allowDecimals
+              />
+            </div>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage defaultMessage="Cost" />
+              </Text>
+              <Text>
+                {ethAmount} {TICKER_NAME}
+              </Text>
+            </div>
+          </NumValidatorContainer>
         </Paper>
       )}
 
@@ -344,6 +354,7 @@ const _GenerateKeysPage = ({
               values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
             />
           </Text>
+
           <NumValidatorContainer>
             <div>
               <Text className="mb5">

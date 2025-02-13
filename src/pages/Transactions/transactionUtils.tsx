@@ -5,7 +5,7 @@ import { SendOptions } from 'web3-eth-contract';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { TransactionStatus } from '../../store/actions/depositFileActions';
-import { CONTRACT_ADDRESS } from '../../utils/envVars';
+import { DEPOSIT_CONTRACT_ADDRESS } from '../../utils/envVars';
 import { DepositKeyInterface } from '../../store/reducers';
 
 const isUserRejectionError = (error: any) => {
@@ -64,7 +64,7 @@ export const handleMultipleTransactions = async (
 ) => {
   const walletProvider: any = await (connector as AbstractConnector).getProvider();
   const web3: any = new Web3(walletProvider);
-  const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
+  const contract = new web3.eth.Contract(contractAbi, DEPOSIT_CONTRACT_ADDRESS);
 
   const remainingTxs = depositKeys.filter(
     key =>

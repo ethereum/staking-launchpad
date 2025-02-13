@@ -35,7 +35,7 @@ import {
 import {
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
-  CONTRACT_ADDRESS,
+  DEPOSIT_CONTRACT_ADDRESS,
   ETHER_TO_GWEI,
   MAX_EFFECTIVE_BALANCE,
   EJECTION_PRICE,
@@ -131,7 +131,10 @@ const TopupPage: React.FC<Props> = ({ validator, backButton }) => {
     setShowTxModal(true);
     const walletProvider: any = await (connector as AbstractConnector).getProvider();
     const web3: any = new Web3(walletProvider);
-    const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
+    const contract = new web3.eth.Contract(
+      contractAbi,
+      DEPOSIT_CONTRACT_ADDRESS
+    );
     const bnInput = new BigNumber(value);
     const transactionAmount = bnInput.multipliedBy(1e18).toNumber();
     const reconstructedRootAmount = bnInput.multipliedBy(1e9).toNumber();

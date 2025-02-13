@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Heading } from 'grommet';
 import { CloseButton } from './Shared';
@@ -28,7 +29,12 @@ const ModalHeader = ({ children, className, onClose }: ModalHeaderProps) => (
     >
       {children}
     </Heading>
-    {onClose && <CloseButton label="Close" onClick={onClose} />}
+    {onClose && (
+      <CloseButton
+        label={<FormattedMessage defaultMessage="Close" />}
+        onClick={onClose}
+      />
+    )}
   </Wrapper>
 );
 

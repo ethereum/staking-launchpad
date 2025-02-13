@@ -122,10 +122,47 @@ const PushConsolidation = ({
               <FormattedMessage defaultMessage="Migrate and exit validator" />
             </ModalHeader>
             <ModalBody>
+              {!showTx && (
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <div style={{ marginBottom: '0.5rem' }}>
+                    <FormattedMessage
+                      defaultMessage="Which validator would you like to {migrateFundsTo}?"
+                      description="{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually"
+                      values={{
+                        migrateFundsTo: (
+                          <strong>
+                            <FormattedMessage defaultMessage="migrate funds to" />
+                          </strong>
+                        ),
+                      }}
+                    />
+                  </div>
+                  <ValidatorSelector
+                    validators={targetValidatorSet}
+                    selectedValidator={targetValidator}
+                    setSelectedValidator={setTargetValidator}
+                  />
+                </div>
+              )}
+
               {!targetValidator && (
                 <ModalContent>
                   <Text>
-                    <FormattedMessage defaultMessage="This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network." />
+                    <FormattedMessage
+                      defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
+                      values={{
+                        exiting: (
+                          <strong>
+                            <FormattedMessage
+                              defaultMessage="exiting index {sourceIndex}"
+                              values={{
+                                sourceIndex: sourceValidator.validatorindex,
+                              }}
+                            />
+                          </strong>
+                        ),
+                      }}
+                    />
                   </Text>
                   <Text>
                     <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
@@ -144,11 +181,11 @@ const PushConsolidation = ({
                     <li>
                       <Text as="span">
                         <FormattedMessage
-                          defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
+                          defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
                           values={{
-                            destination: (
+                            transferredToDestination: (
                               <strong>
-                                <FormattedMessage defaultMessage="validator index you choose below" />
+                                <FormattedMessage defaultMessage="transferred to the validator you select above" />
                               </strong>
                             ),
                           }}
@@ -182,24 +219,6 @@ const PushConsolidation = ({
                       </div>
                     </AlertContent>
                   </Alert>
-                </div>
-              )}
-
-              {!showTx && (
-                <div
-                  style={{
-                    marginBottom: '1.5rem',
-                    marginTop: targetValidator ? '0' : '1rem',
-                  }}
-                >
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <FormattedMessage defaultMessage="Which validator would you like to migrate funds to?" />
-                  </div>
-                  <ValidatorSelector
-                    validators={targetValidatorSet}
-                    selectedValidator={targetValidator}
-                    setSelectedValidator={setTargetValidator}
-                  />
                 </div>
               )}
 
@@ -455,7 +474,11 @@ const PushConsolidation = ({
         </Layer>
       )}
 
-      <Button label="Migrate funds" destructive onClick={confirmConsolidate} />
+      <Button
+        label={<FormattedMessage defaultMessage="Migrate funds" />}
+        destructive
+        onClick={confirmConsolidate}
+      />
     </>
   );
 };

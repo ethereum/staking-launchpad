@@ -112,7 +112,7 @@ const PullConsolidation = ({
   return (
     <>
       <Button
-        label="Pull funds"
+        label={<FormattedMessage defaultMessage="Pull funds" />}
         destructive
         secondary
         onClick={confirmConsolidate}
@@ -133,7 +133,16 @@ const PullConsolidation = ({
               {!showTx && (
                 <div style={{ marginBottom: '1.5rem' }}>
                   <div style={{ marginBottom: '0.5rem' }}>
-                    <FormattedMessage defaultMessage="Which validator would you like to pull from?" />
+                    <FormattedMessage
+                      defaultMessage="Which validator would you like to {pullFrom}?"
+                      values={{
+                        pullFrom: (
+                          <strong>
+                            <FormattedMessage defaultMessage="pull full balance from" />
+                          </strong>
+                        ),
+                      }}
+                    />
                   </div>
                   <ValidatorSelector
                     validators={sourceValidatorSet}
@@ -393,6 +402,19 @@ const PullConsolidation = ({
               ) : (
                 <ModalContent>
                   <Text>
+                    <FormattedMessage
+                      defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
+                      values={{
+                        exiting: (
+                          <strong>
+                            <FormattedMessage defaultMessage="exiting the validator you choose above" />
+                          </strong>
+                        ),
+                      }}
+                    />
+                  </Text>
+
+                  <Text>
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting the chosen validator from the Ethereum proof-of-stake network." />
                   </Text>
                   <Text>
@@ -412,12 +434,12 @@ const PullConsolidation = ({
                     <li>
                       <Text as="span">
                         <FormattedMessage
-                          defaultMessage="All remaining funds will be transferred to {destination} within a few days after exit epoch reached"
+                          defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
                           values={{
-                            destination: (
+                            transferredToDestination: (
                               <strong>
                                 <FormattedMessage
-                                  defaultMessage="validator index {index}"
+                                  defaultMessage="transferred to validator index {index}"
                                   values={{
                                     index: targetValidator.validatorindex,
                                   }}

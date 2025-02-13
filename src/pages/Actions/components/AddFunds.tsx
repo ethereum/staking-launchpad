@@ -169,11 +169,13 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
 
   const signTxStatus = getSignTxStatus(transactionStatus);
 
+  const primaryLabel = <FormattedMessage defaultMessage="Stake more funds" />;
+
   return (
     <>
       <Button
         onClick={openInputModal}
-        label={<FormattedMessage defaultMessage="Stake more funds" />}
+        label={primaryLabel}
         disabled={validator.effectivebalance >= maxEBGwei}
       />
 
@@ -241,7 +243,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       color: 'darkred',
                     }}
                   >
-                    <FormattedMessage defaultMessage="FROM" />
+                    <FormattedMessage defaultMessage="Deposit from" />
                   </Heading>
                   <Text>
                     <strong>
@@ -343,7 +345,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       color: 'darkgreen',
                     }}
                   >
-                    <FormattedMessage defaultMessage="TO" />
+                    <FormattedMessage defaultMessage="Stake to" />
                   </Heading>
                   <Text>
                     <strong>
@@ -437,7 +439,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 style={{ fontSize: '1rem' }}
-                label="Stake more funds"
+                label={primaryLabel}
                 onClick={createAddFundsTransaction}
                 color="dark-3"
                 fullWidth

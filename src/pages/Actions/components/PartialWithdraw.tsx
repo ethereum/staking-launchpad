@@ -177,7 +177,10 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       color: 'darkred',
                     }}
                   >
-                    <FormattedMessage defaultMessage="From" />
+                    <FormattedMessage
+                      defaultMessage="Unstake from"
+                      description="'Unstake' refers to this ETH no longer being considered at 'stake' nor contributing to consensus."
+                    />
                   </Heading>
                   <Text>
                     <strong>
@@ -286,7 +289,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       color: 'darkgreen',
                     }}
                   >
-                    <FormattedMessage defaultMessage="To" />
+                    <FormattedMessage defaultMessage="Withdraw to" />
                   </Heading>
                   <Text>
                     <strong>
@@ -375,7 +378,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
             {!['error', 'complete'].includes(signTxStatus) && (
               <Button
                 style={{ fontSize: '1rem' }}
-                label="Withdrawal"
+                label={<FormattedMessage defaultMessage="Withdraw" />}
                 onClick={createWithdrawTransaction}
                 color="dark-3"
                 fullWidth

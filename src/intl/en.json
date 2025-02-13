@@ -9,6 +9,9 @@
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
+  "+88H3v": {
+    "message": "migrate funds to"
+  },
   "+EZ9E/": {
     "message": "Interactive mode"
   },
@@ -125,6 +128,9 @@
   "/ydZdf": {
     "message": "How large are the rewards/penalties?"
   },
+  "0/du/O": {
+    "message": "I understand the consequences, exit this validator"
+  },
   "00d8uq": {
     "message": "Once set up, your validator won't become active straight away. Use this time to complete the checklist and get some extra practice on a testnet."
   },
@@ -148,6 +154,9 @@
   },
   "0GWhvr": {
     "message": "Expected outputs"
+  },
+  "0L5E+q": {
+    "message": "Warning! Network traffic significantly elevated."
   },
   "0PlVao": {
     "message": "More on slashing prevention"
@@ -218,9 +227,6 @@
   "1G0loj": {
     "message": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
   },
-  "1GAnQ9": {
-    "message": "validator index you choose below"
-  },
   "1ICikH": {
     "message": "This account will be permanently exited from the network."
   },
@@ -271,6 +277,9 @@
   },
   "2/VDay": {
     "message": "Max validators per withdrawals sweep: 16,384 (2{exp})"
+  },
+  "20bp3L": {
+    "message": "Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund. Current withdrawal processing fee is {fee}."
   },
   "21EI3f": {
     "message": "Lodestar validator key management documentation"
@@ -407,6 +416,9 @@
   "4AVfh5": {
     "message": "I've joined my consensus client's Discord server."
   },
+  "4B1i6W": {
+    "message": "Withdraw to"
+  },
   "4LvelA": {
     "message": "Max withdrawable"
   },
@@ -482,9 +494,6 @@
   },
   "5v36Is": {
     "message": "Exiting a {client} validator"
-  },
-  "6/Tl+g": {
-    "message": "TO"
   },
   "63gLLu": {
     "message": "average"
@@ -583,6 +592,9 @@
   },
   "7rnL9U": {
     "message": "Exit validator"
+  },
+  "7sLqH9": {
+    "message": "transferred to the validator you select above"
   },
   "7sZfCF": {
     "message": "More on Nimbus"
@@ -691,9 +703,6 @@
   },
   "9h8yTf": {
     "message": "A “withdrawable epoch” will also be calculated, which is 256 epochs after the calculated exit epoch (~27.3 hours later). When this epoch is reached, your validator will be eligible for a {fullWithdrawal} of all remaining funds."
-  },
-  "9j3hXO": {
-    "message": "To"
   },
   "9jnVGr": {
     "message": "Typically a minimum of 32 GB RAM is required, with 64 GB being recommended."
@@ -1063,6 +1072,9 @@
   "FzkbsB": {
     "message": "validators"
   },
+  "G0AzjT": {
+    "message": "exiting index {sourceIndex}"
+  },
   "G0ZD5H": {
     "message": "To make an account eligible for a full withdrawal, the validator account must first be exited. Validator accounts can be exited from staking in two main ways: voluntarily or forcefully."
   },
@@ -1280,9 +1292,6 @@
   "Jvu600": {
     "message": "Your mnemonic"
   },
-  "Jy0Frw": {
-    "message": "validator index {index}"
-  },
   "K3uH1C": {
     "message": "offline"
   },
@@ -1392,6 +1401,10 @@
   "LlClXS": {
     "message": "Thank you for supporting the Ethereum network!"
   },
+  "LmBip5": {
+    "description": "'Unstake' refers to this ETH no longer being considered at 'stake' nor contributing to consensus.",
+    "message": "Unstake from"
+  },
   "LpnfTF": {
     "message": "Lodestar installation documentation"
   },
@@ -1465,6 +1478,9 @@
   "Mor0Ih": {
     "message": "Bad validator behavior"
   },
+  "MsZuUe": {
+    "message": "pull full balance from"
+  },
   "MtgVBi": {
     "message": "UNSTAKE FUNDS"
   },
@@ -1534,6 +1550,9 @@
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
+  "O0SF0V": {
+    "message": "All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
+  },
   "O3qkOm": {
     "message": "Sharding"
   },
@@ -1588,6 +1607,9 @@
   "P/Oh91": {
     "message": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
   },
+  "P/pJbZ": {
+    "message": "Caution, higher than normal volume, min fee is high, consider waiting a few minutes. Current withdrawal processing fee is {fee}."
+  },
   "P1QerV": {
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
     "message": "If you have questions, EthStaker community is a good place to get help! You can find support on {discord} or {reddit}."
@@ -1612,6 +1634,9 @@
   },
   "PQgBnI": {
     "message": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
+  },
+  "PXAur5": {
+    "message": "Withdraw"
   },
   "PfoT0C": {
     "message": "This checklist will help you understand the role of a validator and prepare you for the role."
@@ -1783,6 +1808,9 @@
   "Seanpx": {
     "message": "Required"
   },
+  "SepcV5": {
+    "message": "exiting the validator you choose above"
+  },
   "SqKNq2": {
     "description": "{homebrew} = 'homebrew' and links to the homebrew package manager website documentation",
     "message": "You can install python3 on your macOS device using {homebrew}"
@@ -1817,8 +1845,14 @@
   "TfNuWP": {
     "message": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
   },
+  "ThGXHF": {
+    "message": "This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
+  },
   "Tpe6yK": {
     "message": "rpc-http-enabled documentation"
+  },
+  "Tpo1B3": {
+    "message": "transferred to validator index {index}"
   },
   "U/NPbq": {
     "message": "German"
@@ -2155,6 +2189,9 @@
   "azLmaD": {
     "message": "Build deposit-cli from the Python source code"
   },
+  "b+ZHvU": {
+    "message": "Stake to"
+  },
   "b+yUd5": {
     "message": "Fetch more"
   },
@@ -2200,9 +2237,6 @@
   "bnuvhg": {
     "message": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
   },
-  "btyyX7": {
-    "message": "All remaining funds will be transferred to {destination} within a few days after exit epoch reached"
-  },
   "bugMfW": {
     "message": "If not, move to next question"
   },
@@ -2211,9 +2245,6 @@
   },
   "by+LIm": {
     "message": "What is a validator client?"
-  },
-  "c4K0U4": {
-    "message": "Withdrawal to"
   },
   "c8BPhf": {
     "message": "Upgrade validator {index}"
@@ -2256,6 +2287,10 @@
   },
   "cdkI09": {
     "message": "How each validator is evaluated for withdrawals"
+  },
+  "ceCCZc": {
+    "description": "{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually",
+    "message": "Which validator would you like to {migrateFundsTo}?"
   },
   "chsS1X": {
     "message": "If not, stop. No withdrawal will be processed and account skipped"
@@ -2305,11 +2340,11 @@
   "dLE9FH": {
     "message": "If not, no withdrawal will be processed and account skipped"
   },
-  "dM+p3/": {
-    "message": "From"
-  },
   "dM/KIM": {
     "message": "What exactly is a validator?"
+  },
+  "dOewZy": {
+    "message": "Deposit from"
   },
   "dTOtPO": {
     "message": "Top Up"
@@ -2945,9 +2980,6 @@
   "oDObOQ": {
     "message": "If the “eth1 withdrawal address” was not provided on initial deposit, you can submit a once-only {BTEC} message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."
   },
-  "oEXI5W": {
-    "message": "Which validator would you like to migrate funds to?"
-  },
   "oF4os+": {
     "message": "Currently Prysm is used by >33% of the network."
   },
@@ -3083,9 +3115,6 @@
   },
   "pyWt01": {
     "message": "Deposit summary"
-  },
-  "q/xjqK": {
-    "message": "Which validator would you like to pull from?"
   },
   "q0thwm": {
     "message": "As a validator you are rewarded for proposing/attesting to blocks that are included in the chain."
@@ -3255,6 +3284,9 @@
   "szh4Xy": {
     "message": "I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)"
   },
+  "tHF016": {
+    "message": "Which validator would you like to {pullFrom}?"
+  },
   "tJcyUM": {
     "message": "Your deposit_data.json suggests you wanted to set up more validators. These deposits are still outstanding. If you think you've already made these deposits, wait an hour before trying again to avoid duplicate deposits."
   },
@@ -3342,9 +3374,6 @@
   },
   "ukfwum": {
     "message": "Become a validator with Nimbus"
-  },
-  "upSHEn": {
-    "message": "FROM"
   },
   "v/nu/L": {
     "message": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing."

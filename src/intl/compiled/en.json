@@ -33,6 +33,12 @@
       "value": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
     }
   ],
+  "+88H3v": [
+    {
+      "type": 0,
+      "value": "migrate funds to"
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
@@ -361,6 +367,12 @@
       "value": "How large are the rewards/penalties?"
     }
   ],
+  "0/du/O": [
+    {
+      "type": 0,
+      "value": "I understand the consequences, exit this validator"
+    }
+  ],
   "00d8uq": [
     {
       "type": 0,
@@ -415,6 +427,12 @@
     {
       "type": 0,
       "value": "Expected outputs"
+    }
+  ],
+  "0L5E+q": [
+    {
+      "type": 0,
+      "value": "Warning! Network traffic significantly elevated."
     }
   ],
   "0PlVao": [
@@ -595,12 +613,6 @@
       "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
     }
   ],
-  "1GAnQ9": [
-    {
-      "type": 0,
-      "value": "validator index you choose below"
-    }
-  ],
   "1ICikH": [
     {
       "type": 0,
@@ -717,6 +729,20 @@
     {
       "type": 0,
       "value": ")"
+    }
+  ],
+  "20bp3L": [
+    {
+      "type": 0,
+      "value": "Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund. Current withdrawal processing fee is "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "21EI3f": [
@@ -1139,6 +1165,12 @@
       "value": "I've joined my consensus client's Discord server."
     }
   ],
+  "4B1i6W": [
+    {
+      "type": 0,
+      "value": "Withdraw to"
+    }
+  ],
   "4LvelA": [
     {
       "type": 0,
@@ -1355,12 +1387,6 @@
     {
       "type": 0,
       "value": " validator"
-    }
-  ],
-  "6/Tl+g": [
-    {
-      "type": 0,
-      "value": "TO"
     }
   ],
   "63gLLu": [
@@ -1659,6 +1685,12 @@
       "value": "Exit validator"
     }
   ],
+  "7sLqH9": [
+    {
+      "type": 0,
+      "value": "transferred to the validator you select above"
+    }
+  ],
   "7sZfCF": [
     {
       "type": 0,
@@ -1905,12 +1937,6 @@
     {
       "type": 0,
       "value": " of all remaining funds."
-    }
-  ],
-  "9j3hXO": [
-    {
-      "type": 0,
-      "value": "To"
     }
   ],
   "9jnVGr": [
@@ -2829,6 +2855,16 @@
       "value": "validators"
     }
   ],
+  "G0AzjT": [
+    {
+      "type": 0,
+      "value": "exiting index "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    }
+  ],
   "G0ZD5H": [
     {
       "type": 0,
@@ -3379,16 +3415,6 @@
       "value": "Your mnemonic"
     }
   ],
-  "Jy0Frw": [
-    {
-      "type": 0,
-      "value": "validator index "
-    },
-    {
-      "type": 1,
-      "value": "index"
-    }
-  ],
   "K3uH1C": [
     {
       "type": 0,
@@ -3641,6 +3667,12 @@
       "value": "Thank you for supporting the Ethereum network!"
     }
   ],
+  "LmBip5": [
+    {
+      "type": 0,
+      "value": "Unstake from"
+    }
+  ],
   "LpnfTF": [
     {
       "type": 0,
@@ -3811,6 +3843,12 @@
     {
       "type": 0,
       "value": "Bad validator behavior"
+    }
+  ],
+  "MsZuUe": [
+    {
+      "type": 0,
+      "value": "pull full balance from"
     }
   ],
   "MtgVBi": [
@@ -3993,6 +4031,20 @@
     {
       "type": 0,
       "value": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
+    }
+  ],
+  "O0SF0V": [
+    {
+      "type": 0,
+      "value": "All remaining funds will be "
+    },
+    {
+      "type": 1,
+      "value": "transferredToDestination"
+    },
+    {
+      "type": 0,
+      "value": " within a few days after exit epoch reached"
     }
   ],
   "O3qkOm": [
@@ -4179,6 +4231,20 @@
       "value": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
     }
   ],
+  "P/pJbZ": [
+    {
+      "type": 0,
+      "value": "Caution, higher than normal volume, min fee is high, consider waiting a few minutes. Current withdrawal processing fee is "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "P1QerV": [
     {
       "type": 0,
@@ -4245,6 +4311,12 @@
     {
       "type": 0,
       "value": "This epoch is determined by the first available epoch that isn't already maxed out with other validators exiting (rate limit depends on total validators on the network), and must be at least four (4) epochs after the exit was initiated."
+    }
+  ],
+  "PXAur5": [
+    {
+      "type": 0,
+      "value": "Withdraw"
     }
   ],
   "PfoT0C": [
@@ -4635,6 +4707,12 @@
       "value": "Required"
     }
   ],
+  "SepcV5": [
+    {
+      "type": 0,
+      "value": "exiting the validator you choose above"
+    }
+  ],
   "SqKNq2": [
     {
       "type": 0,
@@ -4737,10 +4815,34 @@
       "value": "virtualenv would help you to create an isolated Python environment for deposit-cli tool."
     }
   ],
+  "ThGXHF": [
+    {
+      "type": 0,
+      "value": "This will initiate the process of permanently "
+    },
+    {
+      "type": 1,
+      "value": "exiting"
+    },
+    {
+      "type": 0,
+      "value": " from the Ethereum proof-of-stake network."
+    }
+  ],
   "Tpe6yK": [
     {
       "type": 0,
       "value": "rpc-http-enabled documentation"
+    }
+  ],
+  "Tpo1B3": [
+    {
+      "type": 0,
+      "value": "transferred to validator index "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "U/NPbq": [
@@ -5625,6 +5727,12 @@
       "value": "Build deposit-cli from the Python source code"
     }
   ],
+  "b+ZHvU": [
+    {
+      "type": 0,
+      "value": "Stake to"
+    }
+  ],
   "b+yUd5": [
     {
       "type": 0,
@@ -5731,20 +5839,6 @@
       "value": "Lighthouse is built in Rust and offered under an Apache 2.0 License."
     }
   ],
-  "btyyX7": [
-    {
-      "type": 0,
-      "value": "All remaining funds will be transferred to "
-    },
-    {
-      "type": 1,
-      "value": "destination"
-    },
-    {
-      "type": 0,
-      "value": " within a few days after exit epoch reached"
-    }
-  ],
   "bugMfW": [
     {
       "type": 0,
@@ -5761,12 +5855,6 @@
     {
       "type": 0,
       "value": "What is a validator client?"
-    }
-  ],
-  "c4K0U4": [
-    {
-      "type": 0,
-      "value": "Withdrawal to"
     }
   ],
   "c8BPhf": [
@@ -5907,6 +5995,20 @@
     {
       "type": 0,
       "value": "How each validator is evaluated for withdrawals"
+    }
+  ],
+  "ceCCZc": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to "
+    },
+    {
+      "type": 1,
+      "value": "migrateFundsTo"
+    },
+    {
+      "type": 0,
+      "value": "?"
     }
   ],
   "chsS1X": [
@@ -6077,16 +6179,16 @@
       "value": "If not, no withdrawal will be processed and account skipped"
     }
   ],
-  "dM+p3/": [
-    {
-      "type": 0,
-      "value": "From"
-    }
-  ],
   "dM/KIM": [
     {
       "type": 0,
       "value": "What exactly is a validator?"
+    }
+  ],
+  "dOewZy": [
+    {
+      "type": 0,
+      "value": "Deposit from"
     }
   ],
   "dTOtPO": [
@@ -7757,12 +7859,6 @@
       "value": " message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."
     }
   ],
-  "oEXI5W": [
-    {
-      "type": 0,
-      "value": "Which validator would you like to migrate funds to?"
-    }
-  ],
   "oF4os+": [
     {
       "type": 0,
@@ -8099,12 +8195,6 @@
     {
       "type": 0,
       "value": "Deposit summary"
-    }
-  ],
-  "q/xjqK": [
-    {
-      "type": 0,
-      "value": "Which validator would you like to pull from?"
     }
   ],
   "q0thwm": [
@@ -8555,6 +8645,20 @@
       "value": "I've set up a shared JWT secret and made it available to both my execution client, and my consensus client (beacon node)"
     }
   ],
+  "tHF016": [
+    {
+      "type": 0,
+      "value": "Which validator would you like to "
+    },
+    {
+      "type": 1,
+      "value": "pullFrom"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -8843,12 +8947,6 @@
     {
       "type": 0,
       "value": "Become a validator with Nimbus"
-    }
-  ],
-  "upSHEn": [
-    {
-      "type": 0,
-      "value": "FROM"
     }
   ],
   "v/nu/L": [

@@ -539,6 +539,12 @@
       "value": "Validators FAQ"
     }
   ],
+  "0t7f7R": [
+    {
+      "type": 0,
+      "value": "This will result in an excess balance for your validator, which will be automatically withdrawn to your execution account by the network."
+    }
+  ],
   "0uqjBl": [
     {
       "type": 0,
@@ -6325,6 +6331,24 @@
       "value": "What happens if I lose my signing key?"
     }
   ],
+  "f1L9pF": [
+    {
+      "type": 0,
+      "value": "Minimum deposit amount is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_DEPOSIT_ETHER"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "f5yGLr": [
     {
       "type": 0,
@@ -9479,6 +9503,28 @@
       "value": "More on Lighthouse and Sigma Prime"
     }
   ],
+  "zJV6KL": [
+    {
+      "type": 0,
+      "value": "Minimum deposit is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_DEPOSIT_ETHER"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "zJicsO": [
     {
       "type": 0,
@@ -9489,6 +9535,24 @@
     {
       "type": 0,
       "value": "Effective Balance"
+    }
+  ],
+  "zO16iV": [
+    {
+      "type": 0,
+      "value": "The minimum valid deposit amount is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_DEPOSIT_ETHER"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "zfkJaB": [

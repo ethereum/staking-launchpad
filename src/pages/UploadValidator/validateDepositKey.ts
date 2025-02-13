@@ -13,7 +13,7 @@ import {
 import {
   ETHER_TO_GWEI,
   BEACONCHAIN_URL,
-  MIN_DEPOSIT_AMOUNT,
+  MIN_DEPOSIT_GWEI,
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
 } from '../../utils/envVars';
@@ -66,7 +66,7 @@ const validateFieldFormatting = (
   const maxAmountEther =
     accountType < 2 ? MIN_ACTIVATION_BALANCE : MAX_EFFECTIVE_BALANCE;
   if (
-    depositDatum.amount < MIN_DEPOSIT_AMOUNT ||
+    depositDatum.amount < MIN_DEPOSIT_GWEI ||
     depositDatum.amount > maxAmountEther * ETHER_TO_GWEI
   ) {
     return false;

@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 
-import { FormattedMessage } from 'react-intl';
 import { ValidatorType } from '../types';
 import { BeaconChainValidator } from '../../TopUp/types';
+
+import AddFunds from './AddFunds';
 import ForceExit from './ForceExit';
 import PartialWithdraw from './PartialWithdraw';
+import PullConsolidation from './PullConsolidation';
 import PushConsolidation from './PushConsolidation';
-import AddFunds from './AddFunds';
+import { Section as SharedSection } from './Shared';
+import { Text } from '../../../components/Text';
 import UpgradeCompounding from './UpgradeCompounding';
 
-import { Section as SharedSection } from './Shared';
 import {
-  hasValidatorExited,
-  getEtherBalance,
   getCredentialType,
+  getEtherBalance,
+  hasValidatorExited,
 } from '../../../utils/validators';
+
 import {
-  MIN_ACTIVATION_BALANCE,
-  TICKER_NAME,
-  MAX_EFFECTIVE_BALANCE,
   ETHER_TO_GWEI,
+  MAX_EFFECTIVE_BALANCE,
+  MIN_ACTIVATION_BALANCE,
+  MIN_DEPOSIT_ETHER,
+  TICKER_NAME,
 } from '../../../utils/envVars';
-import { Text } from '../../../components/Text';
-import PullConsolidation from './PullConsolidation';
 
 const Section = styled(SharedSection)`
   display: grid;
@@ -143,7 +146,16 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
           <ActionTitle>
             <FormattedMessage defaultMessage="Add funds to your validator" />
           </ActionTitle>
-          <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's maximum effective balance can increase rewards and penalties." />
+          <FormattedMessage defaultMessage="Adding funds to a validator not yet at it's maximum effective balance can increase rewards and penalties." />{' '}
+          <em>
+            <FormattedMessage
+              defaultMessage="Minimum deposit is {MIN_DEPOSIT_ETHER} {TICKER_NAME}."
+              values={{
+                MIN_DEPOSIT_ETHER,
+                TICKER_NAME,
+              }}
+            />
+          </em>
           {validator.effectivebalance >= maxEBGwei && (
             <em>
               {' '}

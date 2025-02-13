@@ -194,6 +194,9 @@
   "0oNdmk": {
     "message": "Validators FAQ"
   },
+  "0t7f7R": {
+    "message": "This will result in an excess balance for your validator, which will be automatically withdrawn to your execution account by the network."
+  },
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
@@ -2404,6 +2407,9 @@
   "f/N7FO": {
     "message": "What happens if I lose my signing key?"
   },
+  "f1L9pF": {
+    "message": "Minimum deposit amount is {MIN_DEPOSIT_ETHER} {TICKER_NAME}"
+  },
   "f5yGLr": {
     "description": "{url} is link to GitHub CLI release, made bold for emphasis",
     "message": "Please make sure that you are downloading from the official EthStaker GitHub account by verifying the url: {url}"
@@ -3604,11 +3610,17 @@
   "zAVb0/": {
     "message": "More on Lighthouse and Sigma Prime"
   },
+  "zJV6KL": {
+    "message": "Minimum deposit is {MIN_DEPOSIT_ETHER} {TICKER_NAME}."
+  },
   "zJicsO": {
     "message": "Staking economics"
   },
   "zNUzpT": {
     "message": "Effective Balance"
+  },
+  "zO16iV": {
+    "message": "The minimum valid deposit amount is {MIN_DEPOSIT_ETHER} {TICKER_NAME}"
   },
   "zfkJaB": {
     "message": "The Ethereum staking deposit contract requires a minimum of {MIN_TOPUP_VALUE} {TICKER_NAME} to be sent at one time to be accepted."

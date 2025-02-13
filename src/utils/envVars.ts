@@ -89,7 +89,8 @@ export const MS_PER_SLOT                = SECONDS_PER_SLOT * 1000
 
 // BLS signature verification variables
 export const ETHER_TO_GWEI              = 1e9;
-export const MIN_DEPOSIT_AMOUNT         = 1 * ETHER_TO_GWEI;
+export const MIN_DEPOSIT_ETHER          = 1;
+export const MIN_DEPOSIT_GWEI           = MIN_DEPOSIT_ETHER * ETHER_TO_GWEI;
 export const DOMAIN_DEPOSIT             = Buffer.from('03000000', 'hex');
 export const EMPTY_ROOT                 = Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
 

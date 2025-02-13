@@ -55,6 +55,7 @@ interface Props {
   setValue: (e: number) => void;
   allowDecimals?: boolean;
   maxValue?: number;
+  minValue?: number;
   id?: string;
 }
 
@@ -63,6 +64,7 @@ export const NumberInput = ({
   setValue,
   allowDecimals,
   maxValue,
+  minValue = 0,
   id,
 }: Props): JSX.Element => {
   const handleManualInput = (e: any) => {
@@ -77,7 +79,7 @@ export const NumberInput = ({
 
   const decrement = () => {
     if (value > 0) {
-      setValue(Math.max(0, +value - 1));
+      setValue(Math.max(minValue, +value - 1));
     }
   };
 

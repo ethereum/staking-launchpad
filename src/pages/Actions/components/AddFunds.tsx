@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js';
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Layer, Form } from 'grommet';
-import { LinkDown as DownIcon } from 'grommet-icons';
+import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
@@ -24,6 +24,7 @@ import {
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
+  MIN_DEPOSIT_ETHER,
 } from '../../../utils/envVars';
 import { Heading } from '../../../components/Heading';
 import ModalHeader from './ModalHeader';
@@ -33,6 +34,7 @@ import {
   ModalContent,
   ModalFooter,
   modalLayerStyle,
+  AlertContent,
 } from './Shared';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
@@ -49,6 +51,7 @@ import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 import { useTxModal } from '../../../hooks/useTxModal';
 
 import { contractAbi } from '../../../contractAbi';
+import { Alert } from '../../../components/Alert';
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -67,11 +70,11 @@ const depositDataContainer = new ContainerType({
   },
 });
 
-interface Props {
+type AddFundsProps = {
   validator: BeaconChainValidator;
-}
+};
 
-const AddFunds: React.FC<Props> = ({ validator }) => {
+const AddFunds = ({ validator }: AddFundsProps) => {
   const { connector, account } = useWeb3React();
   const {
     resetTxModal,
@@ -87,7 +90,7 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
 
   const executionEtherBalance = useExecutionBalance();
 
-  const [etherAmount, setEtherAmount] = useState(0);
+  const [etherAmount, setEtherAmount] = useState(MIN_DEPOSIT_ETHER);
   const [maxEtherAmount, setMaxEtherAmount] = useState(0);
 
   const maxEBGwei =
@@ -97,15 +100,20 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
 
   useEffect(() => {
     // Max is maxEB plus 0.26, accounting for hysteresis zones with 0.01 buffer
-    const maxEther = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.26).minus(
+    const maxUsefulEther = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.26).minus(
       new BigNumber(validator.balance).div(ETHER_TO_GWEI)
+    );
+    // All deposits must at least be MIN_DEPOSIT_ETHER or tx will fail
+    const maxEther = BigNumber.max(
+      maxUsefulEther,
+      new BigNumber(MIN_DEPOSIT_ETHER)
     );
     setMaxEtherAmount(maxEther.toNumber());
   }, [validator]);
 
   const resetState = () => {
     resetTxModal();
-    setEtherAmount(0);
+    setEtherAmount(MIN_DEPOSIT_ETHER);
   };
 
   const handleOpen = () => {
@@ -114,7 +122,10 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
   };
 
   const handleValueChange = (value: number) => {
-    const newValue = Math.max(Math.min(value, maxEtherAmount), 0);
+    const newValue = Math.max(
+      Math.min(value, maxEtherAmount),
+      MIN_DEPOSIT_ETHER
+    );
     setEtherAmount(newValue);
   };
 
@@ -219,13 +230,28 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                       />
                     </Text>
                   </label>
-                  <NumberInput
-                    id="withdrawal-amount"
-                    value={etherAmount}
-                    setValue={handleValueChange}
-                    allowDecimals
-                    maxValue={maxEtherAmount}
-                  />
+                  <div>
+                    <NumberInput
+                      id="withdrawal-amount"
+                      value={etherAmount}
+                      setValue={handleValueChange}
+                      allowDecimals
+                      maxValue={maxEtherAmount}
+                      minValue={MIN_DEPOSIT_ETHER}
+                    />
+                    <Text
+                      style={{
+                        fontSize: '0.75rem',
+                        color: '#555',
+                        marginInlineStart: '0.25rem',
+                      }}
+                    >
+                      <FormattedMessage
+                        defaultMessage="Minimum deposit amount is {MIN_DEPOSIT_ETHER} {TICKER_NAME}"
+                        values={{ MIN_DEPOSIT_ETHER, TICKER_NAME }}
+                      />
+                    </Text>
+                  </div>
                 </Form>
               )}
 
@@ -429,6 +455,27 @@ const AddFunds: React.FC<Props> = ({ validator }) => {
                   </div>
                 </div>
               </div>
+
+              {!showTx && MIN_DEPOSIT_ETHER === maxEtherAmount && (
+                <Alert variant="warning">
+                  <AlertContent>
+                    <AlertIcon />
+                    <div>
+                      <Text>
+                        <strong>
+                          <FormattedMessage
+                            defaultMessage="The minimum valid deposit amount is {MIN_DEPOSIT_ETHER} {TICKER_NAME}"
+                            values={{ MIN_DEPOSIT_ETHER, TICKER_NAME }}
+                          />
+                        </strong>
+                      </Text>
+                      <Text style={{ fontSize: '1rem' }}>
+                        <FormattedMessage defaultMessage="This will result in an excess balance for your validator, which will be automatically withdrawn to your execution account by the network." />
+                      </Text>
+                    </div>
+                  </AlertContent>
+                </Alert>
+              )}
 
               {showTx && (
                 <TransactionStatusInsert

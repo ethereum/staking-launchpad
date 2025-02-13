@@ -133,35 +133,39 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
               </Alert>
             </AlertContainer>
             <ModalContent>
-              <Text>
-                <FormattedMessage defaultMessage="This will initiate the process of upgrading this validator from a Type 1 'regular withdrawals' or 'execution' account type, to a Type 2 'compounding' account type." />
-              </Text>
-              <Text>
-                <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of upgrades is not immediate, so account for several days before completion." />
-              </Text>
-              <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
-                <li>
-                  <Text as="span">
-                    <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+              {!showTx && (
+                <>
+                  <Text>
+                    <FormattedMessage defaultMessage="This will initiate the process of upgrading this validator from a Type 1 'regular withdrawals' or 'execution' account type, to a Type 2 'compounding' account type." />
                   </Text>
-                </li>
-                <li>
-                  <Text as="span">
-                    <FormattedMessage
-                      defaultMessage="Maximum effective account balance will increase to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
-                      values={{ MAX_EFFECTIVE_BALANCE, TICKER_NAME }}
-                    />
+                  <Text>
+                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of upgrades is not immediate, so account for up to several days before completion." />
                   </Text>
-                </li>
-                <li>
-                  <Text as="span">
-                    <FormattedMessage
-                      defaultMessage="Compounding accounts eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
-                      values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
-                    />
-                  </Text>
-                </li>
-              </ul>
+                  <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+                      </Text>
+                    </li>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage
+                          defaultMessage="Maximum effective account balance will increase to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
+                          values={{ MAX_EFFECTIVE_BALANCE, TICKER_NAME }}
+                        />
+                      </Text>
+                    </li>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage
+                          defaultMessage="Compounding accounts eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+                          values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
+                        />
+                      </Text>
+                    </li>
+                  </ul>
+                </>
+              )}
 
               {showTx && (
                 <TransactionStatusInsert

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Layer, Form, TextInput } from 'grommet';
-import { Alert as AlertIcon } from 'grommet-icons';
+import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
@@ -10,22 +10,27 @@ import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Alert } from '../../../components/Alert';
 import { Button } from '../../../components/Button';
+import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { TransactionStatus } from '../../../components/TransactionStatusModal';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 import ModalHeader from './ModalHeader';
 import {
-  ModalBody,
   AlertContainer,
   AlertContent,
+  Hash,
+  ModalBody,
   ModalContent,
-  modalLayerStyle,
   ModalFooter,
+  modalLayerStyle,
 } from './Shared';
 
 import { Queue, generateWithdrawalParams } from '../utils';
+import { TICKER_NAME } from '../../../utils/envVars';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { useModal } from '../../../hooks/useModal';
+import { getEtherBalance } from '../../../utils/validators';
+import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -36,6 +41,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const { connector, account } = useWeb3React();
   const { showModal, setShowModal, showTx, setShowTx } = useModal();
 
+  const executionEtherBalance = useExecutionBalance();
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
   const [stepTwo, setStepTwo] = useState(false);
 
@@ -46,18 +52,18 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   // eslint-disable-next-line
   const [queue, setQueue] = useState<Queue | null>(null);
 
-  const openExitModal = () => {
-    setShowTx(false);
-    setStepTwo(false);
-    setUserConfirmationValue('');
-    setShowModal(true);
-  };
-
-  const handleClose = () => {
+  const resetState = () => {
     setShowTx(false);
     setShowModal(false);
     setStepTwo(false);
     setUserConfirmationValue('');
+    setTransactionStatus('not_started');
+    setTxHash('');
+  };
+
+  const openExitModal = () => {
+    resetState();
+    setShowModal(true);
   };
 
   const createExitTransaction = async () => {
@@ -110,11 +116,11 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
       {showModal && (
         <Layer
           position="center"
-          onEsc={handleClose}
-          onClickOutside={handleClose}
+          onEsc={resetState}
+          onClickOutside={resetState}
           style={modalLayerStyle}
         >
-          <ModalHeader onClose={handleClose}>
+          <ModalHeader onClose={resetState}>
             <FormattedMessage
               defaultMessage="Exit validator {validatorindex}"
               values={{ validatorindex }}
@@ -139,13 +145,13 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
               </Alert>
             </AlertContainer>
             <ModalContent>
-              {!showTx && (
+              {!showTx && !stepTwo && (
                 <>
                   <Text>
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
                   </Text>
                   <Text>
-                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for several days before completion." />
+                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
                   <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
                     <li>
@@ -174,6 +180,205 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     </li>
                   </ul>
                 </>
+              )}
+
+              {stepTwo && (
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div
+                    style={{
+                      background: '#fff',
+                      padding: '1rem',
+                      maxWidth: '100%',
+                      borderRadius: '8px',
+                      border: '2px solid darkred',
+                    }}
+                  >
+                    <Heading
+                      level={3}
+                      style={{
+                        textTransform: 'uppercase',
+                        color: 'darkred',
+                      }}
+                    >
+                      <FormattedMessage defaultMessage="From" />
+                    </Heading>
+                    <Text>
+                      <strong>
+                        <FormattedMessage defaultMessage="Index" />:{' '}
+                        {validator.validatorindex}
+                      </strong>
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: '14px',
+                        color: '#555',
+                        lineHeight: '1.3',
+                        marginBottom: '0.5rem',
+                      }}
+                    >
+                      <Hash>{validator.pubkey}</Hash>
+                    </Text>
+
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                      }}
+                    >
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Balance" />:
+                        </div>
+                        <div
+                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        >
+                          {getEtherBalance(validator).toFixed(9)} {TICKER_NAME}
+                        </div>
+                      </Text>
+
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="New balance" />:
+                        </div>
+                        <div
+                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                        >
+                          {(0).toFixed(9)} {TICKER_NAME}
+                        </div>
+                      </Text>
+                    </div>
+                  </div>
+
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      margin: '0.25rem auto',
+                    }}
+                  >
+                    <DownIcon />
+                    <Text
+                      style={{
+                        fontFamily: 'monospace',
+                        fontSize: '1rem',
+                        color: 'darkred',
+                      }}
+                    >
+                      {getEtherBalance(validator).toFixed(9)} {TICKER_NAME}
+                    </Text>
+                  </div>
+
+                  <div
+                    style={{
+                      background: '#fff',
+                      padding: '1rem',
+                      maxWidth: '100%',
+                      borderRadius: '8px',
+                      border: '2px solid darkgreen',
+                    }}
+                  >
+                    <Heading
+                      level={3}
+                      style={{
+                        textTransform: 'uppercase',
+                        color: 'darkgreen',
+                      }}
+                    >
+                      <FormattedMessage defaultMessage="To" />
+                    </Heading>
+                    <Text>
+                      <strong>
+                        <FormattedMessage defaultMessage="Execution account" />:
+                      </strong>
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: '14px',
+                        color: '#555',
+                        marginBottom: '0.5rem',
+                      }}
+                    >
+                      <Hash style={{ fontSize: '1rem' }}>{account}</Hash>
+                    </Text>
+
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                      }}
+                    >
+                      {executionEtherBalance && (
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="Current" />:
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                            }}
+                          >
+                            {executionEtherBalance.toFixed(9)} {TICKER_NAME}
+                          </div>
+                        </Text>
+                      )}
+
+                      {executionEtherBalance && (
+                        <Text
+                          style={{
+                            display: 'grid',
+                            gridColumn: 'span 2',
+                            gridTemplateColumns: 'subgrid',
+                            columnGap: '0.5rem',
+                          }}
+                        >
+                          <div>
+                            <FormattedMessage defaultMessage="New balance" />:
+                          </div>
+                          <div
+                            style={{
+                              textAlign: 'end',
+                              fontFamily: 'monospace',
+                              color: 'darkgreen',
+                            }}
+                          >
+                            {(
+                              executionEtherBalance + getEtherBalance(validator)
+                            ).toFixed(9)}{' '}
+                            {TICKER_NAME}
+                          </div>
+                        </Text>
+                      )}
+                    </div>
+                  </div>
+                </div>
               )}
 
               {showTx && (
@@ -263,7 +468,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
             {signTxStatus === 'complete' && (
               <Button
                 label={<FormattedMessage defaultMessage="Finish" />}
-                onClick={handleClose}
+                onClick={resetState}
               />
             )}
           </ModalFooter>

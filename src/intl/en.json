@@ -15,6 +15,9 @@
   "+EZ9E/": {
     "message": "Interactive mode"
   },
+  "+POmjo": {
+    "message": "This will result in an excess balance for your validator, which will be automatically refunded to your execution account by the network."
+  },
   "+UUcBt": {
     "message": "Choose a language"
   },
@@ -194,9 +197,6 @@
   "0oNdmk": {
     "message": "Validators FAQ"
   },
-  "0t7f7R": {
-    "message": "This will result in an excess balance for your validator, which will be automatically withdrawn to your execution account by the network."
-  },
   "0uqjBl": {
     "message": "Earn continuous rewards for providing a public good to the community."
   },
@@ -280,9 +280,6 @@
   },
   "2/VDay": {
     "message": "Max validators per withdrawals sweep: 16,384 (2{exp})"
-  },
-  "20bp3L": {
-    "message": "Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund. Current withdrawal processing fee is {fee}."
   },
   "21EI3f": {
     "message": "Lodestar validator key management documentation"
@@ -1436,6 +1433,9 @@
   "MAVs3a": {
     "message": "*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
   },
+  "MAq0zY": {
+    "message": "Minimum fee for processing is currently elevated, consider waiting a few minutes. Current withdrawal processing fee is {fee}."
+  },
   "MCmGYv": {
     "message": "Copied ✓"
   },
@@ -1615,9 +1615,6 @@
   },
   "P/Oh91": {
     "message": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
-  },
-  "P/pJbZ": {
-    "message": "Caution, higher than normal volume, min fee is high, consider waiting a few minutes. Current withdrawal processing fee is {fee}."
   },
   "P1QerV": {
     "description": "{discord} and {reddit} are links to EthStaker forums on Discord and Reddit respectively",
@@ -1877,6 +1874,9 @@
   },
   "UJE2gP": {
     "message": "Controlled by"
+  },
+  "UN2ydn": {
+    "message": "Caution - current request queue higher than normal volume"
   },
   "UOFjs/": {
     "message": "There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types."
@@ -2637,6 +2637,9 @@
   "isGKnz": {
     "message": "Documentation"
   },
+  "isgVsK": {
+    "message": "Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund."
+  },
   "iv88b5": {
     "message": "Send all {totalTxCount} deposits"
   },
@@ -3347,6 +3350,9 @@
   },
   "uAXXOX": {
     "message": "This timing of this last step is variable depending on validator index, current sweep position, and number of validators."
+  },
+  "uAu6S6": {
+    "message": "Current processing fee: {fee}."
   },
   "uDMtC8": {
     "message": "As anyone who has already gone through the process of activating a validator knows, this process is not automatic, especially if there are a lot of other users trying to join at the same time. This is because the consensus layer uses an {activationQueue} to limit how quickly new validator accounts can {join} the network."

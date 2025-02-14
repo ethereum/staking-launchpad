@@ -470,7 +470,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                         </strong>
                       </Text>
                       <Text style={{ fontSize: '1rem' }}>
-                        <FormattedMessage defaultMessage="This will result in an excess balance for your validator, which will be automatically withdrawn to your execution account by the network." />
+                        <FormattedMessage defaultMessage="This will result in an excess balance for your validator, which will be automatically refunded to your execution account by the network." />
                       </Text>
                     </div>
                   </AlertContent>

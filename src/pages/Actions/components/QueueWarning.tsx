@@ -1,9 +1,10 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import BigNumber from 'bignumber.js';
-import { getFeeStatus, getEtherFeeFromQueue, Queue } from '../utils';
 import { Alert } from '../../../components/Alert';
+import { Text } from '../../../components/Text';
+
+import { getFeeStatus, getEtherFeeFromQueue, Queue } from '../utils';
 
 type QueueWarningProps = {
   queue: Queue | null;
@@ -17,32 +18,47 @@ const QueueWarning = ({ queue }: QueueWarningProps) => {
   if (feeStatus === 'high')
     return (
       <Alert variant="warning" style={{ fontSize: '1rem', padding: '1rem' }}>
-        <FormattedMessage
-          defaultMessage="Caution, higher than normal volume, min fee is high, consider waiting a few minutes. Current withdrawal processing fee is {fee}."
-          values={{ fee: getEtherFeeFromQueue(queue) }}
-        />
+        <Text style={{ fontSize: '1rem', lineHeight: '1.75rem' }}>
+          <strong>
+            <FormattedMessage defaultMessage="Caution - current request queue higher than normal volume" />
+          </strong>
+        </Text>
+        <Text style={{ fontSize: '1rem' }}>
+          <FormattedMessage
+            defaultMessage="Minimum fee for processing is currently elevated, consider waiting a few minutes. Current withdrawal processing fee is {fee}."
+            values={{ fee: getEtherFeeFromQueue(queue) }}
+          />
+        </Text>
       </Alert>
     );
 
   if (feeStatus === 'volatile')
     return (
-      <Alert variant="error" style={{ fontSize: '1rem', padding: '1rem' }}>
-        <strong style={{ textTransform: 'uppercase' }}>
-          <FormattedMessage defaultMessage="Warning! Network traffic significantly elevated." />
-        </strong>{' '}
-        <FormattedMessage
-          defaultMessage="Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund. Current withdrawal processing fee is {fee}."
-          values={{
-            fee: (
-              <strong>
-                {getEtherFeeFromQueue({
-                  fee: new BigNumber(1e18),
-                  length: new BigNumber(700),
-                })}
-              </strong>
-            ),
-          }}
-        />
+      <Alert variant="error" style={{ padding: '1rem' }}>
+        <div>
+          <Text
+            style={{
+              fontSize: '1rem',
+              textTransform: 'uppercase',
+              lineHeight: '1.75rem',
+            }}
+          >
+            <strong>
+              <FormattedMessage defaultMessage="Warning! Network traffic significantly elevated." />
+            </strong>
+          </Text>
+          <Text style={{ fontSize: '1rem' }}>
+            <FormattedMessage defaultMessage="Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund." />
+          </Text>
+          <Text style={{ fontSize: '1rem' }}>
+            <FormattedMessage
+              defaultMessage="Current processing fee: {fee}."
+              values={{
+                fee: <strong>{getEtherFeeFromQueue(queue)}</strong>,
+              }}
+            />
+          </Text>
+        </div>
       </Alert>
     );
 

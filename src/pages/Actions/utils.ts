@@ -134,4 +134,4 @@ export const getFeeStatus = (fee: BigNumber): FeeStatus => {
 };
 
 export const getEtherFeeFromQueue = (queue: Queue): string =>
-  `${queue.fee.dividedBy(1e18).toString()} ${TICKER_NAME}`;
+  `${queue.fee.dividedBy(1e18).toFixed()} ${TICKER_NAME}`;

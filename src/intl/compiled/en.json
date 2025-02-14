@@ -45,6 +45,12 @@
       "value": "Interactive mode"
     }
   ],
+  "+POmjo": [
+    {
+      "type": 0,
+      "value": "This will result in an excess balance for your validator, which will be automatically refunded to your execution account by the network."
+    }
+  ],
   "+UUcBt": [
     {
       "type": 0,
@@ -539,12 +545,6 @@
       "value": "Validators FAQ"
     }
   ],
-  "0t7f7R": [
-    {
-      "type": 0,
-      "value": "This will result in an excess balance for your validator, which will be automatically withdrawn to your execution account by the network."
-    }
-  ],
   "0uqjBl": [
     {
       "type": 0,
@@ -735,20 +735,6 @@
     {
       "type": 0,
       "value": ")"
-    }
-  ],
-  "20bp3L": [
-    {
-      "type": 0,
-      "value": "Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund. Current withdrawal processing fee is "
-    },
-    {
-      "type": 1,
-      "value": "fee"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "21EI3f": [
@@ -3781,6 +3767,20 @@
       "value": "*Simply being offline with an otherwise healthy network does not result in slashing, but will result in small inactivity penalties."
     }
   ],
+  "MAq0zY": [
+    {
+      "type": 0,
+      "value": "Minimum fee for processing is currently elevated, consider waiting a few minutes. Current withdrawal processing fee is "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "MCmGYv": [
     {
       "type": 0,
@@ -4275,20 +4275,6 @@
     {
       "type": 0,
       "value": "Phishing is a very real risk for Ethereum validators and, unfortunately, many people will lose funds due to these attacks."
-    }
-  ],
-  "P/pJbZ": [
-    {
-      "type": 0,
-      "value": "Caution, higher than normal volume, min fee is high, consider waiting a few minutes. Current withdrawal processing fee is "
-    },
-    {
-      "type": 1,
-      "value": "fee"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "P1QerV": [
@@ -4927,6 +4913,12 @@
     {
       "type": 0,
       "value": "Controlled by"
+    }
+  ],
+  "UN2ydn": [
+    {
+      "type": 0,
+      "value": "Caution - current request queue higher than normal volume"
     }
   ],
   "UOFjs/": [
@@ -6949,6 +6941,12 @@
       "value": "Documentation"
     }
   ],
+  "isgVsK": [
+    {
+      "type": 0,
+      "value": "Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund."
+    }
+  ],
   "iv88b5": [
     {
       "type": 0,
@@ -8825,6 +8823,20 @@
     {
       "type": 0,
       "value": "This timing of this last step is variable depending on validator index, current sweep position, and number of validators."
+    }
+  ],
+  "uAu6S6": [
+    {
+      "type": 0,
+      "value": "Current processing fee: "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "uDMtC8": [

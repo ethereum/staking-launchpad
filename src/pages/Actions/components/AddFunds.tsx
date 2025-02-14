@@ -99,8 +99,9 @@ const AddFunds = ({ validator }: AddFundsProps) => {
       : MAX_EFFECTIVE_BALANCE) * ETHER_TO_GWEI;
 
   useEffect(() => {
+    const maxEB = getMaxEB(validator);
     // Max is maxEB plus 0.26, accounting for hysteresis zones with 0.01 buffer
-    const maxUsefulEther = new BigNumber(MAX_EFFECTIVE_BALANCE + 0.26).minus(
+    const maxUsefulEther = new BigNumber(maxEB + 0.26).minus(
       new BigNumber(validator.balance).div(ETHER_TO_GWEI)
     );
     // All deposits must at least be MIN_DEPOSIT_ETHER or tx will fail

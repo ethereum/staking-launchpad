@@ -88,8 +88,8 @@ const PushConsolidation = ({
       } = await generateCompoundParams(
         web3,
         account,
-        targetValidator.pubkey,
-        sourceValidator.pubkey
+        sourceValidator.pubkey,
+        targetValidator.pubkey
       );
 
       setQueue(compoundingQueue);

@@ -14,6 +14,29 @@ const StyledButton = styled.button`
     background-color: ${(p: any) => p.theme.gray.lightest};
   }
 `;
+
+const StyledInputContainer = styled.div`
+  flex: 1;
+  position: relative;
+`;
+
+const MaxButton = styled.button`
+  position: absolute;
+  inset: 4px 4px 4px auto;
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ddd;
+  color: #666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  :focus {
+    outline: none;
+  }
+  :hover {
+    background-color: ${(p: any) => p.theme.gray.lighter};
+  }
+`;
+
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,6 +47,7 @@ const ButtonContainer = styled.div`
     border-radius: ${(p: any) => `0 0 ${p.theme.borderRadius} 0`};
   }
 `;
+
 const StyledInput = styled.input`
   height: 50px;
   width: 100%;
@@ -88,14 +112,24 @@ export const NumberInput = ({
     setValue(maxValue !== undefined ? Math.min(newValue, maxValue) : newValue);
   };
 
+  const setToMax = () => {
+    if (maxValue === undefined) return;
+    setValue(maxValue);
+  };
+
   return (
     <div className="flex">
-      <StyledInput
-        id={id}
-        onChange={handleManualInput}
-        value={value}
-        type="number"
-      />
+      <StyledInputContainer>
+        <StyledInput
+          id={id}
+          onChange={handleManualInput}
+          value={value}
+          type="number"
+        />
+        {maxValue !== undefined && (
+          <MaxButton onClick={setToMax}>max</MaxButton>
+        )}
+      </StyledInputContainer>
       <ButtonContainer>
         <StyledButton onClick={increment} style={{ borderBottom: 'none' }}>
           <FormUp size="medium" />

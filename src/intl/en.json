@@ -109,9 +109,6 @@
     "description": "{MIN_TOPUP_VALUE} is a number, and {TICKER_NAME} is either ETH or a variation of ETH depending on network",
     "message": "Validator effective balance is currently maxed out. If desired, you may add {MIN_TOPUP_VALUE} {TICKER_NAME} (the minimum allowed by the deposit contract)"
   },
-  "/rmnC0": {
-    "message": "If at all possible, consider running another client at this time to help protect yourself and the network."
-  },
   "/sp2Uu": {
     "message": "How much {TICKER_NAME} would you like to add to your stake?"
   },
@@ -333,9 +330,6 @@
   },
   "2iODii": {
     "message": "\"Type 0\", \"BLS\", \"locked\""
-  },
-  "2rflCq": {
-    "message": "Client diversity is extremely important for the network health of Ethereum: A bug in a client with a share of over 33% can cause Ethereum to go offline. If the client has a supermajority (>66%), a bug could cause the chain to incorrectly split, potentially leading to slashing."
   },
   "2t/3ab": {
     "message": "The other file you just generated is {depositDataJson}. This file contains the public key(s) associated with your validator(s); You will need to upload this in the next step."
@@ -1053,9 +1047,6 @@
   },
   "FazwRl": {
     "message": "Try again"
-  },
-  "FcCHp4": {
-    "message": "Latest data on network client usage"
   },
   "Felr8P": {
     "message": "A {validatorClient} is the software that acts on behalf of the validator by holding and using its private key to make attestations about the state of the chain. A single validator client can hold many key pairs, controlling many validators."
@@ -2204,9 +2195,6 @@
   "b+yUd5": {
     "message": "Fetch more"
   },
-  "b8APBK": {
-    "message": "More on client diversity"
-  },
   "bFiejS": {
     "message": "Note that in the second (unlikely) scenario, you stand to progressively lose up to 50% ({EJECTION_PRICE} ETH) of your stake over 21 days. After 21 days you are ejected out of the validator set. This ensures that blocks start finalizing again at some point."
   },
@@ -2318,9 +2306,6 @@
   },
   "cm5HC4": {
     "message": "You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
-  },
-  "cnQKC2": {
-    "message": "Currently Geth is used by >66% of the network."
   },
   "cpxfOR": {
     "message": "What are withdrawal credentials?"
@@ -2992,9 +2977,6 @@
   "oDObOQ": {
     "message": "If the “eth1 withdrawal address” was not provided on initial deposit, you can submit a once-only {BTEC} message signed with your BLS withdrawal keys to specific your desired Ethereum withdrawal address. This address can only be provided once, and cannot be changed again."
   },
-  "oF4os+": {
-    "message": "Currently Prysm is used by >33% of the network."
-  },
   "oF6xvJ": {
     "message": "EthStaker Knowledge Base"
   },
@@ -3003,9 +2985,6 @@
   },
   "oLxfO1": {
     "message": "Now that the keys are imported, all that is left to do (assuming your beacon node is already running) is to run the validator client."
-  },
-  "oNP2EG": {
-    "message": "Currently Lighthouse is used by >33% of the network."
   },
   "oNohob": {
     "message": "Configure your consensus client"

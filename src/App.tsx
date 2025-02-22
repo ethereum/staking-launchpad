@@ -1,47 +1,29 @@
 import React from 'react';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
-import { createBrowserHistory } from 'history';
-import { Grommet } from 'grommet';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Box, Grommet } from 'grommet';
+import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
-import { Web3ReactProvider } from '@web3-react/core';
-import { grommetTheme } from './styles/grommetTheme';
-import { styledComponentsTheme } from './styles/styledComponentsTheme';
-import { Routes as RoutedContent } from './Routes';
-import { GlobalStyles } from './styles/GlobalStyles';
-import { reducers } from './store/reducers';
-import { LocalizedRouter } from './components/LocalizedRouter';
-import { Footer } from './components/Footer';
-
-export const store = createStore(
-  reducers,
-  // @ts-ignore
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-
-function getLibrary(provider: any): Web3Provider {
-  const library = new Web3Provider(provider);
-  library.pollingInterval = 12000;
-  return library;
-}
-
-export const history = createBrowserHistory();
+import { Routes } from './Routes';
+import { NetworkStatus } from './components/NetworkStatus';
+import { WhatsNew } from './components/WhatsNew';
+import { PhishingProtection } from './components/PhishingProtection';
+import { useWalletPersistence } from './hooks/useWalletPersistence';
+import { theme } from './styles/theme';
 
 export const App: React.FC = () => {
+  useWalletPersistence();
+  const { active } = useWeb3React<Web3Provider>();
+
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <LocalizedRouter history={history}>
-        <Provider store={store}>
-          <Grommet theme={grommetTheme}>
-            <ThemeProvider theme={styledComponentsTheme}>
-              <GlobalStyles />
-              <RoutedContent />
-              <Footer />
-            </ThemeProvider>
-          </Grommet>
-        </Provider>
-      </LocalizedRouter>
-    </Web3ReactProvider>
+    <Grommet theme={theme} full>
+      <Router>
+        <Box fill>
+          <PhishingProtection />
+          <Routes />
+          {active && <NetworkStatus />}
+          <WhatsNew />
+        </Box>
+      </Router>
+    </Grommet>
   );
 };

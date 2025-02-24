@@ -36,18 +36,20 @@ export const getCompoundingQueueLength = async (
   web3: Web3
 ): Promise<BigNumber> => {
   console.log('Fetching compounding queue length');
-  const queueLengthHex = await web3.eth.getStorageAt(
-    COMPOUNDING_CONTRACT_ADDRESS!,
-    0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
-  );
+  try {
+    const queueLengthHex = await web3.eth.getStorageAt(
+      COMPOUNDING_CONTRACT_ADDRESS!,
+      0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
+    );
 
-  if (!queueLengthHex) {
-    console.error('Unable to get compounding queue length');
-    throw new Error('Unable to get compounding queue length');
+    if (!queueLengthHex)
+      throw new Error('Unable to get compounding queue length');
+
+    return new BigNumber(queueLengthHex);
+  } catch (error) {
+    console.error('Error fetching compounding queue length:', error);
+    return new BigNumber(0);
   }
-
-  console.log('Compounding queue length fetched:', queueLengthHex);
-  return new BigNumber(queueLengthHex);
 };
 
 // https://eips.ethereum.org/EIPS/eip-7251#fee-calculation
@@ -63,18 +65,20 @@ export const getWithdrawalQueueLength = async (
   web3: Web3
 ): Promise<BigNumber> => {
   console.log('Fetching withdrawal queue length');
-  const queueLengthHex = await web3.eth.getStorageAt(
-    WITHDRAWAL_CONTRACT_ADDRESS!,
-    0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
-  );
+  try {
+    const queueLengthHex = await web3.eth.getStorageAt(
+      WITHDRAWAL_CONTRACT_ADDRESS!,
+      0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
+    );
 
-  if (!queueLengthHex) {
-    console.error('Unable to get withdrawal queue length');
-    throw new Error('Unable to get withdrawal queue length');
+    if (!queueLengthHex)
+      throw new Error('Unable to get withdrawal queue length');
+
+    return new BigNumber(queueLengthHex);
+  } catch (error) {
+    console.error('Error fetching withdrawal queue length:', error);
+    return new BigNumber(0);
   }
-
-  console.log('Withdrawal queue length fetched:', queueLengthHex);
-  return new BigNumber(queueLengthHex);
 };
 
 // https://eips.ethereum.org/EIPS/eip-7002#fee-calculation

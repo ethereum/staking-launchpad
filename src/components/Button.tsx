@@ -8,6 +8,8 @@ interface CustomButtonProps {
   fullWidth?: boolean;
   rainbow?: boolean;
   onClick?: () => any;
+  destructive?: boolean;
+  secondary?: boolean;
 }
 
 const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
@@ -21,21 +23,26 @@ const calculateWidth = (p: { width?: number; fullWidth?: boolean }) => {
 
 const StyledButton = styled(GrommetButton)`
   display: block;
-  padding: 15px;
   text-transform: uppercase;
   width: ${calculateWidth};
+  padding: 1rem;
   font-size: 18px;
   letter-spacing: 1.5px;
   background-color: ${p =>
     p.primary ? p.theme.blue.dark : p.theme.gray.light};
   border: ${p => `1px solid ${p.theme.gray.medium}`};
+  border-radius: 4px;
   &:hover {
-    border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background-image: ${p => `linear-gradient(to right, ${p.theme.rainbow})`};
+    background-image: ${p =>
+      `linear-gradient(to right, ${
+        // @ts-ignore
+        p.destructive ? 'none' : p.theme.rainbow
+      })`};
     transition: transform 0.1s;
     transform: scale(1.02);
   }
+  ${p => p.disabled && 'pointer-events: none;'}
   // rainbow styles
   ${p =>
     // @ts-ignore
@@ -44,9 +51,29 @@ const StyledButton = styled(GrommetButton)`
      color: ${p.theme.blue.dark};
      border: 1px solid ${p.theme.blue.dark};
    `}
+
+  // destructive styles
+  ${p =>
+    // @ts-ignore
+    p.destructive &&
+    // @ts-ignore
+    `background-color: ${p.secondary ? p.theme.gray.light : p.theme.red.light};
+    // @ts-ignore
+    color: ${p.secondary ? p.theme.red.medium : p.theme.black};
+    // @ts-ignore
+    border: 1px solid ${p.secondary ? p.theme.gray.medium : p.theme.red.medium};
+    &:hover {
+      background-color: darkred;
+       color: white;
+     }
+   `}
 `;
 
-export const Button = (props: CustomButtonProps & ButtonProps) => {
-  const { className } = props;
-  return <StyledButton className={className} {...props} />;
-};
+export const Button = ({
+  className,
+  ...props
+}: CustomButtonProps &
+  ButtonProps &
+  Pick<React.HTMLAttributes<HTMLButtonElement>, 'style'>) => (
+  <StyledButton className={className} {...props} />
+);

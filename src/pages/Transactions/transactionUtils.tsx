@@ -1,16 +1,12 @@
 import { AbstractConnector } from '@web3-react/abstract-connector';
-import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
 import { prefix0X } from '../../utils/prefix0x';
 import { contractAbi } from '../../contractAbi';
 import { TransactionStatus } from '../../store/actions/depositFileActions';
-import { CONTRACT_ADDRESS, PRICE_PER_VALIDATOR } from '../../utils/envVars';
+import { DEPOSIT_CONTRACT_ADDRESS } from '../../utils/envVars';
 import { DepositKeyInterface } from '../../store/reducers';
-
-const pricePerValidator = new BigNumber(PRICE_PER_VALIDATOR);
-const TX_VALUE = pricePerValidator.multipliedBy(1e18).toNumber();
 
 const isUserRejectionError = (error: any) => {
   if (error.code === 4001) return true; // Metamask reject
@@ -68,14 +64,7 @@ export const handleMultipleTransactions = async (
 ) => {
   const walletProvider: any = await (connector as AbstractConnector).getProvider();
   const web3: any = new Web3(walletProvider);
-  const contract = new web3.eth.Contract(contractAbi, CONTRACT_ADDRESS);
-
-  const transactionParameters: SendOptions = {
-    // gasLimit: '0x124f8', TODO set gas limit
-    gasPrice: web3.utils.toHex(await web3.eth.getGasPrice()),
-    from: account as string,
-    value: TX_VALUE,
-  };
+  const contract = new web3.eth.Contract(contractAbi, DEPOSIT_CONTRACT_ADDRESS);
 
   const remainingTxs = depositKeys.filter(
     key =>
@@ -93,13 +82,21 @@ export const handleMultipleTransactions = async (
 
   const {
     pubkey,
-    // eslint-disable-next-line
+    // eslint-disable-next-line camelcase
     withdrawal_credentials,
     signature,
-    // eslint-disable-next-line
+    // eslint-disable-next-line camelcase
     deposit_data_root,
+    amount: amountInGwei,
   } = nextTransaction;
   updateTransactionStatus(pubkey, TransactionStatus.PENDING);
+
+  const transactionParameters: SendOptions = {
+    // gasLimit: '0x124f8', TODO set gas limit
+    gasPrice: web3.utils.toHex(await web3.eth.getGasPrice()),
+    from: account as string,
+    value: web3.utils.toWei(amountInGwei.toFixed(), 'gwei'),
+  };
 
   contract.methods
     .deposit(

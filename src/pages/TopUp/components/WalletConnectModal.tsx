@@ -55,7 +55,7 @@ const WalletConnectModal: React.FC<{
     chainId,
     active,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const executionLayerName = useIntlNetworkName();
+  const { executionLayerName } = useIntlNetworkName();
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined
@@ -110,7 +110,7 @@ const WalletConnectModal: React.FC<{
           setSelectedWallet={setSelectedWallet}
           logoSource={metamaskLogo}
           walletProvider={metamask}
-          title="Metamask"
+          title="MetaMask"
           error={connector === metamask ? error : undefined}
         />
         {!IS_NON_INFURA_TESTNET && (

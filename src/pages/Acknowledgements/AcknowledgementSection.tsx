@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useIntl } from 'react-intl';
 import { AcknowledgementIdsEnum } from '../../store/reducers';
 import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { Heading } from '../../components/Heading';
 import { Link } from '../../components/Link';
 import { routesEnum } from '../../Routes';
-import { useIntl } from 'react-intl';
 
 const Container = styled.div`
   width: 100%;

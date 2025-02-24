@@ -11,7 +11,7 @@ const SelectionText = styled(Heading)`
 interface TextSelectionBoxProps {
   isActive: boolean;
   onClick: any;
-  children: string;
+  children: React.ReactNode;
   style?: any;
 }
 

@@ -32,6 +32,7 @@ import { routesEnum } from '../../Routes';
 import { Code } from '../../components/Code';
 import { Alert } from '../../components/Alert';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
+import HelpCallout from '../../components/HelpCallout';
 
 const ChecklistPageStyles = styled.div`
   section {
@@ -138,12 +139,6 @@ const SectionHeader = styled.div`
     margin-top: -3rem;
     visibility: hidden;
   }
-`;
-
-const RainbowHeader = styled(SectionHeader as any)`
-  margin: 3rem 1rem 1rem;
-  background-image: ${p =>
-    `linear-gradient(to right, ${p.theme.rainbowLight})`};
 `;
 
 const CardContainer = styled.div`
@@ -542,8 +537,7 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="You need to run an {executionClient} as well as your
-                  {consensusClient}."
+                  defaultMessage="You need to run an {executionClient} as well as a {consensusClient}."
                   values={{
                     executionClient: (
                       <Link
@@ -574,11 +568,14 @@ export const Checklist = () => {
             <li className="py5">
               <Text>
                 <FormattedMessage
-                  defaultMessage="As of {date}, you'll need ~1TB for the Mainnet execution chain data alone (growing at >1GB/day)."
+                  defaultMessage="As of {date}, the Mainnet execution chain data alone is approaching 2TB (growing at >1GB/day). A 2TB SSD is a minimum requirement, while 4TB is now recommended."
                   values={{
                     date: (
                       <FormattedDate
-                        value={new Date(2022, 4)}
+                        // Last updated January 2025
+                        // Citation: https://hackmd.io/@kevaundray/S1hUQuV4Jx
+                        // Archive: https://web.archive.org/web/20250119140420/https://hackmd.io/@kevaundray/S1hUQuV4Jx
+                        value={new Date(2025, 1)}
                         year="numeric"
                         month="long"
                       />
@@ -621,6 +618,11 @@ export const Checklist = () => {
             <FormattedMessage defaultMessage="CPU and RAM" />
           </Heading>
           <ul className="sub-checklist-item">
+            <li className="py5">
+              <Text>
+                <FormattedMessage defaultMessage="Typically a minimum of 32 GB RAM is required, with 64 GB being recommended." />
+              </Text>
+            </li>
             <li className="py5">
               <Text>
                 <FormattedMessage defaultMessage="Check with client documentation to ensure the hardware you want to use is sufficient and supported." />
@@ -1516,25 +1518,10 @@ export const Checklist = () => {
             }
           />
         </section>
-        <RainbowHeader>
-          <FormattedMessage
-            defaultMessage="If you have questions, EthStaker community is a good place to get help!
-                You can find support on {discord} or {reddit}."
-            values={{
-              discord: (
-                <Link primary inline to="https://dsc.gg/ethstaker">
-                  Discord
-                </Link>
-              ),
-              reddit: (
-                <Link primary inline to="https://reddit.com/r/ethstaker">
-                  Reddit
-                </Link>
-              ),
-            }}
-            description="{variables} social media platform links to Discord and Reddit (do not translate names)"
-          />
-        </RainbowHeader>
+
+        <div style={{ margin: '3rem 1rem 1rem' }}>
+          <HelpCallout />
+        </div>
       </ChecklistPageStyles>
     </PageTemplate>
   );

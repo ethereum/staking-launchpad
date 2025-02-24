@@ -9,7 +9,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { toChecksumAddress } from 'ethereumjs-util';
 // Components
 import { Instructions } from './Instructions';
-import { NumberInput } from './NumberInput';
+import { NumberInput } from '../../components/NumberInput';
 import { OperatingSystemButtons } from './OperatingSystemButtons';
 import { WorkflowPageTemplate } from '../../components/WorkflowPage/WorkflowPageTemplate';
 import { Alert } from '../../components/Alert';
@@ -28,8 +28,10 @@ import { StoreState } from '../../store/reducers';
 // Utilities
 import {
   IS_MAINNET,
-  PRICE_PER_VALIDATOR,
+  MAX_EFFECTIVE_BALANCE,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
+  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 // Images
@@ -37,6 +39,10 @@ import instructions1 from '../../static/instructions_1.svg';
 import instructions2 from '../../static/instructions_2.svg';
 // Routes
 import { routesEnum } from '../../Routes';
+import { AccountTypeButtons } from './AccountTypeButtons';
+import { Code } from '../../components/Code';
+
+export type AccountType = '0x01' | '0x02';
 
 export enum operatingSystem {
   'MAC',
@@ -132,14 +138,22 @@ const _GenerateKeysPage = ({
   workflow,
 }: Props): JSX.Element => {
   const { formatMessage } = useIntl();
-  const [validatorCount, setValidatorCount] = useState<number | string>(0);
+  const [ethAmount, setStateEthAmount] = useState<number>(
+    MIN_ACTIVATION_BALANCE
+  );
+  const [validatorCount, setStateValidatorCount] = useState<number>(1);
+
   const [
     mnemonicAcknowledgementChecked,
     setMnemonicAcknowledgementChecked,
   ] = useState<boolean>(workflow > WorkflowStep.GENERATE_KEY_PAIRS);
+
+  const [chosenType, setChosenType] = useState<AccountType>('0x02');
+
   const [chosenOs, setChosenOs] = useState<operatingSystem>(
     operatingSystem.LINUX
   );
+
   const [withdrawalAddress, setWithdrawalAddress] = useState<string>('');
 
   // Default to CLI on mainnet for now, once we have more confidence in it, switch to GUI as default.
@@ -173,6 +187,24 @@ const _GenerateKeysPage = ({
     return '❌';
   }, [withdrawalAddress, isValidWithdrawalAddress]);
 
+  const setValidatorCount = (count: number) => {
+    const newCount = Math.max(count, 1);
+    setStateValidatorCount(newCount);
+    setStateEthAmount(
+      Math.min(newCount * MIN_ACTIVATION_BALANCE, MAX_EFFECTIVE_BALANCE)
+    );
+  };
+
+  const setEthAmount = (amount: number) => {
+    const roundedToGwei = Math.floor(amount * ETHER_TO_GWEI) / ETHER_TO_GWEI;
+    const newAmount = Math.min(
+      MAX_EFFECTIVE_BALANCE,
+      Math.max(1, roundedToGwei)
+    );
+    setStateEthAmount(newAmount);
+    setStateValidatorCount(Math.floor(newAmount / MIN_ACTIVATION_BALANCE));
+  };
+
   const handleSubmit = () => {
     if (workflow === WorkflowStep.GENERATE_KEY_PAIRS) {
       dispatchWorkflowUpdate(WorkflowStep.UPLOAD_VALIDATOR_FILE);
@@ -187,43 +219,42 @@ const _GenerateKeysPage = ({
     <WorkflowPageTemplate
       title={formatMessage({ defaultMessage: 'Generate key pairs' })}
     >
-      <Paper>
-        <Heading level={2} size="small" color="blueMedium">
-          <FormattedMessage defaultMessage="How many validators would you like to run?" />
-        </Heading>
-        <NumValidatorContainer>
-          <div>
-            <Text className="mb5">
-              <FormattedMessage defaultMessage="Validators" />
-            </Text>
-            <NumberInput value={validatorCount} setValue={setValidatorCount} />
-          </div>
-          <div>
-            <Text className="mb5">Cost</Text>
-            <Text>
-              {validatorCount === ''
-                ? validatorCount
-                : new BigNumber(validatorCount)
-                    .times(new BigNumber(PRICE_PER_VALIDATOR))
-                    .toFixed(1)
-                    .toString()}{' '}
-              {TICKER_NAME}
-            </Text>
-          </div>
-        </NumValidatorContainer>
-      </Paper>
-      <Paper className="mt20">
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium" className="mb20">
           <FormattedMessage defaultMessage="Withdrawal address" />
         </Heading>
         <Text className="mb20">
           <FormattedMessage
-            defaultMessage="You may choose to provide a withdrawal address with your initial
-            deposit to automatically enable reward payments and also the ability to fully
-            exit your funds at anytime (recommended). This address should be to a regular
-            Ethereum address and will be the only address funds can be sent to from your new
-            validator accounts, and cannot be changed once chosen."
+            defaultMessage="Your withdrawal address should be a regular Ethereum account that {youControl}, ideally using {coldStorage} techniques."
+            values={{
+              youControl: (
+                <strong>
+                  <FormattedMessage defaultMessage="you control" />
+                </strong>
+              ),
+              coldStorage: (
+                <em>
+                  <FormattedMessage defaultMessage="cold storage" />
+                </em>
+              ),
+            }}
           />
+        </Text>
+        <Text className="mb20">
+          <FormattedMessage
+            defaultMessage="Setting this address establishes your validator {withdrawalCredentials}, and permanently links the chosen execution address to your validator.
+              This account will be the only account that can receive withdrawn funds from your validator."
+            values={{
+              withdrawalCredentials: (
+                <em>
+                  <FormattedMessage defaultMessage="withdrawal credentials" />
+                </em>
+              ),
+            }}
+          />
+        </Text>
+        <Text className="mb20">
+          <FormattedMessage defaultMessage="It can also be used to authorize certain validator actions, such as requesting partial withdrawals, or exiting the validator account entirely." />
         </Text>
         <Text className="mb20">
           <FormattedMessage
@@ -244,19 +275,115 @@ const _GenerateKeysPage = ({
           {isValidWithdrawalAddress ? (
             <FormattedMessage
               defaultMessage="Make sure you have control over this address as this cannot be changed.
-              Providing an account from a centralized exchange is not recommended."
+              Providing an account from a centralized exchange is not recommended. Cold storage is strongly recommended."
             />
           ) : (
             <FormattedMessage
-              defaultMessage="If this is not provided now, your deposited funds will remain
-              locked on the Beacon Chain until an address is provided. Unlocking
-              will require signing a message with your withdrawal keys,
-              generated from your mnemonic seed phrase (so keep it safe)."
+              defaultMessage="Setting a withdrawal address is considered best security practice.
+                If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided.
+                Unlocking will require signing a message with your BLS withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
             />
           )}
         </Alert>
       </Paper>
-      <Paper className="mt20">
+
+      <Paper className="mb20">
+        <Heading level={2} size="small" color="blueMedium">
+          <FormattedMessage defaultMessage="What type of staking account?" />
+        </Heading>
+
+        <AccountTypeButtons
+          chosenType={chosenType}
+          setChosenType={setChosenType}
+        />
+      </Paper>
+
+      {chosenType === '0x02' && (
+        <Paper className="mb20">
+          <Heading level={2} size="small" color="blueMedium" className="mb10">
+            <FormattedMessage
+              defaultMessage="How much {TICKER_NAME} would you like to stake?"
+              values={{ TICKER_NAME }}
+            />
+          </Heading>
+          <Text className="mb10">
+            <FormattedMessage
+              defaultMessage="This approach creates a single compounding account. Requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold up to {MAX_EFFECTIVE_BALANCE}."
+              values={{
+                MAX_EFFECTIVE_BALANCE,
+                MIN_ACTIVATION_BALANCE,
+                TICKER_NAME,
+              }}
+            />
+          </Text>
+
+          <NumValidatorContainer>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage
+                  defaultMessage="Amount of {TICKER_NAME}"
+                  values={{ TICKER_NAME }}
+                />
+              </Text>
+              <NumberInput
+                value={ethAmount}
+                setValue={setEthAmount}
+                allowDecimals
+              />
+            </div>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage defaultMessage="Cost" />
+              </Text>
+              <Text>
+                {ethAmount} {TICKER_NAME}
+              </Text>
+            </div>
+          </NumValidatorContainer>
+        </Paper>
+      )}
+
+      {chosenType === '0x01' && (
+        <Paper className="mb20">
+          <Heading level={2} size="small" color="blueMedium" className="mb10">
+            <FormattedMessage defaultMessage="How many accounts would you like to run?" />
+          </Heading>
+          <Text className="mb10">
+            <FormattedMessage
+              defaultMessage="Each validator of this account type requires exactly {MIN_ACTIVATION_BALANCE} {TICKER_NAME}."
+              values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
+            />
+          </Text>
+
+          <NumValidatorContainer>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage defaultMessage="Validators" />
+              </Text>
+              <NumberInput
+                value={validatorCount}
+                setValue={setValidatorCount}
+              />
+            </div>
+            <div>
+              <Text className="mb5">
+                <FormattedMessage defaultMessage="Cost" />
+              </Text>
+              <Text>
+                {validatorCount === 0
+                  ? validatorCount
+                  : new BigNumber(validatorCount)
+                      .times(new BigNumber(MIN_ACTIVATION_BALANCE))
+                      .toFixed(0)
+                      .toString()}{' '}
+                {TICKER_NAME}
+              </Text>
+            </div>
+          </NumValidatorContainer>
+        </Paper>
+      )}
+
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="What is your current operating system?" />
         </Heading>
@@ -276,33 +403,50 @@ const _GenerateKeysPage = ({
         os={osMapping[chosenOs]}
         chosenTool={chosenTool}
         setChosenTool={setChosenTool}
+        accountType={chosenType}
+        ethAmount={ethAmount}
       />
 
-      <Paper className="mt20">
+      <Paper className="mb20">
         <Heading level={2} size="small" color="blueMedium">
           <FormattedMessage defaultMessage="Save the key files and get the validator file ready" />
         </Heading>
         <Text className="mt20">
           {chosenTool === keysTool.GUI ? (
             <FormattedMessage
-              defaultMessage="You should now have your mnemonic written down in a safe place and a
-              keystore saved for each of your {validatorCount} validators. Please
-              make sure you keep these safe, preferably offline. Your validator
-              keystores should be available in the selected directory."
+              defaultMessage="You should now have your mnemonic written down in a safe place and a keystore saved for {yourValidators}.
+                Please make sure you keep these safe, preferably offline.
+                Your validator keystores should be available in the selected directory."
               values={{
-                validatorCount: <span>{validatorCount}</span>,
+                yourValidators:
+                  validatorCount < 2 ? (
+                    <FormattedMessage defaultMessage="your validator" />
+                  ) : (
+                    <FormattedMessage
+                      defaultMessage="each of your {validatorCount} validators"
+                      values={{ validatorCount }}
+                    />
+                  ),
               }}
             />
           ) : (
             <FormattedMessage
-              defaultMessage="You should now have your mnemonic written down in a safe place and a
-              keystore saved for each of your {validatorCount} validators. Please
-              make sure you keep these safe, preferably offline. Your validator
-              keystores should be available in the newly created
-              {validatorKeys} directory."
+              defaultMessage="You should now have your mnemonic written down in a safe place and a keystore saved for {yourValidators}.
+                Please make sure you keep these safe, preferably offline.
+                Your validator keystores should be available in the newly created {validatorKeys} directory."
               values={{
-                validatorKeys: <Highlight>validator_keys</Highlight>,
-                validatorCount: <span>{validatorCount}</span>,
+                yourValidators:
+                  validatorCount < 2 ? (
+                    <FormattedMessage defaultMessage="your validator" />
+                  ) : (
+                    <FormattedMessage
+                      defaultMessage="each of your {validatorCount} validators"
+                      values={{ validatorCount }}
+                    />
+                  ),
+                validatorKeys: (
+                  <Code>/ethstaker-deposit-cli/validator_keys</Code>
+                ),
               }}
             />
           )}
@@ -344,7 +488,7 @@ const _GenerateKeysPage = ({
           </Link>
         </Alert>
       </Paper>
-      <Paper className="mt20">
+      <Paper>
         <CheckBox
           onChange={onCheckboxClick}
           checked={mnemonicAcknowledgementChecked}

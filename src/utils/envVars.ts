@@ -106,3 +106,5 @@ if(process.env.REACT_APP_MAX_QUERY_LIMIT && Number.isNaN(Number(process.env.REAC
     throw new Error("REACT_APP_MAX_QUERY_LIMIT must be of type: number")
 }
 export const MAX_QUERY_LIMIT            = Number(process.env.REACT_APP_MAX_QUERY_LIMIT) || 100;
+
+export const EXCESS_INHIBITOR           = "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";

@@ -13,16 +13,19 @@ export const useWithdrawalQueue = (activate: boolean) => {
   const updateQueue = useCallback(async () => {
     if (!connector) return;
 
+    console.log('Updating withdrawal queue');
     const walletProvider = await (connector as AbstractConnector).getProvider();
     const web3 = new Web3(walletProvider);
 
     const withdrawalQueue = await getWithdrawalQueue(web3);
+    console.log('Withdrawal queue updated:', withdrawalQueue);
     setQueue(withdrawalQueue);
   }, [connector]);
 
   useEffect(() => {
     if (!activate) return;
 
+    console.log('Activating withdrawal queue updates');
     updateQueue();
     // Run fetchQueue every 10s to update queue state, while showModal open
     const interval = setInterval(updateQueue, 10_000);

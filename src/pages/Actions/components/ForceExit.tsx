@@ -53,6 +53,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     txStatus,
   } = useTxModal();
   const { queue, setQueue } = useWithdrawalQueue(!showTx);
+  console.log('ForceExit component rendered', { validator, queue });
+
   const executionEtherBalance = useExecutionBalance();
 
   const [userConfirmationValue, setUserConfirmationValue] = useState('');
@@ -72,6 +74,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   const createExitTransaction = async () => {
     if (!account) return;
 
+    console.log('Creating exit transaction');
     setTxStatus('waiting_user_confirmation');
     setShowTx(true);
 
@@ -85,17 +88,21 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     } = await generateWithdrawalParams(web3, account, validator.pubkey, 0);
 
     setQueue(withdrawalQueue);
+    console.log('Exit transaction params:', transactionParams);
 
     web3.eth
       .sendTransaction(transactionParams)
       .on('transactionHash', (hash: string): void => {
+        console.log('Transaction hash:', hash);
         setTxStatus('confirm_on_chain');
         setTxHash(hash);
       })
       .on('confirmation', (): any => {
+        console.log('Transaction confirmed');
         setTxStatus('success');
       })
-      .on('error', () => {
+      .on('error', error => {
+        console.error('Transaction error:', error);
         setTxStatus('error');
       });
   };

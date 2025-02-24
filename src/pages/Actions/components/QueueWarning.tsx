@@ -11,9 +11,11 @@ type QueueWarningProps = {
 };
 
 const QueueWarning = ({ queue }: QueueWarningProps) => {
+  console.log('Rendering QueueWarning component', queue);
   if (!queue) return null;
 
   const feeStatus = getFeeStatus(queue.fee);
+  console.log('Fee status:', feeStatus);
 
   if (feeStatus === 'high')
     return (

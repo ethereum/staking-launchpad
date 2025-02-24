@@ -35,14 +35,18 @@ const getRequiredFee = (queueLength: BigNumber): BigNumber => {
 export const getCompoundingQueueLength = async (
   web3: Web3
 ): Promise<BigNumber> => {
+  console.log('Fetching compounding queue length');
   const queueLengthHex = await web3.eth.getStorageAt(
     COMPOUNDING_CONTRACT_ADDRESS!,
     0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
   );
 
-  if (!queueLengthHex)
+  if (!queueLengthHex) {
+    console.error('Unable to get compounding queue length');
     throw new Error('Unable to get compounding queue length');
+  }
 
+  console.log('Compounding queue length fetched:', queueLengthHex);
   return new BigNumber(queueLengthHex);
 };
 
@@ -58,15 +62,18 @@ export const getCompoundingQueue = async (web3: Web3): Promise<Queue> => {
 export const getWithdrawalQueueLength = async (
   web3: Web3
 ): Promise<BigNumber> => {
+  console.log('Fetching withdrawal queue length');
   const queueLengthHex = await web3.eth.getStorageAt(
     WITHDRAWAL_CONTRACT_ADDRESS!,
     0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
   );
 
   if (!queueLengthHex) {
+    console.error('Unable to get withdrawal queue length');
     throw new Error('Unable to get withdrawal queue length');
   }
 
+  console.log('Withdrawal queue length fetched:', queueLengthHex);
   return new BigNumber(queueLengthHex);
 };
 
@@ -106,6 +113,7 @@ export const generateWithdrawalParams = async (
   pubkey: string,
   amount: number
 ): Promise<TxConfigQueue> => {
+  console.log('Generating withdrawal params');
   const queue = await getWithdrawalQueue(web3);
 
   // https://eips.ethereum.org/EIPS/eip-7002#add-withdrawal-request
@@ -117,6 +125,8 @@ export const generateWithdrawalParams = async (
     value: queue.fee.toString(),
     gas: 200000,
   };
+
+  console.log('Withdrawal params generated:', transactionParams);
   return { transactionParams, queue };
 };
 

@@ -108,7 +108,7 @@ const SelectClientSection = ({
         </Heading>
         <Text className="my10">
           <FormattedMessage defaultMessage="After client installation, ensure you are fully synced before submitting your staking deposit. This can take several days." />{' '}
-          <Link primary inline to="/checklist">
+          <Link primary inline to="/checklist" shouldOpenNewTab>
             <FormattedMessage defaultMessage="Validator checklist" />
           </Link>
         </Text>

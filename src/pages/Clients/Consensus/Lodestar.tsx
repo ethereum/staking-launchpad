@@ -18,9 +18,9 @@ export const LodestarDetails = ({ shortened }: { shortened?: boolean }) => (
     </SectionTitle>
     <Text className="mt10">
       <FormattedMessage
-        defaultMessage="Lodestar is an open-sourced TypeScript implementation of the Ethereum Consensus (formerly known as eth2)
-                        specification maintained by ChainSafe Systems. ChainSafe's goal is to develop, improve and diversify the Ethereum
-                        proof of stake ecosystem with their beacon chain and validator client with a focus on light client implementations."
+        defaultMessage="Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. 
+                        Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. 
+                        Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
       />
     </Text>
     <Link to="https://chainsafe.github.io/lodestar/" primary className="mt10">
@@ -33,7 +33,7 @@ export const LodestarDetails = ({ shortened }: { shortened?: boolean }) => (
       <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="Lodestar is built using TypeScript under a GNU Lesser General Public License v3.0." />
+      <FormattedMessage defaultMessage="Lodestar is built using TypeScript under a combination of the Apache 2.0 and GNU Lesser General Public License v3.0." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
@@ -51,7 +51,7 @@ export const LodestarDetails = ({ shortened }: { shortened?: boolean }) => (
           </SectionTitle>
           <Link
             primary
-            to="https://chainsafe.github.io/lodestar/usage/validator-management/"
+            to="https://chainsafe.github.io/lodestar/run/validator-management/vc-configuration"
           >
             <FormattedMessage defaultMessage="Lodestar validator key management documentation" />
           </Link>

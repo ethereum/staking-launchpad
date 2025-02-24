@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Box, BoxProps } from 'grommet';
 
-const variantStyles = {
+const variantStyles: Record<string, React.CSSProperties> = {
   primary: {
     backgroundColor: '#cce5ff',
     borderColor: '#b8daff',
@@ -39,28 +39,33 @@ const HighlightStyles = styled.div`
   }
 `;
 
-export const Alert = (
-  props: {
-    children: React.ReactNode;
-    className?: string;
-    error?: boolean;
-    style?: any;
-    variant?: string;
-  } & BoxProps
-): JSX.Element => {
-  const { variant = 'primary', className, children, pad } = props;
-  return (
-    <Box
-      border
-      className={className}
-      pad={pad || 'medium'}
-      round="xsmall"
-      variant={variant}
-      {...props}
-      // @ts-ignore
-      style={variantStyles[variant]}
-    >
-      <HighlightStyles>{children}</HighlightStyles>
-    </Box>
-  );
-};
+type AlertProps = {
+  children: React.ReactNode;
+  className?: string;
+  error?: boolean;
+  style?: any;
+  variant?: string;
+} & BoxProps;
+
+export const Alert = ({
+  variant = 'primary',
+  className,
+  children,
+  style,
+  pad,
+  ...props
+}: AlertProps) => (
+  <Box
+    border
+    className={className}
+    pad={pad || 'medium'}
+    round="xsmall"
+    style={{
+      ...variantStyles[variant],
+      ...style,
+    }}
+    {...props}
+  >
+    <HighlightStyles>{children}</HighlightStyles>
+  </Box>
+);

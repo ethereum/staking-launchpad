@@ -96,7 +96,7 @@ export const AcknowledgementProgressStep = ({
         {acknowledgementsWithCopy[acknowledgementId]}
       </StyledText>
       <Animated
-        animationInDuration={300}
+        animationInDuration={100}
         animationIn="fadeIn"
         animationOut="fadeOut"
         isVisible={isComplete}

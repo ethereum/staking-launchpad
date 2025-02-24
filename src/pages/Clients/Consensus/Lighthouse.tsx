@@ -10,7 +10,6 @@ import {
 import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
 import { LIGHTHOUSE_INSTALLATION_URL } from '../../../utils/envVars';
 
 const CodeSnippet = styled.div`
@@ -33,9 +32,6 @@ const CodeSnippet = styled.div`
 
 export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
-    <ClientDiversityWarning>
-      <FormattedMessage defaultMessage="Currently Lighthouse is used by >33% of the network." />
-    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Lighthouse
     </SectionTitle>
@@ -90,7 +86,7 @@ export const LighthouseDetails = ({ shortened }: { shortened?: boolean }) => (
           </Text>
           <CodeSnippet>
             lighthouse account validator import --directory
-            staking-deposit-cli/validator_keys
+            ethstaker-deposit-cli/validator_keys
           </CodeSnippet>
           <Text className="mt10">
             <FormattedMessage defaultMessage="Once the process is complete, you should see the following:" />

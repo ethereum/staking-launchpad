@@ -294,7 +294,7 @@ export const WithdrawalCredentials: FC<IProps> = () => {
       setValidator({
         validatorIndex: parseInt(inputValue, 10),
         withdrawalCredentials,
-        isUpgraded: withdrawalCredentials.startsWith('0x01'),
+        isUpgraded: !withdrawalCredentials.startsWith('0x00'),
       });
     } catch (error) {
       setHasError(true);

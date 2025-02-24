@@ -9,8 +9,8 @@ import { Heading } from '../../components/Heading';
 import { Text } from '../../components/Text';
 import {
   EJECTION_PRICE,
-  PRICE_PER_VALIDATOR,
-  TICKER_NAME,
+  MIN_ACTIVATION_BALANCE,
+  MAX_EFFECTIVE_BALANCE,
 } from '../../utils/envVars';
 
 const FAQStyles = styled.div`
@@ -54,13 +54,13 @@ export const FAQ = () => {
       <FAQStyles>
         <section>
           <Anchor to="#introduction" id="introduction">
-            <SectionTitle level={3}>
+            <SectionTitle level={2}>
               <FormattedMessage defaultMessage="Introduction" />
             </SectionTitle>
           </Anchor>
 
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What exactly is a validator?" />
             </Heading>
             <Text className="mt10">
@@ -77,7 +77,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What is a validator client?" />
             </Heading>
             <Text className="mt10">
@@ -94,7 +94,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What is a node operator?" />
             </Heading>
             <Text className="mt10">
@@ -111,99 +111,50 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How much ETH do I need to stake to become a validator?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Each key-pair associated with a validator requires locking {ethPerValidator} to be activated, which represents your initial balance as well as your {initialAndMaximum} voting power for any validator."
+                defaultMessage="Each key-pair associated with a validator requires locking at least {ethPerValidator} to be activated. The amount deposited will represent the initial voting power for any given validator."
                 values={{
-                  ethPerValidator: <strong>{PRICE_PER_VALIDATOR} ETH</strong>,
-                  initialAndMaximum: (
-                    <em>
-                      <FormattedMessage defaultMessage="initial and maximum" />
-                    </em>
+                  ethPerValidator: (
+                    <strong>{MIN_ACTIVATION_BALANCE} ETH</strong>
                   ),
                 }}
               />
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage
                 defaultMessage="Is there any advantage to having more than {pricePerValidator} ETH at stake?"
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
+                values={{ pricePerValidator: MIN_ACTIVATION_BALANCE }}
               />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="No. There is no advantage to having more than {pricePerValidator} ETH staked."
+                defaultMessage="This depends on the type of withdrawal credentials a validator account has.
+                  Those using the newer {compounding} credential type (Type 2, 0x02) benefit from ETH balances beyond {MIN_ACTIVATION_BALANCE}, all the way up to {MAX_EFFECTIVE_BALANCE}."
                 values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Depositing more than {pricePerValidator} ETH to a single set of keys does not increase rewards potential, nor does accumulating rewards above {pricePerValidator} ETH, as each validator is limited to an {effectiveBalance} of {pricePerValidator}. This means that staking is done in {pricePerValidator} ETH increments, each with its own set of keys and balance."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                  effectiveBalance: (
-                    <Link
-                      primary
-                      inline
-                      to="https://www.attestant.io/posts/understanding-validator-effective-balance/"
-                    >
-                      effective balance
-                    </Link>
+                  compounding: (
+                    <strong>
+                      <FormattedMessage defaultMessage="compounding" />
+                    </strong>
+                  ),
+                  MIN_ACTIVATION_BALANCE,
+                  MAX_EFFECTIVE_BALANCE: (
+                    <strong>{MAX_EFFECTIVE_BALANCE}</strong>
                   ),
                 }}
               />
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Validators with a maxed-out effective balance and a linked execution withdrawal address will have any balance over {PRICE_PER_VALIDATOR} {TICKER_NAME} automatically withdrawn as excess balance."
-                values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
-              />
-            </Text>
-          </section>
-          <section>
-            <Heading level={4}>
-              <FormattedMessage
-                defaultMessage="Why the {pricePerValidator} ETH maximum?"
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Heading>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Each {pricePerValidator} ETH deposit activates one set of validator keys. These keys are used to sign off on the state of the network. The lower the ETH requirement, the more resulting signatures must be saved by the network. {pricePerValidator} ETH was chosen as a balance between enabling as many people as possible to stake without inhibiting decentralization by bloating the size of each block with signatures."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Limiting the maximum stake to {pricePerValidator} ETH per validator encourages decentralization of power as it prevents any single validator from having an excessively large vote on the state of the chain. It also limits the amount of ETH that can be exited from staking at any given time, as the number of validator that can exit in a given time period is limited. This helps protect the network against certain attacks."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Although a validator's vote is weighted by the amount it has at stake, each validators voting weight starts at, and is capped at {PRICE_PER_VALIDATOR}. It is possible to drop below this with poor node performance, but it is not possible to raise above it."
-                values={{ PRICE_PER_VALIDATOR }}
-              />
-            </Text>
-            <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="Do not deposit more than {PRICE_PER_VALIDATOR} ETH for a single validator—it will not add to your rewards."
-                values={{ PRICE_PER_VALIDATOR }}
+                defaultMessage="This value is known as the maximum effective balance (the maximum amount of ETH that contributes to your stake).
+                  Older account types (Type 0, or Type 1) have an effective balance limited to {MIN_ACTIVATION_BALANCE}.
+                  In these accounts, any balance over {MIN_ACTIVATION_BALANCE} does not contribute to your principle, nor compound earnings."
+                values={{ MIN_ACTIVATION_BALANCE }}
               />
             </Text>
             <Link
@@ -215,21 +166,141 @@ export const FAQ = () => {
             </Link>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3} className="mb10">
+              <FormattedMessage defaultMessage="What are the different validator types?" />
+            </Heading>
+            <Text className="mb20">
+              <FormattedMessage
+                defaultMessage="Every validator account has a property called {withdrawalCredentials}, which designates which keys are in control of any balance transfers/withdrawals.
+                There are currently three (3) types of withdrawal credentials a validator account can have, differentiated by numerical prefixes:"
+                values={{
+                  withdrawalCredentials: (
+                    <em>
+                      <FormattedMessage defaultMessage="withdrawal credentials" />
+                    </em>
+                  ),
+                }}
+              />
+            </Text>
+
+            <div className="mb20">
+              <Heading level={4}>
+                <FormattedMessage defaultMessage='"Type 0", "BLS", "locked"' />
+              </Heading>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Prefix" />
+                </em>
+                : <Code>0x00</Code>
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Max effective balance" />
+                </em>
+                : {MIN_ACTIVATION_BALANCE} ETH
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Distinguishing features" />
+                </em>
+                :{' '}
+                <FormattedMessage defaultMessage="Funds locked on the beacon chain until execution withdrawal address is provided" />
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Controlled by" />
+                </em>
+                :{' '}
+                <FormattedMessage defaultMessage="A BLS key that can be generated from the same mnemonic used to generate your validator signing keys. This key is used to sign a message providing an execution (regular Ethereum) withdrawal address, which will be permanently assigned to the validator (migrating it to a Type 1 account)." />
+              </Text>
+            </div>
+
+            <div className="mb20">
+              <Heading level={4}>
+                <FormattedMessage defaultMessage='"Type 1", "regular withdrawals"' />
+              </Heading>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Prefix" />
+                </em>
+                : <Code>0x01</Code>
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Max effective balance" />
+                </em>
+                : {MIN_ACTIVATION_BALANCE} ETH
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Distinguishing features" />
+                </em>
+                :{' '}
+                <FormattedMessage defaultMessage="Regular withdrawals distributed to withdrawal address for any balance over 32 ETH, automatically on a regular basis" />
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Controlled by" />
+                </em>
+                :{' '}
+                <FormattedMessage defaultMessage="Withdrawal address private key" />
+              </Text>
+            </div>
+
+            <div className="mb20">
+              <Heading level={4}>
+                <FormattedMessage defaultMessage='"Type 2", "compounding"' />
+              </Heading>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Prefix" />
+                </em>
+                : <Code>0x02</Code>
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Max effective balance" />
+                </em>
+                : {MAX_EFFECTIVE_BALANCE} ETH
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Distinguishing features" />
+                </em>
+                :{' '}
+                <FormattedMessage
+                  defaultMessage="Maximum effective balance of {MAX_EFFECTIVE_BALANCE}, a 64x increase to previous types, and abilty to request partial withdrawal of any balance over {MIN_ACTIVATION_BALANCE} via smart contract interaction"
+                  values={{ MAX_EFFECTIVE_BALANCE, MIN_ACTIVATION_BALANCE }}
+                />
+              </Text>
+              <Text>
+                <em>
+                  <FormattedMessage defaultMessage="Controlled by" />
+                </em>
+                :{' '}
+                <FormattedMessage defaultMessage="Withdrawal address private key" />
+              </Text>
+            </div>
+
+            <Text>
+              <em>
+                <FormattedMessage defaultMessage="Information current as of the Pectra network upgrade 2025." />
+              </em>
+            </Text>
+          </section>
+          <section>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What is the deposit contract?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage defaultMessage="You can think of the deposit contract as a transfer of funds from an Ethereum account to a proof-of-stake validator account." />
             </Text>
             <Text className="mt10">
-              <FormattedMessage
-                defaultMessage="It specifies who is staking, who is validating, how much is being
-                  staked, and who can withdraw the funds."
-              />
+              <FormattedMessage defaultMessage="It holds the records of all the initial deposits made for all validator accounts, and is read by the Beacon Chain to credit these accounts accordingly." />
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="Why do I need to have funds at stake?" />
             </Heading>
             <Text className="mt10">
@@ -246,7 +317,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="Can I stop running my validator for a few days and then start it back up again?" />
             </Heading>
             <Text className="mt10">
@@ -254,7 +325,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="When should I top up my validator’s balance?" />
             </Heading>
             <Text className="mt10">
@@ -274,13 +345,16 @@ export const FAQ = () => {
             </Text>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="At the other end of the spectrum, if your balance is closer to 31
-                  ETH, it’s probably not worth adding the extra ETH required to get back to 32."
+                defaultMessage="If you have a compounding account, any additional ETH up to 2048 will contribute to your effective balance. If you have a non-compounding withdrawal type, you will benefit from top-ups bringing the validator back to {MIN_ACTIVATION_BALANCE} ETH, but would not benefit from top-ups above this amount."
+                values={{ MIN_ACTIVATION_BALANCE }}
               />
+            </Text>
+            <Text className="mt10">
+              <FormattedMessage defaultMessage="To take advantage of a higher effective balance, accounts with older withdrawal credentials can be upgraded to a compounding account. This can be done once and is irreversible." />
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage
                 defaultMessage="When can I withdraw my funds, and what’s the difference
                   between exiting and withdrawing?"
@@ -326,7 +400,7 @@ export const FAQ = () => {
             </Link>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What happened to 'Eth2?'" />
             </Heading>
             <Text className="mt10">
@@ -376,12 +450,12 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#responsibilities" id="responsibilities">
-            <SectionTitle level={3}>
+            <SectionTitle level={2}>
               <FormattedMessage defaultMessage="Responsibilities" />
             </SectionTitle>
           </Anchor>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What clients do I need to run?" />
             </Heading>
             <Text className="mt10">
@@ -397,15 +471,13 @@ export const FAQ = () => {
             </Link>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="Why do I need to run an execution client now?" />
             </Heading>
             <Text className="mt10">
               <FormattedMessage
-                defaultMessage="Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited {pricePerValidator} ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
-                values={{
-                  pricePerValidator: PRICE_PER_VALIDATOR,
-                }}
+                defaultMessage="Previously a Beacon Node (consensus layer) only had to watch the staking deposit contract on the execution layer in order to know which validator accounts had deposited {MIN_ACTIVATION_BALANCE} ETH. This information was easily served by and obtained from third-party providers such as Infura or Alchemy."
+                values={{ MIN_ACTIVATION_BALANCE }}
               />
             </Text>
             <Text className="mt10">
@@ -435,7 +507,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How are validators incentivized to stay active and honest?" />
             </Heading>
             <Text className="mt10">
@@ -482,7 +554,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How are rewards/penalties issued?" />
             </Heading>
             <Text className="mt10">
@@ -508,7 +580,7 @@ export const FAQ = () => {
             </Link>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How often are rewards/penalties issued?" />
             </Heading>
             <Text className="mt10">
@@ -539,7 +611,7 @@ export const FAQ = () => {
             </BlockQuote>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How large are the rewards/penalties?" />
             </Heading>
             <Text className="mt10">
@@ -598,7 +670,7 @@ export const FAQ = () => {
             </BlockQuote>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="Why do rewards depend on the total number of validators in the network?" />
             </Heading>
             <Text className="mt10">
@@ -634,7 +706,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How badly will I be penalized for being offline?" />
             </Heading>
             <Text className="mt10">
@@ -709,7 +781,7 @@ export const FAQ = () => {
             </BlockQuote>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How great does my uptime need to be for my validator to be net profitable?" />
             </Heading>
             <Text className="mt10">
@@ -735,7 +807,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="How much will I be penalized for acting maliciously?" />
             </Heading>
             <Text className="mt10">
@@ -765,7 +837,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What exactly is slashing?" />
             </Heading>
             <Text className="mt10">
@@ -785,12 +857,12 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#withdrawal-credentials" id="withdrawal-credentials">
-            <SectionTitle level={3}>
+            <SectionTitle level={2}>
               <FormattedMessage defaultMessage="Withdrawal credentials" />
             </SectionTitle>
           </Anchor>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What are withdrawal credentials?" />
             </Heading>
             <Text className="mt10">
@@ -873,7 +945,7 @@ export const FAQ = () => {
               </li>
             </ul>
             <section>
-              <Heading level={4}>
+              <Heading level={3}>
                 <FormattedMessage defaultMessage="Can I change the withdrawal credentials of my validator after the first deposit?" />
               </Heading>
               <Text className="mt10">
@@ -895,12 +967,12 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#keys" id="keys">
-            <SectionTitle level={3}>
+            <SectionTitle level={2}>
               <FormattedMessage defaultMessage="Keys" />
             </SectionTitle>
           </Anchor>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What happens if I lose my signing key?" />
             </Heading>
             <Text className="mt10">
@@ -951,7 +1023,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What happens if I have BLS withdrawal credentials and I lose my withdrawal key?" />
             </Heading>
             <Text className="mt10">
@@ -978,7 +1050,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="What happens if my withdrawal key is stolen?" />
             </Heading>
             <Text className="mt10">
@@ -1024,7 +1096,7 @@ export const FAQ = () => {
             </Text>
           </section>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="Why two keys instead of one?" />
             </Heading>
             <Text className="mt10">
@@ -1038,12 +1110,12 @@ export const FAQ = () => {
         </section>
         <section>
           <Anchor to="#support" id="support">
-            <SectionTitle level={3}>
+            <SectionTitle level={2}>
               <FormattedMessage defaultMessage="Support" />
             </SectionTitle>
           </Anchor>
           <section>
-            <Heading level={4}>
+            <Heading level={3}>
               <FormattedMessage defaultMessage="Where can I find troubleshooting support?" />
             </Heading>
             <Text className="mt10">

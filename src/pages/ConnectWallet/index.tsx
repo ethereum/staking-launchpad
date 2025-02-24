@@ -17,7 +17,6 @@ import {
   fortmatic,
   metamask,
   NetworkChainId,
-  portis,
   useMetamaskEagerConnect,
   useMetamaskListener,
 } from './web3Utils';
@@ -30,7 +29,6 @@ import { Link } from '../../components/Link';
 import { Text } from '../../components/Text';
 import { WalletButton } from './WalletButton';
 import metamaskLogo from '../../static/metamask.svg';
-import portisLogo from '../../static/portis.svg';
 import fortmaticLogo from '../../static/fortmatic.svg';
 import { Paper } from '../../components/Paper';
 import { Heading } from '../../components/Heading';
@@ -41,17 +39,17 @@ import {
   WorkflowStep,
 } from '../../store/actions/workflowActions';
 import {
-  PORTIS_DAPP_ID,
   ENABLE_RPC_FEATURES,
   IS_MAINNET,
-  PRICE_PER_VALIDATOR,
   TICKER_NAME,
   IS_NON_INFURA_TESTNET,
   FAUCET_URL,
+  ETHER_TO_GWEI,
 } from '../../utils/envVars';
 import { routeToCorrectWorkflowStep } from '../../utils/RouteToCorrectWorkflowStep';
 import { MetamaskHardwareButton } from './MetamaskHardwareButton';
 import useIntlNetworkName from '../../hooks/useIntlNetworkName';
+import { ValidatorType } from '../Actions/types';
 
 // styled components
 const Container = styled.div`
@@ -217,19 +215,21 @@ const _ConnectWalletPage = ({
     if (!!account && !!library) {
       library
         .getBalance(account)
-        .then((amount: any) => {
-          const formattedBalance = Number(
-            parseFloat(formatEther(amount)).toPrecision(5)
+        .then((wei: any) => {
+          const etherBalance = Number(
+            parseFloat(formatEther(wei)).toPrecision(5)
           );
-          // @ts-ignore (type check performed in envVars.ts)
-          const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
 
-          setBalance(formattedBalance);
-          if (formattedBalance < requiredBalance || formattedBalance === 0) {
-            setLowBalance(true);
-          } else {
-            setLowBalance(false);
-          }
+          const gweiBalance = etherBalance * ETHER_TO_GWEI;
+
+          const requiredGweiBalance = depositKeys.reduce(
+            (acc, key) => acc + key.amount,
+            0
+          );
+
+          setBalance(etherBalance);
+
+          setLowBalance(gweiBalance < requiredGweiBalance || gweiBalance === 0);
         })
         .catch(() => setBalance(null));
       return () => setBalance(null);
@@ -242,22 +242,22 @@ const _ConnectWalletPage = ({
       library.on('block', () => {
         library
           .getBalance(account)
-          .then((amount: any) => {
-            const formattedBalance = Number(
-              parseFloat(formatEther(amount)).toPrecision(5)
+          .then((wei: any) => {
+            const etherBalance = Number(
+              parseFloat(formatEther(wei)).toPrecision(5)
             );
-            if (formattedBalance !== balanceRef.current) {
-              setBalance(formattedBalance);
-              // @ts-ignore (type check performed in envVars.ts)
-              const requiredBalance = depositKeys.length * PRICE_PER_VALIDATOR;
-              if (
-                formattedBalance < requiredBalance ||
-                formattedBalance === 0
-              ) {
-                setLowBalance(true);
-              } else {
-                setLowBalance(false);
-              }
+
+            const gweiBalance = etherBalance * ETHER_TO_GWEI;
+
+            if (etherBalance !== balanceRef.current) {
+              setBalance(etherBalance);
+              const requiredGweiBalance = depositKeys.reduce(
+                (acc, key) => acc + key.amount,
+                0
+              );
+              setLowBalance(
+                gweiBalance < requiredGweiBalance || gweiBalance === 0
+              );
             }
           })
           .catch(() => setBalance(null));
@@ -269,8 +269,7 @@ const _ConnectWalletPage = ({
 
   const getWalletName = (provider?: AbstractConnector) => {
     if (!provider) return '';
-    if (provider === metamask) return 'Metamask';
-    if (provider === portis) return 'Portis';
+    if (provider === metamask) return 'MetaMask';
     if (provider === fortmatic) return 'Fortmatic';
     return '';
   };
@@ -317,9 +316,10 @@ const _ConnectWalletPage = ({
   const withdrawalAddress = useMemo<string>(() => {
     // eslint-disable-next-line camelcase
     const credentials = depositKeys[0]?.withdrawal_credentials ?? '';
-    if (credentials.startsWith('01')) return `0x${credentials.slice(-40)}`;
-    return '';
+    if (+credentials.slice(0, 2) < ValidatorType.Execution) return '';
+    return `0x${credentials.slice(-40)}`;
   }, [depositKeys]);
+
   const withdrawalAddressShort = useMemo<string>(
     () => `${withdrawalAddress.slice(0, 6)}...${withdrawalAddress.slice(-4)}`,
     [withdrawalAddress]
@@ -471,20 +471,9 @@ const _ConnectWalletPage = ({
                   setSelectedWallet={setSelectedWallet}
                   logoSource={metamaskLogo}
                   walletProvider={metamask}
-                  title="Metamask"
+                  title="MetaMask"
                   error={walletProvider === metamask ? error : undefined}
                 />
-                {!IS_NON_INFURA_TESTNET && (
-                  <WalletButton
-                    invalid={PORTIS_DAPP_ID === ''}
-                    selectedWallet={selectedWallet}
-                    setSelectedWallet={setSelectedWallet}
-                    logoSource={portisLogo}
-                    walletProvider={portis}
-                    title="Portis"
-                    error={walletProvider === portis ? error : undefined}
-                  />
-                )}
                 {!IS_NON_INFURA_TESTNET && (
                   <WalletButton
                     invalid={!ENABLE_RPC_FEATURES}

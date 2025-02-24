@@ -4,6 +4,9 @@
   NODE_VERSION = "14.19.2"
 [context.deploy-preview.environment]
   NODE_VERSION = "14.19.2"
+  REACT_APP_IS_MERGE = "true"
+  REACT_APP_COMPOUNDING_CONTRACT_ADDRESS = "0x0000BBdDc7CE488642fb579F8B00f3a590007251"
+  REACT_APP_WITHDRAWAL_CONTRACT_ADDRESS = "0x00000961Ef480Eb55e80D19ad83579A64c007002"
 [context.branch-deploy.environment]
   NODE_VERSION = "14.19.2"
 [context.dev.environment]

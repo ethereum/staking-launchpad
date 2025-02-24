@@ -71,8 +71,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
           <ul className="mb20">
             <li>
               <FormattedMessage
-                defaultMessage="{stakingDepositCli}: if you used the “eth1 withdrawal address” ({eth1WithdrawalAddress})
-                flag when generating your keys, you're good to go"
+                defaultMessage="{stakingDepositCli}: if you added a withdrawal address ({eth1WithdrawalAddress}, {executionAddress}, or {withdrawalAddress} flags) when generating your keys, you're good to go"
                 values={{
                   stakingDepositCli: (
                     <strong>
@@ -82,6 +81,8 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
                   eth1WithdrawalAddress: (
                     <HashCode>--eth1_withdrawal_address</HashCode>
                   ),
+                  executionAddress: <HashCode>--execution_address</HashCode>,
+                  withdrawalAddress: <HashCode>--withdrawal_address</HashCode>,
                 }}
               />
             </li>
@@ -119,7 +120,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
               defaultMessage="If you’re preparing to make a deposit to activate a new
               validator, you can (and should) provide a withdrawal address with your initial deposit. This is
               done at time of key generation, and is then included in your deposit data json file {depositData}
-              which is submitted with your 32 ETH deposit transaction."
+              which is submitted with your ETH deposit transaction."
               values={{
                 depositData: (
                   <Code>
@@ -137,15 +138,18 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
           <ul>
             <li>
               <FormattedMessage
-                defaultMessage="{stakingDepositCli}: This is done by using the “eth1 withdrawal address”
-                ({eth1WithdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
+                defaultMessage="{stakingDepositCli}: This is done by using the withdrawal address ({eth1WithdrawalAddress}, {executionAddress}, or {withdrawalAddress}) flag when generating your keys with the Staking Deposit CLI."
                 values={{
                   stakingDepositCli: (
                     <strong>
                       <FormattedMessage defaultMessage="Staking Deposit CLI" />
                     </strong>
                   ),
-                  eth1WithdrawalAddress: <Code>--eth1_withdrawal_address</Code>,
+                  eth1WithdrawalAddress: (
+                    <HashCode>--eth1_withdrawal_address</HashCode>
+                  ),
+                  executionAddress: <HashCode>--execution_address</HashCode>,
+                  withdrawalAddress: <HashCode>--withdrawal_address</HashCode>,
                 }}
               />
             </li>
@@ -163,7 +167,7 @@ export const WithdrawalsTabComparison: FC<IProps> = () => {
             </li>
             <Text>
               <FormattedMessage
-                defaultMessage="By providing this flag, your withdrawal credentials will contain the {type1} prefix and
+                defaultMessage="By providing this flag, your withdrawal credentials will contain the {type1} (or greater) prefix and
                 your withdrawal address, signaling that your account is ready for withdrawals."
                 values={{ type1: <Code>0x01</Code> }}
               />

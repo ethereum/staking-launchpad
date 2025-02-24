@@ -27,7 +27,6 @@ const StyledPaper = styled(Paper)`
     transition: transform 0.1s;
     transform: scale(1.02);
   }
-  outline: 3px solid purple;
 `;
 
 export const MetamaskHardwareButton = () => {
@@ -35,15 +34,12 @@ export const MetamaskHardwareButton = () => {
   return (
     <Link
       isTextLink={false}
-      to="https://metamask.zendesk.com/hc/en-us/articles/360020394612-How-to-connect-a-Trezor-or-Ledger-Hardware-Wallet"
+      to="https://support.metamask.io/more-web3/wallets/user-guide-how-to-use-a-hardware-wallet/"
     >
-      <StyledPaper
-        pad="xsmall"
-        className="wallet-button flex flex-row relative"
-      >
+      <StyledPaper pad="xsmall" className="flex flex-row relative">
         <Logo src={ledger} />
         <StyledText>
-          <FormattedMessage defaultMessage="Connect your hardware wallet to Metamask" />
+          <FormattedMessage defaultMessage="Connect your hardware wallet to MetaMask" />
         </StyledText>
         <StyledText>{locale === 'ar' ? '↖' : '↗'}</StyledText>
       </StyledPaper>

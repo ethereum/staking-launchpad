@@ -6,6 +6,7 @@ import {
   COMPOUNDING_CONTRACT_ADDRESS,
   WITHDRAWAL_CONTRACT_ADDRESS,
   TICKER_NAME,
+  EXCESS_INHIBITOR,
 } from '../../utils/envVars';
 
 export type Queue = {
@@ -35,13 +36,23 @@ const getRequiredFee = (queueLength: BigNumber): BigNumber => {
 export const getCompoundingQueueLength = async (
   web3: Web3
 ): Promise<BigNumber> => {
-  const queueLengthHex = await web3.eth.getStorageAt(
-    COMPOUNDING_CONTRACT_ADDRESS!,
-    0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
-  );
+  let queueLengthHex;
+  try {
+    queueLengthHex = await web3.eth.getStorageAt(
+      COMPOUNDING_CONTRACT_ADDRESS!,
+      0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
+    );
 
-  if (!queueLengthHex)
-    throw new Error('Unable to get compounding queue length');
+    if (!queueLengthHex) {
+      throw new Error('Unable to get compounding queue length');
+    }
+    if (queueLengthHex === EXCESS_INHIBITOR) {
+      throw new Error('Compounding queue is disabled');
+    }
+  } catch (error) {
+    console.error(error);
+    queueLengthHex = '0x0';
+  }
 
   return new BigNumber(queueLengthHex);
 };
@@ -58,13 +69,22 @@ export const getCompoundingQueue = async (web3: Web3): Promise<Queue> => {
 export const getWithdrawalQueueLength = async (
   web3: Web3
 ): Promise<BigNumber> => {
-  const queueLengthHex = await web3.eth.getStorageAt(
-    WITHDRAWAL_CONTRACT_ADDRESS!,
-    0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
-  );
+  let queueLengthHex;
+  try {
+    queueLengthHex = await web3.eth.getStorageAt(
+      WITHDRAWAL_CONTRACT_ADDRESS!,
+      0 // EXCESS_WITHDRAWAL_REQUESTS_STORAGE_SLOT
+    );
 
-  if (!queueLengthHex) {
-    throw new Error('Unable to get withdrawal queue length');
+    if (!queueLengthHex) {
+      throw new Error('Unable to get withdrawal queue length');
+    }
+    if (queueLengthHex === EXCESS_INHIBITOR) {
+      throw new Error('Withdrawal queue is disabled');
+    }
+  } catch (error) {
+    console.error(error);
+    queueLengthHex = '0x0';
   }
 
   return new BigNumber(queueLengthHex);

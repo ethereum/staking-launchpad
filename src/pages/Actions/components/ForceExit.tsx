@@ -78,7 +78,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     const walletProvider = await (connector as AbstractConnector).getProvider();
     const web3 = new Web3(walletProvider);
 
-    // Force exits have withdrawal amount of 0
+    // Full exits have withdrawal amount of 0
     const {
       transactionParams,
       queue: withdrawalQueue,
@@ -111,7 +111,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   return (
     <>
       <Button
-        label={<FormattedMessage defaultMessage="Force exit" />}
+        label={<FormattedMessage defaultMessage="Exit fully" />}
         onClick={handleOpen}
         destructive
       />

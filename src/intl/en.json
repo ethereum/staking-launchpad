@@ -765,6 +765,9 @@
   "AZaw+B": {
     "message": "Exiting"
   },
+  "Ab1qjD": {
+    "message": "Confirm on execution layer"
+  },
   "AbBgEs": {
     "message": "understanding validator effective balance"
   },
@@ -855,6 +858,9 @@
   },
   "CF9vMR": {
     "message": "Proof of stake"
+  },
+  "CFjSbY": {
+    "message": "Available to withdrawal"
   },
   "CPl2hh": {
     "message": "I have reviewed the checklist and understand how withdrawals work."
@@ -1184,6 +1190,9 @@
   "I7MjRD": {
     "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
   },
+  "I7N/DN": {
+    "message": "Confirmation on the execution layer does not guarantee that the request will be valid on the consensus layer. Please check the beacon explorer to confirm if the request is successful after 13 minutes (under normal finalization period)."
+  },
   "ICbItT": {
     "message": "This approach creates a single compounding account. Requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold up to {MAX_EFFECTIVE_BALANCE}."
   },
@@ -1264,9 +1273,6 @@
   },
   "Ja5vXW": {
     "message": "Further reading"
-  },
-  "Jge1Sx": {
-    "message": "Force exit"
   },
   "JhUYU3": {
     "message": "Download CLI app"
@@ -2352,6 +2358,9 @@
   "dvr19k": {
     "message": "Setup"
   },
+  "dyfKG1": {
+    "message": "Exit fully"
+  },
   "dzdAcD": {
     "message": "Default Port"
   },
@@ -2784,9 +2793,6 @@
   },
   "l5XCJW": {
     "message": "Advisories"
-  },
-  "l5kq/q": {
-    "message": "Confirm on-chain"
   },
   "l6OJpv": {
     "message": "First, create a venv virtualenv under repository directory:"

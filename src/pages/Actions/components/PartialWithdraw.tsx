@@ -232,7 +232,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Available" />:
+                        <FormattedMessage defaultMessage="Available to withdrawal" />
+                        :
                       </div>
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}

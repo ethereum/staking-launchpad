@@ -118,12 +118,17 @@ export const TransactionProgress: React.FC<TransactionProgressProps> = ({
           <FormattedMessage defaultMessage="Sign transaction with your wallet" />
         </Text>
       </Item>
-      <Item>
-        <ProgressCircle step={2} status={confirmOnChainStatus} />
-        <Text>
-          <FormattedMessage defaultMessage="Confirm on-chain" />
+      <div>
+        <Item>
+          <ProgressCircle step={2} status={confirmOnChainStatus} />
+          <Text>
+            <FormattedMessage defaultMessage="Confirm on execution layer" />
+          </Text>
+        </Item>
+        <Text style={{ fontSize: '0.875rem' }}>
+          <FormattedMessage defaultMessage="Confirmation on the execution layer does not guarantee that the request will be valid on the consensus layer. Please check the beacon explorer to confirm if the request is successful after 13 minutes (under normal finalization period)." />
         </Text>
-      </Item>
+      </div>
     </div>
   );
 };

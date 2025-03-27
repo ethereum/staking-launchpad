@@ -18,14 +18,14 @@ export enum NetworkChainId {
   'Mainnet' = 1,
   'Sepolia' = 11155111,
   'Holesky' = 17000,
-  'devnet7' = 7032118028,
+  'Hoodi' = 560048,
 }
 
 export const NetworkChainIdDict: { [id: string]: number } = {
   Mainnet: 1,
   Sepolia: 11155111,
   Holesky: 17000,
-  devnet7: 7032118028,
+  Hoodi: 560048,
 };
 
 /*
@@ -37,13 +37,13 @@ const supportedNetworks = [
   NetworkChainId.Mainnet,
   NetworkChainId.Sepolia,
   NetworkChainId.Holesky,
-  NetworkChainId.devnet7,
+  NetworkChainId.Hoodi,
 ];
 
 enum Testnet {
   'Sepolia',
   'Holesky',
-  'devnet7',
+  'Hoodi',
 }
 
 enum Mainnet {
@@ -54,7 +54,7 @@ export const NetworkNameToChainId: { [key: string]: NetworkChainId } = {
   Holesky: NetworkChainId.Holesky,
   Mainnet: NetworkChainId.Mainnet,
   Sepolia: NetworkChainId.Sepolia,
-  devnet7: NetworkChainId.devnet7,
+  Hoodi: NetworkChainId.Hoodi,
 };
 
 export const TARGET_NETWORK_CHAIN_ID = IS_MAINNET

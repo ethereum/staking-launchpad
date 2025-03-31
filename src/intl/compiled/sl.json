@@ -1,4 +1,10 @@
 {
+  "+/eSwc": [
+    {
+      "type": 0,
+      "value": "Od macOS Sequoia dalje morajo uporabniki te aplikacije odobriti v svojih nastavitvah Zasebnosti in Varnosti po neuspelem poskusu."
+    }
+  ],
   "+2VHUU": [
     {
       "type": 0,
@@ -21,22 +27,28 @@
       "value": " (obdelava nalog za doseganje soglasja z dokazom o deležu, prej 'Eth2' ali 'Ethereum 2.0')."
     }
   ],
+  "+3gmIR": [
+    {
+      "type": 0,
+      "value": "Lodestar je ekosistem v jeziku TypeScript za soglasje v omrežju Ethereum, ki ga je razvilo podjetje ChainSafe Systems. Naša vodilna izdelka sta na proizvodnjo pripravljena oddajniška veriga in odjemalec za validacijo. Niša Lodestarja je v njegovem implementacijskem jeziku, TypeScript. Naša programska oprema in orodja so edinstveno zasnovani kot vodilna izbira za raziskovalce in razvijalce za hitro razvijanje prototipov."
+    }
+  ],
+  "+88H3v": [
+    {
+      "type": 0,
+      "value": "prenesite sredstva na"
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
       "value": "Interaktivni način"
     }
   ],
-  "+Gj8F4": [
+  "+POmjo": [
     {
       "type": 0,
-      "value": "Pripravite se lahko tako, da pri ustvarjanju ključev in podatkov o depozitu navedete naslov za dvig."
-    }
-  ],
-  "+L0IkF": [
-    {
-      "type": 0,
-      "value": "2. korak: generirajte ključe za polog z uporabo orodja za polog fundacije Ethereum Foundation"
+      "value": "To bo povzročilo presežek stanja za vaš validator, ki ga bo omrežje samodejno povrnilo na vaš izvršni račun."
     }
   ],
   "+UUcBt": [
@@ -63,6 +75,12 @@
       "value": "Sprejmem"
     }
   ],
+  "+jXRfC": [
+    {
+      "type": 0,
+      "value": "Hrani zapise o vseh začetnih pologih za vse račune validatorjev, oddajniška veriga pa ga bere, da tem računom ustrezno pripiše sredstva."
+    }
+  ],
   "+mDtA4": [
     {
       "type": 0,
@@ -75,6 +93,12 @@
       "value": "Poljščina"
     }
   ],
+  "+u97jv": [
+    {
+      "type": 0,
+      "value": "Sredstva so zaklenjena na oddajniški verigi, dokler ni naveden naslov za izvršitev dviga."
+    }
+  ],
   "+vHhHz": [
     {
       "type": 0,
@@ -85,6 +109,12 @@
     {
       "type": 0,
       "value": "Discord:"
+    }
+  ],
+  "+z2Qty": [
+    {
+      "type": 0,
+      "value": "Najvišje efektivno stanje (Max EB)"
     }
   ],
   "/+atl4": [
@@ -111,6 +141,12 @@
       "value": "Indonezijščina"
     }
   ],
+  "/EhlLs": [
+    {
+      "type": 0,
+      "value": "Ta validator mora ostati povezan, dokler ni dosežena epoha za izstop."
+    }
+  ],
   "/JiR8D": [
     {
       "type": 0,
@@ -121,12 +157,6 @@
     {
       "type": 0,
       "value": "Upoštevajte, da sta čakalni vrsti »aktivacija« in »izstop« neodvisni in ne tekmujeta. Vsaka je omejen na epoho."
-    }
-  ],
-  "hrJ1oM": [
-    {
-      "type": 0,
-      "value": "Svoj namen, da želite prenehati z validacijo, lahko signalizirate tako, da s svojim validatorjem podpišete sporočilo za prostovoljni izstop."
     }
   ],
   "/SbhtD": [
@@ -165,18 +195,16 @@
       "value": "Ta stran žal ne obstaja."
     }
   ],
-  "/WenEu": [
+  "/X/iV+": [
     {
       "type": 0,
-      "value": "Sami ste odgovorni za transakcijo. Zlonamerna spletna mesta vas lahko poskušajo zvabiti k temu, da bi "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
+      "value": "Poskrbite, da boste imeli nadzor nad tem naslovom, ker ga ne bo mogoče spremeniti. Uporaba računa s centralizirane borze ni priporočljiva. Priporočamo hladno shranjevanje."
+    }
+  ],
+  "/Z2BBF": [
     {
       "type": 0,
-      "value": " poslali njim, namesto na uradno pogodbo za polog. Poskrbite, da je naslov, na katerega pošiljate transakcijo, pravilen naslov."
+      "value": "Pridružujete se omrežju, ki deluje prek programske opreme. Kot pri vsaki programski opremi obstaja možnost nenamernih napak. Čeprav so take napake malo verjetne, lahko povzročijo zmanjšanje deleža."
     }
   ],
   "/e+qAC": [
@@ -185,18 +213,64 @@
       "value": "epoha dviga"
     }
   ],
-  "/h0DGY": [
+  "/eUGwM": [
     {
       "type": 0,
-      "value": "Zakaj "
+      "value": "Dvignete lahko poljuben del svojih zastavljenih sredstev "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "TICKER_NAME"
     },
     {
       "type": 0,
-      "value": " ETH maksimum?"
+      "value": " nad "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/hEGaO": [
+    {
+      "type": 0,
+      "value": "Ta račun validatorja ima največje učinkovito stanje v višini "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Dodati morate le še "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " za dosego največjega učinkovitega stanja."
     }
   ],
   "/jJLYy": [
@@ -211,10 +285,46 @@
       "value": "Za nalaganje sporočila prek spletnega uporabniškega vmesnika lahko uporabite tudi orodje za oddajanje Beaconcha.in:"
     }
   ],
+  "/qfQgA": [
+    {
+      "type": 0,
+      "value": "Učinkovito stanje validatorja je trenutno največje. Če želite, lahko dodate "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (najmanjši znesek, ki ga dovoljuje pogodba za polog)"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
       "value": "Če je le mogoče, sedaj razmislite o zagonu drugega odjemalca, da zaščitite sebe in omrežje."
+    }
+  ],
+  "/sp2Uu": [
+    {
+      "type": 0,
+      "value": "Koliko "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " bi želeli dodati k svojemu deležu?"
     }
   ],
   "/tHxib": [
@@ -263,32 +373,22 @@
       "value": "Kako visoke so nagrade/kazni?"
     }
   ],
-  "00OWFk": [
+  "0/du/O": [
     {
       "type": 0,
-      "value": "Najmanjša vrednost dopolnitve je "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Razumem posledice, izstopi iz tega validatorja"
     }
   ],
   "00d8uq": [
     {
       "type": 0,
       "value": "Po namestitvi bo vaš validator takoj postal aktiven. Ta čas uporabite za izpolnitev kontrolnega seznama in pridobivanje dodatne prakse na testnem omrežju."
+    }
+  ],
+  "01AzGi": [
+    {
+      "type": 0,
+      "value": "Nethermind je zgrajen v C# s prilagodljivo arhitekturo vtičnikov in licenciran pod LGPL-3.0."
     }
   ],
   "03xT/J": [
@@ -309,6 +409,20 @@
       "value": "Poverilnice za dvig:"
     }
   ],
+  "0Em8Cd": [
+    {
+      "type": 0,
+      "value": "Od "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": " se podatki izvršilne verige Mainnet sami približujejo 2 TB (rastejo za > 1 GB/dan). 2 TB SSD je najmanjša zahteva, medtem ko je zdaj priporočeno 4 TB."
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
@@ -321,10 +435,10 @@
       "value": "Pričakovani rezultati"
     }
   ],
-  "pUAoW1": [
+  "0L5E+q": [
     {
       "type": 0,
-      "value": "Ali je dejansko stanje največje pri 32?"
+      "value": "Opozorilo! Omrežni promet je znatno povišan."
     }
   ],
   "0PlVao": [
@@ -351,10 +465,68 @@
       "value": "poverilnice za dvig"
     }
   ],
-  "vCHTnu": [
+  "0WPDnu": [
     {
       "type": 0,
-      "value": "Poverilnice za dvig"
+      "value": "Priporočljivo je, da dopolnite stanje, če se vaše stanje približuje "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH. To storite, da preprečite izključitev iz nabora validatorjev (kar se zgodi samodejno, če vaše stanje pade pod "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH)."
+    }
+  ],
+  "0XRY0E": [
+    {
+      "type": 0,
+      "value": "Če je vaša mnemonična fraza ukradena/ogrožena in še niste nastavili naslova za dvig, bi morali to poskusiti, "
+    },
+    {
+      "type": 1,
+      "value": "immediately"
+    },
+    {
+      "type": 0,
+      "value": " da preprečite "
+    },
+    {
+      "type": 1,
+      "value": "immediately"
+    },
+    {
+      "type": 0,
+      "value": "  "
+    },
+    {
+      "type": 1,
+      "value": "immediately"
+    },
+    {
+      "type": 0,
+      "value": "  trajno izgubo sredstev, preden napadalec nepovratno določi svoj naslov za dvig za vaš validator."
+    }
+  ],
+  "0fkPmg": [
+    {
+      "type": 0,
+      "value": "Reth je modularna, sodelavcem prijazna in izjemno hitra implementacija protokola Ethereum, napisana v jeziku Rust."
+    }
+  ],
+  "0flw9D": [
+    {
+      "type": 0,
+      "value": "Nadaljnja dejanja niso potrebna."
     }
   ],
   "0i4cCJ": [
@@ -383,30 +555,10 @@
       "value": "Nato namestite pakete odvisnosti:"
     }
   ],
-  "0mc/JV": [
-    {
-      "type": 0,
-      "value": "Validacija je obveznost"
-    }
-  ],
   "0oNdmk": [
     {
       "type": 0,
       "value": "Pogosta vprašanja validatorjev"
-    }
-  ],
-  "cJ9MRI": [
-    {
-      "type": 0,
-      "value": "Kot je navedeno zgoraj, se ta korak zaključi s podpisom sporočila, imenovanega "
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": ". Ti so sprejeti v bloke od prve reže po nadgradnji Shanghai/Capella."
     }
   ],
   "0uqjBl": [
@@ -465,6 +617,12 @@
       "value": "Kdaj lahko dvignem svoja sredstva in kakšna je razlika med prenehanjem sodelovanja in dvigom?"
     }
   ],
+  "1D3Svm": [
+    {
+      "type": 0,
+      "value": "Ta validatorski račun bo trajno nadgrajen na račun s kapitalizacijo nagrad (tipa 2)."
+    }
+  ],
   "1FdDAV": [
     {
       "type": 0,
@@ -475,6 +633,18 @@
     {
       "type": 0,
       "value": "Če svoji stranki ne posredujete naslova, ne boste prejeli provizije transakcije, ko vaš validator predlaga bloke."
+    }
+  ],
+  "1ICikH": [
+    {
+      "type": 0,
+      "value": "Ta račun bo trajno izključen iz omrežja."
+    }
+  ],
+  "1ONfru": [
+    {
+      "type": 0,
+      "value": "Če želite to sporočilo vključiti v glavno omrežje, ga morate naložiti v zbirko sporočil »Podpisana sprememba BLS za spremembo izvedbe« na vozlišču."
     }
   ],
   "1P6GMj": [
@@ -549,6 +719,40 @@
       "value": "Dokumentacija o izvajanju odjemalca Nethermind"
     }
   ],
+  "1v/5i7": [
+    {
+      "type": 0,
+      "value": "Prenesite in zapustite validator"
+    }
+  ],
+  "1vVSD6": [
+    {
+      "type": 0,
+      "value": "Če naslov za izvršitev dviga ob pologu ni nastavljen, bodo vaša sredstva blokirana, dokler ne bo zagotovljen. Vaše privzete ključe za dvig je mogoče ustvariti iz vaše mnemonične fraze za preverjanje pristnosti enkratne spremembe za dodajanje naslova za dvig. Ne pozabite "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2/VDay": [
+    {
+      "type": 0,
+      "value": "Največje število validatorjev na en samodejni prenos sredstev: 16.384 (2"
+    },
+    {
+      "type": 1,
+      "value": "exp"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "21EI3f": [
     {
       "type": 0,
@@ -563,12 +767,6 @@
     {
       "type": 1,
       "value": "JSON"
-    }
-  ],
-  "mre8Tb": [
-    {
-      "type": 0,
-      "value": "Če naslov za dvig ni bil nastavljen in ste izgubili dostop do mnemonične varnostne fraze, bodo vaša sredstva ostala zaklenjena na računu validatorja za nedoločen čas."
     }
   ],
   "25suT4": [
@@ -593,18 +791,10 @@
       "value": "."
     }
   ],
-  "2A6Wjz": [
+  "28aik1": [
     {
       "type": 0,
-      "value": "Če navedete to zastavico, bodo vaše poverilnice za dvig vsebovale predpono "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " in vaš naslov za dvig, kar pomeni, da je vaš račun pripravljen za dvige."
+      "value": "Omejitve hitrosti, določene za čakalno vrsto izplačil"
     }
   ],
   "2AHkym": [
@@ -631,6 +821,12 @@
       "value": "Sledite navodilom, ki so vam predstavljena v aplikaciji, da ustvarite svoje ključe."
     }
   ],
+  "2O2sfp": [
+    {
+      "type": 0,
+      "value": "Dokončati"
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
@@ -647,16 +843,16 @@
       "value": "Kateri dejavniki vplivajo na pogostost izplačil?"
     }
   ],
+  "2S/h9V": [
+    {
+      "type": 0,
+      "value": "vi nadzirate"
+    }
+  ],
   "2XWJdH": [
     {
       "type": 0,
       "value": "Če je tako, pojdite na naslednje vprašanje"
-    }
-  ],
-  "3zWAPC": [
-    {
-      "type": 0,
-      "value": "kadarkoli lahko ponovno izračunate svoj ključ za podpisovanje iz ključa za dvig"
     }
   ],
   "2c8F5x": [
@@ -671,20 +867,40 @@
       "value": "dvig presežka stanja"
     }
   ],
-  "5CdqwI": [
+  "2hZ+qP": [
     {
       "type": 0,
-      "value": "Dokumentacija za upravljanje ključa Nimbus"
-    }
-  ],
-  "2rFwzp": [
+      "value": "Da omogočite svojemu(-im) validatorju(-em) oddajniške verige samodejni dvig stanj na vašem "
+    },
     {
       "type": 1,
-      "value": "wagyuKeyGenGui"
+      "value": "executionAddress"
     },
     {
       "type": 0,
-      "value": ": če ste pri generiranju ključev navedli naslov za dvig, ste pripravljeni (najdete ga v možnosti »napredni način«)"
+      "value": ", lahko uporabite orodje "
+    },
+    {
+      "type": 1,
+      "value": "ethstakerDepositCLI"
+    },
+    {
+      "type": 0,
+      "value": " za oblikovanje podpisanega sporočila »Podpisana sprememba BLS za spremembo izvedbe« ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") datoteke JSON. To sporočilo vključuje zahtevo za spremembo vaših starih poverilnic za dvig BLS na nove poverilnice za dvig v formatu naslova za izvršitev."
+    }
+  ],
+  "2iODii": [
+    {
+      "type": 0,
+      "value": "»Tip 0«, »BLS«, »zaklenjeno«"
     }
   ],
   "2rflCq": [
@@ -713,10 +929,18 @@
       "value": "Pogoji storitve"
     }
   ],
-  "om4EMq": [
+  "36P4ra": [
     {
       "type": 0,
-      "value": "Če želite obdelati dohodne pologe validatorja iz sloja za izvedbo (prej verige 'Eth1'), boste morali zagnati odjemalca za izvajanje in odjemalca za soglasje (prej 'Eth2'). Uporabite lahko storitev tretje osebe, kot je Infura, vendar priporočamo, da zaženete lastnega odjemalca, da bo omrežje čim bolj decentralizirano."
+      "value": "Sčasoma se bo vaše stanje zmanjševalo, saj boste kaznovani za neudeležbo v procesu soglasja. Ko vaše stanje doseže "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH, boste samodejno izključeni iz nabora validatorjev."
     }
   ],
   "38Fedn": [
@@ -781,56 +1005,32 @@
       "value": "Ukazna vrstica z zastavicami"
     }
   ],
-  "3NHygY": [
+  "3LbIZa": [
     {
       "type": 0,
-      "value": "Testiranje v omrežju Goerli"
+      "value": "Imate možnost dodati sredstva na svoj račun validatorja, če vaše stanje še ni doseglo največjega učinkovitega stanja (»max EV«, znesek, ki lahko prispeva k vašemu deležu). To lahko uporabite tudi za dopolnitev, če se stanje vašega računa validatorja približuje izločitvenemu stanju "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
-  "3ODqP9": [
+  "3O/6JV": [
     {
       "type": 0,
-      "value": "Polog več kot "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH v en nabor ključev ne poveča potenciala nagrad, prav tako kot kopičenje nagrad nad "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH, saj je vsak validator omejen na "
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": " za "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": ". To pomeni, da se zastavljanje izvaja v "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH korakih, od katerih ima vsak svoj nabor ključev in ravnotežje."
+      "value": "Navodila o tem, kako uporabiti orodje ethstaker-deposit-cli za ustvarjanje in oddajo sporočila SignedBLSToExecutionChange za posodobitev poverilnic za umik validatorja."
     }
   ],
   "3PbtmF": [
@@ -845,22 +1045,10 @@
       "value": "Postanite validator"
     }
   ],
-  "3QmqFf": [
-    {
-      "type": 0,
-      "value": "Dopolni transakcijo"
-    }
-  ],
   "3SOKyg": [
     {
       "type": 0,
       "value": "Te posodobitve terminologije spreminjajo samo konvencije o poimenovanju; ne spreminjajo ciljev ali načrta Ethereuma."
-    }
-  ],
-  "3URRZK": [
-    {
-      "type": 0,
-      "value": "Dokumentacija odjemalca Geth v omrežju Goerli"
     }
   ],
   "3aykgN": [
@@ -875,6 +1063,24 @@
     {
       "type": 0,
       "value": " blokiral predlog vsakih 70 dni."
+    }
+  ],
+  "3fRpn0": [
+    {
+      "type": 0,
+      "value": "Poročilo o reviziji sistema Reth"
+    }
+  ],
+  "3hmlu1": [
+    {
+      "type": 0,
+      "value": "Izberite validator"
+    }
+  ],
+  "3jhjXW": [
+    {
+      "type": 0,
+      "value": "Preberite naslednje navodilo za pravilno konfiguracijo Engine JSON-RPC API za svojega odjemalca za soglasje."
     }
   ],
   "3tR/V9": [
@@ -913,6 +1119,12 @@
       "value": "."
     }
   ],
+  "3zWAPC": [
+    {
+      "type": 0,
+      "value": "Vedno lahko ponovno izračunate svoj ključ za podpisovanje iz svoje mnemonične fraze"
+    }
+  ],
   "4+3cIr": [
     {
       "type": 0,
@@ -927,6 +1139,28 @@
       "value": " izpolnite kontrolni seznam"
     }
   ],
+  "40/5Sf": [
+    {
+      "type": 0,
+      "value": "Upoštevajte, da vaši "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " niso enaki, kot je vaš "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", ki prejema transakcijske provizije iz predlaganih blokov. Oba lahko nastavite na isti naslov, vendar ju je treba nastaviti ločeno."
+    }
+  ],
   "47svuN": [
     {
       "type": 0,
@@ -939,6 +1173,18 @@
       "value": "Pridružil/-a sem se strežniku Discord svojega odjemalca za soglasje."
     }
   ],
+  "4B1i6W": [
+    {
+      "type": 0,
+      "value": "Dvigni na"
+    }
+  ],
+  "4LvelA": [
+    {
+      "type": 0,
+      "value": "Največji možni dvig"
+    }
+  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -949,6 +1195,20 @@
     {
       "type": 0,
       "value": "Zakaj drsna lestvica? Ne bomo se spuščali v podrobnosti, vendar je osnovna slutnja ta, da je potrebno najmanjše število validatorjev (in s tem tudi najmanjša vsota zastavljenega ETH) za pravilno delovanje omrežja. Zato je pomembno, da obrestna mera ostane visoka, dokler to število ne bo doseženo, da bi spodbudili več validatorjev k pridružitvi."
+    }
+  ],
+  "4Vgtcb": [
+    {
+      "type": 0,
+      "value": "Če se pripravljate na polog za aktivacijo novega validatorja, lahko (in bi morali) ob začetnem pologu navedete naslov za izvršitev dviga. To se izvede ob ustvarjanju ključa in se nato vključi v vašo datoteko JSON podatkov o pologu "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": ", ki se predloži z vašo transakcijo pologa ETH."
     }
   ],
   "4hb+GK": [
@@ -975,16 +1235,22 @@
       "value": "Kopiraj"
     }
   ],
+  "4pGGSr": [
+    {
+      "type": 0,
+      "value": "Ta validator je dosegel svoje največje učinkovito stanje."
+    }
+  ],
   "4uFys5": [
     {
       "type": 0,
       "value": "Računi, ki so bili razrezani ali imajo nezadostno stanje, bodo prisiljeni zapreti v skladu s pravili omrežja. To je samodejno in ga po začetku ni mogoče ustaviti."
     }
   ],
-  "sgn0wo": [
+  "4zqUmR": [
     {
       "type": 0,
-      "value": "Kaj se zgodi, če uporabim BLS dvig in izgubim ključ za dvig?"
+      "value": "Preostalo stanje bo odklenjeno, ko bo dosežena zgornja epoha za izstop. Ko bo odklenjeno, bo preostalo stanje v nekaj dneh samodejno preneseno bodisi na vaš povezani račun za dvig bodisi na vaš izbrani ciljni validator, če prenašate račune."
     }
   ],
   "57MWKW": [
@@ -1015,6 +1281,12 @@
       "value": ")"
     }
   ],
+  "58LSsA": [
+    {
+      "type": 0,
+      "value": "Lodestar je zgrajen v jeziku TypeScript in je licenciran pod kombinacijo Apache 2.0 ter GNU Lesser General Public License v3.0."
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
@@ -1031,10 +1303,16 @@
       "value": "learnMore"
     }
   ],
-  "5CBhpq": [
+  "5B+zYt": [
     {
       "type": 0,
-      "value": "Obveza"
+      "value": "Strinjam se, da lahko napake v programski opremi in pri oblikovanju privedejo do zmanjšanja mojega deleža."
+    }
+  ],
+  "5CdqwI": [
+    {
+      "type": 0,
+      "value": "Dokumentacija za vozlišče Nimbus"
     }
   ],
   "5H/J84": [
@@ -1047,12 +1325,6 @@
     {
       "type": 0,
       "value": "Dokumentacija za namestitev odjemalca Teku"
-    }
-  ],
-  "5KtHYT": [
-    {
-      "type": 0,
-      "value": "Če tega ne zagotovite zdaj, bodo vaša nakazana sredstva ostala zaklenjena v Beacon Chain, dokler ne zagotovite naslova. Za odklepanje boste morali podpisati sporočilo s svojimi ključi za dvig, ustvarjenimi iz vaše mnemonične semenske fraze (zato ga shranite na varno)."
     }
   ],
   "5UH1sh": [
@@ -1075,10 +1347,18 @@
       "value": " je to ~1,2–1,3 GB prenosa in ~0,9–1 GB in se bo verjetno še povečalo."
     }
   ],
-  "5hW6Gf": [
+  "5q9Lgv": [
     {
       "type": 0,
-      "value": "Zaščita dviga na plasti za soglasje"
+      "value": "Prenesite vejo "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "5t8oYl": [
@@ -1119,10 +1399,60 @@
       "value": "povprečje"
     }
   ],
+  "67oM5N": [
+    {
+      "type": 0,
+      "value": "Aktivno na spletu"
+    }
+  ],
+  "69FPys": [
+    {
+      "type": 0,
+      "value": "Največje učinkovito stanje za račune s poverilnicami za dvig tipa 0 (BLS) ali tipa 1 (navadni dvigi) znaša "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Ti računi nimajo koristi od stanj nad "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", vendar jih je mogoče nadgraditi na račun s kapitalizacijo nagrad tipa 2, ki omogoča povečano največje učinkovito stanje v višini "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "6NndcB": [
     {
       "type": 0,
       "value": "zapri"
+    }
+  ],
+  "6NyPVb": [
+    {
+      "type": 0,
+      "value": "Nimbus je implementacija odjemalca tako za sloj za izvedbo kot za sloj za soglasje, zasnovana tako, da je kar se da lahka glede porabe virov. To ji omogoča učinkovito delovanje na vgrajenih sistemih, napravah z omejenimi viri, vključno z napravami Raspberry Pi, ter večnamenskih strežnikih."
     }
   ],
   "6S95Bo": [
@@ -1143,16 +1473,74 @@
       "value": "Dejansko stanje tega validatorja lahko izboljšate z dopolnitvijo"
     }
   ],
-  "6eA+mW": [
+  "6glcFX": [
     {
       "type": 0,
-      "value": "Lodestar je zgrajen z uporabo TypeScripta pod GNU Lesser General Public License v3.0."
+      "value": "Kako se pridružiti javnemu testnemu omrežju"
     }
   ],
-  "6nh4de": [
+  "6kX99Q": [
     {
       "type": 0,
-      "value": "Omrežju se pridružujete na začetni stopnji. Kot pri vseh programski opremi obstaja možnost za napake v programski opremi. Čeprav je to malo verjetno, lahko morebitne napake povzročijo zmanjšanje deleža."
+      "value": "Nadgradite račun na račun s kapitalizacijo nagrad, da povečate učinkovito stanje na "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "6stJTU": [
+    {
+      "type": 0,
+      "value": "Uporabite "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " za sinhronizacijo testnega omrežja Holesky."
+    }
+  ],
+  "6vdHjj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " je 32-bajtno polje, povezano z vsakim validatorjem, ki se nastavi ob pologu, za preverjanje cilja veljavnih dvigov. Trenutno obstajata dve vrsti poverilnic za dvig: poverilnice BLS (tip 0 ali "
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") in poverilnice za izvedbo (naslov Ethereum) (tip 1 ali "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ")."
+    }
+  ],
+  "6z/+77": [
+    {
+      "type": 0,
+      "value": "Izvedba pologa na validator"
     }
   ],
   "7+Domh": [
@@ -1183,6 +1571,12 @@
       "value": " ni podprt v načinu brez povezave."
     }
   ],
+  "7AL03B": [
+    {
+      "type": 0,
+      "value": "Seznanjen sem s posledicami, združujem sredstva"
+    }
+  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1197,26 +1591,10 @@
       "value": " zagonsko platformo"
     }
   ],
-  "7FcGxU": [
+  "7EpPjk": [
     {
       "type": 0,
-      "value": "Zagnati morate "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " in "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Izdaje sistema Reth"
     }
   ],
   "7GLK15": [
@@ -1259,6 +1637,12 @@
       "value": "Konfiguracijska datoteka"
     }
   ],
+  "7XWI5I": [
+    {
+      "type": 0,
+      "value": "Počakajte in poskusite znova ali poiščite pomoč, če se ta napaka nadaljuje"
+    }
+  ],
   "7XiYRi": [
     {
       "type": 0,
@@ -1287,10 +1671,28 @@
       "value": "."
     }
   ],
+  "7dUCnj": [
+    {
+      "type": 0,
+      "value": "Revizijo sistema Reth 1.0 je izvajalo podjetje Sigma Prime v obdobju več kot 8 tednov maja 2024, povezava spodaj."
+    }
+  ],
   "7kWKe0": [
     {
       "type": 0,
       "value": "Čakalno vrsto za dvige samodejno zapolnijo in obdelajo predlagatelji blokov, ki samodejno preverijo morebitna razpoložljiva izplačila prek mehanizma pregleda."
+    }
+  ],
+  "7rnL9U": [
+    {
+      "type": 0,
+      "value": "Zapustite validator"
+    }
+  ],
+  "7sLqH9": [
+    {
+      "type": 0,
+      "value": "preneseno na validator, ki ga izberete zgoraj"
     }
   ],
   "7sZfCF": [
@@ -1303,6 +1705,12 @@
     {
       "type": 0,
       "value": "Vsako epoho, omrežje izmeri dejanja vsakega validatorja in razdeli ustrezne nagrade in kazni."
+    }
+  ],
+  "7w+OmC": [
+    {
+      "type": 0,
+      "value": "Nedavne spremembe se morda ne bodo odražale v podrobnostih validatorja, zaradi preobremenjenosti omrežja pa lahko pride do zamud. Bodite previdni, da se izognete pošiljanju podvojenih zahtevkov."
     }
   ],
   "8/nhr4": [
@@ -1329,6 +1737,18 @@
       "value": "Dokumentacija Lodestar"
     }
   ],
+  "8C8bca": [
+    {
+      "type": 0,
+      "value": "Validator izstopa mora ostati povezan, dokler ni dosežena epoha za izstop."
+    }
+  ],
+  "8FjJDx": [
+    {
+      "type": 0,
+      "value": "Slabo vedenje"
+    }
+  ],
   "8FmuYF": [
     {
       "type": 0,
@@ -1353,24 +1773,16 @@
       "value": "Izberite operacijski sistem računalnika, ki ga trenutno uporabljate. To bo računalnik, s katerim boste generirali svoje ključe. To ni nujno OS, ki ga želite uporabiti za svoje vozlišče."
     }
   ],
+  "8VlOTO": [
+    {
+      "type": 0,
+      "value": "Prenesite celotno stanje na enega od svojih drugih računov validatorja in združite oba računa v enega. Ciljni račun mora biti nadgrajen na tip računa s kapitalizacijo nagrad."
+    }
+  ],
   "8WtyrD": [
     {
       "type": 0,
       "value": "Španščina"
-    }
-  ],
-  "8XQmxX": [
-    {
-      "type": 0,
-      "value": "Uporabite "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " za sinhronizacijo testnega omrežja Goerli."
     }
   ],
   "8boRAk": [
@@ -1383,12 +1795,6 @@
     {
       "type": 0,
       "value": "Ne izklopite validatorja, dokler ni dosežena ta epoha."
-    }
-  ],
-  "8fXTDo": [
-    {
-      "type": 0,
-      "value": "Na srečo je to le enkratno sporočilo, ki ga je treba obdelati, in validatorji, ki so ob nakazilu zagotovili poverilnice za dvig, so izvzeti iz tega koraka. Ko je dokončan, je vaš validator trajno omogočen za dvige in bo upravičen do izplačil med naslednjim pregledom."
     }
   ],
   "8k1RjX": [
@@ -1437,6 +1843,12 @@
       "value": " - epoha, v kateri so vaša sredstva validatorja primerna za polni dvig med naslednjim pregledom validatorja."
     }
   ],
+  "8uE+mp": [
+    {
+      "type": 0,
+      "value": "Filtrirajte po indeksu ali javnem ključu."
+    }
+  ],
   "8uq59n": [
     {
       "type": 0,
@@ -1461,10 +1873,10 @@
       "value": "Naprej"
     }
   ],
-  "hAwuqj": [
+  "9/yem6": [
     {
       "type": 0,
-      "value": "Validacija iz varnostnih razlogov vključuje dva ključa. Vaš ključ za podpisovanje mora biti ves čas na voljo. Zato bo moral biti shranjen na spletu. Ker je vse na spletu ranljivo za vdore, istih ključev ni pametno uporabljati tudi za dvige."
+      "value": "Če poskušate goljufati sistem ali delovati v nasprotju s specifikacijami, boste podvrženi kazni, znani kot zmanjšanje deležev*. Istočasno izvajanje vaših ključev validatorja na dveh ali več računalnikih bo povzročilo zmanjšanje deležev."
     }
   ],
   "94dQms": [
@@ -1499,10 +1911,42 @@
       "value": "Ogled vlog in odgovornosti validatorjev"
     }
   ],
+  "9Ur2de": [
+    {
+      "type": 0,
+      "value": "Dodajanje naslova za dvig s programom Wagyu Key Gen"
+    }
+  ],
   "9VZ9oy": [
     {
       "type": 0,
       "value": "Kako so validatorji spodbujeni k temu, da ostajajo aktivni in pošteni?"
+    }
+  ],
+  "9Zv8ye": [
+    {
+      "type": 0,
+      "value": "To bo sprožilo postopek nadgradnje tega validatorja iz računa tipa 1, »navadni dvigi« ali tipa računa za »izvedbo«, v račun tipa 2, »račun s kapitalizacijo nagrad«."
+    }
+  ],
+  "9h8yTf": [
+    {
+      "type": 0,
+      "value": "Izračuna se tudi »epoha dviga«, ki nastopi 256 epoh po izračunani epohi za izstop (~ 27,3 ure pozneje). Ko je ta epoha dosežena, bo vaš validator upravičen do "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " dviga vseh preostalih sredstev."
+    }
+  ],
+  "9jnVGr": [
+    {
+      "type": 0,
+      "value": "Običajno je zahtevani minimum 32 GB RAM-a, priporočeno pa je 64 GB."
     }
   ],
   "9k7tO9": [
@@ -1533,6 +1977,12 @@
     {
       "type": 0,
       "value": "polog"
+    }
+  ],
+  "9oWUO0": [
+    {
+      "type": 0,
+      "value": "To bo sprožilo postopek zaključka vaših obveznosti v omrežju. »Epoha za izstop« bo izračunana glede na to, koliko drugih validatorjev izstopa hkrati. Ko bo ta epoha dosežena, vaš račun validatorja ne bo več upravičen do nagrad in ne bo več izpostavljen tveganju, da pride do izgube sredstev, ker je brez povezave."
     }
   ],
   "9qMyhY": [
@@ -1599,6 +2049,12 @@
       "value": "Pošlji polog"
     }
   ],
+  "A4nMs+": [
+    {
+      "type": 0,
+      "value": "Preverite v naslednjem vodniku, da bo vaš odjemalec za izvajanje pravilno deloval."
+    }
+  ],
   "A6Oppp": [
     {
       "type": 0,
@@ -1623,46 +2079,10 @@
       "value": "Za devnet lahko dodate parameter:"
     }
   ],
-  "AFzWcM": [
-    {
-      "type": 0,
-      "value": "Razumem, da so ključi moja odgovornost in da bo moja mnemonična (varnostna) fraza "
-    },
-    {
-      "type": 1,
-      "value": "onlyWay"
-    },
-    {
-      "type": 0,
-      "value": " za dvig mojih sredstev, če ne zagotovim naslova za dvig s podatki o začetnem depozitu."
-    }
-  ],
   "AH6XsN": [
     {
       "type": 0,
       "value": "Zagotovite tudi, da razumete, kako potekajo dvigi vložkov, preden nastavite svoje ključe in podatke o depozitu."
-    }
-  ],
-  "AJD+66": [
-    {
-      "type": 0,
-      "value": "Zastavni polog Ethereum zahteva, da hkrati pošljete najmanj "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", sicer ne bo sprejeta."
     }
   ],
   "ATwOPg": [
@@ -1671,10 +2091,10 @@
       "value": "odjemalec za izvajanje"
     }
   ],
-  "AYKxmf": [
+  "AYPu/E": [
     {
       "type": 0,
-      "value": "Povežite svojo strojno denarnico z denarnico Metamask"
+      "value": "Kakšen tip računa za zastavljanje?"
     }
   ],
   "AZaw+B": [
@@ -1687,28 +2107,6 @@
     {
       "type": 0,
       "value": "razumevanje dejanskega stanja validatorja"
-    }
-  ],
-  "Ad61gz": [
-    {
-      "type": 0,
-      "value": "Poskrbite, da prenašate iz uradnega GitHub računa Ethereum Foundation tako, da preverite url: "
-    },
-    {
-      "type": 1,
-      "value": "url"
-    }
-  ],
-  "Jrg1Me": [
-    {
-      "type": 0,
-      "value": "Razdrobitev bo spremenila Ethereum zahtevo, da polna vozlišča prenašajo celotno zgodovino verige, in bo namesto tega to obremenitev porazdelila po omrežju, medtem ko bo še vedno zagotavljala razpoložljivost podatkov. To bo znatno povečalo zmogljivost Ethereum na ravni 1, hkrati pa ohranilo zmožnost delovanja celotnega vozlišča na uporabniški strojni opremi, pri čemer bo omrežje ostalo decentralizirano."
-    }
-  ],
-  "Affixg": [
-    {
-      "type": 0,
-      "value": "Polog"
     }
   ],
   "AkVktj": [
@@ -1735,56 +2133,16 @@
       "value": "Postanite validator s programom Lighthouse"
     }
   ],
+  "As7Kwv": [
+    {
+      "type": 0,
+      "value": "Morda imate polog, ki je bil sprejet, vendar se trenutno preverja na verigi. Na voljo bo tukaj, ko beaconcha.in potrdi 2048 blokov."
+    }
+  ],
   "Aw1mMs": [
     {
       "type": 0,
       "value": "Dopolnite validatorja"
-    }
-  ],
-  "AyoE3t": [
-    {
-      "type": 0,
-      "value": "Dvig validatorja še ni mogoč. Ta funkcionalnost naj bi bila vključena v nadgradnjo Shanghai/Capella, načrtovano za 1./2. četrtletje 2023."
-    }
-  ],
-  "uHSqYx": [
-    {
-      "type": 1,
-      "value": "excessBalanceWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " se obdela, ko ima aktivni validator največje dejansko stanje 32 in ima skupno stanje nad 32. Posamezen validator ne more prejeti nagrade za presežek stanja nad 32 ETH, tako bodo ti računi imeli morebitno dodatno stanje samodejno dvignjeno na njihov naslov Ethereum."
-    }
-  ],
-  "RY4SP0": [
-    {
-      "type": 0,
-      "value": "Razumem, da moram položiti "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", če želim postati validator, in da je prenos "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " na oddajniško verigo enosmeren in nepovraten."
     }
   ],
   "BCsPjJ": [
@@ -1797,6 +2155,16 @@
     {
       "type": 0,
       "value": "Dopolnite validatorja"
+    }
+  ],
+  "BFQdAm": [
+    {
+      "type": 0,
+      "value": "Znesek v višini "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "BFsUAH": [
@@ -1887,6 +2255,20 @@
       "value": "Kako sprožiti dvige, spremembo poverilnice"
     }
   ],
+  "BswXIG": [
+    {
+      "type": 0,
+      "value": "Koliko "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " bi želeli dvigniti?"
+    }
+  ],
   "Bxe+HB": [
     {
       "type": 0,
@@ -1897,28 +2279,6 @@
     {
       "type": 0,
       "value": "Konfiguriraj Lighthouse"
-    }
-  ],
-  "40/5Sf": [
-    {
-      "type": 0,
-      "value": "Upoštevajte, da vaše "
-    },
-    {
-      "type": 1,
-      "value": "withdrawalCredentials"
-    },
-    {
-      "type": 0,
-      "value": " niso enake vašemu "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": ", ki prejema transakcijske provizije od predlaganih blokov. Oba sta lahko nastavljena na isti naslov, vendar morata biti nastavljena vsak posebej."
     }
   ],
   "C3jBPI": [
@@ -1951,12 +2311,6 @@
       "value": "Dokaz o deležu"
     }
   ],
-  "CGMYrU": [
-    {
-      "type": 0,
-      "value": "Izdaje Deposit CLI zastavljanja"
-    }
-  ],
   "CPl2hh": [
     {
       "type": 0,
@@ -1971,12 +2325,6 @@
     {
       "type": 1,
       "value": "btec"
-    }
-  ],
-  "0WPDnu": [
-    {
-      "type": 0,
-      "value": "Zagotovo morate dopolniti svojega validatorja, če je vaše stanje blizu 16 ETH. Tako zagotovite, da ne boste odstranjeni iz sklopa validatorjev (kar se samodejno zgodi, če vaše stanje pade pod 16 ETH)."
     }
   ],
   "CWKE9c": [
@@ -2021,6 +2369,20 @@
       "value": "Trenutni validatorji"
     }
   ],
+  "CmVlal": [
+    {
+      "type": 0,
+      "value": "Koliko "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " bi želeli zastaviti?"
+    }
+  ],
   "Co67tK": [
     {
       "type": 0,
@@ -2031,20 +2393,6 @@
     {
       "type": 0,
       "value": "NE"
-    }
-  ],
-  "sNUrEO": [
-    {
-      "type": 0,
-      "value": "Če ne, sem predložil/a sporočilo "
-    },
-    {
-      "type": 1,
-      "value": "btec"
-    },
-    {
-      "type": 0,
-      "value": ", podpisano z mojimi ključi za dvig BLS, da posodobim poverilnice za dvig (zahteva nadgradnjo Shanghai/Capella)."
     }
   ],
   "D33f/7": [
@@ -2059,18 +2407,10 @@
       "value": "Koliko ETH moram zastaviti, da postanem validator?"
     }
   ],
-  "5q9Lgv": [
+  "D91mWV": [
     {
       "type": 0,
-      "value": "Prenesite vejo "
-    },
-    {
-      "type": 1,
-      "value": "btec"
-    },
-    {
-      "type": 0,
-      "value": ":"
+      "value": "Za izkoriščanje višjega učinkovitega stanja je mogoče račune s starejšimi poverilnicami za dvig nadgraditi v račun s kapitalizacijo nagrad. To je mogoče storiti enkrat in je nepovratno."
     }
   ],
   "DCaq7N": [
@@ -2091,28 +2431,6 @@
       "value": "Razumem, da se lahko ob ravnanju, ki ni v skladu s specifikacijo, moj delež zmanjša."
     }
   ],
-  "Ox4e26": [
-    {
-      "type": 0,
-      "value": "Podobno obstaja tudi "
-    },
-    {
-      "type": 1,
-      "value": "exitQueue"
-    },
-    {
-      "type": 0,
-      "value": ", ki omejuje, kako hitro lahko validatorji "
-    },
-    {
-      "type": 1,
-      "value": "leave"
-    },
-    {
-      "type": 0,
-      "value": " omrežje. To je zaradi varnostnih razlogov. Glede na to, da je vsak validator omejen na največje učinkovito stanje 32 ETH, to preprečuje, da bi se veliki deli ETH potencialno uporabili v napadu in nato hitro istočasno zapustili omrežje."
-    }
-  ],
   "DNRQa7": [
     {
       "type": 0,
@@ -2129,6 +2447,12 @@
     {
       "type": 0,
       "value": "Konfiguriranje odjemalca Erigon"
+    }
+  ],
+  "DbLJT1": [
+    {
+      "type": 0,
+      "value": "Zasebni ključ naslova za dvig"
     }
   ],
   "DbnQg+": [
@@ -2149,6 +2473,12 @@
       "value": "Dokumenti JWT za soglasje:"
     }
   ],
+  "DiXOHD": [
+    {
+      "type": 0,
+      "value": "Dokumentacija za gradnjo, izvajanje in odpravljanje napak vozlišča Reth"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
@@ -2161,38 +2491,16 @@
       "value": "Odjemalci podpirajo orodji Prometheus in Grafana, da vam pomagajo pri vizualizaciji pomembnih metrik o svojem validatorju v realnem času."
     }
   ],
-  "DoCZT1": [
-    {
-      "type": 0,
-      "value": "Dejansko stanje validatorja je trenutno najvišje, kot je mogoče. Po želji lahko dodate "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (najmanj, kot dovoljuje pogodba za polog)"
-    }
-  ],
-  "jrbRLT": [
-    {
-      "type": 0,
-      "value": "Če želite postati validator, morate poznati upravljanje ključev in zaščito mnemonične fraze. Če še niste seznanjeni s ključi in mnemonično frazo, ne nadaljujte."
-    }
-  ],
   "DsJ/Mk": [
     {
       "type": 0,
       "value": "Ne zaupate naslovu za pogodbo, ki je naveden na tem spletnem mestu."
+    }
+  ],
+  "DxyGdq": [
+    {
+      "type": 0,
+      "value": "Indeks validatorja"
     }
   ],
   "E+Y27g": [
@@ -2215,10 +2523,22 @@
       "value": "3. Vadite na testnem omrežju"
     }
   ],
+  "E0MgIm": [
+    {
+      "type": 0,
+      "value": "Pozvani boste, da sporočilo podpišete s svojo denarnico. Obdelava nadgradenj ni takojšnja, zato upoštevajte, da lahko traja več dni, preden bo postopek zaključen."
+    }
+  ],
   "E1Mywn": [
     {
       "type": 0,
       "value": "veriga"
+    }
+  ],
+  "E2sGaF": [
+    {
+      "type": 0,
+      "value": "Izstopite"
     }
   ],
   "E4rtgi": [
@@ -2227,10 +2547,34 @@
       "value": "Odjemalci za soglasje:"
     }
   ],
-  "yK2eQ+": [
+  "E55YPl": [
     {
       "type": 0,
-      "value": "Manjše kazni so dodeljene za nenamerna dejanja (ali nedejanja), ki ovirajo doseganje soglasja."
+      "value": "Polog dodatnih sredstev "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " lahko poveča učinkovito stanje tega validatorja. Trenutno učinkovito stanje je "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": ", največje dovoljeno pa znaša "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "EIUapL": [
@@ -2243,6 +2587,20 @@
       "value": "deposit"
     }
   ],
+  "EMCxvJ": [
+    {
+      "type": 0,
+      "value": "Uporabite "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " za sinhronizacijo testnega omrežja Holesky."
+    }
+  ],
   "EPCHZV": [
     {
       "type": 0,
@@ -2253,6 +2611,12 @@
     {
       "type": 0,
       "value": "Simuliral/-a sem izpad električne energije (strežnik in internet) ter samodejno nadaljevanje."
+    }
+  ],
+  "ER2q1V": [
+    {
+      "type": 0,
+      "value": "Nadgradnja s spojitvijo je 15. septembra 2022 uradno uvedla dokaz o deležu v Ethereum, s čimer je dokaz o delu hkrati postal zastarel. S tem je pripravila verigo za prihodnje nadgradnje širjenja, kot je Danksharding, tako da je skupaj z glavnim omrežjem združila soglasje o dokazu o deležu, obenem pa zmanjšala porabo energije za več kot 99,9 %."
     }
   ],
   "ETJ2T5": [
@@ -2285,10 +2649,60 @@
       "value": "Zagonska platforma zastavljanja"
     }
   ],
+  "Ef+t8S": [
+    {
+      "type": 0,
+      "value": "Zahtevajte delni dvig"
+    }
+  ],
   "Ej2jo1": [
     {
       "type": 0,
       "value": "Naslov za dvig:"
+    }
+  ],
+  "ErOWkD": [
+    {
+      "type": 0,
+      "value": "Pridobite najnovejše"
+    }
+  ],
+  "EsxlJB": [
+    {
+      "type": 0,
+      "value": "Konfigurirajte Reth"
+    }
+  ],
+  "EuU/4k": [
+    {
+      "type": 0,
+      "value": "Največje učinkovito stanje "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "EwtSGs": [
+    {
+      "type": 0,
+      "value": "Odgovorni ste za transakcijo. Prevarantska spletna mesta vas lahko poskušajo zvabiti, da jim pošljete "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " namesto uradne pogodbe za polog. Prepričajte se, da je naslov, na katerega pošiljate transakcijo, pravilen."
     }
   ],
   "F8yf1S": [
@@ -2311,12 +2725,6 @@
       "value": "Ključni koncept je naslednji:"
     }
   ],
-  "Q6N+C6": [
-    {
-      "type": 0,
-      "value": "Ethereum se je začel izvajati 30. julija 2015. Njegova velikost sčasoma raste, uvedba razdrobitve pa bo prav tako povečala zahteve glede shrambe, pomnilnika in pasovne širine."
-    }
-  ],
   "FM92S0": [
     {
       "type": 0,
@@ -2327,24 +2735,6 @@
     {
       "type": 0,
       "value": "Razumem, da te transakcije ni mogoče razveljaviti."
-    }
-  ],
-  "uEB8++": [
-    {
-      "type": 0,
-      "value": "Ethereum naslov za dvig: Če želite po nadgradnji Shanghai/Capella dvigniti na naslov denarnice za izvršitev, lahko nastavite "
-    },
-    {
-      "type": 1,
-      "value": "ethAddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": ", ko izvajate depozit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
     }
   ],
   "FU7JYy": [
@@ -2367,6 +2757,18 @@
     {
       "type": 0,
       "value": ", sicer bo polog neveljaven."
+    }
+  ],
+  "FWtWw3": [
+    {
+      "type": 0,
+      "value": "Upoštevajte, da sta čakalni vrsti »dvig« in »BLS za spremembo izvedbe« neodvisni in ne tekmujeta. Vsaka je omejena na podlagi posameznega bloka."
+    }
+  ],
+  "FXE1P1": [
+    {
+      "type": 0,
+      "value": "Informacije so veljavne od nadgradnje omrežja Pectra v letu 2025."
     }
   ],
   "FZCdw+": [
@@ -2409,12 +2811,6 @@
       "value": " je programska oprema, ki deluje v imenu validatorja tako, da drži in uporablja njegov zasebni ključ za pričanje o stanju verige. Posamezen odjemalec validatorja lahko vsebuje veliko parov ključev, ki nadzorujejo veliko validatorjev."
     }
   ],
-  "FfLWt5": [
-    {
-      "type": 0,
-      "value": "Odjemalec za Ethereum z ogromnim naborom razvijalcev. Popoln je za sisteme na nivoju podjetij."
-    }
-  ],
   "FgraU0": [
     {
       "type": 0,
@@ -2435,6 +2831,20 @@
       "value": "."
     }
   ],
+  "Fogk92": [
+    {
+      "type": 0,
+      "value": "Največji dvigi na podatkovni sklop: 16 (2"
+    },
+    {
+      "type": 1,
+      "value": "exp"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "FqgDIV": [
     {
       "type": 0,
@@ -2447,16 +2857,20 @@
       "value": "validatorji"
     }
   ],
+  "G0AzjT": [
+    {
+      "type": 0,
+      "value": "indeks izstopa "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    }
+  ],
   "G0ZD5H": [
     {
       "type": 0,
       "value": "Da bi bil račun upravičen za polni dvig, morate najprej izstopiti iz računa validatorja. Pri zastavljanju lahko iz računov validatorja izstopite na dva glavna načina: prostovoljno ali prisilno."
-    }
-  ],
-  "q0thwm": [
-    {
-      "type": 0,
-      "value": "Kot validator prejmete nagrade za predlaganje/potrjevanje blokov, ki so vključeni v verigo."
     }
   ],
   "G5IMoZ": [
@@ -2543,16 +2957,28 @@
       "value": "Morali bi videti, da imate eno shrambo ključev na validatorja. Ta shramba ključev vsebuje vaš podpisni ključ, šifriran z vašim geslom."
     }
   ],
+  "GmKyht": [
+    {
+      "type": 0,
+      "value": "Redni dvigi brez pristojbine za plin kakršnega koli stanja nad "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "GsBRWL": [
     {
       "type": 0,
       "value": "Jeziki"
-    }
-  ],
-  "Gsixxx": [
-    {
-      "type": 0,
-      "value": "Tveganja pri zgodnji posvojitvi"
     }
   ],
   "GuIwY6": [
@@ -2573,16 +2999,34 @@
       "value": "Skupni potrebni znesek"
     }
   ],
+  "H0jTll": [
+    {
+      "type": 0,
+      "value": "Dodajanje sredstev validatorju, ki še ni dosegel svojega največjega učinkovitega stanja, lahko poveča nagrade in kazni."
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
       "value": "Stanje"
     }
   ],
+  "H84I+K": [
+    {
+      "type": 0,
+      "value": "Dokumentacija za namestitev Retha"
+    }
+  ],
   "HMgrdg": [
     {
       "type": 0,
       "value": "Konfigurirajte svojega odjemalca za izvajanje"
+    }
+  ],
+  "HX93/h": [
+    {
+      "type": 0,
+      "value": "Nastavitev naslova za dvig velja za najboljšo varnostno prakso. Če ta naslov zdaj ni določen, bodo vaša naložena sredstva ostala zaklenjena na vozlišču, dokler naslov ne bo določen. Odklepanje bo zahtevalo podpisovanje sporočila z vašimi ključi za dvig BLS, ki so bili ustvarjeni iz vaše mnemonične semenske fraze (zato jo varno hranite)."
     }
   ],
   "HXvZ2L": [
@@ -2603,6 +3047,34 @@
     {
       "type": 0,
       "value": "Zmanjšanje deleža ima dva namena: (1) zagotoviti, da so stroški napada na omrežje pretirano visoki, in (2) preprečiti leno delovanje validatorjev s preverjanjem, da dejansko opravijo svoje dolžnosti. Če bo vaš delež zmanjšan zaradi delovanja na dokazljivo uničevalen način, bo del vašega deleža uničen."
+    }
+  ],
+  "HemvTL": [
+    {
+      "type": 0,
+      "value": "Poverilnice za dvig BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") se lahko posodobijo na naslov za izvršitev ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") s pošiljanjem sporočila BLS za spremembo izvedbe (BTEC), podpisanega z vašim ključem za dvig BLS. Ta sporočila so vključena v bloke z največjo hitrostjo 16 na blok."
+    }
+  ],
+  "HgMYFB": [
+    {
+      "type": 0,
+      "value": "To bo sprožilo postopek trajnega izstopa izbranega validatorja iz omrežja Ethereum z mehanizmom dokaza o deležu."
     }
   ],
   "Hmxd5S": [
@@ -2671,6 +3143,36 @@
       "value": "Erigon je prej TurboGeth odjemalec Ethereum, zgrajen za omogočanje optimizacije zmogljivosti."
     }
   ],
+  "ICbItT": [
+    {
+      "type": 0,
+      "value": "S tem pristopom se ustvari enoten račun s kapitalizacijo nagrad. Zahteva najmanj "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", sprejme pa lahko do "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "ID3Pgm": [
     {
       "type": 0,
@@ -2681,12 +3183,6 @@
     {
       "type": 0,
       "value": "Podpišite transakcijo z denarnico"
-    }
-  ],
-  "bFiejS": [
-    {
-      "type": 0,
-      "value": "Upoštevajte, da lahko v drugem (malo verjetnem) scenariju postopoma izgubite do 50 % (16 ETH) svojega deleža v obdobju 21 dni. Po 21 dneh ste izvrženi iz nabora validatorjev. To zagotavlja, da se bodo začeli bloki na določeni točki ponovno zaključevati."
     }
   ],
   "IWlazt": [
@@ -2701,10 +3197,22 @@
       "value": "Na voljo so orodja za ustvarjanje sporočila o spremembi ključa"
     }
   ],
+  "IZEvbY": [
+    {
+      "type": 0,
+      "value": "Nethermind, odjemalec za izvajanje Ethereuma, zgrajen na .NET, zagotavlja najboljšo zmogljivost v sektorju pri sinhronizaciji in obdelavi blokov na vrhu verige. S svojo modularno zasnovo in sistemom vtičnikov ponuja razširljivost in funkcije za nove verige. Kot eden najbolj razširjenih odjemalcev za izvajanje na Ethereumu ima ključno vlogo pri izboljšanju raznolikosti in odpornosti ekosistema Ethereuma."
+    }
+  ],
   "IZFEUg": [
     {
       "type": 0,
       "value": "Pripravljeno"
+    }
+  ],
+  "Icu389": [
+    {
+      "type": 0,
+      "value": "Poznavanje učinkovitega stanja validatorja"
     }
   ],
   "IdUtHu": [
@@ -2739,12 +3247,6 @@
     {
       "type": 0,
       "value": "Oddajniška veriga potisni dvigi kot postopki"
-    }
-  ],
-  "IugT5/": [
-    {
-      "type": 0,
-      "value": "ni mogoče prenesti"
     }
   ],
   "IwrKbS": [
@@ -2789,10 +3291,56 @@
       "value": "Kitajščina (tradicionalna)"
     }
   ],
+  "J6xb7K": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": če ste ob ustvarjanju ključev navedli naslov za izvršitev dviga, ste pripravljeni"
+    }
+  ],
   "J7T0SR": [
     {
       "type": 0,
       "value": "Dokumentacija za namestitev odjemalca Nimbus"
+    }
+  ],
+  "J8hlId": [
+    {
+      "type": 0,
+      "value": "Račun "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    },
+    {
+      "type": 0,
+      "value": " bo izključen iz omrežja, njegovo celotno stanje pa bo preneseno na indeks validatorja "
+    },
+    {
+      "type": 1,
+      "value": "targetIndex"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J9BaKo": [
+    {
+      "type": 0,
+      "value": "Ali so bili nedavno izvedeni pologi v višini najmanj "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": "?"
     }
   ],
   "JAiV0o": [
@@ -2821,16 +3369,36 @@
       "value": "4. Izogibajte se lažnemu predstavljanju"
     }
   ],
+  "JQtlrY": [
+    {
+      "type": 0,
+      "value": "Popolnoma izstopite iz validatorja"
+    }
+  ],
+  "JZm4pU": [
+    {
+      "type": 0,
+      "value": "Z nastavitvijo tega naslova se določi vaš validator "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", izbrani naslov za izvršitev pa se trajno poveže z vašim validatorjem. Ta račun bo edini, ki lahko sprejme dvignjena sredstva od vašega validatorja."
+    }
+  ],
   "Ja5vXW": [
     {
       "type": 0,
       "value": "Dodatno branje"
     }
   ],
-  "jVlgXS": [
+  "Jge1Sx": [
     {
       "type": 0,
-      "value": "Poglobite se v nadgradnje Ethereuma."
+      "value": "Ukaz za prisilen izstop"
     }
   ],
   "JhUYU3": [
@@ -2843,6 +3411,12 @@
     {
       "type": 0,
       "value": "Poraba sredstev se lahko bistveno razlikuje med odjemalci. Če morate upoštevati omejitve glede sredstev, raziščite različne odjemalce."
+    }
+  ],
+  "Jrg1Me": [
+    {
+      "type": 0,
+      "value": "Danksharding bo spremenil zahtevo, da polna vozlišča nosijo celotno zgodovino verige, in bo namesto tega to obremenitev porazdelil po omrežju, hkrati pa zagotovil razpoložljivost podatkov. To bo znatno povečalo zmogljivost prvega sloja Ethereuma, hkrati pa ohranilo možnost upravljanja polnega vozlišča na potrošniški strojni opremi, s čimer bo omrežje ostalo decentralizirano."
     }
   ],
   "Js4uuA": [
@@ -2887,16 +3461,16 @@
       "value": "Dokumentacija za namestitev odjemalca Geth"
     }
   ],
-  "bagKCF": [
-    {
-      "type": 0,
-      "value": "Načrtovano je, da se funkcije dviga vključijo v prihodnjo nadgradnjo Shanghai/Capella. Potem ko je ta funkcionalnost dodana, lahko dvignete svoje stanje – s svojim ključem za dvig – po minimalni, približno enodnevni zakasnitvi."
-    }
-  ],
   "K7xnjy": [
     {
       "type": 0,
       "value": "Opozorilo: ključev ne shranite na več (pomožnih) odjemalcev validatorja hkrati"
+    }
+  ],
+  "K8gNLa": [
+    {
+      "type": 0,
+      "value": "naslov za izvršitev_dviga"
     }
   ],
   "KBSbmP": [
@@ -2947,6 +3521,20 @@
       "value": " svojega odjemalca za soglasje."
     }
   ],
+  "KMa0S7": [
+    {
+      "type": 0,
+      "value": "Z zagotovitvijo te zastavice bodo vaše poverilnice za dvig vsebovale predpono "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " (ali večjo) in vaš naslov za dvig, kar bo nakazovalo, da je vaš račun pripravljen za dvige."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
@@ -2959,6 +3547,12 @@
       "value": "združi"
     }
   ],
+  "KUz3Pf": [
+    {
+      "type": 0,
+      "value": "v čakanju"
+    }
+  ],
   "KWWsDo": [
     {
       "type": 0,
@@ -2969,10 +3563,10 @@
       "value": "url"
     }
   ],
-  "KbUOQp": [
+  "KgJB0t": [
     {
       "type": 0,
-      "value": "Odjemalec Nethermind je robusten odjemalec, zgrajen na jedru .NET, zasnovan za zmogljivost, vsestranskost in prilagodljivost."
+      "value": "Priporočeno za večino uporabnikov"
     }
   ],
   "KhJBVZ": [
@@ -2985,6 +3579,12 @@
     {
       "type": 0,
       "value": "Ko bo postopek dokončan, boste videli naslednje:"
+    }
+  ],
+  "KqMfKH": [
+    {
+      "type": 0,
+      "value": "Redni dvigi, razdeljeni na naslov za dvig za vsako stanje nad 32 ETH, samodejno in redno"
     }
   ],
   "KvRSg5": [
@@ -3019,6 +3619,12 @@
       "value": "."
     }
   ],
+  "Kzksr7": [
+    {
+      "type": 0,
+      "value": "Razumem tveganja, povezana s programsko opremo in zmanjšanjem deleža."
+    }
+  ],
   "L7fPF+": [
     {
       "type": 0,
@@ -3041,32 +3647,16 @@
       "value": "ponovno naložite denarnico"
     }
   ],
+  "LBAaxu": [
+    {
+      "type": 0,
+      "value": "Končna točka JSON-RPC"
+    }
+  ],
   "LHPZ+C": [
     {
       "type": 0,
       "value": "Lighthouse je izvedba odjemalca za soglasje, napisana v jeziku Rust ter močno osredotočena na hitrost in varnost."
-    }
-  ],
-  "q8Cxf5": [
-    {
-      "type": 0,
-      "value": "Dvig BLS: privzeto bi depozit-cli ustvaril poverilnice za dvig z "
-    },
-    {
-      "type": 1,
-      "value": "boldWithdrawalKey"
-    },
-    {
-      "type": 0,
-      "value": ", izpeljanimi prek mnemonike v formatu "
-    },
-    {
-      "type": 1,
-      "value": "eip2334"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "LVy+cS": [
@@ -3087,30 +3677,28 @@
       "value": "Pogosta vprašanja validatorjev"
     }
   ],
-  "LibVut": [
-    {
-      "type": 0,
-      "value": "Uporabite "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " za sinhronizacijo testnega omrežja Goerli."
-    }
-  ],
   "Ljo9dF": [
     {
       "type": 0,
       "value": "Bolgarščina"
     }
   ],
+  "Ll/uYX": [
+    {
+      "type": 0,
+      "value": "Povežite se z novo denarnico"
+    }
+  ],
   "LlClXS": [
     {
       "type": 0,
       "value": "Hvala, ker podpirate omrežje Ethereum!"
+    }
+  ],
+  "LmBip5": [
+    {
+      "type": 0,
+      "value": "Odstranite vložek iz"
     }
   ],
   "LpnfTF": [
@@ -3169,16 +3757,24 @@
       "value": "Naložite v skupino vozlišča na oddajniški verigi BLSToExecutionChange"
     }
   ],
-  "M3GwXS": [
+  "MAVs3a": [
     {
       "type": 0,
-      "value": "Polno nagrado boste prejeli samo, če je vaš validator povezan s spletom in posodobljen. To je vaša odgovornost. Če vaš validator izgubi spletno povezavo, boste kaznovani. Kazni za prekinitev povezave so približno enakovredne nagradam za aktivno sodelovanje."
+      "value": "* Biti brez povezave v sicer delujočem omrežju ne povzroči zmanjšanja deleža, lahko pa pomeni manjše kazni zaradi neaktivnosti."
     }
   ],
-  "28aik1": [
+  "MAq0zY": [
     {
       "type": 0,
-      "value": "Omejitve stopnje, določene v čakalni vrsti za dvig (lahko se spremenijo s testiranjem pred Shanghai)"
+      "value": "Trenutno je minimalna provizija za obdelavo povišana, zato priporočamo, da počakate nekaj minut. Trenutna provizija za obdelavo dviga je "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "MCmGYv": [
@@ -3211,12 +3807,6 @@
       "value": "Kaj se zgodi, če je moj ključ za dvig ukraden?"
     }
   ],
-  "Mor0Ih": [
-    {
-      "type": 0,
-      "value": "Slabo vedenje validatorja"
-    }
-  ],
   "MZvoWG": [
     {
       "type": 0,
@@ -3233,6 +3823,12 @@
     {
       "type": 0,
       "value": "Wagyu Key Gen GUI"
+    }
+  ],
+  "MalGck": [
+    {
+      "type": 0,
+      "value": "Geth na dokumentaciji omrežja Holesky"
     }
   ],
   "Mb3npQ": [
@@ -3285,6 +3881,24 @@
       "value": " obdelano za morebitno preostalo stanje"
     }
   ],
+  "Mor0Ih": [
+    {
+      "type": 0,
+      "value": "Slabo vedenje validatorja"
+    }
+  ],
+  "MsZuUe": [
+    {
+      "type": 0,
+      "value": "potegnite celotno stanje iz"
+    }
+  ],
+  "MtgVBi": [
+    {
+      "type": 0,
+      "value": "ODSTRANITE SREDSTVA"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -3299,6 +3913,12 @@
     {
       "type": 0,
       "value": "še nekaj dni"
+    }
+  ],
+  "NB68I4": [
+    {
+      "type": 0,
+      "value": "Dodajte sredstva svojemu validatorju"
     }
   ],
   "NDrMCw": [
@@ -3337,24 +3957,6 @@
       "value": "Zaščitil/-a sem korenski račun."
     }
   ],
-  "dVJcJt": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": To se izvede z uporabo zastavice "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": " pri ustvarjanju vaših ključev z orodjem Staking Deposit CLI."
-    }
-  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -3379,12 +3981,6 @@
     {
       "type": 0,
       "value": " mora biti konfiguriran za dvige. Zabeležite si poverilnice za dvig, saj jih boste potrebovali za posodobitev ključev."
-    }
-  ],
-  "NUcFVA": [
-    {
-      "type": 0,
-      "value": "[Example]"
     }
   ],
   "NVljH4": [
@@ -3427,6 +4023,12 @@
       "value": "Postanite validator z odjemalcem Teku"
     }
   ],
+  "NbiwbX": [
+    {
+      "type": 0,
+      "value": "Pomagali vam bomo ustvariti ključ za podpis za vsak validator, ki ga želite izvajati. Pri tem boste nastavili naslov za dvig, ki bo trajno povezan z vsakim računom validatorja."
+    }
+  ],
   "NiWtxk": [
     {
       "type": 1,
@@ -3463,46 +4065,24 @@
       "value": ")"
     }
   ],
-  "1ONfru": [
-    {
-      "type": 0,
-      "value": "Če želite, da bo to sporočilo vključeno v glavno omrežje, ga boste morali naložiti v skupino "
-    },
-    {
-      "type": 0,
-      "value": " vozlišča svetilnika "
-    },
-    {
-      "type": 0,
-      "value": " trajnem razcepu Capella/Shanghai."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
       "value": "Teku morate ob zagonu usmeriti v datoteke, ki vsebujejo shrambe ključev in njihova povezana gesla. To je mogoče storiti na 3 načine."
     }
   ],
-  "O+3LJ1": [
+  "O0SF0V": [
     {
       "type": 0,
-      "value": "Stanje tega validatorja je na dejanski najvišji vrednosti: "
+      "value": "Vsa preostala sredstva bodo "
     },
     {
       "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
+      "value": "transferredToDestination"
     },
     {
       "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": " v nekaj dneh po doseženi epohi za izstop."
     }
   ],
   "O3qkOm": [
@@ -3539,10 +4119,26 @@
       "value": "Dokumentacija o izvajanju odjemalca Erigon"
     }
   ],
+  "OJcH8h": [
+    {
+      "type": 0,
+      "value": "Začnite z dvigom"
+    }
+  ],
   "ON2tXT": [
     {
       "type": 0,
       "value": "Dokumentacija za Nethermind razlaga, kako prenesete in namestite odjemalca."
+    }
+  ],
+  "ONXIv4": [
+    {
+      "type": 0,
+      "value": "Dvig nekaj "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "ORVjVH": [
@@ -3605,6 +4201,58 @@
       "value": "Vse, kar morate razumeti, preden postanete validator."
     }
   ],
+  "OuiAUJ": [
+    {
+      "type": 0,
+      "value": "vsak od vaših "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validatorjev"
+    }
+  ],
+  "Ox4e26": [
+    {
+      "type": 0,
+      "value": "Obstaja tudi "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": ", ki omejuje, kako hitro lahko validatorji "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " omrežje, in sicer iz varnostnih razlogov. Glede na to, da je vsak validator omejen na največje učinkovito stanje "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", to preprečuje, da bi se velike količine ETH morda uporabile v napadu, nato pa naenkrat vse hitro izstopile iz omrežja."
+    }
+  ],
   "P+nziG": [
     {
       "type": 0,
@@ -3615,12 +4263,6 @@
     {
       "type": 0,
       "value": "Lažno predstavljanje je resnično tveganje za validatorje Razdrobitev in mnogi zaradi tega žal izgubijo svoja sredstva."
-    }
-  ],
-  "cU/ZP6": [
-    {
-      "type": 0,
-      "value": "Nadgradnja oddajniške verige v Ethereum vnaša doseganje soglasja z dokazom o deležu."
     }
   ],
   "P1QerV": [
@@ -3645,6 +4287,12 @@
       "value": "."
     }
   ],
+  "P2eds5": [
+    {
+      "type": 0,
+      "value": "Dvignite sredstva"
+    }
+  ],
   "P8FrVE": [
     {
       "type": 0,
@@ -3659,6 +4307,12 @@
     {
       "type": 1,
       "value": "emoji"
+    }
+  ],
+  "P99NKl": [
+    {
+      "type": 0,
+      "value": "Da bi čim bolj povečali svoje nagrade, morate svoj validator ohranjati povezan in posodobljen. To je vaša odgovornost, saj bo vaš račun kaznovan, če bo brez povezave. Kazni za neaktivnost so približno enake nagradam za aktivno sodelovanje."
     }
   ],
   "P9mVZK": [
@@ -3679,22 +4333,28 @@
       "value": "Ta epoha je določena s prvo razpoložljivo epoho, ki še ni dosežena z izhodom drugih validatorjev (omejitev stopnje je odvisna od skupnega števila validatorjev v omrežju) in mora biti vsaj štiri (4) epohe po začetku izstopa."
     }
   ],
+  "PXAur5": [
+    {
+      "type": 0,
+      "value": "Dvignite"
+    }
+  ],
   "PfoT0C": [
     {
       "type": 0,
       "value": "Kontrolni seznam vam bo pomagal razumeti vlogo validatorja in vas pripraviti na vlogo."
     }
   ],
+  "PgJGHT": [
+    {
+      "type": 0,
+      "value": "Razpoložljivo"
+    }
+  ],
   "PglO1W": [
     {
       "type": 0,
       "value": "Uradno poročilo o potrditvi"
-    }
-  ],
-  "PmrcLE": [
-    {
-      "type": 0,
-      "value": "Dokumentacija odjemalca Nethermind v omrežju Goerli"
     }
   ],
   "PoBIK+": [
@@ -3733,42 +4393,10 @@
       "value": "odložišče"
     }
   ],
-  "Q8P0rZ": [
+  "Q6N+C6": [
     {
       "type": 0,
-      "value": "Validatorji imajo največje dejansko stanje "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". Dopolniti morate samo "
-    },
-    {
-      "type": 1,
-      "value": "maxTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", če želite doseči svoje največje dejansko stanje."
+      "value": "Omrežje Ethereum je zaživelo 30. julija 2015. Njegova velikost se sčasoma povečuje, z uvedbo Dankshardinga pa se bodo povečale zahteve glede shranjevanja, pomnilnika in pasovne širine."
     }
   ],
   "QKFeMq": [
@@ -3783,6 +4411,28 @@
       "value": "Opomba: navidezni stroji lahko privzeto onemogočijo NTP, tako da boste morali morda poiskati rešitev za svoje okolje."
     }
   ],
+  "QOevre": [
+    {
+      "type": 0,
+      "value": "Svojo mnemonično frazo bi morali zdaj imeti zapisano na varnem mestu in shrambo ključev shranjeno za "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Poskrbite, da jih boste hranili na varnem, po možnosti brez povezave. Vaše shrambe ključev za validatorje bi morale biti na voljo v novo ustvarjeni mapi "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "QRUdO6": [
     {
       "type": 0,
@@ -3793,6 +4443,12 @@
     {
       "type": 0,
       "value": "Preberite več o vratih v omrežju"
+    }
+  ],
+  "QUztYl": [
+    {
+      "type": 0,
+      "value": "znesek"
     }
   ],
   "QWDxrk": [
@@ -3823,28 +4479,6 @@
     {
       "type": 1,
       "value": "networkName"
-    }
-  ],
-  "dtVSdl": [
-    {
-      "type": 0,
-      "value": "Pomembno je vedeti, da boste morali kot validator položiti "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " kot varščino – z drugimi besedami, morali boste imeli zastavljena sredstva. Validator lahko postanete samo tako, da opravite enosmerno transakcijo "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " na pogodbo za polog na trenutni verigi Ethereum."
     }
   ],
   "QlsDcr": [
@@ -3879,24 +4513,6 @@
       "value": ", ki je bil sprejet, vendar se še vedno potrjuje v verigi. Tukaj bo na voljo, ko bo na beaconcha.in potrjenih 2048 blokov."
     }
   ],
-  "zBl8d5": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": če ste pri ustvarjanju ključev uporabili zastavico "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": ", lahko začnete"
-    }
-  ],
   "R7v7y3": [
     {
       "type": 0,
@@ -3919,6 +4535,12 @@
     {
       "type": 0,
       "value": "Odjemalci za soglasje"
+    }
+  ],
+  "RGD1CX": [
+    {
+      "type": 0,
+      "value": "Štirje (4) izstopi validatorjev so dovoljeni na epoho in en (1) dodaten za vsakih 65.536 skupnih aktivnih validatorjev nad 327.680. Od aprila 2023 je ta omejitev osem (8) in se bo povečala na devet (9), če/ko bo število aktivnih validatorjev doseglo 655.360."
     }
   ],
   "ROHpFF": [
@@ -3945,16 +4567,22 @@
       "value": "čestitamo"
     }
   ],
-  "RdHdwG": [
+  "RhR6+a": [
     {
       "type": 0,
-      "value": "Navodila za uporabo orodja staking-deposit-cli za ustvarjanje in oddajanje sporočila SignedBLSToExecutionChange za posodobitev poverilnic validatorja za dvig."
+      "value": "Predstavili vam bomo nastavitev naslova za dvig za vaš validator. Velja za najboljšo prakso in je zelo priporočljiva zaradi varnosti."
     }
   ],
-  "Rg5ySE": [
+  "RokPRM": [
     {
       "type": 0,
-      "value": "Koliko validatorjev želite izvajati?"
+      "value": "Redni dvigi"
+    }
+  ],
+  "RqcJGJ": [
+    {
+      "type": 0,
+      "value": "Besu na dokumentaciji omrežja Holesky"
     }
   ],
   "Rr2lI/": [
@@ -3967,6 +4595,24 @@
     {
       "type": 0,
       "value": "Povzetek"
+    }
+  ],
+  "RuFk89": [
+    {
+      "type": 0,
+      "value": "Absorbirajte drugi validator"
+    }
+  ],
+  "RuoC+s": [
+    {
+      "type": 0,
+      "value": "Dosežena je bila epoha za izstop tega validatorja. Preostalo stanje bo v naslednjih nekaj dneh samodejno preneseno bodisi na vaš povezani račun za dvig bodisi vaš izbrani ciljni validator, če prenašate račune."
+    }
+  ],
+  "RwXnhK": [
+    {
+      "type": 0,
+      "value": "hladno shranjevanje"
     }
   ],
   "Ryptmy": [
@@ -3987,6 +4633,12 @@
     {
       "type": 0,
       "value": " stroju z zračno režo."
+    }
+  ],
+  "S3RTk+": [
+    {
+      "type": 0,
+      "value": "Z dodajanjem sredstev na račun, ki še ni dosegel svojega največjega učinkovitega stanja, lahko povečate učinkovito stanje zastavljenih sredstev svojega validatorja, ki se uporablja za izračun nagrad in kazni. Vaše učinkovito stanje se določi iz vašega dejanskega stanja in se povečuje/zmanjšuje v celih enotah."
     }
   ],
   "S943uU": [
@@ -4011,6 +4663,12 @@
     {
       "type": 0,
       "value": "Izvedite datoteko, ki ste jo pravkar prenesli."
+    }
+  ],
+  "SPebP1": [
+    {
+      "type": 0,
+      "value": "Novo stanje"
     }
   ],
   "SVUntz": [
@@ -4057,12 +4715,6 @@
       "value": "Več o tveganjih za zmanjšanje deleža"
     }
   ],
-  "SdRBir": [
-    {
-      "type": 0,
-      "value": "Če želite postati validator, boste morali imeti sposobnost izvajanja ukazov v terminalu v svojem računalniku. Tako ustvarjanje novih parov ključev kot namestitev programske opreme za validacijo potekata v terminalu."
-    }
-  ],
   "SeW5ak": [
     {
       "type": 0,
@@ -4073,6 +4725,12 @@
     {
       "type": 0,
       "value": "Zahtevano"
+    }
+  ],
+  "SepcV5": [
+    {
+      "type": 0,
+      "value": "izstop iz zgoraj izbranega validatorja"
     }
   ],
   "SqKNq2": [
@@ -4091,22 +4749,72 @@
       "value": "Zapri povzetek čakalne vrste"
     }
   ],
+  "SwXcZM": [
+    {
+      "type": 0,
+      "value": "Najmanjša vrednost za dopolnitev znaša "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Sy5bAo": [
+    {
+      "type": 0,
+      "value": "Po končanem prehodu na dokaz o deležu z uvedbo spojitve so validatorji zdaj odgovorni za obdelavo transakcij in podpisovanje njihove veljavnosti. Ti podatki so "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " na voljo v priljubljenih zunanjih virih od uvedbe spojitve naprej. Zaradi uporabe zunanjega ponudnika bo vaš validator brez povezave. Po uvedbi Dankshardinga bodo validatorji morda prav tako izpostavljeni tveganju zmanjšanja deleža pod "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "Szwbym": [
     {
       "type": 0,
       "value": "ključ"
     }
   ],
-  "T2O2Gr": [
+  "T5tldp": [
     {
       "type": 0,
-      "value": "začetni in maksimum"
+      "value": "Nadgradite račun v račun s kapitalizacijo nagrad"
     }
   ],
   "THIzw6": [
     {
       "type": 0,
       "value": "Validatorji in Ethereum"
+    }
+  ],
+  "TKCr16": [
+    {
+      "type": 0,
+      "value": "Za popoln dvig sredstev je treba nastaviti naslov za dvig, sredstva pa bodo samodejno prenesena ob naslednjem pregledu validatorja."
     }
   ],
   "TMw9oz": [
@@ -4127,10 +4835,34 @@
       "value": "virtualenv vam lahko pomaga ustvariti izolirano okolje Python za orodje deposit-cli."
     }
   ],
+  "ThGXHF": [
+    {
+      "type": 0,
+      "value": "S tem se bo sprožil postopek trajnega "
+    },
+    {
+      "type": 1,
+      "value": "exiting"
+    },
+    {
+      "type": 0,
+      "value": " iz omrežja Ethereum z dokazom o deležu."
+    }
+  ],
   "Tpe6yK": [
     {
       "type": 0,
       "value": "Dokumentacija rpc-http-enabled"
+    }
+  ],
+  "Tpo1B3": [
+    {
+      "type": 0,
+      "value": "preneseno na indeks validatorja "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "U/NPbq": [
@@ -4145,10 +4877,18 @@
       "value": "Prikaži obširno primerjavo odjemalcev"
     }
   ],
-  "U6jzBs": [
+  "U4ARud": [
     {
       "type": 0,
-      "value": "Kako se pridružite javnemu testnemu omrežju za dvige"
+      "value": "Pred tem je morala oddajniška veriga (sloj za soglasje) samo opazovati pogodbo za polog zastavljanja na sloju za izvedbo, da bi ugotovila, kateri računi validatorjev so naložili "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Te informacije so zlahka zagotavljali in jih pridobivali zunanji ponudniki, kot sta Infura ali Alchemy."
     }
   ],
   "U7AOxj": [
@@ -4157,24 +4897,22 @@
       "value": "večje od 50 %"
     }
   ],
-  "UJMct0": [
+  "UJE2gP": [
     {
       "type": 0,
-      "value": "Preverite "
-    },
-    {
-      "type": 1,
-      "value": "etherscan"
-    },
-    {
-      "type": 0,
-      "value": " za več podrobnosti"
+      "value": "Nadzor izvaja"
     }
   ],
-  "UUDnWR": [
+  "UN2ydn": [
     {
       "type": 0,
-      "value": "Načrtovanje nadgradnje Shanghai (zadeva GitHub)"
+      "value": "Opozorilo – trenutna čakalna vrsta zahtevkov je višja od običajnega obsega"
+    }
+  ],
+  "UOFjs/": [
+    {
+      "type": 0,
+      "value": "Obstajajo novejši tipi računov poleg tipa 1. Prenos na tip 1 iz tipa 0 je predpogoj za prenos na nadaljnje tipe računov."
     }
   ],
   "UWv7yD": [
@@ -4199,6 +4937,26 @@
     {
       "type": 0,
       "value": "Do te epohe (medtem ko je »v čakalni vrsti«) se pričakuje, da bo vaš validator na spletu in zanj veljajo enaka pravila razreza kot vedno."
+    }
+  ],
+  "UdDXU6": [
+    {
+      "type": 0,
+      "value": "takoj"
+    }
+  ],
+  "UjKpPX": [
+    {
+      "type": 0,
+      "value": "Vsa preostala sredstva bodo prenesena na "
+    },
+    {
+      "type": 1,
+      "value": "destination"
+    },
+    {
+      "type": 0,
+      "value": " v nekaj dneh po doseženi epohi za izstop."
     }
   ],
   "Utck3E": [
@@ -4241,10 +4999,16 @@
       "value": "To je postalo zahteva v času spojitve, zato se pred drobljenjem prepričajte, da uporabljate oba."
     }
   ],
-  "iXbM1G": [
+  "V1iY4C": [
     {
       "type": 0,
-      "value": "Če nimate mape s testnim omrežjem, programa Nimbus verjetno niste pravilno vgradili in izvedli. Ponovno zaženite ukaze make."
+      "value": "Reth je zgrajen v Rustu, programskem jeziku, ki razvijalcem omogoča ustvarjanje zanesljive in učinkovite programske opreme. Rust je splošno uporaben programski jezik, ki daje poudarek zmogljivosti, varnosti tipa in sočasnosti. Zagotavlja varnost pomnilnika, kar pomeni, da vse reference kažejo na veljaven pomnilnik brez uporabe zbiralnika odpadkov."
+    }
+  ],
+  "V4X42O": [
+    {
+      "type": 0,
+      "value": "Konfigurirajte Lodestar"
     }
   ],
   "VASo1/": [
@@ -4279,40 +5043,6 @@
       "value": "Priporočeno"
     }
   ],
-  "VLDKor": [
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " je največje dejansko stanje validatorja. To pomeni, da ne boste zaslužili dodatnih nagrad, če stanje vašega validatorja zraste nad "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". Vendar pa boste zaslužili manj, če pade pod "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -4343,20 +5073,6 @@
     {
       "type": 0,
       "value": ", ki je skrivni ključ, ki si ga delita le dva odjemalca za medsebojno avtentikacijo. Ta skrivnost JWT v skupni rabi mora biti na voljo vsakemu odjemalcu (tako odjemalcu za izvajanje kot odjemalcu za soglasje), kar jima omogoča pravilno medsebojno komunikacijo."
-    }
-  ],
-  "VwWGD9": [
-    {
-      "type": 0,
-      "value": "Ta sporočila so omejena na 16 na blok ("
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": "), tako da, če je naenkrat podanih več kot 16 zahtev, se oblikuje čakalna vrsta in ta bodo obdelana v naslednjih blokih. To pomeni, da lahko takoj po nadgradnji Shanghai/Capella uporabniki, ki pošljejo to sporočilo, opazijo zamude do približno 2-3 dni pred obdelavo te zahteve."
     }
   ],
   "VzGJkB": [
@@ -4403,24 +5119,6 @@
       "value": "Pogosta vprašanja"
     }
   ],
-  "WFVzvu": [
-    {
-      "type": 1,
-      "value": "warning"
-    },
-    {
-      "type": 0,
-      "value": " Podvojeni pologi z enako datoteko z javnimi ključi bodo veljali za dvojni polog. Vse stanje, višje od "
-    },
-    {
-      "type": 1,
-      "value": "eth"
-    },
-    {
-      "type": 0,
-      "value": " se NE bo štelo v vaše dejansko stanje na oddajniški verigi. Dviga ne boste mogli opraviti, dokler se oddajniška veriga ne združi z glavnim omrežjem."
-    }
-  ],
   "WJA1/H": [
     {
       "type": 0,
@@ -4437,24 +5135,50 @@
       "value": " validatorjev"
     }
   ],
+  "WO6Iek": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": če ste pri ustvarjanju svojih ključev dodali naslov za dvig ("
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": " ali "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": " zastavice), ste pripravljeni"
+    }
+  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "Ti koraki so neobvezni, vendar so priporočeni za optimizacijo vašega vozlišča."
     }
   ],
-  "9MIPCp": [
+  "WVsePo": [
     {
       "type": 0,
-      "value": "Če s podatki o začetnem depozitu ne navedete naslova za dvig, boste morali ključe za dvig izpeljati iz svojega mnemonične fraze pozneje, zato varno shranite svojo mnemonično frazo – to bo EDINI način za dvig "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", ko boste odločili za aktiviranje dvigov."
+      "value": "Reth je modularna, sodelavcem prijazna in izjemno hitra implementacija protokola Ethereum v jeziku Rust. Reth lahko sinhronizira arhivsko vozlišče v manj kot 50 urah od začetnega bloka. Arhivsko vozlišče na glavnem omrežju Reth bo v juniju 2024 imelo le 2,1 TB."
     }
   ],
   "WdDGn6": [
@@ -4491,6 +5215,12 @@
     {
       "type": 0,
       "value": "dokaz o skrbništvu"
+    }
+  ],
+  "X4qc7f": [
+    {
+      "type": 0,
+      "value": "časovni žig"
     }
   ],
   "X5KFEh": [
@@ -4533,10 +5263,28 @@
       "value": "Več o nameščanju programa za namestitev"
     }
   ],
-  "XRxD8r": [
+  "XC3Z4Q": [
     {
       "type": 0,
-      "value": "Dokumentacija odjemalca Besu v omrežju Goerli"
+      "value": "»Tip 2«, »nalaganje donosov«"
+    }
+  ],
+  "XLXSsV": [
+    {
+      "type": 0,
+      "value": "Reth omogoča aktivni klepet v Telegramu za tehnično razpravo in odpravljanje napak."
+    }
+  ],
+  "XPKlzF": [
+    {
+      "type": 0,
+      "value": "Dejanje je trajno in nepovratno"
+    }
+  ],
+  "XRUCUL": [
+    {
+      "type": 0,
+      "value": "Ko je naslov za izvršitev zagotovljen s podpisom sporočila BLS za spremembo izvedbe, se ključi za dvig, izpeljani iz vaše mnemonične fraze validatorja, ne uporabljajo več. Zato je čimprejšnja zagotovitev naslova za izvršitev, ki ga nadzorujete, priporočljiva možnost za večino uporabnikov in privzeta pot za tiste, ki se pridružijo prek postopka uvajanja na tem spletnem mestu. To vas varuje pred trajno izgubo vseh sredstev, če ne morete obnoviti svoje mnemonične fraze in ključev za dvig."
     }
   ],
   "XVRQoq": [
@@ -4595,10 +5343,10 @@
       "value": "~25 minut"
     }
   ],
-  "XgOPc8": [
+  "XjMz3s": [
     {
       "type": 0,
-      "value": "Upoštevajte, da trenutno ni načrtov za omogočanje prenosov ETH med validatorji."
+      "value": "Za navedeni račun ni bilo odkritih validatorjev."
     }
   ],
   "XmddSV": [
@@ -4611,12 +5359,6 @@
     {
       "type": 0,
       "value": "Capella - Formalna specifikacija"
-    }
-  ],
-  "XszRWL": [
-    {
-      "type": 0,
-      "value": "eth1_withdrawal_address"
     }
   ],
   "Y07Hwy": [
@@ -4641,6 +5383,28 @@
     {
       "type": 0,
       "value": "Dopolni"
+    }
+  ],
+  "Y4Qzq8": [
+    {
+      "type": 0,
+      "value": "Zagnati morate tako "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " kot "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Y9S0NE": [
@@ -4683,10 +5447,26 @@
       "value": "Ključi"
     }
   ],
+  "YHS8Mc": [
+    {
+      "type": 0,
+      "value": "Vnesite za filtriranje"
+    }
+  ],
   "YJI2xv": [
     {
       "type": 0,
       "value": "Za določitev, katera vrsta dviga se bo sprožila, se sledi odločitvenemu drevesu. Če ima validator, ki se preverja, ETH, ki je primeren za dvig, se doda v čakalno vrsto za dvig. Če ni, je račun preskočen."
+    }
+  ],
+  "YLFl88": [
+    {
+      "type": 0,
+      "value": "Izstopite iz validatorja "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
     }
   ],
   "YP03/j": [
@@ -4707,20 +5487,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "YQJy4H": [
-    {
-      "type": 0,
-      "value": "Na tej točki bi morali imeti mnemonično frazo napisano na varnem mestu in shranjeno shrambo ključev za vse svoje validatorje (št. validatorjev: "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": "). Poskrbite, da so varno shranjeni, po možnosti ne na spletu. Vaše shrambe ključev validatorjev bi morale biti na voljo v izbranem imeniku."
     }
   ],
   "YXrp+b": [
@@ -4763,22 +5529,16 @@
       "value": "V okno terminala vnesite naslednje vrstice:"
     }
   ],
-  "xETYo6": [
-    {
-      "type": 0,
-      "value": "Če izgubite svoj ključ za dvig, ni mogoče dostopati do sredstev, shranjenih v vašem validatorju."
-    }
-  ],
-  "Yo9B64": [
-    {
-      "type": 0,
-      "value": "naslov sloja za izvajanje (Eth1)"
-    }
-  ],
   "YqsgWz": [
     {
       "type": 0,
       "value": "Slovenščina"
+    }
+  ],
+  "YrdpUP": [
+    {
+      "type": 0,
+      "value": "Nadgradite račun"
     }
   ],
   "YtwQyB": [
@@ -4795,6 +5555,12 @@
     {
       "type": 0,
       "value": "vreča denarja"
+    }
+  ],
+  "YzPl2p": [
+    {
+      "type": 0,
+      "value": "Razpoznavne lastnosti"
     }
   ],
   "Z07LQm": [
@@ -4819,12 +5585,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "MAVs3a": [
-    {
-      "type": 0,
-      "value": "Če ostanete brez povezave s sicer zdravim omrežjem, to ne povzroči razreza, vendar bo povzročilo majhne kazni za nedejavnost."
     }
   ],
   "ZK6NmY": [
@@ -4879,16 +5639,22 @@
       "value": "Namestite in nastavite virtualenv:"
     }
   ],
+  "ZuQOEW": [
+    {
+      "type": 0,
+      "value": "Uporablja se lahko tudi za avtorizacijo določenih dejanj validatorja, kot so zahteve za delne dvige ali popoln izstop iz računa validatorja."
+    }
+  ],
+  "ZwqwuN": [
+    {
+      "type": 0,
+      "value": "Za dejanja, ki pomagajo omrežju doseči soglasje, se dodeljujejo nagrade"
+    }
+  ],
   "ZzTcj5": [
     {
       "type": 0,
       "value": "Prenesite python3 in sledite navodilom za namestitev."
-    }
-  ],
-  "hzsgQ5": [
-    {
-      "type": 0,
-      "value": "Te se imenujejo tudi »delni dvigi« ali »plačila nagrad«, saj preostalih 32 ETH ostane zaklenjenih in vloženih."
     }
   ],
   "a+xjjV": [
@@ -4903,36 +5669,32 @@
       "value": "Čakalna vrsta za izstop in čakalna vrsta za aktiviranje"
     }
   ],
-  "Sv30z9": [
+  "a9gOIB": [
     {
       "type": 0,
-      "value": "Če se pripravljate na nakazilo za aktiviranje novega validatorja, lahko (in morate) navesti naslov za izplačilo s svojim začetnim pologom. To se izvede v času ustvarjanja ključa in se nato vključi v vašo datoteko "
+      "value": "Največje učinkovito stanje "
     },
     {
       "type": 1,
-      "value": "depositData"
+      "value": "MAX_EFFECTIVE_BALANCE"
     },
     {
       "type": 0,
-      "value": ", ki je poslana z vašo transakcijo depozita 32 ETH."
-    }
-  ],
-  "9/yem6": [
+      "value": ", 64-kratno povečanje v primerjavi s prejšnjimi tipi in možnost zahtevati delni dvig katerega koli stanja nad "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
     {
       "type": 0,
-      "value": "Če boste poskusili preslepiti sistem ali delovati v nasprotju s specifikacijo, boste lahko kaznovani z zmanjšanjem deleža. Sočasno izvajanje ključev validatorja na dveh ali več napravah bo privedlo do zmanjšanja deleža."
+      "value": " prek interakcije s pametno pogodbo"
     }
   ],
   "aEBE6s": [
     {
       "type": 0,
       "value": "2. Pripravite vozlišča"
-    }
-  ],
-  "fpe4Gx": [
-    {
-      "type": 0,
-      "value": "Aktivni računi z efektivnim stanjem ali skupnim stanjem manj kot 32 bodo preskočeni"
     }
   ],
   "aR50Oc": [
@@ -4959,10 +5721,22 @@
       "value": "Nadaljuj"
     }
   ],
+  "ai7NFR": [
+    {
+      "type": 0,
+      "value": "vedno shranite svojo mnemonično frazo na varnem mestu"
+    }
+  ],
   "aozN2h": [
     {
       "type": 0,
       "value": "Oglejte si dokumentacijo odjemalca za soglasje za navodila, specifična za odjemalca, ter kako to nastavite."
+    }
+  ],
+  "arfnPZ": [
+    {
+      "type": 0,
+      "value": "Največje učinkovito stanje"
     }
   ],
   "azLmaD": [
@@ -4971,24 +5745,16 @@
       "value": "Zgradi deposit-cli iz izvorne kode Python"
     }
   ],
-  "b3J7Pw": [
+  "b+ZHvU": [
     {
       "type": 0,
-      "value": "Ne. Zastavljanje več kot "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " nima nobene prednosti."
+      "value": "Vložite v"
     }
   ],
-  "FWtWw3": [
+  "b+yUd5": [
     {
       "type": 0,
-      "value": "Upoštevajte, da sta čakalni vrsti »dvig« in »BLS za izvedbo« neodvisni in ne tekmujeta. Vsak je omejen na epoho."
+      "value": "Pridobite več"
     }
   ],
   "b8APBK": [
@@ -4997,10 +5763,18 @@
       "value": "Več o raznolikosti odjemalca"
     }
   ],
-  "9h8yTf": [
+  "bFiejS": [
     {
       "type": 0,
-      "value": "Trenutno validatorja ni mogoče ponovno aktivirati in svojih sredstev ne boste mogli prenesti ali dvigniti, dokler se dvigi ne omogočijo z nadgradnjo Shanghai. To pomeni, da bodo vaša sredstva do takrat ostala nedostopna."
+      "value": "Upoštevajte, da po drugem (malo verjetnem) scenariju lahko postopoma izgubite do 50 % ("
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH) svojega vložka v 21 dneh. Po 21 dneh ste izključeni iz nabora validatorjev. To zagotavlja ponovno finalizacijo blokov po določenem času."
     }
   ],
   "bNFkSo": [
@@ -5033,10 +5807,10 @@
       "value": "Ne pozabite upoštevati, da na pogonu potrebujete dovolj prostora, dokler ne opravite vzdrževanja na vozlišču."
     }
   ],
-  "bat2FM": [
+  "bagKCF": [
     {
       "type": 0,
-      "value": "po"
+      "value": "Če ste za svoje poverilnice za dvig že nastavili naslov za dvig Ethereum, bo ob izstopu celotno preostalo stanje samodejno preneseno na ta naslov. V nasprotnem primeru boste za nastavitev naslova za dvig morali uporabiti svojo mnemonično frazo, da ustvarite ključ za dvig."
     }
   ],
   "bbr+aD": [
@@ -5097,6 +5871,38 @@
       "value": "Kaj je odjemalec validatorja?"
     }
   ],
+  "c8BPhf": [
+    {
+      "type": 0,
+      "value": "Nadgradite validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
+  "cDFQIx": [
+    {
+      "type": 0,
+      "value": "Vaš naslov za dvig bi moral biti običajen račun Ethereuma, ki ga "
+    },
+    {
+      "type": 1,
+      "value": "youControl"
+    },
+    {
+      "type": 0,
+      "value": ", po možnosti s pomočjo tehnik "
+    },
+    {
+      "type": 1,
+      "value": "coldStorage"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "cE71F9": [
     {
       "type": 0,
@@ -5117,6 +5923,18 @@
       "value": "Dokumentacija za Geth razlaga, kako prenesti in namestiti odjemalec."
     }
   ],
+  "cHfIGt": [
+    {
+      "type": 0,
+      "value": "Izvršni račun"
+    }
+  ],
+  "cJ9MRI": [
+    {
+      "type": 0,
+      "value": "Če je hkrati podanih več kot 16 zahtevkov, se bo oblikovala čakalna vrsta in ti zahtevki bodo obdelani v naslednjih blokih. Po končani obdelavi bo vaš validator trajno aktiviran za dvige in bo upravičen do izplačil med naslednjim pregledom."
+    }
+  ],
   "cJX99/": [
     {
       "type": 0,
@@ -5135,10 +5953,44 @@
       "value": "Trenutni APR"
     }
   ],
-  "odjJFL": [
+  "cU/ZP6": [
     {
       "type": 0,
-      "value": "Več o razdrobitvi podatkov"
+      "value": "Ethereum za doseganje soglasja uporablja dokazilo o deležu."
+    }
+  ],
+  "cZHvCU": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": To se izvede z naslovom za dvig ("
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": " ali "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") zastavico, ko ustvarite svoje ključe s pologom zastavljanja CLI."
     }
   ],
   "cav520": [
@@ -5159,6 +6011,20 @@
       "value": "Kako se vsak validator oceni za dvige"
     }
   ],
+  "ceCCZc": [
+    {
+      "type": 0,
+      "value": "Na kateri validator bi želeli "
+    },
+    {
+      "type": 1,
+      "value": "migrateFundsTo"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -5171,6 +6037,12 @@
       "value": "Več o PegaSys Teku"
     }
   ],
+  "ci7V7t": [
+    {
+      "type": 0,
+      "value": "Predpona"
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -5181,6 +6053,28 @@
     {
       "type": 0,
       "value": "Kakšna bo moja kazen za zlonamerno delovanje?"
+    }
+  ],
+  "cm5HC4": [
+    {
+      "type": 0,
+      "value": "Trenutno lahko dvignete do "
+    },
+    {
+      "type": 1,
+      "value": "surplusEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "cnQKC2": [
@@ -5213,20 +6107,26 @@
       "value": "Transakcijo morate podpisati za vsak polog, ki ga želite opraviti."
     }
   ],
-  "6vdHjj": [
+  "dAwg7N": [
+    {
+      "type": 0,
+      "value": "Vsak validator tega tipa računa zahteva natančno "
+    },
     {
       "type": 1,
-      "value": "withdrawalCredentials"
+      "value": "MIN_ACTIVATION_BALANCE"
     },
     {
       "type": 0,
-      "value": " je 32-bajtno polje v depozitu za preverjanje cilja veljavnih dvigov. Trenutno obstajata dve vrsti dvigov: dvig BLS in dvig z naslova Ethereum."
-    }
-  ],
-  "8FjJDx": [
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Slabo vedenje"
+      "value": "."
     }
   ],
   "dIgBOz": [
@@ -5241,6 +6141,52 @@
       "value": "Prysm je odjemalec za soglasje protokola Ethereum za izvajanje Go, osredotočena na uporabnost, varnost in zanesljivost."
     }
   ],
+  "dKraKE": [
+    {
+      "type": 0,
+      "value": "Ne pozabite, da boste morali kot validator zastaviti najmanj "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " za zavarovanje oziroma morali boste imeti nekaj sredstev na voljo. Edini način, kako postati validator, je opraviti enosmerno "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " transakcijo "
+    },
+    {
+      "type": 1,
+      "value": "DEPOSIT_CONTRACT"
+    },
+    {
+      "type": 0,
+      "value": " na "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": " sloju za izvedbo. Oddajniška veriga (sloj za soglasje) se uporablja hkrati za sledenje vseh dejavnosti validatorjev."
+    }
+  ],
   "dLE9FH": [
     {
       "type": 0,
@@ -5251,6 +6197,12 @@
     {
       "type": 0,
       "value": "Kaj točno je validator?"
+    }
+  ],
+  "dOewZy": [
+    {
+      "type": 0,
+      "value": "Polog od"
     }
   ],
   "dTOtPO": [
@@ -5321,18 +6273,6 @@
       "value": "code3"
     }
   ],
-  "vPvQyf": [
-    {
-      "type": 0,
-      "value": "Prepričajte se, da imate nadzor nad tem naslovom, saj tega ni mogoče spremeniti."
-    }
-  ],
-  "eD1NDX": [
-    {
-      "type": 0,
-      "value": "Dvig pologa ne bo mogoč do nadgradnje Shanghai/Capella, načrtovane za 1./2. četrtletje 2023."
-    }
-  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -5345,46 +6285,16 @@
       "value": "Pošljite transakcijo, da dokončate svoj polog."
     }
   ],
-  "eOpZjd": [
-    {
-      "type": 0,
-      "value": "Navaja, kdo zastavlja, kdo potrjuje in koliko je zastavljeno ter kdo lahko dvigne sredstva."
-    }
-  ],
-  "eP2Czm": [
-    {
-      "type": 0,
-      "value": "Razumem, da "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " svojega vložka do nadgradnje Shanghai/Capella in "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " med validatorji. Razumem, da se, če izstopim, do takrat ne bom mogel ponovno pridružiti. Zastavljanje je zaveza."
-    }
-  ],
   "eTenzU": [
     {
       "type": 0,
       "value": "čakalna vrsta za aktivacijo"
+    }
+  ],
+  "eWA3GW": [
+    {
+      "type": 0,
+      "value": "Sprožite dvig"
     }
   ],
   "eX072N": [
@@ -5393,22 +6303,16 @@
       "value": "Erigon je odjemalec za izvajanje na meji učinkovitosti, napisan v Go."
     }
   ],
+  "eXIZ1M": [
+    {
+      "type": 0,
+      "value": "Namestite programski jezik python3.9+"
+    }
+  ],
   "eaU/aL": [
     {
       "type": 0,
       "value": "Za večjo varnost in učinkovitost svojega vozlišča uporabite namensko strojno opremo za izvajanje svojih odjemalcev. To zmanjša tveganje za izpostavljenost zlonamerni programski opremi, zmanjša konkurenco za računalniške vire in zagotavlja, da vaše vozlišče vedno obdeluje obremenitev omrežja in svoje odgovornosti kot validator."
-    }
-  ],
-  "Vbv7Uw": [
-    {
-      "type": 0,
-      "value": "Pomagali vam bomo ustvariti podpisni ključ za vsakega validatorja, ki ga želite zagnati. Pri ustvarjanju podatkov o vplačilu lahko svojemu validatorju navedete naslov za dvig, ki trajno nastavi naslov za dvig."
-    }
-  ],
-  "elCkOU": [
-    {
-      "type": 0,
-      "value": "Več o spojitvi"
     }
   ],
   "eq0/34": [
@@ -5423,54 +6327,10 @@
       "value": "Pri zagonu odjemalca Teku so lahko shrambe ključev in gesla zagotovljena na različne načine."
     }
   ],
-  "esDvdR": [
-    {
-      "type": 0,
-      "value": "Stanje validatorja je višje od "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ", vendar je dejansko stanje nizko ("
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": "). Če dodate "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (najmanjša vsota, ki jo dovoljuje pogodba za polog), bo vaše dejansko stanje doseglo najvišjo vrednost."
-    }
-  ],
   "eyK2E3": [
     {
       "type": 0,
       "value": "Izpolnite kontrolni seznam"
-    }
-  ],
-  "ezCT4A": [
-    {
-      "type": 0,
-      "value": "Upoštevanje Shanghai Core EIP"
     }
   ],
   "f/N7FO": [
@@ -5479,24 +6339,70 @@
       "value": "Kaj se zgodi, če izgubim ključ za podpisovanje?"
     }
   ],
-  "fBCdim": [
+  "f1L9pF": [
     {
       "type": 0,
-      "value": "Prej je moralo vozlišče na oddajniški verigi (plast za soglasje) le opazovati pogodbo o depozitu zastavljanja na sloju za izvajanje, da bi vedelo, kateri računi validatorja so deponirali "
+      "value": "Najmanjši znesek pologa je "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "MIN_DEPOSIT_ETHER"
     },
     {
       "type": 0,
-      "value": " ETH. Te informacije so zlahka posredovali in pridobili tretji ponudniki, kot sta Infura ali Alchemy."
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "f5yGLr": [
+    {
+      "type": 0,
+      "value": "Prepričajte se, ali prenašate iz uradnega računa EthStaker GitHub, tako da preverite url: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "fBG/Ge": [
+    {
+      "type": 0,
+      "value": "Stroški"
+    }
+  ],
+  "fF376U": [
+    {
+      "type": 0,
+      "value": "Trenutno"
+    }
+  ],
+  "fH2WUb": [
+    {
+      "type": 0,
+      "value": "(Redni dvigi)"
     }
   ],
   "fHLKXR": [
     {
       "type": 0,
       "value": "Odgovor na to vprašanje je odvisen predvsem od tega, s koliko ETH razpolagate."
+    }
+  ],
+  "fLOgM+": [
+    {
+      "type": 0,
+      "value": "Svojo mnemonično frazo bi morali zdaj imeti zapisano na varnem mestu, shrambo ključev pa shranjeno za "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Poskrbite, da ju boste shranili na varnem mestu, po možnosti brez povezave. Vaše shrambe validatorja bi morale biti na voljo v izbrani mapi."
     }
   ],
   "fQ5yno": [
@@ -5523,22 +6429,10 @@
       "value": "Informacije za operaterje validatorjev glede dvigov zastavljanja."
     }
   ],
-  "dwahMV": [
-    {
-      "type": 0,
-      "value": "Lahko se odločite, da z začetnim pologom navedete naslov za izplačilo, da samodejno omogočite izplačila nagrad in tudi možnost popolnega izstopa iz sredstev kadar koli po nadgradnji Shanghai/Capella. Ta naslov bi moral biti na običajnem naslovu Ethereum in bo edini naslov, na katerega se lahko nakažejo sredstva iz vaših novih računov validatorja."
-    }
-  ],
   "fZwn+P": [
     {
       "type": 0,
       "value": "Po namestitvi odjemalca se prepričajte, da ste v celoti sinhronizirani, preden oddate svoj polog zastavljanja. To lahko traja več dni."
-    }
-  ],
-  "9oWUO0": [
-    {
-      "type": 0,
-      "value": "Vendar ne pozabite, da do nadgradnje Shanghai/Capella, načrtovane za 1./2. četrtletje 2023, ko enkrat izstopite, se več ne morete vrniti."
     }
   ],
   "fbiteI": [
@@ -5551,6 +6445,46 @@
     {
       "type": 0,
       "value": "Čakanje na potrditev s strani denarnice"
+    }
+  ],
+  "fnV2qn": [
+    {
+      "type": 0,
+      "value": "Računi s kapitalizacijo nagrad so upravičeni do zahtevka za delne dvige katerega koli stanja nad "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "fpe4Gx": [
+    {
+      "type": 0,
+      "value": "Aktivni računi z učinkovitim stanjem ali skupnim stanjem, nižjim od "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", se preskočijo"
     }
   ],
   "frGVRP": [
@@ -5577,22 +6511,16 @@
       "value": "Poleg tega lahko odjemalec validatorja (VC) in vozlišče na oddajniški verigi (BN) nastavite v različnih napravah in naslovih IP, tako da bo vaša shramba ključev shranjena v drugi napravi, če vaše vozlišče na oddajniški verigi postane ranljivo."
     }
   ],
-  "g0zIUd": [
-    {
-      "type": 0,
-      "value": "dviga ni mogoče opraviti"
-    }
-  ],
-  "oWBn+a": [
-    {
-      "type": 0,
-      "value": "Priporočila glede strojne opreme se ves čas razvijajo. Trenutne najmanjše zahteve se bodo verjetno obsežno povečale po uvedbi drobljenja. Preden položite sredstva, opravite lastno raziskavo."
-    }
-  ],
   "g37XKP": [
     {
       "type": 0,
       "value": "Več o virtualenv"
+    }
+  ],
+  "g8+DBf": [
+    {
+      "type": 0,
+      "value": "Konfiguriranje vmesnika JSON-RPC"
     }
   ],
   "g8tzOu": [
@@ -5601,36 +6529,28 @@
       "value": "Izbrani naslov prilepite sem, da ga vključite v spodnji ukaz CLI kopiraj/prilepi:"
     }
   ],
+  "gAnk66": [
+    {
+      "type": 0,
+      "value": "Sproži postopek trajnega izstopa vašega računa validatorja iz omrežja Ethereum z dokazom o deležu in dviga celotnega stanja."
+    }
+  ],
   "gFj3By": [
     {
       "type": 0,
       "value": "visoka spremenljivka"
     }
   ],
+  "gGc4ae": [
+    {
+      "type": 0,
+      "value": "Prenesite aplikacijo GUI"
+    }
+  ],
   "gHJegi": [
     {
       "type": 0,
       "value": "Validatorji morajo še vedno opraviti svoje naloge potrjevanja, dokler ne izstopijo"
-    }
-  ],
-  "gN9D/h": [
-    {
-      "type": 0,
-      "value": "Uporabite "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " za sinhronizacijo testnega omrežja Goerli."
-    }
-  ],
-  "gQkd2y": [
-    {
-      "type": 0,
-      "value": "Generirajte ključe za polog z uporabo orodja za polog fundacije Ethereum Foundation"
     }
   ],
   "gVC0Wl": [
@@ -5643,6 +6563,12 @@
     {
       "type": 0,
       "value": "Tako kot urni kazalec ta proces napreduje v eno smer in ko je dosežen zadnji validator, se pregled začne znova od začetka. Pri vsakem validatorju na tej poti se račun oceni za morebitne dvige."
+    }
+  ],
+  "gXVf9n": [
+    {
+      "type": 0,
+      "value": "Najnovejše primerjalne meritve Reth"
     }
   ],
   "gfLdAQ": [
@@ -5661,28 +6587,6 @@
     {
       "type": 0,
       "value": "DA"
-    }
-  ],
-  "grF2gm": [
-    {
-      "type": 0,
-      "value": "Vsak par ključev, povezan s validatorjem, zahteva aktiviranje zaklepanja "
-    },
-    {
-      "type": 1,
-      "value": "ethPerValidator"
-    },
-    {
-      "type": 0,
-      "value": ", ki predstavlja vaše začetno stanje in vašo "
-    },
-    {
-      "type": 1,
-      "value": "initialAndMaximum"
-    },
-    {
-      "type": 0,
-      "value": " glasovalno moč za katerega koli validatorja."
     }
   ],
   "gsuLMm": [
@@ -5751,10 +6655,22 @@
       "value": "Vaš delež"
     }
   ],
+  "hAwuqj": [
+    {
+      "type": 0,
+      "value": "Validacija zahteva dva ključa iz varnostnih razlogov. Vaš podpisni ključ mora biti ves čas dostopen, zato mora biti shranjen na spletu. Ker pa je vse, kar je povezano s spletom, izpostavljeno tveganju, ni priporočljivo uporabljati istega ključa za dvige sredstev."
+    }
+  ],
   "hBIbQ+": [
     {
       "type": 0,
       "value": "Izogibajte se pretirano zapletenim namestitvam in se zavedajte kompromisov. Prekinitev povezave za kratko časovno obdobje bo privedla do nizkih kazni za nedejavnost, kar je mogoče preprosto povrniti po ponovni vzpostavitvi povezave za enako časovno obdobje. Zapleteno zasilno napajanje lahko vaši namestitvi doda stroške, prav tako lahko odvečni nadomestni validatorji privedejo do hujše kazni, znane kot zmanjšanje deleža."
+    }
+  ],
+  "hCkFMJ": [
+    {
+      "type": 0,
+      "value": "Indeks"
     }
   ],
   "hCwX6+": [
@@ -5763,22 +6679,54 @@
       "value": "Čakalna vrsta BLS za spremembo izvedbe (BTEC)"
     }
   ],
-  "ZwqwuN": [
-    {
-      "type": 0,
-      "value": "Nagrade so dodeljene za dejanja, ki pomagajo omrežju doseči soglasje."
-    }
-  ],
   "hG0uP4": [
     {
       "type": 0,
       "value": "Samo za namizje"
     }
   ],
-  "hPCn9f": [
+  "hIQWYg": [
     {
       "type": 0,
-      "value": "--JsonRpc.Enabled dokumentacija"
+      "value": "Dejanja validatorja"
+    }
+  ],
+  "hUmIwN": [
+    {
+      "type": 0,
+      "value": "Stanje validatorja je večje od "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": ", učinkovito stanje pa je nizko ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": "). Z dodajanjem "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (najnižjim dovoljenim po pogodbi za polog) bo doseženo vaše največje učinkovito stanje."
     }
   ],
   "hXE+0W": [
@@ -5803,30 +6751,16 @@
       "value": "Madžarščina"
     }
   ],
-  "nIf7QZ": [
-    {
-      "type": 0,
-      "value": "Zato potrebujemo aktivne udeležence – imenovane validatorji – ki predlagajo, potrjujejo in jamčijo za veljavnost blokov. V zameno pošteni validatorji prejmejo finančne nagrade."
-    }
-  ],
   "hkg3fb": [
     {
       "type": 0,
       "value": "Več o dejanskem stanju"
     }
   ],
-  "hlxt3T": [
+  "hrJ1oM": [
     {
       "type": 0,
-      "value": "Omejitev najvišjega deleža na "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH na validatorja spodbuja decentralizacijo moči, saj preprečuje, da bi kateri koli validator imel pretirano velik glas o stanju verige. Prav tako omejuje količino ETH, ki jo je mogoče kadar koli odstraniti iz zastavljanja, saj je število validatorjev, ki lahko izstopijo v določenem časovnem obdobju, omejeno. To pomaga zaščititi omrežje pred določenimi napadi."
+      "value": "Svojo namero, da prenehate z validacijo, lahko sporočite kadar koli s podpisom sporočila o prostovoljnem izstopu s svojim validatorjem."
     }
   ],
   "huEFUF": [
@@ -5853,6 +6787,28 @@
     {
       "type": 0,
       "value": "Razumem, da je pomembno zagotoviti, da moj validator ostane povezan s spletom in posodobljen."
+    }
+  ],
+  "hzsgQ5": [
+    {
+      "type": 0,
+      "value": "Ti se imenujejo tudi »delni dvigi« ali »plačila nagrade«, ker preostali "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " ostajajo zaklenjeni in zastavljeni."
     }
   ],
   "iCpuph": [
@@ -5885,32 +6841,16 @@
       "value": "Izvajanje odjemalca validatorja"
     }
   ],
-  "iN1PPs": [
-    {
-      "type": 0,
-      "value": "Vsak polog v znesku "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH aktivira en komplet ključev validatorja. Ti ključi se uporabljajo za podpis stanja omrežja. Nižja kot je zahteva ETH, več posledičnih podpisov mora shraniti omrežje. Znesek "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH je bil izbran kot stanje med omogočanjem čim večjemu številu ljudi, da zastavlja, ne da bi ovirali decentralizacijo z napihovanjem velikosti vsakega bloka s podpisi."
-    }
-  ],
   "iX90gu": [
     {
       "type": 0,
       "value": "Pridružil/-a sem se strežniku Discord svojega odjemalca za izvajanje."
+    }
+  ],
+  "iXbM1G": [
+    {
+      "type": 0,
+      "value": "Če nimate mape za testno omrežje, morda niste pravilno zgradili in zagnali Nimbusa. Ponavljajte ukaz za izdelavo."
     }
   ],
   "iZuIgB": [
@@ -5935,6 +6875,12 @@
       "value": "network"
     }
   ],
+  "ijnFHe": [
+    {
+      "type": 0,
+      "value": "naslov sloja za izvedbo"
+    }
+  ],
   "im7uMt": [
     {
       "type": 0,
@@ -5953,22 +6899,28 @@
       "value": "Število praznih rež (zamujene priložnosti bloka, spremenljivo, običajno minimalno)"
     }
   ],
+  "iq4JF8": [
+    {
+      "type": 0,
+      "value": "Izhod iz omrežja brez povezave"
+    }
+  ],
   "iqJ3LM": [
     {
       "type": 0,
       "value": "PegaSys Teku je odjemalec za soglasje Ethereum, ki temelji na jeziku Java, in je zasnovan za izpolnjevanje institucionalnih potreb in varnostnih zahtev."
     }
   ],
-  "XRUCUL": [
-    {
-      "type": 0,
-      "value": "Zato je pametno ustvariti ključe iz mnemonične fraze, ki deluje kot dodatno geslo. To je privzeto za validatorje, ki se pridružijo prek postopka uvedbe na tem spletnem mestu."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
       "value": "Dokumentacija"
+    }
+  ],
+  "isgVsK": [
+    {
+      "type": 0,
+      "value": "Nestanovitnost provizij je velika pri preobremenjenosti omrežja. Nezadostna plačila bodo povzročila neuspeh vašega zahtevka brez povračila."
     }
   ],
   "iv88b5": [
@@ -5999,10 +6951,28 @@
       "value": "Naslov za izvršitev za dvige"
     }
   ],
-  "RGD1CX": [
+  "jM+e2M": [
     {
       "type": 0,
-      "value": "Dovoljeni so štirje (4) izstopi validatorjev na epoho in še en (1) več za vsakih 65.536 skupno aktivnih validatorjev nad 327.680. Od februarja 2023 je ta omejitev sedem (7) in se bo povečala na osem (8), če/ko število validatorjev doseže 524.288."
+      "value": "Največje učinkovito stanje "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "jVlgXS": [
+    {
+      "type": 0,
+      "value": "Poglobite se v načrt Ethereuma."
     }
   ],
   "jXer8/": [
@@ -6015,6 +6985,12 @@
     {
       "type": 0,
       "value": "Dokumentacija za namestitev odjemalca Lighthouse"
+    }
+  ],
+  "jeCR95": [
+    {
+      "type": 0,
+      "value": "Lahko se pozneje prenese na račun s kapitalizacijo nagrad."
     }
   ],
   "jecC36": [
@@ -6047,6 +7023,26 @@
       "value": "Dokumentacija o izvajanju odjemalca Geth"
     }
   ],
+  "jm4ljd": [
+    {
+      "type": 0,
+      "value": "Vsak par ključev, povezan z validatorjem, zahteva zaklepanje vsaj "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": " za aktivacijo. Znesek, ki ga vložite, bo predstavljal začetno glasovalno moč za vsak validator."
+    }
+  ],
+  "jmKQY9": [
+    {
+      "type": 0,
+      "value": "Dokumentacija za odjemalca Nimbus"
+    }
+  ],
   "jp9OG2": [
     {
       "type": 0,
@@ -6067,6 +7063,18 @@
       "value": "pr"
     }
   ],
+  "jrPsyP": [
+    {
+      "type": 0,
+      "value": "Epoha za izstop"
+    }
+  ],
+  "jrbRLT": [
+    {
+      "type": 0,
+      "value": "Če želite postati validator, morate poznati upravljanje ključev in zaščito mnemonične fraze. Če vam ključi in mnemonične fraze še niso znani, ne nadaljujte."
+    }
+  ],
   "jse8rl": [
     {
       "type": 0,
@@ -6083,6 +7091,12 @@
     {
       "type": 0,
       "value": "Dokumentacija Nimbus"
+    }
+  ],
+  "jztMM9": [
+    {
+      "type": 0,
+      "value": "pogodba za polog"
     }
   ],
   "k/4DOL": [
@@ -6109,6 +7123,12 @@
       "value": "Nameščanje odvisnosti:"
     }
   ],
+  "k7rnZP": [
+    {
+      "type": 0,
+      "value": "Izdaje EthStaker Deposit CLI"
+    }
+  ],
   "k8bkck": [
     {
       "type": 0,
@@ -6121,6 +7141,12 @@
     {
       "type": 0,
       "value": " izvaja zasnovo, ki je poenostavila celoten postopek za zastavljavce."
+    }
+  ],
+  "kC4fpt": [
+    {
+      "type": 0,
+      "value": "Povežite svojo strojno denarnico z denarnico MetaMask"
     }
   ],
   "kFS5Sd": [
@@ -6191,10 +7217,52 @@
       "value": "Seznam ključev"
     }
   ],
-  "36P4ra": [
+  "kfks5a": [
     {
       "type": 0,
-      "value": "Sčasoma se bo vaše stanje zmanjšalo, saj boste kaznovani za nesodelovanje v procesu doseganja soglasja. Ko bo vaše stanje doseglo 16 ETH, boste samodejno odstranjeni iz nabora validatorjev."
+      "value": "To je odvisno od vrste poverilnic za dvig, ki jih ima račun validatorja. Tisti, ki uporabljajo novejšo "
+    },
+    {
+      "type": 1,
+      "value": "compounding"
+    },
+    {
+      "type": 0,
+      "value": " vrsto poverilnic (tip 2, 0x02), imajo koristi od stanj ETH, ki presegajo "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", vse do "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "kiTJq4": [
+    {
+      "type": 0,
+      "value": "Največje učinkovito stanje računa se bo zvišalo na "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "kn06Zz": [
@@ -6215,16 +7283,24 @@
       "value": "Stopite v stik"
     }
   ],
-  "ER2q1V": [
-    {
-      "type": 0,
-      "value": "Nadgradnja s spojitvijo je 15. septembra 2022 uradno uvedla dokaz o deležu na Ethereum, s čimer je dokaz o delu hkrati postal zastarel. S tem je pripravila verigo za prihodnje nadgradnje širjenja, kot je drobljenje podatkov, tako da je skupaj z glavnim omrežjem združila soglasje o dokazu o deležu, obenem pa zmanjšala porabo energije za več kot 99,9 %."
-    }
-  ],
   "kuYpoI": [
     {
       "type": 0,
       "value": "Trenutno stanje"
+    }
+  ],
+  "kuzPja": [
+    {
+      "type": 0,
+      "value": "Izstop validatorja "
+    },
+    {
+      "type": 1,
+      "value": "pending"
+    },
+    {
+      "type": 0,
+      "value": " – nadaljnja dejanja niso več mogoča"
     }
   ],
   "kv1nqx": [
@@ -6237,20 +7313,6 @@
     {
       "type": 0,
       "value": "Ste na testnem omrežju"
-    }
-  ],
-  "l3ztMu": [
-    {
-      "type": 0,
-      "value": "Od "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " boste potrebovali ~1 TB samo za podatke verige na glavnem omrežju (kar zraste za ~1 GB/dan)."
     }
   ],
   "l4nLft": [
@@ -6291,6 +7353,26 @@
       "value": "Najprej ustvarite venv virtualenv v imeniku skladišča:"
     }
   ],
+  "l6agKv": [
+    {
+      "type": 0,
+      "value": "Vsa dejanja so dodana v čakalno vrsto za obdelavo"
+    }
+  ],
+  "l8zvXg": [
+    {
+      "type": 0,
+      "value": "Če imate račun s kapitalizacijo nagrad, bo vsak dodaten ETH do 2048 prispeval k vašemu učinkovitemu stanju. Če imate vrsto dviga brez kapitalizacije nagrad, boste imeli koristi od dopolnitev, ki validator vrnejo na "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH, vendar ne boste imeli koristi od dopolnitev nad tem zneskom."
+    }
+  ],
   "l926sJ": [
     {
       "type": 0,
@@ -6311,10 +7393,10 @@
       "value": "Neporavnani polog"
     }
   ],
-  "6NyPVb": [
+  "lG9weW": [
     {
       "type": 0,
-      "value": "Nimbus je izvedba odjemalca tako izvrševalne plasti in plasti za soglasje, ki poskuša biti čimbolj lahek v smislu porabljenih virov. To mu omogoča učinkovito delovanje v vgrajenih sistemih, napravah z omejenimi viri -- vključno z računalniki Raspberry Pi -- in večnamenskih strežnikih."
+      "value": "To bo sprožilo postopek trajnega izstopa tega validatorja iz Ethereumovega omrežja z mehanizmom dokaza o deležu."
     }
   ],
   "lLOZMD": [
@@ -6337,20 +7419,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "lM/dEI": [
-    {
-      "type": 0,
-      "value": "Ali ima spletno mesto, ki vas povpraša po pologu "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": ", pričakovani naslov URL?"
     }
   ],
   "lQzdpT": [
@@ -6421,10 +7489,16 @@
       "value": "Cilj imena datoteke"
     }
   ],
-  "OCl7KQ": [
+  "lkDZQI": [
     {
       "type": 0,
-      "value": "Te transakcije ni mogoče razveljaviti."
+      "value": "Račun bo še vedno odgovoren za naloge soglasja, dokler ne bo dosežena epoha (validator naj ostane s povezavo)."
+    }
+  ],
+  "ll5Sze": [
+    {
+      "type": 0,
+      "value": "Ustvarite ključe za polog s pomočjo orodja za polog EthStaker"
     }
   ],
   "lo+Qqn": [
@@ -6437,6 +7511,26 @@
     {
       "type": 0,
       "value": "Datoteka je naložena"
+    }
+  ],
+  "lt3tOB": [
+    {
+      "type": 0,
+      "value": "Epoha za aktivacijo"
+    }
+  ],
+  "m0FJdr": [
+    {
+      "type": 0,
+      "value": "Uporabite "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " za sinhronizacijo testnega omrežja Holesky."
     }
   ],
   "mAZHi2": [
@@ -6457,6 +7551,36 @@
     {
       "type": 0,
       "value": "Trdi disk"
+    }
+  ],
+  "mF0eMi": [
+    {
+      "type": 0,
+      "value": "Poveča največje učinkovito stanje od "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " na "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "mH6bSl": [
@@ -6531,6 +7655,12 @@
       "value": "Vsi zastavljavci morajo upravljati odjemalca za izvajanje s svojim odjemalcem za soglasje."
     }
   ],
+  "mm+OKT": [
+    {
+      "type": 0,
+      "value": "Načrt Ethereuma"
+    }
+  ],
   "mpmFDY": [
     {
       "type": 0,
@@ -6541,6 +7671,12 @@
     {
       "type": 0,
       "value": "Tveganja in priznanja:"
+    }
+  ],
+  "mre8Tb": [
+    {
+      "type": 0,
+      "value": "Če naslov za dvig ni bil nastavljen in ste izgubili dostop do mnemonične semenske fraze, ne da bi bila ukradena ali ogrožena, bodo vaša sredstva trajno zaklenjena na računu validatorja."
     }
   ],
   "muV9Fg": [
@@ -6573,6 +7709,12 @@
       "value": "Če želite postati validator, boste morali zagnati odjemalca za izvajanje (prej 'Eth1') in odjemalca za soglasje (prej 'Eth2'). Oglejte si kontrolni seznam, da pripravite sebe in svojo opremo."
     }
   ],
+  "nIf7QZ": [
+    {
+      "type": 0,
+      "value": "Za to potrebujemo aktivne udeležence ali validatorje, ki predlagajo, preverjajo in potrjujejo veljavnost blokov. V zameno pošteni validatorji prejmejo finančne nagrade."
+    }
+  ],
   "nRWZl3": [
     {
       "type": 0,
@@ -6591,30 +7733,28 @@
       "value": "Dokumentacija Erigon"
     }
   ],
-  "nZTFTz": [
-    {
-      "type": 0,
-      "value": "Razumem, da opravljanje več kot enega pologa na validator nima nobene prednosti. Ves dodatni "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", poslan s podvojenim pologom, se ne bo štel v moje dejansko stanje validatorja in ga ne bom mogel/-la dvigniti."
-    }
-  ],
   "naHAvS": [
     {
       "type": 0,
       "value": "Omogočanje dvigov"
     }
   ],
+  "naZC3k": [
+    {
+      "type": 0,
+      "value": "Vaš naslov ETH"
+    }
+  ],
   "ndhFef": [
     {
       "type": 0,
       "value": "Ko boste seznanjeni, boste opravili postopek generiranja svojih ključev in pologa svojega ETH."
+    }
+  ],
+  "nix/jD": [
+    {
+      "type": 0,
+      "value": "Koliko računov želite upravljati?"
     }
   ],
   "njAU72": [
@@ -6639,6 +7779,12 @@
     {
       "type": 0,
       "value": "Napredna arhitektura sistema"
+    }
+  ],
+  "nv2lXL": [
+    {
+      "type": 0,
+      "value": "Odjava iz spleta"
     }
   ],
   "nwgrRp": [
@@ -6695,6 +7841,20 @@
       "value": "Dvigi omogočeni"
     }
   ],
+  "oDObOQ": [
+    {
+      "type": 0,
+      "value": "Če naslov za dvig »eth1« ob prvem pologu ni bil naveden, lahko pošljete enkratno "
+    },
+    {
+      "type": 1,
+      "value": "BTEC"
+    },
+    {
+      "type": 0,
+      "value": " sporočilo, podpisano z vašimi ključi za dvig BLS, na želeni naslov za dvig Ethereuma. Ta naslov je mogoče navesti le enkrat in ga ni mogoče ponovno spremeniti."
+    }
+  ],
   "oF4os+": [
     {
       "type": 0,
@@ -6705,6 +7865,12 @@
     {
       "type": 0,
       "value": "Baza znanja EthStaker"
+    }
+  ],
+  "oLlMBP": [
+    {
+      "type": 0,
+      "value": "Aktivno brez povezave"
     }
   ],
   "oLxfO1": [
@@ -6725,10 +7891,46 @@
       "value": "Konfigurirajte svojega odjemalca za soglasje"
     }
   ],
+  "oPgUAj": [
+    {
+      "type": 0,
+      "value": "vaš validator"
+    }
+  ],
+  "oUWdau": [
+    {
+      "type": 0,
+      "value": "Najdeni niso bili nobeni validatorji."
+    }
+  ],
+  "oVx7Qe": [
+    {
+      "type": 0,
+      "value": "2. korak: Ustvarite ključe za polog s pomočjo orodja EthStaker za polog"
+    }
+  ],
+  "oWBn+a": [
+    {
+      "type": 0,
+      "value": "Priporočila glede strojne opreme se ves čas razvijajo. Trenutne najmanjše zahteve se bodo verjetno zelo povečale po uvedbi koncepta Danksharding. Preden položite sredstva, opravite lastno raziskavo."
+    }
+  ],
   "oWhj8Q": [
     {
       "type": 0,
       "value": "Kako pogosto se izdajajo nagrade/kazni?"
+    }
+  ],
+  "oWrId5": [
+    {
+      "type": 0,
+      "value": "Ključ BLS, ki ga je mogoče ustvariti iz iste mnemonične fraze, ki se uporablja za ustvarjanje vaših ključev za podpisovanje validatorja. Ta ključ se uporablja za podpisovanje sporočila, ki zagotavlja naslov za izvršitev dviga (običajnega Ethereuma), ki bo trajno dodeljen validatorju (s tem se prenese na račun tipa 1)."
+    }
+  ],
+  "oXMl1C": [
+    {
+      "type": 0,
+      "value": "Prenesite na"
     }
   ],
   "obp8vV": [
@@ -6737,32 +7939,22 @@
       "value": "Dokumentacija o izvajanju odjemalca Besu"
     }
   ],
-  "ogbG7r": [
+  "odjJFL": [
     {
       "type": 0,
-      "value": "Če želite postati validator na oddajniški verigi, morate položiti "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " na validatorja, ki ga želite zagnati."
+      "value": "Več o konceptu Danksharding"
     }
   ],
   "ohspQX": [
     {
       "type": 0,
       "value": "Odgovornosti"
+    }
+  ],
+  "om4EMq": [
+    {
+      "type": 0,
+      "value": "Za obdelavo vhodnih pologov validatorja iz sloja za izvedbo (prej veriga »Eth1«) boste morali zagnati odjemalca za izvajanje in svojega odjemalca za soglasje (prej »Eth2«)."
     }
   ],
   "omJNJw": [
@@ -6801,18 +7993,10 @@
       "value": "Prišlo je do napake"
     }
   ],
-  "ozEkVY": [
+  "oxoSZx": [
     {
       "type": 0,
-      "value": "Uporabite "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " za sinhronizacijo testnega omrežja Goerli."
+      "value": "Razumem, da so ključi, skupaj z mojo mnemonično (semensko) frazo, moja odgovornost."
     }
   ],
   "p+kDTB": [
@@ -6821,10 +8005,22 @@
       "value": "Uporabniki Ethereuma so navajeni, da se transakcije izvajajo ročno – če želite prenesti sredstva, morate podpisati transakcijo in plačati plin."
     }
   ],
+  "p00N+q": [
+    {
+      "type": 0,
+      "value": "Nalaganje donosov"
+    }
+  ],
   "p0b6zX": [
     {
       "type": 0,
       "value": "Več o Statusu"
+    }
+  ],
+  "p1ynue": [
+    {
+      "type": 0,
+      "value": "Če to ni bilo zagotovljeno, se lahko ključ za dvig uporabi za podpis sporočila, ki določa naslov za dvig. Ključ za dvig je mogoče ustvariti s pomočjo vaše mnemonične fraze. Če sta bila vaš ključ za dvig ali mnemonična fraza ukradena in naslov za dvig še ni bil nastavljen, bo imel tat možnost, da nepovratno določi svoj račun kot naslov za dvig za vaš validator."
     }
   ],
   "p556q3": [
@@ -6869,6 +8065,28 @@
       "value": "json"
     }
   ],
+  "pUAoW1": [
+    {
+      "type": 0,
+      "value": "Ali je največje učinkovito stanje doseženo pri "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6881,16 +8099,16 @@
       "value": "Dokumentacija za Besu razlaga, kako prenesti in namestiti odjemalec."
     }
   ],
-  "qwFYIS": [
-    {
-      "type": 0,
-      "value": "Ta orodja vam bodo pomagala pri ustvarjanju potrebnih ključev in sporočil za podpis. Podpisana sporočila se lahko oddajajo za vključitev v bloke, začenši z nadgradnjo Shanghai/Capella."
-    }
-  ],
   "pfJX2D": [
     {
       "type": 0,
       "value": "Več o lažnem predstavljanju"
+    }
+  ],
+  "pgX4FB": [
+    {
+      "type": 0,
+      "value": "Absorbirajte validator"
     }
   ],
   "plXBe0": [
@@ -6909,6 +8127,44 @@
     {
       "type": 0,
       "value": "Zmanjšanje deleža"
+    }
+  ],
+  "prRNB6": [
+    {
+      "type": 0,
+      "value": "Pri poskusu podpisa z vašo napravo Ledger je prišlo do težave. Preverite, ali ima vaša naprava Ledger tako "
+    },
+    {
+      "type": 1,
+      "value": "blindSigning"
+    },
+    {
+      "type": 0,
+      "value": " kot "
+    },
+    {
+      "type": 1,
+      "value": "debugData"
+    },
+    {
+      "type": 0,
+      "value": " nastavljeno na "
+    },
+    {
+      "type": 1,
+      "value": "enabled"
+    },
+    {
+      "type": 0,
+      "value": ". Do teh nastavitev lahko dostopate tako, da izberete aplikacijo Ethereum in nato vstopite v meni "
+    },
+    {
+      "type": 1,
+      "value": "settings"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "ps8lLk": [
@@ -6933,6 +8189,40 @@
       "value": "Povzetek pologa"
     }
   ],
+  "q0thwm": [
+    {
+      "type": 0,
+      "value": "Kot validator ste nagrajeni za predlaganje/potrjevanje blokov, ki so vključeni v verigo."
+    }
+  ],
+  "q4Cz/L": [
+    {
+      "type": 0,
+      "value": "Zastavite dodatna sredstva"
+    }
+  ],
+  "q8Cxf5": [
+    {
+      "type": 0,
+      "value": "Poverilnice BLS: orodje CLI za polog bi ustvarilo poverilnice za dvig z "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": ", izpeljanim prek mnemoničnih fraz v formatu "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": ". Ta format ni združljiv z dvigi oddajniške verige in ga je treba posodobiti na poverilnice z naslovom Ethereum, da se omogočijo dvigi."
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -6945,36 +8235,16 @@
       "value": "Izstopno obdobje in obdobje možnosti dviga"
     }
   ],
-  "iqy/7c": [
-    {
-      "type": 0,
-      "value": "Če želite svojim validatorjem oddajniške verigeChain omogočiti samodejni dvig stanja na vaš "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", lahko uporabite orodje "
-    },
-    {
-      "type": 0,
-      "value": " za ustvarjanje datoteke JSON s sporočilom "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ". To sporočilo vključuje zahtevo za spremembo vaših starih poverilnic za dvig BLS v nove poverilnice za dvig v obliki naslova za izvršitev."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
       "value": "Terminal"
+    }
+  ],
+  "qLxCF6": [
+    {
+      "type": 0,
+      "value": "Prenesite celotno stanje z drugega računa validatorja na tega, s čimer združite dva računa v enega."
     }
   ],
   "qMePPG": [
@@ -6993,6 +8263,26 @@
     {
       "type": 0,
       "value": "Vsi validatorji"
+    }
+  ],
+  "qaaxCA": [
+    {
+      "type": 0,
+      "value": "Vsak račun validatorja ima lastnost, imenovano "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", ki določa, kateri ključi nadzorujejo prenose/dvige stanja. Trenutno obstajajo tri (3) vrste poverilnic za dvig, ki jih lahko ima račun validatorja, in se razlikujejo po številčnih predponah:"
+    }
+  ],
+  "qdZ2WQ": [
+    {
+      "type": 0,
+      "value": "Koristno je vedeti, kako izvajati ukaze v terminalu na vašem računalniku. Ustvarjanje novih parov ključev in namestitev programske opreme validatorja je mogoče izvesti z grafičnimi vmesniki (GUI) pri nekaterih programih, vendar se običajno za popoln nadzor privzeto uporablja terminal."
     }
   ],
   "qdk7Hp": [
@@ -7029,16 +8319,18 @@
       "value": "software"
     }
   ],
-  "p1ynue": [
+  "qwFYIS": [
     {
       "type": 0,
-      "value": "Če to ni bilo zagotovljeno, bodo ključi za dvig potrebni za podpis sporočila, ki navaja naslov za dvig. To zahteva dostop do mnemonične fraze, ki se uporablja pri nastavljanju ključev."
-    }
-  ],
-  "qwh6gM": [
+      "value": "Ta orodja vam bodo pomagala pri ustvarjanju potrebnih ključev in sporočila za podpisovanje. Podpisana sporočila se lahko nato "
+    },
+    {
+      "type": 1,
+      "value": "broadcastLink"
+    },
     {
       "type": 0,
-      "value": "Razumem tveganja za zgodnje posvojitelje in zmanjšanje deleža."
+      "value": " v bloke."
     }
   ],
   "qx+3RQ": [
@@ -7069,6 +8361,12 @@
       "value": "odjemalec validatorja"
     }
   ],
+  "r3C4x/": [
+    {
+      "type": 0,
+      "value": "Programska oprema"
+    }
+  ],
   "r4JsKB": [
     {
       "type": 0,
@@ -7081,18 +8379,10 @@
       "value": "Vodnik po lažnem predstavljanju"
     }
   ],
-  "rMjMmc": [
+  "rElUnh": [
     {
       "type": 0,
-      "value": "Uporabite "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " za povezovanje svojega vozlišča soglasja s končno točko JSON RPC. To bo omogočilo storitve JSON RPC na privzetih vratih 8545."
+      "value": "Sprožitev izstopa"
     }
   ],
   "rTSJI9": [
@@ -7113,6 +8403,34 @@
       "value": "Več o Lodestar"
     }
   ],
+  "rWEu7N": [
+    {
+      "type": 0,
+      "value": "Stanje tega validatorja je doseglo največjo učinkovito vrednost: "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "rYa2OX": [
+    {
+      "type": 0,
+      "value": "Kateri so različni tipi validatorjev?"
+    }
+  ],
   "raRw6Z": [
     {
       "type": 0,
@@ -7125,48 +8443,30 @@
       "value": "Zapri"
     }
   ],
-  "oDObOQ": [
+  "ri86XL": [
     {
       "type": 0,
-      "value": "Ne, pri dopolnjevanju ne morete spremeniti svojih poverilnic za dvig."
+      "value": "Pozvani boste, da s svojo denarnico podpišete sporočilo. Obdelava izstopov ni takojšnja, zato upoštevajte, da lahko traja nekaj dni, preden bo proces zaključen."
     }
   ],
-  "rs4eqr": [
+  "rk3ll8": [
     {
       "type": 0,
-      "value": "Stanje svojega validatorja boste morali morda dopolniti iz dveh pomembnih razlogov. Če je dejansko stanje vašega validatorja nižje od "
+      "value": "Razumem, da če pri začetnem pologu ne navedem naslova za dvig, so moja sredstva zaklenjena in za dvig svojih sredstev "
     },
     {
       "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
+      "value": "onlyWay"
     },
     {
       "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
+      "value": " potrebujem svojo mnemonično frazo."
+    }
+  ],
+  "rk9g0q": [
     {
       "type": 0,
-      "value": ", kot zastavljavec ne boste zaslužili polne nagrade. V primeru, da pade pod "
-    },
-    {
-      "type": 1,
-      "value": "EJECTION_PRICE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", pa bo sistem izvrgel vašega validatorja."
+      "value": "Tveganja programske opreme"
     }
   ],
   "rswUPu": [
@@ -7175,16 +8475,78 @@
       "value": "Povzetek zagonske platforme"
     }
   ],
+  "rywDJ5": [
+    {
+      "type": 0,
+      "value": "Povežite svojo denarnico za pridobitev validatorjev z ustreznimi poverilnicami za dvig, da nadgradite na nalaganje donosov, združite sredstva, delno dvignete ali prisilno izstopite"
+    }
+  ],
+  "s1Hm3H": [
+    {
+      "type": 0,
+      "value": "Oglejte si transakcijo v pregledovalniku blokov"
+    }
+  ],
   "s6gImC": [
     {
       "type": 0,
       "value": "Odjemalec Teku je mogoče konfigurirati tudi prek datoteke YAML, ki se vnese na več različnih načinov."
     }
   ],
+  "sFD6T7": [
+    {
+      "type": 0,
+      "value": "Lodestar je ekosistem v jeziku TypeScript za soglasje v omrežju Ethereum, ki ga je razvilo podjetje ChainSafe Systems. Naša oddajniška veriga, odjemalec validatorja in orodja so edinstveno zasnovani kot glavno orodje za raziskovalce in razvijalce za hitro razvijanje prototipov."
+    }
+  ],
+  "sIgu5c": [
+    {
+      "type": 0,
+      "value": "Razumem, da ni nobene prednosti v tem, da bi vložil več ETH, kot je največje učinkovito stanje ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " za moj tip računa). Vsa dodatna sredstva "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", ki presegajo to vrednost, ne bodo štela v mojo naložbo in bodo samodejno dvignjena, ko bo račun aktiviran z veljavnim naslovom za dvig."
+    }
+  ],
   "sMHQRT": [
     {
       "type": 0,
       "value": "Odjemalec za soglasje, ki je močno osredotočen na hitrost in varnost. Razvilo ga je podjetje Sigma Prime, ki se ukvarja z informacijsko varnostjo in inženiringom programske opremo, skupaj z ustanovo Ethereum Foundation, podjetjem ConsenSys in zasebnimi posamezniki pa so financirali odjemalec Lighthouse."
+    }
+  ],
+  "sNUrEO": [
+    {
+      "type": 0,
+      "value": "V nasprotnem primeru pošljem "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " sporočilo, podpisano z mojimi ključi za dvig BLS, da posodobim svoje poverilnice za dvig."
     }
   ],
   "sToVAS": [
@@ -7205,10 +8567,10 @@
       "value": "Namesto nove vrste transakcije, ki se uporablja za vlagatelje, da ročno zahtevajo dvige, se na računih vsakih nekaj dni samodejno preveri primerno presežno stanje. Vsi validatorji se preverjajo v neskončni zanki in vse razpoložljive nagrade ali izstopna sredstva se samodejno »potisnejo« na predvideni račun za dvig."
     }
   ],
-  "sj/Zef": [
+  "sgn0wo": [
     {
       "type": 0,
-      "value": "Prenesite aplikacijo Key Gen GUI"
+      "value": "Kaj se zgodi, če imam poverilnice za dvig BLS in izgubim svoj ključ za dvig?"
     }
   ],
   "smD5l/": [
@@ -7267,6 +8629,20 @@
       "value": "Nastavil sem skupno skrivnost JWT in jo dal na voljo tako svojemu odjemalcu za izvajanje kot odjemalcu za soglasje (vozlišče na oddajniški verigi)"
     }
   ],
+  "tHF016": [
+    {
+      "type": 0,
+      "value": "Kateri validator bi želeli "
+    },
+    {
+      "type": 1,
+      "value": "pullFrom"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -7283,12 +8659,6 @@
     {
       "type": 0,
       "value": "Največje število računov, ki jih je mogoče preveriti v bloku. Ustavi se, ko je najdenih 16 dvigov. Če 16 primernih nagrad ni najdenih v prvih 16.384 preverjenih računih, bo čakalna vrsta za dvig za ta blok predložena takšna, kot je, in naslednji predlagatelj bo nadaljeval tam, kjer je končal."
-    }
-  ],
-  "KJ7R/V": [
-    {
-      "type": 0,
-      "value": "Specifikacije plasti za soglasje Ethereum"
     }
   ],
   "teyxVk": [
@@ -7353,12 +8723,6 @@
       "value": "article"
     }
   ],
-  "mm+OKT": [
-    {
-      "type": 0,
-      "value": "Nadgradnje Ethereum"
-    }
-  ],
   "tzMNF3": [
     {
       "type": 0,
@@ -7391,10 +8755,36 @@
       "value": "Portugalščina (Brazilija)"
     }
   ],
+  "u6aCQB": [
+    {
+      "type": 0,
+      "value": "Tip poverilnice za dvig"
+    }
+  ],
   "u81G9+": [
     {
       "type": 0,
       "value": "Čas delovanja"
+    }
+  ],
+  "uAXXOX": [
+    {
+      "type": 0,
+      "value": "Časovni okvir tega zadnjega koraka je spremenljiv glede na indeks validatorja, trenutni položaj pregleda in število validatorjev"
+    }
+  ],
+  "uAu6S6": [
+    {
+      "type": 0,
+      "value": "Trenutna provizija za obdelavo: "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "uDMtC8": [
@@ -7417,6 +8807,86 @@
     {
       "type": 0,
       "value": " omrežju."
+    }
+  ],
+  "uEB8++": [
+    {
+      "type": 0,
+      "value": "Poverilnice za izvršitev: Če želite dvigniti na naslov svoje denarnice za izvršitev, lahko nastavite »naslov za dvig eth1« z uporabo "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": ", ko izvajate CLI pologa. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
+  "uHSqYx": [
+    {
+      "type": 0,
+      "value": "Do obdelave "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " pride, ko ima aktivni validator največje učinkovito stanje "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", skupno stanje pa nad "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". En sam validator ne more prejemati nagrad za presežek stanja nad "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", zato se bo pri teh računih samodejno izvršil dvig vsakega dodatnega stanja na njihov naslov Ethereuma."
     }
   ],
   "uJzGSb": [
@@ -7453,20 +8923,6 @@
       "value": "epoha za izstop"
     }
   ],
-  "uYF99H": [
-    {
-      "type": 0,
-      "value": "Čeprav se teža validatorjevega glasu določa glede na zastavljeno vsoto, se teža glasu vsakega validatorja začne pri in je omejena na "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". S slabim delovanjem vozlišča je možen padec pod to vrednost, dvig nad njo pa ni mogoč."
-    }
-  ],
   "ubKWX8": [
     {
       "type": 0,
@@ -7479,26 +8935,10 @@
       "value": "Zagotovite, da vaše pasovne širine ni mogoče zmanjšati in ni omejena, tako da ostane vaše vozlišče sinhronizirano in bo pripravljeno na validacijo, ko bo potrebno."
     }
   ],
-  "ujVT29": [
+  "uhpVgs": [
     {
       "type": 0,
-      "value": "Na tej točki bi morali imeti mnemonično frazo napisano na varnem mestu in shranjeno shrambo ključev za vse svoje validatorje (št. validatorjev: "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": "). Poskrbite, da so varno shranjeni, po možnosti ne na spletu. Vaše shrambe ključev validatorjev bi morale biti na voljo v novoustvarjeni mapi "
-    },
-    {
-      "type": 1,
-      "value": "validatorKeys"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "(Nalaganje donosov)"
     }
   ],
   "ukfwum": [
@@ -7507,32 +8947,16 @@
       "value": "Postanite validator z odjemalcem Nimbus"
     }
   ],
-  "up+5YH": [
+  "v/nu/L": [
     {
       "type": 0,
-      "value": "Ali vidite nedavne pologe "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": "?"
+      "value": "Ethereumov odjemalec za izvajanje Nethermind, zgrajen na .NET, omogoča vrhunsko zmogljivost pri sinhronizaciji in obdelavi blokov na vrhu verige."
     }
   ],
-  "zkTSvw": [
+  "v0ygo6": [
     {
       "type": 0,
-      "value": "Hujše kazni – ali "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": " – pa so dodeljene za zlonamerna dejanja."
+      "value": "Testiranje na omrežju Holesky"
     }
   ],
   "vBJ79e": [
@@ -7599,28 +9023,6 @@
       "value": "Kitajščina (poenostavljena)"
     }
   ],
-  "okGJD+": [
-    {
-      "type": 0,
-      "value": "Ko so dvigi omogočeni s posodobitvijo Shanghai/Capella, bodo validatorji z največjim dejanskim stanjem in povezanim naslovom za izvršitev dviga vsako stanje nad "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " samodejno dvignili kot presežek stanja."
-    }
-  ],
   "vbVsqW": [
     {
       "type": 0,
@@ -7635,6 +9037,28 @@
       "value": ". Prav tako se pridružite skupnosti EthStaker za podporo in razprave z drugimi validatorji."
     }
   ],
+  "vj7TN7": [
+    {
+      "type": 0,
+      "value": "Ta vrednost je znana kot največje učinkovito stanje (največja količina ETH, ki prispeva k vašemu deležu). Starejši tipi računov (tip 0 ali tip 1) imajo učinkovito stanje omejeno na "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ". Pri teh računih nobeno stanje nad "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ne prispeva k vaši glavnici niti h kumulativnim obrestim."
+    }
+  ],
   "vz8WK7": [
     {
       "type": 0,
@@ -7647,10 +9071,10 @@
       "value": "Zaženite naslednji ukaz za zagon aplikacije"
     }
   ],
-  "wDlux8": [
+  "wIdVXZ": [
     {
       "type": 0,
-      "value": "Še vedno lahko prostovoljno zapustite svojega validatorja, da vas odstranijo iz nabora aktivnih validatorjev, vendar dokler dvigi niso omogočeni, bodo ta sredstva ostala zaklenjena in jih ne bo mogoče dvigniti ali ponovno vložiti."
+      "value": "»Tip 1«, »redni dvigi«"
     }
   ],
   "wJ1PbL": [
@@ -7667,6 +9091,12 @@
     {
       "type": 0,
       "value": "Začetna namestitev"
+    }
+  ],
+  "wL7VAE": [
+    {
+      "type": 0,
+      "value": "Dejanja"
     }
   ],
   "wawegX": [
@@ -7691,34 +9121,6 @@
     {
       "type": 0,
       "value": "Zaženite naslednji ukaz:"
-    }
-  ],
-  "HemvTL": [
-    {
-      "type": 0,
-      "value": "Ena od čakalnih vrst, ki jih je vredno omeniti, je čakalna vrsta, ki omejuje, koliko naslovov za dvig BLS ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ") je mogoče posodobiti na naslov za izvršitev ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ") med danim blokom."
-    }
-  ],
-  "wqUcy/": [
-    {
-      "type": 0,
-      "value": "Tveganja za zgodnje posvojitelje"
     }
   ],
   "wtTeex": [
@@ -7751,6 +9153,12 @@
       "value": "Toplo priporočamo, da te korake opravite na trenutnem testnem omrežju, preden nadaljujete na glavno omrežje."
     }
   ],
+  "x4HNJL": [
+    {
+      "type": 0,
+      "value": "Ali ima spletna stran, ki vas prosi za polog, naslov URL, ki ga pričakujete?"
+    }
+  ],
   "xDyl3T": [
     {
       "type": 0,
@@ -7761,16 +9169,16 @@
       "value": "ethereumorg"
     }
   ],
+  "xETYo6": [
+    {
+      "type": 0,
+      "value": "Če izgubite svoj ključ za dvig, boste potrebovali svojo mnemonično frazo za obnovitev. Če izgubite svojo mnemonično frazo in svojih poverilnic za dvig niste posodobili z naslovom (izvršilnim) za dvig Ethereum, ni mogoče dostopati do sredstev, ki jih hrani vaš validator. Zato je ključnega pomena, da zagotovite varno varnostno kopijo svoje mnemonične fraze validatorja."
+    }
+  ],
   "xGQ38+": [
     {
       "type": 0,
       "value": "Ali je validator zaključil postopek izstopa?"
-    }
-  ],
-  "xH5GKj": [
-    {
-      "type": 0,
-      "value": "Sem zgodnji posvojitelj in sprejemam, da lahko napake v programski opremi in zasnovi privedejo do zmanjšanja mojega deleža."
     }
   ],
   "xMOzv2": [
@@ -7779,10 +9187,22 @@
       "value": "Vsakdo, ki želi skleniti svoje obveznosti vložkov, lahko podpiše sporočilo o »prostovoljnem izstopu«, ki se nato odda oddajniški verigi za začetek postopka. To je ročni korak."
     }
   ],
+  "xP01Tv": [
+    {
+      "type": 0,
+      "value": "Zastavite več sredstev"
+    }
+  ],
   "xP6BKs": [
     {
       "type": 0,
       "value": "kontrolni seznam za zastavljavce"
+    }
+  ],
+  "xQND39": [
+    {
+      "type": 0,
+      "value": "nalaganje donosov"
     }
   ],
   "xQrU13": [
@@ -7821,12 +9241,6 @@
     {
       "type": 0,
       "value": "testnet"
-    }
-  ],
-  "xbet2w": [
-    {
-      "type": 0,
-      "value": "Namesti python3.7+"
     }
   ],
   "xh7oVn": [
@@ -7877,6 +9291,24 @@
       "value": "Besu je napisan v jeziku Java in izdan pod licenco Apache 2.0."
     }
   ],
+  "xrCRnH": [
+    {
+      "type": 0,
+      "value": "Primer"
+    }
+  ],
+  "xrk6zg": [
+    {
+      "type": 0,
+      "value": "Posodobljeno"
+    }
+  ],
+  "xvkEAP": [
+    {
+      "type": 0,
+      "value": "Klepetalnica Reth"
+    }
+  ],
   "xxbUJa": [
     {
       "type": 0,
@@ -7923,10 +9355,28 @@
       "value": "Kaj je upravljavec vozlišča?"
     }
   ],
+  "y8nxN1": [
+    {
+      "type": 0,
+      "value": "Delni dvigi so na voljo prek zahtevka pametne pogodbe"
+    }
+  ],
+  "yCYGZ2": [
+    {
+      "type": 0,
+      "value": "Omogoča samodejno nalaganje nagrad"
+    }
+  ],
   "yFtJza": [
     {
       "type": 0,
       "value": "Zagotovite, da imate nadzor nad ključi tega naslova."
+    }
+  ],
+  "yGyozY": [
+    {
+      "type": 0,
+      "value": "Knjiga Reth pojasnjuje, kako prenesti in namestiti odjemalca. Prav tako zagotavljamo različice izdaj na Githubu."
     }
   ],
   "yI/DO8": [
@@ -7935,10 +9385,22 @@
       "value": "ta številka se poveča, če se drugim validatorjem istočasno zmanjša delež"
     }
   ],
+  "yK2eQ+": [
+    {
+      "type": 0,
+      "value": "Manjše kazni se naložijo za nenamerna dejanja (ali nedelovanja), ki ovirajo dosego soglasja"
+    }
+  ],
   "ySYWBD": [
     {
       "type": 0,
       "value": "Ključe imam varno shranjene in sem zapisal/-a svojo mnemonično frazo."
+    }
+  ],
+  "yYe/CX": [
+    {
+      "type": 0,
+      "value": "Prenesite sredstva"
     }
   ],
   "ydh1KU": [
@@ -7947,22 +9409,16 @@
       "value": "Jezikovne informacije"
     }
   ],
-  "yeI1Zq": [
+  "yeOdna": [
     {
       "type": 0,
-      "value": "Upoštevajte, da je lahko ta zakasnitev daljša, če mnogi drugi istočasno izstopijo ali so izvrženi iz zastavljanja."
+      "value": "povezan naslov za izvršitev dviga"
     }
   ],
   "yis3aS": [
     {
       "type": 0,
       "value": "To je pričakovani scenarij."
-    }
-  ],
-  "yjBvUO": [
-    {
-      "type": 0,
-      "value": "Nethermind je razvit na okviru .NET Core. Razširite in prilagajajte ga – brez omejitev."
     }
   ],
   "ylZLi4": [
@@ -7995,28 +9451,6 @@
       "value": "Vaše stare poverilnice za dvig BLS"
     }
   ],
-  "Sy5bAo": [
-    {
-      "type": 0,
-      "value": "S prehodom na dokaz o deležu, ki je končan prek spojitve, so validatorji zdaj odgovorni za obdelavo transakcij in podpisovanje njihove veljavnosti. Ti podatki "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " na voljo iz priljubljenih virov tretjih oseb od spojitve. Če uporabljate ponudnika tretje osebe, bo vaš validator brez povezave. Ko je uvedena razdrobitev podatkov, bodo validatorji prav tako izpostavljeni tveganju razreza v "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "z63I56": [
     {
       "type": 0,
@@ -8037,22 +9471,32 @@
       "value": "."
     }
   ],
-  "z8zpxp": [
-    {
-      "type": 0,
-      "value": "Lodestar je odprtokodna implementacija TypeScript specifikacije soglasja Ethereum (prej znana kot eth2), ki jo vzdržuje ChainSafe Systems. Cilj ChainSafe je razviti, izboljšati in diverzificirati ekosistem dokazov o deležu Ethereum s svojo oddajniško verigo in odjemalcem validatorja s poudarkom na lahkih implementacijah odjemalcev."
-    }
-  ],
   "zAVb0/": [
     {
       "type": 0,
       "value": "Več o odjemalcu Lighthouse in izvedbi Sigma Prime"
     }
   ],
-  "zGkAVo": [
+  "zJV6KL": [
     {
       "type": 0,
-      "value": "Če je vaše stanje po drugi strani bližje 31 ETH, verjetno ni vredno dodajati dodatnega ETH, ki ga potrebujete, da ponovno pridete do 32."
+      "value": "Najmanjši polog znaša "
+    },
+    {
+      "type": 1,
+      "value": "MIN_DEPOSIT_ETHER"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "zJicsO": [
@@ -8061,38 +9505,70 @@
       "value": "Ekonomika zastavljanja"
     }
   ],
-  "cD0jre": [
+  "zNUzpT": [
     {
       "type": 0,
-      "value": "Ne položite več kot "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " ETH za enega validatorja. Ne bo dodal k vašim nagradam in bo zaklenjen do načrtovane posodobitve Shanghai/Capella."
+      "value": "Učinkovito stanje"
     }
   ],
-  "zbEBi9": [
+  "zO16iV": [
     {
       "type": 0,
-      "value": "Uporabite "
+      "value": "Znesek najmanjšega veljavnega pologa je "
     },
     {
       "type": 1,
-      "value": "mainnet"
+      "value": "MIN_DEPOSIT_ETHER"
     },
     {
       "type": 0,
-      "value": " za sinhronizacijo glavnega omrežja Ethereum."
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "zfkJaB": [
+    {
+      "type": 0,
+      "value": "Pogodba za polog zastavljanja v omrežju Ethereum zahteva, da se za sprejetje pologa z enim nakazilom pošlje najmanj "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "zicXn7": [
     {
       "type": 0,
       "value": "Varnost vozlišča"
+    }
+  ],
+  "zkTSvw": [
+    {
+      "type": 0,
+      "value": "Večje kazni ali "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": " se izrekajo za zlonamerna dejanja"
     }
   ],
   "znyxZv": [
@@ -8115,10 +9591,30 @@
       "value": ". To je zdaj nov nabor metod JSON RPC, ki se lahko uporabljajo za komunikacijo med obema slojema odjemalca."
     }
   ],
-  "zrb2Xo": [
+  "zsu9e8": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
     {
       "type": 0,
-      "value": "Klici skupnosti – objavljeni v skladišču PM"
+      "value": " Podvojeni pologi z istim javnim ključem datoteke s ključi bodo obravnavani kot dvojni polog. Če to stanje preseže največje učinkovito stanje vašega računa ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "), presežek ne bo upoštevan pri vašem deležu. Ob predpostavki, da je bil nastavljen naslov za izplačilo, bodo ta sredstva samodejno prerazporejena, ko bo račun aktiviran. Če naslov za izplačilo ni bil naveden, bodo sredstva ostala zaklenjena, dokler naslov za izplačilo ne bo zagotovljen."
     }
   ]
 }

@@ -1,4 +1,10 @@
 {
+  "+/eSwc": [
+    {
+      "type": 0,
+      "value": "In macOS Sequoia, dopo un tentativo fallito gli utenti devono approvare queste app dalle impostazioni su Privacy e sicurezza."
+    }
+  ],
   "+2VHUU": [
     {
       "type": 0,
@@ -21,22 +27,28 @@
       "value": " (che gestisce i compiti di consenso proof-of-stake, ex 'Eth2' o 'Ethereum 2.0')."
     }
   ],
+  "+3gmIR": [
+    {
+      "type": 0,
+      "value": "Lodestar è un ecosistema basato su Typescript per il consenso in Ethereum sviluppato da ChainSafe Systems. I nostri prodotti di punta sono la nostra beacon chain e il nostro client validatore, entrambi pronti per essere utilizzati in ambienti di produzione. Il punto di forza di Lodestar è il suo linguaggio di implementazione, TypeScript. I nostri software e strumenti sono posizionati in maniera unica come soluzione di riferimento per una rapida elaborazione di prototipi da parte di ricercatori e sviluppatori."
+    }
+  ],
+  "+88H3v": [
+    {
+      "type": 0,
+      "value": "migrare i fondi"
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
       "value": "Modalità interattiva"
     }
   ],
-  "+Gj8F4": [
+  "+POmjo": [
     {
       "type": 0,
-      "value": "Puoi prepararti fornendo un indirizzo di prelievo durante la generazione delle chiavi e dei dati di deposito."
-    }
-  ],
-  "+L0IkF": [
-    {
-      "type": 0,
-      "value": "Fase 2: Genera le chiavi di deposito usando lo strumento di deposito della Ethereum Foundation"
+      "value": "Ciò darà luogo a un saldo in eccesso per il tuo validatore che verrà automaticamente riaccreditato al tuo conto di esecuzione dalla rete."
     }
   ],
   "+UUcBt": [
@@ -63,6 +75,12 @@
       "value": "Accetto"
     }
   ],
+  "+jXRfC": [
+    {
+      "type": 0,
+      "value": "Detiene i registri di tutti i depositi iniziali effettuati per tutti i conti validatori ed è letto dalla beacon chain per accreditarvi i relativi importi."
+    }
+  ],
   "+mDtA4": [
     {
       "type": 0,
@@ -75,6 +93,12 @@
       "value": "Polacco"
     }
   ],
+  "+u97jv": [
+    {
+      "type": 0,
+      "value": "Fondi bloccati nella beacon chain fino a che non verrà fornito un indirizzo di prelievo di esecuzione"
+    }
+  ],
   "+vHhHz": [
     {
       "type": 0,
@@ -85,6 +109,12 @@
     {
       "type": 0,
       "value": "Discord:"
+    }
+  ],
+  "+z2Qty": [
+    {
+      "type": 0,
+      "value": "Saldo effettivo max"
     }
   ],
   "/+atl4": [
@@ -111,6 +141,12 @@
       "value": "Indonesiano"
     }
   ],
+  "/EhlLs": [
+    {
+      "type": 0,
+      "value": "Questo validatore deve rimanere online fino a che non verrà raggiunta l'epoca di uscita."
+    }
+  ],
   "/JiR8D": [
     {
       "type": 0,
@@ -121,12 +157,6 @@
     {
       "type": 0,
       "value": "Le code di \"attivazione\" e \"uscita\" sono indipendenti e non in competizione. Ciascuna è limitata per epoca."
-    }
-  ],
-  "hrJ1oM": [
-    {
-      "type": 0,
-      "value": "Puoi segnalare il tuo indento di interrompere la validazione firmando un messaggio volontario d'uscita con il tuo validatore."
     }
   ],
   "/SbhtD": [
@@ -165,18 +195,16 @@
       "value": "Spiacenti, questa pagina non esiste."
     }
   ],
-  "/WenEu": [
+  "/X/iV+": [
     {
       "type": 0,
-      "value": "Sei responsabile per la transazione. I siti web fraudolenti potrebbero provare a ingannarti nell'inviare loro "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
+      "value": "Assicurati di poter disporre di quest'indirizzo dato che non può essere modificato. Fornire un conto presso un exchange centralizzato è sconsigliato. È fortemente raccomandato il cold storage."
+    }
+  ],
+  "/Z2BBF": [
     {
       "type": 0,
-      "value": ", invece del contratto di deposito ufficiale. Assicurati che l'indirizzo a cui stai inviando la transazione sia l'indirizzo corretto."
+      "value": "Stai entrando a far parte di una rete che opera tramite software. Come per tutti i software, sono possibili bug accidentali. Pur trattandosi di uno scenario improbabile, eventuali bug possono portare allo slashing."
     }
   ],
   "/e+qAC": [
@@ -185,18 +213,64 @@
       "value": "epoca idonea per il prelievo"
     }
   ],
-  "/h0DGY": [
+  "/eUGwM": [
     {
       "type": 0,
-      "value": "Perché il massimo di "
+      "value": "Puoi prelevare qualsiasi porzione del tuo "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "TICKER_NAME"
     },
     {
       "type": 0,
-      "value": " ETH?"
+      "value": " in staking superiore a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/hEGaO": [
+    {
+      "type": 0,
+      "value": "Questo conto validatore ha un saldo effettivo massimo di "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Per far sì che il saldo effettivo raggiunga il limite devi ricaricare solo "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "/jJLYy": [
@@ -211,10 +285,46 @@
       "value": "È anche possibile utilizzare lo strumento di trasmissione Beaconcha.in per caricare il messaggio utilizzando un'interfaccia utente web:"
     }
   ],
+  "/qfQgA": [
+    {
+      "type": 0,
+      "value": "Il limite del saldo effettivo del validatore è stato raggiunto. Se lo desideri puoi aggiungere "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (il minimo consentito dal contratto di deposito)"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
       "value": "Se possibile, valuta l'esecuzione di un altro client in questo momento, per aiutare a proteggere te stesso e la rete."
+    }
+  ],
+  "/sp2Uu": [
+    {
+      "type": 0,
+      "value": "Quanto "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " desideri aggiungere alla tua quota?"
     }
   ],
   "/tHxib": [
@@ -263,32 +373,22 @@
       "value": "A quanto ammontano le ricompense/penalità?"
     }
   ],
-  "00OWFk": [
+  "0/du/O": [
     {
       "type": 0,
-      "value": "Il valore minimo di ricarica è "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Comprendo le conseguenze; fai uscire questo validatore"
     }
   ],
   "00d8uq": [
     {
       "type": 0,
       "value": "Una volta configurato, il validatore non si attiverà immediatamente. Sfrutta questo tempo per completare la lista di controllo e fare pratica su una rete di prova."
+    }
+  ],
+  "01AzGi": [
+    {
+      "type": 0,
+      "value": "Nethermind è sviluppato in C# con un'architettura di plugin flessibile e rilasciato sotto licenza LGPL-3.0."
     }
   ],
   "03xT/J": [
@@ -309,6 +409,20 @@
       "value": "Credenziali di prelievo:"
     }
   ],
+  "0Em8Cd": [
+    {
+      "type": 0,
+      "value": "Al "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", le sole dimensioni dei dati della catena di esecuzione della rete principale si stanno avvicinando a 2 TB (crescendo al ritmo di oltre 1 GB al giorno). Un SSD da 2 TB è un requisito minimo, ma ora sono raccomandati 4 TB."
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
@@ -321,10 +435,10 @@
       "value": "Output previsti"
     }
   ],
-  "pUAoW1": [
+  "0L5E+q": [
     {
       "type": 0,
-      "value": "Il saldo effettivo ha raggiunto il limite di 32?"
+      "value": "Attenzione! Traffico sulla rete molto elevato."
     }
   ],
   "0PlVao": [
@@ -351,10 +465,52 @@
       "value": "credenziali di prelievo"
     }
   ],
-  "vCHTnu": [
+  "0WPDnu": [
     {
       "type": 0,
-      "value": "Credenziali di prelievo"
+      "value": "Se il tuo saldo è vicino a "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH è decisamente consigliato effettuare una ricarica per assicurarti di non venire espulso dal set di validatori (il che avviene automaticamente se il tuo saldo scende al di sotto di "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH)."
+    }
+  ],
+  "0XRY0E": [
+    {
+      "type": 0,
+      "value": "Se il tuo mnemonico viene rubato o compromesso e non hai configurato un indirizzo di prelievo devi provare a eseguire questa operazione "
+    },
+    {
+      "type": 1,
+      "value": "immediately"
+    },
+    {
+      "type": 0,
+      "value": " per impedire la perdita permanente di fondi prima che l'utente malevolo associ il proprio indirizzo di prelievo al tuo validatore."
+    }
+  ],
+  "0fkPmg": [
+    {
+      "type": 0,
+      "value": "Reth è un'implementazione modulare, rapidissima e facile da utilizzare per i contributori del protocollo Ethereum scritta in Rust."
+    }
+  ],
+  "0flw9D": [
+    {
+      "type": 0,
+      "value": "Non è necessario eseguire altre azioni."
     }
   ],
   "0i4cCJ": [
@@ -383,30 +539,10 @@
       "value": "In secondo luogo, installa i pacchetti delle dipendenze:"
     }
   ],
-  "0mc/JV": [
-    {
-      "type": 0,
-      "value": "La convalida è un impegno"
-    }
-  ],
   "0oNdmk": [
     {
       "type": 0,
       "value": "Domande frequenti sui validatori"
-    }
-  ],
-  "cJ9MRI": [
-    {
-      "type": 0,
-      "value": "Come indicato in precedenza, questo passaggio viene completato firmando un messaggio noto come "
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": ". Questi sono accettati in blocchi a partire dal primo slot dopo l'aggiornamento Shanghai/Capella."
     }
   ],
   "0uqjBl": [
@@ -465,6 +601,12 @@
       "value": "Quando posso prelevare i miei fondi, e qual è la differenza tra uscita e prelievo?"
     }
   ],
+  "1D3Svm": [
+    {
+      "type": 0,
+      "value": "Questo conto validatore verrà aggiornato permanentemente a un conto composto (di tipo 2)."
+    }
+  ],
   "1FdDAV": [
     {
       "type": 0,
@@ -475,6 +617,18 @@
     {
       "type": 0,
       "value": "Se non dai un indirizzo al tuo client, non riceverai le commissioni sulle transazioni quando il tuo validatore propone dei blocchi."
+    }
+  ],
+  "1ICikH": [
+    {
+      "type": 0,
+      "value": "Questo conto uscirà permanentemente dalla rete."
+    }
+  ],
+  "1ONfru": [
+    {
+      "type": 0,
+      "value": "Per includere questo messaggio nella rete principale devi caricarlo su un pool di messaggi \"Passaggio da BLS a esecuzione\" di un nodo beacon."
     }
   ],
   "1P6GMj": [
@@ -549,6 +703,40 @@
       "value": "Documentazione sull'esecuzione di Nethermind"
     }
   ],
+  "1v/5i7": [
+    {
+      "type": 0,
+      "value": "Migra e fai uscire validatore"
+    }
+  ],
+  "1vVSD6": [
+    {
+      "type": 0,
+      "value": "Se al momento del deposito non risulta configurato un indirizzo di prelievo, i tuoi fondi verranno bloccati fino a che non ne avrai fornito uno. Per aggiungere un indirizzo di prelievo puoi generare le tue chiavi di prelievo di default a partire dal tuo mnemonico per autenticare una modifica singola. Ricordati di "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2/VDay": [
+    {
+      "type": 0,
+      "value": "Numero massimo di validatori per sweep dei prelievi: 16.384 (2"
+    },
+    {
+      "type": 1,
+      "value": "exp"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "21EI3f": [
     {
       "type": 0,
@@ -567,12 +755,6 @@
     {
       "type": 0,
       "value": " valido"
-    }
-  ],
-  "mre8Tb": [
-    {
-      "type": 0,
-      "value": "Se non è stato impostato un indirizzo di prelievo, e hai perso l'accesso alla frase di seed mnemonica, i tuoi fondi rimarranno bloccati nel conto del validatore per un tempo indefinito."
     }
   ],
   "25suT4": [
@@ -597,18 +779,10 @@
       "value": "."
     }
   ],
-  "2A6Wjz": [
+  "28aik1": [
     {
       "type": 0,
-      "value": "Fornendo questo flag, le credenziali di prelievo conterranno il prefisso "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " e l'indirizzo di prelievo, a indicare che il conto è pronto per i prelievi."
+      "value": "Limite di velocità configurato sulla coda di prelievo"
     }
   ],
   "2AHkym": [
@@ -635,6 +809,12 @@
       "value": "Segui le istruzioni presentate nell'applicazione per generare le chiavi."
     }
   ],
+  "2O2sfp": [
+    {
+      "type": 0,
+      "value": "Fine"
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
@@ -651,16 +831,16 @@
       "value": "Quali fattori influiscono sulla frequenza dei pagamenti?"
     }
   ],
+  "2S/h9V": [
+    {
+      "type": 0,
+      "value": "di cui disponi"
+    }
+  ],
   "2XWJdH": [
     {
       "type": 0,
       "value": "In tal caso, passa alla domanda successiva"
-    }
-  ],
-  "3zWAPC": [
-    {
-      "type": 0,
-      "value": "puoi sempre ricalcolare la chiave di firma dalla tua chiave di prelievo"
     }
   ],
   "2c8F5x": [
@@ -675,20 +855,40 @@
       "value": "prelievo del saldo in eccesso"
     }
   ],
-  "5CdqwI": [
+  "2hZ+qP": [
     {
       "type": 0,
-      "value": "Documentazione per la gestione delle chiavi Nimbus"
-    }
-  ],
-  "2rFwzp": [
+      "value": "Per consentire ai tuoi validatori della beacon chain di prelevare automaticamente importi accreditandoli al tuo "
+    },
     {
       "type": 1,
-      "value": "wagyuKeyGenGui"
+      "value": "executionAddress"
     },
     {
       "type": 0,
-      "value": ": se hai fornito un indirizzo di prelievo quando hai generato le chiavi, puoi continuare (si trova nella “modalità avanzata”)"
+      "value": ", puoi utilizzare lo strumento "
+    },
+    {
+      "type": 1,
+      "value": "ethstakerDepositCLI"
+    },
+    {
+      "type": 0,
+      "value": " per generare il file JSON con il messaggio ("
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": ") \"Passaggio da BLS a esecuzione\". Tale messaggio contiene la richiesta di modificare le tue precedenti credenziali di prelievo BLS nelle nuove credenziali di prelievo nel formato di un indirizzo di esecuzione."
+    }
+  ],
+  "2iODii": [
+    {
+      "type": 0,
+      "value": "\"Tipo 0\", \"BLS\", \"bloccato\""
     }
   ],
   "2rflCq": [
@@ -717,10 +917,18 @@
       "value": "Termini di servizio"
     }
   ],
-  "om4EMq": [
+  "36P4ra": [
     {
       "type": 0,
-      "value": "Per elaborare i depositi del validatore in entrata dal livello d'esecuzione (ex catena 'Eth1'), dovrai eseguire un client d'esecuzione nonché il tuo client di consenso (ex 'Eth2'). Puoi usare un servizio di terze parti come Infura, ma consigliamo di eseguire il tuo client per mantenere la rete il più decentralizzata possibile."
+      "value": "Nel tempo il tuo saldo diminuirà perché verrai penalizzato per la mancata partecipazione al processo di consenso. Quando il tuo saldo raggiungerà "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH uscirai automaticamente dal set di validatori."
     }
   ],
   "38Fedn": [
@@ -785,56 +993,32 @@
       "value": "Riga di comando con flag"
     }
   ],
-  "3NHygY": [
+  "3LbIZa": [
     {
       "type": 0,
-      "value": "Test su Goerli"
+      "value": "Puoi aggiungere fondi al tuo conto validatore fintanto che il tuo saldo effettivo non ha raggiunto il proprio limite massimo (\"saldo effettivo max\", l'importo in grado di contribuire alla tua quota). Puoi anche utilizzarlo per ricaricare se il tuo conto validatore è vicino al saldo di espulsione di "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
-  "3ODqP9": [
+  "3O/6JV": [
     {
       "type": 0,
-      "value": "Depositare più di "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH su un singolo set di chiavi non aumenta il potenziale di ricompensa, e nemmeno accumulare ricompense superiori a "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH, poiché ogni validatore è limitato a un "
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": " di "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": ". Questo significa che lo staking avviene a incrementi di "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH, ciascuno con un proprio set di chiavi e un proprio saldo."
+      "value": "Istruzioni per l'utilizzo dello strumento ethstaker-deposit-cli per generare e trasmettere un messaggio SignedBLSToExecutionChange per aggiornare le credenziali di prelievo del validatore."
     }
   ],
   "3PbtmF": [
@@ -849,22 +1033,10 @@
       "value": "Diventa validatore"
     }
   ],
-  "3QmqFf": [
-    {
-      "type": 0,
-      "value": "Ricarica transazione"
-    }
-  ],
   "3SOKyg": [
     {
       "type": 0,
       "value": "Questi aggiornamenti di terminologia cambiano solo le convenzioni di nomenclatura, senza alterare gli obiettivi né la tabella di marcia di Ethereum."
-    }
-  ],
-  "3URRZK": [
-    {
-      "type": 0,
-      "value": "Documentazione di Geth su Goerli"
     }
   ],
   "3aykgN": [
@@ -879,6 +1051,24 @@
     {
       "type": 0,
       "value": " un blocco ogni 70 giorni."
+    }
+  ],
+  "3fRpn0": [
+    {
+      "type": 0,
+      "value": "Relazione di revisione Reth"
+    }
+  ],
+  "3hmlu1": [
+    {
+      "type": 0,
+      "value": "Seleziona un validatore"
+    }
+  ],
+  "3jhjXW": [
+    {
+      "type": 0,
+      "value": "Leggi la seguente guida per configurare correttamente l'engine API JSON-RPC per il tuo client di consenso."
     }
   ],
   "3tR/V9": [
@@ -917,6 +1107,12 @@
       "value": "."
     }
   ],
+  "3zWAPC": [
+    {
+      "type": 0,
+      "value": "puoi sempre ricalcolare la tua chiave di firma a partire dal tuo mnemonico"
+    }
+  ],
   "4+3cIr": [
     {
       "type": 0,
@@ -925,6 +1121,28 @@
     {
       "type": 1,
       "value": "mainnet"
+    }
+  ],
+  "40/5Sf": [
+    {
+      "type": 0,
+      "value": "Le tue "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " non sono le stesse del tuo "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", che riceve le commissioni di transazione dai blocchi proposti. È possibile configurare lo stesso indirizzo per entrambi, ma ciascuno deve essere configurato separatamente."
     }
   ],
   "47svuN": [
@@ -939,6 +1157,18 @@
       "value": "Mi sono collegato al server Discord del mio client di consenso."
     }
   ],
+  "4B1i6W": [
+    {
+      "type": 0,
+      "value": "Preleva a favore di"
+    }
+  ],
+  "4LvelA": [
+    {
+      "type": 0,
+      "value": "Importo prelevabile max"
+    }
+  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -949,6 +1179,20 @@
     {
       "type": 0,
       "value": "Perché una scala mobile? Non entreremo nei dettagli in questa sede, ma il motivo principale è che ci deve essere un numero minimo di validatori (e quindi una quantità minima di ETH coinvolti) affinché la rete funzioni correttamente. Quindi, per incentivare più validatori a partecipare, è importante che il tasso di interesse rimanga alto fino al raggiungimento del numero minimo."
+    }
+  ],
+  "4Vgtcb": [
+    {
+      "type": 0,
+      "value": "Se stai per effettuare un deposito per attivare un nuovo validatore, puoi (e dovresti) fornire un indirizzo di prelievo per il tuo deposito iniziale. Questa operazione viene effettuata al momento della generazione della chiave; l'indirizzo viene poi incluso nel tuo file JSON con i dati sui depositi "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": ", inviato insieme alla tua transazione di deposito di ETH."
     }
   ],
   "4hb+GK": [
@@ -975,16 +1219,22 @@
       "value": "Copia"
     }
   ],
+  "4pGGSr": [
+    {
+      "type": 0,
+      "value": "Questo validatore ha raggiunto il proprio saldo effettivo massimo."
+    }
+  ],
   "4uFys5": [
     {
       "type": 0,
       "value": "I conti sottoposti slashing o con un saldo insufficiente, saranno costretti a uscire secondo le regole della rete. Questa operazione è automatica e non può essere interrotta una volta iniziata."
     }
   ],
-  "sgn0wo": [
+  "4zqUmR": [
     {
       "type": 0,
-      "value": "Che succede se uso il prelievo BLS e perdo la mia chiave di prelievo?"
+      "value": "Il saldo rimanente verrà sbloccato dopo che verrà raggiunta l'epoca di uscita di cui sopra. Una volta sbloccato, il saldo rimanente verrà trasferito automaticamente al tuo conto di prelievo collegato, oppure al tuo validatore target selezionato se stai effettuando una migrazione di conti, entro pochi giorni."
     }
   ],
   "57MWKW": [
@@ -1015,6 +1265,12 @@
       "value": ")"
     }
   ],
+  "58LSsA": [
+    {
+      "type": 0,
+      "value": "Lodestar è stato sviluppato in TypeScript tramite un mix tra Apache 2.0 e GNU Lesser General Public License v3.0."
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
@@ -1031,10 +1287,16 @@
       "value": "learnMore"
     }
   ],
-  "5CBhpq": [
+  "5B+zYt": [
     {
       "type": 0,
-      "value": "Impegno"
+      "value": "Accetto che eventuali bug di software e progettazione potrebbero portare al mio slashing."
+    }
+  ],
+  "5CdqwI": [
+    {
+      "type": 0,
+      "value": "Documentazione nodo beacon Nimbus"
     }
   ],
   "5H/J84": [
@@ -1047,12 +1309,6 @@
     {
       "type": 0,
       "value": "Documentazione per l'installazione di Teku"
-    }
-  ],
-  "5KtHYT": [
-    {
-      "type": 0,
-      "value": "Se non viene fornito in questa fase, i fondi depositati rimarranno bloccati sulla beacon chain finché non viene fornito un indirizzo. Lo sblocco richiederà la firma di un messaggio con le chiavi di prelievo, generate dalla frase di seed mnemonica (in modo da tenerla al sicuro)."
     }
   ],
   "5UH1sh": [
@@ -1075,10 +1331,18 @@
       "value": " si parla di ~1,2-1,3 GB in download e ~0,9-1 GB in upload all’ora, valore che potrebbe probabilmente aumentare."
     }
   ],
-  "5hW6Gf": [
+  "5q9Lgv": [
     {
       "type": 0,
-      "value": "Protezione del prelievo a livello di consenso"
+      "value": "Scarica ramo "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "5t8oYl": [
@@ -1119,10 +1383,60 @@
       "value": "medio"
     }
   ],
+  "67oM5N": [
+    {
+      "type": 0,
+      "value": "Attivo online"
+    }
+  ],
+  "69FPys": [
+    {
+      "type": 0,
+      "value": "Il saldo effettivo max per qualsiasi conto con credenziali di tipo 0 (BLS) o 1 (prelievi periodici) è "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Tali conti non possono avere saldi superiori a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", ma possono essere aggiornati a un conto composto di tipo 2 per consentire un saldo effettivo max più elevato pari a "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "6NndcB": [
     {
       "type": 0,
       "value": "abbandona"
+    }
+  ],
+  "6NyPVb": [
+    {
+      "type": 0,
+      "value": "Nimbus è un'implementazione sia per il livello di esecuzione che per quello di consenso che mira a impiegare meno risorse possibili. Ciò rende possibili buone prestazioni su sistemi integrati, dispositivi con risorse limitate (inclusi Raspberry Pi) e server multi-purpose."
     }
   ],
   "6S95Bo": [
@@ -1143,16 +1457,74 @@
       "value": "Puoi migliorare il saldo effettivo di questo validatore ricaricando"
     }
   ],
-  "6eA+mW": [
+  "6glcFX": [
     {
       "type": 0,
-      "value": "Lodestar è stato sviluppato mediante TypeScript con la licenza GNU Lesser General Public License v3.0."
+      "value": "Come entrare nella rete di test pubblica"
     }
   ],
-  "6nh4de": [
+  "6kX99Q": [
     {
       "type": 0,
-      "value": "Ti stai unendo a una rete nelle prime fasi. Come avviene per qualsiasi nuovo software, è possibile che vi siano dei bug. Anche se improbabile, potenziali bug possono causare slashing."
+      "value": "Esegui l'aggiornamento a un conto composto per incrementare il saldo effettivo massimo fino a "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "6stJTU": [
+    {
+      "type": 0,
+      "value": "Utilizza la "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " per sincronizzare la rete di test Holesky."
+    }
+  ],
+  "6vdHjj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " è un campo da 32 byte associato a ciascun validatore configurato inizialmente nel corso del deposito per verificare la destinazione dei prelievi validi. Al momento esistono due tipi di credenziali di prelievo: BLS (di tipo 0 o "
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") e di esecuzione (indirizzi Ethereum, di tipo 1 o "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ")."
+    }
+  ],
+  "6z/+77": [
+    {
+      "type": 0,
+      "value": "Deposito a favore del validatore in corso"
     }
   ],
   "7+Domh": [
@@ -1183,6 +1555,12 @@
       "value": " non è supportato in modalità offline."
     }
   ],
+  "7AL03B": [
+    {
+      "type": 0,
+      "value": "Comprendo le conseguenze, consolida i fondi"
+    }
+  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1193,26 +1571,10 @@
       "value": "oppositeNetwork"
     }
   ],
-  "7FcGxU": [
+  "7EpPjk": [
     {
       "type": 0,
-      "value": "È necessario eseguire un "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": " e un "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Rilasci Reth"
     }
   ],
   "7GLK15": [
@@ -1255,6 +1617,12 @@
       "value": "File di configurazione"
     }
   ],
+  "7XWI5I": [
+    {
+      "type": 0,
+      "value": "Attendi e prova di nuovo o, se l'errore persiste, chiedi aiuto."
+    }
+  ],
   "7XiYRi": [
     {
       "type": 0,
@@ -1283,10 +1651,28 @@
       "value": "."
     }
   ],
+  "7dUCnj": [
+    {
+      "type": 0,
+      "value": "Reth 1.0 è stato sottoposto a revisione da parte di Sigma Prime nell'arco di un periodo di oltre 8 settimane a partire da maggio 2024; link in basso."
+    }
+  ],
   "7kWKe0": [
     {
       "type": 0,
       "value": "La coda di prelievo viene compilata ed elaborata automaticamente dai proponenti di blocchi, che controllano automaticamente eventuali pagamenti disponibili tramite un meccanismo di sweeping."
+    }
+  ],
+  "7rnL9U": [
+    {
+      "type": 0,
+      "value": "Fai uscire validatore"
+    }
+  ],
+  "7sLqH9": [
+    {
+      "type": 0,
+      "value": "trasferito al validatore selezionato in alto"
     }
   ],
   "7sZfCF": [
@@ -1299,6 +1685,12 @@
     {
       "type": 0,
       "value": "Ogni epoca, la rete misura le azioni di ogni validatore e assegna ricompense o penali di conseguenza."
+    }
+  ],
+  "7w+OmC": [
+    {
+      "type": 0,
+      "value": "È possibile che le informazioni relative al validatore non rispecchino le ultime modifiche e la congestione della rete potrebbe dare luogo a ritardi. Stai attento a non inviare richieste doppie."
     }
   ],
   "8/nhr4": [
@@ -1325,6 +1717,18 @@
       "value": "Documentazione di Lodestar"
     }
   ],
+  "8C8bca": [
+    {
+      "type": 0,
+      "value": "Il validatore in uscita deve rimanere online fino a che non verrà raggiunta l'epoca di uscita."
+    }
+  ],
+  "8FjJDx": [
+    {
+      "type": 0,
+      "value": "Cattiva condotta"
+    }
+  ],
   "8FmuYF": [
     {
       "type": 0,
@@ -1349,24 +1753,16 @@
       "value": "Scegli il sistema operativo del computer che stai utilizzando. Sarà il computer utilizzato per generare le chiavi. Non deve per forza essere il sistema operativo che vuoi utilizzare per il nodo."
     }
   ],
+  "8VlOTO": [
+    {
+      "type": 0,
+      "value": "Trasferisci interi saldi a un altro dei tuoi conti validatori, consolidando due conti in uno. Il conto target deve essere aggiornato al tipo composto."
+    }
+  ],
   "8WtyrD": [
     {
       "type": 0,
       "value": "Spagnolo"
-    }
-  ],
-  "8XQmxX": [
-    {
-      "type": 0,
-      "value": "Usa "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " per sincronizzare la rete di test Goerli."
     }
   ],
   "8boRAk": [
@@ -1379,12 +1775,6 @@
     {
       "type": 0,
       "value": "Non spegnere il validatore fino a quando non si raggiunge questa epoca."
-    }
-  ],
-  "8fXTDo": [
-    {
-      "type": 0,
-      "value": "Per fortuna, questo è solo un messaggio una tantum che deve essere elaborato, e i validatori che hanno fornito le credenziali di prelievo al momento del deposito non devono effettuare questa operazione. Una volta completato, il validatore è abilitato in modo permanente per i prelievi e allo sweep successivo sarà idoneo per i pagamenti."
     }
   ],
   "8k1RjX": [
@@ -1433,6 +1823,12 @@
       "value": ": epoca in cui i fondi del validatore sono idonei per un prelievo completo durante lo sweep del validatore successivo."
     }
   ],
+  "8uE+mp": [
+    {
+      "type": 0,
+      "value": "Filtra per indice o chiave pubblica"
+    }
+  ],
   "8uq59n": [
     {
       "type": 0,
@@ -1457,10 +1853,10 @@
       "value": "Avanti"
     }
   ],
-  "hAwuqj": [
+  "9/yem6": [
     {
       "type": 0,
-      "value": "La convalida richiede due chiavi per motivi di sicurezza. La chiave di firma deve essere disponibile in ogni momento e quindi dovrà essere tenuta online. Dal momento che ciò che è online è vulnerabile agli hacker, è sconsigliabile utilizzare la stessa chiave per i prelievi."
+      "value": "Se cercherai di imbrogliare il sistema o agirai in maniera contraria alle specifiche potrai subire una penalità detta slashing*. Eseguire le tue chiavi come validatore simultaneamente in due o più macchine porterà al tuo slashing."
     }
   ],
   "94dQms": [
@@ -1495,10 +1891,42 @@
       "value": "Rivedere i ruoli e le responsabilità dei validatori"
     }
   ],
+  "9Ur2de": [
+    {
+      "type": 0,
+      "value": "Aggiungi un indirizzo di prelievo con Wagyu Key Gen"
+    }
+  ],
   "9VZ9oy": [
     {
       "type": 0,
       "value": "In che modo si incentivano i validatori a rimanere attivi e onesti?"
+    }
+  ],
+  "9Zv8ye": [
+    {
+      "type": 0,
+      "value": "Ciò darà avvio al processo di aggiornamento di questo validatore da un conto di tipo 1 per \"prelievi periodici\" o di \"esecuzione\" a un conto \"composto\" di tipo 2."
+    }
+  ],
+  "9h8yTf": [
+    {
+      "type": 0,
+      "value": "Sarà inoltre calcolata una \"epoca idonea per il prelievo\", ovvero 256 epoche dopo l'epoca di uscita calcolata (vale a dire circa 27,3 ore dopo). Quando quest'epoca verrà raggiunta il tuo validatore sarà idoneo a ricevere un "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " di tutti i fondi rimanenti."
+    }
+  ],
+  "9jnVGr": [
+    {
+      "type": 0,
+      "value": "Tipicamente sono richiesti almeno 32 GB di RAM, ma sono raccomandati 64 GB."
     }
   ],
   "9k7tO9": [
@@ -1529,6 +1957,12 @@
     {
       "type": 0,
       "value": "deposito"
+    }
+  ],
+  "9oWUO0": [
+    {
+      "type": 0,
+      "value": "Ciò darà avvio al processo di termine dei tuoi impegni sulla rete. Verrà calcolata una \"epoca di uscita\" in base a quanti altri validatori staranno uscendo simultaneamente. Quando quest'epoca verrà raggiunta il tuo conto validatore non sarà più idoneo a ricevere ricompense e non vi sarà più il rischio che perda fondi perché offline."
     }
   ],
   "9qMyhY": [
@@ -1595,6 +2029,12 @@
       "value": "Invia deposito"
     }
   ],
+  "A4nMs+": [
+    {
+      "type": 0,
+      "value": "Leggi la seguente guida per far funzionare correttamente il tuo client di esecuzione."
+    }
+  ],
   "A6Oppp": [
     {
       "type": 0,
@@ -1619,38 +2059,10 @@
       "value": "Per devnet è possibile aggiungere un parametro:"
     }
   ],
-  "AFzWcM": [
-    {
-      "type": 0,
-      "value": "Capisco che le chiavi sono la mia responsabilità e che il mio mnemonico (seed) sarà l{onlyWay} per prelevare i miei fondi se non fornisco un indirizzo di prelievo con i dati di deposito iniziale."
-    }
-  ],
   "AH6XsN": [
     {
       "type": 0,
       "value": "Accertati anche di comprendere come funzionano i prelievi di staking prima di configurare le chiavi e i dati di deposito."
-    }
-  ],
-  "AJD+66": [
-    {
-      "type": 0,
-      "value": "Il contratto di deposito di staking di Ethereum richiede un minimo di "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " da inviare una sola volta per esser accettato."
     }
   ],
   "ATwOPg": [
@@ -1659,10 +2071,10 @@
       "value": "client di esecuzione"
     }
   ],
-  "AYKxmf": [
+  "AYPu/E": [
     {
       "type": 0,
-      "value": "Collega il tuo portafoglio hardware a Metamask"
+      "value": "Che tipo di conto di staking?"
     }
   ],
   "AZaw+B": [
@@ -1675,28 +2087,6 @@
     {
       "type": 0,
       "value": "informazioni sul saldo effettivo del validatore"
-    }
-  ],
-  "Ad61gz": [
-    {
-      "type": 0,
-      "value": "Assicurati di eseguire il download dall'account ufficiale Ethereum Foundation GitHub verificando l'URL: "
-    },
-    {
-      "type": 1,
-      "value": "url"
-    }
-  ],
-  "Jrg1Me": [
-    {
-      "type": 0,
-      "value": "Lo sharding modificherà il requisito secondo cui i nodi completi devono portare l’intera storia della catena, distribuendo invece questo carico nella rete, pur garantendo la disponibilità dei dati. Questo espanderà in modo significativo la capacità del livello 1 di Ethereum, pur mantenendo la capacità di far funzionare un nodo completo su hardware consumer, mantenendo la rete decentralizzata."
-    }
-  ],
-  "Affixg": [
-    {
-      "type": 0,
-      "value": "Il deposito"
     }
   ],
   "AkVktj": [
@@ -1723,60 +2113,16 @@
       "value": "Diventa validatore con Lighthouse"
     }
   ],
+  "As7Kwv": [
+    {
+      "type": 0,
+      "value": "Potresti avere un deposito che è stato accettato ma che è in corso di validazione sulla catena. Sarà disponibile qui quando beaconcha.in avrà confermato 2048 blocchi."
+    }
+  ],
   "Aw1mMs": [
     {
       "type": 0,
       "value": "Ricarica il validatore"
-    }
-  ],
-  "AyoE3t": [
-    {
-      "type": 0,
-      "value": "Il prelievo da un validatore non è ancora possibile. Questa funzionalità è prevista per essere inclusa nell'aggiornamento Shanghai/Capella previsto per il primo o secondo trimestre del 2023."
-    }
-  ],
-  "uHSqYx": [
-    {
-      "type": 0,
-      "value": "Un "
-    },
-    {
-      "type": 1,
-      "value": "excessBalanceWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " viene elaborato quando un validatore attivo ha un saldo effettivo massimo di 32, e il saldo totale è superiore a 32. Un singolo validatore non può ottenere ricompense in eccesso oltre 32 ETH, quindi da questi conti sarà prelevato automaticamente un qualsiasi saldo extra al rispettivo indirizzo Ethereum."
-    }
-  ],
-  "RY4SP0": [
-    {
-      "type": 0,
-      "value": "Accetto di dover depositare "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " per diventare validatore e comprendo che il trasferimento di "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " verso la beacon chain è unidirezionale e irreversibile."
     }
   ],
   "BCsPjJ": [
@@ -1789,6 +2135,16 @@
     {
       "type": 0,
       "value": "Ricarica un validatore"
+    }
+  ],
+  "BFQdAm": [
+    {
+      "type": 0,
+      "value": "Importo in "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "BFsUAH": [
@@ -1879,6 +2235,20 @@
       "value": "Come attivare i prelievi, modifica delle credenziali"
     }
   ],
+  "BswXIG": [
+    {
+      "type": 0,
+      "value": "Quanto "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " desideri prelevare?"
+    }
+  ],
   "Bxe+HB": [
     {
       "type": 0,
@@ -1889,28 +2259,6 @@
     {
       "type": 0,
       "value": "Configura Lighthouse"
-    }
-  ],
-  "40/5Sf": [
-    {
-      "type": 0,
-      "value": "Ricorda che le "
-    },
-    {
-      "type": 1,
-      "value": "withdrawalCredentials"
-    },
-    {
-      "type": 0,
-      "value": " non sono le stesse del "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": ", che riceve le commissioni di transazione dai blocchi proposti. Entrambe possono essere impostate sullo stesso indirizzo, ma ciascuna deve essere impostata separatamente."
     }
   ],
   "C3jBPI": [
@@ -1943,12 +2291,6 @@
       "value": "Proof of stake"
     }
   ],
-  "CGMYrU": [
-    {
-      "type": 0,
-      "value": "Versioni di Staking Deposit CLI"
-    }
-  ],
   "CPl2hh": [
     {
       "type": 0,
@@ -1967,12 +2309,6 @@
     {
       "type": 0,
       "value": " di nodi beacon"
-    }
-  ],
-  "0WPDnu": [
-    {
-      "type": 0,
-      "value": "Devi sicuramente ricaricare quando il tuo saldo si avvicina a 16 ETH, per assicurarti di non essere escluso dal set di validatori (che avviene automaticamente se il saldo scende sotto 16 ETH)."
     }
   ],
   "CWKE9c": [
@@ -2017,6 +2353,20 @@
       "value": "Validatori correnti"
     }
   ],
+  "CmVlal": [
+    {
+      "type": 0,
+      "value": "Quanto "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " desideri mettere in staking?"
+    }
+  ],
   "Co67tK": [
     {
       "type": 0,
@@ -2027,20 +2377,6 @@
     {
       "type": 0,
       "value": "NO"
-    }
-  ],
-  "sNUrEO": [
-    {
-      "type": 0,
-      "value": "In caso contrario, ho inviato un messaggio "
-    },
-    {
-      "type": 1,
-      "value": "btec"
-    },
-    {
-      "type": 0,
-      "value": " con le mie chiavi di prelievo BLS per aggiornare le mie credenziali di prelievo (richiede l'aggiornamento Shanghai/Capella)."
     }
   ],
   "D33f/7": [
@@ -2055,18 +2391,10 @@
       "value": "Con quanti ETH devo fare staking per diventare validatore?"
     }
   ],
-  "5q9Lgv": [
+  "D91mWV": [
     {
       "type": 0,
-      "value": "Scarica il ramo "
-    },
-    {
-      "type": 1,
-      "value": "btec"
-    },
-    {
-      "type": 0,
-      "value": ":"
+      "value": "Per godere di un maggiore saldo effettivo i conti con vecchie credenziali di prelievo possono essere aggiornati a un conto composto. Si tratta di un'operazione che può essere svolta una volta sola e irreversibile."
     }
   ],
   "DCaq7N": [
@@ -2087,28 +2415,6 @@
       "value": "Accetto che, se agisco in contrasto con la specifica, sono passibile di slashing."
     }
   ],
-  "Ox4e26": [
-    {
-      "type": 0,
-      "value": "Allo stesso modo, esiste anche una "
-    },
-    {
-      "type": 1,
-      "value": "exitQueue"
-    },
-    {
-      "type": 0,
-      "value": ", che limita la velocità con cui i validatori possono "
-    },
-    {
-      "type": 1,
-      "value": "leave"
-    },
-    {
-      "type": 0,
-      "value": " la rete. Questo avviene per motivi di sicurezza. Dato che ogni validatore è limitato a un saldo effettivo massimo di 32 ETH, ciò impedisce che grandi percentuali di ETH possano essere utilizzate potenzialmente in un attacco e poi uscire subito dalla rete in un attimo."
-    }
-  ],
   "DNRQa7": [
     {
       "type": 0,
@@ -2125,6 +2431,12 @@
     {
       "type": 0,
       "value": "Configurare Erigon"
+    }
+  ],
+  "DbLJT1": [
+    {
+      "type": 0,
+      "value": "Chiave privata indirizzo di prelievo"
     }
   ],
   "DbnQg+": [
@@ -2145,6 +2457,12 @@
       "value": "Documenti del consenso JWT:"
     }
   ],
+  "DiXOHD": [
+    {
+      "type": 0,
+      "value": "Documentazione per sviluppo, esecuzione e debugging Reth"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
@@ -2157,38 +2475,16 @@
       "value": "I client supportano Prometheus e Grafana per aiutarti a visualizzare importanti metriche in tempo reale sul tuo validatore."
     }
   ],
-  "DoCZT1": [
-    {
-      "type": 0,
-      "value": "Il saldo effettivo del validatore è attualmente al limite. Se desideri, puoi aggiungere "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (il minimo consentito dal contratto di deposito)"
-    }
-  ],
-  "jrbRLT": [
-    {
-      "type": 0,
-      "value": "Per diventare validatore, devi essere in grado di gestire le chiavi e proteggere uno mnemonico. Se non hai ancora dimestichezza con le chiavi e lo mnemonico, non proseguire."
-    }
-  ],
   "DsJ/Mk": [
     {
       "type": 0,
       "value": "Non fidarti dell'indirizzo del contratto elencato su questo sito web."
+    }
+  ],
+  "DxyGdq": [
+    {
+      "type": 0,
+      "value": "Indice del validatore"
     }
   ],
   "E+Y27g": [
@@ -2211,10 +2507,22 @@
       "value": "3. Pratica su una rete di test"
     }
   ],
+  "E0MgIm": [
+    {
+      "type": 0,
+      "value": "Ti verrà chiesto di firmare un messaggio con il tuo portafoglio. L'elaborazione degli aggiornamenti non è immediata, quindi tieni conto che il completamento potrebbe richiedere diversi giorni."
+    }
+  ],
   "E1Mywn": [
     {
       "type": 0,
       "value": "catena"
+    }
+  ],
+  "E2sGaF": [
+    {
+      "type": 0,
+      "value": "Uscita"
     }
   ],
   "E4rtgi": [
@@ -2223,10 +2531,34 @@
       "value": "Client di consenso:"
     }
   ],
-  "yK2eQ+": [
+  "E55YPl": [
     {
       "type": 0,
-      "value": "Sono previste penali minori per azioni involontarie (o mancanza di azioni) che ostacolano il consenso."
+      "value": "Depositando più "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " è possibile incrementare il saldo effettivo di questo validatore. Il saldo effettivo attuale ammonta a "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": ", mentre il massimo consentito è pari a "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "EIUapL": [
@@ -2239,6 +2571,20 @@
       "value": "deposit"
     }
   ],
+  "EMCxvJ": [
+    {
+      "type": 0,
+      "value": "Utilizza la "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " per sincronizzare la rete di test Holesky."
+    }
+  ],
   "EPCHZV": [
     {
       "type": 0,
@@ -2249,6 +2595,12 @@
     {
       "type": 0,
       "value": "Ho simulato la mancanza di alimentazione (server e internet) e il ripristino automatico."
+    }
+  ],
+  "ER2q1V": [
+    {
+      "type": 0,
+      "value": "L'aggiornamento detto \"la Fusione\" ha consentito ufficialmente a Ethereum di adottare la proof-of-stake il 15 settembre 2022, abbandonando contemporaneamente la proof-of-work. Quest'operazione ha preparato la catena per futuri aggiornamenti di ampliamento come il Danksharding, incorporando il consenso tramite proof-of-stake insieme alla rete principale e, contemporaneamente, riducendo il consumo di energia di oltre il 99,9%."
     }
   ],
   "ETJ2T5": [
@@ -2281,10 +2633,60 @@
       "value": "Launchpad di Staking"
     }
   ],
+  "Ef+t8S": [
+    {
+      "type": 0,
+      "value": "Richiedi prelievo parziale"
+    }
+  ],
   "Ej2jo1": [
     {
       "type": 0,
       "value": "Indirizzo di prelievo:"
+    }
+  ],
+  "ErOWkD": [
+    {
+      "type": 0,
+      "value": "Recupera ultimo"
+    }
+  ],
+  "EsxlJB": [
+    {
+      "type": 0,
+      "value": "Configura Geth"
+    }
+  ],
+  "EuU/4k": [
+    {
+      "type": 0,
+      "value": "Saldo effettivo massimo di "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "EwtSGs": [
+    {
+      "type": 0,
+      "value": "Il responsabile della transazione sei tu. È possibile che dei siti web fraudolenti cerchino di convincerti a inviare loro "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " invece del contratto di deposito ufficiale. Assicurati che l'indirizzo di destinazione della transazione sia quello corretto."
     }
   ],
   "F8yf1S": [
@@ -2307,12 +2709,6 @@
       "value": "Il concetto chiave è il seguente:"
     }
   ],
-  "Q6N+C6": [
-    {
-      "type": 0,
-      "value": "Ethereum è nato il 30 luglio 2015. È cresciuta nel corso del tempo e l'introduzione dello sharding aumenterà anche i requisiti di archiviazione, memoria e larghezza di banda."
-    }
-  ],
   "FM92S0": [
     {
       "type": 0,
@@ -2323,24 +2719,6 @@
     {
       "type": 0,
       "value": "Accetto che questa transazione non sia reversibile."
-    }
-  ],
-  "uEB8++": [
-    {
-      "type": 0,
-      "value": "Indirizzo di prelievo di Ethereum: se desideri prelevare all'indirizzo del tuo portafoglio di esecuzione dopo l'aggiornamento Shanghai/Capella, puoi impostare "
-    },
-    {
-      "type": 1,
-      "value": "ethAddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " quando esegui deposit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
     }
   ],
   "FU7JYy": [
@@ -2363,6 +2741,18 @@
     {
       "type": 0,
       "value": ", altrimenti il deposito non sarà valido."
+    }
+  ],
+  "FWtWw3": [
+    {
+      "type": 0,
+      "value": "Le code di \"prelievo\" e \"Passaggio da BLS a esecuzione\" sono indipendenti e non in competizione. Ciascuna è limitata per blocco."
+    }
+  ],
+  "FXE1P1": [
+    {
+      "type": 0,
+      "value": "Informazioni aggiornate all'aggiornamento della rete Pectra nel 2025."
     }
   ],
   "FZCdw+": [
@@ -2409,12 +2799,6 @@
       "value": " è il software che agisce per conto del validatore, detenendo e usando la sua chiave privata per fare attestazioni sullo stato della catena. Un singolo client validatore può contenere molte coppie di chiavi, controllando quindi molti validatori."
     }
   ],
-  "FfLWt5": [
-    {
-      "type": 0,
-      "value": "Un client Ethereum con un enorme pool di sviluppatori. Perfetto per sistemi di livello aziendale."
-    }
-  ],
   "FgraU0": [
     {
       "type": 0,
@@ -2435,6 +2819,20 @@
       "value": " per utilizzare questo launchpad."
     }
   ],
+  "Fogk92": [
+    {
+      "type": 0,
+      "value": "Numero massimo di prelievi per payload: 16 (2"
+    },
+    {
+      "type": 1,
+      "value": "exp"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "FqgDIV": [
     {
       "type": 0,
@@ -2447,16 +2845,20 @@
       "value": "validatori"
     }
   ],
+  "G0AzjT": [
+    {
+      "type": 0,
+      "value": "uscita indice "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    }
+  ],
   "G0ZD5H": [
     {
       "type": 0,
       "value": "Per rendere un conto idoneo a un prelievo completo, per prima cosa devi uscire dal conto. Esistono due modi principali per far uscire i conti validatori dallo staking: volontariamente o in modo forzoso."
-    }
-  ],
-  "q0thwm": [
-    {
-      "type": 0,
-      "value": "Come validatore, otterrai ricompense per la proposta/attestazione di blocchi che verranno inclusi nella catena."
     }
   ],
   "G5IMoZ": [
@@ -2543,16 +2945,28 @@
       "value": "Dovresti vedere che hai un solo archivio chiavi per validatore. Questo archivio chiavi contiene la chiave di firma, crittografata con la tua password."
     }
   ],
+  "GmKyht": [
+    {
+      "type": 0,
+      "value": "Prelievi periodici senza gas di qualsiasi importo in eccesso rispetto a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "GsBRWL": [
     {
       "type": 0,
       "value": "Lingue"
-    }
-  ],
-  "Gsixxx": [
-    {
-      "type": 0,
-      "value": "Rischi in caso di adozione nelle prime fasi"
     }
   ],
   "GuIwY6": [
@@ -2573,16 +2987,34 @@
       "value": "Importo totale richiesto"
     }
   ],
+  "H0jTll": [
+    {
+      "type": 0,
+      "value": "Aggiungere fondi a un validatore non ancora al proprio saldo effettivo massimo può incrementare ricompense e penalità."
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
       "value": "Saldo"
     }
   ],
+  "H84I+K": [
+    {
+      "type": 0,
+      "value": "Documentazione per l'installazione di Reth"
+    }
+  ],
   "HMgrdg": [
     {
       "type": 0,
       "value": "Configura il tuo client d'esecuzione"
+    }
+  ],
+  "HX93/h": [
+    {
+      "type": 0,
+      "value": "La configurazione di un indirizzo di prelievo è considerata la migliore prassi in termini di sicurezza. Se non lo fornisci ora i tuoi fondi depositati rimarranno bloccati nella beacon chain fino a che non ne fornirai uno. Per sbloccarli dovrai firmare un messaggio con le tue chiavi di prelievo BLS, generate a partire dalla tua seed phrase mnemonica (quindi tienila al sicuro)."
     }
   ],
   "HXvZ2L": [
@@ -2603,6 +3035,34 @@
     {
       "type": 0,
       "value": "Lo slashing ha due scopi: (1) rendere proibitivamente costoso attaccare la rete e (2) impedire ai validatori di esser pigri, verificando che eseguano realmente i propri doveri. Se sei sottoposto a slashing perché hai agito dimostrabilmente in una maniera distruttiva, una parte del tuo staking sarà distrutta."
+    }
+  ],
+  "HemvTL": [
+    {
+      "type": 0,
+      "value": "Le credenziali di prelievo BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") possono essere aggiornate a un indirizzo di esecuzione ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") trasmettendo un messaggio \"Passaggio da BLS a esecuzione\" (BLS To Execution Change, BTEC), firmato con la propria chiave di prelievo BLS. Tali messaggi sono inclusi nei blocchi a una velocità massima di 16 per blocco."
+    }
+  ],
+  "HgMYFB": [
+    {
+      "type": 0,
+      "value": "Ciò darà avvio al processo di uscita permanente del validatore scelto dalla rete di proof-of-stake di Ethereum."
     }
   ],
   "Hmxd5S": [
@@ -2671,6 +3131,36 @@
       "value": "In precedenza TurboGeth, Erigon è un client Ethereum progettato per consentire l'ottimizzazione delle prestazioni."
     }
   ],
+  "ICbItT": [
+    {
+      "type": 0,
+      "value": "Quest'approccio consente di creare un singolo conto composto. Sono necessari almeno "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " ed è possibile detenere fino a "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "ID3Pgm": [
     {
       "type": 0,
@@ -2681,12 +3171,6 @@
     {
       "type": 0,
       "value": "Firma la transazione con il tuo portafoglio"
-    }
-  ],
-  "bFiejS": [
-    {
-      "type": 0,
-      "value": "Tieni presente che, nel secondo scenario (improbabile), rischi di perdere progressivamente fino al 50% (16 ETH) della tua quota in 21 giorni. Dopo 21 giorni sarai espulso dal pool di validatori. Questo assicura che a un certo punto i blocchi inizino a finalizzarsi di nuovo."
     }
   ],
   "IWlazt": [
@@ -2701,10 +3185,22 @@
       "value": "Strumenti disponibili per generare il messaggio di modifica della chiave"
     }
   ],
+  "IZEvbY": [
+    {
+      "type": 0,
+      "value": "Nethermind, client di esecuzione di Ethereum sviluppato in .NET, vanta prestazioni da leader del settore nella sincronizzazione e nell'elaborazione tip-of-chain. Grazie al suo design modulare e al suo sistema di plugin offre estensibilità e funzionalità per nuove catene. Trattandosi di uno dei client di esecuzione più utilizzati su Ethereum, Nethermind svolge un ruolo cruciale incrementando diversità e resilienza dell'ecosistema Ethereum."
+    }
+  ],
   "IZFEUg": [
     {
       "type": 0,
       "value": "Pronto"
+    }
+  ],
+  "Icu389": [
+    {
+      "type": 0,
+      "value": "Maggiori informazioni sul saldo effettivo del validatore"
     }
   ],
   "IdUtHu": [
@@ -2745,12 +3241,6 @@
       "value": "Beacon chain spinge i prelievi come operazioni"
     }
   ],
-  "IugT5/": [
-    {
-      "type": 0,
-      "value": "impossibile trasferire"
-    }
-  ],
   "IwrKbS": [
     {
       "type": 0,
@@ -2785,10 +3275,56 @@
       "value": "Cinese (tradizionale)"
     }
   ],
+  "J6xb7K": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": se hai fornito un indirizzo di prelievo al momento della generazione delle tue chiavi puoi procedere"
+    }
+  ],
   "J7T0SR": [
     {
       "type": 0,
       "value": "Documentazione per l'installazione di Nimbus"
+    }
+  ],
+  "J8hlId": [
+    {
+      "type": 0,
+      "value": "Il conto "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    },
+    {
+      "type": 0,
+      "value": " uscirà dalla rete e il suo intero saldo sarà migrato all'indice del validatore "
+    },
+    {
+      "type": 1,
+      "value": "targetIndex"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J9BaKo": [
+    {
+      "type": 0,
+      "value": "Ci sono depositi recenti di importo pari ad almeno "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": "?"
     }
   ],
   "JAiV0o": [
@@ -2817,16 +3353,36 @@
       "value": "4. Proteggiti dal phishing"
     }
   ],
+  "JQtlrY": [
+    {
+      "type": 0,
+      "value": "Fai uscire totalmente validatore"
+    }
+  ],
+  "JZm4pU": [
+    {
+      "type": 0,
+      "value": "La configurazione di quest'indirizzo crea le "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " del tuo validatore e collega permanentemente l'indirizzo di esecuzione scelto al tuo validatore. Questo conto sarà l'unico che potrà ricevere i fondi prelevati dal tuo validatore."
+    }
+  ],
   "Ja5vXW": [
     {
       "type": 0,
       "value": "Letture consigliate"
     }
   ],
-  "jVlgXS": [
+  "Jge1Sx": [
     {
       "type": 0,
-      "value": "Approfondisci gli aggiornamenti di Ethereum."
+      "value": "Uscita forzata"
     }
   ],
   "JhUYU3": [
@@ -2839,6 +3395,12 @@
     {
       "type": 0,
       "value": "L'utilizzo delle risorse può variare in modo considerevole in base al client. Studia diversi client se hai vincoli di risorse."
+    }
+  ],
+  "Jrg1Me": [
+    {
+      "type": 0,
+      "value": "Il Danksharding modificherà il requisito secondo cui i nodi interi contengono tutta la storia della catena, distribuendo invece tale carico all'interno della rete e assicurando allo stesso tempo la disponibilità dei dati. Ciò amplierà significativamente la capacità del livello 1 di Ethereum mantenendo al contempo la possibilità di eseguire un intero nodo tramite hardware di consumo; in tal modo la rete resterà decentralizzata."
     }
   ],
   "Js4uuA": [
@@ -2883,16 +3445,16 @@
       "value": "Documentazione per l'installazione di Geth"
     }
   ],
-  "bagKCF": [
-    {
-      "type": 0,
-      "value": "È stato proposto di inserire delle funzioni di prelievo nel prossimo aggiornamento Shanghai/Capella. Dopo aver aggiunto questa funzionalità, il saldo potrà essere prelevato (con la chiave di prelievo) dopo un periodo minimo di circa un giorno."
-    }
-  ],
   "K7xnjy": [
     {
       "type": 0,
       "value": "Attenzione: non memorizzare le chiavi su più client validatori (backup) contemporaneamente"
+    }
+  ],
+  "K8gNLa": [
+    {
+      "type": 0,
+      "value": "indirizzo di prelievo"
     }
   ],
   "KBSbmP": [
@@ -2943,6 +3505,20 @@
       "value": " del mio client di consenso."
     }
   ],
+  "KMa0S7": [
+    {
+      "type": 0,
+      "value": "Fornendo questo flag le tue credenziali di prelievo conterranno il prefisso di "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " (o superiore) e il tuo indirizzo di prelievo, segnalando che il tuo conto è pronto per i prelievi."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
@@ -2955,6 +3531,12 @@
       "value": "entrare"
     }
   ],
+  "KUz3Pf": [
+    {
+      "type": 0,
+      "value": "in sospeso"
+    }
+  ],
   "KWWsDo": [
     {
       "type": 0,
@@ -2965,10 +3547,10 @@
       "value": "url"
     }
   ],
-  "KbUOQp": [
+  "KgJB0t": [
     {
       "type": 0,
-      "value": "Nethermind è un client robusto costruito su .NET core e progettato per garantire prestazioni, versatilità e personalizzazione."
+      "value": "Raccomandato per la maggior parte degli utenti"
     }
   ],
   "KhJBVZ": [
@@ -2981,6 +3563,12 @@
     {
       "type": 0,
       "value": "Una volta completato il processo, dovresti vedere quanto segue:"
+    }
+  ],
+  "KqMfKH": [
+    {
+      "type": 0,
+      "value": "Prelievi periodici distribuiti all'indirizzo di prelievo per qualsiasi saldo in eccesso rispetto a 32 ETH, automaticamente su base periodica"
     }
   ],
   "KvRSg5": [
@@ -3015,6 +3603,12 @@
       "value": "."
     }
   ],
+  "Kzksr7": [
+    {
+      "type": 0,
+      "value": "Comprendo il software e i rischi di slashing."
+    }
+  ],
   "L7fPF+": [
     {
       "type": 0,
@@ -3037,32 +3631,16 @@
       "value": "ricaricare il portafoglio"
     }
   ],
+  "LBAaxu": [
+    {
+      "type": 0,
+      "value": "Endpoint JSON-RPC"
+    }
+  ],
   "LHPZ+C": [
     {
       "type": 0,
       "value": "Lighthouse è un'implementazione del client di consenso, scritta in Rust con particolare attenzione a velocità e sicurezza."
-    }
-  ],
-  "q8Cxf5": [
-    {
-      "type": 0,
-      "value": "Prelievo BLS: di default, la deposit-cli genererebbe credenziali di prelievo con la "
-    },
-    {
-      "type": 1,
-      "value": "boldWithdrawalKey"
-    },
-    {
-      "type": 0,
-      "value": " derivata tramite mnemonici in formato "
-    },
-    {
-      "type": 1,
-      "value": "eip2334"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "LVy+cS": [
@@ -3083,30 +3661,28 @@
       "value": "Domande frequenti sui validatori"
     }
   ],
-  "LibVut": [
-    {
-      "type": 0,
-      "value": "Usa "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " per sincronizzare la rete di test Goerli."
-    }
-  ],
   "Ljo9dF": [
     {
       "type": 0,
       "value": "Bulgaro"
     }
   ],
+  "Ll/uYX": [
+    {
+      "type": 0,
+      "value": "Collega a un nuovo portafoglio"
+    }
+  ],
   "LlClXS": [
     {
       "type": 0,
       "value": "Grazie per aver supportato la rete di Ethereum!"
+    }
+  ],
+  "LmBip5": [
+    {
+      "type": 0,
+      "value": "Togli dallo staking da"
     }
   ],
   "LpnfTF": [
@@ -3165,16 +3741,24 @@
       "value": "Carica sul pool BLSToExecutionChange del nodo beacon"
     }
   ],
-  "M3GwXS": [
+  "MAVs3a": [
     {
       "type": 0,
-      "value": "Riceverai le ricompense complete solo se il tuo validatore è online e aggiornato. È tua responsabilità. Se il tuo validatore va offline, verrai penalizzato. Le penalità per chi è offline corrispondono approssimativamente alle ricompense per la partecipazione attiva."
+      "value": "*Il semplice fatto di essere offline in una rete altrimenti in buone condizioni non dà luogo allo slashing, ma determinerà piccole penali di inattività."
     }
   ],
-  "28aik1": [
+  "MAq0zY": [
     {
       "type": 0,
-      "value": "Limiti tariffari impostati sulla coda di prelievo (potrebbe cambiare mediante test prima di Shanghai)"
+      "value": "Al momento la commissione minima per l'elaborazione è elevata; valuta di attendere qualche minuto. L'attuale commissione di elaborazione dei prelievi è pari a "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "MCmGYv": [
@@ -3207,12 +3791,6 @@
       "value": "Cosa succede se mi rubano la chiave di prelievo?"
     }
   ],
-  "Mor0Ih": [
-    {
-      "type": 0,
-      "value": "Comportamento validatore errato"
-    }
-  ],
   "MZvoWG": [
     {
       "type": 0,
@@ -3229,6 +3807,12 @@
     {
       "type": 0,
       "value": "GUI Wagyu Key Gen"
+    }
+  ],
+  "MalGck": [
+    {
+      "type": 0,
+      "value": "Geth su documentazione Holesky"
     }
   ],
   "Mb3npQ": [
@@ -3281,6 +3865,24 @@
       "value": " elaborato per eventuale saldo residuo"
     }
   ],
+  "Mor0Ih": [
+    {
+      "type": 0,
+      "value": "Cattiva condotta validatore"
+    }
+  ],
+  "MsZuUe": [
+    {
+      "type": 0,
+      "value": "prendere l'intero saldo"
+    }
+  ],
+  "MtgVBi": [
+    {
+      "type": 0,
+      "value": "TOGLI FONDI DALLO STAKING"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -3295,6 +3897,12 @@
     {
       "type": 0,
       "value": "qualche altro giorno"
+    }
+  ],
+  "NB68I4": [
+    {
+      "type": 0,
+      "value": "Aggiungi fondi al tuo validatore"
     }
   ],
   "NDrMCw": [
@@ -3333,24 +3941,6 @@
       "value": "Ho protetto l'account root."
     }
   ],
-  "dVJcJt": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": a tal fine si utilizza il flag "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": " quando si generano le chiavi con Staking Deposit CLI."
-    }
-  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -3375,12 +3965,6 @@
     {
       "type": 0,
       "value": " deve essere configurato per i prelievi. Prendi nota delle tue credenziali di prelievo perché ti servirà per aggiornare le chiavi."
-    }
-  ],
-  "NUcFVA": [
-    {
-      "type": 0,
-      "value": "[Example]"
     }
   ],
   "NVljH4": [
@@ -3427,6 +4011,12 @@
       "value": "Diventa validatore con Teku"
     }
   ],
+  "NbiwbX": [
+    {
+      "type": 0,
+      "value": "Ti aiuteremo a generare una chiave di firma per ogni validatore che desideri eseguire. Nel corso di questo processo configurerai un indirizzo di prelievo che sarà permanentemente collegato a ciascun conto validatore."
+    }
+  ],
   "NiWtxk": [
     {
       "type": 1,
@@ -3463,46 +4053,24 @@
       "value": ")"
     }
   ],
-  "1ONfru": [
-    {
-      "type": 0,
-      "value": "Per includere questo messaggio nella rete principale, dovrai caricare questo messaggio su un pool di "
-    },
-    {
-      "type": 0,
-      "value": " del nodo beacon "
-    },
-    {
-      "type": 0,
-      "value": " una biforcazione dura Capella/Shanghai."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
       "value": "Teku all'avvio deve puntare a file contenenti archivi chiavi e alle relative password. È possibile farlo in tre modi."
     }
   ],
-  "O+3LJ1": [
+  "O0SF0V": [
     {
       "type": 0,
-      "value": "Il saldo del validatore è al massimo effettivo: "
+      "value": "Tutti i fondi rimanenti verranno "
     },
     {
       "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
+      "value": "transferredToDestination"
     },
     {
       "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": " entro pochi giorni dal raggiungimento dell'epoca di uscita"
     }
   ],
   "O3qkOm": [
@@ -3543,10 +4111,26 @@
       "value": "Documentazione sull'esecuzione di Erigon"
     }
   ],
+  "OJcH8h": [
+    {
+      "type": 0,
+      "value": "Inizia prelievo"
+    }
+  ],
   "ON2tXT": [
     {
       "type": 0,
       "value": "La documentazione Nethermind spiega come scaricare e installare il client."
+    }
+  ],
+  "ONXIv4": [
+    {
+      "type": 0,
+      "value": "Preleva un po' di "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "ORVjVH": [
@@ -3609,6 +4193,58 @@
       "value": "Tutto ciò che c'è da sapere prima di diventare validatore."
     }
   ],
+  "OuiAUJ": [
+    {
+      "type": 0,
+      "value": "ciascuno dei tuoi "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validatori"
+    }
+  ],
+  "Ox4e26": [
+    {
+      "type": 0,
+      "value": "Analogamente, esiste anche una "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": ", che limita quanto rapidamente i validatori possono "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " la rete per motivi di sicurezza. Poiché il saldo effettivo massimo di ciascun validatore è pari a "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", ciò impedisce che grandi porzioni di ETH vengano utilizzate in un attacco ed escano quindi dalla rete in un'unica volta."
+    }
+  ],
   "P+nziG": [
     {
       "type": 0,
@@ -3619,12 +4255,6 @@
     {
       "type": 0,
       "value": "Il phishing è un rischio molto concreto per i validatori di Ethereum e, sfortunatamente, molte persone perderanno fondi a causa di questi attacchi."
-    }
-  ],
-  "cU/ZP6": [
-    {
-      "type": 0,
-      "value": "L'aggiornamento della beacon chain garantisce a Ethereum la proof of stake."
     }
   ],
   "P1QerV": [
@@ -3649,6 +4279,12 @@
       "value": "."
     }
   ],
+  "P2eds5": [
+    {
+      "type": 0,
+      "value": "Ritira fondi"
+    }
+  ],
   "P8FrVE": [
     {
       "type": 0,
@@ -3663,6 +4299,12 @@
     {
       "type": 1,
       "value": "emoji"
+    }
+  ],
+  "P99NKl": [
+    {
+      "type": 0,
+      "value": "Per massimizzare le ricompense dovrai mantenere il tuo validatore online e aggiornato. Questo compito spetta a te; se il validatore andrà offline verrai penalizzato. Le penalità quando si va offline equivalgono più o meno alle ricompense percepite quando si partecipa attivamente."
     }
   ],
   "P9mVZK": [
@@ -3683,22 +4325,28 @@
       "value": "Questa epoca è determinata dalla prima epoca disponibile che non abbia già raggiunto il limite con altri validatori in uscita (il limite di velocità dipende dai validatori totali sulla rete), e deve essere almeno quattro (4) epoche dopo l'inizio dell'uscita."
     }
   ],
+  "PXAur5": [
+    {
+      "type": 0,
+      "value": "Preleva"
+    }
+  ],
   "PfoT0C": [
     {
       "type": 0,
       "value": "Questa lista di controllo ti aiuterà a capire il ruolo di validatore e a prepararti."
     }
   ],
+  "PgJGHT": [
+    {
+      "type": 0,
+      "value": "Disponibile"
+    }
+  ],
   "PglO1W": [
     {
       "type": 0,
       "value": "Resoconto ufficiale di verifica"
-    }
-  ],
-  "PmrcLE": [
-    {
-      "type": 0,
-      "value": "Nethermind sulla documentazione di Goerli"
     }
   ],
   "PoBIK+": [
@@ -3737,42 +4385,10 @@
       "value": "Appunti"
     }
   ],
-  "Q8P0rZ": [
+  "Q6N+C6": [
     {
       "type": 0,
-      "value": "I validatori hanno un saldo massimo effettivo di "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". Devi ricaricare solo "
-    },
-    {
-      "type": 1,
-      "value": "maxTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " per raggiungere il limite del saldo effettivo."
+      "value": "Ethereum ha avuto origine il 30 luglio 2015. Le sue dimensioni continuano a crescere nel tempo, e l'introduzione del Danksharding incrementerà anche i requisiti di archiviazione, memoria e larghezza di banda."
     }
   ],
   "QKFeMq": [
@@ -3787,6 +4403,28 @@
       "value": "Nota: per impostazione predefinita, le VM possono disabilitare NTP quindi potrebbe essere necessario trovare una soluzione alternativa per il proprio ambiente."
     }
   ],
+  "QOevre": [
+    {
+      "type": 0,
+      "value": "A questo punto dovresti aver conservato il tuo mnemonico in forma scritta in un luogo sicuro e possedere un archivio chiavi salvato per "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Tienili al sicuro, preferibilmente offline. Gli archivi chiavi dei tuoi validatori dovrebbero essere disponibili in una cartella "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " di nuova creazione."
+    }
+  ],
   "QRUdO6": [
     {
       "type": 0,
@@ -3797,6 +4435,12 @@
     {
       "type": 0,
       "value": "Conoscere le porte nelle reti"
+    }
+  ],
+  "QUztYl": [
+    {
+      "type": 0,
+      "value": "importo"
     }
   ],
   "QWDxrk": [
@@ -3827,28 +4471,6 @@
     {
       "type": 1,
       "value": "networkName"
-    }
-  ],
-  "dtVSdl": [
-    {
-      "type": 0,
-      "value": "Importante: come validatore dovrai pubblicare "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " come garanzia. In altre parole, dovrai mettere a disposizione dei fondi. L'unico modo per diventare validatore è quello di effettuare una transazione unidirezionale "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " verso il contratto di deposito sulla catena Ethereum corrente."
     }
   ],
   "QlsDcr": [
@@ -3883,24 +4505,6 @@
       "value": " che è stato accettato ma è in corso di convalida sulla catena. Sarà disponibile qui quando beaconcha.in avrà confermato 2048 blocchi."
     }
   ],
-  "zBl8d5": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": se hai usato il flag "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": " durante la generazione delle chiavi, puoi continuare"
-    }
-  ],
   "R7v7y3": [
     {
       "type": 0,
@@ -3923,6 +4527,12 @@
     {
       "type": 0,
       "value": "Client di consenso"
+    }
+  ],
+  "RGD1CX": [
+    {
+      "type": 0,
+      "value": "Sono consentite quattro (4) uscite di validatori per epoca, più una (1) ogni 65.536 validatori totali attivi su 327.680. Al mese di aprile 2023 questo limite è pari a otto (8), e aumenterà fino a nove (9) se e quando i numero di validatori attivi arriverà a 655.360."
     }
   ],
   "ROHpFF": [
@@ -3949,16 +4559,22 @@
       "value": "congratulazioni"
     }
   ],
-  "RdHdwG": [
+  "RhR6+a": [
     {
       "type": 0,
-      "value": "Istruzioni su come utilizzare lo strumento staking-deposit-cli per generare e trasmettere un messaggio SignedBLSToExecutionChange al fine di aggiornare le credenziali di prelievo del validatore."
+      "value": "Ti guideremo attraverso i passaggi per configurare un indirizzo di prelievo per il tuo validatore. Si tratta della migliore prassi, fortemente raccomandata per motivi di sicurezza."
     }
   ],
-  "Rg5ySE": [
+  "RokPRM": [
     {
       "type": 0,
-      "value": "Quanti validatori vorresti eseguire?"
+      "value": "Prelievi periodici"
+    }
+  ],
+  "RqcJGJ": [
+    {
+      "type": 0,
+      "value": "Besu su documentazione Holesky"
     }
   ],
   "Rr2lI/": [
@@ -3971,6 +4587,24 @@
     {
       "type": 0,
       "value": "Riepilogo"
+    }
+  ],
+  "RuFk89": [
+    {
+      "type": 0,
+      "value": "Assorbi un altro validatore"
+    }
+  ],
+  "RuoC+s": [
+    {
+      "type": 0,
+      "value": "L'epoca di uscita di questo validatore è stata raggiunta. Il saldo rimanente verrà trasferito automaticamente al tuo conto di prelievo collegato, oppure al tuo validatore target selezionato se stai effettuando una migrazione di conti, entro pochi giorni."
+    }
+  ],
+  "RwXnhK": [
+    {
+      "type": 0,
+      "value": "cold storage"
     }
   ],
   "Ryptmy": [
@@ -3991,6 +4625,12 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "S3RTk+": [
+    {
+      "type": 0,
+      "value": "Aggiungendo fondi a un conto che non ha ancora raggiunto il saldo effettivo max, puoi incrementare il saldo effettivo in staking del tuo validatore utilizzato per calcolare sia ricompense che penalità. Il tuo saldo effettivo è calcolato a partire dal tuo saldo reale e aumenta/diminuisce di unità intere."
     }
   ],
   "S943uU": [
@@ -4015,6 +4655,12 @@
     {
       "type": 0,
       "value": "Esegui il file che hai appena scaricato."
+    }
+  ],
+  "SPebP1": [
+    {
+      "type": 0,
+      "value": "Nuovo saldo"
     }
   ],
   "SVUntz": [
@@ -4061,12 +4707,6 @@
       "value": "Maggiori informazioni sui rischi dello slashing"
     }
   ],
-  "SdRBir": [
-    {
-      "type": 0,
-      "value": "Per diventare un validatore, dovrai poter eseguire i comandi nel terminale sul tuo computer. Sia la generazione della tua nuova coppia di chiavi e sia l'installazione del software del validatore vengono eseguite nel terminale."
-    }
-  ],
   "SeW5ak": [
     {
       "type": 0,
@@ -4077,6 +4717,12 @@
     {
       "type": 0,
       "value": "Obbligatorio"
+    }
+  ],
+  "SepcV5": [
+    {
+      "type": 0,
+      "value": "uscita del validatore selezionato in alto"
     }
   ],
   "SqKNq2": [
@@ -4095,22 +4741,72 @@
       "value": "Riepilogo sulla coda di uscita"
     }
   ],
+  "SwXcZM": [
+    {
+      "type": 0,
+      "value": "Il valore di ricarica minimo è: "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Sy5bAo": [
+    {
+      "type": 0,
+      "value": "Con il completamento del passaggio alla proof-of-stake tramite la Fusione, i validatori sono oggi responsabili dell'elaborazione delle transazioni e della firma della loro validità. Al momento della Fusione questi dati "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " possono essere tratti da fonti terze popolari. L'utilizzo di un fornitore terzo farà sì che il tuo validatore vada offline. Quando il Danksharding verrà implementato i validatori saranno anche a rischio di essere sottoposti a slashing nell'ambito del "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "Szwbym": [
     {
       "type": 0,
       "value": "wrench"
     }
   ],
-  "T2O2Gr": [
+  "T5tldp": [
     {
       "type": 0,
-      "value": "iniziale e massimo"
+      "value": "Aggiorna a conto composto"
     }
   ],
   "THIzw6": [
     {
       "type": 0,
       "value": "Validatori ed Ethereum"
+    }
+  ],
+  "TKCr16": [
+    {
+      "type": 0,
+      "value": "Per prelevare tutti i fondi occorre configurare un indirizzo di prelievo; i fondi saranno trasferiti automaticamente nel prossimo sweep del validatore."
     }
   ],
   "TMw9oz": [
@@ -4131,10 +4827,34 @@
       "value": "virtualenv ti aiuterebbe a creare un ambiente Python isolato per lo strumento deposit-cli."
     }
   ],
+  "ThGXHF": [
+    {
+      "type": 0,
+      "value": "Ciò darà avvio al processo di "
+    },
+    {
+      "type": 1,
+      "value": "exiting"
+    },
+    {
+      "type": 0,
+      "value": " permanente dalla rete di proof-of-stake di Ethereum."
+    }
+  ],
   "Tpe6yK": [
     {
       "type": 0,
       "value": "documentazione con supporto rpc-http"
+    }
+  ],
+  "Tpo1B3": [
+    {
+      "type": 0,
+      "value": "trasferito all'indice del validatore "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "U/NPbq": [
@@ -4149,10 +4869,18 @@
       "value": "Visualizza un confronto completo tra i client"
     }
   ],
-  "U6jzBs": [
+  "U4ARud": [
     {
       "type": 0,
-      "value": "Come entrare nella rete di prova dei prelievi pubblici"
+      "value": "In precedenza un nodo beacon (livello di consenso) doveva solo leggere il contratto di deposito di staking sul livello di esecuzione per sapere quali conti validatori avevano depositato "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Quest'informazione era fornita in maniera semplice da terze parti come Infura o Alchemy."
     }
   ],
   "U7AOxj": [
@@ -4161,24 +4889,22 @@
       "value": "superiore al 50%"
     }
   ],
-  "UJMct0": [
+  "UJE2gP": [
     {
       "type": 0,
-      "value": "Consulta "
-    },
-    {
-      "type": 1,
-      "value": "etherscan"
-    },
-    {
-      "type": 0,
-      "value": " per maggiori dettagli"
+      "value": "A disposizione di"
     }
   ],
-  "UUDnWR": [
+  "UN2ydn": [
     {
       "type": 0,
-      "value": "Pianificazione Shanghai (problema GitHub)"
+      "value": "Attenzione: attuale coda di richieste superiore al normale volume"
+    }
+  ],
+  "UOFjs/": [
+    {
+      "type": 0,
+      "value": "Esistono nuovi tipi di conti oltre a quelli di tipo 1. La migrazione dal tipo 0 al tipo 1 è un pre-requisito per poter migrare a nuovi tipi di conti."
     }
   ],
   "UWv7yD": [
@@ -4203,6 +4929,26 @@
     {
       "type": 0,
       "value": "Fino a questa epoca (nello stato \"in coda\"), il validatore deve essere online e deve rispettare le consuete regole di slashing."
+    }
+  ],
+  "UdDXU6": [
+    {
+      "type": 0,
+      "value": "immediatamente"
+    }
+  ],
+  "UjKpPX": [
+    {
+      "type": 0,
+      "value": "Tutti i fondi rimanenti verranno trasferiti alla "
+    },
+    {
+      "type": 1,
+      "value": "destination"
+    },
+    {
+      "type": 0,
+      "value": " entro pochi giorni dal raggiungimento dell'epoca di uscita"
     }
   ],
   "Utck3E": [
@@ -4245,10 +4991,16 @@
       "value": "Questo è diventato un requisito al momento della Fusione, accertati quindi di averle eseguite entrambe prima di fare staking."
     }
   ],
-  "iXbM1G": [
+  "V1iY4C": [
     {
       "type": 0,
-      "value": "Se non hai una cartella della rete di test, è probabile che tu non abbia compilato ed eseguito Nimbus correttamente. Esegui nuovamente i comandi make."
+      "value": "Reth è scritto in Rust, un linguaggio che consente a tutti di sviluppare software affidabili ed efficienti. Rust è un linguaggio di programmazione di uso generale che pone enfasi su prestazioni, sicurezza rispetto ai tipi e concorrenza. Rafforza la sicurezza della memoria (ovvero tutti i riferimenti puntano verso una memoria valida) senza un garbage collector."
+    }
+  ],
+  "V4X42O": [
+    {
+      "type": 0,
+      "value": "Configura Lodestar"
     }
   ],
   "VASo1/": [
@@ -4283,40 +5035,6 @@
       "value": "Consigliato"
     }
   ],
-  "VLDKor": [
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " è il saldo massimo effettivo del validatore. Ssignifica che non otterrai più ricompense se il saldo del validatore supera "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". Guadagnerai però meno se va sotto "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -4347,20 +5065,6 @@
     {
       "type": 0,
       "value": ", una chiave segreta condivisa solo tra i due client per autenticarsi reciprocamente. Questo segreto JWT condiviso deve essere reso disponibile a ciascun client (sia client di esecuzione sia client di consenso) per consentire loro di comunicare correttamente tra loro."
-    }
-  ],
-  "VwWGD9": [
-    {
-      "type": 0,
-      "value": "Questi messaggi sono limitati a 16 per blocco ("
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": "), quindi se vengono presentate più di 16 richieste contemporaneamente, si formerà una coda che verrà elaborata in blocchi successivi. Ciò significa che subito dopo l'aggiornamento Shanghai/Capella, gli utenti che inviano questo messaggio potrebbero riscontrare un ritardo stimato intorno a 2-3 giorni nell'elaborazione di questa richiesta."
     }
   ],
   "VzGJkB": [
@@ -4407,24 +5111,6 @@
       "value": "Domande frequenti"
     }
   ],
-  "WFVzvu": [
-    {
-      "type": 1,
-      "value": "warning"
-    },
-    {
-      "type": 0,
-      "value": " I depositi duplicati con la stessa chiave pubblica del file di chiavi saranno considerati un doppio deposito. I saldi extra superiori a "
-    },
-    {
-      "type": 1,
-      "value": "eth"
-    },
-    {
-      "type": 0,
-      "value": " NON saranno conteggiati nel saldo effettivo sulla beacon chain. Inoltre non potrai prelevare fino a quando la beacon chain non si fonderà con la rete principale."
-    }
-  ],
   "WJA1/H": [
     {
       "type": 0,
@@ -4441,24 +5127,50 @@
       "value": " validatori"
     }
   ],
+  "WO6Iek": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": se hai fornito un indirizzo di prelievo (flag "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": " o "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") al momento della generazione delle tue chiavi puoi procedere"
+    }
+  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "Questi passaggi sono facoltativi ma consigliati per ottimizzare il nodo."
     }
   ],
-  "9MIPCp": [
+  "WVsePo": [
     {
       "type": 0,
-      "value": "Se non fornisci un indirizzo di prelievo con i dati di deposito iniziale, dovrai ricavare le chiavi di prelievo dal tuo mnemonico in un secondo momento, perciò conservalo in modo sicuro: sarà l'UNICO modo per prelevare "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " dopo che avrai scelto di attivare i prelievi."
+      "value": "Reth è un'implementazione modulare, rapidissima e facile da utilizzare per i contributori del protocollo Ethereum scritta in Rust. È in grado di sincronizzare un nodo di archiviazione in meno di 50 ore a partire dalla genesi. Al mese di giugno 2024 un nodo di archiviazione della rete principale di Reth pesa solo 2,1 TB."
     }
   ],
   "WdDGn6": [
@@ -4495,6 +5207,12 @@
     {
       "type": 0,
       "value": "gioco proof-of-custody"
+    }
+  ],
+  "X4qc7f": [
+    {
+      "type": 0,
+      "value": "timestamp"
     }
   ],
   "X5KFEh": [
@@ -4537,10 +5255,28 @@
       "value": "Maggiori informazioni sull'installazione di pip"
     }
   ],
-  "XRxD8r": [
+  "XC3Z4Q": [
     {
       "type": 0,
-      "value": "Besu sulla documentazione di Goerli"
+      "value": "\"Tipo 2\", \"composto\""
+    }
+  ],
+  "XLXSsV": [
+    {
+      "type": 0,
+      "value": "Reth fornisce una chat Telegram attiva per discussioni tecniche e risoluzione di problemi."
+    }
+  ],
+  "XPKlzF": [
+    {
+      "type": 0,
+      "value": "Azione permanente e irreversibile"
+    }
+  ],
+  "XRUCUL": [
+    {
+      "type": 0,
+      "value": "Una volta che è stato fornito un indirizzo di esecuzione firmando il messaggio \"Passaggio da BLS a esecuzione\", le chiavi di prelievo tratte dal mnemonico del tuo validatore non vengono più utilizzate. Per questo quella di fornire un indirizzo di esecuzione a propria disposizione il prima possibile è l'opzione raccomandata per gran parte degli utenti e quella di default per chi si unisce tramite il processo di onboarding di questo sito. Tale meccanismo protegge l'utente dalla perdita permanente di tutti i fondi qualora non sia in grado di recuperare il proprio mnemonico e le proprie chiavi di prelievo."
     }
   ],
   "XVRQoq": [
@@ -4595,10 +5331,10 @@
       "value": "~25 minuti"
     }
   ],
-  "XgOPc8": [
+  "XjMz3s": [
     {
       "type": 0,
-      "value": "Ricorda che non esistono piani correnti per abilitare trasferimenti di ETH tra validatori."
+      "value": "Non sono stati scoperti validatori per il conto fornito."
     }
   ],
   "XmddSV": [
@@ -4611,12 +5347,6 @@
     {
       "type": 0,
       "value": "Capella: specifica formale"
-    }
-  ],
-  "XszRWL": [
-    {
-      "type": 0,
-      "value": "et1_withdrawal_address"
     }
   ],
   "Y07Hwy": [
@@ -4641,6 +5371,28 @@
     {
       "type": 0,
       "value": "Ricarica"
+    }
+  ],
+  "Y4Qzq8": [
+    {
+      "type": 0,
+      "value": "Devi eseguire sia un "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": " che un "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Y9S0NE": [
@@ -4683,10 +5435,26 @@
       "value": "Chiavi"
     }
   ],
+  "YHS8Mc": [
+    {
+      "type": 0,
+      "value": "Tipo da filtrare"
+    }
+  ],
   "YJI2xv": [
     {
       "type": 0,
       "value": "Si segue un albero decisionale per stabilire che tipo di prelievo sarà avviato. Se il validatore sottoposto a controllo presenta ETH idonei al prelievo, viene aggiunto alla coda di prelievo. Se non sono presenti ETH, il conto viene ignorato."
+    }
+  ],
+  "YLFl88": [
+    {
+      "type": 0,
+      "value": "Fai uscire validatore "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
     }
   ],
   "YP03/j": [
@@ -4707,20 +5475,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "YQJy4H": [
-    {
-      "type": 0,
-      "value": "A questo punto dovresti aver preso nota del tuo mnemonico, averlo riposto in un luogo sicuro e aver salvato un archivio chiavi per ognuno dei tuoi validatori "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": ". Assicurati di tenerli al sicuro, preferibilmente offline. Gli archivi chiavi dei tuoi validatori devono essere disponibili nella directory selezionata."
     }
   ],
   "YXrp+b": [
@@ -4763,22 +5517,16 @@
       "value": "Digita le seguenti righe nella finestra del terminale:"
     }
   ],
-  "xETYo6": [
-    {
-      "type": 0,
-      "value": "Se perdi la tua chiave di prelievo, non avrai modo di accedere ai fondi detenuti dal tuo validatore."
-    }
-  ],
-  "Yo9B64": [
-    {
-      "type": 0,
-      "value": "indirizzo livello di esecuzione (Eth1)"
-    }
-  ],
   "YqsgWz": [
     {
       "type": 0,
       "value": "Sloveno"
+    }
+  ],
+  "YrdpUP": [
+    {
+      "type": 0,
+      "value": "Aggiorna conto"
     }
   ],
   "YtwQyB": [
@@ -4799,6 +5547,12 @@
     {
       "type": 0,
       "value": "sacchetto di denaro"
+    }
+  ],
+  "YzPl2p": [
+    {
+      "type": 0,
+      "value": "Funzionalità distintive"
     }
   ],
   "Z07LQm": [
@@ -4827,12 +5581,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "MAVs3a": [
-    {
-      "type": 0,
-      "value": "Essere semplicemente offline con una rete altrimenti integra non comporta lo slashing, ma piccole penalità di inattività."
     }
   ],
   "ZK6NmY": [
@@ -4891,16 +5639,22 @@
       "value": "Installazione e impostazione di virtualenv:"
     }
   ],
+  "ZuQOEW": [
+    {
+      "type": 0,
+      "value": "Può essere utilizzato anche per autorizzare determinate azioni da parte dei validatori, come la richiesta di prelievi parziali, o per far uscire interamente il conto validatore."
+    }
+  ],
+  "ZwqwuN": [
+    {
+      "type": 0,
+      "value": "Sono fornite ricompense per quelle azioni che aiutano la rete a raggiungere il consenso"
+    }
+  ],
   "ZzTcj5": [
     {
       "type": 0,
       "value": "Scarica python3 e segui le istruzioni di installazione."
-    }
-  ],
-  "hzsgQ5": [
-    {
-      "type": 0,
-      "value": "Questi sono anche detti “prelievi parziali” o “pagamenti di ricompensa” in quanto i restanti 32 ETH rimangono bloccati e in staking."
     }
   ],
   "a+xjjV": [
@@ -4915,36 +5669,32 @@
       "value": "Coda di uscita e coda di attivazione"
     }
   ],
-  "Sv30z9": [
+  "a9gOIB": [
     {
       "type": 0,
-      "value": "Se ti stai preparando a fare un deposito per attivare un nuovo validatore, puoi (e devi) fornire un indirizzo di prelievo con il tuo deposito iniziale. Questo viene fatto al momento della generazione della chiave, ed è quindi incluso nel file "
+      "value": "Saldo effettivo massimo pari a "
     },
     {
       "type": 1,
-      "value": "depositData"
+      "value": "MAX_EFFECTIVE_BALANCE"
     },
     {
       "type": 0,
-      "value": " che viene inviato con la tua transazione di deposito di 32 ETH."
-    }
-  ],
-  "9/yem6": [
+      "value": ", 64 volte più elevato dei tipi precedenti, e la possibilità di richiedere il prelievo parziale di qualsiasi importo in eccesso rispetto a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
     {
       "type": 0,
-      "value": "Chi tenta di raggirare il sistema o agire in contrasto con la specifica, sarà soggetto a una penalità, detta slashing. Eseguire le chiavi del tasti validatore contemporaneamente su due o più computer causerà slashing."
+      "value": " tramite l'interazione con uno smart contract"
     }
   ],
   "aEBE6s": [
     {
       "type": 0,
       "value": "2. Prepara i nodi"
-    }
-  ],
-  "fpe4Gx": [
-    {
-      "type": 0,
-      "value": "I conti attivi con un saldo effettivo o totale inferiore a 32 saranno ignorati"
     }
   ],
   "aR50Oc": [
@@ -4971,10 +5721,22 @@
       "value": "Continua"
     }
   ],
+  "ai7NFR": [
+    {
+      "type": 0,
+      "value": "archivia sempre il tuo mnemonico in maniera sicura"
+    }
+  ],
   "aozN2h": [
     {
       "type": 0,
       "value": "Consulta la documentazione del client di consensus per istruzioni specifiche sulla sua impostazione."
+    }
+  ],
+  "arfnPZ": [
+    {
+      "type": 0,
+      "value": "Saldo effettivo massimo"
     }
   ],
   "azLmaD": [
@@ -4983,24 +5745,16 @@
       "value": "Genera deposit-cli dal codice sorgente Python"
     }
   ],
-  "b3J7Pw": [
+  "b+ZHvU": [
     {
       "type": 0,
-      "value": "No. Non ci sono vantaggi a mettere a disposizione più di "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH."
+      "value": "Metti in staking a"
     }
   ],
-  "FWtWw3": [
+  "b+yUd5": [
     {
       "type": 0,
-      "value": "Le code di \"prelievo\" e \"da BLS a esecuzione\" sono indipendenti e non in competizione. Ciascuna è limitata per blocco."
+      "value": "Recupera di più"
     }
   ],
   "b8APBK": [
@@ -5009,10 +5763,18 @@
       "value": "Maggiori informazioni sulla diversità dei client"
     }
   ],
-  "9h8yTf": [
+  "bFiejS": [
     {
       "type": 0,
-      "value": "Al momento non esiste un modo per riattivare il validatore e non potrai trasferire o prelevare fondi fino a quando non saranno abilitati i prelievi con l'aggiornamento Shanghai/Capella. Questo significa che almeno fino ad allora i fondi resteranno inaccessibili."
+      "value": "Nel secondo (improbabile) scenario perderesti progressivamente fino al 50% della tua quota ("
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH) nell'arco di 21 giorni. Dopo 21 giorni verresti espulso dal set di validatori. Ciò garantisce che a un certo punto i blocchi ricomincino a essere finalizzati."
     }
   ],
   "bNFkSo": [
@@ -5045,10 +5807,10 @@
       "value": "Assicurati di avere spazio sufficiente sul disco fino a quando eseguirai la manutenzione sul nodo."
     }
   ],
-  "bat2FM": [
+  "bagKCF": [
     {
       "type": 0,
-      "value": "dopo"
+      "value": "Se hai già fornito un indirizzo di prelievo Ethereum per le tue credenziali di prelievo, il tuo intero saldo rimanente sarà trasferito a tale indirizzo in seguito all'uscita. In caso contrario ti occorrerà comunque il tuo mnemonico per generare la chiave di prelievo necessaria per configurare l'indirizzo di prelievo."
     }
   ],
   "bbr+aD": [
@@ -5113,6 +5875,38 @@
       "value": "Che cos'è un client validatore?"
     }
   ],
+  "c8BPhf": [
+    {
+      "type": 0,
+      "value": "Aggiorna validatore "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
+  "cDFQIx": [
+    {
+      "type": 0,
+      "value": "Il tuo indirizzo di prelievo deve essere un normale conto Ethereum "
+    },
+    {
+      "type": 1,
+      "value": "youControl"
+    },
+    {
+      "type": 0,
+      "value": ", idealmente utilizzando tecniche di "
+    },
+    {
+      "type": 1,
+      "value": "coldStorage"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "cE71F9": [
     {
       "type": 0,
@@ -5133,6 +5927,18 @@
       "value": "La documentazione Geth spiega come scaricare e installare il client."
     }
   ],
+  "cHfIGt": [
+    {
+      "type": 0,
+      "value": "Conto di esecuzione"
+    }
+  ],
+  "cJ9MRI": [
+    {
+      "type": 0,
+      "value": "Qualora vengano inviate 16 richieste contemporaneamente si formerà una coda e le richieste verranno elaborate in blocchi successivi. Una volta completate il tuo validatore verrà permanentemente abilitato ai prelievi e sarà idoneo a ricevere pagamenti nel corso dello sweep successivo."
+    }
+  ],
   "cJX99/": [
     {
       "type": 0,
@@ -5151,10 +5957,44 @@
       "value": "APR corrente"
     }
   ],
-  "odjJFL": [
+  "cU/ZP6": [
     {
       "type": 0,
-      "value": "Ulteriori informazioni sullo sharding dei dati"
+      "value": "Ethereum utilizza la proof-of-stake per raggiungere il consenso."
+    }
+  ],
+  "cZHvCU": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": ciò avviene utilizzando l'indirizzo di prelievo (flag "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": " o "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") al momento della generazione delle tue chiavi con Staking Deposit CLI."
     }
   ],
   "cav520": [
@@ -5175,6 +6015,20 @@
       "value": "Come viene valutato ciascun validatore per i prelievi"
     }
   ],
+  "ceCCZc": [
+    {
+      "type": 0,
+      "value": "A quale validatore desideri "
+    },
+    {
+      "type": 1,
+      "value": "migrateFundsTo"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -5187,6 +6041,12 @@
       "value": "Maggiori informazioni su PegaSys Teku"
     }
   ],
+  "ci7V7t": [
+    {
+      "type": 0,
+      "value": "Prefisso"
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -5197,6 +6057,28 @@
     {
       "type": 0,
       "value": "A quanto corrisponde la penalità per aver agito in modo maligno?"
+    }
+  ],
+  "cm5HC4": [
+    {
+      "type": 0,
+      "value": "Al momento puoi prelevare fino a "
+    },
+    {
+      "type": 1,
+      "value": "surplusEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "cnQKC2": [
@@ -5229,20 +6111,26 @@
       "value": "Devi firmare una transazione per ogni deposito che vuoi effettuare."
     }
   ],
-  "6vdHjj": [
+  "dAwg7N": [
+    {
+      "type": 0,
+      "value": "A ciascun validatore di questo tipo di conto occorrono esattamente "
+    },
     {
       "type": 1,
-      "value": "withdrawalCredentials"
+      "value": "MIN_ACTIVATION_BALANCE"
     },
     {
       "type": 0,
-      "value": " è un campo di 32 byte nel deposito, per verificare la destinazione dei prelievi validi. Attualmente, esistono due tipi di prelievi: prelievo BLS e prelievo da indirizzo Ethereum."
-    }
-  ],
-  "8FjJDx": [
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Comportamento scorretto"
+      "value": "."
     }
   ],
   "dIgBOz": [
@@ -5257,6 +6145,52 @@
       "value": "Prysm è un'implementazione del client di consenso di Go del protocollo di Ethereum incentrata su usabilità, sicurezza e affidabilità."
     }
   ],
+  "dKraKE": [
+    {
+      "type": 0,
+      "value": "È importante ricordare che, come validatore, dovrai fornire almeno "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " come collaterale; in altre parole dovrai avere una certa quantità di fondi in staking. L'unico modo per diventare un validatore è eseguire una transazione unidirezionale in "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " verso il "
+    },
+    {
+      "type": 1,
+      "value": "DEPOSIT_CONTRACT"
+    },
+    {
+      "type": 0,
+      "value": " sul livello di esecuzione di "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". La beacon chain (livello di consenso) è utilizzata in parallelo per tenere traccia di tutte le attività dei validatori."
+    }
+  ],
   "dLE9FH": [
     {
       "type": 0,
@@ -5267,6 +6201,12 @@
     {
       "type": 0,
       "value": "Che cosa è esattamente un validatore?"
+    }
+  ],
+  "dOewZy": [
+    {
+      "type": 0,
+      "value": "Deposita da"
     }
   ],
   "dTOtPO": [
@@ -5337,18 +6277,6 @@
       "value": "code3"
     }
   ],
-  "vPvQyf": [
-    {
-      "type": 0,
-      "value": "Accertati di inserire un indirizzo monitorato in quanto non potrà essere modificato."
-    }
-  ],
-  "eD1NDX": [
-    {
-      "type": 0,
-      "value": "Il prelievo del deposito non sarà possibile fino all'aggiornamento Shanghai/Capella, programmato per il primo o secondo trimestre del 2023."
-    }
-  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -5361,46 +6289,16 @@
       "value": "Invia una transazione per completare il deposito."
     }
   ],
-  "eOpZjd": [
-    {
-      "type": 0,
-      "value": "Specifica chi fa staking, chi convalida, quanto viene messo a disposizione e chi può prelevare i fondi."
-    }
-  ],
-  "eP2Czm": [
-    {
-      "type": 0,
-      "value": "Comprendo che "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " il mio stake fino all'aggiornamento Shanghai/Capella, e che "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " tra validatori. Comprendo che, se esco, non potrò più rientrare fino ad allora. Lo staking è un impegno."
-    }
-  ],
   "eTenzU": [
     {
       "type": 0,
       "value": "coda di attivazione"
+    }
+  ],
+  "eWA3GW": [
+    {
+      "type": 0,
+      "value": "Inizia prelievo"
     }
   ],
   "eX072N": [
@@ -5409,22 +6307,16 @@
       "value": "Erigon è un client di esecuzione che punta sull'efficienza, scritto in Go."
     }
   ],
+  "eXIZ1M": [
+    {
+      "type": 0,
+      "value": "Installa python3.9+"
+    }
+  ],
   "eaU/aL": [
     {
       "type": 0,
       "value": "Per massimizzare la sicurezza e l'efficienza del nodo, usa hardware dedicato per eseguire i client. Riduce il rischio di esposizione ai malware e minimizza la concorrenza per le risorse informatiche, garantendo che il nodo gestisca il carico di rete e le responsabilità dei validatori in ogni momento."
-    }
-  ],
-  "Vbv7Uw": [
-    {
-      "type": 0,
-      "value": "Ti aiuteremo a creare una chiave di firma per ogni validatore che vuoi eseguire. È possibile scegliere di fornire un indirizzo di prelievo per il validatore durante la generazione dei dati di deposito, che imposterà in modo permanente l'indirizzo di prelievo."
-    }
-  ],
-  "elCkOU": [
-    {
-      "type": 0,
-      "value": "Maggiori informazioni sulla fusione"
     }
   ],
   "eq0/34": [
@@ -5439,54 +6331,10 @@
       "value": "Quando si avvia Teku, gli archivi chiavi e le password possono essere forniti in diversi modi."
     }
   ],
-  "esDvdR": [
-    {
-      "type": 0,
-      "value": "Il saldo del validatore supera "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ", ma il saldo effettivo è basso ("
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": "). L'aggiunta di "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (il minimo consentito dal contratto di deposito) porterà il saldo effettivo al limite massimo."
-    }
-  ],
   "eyK2E3": [
     {
       "type": 0,
       "value": "Completa elenco di controllo"
-    }
-  ],
-  "ezCT4A": [
-    {
-      "type": 0,
-      "value": "Shanghai Core EIP Consideration"
     }
   ],
   "f/N7FO": [
@@ -5495,24 +6343,70 @@
       "value": "Cosa succede se perdo la mia chiave di firma?"
     }
   ],
-  "fBCdim": [
+  "f1L9pF": [
     {
       "type": 0,
-      "value": "In precedenza, un Beacon Node (livello di consenso) doveva solo osservare il contratto di deposito di staking sul livello di esecuzione per sapere quali account validatori avevano depositato "
+      "value": "L'importo depositabile minimo è pari a "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "MIN_DEPOSIT_ETHER"
     },
     {
       "type": 0,
-      "value": " ETH. Questa informazione era facilmente fornita e ottenuta da fornitori terzi come Infura o Alchemy."
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "f5yGLr": [
+    {
+      "type": 0,
+      "value": "Assicurati di eseguire il download dall'account ufficiale GitHub EthStaker verificando l'URL: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "fBG/Ge": [
+    {
+      "type": 0,
+      "value": "Costo"
+    }
+  ],
+  "fF376U": [
+    {
+      "type": 0,
+      "value": "Attuale"
+    }
+  ],
+  "fH2WUb": [
+    {
+      "type": 0,
+      "value": "(Prelievi periodici)"
     }
   ],
   "fHLKXR": [
     {
       "type": 0,
       "value": "La risposta a questa domanda dipende molto da quanti ETH hai a disposizione."
+    }
+  ],
+  "fLOgM+": [
+    {
+      "type": 0,
+      "value": "A questo punto dovresti aver conservato il tuo mnemonico in forma scritta in un luogo sicuro e possedere un archivio chiavi salvato per "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Tienili al sicuro, preferibilmente offline. Gli archivi chiavi dei tuoi validatori dovrebbero essere disponibili nella cartella selezionata."
     }
   ],
   "fQ5yno": [
@@ -5539,22 +6433,10 @@
       "value": "Informazioni sui prelievi di staking per gli operatori del validatore."
     }
   ],
-  "dwahMV": [
-    {
-      "type": 0,
-      "value": "Puoi scegliere di fornire un indirizzo di prelievo con il tuo deposito iniziale per abilitare automaticamente i pagamenti dei premi e anche la possibilità di far uscire completamente i tuoi fondi in qualsiasi momento dopo l'aggiornamento Shanghai/Capella. Questo indirizzo deve essere a un normale indirizzo Ethereum e sarà l'unico indirizzo a cui possono essere inviati i fondi dai nuovi conti validatore."
-    }
-  ],
   "fZwn+P": [
     {
       "type": 0,
       "value": "Dopo l'installazione del client, assicurati di essere completamente sincronizzato prima di inviare il deposito per lo staking."
-    }
-  ],
-  "9oWUO0": [
-    {
-      "type": 0,
-      "value": "Tuttavia, tieni presente che fino all'aggiornamento Shanghai/Capella, previsto per il primo o secondo trimestre del 2023, l'operazione di uscita è irreversibile."
     }
   ],
   "fbiteI": [
@@ -5567,6 +6449,46 @@
     {
       "type": 0,
       "value": "In attesa di conferma del portafoglio"
+    }
+  ],
+  "fnV2qn": [
+    {
+      "type": 0,
+      "value": "Conti composti idonei a richiedere prelievi parziali di qualsiasi importo in eccesso rispetto a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "fpe4Gx": [
+    {
+      "type": 0,
+      "value": "I conti attivi con un saldo effettivo o totale inferiore a "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " saranno saltati"
     }
   ],
   "frGVRP": [
@@ -5593,22 +6515,16 @@
       "value": "Inoltre è possibile impostare il client validatore (VC) e il nodo beacon (BN) su computer e IP distinti in modo che, anche se il nodo beacon è vulnerabile, l'archivio chiavi sia conservato su un computer diverso."
     }
   ],
-  "g0zIUd": [
-    {
-      "type": 0,
-      "value": "impossibile prelevare"
-    }
-  ],
-  "oWBn+a": [
-    {
-      "type": 0,
-      "value": "I requisiti hardware sono in continua evoluzione. È probabile che gli attuali requisiti minimi aumentino di un ordine di grandezza dopo l'introduzione dello sharding. Verifica personalmente prima di depositare fondi."
-    }
-  ],
   "g37XKP": [
     {
       "type": 0,
       "value": "Maggiori informazioni sull'ambiente virtuale"
+    }
+  ],
+  "g8+DBf": [
+    {
+      "type": 0,
+      "value": "Configurazione interfaccia JSON-RPC"
     }
   ],
   "g8tzOu": [
@@ -5617,36 +6533,28 @@
       "value": "Incolla qui l'indirizzo scelto per includerlo nel comando copia/incolla CLI qui sotto:"
     }
   ],
+  "gAnk66": [
+    {
+      "type": 0,
+      "value": "Avvia il processo di uscita permanente del tuo conto validatore dalla rete proof-of-stake Ethereum e di prelievo dell'intero saldo."
+    }
+  ],
   "gFj3By": [
     {
       "type": 0,
       "value": "altamente variabile"
     }
   ],
+  "gGc4ae": [
+    {
+      "type": 0,
+      "value": "Scarica l'app GUI"
+    }
+  ],
   "gHJegi": [
     {
       "type": 0,
       "value": "I validatori devono comunque completare le proprie mansioni di convalida fino all'uscita"
-    }
-  ],
-  "gN9D/h": [
-    {
-      "type": 0,
-      "value": "Usa "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " per sincronizzare la rete di test Goerli."
-    }
-  ],
-  "gQkd2y": [
-    {
-      "type": 0,
-      "value": "Genera le chiavi di deposito utilizzando lo strumento di deposito di Ethereum Foundation"
     }
   ],
   "gVC0Wl": [
@@ -5659,6 +6567,12 @@
     {
       "type": 0,
       "value": "Al pari di una lancetta di orologio, questo processo avanza in una sola direzione, e quando viene raggiunto l'ultimo validatore, lo sweep ricomincia da capo. A ogni validatore lungo il percorso, viene valutato il conto per potenziali prelievi."
+    }
+  ],
+  "gXVf9n": [
+    {
+      "type": 0,
+      "value": "Ultimi benchmark Reth"
     }
   ],
   "gfLdAQ": [
@@ -5677,28 +6591,6 @@
     {
       "type": 0,
       "value": "SÌ"
-    }
-  ],
-  "grF2gm": [
-    {
-      "type": 0,
-      "value": "Ogni coppia di chiavi associata a un validatore richiede l'attivazione del blocco "
-    },
-    {
-      "type": 1,
-      "value": "ethPerValidator"
-    },
-    {
-      "type": 0,
-      "value": ", che rappresenta il saldo iniziale e il potere di voto "
-    },
-    {
-      "type": 1,
-      "value": "initialAndMaximum"
-    },
-    {
-      "type": 0,
-      "value": " per ogni validatore."
     }
   ],
   "gsuLMm": [
@@ -5767,10 +6659,22 @@
       "value": "La tua quota"
     }
   ],
+  "hAwuqj": [
+    {
+      "type": 0,
+      "value": "Per la validazione occorrono due chiavi per motivi di sicurezza. La chiave di firma deve essere accessibile in qualsiasi momento; per questo deve essere conservata online. Poiché tutto ciò che è online è vulnerabile è sconsigliato utilizzare la stessa chiave per i prelievi."
+    }
+  ],
   "hBIbQ+": [
     {
       "type": 0,
       "value": "Evita configurazioni troppo complesse e valuta di ricorrere a compromessi. Essere offline per brevi periodi si tradurrà in piccole penalità di inattività, che potranno essere recuperate facilmente rimanendo nuovamente online per più o meno la stessa quantità di tempo. Gruppi di continuità complessi potrebbero far salire il costo della tua configurazione e validatori di scorta ridondanti possono causare una penalità più grave, detta slashing."
+    }
+  ],
+  "hCkFMJ": [
+    {
+      "type": 0,
+      "value": "Indice"
     }
   ],
   "hCwX6+": [
@@ -5779,22 +6683,54 @@
       "value": "Coda di passaggio da BLS all'esecuzione (BTEC)"
     }
   ],
-  "ZwqwuN": [
-    {
-      "type": 0,
-      "value": "Le ricompense vengono elargite per azioni che aiutano la rete a raggiungere il consenso."
-    }
-  ],
   "hG0uP4": [
     {
       "type": 0,
       "value": "Solo desktop"
     }
   ],
-  "hPCn9f": [
+  "hIQWYg": [
     {
       "type": 0,
-      "value": "--JsonRpc.Documentazione abilitata"
+      "value": "Azioni del validatore"
+    }
+  ],
+  "hUmIwN": [
+    {
+      "type": 0,
+      "value": "Il saldo del validatore è superiore a "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": ", ma il saldo effettivo è basso ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": "). Aggiungendo "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (il minimo consentito dal contratto di deposito) puoi far sì che il tuo saldo effettivo raggiunga il limite."
     }
   ],
   "hXE+0W": [
@@ -5819,30 +6755,16 @@
       "value": "Ungherese"
     }
   ],
-  "nIf7QZ": [
-    {
-      "type": 0,
-      "value": "Per questo, abbiamo bisogno di partecipanti attivi, detti validatori, per proporre, verificare e attestare la validità dei blocchi. In cambio, i validatori onesti ricevono ricompense finanziarie."
-    }
-  ],
   "hkg3fb": [
     {
       "type": 0,
       "value": "Maggiori informazioni sul saldo effettivo"
     }
   ],
-  "hlxt3T": [
+  "hrJ1oM": [
     {
       "type": 0,
-      "value": "Limitare lo staking massimo a "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH per validatore incoraggia la decentralizzazione del potere di voto, perché impedisce a un singolo validatore di avere un voto eccessivo sullo stato della catena. Inoltre, limita la quantità di ETH che può essere prelevata in un dato momento, poiché il numero di validatori che possono uscire in un determinato periodo di tempo è limitato. Questo contribuisce a proteggere la rete da alcuni attacchi."
+      "value": "Puoi segnalare l'intenzione di smettere di validare firmando un messaggio di uscita volontaria con il tuo validatore in qualsiasi momento."
     }
   ],
   "huEFUF": [
@@ -5869,6 +6791,28 @@
     {
       "type": 0,
       "value": "Comprendo l'importanza di mantenere il mio validatore online e aggiornato."
+    }
+  ],
+  "hzsgQ5": [
+    {
+      "type": 0,
+      "value": "Sono detti anche \"prelievi parziali\" o \"pagamenti delle ricompense\", dato che i rimanenti "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " restano bloccati e in staking."
     }
   ],
   "iCpuph": [
@@ -5901,32 +6845,16 @@
       "value": "Esecuzione del client validatore"
     }
   ],
-  "iN1PPs": [
-    {
-      "type": 0,
-      "value": "Ogni deposito di "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH attiva un set di chiavi del validatore. Queste chiavi vengono usate per convalidare lo stato della rete. Quanto minori sono gli ETH richiesti, tante più sono le firme che devono essere salvate dalla rete. "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH è stato scelto come punto di equilibrio tra consentire al numero massimo di persone di fare staking senza però pregiudicare la decentralizzazione facendo esplodere la dimensione di ogni blocco di firme."
-    }
-  ],
   "iX90gu": [
     {
       "type": 0,
       "value": "Mi sono collegato al server Discord del mio client di esecuzione."
+    }
+  ],
+  "iXbM1G": [
+    {
+      "type": 0,
+      "value": "Se non disponi di una cartella nella rete di prova è probabile che tu non abbia sviluppato ed eseguito Nimbus correttamente. Esegui di nuovo il comando."
     }
   ],
   "iZuIgB": [
@@ -5951,6 +6879,12 @@
       "value": "network"
     }
   ],
+  "ijnFHe": [
+    {
+      "type": 0,
+      "value": "indirizzo del livello di esecuzione"
+    }
+  ],
   "im7uMt": [
     {
       "type": 0,
@@ -5969,22 +6903,28 @@
       "value": "Numero di slot vuoti (opportunità di blocco perse, variabile, tipicamente minimi)"
     }
   ],
+  "iq4JF8": [
+    {
+      "type": 0,
+      "value": "Uscita offline"
+    }
+  ],
   "iqJ3LM": [
     {
       "type": 0,
       "value": "PegaSys Teku è un client di consenso di Ethereum basato su Java creato per soddisfare i requisiti istituzionali e di sicurezza."
     }
   ],
-  "XRUCUL": [
-    {
-      "type": 0,
-      "value": "E quindi è una buona idea creare le chiavi da mnemonici che funzionano da ulteriore backup. Sarà il comportamento predefinito per i validatori che si uniscono tramite il processo di onboarding di questo sito."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
       "value": "Documentazione"
+    }
+  ],
+  "isgVsK": [
+    {
+      "type": 0,
+      "value": "Quando la rete è congestionata le commissioni presentano un'elevata volatilità. Un pagamento di importo insufficiente farà sì che la tua richiesta venga respinta senza rimborso."
     }
   ],
   "iv88b5": [
@@ -6019,10 +6959,28 @@
       "value": "L'indirizzo di esecuzione per i prelievi"
     }
   ],
-  "RGD1CX": [
+  "jM+e2M": [
     {
       "type": 0,
-      "value": "Sono consentite quattro (4) uscite dei validatori per ogni epoca, più un'altra (1) ogni 65.536 validatori attivi totali su 327.680. A partire da febbraio 2023, questo limite è di sette (7) e arriverà a otto (8) se/quando il numero di validatori arriva a 524.288."
+      "value": "Saldo effettivo massimo di "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "jVlgXS": [
+    {
+      "type": 0,
+      "value": "Scopri di più sulla tabella di marcia di Ethereum."
     }
   ],
   "jXer8/": [
@@ -6035,6 +6993,12 @@
     {
       "type": 0,
       "value": "Documentazione per l'installazione di Lighthouse"
+    }
+  ],
+  "jeCR95": [
+    {
+      "type": 0,
+      "value": "Può essere migrato a un conto composto in un secondo momento"
     }
   ],
   "jecC36": [
@@ -6067,6 +7031,26 @@
       "value": "Documentazione sull'esecuzione di Geth"
     }
   ],
+  "jm4ljd": [
+    {
+      "type": 0,
+      "value": "Per attivare ciascun paio di chiavi associato a un validatore occorre bloccare almeno "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": ". L'importo depositato rappresenterà il potere di voto iniziale di ciascun validatore."
+    }
+  ],
+  "jmKQY9": [
+    {
+      "type": 0,
+      "value": "Documentazione validatore Nimbus"
+    }
+  ],
   "jp9OG2": [
     {
       "type": 0,
@@ -6087,6 +7071,18 @@
       "value": "pr"
     }
   ],
+  "jrPsyP": [
+    {
+      "type": 0,
+      "value": "Epoca di uscita"
+    }
+  ],
+  "jrbRLT": [
+    {
+      "type": 0,
+      "value": "Per diventare un validatore dovrai sapere come gestire le chiavi e proteggere un mnemonico. Se non hai già dimestichezza con chiavi e mnemonici non procedere."
+    }
+  ],
   "jse8rl": [
     {
       "type": 0,
@@ -6103,6 +7099,12 @@
     {
       "type": 0,
       "value": "Documentazione Nimbus"
+    }
+  ],
+  "jztMM9": [
+    {
+      "type": 0,
+      "value": "contratto di deposito"
     }
   ],
   "k/4DOL": [
@@ -6129,6 +7131,12 @@
       "value": "Installazione di dipendenze:"
     }
   ],
+  "k7rnZP": [
+    {
+      "type": 0,
+      "value": "Versioni EthStaker Deposit CLI"
+    }
+  ],
   "k8bkck": [
     {
       "type": 0,
@@ -6141,6 +7149,12 @@
     {
       "type": 0,
       "value": ", implementa un design che semplifica l'intero processo per gli staker."
+    }
+  ],
+  "kC4fpt": [
+    {
+      "type": 0,
+      "value": "Collega il tuo portafoglio hardware a MetaMask"
     }
   ],
   "kFS5Sd": [
@@ -6211,10 +7225,52 @@
       "value": "Elenco di chiavi"
     }
   ],
-  "36P4ra": [
+  "kfks5a": [
     {
       "type": 0,
-      "value": "Nel corso del tempo, il saldo diminuirà a causa delle punizioni per non aver partecipato al processo di consenso. Quando il tuo saldo raggiungerà 16 ETH, sarai automaticamente espulso dal pool di validatori."
+      "value": "Questo dipende dal tipo di credenziali di prelievo che possiede il conto validatore. Chi possiede il nuovo tipo di credenziali, quelle "
+    },
+    {
+      "type": 1,
+      "value": "compounding"
+    },
+    {
+      "type": 0,
+      "value": " (tipo 2, 0x02), beneficia di saldi in ETH superiori a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", fino a un massimo di "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "kiTJq4": [
+    {
+      "type": 0,
+      "value": "Il saldo effettivo massimo del conto aumenterà fino a "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "kn06Zz": [
@@ -6235,16 +7291,24 @@
       "value": "Contattaci"
     }
   ],
-  "ER2q1V": [
-    {
-      "type": 0,
-      "value": "l'aggiornamento della Fusione ha portato ufficialmente il proof-of-stake in Ethereum il 15 settembre 2022, abbandonando contestualmente il proof-of-work. Questo ha preparato la catena a futuri aggiornamenti di scala, come lo sharding dei dati, integrando il consenso proof-of-stake con la Rete principale, riducendo al contempo il consumo di energia di oltre il 99,9%."
-    }
-  ],
   "kuYpoI": [
     {
       "type": 0,
       "value": "Saldo corrente"
+    }
+  ],
+  "kuzPja": [
+    {
+      "type": 0,
+      "value": "Uscita validatore "
+    },
+    {
+      "type": 1,
+      "value": "pending"
+    },
+    {
+      "type": 0,
+      "value": " - Non è possibile eseguire altre azioni"
     }
   ],
   "kv1nqx": [
@@ -6257,20 +7321,6 @@
     {
       "type": 0,
       "value": "Ti trovi sulla rete di test"
-    }
-  ],
-  "l3ztMu": [
-    {
-      "type": 0,
-      "value": "A partire dal "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " servirà ~1TB solo per i dati della catena di esecuzione della rete principale (che cresce di >1GB/giorno)."
     }
   ],
   "l4nLft": [
@@ -6311,6 +7361,26 @@
       "value": "Innanzitutto, crea un ambiente virtuale nella directory del repository:"
     }
   ],
+  "l6agKv": [
+    {
+      "type": 0,
+      "value": "Tutte le azioni sono state aggiunte a una coda per l'elaborazione"
+    }
+  ],
+  "l8zvXg": [
+    {
+      "type": 0,
+      "value": "Se possiedi un conto composto, ogni importo in ETH fino a 2048 contribuirà al tuo saldo effettivo. Se possiedi un tipo di conto di prelievo non composto, beneficerai di ricariche che riportino il validatore a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH, ma non potrai ricaricare oltre tale importo."
+    }
+  ],
   "l926sJ": [
     {
       "type": 0,
@@ -6331,10 +7401,10 @@
       "value": "Debito in sospeso"
     }
   ],
-  "6NyPVb": [
+  "lG9weW": [
     {
       "type": 0,
-      "value": "Nimbus è un'implementazione del client sia per il livello d'esecuzione che del consenso, che vuole essere il più leggera possibile in termini di risorse usate. Questo consente una buona esecuzione sui sistemi embedded, i dispositivi con risorse limitate, compresi i Raspberry Pi, e server multiuso."
+      "value": "Ciò darà avvio al processo di uscita permanente di questo validatore dalla rete di proof-of-stake di Ethereum."
     }
   ],
   "lLOZMD": [
@@ -6357,20 +7427,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "lM/dEI": [
-    {
-      "type": 0,
-      "value": "Il sito che chiede il tuo deposito di "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " ha un URL che riconosci?"
     }
   ],
   "lQzdpT": [
@@ -6445,10 +7501,16 @@
       "value": "Nome file destinazione"
     }
   ],
-  "OCl7KQ": [
+  "lkDZQI": [
     {
       "type": 0,
-      "value": "Questa è una transazione non reversibile."
+      "value": "Conto ancora responsabile dei compiti per il consenso fino a che non verrà raggiunta l'epoca di uscita (mantenere validatore online)"
+    }
+  ],
+  "ll5Sze": [
+    {
+      "type": 0,
+      "value": "Genera chiavi di deposito utilizzando lo strumento di deposito EthStaker"
     }
   ],
   "lo+Qqn": [
@@ -6461,6 +7523,26 @@
     {
       "type": 0,
       "value": "File caricato"
+    }
+  ],
+  "lt3tOB": [
+    {
+      "type": 0,
+      "value": "Epoca di attivazione"
+    }
+  ],
+  "m0FJdr": [
+    {
+      "type": 0,
+      "value": "Utilizza la "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " per sincronizzare la rete di test Holesky."
     }
   ],
   "mAZHi2": [
@@ -6481,6 +7563,36 @@
     {
       "type": 0,
       "value": "Disco rigido"
+    }
+  ],
+  "mF0eMi": [
+    {
+      "type": 0,
+      "value": "Incrementa il saldo effettivo massimo da "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " a "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "mH6bSl": [
@@ -6559,6 +7671,12 @@
       "value": "Tutti gli staker devono eseguire un client di esecuzione insieme al client di consenso."
     }
   ],
+  "mm+OKT": [
+    {
+      "type": 0,
+      "value": "La tabella di marcia di Ethereum"
+    }
+  ],
   "mpmFDY": [
     {
       "type": 0,
@@ -6569,6 +7687,12 @@
     {
       "type": 0,
       "value": "Rischi e riconoscimenti:"
+    }
+  ],
+  "mre8Tb": [
+    {
+      "type": 0,
+      "value": "Se non è stato configurato un indirizzo di prelievo e hai perso accesso alla seed phrase mnemonica, e quest'ultima non è stata rubata né compromessa, i tuoi fondi resteranno bloccati nel conto validatore indefinitamente."
     }
   ],
   "muV9Fg": [
@@ -6601,6 +7725,12 @@
       "value": "Dovrai eseguire un client d'esecuzione (ex 'Eth1') nonché un client di consenso (ex 'Eth2') per diventare un validatore. Dai un'occhiata all'elenco di controllo per preparare te stesso e la tua apparecchiatura."
     }
   ],
+  "nIf7QZ": [
+    {
+      "type": 0,
+      "value": "A tal fine occorrono partecipanti attivi, detti \"validatori\", che propongano, verifichino e garantiscano la validità dei blocchi. In cambio i validatori onesti ricevono ricompense finanziarie."
+    }
+  ],
   "nRWZl3": [
     {
       "type": 0,
@@ -6619,30 +7749,28 @@
       "value": "Documentazione Erigon"
     }
   ],
-  "nZTFTz": [
-    {
-      "type": 0,
-      "value": "Accetto che non vi sia alcun vantaggio nel depositare più di una volta per validatore. Ogni "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " extra inviato in un deposito duplicato non sarà conteggiato nel mio saldo validatore effettivo e non sarò in grado di prelevarlo."
-    }
-  ],
   "naHAvS": [
     {
       "type": 0,
       "value": "Abilitare i prelievi"
     }
   ],
+  "naZC3k": [
+    {
+      "type": 0,
+      "value": "Il tuo indirizzo ETH"
+    }
+  ],
   "ndhFef": [
     {
       "type": 0,
       "value": "Quando ti senti pronto, puoi passare alla generazione delle chiavi e al deposito dei tuoi ETH."
+    }
+  ],
+  "nix/jD": [
+    {
+      "type": 0,
+      "value": "Quanti conti desideri eseguire?"
     }
   ],
   "njAU72": [
@@ -6667,6 +7795,12 @@
     {
       "type": 0,
       "value": "Architettura avanzata del sistema"
+    }
+  ],
+  "nv2lXL": [
+    {
+      "type": 0,
+      "value": "Uscita online"
     }
   ],
   "nwgrRp": [
@@ -6719,6 +7853,20 @@
       "value": "Prelievi abilitati"
     }
   ],
+  "oDObOQ": [
+    {
+      "type": 0,
+      "value": "Se al momento del deposito non è stato fornito l'\"indirizzo di prelievo eth1\", puoi inviare un messaggio "
+    },
+    {
+      "type": 1,
+      "value": "BTEC"
+    },
+    {
+      "type": 0,
+      "value": " una tantum firmato con le tue chiavi di prelievo BLS per specificare il tuo indirizzo di prelievo Ethereum desiderato. Questo indirizzo può essere fornito una volta sola e non può essere modificato nuovamente."
+    }
+  ],
   "oF4os+": [
     {
       "type": 0,
@@ -6729,6 +7877,12 @@
     {
       "type": 0,
       "value": "Base di Conoscenze per EthStaker"
+    }
+  ],
+  "oLlMBP": [
+    {
+      "type": 0,
+      "value": "Attivo offline"
     }
   ],
   "oLxfO1": [
@@ -6749,10 +7903,46 @@
       "value": "Configura il tuo client di consenso"
     }
   ],
+  "oPgUAj": [
+    {
+      "type": 0,
+      "value": "il tuo validatore"
+    }
+  ],
+  "oUWdau": [
+    {
+      "type": 0,
+      "value": "Non è stato trovato alcun validatore."
+    }
+  ],
+  "oVx7Qe": [
+    {
+      "type": 0,
+      "value": "Step 2: genera chiavi di deposito utilizzando lo strumento di deposito EthStaker"
+    }
+  ],
+  "oWBn+a": [
+    {
+      "type": 0,
+      "value": "Le specifiche hardware sono in continuo mutamento. I requisiti minimi sono destinati verosimilmente ad aumentare di un ordine di grandezza dopo l'introduzione del Danksharding. Ti invitiamo a informarti prima di depositare fondi."
+    }
+  ],
   "oWhj8Q": [
     {
       "type": 0,
       "value": "Ogni quanto vengono assegnate le ricompense e le penalità?"
+    }
+  ],
+  "oWrId5": [
+    {
+      "type": 0,
+      "value": "Una chiave BLS che può essere generata a partire dallo stesso mnemonico utilizzato per generare le tue chiavi di firma del validatore. Tale chiave è utilizzata per firmare un messaggio che fornisce un indirizzo di prelievo di esecuzione (ovvero un normale indirizzo Ethereum), che sarà permanentemente assegnato al validatore (facendolo migrare a un conto di tipo 1)."
+    }
+  ],
+  "oXMl1C": [
+    {
+      "type": 0,
+      "value": "Migra a"
     }
   ],
   "obp8vV": [
@@ -6761,32 +7951,22 @@
       "value": "Documentazione sull'esecuzione di Besu"
     }
   ],
-  "ogbG7r": [
+  "odjJFL": [
     {
       "type": 0,
-      "value": "Per diventare validatore sulla beacon chain, è necessario depositare "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " per ogni validatore che si desidera eseguire."
+      "value": "Maggiori informazioni sul Danksharding"
     }
   ],
   "ohspQX": [
     {
       "type": 0,
       "value": "Responsabilità"
+    }
+  ],
+  "om4EMq": [
+    {
+      "type": 0,
+      "value": "Per elaborare i depositi in entrata dei validatori dal livello di esecuzione (detto precedentemente \"catena Eth1\") devi eseguire un client di esecuzione oltre al client di consenso (detto precedentemente \"Eth2\")."
     }
   ],
   "omJNJw": [
@@ -6825,18 +8005,10 @@
       "value": "Si è verificato un errore"
     }
   ],
-  "ozEkVY": [
+  "oxoSZx": [
     {
       "type": 0,
-      "value": "Usa "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " per sincronizzare la rete di test Goerli."
+      "value": "Comprendo che la conservazione delle chiavi e del mio mnemonico (seed) è mia responsabilità."
     }
   ],
   "p+kDTB": [
@@ -6845,10 +8017,22 @@
       "value": "Gli utenti di Ethereum sono abituati a transazioni eseguite manualmente: se si desidera trasferire fondi, è necessario firmare una transazione e pagare il gas."
     }
   ],
+  "p00N+q": [
+    {
+      "type": 0,
+      "value": "Composto"
+    }
+  ],
   "p0b6zX": [
     {
       "type": 0,
       "value": "Maggiori informazioni su Status"
+    }
+  ],
+  "p1ynue": [
+    {
+      "type": 0,
+      "value": "Se questo non è stato fornito, è possibile utilizzare la chiave di prelievo per firmare un messaggio in cui si dichiara un indirizzo di prelievo. La chiave di prelievo può essere generata a partire dal proprio mnemonico. Se la tua chiave di prelievo o il tuo mnemonico sono stati rubati e non è stato ancora configurato un indirizzo di prelievo, il ladro potrà irreversibilmente designare il proprio conto come indirizzo di prelievo del tuo validatore."
     }
   ],
   "p556q3": [
@@ -6893,6 +8077,28 @@
       "value": "json"
     }
   ],
+  "pUAoW1": [
+    {
+      "type": 0,
+      "value": "Il limite del saldo effettivo è pari a "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6905,16 +8111,16 @@
       "value": "La documentazione Besu spiega come scaricare e installare il client."
     }
   ],
-  "qwFYIS": [
-    {
-      "type": 0,
-      "value": "Questi strumenti ti aiuteranno a generare le chiavi e i messaggi necessari da firmare. I messaggi firmati possono essere trasmessi per essere inseriti in blocchi a partire dall'aggiornamento Shanghai/Capella."
-    }
-  ],
   "pfJX2D": [
     {
       "type": 0,
       "value": "Maggiori informazioni sul phishing"
+    }
+  ],
+  "pgX4FB": [
+    {
+      "type": 0,
+      "value": "Assorbi validatore"
     }
   ],
   "plXBe0": [
@@ -6933,6 +8139,44 @@
     {
       "type": 0,
       "value": "Slashing"
+    }
+  ],
+  "prRNB6": [
+    {
+      "type": 0,
+      "value": "Si è verificato un problema nel tentativo di firma con il dispositivo ledger. Verifica che le opzioni "
+    },
+    {
+      "type": 1,
+      "value": "blindSigning"
+    },
+    {
+      "type": 0,
+      "value": " e "
+    },
+    {
+      "type": 1,
+      "value": "debugData"
+    },
+    {
+      "type": 0,
+      "value": " siano "
+    },
+    {
+      "type": 1,
+      "value": "enabled"
+    },
+    {
+      "type": 0,
+      "value": ". È possibile accedervi selezionando l'applicazione Ethereum ed entrando nel menù "
+    },
+    {
+      "type": 1,
+      "value": "settings"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "ps8lLk": [
@@ -6957,6 +8201,40 @@
       "value": "Riepilogo depositi"
     }
   ],
+  "q0thwm": [
+    {
+      "type": 0,
+      "value": "Come validatore puoi ricevere delle ricompense per aver proposto/attestato blocchi inclusi nella catena."
+    }
+  ],
+  "q4Cz/L": [
+    {
+      "type": 0,
+      "value": "Metti in staking altri fondi"
+    }
+  ],
+  "q8Cxf5": [
+    {
+      "type": 0,
+      "value": "Credenziali BLS: di default, deposit CLI genera credenziali di prelievo tramite la "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " tratta da mnemonici in formato "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": ". Tale formato non è compatibile con i prelievi sulla beacon chain; per abilitare i prelievi è necessario l'aggiornamento alle credenziali di indirizzo Ethereum."
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -6969,36 +8247,16 @@
       "value": "Epoca di uscita ed epoca di prelievo"
     }
   ],
-  "iqy/7c": [
-    {
-      "type": 0,
-      "value": "Per consentire al tuo o ai tuoi validatori della beacon chain di prelevare automaticamente i saldi sul tuo "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", è possibile utilizzare lo strumento "
-    },
-    {
-      "type": 0,
-      "value": " per generare il file JSON del messaggio "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ". Questo messaggio include la richiesta di modificare le vecchie credenziali di prelievo BLS in nuove credenziali di prelievo in formato indirizzo di esecuzione."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
       "value": "Il terminale"
+    }
+  ],
+  "qLxCF6": [
+    {
+      "type": 0,
+      "value": "Trasferisci l'intero saldo da un altro conto validatore a questo, consolidando i due conti in uno solo."
     }
   ],
   "qMePPG": [
@@ -7017,6 +8275,26 @@
     {
       "type": 0,
       "value": "Tutti i validatori"
+    }
+  ],
+  "qaaxCA": [
+    {
+      "type": 0,
+      "value": "Ciascun conto validatore possiede delle "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", che designano le chiavi che dispongono di qualsiasi trasferimento/prelievo di saldi. Al momento un conto validatore può avere tre (3) tipi di credenziali di prelievo, caratterizzati da un diverso prefisso numerico:"
+    }
+  ],
+  "qdZ2WQ": [
+    {
+      "type": 0,
+      "value": "Sapere come eseguire comandi nel terminale del proprio computer può risultare utile. È possibile generare nuove paia di chiavi e installare il software validatore tramite interfacce grafiche con alcuni software, ma di default si utilizza tipicamente il terminale per avere il pieno controllo."
     }
   ],
   "qdk7Hp": [
@@ -7053,16 +8331,18 @@
       "value": "software"
     }
   ],
-  "p1ynue": [
+  "qwFYIS": [
     {
       "type": 0,
-      "value": "Se questo non è stato fornito, le chiavi di prelievo saranno necessarie per firmare un messaggio che dichiara un indirizzo di prelievo. Questo richiede l'accesso allo mnemonico usato durante la configurazione delle chiavi."
-    }
-  ],
-  "qwh6gM": [
+      "value": "Tali strumenti ti assisteranno nella generazione delle chiavi necessarie e del messaggio da firmare. I messaggi firmati possono essere poi "
+    },
+    {
+      "type": 1,
+      "value": "broadcastLink"
+    },
     {
       "type": 0,
-      "value": "Comprendo i rischi legati all'adozione precoce e allo slashing."
+      "value": " ai blocchi."
     }
   ],
   "qx+3RQ": [
@@ -7097,6 +8377,12 @@
       "value": "client del validatore"
     }
   ],
+  "r3C4x/": [
+    {
+      "type": 0,
+      "value": "Software"
+    }
+  ],
   "r4JsKB": [
     {
       "type": 0,
@@ -7109,18 +8395,10 @@
       "value": "Guida al phishing"
     }
   ],
-  "rMjMmc": [
+  "rElUnh": [
     {
       "type": 0,
-      "value": "Usa "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " per connettere il tuo nodo di consenso all'endpoint RPC di JSON. Questo abiliterà i servizi RPC di JSON sulla porta 8545 predefinita."
+      "value": "Avviare uscita"
     }
   ],
   "rTSJI9": [
@@ -7141,6 +8419,34 @@
       "value": "Ulteriori informazioni su Lodestar"
     }
   ],
+  "rWEu7N": [
+    {
+      "type": 0,
+      "value": "Il saldo di questo validatore è al proprio livello effettivo massimo: "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "rYa2OX": [
+    {
+      "type": 0,
+      "value": "Quali tipi diversi di validatore esistono?"
+    }
+  ],
   "raRw6Z": [
     {
       "type": 0,
@@ -7153,48 +8459,22 @@
       "value": "Chiudi"
     }
   ],
-  "oDObOQ": [
+  "ri86XL": [
     {
       "type": 0,
-      "value": "No, non puoi cambiare le tue credenziali di prelievo nelle ricariche."
+      "value": "Ti verrà chiesto di firmare un messaggio con il tuo portafoglio. L'elaborazione delle uscite non è immediata, quindi tieni conto che il completamento potrebbe richiedere diversi giorni."
     }
   ],
-  "rs4eqr": [
+  "rk3ll8": [
     {
       "type": 0,
-      "value": "Potrebbe essere necessario ricaricare il saldo del validatore per due motivi importanti. Se il saldo effettivo del validatore è inferiore a "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
+      "value": "Comprendo che se non fornisco un indirizzo di prelievo con il mio deposito iniziale i miei fondi resteranno bloccati e l{onlyWay} di prelevarli è tramite il mio mnemonico."
+    }
+  ],
+  "rk9g0q": [
     {
       "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " non otterrai la ricompensa completa per lo staking. E se scende fino a "
-    },
-    {
-      "type": 1,
-      "value": "EJECTION_PRICE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", il sistema espellerà il tuo validatore."
+      "value": "Rischi del software"
     }
   ],
   "rswUPu": [
@@ -7203,16 +8483,78 @@
       "value": "Riepilogo launchpad"
     }
   ],
+  "rywDJ5": [
+    {
+      "type": 0,
+      "value": "Collega il tuo portafoglio per recuperare i validatori con le corrispondenti credenziali di prelievo e aggiornare a un conto composto, consolidare conti, effettuare un prelievo parziale o forzare l'uscita"
+    }
+  ],
+  "s1Hm3H": [
+    {
+      "type": 0,
+      "value": "Visualizza transazione nell'explorer di blocchi"
+    }
+  ],
   "s6gImC": [
     {
       "type": 0,
       "value": "Teku può anche essere configurato tramite un file YAML che viene trasferito in modi diversi."
     }
   ],
+  "sFD6T7": [
+    {
+      "type": 0,
+      "value": "Lodestar è un ecosistema basato su Typescript per il consenso in Ethereum sviluppato da ChainSafe Systems. La nostra beacon, il nostro client validatore e i nostri strumenti sono posizionati in maniera unica come soluzione di riferimento per una rapida elaborazione di prototipi da parte di ricercatori e sviluppatori."
+    }
+  ],
+  "sIgu5c": [
+    {
+      "type": 0,
+      "value": "Comprendo che depositare più ETH del saldo effettivo massimo (pari per il mio tipo di conto a "
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ") non presenta alcun vantaggio. Ogni importo in "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " inviato superiore a tale valore non andrà a incrementare la mia quota e sarà automaticamente prelevato una volta che il conto verrà attivato con un indirizzo di prelievo valido."
+    }
+  ],
   "sMHQRT": [
     {
       "type": 0,
       "value": "Un client di consenso con particolare attenzione alla velocità e alla sicurezza. Creato da Sigma Prime, una società di sicurezza informatica e ingegneria software che ha finanziato Lighthouse insieme all'Ethereum Foundation, Consensy e privati."
+    }
+  ],
+  "sNUrEO": [
+    {
+      "type": 0,
+      "value": "In caso contrario, ho inviato un messaggio "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " firmato con le mie chiavi di prelievo BLS per aggiornare le mie credenziali di prelievo."
     }
   ],
   "sToVAS": [
@@ -7233,10 +8575,10 @@
       "value": "Invece di un nuovo tipo di transazione utilizzato affinché gli staker richiedano manualmente prelievi, i conti vengono controllati automaticamente per il saldo in eccesso ammissibile a intervalli di pochi giorni. Tutti i validatori sono controllati su un ciclo infinito, e qualsiasi ricompensa disponibile o fondi usciti sono automaticamente “spinti” in un conto di prelievo fornito."
     }
   ],
-  "sj/Zef": [
+  "sgn0wo": [
     {
       "type": 0,
-      "value": "Scarica l'app Key Gen GUI"
+      "value": "Che cosa accade se dispongo di credenziali di prelievo BLS e perdo la mia chiave di prelievo?"
     }
   ],
   "smD5l/": [
@@ -7295,6 +8637,20 @@
       "value": "Ho impostato un segreto JWT condiviso e l'ho reso disponibile sia al mio client di esecuzione che al mio client di consenso (nodo beacon)"
     }
   ],
+  "tHF016": [
+    {
+      "type": 0,
+      "value": "Da quale validatore desideri "
+    },
+    {
+      "type": 1,
+      "value": "pullFrom"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -7311,12 +8667,6 @@
     {
       "type": 0,
       "value": "Numero massimo di account che possono essere controllati in un blocco. Si ferma quando vengono trovati 16 prelievi. Se nei primi 16,384 conti controllati non vengono trovate 16 ricompense idonee, la coda di prelievo per quel blocco sarà inviata così com'è, e il proponente successivo riprenderà da punto in cui era rimasto."
-    }
-  ],
-  "KJ7R/V": [
-    {
-      "type": 0,
-      "value": "La specifica del livello di consenso di Ethereum"
     }
   ],
   "teyxVk": [
@@ -7381,12 +8731,6 @@
       "value": "article"
     }
   ],
-  "mm+OKT": [
-    {
-      "type": 0,
-      "value": "Gli aggiornamenti di Ethereum"
-    }
-  ],
   "tzMNF3": [
     {
       "type": 0,
@@ -7419,10 +8763,36 @@
       "value": "Portoghese (Brasile)"
     }
   ],
+  "u6aCQB": [
+    {
+      "type": 0,
+      "value": "Tipo di credenziali di prelievo"
+    }
+  ],
   "u81G9+": [
     {
       "type": 0,
       "value": "Tempo di attività"
+    }
+  ],
+  "uAXXOX": [
+    {
+      "type": 0,
+      "value": "Le tempistiche di quest'ultimo passaggio variano a seconda dell'indice del validatore, dell'attuale posizione di sweep e del numero di validatori."
+    }
+  ],
+  "uAu6S6": [
+    {
+      "type": 0,
+      "value": "Commissione di elaborazione attuale: "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "uDMtC8": [
@@ -7445,6 +8815,86 @@
     {
       "type": 0,
       "value": " nella rete."
+    }
+  ],
+  "uEB8++": [
+    {
+      "type": 0,
+      "value": "Credenziali di esecuzione: se desideri effettuare un prelievo verso l'indirizzo del tuo portafoglio di esecuzione puoi configurare un \"indirizzo di prelievo eth1\" utilizzando "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " quando esegui deposit CLI. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
+  "uHSqYx": [
+    {
+      "type": 0,
+      "value": "Un "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " viene elaborato quando un validatore attivo ha raggiunto il massimo saldo effettivo di "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " e dispone di un saldo totale superiore a "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Poiché un singolo validatore non può ottenere ricompense su un saldo in eccesso rispetto a "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", eventuali saldi in eccesso di tali conti saranno prelevati automaticamente verso il loro indirizzo Ethereum."
     }
   ],
   "uJzGSb": [
@@ -7481,20 +8931,6 @@
       "value": "epoca di uscita"
     }
   ],
-  "uYF99H": [
-    {
-      "type": 0,
-      "value": "Sebbene il voto di un validatore sia ponderato in base all'importo a disposizione, il peso del voto di ogni validatore parte da "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ", che rappresenta anche il valore massimo. È possibile scendere al di sotto di questo valore in caso di scarse prestazioni del nodo, ma non è possibile superarlo."
-    }
-  ],
   "ubKWX8": [
     {
       "type": 0,
@@ -7507,26 +8943,10 @@
       "value": "Assicurati che la larghezza di banda non possa essere limitata e non abbia un limite massimo, in modo che il nodo rimanga sincronizzato e sia pronto a convalidare quando verrà chiamato."
     }
   ],
-  "ujVT29": [
+  "uhpVgs": [
     {
       "type": 0,
-      "value": "A questo punto dovresti aver preso nota del tuo mnemonico, averlo riposto in un luogo sicuro e aver salvato un archivio chiavi per ognuno dei tuoi validatori "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": ". Assicurati di tenerli al sicuro, preferibilmente offline. Gli archivi chiavi dei tuoi validatori devono essere disponibili nella directory "
-    },
-    {
-      "type": 1,
-      "value": "validatorKeys"
-    },
-    {
-      "type": 0,
-      "value": " appena creata."
+      "value": "(Composto)"
     }
   ],
   "ukfwum": [
@@ -7535,32 +8955,16 @@
       "value": "Diventa validatore con Nimbus"
     }
   ],
-  "up+5YH": [
+  "v/nu/L": [
     {
       "type": 0,
-      "value": "Ci sono depositi recenti di "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": "?"
+      "value": "Nethermind, client di esecuzione di Ethereum sviluppato in .NET, vanta prestazioni da leader del settore nella sincronizzazione e nell'elaborazione tip-of-chain."
     }
   ],
-  "zkTSvw": [
+  "v0ygo6": [
     {
       "type": 0,
-      "value": "E importanti penalità (o "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": ") vengono comminate ad azioni dannose."
+      "value": "Test su Holesky"
     }
   ],
   "vBJ79e": [
@@ -7627,28 +9031,6 @@
       "value": "Cinese (semplificato)"
     }
   ],
-  "okGJD+": [
-    {
-      "type": 0,
-      "value": "Una volta abilitati i prelievi con l'aggiornamento Shanghai/Capella, i validatori con un saldo effettivo al limite e un indirizzo di prelievo di esecuzione collegato avranno automaticamente un saldo superiore a "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " come saldo in eccesso."
-    }
-  ],
   "vbVsqW": [
     {
       "type": 0,
@@ -7663,6 +9045,28 @@
       "value": " il prima possibile. E unisciti alla community EthStaker per avere supporto e poter discutere con altri validatori."
     }
   ],
+  "vj7TN7": [
+    {
+      "type": 0,
+      "value": "Questo valore è detto \"saldo effettivo massimo\" (ovvero la quantità massima di ETH che contribuiscono alla tua quota). Per i tipi di conto più vecchi (tipo 0 o 1) il limite del saldo effettivo è pari a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ". Nell'ambito di questi tipi di conto eventuali saldi in eccesso rispetto a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " non contribuiscono al capitale dell'utente e non accumulano proventi."
+    }
+  ],
   "vz8WK7": [
     {
       "type": 0,
@@ -7675,10 +9079,10 @@
       "value": "Esegui il comando seguente per avviare l'app"
     }
   ],
-  "wDlux8": [
+  "wIdVXZ": [
     {
       "type": 0,
-      "value": "Puoi comunque uscire volontariamente dal validatore che deve essere rimosso dal set di validatori attivi, ma fino a quando i prelievi non saranno abilitati, questi fondi resteranno bloccati e non potranno essere prelevati o rimessi in staking."
+      "value": "\"Tipo 1\", \"prelievi periodici\""
     }
   ],
   "wJ1PbL": [
@@ -7695,6 +9099,12 @@
     {
       "type": 0,
       "value": "Configurazione iniziale"
+    }
+  ],
+  "wL7VAE": [
+    {
+      "type": 0,
+      "value": "Azioni"
     }
   ],
   "wawegX": [
@@ -7719,34 +9129,6 @@
     {
       "type": 0,
       "value": "Esegui il comando seguente:"
-    }
-  ],
-  "HemvTL": [
-    {
-      "type": 0,
-      "value": "Una delle code da notare è una coda che limita quanti indirizzi di prelievo BLS ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ") possono essere aggiornati a un indirizzo di esecuzione ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ") durante un determinato blocco."
-    }
-  ],
-  "wqUcy/": [
-    {
-      "type": 0,
-      "value": "Rischi in caso di adozione nelle prime fasi"
     }
   ],
   "wtTeex": [
@@ -7779,6 +9161,12 @@
       "value": "Raccomandiamo di completare questi passaggi sulla rete di prova corrente prima di procedere sulla rete principale."
     }
   ],
+  "x4HNJL": [
+    {
+      "type": 0,
+      "value": "L'URL del sito che ti chiede un deposito è quello che ti aspetti?"
+    }
+  ],
   "xDyl3T": [
     {
       "type": 0,
@@ -7789,16 +9177,16 @@
       "value": "ethereumorg"
     }
   ],
+  "xETYo6": [
+    {
+      "type": 0,
+      "value": "Se perdi la tua chiave di prelievo, per recuperarla ti servirà il tuo mnemonico. Se perdi il mnemonico e non hai aggiornato le tue credenziali di prelievo con un indirizzo di prelievo (di esecuzione) Ethereum non sarà possibile accedere ai fondi detenuti dal tuo validatore. Per questo è essenziale effettuare un backup sicuro del mnemonico del proprio validatore."
+    }
+  ],
   "xGQ38+": [
     {
       "type": 0,
       "value": "Il validatore ha completato il processo di uscita?"
-    }
-  ],
-  "xH5GKj": [
-    {
-      "type": 0,
-      "value": "Sto adottando la tecnologia nelle prime fasi e accetto che i bug del software e di progettazione possano causare slashing."
     }
   ],
   "xMOzv2": [
@@ -7807,10 +9195,22 @@
       "value": "Chiunque desideri concludere i propri obblighi di staking può firmare un messaggio di “uscita volontaria” che viene poi trasmesso alla beacon chain per avviare il processo. Si tratta di un passaggio manuale."
     }
   ],
+  "xP01Tv": [
+    {
+      "type": 0,
+      "value": "Metti in staking più fondi"
+    }
+  ],
   "xP6BKs": [
     {
       "type": 0,
       "value": "elenco di controllo per lo staking"
+    }
+  ],
+  "xQND39": [
+    {
+      "type": 0,
+      "value": "composte"
     }
   ],
   "xQrU13": [
@@ -7849,12 +9249,6 @@
     {
       "type": 0,
       "value": "rete di prova"
-    }
-  ],
-  "xbet2w": [
-    {
-      "type": 0,
-      "value": "Installa python3.7+"
     }
   ],
   "xh7oVn": [
@@ -7905,6 +9299,24 @@
       "value": "Besu è scritto in Java e rilasciato con licenza Apache 2.0."
     }
   ],
+  "xrCRnH": [
+    {
+      "type": 0,
+      "value": "Esempio"
+    }
+  ],
+  "xrk6zg": [
+    {
+      "type": 0,
+      "value": "Aggiornato"
+    }
+  ],
+  "xvkEAP": [
+    {
+      "type": 0,
+      "value": "Chat di Reth"
+    }
+  ],
   "xxbUJa": [
     {
       "type": 0,
@@ -7951,10 +9363,28 @@
       "value": "Che cos'è un operatore di nodo?"
     }
   ],
+  "y8nxN1": [
+    {
+      "type": 0,
+      "value": "Prelievi parziali disponibili tramite richiesta inviata con smart contract"
+    }
+  ],
+  "yCYGZ2": [
+    {
+      "type": 0,
+      "value": "Consente l'accumulo automatico di ricompense"
+    }
+  ],
   "yFtJza": [
     {
       "type": 0,
       "value": "Assicurati di avere il controllo sulle chiavi a questo indirizzo."
+    }
+  ],
+  "yGyozY": [
+    {
+      "type": 0,
+      "value": "La guida di Reth spiega come scaricare e installare il client. Forniamo anche i rilasci rivisti su GitHub."
     }
   ],
   "yI/DO8": [
@@ -7963,10 +9393,22 @@
       "value": "questo numero aumenta se altri validatori vengono sottoposti a slashing allo stesso tempo"
     }
   ],
+  "yK2eQ+": [
+    {
+      "type": 0,
+      "value": "Sono comminate penalità di lieve entità per azioni (o inazioni) involontarie che ostacolano il raggiungimento del consenso"
+    }
+  ],
   "ySYWBD": [
     {
       "type": 0,
       "value": "Mantengo le mie chiavi al sicuro e ho preso nota della mia frase mnemonica."
+    }
+  ],
+  "yYe/CX": [
+    {
+      "type": 0,
+      "value": "Migra i fondi"
     }
   ],
   "ydh1KU": [
@@ -7975,22 +9417,16 @@
       "value": "Informazioni sul linguaggio"
     }
   ],
-  "yeI1Zq": [
+  "yeOdna": [
     {
       "type": 0,
-      "value": "Si noti che questo ritardo può essere più lungo se molti escono o vengono espulsi allo stesso tempo."
+      "value": "indirizzo di prelievo di esecuzione collegato"
     }
   ],
   "yis3aS": [
     {
       "type": 0,
       "value": "Questo è lo scenario previsto."
-    }
-  ],
-  "yjBvUO": [
-    {
-      "type": 0,
-      "value": "Nethermind è basato su .NET Core. Estendilo e personalizzalo. I limiti li scegli tu."
     }
   ],
   "ylZLi4": [
@@ -8023,28 +9459,6 @@
       "value": "Le tue precedenti credenziali di prelievo BLS"
     }
   ],
-  "Sy5bAo": [
-    {
-      "type": 0,
-      "value": "Una volta completata la transizione alla proof-of-stake con la Fusione, i validatori saranno responsabili dell'elaborazione delle transazioni e della convalida della loro validità. Dopo la Fusione questi dati "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " sono disponibili presso le fonti esterne più diffuse. L'uso di un fornitore esterno farà sì che il tuo validatore risulti quindi offline. Quando verrà implementato lo sharding dei dati, i validatori saranno anche a rischio di slashing in "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "z63I56": [
     {
       "type": 0,
@@ -8065,22 +9479,32 @@
       "value": "."
     }
   ],
-  "z8zpxp": [
-    {
-      "type": 0,
-      "value": "Lodestar è un'implementazione TypeScript open-source della specifica Ethereum Consensus (precedentemente nota come eth2) mantenuta da ChainSafe Systems. L'obiettivo di ChainSafe è quello di sviluppare, migliorare e diversificare l'ecosistema Ethereum proof-of-stake con la loro beacon chain e client validatore con particolare attenzione alle implementazioni dei clienti leggeri."
-    }
-  ],
   "zAVb0/": [
     {
       "type": 0,
       "value": "Maggiori informazioni su Lighthouse e Sigma Prime"
     }
   ],
-  "zGkAVo": [
+  "zJV6KL": [
     {
       "type": 0,
-      "value": "All'altra estremità dello spettro, se il tuo saldo è più vicino a 31 ETH, probabilmente non vale la pena aggiungere gli ulteriori ETH richiesti per tornare a 32."
+      "value": "L'importo depositabile minimo è pari a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_DEPOSIT_ETHER"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "zJicsO": [
@@ -8089,38 +9513,70 @@
       "value": "Economia di staking"
     }
   ],
-  "cD0jre": [
+  "zNUzpT": [
     {
       "type": 0,
-      "value": "Non depositare più di "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " ETH per un singolo validatore. Le tue ricompense non aumenteranno e il validatore sarà bloccato fino all'aggiornamento Shanghai/Capella programmato."
+      "value": "Saldo effettivo"
     }
   ],
-  "zbEBi9": [
+  "zO16iV": [
     {
       "type": 0,
-      "value": "Usa "
+      "value": "L'importo depositabile valido minimo è pari a "
     },
     {
       "type": 1,
-      "value": "mainnet"
+      "value": "MIN_DEPOSIT_ETHER"
     },
     {
       "type": 0,
-      "value": " per sincronizzare la rete principale Ethereum."
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "zfkJaB": [
+    {
+      "type": 0,
+      "value": "Il contratto di deposito in staking Ethereum richiedere l'invio di almeno "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " per essere accettato."
     }
   ],
   "zicXn7": [
     {
       "type": 0,
       "value": "Sicurezza del nodo"
+    }
+  ],
+  "zkTSvw": [
+    {
+      "type": 0,
+      "value": "Vengono comminate pene più severe (o lo "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": ") per azioni malevole"
     }
   ],
   "znyxZv": [
@@ -8143,10 +9599,30 @@
       "value": ". Si tratta di un insieme di metodi JSON RPC che possono essere utilizzati per comunicare tra i due livelli client."
     }
   ],
-  "zrb2Xo": [
+  "zsu9e8": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
     {
       "type": 0,
-      "value": "Inviti alla comunity – annunciati nel repository dei PM"
+      "value": " I depositi duplicati con la stessa chiave pubblica del file di chiavi saranno considerati un doppio deposito. Se tale saldo risulta superiore al saldo effettivo massimo del tuo conto ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "), l'importo in eccesso non verrà aggiunto alla tua quota. Ipotizzando che sia stato configurato un indirizzo di prelievo, tali fondi saranno redistribuiti automaticamente dopo l'attivazione del conto. Se non è stato fornito alcun indirizzo di prelievo i fondi resteranno bloccati fino a che non ne verrà fornito uno."
     }
   ]
 }

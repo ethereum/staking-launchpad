@@ -125,6 +125,13 @@ const PushConsolidation = ({
 
   return (
     <>
+      <Button
+        label={<FormattedMessage defaultMessage="Migrate funds" />}
+        destructive
+        disabled={targetValidatorSet.length < 1}
+        onClick={handleOpen}
+      />
+
       {showModal && (
         <Layer
           position="center"
@@ -490,12 +497,6 @@ const PushConsolidation = ({
           </ModalFooter>
         </Layer>
       )}
-
-      <Button
-        label={<FormattedMessage defaultMessage="Migrate funds" />}
-        destructive
-        onClick={handleOpen}
-      />
     </>
   );
 };

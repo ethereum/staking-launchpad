@@ -32,6 +32,7 @@ import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 import { useTxModal } from '../../../hooks/useTxModal';
 import { useWithdrawalQueue } from '../../../hooks/useWithdrawalQueue';
+import { currentEpoch } from '../../../utils/beaconchain';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -113,7 +114,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   return (
     <>
       <Button
-        disabled={maxAmount <= 0}
+        disabled={
+          maxAmount <= 0 || currentEpoch < validator.activationepoch + 256
+        }
         onClick={handleOpen}
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />

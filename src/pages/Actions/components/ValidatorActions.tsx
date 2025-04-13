@@ -27,6 +27,7 @@ import {
   MIN_DEPOSIT_ETHER,
   TICKER_NAME,
 } from '../../../utils/envVars';
+import { currentEpoch } from '../../../utils/beaconchain';
 
 const Section = styled(SharedSection)`
   display: grid;
@@ -97,11 +98,13 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       const isSameCredentials =
         v.withdrawalcredentials.slice(4) ===
         validator.withdrawalcredentials.slice(4);
+      const isNacent = currentEpoch < v.activationepoch + 256;
       return (
         !isSameValidator &&
         isExecutionOrLater &&
         hasBalance &&
-        isSameCredentials
+        isSameCredentials &&
+        !isNacent
       );
     });
 
@@ -175,64 +178,89 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         <AddFunds validator={validator} />
       </Row>
 
-      {getCredentialType(validator) >= ValidatorType.Compounding && (
-        <Row>
-          <div>
-            <ActionTitle>
-              <FormattedMessage defaultMessage="Request partial withdrawal" />
-            </ActionTitle>
+      {/* {getCredentialType(validator) >= ValidatorType.Compounding && ( */}
+      <Row>
+        <div>
+          <ActionTitle>
+            <FormattedMessage defaultMessage="Request partial withdrawal" />
+          </ActionTitle>
+          <FormattedMessage
+            defaultMessage="You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
+            values={{
+              TICKER_NAME,
+              MIN_ACTIVATION_BALANCE,
+            }}
+          />{' '}
+          {surplusEther > 0 && (
             <FormattedMessage
-              defaultMessage="You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
+              defaultMessage="You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
               values={{
                 TICKER_NAME,
-                MIN_ACTIVATION_BALANCE,
+                surplusEther: (
+                  <span style={{ color: 'darkgreen' }}>{surplusEther}</span>
+                ),
               }}
-            />{' '}
-            {surplusEther > 0 && (
-              <FormattedMessage
-                defaultMessage="You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
-                values={{
-                  TICKER_NAME,
-                  surplusEther: (
-                    <span style={{ color: 'darkgreen' }}>{surplusEther}</span>
-                  ),
-                }}
-              />
-            )}
-          </div>
-          <PartialWithdraw validator={validator} />
-        </Row>
-      )}
+            />
+          )}
+          {getCredentialType(validator) < ValidatorType.Compounding && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="Account must first be upgraded to compounding type." />
+            </em>
+          )}
+          {(true || currentEpoch < validator.activationepoch + 256) && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="Account must be activated for at least 256 epochs (~27 hours) before eligible for partial withdrawals." />
+            </em>
+          )}
+        </div>
+        <PartialWithdraw validator={validator} />
+      </Row>
+      {/* )} */}
 
-      {getCredentialType(validator) >= ValidatorType.Compounding && (
-        <Row>
-          <div>
-            <ActionTitle>
-              <FormattedMessage defaultMessage="Absorb another validator" />
-            </ActionTitle>
-            <FormattedMessage defaultMessage="Transfer entire balance from another validator account into this one, consolidating two accounts into one." />
-          </div>
-          <PullConsolidation
-            targetValidator={validator}
-            sourceValidatorSet={sourceValidatorSet}
-          />
-        </Row>
-      )}
+      <Row>
+        <div>
+          <ActionTitle>
+            <FormattedMessage defaultMessage="Absorb another validator" />
+          </ActionTitle>
+          <FormattedMessage defaultMessage="Transfer entire balance from another validator account into this one, consolidating two accounts into one." />
+          {getCredentialType(validator) < ValidatorType.Compounding && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="Selected account must be upgraded to compounding type to absorb another validator." />
+            </em>
+          )}
+          {sourceValidatorSet.length < 1 && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="No eligible source accounts found. Source validators must be activated for at least 256 epochs (~27 hours) before eligible for consolidation." />
+            </em>
+          )}
+        </div>
+        <PullConsolidation
+          targetValidator={validator}
+          sourceValidatorSet={sourceValidatorSet}
+        />
+      </Row>
 
-      {targetValidatorSet.length > 0 && (
-        <Row>
-          <div>
-            <ActionTitle>
-              <FormattedMessage defaultMessage="Migrate funds" />
-            </ActionTitle>
-            <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />
-          </div>
-          <PushConsolidation
-            sourceValidator={validator}
-            targetValidatorSet={targetValidatorSet}
-          />
-        </Row>
-      )}
+      <Row>
+        <div>
+          <ActionTitle>
+            <FormattedMessage defaultMessage="Migrate funds" />
+          </ActionTitle>
+          <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />{' '}
+          {targetValidatorSet.length < 1 && (
+            <em>
+              <FormattedMessage defaultMessage="No eligible target accounts found." />
+            </em>
+          )}
+        </div>
+        <PushConsolidation
+          sourceValidator={validator}
+          targetValidatorSet={targetValidatorSet}
+        />
+      </Row>
 
       {!hasValidatorExited(validator) && (
         <Row>

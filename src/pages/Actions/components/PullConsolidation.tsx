@@ -27,10 +27,11 @@ import ValidatorSelector from './ValidatorSelector';
 
 import { generateCompoundParams } from '../utils';
 import { TICKER_NAME } from '../../../utils/envVars';
-import { getEtherBalance } from '../../../utils/validators';
+import { getEtherBalance, getCredentialType } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { useTxModal } from '../../../hooks/useTxModal';
 import { useCompoundingQueue } from '../../../hooks/useCompoundingQueue';
+import { ValidatorType } from '../types';
 
 type PullConsolidationProps = {
   targetValidator: BeaconChainValidator; // The selected validator to consolidate into (target)
@@ -126,6 +127,10 @@ const PullConsolidation = ({
     <>
       <Button
         label={<FormattedMessage defaultMessage="Pull funds" />}
+        disabled={
+          getCredentialType(targetValidator) < ValidatorType.Compounding ||
+          sourceValidatorSet.length < 1
+        }
         destructive
         secondary
         onClick={handleOpen}

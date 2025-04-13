@@ -1613,12 +1613,6 @@
       "value": "Configuration file"
     }
   ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Please wait and try again or seek assistance if this error continues."
-    }
-  ],
   "7XiYRi": [
     {
       "type": 0,
@@ -1771,6 +1765,12 @@
     {
       "type": 0,
       "value": "Do not turn your validator off until this epoch is reached."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues."
     }
   ],
   "8k1RjX": [
@@ -2113,12 +2113,6 @@
     {
       "type": 0,
       "value": "Become a validator with Lighthouse"
-    }
-  ],
-  "As7Kwv": [
-    {
-      "type": 0,
-      "value": "You may have a deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
     }
   ],
   "Aw1mMs": [
@@ -3185,6 +3179,12 @@
       "value": "Sign transaction with your wallet"
     }
   ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "Account must first be upgraded to compounding type."
+    }
+  ],
   "IWlazt": [
     {
       "type": 0,
@@ -4183,6 +4183,12 @@
       "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
     }
   ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Check recent deposits on explorer"
+    }
+  ],
   "OdYQYh": [
     {
       "type": 0,
@@ -4691,6 +4697,12 @@
       "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
     }
   ],
+  "Sa8NCw": [
+    {
+      "type": 0,
+      "value": "No eligible target accounts found."
+    }
+  ],
   "SaR1pU": [
     {
       "type": 0,
@@ -4869,6 +4881,16 @@
     {
       "type": 1,
       "value": "index"
+    }
+  ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " or try refreshing the page."
     }
   ],
   "U/NPbq": [
@@ -6037,6 +6059,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "Selected account must be upgraded to compounding type to absorb another validator."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6955,6 +6983,12 @@
       "value": "A withdrawal address has not been set for these validators. Staked funds and rewards will remain locked until withdrawal credentials are provided."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "No eligible source accounts found. Source validators must be activated for at least 256 epochs (~27 hours) before eligible for consolidation."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7665,6 +7699,12 @@
       "value": "Number of withdrawals"
     }
   ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "No validators were found with withdrawal credentials matching connected account."
+    }
+  ],
   "mhyltV": [
     {
       "type": 0,
@@ -7905,12 +7945,6 @@
     {
       "type": 0,
       "value": "your validator"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "No validators were found."
     }
   ],
   "oVx7Qe": [
@@ -8637,6 +8671,12 @@
     {
       "type": 0,
       "value": "What is the deposit contract?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "Account must be activated for at least 256 epochs (~27 hours) before eligible for partial withdrawals."
     }
   ],
   "szN3Fl": [

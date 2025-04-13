@@ -14,6 +14,7 @@ import ValidatorActions from './components/ValidatorActions';
 
 import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
+import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Section } from './components/Shared';
 import { Text } from '../../components/Text';
@@ -26,11 +27,7 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import {
-  BEACONCHAIN_URL,
-  TICKER_NAME,
-  MAX_QUERY_LIMIT,
-} from '../../utils/envVars';
+import { BEACONCHAIN_URL, MAX_QUERY_LIMIT } from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
 
 const FakeLink = styled.span`
@@ -291,6 +288,10 @@ const _ActionsPage = () => {
       );
     }
 
+    const validatorDeposits = new URL('validators/deposits', BEACONCHAIN_URL);
+    validatorDeposits.searchParams.set('q', account || '');
+    const depositsUrl = validatorDeposits.toString();
+
     if (validatorLoadError) {
       return (
         <Alert variant="warning" className="mb10">
@@ -305,19 +306,15 @@ const _ActionsPage = () => {
             <div>
               <Text className="mb10">
                 <strong>
-                  <FormattedMessage defaultMessage="No validators were found." />
+                  <FormattedMessage defaultMessage="No validators were found with withdrawal credentials matching connected account." />
                 </strong>
               </Text>
-              <Text className="mb10">
-                <FormattedMessage
-                  defaultMessage="You may have a deposit that was accepted but is being validated on chain.
-                    It will be available here when beaconcha.in has confirmed 2048 blocks."
-                  values={{ TICKER_NAME }}
-                />
+              <Text className="mb20">
+                <FormattedMessage defaultMessage="You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues." />
               </Text>
-              <Text>
-                <FormattedMessage defaultMessage="Please wait and try again or seek assistance if this error continues." />
-              </Text>
+              <Link primary inline to={depositsUrl}>
+                <FormattedMessage defaultMessage="Check recent deposits on explorer" />
+              </Link>
             </div>
           </div>
         </Alert>
@@ -329,9 +326,16 @@ const _ActionsPage = () => {
         <Alert variant="warning" className="my10">
           <FormattedMessage defaultMessage="No validators were discovered for the provided account." />{' '}
           {/* TODO: Switch this to a button element */}
-          <FakeLink onClick={handleConnect}>
-            <FormattedMessage defaultMessage="Please connect to a new wallet" />
-          </FakeLink>
+          <FormattedMessage
+            defaultMessage="{connect} or try refreshing the page."
+            values={{
+              connect: (
+                <FakeLink onClick={handleConnect}>
+                  <FormattedMessage defaultMessage="Please connect to a new wallet" />
+                </FakeLink>
+              ),
+            }}
+          />
         </Alert>
       );
     }
@@ -427,6 +431,7 @@ const _ActionsPage = () => {
       </>
     );
   }, [
+    account,
     active,
     fetchMoreValidators,
     formatMessage,

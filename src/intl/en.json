@@ -568,9 +568,6 @@
   "7V/8wz": {
     "message": "Configuration file"
   },
-  "7XWI5I": {
-    "message": "Please wait and try again or seek assistance if this error continues."
-  },
   "7XiYRi": {
     "message": "Slashed?"
   },
@@ -640,6 +637,9 @@
   },
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
+  },
+  "8jssAY": {
+    "message": "You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues."
   },
   "8k1RjX": {
     "message": "{NETWORK_NAME} testnet"
@@ -782,9 +782,6 @@
   },
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
-  },
-  "As7Kwv": {
-    "message": "You may have a deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
   },
   "Aw1mMs": {
     "message": "Top up validator"
@@ -1202,6 +1199,9 @@
   "IJw06E": {
     "message": "Sign transaction with your wallet"
   },
+  "IWdOGZ": {
+    "message": "Account must first be upgraded to compounding type."
+  },
   "IWlazt": {
     "message": "full withdrawal"
   },
@@ -1589,6 +1589,9 @@
   "OSEFbC": {
     "message": "Immediately upon broadcasting a signed voluntary exit message, the {exitEpoch} and {withdrawableEpoch} values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
   },
+  "OWPO/L": {
+    "message": "Check recent deposits on explorer"
+  },
   "OdYQYh": {
     "message": "More on ConsenSys"
   },
@@ -1790,6 +1793,9 @@
   "SVUntz": {
     "message": "Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
   },
+  "Sa8NCw": {
+    "message": "No eligible target accounts found."
+  },
   "SaR1pU": {
     "message": "Deposit already exists"
   },
@@ -1856,6 +1862,9 @@
   },
   "Tpo1B3": {
     "message": "transferred to validator index {index}"
+  },
+  "TvuDvB": {
+    "message": "{connect} or try refreshing the page."
   },
   "U/NPbq": {
     "message": "German"
@@ -2295,6 +2304,9 @@
     "description": "{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually",
     "message": "Which validator would you like to {migrateFundsTo}?"
   },
+  "cf+9L6": {
+    "message": "Selected account must be upgraded to compounding type to absorb another validator."
+  },
   "chsS1X": {
     "message": "If not, stop. No withdrawal will be processed and account skipped"
   },
@@ -2640,6 +2652,9 @@
   "j2f6y2": {
     "message": "A withdrawal address has not been set for these validators. Staked funds and rewards will remain locked until withdrawal credentials are provided."
   },
+  "j3Os7+": {
+    "message": "No eligible source accounts found. Source validators must be activated for at least 256 epochs (~27 hours) before eligible for consolidation."
+  },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
@@ -2892,6 +2907,9 @@
   "mdmA4f": {
     "message": "Number of withdrawals"
   },
+  "mhY4Dy": {
+    "message": "No validators were found with withdrawal credentials matching connected account."
+  },
   "mhyltV": {
     "message": "I've set my graffiti flag."
   },
@@ -2997,9 +3015,6 @@
   },
   "oPgUAj": {
     "message": "your validator"
-  },
-  "oUWdau": {
-    "message": "No validators were found."
   },
   "oVx7Qe": {
     "message": "Step 2: Generate deposit keys using the EthStaker deposit tool"
@@ -3274,6 +3289,9 @@
   },
   "sy35J+": {
     "message": "What is the deposit contract?"
+  },
+  "syOmOC": {
+    "message": "Account must be activated for at least 256 epochs (~27 hours) before eligible for partial withdrawals."
   },
   "szN3Fl": {
     "message": "I understand and agree to the terms-of-service and everything stated in the previous sections."

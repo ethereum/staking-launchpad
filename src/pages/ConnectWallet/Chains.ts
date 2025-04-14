@@ -1,4 +1,5 @@
 import { EL_EXPLOER_URL, RPC_URL, NETWORK_NAME } from '../../utils/envVars';
+
 const { ethereum } = window as any;
 
 export const changeToTestnet = async (chainId: number) => {

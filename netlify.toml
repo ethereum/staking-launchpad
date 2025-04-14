@@ -5,7 +5,6 @@
 [context.deploy-preview.environment]
   NODE_VERSION = "14.19.2"
 [context.branch-deploy.environment]
-  REACT_APP_BEACONCHAIN_URL = "https://hoodi.beaconcha.in"
   NODE_VERSION = "14.19.2"
 [context.dev.environment]
   NODE_VERSION = "14.19.2"

@@ -142,7 +142,7 @@ const ValidatorDetails = ({
 
         <BalancesContainer>
           <BalanceItem>
-            <BalanceValue>{getEtherBalance(validator)}</BalanceValue>
+            <BalanceValue>{getEtherBalance(validator).toFixed(9)}</BalanceValue>
             <BalanceLabel>
               <FormattedMessage defaultMessage="Balance" />
             </BalanceLabel>

@@ -936,9 +936,6 @@
   "DjhC7F": {
     "message": "I've forwarded the necessary ports to the correct machine(s) from my router for both my EL and CL client (only open the ports that apply to your installations)."
   },
-  "DjsWrj": {
-    "message": "Estimated fee"
-  },
   "DmKneH": {
     "message": "The clients support Prometheus and Grafana to help you visualize important real-time metrics about your validator."
   },
@@ -2868,6 +2865,9 @@
   "lo+Qqn": {
     "message": "change your wallet"
   },
+  "lpYLlg": {
+    "message": "View on beacon explorer"
+  },
   "lrdlY6": {
     "message": "File uploaded"
   },
@@ -3139,6 +3139,9 @@
   },
   "q8Cxf5": {
     "message": "BLS credentials: By default, the deposit CLI would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format. This format is not compatible with Beacon Chain withdrawals and must be updated to Ethereum address credentials to enable withdrawals."
+  },
+  "qA/iot": {
+    "message": "Max fee"
   },
   "qB6aU6": {
     "message": "What happened to 'Eth2?'"

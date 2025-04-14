@@ -4,12 +4,15 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import styled from 'styled-components';
 
 import { Heading } from '../../../components/Heading';
+import { Link } from '../../../components/Link';
 import { Text } from '../../../components/Text';
 import { Section, CopyContainer, Hash } from './Shared';
 
 import { ValidatorType } from '../types';
 import { BeaconChainValidator } from '../../TopUp/types';
 
+import { epochToDate } from '../../../utils/beaconchain';
+import { BEACONCHAIN_URL } from '../../../utils/envVars';
 import {
   hasValidatorExited,
   getCredentialType,
@@ -17,7 +20,6 @@ import {
   getMaxEB,
   getEffectiveBalance,
 } from '../../../utils/validators';
-import { epochToDate } from '../../../utils/beaconchain';
 
 const BalancesContainer = styled.div`
   display: grid;
@@ -139,6 +141,10 @@ const ValidatorDetails = ({
             </CopyToClipboard>
           </div>
         </Text>
+
+        <Link primary to={`${BEACONCHAIN_URL}/validator/${validator.pubkey}`}>
+          <FormattedMessage defaultMessage="View on beacon explorer" />
+        </Link>
 
         <BalancesContainer>
           <BalanceItem>

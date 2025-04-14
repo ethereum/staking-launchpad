@@ -27,7 +27,7 @@ import {
   MIN_DEPOSIT_ETHER,
   TICKER_NAME,
 } from '../../../utils/envVars';
-import { currentEpoch } from '../../../utils/beaconchain';
+import { isValidatorNascent } from '../utils';
 
 const Section = styled(SharedSection)`
   display: grid;
@@ -98,13 +98,13 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       const isSameCredentials =
         v.withdrawalcredentials.slice(4) ===
         validator.withdrawalcredentials.slice(4);
-      const isNacent = currentEpoch < v.activationepoch + 256;
+      const isNascent = isValidatorNascent(v); // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#new-process_consolidation_request
       return (
         !isSameValidator &&
         isExecutionOrLater &&
         hasBalance &&
         isSameCredentials &&
-        !isNacent
+        !isNascent
       );
     });
 
@@ -208,7 +208,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
               <FormattedMessage defaultMessage="Account must first be upgraded to compounding type." />
             </em>
           )}
-          {(true || currentEpoch < validator.activationepoch + 256) && (
+          {isValidatorNascent(validator) && (
             <em>
               {' '}
               <FormattedMessage defaultMessage="Account must be activated for at least 256 epochs (~27 hours) before eligible for partial withdrawals." />

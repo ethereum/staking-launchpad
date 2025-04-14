@@ -24,7 +24,7 @@ import {
 import { Text } from '../../../components/Text';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
-import { generateWithdrawalParams } from '../utils';
+import { generateWithdrawalParams, isValidatorNascent } from '../utils';
 import { getEtherBalance } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
@@ -32,7 +32,6 @@ import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 import { useExecutionBalance } from '../../../hooks/useExecutionBalance';
 import { useTxModal } from '../../../hooks/useTxModal';
 import { useWithdrawalQueue } from '../../../hooks/useWithdrawalQueue';
-import { currentEpoch } from '../../../utils/beaconchain';
 
 interface Props {
   validator: BeaconChainValidator;
@@ -114,9 +113,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   return (
     <>
       <Button
-        disabled={
-          maxAmount <= 0 || currentEpoch < validator.activationepoch + 256
-        }
+        disabled={maxAmount <= 0 || isValidatorNascent(validator)} // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#new-process_withdrawal_request
         onClick={handleOpen}
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />

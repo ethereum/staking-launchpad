@@ -73,6 +73,10 @@ if(process.env.REACT_APP_MIN_GENESIS_TIME && Number.isNaN(Number(process.env.REA
     throw new Error("REACT_APP_MIN_GENESIS_TIME must be of type: number")
 }
 export const BEACON_CHAIN_GENESIS_TIME  = Number(process.env.REACT_APP_MIN_GENESIS_TIME) || 1606824023_000 // 2020-12-01T12:00:23Z
+if(process.env.REACT_APP_SHARD_COMMITTEE_PERIOD && Number.isNaN(Number(process.env.REACT_APP_SHARD_COMMITTEE_PERIOD))) {
+    throw new Error("REACT_APP_SHARD_COMMITTEE_PERIOD must be of type: number")
+}
+export const SHARD_COMMITTEE_PERIOD  = Number(process.env.REACT_APP_SHARD_COMMITTEE_PERIOD) || 2 ** 8; // 256 epochs
 
 if(process.env.REACT_APP_SLOTS_PER_EPOCH && Number.isNaN(Number(process.env.REACT_APP_SLOTS_PER_EPOCH))) {
     throw new Error("REACT_APP_SLOTS_PER_EPOCH must be of type: number")

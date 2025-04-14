@@ -7,7 +7,10 @@ import {
   WITHDRAWAL_CONTRACT_ADDRESS,
   TICKER_NAME,
   EXCESS_INHIBITOR,
+  SHARD_COMMITTEE_PERIOD,
 } from '../../utils/envVars';
+import { BeaconChainValidator } from '../TopUp/types';
+import { currentEpoch } from '../../utils/beaconchain';
 
 export type Queue = {
   length: BigNumber;
@@ -155,3 +158,6 @@ export const getFeeStatus = (fee: BigNumber): FeeStatus => {
 
 export const getEtherFeeFromQueue = (queue: Queue): string =>
   `${queue.fee.dividedBy(1e18).toFixed()} ${TICKER_NAME}`;
+
+export const isValidatorNascent = (validator: BeaconChainValidator): boolean =>
+  currentEpoch < validator.activationepoch + SHARD_COMMITTEE_PERIOD;

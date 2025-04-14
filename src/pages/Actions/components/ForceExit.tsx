@@ -25,7 +25,7 @@ import {
   modalLayerStyle,
 } from './Shared';
 
-import { generateWithdrawalParams } from '../utils';
+import { generateWithdrawalParams, isValidatorNascent } from '../utils';
 import { getEtherBalance } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { TICKER_NAME } from '../../../utils/envVars';
@@ -114,6 +114,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
         label={<FormattedMessage defaultMessage="Exit fully" />}
         onClick={handleOpen}
         destructive
+        disabled={isValidatorNascent(validator)} // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#modified-process_voluntary_exit
       />
 
       {showModal && (

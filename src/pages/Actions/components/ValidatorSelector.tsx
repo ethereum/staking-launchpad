@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
@@ -37,6 +37,13 @@ const ValidatorSelector = ({
   selectedValidator,
 }: ValidatorSelectorProps) => {
   const { formatMessage } = useIntl();
+
+  // If only one validator, select it by default
+  useEffect(() => {
+    if (validators.length !== 1) return;
+    setSelectedValidator(validators[0]);
+  }, [validators, setSelectedValidator]);
+
   return (
     <Select
       placeholder={`Available validators: ${validators.length}`}

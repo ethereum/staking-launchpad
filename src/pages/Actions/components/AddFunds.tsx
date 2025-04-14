@@ -7,12 +7,14 @@ import { Layer, Form } from 'grommet';
 import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
+import { provider } from 'web3-core';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { SendOptions } from 'web3-eth-contract';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
-import { ValidatorType } from '../types';
 import { BeaconChainValidator } from '../../TopUp/types';
+import { Web3Instance } from '../types';
 
 import { Button } from '../../../components/Button';
 import { NumberInput } from '../../../components/NumberInput';
@@ -21,8 +23,6 @@ import { Text } from '../../../components/Text';
 import {
   DEPOSIT_CONTRACT_ADDRESS,
   ETHER_TO_GWEI,
-  MAX_EFFECTIVE_BALANCE,
-  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   MIN_DEPOSIT_ETHER,
 } from '../../../utils/envVars';
@@ -39,11 +39,7 @@ import {
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
 import { buf2hex } from '../../../utils/buf2hex';
-import {
-  getEtherBalance,
-  getCredentialType,
-  getMaxEB,
-} from '../../../utils/validators';
+import { getEtherBalance, getMaxEB } from '../../../utils/validators';
 import { bufferHex } from '../../../utils/SSZ';
 import { getSignTxStatus } from '../../../utils/txStatus';
 
@@ -52,6 +48,8 @@ import { useTxModal } from '../../../hooks/useTxModal';
 
 import { contractAbi } from '../../../contractAbi';
 import { Alert } from '../../../components/Alert';
+
+const GAS_LIMIT_ADD_FUNDS = 49122;
 
 const depositDataContainer = new ContainerType({
   fields: {
@@ -91,12 +89,33 @@ const AddFunds = ({ validator }: AddFundsProps) => {
   const executionEtherBalance = useExecutionBalance();
 
   const [etherAmount, setEtherAmount] = useState(MIN_DEPOSIT_ETHER);
-  const [maxEtherAmount, setMaxEtherAmount] = useState(0);
+  const [etherMaxUseful, setEtherMaxUseful] = useState(0);
 
-  const maxEBGwei =
-    (getCredentialType(validator) < ValidatorType.Compounding
-      ? MIN_ACTIVATION_BALANCE
-      : MAX_EFFECTIVE_BALANCE) * ETHER_TO_GWEI;
+  const [etherFeeEstimate, setEtherFeeEstimate] = useState(new BigNumber(0));
+
+  const maxEBGwei = getMaxEB(validator) * ETHER_TO_GWEI;
+  const etherMaxAvailableToSend: BigNumber = executionEtherBalance
+    ? new BigNumber(executionEtherBalance).minus(etherFeeEstimate)
+    : new BigNumber(0);
+
+  const isMaxedEB = validator.effectivebalance >= maxEBGwei;
+  const insufficientFunds =
+    etherMaxAvailableToSend.comparedTo(etherAmount) === -1;
+
+  useEffect(() => {
+    (async () => {
+      const walletProvider: provider = await (connector as AbstractConnector).getProvider();
+      const web3: Web3Instance = new Web3(walletProvider);
+      const currentWeiGasPriceHex = web3.utils.toHex(
+        await web3.eth.getGasPrice()
+      );
+      setEtherFeeEstimate(
+        new BigNumber(currentWeiGasPriceHex, 16)
+          .multipliedBy(new BigNumber(GAS_LIMIT_ADD_FUNDS))
+          .div(1e18)
+      );
+    })();
+  }, [connector]);
 
   useEffect(() => {
     const maxEB = getMaxEB(validator);
@@ -105,11 +124,11 @@ const AddFunds = ({ validator }: AddFundsProps) => {
       new BigNumber(validator.balance).div(ETHER_TO_GWEI)
     );
     // All deposits must at least be MIN_DEPOSIT_ETHER or tx will fail
-    const maxEther = BigNumber.max(
+    const maxUsefulEtherToDeposit = BigNumber.max(
       maxUsefulEther,
       new BigNumber(MIN_DEPOSIT_ETHER)
     );
-    setMaxEtherAmount(maxEther.toNumber());
+    setEtherMaxUseful(maxUsefulEtherToDeposit.toNumber());
   }, [validator]);
 
   const resetState = () => {
@@ -124,7 +143,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
 
   const handleValueChange = (value: number) => {
     const newValue = Math.max(
-      Math.min(value, maxEtherAmount),
+      Math.min(value, etherMaxUseful),
       MIN_DEPOSIT_ETHER
     );
     setEtherAmount(newValue);
@@ -136,8 +155,8 @@ const AddFunds = ({ validator }: AddFundsProps) => {
     setTxStatus('waiting_user_confirmation');
     setShowTx(true);
 
-    const walletProvider: any = await (connector as AbstractConnector).getProvider();
-    const web3: any = new Web3(walletProvider);
+    const walletProvider: provider = await (connector as AbstractConnector).getProvider();
+    const web3: Web3Instance = new Web3(walletProvider);
     const contract = new web3.eth.Contract(
       contractAbi,
       DEPOSIT_CONTRACT_ADDRESS
@@ -190,12 +209,24 @@ const AddFunds = ({ validator }: AddFundsProps) => {
 
   const primaryLabel = <FormattedMessage defaultMessage="Stake more funds" />;
 
+  const maxValue = BigNumber.min(
+    etherMaxAvailableToSend,
+    etherMaxUseful
+  ).toNumber();
+
+  const newBalance = executionEtherBalance
+    ? Math.max(
+        0,
+        executionEtherBalance - etherAmount - etherFeeEstimate.toNumber()
+      )
+    : 0;
+
   return (
     <>
       <Button
         onClick={handleOpen}
         label={primaryLabel}
-        disabled={validator.effectivebalance >= maxEBGwei}
+        disabled={isMaxedEB || insufficientFunds}
       />
 
       {showModal && (
@@ -237,7 +268,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                       value={etherAmount}
                       setValue={handleValueChange}
                       allowDecimals
-                      maxValue={maxEtherAmount}
+                      maxValue={maxValue}
                       minValue={MIN_DEPOSIT_ETHER}
                     />
                     <Text
@@ -313,13 +344,15 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                           <FormattedMessage defaultMessage="Available" />:
                         </div>
                         <div
-                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                          }}
                         >
                           {executionEtherBalance.toFixed(9)} {TICKER_NAME}
                         </div>
                       </Text>
                     )}
-
                     {executionEtherBalance && (
                       <Text
                         style={{
@@ -333,10 +366,37 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                           <FormattedMessage defaultMessage="New balance" />:
                         </div>
                         <div
-                          style={{ textAlign: 'end', fontFamily: 'monospace' }}
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                          }}
                         >
-                          {(executionEtherBalance - etherAmount).toFixed(9)}{' '}
-                          {TICKER_NAME}
+                          {newBalance.toFixed(9)} {TICKER_NAME}
+                        </div>
+                      </Text>
+                    )}
+                    {executionEtherBalance && etherFeeEstimate && (
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                          fontSize: '0.875rem',
+                          color: 'gray',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Max fee" />:
+                        </div>
+                        <div
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                            letterSpacing: '0.145rem',
+                          }}
+                        >
+                          -{etherFeeEstimate.toFixed(9)} {TICKER_NAME}
                         </div>
                       </Text>
                     )}
@@ -356,7 +416,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                     style={{
                       fontFamily: 'monospace',
                       fontSize: '1rem',
-                      color: 'darkred',
+                      color: 'darkgreen',
                     }}
                   >
                     {etherAmount.toFixed(9)} {TICKER_NAME}
@@ -457,7 +517,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                 </div>
               </div>
 
-              {!showTx && MIN_DEPOSIT_ETHER === maxEtherAmount && (
+              {!showTx && MIN_DEPOSIT_ETHER === etherMaxUseful && (
                 <Alert variant="warning">
                   <AlertContent>
                     <AlertIcon />
@@ -499,7 +559,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                 color="dark-3"
                 fullWidth
                 type="submit"
-                disabled={!etherAmount}
+                disabled={!etherAmount || insufficientFunds}
               />
             )}
             {signTxStatus === 'error' && (

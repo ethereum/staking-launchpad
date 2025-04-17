@@ -22,6 +22,9 @@ export type TxConfigQueue = {
   queue: Queue;
 };
 
+const COMPOUNDING_FEE_ADDITION = 3;
+const WITHDRAWAL_FEE_ADDITION = 6;
+
 const getRequiredFee = (queueLength: BigNumber): BigNumber => {
   let i = new BigNumber(1);
   let output = new BigNumber(0);
@@ -33,7 +36,7 @@ const getRequiredFee = (queueLength: BigNumber): BigNumber => {
     i = i.plus(1);
   }
 
-  return output.dividedBy(17);
+  return output.dividedToIntegerBy(17);
 };
 
 export const getCompoundingQueueLength = async (
@@ -64,7 +67,10 @@ export const getCompoundingQueueLength = async (
 export const getCompoundingQueue = async (web3: Web3): Promise<Queue> => {
   const length = await getCompoundingQueueLength(web3);
 
-  const fee = getRequiredFee(length);
+  // Add to the queue length to reduce the likelihood of transaction failure
+  const appendedFeeSize = length.plus(COMPOUNDING_FEE_ADDITION);
+
+  const fee = getRequiredFee(appendedFeeSize);
 
   return { length, fee };
 };
@@ -97,7 +103,10 @@ export const getWithdrawalQueueLength = async (
 export const getWithdrawalQueue = async (web3: Web3): Promise<Queue> => {
   const length = await getWithdrawalQueueLength(web3);
 
-  const fee = getRequiredFee(length);
+  // Add to the queue length to reduce the likelihood of transaction failure
+  const appendedFeeSize = length.plus(WITHDRAWAL_FEE_ADDITION);
+
+  const fee = getRequiredFee(appendedFeeSize);
 
   return { length, fee };
 };

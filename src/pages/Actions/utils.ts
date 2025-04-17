@@ -4,10 +4,15 @@ import Web3 from 'web3';
 import { TransactionConfig } from 'web3-core';
 import {
   COMPOUNDING_CONTRACT_ADDRESS,
-  WITHDRAWAL_CONTRACT_ADDRESS,
-  TICKER_NAME,
+  COMPOUNDING_FEE_ADDITION,
   EXCESS_INHIBITOR,
+<<<<<<< HEAD
   SHARD_COMMITTEE_PERIOD,
+=======
+  TICKER_NAME,
+  WITHDRAWAL_CONTRACT_ADDRESS,
+  WITHDRAWAL_FEE_ADDITION,
+>>>>>>> 3340b33 (Adding compounding/withdrawal fee addition as env param)
 } from '../../utils/envVars';
 import { BeaconChainValidator } from '../TopUp/types';
 import { currentEpoch } from '../../utils/beaconchain';
@@ -21,9 +26,6 @@ export type TxConfigQueue = {
   transactionParams: TransactionConfig;
   queue: Queue;
 };
-
-const COMPOUNDING_FEE_ADDITION = 3;
-const WITHDRAWAL_FEE_ADDITION = 6;
 
 const getRequiredFee = (queueLength: BigNumber): BigNumber => {
   let i = new BigNumber(1);
@@ -125,7 +127,7 @@ export const generateCompoundParams = async (
     from: address,
     // calldata (96 bytes): sourceValidator.pubkey (48 bytes) + targetValidator.pubkey (48 bytes)
     data: `0x${source.substring(2)}${target.substring(2)}`,
-    value: queue.fee.toString(),
+    value: queue.fee.toFixed(0),
     gas: 200000,
   };
 
@@ -146,7 +148,7 @@ export const generateWithdrawalParams = async (
     from: address,
     // calldata (56 bytes): sourceValidator.pubkey (48 bytes) + amount (8 bytes)
     data: `0x${pubkey.substring(2)}${amount.toString(16).padStart(16, '0')}`,
-    value: queue.fee.toString(),
+    value: queue.fee.toFixed(0),
     gas: 200000,
   };
   return { transactionParams, queue };

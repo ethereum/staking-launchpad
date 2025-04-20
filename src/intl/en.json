@@ -489,6 +489,9 @@
   "5v36Is": {
     "message": "Exiting a {client} validator"
   },
+  "5w6WCG": {
+    "message": "Withdraw requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the amount you request to withdraw."
+  },
   "63gLLu": {
     "message": "average"
   },
@@ -2664,6 +2667,9 @@
   "jM+e2M": {
     "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
   },
+  "jQ+xag": {
+    "message": "Consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount."
+  },
   "jVlgXS": {
     "message": "Dig deeper into the Ethereum roadmap."
   },
@@ -3061,6 +3067,9 @@
   "ouW9ov": {
     "message": "Your validators"
   },
+  "ovXvfi": {
+    "message": "Exit requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the validator balance that is being exited."
+  },
   "ox304v": {
     "message": "An error occurred"
   },
@@ -3341,6 +3350,9 @@
   },
   "tzMNF3": {
     "message": "Status"
+  },
+  "tzr3AP": {
+    "message": "Upgrading and consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount."
   },
   "u/3saa": {
     "message": "Your wallet is on the wrong Ethereum network. To continue, connect to {executionLayerName}."

@@ -157,6 +157,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   <Text style={{ fontSize: '1rem' }}>
                     <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
+                  <Text>
+                    <FormattedMessage defaultMessage="Exit requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the validator balance that is being exited." />
+                  </Text>
                   <ul
                     style={{
                       paddingInlineStart: '1.5rem',

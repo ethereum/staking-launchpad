@@ -438,6 +438,9 @@ const PullConsolidation = ({
                   <Text>
                     <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
+                  <Text>
+                    <FormattedMessage defaultMessage="Consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount." />
+                  </Text>
                   <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
                     <li>
                       <Text as="span">

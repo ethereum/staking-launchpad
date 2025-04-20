@@ -679,6 +679,12 @@
       "value": "Check deposit contract details"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -1367,12 +1373,6 @@
     {
       "type": 0,
       "value": " validator"
-    }
-  ],
-  "5w6WCG": [
-    {
-      "type": 0,
-      "value": "Withdraw requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the amount you request to withdraw."
     }
   ],
   "63gLLu": [
@@ -2625,6 +2625,12 @@
     {
       "type": 0,
       "value": "5. Time to deposit"
+    }
+  ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
     }
   ],
   "EXLB88": [
@@ -4339,6 +4345,12 @@
       "value": "Your network has changed"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -5093,6 +5105,12 @@
     {
       "type": 0,
       "value": "I am certain that the validator I am topping up is my validator."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
     }
   ],
   "Vm6cRY": [
@@ -7025,12 +7043,6 @@
       "value": "TICKER_NAME"
     }
   ],
-  "jQ+xag": [
-    {
-      "type": 0,
-      "value": "Consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount."
-    }
-  ],
   "jVlgXS": [
     {
       "type": 0,
@@ -8049,12 +8061,6 @@
       "value": "Your validators"
     }
   ],
-  "ovXvfi": [
-    {
-      "type": 0,
-      "value": "Exit requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the validator balance that is being exited."
-    }
-  ],
   "ox304v": [
     {
       "type": 0,
@@ -8819,12 +8825,6 @@
     {
       "type": 0,
       "value": "Status"
-    }
-  ],
-  "tzr3AP": [
-    {
-      "type": 0,
-      "value": "Upgrading and consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount."
     }
   ],
   "u/3saa": [

@@ -260,6 +260,9 @@
   "1fytak": {
     "message": "Check deposit contract details"
   },
+  "1iI5Ju": {
+    "message": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "1ingnQ": {
     "message": "More on Ethereum staking economics"
   },
@@ -488,9 +491,6 @@
   },
   "5v36Is": {
     "message": "Exiting a {client} validator"
-  },
-  "5w6WCG": {
-    "message": "Withdraw requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the amount you request to withdraw."
   },
   "63gLLu": {
     "message": "average"
@@ -992,6 +992,9 @@
   },
   "EThT2C": {
     "message": "5. Time to deposit"
+  },
+  "ETn48e": {
+    "message": "Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
   },
   "EXLB88": {
     "message": "This is a test network ⚠️"
@@ -1638,6 +1641,9 @@
   "P9mVZK": {
     "message": "Your network has changed"
   },
+  "PF61Eu": {
+    "message": "Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "PHZO0L": {
     "message": "Launchpad walkthrough tutorial"
   },
@@ -1953,6 +1959,9 @@
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
+  },
+  "VlItBm": {
+    "message": "Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
   },
   "Vm6cRY": {
     "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
@@ -2667,9 +2676,6 @@
   "jM+e2M": {
     "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
   },
-  "jQ+xag": {
-    "message": "Consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount."
-  },
   "jVlgXS": {
     "message": "Dig deeper into the Ethereum roadmap."
   },
@@ -3067,9 +3073,6 @@
   "ouW9ov": {
     "message": "Your validators"
   },
-  "ovXvfi": {
-    "message": "Exit requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount not the validator balance that is being exited."
-  },
   "ox304v": {
     "message": "An error occurred"
   },
@@ -3350,9 +3353,6 @@
   },
   "tzMNF3": {
     "message": "Status"
-  },
-  "tzr3AP": {
-    "message": "Upgrading and consolidation requests go into a separate queue, requiring a small fee to join. The fee, which is minimal when the queue is short, will be shown as your transaction's send amount."
   },
   "u/3saa": {
     "message": "Your wallet is on the wrong Ethereum network. To continue, connect to {executionLayerName}."

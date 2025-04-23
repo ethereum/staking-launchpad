@@ -6,13 +6,10 @@ import {
   COMPOUNDING_CONTRACT_ADDRESS,
   COMPOUNDING_FEE_ADDITION,
   EXCESS_INHIBITOR,
-<<<<<<< HEAD
   SHARD_COMMITTEE_PERIOD,
-=======
   TICKER_NAME,
   WITHDRAWAL_CONTRACT_ADDRESS,
   WITHDRAWAL_FEE_ADDITION,
->>>>>>> 3340b33 (Adding compounding/withdrawal fee addition as env param)
 } from '../../utils/envVars';
 import { BeaconChainValidator } from '../TopUp/types';
 import { currentEpoch } from '../../utils/beaconchain';

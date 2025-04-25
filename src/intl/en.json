@@ -623,6 +623,9 @@
   "8HxLGA": {
     "message": "Configure Teku"
   },
+  "8J6IfS": {
+    "message": "Filter your validators by index or pubkey or search by pubkey"
+  },
   "8JtiQS": {
     "message": "Does the contract address listed on the website match?"
   },
@@ -631,6 +634,9 @@
   },
   "8VlOTO": {
     "message": "Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type."
+  },
+  "8WAAtu": {
+    "message": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow."
   },
   "8WtyrD": {
     "message": "Spanish"
@@ -658,9 +664,6 @@
   },
   "8rxaqc": {
     "message": "{withdrawableEpochLabel} - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
-  },
-  "8uE+mp": {
-    "message": "Filter by index or pubkey"
   },
   "8uq59n": {
     "message": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
@@ -785,6 +788,9 @@
   },
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
+  },
+  "Atjyqe": {
+    "message": "Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it."
   },
   "Aw1mMs": {
     "message": "Top up validator"
@@ -1750,6 +1756,9 @@
   "RWqrlk": {
     "message": "congratulations"
   },
+  "Ra6IrH": {
+    "message": "Target validator is not associated with your current wallet!"
+  },
   "RhR6+a": {
     "message": "We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons."
   },
@@ -2521,6 +2530,9 @@
   },
   "gXVf9n": {
     "message": "Latest Reth Benchmarks"
+  },
+  "gddfK3": {
+    "message": "Please type the target validator index ({targetIndex}) to acknowledge you understand where your validator balance is being transferred to."
   },
   "gfLdAQ": {
     "message": "More on the Beacon Chain"
@@ -3401,6 +3413,9 @@
   },
   "ubKWX8": {
     "message": "Generate key pairs"
+  },
+  "udj2WS": {
+    "message": "More on upgrading a validator with Type 0 credentials."
   },
   "uhapiE": {
     "message": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."

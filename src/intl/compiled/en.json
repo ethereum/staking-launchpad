@@ -1737,6 +1737,12 @@
       "value": "Configure Teku"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Filter your validators by index or pubkey or search by pubkey"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1753,6 +1759,12 @@
     {
       "type": 0,
       "value": "Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type."
+    }
+  ],
+  "8WAAtu": [
+    {
+      "type": 0,
+      "value": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow."
     }
   ],
   "8WtyrD": [
@@ -1823,12 +1835,6 @@
     {
       "type": 0,
       "value": " - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Filter by index or pubkey"
     }
   ],
   "8uq59n": [
@@ -2119,6 +2125,12 @@
     {
       "type": 0,
       "value": "Become a validator with Lighthouse"
+    }
+  ],
+  "Atjyqe": [
+    {
+      "type": 0,
+      "value": "Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it."
     }
   ],
   "Aw1mMs": [
@@ -4597,6 +4609,12 @@
       "value": "congratulations"
     }
   ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "Target validator is not associated with your current wallet!"
+    }
+  ],
   "RhR6+a": [
     {
       "type": 0,
@@ -6633,6 +6651,20 @@
     {
       "type": 0,
       "value": "Latest Reth Benchmarks"
+    }
+  ],
+  "gddfK3": [
+    {
+      "type": 0,
+      "value": "Please type the target validator index ("
+    },
+    {
+      "type": 1,
+      "value": "targetIndex"
+    },
+    {
+      "type": 0,
+      "value": ") to acknowledge you understand where your validator balance is being transferred to."
     }
   ],
   "gfLdAQ": [
@@ -9025,6 +9057,12 @@
     {
       "type": 0,
       "value": "Generate key pairs"
+    }
+  ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "More on upgrading a validator with Type 0 credentials."
     }
   ],
   "uhapiE": [

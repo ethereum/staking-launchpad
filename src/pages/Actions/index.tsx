@@ -29,6 +29,7 @@ import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
 import { BEACONCHAIN_URL, MAX_QUERY_LIMIT } from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
+import { fetchValidatorsByPubkeys } from './utils';
 
 const FakeLink = styled.span`
   color: blue;
@@ -123,29 +124,6 @@ const fetchPubkeysByWithdrawalAddress = async (
   } catch (error) {
     console.warn(
       `Error fetching pubkeys (address ${address}, limit ${limit}, offset ${offset}):`,
-      error
-    );
-    return null;
-  }
-};
-
-const fetchValidatorsByPubkeys = async (
-  pubkeys: string[]
-): Promise<BeaconChainValidator[] | null> => {
-  try {
-    const response = await fetch(
-      `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(',')}`
-    );
-    if (!response.ok) throw new Error();
-    const json = await response.json();
-    const data: BeaconChainValidator[] = Array.isArray(json.data)
-      ? json.data
-      : [json.data];
-
-    return data;
-  } catch (error) {
-    console.warn(
-      `Error fetching validators (pubkeys ${pubkeys.join(',')}):`,
       error
     );
     return null;

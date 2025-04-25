@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useEffect, useMemo, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { Box, Layer } from 'grommet';
+import { Box, Form, Layer, TextInput } from 'grommet';
 import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -26,12 +27,14 @@ import {
 import ValidatorSelector from './ValidatorSelector';
 
 import { generateCompoundParams } from '../utils';
-import { TICKER_NAME } from '../../../utils/envVars';
-import { getEtherBalance } from '../../../utils/validators';
+import { COMPOUNDING_CREDENTIALS, TICKER_NAME } from '../../../utils/envVars';
+import { getCredentialType, getEtherBalance } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 
 import { useCompoundingQueue } from '../../../hooks/useCompoundingQueue';
 import { useTxModal } from '../../../hooks/useTxModal';
+import { ValidatorType } from '../types';
+import { Link } from '../../../components/Link';
 
 type PushConsolidationProps = {
   sourceValidator: BeaconChainValidator; // The selected validator to migrate funds from (source)
@@ -57,14 +60,23 @@ const PushConsolidation = ({
   } = useTxModal();
   const { queue, setQueue } = useCompoundingQueue(!showTx);
 
+  const [userConfirmationValue, setUserConfirmationValue] = useState<string>(
+    ''
+  );
+
   const [
     targetValidator,
     setTargetValidator,
   ] = useState<BeaconChainValidator | null>(null);
 
+  useEffect(() => {
+    setUserConfirmationValue('');
+  }, [targetValidator]);
+
   const resetState = () => {
     resetTxModal();
     setTargetValidator(null);
+    setUserConfirmationValue('');
   };
 
   const handleOpen = () => {
@@ -123,6 +135,36 @@ const PushConsolidation = ({
     return <FormattedMessage defaultMessage="Finish" />;
   };
 
+  const matchingCredentials = useMemo(() => {
+    if (!sourceValidator || !targetValidator) {
+      return false;
+    }
+
+    return (
+      sourceValidator.withdrawalcredentials.substring(4) ===
+      targetValidator.withdrawalcredentials.substring(4)
+    );
+  }, [sourceValidator, targetValidator]);
+
+  const validCredentials = useMemo(() => {
+    if (targetValidator) {
+      return (
+        +targetValidator.withdrawalcredentials.slice(0, 4) >=
+        +COMPOUNDING_CREDENTIALS
+      );
+    }
+  }, [targetValidator]);
+
+  const validConfirmationMessage = useMemo(() => {
+    if (targetValidator && !matchingCredentials) {
+      return (
+        userConfirmationValue.trim() === `${targetValidator.validatorindex}`
+      );
+    }
+
+    return true;
+  }, [matchingCredentials, userConfirmationValue, targetValidator]);
+
   return (
     <>
       <Button
@@ -160,6 +202,7 @@ const PushConsolidation = ({
                     />
                   </div>
                   <ValidatorSelector
+                    allowSearch
                     validators={targetValidatorSet}
                     selectedValidator={targetValidator}
                     setSelectedValidator={setTargetValidator}
@@ -221,12 +264,50 @@ const PushConsolidation = ({
                 </ModalContent>
               )}
 
-              {targetValidator && !showTx && (
+              {targetValidator && validCredentials === false && (
                 <div style={{ marginBottom: '1.5rem' }}>
-                  <Alert variant="warning">
+                  <Alert variant={'error'}>
                     <AlertContent>
                       <AlertIcon />
                       <div>
+                        <Text style={{ marginBottom: '1rem' }}>
+                          <strong>
+                            <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
+                          </strong>
+                        </Text>
+                        {getCredentialType(targetValidator) ===
+                          ValidatorType.BLS && (
+                          <Text>
+                            <Link inline primary to="/withdrawals">
+                              <FormattedMessage defaultMessage="More on upgrading a validator with Type 0 credentials." />
+                            </Link>
+                          </Text>
+                        )}
+                        {getCredentialType(targetValidator) ===
+                          ValidatorType.Execution && (
+                          <Text>
+                            <FormattedMessage defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow." />
+                          </Text>
+                        )}
+                      </div>
+                    </AlertContent>
+                  </Alert>
+                </div>
+              )}
+
+              {targetValidator && !showTx && validCredentials && (
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <Alert variant={matchingCredentials ? 'warning' : 'error'}>
+                    <AlertContent>
+                      <AlertIcon />
+                      <div>
+                        {!matchingCredentials && (
+                          <Text style={{ marginBottom: '1rem' }}>
+                            <strong>
+                              <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
+                            </strong>
+                          </Text>
+                        )}
                         <Text>
                           <strong>
                             <FormattedMessage
@@ -471,33 +552,74 @@ const PushConsolidation = ({
               )}
             </ModalBody>
           </Box>
-          <ModalFooter>
-            <QueueWarning queue={queue} />
+          {targetValidator && validCredentials && (
+            <ModalFooter>
+              <QueueWarning queue={queue} />
 
-            {!['error', 'complete'].includes(signTxStatus) && (
-              <Button
-                fullWidth
-                destructive
-                disabled={!targetValidator}
-                label={getModalButtonLabel()}
-                onClick={createConsolidationTransaction}
-              />
-            )}
-            {signTxStatus === 'error' && (
-              <Button
-                label={<FormattedMessage defaultMessage="Try again" />}
-                onClick={createConsolidationTransaction}
-                destructive
-                secondary
-              />
-            )}
-            {signTxStatus === 'complete' && (
-              <Button
-                label={<FormattedMessage defaultMessage="Finish" />}
-                onClick={resetState}
-              />
-            )}
-          </ModalFooter>
+              {!showTx && !matchingCredentials && targetValidator && (
+                <Form
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem',
+                  }}
+                >
+                  <label
+                    htmlFor="confirm-push-input"
+                    style={{ marginBottom: '0.25rem' }}
+                  >
+                    <Text>
+                      <FormattedMessage
+                        defaultMessage="Please type the target validator index ({targetIndex}) to acknowledge you understand where your validator balance is being transferred to."
+                        values={{
+                          targetIndex: (
+                            <strong>{targetValidator.validatorindex}</strong>
+                          ),
+                        }}
+                      />
+                    </Text>
+                  </label>
+                  <TextInput
+                    id="confirm-push-input"
+                    name="confirm-push-input"
+                    value={userConfirmationValue}
+                    onChange={event =>
+                      setUserConfirmationValue(event.target.value)
+                    }
+                    style={{ background: 'white', border: '1px solid #ccc' }}
+                  />
+                </Form>
+              )}
+
+              {!['error', 'complete'].includes(signTxStatus) && (
+                <Button
+                  fullWidth
+                  destructive
+                  disabled={
+                    !targetValidator ||
+                    (!matchingCredentials && !validConfirmationMessage)
+                  }
+                  label={getModalButtonLabel()}
+                  onClick={createConsolidationTransaction}
+                />
+              )}
+              {signTxStatus === 'error' && (
+                <Button
+                  label={<FormattedMessage defaultMessage="Try again" />}
+                  onClick={createConsolidationTransaction}
+                  destructive
+                  secondary
+                />
+              )}
+              {signTxStatus === 'complete' && (
+                <Button
+                  label={<FormattedMessage defaultMessage="Finish" />}
+                  onClick={resetState}
+                />
+              )}
+            </ModalFooter>
+          )}
         </Layer>
       )}
     </>

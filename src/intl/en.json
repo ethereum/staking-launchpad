@@ -865,6 +865,9 @@
   "CT+gEC": {
     "message": "Upload to Beacon Node {btec} pool"
   },
+  "CUd95N": {
+    "message": "Compounding accounts are eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+  },
   "CWKE9c": {
     "message": "Your wallet is on the wrong network. Switch to {executionLayerName}"
   },
@@ -2461,9 +2464,6 @@
   },
   "fnMHGO": {
     "message": "Waiting for wallet confirmation"
-  },
-  "fnV2qn": {
-    "message": "Compounding accounts eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
   },
   "fpe4Gx": {
     "message": "Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"

@@ -136,10 +136,8 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                 <AlertContent>
                   <AlertIcon />
                   <div>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="This validator account will be permanently upgraded to a compounding (Type 2) account." />
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="This validator account will be permanently upgraded to a compounding (Type 2) account." />
                     </Text>
                   </div>
                 </AlertContent>
@@ -171,7 +169,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                     <li>
                       <Text as="span">
                         <FormattedMessage
-                          defaultMessage="Compounding accounts eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
+                          defaultMessage="Compounding accounts are eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
                           values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
                         />
                       </Text>

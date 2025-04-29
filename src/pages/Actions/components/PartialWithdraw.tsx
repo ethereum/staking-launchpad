@@ -191,11 +191,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       description="'Unstake' refers to this ETH no longer being considered at 'stake' nor contributing to consensus."
                     />
                   </Heading>
-                  <Text>
-                    <strong>
-                      <FormattedMessage defaultMessage="Index" />:{' '}
-                      {validator.validatorindex}
-                    </strong>
+                  <Text className="text-bold">
+                    <FormattedMessage defaultMessage="Index" />:{' '}
+                    {validator.validatorindex}
                   </Text>
                   <Text
                     style={{
@@ -301,10 +299,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   >
                     <FormattedMessage defaultMessage="Withdraw to" />
                   </Heading>
-                  <Text>
-                    <strong>
-                      <FormattedMessage defaultMessage="Execution account" />:
-                    </strong>
+                  <Text className="text-bold">
+                    <FormattedMessage defaultMessage="Execution account" />:
                   </Text>
                   <Text
                     style={{

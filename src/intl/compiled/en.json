@@ -3035,6 +3035,20 @@
       "value": "Configure your execution client"
     }
   ],
+  "HV2kN4": [
+    {
+      "type": 0,
+      "value": "Please type 'I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF "
+    },
+    {
+      "type": 1,
+      "value": "targetIndex"
+    },
+    {
+      "type": 0,
+      "value": "' to acknowledge you understand where your validator balance is being transferred to."
+    }
+  ],
   "HX93/h": [
     {
       "type": 0,
@@ -4731,12 +4745,6 @@
     {
       "type": 0,
       "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
-    }
-  ],
-  "Sa8NCw": [
-    {
-      "type": 0,
-      "value": "No eligible target accounts found."
     }
   ],
   "SaR1pU": [
@@ -6651,20 +6659,6 @@
     {
       "type": 0,
       "value": "Latest Reth Benchmarks"
-    }
-  ],
-  "gddfK3": [
-    {
-      "type": 0,
-      "value": "Please type the target validator index ("
-    },
-    {
-      "type": 1,
-      "value": "targetIndex"
-    },
-    {
-      "type": 0,
-      "value": ") to acknowledge you understand where your validator balance is being transferred to."
     }
   ],
   "gfLdAQ": [

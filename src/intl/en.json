@@ -1156,6 +1156,9 @@
   "HMgrdg": {
     "message": "Configure your execution client"
   },
+  "HV2kN4": {
+    "message": "Please type 'I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF {targetIndex}' to acknowledge you understand where your validator balance is being transferred to."
+  },
   "HX93/h": {
     "message": "Setting a withdrawal address is considered best security practice. If this is not provided now, your deposited funds will remain locked on the Beacon Chain until an address is provided. Unlocking will require signing a message with your BLS withdrawal keys, generated from your mnemonic seed phrase (so keep it safe)."
   },
@@ -1810,9 +1813,6 @@
   },
   "SVUntz": {
     "message": "Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
-  },
-  "Sa8NCw": {
-    "message": "No eligible target accounts found."
   },
   "SaR1pU": {
     "message": "Deposit already exists"
@@ -2530,9 +2530,6 @@
   },
   "gXVf9n": {
     "message": "Latest Reth Benchmarks"
-  },
-  "gddfK3": {
-    "message": "Please type the target validator index ({targetIndex}) to acknowledge you understand where your validator balance is being transferred to."
   },
   "gfLdAQ": {
     "message": "More on the Beacon Chain"

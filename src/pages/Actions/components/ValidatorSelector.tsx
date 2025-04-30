@@ -28,6 +28,7 @@ const AccountType = styled.p`
 
 type ValidatorSelectorProps = {
   allowSearch?: boolean;
+  autoSelect?: boolean;
   validators: BeaconChainValidator[];
   setSelectedValidator: Dispatch<SetStateAction<BeaconChainValidator | null>>;
   selectedValidator: BeaconChainValidator | null;
@@ -35,6 +36,7 @@ type ValidatorSelectorProps = {
 
 const ValidatorSelector = ({
   allowSearch = false,
+  autoSelect = true,
   validators,
   setSelectedValidator,
   selectedValidator,
@@ -43,9 +45,10 @@ const ValidatorSelector = ({
 
   // If only one validator, select it by default
   useEffect(() => {
+    if (!autoSelect) return;
     if (validators.length !== 1) return;
     setSelectedValidator(validators[0]);
-  }, [validators, setSelectedValidator]);
+  }, [autoSelect, validators, setSelectedValidator]);
 
   const onValidatorSearch = async (value: string) => {
     // Check if user is searching by validator pubkey

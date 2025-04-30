@@ -250,11 +250,6 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
             <FormattedMessage defaultMessage="Migrate funds" />
           </ActionTitle>
           <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />{' '}
-          {targetValidatorSet.length < 1 && (
-            <em>
-              <FormattedMessage defaultMessage="No eligible target accounts found." />
-            </em>
-          )}
         </div>
         <PushConsolidation
           sourceValidator={validator}

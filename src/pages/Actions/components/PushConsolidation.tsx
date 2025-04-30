@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useMemo, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { Box, Form, Layer, TextInput } from 'grommet';
+import { Form, Layer, TextInput } from 'grommet';
 import { Alert as AlertIcon, LinkDown as DownIcon } from 'grommet-icons';
 import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -158,7 +158,8 @@ const PushConsolidation = ({
   const validConfirmationMessage = useMemo(() => {
     if (targetValidator && !matchingCredentials) {
       return (
-        userConfirmationValue.trim() === `${targetValidator.validatorindex}`
+        userConfirmationValue.trim().toLowerCase() ===
+        `i transfer my full validator balance to the owner of ${targetValidator.validatorindex}`
       );
     }
 
@@ -170,7 +171,6 @@ const PushConsolidation = ({
       <Button
         label={<FormattedMessage defaultMessage="Migrate funds" />}
         destructive
-        disabled={targetValidatorSet.length < 1}
         onClick={handleOpen}
       />
 
@@ -181,377 +181,376 @@ const PushConsolidation = ({
           onClickOutside={resetState}
           style={modalLayerStyle}
         >
-          <Box>
-            <ModalHeader onClose={resetState}>
-              <FormattedMessage defaultMessage="Migrate and exit validator" />
-            </ModalHeader>
-            <ModalBody>
-              {!showTx && (
-                <div style={{ marginBottom: '1.5rem' }}>
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <FormattedMessage
-                      defaultMessage="Which validator would you like to {migrateFundsTo}?"
-                      description="{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually"
-                      values={{
-                        migrateFundsTo: (
-                          <strong>
-                            <FormattedMessage defaultMessage="migrate funds to" />
-                          </strong>
-                        ),
-                      }}
-                    />
-                  </div>
-                  <ValidatorSelector
-                    allowSearch
-                    validators={targetValidatorSet}
-                    selectedValidator={targetValidator}
-                    setSelectedValidator={setTargetValidator}
+          <ModalHeader onClose={resetState}>
+            <FormattedMessage defaultMessage="Migrate and exit validator" />
+          </ModalHeader>
+          <ModalBody>
+            {!showTx && (
+              <div style={{ marginBottom: '1.5rem' }}>
+                <div style={{ marginBottom: '0.5rem' }}>
+                  <FormattedMessage
+                    defaultMessage="Which validator would you like to {migrateFundsTo}?"
+                    description="{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually"
+                    values={{
+                      migrateFundsTo: (
+                        <strong>
+                          <FormattedMessage defaultMessage="migrate funds to" />
+                        </strong>
+                      ),
+                    }}
                   />
                 </div>
-              )}
+                <ValidatorSelector
+                  allowSearch
+                  autoSelect={false}
+                  validators={targetValidatorSet}
+                  selectedValidator={targetValidator}
+                  setSelectedValidator={setTargetValidator}
+                />
+              </div>
+            )}
 
-              {!targetValidator && (
-                <ModalContent>
-                  <Text>
-                    <FormattedMessage
-                      defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
-                      values={{
-                        exiting: (
-                          <strong>
-                            <FormattedMessage
-                              defaultMessage="exiting index {sourceIndex}"
-                              values={{
-                                sourceIndex: sourceValidator.validatorindex,
-                              }}
-                            />
-                          </strong>
-                        ),
-                      }}
-                    />
-                  </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
-                  </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
-                  </Text>
-                  <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
-                    <li>
-                      <Text as="span">
-                        <FormattedMessage defaultMessage="Action is permanent and irreversible" />
-                      </Text>
-                    </li>
-                    <li>
-                      <Text as="span">
-                        <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
-                      </Text>
-                    </li>
-                    <li>
-                      <Text as="span">
-                        <FormattedMessage
-                          defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
-                          values={{
-                            transferredToDestination: (
-                              <strong>
-                                <FormattedMessage defaultMessage="transferred to the validator you select above" />
-                              </strong>
-                            ),
-                          }}
-                        />
-                      </Text>
-                    </li>
-                  </ul>
-                </ModalContent>
-              )}
+            {!targetValidator && (
+              <ModalContent>
+                <Text>
+                  <FormattedMessage
+                    defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
+                    values={{
+                      exiting: (
+                        <strong>
+                          <FormattedMessage
+                            defaultMessage="exiting index {sourceIndex}"
+                            values={{
+                              sourceIndex: sourceValidator.validatorindex,
+                            }}
+                          />
+                        </strong>
+                      ),
+                    }}
+                  />
+                </Text>
+                <Text>
+                  <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
+                </Text>
+                <Text>
+                  <FormattedMessage defaultMessage="Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                </Text>
+                <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
+                  <li>
+                    <Text as="span">
+                      <FormattedMessage defaultMessage="Action is permanent and irreversible" />
+                    </Text>
+                  </li>
+                  <li>
+                    <Text as="span">
+                      <FormattedMessage defaultMessage="Account still responsible for consensus duties until exit epoch reached (keep validator online)" />
+                    </Text>
+                  </li>
+                  <li>
+                    <Text as="span">
+                      <FormattedMessage
+                        defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
+                        values={{
+                          transferredToDestination: (
+                            <strong>
+                              <FormattedMessage defaultMessage="transferred to the validator you select above" />
+                            </strong>
+                          ),
+                        }}
+                      />
+                    </Text>
+                  </li>
+                </ul>
+              </ModalContent>
+            )}
 
-              {targetValidator && validCredentials === false && (
-                <div style={{ marginBottom: '1.5rem' }}>
-                  <Alert variant={'error'}>
-                    <AlertContent>
-                      <AlertIcon />
-                      <div>
+            {targetValidator && validCredentials === false && (
+              <div style={{ marginBottom: '1.5rem' }}>
+                <Alert variant={'error'}>
+                  <AlertContent>
+                    <AlertIcon />
+                    <div>
+                      <Text style={{ marginBottom: '1rem' }}>
+                        <strong>
+                          <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
+                        </strong>
+                      </Text>
+                      {getCredentialType(targetValidator) ===
+                        ValidatorType.BLS && (
+                        <Text>
+                          <Link inline primary to="/withdrawals">
+                            <FormattedMessage defaultMessage="More on upgrading a validator with Type 0 credentials." />
+                          </Link>
+                        </Text>
+                      )}
+                      {getCredentialType(targetValidator) ===
+                        ValidatorType.Execution && (
+                        <Text>
+                          <FormattedMessage defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow." />
+                        </Text>
+                      )}
+                    </div>
+                  </AlertContent>
+                </Alert>
+              </div>
+            )}
+
+            {targetValidator && !showTx && validCredentials && (
+              <div style={{ marginBottom: '1.5rem' }}>
+                <Alert variant={matchingCredentials ? 'warning' : 'error'}>
+                  <AlertContent>
+                    <AlertIcon />
+                    <div>
+                      {!matchingCredentials && (
                         <Text style={{ marginBottom: '1rem' }}>
                           <strong>
-                            <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
+                            <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
                           </strong>
                         </Text>
-                        {getCredentialType(targetValidator) ===
-                          ValidatorType.BLS && (
-                          <Text>
-                            <Link inline primary to="/withdrawals">
-                              <FormattedMessage defaultMessage="More on upgrading a validator with Type 0 credentials." />
-                            </Link>
-                          </Text>
-                        )}
-                        {getCredentialType(targetValidator) ===
-                          ValidatorType.Execution && (
-                          <Text>
-                            <FormattedMessage defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow." />
-                          </Text>
-                        )}
-                      </div>
-                    </AlertContent>
-                  </Alert>
-                </div>
-              )}
+                      )}
+                      <Text>
+                        <strong>
+                          <FormattedMessage
+                            defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
+                            values={{
+                              sourceIndex: sourceValidator.validatorindex,
+                              targetIndex: targetValidator.validatorindex,
+                            }}
+                          />
+                        </strong>
+                      </Text>
+                      <Text style={{ fontSize: '1rem' }}>
+                        <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
+                      </Text>
+                    </div>
+                  </AlertContent>
+                </Alert>
+              </div>
+            )}
 
-              {targetValidator && !showTx && validCredentials && (
-                <div style={{ marginBottom: '1.5rem' }}>
-                  <Alert variant={matchingCredentials ? 'warning' : 'error'}>
-                    <AlertContent>
-                      <AlertIcon />
-                      <div>
-                        {!matchingCredentials && (
-                          <Text style={{ marginBottom: '1rem' }}>
-                            <strong>
-                              <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
-                            </strong>
-                          </Text>
-                        )}
-                        <Text>
-                          <strong>
-                            <FormattedMessage
-                              defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
-                              values={{
-                                sourceIndex: sourceValidator.validatorindex,
-                                targetIndex: targetValidator.validatorindex,
-                              }}
-                            />
-                          </strong>
-                        </Text>
-                        <Text style={{ fontSize: '1rem' }}>
-                          <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
-                        </Text>
-                      </div>
-                    </AlertContent>
-                  </Alert>
-                </div>
-              )}
+            {targetValidator && (
+              <ModalContent>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <div
+                    style={{
+                      background: '#fff',
+                      padding: '1rem',
+                      maxWidth: '100%',
+                      borderRadius: '8px',
+                      border: '2px solid darkred',
+                    }}
+                  >
+                    <Heading
+                      level={3}
+                      style={{ textTransform: 'uppercase', color: 'darkred' }}
+                    >
+                      <FormattedMessage defaultMessage="Exit" />
+                    </Heading>
+                    <Text>
+                      <strong>
+                        <FormattedMessage defaultMessage="Index" />:{' '}
+                        {sourceValidator.validatorindex}
+                      </strong>
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: '14px',
+                        color: '#555',
+                        marginBottom: '0.5rem',
+                      }}
+                    >
+                      <Hash>{sourceValidator.pubkey}</Hash>
+                    </Text>
 
-              {targetValidator && (
-                <ModalContent>
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                      }}
+                    >
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Balance" />:
+                        </div>
+                        <div
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                          }}
+                        >
+                          {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                          {TICKER_NAME}
+                        </div>
+                      </Text>
+
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="New balance" />:
+                        </div>
+                        <div
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                          }}
+                        >
+                          {(0).toFixed(9)} {TICKER_NAME}
+                        </div>
+                      </Text>
+                    </div>
+                  </div>
+
                   <div
                     style={{
                       display: 'flex',
-                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      margin: '0.25rem auto',
                     }}
                   >
-                    <div
+                    <DownIcon />
+                    <Text
                       style={{
-                        background: '#fff',
-                        padding: '1rem',
-                        maxWidth: '100%',
-                        borderRadius: '8px',
-                        border: '2px solid darkred',
+                        fontFamily: 'monospace',
+                        fontSize: '1rem',
+                        color: 'darkred',
                       }}
                     >
-                      <Heading
-                        level={3}
-                        style={{ textTransform: 'uppercase', color: 'darkred' }}
-                      >
-                        <FormattedMessage defaultMessage="Exit" />
-                      </Heading>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="Index" />:{' '}
-                          {sourceValidator.validatorindex}
-                        </strong>
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: '14px',
-                          color: '#555',
-                          marginBottom: '0.5rem',
-                        }}
-                      >
-                        <Hash>{sourceValidator.pubkey}</Hash>
-                      </Text>
-
-                      <div
-                        style={{
-                          display: 'grid',
-                          gridTemplateColumns: 'repeat(2, 1fr)',
-                        }}
-                      >
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Balance" />:
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                            }}
-                          >
-                            {getEtherBalance(sourceValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="New balance" />:
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                            }}
-                          >
-                            {(0).toFixed(9)} {TICKER_NAME}
-                          </div>
-                        </Text>
-                      </div>
-                    </div>
-
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        margin: '0.25rem auto',
-                      }}
-                    >
-                      <DownIcon />
-                      <Text
-                        style={{
-                          fontFamily: 'monospace',
-                          fontSize: '1rem',
-                          color: 'darkred',
-                        }}
-                      >
-                        {getEtherBalance(sourceValidator).toFixed(9)}{' '}
-                        {TICKER_NAME}
-                      </Text>
-                    </div>
-
-                    <div
-                      style={{
-                        background: '#fff',
-                        padding: '1rem',
-                        maxWidth: '100%',
-                        borderRadius: '8px',
-                        border: '2px solid darkgreen',
-                      }}
-                    >
-                      <Heading
-                        level={3}
-                        style={{
-                          textTransform: 'uppercase',
-                          color: 'darkgreen',
-                        }}
-                      >
-                        <FormattedMessage defaultMessage="Migrate to" />
-                      </Heading>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="Index" />:{' '}
-                          {targetValidator.validatorindex}
-                        </strong>
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: '14px',
-                          color: '#555',
-                          marginBottom: '0.5rem',
-                        }}
-                      >
-                        <Hash>{targetValidator.pubkey}</Hash>
-                      </Text>
-                      <div
-                        style={{
-                          display: 'grid',
-                          gridTemplateColumns: 'repeat(2, 1fr)',
-                        }}
-                      >
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="Current" />:
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                            }}
-                          >
-                            {getEtherBalance(targetValidator).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-
-                        <Text
-                          style={{
-                            display: 'grid',
-                            gridColumn: 'span 2',
-                            gridTemplateColumns: 'subgrid',
-                            columnGap: '0.5rem',
-                          }}
-                        >
-                          <div>
-                            <FormattedMessage defaultMessage="New balance" />:
-                          </div>
-                          <div
-                            style={{
-                              textAlign: 'end',
-                              fontFamily: 'monospace',
-                              color: 'darkgreen',
-                            }}
-                          >
-                            {(
-                              getEtherBalance(targetValidator) +
-                              getEtherBalance(sourceValidator)
-                            ).toFixed(9)}{' '}
-                            {TICKER_NAME}
-                          </div>
-                        </Text>
-                      </div>
-                    </div>
+                      {getEtherBalance(sourceValidator).toFixed(9)}{' '}
+                      {TICKER_NAME}
+                    </Text>
                   </div>
 
-                  {showTx && (
-                    <TransactionStatusInsert
-                      headerMessage={
-                        <>
-                          <span>{sourceValidator.validatorindex}</span>{' '}
-                          <span
-                            style={{
-                              transform: locale === 'ar' ? 'scale(-1)' : '',
-                            }}
-                          >
-                            {String.fromCodePoint(0x27a0)}
-                          </span>
-                          <span>{targetValidator.validatorindex}</span>
-                        </>
-                      }
-                      txHash={txHash}
-                      transactionStatus={txStatus}
-                    />
-                  )}
-                </ModalContent>
-              )}
-            </ModalBody>
-          </Box>
+                  <div
+                    style={{
+                      background: '#fff',
+                      padding: '1rem',
+                      maxWidth: '100%',
+                      borderRadius: '8px',
+                      border: '2px solid darkgreen',
+                    }}
+                  >
+                    <Heading
+                      level={3}
+                      style={{
+                        textTransform: 'uppercase',
+                        color: 'darkgreen',
+                      }}
+                    >
+                      <FormattedMessage defaultMessage="Migrate to" />
+                    </Heading>
+                    <Text>
+                      <strong>
+                        <FormattedMessage defaultMessage="Index" />:{' '}
+                        {targetValidator.validatorindex}
+                      </strong>
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: '14px',
+                        color: '#555',
+                        marginBottom: '0.5rem',
+                      }}
+                    >
+                      <Hash>{targetValidator.pubkey}</Hash>
+                    </Text>
+                    <div
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                      }}
+                    >
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="Current" />:
+                        </div>
+                        <div
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                          }}
+                        >
+                          {getEtherBalance(targetValidator).toFixed(9)}{' '}
+                          {TICKER_NAME}
+                        </div>
+                      </Text>
+
+                      <Text
+                        style={{
+                          display: 'grid',
+                          gridColumn: 'span 2',
+                          gridTemplateColumns: 'subgrid',
+                          columnGap: '0.5rem',
+                        }}
+                      >
+                        <div>
+                          <FormattedMessage defaultMessage="New balance" />:
+                        </div>
+                        <div
+                          style={{
+                            textAlign: 'end',
+                            fontFamily: 'monospace',
+                            color: 'darkgreen',
+                          }}
+                        >
+                          {(
+                            getEtherBalance(targetValidator) +
+                            getEtherBalance(sourceValidator)
+                          ).toFixed(9)}{' '}
+                          {TICKER_NAME}
+                        </div>
+                      </Text>
+                    </div>
+                  </div>
+                </div>
+
+                {showTx && (
+                  <TransactionStatusInsert
+                    headerMessage={
+                      <>
+                        <span>{sourceValidator.validatorindex}</span>{' '}
+                        <span
+                          style={{
+                            transform: locale === 'ar' ? 'scale(-1)' : '',
+                          }}
+                        >
+                          {String.fromCodePoint(0x27a0)}
+                        </span>
+                        <span>{targetValidator.validatorindex}</span>
+                      </>
+                    }
+                    txHash={txHash}
+                    transactionStatus={txStatus}
+                  />
+                )}
+              </ModalContent>
+            )}
+          </ModalBody>
           {targetValidator && validCredentials && (
             <ModalFooter>
               <QueueWarning queue={queue} />
@@ -571,11 +570,9 @@ const PushConsolidation = ({
                   >
                     <Text>
                       <FormattedMessage
-                        defaultMessage="Please type the target validator index ({targetIndex}) to acknowledge you understand where your validator balance is being transferred to."
+                        defaultMessage="Please type 'I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF {targetIndex}' to acknowledge you understand where your validator balance is being transferred to."
                         values={{
-                          targetIndex: (
-                            <strong>{targetValidator.validatorindex}</strong>
-                          ),
+                          targetIndex: targetValidator.validatorindex,
                         }}
                       />
                     </Text>

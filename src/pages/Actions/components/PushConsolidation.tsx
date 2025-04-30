@@ -155,6 +155,10 @@ const PushConsolidation = ({
     }
   }, [targetValidator]);
 
+  const validValidatorState = useMemo(() => {
+    return targetValidator && targetValidator.status === 'active_ongoing';
+  }, [targetValidator]);
+
   const validConfirmationMessage = useMemo(() => {
     if (targetValidator && !matchingCredentials) {
       return (
@@ -264,7 +268,26 @@ const PushConsolidation = ({
               </ModalContent>
             )}
 
-            {targetValidator && validCredentials === false && (
+            {/* eslint-disable-next-line no-nested-ternary */}
+            {targetValidator && !validValidatorState ? (
+              <div style={{ marginBottom: '1.5rem' }}>
+                <Alert variant={'error'}>
+                  <AlertContent>
+                    <AlertIcon />
+                    <div>
+                      <Text style={{ marginBottom: '1rem' }}>
+                        <strong>
+                          <FormattedMessage defaultMessage="Target validator is not active" />
+                        </strong>
+                      </Text>
+                      <Text>
+                        <FormattedMessage defaultMessage="A validator can only be consolidated to if it is in the proper state of active ongoing." />
+                      </Text>
+                    </div>
+                  </AlertContent>
+                </Alert>
+              </div>
+            ) : targetValidator && validCredentials === false ? (
               <div style={{ marginBottom: '1.5rem' }}>
                 <Alert variant={'error'}>
                   <AlertContent>
@@ -293,40 +316,43 @@ const PushConsolidation = ({
                   </AlertContent>
                 </Alert>
               </div>
-            )}
+            ) : null}
 
-            {targetValidator && !showTx && validCredentials && (
-              <div style={{ marginBottom: '1.5rem' }}>
-                <Alert variant={matchingCredentials ? 'warning' : 'error'}>
-                  <AlertContent>
-                    <AlertIcon />
-                    <div>
-                      {!matchingCredentials && (
-                        <Text style={{ marginBottom: '1rem' }}>
+            {targetValidator &&
+              !showTx &&
+              validCredentials &&
+              validValidatorState && (
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <Alert variant={matchingCredentials ? 'warning' : 'error'}>
+                    <AlertContent>
+                      <AlertIcon />
+                      <div>
+                        {!matchingCredentials && (
+                          <Text style={{ marginBottom: '1rem' }}>
+                            <strong>
+                              <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
+                            </strong>
+                          </Text>
+                        )}
+                        <Text>
                           <strong>
-                            <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
+                            <FormattedMessage
+                              defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
+                              values={{
+                                sourceIndex: sourceValidator.validatorindex,
+                                targetIndex: targetValidator.validatorindex,
+                              }}
+                            />
                           </strong>
                         </Text>
-                      )}
-                      <Text>
-                        <strong>
-                          <FormattedMessage
-                            defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
-                            values={{
-                              sourceIndex: sourceValidator.validatorindex,
-                              targetIndex: targetValidator.validatorindex,
-                            }}
-                          />
-                        </strong>
-                      </Text>
-                      <Text style={{ fontSize: '1rem' }}>
-                        <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
-                      </Text>
-                    </div>
-                  </AlertContent>
-                </Alert>
-              </div>
-            )}
+                        <Text style={{ fontSize: '1rem' }}>
+                          <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
+                        </Text>
+                      </div>
+                    </AlertContent>
+                  </Alert>
+                </div>
+              )}
 
             {targetValidator && (
               <ModalContent>
@@ -551,7 +577,7 @@ const PushConsolidation = ({
               </ModalContent>
             )}
           </ModalBody>
-          {targetValidator && validCredentials && (
+          {targetValidator && validCredentials && validValidatorState && (
             <ModalFooter>
               <QueueWarning queue={queue} />
 

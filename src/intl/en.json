@@ -492,6 +492,9 @@
   "5v36Is": {
     "message": "Exiting a {client} validator"
   },
+  "6/hnxI": {
+    "message": "Target validator is not active"
+  },
   "63gLLu": {
     "message": "average"
   },
@@ -2963,6 +2966,9 @@
   },
   "n5PQND": {
     "message": "Exit epoch"
+  },
+  "n5y2hu": {
+    "message": "A validator can only be consolidated to if it is in the proper state of active ongoing."
   },
   "nBhisA": {
     "message": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."

@@ -1375,6 +1375,12 @@
       "value": " validator"
     }
   ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "Target validator is not active"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -7819,6 +7825,12 @@
     {
       "type": 0,
       "value": "Exit epoch"
+    }
+  ],
+  "n5y2hu": [
+    {
+      "type": 0,
+      "value": "A validator can only be consolidated to if it is in the proper state of active ongoing."
     }
   ],
   "nBhisA": [

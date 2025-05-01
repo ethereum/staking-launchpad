@@ -156,7 +156,11 @@ const PushConsolidation = ({
   }, [targetValidator]);
 
   const validValidatorState = useMemo(() => {
-    return targetValidator && targetValidator.status === 'active_ongoing';
+    // Handle both dora and beaconcha.in status'
+    return (
+      targetValidator &&
+      ['active_online', 'active_ongoing'].includes(targetValidator.status)
+    );
   }, [targetValidator]);
 
   const validConfirmationMessage = useMemo(() => {
@@ -281,7 +285,7 @@ const PushConsolidation = ({
                         </strong>
                       </Text>
                       <Text>
-                        <FormattedMessage defaultMessage="A validator can only be consolidated to if it is in the proper state of active ongoing." />
+                        <FormattedMessage defaultMessage="A validator can only be consolidated to if it is in the proper state of active/online." />
                       </Text>
                     </div>
                   </AlertContent>

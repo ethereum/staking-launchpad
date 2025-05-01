@@ -1841,6 +1841,9 @@
   "SepcV5": {
     "message": "exiting the validator you choose above"
   },
+  "Sjv4KR": {
+    "message": "A validator can only be consolidated to if it is in the proper state of active/online."
+  },
   "SqKNq2": {
     "description": "{homebrew} = 'homebrew' and links to the homebrew package manager website documentation",
     "message": "You can install python3 on your macOS device using {homebrew}"
@@ -2966,9 +2969,6 @@
   },
   "n5PQND": {
     "message": "Exit epoch"
-  },
-  "n5y2hu": {
-    "message": "A validator can only be consolidated to if it is in the proper state of active ongoing."
   },
   "nBhisA": {
     "message": "You'll need to run an execution client (formerly 'Eth1') as well as a consensus client (formerly 'Eth2') to become a validator. Take a look at the checklist to prepare yourself and your equipment."

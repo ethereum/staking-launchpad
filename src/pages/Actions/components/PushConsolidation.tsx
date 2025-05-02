@@ -180,7 +180,12 @@ const PushConsolidation = ({
       userConfirmationValue.trim().toLowerCase() ===
       CONFIRMATION_MESSAGE.toLowerCase()
     );
-  }, [matchingCredentials, userConfirmationValue, targetValidator]);
+  }, [
+    CONFIRMATION_MESSAGE,
+    matchingCredentials,
+    userConfirmationValue,
+    targetValidator,
+  ]);
 
   return (
     <>

@@ -159,7 +159,9 @@ const PushConsolidation = ({
     // Handle both dora and beaconcha.in status'
     return (
       targetValidator &&
-      ['active_online', 'active_ongoing'].includes(targetValidator.status)
+      ['active_online', 'active_offline', 'active_ongoing'].includes(
+        targetValidator.status
+      )
     );
   }, [targetValidator]);
 

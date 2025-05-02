@@ -40,6 +40,7 @@ const shorthandClasses = `
     word-break: break-word;
   }
   .align-flex-end { align-items: flex-end; }
+  .text-bold { font-weight: 700; }
 `;
 
 const transitionClasses = `

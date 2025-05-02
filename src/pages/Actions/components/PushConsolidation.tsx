@@ -152,7 +152,7 @@ const PushConsolidation = ({
                       description="{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually"
                       values={{
                         migrateFundsTo: (
-                          <strong>
+                          <strong className="text-bold">
                             <FormattedMessage defaultMessage="migrate funds to" />
                           </strong>
                         ),
@@ -174,7 +174,7 @@ const PushConsolidation = ({
                       defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
                       values={{
                         exiting: (
-                          <strong>
+                          <strong className="text-bold">
                             <FormattedMessage
                               defaultMessage="exiting index {sourceIndex}"
                               values={{
@@ -209,7 +209,7 @@ const PushConsolidation = ({
                           defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
                           values={{
                             transferredToDestination: (
-                              <strong>
+                              <strong className="text-bold">
                                 <FormattedMessage defaultMessage="transferred to the validator you select above" />
                               </strong>
                             ),
@@ -227,16 +227,14 @@ const PushConsolidation = ({
                     <AlertContent>
                       <AlertIcon />
                       <div>
-                        <Text>
-                          <strong>
-                            <FormattedMessage
-                              defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
-                              values={{
-                                sourceIndex: sourceValidator.validatorindex,
-                                targetIndex: targetValidator.validatorindex,
-                              }}
-                            />
-                          </strong>
+                        <Text className="text-bold">
+                          <FormattedMessage
+                            defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
+                            values={{
+                              sourceIndex: sourceValidator.validatorindex,
+                              targetIndex: targetValidator.validatorindex,
+                            }}
+                          />
                         </Text>
                         <Text style={{ fontSize: '1rem' }}>
                           <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
@@ -270,11 +268,9 @@ const PushConsolidation = ({
                       >
                         <FormattedMessage defaultMessage="Exit" />
                       </Heading>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="Index" />:{' '}
-                          {sourceValidator.validatorindex}
-                        </strong>
+                      <Text className="text-bold">
+                        <FormattedMessage defaultMessage="Index" />:{' '}
+                        {sourceValidator.validatorindex}
                       </Text>
                       <Text
                         style={{
@@ -376,11 +372,9 @@ const PushConsolidation = ({
                       >
                         <FormattedMessage defaultMessage="Migrate to" />
                       </Heading>
-                      <Text>
-                        <strong>
-                          <FormattedMessage defaultMessage="Index" />:{' '}
-                          {targetValidator.validatorindex}
-                        </strong>
+                      <Text className="text-bold">
+                        <FormattedMessage defaultMessage="Index" />:{' '}
+                        {targetValidator.validatorindex}
                       </Text>
                       <Text
                         style={{

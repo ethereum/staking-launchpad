@@ -18,10 +18,11 @@ const QueueWarning = ({ queue }: QueueWarningProps) => {
   if (feeStatus === 'high')
     return (
       <Alert variant="warning" style={{ fontSize: '1rem', padding: '1rem' }}>
-        <Text style={{ fontSize: '1rem', lineHeight: '1.75rem' }}>
-          <strong>
-            <FormattedMessage defaultMessage="Caution - current request queue higher than normal volume" />
-          </strong>
+        <Text
+          style={{ fontSize: '1rem', lineHeight: '1.75rem' }}
+          className="text-bold"
+        >
+          <FormattedMessage defaultMessage="Caution - current request queue higher than normal volume" />
         </Text>
         <Text style={{ fontSize: '1rem' }}>
           <FormattedMessage
@@ -42,10 +43,9 @@ const QueueWarning = ({ queue }: QueueWarningProps) => {
               textTransform: 'uppercase',
               lineHeight: '1.75rem',
             }}
+            className="text-bold"
           >
-            <strong>
-              <FormattedMessage defaultMessage="Warning! Network traffic significantly elevated." />
-            </strong>
+            <FormattedMessage defaultMessage="Warning! Network traffic significantly elevated." />
           </Text>
           <Text style={{ fontSize: '1rem' }}>
             <FormattedMessage defaultMessage="Fee volatility is high during network congestion. Insufficient payments will result in your request failing without refund." />
@@ -54,7 +54,11 @@ const QueueWarning = ({ queue }: QueueWarningProps) => {
             <FormattedMessage
               defaultMessage="Current processing fee: {fee}."
               values={{
-                fee: <strong>{getEtherFeeFromQueue(queue)}</strong>,
+                fee: (
+                  <strong className="text-bold">
+                    {getEtherFeeFromQueue(queue)}
+                  </strong>
+                ),
               }}
             />
           </Text>

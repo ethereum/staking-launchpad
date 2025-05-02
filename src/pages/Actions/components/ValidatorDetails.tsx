@@ -206,19 +206,17 @@ const ValidatorDetails = ({
             gap: '0.5rem',
           }}
         >
-          <Text>
-            <strong>
-              <FormattedMessage
-                defaultMessage="Validator exit {pending} - no further performable actions"
-                values={{
-                  pending: hasExitCompleted ? (
-                    ''
-                  ) : (
-                    <FormattedMessage defaultMessage="pending" />
-                  ),
-                }}
-              />
-            </strong>
+          <Text className="text-bold">
+            <FormattedMessage
+              defaultMessage="Validator exit {pending} - no further performable actions"
+              values={{
+                pending: hasExitCompleted ? (
+                  ''
+                ) : (
+                  <FormattedMessage defaultMessage="pending" />
+                ),
+              }}
+            />
           </Text>
           <Text>
             <FormattedMessage defaultMessage="Exit Epoch" />:{' '}

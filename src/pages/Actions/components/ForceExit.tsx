@@ -136,10 +136,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 <AlertContent>
                   <AlertIcon />
                   <div>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
                     </Text>
                     <Text style={{ fontSize: '1rem' }}>
                       <FormattedMessage defaultMessage="This validator should remain online until exit epoch is reached." />
@@ -183,7 +181,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                           defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
                           values={{
                             destination: (
-                              <strong>
+                              <strong className="text-bold">
                                 <FormattedMessage defaultMessage="connected execution withdrawal address" />
                               </strong>
                             ),
@@ -220,11 +218,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     >
                       <FormattedMessage defaultMessage="Exit" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Index" />:{' '}
-                        {validator.validatorindex}
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {validator.validatorindex}
                     </Text>
                     <Text
                       style={{
@@ -319,10 +315,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     >
                       <FormattedMessage defaultMessage="Withdraw to" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Execution account" />:
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Execution account" />:
                     </Text>
                     <Text
                       style={{
@@ -426,8 +420,11 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     style={{ marginBottom: '0.25rem' }}
                   >
                     <Text>
-                      Please type <strong>{CONFIRM_EXIT_STRING}</strong> to
-                      confirm.
+                      Please type{' '}
+                      <strong className="text-bold">
+                        {CONFIRM_EXIT_STRING}
+                      </strong>{' '}
+                      to confirm.
                     </Text>
                   </label>
                   <TextInput

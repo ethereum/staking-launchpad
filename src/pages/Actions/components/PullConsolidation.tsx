@@ -154,7 +154,7 @@ const PullConsolidation = ({
                     defaultMessage="Which validator would you like to {pullFrom}?"
                     values={{
                       pullFrom: (
-                        <strong>
+                        <strong className="text-bold">
                           <FormattedMessage defaultMessage="pull full balance from" />
                         </strong>
                       ),
@@ -175,16 +175,14 @@ const PullConsolidation = ({
                   <AlertContent>
                     <AlertIcon />
                     <div>
-                      <Text>
-                        <strong>
-                          <FormattedMessage
-                            defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
-                            values={{
-                              targetIndex: targetValidator.validatorindex,
-                              sourceIndex: sourceValidator.validatorindex,
-                            }}
-                          />
-                        </strong>
+                      <Text className="text-bold">
+                        <FormattedMessage
+                          defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
+                          values={{
+                            targetIndex: targetValidator.validatorindex,
+                            sourceIndex: sourceValidator.validatorindex,
+                          }}
+                        />
                       </Text>
                       <Text style={{ fontSize: '1rem' }}>
                         <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
@@ -218,11 +216,9 @@ const PullConsolidation = ({
                     >
                       <FormattedMessage defaultMessage="Exit" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Index" />:{' '}
-                        {sourceValidator.validatorindex}
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {sourceValidator.validatorindex}
                     </Text>
                     <Text
                       style={{
@@ -324,11 +320,9 @@ const PullConsolidation = ({
                     >
                       <FormattedMessage defaultMessage="Migrate to" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Index" />:{' '}
-                        {targetValidator.validatorindex}
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {targetValidator.validatorindex}
                     </Text>
                     <Text
                       style={{
@@ -423,7 +417,7 @@ const PullConsolidation = ({
                     defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
                     values={{
                       exiting: (
-                        <strong>
+                        <strong className="text-bold">
                           <FormattedMessage defaultMessage="exiting the validator you choose above" />
                         </strong>
                       ),
@@ -457,7 +451,7 @@ const PullConsolidation = ({
                         defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
                         values={{
                           transferredToDestination: (
-                            <strong>
+                            <strong className="text-bold">
                               <FormattedMessage
                                 defaultMessage="transferred to validator index {index}"
                                 values={{

@@ -131,18 +131,26 @@ const _TopUpPage: React.FC<Props> = () => {
                 `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
               )
                 .then(r => r.json())
-                .then(({ data }: { data: BeaconChainValidator[] }) => {
-                  if (data.length === 0) {
-                    setShowDepositVerificationWarning(true);
+                .then(
+                  ({
+                    data,
+                  }: {
+                    data: BeaconChainValidator[] | BeaconChainValidator;
+                  }) => {
+                    const validatorsResponse = Array.isArray(data)
+                      ? data
+                      : [data];
+                    if (validatorsResponse.length === 0) {
+                      setShowDepositVerificationWarning(true);
+                      setValidators([]);
+                    } else {
+                      setValidators(
+                        validatorsResponse as BeaconChainValidator[]
+                      );
+                    }
+                    setLoading(false);
                   }
-                  // A single validator will not result in an array
-                  setValidators(
-                    response.length === 1
-                      ? (([data] as unknown) as BeaconChainValidator[])
-                      : data
-                  );
-                  setLoading(false);
-                })
+                )
                 .catch(error => {
                   console.log(error);
                   setLoading(false);

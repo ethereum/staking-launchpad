@@ -203,7 +203,7 @@ const PushConsolidation = ({
                     description="{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually"
                     values={{
                       migrateFundsTo: (
-                        <strong>
+                        <strong className="text-bold">
                           <FormattedMessage defaultMessage="migrate funds to" />
                         </strong>
                       ),
@@ -227,7 +227,7 @@ const PushConsolidation = ({
                     defaultMessage="This will initiate the process of permanently {exiting} from the Ethereum proof-of-stake network."
                     values={{
                       exiting: (
-                        <strong>
+                        <strong className="text-bold">
                           <FormattedMessage
                             defaultMessage="exiting index {sourceIndex}"
                             values={{
@@ -262,7 +262,7 @@ const PushConsolidation = ({
                         defaultMessage="All remaining funds will be {transferredToDestination} within a few days after exit epoch reached"
                         values={{
                           transferredToDestination: (
-                            <strong>
+                            <strong className="text-bold">
                               <FormattedMessage defaultMessage="transferred to the validator you select above" />
                             </strong>
                           ),
@@ -277,14 +277,15 @@ const PushConsolidation = ({
             {/* eslint-disable-next-line no-nested-ternary */}
             {targetValidator && !validValidatorState ? (
               <div style={{ marginBottom: '1.5rem' }}>
-                <Alert variant={'error'}>
+                <Alert variant="error">
                   <AlertContent>
                     <AlertIcon />
                     <div>
-                      <Text style={{ marginBottom: '1rem' }}>
-                        <strong>
-                          <FormattedMessage defaultMessage="Target validator is not active" />
-                        </strong>
+                      <Text
+                        style={{ marginBottom: '1rem' }}
+                        className="text-bold"
+                      >
+                        <FormattedMessage defaultMessage="Target validator is not active" />
                       </Text>
                       <Text>
                         <FormattedMessage defaultMessage="A validator can only be consolidated to if it is in the proper state of active/online." />
@@ -295,14 +296,15 @@ const PushConsolidation = ({
               </div>
             ) : targetValidator && validCredentials === false ? (
               <div style={{ marginBottom: '1.5rem' }}>
-                <Alert variant={'error'}>
+                <Alert variant="error">
                   <AlertContent>
                     <AlertIcon />
                     <div>
-                      <Text style={{ marginBottom: '1rem' }}>
-                        <strong>
-                          <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
-                        </strong>
+                      <Text
+                        style={{ marginBottom: '1rem' }}
+                        className="text-bold"
+                      >
+                        <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
                       </Text>
                       {getCredentialType(targetValidator) ===
                         ValidatorType.BLS && (
@@ -334,22 +336,21 @@ const PushConsolidation = ({
                       <AlertIcon />
                       <div>
                         {!matchingCredentials && (
-                          <Text style={{ marginBottom: '1rem' }}>
-                            <strong>
-                              <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
-                            </strong>
+                          <Text
+                            style={{ marginBottom: '1rem' }}
+                            className="text-bold"
+                          >
+                            <FormattedMessage defaultMessage="Target validator is not associated with your current wallet!" />
                           </Text>
                         )}
-                        <Text>
-                          <strong>
-                            <FormattedMessage
-                              defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
-                              values={{
-                                sourceIndex: sourceValidator.validatorindex,
-                                targetIndex: targetValidator.validatorindex,
-                              }}
-                            />
-                          </strong>
+                        <Text className="text-bold">
+                          <FormattedMessage
+                            defaultMessage="Account {sourceIndex} will be exited from the network, and its full balance will be migrated to validator index {targetIndex}."
+                            values={{
+                              sourceIndex: sourceValidator.validatorindex,
+                              targetIndex: targetValidator.validatorindex,
+                            }}
+                          />
                         </Text>
                         <Text style={{ fontSize: '1rem' }}>
                           <FormattedMessage defaultMessage="The exiting validator should remain online until exit epoch is reached." />
@@ -383,11 +384,9 @@ const PushConsolidation = ({
                     >
                       <FormattedMessage defaultMessage="Exit" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Index" />:{' '}
-                        {sourceValidator.validatorindex}
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {sourceValidator.validatorindex}
                     </Text>
                     <Text
                       style={{
@@ -489,11 +488,9 @@ const PushConsolidation = ({
                     >
                       <FormattedMessage defaultMessage="Migrate to" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Index" />:{' '}
-                        {targetValidator.validatorindex}
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {targetValidator.validatorindex}
                     </Text>
                     <Text
                       style={{
@@ -563,7 +560,7 @@ const PushConsolidation = ({
 
                 {showTx && (
                   <TransactionStatusInsert
-                    headerMessage={
+                    headerMessage={(
                       <>
                         <span>{sourceValidator.validatorindex}</span>{' '}
                         <span
@@ -575,7 +572,7 @@ const PushConsolidation = ({
                         </span>
                         <span>{targetValidator.validatorindex}</span>
                       </>
-                    }
+                    )}
                     txHash={txHash}
                     transactionStatus={txStatus}
                   />
@@ -614,8 +611,7 @@ const PushConsolidation = ({
                     name="confirm-push-input"
                     value={userConfirmationValue}
                     onChange={event =>
-                      setUserConfirmationValue(event.target.value)
-                    }
+                      setUserConfirmationValue(event.target.value)}
                     style={{ background: 'white', border: '1px solid #ccc' }}
                   />
                 </Form>

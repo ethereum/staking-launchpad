@@ -282,10 +282,8 @@ const _ActionsPage = () => {
           >
             <AlertIcon color="redLight" />
             <div>
-              <Text className="mb10">
-                <strong>
-                  <FormattedMessage defaultMessage="No validators were found with withdrawal credentials matching connected account." />
-                </strong>
+              <Text className="mb10 text-bold">
+                <FormattedMessage defaultMessage="No validators were found with withdrawal credentials matching connected account." />
               </Text>
               <Text className="mb20">
                 <FormattedMessage defaultMessage="You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues." />
@@ -351,10 +349,8 @@ const _ActionsPage = () => {
                     <AlertBody>
                       <AlertIcon />
                       <div>
-                        <AlertText className="mb10">
-                          <strong>
-                            <FormattedMessage defaultMessage="All actions are added to a queue for processing" />
-                          </strong>
+                        <AlertText className="mb10 text-bold">
+                          <FormattedMessage defaultMessage="All actions are added to a queue for processing" />
                         </AlertText>
                         <AlertText>
                           <FormattedMessage defaultMessage="Recent changes may not be reflected in validator details, and network congestion may result in delays. Use caution to avoid submitting duplicate requests." />

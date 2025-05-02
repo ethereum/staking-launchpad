@@ -1305,6 +1305,20 @@
       "value": "Teku installation documentation"
     }
   ],
+  "5HZBWx": [
+    {
+      "type": 0,
+      "value": "Please type "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " to acknowledge you understand where your validator balance is being transferred to."
+    }
+  ],
   "5UH1sh": [
     {
       "type": 0,
@@ -3057,20 +3071,6 @@
     {
       "type": 0,
       "value": "Configure your execution client"
-    }
-  ],
-  "HV2kN4": [
-    {
-      "type": 0,
-      "value": "Please type 'I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF "
-    },
-    {
-      "type": 1,
-      "value": "targetIndex"
-    },
-    {
-      "type": 0,
-      "value": "' to acknowledge you understand where your validator balance is being transferred to."
     }
   ],
   "HX93/h": [
@@ -9275,6 +9275,16 @@
     {
       "type": 0,
       "value": "Option 2: source code + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

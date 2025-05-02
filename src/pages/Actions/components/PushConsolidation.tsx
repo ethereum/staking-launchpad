@@ -45,7 +45,7 @@ const PushConsolidation = ({
   sourceValidator,
   targetValidatorSet,
 }: PushConsolidationProps) => {
-  const { locale } = useIntl();
+  const { locale, formatMessage } = useIntl();
   const { connector, account } = useWeb3React();
   const {
     resetTxModal,
@@ -165,15 +165,21 @@ const PushConsolidation = ({
     );
   }, [targetValidator]);
 
-  const validConfirmationMessage = useMemo(() => {
-    if (targetValidator && !matchingCredentials) {
-      return (
-        userConfirmationValue.trim().toLowerCase() ===
-        `i transfer my full validator balance to the owner of ${targetValidator.validatorindex}`
-      );
-    }
+  const CONFIRMATION_MESSAGE = formatMessage(
+    {
+      defaultMessage:
+        'I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF {index}',
+    },
+    { index: targetValidator?.validatorindex }
+  );
 
-    return true;
+  const validConfirmationMessage = useMemo(() => {
+    if (!targetValidator) return false;
+    if (matchingCredentials) return true;
+    return (
+      userConfirmationValue.trim().toLowerCase() ===
+      CONFIRMATION_MESSAGE.toLowerCase()
+    );
   }, [matchingCredentials, userConfirmationValue, targetValidator]);
 
   return (
@@ -560,7 +566,7 @@ const PushConsolidation = ({
 
                 {showTx && (
                   <TransactionStatusInsert
-                    headerMessage={(
+                    headerMessage={
                       <>
                         <span>{sourceValidator.validatorindex}</span>{' '}
                         <span
@@ -572,7 +578,7 @@ const PushConsolidation = ({
                         </span>
                         <span>{targetValidator.validatorindex}</span>
                       </>
-                    )}
+                    }
                     txHash={txHash}
                     transactionStatus={txStatus}
                   />
@@ -599,9 +605,16 @@ const PushConsolidation = ({
                   >
                     <Text>
                       <FormattedMessage
-                        defaultMessage="Please type 'I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF {targetIndex}' to acknowledge you understand where your validator balance is being transferred to."
+                        defaultMessage="Please type {boldConfirmationMessage} to acknowledge you understand where your validator balance is being transferred to."
                         values={{
-                          targetIndex: targetValidator.validatorindex,
+                          boldConfirmationMessage: (
+                            <strong
+                              className="text-bold"
+                              style={{ textTransform: 'uppercase' }}
+                            >
+                              {CONFIRMATION_MESSAGE}
+                            </strong>
+                          ),
                         }}
                       />
                     </Text>
@@ -611,7 +624,8 @@ const PushConsolidation = ({
                     name="confirm-push-input"
                     value={userConfirmationValue}
                     onChange={event =>
-                      setUserConfirmationValue(event.target.value)}
+                      setUserConfirmationValue(event.target.value)
+                    }
                     style={{ background: 'white', border: '1px solid #ccc' }}
                   />
                 </Form>

@@ -260,6 +260,9 @@
   "1fytak": {
     "message": "Check deposit contract details"
   },
+  "1iI5Ju": {
+    "message": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "1ingnQ": {
     "message": "More on Ethereum staking economics"
   },
@@ -990,6 +993,9 @@
   "EThT2C": {
     "message": "5. Time to deposit"
   },
+  "ETn48e": {
+    "message": "Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "EXLB88": {
     "message": "This is a test network ⚠️"
   },
@@ -1635,6 +1641,9 @@
   "P9mVZK": {
     "message": "Your network has changed"
   },
+  "PF61Eu": {
+    "message": "Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "PHZO0L": {
     "message": "Launchpad walkthrough tutorial"
   },
@@ -1950,6 +1959,9 @@
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
+  },
+  "VlItBm": {
+    "message": "Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
   },
   "Vm6cRY": {
     "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."

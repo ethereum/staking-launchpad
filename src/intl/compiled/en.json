@@ -679,6 +679,12 @@
       "value": "Check deposit contract details"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -2621,6 +2627,12 @@
       "value": "5. Time to deposit"
     }
   ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "EXLB88": [
     {
       "type": 0,
@@ -4333,6 +4345,12 @@
       "value": "Your network has changed"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -5087,6 +5105,12 @@
     {
       "type": 0,
       "value": "I am certain that the validator I am topping up is my validator."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
     }
   ],
   "Vm6cRY": [

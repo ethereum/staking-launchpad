@@ -370,7 +370,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                 </div>
               </div>
 
-              {showTx && (
+              {showTx ? (
                 <TransactionStatusInsert
                   headerMessage={
                     <FormattedMessage
@@ -381,6 +381,10 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   txHash={txHash}
                   transactionStatus={txStatus}
                 />
+              ) : (
+                <Text>
+                  <FormattedMessage defaultMessage="Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                </Text>
               )}
             </ModalContent>
           </ModalBody>

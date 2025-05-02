@@ -4,10 +4,12 @@ import Web3 from 'web3';
 import { TransactionConfig } from 'web3-core';
 import {
   COMPOUNDING_CONTRACT_ADDRESS,
-  WITHDRAWAL_CONTRACT_ADDRESS,
-  TICKER_NAME,
+  COMPOUNDING_FEE_ADDITION,
   EXCESS_INHIBITOR,
   SHARD_COMMITTEE_PERIOD,
+  TICKER_NAME,
+  WITHDRAWAL_CONTRACT_ADDRESS,
+  WITHDRAWAL_FEE_ADDITION,
 } from '../../utils/envVars';
 import { BeaconChainValidator } from '../TopUp/types';
 import { currentEpoch } from '../../utils/beaconchain';
@@ -33,7 +35,7 @@ const getRequiredFee = (queueLength: BigNumber): BigNumber => {
     i = i.plus(1);
   }
 
-  return output.dividedBy(17);
+  return output.dividedToIntegerBy(17);
 };
 
 export const getCompoundingQueueLength = async (
@@ -64,7 +66,10 @@ export const getCompoundingQueueLength = async (
 export const getCompoundingQueue = async (web3: Web3): Promise<Queue> => {
   const length = await getCompoundingQueueLength(web3);
 
-  const fee = getRequiredFee(length);
+  // Add to the queue length to reduce the likelihood of transaction failure
+  const appendedFeeSize = length.plus(COMPOUNDING_FEE_ADDITION);
+
+  const fee = getRequiredFee(appendedFeeSize);
 
   return { length, fee };
 };
@@ -97,7 +102,10 @@ export const getWithdrawalQueueLength = async (
 export const getWithdrawalQueue = async (web3: Web3): Promise<Queue> => {
   const length = await getWithdrawalQueueLength(web3);
 
-  const fee = getRequiredFee(length);
+  // Add to the queue length to reduce the likelihood of transaction failure
+  const appendedFeeSize = length.plus(WITHDRAWAL_FEE_ADDITION);
+
+  const fee = getRequiredFee(appendedFeeSize);
 
   return { length, fee };
 };
@@ -116,7 +124,7 @@ export const generateCompoundParams = async (
     from: address,
     // calldata (96 bytes): sourceValidator.pubkey (48 bytes) + targetValidator.pubkey (48 bytes)
     data: `0x${source.substring(2)}${target.substring(2)}`,
-    value: queue.fee.toString(),
+    value: queue.fee.toFixed(0),
     gas: 200000,
   };
 
@@ -137,7 +145,7 @@ export const generateWithdrawalParams = async (
     from: address,
     // calldata (56 bytes): sourceValidator.pubkey (48 bytes) + amount (8 bytes)
     data: `0x${pubkey.substring(2)}${amount.toString(16).padStart(16, '0')}`,
-    value: queue.fee.toString(),
+    value: queue.fee.toFixed(0),
     gas: 200000,
   };
   return { transactionParams, queue };

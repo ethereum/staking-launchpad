@@ -378,7 +378,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   transactionStatus={txStatus}
                 />
               ) : (
-                <Text>
+                <Text style={{ fontSize: '0.875rem', lineHeight: '1.25rem' }}>
                   <FormattedMessage defaultMessage="Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
                 </Text>
               )}

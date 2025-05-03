@@ -161,6 +161,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     }}
                     allowDecimals
                     maxValue={maxAmount}
+                    minValue={0}
                   />
                 </Form>
               )}

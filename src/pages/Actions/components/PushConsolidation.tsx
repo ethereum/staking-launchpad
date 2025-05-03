@@ -610,7 +610,7 @@ const PushConsolidation = ({
                   >
                     <Text>
                       <FormattedMessage
-                        defaultMessage="Please type {boldConfirmationMessage} to acknowledge you understand where your validator balance is being transferred to."
+                        defaultMessage="Please type {boldConfirmationMessage} to acknowledge you understand your validator is changing ownership."
                         values={{
                           boldConfirmationMessage: (
                             <strong

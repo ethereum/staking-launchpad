@@ -93,9 +93,6 @@
   "/e+qAC": {
     "message": "withdrawable epoch"
   },
-  "/eUGwM": {
-    "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
-  },
   "/hEGaO": {
     "message": "This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
   },
@@ -379,6 +376,9 @@
   "3SOKyg": {
     "message": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
   },
+  "3a5wL8": {
+    "message": "Active"
+  },
   "3aykgN": {
     "message": "Your validator will also receives unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 500,000 validators, each validator will {average} a block proposal every 70 days."
   },
@@ -448,6 +448,9 @@
   },
   "4zqUmR": {
     "message": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within a few days."
+  },
+  "5/MOHn": {
+    "message": "Active Exiting"
   },
   "57MWKW": {
     "message": "Withdrawals as an operation, not a new transaction type"
@@ -537,6 +540,9 @@
   },
   "7+Domh": {
     "message": "Notes"
+  },
+  "715MG7": {
+    "message": "Pending Initialized"
   },
   "738tqz": {
     "message": "Prysm is written in Go and released under a GPL-3.0 license."
@@ -780,6 +786,9 @@
   "AbBgEs": {
     "message": "understanding validator effective balance"
   },
+  "AhFU2+": {
+    "message": "Pending Queued"
+  },
   "AkVktj": {
     "message": "Check deposit contract address"
   },
@@ -870,9 +879,6 @@
   },
   "CF9vMR": {
     "message": "Proof of stake"
-  },
-  "CFjSbY": {
-    "message": "Available to withdrawal"
   },
   "CPl2hh": {
     "message": "I have reviewed the checklist and understand how withdrawals work."
@@ -1295,6 +1301,9 @@
   "Ja5vXW": {
     "message": "Further reading"
   },
+  "JcQdD5": {
+    "message": "Active Slashed"
+  },
   "JhUYU3": {
     "message": "Download CLI app"
   },
@@ -1574,6 +1583,9 @@
   "NkFxlX": {
     "message": "At least {time} (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, {highlyVariable})"
   },
+  "NsVnBT": {
+    "message": "Withdrawal Done"
+  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -1603,6 +1615,9 @@
   },
   "ONXIv4": {
     "message": "Withdrawal some {TICKER_NAME}"
+  },
+  "OPrOVV": {
+    "message": "Exited Unslashed"
   },
   "ORVjVH": {
     "message": "Then another {time} (256 epochs) before those funds are flagged as withdrawable"
@@ -2618,6 +2633,9 @@
   "hzsgQ5": {
     "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining {PRICE_PER_VALIDATOR} {TICKER_NAME} stays locked and staked."
   },
+  "i+1KR4": {
+    "message": "{subject} can withdrawal any portion of staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
+  },
   "iCpuph": {
     "message": "Clients"
   },
@@ -3200,6 +3218,9 @@
   "qdk7Hp": {
     "message": "Your wallet has disconnected"
   },
+  "qdoOtK": {
+    "message": "Withdrawal Possible"
+  },
   "qgqVCE": {
     "message": "reconnect your wallet"
   },
@@ -3280,6 +3301,9 @@
   },
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
+  },
+  "sF92ld": {
+    "message": "Exited Slashed"
   },
   "sFD6T7": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."

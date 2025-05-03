@@ -264,7 +264,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
                   </label>
                   <div>
                     <NumberInput
-                      id="withdrawal-amount"
+                      id="deposit-amount"
                       value={etherAmount}
                       setValue={handleValueChange}
                       allowDecimals

@@ -120,6 +120,76 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
+      case 'active_ongoing': {
+        return (
+          <Item>
+            <Wifi color={theme.green.dark} />
+            <Text>
+              <FormattedMessage defaultMessage="Online" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'pending_initialized': {
+        return (
+          <Item>
+            <Refresh color="blueLight" />
+            <Text>
+              <FormattedMessage defaultMessage="Pending" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'pending_queued': {
+        return (
+          <Item>
+            <Refresh color="blueLight" />
+            <Text>
+              <FormattedMessage defaultMessage="Pending" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'active_slashed': {
+        return (
+          <Item>
+            <StatusWarning color={theme.red.light} />
+            <Text>
+              <FormattedMessage defaultMessage="Slashing" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'exited_slashed': {
+        return (
+          <Item>
+            <StatusWarning color={theme.red.light} />
+            <Text>
+              <FormattedMessage defaultMessage="Slashed" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'active_exiting': {
+        return (
+          <Item>
+            <StatusWarning color="yellowDark" />
+            <Text>
+              <FormattedMessage defaultMessage="Exiting" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'exited_unslashed': {
+        return (
+          <Item>
+            <StatusDisabled color={theme.gray.medium} />
+            <Text>
+              <FormattedMessage defaultMessage="Exited" />
+            </Text>
+          </Item>
+        );
+      }
       default:
         return '';
     }

@@ -152,11 +152,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   <Text>
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
                   </Text>
-                  <Text style={{ fontSize: '1rem' }}>
-                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
-                  </Text>
                   <Text>
-                    <FormattedMessage defaultMessage="Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                    <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
                   <ul
                     style={{
@@ -190,6 +187,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                       </Text>
                     </li>
                   </ul>
+                  <Text style={{ fontSize: '0.875rem', lineHeight: '1.25rem' }}>
+                    <FormattedMessage defaultMessage="Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                  </Text>
                 </>
               )}
 

@@ -152,9 +152,6 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                   <Text>
                     <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of upgrades is not immediate, so account for up to several days before completion." />
                   </Text>
-                  <Text>
-                    <FormattedMessage defaultMessage="Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
-                  </Text>
                   <ul style={{ paddingInlineStart: '1.5rem', marginTop: 0 }}>
                     <li>
                       <Text as="span">
@@ -178,6 +175,9 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                       </Text>
                     </li>
                   </ul>
+                  <Text style={{ fontSize: '0.875rem', lineHeight: '1.25rem' }}>
+                    <FormattedMessage defaultMessage="Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                  </Text>
                 </>
               )}
 

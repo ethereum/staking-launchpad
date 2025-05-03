@@ -328,7 +328,16 @@ const PushConsolidation = ({
                       {getCredentialType(targetValidator) ===
                         ValidatorType.Execution && (
                         <Text>
-                          <FormattedMessage defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow." />
+                          <FormattedMessage
+                            defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the {boldUpgradeAccount} flow."
+                            values={{
+                              boldUpgradeAccount: (
+                                <strong className="text-bold">
+                                  Upgrade Account
+                                </strong>
+                              ),
+                            }}
+                          />
                         </Text>
                       )}
                     </div>

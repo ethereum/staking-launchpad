@@ -6,6 +6,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+3Cqbb": {
+    "message": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the {boldUpgradeAccount} flow."
+  },
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -643,9 +646,6 @@
   },
   "8VlOTO": {
     "message": "Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type."
-  },
-  "8WAAtu": {
-    "message": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow."
   },
   "8WtyrD": {
     "message": "Spanish"

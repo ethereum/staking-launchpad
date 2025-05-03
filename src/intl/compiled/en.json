@@ -27,6 +27,20 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": " flow."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -1761,12 +1775,6 @@
     {
       "type": 0,
       "value": "Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type."
-    }
-  ],
-  "8WAAtu": [
-    {
-      "type": 0,
-      "value": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the 'Upgrade Validator' flow."
     }
   ],
   "8WtyrD": [

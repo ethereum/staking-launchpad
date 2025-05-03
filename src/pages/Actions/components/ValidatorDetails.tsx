@@ -92,6 +92,24 @@ const ValidatorDetails = ({
       return <FormattedMessage defaultMessage="Exiting Offline" />;
     if (status === 'exited')
       return <FormattedMessage defaultMessage="Exited" />;
+    if (status === 'pending_initialized')
+      return <FormattedMessage defaultMessage="Pending Initialized" />;
+    if (status === 'pending_queued')
+      return <FormattedMessage defaultMessage="Pending Queued" />;
+    if (status === 'active_ongoing')
+      return <FormattedMessage defaultMessage="Active" />;
+    if (status === 'active_exiting')
+      return <FormattedMessage defaultMessage="Active Exiting" />;
+    if (status === 'active_slashed')
+      return <FormattedMessage defaultMessage="Active Slashed" />;
+    if (status === 'exited_unslashed')
+      return <FormattedMessage defaultMessage="Exited Unslashed" />;
+    if (status === 'exited_slashed')
+      return <FormattedMessage defaultMessage="Exited Slashed" />;
+    if (status === 'withdrawal_possible')
+      return <FormattedMessage defaultMessage="Withdrawal Possible" />;
+    if (status === 'withdrawal_done')
+      return <FormattedMessage defaultMessage="Withdrawal Done" />;
     return status
       .split('_')
       .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -102,6 +120,7 @@ const ValidatorDetails = ({
     if (status.includes('offline')) return '#e74c3c';
     if (status.includes('slash')) return '#e74c3c';
     if (status.includes('online')) return 'green';
+    if (status.includes('active')) return 'green';
     if (status.includes('exit')) return 'darkred';
     return 'inherit';
   };

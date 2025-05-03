@@ -93,9 +93,6 @@
   "/e+qAC": {
     "message": "withdrawable epoch"
   },
-  "/eUGwM": {
-    "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
-  },
   "/hEGaO": {
     "message": "This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
   },
@@ -2620,6 +2617,9 @@
   },
   "hzsgQ5": {
     "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining {PRICE_PER_VALIDATOR} {TICKER_NAME} stays locked and staked."
+  },
+  "i+1KR4": {
+    "message": "{subject} can withdrawal any portion of staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
   },
   "iCpuph": {
     "message": "Clients"

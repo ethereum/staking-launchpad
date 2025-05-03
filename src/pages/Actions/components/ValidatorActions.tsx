@@ -178,30 +178,34 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         <AddFunds validator={validator} />
       </Row>
 
-      {/* {getCredentialType(validator) >= ValidatorType.Compounding && ( */}
       <Row>
         <div>
           <ActionTitle>
             <FormattedMessage defaultMessage="Request partial withdrawal" />
           </ActionTitle>
           <FormattedMessage
-            defaultMessage="You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
+            defaultMessage="{subject} can withdrawal any portion of staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
             values={{
+              subject:
+                getCredentialType(validator) < ValidatorType.Compounding
+                  ? 'Compounding accounts'
+                  : 'You',
               TICKER_NAME,
               MIN_ACTIVATION_BALANCE,
             }}
           />{' '}
-          {surplusEther > 0 && (
-            <FormattedMessage
-              defaultMessage="You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
-              values={{
-                TICKER_NAME,
-                surplusEther: (
-                  <span style={{ color: 'darkgreen' }}>{surplusEther}</span>
-                ),
-              }}
-            />
-          )}
+          {getCredentialType(validator) >= ValidatorType.Compounding &&
+            surplusEther > 0 && (
+              <FormattedMessage
+                defaultMessage="You can currently withdrawal up to {surplusEther} {TICKER_NAME}."
+                values={{
+                  TICKER_NAME,
+                  surplusEther: (
+                    <span style={{ color: 'darkgreen' }}>{surplusEther}</span>
+                  ),
+                }}
+              />
+            )}
           {getCredentialType(validator) < ValidatorType.Compounding && (
             <em>
               {' '}
@@ -217,7 +221,6 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
         </div>
         <PartialWithdraw validator={validator} />
       </Row>
-      {/* )} */}
 
       <Row>
         <div>

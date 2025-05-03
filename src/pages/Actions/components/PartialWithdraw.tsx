@@ -7,6 +7,7 @@ import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
+import { ValidatorType } from '../types';
 import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Button } from '../../../components/Button';
@@ -25,7 +26,7 @@ import { Text } from '../../../components/Text';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
 import { generateWithdrawalParams, isValidatorNascent } from '../utils';
-import { getEtherBalance } from '../../../utils/validators';
+import { getEtherBalance, getCredentialType } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 
@@ -113,7 +114,11 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   return (
     <>
       <Button
-        disabled={maxAmount <= 0 || isValidatorNascent(validator)} // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#new-process_withdrawal_request
+        disabled={
+          maxAmount <= 0 ||
+          isValidatorNascent(validator) ||
+          getCredentialType(validator) < ValidatorType.Compounding
+        } // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#new-process_withdrawal_request
         onClick={handleOpen}
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />

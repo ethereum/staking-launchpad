@@ -231,13 +231,12 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Available to withdrawal" />
-                        :
+                        <FormattedMessage defaultMessage="Current" />:
                       </div>
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}
                       >
-                        {maxAmount.toFixed(9)} {TICKER_NAME}
+                        {getEtherBalance(validator)} {TICKER_NAME}
                       </div>
                     </Text>
 

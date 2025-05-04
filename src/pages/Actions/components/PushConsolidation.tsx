@@ -155,7 +155,7 @@ const PushConsolidation = ({
     }
   }, [targetValidator]);
 
-  const validValidatorState = useMemo(() => {
+  const validValidatorStatus = useMemo(() => {
     // Handle both dora and beaconcha.in status'
     return (
       targetValidator &&
@@ -285,71 +285,75 @@ const PushConsolidation = ({
               </ModalContent>
             )}
 
-            {/* eslint-disable-next-line no-nested-ternary */}
-            {targetValidator && !validValidatorState ? (
-              <div style={{ marginBottom: '1.5rem' }}>
-                <Alert variant="error">
-                  <AlertContent>
-                    <AlertIcon />
-                    <div>
-                      <Text
-                        style={{ marginBottom: '1rem' }}
-                        className="text-bold"
-                      >
-                        <FormattedMessage defaultMessage="Target validator is not active" />
-                      </Text>
-                      <Text>
-                        <FormattedMessage defaultMessage="A validator can only be consolidated to if it is in the proper state of active/online." />
-                      </Text>
-                    </div>
-                  </AlertContent>
-                </Alert>
-              </div>
-            ) : targetValidator && validCredentials === false ? (
-              <div style={{ marginBottom: '1.5rem' }}>
-                <Alert variant="error">
-                  <AlertContent>
-                    <AlertIcon />
-                    <div>
-                      <Text
-                        style={{ marginBottom: '1rem' }}
-                        className="text-bold"
-                      >
-                        <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
-                      </Text>
-                      {getCredentialType(targetValidator) ===
-                        ValidatorType.BLS && (
-                        <Text>
-                          <Link inline primary to="/withdrawals">
-                            <FormattedMessage defaultMessage="More on upgrading a validator with Type 0 credentials." />
-                          </Link>
-                        </Text>
-                      )}
-                      {getCredentialType(targetValidator) ===
-                        ValidatorType.Execution && (
-                        <Text>
-                          <FormattedMessage
-                            defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the {boldUpgradeAccount} flow."
-                            values={{
-                              boldUpgradeAccount: (
-                                <strong className="text-bold">
-                                  Upgrade Account
-                                </strong>
-                              ),
-                            }}
-                          />
-                        </Text>
-                      )}
-                    </div>
-                  </AlertContent>
-                </Alert>
-              </div>
-            ) : null}
+            {targetValidator && (
+              <>
+                {!validValidatorStatus && (
+                  <div style={{ marginBottom: '1.5rem' }}>
+                    <Alert variant="error">
+                      <AlertContent>
+                        <AlertIcon />
+                        <div>
+                          <Text
+                            style={{ marginBottom: '1rem' }}
+                            className="text-bold"
+                          >
+                            <FormattedMessage defaultMessage="Target validator is not active" />
+                          </Text>
+                          <Text>
+                            <FormattedMessage defaultMessage="Only validators with an active status can receive funds from another validator." />
+                          </Text>
+                        </div>
+                      </AlertContent>
+                    </Alert>
+                  </div>
+                )}
+                {validValidatorStatus && !validCredentials && (
+                  <div style={{ marginBottom: '1.5rem' }}>
+                    <Alert variant="error">
+                      <AlertContent>
+                        <AlertIcon />
+                        <div>
+                          <Text
+                            style={{ marginBottom: '1rem' }}
+                            className="text-bold"
+                          >
+                            <FormattedMessage defaultMessage="Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it." />
+                          </Text>
+                          {getCredentialType(targetValidator) ===
+                            ValidatorType.BLS && (
+                            <Text>
+                              <Link inline primary to="/withdrawals">
+                                <FormattedMessage defaultMessage="More on upgrading a validator with Type 0 credentials." />
+                              </Link>
+                            </Text>
+                          )}
+                          {getCredentialType(targetValidator) ===
+                            ValidatorType.Execution && (
+                            <Text>
+                              <FormattedMessage
+                                defaultMessage="To upgrade to a Type 2 validator, please go back, select the target validator, and go through the {boldUpgradeAccount} flow."
+                                values={{
+                                  boldUpgradeAccount: (
+                                    <strong className="text-bold">
+                                      Upgrade Account
+                                    </strong>
+                                  ),
+                                }}
+                              />
+                            </Text>
+                          )}
+                        </div>
+                      </AlertContent>
+                    </Alert>
+                  </div>
+                )}
+              </>
+            )}
 
             {targetValidator &&
               !showTx &&
               validCredentials &&
-              validValidatorState && (
+              validValidatorStatus && (
                 <div style={{ marginBottom: '1.5rem' }}>
                   <Alert variant={matchingCredentials ? 'warning' : 'error'}>
                     <AlertContent>
@@ -381,7 +385,7 @@ const PushConsolidation = ({
                 </div>
               )}
 
-            {targetValidator && (
+            {targetValidator && validValidatorStatus && (
               <ModalContent>
                 <div
                   style={{
@@ -600,7 +604,7 @@ const PushConsolidation = ({
               </ModalContent>
             )}
           </ModalBody>
-          {targetValidator && validCredentials && validValidatorState && (
+          {targetValidator && validCredentials && validValidatorStatus && (
             <ModalFooter>
               <QueueWarning queue={queue} />
 

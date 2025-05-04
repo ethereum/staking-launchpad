@@ -3,6 +3,7 @@ import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { TransactionConfig } from 'web3-core';
 import {
+  BEACONCHAIN_URL,
   COMPOUNDING_CONTRACT_ADDRESS,
   COMPOUNDING_FEE_ADDITION,
   EXCESS_INHIBITOR,
@@ -169,3 +170,26 @@ export const getEtherFeeFromQueue = (queue: Queue): string =>
 
 export const isValidatorNascent = (validator: BeaconChainValidator): boolean =>
   currentEpoch < validator.activationepoch + SHARD_COMMITTEE_PERIOD;
+
+export const fetchValidatorsByPubkeys = async (
+  pubkeys: string[]
+): Promise<BeaconChainValidator[] | null> => {
+  try {
+    const response = await fetch(
+      `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(',')}`
+    );
+    if (!response.ok) throw new Error();
+    const json = await response.json();
+    const data: BeaconChainValidator[] = Array.isArray(json.data)
+      ? json.data
+      : [json.data];
+
+    return data;
+  } catch (error) {
+    console.warn(
+      `Error fetching validators (pubkeys ${pubkeys.join(',')}):`,
+      error
+    );
+    return null;
+  }
+};

@@ -6,6 +6,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+3Cqbb": {
+    "message": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the {boldUpgradeAccount} flow."
+  },
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -495,6 +498,9 @@
   "5v36Is": {
     "message": "Exiting a {client} validator"
   },
+  "6/hnxI": {
+    "message": "Target validator is not active"
+  },
   "63gLLu": {
     "message": "average"
   },
@@ -629,6 +635,9 @@
   "8HxLGA": {
     "message": "Configure Teku"
   },
+  "8J6IfS": {
+    "message": "Filter your validators by index or pubkey or search by pubkey"
+  },
   "8JtiQS": {
     "message": "Does the contract address listed on the website match?"
   },
@@ -664,9 +673,6 @@
   },
   "8rxaqc": {
     "message": "{withdrawableEpochLabel} - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
-  },
-  "8uE+mp": {
-    "message": "Filter by index or pubkey"
   },
   "8uq59n": {
     "message": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
@@ -795,6 +801,9 @@
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
   },
+  "Atjyqe": {
+    "message": "Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it."
+  },
   "Aw1mMs": {
     "message": "Top up validator"
   },
@@ -828,6 +837,9 @@
   },
   "Bc20la": {
     "message": "days"
+  },
+  "BeE9pr": {
+    "message": "Please type {boldConfirmationMessage} to acknowledge you understand your validator is changing ownership."
   },
   "Bj5yI5": {
     "message": "Effective balance"
@@ -1692,6 +1704,9 @@
   "Px7wWb": {
     "message": "pip documentation"
   },
+  "Q+4zQ+": {
+    "message": "Only validators with an active status can receive funds from another validator."
+  },
   "Q/HeiY": {
     "message": "Beaconcha.in Broadcast Tool"
   },
@@ -1768,6 +1783,9 @@
   "RWqrlk": {
     "message": "congratulations"
   },
+  "Ra6IrH": {
+    "message": "Target validator is not associated with your current wallet!"
+  },
   "RhR6+a": {
     "message": "We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons."
   },
@@ -1819,9 +1837,6 @@
   },
   "SVUntz": {
     "message": "Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
-  },
-  "Sa8NCw": {
-    "message": "No eligible target accounts found."
   },
   "SaR1pU": {
     "message": "Deposit already exists"
@@ -3426,6 +3441,9 @@
   "ubKWX8": {
     "message": "Generate key pairs"
   },
+  "udj2WS": {
+    "message": "More on upgrading a validator with Type 0 credentials."
+  },
   "uhapiE": {
     "message": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
   },
@@ -3514,6 +3532,9 @@
   },
   "wtwIax": {
     "message": "Option 2: source code + virtualenv"
+  },
+  "wxaiRj": {
+    "message": "I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF {index}"
   },
   "x+fF+M": {
     "message": "Testnet simulations"

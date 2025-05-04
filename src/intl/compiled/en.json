@@ -27,6 +27,20 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": " flow."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -1365,6 +1379,12 @@
       "value": " validator"
     }
   ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "Target validator is not active"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1733,6 +1753,12 @@
       "value": "Configure Teku"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Filter your validators by index or pubkey or search by pubkey"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1819,12 +1845,6 @@
     {
       "type": 0,
       "value": " - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Filter by index or pubkey"
     }
   ],
   "8uq59n": [
@@ -2123,6 +2143,12 @@
       "value": "Become a validator with Lighthouse"
     }
   ],
+  "Atjyqe": [
+    {
+      "type": 0,
+      "value": "Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it."
+    }
+  ],
   "Aw1mMs": [
     {
       "type": 0,
@@ -2207,6 +2233,20 @@
     {
       "type": 0,
       "value": "days"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Please type "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " to acknowledge you understand your validator is changing ownership."
     }
   ],
   "Bj5yI5": [
@@ -4443,6 +4483,12 @@
       "value": "pip documentation"
     }
   ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Only validators with an active status can receive funds from another validator."
+    }
+  ],
   "Q/HeiY": [
     {
       "type": 0,
@@ -4629,6 +4675,12 @@
       "value": "congratulations"
     }
   ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "Target validator is not associated with your current wallet!"
+    }
+  ],
   "RhR6+a": [
     {
       "type": 0,
@@ -4745,12 +4797,6 @@
     {
       "type": 0,
       "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
-    }
-  ],
-  "Sa8NCw": [
-    {
-      "type": 0,
-      "value": "No eligible target accounts found."
     }
   ],
   "SaR1pU": [
@@ -9079,6 +9125,12 @@
       "value": "Generate key pairs"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "More on upgrading a validator with Type 0 credentials."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9283,6 +9335,16 @@
     {
       "type": 0,
       "value": "Option 2: source code + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

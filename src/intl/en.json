@@ -6,6 +6,9 @@
     "description": "{executionLayer} is a link labeled 'execution layer'. {consensusLayer} is a link labeled 'consensus layer'",
     "message": "Ethereum consists of the {executionLayer} (handling transactions and execution, formerly 'Eth1'), and the {consensusLayer} (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
   },
+  "+3Cqbb": {
+    "message": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the {boldUpgradeAccount} flow."
+  },
   "+3gmIR": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our flagship products are our production-capable beacon chain and validator client. Lodestar’s niche is in its implementation language, TypeScript. Our software and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -92,9 +95,6 @@
   },
   "/e+qAC": {
     "message": "withdrawable epoch"
-  },
-  "/eUGwM": {
-    "message": "You can withdrawal any portion of your staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
   },
   "/hEGaO": {
     "message": "This validator account has a maximum effective balance of {maxEffectiveBalanceEther} {TICKER_NAME}. You only need to top up {maxTopupValue} {TICKER_NAME} to max out your effective balance."
@@ -260,6 +260,9 @@
   "1fytak": {
     "message": "Check deposit contract details"
   },
+  "1iI5Ju": {
+    "message": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "1ingnQ": {
     "message": "More on Ethereum staking economics"
   },
@@ -376,6 +379,9 @@
   "3SOKyg": {
     "message": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
   },
+  "3a5wL8": {
+    "message": "Active"
+  },
   "3aykgN": {
     "message": "Your validator will also receives unburnt gas fees when proposing blocks. Validators are chosen randomly by the protocol to propose blocks, and only one validator can propose a block for each 12-second slot. There are 7200 slots each day, so each validator has 7200 chances-per-day to propose a block. If there are 500,000 validators, each validator will {average} a block proposal every 70 days."
   },
@@ -446,6 +452,9 @@
   "4zqUmR": {
     "message": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within a few days."
   },
+  "5/MOHn": {
+    "message": "Active Exiting"
+  },
   "57MWKW": {
     "message": "Withdrawals as an operation, not a new transaction type"
   },
@@ -488,6 +497,9 @@
   },
   "5v36Is": {
     "message": "Exiting a {client} validator"
+  },
+  "6/hnxI": {
+    "message": "Target validator is not active"
   },
   "63gLLu": {
     "message": "average"
@@ -532,6 +544,9 @@
   "7+Domh": {
     "message": "Notes"
   },
+  "715MG7": {
+    "message": "Pending Initialized"
+  },
   "738tqz": {
     "message": "Prysm is written in Go and released under a GPL-3.0 license."
   },
@@ -567,9 +582,6 @@
   },
   "7V/8wz": {
     "message": "Configuration file"
-  },
-  "7XWI5I": {
-    "message": "Please wait and try again or seek assistance if this error continues."
   },
   "7XiYRi": {
     "message": "Slashed?"
@@ -623,6 +635,9 @@
   "8HxLGA": {
     "message": "Configure Teku"
   },
+  "8J6IfS": {
+    "message": "Filter your validators by index or pubkey or search by pubkey"
+  },
   "8JtiQS": {
     "message": "Does the contract address listed on the website match?"
   },
@@ -641,6 +656,9 @@
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
   },
+  "8jssAY": {
+    "message": "You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues."
+  },
   "8k1RjX": {
     "message": "{NETWORK_NAME} testnet"
   },
@@ -655,9 +673,6 @@
   },
   "8rxaqc": {
     "message": "{withdrawableEpochLabel} - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
-  },
-  "8uE+mp": {
-    "message": "Filter by index or pubkey"
   },
   "8uq59n": {
     "message": "Signal your intent to exit staking by signing and broadcasting a voluntary exit message to the network using your validator keys and validator client"
@@ -765,8 +780,14 @@
   "AZaw+B": {
     "message": "Exiting"
   },
+  "Ab1qjD": {
+    "message": "Confirm on execution layer"
+  },
   "AbBgEs": {
     "message": "understanding validator effective balance"
+  },
+  "AhFU2+": {
+    "message": "Pending Queued"
   },
   "AkVktj": {
     "message": "Check deposit contract address"
@@ -780,8 +801,8 @@
   "Anqi3n": {
     "message": "Become a validator with Lighthouse"
   },
-  "As7Kwv": {
-    "message": "You may have a deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
+  "Atjyqe": {
+    "message": "Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it."
   },
   "Aw1mMs": {
     "message": "Top up validator"
@@ -816,6 +837,9 @@
   },
   "Bc20la": {
     "message": "days"
+  },
+  "BeE9pr": {
+    "message": "Please type {boldConfirmationMessage} to acknowledge you understand your validator is changing ownership."
   },
   "Bj5yI5": {
     "message": "Effective balance"
@@ -861,6 +885,9 @@
   },
   "CT+gEC": {
     "message": "Upload to Beacon Node {btec} pool"
+  },
+  "CUd95N": {
+    "message": "Compounding accounts are eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
   },
   "CWKE9c": {
     "message": "Your wallet is on the wrong network. Switch to {executionLayerName}"
@@ -986,6 +1013,9 @@
   },
   "EThT2C": {
     "message": "5. Time to deposit"
+  },
+  "ETn48e": {
+    "message": "Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
   },
   "EXLB88": {
     "message": "This is a test network ⚠️"
@@ -1184,6 +1214,9 @@
   "I7MjRD": {
     "message": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
   },
+  "I7N/DN": {
+    "message": "Confirmation on the execution layer does not guarantee that the request will be valid on the consensus layer. Please check the beacon explorer to confirm if the request is successful after 13 minutes (under normal finalization period)."
+  },
   "ICbItT": {
     "message": "This approach creates a single compounding account. Requires at least {MIN_ACTIVATION_BALANCE} {TICKER_NAME}, and can hold up to {MAX_EFFECTIVE_BALANCE}."
   },
@@ -1192,6 +1225,9 @@
   },
   "IJw06E": {
     "message": "Sign transaction with your wallet"
+  },
+  "IWdOGZ": {
+    "message": "Account must first be upgraded to compounding type."
   },
   "IWlazt": {
     "message": "full withdrawal"
@@ -1265,8 +1301,8 @@
   "Ja5vXW": {
     "message": "Further reading"
   },
-  "Jge1Sx": {
-    "message": "Force exit"
+  "JcQdD5": {
+    "message": "Active Slashed"
   },
   "JhUYU3": {
     "message": "Download CLI app"
@@ -1547,6 +1583,9 @@
   "NkFxlX": {
     "message": "At least {time} (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, {highlyVariable})"
   },
+  "NsVnBT": {
+    "message": "Withdrawal Done"
+  },
   "NwzcYT": {
     "message": "Teku needs to be pointed at files containing keystores and their associated passwords at startup. There are 3 methods for doing so."
   },
@@ -1577,11 +1616,17 @@
   "ONXIv4": {
     "message": "Withdrawal some {TICKER_NAME}"
   },
+  "OPrOVV": {
+    "message": "Exited Unslashed"
+  },
   "ORVjVH": {
     "message": "Then another {time} (256 epochs) before those funds are flagged as withdrawable"
   },
   "OSEFbC": {
     "message": "Immediately upon broadcasting a signed voluntary exit message, the {exitEpoch} and {withdrawableEpoch} values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
+  },
+  "OWPO/L": {
+    "message": "Check recent deposits on explorer"
   },
   "OdYQYh": {
     "message": "More on ConsenSys"
@@ -1626,6 +1671,9 @@
   "P9mVZK": {
     "message": "Your network has changed"
   },
+  "PF61Eu": {
+    "message": "Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
   "PHZO0L": {
     "message": "Launchpad walkthrough tutorial"
   },
@@ -1655,6 +1703,9 @@
   },
   "Px7wWb": {
     "message": "pip documentation"
+  },
+  "Q+4zQ+": {
+    "message": "Only validators with an active status can receive funds from another validator."
   },
   "Q/HeiY": {
     "message": "Beaconcha.in Broadcast Tool"
@@ -1731,6 +1782,9 @@
   },
   "RWqrlk": {
     "message": "congratulations"
+  },
+  "Ra6IrH": {
+    "message": "Target validator is not associated with your current wallet!"
   },
   "RhR6+a": {
     "message": "We'll guide you through setting a withdrawal address for your validator. This is considered best-practice, and strongly recommended for safety and security reasons."
@@ -1851,6 +1905,9 @@
   "Tpo1B3": {
     "message": "transferred to validator index {index}"
   },
+  "TvuDvB": {
+    "message": "{connect} or try refreshing the page."
+  },
   "U/NPbq": {
     "message": "German"
   },
@@ -1935,6 +1992,9 @@
   },
   "VctWDX": {
     "message": "I am certain that the validator I am topping up is my validator."
+  },
+  "VlItBm": {
+    "message": "Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
   },
   "Vm6cRY": {
     "message": "This communication is secured using a {jwt} secret, which is a secret key that is shared only between the two clients to authenticate one another. This shared JWT secret must be made available to each client (both execution and consensus clients) to allow them to communicate with one another properly."
@@ -2289,6 +2349,9 @@
     "description": "{migrateFundsTo} indicates the direction funds will be transferred, and is emphasized visually",
     "message": "Which validator would you like to {migrateFundsTo}?"
   },
+  "cf+9L6": {
+    "message": "Selected account must be upgraded to compounding type to absorb another validator."
+  },
   "chsS1X": {
     "message": "If not, stop. No withdrawal will be processed and account skipped"
   },
@@ -2351,6 +2414,9 @@
   },
   "dvr19k": {
     "message": "Setup"
+  },
+  "dyfKG1": {
+    "message": "Exit fully"
   },
   "dzdAcD": {
     "message": "Default Port"
@@ -2438,11 +2504,11 @@
   "fbiteI": {
     "message": "only stored on one validator machine"
   },
+  "fdGVBw": {
+    "message": "{subject} can withdraw any portion of staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
+  },
   "fnMHGO": {
     "message": "Waiting for wallet confirmation"
-  },
-  "fnV2qn": {
-    "message": "Compounding accounts eligible to request partial withdrawals of any balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME}"
   },
   "fpe4Gx": {
     "message": "Active accounts with an effective balance or total balance less than {PRICE_PER_VALIDATOR} {TICKER_NAME} will be skipped"
@@ -2631,6 +2697,9 @@
   "j2f6y2": {
     "message": "A withdrawal address has not been set for these validators. Staked funds and rewards will remain locked until withdrawal credentials are provided."
   },
+  "j3Os7+": {
+    "message": "No eligible source accounts found. Source validators must be activated for at least 256 epochs (~27 hours) before eligible for consolidation."
+  },
   "j8GPOH": {
     "message": "Formerly known as Artemis, Teku is a consensus client built to meet institutional needs and security requirements. PegaSys is an arm of ConsenSys, dedicated to building enterprise-ready clients and tools for interacting with the core Ethereum platform."
   },
@@ -2785,9 +2854,6 @@
   "l5XCJW": {
     "message": "Advisories"
   },
-  "l5kq/q": {
-    "message": "Confirm on-chain"
-  },
   "l6OJpv": {
     "message": "First, create a venv virtualenv under repository directory:"
   },
@@ -2844,6 +2910,9 @@
   "lo+Qqn": {
     "message": "change your wallet"
   },
+  "lpYLlg": {
+    "message": "View on beacon explorer"
+  },
   "lrdlY6": {
     "message": "File uploaded"
   },
@@ -2885,6 +2954,9 @@
   },
   "mdmA4f": {
     "message": "Number of withdrawals"
+  },
+  "mhY4Dy": {
+    "message": "No validators were found with withdrawal credentials matching connected account."
   },
   "mhyltV": {
     "message": "I've set my graffiti flag."
@@ -2991,9 +3063,6 @@
   },
   "oPgUAj": {
     "message": "your validator"
-  },
-  "oUWdau": {
-    "message": "No validators were found."
   },
   "oVx7Qe": {
     "message": "Step 2: Generate deposit keys using the EthStaker deposit tool"
@@ -3116,6 +3185,9 @@
   "q8Cxf5": {
     "message": "BLS credentials: By default, the deposit CLI would generate withdrawal credentials with the {boldWithdrawalKey} derived via mnemonics in {eip2334} format. This format is not compatible with Beacon Chain withdrawals and must be updated to Ethereum address credentials to enable withdrawals."
   },
+  "qA/iot": {
+    "message": "Max fee"
+  },
   "qB6aU6": {
     "message": "What happened to 'Eth2?'"
   },
@@ -3145,6 +3217,9 @@
   },
   "qdk7Hp": {
     "message": "Your wallet has disconnected"
+  },
+  "qdoOtK": {
+    "message": "Withdrawal Possible"
   },
   "qgqVCE": {
     "message": "reconnect your wallet"
@@ -3227,6 +3302,9 @@
   "s6gImC": {
     "message": "Teku can also be configured via a YAML file which is passed in via a few different ways."
   },
+  "sF92ld": {
+    "message": "Exited Slashed"
+  },
   "sFD6T7": {
     "message": "Lodestar is a Typescript ecosystem for Ethereum consensus, developed by ChainSafe Systems. Our beacon, validator client and tooling is uniquely situated as the go-to for researchers and developers for rapid prototyping."
   },
@@ -3268,6 +3346,9 @@
   },
   "sy35J+": {
     "message": "What is the deposit contract?"
+  },
+  "syOmOC": {
+    "message": "Account must be activated for at least 256 epochs (~27 hours) before eligible for partial withdrawals."
   },
   "szN3Fl": {
     "message": "I understand and agree to the terms-of-service and everything stated in the previous sections."
@@ -3360,6 +3441,9 @@
   "ubKWX8": {
     "message": "Generate key pairs"
   },
+  "udj2WS": {
+    "message": "More on upgrading a validator with Type 0 credentials."
+  },
   "uhapiE": {
     "message": "Ensure your bandwidth can't be throttled and isn't capped so your node stays in sync and will be ready to validate when called."
   },
@@ -3448,6 +3532,9 @@
   },
   "wtwIax": {
     "message": "Option 2: source code + virtualenv"
+  },
+  "wxaiRj": {
+    "message": "I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF {index}"
   },
   "x+fF+M": {
     "message": "Testnet simulations"

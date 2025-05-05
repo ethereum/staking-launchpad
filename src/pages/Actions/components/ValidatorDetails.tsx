@@ -4,12 +4,15 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import styled from 'styled-components';
 
 import { Heading } from '../../../components/Heading';
+import { Link } from '../../../components/Link';
 import { Text } from '../../../components/Text';
 import { Section, CopyContainer, Hash } from './Shared';
 
 import { ValidatorType } from '../types';
 import { BeaconChainValidator } from '../../TopUp/types';
 
+import { epochToDate } from '../../../utils/beaconchain';
+import { BEACONCHAIN_URL } from '../../../utils/envVars';
 import {
   hasValidatorExited,
   getCredentialType,
@@ -17,7 +20,6 @@ import {
   getMaxEB,
   getEffectiveBalance,
 } from '../../../utils/validators';
-import { epochToDate } from '../../../utils/beaconchain';
 
 const BalancesContainer = styled.div`
   display: grid;
@@ -90,6 +92,24 @@ const ValidatorDetails = ({
       return <FormattedMessage defaultMessage="Exiting Offline" />;
     if (status === 'exited')
       return <FormattedMessage defaultMessage="Exited" />;
+    if (status === 'pending_initialized')
+      return <FormattedMessage defaultMessage="Pending Initialized" />;
+    if (status === 'pending_queued')
+      return <FormattedMessage defaultMessage="Pending Queued" />;
+    if (status === 'active_ongoing')
+      return <FormattedMessage defaultMessage="Active" />;
+    if (status === 'active_exiting')
+      return <FormattedMessage defaultMessage="Active Exiting" />;
+    if (status === 'active_slashed')
+      return <FormattedMessage defaultMessage="Active Slashed" />;
+    if (status === 'exited_unslashed')
+      return <FormattedMessage defaultMessage="Exited Unslashed" />;
+    if (status === 'exited_slashed')
+      return <FormattedMessage defaultMessage="Exited Slashed" />;
+    if (status === 'withdrawal_possible')
+      return <FormattedMessage defaultMessage="Withdrawal Possible" />;
+    if (status === 'withdrawal_done')
+      return <FormattedMessage defaultMessage="Withdrawal Done" />;
     return status
       .split('_')
       .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -100,6 +120,7 @@ const ValidatorDetails = ({
     if (status.includes('offline')) return '#e74c3c';
     if (status.includes('slash')) return '#e74c3c';
     if (status.includes('online')) return 'green';
+    if (status.includes('active')) return 'green';
     if (status.includes('exit')) return 'darkred';
     return 'inherit';
   };
@@ -140,9 +161,13 @@ const ValidatorDetails = ({
           </div>
         </Text>
 
+        <Link primary to={`${BEACONCHAIN_URL}/validator/${validator.pubkey}`}>
+          <FormattedMessage defaultMessage="View on beacon explorer" />
+        </Link>
+
         <BalancesContainer>
           <BalanceItem>
-            <BalanceValue>{getEtherBalance(validator)}</BalanceValue>
+            <BalanceValue>{getEtherBalance(validator).toFixed(9)}</BalanceValue>
             <BalanceLabel>
               <FormattedMessage defaultMessage="Balance" />
             </BalanceLabel>
@@ -200,19 +225,17 @@ const ValidatorDetails = ({
             gap: '0.5rem',
           }}
         >
-          <Text>
-            <strong>
-              <FormattedMessage
-                defaultMessage="Validator exit {pending} - no further performable actions"
-                values={{
-                  pending: hasExitCompleted ? (
-                    ''
-                  ) : (
-                    <FormattedMessage defaultMessage="pending" />
-                  ),
-                }}
-              />
-            </strong>
+          <Text className="text-bold">
+            <FormattedMessage
+              defaultMessage="Validator exit {pending} - no further performable actions"
+              values={{
+                pending: hasExitCompleted ? (
+                  ''
+                ) : (
+                  <FormattedMessage defaultMessage="pending" />
+                ),
+              }}
+            />
           </Text>
           <Text>
             <FormattedMessage defaultMessage="Exit Epoch" />:{' '}

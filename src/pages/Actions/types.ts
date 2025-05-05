@@ -1,3 +1,5 @@
+import Web3 from 'web3';
+
 export interface OwnProps {}
 export interface StateProps {}
 export interface DispatchProps {}
@@ -10,3 +12,5 @@ export const ValidatorType = {
 } as const;
 
 export type ValidatorType = typeof ValidatorType[keyof typeof ValidatorType];
+
+export type Web3Instance = InstanceType<typeof Web3>;

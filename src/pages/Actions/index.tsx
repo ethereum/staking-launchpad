@@ -14,6 +14,7 @@ import ValidatorActions from './components/ValidatorActions';
 
 import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
+import { Link } from '../../components/Link';
 import { PageTemplate } from '../../components/PageTemplate';
 import { Section } from './components/Shared';
 import { Text } from '../../components/Text';
@@ -26,12 +27,9 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import {
-  BEACONCHAIN_URL,
-  TICKER_NAME,
-  MAX_QUERY_LIMIT,
-} from '../../utils/envVars';
+import { BEACONCHAIN_URL, MAX_QUERY_LIMIT } from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
+import { fetchValidatorsByPubkeys } from './utils';
 
 const FakeLink = styled.span`
   color: blue;
@@ -126,29 +124,6 @@ const fetchPubkeysByWithdrawalAddress = async (
   } catch (error) {
     console.warn(
       `Error fetching pubkeys (address ${address}, limit ${limit}, offset ${offset}):`,
-      error
-    );
-    return null;
-  }
-};
-
-const fetchValidatorsByPubkeys = async (
-  pubkeys: string[]
-): Promise<BeaconChainValidator[] | null> => {
-  try {
-    const response = await fetch(
-      `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(',')}`
-    );
-    if (!response.ok) throw new Error();
-    const json = await response.json();
-    const data: BeaconChainValidator[] = Array.isArray(json.data)
-      ? json.data
-      : [json.data];
-
-    return data;
-  } catch (error) {
-    console.warn(
-      `Error fetching validators (pubkeys ${pubkeys.join(',')}):`,
       error
     );
     return null;
@@ -291,6 +266,10 @@ const _ActionsPage = () => {
       );
     }
 
+    const validatorDeposits = new URL('validators/deposits', BEACONCHAIN_URL);
+    validatorDeposits.searchParams.set('q', account || '');
+    const depositsUrl = validatorDeposits.toString();
+
     if (validatorLoadError) {
       return (
         <Alert variant="warning" className="mb10">
@@ -303,21 +282,15 @@ const _ActionsPage = () => {
           >
             <AlertIcon color="redLight" />
             <div>
-              <Text className="mb10">
-                <strong>
-                  <FormattedMessage defaultMessage="No validators were found." />
-                </strong>
+              <Text className="mb10 text-bold">
+                <FormattedMessage defaultMessage="No validators were found with withdrawal credentials matching connected account." />
               </Text>
-              <Text className="mb10">
-                <FormattedMessage
-                  defaultMessage="You may have a deposit that was accepted but is being validated on chain.
-                    It will be available here when beaconcha.in has confirmed 2048 blocks."
-                  values={{ TICKER_NAME }}
-                />
+              <Text className="mb20">
+                <FormattedMessage defaultMessage="You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues." />
               </Text>
-              <Text>
-                <FormattedMessage defaultMessage="Please wait and try again or seek assistance if this error continues." />
-              </Text>
+              <Link primary inline to={depositsUrl}>
+                <FormattedMessage defaultMessage="Check recent deposits on explorer" />
+              </Link>
             </div>
           </div>
         </Alert>
@@ -329,9 +302,16 @@ const _ActionsPage = () => {
         <Alert variant="warning" className="my10">
           <FormattedMessage defaultMessage="No validators were discovered for the provided account." />{' '}
           {/* TODO: Switch this to a button element */}
-          <FakeLink onClick={handleConnect}>
-            <FormattedMessage defaultMessage="Please connect to a new wallet" />
-          </FakeLink>
+          <FormattedMessage
+            defaultMessage="{connect} or try refreshing the page."
+            values={{
+              connect: (
+                <FakeLink onClick={handleConnect}>
+                  <FormattedMessage defaultMessage="Please connect to a new wallet" />
+                </FakeLink>
+              ),
+            }}
+          />
         </Alert>
       );
     }
@@ -369,10 +349,8 @@ const _ActionsPage = () => {
                     <AlertBody>
                       <AlertIcon />
                       <div>
-                        <AlertText className="mb10">
-                          <strong>
-                            <FormattedMessage defaultMessage="All actions are added to a queue for processing" />
-                          </strong>
+                        <AlertText className="mb10 text-bold">
+                          <FormattedMessage defaultMessage="All actions are added to a queue for processing" />
                         </AlertText>
                         <AlertText>
                           <FormattedMessage defaultMessage="Recent changes may not be reflected in validator details, and network congestion may result in delays. Use caution to avoid submitting duplicate requests." />
@@ -427,6 +405,7 @@ const _ActionsPage = () => {
       </>
     );
   }, [
+    account,
     active,
     fetchMoreValidators,
     formatMessage,

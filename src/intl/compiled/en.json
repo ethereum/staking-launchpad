@@ -27,6 +27,20 @@
       "value": " (handling proof-of-stake consensus tasks, formerly 'Eth2' or 'Ethereum 2.0')."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "To upgrade to a Type 2 validator, please go back, select the target validator, and go through the "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": " flow."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -211,28 +225,6 @@
     {
       "type": 0,
       "value": "withdrawable epoch"
-    }
-  ],
-  "/eUGwM": [
-    {
-      "type": 0,
-      "value": "You can withdrawal any portion of your staked "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " over "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "/hEGaO": [
@@ -679,6 +671,12 @@
       "value": "Check deposit contract details"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -1027,6 +1025,12 @@
       "value": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap."
     }
   ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Active"
+    }
+  ],
   "3aykgN": [
     {
       "type": 0,
@@ -1225,6 +1229,12 @@
       "value": "The remaining balance will be unlocked after the above exit epoch has been reached. Once unlocked, the remaining balance will automatically be transferred to either your connected withdrawal account, or your chosen target validator if you're migrating accounts, within a few days."
     }
   ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Active Exiting"
+    }
+  ],
   "57MWKW": [
     {
       "type": 0,
@@ -1367,6 +1377,12 @@
     {
       "type": 0,
       "value": " validator"
+    }
+  ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "Target validator is not active"
     }
   ],
   "63gLLu": [
@@ -1525,6 +1541,12 @@
       "value": "Notes"
     }
   ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Pending Initialized"
+    }
+  ],
   "738tqz": [
     {
       "type": 0,
@@ -1611,12 +1633,6 @@
     {
       "type": 0,
       "value": "Configuration file"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Please wait and try again or seek assistance if this error continues."
     }
   ],
   "7XiYRi": [
@@ -1737,6 +1753,12 @@
       "value": "Configure Teku"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Filter your validators by index or pubkey or search by pubkey"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1771,6 +1793,12 @@
     {
       "type": 0,
       "value": "Do not turn your validator off until this epoch is reached."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues."
     }
   ],
   "8k1RjX": [
@@ -1817,12 +1845,6 @@
     {
       "type": 0,
       "value": " - epoch at which your validator funds are eligible for a full withdrawal during the next validator sweep."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Filter by index or pubkey"
     }
   ],
   "8uq59n": [
@@ -2079,10 +2101,22 @@
       "value": "Exiting"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Confirm on execution layer"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "understanding validator effective balance"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "Pending Queued"
     }
   ],
   "AkVktj": [
@@ -2109,10 +2143,10 @@
       "value": "Become a validator with Lighthouse"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "You may have a deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
+      "value": "Target validator is does not have Type 2 credentials and must be upgraded before funds can be pushed to it."
     }
   ],
   "Aw1mMs": [
@@ -2199,6 +2233,20 @@
     {
       "type": 0,
       "value": "days"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Please type "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " to acknowledge you understand your validator is changing ownership."
     }
   ],
   "Bj5yI5": [
@@ -2305,6 +2353,24 @@
     {
       "type": 0,
       "value": " pool"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "Compounding accounts are eligible to request partial withdrawals of any balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "CWKE9c": [
@@ -2613,6 +2679,12 @@
     {
       "type": 0,
       "value": "5. Time to deposit"
+    }
+  ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
     }
   ],
   "EXLB88": [
@@ -3125,6 +3197,12 @@
       "value": "Formerly TurboGeth, Erigon is an Ethereum client built to enable performance optimizations."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "Confirmation on the execution layer does not guarantee that the request will be valid on the consensus layer. Please check the beacon explorer to confirm if the request is successful after 13 minutes (under normal finalization period)."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3165,6 +3243,12 @@
     {
       "type": 0,
       "value": "Sign transaction with your wallet"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "Account must first be upgraded to compounding type."
     }
   ],
   "IWlazt": [
@@ -3381,10 +3465,10 @@
       "value": "Further reading"
     }
   ],
-  "Jge1Sx": [
+  "JcQdD5": [
     {
       "type": 0,
-      "value": "Force exit"
+      "value": "Active Slashed"
     }
   ],
   "JhUYU3": [
@@ -4055,6 +4139,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Withdrawal Done"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4135,6 +4225,12 @@
       "value": "TICKER_NAME"
     }
   ],
+  "OPrOVV": [
+    {
+      "type": 0,
+      "value": "Exited Unslashed"
+    }
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4169,6 +4265,12 @@
     {
       "type": 0,
       "value": " values are calculated based off the current epoch number. These values determine exactly when the validator will no longer be required to be online performing validation, and when the validator is eligible for a full withdrawal respectively."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Check recent deposits on explorer"
     }
   ],
   "OdYQYh": [
@@ -4315,6 +4417,12 @@
       "value": "Your network has changed"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4373,6 +4481,12 @@
     {
       "type": 0,
       "value": "pip documentation"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Only validators with an active status can receive funds from another validator."
     }
   ],
   "Q/HeiY": [
@@ -4559,6 +4673,12 @@
     {
       "type": 0,
       "value": "congratulations"
+    }
+  ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "Target validator is not associated with your current wallet!"
     }
   ],
   "RhR6+a": [
@@ -4859,6 +4979,16 @@
       "value": "index"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " or try refreshing the page."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5053,6 +5183,12 @@
     {
       "type": 0,
       "value": "I am certain that the validator I am topping up is my validator."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
     }
   ],
   "Vm6cRY": [
@@ -6025,6 +6161,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "Selected account must be upgraded to compounding type to absorb another validator."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6221,6 +6363,12 @@
     {
       "type": 0,
       "value": "Setup"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Exit fully"
     }
   ],
   "dzdAcD": [
@@ -6435,16 +6583,22 @@
       "value": "only stored on one validator machine"
     }
   ],
-  "fnMHGO": [
+  "fdGVBw": [
+    {
+      "type": 1,
+      "value": "subject"
+    },
     {
       "type": 0,
-      "value": "Waiting for wallet confirmation"
-    }
-  ],
-  "fnV2qn": [
+      "value": " can withdraw any portion of staked "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Compounding accounts eligible to request partial withdrawals of any balance over "
+      "value": " over "
     },
     {
       "type": 1,
@@ -6452,11 +6606,13 @@
     },
     {
       "type": 0,
-      "value": " "
-    },
+      "value": "."
+    }
+  ],
+  "fnMHGO": [
     {
-      "type": 1,
-      "value": "TICKER_NAME"
+      "type": 0,
+      "value": "Waiting for wallet confirmation"
     }
   ],
   "fpe4Gx": [
@@ -6937,6 +7093,12 @@
       "value": "A withdrawal address has not been set for these validators. Staked funds and rewards will remain locked until withdrawal credentials are provided."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "No eligible source accounts found. Source validators must be activated for at least 256 epochs (~27 hours) before eligible for consolidation."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7343,12 +7505,6 @@
       "value": "Advisories"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "Confirm on-chain"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7513,6 +7669,12 @@
       "value": "change your wallet"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "View on beacon explorer"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7651,6 +7813,12 @@
     {
       "type": 0,
       "value": "Number of withdrawals"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "No validators were found with withdrawal credentials matching connected account."
     }
   ],
   "mhyltV": [
@@ -7893,12 +8061,6 @@
     {
       "type": 0,
       "value": "your validator"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "No validators were found."
     }
   ],
   "oVx7Qe": [
@@ -8225,6 +8387,12 @@
       "value": " format. This format is not compatible with Beacon Chain withdrawals and must be updated to Ethereum address credentials to enable withdrawals."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Max fee"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8291,6 +8459,12 @@
     {
       "type": 0,
       "value": "Your wallet has disconnected"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "Withdrawal Possible"
     }
   ],
   "qgqVCE": [
@@ -8503,6 +8677,12 @@
       "value": "Teku can also be configured via a YAML file which is passed in via a few different ways."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "Exited Slashed"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8625,6 +8805,12 @@
     {
       "type": 0,
       "value": "What is the deposit contract?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "Account must be activated for at least 256 epochs (~27 hours) before eligible for partial withdrawals."
     }
   ],
   "szN3Fl": [
@@ -8939,6 +9125,12 @@
       "value": "Generate key pairs"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "More on upgrading a validator with Type 0 credentials."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9143,6 +9335,16 @@
     {
       "type": 0,
       "value": "Option 2: source code + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "I TRANSFER MY FULL VALIDATOR BALANCE TO THE OWNER OF "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

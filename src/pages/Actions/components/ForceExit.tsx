@@ -25,7 +25,7 @@ import {
   modalLayerStyle,
 } from './Shared';
 
-import { generateWithdrawalParams } from '../utils';
+import { generateWithdrawalParams, isValidatorNascent } from '../utils';
 import { getEtherBalance } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { TICKER_NAME } from '../../../utils/envVars';
@@ -78,7 +78,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
     const walletProvider = await (connector as AbstractConnector).getProvider();
     const web3 = new Web3(walletProvider);
 
-    // Force exits have withdrawal amount of 0
+    // Full exits have withdrawal amount of 0
     const {
       transactionParams,
       queue: withdrawalQueue,
@@ -111,9 +111,10 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
   return (
     <>
       <Button
-        label={<FormattedMessage defaultMessage="Force exit" />}
+        label={<FormattedMessage defaultMessage="Exit fully" />}
         onClick={handleOpen}
         destructive
+        disabled={isValidatorNascent(validator)} // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#modified-process_voluntary_exit
       />
 
       {showModal && (
@@ -135,10 +136,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                 <AlertContent>
                   <AlertIcon />
                   <div>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="This account will be permanently exited from the network." />
                     </Text>
                     <Text style={{ fontSize: '1rem' }}>
                       <FormattedMessage defaultMessage="This validator should remain online until exit epoch is reached." />
@@ -153,7 +152,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                   <Text>
                     <FormattedMessage defaultMessage="This will initiate the process of permanently exiting this validator from the Ethereum proof-of-stake network." />
                   </Text>
-                  <Text style={{ fontSize: '1rem' }}>
+                  <Text>
                     <FormattedMessage defaultMessage="You'll be asked to sign a message with your wallet. Processing of exits is not immediate, so account for up to several days before completion." />
                   </Text>
                   <ul
@@ -179,7 +178,7 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                           defaultMessage="All remaining funds will be transferred to the {destination} within a few days after exit epoch reached"
                           values={{
                             destination: (
-                              <strong>
+                              <strong className="text-bold">
                                 <FormattedMessage defaultMessage="connected execution withdrawal address" />
                               </strong>
                             ),
@@ -188,6 +187,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                       </Text>
                     </li>
                   </ul>
+                  <Text style={{ fontSize: '0.875rem', lineHeight: '1.25rem' }}>
+                    <FormattedMessage defaultMessage="Exit requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                  </Text>
                 </>
               )}
 
@@ -216,11 +218,9 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     >
                       <FormattedMessage defaultMessage="Exit" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Index" />:{' '}
-                        {validator.validatorindex}
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Index" />:{' '}
+                      {validator.validatorindex}
                     </Text>
                     <Text
                       style={{
@@ -315,10 +315,8 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     >
                       <FormattedMessage defaultMessage="Withdraw to" />
                     </Heading>
-                    <Text>
-                      <strong>
-                        <FormattedMessage defaultMessage="Execution account" />:
-                      </strong>
+                    <Text className="text-bold">
+                      <FormattedMessage defaultMessage="Execution account" />:
                     </Text>
                     <Text
                       style={{
@@ -422,8 +420,11 @@ const ForceExit: React.FC<Props> = ({ validator }) => {
                     style={{ marginBottom: '0.25rem' }}
                   >
                     <Text>
-                      Please type <strong>{CONFIRM_EXIT_STRING}</strong> to
-                      confirm.
+                      Please type{' '}
+                      <strong className="text-bold">
+                        {CONFIRM_EXIT_STRING}
+                      </strong>{' '}
+                      to confirm.
                     </Text>
                   </label>
                   <TextInput

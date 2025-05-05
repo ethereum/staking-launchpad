@@ -7,6 +7,7 @@ import Web3 from 'web3';
 import { AbstractConnector } from '@web3-react/abstract-connector';
 import { useWeb3React } from '@web3-react/core';
 
+import { ValidatorType } from '../types';
 import { BeaconChainValidator } from '../../TopUp/types';
 
 import { Button } from '../../../components/Button';
@@ -24,8 +25,8 @@ import {
 import { Text } from '../../../components/Text';
 import { TransactionStatusInsert } from '../../../components/TransactionStatusModal/TransactionStatusInsert';
 
-import { generateWithdrawalParams } from '../utils';
-import { getEtherBalance } from '../../../utils/validators';
+import { generateWithdrawalParams, isValidatorNascent } from '../utils';
+import { getEtherBalance, getCredentialType } from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { MIN_ACTIVATION_BALANCE, TICKER_NAME } from '../../../utils/envVars';
 
@@ -113,7 +114,11 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
   return (
     <>
       <Button
-        disabled={maxAmount <= 0}
+        disabled={
+          maxAmount <= 0 ||
+          isValidatorNascent(validator) ||
+          getCredentialType(validator) < ValidatorType.Compounding
+        } // https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md#new-process_withdrawal_request
         onClick={handleOpen}
         label={<FormattedMessage defaultMessage="Start withdrawal" />}
       />
@@ -161,6 +166,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                     }}
                     allowDecimals
                     maxValue={maxAmount}
+                    minValue={0}
                   />
                 </Form>
               )}
@@ -191,11 +197,9 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       description="'Unstake' refers to this ETH no longer being considered at 'stake' nor contributing to consensus."
                     />
                   </Heading>
-                  <Text>
-                    <strong>
-                      <FormattedMessage defaultMessage="Index" />:{' '}
-                      {validator.validatorindex}
-                    </strong>
+                  <Text className="text-bold">
+                    <FormattedMessage defaultMessage="Index" />:{' '}
+                    {validator.validatorindex}
                   </Text>
                   <Text
                     style={{
@@ -232,12 +236,12 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                       }}
                     >
                       <div>
-                        <FormattedMessage defaultMessage="Available" />:
+                        <FormattedMessage defaultMessage="Current" />:
                       </div>
                       <div
                         style={{ textAlign: 'end', fontFamily: 'monospace' }}
                       >
-                        {maxAmount.toFixed(9)} {TICKER_NAME}
+                        {getEtherBalance(validator)} {TICKER_NAME}
                       </div>
                     </Text>
 
@@ -300,10 +304,8 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   >
                     <FormattedMessage defaultMessage="Withdraw to" />
                   </Heading>
-                  <Text>
-                    <strong>
-                      <FormattedMessage defaultMessage="Execution account" />:
-                    </strong>
+                  <Text className="text-bold">
+                    <FormattedMessage defaultMessage="Execution account" />:
                   </Text>
                   <Text
                     style={{
@@ -369,7 +371,7 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                 </div>
               </div>
 
-              {showTx && (
+              {showTx ? (
                 <TransactionStatusInsert
                   headerMessage={
                     <FormattedMessage
@@ -380,6 +382,10 @@ const PartialWithdraw: React.FC<Props> = ({ validator }) => {
                   txHash={txHash}
                   transactionStatus={txStatus}
                 />
+              ) : (
+                <Text style={{ fontSize: '0.875rem', lineHeight: '1.25rem' }}>
+                  <FormattedMessage defaultMessage="Withdraw requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />
+                </Text>
               )}
             </ModalContent>
           </ModalBody>

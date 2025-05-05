@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
@@ -7,6 +7,7 @@ import { BeaconChainValidator } from '../../TopUp/types';
 import Select from '../../../components/Select';
 
 import { ETHER_TO_GWEI, TICKER_NAME } from '../../../utils/envVars';
+import { fetchValidatorsByPubkeys } from '../utils';
 
 const AccountType = styled.p`
   font-size: 0.875rem;
@@ -26,22 +27,46 @@ const AccountType = styled.p`
 `;
 
 type ValidatorSelectorProps = {
+  allowSearch?: boolean;
+  autoSelect?: boolean;
   validators: BeaconChainValidator[];
   setSelectedValidator: Dispatch<SetStateAction<BeaconChainValidator | null>>;
   selectedValidator: BeaconChainValidator | null;
 };
 
 const ValidatorSelector = ({
+  allowSearch = false,
+  autoSelect = true,
   validators,
   setSelectedValidator,
   selectedValidator,
 }: ValidatorSelectorProps) => {
   const { formatMessage } = useIntl();
+
+  // If only one validator, select it by default
+  useEffect(() => {
+    if (!autoSelect) return;
+    if (validators.length !== 1) return;
+    setSelectedValidator(validators[0]);
+  }, [autoSelect, validators, setSelectedValidator]);
+
+  const onValidatorSearch = async (value: string) => {
+    // Check if user is searching by validator pubkey
+    if (value && value.length === 98) {
+      const newValidators = await fetchValidatorsByPubkeys([value]);
+
+      if (newValidators && newValidators.length === 1) {
+        setSelectedValidator(newValidators[0]);
+      }
+    }
+  };
+
   return (
     <Select
       placeholder={`Available validators: ${validators.length}`}
       searchPlaceholder={formatMessage({
-        defaultMessage: 'Filter by index or pubkey',
+        defaultMessage:
+          'Filter your validators by index or pubkey or search by pubkey',
       })}
       options={validators.map(v => {
         return {
@@ -86,6 +111,7 @@ const ValidatorSelector = ({
         const validator = validators.find(v => v.pubkey === value);
         setSelectedValidator(validator || null);
       }}
+      onSearchChange={allowSearch ? onValidatorSearch : undefined}
     />
   );
 };

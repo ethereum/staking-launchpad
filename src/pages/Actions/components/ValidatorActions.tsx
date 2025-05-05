@@ -184,7 +184,7 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
             <FormattedMessage defaultMessage="Request partial withdrawal" />
           </ActionTitle>
           <FormattedMessage
-            defaultMessage="{subject} can withdrawal any portion of staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
+            defaultMessage="{subject} can withdraw any portion of staked {TICKER_NAME} over {MIN_ACTIVATION_BALANCE}."
             values={{
               subject:
                 getCredentialType(validator) < ValidatorType.Compounding

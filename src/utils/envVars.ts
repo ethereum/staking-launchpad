@@ -30,7 +30,7 @@ if (IS_NON_INFURA_TESTNET && process.env.REACT_APP_EL_EXPLORER_URL) {
 } else if (IS_MAINNET) {
     elExplorerURL                       = 'https://etherscan.io'
 }
-export const EL_EXPLOER_URL             = elExplorerURL
+export const EL_EXPLORER_URL             = elExplorerURL
 export const EL_TRANSACTION_URL         = `${elExplorerURL}/tx`
 
 

@@ -87,6 +87,7 @@ export type SelectProps = {
   options: Option[];
   value: string;
   onChange: (value: string) => void;
+  onSearchChange?: (value: string) => void;
   placeholder?: string;
   searchPlaceholder?: string;
 };
@@ -95,6 +96,7 @@ const Select = ({
   options,
   value,
   onChange,
+  onSearchChange,
   placeholder,
   searchPlaceholder,
 }: SelectProps) => {
@@ -103,10 +105,13 @@ const Select = ({
   const [search, setSearch] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleSelect = (choice: string) => {
-    onChange(choice);
+  useEffect(() => {
     setIsOpen(false);
     setSearch('');
+  }, [value]);
+
+  const handleSelect = (choice: string) => {
+    onChange(choice);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -155,7 +160,15 @@ const Select = ({
           <SearchInput
             type="text"
             value={search}
-            onChange={e => setSearch(e.target.value)}
+            onChange={e => {
+              const newSearchValue = e.target.value;
+              if (newSearchValue !== search) {
+                setSearch(newSearchValue);
+                if (onSearchChange) {
+                  onSearchChange(newSearchValue);
+                }
+              }
+            }}
             placeholder={
               searchPlaceholder ||
               formatMessage({ defaultMessage: 'Type to filter' })

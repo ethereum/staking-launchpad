@@ -9,12 +9,7 @@ import {
   DepositStatus,
   TransactionStatus,
 } from '../../../store/actions/depositFileActions';
-import {
-  BEACONCHAIN_URL,
-  BEACONSCAN_URL,
-  EL_TRANSACTION_URL,
-  IS_NON_INFURA_TESTNET,
-} from '../../../utils/envVars';
+import { BEACONCHAIN_URL, EL_TRANSACTION_URL } from '../../../utils/envVars';
 import { errorStatuses } from '../../../utils/txStatus';
 
 const Button = styled.button`
@@ -117,12 +112,6 @@ export const ActionButton = ({
           </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
-        {!IS_NON_INFURA_TESTNET && (
-          // Probably no Bellatrix beaconscan explorer
-          <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>
-            Beaconscan
-          </ButtonLink>
-        )}
       </div>
     );
   }

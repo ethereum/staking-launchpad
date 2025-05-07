@@ -17,6 +17,7 @@ import { Link } from './Link';
 import { Text } from './Text';
 import { routesEnum } from '../Routes';
 import { Heading } from './Heading';
+import { Hash } from '../pages/Actions/components/Shared';
 import {
   IS_MAINNET,
   NETWORK_NAME,
@@ -51,7 +52,7 @@ const NetworkText = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
   border-radius: 4px;
   &:hover {
     border-radius: 4px;
@@ -84,7 +85,7 @@ const ValidatorDropdown = styled(DropButton)`
   }
 `;
 
-const DotBox = styled(Box)`
+const DotBox = styled.div`
   display: flex;
   margin-bottom: 20px;
   gap: 10px;
@@ -92,8 +93,6 @@ const DotBox = styled(Box)`
 
 const DotDropdownBox = styled(Box)`
   display: flex;
-  margin-inline-end: 20px;
-  gap: 10px;
 `;
 
 const DotDropdown = styled(DropButton)`
@@ -300,6 +299,16 @@ const _AppBar = ({ location }: RouteComponentProps) => {
             <FormattedMessage defaultMessage="Top Up" />
           </BarLinkText>
         </Link>
+        <Link to={routesEnum.actionsPage} className="secondary-link">
+          <BarLinkText
+            level={4}
+            margin="none"
+            className="bar-link-text"
+            active={pathname === routesEnum.actionsPage}
+          >
+            <FormattedMessage defaultMessage="Actions" />
+          </BarLinkText>
+        </Link>
         <Link to={routesEnum.withdrawals} className="mx10 secondary-link">
           <BarLinkText
             level={4}
@@ -340,9 +349,14 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   {walletConnected && (
                     <DotBox>
                       <Dot success={networkAllowed} error={!networkAllowed} />
-                      <Text size="small" color="blueDark">
-                        {trimString(account as string, 10)}
-                      </Text>
+                      <Hash
+                        style={{
+                          fontSize: '0.875rem',
+                          fontFamily: 'inherit',
+                        }}
+                      >
+                        {account as string}
+                      </Hash>
                     </DotBox>
                   )}
                   <span>
@@ -370,6 +384,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   </DropdownLink>
                   <DropdownLink to={routesEnum.withdrawals}>
                     <FormattedMessage defaultMessage="Withdrawals" />
+                  </DropdownLink>
+                  <DropdownLink to={routesEnum.actionsPage}>
+                    <FormattedMessage defaultMessage="Actions" />
                   </DropdownLink>
                   <DropdownLink to={routesEnum.languagesPage}>
                     <FormattedMessage defaultMessage="Languages" />
@@ -404,70 +421,93 @@ const _AppBar = ({ location }: RouteComponentProps) => {
           />
         )}
         {!mobile && (
-          <ValidatorDropdown
-            className="secondary-link"
-            label={
-              <NetworkText>
-                {NETWORK_NAME}
-                <FormDown />
-              </NetworkText>
-            }
-            dropAlign={{ top: 'bottom', right: dropAlignInline }}
-            dropContent={
-              <Card>
-                <Box pad="small" className="mt0">
-                  {!IS_MAINNET && (
-                    <Text className="mb10">
-                      <FormattedMessage defaultMessage="This is a test network ⚠️" />
-                    </Text>
-                  )}
-                  <DropdownLink to={switchLaunchpadUrl}>
-                    <FormattedMessage
-                      defaultMessage="Switch to {oppositeNetwork} launchpad"
-                      values={{ oppositeNetwork }}
-                    />
-                  </DropdownLink>
-                </Box>
-              </Card>
-            }
-          />
-        )}
-        {!mobile && walletConnected && (
-          <DotDropdownBox>
-            {networkAllowed ? (
-              <DotDropdown
-                className="secondary-link"
-                label={<Dot success={networkAllowed} error={!networkAllowed} />}
-                dropAlign={{ top: 'bottom', right: dropAlignInline }}
-                dropContent={
-                  <Box pad="small">
-                    <Text>
-                      <FormattedMessage defaultMessage="Your wallet is connected to the right network!" />
-                    </Text>
-                  </Box>
-                }
-              />
-            ) : (
-              <DotDropdown
-                className="secondary-link"
-                label={<Dot error={!networkAllowed} />}
-                dropAlign={{ top: 'bottom', right: dropAlignInline }}
-                dropContent={
-                  <Box pad="small">
-                    <Text>
+          <div className="flex flex-column">
+            <ValidatorDropdown
+              className="secondary-link"
+              label={
+                <NetworkText>
+                  {NETWORK_NAME}
+                  <FormDown />
+                </NetworkText>
+              }
+              dropAlign={{ top: 'bottom', right: dropAlignInline }}
+              dropContent={
+                <Card>
+                  <Box pad="small" className="mt0">
+                    {!IS_MAINNET && (
+                      <Text className="mb10">
+                        <FormattedMessage defaultMessage="This is a test network ⚠️" />
+                      </Text>
+                    )}
+                    <DropdownLink to={switchLaunchpadUrl}>
                       <FormattedMessage
-                        defaultMessage="Your wallet should be set to {executionLayerName} to use this launchpad."
-                        values={{ executionLayerName }}
+                        defaultMessage="Switch to {oppositeNetwork} launchpad"
+                        values={{ oppositeNetwork }}
                       />
-                    </Text>
+                    </DropdownLink>
                   </Box>
-                }
-              />
+                </Card>
+              }
+            />
+            {walletConnected && (
+              <DotDropdownBox>
+                {networkAllowed ? (
+                  <DotDropdown
+                    className="secondary-link"
+                    label={
+                      <div
+                        className="flex items-center"
+                        style={{ gap: '0.5rem', paddingInline: '0.5rem' }}
+                      >
+                        <Dot success={networkAllowed} error={!networkAllowed} />
+                        <Text
+                          style={{ color: 'darkblue', fontSize: '0.875rem' }}
+                        >
+                          {trimString(account as string, 10)}
+                        </Text>
+                      </div>
+                    }
+                    dropAlign={{ top: 'bottom', right: dropAlignInline }}
+                    dropContent={
+                      <Box pad="small">
+                        <Text>
+                          <FormattedMessage defaultMessage="Your wallet is connected to the right network!" />
+                        </Text>
+                      </Box>
+                    }
+                  />
+                ) : (
+                  <DotDropdown
+                    className="secondary-link"
+                    label={
+                      <div
+                        className="flex items-center"
+                        style={{ gap: '0.5rem', paddingInline: '0.5rem' }}
+                      >
+                        <Dot error={!networkAllowed} />
+                        <Text
+                          style={{ color: 'darkblue', fontSize: '0.875rem' }}
+                        >
+                          <Hash>{account}</Hash>
+                        </Text>
+                      </div>
+                    }
+                    dropAlign={{ top: 'bottom', right: dropAlignInline }}
+                    dropContent={
+                      <Box pad="small">
+                        <Text>
+                          <FormattedMessage
+                            defaultMessage="Your wallet should be set to {executionLayerName} to use this launchpad."
+                            values={{ executionLayerName }}
+                          />
+                        </Text>
+                      </Box>
+                    }
+                  />
+                )}
+              </DotDropdownBox>
             )}
-            <Text size="small" color="blueDark">
-              {trimString(account as string, 10)}
-            </Text>
-          </DotDropdownBox>
+          </div>
         )}
       </NavLinksRight>
     </RainbowBackground>

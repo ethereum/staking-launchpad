@@ -2,19 +2,15 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { Checkmark, Close } from 'grommet-icons';
-import Spinner from '../../../components/Spinner';
-import { Text } from '../../../components/Text';
-import { stepStatus } from '../types';
-
-const Container = styled.div`
-  justify-content: space-around;
-  flex-direction: column;
-  gap: 30px;
-`;
+import Spinner from '../Spinner';
+import { Text } from '../Text';
+import { stepStatus } from './types';
 
 const Item = styled.div`
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 1rem;
 `;
 
 const CircleDiv = styled.div`
@@ -110,26 +106,29 @@ interface TransactionProgressProps {
   confirmOnChainStatus: stepStatus;
 }
 
-const TransactionProgress: React.FC<TransactionProgressProps> = ({
+export const TransactionProgress: React.FC<TransactionProgressProps> = ({
   signTxStatus,
   confirmOnChainStatus,
 }) => {
   return (
-    <Container>
+    <div>
       <Item>
         <ProgressCircle step={1} status={signTxStatus} />
-        <Text className="mt10">
+        <Text>
           <FormattedMessage defaultMessage="Sign transaction with your wallet" />
         </Text>
       </Item>
-      <Item>
-        <ProgressCircle step={2} status={confirmOnChainStatus} />
-        <Text className="mt10">
-          <FormattedMessage defaultMessage="Confirm on-chain" />
+      <div>
+        <Item>
+          <ProgressCircle step={2} status={confirmOnChainStatus} />
+          <Text>
+            <FormattedMessage defaultMessage="Confirm on execution layer" />
+          </Text>
+        </Item>
+        <Text style={{ fontSize: '0.875rem' }}>
+          <FormattedMessage defaultMessage="Confirmation on the execution layer does not guarantee that the request will be valid on the consensus layer. Please check the beacon explorer to confirm if the request is successful after 13 minutes (under normal finalization period)." />
         </Text>
-      </Item>
-    </Container>
+      </div>
+    </div>
   );
 };
-
-export default TransactionProgress;

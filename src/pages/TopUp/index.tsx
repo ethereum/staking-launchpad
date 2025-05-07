@@ -19,7 +19,8 @@ import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
 import {
   BEACONCHAIN_URL,
-  PRICE_PER_VALIDATOR,
+  MAX_EFFECTIVE_BALANCE,
+  MIN_ACTIVATION_BALANCE,
   EJECTION_PRICE,
   TICKER_NAME,
 } from '../../utils/envVars';
@@ -130,13 +131,26 @@ const _TopUpPage: React.FC<Props> = () => {
                 `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
               )
                 .then(r => r.json())
-                .then(({ data }: { data: BeaconChainValidator[] }) => {
-                  if (data.length === 0) {
-                    setShowDepositVerificationWarning(true);
+                .then(
+                  ({
+                    data,
+                  }: {
+                    data: BeaconChainValidator[] | BeaconChainValidator;
+                  }) => {
+                    const validatorsResponse = Array.isArray(data)
+                      ? data
+                      : [data];
+                    if (validatorsResponse.length === 0) {
+                      setShowDepositVerificationWarning(true);
+                      setValidators([]);
+                    } else {
+                      setValidators(
+                        validatorsResponse as BeaconChainValidator[]
+                      );
+                    }
+                    setLoading(false);
                   }
-                  setValidators(data);
-                  setLoading(false);
-                })
+                )
                 .catch(error => {
                   console.log(error);
                   setLoading(false);
@@ -175,6 +189,19 @@ const _TopUpPage: React.FC<Props> = () => {
     setLoading(false);
   }, [setLoading]);
 
+  const BackButton = () => {
+    if (!selectedValidator) return null;
+    return (
+      <BackText
+        onClick={() => setSelectedValidator(null)}
+        color="blueMedium"
+        style={{ marginTop: '2px', marginBottom: '1rem' }}
+      >
+        <Arrow />
+        <FormattedMessage defaultMessage="All validators" />
+      </BackText>
+    );
+  };
   const topUpPageContent = useMemo(() => {
     if (loading) {
       return <Spinner className="mt40" />;
@@ -232,7 +259,9 @@ const _TopUpPage: React.FC<Props> = () => {
     }
 
     if (selectedValidator) {
-      return <TopupPage validator={selectedValidator} />;
+      return (
+        <TopupPage validator={selectedValidator} backButton={<BackButton />} />
+      );
     }
 
     return (
@@ -285,28 +314,42 @@ const _TopUpPage: React.FC<Props> = () => {
         title={formatMessage({ defaultMessage: 'Top up a validator' })}
       >
         {/* render a "back button" if there's a selected validator */}
-        {selectedValidator && (
-          <BackText
-            onClick={() => setSelectedValidator(null)}
-            color="blueMedium"
-          >
-            <Arrow />
-            <FormattedMessage defaultMessage="All validators" />
-          </BackText>
-        )}
+        <BackButton />
 
-        <SubTextContainer className="mt20">
-          <Text className="mt10">
+        <SubTextContainer className="my20">
+          <Text className="mb20">
             <FormattedMessage
-              defaultMessage="You may need to top up your validator's balance for two important reasons. If your validator's effective balance is below {PRICE_PER_VALIDATOR} {TICKER_NAME} you won't be earning your full staker rewards. And if it drops as low as {EJECTION_PRICE} {TICKER_NAME} the system will eject your validator."
-              values={{ PRICE_PER_VALIDATOR, TICKER_NAME, EJECTION_PRICE }}
+              defaultMessage='You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance ("max EB", the amount capable of contributing to your stake). 
+              You can also use this to top us if you validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}.'
+              values={{
+                MIN_ACTIVATION_BALANCE,
+                TICKER_NAME,
+                EJECTION_PRICE,
+              }}
             />
           </Text>
-          <Alert variant="info" className="my20">
+          <Text className="mb20">
             <FormattedMessage
-              defaultMessage="{PRICE_PER_VALIDATOR} {TICKER_NAME} is the maximum effective validator balance. This means you won't earn more rewards if your validator's balance goes above {PRICE_PER_VALIDATOR}. However you will earn less if it dips below {PRICE_PER_VALIDATOR}."
-              values={{ PRICE_PER_VALIDATOR, TICKER_NAME }}
+              defaultMessage="By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties.
+                Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
+              values={{
+                MIN_ACTIVATION_BALANCE,
+                TICKER_NAME,
+                EJECTION_PRICE,
+              }}
+            />
+          </Text>
+          <Text className="mb20">
+            <FormattedMessage
+              defaultMessage="The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EF of {MAX_EFFECTIVE_BALANCE}."
+              values={{
+                MAX_EFFECTIVE_BALANCE,
+                MIN_ACTIVATION_BALANCE,
+                TICKER_NAME,
+              }}
             />{' '}
+          </Text>
+          <Text className="mb20">
             <Link
               inline
               primary
@@ -314,7 +357,7 @@ const _TopUpPage: React.FC<Props> = () => {
             >
               <FormattedMessage defaultMessage="More on effective balance" />
             </Link>
-          </Alert>
+          </Text>
         </SubTextContainer>
 
         {/* the main content for the topup page */}

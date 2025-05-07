@@ -11,17 +11,13 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
-import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
+import { IS_HOLESKY } from '../../ConnectWallet/web3Utils';
 
 import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const GethDetails = () => (
   <>
-    <ClientDiversityWarning>
-      <FormattedMessage defaultMessage="Currently Geth is used by >66% of the network." />
-    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Geth
     </SectionTitle>
@@ -56,16 +52,16 @@ export const GethDetails = () => (
       <Text className="mb20 mt10">
         <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
-      {!IS_MAINNET && IS_GOERLI && (
+      {!IS_MAINNET && IS_HOLESKY && (
         <>
           <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Goerli" />
+            <FormattedMessage defaultMessage="Testing on Holesky" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="Use {goerli} to sync the Goerli testnet."
+              defaultMessage="Use {testnet} to sync the Holesky testnet."
               values={{
-                goerli: <Code className="mt20">--goerli</Code>,
+                testnet: <Code className="mt20">--holesky</Code>,
               }}
             />
           </Text>
@@ -73,7 +69,7 @@ export const GethDetails = () => (
             primary
             to="https://geth.ethereum.org/docs/interface/command-line-options"
           >
-            <FormattedMessage defaultMessage="Geth on Goerli documentation" />
+            <FormattedMessage defaultMessage="Geth on Holesky documentation" />
           </Link>
         </>
       )}

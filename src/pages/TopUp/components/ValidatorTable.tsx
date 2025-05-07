@@ -21,9 +21,10 @@ import { Paper } from '../../../components/Paper';
 import { Link } from '../../../components/Link';
 import {
   BEACONCHAIN_URL,
-  PRICE_PER_VALIDATOR,
+  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   ETHER_TO_GWEI,
+  MAX_EFFECTIVE_BALANCE,
 } from '../../../utils/envVars';
 
 const FakeLink = styled.span`
@@ -119,6 +120,76 @@ const ValidatorTable: React.FC<{
           </Item>
         );
       }
+      case 'active_ongoing': {
+        return (
+          <Item>
+            <Wifi color={theme.green.dark} />
+            <Text>
+              <FormattedMessage defaultMessage="Online" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'pending_initialized': {
+        return (
+          <Item>
+            <Refresh color="blueLight" />
+            <Text>
+              <FormattedMessage defaultMessage="Pending" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'pending_queued': {
+        return (
+          <Item>
+            <Refresh color="blueLight" />
+            <Text>
+              <FormattedMessage defaultMessage="Pending" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'active_slashed': {
+        return (
+          <Item>
+            <StatusWarning color={theme.red.light} />
+            <Text>
+              <FormattedMessage defaultMessage="Slashing" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'exited_slashed': {
+        return (
+          <Item>
+            <StatusWarning color={theme.red.light} />
+            <Text>
+              <FormattedMessage defaultMessage="Slashed" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'active_exiting': {
+        return (
+          <Item>
+            <StatusWarning color="yellowDark" />
+            <Text>
+              <FormattedMessage defaultMessage="Exiting" />
+            </Text>
+          </Item>
+        );
+      }
+      case 'exited_unslashed': {
+        return (
+          <Item>
+            <StatusDisabled color={theme.gray.medium} />
+            <Text>
+              <FormattedMessage defaultMessage="Exited" />
+            </Text>
+          </Item>
+        );
+      }
       default:
         return '';
     }
@@ -126,12 +197,21 @@ const ValidatorTable: React.FC<{
 
   const validatorRows = React.useMemo(() => {
     return validators.map(validator => {
-      const alreadyToppedUp =
-        validator.effectivebalance >=
-        Number(PRICE_PER_VALIDATOR) * ETHER_TO_GWEI;
       // No top-ups for exited or slashed validators:
       const statusIneligible =
         validator.status === 'slashed' || validator.status === 'exited';
+
+      const maxEffectiveBalanceEther = statusIneligible
+        ? 0
+        : Number(
+            validator.withdrawalcredentials.startsWith('02')
+              ? MAX_EFFECTIVE_BALANCE
+              : MIN_ACTIVATION_BALANCE
+          );
+      const maxEffectiveBalanceGwei = maxEffectiveBalanceEther * ETHER_TO_GWEI;
+      const currentEffectiveBalanceGwei = validator.effectivebalance;
+      const alreadyToppedUp =
+        currentEffectiveBalanceGwei >= maxEffectiveBalanceGwei;
 
       const toolTipText = () => {
         if (statusIneligible)
@@ -143,9 +223,9 @@ const ValidatorTable: React.FC<{
           return formatMessage(
             {
               defaultMessage:
-                "This validator's balance is at the effective maximum: {PRICE_PER_VALIDATOR} {TICKER_NAME}.",
+                "This validator's balance is at the effective maximum: {maxEffectiveBalanceEther} {TICKER_NAME}.",
             },
-            { PRICE_PER_VALIDATOR, TICKER_NAME }
+            { maxEffectiveBalanceEther, TICKER_NAME }
           );
         return formatMessage({
           defaultMessage:
@@ -180,15 +260,18 @@ const ValidatorTable: React.FC<{
               <Text>
                 {`${numeral(validator.balance / ETHER_TO_GWEI).format(
                   '0.00000'
-                )} ${TICKER_NAME}`}
+                )}`}
               </Text>
             </TableCell>
             <TableCell scope="col" border="bottom">
               <Text>
                 {`${numeral(validator.effectivebalance / ETHER_TO_GWEI).format(
-                  '0.00000'
-                )} ${TICKER_NAME}`}
+                  '0'
+                )}`}
               </Text>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>{`${numeral(maxEffectiveBalanceEther).format('0')}`}</Text>
             </TableCell>
             <TableCell data-tip={toolTipText()}>
               <Button
@@ -233,6 +316,11 @@ const ValidatorTable: React.FC<{
             <TableCell scope="col" border="bottom">
               <Text>
                 <FormattedMessage defaultMessage="Effective balance" />
+              </Text>
+            </TableCell>
+            <TableCell scope="col" border="bottom">
+              <Text>
+                <FormattedMessage defaultMessage="Max EB" />
               </Text>
             </TableCell>
           </TableRow>

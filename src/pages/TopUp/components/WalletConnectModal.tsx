@@ -11,7 +11,6 @@ import {
   fortmatic,
   metamask,
   NetworkChainId,
-  portis,
 } from '../../ConnectWallet/web3Utils';
 import { WalletButton } from '../../ConnectWallet/WalletButton';
 import { web3ReactInterface } from '../../ConnectWallet';
@@ -19,10 +18,8 @@ import metamaskLogo from '../../../static/metamask.svg';
 import {
   ENABLE_RPC_FEATURES,
   IS_NON_INFURA_TESTNET,
-  PORTIS_DAPP_ID,
 } from '../../../utils/envVars';
 import closeGlyph from '../../../static/close.svg';
-import portisLogo from '../../../static/portis.svg';
 import fortmaticLogo from '../../../static/fortmatic.svg';
 import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
@@ -58,7 +55,7 @@ const WalletConnectModal: React.FC<{
     chainId,
     active,
   }: web3ReactInterface = useWeb3React<Web3Provider>();
-  const executionLayerName = useIntlNetworkName();
+  const { executionLayerName } = useIntlNetworkName();
 
   const [selectedWallet, setSelectedWallet] = useState<
     AbstractConnector | null | undefined
@@ -113,20 +110,9 @@ const WalletConnectModal: React.FC<{
           setSelectedWallet={setSelectedWallet}
           logoSource={metamaskLogo}
           walletProvider={metamask}
-          title="Metamask"
+          title="MetaMask"
           error={connector === metamask ? error : undefined}
         />
-        {!IS_NON_INFURA_TESTNET && (
-          <WalletButton
-            invalid={PORTIS_DAPP_ID === ''}
-            selectedWallet={selectedWallet}
-            setSelectedWallet={setSelectedWallet}
-            logoSource={portisLogo}
-            walletProvider={portis}
-            title="Portis"
-            error={connector === portis ? error : undefined}
-          />
-        )}
         {!IS_NON_INFURA_TESTNET && (
           <WalletButton
             invalid={!ENABLE_RPC_FEATURES}

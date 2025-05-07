@@ -1,4 +1,10 @@
 {
+  "+/eSwc": [
+    {
+      "type": 0,
+      "value": "Începând cu macOS Sequoia, utilizatorii trebuie să aprobe aceste aplicații din setările de Confidențialitate și Securitate după o încercare eșuată."
+    }
+  ],
   "+2VHUU": [
     {
       "type": 0,
@@ -21,22 +27,28 @@
       "value": " (care se ocupă de sarcinile de verificare a consensului cu dovada mizei, cunoscut anterior sub denumirea de „Eth2” sau „Ethereum 2.0”)."
     }
   ],
+  "+3gmIR": [
+    {
+      "type": 0,
+      "value": "Lodestar este un ecosistem TypeScript pentru consensul Ethereum, dezvoltat de ChainSafe Systems. Produsele noastre de top sunt lanțul beacon și clientul validator, capabile de producție. Nisa Lodestar reprezintă limbajul de implementare, TypeScript. Software-ul și instrumentele noastre sunt unic poziționate ca soluția preferată pentru cercetători și dezvoltatori pentru prototipare rapidă."
+    }
+  ],
+  "+88H3v": [
+    {
+      "type": 0,
+      "value": "migrare fonduri către"
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
       "value": "Mod interactiv"
     }
   ],
-  "+Gj8F4": [
+  "+POmjo": [
     {
       "type": 0,
-      "value": "Puteți să vă pregătiți oferind o adresă de retragere când generați cheile și datele de depunere."
-    }
-  ],
-  "+L0IkF": [
-    {
-      "type": 0,
-      "value": "Pasul 2: Generați chei de depunere folosind instrumentul de depunere al Ethereum Foundation"
+      "value": "Aceasta va duce la un sold în exces pentru validatorul dumneavoastră, care va fi rambursat automat în contul dumneavoastră de execuție de către rețea."
     }
   ],
   "+UUcBt": [
@@ -63,6 +75,12 @@
       "value": "De acord"
     }
   ],
+  "+jXRfC": [
+    {
+      "type": 0,
+      "value": "Include toate înregistrările de depuneri inițiale efectuate pentru toate conturile de validator și este citit de lanțul Beacon pentru a credita respectivele conturi în mod corect."
+    }
+  ],
   "+mDtA4": [
     {
       "type": 0,
@@ -75,16 +93,28 @@
       "value": "Poloneză"
     }
   ],
+  "+u97jv": [
+    {
+      "type": 0,
+      "value": "Fonduri blocate pe lanțul Beacon până când este furnizată adresa de retragere pentru execuție"
+    }
+  ],
   "+vHhHz": [
     {
       "type": 0,
-      "value": "Gestionarea validatorului"
+      "value": "Gestionare validator"
     }
   ],
   "+wJuhm": [
     {
       "type": 0,
       "value": "Discord:"
+    }
+  ],
+  "+z2Qty": [
+    {
+      "type": 0,
+      "value": "EB maxim"
     }
   ],
   "/+atl4": [
@@ -111,6 +141,12 @@
       "value": "Indoneziană"
     }
   ],
+  "/EhlLs": [
+    {
+      "type": 0,
+      "value": "Acest validator ar trebui să rămână online până când se atinge epoca de ieșire."
+    }
+  ],
   "/JiR8D": [
     {
       "type": 0,
@@ -121,12 +157,6 @@
     {
       "type": 0,
       "value": "Rețineți că aceste cozi de „activare” și „ieșire” sunt independente și nu concurează. Fiecare este limitată la una per epocă."
-    }
-  ],
-  "hrJ1oM": [
-    {
-      "type": 0,
-      "value": "Puteți semnala intenția de a opri validarea prin semnarea unui mesaj de ieșire voluntară cu validatorul."
     }
   ],
   "/SbhtD": [
@@ -165,18 +195,16 @@
       "value": "Acestă pagină nu există."
     }
   ],
-  "/WenEu": [
+  "/X/iV+": [
     {
       "type": 0,
-      "value": "Sunteți responsabil pentru tranzacție. Site-urile web frauduloase pot încerca să vă păcălească să le trimiteți "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
+      "value": "Asigurați-vă că aveți control asupra acestei adrese, deoarece aceasta nu poate fi schimbată. Furnizarea unui cont de la o bursă centralizată nu este recomandată. Stocarea la rece este puternic recomandată."
+    }
+  ],
+  "/Z2BBF": [
     {
       "type": 0,
-      "value": " în locul contractului de depozit oficial. Asigurați-vă că adresa la care trimiteți tranzacția este cea corectă."
+      "value": "Vă alăturați unei rețele care funcționează prin software. Ca în orice software, pot apărea erori accidentale. Deși este improbabil, erorile pot duce la penalizări."
     }
   ],
   "/e+qAC": [
@@ -185,18 +213,64 @@
       "value": "epocă pentru retragere"
     }
   ],
-  "/h0DGY": [
+  "/eUGwM": [
     {
       "type": 0,
-      "value": "De ce limita maximă de "
+      "value": "Puteți retrage orice parte din pachetul dumneavoastră acțiuni de "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "TICKER_NAME"
     },
     {
       "type": 0,
-      "value": " ETH?"
+      "value": " peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "/hEGaO": [
+    {
+      "type": 0,
+      "value": "Acest cont validator are un sold efectiv maxim de "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Este suficient să alimentați "
+    },
+    {
+      "type": 1,
+      "value": "maxTopupValue"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " ca să ajungeți la soldul efectiv maxim."
     }
   ],
   "/jJLYy": [
@@ -211,10 +285,46 @@
       "value": "De asemenea, puteți utiliza instrumentul de transmisie Beaconcha.in pentru a încărca mesajul folosind o interfață web utilizator:"
     }
   ],
+  "/qfQgA": [
+    {
+      "type": 0,
+      "value": "Soldul efectiv al validatorului a ajuns la maximum. Dacă vreți, puteți adăuga "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (minimul permis de contractul de depunere)"
+    }
+  ],
   "/rmnC0": [
     {
       "type": 0,
       "value": "În limita posibilităților, este bine să rulați un alt client în acest moment, ca să rămâneți sub protecție atât dvs, cât și rețeaua."
+    }
+  ],
+  "/sp2Uu": [
+    {
+      "type": 0,
+      "value": "Cât de mult "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " doriți să adăugați la mizare?"
     }
   ],
   "/tHxib": [
@@ -263,32 +373,22 @@
       "value": "Cât de mari sunt recompensele/penalizările?"
     }
   ],
-  "00OWFk": [
+  "0/du/O": [
     {
       "type": 0,
-      "value": "Valoarea minimă de alimentare este "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Înțeleg consecințele, părăsesc acest validator"
     }
   ],
   "00d8uq": [
     {
       "type": 0,
       "value": "Odată configurat, validatorul nu va deveni activ imediat. Profitați de timp ca să finalizați lista de verificare și ca să exersați lucrul în rețeaua de testare."
+    }
+  ],
+  "01AzGi": [
+    {
+      "type": 0,
+      "value": "Nethermind este construit în C# cu o arhitectură flexibilă de plugin-uri și licențiat sub LGPL-3.0."
     }
   ],
   "03xT/J": [
@@ -309,6 +409,20 @@
       "value": "Acreditări pentru retragere:"
     }
   ],
+  "0Em8Cd": [
+    {
+      "type": 0,
+      "value": "Începând cu "
+    },
+    {
+      "type": 1,
+      "value": "date"
+    },
+    {
+      "type": 0,
+      "value": ", numai datele din lanțul de execuție a rețelei principale se apropie de 2TB (în creștere cu >1GB/zi). Un SSD de 2TB este o cerință minimă, cu 4TB fiind valoarea recomandată în acest moment."
+    }
+  ],
   "0FTs1T": [
     {
       "type": 0,
@@ -321,10 +435,10 @@
       "value": "Rezultate preconizate"
     }
   ],
-  "pUAoW1": [
+  "0L5E+q": [
     {
       "type": 0,
-      "value": "Soldul efectiv a ajuns la valoarea maximă de 32?"
+      "value": "Atenție! Traficul în rețea este semnificativ ridicat."
     }
   ],
   "0PlVao": [
@@ -351,10 +465,52 @@
       "value": "acreditări pentru retragere"
     }
   ],
-  "vCHTnu": [
+  "0WPDnu": [
     {
       "type": 0,
-      "value": "Acreditări pentru retragere"
+      "value": "Dacă soldul se apropie de "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH, cu siguranță trebuie să alimentați. Acest lucru este necesar pentru a evita eliminarea dumneavoastră din setul de validatori (ceea ce se întâmplă automat dacă soldul scade sub "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH)."
+    }
+  ],
+  "0XRY0E": [
+    {
+      "type": 0,
+      "value": "Dacă mnemonica dumneavoastră este furată/compromisă și nu ați setat încă o adresă de retragere, ar trebui să încercați acest lucru "
+    },
+    {
+      "type": 1,
+      "value": "immediately"
+    },
+    {
+      "type": 0,
+      "value": " pentru a preveni pierderea permanentă de fonduri, înainte ca atacatorul să desemneze în mod ireversibil propria adresă de retragere pentru validatorul dumneavoastră."
+    }
+  ],
+  "0fkPmg": [
+    {
+      "type": 0,
+      "value": "Reth este o implementare modulară a protocolului Ethereum, ușor de utilizat de către colaboratori și extrem de rapidă, scrisă în Rust."
+    }
+  ],
+  "0flw9D": [
+    {
+      "type": 0,
+      "value": "Nu este necesară nicio acțiune suplimentară."
     }
   ],
   "0i4cCJ": [
@@ -383,30 +539,10 @@
       "value": "În al doilea rând, instalați pachetele de dependență:"
     }
   ],
-  "0mc/JV": [
-    {
-      "type": 0,
-      "value": "Validarea este un angajament"
-    }
-  ],
   "0oNdmk": [
     {
       "type": 0,
       "value": "Întrebări frecvente despre validatori"
-    }
-  ],
-  "cJ9MRI": [
-    {
-      "type": 0,
-      "value": "După cum s-a menționat mai sus, acest pas este completat prin semnarea unui mesaj cunoscut ca "
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": ". Acestea sunt acceptate în blocuri începând cu primul slot după modernizarea Shanghai/Capella."
     }
   ],
   "0uqjBl": [
@@ -465,6 +601,12 @@
       "value": "Când îmi pot retrage fondurile și care este diferența între ieșire și retragere?"
     }
   ],
+  "1D3Svm": [
+    {
+      "type": 0,
+      "value": "Acest cont de validator va fi actualizat permanent la un cont compus (Tip 2)."
+    }
+  ],
   "1FdDAV": [
     {
       "type": 0,
@@ -475,6 +617,18 @@
     {
       "type": 0,
       "value": "Dacă nu furnizați o adresă clientului dvs., nu veți primi taxe de tranzacție atunci când validatorul propune blocuri."
+    }
+  ],
+  "1ICikH": [
+    {
+      "type": 0,
+      "value": "Acest cont va fi exclus permanent din rețea."
+    }
+  ],
+  "1ONfru": [
+    {
+      "type": 0,
+      "value": "Pentru a include acest mesaj în rețeaua principală, va trebuie să încărcați acest mesaj în grupul mesajului unui nod beacon „Modificare BLS la execuție semnat”."
     }
   ],
   "1P6GMj": [
@@ -549,6 +703,40 @@
       "value": "Documentația privind rularea Nethermind"
     }
   ],
+  "1v/5i7": [
+    {
+      "type": 0,
+      "value": "Migrare și închidere validator"
+    }
+  ],
+  "1vVSD6": [
+    {
+      "type": 0,
+      "value": "Dacă nu este setată o adresă de retragere la momentul depunerii, fondurile vor fi blocate până când veți introduce una. Cheile dumneavoastră implicite de retragere pot fi generate de mnemonică pentru a autentifica o modificare unică pentru a adăuga o adresă de retragere. Nu uitați să "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "2/VDay": [
+    {
+      "type": 0,
+      "value": "Număr maxim de validatori per retragere: 16.384 (2"
+    },
+    {
+      "type": 1,
+      "value": "exp"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "21EI3f": [
     {
       "type": 0,
@@ -567,12 +755,6 @@
     {
       "type": 0,
       "value": " corect"
-    }
-  ],
-  "mre8Tb": [
-    {
-      "type": 0,
-      "value": "Dacă nu a fost setată o adresă pentru retragere și dacă ați pierdut accesul la fraza de cuvinte mnemonic, fondurile dumneavoastră vor rămâne blocate în contul validatorului pe termen nedefinit."
     }
   ],
   "25suT4": [
@@ -597,18 +779,10 @@
       "value": "."
     }
   ],
-  "2A6Wjz": [
+  "28aik1": [
     {
       "type": 0,
-      "value": "Atunci când furnizați acest indicator, acreditările pentru retragere conțin prefixul "
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": " și adresa pentru retragere, semnalizând că acest cont este pregătit pentru retrageri."
+      "value": "Limite de rată stabilite în coada de retragere"
     }
   ],
   "2AHkym": [
@@ -635,6 +809,12 @@
       "value": "Pentru a vă genera cheile, urmați instrucțiunile afișate în aplicație."
     }
   ],
+  "2O2sfp": [
+    {
+      "type": 0,
+      "value": "Finalizare"
+    }
+  ],
   "2PI6Di": [
     {
       "type": 0,
@@ -651,16 +831,16 @@
       "value": "Ce factori afectează frecvența plăților?"
     }
   ],
+  "2S/h9V": [
+    {
+      "type": 0,
+      "value": "dumneavoastră controlați"
+    }
+  ],
   "2XWJdH": [
     {
       "type": 0,
       "value": "Dacă da, treceți la următoarea întrebare"
-    }
-  ],
-  "3zWAPC": [
-    {
-      "type": 0,
-      "value": "întotdeauna puteți recalcula cheia de semnătură din cheia de retragere"
     }
   ],
   "2c8F5x": [
@@ -675,20 +855,40 @@
       "value": "retragere excedent sold"
     }
   ],
-  "5CdqwI": [
+  "2hZ+qP": [
     {
       "type": 0,
-      "value": "Documentație de management de chei Nimbus"
-    }
-  ],
-  "2rFwzp": [
+      "value": "Pentru a activa validatorul(ii) Lanțului Beacon pentru a retrage automat soldurile în "
+    },
     {
       "type": 1,
-      "value": "wagyuKeyGenGui"
+      "value": "executionAddress"
     },
     {
       "type": 0,
-      "value": ": dacă ați furnizat o adresă pentru retragere la generarea cheilor, puteți continua (identificat în „modul avansat”)"
+      "value": ", puteți folosi instrumentul "
+    },
+    {
+      "type": 1,
+      "value": "ethstakerDepositCLI"
+    },
+    {
+      "type": 0,
+      "value": " pentru a genera fișierul „Modificare BLS la execuție” (fișier JSON cu mesaj "
+    },
+    {
+      "type": 1,
+      "value": "signed"
+    },
+    {
+      "type": 0,
+      "value": "). Acest mesaj include solicitarea de a schimba vechile acreditări de retragere BLS în noile acreditări de retragere în formatul adresei de executare."
+    }
+  ],
+  "2iODii": [
+    {
+      "type": 0,
+      "value": "„Tip 0”, „BLS”, „blocat”"
     }
   ],
   "2rflCq": [
@@ -717,10 +917,18 @@
       "value": "Termenii serviciului"
     }
   ],
-  "om4EMq": [
+  "36P4ra": [
     {
       "type": 0,
-      "value": "Pentru a procesa depunerile validatorilor primite de la nivelul de execuție (anterior denumit lanțul „Eth1”), va trebui să rulați atât un client cu nivel de execuție, cât și clientul cu nivel de consens (anterior denumit „Eth2”). Puteți folosi un serviciu terț precum Infura, dar vă recomandăm să vă rulați propriul client, astfel încât rețeaua să rămână cât mai descentralizată."
+      "value": "În timp, soldul va scădea în urma penalizărilor pentru neparticiparea la procesul de obținere a consensului. Când soldul ajunge la "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH, sistemul vă va elimina automat din grupul de validare."
     }
   ],
   "38Fedn": [
@@ -785,56 +993,32 @@
       "value": "Linia de comandă cu indicatoare"
     }
   ],
-  "3NHygY": [
+  "3LbIZa": [
     {
       "type": 0,
-      "value": "Testare pe Goerli"
+      "value": "Aveți opțiunea de a adăuga fonduri în contul dumneavoastră de validator dacă soldul dumneavoastră nu este deja la soldul maxim efectiv („max EB”, suma permisă pentru contribuție la miză). De asemenea, puteți folosi aceasta pentru a completa în cazul în care contul de validator este aproape de soldul de eliminare, de "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
-  "3ODqP9": [
+  "3O/6JV": [
     {
       "type": 0,
-      "value": "Depunerea a mai mult de "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH într-un singur set de chei nu crește potențialul de recompense, dar nici nu acumulează recompense mai mari de "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH, deoarece fiecare validator este limitat la un "
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": " din "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": ". Aceasta înseamnă că miza este făcută în "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " incremente ETH, fiecare cu propriul set de chei şi sold."
+      "value": "Instrucțiuni de utilizare a instrumentului ethstaker-deposit-cli pentru a genera și difuza un mesaj SignedBLSToExecutionChange pentru a actualiza acreditările de retragere pentru validator."
     }
   ],
   "3PbtmF": [
@@ -849,22 +1033,10 @@
       "value": "Deveniți validator"
     }
   ],
-  "3QmqFf": [
-    {
-      "type": 0,
-      "value": "Tranzacție de alimentare"
-    }
-  ],
   "3SOKyg": [
     {
       "type": 0,
       "value": "Aceste actualizări ale terminologiei modifică numai convențiile pentru denumiri, și nu obiectivele sau foaia de parcurs a lui Ethereum."
-    }
-  ],
-  "3URRZK": [
-    {
-      "type": 0,
-      "value": "Documentație Geth pe Goerli"
     }
   ],
   "3aykgN": [
@@ -879,6 +1051,24 @@
     {
       "type": 0,
       "value": " o propunere de bloc la fiecare 70 de zile."
+    }
+  ],
+  "3fRpn0": [
+    {
+      "type": 0,
+      "value": "Raport de audit Reth"
+    }
+  ],
+  "3hmlu1": [
+    {
+      "type": 0,
+      "value": "Selectați un validator"
+    }
+  ],
+  "3jhjXW": [
+    {
+      "type": 0,
+      "value": "Consultați următorul ghid pentru a configura corect API-ul Engine JSON-RPC pentru clientul dumneavoastră de consens."
     }
   ],
   "3tR/V9": [
@@ -917,6 +1107,12 @@
       "value": "."
     }
   ],
+  "3zWAPC": [
+    {
+      "type": 0,
+      "value": "puteți recalcula întotdeauna cheia de semnare de la mnemonică"
+    }
+  ],
   "4+3cIr": [
     {
       "type": 0,
@@ -925,6 +1121,28 @@
     {
       "type": 1,
       "value": "mainnet"
+    }
+  ],
+  "40/5Sf": [
+    {
+      "type": 0,
+      "value": "Rețineți că "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " nu sunt identice cu "
+    },
+    {
+      "type": 1,
+      "value": "feeRecipient"
+    },
+    {
+      "type": 0,
+      "value": ", care primește comisioanele de tranzacție din propuneri. Acestea pot fi setate la aceeași adresă, dar fiecare trebuie setată separat."
     }
   ],
   "47svuN": [
@@ -939,6 +1157,18 @@
       "value": "Am intrat pe serverul Discord al clientului cu nivel de consens."
     }
   ],
+  "4B1i6W": [
+    {
+      "type": 0,
+      "value": "Retragere către"
+    }
+  ],
+  "4LvelA": [
+    {
+      "type": 0,
+      "value": "Retragere maximă"
+    }
+  ],
   "4NvAhl": [
     {
       "type": 0,
@@ -949,6 +1179,20 @@
     {
       "type": 0,
       "value": "De ce o scară mobilă? Nu intrăm în detalii aici, intuiția spune că este nevoie de un număr minim de validatori (prin urmare, o miză minimă de ETH) ca rețeaua să funcționeze corect. Pentru a stimula mai mulți validatori să participe, este important ca rata dobânzii să rămână ridicată până la atingerea acestui număr minim."
+    }
+  ],
+  "4Vgtcb": [
+    {
+      "type": 0,
+      "value": "Dacă vă pregătiți să faceți o depunere pentru a activa un nou validator, puteți (și ar trebui) să furnizați o adresă de retragere cu depozitul inițial. Acest lucru se realizează în momentul generării cheii şi este apoi inclusă în fişierul json "
+    },
+    {
+      "type": 1,
+      "value": "depositData"
+    },
+    {
+      "type": 0,
+      "value": " care este trimis cu tranzacția de depunere de ETH."
     }
   ],
   "4hb+GK": [
@@ -975,16 +1219,22 @@
       "value": "Copiere"
     }
   ],
+  "4pGGSr": [
+    {
+      "type": 0,
+      "value": "Acest validator este la soldul maxim efectiv."
+    }
+  ],
   "4uFys5": [
     {
       "type": 0,
       "value": "Conturile care au fost penalizate sau cu un sold insuficient vor fi forțate să iasă, respectând regulile rețelei. Acest proces este automat și nu poate fi oprit odată început."
     }
   ],
-  "sgn0wo": [
+  "4zqUmR": [
     {
       "type": 0,
-      "value": "Ce se întâmplă dacă utilizez retragerea prin BLS și îmi pierd cheia de retragere?"
+      "value": "Soldul rămas va fi deblocat după ce epoca de ieșire de mai sus a fost atinsă. Odată deblocat, soldul rămas va fi transferat automat fie către contul dumneavoastră de retragere conectat, fie către validatorul dumneavoastră țintă ales, dacă migrați conturi, în decurs de câteva zile."
     }
   ],
   "57MWKW": [
@@ -1015,6 +1265,12 @@
       "value": ")"
     }
   ],
+  "58LSsA": [
+    {
+      "type": 0,
+      "value": "Lodestar este construit folosind TypeScript cu o combinație între Apache 2.0 și licență publică generală redusă GNU v3.0."
+    }
+  ],
   "58PXVy": [
     {
       "type": 0,
@@ -1031,10 +1287,16 @@
       "value": "learnMore"
     }
   ],
-  "5CBhpq": [
+  "5B+zYt": [
     {
       "type": 0,
-      "value": "Angajament"
+      "value": "Accept faptul că pot suferi penalizări din cauza problemelor de software și de design."
+    }
+  ],
+  "5CdqwI": [
+    {
+      "type": 0,
+      "value": "Documentație nod beacon Nimbus"
     }
   ],
   "5H/J84": [
@@ -1047,12 +1309,6 @@
     {
       "type": 0,
       "value": "Documentație de instalare Teku"
-    }
-  ],
-  "5KtHYT": [
-    {
-      "type": 0,
-      "value": "Dacă nu v-a fost furnizat la acest moment, fondurile depuse vor rămâne blocate în Lanțul Beacon până când este furnizată o adresă. Deblocarea va necesita semnarea unui mesaj folosind cheile de retragere generate de fraza de cuvinte mnemonică (păstrați în siguranță)."
     }
   ],
   "5UH1sh": [
@@ -1075,10 +1331,18 @@
       "value": " aceasta este de ~1,2-1,3 GB descărcare și ~0,9-1 GB încărcare pe oră, și este posibil să crească."
     }
   ],
-  "5hW6Gf": [
+  "5q9Lgv": [
     {
       "type": 0,
-      "value": "Protecție împotriva retragerii în Stratul de consens"
+      "value": "Descărcați ramura "
+    },
+    {
+      "type": 1,
+      "value": "master"
+    },
+    {
+      "type": 0,
+      "value": ":"
     }
   ],
   "5t8oYl": [
@@ -1119,10 +1383,60 @@
       "value": "mediu"
     }
   ],
+  "67oM5N": [
+    {
+      "type": 0,
+      "value": "Activ online"
+    }
+  ],
+  "69FPys": [
+    {
+      "type": 0,
+      "value": "EB maxim pentru orice cont cu acreditări de retragere de Tip 0 (BLS) sau Tip 1 (retrageri obișnuite) este "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Aceste conturi nu beneficiază de solduri peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", dar pot fi modernizate la un cont combinat de Tip 2 pentru a sprijini un EF maxim crescut, de "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "6NndcB": [
     {
       "type": 0,
       "value": "ieșire"
+    }
+  ],
+  "6NyPVb": [
+    {
+      "type": 0,
+      "value": "Nimbus este o implementare pentru client atât pe nivelul de execuție, cât și pe cel de consens, ce se dorește cât se poate de ușoară din punctul de vedere al resurselor utilizate. Aceasta îi permite să funcționeze bine pe sistemele integrate, pe dispozitivele cu restricțiii de resurse, inclusiv Raspberry Pi, și pe serverele cu scopuri multiple."
     }
   ],
   "6S95Bo": [
@@ -1143,16 +1457,74 @@
       "value": "Puteți îmbunătăți soldul efectiv al acestui validator prin alimentare"
     }
   ],
-  "6eA+mW": [
+  "6glcFX": [
     {
       "type": 0,
-      "value": "Lodestar este construit folosind TypeScript cu o Licență publică generală mai mică GNU v3.0."
+      "value": "Intrarea în rețeaua de testare publică"
     }
   ],
-  "6nh4de": [
+  "6kX99Q": [
     {
       "type": 0,
-      "value": "Vă alăturați unei rețele în etapele sale timpurii. Ca în orice software nou, pot apărea erori. Deși este improbabil, erorile pot duce la penalizări."
+      "value": "Modernizați contul pentru a crește soldul efectiv la "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "6stJTU": [
+    {
+      "type": 0,
+      "value": "Folosiți "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza rețeaua de testare Holesky."
+    }
+  ],
+  "6vdHjj": [
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " este un câmp de 32 de octeți asociat cu fiecare validator, configurat inițial în timpul depunerii, utilizat pentru verificarea destinației retragerilor valide. În prezent, există două tipuri de retrageri: retragerea prin acreditări BLS (Tip 0 sau "
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") și retragerea prin acreditări de execuție (adresă Ethereum) (Tip 1 sau "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ")."
+    }
+  ],
+  "6z/+77": [
+    {
+      "type": 0,
+      "value": "Depunere la validator"
     }
   ],
   "7+Domh": [
@@ -1183,6 +1555,12 @@
       "value": " nu este acceptat în modul offline."
     }
   ],
+  "7AL03B": [
+    {
+      "type": 0,
+      "value": "Înțeleg consecințele, consolidează fondurile"
+    }
+  ],
   "7DFXQj": [
     {
       "type": 0,
@@ -1193,26 +1571,10 @@
       "value": "oppositeNetwork"
     }
   ],
-  "7FcGxU": [
+  "7EpPjk": [
     {
       "type": 0,
-      "value": "Trebuie să rulați un "
-    },
-    {
-      "type": 1,
-      "value": "executionClient"
-    },
-    {
-      "type": 0,
-      "value": ", precum și "
-    },
-    {
-      "type": 1,
-      "value": "consensusClient"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": "Versiuni Reth"
     }
   ],
   "7GLK15": [
@@ -1255,6 +1617,12 @@
       "value": "Fișier de configurare"
     }
   ],
+  "7XWI5I": [
+    {
+      "type": 0,
+      "value": "Așteptați și să încercați din nou sau solicitați asistență dacă această eroare persistă."
+    }
+  ],
   "7XiYRi": [
     {
       "type": 0,
@@ -1283,10 +1651,28 @@
       "value": "."
     }
   ],
+  "7dUCnj": [
+    {
+      "type": 0,
+      "value": "Reth 1.0 a fost auditat de Sigma Prime pe parcursul a mai mult de 8 săptămâni în mai 2024, link mai jos."
+    }
+  ],
   "7kWKe0": [
     {
       "type": 0,
       "value": "Coada aferentă retragerii este umplută și procesată automat de cei care propun blocuri, care verifică automat orice plăți disponibile printr-un mecanism de verificare."
+    }
+  ],
+  "7rnL9U": [
+    {
+      "type": 0,
+      "value": "Închidere validator"
+    }
+  ],
+  "7sLqH9": [
+    {
+      "type": 0,
+      "value": "transferat către validatorul selectat mai sus"
     }
   ],
   "7sZfCF": [
@@ -1299,6 +1685,12 @@
     {
       "type": 0,
       "value": "În fiecare epocă, rețeaua măsoară acțiunile fiecărui validator și emite recompensele sau penalitățile corespunzătoare."
+    }
+  ],
+  "7w+OmC": [
+    {
+      "type": 0,
+      "value": "Este posibil ca modificările recente să nu se reflecte în detaliile validatorului, iar congestionarea rețelei poate duce la întârzieri. Procedați cu grijă pentru a evita transmiterea unor cereri dublate."
     }
   ],
   "8/nhr4": [
@@ -1325,6 +1717,18 @@
       "value": "Documentația Lodestar"
     }
   ],
+  "8C8bca": [
+    {
+      "type": 0,
+      "value": "Validatorul existent ar trebui să rămână online până la atingerea epocii de ieșire."
+    }
+  ],
+  "8FjJDx": [
+    {
+      "type": 0,
+      "value": "Comportament incorect"
+    }
+  ],
   "8FmuYF": [
     {
       "type": 0,
@@ -1349,24 +1753,16 @@
       "value": "Alegeți sistemul de operare al computerului pe care îl utilizați. Pe acest computer veți genera cheile. Nu trebuie să fie identic cu sistemul de operare pe care vrei să îl folosiți pentru nod."
     }
   ],
+  "8VlOTO": [
+    {
+      "type": 0,
+      "value": "Transferați întregul sold către altul dintre conturile dumneavoastră de validator, consolidând două conturi într-unul singur. Contul țintă trebuie să fie actualizat la tipul combinat."
+    }
+  ],
   "8WtyrD": [
     {
       "type": 0,
       "value": "Spaniolă"
-    }
-  ],
-  "8XQmxX": [
-    {
-      "type": 0,
-      "value": "Folosește "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " pentru a sincroniza rețeaua de testare Goerli."
     }
   ],
   "8boRAk": [
@@ -1379,12 +1775,6 @@
     {
       "type": 0,
       "value": "Nu opriți validatorul până nu se ajunge la epocă."
-    }
-  ],
-  "8fXTDo": [
-    {
-      "type": 0,
-      "value": "Din fericire, acesta este doar un mesaj unic, care trebuie procesat; și validatorii care au furnizat codurile de autentificare în momentul depunerii sunt scutiți de la această etapă. Odată finalizat, validatorul este activat permanent pentru retrageri și va fi eligibil pentru plăți în timpul următoarei acțiuni de verificare."
     }
   ],
   "8k1RjX": [
@@ -1433,6 +1823,12 @@
       "value": " - epoca la care fondurile de validator sunt disponibile pentru o retragere completă în timpul următoarei verificări a validatorului."
     }
   ],
+  "8uE+mp": [
+    {
+      "type": 0,
+      "value": "Filtrare după index sau pubkey"
+    }
+  ],
   "8uq59n": [
     {
       "type": 0,
@@ -1457,10 +1853,10 @@
       "value": "Înainte"
     }
   ],
-  "hAwuqj": [
+  "9/yem6": [
     {
       "type": 0,
-      "value": "Validarea implică două chei, din motive de securitate. Cheia de semnătură trebuie să fie disponibilă în orice moment. Ca atare, trebuie păstrată online. Întrucât tot ce se ține online este vulnerabil la atacurile hackerilor, nu este o idee bună să folosiți aceeași cheie pentru retrageri."
+      "value": "Dacă încerci să înșelați sistemul sau să nu respecți specificațiile, vi se poate impune o sancțiune, cunoscută sub numele de penalizare*. Rularea simultană a cheilor de validare pe două sau mai multe mașini va duce la penalizare."
     }
   ],
   "94dQms": [
@@ -1495,10 +1891,42 @@
       "value": "Examinați rolurile și responsabilitățile validatorului"
     }
   ],
+  "9Ur2de": [
+    {
+      "type": 0,
+      "value": "Adăugarea unei adrese de retragere cu Wagyu Key Gen"
+    }
+  ],
   "9VZ9oy": [
     {
       "type": 0,
       "value": "Cum sunt stimulați validatorii să rămână activi și cinstiți?"
+    }
+  ],
+  "9Zv8ye": [
+    {
+      "type": 0,
+      "value": "Acest lucru va iniția procesul de îmbunătățire a acestui validator de la un cont de tip 1 „retrageri obișnuite” sau „execuție” la un cont de tip 2 „combinat”."
+    }
+  ],
+  "9h8yTf": [
+    {
+      "type": 0,
+      "value": "O „epocă de retragere” va fi de asemenea calculată, care este la 256 de epoci după epoca de ieșire calculată (~27,3 ore mai târziu). Când această epocă este atinsă, validatorul dumneavoastră va fi eligibil pentru "
+    },
+    {
+      "type": 1,
+      "value": "fullWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " cu toate fondurile rămase."
+    }
+  ],
+  "9jnVGr": [
+    {
+      "type": 0,
+      "value": "În mod obișnuit este necesară o memorie RAM de minimum 32 GB, însă recomandăm 64 GB."
     }
   ],
   "9k7tO9": [
@@ -1529,6 +1957,12 @@
     {
       "type": 0,
       "value": "depunere"
+    }
+  ],
+  "9oWUO0": [
+    {
+      "type": 0,
+      "value": "Acest lucru va începe procesul de încheiere a angajamentelor dumneavoastră în rețea. O „epocă de ieșire” va fi calculată în funcție de câți alți validatori ies în același timp. Când această epocă este atinsă, contul dumneavoastră de validator nu va mai fi eligibil pentru recompense și nu va mai fi în pericol de a pierde fonduri din cauza deconectării."
     }
   ],
   "9qMyhY": [
@@ -1595,6 +2029,12 @@
       "value": "Trimitere depozit"
     }
   ],
+  "A4nMs+": [
+    {
+      "type": 0,
+      "value": "Consultați următorul ghid pentru a asigura funcționarea corectă a clientului dumneavoastră cu nivel de execuție."
+    }
+  ],
   "A6Oppp": [
     {
       "type": 0,
@@ -1619,46 +2059,10 @@
       "value": "Pentru devnet, puteți adăuga un parametru:"
     }
   ],
-  "AFzWcM": [
-    {
-      "type": 0,
-      "value": "Înțeleg că aceste chei sunt responsabilitatea mea și că mnemonicul (nucleul) va fi "
-    },
-    {
-      "type": 1,
-      "value": "onlyWay"
-    },
-    {
-      "type": 0,
-      "value": " de a-mi retrage fondurile dacă nu furnizez o adresă pentru retragere împreună cu datele depunerii inițiale."
-    }
-  ],
   "AH6XsN": [
     {
       "type": 0,
       "value": "De asemenea, asigurați-vă că înțelegeți cum funcționează retragerile la mizare înainte de a configura cheile și datele depozitului."
-    }
-  ],
-  "AJD+66": [
-    {
-      "type": 0,
-      "value": "Ca să fie acceptat contractul de depunere pentru mizarea pe Ethereum, trebuie să trimiteți dintr-odată cel puțin "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "ATwOPg": [
@@ -1667,10 +2071,10 @@
       "value": "clientul cu nivel de execuție"
     }
   ],
-  "AYKxmf": [
+  "AYPu/E": [
     {
       "type": 0,
-      "value": "Conectați-vă portofelul hardware la Metamask"
+      "value": "Ce tip de cont de mizare?"
     }
   ],
   "AZaw+B": [
@@ -1683,28 +2087,6 @@
     {
       "type": 0,
       "value": "înțelegerea soldului efectiv al validatorului"
-    }
-  ],
-  "Ad61gz": [
-    {
-      "type": 0,
-      "value": "Asigurați-vă că descărcați din contul GitHub oficial al Ethereum Foundation, prin verificarea url-ului: "
-    },
-    {
-      "type": 1,
-      "value": "url"
-    }
-  ],
-  "Jrg1Me": [
-    {
-      "type": 0,
-      "value": "Fragmentarea va schimba cerința ca nodurile complete să conțină întreaga istorie a lanțului și va distribui în schimb această sarcină în rețea, asigurând în același timp disponibilitatea datelor. Acest lucru va spori în mod semnificativ capacitatea nivelului 1 Ethereum, menținând în același timp capacitatea de a opera un nod complet pe hardware-ul consumatorului, păstrând rețeaua descentralizată."
-    }
-  ],
-  "Affixg": [
-    {
-      "type": 0,
-      "value": "Depunerea"
     }
   ],
   "AkVktj": [
@@ -1731,60 +2113,16 @@
       "value": "Deviniți validator cu Lighthouse"
     }
   ],
+  "As7Kwv": [
+    {
+      "type": 0,
+      "value": "Este posibil să aveți un depozit de care a fost acceptat, dar a cărui validare în lanț este în curs. Acesta va apărea aici când beaconcha.in a confirmat 2048 de blocuri."
+    }
+  ],
   "Aw1mMs": [
     {
       "type": 0,
       "value": "Alimentați validatorul"
-    }
-  ],
-  "AyoE3t": [
-    {
-      "type": 0,
-      "value": "Retragerea dintr-un validator nu este încă posibilă. Această funcție este planificată pentru includere în actualizarea Shanghai/Capella planificată pentru T1/T2 2023."
-    }
-  ],
-  "uHSqYx": [
-    {
-      "type": 0,
-      "value": "O "
-    },
-    {
-      "type": 1,
-      "value": "excessBalanceWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " este procesată când un validator activ are un sold efectiv maxim de 32 și un sold total de peste 32. Un singur validator nu poate obține recompense pentru soldul care depășește 32 ETH și, astfel, orice sold suplimentar al acestor conturi va fi extras automat în adresa Ethereum."
-    }
-  ],
-  "RY4SP0": [
-    {
-      "type": 0,
-      "value": "Înțeleg că trebuie să depun "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " pentru a deveni validator și că transferul de "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " către Lanțul Beacon este unidirecțional și ireversibil."
     }
   ],
   "BCsPjJ": [
@@ -1797,6 +2135,16 @@
     {
       "type": 0,
       "value": "Alimentați un validator"
+    }
+  ],
+  "BFQdAm": [
+    {
+      "type": 0,
+      "value": "Valoare "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "BFsUAH": [
@@ -1887,6 +2235,20 @@
       "value": "Declanșarea retragerilor, modificarea acreditărilor"
     }
   ],
+  "BswXIG": [
+    {
+      "type": 0,
+      "value": "Ce valoare "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " doriți să adăugați la mizare?"
+    }
+  ],
   "Bxe+HB": [
     {
       "type": 0,
@@ -1897,28 +2259,6 @@
     {
       "type": 0,
       "value": "Configurați Lighthouse"
-    }
-  ],
-  "40/5Sf": [
-    {
-      "type": 0,
-      "value": "Rețineți că "
-    },
-    {
-      "type": 1,
-      "value": "withdrawalCredentials"
-    },
-    {
-      "type": 0,
-      "value": " nu sunt identice cu "
-    },
-    {
-      "type": 1,
-      "value": "feeRecipient"
-    },
-    {
-      "type": 0,
-      "value": ", care primește comisioanele de tranzacție din blocurile propuse. Acestea pot fi setate la aceeași adresă, dar fiecare trebuie setată separat."
     }
   ],
   "C3jBPI": [
@@ -1951,12 +2291,6 @@
       "value": "Dovada mizei"
     }
   ],
-  "CGMYrU": [
-    {
-      "type": 0,
-      "value": "Lansări mizare Deposit CLI"
-    }
-  ],
   "CPl2hh": [
     {
       "type": 0,
@@ -1971,12 +2305,6 @@
     {
       "type": 1,
       "value": "btec"
-    }
-  ],
-  "0WPDnu": [
-    {
-      "type": 0,
-      "value": "Dacă soldul se apropie de 16 ETH, cu siguranță trebuie să alimentați. Acest lucru este necesar pentru a evita eliminarea din setul de validatori (ceea ce se întâmplă automat dacă soldul scade sub 16 ETH)."
     }
   ],
   "CWKE9c": [
@@ -2021,6 +2349,20 @@
       "value": "Validatorii actuali"
     }
   ],
+  "CmVlal": [
+    {
+      "type": 0,
+      "value": "Ce valoare "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " doriți să mizați?"
+    }
+  ],
   "Co67tK": [
     {
       "type": 0,
@@ -2031,20 +2373,6 @@
     {
       "type": 0,
       "value": "NU"
-    }
-  ],
-  "sNUrEO": [
-    {
-      "type": 0,
-      "value": "În caz contrar, am trimis un mesaj "
-    },
-    {
-      "type": 1,
-      "value": "btec"
-    },
-    {
-      "type": 0,
-      "value": " semnat cu cheile mele de retragere BLS pentru actualizarea acreditărilor mele de retragere (necesită actualizarea Shanghai/Capella)."
     }
   ],
   "D33f/7": [
@@ -2059,18 +2387,10 @@
       "value": "De cât ETH am nevoie pentru a putea deveni validator?"
     }
   ],
-  "5q9Lgv": [
+  "D91mWV": [
     {
       "type": 0,
-      "value": "Descărcați ramura "
-    },
-    {
-      "type": 1,
-      "value": "btec"
-    },
-    {
-      "type": 0,
-      "value": ":"
+      "value": "Pentru a beneficia de un sold efectiv mai mare, conturile cu acreditări de retragere mai vechi pot fi îmbunătățite la un cont combinat. Acest lucru se poate face o singură dată și este ireversibil."
     }
   ],
   "DCaq7N": [
@@ -2091,28 +2411,6 @@
       "value": "Înțeleg că voi fi penalizat dacă nu respect specificația."
     }
   ],
-  "Ox4e26": [
-    {
-      "type": 0,
-      "value": "Similar, există și o "
-    },
-    {
-      "type": 1,
-      "value": "exitQueue"
-    },
-    {
-      "type": 0,
-      "value": ", care limitează cât de repede pot "
-    },
-    {
-      "type": 1,
-      "value": "leave"
-    },
-    {
-      "type": 0,
-      "value": " rețeaua validatorii. Acest lucru este justificat din motive de securitate. Dat fiind că fiecare validator este limitat la un sold maxim efectiv de 32 ETH, acest lucru împiedică potențiala utilizare a unor părți mari de ETH într-un atac și ieșirea rapidă din rețea a tuturor participanților simultan."
-    }
-  ],
   "DNRQa7": [
     {
       "type": 0,
@@ -2129,6 +2427,12 @@
     {
       "type": 0,
       "value": "Configurați Erigon"
+    }
+  ],
+  "DbLJT1": [
+    {
+      "type": 0,
+      "value": "Cheia privată adresă de retragere"
     }
   ],
   "DbnQg+": [
@@ -2149,6 +2453,12 @@
       "value": "Documente JWT de consens:"
     }
   ],
+  "DiXOHD": [
+    {
+      "type": 0,
+      "value": "Documentație pentru construirea, rularea și depanarea Reth"
+    }
+  ],
   "DjhC7F": [
     {
       "type": 0,
@@ -2161,38 +2471,16 @@
       "value": "Clienții acceptă Prometheus și Grafana pentru a vă ajuta să vizualizați în timp real măsurători importante despre validatorul dumneavoastră."
     }
   ],
-  "DoCZT1": [
-    {
-      "type": 0,
-      "value": "Soldul efectiv al validatorului a ajuns la maximum. Dacă vrei, puteți adăuga "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (minimul permis de contractul de depozitare)"
-    }
-  ],
-  "jrbRLT": [
-    {
-      "type": 0,
-      "value": "Pentru a deveni un validator, trebuie să cunoașteți ce înseamnă gestionarea cheilor și protejarea menmonicului. Nu continuați dacă nu v-ați familiarizat încă cu mnemonicurile și cheile."
-    }
-  ],
   "DsJ/Mk": [
     {
       "type": 0,
       "value": "Nu este cazul să aveți încredere pur și simplu în adresa de contract afișată pe acest site."
+    }
+  ],
+  "DxyGdq": [
+    {
+      "type": 0,
+      "value": "Index validator"
     }
   ],
   "E+Y27g": [
@@ -2215,10 +2503,22 @@
       "value": "3. Exerciții în rețeaua de testare"
     }
   ],
+  "E0MgIm": [
+    {
+      "type": 0,
+      "value": "Vi se va cere să semnați un mesaj cu portofelul dumneavoastră. Procesarea actualizărilor nu este imediată, așa că luați în considerare până la câteva zile pentru finalizare."
+    }
+  ],
   "E1Mywn": [
     {
       "type": 0,
       "value": "lanț"
+    }
+  ],
+  "E2sGaF": [
+    {
+      "type": 0,
+      "value": "Ieșire"
     }
   ],
   "E4rtgi": [
@@ -2227,10 +2527,34 @@
       "value": "Clienți cu nivel de consens:"
     }
   ],
-  "yK2eQ+": [
+  "E55YPl": [
     {
       "type": 0,
-      "value": "Se dau sancțiuni minore pentru acțiunile (sau inacțiunile) care îngreunează obținerea consensului."
+      "value": "Depunerea suplimentară de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " poate crește soldul efectiv al acestui validator. Soldul efectiv curent este "
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": ", cu un maxim permis de "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "EIUapL": [
@@ -2243,6 +2567,20 @@
       "value": "deposit"
     }
   ],
+  "EMCxvJ": [
+    {
+      "type": 0,
+      "value": "Folosiți "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza rețeaua de testare Holesky."
+    }
+  ],
   "EPCHZV": [
     {
       "type": 0,
@@ -2253,6 +2591,12 @@
     {
       "type": 0,
       "value": "Am simulat o pană de curent (server și internet) și reluarea automată."
+    }
+  ],
+  "ER2q1V": [
+    {
+      "type": 0,
+      "value": "Actualizarea fuziunii a adus în mod oficial dovada mizei la Ethereum pe 15 septembrie 2022, perimând în același timp dovada muncii. Aceasta a pregătit lanțul pentru viitoare actualizări de scalare, cum ar fi fragmentarea Danksharding, prin aducerea consensului cu dovada mizei cu rețeaua principală, reducând în acelaşi timp consumul de energie cu peste 99,9%."
     }
   ],
   "ETJ2T5": [
@@ -2285,10 +2629,60 @@
       "value": "Launchpad-ul de mizare"
     }
   ],
+  "Ef+t8S": [
+    {
+      "type": 0,
+      "value": "Solicitare retragere parțială"
+    }
+  ],
   "Ej2jo1": [
     {
       "type": 0,
       "value": "Adresă de retragere:"
+    }
+  ],
+  "ErOWkD": [
+    {
+      "type": 0,
+      "value": "Preluare cele mai recente"
+    }
+  ],
+  "EsxlJB": [
+    {
+      "type": 0,
+      "value": "Configurare Reth"
+    }
+  ],
+  "EuU/4k": [
+    {
+      "type": 0,
+      "value": "Soldul efectiv maxim, de "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "EwtSGs": [
+    {
+      "type": 0,
+      "value": "Sunteți responsabil(ă) pentru tranzacție. Site-urile web frauduloase pot încerca să vă păcălească să le trimiteți "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " în locul contractului de depozit oficial. Asigurați-vă că adresa la care trimiteți tranzacția este cea corectă."
     }
   ],
   "F8yf1S": [
@@ -2311,12 +2705,6 @@
       "value": "Conceptul cheie este următorul:"
     }
   ],
-  "Q6N+C6": [
-    {
-      "type": 0,
-      "value": "Ethereum a apărut pe data de 30 iulie 2015. Dimensiunea fenomenului crește în timp, iar introducerea fragmentării va spori și cerințele de stocare, memorie și lățime de bandă."
-    }
-  ],
   "FM92S0": [
     {
       "type": 0,
@@ -2327,24 +2715,6 @@
     {
       "type": 0,
       "value": "Înțeleg că această tranzacție este ireversibilă."
-    }
-  ],
-  "uEB8++": [
-    {
-      "type": 0,
-      "value": "Retragerea adresei Ethereum: dacă doriți să retrageți adresa portofelului de execuție după modernizarea Shanghai/Capella, puteți seta "
-    },
-    {
-      "type": 1,
-      "value": "ethAddressWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " când rulați deposit-cli. "
-    },
-    {
-      "type": 1,
-      "value": "boldWarning"
     }
   ],
   "FU7JYy": [
@@ -2367,6 +2737,18 @@
     {
       "type": 0,
       "value": ". În caz contrar, depunerea nu va fi validă."
+    }
+  ],
+  "FWtWw3": [
+    {
+      "type": 0,
+      "value": "Rețineți că aceste cozi de „retragere” și „Modificare BLS la execuție” sunt independente și nu concurează. Fiecare este limitată la una per bloc."
+    }
+  ],
+  "FXE1P1": [
+    {
+      "type": 0,
+      "value": "Informațiile sunt actualizate odată cu îmbunătățirea rețelei Pectra din 2025."
     }
   ],
   "FZCdw+": [
@@ -2413,12 +2795,6 @@
       "value": " este software-ul care acționează în numele validatorului prin deținerea și utilizarea cheii sale private pentru a face atestări despre starea lanțului. Un singur validator poate deține multe perechi cheie, controlând mulți validatori."
     }
   ],
-  "FfLWt5": [
-    {
-      "type": 0,
-      "value": "Un client Ethereum cu un grup uriaș de dezvoltatori. Este perfect pentru sistemele de nivel enterprise."
-    }
-  ],
   "FgraU0": [
     {
       "type": 0,
@@ -2439,6 +2815,20 @@
       "value": " pentru a putea utiliza panoul de lansare."
     }
   ],
+  "Fogk92": [
+    {
+      "type": 0,
+      "value": "Retrageri maxime per sarcină de plată: 16 (2"
+    },
+    {
+      "type": 1,
+      "value": "exp"
+    },
+    {
+      "type": 0,
+      "value": ")"
+    }
+  ],
   "FqgDIV": [
     {
       "type": 0,
@@ -2451,16 +2841,20 @@
       "value": "validatori"
     }
   ],
+  "G0AzjT": [
+    {
+      "type": 0,
+      "value": "ieșire index "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    }
+  ],
   "G0ZD5H": [
     {
       "type": 0,
       "value": "Pentru a face un cont eligibil pentru o retragere totală, trebuie să ieșiți mai întâi din contul validatorului. Se poate ieși din conturile validatorilor din mizare în două modalități principale: voluntar sau forțat."
-    }
-  ],
-  "q0thwm": [
-    {
-      "type": 0,
-      "value": "Ca validator, primiți recompensă dacă propuneți/atestați blocuri care sunt incluse în lanț."
     }
   ],
   "G5IMoZ": [
@@ -2547,16 +2941,28 @@
       "value": "Ar trebui să vedeți că aveți un depozit de chei pentru fiecare validator. Acest depozit de chei conține cheia de semnătură, criptată cu parola dumneavoastră."
     }
   ],
+  "GmKyht": [
+    {
+      "type": 0,
+      "value": "Retrageri regulate fără taxe de gaz din orice sold peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
   "GsBRWL": [
     {
       "type": 0,
       "value": "Limbi"
-    }
-  ],
-  "Gsixxx": [
-    {
-      "type": 0,
-      "value": "Riscuri de adoptare timpurie"
     }
   ],
   "GuIwY6": [
@@ -2577,16 +2983,34 @@
       "value": "Suma totală necesară"
     }
   ],
+  "H0jTll": [
+    {
+      "type": 0,
+      "value": "Adăugarea de fonduri la un validator care nu a atins încă soldul maxim efectiv poate crește recompensele și penalizările."
+    }
+  ],
   "H5+NAX": [
     {
       "type": 0,
       "value": "Sold"
     }
   ],
+  "H84I+K": [
+    {
+      "type": 0,
+      "value": "Documentație de instalare Reth"
+    }
+  ],
   "HMgrdg": [
     {
       "type": 0,
       "value": "Configurați-vă clientul cu nivel de execuție"
+    }
+  ],
+  "HX93/h": [
+    {
+      "type": 0,
+      "value": "Configurarea unei adrese de retragere este considerată bună practică de securitate. Dacă nu o furnizați în acest moment, fondurile depuse vor rămâne blocate în lanțul Beacon până când este furnizată o adresă. Deblocarea va necesita semnarea unui mesaj folosind cheile de retragere BLS, generate de fraza mnemonică (păstrați în siguranță)."
     }
   ],
   "HXvZ2L": [
@@ -2607,6 +3031,34 @@
     {
       "type": 0,
       "value": "Penalizarea are loc în două scopuri: (1) ca să scumpească în mod exagerat atacurile contra rețelei și (2) ca să nu permită validatorilor să stea degeaba, controlând dacă se achită într-adevăr de obligațiile pe care le au. Dacă sunteți penalizat pentru că ați întreprins o acțiune ce se poate dovedi dăunătoare, vi se va distruge o parte din miză."
+    }
+  ],
+  "HemvTL": [
+    {
+      "type": 0,
+      "value": "Acreditările de retragere BLS ("
+    },
+    {
+      "type": 1,
+      "value": "type0"
+    },
+    {
+      "type": 0,
+      "value": ") pot fi actualizate la o adresa de execuție ("
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": ") prin transmiterea unui mesaj Modificare BLS la execuție (BTEC), semnat cu cheia de retragere BLS. Aceste mesaje sunt incluse în blocuri la o rată maximă de 16 per bloc."
+    }
+  ],
+  "HgMYFB": [
+    {
+      "type": 0,
+      "value": "Acest lucru va iniția procesul permanent de scoatere a validatorului selectat din rețeaua Ethereum pe bază de dovadă de mizare."
     }
   ],
   "Hmxd5S": [
@@ -2675,6 +3127,36 @@
       "value": "Erigon, denumit anterior TurboGeth, este un client Ethereum care a fost creat în scopul optimizării performanțelor."
     }
   ],
+  "ICbItT": [
+    {
+      "type": 0,
+      "value": "Această abordare creează un singur cont combinat. Necesită cel puțin "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " și poate deține până la "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "ID3Pgm": [
     {
       "type": 0,
@@ -2685,12 +3167,6 @@
     {
       "type": 0,
       "value": "Semnați tranzacția cu portofelul"
-    }
-  ],
-  "bFiejS": [
-    {
-      "type": 0,
-      "value": "Reține: în cel de-al doilea scenariu (puțin probabil), veți pierde progresiv până la 50% (16 ETH) din miză pe parcursul a 21 de zile. După 21 de zile ești scos din grupul de validatori. Astfel este sigur că, la un moment dat, blocurile încep din nou să se finalizeze."
     }
   ],
   "IWlazt": [
@@ -2705,10 +3181,22 @@
       "value": "Instrumente disponibile pentru generarea mesajului de schimbare a cheii"
     }
   ],
+  "IZEvbY": [
+    {
+      "type": 0,
+      "value": "Clientul de execuție Ethereum Nethermind, construit pe .NET, oferă performanță de vârf în sincronizare și procesare la vârful lanțului. Cu designul său modular și sistemul de pluginuri, oferă posibilitate de extindere și caracteristici pentru lanțuri noi. Nethermind este unul dintre cei mai adopțiți clienți de execuție pe Ethereum și joacă un rol crucial în îmbunătățirea diversității și rezilienței ecosistemului Ethereum."
+    }
+  ],
   "IZFEUg": [
     {
       "type": 0,
       "value": "Gata"
+    }
+  ],
+  "Icu389": [
+    {
+      "type": 0,
+      "value": "Înțelegerea soldului efectiv al validatorului"
     }
   ],
   "IdUtHu": [
@@ -2747,12 +3235,6 @@
     {
       "type": 0,
       "value": "Retrageri forțate în lanțul Beacon ca operațiuni"
-    }
-  ],
-  "IugT5/": [
-    {
-      "type": 0,
-      "value": "nu se poate transfera"
     }
   ],
   "IwrKbS": [
@@ -2797,10 +3279,56 @@
       "value": "Chineză (tradițională)"
     }
   ],
+  "J6xb7K": [
+    {
+      "type": 1,
+      "value": "wagyuKeyGenGui"
+    },
+    {
+      "type": 0,
+      "value": ": dacă ați introdus o adresă de retragere la generarea cheilor, puteți continua"
+    }
+  ],
   "J7T0SR": [
     {
       "type": 0,
       "value": "Documentație de instalare Nimbus"
+    }
+  ],
+  "J8hlId": [
+    {
+      "type": 0,
+      "value": "Contul "
+    },
+    {
+      "type": 1,
+      "value": "sourceIndex"
+    },
+    {
+      "type": 0,
+      "value": " va fi scos din rețea, iar soldul său complet va fi migrat către validatorul cu index "
+    },
+    {
+      "type": 1,
+      "value": "targetIndex"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "J9BaKo": [
+    {
+      "type": 0,
+      "value": "Există depozite recente de cel puțin "
+    },
+    {
+      "type": 1,
+      "value": "ethAmount"
+    },
+    {
+      "type": 0,
+      "value": "?"
     }
   ],
   "JAiV0o": [
@@ -2829,16 +3357,36 @@
       "value": "4. Evită phishingul"
     }
   ],
+  "JQtlrY": [
+    {
+      "type": 0,
+      "value": "Închidere completă validator"
+    }
+  ],
+  "JZm4pU": [
+    {
+      "type": 0,
+      "value": "Setarea acestei adrese stabilește validatorul "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": " și conectează permanent adresa de execuție aleasă la validatorul dumneavoastră. Acest cont va fi singurul cont care poate primi fonduri retrase de la validator."
+    }
+  ],
   "Ja5vXW": [
     {
       "type": 0,
       "value": "Informații suplimentare"
     }
   ],
-  "jVlgXS": [
+  "Jge1Sx": [
     {
       "type": 0,
-      "value": "Aprofundați-vă cunoștințele despre actualizările Ethereum."
+      "value": "Ieșire forțată"
     }
   ],
   "JhUYU3": [
@@ -2851,6 +3399,12 @@
     {
       "type": 0,
       "value": "Consumul de resurse poate varia semnificativ de la un client la altul. Dacă aveți restricții la resurse, verificați mai mulți clienți."
+    }
+  ],
+  "Jrg1Me": [
+    {
+      "type": 0,
+      "value": "Fragmentarea Danksharding va schimba cerința ca nodurile complete să conțină întreaga istorie a lanțului și va distribui în schimb această sarcină în rețea, asigurând în același timp disponibilitatea datelor. Acest lucru va spori în mod semnificativ capacitatea nivelului 1 Ethereum, menținând în același timp capacitatea de a opera un nod complet pe hardware-ul consumatorului, păstrând rețeaua descentralizată."
     }
   ],
   "Js4uuA": [
@@ -2874,7 +3428,7 @@
   "Jvu600": [
     {
       "type": 0,
-      "value": "Mnemonicul dumneavoastră"
+      "value": "Mnemonica dumneavoastră"
     }
   ],
   "K3uH1C": [
@@ -2895,16 +3449,16 @@
       "value": "Documentație de instalare Geth"
     }
   ],
-  "bagKCF": [
-    {
-      "type": 0,
-      "value": "Se planifică includerea funcțiilor de retragere în următoarea actualizare Shanghai/Capella. După adăugarea acestor funcții, soldul dumneavoastră poate fi retras folosind cheia de retragere după o întârziere minimă de aproximativ o zi."
-    }
-  ],
   "K7xnjy": [
     {
       "type": 0,
       "value": "Avertisment: nu păstrați chei în mai mulți clienți de validator (de rezervă) simultan"
+    }
+  ],
+  "K8gNLa": [
+    {
+      "type": 0,
+      "value": "adresă_retragere"
     }
   ],
   "KBSbmP": [
@@ -2955,6 +3509,20 @@
       "value": " pentru clientul meu cu nivel de consens."
     }
   ],
+  "KMa0S7": [
+    {
+      "type": 0,
+      "value": "Atunci când furnizați acest indicator, acreditările pentru retragere conțin prefixul "
+    },
+    {
+      "type": 1,
+      "value": "type1"
+    },
+    {
+      "type": 0,
+      "value": " (sau mai mare) și adresa pentru retragere, semnalizând că acest cont este pregătit pentru retrageri."
+    }
+  ],
   "KN7zKn": [
     {
       "type": 0,
@@ -2967,6 +3535,12 @@
       "value": "intrare"
     }
   ],
+  "KUz3Pf": [
+    {
+      "type": 0,
+      "value": "în așteptare"
+    }
+  ],
   "KWWsDo": [
     {
       "type": 0,
@@ -2977,10 +3551,10 @@
       "value": "url"
     }
   ],
-  "KbUOQp": [
+  "KgJB0t": [
     {
       "type": 0,
-      "value": "Nethermind este un client robust construit pe cadrul .NET pentru performanță, versatilitate și customizabilitate."
+      "value": "Recomandat pentru majoritatea utilizatorilor"
     }
   ],
   "KhJBVZ": [
@@ -2993,6 +3567,12 @@
     {
       "type": 0,
       "value": "După finalizarea procesului, trebuie să apară următoarele:"
+    }
+  ],
+  "KqMfKH": [
+    {
+      "type": 0,
+      "value": "Retrageri regulate distribuite către adresa de retragere pentru orice sold peste 32 ETH, automat, în mod regulat"
     }
   ],
   "KvRSg5": [
@@ -3027,6 +3607,12 @@
       "value": "."
     }
   ],
+  "Kzksr7": [
+    {
+      "type": 0,
+      "value": "Înțeleg riscurile de penalizare și cele referitoare la software."
+    }
+  ],
   "L7fPF+": [
     {
       "type": 0,
@@ -3049,32 +3635,16 @@
       "value": "reîncărcați portofelul"
     }
   ],
+  "LBAaxu": [
+    {
+      "type": 0,
+      "value": "Punct final RPC-JSON"
+    }
+  ],
   "LHPZ+C": [
     {
       "type": 0,
       "value": "Lighthouse este o implementare a clientului cu nivel de consens scrisă în Rust, ce se axează mult pe viteză și securitate."
-    }
-  ],
-  "q8Cxf5": [
-    {
-      "type": 0,
-      "value": "Retragere BLS: deposit-cli generează implicit acreditări de retragere cu "
-    },
-    {
-      "type": 1,
-      "value": "boldWithdrawalKey"
-    },
-    {
-      "type": 0,
-      "value": " derivate folosind mnemonicurile în formatul "
-    },
-    {
-      "type": 1,
-      "value": "eip2334"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "LVy+cS": [
@@ -3095,30 +3665,28 @@
       "value": "Întrebări frecvente despre validatori"
     }
   ],
-  "LibVut": [
-    {
-      "type": 0,
-      "value": "Folosiți "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " pentru a sincroniza rețeaua de testare Goerli."
-    }
-  ],
   "Ljo9dF": [
     {
       "type": 0,
       "value": "Bulgară"
     }
   ],
+  "Ll/uYX": [
+    {
+      "type": 0,
+      "value": "Conectați-vă la un portofel nou"
+    }
+  ],
   "LlClXS": [
     {
       "type": 0,
       "value": "Vă mulțumim pentru sprijinul oferit rețelei Ethereum!"
+    }
+  ],
+  "LmBip5": [
+    {
+      "type": 0,
+      "value": "Deconectare miză de la"
     }
   ],
   "LpnfTF": [
@@ -3177,16 +3745,24 @@
       "value": "Încărcați în grupul Nod Beacon BLSToExecutionChange"
     }
   ],
-  "M3GwXS": [
+  "MAVs3a": [
     {
       "type": 0,
-      "value": "Veți primi recompense complete numai dacă validatorul dvs. este online și actualizat. Acest aspect este responsabilitatea dvs. Dacă validatorul este deconectat, veți fi penalizat. Sancțiunile pentru trecerea offline sunt aproximativ egale cu recompensele pentru participarea activă."
+      "value": "*Simpla deconectare de la o rețea altfel sănătoasă nu duce la penalitate, dar va duce la penalizări minore pentru inactivitate."
     }
   ],
-  "28aik1": [
+  "MAq0zY": [
     {
       "type": 0,
-      "value": "Limite rată setate în coada aferentă retragerii (ar putea fi schimbate pe parcursul testelor înainte de Shanghai)"
+      "value": "Taxa minimă pentru procesare este în prezent crescută, vă recomandăm să așteptați câteva minute. Taxa curentă de retragere este "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "MCmGYv": [
@@ -3219,12 +3795,6 @@
       "value": "Ce se întâmplă dacă mi se fură cheia de retragere?"
     }
   ],
-  "Mor0Ih": [
-    {
-      "type": 0,
-      "value": "Comportamentul incorect al validatorului"
-    }
-  ],
   "MZvoWG": [
     {
       "type": 0,
@@ -3241,6 +3811,12 @@
     {
       "type": 0,
       "value": "Key Gen GUI Wagyu"
+    }
+  ],
+  "MalGck": [
+    {
+      "type": 0,
+      "value": "Documentație Geth pe Holesky"
     }
   ],
   "Mb3npQ": [
@@ -3293,6 +3869,24 @@
       "value": " a fost procesată pentru orice sold rămas"
     }
   ],
+  "Mor0Ih": [
+    {
+      "type": 0,
+      "value": "Comportament incorect validator"
+    }
+  ],
+  "MsZuUe": [
+    {
+      "type": 0,
+      "value": "retragere sold complet din"
+    }
+  ],
+  "MtgVBi": [
+    {
+      "type": 0,
+      "value": "ANULARE FONDURI DIN MIZARE"
+    }
+  ],
   "N0rwnt": [
     {
       "type": 1,
@@ -3307,6 +3901,12 @@
     {
       "type": 0,
       "value": "încă câteva zile"
+    }
+  ],
+  "NB68I4": [
+    {
+      "type": 0,
+      "value": "Adăugare fonduri la validator"
     }
   ],
   "NDrMCw": [
@@ -3345,24 +3945,6 @@
       "value": "Am securizat contul root."
     }
   ],
-  "dVJcJt": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": acest lucru se realizează prin utilizarea indicatorului "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": " când se generează cheile dumneavoastră cu mizare Deposit CLI."
-    }
-  ],
   "NTWnJC": [
     {
       "type": 0,
@@ -3387,12 +3969,6 @@
     {
       "type": 0,
       "value": " trebuie configurat pentru retrageri. Rețineți acreditările pentru retrageri, întrucât veți avea nevoie de acestea pentru actualizarea cheilor."
-    }
-  ],
-  "NUcFVA": [
-    {
-      "type": 0,
-      "value": "[Example]"
     }
   ],
   "NVljH4": [
@@ -3439,6 +4015,12 @@
       "value": "Deveniți validator cu Teku"
     }
   ],
+  "NbiwbX": [
+    {
+      "type": 0,
+      "value": "Vă vom ajuta să generați o cheie de semnare pentru fiecare validator pe care doriți să îl rulați. În timpul acestui proces, veți stabili o adresă de retragere care va fi asociată permanent la fiecare cont de validator."
+    }
+  ],
   "NiWtxk": [
     {
       "type": 1,
@@ -3475,46 +4057,24 @@
       "value": ")"
     }
   ],
-  "1ONfru": [
-    {
-      "type": 0,
-      "value": "Pentru a include acest mesaj în Mainnet, va trebuie să încărcați acest mesaj în bifurcația majoră a grupului nodului beacon "
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 0,
-      "value": " Capella/Shanghai."
-    }
-  ],
   "NwzcYT": [
     {
       "type": 0,
       "value": "Teku trebuie îndreptat spre fișiere care conțin depozite de chei și parolele asociate acestora la pornire. Există 3 metode pentru a face acest lucru."
     }
   ],
-  "O+3LJ1": [
+  "O0SF0V": [
     {
       "type": 0,
-      "value": "Soldul acestui validator este la maximum efectiv: "
+      "value": "Toate fondurile rămase vor fi "
     },
     {
       "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
+      "value": "transferredToDestination"
     },
     {
       "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
+      "value": " în câteva zile după ce epoca de ieșire a fost atinsă"
     }
   ],
   "O3qkOm": [
@@ -3555,10 +4115,26 @@
       "value": "Documentație privind rularea Erigon"
     }
   ],
+  "OJcH8h": [
+    {
+      "type": 0,
+      "value": "Inițiere retragere"
+    }
+  ],
   "ON2tXT": [
     {
       "type": 0,
       "value": "Documentația Nethermind explică modul de descărcare și instalare a clientului."
+    }
+  ],
+  "ONXIv4": [
+    {
+      "type": 0,
+      "value": "Retragere o sumă de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "ORVjVH": [
@@ -3621,6 +4197,58 @@
       "value": "Tot ce trebuie să înțelegeți ca să deveniți validator."
     }
   ],
+  "OuiAUJ": [
+    {
+      "type": 0,
+      "value": "fiecare dintre cei "
+    },
+    {
+      "type": 1,
+      "value": "validatorCount"
+    },
+    {
+      "type": 0,
+      "value": " validatori"
+    }
+  ],
+  "Ox4e26": [
+    {
+      "type": 0,
+      "value": "Similar, există și o "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": ", care limitează cât de repede pot "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " din rețea validatorii. Acest lucru este justificat din motive de securitate. Dat fiind că fiecare validator este limitat la un sold maxim efectiv de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ", acest lucru împiedică potențiala utilizare a unor sume mari de ETH într-un atac și ieșirea rapidă din rețea a tuturor participanților simultan."
+    }
+  ],
   "P+nziG": [
     {
       "type": 0,
@@ -3631,12 +4259,6 @@
     {
       "type": 0,
       "value": "Phishing-ul este un risc absolut real pentru validatorii Ethereum și, din nefericire, multă lume își pierde fondurile din cauza atacurilor de acest fel."
-    }
-  ],
-  "cU/ZP6": [
-    {
-      "type": 0,
-      "value": "Upgrade-ul Lanțului Beacon aduce consens cu dovada mizei în Ethereum."
     }
   ],
   "P1QerV": [
@@ -3661,6 +4283,12 @@
       "value": "."
     }
   ],
+  "P2eds5": [
+    {
+      "type": 0,
+      "value": "Retragere fonduri"
+    }
+  ],
   "P8FrVE": [
     {
       "type": 0,
@@ -3675,6 +4303,12 @@
     {
       "type": 1,
       "value": "emoji"
+    }
+  ],
+  "P99NKl": [
+    {
+      "type": 0,
+      "value": "Pentru a maximiza recompensele, trebuie să vă asigurați că validatorul dumneavoastră este online și actualizat. Acest aspect este responsabilitatea dumneavoastră. Penalitățile pentru deconectarea validatorului sunt aproximativ egale cu recompensele pentru participarea activă."
     }
   ],
   "P9mVZK": [
@@ -3695,22 +4329,28 @@
       "value": "Această epocă este determinată de prima epocă disponibilă, care nu este deja maximizată cu alți validatori care abandonează (limita de rată depinde de totalul validatorilor din rețea) și trebuie să fie cel puțin patru (4) epoci după inițierea abandonului."
     }
   ],
+  "PXAur5": [
+    {
+      "type": 0,
+      "value": "Retragere"
+    }
+  ],
   "PfoT0C": [
     {
       "type": 0,
       "value": "Această listă de verificare vă va ajuta să înțelegeți rolul unui validator și să vă pregătiți pentru acesta."
     }
   ],
+  "PgJGHT": [
+    {
+      "type": 0,
+      "value": "Disponibil"
+    }
+  ],
   "PglO1W": [
     {
       "type": 0,
       "value": "Raport de verificare oficial"
-    }
-  ],
-  "PmrcLE": [
-    {
-      "type": 0,
-      "value": "Documentație Nethermind pe Goerli"
     }
   ],
   "PoBIK+": [
@@ -3749,42 +4389,10 @@
       "value": "clipboard"
     }
   ],
-  "Q8P0rZ": [
+  "Q6N+C6": [
     {
       "type": 0,
-      "value": "Validatorii au un sold efectiv maxim de "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". Este suficient să alimentezi "
-    },
-    {
-      "type": 1,
-      "value": "maxTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " ca să ajungi la soldul efectiv maxim."
+      "value": "Ethereum a apărut pe data de 30 iulie 2015. Dimensiunea fenomenului crește în timp, iar introducerea fragmentării Danksharding va spori și cerințele de stocare, memorie și lățime de bandă."
     }
   ],
   "QKFeMq": [
@@ -3799,6 +4407,28 @@
       "value": "Notă: mașinile virtuale pot dezactiva implicit NTP, deci poți avea nevoie de o soluție adaptată mediului folosit."
     }
   ],
+  "QOevre": [
+    {
+      "type": 0,
+      "value": "În acest moment ar trebui să aveți mnemonica notată într-un loc sigur și un depozit de chei salvat pentru "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Păstrați în loc sigur toate aceste elemente în siguranță, preferabil offline. Depozitele de chei trebuie să fie disponibile în directorul "
+    },
+    {
+      "type": 1,
+      "value": "validatorKeys"
+    },
+    {
+      "type": 0,
+      "value": " nou creat."
+    }
+  ],
   "QRUdO6": [
     {
       "type": 0,
@@ -3809,6 +4439,12 @@
     {
       "type": 0,
       "value": "Învățați despre porturi în rețelistică"
+    }
+  ],
+  "QUztYl": [
+    {
+      "type": 0,
+      "value": "valoare"
     }
   ],
   "QWDxrk": [
@@ -3839,28 +4475,6 @@
     {
       "type": 1,
       "value": "networkName"
-    }
-  ],
-  "dtVSdl": [
-    {
-      "type": 0,
-      "value": "Este important ca în calitate de validator să postați "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " drept colateral—cu alte cuvinte trebuie să puneți miză câteva fonduri. Singurul mod prin care puteți deveni validator este să realizați o tranzacție unilateral "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " la contractul de depozit din lanțul Ethereum curent."
     }
   ],
   "QlsDcr": [
@@ -3895,24 +4509,6 @@
       "value": " care a fost acceptat, dar a cărui validare în lanț nu s-a terminat. Acesta va apărea aici când beaconcha.in a confirmat 2048 de blocuri."
     }
   ],
-  "zBl8d5": [
-    {
-      "type": 1,
-      "value": "stakingDepositCli"
-    },
-    {
-      "type": 0,
-      "value": ": dacă ați folosit indicatorul "
-    },
-    {
-      "type": 1,
-      "value": "eth1WithdrawalAddress"
-    },
-    {
-      "type": 0,
-      "value": " când generați chei, puteți continua"
-    }
-  ],
   "R7v7y3": [
     {
       "type": 0,
@@ -3935,6 +4531,12 @@
     {
       "type": 0,
       "value": "Clienții cu nivel de consens"
+    }
+  ],
+  "RGD1CX": [
+    {
+      "type": 0,
+      "value": "Patru (4) ieșiri de validator sunt permise per epocă, plus încă una (1) pentru fiecare 65.536 validatori activi, în total peste 327.680. Începând din aprilie 2023, această limită este de opt (8) și va crește la nouă (9) în cazul în care numărul de validatori atinge 655.360."
     }
   ],
   "ROHpFF": [
@@ -3961,16 +4563,22 @@
       "value": "felicitări"
     }
   ],
-  "RdHdwG": [
+  "RhR6+a": [
     {
       "type": 0,
-      "value": "Instrucțiuni de utilizare a instrumentului staking-deposit-cli pentru a genera și difuza un mesaj SignedBLSToExecutionChange pentru a actualiza acreditările de retragere pentru validator."
+      "value": "Vă vom ghida prin setarea unei adrese de retragere pentru validator. Aceasta este considerată cea mai bună practică și este recomandată cu tărie din motive de siguranță și securitate."
     }
   ],
-  "Rg5ySE": [
+  "RokPRM": [
     {
       "type": 0,
-      "value": "Câți validatori vreți să rulați?"
+      "value": "Retrageri periodice"
+    }
+  ],
+  "RqcJGJ": [
+    {
+      "type": 0,
+      "value": "Documentație Besu pe Holesky"
     }
   ],
   "Rr2lI/": [
@@ -3983,6 +4591,24 @@
     {
       "type": 0,
       "value": "Rezumat"
+    }
+  ],
+  "RuFk89": [
+    {
+      "type": 0,
+      "value": "Absorbire alt validator"
+    }
+  ],
+  "RuoC+s": [
+    {
+      "type": 0,
+      "value": "Epoca de ieșire pentru acest validator a fost atinsă. Soldul rămas va fi transferat automat fie către contul dumneavoastră de retragere conectat, fie către validatorul dumneavoastră țintă ales, dacă migrați conturi, în decurs de câteva zile."
+    }
+  ],
+  "RwXnhK": [
+    {
+      "type": 0,
+      "value": "stocare la rece"
     }
   ],
   "Ryptmy": [
@@ -4003,6 +4629,12 @@
     {
       "type": 0,
       "value": "."
+    }
+  ],
+  "S3RTk+": [
+    {
+      "type": 0,
+      "value": "Prin adăugarea de fonduri la un cont care nu a atins încă EB maxim, puteți crește soldul efectiv de mizare al validatorului, care este folosit pentru a calcula atât recompensele, cât și penalizările. Soldul efectiv este calculat din soldul real și crește/scade în unități întregi."
     }
   ],
   "S943uU": [
@@ -4027,6 +4659,12 @@
     {
       "type": 0,
       "value": "Executați fișierul pe care tocmai l-ați descărcat."
+    }
+  ],
+  "SPebP1": [
+    {
+      "type": 0,
+      "value": "Sold nou"
     }
   ],
   "SVUntz": [
@@ -4073,12 +4711,6 @@
       "value": "Mai multe despre riscurile de penalizare"
     }
   ],
-  "SdRBir": [
-    {
-      "type": 0,
-      "value": "Pentru a deveni validator, trebuie să aveți posibilitatea de a rula comenzi în terminal pe computer. Noile dvs. perechi de chei se generează în terminal, iar software-ul validatorului se instalează tot pe acesta."
-    }
-  ],
   "SeW5ak": [
     {
       "type": 0,
@@ -4089,6 +4721,12 @@
     {
       "type": 0,
       "value": "Obligatoriu"
+    }
+  ],
+  "SepcV5": [
+    {
+      "type": 0,
+      "value": "ieșire din validatorul selectat mai sus"
     }
   ],
   "SqKNq2": [
@@ -4107,22 +4745,72 @@
       "value": "Sumar abandonare coadă"
     }
   ],
+  "SwXcZM": [
+    {
+      "type": 0,
+      "value": "Valoarea minimă de alimentare este "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "Sy5bAo": [
+    {
+      "type": 0,
+      "value": "Odată cu finalizarea tranziției la dovada mizei prin Fuziune, validatorii sunt responsabili de prelucrarea tranzacțiilor și de semnarea acestora pentru a le confirma valabilitatea. Aceste date "
+    },
+    {
+      "type": 1,
+      "value": "not"
+    },
+    {
+      "type": 0,
+      "value": " vor fi disponibile din surse terțe populare după Fuziune. Utilizarea unui furnizor terț va duce la dezativarea validatorului. Atunci când fragmentarea Danksharding este implementată, validatorii vor risca, de asemenea, penalitatea sub "
+    },
+    {
+      "type": 1,
+      "value": "pocGame"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "Szwbym": [
     {
       "type": 0,
       "value": "cheie"
     }
   ],
-  "T2O2Gr": [
+  "T5tldp": [
     {
       "type": 0,
-      "value": "inițial și maxim"
+      "value": "Îmbunătățire cont la combinat"
     }
   ],
   "THIzw6": [
     {
       "type": 0,
       "value": "Validatorii și Ethereum"
+    }
+  ],
+  "TKCr16": [
+    {
+      "type": 0,
+      "value": "Această retragere completă de fonduri necesită stabilirea unei adrese de retragere și va fi transferată automat în următoarea verificare a validatorului."
     }
   ],
   "TMw9oz": [
@@ -4143,10 +4831,34 @@
       "value": "virtualenv v-ar ajuta să creați un mediu Python izolat pentru instrumentul deposit-cli."
     }
   ],
+  "ThGXHF": [
+    {
+      "type": 0,
+      "value": "Acest lucru va iniția procesul permanent de "
+    },
+    {
+      "type": 1,
+      "value": "exiting"
+    },
+    {
+      "type": 0,
+      "value": " din rețeaua Ethereum pe bază de dovadă de mizare."
+    }
+  ],
   "Tpe6yK": [
     {
       "type": 0,
       "value": "Documentație rpc-http-enabled"
+    }
+  ],
+  "Tpo1B3": [
+    {
+      "type": 0,
+      "value": "transferat către index validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "U/NPbq": [
@@ -4161,10 +4873,18 @@
       "value": "Vizualizați comparația detaliată a clienților"
     }
   ],
-  "U6jzBs": [
+  "U4ARud": [
     {
       "type": 0,
-      "value": "Intrarea în rețeaua de testare publică pentru retrageri"
+      "value": "Anterior, un nod de Beacon (nivel de consens) a trebuit doar să urmărească contractul de depozit cu mizare pe nivelul de execuție pentru a ști ce conturi de validator au realizat depuneri de "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH. Aceste informații au fost ușor obținute și transmise de la furnizori terți, cum ar fi Infura sau Alchemy."
     }
   ],
   "U7AOxj": [
@@ -4173,24 +4893,22 @@
       "value": "mai mare decât 50%"
     }
   ],
-  "UJMct0": [
+  "UJE2gP": [
     {
       "type": 0,
-      "value": "Verificați "
-    },
-    {
-      "type": 1,
-      "value": "etherscan"
-    },
-    {
-      "type": 0,
-      "value": " pentru detalii"
+      "value": "Controlat de"
     }
   ],
-  "UUDnWR": [
+  "UN2ydn": [
     {
       "type": 0,
-      "value": "Planificarea Shanghai (problema GitHub)"
+      "value": "Atenție - coada curentă de cereri este mai mare decât volumul normal"
+    }
+  ],
+  "UOFjs/": [
+    {
+      "type": 0,
+      "value": "Există tipuri de conturi mai noi ulterioare conturilor de Tipul 1. Migrarea la Tipul 1 de la Tipul 0 este o condiție prealabilă înainte de a migra la tipuri de conturi ulterioare."
     }
   ],
   "UWv7yD": [
@@ -4215,6 +4933,26 @@
     {
       "type": 0,
       "value": "Până la această epocă (în timp ce se află „în coadă”), validatorul trebuie să fie online și trebuie păstrate aceleași reguli de penalitate ca întotdeauna."
+    }
+  ],
+  "UdDXU6": [
+    {
+      "type": 0,
+      "value": "imediat"
+    }
+  ],
+  "UjKpPX": [
+    {
+      "type": 0,
+      "value": "Toate fondurile rămase vor fi transferate către "
+    },
+    {
+      "type": 1,
+      "value": "destination"
+    },
+    {
+      "type": 0,
+      "value": " în câteva zile după ce epoca de ieșire a fost atinsă"
     }
   ],
   "Utck3E": [
@@ -4257,10 +4995,16 @@
       "value": "Aceasta a devenit o cerință la momentul Fuziunii, astfel încât vă asigurați că rulați ambele înainte de mizare."
     }
   ],
-  "iXbM1G": [
+  "V1iY4C": [
     {
       "type": 0,
-      "value": "Dacă nu ai un folder pentru rețeaua de testare, probabil că nu ați compilat și executat corect Nimbus. Rulați din nou comenzile de compilare."
+      "value": "Reth este construit în Rust, un limbaj care permite tuturor să construiască software fiabil și eficient. Rust este un limbaj de programare cu scop general, care pune accent pe performanță, siguranța tipurilor și concurență. Asigură siguranța memoriei, adică toate referințele indică o memorie validă, fără un colector de gunoi."
+    }
+  ],
+  "V4X42O": [
+    {
+      "type": 0,
+      "value": "Configurare Lodestar"
     }
   ],
   "VASo1/": [
@@ -4295,40 +5039,6 @@
       "value": "Recomandat"
     }
   ],
-  "VLDKor": [
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " este soldul maxim efectiv al validatorului. Acest lucru înseamnă că nu veți câștiga mai multe recompense dacă soldul de validator depășește "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". Cu toate acestea, veți câștiga mai puțin dacă scade sub "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "VSSmNp": [
     {
       "type": 0,
@@ -4359,20 +5069,6 @@
     {
       "type": 0,
       "value": ", care este o cheie secretă partajată doar între cei doi clienți pentru autentificare reciprocă. Acest secret JWT partajat trebuie pus la dispoziția fiecărui client (atât pentru clienți cu nivel de execuție, cât și pentru clienți cu nivel de consens) pentru a putea comunica adecvat."
-    }
-  ],
-  "VwWGD9": [
-    {
-      "type": 0,
-      "value": "Aceste mesaje sunt limitate la 16 per bloc ("
-    },
-    {
-      "type": 1,
-      "value": "message"
-    },
-    {
-      "type": 0,
-      "value": "), deci, dacă sunt realizate mai mult de 16 cereri la un moment dat, va fi formată o coadă și acestea vor fi procesate în blocuri ulterioare. Aceasta înseamnă că, imediat după actualizarea Shanghai/Capella, utilizatorii care trimit acest mesaj pot vedea întârzieri estimate la 2-3 zile înainte de procesarea solicitării."
     }
   ],
   "VzGJkB": [
@@ -4419,24 +5115,6 @@
       "value": "Întrebări frecvente"
     }
   ],
-  "WFVzvu": [
-    {
-      "type": 1,
-      "value": "warning"
-    },
-    {
-      "type": 0,
-      "value": " Depozitele duplicate cu aceeași cheie publică keyfile vor fi considerate drept duble. Niciun sold suplimentar peste "
-    },
-    {
-      "type": 1,
-      "value": "eth"
-    },
-    {
-      "type": 0,
-      "value": " NU va fi luat în calcul în soldul efectiv pe lanțul de Beacon. De asemenea, nu veți mai putea să-l retrageți până când Lanțul Beacon nu fuzionează cu rețeaua principală."
-    }
-  ],
   "WJA1/H": [
     {
       "type": 0,
@@ -4453,24 +5131,50 @@
       "value": " validatori"
     }
   ],
+  "WO6Iek": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": dacă ați folosit o adresă de retragere (marcaje "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", sau "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") când generați chei, puteți continua"
+    }
+  ],
   "WTPUDZ": [
     {
       "type": 0,
       "value": "Acești pași sunt opționali, dar sunt recomandați pentru optimizarea nodului."
     }
   ],
-  "9MIPCp": [
+  "WVsePo": [
     {
       "type": 0,
-      "value": "Dacă nu furnizați o adresă de retragere cu datele inițiale de depunere, va trebui să derivați cheile de retragere din mnemonic ulterior, prin urmare păstrați mnemonicul în siguranță — va fi SINGURUL mod de retragere a "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " atunci când alegeți să activați retragerile."
+      "value": "Reth este o implementare modulară a protocolului Ethereum, ușor de utilizat de către colaboratori și extrem de rapidă, scrisă în Rust. Reth este capabilă să sincronizeze un nod arhivă în mai puțin de 50 de ore de la inițiere. Un nod arhivă al rețelei principale Reth este de doar 2,1 TB în iunie 2024."
     }
   ],
   "WdDGn6": [
@@ -4507,6 +5211,12 @@
     {
       "type": 0,
       "value": "dovadă de custodie joc"
+    }
+  ],
+  "X4qc7f": [
+    {
+      "type": 0,
+      "value": "marcaj temporal"
     }
   ],
   "X5KFEh": [
@@ -4549,10 +5259,28 @@
       "value": "Mai multe despre instalarea pip"
     }
   ],
-  "XRxD8r": [
+  "XC3Z4Q": [
     {
       "type": 0,
-      "value": "Documentație Besu pe Goerli"
+      "value": "„Tip 2”, „ccombinat”"
+    }
+  ],
+  "XLXSsV": [
+    {
+      "type": 0,
+      "value": "Reth oferă un chat activ pe Telegram pentru discuții tehnice și depanare."
+    }
+  ],
+  "XPKlzF": [
+    {
+      "type": 0,
+      "value": "Acțiunea este permanentă și ireversibilă"
+    }
+  ],
+  "XRUCUL": [
+    {
+      "type": 0,
+      "value": "Odată ce o adresă de execuție a fost furnizată prin semnarea mesajului de modificare BLS la execuție, cheile de retragere derivate din mnemonica validatorului nu mai sunt utilizate. Prin urmare, furnizarea unei adrese de execuție pe care o controlați cât mai devreme posibil este opțiunea recomandată pentru majoritatea utilizatorilor și este calea implicită pentru cei care se alătură prin procesul de integrare de pe accest site. Acest lucru vă protejează împotriva pierderii permanente a tuturor fondurilor în cazul în care nu puteți recupera mnemonica și cheile de retragere."
     }
   ],
   "XVRQoq": [
@@ -4607,10 +5335,10 @@
       "value": "Aproximativ 25 de minute"
     }
   ],
-  "XgOPc8": [
+  "XjMz3s": [
     {
       "type": 0,
-      "value": "Rețineți că nu există planuri la acest moment pentru a permite transferurile de ETH între validatori."
+      "value": "Nu au fost descoperiți validatori pentru contul furnizat."
     }
   ],
   "XmddSV": [
@@ -4623,12 +5351,6 @@
     {
       "type": 0,
       "value": "Capella - Specificații formale"
-    }
-  ],
-  "XszRWL": [
-    {
-      "type": 0,
-      "value": "eth1_withdrawal_address"
     }
   ],
   "Y07Hwy": [
@@ -4653,6 +5375,28 @@
     {
       "type": 0,
       "value": "Alimentare"
+    }
+  ],
+  "Y4Qzq8": [
+    {
+      "type": 0,
+      "value": "Trebuie să rulați un "
+    },
+    {
+      "type": 1,
+      "value": "executionClient"
+    },
+    {
+      "type": 0,
+      "value": ", precum și un "
+    },
+    {
+      "type": 1,
+      "value": "consensusClient"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "Y9S0NE": [
@@ -4695,10 +5439,26 @@
       "value": "Chei"
     }
   ],
+  "YHS8Mc": [
+    {
+      "type": 0,
+      "value": "Tastați pentru a filtra"
+    }
+  ],
   "YJI2xv": [
     {
       "type": 0,
       "value": "Se urmează un arbore de decizie pentru a stabili ce tip de retragere va fi inițiat. În cazul în care validatorul verificat dispune de ETH eligibil pentru a fi retras, acesta se adaugă la lista de retragere. Dacă nu există, contul este omis."
+    }
+  ],
+  "YLFl88": [
+    {
+      "type": 0,
+      "value": "Închidere validator "
+    },
+    {
+      "type": 1,
+      "value": "validatorindex"
     }
   ],
   "YP03/j": [
@@ -4719,20 +5479,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "YQJy4H": [
-    {
-      "type": 0,
-      "value": "Acum trebuie să vă notați mnemonicul și să îl păstrați la loc sigur, precum și să vă salvați câte un depozit de chei pentru fiecare dintre cei "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": " validatori pe care îi aveți. Aveți grijă să le țineți în siguranță, de preferat offline. Depozitele de chei pentru validatorii dvs. sunt disponibile în directorul selectat."
     }
   ],
   "YXrp+b": [
@@ -4775,22 +5521,16 @@
       "value": "Tastați următoarele rânduri în fereastra de terminal:"
     }
   ],
-  "xETYo6": [
-    {
-      "type": 0,
-      "value": "Dacă vă pierdeți cheia de retragere, nu există nicio altă modalitate de a accesa fondurile deținute de validator."
-    }
-  ],
-  "Yo9B64": [
-    {
-      "type": 0,
-      "value": "adresă strat de execuție (Eth1)"
-    }
-  ],
   "YqsgWz": [
     {
       "type": 0,
       "value": "Slovenă"
+    }
+  ],
+  "YrdpUP": [
+    {
+      "type": 0,
+      "value": "Îmbunătățire cont"
     }
   ],
   "YtwQyB": [
@@ -4811,6 +5551,12 @@
     {
       "type": 0,
       "value": "pungă de bani"
+    }
+  ],
+  "YzPl2p": [
+    {
+      "type": 0,
+      "value": "Caracteristici distinctive"
     }
   ],
   "Z07LQm": [
@@ -4839,12 +5585,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "MAVs3a": [
-    {
-      "type": 0,
-      "value": "Simpla deconectare de la o rețea altfel sănătoasă nu duce la penalitate, dar va duce la penalizări minore pentru inactivitate."
     }
   ],
   "ZK6NmY": [
@@ -4899,16 +5639,22 @@
       "value": "Instalați și setați virtualenv:"
     }
   ],
+  "ZuQOEW": [
+    {
+      "type": 0,
+      "value": "Poate fi utilizat și pentru a autoriza anumite acțiuni ale validatorului, cum ar fi solicitarea retragerilor parțiale sau ieșirea completă din contul validatorului."
+    }
+  ],
+  "ZwqwuN": [
+    {
+      "type": 0,
+      "value": "Se oferă recompense pentru acțiunile care ajută rețeaua să ajungă la un consens"
+    }
+  ],
   "ZzTcj5": [
     {
       "type": 0,
       "value": "Descarcați python3 și urmați instrucțiunile de instalare."
-    }
-  ],
-  "hzsgQ5": [
-    {
-      "type": 0,
-      "value": "Acestea sunt denumite, de asemenea, „retrageri parțiale” sau „plăți pentru recompense”, deoarece restul de 32 de ETH rămâne blocat și mizat."
     }
   ],
   "a+xjjV": [
@@ -4923,36 +5669,32 @@
       "value": "Coadă de ieșire și coadă de activare"
     }
   ],
-  "Sv30z9": [
+  "a9gOIB": [
     {
       "type": 0,
-      "value": "Dacă vă pregătiți să faceți o depunere pentru a activa un nou validator, puteți (și trebuie) să furnizați o adresă de retragere cu depozitul inițial. Acest lucru se realizează în momentul generării cheii şi este apoi inclus în fişierul "
+      "value": "Sold maxim efectiv de "
     },
     {
       "type": 1,
-      "value": "depositData"
+      "value": "MAX_EFFECTIVE_BALANCE"
     },
     {
       "type": 0,
-      "value": " care este trimis cu tranzacția de depunere de 32 ETH."
-    }
-  ],
-  "9/yem6": [
+      "value": ", o creștere de 64x față de tipurile anterioare și abilitatea de a solicita retragerea parțială a oricărui sold peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
     {
       "type": 0,
-      "value": "Dacă încerci să înșelați sistemul sau să nu respecți specificațiile, vi se poate impune o sancțiune, cunoscută sub numele de penalizare. Rularea simultană a cheilor de validare pe două sau mai multe mașini va duce la penalizare."
+      "value": " prin interacțiunea cu un contract inteligent"
     }
   ],
   "aEBE6s": [
     {
       "type": 0,
       "value": "2. Pregătirea nodurilor"
-    }
-  ],
-  "fpe4Gx": [
-    {
-      "type": 0,
-      "value": "Conturile active cu un sold efectiv sau un sold total mai mic de 32 vor fi omise"
     }
   ],
   "aR50Oc": [
@@ -4979,10 +5721,22 @@
       "value": "Continuați"
     }
   ],
+  "ai7NFR": [
+    {
+      "type": 0,
+      "value": "păstrați întotdeauna mnemonica în siguranță"
+    }
+  ],
   "aozN2h": [
     {
       "type": 0,
       "value": "Consultați documentația pentru clientul cu nivel de consens pentru instrucțiunile specifice clientului cu privire la această setare."
+    }
+  ],
+  "arfnPZ": [
+    {
+      "type": 0,
+      "value": "Sold efectiv maxim"
     }
   ],
   "azLmaD": [
@@ -4991,24 +5745,16 @@
       "value": "Compilați deposit-cli din codul sursă Python"
     }
   ],
-  "b3J7Pw": [
+  "b+ZHvU": [
     {
       "type": 0,
-      "value": "Nu. Nu există niciun avantaj în a avea miză de peste "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH."
+      "value": "Mizare la"
     }
   ],
-  "FWtWw3": [
+  "b+yUd5": [
     {
       "type": 0,
-      "value": "Rețineți că aceste cozi de „retragere” și „BLS la execuție” sunt independente și nu concurează. Fiecare este limitată la una per bloc."
+      "value": "Preluare mai multe"
     }
   ],
   "b8APBK": [
@@ -5017,10 +5763,18 @@
       "value": "Mai multe despre diversitatea clienților"
     }
   ],
-  "9h8yTf": [
+  "bFiejS": [
     {
       "type": 0,
-      "value": "În prezent, nu există nicio modalitate de a vă reactiva validatorul și nu veți putea transfera sau retrage fondurile până la activarea retragerilor prin actualizarea Shanghai/Capella. Aceasta înseamnă că fondurile vor rămâne inaccesibile cel puțin până în acel moment."
+      "value": "Rețineți că, în cel de-al doilea scenariu (puțin probabil), veți pierde progresiv până la 50% ("
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " ETH) din miză pe parcursul a 21 de zile. După 21 de zile, sunteți eliminat(ă) din grupul de validatori. Astfel, ne asigurăm că, la un moment dat, blocurile încep din nou să se finalizeze."
     }
   ],
   "bNFkSo": [
@@ -5053,10 +5807,10 @@
       "value": "Asigurați-vă că aveți destul spațiu pe disc până când rulați mentenanța pe nod."
     }
   ],
-  "bat2FM": [
+  "bagKCF": [
     {
       "type": 0,
-      "value": "după"
+      "value": "Dacă ați furnizat deja o adresă de retragere Ethereum pentru acreditările de retragere, întregul sold rămas va fi transferat către această adresă la ieșire. Dacă nu, mnemonica va fi încă necesară pentru a genera cheia de retragere pentru a seta adresa de retragere."
     }
   ],
   "bbr+aD": [
@@ -5121,6 +5875,38 @@
       "value": "Ce este un client validator?"
     }
   ],
+  "c8BPhf": [
+    {
+      "type": 0,
+      "value": "Îmbunătățire validator "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    }
+  ],
+  "cDFQIx": [
+    {
+      "type": 0,
+      "value": "Adresa de retragere ar trebui să fie un cont Ethereum obișnuit pe care "
+    },
+    {
+      "type": 1,
+      "value": "youControl"
+    },
+    {
+      "type": 0,
+      "value": ", ideal folosind tehnici de "
+    },
+    {
+      "type": 1,
+      "value": "coldStorage"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "cE71F9": [
     {
       "type": 0,
@@ -5141,6 +5927,18 @@
       "value": "Documentația Geth explică modul de descărcare și instalare a clientului."
     }
   ],
+  "cHfIGt": [
+    {
+      "type": 0,
+      "value": "Cont cu nivel de execuție"
+    }
+  ],
+  "cJ9MRI": [
+    {
+      "type": 0,
+      "value": "Dacă sunt transmise mai mult de 16 cereri simultan, se va forma o coadă, iar acestea vor fi procesate în blocuri ulterioare. Odată finalizat, validatorul este activat permanent pentru retrageri și va fi eligibil pentru plăți în timpul următoarei acțiuni de verificare."
+    }
+  ],
   "cJX99/": [
     {
       "type": 0,
@@ -5159,10 +5957,44 @@
       "value": "APR curent"
     }
   ],
-  "odjJFL": [
+  "cU/ZP6": [
     {
       "type": 0,
-      "value": "Mai multe despre fragmentarea datelor"
+      "value": "Ethereum folosește dovada de miză pentru a ajunge la consens."
+    }
+  ],
+  "cZHvCU": [
+    {
+      "type": 1,
+      "value": "stakingDepositCli"
+    },
+    {
+      "type": 0,
+      "value": ": acest lucru se realizează folosind o adresă de retragere (marcaje "
+    },
+    {
+      "type": 1,
+      "value": "eth1WithdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ", "
+    },
+    {
+      "type": 1,
+      "value": "executionAddress"
+    },
+    {
+      "type": 0,
+      "value": ", sau "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalAddress"
+    },
+    {
+      "type": 0,
+      "value": ") când generați chei cu depunere de mizare CLI."
     }
   ],
   "cav520": [
@@ -5183,6 +6015,20 @@
       "value": "Cum este evaluat fiecare validator pentru retrageri"
     }
   ],
+  "ceCCZc": [
+    {
+      "type": 0,
+      "value": "Către ce validator doriți să "
+    },
+    {
+      "type": 1,
+      "value": "migrateFundsTo"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -5195,6 +6041,12 @@
       "value": "Mai multe despre PegaSys Teku"
     }
   ],
+  "ci7V7t": [
+    {
+      "type": 0,
+      "value": "Prefix"
+    }
+  ],
   "clUb0+": [
     {
       "type": 0,
@@ -5205,6 +6057,28 @@
     {
       "type": 0,
       "value": "Cu cât voi fi penalizat pentru eventualele acțiuni nocive?"
+    }
+  ],
+  "cm5HC4": [
+    {
+      "type": 0,
+      "value": "Puteți retrage în prezent până la "
+    },
+    {
+      "type": 1,
+      "value": "surplusEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "cnQKC2": [
@@ -5237,20 +6111,26 @@
       "value": "Trebuie să semnați o tranzacție pentru fiecare depunere pe care vrei s-o faceți."
     }
   ],
-  "6vdHjj": [
+  "dAwg7N": [
+    {
+      "type": 0,
+      "value": "Fiecare validator al acestui tip de cont necesită exact "
+    },
     {
       "type": 1,
-      "value": "withdrawalCredentials"
+      "value": "MIN_ACTIVATION_BALANCE"
     },
     {
       "type": 0,
-      "value": " este un câmp de 32 de octeți din depozit ce servește la verificarea destinației retragerilor valide. Există actualmente două tipuri de retrageri: retragerea prin BLS și retragerea prin adresa Ethereum."
-    }
-  ],
-  "8FjJDx": [
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Comportament incorect"
+      "value": "."
     }
   ],
   "dIgBOz": [
@@ -5265,6 +6145,52 @@
       "value": "Prysm este o implementare a protocolului Ethereum prin clienți cu nivel de consens în Go, axată pe facilitatea utilizării, securitate și fiabilitate."
     }
   ],
+  "dKraKE": [
+    {
+      "type": 0,
+      "value": "Este important ca, în calitate de validator, să postați "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " drept garanție, cu alte cuvinte trebuie să mizați fonduri. Singurul mod prin care puteți deveni validator este să realizați o tranzacție unilaterală de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " la "
+    },
+    {
+      "type": 1,
+      "value": "DEPOSIT_CONTRACT"
+    },
+    {
+      "type": 0,
+      "value": " din lanțul de execuție "
+    },
+    {
+      "type": 1,
+      "value": "NETWORK_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Lanțul de Beacon (nivelul de consens) este utlizat în paralel pentru a înregistra activitatea validatorului."
+    }
+  ],
   "dLE9FH": [
     {
       "type": 0,
@@ -5275,6 +6201,12 @@
     {
       "type": 0,
       "value": "Ce este un validator?"
+    }
+  ],
+  "dOewZy": [
+    {
+      "type": 0,
+      "value": "Depozit de la"
     }
   ],
   "dTOtPO": [
@@ -5345,18 +6277,6 @@
       "value": "code3"
     }
   ],
-  "vPvQyf": [
-    {
-      "type": 0,
-      "value": "Asigurați-vă că aveți control asupra acestei adrese, deoarece aceasta nu poate fi schimbată."
-    }
-  ],
-  "eD1NDX": [
-    {
-      "type": 0,
-      "value": "Retragerea depozitului nu va fi posibilă până după actualizarea Shanghai/Capella care este planificată pentru T1/T2 2023."
-    }
-  ],
   "eKEL/g": [
     {
       "type": 0,
@@ -5369,46 +6289,16 @@
       "value": "Trimiteți o tranzacție pentru a finaliza depunerea."
     }
   ],
-  "eOpZjd": [
-    {
-      "type": 0,
-      "value": "Specifică cine pune miza, cine validează, cât se mizează și cine poate retrage fondurile."
-    }
-  ],
-  "eP2Czm": [
-    {
-      "type": 0,
-      "value": "Înţeleg că eu "
-    },
-    {
-      "type": 1,
-      "value": "cannotWithdraw"
-    },
-    {
-      "type": 0,
-      "value": " mizele mele până la actualizarea Shanghai/Capella şi "
-    },
-    {
-      "type": 1,
-      "value": "cannotTransfer"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " între validatori. Înţeleg că, dacă ies, nu voi putea să mă alătur din nou până în acel moment. Mizarea este un angajament."
-    }
-  ],
   "eTenzU": [
     {
       "type": 0,
       "value": "coadă de activare"
+    }
+  ],
+  "eWA3GW": [
+    {
+      "type": 0,
+      "value": "Inițiere retragere"
     }
   ],
   "eX072N": [
@@ -5417,22 +6307,16 @@
       "value": "Erigon este un client cu nivel de execuție la frontiera de eficiență, scrisă în Go."
     }
   ],
+  "eXIZ1M": [
+    {
+      "type": 0,
+      "value": "Instalați python3.9+"
+    }
+  ],
   "eaU/aL": [
     {
       "type": 0,
       "value": "Pentru a maximiza securitatea și eficiența nodului, rulează clienții pe hardware dedicat. Acest lucru reduce riscul expunerii la malware și minimizează concurența pentru resursele de calcul. Astfel poți fi sigur că nodul face față solicitărilor din rețea și se achită permanent de responsabilitățile de validator."
-    }
-  ],
-  "Vbv7Uw": [
-    {
-      "type": 0,
-      "value": "Vă vom ajuta să creați o cheie de semnare pentru fiecare validator pe care doriți să îl executați. Puteți alege să oferiți o adresă de retragere pentru validator atunci când generați datele de depunere, care va seta permanent adresa de retragere."
-    }
-  ],
-  "elCkOU": [
-    {
-      "type": 0,
-      "value": "Mai multe despre fuziune"
     }
   ],
   "eq0/34": [
@@ -5447,54 +6331,10 @@
       "value": "La lansarea Teku, depozitele de chei și parolele se pot da prin diferite metode."
     }
   ],
-  "esDvdR": [
-    {
-      "type": 0,
-      "value": "Soldul validatorului este de peste "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ", dar soldul efectiv este scăzut ("
-    },
-    {
-      "type": 1,
-      "value": "effectiveBalance"
-    },
-    {
-      "type": 0,
-      "value": "). Dacă alimentezi cu "
-    },
-    {
-      "type": 1,
-      "value": "minTopupValue"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " (minimul permis de contractul de depozit), soldul efectiv va ajunge la maximum."
-    }
-  ],
   "eyK2E3": [
     {
       "type": 0,
       "value": "Executați pașii din lista de verificare"
-    }
-  ],
-  "ezCT4A": [
-    {
-      "type": 0,
-      "value": "Analiza Shanghai de bază EIP"
     }
   ],
   "f/N7FO": [
@@ -5503,24 +6343,70 @@
       "value": "Ce se întâmplă dacă îmi pierd cheia de semnare?"
     }
   ],
-  "fBCdim": [
+  "f1L9pF": [
     {
       "type": 0,
-      "value": "Anterior, un nod de Beacon (nivel de consens) a trebuit doar să urmărească contractul de depozit pe nivelul de execuție pentru a ști ce conturi de validator depozitaseră "
+      "value": "Valoarea minimă pentru o depunere "
     },
     {
       "type": 1,
-      "value": "pricePerValidator"
+      "value": "MIN_DEPOSIT_ETHER"
     },
     {
       "type": 0,
-      "value": " ETH. Aceste informații au fost ușor deservite și obținute de la furnizori terți, cum ar fi Infura sau Alchemy."
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "f5yGLr": [
+    {
+      "type": 0,
+      "value": "Aveți grijă să descărcați din contul oficial EthStaker GitHub verificând că folosiți url-ul: "
+    },
+    {
+      "type": 1,
+      "value": "url"
+    }
+  ],
+  "fBG/Ge": [
+    {
+      "type": 0,
+      "value": "Cost"
+    }
+  ],
+  "fF376U": [
+    {
+      "type": 0,
+      "value": "Curent"
+    }
+  ],
+  "fH2WUb": [
+    {
+      "type": 0,
+      "value": "(Retrageri periodice)"
     }
   ],
   "fHLKXR": [
     {
       "type": 0,
       "value": "Răspunsul la această întrebare depinde foarte mult de suma ETH pe care o ai la dispoziție."
+    }
+  ],
+  "fLOgM+": [
+    {
+      "type": 0,
+      "value": "În acest moment ar trebui să aveți mnemonica notată într-un loc sigur și un depozit de chei salvat pentru "
+    },
+    {
+      "type": 1,
+      "value": "yourValidators"
+    },
+    {
+      "type": 0,
+      "value": ". Păstrați în loc sigur toate aceste elemente în siguranță, preferabil offline. Depozitele de chei de validator trebuie să fie disponibile în directorul selectat."
     }
   ],
   "fQ5yno": [
@@ -5547,22 +6433,10 @@
       "value": "Informații pentru operatorii de validare despre retragerile la mizare."
     }
   ],
-  "dwahMV": [
-    {
-      "type": 0,
-      "value": "Puteți alege să oferiți o adresă de retragere la momentul efectuării depozitului inițial pentru a activa automat plățile de recompensă și, de asemenea, capacitatea de a retrage complet fondurile oricând, după actualizarea Shanghai/Capella. Această adresă trebuie să fie o adresă Ethereum obișnuită și va fi singura adresă la care se pot trimite fonduri din noile conturi de validator."
-    }
-  ],
   "fZwn+P": [
     {
       "type": 0,
       "value": "După instalarea clientului, asigurați-vă că sunteți complet sincronizați înainte de a trimite depozitul dvs. de participare. Acest lucru poate dura câteva zile."
-    }
-  ],
-  "9oWUO0": [
-    {
-      "type": 0,
-      "value": "Cu toate acestea, rețineți că, până la actualizarea Shanghai/Capella planificată pentru T1/T2 2023, dacă ați ieșit, nu vă mai puteți întoarce."
     }
   ],
   "fbiteI": [
@@ -5575,6 +6449,46 @@
     {
       "type": 0,
       "value": "Se așteaptă confirmarea de portofel"
+    }
+  ],
+  "fnV2qn": [
+    {
+      "type": 0,
+      "value": "Conturi de acumulare eligibile pentru a solicita retrageri parțiale din orice sold peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "fpe4Gx": [
+    {
+      "type": 0,
+      "value": "Conturile active cu un sold efectiv sau un sold total mai mic de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " vor fi omise"
     }
   ],
   "frGVRP": [
@@ -5601,22 +6515,16 @@
       "value": "Mai mult, puteți seta clientul de validator (VC) și nodul Beacon (BN) pe computere separate, cu adrese IP diferite, astfel încât chiar dacă nodul Beacon devine vulnerabil, depozitul de chei este stocat pe o altă mașină."
     }
   ],
-  "g0zIUd": [
-    {
-      "type": 0,
-      "value": "nu se poate retrage"
-    }
-  ],
-  "oWBn+a": [
-    {
-      "type": 0,
-      "value": "Sugestiile hardware reprezintă un obiectiv în continuă evoluție. Cerințele minime actuale vor crește, probabil, cu un ordin de mărime după introducerea fragmentării. Vă recomandăm să vă documentați temeinic înainte de a depune fonduri."
-    }
-  ],
   "g37XKP": [
     {
       "type": 0,
       "value": "Mai multe despre virtualenv"
+    }
+  ],
+  "g8+DBf": [
+    {
+      "type": 0,
+      "value": "Configurare interfață JSON-RPC"
     }
   ],
   "g8tzOu": [
@@ -5625,36 +6533,28 @@
       "value": "Lipiți adresa aleasă aici pentru a o include în comanda de copiere/lipire CLI de mai jos:"
     }
   ],
+  "gAnk66": [
+    {
+      "type": 0,
+      "value": "Inițiază procesul permanent de scoatere a contului dumneavoastră de validator din rețeaua Ethereum pe bază de dovadă de mizare și retragerea întregului sold."
+    }
+  ],
   "gFj3By": [
     {
       "type": 0,
       "value": "foarte variabil"
     }
   ],
+  "gGc4ae": [
+    {
+      "type": 0,
+      "value": "Descărcare aplicație GUI"
+    }
+  ],
   "gHJegi": [
     {
       "type": 0,
       "value": "Validatorii trebuie să finalizeze sarcinile de validare în continuare, până la ieșire"
-    }
-  ],
-  "gN9D/h": [
-    {
-      "type": 0,
-      "value": "Folosește "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " pentru a sincroniza testnetul Goerli."
-    }
-  ],
-  "gQkd2y": [
-    {
-      "type": 0,
-      "value": "Generează chei de depunere folosind instrumentul de depunere al Ethereum Foundation"
     }
   ],
   "gVC0Wl": [
@@ -5667,6 +6567,12 @@
     {
       "type": 0,
       "value": "Ca un ac de ceas, procesul merge într-o direcție și, când se ajunge la ultimul validator, verificarea o ia de la început. Pentru fiecare validator de pe traseu, contul este evaluat pentru identificarea potențialelor retrageri."
+    }
+  ],
+  "gXVf9n": [
+    {
+      "type": 0,
+      "value": "Cele mai recente repere Reth"
     }
   ],
   "gfLdAQ": [
@@ -5685,28 +6591,6 @@
     {
       "type": 0,
       "value": "DA"
-    }
-  ],
-  "grF2gm": [
-    {
-      "type": 0,
-      "value": "Fiecare pereche cheie asociată cu un validator necesită ca blocarea "
-    },
-    {
-      "type": 1,
-      "value": "ethPerValidator"
-    },
-    {
-      "type": 0,
-      "value": " să fie activată, aceasta reprezintă soldul inițial, precum și puterea de vot "
-    },
-    {
-      "type": 1,
-      "value": "initialAndMaximum"
-    },
-    {
-      "type": 0,
-      "value": " pentru orice validator."
     }
   ],
   "gsuLMm": [
@@ -5775,10 +6659,22 @@
       "value": "Miza ta"
     }
   ],
+  "hAwuqj": [
+    {
+      "type": 0,
+      "value": "Validarea implică două chei, din motive de securitate. Cheia de semnătură trebuie să fie disponibilă în orice moment. Ca atare, trebuie păstrată online. Întrucât tot ce se ține online este vulnerabil la expunere, nu este o idee bună să folosiți aceeași cheie pentru retrageri."
+    }
+  ],
   "hBIbQ+": [
     {
       "type": 0,
       "value": "Evitați configurațiile prea complicate și cântăriți cu atenție compromisurile. Ieșirile offline scurte vor duce la penalități mici pentru inactivitate, care se recuperează cu ușurință după revenirea online pentru aproximativ același interval de timp. Configurațiile de rezervă complicate pot face dotarea mai scumpă, iar validatorii de rezervă redundanți pot duce la penalizări mai mari, cunoscute drept penalitate."
+    }
+  ],
+  "hCkFMJ": [
+    {
+      "type": 0,
+      "value": "Index"
     }
   ],
   "hCwX6+": [
@@ -5787,22 +6683,54 @@
       "value": "Coadă Modificare BLS la execuție (BTEC)"
     }
   ],
-  "ZwqwuN": [
-    {
-      "type": 0,
-      "value": "Se dau recompense pentru acțiunile care ajută rețeaua să ajungă la un consens."
-    }
-  ],
   "hG0uP4": [
     {
       "type": 0,
       "value": "Numai desktop"
     }
   ],
-  "hPCn9f": [
+  "hIQWYg": [
     {
       "type": 0,
-      "value": "Documentație --JsonRpc.Enabled"
+      "value": "Acțiuni validator"
+    }
+  ],
+  "hUmIwN": [
+    {
+      "type": 0,
+      "value": "Soldul validatorului este de peste "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": ", dar soldul efectiv este scăzut ("
+    },
+    {
+      "type": 1,
+      "value": "effectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": "). Dacă alimentați cu "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " (minimul permis de contractul de depunere), soldul efectiv va ajunge la maximum."
     }
   ],
   "hXE+0W": [
@@ -5827,30 +6755,16 @@
       "value": "Maghiară"
     }
   ],
-  "nIf7QZ": [
-    {
-      "type": 0,
-      "value": "În acest scop, avem nevoie de participanți activi - cunoscuți ca validatori - pentru a propune, verifica și garanta corectitudinea blocurilor. În schimb, validatorii cinstiți primesc recompense financiare."
-    }
-  ],
   "hkg3fb": [
     {
       "type": 0,
       "value": "Mai multe despre un sold eficient"
     }
   ],
-  "hlxt3T": [
+  "hrJ1oM": [
     {
       "type": 0,
-      "value": "Limitarea mizei maxime la "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH per validator încurajează descentralizarea puterii, deoarece împiedică un singur validator să aibă un vot excesiv de mare asupra stării lanțului. De asemenea, aceasta limitează cantitatea de ETH care poate fi scoasă din joc în orice moment, întrucât numărul de validatori care pot ieși dintr-o anumită perioadă de timp este limitat. Acest lucru ajută la protejarea rețelei împotriva anumitor atacuri."
+      "value": "Puteți semnala intenția de a opri validarea prin semnarea unui mesaj de ieșire voluntară cu validatorul dumneavoastră în orice moment."
     }
   ],
   "huEFUF": [
@@ -5873,6 +6787,28 @@
     {
       "type": 0,
       "value": "Înțeleg că este important ca validatorul meu să fie mereu online și la zi."
+    }
+  ],
+  "hzsgQ5": [
+    {
+      "type": 0,
+      "value": "Acestea sunt denumite, de asemenea, „retrageri parțiale” sau „plăți de recompense”, deoarece restul de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " rămâne blocat și mizat."
     }
   ],
   "iCpuph": [
@@ -5905,32 +6841,16 @@
       "value": "Rularea clientului de validator"
     }
   ],
-  "iN1PPs": [
-    {
-      "type": 0,
-      "value": "Fiecare depozit de "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH activează un set de chei ale validatorului. Aceste chei sunt utilizate pentru conectare la starea rețelei. Cu cât cerința privind ETH este mai mică, cu atât rețeaua trebuie să salveze mai multe semnături rezultate. "
-    },
-    {
-      "type": 1,
-      "value": "pricePerValidator"
-    },
-    {
-      "type": 0,
-      "value": " ETH a fost ales ca un echilibru între număr cât mai mare de persoane care mizează și evitarea inhibării descentralizării prin umflarea mărimii fiecărui bloc cu semnături."
-    }
-  ],
   "iX90gu": [
     {
       "type": 0,
       "value": "Am intrat pe serverul Discord al clientului cu nivel de execuție."
+    }
+  ],
+  "iXbM1G": [
+    {
+      "type": 0,
+      "value": "Dacă nu ai un folder pentru rețeaua de testare, probabil că nu ați compilat și executat corect Nimbus. Rulați din nou comanda de compilare."
     }
   ],
   "iZuIgB": [
@@ -5955,6 +6875,12 @@
       "value": "network"
     }
   ],
+  "ijnFHe": [
+    {
+      "type": 0,
+      "value": "adresă strat de execuție"
+    }
+  ],
   "im7uMt": [
     {
       "type": 0,
@@ -5973,22 +6899,28 @@
       "value": "Număr de sloturi goale (oportunități ratate la nivelul blocurilor, variabile, de obicei minime)"
     }
   ],
+  "iq4JF8": [
+    {
+      "type": 0,
+      "value": "Ieșire din offline"
+    }
+  ],
   "iqJ3LM": [
     {
       "type": 0,
       "value": "PegaSys Teku este un client cu nivel de consens Ethereum bazat pe Java al cărui scop este de a satisface necesitățile instituționale și cerințele privind securitatea."
     }
   ],
-  "XRUCUL": [
-    {
-      "type": 0,
-      "value": "Astfel, este o idee bună pentru a crea chei din mnemonicurile care acționează ca altă rezervă. Aceasta este varianta implicită pentru validatorii care participă prin procesul de integrare al site-ului."
-    }
-  ],
   "isGKnz": [
     {
       "type": 0,
       "value": "Documentație"
+    }
+  ],
+  "isgVsK": [
+    {
+      "type": 0,
+      "value": "Volatilitatea taxelor este mare în timpul congestionării rețelei. Plățile insuficiente vor duce la eșecul solicitării dumneavoastră, neexistând o rambursare."
     }
   ],
   "iv88b5": [
@@ -6023,10 +6955,28 @@
       "value": "Adresa de executare pentru retrageri"
     }
   ],
-  "RGD1CX": [
+  "jM+e2M": [
     {
       "type": 0,
-      "value": "Patru (4) ieșiri de validator sunt permise per epocă, plus încă una (1) pentru fiecare 65.536 validatori activi, în total peste 327.680. Începând din februarie 2023, această limită este de șapte (7) și va crește la opt (8) în cazul în care numărul de validatori atinge 524.288."
+      "value": "Sold efectiv maxim, de "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "jVlgXS": [
+    {
+      "type": 0,
+      "value": "Aprofundați cunoștințele despre foaia de parcurs Ethereum."
     }
   ],
   "jXer8/": [
@@ -6039,6 +6989,12 @@
     {
       "type": 0,
       "value": "Documentație de instalare Lighthouse"
+    }
+  ],
+  "jeCR95": [
+    {
+      "type": 0,
+      "value": "Poate fi migrat la un cont combinat mai târziu"
     }
   ],
   "jecC36": [
@@ -6071,6 +7027,26 @@
       "value": "Documentație privind rularea Geth"
     }
   ],
+  "jm4ljd": [
+    {
+      "type": 0,
+      "value": "Fiecare pereche de chei asociată cu un validator necesită cca cel puțin blocarea "
+    },
+    {
+      "type": 1,
+      "value": "ethPerValidator"
+    },
+    {
+      "type": 0,
+      "value": " să fie activată. Suma depusă reprezintă puterea de vot pentru orice validator."
+    }
+  ],
+  "jmKQY9": [
+    {
+      "type": 0,
+      "value": "Documentație validator Nimbus"
+    }
+  ],
   "jp9OG2": [
     {
       "type": 0,
@@ -6091,6 +7067,18 @@
       "value": "pr"
     }
   ],
+  "jrPsyP": [
+    {
+      "type": 0,
+      "value": "Ieșire din epocă"
+    }
+  ],
+  "jrbRLT": [
+    {
+      "type": 0,
+      "value": "Pentru a deveni un validator, trebuie să cunoașteți ce înseamnă gestionarea cheilor și protejarea mnemonicii. Nu continuați dacă nu v-ați familiarizat încă cu mnemonicile și cheile."
+    }
+  ],
   "jse8rl": [
     {
       "type": 0,
@@ -6107,6 +7095,12 @@
     {
       "type": 0,
       "value": "Documentație Nimbus"
+    }
+  ],
+  "jztMM9": [
+    {
+      "type": 0,
+      "value": "contract de depozit"
     }
   ],
   "k/4DOL": [
@@ -6133,6 +7127,12 @@
       "value": "Instalați dependențele:"
     }
   ],
+  "k7rnZP": [
+    {
+      "type": 0,
+      "value": "Versiuni depozit EthStaker CLI"
+    }
+  ],
   "k8bkck": [
     {
       "type": 0,
@@ -6145,6 +7145,12 @@
     {
       "type": 0,
       "value": ", implementează un design care a simplificat acest întreg proces pentru participanți."
+    }
+  ],
+  "kC4fpt": [
+    {
+      "type": 0,
+      "value": "Conectați portofelul hardware la Metamask"
     }
   ],
   "kFS5Sd": [
@@ -6215,10 +7221,52 @@
       "value": "Listă de chei"
     }
   ],
-  "36P4ra": [
+  "kfks5a": [
     {
       "type": 0,
-      "value": "În timp, soldul va scădea în urma pedepselor pentru neparticiparea la procesul de obținere a consensului. Când soldul ajunge la 16 ETH, sistemul te va elimina automat din grupul de mizare."
+      "value": "Aceasta depinde de tipul de acreditări de retragere pe care le are un cont de validator. Cei care utilizează tipul mai nou de acreditări "
+    },
+    {
+      "type": 1,
+      "value": "compounding"
+    },
+    {
+      "type": 0,
+      "value": " (Tipul 2, 0x02) beneficiază de solduri ETH peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", până la "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "kiTJq4": [
+    {
+      "type": 0,
+      "value": "Soldul efectiv maxim al contului va crește la "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "kn06Zz": [
@@ -6239,16 +7287,24 @@
       "value": "Ia legătura cu noi"
     }
   ],
-  "ER2q1V": [
-    {
-      "type": 0,
-      "value": "Actualizarea fuziunii a adus în mod oficial dovada mizei la Ethereum pe 15 septembrie 2022, perimând în același timp dovada muncii. Aceasta a pregătit lanțul pentru viitoare actualizări de scalare, cum ar fi fragmentarea datelor, prin aducerea consensului cu dovada mizei cu Mainnet, reducând în acelaşi timp consumul de energie cu peste 99,9%."
-    }
-  ],
   "kuYpoI": [
     {
       "type": 0,
       "value": "Sold curent"
+    }
+  ],
+  "kuzPja": [
+    {
+      "type": 0,
+      "value": "Închidere Validator "
+    },
+    {
+      "type": 1,
+      "value": "pending"
+    },
+    {
+      "type": 0,
+      "value": " - nicio acțiune suplimentară posibilă"
     }
   ],
   "kv1nqx": [
@@ -6261,20 +7317,6 @@
     {
       "type": 0,
       "value": "Ești pe testnet"
-    }
-  ],
-  "l3ztMu": [
-    {
-      "type": 0,
-      "value": "Din data de "
-    },
-    {
-      "type": 1,
-      "value": "date"
-    },
-    {
-      "type": 0,
-      "value": " veți avea nevoie de ~400 GB numai pentru datele din lanțul de execuție de pe mainnet (în creștere cu ~1 GB/zi)."
     }
   ],
   "l4nLft": [
@@ -6315,6 +7357,26 @@
       "value": "În primul rând, creează un virtualenv venv în directorul depozit:"
     }
   ],
+  "l6agKv": [
+    {
+      "type": 0,
+      "value": "Toate acțiunile sunt adăugate la o coadă pentru procesare"
+    }
+  ],
+  "l8zvXg": [
+    {
+      "type": 0,
+      "value": "Dacă aveți un cont combinat, orice ETH suplimentar până la 2048 va contribui la soldul dumneavoastră efectiv. Dacă aveți un tip de retragere fără combinație, veți beneficia de completările ce readuc validatorul la "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH, dar nu veți beneficia de completări peste această sumă."
+    }
+  ],
   "l926sJ": [
     {
       "type": 0,
@@ -6335,10 +7397,10 @@
       "value": "Depozit restant"
     }
   ],
-  "6NyPVb": [
+  "lG9weW": [
     {
       "type": 0,
-      "value": "Nimbus este o implementare pentru client atât pe nivelul de execuție, cât și pe cel de consens, ce se dorește cât se poate de ușoară din punctul de vedere al resurselor utilizate. Aceasta îi permite să funcționeze bine pe sistemele integrate, pe dispozitivele cu restricțiii de resurse - inclusiv Raspberry Pi -- și pe serverele cu scopuri multiple."
+      "value": "Acest lucru va iniția procesul permanent de scoatere a acestui validator din rețeaua Ethereum pe bază de dovadă de mizare."
     }
   ],
   "lLOZMD": [
@@ -6361,20 +7423,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "lM/dEI": [
-    {
-      "type": 0,
-      "value": "Site-ul care îți cere depozitul de "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " are un URL la care te așteptai?"
     }
   ],
   "lQzdpT": [
@@ -6445,10 +7493,16 @@
       "value": "Destinație nume fișier"
     }
   ],
-  "OCl7KQ": [
+  "lkDZQI": [
     {
       "type": 0,
-      "value": "Această tranzacție este ireversibilă."
+      "value": "Contul este încă responsabil pentru sarcinile de consens până când este atinsă epoca de ieșire (menține validatorul online)"
+    }
+  ],
+  "ll5Sze": [
+    {
+      "type": 0,
+      "value": "Generați chei de depunere folosind instrumentul de depunere EthStaker"
     }
   ],
   "lo+Qqn": [
@@ -6461,6 +7515,26 @@
     {
       "type": 0,
       "value": "Fișier încărcat"
+    }
+  ],
+  "lt3tOB": [
+    {
+      "type": 0,
+      "value": "Epocă de activare"
+    }
+  ],
+  "m0FJdr": [
+    {
+      "type": 0,
+      "value": "Folosiți "
+    },
+    {
+      "type": 1,
+      "value": "testnet"
+    },
+    {
+      "type": 0,
+      "value": " pentru a sincroniza rețeaua de testare Holesky."
     }
   ],
   "mAZHi2": [
@@ -6481,6 +7555,36 @@
     {
       "type": 0,
       "value": "Hard disk"
+    }
+  ],
+  "mF0eMi": [
+    {
+      "type": 0,
+      "value": "Crește soldul maxim efectiv de la "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " la "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "mH6bSl": [
@@ -6559,6 +7663,12 @@
       "value": "Toți participanții trebuie să administreze un client cu nivel de execuție cu clientul cu nivel de consens."
     }
   ],
+  "mm+OKT": [
+    {
+      "type": 0,
+      "value": "Foaia de parcurs Ethereum"
+    }
+  ],
   "mpmFDY": [
     {
       "type": 0,
@@ -6569,6 +7679,12 @@
     {
       "type": 0,
       "value": "Riscuri și confirmări:"
+    }
+  ],
+  "mre8Tb": [
+    {
+      "type": 0,
+      "value": "Dacă nu a fost setată o adresă pentru retragere și dacă ați pierdut accesul la fraza mnemonică fără ca aeasta să fi fost furată/ccompromisă, fondurile dumneavoastră vor rămâne blocate în contul validatorului pe termen nedefinit."
     }
   ],
   "muV9Fg": [
@@ -6601,6 +7717,12 @@
       "value": "Va trebui să rulați un client cu nivel de execuție (anterior denumit „Eth1”), precum și un client de consens (anterior denumit „Eth2”) ca să deveniți validator. Uitați-vă la lista de verificare ca să vă pregătiți, dvs. și echipamentul."
     }
   ],
+  "nIf7QZ": [
+    {
+      "type": 0,
+      "value": "În acest scop, avem nevoie de participanți activi, cunoscuți ca validatori, pentru a propune, verifica și garanta corectitudinea blocurilor. În schimb, validatorii cinstiți primesc recompense financiare."
+    }
+  ],
   "nRWZl3": [
     {
       "type": 0,
@@ -6619,30 +7741,28 @@
       "value": "Documentația pentru Erigon"
     }
   ],
-  "nZTFTz": [
-    {
-      "type": 0,
-      "value": "Înțeleg că nu există niciun avantaj în a depune mai mult de o dată per validator. Nicio sumă suplimentară de "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " trimisă într-un depozit duplicat nu va fi luată în considerare în soldul efectiv de validator și nu poate fi retrasă."
-    }
-  ],
   "naHAvS": [
     {
       "type": 0,
       "value": "Activarea retragerilor"
     }
   ],
+  "naZC3k": [
+    {
+      "type": 0,
+      "value": "Adresa dumneavoastră ETH"
+    }
+  ],
   "ndhFef": [
     {
       "type": 0,
       "value": "Când simți că te-ai familiarizat cu sistemul, poți să treci la generarea cheilor și la depunerea de ETH."
+    }
+  ],
+  "nix/jD": [
+    {
+      "type": 0,
+      "value": "Câte conturi doriți să rulați?"
     }
   ],
   "njAU72": [
@@ -6667,6 +7787,12 @@
     {
       "type": 0,
       "value": "Arhitectură de sistem avansată"
+    }
+  ],
+  "nv2lXL": [
+    {
+      "type": 0,
+      "value": "Ieșire din online"
     }
   ],
   "nwgrRp": [
@@ -6719,6 +7845,20 @@
       "value": "Retrageri activate"
     }
   ],
+  "oDObOQ": [
+    {
+      "type": 0,
+      "value": "Dacă „adresa de retragere eth1” nu a fost furnizată la depunerea inițială, puteți trimite un mesaj "
+    },
+    {
+      "type": 1,
+      "value": "BTEC"
+    },
+    {
+      "type": 0,
+      "value": " unic semnat cu cheile de retragere BLS pentru a specifica adresa de retragere Ethereum dorită. Această adresă poate fi furnizată o singură dată și nu poate fi schimbată din nou."
+    }
+  ],
   "oF4os+": [
     {
       "type": 0,
@@ -6729,6 +7869,12 @@
     {
       "type": 0,
       "value": "Bază de cunoștințe EthStaker"
+    }
+  ],
+  "oLlMBP": [
+    {
+      "type": 0,
+      "value": "Activ Offline"
     }
   ],
   "oLxfO1": [
@@ -6749,10 +7895,46 @@
       "value": "Configurați-vă clientul cu nivel de consens"
     }
   ],
+  "oPgUAj": [
+    {
+      "type": 0,
+      "value": "validatorul dumneavoastră"
+    }
+  ],
+  "oUWdau": [
+    {
+      "type": 0,
+      "value": "Nu au fost găsiți validatori."
+    }
+  ],
+  "oVx7Qe": [
+    {
+      "type": 0,
+      "value": "Pasul 2: Generați chei de depunere folosind instrumentul de depunere EthStaker"
+    }
+  ],
+  "oWBn+a": [
+    {
+      "type": 0,
+      "value": "Sugestiile hardware reprezintă un obiectiv în continuă evoluție. Cerințele minime actuale vor crește, probabil, cu un ordin de mărime după introducerea fragmentării Danksharding. Vă recomandăm să vă documentați temeinic înainte de a depune fonduri."
+    }
+  ],
   "oWhj8Q": [
     {
       "type": 0,
       "value": "Cât de des se emit recompense/penalizări?"
+    }
+  ],
+  "oWrId5": [
+    {
+      "type": 0,
+      "value": "O cheie BLS care poate fi generată din aceeași mnemonică folosit pentru a genera cheile de semnare ale validatorului dumneavoastră. Această cheie este utilizată pentru a semna un mesaj care oferă o adresă de retragere de execuție (Ethereum regulat), care va fi atribuită permanent validatorului (migrându-l către un cont de Tip 1)."
+    }
+  ],
+  "oXMl1C": [
+    {
+      "type": 0,
+      "value": "Migrare la"
     }
   ],
   "obp8vV": [
@@ -6761,32 +7943,22 @@
       "value": "Documentație privind rularea Besu"
     }
   ],
-  "ogbG7r": [
+  "odjJFL": [
     {
       "type": 0,
-      "value": "Ca să devii validator în Lanțul Beacon, trebuie să depui "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " pentru fiecare validator pe care vrei să-l rulezi."
+      "value": "Mai multe despre fragmentarea Danksharding"
     }
   ],
   "ohspQX": [
     {
       "type": 0,
       "value": "Responsabilități"
+    }
+  ],
+  "om4EMq": [
+    {
+      "type": 0,
+      "value": "Pentru a procesa depunerile validatorilor primite de la nivelul de execuție (anterior denumit lanțul „Eth1”), va trebui să rulați atât un client cu nivel de execuție, cât și clientul cu nivel de consens (anterior denumit „Eth2”)."
     }
   ],
   "omJNJw": [
@@ -6825,18 +7997,10 @@
       "value": "A apărut o eroare"
     }
   ],
-  "ozEkVY": [
+  "oxoSZx": [
     {
       "type": 0,
-      "value": "Folosește "
-    },
-    {
-      "type": 1,
-      "value": "goerli"
-    },
-    {
-      "type": 0,
-      "value": " pentru a sincroniza testnetul Goerli."
+      "value": "Înțeleg că cheile și mnemonica (seed) sunt responsabilitatea mea."
     }
   ],
   "p+kDTB": [
@@ -6845,10 +8009,22 @@
       "value": "Utilizatorii Ethereum sunt utilizați pentru tranzacțiile care sunt executate manual. Dacă doriți să transferați fonduri, trebuie să semnați o tranzacție și să plătiți gazul."
     }
   ],
+  "p00N+q": [
+    {
+      "type": 0,
+      "value": "Combinat"
+    }
+  ],
   "p0b6zX": [
     {
       "type": 0,
       "value": "Detalii despre stare"
+    }
+  ],
+  "p1ynue": [
+    {
+      "type": 0,
+      "value": "Dacă nu s-a furnizat, cheia de retragere poate fi utilizată pentru a semna un mesaj care declară o adresă de retragere. Cheia de retragere poate fi generată folosind propria mnemonică. În cazul în care cheia de retragere sau mnemonica v-a fost furată și nu a fost setată încă o adresă de retragere, hoțul va avea capacitatea de a desemna irevocabil propriul său cont ca adresă de retragere pentru validatorul dumneavoastră."
     }
   ],
   "p556q3": [
@@ -6893,6 +8069,28 @@
       "value": "json"
     }
   ],
+  "pUAoW1": [
+    {
+      "type": 0,
+      "value": "Este soldul efectiv plafonat la "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -6905,16 +8103,16 @@
       "value": "Documentația Besu explică modul de descărcare și instalare a clientului."
     }
   ],
-  "qwFYIS": [
-    {
-      "type": 0,
-      "value": "Aceste instrumente vă vor ajuta să generați cheile și mesajele necesare pentru a semna. Mesajele semnate pot fi transmise pentru includere în blocuri începând cu actualizarea Shanghai/Capella."
-    }
-  ],
   "pfJX2D": [
     {
       "type": 0,
       "value": "Detalii despre phishing"
+    }
+  ],
+  "pgX4FB": [
+    {
+      "type": 0,
+      "value": "Absorbire validator"
     }
   ],
   "plXBe0": [
@@ -6933,6 +8131,44 @@
     {
       "type": 0,
       "value": "Penalizare"
+    }
+  ],
+  "prRNB6": [
+    {
+      "type": 0,
+      "value": "A apărut o problemă în încercarea de a semna cu dispozitivul Ledger. Verificați că dispozitivul Ledger are setat "
+    },
+    {
+      "type": 1,
+      "value": "blindSigning"
+    },
+    {
+      "type": 0,
+      "value": " și "
+    },
+    {
+      "type": 1,
+      "value": "debugData"
+    },
+    {
+      "type": 0,
+      "value": " la "
+    },
+    {
+      "type": 1,
+      "value": "enabled"
+    },
+    {
+      "type": 0,
+      "value": ". Acestea pot fi accesate selectând aplicația Ethereum și acccesând meniul "
+    },
+    {
+      "type": 1,
+      "value": "settings"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "ps8lLk": [
@@ -6957,6 +8193,40 @@
       "value": "Rezumat de depozit"
     }
   ],
+  "q0thwm": [
+    {
+      "type": 0,
+      "value": "Ca validator, primiți o recompensă dacă propuneți/atestați blocuri care sunt incluse în lanț."
+    }
+  ],
+  "q4Cz/L": [
+    {
+      "type": 0,
+      "value": "Mizare fonduri suplimentare"
+    }
+  ],
+  "q8Cxf5": [
+    {
+      "type": 0,
+      "value": "Acreditări BLS: În mod implicit, CLI-ul de depozit ar genera acreditări de retragere cu "
+    },
+    {
+      "type": 1,
+      "value": "boldWithdrawalKey"
+    },
+    {
+      "type": 0,
+      "value": " derivate prin mnemonice în formatul "
+    },
+    {
+      "type": 1,
+      "value": "eip2334"
+    },
+    {
+      "type": 0,
+      "value": ". Acest format nu este compatibil cu retragerile Lanțul Beacon și trebuie actualizat la acreditări de adresa Ethereum pentru a permite retragerile."
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -6969,36 +8239,16 @@
       "value": "Epocă de ieșire și epocă de retragere"
     }
   ],
-  "iqy/7c": [
-    {
-      "type": 0,
-      "value": "Pentru a activa validatorul(ii) Lanțului Beacon pentru a retrage automat soldurile în "
-    },
-    {
-      "type": 1,
-      "value": "executionAddress"
-    },
-    {
-      "type": 0,
-      "value": ", puteți folosi instrumentul "
-    },
-    {
-      "type": 0,
-      "value": " pentru a genera fișierul JSON cu mesajul "
-    },
-    {
-      "type": 1,
-      "value": "signed"
-    },
-    {
-      "type": 0,
-      "value": ". Acest mesaj include solicitarea de a schimba vechile acreditări de retragere BLS în noile acreditări de retragere în formatul adresei de executare."
-    }
-  ],
   "qK4+NQ": [
     {
       "type": 0,
       "value": "Terminalul"
+    }
+  ],
+  "qLxCF6": [
+    {
+      "type": 0,
+      "value": "Transferați întregul sold dintr-un alt cont de validator în acesta, consolidând două conturi într-unul singur."
     }
   ],
   "qMePPG": [
@@ -7017,6 +8267,26 @@
     {
       "type": 0,
       "value": "Toți validatorii"
+    }
+  ],
+  "qaaxCA": [
+    {
+      "type": 0,
+      "value": "Fiecare cont de validator are o proprietate numită "
+    },
+    {
+      "type": 1,
+      "value": "withdrawalCredentials"
+    },
+    {
+      "type": 0,
+      "value": ", care desemnează ce chei controlează orice transferuri de sold/retrageri. În prezent, sunt trei (3) tipuri de acreditări de retragere, pe care un cont de validator poate să le aibă, diferențiate prin prefixe numerice:"
+    }
+  ],
+  "qdZ2WQ": [
+    {
+      "type": 0,
+      "value": "Este util să știți cum să rulați comenzi în terminalul de pe computer. Generarea noilor perechi de chei și instalarea software-ului validator pot fi realizate folosind interfețe grafice (GUI) cu unele software-uri, dar terminalul este utilizat în mod implicit pentru control complet."
     }
   ],
   "qdk7Hp": [
@@ -7053,16 +8323,18 @@
       "value": "software"
     }
   ],
-  "p1ynue": [
+  "qwFYIS": [
     {
       "type": 0,
-      "value": "Dacă acest lucru nu a fost furnizat, cheile de retragere vor fi necesare pentru a semna un mesaj prin care se declară o adresă de retragere. Acest lucru necesită acces la mnemonicul folosit la configurarea cheilor."
-    }
-  ],
-  "qwh6gM": [
+      "value": "Aceste instrumente vă vor ajuta să generați cheile și mesajele necesare pentru a semna. Mesajele semnate pot fi apoi "
+    },
+    {
+      "type": 1,
+      "value": "broadcastLink"
+    },
     {
       "type": 0,
-      "value": "Înțeleg riscurile de penalizare și cele pe care le comportă adoptarea timpurie."
+      "value": " în blocuri."
     }
   ],
   "qx+3RQ": [
@@ -7097,6 +8369,12 @@
       "value": "client validator"
     }
   ],
+  "r3C4x/": [
+    {
+      "type": 0,
+      "value": "Software"
+    }
+  ],
   "r4JsKB": [
     {
       "type": 0,
@@ -7109,18 +8387,10 @@
       "value": "Ghid de apărare împotriva phishingului"
     }
   ],
-  "rMjMmc": [
+  "rElUnh": [
     {
       "type": 0,
-      "value": "Utilizați "
-    },
-    {
-      "type": 1,
-      "value": "http"
-    },
-    {
-      "type": 0,
-      "value": " pentru a vă conecta nodul de consens la endpoint-ul RPC JSON. Astfel se vor activa serviciile RPC JSON pe portul implicit 8545."
+      "value": "Inițiere ieșire"
     }
   ],
   "rTSJI9": [
@@ -7141,6 +8411,34 @@
       "value": "Mai multe despre Lodestar"
     }
   ],
+  "rWEu7N": [
+    {
+      "type": 0,
+      "value": "Soldul acestui validator este la maximum efectiv: "
+    },
+    {
+      "type": 1,
+      "value": "maxEffectiveBalanceEther"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "rYa2OX": [
+    {
+      "type": 0,
+      "value": "Care sunt diferitele tipuri de validator?"
+    }
+  ],
   "raRw6Z": [
     {
       "type": 0,
@@ -7153,48 +8451,30 @@
       "value": "Închide"
     }
   ],
-  "oDObOQ": [
+  "ri86XL": [
     {
       "type": 0,
-      "value": "Nu, nu puteți să vă modificați coduril de autentificare pentru retragere la suplimentarea sumelor."
+      "value": "Vi se va cere să semnați un mesaj cu portofelul dumneavoastră. Procesarea ieșirilor nu este imediată, așa că luați în considerare până la câteva zile pentru finalizare."
     }
   ],
-  "rs4eqr": [
+  "rk3ll8": [
     {
       "type": 0,
-      "value": "Alimentarea soldului de validator poate fi impus de două aspecte importante. Dacă soldul efectiv al validatorului este mai mic decât "
+      "value": "Înțeleg că neintroducerea unei adrese de retragere odată cu depozitul meu inițial lasă fondurile mele blocate și "
     },
     {
       "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
+      "value": "onlyWay"
     },
     {
       "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
+      "value": " de a-mi retrage fondurile presupune utilizarea mnemonicii."
+    }
+  ],
+  "rk9g0q": [
     {
       "type": 0,
-      "value": " nu vei câștiga recompense integrale pentru mize. Iar dacă scade până la "
-    },
-    {
-      "type": 1,
-      "value": "EJECTION_PRICE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " sistemul elimină validatorul."
+      "value": "Riscuri software"
     }
   ],
   "rswUPu": [
@@ -7203,16 +8483,78 @@
       "value": "Rezumat Launchpad"
     }
   ],
+  "rywDJ5": [
+    {
+      "type": 0,
+      "value": "Conectați portofelul pentru a recupera validatorii cu acreditările de retragere corespunzătoare pentru a face upgrade la varianta combinată, a consolida, a retrage parțial sau a forța o ieșire"
+    }
+  ],
+  "s1Hm3H": [
+    {
+      "type": 0,
+      "value": "Vizualizare tranzacție în exploratorul de blocuri"
+    }
+  ],
   "s6gImC": [
     {
       "type": 0,
       "value": "Teku se poate configura și printr-un fișier YAML, care se poate transmite prin mai multe metode diferite."
     }
   ],
+  "sFD6T7": [
+    {
+      "type": 0,
+      "value": "Lodestar este un ecosistem TypeScript pentru consensul Ethereum, dezvoltat de ChainSafe Systems. Lanțul nostru beacon, clientul validator și instrumentele sunt unic poziționate ca soluție preferată pentru cercetători și dezvoltatori pentru prototipare rapidă."
+    }
+  ],
+  "sIgu5c": [
+    {
+      "type": 0,
+      "value": "Înțeleg că nu există niciun avantaj să depun mai mult ETH decât soldul maxim efectiv ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " pentru tipul meu de cont). Orice "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " suplimentar trimis peste această valoare nu va conta la miză și va fi retras automat odată ce contul este activat cu o adresă de retragere validă."
+    }
+  ],
   "sMHQRT": [
     {
       "type": 0,
       "value": "Un client cu nivel de consens ce se axează majoritar pe viteză și securitate. Creat de Sigma Prime, o firmă de securizare a informațiilor și de inginerie software care a finanțat Lighhouse împreună cu Fundația Ethereum, Consensys și persoane independente."
+    }
+  ],
+  "sNUrEO": [
+    {
+      "type": 0,
+      "value": "În caz contrar, am trimis un mesaj "
+    },
+    {
+      "type": 1,
+      "value": "btec"
+    },
+    {
+      "type": 0,
+      "value": " semnat cu cheile mele de retragere BLS pentru actualizarea acreditărilor de retragere."
     }
   ],
   "sToVAS": [
@@ -7233,10 +8575,10 @@
       "value": "În loc ca un nou tip de tranzacție să fie utilizat pentru ca participanții să solicite manual retrageri, se verifică automat soldul excedentar eligibil al conturilor la fiecare câteva zile. Toți validatorii sunt verificați pe o buclă nelimitată și orice recompense disponibile sau fonduri ieșite sunt „împinse” automat într-un cont de retragere furnizat."
     }
   ],
-  "sj/Zef": [
+  "sgn0wo": [
     {
       "type": 0,
-      "value": "Descărcați aplicația Key Gen GUI"
+      "value": "Ce se întâmplă dacă utilizez retragerea prin acreditări BLS și îmi pierd cheia de retragere?"
     }
   ],
   "smD5l/": [
@@ -7295,6 +8637,20 @@
       "value": "Am creat un secret JWT partajat și l-am pus la dispoziția clientului cu nivel de execuție, cât și a clientului cu nivel de consens (nodul de semnal)"
     }
   ],
+  "tHF016": [
+    {
+      "type": 0,
+      "value": "Din ce validator doriți să "
+    },
+    {
+      "type": 1,
+      "value": "pullFrom"
+    },
+    {
+      "type": 0,
+      "value": "?"
+    }
+  ],
   "tJcyUM": [
     {
       "type": 0,
@@ -7311,12 +8667,6 @@
     {
       "type": 0,
       "value": "Numărul maxim de conturi care pot fi verificate într-un bloc. Se oprește atunci când sunt găsite 16 retrageri. Dacă nu sunt găsite 16 recompense eligibile în primele 16.384 conturi verificate, coada retragerilor pentru blocul respectiv va fi trimisă așa cum este și următorul inițiator va prelua de unde a rămas acest bloc."
-    }
-  ],
-  "KJ7R/V": [
-    {
-      "type": 0,
-      "value": "Specificațiile nivelului de consens din Ethereum"
     }
   ],
   "teyxVk": [
@@ -7381,12 +8731,6 @@
       "value": "article"
     }
   ],
-  "mm+OKT": [
-    {
-      "type": 0,
-      "value": "Actualizările Ethereum"
-    }
-  ],
   "tzMNF3": [
     {
       "type": 0,
@@ -7419,10 +8763,36 @@
       "value": "Portugheză (Braziliană)"
     }
   ],
+  "u6aCQB": [
+    {
+      "type": 0,
+      "value": "Tip acreditări pentru retragere"
+    }
+  ],
   "u81G9+": [
     {
       "type": 0,
       "value": "Uptime"
+    }
+  ],
+  "uAXXOX": [
+    {
+      "type": 0,
+      "value": "Sincronizarea acestui ultim pas este variabilă în funcție de indicele validatorului, poziția curentă de verificare și numărul de validatori."
+    }
+  ],
+  "uAu6S6": [
+    {
+      "type": 0,
+      "value": "Taxa actuală de procesare: "
+    },
+    {
+      "type": 1,
+      "value": "fee"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "uDMtC8": [
@@ -7445,6 +8815,86 @@
     {
       "type": 0,
       "value": " în rețea."
+    }
+  ],
+  "uEB8++": [
+    {
+      "type": 0,
+      "value": "Acreditări de execuție: dacă doriți să retrageți la adresa portofelului de execuție, puteți seta o „adresă de retragere eth1” folosind "
+    },
+    {
+      "type": 1,
+      "value": "ethAddressWithdraw"
+    },
+    {
+      "type": 0,
+      "value": " când rulați depunere CLI. "
+    },
+    {
+      "type": 1,
+      "value": "boldWarning"
+    }
+  ],
+  "uHSqYx": [
+    {
+      "type": 0,
+      "value": "O valoare "
+    },
+    {
+      "type": 1,
+      "value": "excessBalanceWithdrawal"
+    },
+    {
+      "type": 0,
+      "value": " este procesată când un validator activ are un sold efectiv maxim de "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " și un sold total de peste "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Un singur validator nu poate obține recompense pentru soldul care depășește "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " și, astfel, orice sold suplimentar al acestor conturi va fi extras automat în adresa Ethereum."
     }
   ],
   "uJzGSb": [
@@ -7481,20 +8931,6 @@
       "value": "epocă de ieșire"
     }
   ],
-  "uYF99H": [
-    {
-      "type": 0,
-      "value": "Deși votul unui validator este ponderat cu suma pe care o are în joc, fiecare validator cu greutatea de vot începe de la și este limitat la "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": ". Este posibil să scădem sub acest nivel cu performanțe slabe ale nodurilor, dar nu este posibil să îl depășim."
-    }
-  ],
   "ubKWX8": [
     {
       "type": 0,
@@ -7507,26 +8943,10 @@
       "value": "Asigură-te că lățimea de bandă nu poate fi restricționată și nu este plafonată, astfel încât nodul să rămână sincronizat și va fi gata de validare la apel."
     }
   ],
-  "ujVT29": [
+  "uhpVgs": [
     {
       "type": 0,
-      "value": "În acest moment ar trebui să ai mnemonicul notat într-un loc sigur și un depozit de chei salvat pentru fiecare validator. "
-    },
-    {
-      "type": 1,
-      "value": "validatorCount"
-    },
-    {
-      "type": 0,
-      "value": ". Păstrează în loc sigur toate aceste elemente în siguranță, preferabil offline. Depozitele de chei trebuie să fie disponibile în directorul "
-    },
-    {
-      "type": 1,
-      "value": "validatorKeys"
-    },
-    {
-      "type": 0,
-      "value": " nou creat."
+      "value": "(Combinat)"
     }
   ],
   "ukfwum": [
@@ -7535,32 +8955,16 @@
       "value": "Devino validator cu Nimbus"
     }
   ],
-  "up+5YH": [
+  "v/nu/L": [
     {
       "type": 0,
-      "value": "Există depozite de "
-    },
-    {
-      "type": 1,
-      "value": "ethAmount"
-    },
-    {
-      "type": 0,
-      "value": " recente?"
+      "value": "Clientul de execuție Ethereum Nethermind, construit pe .NET, oferă performanțe de vârf în sincronizare și procesare a capătului de lanț."
     }
   ],
-  "zkTSvw": [
+  "v0ygo6": [
     {
       "type": 0,
-      "value": "Și se dau amenzi majore – sau "
-    },
-    {
-      "type": 1,
-      "value": "slashings"
-    },
-    {
-      "type": 0,
-      "value": " – pentru acțiunile nocive."
+      "value": "Testare pe Holesky"
     }
   ],
   "vBJ79e": [
@@ -7627,28 +9031,6 @@
       "value": "Chineză (simplificată)"
     }
   ],
-  "okGJD+": [
-    {
-      "type": 0,
-      "value": "Odată ce retragerile sunt activate cu actualizarea Shanghai/Capella, validatorii cu soldul efectiv maxim și adresa de executare asociată a retragerii vor beneficia de retragerea automată a oricărui sold de peste "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " ca excedent de sold."
-    }
-  ],
   "vbVsqW": [
     {
       "type": 0,
@@ -7663,6 +9045,28 @@
       "value": " și intră în comunitatea EthStaker ca să primești ajutor și să discuți cu alți validatori."
     }
   ],
+  "vj7TN7": [
+    {
+      "type": 0,
+      "value": "Această valoare este cunoscută sub denumirea de sold maxim efectiv (suma maximă de ETH care contribuie la mizare). Tipurile mai vechi de conturi (Tip 0 sau Tip 1) au un sold efectiv limitat la "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ". În aceste conturi, orice sold peste "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " nu contribuie la soldul principal, nici la câștigurile combinate."
+    }
+  ],
   "vz8WK7": [
     {
       "type": 0,
@@ -7675,10 +9079,10 @@
       "value": "Rulează următoarea comandă pentru a lansa aplicația"
     }
   ],
-  "wDlux8": [
+  "wIdVXZ": [
     {
       "type": 0,
-      "value": "Veți putea decide în continuare în mod voluntar ca validatorul să fie eliminat din setul activ de validatori, dar până la activarea retragerilor, aceste fonduri rămân blocate și nu pot fi retrase sau remizate."
+      "value": "„Tip 1”, „Retrageri periodice”"
     }
   ],
   "wJ1PbL": [
@@ -7695,6 +9099,12 @@
     {
       "type": 0,
       "value": "Configurare inițială"
+    }
+  ],
+  "wL7VAE": [
+    {
+      "type": 0,
+      "value": "Acțiuni"
     }
   ],
   "wawegX": [
@@ -7719,34 +9129,6 @@
     {
       "type": 0,
       "value": "Rulează următoarea comandă:"
-    }
-  ],
-  "HemvTL": [
-    {
-      "type": 0,
-      "value": "Una dintre cozile care merită menționate este o coadă care limitează câte adrese de retragere BLS ("
-    },
-    {
-      "type": 1,
-      "value": "type0"
-    },
-    {
-      "type": 0,
-      "value": ") pot fi actualizate la adresa de execuție ("
-    },
-    {
-      "type": 1,
-      "value": "type1"
-    },
-    {
-      "type": 0,
-      "value": ") în timpul unui bloc dat."
-    }
-  ],
-  "wqUcy/": [
-    {
-      "type": 0,
-      "value": "Riscurile adoptării timpurii"
     }
   ],
   "wtTeex": [
@@ -7779,6 +9161,12 @@
       "value": "Recomandăm insistent să efectuați acești pași în rețeaua de test actuală înaintea de rețeaua principală."
     }
   ],
+  "x4HNJL": [
+    {
+      "type": 0,
+      "value": "Site-ul care solicită depunerea are un URL la care vă așteptați?"
+    }
+  ],
   "xDyl3T": [
     {
       "type": 0,
@@ -7793,16 +9181,16 @@
       "value": " găsești o listă de surse de încredere"
     }
   ],
+  "xETYo6": [
+    {
+      "type": 0,
+      "value": "Dacă pierdeți cheia de retragere, va fi necesar ca mnemonica să se refacă. În cazul în care pierdeți mnemonica și nu ați actualizat acreditările de retragere cu o adresă de retragere Ethereum (execuție), nu există nicio modalitate de a accesa fondurile deținute de validatorul dumneavoastră. Ca atare, este esențial să vă asigurați că mnemonica validatorului este salvată în siguranță."
+    }
+  ],
   "xGQ38+": [
     {
       "type": 0,
       "value": "Validatorul a finalizat procesul de ieșire?"
-    }
-  ],
-  "xH5GKj": [
-    {
-      "type": 0,
-      "value": "Accept să adopt timpuriu sistemul și faptul că pot suferi penalizări din cauza problemelor de software și de design."
     }
   ],
   "xMOzv2": [
@@ -7811,10 +9199,22 @@
       "value": "Oricine doreşte să îşi încheie obligațiile de mizare poate semna un mesaj de „ieşire voluntară”, transmis apoi Lanțului Beacon pentru demararea procesului. Acesta este un pas manual."
     }
   ],
+  "xP01Tv": [
+    {
+      "type": 0,
+      "value": "Mizare fonduri suplimentare"
+    }
+  ],
   "xP6BKs": [
     {
       "type": 0,
       "value": "lista de verificare pentru mize"
+    }
+  ],
+  "xQND39": [
+    {
+      "type": 0,
+      "value": "combinat"
     }
   ],
   "xQrU13": [
@@ -7853,12 +9253,6 @@
     {
       "type": 0,
       "value": "testnet"
-    }
-  ],
-  "xbet2w": [
-    {
-      "type": 0,
-      "value": "Instalează python3.7+"
     }
   ],
   "xh7oVn": [
@@ -7909,6 +9303,24 @@
       "value": "Besu este scris în Java și lansat sub licența Apache 2.0."
     }
   ],
+  "xrCRnH": [
+    {
+      "type": 0,
+      "value": "Exemplu"
+    }
+  ],
+  "xrk6zg": [
+    {
+      "type": 0,
+      "value": "Actualizat"
+    }
+  ],
+  "xvkEAP": [
+    {
+      "type": 0,
+      "value": "Chat Reth"
+    }
+  ],
   "xxbUJa": [
     {
       "type": 0,
@@ -7955,10 +9367,28 @@
       "value": "Ce este un operator de noduri?"
     }
   ],
+  "y8nxN1": [
+    {
+      "type": 0,
+      "value": "Retrageri parțiale prin intermediul unei cereri de contract inteligent"
+    }
+  ],
+  "yCYGZ2": [
+    {
+      "type": 0,
+      "value": "Permite combinarea automată a recompenselor"
+    }
+  ],
   "yFtJza": [
     {
       "type": 0,
       "value": "Luați măsurile necesare ca să dețineți controlul cheilor pentru această adresă."
+    }
+  ],
+  "yGyozY": [
+    {
+      "type": 0,
+      "value": "Ghidul Reth explică cum să descărcați și să instalați clientul. De asemenea, furnizăm versiuni pe Github."
     }
   ],
   "yI/DO8": [
@@ -7967,10 +9397,22 @@
       "value": "acest număr crește dacă alți validatori sunt penalizați în același timp"
     }
   ],
+  "yK2eQ+": [
+    {
+      "type": 0,
+      "value": "Se aplică penalități minore pentru acțiunile (sau lipsa acțiunilor) care îngreunează obținerea consensului"
+    }
+  ],
   "ySYWBD": [
     {
       "type": 0,
       "value": "Îmi păstrezi cheile în siguranță și mi-am notat fraza mnemonică."
+    }
+  ],
+  "yYe/CX": [
+    {
+      "type": 0,
+      "value": "Migrare fonduri"
     }
   ],
   "ydh1KU": [
@@ -7979,22 +9421,16 @@
       "value": "Informații despre limbă"
     }
   ],
-  "yeI1Zq": [
+  "yeOdna": [
     {
       "type": 0,
-      "value": "Ține cont de faptul că această întârziere poate fi mai mare dacă mulți alții ies sau sunt eliminați în același timp."
+      "value": "adresă de retragere execuție conectată"
     }
   ],
   "yis3aS": [
     {
       "type": 0,
       "value": "Acesta este scenariul preconizat."
-    }
-  ],
-  "yjBvUO": [
-    {
-      "type": 0,
-      "value": "Nethermind este dezvoltat pe .NET Core. Extinde-l și personalizează-l, posibilitățile sunt nelimitate."
     }
   ],
   "ylZLi4": [
@@ -8027,28 +9463,6 @@
       "value": "Vechile acreditări de retragere BLS"
     }
   ],
-  "Sy5bAo": [
-    {
-      "type": 0,
-      "value": "Odată cu finalizarea tranziției la dovada mizei prin Fuziune, validatorii sunt responsabili de prelucrarea tranzacțiilor și de semnarea acestora pentru a le confirma valabilitatea. Aceste date "
-    },
-    {
-      "type": 1,
-      "value": "not"
-    },
-    {
-      "type": 0,
-      "value": " vor fi disponibile din surse terțe populare după Fuziune. Utilizarea unui furnizor terț va duce la intrarea offline a validatorului. Atunci când fragmentarea este implementată, validatorii vor risca, de asemenea, penalitatea sub "
-    },
-    {
-      "type": 1,
-      "value": "pocGame"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "z63I56": [
     {
       "type": 0,
@@ -8069,22 +9483,32 @@
       "value": "."
     }
   ],
-  "z8zpxp": [
-    {
-      "type": 0,
-      "value": "Lodestar este o implementare open-source, de tip TypeScript, a specificației Consens Ethereum (cunoscută anterior ca et2) menținută de sistemele ChainSafe. Scopul ChainSafe este de a dezvolta, de a îmbunătăți și diversifica ecosistemul Ethereum al dovezii mizei cu Lanțul Beacon și cu clientul validator, cu accent pe implementarea ușoară a clientului."
-    }
-  ],
   "zAVb0/": [
     {
       "type": 0,
       "value": "Mai multe despre Lighthouse și Sigma Prime"
     }
   ],
-  "zGkAVo": [
+  "zJV6KL": [
     {
       "type": 0,
-      "value": "La cealaltă extremă, dacă soldul se apropie de 31 ETH, probabil că nu merită să alimentezi suma de ETH suplimentară necesară pentru a reveni la 32."
+      "value": "Valoarea minimă pentru o depunere "
+    },
+    {
+      "type": 1,
+      "value": "MIN_DEPOSIT_ETHER"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "zJicsO": [
@@ -8093,38 +9517,70 @@
       "value": "Economia mizării"
     }
   ],
-  "cD0jre": [
+  "zNUzpT": [
     {
       "type": 0,
-      "value": "Nu depozitați mai mult de "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " ETH pentru un singur validator. Acesta nu va adăuga la recompense și va fi blocat până la actualizarea Shanghai/Capella planificată."
+      "value": "Sold efectiv"
     }
   ],
-  "zbEBi9": [
+  "zO16iV": [
     {
       "type": 0,
-      "value": "Folosește "
+      "value": "Valoarea minimă pentru o depunere validă este "
     },
     {
       "type": 1,
-      "value": "mainnet"
+      "value": "MIN_DEPOSIT_ETHER"
     },
     {
       "type": 0,
-      "value": " pentru a sincroniza rețeaua principală Ethereum."
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    }
+  ],
+  "zfkJaB": [
+    {
+      "type": 0,
+      "value": "Contractul de depozit cu mizare Ethereum poate fi acceptat numai dacă trimiți cel puțin "
+    },
+    {
+      "type": 1,
+      "value": "MIN_TOPUP_VALUE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " într-o tranzacție."
     }
   ],
   "zicXn7": [
     {
       "type": 0,
       "value": "Securitatea nodului"
+    }
+  ],
+  "zkTSvw": [
+    {
+      "type": 0,
+      "value": "Sunt aplicate penalități masive, sau "
+    },
+    {
+      "type": 1,
+      "value": "slashings"
+    },
+    {
+      "type": 0,
+      "value": ", pentru acțiunile nocive"
     }
   ],
   "znyxZv": [
@@ -8147,10 +9603,30 @@
       "value": ". Acesta este un set de metode RPC JSON care pot fi folosite pentru a comunica între cele două niveluri ale clientului."
     }
   ],
-  "zrb2Xo": [
+  "zsu9e8": [
+    {
+      "type": 1,
+      "value": "warning"
+    },
     {
       "type": 0,
-      "value": "Apeluri ale comunității - anunțate în depozitul PM"
+      "value": " Depozitele dublate cu aceeași cheie publică din fișierul cheie vor fi considerate ca un depozit dublu. Dacă acest sold depășește soldul maxim efectiv al conturilor dumneavoastră ("
+    },
+    {
+      "type": 1,
+      "value": "maxEB"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "), excedentul nu va fi luat în considerare pentru miza dumneavoastră. Presupunând că a fost setată o adresă de retragere, aceste fonduri vor fi redistribuite automat după ce contul este activat. Dacă nu a fost furnizată nicio adresă de retragere, fondurile vor rămâne blocate până când va fi furnizată o adresă de retragere."
     }
   ]
 }

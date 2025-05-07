@@ -231,7 +231,7 @@ const _UploadValidatorPage = ({
               const hasCorrectStructure = checkJsonStructure(fileData[0] || {});
               if (
                 hasCorrectStructure &&
-                forkVersion !== GENESIS_FORK_VERSION.toString()
+                forkVersion !== GENESIS_FORK_VERSION.toString('hex')
               ) {
                 // file doesn't match the correct network
                 handleWrongNetwork();
@@ -346,7 +346,7 @@ const _UploadValidatorPage = ({
             defaultMessage="Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
             values={{
               json: <Code>deposit_data-[timestamp].json</Code>,
-              validatorKeys: <Code>/staking-deposit-cli/validator_keys</Code>,
+              validatorKeys: <Code>/ethstaker-deposit-cli/validator_keys</Code>,
             }}
           />
         </Text>

@@ -26,8 +26,6 @@ The Infura Project ID will enable the network status progress bar showing the ba
 REACT_APP_INFURA_PROJECT_ID=your-infura-project-id-here
 ```
 
-Note: The Portis wallet option is not available when running locally
-
 ## Installation
 
 **Available Scripts**
@@ -51,7 +49,7 @@ By default, `dev` acts as the primary base branch which all PRs should merge int
 
 ## Launchpad deployment
 
-- The `master` branch represents the live **testnet** version of the Launchpad. Open a PR to merge `dev` into `master` to deploy a testnet Launchpad (e.g. [#517](https://github.com/ethereum/staking-launchpad/pull/517) for https://goerli.launchpad.ethereum.org/ )
+- The `master` branch represents the live **testnet** version of the Launchpad. Open a PR to merge `dev` into `master` to deploy a testnet Launchpad (e.g. [#517](https://github.com/ethereum/staking-launchpad/pull/517) for https://holesky.launchpad.ethereum.org/ )
 - The `mainnet` branch represents the live **Mainnet** version of the Launchpad. Open a PR to merge `master` into `mainnet` to deploy the Mainnet Launchpad (e.g. [#518](https://github.com/ethereum/staking-launchpad/pull/518) for https://launchpad.ethereum.org/)
 
 ## Launchpad translation

@@ -3,7 +3,6 @@
  */
 import _every from 'lodash/every';
 import { initBLS } from '@chainsafe/bls';
-import compareVersions from 'compare-versions';
 import axios from 'axios';
 import { verifySignature } from '../../utils/verifySignature';
 import { verifyDepositRoots } from '../../utils/SSZ';
@@ -14,8 +13,9 @@ import {
 import {
   ETHER_TO_GWEI,
   BEACONCHAIN_URL,
-  MIN_DEPOSIT_AMOUNT,
-  MIN_DEPOSIT_CLI_VERSION,
+  MIN_DEPOSIT_GWEI,
+  MAX_EFFECTIVE_BALANCE,
+  MIN_ACTIVATION_BALANCE,
 } from '../../utils/envVars';
 
 const validateFieldFormatting = (
@@ -62,20 +62,12 @@ const validateFieldFormatting = (
   }
 
   // check the deposit amount
+  const accountType = +depositDatum.withdrawal_credentials.slice(0, 2);
+  const maxAmountEther =
+    accountType < 2 ? MIN_ACTIVATION_BALANCE : MAX_EFFECTIVE_BALANCE;
   if (
-    depositDatum.amount < MIN_DEPOSIT_AMOUNT ||
-    depositDatum.amount > 32 * ETHER_TO_GWEI
-  ) {
-    return false;
-  }
-
-  // check the deposit-cli version
-  if (
-    compareVersions.compare(
-      depositDatum.deposit_cli_version,
-      MIN_DEPOSIT_CLI_VERSION,
-      '<'
-    )
+    depositDatum.amount < MIN_DEPOSIT_GWEI ||
+    depositDatum.amount > maxAmountEther * ETHER_TO_GWEI
   ) {
     return false;
   }

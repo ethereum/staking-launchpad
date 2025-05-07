@@ -9,15 +9,11 @@ import {
 import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { ClientDiversityWarning } from '../../../components/ClientDiversityWarning';
 import { PRYSM_INSTALLATION_URL } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
 export const PrysmDetails = ({ shortened }: { shortened?: boolean }) => (
   <>
-    <ClientDiversityWarning>
-      <FormattedMessage defaultMessage="Currently Prysm is used by >33% of the network." />
-    </ClientDiversityWarning>
     <SectionTitle level={2} className="mb5">
       Prysm
     </SectionTitle>

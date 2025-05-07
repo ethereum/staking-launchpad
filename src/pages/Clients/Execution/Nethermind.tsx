@@ -9,25 +9,21 @@ import {
 import { PageTemplate } from '../../../components/PageTemplate';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
-import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { IS_GOERLI } from '../../ConnectWallet/web3Utils';
-import { IS_MAINNET } from '../../../utils/envVars';
 
-// eslint-disable-next-line no-unused-vars
 export const NethermindDetails = () => (
   <>
     <SectionTitle level={2} className="mb5">
       Nethermind
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="An Ethereum client with a huge pool of developers. It's perfect for enterprise-grade systems." />
+      <FormattedMessage defaultMessage="The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing. With its modular design and plugin system, it offers extensibility and features for new chains. As one of the most adopted execution clients on Ethereum, Nethermind plays a crucial role in enhancing the diversity and resilience of the Ethereum ecosystem." />
     </Text>
     <SectionTitle level={2} className="mb5">
       <FormattedMessage defaultMessage="Language information" />
     </SectionTitle>
     <Text className="mt10">
-      <FormattedMessage defaultMessage="Nethermind is built on .NET Core. Extend it, customise it - the sky’s the limit.." />
+      <FormattedMessage defaultMessage="Nethermind is built in C# with flexible plugin architecture and licensed under the LGPL-3.0." />
     </Text>
     <section>
       <SectionTitle level={2} className="mb5">
@@ -36,7 +32,11 @@ export const NethermindDetails = () => (
       <Text>
         <FormattedMessage defaultMessage="The Nethermind documentation explains how to download and install the client." />
       </Text>
-      <Link primary to="https://downloads.nethermind.io/" className="mt10">
+      <Link
+        primary
+        to="https://docs.nethermind.io/get-started/installing-nethermind"
+        className="mt10"
+      >
         <FormattedMessage defaultMessage="Nethermind installation documentation" />
       </Link>
     </section>
@@ -45,74 +45,27 @@ export const NethermindDetails = () => (
         <FormattedMessage defaultMessage="Setup" />
       </SectionTitle>
       <Text className="mb20 mt10">
-        <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
-      </Text>
-      {IS_MAINNET && (
-        <>
-          <Text className="mt10">
-            <FormattedMessage
-              defaultMessage="Use {mainnet} to sync the Ethereum mainnet."
-              values={{
-                mainnet: <Code className="mt20">--config mainnet</Code>,
-              }}
-              description="{mainnet} shows '--config mainnet' terminal command"
-            />
-          </Text>
-          <Link
-            primary
-            className="mt20"
-            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#mainnet"
-          >
-            --config mainnet documentation
-          </Link>
-        </>
-      )}
-      {!IS_MAINNET && IS_GOERLI && (
-        <>
-          <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Goerli" />
-          </Heading>
-          <Text className="mt10">
-            <FormattedMessage
-              defaultMessage="Use {goerli} to sync the Goerli testnet."
-              values={{
-                goerli: <Code className="mt20">--config goerli</Code>,
-              }}
-              description="{goerli} shows '--config goerli' terminal command"
-            />
-          </Text>
-          <Link
-            primary
-            className="mt20"
-            to="https://docs.nethermind.io/nethermind/ethereum-client/networks#goerli-goerli"
-          >
-            <FormattedMessage
-              defaultMessage="Nethermind on Goerli documentation"
-              description="Links to the documentation for the execution client Nethermind, specifically for testnet Goerli"
-            />
-          </Link>
-        </>
-      )}
-      <Heading level={3} className="mt20">
-        <FormattedMessage defaultMessage="JSON RPC endpoint" />
-      </Heading>
-      <Text className="mt10">
-        <FormattedMessage
-          defaultMessage="Use {http} to connect your consensus node to the JSON RPC
-          endpoint. This will enable the JSON RPC services on the default 8545
-          port."
-          values={{
-            http: <Code className="mt20">--JsonRpc.Enabled true</Code>,
-          }}
-          description="{http} shows '--JsonRpc.Enabled true' terminal command"
-        />
+        <FormattedMessage defaultMessage="Check out the following guide to get your execution client working properly." />
       </Text>
       <Link
         primary
         className="mt20"
-        to="https://docs.nethermind.io/nethermind/ethereum-client/json-rpc"
+        to="https://docs.nethermind.io/get-started/running-node/"
       >
-        <FormattedMessage defaultMessage="--JsonRpc.Enabled documentation" />
+        Running a node with Nethermind
+      </Link>
+      <Heading level={3} className="mt20">
+        <FormattedMessage defaultMessage="JSON-RPC endpoint" />
+      </Heading>
+      <Text className="mt10">
+        <FormattedMessage defaultMessage="Check out the following guide to properly configure Engine JSON-RPC API for your consensus client." />
+      </Text>
+      <Link
+        primary
+        className="mt20"
+        to="https://docs.nethermind.io/get-started/running-node/consensus-clients#configuring-json-rpc-interface"
+      >
+        <FormattedMessage defaultMessage="Configuring JSON-RPC interface" />
       </Link>
     </section>
   </>
@@ -134,7 +87,7 @@ export const Nethermind = () => {
           <SectionTitle level={2} className="mb5">
             <FormattedMessage defaultMessage="Documentation" />
           </SectionTitle>
-          <Link primary to="https://docs.nethermind.io/nethermind/">
+          <Link primary to="https://docs.nethermind.io">
             <FormattedMessage defaultMessage="Documentation on running Nethermind" />
           </Link>
         </section>

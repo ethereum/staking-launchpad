@@ -79,7 +79,7 @@ export const BtecGuide = () => {
       title={formatMessage({ defaultMessage: 'BLS To Execution Change' })}
       description={formatMessage({
         defaultMessage:
-          'Instructions on how to use the staking-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials.',
+          'Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials.',
       })}
     >
       <ComponentStyles>
@@ -143,15 +143,16 @@ export const BtecGuide = () => {
           <Text className="mb10">
             <FormattedMessage
               defaultMessage="To enable your Beacon Chain validator(s) to automatically withdraw balances to your
-              {executionAddress}, you can use the staking deposit CLI tool to generate the signed “BLS To Execution
+              {executionAddress}, you can use the {ethstakerDepositCLI} tool to generate the signed “BLS To Execution
               Change” ({signed}) message JSON file. This message includes the request to change your old BLS
               withdrawal credentials to the new withdrawal credentials in execution address format."
               values={{
                 executionAddress: (
                   <strong>
-                    <FormattedMessage defaultMessage="execution layer (Eth1) address" />
+                    <FormattedMessage defaultMessage="execution layer address" />
                   </strong>
                 ),
+                ethstakerDepositCLI: <Code>ethstaker-deposit-cli</Code>,
                 signed: <Code>SignedBLSToExecutionChange</Code>,
               }}
             />
@@ -183,9 +184,9 @@ export const BtecGuide = () => {
                     <Link
                       primary
                       inline
-                      to="https://github.com/ethereum/staking-deposit-cli/releases"
+                      to="https://github.com/eth-educators/ethstaker-deposit-cli/releases"
                     >
-                      <FormattedMessage defaultMessage="Staking Deposit CLI releases" />
+                      <FormattedMessage defaultMessage="EthStaker Deposit CLI releases" />
                     </Link>
                   ),
                 }}
@@ -205,7 +206,8 @@ export const BtecGuide = () => {
               />
             </Text>
             <CodeBlock>
-              git clone https://github.com/ethereum/staking-deposit-cli.git
+              git clone
+              https://github.com/eth-educators/ethstaker-deposit-cli.git
             </CodeBlock>
             <Text className="mb10">
               <FormattedMessage defaultMessage="Install and set virtualenv:" />
@@ -255,7 +257,7 @@ export const BtecGuide = () => {
                     <Link
                       primary
                       inline
-                      to="https://github.com/ethereum/staking-deposit-cli#step-2-create-keys-and-deposit_data-json-2"
+                      to="https://deposit-cli.ethstaker.cc/existing_mnemonic.html"
                     >
                       <FormattedMessage defaultMessage="docs" />
                     </Link>
@@ -279,7 +281,7 @@ export const BtecGuide = () => {
                       <Link
                         primary
                         inline
-                        to="https://github.com/ethereum/staking-deposit-cli/blob/bls-to-execution-change/README.md#generate-bls-to-execution-change-arguments"
+                        to="https://deposit-cli.ethstaker.cc/generate_bls_to_execution_change.html#optional-arguments"
                       >
                         <FormattedMessage defaultMessage="docs of full arguments here" />
                       </Link>
@@ -595,7 +597,7 @@ export const BtecGuide = () => {
             <br />
             <span>
               Your SignedBLSToExecutionChange JSON file can be found at:
-              /.../staking-deposit-cli/bls_to_execution_changes
+              /.../ethstaker-deposit-cli/bls_to_execution_changes
             </span>
             <br />
             <br />

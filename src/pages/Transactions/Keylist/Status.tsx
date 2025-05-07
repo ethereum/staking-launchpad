@@ -1,10 +1,10 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Spinning } from 'grommet-controls';
 import styled from 'styled-components';
 import { Alert as GrommetAlert } from 'grommet-icons/icons';
 import { Text } from '../../../components/Text';
 import { Dot } from '../../../components/Dot';
-import { FormattedMessage } from 'react-intl';
 import {
   DepositStatus,
   TransactionStatus,

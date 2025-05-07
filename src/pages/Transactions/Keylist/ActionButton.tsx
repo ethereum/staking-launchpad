@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
 import { FormNextLink, FormPreviousLink } from 'grommet-icons';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -8,20 +9,16 @@ import {
   DepositStatus,
   TransactionStatus,
 } from '../../../store/actions/depositFileActions';
-import {
-  BEACONCHAIN_URL,
-  BEACONSCAN_URL,
-  EL_TRANSACTION_URL,
-  IS_NON_INFURA_TESTNET,
-} from '../../../utils/envVars';
-import ReactTooltip from 'react-tooltip';
+import { BEACONCHAIN_URL, EL_TRANSACTION_URL } from '../../../utils/envVars';
+import { errorStatuses } from '../../../utils/txStatus';
 
-const Container = styled.div`
+const Button = styled.button`
   display: flex;
   border: 1px solid ${p => p.theme.gray.medium};
-  padding: 4px;
+  padding: 4px 24px;
   justify-content: center;
   border-radius: 4px;
+  background: transparent;
   cursor: pointer;
   :hover {
     background: ${p => p.theme.gray.light};
@@ -77,11 +74,11 @@ export const ActionButton = ({
   }
   if (transactionStatus === TransactionStatus.READY) {
     return (
-      <Container onClick={onClick}>
+      <Button onClick={onClick}>
         <ButtonText>
           <FormattedMessage defaultMessage="Confirm deposit" />
         </ButtonText>
-      </Container>
+      </Button>
     );
   }
   if (transactionStatus === TransactionStatus.PENDING) {
@@ -115,28 +112,18 @@ export const ActionButton = ({
           </ButtonLink>
         </span>
         <ReactTooltip id="beaconchain-warning" place="top" effect="solid" />
-        {!IS_NON_INFURA_TESTNET && (
-          // Probably no Bellatrix beaconscan explorer
-          <ButtonLink to={`${BEACONSCAN_URL}/0x${pubkey}`}>
-            Beaconscan
-          </ButtonLink>
-        )}
       </div>
     );
   }
 
-  if (
-    [TransactionStatus.REJECTED, TransactionStatus.LEDGER_ERROR].includes(
-      transactionStatus
-    )
-  ) {
+  if (errorStatuses.includes(transactionStatus)) {
     return (
-      <Container onClick={onClick}>
+      <Button onClick={onClick}>
         <ButtonText>
           <FormattedMessage defaultMessage="Try again" />
         </ButtonText>
         {formArrowLink}
-      </Container>
+      </Button>
     );
   }
 

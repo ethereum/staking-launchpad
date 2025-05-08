@@ -319,8 +319,8 @@ const _TopUpPage: React.FC<Props> = () => {
         <SubTextContainer className="my20">
           <Text className="mb20">
             <FormattedMessage
-              defaultMessage='You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance ("max EB", the amount capable of contributing to your stake). 
-              You can also use this to top us if you validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}.'
+              defaultMessage='You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance ("max EB", the amount capable of contributing to your stake). 
+              You can also use this to top up if your validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}.'
               values={{
                 MIN_ACTIVATION_BALANCE,
                 TICKER_NAME,
@@ -330,7 +330,7 @@ const _TopUpPage: React.FC<Props> = () => {
           </Text>
           <Text className="mb20">
             <FormattedMessage
-              defaultMessage="By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties.
+              defaultMessage="By adding funds to an account not yet at its max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties.
                 Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
               values={{
                 MIN_ACTIVATION_BALANCE,
@@ -341,7 +341,7 @@ const _TopUpPage: React.FC<Props> = () => {
           </Text>
           <Text className="mb20">
             <FormattedMessage
-              defaultMessage="The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EF of {MAX_EFFECTIVE_BALANCE}."
+              defaultMessage="The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EB of {MAX_EFFECTIVE_BALANCE}."
               values={{
                 MAX_EFFECTIVE_BALANCE,
                 MIN_ACTIVATION_BALANCE,

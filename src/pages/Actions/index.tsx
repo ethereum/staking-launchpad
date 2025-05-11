@@ -184,40 +184,48 @@ const _ActionsPage = () => {
     setRefreshing(false);
   }, [account, active, selectedValidator, validators]);
 
-  const fetchMoreValidators = useCallback(async () => {
-    if (!active || !account) return;
+  const fetchMoreValidators = useCallback(
+    async (offset?: number) => {
+      if (!active || !account) return;
 
-    setLoading(true);
+      setLoading(true);
 
-    const pubkeys = await fetchPubkeysByWithdrawalAddress(account, fetchOffset);
+      const searchOffset = offset === undefined ? fetchOffset : offset;
 
-    setFetchOffset(prev => prev + MAX_QUERY_LIMIT);
+      const pubkeys = await fetchPubkeysByWithdrawalAddress(
+        account,
+        searchOffset
+      );
 
-    if (!pubkeys) {
-      setValidatorLoadError(fetchOffset === 0 && pubkeys === null);
-      setLoading(false);
-      return;
-    }
+      setFetchOffset(searchOffset + MAX_QUERY_LIMIT);
 
-    const newValidators = await fetchValidatorsByPubkeys(pubkeys);
+      if (!pubkeys) {
+        setValidatorLoadError(searchOffset === 0 && pubkeys === null);
+        setLoading(false);
+        return;
+      }
 
-    if (!newValidators) {
-      setValidatorLoadError(fetchOffset === 0 && newValidators === null);
-      setLoading(false);
-      return;
-    }
+      const newValidators = await fetchValidatorsByPubkeys(pubkeys);
 
-    setLastUpdate(prev => {
-      const now = Date.now();
-      const newTimestamps: Record<string, number> = {};
-      pubkeys.forEach(pubkey => {
-        newTimestamps[pubkey] = now;
+      if (!newValidators) {
+        setValidatorLoadError(searchOffset === 0 && newValidators === null);
+        setLoading(false);
+        return;
+      }
+
+      setLastUpdate(prev => {
+        const now = Date.now();
+        const newTimestamps: Record<string, number> = {};
+        pubkeys.forEach(pubkey => {
+          newTimestamps[pubkey] = now;
+        });
+        return { ...prev, ...newTimestamps };
       });
-      return { ...prev, ...newTimestamps };
-    });
-    setValidators(prev => [...prev, ...newValidators]);
-    setLoading(false);
-  }, [active, account, fetchOffset]);
+      setValidators(prev => [...prev, ...newValidators]);
+      setLoading(false);
+    },
+    [active, account, fetchOffset]
+  );
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   useEffect(() => {
@@ -227,7 +235,10 @@ const _ActionsPage = () => {
 
     if (!active || !account || !isValidNetwork) return;
 
-    fetchMoreValidators();
+    setValidators([]);
+    setSelectedValidator(null);
+    // Use hardcoded offset of 0 to properly reset
+    fetchMoreValidators(0);
     // eslint-disable-next-line
   }, [account, active, chainId]);
 
@@ -332,7 +343,7 @@ const _ActionsPage = () => {
             {moreToFetch && (
               <FetchButton
                 label={<FormattedMessage defaultMessage="Fetch more" />}
-                onClick={fetchMoreValidators}
+                onClick={() => fetchMoreValidators()}
               />
             )}
           </div>

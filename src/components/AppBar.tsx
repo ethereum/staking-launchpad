@@ -385,6 +385,9 @@ const _AppBar = ({ location }: RouteComponentProps) => {
                   <DropdownLink to={routesEnum.withdrawals}>
                     <FormattedMessage defaultMessage="Withdrawals" />
                   </DropdownLink>
+                  <DropdownLink to={routesEnum.topUpPage}>
+                    <FormattedMessage defaultMessage="Top Up" />
+                  </DropdownLink>
                   <DropdownLink to={routesEnum.actionsPage}>
                     <FormattedMessage defaultMessage="Actions" />
                   </DropdownLink>

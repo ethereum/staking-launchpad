@@ -209,10 +209,11 @@ const AddFunds = ({ validator }: AddFundsProps) => {
 
   const primaryLabel = <FormattedMessage defaultMessage="Stake more funds" />;
 
-  const maxValue = BigNumber.min(
-    etherMaxAvailableToSend,
-    etherMaxUseful
-  ).toNumber();
+  const maxValue = BigNumber.min(etherMaxAvailableToSend, etherMaxUseful)
+    .multipliedBy(1e8)
+    .integerValue(BigNumber.ROUND_DOWN)
+    .div(1e8)
+    .toNumber();
 
   const newBalance = executionEtherBalance
     ? Math.max(

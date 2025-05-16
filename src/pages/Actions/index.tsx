@@ -151,6 +151,17 @@ const _ActionsPage = () => {
 
   const [fetchOffset, setFetchOffset] = useState(0);
 
+  useEffect(() => {
+    if (active) return;
+    deactivate();
+    // Reset state
+    setLoading(false);
+    setValidatorLoadError(false);
+    setValidators([]);
+    setSelectedValidator(null);
+    setFetchOffset(0);
+  }, [active, deactivate]);
+
   const handleConnect = useCallback((): void => {
     setLoading(true);
     deactivate();

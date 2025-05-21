@@ -21,11 +21,10 @@ import { Paper } from '../../../components/Paper';
 import { Link } from '../../../components/Link';
 import {
   BEACONCHAIN_URL,
-  MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
   ETHER_TO_GWEI,
-  MAX_EFFECTIVE_BALANCE,
 } from '../../../utils/envVars';
+import { getMaxEB } from '../../../utils/validators';
 
 const FakeLink = styled.span`
   color: blue;
@@ -203,11 +202,7 @@ const ValidatorTable: React.FC<{
 
       const maxEffectiveBalanceEther = statusIneligible
         ? 0
-        : Number(
-            validator.withdrawalcredentials.startsWith('02')
-              ? MAX_EFFECTIVE_BALANCE
-              : MIN_ACTIVATION_BALANCE
-          );
+        : getMaxEB(validator);
       const maxEffectiveBalanceGwei = maxEffectiveBalanceEther * ETHER_TO_GWEI;
       const currentEffectiveBalanceGwei = validator.effectivebalance;
       const alreadyToppedUp =

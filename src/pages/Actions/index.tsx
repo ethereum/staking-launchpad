@@ -152,15 +152,17 @@ const _ActionsPage = () => {
   const [fetchOffset, setFetchOffset] = useState(0);
 
   useEffect(() => {
-    if (active) return;
-    deactivate();
     // Reset state
     setLoading(false);
     setValidatorLoadError(false);
     setValidators([]);
     setSelectedValidator(null);
     setFetchOffset(0);
-  }, [active, deactivate]);
+
+    if (!account) {
+      deactivate();
+    }
+  }, [account]);
 
   const handleConnect = useCallback((): void => {
     setLoading(true);
@@ -195,14 +197,12 @@ const _ActionsPage = () => {
     setRefreshing(false);
   }, [account, active, selectedValidator, validators]);
 
-  const fetchMoreValidators = useCallback(async () => {
+  const fetchValidators = useCallback(async () => {
     if (!active || !account) return;
 
     setLoading(true);
 
     const pubkeys = await fetchPubkeysByWithdrawalAddress(account, fetchOffset);
-
-    setFetchOffset(prev => prev + MAX_QUERY_LIMIT);
 
     if (!pubkeys) {
       setValidatorLoadError(fetchOffset === 0 && pubkeys === null);
@@ -230,6 +230,10 @@ const _ActionsPage = () => {
     setLoading(false);
   }, [active, account, fetchOffset]);
 
+  const onFetchMore = useCallback(() => {
+    setFetchOffset(prev => prev + MAX_QUERY_LIMIT);
+  }, [fetchOffset]);
+
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   useEffect(() => {
     const network = NetworkChainId[chainId as number];
@@ -238,9 +242,9 @@ const _ActionsPage = () => {
 
     if (!active || !account || !isValidNetwork) return;
 
-    fetchMoreValidators();
+    fetchValidators();
     // eslint-disable-next-line
-  }, [account, active, chainId]);
+  }, [account, active, chainId, fetchOffset]);
 
   // Refresh active validator every 30 seconds
   useEffect(() => {
@@ -343,7 +347,7 @@ const _ActionsPage = () => {
             {moreToFetch && (
               <FetchButton
                 label={<FormattedMessage defaultMessage="Fetch more" />}
-                onClick={fetchMoreValidators}
+                onClick={onFetchMore}
               />
             )}
           </div>
@@ -418,7 +422,7 @@ const _ActionsPage = () => {
   }, [
     account,
     active,
-    fetchMoreValidators,
+    fetchValidators,
     formatMessage,
     handleConnect,
     lastUpdate,

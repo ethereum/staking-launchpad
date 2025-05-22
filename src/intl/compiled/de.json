@@ -27,6 +27,20 @@
       "value": " (wickelt die Proof-of-Stake-Konsens-Aufgaben ab, früher „Eth2\" oder „Ethereum 2.0\")."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "Um auf einen Validator Typ 2 zu aufzurüsten, bitte zurückgehen, den Ziel-Validator auswählen und den "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": "-Ablauf durchlaufen."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -213,28 +227,6 @@
       "value": "Epoche, für die eine Abhebung möglich ist"
     }
   ],
-  "/eUGwM": [
-    {
-      "type": 0,
-      "value": "Sie können jederzeit einen beliebigen Teil Ihres gestakten "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " über "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " abheben."
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -305,12 +297,6 @@
     {
       "type": 0,
       "value": " (das vom Einlagenvertrag erlaubte Minimum) hinzufügen"
-    }
-  ],
-  "/rmnC0": [
-    {
-      "type": 0,
-      "value": "Wenn es möglich ist, solltest du zu diesem Zeitpunkt einen anderen Client verwenden, um dich und das Netzwerk zu schützen."
     }
   ],
   "/sp2Uu": [
@@ -689,6 +675,12 @@
       "value": "Details zum Einzahlungsvertrag prüfen"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Konsolidierungsanfragen gelangen in eine separate Warteschlange mit einer geringen Gebühr, die als Sendebetrag der Transaktion ausgewiesen wird. Die Gebühr ist minimal, wenn die Warteschlange kurz ist, wobei ein kleiner Puffer hinzugefügt wird, um Ablehnungen bei plötzlichen Aktivitätsspitzen zu vermeiden."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -895,12 +887,6 @@
       "value": "„Type 0\", „BLS\", „locked\""
     }
   ],
-  "2rflCq": [
-    {
-      "type": 0,
-      "value": "Die Client-Diversität ist für Ethereums Netzwerkstatus besonders wichtig: Ein Fehler in einem Client mit einem Anteil von über 33 % kann dazu führen, dass Ethereum offline geht. Wenn ein Client eine absolute Mehrheit (> 66 %) hat, könnte ein Fehler sogar dafür verantwortlich sein, dass die Chain falsch geteilt wird, was möglicherweise zu Slashing führt."
-    }
-  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -1045,6 +1031,12 @@
     {
       "type": 0,
       "value": "Diese Terminologieaktualisierungen ändern nur die Namenskonventionen, was die Ziele von Ethereum oder Roadmap nicht verändert."
+    }
+  ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Aktiv"
     }
   ],
   "3aykgN": [
@@ -1249,6 +1241,12 @@
       "value": "Das verbleibende Guthaben wird freigeschaltet, nachdem die obige Ausstiegszeit erreicht wurde. Nach der Entsperrung wird das verbleibende Guthaben innerhalb weniger Tage automatisch auf Ihr verbundenes Auszahlungskonto oder Ihren gewählten Ziel-Validator übertragen, wenn Sie Ihr Konto migrieren."
     }
   ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Aktives Verlassen"
+    }
+  ],
   "57MWKW": [
     {
       "type": 0,
@@ -1387,6 +1385,12 @@
     {
       "type": 0,
       "value": "-Validator beenden"
+    }
+  ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "Ziel-Validator ist nicht aktiv"
     }
   ],
   "63gLLu": [
@@ -1549,6 +1553,12 @@
       "value": "Bemerkungen"
     }
   ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Initialisierung ausstehend"
+    }
+  ],
   "738tqz": [
     {
       "type": 0,
@@ -1635,12 +1645,6 @@
     {
       "type": 0,
       "value": "Konfigurationsdatei"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Bitte warten Sie und versuchen Sie es erneut oder suchen Sie Hilfe, wenn dieser Fehler weiterhin besteht."
     }
   ],
   "7XiYRi": [
@@ -1761,6 +1765,12 @@
       "value": "Teku konfigurieren"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Validatoren nach Index oder Pubkey filtern oder nach Pubkey suchen"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1795,6 +1805,12 @@
     {
       "type": 0,
       "value": "Schalte deinen Validator nicht aus, bis diese Epoche erreicht ist."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "Sie haben möglicherweise eine Einzahlung, die akzeptiert wurde, sich aber noch in der Aktivierungswarteschlange befindet. Bitte warten Sie und versuchen Sie es erneut oder suchen Sie Hilfe, wenn dieser Fehler weiterhin besteht."
     }
   ],
   "8k1RjX": [
@@ -1841,12 +1857,6 @@
     {
       "type": 0,
       "value": " – Epoche, in der dein Validatorguthaben für eine vollständige Abhebung im nächsten Validator-Sweep berechtigt ist."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Nach Index oder Pubkey filtern"
     }
   ],
   "8uq59n": [
@@ -2103,10 +2113,22 @@
       "value": "Beenden"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Auf Ausführungsebene bestätigen"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "Verständnis des effektiven Guthabens des Validators"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "Einreihung ausstehend"
     }
   ],
   "AkVktj": [
@@ -2133,10 +2155,10 @@
       "value": "Werde zum Validator mit Lighthouse"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "Sie haben möglicherweise eine Einzahlung, die akzeptiert wurde, aber noch auf der Kette validiert wird. Sie wird hier verfügbar sein, wenn beaconcha.in 2048 Blöcke bestätigt hat."
+      "value": "Ziel-Validator verfügt nicht über Typ 2 Zugangsdaten und muss aktualisiert werden, bevor Mittel darauf übertragen werden können."
     }
   ],
   "Aw1mMs": [
@@ -2223,6 +2245,20 @@
     {
       "type": 0,
       "value": "Tage"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Bitte "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " eingeben, um den Eigentumswechsel Ihres Validatoren zu bestätigen."
     }
   ],
   "Bj5yI5": [
@@ -2329,6 +2365,28 @@
     {
       "type": 0,
       "value": "-Pool hochladen"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "Aufzinsungskonten sind berechtigt Teilauszahlungen über "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " zu beantragen"
     }
   ],
   "CWKE9c": [
@@ -2639,6 +2697,12 @@
       "value": "5. Zeit zum Einzahlen"
     }
   ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Upgrade- und Konsolidierungsanfragen gelangen in eine separate Warteschlange mit einer geringen Gebühr, die als Sendebetrag der Transaktion ausgewiesen wird. Die Gebühr ist minimal, wenn die Warteschlange kurz ist, wobei ein kleiner Puffer hinzugefügt wird, um Ablehnungen bei plötzlichen Aktivitätsspitzen zu vermeiden."
+    }
+  ],
   "EXLB88": [
     {
       "type": 0,
@@ -2801,12 +2865,6 @@
     {
       "type": 0,
       "value": "Versuche es erneut"
-    }
-  ],
-  "FcCHp4": [
-    {
-      "type": 0,
-      "value": "Aktuellste Daten zur Netzwerk-Client-Nutzung"
     }
   ],
   "Felr8P": [
@@ -3159,6 +3217,12 @@
       "value": "Erigon, früher TurboGeth, ist ein Ethereum-Client, der für Leistungsoptimierungen gebaut wurde."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "Die Bestätigung auf der Ausführungsebene garantiert nicht, dass die Anfrage auf der Konsensus-Ebene gültig sein wird. Bitte überprüfen Sie den Beacon Explorer, um zu bestätigen, ob die Anfrage nach 13 Minuten erfolgreich war (bei normalem Finalisierungszeit)."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3199,6 +3263,12 @@
     {
       "type": 0,
       "value": "Transaktion mit Wallet signieren"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "Konto muss zuerst auf einen Zinseszinstyp aktualisiert werden."
     }
   ],
   "IWlazt": [
@@ -3415,10 +3485,10 @@
       "value": "Weiterführende Literatur"
     }
   ],
-  "Jge1Sx": [
+  "JcQdD5": [
     {
       "type": 0,
-      "value": "Beenden erzwingen"
+      "value": "Unterliegt aktuell Slashing"
     }
   ],
   "JhUYU3": [
@@ -4093,6 +4163,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Abhebung abgeschlossen"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4173,6 +4249,12 @@
       "value": "TICKER_NAME"
     }
   ],
+  "OPrOVV": [
+    {
+      "type": 0,
+      "value": "Ohne Slashing beendet"
+    }
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4207,6 +4289,12 @@
     {
       "type": 0,
       "value": "-Werte werden auf Grundlage der aktuellen Epochennummer berechnet. Diese Werte legen genau fest, wann der Validator nicht mehr zur Online-Validierung benötigt wird und der Validator die Berechtigung zur vollständigen Abhebung erhält."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Überprüfen Sie aktuelle Einzahlungen im Explorer"
     }
   ],
   "OdYQYh": [
@@ -4353,6 +4441,12 @@
       "value": "Dein Netzwerk hat sich geändert"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Austrittsanfragen gelangen in eine separate Warteschlange mit einer geringen Gebühr, die als Sendebetrag der Transaktion ausgewiesen wird. Die Gebühr ist minimal, wenn die Warteschlange kurz ist, wobei ein kleiner Puffer hinzugefügt wird, um Ablehnungen bei plötzlichen Aktivitätsspitzen zu vermeiden."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4411,6 +4505,12 @@
     {
       "type": 0,
       "value": "pip-Dokumentation"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Nur Validatoren mit aktivem Status können Mittel von anderen Validatoren erhalten."
     }
   ],
   "Q/HeiY": [
@@ -4601,6 +4701,12 @@
     {
       "type": 0,
       "value": "Glückwunsch"
+    }
+  ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "Ziel-Validator ist nicht mit Ihrem aktuellen Wallet verknüpft!"
     }
   ],
   "RhR6+a": [
@@ -4909,6 +5015,16 @@
       "value": " übertragen"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " oder versuchen Sie, die Seite zu aktualisieren."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5103,6 +5219,12 @@
     {
       "type": 0,
       "value": "Ich bin sicher, dass der Validator, den ich aufladen will, mein Validator ist."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Abhebungsanfragen gelangen in eine separate Warteschlange mit einer geringen Gebühr, die als Sendebetrag der Transaktion ausgewiesen wird. Die Gebühr ist minimal, wenn die Warteschlange kurz ist, wobei ein kleiner Puffer hinzugefügt wird, um Ablehnungen bei plötzlichen Aktivitätsspitzen zu vermeiden."
     }
   ],
   "Vm6cRY": [
@@ -5813,12 +5935,6 @@
       "value": "Mehr abrufen"
     }
   ],
-  "b8APBK": [
-    {
-      "type": 0,
-      "value": "Mehr zur Client-Vielfalt"
-    }
-  ],
   "bFiejS": [
     {
       "type": 0,
@@ -6089,6 +6205,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "Das ausgewählte Konto muss auf einen Aufzinsungstyp aktualisiert werden, um einen anderen Validator zu absorbieren."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6139,12 +6261,6 @@
     {
       "type": 0,
       "value": " abheben."
-    }
-  ],
-  "cnQKC2": [
-    {
-      "type": 0,
-      "value": "Derzeit wird Geth von > 66 % des Netzwerks genutzt."
     }
   ],
   "cpxfOR": [
@@ -6291,6 +6407,12 @@
     {
       "type": 0,
       "value": "Setup"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Vollständig verlassen"
     }
   ],
   "dzdAcD": [
@@ -6505,24 +6627,14 @@
       "value": "nur auf einem Validator-Rechner gespeichert"
     }
   ],
-  "fnMHGO": [
-    {
-      "type": 0,
-      "value": "Warten auf Wallet-Bestätigung"
-    }
-  ],
-  "fnV2qn": [
-    {
-      "type": 0,
-      "value": "Aufzinsungskonten, die berechtigt sind, Teilauszahlungen über "
-    },
+  "fdGVBw": [
     {
       "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
+      "value": "subject"
     },
     {
       "type": 0,
-      "value": " "
+      "value": " kann einen beliebigen Teil des gestakten "
     },
     {
       "type": 1,
@@ -6530,7 +6642,21 @@
     },
     {
       "type": 0,
-      "value": " zu beantragen"
+      "value": " über "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " abheben."
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "Warten auf Wallet-Bestätigung"
     }
   ],
   "fpe4Gx": [
@@ -7011,6 +7137,12 @@
       "value": "Für diese Validatoren wurde keine Abhebungsadresse festgelegt. Gestakte Gelder und Prämien werden bis zur Bereitstellung von Zugangsdaten zum Abheben gesperrt."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "Keine berechtigen Source-Konten gefunden. Source-Validatoren müssen mindestens 256 Epochen (~27 Stunden) aktiviert sein, bevor sie für eine Konsolidierung berechtigt sind."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7421,12 +7553,6 @@
       "value": "Hinweise"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "On-chain bestätigen"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7591,6 +7717,12 @@
       "value": "Ändere deine Wallet"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "Im Beacon-Explorer anzeigen"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7729,6 +7861,12 @@
     {
       "type": 0,
       "value": "Anzahl an Abhebungen"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "Es wurden keine Validatoren mit Zugangsdaten zum Abheben gefunden, die mit dem verbundenen Konto übereinstimmen."
     }
   ],
   "mhyltV": [
@@ -7943,12 +8081,6 @@
       "value": " Nachricht mit Ihrem BLS-Auszahlungsschlüssel an Ihre gewünschte Ethereum-Auszahlungsadresse senden. Diese Adresse kann nur einmal angegeben und nicht erneut geändert werden."
     }
   ],
-  "oF4os+": [
-    {
-      "type": 0,
-      "value": "Derzeit wird Prysm von > 33 % des Netzwerks genutzt."
-    }
-  ],
   "oF6xvJ": [
     {
       "type": 0,
@@ -7967,12 +8099,6 @@
       "value": "Jetzt, wo alle Schlüssel importiert sind, musst du nur noch den Validierungs-Client starten (vorausgesetzt, die Beacon-Node läuft bereits)."
     }
   ],
-  "oNP2EG": [
-    {
-      "type": 0,
-      "value": "Derzeit wird Lighthouse von > 33 % des Netzwerks genutzt."
-    }
-  ],
   "oNohob": [
     {
       "type": 0,
@@ -7983,12 +8109,6 @@
     {
       "type": 0,
       "value": "Ihr Validator"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "Es wurden keine Validatoren gefunden."
     }
   ],
   "oVx7Qe": [
@@ -8311,6 +8431,12 @@
       "value": " abgeleitet wird. Dieses Format ist nicht kompatibel mit Beacon-Chain-Auszahlungen und muss auf die Ethereum-Adressinformationen aktualisiert werden, um Auszahlungen zu ermöglichen."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Maximale Gebühr"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8377,6 +8503,12 @@
     {
       "type": 0,
       "value": "Die Verbindung zu deiner Wallet wurde getrennt"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "Abhebung möglich"
     }
   ],
   "qgqVCE": [
@@ -8589,6 +8721,12 @@
       "value": "Teku kann auch über eine YAML-Datei konfiguriert werden, die über verschiedene Wege übergeben wird."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "Mit Slashing beendet"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8711,6 +8849,12 @@
     {
       "type": 0,
       "value": "Was ist der Einzahlungsvertrag?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "Konto muss für mindestens 256 Epochen (~27 Stunden) aktiviert sein, bevor es für Teilabhebungen berechtigt ist."
     }
   ],
   "szN3Fl": [
@@ -9029,6 +9173,12 @@
       "value": "Schlüsselpaar erzeugen"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "Mehr über die Aktualisierung eines Validatoren mit Typ 0 Zugangsdaten."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9233,6 +9383,16 @@
     {
       "type": 0,
       "value": "Option 2: Quellcode + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "ICH ÜBERTRAGE DAS GESAMNTE GUTHABEN MEINES VALIDATORS AUF DEN BESITZER VON "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

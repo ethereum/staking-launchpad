@@ -44,6 +44,9 @@ const ComponentStyles = styled.div`
       li:nth-of-type(2) {
         list-style: '✅';
       }
+      li:nth-of-type(3) {
+        list-style: '🚀';
+      }
     }
   }
   li {
@@ -132,19 +135,24 @@ export const Withdrawals = () => {
         <section>
           <Text>
             <FormattedMessage
-              defaultMessage="As of the Shanghai/Capella upgrade withdrawals have been enabled on
-              the Beacon Chain, with the inclusion of {eip}. This Ethereum Improvement Proposal
-              enables rewards to be automatically withdrawn to the execution layer, and also
-              provides a way for exited validators to unlock their entire balance—no gas
-              required."
+              defaultMessage="As of the Shanghai/Capella (March 2023) and Pectra (May 2025) upgrades, withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip4895} and {eip7251}. For Type 1 (0x01) validators, rewards above 32 ETH are automatically withdrawn to the execution layer. Type 2 (0x02) validators introduced by Pectra auto-compound rewards up to 2,048 ETH. Both types support full withdrawals for exited validators—no gas required."
               values={{
-                eip: (
+                eip4895: (
                   <Link
                     primary
                     inline
                     to="https://eips.ethereum.org/EIPS/eip-4895"
                   >
                     <FormattedMessage defaultMessage="EIP-4895" />
+                  </Link>
+                ),
+                eip7251: (
+                  <Link
+                    primary
+                    inline
+                    to="https://eips.ethereum.org/EIPS/eip-7251"
+                  >
+                    <FormattedMessage defaultMessage="EIP-7251" />
                   </Link>
                 ),
               }}
@@ -210,6 +218,19 @@ export const Withdrawals = () => {
                     }}
                   />
                 </li>
+                <li>
+                  <FormattedMessage
+                    defaultMessage='{type2} = "Type 2" = Compounding execution key: {balanceGrowth}'
+                    values={{
+                      type2: <Code>0x02</Code>,
+                      balanceGrowth: (
+                        <em>
+                          <FormattedMessage defaultMessage="Balance can grow above 32 ETH and supports top-ups / manual partial withdrawals" />
+                        </em>
+                      ),
+                    }}
+                  />
+                </li>
               </ul>
               <Text className="mt20">
                 <FormattedMessage defaultMessage="There are newer account types beyond Type 1. Migrating to Type 1 from Type 0 is a prerequisite before migrating to later account types." />
@@ -240,10 +261,13 @@ export const Withdrawals = () => {
               </Heading>
               <ul>
                 <li>
-                  <strong>Staking Deposit CLI</strong> -{' '}
+                  <strong>Staking Deposit CLI 3.0+</strong> -{' '}
                   <Link inline primary to="/btec/">
                     <FormattedMessage defaultMessage="Launchpad walkthrough tutorial" />
-                  </Link>
+                  </Link>{' '}
+                  <em>
+                    <FormattedMessage defaultMessage="(supports Type 2 credentials and increaseValidatorBalance)" />
+                  </em>
                 </li>
                 <li>
                   <strong>Wagyu Key Gen GUI</strong> -{' '}
@@ -256,14 +280,17 @@ export const Withdrawals = () => {
                   </Link>
                 </li>
                 <li>
-                  <strong>ethdo</strong> -{' '}
+                  <strong>ethdo v1.31+</strong> -{' '}
                   <Link
                     inline
                     primary
                     to="https://github.com/wealdtech/ethdo/blob/master/docs/changingwithdrawalcredentials.md"
                   >
                     <FormattedMessage defaultMessage="Changing withdrawal credentials" />
-                  </Link>
+                  </Link>{' '}
+                  <em>
+                    <FormattedMessage defaultMessage="(supports Type 2 credentials)" />
+                  </em>
                 </li>
               </ul>
               <Text className="my20">
@@ -336,16 +363,8 @@ export const Withdrawals = () => {
             </Anchor>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="An {excessBalanceWithdrawal} is processed when an active validator has a maxed out
-                effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, and has a total balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}.
-                A single validator cannot get rewards on excess balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}, and thus these accounts will have
-                any extra balance automatically withdrawn to their Ethereum address."
+                defaultMessage="For Type 1 validators (0x01) any balance > {PRICE_PER_VALIDATOR} {TICKER_NAME} is queued for sweep to the withdrawal address."
                 values={{
-                  excessBalanceWithdrawal: (
-                    <strong>
-                      <FormattedMessage defaultMessage="excess balance withdrawal" />
-                    </strong>
-                  ),
                   PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
                   TICKER_NAME,
                 }}
@@ -353,10 +372,17 @@ export const Withdrawals = () => {
             </Text>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="These are also referred to as “partial withdrawals” or “reward payments” as the remaining
-                {PRICE_PER_VALIDATOR} {TICKER_NAME} stays locked and staked."
+                defaultMessage="For Type 2 validators (0x02) the balance compounds on-validator up to 2,048 {TICKER_NAME}. Surplus can be withdrawn manually or automatically if it exceeds that cap."
                 values={{
-                  PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
+                  TICKER_NAME,
+                }}
+              />
+            </Text>
+            <Text className="mb10">
+              <FormattedMessage
+                defaultMessage="These are also referred to as “partial withdrawals” or “reward payments” as the remaining
+                balance stays locked and staked (32 {TICKER_NAME} for Type 1, variable up to 2,048 {TICKER_NAME} for Type 2)."
+                values={{
                   TICKER_NAME,
                 }}
               />
@@ -366,7 +392,7 @@ export const Withdrawals = () => {
                 📝
               </span>{' '}
               <Text className="inline">
-                <FormattedMessage defaultMessage="It is not possible to manually request specific amounts of ETH to be withdrawn" />
+                <FormattedMessage defaultMessage="New in Pectra: The withdrawal address can call partialWithdraw(amount) to pull a custom amount from a Type 2 validator without exiting." />
               </Text>
             </Alert>
           </section>
@@ -417,6 +443,9 @@ export const Withdrawals = () => {
                   defaultMessage="Those looking to exit their validator from staking and withdrawal their ETH should
                   check out the guide below that matches your setup:"
                 />
+              </Text>
+              <Text className="mb10">
+                <FormattedMessage defaultMessage="Pectra adds EIP-7002. If your validator already has Type 1 or Type 2 creds, you may instead send an execution-layer exitValidator() call from the withdrawal address—no BLS key or validator client interaction required." />
               </Text>
               <Text className="mb10">
                 <strong>
@@ -615,6 +644,9 @@ export const Withdrawals = () => {
                 into a provided withdrawal account."
               />
             </Text>
+            <Text className="mb10">
+              <FormattedMessage defaultMessage="Type 2 exception: Validators using 0x02 credentials do not enter the periodic sweep unless (a) they hold more than 2,048 ETH or (b) the withdrawal address explicitly calls partialWithdraw()." />
+            </Text>
           </section>
 
           <section>
@@ -632,7 +664,7 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="On a never-ending loop, every single validator account is continuously evaluated for
-                eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed
+                eligible ETH withdrawals (partial and full withdrawals, more on this below). Validators are processed
                 in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
               />
             </Text>
@@ -693,8 +725,7 @@ export const Withdrawals = () => {
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="Similarly, there is also an {exitQueue}, which limits how quickly validators can
-                {leave} the network. This is for security reasons. Given each validator is limited to a max effective
-                balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, this prevents large portions of the ETH from potentially
+                {leave} the network. This is for security reasons. The exit queue prevents large portions of the ETH from potentially
                 being used in an attack and then quickly exiting from the network all at once."
                 values={{
                   exitQueue: (
@@ -707,8 +738,6 @@ export const Withdrawals = () => {
                       <FormattedMessage defaultMessage="leave" />
                     </em>
                   ),
-                  PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
-                  TICKER_NAME,
                 }}
               />
             </Text>
@@ -867,9 +896,12 @@ export const Withdrawals = () => {
               <Alert variant="success">
                 <Text>
                   <FormattedMessage
-                    defaultMessage="Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit,
+                    defaultMessage="Note that once a user has {type1} or {type2} withdrawal credentials and has broadcast a voluntary exit,
                     there is no further action required until the processing is complete."
-                    values={{ type1: <Code>0x01</Code> }}
+                    values={{
+                      type1: <Code>0x01</Code>,
+                      type2: <Code>0x02</Code>,
+                    }}
                   />
                 </Text>
               </Alert>
@@ -923,9 +955,8 @@ export const Withdrawals = () => {
               </li>
               <li>
                 <FormattedMessage
-                  defaultMessage="Is the effective balance maxed out at {PRICE_PER_VALIDATOR} {TICKER_NAME}?"
+                  defaultMessage="Is the validator's effective balance maxed out? (32 {TICKER_NAME} for Type 1; up to 2,048 {TICKER_NAME} for Type 2)"
                   values={{
-                    PRICE_PER_VALIDATOR: MIN_ACTIVATION_BALANCE,
                     TICKER_NAME,
                   }}
                 />
@@ -1074,6 +1105,16 @@ export const Withdrawals = () => {
                 to="https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/"
               >
                 <FormattedMessage defaultMessage="Capella - Formal specification" />
+              </Link>
+            </li>
+            <li>
+              <Link primary inline to="https://eips.ethereum.org/EIPS/eip-7251">
+                <FormattedMessage defaultMessage="EIP-7251 - Max Effective Balance / consolidations" />
+              </Link>
+            </li>
+            <li>
+              <Link primary inline to="https://eips.ethereum.org/EIPS/eip-7002">
+                <FormattedMessage defaultMessage="EIP-7002 - EL-triggered exits & partial withdraw" />
               </Link>
             </li>
             <li>

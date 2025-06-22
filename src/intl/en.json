@@ -364,9 +364,6 @@
   "3KP7+U": {
     "message": "Command line with flags"
   },
-  "3LbIZa": {
-    "message": "You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top us if you validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}."
-  },
   "3O/6JV": {
     "message": "Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
   },
@@ -506,9 +503,6 @@
   },
   "67oM5N": {
     "message": "Active Online"
-  },
-  "69FPys": {
-    "message": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EB of {MAX_EFFECTIVE_BALANCE}."
   },
   "6NndcB": {
     "message": "leave"
@@ -1817,9 +1811,6 @@
   "S+FY5u": {
     "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
   },
-  "S3RTk+": {
-    "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -2194,6 +2185,9 @@
   },
   "ZTo0Fl": {
     "message": "Why is there a wait?"
+  },
+  "Zrhg0r": {
+    "message": "By adding funds to an account not yet at its max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
   },
   "ZsXdlw": {
     "message": "Erigon installation documentation"
@@ -3176,6 +3170,9 @@
   "pyWt01": {
     "message": "Deposit summary"
   },
+  "q+m2J+": {
+    "message": "You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top up if your validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}."
+  },
   "q0thwm": {
     "message": "As a validator you are rewarded for proposing/attesting to blocks that are included in the chain."
   },
@@ -3325,6 +3322,9 @@
   },
   "sZK38z": {
     "message": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
+  },
+  "sctRmf": {
+    "message": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EB of {MAX_EFFECTIVE_BALANCE}."
   },
   "sgn0wo": {
     "message": "What happens if I have BLS withdrawal credentials and I lose my withdrawal key?"

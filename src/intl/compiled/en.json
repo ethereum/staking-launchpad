@@ -53,6 +53,12 @@
       "value": "migrate funds to"
     }
   ],
+  "+Cp43+": [
+    {
+      "type": 0,
+      "value": "Learn more on Pectrified"
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
@@ -707,6 +713,36 @@
     {
       "type": 0,
       "value": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
+  "1iW5bS": [
+    {
+      "type": 0,
+      "value": "Note: Balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " will temporarily disappear from balance shown above while it processes through an activation queue. See "
+    },
+    {
+      "type": 1,
+      "value": "pectrified"
+    },
+    {
+      "type": 0,
+      "value": " for details."
     }
   ],
   "1ingnQ": [
@@ -1571,6 +1607,12 @@
     {
       "type": 0,
       "value": "Depending which method you use to generate your keys:"
+    }
+  ],
+  "7GeD1+": [
+    {
+      "type": 0,
+      "value": "View validator and queue details on Pectrified"
     }
   ],
   "7Iz3JI": [
@@ -8965,6 +9007,28 @@
     {
       "type": 0,
       "value": "Checklist"
+    }
+  ],
+  "spvBxs": [
+    {
+      "type": 0,
+      "value": "Balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " will automatically be staked, requiring activation queue processing and a delay."
     }
   ],
   "sraQ3P": [

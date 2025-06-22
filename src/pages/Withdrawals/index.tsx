@@ -13,6 +13,7 @@ import {
   NETWORK_NAME,
   MIN_ACTIVATION_BALANCE,
   TICKER_NAME,
+  MAX_EFFECTIVE_BALANCE,
 } from '../../utils/envVars';
 
 const ComponentStyles = styled.div`
@@ -135,7 +136,7 @@ export const Withdrawals = () => {
         <section>
           <Text>
             <FormattedMessage
-              defaultMessage="As of the Shanghai/Capella (March 2023) and Pectra (May 2025) upgrades, withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip4895} and {eip7251}. For Type 1 (0x01) validators, rewards above 32 ETH are automatically withdrawn to the execution layer. Type 2 (0x02) validators introduced by Pectra auto-compound rewards up to 2,048 ETH. Both types support full withdrawals for exited validators—no gas required."
+              defaultMessage="As of the Shanghai/Capella (March 2023) and Pectra (May 2025) upgrades, withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip4895} and {eip7251}. For Type 1 (0x01) validators, rewards above {MIN_ACTIVATION_BALANCE} {TICKER_NAME} are automatically withdrawn to the execution layer. Type 2 (0x02) validators introduced by Pectra auto-compound rewards up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}. Both types support full withdrawals for exited validators—no gas required."
               values={{
                 eip4895: (
                   <Link
@@ -155,6 +156,9 @@ export const Withdrawals = () => {
                     <FormattedMessage defaultMessage="EIP-7251" />
                   </Link>
                 ),
+                MIN_ACTIVATION_BALANCE,
+                TICKER_NAME,
+                MAX_EFFECTIVE_BALANCE,
               }}
             />
           </Text>
@@ -220,12 +224,17 @@ export const Withdrawals = () => {
                 </li>
                 <li>
                   <FormattedMessage
-                    defaultMessage='{type2} = "Type 2" = Compounding execution key: {balanceGrowth}'
+                    defaultMessage='{type2} = "Type 2" = Compounding account = Balance can grow above {MIN_ACTIVATION_BALANCE} {TICKER_NAME}: {depositWithdrawal}'
                     values={{
                       type2: <Code>0x02</Code>,
-                      balanceGrowth: (
+                      MIN_ACTIVATION_BALANCE,
+                      TICKER_NAME,
+                      depositWithdrawal: (
                         <em>
-                          <FormattedMessage defaultMessage="Balance can grow above 32 ETH and supports top-ups / manual partial withdrawals" />
+                          <FormattedMessage
+                            defaultMessage="supports top-ups / manual partial withdrawals"
+                            values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
+                          />
                         </em>
                       ),
                     }}
@@ -261,7 +270,7 @@ export const Withdrawals = () => {
               </Heading>
               <ul>
                 <li>
-                  <strong>Staking Deposit CLI 3.0+</strong> -{' '}
+                  <strong>Ethstaker Deposit CLI</strong> -{' '}
                   <Link inline primary to="/btec/">
                     <FormattedMessage defaultMessage="Launchpad walkthrough tutorial" />
                   </Link>{' '}
@@ -372,17 +381,21 @@ export const Withdrawals = () => {
             </Text>
             <Text className="mb10">
               <FormattedMessage
-                defaultMessage="For Type 2 validators (0x02) the balance compounds on-validator up to 2,048 {TICKER_NAME}. Surplus can be withdrawn manually or automatically if it exceeds that cap."
+                defaultMessage="For Type 2 validators (0x02) the balance compounds up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}. Surplus over {MIN_ACTIVATION_BALANCE} can be withdrawn manually at any point, and will occur automatically if it exceeds {MAX_EFFECTIVE_BALANCE}."
                 values={{
                   TICKER_NAME,
+                  MAX_EFFECTIVE_BALANCE,
+                  MIN_ACTIVATION_BALANCE,
                 }}
               />
             </Text>
             <Text className="mb10">
               <FormattedMessage
                 defaultMessage="These are also referred to as “partial withdrawals” or “reward payments” as the remaining
-                balance stays locked and staked (32 {TICKER_NAME} for Type 1, variable up to 2,048 {TICKER_NAME} for Type 2)."
+                balance stays locked and staked ({MIN_ACTIVATION_BALANCE} {TICKER_NAME} for Type 1, variable up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME} for Type 2)."
                 values={{
+                  MIN_ACTIVATION_BALANCE,
+                  MAX_EFFECTIVE_BALANCE,
                   TICKER_NAME,
                 }}
               />
@@ -645,7 +658,10 @@ export const Withdrawals = () => {
               />
             </Text>
             <Text className="mb10">
-              <FormattedMessage defaultMessage="Type 2 exception: Validators using 0x02 credentials do not enter the periodic sweep unless (a) they hold more than 2,048 ETH or (b) the withdrawal address explicitly calls partialWithdraw()." />
+              <FormattedMessage
+                defaultMessage="Type 2 exception: Validators using 0x02 credentials do not enter the periodic sweep unless (a) they hold more than {MAX_EFFECTIVE_BALANCE} ETH or (b) the withdrawal address explicitly calls partialWithdraw()."
+                values={{ MAX_EFFECTIVE_BALANCE }}
+              />
             </Text>
           </section>
 
@@ -955,8 +971,10 @@ export const Withdrawals = () => {
               </li>
               <li>
                 <FormattedMessage
-                  defaultMessage="Is the validator's effective balance maxed out? (32 {TICKER_NAME} for Type 1; up to 2,048 {TICKER_NAME} for Type 2)"
+                  defaultMessage="Is the validator's effective balance maxed out? ({MIN_ACTIVATION_BALANCE} {TICKER_NAME} for Type 1; up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME} for Type 2)"
                   values={{
+                    MIN_ACTIVATION_BALANCE,
+                    MAX_EFFECTIVE_BALANCE,
                     TICKER_NAME,
                   }}
                 />

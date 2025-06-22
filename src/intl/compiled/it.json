@@ -27,6 +27,20 @@
       "value": " (che gestisce i compiti di consenso proof-of-stake, ex 'Eth2' o 'Ethereum 2.0')."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "Per passare a un validatore di tipo 2, torna indietro, seleziona il validatore target e segui il flusso "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -213,28 +227,6 @@
       "value": "epoca idonea per il prelievo"
     }
   ],
-  "/eUGwM": [
-    {
-      "type": 0,
-      "value": "Puoi prelevare qualsiasi porzione del tuo "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " in staking superiore a "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -305,12 +297,6 @@
     {
       "type": 0,
       "value": " (il minimo consentito dal contratto di deposito)"
-    }
-  ],
-  "/rmnC0": [
-    {
-      "type": 0,
-      "value": "Se possibile, valuta l'esecuzione di un altro client in questo momento, per aiutare a proteggere te stesso e la rete."
     }
   ],
   "/sp2Uu": [
@@ -685,6 +671,12 @@
       "value": "Controlla i dettagli del contratto di deposito"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Le richieste di consolidamento vengono inserite in una coda apposita con una piccola commissione presentata come l'importo inviato tramite la transazione. Quando la coda è breve la commissione è minima, con l'aggiunta di un piccolo buffer per prevenire rifiuti a causa di improvvisi picchi di attività."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -891,12 +883,6 @@
       "value": "\"Tipo 0\", \"BLS\", \"bloccato\""
     }
   ],
-  "2rflCq": [
-    {
-      "type": 0,
-      "value": "La diversità dei client è estremamente importante per la salute della rete di Ethereum: un bug in un client con una quota superiore al 33% può mandare offline Ethereum. Se il client ha una grande maggioranza (>66%), un bug potrebbe causare la divisione errata della catena, causando potenzialmente lo slashing."
-    }
-  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -1037,6 +1023,12 @@
     {
       "type": 0,
       "value": "Questi aggiornamenti di terminologia cambiano solo le convenzioni di nomenclatura, senza alterare gli obiettivi né la tabella di marcia di Ethereum."
+    }
+  ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Attivo"
     }
   ],
   "3aykgN": [
@@ -1237,6 +1229,12 @@
       "value": "Il saldo rimanente verrà sbloccato dopo che verrà raggiunta l'epoca di uscita di cui sopra. Una volta sbloccato, il saldo rimanente verrà trasferito automaticamente al tuo conto di prelievo collegato, oppure al tuo validatore target selezionato se stai effettuando una migrazione di conti, entro pochi giorni."
     }
   ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Già attivo"
+    }
+  ],
   "57MWKW": [
     {
       "type": 0,
@@ -1375,6 +1373,12 @@
     {
       "type": 1,
       "value": "client"
+    }
+  ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "Il validatore target non è attivo"
     }
   ],
   "63gLLu": [
@@ -1533,6 +1537,12 @@
       "value": "Note"
     }
   ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Inizializzazione in corso"
+    }
+  ],
   "738tqz": [
     {
       "type": 0,
@@ -1615,12 +1625,6 @@
     {
       "type": 0,
       "value": "File di configurazione"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Attendi e prova di nuovo o, se l'errore persiste, chiedi aiuto."
     }
   ],
   "7XiYRi": [
@@ -1741,6 +1745,12 @@
       "value": "Configura Teku"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Filtra i tuoi validatori per indice o chiave pubblica o cerca per chiave pubblica"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1775,6 +1785,12 @@
     {
       "type": 0,
       "value": "Non spegnere il validatore fino a quando non si raggiunge questa epoca."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "Potresti avere un deposito accettato ma in corso di elaborazione nella coda di attivazione. Aspetta e riprova o, se l'errore persiste, chiedi assistenza."
     }
   ],
   "8k1RjX": [
@@ -1821,12 +1837,6 @@
     {
       "type": 0,
       "value": ": epoca in cui i fondi del validatore sono idonei per un prelievo completo durante lo sweep del validatore successivo."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Filtra per indice o chiave pubblica"
     }
   ],
   "8uq59n": [
@@ -2083,10 +2093,22 @@
       "value": "Uscita"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Conferma sul livello di esecuzione"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "informazioni sul saldo effettivo del validatore"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "In coda"
     }
   ],
   "AkVktj": [
@@ -2113,10 +2135,10 @@
       "value": "Diventa validatore con Lighthouse"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "Potresti avere un deposito che è stato accettato ma che è in corso di validazione sulla catena. Sarà disponibile qui quando beaconcha.in avrà confermato 2048 blocchi."
+      "value": "Il validatore target non possiede credenziali di tipo 2 e deve essere aggiornato affinché i fondi possano essere incanalati verso di esso."
     }
   ],
   "Aw1mMs": [
@@ -2203,6 +2225,20 @@
     {
       "type": 0,
       "value": "giorni"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Digita "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " per dichiarare di comprendere che il tuo validatore sta cambiando proprietario."
     }
   ],
   "Bj5yI5": [
@@ -2309,6 +2345,24 @@
     {
       "type": 0,
       "value": " di nodi beacon"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "I conti composti sono idonei a richiedere prelievi parziali di qualsiasi importo in eccesso rispetto a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "CWKE9c": [
@@ -2615,6 +2669,12 @@
       "value": "5. Tempo di depositare"
     }
   ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Le richieste di aggiornamento e consolidamento vengono inserite in una coda apposita con una piccola commissione presentata come l'importo inviato tramite la transazione. Quando la coda è breve la commissione è minima, con l'aggiunta di un piccolo buffer per prevenire rifiuti a causa di improvvisi picchi di attività."
+    }
+  ],
   "EXLB88": [
     {
       "type": 0,
@@ -2777,12 +2837,6 @@
     {
       "type": 0,
       "value": "Riprova"
-    }
-  ],
-  "FcCHp4": [
-    {
-      "type": 0,
-      "value": "Ultimi dati sull'utilizzo dei client di rete"
     }
   ],
   "Felr8P": [
@@ -3131,6 +3185,12 @@
       "value": "In precedenza TurboGeth, Erigon è un client Ethereum progettato per consentire l'ottimizzazione delle prestazioni."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "La conferma sul livello di esecuzione non garantisce che la richiesta sarà valida su quello del consenso. Controlla l'esploratore della beacon chain dopo 13 minuti (se la finalizzazione avviene secondo le normali tempistiche) per verificare se la richiesta è andata a buon fine."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3171,6 +3231,12 @@
     {
       "type": 0,
       "value": "Firma la transazione con il tuo portafoglio"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "È necessario prima aggiornare il conto al tipo composto."
     }
   ],
   "IWlazt": [
@@ -3379,10 +3445,10 @@
       "value": "Letture consigliate"
     }
   ],
-  "Jge1Sx": [
+  "JcQdD5": [
     {
       "type": 0,
-      "value": "Uscita forzata"
+      "value": "Attivo con slashing"
     }
   ],
   "JhUYU3": [
@@ -4053,6 +4119,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Prelievo effettuato"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4133,6 +4205,12 @@
       "value": "TICKER_NAME"
     }
   ],
+  "OPrOVV": [
+    {
+      "type": 0,
+      "value": "Uscito senza slashing"
+    }
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4167,6 +4245,12 @@
     {
       "type": 0,
       "value": " sono calcolati in base al numero di epoca corrente. Questi valori determinano con precisione quando il validatore non dovrà più essere online per eseguire la validazione e quando il validatore è idoneo per il prelievo completo, rispettivamente."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Verifica recenti depositi nell'esploratore"
     }
   ],
   "OdYQYh": [
@@ -4313,6 +4397,12 @@
       "value": "La tua rete è cambiata"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Le richieste di uscita vengono inserite in una coda apposita con una piccola commissione presentata come l'importo inviato tramite la transazione. Quando la coda è breve la commissione è minima, con l'aggiunta di un piccolo buffer per prevenire rifiuti a causa di improvvisi picchi di attività."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4371,6 +4461,12 @@
     {
       "type": 0,
       "value": "documentazione pip"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Solo i validatori con uno stato attivo possono ricevere fondi da altri validatori."
     }
   ],
   "Q/HeiY": [
@@ -4557,6 +4653,12 @@
     {
       "type": 0,
       "value": "congratulazioni"
+    }
+  ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "Il validatore target non è associato al tuo attuale portafoglio."
     }
   ],
   "RhR6+a": [
@@ -4857,6 +4959,16 @@
       "value": "index"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " o prova a ricaricare la pagina."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5051,6 +5163,12 @@
     {
       "type": 0,
       "value": "Ho la certezza che il validatore che sto ricaricando è il mio validatore."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Le richieste di prelievo vengono inserite in una coda apposita con una piccola commissione presentata come l'importo inviato tramite la transazione. Quando la coda è breve la commissione è minima, con l'aggiunta di un piccolo buffer per prevenire rifiuti a causa di improvvisi picchi di attività."
     }
   ],
   "Vm6cRY": [
@@ -5757,12 +5875,6 @@
       "value": "Recupera di più"
     }
   ],
-  "b8APBK": [
-    {
-      "type": 0,
-      "value": "Maggiori informazioni sulla diversità dei client"
-    }
-  ],
   "bFiejS": [
     {
       "type": 0,
@@ -5942,7 +6054,7 @@
   "cJX99/": [
     {
       "type": 0,
-      "value": "Controlla il tuo esploratore di blocchi preferito della Beacon Chain:"
+      "value": "Controlla il tuo esploratore di blocchi preferito della beacon chain:"
     }
   ],
   "cPsIkp": [
@@ -6029,6 +6141,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "Il conto selezionato deve essere aggiornato al tipo composto per assorbire un altro validatore."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6079,12 +6197,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "cnQKC2": [
-    {
-      "type": 0,
-      "value": "Attualmente Geth è utilizzato da oltre il 66% della rete."
     }
   ],
   "cpxfOR": [
@@ -6231,6 +6343,12 @@
     {
       "type": 0,
       "value": "Configurazione"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Esci del tutto"
     }
   ],
   "dzdAcD": [
@@ -6445,16 +6563,22 @@
       "value": "memorizzato su un solo computer validatore"
     }
   ],
-  "fnMHGO": [
+  "fdGVBw": [
+    {
+      "type": 1,
+      "value": "subject"
+    },
     {
       "type": 0,
-      "value": "In attesa di conferma del portafoglio"
-    }
-  ],
-  "fnV2qn": [
+      "value": " può prelevare qualsiasi porzione di "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Conti composti idonei a richiedere prelievi parziali di qualsiasi importo in eccesso rispetto a "
+      "value": " in staking in eccesso rispetto a "
     },
     {
       "type": 1,
@@ -6462,11 +6586,13 @@
     },
     {
       "type": 0,
-      "value": " "
-    },
+      "value": "."
+    }
+  ],
+  "fnMHGO": [
     {
-      "type": 1,
-      "value": "TICKER_NAME"
+      "type": 0,
+      "value": "In attesa di conferma del portafoglio"
     }
   ],
   "fpe4Gx": [
@@ -6947,6 +7073,12 @@
       "value": "Non è stato impostato un indirizzo di prelievo per questi validatori. I fondi e le ricompense in staking non saranno bloccati finché non saranno fornite le credenziali di prelievo."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "Nessun conto di origine idoneo trovato. I validatori di origine devono essere attivi da almeno 256 epoche (circa 27 ore) prima di divenire idonei per il consolidamento."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7349,12 +7481,6 @@
       "value": "Avvertenze"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "Conferma sulla catena"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7519,6 +7645,12 @@
       "value": "cambiare il portafoglio"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "Visualizza nell'esploratore della beacon chain"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7657,6 +7789,12 @@
     {
       "type": 0,
       "value": "Numero di prelievi"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "Non sono stati trovati validatori con credenziali di prelievo corrispondenti al conto connesso."
     }
   ],
   "mhyltV": [
@@ -7867,12 +8005,6 @@
       "value": " una tantum firmato con le tue chiavi di prelievo BLS per specificare il tuo indirizzo di prelievo Ethereum desiderato. Questo indirizzo può essere fornito una volta sola e non può essere modificato nuovamente."
     }
   ],
-  "oF4os+": [
-    {
-      "type": 0,
-      "value": "Attualmente Prysm è utilizzato da oltre il 33% della rete."
-    }
-  ],
   "oF6xvJ": [
     {
       "type": 0,
@@ -7891,12 +8023,6 @@
       "value": "Ora che le chiavi sono state importate, tutto quello che resta da fare (supponendo che il tuo nodo beacon sia già in esecuzione) è eseguire il client validatore."
     }
   ],
-  "oNP2EG": [
-    {
-      "type": 0,
-      "value": "Attualmente Lighthouse è utilizzato da oltre il 33% della rete."
-    }
-  ],
   "oNohob": [
     {
       "type": 0,
@@ -7907,12 +8033,6 @@
     {
       "type": 0,
       "value": "il tuo validatore"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "Non è stato trovato alcun validatore."
     }
   ],
   "oVx7Qe": [
@@ -8235,6 +8355,12 @@
       "value": ". Tale formato non è compatibile con i prelievi sulla beacon chain; per abilitare i prelievi è necessario l'aggiornamento alle credenziali di indirizzo Ethereum."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Commissione max"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8301,6 +8427,12 @@
     {
       "type": 0,
       "value": "Il tuo portafoglio è stato disconnesso"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "Prelievo possibile"
     }
   ],
   "qgqVCE": [
@@ -8501,6 +8633,12 @@
       "value": "Teku può anche essere configurato tramite un file YAML che viene trasferito in modi diversi."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "Uscito con slashing"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8623,6 +8761,12 @@
     {
       "type": 0,
       "value": "Che cosa è il contratto di deposito?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "I conti devono essere attivi da almeno 256 epoche (circa 27 ore) prima di divenire idonei per i prelievi parziali."
     }
   ],
   "szN3Fl": [
@@ -8937,6 +9081,12 @@
       "value": "Genera coppia di chiavi"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "Ulteriori informazioni sull'aggiornamento di un validatore con credenziali di tipo 0."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9141,6 +9291,16 @@
     {
       "type": 0,
       "value": "Opzione 2: codice sorgente + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "TRASFERISCO L'INTERO SALDO DEL MIO VALIDATORE AL PROPRIETARIO DI "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

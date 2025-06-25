@@ -327,7 +327,7 @@ export const Option3 = ({
           inline
           primary
           isTextLink={false}
-          to="https://github.com/eth-educators/ethstaker-deposit-cli/archive/master.zip"
+          to="https://github.com/ethstaker/ethstaker-deposit-cli/archive/master.zip"
         >
           <Button
             className="my20"
@@ -345,7 +345,7 @@ export const Option3 = ({
               gitClone: (
                 <Code>
                   git clone -b master --single-branch
-                  https://github.com/eth-educators/ethstaker-deposit-cli.git
+                  https://github.com/ethstaker/ethstaker-deposit-cli.git
                 </Code>
               ),
               master: <Code>master</Code>,
@@ -418,9 +418,9 @@ export const Option3 = ({
         <Link
           primary
           inline
-          to="https://github.com/eth-educators/ethstaker-deposit-cli"
+          to="https://github.com/ethstaker/ethstaker-deposit-cli"
         >
-          https://github.com/eth-educators/ethstaker-deposit-cli
+          https://github.com/ethstaker/ethstaker-deposit-cli
         </Link>
       </Text>
     </div>

@@ -15,6 +15,9 @@
   "+88H3v": {
     "message": "migrate funds to"
   },
+  "+Cp43+": {
+    "message": "Learn more on Pectrified"
+  },
   "+EZ9E/": {
     "message": "Interactive mode"
   },
@@ -262,6 +265,9 @@
   },
   "1iI5Ju": {
     "message": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
+  "1iW5bS": {
+    "message": "Note: Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will temporarily disappear from balance shown above while it processes through an activation queue. See {pectrified} for details."
   },
   "1ingnQ": {
     "message": "More on Ethereum staking economics"
@@ -561,6 +567,9 @@
   },
   "7GLK15": {
     "message": "Depending which method you use to generate your keys:"
+  },
+  "7GeD1+": {
+    "message": "View validator and queue details on Pectrified"
   },
   "7Iz3JI": {
     "message": "Consensus Client"
@@ -3370,6 +3379,9 @@
   },
   "soCLV+": {
     "message": "Checklist"
+  },
+  "spvBxs": {
+    "message": "Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will automatically be staked, requiring activation queue processing and a delay."
   },
   "sraQ3P": {
     "message": "Waiting to connect..."

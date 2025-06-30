@@ -11,6 +11,7 @@ import PartialWithdraw from './PartialWithdraw';
 import PullConsolidation from './PullConsolidation';
 import PushConsolidation from './PushConsolidation';
 import { Section as SharedSection } from './Shared';
+import { Link } from '../../../components/Link';
 import { Text } from '../../../components/Text';
 import UpgradeCompounding from './UpgradeCompounding';
 
@@ -139,6 +140,21 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
                 TICKER_NAME,
               }}
             />
+            <br />
+            <em>
+              <FormattedMessage
+                defaultMessage="Note: Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will temporarily disappear from balance shown above while it processes through an activation queue. See {pectrified} for details."
+                values={{
+                  MIN_ACTIVATION_BALANCE,
+                  TICKER_NAME,
+                  pectrified: (
+                    <Link inline primary to="https://pectrified.com/">
+                      pectrified.com
+                    </Link>
+                  ),
+                }}
+              />
+            </em>
           </div>
           <UpgradeCompounding validator={validator} />
         </Row>

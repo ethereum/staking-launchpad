@@ -15,6 +15,9 @@
   "+88H3v": {
     "message": "migrate funds to"
   },
+  "+Cp43+": {
+    "message": "Learn more on Pectrified"
+  },
   "+EZ9E/": {
     "message": "Interactive mode"
   },
@@ -68,9 +71,6 @@
   },
   "/EhlLs": {
     "message": "This validator should remain online until exit epoch is reached."
-  },
-  "/JiR8D": {
-    "message": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
   },
   "/OAba6": {
     "message": "Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis."
@@ -227,6 +227,9 @@
   "1G0loj": {
     "message": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
   },
+  "1HZQlC": {
+    "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining balance stays locked and staked ({MIN_ACTIVATION_BALANCE} {TICKER_NAME} for Type 1, variable up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME} for Type 2)."
+  },
   "1ICikH": {
     "message": "This account will be permanently exited from the network."
   },
@@ -262,6 +265,9 @@
   },
   "1iI5Ju": {
     "message": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+  },
+  "1iW5bS": {
+    "message": "Note: Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will temporarily disappear from balance shown above while it processes through an activation queue. See {pectrified} for details."
   },
   "1ingnQ": {
     "message": "More on Ethereum staking economics"
@@ -363,9 +369,6 @@
   },
   "3KP7+U": {
     "message": "Command line with flags"
-  },
-  "3LbIZa": {
-    "message": "You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top us if you validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}."
   },
   "3O/6JV": {
     "message": "Instructions on how to use the ethstaker-deposit-cli tool to generate and broadcast a SignedBLSToExecutionChange message to update validator withdrawal credentials."
@@ -507,9 +510,6 @@
   "67oM5N": {
     "message": "Active Online"
   },
-  "69FPys": {
-    "message": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EF of {MAX_EFFECTIVE_BALANCE}."
-  },
   "6NndcB": {
     "message": "leave"
   },
@@ -567,6 +567,9 @@
   },
   "7GLK15": {
     "message": "Depending which method you use to generate your keys:"
+  },
+  "7GeD1+": {
+    "message": "View validator and queue details on Pectrified"
   },
   "7Iz3JI": {
     "message": "Consensus Client"
@@ -655,6 +658,9 @@
   },
   "8echXf": {
     "message": "Do not turn your validator off until this epoch is reached."
+  },
+  "8fw7aT": {
+    "message": "{type2} = \"Type 2\" = Compounding account = Balance can grow above {MIN_ACTIVATION_BALANCE} {TICKER_NAME}: {depositWithdrawal}"
   },
   "8jssAY": {
     "message": "You may have a deposit that was accepted but is being processed through the activation queue. Please wait and try again or seek assistance if this error continues."
@@ -883,6 +889,9 @@
   "CPl2hh": {
     "message": "I have reviewed the checklist and understand how withdrawals work."
   },
+  "CS09pm": {
+    "message": "Similarly, there is also an {exitQueue}, which limits how quickly validators can {leave} the network. This is for security reasons. The exit queue prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
+  },
   "CT+gEC": {
     "message": "Upload to Beacon Node {btec} pool"
   },
@@ -1093,6 +1102,9 @@
   "FqgDIV": {
     "message": "Terms of service"
   },
+  "FxCI2r": {
+    "message": "EIP-7251"
+  },
   "FzkbsB": {
     "message": "validators"
   },
@@ -1119,9 +1131,6 @@
   },
   "GOc7cL": {
     "message": "How badly will I be penalized for being offline?"
-  },
-  "GTkW7D": {
-    "message": "It is not possible to manually request specific amounts of ETH to be withdrawn"
   },
   "GUDhpC": {
     "message": "Section 1"
@@ -1260,6 +1269,9 @@
   "InUvmv": {
     "message": "Beacon chain push withdrawals as operations"
   },
+  "Is1tie": {
+    "message": "For Type 1 validators (0x01) any balance > {PRICE_PER_VALIDATOR} {TICKER_NAME} is queued for sweep to the withdrawal address."
+  },
   "IwrKbS": {
     "description": "{impact} shows 'impact of effective balance' and links to article on 'Effective Balance'",
     "message": "It depends. In addition to the {impact} there are two important scenarios to be aware of:"
@@ -1365,6 +1377,9 @@
   "KQrlTP": {
     "message": "join"
   },
+  "KTRG4o": {
+    "message": "EIP-7002 - EL-triggered exits & partial withdraw"
+  },
   "KUz3Pf": {
     "message": "pending"
   },
@@ -1433,6 +1448,9 @@
   },
   "LlClXS": {
     "message": "Thank you for supporting the Ethereum network!"
+  },
+  "LlYw5W": {
+    "message": "As of the Shanghai/Capella (March 2023) and Pectra (May 2025) upgrades, withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip4895} and {eip7251}. For Type 1 (0x01) validators, rewards above {MIN_ACTIVATION_BALANCE} {TICKER_NAME} are automatically withdrawn to the execution layer. Type 2 (0x02) validators introduced by Pectra auto-compound rewards up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}. Both types support full withdrawals for exited validators—no gas required."
   },
   "LmBip5": {
     "description": "'Unstake' refers to this ETH no longer being considered at 'stake' nor contributing to consensus.",
@@ -1583,6 +1601,9 @@
   "NkFxlX": {
     "message": "At least {time} (four epochs) from the current epoch before reaching the exit epoch (with no others in the queue, {highlyVariable})"
   },
+  "Nnlc02": {
+    "message": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (partial and full withdrawals, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
+  },
   "NsVnBT": {
     "message": "Withdrawal Done"
   },
@@ -1642,9 +1663,6 @@
   },
   "OuiAUJ": {
     "message": "each of your {validatorCount} validators"
-  },
-  "Ox4e26": {
-    "message": "Similarly, there is also an {exitQueue}, which limits how quickly validators can {leave} the network. This is for security reasons. Given each validator is limited to a max effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, this prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
   },
   "P+nziG": {
     "message": "As a validator, you'll need to have funds at stake so you can be penalized for behaving dishonestly."
@@ -1817,9 +1835,6 @@
   "S+FY5u": {
     "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
   },
-  "S3RTk+": {
-    "message": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-  },
   "S943uU": {
     "message": "Double check the URL"
   },
@@ -1832,11 +1847,11 @@
   "SHNw06": {
     "message": "Execute the file you just downloaded."
   },
+  "SJwShP": {
+    "message": "Note that once a user has {type1} or {type2} withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
+  },
   "SPebP1": {
     "message": "New balance"
-  },
-  "SVUntz": {
-    "message": "Note that once a user has {type1} withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
   },
   "SaR1pU": {
     "message": "Deposit already exists"
@@ -2195,6 +2210,12 @@
   "ZTo0Fl": {
     "message": "Why is there a wait?"
   },
+  "Zazlz4": {
+    "message": "EIP-7251 - Max Effective Balance / consolidations"
+  },
+  "Zrhg0r": {
+    "message": "By adding funds to an account not yet at its max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
+  },
   "ZsXdlw": {
     "message": "Erigon installation documentation"
   },
@@ -2273,6 +2294,9 @@
   "bVtlF7": {
     "message": "Be sure to account for enough space on your drive until you run maintenance on your node."
   },
+  "baGxF9": {
+    "message": "Type 2 exception: Validators using 0x02 credentials do not enter the periodic sweep unless (a) they hold more than {MAX_EFFECTIVE_BALANCE} ETH or (b) the withdrawal address explicitly calls partialWithdraw()."
+  },
   "bagKCF": {
     "message": "If you've already provided an Ethereum withdrawal address for your withdrawal credentials, your entire remaining balance will be transferred to this address upon exit. If not, your mnemonic will still be needed to generate your withdrawal key to set your withdrawal address."
   },
@@ -2296,6 +2320,9 @@
   },
   "bugMfW": {
     "message": "If not, move to next question"
+  },
+  "bwl4Q9": {
+    "message": "Pectra adds EIP-7002. If your validator already has Type 1 or Type 2 creds, you may instead send an execution-layer exitValidator() call from the withdrawal address—no BLS key or validator client interaction required."
   },
   "bxU6sX": {
     "message": "Python installation instructions"
@@ -2519,6 +2546,12 @@
   "frIMm4": {
     "message": "Syncing your execution client may take a few days in the worst-case scenario."
   },
+  "fuNXYN": {
+    "message": "supports top-ups / manual partial withdrawals"
+  },
+  "fw3lvA": {
+    "message": "(supports Type 2 credentials)"
+  },
   "fzrOtJ": {
     "message": "Consensus layer slot timing: 12 seconds (no plans to change)"
   },
@@ -2632,9 +2665,6 @@
   },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
-  },
-  "hzsgQ5": {
-    "message": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining {PRICE_PER_VALIDATOR} {TICKER_NAME} stays locked and staked."
   },
   "iCpuph": {
     "message": "Clients"
@@ -2800,9 +2830,6 @@
   "kRQqpE": {
     "message": "Time to complete"
   },
-  "kSt9db": {
-    "message": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain, with the inclusion of {eip}. This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
-  },
   "kTt/ND": {
     "message": "Russian"
   },
@@ -2891,6 +2918,9 @@
   },
   "lVdzDK": {
     "message": "Upload the deposit data file you just generated. The {json} is located in your {validatorKeys} directory."
+  },
+  "ld0C6T": {
+    "message": "(supports Type 2 credentials and increaseValidatorBalance)"
   },
   "lfHCV+": {
     "message": "Nimbus is a research project and a consensus client implementation for Ethereum designed to perform well on embedded systems and personal mobile devices."
@@ -3040,6 +3070,9 @@
     "description": "{variables} social media platform links to Discord and Reddit (do not translate names)",
     "message": "If you have questions, EthStaker community is a good place to get help! You can find support on {discord} or {reddit}."
   },
+  "o3L/x6": {
+    "message": "New in Pectra: The withdrawal address can call partialWithdraw(amount) to pull a custom amount from a Type 2 validator without exiting."
+  },
   "o9QvTP": {
     "message": "Before you start"
   },
@@ -3139,9 +3172,6 @@
   "pQxML4": {
     "message": "Generate {json} file"
   },
-  "pUAoW1": {
-    "message": "Is the effective balance maxed out at {PRICE_PER_VALIDATOR} {TICKER_NAME}?"
-  },
   "pWuGLy": {
     "message": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."
   },
@@ -3160,6 +3190,9 @@
   "pnxB8A": {
     "message": "Nimbus looks for keystores in your validators folder."
   },
+  "pqADsT": {
+    "message": "For Type 2 validators (0x02) the balance compounds up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}. Surplus over {MIN_ACTIVATION_BALANCE} can be withdrawn manually at any point, and will occur automatically if it exceeds {MAX_EFFECTIVE_BALANCE}."
+  },
   "pqC+qt": {
     "message": "Slashing"
   },
@@ -3175,6 +3208,9 @@
   },
   "pyWt01": {
     "message": "Deposit summary"
+  },
+  "q+m2J+": {
+    "message": "You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top up if your validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}."
   },
   "q0thwm": {
     "message": "As a validator you are rewarded for proposing/attesting to blocks that are included in the chain."
@@ -3326,6 +3362,9 @@
   "sZK38z": {
     "message": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
   },
+  "sctRmf": {
+    "message": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is {MIN_ACTIVATION_BALANCE} {TICKER_NAME}. These accounts do not benefit from balances over {MIN_ACTIVATION_BALANCE}, but can be upgraded to a Type 2 compounding account to support an increased max EB of {MAX_EFFECTIVE_BALANCE}."
+  },
   "sgn0wo": {
     "message": "What happens if I have BLS withdrawal credentials and I lose my withdrawal key?"
   },
@@ -3340,6 +3379,9 @@
   },
   "soCLV+": {
     "message": "Checklist"
+  },
+  "spvBxs": {
+    "message": "Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will automatically be staked, requiring activation queue processing and a delay."
   },
   "sraQ3P": {
     "message": "Waiting to connect..."
@@ -3419,9 +3461,6 @@
   },
   "uEB8++": {
     "message": "Execution credentials: If you want to withdraw to your execution wallet address you can set an “eth1 withdrawal address” using {ethAddressWithdraw} when running the deposit CLI. {boldWarning}"
-  },
-  "uHSqYx": {
-    "message": "An {excessBalanceWithdrawal} is processed when an active validator has a maxed out effective balance of {PRICE_PER_VALIDATOR} {TICKER_NAME}, and has a total balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}. A single validator cannot get rewards on excess balance over {PRICE_PER_VALIDATOR} {TICKER_NAME}, and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
   },
   "uJzGSb": {
     "message": "Make sure you're aware of how to avoid phishing attacks. We've prepared a list of things to look out for."
@@ -3596,6 +3635,9 @@
   },
   "xogY3N": {
     "message": "Besu is written in Java and released under the Apache 2.0 Licence."
+  },
+  "xp/HT+": {
+    "message": "Is the validator's effective balance maxed out? ({MIN_ACTIVATION_BALANCE} {TICKER_NAME} for Type 1; up to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME} for Type 2)"
   },
   "xrCRnH": {
     "message": "Example"

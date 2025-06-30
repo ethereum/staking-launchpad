@@ -53,6 +53,12 @@
       "value": "migrate funds to"
     }
   ],
+  "+Cp43+": [
+    {
+      "type": 0,
+      "value": "Learn more on Pectrified"
+    }
+  ],
   "+EZ9E/": [
     {
       "type": 0,
@@ -159,12 +165,6 @@
     {
       "type": 0,
       "value": "This validator should remain online until exit epoch is reached."
-    }
-  ],
-  "/JiR8D": [
-    {
-      "type": 0,
-      "value": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (of which there are two types, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
     }
   ],
   "/OAba6": [
@@ -605,6 +605,44 @@
       "value": "If you do not provide an address to your client, you will not receive transaction fees when your validator proposes blocks."
     }
   ],
+  "1HZQlC": [
+    {
+      "type": 0,
+      "value": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining balance stays locked and staked ("
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for Type 1, variable up to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for Type 2)."
+    }
+  ],
   "1ICikH": [
     {
       "type": 0,
@@ -675,6 +713,36 @@
     {
       "type": 0,
       "value": "Consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes."
+    }
+  ],
+  "1iW5bS": [
+    {
+      "type": 0,
+      "value": "Note: Balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " will temporarily disappear from balance shown above while it processes through an activation queue. See "
+    },
+    {
+      "type": 1,
+      "value": "pectrified"
+    },
+    {
+      "type": 0,
+      "value": " for details."
     }
   ],
   "1ingnQ": [
@@ -977,28 +1045,6 @@
     {
       "type": 0,
       "value": "Command line with flags"
-    }
-  ],
-  "3LbIZa": [
-    {
-      "type": 0,
-      "value": "You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top us if you validator account is close to the ejection balance of "
-    },
-    {
-      "type": 1,
-      "value": "EJECTION_PRICE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "3O/6JV": [
@@ -1397,44 +1443,6 @@
       "value": "Active Online"
     }
   ],
-  "69FPys": [
-    {
-      "type": 0,
-      "value": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". These accounts do not benefit from balances over "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": ", but can be upgraded to a Type 2 compounding account to support an increased max EF of "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "6NndcB": [
     {
       "type": 0,
@@ -1599,6 +1607,12 @@
     {
       "type": 0,
       "value": "Depending which method you use to generate your keys:"
+    }
+  ],
+  "7GeD1+": [
+    {
+      "type": 0,
+      "value": "View validator and queue details on Pectrified"
     }
   ],
   "7Iz3JI": [
@@ -1793,6 +1807,36 @@
     {
       "type": 0,
       "value": "Do not turn your validator off until this epoch is reached."
+    }
+  ],
+  "8fw7aT": [
+    {
+      "type": 1,
+      "value": "type2"
+    },
+    {
+      "type": 0,
+      "value": " = \"Type 2\" = Compounding account = Balance can grow above "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ": "
+    },
+    {
+      "type": 1,
+      "value": "depositWithdrawal"
     }
   ],
   "8jssAY": [
@@ -2339,6 +2383,28 @@
     {
       "type": 0,
       "value": "I have reviewed the checklist and understand how withdrawals work."
+    }
+  ],
+  "CS09pm": [
+    {
+      "type": 0,
+      "value": "Similarly, there is also an "
+    },
+    {
+      "type": 1,
+      "value": "exitQueue"
+    },
+    {
+      "type": 0,
+      "value": ", which limits how quickly validators can "
+    },
+    {
+      "type": 1,
+      "value": "leave"
+    },
+    {
+      "type": 0,
+      "value": " the network. This is for security reasons. The exit queue prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
     }
   ],
   "CT+gEC": [
@@ -2905,6 +2971,12 @@
       "value": "Terms of service"
     }
   ],
+  "FxCI2r": [
+    {
+      "type": 0,
+      "value": "EIP-7251"
+    }
+  ],
   "FzkbsB": [
     {
       "type": 0,
@@ -2961,12 +3033,6 @@
     {
       "type": 0,
       "value": "How badly will I be penalized for being offline?"
-    }
-  ],
-  "GTkW7D": [
-    {
-      "type": 0,
-      "value": "It is not possible to manually request specific amounts of ETH to be withdrawn"
     }
   ],
   "GUDhpC": [
@@ -3319,6 +3385,28 @@
       "value": "Beacon chain push withdrawals as operations"
     }
   ],
+  "Is1tie": [
+    {
+      "type": 0,
+      "value": "For Type 1 validators (0x01) any balance > "
+    },
+    {
+      "type": 1,
+      "value": "PRICE_PER_VALIDATOR"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " is queued for sweep to the withdrawal address."
+    }
+  ],
   "IwrKbS": [
     {
       "type": 0,
@@ -3617,6 +3705,12 @@
       "value": "join"
     }
   ],
+  "KTRG4o": [
+    {
+      "type": 0,
+      "value": "EIP-7002 - EL-triggered exits & partial withdraw"
+    }
+  ],
   "KUz3Pf": [
     {
       "type": 0,
@@ -3763,6 +3857,60 @@
     {
       "type": 0,
       "value": "Thank you for supporting the Ethereum network!"
+    }
+  ],
+  "LlYw5W": [
+    {
+      "type": 0,
+      "value": "As of the Shanghai/Capella (March 2023) and Pectra (May 2025) upgrades, withdrawals have been enabled on the Beacon Chain, with the inclusion of "
+    },
+    {
+      "type": 1,
+      "value": "eip4895"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "eip7251"
+    },
+    {
+      "type": 0,
+      "value": ". For Type 1 (0x01) validators, rewards above "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " are automatically withdrawn to the execution layer. Type 2 (0x02) validators introduced by Pectra auto-compound rewards up to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Both types support full withdrawals for exited validators—no gas required."
     }
   ],
   "LmBip5": [
@@ -4139,6 +4287,12 @@
       "value": ")"
     }
   ],
+  "Nnlc02": [
+    {
+      "type": 0,
+      "value": "On a never-ending loop, every single validator account is continuously evaluated for eligible ETH withdrawals (partial and full withdrawals, more on this below). Validators are processed in order by index number, originally starting at 0, with each subsequent proposer picking up where the last one left off."
+    }
+  ],
   "NsVnBT": [
     {
       "type": 0,
@@ -4309,44 +4463,6 @@
     {
       "type": 0,
       "value": " validators"
-    }
-  ],
-  "Ox4e26": [
-    {
-      "type": 0,
-      "value": "Similarly, there is also an "
-    },
-    {
-      "type": 1,
-      "value": "exitQueue"
-    },
-    {
-      "type": 0,
-      "value": ", which limits how quickly validators can "
-    },
-    {
-      "type": 1,
-      "value": "leave"
-    },
-    {
-      "type": 0,
-      "value": " the network. This is for security reasons. Given each validator is limited to a max effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", this prevents large portions of the ETH from potentially being used in an attack and then quickly exiting from the network all at once."
     }
   ],
   "P+nziG": [
@@ -4749,12 +4865,6 @@
       "value": " air-gapped machine."
     }
   ],
-  "S3RTk+": [
-    {
-      "type": 0,
-      "value": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -4779,13 +4889,7 @@
       "value": "Execute the file you just downloaded."
     }
   ],
-  "SPebP1": [
-    {
-      "type": 0,
-      "value": "New balance"
-    }
-  ],
-  "SVUntz": [
+  "SJwShP": [
     {
       "type": 0,
       "value": "Note that once a user has "
@@ -4796,7 +4900,21 @@
     },
     {
       "type": 0,
+      "value": " or "
+    },
+    {
+      "type": 1,
+      "value": "type2"
+    },
+    {
+      "type": 0,
       "value": " withdrawal credentials and has broadcast a voluntary exit, there is no further action required until the processing is complete."
+    }
+  ],
+  "SPebP1": [
+    {
+      "type": 0,
+      "value": "New balance"
     }
   ],
   "SaR1pU": [
@@ -5759,6 +5877,18 @@
       "value": "Why is there a wait?"
     }
   ],
+  "Zazlz4": [
+    {
+      "type": 0,
+      "value": "EIP-7251 - Max Effective Balance / consolidations"
+    }
+  ],
+  "Zrhg0r": [
+    {
+      "type": 0,
+      "value": "By adding funds to an account not yet at its max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
+    }
+  ],
   "ZsXdlw": [
     {
       "type": 0,
@@ -5939,6 +6069,20 @@
       "value": "Be sure to account for enough space on your drive until you run maintenance on your node."
     }
   ],
+  "baGxF9": [
+    {
+      "type": 0,
+      "value": "Type 2 exception: Validators using 0x02 credentials do not enter the periodic sweep unless (a) they hold more than "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " ETH or (b) the withdrawal address explicitly calls partialWithdraw()."
+    }
+  ],
   "bagKCF": [
     {
       "type": 0,
@@ -5993,6 +6137,12 @@
     {
       "type": 0,
       "value": "If not, move to next question"
+    }
+  ],
+  "bwl4Q9": [
+    {
+      "type": 0,
+      "value": "Pectra adds EIP-7002. If your validator already has Type 1 or Type 2 creds, you may instead send an execution-layer exitValidator() call from the withdrawal address—no BLS key or validator client interaction required."
     }
   ],
   "bxU6sX": [
@@ -6649,6 +6799,18 @@
       "value": "Syncing your execution client may take a few days in the worst-case scenario."
     }
   ],
+  "fuNXYN": [
+    {
+      "type": 0,
+      "value": "supports top-ups / manual partial withdrawals"
+    }
+  ],
+  "fw3lvA": [
+    {
+      "type": 0,
+      "value": "(supports Type 2 credentials)"
+    }
+  ],
   "fzrOtJ": [
     {
       "type": 0,
@@ -6937,28 +7099,6 @@
     {
       "type": 0,
       "value": "I understand that it is important to keep my validator online and updated."
-    }
-  ],
-  "hzsgQ5": [
-    {
-      "type": 0,
-      "value": "These are also referred to as “partial withdrawals” or “reward payments” as the remaining "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " stays locked and staked."
     }
   ],
   "iCpuph": [
@@ -7337,20 +7477,6 @@
       "value": "Time to complete"
     }
   ],
-  "kSt9db": [
-    {
-      "type": 0,
-      "value": "As of the Shanghai/Capella upgrade withdrawals have been enabled on the Beacon Chain, with the inclusion of "
-    },
-    {
-      "type": 1,
-      "value": "eip"
-    },
-    {
-      "type": 0,
-      "value": ". This Ethereum Improvement Proposal enables rewards to be automatically withdrawn to the execution layer, and also provides a way for exited validators to unlock their entire balance—no gas required."
-    }
-  ],
   "kTt/ND": [
     {
       "type": 0,
@@ -7631,6 +7757,12 @@
     {
       "type": 0,
       "value": " directory."
+    }
+  ],
+  "ld0C6T": [
+    {
+      "type": 0,
+      "value": "(supports Type 2 credentials and increaseValidatorBalance)"
     }
   ],
   "lfHCV+": [
@@ -8007,6 +8139,12 @@
       "value": "."
     }
   ],
+  "o3L/x6": [
+    {
+      "type": 0,
+      "value": "New in Pectra: The withdrawal address can call partialWithdraw(amount) to pull a custom amount from a Type 2 validator without exiting."
+    }
+  ],
   "o9QvTP": [
     {
       "type": 0,
@@ -8229,28 +8367,6 @@
       "value": " file"
     }
   ],
-  "pUAoW1": [
-    {
-      "type": 0,
-      "value": "Is the effective balance maxed out at "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "?"
-    }
-  ],
   "pWuGLy": [
     {
       "type": 0,
@@ -8285,6 +8401,44 @@
     {
       "type": 0,
       "value": "Nimbus looks for keystores in your validators folder."
+    }
+  ],
+  "pqADsT": [
+    {
+      "type": 0,
+      "value": "For Type 2 validators (0x02) the balance compounds up to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". Surplus over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " can be withdrawn manually at any point, and will occur automatically if it exceeds "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "pqC+qt": [
@@ -8351,6 +8505,28 @@
     {
       "type": 0,
       "value": "Deposit summary"
+    }
+  ],
+  "q+m2J+": [
+    {
+      "type": 0,
+      "value": "You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top up if your validator account is close to the ejection balance of "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "q0thwm": [
@@ -8757,6 +8933,44 @@
       "value": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
     }
   ],
+  "sctRmf": [
+    {
+      "type": 0,
+      "value": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". These accounts do not benefit from balances over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", but can be upgraded to a Type 2 compounding account to support an increased max EB of "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "sgn0wo": [
     {
       "type": 0,
@@ -8793,6 +9007,28 @@
     {
       "type": 0,
       "value": "Checklist"
+    }
+  ],
+  "spvBxs": [
+    {
+      "type": 0,
+      "value": "Balance over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " will automatically be staked, requiring activation queue processing and a delay."
     }
   ],
   "sraQ3P": [
@@ -9021,68 +9257,6 @@
     {
       "type": 1,
       "value": "boldWarning"
-    }
-  ],
-  "uHSqYx": [
-    {
-      "type": 0,
-      "value": "An "
-    },
-    {
-      "type": 1,
-      "value": "excessBalanceWithdrawal"
-    },
-    {
-      "type": 0,
-      "value": " is processed when an active validator has a maxed out effective balance of "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", and has a total balance over "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". A single validator cannot get rewards on excess balance over "
-    },
-    {
-      "type": 1,
-      "value": "PRICE_PER_VALIDATOR"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ", and thus these accounts will have any extra balance automatically withdrawn to their Ethereum address."
     }
   ],
   "uJzGSb": [
@@ -9501,6 +9675,44 @@
     {
       "type": 0,
       "value": "Besu is written in Java and released under the Apache 2.0 Licence."
+    }
+  ],
+  "xp/HT+": [
+    {
+      "type": 0,
+      "value": "Is the validator's effective balance maxed out? ("
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for Type 1; up to "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " for Type 2)"
     }
   ],
   "xrCRnH": [

@@ -27,7 +27,11 @@ import { web3ReactInterface } from '../ConnectWallet';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
-import { BEACONCHAIN_URL, MAX_QUERY_LIMIT } from '../../utils/envVars';
+import {
+  BEACONCHAIN_URL,
+  MAX_QUERY_LIMIT,
+  IS_MAINNET,
+} from '../../utils/envVars';
 import { hasValidatorExited } from '../../utils/validators';
 import { fetchValidatorsByPubkeys } from './utils';
 
@@ -354,6 +358,25 @@ const _ActionsPage = () => {
                         </AlertText>
                         <AlertText>
                           <FormattedMessage defaultMessage="Recent changes may not be reflected in validator details, and network congestion may result in delays. Use caution to avoid submitting duplicate requests." />
+                        </AlertText>
+                        <AlertText className="mt20">
+                          {IS_MAINNET ? (
+                            <Link
+                              primary
+                              to={`https://www.pectrified.com/mainnet/validator/${selectedValidator.validatorindex}`}
+                              className="text-bold"
+                            >
+                              <FormattedMessage defaultMessage="View validator and queue details on Pectrified" />
+                            </Link>
+                          ) : (
+                            <Link
+                              primary
+                              to="https://www.pectrified.com/"
+                              className="text-bold"
+                            >
+                              <FormattedMessage defaultMessage="Learn more on Pectrified" />
+                            </Link>
+                          )}
                         </AlertText>
                       </div>
                       <div

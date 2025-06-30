@@ -27,6 +27,20 @@
       "value": " (manipulando tarefas de consenso da prova de participação, anteriormente 'Eth2' ou 'Ethereum 2.0')."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "Para atualizar para um validador Tipo 2, volte, selecione o validador de destino e siga o fluxo "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -213,28 +227,6 @@
       "value": "época de saque"
     }
   ],
-  "/eUGwM": [
-    {
-      "type": 0,
-      "value": "Você pode sacar qualquer parte da sua participação de "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " acima de "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -305,12 +297,6 @@
     {
       "type": 0,
       "value": " (o mínimo permitido pelo contrato de depósito)"
-    }
-  ],
-  "/rmnC0": [
-    {
-      "type": 0,
-      "value": "Se possível, considere a possibilidade de administrar outro cliente neste momento para ajudar a se proteger e à rede."
     }
   ],
   "/sp2Uu": [
@@ -685,6 +671,12 @@
       "value": "Verifique os detalhes do contrato de depósito"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Os pedidos de consolidação entram em uma fila separada com uma pequena taxa, mostrada como o valor de envio da transação. A taxa é mínima quando a fila é curta, com um pequeno buffer adicionado para evitar rejeições de picos súbitos de atividade."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -891,12 +883,6 @@
       "value": "“Tipo 0”, “BLS”, “bloqueado”"
     }
   ],
-  "2rflCq": [
-    {
-      "type": 0,
-      "value": "A diversidade do cliente é extremamente importante para a saúde da rede Ethereum: um bug em um cliente com uma participação de mais de 33% pode fazer com que o Ethereum fique offline. Se o cliente tiver uma supermaioria (>66%), um bug pode fazer com que a cadeia seja dividida incorretamente, potencialmente levando a uma quebra do sistema."
-    }
-  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -1037,6 +1023,12 @@
     {
       "type": 0,
       "value": "Estas atualizações de terminologia apenas alteram as convenções de nomenclatura; isso não altera os objetivos ou o roteiro da Ethereum."
+    }
+  ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Ativo"
     }
   ],
   "3aykgN": [
@@ -1234,7 +1226,13 @@
   "4zqUmR": [
     {
       "type": 0,
-      "value": "O saldo restante será desbloqueado após a época de saída acima ter sido atingida. Uma vez desbloqueado, o saldo remanescente será automaticamente transferido para sua conta de saque conectada ou para o validador alvo escolhido, se você estiver migrando contas, dentro de alguns dias."
+      "value": "O saldo restante será desbloqueado após a época de saída acima ter sido atingida. Uma vez desbloqueado, o saldo remanescente será automaticamente transferido para sua conta de saque conectada ou para o validador de destino escolhido, se você estiver migrando contas, dentro de alguns dias."
+    }
+  ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Saída ativa"
     }
   ],
   "57MWKW": [
@@ -1375,6 +1373,12 @@
     {
       "type": 1,
       "value": "client"
+    }
+  ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "O validador de destino não está ativo"
     }
   ],
   "63gLLu": [
@@ -1533,6 +1537,12 @@
       "value": "Observações"
     }
   ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Estado pendente inicializado"
+    }
+  ],
   "738tqz": [
     {
       "type": 0,
@@ -1615,12 +1625,6 @@
     {
       "type": 0,
       "value": "Arquivo de configuração"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Aguarde e tente novamente ou procure assistência se este erro persistir."
     }
   ],
   "7XiYRi": [
@@ -1741,6 +1745,12 @@
       "value": "Configurar Teku"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Filtre seus validadores por índice ou chave pública ou pesquise por chave pública"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1775,6 +1785,12 @@
     {
       "type": 0,
       "value": "Não desligue o validador até que essa época seja alcançada."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "Você pode ter um depósito que foi aceito, mas que está sendo processado através da fila de ativação. Aguarde e tente novamente ou busque assistência se esse erro continuar."
     }
   ],
   "8k1RjX": [
@@ -1821,12 +1837,6 @@
     {
       "type": 0,
       "value": " — época em que seus fundos de validador estão qualificados para um saque completo durante a próxima varredura do validador."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Filtrar por índice ou chave pública"
     }
   ],
   "8uq59n": [
@@ -2083,10 +2093,22 @@
       "value": "Saída"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Confirmar na camada de execução"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "entendendo o saldo efetivo do validador"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "Estado pendente na fila"
     }
   ],
   "AkVktj": [
@@ -2113,10 +2135,10 @@
       "value": "Torne-se um validador com Lighthouse"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "Você pode ter um depósito que foi aceito, mas que está sendo validado pela cadeia. Ele estará disponível aqui quando o beaconcha.in tiver confirmado 2048 blocos."
+      "value": "O validador de destino não possui credenciais Tipo 2 e deve ser melhorado antes que os fundos possam ser transferidos para ele."
     }
   ],
   "Aw1mMs": [
@@ -2203,6 +2225,20 @@
     {
       "type": 0,
       "value": "dias"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Digite "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " para confirmar que você entende que seu validador está mudando de propriedade."
     }
   ],
   "Bj5yI5": [
@@ -2309,6 +2345,24 @@
     {
       "type": 0,
       "value": " do nó Beacon"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "As contas de capitalização são elegíveis para solicitar saques parciais de qualquer saldo acima de "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "CWKE9c": [
@@ -2615,6 +2669,12 @@
       "value": "5. Hora de depositar"
     }
   ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "As solicitações de atualização e consolidação entram em uma fila separada com uma pequena taxa, mostrada como o valor de envio da transação. A taxa é mínima quando a fila é curta, com um pequeno buffer adicionado para evitar rejeições de picos súbitos de atividade."
+    }
+  ],
   "EXLB88": [
     {
       "type": 0,
@@ -2777,12 +2837,6 @@
     {
       "type": 0,
       "value": "Tente novamente"
-    }
-  ],
-  "FcCHp4": [
-    {
-      "type": 0,
-      "value": "Últimos dados sobre o uso do cliente de rede"
     }
   ],
   "Felr8P": [
@@ -3131,6 +3185,12 @@
       "value": "Anteriormente TurboGeth, Erigon é um cliente Ethereum construído para permitir otimizações de desempenho."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "A confirmação na camada de execução não garante que a solicitação será válida na camada de consenso. Verifique o explorador de beacon para confirmar se a solicitação é bem-sucedida após 13 minutos (sob o período normal de finalização)."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3171,6 +3231,12 @@
     {
       "type": 0,
       "value": "Assine a transação com a sua carteira"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "Primeiro, é necessário atualizar a conta para o tipo de capitalização."
     }
   ],
   "IWlazt": [
@@ -3387,11 +3453,7 @@
       "value": "Leitura adicional"
     }
   ],
-  "Jge1Sx": [
-    {
-      "type": 0,
-      "value": "Forçar saída"
-    }
+  "JcQdD5": [
   ],
   "JhUYU3": [
     {
@@ -4061,6 +4123,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Estado ativo removido (slashed)"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4141,6 +4209,8 @@
       "value": "TICKER_NAME"
     }
   ],
+  "OPrOVV": [
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4175,6 +4245,12 @@
     {
       "type": 0,
       "value": " são calculados com base no número de épocas atual. Esses valores determinam exatamente quando o validador não será mais necessário estar online para executar a validação, e quando o validador for qualificado para um saque total, respectivamente."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Verificar depósitos recentes no explorador"
     }
   ],
   "OdYQYh": [
@@ -4321,6 +4397,12 @@
       "value": "Sua rede foi alterada"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "As solicitações de saída entram em uma fila separada com uma pequena taxa, mostrada como o valor de envio da transação. A taxa é mínima quando a fila é curta, com um pequeno buffer adicionado para evitar rejeições de picos súbitos de atividade."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4379,6 +4461,12 @@
     {
       "type": 0,
       "value": "documentação do pip"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Somente os validadores com status ativo podem receber fundos de outro validador."
     }
   ],
   "Q/HeiY": [
@@ -4567,6 +4655,12 @@
       "value": "parabéns"
     }
   ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "O validador de destino não está associado à sua carteira atual!"
+    }
+  ],
   "RhR6+a": [
     {
       "type": 0,
@@ -4606,7 +4700,7 @@
   "RuoC+s": [
     {
       "type": 0,
-      "value": "A época de saída para este validador foi atingida. O saldo remanescente será automaticamente transferido para sua conta de saque conectada ou para o validador alvo escolhido, se você estiver migrando contas, dentro de alguns dias."
+      "value": "A época de saída para este validador foi atingida. O saldo remanescente será automaticamente transferido para sua conta de saque conectada ou para o validador de destino escolhido, se você estiver migrando contas, dentro de alguns dias."
     }
   ],
   "RwXnhK": [
@@ -4865,6 +4959,16 @@
       "value": "index"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " ou tente atualizar a página."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5059,6 +5163,12 @@
     {
       "type": 0,
       "value": "Eu tenho certeza de que o validador que estou recarregando é meu validador."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "As solicitações de saque entram em uma fila separada com uma pequena taxa, mostrada como o valor de envio da transação. A taxa é mínima quando a fila é curta, com um pequeno buffer adicionado para evitar rejeições de picos súbitos de atividade."
     }
   ],
   "Vm6cRY": [
@@ -5761,12 +5871,6 @@
       "value": "Obter mais"
     }
   ],
-  "b8APBK": [
-    {
-      "type": 0,
-      "value": "Mais sobre a diversidade de clientes"
-    }
-  ],
   "bFiejS": [
     {
       "type": 0,
@@ -6033,6 +6137,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "A conta selecionada deve ser atualizada para o tipo de capitalização para absorver outro validador."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6083,12 +6193,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "cnQKC2": [
-    {
-      "type": 0,
-      "value": "Atualmente, o Geth é usado por >66% da rede."
     }
   ],
   "cpxfOR": [
@@ -6235,6 +6339,12 @@
     {
       "type": 0,
       "value": "Instalação"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Sair totalmente"
     }
   ],
   "dzdAcD": [
@@ -6449,16 +6559,22 @@
       "value": "armazenadas apenas em um validador"
     }
   ],
-  "fnMHGO": [
+  "fdGVBw": [
+    {
+      "type": 1,
+      "value": "subject"
+    },
     {
       "type": 0,
-      "value": "Aguardando a confirmação da carteira"
-    }
-  ],
-  "fnV2qn": [
+      "value": " pode sacar qualquer quantidade de "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Contas de capitalização elegíveis para solicitar saques parciais de qualquer saldo acima de "
+      "value": " em stake acima de "
     },
     {
       "type": 1,
@@ -6466,11 +6582,13 @@
     },
     {
       "type": 0,
-      "value": " "
-    },
+      "value": "."
+    }
+  ],
+  "fnMHGO": [
     {
-      "type": 1,
-      "value": "TICKER_NAME"
+      "type": 0,
+      "value": "Aguardando a confirmação da carteira"
     }
   ],
   "fpe4Gx": [
@@ -6951,6 +7069,12 @@
       "value": "Não foi definido um endereço de saque para esses validadores. Os fundos em stake e as recompensas permanecerão bloqueados até que sejam fornecidas credenciais de saque."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "Nenhuma conta de origem elegível encontrada. Os validadores de origem devem estar ativados por pelo menos 256 épocas (~27 horas) antes de serem elegíveis para consolidação."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7353,12 +7477,6 @@
       "value": "Recomendações"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "Confirmar na cadeia"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7523,6 +7641,12 @@
       "value": "alterar sua carteira"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "Ver no explorador de beacon"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7661,6 +7785,12 @@
     {
       "type": 0,
       "value": "Quantidade de saques"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "Nenhum validador foi encontrado com credenciais de saque correspondentes à conta conectada."
     }
   ],
   "mhyltV": [
@@ -7871,12 +8001,6 @@
       "value": " única assinada com suas chaves de saque BLS para especificar o endereço de saque Ethereum desejado. Esse endereço só pode ser fornecido uma vez e não pode ser alterado novamente."
     }
   ],
-  "oF4os+": [
-    {
-      "type": 0,
-      "value": "Atualmente, o Prysm é usado por >33% da rede."
-    }
-  ],
   "oF6xvJ": [
     {
       "type": 0,
@@ -7895,12 +8019,6 @@
       "value": "Agora que as chaves foram importadas, tudo o que resta fazer (supondo que seu nó de sinalizador já esteja em execução) é executar o cliente validador."
     }
   ],
-  "oNP2EG": [
-    {
-      "type": 0,
-      "value": "Atualmente, o Lighthouse é usado por >33% da rede."
-    }
-  ],
   "oNohob": [
     {
       "type": 0,
@@ -7911,12 +8029,6 @@
     {
       "type": 0,
       "value": "seu validador"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "Nenhum validador foi encontrado."
     }
   ],
   "oVx7Qe": [
@@ -8239,6 +8351,12 @@
       "value": ". Esse formato não é compatível com saques da Beacon Chain e deve ser atualizado para credenciais de endereço Ethereum para permitir saques."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Taxa máxima"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8305,6 +8423,12 @@
     {
       "type": 0,
       "value": "Sua carteira foi desconectada"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "Saque possível"
     }
   ],
   "qgqVCE": [
@@ -8513,6 +8637,12 @@
       "value": "O Teku também pode ser configurado através de um arquivo YAML recebido de várias maneiras possíveis."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "Estado saído penalizado (slashed)"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8635,6 +8765,12 @@
     {
       "type": 0,
       "value": "Qual é o contrato de depósito?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "A conta deve estar ativada por pelo menos 256 épocas (~27 horas) antes de ser elegível para saques parciais."
     }
   ],
   "szN3Fl": [
@@ -8949,6 +9085,12 @@
       "value": "Gerar pares de chaves"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "Saiba mais sobre como fazer upgrade de um validador com credenciais Tipo 0."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9153,6 +9295,16 @@
     {
       "type": 0,
       "value": "Opção 2: código-fonte + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "EU TRANSFIRO O SALDO TOTAL DO MEU SALDO DE VALIDADOR PARA O PROPRIETÁRIO DE "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

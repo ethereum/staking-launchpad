@@ -27,6 +27,20 @@
       "value": " (a cargo de las tareas de consenso de prueba de participación, anteriormente «Eth2» o «Ethereum 2.0»)."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "Para actualizar a un validador de Tipo 2, por favor regrese, seleccione el validador de destino y pase por el flujo "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -213,28 +227,6 @@
       "value": "periodo de retirada"
     }
   ],
-  "/eUGwM": [
-    {
-      "type": 0,
-      "value": "Puede retirar cualquier parte de su "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " apostado sobre "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -305,12 +297,6 @@
     {
       "type": 0,
       "value": " (el mínimo permitido por el contrato de depósito)."
-    }
-  ],
-  "/rmnC0": [
-    {
-      "type": 0,
-      "value": "Si es posible, considere ejecutar otro cliente en este momento para protegerse a sí mismo y a la red."
     }
   ],
   "/sp2Uu": [
@@ -685,6 +671,12 @@
       "value": "Comprobar detalles del contrato de depósito"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Las solicitudes de consolidación ingresan a una cola separada con una pequeña tarifa, que se muestra como la cantidad enviada de la transacción. La tarifa es mínima cuando la cola es corta, con un pequeño margen añadido para prevenir rechazos por picos repentinos de actividad."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -891,12 +883,6 @@
       "value": "«Type 0», «BLS», «locked»"
     }
   ],
-  "2rflCq": [
-    {
-      "type": 0,
-      "value": "La diversidad de clientes es extremadamente importante para la salud de la red de Ethereum: un error en un cliente con una participación de más del 33 % puede hacer que Ethereum se desconecte. Si el cliente tiene una supermayoría (>66 %), un fallo podría causar que la cadena se dividiera incorrectamente, lo que potencialmente podría producir un recorte."
-    }
-  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -1037,6 +1023,12 @@
     {
       "type": 0,
       "value": "Estas actualizaciones de terminología solo cambian las convenciones de nomenclatura; esto no altera los objetivos ni la hoja de ruta de Ethereum."
+    }
+  ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Activo"
     }
   ],
   "3aykgN": [
@@ -1237,6 +1229,12 @@
       "value": "El saldo restante se desbloqueará después de que se haya alcanzado la época de salida mencionada anteriormente. Una vez desbloqueado, el saldo restante se transferirá automáticamente a su cuenta de retirada conectada o al validador de destino elegido, si está migrando cuentas, al cabo de unos días."
     }
   ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Salida activa"
+    }
+  ],
   "57MWKW": [
     {
       "type": 0,
@@ -1375,6 +1373,12 @@
     {
       "type": 1,
       "value": "client"
+    }
+  ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "El validador de destino no está activo"
     }
   ],
   "63gLLu": [
@@ -1533,6 +1537,12 @@
       "value": "Notas"
     }
   ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Pendiente inicializado"
+    }
+  ],
   "738tqz": [
     {
       "type": 0,
@@ -1615,12 +1625,6 @@
     {
       "type": 0,
       "value": "Archivo de configuración"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Por favor, espere e inténtelo de nuevo o busque ayuda si este error persiste."
     }
   ],
   "7XiYRi": [
@@ -1741,6 +1745,12 @@
       "value": "Configurar Teku"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Filtre sus validadores por índice o clave pública o busque por clave pública"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1775,6 +1785,12 @@
     {
       "type": 0,
       "value": "No apague su validador hasta que se alcance este periodo."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "Puede tener un depósito aceptado pero que se está procesando a través de la cola de activación. Por favor, espere e intente de nuevo o busque asistencia si este error continúa."
     }
   ],
   "8k1RjX": [
@@ -1821,12 +1837,6 @@
     {
       "type": 0,
       "value": ": periodo en el que sus fondos de validador son elegibles para una retirada completa durante el próximo barrido del validador."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Filtrar por índice o clave pública"
     }
   ],
   "8uq59n": [
@@ -2083,10 +2093,22 @@
       "value": "Saliendo"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Confirmar en la capa de ejecución"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "entendiendo el saldo efectivo del validador"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "Pendiente en cola"
     }
   ],
   "AkVktj": [
@@ -2113,10 +2135,10 @@
       "value": "Convertirse en validador con Lighthouse"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "Puede que se le haya aceptado un depósito, pero se esté validando en cadena. Estará disponible aquí cuando beaconcha.in haya confirmado 2048 bloques."
+      "value": "El validador de destino no tiene credenciales de Tipo 2 y debe actualizarse antes de que se puedan transferir fondos a él."
     }
   ],
   "Aw1mMs": [
@@ -2203,6 +2225,20 @@
     {
       "type": 0,
       "value": "días"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Por favor, escriba "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " para confirmar que entiende que su validador está cambiando de propietario."
     }
   ],
   "Bj5yI5": [
@@ -2309,6 +2345,24 @@
     {
       "type": 0,
       "value": " de nodo de baliza"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "Cuentas de capitalización elegibles para solicitar retiradas parciales de cualquier saldo superior a "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
     }
   ],
   "CWKE9c": [
@@ -2619,6 +2673,12 @@
       "value": "5. Hora de depositar"
     }
   ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Las solicitudes de consolidación y actualización se acumulan en una cola separada con una pequeña tarifa, que se muestra como la cantidad enviada de la transacción. La tarifa es mínima cuando la cola es corta, con un pequeño margen añadido para prevenir rechazos por picos repentinos de actividad."
+    }
+  ],
   "EXLB88": [
     {
       "type": 0,
@@ -2781,12 +2841,6 @@
     {
       "type": 0,
       "value": "Vuelve a intentarlo"
-    }
-  ],
-  "FcCHp4": [
-    {
-      "type": 0,
-      "value": "Últimos datos sobre el uso del cliente de red"
     }
   ],
   "Felr8P": [
@@ -3135,6 +3189,12 @@
       "value": "Erigon, anteriormente TurboGeth, es un cliente de Ethereum creado para optimizar el rendimiento."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "La confirmación en la capa de ejecución no garantiza que la solicitud seá válida en la capa de consenso. Por favor, revise el explorador de baliza para confirmar si la solicitud es satisfactoria transcurridos 13 minutos (en un período de finalización normal)."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3175,6 +3235,12 @@
     {
       "type": 0,
       "value": "Firmar la transacción con tu cartera"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "La cuenta debe actualizarse primero al tipo de capitalización."
     }
   ],
   "IWlazt": [
@@ -3391,10 +3457,10 @@
       "value": "Para profundizar más"
     }
   ],
-  "Jge1Sx": [
+  "JcQdD5": [
     {
       "type": 0,
-      "value": "Salida forzosa"
+      "value": "Activo recortado"
     }
   ],
   "JhUYU3": [
@@ -4065,6 +4131,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Retirada completa"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4145,6 +4217,12 @@
       "value": "TICKER_NAME"
     }
   ],
+  "OPrOVV": [
+    {
+      "type": 0,
+      "value": "Salida sin recortar"
+    }
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4179,6 +4257,12 @@
     {
       "type": 0,
       "value": " se calculan basándose en la época actual. Estos valores determinan exactamente cuándo el validador ya no tendrá que estar en línea realizando la validación, y cuándo el validador es elegible para un retirada completa respectivamente."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Comprobar depósitos recientes en el explorador"
     }
   ],
   "OdYQYh": [
@@ -4321,6 +4405,12 @@
       "value": "Tu red ha cambiado"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Las solicitudes de salida se acumulan en una cola separada con una pequeña tarifa, que se muestra como la cantidad enviada de la transacción. La tarifa es mínima cuando la cola es corta, con un pequeño margen añadido para prevenir rechazos por picos repentinos de actividad."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4379,6 +4469,12 @@
     {
       "type": 0,
       "value": "documentación de pip"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Solo los validadores con un estado activo pueden recibir fondos de otro validador."
     }
   ],
   "Q/HeiY": [
@@ -4565,6 +4661,12 @@
     {
       "type": 0,
       "value": "enhorabuena"
+    }
+  ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "¡El validador de destino no está asociado con su cartera actual!"
     }
   ],
   "RhR6+a": [
@@ -4865,6 +4967,16 @@
       "value": "index"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " o intente refrescar la página."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5059,6 +5171,12 @@
     {
       "type": 0,
       "value": "Estoy seguro de que el validador que estoy subiendo es mi validador."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Las solicitudes de retirada se acumulan en una cola separada con una pequeña tarifa, que se muestra como la cantidad enviada de la transacción. La tarifa es mínima cuando la cola es corta, con un pequeño margen añadido para prevenir rechazos por picos repentinos de actividad."
     }
   ],
   "Vm6cRY": [
@@ -5761,12 +5879,6 @@
       "value": "Cargar más"
     }
   ],
-  "b8APBK": [
-    {
-      "type": 0,
-      "value": "Más información sobre la diversidad de clientes"
-    }
-  ],
   "bFiejS": [
     {
       "type": 0,
@@ -6033,6 +6145,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "La cuenta seleccionada debe actualizarse al tipo de capitalización para absorber otro validador."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6083,12 +6201,6 @@
     {
       "type": 0,
       "value": "."
-    }
-  ],
-  "cnQKC2": [
-    {
-      "type": 0,
-      "value": "Actualmente Geth lo utiliza el >66 % de la red."
     }
   ],
   "cpxfOR": [
@@ -6235,6 +6347,12 @@
     {
       "type": 0,
       "value": "Configuración"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Salir por completo"
     }
   ],
   "dzdAcD": [
@@ -6449,16 +6567,22 @@
       "value": "solamente almacenado en una máquina validadora"
     }
   ],
-  "fnMHGO": [
+  "fdGVBw": [
+    {
+      "type": 1,
+      "value": "subject"
+    },
     {
       "type": 0,
-      "value": "Esperando confirmación de cartera"
-    }
-  ],
-  "fnV2qn": [
+      "value": " puede retirar cualquier parte de su "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
     {
       "type": 0,
-      "value": "Cuentas de capitalización elegibles para solicitar retiradas parciales de cualquier saldo superior a "
+      "value": " apostado sobre "
     },
     {
       "type": 1,
@@ -6466,11 +6590,13 @@
     },
     {
       "type": 0,
-      "value": " "
-    },
+      "value": "."
+    }
+  ],
+  "fnMHGO": [
     {
-      "type": 1,
-      "value": "TICKER_NAME"
+      "type": 0,
+      "value": "Esperando confirmación de cartera"
     }
   ],
   "fpe4Gx": [
@@ -6951,6 +7077,12 @@
       "value": "No se ha establecido una dirección de retirada para estos validadores. Los fondos apostados y las recompensas permanecerán bloqueados hasta que se proporcionen las credenciales de retirada."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "No se encontraron cuentas de origen elegibles. Los validadores de origen deben estar activados durante al menos 256 épocas (~27 horas) antes de ser elegibles para la consolidación."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7353,12 +7485,6 @@
       "value": "Avisos"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "Confirmar en cadena"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7523,6 +7649,12 @@
       "value": "cambiar tu cartera"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "Ver en el explorador de balizas"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7661,6 +7793,12 @@
     {
       "type": 0,
       "value": "Número de retiradas"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "No se encontraron validadores con credenciales de retirada que coincidan con la cuenta conectada."
     }
   ],
   "mhyltV": [
@@ -7871,12 +8009,6 @@
       "value": " único firmado con sus claves de retirada BLS para especificar la dirección de retirada de Ethereum que desee. Esta dirección solo se puede proporcionar una vez y no se puede cambiar nuevamente."
     }
   ],
-  "oF4os+": [
-    {
-      "type": 0,
-      "value": "Actualmente Prysm lo utiliza el >33 % de la red."
-    }
-  ],
   "oF6xvJ": [
     {
       "type": 0,
@@ -7895,12 +8027,6 @@
       "value": "Ahora que se han importado las claves, todo lo que queda por hacer (asumiendo que el nodo de baliza ya se está ejecutando) es ejecutar el cliente validador."
     }
   ],
-  "oNP2EG": [
-    {
-      "type": 0,
-      "value": "Actualmente Lighthouse es utilizado por >33 % de la red."
-    }
-  ],
   "oNohob": [
     {
       "type": 0,
@@ -7911,12 +8037,6 @@
     {
       "type": 0,
       "value": "su validador"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "No se encontraron validadores."
     }
   ],
   "oVx7Qe": [
@@ -8239,6 +8359,12 @@
       "value": ". Este formato no es compatible con las retiradas de la cadena de baliza y debe actualizarse a credenciales de dirección de Ethereum para habilitar las retiradas."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Tarifa máxima"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8305,6 +8431,12 @@
     {
       "type": 0,
       "value": "Tu cartera se ha desconectado"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "Retiradas habilitadas"
     }
   ],
   "qgqVCE": [
@@ -8513,6 +8645,12 @@
       "value": "Teku también se puede configurar por medio de un archivo YAML que se pasa de diferentes maneras."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "Salida recortada"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8635,6 +8773,12 @@
     {
       "type": 0,
       "value": "¿Qué es el contrato de depósito?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "La cuenta debe estar activada durante al menos 256 épocas (~27 horas) antes de ser elegible para retiradas parciales."
     }
   ],
   "szN3Fl": [
@@ -8949,6 +9093,12 @@
       "value": "Generar pares de claves"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "Más sobre la actualización de un validador con credenciales de Tipo 0."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9153,6 +9303,16 @@
     {
       "type": 0,
       "value": "Opción 2: código fuente + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "TRANSFIERO MI BALANCE DE VALIDADOR COMPLETO AL PROPIETARIO DE "
+    },
+    {
+      "type": 1,
+      "value": "index"
     }
   ],
   "x+fF+M": [

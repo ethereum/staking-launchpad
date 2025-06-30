@@ -167,7 +167,6 @@ const AddFunds = ({ validator }: AddFundsProps) => {
     );
     const bnInput = new BigNumber(etherAmount);
     const transactionAmount = bnInput
-      .decimalPlaces(9, BigNumber.ROUND_DOWN)
       .multipliedBy(1e18)
       .integerValue(BigNumber.ROUND_DOWN); // Convert to Wei and ensure it's an integer
     const reconstructedRootAmount = bnInput
@@ -214,9 +213,10 @@ const AddFunds = ({ validator }: AddFundsProps) => {
 
   const primaryLabel = <FormattedMessage defaultMessage="Stake more funds" />;
 
-  const maxValue = BigNumber.min(etherMaxAvailableToSend, etherMaxUseful)
-    .decimalPlaces(9, BigNumber.ROUND_DOWN)
-    .toNumber();
+  const maxValue = BigNumber.min(
+    etherMaxAvailableToSend,
+    etherMaxUseful
+  ).toNumber();
 
   const newBalance = executionEtherBalance
     ? Math.max(

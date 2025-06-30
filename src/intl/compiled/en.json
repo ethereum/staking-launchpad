@@ -979,28 +979,6 @@
       "value": "Command line with flags"
     }
   ],
-  "3LbIZa": [
-    {
-      "type": 0,
-      "value": "You have the option to add funds to your validator account, as long as your balance it not already at it&apos;s max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top us if you validator account is close to the ejection balance of "
-    },
-    {
-      "type": 1,
-      "value": "EJECTION_PRICE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": "."
-    }
-  ],
   "3O/6JV": [
     {
       "type": 0,
@@ -1395,44 +1373,6 @@
     {
       "type": 0,
       "value": "Active Online"
-    }
-  ],
-  "69FPys": [
-    {
-      "type": 0,
-      "value": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": ". These accounts do not benefit from balances over "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": ", but can be upgraded to a Type 2 compounding account to support an increased max EF of "
-    },
-    {
-      "type": 1,
-      "value": "MAX_EFFECTIVE_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": "."
     }
   ],
   "6NndcB": [
@@ -4749,12 +4689,6 @@
       "value": " air-gapped machine."
     }
   ],
-  "S3RTk+": [
-    {
-      "type": 0,
-      "value": "By adding funds to an account not yet at it's max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
-    }
-  ],
   "S943uU": [
     {
       "type": 0,
@@ -5757,6 +5691,12 @@
     {
       "type": 0,
       "value": "Why is there a wait?"
+    }
+  ],
+  "Zrhg0r": [
+    {
+      "type": 0,
+      "value": "By adding funds to an account not yet at its max EB, you can increase your validator's effective staking balance which is used to calculate both rewards and penalties. Your effective balance is determined from your true balance, and increments/decrements in whole integer units."
     }
   ],
   "ZsXdlw": [
@@ -8353,6 +8293,28 @@
       "value": "Deposit summary"
     }
   ],
+  "q+m2J+": [
+    {
+      "type": 0,
+      "value": "You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance (\"max EB\", the amount capable of contributing to your stake). You can also use this to top up if your validator account is close to the ejection balance of "
+    },
+    {
+      "type": 1,
+      "value": "EJECTION_PRICE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
   "q0thwm": [
     {
       "type": 0,
@@ -8755,6 +8717,44 @@
     {
       "type": 0,
       "value": "Instead of a new transaction type being used for stakers to manually request withdrawals, accounts are automatically checked for eligible excess balance every few days. All validators are checked on an endless loop, and any available rewards or exited funds are automatically “pushed” into a provided withdrawal account."
+    }
+  ],
+  "sctRmf": [
+    {
+      "type": 0,
+      "value": "The max EB for any account with Type 0 (BLS) or Type 1 (regular withdrawals) withdrawal credentials is "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": ". These accounts do not benefit from balances over "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": ", but can be upgraded to a Type 2 compounding account to support an increased max EB of "
+    },
+    {
+      "type": 1,
+      "value": "MAX_EFFECTIVE_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": "."
     }
   ],
   "sgn0wo": [

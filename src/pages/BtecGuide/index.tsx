@@ -184,7 +184,7 @@ export const BtecGuide = () => {
                     <Link
                       primary
                       inline
-                      to="https://github.com/eth-educators/ethstaker-deposit-cli/releases"
+                      to="https://github.com/ethstaker/ethstaker-deposit-cli/releases"
                     >
                       <FormattedMessage defaultMessage="EthStaker Deposit CLI releases" />
                     </Link>
@@ -207,7 +207,7 @@ export const BtecGuide = () => {
             </Text>
             <CodeBlock>
               git clone
-              https://github.com/eth-educators/ethstaker-deposit-cli.git
+              https://github.com/ethstaker/ethstaker-deposit-cli.git
             </CodeBlock>
             <Text className="mb10">
               <FormattedMessage defaultMessage="Install and set virtualenv:" />

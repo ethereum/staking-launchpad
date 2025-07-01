@@ -147,7 +147,7 @@ const AddFunds = ({ validator }: AddFundsProps) => {
     // Do not allow more than 1 gwei precision as required by the deposit contract
     newValue = new BigNumber(value)
       .multipliedBy(ETHER_TO_GWEI)
-      .integerValue()
+      .integerValue(BigNumber.ROUND_DOWN)
       .dividedBy(ETHER_TO_GWEI)
       .toNumber();
     setEtherAmount(newValue);

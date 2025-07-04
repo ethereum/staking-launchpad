@@ -206,8 +206,7 @@ export const BtecGuide = () => {
               />
             </Text>
             <CodeBlock>
-              git clone
-              https://github.com/ethstaker/ethstaker-deposit-cli.git
+              git clone https://github.com/ethstaker/ethstaker-deposit-cli.git
             </CodeBlock>
             <Text className="mb10">
               <FormattedMessage defaultMessage="Install and set virtualenv:" />

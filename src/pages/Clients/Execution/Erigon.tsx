@@ -11,7 +11,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { IS_HOLESKY } from '../../ConnectWallet/web3Utils';
+import { IS_HOODI } from '../../ConnectWallet/web3Utils';
 import { IS_MAINNET } from '../../../utils/envVars';
 
 // eslint-disable-next-line no-unused-vars
@@ -47,7 +47,7 @@ export const ErigonDetails = () => (
         <FormattedMessage defaultMessage="Erigon installation documentation" />
       </Link>
     </section>
-    {!IS_MAINNET && IS_HOLESKY && (
+    {!IS_MAINNET && IS_HOODI && (
       <>
         <section>
           <SectionTitle level={2} className="mb5">
@@ -57,15 +57,15 @@ export const ErigonDetails = () => (
             <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
           </Text>
           <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Holesky" />
+            <FormattedMessage defaultMessage="Testing on Hoodi" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="Use {testnet} to sync the Holesky testnet."
+              defaultMessage="Use {testnet} to sync the Hoodi testnet."
               values={{
-                testnet: <Code className="mt20">--chain holesky</Code>,
+                testnet: <Code className="mt20">--chain hoodi</Code>,
               }}
-              description="{testnet} shows '--chain holesky' terminal command"
+              description="{testnet} shows '--chain hoodi' terminal command"
             />
           </Text>
           <Link

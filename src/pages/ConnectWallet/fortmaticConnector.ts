@@ -1,5 +1,5 @@
 /*
-  This class is from NoahZinsmeisters web3-react library with edits to allow Holesky testnet
+  This class is from NoahZinsmeisters web3-react library with edits to allow Hoodi testnet
   https://github.com/NoahZinsmeister/web3-react/blob/v6/packages/fortmatic-connector/src/index.ts
  */
 
@@ -9,7 +9,7 @@ import invariant from 'tiny-invariant';
 
 const chainIdToNetwork: { [network: number]: string } = {
   1: 'mainnet',
-  17000: 'holesky',
+  560048: 'hoodi',
 };
 
 interface FortmaticConnectorArguments {

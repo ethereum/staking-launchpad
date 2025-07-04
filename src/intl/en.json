@@ -525,15 +525,15 @@
   "6VIBSR": {
     "message": "You can improve the effective balance of this validator by topping up"
   },
+  "6g+zCA": {
+    "description": "Link to documentation about execution client Besu, specifically for Hoodi testnet",
+    "message": "Besu on Hoodi documentation"
+  },
   "6glcFX": {
     "message": "How to join the public testnet"
   },
   "6kX99Q": {
     "message": "Upgrade account to compounding to increase the effective balance to {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
-  },
-  "6stJTU": {
-    "description": "{testnet} shows '--network=holesky' terminal command",
-    "message": "Use {testnet} to sync the Holesky testnet."
   },
   "6vdHjj": {
     "message": "{withdrawalCredentials} is a 32-byte field associated with every validator, initially set during deposit, for verifying the destination of valid withdrawals. Currently, there are two types of withdrawal credentials: BLS credentials (Type 0, or {type0}) and execution (Ethereum address) credentials (Type 1, or {type1})."
@@ -1003,10 +1003,6 @@
   "EIUapL": {
     "description": "{deposit} = 'deposit' styled as code",
     "message": "Use the terminal to move into the directory that contains the {deposit} executable"
-  },
-  "EMCxvJ": {
-    "description": "{testnet} shows '--chain holesky' terminal command",
-    "message": "Use {testnet} to sync the Holesky testnet."
   },
   "EPCHZV": {
     "message": "If you lose your signing key, your validator can no longer propose or attest."
@@ -1505,9 +1501,6 @@
   "MaZo9k": {
     "message": "Wagyu Key Gen GUI"
   },
-  "MalGck": {
-    "message": "Geth on Holesky documentation"
-  },
   "Mb3npQ": {
     "message": "Using the terminal"
   },
@@ -1809,10 +1802,6 @@
   },
   "RokPRM": {
     "message": "Regular withdrawals"
-  },
-  "RqcJGJ": {
-    "description": "Link to documentation about execution client Besu, specifically for Holesky testnet",
-    "message": "Besu on Holesky documentation"
   },
   "Rr2lI/": {
     "message": "You are responsible for this transaction!"
@@ -2196,6 +2185,9 @@
   },
   "ZK6NmY": {
     "message": "Note: the RTC (Real-Time Clock) time may be set to your local timezone instead of UTC, especially in a VM which has its clock configured on Windows."
+  },
+  "ZM0a7A": {
+    "message": "Geth on Hoodi documentation"
   },
   "ZOU+p7": {
     "message": "--http documentation"
@@ -2739,6 +2731,10 @@
   "jM+e2M": {
     "message": "Maximum effective balance of {MAX_EFFECTIVE_BALANCE} {TICKER_NAME}"
   },
+  "jNoyrQ": {
+    "description": "{testnet} shows '--network=hoodi' terminal command",
+    "message": "Use {testnet} to sync the Hoodi testnet."
+  },
   "jVlgXS": {
     "message": "Dig deeper into the Ethereum roadmap."
   },
@@ -2949,8 +2945,9 @@
   "lt3tOB": {
     "message": "Activation Epoch"
   },
-  "m0FJdr": {
-    "message": "Use {testnet} to sync the Holesky testnet."
+  "ltZIgm": {
+    "description": "{testnet} shows '--chain hoodi' terminal command",
+    "message": "Use {testnet} to sync the Hoodi testnet."
   },
   "mAZHi2": {
     "message": "You can broadcast your signed message from the command line using the {curl} command:"
@@ -3495,9 +3492,6 @@
   "v/nu/L": {
     "message": "The Nethermind Ethereum execution client, built on .NET, delivers industry-leading performance in syncing and tip-of-chain processing."
   },
-  "v0ygo6": {
-    "message": "Testing on Holesky"
-  },
   "vBJ79e": {
     "message": "I've simulated how to safely migrate from one execution client to another."
   },
@@ -3541,6 +3535,9 @@
   "w6qYSU": {
     "message": "Run the following command to launch the app"
   },
+  "wFaSlr": {
+    "message": "Testing on Hoodi"
+  },
   "wIdVXZ": {
     "message": "\"Type 1\", \"regular withdrawals\""
   },
@@ -3565,6 +3562,9 @@
   },
   "wm04oC": {
     "message": "Run the following command:"
+  },
+  "wpiqvH": {
+    "message": "Use {testnet} to sync the Hoodi testnet."
   },
   "wtTeex": {
     "message": "Are there spelling mistakes?"

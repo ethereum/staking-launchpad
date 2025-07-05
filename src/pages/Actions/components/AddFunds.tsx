@@ -142,14 +142,13 @@ const AddFunds = ({ validator }: AddFundsProps) => {
   };
 
   const handleValueChange = (value: number) => {
-    let newValue = Math.max(Math.min(value, etherMaxUseful), MIN_DEPOSIT_ETHER);
-
     // Do not allow more than 1 gwei precision as required by the deposit contract
-    newValue = new BigNumber(value)
-      .multipliedBy(ETHER_TO_GWEI)
-      .integerValue(BigNumber.ROUND_DOWN)
-      .dividedBy(ETHER_TO_GWEI)
+    const newValue = new BigNumber(
+      Math.max(Math.min(value, etherMaxUseful), MIN_DEPOSIT_ETHER)
+    )
+      .decimalPlaces(9, BigNumber.ROUND_DOWN)
       .toNumber();
+
     setEtherAmount(newValue);
   };
 

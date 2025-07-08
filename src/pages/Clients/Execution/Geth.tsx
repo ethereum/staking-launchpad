@@ -11,7 +11,7 @@ import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Code } from '../../../components/Code';
 import { Heading } from '../../../components/Heading';
-import { IS_HOLESKY } from '../../ConnectWallet/web3Utils';
+import { IS_HOODI } from '../../ConnectWallet/web3Utils';
 
 import { IS_MAINNET } from '../../../utils/envVars';
 
@@ -52,16 +52,16 @@ export const GethDetails = () => (
       <Text className="mb20 mt10">
         <FormattedMessage defaultMessage="Make sure you do the following to get your execution client working properly." />
       </Text>
-      {!IS_MAINNET && IS_HOLESKY && (
+      {!IS_MAINNET && IS_HOODI && (
         <>
           <Heading level={3} className="mt20">
-            <FormattedMessage defaultMessage="Testing on Holesky" />
+            <FormattedMessage defaultMessage="Testing on Hoodi" />
           </Heading>
           <Text className="mt10">
             <FormattedMessage
-              defaultMessage="Use {testnet} to sync the Holesky testnet."
+              defaultMessage="Use {testnet} to sync the Hoodi testnet."
               values={{
-                testnet: <Code className="mt20">--holesky</Code>,
+                testnet: <Code className="mt20">--hoodi</Code>,
               }}
             />
           </Text>
@@ -69,7 +69,7 @@ export const GethDetails = () => (
             primary
             to="https://geth.ethereum.org/docs/interface/command-line-options"
           >
-            <FormattedMessage defaultMessage="Geth on Holesky documentation" />
+            <FormattedMessage defaultMessage="Geth on Hoodi documentation" />
           </Link>
         </>
       )}

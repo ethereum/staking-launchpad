@@ -1148,7 +1148,7 @@ export const Withdrawals = () => {
               <Link
                 primary
                 inline
-                to="https://notes.ethereum.org/@launchpad/holesky"
+                to="https://notes.ethereum.org/@launchpad/hoodi"
               >
                 <FormattedMessage defaultMessage="How to join the public testnet" />
               </Link>

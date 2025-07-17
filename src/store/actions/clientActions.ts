@@ -8,6 +8,7 @@ export enum ClientId {
   'RETH' = 'RETH',
   'LIGHTHOUSE' = 'LIGHTHOUSE',
   'NIMBUS' = 'NIMBUS',
+  'GRANDINE' = 'GRANDINE',
   'PRYSM' = 'PRYSM',
   'TEKU' = 'TEKU',
   'LODESTAR' = 'LODESTAR',

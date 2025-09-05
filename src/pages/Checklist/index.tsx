@@ -387,11 +387,11 @@ export const Checklist = () => {
       discord: 'https://discord.gg/z9efH7e',
       defaultTcp: 13000,
       defaultUdp: 12000,
-      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      jwtUrl: 'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
       feeRecipientUrl:
-        'https://docs.prylabs.network/docs/execution-node/fee-recipient',
+        'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
       metricsUrl:
-        'https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/',
+        'https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/',
     },
     {
       header: 'Teku',

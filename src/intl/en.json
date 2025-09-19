@@ -72,6 +72,9 @@
   "/EhlLs": {
     "message": "This validator should remain online until exit epoch is reached."
   },
+  "/FXPb2": {
+    "message": "Become a validator with Grandine"
+  },
   "/OAba6": {
     "message": "Note the “activation” and “exit” queues are independent and do not compete. Each are limited on a per-epoch basis."
   },
@@ -812,6 +815,9 @@
   },
   "Aw1mMs": {
     "message": "Top up validator"
+  },
+  "AzzBkK": {
+    "message": "Grandine installation documentation"
   },
   "BCsPjJ": {
     "message": "Start deposit process"
@@ -1764,6 +1770,9 @@
   "QqqeNk": {
     "message": "Transaction rejected"
   },
+  "Qr6xd6": {
+    "message": "More on Grandine"
+  },
   "Qs/oj3": {
     "message": "You may have an {TICKER_NAME} deposit that was accepted but is being validated on chain. It will be available here when beaconcha.in has confirmed 2048 blocks."
   },
@@ -2041,6 +2050,9 @@
   },
   "WkrNSk": {
     "message": "English"
+  },
+  "Wl6KJm": {
+    "message": "Grandine is a high-performance Ethereum consensus layer client built in Rust, designed with a strong focus on speed and security. Its performance-oriented architecture makes it well-suited for a wide range of users—from large institutional operators to individual home stakers running on resource-constrained machines."
   },
   "Wl6cI3": {
     "message": "Please accept the conditions above."
@@ -2336,6 +2348,9 @@
   },
   "cHfIGt": {
     "message": "Execution account"
+  },
+  "cI/zsV": {
+    "message": "Grandine is a high performance Ethereum consensus layer client."
   },
   "cJ9MRI": {
     "message": "If more than 16 requests are being made at one time, a queue will be formed and these will be processed in subsequent blocks. Once completed, your validator is permanently enabled for withdrawals, and will be eligible for payouts during the next sweep."
@@ -2657,6 +2672,9 @@
   },
   "hzLd+/": {
     "message": "I understand that it is important to keep my validator online and updated."
+  },
+  "i7BXoy": {
+    "message": "Grandine is built in Rust and offered under an GPL 3.0 License."
   },
   "iCpuph": {
     "message": "Clients"
@@ -3532,6 +3550,9 @@
   "vz8WK7": {
     "message": "This occurs 256 epochs after the exit epoch, which takes ~27.3 hours."
   },
+  "w/ycqX": {
+    "message": "Grandine documentation"
+  },
   "w6qYSU": {
     "message": "Run the following command to launch the app"
   },
@@ -3704,6 +3725,9 @@
   },
   "ylZLi4": {
     "message": "EIP-2334"
+  },
+  "ym0BdK": {
+    "message": "Configure Grandine"
   },
   "ynB6C+": {
     "message": "I'm able to connect my consensus client to my execution client via HTTP API(s)."

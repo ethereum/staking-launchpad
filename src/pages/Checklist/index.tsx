@@ -389,7 +389,7 @@ export const Checklist = () => {
       defaultUdp: 12000,
       jwtUrl: 'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
       feeRecipientUrl:
-        'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
+        'https://prysm.offchainlabs.com/docs/configure-prysm/fee-recipient/',
       metricsUrl:
         'https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/',
     },

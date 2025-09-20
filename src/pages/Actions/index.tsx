@@ -162,7 +162,7 @@ const _ActionsPage = () => {
     if (!account) {
       deactivate();
     }
-  }, [account]);
+  }, [account, deactivate]);
 
   const handleConnect = useCallback((): void => {
     setLoading(true);
@@ -232,7 +232,7 @@ const _ActionsPage = () => {
 
   const onFetchMore = useCallback(() => {
     setFetchOffset(prev => prev + MAX_QUERY_LIMIT);
-  }, [fetchOffset]);
+  }, []);
 
   // an effect that fetches validators from beaconchain when the user connects or changes their wallet
   useEffect(() => {
@@ -422,13 +422,13 @@ const _ActionsPage = () => {
   }, [
     account,
     active,
-    fetchValidators,
     formatMessage,
     handleConnect,
     lastUpdate,
     loading,
     locale,
     moreToFetch,
+    onFetchMore,
     refreshing,
     refreshValidator,
     selectedValidator,

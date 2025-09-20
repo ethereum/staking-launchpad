@@ -28,6 +28,7 @@ import ScrollToTop from './utils/ScrollToTop';
 import { Prysm } from './pages/Clients/Consensus/Prysm';
 import { Teku } from './pages/Clients/Consensus/Teku';
 import { Nimbus } from './pages/Clients/Consensus/Nimbus';
+import { Grandine } from './pages/Clients/Consensus/Grandine';
 import { Lighthouse } from './pages/Clients/Consensus/Lighthouse';
 import { Lodestar } from './pages/Clients/Consensus/Lodestar';
 import { Besu } from './pages/Clients/Execution/Besu';
@@ -60,6 +61,7 @@ export enum routesEnum {
   nethermind = '/nethermind',
   reth = '/reth',
   nimbus = '/nimbus',
+  grandine = '/grandine',
   prysm = '/prysm',
   teku = '/teku',
   lodestar = '/lodestar',
@@ -119,6 +121,7 @@ const routes: RouteType[] = [
   { path: routesEnum.nethermind, exact: true, component: Nethermind },
   { path: routesEnum.reth, exact: true, component: Reth },
   { path: routesEnum.nimbus, exact: true, component: Nimbus },
+  { path: routesEnum.grandine, exact: true, component: Grandine },
   { path: routesEnum.prysm, exact: true, component: Prysm },
   { path: routesEnum.teku, exact: true, component: Teku },
   { path: routesEnum.lodestar, exact: true, component: Lodestar },

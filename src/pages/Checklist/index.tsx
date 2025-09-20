@@ -21,6 +21,7 @@ import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
+import GrandineBg from '../../static/grandine-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import LodestarBg from '../../static/lodestar-bg.png';
 import BesuBg from '../../static/besu-bg.png';
@@ -372,6 +373,25 @@ export const Checklist = () => {
       feeRecipientUrl: 'https://nimbus.guide/suggested-fee-recipient.html',
       metricsUrl: 'https://nimbus.guide/metrics-pretty-pictures.html',
     },
+    {
+      header: 'Grandine',
+      text: formatMessage({
+        defaultMessage:
+          'Grandine is a high performance Ethereum consensus layer client.',
+      }),
+      imgUrl: GrandineBg,
+      url: routesEnum.grandine,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Grandine',
+      }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/H9XCdUSyZd',
+      ...defaultConsensusPorts,
+      jwtUrl: 'https://docs.grandine.io/cli_options.html',
+      feeRecipientUrl: 'https://docs.grandine.io/validator_client.html',
+      metricsUrl: 'https://docs.grandine.io/metrics.html',
+    },
+
     {
       header: 'Prysm',
       text: formatMessage({

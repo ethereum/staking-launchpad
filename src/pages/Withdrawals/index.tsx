@@ -506,7 +506,7 @@ export const Withdrawals = () => {
                   <Link
                     primary
                     inline
-                    to="https://docs.prylabs.network/docs/wallet/exiting-a-validator"
+                    to="https://prysm.offchainlabs.com/docs/manage-validator/exiting-a-validator/"
                   >
                     <FormattedMessage
                       defaultMessage="Exiting a {client} validator"

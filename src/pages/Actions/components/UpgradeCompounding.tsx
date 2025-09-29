@@ -174,6 +174,14 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
                         />
                       </Text>
                     </li>
+                    <li>
+                      <Text as="span">
+                        <FormattedMessage
+                          defaultMessage="Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will automatically be staked, requiring activation queue processing and a delay."
+                          values={{ MIN_ACTIVATION_BALANCE, TICKER_NAME }}
+                        />
+                      </Text>
+                    </li>
                   </ul>
                   <Text style={{ fontSize: '0.875rem', lineHeight: '1.25rem' }}>
                     <FormattedMessage defaultMessage="Upgrade and consolidation requests enter a separate queue with a small fee, shown as the transaction's send amount. The fee is minimal when the queue is short, with a small buffer added to prevent rejections from sudden activity spikes." />

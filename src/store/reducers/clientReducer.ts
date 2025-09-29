@@ -18,6 +18,7 @@ const executionClientIds = [
 const consensusClientIds = [
   ClientId.LIGHTHOUSE,
   ClientId.NIMBUS,
+  ClientId.GRANDINE,
   ClientId.TEKU,
   ClientId.PRYSM,
 ];

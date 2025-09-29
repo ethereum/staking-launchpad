@@ -27,6 +27,20 @@
       "value": " (önceden 'Eth2' veya 'Ethereum 2.0' olan hisse ispatı mutabakatı görevlerini uygulama)."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "Bir Tip 2 doğrulayıcıya yükseltmek için lütfen geri gidin, hedef doğrulayıcıyı seçin ve "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": " akışını gözden geçirin."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -217,24 +231,6 @@
       "value": "çekilebilir dönem"
     }
   ],
-  "/eUGwM": [
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " üzerinde size ait hisselenmiş "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " miktarının dilediğiniz kadarını çekebilirsiniz."
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -305,12 +301,6 @@
     {
       "type": 0,
       "value": " (para yatırma sözleşmesi tarafından izin verilen minimum değer) ekleyebilirsiniz"
-    }
-  ],
-  "/rmnC0": [
-    {
-      "type": 0,
-      "value": "Herhangi bir şekilde mümkünse kendinizi ve ağı korumak için bir istemci daha çalıştırmayı düşünebilirsiniz."
     }
   ],
   "/sp2Uu": [
@@ -681,6 +671,12 @@
       "value": "Para yatırma sözleşme detaylarını kontrol edin"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "Konsolidasyon talepleri, işlemin gönderim miktarı olarak gösterilen küçük bir ücretle ayrı bir kuyruğa girer. Kuyruk kısa olduğunda ücret asgari düzeydedir ve ani aktivite artışlarından kaynaklanan reddetmeleri önlemek için küçük bir tampon eklenir."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -887,12 +883,6 @@
       "value": "\"Tip 0\", \"BLS\", \"kilitli\""
     }
   ],
-  "2rflCq": [
-    {
-      "type": 0,
-      "value": "Ethereum'un ağ sağlığı için istemci çeşitliliği oldukça önemlidir: %33'ten büyük bir paya sahip bir istemcideki hata, Ethereum'u çevrimdışı hâle getirebilir. Bir istemci süper çoğunluğa sahipse (>%66) bir hata, zincirin yanlış parçalanmasına neden olarak olası bir iptal edilmeye yol açabilir."
-    }
-  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -1037,6 +1027,12 @@
     {
       "type": 0,
       "value": "Bu terminoloji güncellemeleri, Ethereum'un amaçlarını veya yol haritasını değil, sadece adlandırma alışkanlıklarını değiştirir."
+    }
+  ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Aktif"
     }
   ],
   "3aykgN": [
@@ -1237,6 +1233,12 @@
       "value": "Kalan bakiyenin kilidi, yukarıdaki çıkış dönemine ulaşıldıktan sonra açılır. Kalan bakiye, kilidi açıldıktan sonra birkaç gün içinde otomatik olarak bağlı para çekme hesabınıza, hesapları taşıyor olmanız durumundaysa tercih ettiğiniz hedef doğrulayıcıya aktarılır."
     }
   ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Aktif Çıkış"
+    }
+  ],
   "57MWKW": [
     {
       "type": 0,
@@ -1377,6 +1379,12 @@
       "value": " doğrulayıcısı"
     }
   ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "Hedef doğrulayıcı aktif değil"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1488,7 +1496,7 @@
   "6stJTU": [
     {
       "type": 0,
-      "value": "Holesky test ağını senkronize etmek için "
+      "value": "Hoodi test ağını senkronize etmek için "
     },
     {
       "type": 1,
@@ -1535,6 +1543,12 @@
     {
       "type": 0,
       "value": "Notlar"
+    }
+  ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Bekleme Başlatıldı"
     }
   ],
   "738tqz": [
@@ -1619,12 +1633,6 @@
     {
       "type": 0,
       "value": "Yapılandırma dosyası"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Lütfen bekleyip tekrar deneyin veya bu hata devam ederse yardım isteyin."
     }
   ],
   "7XiYRi": [
@@ -1745,6 +1753,12 @@
       "value": "Teku'yu yapılandır"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcılarınızı dizine veya genel anahtara göre filtreleyin ya da genel anahtara göre arayın"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1779,6 +1793,12 @@
     {
       "type": 0,
       "value": "Bu döneme ulaşmadan önce doğrulayıcınızı kapatmayın."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "Kabul edilen, ancak etkinleştirme kuyruğu aracılığıyla işlenen bir para yatırma işlemine sahip olabilirsiniz. Lütfen bekleyin ve tekrar deneyin veya bu hata devam ederse yardım isteyin."
     }
   ],
   "8k1RjX": [
@@ -1825,12 +1845,6 @@
     {
       "type": 0,
       "value": " - doğrulayıcı paralarınızın bir sonraki doğrulayıcı taraması sırasında tam olarak çekilmeye uygun olduğu dönem."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Dizine veya genel anahtara göre filtrele"
     }
   ],
   "8uq59n": [
@@ -2083,10 +2097,22 @@
       "value": "Çıkış yapma"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Yürütüm katmanında onaylayın"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "doğrulayıcı etkin bakiyesini anlama"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "Bekleme Kuyruğa Alındı"
     }
   ],
   "AkVktj": [
@@ -2113,10 +2139,10 @@
       "value": "Lighthouse ile doğrulayıcı olun"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "Kabul edilmiş ancak zincir üzerinde doğrulanmakta olan bir para yatırma işleminiz olabilir. Bu para, beaconcha.in 2048 bloğu onayladığında burada kullanılabilir olacaktır."
+      "value": "Hedef doğrulayıcı, Tip 2 kimlik bilgilerine sahip değil ve fonlar aktarılmadan önce yükseltilmelidir."
     }
   ],
   "Aw1mMs": [
@@ -2199,6 +2225,20 @@
     {
       "type": 0,
       "value": "gün"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Doğrulayıcınızın sahipliğinin değiştiğini anladığınızı onaylamak için lütfen "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " yazın."
     }
   ],
   "Bj5yI5": [
@@ -2305,6 +2345,28 @@
     {
       "type": 0,
       "value": " havuzuna yükle"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "Birleştirme hesapları, "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " üzerindeki herhangi bir bakiyeden kısmi para çekme talebinde bulunmaya uygundur"
     }
   ],
   "CWKE9c": [
@@ -2578,7 +2640,7 @@
   "EMCxvJ": [
     {
       "type": 0,
-      "value": "Holesky test ağını senkronize etmek için "
+      "value": "Hoodi test ağını senkronize etmek için "
     },
     {
       "type": 1,
@@ -2617,6 +2679,12 @@
     {
       "type": 0,
       "value": "5. Yatırım yapma zamanı"
+    }
+  ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "Yükseltme ve konsolidasyon talepleri, işlemin gönderim miktarı olarak gösterilen küçük bir ücretle ayrı bir kuyruğa girer. Kuyruk kısa olduğunda ücret asgari düzeydedir ve ani aktivite artışlarından kaynaklanan reddetmeleri önlemek için küçük bir tampon eklenir."
     }
   ],
   "EXLB88": [
@@ -2777,12 +2845,6 @@
     {
       "type": 0,
       "value": "Tekrar deneyin"
-    }
-  ],
-  "FcCHp4": [
-    {
-      "type": 0,
-      "value": "Ağ istemcisi kullanımına ilişkin en son veriler"
     }
   ],
   "Felr8P": [
@@ -3131,6 +3193,12 @@
       "value": "Eskiden TurboGeth olan Erigon, performans optimizasyonlarını mümkün kılmak için geliştirilmiş bir Ethereum istemcisidir."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "Yürütüm katmanındaki onay, talebin fikir birliği katmanında geçerli olacağını garanti etmez. Talebin 13 dakika sonra (normal kesinleşme süresi altında) başarılı olup olmadığını onaylamak için işaretçi gezginini kontrol edin."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3171,6 +3239,12 @@
     {
       "type": 0,
       "value": "Cüzdanınızla işlem imzalayın"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "Hesap önce birleştirme türüne yükseltilmelidir."
     }
   ],
   "IWlazt": [
@@ -3379,10 +3453,10 @@
       "value": "Ek okumalar"
     }
   ],
-  "Jge1Sx": [
+  "JcQdD5": [
     {
       "type": 0,
-      "value": "Zorla çıkış"
+      "value": "Aktif İptal Edilenler"
     }
   ],
   "JhUYU3": [
@@ -3812,7 +3886,7 @@
   "MalGck": [
     {
       "type": 0,
-      "value": "Holesky dokümanlarında Geth"
+      "value": "Hoodi dokümanlarında Geth"
     }
   ],
   "Mb3npQ": [
@@ -4053,6 +4127,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Para Çekme Tamamlandı"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4137,6 +4217,12 @@
       "value": " çek"
     }
   ],
+  "OPrOVV": [
+    {
+      "type": 0,
+      "value": "İptal Edilmeyenlerden Çıkış Yapıldı"
+    }
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4171,6 +4257,12 @@
     {
       "type": 0,
       "value": " değerleri mevcut dönem numarasına göre hesaplanır. Bu değerler, doğrulayıcının tam olarak ne zaman çevrimiçi doğrulama gerçekleştirmesi gerekmeyeceğini ve sırasıyla doğrulayıcının tam olarak ne zaman tam para çekmeye uygun olduğunu belirler."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Son para yatırma işlemlerini gezginde kontrol edin"
     }
   ],
   "OdYQYh": [
@@ -4313,6 +4405,12 @@
       "value": "Ağınız değişti"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "Çıkış talepleri, işlemin gönderim miktarı olarak gösterilen küçük bir ücretle ayrı bir kuyruğa girer. Kuyruk kısa olduğunda ücret asgari düzeydedir ve ani aktivite artışlarından kaynaklanan reddetmeleri önlemek için küçük bir tampon eklenir."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4371,6 +4469,12 @@
     {
       "type": 0,
       "value": "pip belgesi"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Yalnızca aktif duruma sahip doğrulayıcılar başka bir doğrulayıcıdan fon alabilir."
     }
   ],
   "Q/HeiY": [
@@ -4559,6 +4663,12 @@
       "value": "tebrikler"
     }
   ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "Hedef doğrulayıcı, mevcut cüzdanınızla ilişkili değil!"
+    }
+  ],
   "RhR6+a": [
     {
       "type": 0,
@@ -4574,7 +4684,7 @@
   "RqcJGJ": [
     {
       "type": 0,
-      "value": "Holesky dokümanlarında Besu"
+      "value": "Hoodi dokümanlarında Besu"
     }
   ],
   "Rr2lI/": [
@@ -4861,6 +4971,16 @@
       "value": " aktarıldı"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": " veya sayfayı yenilemeyi deneyin."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5055,6 +5175,12 @@
     {
       "type": 0,
       "value": "Yükleme yaptığım doğrulayıcının doğrulayıcım olduğundan eminim."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "Para çekme talepleri, işlemin gönderim miktarı olarak gösterilen küçük bir ücretle ayrı bir kuyruğa girer. Kuyruk kısa olduğunda ücret asgari düzeydedir ve ani aktivite artışlarından kaynaklanan reddetmeleri önlemek için küçük bir tampon eklenir."
     }
   ],
   "Vm6cRY": [
@@ -5749,12 +5875,6 @@
       "value": "Daha fazlasını getir"
     }
   ],
-  "b8APBK": [
-    {
-      "type": 0,
-      "value": "İstemci çeşitliliği hakkında daha fazla bilgi"
-    }
-  ],
   "bFiejS": [
     {
       "type": 0,
@@ -6017,6 +6137,12 @@
       "value": " işleminin hedefinin hangi doğrulayıcı olmasını istiyorsunuz?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "Seçilen hesap, başka bir doğrulayıcıyı çekmek için birleştirme türüne yükseltilmelidir."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6067,12 +6193,6 @@
     {
       "type": 0,
       "value": " çekebilirsiniz."
-    }
-  ],
-  "cnQKC2": [
-    {
-      "type": 0,
-      "value": "Şu anda Geth, ağın %66'sından fazlası tarafından kullanılmaktadır."
     }
   ],
   "cpxfOR": [
@@ -6219,6 +6339,12 @@
     {
       "type": 0,
       "value": "Kurulum"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Tamamen çık"
     }
   ],
   "dzdAcD": [
@@ -6429,20 +6555,22 @@
       "value": "yalnızca bir doğrulayıcı makinede saklanır"
     }
   ],
-  "fnMHGO": [
+  "fdGVBw": [
+    {
+      "type": 1,
+      "value": "subject"
+    },
     {
       "type": 0,
-      "value": "cüzdan onayı bekleniyor"
-    }
-  ],
-  "fnV2qn": [
+      "value": ", "
+    },
     {
       "type": 1,
       "value": "MIN_ACTIVATION_BALANCE"
     },
     {
       "type": 0,
-      "value": " "
+      "value": " üzerinde "
     },
     {
       "type": 1,
@@ -6450,7 +6578,13 @@
     },
     {
       "type": 0,
-      "value": " üzerindeki herhangi bir bakiyeden kısmi para çekme talebinde bulunmaya uygun birleştirme hesapları"
+      "value": " kişisine ait hisselenmiş miktarın istenen kısmını çekebilir."
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "cüzdan onayı bekleniyor"
     }
   ],
   "fpe4Gx": [
@@ -6923,6 +7057,12 @@
       "value": "Bu doğrulayıcılar için bir para çekme adresi belirlenmedi. Hisseleme yapılmış para ve ödüller, para çekme kimlik bilgileri sağlanana kadar kilitli kalacaktır."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "Uygun kaynak hesap bulunamadı. Kaynak doğrulayıcılar, konsolidasyon için uygun hale gelmeden önce en az 256 dönem (~27 saat) boyunca etkinleştirilmiş olmalıdır."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7325,12 +7465,6 @@
       "value": "Tavsiyeler"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "Zincirde onayla"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7491,6 +7625,12 @@
       "value": "cüzdanınızı değiştirin"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "İşaret gezgininde görüntüleyin"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7506,7 +7646,7 @@
   "m0FJdr": [
     {
       "type": 0,
-      "value": "Holesky test ağını senkronize etmek için "
+      "value": "Hoodi test ağını senkronize etmek için "
     },
     {
       "type": 1,
@@ -7625,6 +7765,12 @@
     {
       "type": 0,
       "value": "Para çekme işlemlerinin sayısı"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "Bağlı hesapla eşleşen para çekme kimlik bilgilerine sahip hiçbir doğrulayıcı bulunamadı."
     }
   ],
   "mhyltV": [
@@ -7835,12 +7981,6 @@
       "value": " mesajı göndererek istediğiniz Ethereum para çekme adresini belirtebilirsiniz. Bu adres yalnızca bir kez verilebilir ve tekrar değiştirilemez."
     }
   ],
-  "oF4os+": [
-    {
-      "type": 0,
-      "value": "Şu anda Prysm, ağın 33'ünden fazlası tarafından kullanılmaktadır."
-    }
-  ],
   "oF6xvJ": [
     {
       "type": 0,
@@ -7859,12 +7999,6 @@
       "value": "Artık anahtarlar içe aktarıldığına göre, tek yapmanız gereken (işaret düğümünüzün zaten çalıştığını varsayarak) doğrulayıcı istemcisini çalıştırmaktır."
     }
   ],
-  "oNP2EG": [
-    {
-      "type": 0,
-      "value": "Lighthouse, mevcut durumda ağ üzerinde %33'ten daha az bir oranda kullanılıyor."
-    }
-  ],
   "oNohob": [
     {
       "type": 0,
@@ -7875,12 +8009,6 @@
     {
       "type": 0,
       "value": "doğrulayıcınız"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "Doğrulayıcı bulunamadı."
     }
   ],
   "oVx7Qe": [
@@ -8203,6 +8331,12 @@
       "value": " ile para çekme kimlik bilgileri oluşturur. Bu biçim, İşaret Zinciri para çekme işlemleriyle uyumlu değildir ve para çekme işlemlerini etkinleştirmek için Ethereum adres kimlik bilgilerine güncellenmelidir."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Maks. ücret"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8269,6 +8403,12 @@
     {
       "type": 0,
       "value": "Cüzdanınızın bağlantısı kesildi"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "Para Çekme Mümkün"
     }
   ],
   "qgqVCE": [
@@ -8481,6 +8621,12 @@
       "value": "Teku, birkaç farklı yolla iletilen bir YAML dosyası aracılığıyla da yapılandırılabilir."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "İptal Edilenlerden Çıkış Yapıldı"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8603,6 +8749,12 @@
     {
       "type": 0,
       "value": "Para yatırma sözleşmesi nedir?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "Hesap, kısmi para çekme işlemleri için uygun olmadan önce en az 256 dönem (~27 saat) etkinleştirilmiş olmalıdır."
     }
   ],
   "szN3Fl": [
@@ -8917,6 +9069,12 @@
       "value": "Anahtar çiftleri oluşturun"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "Tip 0 kimlik bilgileriyle bir doğrulayıcıyı yükseltme hakkında daha fazla bilgi."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -8944,7 +9102,7 @@
   "v0ygo6": [
     {
       "type": 0,
-      "value": "Holesky üzerinde test etme"
+      "value": "Hoodi üzerinde test etme"
     }
   ],
   "vBJ79e": [
@@ -9117,6 +9275,20 @@
     {
       "type": 0,
       "value": "2. seçenek: Kaynak kodu + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "TAM DOĞRULAYICI BAKİYEMİ "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " SAHİBİNE TRANSFER EDERİM"
     }
   ],
   "x+fF+M": [

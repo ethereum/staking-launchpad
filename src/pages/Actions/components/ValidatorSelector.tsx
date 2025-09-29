@@ -61,13 +61,20 @@ const ValidatorSelector = ({
     }
   };
 
+  const defaultPlaceholder = formatMessage({
+    defaultMessage: 'Filter your validators by index or pubkey',
+  });
+  const searchablePlaceholder = formatMessage({
+    defaultMessage:
+      'Filter your validators by index or pubkey or search by pubkey',
+  });
+
   return (
     <Select
       placeholder={`Available validators: ${validators.length}`}
-      searchPlaceholder={formatMessage({
-        defaultMessage:
-          'Filter your validators by index or pubkey or search by pubkey',
-      })}
+      searchPlaceholder={
+        allowSearch ? searchablePlaceholder : defaultPlaceholder
+      }
       options={validators.map(v => {
         return {
           value: v.pubkey,

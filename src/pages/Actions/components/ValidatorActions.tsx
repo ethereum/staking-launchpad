@@ -11,6 +11,7 @@ import PartialWithdraw from './PartialWithdraw';
 import PullConsolidation from './PullConsolidation';
 import PushConsolidation from './PushConsolidation';
 import { Section as SharedSection } from './Shared';
+import { Link } from '../../../components/Link';
 import { Text } from '../../../components/Text';
 import UpgradeCompounding from './UpgradeCompounding';
 
@@ -110,9 +111,18 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
 
     setSourceValidatorSet(potentialSourceValidators);
 
-    const potentialTargetValidators = potentialSourceValidators.filter(
-      v => getCredentialType(v) >= ValidatorType.Compounding
-    );
+    const potentialTargetValidators = validators.filter(v => {
+      const isCompounding = getCredentialType(v) >= ValidatorType.Compounding;
+      const isSameValidator = v.pubkey === validator.pubkey;
+      const hasBalance = v.balance > 0;
+      // Should be filtered out from API call for validators by withdrawal address; backup check
+      const isSameCredentials =
+        v.withdrawalcredentials.slice(4) ===
+        validator.withdrawalcredentials.slice(4);
+      return (
+        isCompounding && !isSameValidator && hasBalance && isSameCredentials
+      );
+    });
 
     setTargetValidatorSet(potentialTargetValidators);
   }, [validator, validators]);
@@ -139,6 +149,21 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
                 TICKER_NAME,
               }}
             />
+            <br />
+            <em>
+              <FormattedMessage
+                defaultMessage="Note: Balance over {MIN_ACTIVATION_BALANCE} {TICKER_NAME} will temporarily disappear from balance shown above while it processes through an activation queue. See {pectrified} for details."
+                values={{
+                  MIN_ACTIVATION_BALANCE,
+                  TICKER_NAME,
+                  pectrified: (
+                    <Link inline primary to="https://pectrified.com/">
+                      pectrified.com
+                    </Link>
+                  ),
+                }}
+              />
+            </em>
           </div>
           <UpgradeCompounding validator={validator} />
         </Row>

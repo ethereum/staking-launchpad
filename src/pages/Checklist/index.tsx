@@ -21,6 +21,7 @@ import { ClientCard } from '../Congratulations/ClientCard';
 import PrysmaticBg from '../../static/prysmatic-bg.png';
 import LighthouseBg from '../../static/lighthouse-bg.png';
 import NimbusBg from '../../static/nimbus-bg.png';
+import GrandineBg from '../../static/grandine-bg.png';
 import TekuBg from '../../static/teku-bg.png';
 import LodestarBg from '../../static/lodestar-bg.png';
 import BesuBg from '../../static/besu-bg.png';
@@ -373,6 +374,25 @@ export const Checklist = () => {
       metricsUrl: 'https://nimbus.guide/metrics-pretty-pictures.html',
     },
     {
+      header: 'Grandine',
+      text: formatMessage({
+        defaultMessage:
+          'Grandine is a high performance Ethereum consensus layer client.',
+      }),
+      imgUrl: GrandineBg,
+      url: routesEnum.grandine,
+      linkText: formatMessage({
+        defaultMessage: 'Configure Grandine',
+      }),
+      layer: layerEnum.consensus,
+      discord: 'https://discord.gg/H9XCdUSyZd',
+      ...defaultConsensusPorts,
+      jwtUrl: 'https://docs.grandine.io/cli_options.html',
+      feeRecipientUrl: 'https://docs.grandine.io/validator_client.html',
+      metricsUrl: 'https://docs.grandine.io/metrics.html',
+    },
+
+    {
       header: 'Prysm',
       text: formatMessage({
         defaultMessage:
@@ -387,11 +407,11 @@ export const Checklist = () => {
       discord: 'https://discord.gg/z9efH7e',
       defaultTcp: 13000,
       defaultUdp: 12000,
-      jwtUrl: 'https://docs.prylabs.network/docs/execution-node/authentication',
+      jwtUrl: 'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
       feeRecipientUrl:
-        'https://docs.prylabs.network/docs/execution-node/fee-recipient',
+        'https://prysm.offchainlabs.com/docs/configure-prysm/fee-recipient/',
       metricsUrl:
-        'https://docs.prylabs.network/docs/prysm-usage/monitoring/grafana-dashboard/',
+        'https://prysm.offchainlabs.com/docs/monitoring-alerts-metrics/grafana-dashboard/',
     },
     {
       header: 'Teku',

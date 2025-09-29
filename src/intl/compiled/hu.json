@@ -27,6 +27,20 @@
       "value": " (korábban „Eth2” vagy „Ethereum 2.0”) rétegből áll."
     }
   ],
+  "+3Cqbb": [
+    {
+      "type": 0,
+      "value": "Ha szeretne 2. típusú validátorra frissíteni, lépjen vissza, válassza ki a célvalidátort, és kövesse a(z) "
+    },
+    {
+      "type": 1,
+      "value": "boldUpgradeAccount"
+    },
+    {
+      "type": 0,
+      "value": " folyamatot."
+    }
+  ],
   "+3gmIR": [
     {
       "type": 0,
@@ -213,28 +227,6 @@
       "value": "kivehető korszak"
     }
   ],
-  "/eUGwM": [
-    {
-      "type": 0,
-      "value": "A letétbe helyezett "
-    },
-    {
-      "type": 1,
-      "value": "TICKER_NAME"
-    },
-    {
-      "type": 0,
-      "value": " bármely részét kiveheti, amely meghaladja a "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " összeget."
-    }
-  ],
   "/hEGaO": [
     {
       "type": 0,
@@ -305,12 +297,6 @@
     {
       "type": 0,
       "value": " (a letétbe helyezési szerződés által megengedett minimum)"
-    }
-  ],
-  "/rmnC0": [
-    {
-      "type": 0,
-      "value": "Ha lehetséges, ilyenkor érdemes lehet megfontolni egy másik kliens futtatását, hogy megvédje magát és a hálózatot."
     }
   ],
   "/sp2Uu": [
@@ -685,6 +671,12 @@
       "value": "Ellenőrizze a letétbe helyezési szerződés részleteit"
     }
   ],
+  "1iI5Ju": [
+    {
+      "type": 0,
+      "value": "A konszolidációs kérelmek egy külön sorba kerülnek egy minimális díjjal, amely a tranzakció küldési összegeként jelenik meg. A díj akkor a legalacsonyabb, amikor a sor rövid, és némi puffert is tartalmaz, amely megakadályozza a hirtelen aktivitási csúcsok miatti esetleges elutasítást."
+    }
+  ],
   "1ingnQ": [
     {
       "type": 0,
@@ -891,12 +883,6 @@
       "value": "„0. típus”, „BLS”, „zárolt”"
     }
   ],
-  "2rflCq": [
-    {
-      "type": 0,
-      "value": "A kliensdiverzitás rendkívül fontos az Ethereum hálózat állapota szempontjából: egy több mint 33%-ban előforduló hiba a kliensben az Ethereum offline állapotba kapcsolását eredményezheti. Ha a kliens túlnyomó többséggel rendelkezik (>66%), a hiba a lánc nem megfelelő kettéosztását okozhatja, ami súlyos büntetéssel egybekötött kizáráshoz vezethet."
-    }
-  ],
   "2t/3ab": [
     {
       "type": 0,
@@ -1041,6 +1027,12 @@
     {
       "type": 0,
       "value": "Ezek a terminológiai módosítások csak az elnevezési szabályokat változtatják meg; ez nem változtat az Ethereum céljain vagy ütemtervén."
+    }
+  ],
+  "3a5wL8": [
+    {
+      "type": 0,
+      "value": "Aktív"
     }
   ],
   "3aykgN": [
@@ -1245,6 +1237,12 @@
       "value": "A fennmaradó egyenleg a fenti kilépési korszak elérése után kerül feloldásra. A feloldás után a fennmaradó egyenleg automatikusan átutalásra kerül a csatlakoztatott kivételi fiókba, vagy néhány napon belül a kiválasztott célvalidátorra, ha éppen áttelepíti a fiókokat."
     }
   ],
+  "5/MOHn": [
+    {
+      "type": 0,
+      "value": "Aktív kilépés"
+    }
+  ],
   "57MWKW": [
     {
       "type": 0,
@@ -1385,6 +1383,12 @@
       "value": " validátorból"
     }
   ],
+  "6/hnxI": [
+    {
+      "type": 0,
+      "value": "A célvalidátor nem aktív"
+    }
+  ],
   "63gLLu": [
     {
       "type": 0,
@@ -1504,7 +1508,7 @@
     },
     {
       "type": 0,
-      "value": " hálózatot a Holesky tesztelő hálózat szinkronizálásához."
+      "value": " hálózatot a Hoodi tesztelő hálózat szinkronizálásához."
     }
   ],
   "6vdHjj": [
@@ -1547,6 +1551,12 @@
     {
       "type": 0,
       "value": "Jegyzetek"
+    }
+  ],
+  "715MG7": [
+    {
+      "type": 0,
+      "value": "Függőben lévő, inicializált"
     }
   ],
   "738tqz": [
@@ -1639,12 +1649,6 @@
     {
       "type": 0,
       "value": "Konfigurációs fájl"
-    }
-  ],
-  "7XWI5I": [
-    {
-      "type": 0,
-      "value": "Kérjük, várjon, és próbálja meg újra, vagy kérjen segítséget, ha ez a hiba továbbra is fennáll."
     }
   ],
   "7XiYRi": [
@@ -1765,6 +1769,12 @@
       "value": "Konfigurálja a Tekut"
     }
   ],
+  "8J6IfS": [
+    {
+      "type": 0,
+      "value": "Szűrje a validátorokat index vagy nyilvános kulcs szerint, vagy keressen nyilvános kulcs szerint"
+    }
+  ],
   "8JtiQS": [
     {
       "type": 0,
@@ -1799,6 +1809,12 @@
     {
       "type": 0,
       "value": "Ne kapcsolja ki a validátort a korszak végéig."
+    }
+  ],
+  "8jssAY": [
+    {
+      "type": 0,
+      "value": "Előfordulhat, hogy van egy letétje, amelyet elfogadtak, de még éppen az aktiválási sorban vár feldolgozásra. Kérjük, várjon, és próbálja meg újra, vagy kérjen segítséget, ha a hiba továbbra is fennáll."
     }
   ],
   "8k1RjX": [
@@ -1845,12 +1861,6 @@
     {
       "type": 0,
       "value": " – korszak, amely során az Ön validátori pénzeszközei a következő validátori átfésülés során teljes összegű kivételre jogosultak."
-    }
-  ],
-  "8uE+mp": [
-    {
-      "type": 0,
-      "value": "Szűrés index vagy nyilvános kulcs alapján"
     }
   ],
   "8uq59n": [
@@ -2107,10 +2117,22 @@
       "value": "Kilépés"
     }
   ],
+  "Ab1qjD": [
+    {
+      "type": 0,
+      "value": "Megerősítés a végrehajtási rétegen"
+    }
+  ],
   "AbBgEs": [
     {
       "type": 0,
       "value": "a validátor hatékony egyenlegének megértése"
+    }
+  ],
+  "AhFU2+": [
+    {
+      "type": 0,
+      "value": "Függőben lévő, várakozó"
     }
   ],
   "AkVktj": [
@@ -2137,10 +2159,10 @@
       "value": "Legyen validátor a Lighthouse-zal"
     }
   ],
-  "As7Kwv": [
+  "Atjyqe": [
     {
       "type": 0,
-      "value": "Előfordulhat, hogy a befizetése el lett fogadva, de a láncban validálási folyamat alatt áll. Itt lesz elérhető, ha a beaconcha.in megerősítette a 2048 blokkot."
+      "value": "A célvalidátor nem rendelkezik 2. típusú hitelesítő adatokkal, és frissíteni kell, mielőtt pénzeszközöket lehetne rá továbbítani."
     }
   ],
   "Aw1mMs": [
@@ -2227,6 +2249,20 @@
     {
       "type": 0,
       "value": "napok"
+    }
+  ],
+  "BeE9pr": [
+    {
+      "type": 0,
+      "value": "Kérjük, írja be a(z) "
+    },
+    {
+      "type": 1,
+      "value": "boldConfirmationMessage"
+    },
+    {
+      "type": 0,
+      "value": " üzenetet annak megerősítésére, hogy megértette, validátorának tulajdonjoga megváltozik."
     }
   ],
   "Bj5yI5": [
@@ -2333,6 +2369,28 @@
     {
       "type": 0,
       "value": " poolba"
+    }
+  ],
+  "CUd95N": [
+    {
+      "type": 0,
+      "value": "Az összesített fiókok jogosultak bármely "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "type": 1,
+      "value": "TICKER_NAME"
+    },
+    {
+      "type": 0,
+      "value": " feletti egyenleg részleges kivételére"
     }
   ],
   "CWKE9c": [
@@ -2606,7 +2664,7 @@
     },
     {
       "type": 0,
-      "value": " hálózatot a Holesky tesztelő hálózat szinkronizálásához."
+      "value": " hálózatot a Hoodi tesztelő hálózat szinkronizálásához."
     }
   ],
   "EPCHZV": [
@@ -2637,6 +2695,12 @@
     {
       "type": 0,
       "value": "5. Itt az ideje a letétbe helyezésnek"
+    }
+  ],
+  "ETn48e": [
+    {
+      "type": 0,
+      "value": "A frissítési és konszolidációs kérelmek egy külön sorba kerülnek egy minimális díjjal, amely a tranzakció küldési összegeként jelenik meg. A díj akkor a legalacsonyabb, amikor a sor rövid, és némi puffert is tartalmaz, amely megakadályozza a hirtelen aktivitási csúcsok miatti esetleges elutasítást."
     }
   ],
   "EXLB88": [
@@ -2801,12 +2865,6 @@
     {
       "type": 0,
       "value": "Próbálja meg újra"
-    }
-  ],
-  "FcCHp4": [
-    {
-      "type": 0,
-      "value": "A hálózatikliens-használat legfrissebb adatai"
     }
   ],
   "Felr8P": [
@@ -3159,6 +3217,12 @@
       "value": "A korábban TurboGeth néven ismert Erigon egy Ethereum-kliens, amelyet a teljesítmény optimalizálására fejlesztettek ki."
     }
   ],
+  "I7N/DN": [
+    {
+      "type": 0,
+      "value": "A végrehajtási rétegen történő megerősítés nem garantálja, hogy a kérés érvényes lesz a konszenzusrétegen. Kérjük, ellenőrizze a Beacon felfedezőt annak megerősítésére, hogy a kérés sikeres-e 13 perc után (normál véglegesítési időszak alatt)."
+    }
+  ],
   "ICbItT": [
     {
       "type": 0,
@@ -3199,6 +3263,12 @@
     {
       "type": 0,
       "value": "Írja alá a tranzakciót a pénztárcájával"
+    }
+  ],
+  "IWdOGZ": [
+    {
+      "type": 0,
+      "value": "A fiókot először összetett típusúra kell frissíteni."
     }
   ],
   "IWlazt": [
@@ -3411,10 +3481,10 @@
       "value": "További információ"
     }
   ],
-  "Jge1Sx": [
+  "JcQdD5": [
     {
       "type": 0,
-      "value": "Kilépés kényszerítése"
+      "value": "Aktív, súlyos büntetést kapott, és ki lett zárva"
     }
   ],
   "JhUYU3": [
@@ -3848,7 +3918,7 @@
   "MalGck": [
     {
       "type": 0,
-      "value": "A Geth dokumentációja a Holesky tesztelő hálózathoz"
+      "value": "A Geth dokumentációja a Hoodi tesztelő hálózathoz"
     }
   ],
   "Mb3npQ": [
@@ -4093,6 +4163,12 @@
       "value": ")"
     }
   ],
+  "NsVnBT": [
+    {
+      "type": 0,
+      "value": "Kivétel kész"
+    }
+  ],
   "NwzcYT": [
     {
       "type": 0,
@@ -4177,6 +4253,12 @@
       "value": " kivétele"
     }
   ],
+  "OPrOVV": [
+    {
+      "type": 0,
+      "value": "Kilépett, súlyos büntetést kapott, de már nincs kizárva"
+    }
+  ],
   "ORVjVH": [
     {
       "type": 0,
@@ -4211,6 +4293,12 @@
     {
       "type": 0,
       "value": " értékek kiszámításra kerülnek az aktuális korszakszám alapján. Ezek az értékek pontosan meghatározzák, hogy a validátornak mikor nem kell többé online validálást végeznie, illetve mikor jogosult teljes kivételre."
+    }
+  ],
+  "OWPO/L": [
+    {
+      "type": 0,
+      "value": "Nézze meg a legutóbbi letéteket a felfedezőben"
     }
   ],
   "OdYQYh": [
@@ -4357,6 +4445,12 @@
       "value": "A hálózata megváltozott"
     }
   ],
+  "PF61Eu": [
+    {
+      "type": 0,
+      "value": "A kilépési kérelmek egy külön sorba kerülnek egy minimális díjjal, amely a tranzakció küldési összegeként jelenik meg. A díj akkor a legalacsonyabb, amikor a sor rövid, és némi puffert is tartalmaz, amely megakadályozza a hirtelen aktivitási csúcsok miatti esetleges elutasítást."
+    }
+  ],
   "PHZO0L": [
     {
       "type": 0,
@@ -4415,6 +4509,12 @@
     {
       "type": 0,
       "value": "pip-dokumentáció"
+    }
+  ],
+  "Q+4zQ+": [
+    {
+      "type": 0,
+      "value": "Csak az aktív státuszú validátorok kaphatnak pénzeszközöket egy másik validátortól."
     }
   ],
   "Q/HeiY": [
@@ -4607,6 +4707,12 @@
       "value": "gratulálunk"
     }
   ],
+  "Ra6IrH": [
+    {
+      "type": 0,
+      "value": "A célvalidátor nincs társítva az aktuális tárcájával!"
+    }
+  ],
   "RhR6+a": [
     {
       "type": 0,
@@ -4622,7 +4728,7 @@
   "RqcJGJ": [
     {
       "type": 0,
-      "value": "A Besu dokumentációja a Holesky tesztelő hálózathoz"
+      "value": "A Besu dokumentációja a Hoodi tesztelő hálózathoz"
     }
   ],
   "Rr2lI/": [
@@ -4913,6 +5019,16 @@
       "value": " validátorindex számára"
     }
   ],
+  "TvuDvB": [
+    {
+      "type": 1,
+      "value": "connect"
+    },
+    {
+      "type": 0,
+      "value": ", vagy próbálja meg frissíteni az oldalt."
+    }
+  ],
   "U/NPbq": [
     {
       "type": 0,
@@ -5107,6 +5223,12 @@
     {
       "type": 0,
       "value": "Biztos vagyok benne, hogy a validátor, amelyre fel akarok tölteni, az én validátorom."
+    }
+  ],
+  "VlItBm": [
+    {
+      "type": 0,
+      "value": "A kivételi kérelmek egy külön sorba kerülnek egy minimális díjjal, amely a tranzakció küldési összegeként jelenik meg. A díj akkor a legalacsonyabb, amikor a sor rövid, és némi puffert is tartalmaz, amely megakadályozza a hirtelen aktivitási csúcsok miatti esetleges elutasítást."
     }
   ],
   "Vm6cRY": [
@@ -5809,12 +5931,6 @@
       "value": "Szerezzen többet"
     }
   ],
-  "b8APBK": [
-    {
-      "type": 0,
-      "value": "Bővebben a kliensdiverzitásról"
-    }
-  ],
   "bFiejS": [
     {
       "type": 0,
@@ -6081,6 +6197,12 @@
       "value": "?"
     }
   ],
+  "cf+9L6": [
+    {
+      "type": 0,
+      "value": "A kiválasztott fiókot összetett típusúra kell frissíteni, hogy elnyeljen egy másik validátort."
+    }
+  ],
   "chsS1X": [
     {
       "type": 0,
@@ -6131,12 +6253,6 @@
     {
       "type": 0,
       "value": " értékben tud kivenni."
-    }
-  ],
-  "cnQKC2": [
-    {
-      "type": 0,
-      "value": "Jelenleg a hálózat több mint 66%-a használja a geth-et."
     }
   ],
   "cpxfOR": [
@@ -6283,6 +6399,12 @@
     {
       "type": 0,
       "value": "Beállítás"
+    }
+  ],
+  "dyfKG1": [
+    {
+      "type": 0,
+      "value": "Kilépés teljesen"
     }
   ],
   "dzdAcD": [
@@ -6497,24 +6619,10 @@
       "value": "csak egy validátorgépen tárolható"
     }
   ],
-  "fnMHGO": [
+  "fdGVBw": [
     {
       "type": 0,
-      "value": "Várakozás a pénztárca megerősítésére"
-    }
-  ],
-  "fnV2qn": [
-    {
-      "type": 0,
-      "value": "Az összesített fiókok jogosultak bármely "
-    },
-    {
-      "type": 1,
-      "value": "MIN_ACTIVATION_BALANCE"
-    },
-    {
-      "type": 0,
-      "value": " "
+      "value": "A letétbe helyezett "
     },
     {
       "type": 1,
@@ -6522,7 +6630,29 @@
     },
     {
       "type": 0,
-      "value": " feletti egyenleg részleges kivételére"
+      "value": " bármely részét kiveheti "
+    },
+    {
+      "type": 1,
+      "value": "subject"
+    },
+    {
+      "type": 0,
+      "value": ", amely meghaladja a(z) "
+    },
+    {
+      "type": 1,
+      "value": "MIN_ACTIVATION_BALANCE"
+    },
+    {
+      "type": 0,
+      "value": " összeget."
+    }
+  ],
+  "fnMHGO": [
+    {
+      "type": 0,
+      "value": "Várakozás a pénztárca megerősítésére"
     }
   ],
   "fpe4Gx": [
@@ -7003,6 +7133,12 @@
       "value": "Ezeknek a validátoroknak nincs beállított kivételi címe. A letétbe helyezett összegek és jutalmak zárolás alatt maradnak a kivételi hitelesítő adatok megadásáig zárolás alatt maradnak."
     }
   ],
+  "j3Os7+": [
+    {
+      "type": 0,
+      "value": "Nem találhatók jogosult forrásfiókok. A forrásvalidátoroknak legalább 256 korszakig (kb. 27 óra) aktiválva kell lenniük, mielőtt jogosultak lennének az összevonásra."
+    }
+  ],
   "j8GPOH": [
     {
       "type": 0,
@@ -7413,12 +7549,6 @@
       "value": "Tanácsadók"
     }
   ],
-  "l5kq/q": [
-    {
-      "type": 0,
-      "value": "Erősítse meg a láncon"
-    }
-  ],
   "l6OJpv": [
     {
       "type": 0,
@@ -7583,6 +7713,12 @@
       "value": "cserélje ki a pénztárcáját"
     }
   ],
+  "lpYLlg": [
+    {
+      "type": 0,
+      "value": "Megtekintés a Beacon felfedezőben"
+    }
+  ],
   "lrdlY6": [
     {
       "type": 0,
@@ -7606,7 +7742,7 @@
     },
     {
       "type": 0,
-      "value": " hálózatot a Holesky tesztelő hálózat szinkronizálásához."
+      "value": " hálózatot a Hoodi tesztelő hálózat szinkronizálásához."
     }
   ],
   "mAZHi2": [
@@ -7721,6 +7857,12 @@
     {
       "type": 0,
       "value": "Kivételek száma"
+    }
+  ],
+  "mhY4Dy": [
+    {
+      "type": 0,
+      "value": "Nem található olyan validátor, amelynek a visszavonási hitelesítő adatai megfelelnének a csatlakoztatott fióknak."
     }
   ],
   "mhyltV": [
@@ -7935,12 +8077,6 @@
       "value": " üzenetet küldhet a BLS kivételi kulcsával aláírva, hogy megadja a kívánt Ethereum kivételi címet. Ez a cím csak egyszer adható meg, és nem módosítható később."
     }
   ],
-  "oF4os+": [
-    {
-      "type": 0,
-      "value": "Jelenleg a hálózat több mint 33%-a használja a Prysmet."
-    }
-  ],
   "oF6xvJ": [
     {
       "type": 0,
@@ -7959,12 +8095,6 @@
       "value": "Most, hogy importálta a kulcsokat, már csak a validátorkliens futtatása van hátra (feltételezve, hogy a beacon-csomópontja már fut)."
     }
   ],
-  "oNP2EG": [
-    {
-      "type": 0,
-      "value": "Jelenleg a hálózat több mint 33%-a használja a Lighthouse-t."
-    }
-  ],
   "oNohob": [
     {
       "type": 0,
@@ -7975,12 +8105,6 @@
     {
       "type": 0,
       "value": "az Ön validátora"
-    }
-  ],
-  "oUWdau": [
-    {
-      "type": 0,
-      "value": "Nem találhatók validátorok."
     }
   ],
   "oVx7Qe": [
@@ -8303,6 +8427,12 @@
       "value": " formátumban származtatnak. Ez a formátum nem kompatibilis a Beacon-lánc kivételekkel, és frissíteni kell az Ethereum cím hitelesítő adataira a kivétek engedélyezéséhez."
     }
   ],
+  "qA/iot": [
+    {
+      "type": 0,
+      "value": "Maximális díj"
+    }
+  ],
   "qB6aU6": [
     {
       "type": 0,
@@ -8369,6 +8499,12 @@
     {
       "type": 0,
       "value": "A pénztárcája nincs csatlakoztatva"
+    }
+  ],
+  "qdoOtK": [
+    {
+      "type": 0,
+      "value": "A kivétel lehetséges"
     }
   ],
   "qgqVCE": [
@@ -8577,6 +8713,12 @@
       "value": "A Teku egy YAML-fájlon keresztül is konfigurálható, amely több különböző módon is továbbítható."
     }
   ],
+  "sF92ld": [
+    {
+      "type": 0,
+      "value": "Kilépett, súlyos büntetést kapott, és ki lett zárva"
+    }
+  ],
   "sFD6T7": [
     {
       "type": 0,
@@ -8699,6 +8841,12 @@
     {
       "type": 0,
       "value": "Mi a letétbe helyezési szerződés?"
+    }
+  ],
+  "syOmOC": [
+    {
+      "type": 0,
+      "value": "A fióknak legalább 256 korszakon (kb. 27 órán) keresztül aktívnak kell lennie, mielőtt részleges kivételi jogosultságot szerezne."
     }
   ],
   "szN3Fl": [
@@ -9013,6 +9161,12 @@
       "value": "Kulcspárok létrehozása"
     }
   ],
+  "udj2WS": [
+    {
+      "type": 0,
+      "value": "További információk a 0. típusú hitelesítő adatokkal rendelkező validátor frissítéséről."
+    }
+  ],
   "uhapiE": [
     {
       "type": 0,
@@ -9040,7 +9194,7 @@
   "v0ygo6": [
     {
       "type": 0,
-      "value": "Tesztelés a Holesky hálózaton"
+      "value": "Tesztelés a Hoodi hálózaton"
     }
   ],
   "vBJ79e": [
@@ -9217,6 +9371,20 @@
     {
       "type": 0,
       "value": "2. opció: forráskód + virtualenv"
+    }
+  ],
+  "wxaiRj": [
+    {
+      "type": 0,
+      "value": "ÁTUTALOM A TELJES VALIDÁTORI EGYENLEGEMET A(Z) "
+    },
+    {
+      "type": 1,
+      "value": "index"
+    },
+    {
+      "type": 0,
+      "value": " TULAJDONOSÁNAK"
     }
   ],
   "x+fF+M": [

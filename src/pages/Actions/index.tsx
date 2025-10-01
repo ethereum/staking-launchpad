@@ -258,7 +258,13 @@ const _ActionsPage = () => {
     return () => clearInterval(interval);
   }, [refreshValidator]);
 
-  const moreToFetch = validators.length === fetchOffset;
+  // fetchOffset lags behind and is used as a trigger to fetch more validators when increased by user action
+  const moreToFetch = useMemo(() => {
+    return (
+      validators.length > 0 &&
+      validators.length === fetchOffset + MAX_QUERY_LIMIT
+    );
+  }, [validators, fetchOffset]);
 
   const actionsPageContent = useMemo(() => {
     if (loading) {

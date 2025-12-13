@@ -407,7 +407,8 @@ export const Checklist = () => {
       discord: 'https://discord.gg/z9efH7e',
       defaultTcp: 13000,
       defaultUdp: 12000,
-      jwtUrl: 'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
+      jwtUrl:
+        'https://prysm.offchainlabs.com/docs/configure-prysm/authentication/',
       feeRecipientUrl:
         'https://prysm.offchainlabs.com/docs/configure-prysm/fee-recipient/',
       metricsUrl:

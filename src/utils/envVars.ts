@@ -12,6 +12,7 @@ export const NETWORK_NAME               = IS_MAINNET ? 'Mainnet' : TESTNET_LAUNC
 export const TICKER_NAME                = IS_MAINNET ? 'ETH' : `${NETWORK_NAME}ETH`;
 export const ETHERSCAN_URL              = IS_MAINNET ? 'https://etherscan.io/tx' : `https://${TESTNET_LAUNCHPAD_NAME.toLowerCase()}.etherscan.io/tx`;
 export const BEACONCHAIN_URL            = (IS_NON_INFURA_TESTNET && process.env.REACT_APP_BEACONCHAIN_URL) ||  `https://${NETWORK_NAME.toLowerCase()}.beaconcha.in`;
+export const IS_DEV                     = process.env.NODE_ENV !== 'production';
 export const FORTMATIC_KEY              = process.env.REACT_APP_FORTMATIC_KEY       || 'pk_test_D113D979E0D3508F';
 export const DEPOSIT_CONTRACT_ADDRESS   = IS_MAINNET ? '0x00000000219ab540356cBB839Cbe05303d7705Fa' : process.env.REACT_APP_CONTRACT_ADDRESS;
 export const COMPOUNDING_CONTRACT_ADDRESS = process.env.REACT_APP_COMPOUNDING_CONTRACT_ADDRESS || '0x0000BBdDc7CE488642fb579F8B00f3a590007251'

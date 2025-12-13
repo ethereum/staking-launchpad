@@ -12,11 +12,11 @@ import {
 } from '../../store/reducers';
 import {
   ETHER_TO_GWEI,
-  BEACONCHAIN_URL,
   MIN_DEPOSIT_GWEI,
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
 } from '../../utils/envVars';
+import { getBeaconchainV1ApiUrl } from '../../utils/getBeaconchainV1ApiUrl';
 
 const validateFieldFormatting = (
   depositDatum: DepositKeyInterface
@@ -99,9 +99,9 @@ export const getExistingDepositsForPubkeys = async (
   files: DepositKeyInterface[]
 ): Promise<BeaconchainDepositInterface> => {
   const pubkeys = files.flatMap(x => x.pubkey);
-  const beaconScanUrl = `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(
-    ','
-  )}/deposits`;
+  const beaconScanUrl = getBeaconchainV1ApiUrl(
+    `validator/${pubkeys.join(',')}/deposits`
+  );
   const { data: beaconScanCheck } = await axios.get<
     BeaconchainDepositInterface
   >(beaconScanUrl);

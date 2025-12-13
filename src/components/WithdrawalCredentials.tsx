@@ -8,7 +8,8 @@ import { Alert } from './Alert';
 import { Button } from './Button';
 import { Spinner } from './Spinner';
 // Constants
-import { BEACONCHAIN_URL, IS_MAINNET, NETWORK_NAME } from '../utils/envVars';
+import { IS_MAINNET, NETWORK_NAME } from '../utils/envVars';
+import { getBeaconchainV1ApiUrl } from '../utils/getBeaconchainV1ApiUrl';
 import { screenSizes } from '../styles/styledComponentsTheme';
 
 const Container = styled.div`
@@ -284,7 +285,8 @@ export const WithdrawalCredentials: FC<IProps> = () => {
   const checkWithdrawalCredentials = async () => {
     setHasError(false);
     setIsLoading(true);
-    const endpoint = `${BEACONCHAIN_URL}/api/v1/validator/${inputValue}`;
+    const endpoint = getBeaconchainV1ApiUrl(`validator/${inputValue}`);
+
     try {
       const response = await fetch(endpoint);
       const { data } = await response.json();

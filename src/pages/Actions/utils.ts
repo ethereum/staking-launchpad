@@ -3,7 +3,6 @@ import Web3 from 'web3';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { TransactionConfig } from 'web3-core';
 import {
-  BEACONCHAIN_URL,
   COMPOUNDING_CONTRACT_ADDRESS,
   COMPOUNDING_FEE_ADDITION,
   EXCESS_INHIBITOR,
@@ -12,6 +11,7 @@ import {
   WITHDRAWAL_CONTRACT_ADDRESS,
   WITHDRAWAL_FEE_ADDITION,
 } from '../../utils/envVars';
+import { getBeaconchainV1ApiUrl } from '../../utils/getBeaconchainV1ApiUrl';
 import { BeaconChainValidator } from '../TopUp/types';
 import { currentEpoch } from '../../utils/beaconchain';
 
@@ -175,9 +175,8 @@ export const fetchValidatorsByPubkeys = async (
   pubkeys: string[]
 ): Promise<BeaconChainValidator[] | null> => {
   try {
-    const response = await fetch(
-      `${BEACONCHAIN_URL}/api/v1/validator/${pubkeys.join(',')}`
-    );
+    const url = getBeaconchainV1ApiUrl(`validator/${pubkeys.join(',')}`);
+    const response = await fetch(url);
     if (!response.ok) throw new Error();
     const json = await response.json();
     const data: BeaconChainValidator[] = Array.isArray(json.data)

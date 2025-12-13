@@ -1,8 +1,8 @@
 const axios = require('axios');
 
 exports.handler = async function(event) {
-  // Get the API path from query parameters
-  const { path, ...otherParams } = event.queryStringParameters || {};
+  // Get the API path and base URL from query parameters
+  const { path, url, ...otherParams } = event.queryStringParameters || {};
 
   if (!path) {
     return {
@@ -11,8 +11,13 @@ exports.handler = async function(event) {
     };
   }
 
-  const BEACONCHAIN_URL =
-    process.env.REACT_APP_BEACONCHAIN_URL || 'https://mainnet.beaconcha.in';
+  if (!url) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Missing url parameter' }),
+    };
+  }
+
   const BEACONCHAIN_API_KEY = process.env.BEACONCHAIN_API_KEY || '';
 
   // Build the full URL with API key
@@ -21,10 +26,10 @@ exports.handler = async function(event) {
     ...(BEACONCHAIN_API_KEY && { apikey: BEACONCHAIN_API_KEY }),
   });
 
-  const url = `${BEACONCHAIN_URL}/api/v1/${path}?${params.toString()}`;
+  const fullUrl = `${url}/api/v1/${path}?${params.toString()}`;
 
   try {
-    const response = await axios.get(url);
+    const response = await axios.get(fullUrl);
 
     return {
       statusCode: response.status,

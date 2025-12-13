@@ -23,6 +23,7 @@ export const getBeaconchainV1ApiUrl = (
 
   const params = new URLSearchParams({
     path,
+    url: BEACONCHAIN_URL,
     ...(queryParams as Record<string, string>),
   });
   return `/.netlify/functions/beaconchain-api?${params.toString()}`;

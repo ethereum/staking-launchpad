@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { BEACONCHAIN_URL, ETH_DEPOSIT_OFFSET } from './envVars';
+import { ETH_DEPOSIT_OFFSET } from './envVars';
+import { getBeaconchainV1ApiUrl } from './getBeaconchainV1ApiUrl';
 
 interface EthstoreData {
   data: {
@@ -17,9 +18,9 @@ export interface FetchTotalStakeAndAPRResponse {
   };
 }
 export const fetchTotalStakeAndAPR = async (): Promise<FetchTotalStakeAndAPRResponse> => {
-  const { href } = new URL('/api/v1/ethstore/latest', BEACONCHAIN_URL);
+  const endpoint = getBeaconchainV1ApiUrl('ethstore/latest');
   try {
-    const response = await axios.get<EthstoreData>(href);
+    const response = await axios.get<EthstoreData>(endpoint);
     if (response.status !== 200) throw new Error(response.statusText);
     const { data } = response;
     const { apr, effective_balances_sum_wei: totalWei } = data.data;

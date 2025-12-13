@@ -18,12 +18,12 @@ import TopupPage from './components/TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
 import {
-  BEACONCHAIN_URL,
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
   EJECTION_PRICE,
   TICKER_NAME,
 } from '../../utils/envVars';
+import { getBeaconchainV1ApiUrl } from '../../utils/getBeaconchainV1ApiUrl';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
 import { Link } from '../../components/Link';
@@ -100,7 +100,8 @@ const _TopUpPage: React.FC<Props> = () => {
       // beaconchain API requires two fetches - one that gets the public keys for an Ethereum address, and one that
       // queries by the validators public keys
 
-      fetch(`${BEACONCHAIN_URL}/api/v1/validator/eth1/${account}`)
+      const url = getBeaconchainV1ApiUrl(`validator/eth1/${account}`);
+      fetch(url)
         .then(r => r.json())
         .then(
           ({
@@ -127,9 +128,10 @@ const _TopUpPage: React.FC<Props> = () => {
                 .map(validator => validator.publickey)
                 .join(',')}`;
 
-              fetch(
-                `${BEACONCHAIN_URL}/api/v1/validator/${pubKeysCommaDelineated}`
-              )
+              const validatorUrl = getBeaconchainV1ApiUrl(
+                `validator/${pubKeysCommaDelineated}`
+              );
+              fetch(validatorUrl)
                 .then(r => r.json())
                 .then(
                   ({

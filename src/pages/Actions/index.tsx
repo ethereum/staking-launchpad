@@ -32,6 +32,7 @@ import {
   MAX_QUERY_LIMIT,
   IS_MAINNET,
 } from '../../utils/envVars';
+import { getBeaconchainV1ApiUrl } from '../../utils/getBeaconchainV1ApiUrl';
 import { hasValidatorExited } from '../../utils/validators';
 import { fetchValidatorsByPubkeys } from './utils';
 
@@ -115,9 +116,11 @@ const fetchPubkeysByWithdrawalAddress = async (
   limit = MAX_QUERY_LIMIT
 ): Promise<string[] | null> => {
   try {
-    const response = await fetch(
-      `${BEACONCHAIN_URL}/api/v1/validator/withdrawalCredentials/${address}?limit=${limit}&offset=${offset}`
+    const url = getBeaconchainV1ApiUrl(
+      `validator/withdrawalCredentials/${address}`,
+      { limit: limit.toString(), offset: offset.toString() }
     );
+    const response = await fetch(url);
     if (!response.ok) throw new Error();
     const json = await response.json();
     const data: BeaconChainValidatorResponse[] = Array.isArray(json.data)

@@ -1,5 +1,8 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
+[functions]
+  directory = "netlify/functions"
+
 [context.production.environment]
   NODE_VERSION = "14.19.2"
 [context.deploy-preview.environment]

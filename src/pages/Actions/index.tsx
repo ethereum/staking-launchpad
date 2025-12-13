@@ -217,6 +217,9 @@ const _ActionsPage = () => {
       return;
     }
 
+    // Delay 1 second to account for beaconcha.in per second rate limit
+    await new Promise(r => setTimeout(r, 1000));
+
     const newValidators = await fetchValidatorsByPubkeys(pubkeys);
 
     if (!newValidators) {

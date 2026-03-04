@@ -93,6 +93,7 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "url": "^0.11.4",
+    "vm-browserify": "^1.1.2",
     "webpack": "^5.97.1"
   },
   "husky": {
@@ -133,11 +134,23 @@
       "no-promise-executor-return": "off",
       "@typescript-eslint/no-redeclare": "warn",
       "@typescript-eslint/no-use-before-define": "off",
-      "no-param-reassign": ["error", { "props": false }],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ],
       "no-shadow": "warn",
       "default-param-last": "warn",
       "arrow-body-style": "warn",
-      "import/no-extraneous-dependencies": ["error", { "devDependencies": ["craco.config.js"] }],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "craco.config.js"
+          ]
+        }
+      ],
       "react/require-default-props": "off",
       "react/default-props-match-prop-types": "off",
       "react/no-unused-prop-types": "warn",

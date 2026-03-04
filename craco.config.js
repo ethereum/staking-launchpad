@@ -56,6 +56,7 @@ module.exports = {
         net: false,
         tls: false,
         child_process: false,
+        vm: require.resolve('vm-browserify'),
       };
       webpackConfig.plugins = [
         ...webpackConfig.plugins,

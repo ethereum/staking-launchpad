@@ -18,18 +18,17 @@ exports.handler = async function(event) {
     };
   }
 
-  const BEACONCHAIN_API_KEY = process.env.BEACONCHAIN_API_KEY || '';
+  const apiKey = process.env.BEACONCHAIN_API_KEY || '';
 
-  // Build the full URL with API key
-  const params = new URLSearchParams({
-    ...otherParams,
-    ...(BEACONCHAIN_API_KEY && { apikey: BEACONCHAIN_API_KEY }),
+  const requestUrl = new URL(`/api/v1/${path}`, url);
+  Object.entries(otherParams).forEach(([key, value]) => {
+    requestUrl.searchParams.set(key, value);
   });
 
-  const fullUrl = `${url}/api/v1/${path}?${params.toString()}`;
-
   try {
-    const response = await axios.get(fullUrl);
+    const response = await axios.get(requestUrl.toString(), {
+      ...(apiKey && { headers: { Authorization: `Bearer ${apiKey}` } }),
+    });
 
     return {
       statusCode: response.status,

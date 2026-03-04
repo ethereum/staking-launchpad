@@ -62,7 +62,11 @@ exports.handler = async function(event) {
         debug: {
           apiKeyLength: BEACONCHAIN_API_KEY.length,
           nodeVersion: process.version,
-          AWS_LAMBDA_JS_RUNTIME: 'nodejs18.x',
+          lambdaRuntime: process.env.AWS_LAMBDA_JS_RUNTIME || 'not set',
+          beaconEnvKeys: Object.keys(process.env).filter(k =>
+            k.includes('BEACON')
+          ),
+          allEnvKeyCount: Object.keys(process.env).length,
         },
       }),
     };

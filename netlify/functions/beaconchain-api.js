@@ -24,7 +24,7 @@ exports.handler = async function(event) {
   console.log(
     'Debug: API key length:',
     BEACONCHAIN_API_KEY.length,
-    'Node:',
+    'Node (w/ AWS_LAMBDA_JS_RUNTIME = nodejs18.x):',
     process.version
   );
 

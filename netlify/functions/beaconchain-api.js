@@ -19,6 +19,14 @@ exports.handler = async function(event) {
   }
 
   const BEACONCHAIN_API_KEY = process.env.BEACONCHAIN_API_KEY || '';
+  // TODO: Remove debug logging
+  // eslint-disable-next-line no-console
+  console.log(
+    'Debug: API key length:',
+    BEACONCHAIN_API_KEY.length,
+    'Node:',
+    process.version
+  );
 
   // Build the full URL with API key
   const params = new URLSearchParams({
@@ -50,6 +58,11 @@ exports.handler = async function(event) {
       body: JSON.stringify({
         error: 'Failed to fetch from Beaconchain API',
         message: error.message,
+        // TODO: Remove debug info
+        debug: {
+          apiKeyLength: BEACONCHAIN_API_KEY.length,
+          nodeVersion: process.version,
+        },
       }),
     };
   }

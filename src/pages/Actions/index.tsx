@@ -28,10 +28,12 @@ import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import WalletConnectModal from '../TopUp/components/WalletConnectModal';
 
 import {
+  BEACONCHAIN_API_DISABLED,
   BEACONCHAIN_URL,
   MAX_QUERY_LIMIT,
   IS_MAINNET,
 } from '../../utils/envVars';
+import { ApiOutageBanner } from '../../components/ApiOutageBanner';
 import { getBeaconchainV1ApiUrl } from '../../utils/getBeaconchainV1ApiUrl';
 import { hasValidatorExited } from '../../utils/validators';
 import { fetchValidatorsByPubkeys } from './utils';
@@ -470,6 +472,19 @@ const _ActionsPage = () => {
     validatorLoadError,
     validators,
   ]);
+
+  if (BEACONCHAIN_API_DISABLED) {
+    return (
+      <PageTemplate
+        title={formatMessage({ defaultMessage: 'Validator Actions' })}
+      >
+        <ApiOutageBanner />
+        <div className="mt30">
+          <HelpCallout />
+        </div>
+      </PageTemplate>
+    );
+  }
 
   return (
     <>

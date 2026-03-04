@@ -18,11 +18,13 @@ import TopupPage from './components/TopupPage';
 import Spinner from '../../components/Spinner';
 import { PageTemplate } from '../../components/PageTemplate';
 import {
+  BEACONCHAIN_API_DISABLED,
   MAX_EFFECTIVE_BALANCE,
   MIN_ACTIVATION_BALANCE,
   EJECTION_PRICE,
   TICKER_NAME,
 } from '../../utils/envVars';
+import { ApiOutageBanner } from '../../components/ApiOutageBanner';
 import { getBeaconchainV1ApiUrl } from '../../utils/getBeaconchainV1ApiUrl';
 import { AllowedELNetworks, NetworkChainId } from '../ConnectWallet/web3Utils';
 import { Alert } from '../../components/Alert';
@@ -304,6 +306,16 @@ const _TopUpPage: React.FC<Props> = () => {
     handleConnect,
   ]);
 
+  if (BEACONCHAIN_API_DISABLED) {
+    return (
+      <PageTemplate
+        title={formatMessage({ defaultMessage: 'Top up a validator' })}
+      >
+        <ApiOutageBanner />
+      </PageTemplate>
+    );
+  }
+
   return (
     <>
       {/* the wallet connect modal controls it's own display, so it is always rendered here */}
@@ -321,7 +333,7 @@ const _TopUpPage: React.FC<Props> = () => {
         <SubTextContainer className="my20">
           <Text className="mb20">
             <FormattedMessage
-              defaultMessage='You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance ("max EB", the amount capable of contributing to your stake). 
+              defaultMessage='You have the option to add funds to your validator account, as long as your balance is not already at its max effective balance ("max EB", the amount capable of contributing to your stake).
               You can also use this to top up if your validator account is close to the ejection balance of {EJECTION_PRICE} {TICKER_NAME}.'
               values={{
                 MIN_ACTIVATION_BALANCE,

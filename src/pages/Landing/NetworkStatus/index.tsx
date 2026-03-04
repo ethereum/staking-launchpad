@@ -6,7 +6,11 @@ import { Heading } from '../../../components/Heading';
 import { Text } from '../../../components/Text';
 import { Link } from '../../../components/Link';
 import { Button } from '../../../components/Button';
-import { BEACONCHAIN_URL, TICKER_NAME } from '../../../utils/envVars';
+import {
+  BEACONCHAIN_API_DISABLED,
+  BEACONCHAIN_URL,
+  TICKER_NAME,
+} from '../../../utils/envVars';
 
 //
 // Styled Components
@@ -98,6 +102,26 @@ export const NetworkStatus: React.FC<{
     }
     return <FormattedMessage defaultMessage="Loading..." />;
   };
+
+  if (BEACONCHAIN_API_DISABLED) {
+    return (
+      <Container isMobile={m}>
+        <Content isMobile={m}>
+          <ButtonContainer>
+            <Link isTextLink={false} to={BEACONCHAIN_URL}>
+              <Button
+                fullWidth
+                width={m ? undefined : 400}
+                label={formatMessage({
+                  defaultMessage: 'View network stats',
+                })}
+              />
+            </Link>
+          </ButtonContainer>
+        </Content>
+      </Container>
+    );
+  }
 
   return (
     <Container isMobile={m}>

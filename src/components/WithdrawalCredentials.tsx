@@ -8,7 +8,12 @@ import { Alert } from './Alert';
 import { Button } from './Button';
 import { Spinner } from './Spinner';
 // Constants
-import { IS_MAINNET, NETWORK_NAME } from '../utils/envVars';
+import {
+  BEACONCHAIN_API_DISABLED,
+  IS_MAINNET,
+  NETWORK_NAME,
+} from '../utils/envVars';
+import { ApiOutageBanner } from './ApiOutageBanner';
 import { getBeaconchainV1ApiUrl } from '../utils/getBeaconchainV1ApiUrl';
 import { screenSizes } from '../styles/styledComponentsTheme';
 
@@ -307,6 +312,14 @@ export const WithdrawalCredentials: FC<IProps> = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     setInputValue(e.target.value.replace(/\D/g, ''));
+
+  if (BEACONCHAIN_API_DISABLED) {
+    return (
+      <Container>
+        <ApiOutageBanner />
+      </Container>
+    );
+  }
 
   return (
     <Container>

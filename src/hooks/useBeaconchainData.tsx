@@ -12,6 +12,7 @@ import {
 } from '../utils/fetchTotalValidators';
 import { NetworkState } from '../pages/Landing/NetworkStatus';
 import { formatPercent, formatNumber } from '../utils/numberFormatters';
+import { BEACONCHAIN_API_DISABLED } from '../utils/envVars';
 
 export const useBeaconchainData = () => {
   const { locale } = useIntl();
@@ -23,6 +24,7 @@ export const useBeaconchainData = () => {
   });
 
   useEffect(() => {
+    if (BEACONCHAIN_API_DISABLED) return;
     // Fetch Total Stake and APR
     (async () => {
       const {

@@ -1043,6 +1043,9 @@
   "Ej2jo1": {
     "message": "Withdrawal address:"
   },
+  "EjPWXW": {
+    "message": "View network stats"
+  },
   "ErOWkD": {
     "message": "Fetch latest"
   },
@@ -1832,6 +1835,9 @@
   },
   "S+FY5u": {
     "message": "This requires use of your mnemonic seed phrase, and should be performed on an {offline} air-gapped machine."
+  },
+  "S+Q7Tw": {
+    "message": "Your funds are safe and unaffected. We are actively working on a fix and expect to restore this functionality shortly."
   },
   "S943uU": {
     "message": "Double check the URL"
@@ -3186,6 +3192,9 @@
   },
   "pQxML4": {
     "message": "Generate {json} file"
+  },
+  "pWt6sn": {
+    "message": "Validator lookup features are temporarily unavailable while we perform a service update."
   },
   "pWuGLy": {
     "message": "When a validator is scheduled to propose the next block, it performs a sweep of validator accounts looking for eligible withdrawals. During the sweep, the validator will check a max of 16,384 accounts, attempting to find 16 available withdrawals to be processed in the next block."

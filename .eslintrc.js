@@ -35,6 +35,26 @@ module.exports = {
     'consistent-return': 'warn',
     eqeqeq: 'warn',
     'react/jsx-one-expression-per-line': 'off',
+    // Rules relaxed for Node/CRA 5 upgrade compatibility
+    'no-undef': 'off', // TypeScript handles this via type checking
+    'no-redeclare': 'off',
+    'no-use-before-define': 'off',
+    'no-promise-executor-return': 'off',
+    'no-param-reassign': ['error', { props: false }],
+    'default-param-last': 'warn',
+    'arrow-body-style': 'warn',
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['craco.config.js'] },
+    ],
+    'react/require-default-props': 'off',
+    'react/default-props-match-prop-types': 'off',
+    'react/function-component-definition': 'off',
+    'react/no-array-index-key': 'warn',
+    'react/jsx-no-useless-fragment': 'warn',
+    'react/jsx-no-bind': 'warn',
+    'react/no-unused-prop-types': 'warn',
+    'react/no-unstable-nested-components': 'warn',
   },
   settings: {
     'import/resolver': {

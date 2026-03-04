@@ -138,7 +138,7 @@ const routes: RouteType[] = [
 ];
 
 const localizeRoutes = (locale: String, routes: RouteType[]) => {
-  return routes.map(route => {
+  return routes.map((route) => {
     const languagePath = route.path.split('/')[1];
     const routeHasLangPath = supportedLanguages.includes(languagePath);
     if (routeHasLangPath || route.path === '/*') {
@@ -176,11 +176,7 @@ const _Routes = () => {
         </Helmet>
         <Switch>
           {localizedRoutes.map((route: RouteType) => (
-            <Route
-              onUpdate={() => window.scrollTo(0, 0)}
-              {...route}
-              key={route.path}
-            />
+            <Route {...route} key={route.path} />
           ))}
         </Switch>
       </ScrollToTop>

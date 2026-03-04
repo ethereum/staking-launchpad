@@ -8,7 +8,7 @@ export const grommetTheme = {
       border: {
         color: transparent,
       },
-      outline: 'none',
+      outline: { color: 'transparent', size: '0px' },
     },
     colors: {
       brand: blue.dark, // needed to override default grommet component styling
@@ -59,9 +59,9 @@ export const grommetTheme = {
       radius: '2px',
     },
     check: {
-      extend: ({ checked }: { checked: boolean }) =>
+      extend: (props: Record<string, any>) =>
         `background-color: white; border: 2px solid ${
-          checked ? 'black' : 'gray'
+          props.checked ? 'black' : 'gray'
         }`,
     },
     color: {

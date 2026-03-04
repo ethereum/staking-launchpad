@@ -111,12 +111,12 @@ const _UploadValidatorPage = ({
     acceptedFiles, // all JSON files will pass this check (including BLS failures
     inputRef,
   } = useDropzone({
-    accept: 'application/json',
+    accept: { 'application/json': ['.json'] },
   });
 
   const flushDropzoneCache = useCallback(() => {
-    acceptedFiles.length = 0;
-    acceptedFiles.splice(0, acceptedFiles.length);
+    (acceptedFiles as File[]).length = 0;
+    (acceptedFiles as File[]).splice(0, acceptedFiles.length);
     if (inputRef.current) {
       inputRef.current.value = '';
     }
@@ -181,7 +181,7 @@ const _UploadValidatorPage = ({
       setIsFileAccepted(true); // rejected if BLS check fails
       dispatchDepositFileNameUpdate(jsonFiles[0].name);
       const reader = new FileReader();
-      reader.onload = async event => {
+      reader.onload = async (event) => {
         if (event.target) {
           try {
             const fileData: any[] = JSON.parse(event.target.result as string);
@@ -198,13 +198,12 @@ const _UploadValidatorPage = ({
 
               // perform double deposit check
               try {
-                const existingDeposits = await getExistingDepositsForPubkeys(
-                  fileData
-                );
+                const existingDeposits =
+                  await getExistingDepositsForPubkeys(fileData);
                 const existingDepositPubkeys = existingDeposits.data.flatMap(
-                  x => x.publickey.substring(2)
+                  (x) => x.publickey.substring(2)
                 );
-                (fileData as DepositKeyInterface[]).forEach(async file => {
+                (fileData as DepositKeyInterface[]).forEach(async (file) => {
                   if (existingDepositPubkeys.includes(file.pubkey)) {
                     dispatchDepositStatusUpdate(
                       file.pubkey,
@@ -281,7 +280,7 @@ const _UploadValidatorPage = ({
     getRootProps,
     getInputProps,
   } = useDropzone({
-    accept: 'application/json',
+    accept: { 'application/json': ['.json'] },
     noClick: isFileStaged || isFileAccepted,
     onDrop: onFileDrop,
   });
@@ -398,12 +397,14 @@ const mapStateToProps = (state: StoreState): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  dispatchDepositFileNameUpdate: name => dispatch(updateDepositFileName(name)),
+  dispatchDepositFileNameUpdate: (name) =>
+    dispatch(updateDepositFileName(name)),
   dispatchDepositStatusUpdate: (pubkey, depositStatus) =>
     dispatch(updateDepositStatus(pubkey, depositStatus)),
-  dispatchDepositFileKeyUpdate: files => dispatch(updateDepositFileKeys(files)),
-  dispatchWorkflowUpdate: step => dispatch(updateWorkflow(step)),
-  dispatchBeaconChainAPIStatusUpdate: status =>
+  dispatchDepositFileKeyUpdate: (files) =>
+    dispatch(updateDepositFileKeys(files)),
+  dispatchWorkflowUpdate: (step) => dispatch(updateWorkflow(step)),
+  dispatchBeaconChainAPIStatusUpdate: (status) =>
     dispatch(updateBeaconChainAPIStatus(status)),
 });
 

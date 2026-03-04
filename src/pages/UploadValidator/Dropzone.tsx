@@ -24,11 +24,11 @@ const Container = styled.div`
   align-items: center;
   padding: 20px;
   border-width: 2px;
-  border-radius: ${p => p.theme.borderRadius};
-  border-color: ${p => getColor(p, p.theme.gray.medium)};
+  border-radius: ${(p) => p.theme.borderRadius};
+  border-color: ${(p) => getColor(p, p.theme.gray.medium)};
   border-style: dashed;
-  background-color: ${p => p.theme.gray.light};
-  color: ${p => getColor(p, p.theme.blue.dark)};
+  background-color: ${(p) => p.theme.gray.light};
+  color: ${(p) => getColor(p, p.theme.blue.dark)};
   outline: none;
   transition: border 0.24s ease-in-out;
   cursor: pointer;
@@ -46,7 +46,7 @@ export const StyledDropzone = ({ isFileStaged, onDrop }: Props) => {
     isDragActive,
     isDragAccept,
     isDragReject,
-  } = useDropzone({ onDrop, accept: 'application/json' });
+  } = useDropzone({ onDrop, accept: { 'application/json': ['.json'] } });
   const { formatMessage } = useIntl();
 
   let message = formatMessage(

@@ -18,7 +18,7 @@ export const LocalizedRouter: React.FC<Props> = ({ children, history }) => (
          * Get current language
          * Set default locale to en if base path is used without a language
          */
-        const params = match ? match.params : {};
+        const params = match ? (match.params as { lang?: string }) : {};
         const { lang = AppLanguage.English } = params;
 
         /**

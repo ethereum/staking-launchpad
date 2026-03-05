@@ -44,7 +44,13 @@ exports.handler = async function(event) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(response.data),
+      body: JSON.stringify({
+        ...response.data,
+        debug: {
+          apiKeyLength: BEACONCHAIN_API_KEY.length,
+          nodeVersion: process.version,
+        },
+      }),
     };
   } catch (error) {
     // eslint-disable-next-line no-console

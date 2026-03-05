@@ -19,6 +19,14 @@ exports.handler = async function(event) {
   }
 
   const BEACONCHAIN_API_KEY = process.env.BEACONCHAIN_API_KEY || '';
+  // TODO: Remove debug logging
+  // eslint-disable-next-line no-console
+  console.log(
+    'Debug: API key length:',
+    BEACONCHAIN_API_KEY.length,
+    'Node (w/ AWS_LAMBDA_JS_RUNTIME = nodejs18.x):',
+    process.version
+  );
 
   // Build the full URL with API key
   const params = new URLSearchParams({
@@ -36,7 +44,13 @@ exports.handler = async function(event) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(response.data),
+      body: JSON.stringify({
+        ...response.data,
+        debug: {
+          apiKeyLength: BEACONCHAIN_API_KEY.length,
+          nodeVersion: process.version,
+        },
+      }),
     };
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -50,6 +64,16 @@ exports.handler = async function(event) {
       body: JSON.stringify({
         error: 'Failed to fetch from Beaconchain API',
         message: error.message,
+        // TODO: Remove debug info
+        debug: {
+          apiKeyLength: BEACONCHAIN_API_KEY.length,
+          nodeVersion: process.version,
+          lambdaRuntime: process.env.AWS_LAMBDA_JS_RUNTIME || 'not set',
+          beaconEnvKeys: Object.keys(process.env).filter(k =>
+            k.includes('BEACON')
+          ),
+          allEnvKeyCount: Object.keys(process.env).length,
+        },
       }),
     };
   }

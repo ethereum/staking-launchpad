@@ -5,9 +5,13 @@
 
 [context.production.environment]
   NODE_VERSION = "14.19.2"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
 [context.deploy-preview.environment]
   NODE_VERSION = "14.19.2"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
 [context.branch-deploy.environment]
   NODE_VERSION = "14.19.2"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
 [context.dev.environment]
   NODE_VERSION = "14.19.2"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"

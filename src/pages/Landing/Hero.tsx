@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
-// @ts-ignore
-import Animate from 'animate.css-react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import LeslieTheRhinoPNG from '../../static/leslie-rhino.png';
 import { routesEnum } from '../../Routes';
@@ -21,16 +19,16 @@ interface mobile {
 const RainbowBackground = styled.div`
   min-width: 100%;
   overflow: hidden;
-  background-image: ${p =>
+  background-image: ${(p) =>
     `radial-gradient(circle at 100% -80%, ${p.theme.rainbowLight})`};
   min-height: ${(p: mobile) => p.isMobile && 'calc(100vh - 20px)'};
 `;
 const MainContainer = styled.div`
-  max-width: ${p => p.theme.screenSizes.largest};
+  max-width: ${(p) => p.theme.screenSizes.largest};
   width: 100%;
   margin: 0 auto;
   padding: 0 120px 100px;
-  @media only screen and (max-width: ${p => p.theme.screenSizes.largest}) {
+  @media only screen and (max-width: ${(p) => p.theme.screenSizes.largest}) {
     padding: ${(p: mobile) => (p.isMobile ? '20px' : '0 60px 100px')};
     min-height: ${(p: mobile) => (p.isMobile ? '100vh' : undefined)};
   }
@@ -160,7 +158,7 @@ export const Hero = () => {
               <LefContentContainer>
                 {isMediumScreen && (
                   <TitleContainer>
-                    <Animate enter="fadeIn" appear="fadeIn" delay={150}>
+                    <div className="animate__animated animate__fadeIn">
                       <LogoContainer className={m ? 'mb50' : undefined}>
                         <LogoText>
                           {IS_MAINNET ? (
@@ -173,7 +171,7 @@ export const Hero = () => {
                           )}
                         </LogoText>
                       </LogoContainer>
-                    </Animate>
+                    </div>
                   </TitleContainer>
                 )}
                 <InfoContainer>
@@ -194,10 +192,8 @@ export const Hero = () => {
                   </ScrollAnimation>
 
                   {!!isSmallScreen && <LeslieImage />}
-                  <Animate
-                    enter="fadeIn"
-                    appear="fadeIn"
-                    className={m ? undefined : 'mt100'}
+                  <div
+                    className={`animate__animated animate__fadeIn ${m ? '' : 'mt100'}`}
                   >
                     <ButtonRow>
                       <ButtonContainer>
@@ -229,7 +225,7 @@ export const Hero = () => {
                         </Link>
                       </ButtonContainer>
                     </ButtonRow>
-                  </Animate>
+                  </div>
                 </InfoContainer>
               </LefContentContainer>
               {!isSmallScreen && <LeslieImage />}

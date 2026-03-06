@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Spinning } from 'grommet-controls';
+import { Spinner } from 'grommet';
 import styled from 'styled-components';
 import { Alert as GrommetAlert } from 'grommet-icons/icons';
 import { Text } from '../../../components/Text';
@@ -15,7 +15,7 @@ interface Props {
   depositStatus: DepositStatus;
 }
 
-const AlertIcon = styled(p => <GrommetAlert {...p} />)`
+const AlertIcon = styled((p) => <GrommetAlert {...p} />)`
   display: block;
   margin-inline-end: 10px;
   height: 23px;
@@ -56,7 +56,7 @@ export const Status = ({ transactionStatus, depositStatus }: Props) => {
   if (transactionStatus === TransactionStatus.STARTED) {
     return (
       <div className="flex">
-        <Spinning kind="pulse" />
+        <Spinner />
         <Text color="green">
           <FormattedMessage defaultMessage="Transaction started" />
         </Text>

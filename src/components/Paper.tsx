@@ -8,6 +8,7 @@ export const Paper = (
     className?: string;
     error?: boolean;
     style?: any;
+    onClick?: () => void;
   } & BoxProps
 ): JSX.Element => {
   const { error, className, children, pad } = props;
@@ -28,11 +29,11 @@ export const Paper = (
 const BoxGroup = styled(Box)`
   width: 100%;
   > :first-child {
-    border-radius: ${p =>
+    border-radius: ${(p) =>
       `${p.theme.borderRadius} ${p.theme.borderRadius} 0 0`};
   }
   > :last-child {
-    border-radius:${p => `0 0 ${p.theme.borderRadius} ${p.theme.borderRadius}`};
+    border-radius:${(p) => `0 0 ${p.theme.borderRadius} ${p.theme.borderRadius}`};
   }
   }
   > *:not(:first-child):not(:last-child) {

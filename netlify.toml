@@ -4,10 +4,14 @@
   directory = "netlify/functions"
 
 [context.production.environment]
-  NODE_VERSION = "14.19.2"
+  NODE_VERSION = "20.20.0"
+  CI = "false"
 [context.deploy-preview.environment]
-  NODE_VERSION = "14.19.2"
+  NODE_VERSION = "20.20.0"
+  CI = "false"
 [context.branch-deploy.environment]
-  NODE_VERSION = "14.19.2"
+  NODE_VERSION = "20.20.0"
+  CI = "false"
 [context.dev.environment]
-  NODE_VERSION = "14.19.2"
+  NODE_VERSION = "20.20.0"
+  CI = "false"

@@ -26,7 +26,7 @@ const StyledBaseLineChartAxis = styled.g``;
 const BaseLineChartAxisTick = styled.text`
   font-family: sans-serif;
   font-size: 16px;
-  fill: ${props => props.fill || props.theme.black};
+  fill: ${(props) => props.fill || props.theme.black};
   font-weight: 700;
 `;
 
@@ -55,6 +55,8 @@ const BaseLineChartAxis: React.FC<Props> = ({
       {!state.chart.y || !state.chart.x
         ? null
         : new Array(ticks).fill(0).map((unused, i) => {
+            const chartX = state.chart.x!;
+            const chartY = state.chart.y!;
             const interval = (+range[1] - +range[0]) * (i / (ticks - 1));
             const dateLabel = `${format(+range[0] + interval)}`;
             const [textAnchor, x, y, lineX1, lineX2, lineY1, lineY2] =
@@ -62,16 +64,16 @@ const BaseLineChartAxis: React.FC<Props> = ({
                 ? [
                     'right',
                     -margin.left,
-                    state!.chart.y!(+range[0] + interval),
-                    state!.chart.x!(0) + margin.left,
+                    chartY(+range[0] + interval),
+                    (chartX(0) ?? 0) + margin.left,
                     dimensions.width - margin.left - margin.right,
                     0,
                     0,
                   ]
                 : [
                     'middle',
-                    state!.chart.x!(+range[0] + interval),
-                    state!.chart.y!(0) + 20,
+                    chartX(+range[0] + interval),
+                    (chartY(0) ?? 0) + 20,
                     0,
                     0,
                     -(dimensions.height - margin.top - margin.bottom) * 0.95 +
@@ -84,7 +86,7 @@ const BaseLineChartAxis: React.FC<Props> = ({
                 <BaseLineChartAxisTick
                   y={axis === 'y' ? 5 : 0}
                   fill={axis === 'y' ? color : undefined}
-                  {...{ textAnchor }}
+                  textAnchor={textAnchor as 'start' | 'middle' | 'end'}
                 >
                   {dateLabel.toUpperCase()}
                 </BaseLineChartAxisTick>

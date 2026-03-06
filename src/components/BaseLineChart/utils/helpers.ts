@@ -79,17 +79,15 @@ export const computeValues = (
     };
 
     // Our X mapping
-    const x = scaleLinear()
-      .domain(_domains.x)
-      .range([0, width]);
+    const x = scaleLinear().domain(_domains.x).range([0, width]);
     // Our Y mapping
     const y = scaleLinear()
       .domain(_domains.y)
       .range([height - 80, 0]);
     // Our line function
     const _line = line<NBaseLineChart.Datum>()
-      .x((datum: NBaseLineChart.Datum) => x(datum[dataKeys.x]))
-      .y((datum: NBaseLineChart.Datum) => y(datum[dataKeys.y]));
+      .x((datum: NBaseLineChart.Datum) => x(datum[dataKeys.x]) ?? 0)
+      .y((datum: NBaseLineChart.Datum) => y(datum[dataKeys.y]) ?? 0);
 
     actions.setChart({ x, y, line: _line, domains: _domains }, cb);
   }

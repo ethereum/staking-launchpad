@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
-import { Spinning } from 'grommet-controls';
+import { Spinner } from 'grommet';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import { AbstractConnector } from '@web3-react/abstract-connector';
@@ -32,11 +32,12 @@ const StyledPaper = styled(Paper)`
   width: 350px;
   margin: 10px;
   align-items: center;
-  cursor: ${p => (p.error ? 'not-allowed' : 'pointer')};
+  cursor: ${(p) => (p.error ? 'not-allowed' : 'pointer')};
   &:hover {
-    box-shadow: ${p => (p.error ? 'none' : '0px 8px 17px rgba(0, 0, 0, 0.15)')};
-    transition: ${p => (p.error ? 'none' : 'transform 0.1s;')};
-    transform: ${p => (p.error ? 'none' : 'scale(1.02)')};
+    box-shadow: ${(p) =>
+      p.error ? 'none' : '0px 8px 17px rgba(0, 0, 0, 0.15)'};
+    transition: ${(p) => (p.error ? 'none' : 'transform 0.1s;')};
+    transform: ${(p) => (p.error ? 'none' : 'scale(1.02)')};
   }
 `;
 
@@ -128,7 +129,7 @@ export const WalletButton = ({
         </WalletText>
         {showSpinner && (
           <SpinnerContainer>
-            <Spinning kind="pulse" />
+            <Spinner />
           </SpinnerContainer>
         )}
       </ConnectingContainer>

@@ -19,6 +19,7 @@ import {
   getCredentialType,
   getEtherBalance,
   hasValidatorExited,
+  isValidatorActive,
 } from '../../../utils/validators';
 
 import {
@@ -115,12 +116,17 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
       const isCompounding = getCredentialType(v) >= ValidatorType.Compounding;
       const isSameValidator = v.pubkey === validator.pubkey;
       const hasBalance = v.balance > 0;
+      const isActive = isValidatorActive(v);
       // Should be filtered out from API call for validators by withdrawal address; backup check
       const isSameCredentials =
         v.withdrawalcredentials.slice(4) ===
         validator.withdrawalcredentials.slice(4);
       return (
-        isCompounding && !isSameValidator && hasBalance && isSameCredentials
+        isCompounding &&
+        !isSameValidator &&
+        hasBalance &&
+        isSameCredentials &&
+        isActive
       );
     });
 
@@ -164,6 +170,14 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
                 }}
               />
             </em>
+            {!isValidatorActive(validator) && (
+              <>
+                <br />
+                <em>
+                  <FormattedMessage defaultMessage="Selected account must be active before it can be upgraded. Inactive validators cause upgrade requests to be ignored on-chain." />
+                </em>
+              </>
+            )}
           </div>
           <UpgradeCompounding validator={validator} />
         </Row>
@@ -259,6 +273,12 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
               <FormattedMessage defaultMessage="Selected account must be upgraded to compounding type to absorb another validator." />
             </em>
           )}
+          {!isValidatorActive(validator) && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="Selected account must be active before it can absorb funds from another validator. Inactive targets cause consolidation requests to be ignored on-chain." />
+            </em>
+          )}
           {sourceValidatorSet.length < 1 && (
             <em>
               {' '}
@@ -278,6 +298,12 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
             <FormattedMessage defaultMessage="Migrate funds" />
           </ActionTitle>
           <FormattedMessage defaultMessage="Transfer entire balance to another one of your validator accounts, consolidating two accounts into one. Target account must be upgraded to compounding type." />{' '}
+          {!isValidatorActive(validator) && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="Selected account must be active before its funds can be migrated. Inactive sources cause consolidation requests to be ignored on-chain." />
+            </em>
+          )}
         </div>
         <PushConsolidation
           sourceValidator={validator}

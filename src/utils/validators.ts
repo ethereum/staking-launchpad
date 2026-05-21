@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import { ValidatorType } from '../pages/Actions/types';
 import { BeaconChainValidator } from '../pages/TopUp/types';
+import { currentEpoch } from './beaconchain';
 import {
   ETHER_TO_GWEI,
   MAX_EFFECTIVE_BALANCE,
@@ -14,6 +15,17 @@ export const hasExitEpochBeenSet = (exitEpoch: BigNumber | number) =>
 
 export const hasValidatorExited = (validator: BeaconChainValidator) =>
   hasExitEpochBeenSet(validator.exitepoch);
+
+// Mirrors `is_active_validator` from the consensus spec
+// https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/beacon-chain.md#is_active_validator
+export const isValidatorActive = (validator: BeaconChainValidator): boolean => {
+  const activationEpoch = new BigNumber(validator.activationepoch);
+  const exitEpoch = new BigNumber(validator.exitepoch);
+  return (
+    activationEpoch.isLessThanOrEqualTo(currentEpoch) &&
+    new BigNumber(currentEpoch).isLessThan(exitEpoch)
+  );
+};
 
 export const getCredentialType = (
   validator: BeaconChainValidator

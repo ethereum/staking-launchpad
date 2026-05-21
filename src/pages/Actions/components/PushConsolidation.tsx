@@ -28,7 +28,11 @@ import ValidatorSelector from './ValidatorSelector';
 
 import { generateCompoundParams } from '../utils';
 import { COMPOUNDING_CREDENTIALS, TICKER_NAME } from '../../../utils/envVars';
-import { getCredentialType, getEtherBalance } from '../../../utils/validators';
+import {
+  getCredentialType,
+  getEtherBalance,
+  isValidatorActive,
+} from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 
 import { useCompoundingQueue } from '../../../hooks/useCompoundingQueue';
@@ -155,15 +159,10 @@ const PushConsolidation = ({
     }
   }, [targetValidator]);
 
-  const validValidatorStatus = useMemo(() => {
-    // Handle both dora and beaconcha.in status'
-    return (
-      targetValidator &&
-      ['active_online', 'active_offline', 'active_ongoing'].includes(
-        targetValidator.status
-      )
-    );
-  }, [targetValidator]);
+  const validValidatorStatus = useMemo(
+    () => !!targetValidator && isValidatorActive(targetValidator),
+    [targetValidator]
+  );
 
   const CONFIRMATION_MESSAGE = formatMessage(
     {

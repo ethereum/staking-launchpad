@@ -105,6 +105,7 @@
   "scripts": {
     "start": "rescripts start",
     "build": "rescripts build",
+    "postbuild": "node scripts/static-pages.js",
     "test": "rescripts test",
     "eject": "rescripts eject",
     "extract": "formatjs extract 'src/**/*.{t,j}sx' --out-file src/intl/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format crowdin",

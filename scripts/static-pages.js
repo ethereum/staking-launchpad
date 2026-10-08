@@ -83,8 +83,9 @@ const escapeHtml = s =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 
+// No trailing slash: Netlify serves en.html at /en and 301s /en/ to it
 const pageUrl = (locale, route) =>
-  route === '/' ? `/${locale}/` : `/${locale}${route}`;
+  route === '/' ? `/${locale}` : `/${locale}${route}`;
 
 const shell = fs.readFileSync(path.join(BUILD, 'index.html'), 'utf8');
 
@@ -124,8 +125,8 @@ let count = 0;
 locales.forEach(locale => {
   PAGES.forEach(page => {
     const html = render(locale, page);
-    const url = pageUrl(locale, page.route).replace(/\/$/, '');
-    // /en/faq is served from en/faq.html and /en/faq/ from en/faq/index.html
+    const url = pageUrl(locale, page.route);
+    // Netlify serves /en/faq from en/faq.html and redirects /en/faq/ to it
     write(`${url}.html`, html);
     write(`${url}/index.html`, html);
     count += 1;

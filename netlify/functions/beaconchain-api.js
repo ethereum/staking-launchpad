@@ -1,5 +1,13 @@
 const axios = require('axios');
 
+// The API key is attached to every request, so only forward to beaconcha.in or the configured explorer.
+const isAllowedHost = target => {
+  if (target.protocol !== 'https:') return false;
+  if (/^[a-z0-9-]+\.beaconcha\.in$/.test(target.hostname)) return true;
+  const custom = process.env.REACT_APP_BEACONCHAIN_URL;
+  return !!custom && new URL(custom).host === target.host;
+};
+
 exports.handler = async function(event) {
   // Get the API path and base URL from query parameters
   const { path, url, ...otherParams } = event.queryStringParameters || {};
@@ -18,9 +26,28 @@ exports.handler = async function(event) {
     };
   }
 
+  let requestUrl;
+  try {
+    requestUrl = new URL(`/api/v1/${path}`, url);
+  } catch {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: 'Invalid url parameter' }),
+    };
+  }
+
+  if (
+    !isAllowedHost(requestUrl) ||
+    !requestUrl.pathname.startsWith('/api/v1/')
+  ) {
+    return {
+      statusCode: 403,
+      body: JSON.stringify({ error: 'url not allowed' }),
+    };
+  }
+
   const apiKey = process.env.BEACONCHAIN_API_KEY || '';
 
-  const requestUrl = new URL(`/api/v1/${path}`, url);
   Object.entries(otherParams).forEach(([key, value]) => {
     requestUrl.searchParams.set(key, value);
   });

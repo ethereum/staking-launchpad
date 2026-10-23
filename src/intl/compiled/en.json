@@ -2755,6 +2755,12 @@
       "value": "Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to."
     }
   ],
+  "Ebtzqs": [
+    {
+      "type": 0,
+      "value": "Selected account must be active before its funds can be migrated. Inactive sources cause consolidation requests to be ignored on-chain."
+    }
+  ],
   "EcCME0": [
     {
       "type": 0,
@@ -3091,6 +3097,12 @@
       "value": "Languages"
     }
   ],
+  "GsS25q": [
+    {
+      "type": 0,
+      "value": "Selected account must be active before it can be upgraded. Inactive validators cause upgrade requests to be ignored on-chain."
+    }
+  ],
   "GuIwY6": [
     {
       "type": 0,
@@ -3373,6 +3385,12 @@
     {
       "type": 0,
       "value": "Beacon chain push withdrawals as operations"
+    }
+  ],
+  "IrL25o": [
+    {
+      "type": 0,
+      "value": "Selected account must be active before it can absorb funds from another validator. Inactive targets cause consolidation requests to be ignored on-chain."
     }
   ],
   "Is1tie": [

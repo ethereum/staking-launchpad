@@ -25,6 +25,7 @@ import { TransactionStatusInsert } from '../../../components/TransactionStatusMo
 
 import { generateCompoundParams } from '../utils';
 import { getSignTxStatus } from '../../../utils/txStatus';
+import { isValidatorActive } from '../../../utils/validators';
 
 import { useCompoundingQueue } from '../../../hooks/useCompoundingQueue';
 import { useTxModal } from '../../../hooks/useTxModal';
@@ -113,6 +114,7 @@ const UpgradeCompounding: React.FC<Props> = ({ validator }) => {
     <>
       <Button
         onClick={handleOpen}
+        disabled={!isValidatorActive(validator)}
         label={<FormattedMessage defaultMessage="Upgrade account" />}
       />
 

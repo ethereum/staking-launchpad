@@ -27,7 +27,11 @@ import ValidatorSelector from './ValidatorSelector';
 
 import { generateCompoundParams } from '../utils';
 import { TICKER_NAME } from '../../../utils/envVars';
-import { getEtherBalance, getCredentialType } from '../../../utils/validators';
+import {
+  getEtherBalance,
+  getCredentialType,
+  isValidatorActive,
+} from '../../../utils/validators';
 import { getSignTxStatus } from '../../../utils/txStatus';
 import { useTxModal } from '../../../hooks/useTxModal';
 import { useCompoundingQueue } from '../../../hooks/useCompoundingQueue';
@@ -129,7 +133,8 @@ const PullConsolidation = ({
         label={<FormattedMessage defaultMessage="Pull funds" />}
         disabled={
           getCredentialType(targetValidator) < ValidatorType.Compounding ||
-          sourceValidatorSet.length < 1
+          sourceValidatorSet.length < 1 ||
+          !isValidatorActive(targetValidator)
         }
         destructive
         secondary

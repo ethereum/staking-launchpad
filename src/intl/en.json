@@ -1034,6 +1034,9 @@
   "EXt8Xd": {
     "message": "Stakers must provide a fee recipient address to their consensus client in order to receive transaction fee rewards. This is a normal Ethereum address that you're used to."
   },
+  "Ebtzqs": {
+    "message": "Selected account must be active before its funds can be migrated. Inactive sources cause consolidation requests to be ignored on-chain."
+  },
   "EcCME0": {
     "message": "Staking Launchpad"
   },
@@ -1161,6 +1164,9 @@
   "GsBRWL": {
     "message": "Languages"
   },
+  "GsS25q": {
+    "message": "Selected account must be active before it can be upgraded. Inactive validators cause upgrade requests to be ignored on-chain."
+  },
   "GuIwY6": {
     "message": "When should I top up my validator’s balance?"
   },
@@ -1270,6 +1276,9 @@
   },
   "InUvmv": {
     "message": "Beacon chain push withdrawals as operations"
+  },
+  "IrL25o": {
+    "message": "Selected account must be active before it can absorb funds from another validator. Inactive targets cause consolidation requests to be ignored on-chain."
   },
   "Is1tie": {
     "message": "For Type 1 validators (0x01) any balance > {PRICE_PER_VALIDATOR} {TICKER_NAME} is queued for sweep to the withdrawal address."

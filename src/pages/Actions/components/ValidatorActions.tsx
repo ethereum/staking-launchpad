@@ -19,6 +19,7 @@ import {
   getCredentialType,
   getEtherBalance,
   hasValidatorExited,
+  isValidatorActive,
 } from '../../../utils/validators';
 
 import {
@@ -257,6 +258,12 @@ const ValidatorActions: React.FC<Props> = ({ validator, validators }) => {
             <em>
               {' '}
               <FormattedMessage defaultMessage="Selected account must be upgraded to compounding type to absorb another validator." />
+            </em>
+          )}
+          {!isValidatorActive(validator) && (
+            <em>
+              {' '}
+              <FormattedMessage defaultMessage="Selected account must be active before it can absorb another validator." />
             </em>
           )}
           {sourceValidatorSet.length < 1 && (

@@ -15,6 +15,12 @@ export const hasExitEpochBeenSet = (exitEpoch: BigNumber | number) =>
 export const hasValidatorExited = (validator: BeaconChainValidator) =>
   hasExitEpochBeenSet(validator.exitepoch);
 
+// Handles both dora and beaconcha.in status strings
+export const isValidatorActive = (validator: BeaconChainValidator): boolean =>
+  ['active_online', 'active_offline', 'active_ongoing'].includes(
+    validator.status
+  );
+
 export const getCredentialType = (
   validator: BeaconChainValidator
 ): ValidatorType =>

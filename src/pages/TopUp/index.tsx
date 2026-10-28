@@ -73,6 +73,19 @@ const ButtonContainer = styled.div`
   }
 `;
 
+// beaconcha.in (and the netlify proxy) return a JSON error body on non-2xx responses, which has no `data` field
+const parseBeaconchainResponse = (r: Response) => {
+  if (!r.ok) {
+    throw new Error(`Beaconcha.in request failed with status ${r.status}`);
+  }
+  return r.json();
+};
+
+// beaconcha.in returns a single object for a single result and an array for multiple; drop missing entries
+function toArray<T>(data: T[] | T | null | undefined): T[] {
+  return (Array.isArray(data) ? data : [data]).filter(Boolean) as T[];
+}
+
 const _TopUpPage: React.FC<Props> = () => {
   const {
     account,
@@ -102,7 +115,7 @@ const _TopUpPage: React.FC<Props> = () => {
 
       const url = getBeaconchainV1ApiUrl(`validator/eth1/${account}`);
       fetch(url)
-        .then(r => r.json())
+        .then(parseBeaconchainResponse)
         .then(
           ({
             data,
@@ -110,7 +123,7 @@ const _TopUpPage: React.FC<Props> = () => {
             data: BeaconChainValidatorResponse[] | BeaconChainValidatorResponse;
           }) => {
             setShowDepositVerificationWarning(false);
-            const response = Array.isArray(data) ? data : [data];
+            const response = toArray(data);
             // no validators for that user's wallet address
             if (response.length === 0) {
               setValidators([]);
@@ -132,23 +145,19 @@ const _TopUpPage: React.FC<Props> = () => {
                 `validator/${pubKeysCommaDelineated}`
               );
               fetch(validatorUrl)
-                .then(r => r.json())
+                .then(parseBeaconchainResponse)
                 .then(
                   ({
                     data,
                   }: {
                     data: BeaconChainValidator[] | BeaconChainValidator;
                   }) => {
-                    const validatorsResponse = Array.isArray(data)
-                      ? data
-                      : [data];
+                    const validatorsResponse = toArray(data);
                     if (validatorsResponse.length === 0) {
                       setShowDepositVerificationWarning(true);
                       setValidators([]);
                     } else {
-                      setValidators(
-                        validatorsResponse as BeaconChainValidator[]
-                      );
+                      setValidators(validatorsResponse);
                     }
                     setLoading(false);
                   }
